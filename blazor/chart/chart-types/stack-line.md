@@ -1,51 +1,44 @@
 ---
 layout: post
-title: Stacked Line Chart in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about Stacked Line Chart in Syncfusion Blazor Charts component and much more.
+title: 100% Stacked Line in Blazor Charts Component | Syncfusion
+description: Checkout and learn here all about 100% Stacked Line Chart in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Stacked Line Chart in Blazor Charts Component
+# 100% Stacked Line in Blazor Charts Component
 
-## Stacked Line
+## 100% Stacked Line
 
-[Stacked Line Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stacked-line-chart) is a chart with Y values stacked over one another in the series order. It shows the relation between individual values to the total sum of the points. To render a [stacked line](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stacked-line-chart) series in your chart, define the series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) as [`StackingLine`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_StackingLine) in your chart configuration. This indicates that the data should be represented as a stacked line chart, allowing multiple data series to be stacked on top of each other. This makes it easier to compare the contribution of each series to the total over a specific period.
+[100% Stacked Line Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/100-stacked-line-chart) displays multiple series of data as stacked lines, ensuring that the cumulative proportion of each stacked element always totals 100%. Hence, the y-axis will always be rendered with the range 0–100%. To render a [100% stacked line](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/100-stacked-line-chart) series in your chart, define the series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) as [`StackingLine100`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_StackingLine100) in your chart configuration. This indicates that the data should be represented as a 100% stacked line chart, with each data series shown as a percentage of the total. This chart type ensures that all lines are stacked to always reach 100% at each data point, allowing for easy comparison of the proportional relationships between the series without the influence of absolute values.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Family Expense for Month">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" Interval="1">
+    <ChartPrimaryXAxis LabelRotation="90" ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
     </ChartPrimaryXAxis>
 	
-    <ChartPrimaryYAxis Title="Expense" Interval="100" LabelFormat="${value}">
-    </ChartPrimaryYAxis>
-
-    <ChartArea>
-        <ChartAreaBorder Width="0"></ChartAreaBorder>
-    </ChartArea>
-
     <ChartSeriesCollection>
         <ChartSeries XName="X" DataSource="@ExpenseReports"
-                     YName="Y" Type="ChartSeriesType.StackingLine">
+                     YName="Y" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingLine100">
             <ChartMarker Visible="true">
             </ChartMarker>
         </ChartSeries>
         <ChartSeries XName="X" DataSource="@ExpenseReports"
-                     YName="Y1" Type="ChartSeriesType.StackingLine">
+                     YName="Y1" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingLine100">
             <ChartMarker Visible="true">
             </ChartMarker>
         </ChartSeries>
         <ChartSeries XName="X" DataSource="@ExpenseReports"
-                     YName="Y2" Type="ChartSeriesType.StackingLine">
+                     YName="Y2" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingLine100">
             <ChartMarker Visible="true">
             </ChartMarker>
         </ChartSeries>
         <ChartSeries XName="X" DataSource="@ExpenseReports"
-                     YName="Y3" Type="ChartSeriesType.StackingLine">
+                     YName="Y3" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingLine100">
             <ChartMarker Visible="true">
             </ChartMarker>
         </ChartSeries>
@@ -80,11 +73,11 @@ documentation: ug
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVKsVhdBSeqWaEP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BthfjusLTJpWigyi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor Stacked Line Chart](../images/chart-types-images/blazor-stacked-line-chart.png)
+![Blazor Stacked Line100 Chart](../images/chart-types-images/blazor-stacked-line-100-chart.png)
 
-N> Refer to our [Blazor Stacked Line Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stacked-line-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Stacked Line Chart Example](https://blazor.syncfusion.com/demos/chart/stacked-line?theme=bootstrap5) to know how to render and configure the Stacked Line type chart.
+N> Refer to our [Blazor 100% Stacked Line Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/100-stacked-line-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor 100% Stacked Line Chart Example](https://blazor.syncfusion.com/demos/chart/percent-stacked-line?theme=bootstrap5) to know how to render and configure the 100% Stacked Line type chart.
 
 ## Binding data with series
 
@@ -95,34 +88,27 @@ You can bind data to the chart using the [`DataSource`](https://help.syncfusion.
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Family Expense for Month">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" Interval="1">
+    <ChartPrimaryXAxis LabelRotation="90" ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
     </ChartPrimaryXAxis>
 	
-    <ChartPrimaryYAxis Title="Expense" Interval="100" LabelFormat="${value}">
-    </ChartPrimaryYAxis>
-
-    <ChartArea>
-        <ChartAreaBorder Width="0"></ChartAreaBorder>
-    </ChartArea>
-
     <ChartSeriesCollection>
         <ChartSeries XName="X" DataSource="@ExpenseReports"
-                     YName="Y" Type="ChartSeriesType.StackingLine">
+                     YName="Y" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingLine100">
             <ChartMarker Visible="true">
             </ChartMarker>
         </ChartSeries>
         <ChartSeries XName="X" DataSource="@ExpenseReports"
-                     YName="Y1" Type="ChartSeriesType.StackingLine">
+                     YName="Y1" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingLine100">
             <ChartMarker Visible="true">
             </ChartMarker>
         </ChartSeries>
         <ChartSeries XName="X" DataSource="@ExpenseReports"
-                     YName="Y2" Type="ChartSeriesType.StackingLine">
+                     YName="Y2" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingLine100">
             <ChartMarker Visible="true">
             </ChartMarker>
         </ChartSeries>
         <ChartSeries XName="X" DataSource="@ExpenseReports"
-                     YName="Y3" Type="ChartSeriesType.StackingLine">
+                     YName="Y3" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingLine100">
             <ChartMarker Visible="true">
             </ChartMarker>
         </ChartSeries>
@@ -157,11 +143,11 @@ You can bind data to the chart using the [`DataSource`](https://help.syncfusion.
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVKsVhdBSeqWaEP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BthfjusLTJpWigyi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Series customization
 
-The following properties can be used to customize the [Stacked Line](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_StackingLine) series.
+The following properties can be used to customize the [100% Stacked Line](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_StackingLine100) series.
 
 **Fill**
 
@@ -172,41 +158,34 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Family Expense for Month">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" Interval="1">
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
     </ChartPrimaryXAxis>
-	
-    <ChartPrimaryYAxis Title="Expense" Interval="100" LabelFormat="${value}">
-    </ChartPrimaryYAxis>
-
-    <ChartArea>
-        <ChartAreaBorder Width="0"></ChartAreaBorder>
-    </ChartArea>
 
     <ChartSeriesCollection>
         <ChartSeries XName="X" DataSource="@ExpenseReports"
-                     YName="Y" Fill="blue" Type="ChartSeriesType.StackingLine">
+                     YName="Y" Fill="blue" Type="ChartSeriesType.StackingLine100">
             <ChartMarker Visible="true">
             </ChartMarker>
         </ChartSeries>
         <ChartSeries XName="X" DataSource="@ExpenseReports"
-                     YName="Y1" Fill="green" Type="ChartSeriesType.StackingLine">
+                     YName="Y1" Fill="green" Type="ChartSeriesType.StackingLine100">
             <ChartMarker Visible="true">
             </ChartMarker>
         </ChartSeries>
         <ChartSeries XName="X" DataSource="@ExpenseReports"
-                     YName="Y2" Fill="red" Type="ChartSeriesType.StackingLine">
+                     YName="Y2" Fill="red" Type="ChartSeriesType.StackingLine100">
             <ChartMarker Visible="true">
             </ChartMarker>
         </ChartSeries>
         <ChartSeries XName="X" DataSource="@ExpenseReports"
-                     YName="Y3" Fill="black" Type="ChartSeriesType.StackingLine">
+                     YName="Y3" Fill="black" Type="ChartSeriesType.StackingLine100">
             <ChartMarker Visible="true">
             </ChartMarker>
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public string X { get; set; }
@@ -215,9 +194,9 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
         public double Y2 { get; set; }
         public double Y3 { get; set; }
     }
-	
+
     public List<ChartData> ExpenseReports = new List<ChartData>
-	{
+    {
          new ChartData { X = "Food" , Y = 90, Y1 = 40 , Y2= 70, Y3= 120},
          new ChartData { X = "Transport", Y = 80, Y1 = 90, Y2= 110, Y3= 70 },
          new ChartData { X = "Medical",Y = 50, Y1 = 80, Y2= 120, Y3= 50 },
@@ -234,9 +213,9 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBpjvixAAGnISES?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhpNvMxVrNGkxdr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) property can be used to apply a gradient color to the stacked line series. By configuring this property with gradient values, you can create a visually appealing effect in which the color transitions smoothly from one shade to another.
+The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) property can be used to apply a gradient color to the 100% stacked line series. By configuring this property with gradient values, you can create a visually appealing effect in which the color transitions smoothly from one shade to another.
 
 ```cshtml
 
@@ -248,19 +227,19 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
 
     <ChartSeriesCollection>
         <ChartSeries XName="X" DataSource="@ExpenseReports"
-                     YName="Y" Fill="url(#grad1)" Type="ChartSeriesType.StackingLine">
+                     YName="Y" Fill="url(#grad1)" Type="ChartSeriesType.StackingLine100">
             <ChartMarker Visible="true"></ChartMarker>
         </ChartSeries>
         <ChartSeries XName="X" DataSource="@ExpenseReports"
-                     YName="Y1" Fill="url(#grad2)" Type="ChartSeriesType.StackingLine">
+                     YName="Y1" Fill="url(#grad2)" Type="ChartSeriesType.StackingLine100">
             <ChartMarker Visible="true"></ChartMarker>
         </ChartSeries>
         <ChartSeries XName="X" DataSource="@ExpenseReports"
-                     YName="Y2" Fill="url(#grad3)" Type="ChartSeriesType.StackingLine">
+                     YName="Y2" Fill="url(#grad3)" Type="ChartSeriesType.StackingLine100">
             <ChartMarker Visible="true"></ChartMarker>
         </ChartSeries>
         <ChartSeries XName="X" DataSource="@ExpenseReports"
-                     YName="Y3" Fill="url(#grad4)" Type="ChartSeriesType.StackingLine">
+                     YName="Y3" Fill="url(#grad4)" Type="ChartSeriesType.StackingLine100">
             <ChartMarker Visible="true"></ChartMarker>
         </ChartSeries>
     </ChartSeriesCollection>
@@ -318,52 +297,45 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLTtbMnzCNKzmNV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBTXlMxLPhEYpdw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 **Opacity**
 
-The [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Opacity) property specifies the transparency level of the [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill). Adjusting this property allows you to control how opaque or transparent the fill color of the series appears.
+The [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Opacity) – property specifies the transparency level of the [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill). Adjusting this property allows you to control how opaque or transparent the fill color of the series appears.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Family Expense for Month">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" Interval="1">
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
     </ChartPrimaryXAxis>
-	
-    <ChartPrimaryYAxis Title="Expense" Interval="100" LabelFormat="${value}">
-    </ChartPrimaryYAxis>
-
-    <ChartArea>
-        <ChartAreaBorder Width="0"></ChartAreaBorder>
-    </ChartArea>
 
     <ChartSeriesCollection>
         <ChartSeries XName="X" DataSource="@ExpenseReports"
-                     YName="Y" Fill="blue" Opacity="0.7" Type="ChartSeriesType.StackingLine">
+                     YName="Y" Fill="blue" Opacity="0.7" Type="ChartSeriesType.StackingLine100">
             <ChartMarker Visible="true">
             </ChartMarker>
         </ChartSeries>
         <ChartSeries XName="X" DataSource="@ExpenseReports"
-                     YName="Y1" Fill="green" Opacity="0.7" Type="ChartSeriesType.StackingLine">
+                     YName="Y1" Fill="green" Opacity="0.7" Type="ChartSeriesType.StackingLine100">
             <ChartMarker Visible="true">
             </ChartMarker>
         </ChartSeries>
         <ChartSeries XName="X" DataSource="@ExpenseReports"
-                     YName="Y2" Fill="red" Opacity="0.7" Type="ChartSeriesType.StackingLine">
+                     YName="Y2" Fill="red" Opacity="0.7" Type="ChartSeriesType.StackingLine100">
             <ChartMarker Visible="true">
             </ChartMarker>
         </ChartSeries>
         <ChartSeries XName="X" DataSource="@ExpenseReports"
-                     YName="Y3" Fill="black" Opacity="0.7" Type="ChartSeriesType.StackingLine">
+                     YName="Y3" Fill="black" Opacity="0.7" Type="ChartSeriesType.StackingLine100">
             <ChartMarker Visible="true">
             </ChartMarker>
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public string X { get; set; }
@@ -372,9 +344,9 @@ The [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Cha
         public double Y2 { get; set; }
         public double Y3 { get; set; }
     }
-	
+
     public List<ChartData> ExpenseReports = new List<ChartData>
-	{
+    {
          new ChartData { X = "Food" , Y = 90, Y1 = 40 , Y2= 70, Y3= 120},
          new ChartData { X = "Transport", Y = 80, Y1 = 90, Y2= 110, Y3= 70 },
          new ChartData { X = "Medical",Y = 50, Y1 = 80, Y2= 120, Y3= 50 },
@@ -390,9 +362,8 @@ The [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Cha
     };
 }
 
-
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhTNFMxqTtCGpWO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhJtPixLVgdYjtA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 **Width**
 
@@ -403,41 +374,34 @@ The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Chart
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Family Expense for Month">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" Interval="1">
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
     </ChartPrimaryXAxis>
-	
-    <ChartPrimaryYAxis Title="Expense" Interval="100" LabelFormat="${value}">
-    </ChartPrimaryYAxis>
-
-    <ChartArea>
-        <ChartAreaBorder Width="0"></ChartAreaBorder>
-    </ChartArea>
 
     <ChartSeriesCollection>
         <ChartSeries XName="X" DataSource="@ExpenseReports"
-                     YName="Y" Fill="blue" Opacity="0.7" Width="2" Type="ChartSeriesType.StackingLine">
+                     YName="Y" Fill="blue" Opacity="0.7" Width="2" Type="ChartSeriesType.StackingLine100">
             <ChartMarker Visible="true">
             </ChartMarker>
         </ChartSeries>
         <ChartSeries XName="X" DataSource="@ExpenseReports"
-                     YName="Y1" Fill="green" Opacity="0.7" Width="2" Type="ChartSeriesType.StackingLine">
+                     YName="Y1" Fill="green" Opacity="0.7" Width="2" Type="ChartSeriesType.StackingLine100">
             <ChartMarker Visible="true">
             </ChartMarker>
         </ChartSeries>
         <ChartSeries XName="X" DataSource="@ExpenseReports"
-                     YName="Y2" Fill="red" Opacity="0.7" Width="2" Type="ChartSeriesType.StackingLine">
+                     YName="Y2" Fill="red" Opacity="0.7" Width="2" Type="ChartSeriesType.StackingLine100">
             <ChartMarker Visible="true">
             </ChartMarker>
         </ChartSeries>
         <ChartSeries XName="X" DataSource="@ExpenseReports"
-                     YName="Y3" Fill="black" Opacity="0.7" Width="2" Type="ChartSeriesType.StackingLine">
+                     YName="Y3" Fill="black" Opacity="0.7" Width="2" Type="ChartSeriesType.StackingLine100">
             <ChartMarker Visible="true">
             </ChartMarker>
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
+@code {
     public class ChartData
     {
         public string X { get; set; }
@@ -446,9 +410,9 @@ The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Chart
         public double Y2 { get; set; }
         public double Y3 { get; set; }
     }
-	
+
     public List<ChartData> ExpenseReports = new List<ChartData>
-	{
+    {
          new ChartData { X = "Food" , Y = 90, Y1 = 40 , Y2= 70, Y3= 120},
          new ChartData { X = "Transport", Y = 80, Y1 = 90, Y2= 110, Y3= 70 },
          new ChartData { X = "Medical",Y = 50, Y1 = 80, Y2= 120, Y3= 50 },
@@ -464,9 +428,8 @@ The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Chart
     };
 }
 
-
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVTtlCxKpUgqisy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrTDFWRrUwyyFzg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 **DashArray**
 
@@ -477,34 +440,27 @@ The [DashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.C
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Family Expense for Month">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" Interval="1">
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
     </ChartPrimaryXAxis>
 	
-    <ChartPrimaryYAxis Title="Expense" Interval="100" LabelFormat="${value}">
-    </ChartPrimaryYAxis>
-
-    <ChartArea>
-        <ChartAreaBorder Width="0"></ChartAreaBorder>
-    </ChartArea>
-
     <ChartSeriesCollection>
         <ChartSeries XName="X" Width="2" DashArray="5,1" DataSource="@ExpenseReports"
-                     YName="Y" Fill="blue" Opacity="0.7" Type="ChartSeriesType.StackingLine">
+                     YName="Y" Fill="blue" Opacity="0.7" Type="ChartSeriesType.StackingLine100">
             <ChartMarker Visible="true">
             </ChartMarker>
         </ChartSeries>
         <ChartSeries XName="X" Width="2" DashArray="5,1" DataSource="@ExpenseReports"
-                     YName="Y1" Fill="green" Opacity="0.7" Type="ChartSeriesType.StackingLine">
+                     YName="Y1" Fill="green" Opacity="0.7" Type="ChartSeriesType.StackingLine100">
             <ChartMarker Visible="true">
             </ChartMarker>
         </ChartSeries>
         <ChartSeries XName="X" Width="2" DashArray="5,1" DataSource="@ExpenseReports"
-                     YName="Y2" Fill="red" Opacity="0.7" Type="ChartSeriesType.StackingLine">
+                     YName="Y2" Fill="red" Opacity="0.7" Type="ChartSeriesType.StackingLine100">
             <ChartMarker Visible="true">
             </ChartMarker>
         </ChartSeries>
         <ChartSeries XName="X" Width="2" DashArray="5,1" DataSource="@ExpenseReports"
-                     YName="Y3" Fill="black" Opacity="0.7" Type="ChartSeriesType.StackingLine">
+                     YName="Y3" Fill="black" Opacity="0.7" Type="ChartSeriesType.StackingLine100">
             <ChartMarker Visible="true">
             </ChartMarker>
         </ChartSeries>
@@ -539,9 +495,7 @@ The [DashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.C
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBKWVLRBIeyYwAD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Stacked Line Chart with Custom Series](../images/chart-types-images/blazor-stacked-line-chart-custom-series.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhUsBrnVIxJdFqq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Empty points
 
@@ -556,24 +510,22 @@ Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Family Expense for Month">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+    <ChartPrimaryXAxis LabelRotation="90" ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
     </ChartPrimaryXAxis>
 
     <ChartSeriesCollection>
-        <ChartSeries XName="X" DataSource="@ExpenseReports" YName="Y" Type="ChartSeriesType.StackingLine">
+        <ChartSeries XName="X" DataSource="@ExpenseReports" YName="Y" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingLine100">
+            <ChartEmptyPointSettings Mode="EmptyPointMode.Average"></ChartEmptyPointSettings>
+            <ChartMarker Visible="true"></ChartMarker>
+        </ChartSeries>
+        <ChartSeries XName="X" DataSource="@ExpenseReports" YName="Y1" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingLine100">
+            <ChartMarker Visible="true"></ChartMarker>
+        </ChartSeries>
+        <ChartSeries XName="X" DataSource="@ExpenseReports" YName="Y2" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingLine100">
             <ChartEmptyPointSettings Mode="EmptyPointMode.Gap"></ChartEmptyPointSettings>
             <ChartMarker Visible="true"></ChartMarker>
         </ChartSeries>
-        <ChartSeries XName="X" DataSource="@ExpenseReports" YName="Y1" Type="ChartSeriesType.StackingLine">
-            <ChartEmptyPointSettings Mode="EmptyPointMode.Gap"></ChartEmptyPointSettings>
-            <ChartMarker Visible="true"></ChartMarker>
-        </ChartSeries>
-        <ChartSeries XName="X" DataSource="@ExpenseReports" YName="Y2" Type="ChartSeriesType.StackingLine">
-            <ChartEmptyPointSettings Mode="EmptyPointMode.Gap"></ChartEmptyPointSettings>
-            <ChartMarker Visible="true"></ChartMarker>
-        </ChartSeries>
-        <ChartSeries XName="X" DataSource="@ExpenseReports" YName="Y3" Type="ChartSeriesType.StackingLine">
-            <ChartEmptyPointSettings Mode="EmptyPointMode.Gap"></ChartEmptyPointSettings>
+        <ChartSeries XName="X" DataSource="@ExpenseReports" YName="Y3" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingLine100">
             <ChartMarker Visible="true"></ChartMarker>
         </ChartSeries>
     </ChartSeriesCollection>
@@ -596,10 +548,10 @@ Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
          new ChartData { X = "Medical",Y = 50, Y1 = 80, Y2= 120, Y3= 50 },
          new ChartData { X = "Clothes",Y = 70, Y1 = 30, Y2= 60, Y3= 180 },
          new ChartData { X = "Personal Care", Y = 30, Y1 = 80, Y2= 80, Y3= 30 },
-         new ChartData { X = "Books", Y = double.NaN, Y1 = double.NaN, Y2= double.NaN, Y3= double.NaN},
-         new ChartData { X = "Fitness",Y = double.NaN, Y1 = double.NaN, Y2= double.NaN, Y3= double.NaN },
-         new ChartData { X = "Electricity", Y = double.NaN, Y1 = double.NaN, Y2= double.NaN, Y3= double.NaN},
-         new ChartData { X = "Tax", Y = double.NaN, Y1 = double.NaN, Y2= double.NaN, Y3= double.NaN },
+         new ChartData { X = "Books", Y = double.NaN, Y1 = 40, Y2= double.NaN, Y3= 270},
+         new ChartData { X = "Fitness",Y = 100, Y1 = 30, Y2= 70, Y3= 40 },
+         new ChartData { X = "Electricity", Y = 55, Y1 = 95, Y2= 55, Y3= 75},
+         new ChartData { X = "Tax", Y = 20, Y1 = 50, Y2= 40, Y3= 65 },
          new ChartData { X = "Pet Care", Y = 40, Y1 = 20, Y2= 80, Y3= 95 },
          new ChartData { X = "Education", Y = 45, Y1 = 15, Y2= 45, Y3= 195 },
          new ChartData { X = "Entertainment", Y = 75, Y1 = 45, Y2= 65, Y3= 115 }
@@ -607,7 +559,129 @@ Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLptlixKIlJureq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBzjkCLTJvEceAo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+**Fill**
+
+Use the [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Fill) property to customize the fill color of empty points in the series.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfChart Title="Family Expense for Month">
+    <ChartPrimaryXAxis LabelRotation="90" ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+    </ChartPrimaryXAxis>
+
+    <ChartSeriesCollection>
+        <ChartSeries XName="X" DataSource="@ExpenseReports" YName="Y" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingLine100">
+            <ChartEmptyPointSettings Mode="EmptyPointMode.Average" Fill="red"></ChartEmptyPointSettings>
+            <ChartMarker Visible="true"></ChartMarker>
+        </ChartSeries>
+        <ChartSeries XName="X" DataSource="@ExpenseReports" YName="Y1" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingLine100">
+            <ChartMarker Visible="true"></ChartMarker>
+        </ChartSeries>
+        <ChartSeries XName="X" DataSource="@ExpenseReports" YName="Y2" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingLine100">
+            <ChartEmptyPointSettings Mode="EmptyPointMode.Gap"></ChartEmptyPointSettings>
+            <ChartMarker Visible="true"></ChartMarker>
+        </ChartSeries>
+        <ChartSeries XName="X" DataSource="@ExpenseReports" YName="Y3" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingLine100">
+            <ChartMarker Visible="true"></ChartMarker>
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code {
+    public class ChartData
+    {
+        public string X { get; set; }
+        public double Y { get; set; }
+        public double Y1 { get; set; }
+        public double Y2 { get; set; }
+        public double Y3 { get; set; }
+    }
+
+    public List<ChartData> ExpenseReports = new List<ChartData>
+    {
+         new ChartData { X = "Food" , Y = 90, Y1 = 40 , Y2= 70, Y3= 120},
+         new ChartData { X = "Transport", Y = 80, Y1 = 90, Y2= 110, Y3= 70 },
+         new ChartData { X = "Medical",Y = 50, Y1 = 80, Y2= 120, Y3= 50 },
+         new ChartData { X = "Clothes",Y = 70, Y1 = 30, Y2= 60, Y3= 180 },
+         new ChartData { X = "Personal Care", Y = 30, Y1 = 80, Y2= 80, Y3= 30 },
+         new ChartData { X = "Books", Y = double.NaN, Y1 = 40, Y2= double.NaN, Y3= 270},
+         new ChartData { X = "Fitness",Y = 100, Y1 = 30, Y2= 70, Y3= 40 },
+         new ChartData { X = "Electricity", Y = 55, Y1 = 95, Y2= 55, Y3= 75},
+         new ChartData { X = "Tax", Y = 20, Y1 = 50, Y2= 40, Y3= 65 },
+         new ChartData { X = "Pet Care", Y = 40, Y1 = 20, Y2= 80, Y3= 95 },
+         new ChartData { X = "Education", Y = 45, Y1 = 15, Y2= 45, Y3= 195 },
+         new ChartData { X = "Entertainment", Y = 75, Y1 = 45, Y2= 65, Y3= 115 }
+    };
+}
+
+``` 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhzZECrpyXsTCTm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+**Border**
+
+Use the [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Border) property to customize the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointBorder.html#Syncfusion_Blazor_Charts_ChartEmptyPointBorder_Width) and [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointBorder.html#Syncfusion_Blazor_Charts_ChartEmptyPointBorder_Color) of the border for empty points.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfChart Title="Family Expense for Month">
+    <ChartPrimaryXAxis LabelRotation="90" ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+    </ChartPrimaryXAxis>
+
+    <ChartSeriesCollection>
+        <ChartSeries XName="X" DataSource="@ExpenseReports" YName="Y" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingLine100">
+            <ChartEmptyPointSettings Mode="EmptyPointMode.Average" Fill="red">
+                <ChartEmptyPointBorder Color="green" Width="2"></ChartEmptyPointBorder>
+            </ChartEmptyPointSettings>
+            <ChartMarker Visible="true"></ChartMarker>
+        </ChartSeries>
+        <ChartSeries XName="X" DataSource="@ExpenseReports" YName="Y1" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingLine100">
+            <ChartMarker Visible="true"></ChartMarker>
+        </ChartSeries>
+        <ChartSeries XName="X" DataSource="@ExpenseReports" YName="Y2" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingLine100">
+            <ChartEmptyPointSettings Mode="EmptyPointMode.Gap"></ChartEmptyPointSettings>
+            <ChartMarker Visible="true"></ChartMarker>
+        </ChartSeries>
+        <ChartSeries XName="X" DataSource="@ExpenseReports" YName="Y3" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingLine100">
+            <ChartMarker Visible="true"></ChartMarker>
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code {
+    public class ChartData
+    {
+        public string X { get; set; }
+        public double Y { get; set; }
+        public double Y1 { get; set; }
+        public double Y2 { get; set; }
+        public double Y3 { get; set; }
+    }
+
+    public List<ChartData> ExpenseReports = new List<ChartData>
+    {
+         new ChartData { X = "Food" , Y = 90, Y1 = 40 , Y2= 70, Y3= 120},
+         new ChartData { X = "Transport", Y = 80, Y1 = 90, Y2= 110, Y3= 70 },
+         new ChartData { X = "Medical",Y = 50, Y1 = 80, Y2= 120, Y3= 50 },
+         new ChartData { X = "Clothes",Y = 70, Y1 = 30, Y2= 60, Y3= 180 },
+         new ChartData { X = "Personal Care", Y = 30, Y1 = 80, Y2= 80, Y3= 30 },
+         new ChartData { X = "Books", Y = double.NaN, Y1 = 40, Y2= double.NaN, Y3= 270},
+         new ChartData { X = "Fitness",Y = 100, Y1 = 30, Y2= 70, Y3= 40 },
+         new ChartData { X = "Electricity", Y = 55, Y1 = 95, Y2= 55, Y3= 75},
+         new ChartData { X = "Tax", Y = 20, Y1 = 50, Y2= 40, Y3= 65 },
+         new ChartData { X = "Pet Care", Y = 40, Y1 = 20, Y2= 80, Y3= 95 },
+         new ChartData { X = "Education", Y = 45, Y1 = 15, Y2= 45, Y3= 195 },
+         new ChartData { X = "Entertainment", Y = 75, Y1 = 45, Y2= 65, Y3= 115 }
+    };
+}
+
+``` 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhpjaihpyjGvmon?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Events
 
@@ -624,22 +698,22 @@ The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
      <ChartSeriesCollection>
         <ChartSeries XName="X" Width="2" DashArray="5,1" DataSource="@ExpenseReports"
-                     YName="Y" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingLine">
+                     YName="Y" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingLine100">
             <ChartMarker Visible="true">
             </ChartMarker>
         </ChartSeries>
         <ChartSeries XName="X" Width="2" DashArray="5,1" DataSource="@ExpenseReports"
-                     YName="Y1" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingLine">
+                     YName="Y1" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingLine100">
             <ChartMarker Visible="true">
             </ChartMarker>
         </ChartSeries>
         <ChartSeries XName="X" Width="2" DashArray="5,1" DataSource="@ExpenseReports"
-                     YName="Y2" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingLine">
+                     YName="Y2" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingLine100">
             <ChartMarker Visible="true">
             </ChartMarker>
         </ChartSeries>
         <ChartSeries XName="X" Width="2" DashArray="5,1" DataSource="@ExpenseReports"
-                     YName="Y3" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingLine">
+                     YName="Y3" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingLine100">
             <ChartMarker Visible="true">
             </ChartMarker>
         </ChartSeries>
@@ -679,7 +753,7 @@ The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBpNlrMihQhygii?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLpZvBiCLhmMMJU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Point render
 
@@ -694,22 +768,22 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
      <ChartSeriesCollection>
         <ChartSeries XName="X" Width="2" DashArray="5,1" DataSource="@ExpenseReports"
-                     YName="Y" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingLine">
+                     YName="Y" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingLine100">
             <ChartMarker Visible="true" Height="10" Width ="10">
             </ChartMarker>
         </ChartSeries>
         <ChartSeries XName="X" Width="2" DashArray="5,1" DataSource="@ExpenseReports"
-                     YName="Y1" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingLine">
+                     YName="Y1" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingLine100">
             <ChartMarker Visible="true" Height="10" Width ="10">
             </ChartMarker>
         </ChartSeries>
         <ChartSeries XName="X" Width="2" DashArray="5,1" DataSource="@ExpenseReports"
-                     YName="Y2" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingLine">
+                     YName="Y2" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingLine100">
             <ChartMarker Visible="true" Height="10" Width ="10">
             </ChartMarker>
         </ChartSeries>
         <ChartSeries XName="X" Width="2" DashArray="5,1" DataSource="@ExpenseReports"
-                     YName="Y3" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingLine">
+                     YName="Y3" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingLine100">
             <ChartMarker Visible="true" Height="10" Width ="10">
             </ChartMarker>
         </ChartSeries>
@@ -750,7 +824,7 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVptPLiCLxTKLSN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLpZlhMCrpBJvmA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
