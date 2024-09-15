@@ -9,7 +9,7 @@ documentation: ug
 
 # Styles and Appearances in Blazor Carousel Component
 
-To modify the Carousel appearance, you need to override the default CSS of Carousel component. Find the list of CSS classes and its corresponding section in Carousel component. Also, you have an option to create your own custom theme for the controls using our [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material).
+To modify the Carousel appearance, you need to override the default CSS of Carousel component. Find the list of CSS classes and its corresponding section in Carousel component. Also, you have an option to create your own custom theme for the controls using our [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=bootstrap5).
 
 ## CSS Structure in Blazor Carousel Component
 
