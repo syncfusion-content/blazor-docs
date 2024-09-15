@@ -9,7 +9,7 @@ documentation: ug
 
 # Automatic Layout in Blazor Diagram Component
 
-Diagram provides support to auto-arrange the nodes in the diagram area that is referred as [Layout](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html). It includes the following layout modes:
+[Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram) provides support to auto-arrange the nodes in the diagram area that is referred as [Layout](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html). It includes the following layout modes:
 
 ## Layout modes
 
@@ -26,3 +26,5 @@ Diagram provides support to auto-arrange the nodes in the diagram area that is r
 * [How to generate the organization chart](./organizational-chart)
 
 * [How to generate the hierarchical layout](./hierarchical-layout)
+
+N> You can also explore our [Blazor Diagram Example](https://blazor.syncfusion.com/demos/diagramcomponent/flowchart?theme=bootstrap5) that shows you how to render the Diagram in Balzor.
