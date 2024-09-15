@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Modal in Blazor SpeedDial Component | Syncfusion
-description: Checkout and learn about how to use modal in Blazor SpeedDial component to add overlay to prevent interaction. 
+description: Checkout and learn about how to use modal in syncfusion Blazor SpeedDial component and how to add overlay to prevent interaction. 
 platform: Blazor
 control: SpeedDial
 documentation: ug
@@ -27,4 +27,4 @@ You can use the [IsModal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor SpeedDial with IsModal](./images/Blazor-SpeedDial-ModalProperty.png)
+![Modal in Blazor SpeedDial component](./images/Blazor-SpeedDial-ModalProperty.png)

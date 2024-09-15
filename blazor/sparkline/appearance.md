@@ -77,4 +77,4 @@ The background color of the Sparkline area can be changed using the [Background]
 </SfSparkline>
 ```
 
-![Blazor Sparkline Chart with Custom Background](images/Appearance/blazor-sparkline-custom-background.png)
+![Blazor Sparkline Chart with Background](images/Appearance/blazor-sparkline-custom-background.png)
