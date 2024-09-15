@@ -7,7 +7,7 @@ component: Common
 documentation: ug
 ---
 
-# How to Configure Syncfusion Blazor Component in bUnit Testing
+# How to configure Syncfusion Blazor Component in bUnit Testing?
 
 This section explains how to configure Syncfusion Blazor component in bUnit testing.
 
@@ -351,4 +351,4 @@ public void TestParameter()
 ## See Also
 
 * [Create a new bUnit Test Project](https://bunit.dev/docs/getting-started/create-test-project.html?tabs=xunit)
-* [Test components in ASP.NET Core Blazor](https://docs.microsoft.com/en-us/aspnet/core/blazor/test?view=aspnetcore-5.0)
+* [Test components in ASP.NET Core Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/test?view=aspnetcore-5.0)

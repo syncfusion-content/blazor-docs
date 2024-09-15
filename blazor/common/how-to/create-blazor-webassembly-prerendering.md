@@ -7,7 +7,7 @@ component: Common
 documentation: ug
 ---
 
-# How to Create a Blazor WebAssembly Application with Prerendering
+# How to Create a Blazor WebAssembly Application with Prerendering?
 
 This section explains how to enable prerendering to a Blazor WebAssembly application.
 
