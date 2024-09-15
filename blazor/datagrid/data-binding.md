@@ -922,6 +922,129 @@ Now, you can configure the datagrid using the **'SfDataManager'** to interact wi
 To perform datagrid CRUD operation using Entity Framework. You can refer [here](./editing/#entity-framework).
 N>You can find the fully working sample [here](https://github.com/ej2gridsamples/Blazor/blob/master/EntityFramework.zip).
 
+## Bind Entity Framework context as a service
+
+To bind an Entity Framework context directly to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property of a DataGrid, you can follow the below steps. 
+
+You need to create a class named **OrderDataAccessLayer**, which act as data access layer for retrieving the records and also insert, update and delete the records from the database table.
+
+```csharp
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using EFGrid.Shared.Models;
+
+namespace EFGrid.Shared.DataAccess
+{
+    public class OrderDataAccessLayer
+    {
+        OrderContext db = new OrderContext();
+
+        //To Get all Orders details   
+        public DbSet<Order> GetAllOrders()
+        {
+            try
+            {
+                return db.Orders;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+       // To Add new Order record
+        public void AddOrder(Order Order)
+        {
+            try
+            {
+                db.Orders.Add(Order);
+                db.SaveChanges();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        //To Update the records of a particluar Order    
+        public void UpdateOrder(Order Order)
+        {
+            try
+            {
+                db.Entry(Order).State = EntityState.Modified;
+                db.SaveChanges();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        //Get the details of a particular Order    
+        public Order GetOrderData(int id)
+        {
+            try
+            {
+                Order Order = db.Orders.Find(id);
+                return Order;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        //To Delete the record of a particular Order    
+        public void DeleteOrder(int? id)
+        {
+            try
+            {
+                Order ord = db.Orders.Find(id);
+                db.Orders.Remove(ord);
+                db.SaveChanges();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+    }
+}
+```
+
+Then, the OrderDataAccessLayer service is injected in the razor component using the `@inject` directive, Here, OrderDataAccessLayer is a service and assigning it to a local variable called OrderData.
+
+```csharp
+@inject OrderDataAccessLayer OrderData
+
+@using Syncfusion.Blazor.Grids
+
+<SfGrid>
+</SfGrid>
+```
+
+Using the OrderData variable, you can directly call the methods for retrieving data from the database in the OrderDataAccessLayer service and assign it to the DataSource property of the DataGrid.
+
+```csharp
+@inject OrderDataAccessLayer OrderData
+
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@OrderData.GetAllOrders()" AllowFiltering="true" AllowPaging="true">
+     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsIdentity="true" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.EmployeeID) HeaderText="Id" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Ordered Date" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Country" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+```
+
 ## HTTP client
 
 It is possible to call web api from the Blazor WebAssembly(client-side) app. This can be used for sending HTTP requests to fetch data from web api and bind them in the DataGrid's data source. The requests are sent using [HttpClient](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-3.0) service.
