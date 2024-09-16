@@ -20,7 +20,6 @@ The following example demonstrates how to use the `CellClicked` event and to not
 ```
 @using Syncfusion.Blazor.HeatMap
 @using Syncfusion.Blazor.Popups
-@inject IJSRuntime JS
 
 @if (IsCellClicked)
 {
