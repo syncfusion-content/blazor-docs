@@ -458,7 +458,7 @@ To enable the column virtualization, set the [EnableRowVirtualization](https://h
 
 N> Column's [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Width) is required for column virtualization. If the column's width is not defined, then the Gantt Chart will consider its value as **150px**.
 
-![Blazor GanttChart with cloumn virtualization](./images/Column_Virtual.gif)
+![Blazor GanttChart with cloumn virtualization.](./images/Column_Virtual.gif)
 
 ## Timeline virtualization
 
@@ -590,7 +590,7 @@ Timeline virtualization allows you to load data sources having a large timespan 
 }
 ```
 
-![Blazor GanttChart with timeline virtualization](./images/timeline_virtual.gif)
+![Blazor GanttChart with timeline virtualization.](./images/timeline_virtual.gif)
 
 ## Limitations for virtualization
 
