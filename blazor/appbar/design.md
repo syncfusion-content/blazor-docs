@@ -30,7 +30,7 @@ The following example depicts the code to provide spacing between the home and p
 </div>
 ```
 
-![Blazor AppBar with Spacer.](./images/blazor-appbar-spacer.png)
+![Blazor AppBar with spacer.](./images/blazor-appbar-spacer.png)
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htLKWVizhrJGeHZk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Separator
@@ -68,7 +68,7 @@ The following example depicts the code to provide a vertical line between a grou
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZrUWhizrrSDjGWv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor AppBar with Separator.](./images/blazor-appbar-separator.png)
+![Blazor AppBar with separator.](./images/blazor-appbar-separator.png)
 
 ## Media Query
 
@@ -114,7 +114,7 @@ Media Query is used to adjusting the AppBar for different screen sizes. Resize t
 </style>
 ```
 
-![Blazor AppBar with Media Query.](./images/blazor-appbar-media-quary.png)
+![Blazor AppBar with media query.](./images/blazor-appbar-media-quary.png)
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDVUWBsJrBofaJVB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ## Designing AppBar with Menu
 
@@ -173,7 +173,7 @@ Media Query is used to adjusting the AppBar for different screen sizes. Resize t
 </style>
 ```
 
-![Blazor AppBar with Menu.](./images/blazor-appbar-menu.png)
+![Blazor AppBar with menu.](./images/blazor-appbar-menu.png)
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXrgCrsfhVRDMsdT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Designing AppBar with Buttons
@@ -209,7 +209,7 @@ Media Query is used to adjusting the AppBar for different screen sizes. Resize t
 </style>
 ```
 
-![Blazor AppBar with Buttons.](./images/blazor-appbar-buttons.png)
+![Blazor AppBar with buttons.](./images/blazor-appbar-buttons.png)
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDVgMBMTLrdehyCb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Designing AppBar with SideBar
@@ -370,6 +370,6 @@ AppBar toggle button used to control the expand and collapse state of **SfSideba
     }
 </style>
 ```
-![Blazor AppBar with SideBar.](./images/blazor-appbar-sidebar.png)
+![Designed AppBar with sidebar in Blazor.](./images/blazor-appbar-designed-sidebar.png)
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDVKirMTrrRbKrNE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
