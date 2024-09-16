@@ -95,33 +95,16 @@ Add the Syncfusion Blazor Gantt Chart component in `.razor` file inside the `Pag
 {% tabs %}
 {% highlight razor %}
 
-<SfGantt TValue="TaskData">
-</SfGantt>
-
-@code{
-    public class TaskData
-    {
-        public int TaskId { get; set; }
-        public string TaskName { get; set; }
-        public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
-        public string Duration { get; set; }
-        public int Progress { get; set; }
-        public int? ParentId { get; set; }
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Binding Blazor Gantt Chart with Data
-
-Bind data with the Gantt Chart component by using the `DataSource` property. It accepts the list objects or the DataManager instance.
-
-{% tabs %}
-{% highlight razor %}
-
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
+    </GanttTaskFields>
+    <GanttColumns>
+        <GanttColumn Field="TaskId" HeaderText="Task ID"></GanttColumn>
+        <GanttColumn Field="TaskName" HeaderText="Task Name"></GanttColumn>
+        <GanttColumn Field="StartDate" HeaderText="Start Date"></GanttColumn>
+        <GanttColumn Field="Duration" HeaderText="Duration"></GanttColumn>
+        <GanttColumn Field="Progress" HeaderText="Progress"></GanttColumn>
+    </GanttColumns>
 </SfGantt>
 
 @code{
@@ -156,9 +139,11 @@ Bind data with the Gantt Chart component by using the `DataSource` property. It 
 {% endhighlight %}
 {% endtabs %}
 
-## Mapping task fields
+## Binding Gantt Chart with Data and Mapping Task Fields
 
-The data source fields that are required to render the tasks are mapped to the Gantt Chart component using the [GanttTaskFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html) property.
+Bind data with the Gantt Chart component by using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_DataSource) property. It accepts the list objects or the DataManager instance. Additionally, task-related fields from the data source are mapped to the Gantt Chart component using the [GanttTaskFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html) property. This property ensures that the necessary task fields, such as `ID`, `Name`, `StartDate`, `EndDate`, `Duration`, and `ParentID` are properly linked to the corresponding data source fields, allowing the Gantt Chart to render tasks accurately. The columns in the Gantt Chart are automatically rendered based on the properties specified in `GanttTaskFields`, ensuring that the necessary columns are displayed to represent the task data.
+
+The Gantt Chart component binds data by mapping the `ID` field, which contains unique values for each task, to the Id property, and the ParentId property, which mapped to the `ParentID` Field. The `ParentId` property should match the Id of the parent task, establishing the hierarchical relationship between tasks. For additional information, refer to [this](https://blazor.syncfusion.com/documentation/gantt-chart/data-binding#self-referential--flat-data-binding).
 
 {% tabs %}
 {% highlight razor %}
@@ -202,12 +187,14 @@ The data source fields that are required to render the tasks are mapped to the G
 
 ## Defining columns
 
-Gantt Chart has an option to define columns as an array. You can customize the Gantt Chart columns using the following properties:
+Gantt Chart has an option to define columns as an array. You can manage the order and customize the Gantt Chart columns using the following properties:
 
 * [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Field): Maps the data source fields to the columns.
 * [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_HeaderText): Changes the title of columns.
 * [TextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_TextAlign): Changes the alignment of columns. By default, columns will be left aligned. To change the columns to right align, set `TextAlign` to right.
 * [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Format): Formats the number and date values to standard or custom formats. Here, it is defined for the conversion of numeric values to currency.
+* [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Visible): Show or hide a particular column. By default, columns are visible. Set this property to `false` to hide the column or `true` to make it visible.
+* [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Width): To specify the width of the column, which can be defined in `pixels` or as a `percentage` of the total column width.
 
 {% tabs %}
 {% highlight razor %}
@@ -259,7 +246,7 @@ Gantt Chart has an option to define columns as an array. You can customize the G
 {% endhighlight %}
 {% endtabs %}
 
-For further details regarding Columns, refer [here](https://blazor.syncfusion.com/documentation/gantt-chart/columns).
+For further details regarding columns, refer [here](https://blazor.syncfusion.com/documentation/gantt-chart/columns).
 
 ## Enable editing
 
