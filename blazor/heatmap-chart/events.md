@@ -13,67 +13,14 @@ This section describes the events that will be triggered for appropriate actions
 
 ## CellClicked
 
-When you click on a HeatMap cell, the [CellClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_CellClicked) event is triggered. More information about the arguments in this event can be found [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.CellClickEventArgs.html).
+When you click on a HeatMap cell, the [CellClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_CellClicked) event is triggered. More information about the arguments in this event can be found [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.CellClickEventArgs.html). When you right-click on a HeatMap cell, the `CellClicked` event is triggered, and the value of `HasRightClicked` property will be true. 
 
-The following example demonstrates how to use the `CellClicked` event to retrieve the value of the clicked cell as well as its x-axis and y-axis labels.
-
-```cshtml
-@using Syncfusion.Blazor.HeatMap
-
-@if(IsVisible) {
-    <div>
-        <span> X-Label : <b> @XLabel </b> </span> <br />
-        <span> Y-Label : <b> @YLabel </b> </span> <br />
-        <span> CellValue : <b> @CellValue </b> </span>
-    </div>
-}
-
-<SfHeatMap DataSource="@dataSource">
-    <HeatMapEvents CellClicked="@CellClicked" />
-    <HeatMapTitleSettings Text="Sales Revenue per Employee (in 1000 US$)" />
-    <HeatMapXAxis Labels="@xAxisLabels" />
-    <HeatMapYAxis Labels="@yAxisLabels" />
-</SfHeatMap>
-
-@code {
-    public bool IsVisible = false;
-    public string XLabel { get; set; }
-    public string YLabel { get; set; }
-    public double CellValue { get; set; }
-    private void CellClicked(CellClickEventArgs args)
-    {
-        IsVisible = true;
-        XLabel = args.XLabel;
-        YLabel = args.YLabel;
-        CellValue = args.Value;
-    }
-    public double[,] dataSource = new double[,]
-    {
-            { 73, 39, 26, 39, 94, 0 },
-            { 93, 58, 53, 38, 26, 68 },
-            { 99, 28, 22, 4, 66, 90 },
-            { 14, 26, 97, 69, 69, 3 },
-            { 7, 46, 47, 47, 88, 6 },
-            { 41, 55, 73, 23, 3, 79 },
-            { 56, 69, 21, 86, 3, 33 },
-            { 45, 7, 53, 81, 95, 79 },
-            { 60, 77, 74, 68, 88, 51 },
-            { 25, 25, 10, 12, 78, 14 },
-            { 25, 56, 55, 58, 12, 82 },
-            { 74, 33, 88, 23, 86, 59 }
-    };
-    public string[] xAxisLabels = new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven",
-                 "Michael", "Robert", "Laura", "Anne", "Paul", "Karin", "Mario" };
-    public string[] yAxisLabels = new string[] { "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat" };
-}
-```
-![CellClicked event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-cell-clicked-event.gif)
-
-The following example demonstrates how to use the `CellClicked` event to notify the right click event in the HeatMap component. When you right-click on a HeatMap cell, the `CellClicked` event is triggered, and the value of `HasRightClicked` property will be true. In this example, a dialog box is displayed only on right-clicking the HeatMap cell.
+The following example demonstrates how to use the `CellClicked` event and to notify the right click event in the HeatMap component. In this example, a dialog box is displayed only on right-clicking the HeatMap cell.
 
 ```
 @using Syncfusion.Blazor.HeatMap
 @using Syncfusion.Blazor.Popups
+@inject IJSRuntime JS
  
 <SfHeatMap DataSource="@dataSource">
     <HeatMapEvents CellClicked="CellClick"></HeatMapEvents>
@@ -122,17 +69,18 @@ The following example demonstrates how to use the `CellClicked` event to notify 
         border-collapse: collapse;
     }
 
-        .styled-table th, .styled-table td {
-            border: 1px solid black;
-            padding: 10px;
-            text-align: left;
-        }
+    .styled-table th, .styled-table td {
+        border: 1px solid black;
+        padding: 10px;
+        text-align: left;
+    }
 
-        .styled-table thead {
-            background-color: #f2f2f2;
-        }
+    .styled-table thead {
+        background-color: #f2f2f2;
+    }
 </style>
 @code {
+    public bool IsCellClicked = false;
     public bool ShowButton { get; set; } = false;
     public bool Visibility { get; set; } = false;
     public ResizeDirection[] DialogResizeDirections { get; set; } = new ResizeDirection[] { ResizeDirection.All };
@@ -154,7 +102,7 @@ The following example demonstrates how to use the `CellClicked` event to notify 
         {41, 55, 73, 23, 3, 79},
     };
 
-    public void CellClick(CellClickEventArgs args)
+    public async Task CellClick(Syncfusion.Blazor.HeatMap.CellClickEventArgs args)
     {
         if (args.HasRightClicked)
         {
@@ -165,6 +113,9 @@ The following example demonstrates how to use the `CellClicked` event to notify 
             xLabel = args.XLabel;
             yLabel = args.YLabel;
             cellValue = args.Value;
+        } else {
+            IsCellClicked = true;
+            await JS.InvokeVoidAsync("eval", @"alert('The cell clicked event has been triggered!!');");
         }
     }
 
@@ -172,11 +123,10 @@ The following example demonstrates how to use the `CellClicked` event to notify 
     {
         ShowButton = false;
     }
-
 }
 ```
 
-![Notify the Right Click event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-notify-right-click-event.png)
+![Cell Clicked Event and Notify the Right Click event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-cell-click-event-and-notify-right-click-event.gif)
 
 ## CellRendering
 
@@ -578,7 +528,7 @@ The following example demonstrates how to use the `LegendRendering` event to cus
 ```cshtml
 @using Syncfusion.Blazor.HeatMap
 
-<SfHeatMap DataSource="@HeatMapData" Width="500px" Height="500px">
+<SfHeatMap DataSource="@HeatMapData">
     <HeatMapEvents LegendRendering="@LegendRender" />
     <HeatMapTitleSettings Text="Sales Revenue per Employee (in 1000 US$)">
     </HeatMapTitleSettings>
