@@ -116,24 +116,24 @@ The negative changes of waterfall charts are represented by using [NegativeFillC
     </ChartPrimaryXAxis>
 
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@ExpenseDetails" XName="XValue" SummaryFillColor="#e56590" NegativeFillColor="#f8b883"
-                     YName="YValue" Type="ChartSeriesType.Waterfall" IntermediateSumIndexes="@intermediateSumIndexes" SumIndexes="@sumIndexes">
+        <ChartSeries DataSource="@SalesReports" SummaryFillColor="#e56590" NegativeFillColor="#f8b883" XName="XValue" YName="YValue" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Waterfall" IntermediateSumIndexes="@index" SumIndexes="@sumIndex">
             <ChartMarker Height="10" Width="10" Visible="true"></ChartMarker>
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
 
-@code{
-    double[] intermediateSumIndexes = new double[] { 4 };
-    double[] sumIndexes = new double[] { 7 };
-	
+@code {
+    double[] index = new double[] { 4 };
+    double[] sumIndex = new double[] { 8 };
+
     public class ChartData
     {
-        public string XValue;
-        public double YValue;
+        public string XValue { get; set; }
+        public double YValue { get; set; }
     }
-    public List<ChartData> ExpenseDetails = new List<ChartData>
-	{
+
+    public List<ChartData> SalesReports = new List<ChartData>
+    {
         new ChartData { XValue = "Income", YValue = 4711 },
         new ChartData { XValue = "Sales", YValue = -1015 },
         new ChartData { XValue = "Development", YValue = -688 },
@@ -147,11 +147,11 @@ The negative changes of waterfall charts are represented by using [NegativeFillC
 
 ``` 
 
-![Blazor Waterfall Chart with Custom Series](../images/othertypes/blazor-waterfall-chart-custom-series.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhTtuiqSypahHvu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Empty points
 
-Data points with `null` or `undefined` values are considered empty. Empty data points are ignored and not plotted on the chart.
+Data points with `null`, `double.NaN` or `undefined` values are considered empty. Empty data points are ignored and not plotted on the chart.
 
 **Mode**
 
