@@ -69,7 +69,7 @@ The Gantt component follows the [keyboard interaction](https://www.w3.org/WAI/AR
 <kbd>Home</kbd> | <kbd>Fn + Left Arrow</kbd> | Moves the focus to the first cell of the focused row.
 <kbd>End</kbd> | <kbd>Fn + Right Arrow</kbd> | Moves the focus to the last cell of the focused row.
 <kbd>Ctrl + Home</kbd> | <kbd>Command + Fn + Left Arrow</kbd> | Moves the focus to the first Cell of the first row in the gantt chart.
-<kbd>Ctrl + End</kbd> | <kbd>Command +  Fn + Right Arrow</kbd> | Moves the focus to the last Cell of the last row in the gantt chart.
+<kbd>Ctrl + End</kbd> | <kbd>Command + Fn + Right Arrow</kbd> | Moves the focus to the last Cell of the last row in the gantt chart.
 <kbd>Up Arrow</kbd> | <kbd>Up Arrow</kbd> | Moves the cell focus upward from the focused cell.
 <kbd>Down Arrow</kbd> | <kbd>Down Arrow</kbd> |  Moves the cell focus downward from the focused cell.
 <kbd>Right Arrow</kbd> | <kbd>Right Arrow</kbd> | Moves the cell focus right side from the focused cell.
