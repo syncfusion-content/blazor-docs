@@ -644,4 +644,4 @@ You can use the `ResponseToolbarItem` tag directive within the `ResponseToolbar`
 
 #### Item clicked
 
-The `itemClicked` event is triggered when the custom toolbar item is clicked.
+The `itemClicked` event is triggered when a custom toolbar item is clicked. This event applies to both prompt and response toolbar items.
