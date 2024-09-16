@@ -465,6 +465,42 @@ The Maps can be initially scaled to the center value based on the marker distanc
 
 ![Blazor Maps Marker with Zooming](./images/Marker/blazor-maps-marker-zooming.PNG)
 
+## Disabling the Zoom on Marker Click
+
+To prevent the zoom-in action when clicking on the marker, you can set `ZoomOnMarkerClick` as false in the `MapsZoomSettings`. This diasble the zooming action in the Maps. By default, the value is set to **true**.
+
+```
+@using Syncfusion.Blazor.Maps
+
+<SfMaps>
+    <MapsLayers>
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
+            <MapsMarkerSettings>
+                <MapsMarker Visible='true' Width="20" Height="20" AnimationDuration="0" DataSource='MarkerDataSource' TValue="MapMarkerDataSource">
+                </MapsMarker>
+            </MapsMarkerSettings>
+        </MapsLayer>
+    </MapsLayers>
+    <MapsZoomSettings Enable='true' ZoomOnClick="true" ZoomOnMarkerClick="false">
+        <MapsZoomToolbarSettings HorizontalAlignment="Alignment.Far">
+        </MapsZoomToolbarSettings>
+    </MapsZoomSettings>
+</SfMaps>
+@code {
+    public class MapMarkerDataSource
+    {
+        public double latitude { get; set; }
+        public double longitude { get; set; }
+        public string name { get; set; }
+    };
+    public List<MapMarkerDataSource> MarkerDataSource = new List<MapMarkerDataSource> {
+        new MapMarkerDataSource{ latitude= 49.95121990866204, longitude= 18.468749999999998, name= "Europe" },
+        new MapMarkerDataSource{ latitude= 59.88893689676585, longitude= -109.3359375, name= "North America" },
+        new MapMarkerDataSource{ latitude= -6.64607562172573, longitude= -55.54687499999999, name= "South America" }
+    };
+}
+```
+
 ## Marker clustering
 
 Maps provide support to cluster the markers when they overlap each other. The number on a cluster indicates how many overlapped markers it contains. If zooming is performed on any of the cluster locations in Maps, the number on the cluster will decrease, and the individual markers will be seen on the map. When zooming out, the overlapping marker will increase. So that it can cluster again and increase the count over the cluster.
