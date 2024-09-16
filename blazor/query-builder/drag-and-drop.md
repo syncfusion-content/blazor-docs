@@ -35,13 +35,12 @@ The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-q
     SfQueryBuilder<EmployeeDetails> QuerybuilderObj;
     List<RuleModel> Rules = new List<RuleModel>()
     {
-        new RuleModel { Label="First Name", Field="FirstName", Type="String", Operator="equal", Value = "Andre", Condition = "and" },
-        new RuleModel { Label="Last Name", Field="LastName", Type="String", Operator="in", Value = new string[] { "Davolio", "Buchanan" } },
-        new RuleModel { Label="Last Name", Field="LastName", Type="String", Operator="equal", Value = "Davolio", Condition = "or" },
-        new RuleModel { Label="Age", Field="Age", Type="Number", Operator="equal", Value = 29, Condition = "and" },
+        new RuleModel { Label="First Name", Field="FirstName", Type="String", Operator="equal", Value = "Andre" },
+        new RuleModel { Label="Last Name", Field="LastName", Type="String", Operator="equal", Value = "Davolio" },
+        new RuleModel { Label="Age", Field="Age", Type="Number", Operator="equal", Value = 29 },
         new RuleModel {
             Condition = "or", Rules = new List<RuleModel>() {
-                new RuleModel { Label= "Is Developer", Field = "IsDeveloper", Type = "Boolean", Operator = "equal", Value = true, Condition = "and" },
+                new RuleModel { Label= "Is Developer", Field = "IsDeveloper", Type = "Boolean", Operator = "equal", Value = true },
                 new RuleModel { Label= "Primary Framework", Field = "PrimaryFramework", Type = "String", Operator = "equal", Value = "React"}
             }
         }
