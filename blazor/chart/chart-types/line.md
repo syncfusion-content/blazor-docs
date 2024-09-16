@@ -17,11 +17,10 @@ documentation: ug
 
 @using Syncfusion.Blazor.Charts
 
-<SfChart Title="Olympic Medals">
+<SfChart>
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-	
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="Y" Type="ChartSeriesType.Line">
+        <ChartSeries DataSource="@SalesDetails" XName="X" YName="Y" Type="ChartSeriesType.Line">
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
@@ -33,25 +32,25 @@ documentation: ug
         public double Y {get; set;}
     }
 	
-    public List<ChartData> MedalDetails = new List<ChartData>
+    public List<ChartData> SalesDetails = new List<ChartData>
 	{
-        new ChartData { X= "South Korea", Y= 39.4 },
-        new ChartData { X= "India", Y= 61.3 },
-        new ChartData { X= "Pakistan", Y= 20.4 },
-        new ChartData { X= "Germany", Y= 65.1 },
-        new ChartData { X= "Australia", Y= 15.8 },
-        new ChartData { X= "Italy", Y= 29.2 },
-        new ChartData { X= "United Kingdom", Y= 44.6 },
-        new ChartData { X= "Saudi Arabia", Y= 9.7 },
-        new ChartData { X= "Russia", Y= 40.8 },
-        new ChartData { X= "Mexico", Y= 31 },
-        new ChartData { X= "Brazil", Y= 75.9 },
-        new ChartData { X= "China", Y= 51.4 }
+        new ChartData { X= "Jan", Y= 35 },
+        new ChartData { X= "Feb", Y= 28 },
+        new ChartData { X= "Mar", Y= 34 },
+        new ChartData { X= "Apr", Y= 32 },
+        new ChartData { X= "May", Y= 40 },
+        new ChartData { X= "Jun", Y= 32 },
+        new ChartData { X= "Jul", Y= 35 },
+        new ChartData { X= "Aug", Y= 55 },
+        new ChartData { X= "Sep", Y= 38 },
+        new ChartData { X= "Oct", Y= 30 },
+        new ChartData { X= "Nov", Y= 25 },
+        new ChartData { X= "Dec", Y= 32 }
     };
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrKiVhdhoVJjpOZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLfNkWrgrqqRINz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Line Chart.](../images/chart-types-images/blazor-line-chart.png)
 
@@ -65,11 +64,10 @@ You can bind data to the chart using the [`DataSource`](https://help.syncfusion.
 
 @using Syncfusion.Blazor.Charts
 
-<SfChart Title="Olympic Medals">
+<SfChart>
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-	
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="Y" Type="ChartSeriesType.Line">
+        <ChartSeries DataSource="@SalesDetails" XName="X" YName="Y" Type="ChartSeriesType.Line">
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
@@ -81,24 +79,25 @@ You can bind data to the chart using the [`DataSource`](https://help.syncfusion.
         public double Y {get; set;}
     }
 	
-    public List<ChartData> MedalDetails = new List<ChartData>
+    public List<ChartData> SalesDetails = new List<ChartData>
 	{
-        new ChartData { X= "South Korea", Y= 39.4 },
-        new ChartData { X= "India", Y= 61.3 },
-        new ChartData { X= "Pakistan", Y= 20.4 },
-        new ChartData { X= "Germany", Y= 65.1 },
-        new ChartData { X= "Australia", Y= 15.8 },
-        new ChartData { X= "Italy", Y= 29.2 },
-        new ChartData { X= "United Kingdom", Y= 44.6 },
-        new ChartData { X= "Saudi Arabia", Y= 9.7 },
-        new ChartData { X= "Russia", Y= 40.8 },
-        new ChartData { X= "Mexico", Y= 31 },
-        new ChartData { X= "Brazil", Y= 75.9 },
-        new ChartData { X= "China", Y= 51.4 }
+        new ChartData { X= "Jan", Y= 35 },
+        new ChartData { X= "Feb", Y= 28 },
+        new ChartData { X= "Mar", Y= 34 },
+        new ChartData { X= "Apr", Y= 32 },
+        new ChartData { X= "May", Y= 40 },
+        new ChartData { X= "Jun", Y= 32 },
+        new ChartData { X= "Jul", Y= 35 },
+        new ChartData { X= "Aug", Y= 55 },
+        new ChartData { X= "Sep", Y= 38 },
+        new ChartData { X= "Oct", Y= 30 },
+        new ChartData { X= "Nov", Y= 25 },
+        new ChartData { X= "Dec", Y= 32 }
     };
 }
 
 ``` 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLfNkWrgrqqRINz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Series customization
 
@@ -112,11 +111,10 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
 
 @using Syncfusion.Blazor.Charts
 
-<SfChart Title="Olympic Medals">
+<SfChart>
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-	
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="Y" Fill="blue" Type="ChartSeriesType.Line">
+        <ChartSeries DataSource="@SalesDetails" Fill="blue" XName="X" YName="Y" Type="ChartSeriesType.Line">
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
@@ -124,29 +122,29 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
 @code{
     public class ChartData
     {
-        public string X { get; set; }
-        public double Y { get; set; }
+        public string X { get; set;}
+        public double Y {get; set;}
     }
 	
-    public List<ChartData> MedalDetails = new List<ChartData>
+    public List<ChartData> SalesDetails = new List<ChartData>
 	{
-        new ChartData { X= "South Korea", Y= 39.4 },
-        new ChartData { X= "India", Y= 61.3 },
-        new ChartData { X= "Pakistan", Y= 20.4 },
-        new ChartData { X= "Germany", Y= 65.1 },
-        new ChartData { X= "Australia", Y= 15.8 },
-        new ChartData { X= "Italy", Y= 29.2 },
-        new ChartData { X= "United Kingdom", Y= 44.6 },
-        new ChartData { X= "Saudi Arabia", Y= 9.7 },
-        new ChartData { X= "Russia", Y= 40.8 },
-        new ChartData { X= "Mexico", Y= 31 },
-        new ChartData { X= "Brazil", Y= 75.9 },
-        new ChartData { X= "China", Y= 51.4 }
+        new ChartData { X= "Jan", Y= 35 },
+        new ChartData { X= "Feb", Y= 28 },
+        new ChartData { X= "Mar", Y= 34 },
+        new ChartData { X= "Apr", Y= 32 },
+        new ChartData { X= "May", Y= 40 },
+        new ChartData { X= "Jun", Y= 32 },
+        new ChartData { X= "Jul", Y= 35 },
+        new ChartData { X= "Aug", Y= 55 },
+        new ChartData { X= "Sep", Y= 38 },
+        new ChartData { X= "Oct", Y= 30 },
+        new ChartData { X= "Nov", Y= 25 },
+        new ChartData { X= "Dec", Y= 32 }
     };
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrztFipLLqFZfqj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNBpNasrAVmsWGMK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) property can be used to apply a gradient color to the line series. By configuring this property with gradient values, you can create a visually appealing effect in which the color transitions smoothly from one shade to another.
 
@@ -154,10 +152,10 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
 
 @using Syncfusion.Blazor.Charts
 
-<SfChart Title="Olympic Medals">
+<SfChart>
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="Y" Fill="url(#grad1)" Type="ChartSeriesType.Line">
+        <ChartSeries DataSource="@SalesDetails" Fill="url(#grad1)" XName="X" YName="Y" Type="ChartSeriesType.Line">
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
@@ -171,32 +169,32 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
    </defs>
 </svg>
 
-@code {
+@code{
     public class ChartData
     {
-        public string X { get; set; }
-        public double Y { get; set; }
+        public string X { get; set;}
+        public double Y {get; set;}
     }
-
-    public List<ChartData> MedalDetails = new List<ChartData>
-    {
-        new ChartData { X= "South Korea", Y= 39.4 },
-        new ChartData { X= "India", Y= 61.3 },
-        new ChartData { X= "Pakistan", Y= 20.4 },
-        new ChartData { X= "Germany", Y= 65.1 },
-        new ChartData { X= "Australia", Y= 15.8 },
-        new ChartData { X= "Italy", Y= 29.2 },
-        new ChartData { X= "United Kingdom", Y= 44.6 },
-        new ChartData { X= "Saudi Arabia", Y= 9.7 },
-        new ChartData { X= "Russia", Y= 40.8 },
-        new ChartData { X= "Mexico", Y= 31 },
-        new ChartData { X= "Brazil", Y= 75.9 },
-        new ChartData { X= "China", Y= 51.4 }
+	
+    public List<ChartData> SalesDetails = new List<ChartData>
+	{
+        new ChartData { X= "Jan", Y= 35 },
+        new ChartData { X= "Feb", Y= 28 },
+        new ChartData { X= "Mar", Y= 34 },
+        new ChartData { X= "Apr", Y= 32 },
+        new ChartData { X= "May", Y= 40 },
+        new ChartData { X= "Jun", Y= 32 },
+        new ChartData { X= "Jul", Y= 35 },
+        new ChartData { X= "Aug", Y= 55 },
+        new ChartData { X= "Sep", Y= 38 },
+        new ChartData { X= "Oct", Y= 30 },
+        new ChartData { X= "Nov", Y= 25 },
+        new ChartData { X= "Dec", Y= 32 }
     };
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVfjvWzgzGJxvcy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrfDYCBKrPPwAeD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 **Opacity**
 
@@ -206,11 +204,10 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
 
 @using Syncfusion.Blazor.Charts
 
-<SfChart Title="Olympic Medals">
+<SfChart>
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-	
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="Y" Fill="blue" Opacity="0.5" Type="ChartSeriesType.Line">
+        <ChartSeries DataSource="@SalesDetails" Opacity="0.5" XName="X" YName="Y" Type="ChartSeriesType.Line">
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
@@ -218,29 +215,29 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
 @code{
     public class ChartData
     {
-        public string X { get; set; }
-        public double Y { get; set; }
+        public string X { get; set;}
+        public double Y {get; set;}
     }
 	
-    public List<ChartData> MedalDetails = new List<ChartData>
+    public List<ChartData> SalesDetails = new List<ChartData>
 	{
-        new ChartData { X= "South Korea", Y= 39.4 },
-        new ChartData { X= "India", Y= 61.3 },
-        new ChartData { X= "Pakistan", Y= 20.4 },
-        new ChartData { X= "Germany", Y= 65.1 },
-        new ChartData { X= "Australia", Y= 15.8 },
-        new ChartData { X= "Italy", Y= 29.2 },
-        new ChartData { X= "United Kingdom", Y= 44.6 },
-        new ChartData { X= "Saudi Arabia", Y= 9.7 },
-        new ChartData { X= "Russia", Y= 40.8 },
-        new ChartData { X= "Mexico", Y= 31 },
-        new ChartData { X= "Brazil", Y= 75.9 },
-        new ChartData { X= "China", Y= 51.4 }
+        new ChartData { X= "Jan", Y= 35 },
+        new ChartData { X= "Feb", Y= 28 },
+        new ChartData { X= "Mar", Y= 34 },
+        new ChartData { X= "Apr", Y= 32 },
+        new ChartData { X= "May", Y= 40 },
+        new ChartData { X= "Jun", Y= 32 },
+        new ChartData { X= "Jul", Y= 35 },
+        new ChartData { X= "Aug", Y= 55 },
+        new ChartData { X= "Sep", Y= 38 },
+        new ChartData { X= "Oct", Y= 30 },
+        new ChartData { X= "Nov", Y= 25 },
+        new ChartData { X= "Dec", Y= 32 }
     };
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhpXbCThLRGHzxQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLzZuWVAgVSvsir?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 **DashArray**
 
@@ -250,11 +247,10 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
 
 @using Syncfusion.Blazor.Charts
 
-<SfChart Title="Olympic Medals">
+<SfChart>
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-	
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="Y" DashArray="5,5" Type="ChartSeriesType.Line">
+        <ChartSeries DataSource="@SalesDetails" DashArray="5,5" XName="X" YName="Y" Type="ChartSeriesType.Line">
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
@@ -262,29 +258,29 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
 @code{
     public class ChartData
     {
-        public string X { get; set; }
-        public double Y { get; set; }
+        public string X { get; set;}
+        public double Y {get; set;}
     }
 	
-    public List<ChartData> MedalDetails = new List<ChartData>
+    public List<ChartData> SalesDetails = new List<ChartData>
 	{
-        new ChartData { X= "South Korea", Y= 39.4 },
-        new ChartData { X= "India", Y= 61.3 },
-        new ChartData { X= "Pakistan", Y= 20.4 },
-        new ChartData { X= "Germany", Y= 65.1 },
-        new ChartData { X= "Australia", Y= 15.8 },
-        new ChartData { X= "Italy", Y= 29.2 },
-        new ChartData { X= "United Kingdom", Y= 44.6 },
-        new ChartData { X= "Saudi Arabia", Y= 9.7 },
-        new ChartData { X= "Russia", Y= 40.8 },
-        new ChartData { X= "Mexico", Y= 31 },
-        new ChartData { X= "Brazil", Y= 75.9 },
-        new ChartData { X= "China", Y= 51.4 }
+        new ChartData { X= "Jan", Y= 35 },
+        new ChartData { X= "Feb", Y= 28 },
+        new ChartData { X= "Mar", Y= 34 },
+        new ChartData { X= "Apr", Y= 32 },
+        new ChartData { X= "May", Y= 40 },
+        new ChartData { X= "Jun", Y= 32 },
+        new ChartData { X= "Jul", Y= 35 },
+        new ChartData { X= "Aug", Y= 55 },
+        new ChartData { X= "Sep", Y= 38 },
+        new ChartData { X= "Oct", Y= 30 },
+        new ChartData { X= "Nov", Y= 25 },
+        new ChartData { X= "Dec", Y= 32 }
     };
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BthpXFMJVrGPHkni?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVzDuWBAUUspqiL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 **Width**
 
@@ -294,11 +290,10 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
 
 @using Syncfusion.Blazor.Charts
 
-<SfChart Title="Olympic Medals">
+<SfChart>
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-	
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="Y" Width="3" Type="ChartSeriesType.Line">
+        <ChartSeries DataSource="@SalesDetails" Width="3" XName="X" YName="Y" Type="ChartSeriesType.Line">
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
@@ -306,171 +301,29 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
 @code{
     public class ChartData
     {
-        public string X { get; set; }
-        public double Y { get; set; }
+        public string X { get; set;}
+        public double Y {get; set;}
     }
 	
-    public List<ChartData> MedalDetails = new List<ChartData>
+    public List<ChartData> SalesDetails = new List<ChartData>
 	{
-        new ChartData { X= "South Korea", Y= 39.4 },
-        new ChartData { X= "India", Y= 61.3 },
-        new ChartData { X= "Pakistan", Y= 20.4 },
-        new ChartData { X= "Germany", Y= 65.1 },
-        new ChartData { X= "Australia", Y= 15.8 },
-        new ChartData { X= "Italy", Y= 29.2 },
-        new ChartData { X= "United Kingdom", Y= 44.6 },
-        new ChartData { X= "Saudi Arabia", Y= 9.7 },
-        new ChartData { X= "Russia", Y= 40.8 },
-        new ChartData { X= "Mexico", Y= 31 },
-        new ChartData { X= "Brazil", Y= 75.9 },
-        new ChartData { X= "China", Y= 51.4 }
+        new ChartData { X= "Jan", Y= 35 },
+        new ChartData { X= "Feb", Y= 28 },
+        new ChartData { X= "Mar", Y= 34 },
+        new ChartData { X= "Apr", Y= 32 },
+        new ChartData { X= "May", Y= 40 },
+        new ChartData { X= "Jun", Y= 32 },
+        new ChartData { X= "Jul", Y= 35 },
+        new ChartData { X= "Aug", Y= 55 },
+        new ChartData { X= "Sep", Y= 38 },
+        new ChartData { X= "Oct", Y= 30 },
+        new ChartData { X= "Nov", Y= 25 },
+        new ChartData { X= "Dec", Y= 32 }
     };
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtVftFCphLPQpmSY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-## Empty points
-
-Data points with `null` or `undefined` values are considered empty. Empty data points are ignored and not plotted on the chart.
-
-**Mode**
-
-Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Mode) property to define how empty or missing data points are handled in the series. The default mode for empty points is [`Gap`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.EmptyPointMode.html#Syncfusion_Blazor_Charts_EmptyPointMode_Gap).
-
-```cshtml
-
-@using Syncfusion.Blazor.Charts
-
-<SfChart Title="Olympic Medals">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-
-    <ChartSeriesCollection>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="Y" Type="ChartSeriesType.Line">
-            <ChartEmptyPointSettings Mode="EmptyPointMode.Gap"></ChartEmptyPointSettings>
-            <ChartMarker Visible="true" Height="10" Width="10"></ChartMarker>
-        </ChartSeries>
-    </ChartSeriesCollection>
-</SfChart>
-
-@code {
-    public class ChartData
-    {
-        public string X { get; set; }
-        public double Y { get; set; }
-    }
-
-    public List<ChartData> MedalDetails = new List<ChartData>
-    {
-        new ChartData { X= "South Korea", Y= 39.4 },
-        new ChartData { X= "India", Y= 61.3 },
-        new ChartData { X= "Pakistan", Y= 20.4 },
-        new ChartData { X= "Germany", Y= 65.1 },
-        new ChartData { X= "Australia", Y = double.NaN},
-        new ChartData { X= "Italy", Y= 29.2 },
-        new ChartData { X= "United Kingdom", Y= 44.6 },
-        new ChartData { X= "Saudi Arabia", Y= 9.7 },
-        new ChartData { X= "Russia", Y= 40.8 },
-        new ChartData { X= "Mexico", Y= 31 },
-        new ChartData { X= "Brazil", Y= 75.9 },
-        new ChartData { X= "China", Y= 51.4 }
-    };
-}
-
-``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrTtlWzJdpzwplO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-**Fill**
-
-Use the [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Fill) property to customize the fill color of empty points in the series.
-
-```cshtml
-
-@using Syncfusion.Blazor.Charts
-
-<SfChart Title="Olympic Medals">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-    <ChartSeriesCollection>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="Y" Type="ChartSeriesType.Line">
-            <ChartEmptyPointSettings Fill="#FFDE59" Mode="EmptyPointMode.Average" />
-            <ChartMarker Visible="true" Height="10" Width="10"></ChartMarker>
-        </ChartSeries>
-    </ChartSeriesCollection>
-</SfChart>
-
-@code {
-    public class ChartData
-    {
-        public string X { get; set; }
-        public double Y { get; set; }
-    }
-
-    public List<ChartData> MedalDetails = new List<ChartData>
-    {
-        new ChartData { X= "South Korea", Y= 39.4 },
-        new ChartData { X= "India", Y= 61.3 },
-        new ChartData { X= "Pakistan", Y= 20.4 },
-        new ChartData { X= "Germany", Y= 65.1 },
-        new ChartData { X= "Australia", Y = double.NaN},
-        new ChartData { X= "Italy", Y= double.NaN },
-        new ChartData { X= "United Kingdom", Y= double.NaN },
-        new ChartData { X= "Saudi Arabia", Y= double.NaN },
-        new ChartData { X= "Russia", Y= 40.8 },
-        new ChartData { X= "Mexico", Y= 31 },
-        new ChartData { X= "Brazil", Y= 75.9 },
-        new ChartData { X= "China", Y= 51.4 }
-    };
-}
-
-``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLfjbiTTxTuQXtH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-**Border**
-
-Use the [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Border) property to customize the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointBorder.html#Syncfusion_Blazor_Charts_ChartEmptyPointBorder_Width) and [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointBorder.html#Syncfusion_Blazor_Charts_ChartEmptyPointBorder_Color) of the border for empty points.
-
-```cshtml
-
-@using Syncfusion.Blazor.Charts
-
-<SfChart Title="Olympic Medals">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-    <ChartSeriesCollection>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="Y" Type="ChartSeriesType.Line">
-            <ChartEmptyPointSettings Fill="#FFDE59" Mode="EmptyPointMode.Average"> 
-                <ChartEmptyPointBorder Color="red" Width="2"></ChartEmptyPointBorder>
-            </ChartEmptyPointSettings>
-            <ChartMarker Visible="true" Height="10" Width="10" />
-        </ChartSeries>
-    </ChartSeriesCollection>
-</SfChart>
-
-@code {
-    public class ChartData
-    {
-        public string X { get; set; }
-        public double Y { get; set; }
-    }
-
-    public List<ChartData> MedalDetails = new List<ChartData>
-    {
-        new ChartData { X= "South Korea", Y= 39.4 },
-        new ChartData { X= "India", Y= 61.3 },
-        new ChartData { X= "Pakistan", Y= 20.4 },
-        new ChartData { X= "Germany", Y= 65.1 },
-        new ChartData { X= "Australia", Y = double.NaN},
-        new ChartData { X= "Italy", Y= double.NaN },
-        new ChartData { X= "United Kingdom", Y= double.NaN },
-        new ChartData { X= "Saudi Arabia", Y= double.NaN },
-        new ChartData { X= "Russia", Y= 40.8 },
-        new ChartData { X= "Mexico", Y= 31 },
-        new ChartData { X= "Brazil", Y= 75.9 },
-        new ChartData { X= "China", Y= 51.4 }
-    };
-}
-
-``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBztPWTKSRqkZfu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLJXkMhKAzqdmaj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Multicolored line
 
@@ -480,11 +333,10 @@ To render a multicolored line series in your chart, define the series [`Type`](h
 
 @using Syncfusion.Blazor.Charts
 
-<SfChart Title="Olympic Medals">
+<SfChart>
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-	
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="Y" PointColorMapping="Color" Type="ChartSeriesType.MultiColoredLine">
+        <ChartSeries DataSource="@SalesDetails" XName="X" YName="Y" PointColorMapping="Color" Type="ChartSeriesType.MultiColoredLine">
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
@@ -492,26 +344,170 @@ To render a multicolored line series in your chart, define the series [`Type`](h
 @code{
     public class ChartData
     {
-        public string X { get; set; }
-        public double Y { get; set; }
+        public string X { get; set;}
+        public double Y {get; set;}
         public string Color { get; set; }
     }
 	
-    public List<ChartData> MedalDetails = new List<ChartData>
+    public List<ChartData> SalesDetails = new List<ChartData>
 	{
-        new ChartData { X= "South Korea", Y= 39.4, Color="red" },
-        new ChartData { X= "India", Y= 61.3, Color="green" },
-        new ChartData { X= "Pakistan", Y= 20.4, Color="#ff0097" },
-        new ChartData { X= "Germany", Y= 65.1, Color="crimson" },
-        new ChartData { X= "Australia", Y= 15.8, Color="blue" },
-        new ChartData { X= "Italy", Y= 29.2, Color="darkorange" },
+        new ChartData { X= "Jan", Y= 35, Color="#1f77b4" },
+        new ChartData { X= "Feb", Y= 28, Color="#ff7f0e" },
+        new ChartData { X= "Mar", Y= 34, Color="#2ca02c" },
+        new ChartData { X= "Apr", Y= 32, Color="#d62728" },
+        new ChartData { X= "May", Y= 40, Color="#9467bd" },
+        new ChartData { X= "Jun", Y= 32, Color="#8c564b" },
+        new ChartData { X= "Jul", Y= 35, Color="#e377c2" },
+        new ChartData { X= "Aug", Y= 55, Color="#7f7f7f" },
+        new ChartData { X= "Sep", Y= 38, Color="#bcbd22" },
+        new ChartData { X= "Oct", Y= 30, Color="#17becf" },
+        new ChartData { X= "Nov", Y= 25, Color="#ff69b4" },
+        new ChartData { X= "Dec", Y= 32, Color="#ff6347" }
     };
 }
 
 ``` 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhqiBrHryhdGmHf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZhfZYMLUfkRrUcB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor Multicolored Line Chart.](../images/chart-types-images/blazor-multicolor-line-chart.png)
+## Empty points
+
+Data points with `null`, `double.NaN` or `undefined` values are considered empty. Empty data points are ignored and not plotted on the chart.
+
+**Mode**
+
+Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Mode) property to define how empty or missing data points are handled in the series. The default mode for empty points is [`Gap`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.EmptyPointMode.html#Syncfusion_Blazor_Charts_EmptyPointMode_Gap).
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@SalesDetails" XName="X" YName="Y" Type="ChartSeriesType.Line">
+            <ChartEmptyPointSettings Mode="EmptyPointMode.Zero"></ChartEmptyPointSettings>
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code{
+    public class ChartData
+    {
+        public string X { get; set;}
+        public double Y {get; set;}
+    }
+	
+    public List<ChartData> SalesDetails = new List<ChartData>
+	{
+        new ChartData { X= "Jan", Y= 35 },
+        new ChartData { X= "Feb", Y= 28 },
+        new ChartData { X= "Mar", Y= 34 },
+        new ChartData { X= "Apr", Y= double.NaN },
+        new ChartData { X= "May", Y= 40 },
+        new ChartData { X= "Jun", Y= 32 },
+        new ChartData { X= "Jul", Y= 35 },
+        new ChartData { X= "Aug", Y= double.NaN },
+        new ChartData { X= "Sep", Y= 38 },
+        new ChartData { X= "Oct", Y= 30 },
+        new ChartData { X= "Nov", Y= 25 },
+        new ChartData { X= "Dec", Y= 32 }
+    };
+}
+
+``` 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrTjasBgzXXURKs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+**Fill**
+
+Use the [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Fill) property to customize the fill color of empty points in the series.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@SalesDetails" XName="X" YName="Y" Type="ChartSeriesType.Line">
+            <ChartEmptyPointSettings Fill="red" Mode="EmptyPointMode.Zero" />
+            <ChartMarker Visible="true" Height="7" Width="7" IsFilled="true"></ChartMarker>
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code{
+    public class ChartData
+    {
+        public string X { get; set;}
+        public double Y {get; set;}
+    }
+	
+    public List<ChartData> SalesDetails = new List<ChartData>
+	{
+        new ChartData { X= "Jan", Y= 35 },
+        new ChartData { X= "Feb", Y= 28 },
+        new ChartData { X= "Mar", Y= 34 },
+        new ChartData { X= "Apr", Y= double.NaN },
+        new ChartData { X= "May", Y= 40 },
+        new ChartData { X= "Jun", Y= 32 },
+        new ChartData { X= "Jul", Y= 35 },
+        new ChartData { X= "Aug", Y= double.NaN },
+        new ChartData { X= "Sep", Y= 38 },
+        new ChartData { X= "Oct", Y= 30 },
+        new ChartData { X= "Nov", Y= 25 },
+        new ChartData { X= "Dec", Y= 32 }
+    };
+}
+
+``` 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htBJXusBqzACyxwK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+**Border**
+
+Use the [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Border) property to customize the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointBorder.html#Syncfusion_Blazor_Charts_ChartEmptyPointBorder_Width) and [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointBorder.html#Syncfusion_Blazor_Charts_ChartEmptyPointBorder_Color) of the border for empty points.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@SalesDetails" XName="X" YName="Y" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Line">
+             <ChartEmptyPointSettings Fill="red" Mode="EmptyPointMode.Zero"> 
+                <ChartEmptyPointBorder Color="green" Width="2"></ChartEmptyPointBorder>
+            </ChartEmptyPointSettings>
+            <ChartMarker Visible="true" Height="7" Width="7" IsFilled="true"></ChartMarker>
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code{
+    public class ChartData
+    {
+        public string X { get; set;}
+        public double Y {get; set;}
+    }
+	
+    public List<ChartData> SalesDetails = new List<ChartData>
+	{
+        new ChartData { X= "Jan", Y= 35 },
+        new ChartData { X= "Feb", Y= 28 },
+        new ChartData { X= "Mar", Y= 34 },
+        new ChartData { X= "Apr", Y= double.NaN },
+        new ChartData { X= "May", Y= 40 },
+        new ChartData { X= "Jun", Y= 32 },
+        new ChartData { X= "Jul", Y= 35 },
+        new ChartData { X= "Aug", Y= double.NaN },
+        new ChartData { X= "Sep", Y= 38 },
+        new ChartData { X= "Oct", Y= 30 },
+        new ChartData { X= "Nov", Y= 25 },
+        new ChartData { X= "Dec", Y= 32 }
+    };
+}
+
+``` 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VthftYsrUzeKyodV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Events
 
@@ -523,48 +519,47 @@ The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 
 @using Syncfusion.Blazor.Charts
 
-<SfChart Title="Olympic Medals">
+<SfChart>
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
     <ChartEvents OnSeriesRender="SeriesRender"></ChartEvents>
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="Y" Type="ChartSeriesType.Line">
+        <ChartSeries DataSource="@SalesDetails" XName="X" YName="Y" Type="ChartSeriesType.Line">
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
 
-@code {
+@code{
     public class ChartData
     {
-        public string X { get; set; }
-        public double Y { get; set; }
+        public string X { get; set;}
+        public double Y {get; set;}
     }
 
     public void SeriesRender(SeriesRenderEventArgs args)
     {
         args.Fill = "#FF4081";
     }
-
-    public List<ChartData> MedalDetails = new List<ChartData>
-    {
-        new ChartData { X= "South Korea", Y= 39.4 },
-        new ChartData { X= "India", Y= 61.3 },
-        new ChartData { X= "Pakistan", Y= 20.4 },
-        new ChartData { X= "Germany", Y= 65.1 },
-        new ChartData { X= "Australia", Y= 15.8 },
-        new ChartData { X= "Italy", Y= 29.2 },
-        new ChartData { X= "United Kingdom", Y= 44.6 },
-        new ChartData { X= "Saudi Arabia", Y= 9.7 },
-        new ChartData { X= "Russia", Y= 40.8 },
-        new ChartData { X= "Mexico", Y= 31 },
-        new ChartData { X= "Brazil", Y= 75.9 },
-        new ChartData { X= "China", Y= 51.4 }
+	
+    public List<ChartData> SalesDetails = new List<ChartData>
+	{
+        new ChartData { X= "Jan", Y= 35 },
+        new ChartData { X= "Feb", Y= 28 },
+        new ChartData { X= "Mar", Y= 34 },
+        new ChartData { X= "Apr", Y= 32 },
+        new ChartData { X= "May", Y= 40 },
+        new ChartData { X= "Jun", Y= 32 },
+        new ChartData { X= "Jul", Y= 35 },
+        new ChartData { X= "Aug", Y= 55 },
+        new ChartData { X= "Sep", Y= 38 },
+        new ChartData { X= "Oct", Y= 30 },
+        new ChartData { X= "Nov", Y= 25 },
+        new ChartData { X= "Dec", Y= 32 }
     };
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLJjPMzKelOwLZm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVTDkMhAIHPfJFn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
-![Blazor Line Chart with custom series.](../images/chart-types-images/blazor-line-chart-custom-series.png)
 ### Point render
 
 The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnPointRender) event allows you to customize each data point before it is rendered on the chart.
@@ -573,47 +568,47 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 
 @using Syncfusion.Blazor.Charts
 
-<SfChart Title="Olympic Medals">
+<SfChart>
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-    <ChartEvents OnPointRender="PointRender"></ChartEvents>
+   <ChartEvents OnPointRender="PointRender"></ChartEvents>
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="Y" Type="ChartSeriesType.Line">
-            <ChartMarker Visible="true" Height="10" Width="10"></ChartMarker>
+        <ChartSeries DataSource="@SalesDetails" XName="X" YName="Y" Type="ChartSeriesType.Line">
+            <ChartMarker Visible="true" Height="7" Width="7"></ChartMarker>
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
 
-@code {
+@code{
     public class ChartData
     {
-        public string X { get; set; }
-        public double Y { get; set; }
+        public string X { get; set;}
+        public double Y {get; set;}
     }
 
     public void PointRender(PointRenderEventArgs args)
     {
-        args.Fill = args.Point.X.ToString() == "Australia" ? "#E91E63" : "#3F51B5";
+        args.Fill = (args.Point.Index % 2 != 0) ? "#ff6347" : "#009cb8";
     }
-
-    public List<ChartData> MedalDetails = new List<ChartData>
-    {
-        new ChartData { X= "South Korea", Y= 39.4 },
-        new ChartData { X= "India", Y= 61.3 },
-        new ChartData { X= "Pakistan", Y= 20.4 },
-        new ChartData { X= "Germany", Y= 65.1 },
-        new ChartData { X= "Australia", Y= 15.8 },
-        new ChartData { X= "Italy", Y= 29.2 },
-        new ChartData { X= "United Kingdom", Y= 44.6 },
-        new ChartData { X= "Saudi Arabia", Y= 9.7 },
-        new ChartData { X= "Russia", Y= 40.8 },
-        new ChartData { X= "Mexico", Y= 31 },
-        new ChartData { X= "Brazil", Y= 75.9 },
-        new ChartData { X= "China", Y= 51.4 }
+	
+    public List<ChartData> SalesDetails = new List<ChartData>
+	{
+        new ChartData { X= "Jan", Y= 35 },
+        new ChartData { X= "Feb", Y= 28 },
+        new ChartData { X= "Mar", Y= 34 },
+        new ChartData { X= "Apr", Y= 32 },
+        new ChartData { X= "May", Y= 40 },
+        new ChartData { X= "Jun", Y= 32 },
+        new ChartData { X= "Jul", Y= 35 },
+        new ChartData { X= "Aug", Y= 55 },
+        new ChartData { X= "Sep", Y= 38 },
+        new ChartData { X= "Oct", Y= 30 },
+        new ChartData { X= "Nov", Y= 25 },
+        new ChartData { X= "Dec", Y= 32 }
     };
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLzNvCpqRSLZzOz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNLfDYsrUxgtYVoO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
