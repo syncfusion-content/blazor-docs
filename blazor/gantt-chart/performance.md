@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Performance tips for Blazor Gantt Chart Component | Syncfusion
-description: Check out and learn how to improve the loading performance of Blazor Gantt Chart Component even binding large data set.
+description: Check out and learn here all about how to improve the loading performance of Syncfusion Blazor Gantt Chart component and more.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
