@@ -17,7 +17,7 @@ You can use the `Width` property to set the width of the AI AssistView.
 
 @using Syncfusion.Blazor.InteractiveChat
 
-<div class="aiassist-container" style="height: 350px;">
+<div class="aiassist-container" style="height: 350px; width: 750px;">
     <SfAIAssistView Width="650px" PromptRequested="@PromptRequest"></SfAIAssistView>
 </div>
 

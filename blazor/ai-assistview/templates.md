@@ -294,8 +294,7 @@ You can use the `FooterTemplate` tag directive to customize the footer items in 
         flex-direction: column;
         gap: 10px;
         padding: 10px;
-        background-color: #f5f5f5;
-        border-top: 1px solid #ccc;
+        background-color: transparent;
     }
 
     #promptTextArea {
@@ -306,7 +305,6 @@ You can use the `FooterTemplate` tag directive to customize the footer items in 
     }
 
     #sendPrompt {
-        align-self: flex-end;
         padding: 5px 15px;
     }
 </style>
