@@ -24,7 +24,7 @@ You can use the `BannerTemplate` tag directive to customize the banner view in t
         <AssistViews>
             <AssistView>
                 <BannerTemplate>
-                    <div class="banner-content"><h3><span class="e-icons e-assistview-icon"></span>AI Assistance</h3><div id="bannerCarousel"></div></div>
+                    <div class="banner-content"><h3><span class="e-icons e-assistview-icon"></span>AI Assistance</h3></div>
                 </BannerTemplate>
             </AssistView>
         </AssistViews>
