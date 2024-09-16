@@ -61,7 +61,7 @@ You can use the `PromptPlaceholder` property to set the placeholder text for the
 
 ## Prompt-response collection
 
-By using the `Prompts` property you can specifies the collection of prompts and their responses in the AI AssistView. It allows to load pre-defined prompt & response pairs during the initial setup or just either one of it ensuring the component is initialized with data condigured.
+By using the `Prompts` property you can specifies the collection of prompts and their responses in the AI AssistView. It allows to load pre-defined prompt & response pairs during the initial setup or just either one of it ensuring the component is initialized with data configured.
 
 By using the `Prompts` property, you can specify the collection of prompts and responses, allowing you to load pre-defined pairs or individual entries ensuring the control is initialized with the configured data.
 
