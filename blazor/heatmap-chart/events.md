@@ -13,11 +13,11 @@ This section describes the events that will be triggered for appropriate actions
 
 ## CellClicked
 
-When you click on a HeatMap cell, the [CellClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_CellClicked) event is triggered. More information about the arguments in this event can be found [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.CellClickEventArgs.html). When you right-click on a HeatMap cell, the `CellClicked` event is triggered, and the value of `HasRightClicked` property will be true. 
+When you click on a HeatMap cell, the [CellClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_CellClicked) event is triggered. More information about the arguments in this event can be found [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.CellClickEventArgs.html). When you right-click on a HeatMap cell, the `CellClicked` event will be triggered, and the `HasRightClicked` property in the event argument will be set to **true**.
 
-The following example demonstrates how to use the `CellClicked` event and to notify the right click event in the HeatMap component. In this example, a dialog box is displayed only on right-clicking the HeatMap cell.
+The following example demonstrates how to use the `CellClicked` event. In this example, content will be displayed when you click on a HeatMap cell. Additionally, a dialog box showing the cell value, x-axis label, and y-axis label of the current cell will appear only when you right-click on the HeatMap cell.
 
-```
+```cshtml
 @using Syncfusion.Blazor.HeatMap
 @using Syncfusion.Blazor.Popups
 
@@ -133,7 +133,7 @@ The following example demonstrates how to use the `CellClicked` event and to not
 }
 ```
 
-![Cell Clicked Event and Notify the Right Click event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-cell-click-event-and-notify-right-click-event.gif)
+![CellClicked event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-cell-click-event-and-notify-right-click-event.gif)
 
 ## CellRendering
 
@@ -470,7 +470,7 @@ The following example demonstrates how to use the `TooltipRendering` event to cu
 
 ## CellDoubleClicked
 
-When you double click on a HeatMap cell, the [CellDoubleClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_CellDoubleClicked) event is triggered. More information about the arguments in this event can be found [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.CellDoubleClickEventArgs.html).
+When you double-click on a HeatMap cell, the [CellDoubleClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_CellDoubleClicked) event is triggered. To learn more about the arguments for this event, refer to the documentation [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.CellDoubleClickEventArgs.html).
 
 The following example demonstrates how to use the `CellDoubleClicked` event to retrieve the value of a cell, as well as its x-axis and y-axis labels, by performing a double-click action.
 
@@ -528,7 +528,7 @@ The following example demonstrates how to use the `CellDoubleClicked` event to r
 
 ## LegendRendering
 
-The [LegendRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_LegendRendering) event will be triggered before each legend is rendered. More information about the arguments in this event can be found [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.LegendRenderEventArgs.html).
+The [LegendRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_LegendRendering) event is triggered before each legend item is rendered. To learn more about the arguments for this event, refer to the documentation [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.LegendRenderEventArgs.html).
 
 The following example demonstrates how to use the `LegendRendering` event to customize the value of the text in the legend.
 

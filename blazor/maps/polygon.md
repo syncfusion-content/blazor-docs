@@ -266,14 +266,11 @@ Any HTML element can be rendered in the tooltip of the polygon shapes using the 
 ![Blazor Maps with tooltip template for polygon shape](./images/Polygon/blazor-map-polygon-shape-tooltip-template.png)
 
 
-## Adding line shape
+## Changing a Polygon Shape to a Line
 
-The line shape can be rendered over the tile images or map layer by defining the [Points](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html#Syncfusion_Blazor_Maps_MapsPolygon_Points) property in the [MapsPolygon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html) tag in the Maps component. To render the line shape, set the `ShapeType` property to `LineString`. The `Points` property uses a collection of latitude and longitude values to define the line shape.
+The rendered polygon shape can be changed to a line shape by setting the `ShapeType` property to **LineString**.
 
-The MapsPolygon properties such as `Fill`, `Opacity`, `BorderColor`, `BorderWidth`, `BorderOpacity` and `ShapeType` are used to customize the line shapes in the Maps component.
-
-The following example shows how to customize the line shape over the tile images, display the tooltip for the line shape, highlight the line shape and select the line shape on the map. In this example, the latitude and longitude values are created from the coordinates in the JSON file and assigned to the `Points` property within `MapsPolygon` tag.
-
+The following example demonstrates how to customize a line shape on an online map, display a tooltip for the line shape, highlight the line shape, and select the line shape on the map. In this example, latitude and longitude values are extracted from coordinates in a JSON file and assigned to the `Points` property within the `MapsPolygon` tag.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -343,6 +340,6 @@ The following example shows how to customize the line shape over the tile images
     }
 }
 ```
->Note: Refer the value of the JSON file of [line.json](https://www.syncfusion.com/downloads/support/directtrac/general/ze/line140125043)  here.
+> Note: Refer the content of the JSON file [line.json here](https://www.syncfusion.com/downloads/support/directtrac/general/ze/line140125043).
 
 ![Blazor Maps with line shape](./images/Polygon/blazor-map-line-shape-on-tile-images.gif)

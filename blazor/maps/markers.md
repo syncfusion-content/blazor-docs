@@ -465,11 +465,11 @@ The Maps can be initially scaled to the center value based on the marker distanc
 
 ![Blazor Maps Marker with Zooming](./images/Marker/blazor-maps-marker-zooming.PNG)
 
-## Disabling the Zoom on Marker Click
+## Disabling Zoom on Marker Click
 
-To prevent the zoom-in action when clicking on the marker, you can set `ZoomOnMarkerClick` as false in the `MapsZoomSettings`. This diasble the zooming action only when clicking on the markers in the Maps. By default, the value is set to **true**, which enables zooming actions when markers are clicked.
+Maps typically zoom in when you click or double-click on them. This zooming also occurs when you click on a marker. To prevent zooming when clicking on a marker, you can set `ZoomOnMarkerClick` to **false** in the `MapsZoomSettings`. This setting disables zooming specifically for marker clicks. By default, `ZoomOnMarkerClick` is set to **true**.
 
-```
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -501,7 +501,7 @@ To prevent the zoom-in action when clicking on the marker, you can set `ZoomOnMa
 }
 ```
 
-![Blazor Maps Disabling the Zooming on Marker Click](./images/Marker/blazor-maps-disabling-zooming-on-marker-click.gif)
+![Disabling Zoom on Marker Click in Blazor Maps](./images/Marker/blazor-maps-disabling-zooming-on-marker-click.gif)
 
 ## Marker clustering
 
