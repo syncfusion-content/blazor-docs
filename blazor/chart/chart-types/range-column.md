@@ -468,8 +468,6 @@ The [ColumnSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
 ``` 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjLUWrrnTnRLsksm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor Range Column Chart with Custom Series](../images/chart-types-images/blazor-range-column-chart-custom-series.png)
-
 ## Empty points
 
 Data points with `null` or `undefined` values are considered empty. Empty data points are ignored and not plotted on the chart.
@@ -733,6 +731,7 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
         <ChartSeries DataSource="@WeatherReport1" XName="X" Name="Series1" High="High" Low="Low" Width="2" Type="Syncfusion.Blazor.Charts.ChartSeriesType.RangeColumn" />
         <ChartSeries DataSource="@WeatherReport2" XName="X" Name="Series2" High="High" Low="Low" Width="2" Type="Syncfusion.Blazor.Charts.ChartSeriesType.RangeColumn" />
     </ChartSeriesCollection>
+    <ChartLegendSettings Visible="false"></ChartLegendSettings>
 </SfChart>
 
 @code {
@@ -746,7 +745,7 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 
     public void PointRender(PointRenderEventArgs args)
     {
-        args.Fill = args.Point.X.ToString() == "Wed" ? "#E91E63" : "#3F51B5";
+        args.Fill = (args.Point.Index % 2 != 0) ? "#ff6347" : "#009cb8";
     }
 
     public List<ChartData> WeatherReport1 = new List<ChartData>
@@ -773,7 +772,7 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLfDvVtjsnrIJCx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVztaigzJrTUPvR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
