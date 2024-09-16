@@ -9,71 +9,91 @@ documentation: ug
 
 # Pagination in Blazor File Manager Component
 
-Pagination in the Blazor File Manager component optimizes the performance and user experience by loading only a specified number of files and folders per page. This feature significantly improves performance when managing large datasets, reducing load times and enhancing interaction.
+Pagination provides an option to display files and folders in segmented pages, making it easier to navigate through large directories. This feature is particularly useful when dealing with extensive file systems in the File Manager component.
 
-## Enabling Pagination
+To enable pagination, you need to set the [allowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_AllowPaging) property to **true**. This property determines whether paging is enabled or disabled for the file manager. When `allowPaging` is enabled, a pager control rendered at the bottom of the file manager, allowing you to navigate through different pages.
 
-To enable pagination in the File Manager, set the [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_AllowPaging) property to `true`. This enables pagination for both details view and large icons view, ensuring efficient navigation and file management across various display modes.
+## Customize the pagination options
 
-## Events in Pagination
+Customizing the pagination options in the Syncfusion File Manager allows you to tailor the pagination control according to your specific requirements. You can customize the pagination to display the number of pages using the `NumericItemCount` property, change the current page using `currentPage` property, display the number of records in the file manager using the `pageSize` property, and even adjust the page sizes in a dropdown using the `pageSizes` property.
 
-You can add events to handle actions during pagination in the File Manager. The [PageChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_PageChanging) event triggers before the page is changed, allowing you to handle actions before navigation. The [PageChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_PageChanged) event occurs after the page has been switched, allows you to perform actions like loading new data after the page has changed.
+### Change the page size
+
+The Syncfusion File Manager allows you to control the number of records displayed per page, providing you with flexibility in managing your data. This feature is particularly useful when you want to adjust the amount of data visible to you at any given time. To achieve this, you can utilize the [pageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerPagesSettings.html#Syncfusion_Blazor_FileManager_FileManagerPagesSettings_PageSizes) property. This property is used to specify the initial number of records to display on each page. 
+
+The following example demonstrates how to change the page size of a File Manager using the `PageSize` property.
 
 ````cshtml
 @using Syncfusion.Blazor.FileManager;
 @using Syncfusion.Blazor.Navigations;
-<SfFileManager TValue="FileManagerDirectoryContent" AllowPaging="true">
+
+<SfFileManager  TValue="FileManagerDirectoryContent" AllowPaging="true">
+    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/FileOperations"
+                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/Upload"
+                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/Download"
+                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/GetImage">
+    </FileManagerAjaxSettings>
+    <FileManagerPageSettings PageSize="3"></FileManagerPageSettings>
+</SfFileManager>
+````
+Below is a screenshot illustrating the `PageSize` property in the File Manager component.
+
+![Pagination in Blazor FileManager](images/blazor-filemanager-pagesize.png)
+
+### Change the page count
+
+The `NumericItemsCount` property is used to control the number of numeric buttons displayed in the pager when pagination is enabled.
+ ````cshtml
+ @using Syncfusion.Blazor.FileManager;
+@using Syncfusion.Blazor.Navigations;
+<SfFileManager TValue="FileManagerDirectoryContent" AllowPaging="true" >
     <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/FileOperations"
                              UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/Upload"
                              DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/Download"
                              GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/GetImage">
     </FileManagerAjaxSettings>
     <FileManagerEvents TValue="FileManagerDirectoryContent" PageChanging="OnChanging" PageChanged="OnChanged"></FileManagerEvents>
+    <FileManagerPageSettings NumericItemsCount="5"></FileManagerPageSettings>
 </SfFileManager>
-@code {
+ ````
 
-    public void OnChanging(PageChangingEventArgs args)
-    {
-        //Add the required code here
-    }
-    public void OnChanged(PageChangedEventArgs args)
-    {
-        //Add the required code here
-    }
-}
+Below is a screenshot illustrating the `NumericItemCount` property in the File Manager component.
 
+![Pagination in Blazor FileManager](images/blazor-filemanager-numericitemcount.png)
+
+### Change the current page
+
+The Syncfusion File Manager allows you to change the currently displayed page, which can be particularly useful when you need to navigate through different pages of data either upon the initial rendering of the file manager or update the displayed page based on interactions or specific conditions. The default value of **CurrentPage** property is 1.
+
+To change the current page in the Syncfusion File Manager, you can utilize the [CurrentPage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerPagesSettings.html#Syncfusion_Blazor_FileManager_FileManagerPagesSettings_CurrentPage) property in [FileManagerPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerPageSettings.html) component, which defines the current page number of the pager.
+
+The following example demonstrates how to implement the `CurrentPage` property.
+
+````cshtml
+@using Syncfusion.Blazor.FileManager;
+@using Syncfusion.Blazor.Navigations;
+
+<SfFileManager TValue="FileManagerDirectoryContent" AllowPaging="true">
+    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/FileOperations"
+                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/Upload"
+                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/Download"
+                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/GetImage">
+    </FileManagerAjaxSettings>
+    <FileManagerPageSettings PageSize="3" CurrentPage="2">
+       
+    </FileManagerPageSettings>
+</SfFileManager>
 ````
+Below is a screenshot illustrating the `CurrentPage` property in the File Manager component.
 
-## Page Size Configuration
+![Pagination in Blazor FileManager](images/blazor-filemanager-currentpage.png)
 
-The [FileManagerPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerPageSettings.html) component's [PageSizes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerPagesSettings.html#Syncfusion_Blazor_FileManager_FileManagerPagesSettings_PageSizes) property enables a dropdown in pager that allows you to dynamically change the number of records displayed in the current page. [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerPagesSettings.html#Syncfusion_Blazor_FileManager_FileManagerPagesSettings_PageSizes) property allows number of items to be loaded in a single page. Here files are sorted using [Custom sorting](https://blazor.syncfusion.com/documentation/file-manager/file-operations#custom-sorting).
-
-The `NumericItemsCount` property is used to control the number of numeric buttons displayed in the pager when pagination is enabled. These buttons allow users to directly navigate to a specific page in the File Manager.
-
-Here is a sample demonstrating Pagination enabled in the File Manager.
-
-```cshtml
-
-@using Syncfusion.Blazor.FileManager
-
-    <SfFileManager TValue="FileManagerDirectoryContent" AllowPaging="true" Path="/Text Documents/" SortComparer="new NaturalSortComparer()">
-        <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/FileOperations"
-                                 UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/Upload"
-                                 DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/Download"
-                                 GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/GetImage">
-        </FileManagerAjaxSettings>
-        <FileManagerPageSettings PageSize="25" NumericItemsCount="8" PageSizes="@(new List<int>(){10,25,50})"></FileManagerPageSettings>
-    </SfFileManager>
-
-```
-
-Below is a screenshot illustrating the pagination feature in the File Manager component.
-
-![Pagination in Blazor FileManager](images/blazor-filemanager-pagination.png)
 
 ## Pager Template in Blazor File Manager
 
 The [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerPageSettings.html#Syncfusion_Blazor_FileManager_FileManagerPageSettings_Template) property in the [FileManagerPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerPageSettings.html) allows you to insert custom UI elements, such as buttons or any HTML elements into the File Manager page settings. This offers greater flexibility and customization for the paging interface.
+
+### How to navigate to particular page
 
 By invoking the [GoToPageAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_GoToPageAsync) method within the pager template for the Blazor File Manager component, you can navigate to a specific page by passing the page number to the method.
 
@@ -108,3 +128,65 @@ Below is an example on how to customize pagination in the Syncfusion File Manage
 The screenshot below shows the Blazor File Manager component with a custom pagination button.
 
 ![Pager Template in Blazor FileManager](images/blazor-filemanager-page-template.png)
+
+### Pager with Page Sizes dropdown
+
+The [FileManagerPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerPageSettings.html) component's [PageSizes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerPagesSettings.html#Syncfusion_Blazor_FileManager_FileManagerPagesSettings_PageSizes) property enables a dropdown in pager that allows you to dynamically change the number of records displayed in the current page. [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerPagesSettings.html#Syncfusion_Blazor_FileManager_FileManagerPagesSettings_PageSizes) property allows number of items to be loaded in a single page. Here files are sorted using [Custom sorting](https://blazor.syncfusion.com/documentation/file-manager/file-operations#custom-sorting).
+
+Here is a sample demonstrating how `PageSizes` property is used when Pagination enabled in the File Manager.
+
+```cshtml
+
+@using Syncfusion.Blazor.FileManager
+
+    <SfFileManager TValue="FileManagerDirectoryContent" AllowPaging="true" Path="/Text Documents/" SortComparer="new NaturalSortComparer()">
+        <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/FileOperations"
+                                 UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/Upload"
+                                 DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/Download"
+                                 GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/GetImage">
+        </FileManagerAjaxSettings>
+        <FileManagerPageSettings PageSizes="@(new List<int>(){10,25,50})"></FileManagerPageSettings>
+    </SfFileManager>
+
+```
+
+The screenshot below shows the Pages Sizes dropdown in the File Manager.
+
+![Pagination in Blazor FileManager](images/blazor-filemanager-pagesize-dropdown.png)
+
+## Events in Pagination
+
+You can add events to handle actions during pagination in the File Manager. 
+
+The [PageChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_PageChanging) event triggers before the page is changed, allowing you to handle actions before navigation.
+
+The [PageChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_PageChanged) event occurs after the page has been switched, allows you to perform actions like loading new data after the page has changed.
+
+````cshtml
+@using Syncfusion.Blazor.FileManager;
+@using Syncfusion.Blazor.Navigations;
+<SfFileManager TValue="FileManagerDirectoryContent" AllowPaging="true">
+    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/FileOperations"
+                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/Upload"
+                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/Download"
+                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/GetImage">
+    </FileManagerAjaxSettings>
+    <FileManagerEvents TValue="FileManagerDirectoryContent" PageChanging="OnChanging" PageChanged="OnChanged"></FileManagerEvents>
+</SfFileManager>
+@code {
+
+    public void OnChanging(PageChangingEventArgs args)
+    {
+        //Add the required code here
+    }
+    public void OnChanged(PageChangedEventArgs args)
+    {
+        //Add the required code here
+    }
+}
+
+````
+
+## See also
+
+* [How to Enable Virtualization in Blazor FileManager Component](https://blazor.syncfusion.com/documentation/file-manager/virtualization)
