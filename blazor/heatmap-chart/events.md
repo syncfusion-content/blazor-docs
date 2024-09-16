@@ -21,7 +21,12 @@ The following example demonstrates how to use the `CellClicked` event and to not
 @using Syncfusion.Blazor.HeatMap
 @using Syncfusion.Blazor.Popups
 @inject IJSRuntime JS
- 
+
+@if (IsCellClicked)
+{
+    <div>@CellClicked</div>
+}
+
 <SfHeatMap DataSource="@dataSource">
     <HeatMapEvents CellClicked="CellClick"></HeatMapEvents>
     <HeatMapXAxis Labels="@XAxisLabels"></HeatMapXAxis>
@@ -33,6 +38,7 @@ The following example demonstrates how to use the `CellClicked` event and to not
     </HeatMapCellSettings>
     <HeatMapLegendSettings ShowLabel="true"></HeatMapLegendSettings>
 </SfHeatMap>
+
 
 @if (this.ShowButton)
 {
@@ -69,18 +75,20 @@ The following example demonstrates how to use the `CellClicked` event and to not
         border-collapse: collapse;
     }
 
-    .styled-table th, .styled-table td {
-        border: 1px solid black;
-        padding: 10px;
-        text-align: left;
-    }
+        .styled-table th, .styled-table td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
 
-    .styled-table thead {
-        background-color: #f2f2f2;
-    }
+        .styled-table thead {
+            background-color: #f2f2f2;
+        }
 </style>
+
 @code {
     public bool IsCellClicked = false;
+    public string CellClicked;
     public bool ShowButton { get; set; } = false;
     public bool Visibility { get; set; } = false;
     public ResizeDirection[] DialogResizeDirections { get; set; } = new ResizeDirection[] { ResizeDirection.All };
@@ -102,7 +110,7 @@ The following example demonstrates how to use the `CellClicked` event and to not
         {41, 55, 73, 23, 3, 79},
     };
 
-    public async Task CellClick(Syncfusion.Blazor.HeatMap.CellClickEventArgs args)
+    public void CellClick(Syncfusion.Blazor.HeatMap.CellClickEventArgs args)
     {
         if (args.HasRightClicked)
         {
@@ -115,7 +123,7 @@ The following example demonstrates how to use the `CellClicked` event and to not
             cellValue = args.Value;
         } else {
             IsCellClicked = true;
-            await JS.InvokeVoidAsync("eval", @"alert('The cell clicked event has been triggered!!');");
+            CellClicked = "The cell clicked event has been triggered!!";
         }
     }
 
