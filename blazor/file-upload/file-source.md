@@ -11,7 +11,7 @@ documentation: ug
 
 ## Directory upload
 
-The [Blazor File Upload](https://www.syncfusion.com/blazor-components/blazor-file-upload/) component allows you to upload all files in the folders to server by using the [DirectoryUpload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderModel.html#Syncfusion_Blazor_Inputs_UploaderModel_DirectoryUpload) property. When this property is enabled, the uploader component processes the files by iterating through the files and sub-directories in a directory. It allows you to select only folders instead of files to upload.
+The [Blazor File Upload](https://www.syncfusion.com/blazor-components/blazor-file-upload) component allows you to upload all files in the folders to server by using the [DirectoryUpload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderModel.html#Syncfusion_Blazor_Inputs_UploaderModel_DirectoryUpload) property. When this property is enabled, the uploader component processes the files by iterating through the files and sub-directories in a directory. It allows you to select only folders instead of files to upload.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
