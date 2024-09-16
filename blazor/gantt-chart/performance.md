@@ -45,7 +45,7 @@ To improve performance when working with large datasets, you can disable this au
     <SfGantt DataSource="@TaskCollection" AutoCalculateDateScheduling="false">  
     </SfGantt>
 ```
-N> When setting `Autocalculatedatescheduling` property to `false`, you must provide the valid data source; otherwise, the Gantt chart will render with invalid dates.
+N> When setting `AutoCalculateDateScheduling` property to `false`, you must provide the valid data source; otherwise, the Gantt chart will render with invalid dates.
 
 ## How to improve loading performance by binding large data by showing custom text or element
 
