@@ -186,10 +186,10 @@ You can use the `ActiveView` property set the active view in the AI AssistView. 
 @using Syncfusion.Blazor.InteractiveChat
 
 <div class="aiassist-container" style="height: 350px; width: 650px;">
-    <SfAIAssistView PromptRequested="@PromptRequest" ActiveView="0">
+    <SfAIAssistView PromptRequested="@PromptRequest" ActiveView="1">
         <AssistViews>
             <AssistView Header="Prompt"></AssistView>
-            <CustomView Header="Response"></CustomView>
+            <CustomView Header="Response" IconCss="e-icons e-comment-show"></CustomView>
         </AssistViews>
     </SfAIAssistView>
 </div>
