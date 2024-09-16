@@ -167,7 +167,7 @@ The WebApiAdaptor can be used to bind query builder with Web API created using O
 
 ## Complex Data Binding
 
-Complex Data Binding allows you to create subfield for columns. To implement complex data binding, either bind the complex data in nested columns or specify complex data source and Separator must be given in querybuilder.
+Complex Data Binding allows you to create subfield for columns. To implement complex data binding, either bind the complex data in nested columns or specify complex data source and Separator must be given in query builder.
 
 ```cshtml
 
