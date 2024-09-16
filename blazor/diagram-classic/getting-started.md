@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Diagram Component | Syncfusion
-description: Checkout and learn about getting started with Blazor Diagram component of Syncfusion, and more details.
+description: Checkout and learn about getting started with Syncfusion Blazor Diagram component and more details.
 platform: Blazor
 control: Diagram
 documentation: ug
@@ -26,7 +26,7 @@ This section briefly explains about how to include a Diagram in your Blazor Serv
 </head>
 ```
 
-N> For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
+N> For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie) for more information.
 
 ```cshtml
 <head>
@@ -242,7 +242,7 @@ Let us create and add a `nodes` with specific position, size, label and shape. C
 
 ![Diagram](images/Diagram.png)
 
-N> You can refer to our [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Diagram example](https://blazor.syncfusion.com/demos/diagram/flowchart?theme=bootstrap4/) to understand how to present and manipulate data.
+N> You can refer to our [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Diagram example](https://blazor.syncfusion.com/demos/diagram/flowchart?theme=bootstrap4) to understand how to present and manipulate data.
 
 ## See Also
 
