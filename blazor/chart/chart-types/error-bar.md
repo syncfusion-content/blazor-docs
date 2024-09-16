@@ -138,8 +138,6 @@ To customize the error bar type, specify the [Type](https://help.syncfusion.com/
 ``` 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BNVpjbVteQTEHUBm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
-![Blazor Line Chart with Custom Error Bar](../images/chart-types-images/blazor-line-chart-custom-error-bar.png)
-
 ## Error bar mode
 
 Error bar mode is used to define whether the error bar line should be drawn horizontally, vertically, or on both sides. To change the error bar mode, use [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartErrorBarSettings.html#Syncfusion_Blazor_Charts_ChartErrorBarSettings_Mode) property in [ChartErrorBarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartErrorBarSettings.html).
@@ -266,8 +264,6 @@ To customize the error bar cap [Length](https://help.syncfusion.com/cr/blazor/Sy
 
 ``` 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZVJXbVDIGdTeIOM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
-
-![Blazor Line Chart with Custom Error Bar Cap](../images/othertypes/blazor-line-chart-custom-error-bar-cap.png)
 
 ## Events
 
