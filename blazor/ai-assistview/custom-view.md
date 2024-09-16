@@ -103,7 +103,7 @@ You can customize the view icons by using the `IconCss` property. By default the
 
 ![Blazor AI AssistView type IconCss](./images/ai-assistview-type-icon.png)
 
-### Setting viewTemplate 
+### Setting view template 
 
 You can use the `ViewTemplate` tag directive to add the view content of the multiple views added in the AI AssistView.
 
@@ -177,7 +177,7 @@ You can use the `ShowClearButton` property using the `AssistView` tag directive 
 
 ![Blazor AI AssistView ClearButton](./images/ai-assistview-clear-btn.png)
 
-## Setting activeView
+## Setting active view
 
 You can use the `ActiveView` property set the active view in the AI AssistView. By default, the value is `0`.
 
