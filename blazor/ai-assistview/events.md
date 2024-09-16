@@ -59,7 +59,7 @@ The `PromptRequested` event is triggered when the prompt request is made in the 
 
 ## PromptChanged
 
-The `PromptChanged` event is triggered when the prompt text changed in the AI AssistView component.
+The `PromptChanged` event is triggered when the prompt text is changed in the AI AssistView component.
 
 ```cshtml
 @using Syncfusion.Blazor.InteractiveChat

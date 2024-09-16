@@ -86,7 +86,7 @@ In the following example, toolbar item type is set as `Button`.
 
 #### Setting text
 
-You can use the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Text) property to set the text for toolbar item.
+You can use the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Text) property to set the text for the toolbar item.
 
 ```cshtml
 
@@ -289,7 +289,7 @@ If you set the `TabIndex` value to 0 for all Toolbar items, tab key navigation w
 
 #### Setting template
 
-You can use the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Template) property to add custom toolbar item in the AI AssistView component. Template property can be given as the `HTML element` or `RenderFragment`.
+You can use the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Template) tag directive to add custom toolbar item in the AI AssistView component. Template property can be given as the `HTML element` or `RenderFragment`.
 
 ```cshtml
 

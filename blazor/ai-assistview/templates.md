@@ -51,7 +51,7 @@ You can use the `BannerTemplate` tag directive to customize the banner view in t
 
 ## Prompt item template
 
-You can use the `PromptItemTemplate` tag directive to customize the prompt items in the AI AssistView. The template context includes `prompt`, `toolbarItems` and `index` items.
+You can use the `PromptItemTemplate` tag directive to customize the prompt items in the AI AssistView. The template context includes `Prompt`, `ToolbarItems` and `Index` items.
 
 ```cshtml
 
@@ -122,7 +122,7 @@ You can use the `PromptItemTemplate` tag directive to customize the prompt items
 
 ## Response item template
 
-You can use the `ResponseItemTemplate` tag directive to customize response items within the AI AssistView. The template context includes the `prompt`, `response`, `index`, `toolbarItems` and `output` items.
+You can use the `ResponseItemTemplate` tag directive to customize response items within the AI AssistView. The template context includes the `Prompt`, `Response`, `Index`, `ToolbarItems` and `Output` items.
 
 ```cshtml
 
@@ -187,7 +187,7 @@ You can use the `ResponseItemTemplate` tag directive to customize response items
 
 ## Prompt suggestion item template
 
-You can use the `PromptSuggestionItemTemplate` tag directive to customize the prompt suggestion items in the AI AssistView. The template context includes the `index` and `promptSuggestion`.
+You can use the `PromptSuggestionItemTemplate` tag directive to customize the prompt suggestion items in the AI AssistView. The template context includes the `Index` and `PromptSuggestion`.
 
 ```cshtml
 @using Syncfusion.Blazor.InteractiveChat

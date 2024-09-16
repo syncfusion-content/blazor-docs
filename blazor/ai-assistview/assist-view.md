@@ -36,7 +36,7 @@ You can use the `Prompt` property to define the prompt text for the AI AssistVie
 
 ## Setting prompt placeholder
 
-You can use the `PromptPlaceholder` property to set the placeholder text for the prompt textarea. The default prompt placeholder value is `Type prompt for assistance...`.
+You can use the `PromptPlaceholder` property to set the placeholder text for the prompt textarea. The default value is `Type prompt for assistance...`.
 
 ```cshtml
 
@@ -61,11 +61,9 @@ You can use the `PromptPlaceholder` property to set the placeholder text for the
 
 ## Prompt-response collection
 
-By using the `Prompts` property you can specifies the collection of prompts and their responses in the AI AssistView. It allows to load pre-defined prompt & response pairs during the initial setup or just either one of it ensuring the component is initialized with the data configured.
+By using the `Prompts` property, you can specify the collection of prompts and responses, allowing you to load pre-defined pairs or individual entries ensuring the AI AssistView component is initialized with the configured data.
 
-By using the `Prompts` property, you can specify the collection of prompts and responses, allowing you to load pre-defined pairs or individual entries ensuring the control is initialized with the configured data.
-
-The `Prompts` property also stores the collection of all the prompts and their corresponding responses generated.
+The `Prompts` collection stores all the prompts and responses generated.
 
 ```cshtml
 

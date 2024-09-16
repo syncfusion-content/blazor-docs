@@ -88,7 +88,8 @@ You can customize the appearance of the AI AssistView component by using the `Cs
         box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.2);
     }
 
-    .e-aiassistview.e-custom .e-view-header .e-toolbar, .e-aiassistview.e-custom .e-view-header .e-toolbar-items {
+    .e-aiassistview.e-custom .e-view-header .e-toolbar,
+    .e-aiassistview.e-custom .e-view-header .e-toolbar-items {
         background: #d5d5d5;
     }
 
