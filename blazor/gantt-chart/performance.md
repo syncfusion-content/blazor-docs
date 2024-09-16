@@ -13,7 +13,7 @@ This article is a comprehensive guide on enhancing the loading performance of th
 
 ## How to improve loading performance by binding large dataset
 
-The Blazor Gantt Chart renders rows, columns, and taskbars, creating a significant number of DOM elements, especially with large datasets. For instance, binding 10 rows and 10 columns generates 100 elements in the grid area and additional elements in the chart area. To optimize performance and reduce loading times, it is recommended to limit the number of rows and columns rendered at once. Implementing techniques such as virtualization, load on demand, and efficient data binding can help manage large datasets effectively, enhancing the overall user experience.
+A Gantt chart consists of rows, columns, and taskbars. For example, binding 10 rows and 10 columns results in rendering 100 elements in the Document Object Model (DOM) of Grid area and 10 elements in the Document Object Model (DOM) of chart area. To ensure optimal loading performance for the component, it is recommended to limit the number of rows and columns rendered. This approach helps in efficiently managing large datasets and enhancing the overall user experience.
 
 ### Optimizing performance with virtualization
 
@@ -21,7 +21,7 @@ To enhance the efficiency of the Blazor Gantt Chart, particularly when handling 
 
 1.	**Row Virtualization**: [Row virtualization](https://blazor.syncfusion.com/documentation/gantt-chart/virtualization#row-virtualization) in the Blazor Gantt Chart allows the efficient handling and display of large datasets by rendering only the visible rows within the Gantt viewport, rather than loading the entire dataset simultaneously. This approach optimizes rendering and reduces the DOM size, resulting in faster load times and smoother interactions. This feature is particularly effective during vertical scrolling, as rows are loaded on-demand based on the current scroll position.
 
-2. **Column Virtualization**: [Column virtualization](https://blazor.syncfusion.com/documentation/gantt-chart/virtualization#column-virtualization) optimizes the rendering of Gantt Chart with a large number of columns by displaying only the columns currently within the viewport. This feature allows horizontal scrolling to reveal additional columns, significantly reducing the initial loading time and improving performance by limiting the number of DOM elements rendered at once.
+2. **Column Virtualization**: [Column virtualization](https://blazor.syncfusion.com/documentation/gantt-chart/virtualization#column-virtualization) optimizes the rendering of Gantt Chart with a large number of columns by displaying only the columns currently within the viewport. This feature renders column cells dynamically during horizontal scrolling, significantly reducing the initial loading time and improving performance by limiting the number of DOM elements rendered at once.
 
 3.	**Timeline Virtualization**: [Timeline virtualization](https://blazor.syncfusion.com/documentation/gantt-chart/virtualization#timeline-virtualization) optimizes the rendering of extensive timespan in the Gantt Chart. By loading only the visible timeline cells, typically three times the width of the Gantt element, this feature reduces the amount of data rendered at once. Additional timeline cells are loaded dynamically during horizontal scrolling, which helps maintain performance even with complex or long project timelines.
 
@@ -45,7 +45,7 @@ To improve performance when working with large datasets, you can disable this au
     <SfGantt DataSource="@TaskCollection" AutoCalculateDateScheduling="false">  
     </SfGantt>
 ```
-N> Disabling automatic date calculation by setting the `AutoCalculateDateScheduling` property to `false` can significantly improve the performance of the Blazor Gantt Chart when dealing with large datasets. However, it is crucial to ensure the integrity of your data source, as the Gantt Chart will no longer adjust dates automatically.
+N> When setting `Autocalculatedatescheduling` property to `false`, you must provide the valid data source; otherwise, the Gantt chart will render with invalid dates.
 
 ## How to improve loading performance by binding large data by showing custom text or element
 
@@ -83,7 +83,7 @@ The Blazor Gantt Chart supports various adaptors (OData, ODataV4, WebAPI, URL, e
 
 ## Strategic approaches to addressing latency challenges
 
-Understanding the concerns related to latency in the Syncfusion Blazor Gantt Chart component, several factors contributing to responsiveness issues have been identified. Notably, when using features like filtering, sorting, and data binding in the Gantt Chart, delays may occur due to client-server interactions, especially if the server is located far from the client.
+Understanding the concerns related to latency in the Syncfusion Blazor Gantt Chart component, several factors contributing to responsiveness issues have been identified. Notably, when using features like filtering, taskbar resizing, and dialog edit in the Gantt Chart, delays may occur due to client-server interactions, if the server is located far from the client.
 
 ### Potential Solutions to Mitigate Delay
 
