@@ -501,6 +501,8 @@ To prevent the zoom-in action when clicking on the marker, you can set `ZoomOnMa
 }
 ```
 
+![Blazor Maps Disabling the Zooming on Marker Click](./images/Marker/blazor-maps-disabling-zooming-on-marker-click.gif)
+
 ## Marker clustering
 
 Maps provide support to cluster the markers when they overlap each other. The number on a cluster indicates how many overlapped markers it contains. If zooming is performed on any of the cluster locations in Maps, the number on the cluster will decrease, and the individual markers will be seen on the map. When zooming out, the overlapping marker will increase. So that it can cluster again and increase the count over the cluster.
