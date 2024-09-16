@@ -467,7 +467,7 @@ The Maps can be initially scaled to the center value based on the marker distanc
 
 ## Disabling the Zoom on Marker Click
 
-To prevent the zoom-in action when clicking on the marker, you can set `ZoomOnMarkerClick` as false in the `MapsZoomSettings`. This diasble the zooming action in the Maps. By default, the value is set to **true**.
+To prevent the zoom-in action when clicking on the marker, you can set `ZoomOnMarkerClick` as false in the `MapsZoomSettings`. This diasble the zooming action only when clicking on the markers in the Maps. By default, the value is set to **true**, which enables zooming actions when markers are clicked.
 
 ```
 @using Syncfusion.Blazor.Maps
