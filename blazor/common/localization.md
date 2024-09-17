@@ -643,7 +643,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-localiza
 
 ## Localization using database in Blazor
 
-* [How to perform localization using database instead of resource files in Blazor?](https://www.syncfusion.com/kb/13012)
+* [How to perform localization using database instead of resource files in Blazor?](https://support.syncfusion.com/kb/article/11465/how-to-perform-localization-using-database-instead-of-resource-files-in-blazor)
 
 ## See also
 * [Statically set the culture in Blazor WASM App](https://docs.microsoft.com/en-us/aspnet/core/blazor/globalization-localization?pivots=webassembly&view=aspnetcore-6.0#statically-set-the-culture)

@@ -271,4 +271,4 @@ public class TreeData
 
 ## See Also
 
-* [TreeGridTemplates component](../templates/#treegridtemplates-component)
+* [TreeGridTemplates component](../templates#treegridtemplates-component)
