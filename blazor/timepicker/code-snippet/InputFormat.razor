@@ -1,0 +1,9 @@
+
+@using Syncfusion.Blazor.Calendars
+
+<SfTimePicker TValue="DateTime?" Format="HH:mm:ss" InputFormats='new string[] { "hh:mm tt", "hh mm tt" }' @bind-Value="@Value"></SfTimePicker>
+
+
+@code {
+    public DateTime? Value { get; set; } = new DateTime(2022, 12, 11, 11, 30, 00);
+}

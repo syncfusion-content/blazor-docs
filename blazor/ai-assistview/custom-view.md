@@ -112,7 +112,7 @@ You can use the `ViewTemplate` tag directive to add the view content of the mult
 @using Syncfusion.Blazor.InteractiveChat
 
 <div class="aiassist-container" style="width: max(50%, 500px); margin: 30px auto;">
-    <SfAIAssistView PromptRequested="@PromptRequest">
+    <SfAIAssistView>
         <AssistViews>
             <AssistView Header="Prompt">
                 <ViewTemplate>
@@ -128,14 +128,6 @@ You can use the `ViewTemplate` tag directive to add the view content of the mult
     </SfAIAssistView>
 </div>
 
-@code {
-    private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
-    {
-        await Task.Delay(1000);
-        var defaultResponse = "For real-time prompt processing, connect the AI AssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
-        args.Response = defaultResponse;
-    }
-}
 <style>
     .view-container {
         margin: 20px auto;
