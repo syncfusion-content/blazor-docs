@@ -12,9 +12,9 @@ documentation: ug
 
 ## Exporting with column template
 
-The PDF export functionality allows exporting Gantt columns that include images, background color, and custom text to a PDF document using the [PdfQueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfQueryCellInfo) event.
+The PDF export functionality allows for advanced customization of Gantt columns, including the inclusion of images, background colors, and custom text. This can be achieved using the [PdfQueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfQueryCellInfo) event. By handling this event, you can define how specific cells in the Gantt chart is rendered in the exported PDF.
 
-In the following sample, custom text and different cell background colors are exported to PDF using the `Font` and `FillBackgroundColor` properties in the `PdfQueryCellInfo` event.
+The following sample code demonstrates how to use the `PdfQueryCellInfo` event to export Gantt columns with custom text and different cell background colors,
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -110,7 +110,9 @@ In the following sample, custom text and different cell background colors are ex
 
 ## Exporting with taskbar template with event
 
-The PDF export functionality allows to export taskbar templates to an PDF document using [PdfQueryTaskbarInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfQueryTaskbarInfo) event. Taskbar in the exported PDF document can be customized or formatted using the `PdfQueryTaskbarInfo` event for parent taskbar template, taskbar templates and milestone templates.
+The PDF export functionality allows you to export taskbar templates to a PDF document using the [PdfQueryTaskbarInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfQueryTaskbarInfo) event. This event provides the flexibility to customize and format the appearance of taskbars, including parent taskbars, individual taskbars, and milestone templates.
+
+The following sample code demonstrates how to use the `PdfQueryTaskbarInfo` event to customize the appearance of taskbars in the exported PDF document,
 
 ``` cshtml
 @using Syncfusion.Blazor.Gantt
@@ -195,7 +197,18 @@ The PDF export functionality allows to export taskbar templates to an PDF docume
 
 ## Exporting with taskbar template with export properties
 
-The PDF export functionality allows exporting taskbar templates to a PDF document using the `TaskbarColor` export property. The taskbar in the exported PDF document can be customized or formatted using the `TaskbarColor` property in `GanttPdfExportProperties` for parent taskbar color, child taskbar color, milestone color, critical path color, manual taskbar color, and baseline color.
+The PDF export functionality allows you to export taskbar templates to a PDF document with customized colors using the `TaskbarColor` property in the `GanttPdfExportProperties` class. This property enables you to format various types of taskbars, including parent taskbars, child taskbars, milestones, critical paths, manual taskbars, and baselines.
+
+You can use the `TaskbarColor` property to set colors for the following taskbar types:
+
+* Parent Taskbar Color
+* Child Taskbar Color
+* Milestone Color
+* Critical Path Color
+* Manual Taskbar Color
+* Baseline Color
+
+The following code demonstrates how to customize the colors of different taskbars in the exported PDF document
 
 ``` cshtml
 @using Syncfusion.Blazor.Gantt

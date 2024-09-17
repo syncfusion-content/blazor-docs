@@ -67,13 +67,16 @@ PDF export allows exporting Gantt data to PDF document. You need to use the [Exp
     }
 }
 ```
+![Blazor Gantt chart displays PDF export](images/blazor-gantt-chart-pdf-export.gif)
 
 ## Customize the PDF export
 
-The PDF export functionality offers a feature that allows you to tailor the Gantt chart to the exported PDF document. This customization can be achieved through the utilization of various properties available within the `GanttPdfExportProperties` class. By adjusting these properties, you can ensure that the exported PDF document accurately reflects the desired layout and details of the Gantt chart.
+The PDF export functionality in the Syncfusion Gantt Chart allows extensive customization through the `GanttPdfExportProperties` class. By configuring properties within this class, you can control the layout, format, and content that is included in the exported PDF. This ensures that the PDF accurately represents the Gantt chart's structure and provides flexibility for tailored exports.
 
 ### Customize file name for exported document
-The PDF export functionality offers a feature that allows you to define the file name of exported document. You can assign the file name by setting the `FileName` property in `GanttPdfExportProperties`.
+The PDF export functionality in the Syncfusion Gantt Chart allows you to customize the file name of the exported document. By configuring the `FileName` property within the `GanttPdfExportProperties` class, you can assign a specific name to the generated PDF. This is especially useful for keeping your exported documents organized and easily identifiable.
+
+In this example, the exported PDF will be saved as `ProjectSchedule.pdf`.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -99,7 +102,7 @@ The PDF export functionality offers a feature that allows you to define the file
         if (args.Item.Id == "PdfExport")
         {
             GanttPdfExportProperties exportProperties = new GanttPdfExportProperties();
-            exportProperties.FileName = "New.pdf";
+            exportProperties.FileName = "ProjectSchedule.pdf";
             await Gantt.ExportToPdfAsync(exportProperties);
         }
     }
@@ -135,9 +138,9 @@ The PDF export functionality offers a feature that allows you to define the file
 ```
 ### How to add a text in header/footer
 
-You can add text and customize its styles either in Header or Footer of exported PDF document using `Header` and `Footer` properties of the `GanttPdfExportProperties` class.
+The PDF export functionality of the Gantt Chart allows you to add and style custom text in the Header or Footer of the exported PDF document. This customization can be achieved using the `Header` and `Footer` properties of the `GanttPdfExportProperties` class. By configuring these properties, you can include important information, such as titles, project names, or other relevant details, to enhance the exported document.
 
-The following sample code demonstrates adding text and customizing its styles in the Header section of the exported document,
+The following sample code demonstrates how to add custom text and customize its styles in the Header section of the exported PDF document:
 
 ``` cshtml
 @using Syncfusion.Blazor.Gantt
@@ -210,7 +213,7 @@ The following sample code demonstrates adding text and customizing its styles in
 ```
 
 ### How to draw a line in header/footer
-You can add line either in the Header or Footer area of the exported PDF document using `Header` and `Footer` properties of the `GanttPdfExportProperties` class.
+You can add lines to the Header or Footer area of the exported PDF document using the `Header` and `Footer` properties in the `GanttPdfExportProperties` class.
 
 Supported line styles are,
 
@@ -294,7 +297,9 @@ The following sample code demonstrates adding line in the Header section of the 
 
 ### How to change the change page orientation
 
-The PDF export functionality offers a feature that allows you to change the page orientation of the exported document. You can set the page orientation to Landscape (default is Portrait) using the `PageOrientation` property in the `GanttPdfExportProperties` class
+The PDF export functionality allows you to customize the page orientation of the exported document. By setting the `PageOrientation` property in the `GanttPdfExportProperties` class, you can switch between Portrait (default) and Landscape orientations based on your requirements.
+
+The following code snippet demonstrates how to set the page orientation to Landscape in the exported PDF document,
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -357,10 +362,9 @@ The PDF export functionality offers a feature that allows you to change the page
 
 ### How to change the change page size
 
-The PDF export functionality allows you to customize the page size of the exported document using the `PageSize` property in the `GanttPdfExportProperties` class. The default page size for the exported document is Letter.
+The PDF export functionality allows you to adjust the page size of the exported document to meet your specific needs. By setting the `PageSize` property in the `GanttPdfExportProperties` class, you can select from various standard page sizes. The default page size is Letter, but other options like A4, A3, and more are available.
 
 Supported page sizes are:
-
 * Letter
 * Note
 * Legal
@@ -388,6 +392,8 @@ Supported page sizes are:
 * HalfLetter
 * Letter11x17
 * Ledger
+
+The following code demonstrates how to change the page size to A4 for the exported PDF document,
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -449,7 +455,9 @@ Supported page sizes are:
 ```
 ### How to export the Gantt chart with specific columns
 
-You can export the PDF Gantt chart with specific columns instead of all columns which are defined in the Gantt chart definition. To achieve this scenario by using `Columns` property of the `GanttPdfExportProperties` class.
+The PDF export functionality allows you to export only specific columns from the Gantt chart, rather than exporting all columns by default. This can be achieved by setting the `Columns` property in the `GanttPdfExportProperties` class, enabling you to tailor the exported document to only include relevant data.
+
+The following code demonstrates how to export the Gantt chart to a PDF with specific columns,
 
 ``` cshtml
 @using Syncfusion.Blazor.Gantt
@@ -526,7 +534,9 @@ You can export the PDF Gantt chart with specific columns instead of all columns 
 ```
 
 ### Export hidden columns
-The PDF export includes a feature that allows you to export hidden columns in a Gantt chart. This can be achieved by setting the `IncludeHiddenColumn` property to `true`. By enabling this option, you can ensure that even the columns which are not visible in the Gantt chart will be included in the exported PDF document.
+The PDF export functionality includes an option to export hidden columns from the Gantt chart. By setting the `IncludeHiddenColumn` property to true in the `GanttPdfExportProperties` class, you can ensure that even columns not visible in the Gantt chart will be included in the exported PDF document.
+
+The following code demonstrates how to export hidden columns in the Gantt chart to a PDF document,
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -588,7 +598,9 @@ The PDF export includes a feature that allows you to export hidden columns in a 
 ```
 ### Customize column width in exported PDF document
 
-The PDF export provides an option to customize the column being exported to a PDF format using the `Columns` property of the `GanttPdfExportProperties` class. While defining the column, we can change its width as per the requirement.
+The PDF export functionality allows you to customize which columns are included in the exported PDF, as well as adjust their widths. This can be achieved using the `Columns` property in the `GanttPdfExportProperties` class. By specifying columns and their respective widths, you can tailor the PDF export to meet your specific needs.
+
+The following code demonstrates how to customize the columns and set their widths in the exported PDF document,
 
 ``` cshtml
 @using Syncfusion.Blazor.Gantt
