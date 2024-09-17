@@ -70,10 +70,10 @@ PDF export allows exporting Gantt data to PDF document. You need to use the [Exp
 
 ## Customize the PDF export
 
-The PDF export functionality offers a feature that allows you to tailor the mapping of the Gantt chart to the exported PDF document. This customization can be achieved through the utilization of various properties available within the `GanttPdfExportProperties` class. By adjusting these properties, you can ensure that the exported PDF document accurately reflects the desired layout and details of the Gantt chart.
+The PDF export functionality offers a feature that allows you to tailor the Gantt chart to the exported PDF document. This customization can be achieved through the utilization of various properties available within the `GanttPdfExportProperties` class. By adjusting these properties, you can ensure that the exported PDF document accurately reflects the desired layout and details of the Gantt chart.
 
 ### Customize file name for exported document
-The file name can be assigned for the exported document by defining `FileName` property in `GanttPdfExportProperties`.
+The PDF export functionality offers a feature that allows you to define the file name of exported document. You can assign the file name by setting the `FileName` property in `GanttPdfExportProperties`.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -294,7 +294,7 @@ The following sample code demonstrates adding line in the Header section of the 
 
 ### How to change the change page orientation
 
-Page orientation can be changed to Landscape (default Portrait) for the exported document using the `PageOrientation` property in `GanttPdfExportProperties` .
+The PDF export functionality offers a feature that allows you to change the page orientation of the exported document. You can set the page orientation to Landscape (default is Portrait) using the `PageOrientation` property in the `GanttPdfExportProperties` class
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -357,7 +357,7 @@ Page orientation can be changed to Landscape (default Portrait) for the exported
 
 ### How to change the change page size
 
-Page size can be customized for the exported document using the `PageSize` property in `GanttPdfExportProperties`. The default page size for the exported document is Letter.
+The PDF export functionality allows you to customize the page size of the exported document using the `PageSize` property in the `GanttPdfExportProperties` class. The default page size for the exported document is Letter.
 
 Supported page sizes are:
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: PDF Exporting with templates in Blazor Gantt Chart Component | Syncfusion
+title: PDF Export with templates in Blazor Gantt Chart Component | Syncfusion
 description: Checkout and learn here all about PDF Exporting with templates in Syncfusion Blazor Gantt Chart component and much more.
 platform: Blazor
 control: Gantt Chart
@@ -12,7 +12,7 @@ documentation: ug
 
 ## Exporting with column template
 
-The PDF export functionality allows exporting Grid columns that include images, background color, and custom text to a PDF document using the [PdfQueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfQueryCellInfo) event.
+The PDF export functionality allows exporting Gantt columns that include images, background color, and custom text to a PDF document using the [PdfQueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfQueryCellInfo) event.
 
 In the following sample, custom text and different cell background colors are exported to PDF using the `Font` and `FillBackgroundColor` properties in the `PdfQueryCellInfo` event.
 
@@ -110,7 +110,7 @@ In the following sample, custom text and different cell background colors are ex
 
 ## Exporting with taskbar template with event
 
-The PDF export functionality allows to export taskbar templates to an PDF document using [PdfQueryTaskbarInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfQueryTaskbarInfo) event. Taskbar in the exported PDF document can be customized or formatted using the pdfQueryTaskbarInfo event for parent taskbar template, taskbar templates and milestone templates.
+The PDF export functionality allows to export taskbar templates to an PDF document using [PdfQueryTaskbarInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfQueryTaskbarInfo) event. Taskbar in the exported PDF document can be customized or formatted using the `PdfQueryTaskbarInfo` event for parent taskbar template, taskbar templates and milestone templates.
 
 ``` cshtml
 @using Syncfusion.Blazor.Gantt
