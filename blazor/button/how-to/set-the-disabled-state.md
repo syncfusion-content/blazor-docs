@@ -32,4 +32,4 @@ The following example demonstrates Button in `Disabled` state.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNBqiBVhMGkwXmsI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Disable State in Blazor Button](./../images/blazor-button-disable-state.png)
+![Disable state in Blazor Button.](./../images/blazor-button-disable-state.png)
