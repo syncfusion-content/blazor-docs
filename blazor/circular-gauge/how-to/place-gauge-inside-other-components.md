@@ -108,7 +108,7 @@ When you drag and resize the Dashboard Layout's panel or resizing the window, th
                                         </CircularGaugePointer>
                                     </CircularGaugePointers>
                                     <CircularGaugeAnnotations>
-                                        <CircularGaugeAnnotation Radius="0%" Angle="0" ZIndex="1">
+                                        <CircularGaugeAnnotation Radius="30%" Angle="90" ZIndex="1">
                                             <ContentTemplate>
                                                 <div class="annotationText">60/100</div>
                                             </ContentTemplate>
