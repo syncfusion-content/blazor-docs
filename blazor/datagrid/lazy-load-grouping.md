@@ -9,156 +9,198 @@ documentation: ug
 
 # Lazy Load Grouping in Blazor DataGrid Component
 
-The lazy load grouping allows you to load grouped records to the Grid through the on-demand concept. So, you can use this feature to load a huge amount of grouped data to the Grid without any performance degradation.
+In Blazor , lazy loading refers to the technique of loading data dynamically when they are needed, instead of loading everything upfront. Lazy loading can significantly improve the performance of your application by reducing the initial load time.
 
-When you enable this feature, the Grid will render only the initial level caption rows in the collapsed state at grouping. The child rows of each caption will be fetched from the server and render in the Grid when you expand the caption row.
+Lazy load grouping in Syncfusion Grid allows you to load and display grouped data efficiently by fetching only the required data on demand. This feature is useful when dealing with large datasets where loading all the data at once might affect performance. The Grid will render only the initial level caption rows in the collapsed state at grouping. The child rows of each caption will be fetched in on demand and render in the Grid when you expand the caption row.
 
-The caption row expand/collapse state will be persisted on paging and grid pages count will be determined based on the caption and child rows.
 
-To enable lazy load grouping in the datagrid, set the `EnableLazyLoading` as true in [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GroupSettings) component.
+To enable this feature, need to set the [EnableLazyLoading](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_EnableLazyLoading) as **true** in [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GroupSettings) component.
 
-The following sample code demonstrates the above,
+The following example demonstrates how to enable the lazy load grouping feature by setting the `EnableLazyLoading` as **true** in `GridGroupSettings` component.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Orders" AllowPaging="true" AllowGrouping="true">
+<SfGrid DataSource="@GridData" AllowPaging="true" AllowGrouping="true" Height="267px">
     <GridGroupSettings EnableLazyLoading="true" Columns="@Initial"></GridGroupSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ProductName) HeaderText="Product Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ProductID) HeaderText="Product ID" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerName) HeaderText="Customer Name" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code{
-    public string[] Initial = (new string[] { "CustomerID" });
-    public List<Order> Orders { get; set; }
+
+@code {
+    public List<OrderData> GridData { get; set; }
+
+    public string[] Initial = (new string[] { "ProductName", "CustomerName" });
 
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID","Maria", "Ana Trujillo", "Antonio Moreno", "Thomas Hardy", "Christina Berglund", "Hanna Moos", "Frédérique Citeaux", "Martín Sommer", "Laurence Lebihan", "Elizabeth Lincoln",
-                    "Victoria Ashworth", "Patricio Simpson", "Francisco Chang", "Yang Wang", "Pedro Afonso" })[new Random().Next(20)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
+        GridData = OrderData.GetAllRecords();
     }
 
-    public class Order
-    {
-        public int OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
-    }
 }
-```
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+  public class OrderData
+    {
+        public static List<OrderData> Orders = new List<OrderData>();
+        
+       
+        public OrderData()
+        {
 
-The following GIF represents the lazy load grouping functionality with paging in DataGrid
+        }
+        public OrderData(int? OrderID,string ProductName, int? ProductID, string CustomerName)
+        {
+           this.OrderID = OrderID;    
+           this.ProductName = ProductName;
+            this.ProductID = ProductID;
+            this.CustomerName = CustomerName;           
+           
+        }
 
-![Blazor DataGrid with Lazy Load Grouping](./images/blazor-datagrid-lazy-load-grouping.gif)
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "Gumbär Gummib", 0, "Marie Bertrand"));
+                    Orders.Add(new OrderData(10249, "Valkoinen suklaa", 1, "Paula Wilson"));
+                    Orders.Add(new OrderData(10250, "Chai", 2, "Giovanni Rovelli"));
+                    Orders.Add(new OrderData(10251, "Guaraná Fantástica", 3, "Yang Wang"));
+                    Orders.Add(new OrderData(10252, "Chef Anton's Cajun Seasoning", 4, "Martín Sommer"));
+                    Orders.Add(new OrderData(10253, "Gudbrandsdalsost", 5, "Laurence Lebihan"));
+                    Orders.Add(new OrderData(10254, "Jack's New England Clam Chowder", 6, "Frédérique Citeaux"));
+                    Orders.Add(new OrderData(10255, "Queso Cabrales", 7, "Philip Cramer"));
+                    Orders.Add(new OrderData(10256, "Tarte au sucre", 8, "Francisco Chang"));
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
+
+        public int? OrderID { get; set; }
+        public string ProductName { get; set; }
+        public int? ProductID { get; set; }
+        public string CustomerName { get; set; }
+    }
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLKWiWfBIFWicGq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Lazy load grouping with virtual scrolling
 
-When you enable lazy load grouping with the virtual scrolling feature, the Grid will render only the initial level caption rows in the collapsed state at grouping. The child rows of each caption will be fetched from the server and rendered in the Grid when you expand the caption row. The caption row expand/collapse state will be persisted while scrolling. In addition, for great performance, a loading placeholder indicator(masked row) is shown between the time of fetching the new data and binding it to the grid. Also, the same set of DOM elements is reused to improve performance.
+The lazy load grouping with virtual scrolling feature in the Syncfusion blazor Grid allows you to efficiently present and analyze large grouped datasets. This feature optimizes performance, reduces initial load time, and provides smooth scrolling through the dataset.
 
-To enable lazy load grouping with virtual scrolling in the datagrid, you need to define the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) property as **true** and the [EnableLazyLoading](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_EnableLazyLoading) property of the [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html) class as **true**.
+**How lazy load grouping with virtual scrolling works**
 
-N> When `EnableLazyLoading` is enabled with `EnableVirtualization`, the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSize) property of the [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html) class and the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) property must be defined.
+1. When you enable lazy load grouping with virtual scrolling, the Grid renders only the initial level caption rows in a collapsed state.
 
-N> When enabling lazy load grouping with virtual scrolling, the [EnableVirtualMaskRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualMaskRow) property is enabled by default. There is no need to use this property explicitly.
+2. The child rows associated with each group caption are loaded and rendered in the Grid only when you expand the respective caption row.
 
-The following sample code demonstrates the above:
+3. Virtual scrolling allows the Grid to load and display a buffered set of records while scrolling vertically.
 
-```cshtml
+
+To enable this feature, you need to set the [EnableLazyLoading](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_EnableLazyLoading) property of the [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html) component and [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) properties to true.
+
+
+> When `EnableLazyLoading` is enabled with `EnableVirtualization`, the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSize) property of the [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html) class and the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) property must be defined.
+
+> When enabling lazy load grouping with virtual scrolling, the [EnableVirtualMaskRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualMaskRow) property is enabled by default. There is no need to use this property explicitly. 
+
+The following example demonstrates how to enable the lazy load grouping with virtual scrolling feature using the `EnableLazyLoading` property of the `GridGroupSettings` component and `EnableVirtualization` property.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.Data
 
-<SfGrid TValue="Customer" DataSource="customers" ID="Grid" RowHeight="36" AllowGrouping="true" EnableVirtualization="true" Height="400">
-    <GridGroupSettings ShowGroupedColumn=true EnableLazyLoading="true" Columns="@GroupedColumns">
-        <CaptionTemplate>
-            @{
-                var customer = (context as CaptionTemplateContext);
-                <div>@customer.Field - @customer.Key</div>
-            }
-        </CaptionTemplate>
-    </GridGroupSettings>
-    <GridPageSettings PageSize=40></GridPageSettings>
+<SfGrid DataSource="@GridData" ID="Grid" RowHeight="36" AllowGrouping="true" EnableVirtualization="true" Height="267px">
+    <GridGroupSettings EnableLazyLoading="true" Columns="@Initial"></GridGroupSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Customer.OrderID) HeaderText="Order ID" IsPrimaryKey=true AllowGrouping="false" TextAlign="@TextAlign.Center" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Customer.ProductID) HeaderText="ProductID" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Customer.ProductName) HeaderText="Product Name" Width="200"></GridColumn>
-        <GridColumn Field=@nameof(Customer.CustomerID) HeaderText="Customer ID" Width="170"></GridColumn>
-        <GridColumn Field=@nameof(Customer.UnitsInStock) HeaderText="Units In Stock" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ProductName) HeaderText="Product Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ProductID) HeaderText="Product ID" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerName) HeaderText="Customer Name" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code{
-    public string[] GroupedColumns = new string[] {"ProductName","CustomerID"};
-    public List<Customer> customers { get; set; } = Customer.GetAllRecords();
-    public class Customer
+
+@code {
+    public List<OrderData> GridData { get; set; }
+
+    public string[] Initial = (new string[] { "ProductName", "CustomerName" });
+
+    protected override void OnInitialized()
     {
-        public int OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public string CustomerName { get; set; }
-        public string CustomerAddress { get; set; }
-        public string ProductName { get; set; }
-        public int ProductID { get; set; }
-        public string Quantity { get; set; }
-        public int UnitsInStock { get; set; }
-        public static List<Customer> GetAllRecords()
-        {
-            List<Customer> customers = new List<Customer>();
-            string[] CustomerId ={"VINET", "TOMSP", "HANAR", "VICTE", "SUPRD", "HANAR", "CHOPS", "RICSU", "WELLI", "HILAA", "ERNSH", "CENTC",
-                "OTTIK", "QUEDE", "RATTC", "ERNSH", "FOLKO", "BLONP", "WARTH", "FRANK", "GROSR", "WHITC", "WARTH", "SPLIR", "RATTC", "QUICK", "VINET",
-                "MAGAA", "TORTU", "MORGK", "BERGS", "LEHMS", "BERGS", "ROMEY", "ROMEY", "LILAS", "LEHMS", "QUICK", "QUICK", "RICAR", "REGGC", "BSBEV",
-                "COMMI", "QUEDE", "TRADH", "TORTU", "RATTC", "VINET", "LILAS", "BLONP", "HUNGO", "RICAR", "MAGAA", "WANDK", "SUPRD", "GODOS", "TORTU",
-                "OLDWO", "ROMEY", "LONEP", "ANATR", "HUNGO", "THEBI", "DUMON", "WANDK", "QUICK", "RATTC", "ISLAT", "RATTC", "LONEP", "ISLAT", "TORTU",
-                "WARTH", "ISLAT", "PERIC", "KOENE", "SAVEA", "KOENE", "BOLID", "FOLKO", "FURIB", "SPLIR", "LILAS", "BONAP", "MEREP", "WARTH", "VICTE",
-                "HUNGO", "PRINI", "FRANK", "OLDWO", "MEREP", "BONAP", "SIMOB", "FRANK", "LEHMS", "WHITC", "QUICK", "RATTC", "FAMIA" };          
-            string[] Product = { "Chai", "Chang", "Syrup", "Corn Snacks", "Gumbo Mix", "Seeds",
-                "Dried Pears", "Sauce", "Mishi Kobe Niku", "Ikura", "Queso Cabrales", "Queso Manchego Pastora", "Konbu",
-                "Tofu", "Genen Shouyu", "Pavlova", "Alice Mutton", "Biscuits", "Teatime Chocolate Biscuits", "Sir Rodney\"s Marmalade", "Sir Rodney\"s Scones",
-                "Gustaf\"s Knäckebröd", "Tunnbröd", "Guaraná Fantástica", "Nougat-Creme", "Gumbär Gummibärchen", "Schoggi Schokolade", "Rössle Sauerkraut",
-                "Thüringer Rostbratwurst", "Nord-Ost Matjeshering", "Gorgonzola Telino", "Mascarpone Fabioli", "Geitost", "Sasquatch Ale", "Steeleye Stout", "Inlagd Sill",
-                "Gravad lax", "Nuts", "Chips", "Crab Meat", "Jack\"s Clam Chowder", "Singaporean Fried Mee", "Ipoh Coffee",
-                "Gula Malacca", "Rogede sild", "Spegesild", "Zaanse koeken", "Chocolade", "Maxilaku", "Valkoinen suklaa", "Manjimup Dried Apples", "Filo Mix", "Perth Pasties",
-                "Tourtičre", "Pâté chinois", "Ipoh Coffee", "Ravioli Angelo", "Escargots Bourgogne", "Raclette Courdavault", "Cake", "Sirop d\"érable",
-                "Tarte au sucre", "Vegie-spread", "Lakkalikri", "Louisiana Pepper Sauce", "Louisiana Hot Spiced Okra", "Lumberjack Lager", "Scottish Longbreads",
-                "Gudbrandsdalsost", "Outback Lager", "Flotemysost", "Mozzarella di Giovanni", "Röd Kaviar", "Longlife Tofu", "Rhönbräu Klosterbier", "Lakkalikööri", "Original Frankfurter" };
-            int OrderID = 1001;
-            int i = 0; int j = 0; int k = 0; int l = 0; int m = 0;
-            for (int x = 0; x < 500000; x++)
-            {
-                i = i >= CustomerId.Length ? 0 : i; 
-                l = l >= Product.Length ? 0 : l; 
-                customers.Add(new Customer() 
-                { 
-                    OrderID = OrderID + x, 
-                    ProductID = x % 1000,
-                    CustomerID = CustomerId[i],                  
-                    ProductName = Product[l],  
-                    UnitsInStock = new Random().Next(1, 10000) 
-                });
-                i++; j++; k++; l++; m++;
-            }
-            return customers;
-        }
+        GridData = OrderData.GetAllRecords();
     }
+
 }
-```
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+ public class OrderData
+    {
+        public static List<OrderData> Orders = new List<OrderData>();
+        
+       
+        public OrderData()
+        {
 
-The following GIF represents the lazy load grouping functionality with virtualization in DataGrid
+        }
+        public OrderData(int? OrderID,string ProductName, int? ProductID, string CustomerName)
+        {
+           this.OrderID = OrderID;    
+           this.ProductName = ProductName;
+            this.ProductID = ProductID;
+            this.CustomerName = CustomerName;           
+           
+        }
 
-![Virtual Scrolling with Lazy Load Grouping in Blazor DataGrid](./images/blazor-datagrid-virtual-lazy-load-grouping.gif)
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int? code = 10247;
+                for (int i = 1; i < 19999; i++)
+                {
+                    Orders.Add(new OrderData(code + 1, "Gumbär Gummib", i, "Marie Bertrand"));
+                    Orders.Add(new OrderData(code + 2, "Valkoinen suklaa", i+1, "Paula Wilson"));
+                    Orders.Add(new OrderData(code + 3, "Chai", i+2, "Giovanni Rovelli"));
+                    Orders.Add(new OrderData(code + 4, "Guaraná Fantástica", i+3, "Yang Wang"));
+                    Orders.Add(new OrderData(code + 5, "Chef Anton's Cajun Seasoning", i + 4, "Martín Sommer"));
+                    Orders.Add(new OrderData(code + 6, "Gudbrandsdalsost", i + 5, "Laurence Lebihan"));
+                    Orders.Add(new OrderData(code + 7, "Jack's New England Clam Chowder", i + 6, "Frédérique Citeaux"));
+                    Orders.Add(new OrderData(code + 8, "Queso Cabrales", i + 7, "Philip Cramer"));
+                    Orders.Add(new OrderData(code + 9, "Tarte au sucre", i + 8, "Francisco Chang"));
+                    code += 9;
+                    i += 8;
+                }
+            }
+            return Orders;
+        }
+
+        public int? OrderID { get; set; }
+        public string ProductName { get; set; }
+        public int? ProductID { get; set; }
+        public string CustomerName { get; set; }
+
+    }
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVUsCMzgHLDLmbm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Lazy load grouping with custom adaptor
 
-You can use the Custom Adaptor of `SfDataManager` when binding the remote data. Along with the default server request, this feature will additionally send the below details to handle the lazy load grouping. In the server end, these details are bound with the **LazyLoad** and **LazyExpandAllGroup** parameters in the `DataManagerRequest` model.
+You can use the Custom Adaptor of DataManager when binding the remote data. Along with the default server request, this feature will additionally send the below details to handle the lazy load grouping. In the server end, these details are bound with the **LazyLoad** and **LazyExpandAllGroup** parameters in the DataManagerRequest model.
 
 | Property Name | Description |
 |-------|---------|
@@ -215,94 +257,16 @@ The following code example describes the lazy load grouping handled at the serve
         }
     }
 ```
-## Lazy load grouping with infinite scrolling
 
-When you enable lazy load grouping with infinite scrolling, the Grid initially renders only the caption rows in a collapsed state during grouping. This feature supports parent-level caption rows and fetches additional caption rows when the scrollbar reaches the end of the scroller. For child items, it fetches data for the expanded caption rows using the row virtualization concept while performing a vertical scroll. In addition, for better performance, a loading placeholder indicator (masked row) is shown between the time of fetching the new data and binding it to the grid for rendering child items.
+## Limitations for lazy load grouping
 
-To enable lazy load grouping with infinite scrolling in the datagrid, you need to define the [EnableInfiniteScrolling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableInfiniteScrolling) property as **true** and the [EnableLazyLoading](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_EnableLazyLoading) property of the [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html) class as **true**.
-
-N> When `EnableLazyLoading` is enabled with `EnableInfiniteScrolling`, the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) and the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) property must be defined.
-
-The following sample code demonstrates the above:
-
-```cshtml
-@using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.Data
-
-<SfGrid TValue="Customer" DataSource="customers" ID="Grid" EnableInfiniteScrolling="true" RowHeight="36" AllowGrouping="true" Height="300">
-    <GridGroupSettings ShowGroupedColumn=true EnableLazyLoading="true" Columns="@GroupedColumns">
-        <CaptionTemplate>
-            @{
-                var customer = (context as CaptionTemplateContext);
-                <div>@customer.Field - @customer.Key</div>
-            }
-        </CaptionTemplate>
-    </GridGroupSettings>
-    <GridPageSettings PageSize=20></GridPageSettings>
-    <GridColumns>
-        <GridColumn Field=@nameof(Customer.OrderID) HeaderText="Order ID" IsPrimaryKey=true AllowGrouping="false" TextAlign="@TextAlign.Center" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Customer.ProductID) HeaderText="ProductID" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Customer.ProductName) HeaderText="Product Name" Width="200"></GridColumn>
-        <GridColumn Field=@nameof(Customer.CustomerID) HeaderText="Customer ID" Width="170"></GridColumn>
-        <GridColumn Field=@nameof(Customer.UnitsInStock) HeaderText="Units In Stock" Width="120"></GridColumn>
-    </GridColumns>
-</SfGrid>
-
-@code{
-    public string[] GroupedColumns = new string[] {"ProductName","CustomerID"};
-    public List<Customer> customers { get; set; } = Customer.GetAllRecords();
-    public class Customer
-    {
-        public int OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public string CustomerName { get; set; }
-        public string CustomerAddress { get; set; }
-        public string ProductName { get; set; }
-        public int ProductID { get; set; }
-        public string Quantity { get; set; }
-        public int UnitsInStock { get; set; }
-        public static List<Customer> GetAllRecords()
-        {
-            List<Customer> customers = new List<Customer>();
-            string[] CustomerId ={"VINET", "TOMSP", "HANAR", "VICTE", "SUPRD", "HANAR", "CHOPS", "RICSU", "WELLI", "HILAA", "ERNSH", "CENTC",
-                "OTTIK", "QUEDE", "RATTC", "ERNSH", "FOLKO", "BLONP", "WARTH", "FRANK", "GROSR", "WHITC", "WARTH", "SPLIR", "RATTC", "QUICK", "VINET",
-                "MAGAA", "TORTU", "MORGK", "BERGS", "LEHMS", "BERGS", "ROMEY", "ROMEY", "LILAS", "LEHMS", "QUICK", "QUICK", "RICAR", "REGGC", "BSBEV",
-                "COMMI", "QUEDE", "TRADH", "TORTU", "RATTC", "VINET", "LILAS", "BLONP", "HUNGO", "RICAR", "MAGAA", "WANDK", "SUPRD", "GODOS", "TORTU",
-                "OLDWO", "ROMEY", "LONEP", "ANATR", "HUNGO", "THEBI", "DUMON", "WANDK", "QUICK", "RATTC", "ISLAT", "RATTC", "LONEP", "ISLAT", "TORTU",
-                "WARTH", "ISLAT", "PERIC", "KOENE", "SAVEA", "KOENE", "BOLID", "FOLKO", "FURIB", "SPLIR", "LILAS", "BONAP", "MEREP", "WARTH", "VICTE",
-                "HUNGO", "PRINI", "FRANK", "OLDWO", "MEREP", "BONAP", "SIMOB", "FRANK", "LEHMS", "WHITC", "QUICK", "RATTC", "FAMIA" };          
-            string[] Product = { "Chai", "Chang", "Syrup", "Corn Snacks", "Gumbo Mix", "Seeds",
-                "Dried Pears", "Sauce", "Mishi Kobe Niku", "Ikura", "Queso Cabrales", "Queso Manchego Pastora", "Konbu",
-                "Tofu", "Genen Shouyu", "Pavlova", "Alice Mutton", "Biscuits", "Teatime Chocolate Biscuits", "Sir Rodney\"s Marmalade", "Sir Rodney\"s Scones",
-                "Gustaf\"s Knäckebröd", "Tunnbröd", "Guaraná Fantástica", "Nougat-Creme", "Gumbär Gummibärchen", "Schoggi Schokolade", "Rössle Sauerkraut",
-                "Thüringer Rostbratwurst", "Nord-Ost Matjeshering", "Gorgonzola Telino", "Mascarpone Fabioli", "Geitost", "Sasquatch Ale", "Steeleye Stout", "Inlagd Sill",
-                "Gravad lax", "Nuts", "Chips", "Crab Meat", "Jack\"s Clam Chowder", "Singaporean Fried Mee", "Ipoh Coffee",
-                "Gula Malacca", "Rogede sild", "Spegesild", "Zaanse koeken", "Chocolade", "Maxilaku", "Valkoinen suklaa", "Manjimup Dried Apples", "Filo Mix", "Perth Pasties",
-                "Tourtičre", "Pâté chinois", "Ipoh Coffee", "Ravioli Angelo", "Escargots Bourgogne", "Raclette Courdavault", "Cake", "Sirop d\"érable",
-                "Tarte au sucre", "Vegie-spread", "Lakkalikri", "Louisiana Pepper Sauce", "Louisiana Hot Spiced Okra", "Lumberjack Lager", "Scottish Longbreads",
-                "Gudbrandsdalsost", "Outback Lager", "Flotemysost", "Mozzarella di Giovanni", "Röd Kaviar", "Longlife Tofu", "Rhönbräu Klosterbier", "Lakkalikööri", "Original Frankfurter" };
-            int OrderID = 1001;
-            int i = 0; int j = 0; int k = 0; int l = 0; int m = 0;
-            for (int x = 0; x < 500000; x++)
-            {
-                i = i >= CustomerId.Length ? 0 : i; 
-                l = l >= Product.Length ? 0 : l; 
-                customers.Add(new Customer() 
-                { 
-                    OrderID = OrderID + x, 
-                    ProductID = x % 1000,
-                    CustomerID = CustomerId[i],                  
-                    ProductName = Product[l],  
-                    UnitsInStock = new Random().Next(1, 10000) 
-                });
-                i++; j++; k++; l++; m++;
-            }
-            return customers;
-        }
-    }
-}
-```
-
-The following GIF represents the lazy load grouping with infinite scrolling functionality in DataGrid
-
-![Lazy Load grouping with Infinite Scrolling in Blazor DataGrid](./images/blazor-datagrid-lazy-load-infinite-scrolling.gif)
+* Due to the element height limitation in browsers, the maximum number of records loaded by the grid is limited due to the browser capability.
+* Lazy load grouping is not compatible with the following features
+    * Batch editing
+    * Row template
+    * Row drag and drop
+    * Hierarchical Grid
+    * Detail Template
+* Programmatic selection is not supported in lazy load grouping when groups are in a collapsed state.
+* Drag selection, Cell selection (box and flow), Row Selection is not working in collapsed state.
+* Clipboard is not support when the groups are in collapsed state.
