@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor MultiColumn ComboBox Component | Syncfusion
+title: Getting Started with Blazor MultiColumn ComboBox Component
 description: Checkout and learn about getting started with Blazor MultiColumn ComboBox component in Blazor Sever App and Blazor WebAssembly App.
 platform: Blazor
 control: MultiColumn ComboBox
@@ -11,7 +11,7 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor MultiColumn ComboBox](https://www.syncfusion.com/blazor-components/blazor-multicolumn-combobox) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
-To get started quickly with Blazor MultiColumn ComboBox component, you can check out this video or [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/MultiColumnComboBox) sample.
+To get started quickly with Blazor MultiColumn ComboBox component, you can check out this video or [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/ComboBox) sample.
 
 ## Prerequisites
 
@@ -23,7 +23,7 @@ You can create a **Blazor Server App** or **Blazor WebAssembly App** using Visua
 
 ## Install Syncfusion Blazor MultiColumnComboBox and Themes NuGet in the App
 
-To add **Blazor MultiColumn ComboBox** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.MultiColumnComboBox](https://www.nuget.org/packages/Syncfusion.Blazor.MultiColumnComboBox) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
+To add **Blazor MultiColumn ComboBox** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.MultiColumnComboBox](https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -163,36 +163,18 @@ After initialization, populate the MultiColumn ComboBox with data using the [Dat
 
 ## Configuring the Columns
 
-The MultiColumn ComboBox supports auto-generating columns, which simplifies the process by automatically creating columns based on the data source. Additionally, you can customize the column header text to reflect specific data, adjust the column width for optimal display, and set the column alignment (left, center, or right) to enhance readability.
+The MultiColumn ComboBox supports auto-generating columns, which simplifies the process by automatically creating columns based on the data source. Additionally, you can customize the column header text to reflect specific data, adjust the column [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html) for optimal display, and set the [TextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html) (left, center, or right) to enhance readability.
 
 {% tabs %}
 {% highlight razor %}
 
-<SfMultiColumnComboBox @bind-Value="@Value" DataSource="@Products" ValueField="Name" TextField="Name" Placeholder="Select any product"></SfMultiColumnComboBox>
-
-@code {
-    public class Product
-    {
-        public string Name { get; set; }
-        public decimal Price { get; set; }
-        public string Availability { get; set; }
-        public string Category { get; set; }
-        public double Rating { get; set; }
-    }
-    private List<Product> Products = new List<Product>();
-    private string Value { get; set; } = "Smartphone";
-    protected override Task OnInitializedAsync()
-    {
-        Products = new List<Product>
-        {
-            new Product { Name = "Laptop", Price = 999.99m, Availability = "In Stock", Category = "Electronics", Rating = 4.5 },
-            new Product { Name = "Smartphone", Price = 599.99m, Availability = "Out of Stock", Category = "Electronics", Rating = 4.3 },
-            new Product { Name = "Tablet", Price = 299.99m, Availability = "In Stock", Category = "Electronics", Rating = 4.2 },
-            new Product { Name = "Headphones", Price = 49.99m, Availability = "In Stock", Category = "Accessories", Rating = 4.0 }
-        };
-        return base.OnInitializedAsync();
-    }
-}
+ <SfMultiColumnComboBox @bind-Value="@Value" DataSource="@Products" PopupWidth="600px" ValueField="Name" TextField="Name" Placeholder="Select any product">
+     <MultiColumnComboboxColumns>
+         <MultiColumnComboboxColumn Field="Name" Width="200px" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center"></MultiColumnComboboxColumn>
+         <MultiColumnComboboxColumn Field="Price" Width="200px" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center"></MultiColumnComboboxColumn>
+         <MultiColumnComboboxColumn Field="Availability" Width="200px" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center"></MultiColumnComboboxColumn>
+     </MultiColumnComboboxColumns>
+ </SfMultiColumnComboBox>
 
 {% endhighlight %}
 {% endtabs %}
