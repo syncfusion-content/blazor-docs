@@ -1118,7 +1118,286 @@ GraphQL is a query language for APIs with which you can get exactly what you nee
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/GraphQLAdaptor)
 
+## Entity Framework
 
+You need to follow the below steps to consume data from the **Entity Framework** in the diagram component.
+
+### Create DBContext class
+
+The first step is to create a DBContext class called **DataBaseContext** to connect to a Microsoft SQL Server database.
+
+```csharp
+using DiagramWithRemoteData.Models;
+using Microsoft.EntityFrameworkCore;
+
+namespace DiagramWithRemoteData.Data
+{
+    public class DataBaseContext : DbContext
+    {
+        public DataBaseContext(DbContextOptions<DataBaseContext> options) : base(options)
+        {
+        }
+
+        private readonly string _connectionString;
+
+        public DataBaseContext(string connectionString)
+        {
+            _connectionString = GetConnectionString(connectionString);
+        }
+
+        public string GetConnectionString(string connection)
+        {
+            string Path = Environment.CurrentDirectory;
+            string[] appPath = Path.Split(new string[] { "bin" }, StringSplitOptions.None);
+            Console.WriteLine(appPath);
+            connection = connection.Replace("|DataDirectory|/", appPath[0]);
+            return connection;
+        }
+
+        public DbSet<Models.Employee> Employees { get; set; }   
+    }
+}
+```
+
+### Creating Web API Controller
+
+ A Web API Controller has to be created which allows directly directly to consume data from the Entity Framework.
+
+```csharp
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using System.Threading.Tasks;
+using System.Collections.Generic;
+using DiagramWithRemoteData.Data;
+using DiagramWithRemoteData.Models;
+
+namespace DiagramWithRemoteData.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class DataController : ControllerBase
+    {
+        private readonly DataBaseContext _context;
+
+        public DataController(DataBaseContext context)
+        {
+            _context = context;
+        }
+
+        // GET: api/Data
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Employee>>> GetEmployees()
+        {
+            return await _context.Employees.ToListAsync();
+        }
+
+        // GET: api/Data/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Employee>> GetEmployee(int id)
+        {
+            var employee = await _context.Employees.FindAsync(id);
+
+            if (employee == null)
+            {
+                return NotFound();
+            }
+
+            return employee;
+        }
+
+        // PUT: api/Data/5
+        [HttpPut("{tableName}")]
+        public async Task<IActionResult> PutEmployee(string tableName, [FromBody] Employee employee)
+        {
+
+
+            _context.Entry(employee).State = EntityState.Modified;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!EmployeeExists(employee.EmployeeID))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent();
+        }
+
+        // POST: api/Data
+        [HttpPost("{tableName}")]
+        public async Task<IActionResult> PostEmployee(string tableName, [FromBody] Employee employee)
+        {
+            _context.Employees.Add(employee);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction(nameof(GetEmployee), new { id = employee.EmployeeID }, employee);
+        }
+
+        // DELETE: api/Data/5
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteEmployee(int id)
+        {
+            var employee = await _context.Employees.FindAsync(id);
+            if (employee == null)
+            {
+                return NotFound();
+            }
+
+            _context.Employees.Remove(employee);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+        }
+
+        private bool EmployeeExists(int id)
+        {
+            return _context.Employees.Any(e => e.EmployeeID == id);
+        }
+    }
+}
+
+```
+
+### Configure diagram component using Web API adaptor
+
+Now, you can configure the diagram using the **'SfDataManager'** to interact with the created Web API and consume the data appropriately. To interact with web api, you need to use WebApiAdaptor.
+
+```cshtml
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Diagram
+@using DiagramWithRemoteData.Controllers
+
+<div id="diagram-space" class="content-wrapper">
+    <SfDiagramComponent @ref="@diagram" Width="100%" Height="690px" ConnectorCreating="@ConnectorCreating" NodeCreating="@NodeCreating">
+        <DataSourceSettings ID="EmployeeID" ParentID="ReportsTo">
+            <SfDataManager Url="api/Data" Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor"></SfDataManager>
+        </DataSourceSettings>
+        <Layout Type="Syncfusion.Blazor.Diagram.LayoutType.HierarchicalTree" VerticalSpacing="75" HorizontalSpacing="75" GetLayoutInfo="GetLayoutInfo"></Layout>
+    </SfDiagramComponent>
+
+</div>
+@functions{
+    SfDiagramComponent? diagram;
+    public static List<EmployeeDetails> employeeDetails { get; set; }
+    Layout LayoutValue = new Layout() { };
+    private TreeInfo GetLayoutInfo(IDiagramObject obj, TreeInfo options)
+    {
+        options.EnableSubTree = true;
+        options.Orientation = Orientation.Horizontal;
+        return options;
+    }
+    private void NodeCreating(IDiagramObject obj)
+    {
+        Node? node = obj as Node;
+        node.Width = 200;
+        node.Height = 100;
+        Dictionary<string, object> data = node.Data as Dictionary<string, object>;
+        if (data != null)
+        {
+            node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+            {
+                new ShapeAnnotation()
+                {
+                    Content = $"Name:{data["Name"]}\nReportsTo:{data["ReportsTo"]}\nDesignation:{data["Designation"]}",
+                }
+            };
+        }
+    }
+    private void ConnectorCreating(IDiagramObject connector)
+    {
+        Connector? newConnector = connector as Connector;
+        newConnector!.TargetDecorator = new DecoratorSettings() { Shape = DecoratorShape.None };
+        newConnector.Type = ConnectorSegmentType.Orthogonal;
+        newConnector.Style = new ShapeStyle() { StrokeColor = "#6d6d6d" };
+        newConnector.Constraints = ConnectorConstraints.None;
+        newConnector.CornerRadius = 5;
+    }
+
+    public class EmployeeDetails
+    {
+        public int EmployeeID { get; set; }
+
+        public string ReportsTo { get; set; }
+
+        public string Name { get; set; }
+
+        public string Designation { get; set; }
+
+        public string Colour { get; set; }
+    }
+}
+```
+
+### CRUD
+The SfDiagramComponent supports CRUD (Create, Read, Update, Delete) operations using SfDataManager for remote data management. By making API calls to update data, the diagram automatically rerenders, ensuring real-time synchronization between the front-end diagram and the backend. This allows users to manage and manipulate diagram data from remote databases or APIs using methods like ReadData, UpdateData, InsertData, and DeleteData.
+
+### Read DataSource
+The SfDiagramComponent can fetch and display data from remote sources using the ReadDataAsync method. This method retrieves data from the server that we visualized as nodes and connectors in the diagram. This method is invoked when the user wants to load the raw data from the server.
+```csharp
+    //To fetch data from the remote service
+    public async void Read()
+    {
+        var data = await diagram.ReadDataAsync();
+    }
+```
+
+### Updating Existing Data
+The UpdateDataAsync method updates the data on the remote server through an API call. Once the data is updated, the diagram automatically refreshes and displays the latest data from the server.
+```csharp
+    //To update data in the remote service
+    public async void Update()
+    {
+        EmployeeDetails employeeDetails = new EmployeeDetails()
+        {
+            EmployeeID = 6,
+            Name = "Michael",
+            Designation = "Product Manager",
+            ReportsTo = "1",
+            Colour = "Green"
+        };
+        await diagram.UpdateDataAsync("EmployeeID", employeeDetails);
+    }
+```
+
+### Inserting New Data
+The InsertDataAsync method adds new data to the remote server via an API. Once the data is inserted, the diagram updates itself to include the new nodes and connectors.
+```csharp
+   //To push data to the remote service
+    public async void Insert()
+    {
+        EmployeeDetails employeeDetails = new EmployeeDetails()
+        {
+            EmployeeID = 11,
+            Name = "Alan",
+            Designation = "HR assistant",
+            ReportsTo = "9",
+            Colour = "Gray"
+        };
+        await diagram.InsertDataAsync(employeeDetails);
+    }
+```
+
+### Deleting Data
+The DeleteDataAsync method removes data from the remote server. Once the data is deleted, the diagram refreshes itself to reflect the removal of nodes and connectors.
+```csharp
+    //To delete data in the remote service
+    public async void Delete()
+    {
+        await diagram.DeleteDataAsync("EmployeeID", 5);
+    }
+```
+
+You can find the fully working sample here.
 ## See Also
 
 * [How to arrange the diagram nodes and connectors using varies layout](./layout/automatic-layout)
