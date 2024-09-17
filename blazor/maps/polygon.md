@@ -264,3 +264,85 @@ Any HTML element can be rendered in the tooltip of the polygon shapes using the 
 ```
 
 ![Blazor Maps with tooltip template for polygon shape](./images/Polygon/blazor-map-polygon-shape-tooltip-template.png)
+
+
+## Changing a Polygon Shape to a Line
+
+The rendered polygon shape can be changed to a line shape by setting the `ShapeType` property to **LineString**.
+
+The following example demonstrates how to customize a line shape on an online map, display a tooltip for the line shape, highlight the line shape, and select the line shape on the map. In this example, latitude and longitude values are extracted from coordinates in a JSON file and assigned to the `Points` property within the `MapsPolygon` tag.
+
+```cshtml
+@using Syncfusion.Blazor.Maps
+@inject NavigationManager NavigationManager
+@inject HttpClient Http;
+@using Newtonsoft.Json;
+
+@if(Coordinates != null)
+{
+    <SfMaps>
+        <MapsCenterPosition Latitude="-25.829397669018562" Longitude="28.539912753179671"></MapsCenterPosition>
+        <MapsZoomSettings Enable="true" MinZoom="1" MaxZoom="19" ZoomFactor="17">
+            <MapsZoomToolbarSettings>
+                <MapsZoomToolbarButton ToolbarItems="new List<ToolbarItem>() { ToolbarItem.Zoom, ToolbarItem.ZoomIn, ToolbarItem.ZoomOut,
+            ToolbarItem.Pan, ToolbarItem.Reset }"></MapsZoomToolbarButton>
+            </MapsZoomToolbarSettings>
+        </MapsZoomSettings>
+        <MapsLayers>
+            <MapsLayer UrlTemplate="https://tile.openstreetmap.org/level/tileX/tileY.png" TValue="string">
+                <MapsPolygons>
+                    <MapsPolygon Fill="transparent" BorderColor="red" Points="@Coordinates" TooltipText="Line String" BorderWidth="2" ShapeType="PolygonShapeType.LineString">
+                    </MapsPolygon>
+                    <MapsPolygonTooltipSettings Visible="true" BorderColor="Red" BorderWidth="1">
+                    </MapsPolygonTooltipSettings>
+                    <MapsPolygonHighlightSettings Enable=true Fill="yellow" Opacity="0.4">
+                        <MapsPolygonHighlightBorder Color="blue" Opacity="1" Width="1"></MapsPolygonHighlightBorder>
+                    </MapsPolygonHighlightSettings>
+                    <MapsPolygonSelectionSettings Enable=true EnableMultiSelect=false Fill="violet" Opacity="0.8">
+                        <MapsPolygonSelectionBorder Color="cyan" Opacity="1" Width="1"></MapsPolygonSelectionBorder>
+                    </MapsPolygonSelectionSettings>
+                </MapsPolygons>
+            </MapsLayer>
+        </MapsLayers>
+    </SfMaps>
+
+}
+
+@code {
+    public List<Coordinate> Coordinates = new List<Coordinate>();
+    protected override async Task OnInitializedAsync()
+    {
+        string path = NavigationManager.BaseUri + "line.json";
+        HttpClient httpClient = new HttpClient();
+        string response = await Http.GetStringAsync(path);
+        GeoJson shapeData = JsonConvert.DeserializeObject<GeoJson>(response);
+        for (int i = 0; i < shapeData.Features[0].Geometry.Coordinates.Count; i++)
+        {
+            List<double> coordinate = shapeData.Features[0].Geometry.Coordinates[i];
+            Coordinates.Add(new Coordinate() { Longitude = coordinate[0], Latitude = coordinate[1] });
+        }
+    }
+
+    public class GeoJson
+    {
+        public string Type { get; set; }
+        public List<Feature> Features { get; set; }
+    }
+
+    public class Feature
+    {
+        public string Type { get; set; }
+        public Geometry Geometry { get; set; }
+        public object Properties { get; set; }
+    }
+
+    public class Geometry
+    {
+        public string Type { get; set; }
+        public List<List<double>> Coordinates { get; set; }
+    }
+}
+```
+> Note: Refer the content of the JSON file [line.json here](https://www.syncfusion.com/downloads/support/directtrac/general/ze/line140125043).
+
+![Blazor Maps with line shape](./images/Polygon/blazor-map-line-shape-on-tile-images.gif)
