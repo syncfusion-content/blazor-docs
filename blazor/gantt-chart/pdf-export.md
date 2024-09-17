@@ -476,6 +476,7 @@ The following code demonstrates how to change the page size to A4 for the export
     }
 }
 ```
+## Customize columns in exported PDF document
 
 ### How to export the Gantt chart with specific columns
 
@@ -709,7 +710,9 @@ The following code demonstrates how to customize the columns and set their width
 }
 ```
 
-### Customizing taskbar appearance using event
+## Customizing taskbar appearance in exported PDF document 
+
+### Task appearance through event 
 
 The PDF export functionality allows you to customize taskbar appearance to a PDF document using the [PdfQueryTaskbarInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfQueryTaskbarInfo) event. This event provides the flexibility to customize and format the appearance of taskbars, including parent taskbars, individual taskbars, and milestone templates.
 
@@ -796,7 +799,7 @@ The following sample code demonstrates how to use the `PdfQueryTaskbarInfo` even
 }
 ```
 
-### Customizing taskbar appearance using export property
+### Task appearance through property
 
 The PDF export functionality allows you to customize taskbar appearance to a PDF document with customized colors using the `TaskbarColor` property in the `GanttPdfExportProperties` class. This property enables you to format various types of taskbars, including parent taskbars, child taskbars, milestones, critical paths, manual taskbars, and baselines.
 
