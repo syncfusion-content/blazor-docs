@@ -278,9 +278,11 @@ The following example demonstrates how to customize a line shape on an online ma
 @inject HttpClient Http;
 @using Newtonsoft.Json;
 
+@if(Coordinates != null)
+{
     <SfMaps>
         <MapsCenterPosition Latitude="-25.829397669018562" Longitude="28.539912753179671"></MapsCenterPosition>
-        <MapsZoomSettings Enable="true" MinZoom="1" MaxZoom="19" ZoomFactor="19">
+        <MapsZoomSettings Enable="true" MinZoom="1" MaxZoom="19" ZoomFactor="17">
             <MapsZoomToolbarSettings>
                 <MapsZoomToolbarButton ToolbarItems="new List<ToolbarItem>() { ToolbarItem.Zoom, ToolbarItem.ZoomIn, ToolbarItem.ZoomOut,
             ToolbarItem.Pan, ToolbarItem.Reset }"></MapsZoomToolbarButton>
@@ -291,19 +293,20 @@ The following example demonstrates how to customize a line shape on an online ma
                 <MapsPolygons>
                     <MapsPolygon Fill="transparent" BorderColor="red" Points="@Coordinates" TooltipText="Line String" BorderWidth="2" ShapeType="PolygonShapeType.LineString">
                     </MapsPolygon>
-                    <MapsPolygonTooltipSettings Visible="true" BorderColor="Red" BorderWidth="2">
+                    <MapsPolygonTooltipSettings Visible="true" BorderColor="Red" BorderWidth="1">
                     </MapsPolygonTooltipSettings>
-                <MapsPolygonHighlightSettings Enable=true Fill="yellow" Opacity="0.4">
-                    <MapsPolygonHighlightBorder Color="blue" Opacity="0.6" Width="4"></MapsPolygonHighlightBorder>
-                </MapsPolygonHighlightSettings>
-                <MapsPolygonSelectionSettings Enable=true EnableMultiSelect=false Fill="violet" Opacity="0.8">
-                    <MapsPolygonSelectionBorder Color="cyan" Opacity="1" Width="7"></MapsPolygonSelectionBorder>
-                </MapsPolygonSelectionSettings>
+                    <MapsPolygonHighlightSettings Enable=true Fill="yellow" Opacity="0.4">
+                        <MapsPolygonHighlightBorder Color="blue" Opacity="1" Width="1"></MapsPolygonHighlightBorder>
+                    </MapsPolygonHighlightSettings>
+                    <MapsPolygonSelectionSettings Enable=true EnableMultiSelect=false Fill="violet" Opacity="0.8">
+                        <MapsPolygonSelectionBorder Color="cyan" Opacity="1" Width="1"></MapsPolygonSelectionBorder>
+                    </MapsPolygonSelectionSettings>
                 </MapsPolygons>
             </MapsLayer>
         </MapsLayers>
     </SfMaps>
 
+}
 
 @code {
     public List<Coordinate> Coordinates = new List<Coordinate>();
