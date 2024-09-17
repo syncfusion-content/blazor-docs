@@ -206,7 +206,7 @@ When the Maps component renders within the Tab component, its rendering begins c
 
 ## Maps component inside Dialog
 
-When the Maps component renders within the Dialog component, its rendering begins concurrently with the Dialog component's rendering. As a result, the size of the Maps component will not be proper. To properly render the Maps component, a boolean variable (i.e. **IsInitialRender**) must be created and it is used to determine the Maps component's rendering. The boolean variable is set to **false** by default, so the Maps component will not be rendered initially. When the Dialog component is being opened, its [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_OnOpen) event is fired. In this event, the `Task.Yield()` method should be called, and the boolean variable (i.e. **IsInitialRender**) must be set to **true** to initiate the rendering of the Maps component. This ensures that the Dialog component is fully rendered before the Maps component begins rendering. When the Dialog component is closed, its [Closed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_Closed) event is triggered, and the boolean variable (i.e. **IsInitialRender**) should be set to **false** in this event.
+When the Maps component renders within the Dialog component, its rendering begins concurrently with the Dialog component's rendering. As a result, the size of the Maps component will not be proper. To properly render the Maps component, a boolean variable (i.e. **IsInitialRender**) must be created and it is used to determine the Maps component's rendering. The boolean variable is set to **false** by default, so the Maps component will not be rendered initially. When the Dialog component is being opened, its [Opened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_Opened) event is fired, and the boolean variable (i.e. **IsInitialRender**) must be set to **true** to initiate the render of the Maps component. When the Dialog component is closed, its [Closed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_Closed) event is triggered, and the boolean variable (i.e. **IsInitialRender**) in this event must be changed to false.
 
 When you drag and resize the Dialog component, the Maps component is not notified, so the Maps are not properly rendered within the Dialog. To avoid this scenario, the Maps component's `Refresh` method must be called in the Dialog's [Resizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_Resizing) and [OnResizeStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.DialogEvents.html#Syncfusion_Blazor_Popups_DialogEvents_OnResizeStop) events. Because the size of the Dialog is determined after a delay, a 500 millisecond delay must be provided before refreshing the Maps component.
 
@@ -223,7 +223,7 @@ When you drag and resize the Dialog component, the Maps component is not notifie
         }
     </div>
     <SfDialog ResizeHandles="@DialogResizeDirections" AllowDragging="true" Height="400px" Width="400px" EnableResize="true" ShowCloseIcon="true" @bind-Visible="Visibility">
-        <DialogEvents OnResizeStop="@OnResizeStopHandler" Resizing="OnResizeStopHandler" OnOpen="@DialogOpen" Closed="@DialogClose"></DialogEvents>
+        <DialogEvents OnResizeStop="@OnResizeStopHandler" Resizing="OnResizeStopHandler" Opened="@DialogOpen" Closed="@DialogClose"></DialogEvents>
         <DialogTemplates>
             <Header>Maps</Header>
             <Content> 
@@ -259,10 +259,9 @@ When you drag and resize the Dialog component, the Maps component is not notifie
         Maps.Refresh();
     }
 
-    public async Task DialogOpen(Object args)
+    public void DialogOpen(Object args)
     {
        this.ShowButton = false;
-       await Task.Yield();
        IsInitialRender = true;
     }
 
