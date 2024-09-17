@@ -106,6 +106,25 @@ Add the Syncfusion Blazor FileManager component in the **~/Pages/Index.razor** f
 {% endhighlight %}
 {% endtabs %}
 
+## Create Models
+
+Create a new folder named `Models` in the server project. Add the necessary model files to this folder for handling file operations. Download the `PhysicalFileProvider.cs` and `Base` folder from this [repository](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider/tree/master/Models) and place them in the Models folder.
+
+## Create a new folder controller
+
+To initialize a local service, create a new folder name with `Controllers` inside the server part of the project. Then, create a new file `FileManagerController` with extension `.cs` inside the `Controllers` folder.
+
+Make sure your controller `FileManagerController.cs` uses the model classes you've created. Import the model namespace at the top of your controller file
+
+File Manager's base functions are available in the below namespace.
+```cshtml
+using Syncfusion.EJ2.FileManager.Base;
+````
+File Manager's operations are available in the below namespace.
+````cshtml
+using Syncfusion.EJ2.FileManager.PhysicalFileProvider;
+````
+
 ## Initialize the service in controller
 
 File Manager supports the basic file actions like Read, Delete, Copy, Move, Get Details, Search, Rename, and Create New Folder.
@@ -125,7 +144,7 @@ using Microsoft.AspNetCore.Http.Features;
 using Syncfusion.EJ2.FileManager.Base;
 //File Manager's operations are available in the below namespace.
 using Syncfusion.EJ2.FileManager.PhysicalFileProvider;
-using Newtonsoft.Json;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -196,10 +215,27 @@ app.MapControllers();.
 
 This will configure and map the controller in your Blazor App.
 
-To access the above File Operations, you need some model class files that have file operations methods. So, create `Models` folder in `server` part of the application and download the `PhysicalFileProvider.cs` and `Base` folder from the [this](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider/tree/master/Models) link in the Models folder.
+## Create Web Server App
+
+Add the Syncfusion Blazor FileManager component in `~/Pages/Index.razor` file.
+
+{% tabs %}
+{% highlight razor %}
+
+<SfFileManager TValue="FileManagerDirectoryContent">
+    <FileManagerAjaxSettings Url="/api/FileManager/FileOperations"
+                             UploadUrl="/api/FileManager/Upload"
+                             DownloadUrl="/api/FileManager/Download"
+                             GetImageUrl="/api/FileManager/GetImage">
+    </FileManagerAjaxSettings>
+</SfFileManager>
+
+{% endhighlight %}
+{% endtabs %}
 
 Add your required files and folders under the `wwwroot\Files` directory.
-
+* In your  project, the `wwwroot` directory is where static files are served from. It is typically found at the root level of your server project.
+* Inside the `wwwroot` directory, create a new folder named `Files`. This will be used to store static files like images, documents, or other resources that you want to serve directly.
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor FileManager component in your default web browser.
 
 ![Blazor FileManager Component](images/blazor-filemanager-component.png)
