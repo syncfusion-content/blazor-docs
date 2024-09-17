@@ -133,7 +133,7 @@ The following example demonstrates how to use the `CellClicked` event. In this e
 }
 ```
 
-![CellClicked event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-cell-click-event-and-notify-right-click-event.gif)
+![CellClicked event in Blazor HeatMap Chart](images/events/blazor-heatmap-chart-cell-clicked-event.gif)
 
 ## CellRendering
 
@@ -571,15 +571,11 @@ The following example demonstrates how to use the `LegendRendering` event to cus
         {7, 46, 47, 47, 88, 6},
         {41, 55, 73, 23, 3, 79}
     };
-    string[] XAxisLabels = new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
-    string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+    public string[] XAxisLabels = new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
+    public string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
     private void LegendRender(Syncfusion.Blazor.HeatMap.LegendRenderEventArgs args)
     {
-        if (args.Text == "0")
-        {
-            args.Text = "100";
-        }
-        else
+        if (args.Text != "0")
         {
             args.Text = "";
         }
