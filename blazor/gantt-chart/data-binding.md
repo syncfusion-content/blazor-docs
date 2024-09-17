@@ -67,10 +67,10 @@ N> * Indent/Outdent is not supported for Hierarchy Data.
 
 ### Self-Referential / Flat Data Binding
 
-The Gantt Chart component can be bound with self-referential data by mapping the data source field values to the `Id` and `ParentID` properties.
+The Gantt Chart component can be bound with self-referential data by mapping the data source field values to the [Id](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Id) and [ParentID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_ParentID) properties.
 
-* ID field: This field contains unique values used to identify each individual task and it is mapped to the `Id` property.
-* Parent ID field: This field contains values that indicate parent tasks and it is mapped to the `ParentID` property.
+* Id field: The `Id` field contains unique values for each task and is mapped to the __TaskId__ property in the Gantt Chart component.
+* ParentID field: The `ParentID` field specifies the parent task for each task and is mapped to the __ParentId__ property. Each child task uses the __ParentId__ to reference its parent task, creating a hierarchical structure where the __ParentId__ of a child task matches the __TaskId__ of its parent task.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
