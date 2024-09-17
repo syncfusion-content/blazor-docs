@@ -112,6 +112,10 @@ Gantt_TimelineCell | Zeitleistenzelle
 Gantt_ConfirmPredecessorDelete | Möchten Sie den Abhängigkeitslink wirklich entfernen?
 Gantt_Indent | Einrücken
 Gantt_Outdent | Ausrücken
+Gantt_SS | SS
+Gantt_SF | SB
+Gantt_FS | BS
+Gantt_FF | BB
 
 ### Blazor server-side
 
@@ -405,7 +409,7 @@ RTL provides an option to switch the text direction and layout of the Gantt comp
 }
 ```
 
-N> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to know how to render and configure the gantt.
+N> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap5) to know how to render and configure the gantt.
 
 ## See also
 
