@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor MultiColumn ComboBox Component
+title: Getting Started with Syncfusion Blazor MultiColumn ComboBox
 description: Checkout and learn about getting started with Blazor MultiColumn ComboBox component in Blazor Sever App and Blazor WebAssembly App.
 platform: Blazor
 control: MultiColumn ComboBox
