@@ -307,11 +307,9 @@ The [ChartSeriesBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 ``` 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjrKsLrRJtxArrAq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor Range Area Chart with Custom Series](../images/chart-types-images/blazor-range-area-chart-custom-series.png)
-
 ## Empty points
 
-Data points with `null` or `undefined` values are considered empty. Empty data points are ignored and not plotted on the chart.
+Data points with `null`, `double.NaN` or `undefined` values are considered empty. Empty data points are ignored and not plotted on the chart.
 
 **Mode**
 
@@ -324,9 +322,8 @@ Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 <SfChart>
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@WeatherReports" XName="X" High="High" Low="Low" Type="ChartSeriesType.RangeArea">
-            <ChartEmptyPointSettings Mode="EmptyPointMode.Gap"></ChartEmptyPointSettings>
-            <ChartMarker Visible="true" Height="10" Width="10"></ChartMarker>
+        <ChartSeries DataSource="@WeatherReports" XName="X" High="High" Low="Low" Type="Syncfusion.Blazor.Charts.ChartSeriesType.RangeArea">
+            <ChartEmptyPointSettings Mode="EmptyPointMode.Zero"></ChartEmptyPointSettings>
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
@@ -352,7 +349,7 @@ Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhJXPiEheSgXoxn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNrfjYCUVcRPTeWM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 **Fill**
 
@@ -365,9 +362,9 @@ Use the [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 <SfChart>
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@WeatherReports" XName="X" High="High" Low="Low" Type="ChartSeriesType.RangeArea">
-            <ChartEmptyPointSettings Fill="#FFDE59" Mode="EmptyPointMode.Average"></ChartEmptyPointSettings>
-            <ChartMarker Visible="true" Height="10" Width="10"></ChartMarker>
+        <ChartSeries DataSource="@WeatherReports" XName="X" High="High" Low="Low" Type="Syncfusion.Blazor.Charts.ChartSeriesType.RangeArea">
+            <ChartEmptyPointSettings Fill="red" Mode="EmptyPointMode.Zero"></ChartEmptyPointSettings>
+            <ChartMarker Visible="true" Height="7" Width="7"></ChartMarker>
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
@@ -393,7 +390,7 @@ Use the [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLTZlsYrIGabHPL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrpZOMgBGvjLZRF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 **Border**
 
@@ -406,11 +403,11 @@ Use the [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 <SfChart>
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@WeatherReports" XName="X" High="High" Low="Low" Type="ChartSeriesType.RangeArea">
-            <ChartEmptyPointSettings Fill="#FFDE59" Mode="EmptyPointMode.Average">
-                <ChartEmptyPointBorder Color="red" Width="2"></ChartEmptyPointBorder>
+        <ChartSeries DataSource="@WeatherReports" XName="X" High="High" Low="Low" Type="Syncfusion.Blazor.Charts.ChartSeriesType.RangeArea">
+            <ChartEmptyPointSettings Fill="red" Mode="EmptyPointMode.Zero">
+                <ChartEmptyPointBorder Color="green" Width="2"></ChartEmptyPointBorder>
             </ChartEmptyPointSettings>
-            <ChartMarker Visible="true" Height="10" Width="10"></ChartMarker>
+            <ChartMarker Visible="true" Height="7" Width="7"></ChartMarker>
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
@@ -436,7 +433,7 @@ Use the [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrzNFCuVoaDwJVe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBpXksArwOUEwRY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Events
 
@@ -472,18 +469,18 @@ The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 
     public List<ChartData> WeatherReports = new List<ChartData>
     {
-        new  ChartData { X=  "Sun", Low=  2.5, High=  9.8 },
-        new  ChartData { X=  "Mon", Low=  4.7, High=  11.4 },
-        new  ChartData { X=  "Tue", Low=  6.4, High=  14.4 },
-        new  ChartData { X=  "Wed", Low=  9.6, High=  17.2 },
-        new  ChartData { X=  "Thu", Low=  7.5, High=  15.1 },
-        new  ChartData { X=  "Fri", Low=  3.0, High=  10.5 },
-        new  ChartData { X=  "Sat", Low=  1.2, High=  7.9 }
+         new ChartData { X= "Sun", Low= 2.5, High= 9.8 },
+         new ChartData { X= "Mon", Low= 4.7, High= 11.4 },
+         new ChartData { X= "Tue", Low= 6.4, High= 14.4 },
+         new ChartData { X= "Wed", Low= 9.6, High= 17.2 },
+         new ChartData { X= "Thu", Low= 7.5, High= 15.1 },
+         new ChartData { X= "Fri", Low= 3.0, High= 10.5 },
+         new ChartData { X= "Sat", Low= 1.2, High= 7.9 }
     };
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVTDlMaLninZGMQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhfDYWghlZFKfRQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Point render
 
@@ -498,7 +495,7 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
     <ChartEvents OnPointRender="PointRender"></ChartEvents>
     <ChartSeriesCollection>
         <ChartSeries DataSource="@WeatherReports" XName="X" High="High" Low="Low" Type="ChartSeriesType.RangeArea">
-            <ChartMarker Visible="true" Height="10" Width="10"></ChartMarker>
+            <ChartMarker Visible="true" Height="7" Width="7"></ChartMarker>
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
@@ -513,24 +510,23 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 
     public void PointRender(PointRenderEventArgs args)
     {
-        args.Fill = args.Point.X.ToString() == "Wed" ? "#E91E63" : "#3F51B5";
+        args.Fill = (args.Point.Index % 2 != 0) ? "#ff6347" : "#009cb8";
     }
-
 
     public List<ChartData> WeatherReports = new List<ChartData>
     {
-        new  ChartData { X=  "Sun", Low=  2.5, High=  9.8 },
-        new  ChartData { X=  "Mon", Low=  4.7, High=  11.4 },
-        new  ChartData { X=  "Tue", Low=  6.4, High=  14.4 },
-        new  ChartData { X=  "Wed", Low=  9.6, High=  17.2 },
-        new  ChartData { X=  "Thu", Low=  7.5, High=  15.1 },
-        new  ChartData { X=  "Fri", Low=  3.0, High=  10.5 },
-        new  ChartData { X=  "Sat", Low=  1.2, High=  7.9 }
+         new ChartData { X= "Sun", Low= 2.5, High= 9.8 },
+         new ChartData { X= "Mon", Low= 4.7, High= 11.4 },
+         new ChartData { X= "Tue", Low= 6.4, High= 14.4 },
+         new ChartData { X= "Wed", Low= 9.6, High= 17.2 },
+         new ChartData { X= "Thu", Low= 7.5, High= 15.1 },
+         new ChartData { X= "Fri", Low= 3.0, High= 10.5 },
+         new ChartData { X= "Sat", Low= 1.2, High= 7.9 }
     };
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVzNFWYhxAzTsAz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrJZECqhFrrVKBi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

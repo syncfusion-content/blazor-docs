@@ -17,7 +17,7 @@ documentation: ug
 
 @using Syncfusion.Blazor.Charts
 
-<SfChart DataSource="@MedalDetails">
+<SfChart DataSource="@ChartDataList">
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
 
     <ChartSeriesCollection>
@@ -36,7 +36,7 @@ documentation: ug
         public double YValue1 { get; set; }
     }
 	
-    public List<ChartData> MedalDetails = new List<ChartData>
+    public List<ChartData> ChartDataList = new List<ChartData>
 	{
         new ChartData { X= "USA", YValue= 46, YValue1=56 },
         new ChartData { X= "GBR", YValue= 27, YValue1=17 },
@@ -64,7 +64,7 @@ You can bind data to the chart using the [`DataSource`](https://help.syncfusion.
 
 @using Syncfusion.Blazor.Charts
 
-<SfChart DataSource="@MedalDetails">
+<SfChart DataSource="@ChartDataList">
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
 
     <ChartSeriesCollection>
@@ -83,7 +83,7 @@ You can bind data to the chart using the [`DataSource`](https://help.syncfusion.
         public double YValue1 { get; set; }
     }
 	
-    public List<ChartData> MedalDetails = new List<ChartData>
+    public List<ChartData> ChartDataList = new List<ChartData>
 	{
         new ChartData { X= "USA", YValue= 46, YValue1=56 },
         new ChartData { X= "GBR", YValue= 27, YValue1=17 },
@@ -115,9 +115,9 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
 
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue" Fill="green" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Scatter">
+        <ChartSeries DataSource="@ChartDataList" XName="X" YName="YValue" Fill="green" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Scatter">
         </ChartSeries>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue1" Fill="blue" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Scatter">
+        <ChartSeries DataSource="@ChartDataList" XName="X" YName="YValue1" Fill="blue" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Scatter">
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
@@ -130,7 +130,7 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
         public double YValue1 { get; set; }
     }
 
-    public List<ChartData> MedalDetails = new List<ChartData>
+    public List<ChartData> ChartDataList = new List<ChartData>
     {
         new ChartData { X= "USA", YValue= 46, YValue1=56 },
         new ChartData { X= "GBR", YValue= 27, YValue1=17 },
@@ -156,10 +156,10 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
 
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue" Fill="url(#grad1)" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Scatter">
+        <ChartSeries DataSource="@ChartDataList" XName="X" YName="YValue" Fill="url(#grad1)" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Scatter">
             <ChartMarker Height="10" Width="10" />
         </ChartSeries>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue1" Fill="url(#grad2)" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Scatter">
+        <ChartSeries DataSource="@ChartDataList" XName="X" YName="YValue1" Fill="url(#grad2)" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Scatter">
             <ChartMarker Height="10" Width="10" />
         </ChartSeries>
     </ChartSeriesCollection>
@@ -191,7 +191,7 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
         public double YValue1 { get; set; }
     }
 
-    public List<ChartData> MedalDetails = new List<ChartData>
+    public List<ChartData> ChartDataList = new List<ChartData>
     {
         new ChartData { X= "USA", YValue= 46, YValue1=56 },
         new ChartData { X= "GBR", YValue= 27, YValue1=17 },
@@ -215,7 +215,7 @@ The [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Cha
 
 @using Syncfusion.Blazor.Charts
 
-<SfChart DataSource="@MedalDetails">
+<SfChart DataSource="@ChartDataList">
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
 	
     <ChartSeriesCollection>
@@ -238,7 +238,7 @@ The [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Cha
         public double YValue1 { get; set; }
     }
 	
-    public List<ChartData> MedalDetails = new List<ChartData>
+    public List<ChartData> ChartDataList = new List<ChartData>
 	{
         new ChartData { X= "USA", YValue= 46, YValue1=56 },
         new ChartData { X= "GBR", YValue= 27, YValue1=17 },
@@ -254,8 +254,6 @@ The [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Cha
 ``` 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNhTjFhNLoCriEer?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor Scatter Chart with Custom Series](../images/chart-types-images/blazor-scatter-chart-custom-series.png)
-
 **Shape**
 
 The [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMarker.html#Syncfusion_Blazor_Charts_ChartCommonMarker_Shape) property allows you to customize the appearance of the markers by specifying different shapes.
@@ -268,10 +266,10 @@ The [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Chart
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
 
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Scatter">
+        <ChartSeries DataSource="@ChartDataList" XName="X" YName="YValue" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Scatter">
             <ChartMarker Height="10" Width="10" Shape="ChartShape.Triangle" />
         </ChartSeries>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue1" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Scatter">
+        <ChartSeries DataSource="@ChartDataList" XName="X" YName="YValue1" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Scatter">
             <ChartMarker Height="10" Width="10" Shape="ChartShape.Rectangle" />
         </ChartSeries>
     </ChartSeriesCollection>
@@ -285,7 +283,7 @@ The [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Chart
         public double YValue1 { get; set; }
     }
 
-    public List<ChartData> MedalDetails = new List<ChartData>
+    public List<ChartData> ChartDataList = new List<ChartData>
     {
         new ChartData { X= "USA", YValue= 46, YValue1=56 },
         new ChartData { X= "GBR", YValue= 27, YValue1=17 },
@@ -303,7 +301,7 @@ The [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Chart
 
 ## Empty points
 
-Data points with `null` or `undefined` values are considered empty. Empty data points are ignored and not plotted on the chart.
+Data points with `null`, `double.NaN` or `undefined` values are considered empty. Empty data points are ignored and not plotted on the chart.
 
 **Mode**
 
@@ -317,11 +315,11 @@ Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
 
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Scatter">
+        <ChartSeries DataSource="@ChartDataList" XName="X" YName="YValue" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Scatter">
             <ChartEmptyPointSettings Mode="EmptyPointMode.Gap"></ChartEmptyPointSettings>
             <ChartMarker Visible="true" Height="10" Width="10"></ChartMarker>
         </ChartSeries>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue1" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Scatter">
+        <ChartSeries DataSource="@ChartDataList" XName="X" YName="YValue1" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Scatter">
             <ChartEmptyPointSettings Mode="EmptyPointMode.Gap"></ChartEmptyPointSettings>
             <ChartMarker Visible="true" Height="10" Width="10"></ChartMarker>
         </ChartSeries>
@@ -336,7 +334,7 @@ Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
         public double YValue1 { get; set; }
     }
 
-    public List<ChartData> MedalDetails = new List<ChartData>
+    public List<ChartData> ChartDataList = new List<ChartData>
     {
         new ChartData { X= "USA", YValue= 46, YValue1=56 },
         new ChartData { X= "GBR", YValue= 27, YValue1=17 },
@@ -364,11 +362,11 @@ Use the [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
 
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Scatter">
+        <ChartSeries DataSource="@ChartDataList" XName="X" YName="YValue" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Scatter">
             <ChartEmptyPointSettings Fill="blue" Mode="EmptyPointMode.Average"></ChartEmptyPointSettings>
             <ChartMarker Height="10" Width="10"></ChartMarker>
         </ChartSeries>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue1" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Scatter">
+        <ChartSeries DataSource="@ChartDataList" XName="X" YName="YValue1" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Scatter">
             <ChartEmptyPointSettings Fill="green" Mode="EmptyPointMode.Average"></ChartEmptyPointSettings>
             <ChartMarker Height="10" Width="10"></ChartMarker>
         </ChartSeries>
@@ -383,7 +381,7 @@ Use the [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
         public double YValue1 { get; set; }
     }
 
-    public List<ChartData> MedalDetails = new List<ChartData>
+    public List<ChartData> ChartDataList = new List<ChartData>
     {
         new ChartData { X= "USA", YValue= 46, YValue1=56 },
         new ChartData { X= "GBR", YValue= 27, YValue1=17 },
@@ -411,13 +409,13 @@ Use the [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
 
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Scatter">
+        <ChartSeries DataSource="@ChartDataList" XName="X" YName="YValue" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Scatter">
             <ChartEmptyPointSettings Fill="blue" Mode="EmptyPointMode.Average">
                 <ChartEmptyPointBorder Width="2" Color="#FF0000"></ChartEmptyPointBorder>
             </ChartEmptyPointSettings>
             <ChartMarker Height="10" Width="10"></ChartMarker>
         </ChartSeries>
-        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue1" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Scatter">
+        <ChartSeries DataSource="@ChartDataList" XName="X" YName="YValue1" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Scatter">
             <ChartEmptyPointSettings Fill="green" Mode="EmptyPointMode.Average">
                 <ChartEmptyPointBorder Width="2" Color="#FF0000"></ChartEmptyPointBorder>
             </ChartEmptyPointSettings>
@@ -434,7 +432,7 @@ Use the [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
         public double YValue1 { get; set; }
     }
 
-    public List<ChartData> MedalDetails = new List<ChartData>
+    public List<ChartData> ChartDataList = new List<ChartData>
     {
         new ChartData { X= "USA", YValue= 46, YValue1=56 },
         new ChartData { X= "GBR", YValue= 27, YValue1=17 },
@@ -464,8 +462,8 @@ The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
     <ChartEvents OnSeriesRender="SeriesRender"></ChartEvents>
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@MedalDetails" Name="Series1" XName="X" YName="YValue" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Scatter" />
-        <ChartSeries DataSource="@MedalDetails" Name="Series2" XName="X" YName="YValue1" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Scatter" />
+        <ChartSeries DataSource="@ChartDataList" Name="Series1" XName="X" YName="YValue" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Scatter" />
+        <ChartSeries DataSource="@ChartDataList" Name="Series2" XName="X" YName="YValue1" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Scatter" />
     </ChartSeriesCollection>
     <ChartLegendSettings Visible="false"></ChartLegendSettings>
 </SfChart>
@@ -490,7 +488,7 @@ The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
         }
     }
 
-    public List<ChartData> MedalDetails = new List<ChartData>
+    public List<ChartData> ChartDataList = new List<ChartData>
     {
         new ChartData { X= "USA", YValue= 46, YValue1=56 },
         new ChartData { X= "GBR", YValue= 27, YValue1=17 },
@@ -518,10 +516,10 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
     <ChartEvents OnPointRender="PointRender"></ChartEvents>
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@MedalDetails" Name="Series1" XName="X" YName="YValue" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Scatter"> 
+        <ChartSeries DataSource="@ChartDataList" Name="Series1" XName="X" YName="YValue" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Scatter"> 
             <ChartMarker Height="10" Width="10" />
         </ChartSeries>
-        <ChartSeries DataSource="@MedalDetails" Name="Series2" XName="X" YName="YValue1" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Scatter">
+        <ChartSeries DataSource="@ChartDataList" Name="Series2" XName="X" YName="YValue1" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Scatter">
             <ChartMarker Height="10" Width="10" />
         </ChartSeries>
     </ChartSeriesCollection>
@@ -541,7 +539,7 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
         args.Fill = args.Point.X.ToString() == "UK" ? args.Series.YName == "YValue" ? "#E91E63" : "#FFC107" : args.Fill;
     }
 
-    public List<ChartData> MedalDetails = new List<ChartData>
+    public List<ChartData> ChartDataList = new List<ChartData>
     {
         new ChartData { X= "USA", YValue= 46, YValue1=56 },
         new ChartData { X= "GBR", YValue= 27, YValue1=17 },

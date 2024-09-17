@@ -179,8 +179,6 @@ To customize the start angle of the [Radar Chart](https://help.syncfusion.com/cr
 ``` 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LXBpZPhtzpLTqzjV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
-![Blazor Radar Chart with Start Angle](../images/polar-radar/blazor-radar-chart-start-angle.png)
-
 ### Coefficient in axis
   
 To customize the radius of the [Radar Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Radar), use [Coefficient](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Coefficient) property. By default, [Coefficient](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Coefficient) value is **100**.
@@ -222,12 +220,10 @@ To customize the radius of the [Radar Chart](https://help.syncfusion.com/cr/blaz
 ``` 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htLJNPVjfzqCoYbb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
-![Blazor Radar Chart with Radius](../images/polar-radar/blazor-radar-chart-radius.png)
-
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 ## Empty points
 
-Data points with `null` or `undefined` values are considered empty. Empty data points are ignored and not plotted on the chart.
+Data points with `null`, `double.NaN` or `undefined` values are considered empty. Empty data points are ignored and not plotted on the chart.
 
 **Mode**
 
