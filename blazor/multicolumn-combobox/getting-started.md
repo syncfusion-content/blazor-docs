@@ -168,9 +168,7 @@ By default, the width of the popup list automatically adjusts according to the M
 {% tabs %}
 {% highlight razor %}
 
-<SfComboBox TValue="string" TItem="Games"PopupHeight="350px" PopupWidth="350px" Placeholder="Select a game" DataSource="@LocalData">
-    <ComboBoxFieldSettings Value="ID" Text="Text"></ComboBoxFieldSettings>
-</SfComboBox>
+<SfMultiColumnComboBox @bind-Value="@Value" DataSource="@Products" PopupHeight="350px" PopupWidth="400px" ValueField="Name" TextField="Name" Placeholder="Select any product"></SfMultiColumnComboBox>
 
 {% endhighlight %}
 {% endtabs %}
