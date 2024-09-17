@@ -13,7 +13,7 @@ The Gantt Chart in Blazor offers a project management interface similar to Micro
 
 ## Key features
 
-* [**Data sources**](./data-binding/) - Bind the Blazor Gantt Chart component with data using `SfDataManager`. The `DataSource` value can be assigned using either the property values from SfDataManager or a list of business objects.
+* [**Data sources**](./data-binding/) - The Blazor Gantt Chart component can be integrated with various remote API service for data binding by using the `SfDataManager` or an enumerable collection of objects by using the `DataSource` property.
 * [**Large data binding**](./data-binding/) - Optimize performance when dealing with extensive datasets by initially loading only parent records. Child records are rendered dynamically upon expansion, reducing initial load times and improving user experience with large project structures.
 * [**Editing**](./managing-tasks/): Directly edit task details such as duration, start and end dates, and dependencies within the Gantt Chart. Use the Edit dialog for structured input or interact with taskbars for a more visual editing approach.
 * [**Task dependencies**](./task-dependencies/): Define and manage task relationships using various dependency types, including finish-to-start, start-to-finish, start-to-start, and finish-to-finish. This feature helps in accurately modeling project schedules and dependencies.
