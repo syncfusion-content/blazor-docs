@@ -371,6 +371,53 @@ The ODataV4 is an improved version of OData protocols, and the [SfDataManager](h
 }
 
 ```
+### Search operation in ODataV4 Adaptor
+
+The Global Search feature allows users to search for data across multiple columns in the Grid when using the ODataV4Adaptor. As $search request is not directly supported , the Grid internally rewrites these requests as $filter queries for the available columns.So to perform search operation in DataGrid component with ODataV4, $search queries were rewritten as $filter for available column and request were sent to ODataV4 adaptor.To enable the search operation in the ODataV4Adaptor, define the EnableODataSearchFallback property to true. This property allows the Grid to perform a fallback search operation when the ODataV4 service does not provide built-in search functionality.
+
+```cshtml
+
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Grids
+
+<SfGrid TValue="Order" AllowFiltering="true" Toolbar="@(new List<string>() { "Search" })" AllowPaging="true">
+    <SfDataManager @ref="dm" Url="https://services.odata.org/V4/Northwind/Northwind.svc/Orders/" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public SfDataManager dm { get; set; }
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        base.OnAfterRender(firstRender);
+        RemoteOptions Rm = (dm.DataAdaptor as ODataV4Adaptor).Options;
+        Rm.EnableODataSearchFallback = true;
+        (dm.DataAdaptor as ODataV4Adaptor).Options = Rm;
+    }
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVKZliTqLgIFqFv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+**Limitations :**
+
+Please find the following limitations applied for implementing this feature in your application.
+
+1.The contains operator will be applied only for string typed column
+
+2.The equal operator will only be applied for all other data types.
 
 ### Web API
 
