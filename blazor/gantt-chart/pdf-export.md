@@ -136,11 +136,12 @@ In this example, the exported PDF will be saved as `ProjectSchedule.pdf`.
     }
 }
 ```
+
 ### How to add a text in header/footer
 
 The PDF export functionality of the Gantt Chart allows you to add and style custom text in the Header or Footer of the exported PDF document. This customization can be achieved using the `Header` and `Footer` properties of the `GanttPdfExportProperties` class. By configuring these properties, you can include important information, such as titles, project names, or other relevant details, to enhance the exported document.
 
-The following sample code demonstrates how to add custom text and customize its styles in the Header section of the exported PDF document:
+The following sample code demonstrates how to add custom text and customize its styles in the Header and Footer section of the exported PDF document,
 
 ``` cshtml
 @using Syncfusion.Blazor.Gantt
@@ -160,7 +161,11 @@ The following sample code demonstrates how to add custom text and customize its 
     private List<object> toolbarItem = new List<Object>() { new ToolbarItem() { Text = "PDF Export", TooltipText = "PDF Export", Id = "PdfExport", PrefixIcon = "e-pdfexport" } };
     public List<PdfHeaderFooterContent> HeaderContent = new List<PdfHeaderFooterContent>
     {
-        new PdfHeaderFooterContent() { Type = ContentType.Text, Value = "Gantt Chart PDF Export", Position = new PdfPosition() { X = 0, Y = 50 }, Style = new PdfContentStyle() { TextBrushColor = "#000000", FontSize = 13 } }
+        new PdfHeaderFooterContent() { Type = ContentType.Text, Value = "Gantt Chart PDF Export Header", Position = new PdfPosition() { X = 0, Y = 50 }, Style = new PdfContentStyle() { TextBrushColor = "#000000", FontSize = 13 } }
+    };
+    public List<PdfHeaderFooterContent> FooterContent = new List<PdfHeaderFooterContent>
+    {
+        new PdfHeaderFooterContent() { Type = ContentType.Text, Value = "Gantt Chart PDF Export Footer", Position = new PdfPosition() { X = 0, Y = 350 }, Style = new PdfContentStyle() { TextBrushColor = "#000000", FontSize = 13 } }
     };
     protected override void OnInitialized()
     {
@@ -177,7 +182,14 @@ The following sample code demonstrates how to add custom text and customize its 
                     Height = 100,
                     Contents = HeaderContent
                 };
+            PdfFooter Footer = new PdfFooter()
+                {
+                    FromBottom = 250,
+                    Height = 100,
+                    Contents = FooterContent
+                };
             exportProperties.Header = Header;
+            exportProperties.Footer = Footer;
             await Gantt.ExportToPdfAsync(exportProperties);
         }
     }
@@ -223,7 +235,7 @@ Supported line styles are,
 * DashDotDot
 * Solid
 
-The following sample code demonstrates adding line in the Header section of the exported document,
+The following sample code demonstrates adding line in the Header and Footer section of the exported document,
 
 ``` cshtml
 @using Syncfusion.Blazor.Gantt
@@ -245,6 +257,10 @@ The following sample code demonstrates adding line in the Header section of the 
     {
         new PdfHeaderFooterContent() { Type = ContentType.Line, Points = new PdfPoints() { X1 = 0, Y1 = 4, X2 = 685, Y2 = 4 }, Style = new PdfContentStyle() { PenColor = "#000080", DashStyle = PdfDashStyle.Solid } }
     };
+    public List<PdfHeaderFooterContent> FooterContent = new List<PdfHeaderFooterContent>
+    {
+        new PdfHeaderFooterContent() { Type = ContentType.Line, Points = new PdfPoints() { X1 = 0, Y1 = 350, X2 = 685, Y2 = 350 }, Style = new PdfContentStyle() { PenColor = "#000080", DashStyle = PdfDashStyle.Solid } }
+    };
     protected override void OnInitialized()
     {
         this.TaskCollection = GetTaskCollection();
@@ -260,7 +276,14 @@ The following sample code demonstrates adding line in the Header section of the 
                     Height = 100,
                     Contents = HeaderContent
                 };
+            PdfFooter Footer = new PdfFooter()
+                {
+                    FromBottom = 250,
+                    Height = 100,
+                    Contents = FooterContent
+                };
             exportProperties.Header = Header;
+            exportProperties.Footer = Footer;
             await Gantt.ExportToPdfAsync(exportProperties);
         }
     }
@@ -453,6 +476,7 @@ The following code demonstrates how to change the page size to A4 for the export
     }
 }
 ```
+
 ### How to export the Gantt chart with specific columns
 
 The PDF export functionality allows you to export only specific columns from the Gantt chart, rather than exporting all columns by default. This can be achieved by setting the `Columns` property in the `GanttPdfExportProperties` class, enabling you to tailor the exported document to only include relevant data.
@@ -604,6 +628,7 @@ The following code demonstrates how to export hidden columns in the Gantt chart 
     }
 }
 ```
+
 ### Customize column width in exported PDF document
 
 The PDF export functionality allows you to customize columns width in the exported PDF document. This can be achieved using the `Width` property in the `GanttColumn` class. By specifying columns and their respective widths, you can tailor the PDF export to meet your specific needs.
@@ -684,7 +709,7 @@ The following code demonstrates how to customize the columns and set their width
 }
 ```
 
-## Customizing taskbar appearance using event
+### Customizing taskbar appearance using event
 
 The PDF export functionality allows you to customize taskbar appearance to a PDF document using the [PdfQueryTaskbarInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfQueryTaskbarInfo) event. This event provides the flexibility to customize and format the appearance of taskbars, including parent taskbars, individual taskbars, and milestone templates.
 
@@ -771,7 +796,7 @@ The following sample code demonstrates how to use the `PdfQueryTaskbarInfo` even
 }
 ```
 
-## Customizing taskbar appearance using export property
+### Customizing taskbar appearance using export property
 
 The PDF export functionality allows you to customize taskbar appearance to a PDF document with customized colors using the `TaskbarColor` property in the `GanttPdfExportProperties` class. This property enables you to format various types of taskbars, including parent taskbars, child taskbars, milestones, critical paths, manual taskbars, and baselines.
 
