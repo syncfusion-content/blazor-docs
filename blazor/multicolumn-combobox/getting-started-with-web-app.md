@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Web App in Blazor MultiColumn ComboBox | Syncfusion
+title: Getting Started with Syncfusion Blazor MultiColumn ComboBox in WebApp
 description: Checkout and learn here all about the documentation for getting started with Blazor MultiColumn ComboBox component in Blazor Web App.
 platform: Blazor
 component: MultiColumn ComboBox
@@ -23,7 +23,7 @@ You need to configure the corresponding [Interactive render mode](https://learn.
 
 ## Install Syncfusion Blazor MultiColumnComboBox and Themes NuGet in the Blazor Web App
 
-To add **Blazor MultiColumn ComboBox** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.MultiColumnComboBox](https://www.nuget.org/packages/Syncfusion.Blazor.MultiColumnComboBox/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+To add **Blazor MultiColumn ComboBox** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.MultiColumnComboBox](https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
 If you utilize `WebAssembly or Auto` render modes in the Blazor Web App need to be install Syncfusion Blazor components NuGet packages within the client project.
 
@@ -106,7 +106,7 @@ Add the Syncfusion Blazor MultiColumn ComboBox component in `.razor` file inside
 
 ## Binding Data Source and Mapping Fields
 
-After initializing, populate the MultiColumn ComboBox with data using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property. Here, the MultiColumn ComboBox binds its DataSource to the Products list, which contains multiple product objects. The [ValueField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html) and [TextField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html) properties are both set to the Name property of the Product class, ensuring that product names are displayed in the dropdown. The [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html) is used to bind the selected value, with an initial value of "Smartphone" already pre-selected in this case.
+After initializing, populate the MultiColumn ComboBox with data using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property. Here, the MultiColumn ComboBox binds its DataSource to the Products list, which contains multiple product objects. The [ValueField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html) and [TextField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html) properties are both set to the Name property of the Product class, ensuring that product names are displayed in the dropdown. The [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html) is used to bind the selected value, with an initial value of "Smart phone" already pre-selected in this case.
 
 {% tabs %}
 {% highlight razor %}
@@ -157,7 +157,7 @@ By default, the width of the popup list automatically adjusts according to the M
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZBpXirahMIhXWui?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Customizing Popup Height and Width in Blazor MultiColumn ComboBox](./images/blazor-multicolumncombobox-popup-customization.png)" %}
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/MultiColumnComboBox).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/ComboBox).
 
 ## See also
 
