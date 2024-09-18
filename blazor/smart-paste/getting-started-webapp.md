@@ -26,7 +26,7 @@ N> As of now, Syncfusion Blazor Smart components are fully compatible with Serve
 
 ## Install Syncfusion Blazor SmartComponents and Themes NuGet in the App
 
-To add **Blazor Smart Paste Button** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.SmartComponents](https://www.nuget.org/packages/Syncfusion.Blazor.SmartComponents/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+To add **Blazor Smart Paste Button** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.SmartComponents](https://www.nuget.org/packages?q=Syncfusion.Blazor.SmartComponents) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
 Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -99,7 +99,7 @@ Here,
 
 For **Azure OpenAI**, first [deploy an Azure OpenAI Service resource and model](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource), then values for `apiKey`, `deploymentName` and `endpoint` will all be provided to you.
 
-If you are using **OpenAI** and [create an API key](https://platform.openai.com/api-keys), leave the `endpoint` as `""`. The value for `deploymentName` is the [model](https://platform.openai.com/docs/models/) you wish to use (e.g., `gpt-3.5-turbo`, `gpt-4`, etc.).
+If you are using **OpenAI** and [create an API key](https://platform.openai.com/docs/quickstart/create-and-export-an-api-key), leave the `endpoint` as `""`. The value for `deploymentName` is the [model](https://platform.openai.com/docs/models/) you wish to use (e.g., `gpt-3.5-turbo`, `gpt-4`, etc.).
 
 ## Add stylesheet and script resources
 
