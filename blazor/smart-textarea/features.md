@@ -15,7 +15,7 @@ The Syncfusion Blazor Smart TextArea component fully inherits all the properties
 * [Floating Labels](https://blazor.syncfusion.com/documentation/textarea/floating-label)
 * [Events](https://blazor.syncfusion.com/documentation/textarea/events)
 * [Methods](https://blazor.syncfusion.com/documentation/textarea/methods)
-* [Style and Appreance](https://blazor.syncfusion.com/documentation/textarea/styles-appearance)
+* [Style and Appearance](https://blazor.syncfusion.com/documentation/textarea/styles-appearance)
 
 ## See also
 

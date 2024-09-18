@@ -7,7 +7,7 @@ control: Smart Paste Button
 documentation: ug
 ---
 
-# Types and Appearances
+# Types and Appearance
 
 The Syncfusion Blazor Smart Paste Button component fully inherits all the properties, types, and styling options of the Syncfusion Blazor Button component. This means that you can leverage the existing features of the Syncfusion Blazor Button while benefiting from the enhanced functionality of the Smart Paste Button.
 

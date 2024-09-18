@@ -7,14 +7,14 @@ control: Smart Paste Button
 documentation: ug
 ---
 
-# Getting Started with Smart Paste Button in Blazor Web App
+# Getting Started with Smart Paste Button
 
 This section briefly explains about how to include [Blazor Smart Paste Button](https://www.syncfusion.com/blazor-components/blazor-smartpaste-button) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/).
 
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-* [OpenAI](https://platform.openai.com/api-keys) or [Azure OpenAI Account](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource)
+* [OpenAI](https://platform.openai.com/docs/quickstart/create-and-export-an-api-key) or [Azure OpenAI Account](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource)
 
 N> As of now, Syncfusion Blazor Smart Components are currently compatible with both OpenAI and Azure OpenAI configurations.
 
