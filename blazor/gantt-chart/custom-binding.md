@@ -9,11 +9,11 @@ documentation: ug
 
 # Custom Binding in Blazor Gantt Chart Component
 
-The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) provides support for custom adaptor, which enable manual operations on data. This feature can be used to implement custom data binding and editing functionalities in the Gantt component, offering more flexibility in managing and interacting with the data.
+The `SfDataManager` supports custom adaptors, allowing for manual operations on data. This feature enables custom data binding and editing functionalities in the Gantt component, providing greater flexibility in managing and interacting with data.
 
-To implement custom data binding in the Gantt component, the [DataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html) class is used. This abstract class serves as the foundation for creating a custom adaptor.
+To implement custom data binding in the Gantt component, use the [`DataAdaptor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html) class. This abstract class serves as the foundation for creating a custom adaptor.
 
-The `DataAdaptor`  abstract class includes both synchronous and asynchronous methods that can be overridden in a custom adaptor. Below are the key method signatures available in this class:
+The `DataAdaptor` abstract class includes both synchronous and asynchronous methods that can be overridden in a custom adaptor. Below are the key method signatures available in this class:
 
 ```csharp
 public abstract class DataAdaptor
@@ -71,7 +71,7 @@ public abstract class DataAdaptor
 
 ## Data binding
 
-Custom data binding can be performed in the Gantt component by providing a custom adaptor class and overriding the [`Read`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Read_Syncfusion_Blazor_DataManagerRequest_System_String_) or [`ReadAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_ReadAsync_Syncfusion_Blazor_DataManagerRequest_System_String_) method of the `DataAdaptor` abstract class.
+Custom data binding in the Gantt component can be achieved by providing a custom adaptor class and overriding either the [`Read`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Read_Syncfusion_Blazor_DataManagerRequest_System_String_) or [`ReadAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_ReadAsync_Syncfusion_Blazor_DataManagerRequest_System_String_) method of the `DataAdaptor` abstract class.
 
 The code snippet below demonstrates how to implement custom data binding using a custom adaptor:
 
@@ -172,13 +172,13 @@ The code snippet below demonstrates how to implement custom data binding using a
 }
 ```
 
->If the [DataManagerRequest.RequiresCounts](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html#Syncfusion_Blazor_DataManagerRequest_RequiresCounts) value is **true**, the `Read`/`ReadAsync` methods must return a [DataResult](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.DataResult.html) with a [Result](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.DataResult-1.html#Syncfusion_Blazor_Data_DataResult_1_Result) collection of records and a [Count](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.DataResult-1.html#Syncfusion_Blazor_Data_DataResult_1_Count) value representing the total number of records. <br/><br/>If `DataManagerRequest.RequiresCounts` is **false**, return only the collection of records. <br/><br/>If the `Read/ReadAsync` method is not overridden in the custom adaptor, the default read handler will manage the request.
+>If the [`DataManagerRequest.RequiresCounts`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html#Syncfusion_Blazor_DataManagerRequest_RequiresCounts) property is **true**, the `Read`/`ReadAsync` methods must return a [`DataResult`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.DataResult.html) object containing both a [`Result`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.DataResult-1.html#Syncfusion_Blazor_Data_DataResult_1_Result) collection of records and a [`Count`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.DataResult-1.html#Syncfusion_Blazor_Data_DataResult_1_Count) indicating the total number of records.<br/><br/>If `DataManagerRequest.RequiresCounts` is **false**, only the collection of records should be returned.<br/><br/>If the `Read`/`ReadAsync` method is not overridden in the custom adaptor, the default read handler will process the request.
 
 ## Inject service into custom adaptor
 
 To inject a service into the custom adaptor and use it, the requirement can be achieved as shown below.
 
-Initially, the CustomAdaptor class needs to be added as AddScoped in the Program.cs (or Startup.cs) file.
+Initially, register the `CustomAdaptor` class as an `AddSingleton` service in the `Program.cs` (or `Startup.cs`) file.
 
 ```csharp
 builder.Services.AddSingleton<TaskModel>();
@@ -517,11 +517,11 @@ The following sample code snippet demonstrates implementing CRUD operations for 
 
 ## Handling Filtering in Custom Adaptor
 
-When using a custom adaptor, handle the filtering operation by overriding the `Read`/`ReadAsync` method of the `DataAdaptor` abstract class. The filter action details can be obtained from the `DataManagerRequest` class, as shown in the image below.
+When using a custom adaptor, handle the filtering operation by overriding the `Read` or `ReadAsync` method of the `DataAdaptor` abstract class. The details of the filter action can be obtained from the `DataManagerRequest` class, as illustrated in the image below.
 
 ![Custom adaptor filter](images/blazor-gantt-chart-custom-adaptor-filter.png)
 
-> Filter records are displayed based on setting the filtered records in the `Read`/`ReadAsync` method. When filtering child records, the parent records should be included in the filtered datasource.
+>Filtered records are displayed based on the records set in the `Read` or `ReadAsync` method. When filtering child records, ensure that the parent records are also included in the filtered data source.
 
 ``` cshtml
 @using Syncfusion.Blazor.Gantt;
