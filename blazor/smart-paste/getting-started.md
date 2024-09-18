@@ -14,7 +14,7 @@ This section briefly explains about how to include [Blazor Smart Paste Button](h
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-* [OpenAI](https://platform.openai.com/api-keys) or [Azure OpenAI Account](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource)
+* [OpenAI](https://platform.openai.com/docs/quickstart/create-and-export-an-api-key) or [Azure OpenAI Account](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource)
 
 N> Blazor Smart Components are currently compatible with both OpenAI and Azure OpenAI configurations.
 
