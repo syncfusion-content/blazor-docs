@@ -13,6 +13,8 @@ The critical path in a project is indicated by a single task or a series of task
 
 The critical path can be enabled in Gantt by using the built-in toolbar button or [EnableCriticalPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableCriticalPath) property.
 
+> The critical path is based on the project end date. Tasks that end before the project’s specified end date will not be considered part of the critical path.
+
 The following code example shows how to display the critical path in the Gantt control:
 
 ```cshtml
