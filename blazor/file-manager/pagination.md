@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Pagination in Blazor File Manager Component | Syncfusion
 description: Checkout and learn here all about Pagination in the Syncfusion Blazor File Manager component and more.
