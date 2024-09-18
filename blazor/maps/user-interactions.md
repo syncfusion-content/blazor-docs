@@ -577,7 +577,7 @@ The shape is initially selected using the [MapsInitialShapeSelection](https://he
 <SfMaps>
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
-            <MapsLayerSelectionSettings Enable="true" Fill="green">
+            <MapsLayerSelectionSettings Enable="true" Fill="green" EnableMultiSelect="true">
                 <MapsLayerSelectionBorder Color="white" Width="2"></MapsLayerSelectionBorder>
             </MapsLayerSelectionSettings>
             <MapsInitialShapeSelectionSettings>
