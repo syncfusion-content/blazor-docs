@@ -41,4 +41,4 @@ The following code demonstrates how to load the font collection to PDF Viewer.
 }
     
 ```
-[View sample in GitHub]().
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Load%20font%20collection%20in%20PDF%20document).
