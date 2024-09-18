@@ -664,12 +664,12 @@ The following code example illustrates how to set the open mode to the tooltip f
     //Method to show tooltip
     private void show()
     {
-        diagram.ShowTooltip(diagram.Nodes[2] as NodeBase);
+        diagram.ShowTooltipAsync(diagram.Nodes[2] as NodeBase);
     }
     //Method to hide tooltip
     private void hide()
     {
-        diagram.HideTooltip(diagram.Nodes[2] as NodeBase);
+        diagram.HideTooltipAsync(diagram.Nodes[2] as NodeBase);
     }
 }
 ```
@@ -737,12 +737,12 @@ The following code example illustrates how to set the open mode to the tooltip f
     //Method to show tooltip
     private void show()
     {
-        diagram.ShowTooltip(diagram.Connectors[2] as NodeBase);
+        diagram.ShowTooltipAsync(diagram.Connectors[2] as NodeBase);
     }
     //Method to hide tooltip
     private void hide()
     {
-        diagram.HideTooltip(diagram.Connectors[2] as NodeBase);
+        diagram.HideTooltipAsync(diagram.Connectors[2] as NodeBase);
     }
 }
 ```
