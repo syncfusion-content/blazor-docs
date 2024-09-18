@@ -9,7 +9,7 @@ documentation: ug
 
 # Show Recent color in Blazor Color Picker Component
 
-The [ShowRecentColors](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_ShowRecentColors) property enables the display of recently selected colors in the ColorPicker when in palette mode. This feature helps users quickly access their most frequently used colors.
+The [`ShowRecentColors`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_ShowRecentColors) property enables the display of recently selected colors in the ColorPicker when in palette mode. This feature helps users quickly access their most frequently used colors.
 
 >Note: The [`ShowRecentColors`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_ShowRecentColors) feature displays up to 10 recent colors as tiles and is available only in `palette` mode.
 
