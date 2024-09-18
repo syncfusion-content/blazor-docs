@@ -11,7 +11,7 @@ documentation: ug
 
 ## Placeholder
 
-Utilize the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Placeholder) property to show a brief description of the expected input value. In the example below, assign `Select a game` to the `Placeholder` property, which will update the `Placeholder` attribute of the input element in the DOM accordingly.
+Utilize the [Placeholder]() property to show a brief description of the expected input value. In the example below, assign `Select a game` to the `Placeholder` property, which will update the `Placeholder` attribute of the input element in the DOM accordingly.
 
 {% highlight cshtml %}
 
@@ -21,7 +21,7 @@ Utilize the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ![Blazor ComboBox with placeholder](./images/placeholder-and-floatlabel/blazor_combobox_placeholder.png)
 
-## Color of the placeholder text
+<!-- ## Color of the placeholder text
 
 You can change the color of the placeholder by targeting its CSS class `input.e-input::placeholder`, which indicates the placeholder text, and set the desired color using the `color` property.
 
@@ -31,9 +31,9 @@ You can change the color of the placeholder by targeting its CSS class `input.e-
 
 {% endhighlight %}
 
-![Blazor ComboBox with color placeholder](./images/placeholder-and-floatlabel/blazor_combobox_placeholder-with-color.png)
+![Blazor ComboBox with color placeholder](./images/placeholder-and-floatlabel/blazor_combobox_placeholder-with-color.png)  -->
 
-## Add mandatory indicator using placeholder
+ ## Add mandatory indicator using placeholder
 
 The mandatory indicator `*` can be applied to the placeholder by targeting its CSS class `.e-float-text::after` using the `content` style.
 
@@ -43,11 +43,11 @@ The mandatory indicator `*` can be applied to the placeholder by targeting its C
 
 {% endhighlight %}
 
-![Blazor ComboBox with mandatory indicator placeholder](./images/placeholder-and-floatlabel/blazor_combobox_placeholder-with-mandatory.png)
+![Blazor ComboBox with mandatory indicator placeholder](./images/placeholder-and-floatlabel/blazor_combobox_placeholder-with-mandatory.png) 
 
 ## FloatLabel
 
-Use the [FloatLabelType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FloatLabelType) property to define how the floating label behaves in the DropDownList, allowing the `Placeholder` text to float above the TextBox. This functionality is relevant only when a `Placeholder` is present. The `FloatLabelType` depends on the `Placeholder` setting, with its default value being `Never`.
+Use the [FloatLabelType]() property to define how the floating label behaves in the DropDownList, allowing the `Placeholder` text to float above the TextBox. This functionality is relevant only when a `Placeholder` is present. The `FloatLabelType` depends on the `Placeholder` setting, with its default value being `Never`.
 
 The floating label supports the types of actions as follow.
 
@@ -67,7 +67,7 @@ The `FloatLabelType` as  `Auto` is demonstrated in the following code sample.
 
 ![Blazor ComboBox with float label](./images/placeholder-and-floatlabel/blazor_combobox_floatlabel.gif)
 
-## Customizing the float label element’s focusing color
+<!-- ## Customizing the float label element’s focusing color
 
 You can change the text color of the floating label when it is focused by targeting its CSS classes `.e-input-focus` and `.e-float-text.e-label-top`. These classes indicate the floating label text while it is focused state and set the desired color using the `color` property.
 
@@ -77,4 +77,4 @@ You can change the text color of the floating label when it is focused by target
 
 {% endhighlight %}
 
-![Blazor ComboBox with float label focusing color](./images/placeholder-and-floatlabel/blazor_combobox_floatlabel-focusing-color.png)
+![Blazor ComboBox with float label focusing color](./images/placeholder-and-floatlabel/blazor_combobox_floatlabel-focusing-color.png) -->
