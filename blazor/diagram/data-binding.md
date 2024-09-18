@@ -1021,6 +1021,335 @@ The following sample code demonstrates how to bind data to the Diagram component
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/RemoteData/URLAdaptor)
 
+### How to bind custom data
+The custom data binding can be performed in the diagram component by providing the custom adaptor class and overriding the Read or ReadAsync method of the DataAdaptor abstract class.
+
+The following sample code demonstrates implementing custom data binding using custom adaptor,
+
+```cshtml
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Data
+
+<div class="row" id="diagram">
+    <div class="col-md-10">
+        <div id="diagram-space" class="content-wrapper">
+            <SfDiagramComponent ID="diagramControl" @ref="@diagram" Width="100%" Height="690px" ConnectorCreating="@ConnectorCreating" NodeCreating="@NodeCreating">
+                <DataSourceSettings ID="EmployeeID" ParentID="ReportsTo">
+                    <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
+                </DataSourceSettings>
+                <Layout Type="Syncfusion.Blazor.Diagram.LayoutType.HierarchicalTree" VerticalSpacing="75" HorizontalSpacing="75"></Layout>
+            </SfDiagramComponent>
+        </div>
+    </div>
+</div>
+@functions{
+    SfDiagramComponent? diagram;
+    public static List<EmployeeDetails> employeeDetails { get; set; }
+    Layout LayoutValue = new Layout() { };
+    private TreeInfo GetLayoutInfo(IDiagramObject obj, TreeInfo options)
+    {
+        options.EnableSubTree = true;
+        options.Orientation = Orientation.Horizontal;
+        return options;
+    }
+    private void NodeCreating(IDiagramObject obj)
+    {
+        Node? node = obj as Node;
+        node!.Style = new ShapeStyle() { Fill = "#659be5", StrokeColor = "none", StrokeWidth = 2, };
+        node.BackgroundColor = "#659be5";
+        node.Width = 200;
+        node.Height = 100;
+        EmployeeDetails data = node.Data as EmployeeDetails;
+        if (data != null)
+        {
+            //node.ID = data.FirstName + data.EmployeeID;
+            node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+            {
+                new ShapeAnnotation()
+                {
+                    ID = data.FirstName,
+                    Content = $"Name:{data.FirstName}\nReportsTo:{data.ReportsTo}\nDesignation:{data.Designation}\nCountry:{data.Country}",
+                    Style = new TextStyle(){FontSize = 15, Color = "white"}
+                }
+            };
+            node.Style = new ShapeStyle() { Fill = data.Color, StrokeColor = "none", StrokeWidth = 2, };
+        }
+    }
+    private void ConnectorCreating(IDiagramObject connector)
+    {
+        Connector? newConnector = connector as Connector;
+        newConnector!.TargetDecorator = new DecoratorSettings() { Shape = DecoratorShape.None };
+        newConnector.Type = ConnectorSegmentType.Orthogonal;
+        newConnector.Style = new ShapeStyle() { StrokeColor = "#6d6d6d" };
+        newConnector.Constraints = ConnectorConstraints.None;
+        newConnector.CornerRadius = 5;
+    }
+
+
+    public class EmployeeDetails
+    {
+        public string EmployeeID { get; set; }
+
+        public string ReportsTo { get; set; }
+
+        public string FirstName { get; set; }
+
+        public string Designation { get; set; }
+
+        public string Country { get; set; }
+
+        public string Color { get; set; }
+    }
+
+
+    // Implementing custom adaptor by extending the DataAdaptor class
+    public class CustomAdaptor : DataAdaptor
+    {
+        // Performs data Read operation
+        public override object Read(DataManagerRequest dm, string key = null)
+        {
+            IEnumerable<EmployeeDetails> DataSource = employeeDetails;
+            if (dm.Search != null && dm.Search.Count > 0)
+            {
+                // Searching
+                DataSource = DataOperations.PerformSearching(DataSource, dm.Search);
+            }
+            if (dm.Sorted != null && dm.Sorted.Count > 0)
+            {
+                // Sorting
+                DataSource = DataOperations.PerformSorting(DataSource, dm.Sorted);
+            }
+            if (dm.Where != null && dm.Where.Count > 0)
+            {
+                // Filtering
+                DataSource = DataOperations.PerformFiltering(DataSource, dm.Where, dm.Where[0].Operator);
+            }
+            int count = DataSource.Cast<EmployeeDetails>().Count();
+            if (dm.Skip != 0)
+            {
+                //Paging
+                DataSource = DataOperations.PerformSkip(DataSource, dm.Skip);
+            }
+            if (dm.Take != 0)
+            {
+                DataSource = DataOperations.PerformTake(DataSource, dm.Take);
+            }
+            return dm.RequiresCounts ? new DataResult() { Result = DataSource, Count = count } : (object)DataSource;
+        }
+    }
+}
+```
+
+### CRUD operation
+
+The CRUD operations for the custom bounded data in the diagram component can be implemented by overriding the following CRUD methods of the **DataAdaptor** abstract class,
+
+* **Insert/InsertAsync**
+* **Remove/RemoveAsync**
+* **Update/UpdateAsync**
+* **Read/ReadAsync**
+
+The following sample code demonstrates implementing CRUD operations for the custom bounded data,
+```cshtml
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Data
+
+@*buttons to perform crud support*@
+<div class="row" style="margin-bottom:20px">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-3">
+                <button class="btn btn-primary" @onclick="Read">Read</button>
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-primary" @onclick="Update">Update</button>
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-primary" @onclick="Insert">Insert</button>
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-primary" @onclick="Delete">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row" id="diagram">
+    <div class="col-md-10">
+        <div id="diagram-space" class="content-wrapper">
+            <SfDiagramComponent ID="diagramControl" @ref="@diagram" Width="100%" Height="690px" ConnectorCreating="@ConnectorCreating" NodeCreating="@NodeCreating">
+                <DataSourceSettings ID="EmployeeID" ParentID="ReportsTo">
+                    <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
+                </DataSourceSettings>
+                <Layout Type="Syncfusion.Blazor.Diagram.LayoutType.HierarchicalTree" VerticalSpacing="75" HorizontalSpacing="75"></Layout>
+            </SfDiagramComponent>
+        </div>
+    </div>
+</div>
+@functions{
+    SfDiagramComponent? diagram;
+    public static List<EmployeeDetails> employeeDetails { get; set; }
+    public static List<EmployeeDetails> Details { get; set; } = new List<EmployeeDetails>();
+
+    Layout LayoutValue = new Layout() { };
+    private TreeInfo GetLayoutInfo(IDiagramObject obj, TreeInfo options)
+    {
+        options.EnableSubTree = true;
+        options.Orientation = Orientation.Horizontal;
+        return options;
+    }
+    private void NodeCreating(IDiagramObject obj)
+    {
+        Node? node = obj as Node;
+        node!.Style = new ShapeStyle() { Fill = "#659be5", StrokeColor = "none", StrokeWidth = 2, };
+        node.BackgroundColor = "#659be5";
+        node.Width = 200;
+        node.Height = 100;
+        EmployeeDetails data = node.Data as EmployeeDetails;
+        if (data != null)
+        {
+            //node.ID = data.FirstName + data.EmployeeID;
+            node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+            {
+                new ShapeAnnotation()
+                {
+                    ID = data.FirstName,
+                    Content = $"Name:{data.FirstName}\nReportsTo:{data.ReportsTo}\nDesignation:{data.Designation}\nCountry:{data.Country}",
+                    Style = new TextStyle(){FontSize = 15, Color = "white"}
+                }
+            };
+            node.Style = new ShapeStyle() { Fill = data.Color, StrokeColor = "none", StrokeWidth = 2, };
+        }
+    }
+    private void ConnectorCreating(IDiagramObject connector)
+    {
+        Connector? newConnector = connector as Connector;
+        newConnector!.TargetDecorator = new DecoratorSettings() { Shape = DecoratorShape.None };
+        newConnector.Type = ConnectorSegmentType.Orthogonal;
+        newConnector.Style = new ShapeStyle() { StrokeColor = "#6d6d6d" };
+        newConnector.Constraints = ConnectorConstraints.None;
+        newConnector.CornerRadius = 5;
+    }
+
+
+    public class EmployeeDetails
+    {
+        public string EmployeeID { get; set; }
+
+        public string ReportsTo { get; set; }
+
+        public string FirstName { get; set; }
+
+        public string Designation { get; set; }
+
+        public string Country { get; set; }
+
+        public string Color { get; set; }
+    }
+
+
+    // Implementing custom adaptor by extending the DataAdaptor class
+    public class CustomAdaptor : DataAdaptor
+    {
+        // Performs data Read operation
+        public override object Read(DataManagerRequest dm, string key = null)
+        {
+            IEnumerable<EmployeeDetails> DataSource = employeeDetails;
+            if (dm.Search != null && dm.Search.Count > 0)
+            {
+                // Searching
+                DataSource = DataOperations.PerformSearching(DataSource, dm.Search);
+            }
+            if (dm.Sorted != null && dm.Sorted.Count > 0)
+            {
+                // Sorting
+                DataSource = DataOperations.PerformSorting(DataSource, dm.Sorted);
+            }
+            if (dm.Where != null && dm.Where.Count > 0)
+            {
+                // Filtering
+                DataSource = DataOperations.PerformFiltering(DataSource, dm.Where, dm.Where[0].Operator);
+            }
+            int count = DataSource.Cast<EmployeeDetails>().Count();
+            if (dm.Skip != 0)
+            {
+                //Paging
+                DataSource = DataOperations.PerformSkip(DataSource, dm.Skip);
+            }
+            if (dm.Take != 0)
+            {
+                DataSource = DataOperations.PerformTake(DataSource, dm.Take);
+            }
+            return dm.RequiresCounts ? new DataResult() { Result = DataSource, Count = count } : (object)DataSource;
+        }
+
+        // Performs Insert operation
+        public override object Insert(DataManager dm, object value, string key)
+        {
+            employeeDetails.Insert(employeeDetails.Count, value as EmployeeDetails);
+            return value;
+        }
+
+        // Performs Remove operation
+        public override object Remove(DataManager dm, object value, string keyField, string key)
+        {
+            employeeDetails.Remove(employeeDetails.Where(or => or.EmployeeID == value.ToString()).FirstOrDefault());
+            return value;
+        }
+
+        // Performs Update operation
+        public override object Update(DataManager dm, object value, string keyField, string key)
+        {
+            var data = employeeDetails.Where(or => or.EmployeeID == (value as EmployeeDetails).EmployeeID).FirstOrDefault();
+            if (data != null)
+            {
+                data.EmployeeID = (value as EmployeeDetails).EmployeeID;
+                data.ReportsTo = (value as EmployeeDetails).ReportsTo;
+                data.FirstName = (value as EmployeeDetails).FirstName;
+                data.Designation = (value as EmployeeDetails).Designation;
+                data.Country = (value as EmployeeDetails).Country;
+                data.Color = (value as EmployeeDetails).Color;
+            }
+            return value;
+        }
+    }
+
+    public void Read()
+    {
+        Details = new List<EmployeeDetails>();
+        Details = diagram.ReadDataAsync().Result as List<EmployeeDetails>;
+    }
+
+    public async void Update()
+    {
+        EmployeeDetails employeeDetails = new EmployeeDetails { EmployeeID = "1", FirstName = "AndrewSimonds", Designation = "CEO", Country = "Australia", ReportsTo = "", Color = "Red" };
+        await diagram.UpdateDataAsync("EmployeeID", employeeDetails);
+    }
+
+    public async void Insert()
+    {
+        EmployeeDetails employeeDetails = new EmployeeDetails()
+        {
+            EmployeeID = "10",
+            FirstName = "Alan",
+            Designation = "HR assistant",
+            Country = "USA",
+            ReportsTo = "6",
+            Color = "Purple"
+        };
+        await diagram.InsertDataAsync(employeeDetails);
+
+    }
+
+    public async void Delete()
+    {
+        await diagram.DeleteDataAsync("EmployeeID", "6");
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/RemoteData/URLAdaptor)
+
 ### Binding with GraphQL service
 GraphQL is a query language for APIs with which you can get exactly what you need and nothing more. The GraphQLAdaptor provides an option to retrieve data from the GraphQL server. For more details on GraphQL service, refer to the [GraphQL documentation](../data/adaptors#graphql-service-binding).
 
@@ -1339,7 +1668,7 @@ Now, you can configure the diagram using the **'SfDataManager'** to interact wit
 ```
 
 ### CRUD
-The SfDiagramComponent supports CRUD (Create, Read, Update, Delete) operations using SfDataManager for remote data management. By making API calls to update data, the diagram automatically rerenders, ensuring real-time synchronization between the front-end diagram and the backend. This allows users to manage and manipulate diagram data from remote databases or APIs using methods like ReadData, UpdateData, InsertData, and DeleteData.
+The SfDiagramComponent supports CRUD (Create, Read, Update, Delete) operations using SfDataManager for remote data management. By making API calls to update data, the diagram automatically re-renders, ensuring real-time synchronization between the front-end diagram and the back-end. This allows users to manage and manipulate diagram data from remote databases or APIs using methods like ReadData, UpdateData, InsertData, and DeleteData.
 
 ### Read DataSource
 The SfDiagramComponent can fetch and display data from remote sources using the ReadDataAsync method. This method retrieves data from the server that we visualized as nodes and connectors in the diagram. This method is invoked when the user wants to load the raw data from the server.
@@ -1398,6 +1727,7 @@ The DeleteDataAsync method removes data from the remote server. Once the data is
 ```
 
 You can find the fully working sample here.
+
 ## See Also
 
 * [How to arrange the diagram nodes and connectors using varies layout](./layout/automatic-layout)
