@@ -11,7 +11,7 @@ documentation: ug
 
 ## Get selected value
 
-Retrieve the selected value from the MultiColumn ComboBox component during the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_ValueChange) event by utilizing the [ChangeEventArgs.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ChangeEventArgs-2.html#Syncfusion_Blazor_DropDowns_ChangeEventArgs_2_Value) property.
+Retrieve the selected value from the MultiColumn ComboBox component during the [ValueChange]() event by utilizing the [ChangeEventArgs.Value]() property.
 
 {% highlight cshtml %}
 
@@ -19,7 +19,7 @@ Retrieve the selected value from the MultiColumn ComboBox component during the [
 
 {% endhighlight %}
 
-Retrieve the full object list corresponding to the selected value in the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event by utilizing the [ChangeEventArgs.ItemData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ChangeEventArgs-2.html#Syncfusion_Blazor_DropDowns_ChangeEventArgs_2_ItemData) property.
+Retrieve the full object list corresponding to the selected value in the [ValueChange]() event by utilizing the [ChangeEventArgs.ItemData]() property.
 
 {% highlight cshtml %}
 
@@ -29,7 +29,7 @@ Retrieve the full object list corresponding to the selected value in the [ValueC
 
 ## Preselected value on OnInitializedAsync
 
-To associate a pre-selected value with the MultiColumn ComboBox component, use the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) attribute. You can set the value property in the [OnInitializedAsync](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-6.0#component-initialization-oninitializedasync) lifecycle method. The following example illustrates how to bind the value when the component is initially rendered.
+To associate a pre-selected value with the MultiColumn ComboBox component, use the [@bind-Value]() attribute. You can set the value property in the [OnInitializedAsync]() lifecycle method. The following example illustrates how to bind the value when the component is initially rendered.
 
 {% highlight cshtml %}
 
@@ -53,7 +53,7 @@ You can change the component's value either programmatically or externally via t
 
 ### ValueChange event
 
-The [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_ValueChange) event is triggered when the value of the MultiColumn ComboBox component get changed or modified. Also, it will return the necessary arguments including the current and previously selected or changed value.
+The [ValueChange]() event is triggered when the value of the MultiColumn ComboBox component get changed or modified. Also, it will return the necessary arguments including the current and previously selected or changed value.
 
 {% highlight cshtml %}
 
@@ -63,7 +63,7 @@ The [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDo
 
 ### OnValueSelect event 
 
-The [OnValueSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_OnValueSelect) event is activated whenever a value is chosen in the DropDownList component. You can access the relevant arguments, including the [ChangeEventArgs.ItemData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ChangeEventArgs-2.html#Syncfusion_Blazor_DropDowns_ChangeEventArgs_2_ItemData). Additionally, you can prevent item selection by setting the [ChangeEventArgs.Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ChangeEventArgs-2.html#Syncfusion_Blazor_DropDowns_ChangeEventArgs_2_Cancel) property to `true` within the event arguments.
+The [OnValueSelect]() event is activated whenever a value is chosen in the DropDownList component. You can access the relevant arguments, including the [ChangeEventArgs.ItemData](). Additionally, you can prevent item selection by setting the [ChangeEventArgs.Cancel]() property to `true` within the event arguments.
 
 {% highlight cshtml %}
 
@@ -73,9 +73,9 @@ The [OnValueSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Drop
 
 ## Preselect value with index
 
-Bind the pre-selected value to the component using the [@bind-Index](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Index) attribute. It binds the respective value present in the specified index position of the datasource.
+Bind the pre-selected value to the component using the [@bind-Index]() attribute. It binds the respective value present in the specified index position of the datasource.
 
-N> It will be dependent on the [SortOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SortOrder.html) type. It will bind the value to the component with the sorted data if the corresponding property is defined.
+N> It will be dependent on the [SortOrder]() type. It will bind the value to the component with the sorted data if the corresponding property is defined.
 
 The following sample shows how to bind the index on the initial rendering.
 
@@ -87,9 +87,9 @@ The following sample shows how to bind the index on the initial rendering.
 
 ![Blazor MultiColumn ComboBox with bind-index](./images/selection/blazor_combobox_preselect-value-index.png)
 
-## Autofill the selected value
+<!-- ## Autofill the selected value
 
-The [Autofill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html#Syncfusion_Blazor_DropDowns_SfComboBox_2_Autofill) property determines if the component's input field will automatically suggest and complete the first matching item as the user types, drawing from the component's data source. If there are no matches, the input field will remain unchanged, and no further action will take place. By default, the `Autofill` setting is set to `false`.
+The [Autofill]() property determines if the component's input field will automatically suggest and complete the first matching item as the user types, drawing from the component's data source. If there are no matches, the input field will remain unchanged, and no further action will take place. By default, the `Autofill` setting is set to `false`.
 
 {% highlight Razor %}
 
@@ -97,21 +97,21 @@ The [Autofill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns
 
 {% endhighlight %} 
 
-![Blazor ComboBox with Autofill property](./images/selection/blazor_combobox_with-autofill-property.gif)
+![Blazor ComboBox with Autofill property](./images/selection/blazor_combobox_with-autofill-property.gif) -->
 
-## Get selected item by value
+<!-- ## Get selected item by value
 
-Get the entire object belonging to the value selected in the component using the [GetDataByValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_GetDataByValue__0_) method.
+Get the entire object belonging to the value selected in the component using the [GetDataByValue]() method.
 
 {% highlight cshtml %}
 
 {% include_relative code-snippet/selection/get-selected-item-by-value.razor %}
 
-{% endhighlight %}
+{% endhighlight %} -->
 
 ## Focus the next component on selection
 
-Focus the component programmatically using the [FocusAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FocusAsync) public method. It will set focus instantly to the MultiColumn ComboBox component when invoking it. 
+Focus the component programmatically using the [FocusAsync]() public method. It will set focus instantly to the MultiColumn ComboBox component when invoking it. 
 
 {% highlight cshtml %}
 
@@ -119,9 +119,9 @@ Focus the component programmatically using the [FocusAsync](https://help.syncfus
 
 {% endhighlight %}
 
-## Programmatically clear the selected value
+<!-- ## Programmatically clear the selected value
 
-To programmatically reset the value of the MultiColumn ComboBox, you can utilize the [ClearAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ClearAsync) method. This method removes any selected values from the SfComboBox<TValue, TItem> component and sets both the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) and [Index](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Index) properties to null.
+To programmatically reset the value of the MultiColumn ComboBox, you can utilize the [ClearAsync]() method. This method removes any selected values from the SfComboBox<TValue, TItem> component and sets both the [Value]() and [Index]() properties to null.
 
 {% highlight cshtml %}
 
@@ -129,7 +129,7 @@ To programmatically reset the value of the MultiColumn ComboBox, you can utilize
 
 {% endhighlight %}
 
-![Blazor ComboBox with programatically clear value](./images/selection/blazor_combobox_with-programmatically-clear-value.gif)
+![Blazor ComboBox with programatically clear value](./images/selection/blazor_combobox_with-programmatically-clear-value.gif) -->
 
 ## Prevent reload on form submit
 
@@ -141,17 +141,17 @@ To prevent the page from reloading when using the MultiColumn ComboBox component
 
 {% endhighlight %}
 
-## Programmatically trigger onChange event
+<!-- ## Programmatically trigger onChange event
 
-Trigger the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_ValueChange) event manually by using the instance (taken from @ref attribute) of the [ComboBoxEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html). In the following example, the `ValueChange` event is invoked inside the `Created` event handler. As per the following code, it will trigger once the component is created or rendered on the page.
+Trigger the [ValueChange]() event manually by using the instance (taken from @ref attribute) of the [ComboBoxEvents](). In the following example, the `ValueChange` event is invoked inside the `Created` event handler. As per the following code, it will trigger once the component is created or rendered on the page.
 
 {% highlight cshtml %}
 
 {% include_relative code-snippet/selection/trigger-change-event.razor %}
 
-{% endhighlight %}
+{% endhighlight %} -->
 
-## Programmatically focus in and focus out the component
+<!-- ## Programmatically focus in and focus out the component
 
 In order to trigger the `FocusAsync()` and `FocusOutAsync()` methods using the instance of the MultiColumn ComboBox, you can use buttons. You can bind the click event of the button to the `FocusAsync()` and `FocusOutAsync()` methods. When the button is clicked, it triggers the corresponding method on the MultiColumn ComboBox.
 
@@ -161,11 +161,11 @@ In order to trigger the `FocusAsync()` and `FocusOutAsync()` methods using the i
 
 {% endhighlight %}
 
-While focusing and focus out the following event get triggered.
+While focusing and focus out the following event get triggered. -->
 
 ### Focus event
 
-The [Focus](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_Focus) event will trigger when the component gets focused. 
+The [Focus]() event will trigger when the component gets focused. 
 
 {% highlight cshtml %}
 
@@ -175,7 +175,7 @@ The [Focus](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.Co
 
 ### Blur event
 
-The [Blur](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_Blur) event will trigger when focus moves out from the component. 
+The [Blur]() event will trigger when focus moves out from the component. 
 
 {% highlight cshtml %}
 
