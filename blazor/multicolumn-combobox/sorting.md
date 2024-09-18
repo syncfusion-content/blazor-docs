@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sorting in Syncfusion Blazor MultiColumn ComboBox
-description: Checkout and learn here all about Sorting functionality in Syncfusion Blazor ComboBox component and much more.
+description: Checkout and learn here all about Sorting functionality in Syncfusion Blazor MultiColumn ComboBox component and much more.
 platform: Blazor
 control: MultiColumn ComboBox
 documentation: ug
