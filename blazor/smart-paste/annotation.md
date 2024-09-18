@@ -88,9 +88,9 @@ These descriptions are then sent to the back end AI model to assist in accuratel
 
 ![Syncfusion Blazor Smart paste button with annotation](images/smart-paste-annotation.gif)
 
-N> [View Sample in GitHub](https://github.com/syncfusion/smart-ai-samples/tree/master/blazor).
+N> [View Sample in GitHub](https://github.com/search?q=org%3Asyncfusion%20smart-ai-samples&type=repositories).
 
 ## See Also
 
-* [Getting Started with Syncfusion Blazor Smart Paste Button Blazor Web App](https://blazor.syncfusion.com/documentation/smart-paste/getting-started-webapp)
-* [Getting Started with Syncfusion Blazor Smart Paste Button Blazor Server App](https://blazor.syncfusion.com/documentation/smart-paste/getting-started)
+* [Getting Started with Syncfusion Blazor Smart Paste Button Blazor Web App](https://blazor.syncfusion.com/documentation/)
+* [Getting Started with Syncfusion Blazor Smart Paste Button Blazor Server App](https://blazor.syncfusion.com/documentation/)

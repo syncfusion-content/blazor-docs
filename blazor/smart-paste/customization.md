@@ -17,5 +17,5 @@ The Syncfusion Blazor Smart Paste Button component fully inherits all the proper
 ## See Also
 
 * [Syncfusion Blazor Button - Types and Styles](https://sfblazor.azurewebsites.net/staging/documentation/button/types-and-styles)
-* [Getting Started with Syncfusion Blazor Smart Paste Button Blazor Web App](https://blazor.syncfusion.com/documentation/smart-paste/getting-started-webapp)
-* [Getting Started with Syncfusion Blazor Smart Paste Button Blazor Server App](https://blazor.syncfusion.com/documentation/smart-paste/getting-started)
+* [Getting Started with Syncfusion Blazor Smart Paste Button Blazor Web App](https://blazor.syncfusion.com/documentation/)
+* [Getting Started with Syncfusion Blazor Smart Paste Button Blazor Server App](https://blazor.syncfusion.com/documentation/)
