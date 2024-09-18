@@ -121,7 +121,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Syncfusion Blazor Smart Paste Button component
 
-Add the Syncfusion Blazor Smart Paste Button component with form components in the **~Pages/.razor** file. In this example, the [Syncfusion Blazor DataForm](https://blazor.syncfusion.com/documentation/data-form/getting-started-with-web-app) component is used to manage form input fields, while the Smart Paste Button provides AI-powered data-pasting capabilities for enhanced user interaction.
+Add the Syncfusion Blazor Smart Paste Button component with form components in the **~Pages/.razor** file. In this example, the [Syncfusion Blazor DataForm](https://blazor.syncfusion.com/documentation/data-form/getting-started-with-web-app) component is used to manage form input fields. To get started, ensure you have the [Syncfusion.Blazor.DataForm](https://www.nuget.org/packages/Syncfusion.Blazor.DataForm) package installed.
 
 If an interactivity location as `Per page/component` in the web app, define a render mode at the top of the `~Pages/.razor` component, as follows:
 
