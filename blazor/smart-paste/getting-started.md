@@ -7,7 +7,7 @@ control: Smart Paste Button
 documentation: ug
 ---
 
-# Getting Started with Blazor Smart Paste Button Component
+# Getting Started with Smart Paste Button Component
 
 This section briefly explains about how to include [Blazor Smart Paste Button](https://www.syncfusion.com/blazor-components/blazor-smartpaste-button) component in your Blazor Server App using Visual Studio.
 
@@ -24,7 +24,7 @@ You can create a **Blazor Server App** using Visual Studio via [Microsoft Templa
 
 N> As of now, Syncfusion Blazor Smart components are fully compatible with Server App.
 
-## Install Syncfusion Blazor SmartComponents and Themes NuGets in the App
+## Install Syncfusion Blazor SmartComponents and Themes NuGet in the App
 
 To add **Blazor Smart Paste Button** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.SmartComponents](https://www.nuget.org/packages/Syncfusion.Blazor.SmartComponents/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
 
