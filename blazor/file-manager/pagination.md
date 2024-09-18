@@ -151,7 +151,7 @@ Here is a sample demonstrating how `PageSizes` property is used when Pagination 
 
 ```
 
-The screenshot below shows the pages sizes dropdown in the File Manager.
+The screenshot below shows the page sizes dropdown in the File Manager.
 
 ![Pagination in Blazor File Manager](images/blazor-filemanager-pagesize-dropdown.png)
 
