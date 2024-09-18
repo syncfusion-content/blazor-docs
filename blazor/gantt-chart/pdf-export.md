@@ -642,7 +642,6 @@ The following code demonstrates how to use the `RangeStart` and `RangeEnd`event 
         public static List<TaskData> GetTreeVirtualData(int count)
         {
             List<TaskData> DataCollection = new List<TaskData>();
-            Random rand = new Random();
             var x = 0;
             int duration = 0;
             DateTime startDate = new DateTime(2000, 1, 5);
@@ -651,7 +650,6 @@ The following code demonstrates how to use the `RangeStart` and `RangeEnd`event 
             string[] reporter = { "James Ivory", "Jordan Peele", "Guillermo del Toro", "Gary Oldman" };
             for (var i = 1; i <= count / 5; i++)
             {
-                var name = rand.Next(0, 100);
                 TaskData Parent = new TaskData()
                     {
                         ID = ++x,

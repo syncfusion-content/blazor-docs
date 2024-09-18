@@ -3878,7 +3878,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 
 ## PdfExporting
 
-The [PdfExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfExporting) event triggers before the Gantt chart is exported to a PDF document. You can cancel the export by setting the event argument `Cancel` to true. 
+The [PdfExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfExporting) event triggers before the Gantt chart is exported to a PDF document. To cancel the export, set the `Cancel` argument to true within the `PdfExporting` event, using the `PdfExportEventArgs` class. 
 
 ``` cshtml
 @using Syncfusion.Blazor.Gantt
