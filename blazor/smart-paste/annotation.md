@@ -7,13 +7,13 @@ control: Smart Paste Button
 documentation: ug
 ---
 
-# Annotaions in Blazor Smart Paste Button Component
+# Annotations in Blazor Smart Paste Button Component
 
 ## Annotating form fields
 
 The `data-smartpaste-description` is a useful attribute that allows you to customize how data is pasted into form fields. By default, the Syncfusion Blazor `Smart Paste Button` analyzes form fields like `<input>`, `<select>`, and `<textarea>` elements, generating descriptions based on their associated `<label>`, `name` attribute, `id` attribute or nearby text content.
 
-These descriptions are then sent to the backend AI model to assist in accurately pasting the relevant data. However, for more control, you can override the default behavior by specifying custom descriptions for specific input field using the `data-smartpaste-description` attribute.
+These descriptions are then sent to the back end AI model to assist in accurately pasting the relevant data. However, for more control, you can override the default behavior by specifying custom descriptions for specific input field using the `data-smartpaste-description` attribute.
 
 ### Example
 
@@ -50,7 +50,7 @@ These descriptions are then sent to the backend AI model to assist in accurately
 <br>
 <h4 style="text-align:center;">Sample content</h4>
 <div>
-    Hi, my name is Jane Smith. You can reach me at janesmith@domain.com or call me at +1-555-987-6543. I live at 789 Pine Avenue, Suite 12, Los Angeles, CA 90001. I was born on 15th March 1990.
+    Hi, my name is Jane Smith. You can reach me at example@domain.com or call me at +1-555-987-6543. I live at 789 Pine Avenue, Suite 12, Los Angeles, CA 90001. I was born on 15th March 1990.
 </div>
 
 @code {

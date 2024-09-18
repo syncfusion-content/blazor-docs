@@ -162,7 +162,7 @@ If an interactivity location as `Per page/component` in the web app, define a re
 <br>
 <h4 style="text-align:center;">Sample content</h4>
 <div>
-    Hi, my name is Jane Smith. You can reach me at janesmith@domain.com or call me at +1-555-987-6543. I live at 789 Pine Avenue, Suite 12, Los Angeles, CA 90001.
+    Hi, my name is Jane Smith. You can reach me at example@domain.com or call me at +1-555-987-6543. I live at 789 Pine Avenue, Suite 12, Los Angeles, CA 90001.
 </div>
 
 @code {
