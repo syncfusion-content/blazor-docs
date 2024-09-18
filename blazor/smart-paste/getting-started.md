@@ -131,35 +131,65 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Syncfusion Blazor Smart Paste Button component
 
-Add the Syncfusion Blazor Smart Paste Button component with form components in the **~/Pages/Index.razor** file.
+Add the Syncfusion Blazor Smart Paste Button component with form components in the **~/Pages/Index.razor** file. In this example, the [Syncfusion Blazor DataForm](https://blazor.syncfusion.com/documentation/data-form/getting-started) component is used to manage form input fields, while the Smart Paste Button provides AI-powered data-pasting capabilities for enhanced user interaction.
 
 ```cshtml
-<EditForm Model="@formModel">
-    <p>Name: <InputText @bind-Value="@formModel.Name" /></p>
-    <p>Address line 1: <InputText @bind-Value="@formModel.AddressLine1" /></p>
-    <p>City: <InputText @bind-Value="@formModel.City" /></p>
-    <p>Zip/postal code: <InputText @bind-Value="@formModel.Zip" /></p>
+@using Syncfusion.Blazor.DataForm
+@using System.ComponentModel.DataAnnotations
+@using Syncfusion.Blazor.SmartComponents
 
-    <button type="submit">Submit</button>
-    <SfSmartPasteButton>Smart Paste</SfSmartPasteButton>
-</EditForm>
+<SfDataForm ID="MyForm"
+            Model="@EventRegistrationModel">
+    <FormValidator>
+        <DataAnnotationsValidator></DataAnnotationsValidator>
+    </FormValidator>
+    <FormItems>
+        <FormItem Field="@nameof(EventRegistration.Name)" ID="firstname"></FormItem>
+        <FormItem Field="@nameof(EventRegistration.Email)" ID="email"></FormItem>
+        <FormItem Field="@nameof(EventRegistration.Phone)" ID="phonenumber"></FormItem>
+        <FormItem Field="@nameof(EventRegistration.Address)" ID="address"></FormItem>
+    </FormItems>
+    <FormButtons>
+        <SfSmartPasteButton IsPrimary="true" Content="Smart Paste" IconCss="e-icons e-paste">
+        </SfSmartPasteButton>
+    </FormButtons>
+</SfDataForm>
+
+<br>
+<h4 style="text-align:center;">Sample content</h4>
+<div>
+    Hi, my name is Jane Smith. You can reach me at janesmith@domain.com or call me at +1-555-987-6543. I live at 789 Pine Avenue, Suite 12, Los Angeles, CA 90001.
+</div>
 
 @code {
-    private FormModel formModel = new FormModel();
+    private EventRegistration EventRegistrationModel = new EventRegistration();
 
-    public class FormModel
+    public class EventRegistration
     {
-        public string? Name { get; set; }
-        public string? AddressLine1 { get; set; }
-        public string? City { get; set; }
-        public string? Zip { get; set; }
+        [Required(ErrorMessage = "Please enter your name.")]
+        [Display(Name = "Name")]
+        public string Name { get; set; }
+
+        [Required(ErrorMessage = "Please enter your email address.")]
+        [Display(Name = "Email ID")]
+        public string Email { get; set; }
+
+        [Required(ErrorMessage = "Please enter your mobile number.")]
+        [Display(Name = "Phone Number")]
+        public string Phone { get; set; }
+
+        [Required(ErrorMessage = "Please enter your address.")]
+        [Display(Name = "Address")]
+        public string Address { get; set; }
     }
 }
 ```
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Smart Paste Button component in your default web browser.
 
-* Copy the sample content and click on Smart Paste to see how the form is instantly filled.
+* Copy the `Sample Content` and click on `Smart Paste` to see how the form is instantly filled.
+
+![Syncfusion Smart Paste Button - Output](images/smart-paste.gif)
 
 N> [View Sample in GitHub](https://github.com/syncfusion/smart-ai-samples/tree/master/blazor).
 
