@@ -161,6 +161,6 @@ Add the Syncfusion Blazor Smart TextArea component with form components in the *
 
 N> [View Sample in GitHub](https://github.com/search?q=org%3Asyncfusion%20smart-ai-samples&type=repositories).
 
-## See Also
+## See also
 
-* [Getting Started with Syncfusion Blazor Smart TextArea Blazor Web App](https://blazor.syncfusion.com/documentation/)
+* [Getting Started with Syncfusion Blazor Smart TextArea in Blazor Web App](https://blazor.syncfusion.com/documentation/)

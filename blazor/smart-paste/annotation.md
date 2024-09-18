@@ -11,11 +11,7 @@ documentation: ug
 
 ## Annotating form fields
 
-The `data-smartpaste-description` is a useful attribute that allows you to customize how data is pasted into form fields. By default, the Syncfusion Blazor `Smart Paste Button` analyzes form fields like `<input>`, `<select>`, and `<textarea>` elements, generating descriptions based on their associated `<label>`, `name` attribute, `id` attribute or nearby text content.
-
-These descriptions are then sent to the back end AI model to assist in accurately pasting the relevant data. However, for more control, you can override the default behavior by specifying custom descriptions for specific input field using the `data-smartpaste-description` attribute.
-
-### Example
+By default, the Syncfusion Blazor `Smart Paste Button` analyzes form fields like `<input>`, `<select>`, and `<textarea>` elements, generating descriptions based on their associated `<label>`, `name` attribute, `id` attribute or nearby text content. These descriptions are then sent to the back end AI model to assist in accurately pasting the relevant data. However, for more control, you can override the default behavior by specifying custom descriptions for specific input field using the `data-smartpaste-description` attribute.
 
 ```cshtml
 @using Syncfusion.Blazor.DataForm
@@ -86,11 +82,13 @@ These descriptions are then sent to the back end AI model to assist in accuratel
 }
 ```
 
+N> In this example, the [Syncfusion Blazor DataForm](https://blazor.syncfusion.com/documentation/data-form/getting-started-with-web-app) component is used to manage form input fields. To get started, ensure you have the [Syncfusion.Blazor.DataForm](https://www.nuget.org/packages/Syncfusion.Blazor.DataForm) package installed.
+
 ![Syncfusion Blazor Smart paste button with annotation](images/smart-paste-annotation.gif)
 
 N> [View Sample in GitHub](https://github.com/search?q=org%3Asyncfusion%20smart-ai-samples&type=repositories).
 
-## See Also
+## See also
 
-* [Getting Started with Syncfusion Blazor Smart Paste Button Blazor Web App](https://blazor.syncfusion.com/documentation/)
-* [Getting Started with Syncfusion Blazor Smart Paste Button Blazor Server App](https://blazor.syncfusion.com/documentation/)
+* [Getting Started with Syncfusion Blazor Smart Paste Button in Blazor Web App](https://blazor.syncfusion.com/documentation/)
+* [Getting Started with Syncfusion Blazor Smart Paste Button in Blazor Server App](https://blazor.syncfusion.com/documentation/)

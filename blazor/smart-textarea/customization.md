@@ -3,7 +3,7 @@ layout: post
 title: Suggestion Customization in Blazor Smart TextArea Component | Syncfusion
 description: Checkout and learn here all about Suggestion Customization in Syncfusion Blazor Smart TextArea component and more.
 platform: Blazor
-control: Smart Paste Button
+control: Smart TextArea
 documentation: ug
 ---
 
@@ -45,7 +45,7 @@ The `ShowSuggestionOnPopup` attribute in Syncfusion Blazor Smart TextArea allows
 
 By default `ShowSuggestionOnPopup` is `false`.
 
-## See Also
+## See also
 
-* [Getting Started with Syncfusion Blazor Smart TextArea with Blazor Web App](https://blazor.syncfusion.com/documentation/)
-* [Getting Started with Syncfusion Blazor Smart TextArea with Blazor Server App](https://blazor.syncfusion.com/documentation/)
+* [Getting Started with Syncfusion Blazor Smart TextArea in Blazor Web App](https://blazor.syncfusion.com/documentation/)
+* [Getting Started with Syncfusion Blazor Smart TextArea with in Blazor Server App](https://blazor.syncfusion.com/documentation/)

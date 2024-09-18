@@ -197,6 +197,6 @@ If an interactivity location as `Per page/component` in the web app, define a re
 
 N> [View Sample in GitHub](https://github.com/search?q=org%3Asyncfusion%20smart-ai-samples&type=repositories).
 
-## See Also
+## See also
 
 * [Getting Started with Syncfusion Blazor Smart Paste Button Blazor Server App](https://blazor.syncfusion.com/documentation/)

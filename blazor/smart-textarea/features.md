@@ -17,9 +17,9 @@ The Syncfusion Blazor Smart TextArea component fully inherits all the properties
 * [Methods](https://blazor.syncfusion.com/documentation/textarea/methods)
 * [Style and Appreance](https://blazor.syncfusion.com/documentation/textarea/styles-appearance)
 
-## See Also
+## See also
 
-* [Getting Started with Syncfusion Blazor Smart TextArea Blazor Web App](https://blazor.syncfusion.com/documentation/)
-* [Getting Started with Syncfusion Blazor Smart TextArea Blazor Server App](https://blazor.syncfusion.com/documentation/)
-* [Getting Started with Syncfusion Blazor TextArea Blazor Web App](https://blazor.syncfusion.com/documentation/textarea/getting-started-webapp)
-* [Getting Started with Syncfusion Blazor TextArea Blazor App](https://blazor.syncfusion.com/documentation/textarea/getting-started)
+* [Getting Started with Syncfusion Blazor Smart TextArea in Blazor Web App](https://blazor.syncfusion.com/documentation/)
+* [Getting Started with Syncfusion Blazor Smart TextArea in Blazor Server App](https://blazor.syncfusion.com/documentation/)
+* [Getting Started with Syncfusion Blazor TextArea in Blazor Web App](https://blazor.syncfusion.com/documentation/textarea/getting-started-webapp)
+* [Getting Started with Syncfusion Blazor TextArea in Blazor App](https://blazor.syncfusion.com/documentation/textarea/getting-started)

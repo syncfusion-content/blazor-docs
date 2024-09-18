@@ -193,6 +193,6 @@ Add the Syncfusion Blazor Smart Paste Button component with form components in t
 
 N> [View Sample in GitHub](https://github.com/search?q=org%3Asyncfusion%20smart-ai-samples&type=repositories).
 
-## See Also
+## See also
 
 * [Getting Started with Syncfusion Blazor Smart Paste Button Blazor Web App](https://blazor.syncfusion.com/documentation/)
