@@ -1357,7 +1357,6 @@ GraphQL is a query language for APIs with which you can get exactly what you nee
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Data
 @using System.Collections.ObjectModel
-@using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor
 
 <div class="content-wrapper" style="width:100%">
@@ -1446,6 +1445,270 @@ GraphQL is a query language for APIs with which you can get exactly what you nee
 ![Binding with GraphQL service](images/GraphQLAdaptor.png) 
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/GraphQLAdaptor)
+
+### Performing CRUD operation using mutation
+
+You can perform the CRUD operations by setting the mutation queries in the [Mutation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html#Syncfusion_Blazor_Data_GraphQLAdaptorOptions_Mutation) property of [GraphQLAdaptorOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html).
+
+The following sample code demonstrates performing CRUD operation. You have to set the Insert mutation query in [Insert](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLMutation.html#Syncfusion_Blazor_Data_GraphQLMutation_Insert) property of Mutation in `GraphQLAdaptorOptions`. Similarly, you have to set the Update and Delete mutation queries in [Update](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLMutation.html#Syncfusion_Blazor_Data_GraphQLMutation_Update) and [Delete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLMutation.html#Syncfusion_Blazor_Data_GraphQLMutation_Delete) properties of Mutation in `GraphQLAdaptorOptions` respectively.
+
+
+The following variables are passed as a parameter to the mutation method written for **Insert** operation in server side.
+
+| Properties | Description |
+|--------|----------------|
+| record | The new record which is need to be inserted. |
+| index | Specifies the index at which the newly added record will be inserted.  |
+| action | Indicates the type of operation being performed. When the same method is used for all CRUD actions, this argument serves to distinguish the action, such as **Add, Delete and Update**  |
+| additionalParameters | An optional parameter that can be used to perform any operations.   |
+
+The following variables are passed as a parameter to the mutation method written for **Update** operation in server side.
+
+| Properties | Description |
+|--------|----------------|
+| record | The new record which is need to be updated. |
+| action | Indicates the type of operation being performed. When the same method is used for all CRUD actions, this argument serves to distinguish the action, such as **Add, Delete and Update**  |
+| primaryColumnName | Specifies the field name of the primary column. |
+| primaryColumnValue | Specifies the primary column value which is needs to be updated in the collection.   |
+| additionalParameters | An optional parameter that can be used to perform any operations.   |
+
+The following variables are passed as a parameter to the mutation method written for **Delete** operation in server side.
+
+| Properties | Description |
+|--------|----------------|
+| primaryColumnValue | Specifies the primary column value which is needs to be removed from the collection. |
+| action | Indicates the type of operation being performed. When the same method is used for all CRUD actions, this argument serves to distinguish the action, such as **Add, Delete and Update**  |
+| primaryColumnName | specifies the field name of the primary column.  |
+| additionalParameters | An optional parameter that can be used to perform any operations.   |
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Data
+@using System.Collections.ObjectModel
+@using Syncfusion.Blazor
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-3">
+                <button class="btn btn-primary" @onclick="Read">Read</button>
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-primary" @onclick="Update">Update</button>
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-primary" @onclick="Insert">Insert</button>
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-primary" @onclick="Delete">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content-wrapper" style="width:100%">
+    <div>
+        <SfDiagramComponent @ref="@diagram" Height="400px"
+                            NodeCreating="OnNodeCreating" ConnectorCreating="OnConnectorCreating">
+            <DataSourceSettings Id="OrderID" ParentId="CustomerID">
+                <SfDataManager Url="https://localhost:7131/graphql" GraphQLAdaptorOptions=@adaptorOptions Adaptor="Adaptors.GraphQLAdaptor"></SfDataManager>
+            </DataSourceSettings>
+            <Layout HorizontalSpacing="40" VerticalSpacing="40" Type="LayoutType.HierarchicalTree"></Layout>
+        </SfDiagramComponent>
+    </div>
+</div>
+@code{
+    public SfDiagramComponent diagram;
+    private float x = 100;
+    private float y = 100;
+    private GraphQLAdaptorOptions adaptorOptions { get; set; } = new GraphQLAdaptorOptions
+    {
+        Query = @"
+        query ordersData($dataManager: DataManagerRequestInput!){
+            ordersData(dataManager: $dataManager) {
+                count, result { OrderID, CustomerID, EmployeeID, } , aggregates
+            }
+        }",
+        Mutation = new GraphQLMutation
+        {
+            Insert = @"
+            mutation create($record: OrderInput!, $index: Int!, $action: String!, $additionalParameters: Any) {
+              createOrder(order: $record, index: $index, action: $action, additionalParameters: $additionalParameters) {
+                OrderID, CustomerID, EmployeeID
+              }
+            }",
+            Update = @"
+            mutation update($record: OrderInput!, $action: String!, $primaryColumnName: String! , $primaryColumnValue: Int!, $additionalParameters: Any) {
+              updateOrder(order: $record, action: $action, primaryColumnName: $primaryColumnName, primaryColumnValue: $primaryColumnValue, additionalParameters: $additionalParameters) {
+                OrderID, CustomerID, EmployeeID
+              }
+            }",
+            Delete = @"
+            mutation delete($primaryColumnValue: Int!, $action: String!, $primaryColumnName: String!, $additionalParameters: Any) {
+              deleteOrder(primaryColumnValue: $primaryColumnValue, action: $action, primaryColumnName: $primaryColumnName, additionalParameters: $additionalParameters) {
+                OrderID, CustomerID, EmployeeID
+              }
+            }"
+        },
+        ResolverName = "OrdersData"
+    };
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public string EmployeeID { get; set; }
+
+    }
+    private void OnNodeCreating(IDiagramObject obj)
+    {
+        Node node = obj as Node;
+
+        node.Width = 80;
+        node.Height = 45;
+        node.Shape = new BasicShape() { Type = Syncfusion.Blazor.Diagram.NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle };
+        node.Style = new ShapeStyle() { StrokeWidth = 0, Fill = "#2084c4" };
+        Dictionary<string, object> data = node.Data as Dictionary<string, object>;
+        string content = "";
+        if (data != null)
+        {
+            foreach (var kvp in data)
+            {
+                if (kvp.Key == "EmployeeID")
+                {
+                    content = kvp.Value.ToString();
+                }
+            }
+        }
+        node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+        {
+                // Annotation is created and stored in Annotations collection of Node.
+                new ShapeAnnotation
+                {
+                    Content = content,
+                    Style = new TextStyle()
+                    {
+                        Color = "White",
+                        Bold = true,
+                        FontSize = 12,
+                        FontFamily = "TimesNewRoman"
+                    }
+                }
+            };
+
+    }
+    @*End:Hidden*@
+    private void OnConnectorCreating(IDiagramObject obj)
+    {
+        Connector connector = obj as Connector;
+        connector.Style.StrokeColor = "#048785";
+        connector.Type = ConnectorSegmentType.Orthogonal;
+        connector.TargetDecorator.Shape = DecoratorShape.None;
+        connector.SourceDecorator.Shape = DecoratorShape.None;
+        connector.Style = new ShapeStyle() { StrokeColor = "#3A4857", Fill = "#3A4857" };
+    }
+
+    //CRUD operations
+    //To fetch data from the remote service
+    public async void Read()
+    {
+        var data = await diagram.ReadDataAsync();
+    }
+    //To update data in the remote service
+    public async void Update()
+    {
+        Order employeeDetails = new Order() { OrderID = 9, EmployeeID = "Craft updated", CustomerID = "5" };
+
+        await diagram.UpdateDataAsync("OrderID", employeeDetails);
+    }
+    //To push data to the remote service
+    public async void Insert()
+    {
+        Order employeeDetails = new Order() { OrderID = 10, EmployeeID = "Craft new ", CustomerID = "5" };
+        await diagram.InsertDataAsync(employeeDetails);
+    }
+    //To delete data in the remote service
+    public async void Delete()
+    {
+        await diagram.DeleteDataAsync("OrderID", 5);
+    }
+}
+```
+
+The following code demonstrates the mutation methods used in the GraphQL server for Normal editing.
+
+```cshtml
+using ASPNetCoreGraphQlServer.Models;
+
+namespace ASPNetCoreGraphQlServer.GraphQl
+{
+    public class GraphQLMutation
+    {
+        public Order CreateOrder(Order order, int index, string action,
+            [GraphQLType(typeof(AnyType))] IDictionary<string, object> additionalParameters)
+        {
+            GraphQLQuery.Orders.Insert(index, order);
+            return order;
+        }
+        public Order UpdateOrder(Order order, string action, string primaryColumnName, int primaryColumnValue,
+            [GraphQLType(typeof(AnyType))] IDictionary<string, object> additionalParameters)
+        {
+            Order updatedOrder = GraphQLQuery.Orders.Where(x => x.OrderID == primaryColumnValue).FirstOrDefault();
+            updatedOrder.OrderID = order.OrderID;
+            updatedOrder.EmployeeID = order.EmployeeID;
+            updatedOrder.CustomerID = order.CustomerID;
+            updatedOrder.Freight = order.Freight;
+            updatedOrder.OrderDate = order.OrderDate;
+            return updatedOrder;
+        }
+        public Order DeleteOrder(int primaryColumnValue, string action, string primaryColumnName,
+            [GraphQLType(typeof(AnyType))] IDictionary<string, object> additionalParameters)
+        {
+            Order deletedOrder = GraphQLQuery.Orders.Where(x => x.OrderID == primaryColumnValue).FirstOrDefault();
+            GraphQLQuery.Orders.Remove(deletedOrder);
+            return deletedOrder;
+        }
+        public List<Order> BatchUpdate(List<Order>? changed, List<Order>? added,
+            List<Order>? deleted, string action, String primaryColumnName,
+            [GraphQLType(typeof(AnyType))] IDictionary<string, object> additionalParameters, int? dropIndex)
+        {
+            if (changed != null && changed.Count > 0)
+            {
+                foreach (var changedOrder in (IEnumerable<Order>)changed)
+                {
+                    Order order = GraphQLQuery.Orders.Where(e => e.OrderID == changedOrder.OrderID).FirstOrDefault();
+                    order.OrderID = changedOrder.OrderID;
+                    order.CustomerID = changedOrder.CustomerID;
+                    order.OrderDate = changedOrder.OrderDate;
+                    order.Freight = changedOrder.Freight;
+                }
+            }
+            if (added != null && added.Count > 0)
+            {
+                if (dropIndex != null)
+                {
+                    GraphQLQuery.Orders.InsertRange((int)dropIndex, added);
+                }
+                else {
+                    foreach (var newOrder in (IEnumerable<Order>)added)
+                    {
+                        GraphQLQuery.Orders.Add(newOrder);
+                    }
+                }                
+            }
+            if (deleted != null && deleted.Count > 0)
+            {
+                foreach (var deletedOrder in (IEnumerable<Order>)deleted)
+                {
+                    GraphQLQuery.Orders.Remove(GraphQLQuery.Orders.Where(e => e.OrderID == deletedOrder.OrderID).FirstOrDefault());
+                }
+            }
+            return GraphQLQuery.Orders;
+        }
+
+    }
+}
+
+```
 
 ## Entity Framework
 
