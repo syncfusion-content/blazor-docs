@@ -59,7 +59,7 @@ You can use the `Height` property to set the height of the AI AssistView. The de
 
 ![Blazor AI AssistView Height](./images/ai-assistview-height.png)
 
-## Cssclass
+## CssClass
 
 You can customize the appearance of the AI AssistView component by using the `CssClass` property.
 
