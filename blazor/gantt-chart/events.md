@@ -3876,4 +3876,153 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 }
 ```
 
+## PdfExporting
+
+The [PdfExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfExporting) event triggers before the Gantt chart is exported to a PDF document. You can cancel the export by setting the event argument `Cancel` to true. 
+
+``` cshtml
+@using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Navigations
+@using Syncfusion.PdfExport
+
+<SfGantt @ref="Gantt" ID="GanttExport" DataSource="@TaskCollection" Height="450px" Width="900px" AllowPdfExport="true" Toolbar="toolbarItem">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Dependency="Predecessor"
+                     Duration="Duration" Progress="Progress" ParentID="ParentId">
+    </GanttTaskFields>
+    <GanttColumns>
+        <GanttColumn Field="TaskId" HeaderText="Task Id" Width="100" HeaderTextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></GanttColumn>
+        <GanttColumn Field="TaskName" HeaderText="Task Name"></GanttColumn>
+        <GanttColumn Field="StartDate" HeaderText="Start Date" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></GanttColumn>
+        <GanttColumn Field="EndDate" HeaderText="End Date"></GanttColumn>
+        <GanttColumn Field="Duration" HeaderText="Duration"></GanttColumn>
+        <GanttColumn Field="Predecessor" HeaderText="Dependency"></GanttColumn>
+    </GanttColumns>
+    <GanttEvents OnToolbarClick="ToolbarClickHandler" PdfExporting=" PdfExportingHandler" TValue="TaskData"></GanttEvents>
+</SfGantt>
+
+@code {
+    private List<TaskData> TaskCollection { get; set; }
+    private SfGantt<TaskData> Gantt;
+    private List<object> toolbarItem = new List<Object>() { new ToolbarItem() { Text = "PDF Export", TooltipText = "PDF Export", Id = "PdfExport", PrefixIcon = "e-pdfexport" } };
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+    public async void ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Id == "PdfExport")
+        {
+            await Gantt.ExportToPdfAsync();
+        }
+    }
+    public void PdfExportingHandler(PdfExportEventArgs args)
+    {
+        //Here, you can customize your code.
+    }
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+        public string Predecessor { get; set; }
+    }
+
+    public static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, ParentId = 1, Predecessor = "2" },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 , Predecessor = "3" },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 21), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, ParentId = 5 },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, ParentId = 5 },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30, ParentId = 5 }
+        };
+        return Tasks;
+    }
+}
+```
+
+## PdfExported
+
+The [PdfExported](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfExported) event triggers after the Gantt chart is exported to a PDF document. Using event arguments, you can get the details of the exported columns, the timeline range of the exported Gantt chart, and the file name of the exported PDF document.
+
+``` cshtml
+@using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Navigations
+@using Syncfusion.PdfExport
+
+<SfGantt @ref="Gantt" ID="GanttExport" DataSource="@TaskCollection" Height="450px" Width="900px" AllowPdfExport="true" Toolbar="toolbarItem">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Dependency="Predecessor"
+                     Duration="Duration" Progress="Progress" ParentID="ParentId">
+    </GanttTaskFields>
+    <GanttColumns>
+        <GanttColumn Field="TaskId" HeaderText="Task Id" Width="100" HeaderTextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></GanttColumn>
+        <GanttColumn Field="TaskName" HeaderText="Task Name"></GanttColumn>
+        <GanttColumn Field="StartDate" HeaderText="Start Date" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></GanttColumn>
+        <GanttColumn Field="EndDate" HeaderText="End Date"></GanttColumn>
+        <GanttColumn Field="Duration" HeaderText="Duration"></GanttColumn>
+        <GanttColumn Field="Predecessor" HeaderText="Dependency"></GanttColumn>
+    </GanttColumns>
+    <GanttEvents OnToolbarClick="ToolbarClickHandler" PdfExported=" PdfExportedHandler" TValue="TaskData"></GanttEvents>
+</SfGantt>
+
+@code {
+    private List<TaskData> TaskCollection { get; set; }
+    private SfGantt<TaskData> Gantt;
+    private List<object> toolbarItem = new List<Object>() { new ToolbarItem() { Text = "PDF Export", TooltipText = "PDF Export", Id = "PdfExport", PrefixIcon = "e-pdfexport" } };
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+    public async void ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Id == "PdfExport")
+        {
+            await Gantt.ExportToPdfAsync();
+        }
+    }
+    public void PdfExportedHandler(PdfExportedEventArgs args)
+    {
+        //Here, you can customize your code.
+    }
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+        public string Predecessor { get; set; }
+    }
+
+    public static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, ParentId = 1, Predecessor = "2" },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 , Predecessor = "3" },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 21), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, ParentId = 5 },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, ParentId = 5 },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30, ParentId = 5 }
+        };
+        return Tasks;
+    }
+}
+```
+
+
 N> We are not going to limit Gantt Chart with these events, we will be adding new events in the future based on the user requests. If the event, you are looking for is not on the list, then request [here](https://www.syncfusion.com/feedback/blazor-components).
