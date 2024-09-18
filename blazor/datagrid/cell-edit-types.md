@@ -744,7 +744,14 @@ You can able to render SfMultiSelect component in EditTemplate. In the below sam
             <Template>
                 @{
                     var d = (context as Order).ChosenItems;
-                    <span>@String.Join(",", d)</span>
+                    if (d != null)
+                    {
+                        <span>@String.Join(",", d)</span>
+                    }
+                    else
+                    {
+                        <span>@String.Empty</span>
+                    }
                 }
             </Template>
         </GridColumn>
