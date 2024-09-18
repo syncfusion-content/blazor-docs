@@ -19,7 +19,7 @@ The AI AssistView component allows you to add header toolbar items using the `As
 
 Items can be constructed with the following built-in command types or item template.
 
-#### Adding iconCSS
+#### Adding iconCss
 
 You can customize the toolbar icons by using the `IconCss` property.
 
@@ -97,7 +97,7 @@ You can use the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.N
     <SfAIAssistView PromptRequested="@PromptRequest">
         <AssistViewToolbar>
             <AssistViewToolbarItem Type="ItemType.Spacer"></AssistViewToolbarItem>
-            <AssistViewToolbarItem Text="Get intelligent responses tailored to your needs"></AssistViewToolbarItem>
+            <AssistViewToolbarItem Text="Welcome User !"></AssistViewToolbarItem>
         </AssistViewToolbar>
     </SfAIAssistView>
 </div>
@@ -127,7 +127,9 @@ You can use the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 <div class="aiassist-container" style="height: 350px; width: 650px;">
     <SfAIAssistView PromptRequested="@PromptRequest">
         <AssistViewToolbar>
+            <AssistViewToolbarItem Type="ItemType.Spacer"></AssistViewToolbarItem>
             <AssistViewToolbarItem Type="ItemType.Button" IconCss="e-icons e-refresh" Visible=false></AssistViewToolbarItem>
+            <AssistViewToolbarItem Type="ItemType.Button" IconCss="e-icons e-user"></AssistViewToolbarItem>
         </AssistViewToolbar>
     </SfAIAssistView>
 </div>
@@ -160,6 +162,7 @@ You can use the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
         <AssistViewToolbar>
             <AssistViewToolbarItem Type="ItemType.Spacer"></AssistViewToolbarItem>
             <AssistViewToolbarItem Type="ItemType.Button" IconCss="e-icons e-refresh" Disabled=true></AssistViewToolbarItem>
+            <AssistViewToolbarItem Type="ItemType.Button" IconCss="e-icons e-user"></AssistViewToolbarItem>
         </AssistViewToolbar>
     </SfAIAssistView>
 </div>
@@ -219,7 +222,7 @@ You can use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
     <SfAIAssistView PromptRequested="@PromptRequest">
         <AssistViewToolbar>
             <AssistViewToolbarItem Type="ItemType.Spacer"></AssistViewToolbarItem>
-            <AssistViewToolbarItem Type="ItemType.Button" IconCss="e-icons e-user" CssClass="e-custom"></AssistViewToolbarItem>
+            <AssistViewToolbarItem Type="ItemType.Button" IconCss="e-icons e-user" CssClass="custom-btn"></AssistViewToolbarItem>
         </AssistViewToolbar>
     </SfAIAssistView>
 </div>
@@ -233,9 +236,13 @@ You can use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
     }
 }
 <style>
-    .e-custom .e-user::before {
+    .custom-btn .e-user::before {
         color: blue;
         font-size: 15px;
+    }
+
+    .custom-btn.e-toolbar-item button.e-tbar-btn {
+        border: 1px solid #dcdcdc;
     }
 </style>
 
@@ -295,6 +302,7 @@ You can use the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 @using Syncfusion.Blazor.InteractiveChat
 @using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.SplitButtons
 
 <div class="aiassist-container" style="height: 350px; width: 650px;">
     <SfAIAssistView PromptRequested="@PromptRequest">
@@ -302,7 +310,13 @@ You can use the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
             <AssistViewToolbarItem Type="ItemType.Spacer"></AssistViewToolbarItem>
             <AssistViewToolbarItem Type="ItemType.Input">
                 <Template>
-                    Your personalized assistant for smarter prompts and responses.
+                    <SfDropDownButton Content="English" CssClass="custom-dropdown" IconCss="e-icons e-translate">
+                        <DropDownMenuItems>
+                            <DropDownMenuItem Text="हिंदी"></DropDownMenuItem>
+                            <DropDownMenuItem Text="தமிழ்"></DropDownMenuItem>
+                            <DropDownMenuItem Text="తెలుగు"></DropDownMenuItem>
+                        </DropDownMenuItems>
+                    </SfDropDownButton>
                 </Template>
             </AssistViewToolbarItem>
         </AssistViewToolbar>
@@ -318,10 +332,8 @@ You can use the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
     }
 }
 <style>
-    .e-template {
-        font-size: 14px;
-        font-weight: 300;
-        text-shadow: 1px 1px 2px rgb(87 83 83 / 50%);
+    .custom-dropdown.e-dropdown-popup ul {
+        min-width: 100px;
     }
 </style>
 

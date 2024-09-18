@@ -25,7 +25,11 @@ You can change the type of view by using the `AssistView` and `CustomView` tag d
     <SfAIAssistView PromptRequested="@PromptRequest">
         <AssistViews>
             <AssistView></AssistView>
-            <CustomView Header="Response"></CustomView>
+            <CustomView Header="Response">
+                <ViewTemplate>
+                    <div class="view-container"><h5>Response view content</h5></div>
+                </ViewTemplate>
+            </CustomView>
         </AssistViews>
     </SfAIAssistView>
 </div>
@@ -38,6 +42,14 @@ You can change the type of view by using the `AssistView` and `CustomView` tag d
         args.Response = defaultResponse;
     }
 }
+<style>
+    .view-container {
+        height: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
 
 ```
 
@@ -54,8 +66,12 @@ You can use the `Header` property to specifies the header name of the `Assist` o
 <div class="aiassist-container" style="height: 350px; width: 650px;">
     <SfAIAssistView PromptRequested="@PromptRequest">
         <AssistViews>
-            <AssistView Header="Prompt"></AssistView>
-            <CustomView Header="Response"></CustomView>
+            <AssistView></AssistView>
+            <CustomView Header="Response">
+                <ViewTemplate>
+                    <div class="view-container"><h5>Response view content</h5></div>
+                </ViewTemplate>
+            </CustomView>
         </AssistViews>
     </SfAIAssistView>
 </div>
@@ -68,12 +84,20 @@ You can use the `Header` property to specifies the header name of the `Assist` o
         args.Response = defaultResponse;
     }
 }
+<style>
+    .view-container {
+        height: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
 
 ```
 
 ![Blazor AI AssistView type Header](./images/ai-assistview-type-header.png)
 
-### Setting iconCSS
+### Setting iconCss
 
 You can customize the view icons by using the `IconCss` property. By default the `e-assistview-icon` class is added as built-in header icon for the AI AssistView.
 
@@ -85,7 +109,11 @@ You can customize the view icons by using the `IconCss` property. By default the
     <SfAIAssistView PromptRequested="@PromptRequest">
         <AssistViews>
             <AssistView Header="Prompt" IconCss="e-assistview-icon"></AssistView>
-            <CustomView Header="Response" IconCss="e-comment-show"></CustomView>
+            <CustomView Header="Response" IconCss="e-comment-show">
+                <ViewTemplate>
+                    <div class="view-container"><h5>Response view content</h5></div>
+                </ViewTemplate>
+            </CustomView>
         </AssistViews>
     </SfAIAssistView>
 </div>
@@ -98,6 +126,14 @@ You can customize the view icons by using the `IconCss` property. By default the
         args.Response = defaultResponse;
     }
 }
+<style>
+    .view-container {
+        height: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
 
 ```
 
@@ -180,8 +216,12 @@ You can use the `ActiveView` property set the active view in the AI AssistView. 
 <div class="aiassist-container" style="height: 350px; width: 650px;">
     <SfAIAssistView PromptRequested="@PromptRequest" ActiveView="1">
         <AssistViews>
-            <AssistView Header="Prompt"></AssistView>
-            <CustomView Header="Response" IconCss="e-icons e-comment-show"></CustomView>
+            <AssistView></AssistView>
+            <CustomView Header="Response" IconCss="e-icons e-comment-show">
+                <ViewTemplate>
+                    <div class="view-container"><h5>Response view content</h5></div>
+                </ViewTemplate>
+            </CustomView>
         </AssistViews>
     </SfAIAssistView>
 </div>
@@ -194,6 +234,14 @@ You can use the `ActiveView` property set the active view in the AI AssistView. 
         args.Response = defaultResponse;
     }
 }
+<style>
+    .view-container {
+        height: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
 
 ```
 

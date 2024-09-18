@@ -61,7 +61,7 @@ You can use the `PromptPlaceholder` property to set the placeholder text for the
 
 ## Prompt-response collection
 
-By using the `Prompts` property, you can specify the collection of prompts and responses, allowing you to load pre-defined pairs or individual entries ensuring the AI AssistView component is initialized with the configured data.
+You can use the `Prompts` property to initialize the component with the configured data as a collection of prompts and responses or individual entries.
 
 The `Prompts` collection stores all the prompts and responses generated.
 
@@ -94,7 +94,7 @@ The `Prompts` collection stores all the prompts and responses generated.
 
 ## Adding prompt suggestions
 
-By using the `PromptSuggestions` property, you can configure the list of suggested prompts in the AI AssistView. Users can choose from these suggestions to use as their prompts.
+You can use the `PromptSuggestions` property, to add the suggestions in both initial and on-demand which help users to refine their prompts. Additionally, custom header can be set for suggestions further enhancing the user experience.
 
 ```cshtml
 
@@ -148,7 +148,7 @@ You can use the `PromptSuggestionsHeader` property to set the header text for th
 
 ![Blazor AI AssistView PromptSuggestionsHeader](./images/assistview-suggestion-header.png)
 
-## Adding prompt iconCSS
+## Adding prompt iconCss
 
 You can customize the appearance of the prompter avatar by using the `PromptIconCss` property.
 
@@ -179,7 +179,7 @@ You can customize the appearance of the prompter avatar by using the `PromptIcon
 
 ![Blazor AI AssistView PromptIcon](./images/assistview-prompt-icon.png)
 
-## Adding response iconCSS
+## Adding response iconCss
 
 You can use the `ResponseIconCss` property to customize the appearance of the responder avatar. By default, the `e-assistview-icon` class is added as the built-in AI AssistView response icon.
 
@@ -188,7 +188,7 @@ You can use the `ResponseIconCss` property to customize the appearance of the re
 @using Syncfusion.Blazor.InteractiveChat
 
 <div class="aiassist-container" style="height: 350px; width: 650px;">
-    <SfAIAssistView Prompts="@prompts" PromptRequested="@PromptRequest" ResponseIconCss="e-icons e-star-filled"></SfAIAssistView>
+    <SfAIAssistView Prompts="@prompts" PromptRequested="@PromptRequest" ResponseIconCss="e-icons e-bullet-4"></SfAIAssistView>
 </div>
 
 @code {
