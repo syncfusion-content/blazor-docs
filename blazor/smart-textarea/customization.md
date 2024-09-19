@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Suggestion Customization in Blazor Smart TextArea Component | Syncfusion
+title: Suggestion Customization in Blazor Smart TextArea | Syncfusion
 description: Checkout and learn here all about Suggestion Customization in Syncfusion Blazor Smart TextArea component and more.
 platform: Blazor
 control: Smart TextArea
