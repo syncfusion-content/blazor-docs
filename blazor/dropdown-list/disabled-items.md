@@ -27,7 +27,6 @@ The disableItem method can be used to handle dynamic changing in disable state o
 
 | Parameter | Type | Description |
 |------|------|------|
-| itemHTMLLIElement |  <code>HTMLLIElement</code> |  It accepts the HTML Li element of the item to be removed.  |
 | itemValue | <code>string</code> \| <code>number</code> \| <code>boolean</code> \| <code>object</code> | It accepts the string, number, boolean and object type value of the item to be removed. |
 | itemIndex | <code>number</code> | It accepts the index of the item to be removed. |
 

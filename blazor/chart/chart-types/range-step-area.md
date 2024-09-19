@@ -357,6 +357,8 @@ Use the [`StepPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LZhTNliuUdrVOsTt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+**Series Border**
+
 The [ChartSeriesBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesBorder.html) property determines the [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonBorder.html#Syncfusion_Blazor_Charts_ChartCommonBorder_Color) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonBorder.html#Syncfusion_Blazor_Charts_ChartCommonBorder_Width) of series border.
 
 ```cshtml
@@ -401,8 +403,6 @@ The [ChartSeriesBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjVztFsugovVdcLp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Range Step Area Chart with customized series](../images/chart-types-images/blazor-range-step-area-chart-custom-series.png)
 
 > Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
@@ -469,7 +469,7 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-     <ChartEvents OnPointRender="PointRender"></ChartEvents>
+    <ChartEvents OnPointRender="PointRender"></ChartEvents>
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" Format="dd MMM">
         <ChartAxisMajorGridLines Width="0" />
     </ChartPrimaryXAxis>
@@ -479,7 +479,7 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
     </ChartPrimaryYAxis>
     <ChartSeriesCollection>
         <ChartSeries DataSource="@ChartPoints" XName="X" High="High" Low="Low" Type="Syncfusion.Blazor.Charts.ChartSeriesType.RangeStepArea">
-             <ChartMarker Visible="true" Height="10" Width="10"></ChartMarker>
+            <ChartMarker Visible="true" Height="10" Width="10"></ChartMarker>
         </ChartSeries>
     </ChartSeriesCollection>
     <ChartLegendSettings Visible="false" />
@@ -499,7 +499,7 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 
     public void PointRender(PointRenderEventArgs args)
     {
-        args.Fill = args.Point.X.ToString() == "Wed" ? "#E91E63" : "#3F51B5";
+        args.Fill = (args.Point.Index % 2 != 0) ? "#ff6347" : "#009cb8";
     }
 
     public class ChartData
@@ -511,7 +511,7 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrTtliOKmVyXBmY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVJXkWKqjxGQeNS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## See also
 
