@@ -700,6 +700,7 @@ The following code demonstrates how to use the `RangeStart` and `RangeEnd`event 
 ```
 
 ### Export hidden columns
+
 The PDF export functionality includes an option to export hidden columns from the Gantt chart. By setting the `IncludeHiddenColumn` property to true in the `GanttPdfExportProperties` class, you can ensure that even columns not visible in the Gantt chart will be included in the exported PDF document.
 
 The following code demonstrates how to export hidden columns in the Gantt chart to a PDF document,
@@ -770,6 +771,7 @@ The following code demonstrates how to export hidden columns in the Gantt chart 
     }
 }
 ```
+![Blazor Gantt chart PDF Export Hidden Column](images/pdf-export-hidden-column.png)
 
 ### Customize column width in exported PDF document
 
@@ -850,6 +852,7 @@ The following code demonstrates how to customize the columns and set their width
     }
 }
 ```
+![Blazor Gantt Chart PDF Custom Column Width](images/pdf-custom-column-width.png)
 
 ## How to export Gantt chart with specific columns
 
@@ -933,6 +936,9 @@ The following code demonstrates how to export the Gantt chart to a PDF with spec
 }
 ```
 
+![Blazor Gantt chart PDF Custom Column Through Property](images/pdf-custom-column-property.png)
+
+
 ### Through event
 
 The PDF export functionality allows you to export only specific columns from the Gantt chart, rather than exporting all columns by default. This can be achieved by using the `Columns` argument in the [PdfExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfExporting) event.
@@ -1015,6 +1021,9 @@ The following code demonstrates how to use the `PdfExporting` event to export sp
 }
 ```
 
+![Blazor Gantt chart PDF Custom Column Through Event](images/pdf-custom-column-property.png)
+
+
 ## Customizing taskbar appearance
 
 ### Through property
@@ -1095,7 +1104,7 @@ The following code demonstrates how to customize the colors of different taskbar
 
     public static List<TaskData> GetTaskCollection()
     {
-        List<TaskData> Tasks = new List<TaskData>()s
+        List<TaskData> Tasks = new List<TaskData>()
         {
             new TaskData() { TaskId = 1, TaskName = "Project initiation", BaselineStartDate = new DateTime(2021, 04, 02), BaselineEndDate = new DateTime(2021, 04, 04), StartDate = new DateTime(2021, 04, 02), EndDate = new DateTime(2021, 04, 06) },
             new TaskData() { TaskId = 2, TaskName = "Identify site location", StartDate = new DateTime(2021, 04, 02), EndDate = new DateTime(2021, 04, 02), Duration = "0", BaselineStartDate = new DateTime(2021, 04, 02), BaselineEndDate = new DateTime(2021, 04, 02), Progress = 30, ParentId = 1 },
@@ -1110,6 +1119,7 @@ The following code demonstrates how to customize the colors of different taskbar
     }
 }
 ```
+![Blazor Gantt Chart PDF Custom Taskbar Appearance Through Property ](images/pdf-custom-taskbar-property.png)
 
 ### Through event 
 
@@ -1197,6 +1207,8 @@ The following sample code demonstrates how to use the `PdfQueryTaskbarInfo` even
     }
 }
 ```
+![Blazor Gantt Chart PDF Custom Taskbar Appearance Through Event ](images/pdf-custom-taskbar-event.png)
+
 ## How to customize timeline cell in exported PDF
 
 The PDF export functionality allows for advanced customization of Gantt timeline cell, including the inclusion of images, background colors, and custom text. This can be achieved using the [PdfQueryTimelineCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfQueryTimelineCellInfo) event. By handling this event, you can define how specific timeline cells in the Gantt chart is rendered in the exported PDF.
