@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Pagination in Blazor File Manager Component | Syncfusion
 description: Checkout and learn here all about Pagination in the Syncfusion Blazor File Manager component and more.
@@ -11,15 +11,15 @@ documentation: ug
 
 Pagination provides an option to display files and folders in segmented pages, making it easier to navigate through large directories. This feature is particularly useful when dealing with extensive file systems in the File Manager component.
 
-To enable pagination, you need to set the [allowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_AllowPaging) property to **true**. This property determines whether paging is enabled or disabled for the File Manager. When `allowPaging` is enabled, a pager control rendered at the bottom of the File Manager, allowing you to navigate through different pages.
+To enable pagination, you need to set the [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_AllowPaging) property to **true**. This property determines whether paging is enabled or disabled for the File Manager. When `AllowPaging` is enabled, a pager control rendered at the bottom of the File Manager, allowing you to navigate through different pages.
 
 ## Customize the pagination options
 
-Customizing the pagination options in the Syncfusion File Manager allows you to tailor the File Manager pager according to your specific requirements. You can customize the pagination to display the number of pages using the `NumericItemCount` property, change the current page using `currentPage` property, display the number of records in the File Manager using the `pageSize` property, and even adjust the page sizes in a dropdown using the `pageSizes` property.
+Customizing the pagination options in the Syncfusion File Manager allows you to tailor the File Manager pager according to your specific requirements. You can customize the pagination to display the number of pages using the `NumericItemsCount` property, change the current page using `CurrentPage` property, display the number of records in the File Manager using the `PageSize` property, and even adjust the page sizes in a dropdown using the `PageSizes` property.
 
 ### Change the page size
 
-The Syncfusion File Manager allows you to control the number of records displayed per page, providing you with flexibility in managing your data. This feature is particularly useful when you want to adjust the amount of data visible to you at any given time. To achieve this, you can utilize the [pageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerPagesSettings.html#Syncfusion_Blazor_FileManager_FileManagerPagesSettings_PageSizes) property. This property is used to specify the initial number of records to display on each page. 
+The Syncfusion File Manager allows you to control the number of records displayed per page, providing you with flexibility in managing your data. This feature is particularly useful when you want to adjust the amount of data visible to you at any given time. To achieve this, you can utilize the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerPageSettings.html#Syncfusion_Blazor_FileManager_FileManagerPageSettings_PageSize) property. This property is used to specify the initial number of records to display on each page. 
 
 The following example demonstrates how to change the page size of a File Manager using the `PageSize` property.
 
@@ -42,7 +42,7 @@ Below is a screenshot illustrating the `PageSize` property in the File Manager c
 
 ### Change the page count
 
-The [NumericItemsCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerPagesSettings.html#Syncfusion_Blazor_FileManager_FileManagerPagesSettings_NumericItemsCount) property is used to control the number of numeric buttons displayed in the pager when pagination is enabled.
+The [NumericItemsCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerPageSettings.html#Syncfusion_Blazor_FileManager_FileManagerPageSettings_NumericItemsCount) property is used to control the number of numeric buttons displayed in the pager when pagination is enabled.
 
  ````cshtml
  @using Syncfusion.Blazor.FileManager;
@@ -58,7 +58,7 @@ The [NumericItemsCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 </SfFileManager>
  ````
 
-Below is a screenshot illustrating the `NumericItemCount` property in the File Manager component.
+Below is a screenshot illustrating the `NumericItemsCount` property in the File Manager component.
 
 ![Pagination in Blazor File Manager](images/blazor-filemanager-numericitemcount.png)
 
@@ -66,7 +66,7 @@ Below is a screenshot illustrating the `NumericItemCount` property in the File M
 
 The Syncfusion File Manager allows you to change the currently displayed page, which can be particularly useful when you need to navigate through different pages of data either upon the initial rendering of the File Manager or update the displayed page based on interactions or specific conditions. The default value of **CurrentPage** property is 1.
 
-To change the current page in the Syncfusion File Manager, you can utilize the [CurrentPage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerPagesSettings.html#Syncfusion_Blazor_FileManager_FileManagerPagesSettings_CurrentPage) property in [FileManagerPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerPageSettings.html) component, which defines the current page number of the pager.
+To change the current page in the Syncfusion File Manager, you can utilize the [CurrentPage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerPageSettings.html#Syncfusion_Blazor_FileManager_FileManagerPageSettings_CurrentPage) property in [FileManagerPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerPageSettings.html) component, which defines the current page number of the pager.
 
 The following example demonstrates how to implement the `CurrentPage` property.
 
@@ -96,9 +96,9 @@ The [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManag
 
 ### How to navigate to particular page
 
-By invoking the [GoToPageAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_GoToPageAsync) method within the pager template for the Blazor File Manager component, you can navigate to a specific page by passing the page number to the method.
+By invoking the [GoToPageAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_GoToPageAsync_System_Int32_) method within the pager template for the Blazor File Manager component, you can navigate to a specific page by passing the page number to the method.
 
-Below is an example on how to customize pagination in the Syncfusion File Manager by adding a custom button and using the [GoToPageAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_GoToPageAsync) method in the pager template for specific page navigation.
+Below is an example on how to customize pagination in the Syncfusion File Manager by adding a custom button and using the [GoToPageAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_GoToPageAsync_System_Int32_) method in the pager template for specific page navigation.
 
 ````cshtml
 @using Syncfusion.Blazor.FileManager;
@@ -132,7 +132,7 @@ The screenshot below shows the Blazor File Manager component with a custom pagin
 
 ### Pager with Page Sizes dropdown
 
-The [FileManagerPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerPageSettings.html) component's [PageSizes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerPagesSettings.html#Syncfusion_Blazor_FileManager_FileManagerPagesSettings_PageSizes) property enables a dropdown in pager that allows you to dynamically change the number of records displayed in the current page. [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerPagesSettings.html#Syncfusion_Blazor_FileManager_FileManagerPagesSettings_PageSizes) property allows number of items to be loaded in a single page.
+The [FileManagerPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerPageSettings.html) component's [PageSizes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerPageSettings.html#Syncfusion_Blazor_FileManager_FileManagerPageSettings_PageSizes) property enables a dropdown in pager that allows you to dynamically change the number of records displayed in the current page.
 
 Here is a sample demonstrating how `PageSizes` property is used when Pagination enabled in the File Manager.
 
@@ -151,7 +151,7 @@ Here is a sample demonstrating how `PageSizes` property is used when Pagination 
 
 ```
 
-The screenshot below shows the Pages Sizes dropdown in the File Manager.
+The screenshot below shows the page sizes dropdown in the File Manager.
 
 ![Pagination in Blazor File Manager](images/blazor-filemanager-pagesize-dropdown.png)
 
@@ -187,7 +187,3 @@ The [PageChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileMa
 }
 
 ````
-
-## See also
-
-* [How to Enable Virtualization in Blazor File Manager Component](https://blazor.syncfusion.com/documentation/file-manager/virtualization)
