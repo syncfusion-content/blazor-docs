@@ -142,7 +142,7 @@ The [SfDiagramComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ### Save diagram as Mermaid syntax
 
- The `SaveDiagramAsMermaid` method serializes the diagram into a Mermaid-compatible string format. This method is specifically designed for diagrams that utilize Flowchart and Mind map layouts. The following code illustrates how to save the diagram in Mermaid string format.
+ The [SaveDiagramAsMermaid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SaveDiagramAsMermaid) method serializes the diagram into a Mermaid-compatible string format. This method is specifically designed for diagrams that utilize Flowchart and Mind map layouts. The following code illustrates how to save the diagram in Mermaid string format.
 
 ```cshtml
 SfDiagramComponent Diagram;
@@ -152,7 +152,7 @@ string data = Diagram.SaveDiagramAsMermaid();
 
 ### Load diagram from Mermaid syntax
 
-You can load a [diagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html) from the serialized Mermaid syntax data using the `LoadDiagramFromMermaidAsync` method. The following code illustrates how to load a diagram from a Mermaid string data.
+You can load a [diagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html) from the serialized Mermaid syntax data using the [LoadDiagramFromMermaidAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_LoadDiagramFromMermaidAsync_System_String_) method. The following code illustrates how to load a diagram from a Mermaid string data.
 
 ```cshtml
 SfDiagramComponent Diagram;
