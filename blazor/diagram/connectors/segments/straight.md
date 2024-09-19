@@ -102,13 +102,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### How to customize Straight Segment Thumb Shape 
 
-The straight connector does not have segments by default, featuring only the source and target thumbs. However, you can create multiple segments between the source and target points by using the `Segments` property. By default, these segments are rendered as circles.
+The Straight connector can have multiple segments between the source and target points. By default, these segments are rendered as circles, but this can be customized either globally or for individual connectors using the [SegmentThumbSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbSettings.html) class.
 
-You can customize the shape of these segment thumbs using the `Shape` property of the `SegmentThumbSettings` class.
+To change the segment thumb shape for all Straight connectors, configure the [SegmentThumbSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbSettings.html) property of the SfDiagramComponent class and set the Shape property to the desired shape.
 
-This customization is effective whether or not the `InheritSegmentThumbShape` enum value is included in the `Constraints` property of the diagram. If you apply the `InheritSegmentThumbShape` constraint, the shape specified at the diagram level will be applied to all segment thumbs within the diagram. Without this constraint, the shape will be applied at the individual connector level.
-
-To ensure that the customized shapes are visible, you must include the `DragSegmentThumb` enum in the connector's constraints.
+To customize the segment thumb shape for a specific connector, first disable the [InheritSegmentThumbShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_InheritSegmentThumbShape) constraint. Then, configure the [SegmentThumbSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbSettings.html) property of the Connector class, specifying the desired shape using the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbSettings.html#Syncfusion_Blazor_Diagram_SegmentThumbSettings_Shape) property of the [SegmentThumbSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbSettings.html) class. 
 
 The following predefined shapes are available for segment thumbs:
 
@@ -204,3 +202,6 @@ The following code example illustrates how to create a customized bezier segment
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments/SegmentShape)
 
 ![Connector with Straight Segment Shape and Style in Blazor Diagram](../../images/StraightSegmentShape1.png)
+
+>Note:  This feature ensures that the shape is updated regardless of whether the  [InheritSegmentThumbShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_InheritSegmentThumbShape) enum value is added to the [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_Constraints) property of the diagram. If you apply the [InheritSegmentThumbShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_InheritSegmentThumbShape) constraints, the shape will be updated at the diagram level. Without these constraints, the shape will be updated at the connector level. 
+ To make the shapes visible, ensure that the [DragSegmentThumb](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_DragSegmentThumb) enum is added to the connector's constraints.
