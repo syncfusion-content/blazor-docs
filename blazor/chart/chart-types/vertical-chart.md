@@ -9,6 +9,8 @@ documentation: ug
 
 # Vertical Chart in Blazor Charts Component
 
+## Vertical chart
+
 One can draw a vertical chart by changing the axis orientation, and all series types support this option. To render a chart vertically, use the [IsTransposed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_IsTransposed) property.
 
 ```cshtml
@@ -85,7 +87,7 @@ You can bind data to the chart using the [`DataSource`](https://help.syncfusion.
 
 ## Empty points
 
-Data points with `null` or `undefined` values are considered empty. Empty data points are ignored and not plotted on the chart.
+Data points with `null`, `double.NaN` or `undefined` values are considered empty. Empty data points are ignored and not plotted on the chart.
 
 **Mode**
 
