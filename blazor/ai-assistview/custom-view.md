@@ -15,7 +15,7 @@ The Blazor AI AssistView allows you to add different views available for user in
 
 #### Setting view type
 
-You can change the type of view by using the [AssistView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistView.html) and [CustomView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.CustomView.html) tag directive.
+You can set the type of view by using the [AssistView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistView.html) and [CustomView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.CustomView.html) tag directive.
 
 ```cshtml
 
