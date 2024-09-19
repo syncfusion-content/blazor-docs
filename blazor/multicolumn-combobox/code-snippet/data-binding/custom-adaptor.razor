@@ -1,11 +1,9 @@
-
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor.DropDowns
-<SfAutoComplete TValue="string" Query="RemoteDataQuery" TItem="OrdersDetails" >
+@using Syncfusion.Blazor.MultiColumnComboBox
+<SfMultiColumnComboBox TValue="string" Query="RemoteDataQuery" TItem="OrdersDetails" ValueField="OrderID" TextField="CustomID">
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor" ></SfDataManager>
-    <AutoCompleteFieldSettings Value="OrderID"></AutoCompleteFieldSettings>
-</SfAutoComplete>
+</SfMultiColumnComboBox>
 
 @code{
 
@@ -15,6 +13,8 @@
     {
         public int OrderID { get; set; }
         public string CustomerID { get; set; }
+        public string ProductName { get; set; } // New field added
+
         // Example static method to get all records
         public static List<OrdersDetails> GetAllRecords()
         {
@@ -22,14 +22,16 @@
             for (int i = 1; i <= 250; i++)
             {
                 records.Add(new OrdersDetails
-                {
-                    OrderID = i,
-                    CustomerID = $"Customer {i}"
-                });
+                    {
+                        OrderID = i,
+                        CustomerID = $"Customer {i}",
+                        ProductName = $"Product {i}" // Assigning value to the new field
+                    });
             }
             return records;
         }
     }
+
     public class CustomAdaptor : DataAdaptor
     {
         static readonly HttpClient client = new HttpClient();
