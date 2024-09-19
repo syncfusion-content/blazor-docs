@@ -26,6 +26,8 @@ Value binding can be accomplished using the [@bind-Value](https://help.syncfusio
 
 {% endhighlight %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBzZYWkLFuRrUhb?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+
 ![Blazor MultiColumn ComboBox with Bind Value](./images/value-binding/blazor-combobox-bind-value.png)
 
 ## Index value binding
@@ -37,6 +39,7 @@ The Index value binding is accomplished through the [@bind-Index]() attribute, w
 {% include_relative code-snippet/value-binding/index-value.razor %}
 
 {% endhighlight %}
+
 
 ![Blazor MultiColumn ComboBox with Index Value](./images/value-binding/blazor_combobox_index-value.png)
 
