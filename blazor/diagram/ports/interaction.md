@@ -160,8 +160,6 @@ The following code explains how to draw the connector by using the port constrai
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/Interaction/DrawConstraintsWithDrawingObject).
 
 ![Drawing Bezier Port Connection in Blazor Diagram](../images/blazor-diagram-draw-port-connection-bezier.gif)
-
-
 ## See also
 
 * [How to create a node](../nodes/nodes)

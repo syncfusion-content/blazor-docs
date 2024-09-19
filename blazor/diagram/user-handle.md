@@ -872,7 +872,6 @@ You can define fixed user handle style using a template in the [FixedUserHandleT
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle/CustomizeFixedUserHandle)
 ![Template for FixedUserHandle](images/FixedUserTemplate.png)
 
-
 ## FixedUserHandle event
 
 The Diagram control provides the following event for the fixed user handle.
