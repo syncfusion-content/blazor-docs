@@ -160,7 +160,7 @@ The following code example illustrates how to create a customized bezier segment
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments/StraightSegmentShape)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments/Straight/StraightSegmentShape)
 
 ![Connector with Straight Segment Shape and Style in Blazor Diagram](../../images/StraightSegmentShape.png)
 
@@ -199,7 +199,7 @@ The following code example illustrates how to create a customized bezier segment
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments/SegmentShape)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments/Straight/SegmentShape)
 
 ![Connector with Straight Segment Shape and Style in Blazor Diagram](../../images/StraightSegmentShape1.png)
 
