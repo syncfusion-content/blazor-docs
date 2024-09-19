@@ -13,7 +13,7 @@ The AI AssistView provides several template options to customize the banner, pro
 
 ## Banner template
 
-You can use the `BannerTemplate` tag directive to customize the banner view in the AI AssistView.
+You can use the [BannerTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistView.html#Syncfusion_Blazor_InteractiveChat_AssistView_BannerTemplate) tag directive to display additional information, such as a welcome note, and more in the AI AssistView. This banner is positioned at the top of the prompt and response conversation area within the AI AssistView.
 
 ```cshtml
 
@@ -24,7 +24,11 @@ You can use the `BannerTemplate` tag directive to customize the banner view in t
         <AssistViews>
             <AssistView>
                 <BannerTemplate>
-                    <div class="banner-content"><h3><span class="e-icons e-assistview-icon"></span>AI Assistance</h3></div>
+                    <div class="banner-content">
+                        <div class="e-icons e-assistview-icon"></div>
+                        <h3>AI Assistance</h3>
+                        <div>Your everyday AI companion.</div>
+                    </div>
                 </BannerTemplate>
             </AssistView>
         </AssistViews>
@@ -40,6 +44,17 @@ You can use the `BannerTemplate` tag directive to customize the banner view in t
     }
 }
 <style>
+    .aiassist-container .e-view-container {
+        margin: auto;
+    }
+
+    .aiassist-container .e-banner-view {
+        margin-left: 0;
+    }
+    .banner-content .e-assistview-icon:before {
+        font-size: 35px;
+    }
+
     .banner-content {
         text-align: center;
     }
@@ -51,7 +66,7 @@ You can use the `BannerTemplate` tag directive to customize the banner view in t
 
 ## Prompt item template
 
-You can use the `PromptItemTemplate` tag directive to customize the prompt items in the AI AssistView. The template context includes `Prompt`, `ToolbarItems` and `Index` items.
+You can use the [PromptItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistView.html#Syncfusion_Blazor_InteractiveChat_AssistView_PromptItemTemplate) tag directive to customize the prompt items in the AI AssistView. The template context includes `Prompt`, `ToolbarItems` and `Index` items.
 
 ```cshtml
 
@@ -122,7 +137,7 @@ You can use the `PromptItemTemplate` tag directive to customize the prompt items
 
 ## Response item template
 
-You can use the `ResponseItemTemplate` tag directive to customize response items within the AI AssistView. The template context includes the `Prompt`, `Response`, `Index`, `ToolbarItems` and `Output` items.
+You can use the [ResponseItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistView.html#Syncfusion_Blazor_InteractiveChat_AssistView_ResponseItemTemplate) tag directive to customize response items within the AI AssistView. The template context includes the `Prompt`, `Response`, `Index`, `ToolbarItems` and `Output` items.
 
 ```cshtml
 
@@ -136,7 +151,7 @@ You can use the `ResponseItemTemplate` tag directive to customize response items
                     <div class="responseItemContent">
                         <div class="response-header">
                             <span class="e-icons e-assistview-icon"></span>
-                            AI AssistView
+                            AI Assist
                         </div>
                         <div class="responseContent">@((MarkupString)context.Response)</div>
                     </div>
@@ -179,6 +194,13 @@ You can use the `ResponseItemTemplate` tag directive to customize response items
         margin-left: 35px;
     }
 
+    .responseItemContent .response-header .e-assistview-icon:before {
+        margin-right: 10px;
+    }
+
+    .aiassist-container .e-response-item-template .e-toolbar-items {
+        margin-left: 35px;
+    }
 </style>
 
 ```
@@ -187,7 +209,7 @@ You can use the `ResponseItemTemplate` tag directive to customize response items
 
 ## Prompt suggestion item template
 
-You can use the `PromptSuggestionItemTemplate` tag directive to customize the prompt suggestion items in the AI AssistView. The template context includes the `Index` and `PromptSuggestion`.
+You can use the [PromptSuggestionItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistView.html#Syncfusion_Blazor_InteractiveChat_AssistView_PromptSuggestionItemTemplate) tag directive to customize the prompt suggestion items in the AI AssistView. The template context includes the `Index` and `PromptSuggestion`.
 
 ```cshtml
 @using Syncfusion.Blazor.InteractiveChat
@@ -249,7 +271,7 @@ You can use the `PromptSuggestionItemTemplate` tag directive to customize the pr
 
 ## Footer template
 
-You can use the `FooterTemplate` tag directive to customize the footer items in the AI AssistView.
+You can use the [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistView.html#Syncfusion_Blazor_InteractiveChat_AssistView_FooterTemplate) tag directive to customize the default footer area and manage prompt request actions in the AI AssistView. This allows users to create unique footers that meet their specific needs.
 
 ```cshtml
 @using Syncfusion.Blazor.InteractiveChat
@@ -261,7 +283,7 @@ You can use the `FooterTemplate` tag directive to customize the footer items in 
                 <FooterTemplate>
                     <div class="custom-footer">
                         <textarea id="promptTextArea" @bind="textAreaValue" class="e-input" rows="2" placeholder="Enter your prompt here"></textarea>
-                        <button id="sendPrompt" @onclick="GenerateContent" class="e-btn e-primary">Send</button>
+                        <button id="sendPrompt" @onclick="GenerateContent" class="e-btn e-primary">Generate</button>
                     </div>
                 </FooterTemplate>
             </AssistView>
@@ -291,7 +313,6 @@ You can use the `FooterTemplate` tag directive to customize the footer items in 
 <style>
     .custom-footer {
         display: flex;
-        flex-direction: column;
         gap: 10px;
         padding: 10px;
         background-color: transparent;
@@ -306,6 +327,7 @@ You can use the `FooterTemplate` tag directive to customize the footer items in 
 
     #sendPrompt {
         padding: 5px 15px;
+        align-self: flex-end;
     }
 </style>
 ```
