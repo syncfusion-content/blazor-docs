@@ -56,9 +56,9 @@ Different flowchart symbols have different meanings that are used to represent d
     {
         for (int i = 0; i < Diagram.Connectors.Count; i++)
         {
-            var connector = Diagram.Connectors[i];
-            var node = Diagram.GetObject(connector.TargetID) as Node;
-            var srcNode = Diagram.GetObject(connector.SourceID) as Node;
+            Connector connector = Diagram.Connectors[i];
+            Node node = Diagram.GetObject(connector.TargetID) as Node;
+            Node srcNode = Diagram.GetObject(connector.SourceID) as Node;
             if (node.Data != null && node.Data is ItemInfo itemInfo)
             {
                 if (itemInfo.Label != null && itemInfo.Label.Count > 0)
@@ -298,9 +298,9 @@ Any text value can be given as a connector text to describe the flow. Also, any 
     {
         for (int i = 0; i < Diagram.Connectors.Count; i++)
         {
-            var connector = Diagram.Connectors[i];
-            var node = Diagram.GetObject(connector.TargetID) as Node;
-            var srcNode = Diagram.GetObject(connector.SourceID) as Node;
+            Connector connector = Diagram.Connectors[i];
+            Node node = Diagram.GetObject(connector.TargetID) as Node;
+            Node srcNode = Diagram.GetObject(connector.SourceID) as Node;
             if (node.Data != null && node.Data is ItemInfo itemInfo)
             {
                 if (itemInfo.Label != null && itemInfo.Label.Count > 0)
