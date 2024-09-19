@@ -1348,7 +1348,7 @@ The following sample code demonstrates implementing CRUD operations for the cust
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/RemoteData/URLAdaptor)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/DiagramWithCustomAdaptor)
 
 ### Binding with GraphQL service
 GraphQL is a query language for APIs with which you can get exactly what you need and nothing more. The GraphQLAdaptor provides an option to retrieve data from the GraphQL server. For more details on GraphQL service, refer to the [GraphQL documentation](../data/adaptors#graphql-service-binding).
@@ -1709,6 +1709,7 @@ namespace ASPNetCoreGraphQlServer.GraphQl
 }
 
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/GraphQLAdaptorCRUD)
 
 ## Entity Framework
 
@@ -1989,7 +1990,7 @@ The DeleteDataAsync method removes data from the remote server. Once the data is
     }
 ```
 
-You can find the fully working sample here.
+You can find the fully working sample [here](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/DiagramWithRemoteData).
 
 ## See Also
 
