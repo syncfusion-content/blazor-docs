@@ -1045,7 +1045,7 @@ The HTML element can be rendered in the tooltip of the Maps using the [TooltipTe
 
 ### Changing duration in mobile devices
 
-To change the duration of the tooltips in mobile devices, you can use the [Duration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsTooltipSettings.html#Syncfusion_Blazor_Maps_MapsTooltipSettings_Duration) property in `MapsLayerTooltipSettings`. By default, this property is set to **2000** milliseconds. Setting the value to **0** will keep the tooltip visible indefinitely, removing it only on the next interaction. If it is greater than **0**, the tooltip will be removed after the specified time.
+To change the duration of the tooltips in mobile devices, you can use the [Duration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsTooltipSettings.html#Syncfusion_Blazor_Maps_MapsTooltipSettings_Duration) property in [MapsLayerTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayerTooltipSettings.html). By default, this property is set to **2000** milliseconds. Setting the value to **0** will keep the tooltip visible indefinitely, removing it only on the next interaction. If it is greater than **0**, the tooltip will be removed after the specified time.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
