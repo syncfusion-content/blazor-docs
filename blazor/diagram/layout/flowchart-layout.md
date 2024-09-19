@@ -301,23 +301,21 @@ Any text value can be given as a connector text to describe the flow. Also, any 
         for (int i = 0; i < Diagram.Connectors.Count; i++)
         {
             var connector = Diagram.Connectors[i];
+            var node = Diagram.GetObject(connector.TargetID) as Node;
+            var srcNode = Diagram.GetObject(connector.SourceID) as Node;
+            if (node.Data != null && node.Data is ItemInfo itemInfo)
             {
-                var node = Diagram.GetObject(connector.TargetID) as Node;
-                var srcNode = Diagram.GetObject(connector.SourceID) as Node;
-                if (node.Data != null && node.Data is ItemInfo itemInfo)
+                if (itemInfo.Label != null && itemInfo.Label.Count > 0)
                 {
-                    if (itemInfo.Label != null && itemInfo.Label.Count > 0)
+                    if (itemInfo.ParentId.IndexOf((srcNode.Data as ItemInfo).Id) != -1)
                     {
-                        if (itemInfo.ParentId.IndexOf((srcNode.Data as ItemInfo).Id) != -1)
+                        var parentIndex = itemInfo.ParentId.IndexOf((srcNode.Data as ItemInfo).Id);
+                        if (itemInfo.Label.Count > parentIndex)
                         {
-                            var parentIndex = itemInfo.ParentId.IndexOf((srcNode.Data as ItemInfo).Id);
-                            if (itemInfo.Label.Count > parentIndex)
+                            connector.Annotations = new DiagramObjectCollection<PathAnnotation>()
                             {
-                                connector.Annotations = new DiagramObjectCollection<PathAnnotation>()
-                                {
-                                    new PathAnnotation() { Content = itemInfo.Label[parentIndex], Style = new TextStyle(){ Bold = true} }
-                                };
-                            }
+                                new PathAnnotation() { Content = itemInfo.Label[parentIndex], Style = new TextStyle(){ Bold = true} }
+                            };
                         }
                     }
                 }
