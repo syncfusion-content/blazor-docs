@@ -16,7 +16,7 @@ Value binding is the process of passing values between a component and its paren
 
 ## Bind value binding
 
-Value binding can be accomplished using the [@bind-Value]() attribute, which supports `string`, `int`, `enum`, `bool`, and `complex types`. When the component's value changes, it will impact all instances where the variable is bound using the `@bind-value` attribute. For the binding to function correctly, the value assigned to the `@bind-value` attribute should correspond to the [TextField] and [ValueField] mapped to the component.
+Value binding can be accomplished using the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_Value) attribute, which supports `string`, `int`, `enum`, `bool`, and `complex types`. When the component's value changes, it will impact all instances where the variable is bound using the `@bind-value` attribute. For the binding to function correctly, the value assigned to the `@bind-value` attribute should correspond to the [TextField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_TextField) and [ValueField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_ValueField) mapped to the component.
 
 * **TValue** - Specifies the type of each list item on the suggestion list.
 
@@ -42,9 +42,9 @@ The Index value binding is accomplished through the [@bind-Index]() attribute, w
 
 <!-- ## Object binding
 
-Bind the Object data to the [@bind-Value]() attribute of the MultiColumn ComboBox component, allowing you to associate the class name with `TValue`.
+Bind the Object data to the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_Value) attribute of the MultiColumn ComboBox component, allowing you to associate the class name with `TValue`.
 
-In the example provided, the `Name` column is linked to the [ValueField] property.
+In the example provided, the `Name` column is linked to the [ValueField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_ValueField) property.
 
 {% highlight cshtml %}
 
@@ -56,7 +56,7 @@ In the example provided, the `Name` column is linked to the [ValueField] propert
 
 ## Show or hide clear button
 
-Utilize the [ShowClearButton]() property to control the visibility of the clear button. When the clear button is activated, the `Value`, `Text`, and `Index` properties will all revert to null.
+Utilize the [ShowClearButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_ShowClearButton) property to control the visibility of the clear button. When the clear button is activated, the `Value`, `Text`, and `Index` properties will all revert to null.
 
 N> If the TValue is a non-nullable type, pressing the clear button will reset it to the default value for that data type. Conversely, if TValue is a nullable type, pressing the clear button will set it to null. For instance, if TValue is defined as `int`, clearing it will assign a value of 0 to the component, whereas if TValue is defined as `int?`, it will assign a value of null.
 

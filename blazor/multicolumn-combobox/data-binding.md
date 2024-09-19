@@ -9,13 +9,13 @@ documentation: ug
 
 # Data Binding in Blazor MultiColumn ComboBox Component
 
-The MultiColumn ComboBox can retrieve data from either local data sources or remote data services. To connect local data, use the [DataSource]() property. For remote data binding, utilize the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
+The MultiColumn ComboBox can retrieve data from either local data sources or remote data services. To connect local data, use the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_DataSource) property. For remote data binding, utilize the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
 
 * **TItem** - Specifies the type of the datasource of the MultiColumn ComboBox component.
 
 ## Binding local data
 
-The MultiColumn ComboBox loads the data from local data sources through the [DataSource]() property. It supports the data type of `Array of primitive type`, `Array of object`, `List of primitive type`,`List of object`, `Observable Collection`, `ExpandoObject`, `DynamicObject`.
+The MultiColumn ComboBox loads the data from local data sources through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_DataSource) property. It supports the data type of `Array of primitive type`, `Array of object`, `List of primitive type`,`List of object`, `Observable Collection`, `ExpandoObject`, `DynamicObject`.
 
 {% highlight cshtml %}
 
@@ -78,9 +78,9 @@ The [DataBound]() event triggers when the data source is populated in the popup 
 
 ### Complex data type
 
-The MultiColumn ComboBox can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [ValueField] and [TextField] property.
+The MultiColumn ComboBox can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [TextField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_TextField) and [ValueField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_ValueField) property.
 
-In the following example, the `Code.ID` column and `Country.CountryID` column from complex data have been mapped to the [ValueField] and [TextField] property respectively.
+In the following example, the `Code.ID` column and `Country.CountryID` column from complex data have been mapped to the [TextField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_TextField) and [ValueField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_ValueField) property respectively.
 
 {% highlight cshtml %}
 
@@ -140,7 +140,7 @@ Bind the [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuet
 
 ## Binding remote data 
 
-The MultiColumn ComboBox loads the data from remote data services through the [DataSource]() property. 
+The MultiColumn ComboBox loads the data from remote data services through the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_DataSource) property. 
 
 The MultiColumn ComboBox supports the retrieval of data from the remote data services with the help of the [DataManager](https://blazor.syncfusion.com/documentation/data/getting-started) control. The [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_Query) property is used to fetch data from the database and bind it to the MultiColumn ComboBox.
 
@@ -150,7 +150,7 @@ The MultiColumn ComboBox supports the retrieval of data from the remote data ser
 
 ### OnActionBegin event
 
-The [OnActionBegin]() event triggers before fetching data from the remote server.
+The [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_OnActionBegin) event triggers before fetching data from the remote server.
 
 {% highlight cshtml %}
 
@@ -160,7 +160,7 @@ The [OnActionBegin]() event triggers before fetching data from the remote server
 
 <!-- ### OnActionComplete event
 
-The [OnActionComplete]() event triggers after data is fetched successfully from the remote server.
+The [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_OnActionComplete) event triggers after data is fetched successfully from the remote server.
 
 {% highlight cshtml %}
 
@@ -170,7 +170,7 @@ The [OnActionComplete]() event triggers after data is fetched successfully from 
 
 ### OnActionFailure event
 
-The [OnActionFailure]() event triggers when the data fetch request from the remote server fails.
+The [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_OnActionFailure) event triggers when the data fetch request from the remote server fails.
 
 {% highlight cshtml %}
 
@@ -202,7 +202,7 @@ The [Web API Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#
 
 ![Blazor ComboBox with Web API Adaptor](./images/data-binding/blazor_combobox_web-api-adaptor.png)
 
-### Custom adaptor
+<!-- ### Custom adaptor
 
 The [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) has custom adaptor support which allows you to perform manual operations on the data. This can be utilized for implementing customize data binding and editing operations in the MultiColumn ComboBox component.
 
@@ -213,7 +213,7 @@ The `DataAdaptor` abstract class has both synchronous and asynchronous method si
 ```csharp
 public abstract class DataAdaptor
 {
-    /// <summary>
+    /// <summary>   
     /// Performs data Read operation synchronously.
     /// </summary>
     public virtual object Read(DataManagerRequest dataManagerRequest, string key = null)
@@ -233,7 +233,7 @@ The following sample code demonstrates implementing custom data binding using cu
 
 {% include_relative code-snippet/data-binding/custom-adaptor.razor %}
 
-{% endhighlight %}
+{% endhighlight %} -->
 
 ### Offline mode
 

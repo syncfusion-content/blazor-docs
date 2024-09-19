@@ -11,7 +11,7 @@ documentation: ug
 
 ## Get selected value
 
-Retrieve the selected value from the MultiColumn ComboBox component during the [ValueChange]() event by utilizing the [ChangeEventArgs.Value]() property.
+Retrieve the selected value from the MultiColumn ComboBox component during the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_ValueChange) event by utilizing the [ValueChangeEventArgs.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.ValueChangeEventArgs-2.html#Syncfusion_Blazor_MultiColumnComboBox_ValueChangeEventArgs_2_Value) property.
 
 {% highlight cshtml %}
 
@@ -19,7 +19,7 @@ Retrieve the selected value from the MultiColumn ComboBox component during the [
 
 {% endhighlight %}
 
-Retrieve the full object list corresponding to the selected value in the [ValueChange]() event by utilizing the [ChangeEventArgs.ItemData]() property.
+Retrieve the full object list corresponding to the selected value in the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_ValueChange) event by utilizing the [ValueChangeEventArgs.ItemData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.ValueChangeEventArgs-2.html#Syncfusion_Blazor_MultiColumnComboBox_ValueChangeEventArgs_2_ItemData) property.
 
 {% highlight cshtml %}
 
@@ -29,7 +29,7 @@ Retrieve the full object list corresponding to the selected value in the [ValueC
 
 ## Preselected value on OnInitializedAsync
 
-To associate a pre-selected value with the MultiColumn ComboBox component, use the [@bind-Value]() attribute. You can set the value property in the [OnInitializedAsync]() lifecycle method. The following example illustrates how to bind the value when the component is initially rendered.
+To associate a pre-selected value with the MultiColumn ComboBox component, use the [@bind-Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_Value) attribute. You can set the value property in the [OnInitializedAsync](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-6.0#component-initialization-oninitializedasync) lifecycle method. The following example illustrates how to bind the value when the component is initially rendered.
 
 {% highlight cshtml %}
 
@@ -53,7 +53,7 @@ You can change the component's value either programmatically or externally via t
 
 ### ValueChange event
 
-The [ValueChange]() event is triggered when the value of the MultiColumn ComboBox component get changed or modified. Also, it will return the necessary arguments including the current and previously selected or changed value.
+The [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_ValueChange) event is triggered when the value of the MultiColumn ComboBox component get changed or modified. Also, it will return the necessary arguments including the current and previously selected or changed value.
 
 {% highlight cshtml %}
 
@@ -63,7 +63,7 @@ The [ValueChange]() event is triggered when the value of the MultiColumn ComboBo
 
 ### OnValueSelect event 
 
-The [OnValueSelect]() event is activated whenever a value is chosen in the DropDownList component. You can access the relevant arguments, including the [ChangeEventArgs.ItemData](). Additionally, you can prevent item selection by setting the [ChangeEventArgs.Cancel]() property to `true` within the event arguments.
+The [OnValueSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_OnValueSelect) event is activated whenever a value is chosen in the DropDownList component. You can access the relevant arguments, including the [ValueSelectEventArgs.ItemData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.ValueChangeEventArgs-2.html#Syncfusion_Blazor_MultiColumnComboBox_ValueChangeEventArgs_2_ItemData). Additionally, you can prevent item selection by setting the [ValueSelectEventArgs.Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.ValueChangeEventArgs-2.html#Syncfusion_Blazor_MultiColumnComboBox_ValueChangeEventArgs_2_Cancel) property to `true` within the event arguments.
 
 {% highlight cshtml %}
 
@@ -73,7 +73,7 @@ The [OnValueSelect]() event is activated whenever a value is chosen in the DropD
 
 ## Preselect value with index
 
-Bind the pre-selected value to the component using the [@bind-Index]() attribute. It binds the respective value present in the specified index position of the datasource.
+Bind the pre-selected value to the component using the [@bind-Index](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_Value) attribute. It binds the respective value present in the specified index position of the datasource.
 
 N> It will be dependent on the [SortOrder]() type. It will bind the value to the component with the sorted data if the corresponding property is defined.
 
@@ -111,7 +111,7 @@ Get the entire object belonging to the value selected in the component using the
 
 ## Focus the next component on selection
 
-Focus the component programmatically using the [FocusAsync]() public method. It will set focus instantly to the MultiColumn ComboBox component when invoking it. 
+Focus the component programmatically using the [FocusAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_FocusAsync) public method. It will set focus instantly to the MultiColumn ComboBox component when invoking it. 
 
 {% highlight cshtml %}
 
@@ -121,7 +121,7 @@ Focus the component programmatically using the [FocusAsync]() public method. It 
 
 <!-- ## Programmatically clear the selected value
 
-To programmatically reset the value of the MultiColumn ComboBox, you can utilize the [ClearAsync]() method. This method removes any selected values from the SfComboBox<TValue, TItem> component and sets both the [Value]() and [Index]() properties to null.
+To programmatically reset the value of the MultiColumn ComboBox, you can utilize the [ClearAsync]() method. This method removes any selected values from the SfComboBox<TValue, TItem> component and sets both the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_Value) and [Index](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_Index) properties to null.
 
 {% highlight cshtml %}
 
@@ -143,7 +143,7 @@ To prevent the page from reloading when using the MultiColumn ComboBox component
 
 <!-- ## Programmatically trigger onChange event
 
-Trigger the [ValueChange]() event manually by using the instance (taken from @ref attribute) of the [ComboBoxEvents](). In the following example, the `ValueChange` event is invoked inside the `Created` event handler. As per the following code, it will trigger once the component is created or rendered on the page.
+Trigger the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_ValueChange) event manually by using the instance (taken from @ref attribute) of the component. In the following example, the `ValueChange` event is invoked inside the `Created` event handler. As per the following code, it will trigger once the component is created or rendered on the page.
 
 {% highlight cshtml %}
 
@@ -153,7 +153,7 @@ Trigger the [ValueChange]() event manually by using the instance (taken from @re
 
 <!-- ## Programmatically focus in and focus out the component
 
-In order to trigger the `FocusAsync()` and `FocusOutAsync()` methods using the instance of the MultiColumn ComboBox, you can use buttons. You can bind the click event of the button to the `FocusAsync()` and `FocusOutAsync()` methods. When the button is clicked, it triggers the corresponding method on the MultiColumn ComboBox.
+In order to trigger the `FocusAsync(https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_FocusAsync)` and `FocusOutAsync()` methods using the instance of the MultiColumn ComboBox, you can use buttons. You can bind the click event of the button to the `FocusAsync(https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_FocusAsync)` and `FocusOutAsync()` methods. When the button is clicked, it triggers the corresponding method on the MultiColumn ComboBox.
 
 {% highlight Razor %}
 
@@ -165,7 +165,7 @@ While focusing and focus out the following event get triggered. -->
 
 ### Focus event
 
-The [Focus]() event will trigger when the component gets focused. 
+The [Focus](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_Focus) event will trigger when the component gets focused. 
 
 {% highlight cshtml %}
 
@@ -175,7 +175,7 @@ The [Focus]() event will trigger when the component gets focused.
 
 ### Blur event
 
-The [Blur]() event will trigger when focus moves out from the component. 
+The [Blur](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_Blur) event will trigger when focus moves out from the component. 
 
 {% highlight cshtml %}
 

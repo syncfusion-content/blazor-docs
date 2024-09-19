@@ -11,7 +11,7 @@ documentation: ug
 
 ## Placeholder
 
-Utilize the [Placeholder]() property to show a brief description of the expected input value. In the example below, assign `Select a game` to the `Placeholder` property, which will update the `Placeholder` attribute of the input element in the DOM accordingly.
+Utilize the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_Placeholder) property to show a brief description of the expected input value. In the example below, assign `Select a game` to the `Placeholder` property, which will update the `Placeholder` attribute of the input element in the DOM accordingly.
 
 {% highlight cshtml %}
 

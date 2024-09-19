@@ -9,7 +9,7 @@ documentation: ug
 
 # Adding Custom Value to Blazor MultiColumn ComboBox Component
 
-You can include custom values in the MultiColumn ComboBox component. If the entered character(s) are not found in the list, a button will appear in the popup menu. Clicking this button will add the custom character(s) to the existing list as a new item. By default, the [AllowCustom]() property is set to `true`.
+You can include custom values in the MultiColumn ComboBox component. If the entered character(s) are not found in the list, a button will appear in the popup menu. Clicking this button will add the custom character(s) to the existing list as a new item. By default, the [AllowCustom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_AllowCustom) property is set to `true`.
 
 **[Index.razor]**
 
