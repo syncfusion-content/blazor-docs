@@ -15,7 +15,7 @@ The Blazor AI AssistView allows you to add different views available for user in
 
 #### Setting view type
 
-You can change the type of view by using the `AssistView` and `CustomView` tag directive.
+You can change the type of view by using the [AssistView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistView.html) and [CustomView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.CustomView.html) tag directive.
 
 ```cshtml
 
@@ -57,7 +57,7 @@ You can change the type of view by using the `AssistView` and `CustomView` tag d
 
 ### Setting name
 
-You can use the `Header` property to specifies the header name of the `Assist` or `Custom` views in the AI AssistView.
+You can use the [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistView.html#Syncfusion_Blazor_InteractiveChat_AssistView_Header) property to specifies the header name of the `Assist` or `Custom` views in the AI AssistView.
 
 ```cshtml
 
@@ -99,7 +99,7 @@ You can use the `Header` property to specifies the header name of the `Assist` o
 
 ### Setting iconCss
 
-You can customize the view icons by using the `IconCss` property. By default the `e-assistview-icon` class is added as built-in header icon for the AI AssistView.
+You can customize the view icons by using the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistView.html#Syncfusion_Blazor_InteractiveChat_AssistView_IconCss) property. By default the `e-assistview-icon` class is added as built-in header icon for the AI AssistView.
 
 ```cshtml
 
@@ -141,7 +141,7 @@ You can customize the view icons by using the `IconCss` property. By default the
 
 ### Setting view template 
 
-You can use the `ViewTemplate` tag directive to add the view content of the multiple views added in the AI AssistView.
+You can use the [ViewTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistView.html#Syncfusion_Blazor_InteractiveChat_AssistView_ViewTemplate) tag directive to add the view content of the multiple views added in the AI AssistView.
 
 ```cshtml
 
@@ -178,7 +178,7 @@ You can use the `ViewTemplate` tag directive to add the view content of the mult
 
 #### Show or hide clear button
 
-You can use the `ShowClearButton` property using the `AssistView` tag directive to show or hide the clear button. By default, its value is `false`, when the clear button is clicked, the prompt text entered will be cleared.
+You can use the [ShowClearButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistView.html#Syncfusion_Blazor_InteractiveChat_AssistView_ShowClearButton) property using the `AssistView` tag directive to show or hide the clear button. By default, its value is `false`, when the clear button is clicked, the prompt text entered will be cleared.
 
 ```cshtml
 
@@ -207,7 +207,7 @@ You can use the `ShowClearButton` property using the `AssistView` tag directive 
 
 ## Setting active view
 
-You can use the `ActiveView` property set the active view in the AI AssistView. By default, the value is `0`.
+You can use the [ActiveView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_ActiveView) property set the active view in the AI AssistView. By default, the value is `0`.
 
 ```cshtml
 

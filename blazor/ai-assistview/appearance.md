@@ -11,7 +11,7 @@ documentation: ug
 
 ## Setting width
 
-You can use the `Width` property to set the width of the AI AssistView. The default value is `100%`.
+You can use the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_Width) property to set the width of the AI AssistView. The default value is `100%`.
 
 ```cshtml
 
@@ -36,7 +36,7 @@ You can use the `Width` property to set the width of the AI AssistView. The defa
 
 ## Setting height
 
-You can use the `Height` property to set the height of the AI AssistView. The default value is `100%`.
+You can use the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_Height) property to set the height of the AI AssistView. The default value is `100%`.
 
 ```cshtml
 
@@ -61,7 +61,7 @@ You can use the `Height` property to set the height of the AI AssistView. The de
 
 ## CssClass
 
-You can customize the appearance of the AI AssistView component by using the `CssClass` property.
+You can customize the appearance of the AI AssistView component by using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_CssClass) property.
 
 ```cshtml
 

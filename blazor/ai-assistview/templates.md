@@ -13,7 +13,7 @@ The AI AssistView provides several template options to customize the banner, pro
 
 ## Banner template
 
-You can use the `BannerTemplate` tag directive to display additional information, such as a welcome note, and more in the AI AssistView. This banner is positioned at the top of the prompt and response conversation area within the AI AssistView.
+You can use the [BannerTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistView.html#Syncfusion_Blazor_InteractiveChat_AssistView_BannerTemplate) tag directive to display additional information, such as a welcome note, and more in the AI AssistView. This banner is positioned at the top of the prompt and response conversation area within the AI AssistView.
 
 ```cshtml
 
@@ -66,7 +66,7 @@ You can use the `BannerTemplate` tag directive to display additional information
 
 ## Prompt item template
 
-You can use the `PromptItemTemplate` tag directive to customize the prompt items in the AI AssistView. The template context includes `Prompt`, `ToolbarItems` and `Index` items.
+You can use the [PromptItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistView.html#Syncfusion_Blazor_InteractiveChat_AssistView_PromptItemTemplate) tag directive to customize the prompt items in the AI AssistView. The template context includes `Prompt`, `ToolbarItems` and `Index` items.
 
 ```cshtml
 
@@ -137,7 +137,7 @@ You can use the `PromptItemTemplate` tag directive to customize the prompt items
 
 ## Response item template
 
-You can use the `ResponseItemTemplate` tag directive to customize response items within the AI AssistView. The template context includes the `Prompt`, `Response`, `Index`, `ToolbarItems` and `Output` items.
+You can use the [ResponseItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistView.html#Syncfusion_Blazor_InteractiveChat_AssistView_ResponseItemTemplate) tag directive to customize response items within the AI AssistView. The template context includes the `Prompt`, `Response`, `Index`, `ToolbarItems` and `Output` items.
 
 ```cshtml
 
@@ -209,7 +209,7 @@ You can use the `ResponseItemTemplate` tag directive to customize response items
 
 ## Prompt suggestion item template
 
-You can use the `PromptSuggestionItemTemplate` tag directive to customize the prompt suggestion items in the AI AssistView. The template context includes the `Index` and `PromptSuggestion`.
+You can use the [PromptSuggestionItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistView.html#Syncfusion_Blazor_InteractiveChat_AssistView_PromptSuggestionItemTemplate) tag directive to customize the prompt suggestion items in the AI AssistView. The template context includes the `Index` and `PromptSuggestion`.
 
 ```cshtml
 @using Syncfusion.Blazor.InteractiveChat
@@ -271,7 +271,7 @@ You can use the `PromptSuggestionItemTemplate` tag directive to customize the pr
 
 ## Footer template
 
-You can use the `FooterTemplate` tag directive to customize the default footer area and manage prompt request actions in the AI AssistView. This allows users to create unique footers that meet their specific needs.
+You can use the [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.AssistView.html#Syncfusion_Blazor_InteractiveChat_AssistView_FooterTemplate) tag directive to customize the default footer area and manage prompt request actions in the AI AssistView. This allows users to create unique footers that meet their specific needs.
 
 ```cshtml
 @using Syncfusion.Blazor.InteractiveChat
