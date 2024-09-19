@@ -92,4 +92,4 @@ The following code demonstrates how to delete multiple annotations at once in PD
 
 ```
 
-[View sample in GitHub]().
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Add%20and%20Delete%20Annotations).
