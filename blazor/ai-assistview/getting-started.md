@@ -125,7 +125,7 @@ Add the Syncfusion Blazor AI AssistView component in the **~/Pages/Index.razor**
 
 ## Configure suggestions and responses
 
-You can use the `PromptSuggestions` property to add prompt suggestions and the `PromptRequested` event to add responses when the prompt matches the specified prompts data otherwise, the default response will be displayed.
+You can use the [PromptSuggestions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_PromptSuggestions) property to add prompt suggestions and the [PromptRequested](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_PromptRequested) event to add responses when the prompt matches the specified prompts data otherwise, the default response will be displayed.
 
 {% tabs %}
 {% highlight razor %}

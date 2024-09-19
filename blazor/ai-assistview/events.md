@@ -13,7 +13,7 @@ This section describes the AI AssistView events that will be triggered when appr
 
 ## Created
 
-The AI AssistView component triggers the `Created` event when the component rendering is completed.
+The AI AssistView component triggers the [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_Created) event when the component rendering is completed.
 
 ```cshtml
 @using Syncfusion.Blazor.InteractiveChat
@@ -38,7 +38,7 @@ The AI AssistView component triggers the `Created` event when the component rend
 
 ## PromptRequested
 
-The `PromptRequested` event is triggered when the prompt request is made in the AI AssistView component.
+The [PromptRequested](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_PromptRequested) event is triggered when the prompt request is made in the AI AssistView component.
 
 ```cshtml
 @using Syncfusion.Blazor.InteractiveChat
@@ -59,7 +59,7 @@ The `PromptRequested` event is triggered when the prompt request is made in the 
 
 ## PromptChanged
 
-The `PromptChanged` event is triggered when the prompt text is changed in the AI AssistView component.
+The [PromptChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_PromptChanged) event is triggered when the prompt text is changed in the AI AssistView component.
 
 ```cshtml
 @using Syncfusion.Blazor.InteractiveChat
