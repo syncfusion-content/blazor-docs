@@ -86,7 +86,7 @@ N> In this example, the [Syncfusion Blazor DataForm](https://blazor.syncfusion.c
 
 ![Syncfusion Blazor Smart paste button with annotation](images/smart-paste-annotation.gif)
 
-N> [View Sample in GitHub](https://github.com/search?q=org%3Asyncfusion%20smart-ai-samples&type=repositories).
+N> [View Sample in GitHub](https://github.com/syncfusion/smart-ai-samples).
 
 ## See also
 
