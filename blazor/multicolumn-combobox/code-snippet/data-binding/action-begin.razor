@@ -1,0 +1,21 @@
+@using Syncfusion.Blazor.MultiColumnComboBox
+@using Syncfusion.Blazor.Data
+
+<SfMultiColumnComboBox TItem="EmployeeData" TValue="string" AllowFiltering=true ValueField="EmployeeID" OnActionBegin="@OnActionBeginhandler" TextField="FirstName" PopupWidth="600px" Placeholder="e.g. Andrew">
+    <SfDataManager Url="https://blazor.syncfusion.com/services/release/api/Employees" CrossDomain="true" Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor"></SfDataManager>
+</SfMultiColumnComboBox>
+
+@code {
+    public Query RemoteQuery = new Query();
+    public class EmployeeData
+    {
+        public int EmployeeID { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Country { get; set; }
+    }
+    private void OnActionBeginhandler(ActionBeginEventArgs args)
+    {
+        // Here, you can customize your code.
+    }
+}
