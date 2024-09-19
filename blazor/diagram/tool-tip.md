@@ -55,7 +55,8 @@ The following code example illustrates how to customize the tooltip for nodes.
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip/TooltipForSpecificNode)
-|![ToolTip During hover the node](images/blazor-diagram-nodetooltip.png) | 
+
+![ToolTip During hover the node](images/blazor-diagram-nodetooltip.png)  
 
 The following code example illustrates how to customize the tooltip for connectors.
 
@@ -83,7 +84,8 @@ The following code example illustrates how to customize the tooltip for connecto
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip/TooltipForSpecificConnector)
-|![ToolTip During hover the node](images/blazor-diagram-connectortooltip.png) | 
+
+![ToolTip During hover the node](images/blazor-diagram-connectortooltip.png) 
 
 ## How to set tooltip position for nodes/connectors
 
@@ -747,4 +749,429 @@ The following code example illustrates how to set the open mode to the tooltip f
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip/TooltipOpenModeForConnector)
+
+## Sticky Mode
+
+You can configure tooltips for nodes and connectors to remain visible until the close icon is pressed. This feature is known as a "sticky" tooltip. When sticky mode is enabled, a close icon appears at the top right corner of the tooltip, allowing users to manually close it.
+
+To enable or disable this sticky mode, use the `IsSticky` property in the tooltip configuration. By default, the `IsSticky` property is set to `false`.
+
+N> The tooltip will have an open and close state whenever the mouse hovers over different diagram elements. Only one "sticky" tooltip can be visible in the diagram at a time.
+
+The following code example demonstrates how to set the `IsSticky` property to `true` for the node:
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Popups
+@using Syncfusion.Blazor.Buttons
+<SfDiagramComponent @ref="@diagram" Width="1000px" Height="500px" Nodes="@nodes" />
+@code
+{
+    //Define diagram's nodes collection
+    DiagramObjectCollection<Node> nodes;
+    //Reference the diagram
+    SfDiagramComponent diagram;
+    protected override void OnInitialized()
+    {
+        //Intialize diagram's nodes collection
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
+            {
+                ID = "node1",
+                OffsetX = 100,
+                OffsetY = 100,
+                Width = 100,
+                Height = 100,
+                Style = new ShapeStyle()
+                {
+                    Fill = "#6495ED",
+                    StrokeColor = "white"
+                },
+                Tooltip = new DiagramTooltip() { Content = "Tooltip", IsSticky=true },
+                Constraints = NodeConstraints.Default | NodeConstraints.Tooltip,
+            };
+        nodes.Add(node);
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip/)
+
+|![ToolTip During hover the node with Stikcy Mode](images/StickyNode.png) | 
+
+The following code example demonstrates how to set the `IsSticky` property to `true` for the connector:
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Popups
+@using Syncfusion.Blazor.Buttons
+<SfDiagramComponent @ref="@diagram" Width="1000px" Height="500px" Connectors="connectors" />
+@code
+{
+    //Define diagram's connectors collection
+    DiagramObjectCollection<Connector> connectors;
+    //Refrence the diagram
+    SfDiagramComponent diagram;
+    protected override void OnInitialized()
+    {
+        //Intialize diagram's nodes collection
+        connectors = new DiagramObjectCollection<Connector>();
+        Connector connector = new Connector()
+            {
+                ID = "Connector1",
+                SourcePoint = new DiagramPoint() { X = 100, Y = 200 },
+                TargetPoint = new DiagramPoint() { X = 200, Y = 100 },
+                Tooltip = new DiagramTooltip() { Content = "Tooltip", IsSticky=true  },
+                Constraints = ConnectorConstraints.Default | ConnectorConstraints.Tooltip,
+            };
+        connectors.Add(connector);
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip/)
+
+|![ToolTip During hover the node with Stikcy Mode](images/StickyConnector.png) | 
+
+For more information about tooltip, refer to [Tooltip](https://blazor.syncfusion.com/documentation/diagram/tool-tip)
+
+### How to set tooltip for user handles
+
+The Diagram component supports displaying tooltips when the mouse hovers over any [UserHandle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectorConstraints.html#Syncfusion_Blazor_Diagram_SelectorConstraints_UserHandle). To achieve this, you need to configure the `Tooltip` property of the `UserHandle` to include the tooltip [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Content) and set its [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Position) appropriately. This configuration ensures that relevant information is displayed at the correct position relative to the handle when users hover over it.
+
+By default, tooltips are not displayed. You need to explicitly configure the tooltip settings as shown in the following example:
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Height="600px"
+                    Nodes="@nodes"
+                    SelectionSettings="@SelectedModel">
+</SfDiagramComponent>
+
+@code
+{
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    DiagramSelectionSettings SelectedModel = new DiagramSelectionSettings();
+    DiagramObjectCollection<UserHandle> UserHandles = new DiagramObjectCollection<UserHandle>();
+    protected override void OnInitialized()
+    {
+        UserHandle cloneHandle = new UserHandle()
+        {
+            Name = "clone",
+            PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z",
+            Visible = true,
+            Offset = 0,
+            Side = Direction.Right,
+            Margin = new DiagramThickness() { Top = 0, Bottom = 0, Left = 0, Right = 0 },
+            Tooltip = new DiagramTooltip() { Content = "CloneNode" }
+        };
+        UserHandles = new DiagramObjectCollection<UserHandle>()
+        {
+            cloneHandle
+        };
+        SelectedModel.UserHandles = UserHandles;
+        nodes = new DiagramObjectCollection<Node>();
+        Node diagramNode = new Node()
+        {
+            ID = "node1",
+            OffsetX = 100,
+            OffsetY = 100,
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "none" },
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Node" } }
+        };
+        nodes.Add(diagramNode);
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle/UserHandleTooltip)
+
+![Tooltip for UserHandle](images/UserHandleTooltip.gif)
+
+### How to set sticky tooltip for user handles
+
+You can configure tooltips for user handle to remain visible until the close icon is pressed. This feature is known as a "sticky" tooltip. When sticky mode is enabled, a close icon appears at the top right corner of the tooltip, allowing users to manually close it.
+
+To enable or disable this sticky mode, use the `IsSticky` property in the tooltip configuration. By default, the `IsSticky` property is set to `false`.
+
+N> The tooltip will have an open and close state whenever the mouse hovers over different diagram elements. Only one "sticky" tooltip can be visible in the diagram at a time.
+
+The following code example demonstrates how to set the `IsSticky` property to `true` for the user handle:
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Height="600px"
+                    Nodes="@nodes"
+                    SelectionSettings="@SelectedModel">
+</SfDiagramComponent>
+
+@code
+{
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    DiagramSelectionSettings SelectedModel = new DiagramSelectionSettings();
+    DiagramObjectCollection<UserHandle> UserHandles = new DiagramObjectCollection<UserHandle>();
+    protected override void OnInitialized()
+    {
+        UserHandle cloneHandle = new UserHandle()
+        {
+            Name = "clone",
+            PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z",
+            Visible = true,
+            Offset = 0,
+            Side = Direction.Right,
+            Margin = new DiagramThickness() { Top = 0, Bottom = 0, Left = 0, Right = 0 },
+            Tooltip = new DiagramTooltip() { Content = "CloneNode",IsSticky = true }
+        };
+        UserHandles = new DiagramObjectCollection<UserHandle>()
+        {
+            cloneHandle
+        };
+        SelectedModel.UserHandles = UserHandles;
+        nodes = new DiagramObjectCollection<Node>();
+        Node diagramNode = new Node()
+        {
+            ID = "node1",
+            OffsetX = 100,
+            OffsetY = 100,
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "none" },
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Node" } }
+        };
+        nodes.Add(diagramNode);
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandleIsSticky/)
+
+![ToolTip During hover the ports with Stikcy Mode](images/UserHandleIsSticky.png)
+
+## How to set tooltip for Fixed user handle
+
+The diagram supports displaying tooltips when the mouse hovers over any [FixedUserHandle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html). To achieve this, the tooltip property of the diagram model must be configured to contain the tooltip [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Content) and to [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Position) it appropriately. This ensures that when users hover over a fixed user handle, relevant information is displayed at the correct position relative to the handle. By default, tooltips are not displayed; you need to add the tooltip as shown in the following example.
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
+
+@code
+{
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+
+    protected override void OnInitialized()
+    {
+        nodes = new DiagramObjectCollection<Node>();
+        Node node1 = new Node()
+        {
+            OffsetX = 250,
+            OffsetY = 250,
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
+            FixedUserHandles = new DiagramObjectCollection<NodeFixedUserHandle>()
+            {
+                new NodeFixedUserHandle() 
+                { 
+                    ID = "user1",
+                    Height = 20, 
+                    Width = 20, 
+                    Visibility = true,
+                    Padding = new DiagramThickness() { Bottom = 1, Left = 1, Right = 1, Top = 1 }, 
+                    Margin = new DiagramThickness() { Right = 20 }, Offset = new DiagramPoint() { X = 0 , Y = 0 }, 
+                    PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z",
+                    Tooltip = new DiagramTooltip(){Content="CloneNode", Position=Position.BottomLeft},
+                },
+            }
+        };
+        nodes.Add(node1);
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle/FixedUserHandleTooltip)
+![Tooltip for UserHandle](images/FixedUserHandleTooltip.gif)
+
+## How to set sticky tooltip for fixed user handles
+
+With this mode set to `true`, Tooltips for fixed user handles can be made to show up on the screen as long as the close icon is pressed. In this mode, close icon is attached to the Tooltip located at the top right corner. This mode can be enabled or disabled using the `IsSticky` property in tooltip. By default, the value of the IsSticky property is set to false.
+
+The following code example demonstrates how to set the IsSticky property to true for the fixed user handle:
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
+
+@code
+{
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+
+    protected override void OnInitialized()
+    {
+        nodes = new DiagramObjectCollection<Node>();
+        Node node1 = new Node()
+        {
+            OffsetX = 250,
+            OffsetY = 250,
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
+            FixedUserHandles = new DiagramObjectCollection<NodeFixedUserHandle>()
+            {
+                new NodeFixedUserHandle() 
+                { 
+                    ID = "user1",
+                    Height = 20, 
+                    Width = 20, 
+                    Visibility = true,
+                    Padding = new DiagramThickness() { Bottom = 1, Left = 1, Right = 1, Top = 1 }, 
+                    Margin = new DiagramThickness() { Right = 20 }, Offset = new DiagramPoint() { X = 0 , Y = 0 }, 
+                    PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z",
+                    Tooltip = new DiagramTooltip(){Content="CloneNode", IsSticky=true},
+                },
+            }
+        };
+        nodes.Add(node1);
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle/FixedUserHandleIsSticky)
+![ToolTip During hover the ports with Stikcy Mode](images/FixedUserHandleIsSticky.png)
+
+## How to set tooltip for ports
+
+The Diagram component provides support for showing or hiding tooltips when the mouse hovers over any port. You can customize the tooltip for each port individually.
+
+To set a tooltip for a port, you need to configure the Tooltip property of the port. This property allows you to define the tooltip [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Content) and [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Position) it appropriately.
+
+By default, tooltips are not displayed. To display a tooltip, you must explicitly configure the tooltip settings for each port as shown in the following example:
+
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+<SfDiagramComponent Width="1000px" Height="500px" Nodes="@nodes"  />
+@code
+{
+    DiagramObjectCollection<Node> nodes;
+    
+    protected override void OnInitialized()
+    {
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
+        {
+            ID = "node1",
+            OffsetX = 250,
+            OffsetY = 250,
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() 
+            { 
+                Fill = "#6495ED", 
+                StrokeColor = "white" 
+            },
+            Ports = new DiagramObjectCollection<PointPort>()
+            {
+                new PointPort(){
+                    ID="Port1",
+                    Style = new ShapeStyle(){ Fill = "gray" },
+                    Offset = new DiagramPoint() { X = 1, Y = 0.5 },
+                    Visibility = PortVisibility.Visible,
+                    Tooltip = new DiagramTooltip(){ Content = "OutConnectPort"},
+                    Constraints = PortConstraints.Default | PortConstraints.Draw
+                } 
+            }
+        };
+        nodes.Add(node);
+        Node node2 = new Node()
+        {
+             ID = "node2",
+             OffsetX = 450,
+             OffsetY = 250,
+             Width = 100,
+             Height = 100,
+             Style = new ShapeStyle()
+             {
+                 Fill = "#6495ED",
+                 StrokeColor = "white"
+             },
+             Ports = new DiagramObjectCollection<PointPort>()
+             {
+                 new PointPort()
+                 {
+                    ID="Port2",
+                    Style = new ShapeStyle(){ Fill = "gray" },
+                    Offset = new DiagramPoint() { X = 0, Y = 0.5},
+                    Visibility = PortVisibility.Visible,
+                    Tooltip = new DiagramTooltip(){ Content = "InConnectPort"},
+                    Constraints = PortConstraints.Default | PortConstraints.Draw
+                 }
+             }
+        };
+        nodes.Add(node2);  
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ActionofPorts/TooltipForSpecificPort)
+
+![ToolTip During hover the port](../images/PortTooltip.gif )
+
+## How to set sticky tooltip for ports
+
+You can configure tooltips for ports to remain visible until the close icon is pressed. This feature is known as a "sticky" tooltip. When sticky mode is enabled, a close icon appears at the top right corner of the tooltip, allowing users to manually close it.
+
+To enable or disable this sticky mode, use the `IsSticky` property in the tooltip configuration. By default, the `IsSticky` property is set to `false`.
+
+N> The tooltip will have an open and close state whenever the mouse hovers over different diagram elements. Only one "sticky" tooltip can be visible in the diagram at a time.
+
+The following code example demonstrates how to set the `IsSticky` property to `true` for the ports:
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Popups
+@using Syncfusion.Blazor.Buttons
+<SfDiagramComponent @ref="@diagram" Width="1000px" Height="500px" Nodes="@nodes" />
+@code
+{
+    //Define diagram's nodes collection
+    DiagramObjectCollection<Node> nodes;
+    //Reference the diagram
+    SfDiagramComponent diagram;
+    protected override void OnInitialized()
+    {
+        //Intialize diagram's nodes collection
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
+            {
+                ID = "node1",
+                OffsetX = 100,
+                OffsetY = 100,
+                Width = 100,
+                Height = 100,
+                Style = new ShapeStyle()
+                {
+                    Fill = "#6495ED",
+                    StrokeColor = "white"
+                },
+                Tooltip = new DiagramTooltip() { Content = "NodeContent", IsSticky = true },
+                Constraints = NodeConstraints.Default | NodeConstraints.Tooltip,
+                Ports = new DiagramObjectCollection<PointPort>()
+                {
+                new PointPort(){
+                    ID="Port1",
+                    Style = new ShapeStyle(){ Fill = "gray" },
+                    Offset = new DiagramPoint() { X = 1, Y = 0.5 },
+                    Visibility = PortVisibility.Visible,
+                    Tooltip = new DiagramTooltip(){ Content = "PortContent" , IsSticky = true},
+                    Constraints = PortConstraints.Default | PortConstraints.Draw
+                }
+                },
+            };
+        nodes.Add(node);
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip/)
+
+![ToolTip During hover the ports with Stikcy Mode](../images/PortIsSticky.png)
+
 

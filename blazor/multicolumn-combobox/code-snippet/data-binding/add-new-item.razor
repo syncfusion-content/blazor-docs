@@ -1,0 +1,39 @@
+@using Syncfusion.Blazor.MultiColumnComboBox
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Buttons
+
+<div>
+    <SfMultiColumnComboBox @ref="multicolumnObj" TItem="Games" TValue="string" DataSource="LocalData" AllowFiltering=true ValueField="Game" TextField="Game" PopupWidth="600px" >
+</SfMultiColumnComboBox>
+</div>
+<div>
+    <SfButton Content="Click to add a new item" OnClick="OnBtnClick"></SfButton>
+</div>
+
+
+@code {
+    SfMultiColumnComboBox<string, Games> multicolumnObj;
+
+    public class Games
+    {
+        public string ID { get; set; }
+        public string Game { get; set; }
+        public string Category { get; set; } // New field
+    }
+    List<Games> LocalData = new List<Games> {
+    new Games() { ID= "Game1", Game= "American Football", Category= "Outdoor" },
+    new Games() { ID= "Game2", Game= "Badminton", Category= "Indoor" },
+    new Games() { ID= "Game3", Game= "Basketball", Category= "Outdoor" },
+    new Games() { ID= "Game4", Game= "Cricket", Category= "Outdoor" },
+    new Games() { ID= "Game5", Game= "Football", Category= "Outdoor" },
+    new Games() { ID= "Game6", Game= "Golf", Category= "Outdoor" },
+    new Games() { ID= "Game7", Game= "Hockey", Category= "Outdoor" },
+    new Games() { ID= "Game8", Game= "Rugby", Category= "Outdoor" },
+    new Games() { ID= "Game9", Game= "Snooker", Category= "Indoor" }
+};
+
+    public async Task OnBtnClick()
+    {
+        await this.multicolumnObj.AddItemsAsync(new List<Games> { new Games() { ID = "Game11", Game = "Tennis", Category ="Outdoor" } });
+    }
+}
