@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Styles and Appearances in Blazor Smart Paste Button Component | Syncfusion
+title: Customization in Blazor Smart Paste Button Component | Syncfusion
 description: Checkout and learn here all about Styles and Appearances in Syncfusion Blazor Smart Paste Button component and more.
 platform: Blazor
 control: Smart Paste Button
