@@ -75,8 +75,6 @@ The [OnValueSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Mult
 
 Bind the pre-selected value to the component using the [@bind-Index](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_Value) attribute. It binds the respective value present in the specified index position of the datasource.
 
-N> It will be dependent on the [SortOrder]() type. It will bind the value to the component with the sorted data if the corresponding property is defined.
-
 The following sample shows how to bind the index on the initial rendering.
 
 {% highlight cshtml %}
