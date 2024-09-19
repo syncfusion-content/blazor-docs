@@ -21,22 +21,21 @@ The following code demonstrates how to load the font collection to PDF Viewer.
 
 ```cshtml
 
-<SfPdfViewer2 @ref="pdfViewerRef" 
+<SfPdfViewer2 @ref="Viewer" 
               DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-              FallbackFontCollection="@fontCollection"
               Height="100%"
               Width="100%">
+    <PdfViewerEvents Created="@Created"></PdfViewerEvents>
 </SfPdfViewer2>
  
 
 @code {
-    SfPdfViewer2 pdfViewerRef;
-    Dictionary<string, Stream> fontCollection = new Dictionary<string, Stream>();
+    SfPdfViewer2 Viewer;
     
-    protected override void OnInitialized()
+    public void Created()
     {
-    Stream font = new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/seguiemj.ttf"));
-    fontCollection.Add("seguiemj", font);
+       Stream font = new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/seguiemj.ttf"));
+       Viewer.FallbackFontCollection.Add("seguiemj", font);
     }
 }
     
