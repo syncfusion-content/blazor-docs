@@ -14,7 +14,7 @@ This section briefly explains about how to include [Blazor Smart Paste Button](h
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-* [OpenAI](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key) or [Azure OpenAI Account](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource)
+* [OpenAI](https://github.com/syncfusion/smart-ai-samples/tree/master/blazor#openai) or [Azure OpenAI Account](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource)
 
 N> Blazor Smart Components are currently compatible with both OpenAI and Azure OpenAI configurations.
 
@@ -109,7 +109,7 @@ Here,
 
 For **Azure OpenAI**, first [deploy an Azure OpenAI Service resource and model](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource), then values for `apiKey`, `deploymentName` and `endpoint` will all be provided to you.
 
-If you are using **OpenAI** and [create an API key](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), leave the `endpoint` as `""`. The value for `deploymentName` is the [model](https://platform.openai.com/docs/models/) you wish to use (e.g., `gpt-3.5-turbo`, `gpt-4`, etc.).
+If you are using **OpenAI** and [create an API key](https://github.com/syncfusion/smart-ai-samples/tree/master/blazor#openai), leave the `endpoint` as `""`. The value for `deploymentName` is the [model](https://platform.openai.com/docs/models/) you wish to use (e.g., `gpt-3.5-turbo`, `gpt-4`, etc.).
 
 ## Add stylesheet and script resources
 
