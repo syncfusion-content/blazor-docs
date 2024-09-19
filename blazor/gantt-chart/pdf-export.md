@@ -9,7 +9,8 @@ documentation: ug
 
 # PDF Export in Blazor Gantt Chart Component
 
-PDF export allows exporting Gantt data to PDF document. You need to use the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ExportToPdfAsync) method for exporting. To enable PDF export in the Gantt, set the [AllowPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowPdfExport) to true.
+The PDF export feature enables exporting Gantt chart data to a PDF document. To perform the export, use the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ExportToPdfAsync) method. Ensure that PDF export is enabled in the Gantt chart component by setting the [AllowPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowPdfExport) property to true.
+
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -71,10 +72,10 @@ PDF export allows exporting Gantt data to PDF document. You need to use the [Exp
 
 ## Customize the PDF export
 
-The PDF export functionality in the Syncfusion Gantt Chart allows extensive customization through the `GanttPdfExportProperties` class. By configuring properties within this class, you can control the layout, format, and content that is included in the exported PDF. This ensures that the PDF accurately represents the Gantt chart's structure and provides flexibility for tailored exports.
+The PDF export functionality in the Syncfusion Gantt Chart provides extensive customization options through the [GanttPdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html) class. By configuring the properties within this class, you can control the layout, format, and content of the exported PDF. This customization ensures that the PDF accurately represents the Gantt chart's structure and allows for tailored exports.
 
 ### Customize file name for exported document
-The PDF export functionality in the Syncfusion Gantt Chart allows you to customize the file name of the exported document. By configuring the `FileName` property within the `GanttPdfExportProperties` class, you can assign a specific name to the generated PDF. This is especially useful for keeping your exported documents organized and easily identifiable.
+The PDF export functionality in the Syncfusion Gantt Chart allows you to customize the file name of the exported document. By configuring the `FileName` property within the [GanttPdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html) class, you can assign a specific name to the generated PDF. This is especially useful for keeping your exported documents organized and easily identifiable.
 
 In this example, the exported PDF will be saved as `ProjectSchedule.pdf`.
 
@@ -139,9 +140,9 @@ In this example, the exported PDF will be saved as `ProjectSchedule.pdf`.
 
 ### How to add a text in header/footer
 
-The PDF export functionality of the Gantt Chart allows you to add and style custom text in the Header or Footer of the exported PDF document. This customization can be achieved using the `Header` and `Footer` properties of the `GanttPdfExportProperties` class. By configuring these properties, you can include important information, such as titles, project names, or other relevant details, to enhance the exported document.
+The PDF export functionality of the Gantt Chart allows you to add and style custom text in the header or footer of the exported PDF document. This customization can be achieved using the [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_Header) and [Footer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_Footer) properties of the [GanttPdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html) class. By configuring these properties, you can include important information, such as titles, project names, or other relevant details, to enhance the exported document.
 
-The following sample code demonstrates how to add custom text and customize its styles in the Header and Footer section of the exported PDF document,
+The following sample code demonstrates how to add custom text and apply styling to the header and footer sections of the exported PDF document,
 
 ``` cshtml
 @using Syncfusion.Blazor.Gantt
@@ -225,7 +226,7 @@ The following sample code demonstrates how to add custom text and customize its 
 ```
 
 ### How to draw a line in header/footer
-You can add lines to the Header or Footer area of the exported PDF document using the `Header` and `Footer` properties in the `GanttPdfExportProperties` class.
+You can add lines to the Header or Footer area of the exported PDF document using the [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_Header) and [Footer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_Footer) properties in the [GanttPdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html) class.
 
 Supported line styles are,
 
@@ -320,9 +321,9 @@ The following sample code demonstrates adding line in the Header and Footer sect
 
 ### How to change the page orientation
 
-The PDF export functionality allows you to customize the page orientation of the exported document. By setting the `PageOrientation` property in the `GanttPdfExportProperties` class, you can switch between Portrait (default) and Landscape orientations based on your requirements.
+The PDF export functionality allows you to customize the page orientation of the exported document. By setting the [PageOrientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_PageOrientation) property in the [GanttPdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html) class, you can choose between [Portrait](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PageOrientation.html#Syncfusion_Blazor_Grids_PageOrientation_Portrait) (default) and [Landscape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PageOrientation.html#Syncfusion_Blazor_Grids_PageOrientation_Landscape) orientations based on your requirements.
 
-The following code snippet demonstrates how to set the page orientation to Landscape in the exported PDF document,
+The following code snippet demonstrates how to set the page orientation to Landscape for the exported PDF document,
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -385,7 +386,7 @@ The following code snippet demonstrates how to set the page orientation to Lands
 
 ### How to change the page size
 
-The PDF export functionality allows you to adjust the page size of the exported document to meet your specific needs. By setting the `PageSize` property in the `GanttPdfExportProperties` class, you can select from various standard page sizes. The default page size is Letter, but other options like A4, A3, and more are available.
+The PDF export functionality allows you to customize the page size of the exported document to suit your needs. By setting the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfPageSize.html) property in the [GanttPdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html) class, you can select from various standard page sizes. The default page size is Letter, but other options like A4, A3, and others.
 
 Supported page sizes are:
 * Letter
@@ -479,7 +480,7 @@ The following code demonstrates how to change the page size to A4 for the export
 
 ### Export current view records
 
-The PDF export functionality allows you to export records are in current view of the Gantt chart to the PDF document by setting the `IsCurrentViewExport` argument in the [PdfExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfExporting) event to true.
+The PDF export functionality allows you to export records are in current view of the Gantt chart to the PDF document by setting the [IsCurrentViewExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html#Syncfusion_Blazor_Gantt_PdfExportEventArgs_IsCurrentViewExport) argument in the [PdfExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfExporting) event to true, using the [PdfExportEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html#Syncfusion_Blazor_Gantt_PdfExportEventArgs) class.
 
 The following code demonstrates how to use the `PdfExporting` event to export current view data of the Gantt chart to a PDF document,
 
@@ -590,9 +591,9 @@ The following code demonstrates how to use the `PdfExporting` event to export cu
 ```
 ### How to export Gantt chart with custom timeline range
 
-The PDF export functionality allows you to export custom timeline range selection of the Gantt chart to the PDF document by setting the `RangeStart` argument for setting the start date of timeline range and `RangeEnd` arguments for setting the end date of timeline range in the [PdfExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfExporting) event.
+The PDF export functionality allows you to export a custom timeline range of the Gantt chart to the PDF document. To specify the range, set the [RangeStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html#Syncfusion_Blazor_Gantt_PdfExportEventArgs_RangeStart) and [RangeEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html#Syncfusion_Blazor_Gantt_PdfExportEventArgs_RangeEnd) arguments within the [PdfExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfExporting) event. The `RangeStart` argument defines the start date, and the `RangeEnd` argument defines the end date of the timeline range. Both arguments are part of the [PdfExportEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html#Syncfusion_Blazor_Gantt_PdfExportEventArgs) class used in the `PdfExporting` event.
 
-The following code demonstrates how to use the `RangeStart` and `RangeEnd`event arguments of `PdfExporting` event to export custom timeline range of the Gantt chart to a PDF document,
+The following code demonstrates how to use the `RangeStart` and `RangeEnd` arguments of the PdfExportEventArgs class within the PdfExporting event to export a custom timeline range of the Gantt chart to a PDF document,
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -701,7 +702,7 @@ The following code demonstrates how to use the `RangeStart` and `RangeEnd`event 
 
 ### Export hidden columns
 
-The PDF export functionality includes an option to export hidden columns from the Gantt chart. By setting the `IncludeHiddenColumn` property to true in the `GanttPdfExportProperties` class, you can ensure that even columns not visible in the Gantt chart will be included in the exported PDF document.
+The PDF export functionality allows you to include hidden columns from the Gantt chart in the exported PDF document. To achieve this, set the [IncludeHiddenColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_IncludeHiddenColumn) property to true within the [GanttPdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html) class. This ensures that columns not visible in the Gantt chart are included in the PDF export.
 
 The following code demonstrates how to export hidden columns in the Gantt chart to a PDF document,
 
@@ -775,9 +776,9 @@ The following code demonstrates how to export hidden columns in the Gantt chart 
 
 ### Customize column width in exported PDF document
 
-The PDF export functionality allows you to customize columns width in the exported PDF document. This can be achieved using the `Width` property in the `GanttColumn` class. By specifying columns and their respective widths, you can tailor the PDF export to meet your specific needs.
+The PDF export functionality allows you to customize the width of columns in the exported PDF document. This can be achieved using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Width) property in the [GanttColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html) class. By specifying the width for each column, you can tailor the appearance of the exported PDF to your requirements.
 
-The following code demonstrates how to customize the columns and set their widths in the exported PDF document,
+The following code snippet demonstrates how to customize column widths in the exported PDF document using the [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html#Syncfusion_Blazor_Gantt_GanttPdfExportProperties_Columns) property of the [GanttPdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html) class,
 
 ``` cshtml
 @using Syncfusion.Blazor.Gantt
@@ -858,9 +859,9 @@ The following code demonstrates how to customize the columns and set their width
 
 ### Through property
 
-The PDF export functionality allows you to export only specific columns from the Gantt chart, rather than exporting all columns by default. This can be achieved by setting the `Columns` property in the `GanttPdfExportProperties` class, enabling you to tailor the exported document to only include relevant data.
+The PDF export functionality enables you to export only specific columns from the Gantt chart, rather than exporting all columns by default. To achieve this, set the [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html#Syncfusion_Blazor_Gantt_GanttPdfExportProperties_Columns) property of the [GanttPdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html) class. This allows you to tailor the exported PDF to include only the columns that are relevant to your needs.
 
-The following code demonstrates how to export the Gantt chart to a PDF with specific columns,
+The following code snippet demonstrates how to configure the `Columns` property to export specific columns from the Gantt chart to a PDF document:
 
 ``` cshtml
 @using Syncfusion.Blazor.Gantt
@@ -941,7 +942,7 @@ The following code demonstrates how to export the Gantt chart to a PDF with spec
 
 ### Through event
 
-The PDF export functionality allows you to export only specific columns from the Gantt chart, rather than exporting all columns by default. This can be achieved by using the `Columns` argument in the [PdfExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfExporting) event.
+The PDF export functionality allows you to export only specific columns from the Gantt chart, rather than exporting all columns by default. This can be achieved by using the `Columns` argument in the [PdfExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfExporting) event, using the [PdfExportEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html#Syncfusion_Blazor_Gantt_PdfExportEventArgs) class.
 
 The following code demonstrates how to use the `PdfExporting` event to export specific columns of the Gantt chart to a PDF document,
 
@@ -1028,18 +1029,16 @@ The following code demonstrates how to use the `PdfExporting` event to export sp
 
 ### Through property
 
-The PDF export functionality allows you to customize taskbar appearance to a PDF document with customized colors using the `TaskbarColor` property in the `GanttPdfExportProperties` class. This property enables you to format various types of taskbars, including parent taskbars, child taskbars, milestones, critical paths, manual taskbars, and baselines.
+The PDF export functionality allows you to customize the appearance of taskbars in the exported PDF document using the [TaskbarColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfGanttStyle.html#Syncfusion_Blazor_Gantt_PdfGanttStyle_TaskbarColor) property in the [GanttPdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html) class. This property enables you to set colors for various types of taskbars, including:
 
-You can use the `TaskbarColor` property to set colors for the following taskbar types:
+* Parent Taskbars
+* Child Taskbars
+* Milestones
+* Critical Paths
+* Manual Taskbars
+* Baselines
 
-* Parent Taskbar Color
-* Child Taskbar Color
-* Milestone Color
-* Critical Path Color
-* Manual Taskbar Color
-* Baseline Color
-
-The following code demonstrates how to customize the colors of different taskbars in the exported PDF document
+By configuring the TaskbarColor property, you can format these taskbars to match your desired color scheme. The following code snippet demonstrates how to use the `TaskbarColor` property to customize the colors of different taskbars in the exported PDF document,
 
 ``` cshtml
 @using Syncfusion.Blazor.Gantt
@@ -1123,9 +1122,9 @@ The following code demonstrates how to customize the colors of different taskbar
 
 ### Through event 
 
-The PDF export functionality allows you to customize taskbar appearance to a PDF document using the [PdfQueryTaskbarInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfQueryTaskbarInfo) event. This event provides the flexibility to customize and format the appearance of taskbars, including parent taskbars, individual taskbars, and milestone templates.
+The PDF export functionality allows you to customize the appearance of taskbars in the exported PDF document using the [PdfQueryTaskbarInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfQueryTaskbarInfo) event. This event provides the flexibility to customize and format the appearance of taskbars, including parent taskbars, individual taskbars, and milestone templates.
 
-The following sample code demonstrates how to use the `PdfQueryTaskbarInfo` event to customize the appearance of taskbars in the exported PDF document,
+The following code snippet demonstrates how to use the `PdfQueryTaskbarInfo` event to customize the appearance of taskbars in the exported PDF document,
 
 ``` cshtml
 @using Syncfusion.Blazor.Gantt
@@ -1211,9 +1210,9 @@ The following sample code demonstrates how to use the `PdfQueryTaskbarInfo` even
 
 ## How to customize timeline cell in exported PDF
 
-The PDF export functionality allows for advanced customization of Gantt timeline cell, including the inclusion of images, background colors, and custom text. This can be achieved using the [PdfQueryTimelineCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfQueryTimelineCellInfo) event. By handling this event, you can define how specific timeline cells in the Gantt chart is rendered in the exported PDF.
+The PDF export functionality supports advanced customization of Gantt chart timeline cells, including the addition of images, background colors, and custom text. This customization can be achieved using the [PdfQueryTimelineCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfQueryTimelineCellInfo) event. Handling this event allows you to specify how individual timeline cells in the Gantt chart are rendered in the exported PDF document.
 
-The following sample code demonstrates how to use the `PdfQueryTimelineCellInfo` event to with custom text on the Gantt chart timeline cell,
+The following code snippet demonstrates how to use the `PdfQueryTimelineCellInfo` event to add custom text to the Gantt chart timeline cells in the exported PDF document:
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
