@@ -42,14 +42,6 @@ You can set the type of view by using the [AssistView](https://help.syncfusion.c
         args.Response = defaultResponse;
     }
 }
-<style>
-    .view-container {
-        height: inherit;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-</style>
 
 ```
 
@@ -66,7 +58,7 @@ You can use the [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 <div class="aiassist-container" style="height: 350px; width: 650px;">
     <SfAIAssistView PromptRequested="@PromptRequest">
         <AssistViews>
-            <AssistView></AssistView>
+            <AssistView Header="Prompt"></AssistView>
             <CustomView Header="Response">
                 <ViewTemplate>
                     <div class="view-container"><h5>Response view content</h5></div>
@@ -84,14 +76,6 @@ You can use the [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
         args.Response = defaultResponse;
     }
 }
-<style>
-    .view-container {
-        height: inherit;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-</style>
 
 ```
 
@@ -126,14 +110,6 @@ You can customize the view icons by using the [IconCss](https://help.syncfusion.
         args.Response = defaultResponse;
     }
 }
-<style>
-    .view-container {
-        height: inherit;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-</style>
 
 ```
 
