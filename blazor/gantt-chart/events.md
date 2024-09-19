@@ -3875,10 +3875,9 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
     }
 }
 ```
-
 ## PdfExporting
 
-The [PdfExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfExporting) event triggers before the Gantt chart is exported to a PDF document. To cancel the export, set the `Cancel` argument to true within the `PdfExporting` event, using the `PdfExportEventArgs` class. 
+The [PdfExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfExporting) event triggers before the Gantt chart is exported to a PDF document. To cancel the export, set the [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html#Syncfusion_Blazor_Gantt_PdfExportEventArgs_Cancel) argument to true within the `PdfExporting` event, which uses the [PdfExportEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html) class. 
 
 ``` cshtml
 @using Syncfusion.Blazor.Gantt
@@ -3952,7 +3951,7 @@ The [PdfExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt
 
 ## PdfExported
 
-The [PdfExported](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfExported) event triggers after the Gantt chart is exported to a PDF document. Using event arguments, you can get the details of the exported columns, the timeline range of the exported Gantt chart, and the file name of the exported PDF document.
+The [PdfExported](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfExported) event is triggered after the Gantt chart has been exported to a PDF document. Through the event arguments, you can access details about the exported columns, the timeline range of the Gantt chart, and the file name of the exported PDF document.
 
 ``` cshtml
 @using Syncfusion.Blazor.Gantt
