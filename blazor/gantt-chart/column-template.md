@@ -26,7 +26,7 @@ N> The column template feature is used to render the customized element value in
                 @{
                     @if (context != null)
                     {
-                        <SfButton Content="@((context as TaskData).TaskName)"></SfButton>
+                        <SfButton CssClass="e-bigger" Content="@((context as TaskData).TaskName)"></SfButton>
                     }
                 }
             </Template>
