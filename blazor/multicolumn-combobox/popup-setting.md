@@ -21,8 +21,6 @@ In the following sample, the `PopupWidth` is set as `600px`.
 
 {% endhighlight %}
 
-![Blazor MultiColumn ComboBox with customizing popup width](./images/popup-setting/blazor_MultiColumn_ComboBox_popup-width.png)
-
 ## Change the popup height
 
 Customize the height of the popup using the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_PopupHeight) property.
@@ -34,8 +32,6 @@ In the following sample, the `PopupHeight` is set as `500px`.
 {% include_relative code-snippet/popup-setting/popup-height.razor %}
 
 {% endhighlight %}
-
-![Blazor ComboBox with customizing popup height](./images/popup-setting/blazor_MultiColumnComboBox_popup-height.png)
 
 ## Change the popup z-index
 
@@ -53,8 +49,6 @@ You can achieve this by using [ShowPopupAsync()](https://help.syncfusion.com/cr/
 
 {% endhighlight %}
 
-![Blazor MultiColumn ComboBox with Show popup on initial loading](./images/popup-setting/blazor_MultiColumnComboBox_popup-initial-loading.png)
-
 ## Preventing opening and closing
 
 Prevent the popup open and close in the event argument like [PopupOpeningEventArgs.cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.PopupOpeningEventArgs.html#Syncfusion_Blazor_MultiColumnComboBox_PopupOpeningEventArgs_Cancel) and [PopupClosingEventArgs.cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.PopupClosingEventArgs.html#Syncfusion_Blazor_MultiColumnComboBox_PopupClosingEventArgs_Cancel) as `true`. It is achieved by the [PopupOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_PopupOpening) and [PopupClosing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_PopupClosing) events. 
@@ -64,8 +58,6 @@ Prevent the popup open and close in the event argument like [PopupOpeningEventAr
 {% include_relative code-snippet/popup-setting/preventing-opening-closing.razor %}
 
 {% endhighlight %}
-
-![Blazor MultiColumn ComboBox with Preventing opening and closing](./images/popup-setting/blazor_ComboBox_preventing-opening-closing.png)
 
 The following events are used to trigger when opening and closing popup.
 
@@ -132,5 +124,3 @@ You can achieve this by binding the `resize` event in window and update the heig
 
 {% endhighlight %}
 {% endtabs %}
-
-![Popup height based on available space in Blazor MultiColumn ComboBox](./images/popup-setting/blazor_combobox_popup_resize.gif)
