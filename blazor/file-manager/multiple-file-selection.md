@@ -101,6 +101,29 @@ For example, in the following example, selection is prevented for the **Music** 
 
 ```
 
+## Range Selection
+
+The File Manager supports for selecting files and folders in specific ranges through mouse drag as like File Explorer. This is particularly useful in scenarios where users need to select a large group of files quickly without manually clicking each one. 
+
+### Enabling Range Selection
+
+To enable range selection, you need to set the [EnableRangeSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_EnableRangeSelection) property to `true` and ensure that multi-selection is allowed using the [AllowMultiSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_AllowMultiSelection) property.
+
+````cshtml
+@using Syncfusion.Blazor.FileManager;
+<div class="control-section">
+    <div class="control_wrapper">
+        <SfFileManager @ref="File" TValue="FileManagerDirectoryContent" AllowMultiSelection="true" EnableRangeSelection="true">
+            <FileManagerAjaxSettings Url="https://amazons3.azurewebsites.net/api/AmazonS3Provider/AmazonS3Fileoperations"
+                                     UploadUrl="https://amazons3.azurewebsites.net/api/AmazonS3Provider/AmazonS3Upload"
+                                     DownloadUrl="https://amazons3.azurewebsites.net/api/AmazonS3Provider/AmazonS3Download"
+                                     GetImageUrl="https://amazons3.azurewebsites.net/api/AmazonS3Provider/AmazonS3GetImage">
+            </FileManagerAjaxSettings>
+        </SfFileManager>
+    </div>
+</div>
+````
+
 ## Events
 
 The Blazor FileManager component includes FileSelection and FileSelected events which are triggered during file selection and after a file has been selected, respectively. These events can be bound to the FileManager using the **FileManagerEvents**, which requires the **TValue** to be provided.
