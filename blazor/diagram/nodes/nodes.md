@@ -175,7 +175,7 @@ The following code explains how to add an node with annotation  at runtime by us
             },
         };
         NodeCollection.Add(NewNode);
-       await Diagram.AddDiagramElements(NodeCollection);
+       await diagram.AddDiagramElements(NodeCollection);
     }
 }
 ```

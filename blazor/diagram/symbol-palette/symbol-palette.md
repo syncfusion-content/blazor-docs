@@ -698,7 +698,7 @@ Also, you can add palette to the symbol palette at runtime by using the `Add` me
     {
         new Palette(){Symbols = newNodes,Title = "BasicShapes",ID = "BasicShapes" },
     };
-    SymbolPalette.Palettes.Add(NewPalette);
+    SymbolPalette.Palettes.Add(newPalettes);
 ```
 
 Palettes can be removed from the symbol palette at runtime by using the public method [RemovePalettes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_RemovePalettes_System_String_). The following code sample illustrates how to remove palette using the RemovePalettes method.
@@ -996,7 +996,6 @@ The [RefreshSymbols](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dia
         </div>
     </div>
 </div>
-<input type="button" value="RefreshSymbols" @onclick="RefreshSymbols" />
 <SfButton Content="RefreshSymbols" OnClick="@RefreshSymbols" />
 
 @code

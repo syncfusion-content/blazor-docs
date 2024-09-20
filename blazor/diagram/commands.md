@@ -678,7 +678,8 @@ The following code illustrates how to execute the clipboard commands.
         DiagramObjectCollection<NodeBase> nodeBase = new DiagramObjectCollection<NodeBase>();
         Node clonedNode = diagram.Nodes[0].Clone() as Node;
         nodeBase.Add(clonedNode);
-
+        clonedNode.OffsetX += 10;
+        clonedNode.OffsetY += 10;
         //pastes an object as a parameter.
         diagram.Paste(nodeBase);
     }
@@ -1139,7 +1140,7 @@ The [Undo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDia
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/NudgeCommand/NudgeCommand)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/UndoRedoCommands)
 
 
 ## How to bring the specific element into the viewport of the diagram
@@ -1501,7 +1502,7 @@ The following code illustrates how to execute the CanZoomIn command.
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/CanZoomIn)
 
-![CanZoomIn to bring the small diagram into view](images/CanZoomIn.webp)
+![CanZoomIn to bring the small diagram into view](images/CanZoomIn.png)
 
 ## Command manager
 
