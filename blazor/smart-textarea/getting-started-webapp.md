@@ -46,24 +46,36 @@ N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.o
 
 Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.SmartComponents` namespace .
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.SmartComponents
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor Web App.
 
-```cshtml
+{% tabs %}
+{% highlight C# tabtitle="Blazor Server App" hl_lines="3 10" %}
 
-....
+using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Web;
 using Syncfusion.Blazor;
-....
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
 builder.Services.AddSyncfusionBlazor();
+
+var app = builder.Build();
 ....
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Configure AI Service
 
@@ -122,10 +134,10 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Syncfusion Blazor Smart TextArea component
 
-Add the Syncfusion Blazor Smart TextArea component with form components in the **~Pages/.razor** file.
+Add the Syncfusion Blazor Smart TextArea component with form components in the **~Pages/Index.razor** file.
 
-```cshtml
-@using Syncfusion.Blazor.SmartComponents
+{% tabs %}
+{% highlight razor tabtitle="~/Index.razor" %}
 
 <SfSmartTextArea UserRole="@userRole" UserPhrases="@userPhrases" Placeholder="Enter your queries here" @bind-Value="prompt" Width="75%" RowCount="5">
 </SfSmartTextArea>
@@ -142,7 +154,8 @@ Add the Syncfusion Blazor Smart TextArea component with form components in the *
         "Bug report: File not found error occurred in NEED_INFO"
     ];
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 Here,
 
