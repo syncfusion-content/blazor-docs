@@ -78,9 +78,10 @@ Based on the diagramming element position, the size of the page dynamically incr
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="nodes">
+    <SnapSettings Constraints="SnapConstraints.None"></SnapSettings>
     @*Initialize the page settings with multiple page, page orientation and break lines*@
-    <PageSettings Height="300"
-                  Width="300"
+    <PageSettings Height="200"
+                  Width="200"
                   MultiplePage="true"
                   Orientation="@orientation"
                   ShowPageBreaks="true">
@@ -99,8 +100,8 @@ Based on the diagramming element position, the size of the page dynamically incr
             ID = "node6",
             Width = 50,
             Height = 50,
-            OffsetX = 150,
-            OffsetY = 100,
+            OffsetX = 200,
+            OffsetY = 200,
             Style = new ShapeStyle()
             {
                 Fill = "#6495ED",
@@ -129,9 +130,10 @@ The appearance of the pages can be customized using the following properties of 
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="nodes">
+    <SnapSettings Constraints="SnapConstraints.None"></SnapSettings>
     @*Initialize the page settings with page orientation and break lines*@
-    <PageSettings Height="300"
-                  Width="300"
+    <PageSettings Height="200"
+                  Width="200"
                   Orientation="@orientation"
                   MultiplePage="true"
                   ShowPageBreaks="true">
@@ -151,8 +153,8 @@ The appearance of the pages can be customized using the following properties of 
             ID = "node6",
             Width = 50,
             Height = 50,
-            OffsetX = 150,
-            OffsetY = 100,
+            OffsetX = 200,
+            OffsetY = 200,
             Style = new ShapeStyle()
             {
                 Fill = "#6495ED",
