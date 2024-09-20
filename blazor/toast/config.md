@@ -381,6 +381,7 @@ app.Run();
                 this.IsToastVisible = true;
                 this.StateHasChanged();
                 Toast.ShowAsync(new ToastModel() { Title = options.Title, Content = options.Content });
+                
             });
         };
         base.OnInitialized();
