@@ -59,7 +59,7 @@ The following ARIA attributes are used in Blazor Gantt:
 
 ## Keyboard navigation
 
-The Blazor Gantt component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Gantt component.
+The Gantt component follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/) guideline, ensuring accessibility for users of assistive technologies (AT) and those who rely solely on keyboard navigation. The following keyboard shortcuts are supported by the Gantt component:
 
 <b>Focus Elements</b>
 
@@ -69,7 +69,7 @@ The Blazor Gantt component followed the [keyboard interaction](https://www.w3.or
 <kbd>Home</kbd> | <kbd>Fn + Left Arrow</kbd> | Moves the focus to the first cell of the focused row.
 <kbd>End</kbd> | <kbd>Fn + Right Arrow</kbd> | Moves the focus to the last cell of the focused row.
 <kbd>Ctrl + Home</kbd> | <kbd>Command + Fn + Left Arrow</kbd> | Moves the focus to the first Cell of the first row in the gantt chart.
-<kbd>Ctrl + End</kbd> | <kbd>Command +  Fn + Right Arrow</kbd> | Moves the focus to the last Cell of the last row in the gantt chart.
+<kbd>Ctrl + End</kbd> | <kbd>Command + Fn + Right Arrow</kbd> | Moves the focus to the last Cell of the last row in the gantt chart.
 <kbd>Up Arrow</kbd> | <kbd>Up Arrow</kbd> | Moves the cell focus upward from the focused cell.
 <kbd>Down Arrow</kbd> | <kbd>Down Arrow</kbd> |  Moves the cell focus downward from the focused cell.
 <kbd>Right Arrow</kbd> | <kbd>Right Arrow</kbd> | Moves the cell focus right side from the focused cell.
@@ -165,6 +165,7 @@ The Blazor Gantt component followed the [keyboard interaction](https://www.w3.or
 <kbd>Left</kbd> | <kbd>Left</kbd> | Focuses the previous element.
 <kbd>Right</kbd> | <kbd>Right</kbd> | Focuses the next element.
 <kbd>Enter</kbd> | <kbd>Enter</kbd> | Performs the focused toolbar element action.
+
 <b>Tooltip</b>
 
 **Windows**  | **MAC** | **To do this**

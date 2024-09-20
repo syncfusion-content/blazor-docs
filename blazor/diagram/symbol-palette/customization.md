@@ -748,7 +748,7 @@ Palette interaction notifies the element enter, leave, and dragging of the symbo
 - [Dragging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Dragging) event is triggered when an element drags over another diagram element.
 - [DragLeave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DragLeave) event is triggered when an element drags over another diagram element.
 
-For more information about event, refer to the [Events](../events.md).
+For more information about event, refer to the [Events](../events).
 
 ## Escape key function
 

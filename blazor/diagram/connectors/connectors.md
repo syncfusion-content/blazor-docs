@@ -183,7 +183,7 @@ The following code explains how to add an connector with annotation  at runtime 
         connectors.Add(Connector);
     }
 
-    public void AddConnector()
+    public async void AddConnector()
     {
         Connector NewConnector = new Connector()
         { 
