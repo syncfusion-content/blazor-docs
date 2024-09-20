@@ -112,6 +112,10 @@ Gantt_TimelineCell | Zeitleistenzelle
 Gantt_ConfirmPredecessorDelete | Möchten Sie den Abhängigkeitslink wirklich entfernen?
 Gantt_Indent | Einrücken
 Gantt_Outdent | Ausrücken
+Gantt_SS | SS
+Gantt_SF | SB
+Gantt_FS | BS
+Gantt_FF | BB
 
 ### Blazor server-side
 
