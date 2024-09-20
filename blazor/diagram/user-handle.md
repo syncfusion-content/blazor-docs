@@ -199,7 +199,7 @@ The [VisibleTarget](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diag
 
 | VisibleTarget | Node | Connector | Description |
 | -------- | -------- | -------- |-------- |
-|Node|![VisibleTarget set as Node](Images/blazor-diagram-user-handle-visible-target-node.png)|![VisibleTarget set as Node](Images/blazor-diagram-user-handle-visible-target-node1.png)|When the visibletarget is set as the node, the userhandle only renders for nodes, not for connectors. |
+|Node|![VisibleTarget set as Node](Images/blazor-diagram-user-handle-visible-target-node.png)|![VisibleTarget set as Node](Images/blazor-diagram-user-handle-visible-target-node1.png)|When the VisibleTarget is set as the node, the userhandle only renders for nodes, not for connectors. |
 |Connector|![VisibleTarget set as connector](Images/blazor-diagram-user-handle-visible-target-connector1.png)|![VisibleTarget set as connector](Images/blazor-diagram-user-handle-visible-target-connector.png)|When VisibleTarget is set as the connector, the userhandle only renders for the connector, not for nodes. |
 |Both|![VisibleTarget set as Both](Images/blazor-diagram-user-handle-visible-target-node.png)|![VisibleTarget set as Both](Images/blazor-diagram-user-handle-visible-target-connector.png)|When the VisibleTarget is set as both, then the userhandle renders for both nodes and connectors |
 
@@ -439,7 +439,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### How to provide a template to userhandle
 
-You can define user handle style using a template in the [UserHandleTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTemplates.html#Syncfusion_Blazor_Diagram_DiagramTemplates_UserHandleTemplate) at the tag level. The template will be rendered when the PathData and ImageUrl properties of the userhandle are not defined. However, if either PathData or ImageUrl is defined, then template will not be rendered as they take precedence. The following code explains how to define a template for the fixeduserhandle.
+You can define user handle style using a template in the [UserHandleTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTemplates.html#Syncfusion_Blazor_Diagram_DiagramTemplates_UserHandleTemplate) at the tag level. The template will be rendered when the PathData and ImageUrl properties of the userhandle are not defined. However, if either PathData or ImageUrl is defined, then template will not be rendered as they take precedence. The following code explains how to define a template for the [FixedUserHandle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -856,8 +856,8 @@ You can define fixed user handle style using a template in the [FixedUserHandleT
             TargetPoint = new DiagramPoint() { X = 800, Y = 400 },
             FixedUserHandles = new DiagramObjectCollection<ConnectorFixedUserHandle>() { new ConnectorFixedUserHandle() { 
                 ID="user2",
-                Offset = 0.5, 
-                Alignment = FixedUserHandleAlignment.Center, 
+                Offset = 1, 
+                Alignment = FixedUserHandleAlignment.After, 
                 Displacement = new DiagramPoint() { X = 10}, 
                 Padding = new DiagramThickness() { Bottom = 1, Left = 1, Right = 1, Top = 1 }, 
                 Width = 30, 

@@ -518,9 +518,11 @@ The [ObstaclePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
     {
         nodes = new DiagramObjectCollection<Node>()
         {
-            new Node() { ID = "node1", OffsetX = 100, OffsetY = 300, Width = 100, Height =100 },
-            new Node() { ID = "node2", OffsetX = 600, OffsetY = 100, Width = 100, Height = 100 },
-            new Node() { ID = "node3", OffsetX = 400, OffsetY = 250, Width = 100, Height = 100 }
+             new Node() { ID = "node1", OffsetX = 100, OffsetY = 300, Width = 100, Height =100, Annotations= new DiagramObjectCollection<ShapeAnnotation>(){ new ShapeAnnotation() { Content="Source" } } },
+             new Node() { ID = "node2", OffsetX = 430, OffsetY = 130, Width = 100, Height = 100, Annotations= new DiagramObjectCollection<ShapeAnnotation>(){ new ShapeAnnotation() { Content="Target" } } },
+             new Node() { ID = "node3", OffsetX = 430, OffsetY = 250, Width = 100, Height = 100, Annotations= new DiagramObjectCollection<ShapeAnnotation>(){ new ShapeAnnotation() { Content="Obstacle 1" } } },
+             new Node() { ID = "node4", OffsetX = 150, OffsetY = 90, Width = 100, Height = 100, Annotations= new DiagramObjectCollection<ShapeAnnotation>(){ new ShapeAnnotation() { Content="Obstacle 2" } } }
+      
         };
         connectors = new DiagramObjectCollection<Connector>(){
             new Connector()
