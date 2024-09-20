@@ -86,9 +86,7 @@ In the following example, the `Code.ID` column and `Country.CountryID` column fr
 
 {% include_relative code-snippet/data-binding/complex-data-type.razor %}
 
-{% endhighlight %}
-
-![Blazor ComboBox with Complex data type](./images/data-binding/blazor_combobox_complex-data-type.png) -->
+{% endhighlight %} -->
 
 ### Expando object binding
 
@@ -110,9 +108,7 @@ Bind the [ObservableCollection](https://blazor.syncfusion.com/documentation/comm
 
 {% include_relative code-snippet/data-binding/observable-collection-binding.razor %}
 
-{% endhighlight %}
-
-![Blazor ComboBox with Observable collection binding](./images/data-binding/blazor_combobox_observable-collection-binding.png) -->
+{% endhighlight %} -->
 
 ### Dynamic object binding
 
@@ -135,8 +131,6 @@ Bind the [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuet
 {% include_relative code-snippet/data-binding/value-tuple-data-binding.razor %}
 
 {% endhighlight %}
-
-![Blazor ComboBox with ValueTuple data binding](./images/data-binding/blazor_combobox_value-tuple-data-binding.png)
 
 ## Binding remote data 
 
@@ -380,6 +374,4 @@ Add the new item in the popup with the help of [AddItemsAsync]() public method. 
 
 {% include_relative code-snippet/data-binding/add-new-item.razor %}
 
-{% endhighlight %}
-
-![Blazor ComboBox with adding new Item](./images/data-binding/blazor_combobox_add-new-item.gif) -->
+{% endhighlight %} -->
