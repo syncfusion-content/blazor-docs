@@ -55,7 +55,7 @@ In the following example, `EndsWith` filter type has been mapped to the `FilterT
 
 ![Blazor MultiColumn ComboBox with Filter Type](./images/filtering/blazor_combobox_filter-type.png)
 
-## Minimum filter length
+<!-- ## Minimum filter length
 
 When filtering list items, you can specify a character count limit to trigger a remote request and retrieve filtered data for the DropDownList. This can be achieved through manual validation using the [Filtering event arguments](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.FilteringEventArgs.html) within the [Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_Filtering) event handler.
 
@@ -65,9 +65,7 @@ In the following example, the remote request does not fetch the search data unti
 
 {% include_relative code-snippet/filtering/minimum-filter-length.razor %}
 
-{% endhighlight %}
-
-![Blazor MultiColumn ComboBox with Minimum filter length](./images/filtering/blazor_combobox_minimum-filter-length.gif)
+{% endhighlight %} -->
 
 <!-- ## Multi column filtering
 
@@ -79,7 +77,6 @@ To enable multi-column support in the built-in Syncfusion Blazor theme files, si
 
 {% endhighlight %}
 
-![Blazor ComboBox with Multi Column filtering](./images/filtering/blazor_combobox_multi-column.png)
 
 You can achieve multiple column(field) filtering by passing the List of [predicates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_predicates) to the [And](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_And_Syncfusion_Blazor_Data_WhereFilter_) or [Or](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_Or_Syncfusion_Blazor_Data_WhereFilter_) methods of [WhereFilters](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter__ctor).
 
@@ -88,8 +85,6 @@ You can achieve multiple column(field) filtering by passing the List of [predica
 {% include_relative code-snippet/filtering/multi-column-filtering.razor %}
 
 {% endhighlight %}
-
-![Blazor MultiColumn ComboBox with Multi Column filtering](./images/filtering/blazor_combobox_multi-colum-filtering.gif) -->
 
 <!-- ## Case sensitive filtering
 
