@@ -51,7 +51,7 @@ N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.o
 * Register the Syncfusion Blazor Service in the **~/Program.cs** file.
 
 {% tabs %}
-{% highlight c# tabtitle="~/Program.cs" hl_lines="3 9 12" %}
+{% highlight c# tabtitle="~/Program.cs" hl_lines="3 10 12" %}
 
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;

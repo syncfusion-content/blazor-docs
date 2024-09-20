@@ -146,7 +146,7 @@ app.Run();
 
 {% endhighlight %}
 
-{% highlight c# tabtitle=".NET 8 (~/Program.cs) Auto" hl_lines="3 9 11" %}
+{% highlight c# tabtitle=".NET 8 (~/Program.cs) Auto" hl_lines="3 9 11 13" %}
 
 using BlazorWebAppAuto.Client.Pages;
 using BlazorWebAppAuto.Components;
@@ -155,6 +155,8 @@ using Syncfusion.Blazor;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
 .AddInteractiveServerComponents() .AddInteractiveWebAssemblyComponents();
+
+builder.Services.AddSignalR(o => { o.MaximumReceiveMessageSize = 102400000; });
 
 builder.Services.AddMemoryCache();
 //Add Syncfusion Blazor service to the container

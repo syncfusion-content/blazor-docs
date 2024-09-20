@@ -182,7 +182,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
                 OffsetY = 100,
                 Width = 100,
                 Height = 100,
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
+                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
             });
         Nodes.Add(new Node()
             {
@@ -204,14 +204,14 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
             {
                 ID = "group",
                 Children = new string[] { "node2", "node3" },
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
+                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
             });
         Connectors.Add(new Connector()
             {
                 SourceID = "node1",
                 TargetID = "group",
                 Style = new ShapeStyle() { StrokeColor = "#6495ED" },
-                TargetDecorator = new DecoratorSettings() { Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" } }
+                TargetDecorator = new DecoratorSettings() { Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" } }
             });
     }
     private void Clear()
@@ -899,41 +899,51 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
      DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
 
-    protected override void OnInitialized()
-     {
-       Node node = new Node()
-       {
-            ID = "node1",
-            Width = 50,
-            Height = 50,
-            OffsetX = 900,
-            OffsetY = 100,
-            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
-        };
-           Connector Connector = new Connector()
-        {
-            ID = "connector1",
-            SourceID = "node1",
-            TargetDecorator = new DecoratorSettings()
+        protected override void OnInitialized()
+    {
+        Node node = new Node()
             {
+                ID = "node1",
+                Width = 50,
+                Height = 50,
+                OffsetX = 350,
+                OffsetY = 100,
+                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
+            };
+        Node node2 = new Node()
+            {
+                ID = "node2",
+                Width = 50,
+                Height = 50,
+                OffsetX = 450,
+                OffsetY = 100,
+                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
+            };
+        Connector Connector = new Connector()
+            {
+                ID = "connector1",
+                SourceID = "node1",
+                TargetDecorator = new DecoratorSettings()
+                {
+                    Style = new ShapeStyle()
+                    {
+                        Fill = "#6495ED",
+                        StrokeColor = "#6495ED",
+                    }
+                },
+                TargetID = "node2",
                 Style = new ShapeStyle()
-               {
-                   Fill = "#6495ED",
+                {
+                    Fill = "#6495ED",
                     StrokeColor = "#6495ED",
-                }
-            },
-            TargetID = "node2",
-            Style = new ShapeStyle()
-            {
-                Fill = "#6495ED",
-                StrokeColor = "#6495ED",
-            },
-            Type = ConnectorSegmentType.Straight,
-        };
+                },
+                Type = ConnectorSegmentType.Straight,
+            };
         connectors.Add(Connector);
         nodes.Add(node);
+        nodes.Add(node2);
 
-     }
+    }
   
     public string cursor(DiagramElementAction action, bool active, string handle)
      {
@@ -1639,7 +1649,7 @@ The following code illustrates how to set background color for node.
     }
     private void GetParent()
     {
-     diagram.Nodes[0].GetParent();
+        IDiagramObject parent = diagram.Nodes[0].GetParent();
     }
 }
 ```

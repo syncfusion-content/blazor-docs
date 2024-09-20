@@ -169,7 +169,7 @@ N> You can set `Min` and `Max` values for number values.
 @using Syncfusion.Blazor.QueryBuilder
 
 <SfQueryBuilder TValue="EmployeeDetails" AllowValidation="true">
-    <QueryBuilderColumnValidation Max="0" Min="100"></QueryBuilderColumnValidation>
+    <QueryBuilderColumnValidation Max="100" Min="0"></QueryBuilderColumnValidation>
     <QueryBuilderColumns>
         <QueryBuilderColumn Field="EmployeeID" Label="Employee ID" Type="ColumnType.Number"></QueryBuilderColumn>
         <QueryBuilderColumn Field="FirstName" Label="First Name" Type="ColumnType.String"></QueryBuilderColumn>
