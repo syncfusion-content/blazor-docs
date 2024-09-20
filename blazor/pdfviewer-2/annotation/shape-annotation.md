@@ -236,7 +236,7 @@ This code will add a shape annotation to the first page of the PDF document.
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Programmatic%20Support/Shapes/Add).
 
 
-# Add and Delete multiple annotations at once in a PDF Viewer
+## Add and Delete multiple annotations at once in a PDF Viewer
 
 The PDF Viewer provides support to add and delete multiple annotations at once. we can programmatically create a collection of annotations, such as lines or shapes, and apply them to the document in one go using [AddAnnotationsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationsAsync_System_Collections_Generic_List_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation__). Similarly, the viewer allows you to retrieve and remove all annotations from the document efficiently using [DeleteAnnotationsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DeleteAnnotationsAsync_System_Collections_Generic_List_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation__). This capability is particularly useful for bulk annotation management within a Blazor application.
 
