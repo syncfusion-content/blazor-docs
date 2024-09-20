@@ -16,7 +16,7 @@ This section briefly explains about how to include [Blazor Smart Paste Button](h
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 * [OpenAI](https://github.com/syncfusion/smart-ai-samples/tree/master/blazor#openai) or [Azure OpenAI Account](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource)
 
-N> As of now, Syncfusion Blazor Smart Components are currently compatible with both OpenAI and Azure OpenAI configurations.
+N> As of now, Syncfusion Blazor Smart Components are currently compatible with both `OpenAI` and `Azure OpenAI` configurations.
 
 ## Create a new Blazor Web App
 
@@ -45,24 +45,36 @@ N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.o
 
 Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.SmartComponents` namespace .
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.SmartComponents
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor Web App.
 
-```cshtml
+{% tabs %}
+{% highlight C# tabtitle="Blazor Server App" hl_lines="3 10" %}
 
-....
+using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Web;
 using Syncfusion.Blazor;
-....
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
 builder.Services.AddSyncfusionBlazor();
+
+var app = builder.Build();
 ....
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Configure AI Service
 
@@ -121,23 +133,11 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Syncfusion Blazor Smart Paste Button component
 
-Add the Syncfusion Blazor Smart Paste Button component with form components in the **~Pages/.razor** file. In this example, the [Syncfusion Blazor DataForm](https://blazor.syncfusion.com/documentation/data-form/getting-started-with-web-app) component is used to manage form input fields. To get started, ensure you have the [Syncfusion.Blazor.DataForm](https://www.nuget.org/packages/Syncfusion.Blazor.DataForm) package installed.
-
-If an interactivity location as `Per page/component` in the web app, define a render mode at the top of the `~Pages/.razor` component, as follows:
-
-{% tabs %}
-{% highlight razor %}
-
-@* desired render mode define here *@
-@rendermode InteractiveServer
-
-{% endhighlight %}
-{% endtabs %}
+Add the Syncfusion Blazor Smart Paste Button component with form components in the **~Pages/Index.razor** file. In this example, the [Syncfusion Blazor DataForm](https://blazor.syncfusion.com/documentation/data-form/getting-started-with-web-app) component is used to manage form input fields. To get started, ensure you have the [Syncfusion.Blazor.DataForm](https://www.nuget.org/packages/Syncfusion.Blazor.DataForm) package installed.
 
 {% tabs %}
 {% highlight razor tabtitle="~/Index.razor" %}
 
-```cshtml
 @using Syncfusion.Blazor.DataForm
 @using System.ComponentModel.DataAnnotations
 @using Syncfusion.Blazor.SmartComponents
@@ -187,7 +187,9 @@ If an interactivity location as `Per page/component` in the web app, define a re
         public string Address { get; set; }
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Smart Paste Button component in your default web browser.
 
