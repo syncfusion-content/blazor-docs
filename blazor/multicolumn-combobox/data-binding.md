@@ -368,7 +368,7 @@ Now, configure the MultiColumn ComboBox using the [SfDataManager](https://blazor
 
 {% highlight cshtml %}
 
-{% include_relative code-snippet/data-binding/-comboboxwith-web-api-adaptor.razor %}
+{% include_relative code-snippet/data-binding/combobox-with-web-api-adaptor.razor %}
 
 {% endhighlight %}
 
