@@ -55,7 +55,7 @@ In the following example, `EndsWith` filter type has been mapped to the `FilterT
 
 ![Blazor MultiColumn ComboBox with Filter Type](./images/filtering/blazor_combobox_filter-type.png)
 
-## Minimum filter length
+<!-- ## Minimum filter length
 
 When filtering list items, you can specify a character count limit to trigger a remote request and retrieve filtered data for the DropDownList. This can be achieved through manual validation using the [Filtering event arguments](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.FilteringEventArgs.html) within the [Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_Filtering) event handler.
 
@@ -65,9 +65,7 @@ In the following example, the remote request does not fetch the search data unti
 
 {% include_relative code-snippet/filtering/minimum-filter-length.razor %}
 
-{% endhighlight %}
-
-![Blazor MultiColumn ComboBox with Minimum filter length](./images/filtering/blazor_combobox_minimum-filter-length.gif)
+{% endhighlight %} -->
 
 <!-- ## Multi column filtering
 
