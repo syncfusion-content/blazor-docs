@@ -49,6 +49,7 @@ Error bars are graphical representations of the variability of data that are use
 }
 
 ``` 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjrJXvLtoGKlZQco?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
 ![Blazor Line Chart with Error Bar](../images/othertypes/blazor-error-bar-chart.png)
 
@@ -92,6 +93,7 @@ To change the error bar rendering type, set [Type](https://help.syncfusion.com/c
 }
 
 ``` 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVptlLDSQfSIQbX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
 ## Customizing error bar type
 
@@ -134,8 +136,7 @@ To customize the error bar type, specify the [Type](https://help.syncfusion.com/
 }
 
 ``` 
-
-![Blazor Line Chart with Custom Error Bar](../images/chart-types-images/blazor-line-chart-custom-error-bar.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVpjbVteQTEHUBm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
 ## Error bar mode
 
@@ -177,6 +178,7 @@ Error bar mode is used to define whether the error bar line should be drawn hori
 }
 
 ``` 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrJXlrZemozoWbI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
 ## Error bar direction
 
@@ -218,6 +220,7 @@ To change the error bar direction to plus, minus, or both sides, use [Direction]
 }
 
 ``` 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVfjbBNSQIYbupQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
 ## Customizing error bar cap
 
@@ -260,10 +263,110 @@ To customize the error bar cap [Length](https://help.syncfusion.com/cr/blazor/Sy
 }
 
 ``` 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZVJXbVDIGdTeIOM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
-![Blazor Line Chart with Custom Error Bar Cap](../images/othertypes/blazor-line-chart-custom-error-bar-cap.png)
+## Events
 
-N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+### Series render
+
+The [`OnSeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnSeriesRender) event allows you to customize series properties, such as [Data](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesRenderEventArgs.html#Syncfusion_Blazor_Charts_SeriesRenderEventArgs_Data), [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesRenderEventArgs.html#Syncfusion_Blazor_Charts_SeriesRenderEventArgs_Fill), and [Series](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SeriesRenderEventArgs.html#Syncfusion_Blazor_Charts_SeriesRenderEventArgs_Series), before they are rendered on the chart.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartEvents OnSeriesRender="SeriesRender"></ChartEvents>
+
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+    </ChartPrimaryXAxis>
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@SalesReports" XName="X" YName="Y" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Line">
+            <ChartErrorBarSettings Visible="true">
+            </ChartErrorBarSettings>
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code {
+    public class ChartData
+    {
+        public double X { get; set; }
+        public double Y { get; set; }
+    }
+
+    public void SeriesRender(SeriesRenderEventArgs args)
+    {
+        args.Fill = "#FF4081";
+    }
+
+    public List<ChartData> SalesReports = new List<ChartData>
+    {
+        new ChartData{ X= 2005, Y= 28 },
+        new ChartData{ X= 2006, Y= 25 },
+        new ChartData{ X= 2007, Y= 26 },
+        new ChartData{ X= 2008, Y= 27 },
+        new ChartData{ X= 2009, Y= 32 },
+        new ChartData{ X= 2010, Y= 35 },
+        new ChartData{ X= 2011, Y= 30 }
+    };
+}
+
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htBJjPrtyQcdqASQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
+
+### Point render
+
+The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnPointRender) event allows you to customize each data point before it is rendered on the chart.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartEvents OnPointRender="PointRender"></ChartEvents>
+
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+    </ChartPrimaryXAxis>
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@SalesReports" XName="X" YName="Y" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Line">
+            <ChartErrorBarSettings Visible="true">
+            </ChartErrorBarSettings>
+            <ChartMarker Visible="true" Height="10" Width="10"></ChartMarker>
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code {
+    public class ChartData
+    {
+        public double X { get; set; }
+        public double Y { get; set; }
+    }
+
+    public void PointRender(PointRenderEventArgs args)
+    {
+        args.Fill = args.Point.X.ToString() == "2008" ? "#E91E63" : "#3F51B5";
+    }
+
+    public List<ChartData> SalesReports = new List<ChartData>
+    {
+        new ChartData{ X= 2005, Y= 28 },
+        new ChartData{ X= 2006, Y= 25 },
+        new ChartData{ X= 2007, Y= 26 },
+        new ChartData{ X= 2008, Y= 27 },
+        new ChartData{ X= 2009, Y= 32 },
+        new ChartData{ X= 2010, Y= 35 },
+        new ChartData{ X= 2011, Y= 30 }
+    };
+}
+
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVzXbhXScaLsKPU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
+
+N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See also
 
