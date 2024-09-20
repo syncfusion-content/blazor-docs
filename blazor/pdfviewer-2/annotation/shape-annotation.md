@@ -321,7 +321,7 @@ The following code demonstrates how to delete multiple annotations at once in PD
 
 ```
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Add%20and%20Delete%20Annotations).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Add%20and%20Delete%20Annotations%20as%20collection).
 
 
 ## Edit shape annotation Programmatically
