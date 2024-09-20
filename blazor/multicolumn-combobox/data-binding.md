@@ -23,6 +23,8 @@ The MultiColumn ComboBox loads the data from local data sources through the [Dat
 
 {% endhighlight %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLftusaTrQvPHgm?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+
 ![Blazor ComboBox with local data binding](./images/data-binding/blazor_combobox_local-binding.png)
 
 ## Index value binding
@@ -65,6 +67,8 @@ Index value binding can be accomplished with the `bind-Index` attribute, which s
 }
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBTtYiOqwKUHZCY?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+
 <!-- ### DataBound event
 
 The [DataBound]() event triggers when the data source is populated in the popup list.
@@ -100,7 +104,7 @@ Bind the [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dyn
 
 {% endhighlight %}
 
-![Blazor ComboBox with Expando object binding](./images/data-binding/blazor_combobox_expando-object-binding.png)
+![Blazor ComboBox with Expando object binding](./images/data-binding/blazor_combobox_expando-object-binding.gif)
 
 <!-- ### Observable collection binding
 
@@ -124,7 +128,7 @@ Bind the [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dyn
 
 {% endhighlight %}
 
-![Blazor ComboBox with Dynamic object binding](./images/data-binding/blazor_combobox_dynamic-data-binding.png)
+![Blazor ComboBox with Dynamic object binding](./images/data-binding/blazor_combobox_dynamic-data-binding.gif)
 
 ### ValueTuple data binding
 
@@ -135,6 +139,8 @@ Bind the [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuet
 {% include_relative code-snippet/data-binding/value-tuple-data-binding.razor %}
 
 {% endhighlight %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBJXOWYqcwRBUbm?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 ![Blazor ComboBox with ValueTuple data binding](./images/data-binding/blazor_combobox_value-tuple-data-binding.png)
 
@@ -158,6 +164,8 @@ The [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Mult
 
 {% endhighlight %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhTXOBtLtGPxmzl?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+
 <!-- ### OnActionComplete event
 
 The [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_OnActionComplete) event triggers after data is fetched successfully from the remote server.
@@ -178,6 +186,8 @@ The [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Mu
 
 {% endhighlight %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhpjYWagPigEDli?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+
 ### OData v4 services
 
 The [OData v4 Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor) provides the ability to consume and manipulate data from OData v4 services. The following sample displays the first six customer details from `Customers` table of the `Northwind` Data Service.
@@ -187,6 +197,8 @@ The [OData v4 Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors
 {% include_relative code-snippet/data-binding/odata-v4-services.razor %}
 
 {% endhighlight %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjrfXYsuKbAMJeTB?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 ![Blazor ComboBox with OData v4 Adaptor](./images/data-binding/blazor_combobox_odata-v4-services.png)
 
@@ -199,6 +211,8 @@ The [Web API Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#
 {% include_relative code-snippet/data-binding/web-api-adaptor.razor %}
 
 {% endhighlight %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXrTXaVNLsiKTDqf?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 ![Blazor ComboBox with Web API Adaptor](./images/data-binding/blazor_combobox_web-api-adaptor.png)
 
@@ -247,6 +261,7 @@ The following example is for remote data binding and enabled offline mode.
 
 {% endhighlight %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBTDYiueZHDbZmB?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 ### Entity Framework
 
