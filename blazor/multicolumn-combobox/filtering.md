@@ -77,7 +77,6 @@ To enable multi-column support in the built-in Syncfusion Blazor theme files, si
 
 {% endhighlight %}
 
-![Blazor ComboBox with Multi Column filtering](./images/filtering/blazor_combobox_multi-column.png)
 
 You can achieve multiple column(field) filtering by passing the List of [predicates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_predicates) to the [And](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_And_Syncfusion_Blazor_Data_WhereFilter_) or [Or](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_Or_Syncfusion_Blazor_Data_WhereFilter_) methods of [WhereFilters](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter__ctor).
 
@@ -86,8 +85,6 @@ You can achieve multiple column(field) filtering by passing the List of [predica
 {% include_relative code-snippet/filtering/multi-column-filtering.razor %}
 
 {% endhighlight %}
-
-![Blazor MultiColumn ComboBox with Multi Column filtering](./images/filtering/blazor_combobox_multi-colum-filtering.gif) -->
 
 <!-- ## Case sensitive filtering
 
