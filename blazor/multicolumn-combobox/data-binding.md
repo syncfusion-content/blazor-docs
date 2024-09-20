@@ -65,29 +65,6 @@ Index value binding can be accomplished with the `bind-Index` attribute, which s
 }
 ```
 
-<!-- ### DataBound event
-
-The [DataBound]() event triggers when the data source is populated in the popup list.
-
-{% highlight cshtml %}
-
-{% include_relative code-snippet/data-binding/data-bound.razor %}
-
-{% endhighlight %}
-
-
-### Complex data type
-
-The MultiColumn ComboBox can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [TextField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_TextField) and [ValueField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_ValueField) property.
-
-In the following example, the `Code.ID` column and `Country.CountryID` column from complex data have been mapped to the [TextField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_TextField) and [ValueField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_ValueField) property respectively.
-
-{% highlight cshtml %}
-
-{% include_relative code-snippet/data-binding/complex-data-type.razor %}
-
-{% endhighlight %} -->
-
 ### Expando object binding
 
 Bind the [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-5.0) data to the MultiColumn ComboBox component. In the following example, the `ExpandoObject` is bound to the collection of vehicles data.
@@ -99,16 +76,6 @@ Bind the [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dyn
 {% endhighlight %}
 
 ![Blazor ComboBox with Expando object binding](./images/data-binding/blazor_combobox_expando-object-binding.png)
-
-<!-- ### Observable collection binding
-
-Bind the [ObservableCollection](https://blazor.syncfusion.com/documentation/common/data-binding/data-updates#observable-collection) data to the MultiColumn ComboBox component. In the following example, the `Observable Data` is bound to a collection of colors data.
-
-{% highlight cshtml %}
-
-{% include_relative code-snippet/data-binding/observable-collection-binding.razor %}
-
-{% endhighlight %} -->
 
 ### Dynamic object binding
 
@@ -152,16 +119,6 @@ The [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Mult
 
 {% endhighlight %}
 
-<!-- ### OnActionComplete event
-
-The [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_OnActionComplete) event triggers after data is fetched successfully from the remote server.
-
-{% highlight cshtml %}
-
-{% include_relative code-snippet/data-binding/action-complete.razor %}
-
-{% endhighlight %} -->
-
 ### OnActionFailure event
 
 The [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_OnActionFailure) event triggers when the data fetch request from the remote server fails.
@@ -195,39 +152,6 @@ The [Web API Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#
 {% endhighlight %}
 
 ![Blazor ComboBox with Web API Adaptor](./images/data-binding/blazor_combobox_web-api-adaptor.png)
-
-<!-- ### Custom adaptor
-
-The [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) has custom adaptor support which allows you to perform manual operations on the data. This can be utilized for implementing customize data binding and editing operations in the MultiColumn ComboBox component.
-
-For implementing custom data binding in the MultiColumn ComboBox, the `DataAdaptor` class is used. This abstract class acts as a base class for the custom adaptor.
-
-The `DataAdaptor` abstract class has both synchronous and asynchronous method signatures, which can be overridden in the custom adaptor. Following are the method signatures present in this class.
-
-```csharp
-public abstract class DataAdaptor
-{
-    /// <summary>   
-    /// Performs data Read operation synchronously.
-    /// </summary>
-    public virtual object Read(DataManagerRequest dataManagerRequest, string key = null)
-
-    /// <summary>
-    /// Performs data Read operation asynchronously.
-    /// </summary>
-    public virtual Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string key = null)
-}
-```
-
-In custom Adaptor, the data binding operation can be performed in the MultiColumn ComboBox component by providing the custom adaptor class and overriding the Read or ReadAsync method of the DataAdaptor abstract class.
-
-The following sample code demonstrates implementing custom data binding using custom adaptor.
-
-{% highlight cshtml %}
-
-{% include_relative code-snippet/data-binding/custom-adaptor.razor %}
-
-{% endhighlight %} -->
 
 ### Offline mode
 
@@ -365,13 +289,3 @@ Now, configure the MultiColumn ComboBox using the [SfDataManager](https://blazor
 {% include_relative code-snippet/data-binding/combobox-with-web-api-adaptor.razor %}
 
 {% endhighlight %}
-
-<!-- ## Adding new items
-
-Add the new item in the popup with the help of [AddItemsAsync]() public method. This method will add a mentioned item in the MultiColumn ComboBox popup without affecting the data source items.
-
-{% highlight cshtml %}
-
-{% include_relative code-snippet/data-binding/add-new-item.razor %}
-
-{% endhighlight %} -->
