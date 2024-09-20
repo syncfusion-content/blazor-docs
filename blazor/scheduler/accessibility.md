@@ -76,7 +76,7 @@ Keyboard shortcuts | Actions
 <kbd>Home</kbd> |To move the selection to the first cell of Scheduler.
 <kbd>F12</kbd> |To have the inline option for both cells and events.
 <kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>Y</kbd> | To navigate to the today date period.
-<kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>N</kbd> | Opens the new event Editor window on the selected cells.
+<kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>N</kbd> | Opens the new event Editor window.
 
 ## Ensuring accessibility
 
