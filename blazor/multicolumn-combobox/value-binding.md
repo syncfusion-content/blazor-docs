@@ -40,6 +40,7 @@ The Index value binding is accomplished through the [@bind-Index]() attribute, w
 
 {% endhighlight %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLfZasEAxNRINSJ?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 ![Blazor MultiColumn ComboBox with Index Value](./images/value-binding/blazor_combobox_index-value.png)
 
@@ -70,6 +71,8 @@ The following example illustrates the use of `string` as the TValue. Therefore, 
 {% include_relative code-snippet/value-binding/show-hide-clear-button.razor %}
 
 {% endhighlight %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLJDEskURJpKyLy?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 ![Blazor ComboBox with clear button](./images/value-binding/blazor_combobox_show-hide-clear-button.png)
 
@@ -109,7 +112,7 @@ First, create a `MultiColumnComboBox.razor` file as a parent component in the `/
 
 Then, render the Generic MultiColumn ComboBox component with the required `TValue` and `TItem` in the respective razor components. 
 
-Here, the MultMultiColumn ComboBox component with TValue as an int nullable type in the `/Index.razor` file.
+Here, the MultiColumn ComboBox component with TValue as an int nullable type in the `/Index.razor` file.
 
 **[Index.razor]**
 
