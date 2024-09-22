@@ -19,6 +19,8 @@ Utilize the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 {% endhighlight %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVpXEWYAYcFnftW?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+
 ![Blazor ComboBox with placeholder](./images/placeholder-and-floatlabel/blazor_combobox_placeholder.png)
 
 <!-- ## Color of the placeholder text
@@ -43,6 +45,8 @@ The mandatory indicator `*` can be applied to the placeholder by targeting its C
 
 {% endhighlight %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhfXuWkpfiTqsiM?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+
 ![Blazor ComboBox with mandatory indicator placeholder](./images/placeholder-and-floatlabel/blazor_combobox_placeholder-with-mandatory.png) 
 
 ## FloatLabel
@@ -64,6 +68,8 @@ The `FloatLabelType` as  `Auto` is demonstrated in the following code sample.
 {% include_relative code-snippet/placeholder-and-floatlabel/floatlabel.razor %}
 
 {% endhighlight %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLJtasupZNuHICO?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 ![Blazor ComboBox with float label](./images/placeholder-and-floatlabel/blazor_combobox_floatlabel.gif)
 
