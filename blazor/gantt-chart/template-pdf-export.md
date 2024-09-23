@@ -14,7 +14,7 @@ The Gantt chart export functionality allows you to export both column and header
 
 ## Exporting with column header template
 
-The PDF export functionality allows for advanced customization of Gantt chart columns header, including the inclusion of images, background colors, and custom text. This can be achieved using the [PdfColumnHeaderQueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfColumnHeaderQueryCellInfo) event. By handling this event, you can define how each column header in the Gantt chart is rendered in the exported PDF.
+The PDF export functionality allows for customization of Gantt chart columns header, including the inclusion of images, background colors, and custom text. This can be achieved using the [PdfColumnHeaderQueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfColumnHeaderQueryCellInfo) event. By handling this event, you can define how each column header in the Gantt chart is rendered in the exported PDF.
 
 The following code snippet demonstrates how to use the `PdfColumnHeaderQueryCellInfo` event to export Gantt columns header with custom text and image on the task name column header,
 

@@ -480,10 +480,11 @@ The following code demonstrates how to change the page size to A4 for the export
 
 ### Export current view records
 
-The PDF export functionality allows you to export records are in current view of the Gantt chart to the PDF document by setting the [IsCurrentViewExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html#Syncfusion_Blazor_Gantt_PdfExportEventArgs_IsCurrentViewExport) argument in the [PdfExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfExporting) event to true, using the [PdfExportEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html#Syncfusion_Blazor_Gantt_PdfExportEventArgs) class.
+The PDF export functionality allows you to export only the records that are currently in view on the Gantt chart to a PDF document. This can be achieved by enabling the [IsCurrentViewExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html#Syncfusion_Blazor_Gantt_PdfExportEventArgs_IsCurrentViewExport) boolean argument in the [PdfExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfExporting) event.
+
+N> Exporting current view records is only applicable when the virtualization feature is enabled, and it does not retain the state of collapsed rows during export.
 
 The following code demonstrates how to use the `PdfExporting` event to export current view data of the Gantt chart to a PDF document,
-
 ```cshtml
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Navigations
@@ -591,7 +592,7 @@ The following code demonstrates how to use the `PdfExporting` event to export cu
 ```
 ### How to export Gantt chart with custom timeline range
 
-The PDF export functionality allows you to export a custom timeline range of the Gantt chart to the PDF document. To specify the range, set the [RangeStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html#Syncfusion_Blazor_Gantt_PdfExportEventArgs_RangeStart) and [RangeEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html#Syncfusion_Blazor_Gantt_PdfExportEventArgs_RangeEnd) arguments within the [PdfExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfExporting) event. The `RangeStart` argument defines the start date, and the `RangeEnd` argument defines the end date of the timeline range. Both arguments are part of the [PdfExportEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html#Syncfusion_Blazor_Gantt_PdfExportEventArgs) class used in the `PdfExporting` event.
+The PDF export functionality allows you to export with custom timeline range of the Gantt chart to the PDF document. To specify the range, set the [RangeStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html#Syncfusion_Blazor_Gantt_PdfExportEventArgs_RangeStart) and [RangeEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html#Syncfusion_Blazor_Gantt_PdfExportEventArgs_RangeEnd) arguments within the [PdfExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfExporting) event. The `RangeStart` argument defines the start date, and the `RangeEnd` argument defines the end date of the timeline range. Both arguments are part of the [PdfExportEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html#Syncfusion_Blazor_Gantt_PdfExportEventArgs) class used in the `PdfExporting` event.
 
 The following code demonstrates how to use the `RangeStart` and `RangeEnd` arguments of the PdfExportEventArgs class within the PdfExporting event to export a custom timeline range of the Gantt chart to a PDF document,
 
@@ -1214,23 +1215,9 @@ The following code snippet demonstrates how to use the `PdfQueryTaskbarInfo` eve
 
 When exporting the Gantt chart to a PDF document, a series of events are triggered in a specific order, allowing for advanced customization of the export process. Understanding this flow is essential to control and modify the exported content effectively. Below is the flow of events that occur during PDF export in the Gantt chart:
 
-* PdfExporting
-* PdfQueryTimelineCellInfo
-* PdfColumnHeaderQueryCellInfo
-* PdfQueryCellInfo
-* PdfQueryTaskbarInfo
-* PdfExported
-
-The [PdfExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfExporting) event is triggered first, just before the export process begins. This event provides an opportunity to cancel the export or configure initial export settings, such as the timeline range, column selection, or any other export properties. By handling this event, you can customize the overall export configuration.
-
-After the export process is initiated, the [PdfQueryTimelineCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfQueryTimelineCellInfo) event is triggered. This event is invoked each time a timeline cell is drawn on the exported PDF document. You can handle this event to customize how individual timeline cells are rendered, including adding images, background colors, or custom text to the timeline cells.
-
-The third event, [PdfColumnHeaderQueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfColumnHeaderQueryCellInfo), is triggered when the column headers are being drawn in the PDF export. This event allows you to modify the appearance of column headers in the exported document, including the addition of images, background colors, and custom text.
-
-After the column headers are rendered, the [PdfQueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfQueryCellInfo) event is triggered. This event handles the rendering of individual Gantt chart cells in the PDF document. You can use this event to customize each cell, including altering its background color, adding images, or modifying the text.
-
- After the cells are rendered the [PdfQueryTaskbarInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfQueryTaskbarInfo) event is triggered as taskbars are drawn, offering the flexibility to customize the appearance of parent and individual taskbars, including milestone templates, to meet project needs.
-
-After the Gantt chart has been fully exported to a PDF document, the [PdfExported](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfExported) event is triggered. This event provides details of the completed export, such as the file name, exported columns, and the timeline range. You can use this event to perform any final actions or log export details.
-
-For more details and examples, see the Gantt chart PDF export events in the [documentation](https://blazor.syncfusion.com/documentation/gantt-chart/events).
+* [PdfExporting](https://blazor.syncfusion.com/documentation/gantt-chart/events)
+* [PdfQueryTimelineCellInfo](https://blazor.syncfusion.com/documentation/gantt-chart/events)
+* [PdfColumnHeaderQueryCellInfo](https://blazor.syncfusion.com/documentation/gantt-chart/events)
+* [PdfQueryCellInfo](https://blazor.syncfusion.com/documentation/gantt-chart/events)
+* [PdfQueryTaskbarInfo](https://blazor.syncfusion.com/documentation/gantt-chart/events)
+* [PdfExported](https://blazor.syncfusion.com/documentation/gantt-chart/events)
