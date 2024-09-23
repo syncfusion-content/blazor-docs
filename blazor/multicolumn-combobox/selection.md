@@ -19,6 +19,8 @@ Retrieve the selected value from the MultiColumn ComboBox component during the [
 
 {% endhighlight %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BthftYMaJBNGrdDn?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+
 Retrieve the full object list corresponding to the selected value in the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_ValueChange) event by utilizing the [ValueChangeEventArgs.ItemData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.ValueChangeEventArgs-2.html#Syncfusion_Blazor_MultiColumnComboBox_ValueChangeEventArgs_2_ItemData) property.
 
 {% highlight cshtml %}
@@ -26,6 +28,8 @@ Retrieve the full object list corresponding to the selected value in the [ValueC
 {% include_relative code-snippet/selection/item-data.razor %}
 
 {% endhighlight %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLfZOMYJBsbSpiT?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 ## Preselected value on OnInitializedAsync
 
@@ -36,6 +40,8 @@ To associate a pre-selected value with the MultiColumn ComboBox component, use t
 {% include_relative code-snippet/selection/preselect-value.razor %}
 
 {% endhighlight %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLTtOMYoiBxOutq?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 ![Blazor ComboBox with pre-select value](./images/selection/blazor_combobox_preselect-value.png)
 
@@ -49,6 +55,8 @@ You can change the component's value either programmatically or externally via t
 
 {% endhighlight %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htBTtaWOTIoCCOww?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+
 ![Blazor ComboBox with pre-select value before](./images/selection/blazor_combobox_changing-selected-value.gif)
 
 ### ValueChange event
@@ -61,6 +69,8 @@ The [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiC
 
 {% endhighlight %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBTjaikpWnchtLT?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+
 ### OnValueSelect event 
 
 The [OnValueSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_OnValueSelect) event is activated whenever a value is chosen in the DropDownList component. You can access the relevant arguments, including the [ValueSelectEventArgs.ItemData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.ValueChangeEventArgs-2.html#Syncfusion_Blazor_MultiColumnComboBox_ValueChangeEventArgs_2_ItemData). Additionally, you can prevent item selection by setting the [ValueSelectEventArgs.Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.ValueChangeEventArgs-2.html#Syncfusion_Blazor_MultiColumnComboBox_ValueChangeEventArgs_2_Cancel) property to `true` within the event arguments.
@@ -70,6 +80,8 @@ The [OnValueSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Mult
 {% include_relative code-snippet/selection/valueselect-event.razor %}
 
 {% endhighlight %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhTtkMaJMoQeBSK?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 ## Preselect value with index
 
@@ -83,6 +95,8 @@ The following sample shows how to bind the index on the initial rendering.
 
 {% endhighlight %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZBJDOiEpMTRyGJU?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+
 ![Blazor MultiColumn ComboBox with bind-index](./images/selection/blazor_combobox_preselect-value-index.png)
 
 <!-- ## Autofill the selected value
@@ -93,9 +107,7 @@ The [Autofill]() property determines if the component's input field will automat
 
 {% include_relative code-snippet/selection/auto-fill.razor %}
 
-{% endhighlight %} 
-
-![Blazor ComboBox with Autofill property](./images/selection/blazor_combobox_with-autofill-property.gif) -->
+{% endhighlight %}  -->
 
 <!-- ## Get selected item by value
 
@@ -117,6 +129,8 @@ Focus the component programmatically using the [FocusAsync](https://help.syncfus
 
 {% endhighlight %}
 
+![Blazor ComboBox with Focus the next component on selection](./images/selection/blazor_combobox_focus-next-component.gif)
+
 <!-- ## Programmatically clear the selected value
 
 To programmatically reset the value of the MultiColumn ComboBox, you can utilize the [ClearAsync]() method. This method removes any selected values from the SfComboBox<TValue, TItem> component and sets both the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_Value) and [Index](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_Index) properties to null.
@@ -125,9 +139,7 @@ To programmatically reset the value of the MultiColumn ComboBox, you can utilize
 
 {% include_relative code-snippet/selection/programmatically-clear-value.razor %}
 
-{% endhighlight %}
-
-![Blazor ComboBox with programatically clear value](./images/selection/blazor_combobox_with-programmatically-clear-value.gif) -->
+{% endhighlight %} -->
 
 ## Prevent reload on form submit
 
@@ -138,6 +150,8 @@ To prevent the page from reloading when using the MultiColumn ComboBox component
 {% include_relative code-snippet/selection/prevent-reload.razor %}
 
 {% endhighlight %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhpNuWOfWMzQIrf?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 <!-- ## Programmatically trigger onChange event
 
@@ -171,6 +185,8 @@ The [Focus](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnC
 
 {% endhighlight %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLpNEMkpWjDUxyW?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+
 ### Blur event
 
 The [Blur](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_Blur) event will trigger when focus moves out from the component. 
@@ -180,3 +196,5 @@ The [Blur](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnCo
 {% include_relative code-snippet/selection/blur-event.razor %}
 
 {% endhighlight %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrJZkiapZPZlLCm?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
