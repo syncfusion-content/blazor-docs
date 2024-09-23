@@ -480,7 +480,7 @@ In the below example, we have bound the nested **Employee** object’s **FirstNa
 
 > You can also use the **nameof** for complex columns instead of assigning static text for the `Field` property.
 > ```cshtml
-> <GridColumn Field="@(nameof(EmployeeData.Name) + "." + nameof(EmployeeName.FirstName))" HeaderText="First Name" Width="150"></GridColumn>
+> <GridColumn Field="@(nameof(EmployeeData.EmployeeName) + "." + nameof(EmployeeName.FirstName))" HeaderText="First Name" Width="150"></GridColumn>
 > ```
 
 {% tabs %}
