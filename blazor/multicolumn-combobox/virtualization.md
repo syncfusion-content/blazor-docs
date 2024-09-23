@@ -33,4 +33,6 @@ This feature is applicable to both local and remote data scenarios, providing fl
 
 {% endhighlight %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjBpNYCkfVIICLcf?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+
 ![Blazor MultiColumn ComboBox with virtualization](./images/blazor_multicolumn_combobox_remote-data-virtualization.gif)
