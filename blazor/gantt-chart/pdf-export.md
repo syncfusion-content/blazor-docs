@@ -940,7 +940,6 @@ The following code snippet demonstrates how to configure the `Columns` property 
 ![Blazor Gantt chart PDF Custom Column Through Property](images/pdf-custom-column-property.png)
 
 
-
 ### Through event
 
 The PDF export functionality allows you to export only specific columns from the Gantt chart, rather than exporting all columns by default. This can be achieved by using the `Columns` argument in the [PdfExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfExporting) event, using the [PdfExportEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html#Syncfusion_Blazor_Gantt_PdfExportEventArgs) class.
@@ -1209,81 +1208,29 @@ The following code snippet demonstrates how to use the `PdfQueryTaskbarInfo` eve
 ```
 ![Blazor Gantt Chart PDF Custom Taskbar Appearance Through Event ](images/pdf-custom-taskbar-event.png)
 
-## How to customize timeline cell in exported PDF
 
-The PDF export functionality supports advanced customization of Gantt chart timeline cells, including the addition of images, background colors, and custom text. This customization can be achieved using the [PdfQueryTimelineCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfQueryTimelineCellInfo) event. Handling this event allows you to specify how individual timeline cells in the Gantt chart are rendered in the exported PDF document.
 
-The following code snippet demonstrates how to use the `PdfQueryTimelineCellInfo` event to add custom text to the Gantt chart timeline cells in the exported PDF document:
+## Events triggered during exporting
 
-```cshtml
-@using Syncfusion.Blazor.Gantt
-@using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.Navigations
-@using Syncfusion.PdfExport
+When exporting the Gantt chart to a PDF document, a series of events are triggered in a specific order, allowing for advanced customization of the export process. Understanding this flow is essential to control and modify the exported content effectively. Below is the flow of events that occur during PDF export in the Gantt chart:
 
-<SfGantt @ref="Gantt" ID="GanttExport" DataSource="@TaskCollection" Height="450px" Width="900px" AllowPdfExport="true" Toolbar="toolbarItem">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Dependency="Predecessor"
-                     Duration="Duration" Progress="Progress" ParentID="ParentId">
-    </GanttTaskFields>
-    <GanttColumns>
-        <GanttColumn Field="TaskId" HeaderText="Task Id" Width="100" HeaderTextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></GanttColumn>
-        <GanttColumn Field="TaskName" HeaderText="Task Name"></GanttColumn>
-        <GanttColumn Field="StartDate" HeaderText="Start Date" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></GanttColumn>
-        <GanttColumn Field="EndDate" HeaderText="End Date"></GanttColumn>
-        <GanttColumn Field="Duration" HeaderText="Duration"></GanttColumn>
-        <GanttColumn Field="Predecessor" HeaderText="Dependency"></GanttColumn>
-    </GanttColumns>
-    <GanttEvents OnToolbarClick="ToolbarClickHandler" PdfQueryTimelineCellInfo="PPdfQueryTimelineCellInfoHandler" TValue="TaskData"></GanttEvents>
-</SfGantt>
+* PdfExporting
+* PdfQueryTimelineCellInfo
+* PdfColumnHeaderQueryCellInfo
+* PdfQueryCellInfo
+* PdfQueryTaskbarInfo
+* PdfExported
 
-@code {
-    private List<TaskData> TaskCollection { get; set; }
-    private SfGantt<TaskData> Gantt;
-    private List<object> toolbarItem = new List<Object>() { new ToolbarItem() { Text = "PDF Export", TooltipText = "PDF Export", Id = "PdfExport", PrefixIcon = "e-pdfexport" } };
-    protected override void OnInitialized()
-    {
-        this.TaskCollection = GetTaskCollection();
-    }
-    public async void ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
-    {
-        if (args.Item.Id == "PdfExport")
-        {
-            await Gantt.ExportToPdfAsync();
-        }
-    }
-    public void PPdfQueryTimelineCellInfoHandler(Syncfusion.Blazor.Gantt.PdfQueryTimelineCellInfoEventArgs args)
-    {
-        if (args.Value == "S")
-        {
-            args.Value = "O";
-        }
-    }
-    public class TaskData
-    {
-        public int TaskId { get; set; }
-        public string TaskName { get; set; }
-        public DateTime StartDate { get; set; }
-        public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
-        public int Progress { get; set; }
-        public int? ParentId { get; set; }
-        public string Predecessor { get; set; }
-    }
+The [PdfExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfExporting) event is triggered first, just before the export process begins. This event provides an opportunity to cancel the export or configure initial export settings, such as the timeline range, column selection, or any other export properties. By handling this event, you can customize the overall export configuration.
 
-    public static List<TaskData> GetTaskCollection()
-    {
-        List<TaskData> Tasks = new List<TaskData>()
-        {
-            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), },
-            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
-            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, ParentId = 1, Predecessor = "2" },
-            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 , Predecessor = "3" },
-            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 21), },
-            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, ParentId = 5 },
-            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, ParentId = 5 },
-            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30, ParentId = 5 }
-        };
-        return Tasks;
-    }
-}
-```
+After the export process is initiated, the [PdfQueryTimelineCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfQueryTimelineCellInfo) event is triggered. This event is invoked each time a timeline cell is drawn on the exported PDF document. You can handle this event to customize how individual timeline cells are rendered, including adding images, background colors, or custom text to the timeline cells.
+
+The third event, [PdfColumnHeaderQueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfColumnHeaderQueryCellInfo), is triggered when the column headers are being drawn in the PDF export. This event allows you to modify the appearance of column headers in the exported document, including the addition of images, background colors, and custom text.
+
+After the column headers are rendered, the [PdfQueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfQueryCellInfo) event is triggered. This event handles the rendering of individual Gantt chart cells in the PDF document. You can use this event to customize each cell, including altering its background color, adding images, or modifying the text.
+
+ After the cells are rendered the [PdfQueryTaskbarInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfQueryTaskbarInfo) event is triggered as taskbars are drawn, offering the flexibility to customize the appearance of parent and individual taskbars, including milestone templates, to meet project needs.
+
+After the Gantt chart has been fully exported to a PDF document, the [PdfExported](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfExported) event is triggered. This event provides details of the completed export, such as the file name, exported columns, and the timeline range. You can use this event to perform any final actions or log export details.
+
+For more details and examples, see the Gantt chart PDF export events in the [documentation](https://blazor.syncfusion.com/documentation/gantt-chart/events#pdfexporting).
