@@ -53,7 +53,7 @@ To enable the rendering of boolean values as checkboxes, you need to set the `Di
 
 You can customize the appearance of the column headers in MultiColumn ComboBox using the [CustomAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.MultiColumnComboboxColumn.html#Syncfusion_Blazor_MultiColumnComboBox_MultiColumnComboboxColumn_CustomAttributes) property.
 
-You can set the **CustomAttributes** property of the desired column to an object that contains the CSS class **customcss**. This CSS class will be applied to the header cell of the specified rows in the Multicolumn.
+You can set the **CustomAttributes** property of the desired column to an object that contains the CSS class custom css. This CSS class will be applied to the header cell of the specified rows in the Multicolumn.
 
 ```cshtml
 <MultiColumnComboboxColumn Field="Name" Width="200px" CustomAttributes="@(new Dictionary<string, object>() { { "class", "customcss" } })"></MultiColumnComboboxColumn>
