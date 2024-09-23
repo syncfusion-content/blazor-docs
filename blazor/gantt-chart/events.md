@@ -3875,9 +3875,10 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
     }
 }
 ```
+
 ## PdfExporting
 
-The [PdfExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfExporting) event triggers before the Gantt chart is exported to a PDF document. To cancel the export, set the [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html#Syncfusion_Blazor_Gantt_PdfExportEventArgs_Cancel) argument to true within the `PdfExporting` event, which uses the [PdfExportEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html) class. 
+The [PdfExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfExporting) event triggers before the Gantt chart is exported to a PDF document. To cancel the export, set the [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html#Syncfusion_Blazor_Gantt_PdfExportEventArgs_Cancel) argument to true within the `PdfExporting` event.
 
 ``` cshtml
 @using Syncfusion.Blazor.Gantt
@@ -4022,6 +4023,7 @@ The [PdfExported](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.
     }
 }
 ```
+
 ## PdfColumnHeaderQueryCellInfo
 
 The [PdfColumnHeaderQueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfColumnHeaderQueryCellInfo) event is triggered each time a column header is drawn in PDF document export. By handling this event, you can define how each column header in the Gantt chart is rendered in the exported PDF, including the addition of images, background colors, and custom text.
