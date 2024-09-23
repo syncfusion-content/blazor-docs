@@ -30,5 +30,3 @@ When the MultiColumn ComboBox input is valid, the form is ready to be submitted.
 {% endhighlight %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hXrKWVrGUcRBhJQE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor ComboBox inside editform](./images/form-validation/blazor_combobox_inside-editform.png)
