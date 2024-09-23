@@ -1233,4 +1233,4 @@ After the column headers are rendered, the [PdfQueryCellInfo](https://help.syncf
 
 After the Gantt chart has been fully exported to a PDF document, the [PdfExported](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfExported) event is triggered. This event provides details of the completed export, such as the file name, exported columns, and the timeline range. You can use this event to perform any final actions or log export details.
 
-For more details and examples, see the Gantt chart PDF export events in the [documentation](https://blazor.syncfusion.com/documentation/gantt-chart/events#pdfexporting).
+For more details and examples, see the Gantt chart PDF export events in the [documentation](https://blazor.syncfusion.com/documentation/gantt-chart/events).
