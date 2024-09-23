@@ -11,7 +11,7 @@ documentation: ug
 
 ## Setting prompt text
 
-You can use the `Prompt` property to define the prompt text for the AI AssistView component.
+You can use the [Prompt](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_Prompt) property to define the prompt text for the AI AssistView component.
 
 ```cshtml
 
@@ -36,7 +36,7 @@ You can use the `Prompt` property to define the prompt text for the AI AssistVie
 
 ## Setting prompt placeholder
 
-You can use the `PromptPlaceholder` property to set the placeholder text for the prompt textarea. The default value is `Type prompt for assistance...`.
+You can use the [PromptPlaceholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_PromptPlaceholder) property to set the placeholder text for the prompt textarea. The default value is `Type prompt for assistance...`.
 
 ```cshtml
 
@@ -61,7 +61,7 @@ You can use the `PromptPlaceholder` property to set the placeholder text for the
 
 ## Prompt-response collection
 
-By using the `Prompts` property, you can specify the collection of prompts and responses, allowing you to load pre-defined pairs or individual entries ensuring the AI AssistView component is initialized with the configured data.
+You can use the [Prompts](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_Prompts) property to initialize the component with the configured data as a collection of prompts and responses or individual entries.
 
 The `Prompts` collection stores all the prompts and responses generated.
 
@@ -94,7 +94,7 @@ The `Prompts` collection stores all the prompts and responses generated.
 
 ## Adding prompt suggestions
 
-By using the `PromptSuggestions` property, you can configure the list of suggested prompts in the AI AssistView. Users can choose from these suggestions to use as their prompts.
+You can use the [PromptSuggestions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_PromptSuggestions) property, to add the suggestions in both initial and on-demand which help users to refine their prompts. Additionally, custom header can be set for suggestions further enhancing the user experience.
 
 ```cshtml
 
@@ -122,7 +122,7 @@ By using the `PromptSuggestions` property, you can configure the list of suggest
 
 ### Adding suggestion headers
 
-You can use the `PromptSuggestionsHeader` property to set the header text for the prompt suggestions in the AI AssistView.
+You can use the [PromptSuggestionsHeader](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_PromptSuggestionsHeader) property to set the header text for the prompt suggestions in the AI AssistView.
 
 ```cshtml
 
@@ -148,9 +148,9 @@ You can use the `PromptSuggestionsHeader` property to set the header text for th
 
 ![Blazor AI AssistView PromptSuggestionsHeader](./images/assistview-suggestion-header.png)
 
-## Adding prompt iconCSS
+## Adding prompt iconCss
 
-You can customize the appearance of the prompter avatar by using the `PromptIconCss` property.
+You can customize the appearance of the prompter avatar by using the [PromptIconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_PromptIconCss) property.
 
 ```cshtml
 
@@ -179,16 +179,16 @@ You can customize the appearance of the prompter avatar by using the `PromptIcon
 
 ![Blazor AI AssistView PromptIcon](./images/assistview-prompt-icon.png)
 
-## Adding response iconCSS
+## Adding response iconCss
 
-You can use the `ResponseIconCss` property to customize the appearance of the responder avatar. By default, the `e-assistview-icon` class is added as the built-in AI AssistView response icon.
+You can use the [ResponseIconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_ResponseIconCss) property to customize the appearance of the responder avatar. By default, the `e-assistview-icon` class is added as the built-in AI AssistView response icon.
 
 ```cshtml
 
 @using Syncfusion.Blazor.InteractiveChat
 
 <div class="aiassist-container" style="height: 350px; width: 650px;">
-    <SfAIAssistView Prompts="@prompts" PromptRequested="@PromptRequest" ResponseIconCss="e-icons e-star-filled"></SfAIAssistView>
+    <SfAIAssistView Prompts="@prompts" PromptRequested="@PromptRequest" ResponseIconCss="e-icons e-bullet-4"></SfAIAssistView>
 </div>
 
 @code {

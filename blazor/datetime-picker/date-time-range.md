@@ -73,7 +73,9 @@ The following code allows selecting a date within the range from 10:00 AM to 8:3
 
 ![Time Selection in Blazor DateTimePicker](./images/blazor-datetimepicker-time-selection.png)
 
-When the MinTime and MaxTime properties are configured and the selected time value is out-of-range or invalid, then the model value will be set to `out of range` time value or `null` respectively with highlighted `error` class to indicate the time is out of range or invalid.
+When minTime and maxTime are set, the component will prioritize min if minTime is less than the current min time, and max if maxTime is greater than the current max time. Conversely, it will prioritize minTime if it is greater than the current min time, and maxTime if it is less than the current max time. These behaviors apply only when min and max Dates are selected or pre-bounded, with minTime and maxTime values set for all other dates apart from min and max dates.
+
+The below example allows selecting a time within the range from 10:00 AM to 8:30 PM of each day.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
