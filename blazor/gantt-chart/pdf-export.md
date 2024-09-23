@@ -71,10 +71,10 @@ PDF export allows exporting Gantt data to PDF document. You need to use the [Exp
 
 ## Customize the PDF export
 
-The PDF export functionality in the Syncfusion Gantt Chart allows extensive customization through the `GanttPdfExportProperties` class. By configuring properties within this class, you can control the layout, format, and content that is included in the exported PDF. This ensures that the PDF accurately represents the Gantt chart's structure and provides flexibility for tailored exports.
+The PDF export functionality in the Syncfusion Gantt Chart allows extensive customization through the [GanttPdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html) class. By configuring properties within this class, you can control the layout, format, and content that is included in the exported PDF. This ensures that the PDF accurately represents the Gantt chart's structure and provides flexibility for tailored exports.
 
 ### Customize file name for exported document
-The PDF export functionality in the Syncfusion Gantt Chart allows you to customize the file name of the exported document. By configuring the `FileName` property within the `GanttPdfExportProperties` class, you can assign a specific name to the generated PDF. This is especially useful for keeping your exported documents organized and easily identifiable.
+The PDF export functionality in the Syncfusion Gantt Chart allows you to customize the file name of the exported document. By configuring the [FileName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_FileName) property within the [GanttPdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html) class, you can assign a specific name to the generated PDF. This is especially useful for keeping your exported documents organized and easily identifiable.
 
 In this example, the exported PDF will be saved as `ProjectSchedule.pdf`.
 
@@ -139,7 +139,7 @@ In this example, the exported PDF will be saved as `ProjectSchedule.pdf`.
 
 ### How to add a text in header/footer
 
-The PDF export functionality of the Gantt Chart allows you to add and style custom text in the Header or Footer of the exported PDF document. This customization can be achieved using the `Header` and `Footer` properties of the `GanttPdfExportProperties` class. By configuring these properties, you can include important information, such as titles, project names, or other relevant details, to enhance the exported document.
+The PDF export functionality of the Gantt Chart allows you to add and style custom text in the Header or Footer of the exported PDF document. This customization can be achieved using the [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_Header) and [Footer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_Footer) properties of the [GanttPdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html) class. By configuring these properties, you can include important information, such as titles, project names, or other relevant details, to enhance the exported document.
 
 The following sample code demonstrates how to add custom text and customize its styles in the Header and Footer section of the exported PDF document,
 
@@ -225,7 +225,7 @@ The following sample code demonstrates how to add custom text and customize its 
 ```
 
 ### How to draw a line in header/footer
-You can add lines to the Header or Footer area of the exported PDF document using the `Header` and `Footer` properties in the `GanttPdfExportProperties` class.
+You can add lines to the Header or Footer area of the exported PDF document using the [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_Header) and [Footer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_Footer) properties in the [GanttPdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html) class.
 
 Supported line styles are,
 
@@ -320,7 +320,7 @@ The following sample code demonstrates adding line in the Header and Footer sect
 
 ### How to change the page orientation
 
-The PDF export functionality allows you to customize the page orientation of the exported document. By setting the `PageOrientation` property in the `GanttPdfExportProperties` class, you can switch between Portrait (default) and Landscape orientations based on your requirements.
+The PDF export functionality allows you to customize the page orientation of the exported document. By setting the [PageOrientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_PageOrientation) property in the [GanttPdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html) class, you can switch between Portrait (default) and Landscape orientations based on your requirements.
 
 The following code snippet demonstrates how to set the page orientation to Landscape in the exported PDF document,
 
@@ -385,7 +385,7 @@ The following code snippet demonstrates how to set the page orientation to Lands
 
 ### How to change the page size
 
-The PDF export functionality allows you to adjust the page size of the exported document to meet your specific needs. By setting the `PageSize` property in the `GanttPdfExportProperties` class, you can select from various standard page sizes. The default page size is Letter, but other options like A4, A3, and more are available.
+The PDF export functionality allows you to adjust the page size of the exported document to meet your specific needs. By setting the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_PageSize) property in the [GanttPdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html) class, you can select from various standard page sizes. The default page size is Letter, but other options like A4, A3, and more are available.
 
 Supported page sizes are:
 * Letter
@@ -481,7 +481,7 @@ The following code demonstrates how to change the page size to A4 for the export
 
 ### How to export the Gantt chart with specific columns
 
-The PDF export functionality allows you to export only specific columns from the Gantt chart, rather than exporting all columns by default. This can be achieved by setting the `Columns` property in the `GanttPdfExportProperties` class, enabling you to tailor the exported document to only include relevant data.
+The PDF export functionality allows you to export only specific columns from the Gantt chart, rather than exporting all columns by default. This can be achieved by setting the [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html#Syncfusion_Blazor_Gantt_GanttPdfExportProperties_Columns) property in the [GanttPdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html) class, enabling you to tailor the exported document to only include relevant data.
 
 The following code demonstrates how to export the Gantt chart to a PDF with specific columns,
 
@@ -560,7 +560,7 @@ The following code demonstrates how to export the Gantt chart to a PDF with spec
 ```
 
 ### Export hidden columns
-The PDF export functionality includes an option to export hidden columns from the Gantt chart. By setting the `IncludeHiddenColumn` property to true in the `GanttPdfExportProperties` class, you can ensure that even columns not visible in the Gantt chart will be included in the exported PDF document.
+The PDF export functionality includes an option to export hidden columns from the Gantt chart. By setting the [IncludeHiddenColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_IncludeHiddenColumn) property to true in the [GanttPdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html) class, you can ensure that even columns not visible in the Gantt chart will be included in the exported PDF document.
 
 The following code demonstrates how to export hidden columns in the Gantt chart to a PDF document,
 
@@ -633,7 +633,7 @@ The following code demonstrates how to export hidden columns in the Gantt chart 
 
 ### Customize column width in exported PDF document
 
-The PDF export functionality allows you to customize columns width in the exported PDF document. This can be achieved using the `Width` property in the `GanttColumn` class. By specifying columns and their respective widths, you can tailor the PDF export to meet your specific needs.
+The PDF export functionality allows you to customize columns width in the exported PDF document. This can be achieved using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Width) property in the [GanttColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html) class. By specifying columns and their respective widths, you can tailor the PDF export to meet your specific needs.
 
 The following code demonstrates how to customize the columns and set their widths in the exported PDF document,
 
@@ -715,7 +715,7 @@ The following code demonstrates how to customize the columns and set their width
 
 ### Through property
 
-The PDF export functionality allows you to customize taskbar appearance to a PDF document with customized colors using the `TaskbarColor` property in the `GanttPdfExportProperties` class. This property enables you to format various types of taskbars, including parent taskbars, child taskbars, milestones, critical paths, manual taskbars, and baselines.
+The PDF export functionality allows you to customize taskbar appearance to a PDF document with customized colors using the [TaskbarColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfGanttStyle.html#Syncfusion_Blazor_Gantt_PdfGanttStyle_TaskbarColor) property in the [GanttPdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html) class. This property enables you to format various types of taskbars, including parent taskbars, child taskbars, milestones, critical paths, manual taskbars, and baselines.
 
 You can use the `TaskbarColor` property to set colors for the following taskbar types:
 

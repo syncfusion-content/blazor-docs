@@ -943,7 +943,7 @@ The following code example demonstrates how to set the `IsSticky` property to `t
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandleIsSticky/)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle/UserHandleIsSticky/)
 
 ![ToolTip During hover the ports with Stikcy Mode](images/UserHandleIsSticky.png)
 
@@ -1113,7 +1113,7 @@ By default, tooltips are not displayed. To display a tooltip, you must explicitl
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ActionofPorts/TooltipForSpecificPort)
 
-![ToolTip During hover the port](../images/PortTooltip.gif )
+![ToolTip During hover the port](./images/PortTooltip.gif )
 
 ## How to set sticky tooltip for ports
 
@@ -1172,6 +1172,6 @@ The following code example demonstrates how to set the `IsSticky` property to `t
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip/)
 
-![ToolTip During hover the ports with Stikcy Mode](../images/PortIsSticky.png)
+![ToolTip During hover the ports with Stikcy Mode](./images/PortIsSticky.png)
 
 
