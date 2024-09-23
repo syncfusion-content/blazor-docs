@@ -40,7 +40,7 @@ The Index value binding is accomplished through the [@bind-Index]() attribute, w
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLfZasEAxNRINSJ?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrJXOrUfZAICmMF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor MultiColumn ComboBox with Index Value](./images/value-binding/blazor_combobox_index-value.png)
 
@@ -70,7 +70,7 @@ The following example illustrates the use of `string` as the TValue. Therefore, 
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLJDEskURJpKyLy?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBftkrKpNAYFijk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor ComboBox with clear button](./images/value-binding/blazor_combobox_show-hide-clear-button.png)
 

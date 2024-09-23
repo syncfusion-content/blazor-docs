@@ -19,7 +19,9 @@ The MultiColumn ComboBox supports auto-generating columns, which simplifies the 
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rthptYsEgssKVDPs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor MultiColumn ComboBox with Data Binding](./images/blazor-multicolumncombobox-columns.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVpjYVATVHVEqlS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+![Blazor MultiColumn ComboBox with Text align](./images/column/blazor_multicolumn_combobox_column-text-align.gif)
 
 ## Setting the Template
 
@@ -37,6 +39,8 @@ In the following sample, defines how to use `Template` and `HeaderTemplate`.
 
 {% endhighlight %}
 
+![Blazor MultiColumn ComboBox with Column header](./images/column/blazor_multicolumn_combobox_column-header.gif)
+
 ## Setting Display As CheckBox 
 
 The MultiColumn ComboBox component allows you to render boolean values as checkboxes in columns. This can be achieved by using the [DisplayAsCheckBox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.MultiColumnComboboxColumn.html#Syncfusion_Blazor_MultiColumnComboBox_MultiColumnComboboxColumn_DisplayAsCheckBox)  property. This property is useful when you have a boolean column in your MultiColumn ComboBox and you want to display the values as checkboxes instead of the default text representation of **true** or **false**.
@@ -48,6 +52,10 @@ To enable the rendering of boolean values as checkboxes, you need to set the `Di
 {% include_relative code-snippet/column/column-checkbox.razor %}
 
 {% endhighlight %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhzXOLgTUyFLZUG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+![Blazor MultiColumn ComboBox with Check Box](./images/column/blazor_multicolumn_combobox_column-checkbox.gif)
 
 ## Setting custom attributes
 
@@ -67,6 +75,8 @@ The following example demonstrates how to customize the appearance of the Multic
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLqCMNiLfcCJPPZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLpZOLApKBUYqMm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+![Blazor MultiColumn ComboBox with custom attributes](./images/column/blazor_multicolumn_combobox_column-custom-attributes.gif)
 
 
