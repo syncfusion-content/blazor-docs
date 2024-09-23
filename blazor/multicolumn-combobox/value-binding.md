@@ -54,9 +54,7 @@ In the example provided, the `Name` column is linked to the [ValueField](https:/
 
 {% include_relative code-snippet/value-binding/object-binding.razor %}
 
-{% endhighlight %}
-
-![Blazor MultiColumn ComboBox with object values](./images/value-binding/blazor_combobox_object-binding.png) -->
+{% endhighlight %} -->
 
 ## Show or hide clear button
 
@@ -112,7 +110,7 @@ First, create a `MultiColumnComboBox.razor` file as a parent component in the `/
 
 Then, render the Generic MultiColumn ComboBox component with the required `TValue` and `TItem` in the respective razor components. 
 
-Here, the MultMultiColumn ComboBox component with TValue as an int nullable type in the `/Index.razor` file.
+Here, the MultiColumn ComboBox component with TValue as an int nullable type in the `/Index.razor` file.
 
 **[Index.razor]**
 

@@ -31,9 +31,7 @@ You can change the color of the placeholder by targeting its CSS class `input.e-
 
 {% include_relative code-snippet/placeholder-and-floatlabel/placeholder-with-color.razor %}
 
-{% endhighlight %}
-
-![Blazor ComboBox with color placeholder](./images/placeholder-and-floatlabel/blazor_combobox_placeholder-with-color.png)  -->
+{% endhighlight %} -->
 
  ## Add mandatory indicator using placeholder
 
@@ -81,6 +79,4 @@ You can change the text color of the floating label when it is focused by target
 
 {% include_relative code-snippet/placeholder-and-floatlabel/floatlabel-focusing-color.razor %}
 
-{% endhighlight %}
-
-![Blazor ComboBox with float label focusing color](./images/placeholder-and-floatlabel/blazor_combobox_floatlabel-focusing-color.png) -->
+{% endhighlight %} -->
