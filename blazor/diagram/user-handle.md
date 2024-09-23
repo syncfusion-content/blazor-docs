@@ -292,7 +292,7 @@ The following code example shows how to change the VisibleTarget in the userhand
             {
                 sfDiagram.EndGroupAction();
             }
-            _ = sfDiagram.EndUpdate();
+            _ = sfDiagram.EndUpdateAsync();
             base.OnMouseUp(args);
             this.InAction = true;
         }
