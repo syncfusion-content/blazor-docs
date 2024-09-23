@@ -592,9 +592,9 @@ The following code demonstrates how to use the `PdfExporting` event to export cu
 ```
 ### How to export Gantt chart with custom timeline range
 
-The PDF export functionality allows you to export with custom timeline range of the Gantt chart to the PDF document. To specify the range, set the [RangeStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html#Syncfusion_Blazor_Gantt_PdfExportEventArgs_RangeStart) and [RangeEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html#Syncfusion_Blazor_Gantt_PdfExportEventArgs_RangeEnd) arguments within the [PdfExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfExporting) event. The `RangeStart` argument defines the start date, and the `RangeEnd` argument defines the end date of the timeline range. Both arguments are part of the [PdfExportEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html#Syncfusion_Blazor_Gantt_PdfExportEventArgs) class used in the `PdfExporting` event.
+The PDF export functionality allows you to export with custom timeline range of the Gantt chart to the PDF document. To specify the range, set the [RangeStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html#Syncfusion_Blazor_Gantt_PdfExportEventArgs_RangeStart) and [RangeEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html#Syncfusion_Blazor_Gantt_PdfExportEventArgs_RangeEnd) arguments within the [PdfExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfExporting) event. The `RangeStart` argument defines the start date, and the `RangeEnd` argument defines the end date of the timeline range.
 
-The following code demonstrates how to use the `RangeStart` and `RangeEnd` arguments of the PdfExportEventArgs class within the PdfExporting event to export a custom timeline range of the Gantt chart to a PDF document,
+The following code demonstrates how to use the `RangeStart` and `RangeEnd` arguments of the PdfExporting event to export a custom timeline range of the Gantt chart to a PDF document,
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -943,7 +943,7 @@ The following code snippet demonstrates how to configure the `Columns` property 
 
 ### Through event
 
-The PDF export functionality allows you to export only specific columns from the Gantt chart, rather than exporting all columns by default. This can be achieved by using the `Columns` argument in the [PdfExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfExporting) event, using the [PdfExportEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html#Syncfusion_Blazor_Gantt_PdfExportEventArgs) class.
+The PDF export functionality allows you to export only specific columns from the Gantt chart, rather than exporting all columns by default. This can be achieved by using the `Columns` argument in the [PdfExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfExporting) event.
 
 The following code demonstrates how to use the `PdfExporting` event to export specific columns of the Gantt chart to a PDF document,
 
