@@ -9,7 +9,8 @@ documentation: ug
 
 # PDF Export in Blazor Gantt Chart Component
 
-PDF export allows exporting Gantt data to PDF document. You need to use the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ExportToPdfAsync) method for exporting. To enable PDF export in the Gantt, set the [AllowPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowPdfExport) to true.
+The PDF export feature enables exporting Gantt chart data to a PDF document. To perform the export, use the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ExportToPdfAsync) method. Ensure that PDF export is enabled in the Gantt chart component by setting the [AllowPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowPdfExport) property to true.
+
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -71,10 +72,10 @@ PDF export allows exporting Gantt data to PDF document. You need to use the [Exp
 
 ## Customize the PDF export
 
-The PDF export functionality in the Syncfusion Gantt Chart allows extensive customization through the `GanttPdfExportProperties` class. By configuring properties within this class, you can control the layout, format, and content that is included in the exported PDF. This ensures that the PDF accurately represents the Gantt chart's structure and provides flexibility for tailored exports.
+The PDF export functionality in the Syncfusion Gantt Chart provides extensive customization options through the [GanttPdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html) class. By configuring the properties within this class, you can control the layout, format, and content of the exported PDF. This customization ensures that the PDF accurately represents the Gantt chart's structure and allows for tailored exports.
 
 ### Customize file name for exported document
-The PDF export functionality in the Syncfusion Gantt Chart allows you to customize the file name of the exported document. By configuring the `FileName` property within the `GanttPdfExportProperties` class, you can assign a specific name to the generated PDF. This is especially useful for keeping your exported documents organized and easily identifiable.
+The PDF export functionality in the Syncfusion Gantt Chart allows you to customize the file name of the exported document. By configuring the [FileName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_FileName) property within the [GanttPdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html) class, you can assign a specific name to the generated PDF. This is especially useful for keeping your exported documents organized and easily identifiable.
 
 In this example, the exported PDF will be saved as `ProjectSchedule.pdf`.
 
@@ -139,9 +140,9 @@ In this example, the exported PDF will be saved as `ProjectSchedule.pdf`.
 
 ### How to add a text in header/footer
 
-The PDF export functionality of the Gantt Chart allows you to add and style custom text in the Header or Footer of the exported PDF document. This customization can be achieved using the `Header` and `Footer` properties of the `GanttPdfExportProperties` class. By configuring these properties, you can include important information, such as titles, project names, or other relevant details, to enhance the exported document.
+The PDF export functionality of the Gantt Chart allows you to add and style custom text in the header or footer of the exported PDF document. This customization can be achieved using the [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_Header) and [Footer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_Footer) properties of the [GanttPdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html) class. By configuring these properties, you can include important information, such as titles, project names, or other relevant details, to enhance the exported document.
 
-The following sample code demonstrates how to add custom text and customize its styles in the Header and Footer section of the exported PDF document,
+The following sample code demonstrates how to add custom text and apply styling to the header and footer sections of the exported PDF document,
 
 ``` cshtml
 @using Syncfusion.Blazor.Gantt
@@ -225,7 +226,7 @@ The following sample code demonstrates how to add custom text and customize its 
 ```
 
 ### How to draw a line in header/footer
-You can add lines to the Header or Footer area of the exported PDF document using the `Header` and `Footer` properties in the `GanttPdfExportProperties` class.
+You can add lines to the Header or Footer area of the exported PDF document using the [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_Header) and [Footer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_Footer) properties in the [GanttPdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html) class.
 
 Supported line styles are,
 
@@ -320,9 +321,9 @@ The following sample code demonstrates adding line in the Header and Footer sect
 
 ### How to change the page orientation
 
-The PDF export functionality allows you to customize the page orientation of the exported document. By setting the `PageOrientation` property in the `GanttPdfExportProperties` class, you can switch between Portrait (default) and Landscape orientations based on your requirements.
+The PDF export functionality allows you to customize the page orientation of the exported document. By setting the [PageOrientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_PageOrientation) property in the [GanttPdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html) class, you can choose between [Portrait](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PageOrientation.html#Syncfusion_Blazor_Grids_PageOrientation_Portrait) (default) and [Landscape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PageOrientation.html#Syncfusion_Blazor_Grids_PageOrientation_Landscape) orientations based on your requirements.
 
-The following code snippet demonstrates how to set the page orientation to Landscape in the exported PDF document,
+The following code snippet demonstrates how to set the page orientation to Landscape for the exported PDF document,
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -385,7 +386,7 @@ The following code snippet demonstrates how to set the page orientation to Lands
 
 ### How to change the page size
 
-The PDF export functionality allows you to adjust the page size of the exported document to meet your specific needs. By setting the `PageSize` property in the `GanttPdfExportProperties` class, you can select from various standard page sizes. The default page size is Letter, but other options like A4, A3, and more are available.
+The PDF export functionality allows you to customize the page size of the exported document to suit your needs. By setting the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfPageSize.html) property in the [GanttPdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html) class, you can select from various standard page sizes. The default page size is Letter, but other options like A4, A3, and others.
 
 Supported page sizes are:
 * Letter
@@ -477,13 +478,391 @@ The following code demonstrates how to change the page size to A4 for the export
 }
 ```
 
-## Customize columns in exported PDF document
+### Export current view records
 
-### How to export the Gantt chart with specific columns
+The PDF export functionality allows you to export only the records that are currently in view on the Gantt chart to a PDF document. This can be achieved by enabling the [IsCurrentViewExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html#Syncfusion_Blazor_Gantt_PdfExportEventArgs_IsCurrentViewExport) boolean argument in the [PdfExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfExporting) event.
 
-The PDF export functionality allows you to export only specific columns from the Gantt chart, rather than exporting all columns by default. This can be achieved by setting the `Columns` property in the `GanttPdfExportProperties` class, enabling you to tailor the exported document to only include relevant data.
+N> Exporting current view records is only applicable when the virtualization feature is enabled, and it does not retain the state of collapsed rows during export.
 
-The following code demonstrates how to export the Gantt chart to a PDF with specific columns,
+The following code demonstrates how to use the `PdfExporting` event to export current view data of the Gantt chart to a PDF document,
+```cshtml
+@using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Navigations
+
+<SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="100%" AllowPdfExport="true" TreeColumnIndex="1" EnableRowVirtualization="true"  Toolbar="@toolbarItem" ScrollToTaskbarOnClick="true">
+    <GanttLabelSettings LeftLabel="TaskName" TValue="TaskData"></GanttLabelSettings>
+    <GanttTaskFields ParentID="ParentId" Work="Work" Id="ID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" TaskType="TaskType" Dependency="Predecessor">
+    </GanttTaskFields>
+    <GanttColumns>
+        <GanttColumn Field="ID" HeaderText="Task Id" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center"></GanttColumn>
+        <GanttColumn Field="TaskName" HeaderText="Task Name"></GanttColumn>
+        <GanttColumn Field="StartDate" HeaderText="Start Date"></GanttColumn>
+        <GanttColumn Field="EndDate" HeaderText="End Date"></GanttColumn>
+        <GanttColumn Field="Duration" HeaderText="Duration"></GanttColumn>
+        <GanttColumn Field="Assignee" HeaderText="Assignee"></GanttColumn>
+        <GanttColumn Field="Reporter" HeaderText="Reporter"></GanttColumn>
+        <GanttColumn Field="Progress" HeaderText="Progress" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center"></GanttColumn>
+    </GanttColumns>
+    <GanttEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode="EditMode.Auto" ShowDeleteConfirmDialog="true">
+    </GanttEditSettings>
+    <GanttEvents OnToolbarClick="ToolbarClickHandler" PdfExporting=" PdfExportingHandler" TValue="TaskData"></GanttEvents>
+    <GanttSplitterSettings Position="40%"></GanttSplitterSettings>
+</SfGantt>
+@code {
+    private SfGantt<TaskData> Gantt { get; set; }
+    private List<object> toolbarItem = new List<Object>() { new ToolbarItem() { Text = "PDF Export", TooltipText = "PDF Export", Id = "PdfExport", PrefixIcon = "e-pdfexport" } };
+    private List<TaskData> TaskCollection { get; set; }
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = VirtualData.GetTreeVirtualData(30);
+    }
+    public async void ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Id == "PdfExport")
+        {
+            await Gantt.ExportToPdfAsync();
+        }
+    }
+    public void PdfExportingHandler(PdfExportEventArgs args)
+    {
+        args.IsCurrentViewExport = true;
+    }
+    public class VirtualData
+    {
+        public static List<TaskData> GetTreeVirtualData(int count)
+        {
+            List<TaskData> DataCollection = new List<TaskData>();
+            Random rand = new Random();
+            var x = 0;
+            int duration = 0;
+            DateTime startDate = new DateTime(2000, 1, 5);
+            DateTime endDate = new DateTime(2000, 1, 12);
+            string[] assignee = { "Allison Janney", "Bryan Fogel", "Richard King", "Alex Gibson" };
+            string[] reporter = { "James Ivory", "Jordan Peele", "Guillermo del Toro", "Gary Oldman" };
+            for (var i = 1; i <= count / 5; i++)
+            {
+                var name = rand.Next(0, 100);
+                TaskData Parent = new TaskData()
+                    {
+                        ID = ++x,
+                        TaskName = "Task " + x,
+                        StartDate = startDate,
+                        EndDate = startDate.AddDays(26),
+                        Duration = "20",
+                        Assignee = "Mark Bridges",
+                        Reporter = "Kobe Bryant",
+                        Progress = 50,
+                    };
+                DataCollection.Add(Parent);
+                for (var j = 1; j <= 4; j++)
+                {
+                    startDate = startDate.AddDays(j == 1 ? 0 : duration + 2);
+                    duration = 5;
+                    DataCollection.Add(new TaskData()
+                        {
+                            ID = ++x,
+                            TaskName = "Task " + x,
+                            StartDate = startDate,
+                            EndDate = startDate.AddDays(5),
+                            Duration = duration.ToString(),
+                            Assignee = assignee[j - 1],
+                            Reporter = reporter[j - 1],
+                            Progress = 50,
+                            ParentId = Parent.ID,
+                        });
+                }
+            }
+            return DataCollection;
+        }
+    }
+    public class TaskData
+    {
+        public int ID { get; set; }
+        public string TaskName { get; set; }
+        public DateTime? StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+        public string Duration { get; set; }
+        public string Assignee { get; set; }
+        public string Reporter { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+        public string Predecessor { get; set; }
+    }
+}
+```
+### How to export Gantt chart with custom timeline range
+
+The PDF export functionality allows you to export with custom timeline range of the Gantt chart to the PDF document. To specify the range, set the [RangeStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html#Syncfusion_Blazor_Gantt_PdfExportEventArgs_RangeStart) and [RangeEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html#Syncfusion_Blazor_Gantt_PdfExportEventArgs_RangeEnd) arguments within the [PdfExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfExporting) event. The `RangeStart` argument defines the start date, and the `RangeEnd` argument defines the end date of the timeline range.
+
+The following code demonstrates how to use the `RangeStart` and `RangeEnd` arguments of the PdfExporting event to export a custom timeline range of the Gantt chart to a PDF document,
+
+```cshtml
+@using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Navigations
+
+<SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="100%" AllowPdfExport="true" TreeColumnIndex="1"  Toolbar="@toolbarItem">
+    <GanttLabelSettings LeftLabel="TaskName" TValue="TaskData"></GanttLabelSettings>
+    <GanttTaskFields ParentID="ParentId" Work="Work" Id="ID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" TaskType="TaskType" Dependency="Predecessor">
+    </GanttTaskFields>
+    <GanttColumns>
+        <GanttColumn Field="ID" HeaderText="Task Id" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center"></GanttColumn>
+        <GanttColumn Field="TaskName" HeaderText="Task Name"></GanttColumn>
+        <GanttColumn Field="StartDate" HeaderText="Start Date"></GanttColumn>
+        <GanttColumn Field="EndDate" HeaderText="End Date"></GanttColumn>
+        <GanttColumn Field="Duration" HeaderText="Duration"></GanttColumn>
+        <GanttColumn Field="Assignee" HeaderText="Assignee"></GanttColumn>
+        <GanttColumn Field="Reporter" HeaderText="Reporter"></GanttColumn>
+        <GanttColumn Field="Progress" HeaderText="Progress" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center"></GanttColumn>
+    </GanttColumns>
+    <GanttEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode="EditMode.Auto" ShowDeleteConfirmDialog="true">
+    </GanttEditSettings>
+    <GanttEvents OnToolbarClick="ToolbarClickHandler" PdfExporting=" PdfExportingHandler" TValue="TaskData"></GanttEvents>
+    <GanttSplitterSettings Position="40%"></GanttSplitterSettings>
+</SfGantt>
+@code {
+    private SfGantt<TaskData> Gantt { get; set; }
+    private List<object> toolbarItem = new List<Object>() { new ToolbarItem() { Text = "PDF Export", TooltipText = "PDF Export", Id = "PdfExport", PrefixIcon = "e-pdfexport" } };
+    private List<TaskData> TaskCollection { get; set; }
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = VirtualData.GetTreeVirtualData(30);
+    }
+    public async void ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Id == "PdfExport")
+        {
+            await Gantt.ExportToPdfAsync();
+        }
+    }
+    public void PdfExportingHandler(PdfExportEventArgs args)
+    {
+        args.RangeStart = new DateTime(2000, 1, 14);
+        args.RangeEnd = new DateTime(2000, 05, 12);
+    }
+    public class VirtualData
+    {
+        public static List<TaskData> GetTreeVirtualData(int count)
+        {
+            List<TaskData> DataCollection = new List<TaskData>();
+            var x = 0;
+            int duration = 0;
+            DateTime startDate = new DateTime(2000, 1, 5);
+            DateTime endDate = new DateTime(2000, 1, 12);
+            string[] assignee = { "Allison Janney", "Bryan Fogel", "Richard King", "Alex Gibson" };
+            string[] reporter = { "James Ivory", "Jordan Peele", "Guillermo del Toro", "Gary Oldman" };
+            for (var i = 1; i <= count / 5; i++)
+            {
+                TaskData Parent = new TaskData()
+                    {
+                        ID = ++x,
+                        TaskName = "Task " + x,
+                        StartDate = startDate,
+                        EndDate = startDate.AddDays(26),
+                        Duration = "20",
+                        Assignee = "Mark Bridges",
+                        Reporter = "Kobe Bryant",
+                        Progress = 50,
+                    };
+                DataCollection.Add(Parent);
+                for (var j = 1; j <= 4; j++)
+                {
+                    startDate = startDate.AddDays(j == 1 ? 0 : duration + 2);
+                    duration = 5;
+                    DataCollection.Add(new TaskData()
+                        {
+                            ID = ++x,
+                            TaskName = "Task " + x,
+                            StartDate = startDate,
+                            EndDate = startDate.AddDays(5),
+                            Duration = duration.ToString(),
+                            Assignee = assignee[j - 1],
+                            Reporter = reporter[j - 1],
+                            Progress = 50,
+                            ParentId = Parent.ID,
+                        });
+                }
+            }
+            return DataCollection;
+        }
+    }
+    public class TaskData
+    {
+        public int ID { get; set; }
+        public string TaskName { get; set; }
+        public DateTime? StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+        public string Duration { get; set; }
+        public string Assignee { get; set; }
+        public string Reporter { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+        public string Predecessor { get; set; }
+    }
+}
+```
+
+### Export hidden columns
+
+The PDF export functionality allows you to include hidden columns from the Gantt chart in the exported PDF document. To achieve this, set the [IncludeHiddenColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_IncludeHiddenColumn) property to true within the [GanttPdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html) class. This ensures that columns not visible in the Gantt chart are included in the PDF export.
+
+The following code demonstrates how to export hidden columns in the Gantt chart to a PDF document,
+
+``` cshtml
+@using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Navigations
+
+<SfGantt @ref="Gantt" ID="GanttExport" DataSource="@TaskCollection" Height="450px" Width="900px" AllowPdfExport="true" Toolbar="toolbarItem">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Dependency="Predecessor"
+                     Duration="Duration" Progress="Progress" ParentID="ParentId">
+    </GanttTaskFields>
+    <GanttColumns>
+        <GanttColumn Field="TaskId" HeaderText="Task Id" Width="100" HeaderTextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></GanttColumn>
+        <GanttColumn Field="TaskName" HeaderText="Task Name" Visible="false"></GanttColumn>
+        <GanttColumn Field="StartDate" HeaderText="Start Date" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></GanttColumn>
+        <GanttColumn Field="EndDate" HeaderText="End Date"></GanttColumn>
+        <GanttColumn Field="Duration" HeaderText="Duration"></GanttColumn>
+        <GanttColumn Field="Predecessor" HeaderText="Dependency"></GanttColumn>
+    </GanttColumns>
+    <GanttEvents OnToolbarClick="ToolbarClickHandler" TValue="TaskData"></GanttEvents>
+</SfGantt>
+
+@code {
+    private List<TaskData> TaskCollection { get; set; }
+    private SfGantt<TaskData> Gantt;
+    private List<object> toolbarItem = new List<Object>() { new ToolbarItem() { Text = "PDF Export", TooltipText = "PDF Export", Id = "PdfExport", PrefixIcon = "e-pdfexport" } };
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+    public async void ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Id == "PdfExport")
+        {
+            GanttPdfExportProperties exportProperties = new GanttPdfExportProperties();
+            exportProperties.IncludeHiddenColumn = true;
+            await Gantt.ExportToPdfAsync(exportProperties);
+        }
+    }
+   
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+        public string Predecessor { get; set; }
+    }
+
+    public static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, ParentId = 1, Predecessor = "2" },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 , Predecessor = "3" },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 21), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, ParentId = 5 },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, ParentId = 5 },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30, ParentId = 5 }
+        };
+        return Tasks;
+    }
+}
+```
+![Blazor Gantt chart PDF Export Hidden Column](images/pdf-export-hidden-column.png)
+
+### Customize column width in exported PDF document
+
+The PDF export functionality allows you to customize the width of columns in the exported PDF document. This can be achieved using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_Width) property in the [GanttColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html) class. By specifying the width for each column, you can tailor the appearance of the exported PDF to your requirements.
+
+The following code snippet demonstrates how to customize column widths in the exported PDF document using the [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html#Syncfusion_Blazor_Gantt_GanttPdfExportProperties_Columns) property of the [GanttPdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html) class,
+
+``` cshtml
+@using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Navigations
+@using Syncfusion.PdfExport
+
+<SfGantt @ref="Gantt" ID="GanttExport" DataSource="@TaskCollection" Height="450px" Width="900px" AllowPdfExport="true" Toolbar="toolbarItem">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Dependency="Predecessor"
+                     Duration="Duration" Progress="Progress" ParentID="ParentId">
+    </GanttTaskFields>
+    <GanttColumns>
+        <GanttColumn Field="TaskId" HeaderText="Task Id" Width="100" HeaderTextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></GanttColumn>
+        <GanttColumn Field="TaskName" HeaderText="Task Name"></GanttColumn>
+        <GanttColumn Field="StartDate" HeaderText="Start Date" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></GanttColumn>
+        <GanttColumn Field="EndDate" HeaderText="End Date"></GanttColumn>
+        <GanttColumn Field="Duration" HeaderText="Duration"></GanttColumn>
+        <GanttColumn Field="Predecessor" HeaderText="Dependency"></GanttColumn>
+    </GanttColumns>
+    <GanttEvents OnToolbarClick="ToolbarClickHandler" TValue="TaskData"></GanttEvents>
+</SfGantt>
+
+@code {
+    private List<TaskData> TaskCollection { get; set; }
+    private SfGantt<TaskData> Gantt;
+    private List<object> toolbarItem = new List<Object>() { new ToolbarItem() { Text = "PDF Export", TooltipText = "PDF Export", Id = "PdfExport", PrefixIcon = "e-pdfexport" } };
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+    public async void ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Id == "PdfExport")
+        {
+            GanttPdfExportProperties exportProperties = new GanttPdfExportProperties();
+            exportProperties.Columns = new List<GanttColumn>()
+            {
+                new GanttColumn(){ Field = "TaskId", HeaderText = "Task Id", Width = "200" },
+                new GanttColumn(){ Field = "TaskName", HeaderText = "Task Name", Width = "250"},
+                new GanttColumn(){ Field = "StartDate", HeaderText = "Start Date", Width = "150"},
+            };
+            await Gantt.ExportToPdfAsync(exportProperties);
+        }
+    }
+    
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+        public string Predecessor { get; set; }
+    }
+
+    public static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, ParentId = 1, Predecessor = "2" },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 , Predecessor = "3" },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 21), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, ParentId = 5 },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, ParentId = 5 },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30, ParentId = 5 }
+        };
+        return Tasks;
+    }
+}
+```
+![Blazor Gantt Chart PDF Custom Column Width](images/pdf-custom-column-width.png)
+
+## How to export Gantt chart with specific columns
+
+### Through property
+
+The PDF export functionality enables you to export only specific columns from the Gantt chart, rather than exporting all columns by default. To achieve this, set the [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html#Syncfusion_Blazor_Gantt_GanttPdfExportProperties_Columns) property of the [GanttPdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html) class. This allows you to tailor the exported PDF to include only the columns that are relevant to your needs.
+
+The following code snippet demonstrates how to configure the `Columns` property to export specific columns from the Gantt chart to a PDF document:
 
 ``` cshtml
 @using Syncfusion.Blazor.Gantt
@@ -559,83 +938,14 @@ The following code demonstrates how to export the Gantt chart to a PDF with spec
 }
 ```
 
-### Export hidden columns
-The PDF export functionality includes an option to export hidden columns from the Gantt chart. By setting the `IncludeHiddenColumn` property to true in the `GanttPdfExportProperties` class, you can ensure that even columns not visible in the Gantt chart will be included in the exported PDF document.
+![Blazor Gantt chart PDF Custom Column Through Property](images/pdf-custom-column-property.png)
 
-The following code demonstrates how to export hidden columns in the Gantt chart to a PDF document,
 
-```cshtml
-@using Syncfusion.Blazor.Gantt
-@using Syncfusion.Blazor.Navigations
+### Through event
 
-<SfGantt @ref="Gantt" ID="GanttExport" DataSource="@TaskCollection" Height="450px" Width="900px" AllowPdfExport="true" Toolbar="toolbarItem">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Dependency="Predecessor"
-                     Duration="Duration" Progress="Progress" ParentID="ParentId">
-    </GanttTaskFields>
-    <GanttColumns>
-        <GanttColumn Field="TaskId" HeaderText="Task Id" Width="100" HeaderTextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></GanttColumn>
-        <GanttColumn Field="TaskName" HeaderText="Task Name" Visible="false"></GanttColumn>
-        <GanttColumn Field="StartDate" HeaderText="Start Date" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></GanttColumn>
-        <GanttColumn Field="EndDate" HeaderText="End Date"></GanttColumn>
-        <GanttColumn Field="Duration" HeaderText="Duration"></GanttColumn>
-        <GanttColumn Field="Predecessor" HeaderText="Dependency"></GanttColumn>
-    </GanttColumns>
-    <GanttEvents OnToolbarClick="ToolbarClickHandler" TValue="TaskData"></GanttEvents>
-</SfGantt>
+The PDF export functionality allows you to export only specific columns from the Gantt chart, rather than exporting all columns by default. This can be achieved by using the `Columns` argument in the [PdfExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfExporting) event.
 
-@code {
-    private List<TaskData> TaskCollection { get; set; }
-    private SfGantt<TaskData> Gantt;
-    private List<object> toolbarItem = new List<Object>() { new ToolbarItem() { Text = "PDF Export", TooltipText = "PDF Export", Id = "PdfExport", PrefixIcon = "e-pdfexport" } };
-    protected override void OnInitialized()
-    {
-        this.TaskCollection = GetTaskCollection();
-    }
-    public async void ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
-    {
-        if (args.Item.Id == "PdfExport")
-        {
-            GanttPdfExportProperties exportProperties = new GanttPdfExportProperties();
-            exportProperties.IncludeHiddenColumn = true;
-            await Gantt.ExportToPdfAsync(exportProperties);
-        }
-    }
-   
-    public class TaskData
-    {
-        public int TaskId { get; set; }
-        public string TaskName { get; set; }
-        public DateTime StartDate { get; set; }
-        public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
-        public int Progress { get; set; }
-        public int? ParentId { get; set; }
-        public string Predecessor { get; set; }
-    }
-
-    public static List<TaskData> GetTaskCollection()
-    {
-        List<TaskData> Tasks = new List<TaskData>()
-        {
-            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), },
-            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
-            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, ParentId = 1, Predecessor = "2" },
-            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 , Predecessor = "3" },
-            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 21), },
-            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, ParentId = 5 },
-            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, ParentId = 5 },
-            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30, ParentId = 5 }
-        };
-        return Tasks;
-    }
-}
-```
-
-### Customize column width in exported PDF document
-
-The PDF export functionality allows you to customize columns width in the exported PDF document. This can be achieved using the `Width` property in the `GanttColumn` class. By specifying columns and their respective widths, you can tailor the PDF export to meet your specific needs.
-
-The following code demonstrates how to customize the columns and set their widths in the exported PDF document,
+The following code demonstrates how to use the `PdfExporting` event to export specific columns of the Gantt chart to a PDF document,
 
 ``` cshtml
 @using Syncfusion.Blazor.Gantt
@@ -655,7 +965,7 @@ The following code demonstrates how to customize the columns and set their width
         <GanttColumn Field="Duration" HeaderText="Duration"></GanttColumn>
         <GanttColumn Field="Predecessor" HeaderText="Dependency"></GanttColumn>
     </GanttColumns>
-    <GanttEvents OnToolbarClick="ToolbarClickHandler" TValue="TaskData"></GanttEvents>
+    <GanttEvents OnToolbarClick="ToolbarClickHandler" PdfExporting=" PdfExportingHandler" TValue="TaskData"></GanttEvents>
 </SfGantt>
 
 @code {
@@ -670,15 +980,17 @@ The following code demonstrates how to customize the columns and set their width
     {
         if (args.Item.Id == "PdfExport")
         {
-            GanttPdfExportProperties exportProperties = new GanttPdfExportProperties();
-            exportProperties.Columns = new List<GanttColumn>()
+            await Gantt.ExportToPdfAsync();
+        }
+    }
+    public void PdfExportingHandler(PdfExportEventArgs args)
+    {
+        args.Columns = new List<GanttColumn>()
             {
-                new GanttColumn(){ Field = "TaskId", HeaderText = "Task Id", Width = "200" },
-                new GanttColumn(){ Field = "TaskName", HeaderText = "Task Name", Width = "250"},
+                new GanttColumn(){ Field = "TaskId", HeaderText = "Task Id", Width = "100" },
+                new GanttColumn(){ Field = "TaskName", HeaderText = "Task Name", Width = "200"},
                 new GanttColumn(){ Field = "StartDate", HeaderText = "Start Date", Width = "150"},
             };
-            await Gantt.ExportToPdfAsync(exportProperties);
-        }
     }
     
     public class TaskData
@@ -711,22 +1023,23 @@ The following code demonstrates how to customize the columns and set their width
 }
 ```
 
+![Blazor Gantt chart PDF Custom Column Through Event](images/pdf-custom-column-property.png)
+
+
 ## Customizing taskbar appearance
 
 ### Through property
 
-The PDF export functionality allows you to customize taskbar appearance to a PDF document with customized colors using the `TaskbarColor` property in the `GanttPdfExportProperties` class. This property enables you to format various types of taskbars, including parent taskbars, child taskbars, milestones, critical paths, manual taskbars, and baselines.
+The PDF export functionality allows you to customize the appearance of taskbars in the exported PDF document using the [TaskbarColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfGanttStyle.html#Syncfusion_Blazor_Gantt_PdfGanttStyle_TaskbarColor) property in the [GanttPdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html) class. This property enables you to set colors for various types of taskbars, including:
 
-You can use the `TaskbarColor` property to set colors for the following taskbar types:
+* Parent Taskbars
+* Child Taskbars
+* Milestones
+* Critical Paths
+* Manual Taskbars
+* Baselines
 
-* Parent Taskbar Color
-* Child Taskbar Color
-* Milestone Color
-* Critical Path Color
-* Manual Taskbar Color
-* Baseline Color
-
-The following code demonstrates how to customize the colors of different taskbars in the exported PDF document
+By configuring the TaskbarColor property, you can format these taskbars to match your desired color scheme. The following code snippet demonstrates how to use the `TaskbarColor` property to customize the colors of different taskbars in the exported PDF document,
 
 ``` cshtml
 @using Syncfusion.Blazor.Gantt
@@ -791,7 +1104,7 @@ The following code demonstrates how to customize the colors of different taskbar
 
     public static List<TaskData> GetTaskCollection()
     {
-        List<TaskData> Tasks = new List<TaskData>()s
+        List<TaskData> Tasks = new List<TaskData>()
         {
             new TaskData() { TaskId = 1, TaskName = "Project initiation", BaselineStartDate = new DateTime(2021, 04, 02), BaselineEndDate = new DateTime(2021, 04, 04), StartDate = new DateTime(2021, 04, 02), EndDate = new DateTime(2021, 04, 06) },
             new TaskData() { TaskId = 2, TaskName = "Identify site location", StartDate = new DateTime(2021, 04, 02), EndDate = new DateTime(2021, 04, 02), Duration = "0", BaselineStartDate = new DateTime(2021, 04, 02), BaselineEndDate = new DateTime(2021, 04, 02), Progress = 30, ParentId = 1 },
@@ -806,12 +1119,13 @@ The following code demonstrates how to customize the colors of different taskbar
     }
 }
 ```
+![Blazor Gantt Chart PDF Custom Taskbar Appearance Through Property ](images/pdf-custom-taskbar-property.png)
 
 ### Through event 
 
-The PDF export functionality allows you to customize taskbar appearance to a PDF document using the [PdfQueryTaskbarInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfQueryTaskbarInfo) event. This event provides the flexibility to customize and format the appearance of taskbars, including parent taskbars, individual taskbars, and milestone templates.
+The PDF export functionality allows you to customize the appearance of taskbars in the exported PDF document using the [PdfQueryTaskbarInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfQueryTaskbarInfo) event. This event provides the flexibility to customize and format the appearance of taskbars, including parent taskbars, individual taskbars, and milestone templates.
 
-The following sample code demonstrates how to use the `PdfQueryTaskbarInfo` event to customize the appearance of taskbars in the exported PDF document,
+The following code snippet demonstrates how to use the `PdfQueryTaskbarInfo` event to customize the appearance of taskbars in the exported PDF document,
 
 ``` cshtml
 @using Syncfusion.Blazor.Gantt
@@ -893,3 +1207,17 @@ The following sample code demonstrates how to use the `PdfQueryTaskbarInfo` even
     }
 }
 ```
+![Blazor Gantt Chart PDF Custom Taskbar Appearance Through Event ](images/pdf-custom-taskbar-event.png)
+
+
+
+## Events triggered during exporting
+
+When exporting the Gantt chart to a PDF document, a series of events are triggered in a specific order, allowing for advanced customization of the export process. Understanding this flow is essential to control and modify the exported content effectively. Below is the flow of events that occur during PDF export in the Gantt chart:
+
+* [PdfExporting](https://blazor.syncfusion.com/documentation/gantt-chart/events)
+* [PdfQueryTimelineCellInfo](https://blazor.syncfusion.com/documentation/gantt-chart/events)
+* [PdfColumnHeaderQueryCellInfo](https://blazor.syncfusion.com/documentation/gantt-chart/events)
+* [PdfQueryCellInfo](https://blazor.syncfusion.com/documentation/gantt-chart/events)
+* [PdfQueryTaskbarInfo](https://blazor.syncfusion.com/documentation/gantt-chart/events)
+* [PdfExported](https://blazor.syncfusion.com/documentation/gantt-chart/events)
