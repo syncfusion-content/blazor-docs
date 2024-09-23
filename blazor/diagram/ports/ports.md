@@ -346,7 +346,7 @@ protected override void OnInitialized()
         diagram.BeginUpdate();
         nodes[0].Ports[0].Offset.X = 1;
         nodes[0].Ports[0].Offset.Y = 1;
-        await diagram.EndUpdate();
+        await diagram.EndUpdateAsync();
     }
 }
 ```
