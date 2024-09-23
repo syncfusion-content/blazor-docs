@@ -656,3 +656,32 @@ In the following example, you can use the [`DrawImageAsync`](https://help.syncfu
 ```
 
 ![Blazor Image Editor with Add Image in an image](./images/blazor-image-editor-add-image.png)
+
+### Customize Default Stroke Color for Shapes 
+
+We provide default settings for stroke color, stroke width, fill color, and other customizations. If users wish to modify only the default options while preserving their previously selected customizations, they can do so by utilizing the [`shapeChanging`](https://ej2.syncfusion.com/javascript/documentation/api/image-editor/#shapechanging) event. Within this event, users can update the values in the `currentShapeSettings` object to apply their own preferences instead of the defaults. This approach allows conditional updates to the `currentShapeSettings`, ensuring that only the desired defaults are changed while maintaining the other settings.
+
+```cshtml
+@using Syncfusion.Blazor.ImageEditor
+
+<SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="400">
+    <ImageEditorEvents Created="CreatedAsync" ShapeChanging="ShapeChangingAsync"></ImageEditorEvents>
+</SfImageEditor> 
+
+@code {
+    SfImageEditor ImageEditor; 
+    private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>() { }; 
+
+    private async void CreatedAsync() 
+    { 
+        await ImageEditor.OpenAsync("nature.png"); 
+    }
+
+    private async void ShapeChangingAsync(ShapeChangingEventArgs args)
+    {
+        if (args.action === "insert" && args.currentShapeSettings?.type === "FreehandDraw") {
+            args.currentShapeSettings.strokeColor = "red";
+        }
+    }
+}
+```
