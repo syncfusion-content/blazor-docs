@@ -75,7 +75,7 @@ The PDF export feature enables exporting Gantt chart data to a PDF document. To 
 The PDF export functionality in the Syncfusion Gantt Chart provides extensive customization options through the [GanttPdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html) class. By configuring the properties within this class, you can control the layout, format, and content of the exported PDF. This customization ensures that the PDF accurately represents the Gantt chart's structure and allows for tailored exports.
 
 ### Customize file name for exported document
-The PDF export functionality in the Syncfusion Gantt Chart allows you to customize the file name of the exported document. By configuring the `FileName` property within the [GanttPdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html) class, you can assign a specific name to the generated PDF. This is especially useful for keeping your exported documents organized and easily identifiable.
+The PDF export functionality in the Syncfusion Gantt Chart allows you to customize the file name of the exported document. By configuring the [FileName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_FileName) property within the [GanttPdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html) class, you can assign a specific name to the generated PDF. This is especially useful for keeping your exported documents organized and easily identifiable.
 
 In this example, the exported PDF will be saved as `ProjectSchedule.pdf`.
 
@@ -480,10 +480,11 @@ The following code demonstrates how to change the page size to A4 for the export
 
 ### Export current view records
 
-The PDF export functionality allows you to export records are in current view of the Gantt chart to the PDF document by setting the [IsCurrentViewExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html#Syncfusion_Blazor_Gantt_PdfExportEventArgs_IsCurrentViewExport) argument in the [PdfExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfExporting) event to true, using the [PdfExportEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html#Syncfusion_Blazor_Gantt_PdfExportEventArgs) class.
+The PDF export functionality allows you to export only the records that are currently in view on the Gantt chart to a PDF document. This can be achieved by enabling the [IsCurrentViewExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html#Syncfusion_Blazor_Gantt_PdfExportEventArgs_IsCurrentViewExport) boolean argument in the [PdfExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfExporting) event.
+
+N> Exporting current view records is only applicable when the virtualization feature is enabled, and it does not retain the state of collapsed rows during export.
 
 The following code demonstrates how to use the `PdfExporting` event to export current view data of the Gantt chart to a PDF document,
-
 ```cshtml
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Navigations
@@ -591,7 +592,7 @@ The following code demonstrates how to use the `PdfExporting` event to export cu
 ```
 ### How to export Gantt chart with custom timeline range
 
-The PDF export functionality allows you to export a custom timeline range of the Gantt chart to the PDF document. To specify the range, set the [RangeStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html#Syncfusion_Blazor_Gantt_PdfExportEventArgs_RangeStart) and [RangeEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html#Syncfusion_Blazor_Gantt_PdfExportEventArgs_RangeEnd) arguments within the [PdfExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfExporting) event. The `RangeStart` argument defines the start date, and the `RangeEnd` argument defines the end date of the timeline range. Both arguments are part of the [PdfExportEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html#Syncfusion_Blazor_Gantt_PdfExportEventArgs) class used in the `PdfExporting` event.
+The PDF export functionality allows you to export with custom timeline range of the Gantt chart to the PDF document. To specify the range, set the [RangeStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html#Syncfusion_Blazor_Gantt_PdfExportEventArgs_RangeStart) and [RangeEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html#Syncfusion_Blazor_Gantt_PdfExportEventArgs_RangeEnd) arguments within the [PdfExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfExporting) event. The `RangeStart` argument defines the start date, and the `RangeEnd` argument defines the end date of the timeline range. Both arguments are part of the [PdfExportEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.PdfExportEventArgs.html#Syncfusion_Blazor_Gantt_PdfExportEventArgs) class used in the `PdfExporting` event.
 
 The following code demonstrates how to use the `RangeStart` and `RangeEnd` arguments of the PdfExportEventArgs class within the PdfExporting event to export a custom timeline range of the Gantt chart to a PDF document,
 
@@ -1208,81 +1209,15 @@ The following code snippet demonstrates how to use the `PdfQueryTaskbarInfo` eve
 ```
 ![Blazor Gantt Chart PDF Custom Taskbar Appearance Through Event ](images/pdf-custom-taskbar-event.png)
 
-## How to customize timeline cell in exported PDF
 
-The PDF export functionality supports advanced customization of Gantt chart timeline cells, including the addition of images, background colors, and custom text. This customization can be achieved using the [PdfQueryTimelineCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfQueryTimelineCellInfo) event. Handling this event allows you to specify how individual timeline cells in the Gantt chart are rendered in the exported PDF document.
 
-The following code snippet demonstrates how to use the `PdfQueryTimelineCellInfo` event to add custom text to the Gantt chart timeline cells in the exported PDF document:
+## Events triggered during exporting
 
-```cshtml
-@using Syncfusion.Blazor.Gantt
-@using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.Navigations
-@using Syncfusion.PdfExport
+When exporting the Gantt chart to a PDF document, a series of events are triggered in a specific order, allowing for advanced customization of the export process. Understanding this flow is essential to control and modify the exported content effectively. Below is the flow of events that occur during PDF export in the Gantt chart:
 
-<SfGantt @ref="Gantt" ID="GanttExport" DataSource="@TaskCollection" Height="450px" Width="900px" AllowPdfExport="true" Toolbar="toolbarItem">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Dependency="Predecessor"
-                     Duration="Duration" Progress="Progress" ParentID="ParentId">
-    </GanttTaskFields>
-    <GanttColumns>
-        <GanttColumn Field="TaskId" HeaderText="Task Id" Width="100" HeaderTextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></GanttColumn>
-        <GanttColumn Field="TaskName" HeaderText="Task Name"></GanttColumn>
-        <GanttColumn Field="StartDate" HeaderText="Start Date" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></GanttColumn>
-        <GanttColumn Field="EndDate" HeaderText="End Date"></GanttColumn>
-        <GanttColumn Field="Duration" HeaderText="Duration"></GanttColumn>
-        <GanttColumn Field="Predecessor" HeaderText="Dependency"></GanttColumn>
-    </GanttColumns>
-    <GanttEvents OnToolbarClick="ToolbarClickHandler" PdfQueryTimelineCellInfo="PPdfQueryTimelineCellInfoHandler" TValue="TaskData"></GanttEvents>
-</SfGantt>
-
-@code {
-    private List<TaskData> TaskCollection { get; set; }
-    private SfGantt<TaskData> Gantt;
-    private List<object> toolbarItem = new List<Object>() { new ToolbarItem() { Text = "PDF Export", TooltipText = "PDF Export", Id = "PdfExport", PrefixIcon = "e-pdfexport" } };
-    protected override void OnInitialized()
-    {
-        this.TaskCollection = GetTaskCollection();
-    }
-    public async void ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
-    {
-        if (args.Item.Id == "PdfExport")
-        {
-            await Gantt.ExportToPdfAsync();
-        }
-    }
-    public void PPdfQueryTimelineCellInfoHandler(Syncfusion.Blazor.Gantt.PdfQueryTimelineCellInfoEventArgs args)
-    {
-        if (args.Value == "S")
-        {
-            args.Value = "O";
-        }
-    }
-    public class TaskData
-    {
-        public int TaskId { get; set; }
-        public string TaskName { get; set; }
-        public DateTime StartDate { get; set; }
-        public DateTime? EndDate { get; set; }
-        public string Duration { get; set; }
-        public int Progress { get; set; }
-        public int? ParentId { get; set; }
-        public string Predecessor { get; set; }
-    }
-
-    public static List<TaskData> GetTaskCollection()
-    {
-        List<TaskData> Tasks = new List<TaskData>()
-        {
-            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), },
-            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
-            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, ParentId = 1, Predecessor = "2" },
-            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 , Predecessor = "3" },
-            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 21), },
-            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, ParentId = 5 },
-            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, ParentId = 5 },
-            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30, ParentId = 5 }
-        };
-        return Tasks;
-    }
-}
-```
+* [PdfExporting](https://blazor.syncfusion.com/documentation/gantt-chart/events)
+* [PdfQueryTimelineCellInfo](https://blazor.syncfusion.com/documentation/gantt-chart/events)
+* [PdfColumnHeaderQueryCellInfo](https://blazor.syncfusion.com/documentation/gantt-chart/events)
+* [PdfQueryCellInfo](https://blazor.syncfusion.com/documentation/gantt-chart/events)
+* [PdfQueryTaskbarInfo](https://blazor.syncfusion.com/documentation/gantt-chart/events)
+* [PdfExported](https://blazor.syncfusion.com/documentation/gantt-chart/events)
