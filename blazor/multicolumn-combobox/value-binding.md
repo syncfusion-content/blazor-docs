@@ -78,7 +78,7 @@ The following example illustrates the use of `string` as the TValue. Therefore, 
 
 The `TItem` property can be modified dynamically by specifying the datasource type of the MultiColumn ComboBox component using the `@typeparam` directive. The sample demonstration below illustrates how to dynamically change the `TItem` with various types of datasources.
 
-### Creating generic combobox component
+### Creating generic MultiColumn Combobox component
 
 First, create a `MultiColumnComboBox.razor` file as a parent component in the `/Pages` folder. Also, add a Parameter property for a List as `<TItem>` and `TValue`.
 
