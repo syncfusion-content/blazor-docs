@@ -54,9 +54,7 @@ In the example provided, the `Name` column is linked to the [ValueField](https:/
 
 {% include_relative code-snippet/value-binding/object-binding.razor %}
 
-{% endhighlight %}
-
-![Blazor MultiColumn ComboBox with object values](./images/value-binding/blazor_combobox_object-binding.png) -->
+{% endhighlight %} -->
 
 ## Show or hide clear button
 

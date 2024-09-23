@@ -107,9 +107,7 @@ The [Autofill]() property determines if the component's input field will automat
 
 {% include_relative code-snippet/selection/auto-fill.razor %}
 
-{% endhighlight %} 
-
-![Blazor ComboBox with Autofill property](./images/selection/blazor_combobox_with-autofill-property.gif) -->
+{% endhighlight %} -->
 
 <!-- ## Get selected item by value
 
@@ -141,9 +139,7 @@ To programmatically reset the value of the MultiColumn ComboBox, you can utilize
 
 {% include_relative code-snippet/selection/programmatically-clear-value.razor %}
 
-{% endhighlight %}
-
-![Blazor ComboBox with programatically clear value](./images/selection/blazor_combobox_with-programmatically-clear-value.gif) -->
+{% endhighlight %} -->
 
 ## Prevent reload on form submit
 
