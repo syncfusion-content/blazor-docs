@@ -29,7 +29,9 @@ The following example demonstrates how to change the page size of a MultiColumn 
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVTtshJAItZMYUX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVzXkBAfiXjxboe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+![Blazor MultiColumn ComboBox with Page size](./images/paging/blazor_multicolumn_combobox_page_size.gif)
 
 ### Change the page count
 
@@ -45,4 +47,6 @@ The following example demonstrates how to change the page count of a Grid using 
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVpNsrfUyIpaGxQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtrTtOrqpWjngqOp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+![Blazor MultiColumn ComboBox with Page count](./images/paging/blazor_multicolumn_combobox_page_count.gif)

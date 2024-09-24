@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Placeholder/FloatLabel in Blazor MultiColumn ComboBox Component | Syncfusion
+title: Placeholder/FloatLabel in Blazor MultiColumn ComboBox | Syncfusion
 description: Checkout and learn here all about Placeholder and FloatLabel in Syncfusion Blazor MultiColumn ComboBox component and more.
 platform: Blazor
 control: MultiColumn ComboBox
@@ -19,7 +19,7 @@ Utilize the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVpXEWYAYcFnftW?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVTNaLAqYKlJFoq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor ComboBox with placeholder](./images/placeholder-and-floatlabel/blazor_combobox_placeholder.png)
 
@@ -43,7 +43,7 @@ The mandatory indicator `*` can be applied to the placeholder by targeting its C
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhfXuWkpfiTqsiM?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBfDurAqkybkRoR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor ComboBox with mandatory indicator placeholder](./images/placeholder-and-floatlabel/blazor_combobox_placeholder-with-mandatory.png) 
 
@@ -67,7 +67,7 @@ The `FloatLabelType` as  `Auto` is demonstrated in the following code sample.
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLJtasupZNuHICO?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDrzXarAUYxRzqxe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor ComboBox with float label](./images/placeholder-and-floatlabel/blazor_combobox_floatlabel.gif)
 
