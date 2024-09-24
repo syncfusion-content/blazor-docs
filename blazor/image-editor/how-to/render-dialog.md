@@ -27,12 +27,10 @@ Rendering the Image Editor in a dialog involves displaying the image editor comp
     <DialogTemplates>
         <Content>
                 <div class="dialogContent">
-                    @if (isOpened)
-                    {
-                        <SfImageEditor @ref="ImageEditor" Height="400">
-                            <ImageEditorEvents Created="Created"></ImageEditorEvents>
+                   
+                        <SfImageEditor @ref="ImageEditor" Height="400px">
+                            <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
                         </SfImageEditor>
-                    }
                 </div>
         </Content>
     </DialogTemplates>
@@ -40,8 +38,8 @@ Rendering the Image Editor in a dialog involves displaying the image editor comp
 </SfDialog>
 
 @code {
-    private bool Visibility { get; set; } = true;
-    private bool ShowButton { get; set; } = false;
+    private bool Visibility { get; set; } = false;
+    private bool ShowButton { get; set; } = true;
     SfImageEditor ImageEditor; 
 
     private async void OpenDialogAsync() 

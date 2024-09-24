@@ -149,6 +149,42 @@ User can easily open images in the Image Editor from Blob storage. This method a
 
 User can easily open images in the Image Editor using a file uploader. This method allows users to upload an image file from their device and load it directly into the editor. Once the image is selected through the file uploader, pass the file to the open method, and the image will be seamlessly loaded into the editor.
 
+```cshtml
+@using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.ImageEditor
+@using System.IO
+
+<div class="e-img-editor-sample">
+    <SfUploader AllowedExtensions=".jpg,.jpeg,.png" AutoUpload="false" @ref="uploader" Selected="@OnImageSelected">
+    </SfUploader>
+    <SfImageEditor @ref="imageEditor" Height="350px"></SfImageEditor>
+</div>
+
+@code {
+    private SfUploader uploader;
+    private SfImageEditor imageEditor;
+
+    private async Task OnImageSelected(UploadChangeEventArgs args)
+    {
+        if (args.Files != null && args.Files.Count > 0)
+        {
+            var file = args.Files[0];
+            if (file != null)
+            {
+                using (var memoryStream = new MemoryStream())
+                {
+                    await file.File.OpenReadStream(long.MaxValue).CopyToAsync(memoryStream);
+                    string base64String = Convert.ToBase64String(memoryStream.ToArray());
+                    string dataUrl = "data:image/png;base64," + base64String;
+                    await imageEditor.OpenAsync(dataUrl);
+                }
+            }
+        }
+    }
+}
+```
+
+
 ### Open and image from File Manager 
 
 User can easily open images in the Image Editor using the File Manager. This method allows you to browse and select an image file directly from the File Manager and load it into the editor. Once the image is selected, pass the file to the open method, and the image will be seamlessly loaded into the editor.
