@@ -82,6 +82,8 @@ Users can easily open images in the Image Editor using a Base64-encoded string. 
 }
 ```
 
+![Blazor Image Editor with Opening an base 64 image](./images/blazor-image-editor-base-image.png)
+
 ### Open an image from Blob storage
 
 User can easily open images in the Image Editor from Blob storage. This method allows you to load images directly from Blob storage, ensuring seamless integration and flexibility in your application. Simply retrieve the image Blob from storage and pass it to the open method, and the image will be loaded into the editor. 
@@ -144,6 +146,7 @@ User can easily open images in the Image Editor from Blob storage. This method a
     }
 }
 ```
+![Blazor Image Editor with Opening an blob image](./images/blazor-image-editor-save-blob.png)
 
 ### Open an image from file uploader 
 
@@ -184,12 +187,11 @@ User can easily open images in the Image Editor using a file uploader. This meth
 }
 ```
 
-
 ### Open and image from File Manager 
 
 User can easily open images in the Image Editor using the File Manager. This method allows you to browse and select an image file directly from the File Manager and load it into the editor. Once the image is selected, pass the file to the open method, and the image will be seamlessly loaded into the editor.
 
-### Open an image from Treeview 
+### Open an image from Treeview
 
 Users can easily open images in the Syncfusion Image Editor by dragging and dropping nodes from a tree view. This feature allows users to select an image from a tile view interface and load it into the editor. When a node is dropped into the image editor, you can pass the file to the editor’s open method to seamlessly load the image.
 
@@ -219,6 +221,7 @@ You can utilize the ‘[`FileOpenEventArgs`](https://help.syncfusion.com/cr/blaz
     }
 }
 ```
+![Blazor Image Editor with Adding Watermark](./images/blazor-image-editor-add-watermark.png)
 
 ### Save as image
 

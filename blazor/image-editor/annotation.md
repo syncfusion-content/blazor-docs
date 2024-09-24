@@ -685,3 +685,4 @@ We provide default settings for stroke color, stroke width, fill color, and othe
     }
 }
 ```
+![Blazor Image Editor with Default Color](./images/blazor-image-editor-default-stroke-color.png)
