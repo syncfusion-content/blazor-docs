@@ -666,12 +666,12 @@ The following code example illustrates how to set the open mode to the tooltip f
     //Method to show tooltip
     private void show()
     {
-        diagram.ShowTooltip(diagram.Nodes[2] as NodeBase);
+        diagram.ShowTooltipAsync(diagram.Nodes[2] as NodeBase);
     }
     //Method to hide tooltip
     private void hide()
     {
-        diagram.HideTooltip(diagram.Nodes[2] as NodeBase);
+        diagram.HideTooltipAsync(diagram.Nodes[2] as NodeBase);
     }
 }
 ```
@@ -739,12 +739,12 @@ The following code example illustrates how to set the open mode to the tooltip f
     //Method to show tooltip
     private void show()
     {
-        diagram.ShowTooltip(diagram.Connectors[2] as NodeBase);
+        diagram.ShowTooltipAsync(diagram.Connectors[2] as NodeBase);
     }
     //Method to hide tooltip
     private void hide()
     {
-        diagram.HideTooltip(diagram.Connectors[2] as NodeBase);
+        diagram.HideTooltipAsync(diagram.Connectors[2] as NodeBase);
     }
 }
 ```
@@ -833,7 +833,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 For more information about tooltip, refer to [Tooltip](https://blazor.syncfusion.com/documentation/diagram/tool-tip)
 
-### How to set tooltip for user handles
+## How to set tooltip for user handles
 
 The Diagram component supports displaying tooltips when the mouse hovers over any [UserHandle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectorConstraints.html#Syncfusion_Blazor_Diagram_SelectorConstraints_UserHandle). To achieve this, you need to configure the `Tooltip` property of the `UserHandle` to include the tooltip [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Content) and set its [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Position) appropriately. This configuration ensures that relevant information is displayed at the correct position relative to the handle when users hover over it.
 
@@ -943,7 +943,7 @@ The following code example demonstrates how to set the `IsSticky` property to `t
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandleIsSticky/)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle/UserHandleIsSticky/)
 
 ![ToolTip During hover the ports with Stikcy Mode](images/UserHandleIsSticky.png)
 
@@ -991,7 +991,7 @@ The diagram supports displaying tooltips when the mouse hovers over any [FixedUs
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle/FixedUserHandleTooltip)
 ![Tooltip for UserHandle](images/FixedUserHandleTooltip.gif)
 
-## How to set sticky tooltip for fixed user handles
+### How to set sticky tooltip for fixed user handles
 
 With this mode set to `true`, Tooltips for fixed user handles can be made to show up on the screen as long as the close icon is pressed. In this mode, close icon is attached to the Tooltip located at the top right corner. This mode can be enabled or disabled using the `IsSticky` property in tooltip. By default, the value of the IsSticky property is set to false.
 
@@ -1113,9 +1113,9 @@ By default, tooltips are not displayed. To display a tooltip, you must explicitl
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ActionofPorts/TooltipForSpecificPort)
 
-![ToolTip During hover the port](../images/PortTooltip.gif )
+![ToolTip During hover the port](./images/PortTooltip.gif )
 
-## How to set sticky tooltip for ports
+### How to set sticky tooltip for ports
 
 You can configure tooltips for ports to remain visible until the close icon is pressed. This feature is known as a "sticky" tooltip. When sticky mode is enabled, a close icon appears at the top right corner of the tooltip, allowing users to manually close it.
 
@@ -1172,6 +1172,6 @@ The following code example demonstrates how to set the `IsSticky` property to `t
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip/)
 
-![ToolTip During hover the ports with Stikcy Mode](../images/PortIsSticky.png)
+![ToolTip During hover the ports with Stikcy Mode](./images/PortIsSticky.png)
 
 

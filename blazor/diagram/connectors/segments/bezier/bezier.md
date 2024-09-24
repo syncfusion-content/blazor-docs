@@ -244,7 +244,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Avoid overlapping with bezier](../../../images/bezierOverlap.png)
 
-### How to customize Bezier Segment Thumb Shape 
+## How to customize Bezier Segment Thumb Shape 
 
 The Bezier connector can have multiple segments between the source and target points. By default, these segments are rendered as circles, but this can be customized either globally or for individual connectors using the [SegmentThumbSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbSettings.html) class.
 

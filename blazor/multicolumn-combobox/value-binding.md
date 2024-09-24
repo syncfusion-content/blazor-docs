@@ -26,7 +26,7 @@ Value binding can be accomplished using the [@bind-Value](https://help.syncfusio
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBzZYWkLFuRrUhb?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBJXYhzMFjWdrGx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor MultiColumn ComboBox with Bind Value](./images/value-binding/blazor-combobox-bind-value.png)
 
@@ -40,6 +40,7 @@ The Index value binding is accomplished through the [@bind-Index]() attribute, w
 
 {% endhighlight %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrJXOrUfZAICmMF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor MultiColumn ComboBox with Index Value](./images/value-binding/blazor_combobox_index-value.png)
 
@@ -53,9 +54,7 @@ In the example provided, the `Name` column is linked to the [ValueField](https:/
 
 {% include_relative code-snippet/value-binding/object-binding.razor %}
 
-{% endhighlight %}
-
-![Blazor MultiColumn ComboBox with object values](./images/value-binding/blazor_combobox_object-binding.png) -->
+{% endhighlight %} -->
 
 ## Show or hide clear button
 
@@ -71,13 +70,15 @@ The following example illustrates the use of `string` as the TValue. Therefore, 
 
 {% endhighlight %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBftkrKpNAYFijk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Blazor ComboBox with clear button](./images/value-binding/blazor_combobox_show-hide-clear-button.png)
 
 ## Dynamically change TItem
 
 The `TItem` property can be modified dynamically by specifying the datasource type of the MultiColumn ComboBox component using the `@typeparam` directive. The sample demonstration below illustrates how to dynamically change the `TItem` with various types of datasources.
 
-### Creating generic combobox component
+### Creating generic MultiColumn Combobox component
 
 First, create a `MultiColumnComboBox.razor` file as a parent component in the `/Pages` folder. Also, add a Parameter property for a List as `<TItem>` and `TValue`.
 
@@ -109,7 +110,7 @@ First, create a `MultiColumnComboBox.razor` file as a parent component in the `/
 
 Then, render the Generic MultiColumn ComboBox component with the required `TValue` and `TItem` in the respective razor components. 
 
-Here, the MultMultiColumn ComboBox component with TValue as an int nullable type in the `/Index.razor` file.
+Here, the MultiColumn ComboBox component with TValue as an int nullable type in the `/Index.razor` file.
 
 **[Index.razor]**
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Placeholder/FloatLabel in Blazor MultiColumn ComboBox Component | Syncfusion
+title: Placeholder/FloatLabel in Blazor MultiColumn ComboBox | Syncfusion
 description: Checkout and learn here all about Placeholder and FloatLabel in Syncfusion Blazor MultiColumn ComboBox component and more.
 platform: Blazor
 control: MultiColumn ComboBox
@@ -19,6 +19,8 @@ Utilize the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 {% endhighlight %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVTNaLAqYKlJFoq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Blazor ComboBox with placeholder](./images/placeholder-and-floatlabel/blazor_combobox_placeholder.png)
 
 <!-- ## Color of the placeholder text
@@ -29,9 +31,7 @@ You can change the color of the placeholder by targeting its CSS class `input.e-
 
 {% include_relative code-snippet/placeholder-and-floatlabel/placeholder-with-color.razor %}
 
-{% endhighlight %}
-
-![Blazor ComboBox with color placeholder](./images/placeholder-and-floatlabel/blazor_combobox_placeholder-with-color.png)  -->
+{% endhighlight %} -->
 
  ## Add mandatory indicator using placeholder
 
@@ -43,9 +43,11 @@ The mandatory indicator `*` can be applied to the placeholder by targeting its C
 
 {% endhighlight %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBfDurAqkybkRoR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Blazor ComboBox with mandatory indicator placeholder](./images/placeholder-and-floatlabel/blazor_combobox_placeholder-with-mandatory.png) 
 
-## FloatLabel
+## Floating label
 
 Use the [FloatLabelType]() property to define how the floating label behaves in the DropDownList, allowing the `Placeholder` text to float above the TextBox. This functionality is relevant only when a `Placeholder` is present. The `FloatLabelType` depends on the `Placeholder` setting, with its default value being `Never`.
 
@@ -65,6 +67,8 @@ The `FloatLabelType` as  `Auto` is demonstrated in the following code sample.
 
 {% endhighlight %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDrzXarAUYxRzqxe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ![Blazor ComboBox with float label](./images/placeholder-and-floatlabel/blazor_combobox_floatlabel.gif)
 
 <!-- ## Customizing the float label element’s focusing color
@@ -75,6 +79,4 @@ You can change the text color of the floating label when it is focused by target
 
 {% include_relative code-snippet/placeholder-and-floatlabel/floatlabel-focusing-color.razor %}
 
-{% endhighlight %}
-
-![Blazor ComboBox with float label focusing color](./images/placeholder-and-floatlabel/blazor_combobox_floatlabel-focusing-color.png) -->
+{% endhighlight %} -->
