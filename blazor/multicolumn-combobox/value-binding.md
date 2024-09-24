@@ -26,7 +26,7 @@ Value binding can be accomplished using the [@bind-Value](https://help.syncfusio
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBzZYWkLFuRrUhb?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBJXYhzMFjWdrGx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor MultiColumn ComboBox with Bind Value](./images/value-binding/blazor-combobox-bind-value.png)
 
