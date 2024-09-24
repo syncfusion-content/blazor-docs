@@ -21,7 +21,7 @@ The following code demonstrates the filtering functionality with local data in t
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZVpZOCaUbksiExT?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLpXkVggODahmWg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor MultiColumn ComboBox with local data filtering](./images/filtering/blazor_combobox_local-data.png)
 
@@ -37,7 +37,7 @@ The following code illustrates the filtering capabilities using the [ODataAdapto
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVpDEWEAkDqmrEI?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htVTXYrAgksxfrMK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Filter type
 
@@ -57,7 +57,7 @@ In the following example, `EndsWith` filter type has been mapped to the `FilterT
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrftaBZLMRWvRyO?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLpjaVqKYrUJqyJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor MultiColumn ComboBox with Filter Type](./images/filtering/blazor_combobox_filter-type.png)
 
@@ -135,4 +135,4 @@ In the following example, the isTyped flag is used to track whether the filterin
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBzZYVjLimaBuKY?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjrzNEhqqOUhpwzY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
