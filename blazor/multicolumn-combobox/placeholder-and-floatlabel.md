@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Placeholder/FloatLabel in Blazor MultiColumn ComboBox Component | Syncfusion
+title: Placeholder/FloatLabel in Blazor MultiColumn ComboBox | Syncfusion
 description: Checkout and learn here all about Placeholder and FloatLabel in Syncfusion Blazor MultiColumn ComboBox component and more.
 platform: Blazor
 control: MultiColumn ComboBox
