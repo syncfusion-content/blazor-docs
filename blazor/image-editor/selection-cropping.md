@@ -199,7 +199,7 @@ The parameter available in the [`Cropping`](https://help.syncfusion.com/cr/blazo
 
 ### Maintaining Original Image Size During Cropping 
 
-In the image editor, when an image is cropped, it is usually enlarged or scaled to improve visibility within the user interface. If you want to prevent this scaling and maintain the original cropping size, you can bind to the ‘[`CropEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.CropEventArgs.html)’ event and set the `preventScaling` value to true. This not only keeps the image size consistent during cropping but also ensures that the saved image retains its original cropping size without being enlarged.
+In the image editor, when an image is cropped, it is usually enlarged or scaled to improve visibility within the user interface. If you want to prevent this scaling and maintain the original cropping size, you can bind to the ‘[`CropEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.CropEventArgs.html)’ event and set the [`PreventScaling`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.CropEventArgs.html#Syncfusion_Blazor_ImageEditor_CropEventArgs_PreventScaling) value to true. This not only keeps the image size consistent during cropping but also ensures that the saved image retains its original cropping size without being enlarged.
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
@@ -230,7 +230,7 @@ In the image editor, when an image is cropped, it is usually enlarged or scaled 
 
 ### Locking Selection Area During Cropping 
 
-When selecting an area for cropping, users can typically resize the selection from all corners and edges. If you want to prevent the resizing of the selection area, you can bind to the [`selectionChanging`](https://ej2.syncfusion.com/javascript/documentation/api/image-editor/#selectionchanging) event. Check if the action is `resize`, and if it is, set `previousSelectionSettings` value to `currentSelectionSettings` value. This will lock the selection area, preventing any adjustments to its size.
+When selecting an area for cropping, users can typically resize the selection from all corners and edges. If you want to prevent the resizing of the selection area, you can bind to the [`SelectionChangeEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SelectionChangeEventArgs.html) event. Check if the action is `resize`, and if it is, set [`PreviousSelectionSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SelectionChangeEventArgs.html#Syncfusion_Blazor_ImageEditor_SelectionChangeEventArgs_PreviousSelectionSettings) value to [`CurrentSelectionSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SelectionChangeEventArgs.html#Syncfusion_Blazor_ImageEditor_SelectionChangeEventArgs_CurrentSelectionSettings) value. This will lock the selection area, preventing any adjustments to its size.
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
@@ -240,7 +240,7 @@ When selecting an area for cropping, users can typically resize the selection fr
     <SfButton OnClick="CropAsync">Crop</SfButton>
 </div>
 <SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="400">
-    <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
+    <ImageEditorEvents Created="OpenAsync" SelectionChanging="SelectionChangingAsync"></ImageEditorEvents>
 </SfImageEditor> 
 
 @code {
@@ -252,10 +252,11 @@ When selecting an area for cropping, users can typically resize the selection fr
         await ImageEditor.OpenAsync("nature.png"); 
     }
 
-    private async void CropAsync()
-    {
-        await ImageEditor.SelectAsync("Circle");
-        await ImageEditor.CropAsync();
+    private async void SelectionChangingAsync(SelectionChanging args)
+    {   
+        if (args.action === "resize") {
+            args.currentSelectionSettings = args.previousSelectionSettings;
+        }
     }
 }
 ```
@@ -284,10 +285,12 @@ Users can perform cropping either through the toolbar or by using our public met
         await ImageEditor.OpenAsync("nature.png"); 
     }
 
-    private async void CropAsync()
-    {
-        await ImageEditor.SelectAsync("Circle");
-        await ImageEditor.CropAsync();
+    private async void SelectionChangingAsync(SelectionChanging args)
+    {   
+        if (args.action === "insert" && args.currentSelectionSettings.type === "Custom") {
+            args.currentSelectionSettings.height = 200;
+            args.currentSelectionSettings.width = 200;
+        }
     }
 }
 ```
