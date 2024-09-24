@@ -196,3 +196,98 @@ The parameter available in the [`Cropping`](https://help.syncfusion.com/cr/blazo
 * CropEventArgs.EndPoint - The x and y coordinates of an end point as [`ImageEditorPoint`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorPoint.html) of the selection region. 
 
 * CropEventArgs.Cancel - To cancel the cropping action.
+
+### Maintaining Original Image Size During Cropping 
+
+In the image editor, when an image is cropped, it is usually enlarged or scaled to improve visibility within the user interface. If you want to prevent this scaling and maintain the original cropping size, you can bind to the ‘[`CropEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.CropEventArgs.html)’ event and set the `preventScaling` value to true. This not only keeps the image size consistent during cropping but also ensures that the saved image retains its original cropping size without being enlarged.
+
+```cshtml
+@using Syncfusion.Blazor.ImageEditor
+@using Syncfusion.Blazor.Buttons
+
+<div style="padding-bottom: 15px">
+    <SfButton OnClick="CropAsync">Crop</SfButton>
+</div>
+<SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="400">
+    <ImageEditorEvents Created="OpenAsync" Cropping="CroppingAsync"></ImageEditorEvents>
+</SfImageEditor> 
+
+@code {
+    SfImageEditor ImageEditor; 
+    private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>() { }; 
+
+    private async void OpenAsync() 
+    { 
+        await ImageEditor.OpenAsync("nature.png"); 
+    }
+
+    private async void CroppingAsync(CropEventArgs args)
+    {
+       args.preventScaling = true;
+    }
+}
+```
+
+### Locking Selection Area During Cropping 
+
+When selecting an area for cropping, users can typically resize the selection from all corners and edges. If you want to prevent the resizing of the selection area, you can bind to the [`selectionChanging`](https://ej2.syncfusion.com/javascript/documentation/api/image-editor/#selectionchanging) event. Check if the action is `resize`, and if it is, set `previousSelectionSettings` value to `currentSelectionSettings` value. This will lock the selection area, preventing any adjustments to its size.
+
+```cshtml
+@using Syncfusion.Blazor.ImageEditor
+@using Syncfusion.Blazor.Buttons
+
+<div style="padding-bottom: 15px">
+    <SfButton OnClick="CropAsync">Crop</SfButton>
+</div>
+<SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="400">
+    <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
+</SfImageEditor> 
+
+@code {
+    SfImageEditor ImageEditor; 
+    private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>() { }; 
+
+    private async void OpenAsync() 
+    { 
+        await ImageEditor.OpenAsync("nature.png"); 
+    }
+
+    private async void CropAsync()
+    {
+        await ImageEditor.SelectAsync("Circle");
+        await ImageEditor.CropAsync();
+    }
+}
+```
+
+### Cropping with Custom Ratio Selection 
+
+Users can perform cropping either through the toolbar or by using our public methods. While predefined ratio selections are available in the toolbar, users can also crop with custom ratios using our public method, [`select`](https://ej2.syncfusion.com/javascript/documentation/api/image-editor/#select). Regardless of the ratio type used, the selection will adhere to the specified ratio, even when resizing the selection area.
+
+```cshtml
+@using Syncfusion.Blazor.ImageEditor
+@using Syncfusion.Blazor.Buttons
+
+<div style="padding-bottom: 15px">
+    <SfButton OnClick="CropAsync">Crop</SfButton>
+</div>
+<SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="400">
+    <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
+</SfImageEditor> 
+
+@code {
+    SfImageEditor ImageEditor; 
+    private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>() { }; 
+
+    private async void OpenAsync() 
+    { 
+        await ImageEditor.OpenAsync("nature.png"); 
+    }
+
+    private async void CropAsync()
+    {
+        await ImageEditor.SelectAsync("Circle");
+        await ImageEditor.CropAsync();
+    }
+}
+```
