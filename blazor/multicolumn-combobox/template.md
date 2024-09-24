@@ -11,4 +11,4 @@ documentation: ug
 
 ## Header template
 
-The [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.MultiColumnComboboxColumn.html#Syncfusion_Blazor_MultiColumnComboBox_MultiColumnComboboxColumn_HeaderTemplate) of the MultiColumn ComboBox component used to customize the header element of a MultiColum. For more detailed information on Header Template, please refer [link](https://blazor.syncfusion.com/documentation/multicolumn-combobox/column#header-template).
+The [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.MultiColumnComboboxColumn.html#Syncfusion_Blazor_MultiColumnComboBox_MultiColumnComboboxColumn_HeaderTemplate) of the MultiColumn ComboBox component used to customize the header element of a MultiColumn. For more detailed information on Header Template, please refer [link](https://blazor.syncfusion.com/documentation/multicolumn-combobox/column#header-template).
