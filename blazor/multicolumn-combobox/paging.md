@@ -15,7 +15,7 @@ To enable paging, you need to set the [AllowPaging](https://help.syncfusion.com/
 
 ## Customize the pager options
 
-Customizing the pager options in the Syncfusion MultiColumn ComboBox allows you to tailor the pagination control according to your specific requirements. You can customize the pager to display the number of pages using the `PageCount` property and display the number of records in the MultiColumn ComboBox using the `PageSize` property.
+Customizing the pager options in the Syncfusion MultiColumn ComboBox allows you to tailor the pagination control according to your specific requirements. You can customize the pager to display the number of pages using the  [PageCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_PageCount)  property and display the number of records in the MultiColumn ComboBox using the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_PageSize) property.
 
 ### Change the page size
 
