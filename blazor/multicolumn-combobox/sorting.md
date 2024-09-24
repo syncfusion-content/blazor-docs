@@ -76,4 +76,4 @@ The MultiColumn ComboBox component allows to sort more than one column at a time
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZrKsMZhrntSJwyp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrJZEBzBCeCcPgD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
