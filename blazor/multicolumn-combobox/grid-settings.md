@@ -33,7 +33,7 @@ The following example enables alternate row styling, where every other row will 
 
 {% endhighlight %}
 
-## Setting allow column resizing
+## Resizing the column
 
 The Column resizing allows users to adjust the width of columns in the MultiColumn ComboBox by dragging the edge of the column header. The [AllowColumnResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_AllowColumnResizing) property. This property is useful for providing flexibility in adjusting the grid layout based on user preferences.
 
