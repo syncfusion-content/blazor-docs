@@ -198,7 +198,7 @@ You can use [OpensOnHover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 ## Customized icon
 
-You can enhance the appearance of the Speed Dial component in its default primary state by customizing the icon color using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_CssClass) property.
+You can use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_CssClass) property to customize the appearance of the speedDial component in its default primary state. Below example demonstrates the `cssClass` property usage in speedDial.
 
 {% tabs %}
 {% highlight razor %}
