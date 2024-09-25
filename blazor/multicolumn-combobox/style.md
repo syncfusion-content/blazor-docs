@@ -33,7 +33,7 @@ Specify the boolean value to the [Disabled](https://help.syncfusion.com/cr/blazo
 
 {% endhighlight %}
 
-## Setting the cascading style sheet class
+## Applying custom CSS classes
 
 Specifies the CSS class name that can be appended to the root element of the MultiColumn ComboBox. One or more custom CSS classes can be added to a MultiColumn ComboBox.
 
