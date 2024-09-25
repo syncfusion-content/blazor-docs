@@ -111,7 +111,7 @@ Here,
 
 For **Azure OpenAI**, first [deploy an Azure OpenAI Service resource and model](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource), then values for `apiKey`, `deploymentName` and `endpoint` will all be provided to you.
 
-If you are using **OpenAI** and [create an API key](https://github.com/syncfusion/smart-ai-samples/tree/master/blazor#openai) and place it at `apiKey`, leave the `endpoint` as `""`. The value for `deploymentName` is the [models](https://github.com/syncfusion/smart-ai-samples/tree/master/blazor#openai) you wish to use (e.g., `gpt-3.5-turbo`, `gpt-4`, etc.).
+If you are using **OpenAI**, [Create an API key](https://github.com/syncfusion/smart-ai-samples/tree/master/blazor#openai) and place it at `apiKey`, leave the `endpoint` as `""`. The value for `deploymentName` is the [models](https://github.com/syncfusion/smart-ai-samples/tree/master/blazor#openai) you wish to use (e.g., `gpt-3.5-turbo`, `gpt-4`, etc.).
 
 ## Add stylesheet and script resources
 
