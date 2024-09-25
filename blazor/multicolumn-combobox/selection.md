@@ -19,7 +19,7 @@ Retrieve the selected value from the MultiColumn ComboBox component during the [
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BthftYMaJBNGrdDn?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBfXYhUKacoERWz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 Retrieve the full object list corresponding to the selected value in the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_ValueChange) event by utilizing the [ValueChangeEventArgs.ItemData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.ValueChangeEventArgs-2.html#Syncfusion_Blazor_MultiColumnComboBox_ValueChangeEventArgs_2_ItemData) property.
 
@@ -29,7 +29,7 @@ Retrieve the full object list corresponding to the selected value in the [ValueC
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLfZOMYJBsbSpiT?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZrTtErggklqvxPe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Preselected value on OnInitializedAsync
 
@@ -41,7 +41,7 @@ To associate a pre-selected value with the MultiColumn ComboBox component, use t
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjLTtOMYoiBxOutq?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrTDYVKgaYDmQmK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor ComboBox with pre-select value](./images/selection/blazor_combobox_preselect-value.png)
 
@@ -55,7 +55,7 @@ You can change the component's value either programmatically or externally via t
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htBTtaWOTIoCCOww?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVfDkhKgOkmNULd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor ComboBox with pre-select value before](./images/selection/blazor_combobox_changing-selected-value.gif)
 
@@ -69,7 +69,7 @@ The [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiC
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBTjaikpWnchtLT?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLzXELAzNjrImKu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### OnValueSelect event 
 
@@ -81,7 +81,7 @@ The [OnValueSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Mult
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhTtkMaJMoQeBSK?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBfNEBAJNtnOoRY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Preselect value with index
 
@@ -95,7 +95,7 @@ The following sample shows how to bind the index on the initial rendering.
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZBJDOiEpMTRyGJU?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhpZkBApjCrhVtv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor MultiColumn ComboBox with bind-index](./images/selection/blazor_combobox_preselect-value-index.png)
 
@@ -151,7 +151,7 @@ To prevent the page from reloading when using the MultiColumn ComboBox component
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhpNuWOfWMzQIrf?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBfNkrqfZMEHYfF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 <!-- ## Programmatically trigger onChange event
 
@@ -185,7 +185,7 @@ The [Focus](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnC
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLpNEMkpWjDUxyW?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLptkBgfXVfbjJH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Blur event
 
@@ -197,4 +197,4 @@ The [Blur](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnCo
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDrJZkiapZPZlLCm?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBTNYBKfNhYoGKt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
