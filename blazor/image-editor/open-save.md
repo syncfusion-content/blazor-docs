@@ -382,7 +382,41 @@ builder.Services.AddServerSideBlazor().AddHubOptions(o => { o.MaximumReceiveMess
 
 ### Remove default Save button and add custom button to save the image to server 
 
-User can leverage the [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_Toolbar) property to replace the default save button with a custom one. By doing so, you can use the [`GetImageDataUrlAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetImageDataUrlAsync) method to retrieve the image data, convert it to base64 format, and then save it to the server. This approach gives you more control over the image-saving process. 
+User can leverage the [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_Toolbar) property to replace the default save button with a custom one. By doing so, you can use the [`GetImageDataUrlAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetImageDataUrlAsync) method to retrieve the image data, convert it to base64 format, and then save it to the server. This approach gives you more control over the image-saving process.
+
+```cshtml
+@using Syncfusion.Blazor.ImageEditor
+@using Syncfusion.Blazor.Navigations
+
+<div>
+    <SfImageEditor @ref="ImageEditor" Height="400px" Width="500px" Toolbar="@customToolbar">
+    </SfImageEditor>
+    <button @onclick="SaveImage">Save to Server</button>
+</div>
+
+@code {
+    private SfImageEditor ImageEditor;
+    
+    // Define the custom toolbar items
+    private List<ImageEditorToolbarItemModel> customToolbar = new List<ImageEditorToolbarItemModel>()
+    {
+        new ImageEditorToolbarItemModel { Name = "Zoom" },
+        new ImageEditorToolbarItemModel { Name = "Annotation" },
+        new ImageEditorToolbarItemModel { Name = "Filter" },
+        new ImageEditorToolbarItemModel { Name = "Crop" },
+        new ImageEditorToolbarItemModel { Text = "Rotate", TooltipText = "Rotate", Align = ItemAlign.Center }
+    };
+    private async Task SaveImage()
+    {
+        var imageData = await ImageEditor.GetImageDataUrlAsync();
+        if (!string.IsNullOrEmpty(imageData) && imageData.Contains(","))
+        {
+            var base64Data = imageData.Split(',')[1];
+            byte[] imageBytes = Convert.FromBase64String(base64Data);
+        }
+    }
+}
+```
 
 ### Prevent default save option and save the image to specific location 
 
