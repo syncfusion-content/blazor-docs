@@ -48,7 +48,7 @@ Note: To load the image in the image editor, the image is placed within the appl
 
 Users can easily open images in the Image Editor using a Base64-encoded string. This method allows you to load images directly from their Base64 representation, ensuring seamless integration and flexibility in your application. Simply pass the Base64 string to the open method, and the image will be loaded into the editor. 
 
-`Note:` You can obtain the Base64 representation of an image from the Image Editor using the [`GetImageDataAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetImageDataAsync) method. This process will be explained in the upcoming section.
+`Note:` You can obtain the Base64 representation of an image from the Image Editor using the [`GetImageDataUrlAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetImageDataUrlAsync) method. This process will be explained in the upcoming section.
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor 
@@ -71,7 +71,7 @@ Users can easily open images in the Image Editor using a Base64-encoded string. 
 
     private async void SaveAsync() 
     { 
-        var imageData = await ImageEditor.GetImageDataAsync();
+        var imageData = await ImageEditor.GetImageDataUrlAsync();
         base64String = Convert.ToBase64String(imageData);
     }
 
@@ -88,7 +88,7 @@ Users can easily open images in the Image Editor using a Base64-encoded string. 
 
 User can easily open images in the Image Editor from Blob storage. This method allows you to load images directly from Blob storage, ensuring seamless integration and flexibility in your application. Simply retrieve the image Blob from storage and pass it to the open method, and the image will be loaded into the editor. 
 
-`Note:` You can obtain the Base64 representation of an image from the Image Editor using the [`GetImageDataAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetImageDataAsync) method. This process will be explained in the upcoming section.
+`Note:` You can obtain the Base64 representation of an image from the Image Editor using the [`GetImageDataUrlAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetImageDataUrlAsync) method. This process will be explained in the upcoming section.
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
@@ -115,7 +115,7 @@ User can easily open images in the Image Editor from Blob storage. This method a
 
     private async Task SaveAsync()
     {
-        var imageData = await ImageEditor.GetImageDataAsync();
+        var imageData = await ImageEditor.GetImageDataUrlAsync();
         blobUrl = await CreateBlobUrl(imageData);
     }
 
@@ -251,7 +251,7 @@ In the following example, the [`ExportAsync`](https://help.syncfusion.com/cr/bla
 
 ### Save the image as base64 format. 
 
-To save an image as a base64 format, use the [`GetImageDataAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetImageDataAsync) method of the editor to retrieve the image data and convert it into a Data URL, which contains the base64-encoded string. By invoking the open method on the Syncfusion Image Editor instance, you can load this Data URL into the editor. The resulting base64 string can then be embedded directly in HTML or CSS or transmitted over data channels without requiring an external file.
+To save an image as a base64 format, use the [`GetImageDataUrlAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetImageDataUrlAsync) method of the editor to retrieve the image data and convert it into a Data URL, which contains the base64-encoded string. By invoking the open method on the Syncfusion Image Editor instance, you can load this Data URL into the editor. The resulting base64 string can then be embedded directly in HTML or CSS or transmitted over data channels without requiring an external file.
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor 
@@ -273,7 +273,7 @@ To save an image as a base64 format, use the [`GetImageDataAsync`](https://help.
 
     private async void SaveAsync() 
     { 
-        var imageData = await ImageEditor.GetImageDataAsync();
+        var imageData = await ImageEditor.GetImageDataUrlAsync();
         base64String = Convert.ToBase64String(imageData);
     }
 }
@@ -281,11 +281,11 @@ To save an image as a base64 format, use the [`GetImageDataAsync`](https://help.
 
 ### Save the image as byte[]
 
-To save an image as a byte array, use the [`GetImageDataAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetImageDataAsync) method of the editor to retrieve the image data and convert it into a byte array. You can then invoke the open method on the Syncfusion Image Editor instance to load this byte array into the editor. The resulting byte array can be stored in a database for data management and maintenance.
+To save an image as a byte array, use the [`GetImageDataUrlAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetImageDataUrlAsync) method of the editor to retrieve the image data and convert it into a byte array. You can then invoke the open method on the Syncfusion Image Editor instance to load this byte array into the editor. The resulting byte array can be stored in a database for data management and maintenance.
 
 ### Save the image as blob
 
-To save an image as a blob, use the [`GetImageDataAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetImageDataAsync) method of the editor to retrieve the image data and convert it into a blob. You can then invoke the open method on the Syncfusion Image Editor instance to load this byte array into the editor. The resulting byte array can be stored in a database for data management and maintenance.
+To save an image as a blob, use the [`GetImageDataUrlAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetImageDataUrlAsync) method of the editor to retrieve the image data and convert it into a blob. You can then invoke the open method on the Syncfusion Image Editor instance to load this byte array into the editor. The resulting byte array can be stored in a database for data management and maintenance.
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
@@ -311,7 +311,7 @@ To save an image as a blob, use the [`GetImageDataAsync`](https://help.syncfusio
 
     private async Task SaveAsync()
     {
-        var imageData = await ImageEditor.GetImageDataAsync();
+        var imageData = await ImageEditor.GetImageDataUrlAsync();
         blobUrl = await CreateBlobUrl(imageData);
     }
 
@@ -382,11 +382,11 @@ builder.Services.AddServerSideBlazor().AddHubOptions(o => { o.MaximumReceiveMess
 
 ### Remove default Save button and add custom button to save the image to server 
 
-User can leverage the [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_Toolbar) property to replace the default save button with a custom one. By doing so, you can use the [`GetImageDataAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetImageDataAsync) method to retrieve the image data, convert it to base64 format, and then save it to the server. This approach gives you more control over the image-saving process. 
+User can leverage the [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_Toolbar) property to replace the default save button with a custom one. By doing so, you can use the [`GetImageDataUrlAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetImageDataUrlAsync) method to retrieve the image data, convert it to base64 format, and then save it to the server. This approach gives you more control over the image-saving process. 
 
 ### Prevent default save option and save the image to specific location 
 
-User can make use of the [`Saving`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_Saving) event, which triggers just before the image is downloaded, to override the default save option by setting `args.cancel` to true. Afterward, you can utilize the [`GetImageDataAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetImageDataAsync) method to retrieve the current image data and convert it into a format like `byte[]`, `blob`, or `base64` for further processing. This gives you greater flexibility in handling the image data.
+User can make use of the [`Saving`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_Saving) event, which triggers just before the image is downloaded, to override the default save option by setting `args.cancel` to true. Afterward, you can utilize the [`GetImageDataUrlAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetImageDataUrlAsync) method to retrieve the current image data and convert it into a format like `byte[]`, `blob`, or `base64` for further processing. This gives you greater flexibility in handling the image data.
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
