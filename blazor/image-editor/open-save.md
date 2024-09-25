@@ -82,7 +82,7 @@ Users can easily open images in the Image Editor using a Base64-encoded string. 
 }
 ```
 
-![Blazor Image Editor with Opening an base 64 image](./images/blazor-image-editor-base-image.png)
+![Blazor Image Editor with Opening an base 64 image](./images/blazor-image-editor-base-image.jpeg)
 
 ### Open an image from Blob storage
 
