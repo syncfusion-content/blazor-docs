@@ -1,0 +1,20 @@
+@using Syncfusion.Blazor.RichTextEditor
+
+<SfRichTextEditor EditorMode="EditorMode.Markdown">
+    <RichTextEditorToolbarSettings Items="@Tools" />
+The Rich Text Editor component is the WYSIWYG ('what you see is what you get') editor that provides the best user experience to create and update content. Users can format their content using standard toolbar commands.
+
+**Key features:**
+
+    - Capable of handling markdown editing.
+    - Contains a modular library to load the necessary functionality on demand.
+    - Supports third-party library integration.
+</SfRichTextEditor>
+
+@code {
+    private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.CreateLink },
+        new ToolbarItemModel() { Command = ToolbarCommand.RemoveLink }
+    };
+}
