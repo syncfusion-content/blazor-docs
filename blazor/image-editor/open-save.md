@@ -1,3 +1,4 @@
+---
 layout: post
 title: Open save with Blazor Image Editor Component | Syncfusion
 description: Checkout the Open save available in Blazor Image Editor component in Blazor Server App and Blazor WebAssembly App.
