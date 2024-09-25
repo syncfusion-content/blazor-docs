@@ -50,6 +50,50 @@ Common, Base
 </tr>
 </table>
 
+## Syncfusion.Blazor.SmartComponents
+
+The Syncfusion Blazor Smart Components are designed to seamlessly integrate with AI and offering intelligent features that go beyond standard user interfaces.
+
+<table>
+<tr>
+<td>
+<b>NuGet package</b>
+</td>
+<td>
+<b>Components friendly name</b>
+</td>
+<td>
+<b>Components name</b>
+</td>
+<td>
+<b>Dependencies</b>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.SmartComponents/">Syncfusion.Blazor.SmartComponents</a>
+</td>
+<td>
+<ul>
+<li><a href="https://www.syncfusion.com/blazor-components/blazor-smartpaste-button">Smart Paste Button</a></li>
+<li><a href="https://www.syncfusion.com/blazor-components/blazor-smart-textarea">Smart TextArea</a></li>
+</ul>
+</td>
+<td>
+<ul>
+<li>SfSmartPasteButton</li>
+<li>SfSmartTextArea</li>
+</ul>
+</td>
+<td>
+<a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a>
+<a href="##syncfusionblazorbuttons">Syncfusion.Blazor.Buttons</a>
+<a href="#syncfusionblazorinputs">Syncfusion.Blazor.Inputs</a>
+<a href="https://www.nuget.org/packages/Azure.AI.OpenAI/">Azure.AI.OpenAI</a>
+</td>
+</tr>
+</table>
+
 ## Syncfusion.Blazor.BarcodeGenerator
 
 The Blazor BarcodeGenerator supports the most common 1D and 2D barcode, and complete customization of its appearance.
