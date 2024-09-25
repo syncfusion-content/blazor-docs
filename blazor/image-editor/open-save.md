@@ -284,27 +284,28 @@ To save an image as a byte array, use the [`GetImageDataUrlAsync`](https://help.
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
-
+ 
 <SfImageEditor @ref="imageEditor" Height="400px" />
-
+ 
 <button @onclick="SaveImageAsByteArray">Save Image</button>
 <button @onclick="OpenImage">Open Image</button>
-
+ 
 @code {
     private SfImageEditor imageEditor;
-    private byte[] savedImageData;
-
+    private byte[] savedImageData; // Variable to hold the saved image data
+ 
     private async Task SaveImageAsByteArray()
     {
-        savedImageData = await imageEditor.GetImageDataUrlAsync(); // Save the image data
-        // You can save this byte array to a database here if needed
+        savedImageData = await imageEditor.GetImageDataAsync(); 
     }
-
+ 
     private async Task OpenImage()
     {
         if (savedImageData != null)
         {
-            await imageEditor.OpenAsync(savedImageData); // Open the saved image data
+            string base64String = Convert.ToBase64String(savedImageData);
+            base64String = "data:image/png;base64," + base64String;
+            await imageEditor.OpenAsync(base64String);
         }
     }
 }
