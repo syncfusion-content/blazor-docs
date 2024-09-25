@@ -7,7 +7,7 @@ control: Image Editor
 documentation: ug
 ---
 
-### Render Image Editor in Dialog Component
+# Render Image Editor in Dialog Component
 
 Rendering the Image Editor in a dialog involves displaying the image editor component within a modal dialog window, allowing users to edit images in a pop-up interface. This can be useful for maintaining a clean layout and providing a focused editing experience without navigating away from the current page.
 
