@@ -146,7 +146,7 @@ User can easily open images in the Image Editor from Blob storage. This method a
     }
 }
 ```
-![Blazor Image Editor with Opening an blob image](./images/blazor-image-editor-save-blob.png)
+![Blazor Image Editor with Opening an blob image](./images/blazor-image-editor-save-blob.jpeg)
 
 ### Open an image from file uploader 
 
@@ -221,7 +221,7 @@ You can utilize the ‘[`FileOpenEventArgs`](https://help.syncfusion.com/cr/blaz
     }
 }
 ```
-![Blazor Image Editor with Adding Watermark](./images/blazor-image-editor-add-watermark.png)
+![Blazor Image Editor with Adding Watermark](./images/blazor-image-editor-add-watermark.jpeg)
 
 ### Save as image
 
