@@ -295,4 +295,4 @@ Users can perform cropping either through the toolbar or by using our public met
 }
 ```
 
-![Blazor Image Editor with Custom Crop Ratio](./images/blazor-image-editor-custom-crop-ratio.png')
+![Blazor Image Editor with Custom Crop Ratio](./images/blazor-image-editor-custom-crop-ratio.png)
