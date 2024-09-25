@@ -363,38 +363,6 @@ To save an image as a blob, use the [`GetImageDataUrlAsync`](https://help.syncfu
 }
 ```
 
-### Add Watermarks while saving the image 
-
-User can utilize the ‘[`BeforeSave`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SaveEventArgs.html)’ event, which triggers just before the image is downloaded, to apply a text annotation as a watermark. After the image is downloaded, the ‘[`SaveEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SaveEventArgs.html)’ event is triggered, allowing you to remove the watermark using the ‘[`DeleteShapeAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DeleteShapeAsync_System_String_)’ method. This ensures that the watermark is only visible in the downloaded image and not in the editor.
-
-```cshtml
-@using Syncfusion.Blazor.ImageEditor 
-<SfImageEditor @ref="ImageEditor" Height="400">
-    <ImageEditorEvents Created="OpenAsync" Saving="BeforeSaveAsync" Saved="SavedAsync"></ImageEditorEvents>
-</SfImageEditor> 
-
-@code { 
-    SfImageEditor ImageEditor;
-
-    private async void OpenAsync() 
-    { 
-        await ImageEditor.OpenAsync("nature.png"); 
-    }
-
-    private async void BeforeSaveAsync() 
-    { 
-       ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
-        await ImageEditor.DrawTextAsync(Dimension.X.Value + 100, Dimension.Y.Value + 100, "Enter\nText", "Arial", 40, false, false, "#80330075");
-    }
-
-    private async void SavedAsync()
-    { 
-        var Shapes = await ImageEditor.GetShapeSettingsAsync();
-        await ImageEditor.DeleteShapeAsync(Shapes[Shapes.length - 1].id);
-    }
-}
-```
-
 ### Save as image in server
 
 The [`GetImageDataUrlAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetImageDataUrlAsync) method in the Blazor Image Editor component is used to gets the current image data url from the Image Editor component
