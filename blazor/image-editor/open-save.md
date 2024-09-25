@@ -1,4 +1,3 @@
-456989---
 layout: post
 title: Open save with Blazor Image Editor Component | Syncfusion
 description: Checkout the Open save available in Blazor Image Editor component in Blazor Server App and Blazor WebAssembly App.
@@ -370,7 +369,7 @@ User can utilize the ‘[`BeforeSave`](https://help.syncfusion.com/cr/blazor/Syn
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor 
 <SfImageEditor @ref="ImageEditor" Height="400">
-    <ImageEditorEvents Created="OpenAsync" BeforeSave="BeforeSaveAsync" Saved="SavedAsync"></ImageEditorEvents>
+    <ImageEditorEvents Created="OpenAsync" Saving="BeforeSaveAsync" Saved="SavedAsync"></ImageEditorEvents>
 </SfImageEditor> 
 
 @code { 
@@ -387,7 +386,7 @@ User can utilize the ‘[`BeforeSave`](https://help.syncfusion.com/cr/blazor/Syn
         await ImageEditor.DrawTextAsync(Dimension.X.Value + 100, Dimension.Y.Value + 100, "Enter\nText", "Arial", 40, false, false, "#80330075");
     }
 
-    private async void SavedAsync() 
+    private async void SavedAsync()
     { 
         var Shapes = await ImageEditor.GetShapeSettingsAsync();
         await ImageEditor.DeleteShapeAsync(Shapes[Shapes.length - 1].id);
