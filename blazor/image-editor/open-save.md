@@ -199,7 +199,6 @@ You can utilize the ‘[`FileOpenEventArgs`](https://help.syncfusion.com/cr/blaz
 
 @code { 
     SfImageEditor ImageEditor;
-    private string base64String;
 
     private async void OpenAsync() 
     { 
@@ -362,7 +361,7 @@ User can utilize the ‘[`BeforeSave`](https://help.syncfusion.com/cr/blazor/Syn
     private async void SavedAsync() 
     { 
         var Shapes = await ImageEditor.GetShapeSettingsAsync();
-        await ImageEditor.DeleteShapeAsync(shapes[shapes.length - 1].id);
+        await ImageEditor.DeleteShapeAsync(Shapes[Shapes.length - 1].id);
     }
 }
 ```
@@ -387,7 +386,33 @@ User can leverage the [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 ### Prevent default save option and save the image to specific location 
 
-User can make use of the [`BeforeSave`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SaveEventArgs.html) event, which triggers just before the image is downloaded, to override the default save option by setting `args.cancel` to true. Afterward, you can utilize the [`GetImageDataAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetImageDataAsync) method to retrieve the current image data and convert it into a format like `byte[]`, `blob`, or `base64` for further processing. This gives you greater flexibility in handling the image data. 
+User can make use of the [`BeforeSave`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SaveEventArgs.html) event, which triggers just before the image is downloaded, to override the default save option by setting `args.cancel` to true. Afterward, you can utilize the [`GetImageDataAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetImageDataAsync) method to retrieve the current image data and convert it into a format like `byte[]`, `blob`, or `base64` for further processing. This gives you greater flexibility in handling the image data.
+
+```cshtml
+@using Syncfusion.Blazor.ImageEditor
+@using System.IO
+ 
+<div>
+<SfImageEditor @ref="ImageEditor" Height="400px" Width="500px">
+<ImageEditorEvents Saving="OnBeforeSave"></ImageEditorEvents>
+</SfImageEditor>
+</div>
+ 
+@code {
+    private SfImageEditor ImageEditor;
+ 
+    private async Task OnBeforeSave(SaveEventArgs args)
+    {
+        args.Cancel = true;
+        var imageData = await ImageEditor.GetImageDataUrlAsync();
+        if (!string.IsNullOrEmpty(imageData) && imageData.Contains(","))
+        {
+            var base64Data = imageData.Split(',')[1];
+            byte[] imageBytes = Convert.FromBase64String(base64Data);
+        }
+    }
+}
+```
 
 ## Events to handle Save Actions 
 
