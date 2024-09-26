@@ -98,4 +98,4 @@ The `StepperStep` tag directive options and current step index are passed as `st
 
 ```
 
-![Blazor Stepper Component with Template](./images/Blazor-template.png)
+![Blazor Stepper Component with Template.](./images/Blazor-template.png)
