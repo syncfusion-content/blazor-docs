@@ -23,9 +23,9 @@ The MultiColumn ComboBox loads the data from local data sources through the [Dat
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLftusaTrQvPHgm?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBftYVqKvgHmaAA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor ComboBox with local data binding](./images/data-binding/blazor_combobox_local-binding.png)
+![Blazor MultiColumn ComboBox with local data binding](./images/data-binding/blazor_combobox_local-binding.png)
 
 ## Index value binding
 
@@ -67,7 +67,7 @@ Index value binding can be accomplished with the `bind-Index` attribute, which s
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBTtYiOqwKUHZCY?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVpNOrAUlzhIfCJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Expando object binding
 
@@ -79,7 +79,7 @@ Bind the [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dyn
 
 {% endhighlight %}
 
-![Blazor ComboBox with Expando object binding](./images/data-binding/blazor_combobox_expando-object-binding.gif)
+![Blazor MultiColumn ComboBox with Expando object binding](./images/data-binding/blazor_combobox_expando-object-binding.gif)
 
 ### Dynamic object binding
 
@@ -91,7 +91,7 @@ Bind the [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dyn
 
 {% endhighlight %}
 
-![Blazor ComboBox with Dynamic object binding](./images/data-binding/blazor_combobox_dynamic-data-binding.gif)
+![Blazor MultiColumn ComboBox with Dynamic object binding](./images/data-binding/blazor_combobox_dynamic-data-binding.gif)
 
 ### ValueTuple data binding
 
@@ -103,7 +103,7 @@ Bind the [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuet
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBJXOWYqcwRBUbm?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLzNkLgKvoKORyE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Binding remote data 
 
@@ -125,7 +125,7 @@ The [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Mult
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhTXOBtLtGPxmzl?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVTXahAKvxlOgaH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### OnActionFailure event
 
@@ -137,7 +137,7 @@ The [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Mu
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhpjYWagPigEDli?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLpZkrKqPQmofLv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### OData v4 services
 
@@ -149,9 +149,9 @@ The [OData v4 Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjrfXYsuKbAMJeTB?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVJZkBKUbFJULBC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor ComboBox with OData v4 Adaptor](./images/data-binding/blazor_combobox_odata-v4-services.png)
+![Blazor MultiColumn ComboBox with OData v4 Adaptor](./images/data-binding/blazor_combobox_odata-v4-services.png)
 
 ### Web API adaptor
 
@@ -163,9 +163,9 @@ The [Web API Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXrTXaVNLsiKTDqf?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZhTDaLKUlkAUjhM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor ComboBox with Web API Adaptor](./images/data-binding/blazor_combobox_web-api-adaptor.png)
+![Blazor MultiColumn ComboBox with Web API Adaptor](./images/data-binding/blazor_combobox_web-api-adaptor.png)
 
 ### Offline mode
 
@@ -179,7 +179,7 @@ The following example is for remote data binding and enabled offline mode.
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBTDYiueZHDbZmB?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLTjuLqKOjLPMlY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Entity Framework
 
