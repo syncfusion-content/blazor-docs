@@ -16,13 +16,11 @@ This section briefly explains about how to include [Blazor Smart Paste Button](h
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 * [OpenAI](https://github.com/syncfusion/smart-ai-samples/tree/master/blazor#openai) or [Azure OpenAI Account](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource)
 
-N> As of now, Syncfusion Blazor Smart Components are currently compatible with both `OpenAI` and `Azure OpenAI` configurations.
+N> Syncfusion Blazor Smart Components are compatible with both `OpenAI` and `Azure OpenAI`, and fully support Server Interactivity mode apps.
 
 ## Create a new Blazor Web App
 
 You can create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
-
-N> As of now, Syncfusion Blazor Smart components are fully compatible with Server Interactivity mode Apps.
 
 ## Install Syncfusion Blazor SmartComponents and Themes NuGet in the App
 
@@ -133,7 +131,9 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Syncfusion Blazor Smart Paste Button component
 
-Add the Syncfusion Blazor Smart Paste Button component with form components in the **~Pages/Index.razor** file. In this example, the [Syncfusion Blazor DataForm](https://blazor.syncfusion.com/documentation/data-form/getting-started-with-web-app) component is used to manage form input fields. To get started, ensure you have the [Syncfusion.Blazor.DataForm](https://www.nuget.org/packages/Syncfusion.Blazor.DataForm) package installed.
+Add the Syncfusion **Blazor Smart Paste Button** component with form components in the **~Pages/Index.razor** file.
+
+N> In this example, [Syncfusion Blazor DataForm](https://blazor.syncfusion.com/documentation/data-form/getting-started-with-web-app) component is used to manage form input fields. To get started, install the [Syncfusion.Blazor.DataForm](https://www.nuget.org/packages/Syncfusion.Blazor.DataForm) package.
 
 {% tabs %}
 {% highlight razor tabtitle="~/Index.razor" %}
