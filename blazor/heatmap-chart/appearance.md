@@ -289,6 +289,56 @@ The visibility of data labels can be toggled using the [ShowLabel](https://help.
 
 ![Blazor HeatMap Chart with DataLabel](images/appearance/blazor-heatmap-chart-with-datalabel.png)
 
+### Cutomize the data label
+
+The label displayed in the HeatMap cell can be changed using the [CellRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapEvents.html#Syncfusion_Blazor_HeatMap_HeatMapEvents_CellRendering) event.
+
+```cshtml
+
+@using Syncfusion.Blazor.HeatMap
+
+<SfHeatMap DataSource="@HeatMapData">
+    <HeatMapEvents CellRendering="CellRender"></HeatMapEvents>
+    <HeatMapXAxis Labels="@XAxisLabels"></HeatMapXAxis>
+    <HeatMapYAxis Labels="@YAxisLabels"></HeatMapYAxis>
+    <HeatMapTitleSettings Text="Sales Revenue per Employee (in 1000 US$)">
+        <HeatMapTitleTextStyle Size="15px" FontWeight="500" FontStyle="Italic" FontFamily="Segoe UI"></HeatMapTitleTextStyle>
+    </HeatMapTitleSettings>
+    <HeatMapCellSettings ShowLabel="true" TileType="CellType.Rect">
+    </HeatMapCellSettings>
+    <HeatMapMargin Left="15" Right="15" Top="15" Bottom="15"></HeatMapMargin>
+</SfHeatMap>
+
+@code{
+    public int[,] GetDefaultData()
+    {
+        int[,] dataSource = new int[,]
+        {
+            {73, 39, 26, 39, 94, 0},
+            {93, 58, 53, 38, 26, 68},
+            {99, 28, 22, 4, 66, 90},
+            {14, 26, 97, 69, 69, 3},
+            {7, 46, 47, 47, 88, 6},
+            {41, 55, 73, 23, 3, 79}
+        };
+        return dataSource;
+    }
+    public string[] XAxisLabels = new string[] {"Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael" };
+    public string[] YAxisLabels = new string[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+    public object HeatMapData { get; set; }
+    protected override void OnInitialized()
+    {
+        HeatMapData = GetDefaultData();
+    }
+    public void CellRender(HeatMapCellRenderEventArgs args)
+    {
+        args.CellValue = args.CellValue + " $";
+    }
+}
+
+```
+![Customizing the Data Label in Blazor HeatMap Chart](images/appearance/blazor-heatmap-chart-data-label-customization.png)
+
 ### Text style
 
 The text attributes of the data label such as font-family, font-size, and color can be customized using the [HeatMapCellTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellTextStyle.html) tag.
