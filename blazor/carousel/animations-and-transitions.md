@@ -156,7 +156,7 @@ The following demo depicts the example for `parallax` custom animation
 </style>
 ```
 
-![Carousel custom animation](images/custom_animation.gif)
+![Blazor Carousel with custom animation](images/custom_animation.gif)
 
 ## Intervals between slides
 
@@ -342,7 +342,7 @@ In the carousel, slides transitions are repeated continuously when you reach the
 </style>
 ```
 
-![Carousel Looping Slides](images/looping_slides.png)
+![Blazor Carousel Looping Slides](images/looping_slides.png)
 
 ## Slide changing events
 

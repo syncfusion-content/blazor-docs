@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Breadcrumb Items with Blazor Breadcrumb component | Syncfusion
-description: Checkout and learn here all about data binding with Blazor Breadcrumb component of Syncfusion and more.
+description: Checkout and learn here all about breadcrumb items in Blazor Breadcrumb component of Syncfusion and more.
 platform: Blazor
 control: Breadcrumb
 documentation: ug
@@ -32,7 +32,7 @@ The [Blazor Breadcrumb](https://www.syncfusion.com/blazor-components/blazor-brea
 </SfBreadcrumb>
 ```
 
-![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-tag.png)
+![Breadcrumb items in Blazor Breadcrumb Component](./images/blazor-Breadcrumb-tag.png)
 
 ## Items based on current URL
 
@@ -44,7 +44,7 @@ The Breadcrumb items can be generated based on the current URL of the page when 
 <SfBreadcrumb></SfBreadcrumb>
 ```
 
-![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-current-url.png)
+![Current URL in Blazor Breadcrumb Component](./images/blazor-Breadcrumb-current-url.png)
 
 N> This output screenshot shows the [Bind to Location](https://blazor.syncfusion.com/demos/breadcrumb/bind-to-location) sample.
 
@@ -59,4 +59,4 @@ You can generate the Breadcrumb items by providing the [Url](https://help.syncfu
 </SfBreadcrumb>
 ```
 
-![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-static-url.png)
+![Absolute URL in Blazor Breadcrumb Component](./images/blazor-Breadcrumb-static-url.png)

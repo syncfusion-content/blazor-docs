@@ -30,7 +30,7 @@ You can specify relative URL in the [Url](https://help.syncfusion.com/cr/blazor/
 </SfBreadcrumb>
 ```
 
-![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-relative-url.png)
+![Blazor Breadcrumb Component with relative URL](./images/blazor-Breadcrumb-relative-url.png)
 
 ## Absolute URL
 
@@ -50,7 +50,7 @@ You can specify absolute URL in the [Url](https://help.syncfusion.com/cr/blazor/
 </SfBreadcrumb>
 ```
 
-![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-absolute-url.png)
+![Blazor Breadcrumb Component with absolute URL](./images/blazor-Breadcrumb-absolute-url.png)
 
 ## Enable navigation for last Breadcrumb item
 
@@ -70,4 +70,4 @@ Breadcrumb enables the navigation for the last item by setting the [EnableActive
 </SfBreadcrumb>
 ```
 
-![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-enable-navigation.png)
+![Blazor Breadcrumb Component with enable navigation for last breadcrumb item](./images/blazor-Breadcrumb-enable-navigation.png)
