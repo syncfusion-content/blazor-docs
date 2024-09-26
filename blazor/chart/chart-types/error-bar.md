@@ -272,7 +272,7 @@ To customize the error bar cap [Length](https://help.syncfusion.com/cr/blazor/Sy
 ![Blazor Line Chart with Custom Error Bar Cap](../images/othertypes/blazor-line-chart-custom-error-bar-cap.png)
 <!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VtLUNQXIUrmLKPYh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
-N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See also
 

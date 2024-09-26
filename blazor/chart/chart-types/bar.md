@@ -192,7 +192,7 @@ The following properties can be used to customize the [Bar](https://help.syncfus
 ![Blazor Bar Chart with Custom Series](../images/chart-types-images/blazor-bar-chart-custom-series.png)
 <!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VtVqDmNpTqUpLrOz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
-N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See also
 
