@@ -268,6 +268,76 @@ The following image represents the Group and Caption template with aggregates.
 
 N> The aggregate values must be accessed inside the template using their corresponding [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) name.
 
+## Invoke Async Method in Caption template aggregate 
+
+To calculate the aggregate value by invoke the asynchronous method within the grid caption template
+
+In the following example, this is demonstrated the aggregate values inside the **GroupCaptionTemplate** calculate by asynchronous method.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Products" AllowGrouping="true" AllowPaging="true">
+    <GridGroupSettings Columns=@Units></GridGroupSettings>
+    <GridAggregates>
+        <GridAggregate>
+            <GridAggregateColumns>
+                <GridAggregateColumn Field=@nameof(Product.UnitsInStock) Type="AggregateType.Max">
+                    <GroupCaptionTemplate>
+                        @{
+                            var aggregate = @GetAggregateMax(context as AggregateTemplateContext);
+                            <div>
+                                <p>Maximum: @aggregate.Result</p>
+                            </div>
+                        }
+                    </GroupCaptionTemplate>
+                </GridAggregateColumn>
+            </GridAggregateColumns>
+        </GridAggregate>
+    </GridAggregates>
+    <GridColumns>
+        <GridColumn Field=@nameof(Product.ProductName) HeaderText="Product Name" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Product.QuantityPerUnit) HeaderText="Quantity Per Unit" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Product.UnitsInStock) HeaderText="Units In Stock" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Product.Discontinued) HeaderText="Discontinued" TextAlign="TextAlign.Right" DisplayAsCheckBox="true" Type="ColumnType.Boolean"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+
+    public List<Product> Products { get; set; }
+    private string[] Units = (new string[] { "QuantityPerUnit" });
+    protected override void OnInitialized()
+    {
+        Products = Enumerable.Range(1, 10).Select(x => new Product
+            {
+                ProductName = (new string[] { "Chai", "Chang", "Aniseed Syrup", "Chef Anton's Cajun Seasoning", "Chef Anton's Gumbo Mix" })[new Random().Next(5)],
+                QuantityPerUnit = (new string[] { "10 boxes x 20 bags", "24 - 12 oz bottles", "12 - 550 ml bottles", "48 - 6 oz jars", "36 boxes" })[new Random().Next(5)],
+                UnitsInStock = x,
+                Discontinued = (new bool[] { true, false })[new Random().Next(2)]
+            }).ToList();
+    }
+ 
+    public async Task<string?> GetAggregateMax(AggregateTemplateContext order)
+    {
+        var Maxvalue = order.Max;
+        return Maxvalue;
+      
+    }  
+
+    public class Product
+    {
+        public string ProductName { get; set; }
+        public string QuantityPerUnit { get; set; }
+        public int UnitsInStock { get; set; }
+        public bool Discontinued { get; set; }
+    }
+}
+```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLUXOjqQOuqkZYW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+
 ## Custom aggregate
 
 To calculate the aggregate value with your own aggregate functions, use the custom aggregate option.
