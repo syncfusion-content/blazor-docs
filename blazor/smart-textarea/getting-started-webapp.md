@@ -132,7 +132,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Syncfusion Blazor Smart TextArea component
 
-Add the Syncfusion **Blazor Smart TextArea** component with form components in the **~Pages/Index.razor** file.
+Add the Syncfusion **Blazor Smart TextArea** component in the **~Pages/Index.razor** file.
 
 {% tabs %}
 {% highlight razor tabtitle="~/Index.razor" %}
