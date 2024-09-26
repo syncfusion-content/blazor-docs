@@ -21,7 +21,7 @@ To display the legend for the Stock Chart, set the [Visible](https://help.syncfu
         <SfStockChart Title="AAPL Stock Price">
             <StockChartLegendSettings Visible="true"></StockChartLegendSettings>
             <StockChartSeriesCollection>
-                <StockChartSeries DataSource="@StockDetails" XName="date" YName="high" Name="Apple Inc" Type="ChartSeriesType.Candle"></StockChartSeries>
+                <StockChartSeries DataSource="@StockDetails" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Name="Apple  Inc" Type="ChartSeriesType.Candle"></StockChartSeries>
             </StockChartSeriesCollection>
         </SfStockChart>
   
@@ -29,12 +29,12 @@ To display the legend for the Stock Chart, set the [Visible](https://help.syncfu
 @code {
     public class ChartData
     {
-        public DateTime Date;
-        public Double Open;
-        public Double Low;
-        public Double Close;
-        public Double High;
-        public Double Volume;
+        public DateTime Date { get; set; }
+        public Double Open { get; set; }
+        public Double Low { get; set; }
+        public Double Close { get; set; }
+        public Double High { get; set; }
+        public Double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -62,7 +62,7 @@ By using the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
         <SfStockChart Title="AAPL Stock Price">
             <StockChartLegendSettings Visible="true" Position="LegendPosition.Top"></StockChartLegendSettings>
             <StockChartSeriesCollection>
-                <StockChartSeries DataSource="@StockDetails" XName="date" YName="high" Name="Apple Inc" Type="ChartSeriesType.Candle"></StockChartSeries>
+                <StockChartSeries DataSource="@StockDetails" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Name="Apple Inc" Type="ChartSeriesType.Candle"></StockChartSeries>
             </StockChartSeriesCollection>
         </SfStockChart>
   
@@ -70,12 +70,12 @@ By using the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 @code {
     public class ChartData
     {
-        public DateTime Date;
-        public Double Open;
-        public Double Low;
-        public Double Close;
-        public Double High;
-        public Double Volume;
+        public DateTime Date { get; set; }
+        public Double Open { get; set; }
+        public Double Low { get; set; }
+        public Double Close { get; set; }
+        public Double High { get; set; }
+        public Double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -102,7 +102,7 @@ The **Custom** position helps to position the legend anywhere in the Stock Chart
                 <StockChartLegendBorder Color="Black" Width="2"></StockChartLegendBorder>
             </StockChartLegendSettings>
             <StockChartSeriesCollection>
-                <StockChartSeries DataSource="@StockDetails" XName="date" YName="high" Name="Apple Inc" Type="ChartSeriesType.Candle"></StockChartSeries>
+                <StockChartSeries DataSource="@StockDetails" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Name="Apple Inc" Type="ChartSeriesType.Candle"></StockChartSeries>
             </StockChartSeriesCollection>
         </SfStockChart>
   
@@ -110,12 +110,12 @@ The **Custom** position helps to position the legend anywhere in the Stock Chart
 @code {
     public class ChartData
     {
-        public DateTime Date;
-        public Double Open;
-        public Double Low;
-        public Double Close;
-        public Double High;
-        public Double Volume;
+        public DateTime Date { get; set; }
+        public Double Open { get; set; }
+        public Double Low { get; set; }
+        public Double Close { get; set; }
+        public Double High { get; set; }
+        public Double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -142,9 +142,13 @@ You can reverse the order of the legend items by using the [Reversed](https://he
            <StockChartLegendSettings Visible="true" Reversed="true">
             </StockChartLegendSettings>
            <StockChartSeriesCollection>
-                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="x" YName="close" Name="Apple Stock Price"></StockChartSeries>
-                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="x" YName="close" Name="Google Stock Price"></StockChartSeries>
-                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Spline" XName="x" YName="close" Name="Tesla Stock Price"></StockChartSeries>
+
+                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Name="Apple Stock Price"></StockChartSeries>
+
+                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Name="Google Stock Price"></StockChartSeries>
+
+                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Spline"XName="Date" High="High" Low="Low" Open="Open" Close="Close" Name="Tesla Stock Price"></StockChartSeries>
+
             </StockChartSeriesCollection>
         </SfStockChart>
   
@@ -152,12 +156,12 @@ You can reverse the order of the legend items by using the [Reversed](https://he
 @code {
     public class ChartData
     {
-        public DateTime Date;
-        public Double Open;
-        public Double Low;
-        public Double Close;
-        public Double High;
-        public Double Volume;
+        public DateTime Date { get; set; }
+        public Double Open { get; set; }
+        public Double Low { get; set; }
+        public Double Close { get; set; }
+        public Double High { get; set; }
+        public Double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -185,7 +189,7 @@ Using the [Alignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
             <StockChartLegendBorder Color="Black" Width="2"></StockChartLegendBorder>
             </StockChartLegendSettings>
             <StockChartSeriesCollection>
-                <StockChartSeries DataSource="@StockDetails" XName="date" YName="high" Name="Apple Inc" Type="ChartSeriesType.Candle"></StockChartSeries>
+                <StockChartSeries DataSource="@StockDetails"  XName="Date" High="High" Low="Low" Open="Open" Close="Close" Name="Apple Inc" Type="ChartSeriesType.Candle"></StockChartSeries>
             </StockChartSeriesCollection>
         </SfStockChart>
   
@@ -193,12 +197,12 @@ Using the [Alignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 @code {
     public class ChartData
     {
-        public DateTime Date;
-        public Double Open;
-        public Double Low;
-        public Double Close;
-        public Double High;
-        public Double Volume;
+        public DateTime Date { get; set; }
+        public Double Open { get; set; }
+        public Double Low { get; set; }
+        public Double Close { get; set; }
+        public Double High { get; set; }
+        public Double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -228,7 +232,7 @@ The [LegendShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
             <StockChartLegendSettings Visible="true" ShapeHeight="13" ShapeWidth="13">
             </StockChartLegendSettings>
             <StockChartSeriesCollection>
-                <StockChartSeries DataSource="@StockDetails" XName="date" YName="high" Name="Apple Inc" Type="ChartSeriesType.Candle"  LegendShape="LegendShape.Diamond"></StockChartSeries>
+                <StockChartSeries DataSource="@StockDetails" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Name="Apple Inc" Type="ChartSeriesType.Candle"  LegendShape="LegendShape.Diamond"></StockChartSeries>
             </StockChartSeriesCollection>
         </SfStockChart>
   
@@ -236,12 +240,12 @@ The [LegendShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 @code {
     public class ChartData
     {
-        public DateTime Date;
-        public Double Open;
-        public Double Low;
-        public Double Close;
-        public Double High;
-        public Double Volume;
+        public DateTime Date { get; set; }
+        public Double Open { get; set; }
+        public Double Low { get; set; }
+        public Double Close { get; set; }
+        public Double High { get; set; }
+        public Double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -269,8 +273,8 @@ When the legend is placed on the top or bottom of the Stock Chart, it takes up 2
                 <StockChartLegendBorder Color="blue" Width="1"></StockChartLegendBorder>
             </StockChartLegendSettings>
             <StockChartSeriesCollection>
-               <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="x" YName="close" Name="Apple Stock Price"></StockChartSeries>
-                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="x" YName="close" Name="Google Stock Price"></StockChartSeries>
+               <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Name="Apple Stock Price"></StockChartSeries>
+                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Name="Google Stock Price"></StockChartSeries>
             </StockChartSeriesCollection>
         </SfStockChart>
   
@@ -278,12 +282,12 @@ When the legend is placed on the top or bottom of the Stock Chart, it takes up 2
 @code {
     public class ChartData
     {
-        public DateTime Date;
-        public Double Open;
-        public Double Low;
-        public Double Close;
-        public Double High;
-        public Double Volume;
+        public DateTime Date { get; set; }
+        public Double Open { get; set; }
+        public Double Low { get; set; }
+        public Double Close { get; set; }
+        public Double High { get; set; }
+        public Double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -310,7 +314,7 @@ The [ShapeHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
            <StockChartLegendSettings Visible="true" Height="50" Width="300" ShapeHeight="15" ShapeWidth="15">
             </StockChartLegendSettings>
             <StockChartSeriesCollection>
-                <StockChartSeries DataSource="@StockDetails" XName="date" YName="high" Name="Apple Inc" Type="ChartSeriesType.Candle"></StockChartSeries>
+                <StockChartSeries DataSource="@StockDetails" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Name="Apple Inc" Type="ChartSeriesType.Candle"></StockChartSeries>
             </StockChartSeriesCollection>
         </SfStockChart>
   
@@ -318,12 +322,12 @@ The [ShapeHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 @code {
     public class ChartData
     {
-        public DateTime Date;
-        public Double Open;
-        public Double Low;
-        public Double Close;
-        public Double High;
-        public Double Volume;
+        public DateTime Date { get; set; }
+        public Double Open { get; set; }
+        public Double Low { get; set; }
+        public Double Close { get; set; }
+        public Double High { get; set; }
+        public Double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -351,8 +355,8 @@ The [ItemPadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
            <StockChartLegendSettings Visible="true" ItemPadding="30">
             </StockChartLegendSettings>
            <StockChartSeriesCollection>
-                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="x" YName="close" Name="Apple"></StockChartSeries>
-                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="x" YName="close" Name="Google"></StockChartSeries>
+                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Name="Apple"></StockChartSeries>
+                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Name="Google"></StockChartSeries>
             </StockChartSeriesCollection>
         </SfStockChart>
   
@@ -360,12 +364,12 @@ The [ItemPadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 @code {
     public class ChartData
     {
-        public DateTime Date;
-        public Double Open;
-        public Double Low;
-        public Double Close;
-        public Double High;
-        public Double Volume;
+        public DateTime Date { get; set; }
+        public Double Open { get; set; }
+        public Double Low { get; set; }
+        public Double Close { get; set; }
+        public Double High { get; set; }
+        public Double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -392,9 +396,9 @@ When the legend items exceed legend bounds, paging will be enabled by default. E
            <StockChartLegendSettings Visible="true" Width="100" Height="70" Padding="10" ShapePadding="10">
             </StockChartLegendSettings>
            <StockChartSeriesCollection>
-                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="x" YName="close" Name="Apple"></StockChartSeries>
-                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="x" YName="close" Name="Google"></StockChartSeries>
-                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Spline" XName="x" YName="close" Name="Tesla"></StockChartSeries>
+                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Name="Apple"></StockChartSeries>
+                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Name="Google"></StockChartSeries>
+                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Spline" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Name="Tesla"></StockChartSeries>
             </StockChartSeriesCollection>
         </SfStockChart>
   
@@ -402,12 +406,12 @@ When the legend items exceed legend bounds, paging will be enabled by default. E
 @code {
     public class ChartData
     {
-        public DateTime Date;
-        public Double Open;
-        public Double Low;
-        public Double Close;
-        public Double High;
-        public Double Volume;
+        public DateTime Date { get; set; }
+        public Double Open { get; set; }
+        public Double Low { get; set; }
+        public Double Close { get; set; }
+        public Double High { get; set; }
+        public Double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -435,9 +439,9 @@ When the legend text exceeds the container, the text can be wrapped by using [Te
            <StockChartLegendSettings Visible="true" Position="@LegendPosition.Right" TextWrap="@TextWrap.Wrap" MaxLabelWidth="70">
             </StockChartLegendSettings>
            <StockChartSeriesCollection>
-                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="x" YName="close" Name="Apple Stock Price"></StockChartSeries>
-                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="x" YName="close" Name="Google Stock Price"></StockChartSeries>
-                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Spline" XName="x" YName="close" Name="Tesla Stock Price"></StockChartSeries>
+                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Name="Apple Stock Price"></StockChartSeries>
+                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Name="Google Stock Price"></StockChartSeries>
+                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Spline" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Name="Tesla Stock Price"></StockChartSeries>
             </StockChartSeriesCollection>
         </SfStockChart>
   
@@ -445,12 +449,12 @@ When the legend text exceeds the container, the text can be wrapped by using [Te
 @code {
     public class ChartData
     {
-        public DateTime Date;
-        public Double Open;
-        public Double Low;
-        public Double Close;
-        public Double High;
-        public Double Volume;
+        public DateTime Date { get; set; }
+        public Double Open { get; set; }
+        public Double Low { get; set; }
+        public Double Close { get; set; }
+        public Double High { get; set; }
+        public Double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -477,9 +481,9 @@ By default, when you click on the legend item, the appropriate series visibility
            <StockChartLegendSettings Visible="true"  ToggleVisibility="false">
             </StockChartLegendSettings>
            <StockChartSeriesCollection>
-                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="x" YName="close" Name="Apple Stock Price"></StockChartSeries>
-                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="x" YName="close" Name="Google Stock Price"></StockChartSeries>
-                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Spline" XName="x" YName="close" Name="Tesla Stock Price"></StockChartSeries>
+                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Name="Apple Stock Price"></StockChartSeries>
+                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Name="Google Stock Price"></StockChartSeries>
+                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Spline" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Name="Tesla Stock Price"></StockChartSeries>
             </StockChartSeriesCollection>
         </SfStockChart>
   
@@ -487,12 +491,12 @@ By default, when you click on the legend item, the appropriate series visibility
 @code {
     public class ChartData
     {
-        public DateTime Date;
-        public Double Open;
-        public Double Low;
-        public Double Close;
-        public Double High;
-        public Double Volume;
+        public DateTime Date { get; set; }
+        public Double Open { get; set; }
+        public Double Low { get; set; }
+        public Double Close { get; set; }
+        public Double High { get; set; }
+        public Double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -519,9 +523,9 @@ The series [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
            <StockChartLegendSettings Visible="true"  ToggleVisibility="true">
             </StockChartLegendSettings>
            <StockChartSeriesCollection>
-                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="x" YName="close" Name="Apple Stock Price"></StockChartSeries>
-                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="x" YName="close" Name=""></StockChartSeries>
-                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Spline" XName="x" YName="close" Name="Tesla Stock Price"></StockChartSeries>
+                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Name="Apple Stock Price"></StockChartSeries>
+                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Line" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Name="Google Stock Price"></StockChartSeries>
+                <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Spline" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Name="Tesla Stock Price"></StockChartSeries>
             </StockChartSeriesCollection>
         </SfStockChart>
   
@@ -529,12 +533,12 @@ The series [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 @code {
     public class ChartData
     {
-        public DateTime Date;
-        public Double Open;
-        public Double Low;
-        public Double Close;
-        public Double High;
-        public Double Volume;
+        public DateTime Date { get; set; }
+        public Double Open { get; set; }
+        public Double Low { get; set; }
+        public Double Close { get; set; }
+        public Double High { get; set; }
+        public Double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>

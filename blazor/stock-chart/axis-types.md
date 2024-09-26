@@ -31,8 +31,8 @@ Date time axis uses date time scale and displays the date time values as axis la
 @code{
     public class ChartData
     {
-        public DateTime Date;
-        public Double Y;
+        public DateTime Date { get; set; }
+        public Double Y { get; set; }
     }
     public List<ChartData> StockDetails = new List<ChartData>
 {
@@ -74,8 +74,8 @@ Logarithmic axis uses logarithmic scale and it is very useful in visualizing dat
 @code{
     public class ChartData
     {
-        public DateTime Date;
-        public Double Y;
+        public DateTime Date { get; set; }
+        public Double Y { get; set; }
     }
     public List<ChartData> StockDetails = new List<ChartData>
 {

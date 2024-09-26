@@ -34,12 +34,12 @@ By default, tooltip is not visible. Enable the tooltip by setting [Enable](https
 
     public class ChartData
     {
-        public DateTime Date;
-        public Double Open;
-        public Double Low;
-        public Double Close;
-        public Double High;
-        public Double Volume;
+        public DateTime Date { get; set; }
+        public Double Open { get; set; }
+        public Double Low { get; set; }
+        public Double Close { get; set; }
+        public Double High { get; set; }
+        public Double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -86,12 +86,12 @@ By default, tooltip shows information of x and y value in points. In addition to
 
     public class ChartData
     {
-        public DateTime Date;
-        public Double Open;
-        public Double Low;
-        public Double Close;
-        public Double High;
-        public Double Volume;
+        public DateTime Date { get; set; }
+        public Double Open { get; set; }
+        public Double Low { get; set; }
+        public Double Close { get; set; }
+        public Double High { get; set; }
+        public Double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
@@ -132,12 +132,12 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockC
 
     public class ChartData
     {
-        public DateTime Date;
-        public Double Open;
-        public Double Low;
-        public Double Close;
-        public Double High;
-        public Double Volume;
+        public DateTime Date { get; set; }
+        public Double Open { get; set; }
+        public Double Low { get; set; }
+        public Double Close { get; set; }
+        public Double High { get; set; }
+        public Double Volume { get; set; }
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
