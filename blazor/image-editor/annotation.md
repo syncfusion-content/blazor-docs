@@ -524,7 +524,7 @@ Here is an example of inserting rectangle, ellipse, arrow, path, and line in a b
     private async void RectangleAsync()
     {
         await ImageEditor.DrawRectangleAsync(250, 50, 120, 120, 4, "#fff", "blue");
-        await ImageEditor.DrawRectangleAsync(450, 200, 120, 120, 4, "#fff", "blue", null, null, 8);
+        await ImageEditor.DrawRectangleAsync(250, 200, 120, 120, 4, "#fff", "blue", null, null, 8);
     }
 
     private async void EllipseAsync()
