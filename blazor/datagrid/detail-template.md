@@ -210,7 +210,7 @@ In the following sample, a datagrid component is rendered as custom component us
 
 ## Expand by external button
 
-By default, detail rows render in collapsed state. You can expand a detail row by invoking the `Expand` method using the external button.
+By default, detail rows render in collapsed state. You can expand a detail row by invoking the `ExpandAllDetailRowAsync` method using the external button.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
