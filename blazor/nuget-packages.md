@@ -86,10 +86,12 @@ The Syncfusion Blazor Smart Components are designed to seamlessly integrate with
 </ul>
 </td>
 <td>
-<a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a>
-<a href="##syncfusionblazorbuttons">Syncfusion.Blazor.Buttons</a>
-<a href="#syncfusionblazorinputs">Syncfusion.Blazor.Inputs</a>
-<a href="https://www.nuget.org/packages/Azure.AI.OpenAI/">Azure.AI.OpenAI</a>
+<ul>
+<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
+<li><a href="##syncfusionblazorbuttons">Syncfusion.Blazor.Buttons</a></li>
+<li><a href="#syncfusionblazorinputs">Syncfusion.Blazor.Inputs</a></li>
+<li><a href="https://www.nuget.org/packages/Azure.AI.OpenAI/">Azure.AI.OpenAI</a></li>
+</ul>
 </td>
 </tr>
 </table>

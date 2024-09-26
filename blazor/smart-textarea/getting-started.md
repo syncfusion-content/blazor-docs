@@ -16,13 +16,11 @@ This section briefly explains about how to include [Blazor Smart TextArea](https
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 * [OpenAI](https://github.com/syncfusion/smart-ai-samples/tree/master/blazor#openai) or [Azure OpenAI Account](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource)
 
-N> Blazor Smart Components are currently compatible with both OpenAI and Azure OpenAI configurations.
+N> Syncfusion Blazor Smart Components are compatible with both `OpenAI` and `Azure OpenAI`, and fully support Server Interactivity mode apps.
 
 ## Create a new Blazor App in Visual Studio
 
 You can create a **Blazor Server App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
-
-N> As of now, Syncfusion Blazor Smart components are fully compatible with Server App.
 
 ## Install Syncfusion Blazor SmartComponents and Themes NuGet in the App
 
@@ -131,9 +129,11 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Syncfusion Blazor Smart TextArea component
 
-Add the Syncfusion Blazor Smart TextArea component with form components in the **~/Pages/Index.razor** file.
+Add the Syncfusion **Blazor Smart TextArea** component in the **~/Pages/Index.razor** file.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="~/Index.razor" %}
+
 @using Syncfusion.Blazor.SmartComponents
 
 <SfSmartTextArea UserRole="@userRole" UserPhrases="@userPhrases" Placeholder="Enter your queries here" @bind-Value="prompt" Width="75%" RowCount="5">
@@ -151,7 +151,9 @@ Add the Syncfusion Blazor Smart TextArea component with form components in the *
         "Bug report: File not found error occurred in NEED_INFO"
     ];
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Smart TextArea component in your default web browser.
 
