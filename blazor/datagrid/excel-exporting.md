@@ -36,7 +36,7 @@ The excel export allows exporting DataGrid data to Excel document. You need to u
     {
        if (args.Item.Id == "Grid_excelexport") //Id is combination of Grid's ID and itemname
         {
-            await this.DefaultGrid.ExcelExport();
+            await this.DefaultGrid.ExportToExcelAsync();
         }
     }
 
