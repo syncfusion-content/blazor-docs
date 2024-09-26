@@ -149,7 +149,7 @@ bool isValid = SyncfusionLicenseProvider.ValidateLicense(Platform.Blazor);
 
 * To create a unit test project in Visual Studio, choose **File -> New -> Project** from the menu. This opens a new dialog for creating a new project. Filtering the project type by Test or typing Test as a keyword in the search option can help you to find available unit test projects. Select the appropriate test framework (such as MSTest, NUnit, or xUnit) that best suits your need.
 
-![Unit Test Projects](licensing-images/unit-test-projects.png)
+![Unit Test Projects](images/unit-test-projects.png)
 
 * For more details on creating unit test projects in Visual Studio, refer to the [Getting Started with Unit Testing guide](https://learn.microsoft.com/en-us/visualstudio/test/getting-started-with-unit-testing?view=vs-2022&tabs=dotnet%2Cmstest#create-unit-tests).
 
@@ -183,10 +183,10 @@ public void TestSyncfusionBlazorLicense()
 
 * Once the unit test is executed, if the license key validation passes for the specified platform, the output similar to the following will be displayed in the Test Explorer window.
 
-![License Validation Success Message](licensing-images/unit-test-success-message.png)
+![License Validation Success Message](images/unit-test-success-message.png)
 
 * If the license validation fails during unit testing, the following output will be displayed in the Test Explorer window.
 
-![License Validation Failure Message](licensing-images/unit-test-failure-message.png)
+![License Validation Failure Message](images/unit-test-failure-message.png)
 
 * License validation fails due to either an invalid license key or an incorrect assembly or package version that is referenced in the project. In such cases, verify that you are using the valid license key for the platform, and ensure the assembly or package versions referenced in the project match the version of the license key.
