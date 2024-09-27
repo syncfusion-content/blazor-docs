@@ -853,6 +853,75 @@ In the following image, **SfRichTextEditor** component is rendered with **EditTe
 
 ![Blazor DataGrid with Editing in Custom RichTextEditor](./images/blazor-datagrid-editing-in-custom-richtexteditor.png)
 
+### Using SfMaskedTextBox in EditTemplate 
+
+The **SfMaskedTextBox** component in Syncfusion Blazor provides a masked input control that allows you to enforce specific input patterns for text values. This feature can be used within the Syncfusion Blazor Grid component to enable masked input for a specific column in the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate).
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Inputs
+
+<SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" Height="315">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true})" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" DisableHtmlEncode="false" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit" Width="120"></GridColumn>
+        <GridColumn Field="PhoneNumber" HeaderText="Phone Number" Width="120">
+            <EditTemplate>
+                @{
+                    var data = context as Order;
+                }
+
+                <SfMaskedTextBox ID="PhoneNumber" Mask="##-###-#####" Placeholder="PhoneNumber" ValueChange="@(args=>OnChanged(args,data))" Value="((context as Order).PhoneNumber.ToString())"></SfMaskedTextBox>
+            </EditTemplate>
+
+        </GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" EditType="EditType.DropDownEdit" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<Order> Orders { get; set; }
+    public string Maskedvalue { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+                Freight = 2.1 * x,
+                OrderDate = DateTime.Now.AddDays(-x),
+                PhoneNumber = 9876543210,
+                ShipCountry = (new string[] { "USA", "UK", "CHINA", "RUSSIA", "INDIA" })[new Random().Next(5)]
+            }).ToList();
+    }
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+        public long PhoneNumber { get; set; }
+        public string ShipCountry { get; set; }
+    }
+    public void OnChanged(MaskChangeEventArgs Args,Order Data)
+    {
+        if (Args.Value != null)
+        {
+            // store the value global variable.
+            Data.PhoneNumber = long.Parse(Args.Value);
+        }
+    }
+}
+```
+
+In the following image, **SfMaskedTextBox** component is rendered with **EditTemplate** in PhoneNumber column .
+
+![Using SfMaskedTextBox in EditTemplate](./images/using%20maskedTextbox.png)
+
 ### DynamicObject data binding with edit template feature
 
 By defining the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) feature of a [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html), you can render a custom editor component in Grid edit form. Two-way (@bind-Value) binding cannot be defined to the editor component inside `EditTemplate`, since its data type is unknown when Grid is bound by DynamicObject. In this case, you can use the following way to perform a CRUD operation in the DynamicObject bound Grid with `EditTemplate`.
