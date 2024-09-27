@@ -141,3 +141,6 @@ In the below code, word document is converted in to pdf document and return that
 ```
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Load%20PDF%2C%20Excel%2C%20PPT%20file%20types).
+
+N> The above steps are applicable only for server applications. To load Microsoft Office files in the Blazor Syncfusion PDF Viewer Component in a WebAssembly application, kindly refer to the Knowledge Base documentation.
+[reference link](https://www.syncfusion.com/kb/13871/how-to-convert-word-to-pdf-in-blazor-webassembly-wasm)
