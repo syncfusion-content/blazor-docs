@@ -134,6 +134,126 @@ In the following example:
 
 ```
 
+## Event trace while Normal editing
+
+While Normal and dialog editing operation is getting executed the following events will be notified,
+
+* [OnBeginEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBeginEdit)  
+* [RowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowEditing)
+* [RowEdited](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowEdited)
+* [OnRowEditStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnRowEditStart)
+* [EditCanceling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_EditCanceling)
+* [EditCanceled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_EditCanceled)
+* [RowDeleting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDeleting)
+* [RowDeleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDeleted)
+* [RowCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowCreating)
+* [RowCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowCreated)
+* [RowUpdating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowUpdating)
+* [RowUpdated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowUpdated)
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" Height="315">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal"></GridEditSettings>
+    <GridEvents OnBeginEdit="BeginEditHandler" RowEdited="RowEditedHandler" RowEditing="RowEditingHandler" OnRowEditStart="OnRowEditStartHandler" EditCanceling="EditCancelingHandler"
+        EditCanceled="EditCanceledHandler" RowDeleting="RowDeletingHandler" RowDeleted="RowDeletedHandler" RowCreating="RowCreatingHandler" RowCreated="RowCreatedHandler" 
+        RowUpdating="RowUpdatingHandler" RowUpdated="RowUpdatedHandler" TValue="Order"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true})" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required=true})" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" EditType="EditType.DropDownEdit" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+                Freight = 2.1 * x,
+                OrderDate = DateTime.Now.AddDays(-x),
+                ShipCountry = (new string[] { "USA", "UK", "CHINA", "RUSSIA", "INDIA" })[new Random().Next(5)]
+            }).ToList();
+    }
+
+    public void BeginEditHandler(BeginEditArgs<Order> args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public void RowEditedHandler(RowEditedEventArgs<Order> args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public void RowEditingHandler(RowEditingEventArgs<Order> args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public void OnRowEditStartHandler(OnRowEditStartEventArgs args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public void EditCanceledHandler(EditCanceledEventArgs<Order> args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public void EditCancelingHandler(EditCancelingEventArgs<Order> args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public void RowDeletedHandler(RowDeletedEventArgs<Order> args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public void RowDeletingHandler(RowDeletingEventArgs<Order> args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public void RowUpdatingHandler(RowUpdatingEventArgs<Order> args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public void RowUpdatedHandler(RowUpdatedEventArgs<Order> args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public void RowCreatingHandler(RowCreatingEventArgs<Order> args)
+    {
+        // Here, you can customize your code.
+    }
+
+    public void RowCreatedHandler(RowCreatedEventArgs<Order> args)
+    {
+        // Here, you can customize your code.
+    }
+
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+        public string ShipCountry { get; set; }
+    }
+}
+```
 ## Confirmation dialog
 
 The delete confirms dialog can be shown on deleting a record by setting the [ShowDeleteConfirmDialog](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_ShowDeleteConfirmDialog) property of the [GridEditSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component as **true**.
