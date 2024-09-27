@@ -40,36 +40,6 @@ The SfPdfViewer control provides the support to import and export annotations us
 
 ![Blazor PDFViewer with Imported Annotation](../../pdfviewer/images/blazor-pdfviewer-imported-annotation.png)
 
-## Importing annotation using SfPdfViewer API
-
-You can import annotations using JSON file or JSON object in code behind like the following code snippet.
-
-```cshtml
-
-@using Syncfusion.Blazor.Buttons
-@using Syncfusion.Blazor.SfPdfViewer
-
-<SfButton OnClick="@OnImportAnnotationsClick">Import Annotation</SfButton>
-<SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
-
-@code {
-    SfPdfViewer2 Viewer;
-    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
-
-    public async void OnImportAnnotationsClick(MouseEventArgs args)
-    {
-        //The json file has been placed inside the data folder.
-        byte[] bytes = System.IO.File.ReadAllBytes("wwwroot/Data/PDF_Succinctly.json");
-        await Viewer.ImportAnnotationAsync(new MemoryStream(bytes));
-    }
-}
-
-```
-
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Import-Export/Annotations%20as%20JSON%20object%20-%20SfPdfViewer).
-
-N>The JSON file for importing the annotation should be placed in the desired location and the path has to be provided correctly.
-
 ## Exporting annotation from the PDF document
 
 The SfPdfViewer control provides the support to export the annotations as JSON file and JSON object using annotation toolbar.
@@ -85,30 +55,231 @@ The SfPdfViewer control provides the support to export the annotations as JSON f
 
 N>Export annotations will be in the disabled state when the loaded PDF document does not contain any annotations.
 
-## Exporting annotation using SfPdfViewer API
+## Export and import annotations programatically
 
-You can export annotations as JSON file in code behind like the following code snippet.
+The PDF Viewer control provides the support to export and import annotations programatically in the following formats using the methods `ImportAnnotationAsync`, `ExportAnnotationAsync`, `ExportAnnotationsAsObjectAsync`.
+
+* XFDF
+* JSON
+
+### Export and import as JSON
+
+#### Export as JSON 
+
+Using the `ExportAnnotationAsync` method, the annotation data can be exported in the specified data format. 
+
+The following code explains how to export the annotation data as JSON.
 
 ```cshtml
 
 @using Syncfusion.Blazor.SfPdfViewer
 @using Syncfusion.Blazor.Buttons
 
-<SfButton OnClick="@OnExportAnnotationsClick">Export Annotation</SfButton>
-<SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
+@* Button to import annotations*@
+<SfButton OnClick="@OnExportAnnotationsClick">Export Annotation as JSON</SfButton>
 
+<SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
 @code {
     SfPdfViewer2 Viewer;
     public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
 
+    // Event handler for export annotations button click
     public async void OnExportAnnotationsClick(MouseEventArgs args)
     {
-        await Viewer.ExportAnnotationAsync();
+        await Viewer.ExportAnnotationAsync(AnnotationDataFormat.Json);
     }
 }
 
 ```
+
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Import-Export/Annotations%20as%20JSON%20stream%20and%20file%20-%20SfPdfViewer).
+
+#### Import as JSON 
+
+Using the `ImportAnnotationAsync` method, the annotation data can be imported in the specified data format. 
+
+The following code explains how to import the annotation data as JSON.
+
+```cshtml
+
+
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.SfPdfViewer
+
+@* Button to import annotations*@
+<SfButton OnClick="@OnImportAnnotationsClick">Import Annotation as JSON</SfButton>
+
+<SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
+
+@code {
+
+    SfPdfViewer2 Viewer;
+    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+
+    // Event handler for import annotations button click
+    public async void OnImportAnnotationsClick(MouseEventArgs args)
+    {
+        await Viewer.ImportAnnotationAsync("wwwroot/Data/PDF_Succinctly.json");
+
+    }
+}
+
+```
+
+### Export and import as XFDF
+
+#### Export as XFDF 
+
+Using the `ExportAnnotationAsync` method, the annotation data can be exported in the specified data format. 
+
+The following code explains how to export the annotation data as XFDF.
+
+```cshtml
+
+@using Syncfusion.Blazor.SfPdfViewer
+@using Syncfusion.Blazor.Buttons
+
+<SfButton OnClick="@OnExportAnnotationsClick">Export Annotation as XFDF</SfButton>
+
+<SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
+
+@code {
+    SfPdfViewer2 Viewer;
+
+    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+
+    // Event handler for export annotations button click
+    public async void OnExportAnnotationsClick(MouseEventArgs args)
+    {
+        await Viewer.ExportAnnotationAsync(AnnotationDataFormat.Xfdf);
+    }
+}
+
+```
+
+#### Import as XFDF 
+
+Using the `ImportAnnotationAsync` method, the annotation data can be imported in the specified data format. 
+
+The following code explains how to import the annotation data as XFDF.
+
+```cshtml
+
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.SfPdfViewer
+
+@* Button to import annotations*@
+<SfButton OnClick="@OnImportAnnotationsClick">Import Annotation as XFDF</SfButton>
+
+<SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
+
+@code {
+
+    SfPdfViewer2 Viewer;
+    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+
+    // Event handler for import annotations button click
+    public async void OnImportAnnotationsClick(MouseEventArgs args)
+    {
+        await Viewer.ImportAnnotationAsync("wwwroot/Data/PDF_Succinctly.Xfdf");
+
+    }
+}
+
+```
+
+### Export and import as Object
+
+The SfPdfViewer control supports exporting the annotation data as an object, and the exported data will be imported into the current PDF document from the object. Using the `ExportAnnotationAsync` method, the annotation data can be exported in the specified data format. 
+
+The following code shows how to export the annotation data as an object and import the annotation data from that object into the current PDF document via a button click.
+
+```cshtml
+
+@using Syncfusion.Blazor.SfPdfViewer
+@using Syncfusion.Blazor.Buttons
+
+<SfButton OnClick="@ExportasObject">Export as Object</SfButton>
+
+<SfButton OnClick="@ImportasObject">Import as Object</SfButton>
+
+<SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
+
+@code {
+    SfPdfViewer2 Viewer;
+    public object ExportObject;
+
+    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+
+    // Event handler for export annotations button click
+    public async void ExportasObject(MouseEventArgs args)
+    {
+        ExportObject = await Viewer.ExportAnnotationsAsObjectAsync();
+    }
+
+    // Event handler for import annotations button click
+    public async void ImportasObject(MouseEventArgs args)
+    {
+        await Viewer.ImportAnnotationAsync(ExportObject);
+    }
+}
+
+```
+
+### Import as base64 string
+
+The following code snippet explains how the import annotation in SfPdfViewer as base64 string. 
+
+```cshtml
+
+@using Syncfusion.Blazor.SfPdfViewer
+@using Syncfusion.Blazor.Buttons
+
+<SfButton OnClick="@ImportasBase64">Import as Base 64</SfButton>
+
+<SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
+
+@code {
+    SfPdfViewer2 Viewer;
+
+    public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+
+    // Event handler for import annotations button click
+    public async void ImportasBase64(MouseEventArgs args)
+    {
+        Stream stream = await GetDocumentAsStream("wwwroot/Data/PDF_Succinctly.json");
+        MemoryStream memoryStream = new MemoryStream();
+        await stream.CopyToAsync(memoryStream);
+        memoryStream.Position = 0;
+        string base64 = Convert.ToBase64String(memoryStream.ToArray());
+        await Viewer.ImportAnnotationAsync(base64);
+    }
+
+    private async Task<Stream> GetDocumentAsStream(string documentPath)
+    {
+        Stream stream = new MemoryStream();
+        try
+        {
+            string newDocumentPath = documentPath;
+            if (System.IO.File.Exists("wwwroot/" + documentPath))
+            {
+                FileStream fileStream = new FileStream("wwwroot/" + documentPath, FileMode.Open, FileAccess.Read);
+                MemoryStream memoryStream = new MemoryStream();
+                await fileStream.CopyToAsync(memoryStream);
+                memoryStream.Position = 0;
+                stream = memoryStream;
+                return stream;
+            }
+            return stream;
+        }
+        catch
+        {
+            return stream;
+        }
+    }
+}
+
+```
 
 ## See also
 
