@@ -406,7 +406,7 @@ In the following example, AI AssistView component rendered with built-in toolbar
 
 ```
 
-![Blazor AI AssistView Prompts](./images/assistview-prompts.png)
+![Blazor AI AssistView Prompts](./images/ai-assistview-prompt-built-icon.png)
 
 #### Setting width
 
