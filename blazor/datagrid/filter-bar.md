@@ -150,6 +150,90 @@ The following screenshot shows filtering using custom component
 
 ![Filtering with Custom Component in Blazor DataGrid](./images/blazor-datagrid-custom-filter.PNG)
 
+## DatePicker component in Filterbar with Immediate filter Mode
+
+The **DatePicker** component can be rendered in the FilterBar using the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) feature of the Grid. When a value is selected in the **DatePicker**, the column will not be filtered automatically. However, the datepicker control offers a convenient method for users to enter a date and automatically apply the filter based on the entered date. This functionality is triggered by the **"oninput"** event of the **SfDatePicker**. Depending on the **ImmediateModeDelay** setting, the filtering operation will be executed accordingly. This event enables you to capture the user's input as they type and perform any required actions or validations.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Calendars
+@using System.Globalization;
+ 
+<SfGrid @ref="Grid" DataSource="@Orders" AllowFiltering="true" AllowPaging="true">
+    <GridFilterSettings Mode="FilterBarMode.Immediate" ImmediateModeDelay="700"></GridFilterSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.DateTime" TextAlign="TextAlign.Right" Width="130">
+            <FilterTemplate>
+                <SfDatePicker @ref="DatePicker" Format="d" TValue="DateTime?" @oninput="HandleInput" Placeholder='Select a date'>
+                </SfDatePicker>
+            </FilterTemplate>
+        </GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+ 
+@code {
+    public List<Order> Orders { get; set; }
+    SfGrid<Order> Grid;
+    SfDatePicker<DateTime?> DatePicker { get; set; }
+ 
+    private async Task HandleInput(ChangeEventArgs args)
+    {
+        var textValue = args.Value.ToString();
+ 
+        var isParsable = DateTime.TryParseExact(args.Value.ToString(), "d", CultureInfo.CurrentCulture, DateTimeStyles.AssumeUniversal, out DateTime newDate);
+        if (isParsable)
+        {
+            DateTime date = (DateTime)Convert.ChangeType(args.Value, typeof(DateTime));
+ 
+            if (DatePicker != null)
+            {
+                await Task.Delay(500);
+                if (textValue != null)
+                {
+                    await Grid.FilterByColumnAsync("OrderDate", "equal", date);
+                }
+            }
+        }
+        else if (textValue != null && textValue.Length == 0)
+        {
+            await Grid.ClearFilteringAsync();
+        }
+        else
+        {
+            await Grid.FilterByColumnAsync("OrderDate", "equal", " ");
+        }
+    }
+ 
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+                Freight = 2.1 * x,
+                OrderDate = (new DateTime[] { new DateTime(2010, 5, 1), new DateTime(2010, 5, 2), new DateTime(2010, 5, 3), new DateTime(2021, 6, 22) })[new Random().Next(4)],
+            }).ToList();
+    }
+ 
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBgNbiJKmAZawwI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+In the following image, SfDatePicker component is rendered with EditTemplate in OrderDate column.
+
+![FilterBar with SfDatePicker Component in Blazor DataGrid](./images/filterbardatepicker.png)
+
 ## Change default filter operator
 
 You can change the default filter operator by extending `FilterSettings` property in the column.
