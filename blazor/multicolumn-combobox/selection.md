@@ -107,7 +107,7 @@ The [Autofill]() property determines if the component's input field will automat
 
 {% include_relative code-snippet/selection/auto-fill.razor %}
 
-{% endhighlight %} -->
+{% endhighlight %}  -->
 
 <!-- ## Get selected item by value
 

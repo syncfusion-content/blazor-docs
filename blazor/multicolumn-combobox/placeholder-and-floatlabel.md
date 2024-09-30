@@ -47,7 +47,7 @@ The mandatory indicator `*` can be applied to the placeholder by targeting its C
 
 ![Blazor ComboBox with mandatory indicator placeholder](./images/placeholder-and-floatlabel/blazor_combobox_placeholder-with-mandatory.png) 
 
-## FloatLabel
+## Floating label
 
 Use the [FloatLabelType]() property to define how the floating label behaves in the DropDownList, allowing the `Placeholder` text to float above the TextBox. This functionality is relevant only when a `Placeholder` is present. The `FloatLabelType` depends on the `Placeholder` setting, with its default value being `Never`.
 
