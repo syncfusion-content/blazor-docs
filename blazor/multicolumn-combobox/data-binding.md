@@ -25,7 +25,7 @@ The MultiColumn ComboBox loads the data from local data sources through the [Dat
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZBftYVqKvgHmaAA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor ComboBox with local data binding](./images/data-binding/blazor_combobox_local-binding.png)
+![Blazor MultiColumn ComboBox with local data binding](./images/data-binding/blazor_combobox_local-binding.png)
 
 ## Index value binding
 
@@ -79,7 +79,7 @@ Bind the [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dyn
 
 {% endhighlight %}
 
-![Blazor ComboBox with Expando object binding](./images/data-binding/blazor_combobox_expando-object-binding.gif)
+![Blazor MultiColumn ComboBox with Expando object binding](./images/data-binding/blazor_combobox_expando-object-binding.gif)
 
 ### Dynamic object binding
 
@@ -91,7 +91,7 @@ Bind the [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dyn
 
 {% endhighlight %}
 
-![Blazor ComboBox with Dynamic object binding](./images/data-binding/blazor_combobox_dynamic-data-binding.gif)
+![Blazor MultiColumn ComboBox with Dynamic object binding](./images/data-binding/blazor_combobox_dynamic-data-binding.gif)
 
 ### ValueTuple data binding
 
@@ -151,7 +151,7 @@ The [OData v4 Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjVJZkBKUbFJULBC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor ComboBox with OData v4 Adaptor](./images/data-binding/blazor_combobox_odata-v4-services.png)
+![Blazor MultiColumn ComboBox with OData v4 Adaptor](./images/data-binding/blazor_combobox_odata-v4-services.png)
 
 ### Web API adaptor
 
@@ -165,7 +165,7 @@ The [Web API Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZhTDaLKUlkAUjhM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor ComboBox with Web API Adaptor](./images/data-binding/blazor_combobox_web-api-adaptor.png)
+![Blazor MultiColumn ComboBox with Web API Adaptor](./images/data-binding/blazor_combobox_web-api-adaptor.png)
 
 ### Offline mode
 
