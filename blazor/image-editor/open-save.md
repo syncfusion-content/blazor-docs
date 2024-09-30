@@ -115,7 +115,7 @@ User can easily open images in the Image Editor from Blob storage. This method a
 
     private async Task SaveAsync()
     {
-        var imageData = await ImageEditor.GetImageDataUrlAsync();
+        var imageData = await ImageEditor.GetImageDataAsync();
         blobUrl = await CreateBlobUrl(imageData);
     }
 
@@ -130,19 +130,19 @@ User can easily open images in the Image Editor from Blob storage. This method a
     private async Task<string> CreateBlobUrl(byte[] imageData)
     {
         var base64String = Convert.ToBase64String(imageData);
-        var jsCode = $@"
-            return new Promise((resolve) => {{
-                const byteCharacters = atob('{base64String}');
+        var jsCode = @"
+            return new Promise((resolve) => {
+                const byteCharacters = atob(arguments[0]);
                 const byteNumbers = new Uint8Array(byteCharacters.length);
-                for (let i = 0; i < byteCharacters.length; i++) {{
+                for (let i = 0; i < byteCharacters.length; i++) {
                     byteNumbers[i] = byteCharacters.charCodeAt(i);
-                }}
-                const blob = new Blob([byteNumbers], {{type: 'image/png'}});
+                }
+                const blob = new Blob([byteNumbers], {type: 'image/png'});
                 resolve(URL.createObjectURL(blob));
-            }});
+            });
         ";
-
-        return await JS.InvokeAsync<string>("eval", jsCode);
+ 
+        return await JS.InvokeAsync<string>("eval", jsCode, base64String);
     }
 }
 ```
