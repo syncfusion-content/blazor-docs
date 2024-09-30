@@ -304,7 +304,136 @@ The [ChartSeriesBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXrgWhBxpxgIqdqw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor Step Area Chart with Custom Series](../images/chart-types-images/blazor-step-area-chart-custom-series.png)
+## Empty points
+
+Data points with `null`, `double.NaN` or `undefined` values are considered empty. Empty data points are ignored and not plotted on the chart.
+
+**Mode**
+
+Use the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Mode) property to define how empty or missing data points are handled in the series. The default mode for empty points is [`Gap`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.EmptyPointMode.html#Syncfusion_Blazor_Charts_EmptyPointMode_Gap).
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@WeatherReports" XName="X" YName="Y" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StepArea">
+            <ChartEmptyPointSettings Mode="EmptyPointMode.Zero"></ChartEmptyPointSettings>
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code {
+    public class ChartData
+    {
+        public string X { get; set; }
+        public double Y { get; set; }
+        public double High { get; set; }
+    }
+
+    public List<ChartData> WeatherReports = new List<ChartData>
+    {
+         new ChartData { X= "Sun", Y= 2.5 },
+         new ChartData { X= "Mon", Y= 4.7 },
+         new ChartData { X= "Tue", Y= 6.4 },
+         new ChartData { X= "Wed", Y= double.NaN },
+         new ChartData { X= "Thu", Y= 7.5 },
+         new ChartData { X= "Fri", Y= 3.0 },
+         new ChartData { X= "Sat", Y= 1.2 }
+    };
+}
+
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBpNYiKqFybwcxy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+**Fill**
+
+Use the [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Fill) property to customize the fill color of empty points in the series.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@WeatherReports" XName="X" YName="Y" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StepArea">
+            <ChartEmptyPointSettings Mode="EmptyPointMode.Zero" Fill="red"></ChartEmptyPointSettings>
+            <ChartMarker Visible="true" Height="7" Width="7" IsFilled="true"></ChartMarker>
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code {
+    public class ChartData
+    {
+        public string X { get; set; }
+        public double Y { get; set; }
+        public double High { get; set; }
+    }
+
+    public List<ChartData> WeatherReports = new List<ChartData>
+    {
+         new ChartData { X= "Sun", Y= 2.5 },
+         new ChartData { X= "Mon", Y= 4.7 },
+         new ChartData { X= "Tue", Y= 6.4 },
+         new ChartData { X= "Wed", Y= double.NaN },
+         new ChartData { X= "Thu", Y= 7.5 },
+         new ChartData { X= "Fri", Y= 3.0 },
+         new ChartData { X= "Sat", Y= 1.2 }
+    };
+}
+
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBftkMqAPbZoJkr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+**Border**
+
+Use the [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Border) property to customize the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointBorder.html#Syncfusion_Blazor_Charts_ChartEmptyPointBorder_Width) and [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointBorder.html#Syncfusion_Blazor_Charts_ChartEmptyPointBorder_Color) of the border for empty points.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@WeatherReports" XName="X" YName="Y" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StepArea">
+            <ChartEmptyPointSettings Mode="EmptyPointMode.Zero" Fill="red">
+                <ChartEmptyPointBorder Color="green" Width="2"></ChartEmptyPointBorder>
+            </ChartEmptyPointSettings>
+            <ChartMarker Visible="true" Height="7" Width="7" IsFilled="true"></ChartMarker>
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code {
+    public class ChartData
+    {
+        public string X { get; set; }
+        public double Y { get; set; }
+        public double High { get; set; }
+    }
+
+    public List<ChartData> WeatherReports = new List<ChartData>
+    {
+         new ChartData { X= "Sun", Y= 2.5 },
+         new ChartData { X= "Mon", Y= 4.7 },
+         new ChartData { X= "Tue", Y= 6.4 },
+         new ChartData { X= "Wed", Y= double.NaN },
+         new ChartData { X= "Thu", Y= 7.5 },
+         new ChartData { X= "Fri", Y= 3.0 },
+         new ChartData { X= "Sat", Y= 1.2 }
+    };
+}
+
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBzXuMqKvEjAFVY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Events
 
@@ -382,7 +511,7 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 
     public void PointRender(PointRenderEventArgs args)
     {
-        args.Fill = args.Point.X.ToString() == "Wed" ? "#E91E63" : "#3F51B5";
+        args.Fill = (args.Point.Index % 2 != 0) ? "#ff6347" : "#009cb8";
     }
 
     public List<ChartData> WeatherReports = new List<ChartData>
@@ -398,7 +527,7 @@ The [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhTtFCEpvoMIdnA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVfZaWgUFkdqzow?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

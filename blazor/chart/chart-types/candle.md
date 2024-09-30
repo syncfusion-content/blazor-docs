@@ -203,11 +203,9 @@ The color of the candle will be defined by comparing with previous values. [Bull
 ``` 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hXrJZPrNfEvwlPNT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor Solid Candle Chart](../images/financial-types/blazor-solid-candle-chart.png)
-
 ## Empty points
 
-Data points with `null` or `undefined` values are considered empty. Empty data points are ignored and not plotted on the chart.
+Data points with `null`, `double.NaN` or `undefined` values are considered empty. Empty data points are ignored and not plotted on the chart.
 
 **Mode**
 

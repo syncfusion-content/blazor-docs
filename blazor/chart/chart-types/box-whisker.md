@@ -318,8 +318,6 @@ To change the rendering mode of the Box and Whisker series, use the [BoxPlotMode
 ``` 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VtrJNbLZyqNmLSfX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor Box and Whisker Charts with Box Plot Mode](../images/othertypes/blazor-box-whisker-chart-with-box-plot-mode.png)
-
 ## Show mean
 
 In Box and Whisker series, [ShowMean](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_ShowMean) property is used to show the box and whisker average value. The default value of [ShowMean](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_ShowMean) is **false**.
@@ -361,8 +359,6 @@ In Box and Whisker series, [ShowMean](https://help.syncfusion.com/cr/blazor/Sync
 
 ``` 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNLTjlrtyAViHspW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor Box and Whisker Charts with Average Value](../images/chart-types-images/blazor-box-whisker-chart-average-value.png)
 
 ## Events
 
