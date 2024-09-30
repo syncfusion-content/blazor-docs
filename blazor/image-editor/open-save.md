@@ -84,70 +84,6 @@ Users can easily open images in the Image Editor using a Base64-encoded string. 
 
 ![Blazor Image Editor with Opening an base 64 image](./images/blazor-image-editor-base-image.jpeg)
 
-### Open an image from Blob storage
-
-User can easily open images in the Image Editor from Blob storage. This method allows you to load images directly from Blob storage, ensuring seamless integration and flexibility in your application. Simply retrieve the image Blob from storage and pass it to the [`OpenAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_OpenAsync_System_Object_System_Boolean_System_String_) method, and the image will be loaded into the editor. 
-
-`Note:` You can obtain the Base64 representation of an image from the Image Editor using the [`GetImageDataUrlAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetImageDataUrlAsync) method. This process will be explained in the upcoming section.
-
-```cshtml
-@using Syncfusion.Blazor.ImageEditor
-@using Syncfusion.Blazor.Buttons
-@inject IJSRuntime JS
-
-<div style="padding-bottom: 15px">
-    <SfButton OnClick="SaveAsync">Save Blob</SfButton>
-    <SfButton OnClick="OpenBlob">Open Blob</SfButton>
-</div>
-
-<SfImageEditor @ref="ImageEditor" Height="400">
-    <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
-</SfImageEditor>
-
-@code {
-    private SfImageEditor ImageEditor;
-    private string blobUrl;
-
-    private async Task OpenAsync() 
-    { 
-        await ImageEditor.OpenAsync("nature.png"); 
-    }
-
-    private async Task SaveAsync()
-    {
-        var imageData = await ImageEditor.GetImageDataUrlAsync();
-        blobUrl = await CreateBlobUrl(imageData);
-    }
-
-    private async Task OpenBlob()
-    {
-        if (!string.IsNullOrEmpty(blobUrl))
-        {
-            await ImageEditor.OpenAsync(blobUrl);
-        }
-    }
-
-    private async Task<string> CreateBlobUrl(byte[] imageData)
-    {
-        var base64String = Convert.ToBase64String(imageData);
-        var jsCode = $@"
-            return new Promise((resolve) => {{
-                const byteCharacters = atob('{base64String}');
-                const byteNumbers = new Uint8Array(byteCharacters.length);
-                for (let i = 0; i < byteCharacters.length; i++) {{
-                    byteNumbers[i] = byteCharacters.charCodeAt(i);
-                }}
-                const blob = new Blob([byteNumbers], {{type: 'image/png'}});
-                resolve(URL.createObjectURL(blob));
-            }});
-        ";
-
-        return await JS.InvokeAsync<string>("eval", jsCode);
-    }
-}
-```
-![Blazor Image Editor with Opening an blob image](./images/blazor-image-editor-save-blob.jpeg)
-
 ### Open an image from file uploader 
 
 User can easily open images in the Image Editor using a file uploader. This method allows users to upload an image file from their device and load it directly into the editor. Once the image is selected through the file uploader, pass the file to the [`OpenAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_OpenAsync_System_Object_System_Boolean_System_String_) method, and the image will be seamlessly loaded into the editor.
@@ -308,58 +244,6 @@ To save an image as a byte array, use the [`GetImageDataUrlAsync`](https://help.
             base64String = "data:image/png;base64," + base64String;
             await imageEditor.OpenAsync(base64String);
         }
-    }
-}
-```
-
-### Save the image as blob
-
-To save an image as a blob, use the [`GetImageDataUrlAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetImageDataUrlAsync) method of the editor to retrieve the image data and convert it into a blob. You can then invoke the [`OpenAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_OpenAsync_System_Object_System_Boolean_System_String_) method on the Syncfusion Image Editor instance to load this byte array into the editor. The resulting byte array can be stored in a database for data management and maintenance.
-
-```cshtml
-@using Syncfusion.Blazor.ImageEditor
-@using Syncfusion.Blazor.Buttons
-@inject IJSRuntime JS
-
-<div style="padding-bottom: 15px">
-    <SfButton OnClick="SaveAsync">Save Blob</SfButton>
-</div>
-
-<SfImageEditor @ref="ImageEditor" Height="400px">
-    <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
-</SfImageEditor>
-
-@code {
-    private SfImageEditor ImageEditor;
-    private string blobUrl;
-
-    private async Task OpenAsync() 
-    { 
-        await ImageEditor.OpenAsync("nature.png"); 
-    }
-
-    private async Task SaveAsync()
-    {
-        var imageData = await ImageEditor.GetImageDataUrlAsync();
-        blobUrl = await CreateBlobUrl(imageData);
-    }
-
-    private async Task<string> CreateBlobUrl(byte[] imageData)
-    {
-        var base64String = Convert.ToBase64String(imageData);
-        var jsCode = $@"
-            return new Promise((resolve) => {{
-                const byteCharacters = atob('{base64String}');
-                const byteNumbers = new Uint8Array(byteCharacters.length);
-                for (let i = 0; i < byteCharacters.length; i++) {{
-                    byteNumbers[i] = byteCharacters.charCodeAt(i);
-                }}
-                const blob = new Blob([byteNumbers], {{type: 'image/png'}});
-                resolve(URL.createObjectURL(blob));
-            }});
-        ";
-
-        return await JS.InvokeAsync<string>("eval", jsCode);
     }
 }
 ```
