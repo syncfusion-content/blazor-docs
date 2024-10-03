@@ -500,6 +500,9 @@ The following GIF represent a WildCard operator filtering.
 
 ![Blazor DataGrid with WildCard operator filtering.](./images/blazor-datagrid-wildcard-operator-filtering.gif)
 
+
+> If you want to perform wildcard filtering in the filter bar, you should set the [Operator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterSettings.html#Syncfusion_Blazor_Grids_FilterSettings_Operator)  property to "Wildcard" within the [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) configuration.
+
 ### Like filtering
 The Like filter can process single search patterns using the “%” symbol, retrieving values matching the specified patterns. The following Grid features support Like filtering on string-type columns:
 
@@ -517,6 +520,8 @@ ab% | Returns all the value that are ends with “ab” character.
 The following GIF represent a Like operator filtering.
 
 ![Blazor DataGrid with like operator filtering.](./images/blazor-datagrid-like-operator-filtering.gif)
+
+>If you want to perform like filtering in the filter bar, you should set the [Operator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterSettings.html#Syncfusion_Blazor_Grids_FilterSettings_Operator) property to "Like" within the [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) configuration.
 
 ## Filtering with case sensitivity
 
