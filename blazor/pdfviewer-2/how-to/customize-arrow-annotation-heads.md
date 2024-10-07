@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customize the arrow annotation heads in Blazor SfPdfviewer | Syncfusion
+title: Customize the arrow annotation heads in SfPdfviewer | Syncfusion
 description: Learn here all about how to increase the connection buffer size in Syncfusion Blazor SfPdfviewer component and more.
 platform: Blazor
 control: SfPdfviewer
 documentation: ug
 ---
 
-# Customize the arrow annotation heads in Blazor SfPdfviewer Component
+# Customize the arrow annotation heads in Blazor SfPdfViewer Component
 
 You can customize the arrow annotation using the ArrowSettings API.
 

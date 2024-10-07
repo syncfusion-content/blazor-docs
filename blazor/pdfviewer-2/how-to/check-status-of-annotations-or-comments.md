@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Check the status of annotations or comments in Blazor SfPdfViewer Component
+# Check the status of annotations or comments in Blazor SfPdfViewer
 
 The Syncfusion's Blazor SfPdfViewer component allows to check the status of the annotations in the SfPdfViewer using the [Review](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.Review.html) property of the [PdfAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfAnnotation.html) class.
 

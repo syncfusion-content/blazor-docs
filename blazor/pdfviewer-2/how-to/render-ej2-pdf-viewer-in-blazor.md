@@ -23,7 +23,7 @@ The following code example shows how to render the JS PDF Viewer component into 
 
 ```
 
-**Step 2:** Add the following code to render the Js component in the blazor to the newly added JS file.
+**Step 2:** Add the following code to render the JS component in the blazor to the newly added JS file.
 
 ```javascript
 
