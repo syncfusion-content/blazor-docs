@@ -23,4 +23,4 @@ By setting the overflow property to hidden, the SfPdfViewer component will be di
 
 ```
 
-[View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Prevent%20the%20PDF%20from%20scrolling%20-%20SfPdfViewer)
+[View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Prevent%20the%20PDF%20from%20scrolling)
