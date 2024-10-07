@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Create PDF document in the created event of Blazor SfPdfViewer Component
+# Create PDF document in the created event of SfPdfViewer Component
 
 You can create PDF document in the SfPdfViewer's `Created` event and load the same document in the viewer.
 
