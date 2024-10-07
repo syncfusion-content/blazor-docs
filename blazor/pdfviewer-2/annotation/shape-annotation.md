@@ -189,7 +189,7 @@ The following code illustrates how to change the resizer shape of the shape anno
 
 ![Custom Selector in Blazor SfPdfViewer](../../pdfviewer/images/customselector.png)
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Selector/Customize%20Annotation%20%20Selector%20-%20SfPdfViewer).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Selector/Customize%20Annotation%20%20Selector).
 
 ## Add shape annotation Programmatically
 

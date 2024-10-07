@@ -47,7 +47,7 @@ The following code example shows the review status of the annotation.
     }
 }
 ```
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Comment%20Panel/Retrieve%20the%20comment%20status%20-%20SfPdfViewer).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Comment%20Panel/Retrieve%20the%20comment%20status).
 
 ## See also
 
