@@ -29,4 +29,4 @@ The following code example shows how to suppress the error dialog.
 }
 ```
  
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Supress%20the%20Error%20Dialog-SfPdfViewer)
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Supress%20the%20Error%20Dialog)

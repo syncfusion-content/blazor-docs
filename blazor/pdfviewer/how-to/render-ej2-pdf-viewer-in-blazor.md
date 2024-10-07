@@ -71,4 +71,4 @@ window.renderJsPdfViewer = (id) => {
 
 >N : you can’t able to use the API calls from C# side. You have to use a JS code snippet to use the PDF Viewer component API since we have rendered the JS component.
 
-[View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Render%20JS%20PDF%20Viewer%20component%20in%20Blazor)
+[View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-classic-examples/tree/master/Common/Render%20JS%20PDF%20Viewer%20component%20in%20Blazor)

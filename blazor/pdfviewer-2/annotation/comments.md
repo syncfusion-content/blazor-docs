@@ -148,7 +148,7 @@ The following code snippet explains how to show the Comment panel.
     }
 }
 ```
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Comment%20Panel/Show%20or%20hide%20comment%20panel%20-%20SfPdfViewer).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Comment%20Panel/Show%20or%20hide%20comment%20panel).
 
 ## Add Comments and Reply Comments Programmatically
 
@@ -356,7 +356,7 @@ This code implements date and time formatting for the comment panel of the PDF v
 
 ![Customizing DateTime Format](../images/customizing_datetime_format.png)
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Comment%20Panel/Customize%20DateTimeFormat%20-%20SfPdfViewer).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Comment%20Panel/Customize%20DateTimeFormat).
 
 ## Enabling Multiline Support 
 
@@ -386,7 +386,7 @@ This code will enable multiline support in the Comment panel of the PDF Viewer
 
 ![Enabling Multiline Support](../images/enabling_multiline_support.png)
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Comment%20Panel/Enable%20Multiline%20Support%20-%20SfPdfViewer).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Comment%20Panel/Enable%20Multiline%20Support).
 
 ## See also
 
