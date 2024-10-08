@@ -44,4 +44,4 @@ The following code example shows the review status of the annotation.
     }
 }
 ```
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Comment%20Panel/Retrieve%20the%20comment%20status).
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-classic-examples/tree/master/Annotations/Comment%20Panel/Retrieve%20the%20comment%20status).

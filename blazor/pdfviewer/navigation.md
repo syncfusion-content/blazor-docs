@@ -162,7 +162,7 @@ The following code illustrates how to open thumbnail panel programmatically.
 }
 ```
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Thumbnail/Show%20Thumbnail%20Panel).
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-classic-examples/tree/master/Thumbnail/Show%20Thumbnail%20Panel).
 
 ## Hyperlink navigation
 

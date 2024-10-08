@@ -149,4 +149,4 @@ The following code snippet explains how to show the Comment panel.
     }
 }
 ```
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Comment%20Panel/Show%20or%20hide%20comment%20panel).
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-classic-examples/tree/master/Annotations/Comment%20Panel/Show%20or%20hide%20comment%20panel).
