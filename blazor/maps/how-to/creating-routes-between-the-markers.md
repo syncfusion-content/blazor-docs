@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to create the routes in Blazor Maps Component | Syncfusion
-description: Checkout and learn here all about creating the routes between the markers in Syncfusion Blazor Maps component and more.
+title: How to create routes between markers in Blazor Maps Component | Syncfusion
+description: Learn here all about creating routes between markers in the Syncfusion Blazor Maps component and more.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# Creating routes between the markers in the Blazor Maps component
+# Creating Routes Between Markers in the Blazor Maps component
 
 The Syncfusion Maps component supports plotting routes between two locations (source and destination) using the navigation line feature. Markers can be placed at these locations to visually indicate the source and destination, making it easier to view the path between them on the map.
 
@@ -33,7 +33,7 @@ To access the Google Maps Directions API, include the following script file in y
 
 ## Create Input Fields for Source and Destination
 
-To obtain the source and destination from the user, create two input fields as text boxes. Additionally, include a button to generate routes on the map based on their input. When the user provides addresses in the input fields, you can geocode the addresses to get the corresponding coordinates, add markers to the map at those locations, and draw the route between them will be explained in detail in the topics below.
+To obtain the source and destination from the user, create two input fields as text boxes. Additionally, include a button to generate routes on the map based on their input. The process for generating routes based on the button click is explained in the next section.
 
 ## Fetch coordinates from Google API
 
