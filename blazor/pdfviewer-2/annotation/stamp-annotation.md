@@ -186,7 +186,7 @@ The following code illustrates how to add the image as a stamp annotation in the
 </style>
 
 ```
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Stamp/Add%20a%20custom%20stamp%20-%20SfPdfViewer)
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Stamp/Add%20a%20custom%20stamp)
 
 ## Add stamp annotation programmatically
 

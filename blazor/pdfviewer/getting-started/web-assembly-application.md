@@ -155,7 +155,7 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 {% endhighlight %}
 {% endtabs %}
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Getting%20Started/Client-side%20application).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-classic-examples/tree/master/Getting%20Started/Client-side%20application).
 
 ## Server side processing
 
@@ -207,4 +207,4 @@ Refer,[How to create PDF Viewer Web Service](https://support.syncfusion.com/kb/a
 }
 ```
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Load%20a%20PDF%20file%20using%20local%20service).
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-classic-examples/tree/master/Load%20and%20Save/Load%20a%20PDF%20file%20using%20local%20service).
