@@ -95,16 +95,31 @@ You can retrieve coordinates based on different travel modes, such as DRIVING, W
 To plot markers on the map, use the retrieved geographic coordinates to place the markers at the source and destination locations. This allows users to easily identify the key points along the route.
 
 ```
-            Cities.Add(new MapMarker
-            {
-                 Latitude = response.GetProperty("startLocation").GetProperty("latitude").GetDouble(),
-                 Longitude = response.GetProperty("startLocation").GetProperty("longitude").GetDouble()
-            });
-            Cities.Add(new MapMarker
-            {
-                Latitude = response.GetProperty("endLocation").GetProperty("latitude").GetDouble(),
-                Longitude = response.GetProperty("endLocation").GetProperty("longitude").GetDouble()
-            });
+         //..
+         //..
+         @if (Cities != null)
+         {
+             <MapsMarkerSettings>
+                  <MapsMarker Visible="true" Height="20" Width="20" DataSource="Cities" TValue="MapMarker" Shape="MarkerType.Image" ImageUrl="https://blazor.syncfusion.com/demos/_content/blazor_server_common_net8/images/maps/ballon.png">
+                  </MapsMarker>
+             </MapsMarkerSettings>
+         }
+         //..
+         //..
+    @code{
+         //..
+         //..
+         Cities.Add(new MapMarker
+         {
+             Latitude = response.GetProperty("startLocation").GetProperty("latitude").GetDouble(),
+             Longitude = response.GetProperty("startLocation").GetProperty("longitude").GetDouble()
+         });
+         Cities.Add(new MapMarker
+         {
+             Latitude = response.GetProperty("endLocation").GetProperty("latitude").GetDouble(),
+             Longitude = response.GetProperty("endLocation").GetProperty("longitude").GetDouble()
+         });
+     }
 ```
 
 ## Generate and visualize the route
@@ -112,10 +127,22 @@ To plot markers on the map, use the retrieved geographic coordinates to place th
 To generate and visualize the route, use the geographic coordinates obtained from the Google Directions API to draw a navigation line between the source and destination markers on the map. This provides a clear representation of the path for users to follow.
 
 ```
-       foreach (var point in response.GetProperty("path").EnumerateArray())
-       {
-            LatitudePoints.Add(point.GetProperty("latitude").GetDouble());
-            LongitudePoints.Add(point.GetProperty("longitude").GetDouble());
+        //..
+        //..
+        <MapsNavigationLines>
+        @if (LatitudePoints.Count > 1 && LongitudePoints.Count > 1)
+        {
+            <MapsNavigationLine Visible="true" Angle="0" Color="black" Width="2" Latitude="@LatitudePoints.ToArray()" Longitude="@LongitudePoints.ToArray()"></MapsNavigationLine>
+        }
+        </MapsNavigationLines>
+        //..
+        //..
+       @code{
+             foreach (var point in response.GetProperty("path").EnumerateArray())
+             {
+                   LatitudePoints.Add(point.GetProperty("latitude").GetDouble());
+                   LongitudePoints.Add(point.GetProperty("longitude").GetDouble());
+             }
        }
 ```
 
