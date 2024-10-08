@@ -21,7 +21,7 @@ The data for navigation routes must be retrieved from an external source, such a
 
 Similarly, you can retrieve coordinates from other services and integrate them into the Maps.
 
-## Initialize the Google Maps Directions Service
+## Initialize the Google Maps Directions API
 
 To access the Google Maps Directions API, include the following script file in your HTML page and add your generated API key to the URL of the script.
 
@@ -86,7 +86,7 @@ To obtain the geographic coordinates (latitude and longitude) from the Google Di
     }
 ```
 
-### Customize the travel mode direction services in the Google Map
+### Customize the travel mode in the Google Map Directions API
 
 You can retrieve coordinates based on different travel modes, such as DRIVING, WALKING, BICYCLING, or TRANSIT, using the Google Maps Directions API. DRIVING is the default travel mode for these services. For additional information on various travel modes, you can refer to the [link](https://developers.google.com/maps/documentation/javascript/directions#TravelModes).
 
