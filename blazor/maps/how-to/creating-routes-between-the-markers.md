@@ -148,5 +148,5 @@ To generate and visualize the route, use the geographic coordinates obtained fro
 
 You can find a demonstration of integrating the Google Maps Directions API with the Syncfusion Maps component to render navigation routes below.
 
-[Sample in the GitHub](https://github.com/SyncfusionExamples/How-to-create-a-route-between-the-markers-on-the-Blazor-Maps-from-the-external-source)
+[Sample in the GitHub](https://github.com/SyncfusionExamples/how-to-create-a-route-between-the-markers-in-the-Blazor-maps)
 
