@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to create routes between markers in Blazor Maps Component | Syncfusion
+title: How to create routes between markers in Maps Component | Syncfusion
 description: Learn here all about creating routes between markers in the Syncfusion Blazor Maps component and more.
 platform: Blazor
 control: Maps
@@ -148,5 +148,5 @@ To generate and visualize the route, use the geographic coordinates obtained fro
 
 You can find a demonstration of integrating the Google Maps Directions API with the Syncfusion Maps component to render navigation routes below.
 
-[Sample in the GitHub](https://github.com/SyncfusionExamples/How-to-create-a-route-between-the-markers-on-the-Blazor-Maps-from-the-external-source/tree/master)
+[Sample in the GitHub](https://github.com/SyncfusionExamples/How-to-create-a-route-between-the-markers-on-the-Blazor-Maps-from-the-external-source)
 
