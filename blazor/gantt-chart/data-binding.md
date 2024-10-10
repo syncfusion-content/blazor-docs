@@ -225,6 +225,7 @@ ExpandoObject can be bound to Gantt by assigning to the `DataSource` property. G
 ```cshtml
 
 @using Syncfusion.Blazor.Gantt
+@using System.Dynamic
 
 <SfGantt TValue="ExpandoObject" DataSource="@TreeData" @ref="Gantt" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" Duration="Duration"
