@@ -315,3 +315,114 @@ The following code example shows how to drag and drop a row on button click acti
     }
 }
 ```
+
+## Dynamically hide row drag and drop icons
+
+By default, Gantt Chart renders all records with a row drag and drop icon. This can be dynamically modified to hide the row drag and drop icon based on specific conditions using the [`RowDataBound`](https://blazor.syncfusion.com/documentation/gantt-chart/events#rowdatabound) event.
+
+**Step 1**:
+
+You can dynamically hide the row drag and drop icon based on specific conditions using `RowDataBound` event handling. Here's how you can achieve this:
+
+```csharp
+
+private async void RowDataBoundHandler(Syncfusion.Blazor.Grids.RowDataBoundEventArgs<TaskData> args)
+{
+    if (args.Data.TaskId >= 1 && args.Data.TaskId <= 3)
+    {
+        args.Row.AddClass(new string[] { "e-notdraggable" });
+    }
+}
+
+```
+
+**Step 2**:
+
+To visually hide the row drag and drop icon, you can apply CSS styles:
+
+```html
+
+<style>
+    .e-gantt .e-notdraggable .e-rowcelldrag {
+        display: none;
+    }
+    .e-gantt .e-notdraggable .e-rowdragdrop {
+        pointer-events: none;
+    }
+</style>
+
+```
+
+The following code snippet dynamically row hide drag and drop icons in a Gantt Chart control.
+
+```cshtml
+@using Syncfusion.Blazor.Gantt
+<SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="900px" HighlightWeekends="true"
+          TreeColumnIndex="1" AllowRowDragAndDrop="true">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
+         ParentID="ParentId" Dependency="Predecessor"></GanttTaskFields>
+    <GanttEvents RowDataBound="RowDataBoundHandler" TValue="TaskData"></GanttEvents>
+</SfGantt>
+   
+<style>
+    .e-gantt .e-notdraggable .e-rowcelldrag {
+        display: none;
+    }
+    .e-gantt .e-notdraggable .e-rowdragdrop {
+        pointer-events: none;
+    }
+</style>
+@code {
+    SfGantt<TaskData> Gantt;
+    private List<TaskData> TaskCollection { get; set; }
+    
+    private async void RowDataBoundHandler(Syncfusion.Blazor.Grids.RowDataBoundEventArgs<TaskData> args)
+    {
+        if (args.Data.TaskId >= 1 && args.Data.TaskId <= 3)
+        {
+            args.Row.AddClass(new string[] { "e-notdraggable" });
+        }
+    }
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = ProjectNewData();
+    }
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime? StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public string Predecessor { get; set; }
+        public int? ParentId { get; set; }
+    }
+    public static List<TaskData> ProjectNewData()
+    {
+        List<TaskData> Tasks = new List<TaskData>() 
+        {
+            new TaskData() { TaskId = 1, TaskName = "Product concept ", StartDate = new DateTime(2021, 04, 02), EndDate = new DateTime(2021, 04, 08), Duration = "5days" },
+            new TaskData() { TaskId = 2, TaskName = "Define the product usage", StartDate = new DateTime(2021, 04, 02), EndDate = new DateTime(2021, 04, 08), Duration = "3", Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 3, TaskName = "Define the target audience", EndDate = new DateTime(2021, 04, 04), Progress = 40, ParentId = 1 },
+            new TaskData() { TaskId = 4, TaskName = "Prepare product sketch and notes", StartDate = new DateTime(2021, 04, 05), Duration = "2", Progress = 30, ParentId = 1, Predecessor="2" },
+            new TaskData() { TaskId = 5, TaskName = "Concept approval", StartDate = new DateTime(2021, 04, 08), EndDate = new DateTime(2021, 04, 08), Duration="0", Predecessor="3,4" },
+            new TaskData() { TaskId = 6, TaskName = "Market research", StartDate = new DateTime(2021, 04, 09), EndDate = new DateTime(2021, 04, 18), Duration = "4", Progress = 30 },
+            new TaskData() { TaskId = 7, TaskName = "Demand analysis", Duration = "4", Progress = 40, ParentId = 6 },
+            new TaskData() { TaskId = 8, TaskName = "Customer strength", StartDate = new DateTime(2021, 04, 09), EndDate = new DateTime(2021, 04, 12), Duration = "4", Progress = 30, ParentId = 7, Predecessor="5", },
+            new TaskData() { TaskId = 9, TaskName = "Market opportunity analysis", StartDate = new DateTime(2021, 04, 09), EndDate = new DateTime(2021, 04, 012), Duration="4", ParentId= 7, Predecessor="5" },
+            new TaskData() { TaskId = 10, TaskName = "Competitor analysis", StartDate = new DateTime(2021, 04, 15), EndDate = new DateTime(2021, 04, 18), Duration = "4", Progress = 30, ParentId= 6, Predecessor="7,8" },
+            new TaskData() { TaskId = 11, TaskName = "Product strength analysis", StartDate = new DateTime(2021, 04, 15), EndDate = new DateTime(2021, 04, 18), Duration = "4", Progress = 40, ParentId = 6, Predecessor="9" },
+            new TaskData() { TaskId = 12, TaskName = "Research completed", StartDate = new DateTime(2021, 04, 18), EndDate = new DateTime(2021, 04, 18), Duration = "0", Progress = 30, ParentId = 6, Predecessor="10" },
+            new TaskData() { TaskId = 13, TaskName = "Product design and development", StartDate = new DateTime(2021, 04, 19), EndDate = new DateTime(2021, 05, 16), Duration="20" },
+            new TaskData() { TaskId = 14, TaskName = "Functionality design", StartDate = new DateTime(2021, 04, 19), EndDate = new DateTime(2021, 04, 23), Duration = "3", Progress = 30, ParentId = 13, Predecessor="12" },
+            new TaskData() { TaskId = 15, TaskName = "Quality design", StartDate = new DateTime(2021, 04, 19), EndDate = new DateTime(2021, 04, 23), Duration = "3", Progress = 40, ParentId = 13, Predecessor="12" }
+        };
+        return Tasks;
+    }
+}
+```
+
+The following screenshot shows the output of the above code snippet.
+
+![Hide Row Drag and Drop Icons](images/blazor-gantt-chart-hide-row-drag-and-drop-icons.png)
