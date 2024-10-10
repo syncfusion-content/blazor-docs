@@ -9,7 +9,7 @@ documentation: ug
 
 # ASP.NET Core SharePoint file provider
 
-The ASP.NET Core SharePoint file provider allows users to access and manage files within Microsoft SharePoint. To get started, clone the [SharePoint-aspcore-file-provider](https://github.com/SyncfusionExamples/sharepoint-aspcore-file-provider) using the following command.
+The ASP.NET Core SharePoint file provider allows users to access and manage files within Microsoft SharePoint. To get started, clone the [SharePoint ASP.NET Core File Provider](https://github.com/SyncfusionExamples/sharepoint-aspcore-file-provider) using the following command.
 
 
 ```
