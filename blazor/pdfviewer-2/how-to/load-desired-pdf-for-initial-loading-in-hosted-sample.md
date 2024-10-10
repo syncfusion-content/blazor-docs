@@ -46,7 +46,7 @@ In the above code, When the `Load Another Document` button is clicked, the `Load
 
 With this implementation, users can click the `Load Another Document` button to dynamically change the PDF document displayed in the Blazor SfPdfViewer component.
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Load%20Desire%20PDF%20in%20Blazor%20-%20SfPdfViewer).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Load%20Desire%20PDF%20in%20Blazor).
 
 ## See also
 
