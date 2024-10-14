@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Import/Export in RichTextEditor | Syncfusion
-description: Checkout and learn here all about Import/Export in Syncfusion Blazor RichTextEditor component and more.
+title: Import/Export in Rich Text Editor | Syncfusion
+description: Checkout and learn here all about Import/Export in Syncfusion Blazor Rich Text Editor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
@@ -137,12 +137,6 @@ The following example illustrates how to set up the `ImportWord` in the Rich Tex
         </div>
     </div>
 </div>
-<style>
-    .sb-content div#navigation-btn,
-    .sb-content .sb-toolbar-splitter {
-        z-index: 0
-    }
-</style>
 @code {
     SfRichTextEditor EditorRef;
     private string SaveURL = "https://blazor.syncfusion.com/services/production/api/RichTextEditor/SaveFile";
@@ -213,7 +207,7 @@ The Rich Text Editor's export functionality allows users to convert their edited
 
 You can add `ExportWord` and `ExportPdf` tools to the Rich Text Editor toolbar using the[RichTextEditorToolbarSettings.Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings_Items) property.
 
-To enable the `ExportWord` and `ExportPdf` functionality, the `ServiceUrl` property must be correctly configured within the `ExportWordModel` and `ExportPdfModel`. These API endpoints handle the export process and manage the server-side generation of Word and PDF files, respectively.
+To enable the `ExportWord` and `ExportPdf` functionality, the `ServiceUrl` property must be correctly configured within the `RichTextEditorExportWord` and `RichTextEditorExportPdf`. These API endpoints handle the export process and manage the server-side generation of Word and PDF files, respectively.
 
 The following code block provides a detailed explanation of the API endpoint used for the content export functionality:
 
@@ -348,12 +342,6 @@ The following example demonstrates how to configure the `ExportWord` and `Export
         </div>
     </div>
 </div>
-<style>
-    .sb-content div#navigation-btn,
-    .sb-content .sb-toolbar-splitter {
-        z-index: 0
-    }
-</style>
 @code {
     SfRichTextEditor EditorRef;
     private string SaveURL = "https://blazor.syncfusion.com/services/production/api/RichTextEditor/SaveFile";
