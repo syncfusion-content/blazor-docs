@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Import Microsoft Project XML into Blazor Gantt Chart Component | Syncfusion
+title: Import Microsoft Project XML into Blazor Gantt Chart | Syncfusion
 description: Learn here to import microsoft project XML into Gantt Chart in Syncfusion Blazor Gantt Chart component.
 platform: Blazor
 control: Gantt Chart
@@ -76,7 +76,7 @@ Ensure that you have initialized your Gantt Chart component with the required ta
 
 Now, your Blazor application is equipped to seamlessly import task data from XML files and display them in the Syncfusion Gantt Chart.
 
-The following code snippet import microsoft project XML into Blazor Gantt Chart control.
+The following code snippet import Microsoft Project XML into Blazor Gantt Chart control.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
