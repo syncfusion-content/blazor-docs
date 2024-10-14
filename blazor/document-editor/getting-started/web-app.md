@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor DocumentEditor in Web App | Syncfusion
-description: Checkout and learn about the documentation for getting started with Blazor DocumentEditor Component in Blazor Web App.
+title: Getting Started with Blazor DocumentEditor Component | Syncfusion
+description: Checkout and learn about the documentation for getting started with Blazor DocumentEditor component in Blazor Web App.
 platform: Blazor
 component: DocumentEditor
 documentation: ug
 ---
 
-# Getting Started with Blazor DocumentEditor Component in Web App
+# Getting started with Blazor DocumentEditor Component in Web App
 
 This section briefly explains about how to include [Blazor DocumentEditor](https://www.syncfusion.com/blazor-components/blazor-word-processor) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/).
 
