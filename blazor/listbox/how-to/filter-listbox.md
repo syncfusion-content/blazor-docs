@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Filter Data in Blazor ListBox Component | Syncfusion
-description: Checkout and learn here all Filter Data in Syncfusion Blazor ListBox component and much more.
+description: Checkout and learn here all Filter ListBox Data Using TextBox Component in Syncfusion Blazor ListBox component and much more.
 platform: Blazor
 control: List Box
 documentation: ug
