@@ -36,7 +36,7 @@ The following code example shows how to load a bas64 string dynamically.
     }
 }
 ```
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/LoadAsync-SfPdfViewer).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/LoadAsync).
 
 The following code example shows how to load the PDF dynamically by specifying file path.
 

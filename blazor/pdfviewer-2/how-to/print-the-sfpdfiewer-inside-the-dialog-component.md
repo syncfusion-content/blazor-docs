@@ -71,7 +71,7 @@ The following code illustrates how to perform print action once SfPdfViewer is l
 }
 ```
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Print/PDF%20Viewer%20in%20a%20Dialog-SfPdfViewer).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Print/PDF%20Viewer%20in%20a%20Dialog).
 
 ## See also
 
