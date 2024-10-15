@@ -76,7 +76,7 @@ N> In the above example, `TValue` is specified as `MenuItemModel` because the me
 
 ## Handling Self-Referential Data with CustomMenuItem TValue in MenuTemplate
 
-When using TValue with CustomMenuItem in the [MenuTemplates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuTemplates-1.html), self-referential data structures with ParentId mapping are not supported. To address this limitation, you need to manually map the parent and child menu items within the menu template.
+When using TValue with CustomMenuItem in the [MenuTemplates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuTemplates-1.html), self-referential data structures with ParentId mapping are not supported. To address this limitation, you need to manually map the parent and child menu items within the menu template. In the following example, we demonstrate how to configure the SfMenu component using self-referential data with CustomMenuItem as the TValue in the MenuTemplate.
 
 ```cshtml
 
