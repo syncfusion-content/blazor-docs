@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: Box and Whisker in Blazor Charts Component | Syncfusion
