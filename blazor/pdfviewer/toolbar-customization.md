@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: Toolbar Customization in Blazor PDF Viewer Component | Syncfusion
@@ -166,7 +165,7 @@ The following code snippet explains how to show or hide annotation toolbar using
 ```
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-classic-examples/tree/master/Toolbar/Annotation%20Toolbar/Show%20or%20hide%20on%20loading).
 
-N> You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer-2/default-functionalities?theme=fluent2) to understand how to explain core features of PDF Viewer.
+N> You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor PDF Viewer example]() to understand how to explain core features of PDF Viewer.
 
 ## How to create custom Toolbar with Save option
 
