@@ -15,7 +15,7 @@ The [Blazor Image Editor](https://www.syncfusion.com/blazor-components/blazor-im
 
 Text annotation feature in the Blazor Image Editor component provides the capability to add and customize labels, captions, and other text elements directly onto the image. With this feature, you can easily insert text at specific locations within the image and customize various aspects of the text to meet your requirements.
 
-You have control over the customization options including text content, font family, font style and font size for the text annotation.
+You have control over the customization options including text content, font family, font style, font color, fill color, stroke color, stroke width and font size for the text annotation.
 
 ### Add a text
 
@@ -39,6 +39,14 @@ The [`DrawTextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Im
 
 * isSelected: Specifies to show the text in the selected state.
 
+* degree: Specifies the degree to rotate the text.
+
+* fillColor: Specifies the background color of the text.
+
+* strokeColor: Specifies the outline color of the text annotation.
+
+* strokeWidth: Specifies the outline stroke width of the text annotation.
+
 By utilizing the [`DrawTextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawTextAsync_System_Nullable_System_Double__System_Nullable_System_Double__System_String_System_String_System_Nullable_System_Int32__System_Boolean_System_Boolean_System_String_) method with these parameters, you can precisely position and customize text annotations within the image. This provides the flexibility to add labels, captions, or other text elements with specific font styles, sizes, and colors, enhancing the visual presentation and clarity of the image. 
 
 Here is an example of adding a text in a button click using [`DrawTextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawTextAsync_System_Nullable_System_Double__System_Nullable_System_Double__System_String_System_String_System_Nullable_System_Int32__System_Boolean_System_Boolean_System_String_) method. 
@@ -51,6 +59,8 @@ In the following example, you can using the DrawTextAsync method in the button c
 
 <div style="padding-bottom: 15px">
     <SfButton OnClick="DrawTextAsync">Draw Text</SfButton>
+    <SfButton OnClick="DrawTextOutlineAsync">Draw Text Outline</SfButton>
+    <SfButton OnClick="DrawTextBackgroundColorAsync">Draw Text Background Color</SfButton>
 </div>
 <SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="400">
     <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
@@ -68,7 +78,17 @@ In the following example, you can using the DrawTextAsync method in the button c
     private async void DrawTextAsync()
     {
         ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
-        await ImageEditor.DrawTextAsync(Dimension.X.Value + 100, Dimension.Y.Value + 100, "Syncfusion");
+        await ImageEditor.DrawTextAsync(Dimension.X.Value, Dimension.Y.Value, "Syncfusion");
+    }
+    private async void DrawTextOutlineAsync()
+    {
+        ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
+         await ImageEditor.DrawTextAsync(Dimension.X.Value + 50, Dimension.Y.Value + 50, "Syncfusion", "Arial", 40, false, false, "", false, 0, "", "green", 8);
+    }
+    private async void DrawTextBackgroundColorAsync()
+    {
+        ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
+        await ImageEditor.DrawTextAsync(Dimension.X.Value + 100, Dimension.Y.Value + 100, "Syncfusion", "Arial", 40, false, false, "", false, 0, "red", "", 0);
     }
 }
 ```
@@ -377,7 +397,7 @@ The Blazor Image Editor component provides the ability to add shape annotations 
 
 The [`DrawRectangleAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawRectangleAsync_System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_String_) method is used to draw rectangle in the Blazor Image Editor component. Rectangle annotations are valuable tools for highlighting, emphasizing, or marking specific areas of an image to draw attention or provide additional context.
 
-The [`DrawRectangleAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawRectangleAsync_System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_String_) method in the Image Editor component takes seven parameters to define the properties of the rectangle annotation: 
+The [`DrawRectangleAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawRectangleAsync_System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_String_) method in the Image Editor component takes ten parameters to define the properties of the rectangle annotation: 
 
 * x: Specifies the x-coordinate of the top-left corner of the rectangle. 
 
@@ -396,6 +416,8 @@ The [`DrawRectangleAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 * degree: Specifies the degree to rotate the rectangle.
 
 * isSelected: Specifies to show the rectangle in the selected state.
+
+* borderRadius: Specifies the radius to apply border radius to rectangle.
 
 The [`DrawEllipseAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawEllipseAsync_System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_Nullable_System_Double__System_String_System_String_) method in the Blazor Image Editor component is used to draw an ellipse. Ellipse annotations are valuable for highlighting, emphasizing, or marking specific areas of an image.
 
@@ -501,7 +523,8 @@ Here is an example of inserting rectangle, ellipse, arrow, path, and line in a b
 
     private async void RectangleAsync()
     {
-        await ImageEditor.DrawRectangleAsync(250, 50, 120, 120, 4, "#fff", "blue");
+        await ImageEditor.DrawRectangleAsync(250, 50, 120, 60, 4, "#fff", "blue");
+        await ImageEditor.DrawRectangleAsync(450, 200, 120, 60, 4, "#fff", "blue", 0, false, 8);
     }
 
     private async void EllipseAsync()
@@ -511,7 +534,7 @@ Here is an example of inserting rectangle, ellipse, arrow, path, and line in a b
 
     private async void ArrowAsync()
     {
-        await ImageEditor.DrawArrowAsync(250, 200, 400, 200, 5, "red", ImageEditorArrowHeadType.Circle);
+        await ImageEditor.DrawArrowAsync(250, 200, 400, 200, 5, "red", ImageEditorArrowHeadType.SolidCircle);
     }
 
     private async void PathAsync()
@@ -633,3 +656,33 @@ In the following example, you can use the [`DrawImageAsync`](https://help.syncfu
 ```
 
 ![Blazor Image Editor with Add Image in an image](./images/blazor-image-editor-add-image.png)
+
+### Customize Default Stroke Color for Shapes 
+
+We provide default settings for stroke color, stroke width, fill color, and other customizations. If users wish to modify only the default options while preserving their previously selected customizations, they can do so by utilizing the [`ShapeChanging`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_ShapeChanging) event. Within this event, users can update the values in the [`CurrentShapeSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ShapeChangeEventArgs.html#Syncfusion_Blazor_ImageEditor_ShapeChangeEventArgs_CurrentShapeSettings) object to apply their own preferences instead of the defaults. This approach allows conditional updates to the [`CurrentShapeSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ShapeChangeEventArgs.html#Syncfusion_Blazor_ImageEditor_ShapeChangeEventArgs_CurrentShapeSettings), ensuring that only the desired defaults are changed while maintaining the other settings.
+
+```cshtml
+@using Syncfusion.Blazor.ImageEditor
+
+<SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="400">
+    <ImageEditorEvents Created="CreatedAsync" ShapeChanging="ShapeChangingAsync"></ImageEditorEvents>
+</SfImageEditor> 
+
+@code {
+    SfImageEditor ImageEditor; 
+    private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>() { }; 
+
+    private async void CreatedAsync() 
+    { 
+        await ImageEditor.OpenAsync("nature.png"); 
+    }
+
+    private async void ShapeChangingAsync(ShapeChangingEventArgs args)
+    {
+        if (args.action === "insert" && args.currentShapeSettings?.type === "FreehandDraw") {
+            args.currentShapeSettings.strokeColor = "red";
+        }
+    }
+}
+```
+![Blazor Image Editor with Default Color](./images/blazor-image-editor-default-stroke-color.jpeg)

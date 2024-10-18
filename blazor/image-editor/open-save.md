@@ -12,6 +12,12 @@ documentation: ug
 
 The [Blazor Image Editor](https://www.syncfusion.com/blazor-components/blazor-image-editor) component supports to import an image into the canvas, it must first be converted into a blob object. The Uploader component can be used to facilitate the process of uploading an image from the user interface. Once the image has been uploaded, it can then be converted into a blob and drawn onto the canvas.
 
+## Supported image formats
+
+The Image Editor control supports three common image formats: PNG, JPEG, and SVG. These formats allow you to work with a wide range of image files within the Image Editor.
+
+When it comes to saving the edited image, the default file type is set as PNG. This means that when you save the edited image without specifying a different file type, it will be saved as a PNG file. However, it's important to note that the Image Editor typically provides options or methods to specify a different file type if desired. This allows you to save the edited image in formats other than the default PNG, such as JPEG or SVG, based on your specific requirements or preferences.
+
 ## Open an image
 
 The [`OpenAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_OpenAsync_System_Object_) method in the Blazor Image Editor component offers the capability to open an image by providing it in different formats. This method accepts various types of arguments, such as a base64-encoded string, raw image data, or a hosted/online URL. You can pass either the file name or the actual image data as an argument to the [`OpenAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_OpenAsync_System_Object_) method, and it will load the specified image into the image editor component. This flexibility allows you to work with images from different sources and formats, making it easier to integrate and manipulate images within the Image Editor component.
@@ -38,17 +44,117 @@ Note: To load the image in the image editor, the image is placed within the appl
 
 ![Blazor Image Editor with Opening an image](./images/blazor-image-editor-open.png)
 
-## Supported image formats
+### Open an image from Base64 format 
 
-The Blazor Image Editor component supports three common image formats: PNG, JPEG, and SVG. These formats allow you to work with a wide range of image files within the image editor.
+Users can easily open images in the Image Editor using a Base64-encoded string. This method allows you to load images directly from their Base64 representation, ensuring seamless integration and flexibility in your application. Simply pass the Base64 string to the [`OpenAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_OpenAsync_System_Object_System_Boolean_System_String_) method, and the image will be loaded into the editor. 
 
-When it comes to saving the edited image, the default file type is set as PNG. This means that when you save the edited image without specifying a different file type, it will be saved as a PNG file. However, it's important to note that the Image Editor typically provides options or methods to specify a different file type if desired. This allows you to save the edited image in formats other than the default PNG, such as JPEG or SVG, based on your specific requirements or preferences. 
+`Note:` You can obtain the Base64 representation of an image from the Image Editor using the [`GetImageDataUrlAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetImageDataUrlAsync_System_Boolean_) method. This process will be explained in the upcoming section.
+
+```cshtml
+@using Syncfusion.Blazor.ImageEditor 
+<div style="padding-bottom: 15px">
+    <SfButton OnClick="SaveAsync">Save</SfButton>
+    <SfButton OnClick="OpenBaseAsync">Open base64</SfButton>
+</div>
+<SfImageEditor @ref="ImageEditor" Height="400">
+    <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
+</SfImageEditor> 
+
+@code { 
+    SfImageEditor ImageEditor;
+    private string base64String;
+
+    private async void OpenAsync() 
+    { 
+        await ImageEditor.OpenAsync("nature.png"); 
+    }
+
+    private async void SaveAsync() 
+    { 
+        var imageData = await ImageEditor.GetImageDataUrlAsync();
+        base64String = Convert.ToBase64String(imageData);
+    }
+
+    private async void OpenBaseAsync()
+    {
+       await ImageEditor.OpenAsync("data:image/png;base64," + base64String);
+    }
+}
+```
+
+![Blazor Image Editor with Opening an base 64 image](./images/blazor-image-editor-base-image.jpeg)
+
+### Open an image from file uploader 
+
+User can easily open images in the Image Editor using a file uploader. This method allows users to upload an image file from their device and load it directly into the editor. Once the image is selected through the file uploader, pass the file to the [`OpenAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_OpenAsync_System_Object_System_Boolean_System_String_) method, and the image will be seamlessly loaded into the editor.
+
+```cshtml
+@using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.ImageEditor
+@using System.IO
+
+<div class="e-img-editor-sample">
+    <SfUploader AllowedExtensions=".jpg,.jpeg,.png" AutoUpload="false" @ref="uploader" Selected="@OnImageSelected">
+    </SfUploader>
+    <SfImageEditor @ref="imageEditor" Height="350px"></SfImageEditor>
+</div>
+
+@code {
+    private SfUploader uploader;
+    private SfImageEditor imageEditor;
+
+    private async Task OnImageSelected(UploadChangeEventArgs args)
+    {
+        if (args.Files != null && args.Files.Count > 0)
+        {
+            var file = args.Files[0];
+            if (file != null)
+            {
+                using (var memoryStream = new MemoryStream())
+                {
+                    await file.File.OpenReadStream(long.MaxValue).CopyToAsync(memoryStream);
+                    string base64String = Convert.ToBase64String(memoryStream.ToArray());
+                    string dataUrl = "data:image/png;base64," + base64String;
+                    await imageEditor.OpenAsync(dataUrl);
+                }
+            }
+        }
+    }
+}
+```
+
+### Add Watermarks while opening an image 
+
+You can utilize the ‘[`FileOpenEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.FileOpenEventArgs.html)’ event, which triggers once the image is loaded into the image editor. After this event, you can use the ‘[`DrawTextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawTextAsync_System_Double_System_Double_System_String_System_String_System_Int32_System_Boolean_System_Boolean_System_String_System_Boolean_System_Int32_System_String_System_String_System_Int32_)’ method to add a watermark. This approach allows the watermark to be automatically drawn on the canvas every time an image is opened in the editor, making it useful for handling copyright-related content.
+
+```cshtml
+@using Syncfusion.Blazor.ImageEditor 
+<SfImageEditor @ref="ImageEditor" Height="400">
+    <ImageEditorEvents Created="OpenAsync" FileOpened="FileOpenedAsync"></ImageEditorEvents>
+</SfImageEditor> 
+
+@code { 
+    SfImageEditor ImageEditor;
+
+    private async void OpenAsync() 
+    { 
+        await ImageEditor.OpenAsync("nature.png"); 
+    }
+
+    private async void FileOpenedAsync() 
+    { 
+       ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
+        await ImageEditor.DrawTextAsync(Dimension.X.Value + 100, Dimension.Y.Value + 100, "Enter\nText", "Arial", 40, false, false, "#80330075");
+    }
+}
+```
+![Blazor Image Editor with Adding Watermark](./images/blazor-image-editor-add-watermark.jpeg)
 
 ### Save as image
 
-The [`ExportAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_ExportAsync_System_String_Syncfusion_Blazor_ImageEditor_ImageEditorFileType_) method in the Blazor Image Editor component is used to save the modified image as an image, and it accepts a file name and file type as parameters. The file type parameter supports PNG, JPEG, and SVG and the default file type is PNG. Users are allowed to save an image with a specified file name, file type, and image quality. This enhancement provides more control over the output, ensuring that users can save their work exactly as they need it.
+The [`ExportAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_ExportAsync_System_String_Syncfusion_Blazor_ImageEditor_ImageEditorFileType_System_Double_) method in the Blazor Image Editor component is used to save the modified image as an image, and it accepts a file name and file type as parameters. The file type parameter supports PNG, JPEG, and SVG and the default file type is PNG. Users are allowed to save an image with a specified file name, file type, and image quality. This enhancement provides more control over the output, ensuring that users can save their work exactly as they need it.
 
-In the following example, the [`ExportAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_ExportAsync_System_String_Syncfusion_Blazor_ImageEditor_ImageEditorFileType_) method is used in the button click event.
+In the following example, the [`ExportAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_ExportAsync_System_String_Syncfusion_Blazor_ImageEditor_ImageEditorFileType_System_Double_) method is used in the button click event.
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
@@ -79,9 +185,72 @@ In the following example, the [`ExportAsync`](https://help.syncfusion.com/cr/bla
 
 ![Blazor Image Editor with Save an image](./images/blazor-image-editor-export.png)
 
+### Save the image as base64 format. 
+
+To save an image as a base64 format, use the [`GetImageDataUrlAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetImageDataUrlAsync_System_Boolean_) method of the editor to retrieve the image data and convert it into a Data URL, which contains the base64-encoded string. By invoking the [`OpenAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_OpenAsync_System_Object_System_Boolean_System_String_) on the Syncfusion Image Editor instance, you can load this Data URL into the editor. The resulting base64 string can then be embedded directly in HTML or CSS or transmitted over data channels without requiring an external file.
+
+```cshtml
+@using Syncfusion.Blazor.ImageEditor 
+<div style="padding-bottom: 15px">
+    <SfButton OnClick="SaveAsync">Save</SfButton>
+</div>
+<SfImageEditor @ref="ImageEditor" Height="400">
+    <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
+</SfImageEditor> 
+
+@code { 
+    SfImageEditor ImageEditor;
+    private string base64String;
+
+    private async void OpenAsync() 
+    { 
+        await ImageEditor.OpenAsync("nature.png"); 
+    }
+
+    private async void SaveAsync() 
+    { 
+        var imageData = await ImageEditor.GetImageDataUrlAsync();
+        base64String = Convert.ToBase64String(imageData);
+    }
+}
+```
+
+### Save the image as byte[]
+
+To save an image as a byte array, use the [`GetImageDataAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetImageDataAsync) method of the editor to retrieve a byte array. You can then invoke the [`OpenAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_OpenAsync_System_Object_System_Boolean_System_String_) method on the Syncfusion Image Editor instance to load this byte array into the editor. The resulting byte array can be stored in a database for data management and maintenance.
+
+```cshtml
+@using Syncfusion.Blazor.ImageEditor
+ 
+<SfImageEditor @ref="imageEditor" Height="400px" />
+ 
+<button @onclick="SaveImageAsByteArray">Save Image</button>
+<button @onclick="OpenImage">Open Image</button>
+ 
+@code {
+    private SfImageEditor imageEditor;
+    private byte[] savedImageData; // Variable to hold the saved image data
+ 
+    private async Task SaveImageAsByteArray()
+    {
+        savedImageData = await imageEditor.GetImageDataAsync(); 
+    }
+ 
+    private async Task OpenImage()
+    {
+        if (savedImageData != null)
+        {
+            string base64String = Convert.ToBase64String(savedImageData);
+            base64String = "data:image/png;base64," + base64String;
+            await imageEditor.OpenAsync(base64String);
+        }
+    }
+}
+```
+
 ### Save as image in server
 
-The [`GetImageDataUrlAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetImageDataUrlAsync) method in the Blazor Image Editor component is used to gets the current image data url from the Image Editor component
+The [`GetImageDataUrlAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetImageDataUrlAsync_System_Boolean_) method in the Blazor Image Editor component is used to gets the current image data url from the Image Editor component
 
 The value returned from this method is used to save the edited image to database as well as open in our image editor using The [`OpenAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_OpenAsync_System_Object_)method.
 
@@ -92,6 +261,78 @@ The Syncfusion's Blazor Image Editor component allows to increase the connection
 ```cshtml
 builder.Services.AddServerSideBlazor().AddHubOptions(o => { o.MaximumReceiveMessageSize = 102400000; });
 ```
+
+### Remove default Save button and add custom button to save the image to server 
+
+User can leverage the [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_Toolbar) property to replace the default save button with a custom one. By doing so, you can use the [`GetImageDataUrlAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetImageDataUrlAsync_System_Boolean_) method to retrieve the image data, convert it to base64 format, and then save it to the server. This approach gives you more control over the image-saving process.
+
+```cshtml
+@using Syncfusion.Blazor.ImageEditor
+@using Syncfusion.Blazor.Navigations
+
+<div>
+    <SfImageEditor @ref="ImageEditor" Height="400px" Width="500px" Toolbar="@customToolbar">
+    </SfImageEditor>
+    <button @onclick="SaveImage">Save to Server</button>
+</div>
+
+@code {
+    private SfImageEditor ImageEditor;
+    
+    // Define the custom toolbar items
+    private List<ImageEditorToolbarItemModel> customToolbar = new List<ImageEditorToolbarItemModel>()
+    {
+        new ImageEditorToolbarItemModel { Name = "Zoom" },
+        new ImageEditorToolbarItemModel { Name = "Annotation" },
+        new ImageEditorToolbarItemModel { Name = "Filter" },
+        new ImageEditorToolbarItemModel { Name = "Crop" },
+        new ImageEditorToolbarItemModel { Text = "Rotate", TooltipText = "Rotate", Align = ItemAlign.Center }
+    };
+    private async Task SaveImage()
+    {
+        var imageData = await ImageEditor.GetImageDataUrlAsync();
+        if (!string.IsNullOrEmpty(imageData) && imageData.Contains(","))
+        {
+            var base64Data = imageData.Split(',')[1];
+            byte[] imageBytes = Convert.FromBase64String(base64Data);
+        }
+    }
+}
+```
+
+### Prevent default save option and save the image to specific location 
+
+User can make use of the [`Saving`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_Saving) event, which triggers just before the image is downloaded, to override the default save option by setting `args.cancel` to true. Afterward, you can utilize the [`GetImageDataUrlAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetImageDataUrlAsync_System_Boolean_) method to retrieve the current image data and convert it into a format like `byte[]`, `blob`, or `base64` for further processing. This gives you greater flexibility in handling the image data.
+
+```cshtml
+@using Syncfusion.Blazor.ImageEditor
+@using System.IO
+ 
+<div>
+<SfImageEditor @ref="ImageEditor" Height="400px" Width="500px">
+<ImageEditorEvents Saving="OnBeforeSave"></ImageEditorEvents>
+</SfImageEditor>
+</div>
+ 
+@code {
+    private SfImageEditor ImageEditor;
+ 
+    private async Task OnBeforeSave(SaveEventArgs args)
+    {
+        args.Cancel = true;
+        var imageData = await ImageEditor.GetImageDataUrlAsync();
+        if (!string.IsNullOrEmpty(imageData) && imageData.Contains(","))
+        {
+            var base64Data = imageData.Split(',')[1];
+            byte[] imageBytes = Convert.FromBase64String(base64Data);
+        }
+    }
+}
+```
+
+## Events to handle Save Actions 
+
+The Image Editor provides several events related to opening and saving images. These events offer detailed control over the image handling process. For comprehensive information about these events, including their triggers and usage, please refer to the dedicated section on open and save support. This section will provide you with the specifics needed to effectively utilize these events in your application. 
 
 ### File opened event
 

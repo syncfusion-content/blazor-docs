@@ -28,21 +28,21 @@ The built-in fields available on Scheduler event object are as follows.
 
 | Field name | Description |
 |-------|---------|
-| Id | The `Id` field needs to be defined as mandatory, and usually assigns a unique ID value to each of the events.|
-| Subject | The `Subject` field is optional, and usually assigns the summary text to each of the events.|
-| StartTime | The `StartTime` field defines the start time of an event and it is mandatory to provide it for any of the valid event objects.|
-| EndTime | The `EndTime` field defines the end time of an event and it is mandatory to provide the end time for any of the valid event objects.|
-| StartTimezone | It maps the `StartTimezone` field from the dataSource and usually accepts the valid IANA timezone names. It is assumed that the value provided for this field is taken into consideration while processing the `StartTime` field. When this field is not mapped with any timezone names, then the events will be processed based on the timezone assigned to the Scheduler.|
-| EndTimezone | It maps the `EndTimezone` field from the dataSource and usually accepts the valid IANA timezone names. It is assumed that the value provided for this field is taken into consideration while processing the `EndTime` field. When this field is not mapped with any timezone names, then the events will be processed based on the timezone assigned to the Scheduler.|
-| Location | It maps the `Location` field from the dataSource and the location text value will be displayed over the events.|
-| Description | It maps the `Description` field from the dataSource and denotes the event description which is optional.|
-| IsAllDay | The `IsAllDay` field is mapped from the dataSource and is used to denote whether an event is created for an entire day or for specific time alone. Usually, an event with `IsAllDay` field set to true will be considered as an all-day event. |
-| RecurrenceID | It maps the `RecurrenceID` field from dataSource and usually holds the ID value of the parent recurrence event. This field is applicable only for the edited occurrence events.|
-| RecurrenceRule | It maps the `RecurrenceRule` field from dataSource and holds the recurrence rule value in a string format. Also, it uniquely identifies whether the event belongs to a recurring type or normal ones. |
-| RecurrenceException | It maps the `RecurrenceException` field from dataSource and is used to hold the collection of exception dates in UTC format, on which the recurring occurrences needs to be excluded. |
-| IsReadonly | It maps the `IsReadonly` field from dataSource. It is mainly used to make specific appointments as readonly when set to `true`. |
-| IsBlock | It maps the `IsBlock` field from dataSource. It is used to block the particular time ranges in the Scheduler and prevents the event creation on those time slots. |
-| CssClass | It maps the `CssClass` field from the dataSource. It is used to customize the particular events. |
+| Id | The [`Id`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleField.html#Syncfusion_Blazor_Schedule_ScheduleField_Id) field needs to be defined as mandatory, and usually assigns a unique ID value to each of the events.|
+| Subject | The [`Subject`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.FieldSubject.html) field is optional, and usually assigns the summary text to each of the events.|
+| StartTime | The [`StartTime`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.FieldStartTime.html) field defines the start time of an event and it is mandatory to provide it for any of the valid event objects.|
+| EndTime | The [`EndTime`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.FieldEndTime.html) field defines the end time of an event and it is mandatory to provide the end time for any of the valid event objects.|
+| StartTimezone | It maps the [`StartTimezone`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.FieldStartTimezone.html) field from the dataSource and usually accepts the valid IANA timezone names. It is assumed that the value provided for this field is taken into consideration while processing the `StartTime` field. When this field is not mapped with any timezone names, then the events will be processed based on the timezone assigned to the Scheduler.|
+| EndTimezone | It maps the [`EndTimezone`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.FieldEndTimezone.html) field from the dataSource and usually accepts the valid IANA timezone names. It is assumed that the value provided for this field is taken into consideration while processing the `EndTime` field. When this field is not mapped with any timezone names, then the events will be processed based on the timezone assigned to the Scheduler.|
+| Location | It maps the [`Location`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.FieldLocation.html) field from the dataSource and the location text value will be displayed over the events.|
+| Description | It maps the [`Description`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.FieldDescription.html) field from the dataSource and denotes the event description which is optional.|
+| IsAllDay | The [`IsAllDay`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.FieldIsAllDay.html) field is mapped from the dataSource and is used to denote whether an event is created for an entire day or for specific time alone. Usually, an event with `IsAllDay` field set to true will be considered as an all-day event. |
+| RecurrenceID | It maps the [`RecurrenceID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.FieldRecurrenceId.html) field from dataSource and usually holds the ID value of the parent recurrence event. This field is applicable only for the edited occurrence events.|
+| RecurrenceRule | It maps the [`RecurrenceRule`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.FieldRecurrenceRule.html) field from dataSource and holds the recurrence rule value in a string format. Also, it uniquely identifies whether the event belongs to a recurring type or normal ones. |
+| RecurrenceException | It maps the [`RecurrenceException`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.FieldRecurrenceException.html) field from dataSource and is used to hold the collection of exception dates in UTC format, on which the recurring occurrences needs to be excluded. |
+| IsReadonly | It maps the [`IsReadonly`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleField.html#Syncfusion_Blazor_Schedule_ScheduleField_IsReadonly) field from dataSource. It is mainly used to make specific appointments as readonly when set to `true`. |
+| IsBlock | It maps the [`IsBlock`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleField.html#Syncfusion_Blazor_Schedule_ScheduleField_IsBlock) field from dataSource. It is used to block the particular time ranges in the Scheduler and prevents the event creation on those time slots. |
+| CssClass | It maps the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleField.html#Syncfusion_Blazor_Schedule_ScheduleField_CssClass) field from the dataSource. It is used to customize the particular events. |
 
 ### Binding different field names
 
@@ -95,7 +95,7 @@ When the fields of event instances has the default mapping name, it is not manda
 }
 ```
 
-N> The mapper field `Id` is of string type and has no additional validation options, whereas all other fields has additional options.
+N> The mapper field [`Id`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleField.html#Syncfusion_Blazor_Schedule_ScheduleField_Id) is of string type and has no additional validation options, whereas all other fields has additional options.
 
 ### Event field settings
 
@@ -245,7 +245,7 @@ N> For example, in week view if an appointment is created for two days say from 
 
 It represents an appointment that is created for an entire day such as holiday events. It is usually displayed separately in an all-day row, a separate row for all-day appointments below the date header section. In Timeline views, the all-day appointments displays in the working space area, and no separate all-day row is present in that view.
 
-N> To change normal appointment into all-day event, set `IsAllDay` field to true.
+N> To change normal appointment into all-day event, set [`IsAllDay`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.FieldIsAllDay.html) field to true.
 
 ### Hide all-day row events
 
@@ -426,7 +426,7 @@ There are scenarios where you need to restrict the CRUD action on specific appoi
 }
 ```
 
-N> By default, the event editor is prevented to open on the read-only events when `IsReadonly` field is set to **true**.
+N> By default, the event editor is prevented to open on the read-only events when [`IsReadonly`]((https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleField.html#Syncfusion_Blazor_Schedule_ScheduleField_IsReadonly)) field is set to **true**.
 
 ## Customize the order of the overlapping events
 
@@ -622,7 +622,7 @@ More indicator can be shown if more than one appointment is available in a same 
 
 ![Differentiate Past Time Events in Blazor Scheduler](images/blazor-scheduler-appointments-entirecell.png)
 
-N> The `EnableIndicator` property will work, only when the `EnableMaxHeight` property value is set to true.
+N> The [`EnableIndicator`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_EnableIndicator) property will work, only when the [`EnableMaxHeight`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_EnableMaxHeight) property value is set to true.
 
 ## Display tooltip for appointments
 

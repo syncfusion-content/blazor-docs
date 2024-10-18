@@ -112,32 +112,33 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## Adding icons to the Blazor TextBox
 
-A TextBox can be created with icon as a group by creating the parent `div` element with the class `e-input-group` and add the icon element as span with the class `e-input-group-icon`.
+You can add an icon to the TextBox component using the [AddIconAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_AddIconAsync_System_String_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__) method. Below is an example of how to implement this in your Blazor application:
 
-{% tabs %}
-{% highlight razor %}
+```cshtml
+@using Syncfusion.Blazor.Inputs
 
-<div class='e-input-group'>
-    <input class='e-input' Placeholder='Date of Birth' type='text'>
-    <span class='e-input-group-icon e-input-calendar'></span>
+<div id="sample" style="margin:130px auto;width:300px">
+    <SfTextBox @ref=@TextBoxDropDownObj
+               Created="@AddDateIcon"
+               Placeholder="Enter Date"
+               FloatLabelType="@FloatLabelType.Auto">
+    </SfTextBox>
 </div>
 
-<style>
-.e-input-group-icon:before {
-  font-family: e-icons;
-}
 
-.e-input-group .e-input-group-icon.e-input-calendar {
-  font-size: 16px;
-}
+@code {
+    SfTextBox TextBoxDropDownObj { get; set; }
 
-.e-input-group-icon.e-input-calendar:before {
-  content: "\e75e";
+    private async void AddDateIcon()
+    {
+        if (TextBoxDropDownObj != null)
+        {
+            //Add icon to the TextBox
+            await TextBoxDropDownObj.AddIconAsync("append", "e-icons e-date-icon");
 }
-</style>
-
-{% endhighlight %}
-{% endtabs %}
+    }
+}
+```
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDhzZCKNfeoflPrc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TextBox with Icon](./images/blazor-textbox-icons.png)" %}
 

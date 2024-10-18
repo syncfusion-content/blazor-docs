@@ -53,6 +53,6 @@ You can stretch the PDF Viewer size to its container size while resizing the con
 }
 ```
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Resize%20the%20PDF%20Viewer%20to%20its%20parent%20element).
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-classic-examples/tree/master/Common/Resize%20the%20PDF%20Viewer%20to%20its%20parent%20element).
 
 N> You can refer to our [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explains core features of PDF Viewer.

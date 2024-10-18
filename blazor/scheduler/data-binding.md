@@ -57,7 +57,7 @@ To bind list binding to the Scheduler, you can simply assign a list of datasourc
 
 N> By default, `DataManager` uses `BlazorAdaptor` for binding local data.
 
-You can also bind different field names to the default event fields as well as include additional custom fields to the event object collection which can be referred [here](./appointments#event-fields).
+> You can also bind different field names to the default event fields as well as include additional `custom fields` to the event object collection which can be referred [here](./appointments#event-fields).
 
 ### ExpandoObject binding
 
@@ -109,7 +109,7 @@ To bind data to the Scheduler using ExpandoObject, you can create a list of Expa
 
 **DynamicObject** binding is another approach for binding data to the Scheduler when the model type is unknown at compile time. In this approach, you use the dynamic keyword to define variables that can hold objects of any type, including those with dynamically added properties.
 
-To bind data to the Scheduler using **DynamicObject** binding, you can create a list of dynamic objects and set it as the `DataSource` property of the Scheduler's `ScheduleEventSettings` component. You can then use the Scheduler's built-in data operations and editing features to work with the data.
+To bind data to the Scheduler using **DynamicObject** binding, you can create a list of dynamic objects and set it as the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_DataSource) property of the Scheduler's `ScheduleEventSettings` component. You can then use the Scheduler's built-in data operations and editing features to work with the data.
 
 **DynamicObject** implements the `IDynamicMetaObjectProvider` interface, which means you can override member access operations like `GetMember` and `SetMember` to provide your own custom logic.**DynamicObject** binding is that it allows you to create objects with dynamic behavior, which can be useful in scenarios where you need to work with objects whose behavior is not known at compile-time.
 
@@ -706,7 +706,7 @@ namespace Url_Adaptor.Controller
 
 ### Sending additional parameters to the server
 
-To send an additional custom parameter to the server-side post, make use of the `AddParams` method of `Query`. Now, assign this `Query` object with additional parameters to the `Query` property of Scheduler.
+To send an additional custom parameter to the server-side post, make use of the `AddParams` method of [`Query`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_Query). Now, assign this [`Query`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_Query) object with additional parameters to the [`Query`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_Query) property of Scheduler.
 
 ```cshtml
 @using Syncfusion.Blazor
@@ -728,7 +728,7 @@ The value passed to the additional parameter is shown in the following image.
 
 ![Passing Additional Parameters in Blazor Scheduler](./images/blazor-scheduler-additional-parameters.png)
 
-N> The parameters added using the `Query` property will be sent along with the data request sent to the server on every scheduler actions.
+N> The parameters added using the [`Query`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_Query) property will be sent along with the data request sent to the server on every scheduler actions.
 
 ### Authorization and Authentication
 
@@ -1366,7 +1366,7 @@ N> You can find the working sample on Entity framework [here](https://github.com
 
 ## Configuring Scheduler with Google API service
 
-We have assigned the dataSource that is retrieved from the Google services within the `OnInitializedAsync` method. And, the CRUD actions are performed within the `ActionCompleted` event.
+We have assigned the dataSource that is retrieved from the Google services within the [`OnInitializedAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_OnInitializedAsync) method. And, the CRUD actions are performed within the [`ActionCompleted`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_ActionCompleted) event.
 
 We have to write our own service to connect retrieve the events from the Google calendar.
 

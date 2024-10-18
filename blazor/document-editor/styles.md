@@ -71,17 +71,17 @@ The following example shows how to programmatically create a character style.
 
 ```cshtml
 @using Syncfusion.Blazor.DocumentEditor;
-<SfDocumentEditor @ref="documentEditor" IsReadOnly=false EnableEditor=true EnableSelection=true>
+<SfDocumentEditorContainer @ref="container" EnableToolbar=true>
     <DocumentEditorContainerEvents Created="OnLoad"></DocumentEditorContainerEvents>
-</SfDocumentEditor>
+</SfDocumentEditorContainer>
 
 @code {
-    SfDocumentEditor documentEditor;
+    SfDocumentEditorContainer container;
     protected async void OnLoad(object args)
     {
         string styleJson = "{\"type\":\"Character\",\"name\":\"New CharacterStyle\",\"basedOn\":\"Default Paragraph Font\",\"characterFormat\":{\"fontSize\":16.0,\"fontFamily\":\"Calibri Light\",\"fontColor\":\"#2F5496\",\"bold\":true,\"italic\":true,\"underline\":\"Single\"}}";
-        await documentEditor.Editor.CreateStyleAsync(styleJson);
-        await documentEditor.Editor.ApplyStyleAsync("New CharacterStyle");
+        await container.DocumentEditor.Editor.CreateStyleAsync(styleJson);
+        await container.DocumentEditor.Editor.ApplyStyleAsync("New CharacterStyle");
     }
 }
 ```
@@ -92,17 +92,17 @@ The following example shows how to programmatically create a paragraph style.
 
 ```cshtml
 @using Syncfusion.Blazor.DocumentEditor;
-<SfDocumentEditor @ref="documentEditor" IsReadOnly=false EnableEditor=true EnableSelection=true>
+<SfDocumentEditorContainer @ref="container" EnableToolbar=true>
     <DocumentEditorContainerEvents Created="OnLoad"></DocumentEditorContainerEvents>
-</SfDocumentEditor>
+</SfDocumentEditorContainer>
 
 @code {
-    SfDocumentEditor documentEditor;
+    SfDocumentEditorContainer container;
     protected async void OnLoad(object args)
     {
         string styleJson = "{\"type\":\"Paragraph\",\"name\":\"New ParagraphStyle\",\"basedOn\":\"Normal\",\"characterFormat\":{\"fontSize\":16.0,\"fontFamily\":\"Calibri Light\",\"fontColor\":\"#2F5496\",\"bold\":true,\"italic\":true,\"underline\":\"Single\"},\"paragraphFormat\":{\"leftIndent\":0.0,\"rightIndent\":0.0,\"firstLineIndent\":0.0,\"beforeSpacing\":12.0,\"afterSpacing\":0.0,\"lineSpacing\":1.0791666507720947,\"lineSpacingType\":\"Multiple\",\"textAlignment\":\"Left\",\"outlineLevel\":\"Level1\"}}";
-        await documentEditor.Editor.CreateStyleAsync(styleJson);
-        await documentEditor.Editor.ApplyStyleAsync("New ParagraphStyle");
+        await container.DocumentEditor.Editor.CreateStyleAsync(styleJson);
+        await container.DocumentEditor.Editor.ApplyStyleAsync("New ParagraphStyle");
     }
 }
 ```
@@ -114,17 +114,17 @@ The following example shows how to programmatically create linked style.
 ```cshtml
 @using Syncfusion.Blazor.DocumentEditor;
 
-<SfDocumentEditor @ref="documentEditor" IsReadOnly=false EnableEditor=true EnableSelection=true>
+<SfDocumentEditorContainer @ref="container" EnableToolbar=true>
     <DocumentEditorContainerEvents Created="OnLoad"></DocumentEditorContainerEvents>
-</SfDocumentEditor>
+</SfDocumentEditorContainer>
 
 @code {
-    SfDocumentEditor documentEditor;
+    SfDocumentEditorContainer container;
     protected async void OnLoad(object args)
     {
         string styleJson = "{\"type\": \"Paragraph\",\"name\":\"New Linked\",\"basedOn\":\"Normal\",\"next\":\"Normal\",\"link\":\"New Linked Char\",\"characterFormat\":{\"fontSize\":16.0,\"fontFamily\":\"Calibri Light\",\"fontColor\":\"#2F5496\"},\"paragraphFormat\":{\"leftIndent\": 0.0,\"rightIndent\":0.0,\"firstLineIndent\":0.0,\"beforeSpacing\":12.0,\"afterSpacing\":0.0,\"lineSpacing\":1.0791666507720947,\"lineSpacingType\":\"Multiple\",\"textAlignment\":\"Left\",\"outlineLevel\":\"Level1\"}}";
-        await documentEditor.Editor.CreateStyleAsync(styleJson);
-        await documentEditor.Editor.ApplyStyleAsync("New Linked");
+        await container.DocumentEditor.Editor.CreateStyleAsync(styleJson);
+        await container.DocumentEditor.Editor.ApplyStyleAsync("New Linked");
     }
 }
 ```
@@ -140,9 +140,9 @@ When there is no selection, styles of **Linked** type will change the values of 
 For example, the following line will apply the "New Linked" to the current paragraph.
 
 ```csharp
-await documentEditor.Editor.ApplyStyleAsync("New Linked");
+await container.DocumentEditor.Editor.ApplyStyleAsync("New Linked");
 //Clear direct formatting and apply the specified style.
-await documentEditor.Editor.ApplyStyleAsync("New Linked", true);
+await container.DocumentEditor.Editor.ApplyStyleAsync("New Linked", true);
 ```
 
 You can refer to our [Blazor Word Processor](https://www.syncfusion.com/blazor-components/blazor-word-processor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Word Processor example](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) to know how to render and configure the document editor.

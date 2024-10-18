@@ -63,7 +63,7 @@ The following example code illustrates how to process the sfdt in server-side.
     public async void ExportAsPdf()
     {
         SfDocumentEditor editor = container.DocumentEditor;
-        string base64Data = await editor.SaveAsBlob(FormatType.Docx);
+        string base64Data = await editor.SaveAsBlobAsync(FormatType.Docx);
         byte[] data = Convert.FromBase64String(base64Data);
         //To observe the memory go down, null out the reference of base64Data variable.
         base64Data = null;

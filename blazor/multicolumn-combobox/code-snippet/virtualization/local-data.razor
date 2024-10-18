@@ -1,0 +1,39 @@
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.MultiColumnComboBox
+
+<SfMultiColumnComboBox TItem="Employee" TValue="string" EnableVirtualization="true" TextField="Name" Width="600px" @bind-Value="@Value" DataSource="@Employees" ValueField="Name" Placeholder="Local Data">
+</SfMultiColumnComboBox>
+@code {
+    public class Employee
+    {
+        public string Name { get; set; }
+        public string Department { get; set; }
+        public string Role { get; set; }
+        public string Location { get; set; }
+        public int Experience { get; set; }
+    }
+    private string Value { get; set; } = "Alice Johnson";
+    private List<Employee> Employees = new List<Employee>();
+    protected override Task OnInitializedAsync()
+    {
+        List<Employee> employees = new List<Employee>();
+        string[] names = { "John Doe", "Jane Smith", "Alice Johnson", "Bob Brown", "Emily Davis" };
+        string[] departments = { "HR", "IT", "Finance", "Marketing", "Sales" };
+        string[] roles = { "Manager", "Developer", "Analyst", "Consultant", "Executive" };
+        string[] locations = { "New York", "San Francisco", "London", "Berlin", "Tokyo" };
+        Random rand = new Random();
+        for (int i = 1; i <= 2000; i++)
+        {
+            employees.Add(new Employee
+                {
+                    Name = names[rand.Next(names.Length)],
+                    Department = departments[rand.Next(departments.Length)],
+                    Role = roles[rand.Next(roles.Length)],
+                    Location = locations[rand.Next(locations.Length)],
+                    Experience = rand.Next(1, 21) // Experience between 1 and 20 years
+                });
+        }
+        Employees = employees;
+        return base.OnInitializedAsync();
+    }
+}

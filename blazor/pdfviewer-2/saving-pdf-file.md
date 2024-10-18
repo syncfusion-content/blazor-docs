@@ -156,7 +156,7 @@ The following code example shows how to set default filename to the downloaded f
 }
 
 ```
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Modify%20the%20file%20name-SfPdfViewer).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Modify%20the%20file%20name).
 
 ### Download PDF file as a copy
 

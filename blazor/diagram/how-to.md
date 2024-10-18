@@ -50,11 +50,11 @@ To create a node, define the Node object and add it to the nodes collection of t
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/AddMethod)
 
-## How to add nodes through AddDiagramElements
+## How to add nodes through AddDiagramElementsAsync
 
- Unlike the Add() method, the [AddDiagramElements](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_AddDiagramElements_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) method will measure the passed elements before re-rendering the complete diagram component at once. When using the Add() method to add multiple nodes and connectors simultaneously, the connectors will be rendered before the nodes. As a result, connectors may be misplaced due to the synchronous behavior of the Add method. To overcome this, use the asynchronous AddDiagramElements() method.
+ Unlike the Add() method, the [AddDiagramElementsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_AddDiagramElementsAsync_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) method will measure the passed elements before re-rendering the complete diagram component at once. When using the Add() method to add multiple nodes and connectors simultaneously, the connectors will be rendered before the nodes. As a result, connectors may be misplaced due to the synchronous behavior of the Add method. To overcome this, use the asynchronous AddDiagramElementsAsync() method.
 
-* AddDiagramElements() method is a preferred way to add a collection of items to the diagram to get better performance compared to Add() method.
+* AddDiagramElementsAsync() method is a preferred way to add a collection of items to the diagram to get better performance compared to Add() method.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -147,7 +147,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
         NodeCollection.Add(node1);
         NodeCollection.Add(node2);
         NodeCollection.Add(Connector);
-        await Diagram.AddDiagramElements(NodeCollection);
+        await Diagram.AddDiagramElementsAsync(NodeCollection);
     }
 }
 ```
@@ -182,7 +182,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
                 OffsetY = 100,
                 Width = 100,
                 Height = 100,
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
+                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
             });
         Nodes.Add(new Node()
             {
@@ -204,14 +204,14 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
             {
                 ID = "group",
                 Children = new string[] { "node2", "node3" },
-                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
+                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
             });
         Connectors.Add(new Connector()
             {
                 SourceID = "node1",
                 TargetID = "group",
                 Style = new ShapeStyle() { StrokeColor = "#6495ED" },
-                TargetDecorator = new DecoratorSettings() { Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" } }
+                TargetDecorator = new DecoratorSettings() { Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" } }
             });
     }
     private void Clear()
@@ -899,41 +899,51 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
      DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
 
-    protected override void OnInitialized()
-     {
-       Node node = new Node()
-       {
-            ID = "node1",
-            Width = 50,
-            Height = 50,
-            OffsetX = 900,
-            OffsetY = 100,
-            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
-        };
-           Connector Connector = new Connector()
-        {
-            ID = "connector1",
-            SourceID = "node1",
-            TargetDecorator = new DecoratorSettings()
+        protected override void OnInitialized()
+    {
+        Node node = new Node()
             {
+                ID = "node1",
+                Width = 50,
+                Height = 50,
+                OffsetX = 350,
+                OffsetY = 100,
+                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
+            };
+        Node node2 = new Node()
+            {
+                ID = "node2",
+                Width = 50,
+                Height = 50,
+                OffsetX = 450,
+                OffsetY = 100,
+                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "black" }
+            };
+        Connector Connector = new Connector()
+            {
+                ID = "connector1",
+                SourceID = "node1",
+                TargetDecorator = new DecoratorSettings()
+                {
+                    Style = new ShapeStyle()
+                    {
+                        Fill = "#6495ED",
+                        StrokeColor = "#6495ED",
+                    }
+                },
+                TargetID = "node2",
                 Style = new ShapeStyle()
-               {
-                   Fill = "#6495ED",
+                {
+                    Fill = "#6495ED",
                     StrokeColor = "#6495ED",
-                }
-            },
-            TargetID = "node2",
-            Style = new ShapeStyle()
-            {
-                Fill = "#6495ED",
-                StrokeColor = "#6495ED",
-            },
-            Type = ConnectorSegmentType.Straight,
-        };
+                },
+                Type = ConnectorSegmentType.Straight,
+            };
         connectors.Add(Connector);
         nodes.Add(node);
+        nodes.Add(node2);
 
-     }
+    }
   
     public string cursor(DiagramElementAction action, bool active, string handle)
      {
@@ -948,8 +958,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
  ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/GetCustomCursor)
 
-## How to use the BeginUpdate and EndUpdate
- [BeginUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_BeginUpdate) prevents visual updates to the diagram until the EndUpdate() method is called. [EndUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_EndUpdate) means that the diagram is unlocked following a call to the BeginUpdate(Boolean) method, resulting in an immediate visual update.
+## How to use the BeginUpdate and EndUpdateAsync
+ [BeginUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_BeginUpdate) prevents visual updates to the diagram until the EndUpdateAsync() method is called. [EndUpdateAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_EndUpdateAsync) means that the diagram is unlocked following a call to the BeginUpdate(Boolean) method, resulting in an immediate visual update.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -1022,7 +1032,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
         diagram.BeginUpdate();
         diagram.Nodes[0].Height = 150;
         diagram.Nodes[0].Width = 150;
-        diagram.EndUpdate();
+        diagram.EndUpdateAsync();
 
     }
 }
@@ -1295,7 +1305,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
             {
                 sfDiagram.EndGroupAction();
             }
-            _ = sfDiagram.EndUpdate();
+            _ = sfDiagram.EndUpdateAsync();
             base.OnMouseUp(args);
             this.InAction = true;
         }
@@ -1515,7 +1525,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/ZoomAndPan)
 
 ## How to refresh the datasource
- [RefreshDataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_RefreshDataSource) will refresh the layout based on the changes in the data source.
+ [RefreshDataSourceAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_RefreshDataSourceAsync) will refresh the layout based on the changes in the data source.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -1589,7 +1599,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
         new MindMapDetails() { Id= "4",  Label="Sessions", ParentId ="2", Branch = "subRight" },
         new MindMapDetails() { Id= "5",  Label="Complementing", ParentId ="2", Branch = "subRight" },
         };
-        await Diagram.RefreshDataSource();
+        await Diagram.RefreshDataSourceAsync();
     }
 }
 ```
@@ -1639,7 +1649,7 @@ The following code illustrates how to set background color for node.
     }
     private void GetParent()
     {
-     diagram.Nodes[0].GetParent();
+        IDiagramObject parent = diagram.Nodes[0].GetParent();
     }
 }
 ```
