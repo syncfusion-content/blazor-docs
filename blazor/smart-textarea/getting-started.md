@@ -79,6 +79,7 @@ To configure the AI service, add the following settings to the **~/Program.cs** 
 {% tabs %}
 {% highlight C# tabtitle="Blazor Server App" hl_lines="7 8 9 11 12 13" %}
 
+using Syncfusion.Blazor.SmartComponents;
 var builder = WebApplication.CreateBuilder(args);
 
 ....
@@ -115,14 +116,18 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 * For **.NET 6** Blazor Server app, include it in **~/Pages/_Layout.cshtml** file.
 
-* For **.NET 7** Blazor Server app, include it in the **~/Pages/_Host.cshtml** file.
+* For **.NET 8** Blazor Server App, include it in the **~/Components/App.razor** file.
 
 ```html
 <head>
     ....
     <link href="_content/Syncfusion.Blazor.Themes/tailwind.css" rel="stylesheet" />
-    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </head>
+
+<body>
+    ....
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+</body>
 ```
 
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
