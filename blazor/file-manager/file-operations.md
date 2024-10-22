@@ -1475,7 +1475,7 @@ N> The fully working sample can be found [here](https://github.com/SyncfusionExa
 
 In the Blazor FileManager component, filtering support is provided. When the [FilterFilesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_FilterFilesAsync_System_Collections_Generic_List__0__) method is called, it triggers a custom operation on the controller side. Using this method, you can perform search operations by passing the SearchString as a parameter. 
 
-In the following example, the SearchStringvalue **Downloads** is passed, and based on that, a search operation is performed in the Blazor FileManager using a button click.
+In the following example, the SearchString value **Downloads** is passed, and based on that, a search operation is performed in the Blazor FileManager using a button click.
 
 ```cshtml
 
