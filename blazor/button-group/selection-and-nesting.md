@@ -9,6 +9,8 @@ documentation: ug
 
 # Selection and Nesting in Blazor ButtonGroup Component
 
+The Blazor ButtonGroup supports both Single and Multiple selection modes, offering two-way binding to easily handle user interactions.
+
 ## Single selection
 
 ButtonGroup supports single selection type in which only one button can be selected.
@@ -17,16 +19,30 @@ The following example illustrates the single selection behavior in ButtonGroup.
 
 ```cshtml
 
+@using Syncfusion.Blazor
 @using Syncfusion.Blazor.SplitButtons
 
 <SfButtonGroup Mode="Syncfusion.Blazor.SplitButtons.SelectionMode.Single">
-    <ButtonGroupButton>Left</ButtonGroupButton>
-    <ButtonGroupButton @bind-Selected="@centerSelected">Center</ButtonGroupButton>
-    <ButtonGroupButton>Right</ButtonGroupButton>
+    <ButtonGroupButton @bind-Selected="@FirstSelected">First</ButtonGroupButton>
+    <ButtonGroupButton @bind-Selected="@SecondSelected">Second</ButtonGroupButton>
+    <ButtonGroupButton @bind-Selected="@ThirdSelected">Third</ButtonGroupButton>
 </SfButtonGroup>
-
-@code {
-    private bool centerSelected = true;
+@if (FirstSelected)
+{
+    <div class="alert alert-info">First button is selected</div>
+}
+@if (SecondSelected)
+{
+    <div class="text-danger">Second button is selected</div>
+}
+@if (ThirdSelected)
+{
+    <div class="alert alert-success">Third button is selected</div>
+}
+@code{
+    bool FirstSelected { get; set; }
+    bool SecondSelected { get; set; }
+    bool ThirdSelected { get; set; } = true; // you can pre-select buttons
 }
 
 ```
@@ -41,18 +57,32 @@ ButtonGroup supports multiple selection type in which multiple button can be sel
 The following example illustrates the multiple selection behavior in ButtonGroup.
 
 ```cshtml
+@using Syncfusion.Blazor
 @using Syncfusion.Blazor.SplitButtons
 
 <SfButtonGroup Mode="Syncfusion.Blazor.SplitButtons.SelectionMode.Multiple">
-    <ButtonGroupButton @bind-Selected="@boldSelected" IconCss="bg-icons e-btngrp-bold">Bold</ButtonGroupButton>
-    <ButtonGroupButton @bind-Selected="@italicSelected" IconCss="bg-icons e-btngrp-italic e-icon-left">Italic</ButtonGroupButton>
-    <ButtonGroupButton IconCss="bg-icons e-btngrp-underline e-icon-left">Underline</ButtonGroupButton>
+    <ButtonGroupButton @bind-Selected="@FirstSelected">First</ButtonGroupButton>
+    <ButtonGroupButton @bind-Selected="@SecondSelected">Second</ButtonGroupButton>
+    <ButtonGroupButton @bind-Selected="@ThirdSelected">Third</ButtonGroupButton>
 </SfButtonGroup>
-
-@code {
-    private bool boldSelected = true;
-    private bool italicSelected = true;
+@if (FirstSelected)
+{
+    <div class="alert alert-info">First button is selected</div>
 }
+@if (SecondSelected)
+{
+    <div class="text-danger">Second button is selected</div>
+}
+@if (ThirdSelected)
+{
+    <div class="alert alert-success">Third button is selected</div>
+}
+@code{
+    bool FirstSelected { get; set; }
+    bool SecondSelected { get; set; }
+    bool ThirdSelected { get; set; } = true; // you can pre-select buttons
+}
+
 
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hthgiLrLWbohwhqS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
