@@ -9,6 +9,8 @@ documentation: ug
 
 # Columns in Blazor DataGrid Component
 
+In Syncfusion Blazor DataGrid, Columns are fundamental elements that play a pivotal role in organizing and displaying data within your application. They serve as the building blocks for data presentation, allowing you to specify what data fields to show, how to format and style them, and how to enable various interactions within the grid.
+
 ## Column types
 
 The Syncfusion Blazor DataGrid component allows you to specify the type of data that a column binds using the [Column.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type) property. The `Type` property is used to determine the appropriate [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Format), such as [Decimal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnType.html#Syncfusion_Blazor_Grids_ColumnType_Decimal),  [Double](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnType.html#Syncfusion_Blazor_Grids_ColumnType_Double), [Integer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnType.html#Syncfusion_Blazor_Grids_ColumnType_Integer), [Long](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnType.html#Syncfusion_Blazor_Grids_ColumnType_Long), [None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnType.html#Syncfusion_Blazor_Grids_ColumnType_None) or [Date](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnType.html#Syncfusion_Blazor_Grids_ColumnType_Date), for displaying the column data. 
@@ -496,6 +498,85 @@ Type="ColumnType.Date" Format="dMM/dd/yyyy hh:mm:ss tt" | 04/07/1996 12:00 AM
 
 > To learn more about date formatting, you can refer to [Date formatting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnType.html#Syncfusion_Blazor_Grids_ColumnType_Date).
 
+## Format the date column based on localization
+
+You can also format the date column based on the localization settings of the user’s browser. You can use the format property of the Grid columns along with the locale property to specify the desired date format based on the locale.
+
+In this example, the format property specifies the date format as “yyyy-MMM-dd”, and the locale property specifies the locale as “es-AR” for Spanish (Argentina).
+
+## Format template column value
+
+In the Syncfusion Blazor DataGrid, you have the ability to customize the display of data in a column through the use of template columns. Formatting template column values is essential for enhancing the visual representation of data in a web application. It allows the customization of the appearance of specific column data, such as dates and numbers, to improve readability and user understanding.
+
+To illustrate how to format a template column value, consider the following example where the OrderDate column is formatted to display dates in the ‘dd/MMM/yyyy’ format.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@page "/counter"
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders">
+    <GridPageSettings PageSize="5"></GridPageSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+<GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130">
+            <Template>
+                @{
+                    var values = context as Order;
+                    if (values?.OrderDate == null)
+                    {
+                        <div></div>  <!-- Display blank if OrderDate is null -->
+                    }else                    {
+                        var day = values.OrderDate.Value.Day.ToString("00");  // Ensures two-digit day
+                        var month = values.OrderDate.Value.ToString("MMM");  // Short month format
+                        var year = values.OrderDate.Value.Year;
+                        <div>@($"{day}/{month}/{year}")</div> <!-- Display formatted date -->
+                    }
+                }
+            </Template>
+        </GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="ShipCountry" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+            {
+                OrderID = 1000 + x,
+                ShipCountry = (new string[] { "France", "Germany", "Brazil", "Belgium", "Switzerland" })[new Random().Next(5)],
+                Freight = 2.1 * x,
+                OrderDate = DateTime.Now.AddDays(-x),
+                
+            }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string? ShipCountry { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrpsDhLVmdBIgaq?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+
+## Custom formatting
+
+Syncfusion Blazor DataGrid allows you to customize the formatting of data in the grid columns. You can apply custom formats to numeric or date columns to display data in a specific way according to the requirements. To apply custom formatting to grid columns in Syncfusion Grid, you can use the format property. Here’s an example of how you can use custom formatting for numeric and date columns:
+
+In the below example, the numberFormatOptions object is used as the format property for the ‘Freight’ column to apply a custom numeric format with four decimal places. Similarly, the dateFormatOptions object is used as the format property for the ‘OrderDate’ column to apply a custom date format displaying the date in the format of day-of-the-week, month abbreviation, day, and 2-digit year (e.g. Sun, May 8, 23).
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLqWZKWCpWghdlk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## Align the text of content
 
 You can align the text in the content of a Grid column using the [TextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_TextAlign) property. This property allows you to specify the alignment of the text within the cells of a particular column in the DataGrid. By default, the text is aligned to the left, but you can change the alignment by setting the value of the `TextAlign` property to one of the following options:
@@ -659,6 +740,11 @@ To enable the rendering of boolean values as checkboxes, you need to set the `Di
 >* The `DisplayAsCheckBox` property is only applicable to boolean values in DataGrid columns.
 > * Need to define [EditType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_EditType) as **EditType.BooleanEdit** to GridColumn to render checkbox while editing a boolean value.
 >* When `DisplayAsCheckBox` is set to **true**, the boolean values will be rendered as checkboxes in the DataGrid column, with checked state indicating **true** and unchecked state indicating **false**.
+
+## How to prevent checkbox in the blank row
+To prevent the checkbox in the blank row of the Grid, even if the displayAsCheckBox property is set to true for that column, you can use the rowDataBound event and check for empty or null values in the row data. If all the values in the row are empty or null, you can set the inner HTML of the corresponding cell to an empty string to hide the checkbox.
+
+Here is an example of how you can prevent a checkbox from being displayed in a blank row in a Grid:
 
 ## AutoFit columns
 
@@ -925,6 +1011,19 @@ Here's an example code snippet in Blazor that demonstrates how to auto fit colum
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtrUWCZmBqLMLrUr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+### AutoFit columns with specific rows
+
+To adjust the column widths of a specific range of rows based on their content, you can use the autoFitColumns method by simply passing the second and third parameters (optional) as the start and end index for the column you want to fit. You can autofit specific columns at initial rendering by invoking the autoFitColumns method in dataBound event.
+
+This feature will calculate the appropriate width based on the maximum content width of the specified range of rows or the header text width. Subsequently, the maximum width of the content of the specified rows or header text will be applied to the entire column of the grid.
+
+Here is an example of how to autofit columns with specific rows. The first parameter is an array containing the specific column field names, such as Inventor, Number of INPADOC patents and Main fields of invention is passed to apply the autofit functionality to these columns. After, the second parameter are start index is set to 1 and third parameter are end index is set to 3. When specifying these start and end index, the autofit operation is applied only to the range of rows from 1 to 3 for column width adjustment.
+
+## Locked columns
+The Syncfusion Grid allows you to lock columns, which prevents them from being reordered and moves them to the first position. This functionality can be achieved by setting the column.lockColumn property to true, which locks the column and moves it to the first position in the grid.
+
+Here’s an example of how you can use the lockColumn property to lock a column in the Syncfusion Grid:
 
 ## Show or hide columns
 
