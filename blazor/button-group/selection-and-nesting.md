@@ -9,7 +9,7 @@ documentation: ug
 
 # Selection and Nesting in Blazor ButtonGroup Component
 
-The Blazor ButtonGroup supports both Single and Multiple selection modes, offering two-way binding to easily handle user interactions.
+Blazor ButtonGroup component provided two-way binding support in both single and multiple selection modes through the `Selected` property of `ButtonGroupButton`. The `@bind-Selected` directive enables two-way data binding, allowing the state of each button (selected or not) to synchronize between the UI and the backing properties.
 
 ## Single selection
 
