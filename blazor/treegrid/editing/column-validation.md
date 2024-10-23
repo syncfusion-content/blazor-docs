@@ -155,6 +155,7 @@ Toolbar="@(new List<string>() { "Edit", "Update", "Cancel" })">
     {
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
+            // added condition check for empty string 
             if (value != null && value != "")
             {
                 string name = value.ToString();
