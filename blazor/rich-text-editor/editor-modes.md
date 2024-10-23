@@ -68,7 +68,7 @@ Set the `EditorMode` property to `Markdown` to create or edit the content and ap
 
 ![Blazor RichTextEditor with Markdown Editor](./images/blazor-richtexteditor-markdown-editor.png)
 
-For further details on Markdown editing, refer to the [Markdown](./markdown/) section.
+For further details on Markdown editing, refer to the [Markdown](./markdown) section.
 
 N> You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap5) example to know how to render and configure the rich text editor tools.
 
