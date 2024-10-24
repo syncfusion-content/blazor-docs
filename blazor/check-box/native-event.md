@@ -44,3 +44,22 @@ The `onchange` attribute is used to bind the onchange event for Checkbox. Here, 
     }
 }
 ```
+
+## How to bind ValueChange event to Checkbox
+
+To bind the change event in the checkbox [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfCheckBox-1.html#Syncfusion_Blazor_Buttons_SfCheckBox_1_ValueChange) event is used and the event is triggered when the value in the checkbox changes.
+
+```cshtml
+@using Syncfusion.Blazor.Buttons
+
+<SfCheckBox @bind-Checked="isChecked" Label="Change" ValueChange="ValueChange" TChecked="bool"></SfCheckBox>
+
+@code {
+    private bool isChecked = true;
+    private void ValueChange(ChangeEventArgs<bool> args)
+    {
+        //ValueChange Event triggered
+        var state = args.Checked;
+    }
+}
+```
