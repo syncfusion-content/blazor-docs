@@ -161,7 +161,7 @@ N> The order of toolbar options can be changed by simply moving the position of 
 
 ```
 
-![Blazor PivotTable with Toolbar](images/blazor-pivottable-with-toolbar.png)
+![Blazor PivotTable with Toolbar.](images/blazor-pivottable-with-toolbar.png)
 
 ## Show desired chart types in the dropdown menu
 
@@ -213,20 +213,20 @@ By default, all the chart types are displayed in the dropdown menu included in t
 
 ```
 
-![Displaying Blazor PivotChart in DropDown Menu](images/blazor-pivotchart-in-dropdown-menu.png)
+![Displaying Blazor PivotChart in DropDown Menu.](images/blazor-pivotchart-in-dropdown-menu.png)
 
 ## Switch the chart to multiple axes
 
 In the chart, the user can switch from single axis to multiple axes with the help of the built-in checkbox available inside the chart type dropdown menu in the toolbar. For more information [refer here](https://blazor.syncfusion.com/documentation/pivot-table/pivot-chart#multi-axis).
 
-![Displaying Multiple Axes in Blazor PivotTable DropDown Menu](images/blazor-pivotchart-show-multiple-axes.png)
+![Displaying Multiple Axes in Blazor PivotTable DropDown Menu.](images/blazor-pivotchart-show-multiple-axes.png)
 
 ## Show or hide legend
 
 In the chart, legend can be shown or hidden dynamically with the help of the built-in option available in the chart type drop-down menu.
 N> By default, the legend will not be visible for the accumulation chart types like pie, doughnut, pyramid, and funnel. Users can enable or disable using the built-in checkbox option.
 
-![Blazor PivotChart with Legend](images/blazor-pivotchart-legend.png)
+![Blazor PivotChart with Legend.](images/blazor-pivotchart-legend.png)
 
 ## Save and load reports to a SQL database
 
@@ -238,7 +238,7 @@ SQL Server is a relational database management system (RDBMS) that can be used t
 
 **2.** To connect a SQL Server database using the Microsoft SqlClient in our application, we need to install the [Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient) NuGet package. To do so, open the NuGet package manager of the project solution, search for the package **Microsoft.Data.SqlClient** and install it.
 
-![Add the NuGet package Microsoft.Data.SqlClient to the project](./images/ms-data-sqlclient-nuget-package-install.png)
+![Add the NuGet package Microsoft.Data.SqlClient to the project.](./images/ms-data-sqlclient-nuget-package-install.png)
 
 **3.** Next, in the **Index.razor** page, the **OpenConnection** method is used to connect to the SQL database. The **GetDataTable** method then processes the specified SQL query string, retrieves data from the database, and converts it into a **DataTable** using **SqlCommand** and **SqlDataAdapter**. This **DataTable** can be used to retrieve saved reports and modify them further as shown in the code block below.
 
@@ -525,11 +525,11 @@ For example, the report shown in the following code snippet will be passed to th
 
 ```
 
-![The current report has been saved in the SQL database](./images/blazor_output_save_report.png)
+![The current report has been saved in the SQL database.](./images/blazor_output_save_report.png)
 
 In the meantime, you can save a duplicate of the current report to the SQL Server database with a different name by selecting **"Save as current report"** from the toolbar. The [saveReport](#savereport) event will then be triggered with the new report name **"Sample Report 1"** and the current report. You can save them to the SQL Server database after passing them to the **SaveReportToDB** method, as mentioned above.
 
-![Copy of the current report has been saved in the SQL database](./images/blazor_output_save_as_report.png)
+![Copy of the current report has been saved in the SQL database.](./images/blazor_output_save_as_report.png)
 
 #### Loading a report
 
@@ -631,7 +631,7 @@ For example, if the report name **"Sample Report 1"** is selected from a dropdow
 
 ```
 
-![Loading a report from SQL database](./images/blazor_output_load_report.png)
+![Loading a report from SQL database.](./images/blazor_output_load_report.png)
 
 #### Renaming a report
 
@@ -851,13 +851,13 @@ For example, if we delete the current report **"Sample Report 2"** from the pivo
 
 ```
 
-![Deleting a report from the SQL database](./images/blazor_output_remove_report.png)
+![Deleting a report from the SQL database.](./images/blazor_output_remove_report.png)
 
 #### Adding a report
 
 When you select the **"Create a new report"** option from the toolbar, the [NewReport](#newreport) event is triggered, followed by the [SaveReport](#savereport) event. To save this new report to the SQL database, the [SaveReport](#savereport) event triggered later, and then follow the save report briefing in the preceding [topic](#saving-a-report).
 
-![Adding a report in the SQL database](./images/blazor_output_new_report.png)
+![Adding a report in the SQL database.](./images/blazor_output_new_report.png)
 
 > In [this](https://github.com/SyncfusionExamples/Save-and-load-report-from-SQL-database-to-blazor-pivot-table) GitHub repository, you can find our Blazor Pivot Table sample to save and load reports from SQL Server database.
 
@@ -865,11 +865,11 @@ When you select the **"Create a new report"** option from the toolbar, the [NewR
 
 **1.** Open Visual Studio and create an ASP.NET Core Web App project type, naming it **MyWebService**. To create an ASP.NET Core Web application, follow the document [link](https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-aspnet-core?view=vs-2022).
 
-![Create ASP.NET Core Web App project](images/azure-asp-core-web-service-create.png)
+![Create ASP.NET Core Web App project.](images/azure-asp-core-web-service-create.png)
 
 **2.** To connect a SQL Server database using the Microsoft SqlClient in our application, we need to install the [Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient) NuGet package. To do so, open the NuGet package manager of the project solution, search for the package **Microsoft.Data.SqlClient** and install it.
 
-![Add the NuGet package Microsoft.Data.SqlClient to the project](images/ms-data-sqlclient-nuget-package-install.png)
+![Add the NuGet package Microsoft.Data.SqlClient to the project.](./images/ms-data-sqlclient-nuget-package-install.png) 
 
 **3.** Under the **Controllers** folder, create a Web API controller (aka, PivotController.cs) file that aids in data communication with the Pivot Table.
 
@@ -1185,11 +1185,11 @@ namespace MyWebService.Controllers
 
 ```
 
-![The current report has been saved in the SQL database](images/blazor_output_save_report.png)
+![The current report has been saved in the SQL database.](images/blazor_output_save_report.png)
 
 In the meantime, you can save a duplicate of the current report to the SQL Server database with a different name by selecting **"Save as current report"** from the toolbar. The [saveReport](#savereport) event will then be triggered with the new report name **"Sample Report 1"** and the current report. You can save them to the SQL Server database after passing them to the Web API service, as mentioned above.
 
-![Copy of the current report has been saved in the SQL database](images/blazor_output_save_as_report.png)
+![Copy of the current report has been saved in the SQL database.](images/blazor_output_save_as_report.png)
 
 #### Loading a report
 
@@ -1324,7 +1324,7 @@ namespace MyWebService.Controllers
 
 ```
 
-![Loading a report from SQL database](images/blazor_output_load_report.png)
+![Loading a report from SQL database.](images/blazor_output_load_report.png)
 
 #### Renaming a report
 
@@ -1477,7 +1477,7 @@ namespace MyWebService.Controllers
 
 ```
 
-![Renaming a report in the SQL database](images/blazor_output_rename_report.png)
+![Renaming a report in the SQL database.](images/blazor_output_rename_report.png)
 
 #### Deleting a report
 
@@ -1608,13 +1608,13 @@ namespace MyWebService.Controllers
 
 ```
 
-![Deleting a report from the SQL database](images/blazor_output_remove_report.png)
+![Deleting a report from the SQL database.](images/blazor_output_remove_report.png)
 
 #### Adding a report
 
 When you select the **"Create a new report"** option from the toolbar, the [NewReport](#newreport) event is triggered, followed by the [SaveReport](#savereport) event. To save this new report to the SQL database, use the [SaveReport](#savereport) event triggered later, and then follow the save report briefing in the preceding [topic](#saving-a-report).
 
-![Adding a report in the SQL database](images/blazor_output_new_report.png)
+![Adding a report in the SQL database.](images/blazor_output_new_report.png)
 
 > In [this](https://github.com/SyncfusionExamples/Save-and-load-report-from-SQL-database-to-pivot-table) GitHub repository, you can find our Blazor Pivot Table sample and ASP.NET Core Web Application to save and load reports from SQL Server database.
 
@@ -1765,7 +1765,7 @@ By default, the pivot table is displayed with the report bound at the code-behin
 }
 
 ```
-![Blazor Pivot Table loaded with desired report from saved report collection](images/blazor-pivottable-load-default-report.PNG)
+![Blazor Pivot Table loaded with desired report from saved report collection.](images/blazor-pivottable-load-default-report.PNG)
 
 ## Events
 
