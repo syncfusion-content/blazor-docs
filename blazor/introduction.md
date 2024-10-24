@@ -78,6 +78,7 @@ padding-top: 20px;
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/datagrid/getting-started">DataGrid</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/pivot-table/getting-started">Pivot Table</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/treegrid/getting-started">TreeGrid</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/multicolumn-combobox/getting-started">Multicolumn ComboBox</a></div>
         <div><p class="controlcategory">FILE VIEWERS & EDITORS</p></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started">RichTextEditor</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/web-app">PDF Viewer</a></div>
@@ -184,6 +185,70 @@ padding-top: 20px;
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/message/getting-started">Message</a></div>
     </td>
 </tr>
+</table>
+
+## Smart Component list
+
+<style>
+#table
+{
+border:0 !important;
+line-height: 160% !important;
+}
+
+tr
+{
+border:0 !important;
+}
+
+td
+{
+border:0 !important;
+vertical-align: top;
+}
+
+.controlanchorlink
+{
+font-size: 14px !important;
+text-decoration: none!important;
+text-align: left!important;
+padding: 1px 0px;
+}
+.controlcategory-topics
+{
+font-size: 14px !important;
+font-weight: 500!important;
+border:0 !important;
+line-height: 20px;
+}
+.controlcategory
+{
+font-size: 14px !important;
+font-weight: 500!important;
+border:0 !important;
+text-align: left!important;
+line-height: 20px;
+padding-top: 20px;
+}
+</style>
+
+<table id="table">
+    <tbody>
+        <colgroup>
+            <col style="width: 25%">
+            <col style="width: 25%">
+            <col style="width: 25%">
+            <col style="width: 25%">
+        </colgroup>
+    </tbody>
+    <tr>
+        <td>
+            <div><p class="controlcategory-topics">Smart AI</p></div>
+            <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/ai-assistview/getting-started">AI AssistView</a></div>
+            <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/smart-paste/getting-started">Smart Paste Button</a></div>
+            <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/smart-textarea/getting-started">Smart TextArea</a></div>
+        </td>
+    </tr>
 </table>
 
 ## Getting Help
