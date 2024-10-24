@@ -1170,6 +1170,38 @@ SfMaps
 </tr>
 </table>
 
+## Syncfusion.Blazor.MultiColumnComboBox
+
+<table>
+<tr>
+<td>
+<b>NuGet package</b>
+</td>
+<td>
+<b>Components friendly name</b>
+</td>
+<td>
+<b>Components name</b>
+</td>
+<td>
+<b>Dependencies</b>
+</td>
+</tr>
+<tr>
+<td><a href="https://www.nuget.org/packages/Syncfusion.Blazor.MultiColumnComboBox">Syncfusion.Blazor.MultiColumnComboBox</td>
+<td><a href="https://blazor.syncfusion.com/documentation/multicolumn-combobox/getting-started">MultiColumn ComboBox</a></td>
+<td>SfMultiColumnComboBox</td>
+<td>
+<ul>
+    <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Core/">Syncfusion.Blazor.Core</a></li>
+    <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Data/">Syncfusion.Blazor.Data</a></li>
+    <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Grid/">Syncfusion.Blazor.Grid</a></li>
+    <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Inputs/">Syncfusion.Blazor.Inputs</a></li>
+</ul>
+</td>
+</tr>
+</table>
+
 ## Syncfusion.Blazor.Navigations
 
 A package of Blazor navigation components such as Accordion, ContextMenu, Tabs, Toolbar, TreeView, and Sidebar.
