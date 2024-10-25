@@ -9,7 +9,7 @@ documentation: ug
 
 # Grouping in Blazor MultiSelect Dropdown Component
 
-The DropDownList supports wrapping of the nested elements into a group based on different categories. The category of each list item can be mapped through the [MultiSelectFieldSettings.GroupBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectFieldSettings.html#Syncfusion_Blazor_DropDowns_MultiSelectFieldSettings_GroupBy) field in the data table. The group header is displayed both as inline and fixed headers. The fixed group header content is updated dynamically on scrolling the popup list with its category value.
+The MultiSelect supports wrapping of the nested elements into a group based on different categories. The category of each list item can be mapped through the [MultiSelectFieldSettings.GroupBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectFieldSettings.html#Syncfusion_Blazor_DropDowns_MultiSelectFieldSettings_GroupBy) field in the data table. The group header is displayed both as inline and fixed headers. The fixed group header content is updated dynamically on scrolling the popup list with its category value.
 
 To get started quickly with grouping in the Blazor MultiSelect Dropdown component, you can check the video below.
 
