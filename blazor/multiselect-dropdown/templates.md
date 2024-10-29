@@ -15,84 +15,47 @@ To get started quickly with templates in the Blazor MultiSelect Dropdown compone
 
 {% youtube "https://www.youtube.com/watch?v=6A61PDatD0s" %}
 
-## Item template
-
-The content of each list item within the MultiSelect can be customized with the help of [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ItemTemplate) property.
-
-```cshtml
-@using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor.DropDowns
-@using Syncfusion.Blazor
-
-<SfMultiSelect Placeholder="Select a employee" TValue="string[]" TItem="EmployeeData" Query="@Query">
-    <MultiSelectTemplates TItem="EmployeeData">
-        <ItemTemplate>
-            <span><span class='name'>@((context as EmployeeData).FirstName)</span><span class='country'>@((context as EmployeeData).Country)</span></span>
-        </ItemTemplate>
-    </MultiSelectTemplates>
-    <SfDataManager Url="https://ej2services.syncfusion.com/production/web-services/api/Employees" Adaptor="Adaptors.WebApiAdaptor" CrossDomain=true></SfDataManager>
-    <MultiSelectFieldSettings Text="FirstName" Value="Country"></MultiSelectFieldSettings>
-</SfMultiSelect>
-
-@code {
-    public class EmployeeData
-    {
-        public string FirstName { get; set; }
-        public string Country { get; set; }
-    }
-    public Query Query = new Query();
-}
-
-<style>
-    .country {
-        right: 15px;
-        position: absolute;
-    }
-</style>
-```
-
-![Blazor MultiSelect DropDown with Item Template](./images/blazor-multiselect-dropdown-item-template.png)
-
 ## Value template
 
 The currently selected value that is displayed by default on the MultiSelect input element can be customized using the [ValueTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectModel-1.html#Syncfusion_Blazor_DropDowns_MultiSelectModel_1_ValueTemplate) property.
 
 In the following sample, the selected value is displayed as a combined text of both `FirstName` and `Designation` in the MultiSelect input, which is separated by a hyphen.
 
-```cshtml
-@using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor.DropDowns
-@using Syncfusion.Blazor
-<SfMultiSelect TValue="string[]" TItem="EmployeeData" Placeholder="Select a employee" Query="@Query">
-    <MultiSelectTemplates TItem="EmployeeData">
-        <ItemTemplate>
-            <span><span class='name'>@((context as EmployeeData).FirstName)</span><span class='destination'>@((context as EmployeeData).Designation)</span></span>
-        </ItemTemplate>
-        <ValueTemplate>
-            <span>@((context as EmployeeData).FirstName) - @((context as EmployeeData).Designation)</span>
-        </ValueTemplate>
-    </MultiSelectTemplates>
-    <SfDataManager Url="https://ej2services.syncfusion.com/production/web-services/api/Employees" Adaptor="Adaptors.WebApiAdaptor" CrossDomain=true></SfDataManager>
-    <MultiSelectFieldSettings Text="FirstName" Value="Designation"></MultiSelectFieldSettings>
-</SfMultiSelect>
+{% highlight cshtml %}
 
-@code {
-    public class EmployeeData
-    {
-        public string FirstName { get; set; }
-        public string Designation { get; set; }
-    }
-    public Query Query = new Query();
-}
-<style>
-    .destination {
-        right: 15px;
-        position: absolute;
-    }
-</style>
-```
+{% include_relative code-snippet/template/value-template.razor %}
+
+{% endhighlight %}
 
 ![Blazor MultiSelect DropDown with Value Template](./images/blazor-multiselect-dropdown-value-template.png)
+
+## Item template
+
+The content of each list item within the MultiSelect can be customized with the help of [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ItemTemplate) property.
+
+In the following sample, each list item is split into two columns to display relevant data.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/template/item-template.razor %}
+
+{% endhighlight %}
+
+![Blazor MultiSelect DropDown with Item Template](./images/blazor-multiselect-dropdown-item-template.png)
+
+## Group template
+
+The group header title under which appropriate sub-items are categorized can also be customized with the help of the [GroupTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_GroupTemplate) property. This template is common for both inline and floating group header template.
+
+In the following sample, employees are grouped according to their cities.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/template/group-template.razor %}
+
+{% endhighlight %}
+
+![Blazor MultiSelect with GroupTemplate](./images/template/blazor-multiselect-group-template.png)
 
 ## Header template
 
@@ -100,61 +63,11 @@ The header element is shown statically at the top of the popup list items within
 
 In the following sample, the list items and its headers are designed and displayed as two columns similar to multiple columns of the grid.
 
-```cshtml
-@using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor.DropDowns
-@using Syncfusion.Blazor
+{% highlight cshtml %}
 
-<SfMultiSelect TValue="string[]" TItem="EmployeeData" Placeholder="Select a employe" Query="@Query">
-    <MultiSelectTemplates TItem="EmployeeData">
-        <ItemTemplate>
-            <span class='item'><span class='name'>@((context as EmployeeData).FirstName)</span><span class='city'>@((context as EmployeeData).Country)</span></span>
-        </ItemTemplate>
-        <HeaderTemplate>
-            <span class='head'><span class='name'>Name</span><span class='city'>Country</span></span>
-        </HeaderTemplate>
-    </MultiSelectTemplates>
-    <SfDataManager Url="https://ej2services.syncfusion.com/production/web-services/api/Employees" Adaptor="Adaptors.WebApiAdaptor" CrossDomain=true></SfDataManager>
-    <MultiSelectFieldSettings Value="Country" Text="FirstName"></MultiSelectFieldSettings>
-</SfMultiSelect>
+{% include_relative code-snippet/template/header-template.razor %}
 
-@code {
-    public class EmployeeData
-    {
-        public string FirstName { get; set; }
-        public string Country { get; set; }
-    }
-    public Query Query = new Query();
-}
-
-<style>
-    .head, .item {
-        display: table;
-        width: 100%;
-        margin: auto;
-    }
-
-    .head {
-        height: 40px;
-        font-size: 15px;
-        font-weight: 600;
-    }
-
-    .name, .city {
-        display: table-cell;
-        vertical-align: middle;
-        width: 50%;
-    }
-
-    .head .name {
-        text-indent: 16px;
-    }
-
-    .head .city {
-        text-indent: 10px;
-    }
-</style>
-```
+{% endhighlight %}
 
 ![Blazor MultiSelect DropDown with Header Template](./images/blazor-multiselect-dropdown-header-template.png)
 
@@ -162,40 +75,13 @@ In the following sample, the list items and its headers are designed and display
 
 The MultiSelect has options to show a footer element at the bottom of the list items in the popup list. Here, you can place any custom element as a footer element using the [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectModel-1.html#Syncfusion_Blazor_DropDowns_MultiSelectModel_1_FooterTemplate) property.
 
-```cshtml
-@using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor.DropDowns
-@using Syncfusion.Blazor
+In the following sample, footer element displays the total number of list items present in the MultiSelect.
 
-<SfMultiSelect TValue="string[]" TItem="EmployeeData" Query="@Query" Placeholder="Select a customer">
-    <MultiSelectTemplates TItem="EmployeeData">
-        <FooterTemplate>
-            <span class='footer'>Total list Item: 6 </span>
-        </FooterTemplate>
-    </MultiSelectTemplates>
-    <SfDataManager Url="https://ej2services.syncfusion.com/production/web-services/api/Employees" Adaptor="Adaptors.WebApiAdaptor" CrossDomain=true></SfDataManager>
-    <MultiSelectFieldSettings Value="Country" Text="FirstName"></MultiSelectFieldSettings>
-</SfMultiSelect>
+{% highlight cshtml %}
 
-@code {
+{% include_relative code-snippet/template/footer-template.razor %}
 
-    public class EmployeeData
-    {
-        public string FirstName { get; set; }
-    }
-    public Query Query = new Query();
-}
-
-<style>
-    .footer {
-        text-indent: 1.2em;
-        display: block;
-        font-size: 15px;
-        line-height: 40px;
-        border-top: 1px solid #e0e0e0;
-    }
-</style>
-```
+{% endhighlight %}
 
 ![Blazor MultiSelect DropDown with Footer Template](./images/blazor-multiselect-dropdown-footer-template.png)
 
@@ -203,24 +89,13 @@ The MultiSelect has options to show a footer element at the bottom of the list i
 
 The MultiSelect is provided with support to custom design the popup list content when no data is found and no matches are found on search with the help of [NoRecordsTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_NoRecordsTemplate) property.
 
-```cshtml
-@using Syncfusion.Blazor.DropDowns
+In the following sample, popup list content displays the notification of no data available.
 
-<SfMultiSelect TValue="string[]" TItem="EmployeeData" Placeholder="Select a employee" CssClass="e-custom" DataSource="@employee">
-    <MultiSelectTemplates TItem="EmployeeData">
-        <NoRecordsTemplate>
-            <span class='norecord'> NO DATA AVAILABLE</span>
-        </NoRecordsTemplate>
-    </MultiSelectTemplates>
-</SfMultiSelect>
+{% highlight cshtml %}
 
-@code {
+{% include_relative code-snippet/template/no-record-template.razor %}
 
-    public class EmployeeData { }
-
-    List<EmployeeData> employee = new List<EmployeeData> { };
-}
-```
+{% endhighlight %}
 
 ![Blazor MultiSelect DropDown without Data](./images/blazor-multiselect-dropdown-without-data.png)
 
@@ -228,28 +103,12 @@ The MultiSelect is provided with support to custom design the popup list content
 
 There is also an option to custom design the popup list content when the data fetch request fails at the remote server. This can be achieved using the [ActionFailureTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ActionFailureTemplate) property.
 
-```cshtml
-@using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor.DropDowns
-@using Syncfusion.Blazor
+In the following sample, when the data fetch request fails, the MultiSelect displays the notification.
 
-<SfMultiSelect  TValue="string[]" TItem="EmployeeData" Placeholder="Select a customer" Query="@Query">
-    <MultiSelectTemplates TItem="EmployeeData">
-        <ActionFailureTemplate>
-            <span class='norecord'>Data fetch get fails </span>
-        </ActionFailureTemplate>
-    </MultiSelectTemplates>
-    <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svcs/Employees" Adaptor="Adaptors.ODataV4Adaptor" CrossDomain=true></SfDataManager>
-    <MultiSelectFieldSettings Value="Country" Text="FirstName"></MultiSelectFieldSettings>
-</SfMultiSelect>
+{% highlight cshtml %}
 
-@code {
-    public class EmployeeData
-    {
-        public string FirstName { get; set; }
-    }
-    public Query Query = new Query();
-}
-```
+{% include_relative code-snippet/template/action-failure-template.razor %}
+
+{% endhighlight %}
 
 ![Blazor MultiSelect DropDown with Action Template](./images/blazor-multiselect-dropdown-action-template.png)
