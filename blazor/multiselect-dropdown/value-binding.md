@@ -109,11 +109,11 @@ The following sample demonstrates the `string` used as `TValue`. So, if you clea
 
 ## Dynamically change TItem
 
-The `TItem` property can be changed dynamically by defining the datasource type of the DropDownList component with the help of the `@typeparam` directive. The following sample demonstration explains how to change  the TItem dynamically with different type of datasource.
+The `TItem` property can be changed dynamically by defining the datasource type of the MultiSelect component with the help of the `@typeparam` directive. The following sample demonstration explains how to change  the TItem dynamically with different type of datasource.
 
-### Creating generic dropdownList component
+### Creating generic MultiSelect component
 
-First, create a `DropDownList.razor` file as a parent component in the `/Pages` folder. Also, add a Parameter property for a List as `<TItem>` and `TValue`.
+First, create a `MultiSelect.razor` file as a parent component in the `/Pages` folder. Also, add a Parameter property for a List as `<TItem>` and `TValue`.
 
 {% tabs %}
 {% highlight razor %}
@@ -122,17 +122,17 @@ First, create a `DropDownList.razor` file as a parent component in the `/Pages` 
 @typeparam TValue;
 @typeparam TItem;
 
-<SfDropDownList TValue="TValue" Width="300px" TItem="TItem" @bind-Value="@DDLValue" Placeholder="Please select a value" DataSource="@customData">
-    <DropDownListFieldSettings Text="Text" Value="ID"></DropDownListFieldSettings>
-</SfDropDownList>
+<SfMultiSelect TValue="TValue[]" Width="300px" TItem="TItem" @bind-Value="@DDLValue" Placeholder="Please select a value" DataSource="@customData">
+    <MultiSelectFieldSettings Text="Text" Value="ID"></MultiSelectFieldSettings>
+</SfMultiSelect>
 
 @code {
-    [Parameter]
-    public List<TItem> customData { get; set; }
-    [Parameter]
-    public TValue DDLValue { get; set; }
-    [Parameter]
-    public EventCallback<TValue> DDLValueChanged { get; set; }
+[Parameter]
+public List<TItem> customData { get; set; }
+[Parameter]
+public TValue[] DDLValue { get; set; }
+[Parameter]
+public EventCallback<TValue> DDLValueChanged { get; set; }
 }
 
 {% endhighlight razor %}
@@ -140,20 +140,21 @@ First, create a `DropDownList.razor` file as a parent component in the `/Pages` 
 
 ### Usage of generic component with different type
 
-Then, render the Generic DropDownList component with the required `TValue` and `TItem` in the respective razor components. 
+Then, render the Generic MultiSelect component with the required `TValue` and `TItem` in the respective razor components. 
 
-Here, the DropDownList component is rendered with the TValue as a string type in the `/Index.razor` file and the DropDownList component with TValue as an int nullable type in the `/Counter.razor` file.
+Here, the MultiSelect component is rendered with the TValue as a string type in the `/Index.razor` file and the MultiSelect component with TValue as an int nullable type in the `/Counter.razor` file.
 
 **[Index.razor]**
 
 {% tabs %}
 {% highlight razor %}
 
-<DropDownList TValue="string" TItem="Games" @bind-DDLValue="@value" customData="@LocalData">
-</DropDownList>
+<MultiSelect TValue="string[]" TItem="Games" @bind-DDLValue="@value" customData="@LocalData">
+</MultiSelect>
 
 @code{
-    public string value { get; set; } = "Game1";
+    public string[] value { get; set; } = new string[] { "Game1" };
+
     public class Games
     {
         public string ID { get; set; }
@@ -180,53 +181,32 @@ Here, the DropDownList component is rendered with the TValue as a string type in
 
 {% tabs %}
 {% highlight razor %}
-<DropDownList TValue="int?" TItem="Games" @bind-DDLValue="@value" customData="@LocalData">
-</DropDownList>
+
+<MultiSelect TValue="int?[]" TItem="Games" @bind-DDLValue="@value" customData="@LocalData">
+</MultiSelect>
 
 @code{
-    public int? value { get; set; } = 3;
-    public class Games
-    {
-        public int? ID { get; set; }
-        public string Text { get; set; }
-    }
-    List<Games> LocalData = new List<Games> {
-        new Games() { ID= 1, Text= "American Football" },
-        new Games() { ID= 2, Text= "Badminton" },
-        new Games() { ID= 3, Text= "Basketball" },
-        new Games() { ID= 4, Text= "Cricket" },
-        new Games() { ID= 5, Text= "Football" },
-        new Games() { ID= 6, Text= "Golf" },
-        new Games() { ID= 7, Text= "Hockey" },
-        new Games() { ID= 8, Text= "Rugby"},
-        new Games() { ID= 9, Text= "Snooker" },
-        new Games() { ID= 10, Text= "Tennis"},
+
+public int?[] value { get; set; } = new int?[] { 3 };
+public class Games
+{
+    public int? ID { get; set; }
+    public string Text { get; set; }
+}
+List<Games> LocalData = new List<Games> {
+    new Games() { ID= 1, Text= "American Football" },
+    new Games() { ID= 2, Text= "Badminton" },
+    new Games() { ID= 3, Text= "Basketball" },
+    new Games() { ID= 4, Text= "Cricket" },
+    new Games() { ID= 5, Text= "Football" },
+    new Games() { ID= 6, Text= "Golf" },
+    new Games() { ID= 7, Text= "Hockey" },
+    new Games() { ID= 8, Text= "Rugby"},
+    new Games() { ID= 9, Text= "Snooker" },
+    new Games() { ID= 10, Text= "Tennis"},
     };
 }
 
+
 {% endhighlight razor %}
 {% endtabs %}
-
-## Two way binding
-
-Two-way is having a bi-directional data flow, i.e., passing the value from the property to the UI and then from the view (UI) to the property as well. The synchronization of data flow between model and view is achieved using the bind attribute in Blazor. To enable two-way binding for the Syncfusion Blazor DropDownList component, you can use the @bind-Value directive to bind the value of the DropDownList
-
-{% highlight cshtml %}
-
-{% include_relative code-snippet/value-binding/two-way-binding.razor %}
-
-{% endhighlight %}
-
-![Blazor DropdownList with Two way binding](./images/value-binding/blazor_dropdown_two-way-binding.png)
-
-## Programmatically clearing value
-
-You can clear the value programmatically by accessing the `ClearAsync()` method through an instance of the dropdown list. You can bind the click event of a button to the `ClearAsync()` method. When the button is clicked, it will trigger the `ClearAsync()` method on the dropdown list, clearing its value.
-
-{% highlight Razor %}
-
-{% include_relative code-snippet/value-binding/clearAsync-method.razor %}
-
-{% endhighlight %} 
-
-![Blazor DropDownList with clear button](./images/value-binding/blazor_dropdown_with-clearAsync-method.gif)
