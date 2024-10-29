@@ -1188,7 +1188,7 @@ SfMaps
 </td>
 </tr>
 <tr>
-<td><a href="https://www.nuget.org/packages/Syncfusion.Blazor.MultiColumnComboBox">Syncfusion.Blazor.MultiColumnComboBox</td>
+<td><a href="https://www.nuget.org/packages/Syncfusion.Blazor.MultiColumnComboBox">Syncfusion.Blazor.MultiColumnComboBox</a></td>
 <td><a href="https://blazor.syncfusion.com/documentation/multicolumn-combobox/getting-started">MultiColumn ComboBox</a></td>
 <td>SfMultiColumnComboBox</td>
 <td>
