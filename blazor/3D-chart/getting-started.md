@@ -100,6 +100,8 @@ Add the Syncfusion Blazor 3D Chart component in the **~/Pages/Index.razor** file
 {% endhighlight %}
 {% endtabs %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBJWtKXJywJbsUy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor 3D Chart component in your default web browser.
 
 ## Populate Blazor 3D Chart with data
