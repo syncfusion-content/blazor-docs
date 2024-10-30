@@ -9,7 +9,7 @@ documentation: ug
 
 # How to Filter Blazor ListBox Data Using TextBox Component
 
-This example demonstrates how to filter data in the Syncfusion ListBox using a TextBox component. It shows the implementation of a TextBox filter for data filtering in ListBox items.
+This example demonstrates how to filter Syncfusion ListBox data based on input from a TextBox. Bind an input event listener to the TextBox to capture user input and filter the items in the ListBox. Within the event handler, use the [`FilterAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_FilterAsync_System_Collections_Generic_IEnumerable__1__Syncfusion_Blazor_Data_Query_Syncfusion_Blazor_DropDowns_FieldSettingsModel_) method to update the ListBox items, ensuring that only those matching the input text are included.
 
 ```cshtml
 @using Syncfusion.Blazor
@@ -45,7 +45,7 @@ This example demonstrates how to filter data in the Syncfusion ListBox using a T
     {
         var inputValue = e.Value?.ToString() ?? string.Empty;
         var query = new Query().Where("Text", "contains", inputValue, true);
-        await ListBoxRef.FilterAsync(Vehicles, query);  // Use ListBoxRef here
+        await ListBoxRef.FilterAsync(Vehicles, query);
     }
     
 }
