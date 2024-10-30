@@ -260,7 +260,7 @@ The following table represents the response parameters of *rename* operations.
 
 |Parameter|Type|Default|Explanation|
 |----|----|----|----|
-|files|FileManagerDirectoryContent[]|-|Details of the renamed item.|
+|files|FileManagerDirectoryContent[ ]|-|Details of the renamed item.|
 |error|ErrorDetails|-|Error Details|
 
 *Refer [File request and response contents](#file-request-and-response-contents) for the contents of files and error*.
