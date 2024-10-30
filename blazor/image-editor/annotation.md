@@ -686,3 +686,43 @@ We provide default settings for stroke color, stroke width, fill color, and othe
 }
 ```
 ![Blazor Image Editor with Default Color](./images/blazor-image-editor-default-stroke-color.jpeg)
+
+## Show or hide the annotation option
+
+Using the [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_Toolbar) property of image editor component, we can hide or show the annotation options from annotation dropdown menu.
+
+```cshtml
+@using Syncfusion.Blazor.ImageEditor
+
+<SfImageEditor Height="400" Toolbar="CustomToolbarItem" @ref="ImageEditor">
+    <ImageEditorEvents Created="Created"></ImageEditorEvents>
+</SfImageEditor>
+
+@code {
+    private SfImageEditor ImageEditor;
+    private List<ImageEditorToolbarItemModel> CustomToolbarItem = new List<ImageEditorToolbarItemModel>
+    {
+        new ImageEditorToolbarItemModel { Name = "Open"},
+        new ImageEditorToolbarItemModel { Name = "Zoom"},
+        new ImageEditorToolbarItemModel { Name = "Crop"},
+        new ImageEditorToolbarItemModel { Name = "Annotation"},
+        new ImageEditorToolbarItemModel { Name = "Pen"},
+        new ImageEditorToolbarItemModel { Name = "Line"},
+        new ImageEditorToolbarItemModel { Name = "Ellipse"},
+        new ImageEditorToolbarItemModel { Name = "Path"},
+        new ImageEditorToolbarItemModel { Name = "Arrow"},
+        new ImageEditorToolbarItemModel { Name = "Finetune"},
+        new ImageEditorToolbarItemModel { Name = "Filter"},
+        new ImageEditorToolbarItemModel { Name = "Frame"},
+        new ImageEditorToolbarItemModel { Name = "Resize"},
+        new ImageEditorToolbarItemModel { Name = "Reset"},
+        new ImageEditorToolbarItemModel { Name = "Save"}
+    };
+    private async void Created()
+    {
+        await ImageEditor.OpenAsync("nature.png");
+    }
+}
+
+```
+![Blazor Image Editor with annotation option](./images/blazor-image-editor-annotation-option.png)
