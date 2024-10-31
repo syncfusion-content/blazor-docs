@@ -170,4 +170,4 @@ N> [View Sample in GitHub](https://github.com/syncfusion/smart-ai-samples).
 
 ## See also
 
-* [Getting Started with Syncfusion Blazor Smart TextArea in Blazor Web App](https://blazor.syncfusion.com/documentation/)
+* [Getting Started with Syncfusion Blazor Smart TextArea in Blazor Web App](https://blazor.syncfusion.com/documentation/introduction)
