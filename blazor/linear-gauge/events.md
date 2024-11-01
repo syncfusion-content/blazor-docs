@@ -95,7 +95,7 @@ The [OnDragEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGa
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge>
-    <LinearGaugeEvents OnDragStart="DragEnd"></LinearGaugeEvents>
+    <LinearGaugeEvents OnDragEnd="DragEnd"></LinearGaugeEvents>
     <LinearGaugeAxes>
         <LinearGaugeAxis>
             <LinearGaugePointers>
