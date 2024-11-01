@@ -404,7 +404,7 @@ The pointers are animated on loading the gauge using the [CircularGaugePointerAn
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
 
-<SfCircularGauge Height="250" Width="250">
+<SfCircularGauge Height="250px" Width="250px">
     <CircularGaugeAxes>
         <CircularGaugeAxis>
             <CircularGaugePointers>
