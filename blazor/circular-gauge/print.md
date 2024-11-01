@@ -27,7 +27,7 @@ To use the print functionality, you should set the [AllowPrint](https://help.syn
                                      Position="Position.Inside">
         </CircularGaugeAxisMinorTicks>
         <CircularGaugePointers>
-            <CircularGaugePointer Value="40"></CircularGaugePointer>
+            <CircularGaugePointer></CircularGaugePointer>
         </CircularGaugePointers>
       </CircularGaugeAxis>
     </CircularGaugeAxes>
