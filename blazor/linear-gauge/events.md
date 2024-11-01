@@ -27,7 +27,7 @@ Before the annotation is rendered in the Linear Gauge, the [AnnotationRendering]
     <LinearGaugeAxes>
         <LinearGaugeAxis>
             <LinearGaugePointers>
-                <LinearGaugePointer Value="40"></LinearGaugePointer>
+                <LinearGaugePointer PointerValue="40"></LinearGaugePointer>
             </LinearGaugePointers>
         </LinearGaugeAxis>
     </LinearGaugeAxes>
@@ -99,7 +99,7 @@ The [OnDragEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGa
     <LinearGaugeAxes>
         <LinearGaugeAxis>
             <LinearGaugePointers>
-                <LinearGaugePointer Value="40" EnableDrag="true"></LinearGaugePointer>
+                <LinearGaugePointer PointerValue="40" EnableDrag="true"></LinearGaugePointer>
             </LinearGaugePointers>
         </LinearGaugeAxis>
     </LinearGaugeAxes>
@@ -125,7 +125,7 @@ When the pointer drag begins, the [OnDragStart](https://help.syncfusion.com/cr/b
     <LinearGaugeAxes>
         <LinearGaugeAxis>
             <LinearGaugePointers>
-                <LinearGaugePointer Value="40" EnableDrag="true"></LinearGaugePointer>
+                <LinearGaugePointer PointerValue="40" EnableDrag="true"></LinearGaugePointer>
             </LinearGaugePointers>
         </LinearGaugeAxis>
     </LinearGaugeAxes>
@@ -300,7 +300,7 @@ The [TooltipRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.L
     <LinearGaugeAxes>
         <LinearGaugeAxis>
             <LinearGaugePointers>
-                <LinearGaugePointer Value="50"></LinearGaugePointer>
+                <LinearGaugePointer PointerValue="50"></LinearGaugePointer>
             </LinearGaugePointers>
         </LinearGaugeAxis>
     </LinearGaugeAxes>
