@@ -231,6 +231,7 @@ The `Http.GetJsonAsync` method is used in the  `OnInitializedAsync` life cycle m
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap
+@inject NavigationManager Navigation
 @inject HttpClient Http;
 
 @if (GrowthReports == null)
@@ -240,20 +241,19 @@ The `Http.GetJsonAsync` method is used in the  `OnInitializedAsync` life cycle m
 else
 {
     <SfTreeMap WeightValuePath="GDP" TValue="GDPReport" DataSource="GrowthReports">
-        <TreeMapLeafItemSettings LabelPath="State">
+        <TreeMapLeafItemSettings LabelPath="Country">
         </TreeMapLeafItemSettings>
     </SfTreeMap>
 }
 @code{
     public List<GDPReport> GrowthReports { get; set; }
-    protected override Task OnInitializedAsync()
+    protected async override Task OnInitializedAsync()
     {
-        GrowthReports = await Http.GetJsonAsync<List<GDPReport>>("sample-data/product-growth.json");
-        return base.OnInitializedAsync();
+         GrowthReports = await Http.GetFromJsonAsync<List<GDPReport>>(Navigation.ToAbsoluteUri("sample-data/product-growth.json"));
     }
     public class GDPReport
     {
-        public string State { get; set; }
+        public string Country { get; set; }
         public int GDP { get; set; }
         public double Percentage { get; set; }
         public int Rank { get; set; }
@@ -262,6 +262,8 @@ else
 ```
 
 ![Loading Blazor TreeMap Data from JSON File](images/Databinding/blazor-treemap-flat-data.png)
+
+N> Refer the data values for [product_growth](https://www.syncfusion.com/downloads/support/directtrac/general/ze/product-growth-360857189) here. 
 
 ## Remote data
 
