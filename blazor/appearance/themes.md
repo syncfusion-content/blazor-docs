@@ -32,6 +32,24 @@ The following list of themes are included in the Syncfusion Blazor components li
 
 The Syncfusion Blazor Bootstrap Theme is designed based on Bootstrap v3, whereas the Bootsrap4 theme is designed based on Bootstrap v4.
 
+## Optimized CSS files
+
+Syncfusion controls provide two size modes for each theme: **normal** and **bigger**. By default, the **normal size mode** is applied, offering a standard appearance that is suitable for all devices. The **bigger size mode** provides an enlarged interface for enhanced interactions, visibility, and an overall improved user experience by increasing the size of the UI controls.
+
+The bigger size mode is ideal when an enlarged appearance is needed, while the normal size mode works best for maintaining the default appearance of controls.
+
+Below is a comparison of the Button control in normal and bigger size modes:
+
+![bigger-sized-button](./images/bigger-theme-button.png)
+
+Each theme includes both normal and bigger size modes, which increases the overall file size. To optimize performance, Syncfusion offers additional theme files (e.g., `fluent2-lite.css`), which only include the normal size mode styles. This results in a significant reduction in file size, improving load times and overall application performance, especially when the bigger size mode is unnecessary.
+
+Refer to the comparison below for the default and optimized theme file sizes:
+
+| Theme Name | Default Theme Size | Optimized Theme Size |
+| -- | -- | -- |
+| Fluent 2 | 3.97 MB | 2.96 MB |
+
 ## Reference themes in Blazor application
 
 Syncfusion Blazor themes can be used in your Blazor application by referencing the style sheet.
@@ -78,12 +96,26 @@ When using individual NuGet packages in your application, add [Syncfusion.Blazor
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
 </head>
 ```
+To refer to optimized CSS files, use the following syntax: 
+
+ ```html
+<head>
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.lite.css" rel="stylesheet" />
+</head>
+```
 
 When using [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) NuGet package,
 
  ```html
 <head>
     <link href="_content/Syncfusion.Blazor/styles/bootstrap5.css" rel="stylesheet" />
+</head>
+```
+To reference optimized CSS files from [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) NuGet package, here's how to:
+
+ ```html
+<head>
+    <link href="_content/Syncfusion.Blazor/styles/bootstrap5.lite.css" rel="stylesheet" />
 </head>
 ```
 
@@ -96,6 +128,14 @@ Syncfusion Blazor Themes are available in the CDN. Make sure that the version in
  ```html
 <head>
     <link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5.css" rel="stylesheet"/>
+</head>
+```
+
+To refer to optimized CSS files, use the following syntax:
+
+```html
+<head>
+    <link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/<theme_name>-lite.css" rel="stylesheet"/>
 </head>
 ```
 
@@ -1000,7 +1040,6 @@ Starting from `v23.2.4`, customized `Material` and `Tailwind` themes are availab
     ....
     <link href="https://cdn.syncfusion.com/blazor/23.2.4/styles/customized/material.css" rel="stylesheet" />
 </head>
-```
 
 ## See also
 
