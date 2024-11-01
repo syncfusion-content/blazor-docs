@@ -165,8 +165,6 @@ Add label text to the leaf items in the TreeMap component by setting the field n
 {% endhighlight %}
 {% endtabs %}
 
-N> Refer to the [code block](#adding-treemap-component) to know about the property value of the **GrowthReport**.
-
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtBpXWUjTGrcfQex?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeMap with Label](images/blazor-treemap-with-label.png)" %}
 
 ## Adding title to Blazor TreeMap
@@ -205,8 +203,6 @@ Add a title using the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 
 {% endhighlight %}
 {% endtabs %}
-
-N> Refer to the [code block](#adding-treemap-component) to know the property value of the **GrowthReport**.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDVJNWgtfGUUNerG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeMap with Title](images/blazor-treemap-with-title.png)" %}
 
@@ -255,8 +251,6 @@ The color mapping supports customization of item colors based on the underlying 
 {% endhighlight %}
 {% endtabs %}
 
-N> Refer to the [code block](#adding-treemap-component) to know about the property value of the **GrowthReport**.
-
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZBpZWAjTGKvLKSK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeMap with Color Mapping](images/blazor-treemap-color-mapping.png)" %}
 
 ## Enable legend
@@ -302,8 +296,6 @@ Legend items are used to denote the color mapping categories and show the legend
 
 {% endhighlight %}
 {% endtabs %}
-
-N> Refer to the [code block](#adding-treemap-component) to know about the property value of the **GrowthReport**.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjBpDCqDJcJzjaSL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeMap with Legend](images/blazor-treemap-legend.png)" %}
 
@@ -351,8 +343,6 @@ When space constraints prevents from displaying information using data labels, t
 
 {% endhighlight %}
 {% endtabs %}
-
-N> Refer to the [code block](#adding-treemap-component) to know about the property value of the **GrowthReport**.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZBJXCUDJGTEuBNf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeMap with Tooltip](images/blazor-treemap-tooltip.png)" %}
 
