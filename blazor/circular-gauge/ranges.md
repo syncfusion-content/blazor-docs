@@ -252,7 +252,7 @@ To apply linear gradient to the range, follow the below code sample.
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
 
-<SfCircularGauge CenterY="57%" Title="Shot Put Distance" Height="750">
+<SfCircularGauge CenterY="57%" Title="Shot Put Distance">
     <CircularGaugeAxes>
         <CircularGaugeAxis StartAngle="200" EndAngle="130" Minimum="0" Maximum="14" Radius="80%">
             <CircularGaugeAxisLineStyle Width="0.001" />
@@ -262,27 +262,34 @@ To apply linear gradient to the range, follow the below code sample.
                 <CircularGaugeAxisLabelFont Size="0px" />
             </CircularGaugeAxisLabelStyle>
             <CircularGaugePointers>
-                <CircularGaugePointer Type="PointerType.Marker" Value="12" MarkerShape="GaugeShape.Image" ImageUrl="src/circular-gauge/images/football.png" Radius="100%" MarkerWidth="28" MarkerHeight="28">
-                    <CircularGaugePointerAnimation Enable="true" Duration="1500" />
+                <CircularGaugePointer Type="PointerType.Marker" Value="12" MarkerShape="GaugeShape.Image" 
+                ImageUrl="https://blazor.syncfusion.com/demos/_content/blazor_server_common_net8/images/circular-gauge/football.png" Radius="100%" MarkerWidth="28" MarkerHeight="28">
+                      <CircularGaugePointerAnimation Enable="true" Duration="1500" />
                 </CircularGaugePointer>
-                <CircularGaugePointer Type="PointerType.Marker" Value="11" MarkerShape="GaugeShape.Image" ImageUrl="src/circular-gauge/images/basketball.png" Radius="70%" MarkerWidth="28" MarkerHeight="28">
-                    <CircularGaugePointerAnimation Enable="true" Duration="1200" />
+                <CircularGaugePointer Type="PointerType.Marker" Value="11" MarkerShape="GaugeShape.Image" 
+                ImageUrl="https://blazor.syncfusion.com/demos/_content/blazor_server_common_net8/images/circular-gauge/basketball.png" Radius="70%" MarkerWidth="28" MarkerHeight="28">
+                     <CircularGaugePointerAnimation Enable="true" Duration="1200" />
                 </CircularGaugePointer>
-                <CircularGaugePointer Type="PointerType.Marker" Value="10" MarkerShape="GaugeShape.Image" ImageUrl="src/circular-gauge/images/golfball.png" Radius="40%" MarkerWidth="28" MarkerHeight="28">
+                <CircularGaugePointer Type="PointerType.Marker" Value="10" MarkerShape="GaugeShape.Image" 
+                ImageUrl="https://blazor.syncfusion.com/demos/_content/blazor_server_common_net8/images/circular-gauge/golf-ball.png" Radius="40%" MarkerWidth="28" MarkerHeight="28">
                     <CircularGaugePointerAnimation Enable="true" Duration="900" />
+               </CircularGaugePointer>
+               <CircularGaugePointer Type="PointerType.Marker" Value="12" MarkerShape="GaugeShape.Image" 
+                ImageUrl="https://blazor.syncfusion.com/demos/_content/blazor_server_common_net8/images/circular-gauge/athletics.png" Radius="0%" MarkerWidth="90" MarkerHeight="90">
+                   <CircularGaugePointerAnimation Enable="true" Duration="0" />
+               </CircularGaugePointer>
+               <CircularGaugePointer Type="PointerType.Marker" Value="0" MarkerShape="GaugeShape.Image" 
+                ImageUrl="https://blazor.syncfusion.com/demos/_content/blazor_server_common_net8/images/circular-gauge/girl1.png" Radius="100%" MarkerWidth="28" MarkerHeight="28">
+                   <CircularGaugePointerAnimation Enable="true" Duration="1500" />
                 </CircularGaugePointer>
-                <CircularGaugePointer Type="PointerType.Marker" Value="12" MarkerShape="GaugeShape.Image" ImageUrl="src/ircular-gauge/images/athletics.png" Radius="0%" MarkerWidth="90" MarkerHeight="90">
-                    <CircularGaugePointerAnimation Enable="true" Duration="0" />
-                </CircularGaugePointer>
-                <CircularGaugePointer Type="PointerType.Marker" Value="0" MarkerShape="GaugeShape.Image" ImageUrl="src/circular-gauge/images/girl1.png" Radius="100%" MarkerWidth="28" MarkerHeight="28">
+                <CircularGaugePointer Type="PointerType.Marker" Value="0" MarkerShape="GaugeShape.Image" 
+                ImageUrl="https://blazor.syncfusion.com/demos/_content/blazor_server_common_net8/images/circular-gauge/man1.png" Radius="70%" MarkerWidth="28" MarkerHeight="28">
+                   <CircularGaugePointerAnimation Enable="true" Duration="1500" />
+               </CircularGaugePointer>
+               <CircularGaugePointer Type="PointerType.Marker" Value="0" MarkerShape="GaugeShape.Image" 
+                ImageUrl="https://blazor.syncfusion.com/demos/_content/blazor_server_common_net8/images/circular-gauge/man2.png" Radius="40%" MarkerWidth="28" MarkerHeight="28">
                     <CircularGaugePointerAnimation Enable="true" Duration="1500" />
-                </CircularGaugePointer>
-                <CircularGaugePointer Type="PointerType.Marker" Value="0" MarkerShape="GaugeShape.Image" ImageUrl="src/circular-gauge/images/man1.png" Radius="70%" MarkerWidth="28" MarkerHeight="28">
-                    <CircularGaugePointerAnimation Enable="true" Duration="1500" />
-                </CircularGaugePointer>
-                <CircularGaugePointer Type="PointerType.Marker" Value="0" MarkerShape="GaugeShape.Image" ImageUrl="src/circular-gauge/images/man2.png" Radius="40%" MarkerWidth="28" MarkerHeight="28">
-                    <CircularGaugePointerAnimation Enable="true" Duration="1500" />
-                </CircularGaugePointer>
+               </CircularGaugePointer>
             </CircularGaugePointers>
             <CircularGaugeRanges>
                 <CircularGaugeRange Start="0" End="12" Radius="105%" Color="#01aebe" StartWidth="25" EndWidth="25">
@@ -311,20 +318,20 @@ To apply linear gradient to the range, follow the below code sample.
                 </CircularGaugeRange>
               </CircularGaugeRanges>
             <CircularGaugeAnnotations>
-                <CircularGaugeAnnotation Content="12 M" Radius="105%" Angle="95" ZIndex="1" />
-                <CircularGaugeAnnotation Content="11 M" Radius="77%" Angle="78" ZIndex="1" />
-                <CircularGaugeAnnotation Content="10 M" Radius="45%" Angle="65" ZIndex="1" />
-                <CircularGaugeAnnotation Radius="108%" Angle="190" ZIndex="1">
+                <CircularGaugeAnnotation Content="12 M" Radius="100%" Angle="97" ZIndex="1" />
+                <CircularGaugeAnnotation Content="11 M" Radius="72%" Angle="80" ZIndex="1" />
+                <CircularGaugeAnnotation Content="10 M" Radius="40%" Angle="68" ZIndex="1" />
+                <CircularGaugeAnnotation Radius="108%" Angle="185" ZIndex="1">
                     <ContentTemplate>
                         <div class="annotationText"><span class="templateAlign">Doe</span></div>
                     </ContentTemplate>
                 </CircularGaugeAnnotation>
-                <CircularGaugeAnnotation Radius="80%" Angle="185" ZIndex="1">
+                <CircularGaugeAnnotation Radius="80%" Angle="175" ZIndex="1">
                     <ContentTemplate>
                         <div class="annotationText"><span class="templateAlign">Almaida</span></div>
                     </ContentTemplate>
                 </CircularGaugeAnnotation>
-                <CircularGaugeAnnotation Radius="50%" Angle="180" ZIndex="1">
+                <CircularGaugeAnnotation Radius="50%" Angle="168" ZIndex="1">
                     <ContentTemplate>
                         <div class="annotationText"><span class="templateAlign">John</span></div>
                     </ContentTemplate>
@@ -367,25 +374,25 @@ To apply radial gradient to the range, follow the below code sample.
                 <CircularGaugeAxisLabelFont Size="0px" />
             </CircularGaugeAxisLabelStyle>
             <CircularGaugePointers>
-                <CircularGaugePointer Type="PointerType.Marker" Value="12" MarkerShape="GaugeShape.Image" ImageUrl="src/circular-gauge/images/football.png" Radius="100%" MarkerWidth="28" MarkerHeight="28">
+                <CircularGaugePointer Type="PointerType.Marker" Value="12" MarkerShape="GaugeShape.Image" ImageUrl="https://blazor.syncfusion.com/demos/_content/blazor_server_common_net8/images/circular-gauge/football.png" Radius="100%" MarkerWidth="28" MarkerHeight="28">
                     <CircularGaugePointerAnimation Enable="true" Duration="1500" />
                 </CircularGaugePointer>
-                <CircularGaugePointer Type="PointerType.Marker" Value="11" MarkerShape="GaugeShape.Image" ImageUrl="src/circular-gauge/images/basketball.png" Radius="70%" MarkerWidth="28" MarkerHeight="28">
+                <CircularGaugePointer Type="PointerType.Marker" Value="11" MarkerShape="GaugeShape.Image" ImageUrl="https://blazor.syncfusion.com/demos/_content/blazor_server_common_net8/images/circular-gauge/basketball.png" Radius="70%" MarkerWidth="28" MarkerHeight="28">
                     <CircularGaugePointerAnimation Enable="true" Duration="1200" />
                 </CircularGaugePointer>
-                <CircularGaugePointer Type="PointerType.Marker" Value="10" MarkerShape="GaugeShape.Image" ImageUrl="src/circular-gauge/cimages/golfball.png" Radius="40%" MarkerWidth="28" MarkerHeight="28">
+                <CircularGaugePointer Type="PointerType.Marker" Value="10" MarkerShape="GaugeShape.Image" ImageUrl="https://blazor.syncfusion.com/demos/_content/blazor_server_common_net8/images/circular-gauge/golfball.png" Radius="40%" MarkerWidth="28" MarkerHeight="28">
                     <CircularGaugePointerAnimation Enable="true" Duration="900" />
                 </CircularGaugePointer>
-                <CircularGaugePointer Type="PointerType.Marker" Value="12" MarkerShape="GaugeShape.Image" ImageUrl="src/ircular-gauge/images/athletics.png" Radius="0%" MarkerWidth="90" MarkerHeight="90">
+                <CircularGaugePointer Type="PointerType.Marker" Value="12" MarkerShape="GaugeShape.Image" ImageUrl="https://blazor.syncfusion.com/demos/_content/blazor_server_common_net8/images/circular-gauge/athletics.png" Radius="0%" MarkerWidth="90" MarkerHeight="90">
                     <CircularGaugePointerAnimation Enable="true" Duration="0" />
                 </CircularGaugePointer>
-                <CircularGaugePointer Type="PointerType.Marker" Value="0" MarkerShape="GaugeShape.Image" ImageUrl="src/circular-gauge/images/girl1.png" Radius="100%" MarkerWidth="28" MarkerHeight="28">
+                <CircularGaugePointer Type="PointerType.Marker" Value="0" MarkerShape="GaugeShape.Image" ImageUrl="https://blazor.syncfusion.com/demos/_content/blazor_server_common_net8/images/circular-gauge/girl1.png" Radius="100%" MarkerWidth="28" MarkerHeight="28">
                     <CircularGaugePointerAnimation Enable="true" Duration="1500" />
                 </CircularGaugePointer>
-                <CircularGaugePointer Type="PointerType.Marker" Value="0" MarkerShape="GaugeShape.Image" ImageUrl="src/circular-gauge/images/man1.png" Radius="70%" MarkerWidth="28" MarkerHeight="28">
+                <CircularGaugePointer Type="PointerType.Marker" Value="0" MarkerShape="GaugeShape.Image" ImageUrl="https://blazor.syncfusion.com/demos/_content/blazor_server_common_net8/images/circular-gauge/man1.png" Radius="70%" MarkerWidth="28" MarkerHeight="28">
                     <CircularGaugePointerAnimation Enable="true" Duration="1500" />
                 </CircularGaugePointer>
-                <CircularGaugePointer Type="PointerType.Marker" Value="0" MarkerShape="GaugeShape.Image" ImageUrl="src/circular-gauge/images/man2.png" Radius="40%" MarkerWidth="28" MarkerHeight="28">
+                <CircularGaugePointer Type="PointerType.Marker" Value="0" MarkerShape="GaugeShape.Image" ImageUrl="https://blazor.syncfusion.com/demos/_content/blazor_server_common_net8/images/circular-gauge/man2.png" Radius="40%" MarkerWidth="28" MarkerHeight="28">
                     <CircularGaugePointerAnimation Enable="true" Duration="1500" />
                 </CircularGaugePointer>
             </CircularGaugePointers>
@@ -422,20 +429,20 @@ To apply radial gradient to the range, follow the below code sample.
                 </CircularGaugeRange>
             </CircularGaugeRanges>
             <CircularGaugeAnnotations>
-                <CircularGaugeAnnotation Content="12 M" Radius="105%" Angle="95" ZIndex="1" />
-                <CircularGaugeAnnotation Content="11 M" Radius="77%" Angle="78" ZIndex="1" />
-                <CircularGaugeAnnotation Content="10 M" Radius="45%" Angle="65" ZIndex="1" />
-                <CircularGaugeAnnotation Radius="108%" Angle="190" ZIndex="1">
+                <CircularGaugeAnnotation Content="12 M" Radius="100%" Angle="97" ZIndex="1" />
+                <CircularGaugeAnnotation Content="11 M" Radius="72%" Angle="80" ZIndex="1" />
+                <CircularGaugeAnnotation Content="10 M" Radius="40%" Angle="68" ZIndex="1" />
+                <CircularGaugeAnnotation Radius="108%" Angle="185" ZIndex="1">
                     <ContentTemplate>
                         <div class="annotationText"><span class="templateAlign">Doe</span></div>
                     </ContentTemplate>
                 </CircularGaugeAnnotation>
-                <CircularGaugeAnnotation Radius="80%" Angle="185" ZIndex="1">
+                <CircularGaugeAnnotation Radius="80%" Angle="175" ZIndex="1">
                     <ContentTemplate>
                         <div class="annotationText"><span class="templateAlign">Almaida</span></div>
                     </ContentTemplate>
                 </CircularGaugeAnnotation>
-                <CircularGaugeAnnotation Radius="50%" Angle="180" ZIndex="1">
+                <CircularGaugeAnnotation Radius="50%" Angle="168" ZIndex="1">
                     <ContentTemplate>
                         <div class="annotationText"><span class="templateAlign">John</span></div>
                     </ContentTemplate>
