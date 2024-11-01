@@ -142,28 +142,10 @@ Add label text to the leaf items in the TreeMap component by setting the field n
     <TreeMapLeafItemSettings LabelPath="Name" Fill="lightgray"></TreeMapLeafItemSettings>
 </SfTreeMap>
 
-@code {
-    public class Country
-    {
-        public string Name { get; set; }
-        public double GDP { get; set; }
-    }
-    public List<Country> GrowthReport = new List<Country> {
-        new Country  {Name="United States", GDP=17946 },
-        new Country  {Name="China", GDP=10866 },
-        new Country  {Name="Japan", GDP=4123 },
-        new Country  {Name="Germany", GDP=3355 },
-        new Country  {Name="United Kingdom", GDP=2848 },
-        new Country  {Name="France", GDP=2421 },
-        new Country  {Name="India", GDP=2073 },
-        new Country  {Name="Italy", GDP=1814 },
-        new Country  {Name="Brazil", GDP=1774 },
-        new Country  {Name="Canada", GDP=1550 }
-    };
-}
-
 {% endhighlight %}
 {% endtabs %}
+
+N> Refer to the [code block](#adding-treemap-component) to know about the property value of the **GrowthReport**.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtBpXWUjTGrcfQex?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeMap with Label](images/blazor-treemap-with-label.png)" %}
 
@@ -181,28 +163,10 @@ Add a title using the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
     <TreeMapLeafItemSettings LabelPath="Name" Fill="lightgray"></TreeMapLeafItemSettings>
 </SfTreeMap>
 
-@code {
-    public class Country
-    {
-        public string Name { get; set; }
-        public double GDP { get; set; }
-    }
-    public List<Country> GrowthReport = new List<Country> {
-        new Country  {Name="United States", GDP=17946 },
-        new Country  {Name="China", GDP=10866 },
-        new Country  {Name="Japan", GDP=4123 },
-        new Country  {Name="Germany", GDP=3355 },
-        new Country  {Name="United Kingdom", GDP=2848 },
-        new Country  {Name="France", GDP=2421 },
-        new Country  {Name="India", GDP=2073 },
-        new Country  {Name="Italy", GDP=1814 },
-        new Country  {Name="Brazil", GDP=1774 },
-        new Country  {Name="Canada", GDP=1550 }
-    };
-}
-
 {% endhighlight %}
 {% endtabs %}
+
+N> Refer to the [code block](#adding-treemap-component) to know about the property value of the **GrowthReport**.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDVJNWgtfGUUNerG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeMap with Title](images/blazor-treemap-with-title.png)" %}
 
@@ -228,28 +192,10 @@ The color mapping supports customization of item colors based on the underlying 
     </TreeMapLeafItemSettings>
 </SfTreeMap>
 
-@code {
-    public class Country
-    {
-        public string Name { get; set; }
-        public double GDP { get; set; }
-    }
-    public List<Country> GrowthReport = new List<Country> {
-        new Country  {Name="United States", GDP=17946 },
-        new Country  {Name="China", GDP=10866 },
-        new Country  {Name="Japan", GDP=4123 },
-        new Country  {Name="Germany", GDP=3355 },
-        new Country  {Name="United Kingdom", GDP=2848 },
-        new Country  {Name="France", GDP=2421 },
-        new Country  {Name="India", GDP=2073 },
-        new Country  {Name="Italy", GDP=1814 },
-        new Country  {Name="Brazil", GDP=1774 },
-        new Country  {Name="Canada", GDP=1550 }
-    };
-}
-
 {% endhighlight %}
 {% endtabs %}
+
+N> Refer to the [code block](#adding-treemap-component) to know about the property value of the **GrowthReport**.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZBpZWAjTGKvLKSK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeMap with Color Mapping](images/blazor-treemap-color-mapping.png)" %}
 
@@ -274,28 +220,10 @@ Legend items are used to denote the color mapping categories and show the legend
     <TreeMapLegendSettings Visible="true"></TreeMapLegendSettings>
 </SfTreeMap>
 
-@code {
-    public class Country
-    {
-        public string Name { get; set; }
-        public double GDP { get; set; }
-    }
-    public List<Country> GrowthReport = new List<Country> {
-        new Country  {Name="United States", GDP=17946 },
-        new Country  {Name="China", GDP=10866 },
-        new Country  {Name="Japan", GDP=4123 },
-        new Country  {Name="Germany", GDP=3355 },
-        new Country  {Name="United Kingdom", GDP=2848 },
-        new Country  {Name="France", GDP=2421 },
-        new Country  {Name="India", GDP=2073 },
-        new Country  {Name="Italy", GDP=1814 },
-        new Country  {Name="Brazil", GDP=1774 },
-        new Country  {Name="Canada", GDP=1550 }
-    };
-}
-
 {% endhighlight %}
 {% endtabs %}
+
+N> Refer to the [code block](#adding-treemap-component) to know about the property value of the **GrowthReport**.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjBpDCqDJcJzjaSL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeMap with Legend](images/blazor-treemap-legend.png)" %}
 
@@ -321,28 +249,10 @@ When space constraints prevents from displaying information using data labels, t
     <TreeMapTooltipSettings Visible="true"></TreeMapTooltipSettings>
 </SfTreeMap>
 
-@code {
-    public class Country
-    {
-        public string Name { get; set; }
-        public double GDP { get; set; }
-    }
-    public List<Country> GrowthReport = new List<Country> {
-        new Country  {Name="United States", GDP=17946 },
-        new Country  {Name="China", GDP=10866 },
-        new Country  {Name="Japan", GDP=4123 },
-        new Country  {Name="Germany", GDP=3355 },
-        new Country  {Name="United Kingdom", GDP=2848 },
-        new Country  {Name="France", GDP=2421 },
-        new Country  {Name="India", GDP=2073 },
-        new Country  {Name="Italy", GDP=1814 },
-        new Country  {Name="Brazil", GDP=1774 },
-        new Country  {Name="Canada", GDP=1550 }
-    };
-}
-
 {% endhighlight %}
 {% endtabs %}
+
+N> Refer to the [code block](#adding-treemap-component) to know about the property value of the **GrowthReport**.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZBJXCUDJGTEuBNf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeMap with Tooltip](images/blazor-treemap-tooltip.png)" %}
 
