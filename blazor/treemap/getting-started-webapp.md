@@ -142,6 +142,26 @@ Add label text to the leaf items in the TreeMap component by setting the field n
     <TreeMapLeafItemSettings LabelPath="Name" Fill="lightgray"></TreeMapLeafItemSettings>
 </SfTreeMap>
 
+@code {
+    public class Country
+    {
+        public string Name { get; set; }
+        public double GDP { get; set; }
+    }
+    public List<Country> GrowthReport = new List<Country> {
+        new Country  {Name="United States", GDP=17946 },
+        new Country  {Name="China", GDP=10866 },
+        new Country  {Name="Japan", GDP=4123 },
+        new Country  {Name="Germany", GDP=3355 },
+        new Country  {Name="United Kingdom", GDP=2848 },
+        new Country  {Name="France", GDP=2421 },
+        new Country  {Name="India", GDP=2073 },
+        new Country  {Name="Italy", GDP=1814 },
+        new Country  {Name="Brazil", GDP=1774 },
+        new Country  {Name="Canada", GDP=1550 }
+    };
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -162,6 +182,26 @@ Add a title using the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
     <TreeMapTitleSettings Text="Top 10 countries by GDP Nominal - 2015"></TreeMapTitleSettings>
     <TreeMapLeafItemSettings LabelPath="Name" Fill="lightgray"></TreeMapLeafItemSettings>
 </SfTreeMap>
+
+@code {
+    public class Country
+    {
+        public string Name { get; set; }
+        public double GDP { get; set; }
+    }
+    public List<Country> GrowthReport = new List<Country> {
+        new Country  {Name="United States", GDP=17946 },
+        new Country  {Name="China", GDP=10866 },
+        new Country  {Name="Japan", GDP=4123 },
+        new Country  {Name="Germany", GDP=3355 },
+        new Country  {Name="United Kingdom", GDP=2848 },
+        new Country  {Name="France", GDP=2421 },
+        new Country  {Name="India", GDP=2073 },
+        new Country  {Name="Italy", GDP=1814 },
+        new Country  {Name="Brazil", GDP=1774 },
+        new Country  {Name="Canada", GDP=1550 }
+    };
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -192,6 +232,26 @@ The color mapping supports customization of item colors based on the underlying 
     </TreeMapLeafItemSettings>
 </SfTreeMap>
 
+@code {
+    public class Country
+    {
+        public string Name { get; set; }
+        public double GDP { get; set; }
+    }
+    public List<Country> GrowthReport = new List<Country> {
+        new Country  {Name="United States", GDP=17946 },
+        new Country  {Name="China", GDP=10866 },
+        new Country  {Name="Japan", GDP=4123 },
+        new Country  {Name="Germany", GDP=3355 },
+        new Country  {Name="United Kingdom", GDP=2848 },
+        new Country  {Name="France", GDP=2421 },
+        new Country  {Name="India", GDP=2073 },
+        new Country  {Name="Italy", GDP=1814 },
+        new Country  {Name="Brazil", GDP=1774 },
+        new Country  {Name="Canada", GDP=1550 }
+    };
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -219,6 +279,26 @@ Legend items are used to denote the color mapping categories and show the legend
     </TreeMapLeafItemSettings>
     <TreeMapLegendSettings Visible="true"></TreeMapLegendSettings>
 </SfTreeMap>
+
+@code {
+    public class Country
+    {
+        public string Name { get; set; }
+        public double GDP { get; set; }
+    }
+    public List<Country> GrowthReport = new List<Country> {
+        new Country  {Name="United States", GDP=17946 },
+        new Country  {Name="China", GDP=10866 },
+        new Country  {Name="Japan", GDP=4123 },
+        new Country  {Name="Germany", GDP=3355 },
+        new Country  {Name="United Kingdom", GDP=2848 },
+        new Country  {Name="France", GDP=2421 },
+        new Country  {Name="India", GDP=2073 },
+        new Country  {Name="Italy", GDP=1814 },
+        new Country  {Name="Brazil", GDP=1774 },
+        new Country  {Name="Canada", GDP=1550 }
+    };
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -248,6 +328,26 @@ When space constraints prevents from displaying information using data labels, t
     <TreeMapLegendSettings Visible="true"></TreeMapLegendSettings>
     <TreeMapTooltipSettings Visible="true"></TreeMapTooltipSettings>
 </SfTreeMap>
+
+@code {
+    public class Country
+    {
+        public string Name { get; set; }
+        public double GDP { get; set; }
+    }
+    public List<Country> GrowthReport = new List<Country> {
+        new Country  {Name="United States", GDP=17946 },
+        new Country  {Name="China", GDP=10866 },
+        new Country  {Name="Japan", GDP=4123 },
+        new Country  {Name="Germany", GDP=3355 },
+        new Country  {Name="United Kingdom", GDP=2848 },
+        new Country  {Name="France", GDP=2421 },
+        new Country  {Name="India", GDP=2073 },
+        new Country  {Name="Italy", GDP=1814 },
+        new Country  {Name="Brazil", GDP=1774 },
+        new Country  {Name="Canada", GDP=1550 }
+    };
+}
 
 {% endhighlight %}
 {% endtabs %}
