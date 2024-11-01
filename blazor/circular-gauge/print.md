@@ -18,6 +18,19 @@ To use the print functionality, you should set the [AllowPrint](https://help.syn
 
 <button @onclick="PrintGauge">Print</button>
 <SfCircularGauge @ref="Gauge" AllowPrint="true">
+   <CircularGaugeAxes>
+      <CircularGaugeAxis>
+        <CircularGaugeAxisMajorTicks Height="10" Width="3"
+                                     Position="Position.Inside">
+        </CircularGaugeAxisMajorTicks>
+        <CircularGaugeAxisMinorTicks Height="5" Width="2"
+                                     Position="Position.Inside">
+        </CircularGaugeAxisMinorTicks>
+        <CircularGaugePointers>
+            <CircularGaugePointer Value="40"></CircularGaugePointer>
+        </CircularGaugePointers>
+      </CircularGaugeAxis>
+    </CircularGaugeAxes>
 </SfCircularGauge>
 
 @code {
