@@ -204,7 +204,7 @@ The following properties and classes are available in legend to customize the le
     </MapsLegendSettings>
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}' ShapeDataPath="Country"
-                   DataSource="MemberShipDetails" ShapePropertyPath='new string[] {"name"}' TValue="UNCouncilCountry">
+                   DataSource="MemberShipDetails" ShapePropertyPath='new string[] {"name"}' TValue="UNCouncil">
             <MapsShapeSettings ColorValuePath="Membership">
                 <MapsShapeColorMappings>
                     <MapsShapeColorMapping Value="Permanent" Color='new string[] {"#D84444"}' />
