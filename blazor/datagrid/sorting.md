@@ -11,6 +11,10 @@ documentation: ug
 
 The DataGrid component provides built-in support for sorting data-bound columns in ascending or descending order. To enable sorting in the Datagrid, set the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property to **true**.
 
+To know about how to **Sorting** in Blazor DataGrid Component, you can check this video.
+
+{% youtube "youtube:https://www.youtube.com/watch?v=P3VO_vd0Ev0" %}
+
 To sort a particular column in the DataGrid, click on its column header. Each time you click the header, the order of the column will switch between **Ascending** and **Descending**.
 
 {% tabs %}
@@ -1242,4 +1246,4 @@ The following example demonstrates how the `Sorting` and `Sorted` events work wh
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDhzNWNzLolkmHqw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
-> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
+> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand how to present and manipulate data.
