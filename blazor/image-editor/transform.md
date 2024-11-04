@@ -198,6 +198,30 @@ Here is an example of specifying [`MinZoomFactor`](https://help.syncfusion.com/c
 
 ![Blazor Image Editor with Zoom](./images/blazor-image-editor-zoom.jpg)
 
+### Enable the specific types of zooming
+
+Using the [`ZoomTrigger`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorZoomSettings.html#Syncfusion_Blazor_ImageEditor_ImageEditorZoomSettings_ZoomTrigger) property of [`ImageEditorZoomSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorZoomSettings.html), we can set the specific type of zoom actions like Pinch, Mouse Wheel, Commands and Toolbar options.
+
+```cshtml
+@using Syncfusion.Blazor.ImageEditor
+
+<SfImageEditor @ref="ImageEditor" Height="450">
+    <ImageEditorEvents Created="Created"></ImageEditorEvents>
+    <ImageEditorZoomSettings MinZoomFactor="0.1" MaxZoomFactor="50" ZoomTrigger="ZoomTrigger.MouseWheel"></ImageEditorZoomSettings>
+</SfImageEditor>
+
+@code {
+    SfImageEditor ImageEditor;
+
+    private async void Created()
+    {
+        await ImageEditor.OpenAsync("bridge.png");
+    }
+}
+
+```
+![Blazor Image Editor with ZoomWheel](./images/blazor-image-editor-zoomwheel.png)
+
 ## Panning an image
 
 The Blazor Image Editor allows to pan an image when the image exceeds the canvas size or selection range. When zooming in on an image or applying a selection for cropping, it is common for the image to exceed the size of the canvas or exceed the selection range. So, the panning is used to view the entire image, by clicking on the canvas and dragging it in the direction they want to move.
