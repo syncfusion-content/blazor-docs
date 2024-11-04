@@ -451,7 +451,7 @@ To hide the duplicate legend items in Maps, set the [RemoveDuplicateLegend](http
         new PopulationDetail
         {
             Name = "United States", Population = 325020000, Density = 33, Color = "yellow"
-        }
+        },
         new PopulationDetail
         {
             Name = "India", Population = 1198003000, Density = 364, Color = "blue"
