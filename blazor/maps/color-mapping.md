@@ -207,7 +207,7 @@ The color mapping types such as range color mapping, equal color mapping and des
 ```cshtml
 @using Syncfusion.Blazor.Maps
 
-<SfMaps Height="600" Width="400">
+<SfMaps>
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
 		        ShapeDataPath="Name" ShapePropertyPath='new string[] {"name"}' TValue="BubbleData">
