@@ -200,14 +200,14 @@ Here is an example of specifying [`MinZoomFactor`](https://help.syncfusion.com/c
 
 ### Enable the specific types of zooming
 
-Using the [`ZoomTrigger`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorZoomSettings.html#Syncfusion_Blazor_ImageEditor_ImageEditorZoomSettings_ZoomTrigger) property of [`ImageEditorZoomSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorZoomSettings.html), we can set the specific type of zoom actions like Pinch, Mouse Wheel, Commands and Toolbar options.
+Using the [`ZoomTrigger`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorZoomSettings.html#Syncfusion_Blazor_ImageEditor_ImageEditorZoomSettings_ZoomTrigger) property of [`ImageEditorZoomSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorZoomSettings.html), We can set one or more specific types of zoom actions like pinch, mouse wheel, commands, and toolbar options.
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
 
 <SfImageEditor @ref="ImageEditor" Height="450">
     <ImageEditorEvents Created="Created"></ImageEditorEvents>
-    <ImageEditorZoomSettings MinZoomFactor="0.1" MaxZoomFactor="50" ZoomTrigger="ZoomTrigger.MouseWheel"></ImageEditorZoomSettings>
+    <ImageEditorZoomSettings MinZoomFactor="0.1" MaxZoomFactor="50" ZoomTrigger="ZoomTrigger.Pinch | ZoomTrigger.MouseWheel"></ImageEditorZoomSettings>
 </SfImageEditor>
 
 @code {
