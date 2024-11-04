@@ -39,7 +39,7 @@ In the following example, the value of [LabelPath](https://help.syncfusion.com/c
 <SfMaps ID="Maps">
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="PopulationDetail"
-                   DataSource="PopulationDetailss" ShapeDataPath="@ShapeDataPath" ShapePropertyPath="@ShapePropertyPath">
+                   DataSource="PopulationDetails" ShapeDataPath="@ShapeDataPath" ShapePropertyPath="@ShapePropertyPath">
             @* To add data labels *@
             <MapsDataLabelSettings Visible="true" LabelPath="Continent"></MapsDataLabelSettings>
             <MapsShapeSettings Autofill="true"></MapsShapeSettings>
@@ -58,7 +58,7 @@ In the following example, the value of [LabelPath](https://help.syncfusion.com/c
         public string Color { get; set; }
         public string Continent { get; set; }
     };
-    public List<PopulationDetail> PopulationDetailss = new List<PopulationDetail> {
+    public List<PopulationDetail> PopulationDetails = new List<PopulationDetail> {
         new PopulationDetail {
             Code = "AF", Value= 53, Name= "Afghanistan", Population= 29863010, Density= 119, Color = "Red", Continent = "Asia"
         },
@@ -182,22 +182,27 @@ The data label can be added as a template in the Maps component. The [LabelTempl
 
 N>The customization properties of data label, [SmartLabelMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_SmartLabelMode), [AnimationDuration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_AnimationDuration) and [IntersectionAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_IntersectionAction) properties are not applicable to [LabelTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_LabelTemplate) property. The styles can be applied to the label template using the CSS styles of the template element.
 
+The following example shows how to add a label template with the data source **PopulationDetails** that is available in the adding data labels from a data source section.
+
 ```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/usa.json"}' TValue="string">
-            @* To trim intersect labels *@
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="PopulationDetail"
+                   DataSource="PopulationDetails" ShapeDataPath="@ShapeDataPath" ShapePropertyPath="@ShapePropertyPath">
             <MapsDataLabelSettings Visible="true">
                 <LabelTemplate>
-                    @{ <p>Label</p> }
+                    @{
+                        var Data = context as PopulationDetail;
+                        <div style="width:50px; height:20px;border: 2px solid black; text-align:center;">
+                            <p style="color:red; font-size:12px;">@Data.Continent</p>
+                        </div>
+                    }
                 </LabelTemplate>
             </MapsDataLabelSettings>
-            <MapsShapeSettings Autofill="true"></MapsShapeSettings>
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
 ```
-
 ![Blazor Maps with Data Label Template](./images/DataLabel/blazor-maps-data-label-template.PNG)
