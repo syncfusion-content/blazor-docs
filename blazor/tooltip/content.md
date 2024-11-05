@@ -64,7 +64,14 @@ Refer to the following code example to embed an HTML template within the Tooltip
                 <h3 style='margin-top:10px'>Eastern Bluebird <hr style='margin-top:10px'></h3>
                 <div style='margin-top: -10px'>
                     <div style='float:left;width:57%'>
-                        The<a href='https://en.wikipedia.org/wiki/Eastern_bluebird' target='blank'> Eastern Bluebird</a> is easily found in open fields and sparse woodland areas, including along woodland edges.These are<i>cavity-nesting birds</i>and a pair of eastern bluebirds will raise 2-3 broods annually, with 2-8 light blue or whitish eggs per brood.
+                        The
+                            <a href='https://en.wikipedia.org/wiki/Eastern_bluebird' target='blank'> Eastern Bluebird
+                            </a> 
+                                is easily found in open fields and sparse woodland areas, including along woodland edges.These are
+                            <i>
+                                cavity-nesting birds
+                            </i>
+                        and a pair of eastern bluebirds will raise 2-3 broods annually, with 2-8 light blue or whitish eggs per brood.
                     </div>
                     <div id='bird' style='float:right;width:42%'><img src='https://blazor.syncfusion.com/demos/_content/blazor_webapp_common_net8/images/tooltip/bird.png' width='125' height='125' /></div>
                 </div>
