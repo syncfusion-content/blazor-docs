@@ -340,6 +340,7 @@ The following demo shows how to change the default frozen line color.
 }
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVJXsXSLrGWRalt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Limitations
 
