@@ -368,7 +368,7 @@ In the below example, we will demonstrate how to dynamically change the height o
     private void ChangeRowHeight(int height)
     {
         RowHeight = height;
-        Grid.Refresh(); // Refresh the grid to apply the new row height
+        Grid.Refresh(); // Refresh the grid to apply the new row height.
     }
 }
 
