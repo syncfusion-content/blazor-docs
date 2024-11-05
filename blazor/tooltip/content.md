@@ -73,11 +73,18 @@ Refer to the following code example to embed an HTML template within the Tooltip
                             </i>
                         and a pair of eastern bluebirds will raise 2-3 broods annually, with 2-8 light blue or whitish eggs per brood.
                     </div>
-                    <div id='bird' style='float:right;width:42%'><img src='https://blazor.syncfusion.com/demos/_content/blazor_webapp_common_net8/images/tooltip/bird.png' width='125' height='125' /></div>
+                    <div id='bird' style='float:right;width:42%'>
+                        <img src='https://blazor.syncfusion.com/demos/_content/blazor_webapp_common_net8/images/tooltip/bird.png' width='125' height='125' />
+                    </div>
                 </div>
                 <div style='margin-top:160px'>
-                    <hr><p style='margin-top:-11px'> Eastern bluebirds can be very vocal in flocks.Their calls include a rapid, mid-tone chatter and several long dropping pitch calls.</p>
-                </div><p>Source:<br /><a href='https://en.wikipedia.org/wiki/Eastern_bluebird' target='_blank'>https://en.wikipedia.org/wiki/Eastern_bluebird</a></p>
+                    <hr>
+                    <p style='margin-top:-11px'> Eastern bluebirds can be very vocal in flocks.Their calls include a rapid,  mid-tone chatter and several long dropping pitch calls.
+                    </p>
+                </div>
+                    <p>Source:<br />
+                        <a href='https://en.wikipedia.org/wiki/Eastern_bluebird' target='_blank'>https://en.wikipedia.org/wiki/Eastern_bluebird</a>
+                    </p>
             </div>
         </div>
     </ContentTemplate>
