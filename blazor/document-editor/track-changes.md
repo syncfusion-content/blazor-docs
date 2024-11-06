@@ -20,6 +20,31 @@ The following example demonstrates how to enable track changes.
 </SfDocumentEditorContainer>
 ```
 
+## Show/Hide Revisions Pane
+ 
+The Show/Hide Revisions Pane feature in the Document Editor allows users to toggle the visibility of the revisions pane, providing flexibility in managing tracked changes within the document.
+ 
+The following example code illustrates how to show/hide the revisions pane.
+
+```typescript
+
+@using Syncfusion.Blazor.DocumentEditor
+<SfDocumentEditorContainer @ref="container" EnableToolbar=true EnableTrackChanges=true>
+    <DocumentEditorContainerEvents Created="OnLoad"></DocumentEditorContainerEvents>
+</SfDocumentEditorContainer>
+
+@code {
+    SfDocumentEditorContainer container;
+    public async void OnLoad(object args)
+    {
+        container.DocumentEditor.ShowRevisions=true; // To show revisions pane
+        container.DocumentEditor.ShowRevisions=false; // To hide revisions pane
+    }
+}
+
+```
+
+
 ## Navigate between the tracked changes
 
 The following example demonstrates how to navigate tracked revision programmatically.
@@ -28,12 +53,12 @@ The following example demonstrates how to navigate tracked revision programmatic
 /**
  * Navigate to next tracked change from the current selection.
  */
-container.DocumentEditor.Selection.NavigateNextRevisionAsync();
+await container.DocumentEditor.Selection.NavigateNextRevisionAsync();
 
 /**
  * Navigate to previous tracked change from the current selection.
  */
-container.DocumentEditor.Selection.NavigatePreviousRevisionAsync();
+await container.DocumentEditor.Selection.NavigatePreviousRevisionAsync();
 ```
 
 ## Filtering changes based on user
@@ -58,12 +83,12 @@ The following example code illustrates how to enforce and stop protection in Doc
 
 @code {
     SfDocumentEditorContainer container;
-    protected void protectDocument(object args)
+    protected async void protectDocument(object args)
     {
         //enforce protection
-        container.DocumentEditor.Editor.EnforceProtectionAsync("123", ProtectionType.RevisionsOnly);
+        await container.DocumentEditor.Editor.EnforceProtectionAsync("123", ProtectionType.RevisionsOnly);
         //stop the document protection
-        container.DocumentEditor.Editor.StopProtectionAsync("123");
+        await container.DocumentEditor.Editor.StopProtectionAsync("123");
     }
 }
 ```

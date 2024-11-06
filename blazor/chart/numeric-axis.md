@@ -405,6 +405,56 @@ The table below shows the results of applying various commonly used label format
 </tr>
 </table>
 
+## GroupingSeparator
+
+To separate groups of thousands for numerical values, use the [UseGroupingSeparator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_UseGroupingSeparator) property set to true in the chart to enable it. When this property is enabled, axis labels, data labels, and tooltips will display with a thousand separator.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfChart UseGroupingSeparator="true">
+    <ChartArea><ChartAreaBorder Width="0" /></ChartArea>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTimeCategory" LabelFormat="MMM yyyy" IntervalType="Syncfusion.Blazor.Charts.IntervalType.Months" EdgeLabelPlacement="EdgeLabelPlacement.Shift">
+        <ChartAxisMajorGridLines Width="0" />
+    </ChartPrimaryXAxis>
+    <ChartPrimaryYAxis>
+        <ChartAxisLineStyle Width="0" />
+        <ChartAxisMajorTickLines Width="0" />
+    </ChartPrimaryYAxis>
+    <ChartTooltipSettings Enable="true" />
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@Data" Name="Test" XName="PrdDate" Width="2" YName="Amount" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Line">
+            <ChartMarker Visible="true">
+                <ChartDataLabel Visible="true" />
+            </ChartMarker>
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code {
+    public class ChartData
+    {
+        public DateTime PrdDate { get; set; }
+        public double Amount { get; set; }
+    }
+    public List<ChartData> Data = new List<ChartData>
+    {
+        new ChartData { PrdDate = new DateTime(2021,01,01), Amount = 1000 },
+        new ChartData { PrdDate = new DateTime(2021,02,01), Amount = 4000 },
+        new ChartData { PrdDate = new DateTime(2021,03,01), Amount = 5000 },
+        new ChartData { PrdDate = new DateTime(2021,04,01), Amount = 6000 },
+        new ChartData { PrdDate = new DateTime(2021,05,01), Amount = 2000 },
+        new ChartData { PrdDate = new DateTime(2021,06,01), Amount = 3000 },
+        new ChartData { PrdDate = new DateTime(2021,07,01), Amount = 8000 },
+    };
+}
+
+```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBJZqLnepVFKTog?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+![Grouping Separator in Blazor Line Chart](images/numeric-axis/blazor-line-chart-grouping-separator.png)
+
 ## Custom label format
 
 Axis also supports custom label format using placeholders such as {value}K, where the value represents the axis label, for example, 20K.

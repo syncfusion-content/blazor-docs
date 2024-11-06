@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Working with Data in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about Working with Data in Syncfusion Blazor Charts component and much more.
+description: Checkout and learn here all about working with data in Syncfusion Blazor Charts component, it's elements and more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -195,7 +195,7 @@ The [WebApiAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <SfDataManager Url="https://ej2services.syncfusion.com/production/web-services/api/Orders" Adaptor="Adaptors.WebApiAdaptor"></SfDataManager>
+    <SfDataManager Url="https://blazor.syncfusion.com/services/production/api/Orders" Adaptor="Adaptors.WebApiAdaptor"></SfDataManager>
 
     <ChartPrimaryXAxis Title="Orders" ValueType="Syncfusion.Blazor.Charts.ValueType.Category"
                        ></ChartPrimaryXAxis>

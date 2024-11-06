@@ -48,21 +48,21 @@ Add the Syncfusion PDF Viewer (Next Gen) component in the **~/Pages/Index.razor*
 {% endhighlight %}
 {% endtabs %}
 
-N> When developing a Blazor Android MAUI application, passing the `DocumentPath` to the PDF Viewer (Next Gen) component as a `base64 string` is needed. This ensures that the application can retrieve and render a PDF document correctly within the PDF Viewer (Next Gen) component.
+N> When developing a Blazor Android MAUI application, passing the [DocumentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DocumentPath) to the PDF Viewer (Next Gen) component as a `base64 string` is needed. This ensures that the application can retrieve and render a PDF document correctly within the PDF Viewer (Next Gen) component.
 
 ## Run on Android emulator
 
 To run the PDF Viewer (Next Gen) in a Blazor Android MAUI application using the Android emulator, follow these steps:
 
-![Run Windows machine](../getting-started/GettingStarted_images/emulator_maui.png)
+![Run Windows machine](../getting-started/gettingstarted-images/emulator_maui.png)
 
 **Step 1** Set up the necessary dependencies, SDKs, and tools for Blazor Android MAUI on your Windows machine. Ensure that you have installed the required `Android SDK licenses`. If any errors occur during installation, follow the provided prompts or instructions to resolve them.
 
-![android-sdk-liscence](../getting-started/GettingStarted_images/android-sdk-liscence_maui.png)
+![android-sdk-liscence](../getting-started/gettingstarted-images/android-sdk-liscence_maui.png)
 
-**Step 2** Install and launch the Android Device Manager. Open the Android SDK Manager, go to the `SDK Tools` tab, select the `Android Device Manager` checkbox, and click `Apply` or `OK`. This will allow you to create, manage, and launch Android Virtual Devices (AVDs) for testing and running Android applications.
+**Step 2** Install and launch the Android Device Manager. Open the Android SDK Manager, go to the `SDK Tools` tab, select the `Android Device Manager` checkbox, and click `Apply` or `OK`. This will allow you to create, manage, and launch Android Virtual Devices (AVD's) for testing and running Android applications.
 
-![picxel emulator](../getting-started/GettingStarted_images/pixcel-emulator_maui.png)
+![picxel emulator](../getting-started/gettingstarted-images/pixcel-emulator_maui.png)
 
 **Step 3** Ensure the Android emulator is running. Launch the Android Device Manager and create or select an existing AVD to run the emulator.
 
@@ -70,9 +70,9 @@ Now, relaunch the project in emulator mode. It will render the PDF Viewer (Next 
 
 N> If you encounter any errors while using the Android Emulator, refer to the following link for troubleshooting guidance[Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting).
 
-![Blazor SfPdfViewer Component](../getting-started/GettingStarted_images/emulator.png)
+![Blazor SfPdfViewer Component](../getting-started/gettingstarted-images/emulator.png)
 
->[View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Server%20Deployment/Maui/MauiBlazorAndroid%20-%20SfPdfViewer).
+>[View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Server%20Deployment/Maui/MauiBlazorAndroid).
 
 ## See also
 

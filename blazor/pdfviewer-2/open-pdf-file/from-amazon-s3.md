@@ -43,7 +43,7 @@ Start by following the steps provided in this [link](https://blazor.syncfusion.c
 </SfPdfViewer2>
 
 @code {
-    private SfPdfViewerServer viewer;
+    private SfPdfViewer2 viewer;
     private string DocumentPath { get; set; }
 
     private readonly string accessKey = "Your Access Key from AWS S3";
@@ -70,10 +70,14 @@ Start by following the steps provided in this [link](https://blazor.syncfusion.c
 }
 ```
 
-Replace the file name with the actual document name that you want to load from Box cloud file storage. Make sure to pass the document name from the box folder to the `documentPath` property of the SfPdfViewer component
+Replace the file name with the actual document name that you want to load from Box cloud file storage. Make sure to pass the document name from the box folder to the [documentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DocumentPath) property of the SfPdfViewer component
 
 N> Replace **Your Access Key from AWS S3**, **Your Secret Key from AWS S3**, and **Your Bucket name from AWS S3** with your actual AWS access key, secret key and bucket name
 
 N> The **AWSSDK.S3** NuGet package must be installed in your application to use the previous code example.
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Open%20and%20Save%20from%20AWS%20S3-SfPdfViewer)
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Open%20and%20Save%20from%20AWS%20S3)
+
+## See also
+
+* [Processing Large Files Without Increasing Maximum Message Size in SfPdfViewer Component](../how-to/processing-large-files-without-increasing-maximum-message-size)

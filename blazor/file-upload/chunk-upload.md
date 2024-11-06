@@ -17,69 +17,93 @@ To enable the chunk upload, set the size to [ChunkSize](https://help.syncfusion.
 
 ## Save and remove action for Blazor (ASP.NET Core hosted) application
 
-The Uploader sends the large file split into small chunks and transmits to the server using AJAX. You can also pause, resume, and retry the failed chunk file.
+The server-side implementation entirely depends on the application requirements and logic. The following code snippet provides the server-side logic to handle the chunk upload using the FileUpload components.
 
 ```csharp
-[Route("api/[controller]")]
+public string uploads = Path.Combine(Directory.GetCurrentDirectory(), "Uploaded Files"); // Set your desired upload directory path
 
-private IHostingEnvironment hostingEnv;
-
-public SampleDataController(IHostingEnvironment env)
-{
-    this.hostingEnv = env;
-}
-
-[HttpPost("[action]")]
-public void Save(IList<IFormFile> chunkFile, IList<IFormFile> UploadFiles)
+public async Task<IActionResult> Save(IFormFile UploadFiles)
 {
     try
     {
-        foreach (var file in chunkFile)
+        if (UploadFiles.Length > 0)
         {
-            var filename = hostingEnv.ContentRootPath + $@"\{file.FileName}";
-            if (!System.IO.File.Exists(filename))
+            var fileName = UploadFiles.FileName;
+
+            // Create upload directory if it doesn't exist
+            if (!Directory.Exists(uploads))
             {
-                using (FileStream fs = System.IO.File.Create(filename))
-                {
-                    file.CopyTo(fs);
-                    fs.Flush();
-                }
+                Directory.CreateDirectory(uploads);
             }
-            else
+
+            if (UploadFiles.ContentType == "application/octet-stream") //Handle chunk upload
             {
-                using (FileStream fs = System.IO.File.Open(filename, FileMode.Append))
+                // Fetch chunk-index and total-chunk from form data
+                var chunkIndex = Request.Form["chunk-index"];
+                var totalChunk = Request.Form["total-chunk"];
+
+                // Path to save the chunk files with .part extension
+                var tempFilePath = Path.Combine(uploads, fileName + ".part");
+
+                using (var fileStream = new FileStream(tempFilePath, chunkIndex == "0" ? FileMode.Create : FileMode.Append))
                 {
-                    file.CopyTo(fs);
-                    fs.Flush();
+                    await UploadFiles.CopyToAsync(fileStream);
                 }
+
+                // If all chunks are uploaded, move the file to the final destination
+                if (Convert.ToInt32(chunkIndex) == Convert.ToInt32(totalChunk) - 1)
+                {
+                    var finalFilePath = Path.Combine(uploads, fileName);
+
+                    // Move the .part file to the final destination without the .part extension
+                    System.IO.File.Move(tempFilePath, finalFilePath);
+
+                    return Ok(new { status = "File uploaded successfully" });
+                }
+
+                return Ok(new { status = "Chunk uploaded successfully" });
+            }
+            else //Handle normal upload
+            {
+                var filePath = Path.Combine(uploads, fileName);
+
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    await UploadFiles.CopyToAsync(fileStream);
+                }
+
+                return Ok(new { status = "File uploaded successfully" });
             }
         }
+
+        return BadRequest(new { status = "No file to upload" });
     }
-    catch (Exception e)
+    catch (Exception ex)
     {
-        Response.Clear();
-        Response.StatusCode = 204;
-        Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = "File failed to upload";
-        Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = e.Message;
+        return StatusCode(500, new { status = "Error", message = ex.Message });
     }
 }
-[HttpPost("[action]")]
-public void Remove(IList<IFormFile> UploadFiles)
+
+// Method to handle file removal (optional if needed)
+public async Task<IActionResult> Remove(string UploadFiles)
 {
     try
     {
-        var filename = hostingEnv.ContentRootPath + $@"\{UploadFiles[0].FileName}";
-        if (System.IO.File.Exists(filename))
+        var filePath = Path.Combine(uploads, UploadFiles);
+
+        if (System.IO.File.Exists(filePath))
         {
-            System.IO.File.Delete(filename);
+            System.IO.File.Delete(filePath);
+            return Ok(new { status = "File deleted successfully" });
+        }
+        else
+        {
+            return NotFound(new { status = "File not found" });
         }
     }
-    catch (Exception e)
+    catch (Exception ex)
     {
-        Response.Clear();
-        Response.StatusCode = 200;
-        Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = "File removed successfully";
-        Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = e.Message;
+        return StatusCode(500, new { status = "Error", message = ex.Message });
     }
 }
 ```
@@ -220,7 +244,7 @@ When the request fails, the pause icon is changed to retry icon. By clicking the
 
 The following example explains about chunk upload with cancel support.
 
-`SaveUrl` and `RemoveUrl` actions are explained in this [link](./chunk-upload/#save-and-remove-action-for-blazor-aspnet-core-hosted-application).
+`SaveUrl` and `RemoveUrl` actions are explained in this [link](./chunk-upload#save-and-remove-action-for-blazor-aspnet-core-hosted-application).
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs

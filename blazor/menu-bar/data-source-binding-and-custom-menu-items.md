@@ -74,6 +74,145 @@ In the following example, the **id**, **pId**, and **text** columns from self-re
 
 N> In the above example, `TValue` is specified as `MenuItemModel` because the menu is rendered using the `Items` property.
 
+## Handling Self-Referential Data with CustomMenuItem TValue in MenuTemplate
+
+When using TValue with CustomMenuItem in the [MenuTemplates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuTemplates-1.html), self-referential data structures with ParentId mapping are not supported. To address this limitation, you need to manually map the parent and child menu items within the menu template. In the following example, we demonstrate how to configure the SfMenu component using self-referential data with CustomMenuItem as the TValue in the MenuTemplate.
+
+```cshtml
+
+@using Syncfusion.Blazor.Navigations
+
+<SfMenu Items="@MenuHierarchy">
+    <MenuFieldSettings Text="Text" Children="SubMenu"></MenuFieldSettings>
+    <MenuEvents TValue="CustomMenuItem" ItemSelected="ItemSelected"></MenuEvents>
+    <MenuTemplates TValue="CustomMenuItem">
+        <Template>
+            @{
+                var MenuItems = context;
+                <div style="width: 100%; display: flex; justify-content: space-between;">
+                    @{
+                        <span style="width:100%;">@MenuItems.Text</span>
+                    }
+                </div>
+            }
+        </Template>
+    </MenuTemplates>
+</SfMenu>
+
+@code {
+    public List<CustomMenuItem> MenuHierarchy;
+    public List<CustomMenuItem> MenuItems = new List<CustomMenuItem>
+    {
+        new CustomMenuItem{ Id = "parent1", Text = "Events"},
+        new CustomMenuItem{ Id = "parent2", Text = "Movies" },
+        new CustomMenuItem { Id = "parent3", Text = "Directory" },
+        new CustomMenuItem { Id = "parent4", Text = "Queries", ParentId = "null" },
+        new CustomMenuItem { Id = "parent5", Text = "Services", ParentId = "null" },
+        new CustomMenuItem { Id = "parent6", Text = "Conferences", ParentId = "parent1" },
+        new CustomMenuItem { Id = "parent7", Text = "Music", ParentId = "parent1" },
+        new CustomMenuItem { Id = "parent8", Text = "Workshops", ParentId = "parent1" },
+
+        new CustomMenuItem { Id = "parent9", Text = "Now Showing", ParentId = "parent2" },
+        new CustomMenuItem { Id = "parent10", Text = "Coming Soon", ParentId = "parent2" },
+
+        new CustomMenuItem { Id = "parent10", Text = "Media Gallery", ParentId = "parent3" },
+        new CustomMenuItem { Id = "parent11", Text = "Newsletters", ParentId = "parent3" },
+
+        new CustomMenuItem { Id = "parent12", Text = "Our Policy", ParentId = "parent4" },
+        new CustomMenuItem { Id = "parent13", Text = "Site Map", ParentId = "parent4" },
+        new CustomMenuItem { Id = "parent14", Text = "Pop", ParentId = "parent7" },
+        new CustomMenuItem { Id = "parent15", Text = "Folk", ParentId = "parent7" },
+        new CustomMenuItem { Id = "parent16", Text = "Classical", ParentId = "parent7" }
+    };
+    protected override async Task OnInitializedAsync()
+    {
+        MenuHierarchy = BuildMenuHierarchy(MenuItems);
+    }
+    public List<CustomMenuItem> BuildMenuHierarchy(List<CustomMenuItem> menuItems)
+    {
+        var menuDict = new Dictionary<string, CustomMenuItem>();
+        var rootMenuItems = new List<CustomMenuItem>();
+
+        // Populate the dictionary with cloned items
+        foreach (var item in menuItems)
+        {
+            var clonedItem = CloneMenuItem(item);
+            menuDict[clonedItem.Id] = clonedItem;
+        }
+
+        // Build the hierarchy
+        foreach (var item in menuItems)
+        {
+            var clonedItem = menuDict[item.Id];
+            if (!string.IsNullOrEmpty(item.ParentId) && item.ParentId != "null")
+            {
+                if (menuDict.ContainsKey(item.ParentId))
+                {
+                    var parentItem = menuDict[item.ParentId];
+                    if (parentItem.SubMenu == null)
+                    {
+                        parentItem.SubMenu = new List<CustomMenuItem>();
+                    }
+                    parentItem.SubMenu.Add(clonedItem);
+                }
+            }
+            else
+            {
+                rootMenuItems.Add(clonedItem);
+            }
+        }
+
+        // Remove ParentId from each item in the hierarchy (optional)
+        RemoveParentId(rootMenuItems);
+        return rootMenuItems;
+    }
+
+
+    private CustomMenuItem CloneMenuItem(CustomMenuItem item)
+    {
+        return new CustomMenuItem
+            {
+                Id = item.Id,
+                Text = item.Text,
+                ParentId = item.ParentId,
+                ImageName = item.ImageName,
+                IsSeparator = item.IsSeparator,
+                SubMenu = item.SubMenu != null ? new List<CustomMenuItem>(item.SubMenu) : null
+            };
+    }
+
+    private void RemoveParentId(List<CustomMenuItem> menuItems)
+    {
+        foreach (var item in menuItems)
+        {
+            item.ParentId = null;
+            if (item.SubMenu != null)
+            {
+                RemoveParentId(item.SubMenu);
+            }
+        }
+    }
+
+    public class CustomMenuItem
+    {
+        public string Id { get; set; }
+        public string Text { get; set; }
+        public string ParentId { get; set; }
+        public string ImageName { get; set; }
+        public bool IsSeparator { get; set; }
+        public List<CustomMenuItem> SubMenu { get; set; }
+    }
+    private void ItemSelected(MenuEventArgs<CustomMenuItem> args)
+    {
+        //Selected menu item
+        var selectedItem = args.Item.Text;
+    }
+}
+
+```
+
+![Blazor MenuBar with Self-Referential Data with CustomMenuItem TValue in MenuTemplate](./images/blazor-menubar-self-referential-data.png)
+
 ## Custom Menu Bar Items
 
 To customize Menu Bar items in your application, set your customized template using [MenuTemplates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuTemplates-1.html). In the following example, the Menu Bar has been rendered with customized Menu Bar items.

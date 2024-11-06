@@ -222,6 +222,7 @@ The segmented taskbars can be merged together using **Merge Task** context menu 
 In the segments tab of the [add/edit dialog](https://blazor.syncfusion.com/documentation/gantt-chart/editing-tasks#dialog-editing), taskbars can be split or merged by providing the segments details such as the start date, end date, and duration. However, it's important to note that the segment start date and end date cannot exceed the task's start date and end date.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Gantt
 @using System.ComponentModel.DataAnnotations
 
@@ -603,10 +604,14 @@ In the code snippet below, the segments are customized based on template context
                 {
                     foreach (var segment in segments)
                     {
+                        string textContent = "Segment " + (segment.SegmentIndex + 1);
                         <div class="e-gantt-child-taskbar-inner-div e-gantt-child-taskbar e-segmented-taskbar" style=@("height:24px;position: absolute;left:" + segment.Left + "px; width:" + segment.Width + "px;") tabindex=-1 data-segment-index="@(segment.SegmentIndex)">
                             <div class="e-taskbar-left-resizer e-icon" style="margin-top: 5px; left:2px">
                             </div>
                             <div class="e-gantt-child-progressbar-inner-div e-gantt-child-progressbar" style="height:24px;width:@(segment.ProgressWidth + "px");border-radius: 0px;text-align: right;">
+                                <div style=@("height:22px;position: absolute;line-height:21px;font-size: 11px;color: #fff;text-overflow:ellipsis;overflow-x:hidden;")>
+                                    <span>@textContent</span>
+                                </div>
                             </div>
                             <div class="e-taskbar-right-resizer e-icon" style="margin-top: 5px;left:@((segment.Width) - 15)px">
                             </div>

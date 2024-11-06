@@ -564,7 +564,7 @@ This section explains the list of events of the MultiSelect component which will
 @using Syncfusion.Blazor.DropDowns
 
 <SfMultiSelect TItem="GameFields" TValue="string[]" AllowFiltering="true" DataSource="@Games">
-    <MultiSelectEvents TItem="GameFields" TValue="string[]" Cleared="@Clearedhandler"></MultiSelectEvents>
+    <MultiSelectEvents TItem="GameFields" TValue="string[]" OnChipTag="@ChipTagHandler"></MultiSelectEvents>
     <MultiSelectFieldSettings Text="Text" Value="ID"></MultiSelectFieldSettings>
 </SfMultiSelect>
 
@@ -582,7 +582,7 @@ This section explains the list of events of the MultiSelect component which will
         new GameFields(){ ID= "Game4", Text= "Cricket" },
      };
 
-    private void Clearedhandler(MouseEventArgs args)
+    private void ChipTagHandler(TaggingEventArgs<GameFields> args)
     {
         // Here you can customize your code
     }

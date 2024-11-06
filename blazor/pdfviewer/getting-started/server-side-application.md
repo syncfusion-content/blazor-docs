@@ -21,11 +21,11 @@ This section briefly explains about how to integrate [Blazor PDF Viewer](https:/
 
 1. Start Visual Studio and select **Create a new project**.
 2. For a Blazor Server experience, choose the **Blazor Server App** template. Select **Next**.
-![Create-new-blazor-server-app](GettingStarted_images/start-window-create-new-project.png)
+![Create-new-blazor-server-app](gettingstarted-images/start-window-create-new-project.png)
 3. Provide a **Project Name** and confirm that the *Location* is correct. Select Next.
-![Set-project-name](GettingStarted_images/Set-project-name.png)
+![Set-project-name](gettingstarted-images/Set-project-name.png)
 4. In the **Additional information** dialog, set the target framework.
-![Set-target-framework](GettingStarted_images/Additional_information.png)
+![Set-target-framework](gettingstarted-images/Additional_information.png)
 
 ## Install Blazor PDF Viewer NuGet package in Blazor Server App
 
@@ -166,6 +166,6 @@ N> If the `DocumentPath` property value is not provided, the PDF Viewer componen
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor PDF Viewer` component will be rendered in the default web browser.
 
-![Blazor PDFViewer Component](GettingStarted_images/blazor-pdfviewer.png)
+![Blazor PDFViewer Component](gettingstarted-images/blazor-pdfviewer.png)
 
 >[View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/PDFViewer).

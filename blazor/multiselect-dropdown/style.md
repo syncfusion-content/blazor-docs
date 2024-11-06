@@ -91,18 +91,6 @@ You can customize the dropdown [icon](https://ej2.syncfusion.com/documentation/a
 
 ![Blazor Multiselect DropDown icon color](./images/style/blazor_multiselect_icon-color.png)
 
-## Customizing the focus color
-
-You can customize the component color when it is focused by targeting its CSS class `.e-input-focus::after`, which indicates the input element when it is focused, and set the desired color to the `background` property.
-
-{% highlight cshtml %}
-
-{% include_relative code-snippet/style/focus-color.razor %}
-
-{% endhighlight %}
-
-![Blazor Multiselect DropDown focus color](./images/style/blazor_multiselect_focus-color.png)
-
 ## Customizing the disabled component’s text color
 
 You can customize the text color of a disabled component by targeting its CSS class `.e-multiselect.e-disabled`, which indicates the input element in a disabled state, and set the desired color to the `-webkit-text-fill-color` property.
@@ -114,30 +102,6 @@ You can customize the text color of a disabled component by targeting its CSS cl
 {% endhighlight %}
 
 ![Blazor Multiselect DropDown with Disabled component text color](./images/style/blazor_multiselect_disabled-text-color.png)
-
-## Customizing the color of the placeholder text
-
-You can change the color of the placeholder by targeting its CSS class `input.e-multiselect::placeholder`, which indicates the placeholder text, and set the desired color using the `color` property.
-
-{% highlight cshtml %}
-
-{% include_relative code-snippet/style/placeholder-with-color.razor %}
-
-{% endhighlight %}
-
-![Blazor Multiselect DropDown with color placeholder](./images/style/blazor_multiselect_placeholder-color.png)
-
-## Customizing the placeholder to add mandatory indicator(*)
-
-The mandatory indicator `*` can be applied to the placeholder by targeting its CSS class `.e-float-text::after` using the `content` style.
-
-{% highlight cshtml %}
-
-{% include_relative code-snippet/style/placeholder-with-mandatory.razor %}
-
-{% endhighlight %}
-
-![Blazor Multiselect DropDown with mandatory indicator placeholder](./images/style/blazor_multiselect_placeholder-with-mandatory.png)
 
 ## Customizing the float label element's focusing color
 

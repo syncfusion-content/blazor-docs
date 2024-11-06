@@ -76,7 +76,7 @@ After editing the default opacity using the Edit Opacity tool, they will be chan
             Author = "Blazor"
         };
 }
-}
+
 ```
 
 ## Adding a custom stamp to the PDF document via PdfViewerCustomStampSettings
@@ -186,7 +186,7 @@ The following code illustrates how to add the image as a stamp annotation in the
 </style>
 
 ```
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Stamp/Add%20a%20custom%20stamp%20-%20SfPdfViewer)
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Stamp/Add%20a%20custom%20stamp)
 
 ## Add stamp annotation programmatically
 
@@ -283,6 +283,22 @@ This code snippet will edit the stamp annotation programmatically within the SfP
 ![Programmatically Edit Stamp Annotation in Blazor SfPdfViewer](../images/blazor-sfpdfviewer-programmatically-edit-stamp-annotation.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Programmatic%20Support/Stamp/Edit).
+
+## Customized templated stamp appearance
+
+The customized templated stamp appearance feature provides support for displaying personalized stamps with tailored templates, focusing solely on their visual representation. 
+
+![Customized templated stamp appearance](../images/customized_templated_stamp_appearance.png)
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Stamp/Customized%20templated%20stamp%20appearance).
+
+## Rotation support for Custom Stamp and Customized templated stamps
+
+The PDF Viewer also supports smooth rotation of Custom stamps and Customized templated stamps 
+
+![Rotation support for Custom Stamp and Customized templated stamps](../images/rotation_support_for_customized_templated_stamps.png)
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Stamp/Customized%20templated%20stamp%20appearance).
 
 ## See also
 

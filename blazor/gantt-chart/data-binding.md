@@ -67,10 +67,10 @@ N> * Indent/Outdent is not supported for Hierarchy Data.
 
 ### Self-Referential / Flat Data Binding
 
-The Gantt Chart component can be bound with self-referential data by mapping the data source field values to the `Id` and `ParentID` properties.
+The Gantt Chart component uses a self-referential data binding model to represent hierarchical tasks, in which two key fields from your data source has to be mapped to the [Id](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Id) field and the [ParentID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_ParentID) field of [GanttTaskFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html). Together, these two fields define the parent-child relationship between tasks.
 
-* ID field: This field contains unique values used to identify each individual task and it is mapped to the `Id` property.
-* Parent ID field: This field contains values that indicate parent tasks and it is mapped to the `ParentID` property.
+* **Id field**: A field in each data object of the data source that uniquely identifies the task. This field name is mapped to the `Id` property of `GanttTaskFields`.
+* **ParentID field**: A field in each data object of the data source that contains a value corresponding to the **Id Field** to establish a parent-child relationship between tasks. This field name is mapped to the `ParentID` property of `GanttTaskFields`.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -225,6 +225,7 @@ ExpandoObject can be bound to Gantt by assigning to the `DataSource` property. G
 ```cshtml
 
 @using Syncfusion.Blazor.Gantt
+@using System.Dynamic
 
 <SfGantt TValue="ExpandoObject" DataSource="@TreeData" @ref="Gantt" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" Duration="Duration"

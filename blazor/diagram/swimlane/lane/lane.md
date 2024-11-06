@@ -25,7 +25,7 @@ The following code example explains how to define a swimlane with lane.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" />
+<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" NodeCreating="@OnNodeCreating" />
 
 @code
 {
@@ -54,6 +54,25 @@ The following code example explains how to define a swimlane with lane.
         // Add swimlane.
         SwimlaneCollections.Add(swimlane);
     }
+    private void OnNodeCreating(IDiagramObject obj)
+    {
+       if (obj is Swimlane swimlane)
+       {
+         swimlane.Header.Style = new TextStyle()
+             {
+                 Fill = "#5b9bd5",
+                 StrokeColor = "#5b9bd5"
+             };
+         foreach (Phase phase in swimlane.Phases)
+         {
+             phase.Style = new ShapeStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
+         }
+         foreach (Lane lane in swimlane.Lanes)
+         {
+             lane.Header.Style = new TextStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
+         }
+       }
+    }
 }
 ``` 
 ![Lane](../Swimlane-images/Swimlane_Lane.PNG)
@@ -71,7 +90,7 @@ The following code example explains how to define a lane header and its customiz
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" />
+<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections"  NodeCreating="@OnNodeCreating"/>
 
 @code
 {
@@ -107,6 +126,21 @@ The following code example explains how to define a lane header and its customiz
             };
     // Add swimlane.
     SwimlaneCollections.Add(swimlane);
+    }
+    private void OnNodeCreating(IDiagramObject obj)
+    {
+       if (obj is Swimlane swimlane)
+       {
+           swimlane.Header.Style = new TextStyle()
+           {
+                Fill = "#5b9bd5",
+                StrokeColor = "#5b9bd5"
+           };
+           foreach (Phase phase in swimlane.Phases)
+           {
+                phase.Style = new ShapeStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
+           }
+        }
     }
 }
 ``` 
@@ -203,7 +237,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 <SfButton Content="Add Lane" OnClick="@AddLane" />
 <SfButton Content="Remove Lane" OnClick="@RemoveLane" />
-<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" />
+<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" NodeCreating="@OnNodeCreating"/>
 
 @code
 {
@@ -246,6 +280,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
             Header = new SwimlaneHeader()
             {
                  Annotation = new ShapeAnnotation() { Content = "Lane title" }, Width = 30,
+                  Style = new TextStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" }
             }
         };
         SwimlaneCollections[0].Lanes.Add(newLane);
@@ -255,6 +290,25 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
     {
         Lane lane = SwimlaneCollections[0].Lanes[^1];
         SwimlaneCollections[0].Lanes.Remove(lane);
+    }
+    private void OnNodeCreating(IDiagramObject obj)
+    {
+        if (obj is Swimlane swimlane)
+        {
+            swimlane.Header.Style = new TextStyle()
+             {
+                 Fill = "#5b9bd5",
+                 StrokeColor = "#5b9bd5"
+             };
+             foreach (Phase phase in swimlane.Phases)
+             {
+                 phase.Style = new ShapeStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
+             }
+             foreach (Lane lane in swimlane.Lanes)
+             {
+                 lane.Header.Style = new TextStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
+             }
+        }
     }
 }
 ``` 
@@ -276,7 +330,7 @@ The following code example explains how to add nodes to lane.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" />
+<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" NodeCreating="@OnNodeCreating"/>
 
 @code
 {
@@ -317,6 +371,33 @@ The following code example explains how to add nodes to lane.
             };
         // Add swimlane.
         SwimlaneCollections.Add(swimlane);
+    }
+    private void OnNodeCreating(IDiagramObject obj)
+    {
+        if (obj is Swimlane swimlane)
+        {
+             swimlane.Header.Style = new TextStyle()
+             {
+                 Fill = "#5b9bd5",
+                 StrokeColor = "#5b9bd5"
+             };
+             foreach (Phase phase in swimlane.Phases)
+             {
+                 phase.Style = new ShapeStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
+             }
+             foreach (Lane lane in swimlane.Lanes)
+             {
+                 lane.Header.Style = new TextStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
+             }
+        }
+        else if (obj is Node node)
+        {
+             node.Style = new ShapeStyle()
+             {
+                 Fill = "#5b9bd5",
+                 StrokeColor = "#5b9bd5"
+             };
+        }
     }
 }
 ```

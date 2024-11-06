@@ -13,7 +13,7 @@ You can find the specified text content in the PDF document using the built-in o
 
 ![Text Search in Blazor SfPdfViewer](../pdfviewer/images/blazor-pdfviewer-text-search.png)
 
-You can enable or disable the text search by setting the `EnableTextSearch` API.
+You can enable or disable the text search by setting the [EnableTextSearch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableTextSearch) API.
 
 ```cshtml
 

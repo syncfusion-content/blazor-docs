@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Grid Lines and Tick Lines in Blazor Range Selector | Syncfusion
-description: Learn here all about Grid Lines and Tick Lines in Syncfusion Blazor Range Selector component and more.
+description: Learn here all about grid lines and tick lines in Syncfusion Blazor Range Selector component, it's elements and more.
 platform: Blazor
 control: Range Selector
 documentation: ug
@@ -46,7 +46,7 @@ The gridlines indicate axis divisions by drawing the chart plot. Gridlines inclu
 
 ```
 
-![Blazor RangeNavigator with Grid Line](images/grid-tick/blazor-rangenavigator-grid-line.png)
+![Blazor RangeNavigator with grid line](images/grid-tick/blazor-rangenavigator-grid-line.png)
 
 ## Tickline Customization
 
@@ -85,4 +85,4 @@ Ticklines are the small lines which is drawn on the axis line representing the a
 
 ```
 
-![Blazor RangeNavigator with Tick Line](images/grid-tick/blazor-rangenavigator-tick-line.png)
+![Blazor RangeNavigator with tick line](images/grid-tick/blazor-rangenavigator-tick-line.png)

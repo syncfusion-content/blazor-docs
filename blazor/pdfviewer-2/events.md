@@ -61,7 +61,7 @@ The events provided in SfPdfViewer component are listed out as follows:
 
 ## Adding SfPdfViewer events to Blazor component
 
-The Syncfusion SfPdfViewer events has to be wrapped inside the `PdfViewerEvents` tag.
+The Syncfusion SfPdfViewer events has to be wrapped inside the [PdfViewerEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html) tag.
 
 ```cshtml
 
@@ -138,4 +138,4 @@ The following code illustrates how to trigger the DocumentEdited Event. In that 
 
 ```
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Load%20a%20PDF%20document%20using%20created%20event-SfPdfViewer)
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Load%20a%20PDF%20document%20using%20created%20event)

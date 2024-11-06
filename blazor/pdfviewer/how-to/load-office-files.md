@@ -140,4 +140,4 @@ In the below code, word document is converted in to pdf document and return that
 }
 ```
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Load%20PDF%2C%20Excel%2C%20PPT%20file%20types).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-classic-examples/tree/master/Common/Load%20PDF%2C%20Excel%2C%20PPT%20file%20types).

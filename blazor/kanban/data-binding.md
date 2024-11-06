@@ -287,7 +287,7 @@ You can use WebApiAdaptor to bind Kanban with Web API created using OData endpoi
 @using Syncfusion.Blazor.Kanban
 
 <SfKanban TValue="TasksModel" KeyField="Status" AllowDragAndDrop="false">
-    <SfDataManager Url="https://ej2services.syncfusion.com/production/web-services/api/Kanban" Adaptor="@Syncfusion.Blazor.Adaptors.WebApiAdaptor"></SfDataManager>
+    <SfDataManager Url="https://blazor.syncfusion.com/services/production/api/Kanban" Adaptor="@Syncfusion.Blazor.Adaptors.WebApiAdaptor"></SfDataManager>
     <KanbanColumns>
         @foreach (ColumnModel item in columnData)
         {
@@ -331,7 +331,7 @@ The following sample code demonstrates enabling data manager condition in the Ka
 <SfKanban TValue="TasksModel" KeyField="Status" AllowDragAndDrop="false">
     @if (IsInitialRender)
     {
-        <SfDataManager Url="https://ej2services.syncfusion.com/production/web-services/api/Kanban" Adaptor="@Syncfusion.Blazor.Adaptors.WebApiAdaptor"></SfDataManager>
+        <SfDataManager Url="https://blazor.syncfusion.com/services/production/api/Kanban" Adaptor="@Syncfusion.Blazor.Adaptors.WebApiAdaptor"></SfDataManager>
     }
     <KanbanColumns>
         @foreach (ColumnModel item in columnData)
@@ -386,7 +386,7 @@ The following sample code demonstrates sending additional parameters using the Q
 @using Syncfusion.Blazor.Kanban
 
 <SfKanban TValue="TasksModel" KeyField="Status" AllowDragAndDrop="false" Query=@KanbanQuery>
-    <SfDataManager Url="https://ej2services.syncfusion.com/production/web-services/api/Kanban" Adaptor="@Syncfusion.Blazor.Adaptors.WebApiAdaptor"></SfDataManager>
+    <SfDataManager Url="https://blazor.syncfusion.com/services/production/api/Kanban" Adaptor="@Syncfusion.Blazor.Adaptors.WebApiAdaptor"></SfDataManager>
     <KanbanColumns>
         @foreach (ColumnModel item in columnData)
         {

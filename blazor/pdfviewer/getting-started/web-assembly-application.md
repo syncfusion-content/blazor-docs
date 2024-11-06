@@ -21,11 +21,11 @@ This section briefly explains about how to include [Blazor PDF Viewer](https://w
 
 1. Start Visual Studio and select **Create a new project**.
 2. For a Blazor WebAssembly experience, choose the **Blazor WebAssembly App** template and select **Next**.
-![Create-a-new-WASM-app](GettingStarted_images/Create-new-WASM-app.png)
+![Create-a-new-WASM-app](gettingstarted-images/Create-new-WASM-app.png)
 3. Provide a **Project name** and confirm that the *Location* is correct. Select **Next**.
-![Set-project-name](GettingStarted_images/Set-WASM-project-name.png)
+![Set-project-name](gettingstarted-images/Set-WASM-project-name.png)
 4. In **Additional information dialog**, set target framework.
-![Addition-information-WASM](GettingStarted_images/Additional_information_WASM.png)
+![Addition-information-WASM](gettingstarted-images/Additional_information_WASM.png)
 
 ## Install Blazor PDFViewer NuGet package in WASM App
 
@@ -155,7 +155,7 @@ N> Syncfusion recommends to reference scripts using [Static Web Assets](https://
 {% endhighlight %}
 {% endtabs %}
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Getting%20Started/Client-side%20application).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-classic-examples/tree/master/Getting%20Started/Client-side%20application).
 
 ## Server side processing
 
@@ -165,7 +165,7 @@ N> [View web service sample in GitHub](https://github.com/SyncfusionExamples/EJ2
 
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion `Blazor PDF Viewer` component will be rendered in the default web browser.
 
-![Blazor PDF Viewer Component](GettingStarted_images/blazor-pdfviewer.png)
+![Blazor PDF Viewer Component](gettingstarted-images/blazor-pdfviewer.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/PDFViewer).
 
@@ -207,4 +207,4 @@ Refer,[How to create PDF Viewer Web Service](https://support.syncfusion.com/kb/a
 }
 ```
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Load%20a%20PDF%20file%20using%20local%20service).
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-classic-examples/tree/master/Load%20and%20Save/Load%20a%20PDF%20file%20using%20local%20service).

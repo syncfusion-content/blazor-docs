@@ -67,8 +67,8 @@ The Blazor Media Query component allows you to define custom media breakpoints b
         mediaBreakPoint = new List<MediaBreakpoint>() 
         {
             new MediaBreakpoint() { Breakpoint = "Mobile", MediaQuery = "(max-width: 600px)" },
-            new MediaBreakpoint() { Breakpoint = "Tablet", MediaQuery = "(min-width: 600px)" },
-            new MediaBreakpoint() { Breakpoint = "Laptop", MediaQuery = "(min-width: 1000px)" },
+            new MediaBreakpoint() { Breakpoint = "Tablet", MediaQuery = "(min-width: 600px) and (max-width: 999px)" },
+            new MediaBreakpoint() { Breakpoint = "Laptop", MediaQuery = "(min-width: 1000px) and (max-width: 1199px)" },
             new MediaBreakpoint() { Breakpoint = "Desktop", MediaQuery = "(min-width: 1200px)" }
         };
         base.OnInitialized();

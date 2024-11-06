@@ -443,7 +443,10 @@ The Maps can be initially scaled to the center value based on the marker distanc
             </MapsMarkerSettings>
         </MapsLayer>
     </MapsLayers>
-    <MapsZoomSettings Enable='true' HorizontalAlignment="Syncfusion.Blazor.Maps.Alignment.Near" ShouldZoomInitially="true"></MapsZoomSettings>
+    <MapsZoomSettings Enable='true' ShouldZoomInitially="true">
+        <MapsZoomToolbarSettings HorizontalAlignment="Alignment.Near">
+        </MapsZoomToolbarSettings>
+    </MapsZoomSettings>
 </SfMaps>
 @code {
     public class MapMarkerDataSource
@@ -461,6 +464,44 @@ The Maps can be initially scaled to the center value based on the marker distanc
 ```
 
 ![Blazor Maps Marker with Zooming](./images/Marker/blazor-maps-marker-zooming.PNG)
+
+## Disabling Zoom on Marker Click
+
+Maps typically zoom in when you click or double-click on them. This zooming also occurs when you click on a marker. To prevent zooming when clicking on a marker, you can set `ZoomOnMarkerClick` to **false** in the `MapsZoomSettings`. This setting disables zooming specifically for marker clicks. By default, `ZoomOnMarkerClick` is set to **true**.
+
+```cshtml
+@using Syncfusion.Blazor.Maps
+
+<SfMaps>
+    <MapsLayers>
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
+            <MapsMarkerSettings>
+                <MapsMarker Visible='true' Width="20" Height="20" AnimationDuration="0" DataSource='MarkerDataSource' TValue="MapMarkerDataSource">
+                </MapsMarker>
+            </MapsMarkerSettings>
+        </MapsLayer>
+    </MapsLayers>
+    <MapsZoomSettings Enable='true' ZoomOnClick="true" ZoomOnMarkerClick="false">
+        <MapsZoomToolbarSettings HorizontalAlignment="Alignment.Far">
+        </MapsZoomToolbarSettings>
+    </MapsZoomSettings>
+</SfMaps>
+@code {
+    public class MapMarkerDataSource
+    {
+        public double latitude { get; set; }
+        public double longitude { get; set; }
+        public string name { get; set; }
+    };
+    public List<MapMarkerDataSource> MarkerDataSource = new List<MapMarkerDataSource> {
+        new MapMarkerDataSource{ latitude= 49.95121990866204, longitude= 18.468749999999998, name= "Europe" },
+        new MapMarkerDataSource{ latitude= 59.88893689676585, longitude= -109.3359375, name= "North America" },
+        new MapMarkerDataSource{ latitude= -6.64607562172573, longitude= -55.54687499999999, name= "South America" }
+    };
+}
+```
+
+![Disabling Zoom on Marker Click in Blazor Maps](./images/Marker/blazor-maps-disabling-zooming-on-marker-click.gif)
 
 ## Marker clustering
 

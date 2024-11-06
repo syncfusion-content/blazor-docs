@@ -466,7 +466,7 @@ The following code example shows how to flip the connector.
 {
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
     public SfDiagramComponent diagram;
-    DiagramObjectCollection<Node> NodeCollection;
+    DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
     protected override void OnInitialized()
     {     
         Connector Connector = new Connector()

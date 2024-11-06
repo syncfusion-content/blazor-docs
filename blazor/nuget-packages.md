@@ -24,9 +24,6 @@ This package contains the base component, common classes, common functionalities
 <b>NuGet package</b>
 </td>
 <td>
-<b>Components friendly name</b>
-</td>
-<td>
 <b>Components name</b>
 </td>
 <td>
@@ -38,12 +35,7 @@ This package contains the base component, common classes, common functionalities
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.Core/">Syncfusion.Blazor.Core</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/media-query/getting-started-webapp">MediaQuery</a>
-</td>
-<td>
-<ul>
-<li>SfMediaQuery</li>
-</ul>
+Common, Base
 </td>
 <td>
 <ul>
@@ -53,6 +45,52 @@ This package contains the base component, common classes, common functionalities
 <li><a href="#syncfusionblazorthemes">Syncfusion.Blazor.Themes</a> (Utilized up to v19.4.0.56)</li>
 <li><a href="https://www.nuget.org/packages/Syncfusion.Licensing/" target="_blank">Syncfusion.Licensing</a></li>
 <li><a href="https://www.nuget.org/packages/System.Text.Json/" target="_blank">System.Text.Json</a> (Utilizing from v19.4.0.38)</li>
+</ul>
+</td>
+</tr>
+</table>
+
+## Syncfusion.Blazor.SmartComponents
+
+The Syncfusion Blazor Smart Components are designed to seamlessly integrate with AI and offering intelligent features that go beyond standard user interfaces.
+
+<table>
+<tr>
+<td>
+<b>NuGet package</b>
+</td>
+<td>
+<b>Components friendly name</b>
+</td>
+<td>
+<b>Components name</b>
+</td>
+<td>
+<b>Dependencies</b>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.SmartComponents/">Syncfusion.Blazor.SmartComponents</a>
+</td>
+<td>
+<ul>
+<li><a href="https://www.syncfusion.com/blazor-components/blazor-smartpaste-button">Smart Paste Button</a></li>
+<li><a href="https://www.syncfusion.com/blazor-components/blazor-smart-textarea">Smart TextArea</a></li>
+</ul>
+</td>
+<td>
+<ul>
+<li>SfSmartPasteButton</li>
+<li>SfSmartTextArea</li>
+</ul>
+</td>
+<td>
+<ul>
+<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
+<li><a href="##syncfusionblazorbuttons">Syncfusion.Blazor.Buttons</a></li>
+<li><a href="#syncfusionblazorinputs">Syncfusion.Blazor.Inputs</a></li>
+<li><a href="https://www.nuget.org/packages/Azure.AI.OpenAI/">Azure.AI.OpenAI</a></li>
 </ul>
 </td>
 </tr>

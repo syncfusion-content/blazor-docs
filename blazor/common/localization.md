@@ -390,9 +390,11 @@ Add the `CultureSwitcher` component to `~/MainLayout.razor` to enable the cultur
 
 {% endtabs %}
 
-### Blazor Server App
+### Blazor Server App and Blazor Web App (Interactive Server)
 
 Set the app's supported cultures. Also, ensure the app is configured to process controller actions by calling `AddControllers` and `MapControllers`.
+
+If you create a Blazor Web App with an **Interactive render mode** as `Server` make sure to include the registration of SyncfusionLocalizer and Syncfusion Blazor services in the ~/Program.cs files.
 
 {% tabs %}
 
@@ -436,9 +438,43 @@ app.Run();
 
 {% endhighlight %}
 
+{% highlight c# tabtitle=".NET 8 (~/Program.cs)" hl_lines="4 6 7 8 9 10 13 24" %}
+
+builder.Services.AddControllers();
+
+builder.Services.AddSyncfusionBlazor();
+builder.Services.AddLocalization();
+
+var supportedCultures = new[] { "en-US", "de-DE", "fr-FR", "ar-AE", "zh-HK" };
+var localizationOptions = new RequestLocalizationOptions()
+    .SetDefaultCulture(supportedCultures[0])
+    .AddSupportedCultures(supportedCultures)
+    .AddSupportedUICultures(supportedCultures);
+
+var app = builder.Build();
+app.UseRequestLocalization(localizationOptions);
+// Configure the HTTP request pipeline.
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Error");
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseHsts();
+}
+app.UseHttpsRedirection();
+app.UseStaticFiles();
+app.UseRouting();
+app.MapControllers();
+app.MapBlazorHub();
+app.MapFallbackToPage("/_Host");
+
+app.Run();
+
+{% endhighlight %}
 {% endtabs %}
 
-Set the current culture in a cookie immediately after opening <body> tag of `Pages/_Host.cshtml`.
+For .NET 6 and 7 set the current culture in a cookie immediately after opening <body> tag of `Pages/_Host.cshtml`.
+
+For .NET 8 set the current culture in a cookie in App component file
 
 {% tabs %}
 {% highlight c# tabtitle=".NET 6 & .NET 7 (_Host.cshtml)" hl_lines="6 7 8 9 10 11" %}
@@ -454,6 +490,27 @@ Set the current culture in a cookie immediately after opening <body> tag of `Pag
                     new RequestCulture(
                         CultureInfo.CurrentCulture,
                         CultureInfo.CurrentUICulture)));
+}
+
+{% endhighlight %}
+
+{% highlight C# tabtitle=".NET 8 (App.razor)" %}
+
+@using System.Globalization
+@using Microsoft.AspNetCore.Localization
+@code {
+    [CascadingParameter]
+    public HttpContext? HttpContext { get; set; }
+
+    protected override void OnInitialized()
+    {
+        HttpContext?.Response.Cookies.Append(
+            CookieRequestCultureProvider.DefaultCookieName,
+            CookieRequestCultureProvider.MakeCookieValue(
+                new RequestCulture(
+                    CultureInfo.CurrentCulture,
+                    CultureInfo.CurrentUICulture)));
+    }
 }
 
 {% endhighlight %}
@@ -493,7 +550,7 @@ Create `CultureSwitcher` component and place it inside shared folder to perform 
 
 {% tabs %}
 
-{% highlight razor tabtitle="Shared/CultureSwitcher.razor" %}
+{% highlight razor tabtitle=".NET 6 & .NET 7 (Shared/CultureSwitcher.razor) .NET 8 (Components/Pages/CultureSwitcher.razor)" %}
 
 @using  System.Globalization
 @inject NavigationManager NavigationManager
@@ -555,7 +612,7 @@ Add the `CultureSwitcher` component to `Shared/MainLayout.razor` to enable the c
 
 {% tabs %}
 
-{% highlight razor tabtitle="Shared/MainLayout.razor" %}
+{% highlight razor tabtitle=".NET 6 & .NET 7 (Shared/MainLayout.razor)" %}
 
 <div class="page">
     <div class="sidebar">
@@ -576,15 +633,36 @@ Add the `CultureSwitcher` component to `Shared/MainLayout.razor` to enable the c
 
 {% endhighlight %}
 
+{% highlight razor tabtitle=".NET 8 (Components/Layout/MainLayout.razor)" %}
+
+ <div class="page">
+    <div class="sidebar">
+        <NavMenu />
+    </div>
+
+    <main>
+        <div class="top-row px-4">
+            <CultureSwitcher></CultureSwitcher>
+            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+        </div>
+
+        <article class="content px-4">
+            @Body
+        </article>
+    </main>
+</div>
+        
+{% endhighlight %}
+
 {% endtabs %}
 
 ### MAUI Blazor App
 
-In `App.xaml.cs`, use [Preferences](https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/storage/preferences) to retrieve the user's stored culture selection. If the storage doesn't contain a culture for the user, the code sets a default value of United States English (en-US).
+In `App.xaml.cs`, use [Preferences](https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/storage/preferences?view=net-maui-8.0&tabs=windows) to retrieve the user's stored culture selection. If the storage doesn't contain a culture for the user, the code sets a default value of United States English (en-US).
 
 {% tabs %}
 
-{% highlight c# tabtitle="App.xaml.cs)" %}
+{% highlight c# tabtitle="App.xaml.cs" %}
 
 using System.Globalization;
 
@@ -608,7 +686,7 @@ namespace LocalizationMauiBlazor
 
 {% endtabs %}
 
-Create `CultureSwitcher` component to store the user's culture selection via [Preferences](https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/storage/preferences) and to force reload the page using the updated culture.
+Create `CultureSwitcher` component to store the user's culture selection via [Preferences](https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/storage/preferences?view=net-maui-8.0&tabs=windows) and to force reload the page using the updated culture.
 
 {% tabs %}
 

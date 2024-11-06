@@ -678,7 +678,8 @@ The following code illustrates how to execute the clipboard commands.
         DiagramObjectCollection<NodeBase> nodeBase = new DiagramObjectCollection<NodeBase>();
         Node clonedNode = diagram.Nodes[0].Clone() as Node;
         nodeBase.Add(clonedNode);
-
+        clonedNode.OffsetX += 10;
+        clonedNode.OffsetY += 10;
         //pastes an object as a parameter.
         diagram.Paste(nodeBase);
     }
@@ -1139,7 +1140,7 @@ The [Undo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDia
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/NudgeCommand/NudgeCommand)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/UndoRedoCommands)
 
 
 ## How to bring the specific element into the viewport of the diagram
@@ -1151,7 +1152,7 @@ The [BringIntoView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diag
 @using Syncfusion.Blazor.Buttons
 
 <SfButton Content="BringIntoView" OnClick="@BringIntoView" />
-<SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" @bind-Nodes="@nodes"><PageSettings @bind-Orientation="@pageOrientation" @bind-MultiplePage="@IsMultiplePage"></PageSettings>
+<SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" @bind-Nodes="@nodes">
 </SfDiagramComponent>
 @code
 {
@@ -1168,7 +1169,7 @@ protected override void OnInitialized()
             new ShapeAnnotation() { Content = "Node1" } } },
         };
     }
-    Brings the specified bounds into the view port of the diagram
+    //Brings the specified bounds into the view port of the diagram
     private void BringIntoView()
     {
     DiagramRect bound = new DiagramRect(950,650,500,500);
@@ -1187,7 +1188,7 @@ The [BringIntoCenter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
 @using Syncfusion.Blazor.Buttons
 
 <SfButton Content="BringIntoCenter" OnClick="@BringIntoCenter" />
-<SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" @bind-Nodes="@nodes"><PageSettings @bind-Orientation="@pageOrientation" @bind-MultiplePage="@IsMultiplePage"></PageSettings>
+<SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" @bind-Nodes="@nodes">
 </SfDiagramComponent>
 @code
 {
@@ -1204,7 +1205,7 @@ protected override void OnInitialized()
             new ShapeAnnotation() { Content = "Node1" } } },
         };
     }
-    Brings the specified bounds into the center of the view port of the diagram
+    //Brings the specified bounds into the center of the view port of the diagram
     private void BringIntoCenter()
     {
     DiagramRect bound = new DiagramRect(950,650,500,500);
@@ -1387,89 +1388,121 @@ The following code illustrates how to execute the CanZoomIn command.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-@using Node = Syncfusion.Blazor.Diagram.Node
 
-<SfDiagramComponent @ref="diagram" Width="1000px" Height="600px" Nodes="nodes" Connectors="connectors">
-</SfDiagramComponent>
+@using Syncfusion.Blazor.Buttons
 
-@code 
+<SfButton Content="CanZoomIn" @onclick="CanZoom" />
+
+<div class="col-lg-9 control-section" style="border-right: 1px solid #D7D7D7">
+    <SfDiagramComponent @ref="@diagram" Height="700px" Width="800px"
+                        Nodes="@nodes"
+                        Connectors="@connectors">
+
+    </SfDiagramComponent>
+</div>
+
+@code
 {
-    //Initialize of all the variables, methods and classes.
+
     public SfDiagramComponent diagram;
-    
+
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
-    
-    FitOptions options = new FitOptions() 
-    {
-        Mode = FitMode.Height, 
-        Region = DiagramRegion.Content,
-        CanZoomIn = true
-    };
+
+    FitOptions Options = new FitOptions()
+
+        {
+
+            Mode = FitMode.Height,
+
+            Region = DiagramRegion.Content,
+
+            CanZoomIn = true
+
+        };
+
     protected override void OnInitialized()
+
     {
+
         Node node1 = new Node()
-        {
-            ID = "node1",
-            OffsetX = 100,
-            OffsetY = 100,
-            Width = 100,
-            Height = 50,
-            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
-        };
-        Node node2 = new Node()
-        {
-            ID = "node2",
-            OffsetX = 500,
-            OffsetY = 700,
-            Width = 100,
-            Height = 50,
-            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
-        };
-        Node node3 = new Node()
-        {
-            ID = "node3",
-            OffsetX = 500,
-            OffsetY = 500,
-            Width = 100,
-            Height = 50,
-            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
-        };
-            
+            {
+                ID = "node1",
+                OffsetX = 250,
+                OffsetY = 100,
+                Width = 100,
+                Height = 50,
+                Style = new ShapeStyle()
+                {
+                    Fill = "#6495ED",
+                    StrokeColor = "white"
+                }
+            };
+
         nodes.Add(node1);
+
+        Node node2 = new Node()
+            {
+                ID = "node2",
+                OffsetX = 250,
+                OffsetY = 180,
+                Width = 100,
+                Height = 50,
+                Style = new ShapeStyle()
+                {
+                    Fill = "#6495ED",
+                    StrokeColor = "white"
+                }
+            };
+
         nodes.Add(node2);
-        nodes.Add(node3);   
-        
-        Connector connector1 = new Connector() 
-        { 
-            ID = "connector1", 
-            SourceID = "node1", 
-            TargetID = "node2", 
-            Type = ConnectorSegmentType.Straight 
-        }; 
-        Connector connector2 = new Connector() 
-        { 
-            ID = "connector2", 
-            SourceID = "node2", 
-            TargetID = "node3", 
-            Type = ConnectorSegmentType.Straight 
-        }; 
 
+        Node node3 = new Node()
+
+            {
+                ID = "node3",
+                OffsetX = 250,
+                OffsetY = 260,
+                Width = 100,
+                Height=50,
+                Style = new ShapeStyle() 
+                {
+                    Fill = "#6495ED",
+                    StrokeColor = "white"
+                }
+            };
+        nodes.Add(node3);
+
+        Connector connector1 = new Connector()
+            {
+                ID = "connector1",
+                SourceID = "node1",
+                TargetID = "node2",
+                Type = ConnectorSegmentType.Straight
+            };
         connectors.Add(connector1);
-        connectors.Add(connector2);   
-    }
 
-    //fit the smaller diagram to the viewport
-    private void ZoomIn()
+        Connector connector2 = new Connector()
+            {
+                ID = "connector2",
+                SourceID = "node2",
+                TargetID = "node3",
+                Type = ConnectorSegmentType.Straight
+            };
+        connectors.Add(connector2);
+
+    }
+    public void CanZoom()
     {
-        diagram.FitToPage(options);
+        diagram.FitToPage(Options);
     }
 
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/CanZoomIn)
 
-![CanZoomIn to bring the small diagram into view](images/CanZoomIn.gif)
+![CanZoomIn to bring the small diagram into view](images/CanZoomIn.png)
 
 ## Command manager
 

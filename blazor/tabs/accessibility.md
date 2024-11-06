@@ -19,8 +19,8 @@ The accessibility compliance for the Blazor Tabs component is outlined below.
 | [Section 508](https://www.section508.gov/) Support | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
 | Screen Reader Support | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | Right-To-Left Support | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
-| Color Contrast |  |
-| Mobile Device Support |  |
+| Color Contrast | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| Mobile Device Support | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | Keyboard Navigation Support | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 | [Axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) Accessibility Validation | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
 
@@ -39,7 +39,7 @@ The accessibility compliance for the Blazor Tabs component is outlined below.
 
 ## WAI-ARIA attributes
 
-[Blazor Tabs](https://www.syncfusion.com/blazor-components/blazor-tabs) component is designed by considering [WAI-ARIA](https://www.w3.org/TR/wai-aria-practices/#Tabpanel) standard. Tab is supported with ARIA Accessibility which is accessible by on-screen readers, and other assistive technology devices.
+[Blazor Tabs](https://www.syncfusion.com/blazor-components/blazor-tabs) component is designed by considering [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/practices/) standard. Tab is supported with ARIA Accessibility which is accessible by on-screen readers, and other assistive technology devices.
 
 The following list of attributes are added in the Tab.
 

@@ -22,7 +22,7 @@ You can create a radial tree layout with DataSource. The following code example 
 ```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent @ref="diagram" Width="100%" Height="800px" NodeCreating="NodeCreating" ConnectorCreating="ConnectorCreating">
+<SfDiagramComponent @ref="diagram" Width="100%" Height="800px" NodeCreating="OnNodeCreating" ConnectorCreating="OnConnectorCreating">
     <DataSourceSettings DataSource="RadialSource" ID="Id" ParentID="ReportingPerson"></DataSourceSettings>
 
     <Layout Type="LayoutType.RadialTree" HorizontalSpacing="30" VerticalSpacing="30"></Layout>
@@ -145,6 +145,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Blazor Radial Tree Diagram](../images/RadialTreeUG.png)
 
+>**Note:** In the DataSourceSettings, the type of the ID and ParentID properties is string. The provided DataSource should have a parent-child relationship. It is necessary for at least one node to have an empty ParentID.
+
 ## How to create a RadialTree with nodes and connectors
 
 You can render a radial tree layout without using Datasource. The following code demonstrates how to render a radial tree layout without using DataSource.
@@ -152,13 +154,14 @@ You can render a radial tree layout without using Datasource. The following code
 ```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent @ref="diagram" Width="1200px" Height="800px" @bind-Nodes="@nodes" @bind-Connectors="@connectors" NodeCreating="NodeCreating" ConnectorCreating="ConnectorCreating">
+<SfDiagramComponent @ref="diagram" Width="1200px" Height="800px" @bind-Nodes="@nodes" @bind-Connectors="@connectors" NodeCreating="OnNodeCreating" ConnectorCreating="OnConnectorCreating">
     <Layout Type="LayoutType.RadialTree" HorizontalSpacing="40" VerticalSpacing="40" Root="@root">
     </Layout>
 </SfDiagramComponent>
 
 @code
 {
+    SfDiagramComponent diagram;
     //Initialize the diagram's nodes collection.
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
