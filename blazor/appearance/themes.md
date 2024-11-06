@@ -34,15 +34,15 @@ The Syncfusion Blazor Bootstrap Theme is designed based on Bootstrap v3, whereas
 
 ## Optimized CSS files
 
-Syncfusion controls provide two size modes for each theme: **normal** and **bigger**. By default, the **normal size mode** is applied, offering a standard appearance that is suitable for all devices. The **bigger size mode** provides an enlarged interface for enhanced interactions, visibility, and an overall improved user experience by increasing the size of the UI controls.
+Syncfusion Blazor Themes have two size modes for each theme: **normal** and **bigger**. By default, the **normal** size mode is applied, offering a standard appearance that is suitable for all devices. The **bigger** size mode provides an enlarged interface for enhanced interactions, visibility, and an overall improved user experience by increasing the size of the UI controls.
 
-The bigger size mode is ideal when an enlarged appearance is needed, while the normal size mode works best for maintaining the default appearance of controls.
+The **bigger** size mode is ideal when an enlarged appearance is needed, while the normal size mode works best for maintaining the default appearance of controls.
 
-Below is a comparison of the Button control in normal and bigger size modes:
+Comparison of the Syncfusion Blazor Button Component in **normal** and **bigger** size modes:
 
 ![bigger-sized-button](./images/bigger-theme-button.png)
 
-Each theme includes both normal and bigger size modes, which increases the overall file size. To optimize performance, Syncfusion offers additional theme files (e.g., `fluent2-lite.css`), which only include the normal size mode styles. This results in a significant reduction in file size, improving load times and overall application performance, especially when the bigger size mode is unnecessary.
+Each theme includes both **normal** and **bigger** size modes, which increases the overall file size. To optimize performance, Syncfusion offers additional theme files (e.g., `fluent2-lite.css`), which only include the normal size mode styles. This results in a significant reduction in file size, improving load times and overall application performance, especially when the bigger size mode is unnecessary.
 
 Refer to the comparison below for the default and optimized theme file sizes:
 
