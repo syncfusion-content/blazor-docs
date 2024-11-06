@@ -1040,6 +1040,7 @@ Starting from `v23.2.4`, customized `Material` and `Tailwind` themes are availab
     ....
     <link href="https://cdn.syncfusion.com/blazor/23.2.4/styles/customized/material.css" rel="stylesheet" />
 </head>
+```
 
 ## See also
 
