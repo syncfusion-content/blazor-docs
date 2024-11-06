@@ -144,8 +144,7 @@ To adjust the column width in a Grid, you can use the [Width](https://help.syncf
 
 7. If the parent element has a fixed width, the grid component will inherit that width and occupy the available space. However, if the parent element does not have a fixed width, the grid component will adjust its width dynamically based on the available space.
 
-8. When no width is provided in a column and MinWidth property is defined, if the cumulative width of the column is greater than the grid element width then MinWidth would be used as the column width to avoid it from becoming invisible.
-9. When AllowResizing is enabled in the Data Grid, columns whose width is unspecified will be defined as 200px.
+8. When AllowResizing is enabled in the Data Grid, columns whose width is unspecified will be defined as 200px.
 
 **Supported types for column width**
 
