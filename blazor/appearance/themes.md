@@ -133,7 +133,7 @@ Syncfusion Blazor Themes are available in the CDN. Make sure that the version in
 </head>
 ```
 
-To refer to optimized CSS files, use the following syntax:
+To refer optimized CSS files, use the following syntax:
 
 ```html
 <head>
