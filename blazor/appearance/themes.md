@@ -13,28 +13,28 @@ The following list of themes are included in the Syncfusion Blazor components li
 
 |Theme	|Style Sheet Name|
 |--------|--------|
-|Material 3 | material3.css |
-|Material 3 Dark | material3-dark.css |
-|Bootstrap 5	| bootstrap5.css |
-|Bootstrap 5 Dark	| bootstrap5-dark.css |
-|Bootstrap 4	| bootstrap4.css |
-|Bootstrap 3	| bootstrap.css |
-|Bootstrap 3 Dark	| bootstrap-dark.css |
-|Google’s Material | material.css |
-|Google’s Material-Dark | material-dark.css |
-|Tailwind CSS | tailwind.css |
-|Tailwind CSS Dark | tailwind-dark.css |
-|Fluent | fluent.css |
-|Fluent Dark | fluent-dark.css |
-|Microsoft Office Fabric | fabric.css |
-|Microsoft Office Fabric Dark | fabric-dark.css |
-|High Contrast | highcontrast.css |
+|Material 3 | material3.css, material3-lite.css |
+|Material 3 Dark | material3-dark.css, material3-dark-lite.css |
+|Bootstrap 5	| bootstrap5.css, bootstrap5-lite.css |
+|Bootstrap 5 Dark	| bootstrap5-dark.css, bootstrap5-dark-lite.css |
+|Bootstrap 4	| bootstrap4.css, bootstrap4-lite.css |
+|Bootstrap 3	| bootstrap.css, bootstrap-lite.css |
+|Bootstrap 3 Dark	| bootstrap-dark.css, bootstrap-dark-lite.css |
+|Google’s Material | material.css, material-lite.css |
+|Google’s Material-Dark | material-dark.css, material-dark-lite.css |
+|Tailwind CSS | tailwind.css, tailwind-lite.css |
+|Tailwind CSS Dark | tailwind-dark.css, tailwind-dark-lite.css |
+|Fluent | fluent.css, fluent-lite.css |
+|Fluent Dark | fluent-dark.css, fluent-dark-lite.css |
+|Microsoft Office Fabric | fabric.css, fabric-lite.css |
+|Microsoft Office Fabric Dark | fabric-dark.css, fabric-dark-lite.css |
+|High Contrast | highcontrast.css, highcontrast-lite.css |
 
 The Syncfusion Blazor Bootstrap Theme is designed based on Bootstrap v3, whereas the Bootsrap4 theme is designed based on Bootstrap v4.
 
 ## Optimized CSS files
 
-Syncfusion controls provide two size modes for each theme: **normal** and **bigger**. By default, the **normal size mode** is applied, offering a standard appearance that is suitable for all devices. The **bigger size mode** provides an enlarged interface for enhanced interactions, visibility, and an overall improved user experience by increasing the size of the UI controls.
+Syncfusion controls offer two size modes for each theme: **normal** and **bigger**. The **normal size mode** delivers a standard, optimized appearance for all devices, while the **bigger size mode** enhances the interface by enlarging UI controls, improving visibility, interactions, and the overall user experience.
 
 The bigger size mode is ideal when an enlarged appearance is needed, while the normal size mode works best for maintaining the default appearance of controls.
 
@@ -42,7 +42,7 @@ Below is a comparison of the Button control in normal and bigger size modes:
 
 ![bigger-sized-button](./images/bigger-theme-button.png)
 
-Each theme includes both normal and bigger size modes, which increases the overall file size. To optimize performance, Syncfusion offers additional theme files (e.g., `fluent2-lite.css`), which only include the normal size mode styles. This results in a significant reduction in file size, improving load times and overall application performance, especially when the bigger size mode is unnecessary.
+Each theme comes in both normal and larger size modes, with the larger size mode increasing the overall file size. To enhance performance, Syncfusion provides alternative theme files (e.g., `fluent2-lite.css`) that include only the styles for the normal size mode. This helps reduce the file size considerably, improving load times and boosting application performance, particularly when the larger size mode is not needed.
 
 Refer to the comparison below for the default and optimized theme file sizes:
 
@@ -101,7 +101,7 @@ To refer to optimized CSS files, use the following syntax:
 
  ```html
 <head>
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.lite.css" rel="stylesheet" />
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5-lite.css" rel="stylesheet" />
 </head>
 ```
 
@@ -117,7 +117,7 @@ To reference optimized CSS files from [Syncfusion.Blazor](https://www.nuget.org/
 
  ```html
 <head>
-    <link href="_content/Syncfusion.Blazor/styles/bootstrap5.lite.css" rel="stylesheet" />
+    <link href="_content/Syncfusion.Blazor/styles/bootstrap5-lite.css" rel="stylesheet" />
 </head>
 ```
 
