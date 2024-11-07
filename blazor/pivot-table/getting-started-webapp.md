@@ -263,7 +263,7 @@ In-order to define each field in the respective axis, the following basic proper
     protected override void OnInitialized()
     {
         this.dataSource = ProductDetails.GetProductData().ToList();
-        //Bind the data source collection here. Refer [Assigning sample data to the pivot table](https://blazor.syncfusion.com/documentation/pivot-table/getting-started-webapp#assigning-sample-data-to-the-blazor-pivot-table) section for more details.
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" (https://blazor.syncfusion.com/documentation/pivot-table/getting-started-webapp#assigning-sample-data-to-the-blazor-pivot-table) section for more details.
     }
 }
 
@@ -306,7 +306,7 @@ N> Only fields from value section, which is in the form of numeric data values a
     protected override void OnInitialized()
     {
         this.dataSource = ProductDetails.GetProductData().ToList();
-        //Bind the data source collection here. Refer [Assigning sample data to the pivot table](https://blazor.syncfusion.com/documentation/pivot-table/getting-started-webapp#assigning-sample-data-to-the-blazor-pivot-table) section for more details.
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" (https://blazor.syncfusion.com/documentation/pivot-table/getting-started-webapp#assigning-sample-data-to-the-blazor-pivot-table) section for more details.
     }
 }
 
@@ -349,7 +349,7 @@ The field list allows to add or remove fields and also rearrange the fields betw
     protected override void OnInitialized()
     {
         this.dataSource = ProductDetails.GetProductData().ToList();
-        //Bind the data source collection here. Refer [Assigning sample data to the pivot table](https://blazor.syncfusion.com/documentation/pivot-table/getting-started-webapp#assigning-sample-data-to-the-blazor-pivot-table) section for more details.
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" (https://blazor.syncfusion.com/documentation/pivot-table/getting-started-webapp#assigning-sample-data-to-the-blazor-pivot-table) section for more details.
     }
 }
 
@@ -390,7 +390,7 @@ The grouping bar feature automatically populates fields from the bound data sour
     protected override void OnInitialized()
     {
         this.dataSource = ProductDetails.GetProductData().ToList();
-        //Bind the data source collection here. Refer [Assigning sample data to the pivot table](https://blazor.syncfusion.com/documentation/pivot-table/getting-started-webapp#assigning-sample-data-to-the-blazor-pivot-table) section for more details.
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" (https://blazor.syncfusion.com/documentation/pivot-table/getting-started-webapp#assigning-sample-data-to-the-blazor-pivot-table) section for more details.
     }
 }
 
@@ -433,7 +433,7 @@ The filter axis contains collection of fields that would act as master filter ov
     protected override void OnInitialized()
     {
         this.dataSource = ProductDetails.GetProductData().ToList();
-        //Bind the data source collection here. Refer [Assigning sample data to the pivot table](https://blazor.syncfusion.com/documentation/pivot-table/getting-started-webapp#assigning-sample-data-to-the-blazor-pivot-table) section for more details.
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" (https://blazor.syncfusion.com/documentation/pivot-table/getting-started-webapp#assigning-sample-data-to-the-blazor-pivot-table) section for more details.
     }
 }
 
@@ -482,7 +482,7 @@ The calculated field feature allows user to insert or add a new calculated field
     protected override void OnInitialized()
     {
         this.dataSource = ProductDetails.GetProductData().ToList();
-        //Bind the data source collection here. Refer [Assigning sample data to the pivot table](https://blazor.syncfusion.com/documentation/pivot-table/getting-started-webapp#assigning-sample-data-to-the-blazor-pivot-table) section for more details.
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" (https://blazor.syncfusion.com/documentation/pivot-table/getting-started-webapp#assigning-sample-data-to-the-blazor-pivot-table) section for more details.
     }
 }
 
