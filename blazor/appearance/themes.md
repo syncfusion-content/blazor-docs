@@ -97,7 +97,7 @@ When using individual NuGet packages in your application, add [Syncfusion.Blazor
 </head>
 ```
 
-To refer to optimized CSS files, use the following syntax: 
+To refer optimized CSS files, use the following syntax: 
 
  ```html
 <head>
