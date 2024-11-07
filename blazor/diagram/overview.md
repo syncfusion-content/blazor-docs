@@ -34,13 +34,13 @@ documentation: ug
 * **Automatic Layouts:** Built-in automatic nodes arrangement support for organization chart layout, mind map layout, hierarchical tree layout, and complex hierarchical layout.
 * **Serialization:** Save the Blazor diagram state in JSON format and load it back later for further editing using the serializer.
 * **Symbol palette:** Includes a gallery of stencils, reusable symbols, and nodes that can be dragged onto the surface of a Blazor diagram.
-* **Overview control:** Displays a small preview of the full diagram page, which allows you to improve the navigation.
+* **Overview control:** Displays a small preview of the entire diagram page for easier navigation.
 * **Localization:** Localizes every static text in the control to any supported language.
 * **DrawingTool:** Draw all kinds of built-in nodes and connect them with connectors interactively by just clicking and dragging on the drawing area.
 * **Printing:** Print diagrams from the browser. Users can also customize the page size, orientation, and page margin, and fit a diagram to a single page.
 * **Exporting:** You can export a diagram to different image files such as PNG, JPEG, and SVG.
 * **Tooltip:** Use tooltips to provide additional information about a node and connector.
-* **Context menu:** Easily map frequently used commands to the context menu.
+* **Context menu:** Customize the context menu with frequently used commands for easier access.
 * **Gridlines:** Gridlines provide guidance when trying to align objects.
 * **Data binding:** Create and position nodes and connectors in Blazor diagrams based on data from data sources. Furthermore, data in any format can be easily converted, mapped, and consumed in the Blazor diagram by simply changing a few properties without writing any code. Loading data from a list or an IEnumerable collection is also supported by the Blazor Diagram library.
 * **Spacing Commands:** Spacing commands allow you to place selected objects on the diagram at equal intervals.
