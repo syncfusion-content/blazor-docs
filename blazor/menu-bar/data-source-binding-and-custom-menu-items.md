@@ -79,13 +79,7 @@ N> In the above example, `TValue` is specified as `MenuItemModel` because the me
 When using TValue with CustomMenuItem in the [MenuTemplates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuTemplates-1.html), self-referential data structures with ParentId mapping are not supported. To address this limitation, you need to manually map the parent and child menu items within the menu template. In the following example, we demonstrate how to configure the SfMenu component using self-referential data with CustomMenuItem as the TValue in the MenuTemplate.
 
 ```cshtml
-<<<<<<< HEAD
-
 @using Syncfusion.Blazor.Navigations
-
-=======
-@using Syncfusion.Blazor.Navigations
->>>>>>> 8bc75e2704b525720a3823a5132c45971c27094a
 <SfMenu Items="@MenuHierarchy">
     <MenuFieldSettings Text="Text" Children="SubMenu"></MenuFieldSettings>
     <MenuEvents TValue="CustomMenuItem" ItemSelected="ItemSelected"></MenuEvents>
@@ -102,10 +96,6 @@ When using TValue with CustomMenuItem in the [MenuTemplates](https://help.syncfu
         </Template>
     </MenuTemplates>
 </SfMenu>
-<<<<<<< HEAD
-
-=======
->>>>>>> 8bc75e2704b525720a3823a5132c45971c27094a
 @code {
     public List<CustomMenuItem> MenuHierarchy;
     public List<CustomMenuItem> MenuItems = new List<CustomMenuItem>
@@ -118,20 +108,10 @@ When using TValue with CustomMenuItem in the [MenuTemplates](https://help.syncfu
         new CustomMenuItem { Id = "parent6", Text = "Conferences", ParentId = "parent1" },
         new CustomMenuItem { Id = "parent7", Text = "Music", ParentId = "parent1" },
         new CustomMenuItem { Id = "parent8", Text = "Workshops", ParentId = "parent1" },
-<<<<<<< HEAD
-
-        new CustomMenuItem { Id = "parent9", Text = "Now Showing", ParentId = "parent2" },
-        new CustomMenuItem { Id = "parent10", Text = "Coming Soon", ParentId = "parent2" },
-
-        new CustomMenuItem { Id = "parent10", Text = "Media Gallery", ParentId = "parent3" },
-        new CustomMenuItem { Id = "parent11", Text = "Newsletters", ParentId = "parent3" },
-
-=======
         new CustomMenuItem { Id = "parent9", Text = "Now Showing", ParentId = "parent2" },
         new CustomMenuItem { Id = "parent10", Text = "Coming Soon", ParentId = "parent2" },
         new CustomMenuItem { Id = "parent10", Text = "Media Gallery", ParentId = "parent3" },
         new CustomMenuItem { Id = "parent11", Text = "Newsletters", ParentId = "parent3" },
->>>>>>> 8bc75e2704b525720a3823a5132c45971c27094a
         new CustomMenuItem { Id = "parent12", Text = "Our Policy", ParentId = "parent4" },
         new CustomMenuItem { Id = "parent13", Text = "Site Map", ParentId = "parent4" },
         new CustomMenuItem { Id = "parent14", Text = "Pop", ParentId = "parent7" },
@@ -146,20 +126,12 @@ When using TValue with CustomMenuItem in the [MenuTemplates](https://help.syncfu
     {
         var menuDict = new Dictionary<string, CustomMenuItem>();
         var rootMenuItems = new List<CustomMenuItem>();
-<<<<<<< HEAD
-
-=======
->>>>>>> 8bc75e2704b525720a3823a5132c45971c27094a
         // Populate the dictionary with cloned items
         foreach (var item in menuItems)
         {
             var clonedItem = CloneMenuItem(item);
             menuDict[clonedItem.Id] = clonedItem;
         }
-<<<<<<< HEAD
-
-=======
->>>>>>> 8bc75e2704b525720a3823a5132c45971c27094a
         // Build the hierarchy
         foreach (var item in menuItems)
         {
@@ -181,19 +153,10 @@ When using TValue with CustomMenuItem in the [MenuTemplates](https://help.syncfu
                 rootMenuItems.Add(clonedItem);
             }
         }
-<<<<<<< HEAD
-
-=======
->>>>>>> 8bc75e2704b525720a3823a5132c45971c27094a
         // Remove ParentId from each item in the hierarchy (optional)
         RemoveParentId(rootMenuItems);
         return rootMenuItems;
     }
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 8bc75e2704b525720a3823a5132c45971c27094a
     private CustomMenuItem CloneMenuItem(CustomMenuItem item)
     {
         return new CustomMenuItem
@@ -206,10 +169,6 @@ When using TValue with CustomMenuItem in the [MenuTemplates](https://help.syncfu
                 SubMenu = item.SubMenu != null ? new List<CustomMenuItem>(item.SubMenu) : null
             };
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> 8bc75e2704b525720a3823a5132c45971c27094a
     private void RemoveParentId(List<CustomMenuItem> menuItems)
     {
         foreach (var item in menuItems)
@@ -221,10 +180,6 @@ When using TValue with CustomMenuItem in the [MenuTemplates](https://help.syncfu
             }
         }
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> 8bc75e2704b525720a3823a5132c45971c27094a
     public class CustomMenuItem
     {
         public string Id { get; set; }
@@ -240,10 +195,6 @@ When using TValue with CustomMenuItem in the [MenuTemplates](https://help.syncfu
         var selectedItem = args.Item.Text;
     }
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 8bc75e2704b525720a3823a5132c45971c27094a
 ```
 
 ![Blazor MenuBar with Self-Referential Data with CustomMenuItem TValue in MenuTemplate](./images/blazor-menubar-self-referential-data.png)
