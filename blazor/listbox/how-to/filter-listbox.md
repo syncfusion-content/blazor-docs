@@ -17,11 +17,7 @@ This example demonstrates how to filter Syncfusion ListBox data based on input f
 @using Syncfusion.Blazor.Data
 
 <label for="filter">Enter Text: </label>
-<<<<<<< HEAD
-<input type="text" id="filterTextBox" @oninput="FilterList" placeholder="Enter text to filter" />
-=======
 <input type="text" id="filterTextBox" id="filter" @oninput="FilterList" placeholder="Enter text to filter"/>
->>>>>>> 8bc75e2704b525720a3823a5132c45971c27094a
 <SfListBox @ref="ListBoxRef" TValue="string[]" DataSource="@Vehicles" TItem="VehicleData">
     <ListBoxFieldSettings Text="Text" Value="Id" />
 </SfListBox>
@@ -54,13 +50,7 @@ This example demonstrates how to filter Syncfusion ListBox data based on input f
     
 }
 ```
-<<<<<<< HEAD
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LthJMjgtfQYiRtee?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Adding Items in Blazor ListBox](./../images/blazor-listbox-filter.png)
-=======
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LthJMjgtfQYiRtee?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Adding Items in Blazor ListBox](./../images/blazor-listbox-filter.png)
->>>>>>> 8bc75e2704b525720a3823a5132c45971c27094a
