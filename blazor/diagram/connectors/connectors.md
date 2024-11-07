@@ -133,7 +133,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
         connector.ID = RandomId();
         connector.SourcePoint = new DiagramPoint { X = 100, Y = 100 };
         connector.TargetPoint = new DiagramPoint { X = 200, Y = 100 };
-        await diagram.AddDiagramElements(new DiagramObjectCollection<NodeBase>() { connector });
+        await diagram.AddDiagramElementsAsync(new DiagramObjectCollection<NodeBase>() { connector });
 
     }
     internal string RandomId()
@@ -152,9 +152,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ![Clonning Node](../images/CloneConnector.gif)
 ## How to add connector with annotations at runtime
 
-You can add connector with annotation at runtime in the diagram component by using the [AddDiagramElements](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_AddDiagramElements_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) method.
+You can add connector with annotation at runtime in the diagram component by using the [AddDiagramElementsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_AddDiagramElementsAsync_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) method.
 
-The following code explains how to add an connector with annotation  at runtime by using `AddDiagramElements` method.
+The following code explains how to add an connector with annotation  at runtime by using `AddDiagramElementsAsync` method.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -200,7 +200,7 @@ The following code explains how to add an connector with annotation  at runtime 
             },
         };
         NodeCollection.Add(NewConnector);
-       await Diagram.AddDiagramElements(NodeCollection);
+       await Diagram.AddDiagramElementsAsync(NodeCollection);
     }
 }
 ```
@@ -393,13 +393,13 @@ The following code example explains how to change the connector properties.
         Diagram.BeginUpdate();
         Diagram.Connectors[0].SourcePoint.X = 50;
         Diagram.Connectors[0].SourcePoint.Y = 50;
-        Diagram.EndUpdate();
+        Diagram.EndUpdateAsync();
     }
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/ActionofConnectors/UpdateConnectorAtRunTime)
 
-N> BeginUpdate and EndUpdate methods allow you to stop the continuous update of control and resume it finally.
+N> BeginUpdate and EndUpdateAsync methods allow you to stop the continuous update of control and resume it finally.
 
 ## Connections
 
