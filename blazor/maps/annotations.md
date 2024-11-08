@@ -132,15 +132,15 @@ Multiple annotations can be added to the Maps by adding multiple [MapsAnnotation
     <MapsAnnotations>
         <MapsAnnotation X="0%" Y="50%">
             <ContentTemplate>
-                <div>
-                    <img style="height: 30px; width: 40px" src='src/maps/images/wheel.png'>
-                </div>
+               <div>
+                   <div id="first"><h1>Maps</h1></div>
+               </div>
             </ContentTemplate>
         </MapsAnnotation>
-        <MapsAnnotation X="20%" Y="10%" ZIndex= "-1" VerticalAlignment="AnnotationAlignment.Center" HorizontalAlignment="AnnotationAlignment.Center">
+        <MapsAnnotation ZIndex= "-1" HorizontalAlignment="AnnotationAlignment.Center">
             <ContentTemplate>
                 <div>
-                    <div id="first"><h1>Maps</h1></div>
+                    <div id="second"><h1>Maps-Annotation</h1></div>
                 </div>
             </ContentTemplate>
         </MapsAnnotation>
