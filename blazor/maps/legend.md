@@ -497,11 +497,11 @@ The following properties and components are available to customize the toggle op
 @code{
     public class PopulationDetail
     {
-        public string Name;
-        public double Population;
-        public double Density;
-        public bool LegendVisibility;
-        public string Color;
+        public string Name { get; set; }
+        public double Population { get; set; }
+        public double Density { get; set; }
+        public bool LegendVisibility { get; set; }
+        public string Color { get; set; }
     };
     private List<PopulationDetail> populationDetails = new List<PopulationDetail> {
         new PopulationDetail
