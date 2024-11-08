@@ -286,7 +286,7 @@ In-order to define each field in the respective axis, the following basic proper
     protected override void OnInitialized()
     {
         this.dataSource = ProductDetails.GetProductData().ToList();
-        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section for more details.
+        //Bind the data source collection here. Refer [Assigning sample data to the pivot table](https://blazor.syncfusion.com/documentation/pivot-table/getting-started#assigning-sample-data-to-the-blazor-pivot-table) section for more details.
     }
 }
 
@@ -295,7 +295,7 @@ In-order to define each field in the respective axis, the following basic proper
 
 ## Applying formatting to a value field
 
-Formatting defines a way in which values should be displayed. For example, format **"C"** denotes the values should be displayed in currency pattern. To do so, define the [PivotViewFormatSetting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFilterSetting.html) class with its [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Name) and [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Format) properties and add it to [PivotViewFormatSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFilterSettings.html). In this illustration, the [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Name) property is set as **Amount**, a field from value section and its format is set as currency. Likewise, we can set format for other value fields as well and add it to [PivotViewFormatSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFilterSettings.html).
+Formatting defines a way in which values should be displayed. For example, format **"C"** denotes the values should be displayed in currency pattern. To do so, define the [PivotViewFormatSetting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_FormatSettings) class with its [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Name) and [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Format) properties and add it to [PivotViewFormatSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_FormatSettings). In this illustration, the [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Name) property is set as **Amount**, a field from value section and its format is set as currency. Likewise, we can set format for other value fields as well and add it to [PivotViewFormatSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_FormatSettings).
 
 N> Only fields from value section, which is in the form of numeric data values are applicable for formatting.
 
@@ -327,7 +327,7 @@ N> Only fields from value section, which is in the form of numeric data values a
     protected override void OnInitialized()
     {
         this.dataSource = ProductDetails.GetProductData().ToList();
-        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section for more details.
+        //Bind the data source collection here. Refer [Assigning sample data to the pivot table](https://blazor.syncfusion.com/documentation/pivot-table/getting-started#assigning-sample-data-to-the-blazor-pivot-table) section for more details.
     }
 }
 
@@ -370,7 +370,7 @@ The field list allows to add or remove fields and also rearrange the fields betw
     protected override void OnInitialized()
     {
         this.dataSource = ProductDetails.GetProductData().ToList();
-        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section for more details.
+        //Bind the data source collection here. Refer [Assigning sample data to the pivot table](https://blazor.syncfusion.com/documentation/pivot-table/getting-started#assigning-sample-data-to-the-blazor-pivot-table) section for more details.
     }
 }
 
@@ -411,7 +411,7 @@ The grouping bar feature automatically populates fields from the bound data sour
     protected override void OnInitialized()
     {
         this.dataSource = ProductDetails.GetProductData().ToList();
-        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section for more details.
+        //Bind the data source collection here. Refer [Assigning sample data to the pivot table](https://blazor.syncfusion.com/documentation/pivot-table/getting-started#assigning-sample-data-to-the-blazor-pivot-table) section for more details.
     }
 }
 
@@ -454,7 +454,7 @@ The filter axis contains collection of fields that would act as master filter ov
     protected override void OnInitialized()
     {
         this.dataSource = ProductDetails.GetProductData().ToList();
-        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section for more details.
+        //Bind the data source collection here. Refer [Assigning sample data to the pivot table](https://blazor.syncfusion.com/documentation/pivot-table/getting-started#assigning-sample-data-to-the-blazor-pivot-table) section for more details.
     }
 }
 
@@ -503,7 +503,7 @@ The calculated field feature allows user to insert or add a new calculated field
     protected override void OnInitialized()
     {
         this.dataSource = ProductDetails.GetProductData().ToList();
-        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section for more details.
+        //Bind the data source collection here. Refer [Assigning sample data to the pivot table](https://blazor.syncfusion.com/documentation/pivot-table/getting-started#assigning-sample-data-to-the-blazor-pivot-table) section for more details.
     }
 }
 

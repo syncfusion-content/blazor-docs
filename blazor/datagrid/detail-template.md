@@ -210,7 +210,7 @@ In the following sample, a datagrid component is rendered as custom component us
 
 ## Expand by external button
 
-By default, detail rows render in collapsed state. You can expand a detail row by invoking the `Expand` method using the external button.
+By default, detail rows render in collapsed state. You can expand a detail row by invoking the `ExpandAllDetailRowAsync` method using the external button.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -321,13 +321,13 @@ By default, detail rows render in collapsed state. You can expand a detail row b
 
     public void BtnClick()
     {
-        this.GridObj.DetailExpandAll();
+        this.GridObj.ExpandAllDetailRowAsync();
     }
 }
 ```
 
-N> * You can expand all the rows by using `ExpandAll` method.
-<br/> * If you want to expand all the rows at initial DataGrid rendering, then use `ExpandAll` method in [dataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event of the DataGrid.
+N> * You can expand all the rows by using [ExpandAllDetailRowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExpandAllDetailRowAsync) method.
+<br/> * If you want to expand all the rows at initial DataGrid rendering, then use [ExpandAllDetailRowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExpandAllDetailRowAsync) method in [dataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event of the DataGrid.
 
 ## Expand or collapse specific detail template row
 
