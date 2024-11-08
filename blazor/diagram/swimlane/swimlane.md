@@ -9,7 +9,7 @@ documentation: ug
 
 # Swimlane in Blazor Diagram Component
 
-A [Swimlane](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Swimlane.html) is a type of diagram nodes that is used to visualize the connection between a business process and its responsible department. It emphasizes logical relationships among activities, making it easier to understand the dynamics of the process and the associated departmental responsibilities.
+A [Swimlane](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Swimlane.html) is a type of diagram node that is used to visualize the connection between a business process and its responsible department. It emphasizes logical relationships among activities, making it easier to understand the dynamics of the process and the associated departmental responsibilities.
 
 ![Swimlane Content](./Swimlane-images/Swimlane_Default.PNG)
 
@@ -76,7 +76,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 The Swimlane Header was the primary element for swimlanes. The [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Swimlane.html#Syncfusion_Blazor_Diagram_Swimlane_Header) property of swimlane allows you to define its textual description and to customize its appearance.
 
->Note: By using this header, swimlane interactions such as selection, dragging, and other functionalities will be performed.
+>Note: By using this header, swimlane interactions such as selection, dragging, and other functionalities can be performed.
 
 The following code example explains how to define the swimlane header.
 
@@ -273,7 +273,7 @@ The diagram provides support to edit swimlane headers at runtime. You can achiev
 
 ## Orientation
 
-The orientation of swimlane can be customized with the [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Swimlane.html#Syncfusion_Blazor_Diagram_Swimlane_Orientation) property of the swimlane.
+The orientation of the swimlane can be customized using the [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Swimlane.html#Syncfusion_Blazor_Diagram_Swimlane_Orientation) property of the swimlane.
 
 >Note: The swimlane orientation is set to horizontal by default.
 
