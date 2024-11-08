@@ -31,7 +31,7 @@ The [ShapeSelectionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
     </MapsZoomSettings>
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
-		    <MapsLayerSelectionSettings Enable="true">
+            <MapsLayerSelectionSettings Enable="true" Fill="Green"></MapsLayerSelectionSettings>
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
@@ -40,7 +40,7 @@ The [ShapeSelectionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
     SfMaps maps;
     public async Task ShapeSelectAsync()
     {
-        await maps.ShapeSelectionAsync(0, "Argentina", "Argentina");
+         await maps.ShapeSelectionAsync(0, "name", "Argentina");
     }
 }
 ```
