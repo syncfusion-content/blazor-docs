@@ -23,7 +23,7 @@ By using the `ContentTemplate` property of [MapsAnnotation](https://help.syncfus
         <MapsAnnotation X="0%" Y="50%">
             <ContentTemplate>
                 <div>
-                    <img style="height: 30px; width: 40px" src='src/maps/images/wheel.png'>
+                    <img style="height: 30px; width: 40px" src='https://blazor.syncfusion.com/demos/_content/blazor_server_common_net8/images/maps/wheel.png'>
                 </div>
             </ContentTemplate>
         </MapsAnnotation>
