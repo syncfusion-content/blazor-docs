@@ -117,7 +117,7 @@ The [ZoomByPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Map
 ```cshtml
 @using Syncfusion.Blazor.Maps
 
-<button @onclick="ZoomByPosition">Print</button>
+<button @onclick="ZoomByPosition">ZoomByPosition</button>
 <SfMaps @ref="maps">
     <MapsZoomSettings Enable="true">
     </MapsZoomSettings>
@@ -153,7 +153,7 @@ The [ZoomToCoordinates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 ```cshtml
 @using Syncfusion.Blazor.Maps
 
-<button @onclick="ZoomToCoordinates">Print</button>
+<button @onclick="ZoomToCoordinates">ZoomToCoordinates</button>
 <SfMaps @ref="maps">
     <MapsZoomSettings Enable="true">
     </MapsZoomSettings>
