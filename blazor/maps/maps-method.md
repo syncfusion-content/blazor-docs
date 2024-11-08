@@ -66,7 +66,7 @@ The [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMap
     SfMaps maps;
     public void Refresh()
     {
-        await maps.Refresh();
+       maps.Refresh();
     }
 }
 ```
