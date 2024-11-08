@@ -170,7 +170,7 @@ The following code illustrates how to ungroup at runtime.
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Group/UnGroup)
 ### How to clone the group of node at runtime
-[Clone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Clone) is a virtual method of the node that is used to create a copy of a diagram object. After cloning, we need to set the ID for cloned nodes. The following code demonstrates how to clone the group of nodes during runtime.
+[Clone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Clone) is a virtual method of the node that is used to create a copy of a diagram object. After cloning, you need to set the ID for the cloned nodes. The following code demonstrates how to clone a group of nodes during runtime.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
@@ -384,7 +384,7 @@ The following code illustrates how a node group is added at runtime.
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Group/AddGroupAtRunTime)
-* Also, you can add the child to the node group through [AddChild](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_AddChild_Syncfusion_Blazor_Diagram_NodeGroup_Syncfusion_Blazor_Diagram_NodeBase_) method. The following code illustrates how to add child to the existing node group through AddChild method.
+* Also, you can add the child to the node group through the [AddChild](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_AddChild_Syncfusion_Blazor_Diagram_NodeGroup_Syncfusion_Blazor_Diagram_NodeBase_) method. The following code illustrates how to add child to the existing node group through the AddChild method.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -546,7 +546,7 @@ You can change the appearance of the node group similar to node. For more inform
 
 ## Interact with the node group
 
-You can edit the node group and its children at runtime. You can interact with the nodegroup as like the node interaction like resize, rotate and drag. For more information about node interaction, refer to [Interaction](https://blazor.syncfusion.com/documentation/diagram/nodes/interaction).
+You can edit the node group and its children at runtime. You can interact with the node group similar to node interactions like resize, rotate, and drag. For more information about node interaction, refer to [Interaction](https://blazor.syncfusion.com/documentation/diagram/nodes/interaction).
 
 ### Selecting a NodeGroup
 
