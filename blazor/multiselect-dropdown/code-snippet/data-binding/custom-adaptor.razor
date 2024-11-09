@@ -1,40 +1,25 @@
-
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor.DropDowns
-<SfAutoComplete TValue="string" Query="RemoteDataQuery" TItem="OrdersDetails" >
-    <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor" ></SfDataManager>
-    <AutoCompleteFieldSettings Value="OrderID"></AutoCompleteFieldSettings>
-</SfAutoComplete>
+<SfMultiSelect TValue="string[]" TItem="Orders">
+    <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
+    <MultiSelectFieldSettings Value="CustomerID"></MultiSelectFieldSettings>
+</SfMultiSelect>
 
 @code{
 
-    public Query RemoteDataQuery = new Query().Take(50).RequiresCount();
-
-    public class OrdersDetails
+    public class Orders
     {
+        public Orders() { }
+        public Orders(int OrderID, string CustomerID)
+        {
+            this.OrderID = OrderID;
+            this.CustomerID = CustomerID;
+        }
         public int OrderID { get; set; }
         public string CustomerID { get; set; }
-        // Example static method to get all records
-        public static List<OrdersDetails> GetAllRecords()
-        {
-            var records = new List<OrdersDetails>();
-            for (int i = 1; i <= 250; i++)
-            {
-                records.Add(new OrdersDetails
-                {
-                    OrderID = i,
-                    CustomerID = $"Customer {i}"
-                });
-            }
-            return records;
-        }
     }
     public class CustomAdaptor : DataAdaptor
     {
-        static readonly HttpClient client = new HttpClient();
         public static List<OrdersDetails> order = OrdersDetails.GetAllRecords();
-        public override async Task<object> ReadAsync(DataManagerRequest dm, string key = null)
+        public override object Read(DataManagerRequest dm, string key = null)
         {
             IEnumerable<OrdersDetails> DataSource = order;
             if (dm.Search != null && dm.Search.Count > 0)
