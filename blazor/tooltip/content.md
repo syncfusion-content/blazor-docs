@@ -13,9 +13,7 @@ A text or a piece of information assigned to the Tooltip's `Content` property wi
 
 ##  Displaying dynamic HTML Content
 
-Any type of formatted content can be displayed within the Tooltip by default. To enhance the Tooltip layout or create a custom visualized element, use the `<ContentTemplate>` tag to define the structure.
-
-Refer to the following code example to add dynamic HTML content to the Tooltip. Use @(MarkupString) to render HTML content dynamically.
+By default, the Tooltip can show any kind of formatted content. To improve its layout or create a custom visual element, utilize the `<ContentTemplate>` tag to establish the desired structure. You can also use @(MarkupString) to dynamically render HTML content.
 
 ```cshtml
 @using Syncfusion.Blazor.Popups
@@ -49,9 +47,9 @@ Refer to the following code example to add dynamic HTML content to the Tooltip. 
 
 ## Template in Blazor Tooltip Component
 
-The Tooltip's Template property allows you to fully customize the layout or add any custom elements within the Tooltip. You can include any content or HTML elements as Tooltip content by defining them in the `<ContentTemplate>` tag of the Tooltip component.
+The Tooltip's Template property enables you to completely customize the layout and incorporate custom elements into the Tooltip. You can insert any content or HTML elements as Tooltip content by specifying them within the `<ContentTemplate>` tag of the Tooltip component.
 
-Refer to the following code example to embed an HTML template within the Tooltip.
+Check out the following code example to see how to include an HTML template inside the Tooltip.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons;
