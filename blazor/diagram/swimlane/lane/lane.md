@@ -10,15 +10,15 @@ documentation: ug
 
 # Lane in Blazor Diagram Component
 
-A [Lane](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Lane.html) is a functional unit or a responsible department of a business process that helps to map a process within the functional unit or in between other functional units.
+A [Lane](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Lane.html) is a functional unit or a responsible department of a business process that helps to map a process within the functional unit or between other functional units.
 
-The number of lanes can be added to swimlane and rendered in the diagram. The lanes are automatically stacked inside swimlane based on the order they are added.
+The number of lanes can be added to a swimlane and rendered in the diagram. The lanes are automatically stacked inside the swimlane based on the order they are added.
 
 ## Create an empty lane
 
-* You can create the [Lane](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Lane.html) and add it to the [Lanes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Swimlane.html#Syncfusion_Blazor_Diagram_Swimlane_Lanes) collection of the Swimlane.
+* You can create a [Lane](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Lane.html) and add it to the [Lanes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Swimlane.html#Syncfusion_Blazor_Diagram_Swimlane_Lanes) collection of the Swimlane.
 
->Note: For the Horizontal Swimlane, you must set the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneChild.html#Syncfusion_Blazor_Diagram_SwimlaneChild_Height) of the Lane. For the Vertical Swimlane, you must set [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneChild.html#Syncfusion_Blazor_Diagram_SwimlaneChild_Width) of the Lane.
+> Note: For a Horizontal Swimlane, you must set the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneChild.html#Syncfusion_Blazor_Diagram_SwimlaneChild_Height) of the Lane. For a Vertical Swimlane, you must set the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneChild.html#Syncfusion_Blazor_Diagram_SwimlaneChild_Width) of the Lane.
 
 The following code example explains how to define a swimlane with lane.
 
@@ -81,9 +81,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Create Lane Header and Header customization
 
-* The [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Lane.html#Syncfusion_Blazor_Diagram_Lane_Header) property of the lane allows you to textually describe the lane and to customize the appearance of the description.
-* The size of the lane header can be controlled by using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneChild.html#Syncfusion_Blazor_Diagram_SwimlaneChild_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneChild.html#Syncfusion_Blazor_Diagram_SwimlaneChild_Height) properties of the header.
-* The appearance of the lane header can be set by using the [Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneHeader.html#Syncfusion_Blazor_Diagram_SwimlaneHeader_Style) property.
+* The [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Lane.html#Syncfusion_Blazor_Diagram_Lane_Header) property of a lane allows you to textually describe the lane and customize the appearance of the description.
+* The size of the lane header can be controlled using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneChild.html#Syncfusion_Blazor_Diagram_SwimlaneChild_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneChild.html#Syncfusion_Blazor_Diagram_SwimlaneChild_Height) properties of the header.
+* The appearance of the lane header can be set using the [Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneHeader.html#Syncfusion_Blazor_Diagram_SwimlaneHeader_Style) property.
 
 The following code example explains how to define a lane header and its customization.
 
@@ -229,7 +229,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Add and Remove the lane at runtime
 
- You can add and remove the lane at runtime by using the `Add` and `Remove` methods of the [Swimlane.Lanes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Swimlane.html#Syncfusion_Blazor_Diagram_Swimlane_Lanes) Collection. The following code explains how to dynamically add and remove the lane to swimlane.
+ You can add and remove the lane at runtime by using the `Add` and `Remove` methods of the [Swimlane.Lanes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Swimlane.html#Syncfusion_Blazor_Diagram_Swimlane_Lanes) Collection. The following code explains how to dynamically add and remove the lane in a swimlane.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -412,7 +412,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
  * You can resize the individual lane header. While resizing lane, it will maintain 20px distances from the Lane children.
 
- * When a element is resized, the [SizeChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SizeChanging) and [SizeChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SizeChanged) events get triggered.
+ * When an element is resized, the [SizeChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SizeChanging) and [SizeChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SizeChanged) events get triggered.
 
  The following image shows how to select and resize the lane header.
 
