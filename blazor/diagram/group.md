@@ -236,7 +236,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
         (node4 as NodeGroup).Children = array;
         node4.OffsetX += 25;
         node4.OffsetY += 25;
-        await diagram.AddDiagramElements(new DiagramObjectCollection<NodeBase>() { node2, node3, node4 });
+        await diagram.AddDiagramElementsAsync(new DiagramObjectCollection<NodeBase>() { node2, node3, node4 });
     }
 
     internal string RandomId()
@@ -384,7 +384,7 @@ The following code illustrates how a node group is added at runtime.
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Group/AddGroupAtRunTime)
-* Also, you can add the child to the node group through [AddChild](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_AddChild_Syncfusion_Blazor_Diagram_NodeGroup_Syncfusion_Blazor_Diagram_NodeBase_) method. The following code illustrates how to add child to the existing node group through AddChild method.
+* Also, you can add the child to the node group through [AddChildAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_AddChildAsync_Syncfusion_Blazor_Diagram_NodeGroup_Syncfusion_Blazor_Diagram_NodeBase_) method. The following code illustrates how to add child to the existing node group through AddChildAsync method.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -466,7 +466,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
                 }
             }
         };
-        await diagram.AddChild(group as NodeGroup, node);
+        await diagram.AddChildAsync(group as NodeGroup, node);
     }
 }
 ```
