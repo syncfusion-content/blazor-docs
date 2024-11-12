@@ -21,7 +21,7 @@ A node to node connection is one where the connector will move around the node a
 
 ![Connection between Nodes in Blazor Diagram](../images/blazor-diagram-node-connection.gif)
 
-Ports act as the connection points of the node and allows creating connections with only those specific points as shown in the following image.
+Ports act as the connection points of the node and allows creating connections with only those specific points, as shown in the following image.
 
 ![Connection between Ports in Blazor Diagram](../images/blazor-diagram-port-connection.gif)
 
@@ -71,7 +71,7 @@ To create and customize the ports in the Blazor Diagram, refer to the below vide
     }
 }
 ```
->**Note:** Port's Id should not start with numbers or special characters and should not contain special characters such as underscore(_) or space.
+>**Note:** Port's Id should not start with numbers or special characters and should not contain special characters such as underscores(_) or spaces.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ActionofPorts/CreatePorts)
 
@@ -132,7 +132,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 Also, the port can be added at runtime by using the `AddAsync` method. The `await` operator suspends evaluation of the enclosing async method until the asynchronous operation represented by its operand completes.
 
-The following code explains how to add ports to node at runtime by using `AddAsync` method.
+The following code explains how to add ports to node at runtime by using the `AddAsync` method.
 
 ```csharp
 //Method to add port at runtime
@@ -153,7 +153,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to add multiple ports at runtime
 
-Add multiple ports at runtime by using the method `Add` in the port collection. The following code explains how to add two or more ports to node at runtime.
+Add multiple ports at runtime by using the `Add` method in the port collection. The following code explains how to add two or more ports to node at runtime.
 
 The port’s [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_ID) property is used to define the unique ID for the port and it is further used to find the port at runtime. If **ID** is not set, then default **ID** is automatically set.
 
