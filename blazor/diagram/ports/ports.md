@@ -346,12 +346,95 @@ protected override void OnInitialized()
         diagram.BeginUpdate();
         nodes[0].Ports[0].Offset.X = 1;
         nodes[0].Ports[0].Offset.Y = 1;
-        await diagram.EndUpdate();
+        await diagram.EndUpdateAsync();
     }
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ActionofPorts/UpdatePorts)
 
+## How to specify connection direction to port
+
+The [ConnectionDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_ConnectionDirection) property of a port allows users to specify the direction in which a connector should establish a connection. This can be either to the port incoming or from the port outgoing.
+
+The following code example how to set connection direction to port.
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+
+<SfDiagramComponent Width="600px" Height="600px" Nodes="@nodes" Connectors="@connectors" >
+</SfDiagramComponent>
+
+
+@code
+{
+    //Defines Diagram's Nodes collection
+    private DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    //Defines Diagram's Connectors collection
+    private DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+
+    protected override void OnInitialized()
+    {
+        Node node1 = new Node()
+            {
+                ID = "node1",
+                // Position of the node.
+                OffsetX = 450,
+                OffsetY = 200,
+                // Size of the node.
+                Width = 100,
+                Height = 100,
+                Style = new ShapeStyle() { Fill = "#6BA5D7" },
+                Ports = new DiagramObjectCollection<PointPort>()
+                {
+                    new PointPort()
+                    { ID="port1",
+                      Offset = new DiagramPoint() { X = 0, Y = 0 },
+                      Visibility = PortVisibility.Visible,
+                    }
+                }
+            };
+        nodes.Add(node1);
+        Node node2 = new Node()
+            {
+                ID = "node2",
+                // Position of the node.
+                OffsetX = 270,
+                OffsetY = 300,
+                // Size of the node.
+                Style = new ShapeStyle() { Fill = "#6BA5D7" },
+                Width = 100,
+                Height = 100,
+                Ports = new DiagramObjectCollection<PointPort>()
+                {
+                    new PointPort()
+                    { ID="port2",
+                      Offset = new DiagramPoint() { X = 0.5, Y = 0.5 },
+                      Visibility = PortVisibility.Visible,
+                      //Sets the connection direction as Left
+                      ConnectionDirection = PortConnectionDirection.Left
+                    }
+                }
+            };
+        // Add node.
+        nodes.Add(node2);
+        Connector Connector1 = new Connector()
+            {
+                ID = "connector1",
+                // Set the source and target point of the connector.
+                SourceID = "node2",
+                TargetID = "node1",
+                SourcePortID = "port2",
+                TargetPortID = "port1",
+                // Type of the connector segments.
+                Type = ConnectorSegmentType.Orthogonal
+            };
+        connectors.Add(Connector1);
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ActionofPorts/PortDirection)
+
+![Port Connection Direction](../images/PortDirection.gif)
 
 ## How to get InEdges and OutEdges of ports
 
