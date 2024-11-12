@@ -289,7 +289,7 @@ In the below code example, the following things have been done.
 
         private void ValidateRequested(object editContext, ValidationRequestedEventArgs validationEventArgs)
         {
-            HandleValidation(CurrentEditContext.Field("Freight"));
+            HandleValidation(CurrentEditContext.Field("Field"));
         }
 
     }

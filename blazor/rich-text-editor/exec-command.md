@@ -26,7 +26,7 @@ The `ExecuteCommand` methods support following HTML editor commands.
 <td><p>Bold</p></td>
 <td><p>Make the selected content bold.</p></td>
 <td>
-{% highlight cshtml %}
+{% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.Bold); 
 {% endhighlight %}</td>
 </tr>
@@ -35,7 +35,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.Bold);
 <td><p>Italic</p></td>
 <td><p>Apply the italic style to the selected content.</p></td>
 <td>
-{% highlight cshtml %}
+{% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.Italic);
 {% endhighlight %}</td>
 </tr>
@@ -44,7 +44,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.Italic);
 <td><p>Underline</p></td>
 <td><p>Underline the selected content.</p></td>
 <td>
-{% highlight cshtml %}
+{% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.Underline);
 {% endhighlight %}</td>
 </tr>
@@ -53,7 +53,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.Underline);
 <td><p>StrikeThrough</p></td>
 <td><p>Apply single-line strikethrough formatting for the selected content.</p></td>
 <td>
-{% highlight cshtml %}
+{% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.StrikeThrough);
 {% endhighlight %}</td>
 </tr>
@@ -62,7 +62,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.StrikeThrough);
 <td><p>Superscript</p></td>
 <td><p>Makes the selected content as superscript (higher).</p></td>
 <td>
-{% highlight cshtml %}
+{% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.Superscript);
 {% endhighlight %}</td>
 </tr>
@@ -71,7 +71,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.Superscript);
 <td><p>Subscript</p></td>
 <td><p>Makes the selected content as subscript (lower).</p></td>
 <td>
-{% highlight cshtml %}
+{% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.Subscript);
 {% endhighlight %}</td>
 </tr>
@@ -80,7 +80,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.Subscript);
 <td><p>Uppercase</p></td>
 <td><p>Change the selected content to upper case.</p></td>
 <td>
-{% highlight cshtml %}
+{% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.Uppercase);
 {% endhighlight %}</td>
 </tr>
@@ -89,7 +89,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.Uppercase);
 <td><p>Lowercase</p></td>
 <td><p>Change the selected content to lower case.</p></td>
 <td>
-{% highlight cshtml %}
+{% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.Lowercase);
 {% endhighlight %}</td>
 </tr>
@@ -98,7 +98,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.Lowercase);
 <td><p>FontColor</p></td>
 <td><p>Apply the specified font color to the selected content.</p></td>
 <td>
-{% highlight cshtml %}
+{% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.FontColor, "Red");
 {% endhighlight %}</td>
 </tr>
@@ -107,7 +107,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.FontColor, "Red");
 <td><p>FontName</p></td>
 <td><p>Apply the specified font name to the selected content.</p></td>
 <td>
-{% highlight cshtml %}
+{% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.FontName, "Impact");
 {% endhighlight %}</td>
 </tr>
@@ -116,7 +116,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.FontName, "Impact");
 <td><p>FontSize</p></td>
 <td><p>Apply the specified font size to the selected content.</p></td>
 <td>
-{% highlight cshtml %}
+{% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.FontSize, "10pt");
 {% endhighlight %}</td>
 </tr>
@@ -125,7 +125,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.FontSize, "10pt");
 <td><p>BackgroundColor</p></td>
 <td><p>Apply the specified background color to the selected content.</p></td>
 <td>
-{% highlight cshtml %}
+{% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.BackgroundColor, "red");
 {% endhighlight %}</td>
 </tr>
@@ -134,7 +134,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.BackgroundColor, "red");
 <td><p>JustifyCenter</p></td>
 <td><p>Align the content with the centre margin.</p></td>
 <td>
-{% highlight cshtml %}
+{% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.JustifyCenter);
 {% endhighlight %}</td>
 </tr>
@@ -143,7 +143,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.JustifyCenter);
 <td><p>JustifyFull</p></td>
 <td><p>Align the content with justify margin.</p></td>
 <td>
-{% highlight cshtml %}
+{% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.JustifyFull);
 {% endhighlight %}</td>
 </tr>
@@ -152,7 +152,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.JustifyFull);
 <td><p>JustifyLeft</p></td>
 <td><p>Align the content with the left margin.</p></td>
 <td>
-{% highlight cshtml %}
+{% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.JustifyLeft);
 {% endhighlight %}</td>
 </tr>
@@ -161,7 +161,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.JustifyLeft);
 <td><p>JustifyRight</p></td>
 <td><p>Align the content with the margin on the right.</p></td>
 <td>
-{% highlight cshtml %}
+{% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.JustifyRight);
 {% endhighlight %}</td>
 </tr>
@@ -170,7 +170,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.JustifyRight);
 <td><p>CreateLink</p></td>
 <td><p>Creates a hyperlink from a text or image to a specific location in the content.</p></td>
 <td>
-{% highlight cshtml %}
+{% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.CreateLink, new LinkCommandsArgs() { Text = "Links", Url= "http://", Title = "Link"});
 {% endhighlight %}</td>
 </tr>
@@ -179,7 +179,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.CreateLink, new LinkCommandsAr
 <td><p>Indent</p></td>
 <td><p>Allows you to increase the content's indentation level.</p></td>
 <td>
-{% highlight cshtml %}
+{% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.Indent);
 {% endhighlight %}</td>
 </tr>
@@ -188,7 +188,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.Indent);
 <td><p>InsertHTML</p></td>
 <td><p>Insert the HTML content at the current cursor position.</p></td>
 <td>
-{% highlight cshtml %}
+{% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.InsertHTML,"<div>Syncfusion Rich Text Editor</div>");
 {% endhighlight %}</td>
 </tr>
@@ -197,7 +197,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.InsertHTML,"<div>Syncfusion Ri
 <td><p>InsertOrderedList</p></td>
 <td><p>Create a new list item(numbered).</p></td>
 <td>
-{% highlight cshtml %}
+{% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.InsertOrderedList);
 {% endhighlight %}</td>
 </tr>
@@ -206,7 +206,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.InsertOrderedList);
 <td><p>InsertUnorderedList</p></td>
 <td><p>Create a new list item(bulleted).</p></td>
 <td>
-{% highlight cshtml %}
+{% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.InsertUnorderedList);
 {% endhighlight %}</td>
 </tr>
@@ -215,7 +215,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.InsertUnorderedList);
 <td><p>Outdent</p></td>
 <td><p>Allows you to decrease the content's indentation level.</p></td>
 <td>
-{% highlight cshtml %}
+{% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.Outdent);
 {% endhighlight %}</td>
 </tr>
@@ -224,7 +224,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.Outdent);
 <td><p>Redo</p></td>
 <td><p>Allows you to redo your actions. </p></td>
 <td>
-{% highlight cshtml %}
+{% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.Redo);
 {% endhighlight %}</td>
 </tr>
@@ -233,7 +233,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.Redo);
 <td><p>RemoveFormat</p></td>
 <td><p>Remove all formatting styles (such as bold, italic, underline, color, superscript, subscript, and more) from the currently selected text.</p></td>
 <td>
-{% highlight cshtml %}
+{% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.RemoveFormat);
 {% endhighlight %}</td>
 </tr>
@@ -242,7 +242,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.RemoveFormat);
 <td><p>InsertText</p></td>
 <td><p>Text will be inserted at the current cursor position.</p></td>
 <td>
-{% highlight cshtml %}
+{% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.InsertText, "Inserted text");
 {% endhighlight %}</td>
 </tr>
@@ -251,7 +251,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.InsertText, "Inserted text");
 <td><p>InsertImage</p></td>
 <td><p>Insert an image to the current cursor position.</p></td>
 <td>
-{% highlight cshtml %}
+{% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.InsertImage, new ImageCommandsArgs() { Url = "https://ej2.syncfusion.com/javascript/demos/src/rich-text-editor/images/RTEImage-Feather.png", CssClass = "rte-img" });
 {% endhighlight %}</td>
 </tr>
@@ -286,7 +286,7 @@ The `ExecuteCommand` methods support following markdown commands.
 <td><p>Bold</p></td>
 <td><p>Make the selected content bold.</p></td>
 <td>
-{% highlight cshtml %}
+{% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.Bold); 
 {% endhighlight %}</td>
 </tr>
@@ -295,7 +295,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.Bold);
 <td><p>Italic</p></td>
 <td><p>Apply the italic style to the selected content.</p></td>
 <td>
-{% highlight cshtml %}
+{% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.Italic);
 {% endhighlight %}</td>
 </tr>
@@ -304,7 +304,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.Italic);
 <td><p>StrikeThrough</p></td>
 <td><p>Apply single-line strikethrough formatting for the selected content.</p></td>
 <td>
-{% highlight cshtml %}
+{% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.StrikeThrough);
 {% endhighlight %}</td>
 </tr>
@@ -313,7 +313,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.StrikeThrough);
 <td><p>Superscript</p></td>
 <td><p>Makes the selected content as superscript (higher).</p></td>
 <td>
-{% highlight cshtml %}
+{% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.Superscript);
 {% endhighlight %}</td>
 </tr>
@@ -322,7 +322,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.Superscript);
 <td><p>Subscript</p></td>
 <td><p>Makes the selected content as subscript (lower).</p></td>
 <td>
-{% highlight cshtml %}
+{% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.Subscript);
 {% endhighlight %}</td>
 </tr>
@@ -331,7 +331,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.Subscript);
 <td><p>Uppercase</p></td>
 <td><p>Change the selected content to upper case.</p></td>
 <td>
-{% highlight cshtml %}
+{% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.Uppercase);
 {% endhighlight %}</td>
 </tr>
@@ -340,7 +340,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.Uppercase);
 <td><p>Lowercase</p></td>
 <td><p>Change the selected content to lower case.</p></td>
 <td>
-{% highlight cshtml %}
+{% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.Lowercase);
 {% endhighlight %}</td>
 </tr>
@@ -349,7 +349,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.Lowercase);
 <td><p>CreateLink</p></td>
 <td><p>Creates a hyperlink from a text or image to a specific location in the content.</p></td>
 <td>
-{% highlight cshtml %}
+{% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.CreateLink, new LinkCommandsArgs() { Text = "Links", Url= "http://", Title = "Link"});
 {% endhighlight %}</td>
 </tr>
@@ -358,7 +358,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.CreateLink, new LinkCommandsAr
 <td><p>InsertOrderedList</p></td>
 <td><p>Create a new list item(numbered).</p></td>
 <td>
-{% highlight cshtml %}
+{% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.InsertOrderedList);
 {% endhighlight %}</td>
 </tr>
@@ -367,7 +367,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.InsertOrderedList);
 <td><p>InsertUnorderedList</p></td>
 <td><p>Create a new list item(bulleted).</p></td>
 <td>
-{% highlight cshtml %}
+{% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.InsertUnorderedList);
 {% endhighlight %}</td>
 </tr>
@@ -376,7 +376,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.InsertUnorderedList);
 <td><p>Redo</p></td>
 <td><p>Allows you to redo your actions. </p></td>
 <td>
-{% highlight cshtml %}
+{% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.Redo);
 {% endhighlight %}</td>
 </tr>
@@ -385,7 +385,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.Redo);
 <td><p>InsertText</p></td>
 <td><p>Text will be inserted at the current cursor position.</p></td>
 <td>
-{% highlight cshtml %}
+{% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.InsertText, "Inserted text");
 {% endhighlight %}</td>
 </tr>
@@ -394,7 +394,7 @@ await this.RteObj.ExecuteCommandAsync(CommandName.InsertText, "Inserted text");
 <td><p>InsertImage</p></td>
 <td><p>Insert an image to the current cursor position.</p></td>
 <td>
-{% highlight cshtml %}
+{% highlight cshtml %} 
 await this.RteObj.ExecuteCommandAsync(CommandName.InsertImage, new ImageCommandsArgs() { Url = "https://ej2.syncfusion.com/javascript/demos/src/rich-text-editor/images/RTEImage-Feather.png", CssClass = "rte-img" });
 {% endhighlight %}</td>
 </tr>
@@ -410,4 +410,4 @@ await this.RteObj.ExecuteCommandAsync(CommandName.InsertImage, new ImageCommands
 
 ![Execute Command in Markdown Blazor RichTextEditor](./images/blazor-richtexteditor-execute-command-markdown.png)
 
-N> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap5) example to knows how to render and configure the rich text editor tools.
+N> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to knows how to render and configure the rich text editor tools.

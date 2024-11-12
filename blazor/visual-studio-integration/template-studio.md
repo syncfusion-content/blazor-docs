@@ -46,9 +46,9 @@ N> Before use the Syncfusion Blazor Project Template, check whether the Syncfusi
      Choose one of the Syncfusion Blazor application types based on the version of the .NET SDK you are using.
 
     | .NET SDK version | Supported Syncfusion Blazor Application Type |
-    | ---------------- | -------------------------------------------- |
-    | [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0), [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) | Syncfusion Blazor Web App |
-    | [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0), [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0), [.NET 7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0), [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) | Syncfusion Blazor WebAssembly App |
+    | ------------- | ------------- |
+    | [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) | Syncfusion Blazor Web App |
+    | [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0), [.NET 7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0), [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) | Syncfusion Blazor WebAssembly App |
     | [.NET 7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0), [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) | Syncfusion Blazor Server App |
 
     In the **Syncfusion Blazor Web App** application type, you can configure the following options:
@@ -98,7 +98,7 @@ N> Before use the Syncfusion Blazor Project Template, check whether the Syncfusi
 
 6. Click either **Next** or the **Features** tab, and you will see the features listed for the selected controls. You can choose the required features.
 
-7. Click **Next** or the **Configuration** tab to load the Configuration section. You can choose the required (.NET 9.0, .NET 8.0, .NET 7.0, and .NET 6.0), themes, https configuration, localization option, authentication type, Blazor Web App, and Blazor Web Assembly application types.
+7. Click **Next** or the **Configuration** tab to load the Configuration section. You can choose the required (.NET 8.0, .NET 7.0, and .NET 6.0), themes, https configuration, localization option, authentication type, Blazor Web App, and Blazor Web Assembly application types.
 
      Depending on your Syncfusion Blazor Application Type, refer to the table below for supported authentication types.
 
@@ -340,7 +340,7 @@ N> **Note:** Above culture combo box will be enabled in sample output if localiz
 
 #### Blazor Web App
 
-##### Applying Database Migrations and User Registration in the .NET 8.0 and .NET 9.0 Blazor Web App
+##### Applying Database Migrations and User Registration in the .NET 8.0 Blazor Web App
 
 ##### Applying Database Migrations:
 

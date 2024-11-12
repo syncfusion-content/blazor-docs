@@ -251,7 +251,7 @@ Clone is a virtual method of the node that is used to create a copy of a diagram
             groupNode.OffsetX += 25;
             groupNode.OffsetY += 25;
         }
-        diagram.AddDiagramElementsAsync(new DiagramObjectCollection<NodeBase>() { groupNode });
+        diagram.AddDiagramElements(new DiagramObjectCollection<NodeBase>() { groupNode });
         return groupNode.ID;
     }
     public string CloneNode(Node node, bool isChild)
@@ -264,7 +264,7 @@ Clone is a virtual method of the node that is used to create a copy of a diagram
             nodeChild.OffsetX += 25;
             nodeChild.OffsetY += 25;
         }
-        diagram.AddDiagramElementsAsync(new DiagramObjectCollection<NodeBase>() { nodeChild });
+        diagram.AddDiagramElements(new DiagramObjectCollection<NodeBase>() { nodeChild });
         diagram.EndGroupAction();
         return nodeChild.ID;
     }
@@ -278,7 +278,7 @@ Clone is a virtual method of the node that is used to create a copy of a diagram
             connectorChild.SourcePoint = new DiagramPoint() { X = connectorChild.SourcePoint.X + 25, Y = connectorChild.SourcePoint.Y + 25 };
             connectorChild.TargetPoint = new DiagramPoint() { X = connectorChild.TargetPoint.X + 25, Y = connectorChild.TargetPoint.Y + 25 };
         }
-        diagram.AddDiagramElementsAsync(new DiagramObjectCollection<NodeBase>() { connectorChild });
+        diagram.AddDiagramElements(new DiagramObjectCollection<NodeBase>() { connectorChild });
         diagram.EndGroupAction();
         return connectorChild.ID;
     }

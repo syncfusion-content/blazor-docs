@@ -467,7 +467,7 @@ The Maps can be initially scaled to the center value based on the marker distanc
 
 ## Disabling Zoom on Marker Click
 
-Maps typically zoom in when you click or double-click on them. This zooming also occurs when you click on a marker. To prevent zooming when clicking on a marker, you can set [ZoomOnMarkerClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_ZoomOnMarkerClick) to **false** in the [MapsZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html). This setting disables zooming specifically for marker clicks. By default, `ZoomOnMarkerClick` is set to **true**.
+Maps typically zoom in when you click or double-click on them. This zooming also occurs when you click on a marker. To prevent zooming when clicking on a marker, you can set `ZoomOnMarkerClick` to **false** in the `MapsZoomSettings`. This setting disables zooming specifically for marker clicks. By default, `ZoomOnMarkerClick` is set to **true**.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps

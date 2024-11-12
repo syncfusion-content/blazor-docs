@@ -370,11 +370,11 @@ The following code example illustrates how to add assistants to the layout.
 
 ## How to refresh the layout
 
-Diagram allows to refresh the layout at runtime by using the [DoLayoutAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DoLayoutAsync) method. Use the following code example to refresh the layout.
+Diagram allows to refresh the layout at runtime by using the [DoLayout](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DoLayout) method. Use the following code example to refresh the layout.
 
 ```csharp
 //Update the layout at runtime.
-diagram.DoLayoutAsync();
+diagram.DoLayout();
 
 //Here, diagram is instance of SfDiagramComponent.
 ```

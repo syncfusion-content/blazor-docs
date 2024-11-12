@@ -196,7 +196,7 @@ public void UpdateSpacing()
     Diagram.BeginUpdate();
     HorizontalSpacing += 10;
     VerticalSpacing += 10;
-    Diagram.EndUpdateAsync();
+    Diagram.EndUpdate();
 }
 ```
 
@@ -221,7 +221,7 @@ public void UpdateMargin()
     Diagram.BeginUpdate();
     left += 10;
     top += 10;
-    Diagram.EndUpdateAsync();
+    Diagram.EndUpdate();
 }
 ```
 

@@ -268,9 +268,9 @@ Any HTML element can be rendered in the tooltip of the polygon shapes using the 
 
 ## Changing a Polygon Shape to a Line
 
-The rendered polygon shape can be changed to a line shape by setting the [ShapeType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html#Syncfusion_Blazor_Maps_MapsPolygon_ShapeType) property to [LineString](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.PolygonShapeType.html#Syncfusion_Blazor_Maps_PolygonShapeType_LineString).
+The rendered polygon shape can be changed to a line shape by setting the `ShapeType` property to **LineString**.
 
-The following example demonstrates how to customize a line shape on an online map, display a tooltip for the line shape, highlight the line shape, and select the line shape on the map. In this example, latitude and longitude values are extracted from coordinates in a JSON file and assigned to the [Points](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html#Syncfusion_Blazor_Maps_MapsPolygon_Points) property within the [MapsPolygon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsPolygon.html) tag.
+The following example demonstrates how to customize a line shape on an online map, display a tooltip for the line shape, highlight the line shape, and select the line shape on the map. In this example, latitude and longitude values are extracted from coordinates in a JSON file and assigned to the `Points` property within the `MapsPolygon` tag.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -343,6 +343,6 @@ The following example demonstrates how to customize a line shape on an online ma
     }
 }
 ```
-> Note: Refer the content of the JSON file [line.json](https://www.syncfusion.com/downloads/support/directtrac/general/ze/line140125043) here.
+> Note: Refer the content of the JSON file [line.json here](https://www.syncfusion.com/downloads/support/directtrac/general/ze/line140125043).
 
 ![Blazor Maps with line shape](./images/Polygon/blazor-map-line-shape-on-tile-images.gif)
