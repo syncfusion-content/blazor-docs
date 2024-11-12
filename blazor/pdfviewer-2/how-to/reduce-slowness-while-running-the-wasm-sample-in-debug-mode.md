@@ -13,4 +13,4 @@ You may experience performance issues when running the WASM sample in Debug mode
 
 ![Mono Debugger](../../pdfviewer-2/images/mono_debugger.png)
 
-Disabling the Mono Debugger should help resolve the performance issues and provide a smoother experience while debugging your WebAssembly project..
+Disabling the Mono Debugger should help resolve the performance issues and provide a smoother experience while debugging your WebAssembly project.
