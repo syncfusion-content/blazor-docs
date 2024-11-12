@@ -118,7 +118,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 You can add node with annotation at runtime in the diagram component by using the [AddDiagramElements](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_AddDiagramElements_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) method.
 
-The following code explains how to add an node with annotation at runtime by using `AddDiagramElements` method.
+The following code explains how to add an node with annotation  at runtime by using `AddDiagramElementsAsync` method.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -175,7 +175,7 @@ The following code explains how to add an node with annotation at runtime by usi
             },
         };
         NodeCollection.Add(NewNode);
-       await diagram.AddDiagramElements(NodeCollection);
+       await diagram.AddDiagramElementsAsync(NodeCollection);
     }
 }
 ```
@@ -300,7 +300,7 @@ public void RemoveNodes()
         node.ID = RandomId();
         node.OffsetX += 25;
         node.OffsetY += 25;
-        await diagram.AddDiagramElements(new DiagramObjectCollection<NodeBase>() { node });
+        await diagram.AddDiagramElementsAsync(new DiagramObjectCollection<NodeBase>() { node });
     }
 
     internal string RandomId()
@@ -358,13 +358,13 @@ The following code example explains how to change the node properties.
         Diagram.BeginUpdate();
         Diagram.Nodes[0].Width = 50;
         Diagram.Nodes[0].Height = 50;
-        await Diagram.EndUpdate();
+        await Diagram.EndUpdateAsync();
     }
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ActionsofNodes/UpdateNode)
 
-N> [BeginUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_BeginUpdate) and [EndUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_EndUpdate) methods allow you to temporarily stop the continuous update of the control and resume it once the updates are complete.
+N> [BeginUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_BeginUpdate) and [EndUpdateAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_EndUpdateAsync) methods allow you to stop the continuous update of control and resume it finally.
 
 ## See Also
 
