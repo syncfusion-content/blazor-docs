@@ -1,0 +1,43 @@
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.DropDowns
+
+<SfMultiSelect TValue="string[]" @ref="multiObj" TItem="Country" Placeholder="e.g. Australia" OpenOnClick="false" DataSource="country" AllowFiltering="true">
+    <MultiSelectFieldSettings Text="Name" Value="Code"></MultiSelectFieldSettings>
+    <MultiSelectEvents TValue="string[]" TItem="Country" Filtering="OnFilter"></MultiSelectEvents>
+</SfMultiSelect>
+
+@code {
+
+SfMultiSelect<string[], Country> multiObj { get; set; }
+
+public class Country
+{
+public string Name { get; set; }
+
+public string Code { get; set; }
+}
+
+List<Country> country = new List<Country>
+{
+new Country() { Name = "Australia", Code = "AU" },
+new Country() { Name = "Bermuda", Code = "BM" },
+new Country() { Name = "Canada", Code = "CA" },
+new Country() { Name = "Cameroon", Code = "CM" },
+new Country() { Name = "Denmark", Code = "DK" }
+};
+
+private async Task OnFilter(FilteringEventArgs args)
+{
+args.PreventDefaultAction = true;
+// load overall data when search key empty.
+if (args.Text == "") await multiObj.FilterAsync(multiObj.DataSource);
+// restrict the remote request until search key contains 3 characters.
+else if (args.Text.Length < 3) { return; }
+else
+{
+var query = new Query().Where(new WhereFilter() { Field = "Name", value = args.Text, Operator = "contains", IgnoreAccent = true, IgnoreCase = true });
+query = !string.IsNullOrEmpty(args.Text) ? query : new Query();
+await multiObj.FilterAsync(multiObj.DataSource, query);
+}
+}
+}

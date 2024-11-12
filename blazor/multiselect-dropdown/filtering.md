@@ -23,61 +23,51 @@ The following code demonstrates the filtering functionality with local data in t
 
 ![Filtering in Blazor MultiSelect DropDown](./images/blazor-multiselect-dropdown-filtering.png)
 
-## Custom Filtering
+## Remote data
 
-The MultiSelect component filter queries can be customized. You can also use your own filter libraries to filter data like Fuzzy search.
+For Remote data, each key press, filter action request is made at the server end.
 
-```cshtml
-@using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor.DropDowns
+The below code demonstrates the filtering functionality with [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) in the MultiSelect component with help of [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html) property.
 
-<SfMultiSelect TValue="string[]" @ref="mulObj" TItem="Country" Placeholder="e.g. Australia" DataSource="@Countries" AllowFiltering="true">
-    <MultiSelectFieldSettings Text="Name" Value="Code"></MultiSelectFieldSettings>
-    <MultiSelectEvents TValue="string[]" TItem="Country" Filtering="OnFilter"></MultiSelectEvents>
-</SfMultiSelect>
+{% highlight cshtml %}
 
+{% include_relative code-snippet/filtering/remote-data.razor %}
 
-@code {
+{% endhighlight %}
 
-    SfMultiSelect<string[], Country> mulObj { get; set; }
+## Filter type
 
-    public class Country
-    {
-        public string Name { get; set; }
+You can use [FilterType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_FilterType) property to specify on which filter type needed to be considered on the search action of the component. The available `FilterType` and its supported data types are:
 
-        public string Code { get; set; }
-    }
+FilterType     | Description
+------------ | -------------
+  [StartsWith](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FilterType.html#Syncfusion_Blazor_DropDowns_FilterType_StartsWith)       | Checks whether a value begins with the specified value.
+  [EndsWith](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FilterType.html#Syncfusion_Blazor_DropDowns_FilterType_EndsWith)     | Checks whether a value ends with specified value.
+  [Contains](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FilterType.html#Syncfusion_Blazor_DropDowns_FilterType_Contains)      | Checks whether a value contained with specified value.
 
-    List<Country> Countries = new List<Country>
-    {
-        new Country() { Name = "Australia", Code = "AU" },
-        new Country() { Name = "Bermuda", Code = "BM" },
-        new Country() { Name = "Canada", Code = "CA" },
-        new Country() { Name = "Cameroon", Code = "CM" },
-        new Country() { Name = "Denmark", Code = "DK" }
-    };
+In the following example, `EndsWith` filter type has been mapped to the `FilterType` property.
 
-    List<Country> CountriesFiltered = new List<Country>
-    {
-        new Country() { Name = "France", Code = "FR" },
-        new Country() { Name = "Finland", Code = "FI" },
-        new Country() { Name = "Germany", Code = "DE" },
-        new Country() { Name = "Greenland", Code = "GL" }
-    };
+{% highlight cshtml %}
 
-    private async Task OnFilter(FilteringEventArgs args)
-    {
-        args.PreventDefaultAction = true;
-        var query = new Query().Where(new WhereFilter() { Field = "Name", Operator = "contains", value = args.Text, IgnoreCase = true });
+{% include_relative code-snippet/filtering/filter-type.razor %}
 
-        query = !string.IsNullOrEmpty(args.Text) ? query : new Query();
+{% endhighlight %}
 
-        await mulObj.FilterAsync(CountriesFiltered, query);
-    }
-}
-```
+![Blazor MultiSelect with Filter Type](./images/filtering/blazor_MultiSelect_filter-type.png)
 
-## FilterBarPlaceholder
+## Case sensitive filtering
+
+The Data items can be filtered with or without case sensitivity using the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html). This can be done by passing the fourth optional parameter [IgnoreCase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_IgnoreCase) of the [Where clause](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html#Syncfusion_Blazor_Data_Query_Where_Syncfusion_Blazor_Data_WhereFilter_).
+
+The following example shows how to perform case-sensitive filter.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/filtering/case-sentitive.razor %}
+
+{% endhighlight %}
+
+## Filter Textbox Placeholder 
 
 Accepts the value to be displayed as a watermark text on the filter bar. [FilterBarPlaceholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_FilterBarPlaceholder) is applicable when [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_AllowFiltering) is set as `true` in the checkbox mode. `FilterBarPlaceholder` is depends on `AllowFiltering` in checkbox mode.
 
@@ -89,4 +79,27 @@ Accepts the value to be displayed as a watermark text on the filter bar. [Filter
 
 ![Blazor MultiSelect DropDown with FilterBarPlaceholder property](./images/filtering/blazor_multiselect_filterBarPlaceholder-property.png)
 
+## Custom Filtering
+
+The MultiSelect component filter queries can be customized. You can also use your own filter libraries to filter data like Fuzzy search.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/filtering/custom-filtering.razor %}
+
+{% endhighlight %}
+
+## Minimum filter length
+
+When filtering the list items, you can set the limit for character count to raise a remote request and fetch filtered data on the MultiSelect. This can be done by manual validation by using the [Filtering event arguments](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FilteringEventArgs.html#Syncfusion_Blazor_DropDowns_FilteringEventArgs_Text) within the [Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectEvents-2.html#Syncfusion_Blazor_DropDowns_MultiSelectEvents_2_Filtering) event handler.
+
+In the following example, the remote request does not fetch the search data until the search key contains three characters.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/filtering/minimum-filter-length.razor %}
+
+{% endhighlight %}
+
+![Blazor MultiSelect with Minimum filter length](./images/filtering/blazor_MultiSelect_minimum-filter-length.gif)
 
