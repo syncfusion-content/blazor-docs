@@ -35,9 +35,13 @@ If you select an Interactive render mode as WebAssembly or Auto, you can install
 N> If you select an Interactive render mode as `WebAssembly or Auto`, you can install the NuGet package in the client-side project to add component in Web App.
 * [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor)
 
+On the Syncfusion side, we are using SkiaSharp.Views.Blazor version 2.88.8. Please make sure to reference this version as well.
+
 ![SkiaSharp Views Blazor](gettingstarted-images/skia-sharp-image.png)
 
 ## Add the following PropertyGroup and ItemGroup
+
+This configuration is required only for .NET 9 projects. Please ensure you use this setup for the corresponding version.
 
 Interactive render mode as WebAssembly or Auto, need to add the following property group and item group in client project.
 
@@ -50,7 +54,7 @@ Interactive render mode as WebAssembly or Auto, need to add the following proper
 </PropertyGroup>
 
 <ItemGroup>
-    <NativeFileReference Include="$(SkiaSharpStaticLibraryPath)\2.0.23\*.a" />
+    <NativeFileReference Include="$(SkiaSharpStaticLibraryPath)\3.1.34\st\*.a" />
 </ItemGroup>
 
 {% endhighlight %}
