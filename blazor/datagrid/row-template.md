@@ -37,6 +37,7 @@ The example below shows how to set up a Row Template in Blazor DataGrid to displ
 <RowTemplate Context="emp">
 @{
 var employee = (emp as EmployeeData);
+
 <td class="photo">
 <img src="@($" Scripts/Images/Employees/{employee.EmployeeID}.png")" alt="@employee.EmployeeID" />
 </td>
@@ -218,6 +219,7 @@ Here is an example of how to define a global formatting function for a date colu
 <RowTemplate Context="emp">
 @{
 var employee = (emp as EmployeeData);
+
 <td class="photo">
 <img src="@($" Scripts/Images/Employees/{employee.EmployeeID}.png")" alt="@employee.EmployeeID" />
 </td>
@@ -411,6 +413,7 @@ Here is an example that demonstrates rendering Syncfusion controls within a row 
 @{
 var data = (OrderData)order;
 }
+
 <td class="rows">
 <SfChip Width="50">
 <ChipItems>
