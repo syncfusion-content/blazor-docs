@@ -11,8 +11,8 @@ documentation: ug
 
 ## Text Change event
 
-* While editing the node's or connector's annotation, the following event can be used to do the customization.
-* When the node's or connector's annotation is changed in the diagram, this event is getting triggered. 
+* While editing a node's or connector's annotation, the following event can be used to do the customization.
+* When a node's or connector's annotation is changed in the diagram, this event is getting triggered. 
 
 |Event Name|Arguments|Description|
 |------------|-----------|------------------------|

@@ -21,7 +21,7 @@ Diagram provides support to add different kind of nodes. They are as follows:
 
 ## Text node
 
-The Diagram allows you to add texts as [TextShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextShape.html). The [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextShape.html#Syncfusion_Blazor_Diagram_TextShape_Content) property defines the text that is to be added. [Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Style) of the node is used as [TextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html) to customize the appearance of the text.
+The diagram allows you to add texts as [TextShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextShape.html). The [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextShape.html#Syncfusion_Blazor_Diagram_TextShape_Content) property defines the text that is to be added. The [Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Style) of the node is used as [TextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html) to customize the appearance of the text.
 
 The following code illustrates how to create a text node.
 ```cshtml
@@ -63,7 +63,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Image node
 
-Diagram allows to add images as [ImageShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ImageShape.html). The [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Shape) property of node allows you to set the type of node and for image nodes, it should be set as **Image**. In addition, the [Source](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ImageShape.html#Syncfusion_Blazor_Diagram_ImageShape_Source) property of shape enables you to set the image.
+The diagram allows to add images as [ImageShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ImageShape.html). The [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Shape) property of node allows you to set the type of node and for image nodes, it should be set as **Image**. In addition, the [Source](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ImageShape.html#Syncfusion_Blazor_Diagram_ImageShape_Source) property of shape enables you to set the image.
 
 The following code illustrates how an image node is created.
 
@@ -442,7 +442,7 @@ The list of flow shapes are as follows.
 
 ## SVG template shape
 
-Diagram provides support to embed SVG element into a node. The Shape property of the node allows to set the type of node. To create a SVG node, it should be set as [SVG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeShapes.html#Syncfusion_Blazor_Diagram_NodeShapes_SVG). The following code illustrates how a SVG node is created.
+The diagram provides support to embed SVG element into a node. The Shape property of the node allows to set the type of node. To create a SVG node, it should be set as [SVG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeShapes.html#Syncfusion_Blazor_Diagram_NodeShapes_SVG). The following code illustrates how a SVG node is created.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
