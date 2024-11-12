@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Reduce slowness while running the WASM sample in Debug Mode | Syncfusion
+title: Reduce slowness while running the WASM sample | Syncfusion
 description: Learn here all about how to reduce slowness while running the WASM sample in Debug Mode in Blazor SfPdfViewer component and more.
 platform: Blazor
 control: SfPdfViewer
