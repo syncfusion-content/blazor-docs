@@ -29,7 +29,7 @@ For quick view, you might need to display the PDF file in a dialog window. The f
               Header="@Header"
               ShowCloseIcon="true">
         <SfPdfViewer2 @ref="Viewer">
-        <PdfViewerEvents Created="created"></PdfViewerEvents>
+            <PdfViewerEvents Created="Created"></PdfViewerEvents>
         </SfPdfViewer2>
     </SfDialog>
 
@@ -44,7 +44,7 @@ For quick view, you might need to display the PDF file in a dialog window. The f
         await this.Dialog.ShowAsync();
     }
 
-    private async void created()
+    private async void Created()
     {
         await Viewer.LoadAsync(DocumentPath, null);
     }

@@ -37,8 +37,6 @@ N> On the Syncfusion side, we are using SkiaSharp.Views.Blazor version 2.88.8. P
 
 ## Add the following PropertyGroup and ItemGroup:
 
-This configuration is required only for .NET 9 projects. Please ensure you use this setup for the corresponding version.
-
 {% tabs %}
 {% highlight c# hl_lines="2 3 7" %}
 
@@ -53,6 +51,8 @@ This configuration is required only for .NET 9 projects. Please ensure you use t
 
 {% endhighlight %}
 {% endtabs %}
+
+The above configuration is required only for .NET 9 projects. Please ensure you use this setup for the corresponding version.
 
 ## Register Syncfusion Blazor Service
 

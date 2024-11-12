@@ -33,15 +33,13 @@ To add **Blazor PDF Viewer (Next Gen)** component in the app, open the NuGet pac
 If you select an Interactive render mode as WebAssembly or Auto, you can install the NuGet package in the client-side project to add component in Web App.
 
 N> If you select an Interactive render mode as `WebAssembly or Auto`, you can install the NuGet package in the client-side project to add component in Web App.
-* [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor)
 
 On the Syncfusion side, we are using SkiaSharp.Views.Blazor version 2.88.8. Please make sure to reference this version as well.
+* [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor)
 
 ![SkiaSharp Views Blazor](gettingstarted-images/skia-sharp-image.png)
 
 ## Add the following PropertyGroup and ItemGroup
-
-This configuration is required only for .NET 9 projects. Please ensure you use this setup for the corresponding version.
 
 Interactive render mode as WebAssembly or Auto, need to add the following property group and item group in client project.
 
@@ -59,6 +57,8 @@ Interactive render mode as WebAssembly or Auto, need to add the following proper
 
 {% endhighlight %}
 {% endtabs %}
+
+The above configuration is required only for .NET 9 projects. Please ensure you use this setup for the corresponding version.
 
 ## Register Syncfusion Blazor Service
 
