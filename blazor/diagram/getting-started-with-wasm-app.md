@@ -258,7 +258,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 
 ## How to create organizational chart
 
-A built-in automatic layout algorithm is specifically designed for organizational charts to arrange parent and child node positions automatically.
+A built-in automatic layout algorithm is designed specifically for organizational charts, automatically arranging parent and child node positions for optimal structure and clarity.
 
 {% tabs %}
 {% highlight razor %}
