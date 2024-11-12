@@ -9,15 +9,15 @@ documentation: ug
 
 # Node in Blazor Diagram Component
 
-Nodes are graphical objects that are used to visually represent the geometrical information, process flow, internal business procedure, entity, or any other kind of data and it represents the functions of a complete system, including how it interacts with external entities, providing a clear visual representation of complex processes and relationships.
+Nodes are graphical objects that are used to visually represent the geometrical information, process flow, internal business procedure, entity, or any other kind of data and it represents the functions of a complete system regarding to how it interacts with external entities.
 
 ![Node in Blazor Diagram](../images/blazor-diagram-node.png)
 
 ## How to create node
 
-A node can be created and added to the diagram, either programmatically or interactively. In the diagram area, nodes are stacked from bottom-to-top in the order they are added.
+A node can be created and added to the diagram, either programmatically or interactively. Nodes are stacked in the diagram area from bottom-to-top in the order they are added.
 
-To learn more about creating nodes and exploring different node shapes in a Blazor Diagram, refer to the below video link.
+To create a node easily and to know about different types of node shapes in a Blazor Diagram, refer to the below video link.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=4_RCxBnDs3w" %}
 
@@ -181,7 +181,7 @@ The following code explains how to add an node with annotation  at runtime by us
 ```
 ## How to add node into palette
 
-Nodes can be predefined and added to the symbol palette, and can be dropped into the diagram when needed. For more information about adding nodes from symbol palette, refer to the [Symbol Palette](../symbol-palette).
+Nodes can be predefined and added to the palette, and can be dropped into the diagram when needed. For more information about adding nodes from symbol palette, refer to the [Symbol Palette](../symbol-palette).
 
 * Once you drag a node/connector from the palette to the diagram, the following events can be used to do the customization.
 * When a symbol is dragged into a diagram from symbol palette, the [DragStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DragStart) event gets triggered. [DragStartEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DragStartEventArgs.html) notifies when the element enters into the diagram from the symbol palette.
@@ -201,7 +201,7 @@ For more information about drawing node, refer to the `Draw Nodes`.
 
 ## How to create node through datasource
 
-Nodes can be generated automatically with the information provided through a data source. The default properties for these nodes are fetched from default settings. For more information about datasource, refer to the [DataSource](../data-binding).
+Nodes can be generated automatically with the information provided through data source. The default properties for these nodes are fetched from default settings. For more information about datasource, refer to the [DataSource](../data-binding).
 
 ## How to remove nodes at runtime
 
@@ -249,7 +249,7 @@ The following code shows how to remove a node at runtime.
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ActionsofNodes/RemoveNode)
 
-A node can be removed from the diagram by using the native `RemoveAt` method. Refer to the following example to see how to remove the node at runtime.
+A node can be removed from the diagram by using the native `RemoveAt` method. Refer to the following example that shows how to remove the node at runtime.
 
 ```csharp
 public void RemoveNodes()

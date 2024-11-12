@@ -11,7 +11,7 @@ documentation: ug
 
 ## How to create bezier segment
 
-Bezier segments are used to create curve segments, and the curves are configurable either with control points or vectors. To create a bezier segment, set the segment Type as [Bezier](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Bezier) and specify the type for the connector. The following code example illustrates how to create a default bezier segment.
+Bezier segments are used to create curve segments, and the curves are configurable either with the control points or vectors. To create a bezier segment, the Type of the segment is set as [Bezier](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Bezier) and need to specify type for the connector. The following code example illustrates how to create a default bezier segment.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram

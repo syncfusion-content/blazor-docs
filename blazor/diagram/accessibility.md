@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor Diagram Component
 
-Accessibility in the Blazor diagram component is achieved through compliance with the [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), and [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, as well as [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) and support for keyboard navigation. This ensures that users can effectively interact with the diagram features using assistive technologies such as screen readers.
+Accessibility in the Blazor diagram component is achieved through compliance with the [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) and support for keyboard navigation. This ensures that users can effectively interact with the diagram features using assistive technologies such as screen readers.
 
 The accessibility compliance for the Blazor diagram component is outlined below:
 
@@ -46,7 +46,7 @@ The Blazor Diagram component followed the WAI-ARIA patterns to meet the accessib
 | `aria-label` | Provides an accessible name for the Diagram Objects. |
 
 ### Aria-label
-The aria-label attribute provides the text label with some default description for below elements in diagram.
+Attribute provides the text label with some default description for below elements in diagram.
 
 <!-- markdownlint-disable MD033 -->
 <table>

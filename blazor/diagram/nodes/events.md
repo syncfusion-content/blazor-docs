@@ -11,7 +11,7 @@ documentation: ug
 
 ## Events
 
-Diagram provides several events support for node that triggers when interacting with the node.
+Diagram provides some events support for node that triggers when interacting with the node.
 
 ## Selection change event
 

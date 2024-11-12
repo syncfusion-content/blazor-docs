@@ -139,7 +139,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ![Auto BPMN Shape](../images/bpmn-text-annotation_WithTarget.png) 
 
 ## How to connect the TextAnnotation to BPMNNode
-Drag and drop any bpmn shapes from the palette to the diagram and connect the BPMN Node and TextAnnotation.
+Drag and drop any bpmn shapes from the palette to diagram and connect the BPMN Node and TextAnnotation.
 
 The following image shows how to drag a symbol from the palette and connect the TextAnnotation to the BPMNNode with interaction.
 

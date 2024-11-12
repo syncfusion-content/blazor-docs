@@ -277,7 +277,7 @@ The following code shows how to disable select constraint from the default const
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Constraints/ConnectorConstraints)
 
-The following example shows how to add Bridging constraint to the default constraints of a connector.
+The following example shows how to add Bridging constraint to the default constraints of connector.
 
 ```csharp
 ConnectorConstraints ConnectorConstraints = ConnectorConstraints.Default | ConnectorConstraints.Bridging;
@@ -566,7 +566,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 |![ToolTip During hover the node with selectorconstraints](images/blazor-diagram-selectorconstraintsnode.gif) | 
 
-N> Element should be in a selected state, then only Rotator, UserHandle and Resizer thumbs will be visible.
+N> Element should be in selected state, then only Rotator, UserHandle and Resizer thumbs will be visible.
 
 The following code example shows how to disable the userhandle functionality for the selected item.
 

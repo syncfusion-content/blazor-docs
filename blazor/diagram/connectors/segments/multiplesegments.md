@@ -11,7 +11,7 @@ documentation: ug
 
 ## How to create multiple segments
 
-Multiple segments can be defined sequentially. To create a connector with multiple segments, define and add the segments to the [connector.Segments](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegment.html) collection. The following code example illustrates how to create a connector with multiple segments.
+Multiple segments can be defined one after another. To create a connector with multiple segments, define and add the segments to the [connector.Segments](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegment.html) collection. The following code example illustrates how to create a connector with multiple segments.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram

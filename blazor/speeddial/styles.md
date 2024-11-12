@@ -9,7 +9,7 @@ documentation: ug
 
 # Styles in Blazor SpeedDial Component
 
-This section briefs different ways to style SpeedDial Component.
+This section briefs different ways to stye SpeedDial Component.
 
 ## SpeedDial button
 
@@ -196,32 +196,3 @@ You can use [OpensOnHover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 ![Blazor SpeedDial with OpensOnHover](./images/Blazor-SpeedDial-OpensOnHover.png)
 
-## Customized icon
-
-You can use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSpeedDial.html#Syncfusion_Blazor_Buttons_SfSpeedDial_CssClass) property to customize the appearance of the speedDial component in its default primary state. Below example demonstrates the `cssClass` property usage in speedDial.
-
-{% tabs %}
-{% highlight razor %}
-
-@using Syncfusion.Blazor.Buttons
-<div id="target" style="min-height:200px; position:relative; width:300px; border:1px solid;">
-<SfSpeedDial Target="#target" OpenIconCss="e-icons e-edit" CloseIconCss="e-icons e-close" CssClass="custom-css">
-    <SpeedDialItems>
-        <SpeedDialItem IconCss="e-icons e-cut"/>
-        <SpeedDialItem IconCss="e-icons e-copy"/>
-        <SpeedDialItem IconCss="e-icons e-paste"/>
-    </SpeedDialItems>
-</SfSpeedDial>
-</div>
-<style>  
-    .custom-css .e-btn-icon {
-        color: black;
-    }
-</style>
-
-{% endhighlight %}
-{% endtabs %}
-
-![Blazor SpeedDial With CustomIcon Close](./images/Blazor-SpeedDial-CustomIcon-Close.png)
-
-![Blazor SpeedDial With CustomIcon Open](./images/Blazor-SpeedDial-CustomIcon-Open.png)

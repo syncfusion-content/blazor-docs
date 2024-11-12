@@ -11,12 +11,12 @@ documentation: ug
 
 ## How to edit bezier segments based on bezier connector settings
 
-The intermediate point of two adjacent bezier segments can be edited interactively using the [BezierConnectorSettings.SegmentEditOrientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierConnectorSettings.html#Syncfusion_Blazor_Diagram_BezierConnectorSettings_SegmentEditOrientation) property of the Connector class.
+The intermediate point of two adjacent bezier segments can be edited interactively based on the [BezierConnectorSettings.SegmentEditOrientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierConnectorSettings.html#Syncfusion_Blazor_Diagram_BezierConnectorSettings_SegmentEditOrientation) property of the Connector class.
 
 | SegmentEditOrientation value | Description | Output |
 |-------- | -------- | -------- |
-| Bidirectional | Allows the intermediate points to be dragged in either vertical or horizontal directions. | ![Bidirectional](../../../../images/Bidirectional.gif) |
-| Freeform | Allows the intermediate points to be dragged in any direction. | ![Freeform](../../../../images/Freeform.gif) |
+| Bidirectional | It allows the intermediate points to be dragged in either vertical or horizontal directions.  | ![Bidirectional](../../../../images/Bidirectional.gif) |
+| Freeform | It allows the intermediate points to be dragged in any direction. | ![Freeform](../../../../images/Freeform.gif) |
 
 The following code illustrates how to interact with Bezier efficiently by using the [BezierConnectorSettings.Smoothness](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierConnectorSettings.html#Syncfusion_Blazor_Diagram_BezierConnectorSettings_Smoothness) and [BezierConnectorSettings.SegmentEditOrientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierConnectorSettings.html#Syncfusion_Blazor_Diagram_BezierConnectorSettings_SegmentEditOrientation) properties of the Connector class.
 

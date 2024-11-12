@@ -1,6 +1,0 @@
-@using Syncfusion.Blazor.DropDowns;
-
-<SfMultiSelect TItem="(DayOfWeek, string)" Width="250px" TValue="DayOfWeek[]"
-               DataSource="@(Enum.GetValues<DayOfWeek>().Select(e => (e, e.ToString())))">
-    <MultiSelectFieldSettings Value="Item1" Text="Item2" />
-</SfMultiSelect>
