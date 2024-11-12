@@ -13,7 +13,7 @@ The following content provides the exact CSS structure that can be used to modif
 
 ## Read-only mode
 
-Specify the boolean value to the [Readonly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Readonly) whether the MultiSelect allows the user to change the value or not.
+Specify the boolean value to the [Readonly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_Readonly) whether the MultiSelect allows the user to change the value or not.
 
 {% highlight Razor %}
 
@@ -22,6 +22,98 @@ Specify the boolean value to the [Readonly](https://help.syncfusion.com/cr/blazo
 {% endhighlight %}
 
 ![Blazor MultiSelect DropDown with Readonly property](./images/style/blazor_multiselect_readonly-property.png)
+
+## Disable State 
+
+The SfMultiSelect component has an [Enabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_Enabled) property that controls whether the MultiSelect is interactive. Setting `Enabled` to `false` disables the component, making it unclickable and inactive. In contrast, the [Readonly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_Readonly) property, when set to `true`, allows users to view existing selections without modifying them.
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/style/Disable-property.razor %}
+
+{% endhighlight %}
+
+![Blazor MultiSelect DropDown with Disable property](./images/style/blazor_multiselect_disable-property.png)
+
+### Customizing the disabled component’s text color
+
+You can customize the text color of a disabled component by targeting its CSS class `.e-multiselect.e-disabled`, which indicates the input element in a disabled state, and set the desired color to the `-webkit-text-fill-color` property.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/disable-text-color.razor %}
+
+{% endhighlight %}
+
+![Blazor Multiselect DropDown with Disabled component text color](./images/style/blazor_multiselect_disabled-text-color.png)
+
+## Change remove icon color in chip
+
+To change the remove icon color in a chip within the Syncfusion Blazor MultiSelect component, you can use the following CSS style to customize it.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/remove-icon-chip-color.razor %}
+
+{% endhighlight %}
+
+![Blazor Multiselect DropDown with remove icon color in chip](./images/style/blazor_multiselect_remove-icon-chip-color.png)
+
+## Show the custom icon in dropdown icon
+
+You can customize the dropdown [icon](https://ej2.syncfusion.com/documentation/appearance/icons#material) by targeting its CSS class `.e-ddl-icon::before`, which indicates the icon element displayed within the dropdown list component, and set the desired icon to the `content` property.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/dropdown-icon.razor %}
+
+{% endhighlight %}
+
+![Blazor Multiselect with dropdown icon](./images/style/blazor_Multiselect_dropdown-icon.png)
+
+You can customize the dropdown icon for the particular component using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_CssClass) property and add style to the custom class which is mapped to `CssClass`.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/dropdown-icon-using-cssclass.razor %}
+
+{% endhighlight %}
+
+## Adding Icon in Popup Items
+
+You can customize the MultiSelect dropdown to display icons by mapping a field from the data object to the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectFieldSettings.html#Syncfusion_Blazor_DropDowns_MultiSelectFieldSettings_IconCss) property.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/adding-icon-popup-items.razor %}
+
+{% endhighlight %}
+
+![Blazor Multiselect with adding icon in popup items](./images/style/blazor_Multiselect_adding-icon-popup-items.png)
+
+## Customizing the background color of container element
+
+You can customize the appearance of the container element within the multiselect component by targeting its CSS class `.e-multi-select-wrapper`, which indicates the parent element of the input, and allows you to apply any desired styles to the component.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/container-background-color.razor %}
+
+{% endhighlight %}
+
+![Blazor Multiselect DropDown container background color](./images/style/blazor_multiselect_background-color-of-container.png)
+
+## Customizing the dropdown icon’s color
+
+You can customize the dropdown [icon](https://ej2.syncfusion.com/documentation/appearance/icons/#material) by targeting its CSS class `.e-ddl-icon.e-icons`, which indicates the icon element displayed within the multiselect component, and setting the desired color to the `color` property.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/dropdown-icon-color.razor %}
+
+{% endhighlight %}
+
+![Blazor Multiselect DropDown icon color](./images/style/blazor_multiselect_icon-color.png)
 
 ## CssClass
 
@@ -41,18 +133,6 @@ Some of the possible values are
 {% endhighlight %} 
 
 ![Blazor MultiSelect DropDown with CssClass property](./images/style/blazor_multiselect_cssClass-property.png)
-
-## Customizing the background color of container element
-
-You can customize the color of the container element within the multiselect component by targeting its CSS class `.e-multi-select-wrapper`, which indicates the wrapper element of the multiselect component, and set the desired color for the `background-color` property.
-
-{% highlight cshtml %}
-
-{% include_relative code-snippet/style/container-background-color.razor %}
-
-{% endhighlight %}
-
-![Blazor Multiselect DropDown container background color](./images/style/blazor_multiselect_background-color-of-container.png)
 
 
 ## Customizing the appearance of the delimiter container element
@@ -79,42 +159,6 @@ You can customize the appearance of the chips within the multiselect component b
 
 ![Blazor Multiselect DropDown appearance of chips](./images/style/blazor_multiselect_appearance-of-chips.png)
 
-## Customizing the dropdown icon’s color
-
-You can customize the dropdown [icon](https://ej2.syncfusion.com/documentation/appearance/icons/#material) by targeting its CSS class `.e-ddl-icon.e-icons`, which indicates the icon element displayed within the multiselect component, and setting the desired color to the `color` property.
-
-{% highlight cshtml %}
-
-{% include_relative code-snippet/style/dropdown-icon-color.razor %}
-
-{% endhighlight %}
-
-![Blazor Multiselect DropDown icon color](./images/style/blazor_multiselect_icon-color.png)
-
-## Customizing the disabled component’s text color
-
-You can customize the text color of a disabled component by targeting its CSS class `.e-multiselect.e-disabled`, which indicates the input element in a disabled state, and set the desired color to the `-webkit-text-fill-color` property.
-
-{% highlight cshtml %}
-
-{% include_relative code-snippet/style/disable-text-color.razor %}
-
-{% endhighlight %}
-
-![Blazor Multiselect DropDown with Disabled component text color](./images/style/blazor_multiselect_disabled-text-color.png)
-
-## Customizing the float label element's focusing color
-
-You can change the text color of the floating label when it is focused by targeting its CSS classes `.e-input-focus` and `.e-float-text.e-label-top`. These classes indicate the floating label text while it is focused and set the desired color using the `color` property.
-
-{% highlight cshtml %}
-
-{% include_relative code-snippet/style/floatlabel-focusing-color.razor %}
-
-{% endhighlight %}
-
-![Blazor Multiselect DropDown with float label focusing color](./images/style/blazor_multiselect_floatlabel-focus-color.png)
-
 ## Customizing the outline theme's focus color
 
 You can customize the color of the multiselect component when it is in a focused state and rendered with an outline theme, by targeting its CSS class `e-outline` which indicates the input element when it is focused, and allows you to set the desired color to the `color` property.
@@ -126,6 +170,7 @@ You can customize the color of the multiselect component when it is in a focused
 {% endhighlight %}
 
 ![Blazor Multiselect DropDown focusing color outline theme](./images/style/blazor_multiselect_outline-theme-color.png)
+
 
 ## Customizing the background color of focus, hover, and active items
 
@@ -153,49 +198,7 @@ You can customize the appearance of the popup element within the multiselect com
 
 ![Blazor Multiselect DropDown with customizing popup color](./images/style/blazor_multiselect_appearance-of-popup.png)
 
-## Customizing the color of the checkbox
-
-You can change the color of the checkbox by targeting the CSS classes `.e-checkbox-wrapper` and `.e-frame.e-check` which indicates the checkbox of the list item element. Set the desired color using the `background-color` and `color` properties.
-
-{% highlight cshtml %}
-
-{% include_relative code-snippet/style/customizing-checkbox.razor %}
-
-{% endhighlight %}
-
-![Blazor Multiselect DropDown with customizing checkbox](./images/style/blazor_multiselect_cutomizing-checkbox.png)
-
-## Placeholder
-
-Specifies the text that is shown as a hint or [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_Placeholder) until the user focuses or enter a value in MultiSelect.
-
-{% highlight Razor %}
-
-{% include_relative code-snippet/style/placeholder-property.razor %}
-
-{% endhighlight %}
-
-![Blazor MultiSelect DropDown with Placeholder property](./images/style/blazor_multiselect_placeholder-property.png)
-
-## FloatLabelType
-
-Specifies the floating label behavior of the MultiSelect that the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_Placeholder) text floats above the MultiSelect based on the following values. [FloatLabelType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_FloatLabelType) is applicable only when `Placeholder` is used.`FloatLabelType` is depends on `Placeholder`.
-
-Possible values are:
-
-* [Never](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.FloatLabelType.html#Syncfusion_Blazor_Inputs_FloatLabelType_Never) - Never floats the label in the MultiSelect when the placeholder is available.
-* [Always](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.FloatLabelType.html#Syncfusion_Blazor_Inputs_FloatLabelType_Always) - The floating label always floats above the MultiSelect.
-* [Auto](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.FloatLabelType.html#Syncfusion_Blazor_Inputs_FloatLabelType_Auto) - The floating label floats above the MultiSelect after focusing it or when enters the value in it.
-
-{% highlight Razor %}
-
-{% include_relative code-snippet/style/floatLabelType-property.razor %}
-
-{% endhighlight %}
-
-![Blazor MultiSelect DropDown with FloatLabelType property](./images/style/blazor_multiselect_floatLabelType-property.gif)
-
-## HtmlAttributes
+## Change the HTML Attributes
 
 You can add the additional input attributes such as disabled, value, and more to the root element.
 
@@ -208,6 +211,108 @@ If you configured both the property and equivalent input attribute, then the com
 {% endhighlight %}
 
 ![Blazor MultiSelect DropDown with HtmlAttributes property](./images/style/blazor_multiselect_htmlAttributes-property.png)
+
+
+## Set the various font family for dropdown list elements
+
+The font-family of the multiselect dropdown list can be changed by overriding using the following selector. The overridden can be applied to specific component by adding a class name through the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_CssClass) property.
+
+In the following sample, the font family of the MultiSelect, ListItem text in DropDownList and filterInput text are changed.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/dropdown-font-family.razor %}
+
+{% endhighlight %}
+
+![Blazor MultiSelect DropDown with different font family](./images/style/blazor_MultiSelect_font-family.png)
+
+## Show tooltip on list item
+
+You can achieve this behavior by integrating the tooltip component. When the mouse hovers over the DropDownList option, a tooltip appears with information about the hovered list item.
+
+The following code demonstrates how to display a tooltip when hovering over the DropDownList option.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/dropdown-with-tooltip.razor %}
+
+{% endhighlight %}
+
+![Blazor MultiSelect DropDown displays Tooltip](./images/blazor-multiselect-dropdown-tooltip.png)
+
+## Change the PopupHeight
+
+Use the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_PopupHeight) property to change the height of the popup. The default value of the `PopupHeight` is `300px`.
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/style/popupHeight-property.razor %}
+
+{% endhighlight %}
+
+![Blazor MultiSelect DropDown with PopupHeight property](./images/style/blazor_multiselect_popupHeight-property.png)
+
+## Change the PopupWidth
+
+To customize the width of the popup alone, use the [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_PopupWidth) property. The default value of the `PopupWidth` is `100%`. If popup width unspecified, it sets based on the width of the MultiSelect component.
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/style/popupWidth-property.razor %}
+
+{% endhighlight %}
+
+![Blazor MultiSelect DropDown with PopupWidth property](./images/style/blazor_multiselect_popupWidth-property.png)
+
+## Change the Width
+
+Gets or sets the width of the component. By default, it sizes based on its parent container dimension.
+
+Default value of [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_Width) is `100%`.
+ 
+{% highlight Razor %}
+
+{% include_relative code-snippet/style/width-property.razor %}
+
+{% endhighlight %} 
+
+![Blazor MultiSelect DropDown with Width property](./images/style/blazor_multiselect_width-property.png)
+
+## Disable Specific Items in Dropdown List
+
+The [MultiSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html) provides options for individual items to be either in an enabled or disabled state for specific scenarios. The category of each list item can be mapped through the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectFieldSettings.html#Syncfusion_Blazor_DropDowns_MultiSelectFieldSettings_Disabled) field in the data table. Once an item is disabled, it cannot be selected as a value for the component. To configure the disabled item columns, use the `MultiSelectFieldSettings.Disabled` property.
+
+In the following sample, State are grouped according on its category using `Disabled` field.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/disabled-items/disabled-items.razor %}
+
+{% endhighlight %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLptHMLzPvxxvrZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Disable Item Method
+
+The disableItem method can be used to handle dynamic changing in disable state of a specific item. Only one item can be disabled in this method. To disable multiple items, this method can be iterated with the items list or array. The disabled field state will to be updated in the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource), when the item is disabled using this method. If the selected item is disabled dynamically, then the selection will be cleared.
+
+| Parameter | Type | Description |
+|------|------|------|
+| itemValue | <code>string</code> \| <code>number</code> \| <code>boolean</code> \| <code>object</code> | It accepts the string, number, boolean and object type value of the item to be removed. |
+| itemIndex | <code>number</code> | It accepts the index of the item to be removed. |
+
+## Customizing the color of the checkbox
+
+You can change the color of the checkbox by targeting the CSS classes `.e-checkbox-wrapper` and `.e-frame.e-check` which indicates the checkbox of the list item element. Set the desired color using the `background-color` and `color` properties.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/customizing-checkbox.razor %}
+
+{% endhighlight %}
+
+![Blazor Multiselect DropDown with customizing checkbox](./images/style/blazor_multiselect_cutomizing-checkbox.png)
 
 ## InputAttributes
 
@@ -249,43 +354,6 @@ The [EnableCloseOnSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ![Blazor MultiSelect DropDown with EnableCloseOnSelect property](./images/style/blazor_multiselect_enableCloseOnSelect-property.png)
 
-## Change the PopupHeight
-
-Customize the height of the popup using the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupHeight). The default value of the `PopupHeight` is `300px`.
-
-{% highlight Razor %}
-
-{% include_relative code-snippet/style/popupHeight-property.razor %}
-
-{% endhighlight %}
-
-![Blazor MultiSelect DropDown with PopupHeight property](./images/style/blazor_multiselect_popupHeight-property.png)
-
-## Change the PopupWidth
-
-Customize the width of the popup using the [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth) property. The default value of the `PopupWidth` is `100%`. If popup width unspecified, it sets based on the width of the MultiSelect component.
-
-{% highlight Razor %}
-
-{% include_relative code-snippet/style/popupWidth-property.razor %}
-
-{% endhighlight %}
-
-![Blazor MultiSelect DropDown with PopupWidth property](./images/style/blazor_multiselect_popupWidth-property.png)
-
-## Change the Width
-
-Gets or sets the width of the component. By default, it sizes based on its parent. container dimension.
-
-Default value of [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_Width) is `100%`.
- 
-{% highlight Razor %}
-
-{% include_relative code-snippet/style/width-property.razor %}
-
-{% endhighlight %} 
-
-![Blazor MultiSelect DropDown with Width property](./images/style/blazor_multiselect_width-property.png)
 
 ## Programmatically clearing value
 
