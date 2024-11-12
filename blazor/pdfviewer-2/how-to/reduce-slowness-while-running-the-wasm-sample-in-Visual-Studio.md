@@ -16,5 +16,5 @@ You may experience performance issues when running the WASM sample in Visual Stu
 Disabling the Mono Debugger should help resolve the performance issues and provide a smoother experience while debugging your WebAssembly project.
 
 For detailed instructions on why disabling the Mono Debugger is recommended, and to follow the necessary steps, please refer to the links below:
-  * [Crippled Visual Studio 2022 debugging performance on Blazor Web (WASM components) after updating to .NET 9](https://github.com/dotnet/aspnetcore/issues/58577)
+  * [Performance Regression debugging Blazor WebAssembly with .NET 9](https://developercommunity.visualstudio.com/t/Performance-Regression-debugging-Blazor/10773897)
   * [Performance Regression in Blazor WebAssembly with .NET 9](https://github.com/dotnet/aspnetcore/issues/58507)
