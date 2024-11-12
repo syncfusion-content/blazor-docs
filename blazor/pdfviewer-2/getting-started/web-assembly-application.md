@@ -33,6 +33,8 @@ Add the following NuGet packages into the Blazor WebAssembly app.
 * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)
 * [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor)
 
+N> On the Syncfusion side, we are using SkiaSharp.Views.Blazor version 2.88.8. Please make sure to reference this version as well.
+
 ## Add the following PropertyGroup and ItemGroup:
 
 {% tabs %}
@@ -44,11 +46,13 @@ Add the following NuGet packages into the Blazor WebAssembly app.
 </PropertyGroup>
 
 <ItemGroup>
-    <NativeFileReference Include="$(SkiaSharpStaticLibraryPath)\2.0.23\*.a" />
+    <NativeFileReference Include="$(SkiaSharpStaticLibraryPath)\3.1.34\st\*.a" />
 </ItemGroup>
 
 {% endhighlight %}
 {% endtabs %}
+
+The above configuration is required only for .NET 9 projects. Please ensure you use this setup for the corresponding version.
 
 ## Register Syncfusion Blazor Service
 

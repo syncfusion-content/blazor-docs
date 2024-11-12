@@ -28,8 +28,9 @@ For quick view, you might need to display the PDF file in a dialog window. The f
               IsModal="true"
               Header="@Header"
               ShowCloseIcon="true">
-        <DialogEvents OnOpen="OnOpen"></DialogEvents>
-        <SfPdfViewer2 @ref="Viewer" />
+        <SfPdfViewer2 @ref="Viewer">
+            <PdfViewerEvents Created="Created"></PdfViewerEvents>
+        </SfPdfViewer2>
     </SfDialog>
 
 </div>
@@ -38,12 +39,12 @@ For quick view, you might need to display the PDF file in a dialog window. The f
     public SfPdfViewer2 Viewer { get; set; }
     SfDialog Dialog;
 
-    public void OnClick(MouseEventArgs args)
+    public async void OnClick(MouseEventArgs args)
     {
-        this.Dialog.Show();
+        await this.Dialog.ShowAsync();
     }
 
-    public async void OnOpen(BeforeOpenEventArgs args)
+    private async void Created()
     {
         await Viewer.LoadAsync(DocumentPath, null);
     }
