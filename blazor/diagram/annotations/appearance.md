@@ -376,7 +376,7 @@ You can change the font style of the annotations with the font specific properti
         Diagram.Nodes[0].Annotations[0].Style.Bold = false;
         Diagram.Nodes[0].Annotations[0].Style.TextDecoration = TextDecoration.None;
         Diagram.Nodes[0].Annotations[0].Style.Color = "Red";
-        Diagram.EndUpdate();
+        Diagram.EndUpdateAsync();
     }
 }
 ```

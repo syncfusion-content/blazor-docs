@@ -83,7 +83,7 @@ In the following example, you can using the DrawTextAsync method in the button c
     private async void DrawTextOutlineAsync()
     {
         ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
-        await ImageEditor.DrawTextAsync(Dimension.X.Value + 50, Dimension.Y.Value + 50, "Syncfusion", "Arial", 40, false, false, "", false, 0, "", "green", 8);
+         await ImageEditor.DrawTextAsync(Dimension.X.Value + 50, Dimension.Y.Value + 50, "Syncfusion", "Arial", 40, false, false, "", false, 0, "", "green", 8);
     }
     private async void DrawTextBackgroundColorAsync()
     {

@@ -75,8 +75,8 @@ The Syncfusion Blazor Smart Components are designed to seamlessly integrate with
 </td>
 <td>
 <ul>
-<li><a href="https://www.syncfusion.com/blazor-components/blazor-smartpaste-button">Smart Paste Button</a></li>
-<li><a href="https://www.syncfusion.com/blazor-components/blazor-smart-textarea">Smart TextArea</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/smart-paste/getting-started">Smart Paste Button</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/smart-textarea/getting-started">Smart TextArea</a></li>
 </ul>
 </td>
 <td>
@@ -94,6 +94,40 @@ The Syncfusion Blazor Smart Components are designed to seamlessly integrate with
 </ul>
 </td>
 </tr>
+</table>
+
+## Syncfusion.Blazor.InteractiveChat
+
+The AI AssistView creates an interface through which users can interact with AI-driven suggestions and prompts.
+
+<table>
+    <tr>
+        <td>
+            <b>NuGet package</b>
+        </td>
+        <td>
+            <b>Components friendly name</b>
+        </td>
+        <td>
+            <b>Components name</b>
+        </td>
+        <td>
+            <b>Dependencies</b>
+        </td>
+    </tr>
+    <tr>
+        <td><a href="https://www.nuget.org/packages/Syncfusion.Blazor.InteractiveChat">Syncfusion.Blazor.InteractiveChat</a></td>
+        <td><a href="https://blazor.syncfusion.com/documentation/ai-assistview/getting-started">AI AssistView</a></td>
+        <td>SfAIAssistView</td>
+        <td>
+            <ul>
+                <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Core/">Syncfusion.Blazor.Core </a></li>
+                <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Inputs/">Syncfusion.Blazor.Inputs</a></li>
+                <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/">Syncfusion.Blazor.Navigations</a></li>
+                <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Notifications/">Syncfusion.Blazor.Notifications</a></li>
+            </ul>
+        </td>
+    </tr>
 </table>
 
 ## Syncfusion.Blazor.BarcodeGenerator
@@ -1131,6 +1165,38 @@ SfMaps
 <li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
 <li><a href="#syncfusionblazordata">Syncfusion.Blazor.Data</a></li>
 <li><a href="https://www.nuget.org/packages/Syncfusion.PdfExport.Net.Core/" target="_blank">Syncfusion.PdfExport.Net.Core</a></li>
+</ul>
+</td>
+</tr>
+</table>
+
+## Syncfusion.Blazor.MultiColumnComboBox
+
+<table>
+<tr>
+<td>
+<b>NuGet package</b>
+</td>
+<td>
+<b>Components friendly name</b>
+</td>
+<td>
+<b>Components name</b>
+</td>
+<td>
+<b>Dependencies</b>
+</td>
+</tr>
+<tr>
+<td><a href="https://www.nuget.org/packages/Syncfusion.Blazor.MultiColumnComboBox">Syncfusion.Blazor.MultiColumnComboBox</a></td>
+<td><a href="https://blazor.syncfusion.com/documentation/multicolumn-combobox/getting-started">MultiColumn ComboBox</a></td>
+<td>SfMultiColumnComboBox</td>
+<td>
+<ul>
+    <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Core/">Syncfusion.Blazor.Core</a></li>
+    <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Data/">Syncfusion.Blazor.Data</a></li>
+    <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Grid/">Syncfusion.Blazor.Grid</a></li>
+    <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Inputs/">Syncfusion.Blazor.Inputs</a></li>
 </ul>
 </td>
 </tr>
