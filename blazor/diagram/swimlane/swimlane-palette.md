@@ -12,7 +12,7 @@ documentation: ug
 
 ## Add lanes and phases into symbol palette
 
-Swimlane elements such as [Lane](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Lane.html), and [Phase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Phase.html) can be used to visualize the Symbol.
+Swimlane elements such as [Lane](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Lane.html) and [Phase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Phase.html) can be used to visualize the symbols.
 
 The following code sample shows how to add the lanes and phases to palette.
 
@@ -119,9 +119,10 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Interactions
 
-* The drag and drop support for swimlane shapes have been provided.
-* When you drag and drop the lane shape, if the diagram already contains swimlane with the same orientation, the lane will be added and stacked inside a swimlane based on the order. Otherwise, it will be added as a new swimlane.
-* The phase will only drop on the swimlane shape with the same orientation.
-The following image shows how to drag symbol from palette.
+* Drag and drop support for swimlane shapes is provided.
+* When you drag and drop a lane shape, if the diagram already contains a swimlane with the same orientation, the lane will be added and stacked inside the swimlane based on the order. Otherwise, it will be added as a new swimlane.
+* A phase will only drop on a swimlane shape with the same orientation.
+
+The following image shows how to drag a symbol from the palette.
 
 ![Drag Symbol from Palette](Swimlane-images/Symbol_palette.gif)
