@@ -9,11 +9,11 @@ documentation: ug
 
 # Phase in Blazor Diagram Component
 
- The [Phase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Phase.html) is the subprocess which will split each lane as horizontally or vertically based on the swimlane orientation. The multiple phases can be added to the swimlane.
+ The [Phase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Phase.html) is a subprocess that splits each lane either horizontally or vertically based on the swimlane orientation. Multiple phases can be added to the swimlane.
 
 ## Create an empty Phase
 
-You can create the [Phase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Phase.html) and add into the [Phases](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Swimlane.html#Syncfusion_Blazor_Diagram_Swimlane_Phases) collection of the Swimlane.
+You can create a [Phase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Phase.html) and add it to the [Phases](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Swimlane.html#Syncfusion_Blazor_Diagram_Swimlane_Phases) collection of the Swimlane.
 
 >Note: For Horizontal Swimlane, you must set the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneChild.html#Syncfusion_Blazor_Diagram_SwimlaneChild_Width) of the Phase. For Vertical Swimlane, you must set the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneChild.html#Syncfusion_Blazor_Diagram_SwimlaneChild_Height) of the Phase.
 
@@ -91,7 +91,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Dynamically add phase to Swimlane
 
- You can add a phase at runtime by using the `Add` and `Remove` methods of the [Swimlane.Phases](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Swimlane.html#Syncfusion_Blazor_Diagram_Swimlane_Phases) collection. The following code example explains how to add and remove phases at run time.
+ You can dynamically add or remove a phase at runtime by using the `Add` and `Remove` methods of the [Swimlane.Phases](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Swimlane.html#Syncfusion_Blazor_Diagram_Swimlane_Phases) collection. The following code example explains how to add and remove phases at run time.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -191,7 +191,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Create the Phase Header and Header customization
 
-* The [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Phase.html#Syncfusion_Blazor_Diagram_Phase_Header) property of Phase allows you to describe the phase textually and customize the appearance of the description.
+* The [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Phase.html#Syncfusion_Blazor_Diagram_Phase_Header) property of the Phase allows you to describe the phase textually and customize the appearance of the description.
 * The size of the Phase header can be controlled by using the header's [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneChild.html#Syncfusion_Blazor_Diagram_SwimlaneChild_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneChild.html#Syncfusion_Blazor_Diagram_SwimlaneChild_Height) properties.
 * The appearance of the Phase header can be customized by using the [Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneHeader.html#Syncfusion_Blazor_Diagram_SwimlaneHeader_Style) property.
 
@@ -346,9 +346,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
  * You can select the individual phase header by clicking on the header twice. On the first click, you can select the respective phase. 
 
- * You can resize the individual phase header. While resizing the phase, it will maintain 20px distances from Lane children.
+ * You can resize the individual phase header. While resizing the phase, it will maintain a 20px distances from Lane children.
 
-  * When a element is resized, the [SizeChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SizeChanging) and [SizeChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SizeChanged) events get triggered.
+  * When an element is resized, the [SizeChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SizeChanging) and [SizeChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SizeChanged) events get triggered.
 
  The following image shows how to select and resize the phase header.
 
@@ -373,5 +373,5 @@ Phase can be selected by clicking (tapping) the header of the phase.
 
 * The phase can be resized by using its selector.
 * You must click the phase header to enable the phase selection.
-* Once the phase can be resized, the lane size will be updated automatically.
+* Once the phase is resized, the lane size will be updated automatically.
 

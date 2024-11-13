@@ -11,7 +11,7 @@ documentation: ug
 
 ## How to update size of an annotation
 
-Diagram allows you to set size for annotations by using the Height and Width properties. The default value of the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Height) properties is 0, and it takes the node or connector size as default. The following code example shows how the annotation size is customized.
+The diagram allows you to set size for annotations by using the Height and Width properties. The default value of the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Height) properties is 0, and it takes the node or connector size as default. The following code example shows how the annotation size is customized.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -50,7 +50,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to add hyperlink to an annotation
 
-Diagram provides support to add a [Hyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Hyperlink) to the node's or connector's annotation. It can also be customized.
+The diagram provides support to add a [Hyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Hyperlink) to the node's or connector's annotation. It can also be customized.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -141,7 +141,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to change text wrapping
 
-The [TextWrapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_TextWrapping) property of the annotation defines how the text should be wrapped. When text overflows node boundaries, you can control it by using the `TextWrapping`. So, it is wrapped into multiple lines. The following code explains how to wrap a text in a node.
+The [TextWrapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_TextWrapping) property of an annotation defines how the text should be wrapped. When text overflows node boundaries, you can control it by using the `TextWrapping`. So, it is wrapped into multiple lines. The following code explains how to wrap a text in a node.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -192,11 +192,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### How to update text overflow
 
-The [TextOverflow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_TextOverflow) property specifies how the overflowed content that is not displayed should be signaled to the user. The TextOverflow can have the following values.
+The [TextOverflow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_TextOverflow) property specifies how the overflowed content that is not displayed should be signaled to the user. The TextOverflow property can have the following values.
 
 * **Wrap**: Wraps the text to next line, when it exceeds its bounds.
 * **Ellipsis**: It truncates the overflown text and renders an ellipsis ("...") to represent the clipped text.
-* **Clip**: The text is clipped and the overflow text will not be shown.
+* **Clip**: Clips the text, and the overflow text will not be shown.
 
 The following code sample shows how the different types of overflow property working for the different types of text wrapping.
 
@@ -258,7 +258,7 @@ N>**Note :** All the customization over the overflow is also applicable to conne
 
 ## How to customize the appearance of an annotation
 
-You can change the font style of the annotations with the font specific properties (FontSize, FontFamily, Color). The following code explains how to customize the appearance of the annotation.
+You can change the font style of the annotations with the font specific properties such as FontSize, FontFamily, and Color. The following code explains how to customize the appearance of the annotation.
 
 * The annotation’s [Bold](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_Bold), [Italic](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_Italic), and [TextDecoration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_TextDecoration) properties are used to style the annotation’s text.
 
@@ -266,7 +266,7 @@ You can change the font style of the annotations with the font specific properti
 
 * The [Visibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Visibility) property of the annotation enables or disables the visibility of annotation.
 
-The Fill, Border, and Opacity appearances of the text can also be customized with appearance specific properties of annotation. The following code explains how to customize the appearance of the annotation.
+The Fill, Border, and Opacity appearances of the text can also be customized with appearance specific properties of the annotation. The following code explains how to customize the appearance of the annotation.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -318,7 +318,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to update the annotation style at runtime
 
-You can change the font style of the annotations with the font specific properties ([FontSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_FontSize), [FontFamily](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_FontFamily), and [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_Color)). The following code explains how to update the font style of the annotation.
+You can change the font style of the annotations with the font specific properties such as [FontSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_FontSize), [FontFamily](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_FontFamily), and [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_Color). The following code explains how to update the font style of the annotation.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -376,7 +376,7 @@ You can change the font style of the annotations with the font specific properti
         Diagram.Nodes[0].Annotations[0].Style.Bold = false;
         Diagram.Nodes[0].Annotations[0].Style.TextDecoration = TextDecoration.None;
         Diagram.Nodes[0].Annotations[0].Style.Color = "Red";
-        Diagram.EndUpdate();
+        Diagram.EndUpdateAsync();
     }
 }
 ```
@@ -384,7 +384,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to change the editing mode
 
-Diagram provides support to edit an annotation at runtime, either programmatically or interactively. By default, the annotation is in view mode. However, it can be brought into edit mode in two ways.
+The diagram provides support to edit an annotation at runtime, either programmatically or interactively. By default, the annotation is in view mode. However, it can be brought into edit mode in two ways.
 
 * You can edit the annotation programmatically by using the [StartTextEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_StartTextEdit_Syncfusion_Blazor_Diagram_IDiagramObject_System_String_) method.
 * Also, you can edit the annotation interactively.
@@ -395,7 +395,7 @@ Double-clicking any annotation will enable the editing and the node enables firs
 
 ## How to set read only constraints for annotation
 
-Diagram allows to create read-only annotations. You have to set the read-only property of annotation to enable or disable the [ReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AnnotationConstraints.html#Syncfusion_Blazor_Diagram_AnnotationConstraints_ReadOnly) constraints. The following code explains how to enable read-only mode.
+The diagram allows you to create read-only annotations. You have to set the read-only property of annotation to enable or disable the [ReadOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AnnotationConstraints.html#Syncfusion_Blazor_Diagram_AnnotationConstraints_ReadOnly) constraints. The following code explains how to enable read-only mode.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -517,10 +517,10 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Blazor Diagram with Multiple Annotations](../images/blazor-diagram-multiple-annotations.png)
 
-N>* Type of the annotation’s property of the node or connector was ObservableCollection.
+N>* Type of the annotation’s property of the node or connector is ObservableCollection.
 <br/>* Default value of the annotation will be null.
 <br/>* All the same customization can be applicable for the annotations.
-<br/>* Text Editing can be stated only the first annotation of the annotation collection when you double click the node or connector.
+<br/>* Text Editing can be started only the first annotation of the annotation collection when you double click the node or connector.
 
 ## How to update annotation constraints
 
