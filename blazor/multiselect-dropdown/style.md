@@ -241,30 +241,6 @@ The following code demonstrates how to display a tooltip when hovering over the 
 
 ![Blazor MultiSelect DropDown displays Tooltip](./images/blazor-multiselect-dropdown-tooltip.png)
 
-## Change the PopupHeight
-
-Use the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_PopupHeight) property to change the height of the popup. The default value of the `PopupHeight` is `300px`.
-
-{% highlight Razor %}
-
-{% include_relative code-snippet/style/popupHeight-property.razor %}
-
-{% endhighlight %}
-
-![Blazor MultiSelect DropDown with PopupHeight property](./images/style/blazor_multiselect_popupHeight-property.png)
-
-## Change the PopupWidth
-
-To customize the width of the popup alone, use the [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_PopupWidth) property. The default value of the `PopupWidth` is `100%`. If popup width unspecified, it sets based on the width of the MultiSelect component.
-
-{% highlight Razor %}
-
-{% include_relative code-snippet/style/popupWidth-property.razor %}
-
-{% endhighlight %}
-
-![Blazor MultiSelect DropDown with PopupWidth property](./images/style/blazor_multiselect_popupWidth-property.png)
-
 ## Change the Width
 
 Gets or sets the width of the component. By default, it sizes based on its parent container dimension.
