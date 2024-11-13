@@ -66,7 +66,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Selecting a group
 
-When a child element of any group is clicked, its contained group is selected instead of the child element. With consecutive clicks on the selected element, selection is changed from top to bottom in the hierarchy of parent group to its children.
+When a child element of any group is clicked, its contained group is selected instead of the child element. With consecutive clicks on the selected element, the selection is changed from top to bottom in the hierarchy of the parent group to its children.
 
 ## Multiple selection
 
@@ -74,7 +74,7 @@ Multiple elements can be selected with the following ways:
 
 * Ctrl+Click
 
-During single click, any existing item in the selection list is cleared, and only the recently clicked item remains in the selection list. To avoid clearing the previously selected item, Ctrl key must be on hold when clicking.
+During a single click, any existing item in the selection list is cleared, and only the recently clicked item remains in the selection list. To avoid clearing the previously selected item, Ctrl key must be on hold when clicking.
 
 * Selection rectangle/rubber band selection
 
@@ -92,7 +92,7 @@ Get the currently selected items from the [Nodes](https://help.syncfusion.com/cr
 
 The [SelectAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectAll) method is used to select all the elements such as nodes/connectors in the diagram. Refer to the following link which shows how to use SelectAll method on the diagram.
 ### How to clone the selected nodes and connector at runtime
-Clone is a virtual method of the node that is used to create a copy of a diagram object. After cloning, we need to set the ID for cloned nodes and connectors. The following code demonstrates how to clone selected nodes during runtime.
+Clone is a virtual method of the node that is used to create a copy of a diagram object. After cloning, it is necessary to set a unique ID for the cloned nodes and connectors. The following code demonstrates how to clone selected nodes during runtime.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
@@ -251,7 +251,7 @@ Clone is a virtual method of the node that is used to create a copy of a diagram
             groupNode.OffsetX += 25;
             groupNode.OffsetY += 25;
         }
-        diagram.AddDiagramElements(new DiagramObjectCollection<NodeBase>() { groupNode });
+        diagram.AddDiagramElementsAsync(new DiagramObjectCollection<NodeBase>() { groupNode });
         return groupNode.ID;
     }
     public string CloneNode(Node node, bool isChild)
@@ -264,7 +264,7 @@ Clone is a virtual method of the node that is used to create a copy of a diagram
             nodeChild.OffsetX += 25;
             nodeChild.OffsetY += 25;
         }
-        diagram.AddDiagramElements(new DiagramObjectCollection<NodeBase>() { nodeChild });
+        diagram.AddDiagramElementsAsync(new DiagramObjectCollection<NodeBase>() { nodeChild });
         diagram.EndGroupAction();
         return nodeChild.ID;
     }
@@ -278,7 +278,7 @@ Clone is a virtual method of the node that is used to create a copy of a diagram
             connectorChild.SourcePoint = new DiagramPoint() { X = connectorChild.SourcePoint.X + 25, Y = connectorChild.SourcePoint.Y + 25 };
             connectorChild.TargetPoint = new DiagramPoint() { X = connectorChild.TargetPoint.X + 25, Y = connectorChild.TargetPoint.Y + 25 };
         }
-        diagram.AddDiagramElements(new DiagramObjectCollection<NodeBase>() { connectorChild });
+        diagram.AddDiagramElementsAsync(new DiagramObjectCollection<NodeBase>() { connectorChild });
         diagram.EndGroupAction();
         return connectorChild.ID;
     }
@@ -346,8 +346,8 @@ For more information about dragging, refer [Node Drag](./nodes/interaction#how-t
 
 ## Resize
 
-* Selector is surrounded by eight thumbs. When dragging these thumbs, selected items can be resized.
-* When one corner of the selector is dragged, opposite corner is in a static position.
+* The selector is surrounded by eight thumbs. When dragging these thumbs, selected items can be resized.
+* When one corner of the selector is dragged, the opposite corner remains in a static position.
 * When a node is resized, the following events get triggered.
 
 | Events | EventArgs | Description |
@@ -401,7 +401,7 @@ N> While dragging and resizing, the objects are snapped towards the nearest obje
 
 * A rotate handler is placed above the selector. Clicking and dragging the handler in a circular direction lead to rotate the node.
 * The node is rotated with reference to the static pivot point.
-* Pivot thumb (thumb at the middle of the node) appears while rotating the node to represent the static point.
+* A pivot thumb (thumb at the middle of the node) appears while rotating the node to represent the static point.
 * When a node is rotated, the following events get triggered.
 
 | Events | EventArgs | Description |
@@ -455,7 +455,7 @@ For more information about resizing, refer [Node Rotate](./nodes/interaction#how
 
 ## End point handles
 
-Source and target points of the selected connectors are represented with two handles. Clicking and dragging those handles help you to adjust the source and target points.
+Source and target points of the selected connectors are represented by two handles. Clicking and dragging those handles help you to adjust the source and target points.
 
 For more information, refer [End Point Dragging](./connectors/interactions#end-point-dragging)
 
@@ -551,9 +551,9 @@ For more information about straight segment editing, refer [Straight Segment Edi
 
 ## Orthogonal segment editing
 
-* Orthogonal thumbs allow you to adjust the length of adjacent segments by clicking and dragging it.
+* Orthogonal thumbs allow you to adjust the length of adjacent segments by clicking and dragging them.
 * When necessary, some segments are added or removed automatically, when dragging the segment. This is to maintain proper routing of orthogonality between segments.
-* When editing the segment collection of connector, the following event gets triggered.
+* When editing the segment collection of a connector, the following event gets triggered.
 
 | Events | EventArgs | Description |
 |----------------|--------------|--------------|
@@ -636,19 +636,19 @@ User handles can be aligned relative to the node boundaries. It has [Margin](htt
 
 ##  How to position the user handle
 
-The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Offset) property of [UserHandle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html) is used to align the user handle based on fractions. 0 represents top/left corner, 1 represents bottom/right corner, and 0.5 represents half of width/height.
+The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Offset) property of a [UserHandle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html) is used to align the user handle based on fractions. 0 represents top/left corner, 1 represents bottom/right corner, and 0.5 represents half of width/height.
 
 ## How to align the user handle based on the connector boundary
 
-The [Side](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Side) property of [UserHandle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html) is used to align the user handle by using the [Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Direction.html#Syncfusion_Blazor_Diagram_Direction_Top), [Bottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Direction.html#Syncfusion_Blazor_Diagram_Direction_Bottom), [Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Direction.html#Syncfusion_Blazor_Diagram_Direction_Left), and [Right](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Direction.html#Syncfusion_Blazor_Diagram_Direction_Right) options.
+The [Side](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Side) property of a [UserHandle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html) is used to align the user handle by using the [Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Direction.html#Syncfusion_Blazor_Diagram_Direction_Top), [Bottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Direction.html#Syncfusion_Blazor_Diagram_Direction_Bottom), [Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Direction.html#Syncfusion_Blazor_Diagram_Direction_Left), and [Right](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Direction.html#Syncfusion_Blazor_Diagram_Direction_Right) options.
 
 ## Add Horizontal and vertical alignments to the user handle
 
-The [HorizontalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_HorizontalAlignment) property of [UserHandle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html) is used to set how the user handle is horizontally aligned at the position based on the [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Offset). The [VerticalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_VerticalAlignment) property is used to set how user handle is vertically aligned at the position.
+The [HorizontalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_HorizontalAlignment) property of a [UserHandle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html) is used to set how the user handle is horizontally aligned at the position based on the [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Offset). The [VerticalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_VerticalAlignment) property is used to set how user handle is vertically aligned at the position.
 
 ## Add Margin to the user handle
 
-Margin is an absolute value used to add some blank space in any one of its four sides. The [UserHandle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html) can be displaced with the [Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Margin) property.
+Margin is an absolute value used to add some blank space on any one of its four sides. The [UserHandle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html) can be displaced with the [Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Margin) property.
 
 ## Notification for the mouse button clicked
 
@@ -702,13 +702,13 @@ The appearance of the user handle can be customized by using the [Size](https://
 ## Zoom pan the diagram
 
 * When a large diagram is loaded, only certain portion of the diagram is visible. The remaining portions are clipped.       Clipped portions can be explored by scrolling the scrollbars or panning the diagram.
-* Diagram can be zoomed in or out by using Ctrl + mouse wheel.
+* The diagram can be zoomed in or out by using Ctrl + mouse wheel.
 
 ![Zoom Pan in Blazor Diagram](images/blazor-diagram-zoom-pan.gif)
 
 ## Keyboard shortcuts
 
-Diagram provides support to interact with the elements with key gestures. By default, some in-built commands are bound with a relevant set of key combinations.
+Diagram provides support to interact with elements with key gestures. By default, some in-built commands are bound with a relevant set of key combinations.
 
 The following table illustrates those commands with the associated key values.
 

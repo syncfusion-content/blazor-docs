@@ -83,6 +83,7 @@ The following example illustrates the multiple selection behavior in ButtonGroup
     bool ThirdSelected { get; set; } = true; // you can pre-select buttons
 }
 
+
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXLfitrYfutrvLMs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
