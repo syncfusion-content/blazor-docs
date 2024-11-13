@@ -214,7 +214,7 @@ The following table contains various types of BPMN loops.
 
 ### Compensation
 
-[IsCompensation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html#Syncfusion_Blazor_Diagram_BpmnActivity_IsCompensation) is triggered when the operation is partially failed and enabled it with the   [IsCompensation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html#Syncfusion_Blazor_Diagram_BpmnActivity_IsCompensation) property of the [Bpmn Activity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html). By default, the [IsCompensation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html#Syncfusion_Blazor_Diagram_BpmnActivity_IsCompensation) is set to false.
+[IsCompensation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html#Syncfusion_Blazor_Diagram_BpmnActivity_IsCompensation) is triggered when the operation is partially failed and enabled it with the [IsCompensation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html#Syncfusion_Blazor_Diagram_BpmnActivity_IsCompensation) property of the [Bpmn Activity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html). By default, the [IsCompensation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html#Syncfusion_Blazor_Diagram_BpmnActivity_IsCompensation) property is set to false.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
