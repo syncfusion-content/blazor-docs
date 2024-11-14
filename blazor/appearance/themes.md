@@ -36,7 +36,7 @@ The Syncfusion Blazor Bootstrap Theme is designed based on Bootstrap v3, whereas
 
 Syncfusion Blazor themes can be used in your Blazor application by referencing the style sheet.
 
-*  For **Blazor Web App**, refer style sheet inside the `<head>` of **~/Components/App.razor** file for .NET 8.
+*  For **Blazor Web App**, refer style sheet inside the `<head>` of **~/Components/App.razor** file for .NET 9 or .NET 8.
 * For **Blazor WebAssembly application**, refer style sheet inside the `<head>` of **wwwroot/index.html** file.
 * For **Blazor Server application**, refer style sheet inside the `<head>` of
     * **~/Pages/_Host.cshtml** file for .NET 7.
@@ -64,7 +64,7 @@ N> For **Blazor Web App with interaction mode as  Auto & Blazor WASM App**, call
 
 Syncfusion Blazor themes are available as static web assets in the [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) NuGet Packages.
 
-*  For **Blazor Web App**,  refer style sheet inside the `<head>` of **~/Components/App.razor** file for .NET 8.
+*  For **Blazor Web App**,  refer style sheet inside the `<head>` of **~/Components/App.razor** file for .NET 9 or .NET 8.
 
 * For **Blazor WebAssembly application**, refer style sheet inside the `<head>` element of **wwwroot/index.html** file.
 * For **Blazor Server application**, refer style sheet inside the `<head>` element of
@@ -610,7 +610,7 @@ The following example demonstrates how to change a theme dynamically in Blazor a
 * For **Blazor Web App**, the theme is changed based on query string at the **~/Components/App.razor** file
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 8 (~/App.razor)" %}
+{% highlight c# tabtitle=".NET 9 & .NET 8 (~/App.razor)" %}
 
 @using Microsoft.AspNetCore.WebUtilities;
 @inject NavigationManager UrlHelper;

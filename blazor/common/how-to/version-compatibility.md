@@ -13,6 +13,7 @@ The following table represents the supported .NET and .NET Core versions by diff
 
 | Version | Syncfusion Blazor Components Version |
 | ------------- | ------------- |
+| [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) | 27.2.2 and above |
 | [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) | 23.1.36 and above |
 | [.NET 7.0](https://devblogs.microsoft.com/dotnet/announcing-dotnet-7/) | 20.4.0.38 and above |
 | [.NET 6.0](https://devblogs.microsoft.com/dotnet/announcing-asp-net-core-in-net-6/) | 19.3.0.43 and above |

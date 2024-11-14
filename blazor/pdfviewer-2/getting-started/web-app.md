@@ -74,7 +74,7 @@ Interactive render mode as WebAssembly or Auto, need to add the following proper
 If you select an Interactive render mode as `WebAssembly` or `Auto`, you need to register the Syncfusion Blazor service in both **~/Program.cs** files of your Blazor Web App.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 8 (~/Program.cs) Server" hl_lines="2 9 11 13" %}
+{% highlight c# tabtitle=".NET 9 & .NET 8 (~/Program.cs) Server" hl_lines="2 9 11 13" %}
 
 using BlazorWebAppServer.Components;
 using Syncfusion.Blazor;
@@ -109,7 +109,7 @@ app.Run();
 
 {% endhighlight %}
 
-{% highlight c# tabtitle=".NET 8 (~/Program.cs) WebAssembly" hl_lines="3 9 11" %}
+{% highlight c# tabtitle=".NET 9 & .NET 8 (~/Program.cs) WebAssembly" hl_lines="3 9 11" %}
 
 using BlazorWebApp.Client.Pages;
 using BlazorWebApp.Components;
@@ -146,7 +146,7 @@ app.Run();
 
 {% endhighlight %}
 
-{% highlight c# tabtitle=".NET 8 (~/Program.cs) Auto" hl_lines="3 9 11 13" %}
+{% highlight c# tabtitle=".NET 9 & .NET 8 (~/Program.cs) Auto" hl_lines="3 9 11 13" %}
 
 using BlazorWebAppAuto.Client.Pages;
 using BlazorWebAppAuto.Components;
