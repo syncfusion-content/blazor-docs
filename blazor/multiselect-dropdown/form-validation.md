@@ -9,7 +9,7 @@ documentation: ug
 
 # Form Validation in MultiSelect
 
-## Editform validation
+## Edit form validation
 
 The MultiSelect component can be used inside an EditForm to create a form that includes a list for selecting an option. The `EditForm` component validates all data annotation rules using the `DataAnnotationsValidator` component.
 
