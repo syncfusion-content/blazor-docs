@@ -11,18 +11,18 @@ documentation: ug
 
 The Detail Template feature in the Syncfusion Blazor DataGrid component allows you to display expanded or collapsible sections for each row to show additional, context-specific information. This is particularly useful for scenarios where rows contain nested or supplementary data that would otherwise clutter the main grid view. You can use the [DetailTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_DetailTemplate) property to define an HTML template for the detail row, which can include any HTML element, Syncfusion component, or custom Blazor component.
 
-To integrate the Detail Template in the Blazor DataGrid component:
-
-1. Add the <DetailTemplate> element within the <GridTemplates> component to specify the content of the detail row.
-2. Use any HTML structure or additional Blazor components within the DetailTemplate to define custom content for each expanded row.
-3. Optionally, bind data to the template to display information that corresponds to the specific row being expanded.
-
-N> Before adding detail template to the datagrid, it is recommended to go through the [template](https://blazor.syncfusion.com/documentation/datagrid/templates) section topic to configure the template.
+> Before adding detail template to the datagrid, it is recommended to go through the [template](https://blazor.syncfusion.com/documentation/datagrid/templates) section topic to configure the template.
 
 To know about **Detail Template** in Blazor DataGrid Component, you can check this video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=Dft0kerEGUQ"%}
+
+To integrate the Detail Template in the Blazor DataGrid component:
+
+1. Add the <DetailTemplate> element within the <GridTemplates> component to specify the content of the detail row.
+2. Use any HTML structure or additional Blazor components within the DetailTemplate to define custom content for each expanded row.
+3. Optionally, bind data to the template to display information that corresponds to the specific row being expanded.
 
 Here's an example to demonstrate use of `DetailTemplate` to display extra details for each row:
 
@@ -34,56 +34,56 @@ Here's an example to demonstrate use of `DetailTemplate` to display extra detail
 @using BlazorApp1.Data
 
 <SfGrid @ref="Grid" DataSource="@Employees">
-<GridTemplates>
-<DetailTemplate>
-@{
-var employee = (context as EmployeeData);
+    <GridTemplates>
+        <DetailTemplate>
+            @{
+                var employee = (context as EmployeeData);
 
-<table class="detailtable" width="100%">
-<colgroup>
-<col width="35%">
-<col width="35%">
-<col width="30%">
-</colgroup>
-<tbody>
-<tr>
-<td rowspan="4" style="text-align: center;">
-<img class="photo" src="@($" scripts/Images/Employees/{employee.EmployeeID}.png")" alt="@employee.EmployeeID" />
-</td>
-<td>
-<span style="font-weight: 500;">Employee ID: </span> @employee.FirstName
-</td>
-<td>
-<span style="font-weight: 500;">Hire Date: </span> @employee.HireDate.ToShortDateString()
-</td>
-</tr>
-<tr>
-<td>
-<span style="font-weight: 500;">Last Name: </span> @employee.LastName
-</td>
-<td>
-<span style="font-weight: 500;">City: </span> @employee.City
-</td>
-</tr>
-<tr>
-<td>
-<span style="font-weight: 500;">Title: </span> @employee.Title
-</td>
-<td>
-<span style="font-weight: 500;">Country: </span> @employee.Country
-</td>
-</tr>
-</tbody>
-</table>
-}
-</DetailTemplate>
-</GridTemplates>
-<GridColumns>
-<GridColumn Field=@nameof(EmployeeData.FirstName) HeaderText="First Name" Width="110"> </GridColumn>
-<GridColumn Field=@nameof(EmployeeData.LastName) HeaderText="Last Name" Width="110"></GridColumn>
-<GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Title" Width="110"></GridColumn>
-<GridColumn Field=@nameof(EmployeeData.Country) HeaderText="Country" Width="110"></GridColumn>
-</GridColumns>
+                <table class="detailtable" width="100%">
+                    <colgroup>
+                        <col width="35%">
+                        <col width="35%">
+                        <col width="30%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td rowspan="4" style="text-align: center;">
+                                <img class="photo" src="@($" scripts/Images/Employees/{employee.EmployeeID}.png")" alt="@employee.EmployeeID" />
+                            </td>
+                            <td>
+                                <span style="font-weight: 500;">Employee ID: </span> @employee.FirstName
+                            </td>
+                            <td>
+                                <span style="font-weight: 500;">Hire Date: </span> @employee.HireDate.ToShortDateString()
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span style="font-weight: 500;">Last Name: </span> @employee.LastName
+                            </td>
+                            <td>
+                                <span style="font-weight: 500;">City: </span> @employee.City
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span style="font-weight: 500;">Title: </span> @employee.Title
+                            </td>
+                            <td>
+                                <span style="font-weight: 500;">Country: </span> @employee.Country
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            }
+        </DetailTemplate>
+    </GridTemplates>
+    <GridColumns>
+        <GridColumn Field=@nameof(EmployeeData.FirstName) HeaderText="First Name" Width="110"> </GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.LastName) HeaderText="Last Name" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Title" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.Country) HeaderText="Country" Width="110"></GridColumn>
+    </GridColumns>
 </SfGrid>
 
 <style type="text/css" class="cssStyles">
@@ -105,8 +105,8 @@ var employee = (context as EmployeeData);
 </style>
 
 @code {
-private SfGrid<EmployeeData> Grid;
-public List<EmployeeData> Employees { get; set; }
+    private SfGrid<EmployeeData> Grid;
+    public List<EmployeeData> Employees { get; set; }
 
     protected override void OnInitialized()
     {
@@ -580,8 +580,8 @@ public static List<EmployeeData> Employees = new List<EmployeeData>();
 
 ![Expand by external button](./images/blazor-datagrid-detail-template-externalbutton.png)
 
-N> 
-* You can expand all the rows by using `ExpandAllDetailRowAsync` method.
+ 
+> * You can expand all the rows by using `ExpandAllDetailRowAsync` method.
 * If you want to expand all the rows at initial DataGrid rendering, then use `ExpandAllDetailRowAsync` method in [dataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event of the DataGrid.
 
 ## Expand or collapse specific detail template row
@@ -589,6 +589,8 @@ N>
 To expand or collapse a specific row of a detail template in the Syncfusion Grid, you can use the [ExpandCollapseDetailRowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExpandCollapseDetailRowAsync__0_) method. This method allows you to programmatically expand or collapse the detail template for a specific row of data by passing the data object representing that row.
 
 The following code demonstrates how to expand the particular rows using `ExpandCollapseDetailRowAsync` method of the DataGrid component when a button is clicked, using the DataGrid reference.
+
+In the below code, the **Expand** method is defined to expand or collapse the detail row of a specific employee when the "Expand/Collapse" button is clicked.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -794,10 +796,6 @@ public static List<EmployeeData> Employees = new List<EmployeeData>();
 {% endhighlight %}
 {% endtabs %}
 
-N> For both collapsing and expanding, same method is used. If a record is in an expanded state, calling this method will collapse it, and vice versa.
-
-In the above code, the **Expand** method is defined to expand or collapse the detail row of a specific employee when the "Expand/Collapse" button is clicked.
-
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjVfCMsBMmVxgIHX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Customize detail template icon
@@ -824,56 +822,56 @@ Here is an example of how to customize the detail template icon:
 @using BlazorApp1.Data
 
 <SfGrid @ref="Grid" DataSource="@Employees">
-<GridTemplates>
-<DetailTemplate>
-@{
-var employee = (context as EmployeeData);
+    <GridTemplates>
+        <DetailTemplate>
+            @{
+                var employee = (context as EmployeeData);
 
-<table class="detailtable" width="100%">
-<colgroup>
-<col width="35%">
-<col width="35%">
-<col width="30%">
-</colgroup>
-<tbody>
-<tr>
-<td rowspan="4" style="text-align: center;">
-<img class="photo" src="@($" scripts/Images/Employees/{employee.EmployeeID}.png")" alt="@employee.EmployeeID" />
-</td>
-<td>
-<span style="font-weight: 500;">Employee ID: </span> @employee.FirstName
-</td>
-<td>
-<span style="font-weight: 500;">Hire Date: </span> @employee.HireDate.ToShortDateString()
-</td>
-</tr>
-<tr>
-<td>
-<span style="font-weight: 500;">Last Name: </span> @employee.LastName
-</td>
-<td>
-<span style="font-weight: 500;">City: </span> @employee.City
-</td>
-</tr>
-<tr>
-<td>
-<span style="font-weight: 500;">Title: </span> @employee.Title
-</td>
-<td>
-<span style="font-weight: 500;">Country: </span> @employee.Country
-</td>
-</tr>
-</tbody>
-</table>
-}
-</DetailTemplate>
-</GridTemplates>
-<GridColumns>
-<GridColumn Field=@nameof(EmployeeData.FirstName) HeaderText="First Name" Width="110"> </GridColumn>
-<GridColumn Field=@nameof(EmployeeData.LastName) HeaderText="Last Name" Width="110"></GridColumn>
-<GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Title" Width="110"></GridColumn>
-<GridColumn Field=@nameof(EmployeeData.Country) HeaderText="Country" Width="110"></GridColumn>
-</GridColumns>
+                <table class="detailtable" width="100%">
+                    <colgroup>
+                        <col width="35%">
+                        <col width="35%">
+                        <col width="30%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td rowspan="4" style="text-align: center;">
+                                <img class="photo" src="@($" scripts/Images/Employees/{employee.EmployeeID}.png")" alt="@employee.EmployeeID" />
+                            </td>
+                            <td>
+                                <span style="font-weight: 500;">Employee ID: </span> @employee.FirstName
+                            </td>
+                            <td>
+                                <span style="font-weight: 500;">Hire Date: </span> @employee.HireDate.ToShortDateString()
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span style="font-weight: 500;">Last Name: </span> @employee.LastName
+                            </td>
+                            <td>
+                                <span style="font-weight: 500;">City: </span> @employee.City
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span style="font-weight: 500;">Title: </span> @employee.Title
+                            </td>
+                            <td>
+                                <span style="font-weight: 500;">Country: </span> @employee.Country
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            }
+        </DetailTemplate>
+    </GridTemplates>
+    <GridColumns>
+        <GridColumn Field=@nameof(EmployeeData.FirstName) HeaderText="First Name" Width="110"> </GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.LastName) HeaderText="Last Name" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Title" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.Country) HeaderText="Country" Width="110"></GridColumn>
+    </GridColumns>
 </SfGrid>
 
 <style type="text/css" class="cssStyles">
@@ -892,7 +890,8 @@ var employee = (context as EmployeeData);
         border-radius: 50px;
         box-shadow: inset 0 0 1px #e0e0e0, inset 0 0 14px rgba(0,0,0,0.2);
     }
-        .e-grid .e-icon-grightarrow::before {
+
+    .e-grid .e-icon-grightarrow::before {
         content: "\e7a9";
     }
 
@@ -902,8 +901,8 @@ var employee = (context as EmployeeData);
 </style>
 
 @code {
-private SfGrid<EmployeeData> Grid;
-public List<EmployeeData> Employees { get; set; }
+    private SfGrid<EmployeeData> Grid;
+    public List<EmployeeData> Employees { get; set; }
 
     protected override void OnInitialized()
     {
@@ -1185,7 +1184,7 @@ public static List<EmployeeData> Employees = new List<EmployeeData>();
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjhpWWCAsuvxiajJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-set-instance-for-child-component)
+> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-set-instance-for-child-component)
 
 ## Limitations
 
