@@ -104,14 +104,15 @@ The following example shows how to perform case-sensitive filter.
 
 {% endhighlight %} -->
 
-<!-- ## Custom filtering
+## Custom filtering
 
-The filter queries for the MultiColumn ComboBox component can be tailored using the [Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_Filtering) event, allowing you to filter text across multiple columns in the data source.
+The MultiColumn ComboBox dropdown component allows you to customize filter queries using the [`Filtering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.SfMultiColumnComboBox-2.html#Syncfusion_Blazor_MultiColumnComboBox_SfMultiColumnComboBox_2_Filtering) event. You can also filter data in multiple columns using the `FilterAsync` method in combination with the `Filtering` event.
 
-In the following example, you can filter the data based on either the `FirstName` or `LastName` fields. The Filtering event utilizes a [Predicate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_Condition) with an `or` condition to accommodate filtering on both fields.
+In the following example, the filter is configured to search based on both the `Name` and `Category` fields. The `Filtering` event uses a [Predicate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_Condition) with an `or` condition to allow filtering across these fields.
 
-For example, if a data source item has `FirstName` as `Nancy` and `LastName` as `Davalio`, you can type either the character `N` or `D` to filter the data. This will display `Nancy` (from the FirstName field) in the popup.
+For instance, if a data source item has a `Name` of "Smartwatch" and a `Category` of "Wearables," typing either "S" or "W" will filter and display the "Smartwatch" item (from the Name field) in the dropdown popup.
 
+> The `FilterAsync` method support is available for the MultiColumnComboBox component starting from version 27.1.57.
 
 {% highlight cshtml %}
 
@@ -119,7 +120,7 @@ For example, if a data source item has `FirstName` as `Nancy` and `LastName` as 
 
 {% endhighlight %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLKsLVmKwTcWkyh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjBTCWCpseStKzwi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Prevent popup opening when filtering
 

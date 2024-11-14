@@ -1,11 +1,12 @@
 @using Syncfusion.Blazor.MultiColumnComboBox
 @using Syncfusion.Blazor.Data
 
-<SfMultiColumnComboBox @ref="multicolumnObj" TValue="string" TItem="Product" Filtering="OnFilter" AllowFiltering=true ShowClearButton=true DataSource="@Products" PopupWidth="600px" ValueField="Name" TextField="Name" Placeholder="Select any product"></SfMultiColumnComboBox>
+<SfMultiColumnComboBox @ref="MultiComboObj" TValue="string" TItem="Product" @bind-Value="@Value" AllowFiltering=true Filtering="onFiltering" ShowClearButton=true DataSource="@Products" PopupWidth="600px" ValueField="Name" TextField="Name" Placeholder="Select any product"></SfMultiColumnComboBox>
 
 @code {
 
-    SfMultiColumnComboBox<string, Product> multicolumnObj { get; set; }
+    private SfMultiColumnComboBox<string, Product> MultiComboObj { get; set; }
+
     public class Product
     {
         public string Name { get; set; }
@@ -14,8 +15,27 @@
         public string Category { get; set; }
         public double Rating { get; set; }
     }
+
     private List<Product> Products = new List<Product>();
-    private string Value { get; set; } = "Smartphone";
+
+    private string Value { get; set; }
+
+    public async Task onFiltering(Syncfusion.Blazor.MultiColumnComboBox.FilteringEventArgs args)
+    {
+        args.PreventDefaultAction = true;
+        var predicate = new List<WhereFilter>
+          {
+            new WhereFilter { Condition = "or", Field = "Name", value = args.Text, Operator = "StartsWith", IgnoreAccent = true, IgnoreCase = true },
+            new WhereFilter { Condition = "or", Field = "Category", value = args.Text, Operator = "StartsWith", IgnoreAccent = true, IgnoreCase = true }
+          };
+        var query = new Query().Where(WhereFilter.Or(predicate));
+        query = !string.IsNullOrEmpty(args.Text) ? query : new Query();
+
+        query = !string.IsNullOrEmpty(args.Text) ? query : new Query();
+
+        await MultiComboObj.FilterAsync(Products, query);
+    }
+
     protected override Task OnInitializedAsync()
     {
         Products = new List<Product>
@@ -29,15 +49,5 @@
 
         };
         return base.OnInitializedAsync();
-    }
-
-    private async Task OnFilter(FilteringEventArgs args)
-    {
-        args.PreventDefaultAction = true;
-        var query = new Query().Where(new WhereFilter() { Field = "Name", Operator = "contains", value = args.Text, IgnoreCase = true });
-
-        query = !string.IsNullOrEmpty(args.Text) ? query : new Query();
-
-        await multicolumnObj.FilterAsync(Products, query);
     }
 }
