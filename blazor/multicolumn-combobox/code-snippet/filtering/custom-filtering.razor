@@ -29,7 +29,6 @@
             new WhereFilter { Condition = "or", Field = "Category", value = args.Text, Operator = "StartsWith", IgnoreAccent = true, IgnoreCase = true }
           };
         var query = new Query().Where(WhereFilter.Or(predicate));
-        query = !string.IsNullOrEmpty(args.Text) ? query : new Query();
 
         query = !string.IsNullOrEmpty(args.Text) ? query : new Query();
 
