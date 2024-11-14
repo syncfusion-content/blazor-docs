@@ -23,7 +23,7 @@ When the MultiSelect input is valid, the form is ready to be submitted. If the i
 
 {% highlight cshtml %}
 
-{% include_relative code-snippet/form-validation/editform-validation.razor %}
+{% include_relative code-snippet/validators/editform-validation.razor %}
 
 {% endhighlight %}
 
