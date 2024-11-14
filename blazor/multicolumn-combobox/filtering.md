@@ -112,6 +112,8 @@ In the following example, the filter is configured to search based on both the `
 
 For instance, if a data source item has a `Name` of "Smartwatch" and a `Category` of "Wearables," typing either "S" or "W" will filter and display the "Smartwatch" item (from the Name field) in the dropdown popup.
 
+> The `FilterAsync` method support is available for the MultiColumnComboBox component starting from version 27.1.57.
+
 {% highlight cshtml %}
 
 {% include_relative code-snippet/filtering/custom-filtering.razor %}
