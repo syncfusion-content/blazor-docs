@@ -122,3 +122,66 @@ To drag and drop an item or group of item between two listbox can achieved by se
 ```
 
 ![Dragging Item between Multiple Blazor ListBox](./images/blazor-listbox-multiple-drag-item.png)
+
+## Dual ListBox with drag and drop
+
+The toolbar and drag and drop actions between two listboxes can be enabled by setting a unique id value and the same Scope property value.
+
+```
+@using Syncfusion.Blazor.DropDowns
+
+<div id="listbox1">
+    <h4>Group A</h4>
+    <SfListBox TValue="string[]" id="scope1" Scope="scope1" DataSource="@GroupA" TItem="CountryCode" AllowDragAndDrop="true">
+        <ListBoxFieldSettings Text="Name"></ListBoxFieldSettings>
+        <ListBoxToolbarSettings Items="@Items"></ListBoxToolbarSettings>
+    </SfListBox>
+</div>
+<div id="listbox2">
+    <h4>Group B</h4>
+    <SfListBox TValue="string[]" id="scope2" Scope="scope1" DataSource="@GroupB" TItem="CountryCode" AllowDragAndDrop="true">
+        <ListBoxFieldSettings Text="Name"></ListBoxFieldSettings>
+    </SfListBox>
+</div>
+
+@code {
+    public string[] Items = new string[] { "MoveTo", "MoveFrom", "MoveAllTo", "MoveAllFrom" };
+    public List<CountryCode> GroupA = new List<CountryCode>
+    {
+        new CountryCode{ Name = "Australia", Code = "AU" },
+        new CountryCode{ Name = "Bermuda", Code = "BM" },
+        new CountryCode{ Name = "Canada", Code = "CA" },
+        new CountryCode{ Name = "Cameroon", Code = "CM" },
+        new CountryCode{ Name = "Denmark", Code = "DK" }
+    };
+
+    public List<CountryCode> GroupB = new List<CountryCode>
+    {
+        new CountryCode{ Name = "India", Code = "IN" },
+        new CountryCode{ Name = "Italy", Code = "IT" },
+        new CountryCode{ Name = "Japan", Code = "JP" },
+        new CountryCode{ Name = "Mexico", Code = "MX" },
+        new CountryCode{ Name = "Norway", Code = "NO" },
+    };
+
+    public class CountryCode
+    {
+        public string Name { get; set; }
+        public string Code { get; set; }
+    }
+}
+
+<style>
+    #listbox1 {
+        width: 48%;
+        float: left;
+    }
+
+    #listbox2 {
+        width: 48%;
+        float: right;
+    }
+</style>
+```
+
+![Dragging Item between Blazor dual ListBox](./images/blazor-listbox-dual-and-drag.png)
