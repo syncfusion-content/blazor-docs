@@ -11,35 +11,13 @@ documentation: ug
 
 The MultiSelect allows the user to select and tag the typed custom value that is not present in the data source when you set the [AllowCustomValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectModel-1.html#Syncfusion_Blazor_DropDowns_MultiSelectModel_1_AllowCustomValue) as true. The selected custom value is added to the suggestion list alone. It will not affect the original data source. The `CustomValueSpecifier` event will trigger when you select or tag the typed custom value.
 
-N> The `Value` field, `Text` field, and `Value` property must be of `string` type when you enable the custom value. For other types, you must provide the custom data for the typed custom value in the `CustomValueSpecifier` event. Find the details on [Value as non-string type](https://blazor.syncfusion.com/documentation/multiselect-dropdown/custom-value#value-as-non-string-type) section.
+N> The `Value` field, `Text` field, and `Value` property must be of `string` type when you enable the custom value. For other types, you must provide the custom data for the typed custom value in the `CustomValueSpecifier` event. Find the details on [Value as non-string type](https://blazor.syncfusion.com/documentation/multiselect-dropdown/custom-value#value-as-non-string-type) section. 
 
-```cshtml
-@using Syncfusion.Blazor.DropDowns
+{% highlight cshtml %}
 
-<SfMultiSelect TValue="Games[]" TItem="Games" Placeholder="Favorite Sports" AllowCustomValue=true DataSource="@LocalData">
-    <MultiSelectFieldSettings Text="Text" Value="ID"></MultiSelectFieldSettings>
-</SfMultiSelect>
+{% include_relative code-snippet/custom-value/custom-value.razor %}
 
-@code {
-    public class Games
-    {
-        public string ID { get; set; }
-        public string Text { get; set; }
-    }
-    List<Games> LocalData = new List<Games> {
-    new Games() { ID= "Game1", Text= "American Football" },
-    new Games() { ID= "Game2", Text= "Badminton" },
-    new Games() { ID= "Game3", Text= "Basketball" },
-    new Games() { ID= "Game4", Text= "Cricket" },
-    new Games() { ID= "Game5", Text= "Football" },
-    new Games() { ID= "Game6", Text= "Golf" },
-    new Games() { ID= "Game7", Text= "Hockey" },
-    new Games() { ID= "Game8", Text= "Rugby"},
-    new Games() { ID= "Game9", Text= "Snooker" },
-    new Games() { ID= "Game10", Text= "Tennis"},
-    };
-}
-```
+{% endhighlight %}
 
 ![Blazor MultiSelect DropDown with Custom Value](./images/blazor-multiselect-dropdown-custom-value.png)
 
@@ -51,36 +29,13 @@ In the `CustomValueSpecifier` event, you will get the typed custom value in the 
 
 The following sample demonstrates configuration of custom value in `CustomValueSpecifier` event.
 
-```cshtml
-@using Syncfusion.Blazor.DropDowns
-<SfMultiSelect TValue="int[]" TItem="Games" Placeholder="Favorite Sports" AllowCustomValue=true DataSource="@LocalData">
-    <MultiSelectFieldSettings Text="Text" Value="ID"></MultiSelectFieldSettings>
-    <MultiSelectEvents TValue="int[]" TItem="Games" CustomValueSpecifier="@CustomValueHandler"></MultiSelectEvents>
-</SfMultiSelect>
+{% highlight cshtml %}
 
-@code {
-    public class Games
-    {
-        public int ID { get; set; }
-        public string Text { get; set; }
-    }
-    List<Games> LocalData = new List<Games> {
-        new Games() { ID= 1, Text= "American Football" },
-        new Games() { ID= 2, Text= "Badminton" },
-        new Games() { ID= 3, Text= "Basketball" },
-        new Games() { ID= 4, Text= "Cricket" },
-        new Games() { ID= 5, Text= "Football" },
-        new Games() { ID= 6, Text= "Golf" },
-        new Games() { ID= 7, Text= "Hockey" },
-        new Games() { ID= 8, Text= "Rugby"},
-        new Games() { ID= 9, Text= "Snooker" },
-        new Games() { ID= 10, Text= "Tennis"},
-    };
-    private void CustomValueHandler(CustomValueEventArgs<Games> args)
-    {
-        System.Random random = new System.Random();
-        args.NewData = new Games() { ID = random.Next(100), Text = args.Text };
-    }
-}
-```
+{% include_relative code-snippet/custom-value/custom-value-non-string.razor %}
+
+{% endhighlight %}
+
+## Limitation in Checkbox mode 
+
+The MultiSelect component supports adding custom values in various modes, including `Default`, `Box`, and `Delimiter`. However, in `Checkbox` mode, the input element is non-editable, preventing the addition of custom values. This limitation is due to the specific functionality of Checkbox mode, where the parent input field remains read-only. As a result, entering custom values is not supported in Checkbox mode, which is the default behavior of the component.
 

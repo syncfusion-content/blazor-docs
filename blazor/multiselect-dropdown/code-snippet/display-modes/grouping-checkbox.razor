@@ -1,18 +1,3 @@
----
-layout: post
-title: Checkbox grouping in Blazor MultiSelect Component | Syncfusion
-description: Checkout and learn here all about checkbox grouping in Syncfusion Blazor MultiSelect component and much more.
-platform: Blazor
-control: MultiSelect
-documentation: ug
----
-
-# Checkbox Grouping in Blazor MultiSelect Component
-
-You can arrange the datasource items by grouping them with checkbox mode in MultiSelect. Clicking the checkbox in group will select all the items grouped under it. Click the MultiSelect element and then type the character in the search box. It will display the filtered list items based on the typed characters and then select the multiple values through the checkbox.
-
-```cshtml
-
 @using Syncfusion.Blazor.DropDowns
 
 <SfMultiSelect TValue="string[]" AllowFiltering="true" TItem="Vegetables" Mode="@VisualMode.CheckBox" Width="250px" Placeholder="Select a vegetable" DataSource="@VegetablesList" ShowSelectAll="@ShowSelectAllCheckBox"
@@ -45,8 +30,3 @@ You can arrange the datasource items by grouping them with checkbox mode in Mult
         new Vegetables() { Vegetable = "Yarrow", Category = "Leafy and Salad", ID = "item11" },
     };
 }
-
-```
-
-![Blazor MultiSelect DropDown with Checkbox Grouping](./images/blazor-multiselect-dropdown-checkbox-grouping.png)
-
