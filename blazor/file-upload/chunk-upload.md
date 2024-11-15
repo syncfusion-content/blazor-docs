@@ -19,6 +19,10 @@ To enable the chunk upload, set the size to [ChunkSize](https://help.syncfusion.
 
 The server-side implementation entirely depends on the application requirements and logic. The following code snippet provides the server-side logic to handle the chunk upload using the FileUpload components.
 
+>The `chunk-index` and `total-chunk` values are accessible through the form data using `Request.Form`, which retrieves these details from the incoming request.
+* `chunk-index` - Indicates the index of the current chunk being received.
+* `total-chunk` - Represents the total number of chunks for the file being uploaded.
+
 ```csharp
 public string uploads = Path.Combine(Directory.GetCurrentDirectory(), "Uploaded Files"); // Set your desired upload directory path
 
