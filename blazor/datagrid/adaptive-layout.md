@@ -186,7 +186,7 @@ public static List<AdaptiveDetails> AdaptiveModels = new List<AdaptiveDetails>()
 
     public AdaptiveDetails() { }
 
-    public AdaptiveDetails(int? SNO, string Model, string Developer, DateTime? ReleaseDate, string AndroidVersion)
+    public AdaptiveDetails(int SNO, string Model, string Developer, DateTime? ReleaseDate, string AndroidVersion)
     {
         this.SNO = SNO;
         this.Model = Model;
@@ -231,9 +231,7 @@ public static List<AdaptiveDetails> AdaptiveModels = new List<AdaptiveDetails>()
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLfWiMTrwfRIOLP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-N> 1. This UI is common for both horizontal and vertical mode of rendering when EnableAdaptiveUI is enabled.
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrTCCMIipRSVeiy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Vertical row rendering
 
@@ -451,7 +449,7 @@ public class AdaptiveDetails
 
     public AdaptiveDetails() { }
 
-    public AdaptiveDetails(int? SNO, string Model, string Developer, DateTime? ReleaseDate, string AndroidVersion)
+    public AdaptiveDetails(int SNO, string Model, string Developer, DateTime? ReleaseDate, string AndroidVersion)
     {
         this.SNO = SNO;
         this.Model = Model;
@@ -496,7 +494,7 @@ public class AdaptiveDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrziMiTUYStHrZr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXVTCssyWfxDKTfT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > [EnableAdaptiveUI](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableAdaptiveUI) property must be enabled for vertical row rendering.
 
@@ -750,4 +748,4 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDhfsMCfznwypGTw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-render-adaptive-layout)
+> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-render-adaptive-layout)
