@@ -500,9 +500,118 @@ Type="ColumnType.Date" Format="dMM/dd/yyyy hh:mm:ss tt" | 04/07/1996 12:00 AM
 
 ## Format the date column based on localization
 
-You can also format the date column based on the localization settings of the user’s browser. You can use the format property of the Grid columns along with the locale property to specify the desired date format based on the locale.
+In Syncfusion Blazor Grid, you can format date columns to match the user’s locale settings by configuring the application’s localization. By setting up the application culture and using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Format) property in Grid columns, you can display dates in a format appropriate for the user’s region.
 
-In this example, the format property specifies the date format as “yyyy-MMM-dd”, and the locale property specifies the locale as “es-AR” for Spanish (Argentina).
+**Enabling Localization in a Blazor Application**
+
+To enable localization in your Blazor application:
+
+1. **Download Locale Files:**
+
+    Download the necessary locale files from [Syncfusion’s Blazor Locale Repository](https://github.com/syncfusion/blazor-locale).
+
+2. **Register Locale Files:**
+
+    Follow the localization setup guidelines provided in the [Syncfusion Localization Documentation](https://blazor.syncfusion.com/documentation/common/localization) to register and configure the locale files in your project.
+
+3. **Set the Application Culture:**
+
+    Configure the culture setting in Program.cs or _Host.cshtml to match the desired locale. For example, setting the culture to Spanish ("es") ensures dates display according to Spanish formatting conventions:
+    ```cs
+    using System.Globalization;
+
+    CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("es-AR");
+    CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo("es-AR");
+    ```
+
+Once localization is enabled, you can specify a custom date format for each date column in the Syncfusion Blazor Grid by using the `Format` property. This property allows you to define how dates will be displayed, enhancing user experience by ensuring date formats are familiar to the user.
+
+In the example below, the date format is set to **yyyy-MMM-dd** to align with the Spanish culture configured in the application.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@page "/counter"
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" Height="315">
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText=" Order Date" Format="yyyy-MMM-dd" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="ShipCountry" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<OrderData> Orders { get; set; }
+
+    protected override void OnInitialized ()
+    {
+        Orders = OrderData.GetAllRecords();
+    }
+}
+
+{% endhighlight %}
+{% highlight cs tabtitle="OrderData.cs" %}
+namespace LocalizationSample.Client
+{
+    public class OrderData
+    {
+        public static List<OrderData> Orders = new List<OrderData>();
+
+        public OrderData() { }
+
+        public OrderData(int? OrderID, string CustomerID, string ShipName, double Freight, DateTime? OrderDate, DateTime? ShippedDate, bool? IsVerified, string ShipCity, string ShipCountry, int employeeID)
+        {
+            this.OrderID = OrderID;
+            this.CustomerID = CustomerID;
+            this.ShipName = ShipName;
+            this.Freight = Freight;
+            this.OrderDate = OrderDate;
+            this.ShippedDate = ShippedDate;
+            this.IsVerified = IsVerified;
+            this.ShipCity = ShipCity;
+            this.ShipCountry = ShipCountry;
+            this.EmployeeID = employeeID;
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count == 0)
+            {
+                Orders.Add(new OrderData(10248, "VINET", "Vins et alcools Chevalier", 32.38, new DateTime(1996, 7, 4), new DateTime(1996, 08, 07), true, "Reims", "France", 1));
+                Orders.Add(new OrderData(10249, "TOMSP", "Toms Spezialitäten", 11.61, new DateTime(1996, 7, 5), new DateTime(1996, 08, 07), false, "Münster", "Germany", 2));
+                Orders.Add(new OrderData(10250, "HANAR", "Hanari Carnes", 65.83, new DateTime(1996, 7, 6), new DateTime(1996, 08, 07), true, "Rio de Janeiro", "Brazil", 3));
+                Orders.Add(new OrderData(10251, "VINET", "Vins et alcools Chevalier", 41.34, new DateTime(1996, 7, 7), new DateTime(1996, 08, 07), false, "Lyon", "France", 1));
+                Orders.Add(new OrderData(10252, "SUPRD", "Suprêmes délices", 151.30, new DateTime(1996, 7, 8), new DateTime(1996, 08, 07), true, "Charleroi", "Belgium", 2));
+                Orders.Add(new OrderData(10253, "HANAR", "Hanari Carnes", 58.17, new DateTime(1996, 7, 9), new DateTime(1996, 08, 07), false, "Bern", "Switzerland", 3));
+                Orders.Add(new OrderData(10254, "CHOPS", "Chop-suey Chinese", 22.98, new DateTime(1996, 7, 10), new DateTime(1996, 08, 07), true, "Genève", "Switzerland", 2));
+                Orders.Add(new OrderData(10255, "VINET", "Vins et alcools Chevalier", 148.33, new DateTime(1996, 7, 11), new DateTime(1996, 08, 07), false, "Resende", "Brazil", 1));
+                Orders.Add(new OrderData(10256, "HANAR", "Hanari Carnes", 13.97, new DateTime(1996, 7, 12), new DateTime(1996, 08, 07), true, "Paris", "France", 3));
+            }
+            return Orders;
+        }
+
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public string ShipName { get; set; }
+        public double? Freight { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public DateTime? ShippedDate { get; set; }
+        public bool? IsVerified { get; set; }
+        public string ShipCity { get; set; }
+        public string ShipCountry { get; set; }
+        public int EmployeeID { get; set; }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Format the date column based on localization](./images/blazor-datagrid-format-localization.png)
+
+> [Syncfusion GitHub Sample for Blazor Localization](https://github.com/SyncfusionExamples/blazor-localization)
 
 ## Format template column value
 
@@ -575,7 +684,53 @@ Syncfusion Blazor DataGrid allows you to customize the formatting of data in the
 
 In the below example, the numberFormatOptions object is used as the format property for the ‘Freight’ column to apply a custom numeric format with four decimal places. Similarly, the dateFormatOptions object is used as the format property for the ‘OrderDate’ column to apply a custom date format displaying the date in the format of day-of-the-week, month abbreviation, day, and 2-digit year (e.g. Sun, May 8, 23).
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLqWZKWCpWghdlk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@page "/counter"
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders">
+    <GridPageSettings PageSize="5"></GridPageSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="@numberFormatOptions" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Type="Syncfusion.Blazor.Grids.ColumnType.Date" Format="@dateFormatOptions" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="130">
+        </GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<Order> Orders { get; set; }
+    public string numberFormatOptions = "##.0000";
+    public string dateFormatOptions = "ddd, MMM d, ''yy";
+        
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "ALFKI", "ANTON", "BOLID", "BLONP", "ANTAR" })[new Random().Next(5)],
+                ShipCountry = (new string[] { "France", "Germany", "Brazil", "Belgium", "Switzerland" })[new Random().Next(5)],
+                Freight = 2.1 * x,
+                OrderDate = DateTime.Now.AddDays(-x),
+                
+            }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public string ShipCountry { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLfitrqWuljKUXu?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 ## Align the text of content
 
@@ -740,11 +895,6 @@ To enable the rendering of boolean values as checkboxes, you need to set the `Di
 >* The `DisplayAsCheckBox` property is only applicable to boolean values in DataGrid columns.
 > * Need to define [EditType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_EditType) as **EditType.BooleanEdit** to GridColumn to render checkbox while editing a boolean value.
 >* When `DisplayAsCheckBox` is set to **true**, the boolean values will be rendered as checkboxes in the DataGrid column, with checked state indicating **true** and unchecked state indicating **false**.
-
-## How to prevent checkbox in the blank row
-To prevent the checkbox in the blank row of the Grid, even if the displayAsCheckBox property is set to true for that column, you can use the rowDataBound event and check for empty or null values in the row data. If all the values in the row are empty or null, you can set the inner HTML of the corresponding cell to an empty string to hide the checkbox.
-
-Here is an example of how you can prevent a checkbox from being displayed in a blank row in a Grid:
 
 ## AutoFit columns
 
@@ -1011,19 +1161,6 @@ Here's an example code snippet in Blazor that demonstrates how to auto fit colum
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtrUWCZmBqLMLrUr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-### AutoFit columns with specific rows
-
-To adjust the column widths of a specific range of rows based on their content, you can use the autoFitColumns method by simply passing the second and third parameters (optional) as the start and end index for the column you want to fit. You can autofit specific columns at initial rendering by invoking the autoFitColumns method in dataBound event.
-
-This feature will calculate the appropriate width based on the maximum content width of the specified range of rows or the header text width. Subsequently, the maximum width of the content of the specified rows or header text will be applied to the entire column of the grid.
-
-Here is an example of how to autofit columns with specific rows. The first parameter is an array containing the specific column field names, such as Inventor, Number of INPADOC patents and Main fields of invention is passed to apply the autofit functionality to these columns. After, the second parameter are start index is set to 1 and third parameter are end index is set to 3. When specifying these start and end index, the autofit operation is applied only to the range of rows from 1 to 3 for column width adjustment.
-
-## Locked columns
-The Syncfusion Grid allows you to lock columns, which prevents them from being reordered and moves them to the first position. This functionality can be achieved by setting the column.lockColumn property to true, which locks the column and moves it to the first position in the grid.
-
-Here’s an example of how you can use the lockColumn property to lock a column in the Syncfusion Grid:
 
 ## Show or hide columns
 
@@ -1389,11 +1526,6 @@ Customizing the datagrid column styles allows you to modify the appearance of co
 
 For more information check on this [documentation](https://blazor.syncfusion.com/documentation/datagrid/cell#customize-cell-styles).
 
-
-## Manipulating columns
-
-The Syncfusion DataGrid for Blazor provides powerful features for manipulating columns in a datagrid. This section explains how to access columns and add/remove columns using Syncfusion DataGrid properties, methods, and events.
-
 ### Accessing Columns
 
 To access columns in the Syncfusion DataGrid, you can use the following methods in the datagrid.
@@ -1447,7 +1579,6 @@ This method returns an list of field names of all the columns in the DataGrid.
 ```
 
 > For a complete list of column methods and properties, refer to this [section](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html).
-
 
 ### Adding/Removing Columns
 
