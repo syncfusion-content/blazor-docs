@@ -248,3 +248,5 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 * [Learn different ways to add script reference in Blazor Application](https://blazor.syncfusion.com/documentation/common/adding-script-references)
 
 * [Processing Large Files Without Increasing Maximum Message Size in SfPdfViewer Component](../how-to/processing-large-files-without-increasing-maximum-message-size)
+
+* [Resolving Native Linking Issues with SkiaSharp and Emscripten 3.1.56 in Blazor](../how-to/resolving-native-linking-issues-with-skiasharp-and-emscripten-in-blazor)
