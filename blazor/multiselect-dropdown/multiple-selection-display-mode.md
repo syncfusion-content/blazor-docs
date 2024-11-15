@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Multiple selection display modes in Blazor MultiSelect Component | Syncfusion
+title: Multiple selection modes in Blazor MultiSelect Component | Syncfusion
 description: Checkout and learn here all about Multiple selection display modes in Syncfusion Blazor MultiSelect component and more.
 platform: Blazor
 control: MultiSelect
