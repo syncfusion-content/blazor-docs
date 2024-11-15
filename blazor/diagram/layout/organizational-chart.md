@@ -105,9 +105,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Blazor Organization Chart Diagram](../images/blazor-organization-chart.png)
 
-Organizational chart layout starts parsing from root and iterate through all its child elements. The [GetLayoutInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_GetLayoutInfo) event callback method provides necessary information about a node’s children and the way to arrange them(direction, orientation, offsets, etc.). The arrangements can be customized by overriding this function as explained.
+Organizational chart layout starts parsing from root and iterates through all its child elements. The [GetLayoutInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_GetLayoutInfo) event callback method provides necessary information about a node’s children and the way to arrange them(direction, orientation, offsets, etc.). The arrangements can be customized by overriding this function as explained.
 
-**GetLayoutInfo** set chart orientations, chart types, and offset to be left between parent and child nodes. The GetLayoutInfo event callback method is called to configure every subtree of the organizational chart. It takes the following arguments.
+**GetLayoutInfo** sets chart orientations, chart types, and offset to be left between parent and child nodes. The GetLayoutInfo event callback method is called to configure every subtree of the organizational chart. It takes the following arguments.
 
 1. **IDiagramObject**: Parent node to that options are to be customized.
 2. **TreeInfo**: Object to set the customizable properties.
@@ -252,7 +252,7 @@ Layout provides support to add some blank space between the layout bounds/viewpo
 
 ### How to change orientation
 
-Diagram provides support to customize the `Orientation` of layout. You can set the desired orientation using `LayoutOrientation`.
+Diagram provides support to customize the `Orientation` of the layout. You can set the desired orientation using `LayoutOrientation`.
 
 The following code illustrates how to arrange the nodes in a BottomToTop orientation.
 
@@ -370,7 +370,7 @@ The following code example illustrates how to add assistants to the layout.
 
 ## How to refresh the layout
 
-Diagram allows to refresh the layout at runtime by using the [DoLayoutAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DoLayoutAsync) method. Use the following code example to refresh the layout.
+Diagram allows you to refresh the layout at runtime by using the [DoLayoutAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DoLayoutAsync) method. Use the following code example to refresh the layout.
 
 ```csharp
 //Update the layout at runtime.
