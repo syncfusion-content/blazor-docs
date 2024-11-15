@@ -31,7 +31,7 @@ When the MultiSelect input is valid, the form is ready to be submitted. If the i
 
 ## Selection Limit
 
-The number of selectable items in the MultiSelect component can be limited by setting the [MaximumSelectionLength](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectModel-1.html#Syncfusion_Blazor_DropDowns_MultiSelectModel_1_MaximumSelectionLength) property.
+The number of selectable items in the MultiSelect component can be limited by setting the [MaximumSelectionLength](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_MaximumSelectionLength) property.
 
 In the example below, the selection limit is set to three items, and the MultiSelect component displays the selected items in CheckBox mode.
 
