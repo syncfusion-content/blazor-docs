@@ -375,7 +375,7 @@ To customize the visual appearance of the Orthogonal segment thumb, apply the fo
    }
 </style>
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Sample/Style/OrthogonalThumbStyle)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Style/OrthogonalThumbStyle)
 
 ![Segment Thumb style in Blazor Diagram](images/OrthogonalThumbStyle.png)
 
