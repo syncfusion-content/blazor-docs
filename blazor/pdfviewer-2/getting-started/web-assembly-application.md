@@ -17,8 +17,11 @@ In this section, we'll guide you through the process of adding Syncfusion's Blaz
 
 * To use the PDF Viewer (Next Gen) component in a Blazor WebAssembly application with SkiaSharp, make sure to have the required .NET workloads installed by executing the following commands in the command prompt.
     * dotnet workload install wasm-tools
-    * dotnet workload install wasm-tools-net6
-    * dotnet workload install wasm-tools-net8
+
+N> | .NET Version Installed | Workload Installation Command                                | Description                                         |
+|------------------------|--------------------------------------------------------------|-----------------------------------------------------|
+| Future .NET Versions   | `dotnet workload install wasm-tools`                         | Installs WebAssembly tools for future .NET versions (e.g., .NET 9 and beyond).|
+| Older Versions         | `dotnet workload install wasm-tools-netX` (e.g., `dotnet workload install wasm-tools-net6`) | Specify the version when using older versions.     |
 
 ## Create a new Blazor App in Visual Studio    
 
