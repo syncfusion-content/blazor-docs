@@ -745,75 +745,123 @@ Here is an example of using the `TextAlign` property to align the text of a Data
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+@page "/"
+
 @using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.DropDowns
 @using BlazorApp1.Data
 
-<SfGrid DataSource="@Orders" AllowPaging="true" Height="315">
+<div style="display:flex; margin:3px">
+    <label style="padding:  10px 10px 12px 0">Align the text for columns :</label>
+    <SfDropDownList style='margin-top:5px' Width="100px" TValue="string" TItem="ColumnAlignmentOption" DataSource="@DropDownData" Value="@SelectedAlignment">
+        <DropDownListFieldSettings Value="Text" Text="Text"></DropDownListFieldSettings>
+        <DropDownListEvents TValue="string" TItem="ColumnAlignmentOption" ValueChange="OnValueChange"></DropDownListEvents>
+    </SfDropDownList>
+</div>
+
+<SfGrid DataSource="@Orders" Height="315" @ref="grid">
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Left" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" TextAlign="TextAlign.Center" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" Width="130" TextAlign="TextAlign.Justify" Type="ColumnType.Date"></GridColumn>
+        <GridColumn Field="OrderID" HeaderText="Order ID" IsPrimaryKey="true" Width="100" TextAlign="@SelectedAlignmentEnum"></GridColumn>
+        <GridColumn Field="CustomerID" HeaderText="Customer ID" TextAlign="@SelectedAlignmentEnum" Width="120"></GridColumn>
+        <GridColumn Field="ShipCountry" HeaderText="Ship Country" TextAlign="@SelectedAlignmentEnum" Width="80"></GridColumn>
+        <GridColumn Field="OrderDate" HeaderText="Order Date" TextAlign="@SelectedAlignmentEnum" Format="yMd" Width="80"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 @code {
     public List<OrderData> Orders { get; set; }
-   
+    public string SelectedAlignment  { get; set; } = "Left";
+    public TextAlign SelectedAlignmentEnum { get; set; } = TextAlign.Left;
+
+    public class ColumnAlignmentOption
+    {
+        public string Text { get; set; }
+    }
+
+    List<ColumnAlignmentOption> DropDownData = new List<ColumnAlignmentOption> {
+        new ColumnAlignmentOption() { Text= "Left" },
+        new ColumnAlignmentOption() { Text= "Right" },
+        new ColumnAlignmentOption() { Text= "Center" },
+    };
+
+    // Reference to the grid
+    private SfGrid<OrderData> grid;
+    public void OnValueChange(ChangeEventArgs<string, ColumnAlignmentOption> args)
+    {
+        SelectedAlignment  = args.Value;
+        SelectedAlignmentEnum = SelectedAlignment  switch
+        {
+            "Left" => TextAlign.Left,
+            "Right" => TextAlign.Right,
+            "Center" => TextAlign.Center,
+            _ => TextAlign.Left
+        };
+        grid.Refresh();
+    }
+
     protected override void OnInitialized()
     {
         Orders = OrderData.GetAllRecords();
-    }    
+    }
 }
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
+  namespace BlazorApp1.Data
+{
     public class OrderData
     {
         public static List<OrderData> Orders = new List<OrderData>();
-        public OrderData()
-        {
 
-        }
-        public OrderData(int? OrderID, string CustomerID, DateTime? OrderDate,string ShipCountry)
+        public OrderData() { }
+
+        public OrderData(int OrderID, string CustomerID, string ShipName, double Freight, DateTime? OrderDate, DateTime? ShippedDate, bool? IsVerified, string ShipCity, string ShipCountry, int employeeID)
         {
             this.OrderID = OrderID;
-            this.CustomerID = CustomerID;   
+            this.CustomerID = CustomerID;
+            this.ShipName = ShipName;
+            this.Freight = Freight;
             this.OrderDate = OrderDate;
+            this.ShippedDate = ShippedDate;
+            this.IsVerified = IsVerified;
+            this.ShipCity = ShipCity;
             this.ShipCountry = ShipCountry;
-           
+            this.EmployeeID = employeeID; 
         }
 
         public static List<OrderData> GetAllRecords()
         {
-            if (Orders.Count() == 0)
+            if (Orders.Count == 0)
             {
-                int code = 10;
-                for (int i = 1; i < 2; i++)
-                {
-                    Orders.Add(new OrderData(10248, "VINET", new DateTime(1996,7,4), "France"));
-                    Orders.Add(new OrderData(10249, "TOMSP",  new DateTime(1996, 7, 5), "Germany"));
-                    Orders.Add(new OrderData(10250, "HANAR", new DateTime(1996, 7, 6), "Brazil"));
-                    Orders.Add(new OrderData(10251, "VINET",  new DateTime(1996, 7, 7), "France"));
-                    Orders.Add(new OrderData(10252, "SUPRD", new DateTime(1996, 7, 8), "Belgium"));
-                    Orders.Add(new OrderData(10253, "HANAR",  new DateTime(1996, 7, 9), "Brazil"));
-                    Orders.Add(new OrderData(10254, "CHOPS", new DateTime(1996, 7, 10), "Switzerland"));
-                    Orders.Add(new OrderData(10255, "VINET",new DateTime(1996, 7, 11), "Switzerland"));
-                    Orders.Add(new OrderData(10256, "HANAR", new DateTime(1996, 7, 12), "Brazil"));
-                    code += 5;
-                }
+                Orders.Add(new OrderData(10248, "VINET", "Vins et alcools Chevalier", 32.38, new DateTime(1996, 7, 4), new DateTime(1996, 08, 07), true, "Reims", "France", 1));
+                Orders.Add(new OrderData(10249, "TOMSP", "Toms Spezialitäten", 11.61, new DateTime(1996, 7, 5), new DateTime(1996, 08, 07), false, "Münster", "Germany", 2));
+                Orders.Add(new OrderData(10250, "HANAR", "Hanari Carnes", 65.83, new DateTime(1996, 7, 6), new DateTime(1996, 08, 07), true, "Rio de Janeiro", "Brazil", 3));
+                Orders.Add(new OrderData(10251, "VINET", "Vins et alcools Chevalier", 41.34, new DateTime(1996, 7, 7), new DateTime(1996, 08, 07), false, "Lyon", "France", 1));
+                Orders.Add(new OrderData(10252, "SUPRD", "Suprêmes délices", 151.30, new DateTime(1996, 7, 8), new DateTime(1996, 08, 07), true, "Charleroi", "Belgium", 2));
+                Orders.Add(new OrderData(10253, "HANAR", "Hanari Carnes", 58.17, new DateTime(1996, 7, 9), new DateTime(1996, 08, 07), false, "Bern", "Switzerland", 3));
+                Orders.Add(new OrderData(10254, "CHOPS", "Chop-suey Chinese", 22.98, new DateTime(1996, 7, 10), new DateTime(1996, 08, 07), true, "Genève", "Switzerland", 2));
+                Orders.Add(new OrderData(10255, "VINET", "Vins et alcools Chevalier", 148.33, new DateTime(1996, 7, 11), new DateTime(1996, 08, 07), false, "Resende", "Brazil", 1));
+                Orders.Add(new OrderData(10256, "HANAR", "Hanari Carnes", 13.97, new DateTime(1996, 7, 12), new DateTime(1996, 08, 07), true, "Paris", "France", 3));
             }
             return Orders;
         }
-        public int? OrderID { get; set; }
+
+        public int OrderID { get; set; }
         public string CustomerID { get; set; }
-        public string ShipCountry { get; set; }
+        public string ShipName { get; set; }
+        public double? Freight { get; set; }
         public DateTime? OrderDate { get; set; }
-       
+        public DateTime? ShippedDate { get; set; }
+        public bool? IsVerified { get; set; }
+        public string ShipCity { get; set; }
+        public string ShipCountry { get; set; }
+        public int EmployeeID { get; set; } 
     }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLqMDAssKgmASlG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htrJCMMuCwICimOy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 >* The `TextAlign` property only changes the alignment content not the column header. If you want to align both the column header and content, you can use the [HeaderTextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderTextAlign) property.
 
