@@ -9,6 +9,8 @@ documentation: ug
 
 # Columns in Blazor DataGrid Component
 
+In Syncfusion Blazor DataGrid, Columns are fundamental elements that play a pivotal role in organizing and displaying data within your application. They serve as the building blocks for data presentation, allowing you to specify what data fields to show, how to format and style them, and how to enable various interactions within the grid.
+
 ## Column types
 
 The Syncfusion Blazor DataGrid component allows you to specify the type of data that a column binds using the [Column.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type) property. The `Type` property is used to determine the appropriate [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Format), such as [Decimal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnType.html#Syncfusion_Blazor_Grids_ColumnType_Decimal),  [Double](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnType.html#Syncfusion_Blazor_Grids_ColumnType_Double), [Integer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnType.html#Syncfusion_Blazor_Grids_ColumnType_Integer), [Long](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnType.html#Syncfusion_Blazor_Grids_ColumnType_Long), [None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnType.html#Syncfusion_Blazor_Grids_ColumnType_None) or [Date](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnType.html#Syncfusion_Blazor_Grids_ColumnType_Date), for displaying the column data. 
@@ -144,7 +146,8 @@ To adjust the column width in a Grid, you can use the [Width](https://help.syncf
 
 7. If the parent element has a fixed width, the grid component will inherit that width and occupy the available space. However, if the parent element does not have a fixed width, the grid component will adjust its width dynamically based on the available space.
 
-8. When AllowResizing is enabled in the Data Grid, columns whose width is unspecified will be defined as 200px.
+8. When no width is provided in a column and MinWidth property is defined, if the cumulative width of the column is greater than the grid element width then MinWidth would be used as the column width to avoid it from becoming invisible.
+9. When AllowResizing is enabled in the Data Grid, columns whose width is unspecified will be defined as 200px.
 
 **Supported types for column width**
 
@@ -495,6 +498,240 @@ Type="ColumnType.Date" Format="dMM/dd/yyyy hh:mm:ss tt" | 04/07/1996 12:00 AM
 
 > To learn more about date formatting, you can refer to [Date formatting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnType.html#Syncfusion_Blazor_Grids_ColumnType_Date).
 
+### Format the date column based on localization
+
+In Syncfusion Blazor Grid, you can format date columns to match the user’s locale settings by configuring the application’s localization. By setting up the application culture and using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Format) property in Grid columns, you can display dates in a format appropriate for the user’s region.
+
+**Enabling Localization in a Blazor Application**
+
+To enable localization in your Blazor application:
+
+1. **Download Locale Files:**
+
+    Download the necessary locale files from [Syncfusion’s Blazor Locale Repository](https://github.com/syncfusion/blazor-locale).
+
+2. **Register Locale Files:**
+
+    Follow the localization setup guidelines provided in the [Syncfusion Localization Documentation](https://blazor.syncfusion.com/documentation/common/localization) to register and configure the locale files in your project.
+
+3. **Set the Application Culture:**
+
+    Configure the culture setting in Program.cs or _Host.cshtml to match the desired locale. For example, setting the culture to Spanish ("es") ensures dates display according to Spanish formatting conventions:
+    ```cs
+    using System.Globalization;
+
+    CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("es-AR");
+    CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo("es-AR");
+    ```
+
+Once localization is enabled, you can specify a custom date format for each date column in the Syncfusion Blazor Grid by using the `Format` property. This property allows you to define how dates will be displayed, enhancing user experience by ensuring date formats are familiar to the user.
+
+In the example below, the date format is set to **yyyy-MMM-dd** to align with the Spanish culture configured in the application.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@page "/counter"
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" Height="315">
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText=" Order Date" Format="yyyy-MMM-dd" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="ShipCountry" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<OrderData> Orders { get; set; }
+
+    protected override void OnInitialized ()
+    {
+        Orders = OrderData.GetAllRecords();
+    }
+}
+
+{% endhighlight %}
+{% highlight cs tabtitle="OrderData.cs" %}
+namespace LocalizationSample.Client
+{
+    public class OrderData
+    {
+        public static List<OrderData> Orders = new List<OrderData>();
+
+        public OrderData() { }
+
+        public OrderData(int? OrderID, string CustomerID, string ShipName, double Freight, DateTime? OrderDate, DateTime? ShippedDate, bool? IsVerified, string ShipCity, string ShipCountry, int employeeID)
+        {
+            this.OrderID = OrderID;
+            this.CustomerID = CustomerID;
+            this.ShipName = ShipName;
+            this.Freight = Freight;
+            this.OrderDate = OrderDate;
+            this.ShippedDate = ShippedDate;
+            this.IsVerified = IsVerified;
+            this.ShipCity = ShipCity;
+            this.ShipCountry = ShipCountry;
+            this.EmployeeID = employeeID;
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count == 0)
+            {
+                Orders.Add(new OrderData(10248, "VINET", "Vins et alcools Chevalier", 32.38, new DateTime(1996, 7, 4), new DateTime(1996, 08, 07), true, "Reims", "France", 1));
+                Orders.Add(new OrderData(10249, "TOMSP", "Toms Spezialitäten", 11.61, new DateTime(1996, 7, 5), new DateTime(1996, 08, 07), false, "Münster", "Germany", 2));
+                Orders.Add(new OrderData(10250, "HANAR", "Hanari Carnes", 65.83, new DateTime(1996, 7, 6), new DateTime(1996, 08, 07), true, "Rio de Janeiro", "Brazil", 3));
+                Orders.Add(new OrderData(10251, "VINET", "Vins et alcools Chevalier", 41.34, new DateTime(1996, 7, 7), new DateTime(1996, 08, 07), false, "Lyon", "France", 1));
+                Orders.Add(new OrderData(10252, "SUPRD", "Suprêmes délices", 151.30, new DateTime(1996, 7, 8), new DateTime(1996, 08, 07), true, "Charleroi", "Belgium", 2));
+                Orders.Add(new OrderData(10253, "HANAR", "Hanari Carnes", 58.17, new DateTime(1996, 7, 9), new DateTime(1996, 08, 07), false, "Bern", "Switzerland", 3));
+                Orders.Add(new OrderData(10254, "CHOPS", "Chop-suey Chinese", 22.98, new DateTime(1996, 7, 10), new DateTime(1996, 08, 07), true, "Genève", "Switzerland", 2));
+                Orders.Add(new OrderData(10255, "VINET", "Vins et alcools Chevalier", 148.33, new DateTime(1996, 7, 11), new DateTime(1996, 08, 07), false, "Resende", "Brazil", 1));
+                Orders.Add(new OrderData(10256, "HANAR", "Hanari Carnes", 13.97, new DateTime(1996, 7, 12), new DateTime(1996, 08, 07), true, "Paris", "France", 3));
+            }
+            return Orders;
+        }
+
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public string ShipName { get; set; }
+        public double? Freight { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public DateTime? ShippedDate { get; set; }
+        public bool? IsVerified { get; set; }
+        public string ShipCity { get; set; }
+        public string ShipCountry { get; set; }
+        public int EmployeeID { get; set; }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Format the date column based on localization](./images/blazor-datagrid-format-localization.png)
+
+> [Syncfusion GitHub Sample for Blazor Localization](https://github.com/SyncfusionExamples/blazor-localization)
+
+### Format template column value
+
+In the Syncfusion Blazor DataGrid, you have the ability to customize the display of data in a column through the use of template columns. Formatting template column values is essential for enhancing the visual representation of data in a web application. It allows the customization of the appearance of specific column data, such as dates and numbers, to improve readability and user understanding.
+
+To illustrate how to format a template column value, consider the following example where the OrderDate column is formatted to display dates in the ‘dd/MMM/yyyy’ format.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@page "/counter"
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders">
+    <GridPageSettings PageSize="5"></GridPageSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+<GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130">
+            <Template>
+                @{
+                    var values = context as Order;
+                    if (values?.OrderDate == null)
+                    {
+                        <div></div>  <!-- Display blank if OrderDate is null -->
+                    }else                    {
+                        var day = values.OrderDate.Value.Day.ToString("00");  // Ensures two-digit day
+                        var month = values.OrderDate.Value.ToString("MMM");  // Short month format
+                        var year = values.OrderDate.Value.Year;
+                        <div>@($"{day}/{month}/{year}")</div> <!-- Display formatted date -->
+                    }
+                }
+            </Template>
+        </GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="ShipCountry" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+            {
+                OrderID = 1000 + x,
+                ShipCountry = (new string[] { "France", "Germany", "Brazil", "Belgium", "Switzerland" })[new Random().Next(5)],
+                Freight = 2.1 * x,
+                OrderDate = DateTime.Now.AddDays(-x),
+                
+            }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string? ShipCountry { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrpsDhLVmdBIgaq?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+
+### Custom formatting
+
+Syncfusion Blazor DataGrid allows you to customize the formatting of data in the grid columns. You can apply custom formats to numeric or date columns to display data in a specific way according to the requirements. To apply custom formatting to grid columns in Syncfusion Grid, you can use the format property. Here’s an example of how you can use custom formatting for numeric and date columns:
+
+In the below example, the numberFormatOptions object is used as the format property for the ‘Freight’ column to apply a custom numeric format with four decimal places. Similarly, the dateFormatOptions object is used as the format property for the ‘OrderDate’ column to apply a custom date format displaying the date in the format of day-of-the-week, month abbreviation, day, and 2-digit year (e.g. Sun, May 8, 23).
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@page "/counter"
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders">
+    <GridPageSettings PageSize="5"></GridPageSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="@numberFormatOptions" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Type="Syncfusion.Blazor.Grids.ColumnType.Date" Format="@dateFormatOptions" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="130">
+        </GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<Order> Orders { get; set; }
+    public string numberFormatOptions = "##.0000";
+    public string dateFormatOptions = "ddd, MMM d, ''yy";
+        
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "ALFKI", "ANTON", "BOLID", "BLONP", "ANTAR" })[new Random().Next(5)],
+                ShipCountry = (new string[] { "France", "Germany", "Brazil", "Belgium", "Switzerland" })[new Random().Next(5)],
+                Freight = 2.1 * x,
+                OrderDate = DateTime.Now.AddDays(-x),
+                
+            }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public string ShipCountry { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLfitrqWuljKUXu?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+
 ## Align the text of content
 
 You can align the text in the content of a Grid column using the [TextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_TextAlign) property. This property allows you to specify the alignment of the text within the cells of a particular column in the DataGrid. By default, the text is aligned to the left, but you can change the alignment by setting the value of the `TextAlign` property to one of the following options:
@@ -508,75 +745,123 @@ Here is an example of using the `TextAlign` property to align the text of a Data
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+@page "/"
+
 @using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.DropDowns
 @using BlazorApp1.Data
 
-<SfGrid DataSource="@Orders" AllowPaging="true" Height="315">
+<div style="display:flex; margin:3px">
+    <label style="padding:  10px 10px 12px 0">Align the text for columns :</label>
+    <SfDropDownList style='margin-top:5px' Width="100px" TValue="string" TItem="ColumnAlignmentOption" DataSource="@DropDownData" Value="@SelectedAlignment">
+        <DropDownListFieldSettings Value="Text" Text="Text"></DropDownListFieldSettings>
+        <DropDownListEvents TValue="string" TItem="ColumnAlignmentOption" ValueChange="OnValueChange"></DropDownListEvents>
+    </SfDropDownList>
+</div>
+
+<SfGrid DataSource="@Orders" Height="315" @ref="grid">
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Left" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" TextAlign="TextAlign.Center" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" Width="130" TextAlign="TextAlign.Justify" Type="ColumnType.Date"></GridColumn>
+        <GridColumn Field="OrderID" HeaderText="Order ID" IsPrimaryKey="true" Width="100" TextAlign="@SelectedAlignmentEnum"></GridColumn>
+        <GridColumn Field="CustomerID" HeaderText="Customer ID" TextAlign="@SelectedAlignmentEnum" Width="120"></GridColumn>
+        <GridColumn Field="ShipCountry" HeaderText="Ship Country" TextAlign="@SelectedAlignmentEnum" Width="80"></GridColumn>
+        <GridColumn Field="OrderDate" HeaderText="Order Date" TextAlign="@SelectedAlignmentEnum" Format="yMd" Width="80"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 @code {
     public List<OrderData> Orders { get; set; }
-   
+    public string SelectedAlignment  { get; set; } = "Left";
+    public TextAlign SelectedAlignmentEnum { get; set; } = TextAlign.Left;
+
+    public class ColumnAlignmentOption
+    {
+        public string Text { get; set; }
+    }
+
+    List<ColumnAlignmentOption> DropDownData = new List<ColumnAlignmentOption> {
+        new ColumnAlignmentOption() { Text= "Left" },
+        new ColumnAlignmentOption() { Text= "Right" },
+        new ColumnAlignmentOption() { Text= "Center" },
+    };
+
+    // Reference to the grid
+    private SfGrid<OrderData> grid;
+    public void OnValueChange(ChangeEventArgs<string, ColumnAlignmentOption> args)
+    {
+        SelectedAlignment  = args.Value;
+        SelectedAlignmentEnum = SelectedAlignment  switch
+        {
+            "Left" => TextAlign.Left,
+            "Right" => TextAlign.Right,
+            "Center" => TextAlign.Center,
+            _ => TextAlign.Left
+        };
+        grid.Refresh();
+    }
+
     protected override void OnInitialized()
     {
         Orders = OrderData.GetAllRecords();
-    }    
+    }
 }
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
+  namespace BlazorApp1.Data
+{
     public class OrderData
     {
         public static List<OrderData> Orders = new List<OrderData>();
-        public OrderData()
-        {
 
-        }
-        public OrderData(int? OrderID, string CustomerID, DateTime? OrderDate,string ShipCountry)
+        public OrderData() { }
+
+        public OrderData(int OrderID, string CustomerID, string ShipName, double Freight, DateTime? OrderDate, DateTime? ShippedDate, bool? IsVerified, string ShipCity, string ShipCountry, int employeeID)
         {
             this.OrderID = OrderID;
-            this.CustomerID = CustomerID;   
+            this.CustomerID = CustomerID;
+            this.ShipName = ShipName;
+            this.Freight = Freight;
             this.OrderDate = OrderDate;
+            this.ShippedDate = ShippedDate;
+            this.IsVerified = IsVerified;
+            this.ShipCity = ShipCity;
             this.ShipCountry = ShipCountry;
-           
+            this.EmployeeID = employeeID; 
         }
 
         public static List<OrderData> GetAllRecords()
         {
-            if (Orders.Count() == 0)
+            if (Orders.Count == 0)
             {
-                int code = 10;
-                for (int i = 1; i < 2; i++)
-                {
-                    Orders.Add(new OrderData(10248, "VINET", new DateTime(1996,7,4), "France"));
-                    Orders.Add(new OrderData(10249, "TOMSP",  new DateTime(1996, 7, 5), "Germany"));
-                    Orders.Add(new OrderData(10250, "HANAR", new DateTime(1996, 7, 6), "Brazil"));
-                    Orders.Add(new OrderData(10251, "VINET",  new DateTime(1996, 7, 7), "France"));
-                    Orders.Add(new OrderData(10252, "SUPRD", new DateTime(1996, 7, 8), "Belgium"));
-                    Orders.Add(new OrderData(10253, "HANAR",  new DateTime(1996, 7, 9), "Brazil"));
-                    Orders.Add(new OrderData(10254, "CHOPS", new DateTime(1996, 7, 10), "Switzerland"));
-                    Orders.Add(new OrderData(10255, "VINET",new DateTime(1996, 7, 11), "Switzerland"));
-                    Orders.Add(new OrderData(10256, "HANAR", new DateTime(1996, 7, 12), "Brazil"));
-                    code += 5;
-                }
+                Orders.Add(new OrderData(10248, "VINET", "Vins et alcools Chevalier", 32.38, new DateTime(1996, 7, 4), new DateTime(1996, 08, 07), true, "Reims", "France", 1));
+                Orders.Add(new OrderData(10249, "TOMSP", "Toms Spezialitäten", 11.61, new DateTime(1996, 7, 5), new DateTime(1996, 08, 07), false, "Münster", "Germany", 2));
+                Orders.Add(new OrderData(10250, "HANAR", "Hanari Carnes", 65.83, new DateTime(1996, 7, 6), new DateTime(1996, 08, 07), true, "Rio de Janeiro", "Brazil", 3));
+                Orders.Add(new OrderData(10251, "VINET", "Vins et alcools Chevalier", 41.34, new DateTime(1996, 7, 7), new DateTime(1996, 08, 07), false, "Lyon", "France", 1));
+                Orders.Add(new OrderData(10252, "SUPRD", "Suprêmes délices", 151.30, new DateTime(1996, 7, 8), new DateTime(1996, 08, 07), true, "Charleroi", "Belgium", 2));
+                Orders.Add(new OrderData(10253, "HANAR", "Hanari Carnes", 58.17, new DateTime(1996, 7, 9), new DateTime(1996, 08, 07), false, "Bern", "Switzerland", 3));
+                Orders.Add(new OrderData(10254, "CHOPS", "Chop-suey Chinese", 22.98, new DateTime(1996, 7, 10), new DateTime(1996, 08, 07), true, "Genève", "Switzerland", 2));
+                Orders.Add(new OrderData(10255, "VINET", "Vins et alcools Chevalier", 148.33, new DateTime(1996, 7, 11), new DateTime(1996, 08, 07), false, "Resende", "Brazil", 1));
+                Orders.Add(new OrderData(10256, "HANAR", "Hanari Carnes", 13.97, new DateTime(1996, 7, 12), new DateTime(1996, 08, 07), true, "Paris", "France", 3));
             }
             return Orders;
         }
-        public int? OrderID { get; set; }
+
+        public int OrderID { get; set; }
         public string CustomerID { get; set; }
-        public string ShipCountry { get; set; }
+        public string ShipName { get; set; }
+        public double? Freight { get; set; }
         public DateTime? OrderDate { get; set; }
-       
+        public DateTime? ShippedDate { get; set; }
+        public bool? IsVerified { get; set; }
+        public string ShipCity { get; set; }
+        public string ShipCountry { get; set; }
+        public int EmployeeID { get; set; } 
     }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLqMDAssKgmASlG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htrJCMMuCwICimOy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 >* The `TextAlign` property only changes the alignment content not the column header. If you want to align both the column header and content, you can use the [HeaderTextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderTextAlign) property.
 
@@ -1289,7 +1574,6 @@ Customizing the datagrid column styles allows you to modify the appearance of co
 
 For more information check on this [documentation](https://blazor.syncfusion.com/documentation/datagrid/cell#customize-cell-styles).
 
-
 ## Manipulating columns
 
 The Syncfusion DataGrid for Blazor provides powerful features for manipulating columns in a datagrid. This section explains how to access columns and add/remove columns using Syncfusion DataGrid properties, methods, and events.
@@ -1347,7 +1631,6 @@ This method returns an list of field names of all the columns in the DataGrid.
 ```
 
 > For a complete list of column methods and properties, refer to this [section](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html).
-
 
 ### Adding/Removing Columns
 
