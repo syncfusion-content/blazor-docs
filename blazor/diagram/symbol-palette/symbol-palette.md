@@ -1095,7 +1095,7 @@ The Symbol Palette allows you to customize the appearance of symbols using [Symb
 
 ![Symbol palette templates](../images/SymbolPaletteTemplate.png)
 
-You can download a complete working sample from [GitHub]()
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/SymbolPaletteTemplate)
 
 ## See Also
 
