@@ -429,9 +429,9 @@ In the below example, we will demonstrate how to dynamically change the height o
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZBJWDgtqYsIJUYQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> The `RowHeight` property can only be used to set the height of the entire grid row. It cannot be used to set the height of individual cells within a row.
-> The `RowHeight` property applies the height to all rows in the grid, including the header and footer rows.
-> You can also set the height for a specific row using the `RowHeight` property of the corresponding row object in the [RowDataBound](https://blazor.syncfusion.com/documentation/datagrid/events#rowdatabound) event.
+> * The `RowHeight` property can only be used to set the height of the entire grid row. It cannot be used to set the height of individual cells within a row.
+> * The `RowHeight` property applies the height to all rows in the grid, including the header and footer rows.
+> * You can also set the height for a specific row using the `RowHeight` property of the corresponding row object in the [RowDataBound](https://blazor.syncfusion.com/documentation/datagrid/events#rowdatabound) event.
 
 ### Customize row height for particular row
 
@@ -635,7 +635,7 @@ Here is an example that demonstrates how to enable/disable row hover based on th
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDhpiDUZpjrcFKJP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> The enableHover property applies to the entire grid, not individual rows or columns.
+> The `EnableHover` property applies to the entire grid, not individual rows or columns.
 
 ## Row pinning (Frozen)
 
@@ -750,10 +750,10 @@ In the following example, the [FrozenRows](https://help.syncfusion.com/cr/blazor
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjrTMjUtTMnyFhpX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> Frozen rows should not be set outside the grid view port.
-> Frozen Grid will support row virtualization feature, which helps to improve the Grid performance while loading a large dataset.
-> The frozen feature is supported only for the rows that are visible in the current view.
-> You can use both [FrozenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenColumns) property and [FrozenRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenRows) property in the same application.
+> * Frozen rows should not be set outside the grid view port.
+> * Frozen Grid will support row virtualization feature, which helps to improve the Grid performance while loading a large dataset.
+> * The frozen feature is supported only for the rows that are visible in the current view.
+> * You can use both [FrozenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenColumns) property and [FrozenRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenRows) property in the same application.
 
 ### Change default frozen rows line color
 
@@ -877,8 +877,8 @@ The Syncfusion Blazor DataGrid provides a way to add a new row to the grid progr
 
 The `AddRecordAsync` method takes two parameters:
 
-> The **data** object representing the new row to be added
-> The **index** at which the new row should be inserted. If no index is specified, the new row will be added at the end of the Grid.
+* The **data** object representing the new row to be added
+* The **index** at which the new row should be inserted. If no index is specified, the new row will be added at the end of the Grid.
 
 Here’s an example of how to add a new row using the `AddRecordAsync` method:
 
@@ -1023,35 +1023,35 @@ Here’s an example of how to add a new row using the `AddRecordAsync` method:
 
 Grid provides several methods to retrieve row data and elements. This feature is useful when you need to access specific rows, perform custom operations, or manipulate the data displayed in the grid.
 
-1. [GetRowIndexByPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetRowIndexByPrimaryKeyAsync_System_Object_): The method allows you to retrieve the row index based on a specific primary key value or row data.
+* [GetRowIndexByPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetRowIndexByPrimaryKeyAsync_System_Object_): The method allows you to retrieve the row index based on a specific primary key value or row data.
 
-```cs
-<SfButton id="GetRowIndexByPrimaryKey" @onclick="GetDataHandler">GetRowIndexByPrimaryKey</SfButton>
-<SfGrid @ref="grid" DataSource="@Orders">
- ........
-</SfGrid>
-@code{
-   SfGrid<Order> grid;
+    ```cs
+    <SfButton id="GetRowIndexByPrimaryKey" @onclick="GetDataHandler">GetRowIndexByPrimaryKey</SfButton>
+    <SfGrid @ref="grid" DataSource="@Orders">
+    ........
+    </SfGrid>
+    @code{
+    SfGrid<Order> grid;
+        private async Task GetDataHandler()
+        {
+            var rowIndex = await Grid.GetRowIndexByPrimaryKeyAsync(10250);  // pass primary key value here.
+            Console.WriteLine(rowIndex);
+        }
+    }
+    ```
+
+* [GetSelectedRowIndexesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetSelectedRowIndexesAsync): This methods allows you to get the collection of selected row indexes.
+
+    ```cs
+    <SfButton id="GetSelectedRowIndexes " @onclick="GetDataHandler">GetSelectedRowIndexes </SfButton>
+    <SfGrid @ref="grid" DataSource="@Orders">
+    ........
+    </SfGrid>
+    @code{
+    SfGrid<Order> grid;
     private async Task GetDataHandler()
     {
-        var rowIndex = await Grid.GetRowIndexByPrimaryKeyAsync(10250);  // pass primary key value here.
-        Console.WriteLine(rowIndex);
+            var SelectedRowIndexes = await grid.GetSelectedRowIndexesAsync();  
     }
-}
-```
-
-2. [GetSelectedRowIndexesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetSelectedRowIndexesAsync): This methods allows you to get the collection of selected row indexes.
-
-```cs
-<SfButton id="GetSelectedRowIndexes " @onclick="GetDataHandler">GetSelectedRowIndexes </SfButton>
-<SfGrid @ref="grid" DataSource="@Orders">
- ........
-</SfGrid>
-@code{
-   SfGrid<Order> grid;
-   private async Task GetDataHandler()
-   {
-        var SelectedRowIndexes = await grid.GetSelectedRowIndexesAsync();  
-   }
-}
-```
+    }
+    ```
