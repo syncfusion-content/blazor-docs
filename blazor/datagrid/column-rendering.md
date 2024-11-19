@@ -156,9 +156,12 @@ You can use the following code snippet to enable auto-generated columns in the S
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rjBKWiXngmWUgDyz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-
 >* When the columns are auto-generated, the column [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type) is determined from the first record of the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource).
 >* If you have a large dataset, auto-generating columns can result in performance issues. In this case, it is recommended to specify the columns manually in the columns property during initialization or else use column virtualization feature by setting [EnableColumnVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableColumnVirtualization) property value as **true**.
+
+To know about how to **Customize Auto generated columns using Data Annotation** in Blazor DataGrid Component, you can check this video.
+
+{% youtube "youtube:https://www.youtube.com/watch?v=f7OIzUM0e7Y"%}
 
 ### Set IsPrimaryKey for auto generated columns when editing is enabled
 

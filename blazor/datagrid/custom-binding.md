@@ -69,6 +69,10 @@ public abstract class DataAdaptor
 }
 ```
 
+To know about **Custom Binding** in Blazor DataGrid Component, you can check this video.
+
+{% youtube "youtube:https://www.youtube.com/watch?v=LmdUGJBUJqE" %}
+
 ## Data binding
 
 The custom data binding can be performed in the DataGrid component by providing the custom adaptor class and overriding the **Read** or **ReadAsync** method of the **DataAdaptor** abstract class.
