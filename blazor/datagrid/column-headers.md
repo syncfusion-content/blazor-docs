@@ -517,7 +517,7 @@ Follow the below steps to change the orientation of the header text in DataGrid:
 To `rotate` the header text, you can create a CSS class with the `transform` property that rotates the header text 90 degrees. This class will be added to the header cell using the `CustomAttributes` property.
 
 ```css
- .e-grid .e-columnheader .e-headercell.textorientationclass .e-headercelldiv { 
+ .e-grid .e-columnheader .e-headercell.orientation .e-headercelldiv { 
         transform: rotate(90deg);  // Rotate a particular headertext  
     }
 ```
@@ -526,10 +526,10 @@ To `rotate` the header text, you can create a CSS class with the `transform` pro
 
 Once you have created the CSS class, you can add it to the particular column by using the `CustomAttributes` property. This property allows you to add any custom  attribute to the GridColumn.
 
-For example, to add the textorientationclass class to the CustomerID column, you can use the following code:
+For example, to add the orientation class to the CustomerID column, you can use the following code:
 
 ```cshtml
-    <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" TextAlign="TextAlign.Center" CustomAttributes="@(new Dictionary<string, object>(){ { "class", "textorientationclass" }})" Width="150"></GridColumn>
+    <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" TextAlign="TextAlign.Center" CustomAttributes="@(new Dictionary<string, object>(){ { "class", "orientation" }})" Width="150"></GridColumn>
 ```
 
 **Step 3**: **Resize the header cell height**
@@ -538,7 +538,7 @@ After adding the custom CSS class to a column, you need to resize the header cel
 
 ```cshtml
 function setHeaderHeight(args) {
-    var textWidth = document.querySelector(".textorientationclass > div").scrollWidth; // Obtain the width of the headerText content.
+    var textWidth = document.querySelector(".orientation > div").scrollWidth; // Obtain the width of the headerText content.
     var header = document.querySelectorAll(".e-columnheader");
     for (var i = 0; i < header.length; i++) {
         (header.item(i)).style.height = textWidth + 'px'; // Assign the obtained textWidth as the height of the column header.
@@ -559,12 +559,12 @@ This is demonstrated in the following sample:
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Center" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" TextAlign="TextAlign.Center" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" CustomAttributes="@(new Dictionary<string, object>(){ { "class", "textorientationclass" }})" TextAlign="TextAlign.Center" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" CustomAttributes="@(new Dictionary<string, object>(){ { "class", "orientation" }})" TextAlign="TextAlign.Center" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" TextAlign="TextAlign.Center" Width="130"></GridColumn>
     </GridColumns>
 </SfGrid>
 <style>
-    .e-grid .e-columnheader .e-headercell.textorientationclass .e-headercelldiv {
+    .e-grid .e-columnheader .e-headercell.orientation .e-headercelldiv {
         transform: rotate(90deg);
     }
 </style>
