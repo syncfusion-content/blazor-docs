@@ -115,6 +115,80 @@ The following example demonstrates how to define a `Template` for the **Employee
 
 > The [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) option allows to define any HTML content within a column.
 
+## Render hyperlink in a column
+
+The DataGrid component provides support for rendering hyperlink columns and performing routing on click using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This feature is useful when displaying data that requires a link to another page or website.
+
+The following example demonstrates, how to render hyperlink column in the Grid using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property of the `GridColumn` tag. To define a `Template` for the column,  you can use the `Template` with the `a` tag to create the hyperlink. 
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@EmployeeData">
+    <GridColumns>
+        <GridColumn Field=@nameof(EmployeeDetails.EmployeeID) HeaderText="Employee ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeDetails.LastName) HeaderText="Last Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeDetails.FirstName) HeaderText="First Name" Width="150">
+            <Template>
+                @{
+                    var data = (context as EmployeeDetails);
+                    <div>
+                        <a href="https://www.google.com/search?q=@data.FirstName" target="_blank">@data.FirstName</a>
+                    </div>
+                }
+            </Template>
+        </GridColumn>
+    </GridColumns>
+</SfGrid>
+@code {
+    public List<EmployeeDetails> EmployeeData { get; set; }
+
+    protected override void OnInitialized()
+    {
+    EmployeeData = EmployeeDetails.GetAllRecords();        
+    }       
+}
+{% endhighlight %}
+{% highlight c# tabtitle="EmployeeDetails.cs" %}
+public class EmployeeDetails
+{
+    public static List<EmployeeDetails> employee = new List<EmployeeDetails>();
+
+    public EmployeeDetails() { }
+
+    public EmployeeDetails(int employeeID, string lastName, string firstName)
+    {
+        this.EmployeeID = employeeID;
+        this.LastName = lastName;
+        this.FirstName = firstName;
+    }
+
+    public static List<EmployeeDetails> GetAllRecords()
+    {
+        if (employee.Count == 0)
+        {
+            employee.Add(new EmployeeDetails(1, "Davolio", "Nancy"));
+            employee.Add(new EmployeeDetails(2, "Fuller", "Andrew"));
+            employee.Add(new EmployeeDetails(3, "Leverling", "Janet"));
+            employee.Add(new EmployeeDetails(4, "Peacock", "Margaret"));
+            employee.Add(new EmployeeDetails(5, "Buchanan", "Steven"));
+            employee.Add(new EmployeeDetails(6, "Suyama", "Michael"));
+            employee.Add(new EmployeeDetails(7, "King", "Robert"));
+            employee.Add(new EmployeeDetails(8, "Callahan", "Laura"));
+            employee.Add(new EmployeeDetails(9, "Dodsworth", "Anne"));
+        }
+        return employee;
+    }
+
+    public int EmployeeID { get; set; }
+    public string LastName { get; set; }
+    public string FirstName { get; set; }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZrpMMVXzoBzmrze?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Render other components in a column
 
@@ -122,7 +196,7 @@ The column template has options to render a custom component in a DataGrid colum
 
 ### Render DropDownList component in a column
 
-To render a custom component in a grid column, you need to define a [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) for the column using the column `Template` property. In the following code, we rendered the [DropDownList](https://ej2.syncfusion.com/angular/documentation/drop-down-list/getting-started) component in the **Order Status** column by defining the `Template` property.
+To render a custom component in a grid column, you need to define a [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) for the column using the column `Template` property. In the following code, we rendered the [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) component in the **Order Status** column by defining the `Template` property.
 
 ```csharp
  <SfDropDownList TValue="string" Placeholder="Order Placed" PopupWidth="150" PopupHeight="150" TItem="EmployeeNames" DataSource="@EmployeeDetails">
@@ -219,6 +293,93 @@ public class OrderData
 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjhKiMZsUppLpTZe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+### Render Chip component in a column
+
+The DataGrid component provides support for rendering [Chips](https://blazor.syncfusion.com/documentation/color-picker/getting-started-with-web-app) component in a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This feature is useful when displaying data that requires a chip component to be rendered in a column.
+
+In the following code, we rendered the Chips component in the Grid **First Name** column by defining the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property.
+
+```
+<SfChip ID="chip">
+    <ChipItems>
+        <ChipItem Text="@data.FirstName"></ChipItem>
+    </ChipItems>
+</SfChip>
+```
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@EmployeeData">
+    <GridColumns>
+        <GridColumn Field=@nameof(EmployeeDetails.LastName) HeaderText="Last Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeDetails.City) HeaderText="City" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeDetails.FirstName) HeaderText="First Name" Width="150">
+             <Template>
+                @{
+                    var data = (context as EmployeeDetails);                    
+                    <SfChip ID="chip">
+                        <ChipItems>
+                            <ChipItem Text="@data.FirstName"></ChipItem>
+                        </ChipItems>
+                    </SfChip>
+                }
+            </Template>
+        </GridColumn>
+    </GridColumns>
+</SfGrid>
+@code {
+    public List<EmployeeDetails> EmployeeData { get; set; }
+
+    protected override void OnInitialized()
+    {
+    EmployeeData = EmployeeDetails.GetAllRecords();        
+    }       
+}
+{% endhighlight %}
+{% highlight c# tabtitle="EmployeeDetails.cs" %}
+public class EmployeeDetails
+{
+    public static List<EmployeeDetails> employee = new List<EmployeeDetails>();
+
+    public EmployeeDetails() { }
+
+    public EmployeeDetails(int employeeID, string lastName, string firstName, string city)
+    {
+        this.EmployeeID = employeeID;
+        this.LastName = lastName;
+        this.FirstName = firstName;
+        this.City = city;
+    }
+
+    public static List<EmployeeDetails> GetAllRecords()
+    {
+        if (employee.Count == 0)
+        {
+            employee.Add(new EmployeeDetails(1, "Davolio", "Nancy", "Seattle"));
+            employee.Add(new EmployeeDetails(2, "Fuller", "Andrew", "Tacoma"));
+            employee.Add(new EmployeeDetails(3, "Leverling", "Janet", "Kirkland"));
+            employee.Add(new EmployeeDetails(4, "Peacock", "Margaret", "Redmond"));
+            employee.Add(new EmployeeDetails(5, "Buchanan", "Steven", "London"));
+            employee.Add(new EmployeeDetails(6, "Suyama", "Michael", "London"));
+            employee.Add(new EmployeeDetails(7, "King", "Robert", "London"));
+            employee.Add(new EmployeeDetails(8, "Callahan", "Laura", "Seattle"));
+            employee.Add(new EmployeeDetails(9, "Dodsworth", "Anne", "London"));
+        }
+        return employee;
+    }
+
+    public int EmployeeID { get; set; }
+    public string LastName { get; set; }
+    public string FirstName { get; set; }
+    public string City { get; set; }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLfsihZJaDYOHeV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Using condition template
 
