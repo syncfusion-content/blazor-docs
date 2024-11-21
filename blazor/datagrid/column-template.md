@@ -132,9 +132,9 @@ The following example demonstrates, how to render hyperlink column in the Grid u
         <GridColumn Field=@nameof(EmployeeDetails.FirstName) HeaderText="First Name" Width="150">
             <Template>
                 @{
-                    var data = (context as EmployeeDetails);
+                    var Data = (context as EmployeeDetails);
                     <div>
-                        <a href="https://www.google.com/search?q=@data.FirstName" target="_blank">@data.FirstName</a>
+                        <a href="https://www.google.com/search?q=@Data.FirstName" target="_blank">@Data.FirstName</a>
                     </div>
                 }
             </Template>
@@ -193,6 +193,106 @@ public class EmployeeDetails
 ## Render other components in a column
 
 The column template has options to render a custom component in a DataGrid column instead of a field value.
+
+### Render LineChart component in a column
+
+The [LineChart](https://blazor.syncfusion.com/documentation/sparkline/getting-started-webapp) component of Syncfusion provides an elegant way to represent and compare data over time. It displays data points connected by straight line segments to visualize trends in data.
+
+In the following example, we rendered the Sparkline Chart component in the Grid column by defining the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@EmployeeData">
+    <GridColumns>
+        <GridColumn Field=@nameof(EmployeeDetails.EmployeeID) HeaderText="Employee ID" Width="150">
+        </GridColumn>
+        <GridColumn Field=@nameof(EmployeeDetails.FirstName) HeaderText="First Name" Width="150">
+        </GridColumn>
+        <GridColumn HeaderText="Employee Performance Rating" Width="280">
+            <Template>
+                @{
+                    var Data = (context as EmployeeDetails);
+                    <SfSparkline Height="50px" Width="90%" Fill="#3C78EF" DataSource="@GetSparkData("line", (Data).EmployeeID + 1)">
+                    </SfSparkline>
+                }
+            </Template>
+        </GridColumn>
+    </GridColumns>
+</SfGrid>
+@code {
+    public List<EmployeeDetails> EmployeeData { get; set; }
+
+    protected override void OnInitialized()
+    {
+    EmployeeData = EmployeeDetails.GetAllRecords();        
+    } 
+     // Line data
+    private List<List<int>> lineData = new List<List<int>>
+    {
+        new List<int> { 0, 6, -4, 1, -3, 2, 5 },
+        new List<int> { 5, -4, 6, 3, -1, 2, 0 },
+        new List<int> { 6, 4, 0, 3, -2, 5, 1 },
+        new List<int> { 4, -6, 3, 0, 1, -2, 5 },
+        new List<int> { 3, 5, -6, -4, 0, 1, 2 },
+        new List<int> { 1, -3, 4, -2, 5, 0, 6 },
+        new List<int> { 2, 4, 0, -3, 5, -6, 1 },
+        new List<int> { 5, 4, -6, 3, 1, -2, 0 },
+        new List<int> { 0, -6, 4, 1, -3, 2, 5 },
+        new List<int> { 6, 4, 0, -3, 2, -5, 1 }
+    };
+
+    // Function to get sparkline data
+    private List<int> GetSparkData(string type, int count)
+    {
+        if (type == "line" && count > 0 && count <= lineData.Count)
+        {
+            return lineData[count - 1];
+        }
+        return new List<int>();
+    }            
+}
+{% endhighlight %}
+{% highlight c# tabtitle="EmployeeDetails.cs" %}
+public class EmployeeDetails
+{
+    public static List<EmployeeDetails> employee = new List<EmployeeDetails>();
+
+    public EmployeeDetails() { }
+
+    public EmployeeDetails(int employeeID, string lastName, string firstName)
+    {
+        this.EmployeeID = employeeID;
+        this.LastName = lastName;
+        this.FirstName = firstName;
+    }
+
+    public static List<EmployeeDetails> GetAllRecords()
+    {
+        if (employee.Count == 0)
+        {
+            employee.Add(new EmployeeDetails(1, "Davolio", "Nancy"));
+            employee.Add(new EmployeeDetails(2, "Fuller", "Andrew"));
+            employee.Add(new EmployeeDetails(3, "Leverling", "Janet"));
+            employee.Add(new EmployeeDetails(4, "Peacock", "Margaret"));
+            employee.Add(new EmployeeDetails(5, "Buchanan", "Steven"));
+            employee.Add(new EmployeeDetails(6, "Suyama", "Michael"));
+            employee.Add(new EmployeeDetails(7, "King", "Robert"));
+            employee.Add(new EmployeeDetails(8, "Callahan", "Laura"));
+            employee.Add(new EmployeeDetails(9, "Dodsworth", "Anne"));
+        }
+        return employee;
+    }
+
+    public int EmployeeID { get; set; }
+    public string LastName { get; set; }
+    public string FirstName { get; set; }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBJsWrWVXXLwpde?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Render DropDownList component in a column
 
@@ -303,7 +403,7 @@ In the following code, we rendered the Chips component in the Grid **First Name*
 ```
 <SfChip ID="chip">
     <ChipItems>
-        <ChipItem Text="@data.FirstName"></ChipItem>
+        <ChipItem Text="@Data.FirstName"></ChipItem>
     </ChipItems>
 </SfChip>
 ```
@@ -319,10 +419,10 @@ In the following code, we rendered the Chips component in the Grid **First Name*
         <GridColumn Field=@nameof(EmployeeDetails.FirstName) HeaderText="First Name" Width="150">
              <Template>
                 @{
-                    var data = (context as EmployeeDetails);                    
+                    var Data = (context as EmployeeDetails);                    
                     <SfChip ID="chip">
                         <ChipItems>
-                            <ChipItem Text="@data.FirstName"></ChipItem>
+                            <ChipItem Text="@Data.FirstName"></ChipItem>
                         </ChipItems>
                     </SfChip>
                 }
@@ -380,6 +480,90 @@ public class EmployeeDetails
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXLfsihZJaDYOHeV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+### Render ProgressBar component in a column
+
+The Syncfusion Grid component supports rendering the [Progress Bar](https://blazor.syncfusion.com/documentation/progress-bar/getting-started-webapp) component within a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. Displaying the `Progress Bar` component in a grid column allows users to visually track the progress of tasks or operations associated with specific records. This feature is particularly useful for applications involving processes such as data loading, task completion, or other progressive activities.
+
+In the following code, the `Progress Bar` component render in the Grid **Freight** column by defining the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property.
+
+```
+<SfProgressBar Type="ProgressType.Linear" Value="data.Freight" CornerRadius="CornerType.Square" Height="60" TrackThickness="24" ProgressThickness="20">
+</SfProgressBar>
+```
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.ProgressBar
+
+<SfGrid DataSource="@OrderData">                
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer ID"  Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" Width="150">
+            <Template>
+                @{
+                    var Data = (context as OrderDetails);
+                    <SfProgressBar Type="ProgressType.Linear" Value="Data.Freight" CornerRadius="CornerType.Square" Height="60" TrackThickness="24" ProgressThickness="20">
+                    </SfProgressBar>
+                }
+            </Template>
+        </GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<OrderDetails> OrderData { get; set; }
+    protected override void OnInitialized()
+    {
+        OrderData = OrderDetails.GetAllRecords();
+    }
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderDetails.cs" %}
+public class OrderDetails
+{
+    public static List<OrderDetails> order = new List<OrderDetails>();
+    public OrderDetails(int OrderID, string CustomerId, int EmployeeId, double Freight)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerId;
+        this.EmployeeID = EmployeeId;
+        this.Freight = Freight; 
+
+    }
+    public static List<OrderDetails> GetAllRecords()
+    {
+        if (order.Count == 0)
+        {
+            order.Add(new OrderDetails(10248, "VINET",  5,  32.38));
+            order.Add(new OrderDetails(10249, "TOMSP",  6,  11.61));
+            order.Add(new OrderDetails(10250, "HANAR",  4,  65.83));
+            order.Add(new OrderDetails(10251, "VICTE",  3, 41.34));
+            order.Add(new OrderDetails(10252, "SUPRD",  4, 51.3));
+            order.Add(new OrderDetails(10253, "HANAR",  3,  58.17));
+            order.Add(new OrderDetails(10254, "CHOPS",  5,  22.98));
+            order.Add(new OrderDetails(10255, "RICSU",  9,  48.33));
+            order.Add(new OrderDetails(10256, "WELLI",  3,  13.97));
+            order.Add(new OrderDetails(10257, "HILAA",  4,  81.91));
+            order.Add(new OrderDetails(10258, "ERNSH",  1,  40.51));
+            order.Add(new OrderDetails(10259, "CENTC",  7, 3.25));
+            order.Add(new OrderDetails(10260, "OTTIK",  2, 55.09));
+            order.Add(new OrderDetails(10261, "QUEDE",  4, 3.05));
+            order.Add(new OrderDetails(10262, "RATTC", 8, 48.29));
+        }
+        return order;
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public int EmployeeID { get; set; }
+    public double Freight { get; set; } 
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZVpMWhMhJHQEtIF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Using condition template
 
@@ -470,6 +654,108 @@ In the following code, checkbox is rendered based on **Discontinued** field valu
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rNrKWsDsASInUbPD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Dynamically adding template column
+
+The Syncfusion Grid component allows you to dynamically add template columns at runtime. This capability is particularly useful when the structure of the grid needs to be modified based on individual interactions or other dynamic conditions.
+
+Dynamically adding template columns involves creating and inserting columns with custom templates after the grid has been initialized. This approach provides flexibility in presenting data in a highly customizable manner.
+
+The following example demonstrates how to add template column using external button click. In this example, the **ShipCountry** column with a [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) is added in column [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template), and an icon is displayed using the [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderTemplate) for the **ShipCountry** column. 
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Buttons
+
+<SfButton CssClass="e-outline" OnClick="AddTemplateColumn">Add Column</SfButton>
+<SfGrid @ref="Grid" ID="Grid" DataSource="@OrderData" AllowPaging="true"> 
+                   
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer ID"  Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" Format="C2" Width="100"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public SfGrid<OrderDetails> Grid { get; set; }
+    public List<string> ShipCountryList { get; set; } = new();
+    public List<OrderDetails> OrderData { get; set; }
+
+    protected override void OnInitialized()
+    {
+        OrderData = OrderDetails.GetAllRecords();
+        ShipCountryList = OrderData.Select(o => o.ShipCountry).Distinct().ToList();
+    }
+    private void AddTemplateColumn()
+    {
+        List<GridColumn> NewColumns = new List<GridColumn> { 
+            new GridColumn { 
+                Field = "ShipCountry", 
+                Template= data =>
+                {                
+                    return @<div>
+                        <SfDropDownList DataSource="@ShipCountryList" PopupWidth="150" PopupHeight="150" @bind-Value="((OrderDetails)data).ShipCountry">
+                        </SfDropDownList>
+                    </div>;
+                },
+                HeaderTemplate = data => {return @<div><span class="e-icons e-location"></span> Ship Country</div>;},
+                Width = "120" 
+            }
+        };
+        foreach (GridColumn column in NewColumns)
+        {
+            Grid.Columns.Add(column);
+        }
+        Grid.RefreshColumnsAsync();
+    }  
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderDetails.cs" %}
+public class OrderDetails
+{
+    public static List<OrderDetails> order = new List<OrderDetails>();
+    
+    public OrderDetails(int OrderID, string CustomerId, string Shipcountry, double Freight)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerId;
+        this.ShipCountry = Shipcountry;
+        this.Freight = Freight; 
+    }
+    public static List<OrderDetails> GetAllRecords()
+    {
+        if (order.Count == 0)
+        {
+            order.Add(new OrderDetails(10248, "VINET",  "France",  32.38));
+            order.Add(new OrderDetails(10249, "TOMSP",  "Germany",  11.61));
+            order.Add(new OrderDetails(10250, "HANAR",  "Brazil",  65.83));
+            order.Add(new OrderDetails(10251, "VICTE",  "France", 41.34));
+            order.Add(new OrderDetails(10252, "SUPRD",  "Belgium", 51.3));
+            order.Add(new OrderDetails(10253, "HANAR",  "Brazil",  58.17));
+            order.Add(new OrderDetails(10254, "CHOPS",  "Switzerland",  22.98));
+            order.Add(new OrderDetails(10255, "RICSU",  "Switzerland",  148.33));
+            order.Add(new OrderDetails(10256, "WELLI",  "Brazil",  13.97));
+            order.Add(new OrderDetails(10257, "HILAA",  "Venezuela",  81.91));
+            order.Add(new OrderDetails(10258, "ERNSH",  "Austria",  140.51));
+            order.Add(new OrderDetails(10259, "CENTC",  "Mexico", 3.25));
+            order.Add(new OrderDetails(10260, "OTTIK",  "Germany", 55.09));
+            order.Add(new OrderDetails(10261, "QUEDE",  "Brazil", 3.05));
+            order.Add(new OrderDetails(10262, "RATTC", "USA", 48.29));
+        }
+        return order;
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipCountry { get; set; }
+    public double Freight { get; set; } 
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZVJsChWpdcrPOlN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Using hyperlink column and performing routing on click
 
