@@ -34,21 +34,39 @@ The Syncfusion Blazor Bootstrap Theme is designed based on Bootstrap v3, whereas
 
 ## Optimized CSS files
 
-Syncfusion Blazor Themes have two size modes for each theme: **normal** and **bigger**. By default, the **normal** size mode is applied, offering a standard appearance that is suitable for all devices. The **bigger** size mode provides an enlarged interface for enhanced interactions, visibility, and an overall improved user experience by increasing the size of the UI controls.
+Syncfusion Blazor Themes have **normal** and **bigger** size modes for each theme. By default, the **normal** size mode `(<theme_name>-lite.css)` is applied, offering a standard appearance that is suitable for all devices. The **bigger** size mode `(<theme_name>.css)` provides an enlarged interface for enhanced interactions, visibility, and an overall improved user experience by increasing the size of the UI controls.
 
-The **bigger** size mode is ideal when an enlarged appearance is needed, while the normal size mode works best for maintaining the default appearance of controls.
 
 Comparison of the Syncfusion Blazor Button Component in **normal** and **bigger** size modes:
 
 ![bigger-sized-button](./images/bigger-theme-button.png)
 
-Each theme includes both **normal** and **bigger** size modes, which increases the overall file size. To optimize performance, Syncfusion offers additional theme files (e.g., `fluent2-lite.css`), which only include the normal size mode styles. This results in a significant reduction in file size, improving load times and overall application performance, especially when the bigger size mode is unnecessary.
+To optimize performance, Syncfusion offers additional theme files (e.g., `fluent2-lite.css`), which only include the normal size mode styles. This results in a significant reduction in file size, improving load times and overall application performance, especially when the bigger size mode is unnecessary.
 
 Refer to the comparison below for the default and optimized theme file sizes:
 
-| Theme Name | Default Theme Size | Optimized Theme Size |
-| -- | -- | -- |
-| Fluent 2 | 3.97 MB | 2.96 MB |
+| Default Theme Name | Default Theme Size | Optimized Theme Name | Optimized Theme Size |
+| -- | -- | -- | -- |
+| Fluent 2 | 3.88 MB | Fluent 2 Lite |2.90 MB |
+| Fluent 2 Dark | 3.85 MB | Fluent2 Dark Lite |2.86 MB |
+| material 3 | 3.98 MB | material 3 Lite |2.85 MB |
+| material 3 Dark | 3.98 MB | material 3 Dark Lite |2.84 MB |
+| Bootstrap 5.3 | 3.53 MB | Bootstrap 5.3 Lite 2 |2.73 MB |
+| Bootstrap 5.3 Dark | 3.51 MB | Bootstrap 5.3 Dark Lite |2.71 MB |
+| Bootstrap 5 | 3.36 MB | Bootstrap 5 Lite 2 |2.57 MB |
+| Bootstrap 5 Dark | 3.36 MB | Bootstrap 5 Dark Lite |2.57 MB |
+| Bootstrap 4 | 3.35 MB | Bootstrap 4 Lite |2.56 MB |
+| Bootstrap | 3.29 MB | Bootstrap Lite |2.53 MB |
+| Bootstrap Dark | 3.31 MB | Bootstrap Dark Lite |2.54 MB |
+| Google’s Material | 3.88 MB | Google’s Material Lite |2.80 MB |
+| Google’s Material Dark | 3.93 MB | Google’s Material Dark Lite |2.84 MB |
+| Tailwind | 3.26 MB | Tailwind Lite |2.46 MB |
+| Tailwind Dark | 3.30 MB | Tailwind Dark Lite |2.49 MB |
+| Fluent | 3.31 MB | Fluent Lite |2.51 MB |
+| Fluent Dark | 3.31 MB | Fluent Dark Lite |2.51 MB |
+| Microsoft Office Fabric | 3.20 MB | Microsoft Office Fabric Lite |2.44 MB |
+| Microsoft Office Fabric Dark | 3.25 MB | Microsoft Office Fabric Dark Lite |2.49 MB |
+| High Contrast | 3.22 MB | High Contrast Lite |2.45 MB |
 
 ## Reference themes in Blazor application
 
@@ -142,21 +160,37 @@ To refer to optimized CSS files, use the following syntax:
 | Theme Name | CDN Reference |
 |--- | --- |
 | Material 3 | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material3.css |
+| Material 3 Lite | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material3-lite.css |
 | Material 3 Dark | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material3-dark.css |
+| Material 3 Dark Lite | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material3-dark-lite.css |
 | Bootstrap 5 | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5.css |
+| Bootstrap 5 Lite | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5-lite.css |
 | Bootstrap 5 Dark| https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5-dark.css |
+| Bootstrap 5 Dark Lite| https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5-dark-lite.css |
 | Bootstrap 4 | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css |
+| Bootstrap 4 Lite | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4-lite.css |
 | Bootstrap 3 | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap.css |
+| Bootstrap 3 Lite | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap-lite.css |
 | Bootstrap 3 Dark| https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap-dark.css |
+| Bootstrap 3 Dark Lite| https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap-dark-lite.css |
 | Google’s Material | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material.css |
+| Google’s Material Lite | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material-lite.css |
 | Google’s Material Dark | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material-dark.css |
+| Google’s Material Dark Lite | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material-dark-lite.css |
 | Tailwind CSS | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind.css |
+| Tailwind CSS Lite | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind-lite.css |
 | Tailwind CSS Dark | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind-dark.css |
+| Tailwind CSS Dark Lite | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind-dark-lite.css |
 | Fluent | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fluent.css |
+| Fluent Lite | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fluent-lite.css |
 | Fluent Dark | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fluent-dark.css |
+| Fluent Dark Lite | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fluent-dark-lite.css |
 | Microsoft Office Fabric  | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fabric.css |
+| Microsoft Office Fabric Lite  | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fabric-lite.css |
 | Microsoft Office Fabric Dark | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fabric-dark.css |
+| Microsoft Office Fabric Dark Lite | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fabric-dark-lite.css |
 | High Contrast  | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/highcontrast.css |
+| High Contrast Lite  | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/highcontrast-lite.css |
 
 ## LibMan
 
