@@ -31,19 +31,19 @@ string data = Diagram.SaveDiagram();
 
 ## Load the diagram from string
 
-The [diagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html) is loaded from the serialized string data by the [LoadDiagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_LoadDiagram_System_String_System_Boolean_) method. The following code illustrates how to load the diagram from serialized string data.
+The [diagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html) is loaded from the serialized string data by the [LoadDiagramAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_LoadDiagramAsync_System_String_System_Boolean_) method. The following code illustrates how to load the diagram from serialized string data.
 
 ```cshtml
 SfDiagramComponent Diagram;
 //returns the serialized string of the Diagram
 string data = Diagram.SaveDiagram();
 //Loads the Diagram from saved data
-await Diagram.LoadDiagram(data);
+await Diagram.LoadDiagramAsync(data);
 ```
 
 ## Load the SfDiagram JSON data string using SfDiagramComponent
 
-You can load the [SfDiagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html) serialized JSON data string into [SfDiagramComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html) using [LoadDiagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_LoadDiagram_System_String_System_Boolean_) method. When you load SfDiagram serialized string, then the isClassicData parameter should be set to true. The default value of the isClassicData is false.
+You can load the [SfDiagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html) serialized JSON data string into [SfDiagramComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html) using [LoadDiagramAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_LoadDiagramAsync_System_String_System_Boolean_) method. When you load SfDiagram serialized string, then the isClassicData parameter should be set to true. The default value of the isClassicData is false.
 
 The following code illustrates how to load the SfDiagramComponent from SfDiagram serialized string data.
 
@@ -54,7 +54,7 @@ string data = ClassicDiagram.SaveDiagram();
 
 SfDiagramComponent Diagram;
 //Loads the SfDiagramComponent from saved data of the SfDiagram
-await Diagram.LoadDiagram(data, true);
+await Diagram.LoadDiagramAsync(data, true);
 ```
 
 ## How to save and load the diagram using file stream
@@ -86,7 +86,7 @@ The diagram provides support to save and load the diagram using file stream. The
         diagram.BeginUpdate();
         ExtensionType = ".json";
         await FileUtil.Click(jsRuntime);
-        await diagram.EndUpdate();
+        await diagram.EndUpdateAsync();
     }
 
     public async static Task SaveAs(IJSRuntime js, string data, string fileName)
@@ -135,3 +135,32 @@ The diagram provides support to save and load the diagram using file stream. The
 ```
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Serialization/SaveAndLoad)
+
+## Importing and Exporting Mind Map and Flowchart Diagrams using Mermaid Syntax
+
+The [SfDiagramComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html) supports saving diagrams in Mermaid syntax format. Mermaid is a Markdown-inspired syntax that automatically generates diagrams. With this functionality, you can easily create mind maps and flowcharts from Mermaid syntax data, simplifying the visualization of complex ideas and processes without manual drawing. Additionally, you can export your mind maps and flowcharts to Mermaid syntax, allowing for easy sharing, editing, and use across different platforms.
+
+### Save diagram as Mermaid syntax
+
+ The [SaveDiagramAsMermaid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SaveDiagramAsMermaid) method serializes the diagram into a Mermaid-compatible string format. This method is specifically designed for diagrams that utilize Flowchart and Mind map layouts. The following code illustrates how to save the diagram in Mermaid string format.
+
+```cshtml
+SfDiagramComponent Diagram;
+//returns the serialized Mermaid string of the Diagram
+string data = Diagram.SaveDiagramAsMermaid();
+```
+
+### Load diagram from Mermaid syntax
+
+You can load a [diagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html) from the serialized Mermaid syntax data using the [LoadDiagramFromMermaidAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_LoadDiagramFromMermaidAsync_System_String_) method. The following code illustrates how to load a diagram from a Mermaid string data.
+
+```cshtml
+SfDiagramComponent Diagram;
+// Retrieves the serialized Mermaid string of the Diagram
+string data = Diagram.SaveDiagramAsMermaid();
+// Loads the Diagram from the saved Mermaid string
+await Diagram.LoadDiagramFromMermaidAsync(data);
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/MermaidSupport).
+
+>**Note:** Mermaid syntax data serialization and deserialization are only supported for Flowchart and Mind map layouts. Please ensure that your diagram uses one of these layouts to successfully load the data.

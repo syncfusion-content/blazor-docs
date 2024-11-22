@@ -34,7 +34,7 @@
     public async void GetDataByValue()
     {
         var val = this.MultiSelectObj.Value;
-        var Data = await this.MultiSelectObj.GetDataByValue (val);
+        var Data = await this.MultiSelectObj.GetDataByValueAsync(val);
         Console.WriteLine (Data[0].ID.ToString());
         Console.WriteLine (Data[0].Text.ToString());
     }

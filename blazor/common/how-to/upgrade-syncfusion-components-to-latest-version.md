@@ -13,7 +13,7 @@ To upgrade Syncfusion Blazor Components to the latest version, you need to ensur
 
 ## Compatible .NET version
 
-Syncfusion Blazor components in the latest version `'{:nuget-version:}'` are compatible with the latest version of [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0). Also, refer to [version compatibility](./version-compatibility) documentation for more information about version compatibility of Syncfusion Blazor components and .NET Core SDK.
+Syncfusion Blazor components in the latest version `'{:nuget-version:}'` are compatible with the latest version of [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0). Also, refer to [version compatibility](./version-compatibility) documentation for more information about version compatibility of Syncfusion Blazor components and .NET Core SDK.
 
 ## Client resource file references
 

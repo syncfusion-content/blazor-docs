@@ -46,7 +46,7 @@ The following example illustrates the single selection behavior in ButtonGroup.
 }
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLUirhrCPItMWBe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBzsDVOTbttngcl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor ButtonGroup with Single Selection](./images/blazor-buttongroup-single-selection.png)
 
@@ -83,8 +83,9 @@ The following example illustrates the multiple selection behavior in ButtonGroup
     bool ThirdSelected { get; set; } = true; // you can pre-select buttons
 }
 
+
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hthgiLrLWbohwhqS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLfitrYfutrvLMs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor ButtonGroup with Multiple Selection](./images/blazor-buttongroup-multiple-selection.png)
 
