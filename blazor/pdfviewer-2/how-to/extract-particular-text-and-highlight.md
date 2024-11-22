@@ -105,4 +105,4 @@ The following code example demonstrates how to extract text from a PDF document 
 }
 ```
 
- [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/).
+ [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Extract%20Particular%20Text%20and%20Highlight).
