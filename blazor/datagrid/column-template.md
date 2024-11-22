@@ -655,6 +655,186 @@ In the following code, checkbox is rendered based on **Discontinued** field valu
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rNrKWsDsASInUbPD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+## How to get the row object by clicking on the template element
+
+The Grid component allows you to retrieve the row object of the selected record when clicking on a [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) element. This feature can be useful when you need to perform custom actions based on the selected record.
+
+In the following code, the button component is rendered in the **Employee Data** column and [OnClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_OnClick) event binding is used to call the showDetails method when the template element is clicked and the [RowSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowSelected) event of the grid used to access the selected row object and display it in the dialog popup.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Popups
+@using Syncfusion.Blazor.Buttons
+
+
+<SfGrid @ref="Grid" ID="Grid" DataSource="@EmployeeData">
+    <GridEvents TValue="EmployeeDetails" RowSelected="OnRowSelected"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(EmployeeDetails.EmployeeID) HeaderText="Employee ID" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeDetails.FirstName) HeaderText="First Name" Width="120"></GridColumn>
+        <GridColumn HeaderText="Employee Data" TextAlign="TextAlign.Right" Width="150">
+            <Template>
+                <SfButton CssClass="empData" OnClick="ShowDetails">View</SfButton>
+                <SfDialog @ref="Dialog" Visible="false" Width="50%" ShowCloseIcon="true" Header="Selected Row Details">
+                    <DialogTemplates>
+                        <Content>
+                            @if (selectedRecord !=null)
+                            {
+                                <p><b>Employee ID:</b> @selectedRecord.EmployeeID</p>
+                                <p><b>First Name:</b> @selectedRecord.FirstName</p>
+                                <p><b>Last Name:</b> @selectedRecord.LastName</p>
+                            }
+                        </Content>
+                    </DialogTemplates>
+                </SfDialog>
+            </Template>
+        </GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public SfGrid<EmployeeDetails> Grid { get; set; }  
+    public List<EmployeeDetails> EmployeeData { get; set; }
+    protected override void OnInitialized()
+    {
+        EmployeeData = EmployeeDetails.GetAllRecords();
+    }
+    private SfDialog Dialog;
+    private EmployeeDetails selectedRecord;
+
+    private void OnRowSelected(RowSelectEventArgs<EmployeeDetails> args)
+    {
+        selectedRecord = args.Data; 
+    }
+    private void ShowDetails()
+    {
+        Dialog.ShowAsync();
+    }
+}
+{% endhighlight %}
+{% highlight c# tabtitle="EmployeeDetails.cs" %}
+public class EmployeeDetails
+{
+    public static List<EmployeeDetails> employee = new List<EmployeeDetails>();
+
+    public EmployeeDetails(int employeeID, string lastName, string firstName)
+    {
+        this.EmployeeID = employeeID;
+        this.LastName = lastName;
+        this.FirstName = firstName;
+    }
+
+    public static List<EmployeeDetails> GetAllRecords()
+    {
+        if (employee.Count == 0)
+        {
+            employee.Add(new EmployeeDetails(1, "Davolio", "Nancy"));
+            employee.Add(new EmployeeDetails(2, "Fuller", "Andrew"));
+            employee.Add(new EmployeeDetails(3, "Leverling", "Janet"));
+            employee.Add(new EmployeeDetails(4, "Peacock", "Margaret"));
+            employee.Add(new EmployeeDetails(5, "Buchanan", "Steven"));
+            employee.Add(new EmployeeDetails(6, "Suyama", "Michael"));
+            employee.Add(new EmployeeDetails(7, "King", "Robert"));
+            employee.Add(new EmployeeDetails(8, "Callahan", "Laura"));
+            employee.Add(new EmployeeDetails(9, "Dodsworth", "Anne"));
+        }
+        return employee;
+    }
+
+    public int EmployeeID { get; set; }
+    public string LastName { get; set; }
+    public string FirstName { get; set; }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhJiCBLfgSrKWdw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Use custom helper inside the template
+
+The Syncfusion Grid allows you to use custom helpers inside the `Template` directive of a column. This feature allows you to create complex templates that can incorporate additional helper functions that are not available through the default [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) syntax.
+
+To use the custom helper function inside a column template, you must first add the function to the template's context.
+
+The following example demonstrates how to use a custom helper function inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property, using the `Template` element for the Freight column.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@OrderData">                    
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Width="90">
+            <Template Context="data">
+                @formatCurrency(((OrderDetails)data).Freight)
+            </Template>
+        </GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.OrderDate) HeaderText="Order Date" Format="d" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<OrderDetails> OrderData { get; set; }
+
+    protected override void OnInitialized()
+    {
+        OrderData = OrderDetails.GetAllRecords();
+    }
+    public string formatCurrency(double value)
+    {
+        return "₹ " + value.ToString("F3"); // Format currency with 3 decimals
+    }
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderDetails.cs" %}
+public class OrderDetails
+{
+    public static List<OrderDetails> order = new List<OrderDetails>();
+    
+    public OrderDetails(int OrderID, string CustomerId, DateTime Orderdate, double Freight)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerId;
+        this.OrderDate = Orderdate;
+        this.Freight = Freight; 
+    }
+    public static List<OrderDetails> GetAllRecords()
+    {
+        if (order.Count == 0)
+        {
+            order.Add(new OrderDetails(10248, "VINET", new DateTime(1996, 7, 4), 32.38));
+            order.Add(new OrderDetails(10249, "TOMSP", new DateTime(1996, 7, 5), 11.61));
+            order.Add(new OrderDetails(10250, "HANAR", new DateTime(1996, 7, 8), 65.83));
+            order.Add(new OrderDetails(10251, "VICTE", new DateTime(1996, 7, 8), 41.34));
+            order.Add(new OrderDetails(10252, "SUPRD", new DateTime(1996, 7, 9), 51.3));
+            order.Add(new OrderDetails(10253, "HANAR", new DateTime(1996, 7, 10), 58.17));
+            order.Add(new OrderDetails(10254, "CHOPS", new DateTime(1996, 7, 11), 22.98));
+            order.Add(new OrderDetails(10255, "RICSU", new DateTime(1996, 7, 12), 148.33));
+            order.Add(new OrderDetails(10256, "WELLI", new DateTime(1996, 7, 15), 13.97));
+            order.Add(new OrderDetails(10257, "HILAA", new DateTime(1996, 7, 16), 81.91));
+            order.Add(new OrderDetails(10258, "ERNSH", new DateTime(1996, 7, 17), 140.51));
+            order.Add(new OrderDetails(10259, "CENTC", new DateTime(1996, 7, 18), 3.25));
+            order.Add(new OrderDetails(10260, "OTTIK", new DateTime(1996, 7, 19), 55.09));
+            order.Add(new OrderDetails(10261, "QUEDE", new DateTime(1996, 7, 19), 3.05));
+            order.Add(new OrderDetails(10262, "RATTC", new DateTime(1996, 7, 22), 48.29));
+        }
+        return order;
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public DateTime OrderDate { get; set; }
+    public double Freight { get; set; } 
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VthJiiBVViweNEBD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+> Custom helpers can only be used inside the Template directive of a column.
+
 ## Dynamically adding template column
 
 The Syncfusion Grid component allows you to dynamically add template columns at runtime. This capability is particularly useful when the structure of the grid needs to be modified based on individual interactions or other dynamic conditions.
@@ -670,8 +850,7 @@ The following example demonstrates how to add template column using external but
 @using Syncfusion.Blazor.Buttons
 
 <SfButton CssClass="e-outline" OnClick="AddTemplateColumn">Add Column</SfButton>
-<SfGrid @ref="Grid" ID="Grid" DataSource="@OrderData" AllowPaging="true"> 
-                   
+<SfGrid @ref="Grid" ID="Grid" DataSource="@OrderData" AllowPaging="true">                    
     <GridColumns>
         <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" Width="100"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer ID"  Width="100"></GridColumn>
