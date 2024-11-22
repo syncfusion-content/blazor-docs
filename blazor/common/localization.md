@@ -438,7 +438,7 @@ app.Run();
 
 {% endhighlight %}
 
-{% highlight c# tabtitle=".NET 8 (~/Program.cs)" hl_lines="4 6 7 8 9 10 13 24" %}
+{% highlight c# tabtitle=".NET 9 & .NET 8 (~/Program.cs)" hl_lines="4 6 7 8 9 10 13 24" %}
 
 builder.Services.AddControllers();
 
@@ -474,7 +474,7 @@ app.Run();
 
 For .NET 6 and 7 set the current culture in a cookie immediately after opening <body> tag of `Pages/_Host.cshtml`.
 
-For .NET 8 set the current culture in a cookie in App component file
+For .NET 9 and .NET 8 set the current culture in a cookie in App component file
 
 {% tabs %}
 {% highlight c# tabtitle=".NET 6 & .NET 7 (_Host.cshtml)" hl_lines="6 7 8 9 10 11" %}
@@ -494,7 +494,7 @@ For .NET 8 set the current culture in a cookie in App component file
 
 {% endhighlight %}
 
-{% highlight C# tabtitle=".NET 8 (App.razor)" %}
+{% highlight C# tabtitle=".NET 9 & .NET 8 (App.razor)" %}
 
 @using System.Globalization
 @using Microsoft.AspNetCore.Localization
@@ -550,7 +550,7 @@ Create `CultureSwitcher` component and place it inside shared folder to perform 
 
 {% tabs %}
 
-{% highlight razor tabtitle=".NET 6 & .NET 7 (Shared/CultureSwitcher.razor) .NET 8 (Components/Pages/CultureSwitcher.razor)" %}
+{% highlight razor tabtitle=".NET 6 & .NET 7 (Shared/CultureSwitcher.razor) .NET 9 & .NET 8 (Components/Pages/CultureSwitcher.razor)" %}
 
 @using  System.Globalization
 @inject NavigationManager NavigationManager
@@ -633,7 +633,7 @@ Add the `CultureSwitcher` component to `Shared/MainLayout.razor` to enable the c
 
 {% endhighlight %}
 
-{% highlight razor tabtitle=".NET 8 (Components/Layout/MainLayout.razor)" %}
+{% highlight razor tabtitle=".NET 9 & .NET 8 (Components/Layout/MainLayout.razor)" %}
 
  <div class="page">
     <div class="sidebar">

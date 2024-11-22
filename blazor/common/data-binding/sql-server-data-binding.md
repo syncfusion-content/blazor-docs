@@ -413,7 +413,7 @@ Themes provide life to components. Syncfusion Blazor has different themes. They 
 
 In this demo application, the latest theme will be used.
 
-  * For **Blazor Web App**,  refer stylesheet inside the `<head>` of **~/Components/App.razor** file for .NET 8.
+  * For **Blazor Web App**,  refer stylesheet inside the `<head>` of **~/Components/App.razor** file for .NET 8 and .NET 9.
 
   * For **Blazor WebAssembly application**, refer stylesheet inside the `<head>` element of **wwwroot/index.html** file.
   * For **Blazor Server application**, refer stylesheet inside the `<head>` element of
@@ -464,7 +464,7 @@ Now, get the SQL data from the SQL server and bind it to the DataGrid component 
 Grid columns can be defined using the [GridColumn](https://blazor.syncfusion.com/documentation/datagrid/columns) component. Create columns using the following code. The properties used and their usage are discussed below.
 
 {% tabs %}
-{% highlight razor tabtitle="Blazor Web App"%}
+{% highlight razor tabtitle="Blazor Web App" %}
 
 @* Your App render mode define here *@
 @rendermode InteractiveAuto
@@ -487,7 +487,7 @@ Grid columns can be defined using the [GridColumn](https://blazor.syncfusion.com
 }
 
 {% endhighlight %}
-{% highlight razor tabtitle="Blazor Server App"%}
+{% highlight razor tabtitle="Blazor Server App" %}
 
 <SfGrid @ref="Grid" TValue="Order" AllowPaging="true" >
     <SfDataManager Adaptor="Adaptors.CustomAdaptor">
@@ -522,7 +522,7 @@ In the custom adaptor’s **Read** method, you can get the Grid action details l
 * Return the response in Result and Count pair object in Read method to bind the data to the DataGrid.
 
 {% tabs %}
-{% highlight razor tabtitle="Blazor Web App"%}
+{% highlight razor tabtitle="Blazor Web App" %}
 [CustomAdaptorComponent.razor]
 @using Newtonsoft.Json
 @using BlazorWebApp.Shared.Data;
@@ -555,7 +555,7 @@ In the custom adaptor’s **Read** method, you can get the Grid action details l
 }
 
 {% endhighlight %}
-{% highlight razor tabtitle="Blazor Server App"%}
+{% highlight razor tabtitle="Blazor Server App" %}
 [CustomAdaptorComponent.razor]
 [CustomAdaptorComponent.razor]
 
@@ -671,7 +671,7 @@ Let’s see how to perform CRUD operation using SQL server data with Syncfusion 
 To Perform the Insert operation, override the Insert/InsertAsync method of the custom adaptor and add the following code in the CustomAdaptorComponent.razor.
 
 {% tabs %}
-{% highlight razor tabtitle="Blazor Web App"%}
+{% highlight razor tabtitle="Blazor Web App" %}
 
 public override async Task<object> InsertAsync(DataManager DataManager, object Value, string Key)
 {
@@ -680,7 +680,7 @@ public override async Task<object> InsertAsync(DataManager DataManager, object V
 }
 
 {% endhighlight %}
-{% highlight razor tabtitle="Blazor Server App"%}
+{% highlight razor tabtitle="Blazor Server App" %}
 // Performs Insert operation
 //You will get the DataManager instance in the DataManager parameter
 //You will get the record in the Value parameter
@@ -722,7 +722,7 @@ The resultant grid will look like below.
 To Perform the Update operation, override the Update/UpdateAsync method of the custom adaptor and add the following code in the CustomAdaptorComponent.razor.
 
 {% tabs %}
-{% highlight razor tabtitle="Blazor Web App"%}
+{% highlight razor tabtitle="Blazor Web App" %}
 
 // Performs Update operation
 public override async Task<object> Update(DataManager dm, object value, string keyField, string key)
@@ -732,7 +732,7 @@ public override async Task<object> Update(DataManager dm, object value, string k
 }
 
 {% endhighlight %}
-{% highlight razor tabtitle="Blazor Server App"%}
+{% highlight razor tabtitle="Blazor Server App" %}
 
 // Performs Update operation
 //You will get the DataManager instance in the DataManager parameter
@@ -775,7 +775,7 @@ The resultant grid will look like below.
 To Perform the Delete operation, override the Remove/RemoveAsync method of the custom adaptor and add the following code in the CustomAdaptorComponent.razor.
 
 {% tabs %}
-{% highlight razor tabtitle="Blazor Web App"%}
+{% highlight razor tabtitle="Blazor Web App" %}
 
 public override async Task<object> RemoveAsync(DataManager dm, object value, string keyField, string key)
 {
@@ -784,7 +784,7 @@ public override async Task<object> RemoveAsync(DataManager dm, object value, str
 }
 
 {% endhighlight %}
-{% highlight razor tabtitle="Blazor Server App"%}
+{% highlight razor tabtitle="Blazor Server App" %}
 
 // Performs Remove operation
 //You will get the DataManager instance in the DataManager parameter

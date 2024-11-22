@@ -33,6 +33,7 @@ To add **Blazor PDF Viewer (Next Gen)** component in the app, open the NuGet pac
 If you select an Interactive render mode as WebAssembly or Auto, you can install the NuGet package in the client-side project to add component in Web App.
 
 N> If you select an Interactive render mode as `WebAssembly or Auto`, you can install the NuGet package in the client-side project to add component in Web App.
+On the Syncfusion side, we are using SkiaSharp.Views.Blazor version 2.88.8. Please make sure to reference this version as well.
 * [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor)
 
 ![SkiaSharp Views Blazor](gettingstarted-images/skia-sharp-image.png)
@@ -50,11 +51,13 @@ Interactive render mode as WebAssembly or Auto, need to add the following proper
 </PropertyGroup>
 
 <ItemGroup>
-    <NativeFileReference Include="$(SkiaSharpStaticLibraryPath)\2.0.23\*.a" />
+    <NativeFileReference Include="$(SkiaSharpStaticLibraryPath)\3.1.34\st\*.a" />
 </ItemGroup>
 
 {% endhighlight %}
 {% endtabs %}
+
+The above configuration is required only for .NET 9 projects. Please ensure you use this setup for the corresponding version.
 
 ## Register Syncfusion Blazor Service
 
@@ -74,7 +77,7 @@ Interactive render mode as WebAssembly or Auto, need to add the following proper
 If you select an Interactive render mode as `WebAssembly` or `Auto`, you need to register the Syncfusion Blazor service in both **~/Program.cs** files of your Blazor Web App.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 8 (~/Program.cs) Server" hl_lines="2 9 11 13" %}
+{% highlight c# tabtitle=".NET 9 & .NET 8 (~/Program.cs) Server" hl_lines="2 9 11 13" %}
 
 using BlazorWebAppServer.Components;
 using Syncfusion.Blazor;
@@ -109,7 +112,7 @@ app.Run();
 
 {% endhighlight %}
 
-{% highlight c# tabtitle=".NET 8 (~/Program.cs) WebAssembly" hl_lines="3 9 11" %}
+{% highlight c# tabtitle=".NET 9 & .NET 8 (~/Program.cs) WebAssembly" hl_lines="3 9 11" %}
 
 using BlazorWebApp.Client.Pages;
 using BlazorWebApp.Components;
@@ -146,7 +149,7 @@ app.Run();
 
 {% endhighlight %}
 
-{% highlight c# tabtitle=".NET 8 (~/Program.cs) Auto" hl_lines="3 9 11 13" %}
+{% highlight c# tabtitle=".NET 9 & .NET 8 (~/Program.cs) Auto" hl_lines="3 9 11 13" %}
 
 using BlazorWebAppAuto.Client.Pages;
 using BlazorWebAppAuto.Components;

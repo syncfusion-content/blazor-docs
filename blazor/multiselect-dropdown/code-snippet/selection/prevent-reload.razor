@@ -1,0 +1,34 @@
+@using Syncfusion.Blazor.DropDowns;
+@using Syncfusion.Blazor.Buttons;
+
+<form>
+    <div>
+        <label class="example-label">Select a game</label>
+        <SfMultiSelect TItem="GameFields" TValue="string[]" DataSource="@Games" Placeholder="Select a game">
+            <MultiSelectFieldSettings Value="ID" Text="Text"></MultiSelectFieldSettings>
+        </SfMultiSelect>
+    </div>
+    <div class="submit-btn">
+        <SfButton HtmlAttributes="@TypeChange" IsPrimary="true">Submit</SfButton>
+    </div>
+</form>
+
+@code {
+    private Dictionary<string, object> TypeChange = new Dictionary<string, object>()
+    {
+        { "type", "button"}
+    };
+
+    public class GameFields
+    {
+        public string ID { get; set; }
+        public string Text { get; set; }
+    }
+
+    private List<GameFields> Games = new List<GameFields>() {
+        new GameFields(){ ID= "Game1", Text= "American Football" },
+        new GameFields(){ ID= "Game2", Text= "Badminton" },
+        new GameFields(){ ID= "Game3", Text= "Basketball" },
+        new GameFields(){ ID= "Game4", Text= "Cricket" },
+    };
+}
