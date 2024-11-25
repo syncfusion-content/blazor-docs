@@ -111,7 +111,7 @@ Autoscroll feature automatically scrolls the Diagram whenever the Node or Connec
 * Connector dragging and end thumb dragging
 * Rubber band selection
 
-The auto-scroll behavior in diagram can be enabled or disabled by using the [EnableAutoScroll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html#Syncfusion_Blazor_Diagram_ScrollSettings_EnableAutoScroll) property of the diagram. The following code example illustrates enabling or disabling the auto-scroll support for nodes.
+The auto-scroll behavior in the diagram can be enabled or disabled by using the [EnableAutoScroll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html#Syncfusion_Blazor_Diagram_ScrollSettings_EnableAutoScroll) property of the diagram. The following code example illustrates enabling or disabling the auto-scroll support for nodes.
 
 
 ```cshtml
