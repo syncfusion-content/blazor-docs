@@ -11,8 +11,6 @@ documentation: ug
 
 The column menu in the Syncfusion Blazor Grid component provides options to enable features such as sorting, grouping, filtering, column chooser, and autofit. When users click on the column header’s menu icon, a menu will be displayed with these integrated features. To enable the column menu, you need to set the [ShowColumnMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ShowColumnMenu) property to true in the Grid configuration.
 
-
-
 The default menu items are displayed in the following table,
 
 | Item | Description |
@@ -96,10 +94,86 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
->  You can disable column menu for a particular column by defining the column's [ShowColumnMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ShowColumnMenu) property as false.
-<br/> You can customize the default menu items by defining the [ColumnMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ContextMenuItems) with the required items.
-
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXrUsijhhkfMyNWj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+> *  You can disable column menu for a particular column by defining the column's [ShowColumnMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ShowColumnMenu) property as false.
+> * You can customize the default menu items by defining the [ColumnMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ContextMenuItems) with the required items.
+
+## Prevent column menu for particular column
+
+The Syncfusion Blazor DataGrid component provides the ability to prevent the appearance of the column menu for specific columns. This feature is useful when you want to restrict certain columns from being customizable through the column menu.
+
+To prevent the column menu for a particular column, you can set the [ShowColumnMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ShowColumnMenu) property to **false** for that specific column configuration. This will disable the column menu options specifically for the designated column, while other columns will have the column menu enabled.
+
+The following example demonstrates how to prevent the column menu for a specific column. In this example, the column menu is disabled for the **OrderID** column by setting the `showColumnMenu` property to **false**.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@OrderData" Height="315" AllowSorting="true" AllowGrouping="true" AllowFiltering="true" ShowColumnMenu="true" AllowPaging="true">
+    <GridFilterSettings Type="FilterType.CheckBox"></GridFilterSettings>
+    <GridGroupSettings ShowGroupedColumn="true"></GridGroupSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" ShowColumnMenu="false" TextAlign="TextAlign.Right" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer Name"  Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+    </GridColumns>
+</SfGrid>
+@code {
+    public List<OrderDetails> OrderData { get; set; }    
+    protected override void OnInitialized()
+    {
+        OrderData = OrderDetails.GetAllRecords();
+    }
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderDetails.cs" %}
+public class OrderDetails
+{
+    public static List<OrderDetails> order = new List<OrderDetails>();
+    
+    public OrderDetails(int OrderID, string CustomerId, string Shipcity,  string Shipcountry, double Freight)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerId;
+        this.ShipCity = Shipcity;
+        this.ShipCountry = Shipcountry;
+        this.Freight = Freight; 
+    }
+    public static List<OrderDetails> GetAllRecords()
+    {
+        if (order.Count == 0)
+        {
+            order.Add(new OrderDetails(10248, "VINET", "Reims", "France",  32.38));
+            order.Add(new OrderDetails(10249, "TOMSP", "Münster", "Germany",  11.61));
+            order.Add(new OrderDetails(10250, "HANAR", "Rio de Janeiro", "Brazil",  65.83));
+            order.Add(new OrderDetails(10251, "VICTE", "Lyon", "France", 41.34));
+            order.Add(new OrderDetails(10252, "SUPRD", "Charleroi", "Belgium", 51.3));
+            order.Add(new OrderDetails(10253, "HANAR", "Rio de Janeiro", "Brazil",  58.17));
+            order.Add(new OrderDetails(10254, "CHOPS", "Bern", "Switzerland",  22.98));
+            order.Add(new OrderDetails(10255, "RICSU", "Genève", "Switzerland",  148.33));
+            order.Add(new OrderDetails(10256, "WELLI",  "Resende", "Brazil",  13.97));
+            order.Add(new OrderDetails(10257, "HILAA", "San Cristóbal", "Venezuela",  81.91));
+            order.Add(new OrderDetails(10258, "ERNSH", "Graz", "Austria",  140.51));
+            order.Add(new OrderDetails(10259, "CENTC", "México D.F.", "Mexico", 3.25));
+            order.Add(new OrderDetails(10260, "OTTIK", "Köln",  "Germany", 55.09));
+            order.Add(new OrderDetails(10261, "QUEDE", "Rio de Janeiro", "Brazil", 3.05));
+            order.Add(new OrderDetails(10262, "RATTC", "Albuquerque", "USA", 48.29));
+        }
+        return order;
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipCountry { get; set; }
+    public double Freight { get; set; } 
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBfiCVHTnFFingT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Add custom column menu item
 
