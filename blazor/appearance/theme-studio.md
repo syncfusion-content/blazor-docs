@@ -43,7 +43,10 @@ You can download the custom styles after customizing the theme colors.
 2. Assign a theme name in the File Name field, and click the Download button.
 ![Theme Studio download-dialog](images/download-dialog.png)
 3. The download styles will come as a zip file that contains SCSS and CSS files for the selected Syncfusion Blazor components. The current settings are stored in the `settings.json` file.
+
 ![Theme Studio output-files](images/output-files.png)
+
+N> The Material and Tailwind themes use the online Roboto font. If your app is designed to work on a local network without an internet connection, you can use the customized folder, as it contains CSS files without online dependencies of Google Fonts. The lightweight theme files (e.g., fluent2-lite.css) were provided to optimize performance by excluding bigger size styles.
 
 ### Using customized theme in a web application
 
