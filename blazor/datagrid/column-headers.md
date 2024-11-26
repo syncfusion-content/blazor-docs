@@ -491,7 +491,6 @@ In the following example, the [TextWrapSettings.WrapMode](https://help.syncfusio
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtVKWMjirseyNsmj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-
 ## Change the height of header
 
 Changing the height of the header can be useful in cases where the default height is not sufficient to display the header content cell. For example, if you have a header with a lot of text or if you want to add an image to the header, you may need to increase the height of the header to accommodate the content.This can be easily achieved by changing the height of the header using CSS or by dynamically adjusting the height using a methods.
@@ -635,6 +634,131 @@ This is demonstrated in the following sample:
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZBKiiDMrraFxmkh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Custom tooltip for header
+
+Custom tooltips for headers provide additional information when hovering over a column header in the Syncfusion DataGrid. This can be useful in situations where there is not enough space to display all of the information related to a column, or when there is additional context that may be helpful.
+
+To enable custom tooltips for headers in the Grid, you can use the [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderTemplate) feature by rendering the [SfTooltip](https://blazor.syncfusion.com/documentation/tooltip/getting-started) components within the template.
+
+Here's an example of how to use the `HeaderTemplate` to add a custom tooltip to a header cell:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+    
+<SfGrid ID="Grid" DataSource="@OrderData" AllowPaging="true">            
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID"  Width="100">
+            <HeaderTemplate>
+                <SfTooltip Content="@GetTooltipContent("Order ID")" Position="Position.BottomCenter">
+                    <span><b>Order ID</b></span>
+                </SfTooltip>
+            </HeaderTemplate>
+        </GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer ID" Width="100">
+            <HeaderTemplate>
+                <SfTooltip Content="@GetTooltipContent("Customer ID")" Position="Position.BottomCenter">
+                    <span><b>Customer ID</b></span>
+                </SfTooltip>
+            </HeaderTemplate>
+        </GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.OrderDate) HeaderText="Order Date" Format="d" Type="Syncfusion.Blazor.Grids.ColumnType.Date" Width="160">
+            <HeaderTemplate>
+                <SfTooltip Content="@GetTooltipContent("Order Date")"  Position="Position.BottomCenter">
+                    <span><b>Order Date</b></span>
+                </SfTooltip>
+            </HeaderTemplate>
+        </GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" Format="C2"  Width="150">
+            <HeaderTemplate>
+                <SfTooltip Content="@GetTooltipContent("Freight")" Position="Position.BottomCenter">
+                    <span><b>Freight</b></span>
+                </SfTooltip>
+            </HeaderTemplate>
+        </GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShippedDate) HeaderText="Shipped Date" Format="d" Type="Syncfusion.Blazor.Grids.ColumnType.Date" Width="160">
+            <HeaderTemplate>
+                <SfTooltip Content="@GetTooltipContent("Shipped Date")" Position="Position.BottomCenter">
+                    <span><b>Shipped Date</b></span>
+                </SfTooltip>
+            </HeaderTemplate>
+        </GridColumn>
+    </GridColumns>
+</SfGrid>   
+
+@code {
+    public SfGrid<OrderDetails> Grid { get; set; }
+
+    public List<OrderDetails> OrderData { get; set; }
+    protected override void OnInitialized()
+    {
+        OrderData = OrderDetails.GetAllRecords();
+    }
+    // Dictionary for column descriptions
+    public Dictionary<string, string> ColumnDescriptions = new()
+    {
+        { "Order ID", "Order ID: A unique number assigned to each order." },
+        { "Customer ID", "Customer ID: The ID of the customer placing the order." },
+        { "Order Date", "Order Date: The date when the order was placed." },
+        { "Freight", "Freight: The cost of shipping the order." },
+        { "Shipped Date", "Shipped Date: The date when the order was shipped." }
+    };
+
+    // Method to get tooltip content dynamically based on HeaderText
+    public string GetTooltipContent(string headerText)
+    {
+        return ColumnDescriptions.ContainsKey(headerText) ? ColumnDescriptions[headerText] : "No description available.";
+    }
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderDetails.cs" %}
+public class OrderDetails
+{
+    public static List<OrderDetails> order = new List<OrderDetails>();
+    public OrderDetails(int OrderID, string CustomerId, int EmployeeId, double Freight, DateTime OrderDate, DateTime shippeddate)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerId;
+        this.EmployeeID = EmployeeId;
+        this.Freight = Freight;
+        this.OrderDate = OrderDate;
+        this.ShippedDate = shippeddate; 
+
+    }
+    public static List<OrderDetails> GetAllRecords()
+    {
+        if (order.Count == 0)
+        {
+            order.Add(new OrderDetails(10248, "VINET",  5,  32.38, new DateTime(1996, 7, 4), new DateTime(1996, 7, 16)));
+            order.Add(new OrderDetails(10249, "TOMSP",  6,  11.61, new DateTime(1996, 7, 5), new DateTime(1996, 7, 10)));
+            order.Add(new OrderDetails(10250, "HANAR",  4,  65.83,new DateTime(1996, 7, 8), new DateTime(1996, 7, 12)));
+            order.Add(new OrderDetails(10251, "VICTE",  3, 41.34, new DateTime(1996, 7, 8), new DateTime(1996, 7, 15)));
+            order.Add(new OrderDetails(10252, "SUPRD",  4, 51.3, new DateTime(1996, 7, 9), new DateTime(1996, 7, 11)));
+            order.Add(new OrderDetails(10253, "HANAR",  3,  58.17, new DateTime(1996, 7, 10), new DateTime(1996, 7, 16)));
+            order.Add(new OrderDetails(10254, "CHOPS",  5,  22.98, new DateTime(1996, 7, 11), new DateTime(1996, 7, 23)));
+            order.Add(new OrderDetails(10255, "RICSU",  9,  148.33,  new DateTime(1996, 7, 12), new DateTime(1996, 7, 24)));
+            order.Add(new OrderDetails(10256, "WELLI",  3,  13.97, new DateTime(1996, 7, 15), new DateTime(1996, 7, 25)));
+            order.Add(new OrderDetails(10257, "HILAA",  4,  81.91, new DateTime(1996, 7, 16), new DateTime(1996, 7, 30)));
+            order.Add(new OrderDetails(10258, "ERNSH",  1,  140.51, new DateTime(1996, 7, 17), new DateTime(1996, 7, 29)));
+            order.Add(new OrderDetails(10259, "CENTC",  4, 3.25, new DateTime(1996, 7, 18), new DateTime(1996, 7, 31)));
+            order.Add(new OrderDetails(10260, "OTTIK",  4, 55.09, new DateTime(1996, 7, 19), new DateTime(1996, 8, 1)));
+            order.Add(new OrderDetails(10261, "QUEDE",  4, 3.05, new DateTime(1996, 7, 19), new DateTime(1996, 8, 2)));
+            order.Add(new OrderDetails(10262, "RATTC", 8, 48.29, new DateTime(1996, 7, 22), new DateTime(1996, 8, 5)));
+        }
+        return order;
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public int EmployeeID { get; set; }
+    public double Freight { get; set; }
+    public DateTime OrderDate { get; set; }
+    public DateTime ShippedDate { get; set; }     
+}    
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjhTCWVShlavzQwS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Customize header text styles 
 
@@ -870,23 +994,13 @@ The following example demonstrates how to add a `HeaderCellInfo` event handler t
 public class OrderDetails
 {
     public static List<OrderDetails> order = new List<OrderDetails>();
-    public OrderDetails()
-    {
-
-    }
-    public OrderDetails(int OrderID, string CustomerId, int EmployeeId, double Freight, DateTime OrderDate, string ShipCity, string ShipName, string ShipCountry, string ShipAddress, string shipRegion, string shipPostalCode, DateTime shippeddate)
+    public OrderDetails(int OrderID, string CustomerId, int EmployeeId, double Freight, DateTime OrderDate, DateTime shippeddate)
     {
         this.OrderID = OrderID;
         this.CustomerID = CustomerId;
         this.EmployeeID = EmployeeId;
         this.Freight = Freight;
-        this.ShipCity = ShipCity;
         this.OrderDate = OrderDate;
-        this.ShipName = ShipName;
-        this.ShipCountry = ShipCountry;
-        this.ShipAddress = ShipAddress;
-        this.ShipRegion = shipRegion; 
-        this.ShipPostalCode = shipPostalCode; 
         this.ShippedDate = shippeddate; 
 
     }
@@ -894,21 +1008,21 @@ public class OrderDetails
     {
         if (order.Count == 0)
         {
-            order.Add(new OrderDetails(10248, "VINET",  5,  32.38, new DateTime(1996, 7, 4), "Reims", "Vins et alcools Chevalier", "Australia",  "59 rue de l Abbaye", "51100", "CJ", new DateTime(1996, 7, 16)));
-            order.Add(new OrderDetails(10249, "TOMSP",  6,  11.61, new DateTime(1996, 7, 5), "Münster", "Toms Spezialitäten", "Australia", "Luisenstr. 48",  "44087", "CJ", new DateTime(1996, 7, 10)));
-            order.Add(new OrderDetails(10250, "HANAR",  4,  65.83,new DateTime(1996, 7, 8), "Rio de Janeiro", "Hanari Carnes", "United States", "Rua do Paço, 67",  "05454-876", "RJ", new DateTime(1996, 7, 12)));
-            order.Add(new OrderDetails(10251, "VICTE",  3, 41.34, new DateTime(1996, 7, 8), "Lyon", "Victuailles en stock", "Australia", "2, rue du Commerce","69004", "CJ", new DateTime(1996, 7, 15)));
-            order.Add(new OrderDetails(10252, "SUPRD",  4, 51.3, new DateTime(1996, 7, 9), "Charleroi", "Suprêmes délices", "United States", "Boulevard Tirou, 255", "B-6000", "CJ", new DateTime(1996, 7, 11)));
-            order.Add(new OrderDetails(10253, "HANAR",  3,  58.17, new DateTime(1996, 7, 10), "Rio de Janeiro", "Hanari Carnes", "United States", "Rua do Paço, 67", "05454-876", "RJ", new DateTime(1996, 7, 16)));
-            order.Add(new OrderDetails(10254, "CHOPS",  5,  22.98, new DateTime(1996, 7, 11), "Bern", "Chop-suey Chinese", "Switzerland", "Hauptstr. 31", "3012", "CJ", new DateTime(1996, 7, 23)));
-            order.Add(new OrderDetails(10255, "RICSU",  9,  148.33,  new DateTime(1996, 7, 12), "Genève", "Richter Supermarkt", "Switzerland", "Starenweg 5", "1204", "CJ", new DateTime(1996, 7, 24)));
-            order.Add(new OrderDetails(10256, "WELLI",  3,  13.97, new DateTime(1996, 7, 15), "Resende", "Wellington Importadora", "Brazil",  "Rua do Mercado, 12", "08737-363", "SP", new DateTime(1996, 7, 25)));
-            order.Add(new OrderDetails(10257, "HILAA",  4,  81.91, new DateTime(1996, 7, 16), "San Cristóbal", "HILARION-Abastos", "Venezuela", "Carrera 22 con Ave. Carlos Soublette #8-35", "5022", "Táchira", new DateTime(1996, 7, 30)));
-            order.Add(new OrderDetails(10258, "ERNSH",  1,  140.51, new DateTime(1996, 7, 17), "Graz", "Ernst Handel", "Austria", "Kirchgasse 6", "8010", "CJ", new DateTime(1996, 7, 29)));
-            order.Add(new OrderDetails(10259, "CENTC",  4, 3.25, new DateTime(1996, 7, 18), "México D.F.", "Centro comercial Moctezuma", "Mexico", "Sierras de Granada 9993", "05022", "CJ", new DateTime(1996, 7, 31)));
-            order.Add(new OrderDetails(10260, "OTTIK",  4, 55.09, new DateTime(1996, 7, 19), "Köln", "Ottilies Käseladen", "Germany", "Mehrheimerstr. 369", "50739", "CJ", new DateTime(1996, 8, 1)));
-            order.Add(new OrderDetails(10261, "QUEDE",  4, 3.05, new DateTime(1996, 7, 19), "Rio de Janeiro", "Que Delícia", "Brazil", "Rua da Panificadora, 12", "02389-673", "RJ", new DateTime(1996, 8, 2)));
-            order.Add(new OrderDetails(10262, "RATTC", 8, 48.29, new DateTime(1996, 7, 22), "Albuquerque", "Rattlesnake Canyon Grocery", "USA", "2817 Milton Dr.", "87110", "NM", new DateTime(1996, 8, 5)));
+            order.Add(new OrderDetails(10248, "VINET",  5,  32.38, new DateTime(1996, 7, 4), new DateTime(1996, 7, 16)));
+            order.Add(new OrderDetails(10249, "TOMSP",  6,  11.61, new DateTime(1996, 7, 5), new DateTime(1996, 7, 10)));
+            order.Add(new OrderDetails(10250, "HANAR",  4,  65.83,new DateTime(1996, 7, 8), new DateTime(1996, 7, 12)));
+            order.Add(new OrderDetails(10251, "VICTE",  3, 41.34, new DateTime(1996, 7, 8), new DateTime(1996, 7, 15)));
+            order.Add(new OrderDetails(10252, "SUPRD",  4, 51.3, new DateTime(1996, 7, 9), new DateTime(1996, 7, 11)));
+            order.Add(new OrderDetails(10253, "HANAR",  3,  58.17, new DateTime(1996, 7, 10), new DateTime(1996, 7, 16)));
+            order.Add(new OrderDetails(10254, "CHOPS",  5,  22.98, new DateTime(1996, 7, 11), new DateTime(1996, 7, 23)));
+            order.Add(new OrderDetails(10255, "RICSU",  9,  148.33,  new DateTime(1996, 7, 12), new DateTime(1996, 7, 24)));
+            order.Add(new OrderDetails(10256, "WELLI",  3,  13.97, new DateTime(1996, 7, 15), new DateTime(1996, 7, 25)));
+            order.Add(new OrderDetails(10257, "HILAA",  4,  81.91, new DateTime(1996, 7, 16), new DateTime(1996, 7, 30)));
+            order.Add(new OrderDetails(10258, "ERNSH",  1,  140.51, new DateTime(1996, 7, 17), new DateTime(1996, 7, 29)));
+            order.Add(new OrderDetails(10259, "CENTC",  4, 3.25, new DateTime(1996, 7, 18), new DateTime(1996, 7, 31)));
+            order.Add(new OrderDetails(10260, "OTTIK",  4, 55.09, new DateTime(1996, 7, 19), new DateTime(1996, 8, 1)));
+            order.Add(new OrderDetails(10261, "QUEDE",  4, 3.05, new DateTime(1996, 7, 19), new DateTime(1996, 8, 2)));
+            order.Add(new OrderDetails(10262, "RATTC", 8, 48.29, new DateTime(1996, 7, 22), new DateTime(1996, 8, 5)));
         }
         return order;
     }
@@ -916,19 +1030,10 @@ public class OrderDetails
     public string CustomerID { get; set; }
     public int EmployeeID { get; set; }
     public double Freight { get; set; }
-    public string ShipCity { get; set; }
     public DateTime OrderDate { get; set; }
-    public string ShipName { get; set; }
-    public string ShipCountry { get; set; }
-    public string ShipAddress { get; set; }
-    public string ShipRegion { get; set; } 
-    public string ShipPostalCode { get; set; } 
-    public DateTime ShippedDate { get; set; } 
+    public DateTime ShippedDate { get; set; }     
 } 
 {% endhighlight %}
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjLfsMWkTIsIyEuk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-
-
