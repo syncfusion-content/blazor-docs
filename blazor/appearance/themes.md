@@ -34,7 +34,7 @@ The Syncfusion Blazor Bootstrap Theme is designed based on Bootstrap v3, whereas
 
 ## Optimized CSS files
 
-By default, Syncfusion Blazor Themes contains **normal** along with **bigger** size mode styles in all themes in the name of `<theme_name>.css`. For this combination, themes files are in high size. To reduce this, we have provide the additional optimized theme for **normal** size modes alone in the name of  `<theme_name>-lite.css` files which does not contain any **bigger** size mode styles. This results in a significant reduction in theme file size, improving load times and overall application performance, especially when the bigger size mode is unnecessary.
+By default, Syncfusion Blazor themes include styles for both **normal** and **bigger** size modes within the main `<theme_name>.css` file. While this ensures comprehensive styling support, it increases the file size. To address this, we offer optimized theme files named `<theme_name>-lite.css`, which include styles exclusively for the **normal** size mode, omitting the **bigger** size mode styles. Using these lightweight theme files significantly reduces the file size, improving load times and enhancing overall application performance, particularly when the bigger size mode is not required.
 
 Comparison of the Syncfusion Blazor Button Component in **normal** and **bigger** size modes:
 
