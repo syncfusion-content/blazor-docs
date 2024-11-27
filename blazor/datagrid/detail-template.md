@@ -11,7 +11,7 @@ documentation: ug
 
 The Detail Template feature in the Syncfusion Blazor DataGrid component allows you to display expanded or collapsible sections for each row to show additional, context-specific information. This is particularly useful for scenarios where rows contain nested or supplementary data that would otherwise clutter the main grid view. You can use the [DetailTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_DetailTemplate) property to define an HTML template for the detail row, which can include any HTML element, Syncfusion component, or custom Blazor component.
 
-> Before adding detail template to the datagrid, it is recommended to go through the [template](https://blazor.syncfusion.com/documentation/datagrid/templates) section topic to configure the template.
+> Before adding detail template to the datagrid, it is recommended to go through the [Template](https://blazor.syncfusion.com/documentation/datagrid/templates) section topic to configure the template.
 
 To know about **Detail Template** in Blazor DataGrid Component, you can check this video.
 
@@ -29,7 +29,6 @@ Here's an example to demonstrate use of `DetailTemplate` to display extra detail
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @page "/"
-
 @using Syncfusion.Blazor.Grids
 @using BlazorApp1.Data
 
@@ -38,7 +37,6 @@ Here's an example to demonstrate use of `DetailTemplate` to display extra detail
         <DetailTemplate>
             @{
                 var employee = (context as EmployeeData);
-
                 <table class="detailtable" width="100%">
                     <colgroup>
                         <col width="35%">
@@ -95,7 +93,6 @@ Here's an example to demonstrate use of `DetailTemplate` to display extra detail
         text-overflow: ellipsis;
         white-space: nowrap;
     }
-
     .photo {
         width: 100px;
         height: 100px;
@@ -170,7 +167,6 @@ public static List<EmployeeData> Employees = new List<EmployeeData>();
         public string? City { get; set; } // New City property
         public DateTime HireDate { get; set; }
     }
-
 }
 
 {% endhighlight %}
@@ -189,7 +185,6 @@ In the following sample, a DataGrid component is rendered as custom component us
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @page "/"
-
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
 @using BlazorApp1.Data
@@ -217,7 +212,6 @@ var employee = (context as EmployeeData);
         <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Title" Width="110"></GridColumn>
         <GridColumn Field=@nameof(EmployeeData.Country) HeaderText="Country" Width="110"></GridColumn>
     </GridColumns>
-
 </SfGrid>
 
 <style type="text/css" class="cssStyles">
@@ -235,7 +229,6 @@ var employee = (context as EmployeeData);
 private SfGrid<EmployeeData> Grid;
 public List<EmployeeData> Employees { get; set; }
 public List<OrderData> Orders { get; set; }
-
     protected override void OnInitialized()
     {
         Employees = EmployeeData.GetAllRecords();
@@ -294,7 +287,6 @@ public static List<OrderData> Orders = new List<OrderData>();
         public string ShipCountry { get; set; }
         public int EmployeeID { get; set; }
     }
-
 }
 
 {% endhighlight %}
@@ -353,7 +345,6 @@ public static List<EmployeeData> Employees = new List<EmployeeData>();
         public string? City { get; set; }
         public DateTime HireDate { get; set; }
     }
-
 }
 
 {% endhighlight %}
@@ -379,7 +370,6 @@ By default, detail rows render in collapsed state. You can expand a detail rows 
         <DetailTemplate>
             @{
                 var employee = (context as EmployeeData);
-
                 <table class="detailtable" width="100%">
                     <colgroup>
                         <col width="35%">
@@ -436,7 +426,6 @@ By default, detail rows render in collapsed state. You can expand a detail rows 
         text-overflow: ellipsis;
         white-space: nowrap;
     }
-
     .photo {
         width: 100px;
         height: 100px;
@@ -580,9 +569,8 @@ public static List<EmployeeData> Employees = new List<EmployeeData>();
 
 ![Expand by external button](./images/blazor-datagrid-detail-template-externalbutton.png)
 
- 
 > * You can expand all the rows by using `ExpandAllDetailRowAsync` method.
-* If you want to expand all the rows at initial DataGrid rendering, then use `ExpandAllDetailRowAsync` method in [dataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event of the DataGrid.
+* If you want to expand all the rows at initial DataGrid rendering, then use `ExpandAllDetailRowAsync` method in [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound) event of the DataGrid.
 
 ## Expand or collapse specific detail template row
 
@@ -595,7 +583,6 @@ In the below code, the **Expand** method is defined to expand or collapse the de
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @page "/"
-
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
 @using BlazorApp1.Data
@@ -613,7 +600,6 @@ In the below code, the **Expand** method is defined to expand or collapse the de
             @{
                 var employee = (context as EmployeeData);
                 var Order = (context as OrderData);
-
                 <SfGrid DataSource="@Orders" Query="@(new Query().Where("EmployeeID", "equal", employee.EmployeeID))">
                     <GridColumns>
                         <GridColumn Field=@nameof(Order.OrderID) HeaderText="First Name" Width="110"> </GridColumn>
@@ -631,7 +617,6 @@ In the below code, the **Expand** method is defined to expand or collapse the de
         <GridColumn Field=@nameof(EmployeeData.Country) HeaderText="Country" Width="110"></GridColumn>
     </GridColumns>
 </SfGrid>
-
 
 <style type="text/css" class="cssStyles">
     .detailtable td {
@@ -966,7 +951,6 @@ public static List<EmployeeData> Employees = new List<EmployeeData>();
         public string? City { get; set; } // New City property
         public DateTime HireDate { get; set; }
     }
-
 }
 
 {% endhighlight %}
@@ -1046,7 +1030,6 @@ In the following sample, you can get the instance of that particular child gr
     private List<Object> Toolbaritems = new List<Object>() { new ItemModel() { Text = "Click", TooltipText = "Click", PrefixIcon = "e-click", Id = "Click" } };
     private string SelectedRecordsMessage { get; set; } = "Select records to view details";
 
-  
     protected override void OnInitialized()
     {
         Employees = EmployeeData.GetAllRecords();
@@ -1058,7 +1041,6 @@ In the following sample, you can get the instance of that particular child gr
         if (args.Item.Id == "Click" && employeeID.HasValue && Grid.ContainsKey(employeeID))
         {
             var selectedRecords = await Grid[employeeID].GetSelectedRecordsAsync();
-
             SelectedRecordsMessage = selectedRecords.Count > 0
                 ? $"Selected records for Employee ID {employeeID}: {string.Join(", ", selectedRecords.Select(r => r.OrderID))}"
                 : $"No records selected for Employee ID {employeeID}";
@@ -1176,7 +1158,6 @@ public static List<EmployeeData> Employees = new List<EmployeeData>();
         public string? City { get; set; } // New City property
         public DateTime HireDate { get; set; }
     }
-
 }
 
 {% endhighlight %}
