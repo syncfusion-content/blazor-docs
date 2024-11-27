@@ -32,6 +32,39 @@ The following list of themes are included in the Syncfusion Blazor components li
 
 The Syncfusion Blazor Bootstrap Theme is designed based on Bootstrap v3, whereas the Bootsrap4 theme is designed based on Bootstrap v4.
 
+## Optimized CSS files
+
+By default, Syncfusion Blazor themes include styles for both **normal** and **bigger** size modes within the main `<theme_name>.css` file. While this ensures comprehensive styling support, it increases the file size. To address this, we offer optimized theme files named `<theme_name>-lite.css`, which include styles exclusively for the **normal** size mode, omitting the **bigger** size mode styles. Using these lightweight theme files significantly reduces the file size, improving load times and enhancing overall application performance, particularly when the bigger size mode is not required.
+
+Comparison of the Syncfusion Blazor Button Component in **normal** and **bigger** size modes:
+
+![bigger-sized-button](./images/bigger-theme-button.png)
+
+Refer to the comparison below for the default and optimized theme file sizes:
+
+| Default Theme Name | Default Theme Size | Optimized Theme Name | Optimized Theme Size |
+| -- | -- | -- | -- |
+| Fluent 2 | 3.88 MB | Fluent 2 Lite |2.90 MB |
+| Fluent 2 Dark | 3.85 MB | Fluent2 Dark Lite |2.86 MB |
+| material 3 | 3.98 MB | material 3 Lite |2.85 MB |
+| material 3 Dark | 3.98 MB | material 3 Dark Lite |2.84 MB |
+| Bootstrap 5.3 | 3.53 MB | Bootstrap 5.3 Lite 2 |2.73 MB |
+| Bootstrap 5.3 Dark | 3.51 MB | Bootstrap 5.3 Dark Lite |2.71 MB |
+| Bootstrap 5 | 3.36 MB | Bootstrap 5 Lite 2 |2.57 MB |
+| Bootstrap 5 Dark | 3.36 MB | Bootstrap 5 Dark Lite |2.57 MB |
+| Bootstrap 4 | 3.35 MB | Bootstrap 4 Lite |2.56 MB |
+| Bootstrap | 3.29 MB | Bootstrap Lite |2.53 MB |
+| Bootstrap Dark | 3.31 MB | Bootstrap Dark Lite |2.54 MB |
+| Google’s Material | 3.88 MB | Google’s Material Lite |2.80 MB |
+| Google’s Material Dark | 3.93 MB | Google’s Material Dark Lite |2.84 MB |
+| Tailwind | 3.26 MB | Tailwind Lite |2.46 MB |
+| Tailwind Dark | 3.30 MB | Tailwind Dark Lite |2.49 MB |
+| Fluent | 3.31 MB | Fluent Lite |2.51 MB |
+| Fluent Dark | 3.31 MB | Fluent Dark Lite |2.51 MB |
+| Microsoft Office Fabric | 3.20 MB | Microsoft Office Fabric Lite |2.44 MB |
+| Microsoft Office Fabric Dark | 3.25 MB | Microsoft Office Fabric Dark Lite |2.49 MB |
+| High Contrast | 3.22 MB | High Contrast Lite |2.45 MB |
+
 ## Reference themes in Blazor application
 
 Syncfusion Blazor themes can be used in your Blazor application by referencing the style sheet.
@@ -78,12 +111,26 @@ When using individual NuGet packages in your application, add [Syncfusion.Blazor
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
 </head>
 ```
+To refer to optimized CSS files, use the following syntax: 
+
+ ```html
+<head>
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.lite.css" rel="stylesheet" />
+</head>
+```
 
 When using [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) NuGet package,
 
  ```html
 <head>
     <link href="_content/Syncfusion.Blazor/styles/bootstrap5.css" rel="stylesheet" />
+</head>
+```
+To reference optimized CSS files from [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) NuGet package, here's how to:
+
+ ```html
+<head>
+    <link href="_content/Syncfusion.Blazor/styles/bootstrap5.lite.css" rel="stylesheet" />
 </head>
 ```
 
@@ -99,24 +146,48 @@ Syncfusion Blazor Themes are available in the CDN. Make sure that the version in
 </head>
 ```
 
+To refer to optimized CSS files, use the following syntax:
+
+```html
+<head>
+    <link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/<theme_name>-lite.css" rel="stylesheet"/>
+</head>
+```
+
 | Theme Name | CDN Reference |
 |--- | --- |
 | Material 3 | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material3.css |
+| Material 3 Lite | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material3-lite.css |
 | Material 3 Dark | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material3-dark.css |
+| Material 3 Dark Lite | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material3-dark-lite.css |
 | Bootstrap 5 | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5.css |
+| Bootstrap 5 Lite | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5-lite.css |
 | Bootstrap 5 Dark| https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5-dark.css |
+| Bootstrap 5 Dark Lite| https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5-dark-lite.css |
 | Bootstrap 4 | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css |
+| Bootstrap 4 Lite | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4-lite.css |
 | Bootstrap 3 | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap.css |
+| Bootstrap 3 Lite | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap-lite.css |
 | Bootstrap 3 Dark| https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap-dark.css |
+| Bootstrap 3 Dark Lite| https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap-dark-lite.css |
 | Google’s Material | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material.css |
+| Google’s Material Lite | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material-lite.css |
 | Google’s Material Dark | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material-dark.css |
+| Google’s Material Dark Lite | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material-dark-lite.css |
 | Tailwind CSS | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind.css |
+| Tailwind CSS Lite | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind-lite.css |
 | Tailwind CSS Dark | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind-dark.css |
+| Tailwind CSS Dark Lite | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind-dark-lite.css |
 | Fluent | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fluent.css |
+| Fluent Lite | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fluent-lite.css |
 | Fluent Dark | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fluent-dark.css |
+| Fluent Dark Lite | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fluent-dark-lite.css |
 | Microsoft Office Fabric  | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fabric.css |
+| Microsoft Office Fabric Lite  | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fabric-lite.css |
 | Microsoft Office Fabric Dark | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fabric-dark.css |
+| Microsoft Office Fabric Dark Lite | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fabric-dark-lite.css |
 | High Contrast  | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/highcontrast.css |
+| High Contrast Lite  | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/highcontrast-lite.css |
 
 ## LibMan
 
