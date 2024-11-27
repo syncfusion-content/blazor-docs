@@ -9,7 +9,7 @@ documentation: ug
 
 # Browser Compatibility in Blazor
 
-Syncfusion Blazor UI components are supported by all modern web browsers on both desktop and mobile devices running Windows, Linux, or MacOS.
+Syncfusion&reg; Blazor UI components are supported by all modern web browsers on both desktop and mobile devices running Windows, Linux, or MacOS.
 
 ## Blazor Web App
 

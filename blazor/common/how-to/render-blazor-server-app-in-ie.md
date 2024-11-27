@@ -38,7 +38,7 @@ Find the following steps to add the polyfills in the Blazor server application.
 
     N> This [polyfill](https://github.com/Daddoon/Blazor.Polyfill/releases/tag/3.0.8) is required to configure in Blazor server application for IE 11 support for .NET Core 3.1 app.
 
-3. Run the application in the IE 11 web browser and the Syncfusion Blazor Component is now rendered on IE 11.
+3. Run the application in the IE 11 web browser and the Syncfusion&reg; Blazor Component is now rendered on IE 11.
 
     ![Syncfusion component rendering on IE11](images/rendering-component-on-ie11.png)
 

@@ -9,9 +9,9 @@ documentation: ug
 
 # Blazor - Two-way Data Binding
 
-Syncfusion Blazor components provide data binding features with the `@bind-value` Razor directive attribute with a field, property, or Razor expression value. By default, the `bind-value` attribute binds the data value in the `OnChange` event. The `OnChange` event triggers when the element loses its focus.
+Syncfusion&reg; Blazor components provide data binding features with the `@bind-value` Razor directive attribute with a field, property, or Razor expression value. By default, the `bind-value` attribute binds the data value in the `OnChange` event. The `OnChange` event triggers when the element loses its focus.
 
-To perform a two-way binding Syncfusion Blazor components, use the `bind-Value` attribute. In the below example, `SfTextBox` component value to the C# `textValue` property. When an `SfTextBox` component loses focus, its bound field or property is updated.
+To perform a two-way binding Syncfusion&reg; Blazor components, use the `bind-Value` attribute. In the below example, `SfTextBox` component value to the C# `textValue` property. When an `SfTextBox` component loses focus, its bound field or property is updated.
 
 ```cshtml
 
@@ -34,7 +34,7 @@ To perform a two-way binding Syncfusion Blazor components, use the `bind-Value` 
 
 ![Two-Way Binding in Blazor](../images/blazor-two-way-binding.gif)
 
-The following Syncfusion Blazor components support two-way binding:
+The following Syncfusion&reg; Blazor components support two-way binding:
 
 * [AutoComplete](https://blazor.syncfusion.com/documentation/autocomplete/data-binding)
 * [Calendar](https://blazor.syncfusion.com/documentation/calendar/data-binding)

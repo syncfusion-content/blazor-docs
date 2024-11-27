@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Playground
 
-The Blazor playground allows you to develop and test any Blazor component, including both general components and pre-built Syncfusion Blazor components.
+The Blazor playground allows you to develop and test any Blazor component, including both general components and pre-built Syncfusion&reg; Blazor components.
 
 ## Blazor Component
 
@@ -72,9 +72,9 @@ You can create a Blazor component in Blazor playground by following the given st
 
 ![Syncfusion Blazor Playground](images/blazor_component.png)
 
-## Syncfusion Blazor Component
+## Syncfusion&reg; Blazor Component
 
-As Syncfusion Blazor playground comes pre-configured with `Syncfusion.Blazor` package, stylesheet, script, and namespace are included with the application. To render Syncfusion components in Blazor playground, follow the steps given below:
+As Syncfusion&reg; Blazor playground comes pre-configured with `Syncfusion.Blazor` package, stylesheet, script, and namespace are included with the application. To render Syncfusion&reg; components in Blazor playground, follow the steps given below:
 
 * Import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Calendars` namespace on top of the code editor.
 

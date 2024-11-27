@@ -11,13 +11,13 @@ documentation: ug
 
 The Blazor framework provides the support to extend a component or customize it within another component for a strong composite model.
 
-## Extend Syncfusion Blazor component
+## Extend Syncfusion&reg; Blazor component
 
-The Syncfusion Blazor components can extend and customize the logic by creating a new Blazor component.
+The Syncfusion&reg; Blazor components can extend and customize the logic by creating a new Blazor component.
 
 1. Right-click on the `~/Pages` folder in the Visual Studio and select `Add -> Razor Component` to create a new Razor component (SyncButton.razor).
 
-2. Inherit any Syncfusion Blazor component and render your component based on your logic with Syncfusion Blazor API.
+2. Inherit any Syncfusion&reg; Blazor component and render your component based on your logic with Syncfusion&reg; Blazor API.
 
     ```cshtml
     @inherits SfButton;
@@ -84,13 +84,13 @@ The Syncfusion Blazor components can extend and customize the logic by creating 
 
     ![Output of extending Syncfusion component](images/extend-sync-component.png)
 
-## Use Syncfusion Blazor component within another Blazor component
+## Use Syncfusion&reg; Blazor component within another Blazor component
 
-The Syncfusion Blazor component can be implemented within another Blazor component.
+The Syncfusion&reg; Blazor component can be implemented within another Blazor component.
 
 1. Right-click on the `~/Pages` folder in the Visual Studio and select `Add -> Razor Component` to create a new Razor component (TodoList.razor).
 
-2. Add any Syncfusion Blazor component to the newly created Blazor component.
+2. Add any Syncfusion&reg; Blazor component to the newly created Blazor component.
 
     ```cshtml
     <h3>Todo List</h3>
@@ -156,9 +156,9 @@ The Syncfusion Blazor component can be implemented within another Blazor compone
 
     ![Render Syncfusion Blazor components inside another Blazor component](images/todolist.gif)
 
-## Render Syncfusion Blazor component dynamically
+## Render Syncfusion&reg; Blazor component dynamically
 
-The following methods can be used to render the Syncfusion Blazor components dynamically:
+The following methods can be used to render the Syncfusion&reg; Blazor components dynamically:
 
 1. [RenderFragment](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.renderfragment?view=aspnetcore-5.0) with [Razor Template Syntax](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/?view=aspnetcore-5.0#razor-templates)
 2. [RenderFragment](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.renderfragment?view=aspnetcore-5.0) with [RenderTreeBuilder](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.rendering.rendertreebuilder?view=aspnetcore-5.0) methods

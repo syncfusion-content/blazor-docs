@@ -11,7 +11,7 @@ documentation: ug
 
 ## Introduction
 
-This topic gives a clear idea about how to consume data from [SQL Server](https://learn.microsoft.com/en-us/sql/sql-server/?view=sql-server-ver15) using Microsoft SQL Client, bind it to a Syncfusion Component, and perform CRUD operations.
+This topic gives a clear idea about how to consume data from [SQL Server](https://learn.microsoft.com/en-us/sql/sql-server/?view=sql-server-ver15) using Microsoft SQL Client, bind it to a Syncfusion&reg; Component, and perform CRUD operations.
 
 ## Prerequisite software
 
@@ -361,11 +361,11 @@ namespace BlazorWebApp.Controller
 
 Open Visual Studio and follow the steps in the [documentation](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) to create the Blazor Server Application.
 
-## Add Syncfusion Blazor DataGrid package
+## Add Syncfusion&reg; Blazor DataGrid package
 
 To add **Blazor DataGrid** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
-If you utilize `WebAssembly or Auto` render modes in the Blazor Web App need to be install Syncfusion Blazor components NuGet packages within the client project.
+If you utilize `WebAssembly or Auto` render modes in the Blazor Web App need to be install Syncfusion&reg; Blazor components NuGet packages within the client project.
 
 Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -378,7 +378,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+N> Syncfusion&reg; Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
 Open **~/_Imports.razor** file and import the following namespace.
 
@@ -389,9 +389,9 @@ Open **~/_Imports.razor** file and import the following namespace.
 
 {% endhighlight %}
 
-Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your App.
+Now, register the Syncfusion&reg; Blazor Service in the **~/Program.cs** file of your App.
 
-For a Blazor Web App with `WebAssembly` or `Auto (Server and WebAssembly)` interactive render mode, register the Syncfusion Blazor service in both **~/Program.cs** files of your web app.
+For a Blazor Web App with `WebAssembly` or `Auto (Server and WebAssembly)` interactive render mode, register the Syncfusion&reg; Blazor service in both **~/Program.cs** files of your web app.
 
 ```cshtml
 
@@ -403,7 +403,7 @@ builder.Services.AddSyncfusionBlazor();
 
 ```
 
-Themes provide life to components. Syncfusion Blazor has different themes. They are:
+Themes provide life to components. Syncfusion&reg; Blazor has different themes. They are:
 
 * Bootstrap5
 * Material 3
@@ -434,11 +434,11 @@ Also, Include the script reference at the end of the `<body>` of **~/Components/
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </body>
 ```
-## Add Syncfusion Blazor DataGrid component to an application
+## Add Syncfusion&reg; Blazor DataGrid component to an application
 
-In previous steps, you have successfully configured the Syncfusion Blazor package in the application. Now, you can add the grid component to the to the `.razor` page inside the `Pages` folder.
+In previous steps, you have successfully configured the Syncfusion&reg; Blazor package in the application. Now, you can add the grid component to the to the `.razor` page inside the `Pages` folder.
 
-If you have set the interactivity location to `Per page/component` in the web app, ensure that you define a render mode at the top of the Syncfusion Blazor component-included razor page as follows:
+If you have set the interactivity location to `Per page/component` in the web app, ensure that you define a render mode at the top of the Syncfusion&reg; Blazor component-included razor page as follows:
 
 {% tabs %}
 {% highlight razor %}
@@ -641,7 +641,7 @@ While running the application, the grid will be displayed as follows.
 
 ![Binding SQL data to the Blazor DataGrid Component](../images/SQLServerBoundedGrid.png)
 
-## Handling CRUD operations with our Syncfusion Blazor DataGrid component
+## Handling CRUD operations with our Syncfusion&reg; Blazor DataGrid component
 
 Enable editing in the grid component using the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component. Grid provides various modes of editing options such as Inline/Normal, Dialog and Batch editing. Refer the [Grid Editing](https://blazor.syncfusion.com/documentation/datagrid/editing) documentation for reference.
 
@@ -664,7 +664,7 @@ The CRUD operations can be performed and customized on our own by overriding the
 * Update/UpdateAsync
 * BatchUpdate/BatchUpdateAsync
 
-Let’s see how to perform CRUD operation using SQL server data with Syncfusion Blazor DataGrid component
+Let’s see how to perform CRUD operation using SQL server data with Syncfusion&reg; Blazor DataGrid component
 
 ### Insert Operation
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Observable Collection and INotifyPropertyChanged in Blazor
 
-Syncfusion Blazor components supports to automatically update data based on `INotifyCollectionChanged` (`ObservableCollection`) and `INotifyPropertyChanged` interfaces. 
+Syncfusion&reg; Blazor components supports to automatically update data based on `INotifyCollectionChanged` (`ObservableCollection`) and `INotifyPropertyChanged` interfaces. 
 
 ## Observable Collection
 
@@ -73,7 +73,7 @@ In the following code example, DataGrid automatically updates its data when add,
 }
 ```
 
-### List of Syncfusion Components supports ObservableCollection
+### List of Syncfusion&reg; Components supports ObservableCollection
 
 * AutoComplete
 * Breadcrumb

@@ -9,19 +9,19 @@ documentation: ug
 
 # Custom Resource Generator
 
-Syncfusion provides an option to generate a component's interop script and styles using the [Custom Resource Generator](https://blazor.syncfusion.com/crg/) (CRG) web tool for Blazor components from v19.2.0.44. This tool empowers users by generating precise interop scripts and styles specifically for their components. By leveraging the CRG, you can optimize loading times and enhance responsiveness compared to loading overall script and style resources.
+Syncfusion&reg; provides an option to generate a component's interop script and styles using the [Custom Resource Generator](https://blazor.syncfusion.com/crg/) (CRG) web tool for Blazor components from v19.2.0.44. This tool empowers users by generating precise interop scripts and styles specifically for their components. By leveraging the CRG, you can optimize loading times and enhance responsiveness compared to loading overall script and style resources.
 
 ![Custom resource generator preview for Blazor](images/custom-resource-generator-preview.png)
 
 ## Search and select the component list
 
-Search and select the required Syncfusion Blazor UI components from the CRG to generate a specific set of component resources.
+Search and select the required Syncfusion&reg; Blazor UI components from the CRG to generate a specific set of component resources.
 
 Refer to the following steps to search and select the components in CRG:
 
-1. Open [Syncfusion Custom Resource Generator](https://blazor.syncfusion.com/crg/) (CRG) application.
+1. Open [Syncfusion&reg; Custom Resource Generator](https://blazor.syncfusion.com/crg/) (CRG) application.
 2. Type the required component name in the search bar, and then select the checkbox. The dependency of the selected component is resolved in the application itself, so you do not need to choose each dependent component manually.
-![Search and select Syncfusion Blazor UI components](images/search-non-injectable.png)
+![Search and select Syncfusion&reg; Blazor UI components](images/search-non-injectable.png)
 3. Select the required built-in themes from the **Select Themes** option. This provides an option to select more than one theme.
 ![Select the built-in themes in Blazor](images/select-inbuilt-themes.png)
 
@@ -65,7 +65,7 @@ N> When you download the resources of Material and Tailwind themes, either separ
 
 ## Import previously generated settings into CRG
 
-To add more components or upgrade the latest Syncfusion Blazor library resources, it is not necessary to generate from the scratch in the CRG. Just import the old **import.json** file, make the changes, and then download it again from the CRG application.
+To add more components or upgrade the latest Syncfusion&reg; Blazor library resources, it is not necessary to generate from the scratch in the CRG. Just import the old **import.json** file, make the changes, and then download it again from the CRG application.
 
 Refer to the following steps to import previous settings in CRG:
 

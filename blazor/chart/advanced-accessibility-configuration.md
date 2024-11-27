@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility Customization in Blazor Chart Component
 
-The Syncfusion Blazor Chart component is structured to visualize data in a graphical manner. It provides robust customization options for accessibility, allowing you to enhance the user experience for those with disabilities. The main attributes of the Blazor Chart component's accessibility customization are briefly explained in this section.
+The Syncfusion&reg; Blazor Chart component is structured to visualize data in a graphical manner. It provides robust customization options for accessibility, allowing you to enhance the user experience for those with disabilities. The main attributes of the Blazor Chart component's accessibility customization are briefly explained in this section.
 
 The chart component has a number of characteristics that enable accessibility features to be customized, including:
 *  [AccessibilityDescription](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_AccessibilityDescription) - Provides a text description for the chart, improving support for screen readers.

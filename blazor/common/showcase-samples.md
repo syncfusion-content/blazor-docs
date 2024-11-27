@@ -7,9 +7,9 @@ component: Common
 documentation: ug
 ---
 
-# Syncfusion Blazor Components showcase samples
+# Syncfusion&reg; Blazor Components showcase samples
 
-Syncfusion has a collection of sample applications that demonstrate the use of Syncfusion Blazor UI components.
+Syncfusion&reg; has a collection of sample applications that demonstrate the use of Syncfusion&reg; Blazor UI components.
 
 | Sample Application | Description | Platform | GitHub |
 | ------------- | ------------- | ------------- | ------------- |

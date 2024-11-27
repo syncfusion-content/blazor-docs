@@ -54,28 +54,28 @@ documentation: ug
 
 * **The type name 'Shared' does not exist in the type 'SyncfusionBlazor'**
 
-   You may see the below exception while running the Syncfusion blazor
+   You may see the below exception while running the Syncfusion&reg; blazor
    application.
 
     E> The type name 'Shared' does not exist in the type 'SyncfusionBlazor' SyncfusionBlazor `\SyncfusionBlazor\SyncfusionBlazor\obj\Debug\netcoreapp3.1\Razor\Shared\MainLayout.razor.g.cs`
 
    **Cause:**
 
-    This issue occurred, if you are creating the application name as **SyncfusionBlazor**. The name **SyncfusionBlazor** is already registered in the Syncfusion service handling. So your application name and the internally used class name gets conflict.
+    This issue occurred, if you are creating the application name as **SyncfusionBlazor**. The name **SyncfusionBlazor** is already registered in the Syncfusion&reg; service handling. So your application name and the internally used class name gets conflict.
 
    **Solution:**
 
-   Try to use a different application name, when you create the blazor application with Syncfusion Blazor components.
+   Try to use a different application name, when you create the blazor application with Syncfusion&reg; Blazor components.
 
 * **System.IO.FileLoadException: Could not load file or assembly 'System.Text.Json**
 
-    You may get the below exception while running the Syncfusion blazor application.
+    You may get the below exception while running the Syncfusion&reg; blazor application.
 
     E> **System.IO.FileLoadException:** Could not load file or assembly 'System.Text.Json, Version=4.0.1.1, Culture=neutral PublicKeyToken=cc7b13ffcd2ddd51'. The located assembly's manifest definition does not match the assembly reference.
 
     **Cause:**
 
-    You may have .NET Core SDK older than version 3.1.2, but Syncfusion Blazor components need the latest version of .NET Core SDK as stated in the [pre-requisite](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio#prerequisites) documentation.
+    You may have .NET Core SDK older than version 3.1.2, but Syncfusion&reg; Blazor components need the latest version of .NET Core SDK as stated in the [pre-requisite](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio#prerequisites) documentation.
 
     **Solution:**
 
@@ -91,7 +91,7 @@ documentation: ug
 
     **Cause:**
 
-    1. You may used `SfPdfViewer` or `SfDocumentEditor` components along with other Syncfusion Blazor components in your application.
+    1. You may used `SfPdfViewer` or `SfDocumentEditor` components along with other Syncfusion&reg; Blazor components in your application.
     2. You may installed both [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) and [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) in the same application.
 
     **Solution**
@@ -107,11 +107,11 @@ documentation: ug
 
     **Cause:**
 
-    You may use deprecated namespace in the application with Syncfusion Blazor NuGet package version greater than or equal to 18.1.0.36.
+    You may use deprecated namespace in the application with Syncfusion&reg; Blazor NuGet package version greater than or equal to 18.1.0.36.
 
     **Solution**
 
-    The Syncfusion Blazor library has changed its namespace, NuGet package name, component name from v18.1.0.36. Refer this [documentation](./upgrade-syncfusion-components-to-18.1.0.36-version#namespace-changes) to migrate your application with correct namespace. Example: `Syncfusion.EJ2.Blazor` is now modified as `Syncfusion.Blazor`.
+    The Syncfusion&reg; Blazor library has changed its namespace, NuGet package name, component name from v18.1.0.36. Refer this [documentation](./upgrade-syncfusion-components-to-18.1.0.36-version#namespace-changes) to migrate your application with correct namespace. Example: `Syncfusion.EJ2.Blazor` is now modified as `Syncfusion.Blazor`.
 
 * **Found markup element with unexpected name 'Ejs'. If this is intended to be a component, add a @using directive for its namespace**
 
@@ -121,15 +121,15 @@ documentation: ug
 
     **Cause:**
 
-    You may use the deprecated component name in the application with the Syncfusion Blazor NuGet package version greater than or equal to 18.1.0.36.
+    You may use the deprecated component name in the application with the Syncfusion&reg; Blazor NuGet package version greater than or equal to 18.1.0.36.
 
     **Solution**
 
-    The Syncfusion Blazor library has changed its namespace, NuGet package name and component name from v18.1.0.36. Refer this [documentation](./upgrade-syncfusion-components-to-18.1.0.36-version#component-name-changes) to migrate your application with correct component name. Example: `EjsGrid` is now modified as `SfGrid`.
+    The Syncfusion&reg; Blazor library has changed its namespace, NuGet package name and component name from v18.1.0.36. Refer this [documentation](./upgrade-syncfusion-components-to-18.1.0.36-version#component-name-changes) to migrate your application with correct component name. Example: `EjsGrid` is now modified as `SfGrid`.
 
 ## Browser console errors
 
-* **net::ERR_ABORTED 404 Error While Using Syncfusion Blazor Static CSS**
+* **net::ERR_ABORTED 404 Error While Using Syncfusion&reg; Blazor Static CSS**
 
     You may see the below exception in the web browser dev tool console.
 
@@ -137,11 +137,11 @@ documentation: ug
 
     **Cause:**
 
-    If you upgraded Syncfusion Blazor packages from previous versions to 18.4.0.* version or later, this issue occurred.
+    If you upgraded Syncfusion&reg; Blazor packages from previous versions to 18.4.0.* version or later, this issue occurred.
 
     **Solution**
 
-    The Syncfusion Blazor library provides [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) from the 18.4.0.30 version. If you are using `individual NuGet Package` in your application, you have to modify the below static web assets (styles) reference from `Syncfusion.Blazor` to `Syncfusion.Blazor.Themes` in the application to resolve this issue.
+    The Syncfusion&reg; Blazor library provides [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) from the 18.4.0.30 version. If you are using `individual NuGet Package` in your application, you have to modify the below static web assets (styles) reference from `Syncfusion.Blazor` to `Syncfusion.Blazor.Themes` in the application to resolve this issue.
 
     ```html
         <head>
@@ -183,7 +183,7 @@ documentation: ug
 
     We recommend you to clear the browser cache to resolve the above script error in v18.2.0.44 or later.
 
-* **net::ERR_ABORTED 404 Error While Using Syncfusion Blazor Static files in modified base path or hosted as sub path app.**
+* **net::ERR_ABORTED 404 Error While Using Syncfusion&reg; Blazor Static files in modified base path or hosted as sub path app.**
 
    You may face the below exception when deploying the blazor application as Sub application.
 
@@ -212,5 +212,5 @@ documentation: ug
 
 * [How to solve AOT publish failure when using Syncfusion.Blazor](https://www.syncfusion.com/forums/169884/aot-publish-fails-for-syncfusion-blazor-dll)
 
-* [Syncfusion components doesn't render in Blazor WebAssembly application](https://support.syncfusion.com/kb/article/12054/syncfusion-components-doesnt-render-in-blazor-webassembly-application?isInternalRefresh=False#problem)
+* [Syncfusion&reg; components doesn't render in Blazor WebAssembly application](https://support.syncfusion.com/kb/article/12054/syncfusion-components-doesnt-render-in-blazor-webassembly-application?isInternalRefresh=False#problem)
 

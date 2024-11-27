@@ -7,10 +7,10 @@ component: Common
 documentation: ug
 ---
 
-# Bind Data from SQL Server to Syncfusion Blazor Components
+# Bind Data from SQL Server to Syncfusion&reg; Blazor Components
 
 In this section, you can learn how to retrieve data from SQL database using [Entity Framework](https://learn.microsoft.com/en-us/ef/core/) to bind it to the Grid component and perform CRUD operations.
-Entity Framework is an open-source object-relational mapper (O/RM) from Microsoft. Entity Framework works with many databases. But here, we are going to discuss the step-by-step procedure to create an Entity Framework using the [MS SQL Server](https://en.wikipedia.org/wiki/Microsoft_SQL_Server) database and connect it to the Syncfusion component to perform CRUD operations in a Blazor Server Application.
+Entity Framework is an open-source object-relational mapper (O/RM) from Microsoft. Entity Framework works with many databases. But here, we are going to discuss the step-by-step procedure to create an Entity Framework using the [MS SQL Server](https://en.wikipedia.org/wiki/Microsoft_SQL_Server) database and connect it to the Syncfusion&reg; component to perform CRUD operations in a Blazor Server Application.
 
 ## Prerequisite software
 
@@ -457,11 +457,11 @@ builder.Services.AddDbContext<LibraryContext>(option =>
 {% endhighlight %}
 {% endtabs %}
 
-## Add Syncfusion Blazor Grid and Themes NuGet in Blazor App
+## Add Syncfusion&reg; Blazor Grid and Themes NuGet in Blazor App
 
 To add **Blazor DataGrid** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
-If you utilize `WebAssembly or Auto` render modes in the Blazor Web App need to be install Syncfusion Blazor components NuGet packages within the client project.
+If you utilize `WebAssembly or Auto` render modes in the Blazor Web App need to be install Syncfusion&reg; Blazor components NuGet packages within the client project.
 
 Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -474,7 +474,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+N> Syncfusion&reg; Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
 Open **~/_Imports.razor** file and import the following namespace.
 
@@ -485,9 +485,9 @@ Open **~/_Imports.razor** file and import the following namespace.
 
 {% endhighlight %}
 
-Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your App.
+Now, register the Syncfusion&reg; Blazor Service in the **~/Program.cs** file of your App.
 
-For a Blazor Web App with `WebAssembly` or `Auto (Server and WebAssembly)` interactive render mode, register the Syncfusion Blazor service in both **~/Program.cs** files of your web app.
+For a Blazor Web App with `WebAssembly` or `Auto (Server and WebAssembly)` interactive render mode, register the Syncfusion&reg; Blazor service in both **~/Program.cs** files of your web app.
 
 ```cshtml
 
@@ -499,7 +499,7 @@ builder.Services.AddSyncfusionBlazor();
 
 ```
 
-Themes provide life to components. Syncfusion Blazor has different themes. They are:
+Themes provide life to components. Syncfusion&reg; Blazor has different themes. They are:
 
 * Fabric
 * Bootstrap
@@ -529,11 +529,11 @@ Also, Include the script reference at the end of the `<body>` of **~/Components/
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </body>
 ```
-## Add Syncfusion Blazor DataGrid component to an application
+## Add Syncfusion&reg; Blazor DataGrid component to an application
 
-In previous steps, you have successfully configured the Syncfusion Blazor package in the application. Now, you can add the grid component to the `.razor` page inside the `Pages` folder.
+In previous steps, you have successfully configured the Syncfusion&reg; Blazor package in the application. Now, you can add the grid component to the `.razor` page inside the `Pages` folder.
 
-If you have set the interactivity location to `Per page/component` in the web app, ensure that you define a render mode at the top of the Syncfusion Blazor component-included razor page as follows:
+If you have set the interactivity location to `Per page/component` in the web app, ensure that you define a render mode at the top of the Syncfusion&reg; Blazor component-included razor page as follows:
 
 {% tabs %}
 {% highlight razor %}
@@ -662,7 +662,7 @@ Now, the data from the SQL server is loaded into the DataGrid component. Refer t
 
 ![SQL Server Grid in Blazor](../images/grid-component.png)
 
-## Handling CRUD operations with our Syncfusion Blazor DataGrid component
+## Handling CRUD operations with our Syncfusion&reg; Blazor DataGrid component
 
 You can enable editing in the grid component using the **GridEditSettings** component. Grid provides various modes of editing options such as Inline/Normal, Dialog, and Batch editing. Refer to the following documentation for your reference.
 

@@ -23,7 +23,7 @@ Blazor applications can be developed using one of the following IDEs. You can al
 
 One of the the following .NET SDK is required to develop and run the Blazor application.
 
-| .NET SDK | Syncfusion Blazor Components Version |
+| .NET SDK | Syncfusion&reg; Blazor Components Version |
 | ------------- | ------------- |
 | [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) | 27.2.2 and above |
 | [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) | 23.2.4 and above |
