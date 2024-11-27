@@ -13,7 +13,7 @@ The [RowTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.
 
 To enable and configure the `RowTemplate` feature in Syncfusion Blazor DataGrid, follow these steps:
 
-1. **Set up the RowTemplate Property:** Use the `RowTemplate` property to define custom row layouts.
+1. **Set up the RowTemplate:** Use the `RowTemplate` to define custom row layouts.
 
 2. **Define Row Layout using GridTemplates Component:** The `RowTemplate` content must be wrapped within the [GridTemplates](https://blazor.syncfusion.com/documentation/datagrid/templates#gridtemplates-component) component, with each row template containing the same number of **<td>** elements as the columns defined in the DataGrid. This ensures alignment across rows.
 
@@ -33,55 +33,55 @@ The example below shows how to set up a Row Template in Blazor DataGrid to displ
 @using BlazorApp1.Data
 
 <SfGrid @ref="Grid" DataSource="@Employees" AllowSelection="true" Height="315px">
-<GridTemplates>
-<RowTemplate Context="emp">
-@{
-var employee = (emp as EmployeeData);
+    <GridTemplates>
+        <RowTemplate Context="emp">
+            @{
+                var employee = (emp as EmployeeData);
 
-<td class="photo">
-<img src="@($" Scripts/Images/Employees/{employee.EmployeeID}.png")" alt="@employee.EmployeeID" />
-</td>
-<td class="details">
-<table class="CardTable" cellpadding="3" cellspacing="2">
-<colgroup>
-<col width="50%">
-<col width="50%">
-</colgroup>
-<tbody>
-<tr>
-<td class="CardHeader">First Name </td>
-<td>@employee.FirstName </td>
-</tr>
-<tr>
-<td class="CardHeader">Last Name</td>
-<td>@employee.LastName </td>
-</tr>
-<tr>
-<td class="CardHeader">
-Title
-</td>
-<td>
-@employee.Title
-</td>
-</tr>
-<tr>
-<td class="CardHeader">
-Country
-</td>
-<td>
-@employee.Country
-</td>
-</tr>
-</tbody>
-</table>
-</td>
-}
-</RowTemplate>
-</GridTemplates>
-<GridColumns>
-<GridColumn HeaderText="Employee Image" Width="250" TextAlign="TextAlign.Center"> </GridColumn>
-<GridColumn HeaderText="Employee Details" Width="300" TextAlign="TextAlign.Left"></GridColumn>
-</GridColumns>
+                <td class="photo">
+                    <img src="@($" Scripts/Images/Employees/{employee.EmployeeID}.png")" alt="@employee.EmployeeID" />
+                </td>
+                <td class="details">
+                    <table class="CardTable" cellpadding="3" cellspacing="2">
+                        <colgroup>
+                            <col width="50%">
+                            <col width="50%">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <td class="CardHeader">First Name </td>
+                                <td>@employee.FirstName </td>
+                            </tr>
+                            <tr>
+                                <td class="CardHeader">Last Name</td>
+                                <td>@employee.LastName </td>
+                            </tr>
+                            <tr>
+                                <td class="CardHeader">
+                                    Title
+                                </td>
+                                <td>
+                                    @employee.Title
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="CardHeader">
+                                    Country
+                                </td>
+                                <td>
+                                    @employee.Country
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            }
+        </RowTemplate>
+    </GridTemplates>
+    <GridColumns>
+        <GridColumn HeaderText="Employee Image" Width="250" TextAlign="TextAlign.Center"> </GridColumn>
+        <GridColumn HeaderText="Employee Details" Width="300" TextAlign="TextAlign.Left"></GridColumn>
+    </GridColumns>
 </SfGrid>
 
 <style type="text/css" class="cssStyles">
@@ -130,8 +130,8 @@ Country
 </style>
 
 @code {
-private SfGrid<EmployeeData> Grid;
-public List<EmployeeData> Employees { get; set; }
+    private SfGrid<EmployeeData> Grid;
+    public List<EmployeeData> Employees { get; set; }
 
     protected override void OnInitialized()
     {
@@ -215,63 +215,63 @@ Here is an example of how to define a global formatting function for a date colu
 @using BlazorApp1.Data
 
 <SfGrid @ref="Grid" DataSource="@Employees" AllowSelection="true" Height="315px">
-<GridTemplates>
-<RowTemplate Context="emp">
-@{
-var employee = (emp as EmployeeData);
+    <GridTemplates>
+        <RowTemplate Context="emp">
+            @{
+                var employee = (emp as EmployeeData);
 
-<td class="photo">
-<img src="@($" Scripts/Images/Employees/{employee.EmployeeID}.png")" alt="@employee.EmployeeID" />
-</td>
-<td class="details">
-<table class="CardTable" cellpadding="3" cellspacing="2">
-<colgroup>
-<col width="50%">
-<col width="50%">
-</colgroup>
-<tbody>
-<tr>
-<td class="CardHeader">First Name </td>
-<td>@employee.FirstName </td>
-</tr>
-<tr>
-<td class="CardHeader">Last Name</td>
-<td>@employee.LastName </td>
-</tr>
-<tr>
-<td class="CardHeader">
-Title
-</td>
-<td>
-@employee.Title
-</td>
-</tr>
-<tr>
-<td class="CardHeader">
-Hire Date
-</td>
-<td>
-@employee.HireDate.ToString("MM/dd/yyyy")
-</td>
-</tr>
-<tr>
-<td class="CardHeader">
-Country
-</td>
-<td>
-@employee.Country
-</td>
-</tr>
-</tbody>
-</table>
-</td>
-}
-</RowTemplate>
-</GridTemplates>
-<GridColumns>
-<GridColumn HeaderText="Employee Image" Width="250" TextAlign="TextAlign.Center"> </GridColumn>
-<GridColumn HeaderText="Employee Details" Width="300" TextAlign="TextAlign.Left"></GridColumn>
-</GridColumns>
+                <td class="photo">
+                    <img src="@($" Scripts/Images/Employees/{employee.EmployeeID}.png")" alt="@employee.EmployeeID" />
+                </td>
+                <td class="details">
+                    <table class="CardTable" cellpadding="3" cellspacing="2">
+                        <colgroup>
+                            <col width="50%">
+                            <col width="50%">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <td class="CardHeader">First Name </td>
+                                <td>@employee.FirstName </td>
+                            </tr>
+                            <tr>
+                                <td class="CardHeader">Last Name</td>
+                                <td>@employee.LastName </td>
+                            </tr>
+                            <tr>
+                                <td class="CardHeader">
+                                    Title
+                                </td>
+                                <td>
+                                    @employee.Title
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="CardHeader">
+                                    Hire Date
+                                </td>
+                                <td>
+                                    @employee.HireDate.ToString("MM/dd/yyyy")
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="CardHeader">
+                                    Country
+                                </td>
+                                <td>
+                                    @employee.Country
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            }
+        </RowTemplate>
+    </GridTemplates>
+    <GridColumns>
+        <GridColumn HeaderText="Employee Image" Width="250" TextAlign="TextAlign.Center"> </GridColumn>
+        <GridColumn HeaderText="Employee Details" Width="300" TextAlign="TextAlign.Left"></GridColumn>
+    </GridColumns>
 </SfGrid>
 
 <style type="text/css" class="cssStyles">
@@ -320,8 +320,8 @@ Country
 </style>
 
 @code {
-private SfGrid<EmployeeData> Grid;
-public List<EmployeeData> Employees { get; set; }
+    private SfGrid<EmployeeData> Grid;
+    public List<EmployeeData> Employees { get; set; }
 
     protected override void OnInitialized()
     {
@@ -408,54 +408,54 @@ Here is an example that demonstrates rendering Syncfusion controls within a row 
 @using Syncfusion.Blazor.DropDowns
 
 <SfGrid @ref="Grid" DataSource="@Orders">
-<GridTemplates>
-<RowTemplate Context="order">
-@{
-var data = (OrderData)order;
-}
+    <GridTemplates>
+        <RowTemplate Context="order">
+            @{
+                var data = (OrderData)order;
+            }
 
-<td class="rows">
-<SfChip Width="50">
-<ChipItems>
-<ChipItem Text="@data.OrderID.ToString()"></ChipItem>
-</ChipItems>
-</SfChip>
-</td>
-<td class="rows">
-<SfNumericTextBox TValue="int" @bind-Value="data.Quantity" Min="0" Max="10" Width="150"></SfNumericTextBox>
-</td>
-<td class="rows">
-@data.ShipAddress
-</td>
-<td class="rows">
-<SfDatePicker TValue="DateTime" @bind-Value="data.OrderDate" Width="150"></SfDatePicker>
-</td>
-<td class="rows">
-<SfDropDownList TValue="string" TItem="string" DataSource="@DropData" @bind-Value="data.OrderStatus" Placeholder="Select Status" Width="150">
-<DropDownListFieldSettings Value="Text" Text="Text"></DropDownListFieldSettings>
-</SfDropDownList>
-</td>
-</RowTemplate>
-</GridTemplates>
-<GridColumns>
-<GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" Width="120"></GridColumn>
-<GridColumn Field=@nameof(OrderData.Quantity) HeaderText="Quantity" Width="170"></GridColumn>
-<GridColumn Field=@nameof(OrderData.ShipAddress) HeaderText="Ship Address" Width="170"></GridColumn>
-<GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="dd/MM/yyyy hh:mm tt" Width="120" Type="Syncfusion.Blazor.Grids.ColumnType.DateTime"></GridColumn>
-<GridColumn Field=@nameof(OrderData.OrderStatus) HeaderText="Order Status" Width="120"></GridColumn>
-</GridColumns>
+            <td class="rows">
+                <SfChip Width="50">
+                    <ChipItems>
+                        <ChipItem Text="@data.OrderID.ToString()"></ChipItem>
+                    </ChipItems>
+                </SfChip>
+            </td>
+            <td class="rows">
+                <SfNumericTextBox TValue="int" @bind-Value="data.Quantity" Min="0" Max="10" Width="150"></SfNumericTextBox>
+            </td>
+            <td class="rows">
+                @data.ShipAddress
+            </td>
+            <td class="rows">
+                <SfDatePicker TValue="DateTime" @bind-Value="data.OrderDate" Width="150"></SfDatePicker>
+            </td>
+            <td class="rows">
+                <SfDropDownList TValue="string" TItem="string" DataSource="@DropData" @bind-Value="data.OrderStatus" Placeholder="Select Status" Width="150">
+                    <DropDownListFieldSettings Value="Text" Text="Text"></DropDownListFieldSettings>
+                </SfDropDownList>
+            </td>
+        </RowTemplate>
+    </GridTemplates>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Quantity) HeaderText="Quantity" Width="170"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipAddress) HeaderText="Ship Address" Width="170"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="dd/MM/yyyy hh:mm tt" Width="120" Type="Syncfusion.Blazor.Grids.ColumnType.DateTime"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderStatus) HeaderText="Order Status" Width="120"></GridColumn>
+    </GridColumns>
 </SfGrid>
 
 <style>
     .rows {
         padding: 8px;
-    }
+        }
 </style>
 
 @code {
-private SfGrid<OrderData> Grid;
-public List<OrderData> Orders { get; set; }
-public List<string> DropData { get; set; } = new List<string> { "Order Placed", "Processing", "Delivered" };
+    private SfGrid<OrderData> Grid;
+    public List<OrderData> Orders { get; set; }
+    public List<string> DropData { get; set; } = new List<string> { "Order Placed", "Processing", "Delivered" };
 
     protected override void OnInitialized()
     {
