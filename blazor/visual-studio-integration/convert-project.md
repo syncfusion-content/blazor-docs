@@ -21,7 +21,7 @@ N> Before use the Syncfusion Blazor Project Conversion, check whether the Syncfu
 
     **Option 1:**
 
-    Choose **Extensions -> Syncfusion -> Essential Studio for Blazor -> Convert Project...** in the Visual Studio menu.
+    Choose **Extensions -> Syncfusion -> Essential Studio® for Blazor -> Convert Project...** in the Visual Studio menu.
 
     ![ConversionMenu](images/ConversionMenu.png)
 
@@ -49,4 +49,4 @@ N> Before use the Syncfusion Blazor Project Conversion, check whether the Syncfu
 
 6. Selected Blazor application is converted to Syncfusion Blazor application by installed Syncfusion Blazor NuGet packages with selected version, and added selected style in corresponding layout file.
 
-7. If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion license key to your application since Syncfusion introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion license key to your application. Refer to this [blog](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2) post for understanding the licensing changes introduced in Essential Studio.
+7. If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion license key to your application since Syncfusion introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio® release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion license key to your application. Refer to this [blog](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2) post for understanding the licensing changes introduced in Essential Studio®.
