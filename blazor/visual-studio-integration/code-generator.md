@@ -27,7 +27,7 @@ N> Before using the Syncfusion Blazor Code Generator, check whether the Syncfusi
 
     **Option 2:**
 
-    Open the .razor file and place the cursor at the required line then choose **Extension -> Syncfusion -> Essential Studio for Blazor -> Syncfusion Blazor Code Generator…** from the Visual Studio menu.
+    Open the .razor file and place the cursor at the required line then choose **Extension -> Syncfusion -> Essential Studio® for Blazor -> Syncfusion Blazor Code Generator…** from the Visual Studio menu.
 
     ![CodeGeneratorMenu](images/Code-Generator-Menu.PNG)
 
@@ -51,4 +51,4 @@ N> Before using the Syncfusion Blazor Code Generator, check whether the Syncfusi
 
 5. The selected Syncfusion Blazor component code is inserted in selected active razor file and application configured with most recent selected Syncfusion Blazor component NuGet package, styles, namespaces for selected components.
 
-6. If you have installed the trial setup or NuGet packages from nuget.org, you must register the Syncfusion license key to your application as Syncfusion has introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion license key to your application. Refer to this [blog](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2.aspx?_ga=2.11237684.1233358434.1587355730-230058891.1567654773) post to know more about the licensing changes introduced in Essential Studio.
+6. If you have installed the trial setup or NuGet packages from nuget.org, you must register the Syncfusion license key to your application as Syncfusion has introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio® release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion license key to your application. Refer to this [blog](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2.aspx?_ga=2.11237684.1233358434.1587355730-230058891.1567654773) post to know more about the licensing changes introduced in Essential Studio®.

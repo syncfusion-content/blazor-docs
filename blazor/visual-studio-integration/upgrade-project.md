@@ -9,7 +9,7 @@ documentation: ug
 
 # Upgrading Syncfusion Blazor application to latest version
 
-The Syncfusion Blazor migration add-in for Visual Studio allows you to migrate an existing Syncfusion Blazor application from one version of Essential Studio version to another version. This reduces the amount of manual work required when migrating the Syncfusion version.
+The Syncfusion Blazor migration add-in for Visual Studio allows you to migrate an existing Syncfusion Blazor application from one version of Essential Studio® version to another version. This reduces the amount of manual work required when migrating the Syncfusion version.
 
 The steps below will assist you to upgrade the Syncfusion version in the Syncfusion Blazor application via Visual Studio 2022:
 
@@ -21,7 +21,7 @@ N> Before use the Syncfusion Blazor Project Migration, check whether the Syncfus
 
     **Option 1**
 
-    Choose **Extensions -> Syncfusion -> Essential Studio for Blazor -> Migrate Project…** from Visual Studio 2022 menu.
+    Choose **Extensions -> Syncfusion -> Essential Studio® for Blazor -> Migrate Project…** from Visual Studio 2022 menu.
 
     ![MigrationMenu](images/MigrationMenu.PNG)
 
@@ -49,4 +49,4 @@ N> Before use the Syncfusion Blazor Project Migration, check whether the Syncfus
 
 6. The Syncfusion Blazor NuGet packages are updated to the respective selected version in the Syncfusion Blazor application.
 
-7. If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion license key to your application since Syncfusion introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion license key to your application. Refer to this [blog](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2.aspx) post for understanding the licensing changes introduced in Essential Studio.
+7. If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion license key to your application since Syncfusion introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio® release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion license key to your application. Refer to this [blog](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2.aspx) post for understanding the licensing changes introduced in Essential Studio®.

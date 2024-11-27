@@ -11,7 +11,7 @@ documentation: ug
 
 The Syncfusion Blazor code snippet utility for Visual Studio Code includes snippets for inserting a Syncfusion Blazor component with various features into the Blazor Application's Razor code editor.
 
-   N> The Syncfusion Blazor code snippet is available from Essential Studio 2021 Volume 1 (`v19.1.0.54`).
+   N> The Syncfusion Blazor code snippet is available from Essential Studio® 2021 Volume 1 (`v19.1.0.54`).
 
 ## Add a Syncfusion Blazor component
 
@@ -63,4 +63,4 @@ If you select an **Interactive render mode** as `WebAssembly` or `Auto`, you nee
 
     ![Syncfusion Configuration](images/Configuration-Snippet.png)
 
-5. If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion license key to your application since Syncfusion introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion license key to your application. Refer to this [UG](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) topic for understanding the licensing details in Essential Studio for Blazor.
+5. If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion license key to your application since Syncfusion introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio® release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion license key to your application. Refer to this [UG](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) topic for understanding the licensing details in Essential Studio® for Blazor.
