@@ -365,8 +365,8 @@ Here is an example of how to customize the filter operators list in Syncfusion B
     }
 
     List<Syncfusion.Blazor.Grids.IFilterOperator> StringOperator = new List<Syncfusion.Blazor.Grids.IFilterOperator> {
-        new Operators()  { Value= "startsWith", Text= "Starts With" },
-        new Operators() { Value= "endsWith", Text= "Ends With" },
+        new Operators()  { Value= "startswith", Text= "Starts With" },
+        new Operators() { Value= "endswith", Text= "Ends With" },
         new Operators() { Value= "contains", Text= "Contains" },
         new Operators() { Value= "equal", Text= "Equal" },
         new Operators() { Value= "notequal", Text= "Not Equal" }
@@ -374,14 +374,14 @@ Here is an example of how to customize the filter operators list in Syncfusion B
     List<Syncfusion.Blazor.Grids.IFilterOperator> NumberOperator = new List<Syncfusion.Blazor.Grids.IFilterOperator> {
         new Operators()  { Value= "equal", Text= "Equal" },
         new Operators() { Value= "notequal", Text= "Not Equal" },
-        new Operators() { Value= "greaterThan", Text= "Greater Than" },
-        new Operators() { Value= "lessThan", Text= "Less Than" },
+        new Operators() { Value= "greaterthan", Text= "Greater Than" },
+        new Operators() { Value= "lessthan", Text= "Less Than" },
     };
     List<Syncfusion.Blazor.Grids.IFilterOperator> DateOperator = new List<Syncfusion.Blazor.Grids.IFilterOperator> {
          new Operators()  { Value= "equal", Text= "Equal" },
         new Operators() { Value= "notequal", Text= "Not Equal" },
-        new Operators() { Value= "greaterThan", Text= "After" },
-        new Operators() { Value= "lessThan", Text= "Before" },
+        new Operators() { Value= "greaterthan", Text= "After" },
+        new Operators() { Value= "lessthan", Text= "Before" },
     };
     List<Syncfusion.Blazor.Grids.IFilterOperator> BooleanOperator = new List<Syncfusion.Blazor.Grids.IFilterOperator> {
         new Operators()  { Value= "equal", Text= "Equal" },
