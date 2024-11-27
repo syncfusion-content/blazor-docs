@@ -675,7 +675,7 @@ To illustrate how to format a template column value, consider the following exam
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrpsDhLVmdBIgaq?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrpsDhLVmdBIgaq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Custom formatting
 
@@ -729,7 +729,7 @@ In the below example, the numberFormatOptions object is used as the format prope
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLfitrqWuljKUXu?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLfitrqWuljKUXu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Align the text of content
 
