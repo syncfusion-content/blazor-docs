@@ -35,7 +35,7 @@ await container.DocumentEditor.Selection.ImageFormat.ResizeAsync(width + 10, hei
 
 ## Text wrapping style
 
-Text wrapping refers to how images fit with surrounding text in a document. [Refer to this page](../document-editor/text-wrapping-style) for more information about text wrapping styles available in Word documents.
+Text wrapping refers to how images fit with surrounding text in a document. [Refer to this page](./text-wrapping-style) for more information about text wrapping styles available in Word documents.
 
 ## Positioning the image
 
