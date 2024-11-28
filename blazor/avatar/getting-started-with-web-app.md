@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Avatar Component in Blazor Web App
 
-This section briefly explains about how to include [Blazor Avatar](https://blazor.syncfusion.com/documentation/avatar/getting-started) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/).
+This section briefly explains about how to include [Blazor Avatar](https://blazor.syncfusion.com/demos/avatar/defaultfunctionalities?theme=fluent2) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/).
 
 ## Prerequisites
 
