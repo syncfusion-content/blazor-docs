@@ -9,6 +9,14 @@ documentation: ug
 
 # Column Rendering in Blazor DataGrid Component
 
+In Syncfusion Blazor DataGrid, column rendering provides you with the ability to finely control how data is presented. This allows you to manually define columns, automatically generate them, and dynamically customize data presentation. With column rendering, you can ensure that your data is displayed exactly as needed, offering a wide range of possibilities for organizing and showcasing information within the grid.
+
+The column definitions are used as the DataSource schema in the grid. The grid operations such as sorting, filtering and grouping etc. are performed based on column definitions. The [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) property of grid column is necessary to map the datasource values in the grid columns.
+
+> If the column `Field` is not specified in the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource), the column values will be empty.
+> If the `Field` name contains **dot** operator, it is considered as complex binding.
+> It is must to define the `Field` property for a Template column, to perform CRUD or data Operations such as filtering, searching etc.
+
 ## Define columns manually 
 
 To define columns manually in DataGrid, you can use the `GridColumn` component to define the columns and represent each column with its respective properties such as [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field), [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderText), [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type), and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Width) set accordingly. This allows you to customize the column's behavior and appearance based on the requirements.
@@ -693,5 +701,4 @@ Before proceeding this, learn about [DynamicObject Binding](https://blazor.syncf
 > * you can perform the Data operations and CRUD operations for Complex DynamicObject binding fields too.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtBgNdrjLuIpsnpS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 
