@@ -25,4 +25,4 @@ You can modify the default value in `.res` file added to Resource folder. Enter 
 
 ## RTL
 
-Dropdown Tree component has `RTL` support. It helps to render the Dropdown Tree from right-to-left direction. Refer to the [Right-To-Left Support](https://blazor.syncfusion.com/documentation/common/right-to-left) topic to enable the `RTL` in Syncfusion Blazor components
+Dropdown Tree component has `RTL` support. It helps to render the Dropdown Tree from right-to-left direction. Refer to the [Right-To-Left Support](https://blazor.syncfusion.com/documentation/common/right-to-left) topic to enable the `RTL` in Syncfusion&reg; Blazor components

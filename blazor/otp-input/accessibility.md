@@ -57,7 +57,7 @@ The following keyboard shortcuts are supported by the OTP Input component.
 
 ## See also
 
-* [Accessibility in Syncfusion Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Syncfusion&reg; Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
 
 ## HtmlAttributes
 

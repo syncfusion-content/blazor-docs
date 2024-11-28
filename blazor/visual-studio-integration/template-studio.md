@@ -9,17 +9,17 @@ documentation: ug
 
 # Syncfusion Blazor Template Studio
 
-Syncfusion provides the Blazor Template Studio, which allows you to create a Syncfusion Blazor application with Syncfusion components. The Syncfusion Blazor app is created with the required component Syncfusion NuGet references, namespaces, styles, and component render code. The Template Studio provides an easy-to-use project wizard that walks you through the process of creating an application with Syncfusion components.
+Syncfusion&reg; provides the Blazor Template Studio, which allows you to create a Syncfusion&reg; Blazor application with Syncfusion&reg; components. The Syncfusion&reg; Blazor app is created with the required component Syncfusion&reg; NuGet references, namespaces, styles, and component render code. The Template Studio provides an easy-to-use project wizard that walks you through the process of creating an application with Syncfusion&reg; components.
 
-The steps below will assist you to create your **Syncfusion Blazor Application** through **Visual Studio 2022**:
+The steps below will assist you to create your **Syncfusion&reg; Blazor Application** through **Visual Studio 2022**:
 
-> **Note:** The Syncfusion Blazor Extensions for Visual Studio 2019 are available on Essential Studio release "20.3.0.56" and below.
+> **Note:** The Syncfusion&reg; Blazor Extensions for Visual Studio 2019 are available on Essential Studio release "20.3.0.56" and below.
 
-N> Before use the Syncfusion Blazor Project Template, check whether the Syncfusion Blazor Template Studio Extension installed or not in Visual Studio Extension Manager by clicking on the Extensions -> Manage Extensions -> Installed. If this extension not installed, install the extension by follow the steps from the [download and installation](https://blazor.syncfusion.com/documentation/visual-studio-integration/download-and-installation) help topic.
+N> Before use the Syncfusion&reg; Blazor Project Template, check whether the Syncfusion&reg; Blazor Template Studio Extension installed or not in Visual Studio Extension Manager by clicking on the Extensions -> Manage Extensions -> Installed. If this extension not installed, install the extension by follow the steps from the [download and installation](https://blazor.syncfusion.com/documentation/visual-studio-integration/download-and-installation) help topic.
 
 1. Open Visual Studio 2022.
 
-2. To create a Syncfusion Blazor application, use either one of the following options:
+2. To create a Syncfusion&reg; Blazor application, use either one of the following options:
 
      **Option 1**
 
@@ -29,29 +29,29 @@ N> Before use the Syncfusion Blazor Project Template, check whether the Syncfusi
 
      **Option 2**
 
-     Choose **File -> New -> Project** from the menu. This launches a new dialogue for creating a new application. Syncfusion templates for Blazor can be found by filtering the application type for **Syncfusion** or by entering **Syncfusion** as a keyword in the search option.
+     Choose **File -> New -> Project** from the menu. This launches a new dialogue for creating a new application. Syncfusion&reg; templates for Blazor can be found by filtering the application type for **Syncfusion** or by entering **Syncfusion** as a keyword in the search option.
 
      ![CreateNewWindow](images/createnewwindow.png)
 
-3. Select the **Syncfusion Blazor Template Studio** and click **Next**.
+3. Select the **Syncfusion&reg; Blazor Template Studio** and click **Next**.
 
      ![CreateNewWizard](images/createnewwizard.png)
 
-4. The Syncfusion Blazor Template Studio wizard will be launched to configure the Syncfusion Blazor app.
+4. The Syncfusion&reg; Blazor Template Studio wizard will be launched to configure the Syncfusion&reg; Blazor app.
 
-     > **Note:** Refer to the .NET SDK support for Syncfusion Blazor Components [here](https://blazor.syncfusion.com/documentation/system-requirements#net-sdk).
+     > **Note:** Refer to the .NET SDK support for Syncfusion&reg; Blazor Components [here](https://blazor.syncfusion.com/documentation/system-requirements#net-sdk).
 
      **Project type section**
 
-     Choose one of the Syncfusion Blazor application types based on the version of the .NET SDK you are using.
+     Choose one of the Syncfusion&reg; Blazor application types based on the version of the .NET SDK you are using.
 
-    | .NET SDK version | Supported Syncfusion Blazor Application Type |
+    | .NET SDK version | Supported Syncfusion&reg; Blazor Application Type |
     | ---------------- | -------------------------------------------- |
-    | [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0), [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) | Syncfusion Blazor Web App |
-    | [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0), [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0), [.NET 7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0), [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) | Syncfusion Blazor WebAssembly App |
-    | [.NET 7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0), [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) | Syncfusion Blazor Server App |
+    | [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0), [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) | Syncfusion&reg; Blazor Web App |
+    | [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0), [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0), [.NET 7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0), [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) | Syncfusion&reg; Blazor WebAssembly App |
+    | [.NET 7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0), [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) | Syncfusion&reg; Blazor Server App |
 
-    In the **Syncfusion Blazor Web App** application type, you can configure the following options:
+    In the **Syncfusion&reg; Blazor Web App** application type, you can configure the following options:
 
     <table>
     <tbody>
@@ -76,13 +76,13 @@ N> Before use the Syncfusion Blazor Project Template, check whether the Syncfusi
 
     ![WebAppTemplate](images/webapptemplate.png)
 
-     In the **Syncfusion Blazor WebAssembly App** application type, you can choose ASP.NET Core hosted, Progressive Web Application, or both.
+     In the **Syncfusion&reg; Blazor WebAssembly App** application type, you can choose ASP.NET Core hosted, Progressive Web Application, or both.
 
      ![WASMTemplate](images/wasmtemplate.png)
 
      > **Note:** The Progressive Web Application will be enabled if .NET 6.0 version or higher is installed.
 
-5. Click either **Next** or the **Controls** tab. The Syncfusion Blazor components you can add to the application are listed.
+5. Click either **Next** or the **Controls** tab. The Syncfusion&reg; Blazor components you can add to the application are listed.
 
      ![Controls Section](images/controlssection1.png)
 
@@ -100,13 +100,13 @@ N> Before use the Syncfusion Blazor Project Template, check whether the Syncfusi
 
 7. Click **Next** or the **Configuration** tab to load the Configuration section. You can choose the required (.NET 9.0, .NET 8.0, .NET 7.0, and .NET 6.0), themes, https configuration, localization option, authentication type, Blazor Web App, and Blazor Web Assembly application types.
 
-     Depending on your Syncfusion Blazor Application Type, refer to the table below for supported authentication types.
+     Depending on your Syncfusion&reg; Blazor Application Type, refer to the table below for supported authentication types.
 
-     | Syncfusion Blazor Application Type | Supported Authentication Types |
+     | Syncfusion&reg; Blazor Application Type | Supported Authentication Types |
      | ------------- | ------------- |
-     | Syncfusion Blazor Web App | None and Individual Accounts |
-     | Syncfusion Blazor WebAssembly App | None, Individual Accounts and Microsoft Identity Platform |
-     | Syncfusion Blazor Server App | None, Individual Accounts, Microsoft Identity Platform, and Windows |
+     | Syncfusion&reg; Blazor Web App | None and Individual Accounts |
+     | Syncfusion&reg; Blazor WebAssembly App | None, Individual Accounts and Microsoft Identity Platform |
+     | Syncfusion&reg; Blazor Server App | None, Individual Accounts, Microsoft Identity Platform, and Windows |
 
      If you choose the **Blazor Web App** application type, you can customize the Interactivity type and Interactivity location options.
 
@@ -122,13 +122,13 @@ N> Before use the Syncfusion Blazor Project Template, check whether the Syncfusi
 
      ![ProjectDetails](images/rightsideprojectdetails.png)
 
-8. Click **Create** button. The Syncfusion Blazor application has been created. The created Syncfusion Blazor app has the Syncfusion NuGet packages, styles, and the render code for the selected Syncfusion component.
+8. Click **Create** button. The Syncfusion&reg; Blazor application has been created. The created Syncfusion&reg; Blazor app has the Syncfusion&reg; NuGet packages, styles, and the render code for the selected Syncfusion&reg; component.
 
      ![Readme](images/readme.png)
 
-9. The Syncfusion Blazor application configures with most recent Syncfusion Blazor NuGet packages version, selected style, namespaces, selected authentication, and component render code for Syncfusion components.
+9. The Syncfusion&reg; Blazor application configures with most recent Syncfusion&reg; Blazor NuGet packages version, selected style, namespaces, selected authentication, and component render code for Syncfusion&reg; components.
 
-10. If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion license key to your application since Syncfusion introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion license key to your application. Refer to this [blog](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2.aspx) post for understanding the licensing changes introduced in Essential Studio.
+10. If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion&reg; license key to your application since Syncfusion&reg; introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion&reg; license key to your application. Refer to this [blog](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2.aspx) post for understanding the licensing changes introduced in Essential Studio.
 
 ## Authentication Configuration
 
@@ -324,7 +324,7 @@ We need to register the created application in Google Platform API Console for I
 
 ### Run application
 
-You can run the application and see the Syncfusion components you selected. Select a component to see component output.
+You can run the application and see the Syncfusion&reg; components you selected. Select a component to see component output.
 
 ![Blazor Template output page](images/homepage.png)
 
@@ -332,7 +332,7 @@ You can select a culture language in combo box at top right on the output page t
 
 ![Blazor Template output page](images/localization.png)
 
-N> **Note:** Above culture combo box will be enabled in sample output if localization option is selected in configuration window from Syncfusion Blazor Template Studio wizard.
+N> **Note:** Above culture combo box will be enabled in sample output if localization option is selected in configuration window from Syncfusion&reg; Blazor Template Studio wizard.
 
 ## Register and Login Application
 

@@ -64,4 +64,4 @@ The accessibility compliance of the Tooltip component is shown in the following 
 
 ## See also
 
-* [Accessibility in Syncfusion Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Syncfusion&reg; Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)

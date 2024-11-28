@@ -11,7 +11,7 @@ documentation: ug
 
 ## Localization
 
-The [Blazor DropDownList](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) component can be localized. Refer to the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion Blazor components.
+The [Blazor DropDownList](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) component can be localized. Refer to the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion&reg; Blazor components.
 
 ## Globalization
 

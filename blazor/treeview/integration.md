@@ -867,7 +867,7 @@ In this example, TreeView's `NavigateUrl` is mapped to move one page to another 
 
 ## Tooltip in Blazor TreeView Component
 
-Implemented the functionality to display a Syncfusion Tooltip when hovering over nodes in the Blazor TreeView component. This was achieved by utilizing the Tooltip component's [OnRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_OnRender) event and performing a JavaScript interop call to dynamically update the [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_Content) based on the node being hovered over.
+Implemented the functionality to display a Syncfusion&reg; Tooltip when hovering over nodes in the Blazor TreeView component. This was achieved by utilizing the Tooltip component's [OnRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_OnRender) event and performing a JavaScript interop call to dynamically update the [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_Content) based on the node being hovered over.
 
 ```cshtml
 

@@ -17,9 +17,9 @@ This section briefly explains how to include the predefined dialogs in your Blaz
 
 ## Create a new Blazor App in Visual Studio
 
-You can create a **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=windows) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+You can create a **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=windows) or the [Syncfusion&reg; Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-## Install Syncfusion Blazor Popups and Themes NuGet in the App
+## Install Syncfusion&reg; Blazor Popups and Themes NuGet in the App
 
 To add **Blazor predefined dialog** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Popups](https://www.nuget.org/packages/Syncfusion.Blazor.Popups) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -32,9 +32,9 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+N> Syncfusion&reg; Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
-## Register Syncfusion Blazor Service and Sycnfusion Dialog Service
+## Register Syncfusion&reg; Blazor Service and Sycnfusion Dialog Service
 
 Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Popups` namespace.
 
@@ -47,7 +47,7 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor Server App or Blazor WebAssembly App.
+Now, register the Syncfusion&reg; Blazor Service in the **~/Program.cs** file of your Blazor Server App or Blazor WebAssembly App.
 
 {% tabs %}
 {% highlight C# tabtitle="Blazor Server App" hl_lines="1 2 7 8" %}
@@ -122,7 +122,7 @@ Once you added `SfDialogService` and `SfDialogProvider`, you can open predefined
 
 An alert dialog box used to display an errors, warnings, and information alerts that needs user awareness. This can be achieved by using the [DialogService.AlertAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfDialogService.html#Syncfusion_Blazor_Popups_SfDialogService_AlertAsync_System_String_System_String_Syncfusion_Blazor_Popups_DialogOptions_) method. The alert dialog is displayed along with the `OK` button. When user clicks on `OK` button, alert dialog will get closed.
 
-In the code example below, an alert dialog is displayed upon clicking the button using the Syncfusion Blazor [Button](https://blazor.syncfusion.com/documentation/button/getting-started) Component.
+In the code example below, an alert dialog is displayed upon clicking the button using the Syncfusion&reg; Blazor [Button](https://blazor.syncfusion.com/documentation/button/getting-started) Component.
 
 {% tabs %}
 {% highlight razor %}

@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor WebAssembly Diagram in Blazor Diagram Component
 
-This article provides a step-by-step instructions to configure Syncfusion Blazor Diagram in a simple Blazor WebAssembly application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).
+This article provides a step-by-step instructions to configure Syncfusion&reg; Blazor Diagram in a simple Blazor WebAssembly application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).
 
 **Note**: Starting with version 17.4.0.39 (2019 Volume 4), you need to include a valid license key (either paid or trial key) within your applications. Refer to this help topic for more information.
 
@@ -20,7 +20,7 @@ This article provides a step-by-step instructions to configure Syncfusion Blazor
 
 **Note**: .NET Core SDK 3.1.3 requires Visual Studio 2019 16.6 or later.
 
-Syncfusion Blazor components are compatible with .NET Core 5.0 Preview 6 and it requires Visual Studio 16.7 Preview 1 or later.
+Syncfusion&reg; Blazor components are compatible with .NET Core 5.0 Preview 6 and it requires Visual Studio 16.7 Preview 1 or later.
 
 ## Create a Blazor WebAssembly project in Visual Studio 2019
 
@@ -48,7 +48,7 @@ Syncfusion Blazor components are compatible with .NET Core 5.0 Preview 6 and it 
 
 **Note**: ASP.NET Core 3.1 is available in Visual Studio 2019 version.
 
-## Importing Syncfusion Blazor component in the application
+## Importing Syncfusion&reg; Blazor component in the application
 
 1. Now, install **Syncfusion.Blazor** NuGet package to the newly created application by using the `NuGet Package Manager`. Right-click the project and select Manage NuGet Packages.
 
@@ -58,7 +58,7 @@ Syncfusion Blazor components are compatible with .NET Core 5.0 Preview 6 and it 
 
    ![select nuget](../images/DiagramPackages.png)
 
-3. The Syncfusion Blazor package will be installed in the project, once the installation process is completed.
+3. The Syncfusion&reg; Blazor package will be installed in the project, once the installation process is completed.
 
 4. Install **Syncfusion.EJ2.Blazor** NuGet package to the application using the **NuGet Package Manager**. Ensure to check the Include prerelease option for our Beta release.
 
@@ -96,7 +96,7 @@ Open **~/_Imports.razor** file and import the **Syncfusion.Blazor.Diagram** pack
 
 ## Add SyncfusionBlazor service in Startup.cs
 
-Open the **Startup.cs** file and add services required by Syncfusion components using **services.AddSyncfusionBlazor()** method. Add this method in the **ConfigureServices** function as follows.
+Open the **Startup.cs** file and add services required by Syncfusion&reg; components using **services.AddSyncfusionBlazor()** method. Add this method in the **ConfigureServices** function as follows.
 
 ```csharp
  using Syncfusion.Blazor;
@@ -289,6 +289,6 @@ private void CreateNode(string id, double y, FlowShapes shape, string label, boo
 
 ## See Also
 
-* [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
-* [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019 Preview](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
-* [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
+* [Getting Started with Syncfusion&reg; Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
+* [Getting Started with Syncfusion&reg; Blazor for Server-Side in Visual Studio 2019 Preview](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+* [Getting Started with Syncfusion&reg; Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)

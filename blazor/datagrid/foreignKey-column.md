@@ -9,7 +9,7 @@ documentation: ug
 
 # Foreign key column in Blazor DataGrid component
 
-The Foreign key column in the Syncfusion Grid component allows you to display related data from a foreign key data source in a column within the grid. This feature is particularly useful when you have a column in the grid that represents a foreign key relationship with another data source.
+The Foreign key column in the Syncfusion&reg; Grid component allows you to display related data from a foreign key data source in a column within the grid. This feature is particularly useful when you have a column in the grid that represents a foreign key relationship with another data source.
 
 Foreign key column can be enabled by using [ForeignDataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html), [ForeignKeyField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyField) and [ForeignKeyValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyValue) properties of **GridForeignColumn** directive.
 
@@ -21,7 +21,7 @@ Define the foreign key column in the grid using the following properties:
 
 ## Binding local data
 
-The Syncfusion Grid component provides a convenient way to bind local data to a foreign key column. This allows you to display related data from a local data source within the grid. Here’s an example of how to bind local data to a Foreign Key column in Syncfusion Grid:
+The Syncfusion&reg; Grid component provides a convenient way to bind local data to a foreign key column. This allows you to display related data from a local data source within the grid. Here’s an example of how to bind local data to a Foreign Key column in Syncfusion&reg; Grid:
 
 In this example, data is the local data source for the Grid, and **Employee Name** is the local data source for the foreign key column. The ForeignKeyValue property is set to **FirstName** which represents the field name in the  **Employee Name** that you want to display in the foreign key column.
 
@@ -135,7 +135,7 @@ In this example, data is the local data source for the Grid, and **Employee Name
 
 ## Binding remote data
 
-The Foreign key column in Syncfusion Grid allows you to bind remote data for a foreign key column. You can use  ```SfDataManager``` component instead of using ```DataSource```  property. 
+The Foreign key column in Syncfusion&reg; Grid allows you to bind remote data for a foreign key column. You can use  ```SfDataManager``` component instead of using ```DataSource```  property. 
 
 This example demonstrates how to use the foreign key column with remote data binding using the ```ODataV4Adaptor``` in the grid:
 
@@ -225,7 +225,7 @@ This example demonstrates how to use the foreign key column with remote data bin
 
 ## Use edit template in foreign key column
 
-The Syncfusion Grid provides support for using an edit template in a foreign key column. By default, a dropdown component is used for editing foreign key column. Other editable components can be rendered using the EditTemplate feature of Grid. The following example demonstrates the way of using edit template with ComboBox component in the foreign column.
+The Syncfusion&reg; Grid provides support for using an edit template in a foreign key column. By default, a dropdown component is used for editing foreign key column. Other editable components can be rendered using the EditTemplate feature of Grid. The following example demonstrates the way of using edit template with ComboBox component in the foreign column.
 
 In the following code example, the Employee Name is a foreign key column. When editing, the ComboBox component is rendered instead of DropDownList.
 
@@ -345,7 +345,7 @@ In the following code example, the Employee Name is a foreign key column. When e
 
 ## Customize filter UI in foreignkey column
 
-The Syncfusion Grid allows you to customize the filtering user interface (UI) for foreign key columns by using the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate)  property. By default, a dropdown component is used for filtering foreign key columns. However, you can create your own custom filtering UI by [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) property. Here’s an example that demonstrates how to create a custom filtering UI in a foreign key column:
+The Syncfusion&reg; Grid allows you to customize the filtering user interface (UI) for foreign key columns by using the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate)  property. By default, a dropdown component is used for filtering foreign key columns. However, you can create your own custom filtering UI by [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) property. Here’s an example that demonstrates how to create a custom filtering UI in a foreign key column:
 
 > For all filter types other than FilterBar, filtering parameters will be sent in the form of `PredicateModel<T>`. Here, T represents the type of `ForeignKeyValue` property when using the foreignkey column.
 
@@ -687,7 +687,7 @@ In the following code sample, you can prevent default filter query generation us
 
 ## Enable multiple foreign key columns
 
-The Syncfusion Grid component supports the feature of enabling multiple foreign key columns with editing options. This allows users to display columns from foreign data sources in the Grid component.
+The Syncfusion&reg; Grid component supports the feature of enabling multiple foreign key columns with editing options. This allows users to display columns from foreign data sources in the Grid component.
 
 In the following example, Employee Name and Ship City are foreign key columns that display the FirstName and ShipCity columns from foreign data.
 

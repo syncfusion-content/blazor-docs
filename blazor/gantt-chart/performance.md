@@ -31,7 +31,7 @@ For the most comprehensive performance optimization, combining row, column, and 
 
 ## How to improve performance of Gantt chart in Blazor WASM application
 
-This section provides performance guidelines for using the Syncfusion Gantt Chart component efficiently in Blazor WebAssembly (WASM) applications. For general Blazor WebAssembly performance best practices, please refer to the official guidelines [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance?view=aspnetcore-8.0).
+This section provides performance guidelines for using the Syncfusion&reg; Gantt Chart component efficiently in Blazor WebAssembly (WASM) applications. For general Blazor WebAssembly performance best practices, please refer to the official guidelines [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance?view=aspnetcore-8.0).
 
 1.	[Avoid unnecessary component renders](https://blazor.syncfusion.com/documentation/gantt-chart/webassembly-performance#avoid-unnecessary-component-renders)
 2.	[Avoid unnecessary initial auto-scheduling validation](https://blazor.syncfusion.com/documentation/gantt-chart/webassembly-performance#avoid-unnecessary-initial-auto-scheduling-validation)
@@ -64,7 +64,7 @@ By utilizing the Column Template feature, you can efficiently render custom cont
 
 ## How to improve loading performance by referring individual script and CSS
 
-Instead of using the consolidated `Syncfusion.Blazor` package, which includes all Syncfusion Blazor components and can result in a larger package size, you should use the specific NuGet package for the Gantt Chart component, such as `Syncfusion.Blazor.Gantt`. This approach ensures that only the necessary components and dependencies for the Gantt Chart are included, leading to improved performance and reduced load times.
+Instead of using the consolidated `Syncfusion.Blazor` package, which includes all Syncfusion&reg; Blazor components and can result in a larger package size, you should use the specific NuGet package for the Gantt Chart component, such as `Syncfusion.Blazor.Gantt`. This approach ensures that only the necessary components and dependencies for the Gantt Chart are included, leading to improved performance and reduced load times.
 
 When configuring your Blazor `Gantt Chart`, use individual script and CSS files instead of a single large package file. This practice allows for more efficient loading and rendering of the component by reducing the amount of data processed during initialization. By referring to individual scripts and CSS files, you can ensure that only the necessary resources are loaded, which enhances performance and speeds up the initial rendering of the Gantt Chart.
 
@@ -83,7 +83,7 @@ The Blazor Gantt Chart supports various adaptors (OData, ODataV4, WebAPI, URL, e
 
 ## Strategic approaches to addressing latency challenges
 
-Understanding the concerns related to latency in the Syncfusion Blazor Gantt Chart component, several factors contributing to responsiveness issues have been identified. Notably, when using features like filtering, taskbar resizing, and dialog edit in the Gantt Chart, delays may occur due to client-server interactions, if the server is located far from the client.
+Understanding the concerns related to latency in the Syncfusion&reg; Blazor Gantt Chart component, several factors contributing to responsiveness issues have been identified. Notably, when using features like filtering, taskbar resizing, and dialog edit in the Gantt Chart, delays may occur due to client-server interactions, if the server is located far from the client.
 
 ### Potential Solutions to Mitigate Delay
 

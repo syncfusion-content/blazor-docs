@@ -7,13 +7,13 @@ component: Common
 documentation: ug
 ---
 
-# Installing Syncfusion Blazor Linux installer
+# Installing Syncfusion&reg; Blazor Linux installer
 
 ## Step-by-Step Installation
 
 The steps below show how to install Blazor Linux installer.
 
-1. Extract the Syncfusion Blazor Linux installer(.zip) file. The files are extracted in your machine.
+1. Extract the Syncfusion&reg; Blazor Linux installer(.zip) file. The files are extracted in your machine.
 
    ![Welcome wizard](images/Linux_Installer1.png)
    
@@ -36,7 +36,7 @@ After the installation, the license key is required to register the demo source 
 * For server side application register the license key in Configure method of [Startup.cs](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application#blazor-server-app)
 * For client side application register the license key in main method of [Program.cs](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application#blazor-webassembly-app)
 
-You can also find the steps for getting started with Syncfusion Blazor components in Linux,
+You can also find the steps for getting started with Syncfusion&reg; Blazor components in Linux,
 
-* Getting started with Syncfusion Blazor Components in [Blazor Server Side App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-mac/#getting-started-with-syncfusion-blazor-components-in-blazor-server-side-app-using-visual-studio-for-mac) using Visual Studio for Linux.
-* Getting started with Syncfusion Blazor Components in [Web Assembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio-mac/) using Visual Studio for Linux.
+* Getting started with Syncfusion&reg; Blazor Components in [Blazor Server Side App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-mac/#getting-started-with-syncfusion-blazor-components-in-blazor-server-side-app-using-visual-studio-for-mac) using Visual Studio for Linux.
+* Getting started with Syncfusion&reg; Blazor Components in [Web Assembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio-mac/) using Visual Studio for Linux.

@@ -7,9 +7,9 @@ component: Common
 documentation: ug
 ---
 
-# Register Syncfusion License key in Blazor Application
+# Register Syncfusion&reg; License key in Blazor Application
 
-Syncfusion license key should be registered, if your project using Syncfusion Blazor packages reference from [nuget.org](https://www.nuget.org/packages?q=syncfusion) or from trial installer. The generated license key is just a string that needs to be registered before any Syncfusion control is initiated. The following code is used to register the license.
+Syncfusion&reg; license key should be registered, if your project using Syncfusion&reg; Blazor packages reference from [nuget.org](https://www.nuget.org/packages?q=syncfusion) or from trial installer. The generated license key is just a string that needs to be registered before any Syncfusion&reg; control is initiated. The following code is used to register the license.
 
 {% tabs %}
 {% highlight c# %}
@@ -20,13 +20,13 @@ Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY
 {% endtabs %}
 
 N> * Place the license key between double quotes.  Also, ensure that Syncfusion.Licensing.dll is referenced in your project where the license key is being registered.
-* Syncfusion license validation is done offline during application execution and does not require internet access.  Apps registered with a Syncfusion license key can be deployed on any system that does not have an internet connection.
+* Syncfusion&reg; license validation is done offline during application execution and does not require internet access.  Apps registered with a Syncfusion&reg; license key can be deployed on any system that does not have an internet connection.
 
-I> Syncfusion license keys can be validated during the Continuous Integration (CI) processes to ensure proper licensing and prevent licensing errors during deployment. Refer to the [CI License Validation](https://blazor.syncfusion.com/documentation/getting-started/license-key/ci-license-validation) section for detailed instructions on how to implement it.
+I> Syncfusion&reg; license keys can be validated during the Continuous Integration (CI) processes to ensure proper licensing and prevent licensing errors during deployment. Refer to the [CI License Validation](https://blazor.syncfusion.com/documentation/getting-started/license-key/ci-license-validation) section for detailed instructions on how to implement it.
 
 ## Blazor Web App
 
-Open **~/Program.cs** file and register the Syncfusion Blazor license key in the Blazor web app.
+Open **~/Program.cs** file and register the Syncfusion&reg; Blazor license key in the Blazor web app.
 
 {% tabs %}
 
@@ -41,7 +41,7 @@ Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY
 
 ## Blazor Server App
 
-* For .NET 6 and .NET 7 app, open the **~/Program.cs** file and register the Syncfusion license key.
+* For .NET 6 and .NET 7 app, open the **~/Program.cs** file and register the Syncfusion&reg; license key.
 
 {% tabs %}
 
@@ -65,7 +65,7 @@ if (!app.Environment.IsDevelopment())
 
 ## Blazor WebAssembly App
 
-Open **~/Program.cs** file and register the Syncfusion Blazor license key in the client web app.
+Open **~/Program.cs** file and register the Syncfusion&reg; Blazor license key in the client web app.
 
 {% tabs %}
 

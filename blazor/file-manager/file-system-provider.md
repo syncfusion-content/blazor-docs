@@ -11,7 +11,7 @@ documentation: ug
 
 The file system provider allows the File Manager component to manage the files and folders in a physical or cloud-based file system. It provides the methods for performing various file actions like creating a new folder, copying and moving of files or folders, deleting, uploading, and downloading the files or folders in the file system.
 
-The following file providers are added in Syncfusion Blazor File Manager component.
+The following file providers are added in Syncfusion&reg; Blazor File Manager component.
 
 * [ASP.NET Core file system provider](https://blazor.syncfusion.com/documentation/file-manager/ASP-NET-Core-file-system-provider)
 * [ASP.NET Core Azure cloud file system Provider](https://blazor.syncfusion.com/documentation/file-manager/ASP-NET-Core-Azure-cloud-file-system-provider)

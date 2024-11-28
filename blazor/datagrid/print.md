@@ -11,7 +11,7 @@ documentation: ug
 
 # Print in Blazor DataGrid Component
 
-The printing feature in Syncfusion Grid allows you to easily generate and print a representation of the grid’s content for better offline accessibility and documentation. You can enable this feature using either the grid’s Toolbar or the programmatically available [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PrintAsync) method.
+The printing feature in Syncfusion&reg; Grid allows you to easily generate and print a representation of the grid’s content for better offline accessibility and documentation. You can enable this feature using either the grid’s Toolbar or the programmatically available [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PrintAsync) method.
 
 To add the printing option to the grid’s Toolbar, simply include the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property in your grid configuration and add the **Print** as Toolbar item. This will allow you to directly initiate the printing process while click on the Print item from the toolbar
 
@@ -178,7 +178,7 @@ You can print the grid’s content using an external button by utilizing the [Pr
 
 ## Print visible Page
 
-By default, the Syncfusion Blazor Grid prints all the pages of the grid. The [PrintMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) property within the grid grants you control over the printing process. However, if you want to print only the current visible page, you can achieve this by setting the `PrintMode` property to **CurrentPage**.
+By default, the Syncfusion&reg; Blazor Grid prints all the pages of the grid. The [PrintMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) property within the grid grants you control over the printing process. However, if you want to print only the current visible page, you can achieve this by setting the `PrintMode` property to **CurrentPage**.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

@@ -593,7 +593,7 @@ The sample response object should look like this:
 }
 ```
 
-## Handling CRUD operations with our Syncfusion Blazor DataGrid component
+## Handling CRUD operations with our Syncfusion&reg; Blazor DataGrid component
 
 You can enable editing in the grid component using the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component. Grid provides various modes of editing options such as [Inline/Normal](https://blazor.syncfusion.com/documentation/datagrid/in-line-editing), [Dialog](https://blazor.syncfusion.com/documentation/datagrid/dialog-editing), and [Batch](https://blazor.syncfusion.com/documentation/datagrid/batch-editing) editing.
 

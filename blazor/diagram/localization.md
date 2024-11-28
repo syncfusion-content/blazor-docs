@@ -9,4 +9,4 @@ documentation: ug
 
 # Localization in Blazor Diagram Component
 
-[Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion Blazor components.
+[Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion&reg; Blazor components.

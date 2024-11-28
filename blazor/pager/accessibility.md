@@ -70,4 +70,4 @@ The accessibility compliance of the Blazor Pager component is shown in the follo
 
 ## See also
 
-* [Accessibility in Syncfusion Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Syncfusion&reg; Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)

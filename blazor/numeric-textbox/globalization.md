@@ -9,7 +9,7 @@ documentation: ug
 
 # Globalization in Blazor Numeric TextBox Component
 
-[Blazor NumericTextBox](https://www.syncfusion.com/blazor-components/blazor-numeric-textbox) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion Blazor components.
+[Blazor NumericTextBox](https://www.syncfusion.com/blazor-components/blazor-numeric-textbox) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion&reg; Blazor components.
 
 ## Right to Left
 

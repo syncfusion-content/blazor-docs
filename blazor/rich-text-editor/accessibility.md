@@ -173,4 +173,4 @@ N> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/bla
 
 ## See also
 
-* [Accessibility in Syncfusion Blazor components](../common/accessibility)
+* [Accessibility in Syncfusion&reg; Blazor components](../common/accessibility)

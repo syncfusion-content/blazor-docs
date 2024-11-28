@@ -209,7 +209,7 @@ Html elements can be embedded in the diagram through [HTML](https://help.syncfus
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-@* Add a Namespace for a syncfusion control used in Diagrm HTML node *@
+@* Add a Namespace for a Syncfusion&reg; control used in Diagrm HTML node *@
 @using Syncfusion.Blazor.CircularGauge
 
 @* Initialize Diagram with node template *@

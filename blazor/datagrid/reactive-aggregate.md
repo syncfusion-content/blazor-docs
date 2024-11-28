@@ -9,7 +9,7 @@ documentation: ug
 
 # Reactive aggregate in Blazor Grid component
 
-The Syncfusion Blazor Grid component provides support for reactive aggregates, which allow you to update the aggregate values dynamically as the data changes. Reactive aggregates automatically recalculate their values when there are changes in the underlying data, providing real-time updates to the aggregate values in the grid.
+The Syncfusion&reg; Blazor Grid component provides support for reactive aggregates, which allow you to update the aggregate values dynamically as the data changes. Reactive aggregates automatically recalculate their values when there are changes in the underlying data, providing real-time updates to the aggregate values in the grid.
 
 ## Auto update aggregate value in batch editing
 

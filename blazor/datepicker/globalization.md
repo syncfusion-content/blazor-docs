@@ -9,7 +9,7 @@ documentation: ug
 
 # Globalization in Blazor DatePicker Component
 
-[Blazor DatePicker](https://www.syncfusion.com/blazor-components/blazor-datepicker) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion Blazor components.
+[Blazor DatePicker](https://www.syncfusion.com/blazor-components/blazor-datepicker) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion&reg; Blazor components.
 
 ## Right-To-Left
 

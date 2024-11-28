@@ -83,4 +83,4 @@ The accessibility compliance of the Dropdown Tree component is shown in the foll
 
 ## See also
 
-* [Accessibility in Syncfusion Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Syncfusion&reg; Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)

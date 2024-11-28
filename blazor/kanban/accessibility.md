@@ -86,4 +86,4 @@ The accessibility compliance of the Kanban component is shown in the following s
 
 ## See also
 
-* [Accessibility in Syncfusion Blazor components](../common/accessibility)
+* [Accessibility in Syncfusion&reg; Blazor components](../common/accessibility)

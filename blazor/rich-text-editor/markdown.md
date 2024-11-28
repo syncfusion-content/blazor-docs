@@ -54,7 +54,7 @@ The [Blazor Markdown editor](https://www.syncfusion.com/blazor-components/blazor
 | Escape Character | `\(`any syntax`)` | Escape any markdown syntax by prefix `\` to the syntax.<br>Example:<br>`\**`Bold text`**`|
 | HTML Entities | Copyright: &copy; - `&copy;` <br>Trade mark: &trade; - `&trade;`<br>Registered: &reg; - `&reg;`<br>Ampersand: &amp; - `&amp;`<br>Less than: &lt; - `&lt;`<br>Greater than: &gt; - `&gt;` | For HTML entities, add & and ; to the front and back of the respective entities. |
 
-N> The above listed commands alone are supported in Syncfusion markdown editor. For other unsupported commands, you can achieve using the HTML tags in markdown editor. The foot notes, definitions, math, and check list markdown syntax are also not supported.
+N> The above listed commands alone are supported in Syncfusion&reg; markdown editor. For other unsupported commands, you can achieve using the HTML tags in markdown editor. The foot notes, definitions, math, and check list markdown syntax are also not supported.
 
 ## Insert table
 

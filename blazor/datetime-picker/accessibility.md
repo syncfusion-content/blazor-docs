@@ -130,4 +130,4 @@ The accessibility compliance of the DateTimePicker component is shown in the fol
 
 ## See also
 
-* [Accessibility in Syncfusion components](../common/accessibility)
+* [Accessibility in Syncfusion&reg; components](../common/accessibility)

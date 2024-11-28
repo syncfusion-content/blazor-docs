@@ -11,7 +11,7 @@ documentation: ug
 
 ## Localization
 
-[Blazor In-place Editor](https://www.syncfusion.com/blazor-components/blazor-in-place-editor) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion Blazor components.
+[Blazor In-place Editor](https://www.syncfusion.com/blazor-components/blazor-in-place-editor) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion&reg; Blazor components.
 
 ## Right to left
 

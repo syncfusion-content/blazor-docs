@@ -28,7 +28,7 @@ Add the following NuGet packages into the Blazor Maui app.
 * [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer) 
 * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)
 
-## Register Syncfusion Blazor Service
+## Register Syncfusion&reg; Blazor Service
 
 * In the **~/_Imports.razor** file, add the following namespaces:
 
@@ -41,7 +41,7 @@ Add the following NuGet packages into the Blazor Maui app.
 {% endhighlight %}
 {% endtabs %}
 
-* Register the Syncfusion Blazor Service in the **~/MauiProgram.cs** file.
+* Register the Syncfusion&reg; Blazor Service in the **~/MauiProgram.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="~/MauiProgram.cs" hl_lines="3 20 28" %}
@@ -100,7 +100,7 @@ Add the following stylesheet and script to the head section of the **~/wwwroot/i
 
 ## Add PDF Viewer component
 
-Add the Syncfusion PDF Viewer (Next Gen) component in the **~/Pages/Index.razor** file.
+Add the Syncfusion&reg; PDF Viewer (Next Gen) component in the **~/Pages/Index.razor** file.
 
 {% tabs %}
 {% highlight razor %}

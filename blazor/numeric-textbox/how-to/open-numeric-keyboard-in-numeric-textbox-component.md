@@ -15,7 +15,7 @@ When implementing a Numeric TextBox in a web application, it is often desirable 
 
 To configure the Numeric TextBox to use the numeric keyboard, you can set the `type` attribute to `"tel"`. This instructs the browser to display the numeric keyboard on devices where it is available.
 
-Here is an example code snippet using the Syncfusion Blazor Numeric TextBox component:
+Here is an example code snippet using the Syncfusion&reg; Blazor Numeric TextBox component:
 
 ```csharp
 @using Syncfusion.Blazor.Inputs
@@ -37,7 +37,7 @@ It is important to note that not all browsers support the `type="tel"` attribute
 
 To see a live example of the Numeric Textbox configured for the numeric keyboard, visit the following link:
 
-[Syncfusion Blazor Playground - Numeric Textbox](https://blazorplayground.syncfusion.com/embed/rDLpjJrOLrHzOprq?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5)
+[Syncfusion&reg; Blazor Playground - Numeric Textbox](https://blazorplayground.syncfusion.com/embed/rDLpjJrOLrHzOprq?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5)
 
 **Additional References:**
 - [MDN Web Docs: input type="tel"](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/tel)

@@ -196,4 +196,4 @@ N> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-c
 
 ## See also
 
-* [Accessibility in Syncfusion Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Syncfusion&reg; Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)

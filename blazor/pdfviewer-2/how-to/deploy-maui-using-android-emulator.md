@@ -15,7 +15,7 @@ Refer [here](https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-sta
 
 ## Add PDF Viewer component
 
-Add the Syncfusion PDF Viewer (Next Gen) component in the **~/Pages/Index.razor** file.
+Add the Syncfusion&reg; PDF Viewer (Next Gen) component in the **~/Pages/Index.razor** file.
 
 {% tabs %}
 {% highlight razor %}

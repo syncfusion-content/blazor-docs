@@ -99,7 +99,7 @@ For instance , the data source item consists of `FirstName` as `Nancy` and `Last
 
 ## Multi column filtering 
 
-In the built-in Syncfusion Blazor theme files, support for multi column can be enabled by adding `e-multi-column` class in the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html#Syncfusion_Blazor_DropDowns_DropDownListModel_2_CssClass) property.
+In the built-in Syncfusion&reg; Blazor theme files, support for multi column can be enabled by adding `e-multi-column` class in the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html#Syncfusion_Blazor_DropDowns_DropDownListModel_2_CssClass) property.
 
 {% highlight cshtml %}
 
