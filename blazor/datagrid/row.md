@@ -867,9 +867,7 @@ By applying this CSS class, you can set the background color of frozen rows to t
 
 ### Limitations
 
-Frozen row is not compatible with the following features:
-
-1. Autofill
+Frozen row is not compatible with the Autofill feature.
 
 ## Adding a new row programmatically
 
