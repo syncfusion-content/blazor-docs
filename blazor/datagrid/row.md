@@ -19,7 +19,7 @@ Customizing the styles of rows in a Syncfusion Grid allows you to modify the app
 
 You can customize the appearance of the rows by using the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDataBound) event. This event triggers for every row when it is bound to the data source. In the event handler, you can get the [RowDataBoundEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.RowDataBoundEventArgs-1.html) object, which contains details of the row. You can use this object to modify the row’s appearance, add custom elements, or perform any other customization.
 
-Here’s an example of how you can use the `RowDataBound` event to customize the styles of rows based on the value of the Freight column. This example involves checking the value of the Freight column for each row and adding a CSS class to the row based on the value. The CSS classes below-30, below-80, and above-80 can then be defined in your stylesheet to apply the desired styles to the rows.
+Here’s an example of how you can use the `RowDataBound` event to customize the styles of rows based on the value of the **Freight** column. This example involves checking the value of the Freight column for each row and adding a CSS class to the row based on the value. The CSS classes **below-30**, **below-80**, and **above-80** can then be defined in your stylesheet to apply the desired styles to the rows.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -134,7 +134,7 @@ You can apply styles to the rows using CSS selectors. The Grid provides a class 
 
 **Customize alternate rows**
 
-You can customize the appearance of the alternate rows using CSS. This can be useful for improving the readability of the data and making it easier to distinguish between rows. By default, Syncfusion Grid provides the CSS class .e-altrow to style the alternate rows. You can customize this default style by overriding the .e-altrow class with your custom CSS styles.
+You can customize the appearance of the alternate rows using CSS. This can be useful for improving the readability of the data and making it easier to distinguish between rows. By default, Syncfusion Grid provides the CSS class **.e-altrow** to style the alternate rows. You can customize this default style by overriding the **.e-altrow** class with your custom CSS styles.
 
 To change the background color of the alternate rows, you can add the following CSS code to your application’s stylesheet:
 
@@ -223,7 +223,7 @@ To change the background color of the alternate rows, you can add the following 
 
 **Customize selected row**
 
-You can customize the appearance of the selected row using CSS. This is useful when you want to highlight the currently selected row for improve the visual appeal of the Grid. By default, the Grid provides the CSS class .e-selectionbackground to style the selected row. You can customize this default style by overriding the .e-selectionbackground class with your own custom CSS styles.
+You can customize the appearance of the selected row using CSS. This is useful when you want to highlight the currently selected row for improve the visual appeal of the Grid. By default, the Grid provides the CSS class **.e-selectionbackground** to style the selected row. You can customize this default style by overriding the **.e-selectionbackground** class with your own custom CSS styles.
 
 To change the background color of the selected row, you can add the following CSS code to your application:
 
@@ -233,7 +233,7 @@ To change the background color of the selected row, you can add the following CS
 }
 ```
 
-Here’s an example of how to use the .e-selectionbackground class to style the selected row:
+Here’s an example of how to use the **.e-selectionbackground** class to style the selected row:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -439,7 +439,7 @@ Customizing the row height for a particular row can be useful when you want to d
 
 The `RowHeight` property of the Grid component allows you to set the height of all rows in the grid to a specific value. However, if you want to customize the row height for a specific row based on the row data, you can use the `RowDataBound` event. This event is triggered every time a request is made to access row information, element, or data, and before the row element is appended to the Grid element.
 
-In the below example, the row height for the row with OrderID as ‘10249’ is set as ‘90px’ using the `RowDataBound` event.
+In the below example, the row height for the row with **OrderID** as ‘10249’ is set as ‘90px’ using the `RowDataBound` event.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -541,7 +541,7 @@ In the below example, the row height for the row with OrderID as ‘10249’ is 
 
 The Row Hover feature in Grid provides a visual effect when the mouse pointer hovers over the rows, making it easy to highlight and identify the selected row. This feature can also improve the readability of data in the grid. The row hover effect can be enabled or disabled using the [EnableHover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableHover) property of the Grid component.
 
-By default, the `EnableHover` property is set to true, which means that the row hovering effect is enabled. To disable the row hover effect, set the `EnableHover` property to false.
+By default, the `EnableHover` property is set to **true**, which means that the row hovering effect is enabled. To disable the row hover effect, set the `EnableHover` property to **false**.
 
 Here is an example that demonstrates how to enable/disable row hover based on the Switch Component:
 
@@ -641,7 +641,7 @@ Here is an example that demonstrates how to enable/disable row hover based on th
 
 The Syncfusion Blazor DataGrid allows you to freeze rows to keep them visible while scrolling vertically through large datasets. This feature enhances the experience by maintaining important information within view at all times.
 
-In the following example, the [FrozenRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenRows) property is set to 2. This configuration freezes the top two rows of the grid, and they will remain fixed in their positions while the rest of the grid can be scrolled vertically.
+In the following example, the [FrozenRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenRows) property is set to **2**. This configuration freezes the top two rows of the grid, and they will remain fixed in their positions while the rest of the grid can be scrolled vertically.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -911,7 +911,7 @@ Here’s an example of how to add a new row using the `AddRecordAsync` method:
 
     protected override void OnInitialized()
     {
-        Orders = OrderData.GetAllRecords(); // Assuming this method fetches your initial data
+        Orders = OrderData.GetAllRecords();
     }
 
     public async Task AddRow()
@@ -1035,7 +1035,6 @@ Grid provides several methods to retrieve row data and elements. This feature is
     private async Task GetDataHandler()
     {
         var rowIndex = await Grid.GetRowIndexByPrimaryKeyAsync(10250);  // pass primary key value here.
-        Console.WriteLine(rowIndex);
     }
 }
 ```
