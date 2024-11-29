@@ -37,7 +37,7 @@ Our 30-day trial can be downloaded in two ways.
 
    ![Start Trial download](images/start-trial-download-installer.png)
 
-6. Click the More Download Options (element 2 in the above screenshot) button to get the Essential Studio Blazor Offline trial installer which is available in EXE and ZIP format.
+6. Click the More Download Options (element 2 in the above screenshot) button to get the Essential Studio&reg; Blazor Offline trial installer which is available in EXE and ZIP format.
 
    ![Trial Downlaod Offline Installer](images/start-trial-download-offline-installer.PNG)
 

@@ -30,7 +30,7 @@ Syncfusion&reg; provides Blazor Mac installer for both evaluation and paid custo
 
    ![Start Trial download](images/start-trial-download-installer.png)
 
-6. Click the More Download Options (element 2 in the above screenshot) button to get the Essential Studio Blazor Offline trial installer which is available in DMG format.
+6. Click the More Download Options (element 2 in the above screenshot) button to get the Essential Studio&reg; Blazor Offline trial installer which is available in DMG format.
 
    ![Trial Downlaod Offline Installer](images/blazor_mac.png)
 

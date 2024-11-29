@@ -9,9 +9,9 @@ documentation: ug
 
 # Syncfusion&reg; Notifications
 
-Syncfusion&reg; enhances the user experience in Blazor applications through notification messages. These notifications cover various aspects, including alerts for trial applications when utilizing Syncfusion&reg; trial assemblies, updates regarding the availability of the latest Syncfusion&reg; NuGet package, and notifications regarding newer releases of Essential Studio. By keeping users informed, Syncfusion&reg; ensures that developers stay updated with Syncfusion&reg; latest features and enhancements.
+Syncfusion&reg; enhances the user experience in Blazor applications through notification messages. These notifications cover various aspects, including alerts for trial applications when utilizing Syncfusion&reg; trial assemblies, updates regarding the availability of the latest Syncfusion&reg; NuGet package, and notifications regarding newer releases of Essential Studio&reg;. By keeping users informed, Syncfusion&reg; ensures that developers stay updated with Syncfusion&reg; latest features and enhancements.
 
-N> The Syncfusion&reg; Notification feature is available from Essential Studio v22.1.34.
+N> The Syncfusion&reg; Notification feature is available from Essential Studio&reg; v22.1.34.
 
 ## Notification Configuration
 
@@ -35,9 +35,9 @@ If you have installed lower versions of Syncfusion&reg; NuGet packages in your a
 
    ![NuGet Notification](images/blazor_nuget.png)
 
-**3. Newer Essential Studio Build Notification**
+**3. Newer Essential Studio&reg; Build Notification**
 
-If you use older versions of Syncfusion&reg; assemblies or NuGet packages from **Essential Studio Blazor,** Syncfusion&reg; will notify you about new releases for the latest Essential Studio build. Updating to the newest version ensures access to recent features, enhancements, and important updates, maximizing the capabilities of Syncfusion&reg; in your Blazor development projects.
+If you use older versions of Syncfusion&reg; assemblies or NuGet packages from **Essential Studio Blazor,** Syncfusion&reg; will notify you about new releases for the latest Essential Studio&reg; build. Updating to the newest version ensures access to recent features, enhancements, and important updates, maximizing the capabilities of Syncfusion&reg; in your Blazor development projects.
 
    ![Build Notification](images/blazor_build.png)
 

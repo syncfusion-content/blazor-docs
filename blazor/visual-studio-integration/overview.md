@@ -23,4 +23,4 @@ The Syncfusion&reg; Blazor extensions provides the following add-ins in Visual S
 
 [Convert project](convert-project):  Converts an existing Blazor Web Application to a Syncfusion&reg; Blazor Web Application by importing the necessary Syncfusion&reg; NuGet packages.
 
-[Upgrade project](upgrade-project):  Upgrades the existing Syncfusion&reg; Blazor Web Application from one Essential Studio version to another version.
+[Upgrade project](upgrade-project):  Upgrades the existing Syncfusion&reg; Blazor Web Application from one Essential Studio&reg; version to another version.

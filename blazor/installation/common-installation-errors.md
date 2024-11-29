@@ -19,7 +19,7 @@ This article describes the most common installation errors, as well as the cause
 
 ## Unlocking the license installer using the trial key
 
-**Error Message:** Sorry, the provided unlock key is a trial unlock key and cannot be used to unlock the licensed version of our Essential Studio for Blazor installer.
+**Error Message:** Sorry, the provided unlock key is a trial unlock key and cannot be used to unlock the licensed version of our Essential Studio&reg; for Blazor installer.
 
 ![Installation Unlock Error](images/installation-error-1.png)
 
@@ -29,7 +29,7 @@ This article describes the most common installation errors, as well as the cause
 
 ## License has expired
 
-**Error Message:** Your license for Syncfusion&reg; Essential Studio for Blazor has been expired since {date}. Renew your subscription and try again.
+**Error Message:** Your license for Syncfusion&reg; Essential Studio&reg; for Blazor has been expired since {date}. Renew your subscription and try again.
 
 ***Online Installer***
 
@@ -46,7 +46,7 @@ This article describes the most common installation errors, as well as the cause
 
 ## Unable to find a valid license or trial
 
-**Error Message:** Sorry, we are unable to find a valid license or trial for Essential Studio for Blazor under your account.
+**Error Message:** Sorry, we are unable to find a valid license or trial for Essential Studio&reg; for Blazor under your account.
 
 ***Offline installer***
 

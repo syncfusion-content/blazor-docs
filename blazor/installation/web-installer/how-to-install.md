@@ -11,9 +11,9 @@ documentation: ug
 
 ## Installation
 
-The steps below show how to install Essential Studio Blazor Web Installer.
+The steps below show how to install Essential Studio&reg; Blazor Web Installer.
 
-1. Open the Syncfusion&reg; Essential Studio Blazor Web Installer file from downloaded location by double-clicking it. The Installer Wizard automatically opens and extracts the package.
+1. Open the Syncfusion&reg; Essential Studio&reg; Blazor Web Installer file from downloaded location by double-clicking it. The Installer Wizard automatically opens and extracts the package.
 
    ![Web Installer Setup](images/webinstaller-1.png)
 
@@ -87,7 +87,7 @@ The steps below show how to install Essential Studio Blazor Web Installer.
 
    ![Web Installer Installation Summary](images/webinstaller-12.png)
 
-12. After installation, there will be two Syncfusion&reg; control panel entries, as shown below. The Essential Studio entry will manage all Syncfusion&reg; products installed in the same version, while the Product entry will only uninstall the specific product setup.
+12. After installation, there will be two Syncfusion&reg; control panel entries, as shown below. The Essential Studio&reg; entry will manage all Syncfusion&reg; products installed in the same version, while the Product entry will only uninstall the specific product setup.
 
    ![Control Panel Installation entries](images/webinstaller-13.png)
 
@@ -99,21 +99,21 @@ Syncfusion&reg; Blazor installer can be uninstalled in two ways.
 
 * Uninstall the Blazor from Windows Control Panel
 
-Follow either one of the option below to uninstall Syncfusion&reg; Essential Studio Blazor installer,
+Follow either one of the option below to uninstall Syncfusion&reg; Essential Studio&reg; Blazor installer,
 
 **Option 1:** ***Uninstall the Blazor using the Syncfusion&reg; Blazor web installer***
 
-Syncfusion&reg; provides the option to uninstall products of the same version directly from the Web Installer application. Open the Syncfusion&reg; Essential Studio Blazor Online Installer file from downloaded location by double-clicking it. Select the products to be uninstalled from the list, and Web Installer will uninstall them one by one.
+Syncfusion&reg; provides the option to uninstall products of the same version directly from the Web Installer application. Open the Syncfusion&reg; Essential Studio&reg; Blazor Online Installer file from downloaded location by double-clicking it. Select the products to be uninstalled from the list, and Web Installer will uninstall them one by one.
 
 ![Web Installer Installed Products Uninstall](images/webinstaller-uninstall-2.png)
 
 **Option 2:** ***Uninstall the Blazor from Windows Control Panel***
 
-You can uninstall all the installed products by selecting the **Syncfusion&reg; Essential Studio {version}** entry (element 1 in the below screenshot) from the Windows control panel, or you can uninstall Blazor alone by selecting the **Syncfusion&reg; Essential Studio for Blazor {version}** entry (element 2 in the below screenshot) from the Windows control panel.
+You can uninstall all the installed products by selecting the **Syncfusion&reg; Essential Studio&reg; {version}** entry (element 1 in the below screenshot) from the Windows control panel, or you can uninstall Blazor alone by selecting the **Syncfusion&reg; Essential Studio&reg; for Blazor {version}** entry (element 2 in the below screenshot) from the Windows control panel.
 
 ![Control Panel Uninstallation entries](images/webinstaller-uninstall-1.png)
 
-N> If the **Syncfusion&reg; Essential Studio for Blazor {version}** entry is selected from the Windows control panel, the Syncfusion&reg; Essential Studio Blazor alone will be removed and the below default MSI uninstallation window will be displayed.
+N> If the **Syncfusion&reg; Essential Studio&reg; for Blazor {version}** entry is selected from the Windows control panel, the Syncfusion&reg; Essential Studio&reg; Blazor alone will be removed and the below default MSI uninstallation window will be displayed.
 
 1. The Syncfusion&reg; Blazor Web Installer’s ***welcome wizard*** will be displayed. Click the Next button
 

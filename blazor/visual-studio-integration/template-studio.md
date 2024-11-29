@@ -13,7 +13,7 @@ Syncfusion&reg; provides the Blazor Template Studio, which allows you to create 
 
 The steps below will assist you to create your **Syncfusion&reg; Blazor Application** through **Visual Studio 2022**:
 
-> **Note:** The Syncfusion&reg; Blazor Extensions for Visual Studio 2019 are available on Essential Studio release "20.3.0.56" and below.
+> **Note:** The Syncfusion&reg; Blazor Extensions for Visual Studio 2019 are available on Essential Studio&reg; release "20.3.0.56" and below.
 
 N> Before use the Syncfusion&reg; Blazor Project Template, check whether the Syncfusion&reg; Blazor Template Studio Extension installed or not in Visual Studio Extension Manager by clicking on the Extensions -> Manage Extensions -> Installed. If this extension not installed, install the extension by follow the steps from the [download and installation](https://blazor.syncfusion.com/documentation/visual-studio-integration/download-and-installation) help topic.
 
@@ -128,7 +128,7 @@ N> Before use the Syncfusion&reg; Blazor Project Template, check whether the Syn
 
 9. The Syncfusion&reg; Blazor application configures with most recent Syncfusion&reg; Blazor NuGet packages version, selected style, namespaces, selected authentication, and component render code for Syncfusion&reg; components.
 
-10. If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion&reg; license key to your application since Syncfusion&reg; introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion&reg; license key to your application. Refer to this [blog](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2.aspx) post for understanding the licensing changes introduced in Essential Studio.
+10. If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion&reg; license key to your application since Syncfusion&reg; introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio&reg; release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion&reg; license key to your application. Refer to this [blog](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2.aspx) post for understanding the licensing changes introduced in Essential Studio&reg;.
 
 ## Authentication Configuration
 

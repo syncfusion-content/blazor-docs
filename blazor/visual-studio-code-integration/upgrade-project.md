@@ -9,7 +9,7 @@ documentation: ug
 
 # Upgrading Syncfusion&reg; Blazor application to latest version
 
-The Syncfusion&reg; Blazor Migration is an add-in for Visual Studio Code allows you to migrate an existing Syncfusion&reg; Blazor Web Application from one Essential Studio version to another.
+The Syncfusion&reg; Blazor Migration is an add-in for Visual Studio Code allows you to migrate an existing Syncfusion&reg; Blazor Web Application from one Essential Studio&reg; version to another.
 
    N> The Syncfusion&reg; Blazor Web Application Project Migration utility is available from `v17.4.0.39`.
 
@@ -33,4 +33,4 @@ The steps below assist you to migrating existing Syncfusion&reg; Blazor Web Appl
 
     ![CDNLink](images/CDNLink.png)
 
-5. If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion&reg; license key to your application since Syncfusion&reg; introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion&reg; license key to your application. Refer to this [UG](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) topic for understanding the licensing details in Essential Studio for Blazor.
+5. If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion&reg; license key to your application since Syncfusion&reg; introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio&reg; release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion&reg; license key to your application. Refer to this [UG](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) topic for understanding the licensing details in Essential Studio&reg; for Blazor.
