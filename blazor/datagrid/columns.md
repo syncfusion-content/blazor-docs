@@ -802,7 +802,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjBTsirliPKINLsC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5 " %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjBTsirliPKINLsC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Align the text of content
 
