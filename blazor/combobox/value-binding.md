@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Data Binding in Blazor ComboBox Component | Syncfusion
-description: Checkout and learn here all about value binding in Syncfusion Blazor ComboBox component and more.
+description: Learn here all about value binding in Syncfusion Blazor Combobox component of Syncfusion Essential JS 2 and more.
 platform: Blazor
 control: ComboBox
 documentation: ug
