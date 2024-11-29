@@ -49,4 +49,4 @@ TextBox supports to set the attributes directly also.
 
 ## See also
 
-* [Create Edit Forms with FluentValidation and Syncfusion&reg; Blazor Components](https://www.syncfusion.com/blogs/post/create-edit-forms-with-fluentvalidation-and-syncfusion-blazor-components.aspx)
+* [Create Edit Forms with FluentValidation and Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components](https://www.syncfusion.com/blogs/post/create-edit-forms-with-fluentvalidation-and-syncfusion-blazor-components.aspx)

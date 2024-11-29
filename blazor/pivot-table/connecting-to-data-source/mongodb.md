@@ -8,7 +8,7 @@ description: "Learn how to bind data from a MongoDB in the Syncfusion Blazor Piv
 
 This section describes how to use [MongoDB driver](https://www.nuget.org/packages/MongoDB.Driver) to retrieve data from a MongoDB and bind it to the Blazor Pivot Table.
 
-## Connecting a MongoDB to a Syncfusion&reg; Blazor Pivot Table
+## Connecting a MongoDB to a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table
 
 **1.** Create a simple Blazor Pivot Table by following the **"Getting Started"** documentation [link](../getting-started).
 
@@ -77,7 +77,7 @@ When you run the application, the resultant pivot table will look like this.
 
 ![Blazor Pivot Table bound with MongoDB data](../images/blazor-pivottable-mongodb-databinding.png)
 
-## Connecting a MongoDB to a Syncfusion&reg; Blazor Pivot Table via Web API service
+## Connecting a MongoDB to a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table via Web API service
 
 ### Create a Web API service to fetch MongoDB data
 

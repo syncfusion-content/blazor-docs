@@ -8,9 +8,9 @@ documentation: ug
 ---
 
 # Predefined Code Snippets for Blazor Playground
-Blazor Playground provides pre-defined code snippets for all Syncfusion&reg; Blazor components that helps to ease access the component's code snippets.  
+Blazor Playground provides pre-defined code snippets for all Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components that helps to ease access the component's code snippets.  
 
-* Click the `Snippet` button to open a popup containing a list of predefined code snippets for Syncfusion&reg; Blazor UI components.
+* Click the `Snippet` button to open a popup containing a list of predefined code snippets for Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI components.
 ![Blazor Playground with pre-configured code snippet](./images/Click_Snippet.png)
 
 * Choose the specific components you want to render (up to 10 at a time). This can be done by simply clicking on the desired snippet. Blazor Playground allows you to select multiple components simultaneously.

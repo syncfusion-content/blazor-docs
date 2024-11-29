@@ -12,7 +12,7 @@ documentation: ug
 
 # Switching to older themes style in Blazor Pivot Table Component
 
-From Volume 1, 2020 onwards Syncfusion&reg; has revised the theming and layout of the Pivot Table. So, to inherit the older theme style and layout, do the necessary changes in CSS and pivot table height.
+From Volume 1, 2020 onwards Syncfusion<sup style="font-size:70%">&reg;</sup> has revised the theming and layout of the Pivot Table. So, to inherit the older theme style and layout, do the necessary changes in CSS and pivot table height.
 
 ## CSS Selectors
 

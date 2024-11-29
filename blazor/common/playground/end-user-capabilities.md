@@ -11,7 +11,7 @@ documentation: ug
 
 ## Switching the Themes
 
-Blazor Playground lets you customize the appearance of Syncfusion&reg; Blazor components by choosing from various themes using the dropdown accessible through the **Output Theme** button.
+Blazor Playground lets you customize the appearance of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components by choosing from various themes using the dropdown accessible through the **Output Theme** button.
 
 ![Syncfusion Blazor Playground with theme](images/Output_Theme.gif)
 

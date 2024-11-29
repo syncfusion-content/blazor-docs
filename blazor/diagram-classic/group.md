@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Group in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about Group in Syncfusion&reg; Blazor Diagram component and much more details.
+description: Checkout and learn here all about Group in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram
 documentation: ug
 ---
 
-N> Syncfusion&reg; recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
 
 # Group in Blazor Diagram Component
 

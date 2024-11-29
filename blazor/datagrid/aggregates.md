@@ -9,7 +9,7 @@ documentation: ug
 
 # Aggregates in Blazor DataGrid Component
 
-The Aggregates feature in the Syncfusion&reg; Blazor Grid component allows you to display aggregate values in the footer, group footer, and group caption of the grid. With this feature, you can easily perform calculations on specific columns and show summary information.This feature can be configured using the **GridAggregates** component.To represent an aggregate column, you need to specify the minimum required properties, such as [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Field)  and  [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type).
+The Aggregates feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid component allows you to display aggregate values in the footer, group footer, and group caption of the grid. With this feature, you can easily perform calculations on specific columns and show summary information.This feature can be configured using the **GridAggregates** component.To represent an aggregate column, you need to specify the minimum required properties, such as [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Field)  and  [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type).
 
 **Displaying aggregate values**
 
@@ -133,7 +133,7 @@ By default, the aggregate values are displayed in the footer, group, and caption
 
 ## Built-in aggregate types
 
-The Syncfusion&reg; Blazor Grid component provides several built-in aggregate types that can be specified in the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) property to configure an aggregate column.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid component provides several built-in aggregate types that can be specified in the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) property to configure an aggregate column.
 
 The available built-in aggregate types are :
 
@@ -146,7 +146,7 @@ The available built-in aggregate types are :
 * **TrueCount:** Counts the number of true values in the column.
 * **FalseCount:** Counts the number of false values in the column.
 
-Here is an example that demonstrates how to use built-in aggregates types in the Syncfusion&reg; Grid:
+Here is an example that demonstrates how to use built-in aggregates types in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

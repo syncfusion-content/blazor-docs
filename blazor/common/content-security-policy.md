@@ -7,18 +7,18 @@ component: Common
 documentation: ug
 ---
 
-# Syncfusion&reg; Blazor Components with Strict Content Security Policy (CSP)
+# Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components with Strict Content Security Policy (CSP)
 
 Content Security Policy (CSP) is a security feature implemented by web browsers that helps to protect against attacks such as cross-site scripting (XSS) and data injection. It does this by limiting the sources from which certain types of content can be loaded on a webpage.
 
-When enabling strict Content Security Policy (CSP), some browser features are disabled by default. In order to use Syncfusion&reg; blazor components with strict CSP mode, certain directives must be included in the CSP meta tag. These directives allow to use certain features that are necessary for Syncfusion&reg; blazor components to function properly.
+When enabling strict Content Security Policy (CSP), some browser features are disabled by default. In order to use Syncfusion<sup style="font-size:70%">&reg;</sup> blazor components with strict CSP mode, certain directives must be included in the CSP meta tag. These directives allow to use certain features that are necessary for Syncfusion<sup style="font-size:70%">&reg;</sup> blazor components to function properly.
 
-To use Syncfusion&reg; blazor components with strict CSP mode, the following directives must be included in the CSP meta tag:
+To use Syncfusion<sup style="font-size:70%">&reg;</sup> blazor components with strict CSP mode, the following directives must be included in the CSP meta tag:
 
 * `font-src data:` - This directive allows for the use of `base64` encoded font icons.
 * `style-src 'self' unsafe-inline` - This directive allows for the use of inline styles and external fonts.
 * `connect-src 'self' https: wss:` - This directive enables web sockets.
-* `script-src 'self' unsafe-eval` - This directive allows for the use of the `new()` and `eval()` functions. Used in animation enabled Syncfusion&reg; components.
+* `script-src 'self' unsafe-eval` - This directive allows for the use of the `new()` and `eval()` functions. Used in animation enabled Syncfusion<sup style="font-size:70%">&reg;</sup> components.
 
 These directives should be included in the `<head>` tag of the application's webpage, typically
 

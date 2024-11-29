@@ -8,7 +8,7 @@ description: "Learn how to bind data from a Elasticsearch database in the Syncfu
 
 This section describes how to use [Nest](https://www.nuget.org/packages/Nest) to retrieve data from a Elasticsearch database and bind it to the Blazor Pivot Table.
 
-## Connecting a Elasticsearch to a Syncfusion&reg; Blazor Pivot Table
+## Connecting a Elasticsearch to a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table
 
 **1.** Create a simple Blazor Pivot Table by following the **"Getting Started"** documentation [link](../getting-started).
 
@@ -86,7 +86,7 @@ When you run the application, the resultant pivot table will look like this.
 
 ![Blazor Pivot Table bound with Elasticsearch data](../images/blazor-pivottable-Elasticsearch-databinding.png)
 
-## Connecting a Elasticsearch to a Syncfusion&reg; Blazor Pivot Table via Web API service
+## Connecting a Elasticsearch to a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table via Web API service
 
 ### Create a Web API service to fetch Elasticsearch data
 

@@ -89,4 +89,4 @@ The following code snippet explains how to create custom command.
 
 ## See also
 
-* [Keyboard Accessibility in Syncfusion&reg; Blazor PDF Viewer](./accessibility)
+* [Keyboard Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PDF Viewer](./accessibility)

@@ -72,4 +72,4 @@ The accessibility compliance of the Blazor Dropdown Menu component is shown in t
 
 ## See also
 
-* [Accessibility in Syncfusion&reg; Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)

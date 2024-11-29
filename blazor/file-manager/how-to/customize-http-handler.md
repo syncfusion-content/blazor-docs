@@ -13,7 +13,7 @@ In a Blazor FileManager component, you can customize the HTTP handler to access 
 
 ## Create client windows authenticated Blazor FileManager application
 
-You can create a Blazor server application with Windows authentication using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion&reg; Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+You can create a Blazor server application with Windows authentication using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 ![Authentication](../images/customize-http-handler.png)
 

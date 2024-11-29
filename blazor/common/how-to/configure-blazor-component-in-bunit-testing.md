@@ -7,9 +7,9 @@ component: Common
 documentation: ug
 ---
 
-# How to Configure Syncfusion&reg; Blazor Component in bUnit Testing
+# How to Configure Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Component in bUnit Testing
 
-This section explains how to configure Syncfusion&reg; Blazor component in bUnit testing.
+This section explains how to configure Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component in bUnit testing.
 
 ## Configure bUnit with xUnit Test Project
 
@@ -47,7 +47,7 @@ This section explains how to configure Syncfusion&reg; Blazor component in bUnit
 
     ![Add existing project reference on xUnit project](images/bunit/xunit-add-project-reference.png)
 
-3. Add the below Syncfusion&reg; Button sample in `~/Pages/Home.razor or Index.razor` file on the Blazor project for testing purpose. You can test your Blazor component from your application instead of the below example component.
+3. Add the below Syncfusion<sup style="font-size:70%">&reg;</sup> Button sample in `~/Pages/Home.razor or Index.razor` file on the Blazor project for testing purpose. You can test your Blazor component from your application instead of the below example component.
 
     ```cshtml
     @using Syncfusion.Blazor.Buttons
@@ -115,7 +115,7 @@ This section explains how to configure Syncfusion&reg; Blazor component in bUnit
 
     From the above code snippet:
 
-    * Created a new `TestContext` and added Syncfusion&reg; Blazor Service.
+    * Created a new `TestContext` and added Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service.
 
     ```c#
     using var testContext = new TestContext();
@@ -132,7 +132,7 @@ This section explains how to configure Syncfusion&reg; Blazor component in bUnit
     var indexComponent = testContext.RenderComponent<Home>();
     ```
 
-    * Find Syncfusion&reg; Button component and span element from the rendered `Home` component.
+    * Find Syncfusion<sup style="font-size:70%">&reg;</sup> Button component and span element from the rendered `Home` component.
 
     ```c#
     // Find Syncfusion Button component.
@@ -148,7 +148,7 @@ This section explains how to configure Syncfusion&reg; Blazor component in bUnit
     span.MarkupMatches("<span class=\"alert alert-info\">Count: 0</span>");
     ```
 
-    * Find the button element from Syncfusion&reg; Button component and trigger the click action. Test the span element's markup state after the button click.
+    * Find the button element from Syncfusion<sup style="font-size:70%">&reg;</sup> Button component and trigger the click action. Test the span element's markup state after the button click.
 
     ```c#
     // Click Syncfusion Button component.
@@ -197,7 +197,7 @@ This section explains how to configure Syncfusion&reg; Blazor component in bUnit
 
     ![Add existing project reference on NUnit project](images/bunit/nunit-add-project-reference.png)
 
-3. Add the below Syncfusion&reg; Button sample in `~/Pages/Home.razor or Index.razor` file on the Blazor project for testing purpose. You can test your Blazor component from your application instead of the below example component.
+3. Add the below Syncfusion<sup style="font-size:70%">&reg;</sup> Button sample in `~/Pages/Home.razor or Index.razor` file on the Blazor project for testing purpose. You can test your Blazor component from your application instead of the below example component.
 
     ```cshtml
     @using Syncfusion.Blazor.Buttons
@@ -266,7 +266,7 @@ This section explains how to configure Syncfusion&reg; Blazor component in bUnit
 
     From the above code snippet:
 
-    * Created a new `TestContext` and added Syncfusion&reg; Blazor Service.
+    * Created a new `TestContext` and added Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service.
 
     ```c#
     using var testContext = new Bunit.TestContext();
@@ -283,7 +283,7 @@ This section explains how to configure Syncfusion&reg; Blazor component in bUnit
     var indexComponent = testContext.RenderComponent<Home>();
     ```
 
-    * Find Syncfusion&reg; Button component and span element from the rendered `Home` component.
+    * Find Syncfusion<sup style="font-size:70%">&reg;</sup> Button component and span element from the rendered `Home` component.
 
     ```c#
     // Find Syncfusion Button component.
@@ -299,7 +299,7 @@ This section explains how to configure Syncfusion&reg; Blazor component in bUnit
     span.MarkupMatches("<span class=\"alert alert-info\">Count: 0</span>");
     ```
 
-    * Find the button element from Syncfusion&reg; Button component and trigger the click action. Test the span element's markup state after the button click.
+    * Find the button element from Syncfusion<sup style="font-size:70%">&reg;</sup> Button component and trigger the click action. Test the span element's markup state after the button click.
 
     ```c#
     // Click Syncfusion Button component.

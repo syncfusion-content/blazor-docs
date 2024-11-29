@@ -9,7 +9,7 @@ documentation: ug
 
 # Best practices to improve the performance of the Blazor Pivot Table
 
-Performance optimization is crucial when working with large datasets in the [Syncfusion&reg; Blazor Pivot Table](https://www.syncfusion.com/blazor-components). This documentation provides some best practices to empower your data analysis and enhance the user experience.
+Performance optimization is crucial when working with large datasets in the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table](https://www.syncfusion.com/blazor-components). This documentation provides some best practices to empower your data analysis and enhance the user experience.
 
 N> In Blazor, the framework takes about 0.06 milliseconds to render one component on the page. You can find more details at the official [documentation link](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance?view=aspnetcore-8.0).
 
@@ -17,9 +17,9 @@ N> In Blazor, the framework takes about 0.06 milliseconds to render one componen
 
 ### Refer individual NuGet, Script and CSS
 
-To enhance the performance of the [Syncfusion&reg; Blazor Pivot Table](https://www.syncfusion.com/blazor-components) component during the initial render and specific UI interactions, it's recommended to utilize the individual NuGet package (Syncfusion.Blazor.PivotTable) along with the respective script and CSS files dedicated to this component.
+To enhance the performance of the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table](https://www.syncfusion.com/blazor-components) component during the initial render and specific UI interactions, it's recommended to utilize the individual NuGet package (Syncfusion.Blazor.PivotTable) along with the respective script and CSS files dedicated to this component.
 
-In the bundled package (Syncfusion.Blazor), all components are included, resulting in a larger package size. With the inclusion of script and CSS files, the overall file size increases as they encompass the necessary resources for all Syncfusion&reg; Blazor components. Larger package, script, and CSS file sizes may lead to delays or performance issues during component rendering in certain scenarios compared to using individual packages, scripts, and CSS files.
+In the bundled package (Syncfusion.Blazor), all components are included, resulting in a larger package size. With the inclusion of script and CSS files, the overall file size increases as they encompass the necessary resources for all Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components. Larger package, script, and CSS file sizes may lead to delays or performance issues during component rendering in certain scenarios compared to using individual packages, scripts, and CSS files.
 
 Individual NuGet packages contain all required dependencies and resources for each component, including their script and CSS references. Therefore, it's preferable to reference the individual package.
 
@@ -326,7 +326,7 @@ N> Normally, pixel units are preferred, ensuring more accurate page calculations
 
 ## What other framework-based options exist for improving performance, particularly in the WASM?
 
-This section provides performance guidelines for efficiently using the Syncfusion&reg; Pivot Table component in Blazor WebAssembly, besides built-in features. The best practices or guidelines for general framework Blazor WebAssembly performance can be found [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance?view=aspnetcore-8.0).
+This section provides performance guidelines for efficiently using the Syncfusion<sup style="font-size:70%">&reg;</sup> Pivot Table component in Blazor WebAssembly, besides built-in features. The best practices or guidelines for general framework Blazor WebAssembly performance can be found [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance?view=aspnetcore-8.0).
 
 ### Avoid unnecessary component renders
 
@@ -451,7 +451,7 @@ N> * For events without any argument such as [DataBound](https://blazor.syncfusi
 
 ## What are the strategic approaches to addressing latency challenges?
 
-Understanding the concerns you are facing regarding the lagging responsiveness of the [Syncfusion&reg; Blazor Pivot Table](https://www.syncfusion.com/blazor-components) component, your situation has been reviewed, and several factors contributing to this issue have been identified. It’s important to note that when using dialog-oriented features like filtering and drill-through, a call is made from the client to the server, resulting in some delay if the servers are located in a distant location.
+Understanding the concerns you are facing regarding the lagging responsiveness of the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table](https://www.syncfusion.com/blazor-components) component, your situation has been reviewed, and several factors contributing to this issue have been identified. It’s important to note that when using dialog-oriented features like filtering and drill-through, a call is made from the client to the server, resulting in some delay if the servers are located in a distant location.
 
 **Network Latency**: When the server is in a different region, the increased distance between the client and server leads to higher latency, impacting the responsiveness of client-server communication.
 

@@ -19,7 +19,7 @@ This article describes the most common installation errors, as well as the cause
 
 ## Unlocking the license installer using the trial key
 
-**Error Message:** Sorry, the provided unlock key is a trial unlock key and cannot be used to unlock the licensed version of our Essential Studio&reg; for Blazor installer.
+**Error Message:** Sorry, the provided unlock key is a trial unlock key and cannot be used to unlock the licensed version of our Essential Studio<sup style="font-size:70%">&reg;</sup> for Blazor installer.
 
 ![Installation Unlock Error](images/installation-error-1.png)
 
@@ -29,7 +29,7 @@ This article describes the most common installation errors, as well as the cause
 
 ## License has expired
 
-**Error Message:** Your license for Syncfusion&reg; Essential Studio&reg; for Blazor has been expired since {date}. Renew your subscription and try again.
+**Error Message:** Your license for Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> for Blazor has been expired since {date}. Renew your subscription and try again.
 
 ***Online Installer***
 
@@ -46,7 +46,7 @@ This article describes the most common installation errors, as well as the cause
 
 ## Unable to find a valid license or trial
 
-**Error Message:** Sorry, we are unable to find a valid license or trial for Essential Studio&reg; for Blazor under your account.
+**Error Message:** Sorry, we are unable to find a valid license or trial for Essential Studio<sup style="font-size:70%">&reg;</sup> for Blazor under your account.
 
 ***Offline installer***
 
@@ -77,7 +77,7 @@ This article describes the most common installation errors, as well as the cause
 
 **Reason** <br /> You are trying to install when another installation is already running in your machine.
 
-**Suggested solution** <br /> Open and kill the msiexec process in the task manager and then continue to install Syncfusion. If the problem is still present, restart the computer and try Syncfusion&reg; installer.
+**Suggested solution** <br /> Open and kill the msiexec process in the task manager and then continue to install Syncfusion. If the problem is still present, restart the computer and try Syncfusion<sup style="font-size:70%">&reg;</sup> installer.
 1. Open the Windows Task Manager.
 2. Browse the Details tab.
 3. Select the msiexec.exe and click **End task**.
@@ -105,7 +105,7 @@ This article describes the most common installation errors, as well as the cause
 **Suggestion 1:**
 * We will ship our demos in the public documents folder by default. 
 * You have controlled folder access enabled on your machine, so our demos cannot be installed in the documents folder. If you need to install our demos in the Documents folder, follow the steps in this [link](https://support.microsoft.com/en-us/windows/allow-an-app-to-access-controlled-folders-b5b6627a-b008-2ca2-7931-7e51e912b034) and disable the controlled folder access.
-* You can enable this option after the installing our Syncfusion&reg; setup.
+* You can enable this option after the installing our Syncfusion<sup style="font-size:70%">&reg;</sup> setup.
 
 **Suggestion 2:**
 * If you do not want to disable controlled folder access, you can install our demos in another directory.

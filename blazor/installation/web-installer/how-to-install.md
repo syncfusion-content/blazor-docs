@@ -7,19 +7,19 @@ component: Common
 documentation: ug
 ---
 
-# Installing Syncfusion&reg; Blazor web installer
+# Installing Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor web installer
 
 ## Installation
 
-The steps below show how to install Essential Studio&reg; Blazor Web Installer.
+The steps below show how to install Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor Web Installer.
 
-1. Open the Syncfusion&reg; Essential Studio&reg; Blazor Web Installer file from downloaded location by double-clicking it. The Installer Wizard automatically opens and extracts the package.
+1. Open the Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor Web Installer file from downloaded location by double-clicking it. The Installer Wizard automatically opens and extracts the package.
 
    ![Web Installer Setup](images/webinstaller-1.png)
 
    N> The installer wizard extracts the syncfusionessentialblazorwebinstaller_{version}.exe dialog, which displays the package’s unzip operation.
 
-2. The Syncfusion&reg; Blazor Web Installer’s ***welcome wizard*** will be displayed. Click the Next button.
+2. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web Installer’s ***welcome wizard*** will be displayed. Click the Next button.
 
    ![Web Installer welcome wizard](images/webinstaller-2.png)
 
@@ -45,7 +45,7 @@ The steps below show how to install Essential Studio&reg; Blazor Web Installer.
 
    ![Web Installer Uninstall Previous Wizard](images/webinstaller-6.png)
 
-   N> From the 2021 Volume 1 release, Syncfusion&reg; has provided option to uninstall the previous versions from 18.1 while installing the new version.
+   N> From the 2021 Volume 1 release, Syncfusion<sup style="font-size:70%">&reg;</sup> has provided option to uninstall the previous versions from 18.1 while installing the new version.
 
 5. Pop up screen will be displayed to get the confirmation to uninstall selected previous versions.
 
@@ -63,59 +63,59 @@ The steps below show how to install Essential Studio&reg; Blazor Web Installer.
 
    ***Additional settings***
 
-   * Select the **Install Demos** check box to install Syncfusion&reg; samples, or leave the check box unchecked, if you do not want to install Syncfusion&reg; samples.
+   * Select the **Install Demos** check box to install Syncfusion<sup style="font-size:70%">&reg;</sup> samples, or leave the check box unchecked, if you do not want to install Syncfusion<sup style="font-size:70%">&reg;</sup> samples.
 
-   * Select the **Configure Syncfusion&reg; Extensions controls in Visual Studio** checkbox to configure the Syncfusion&reg; Extensions in Visual Studio or clear this check box when you do not want to configure the Syncfusion&reg; Extensions in Visual Studio.
+   * Select the **Configure Syncfusion<sup style="font-size:70%">&reg;</sup> Extensions controls in Visual Studio** checkbox to configure the Syncfusion<sup style="font-size:70%">&reg;</sup> Extensions in Visual Studio or clear this check box when you do not want to configure the Syncfusion<sup style="font-size:70%">&reg;</sup> Extensions in Visual Studio.
 
-   * Check the **Create Desktop Shortcut** checkbox to add a desktop shortcut for Syncfusion&reg; Control Panel.
+   * Check the **Create Desktop Shortcut** checkbox to add a desktop shortcut for Syncfusion<sup style="font-size:70%">&reg;</sup> Control Panel.
 
-   * Check the **Create Start Menu Shortcut** checkbox to add a shortcut to the start menu for Syncfusion&reg; Control Panel.
+   * Check the **Create Start Menu Shortcut** checkbox to add a shortcut to the start menu for Syncfusion<sup style="font-size:70%">&reg;</sup> Control Panel.
 
 8. After reading the License Terms and Conditions, check the **I agree to the License Terms and Privacy Policy** check box. Click the Next button.
 
-9. The login wizard will appear. You must enter your Syncfusion&reg; email address and password. If you do not already have a Syncfusion&reg; account, you can create one by clicking on **Create an Account**. If you have forgotten your password, click **Forgot Password** to create a new one. Click the Install button.
+9. The login wizard will appear. You must enter your Syncfusion<sup style="font-size:70%">&reg;</sup> email address and password. If you do not already have a Syncfusion<sup style="font-size:70%">&reg;</sup> account, you can create one by clicking on **Create an Account**. If you have forgotten your password, click **Forgot Password** to create a new one. Click the Install button.
 
    ![Web Installer Login Wizard](images/webinstaller-10.png)
 
-   I> The products you have chosen will be installed based on your Syncfusion&reg; License (Trial or Licensed).
+   I> The products you have chosen will be installed based on your Syncfusion<sup style="font-size:70%">&reg;</sup> License (Trial or Licensed).
 
 10. The download and installation/uninstallation progress will be displayed as shown below.
    ![Web Installer Installation Wizard](images/webinstaller-11.png)
-   To open the Syncfusion&reg; Control Panel, click **Launch Control Panel**.
+   To open the Syncfusion<sup style="font-size:70%">&reg;</sup> Control Panel, click **Launch Control Panel**.
 
 11. When the installation is finished, the ***Summary wizard*** will appear. Here you can see the list of products that have been installed successfully and those that have failed. To close the Summary wizard, click Finish.
 
    ![Web Installer Installation Summary](images/webinstaller-12.png)
 
-12. After installation, there will be two Syncfusion&reg; control panel entries, as shown below. The Essential Studio&reg; entry will manage all Syncfusion&reg; products installed in the same version, while the Product entry will only uninstall the specific product setup.
+12. After installation, there will be two Syncfusion<sup style="font-size:70%">&reg;</sup> control panel entries, as shown below. The Essential Studio<sup style="font-size:70%">&reg;</sup> entry will manage all Syncfusion<sup style="font-size:70%">&reg;</sup> products installed in the same version, while the Product entry will only uninstall the specific product setup.
 
    ![Control Panel Installation entries](images/webinstaller-13.png)
 
 ## Uninstallation
 
-Syncfusion&reg; Blazor installer can be uninstalled in two ways.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor installer can be uninstalled in two ways.
 
-* Uninstall the Blazor using the Syncfusion&reg; Blazor web installer
+* Uninstall the Blazor using the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor web installer
 
 * Uninstall the Blazor from Windows Control Panel
 
-Follow either one of the option below to uninstall Syncfusion&reg; Essential Studio&reg; Blazor installer,
+Follow either one of the option below to uninstall Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor installer,
 
-**Option 1:** ***Uninstall the Blazor using the Syncfusion&reg; Blazor web installer***
+**Option 1:** ***Uninstall the Blazor using the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor web installer***
 
-Syncfusion&reg; provides the option to uninstall products of the same version directly from the Web Installer application. Open the Syncfusion&reg; Essential Studio&reg; Blazor Online Installer file from downloaded location by double-clicking it. Select the products to be uninstalled from the list, and Web Installer will uninstall them one by one.
+Syncfusion<sup style="font-size:70%">&reg;</sup> provides the option to uninstall products of the same version directly from the Web Installer application. Open the Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor Online Installer file from downloaded location by double-clicking it. Select the products to be uninstalled from the list, and Web Installer will uninstall them one by one.
 
 ![Web Installer Installed Products Uninstall](images/webinstaller-uninstall-2.png)
 
 **Option 2:** ***Uninstall the Blazor from Windows Control Panel***
 
-You can uninstall all the installed products by selecting the **Syncfusion&reg; Essential Studio&reg; {version}** entry (element 1 in the below screenshot) from the Windows control panel, or you can uninstall Blazor alone by selecting the **Syncfusion&reg; Essential Studio&reg; for Blazor {version}** entry (element 2 in the below screenshot) from the Windows control panel.
+You can uninstall all the installed products by selecting the **Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> {version}** entry (element 1 in the below screenshot) from the Windows control panel, or you can uninstall Blazor alone by selecting the **Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> for Blazor {version}** entry (element 2 in the below screenshot) from the Windows control panel.
 
 ![Control Panel Uninstallation entries](images/webinstaller-uninstall-1.png)
 
-N> If the **Syncfusion&reg; Essential Studio&reg; for Blazor {version}** entry is selected from the Windows control panel, the Syncfusion&reg; Essential Studio&reg; Blazor alone will be removed and the below default MSI uninstallation window will be displayed.
+N> If the **Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> for Blazor {version}** entry is selected from the Windows control panel, the Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor alone will be removed and the below default MSI uninstallation window will be displayed.
 
-1. The Syncfusion&reg; Blazor Web Installer’s ***welcome wizard*** will be displayed. Click the Next button
+1. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Web Installer’s ***welcome wizard*** will be displayed. Click the Next button
 
    ![Web Installer welcome wizard](images/webinstaller-2.png)
 
@@ -151,11 +151,11 @@ N> If the **Syncfusion&reg; Essential Studio&reg; for Blazor {version}** entry i
 
 7. After reading the License Terms and Conditions, check the **I agree to the License Terms and Privacy Policy** check box. Click the Next button.
 
-8. The ***login wizard*** will appear. You must enter your Syncfusion&reg; email address and password. If you do not already have a Syncfusion&reg; account, you can create one by clicking on **Create an Account**. If you have forgotten your password, click **Forgot Password** to create a new one. Click the Install button.
+8. The ***login wizard*** will appear. You must enter your Syncfusion<sup style="font-size:70%">&reg;</sup> email address and password. If you do not already have a Syncfusion<sup style="font-size:70%">&reg;</sup> account, you can create one by clicking on **Create an Account**. If you have forgotten your password, click **Forgot Password** to create a new one. Click the Install button.
 
    ![Web Installer Login Wizard](images/webinstaller-10.png)
 
-   I> The products you have chosen will be installed based on your Syncfusion&reg; License (Trial or Licensed).
+   I> The products you have chosen will be installed based on your Syncfusion<sup style="font-size:70%">&reg;</sup> License (Trial or Licensed).
 
 9. The download, installation, and uninstallation progresses will be shown.
 
@@ -165,4 +165,4 @@ N> If the **Syncfusion&reg; Essential Studio&reg; for Blazor {version}** entry i
 
    ![Web Installer Uninstallation Summary](images/webinstaller-uninstall-8.png)
 
-* To open the Syncfusion&reg; Control Panel, click **Launch Control Panel**.
+* To open the Syncfusion<sup style="font-size:70%">&reg;</sup> Control Panel, click **Launch Control Panel**.

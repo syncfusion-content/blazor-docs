@@ -7,9 +7,9 @@ component: Common
 documentation: ug
 ---
 
-# Register Syncfusion&reg; License Key in a Razor Class Library Application
+# Register Syncfusion<sup style="font-size:70%">&reg;</sup> License Key in a Razor Class Library Application
 
-The generated license key is just a string that might be registered before any Syncfusion&reg; control is initiated. The following code is used to register the license.
+The generated license key is just a string that might be registered before any Syncfusion<sup style="font-size:70%">&reg;</sup> control is initiated. The following code is used to register the license.
 
 {% tabs %}
 {% highlight c# %}
@@ -20,15 +20,15 @@ Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY
 {% endtabs %}
 
 N> * Place the license key between double quotes.  Also, ensure that Syncfusion.Licensing.dll is referenced in your project where the license key is being registered.
-* Syncfusion&reg; license validation is done offline during application execution and does not require internet access.  Apps registered with a Syncfusion&reg; license key can be deployed on any system that does not have an internet connection.
+* Syncfusion<sup style="font-size:70%">&reg;</sup> license validation is done offline during application execution and does not require internet access.  Apps registered with a Syncfusion<sup style="font-size:70%">&reg;</sup> license key can be deployed on any system that does not have an internet connection.
 
-If your Razor Class Library (RCL) project uses Syncfusion&reg; Blazor packages from [nuget.org](https://www.nuget.org/packages?q=syncfusion) or the trial installer, you must register your license key. We need to register the license key in RCL project similar to how we do for the Blazor project based on your application type (Server application / Client WebAssembly application).
+If your Razor Class Library (RCL) project uses Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages from [nuget.org](https://www.nuget.org/packages?q=syncfusion) or the trial installer, you must register your license key. We need to register the license key in RCL project similar to how we do for the Blazor project based on your application type (Server application / Client WebAssembly application).
 
-Refer to this [link](https://blazor.syncfusion.com/documentation/getting-started/razor-class-library) for more information on getting started with the Syncfusion&reg; Blazor components in the RCL project.
+Refer to this [link](https://blazor.syncfusion.com/documentation/getting-started/razor-class-library) for more information on getting started with the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components in the RCL project.
 
 ## Blazor Web App
 
-Open **~/Program.cs** file and register the Syncfusion&reg; Blazor license key in the Blazor web app.
+Open **~/Program.cs** file and register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor license key in the Blazor web app.
 
 {% tabs %}
 
@@ -45,7 +45,7 @@ Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY
 
 After configuring the RCL project with your Blazor Server application, register the license key in the Program.cs file.
 
-* For .NET 6 and .NET 7 app, open the **~/Program.cs** file and register the Syncfusion&reg; license key.
+* For .NET 6 and .NET 7 app, open the **~/Program.cs** file and register the Syncfusion<sup style="font-size:70%">&reg;</sup> license key.
 
 {% tabs %}
 

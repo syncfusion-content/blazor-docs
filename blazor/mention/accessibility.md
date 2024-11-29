@@ -81,4 +81,4 @@ The accessibility compliance of the Mention component is shown in the following 
 
 ## See also
 
-* [Accessibility in Syncfusion&reg; components](../common/accessibility)
+* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> components](../common/accessibility)

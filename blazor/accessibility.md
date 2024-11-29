@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor
 
-The Syncfusion&reg; JavaScript UI controls follows WAI-ARIA accessibility standard by default. This enables you to build accessible web application which are fully navigable by users with disabilities.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> JavaScript UI controls follows WAI-ARIA accessibility standard by default. This enables you to build accessible web application which are fully navigable by users with disabilities.
 
 ## Keyboard navigation
 

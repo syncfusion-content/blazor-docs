@@ -109,15 +109,15 @@ namespace MyWebService.Controllers
 
 **Create a new Blazor Web App**
 
-You can create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion&reg; Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+You can create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 You need to configure the corresponding [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows) while creating a Blazor Web Application.
 
-**Install Syncfusion&reg; Blazor Grid and Themes NuGet in the Blazor Web App**
+**Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid and Themes NuGet in the Blazor Web App**
 
 To add **Blazor DataGrid** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
-If you utilize `WebAssembly or Auto` render modes in the Blazor Web App need to be install Syncfusion&reg; Blazor components NuGet packages within the client project.
+If you utilize `WebAssembly or Auto` render modes in the Blazor Web App need to be install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components NuGet packages within the client project.
 
 Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -130,9 +130,9 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-> Syncfusion&reg; Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
-**Register Syncfusion&reg; Blazor Service**
+**Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service**
 
 Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Grids` namespace.
 
@@ -142,7 +142,7 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 @using Syncfusion.Blazor.Grids
 ```
 
-Now, register the Syncfusion&reg; Blazor Service in the **~/Program.cs** file of your Blazor Web App. For a app with `WebAssembly` or `Auto (Server and WebAssembly)` interactive render mode, register the Syncfusion&reg; Blazor service in both **~/Program.cs** files of your web app.
+Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor Web App. For a app with `WebAssembly` or `Auto (Server and WebAssembly)` interactive render mode, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in both **~/Program.cs** files of your web app.
 
 ```cshtml
 
@@ -268,7 +268,7 @@ When you run the application, the resultant Blazor DataGrid component will look 
 
 ![Blazor DataGrid component bound with SQLite Server data](../images/blazor-Grid-Ms-SQL-databinding.png)
 
-> * The Syncfusion&reg; Blazor DataGrid component provides built-in support for handling various data operations such as **searching**, **sorting**, **filtering**, **aggregate** and **paging** on the server-side. These operations can be handled using methods such as `PerformSearching`, `PerformFiltering`, `PerformSorting`, `PerformAggregation`, `PerformTake` and `PerformSkip` available in the **Syncfusion.Blazor.Data** package. Let's explore how to manage these data operations using the `UrlAdaptor`.
+> * The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component provides built-in support for handling various data operations such as **searching**, **sorting**, **filtering**, **aggregate** and **paging** on the server-side. These operations can be handled using methods such as `PerformSearching`, `PerformFiltering`, `PerformSorting`, `PerformAggregation`, `PerformTake` and `PerformSkip` available in the **Syncfusion.Blazor.Data** package. Let's explore how to manage these data operations using the `UrlAdaptor`.
 > * In an API service project, add **Syncfusion.Blazor.Data** by opening the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install it.
 
 ### Handling searching operation
@@ -1045,7 +1045,7 @@ The CRUD operations can be performed and customized on our own by overriding the
 * Update/UpdateAsync
 * BatchUpdate/BatchUpdateAsync
 
-Let’s see how to perform CRUD operation using SQLite Server data with Syncfusion&reg; Blazor DataGrid component.
+Let’s see how to perform CRUD operation using SQLite Server data with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component.
 
 **Insert Operation:**
 

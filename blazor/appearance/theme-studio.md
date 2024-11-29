@@ -9,23 +9,23 @@ documentation: ug
 
 # Theme Studio in Blazor Components
 
-Theme Studio for Syncfusion&reg; Blazor can be used to customize a new theme from an existing theme. It does not support data visualization controls such as Chart, Diagram, Gauge, Range Navigator, and Maps.
+Theme Studio for Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor can be used to customize a new theme from an existing theme. It does not support data visualization controls such as Chart, Diagram, Gauge, Range Navigator, and Maps.
 
 ## Customizing theme color from theme studio
 
-The Syncfusion&reg; Blazor themes are developed under the SCSS environment. Each theme has a unique common variable list. When you change the common variable color code value, it will reflect in all the Syncfusion&reg; Blazor components. All Syncfusion&reg; Blazor component styles are derived from these [theme-based common variables](#common-variables). This common variable list is handled inside the Theme Studio application for customizing theme-based colors.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor themes are developed under the SCSS environment. Each theme has a unique common variable list. When you change the common variable color code value, it will reflect in all the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components. All Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component styles are derived from these [theme-based common variables](#common-variables). This common variable list is handled inside the Theme Studio application for customizing theme-based colors.
 
 1. Open [Blazor Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material3) application.
 2. The Theme Studio application page can be divided into two sections: the controls preview section on the left, and the theme customization section on the right.
 ![Theme Studio two-sections](images/two-pane.png)
 3. Click the color pickers in the theme customization section to select your desired colors.
 ![Theme Studio colpr-picker](images/colorpicker.png)
-4. The Syncfusion&reg; Blazor components will be rendered with the newly selected colors in the preview section after selecting a custom color form picker.
+4. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components will be rendered with the newly selected colors in the preview section after selecting a custom color form picker.
 ![Theme Studio customized](images/customized.png)
 
 ### Filtering a specific list of controls
 
-Using the theme studio, you can apply custom themes to a list of specific controls. This option is used when you integrate a selective list of Syncfusion&reg; Blazor components in your application. The theme studio will filter the selected controls and customize the final output for the controls’ styles alone by reducing the final output file size.
+Using the theme studio, you can apply custom themes to a list of specific controls. This option is used when you integrate a selective list of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components in your application. The theme studio will filter the selected controls and customize the final output for the controls’ styles alone by reducing the final output file size.
 
 1. Click the Filter icon at the top-right corner, and select the controls whose theme you want to customize.
 ![Theme Studio filter-icon](images/filter-icon.png)
@@ -42,7 +42,7 @@ You can download the custom styles after customizing the theme colors.
 ![Theme Studio download-icon](images/download-icon.png)
 2. Assign a theme name in the File Name field, and click the Download button.
 ![Theme Studio download-dialog](images/download-dialog.png)
-3. The download styles will come as a zip file that contains SCSS and CSS files for the selected Syncfusion&reg; Blazor components. The current settings are stored in the `settings.json` file.
+3. The download styles will come as a zip file that contains SCSS and CSS files for the selected Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components. The current settings are stored in the `settings.json` file.
 
 ![Theme Studio output-files](images/output-files.png)
 
@@ -68,7 +68,7 @@ You can directly use the customized CSS file in the web application.
 
 ## Import previously changed settings into theme studio
 
-If you need to change your application theme and UI design in the future, do not customize the Syncfusion&reg; Blazor components from scratch in the theme studio. Just import the old `settings.json` file to review and update your stored settings in the Theme Studio application.
+If you need to change your application theme and UI design in the future, do not customize the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components from scratch in the theme studio. Just import the old `settings.json` file to review and update your stored settings in the Theme Studio application.
 
 1. Click the Import icon at the top-right corner.
 ![Theme Studio import-icon](images/import-icon.png)
@@ -82,7 +82,7 @@ If you need to change your application theme and UI design in the future, do not
 
 ## Common Variables
 
-The following list of common variables is used in the Syncfusion&reg; Blazor library themes for all UI components. You can change these variables to customize the corresponding theme.
+The following list of common variables is used in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor library themes for all UI components. You can change these variables to customize the corresponding theme.
 
 ### Material 3 Theme
 

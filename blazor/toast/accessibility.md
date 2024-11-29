@@ -86,4 +86,4 @@ The accessibility compliance of the Toast component is shown in the following sa
 
 ## See also
 
-* [Accessibility in Syncfusion&reg; components](../common/accessibility)
+* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> components](../common/accessibility)

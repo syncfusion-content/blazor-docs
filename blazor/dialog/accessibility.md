@@ -151,4 +151,4 @@ The accessibility compliance of the Dialog component is shown in the following s
 
 ## See also
 
-* [Accessibility in Syncfusion&reg; components](../common/accessibility)
+* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> components](../common/accessibility)

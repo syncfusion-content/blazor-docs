@@ -75,4 +75,4 @@ The accessibility compliance of the Blazor Accumulation Chart component is shown
 
 ## See also
 
-* [Accessibility in Syncfusion&reg; Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)

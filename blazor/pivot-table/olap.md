@@ -15,15 +15,15 @@ documentation: ug
 ## Getting Started
 
 
-This section briefly explains about how to create a simple [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) with OLAP data source. You can refer [Getting Started with Syncfusion&reg; Blazor for Client-Side in Visual Studio 2019 Preview](https://blazor.syncfusion.com/documentation/getting-started) page for the introduction and for configuring the common specifications.
+This section briefly explains about how to create a simple [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) with OLAP data source. You can refer [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Client-Side in Visual Studio 2019 Preview](https://blazor.syncfusion.com/documentation/getting-started) page for the introduction and for configuring the common specifications.
 
-### Importing Syncfusion&reg; Blazor component package in the application
+### Importing Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component package in the application
 
 Install **Syncfusion.Blazor** NuGet package to the application by using the `NuGet Package Manager`. Ensure to check the Include **prerelease** option.
 
 ### Initializing pivot table component in an application
 
-The Syncfusion&reg; Pivot Table component can be initialized in any razor page inside `~/Pages` folder. Here, the pivot table component is initialized inside `~/Pages/Index.razor` page. In a new application, if `Index.razor` page has any default content template, then those content can be completely removed and the following code can be added.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Pivot Table component can be initialized in any razor page inside `~/Pages` folder. Here, the pivot table component is initialized inside `~/Pages/Index.razor` page. In a new application, if `Index.razor` page has any default content template, then those content can be completely removed and the following code can be added.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView

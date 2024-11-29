@@ -7,9 +7,9 @@ component: Common
 documentation: ug
 ---
 
-# Creating Razor Class Library (RCL) using Syncfusion&reg; Blazor components
+# Creating Razor Class Library (RCL) using Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components
 
-This section provides information about creating Razor Class Library with the Syncfusion&reg; Blazor components using [Visual Studio](https://visualstudio.microsoft.com/vs/).
+This section provides information about creating Razor Class Library with the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components using [Visual Studio](https://visualstudio.microsoft.com/vs/).
 
 ## Prerequisites
 
@@ -34,7 +34,7 @@ This section provides information about creating Razor Class Library with the Sy
 
     ![select framework](images/VS2022/blazor-select-template-rcl-2022.png)
 
-## Install Syncfusion&reg; Blazor Calendars and Themes NuGet in the App
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendars and Themes NuGet in the App
 
 To add **Blazor Calendar** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -48,11 +48,11 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion&reg; Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
-## Importing Syncfusion&reg; Blazor component in Razor Class Library
+## Importing Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component in Razor Class Library
 
-Now, import and add the Syncfusion&reg; Blazor components in the `~/Component1.razor` file. For example, the Calendar component is imported and added in the **~/Component1.razor** page.
+Now, import and add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components in the `~/Component1.razor` file. For example, the Calendar component is imported and added in the **~/Component1.razor** page.
 
 ```html
 
@@ -98,9 +98,9 @@ This Blazor component is defined in the <strong>RazorClassLibrary</strong> packa
     @using RazorClassLibrary
     ```
 
-2. Now, register the Syncfusion&reg; Blazor Service in the **~/Program.cs** file of your Blazor App.
+2. Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor App.
 
-   * If you select an **Interactive render mode** as `WebAssembly` or `Auto`, you need to register the Syncfusion&reg; Blazor service in both **~/Program.cs** files of your Blazor Web App.
+   * If you select an **Interactive render mode** as `WebAssembly` or `Auto`, you need to register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in both **~/Program.cs** files of your Blazor Web App.
 
     ```cshtml
 
@@ -142,6 +142,6 @@ This Blazor component is defined in the <strong>RazorClassLibrary</strong> packa
 
     ```
 
-5. Run the application, The Syncfusion&reg; Blazor Calendar component will be rendered in the default web browser.
+5. Run the application, The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendar component will be rendered in the default web browser.
 
     ![RCL output](images/RCL-output.png)

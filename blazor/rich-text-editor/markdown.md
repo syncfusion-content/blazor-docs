@@ -52,9 +52,9 @@ The [Blazor Markdown editor](https://www.syncfusion.com/blazor-components/blazor
 | Image with alternate text | !`[` alternate text `](`URL path`)` | Create an image with alternate text by wrapping an alternative text in brackets `[ ]`, and then link of the image source in parentheses `()`.<br>**Note:** When inserting the image using toolbar, the alternate text cannot be provided that needs to be given manually. |
 | Escape tick marks supported | Sample text content with `**`bold and `**`not bold`**` text can be in the same line.`**` | In the syntax, the whole content is made as bold where the content `not bold` can be made as normal text by adding the bold syntax to the start and end of the respective text. Likewise you can do the same for various inline commands. |
 | Escape Character | `\(`any syntax`)` | Escape any markdown syntax by prefix `\` to the syntax.<br>Example:<br>`\**`Bold text`**`|
-| HTML Entities | Copyright: &copy; - `&copy;` <br>Trade mark: &trade; - `&trade;`<br>Registered: &reg; - `&reg;`<br>Ampersand: &amp; - `&amp;`<br>Less than: &lt; - `&lt;`<br>Greater than: &gt; - `&gt;` | For HTML entities, add & and ; to the front and back of the respective entities. |
+| HTML Entities | Copyright: &copy; - `&copy;` <br>Trade mark: &trade; - `&trade;`<br>Registered: <sup style="font-size:70%">&reg;</sup> - `<sup style="font-size:70%">&reg;</sup>`<br>Ampersand: &amp; - `&amp;`<br>Less than: &lt; - `&lt;`<br>Greater than: &gt; - `&gt;` | For HTML entities, add & and ; to the front and back of the respective entities. |
 
-N> The above listed commands alone are supported in Syncfusion&reg; markdown editor. For other unsupported commands, you can achieve using the HTML tags in markdown editor. The foot notes, definitions, math, and check list markdown syntax are also not supported.
+N> The above listed commands alone are supported in Syncfusion<sup style="font-size:70%">&reg;</sup> markdown editor. For other unsupported commands, you can achieve using the HTML tags in markdown editor. The foot notes, definitions, math, and check list markdown syntax are also not supported.
 
 ## Insert table
 

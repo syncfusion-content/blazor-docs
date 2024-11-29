@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor Icons Library
 
-The Syncfusion&reg; Blazor library provides the set of `base64` formatted font icons which are being used in the Syncfusion&reg; Blazor components. These icons can be utilized in the web applications using `SfIcon` component or `e-icons` class.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor library provides the set of `base64` formatted font icons which are being used in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components. These icons can be utilized in the web applications using `SfIcon` component or `e-icons` class.
 
 Check out the video to quickly get started with the Blazor Icon component:
 
@@ -18,11 +18,11 @@ Check out the video to quickly get started with the Blazor Icon component:
 
 ## Icon component
 
-Syncfusion&reg; Icon component provides support to render predefined Syncfusion&reg; icons or custom font icons.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Icon component provides support to render predefined Syncfusion<sup style="font-size:70%">&reg;</sup> icons or custom font icons.
 
-You can refer [Getting Started with Syncfusion&reg; Blazor for Server-side in Visual Studio page](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) for the introduction and configuring the common specifications.
+You can refer [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Server-side in Visual Studio page](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) for the introduction and configuring the common specifications.
 
-The following code example shows the rendering of built-in Syncfusion&reg; icons from predefined [IconName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.IconName.html) options using [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfIcon.html#Syncfusion_Blazor_Buttons_SfIcon_Name) property by defining them in `SfIcon` tag.
+The following code example shows the rendering of built-in Syncfusion<sup style="font-size:70%">&reg;</sup> icons from predefined [IconName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.IconName.html) options using [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfIcon.html#Syncfusion_Blazor_Buttons_SfIcon_Name) property by defining them in `SfIcon` tag.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -170,9 +170,9 @@ The following example shows the icon font size customization using `@attributes`
 
 ## Icon integration with Button component
 
-The built-in Syncfusion&reg; icons can be integrated with other Blazor components without defining the `<SfIcon>` tag. To use Syncfusion&reg; icons, add `e-icons` class that contains the font-family and common property of the font icons. Add the icon class with the corresponding icon name from the [available icons](#icons-list) with `e-` prefix.
+The built-in Syncfusion<sup style="font-size:70%">&reg;</sup> icons can be integrated with other Blazor components without defining the `<SfIcon>` tag. To use Syncfusion<sup style="font-size:70%">&reg;</sup> icons, add `e-icons` class that contains the font-family and common property of the font icons. Add the icon class with the corresponding icon name from the [available icons](#icons-list) with `e-` prefix.
 
-The following example shows how to integrate the icons with Syncfusion&reg; button component by defining the icon class in the `IconCss` property of button.
+The following example shows how to integrate the icons with Syncfusion<sup style="font-size:70%">&reg;</sup> button component by defining the icon class in the `IconCss` property of button.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -185,9 +185,9 @@ The following example shows how to integrate the icons with Syncfusion&reg; butt
 
 ## Using icons directly in HTML element
 
-The built-in Syncfusion&reg; icons can be rendered directly in the HTML element by defining `e-icons` class that contains the font-family and common property of font icons, and defining the [available icon's](#icons-list) class with `e-` prefix. 
+The built-in Syncfusion<sup style="font-size:70%">&reg;</sup> icons can be rendered directly in the HTML element by defining `e-icons` class that contains the font-family and common property of font icons, and defining the [available icon's](#icons-list) class with `e-` prefix. 
 
-The following code example explains the direct rendering of Syncfusion&reg; `search` icon in the span element.
+The following code example explains the direct rendering of Syncfusion<sup style="font-size:70%">&reg;</sup> `search` icon in the span element.
 
 ```cshtml
 <span class="e-icons e-search"></span>
@@ -195,7 +195,7 @@ The following code example explains the direct rendering of Syncfusion&reg; `sea
 
 ## Icons list
 
-The complete pack of Syncfusion&reg; Blazor icons is listed in the following table. The corresponding icon content can be referred to the content section.
+The complete pack of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor icons is listed in the following table. The corresponding icon content can be referred to the content section.
 
 <!-- markdownlint-disable MD033 -->
 

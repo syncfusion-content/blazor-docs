@@ -57,4 +57,4 @@ The accessibility compliance of the Sidebar component is shown in the following 
 
 ## See also
 
-* [Accessibility in Syncfusion&reg; Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)

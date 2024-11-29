@@ -9,11 +9,11 @@ documentation: ug
 
 # Animation in Blazor Components
 
-This section provides information about the animation process and how to enable/disable it globally for Syncfusion&reg; Blazor Components.
+This section provides information about the animation process and how to enable/disable it globally for Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components.
 
 ## Enable or disable animation globally
 
-You can enable or disable animation for all Syncfusion&reg; Blazor Component's globally by setting [GlobalOptions.Animation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_Animation) property while registering the [Syncfusion&reg; Blazor service](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SyncfusionBlazor.html#Syncfusion_Blazor_SyncfusionBlazor_AddSyncfusionBlazor_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_Syncfusion_Blazor_GlobalOptions__), with one of below options,
+You can enable or disable animation for all Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Component's globally by setting [GlobalOptions.Animation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_Animation) property while registering the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SyncfusionBlazor.html#Syncfusion_Blazor_SyncfusionBlazor_AddSyncfusionBlazor_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_Syncfusion_Blazor_GlobalOptions__), with one of below options,
 
 * Enable - Enables the animation for all components regardless of individual component's animation settings.
 * Disable - Disables the animation for all components regardless of individual component's animation settings.

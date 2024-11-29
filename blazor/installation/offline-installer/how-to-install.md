@@ -7,32 +7,32 @@ component: Common
 documentation: ug
 ---
 
-# Installing Syncfusion&reg; Blazor offline installer
+# Installing Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor offline installer
 
 ## Installing with UI
 
-The steps below show how to install the Essential Studio&reg; Blazor installer.
+The steps below show how to install the Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor installer.
 
-1. Open the Syncfusion&reg; Blazor offline installer file from downloaded location by double-clicking it. The Installer Wizard automatically opens and extracts the package
+1. Open the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor offline installer file from downloaded location by double-clicking it. The Installer Wizard automatically opens and extracts the package
 
    ![Web Offline Installer Setup wizard](images/webofflineinstaller-1.png)
 
    N> The Installer wizard extracts the syncfusionessentialblazor_(version).exe dialog, which displays the package’s unzip operation.
 
-2. To unlock the Syncfusion&reg; offline installer, you have two options:
+2. To unlock the Syncfusion<sup style="font-size:70%">&reg;</sup> offline installer, you have two options:
 
    * *Login To Install*
    * *Use Unlock Key*
 
    **Login To Install:**
 
-   You must enter your Syncfusion&reg; email address and password. If you don’t already have a Syncfusion&reg; account, you can sign up for one by clicking "**Create an account**". If you have forgotten your password, click on "**Forgot Password**" to create a new one. Once you’ve entered your Syncfusion&reg; email and password, click Next.
+   You must enter your Syncfusion<sup style="font-size:70%">&reg;</sup> email address and password. If you don’t already have a Syncfusion<sup style="font-size:70%">&reg;</sup> account, you can sign up for one by clicking "**Create an account**". If you have forgotten your password, click on "**Forgot Password**" to create a new one. Once you’ve entered your Syncfusion<sup style="font-size:70%">&reg;</sup> email and password, click Next.
 
    ![Web Offline Installer LoginToInstall Wizard](images/webofflineinstaller-2.png)
 
    **Use Unlock Key:**
 
-   Unlock keys are used to unlock the Syncfusion&reg; offline installer, and they are platform and version specific. You should use either Syncfusion&reg; licensed or trial Unlock key to unlock Syncfusion&reg; Blazor installer.
+   Unlock keys are used to unlock the Syncfusion<sup style="font-size:70%">&reg;</sup> offline installer, and they are platform and version specific. You should use either Syncfusion<sup style="font-size:70%">&reg;</sup> licensed or trial Unlock key to unlock Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor installer.
 
    The trial unlock key is only valid for 30 days, and the installer will not accept an expired trial key.
 
@@ -48,19 +48,19 @@ The steps below show how to install the Essential Studio&reg; Blazor installer.
 
    ***Additional Settings***
 
-   * Select the **Install Demos** check box to install Syncfusion&reg; samples, or leave the check box unchecked, if you do not want to install Syncfusion&reg; samples.
+   * Select the **Install Demos** check box to install Syncfusion<sup style="font-size:70%">&reg;</sup> samples, or leave the check box unchecked, if you do not want to install Syncfusion<sup style="font-size:70%">&reg;</sup> samples.
 
-   * Select the **Configure Syncfusion&reg; Extensions controls in Visual Studio** checkbox to configure the Syncfusion&reg; Extensions in Visual Studio or clear this check box when you do not want to configure the Syncfusion&reg; Extensions in Visual Studio.
+   * Select the **Configure Syncfusion<sup style="font-size:70%">&reg;</sup> Extensions controls in Visual Studio** checkbox to configure the Syncfusion<sup style="font-size:70%">&reg;</sup> Extensions in Visual Studio or clear this check box when you do not want to configure the Syncfusion<sup style="font-size:70%">&reg;</sup> Extensions in Visual Studio.
 
-   * Check the **Create Desktop Shortcut** checkbox to add a desktop shortcut for Syncfusion&reg; Control Panel.
+   * Check the **Create Desktop Shortcut** checkbox to add a desktop shortcut for Syncfusion<sup style="font-size:70%">&reg;</sup> Control Panel.
 
-   * Check the **Create Start Menu Shortcut** checkbox to add a shortcut to the start menu for Syncfusion&reg; Control Panel.
+   * Check the **Create Start Menu Shortcut** checkbox to add a shortcut to the start menu for Syncfusion<sup style="font-size:70%">&reg;</sup> Control Panel.
 
 5. If any previous versions of the current product is installed, the Uninstall Previous Version(s) wizard will be opened. Select **Uninstall** checkbox to uninstall the previous versions and then click the Proceed button.
 
    ![Web Offline Installer Uninstall Previous Wizard](images/webofflineinstaller-5.png)
 
-   N> From the 2021 Volume 1 release, Syncfusion&reg; has added the option to uninstall previous versions from 18.1 while installing the new version. <br /> <br /> If any version is selected to uninstall, a confirmation screen will appear; if continue is selected, the Progress screen will display the uninstall and install progress, respectively. If none of the versions are chosen to be uninstalled, only the installation progress will be displayed.
+   N> From the 2021 Volume 1 release, Syncfusion<sup style="font-size:70%">&reg;</sup> has added the option to uninstall previous versions from 18.1 while installing the new version. <br /> <br /> If any version is selected to uninstall, a confirmation screen will appear; if continue is selected, the Progress screen will display the uninstall and install progress, respectively. If none of the versions are chosen to be uninstalled, only the installation progress will be displayed.
 
    **Confirmation Alert:**
 
@@ -78,19 +78,19 @@ The steps below show how to install the Essential Studio&reg; Blazor installer.
 
    ![Web Offline Installer Summary Wizard](images/webofflineinstaller-9.png)
 
-6. After installing, click the **Launch Control Panel** link to open the Syncfusion&reg; Control Panel.
+6. After installing, click the **Launch Control Panel** link to open the Syncfusion<sup style="font-size:70%">&reg;</sup> Control Panel.
 
-7. Click the Finish button. Your system has been installed with the Syncfusion&reg; Essential Studio&reg; Blazor product.
+7. Click the Finish button. Your system has been installed with the Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor product.
 
 ## Installing in Silent Mode
 
-The Syncfusion&reg; Essential Studio&reg; Blazor Installer supports installation and uninstallation via the command line.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor Installer supports installation and uninstallation via the command line.
 
 ***Command Line Installation***
 
 To install through the Command Line in Silent mode, follow the steps below.
 
-1. Run the Syncfusion&reg; Blazor installer by double-clicking it. The Installer Wizard automatically opens and extracts the package.
+1. Run the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor installer by double-clicking it. The Installer Wizard automatically opens and extracts the package.
 
 2. The file syncfusionessentialblazor_(version).exe file will be extracted into the Temp directory.
 
@@ -108,15 +108,15 @@ To install through the Command Line in Silent mode, follow the steps below.
 
    **Example:** "D:\Temp\syncfusionessentialblazor_x.x.x.x.exe" /Install silent /UNLOCKKEY:"product unlock key" /log    "C:\Temp\EssentialStudio_Product.log" /InstallPath:C:\Syncfusion\x.x.x.x /InstallSamples:true /CreateShortcut:true /   CreateStartMenuShortcut:true
 
-7. Essential Studio&reg; for Blazor is installed.
+7. Essential Studio<sup style="font-size:70%">&reg;</sup> for Blazor is installed.
 
-   N> x.x.x.x should be replaced with the Essential Studio&reg; version and the Product Unlock Key needs to be replaced with the Unlock Key for that version.
+   N> x.x.x.x should be replaced with the Essential Studio<sup style="font-size:70%">&reg;</sup> version and the Product Unlock Key needs to be replaced with the Unlock Key for that version.
 
 ## Command Line Uninstallation
 
-Syncfusion&reg; Essential&reg; Blazor can be uninstalled silently using the Command Line.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> Blazor can be uninstalled silently using the Command Line.
 
-1. Run the Syncfusion&reg; Blazor installer by double-clicking it. The Installer Wizard automatically opens and extracts the package.
+1. Run the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor installer by double-clicking it. The Installer Wizard automatically opens and extracts the package.
 
 2. The file syncfusionessentialblazor_(version).exe file will be extracted into the Temp directory.
 
@@ -130,4 +130,4 @@ Syncfusion&reg; Essential&reg; Blazor can be uninstalled silently using the Comm
 **Arguments:** "Copied installer file path\syncfusionessentialblazor_(version).exe" /uninstall silent <br /> <br />
 **Example:** "D:\Temp\syncfusionessentialblazor_x.x.x.x.exe" /uninstall silent
 
-7. Essential Studio&reg; for Blazor is uninstalled.
+7. Essential Studio<sup style="font-size:70%">&reg;</sup> for Blazor is uninstalled.

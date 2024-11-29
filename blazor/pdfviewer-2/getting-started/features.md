@@ -79,7 +79,7 @@ The table below provides a list of supported and non-supported features on both 
 
 N> Enable desktop mode on mobile devices using the [EnableDesktopMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableDesktopMode) property to view the toolbar as in desktop.
 
-N> Syncfusion&reg; provides the SfPdfViewer component for both Blazor Server and Blazor WebAssembly applications.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> provides the SfPdfViewer component for both Blazor Server and Blazor WebAssembly applications.
 <br />For both **Blazor WebAssembly App** and **Blazor Server App** use [SfPdfViewer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PdfViewer.SfPdfViewer.html) component in Syncfusion.Blazor.SfPdfViewer NuGet package. This component will not requires server-side processing to render the PDF files through web service.
 <br/>* For Windows, Linux and Mac (OSX) uses the sample Nuget [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer)
 
