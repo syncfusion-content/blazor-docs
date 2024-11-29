@@ -25,7 +25,6 @@ To learn about what are all the edit modes and edit types are available in Blazo
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @page "/"
-
 @using Syncfusion.Blazor.Grids
 @using BlazorApp1.Data
 
@@ -99,10 +98,11 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}      
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVACDDzLCOPwlKE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhziWBvqbwIbFth?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> * If columns.isIdentity is enabled, then it will be considered as a read-only column when editing and adding a record.
-> * You can disable editing for a particular column, by specifying columns.allowEditing to false.
+> * Grid uses `Activator.CreateInstance<TValue>()` to generate a new record when an insert operation is invoked, so it must have a parameterless constructors defined for the model class and any referenced complex type classes. To provide custom logic for object creation during editing, you can refer [here](#provide-new-item-or-edited-item-using-events).
+> * If [IsIdentity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsIdentity) is enabled, then it will be considered as a read-only column when editing and adding a record.
+> * You can disable editing for a particular column, by specifying Columns.AllowEditing to **false**.
 > * You can use the Insert key to add a new row to the grid and use the Delete key to delete the selected row from the grid.
 
 ## Toolbar with edit option
@@ -123,10 +123,10 @@ Here’s an example of how to enable the toolbar with edit option in the Grid:
 <SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="ShipCountry" TextAlign="TextAlign.Right" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120" ValidationRules="@(new ValidationRules{ Required=true,Number=true})"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="120" ValidationRules="@(new ValidationRules{ Required=true})"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120" ValidationRules="@(new ValidationRules{ Required=true,Number=true})"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="ShipCountry" TextAlign="TextAlign.Right" Width="150" ValidationRules="@(new ValidationRules{ Required=true})"></GridColumn>
     </GridColumns>
 </SfGrid>
 
@@ -195,192 +195,69 @@ namespace BlazorApp1.Data
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVACDDzLCOPwlKE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrfMiVbAESNqmNd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Disable editing for particular column
 
 In Grid component, you have an option to disable editing for a specific column. This feature is useful when you want to prevent editing certain columns, such as columns that contain calculated values or read-only data.
 
-To disable editing for a particular column, you can use the [AllowEditing]() property of the columns object. By setting this property to false, you can prevent editing for that specific column.
+To disable editing for a particular column, you can use the [AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowEditing) property of the columns object. By setting this property to **false**, you can prevent editing for that specific column.
 
 Here’s an example that demonstrates how to disable editing for the column in the Grid:
 
-
-```cshtml
-@using Syncfusion.Blazor.Grids
-
-<SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" Height ="315">
-   <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
-    <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-    </GridColumns>
-</SfGrid>
-
-@code{
-    public List<Order> Orders { get; set; }
-
-    protected override void OnInitialized()
-    {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
-    }
-
-    public class Order {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
-    }
-}
-
-```
-
-The following screenshot represents Editing with Default Mode.
-
-![Editing in Blazor DataGrid](./images/blazor-datagrid-editing.png)
-
-> * If you have set the isPrimaryKey property to true for a column, editing will be automatically disabled for that column.
-> * You can disble the particular row using actionBegin event.please refer this link.
-> * You can disble the particular cell using cellEdit event.please refer this link.
-
-## Disable editing for a particular row or cell
-
-Specific rows can be disabled from editing using the OnActionBegin event of the Grid based on the RequestType as BeginEdit.
-
-In the following sample, the rows that have the value for the ShipCountry column as “Russia” are prevented from being edited by updating the Cancel argument of the OnActionBegin event to true.
-
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @page "/"
-
 @using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.DropDowns
 @using BlazorApp1.Data
 
-<SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Edit", "Cancel", "Update" })">
-    <GridEvents OnActionBegin="OnActionBegin" TValue="OrderData"></GridEvents>
-    <GridEditSettings AllowEditing="true"></GridEditSettings>
+<div style="display:flex; margin:3px">
+    <label style="padding:  10px 10px 12px 0">Select column to disable editing</label>
+    <SfDropDownList style='margin-top:5px; height:30px' Width="130px" DataSource="@ColumnsList" Value="@SelectedColumn">
+        <DropDownListFieldSettings Value="Field" Text="HeaderText"></DropDownListFieldSettings>
+        <DropDownListEvents TValue="string" TItem="ColumnOption" ValueChange="OnColumnSelectionChange"></DropDownListEvents>
+    </SfDropDownList>
+</div>
+<SfGrid @ref="Grid" DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="100" ValidationRules="@(new ValidationRules{ Required=true})"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="120" ValidationRules="@(new ValidationRules{ Required=true})"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120" EditType="EditType.NumericEdit" ValidationRules="@(new ValidationRules{ Required=true,Min=1,Max=1000})"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="ShipCountry" EditType="EditType.DropDownEdit" TextAlign="TextAlign.Right" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120" ValidationRules="@(new ValidationRules{ Required=true})" AllowEditing="@(SelectedColumn != nameof(OrderData.OrderID))"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="120" ValidationRules="@(new ValidationRules{ Required=true})" AllowEditing="@(SelectedColumn != nameof(OrderData.CustomerID))"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120" EditType="EditType.NumericEdit" ValidationRules="@(new ValidationRules{ Required=true, Min=1, Max=1000})" AllowEditing="@(SelectedColumn != nameof(OrderData.Freight))"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="130" AllowEditing="@(SelectedColumn != nameof(OrderData.OrderDate))"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" EditType="EditType.DropDownEdit" TextAlign="TextAlign.Right" Width="150" AllowEditing="@(SelectedColumn != nameof(OrderData.ShipCountry))"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 @code {
     public List<OrderData> Orders { get; set; }
+    public SfGrid<OrderData> Grid;
+    public string SelectedColumn { get; set; } = "OrderID";
+    public bool option { get; set; } = true;
+
+    public class ColumnOption
+    {
+        public string Field { get; set; }
+        public string HeaderText { get; set; }
+    }
+
+    List<ColumnOption> ColumnsList = new List<ColumnOption>
+    {
+        new ColumnOption { Field = "OrderID", HeaderText = "Order ID" },
+        new ColumnOption { Field = "CustomerID", HeaderText = "Customer ID" },
+        new ColumnOption { Field = "Freight", HeaderText = "Freight" },
+        new ColumnOption { Field = "OrderDate", HeaderText = "Order Date" },
+        new ColumnOption { Field = "ShipCountry", HeaderText = "Ship Country" }
+    };
+
     protected override void OnInitialized()
     {
         Orders = OrderData.GetAllRecords();
     }
-    private void OnActionBegin(Syncfusion.Blazor.Grids.ActionEventArgs<OrderData> args)
+    private void OnColumnSelectionChange(ChangeEventArgs<string, ColumnOption> args)
     {
-        if (args.RequestType == Syncfusion.Blazor.Grids.Action.BeginEdit)
-        {
-            if (args.RowData.ShipCountry == "Russia")
-            {
-                args.Cancel = true;
-            }
-        }
-    }
-}
-{% endhighlight %}
-{% highlight c# tabtitle="OrderData.cs" %}
-public class OrderData
-{
-    public static List<OrderData> Orders = new List<OrderData>();
-
-    public OrderData() { }
-
-    public OrderData(int OrderID, string CustomerID, string ShipName, double Freight, DateTime? OrderDate, DateTime? ShippedDate, bool? IsVerified, string ShipCity, string ShipCountry, int employeeID)
-    {
-        this.OrderID = OrderID;
-        this.CustomerID = CustomerID;
-        this.ShipName = ShipName;
-        this.Freight = Freight;
-        this.OrderDate = OrderDate;
-        this.ShippedDate = ShippedDate;
-        this.IsVerified = IsVerified;
-        this.ShipCity = ShipCity;
-        this.ShipCountry = ShipCountry;
-        this.EmployeeID = employeeID; 
-    }
-
-    public static List<OrderData> GetAllRecords()
-    {
-        if (Orders.Count == 0)
-        {
-            Orders.Add(new OrderData(10248, "VINET", "Vins et alcools Chevalier", 32.38, new DateTime(1996, 7, 4), new DateTime(1996, 08, 07), true, "Reims", "France", 1));
-            Orders.Add(new OrderData(10249, "TOMSP", "Toms Spezialitäten", 11.61, new DateTime(1996, 7, 5), new DateTime(1996, 08, 07), false, "Münster", "Russia", 2));
-            Orders.Add(new OrderData(10250, "HANAR", "Hanari Carnes", 65.83, new DateTime(1996, 7, 6), new DateTime(1996, 08, 07), true, "Rio de Janeiro", "Brazil", 3));
-            Orders.Add(new OrderData(10251, "VINET", "Vins et alcools Chevalier", 41.34, new DateTime(1996, 7, 7), new DateTime(1996, 08, 07), false, "Lyon", "France", 1));
-            Orders.Add(new OrderData(10252, "SUPRD", "Suprêmes délices", 151.30, new DateTime(1996, 7, 8), new DateTime(1996, 08, 07), true, "Charleroi", "Belgium", 2));
-            Orders.Add(new OrderData(10253, "HANAR", "Hanari Carnes", 58.17, new DateTime(1996, 7, 9), new DateTime(1996, 08, 07), false, "Bern", "Russia", 3));
-            Orders.Add(new OrderData(10254, "CHOPS", "Chop-suey Chinese", 22.98, new DateTime(1996, 7, 10), new DateTime(1996, 08, 07), true, "Genève", "Switzerland", 2));
-            Orders.Add(new OrderData(10255, "VINET", "Vins et alcools Chevalier", 148.33, new DateTime(1996, 7, 11), new DateTime(1996, 08, 07), false, "Resende", "Russia", 1));
-            Orders.Add(new OrderData(10256, "HANAR", "Hanari Carnes", 13.97, new DateTime(1996, 7, 12), new DateTime(1996, 08, 07), true, "Paris", "France", 3));
-        }
-        return Orders;
-    }
-
-    public int OrderID { get; set; }
-    public string CustomerID { get; set; }
-    public string ShipName { get; set; }
-    public double? Freight { get; set; }
-    public DateTime? OrderDate { get; set; }
-    public DateTime? ShippedDate { get; set; }
-    public bool? IsVerified { get; set; }
-    public string ShipCity { get; set; }
-    public string ShipCountry { get; set; }
-    public int EmployeeID { get; set; } 
-}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVACDDzLCOPwlKE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-Use the Grid’s OnCellEdit event to disable a specific cell when editing in batch mode. 
-
-In the following sample, the cells that have the value for the ShipCountry column as “India” are prevented from being edited by updating the Cancel argument of the OnCellEdit event to true.
-
-{% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-@page "/"
-
-@using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
-
-<SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Edit", "Cancel", "Update" })">
-    <GridEvents OnCellEdit="OnCellEdit" TValue="OrderData"></GridEvents>
-    <GridEditSettings AllowEditing="true" Mode="EditMode.Batch"></GridEditSettings>
-    <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="100" ValidationRules="@(new ValidationRules{ Required=true})"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="120" ValidationRules="@(new ValidationRules{ Required=true})"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120" EditType="EditType.NumericEdit" ValidationRules="@(new ValidationRules{ Required=true,Min=1,Max=1000})"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="ShipCountry" EditType="EditType.DropDownEdit" TextAlign="TextAlign.Right" Width="150"></GridColumn>
-    </GridColumns>
-</SfGrid>
-
-@code {
-    public List<OrderData> Orders { get; set; }
-    protected override void OnInitialized()
-    {
-        Orders = OrderData.GetAllRecords();
-    }
-    private void OnCellEdit(Syncfusion.Blazor.Grids.CellEditArgs<OrderData> args)
-    {
-        if (args.RowData.ShipCountry == "India" && args.ColumnName == "ShipCountry")
-        {
-            args.Cancel = true;
-        }
+        SelectedColumn = args.Value;
     }
 }
 {% endhighlight %}
@@ -411,12 +288,12 @@ public class OrderData
         {
             Orders.Add(new OrderData(10248, "VINET", "Vins et alcools Chevalier", 32.38, new DateTime(1996, 7, 4), new DateTime(1996, 08, 07), true, "Reims", "France", 1));
             Orders.Add(new OrderData(10249, "TOMSP", "Toms Spezialitäten", 11.61, new DateTime(1996, 7, 5), new DateTime(1996, 08, 07), false, "Münster", "Germany", 2));
-            Orders.Add(new OrderData(10250, "HANAR", "Hanari Carnes", 65.83, new DateTime(1996, 7, 6), new DateTime(1996, 08, 07), true, "Rio de Janeiro", "India", 3));
+            Orders.Add(new OrderData(10250, "HANAR", "Hanari Carnes", 65.83, new DateTime(1996, 7, 6), new DateTime(1996, 08, 07), true, "Rio de Janeiro", "Brazil", 3));
             Orders.Add(new OrderData(10251, "VINET", "Vins et alcools Chevalier", 41.34, new DateTime(1996, 7, 7), new DateTime(1996, 08, 07), false, "Lyon", "France", 1));
             Orders.Add(new OrderData(10252, "SUPRD", "Suprêmes délices", 151.30, new DateTime(1996, 7, 8), new DateTime(1996, 08, 07), true, "Charleroi", "Belgium", 2));
             Orders.Add(new OrderData(10253, "HANAR", "Hanari Carnes", 58.17, new DateTime(1996, 7, 9), new DateTime(1996, 08, 07), false, "Bern", "Switzerland", 3));
             Orders.Add(new OrderData(10254, "CHOPS", "Chop-suey Chinese", 22.98, new DateTime(1996, 7, 10), new DateTime(1996, 08, 07), true, "Genève", "Switzerland", 2));
-            Orders.Add(new OrderData(10255, "VINET", "Vins et alcools Chevalier", 148.33, new DateTime(1996, 7, 11), new DateTime(1996, 08, 07), false, "Resende", "India", 1));
+            Orders.Add(new OrderData(10255, "VINET", "Vins et alcools Chevalier", 148.33, new DateTime(1996, 7, 11), new DateTime(1996, 08, 07), false, "Resende", "Brazil", 1));
             Orders.Add(new OrderData(10256, "HANAR", "Hanari Carnes", 13.97, new DateTime(1996, 7, 12), new DateTime(1996, 08, 07), true, "Paris", "France", 3));
         }
         return Orders;
@@ -436,13 +313,17 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVACDDzLCOPwlKE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBTMWBYiLcvZECc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+> * If you have set the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property to **true** for a column, editing will be automatically disabled for that column.
+> * You can disble the particular row using [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event.
+> * You can disble the particular cell using [OnCellEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnCellEdit) event.
 
 ## Editing template column
 
 The editing template column feature in the Grid allows you to create custom editing templates for specific columns in the grid. This feature is particularly useful when you need to customize the editing experience for certain columns, such as using custom input controls or displaying additional information during editing.
 
-To enable the editing template column feature, you need to define the field property for the specific column in the grid’s configuration. The field property maps the column to the corresponding field name in the data source, allowing you to edit the value of that field.
+To enable the editing template column feature, you need to define the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) property for the specific column in the grid’s configuration. The `Field` property maps the column to the corresponding field name in the data source, allowing you to edit the value of that field.
 
 In the below demo, the ShipCountry column is rendered with the template.
 
@@ -456,16 +337,13 @@ In the below demo, the ShipCountry column is rendered with the template.
 @using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" Toolbar="@(new string[] {"Add", "Edit" ,"Delete","Update","Cancel" })">
-
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true">
-
     </GridEditSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="100" ValidationRules="@(new ValidationRules{ Required=true})"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="120" ValidationRules="@(new ValidationRules{ Required=true})"></GridColumn>
         <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120" EditType="EditType.NumericEdit" ValidationRules="@(new ValidationRules{ Required=true,Min=1,Max=1000})"></GridColumn>
         <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="ShipCountry" EditType="EditType.DropDownEdit" TextAlign="TextAlign.Right" Width="150">
-
             <Template>
                 @{
                     var Order = (context as OrderData);
@@ -538,16 +416,20 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLTiMVEWAvGBnfF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## Customize delete confirmation dialog
 
 Customizing the delete confirmation dialog in Grid allows you to personalize the appearance, content, and behavior of the dialog that appears when you attempts to delete an item. You can modify properties like header, showCloseIcon, and height to tailor the edit dialog to your specific requirements. Additionally, you can override default localization strings to provide custom text for buttons or other elements within the dialog.
 
-To customize the delete confirmation dialog, you can utilize the toolbarClick event. This event is triggered when a toolbar item, such as the delete button, is clicked.
+To customize the delete confirmation dialog, you can use the [OnActionBegin]() event of the Grid. This event lets you cancel the default delete behavior and show a custom confirmation dialog, allowing users to confirm or cancel the delete action.
 
-> To enable the confirmation dialog for the delete operation in the Grid, you can set the showDeleteConfirmDialog property of the editSettings configuration to true.
-> You can refer the Grid Default text list for more localization.
+> Enable delete functionality in the Grid using AllowDeleting in GridEditSettings.
+> Use a SfDialog to create a custom confirmation dialog.
+> Handle the OnActionBegin event to cancel the default delete action and show the custom dialog.
+> Perform the delete operation programmatically if the user confirms the action.
 
-The following example that demonstrates how to customize the delete confirmation dialog using the toolbarClick event:
+The following example that demonstrates how to customize the delete confirmation dialog using the custom dialog:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -786,100 +668,70 @@ In the following example, the DropDownList component is rendered within the edit
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
-@page "/"
-
 @using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Inputs
-@using BlazorApp1.Data
+@using Syncfusion.Blazor.DropDowns
 
-<SfGrid DataSource="@Orders" Toolbar="@(new string[] {"Add", "Edit" ,"Delete","Update","Cancel" })">
-    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
+<SfGrid DataSource="@Details" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" >
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal">
+    </GridEditSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="100" ValidationRules="@(new ValidationRules{ Required=true})"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="120" ValidationRules="@(new ValidationRules{ Required=true})"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="OrderDate" Format="d" TextAlign="TextAlign.Right" Width="120" EditType="EditType.DatePickerEdit" ValidationRules="@(new ValidationRules{ Required=true})"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120" EditType="EditType.NumericEdit" ValidationRules="@(new ValidationRules{ Required=true,Min=1,Max=1000})"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.IsVerified) HeaderText="Verified" TextAlign="TextAlign.Right" Width="150" ValidationRules="@(new ValidationRules{ Required=true})">
-            <Template>
+        <GridColumn Field="@nameof(EmployeeDetails.Id)" HeaderText="Employee ID" IsPrimaryKey="true" TextAlign="TextAlign.Center" Width="90"></GridColumn>
+        <GridColumn Field="@nameof(EmployeeDetails.CustomerID)" HeaderText="Employee Name" TextAlign="TextAlign.Center" Width="100"></GridColumn>
+        <GridColumn Field="@nameof(EmployeeDetails.FeedbackDetails)" HeaderText="Employee Feedback" Type="ColumnType.Number" Width="120">
+            <EditTemplate>
                 @{
-                    var Order = (context as OrderData);
-                    <SfCheckBox Checked="@(Order.IsVerified)"></SfCheckBox>
+                    var Order = (context as EmployeeDetails);
+                    <SfDropDownList @ref="DropDownList" ID="Edge" DataSource="@DropDownEnumValue" @bind-Value="@((context as EmployeeDetails).FeedbackDetails)" TValue="Feedback" TItem="string" Placeholder="Feedback Detail" FloatLabelType="FloatLabelType.Always">
+                    </SfDropDownList>
                 }
-            </Template>
+            </EditTemplate>
         </GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code {
-    public List<OrderData> Orders { get; set; }
+@code{
+    SfDropDownList<Feedback, string> DropDownList;
+    public List<string> DropDownEnumValue = new List<string>();
+    public enum Feedback
+    {
+        Positive = 0,
+        Negative = 1
+    }
 
+    public class EmployeeDetails
+    {
+
+        public int Id { get; set; }
+        public string CustomerID { get; set; }
+        public Feedback FeedbackDetails { get; set; }
+
+    }
     protected override void OnInitialized()
     {
-        Orders = OrderData.GetAllRecords();
-    }
-}
-{% endhighlight %}
-{% highlight c# tabtitle="OrderData.cs" %}
-public class OrderData
-{
-    public static List<OrderData> Orders = new List<OrderData>();
-
-    public OrderData() { }
-
-    public OrderData(int OrderID, string CustomerID, string ShipName, double Freight, DateTime? OrderDate, DateTime? ShippedDate, bool? IsVerified, string ShipCity, string ShipCountry, int employeeID)
-    {
-        this.OrderID = OrderID;
-        this.CustomerID = CustomerID;
-        this.ShipName = ShipName;
-        this.Freight = Freight;
-        this.OrderDate = OrderDate;
-        this.ShippedDate = ShippedDate;
-        this.IsVerified = IsVerified;
-        this.ShipCity = ShipCity;
-        this.ShipCountry = ShipCountry;
-        this.EmployeeID = employeeID; 
-    }
-
-    public static List<OrderData> GetAllRecords()
-    {
-        if (Orders.Count == 0)
+        foreach (string item in Enum.GetNames(typeof(Feedback)))
         {
-            Orders.Add(new OrderData(10248, "VINET", "Vins et alcools Chevalier", 32.38, new DateTime(1996, 7, 4), new DateTime(1996, 08, 07), true, "Reims", "France", 1));
-            Orders.Add(new OrderData(10249, "TOMSP", "Toms Spezialitäten", 11.61, new DateTime(1996, 7, 5), new DateTime(1996, 08, 07), false, "Münster", "Germany", 2));
-            Orders.Add(new OrderData(10250, "HANAR", "Hanari Carnes", 65.83, new DateTime(1996, 7, 6), new DateTime(1996, 08, 07), true, "Rio de Janeiro", "Brazil", 3));
-            Orders.Add(new OrderData(10251, "VINET", "Vins et alcools Chevalier", 41.34, new DateTime(1996, 7, 7), new DateTime(1996, 08, 07), false, "Lyon", "France", 1));
-            Orders.Add(new OrderData(10252, "SUPRD", "Suprêmes délices", 151.30, new DateTime(1996, 7, 8), new DateTime(1996, 08, 07), true, "Charleroi", "Belgium", 2));
-            Orders.Add(new OrderData(10253, "HANAR", "Hanari Carnes", 58.17, new DateTime(1996, 7, 9), new DateTime(1996, 08, 07), false, "Bern", "Switzerland", 3));
-            Orders.Add(new OrderData(10254, "CHOPS", "Chop-suey Chinese", 22.98, new DateTime(1996, 7, 10), new DateTime(1996, 08, 07), true, "Genève", "Switzerland", 2));
-            Orders.Add(new OrderData(10255, "VINET", "Vins et alcools Chevalier", 148.33, new DateTime(1996, 7, 11), new DateTime(1996, 08, 07), false, "Resende", "Brazil", 1));
-            Orders.Add(new OrderData(10256, "HANAR", "Hanari Carnes", 13.97, new DateTime(1996, 7, 12), new DateTime(1996, 08, 07), true, "Paris", "France", 3));
+            DropDownEnumValue.Add(item);
         }
-        return Orders;
     }
-
-    public int OrderID { get; set; }
-    public string CustomerID { get; set; }
-    public string ShipName { get; set; }
-    public double? Freight { get; set; }
-    public DateTime? OrderDate { get; set; }
-    public DateTime? ShippedDate { get; set; }
-    public bool? IsVerified { get; set; }
-    public string ShipCity { get; set; }
-    public string ShipCountry { get; set; }
-    public int EmployeeID { get; set; } 
+    public List<EmployeeDetails> Details = Enumerable.Range(1, 8).Select(x => new EmployeeDetails()
+    {
+        Id = x,
+        CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID", "PETER", "BLOP", "CHRISTN" })[new Random().Next(8)],
+        FeedbackDetails = Feedback.Positive,
+    }).ToList();
 }
 {% endhighlight %}
 {% endtabs %}
 
-N> * Grid uses `Activator.CreateInstance<TValue>()` to generate a new record when an insert operation is invoked, so it must have a parameterless constructors defined for the model class and any referenced complex type classes. To provide custom logic for object creation during editing, you can refer [here](#provide-new-item-or-edited-item-using-events).
-<br/> * If [IsIdentity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsIdentity) is enabled, then it will be considered as a read-only column when editing and adding a record.
-<br/> * You can disable editing for a particular column by specifying
-[AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowEditing) to **false**.
-<br/>* You can disable adding for a particular column by specifying
-[AllowAdding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowAdding) to **false**.
-<br/>* You can disable editing of a record on double click by specifying
-[EditSettings.AllowEditOnDblClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_AllowEditOnDblClick) to **false**.
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVfsihYMwfNqnqV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Edit complex column
+
+The edit template for complex column in Grid is used to customize the editing experience when dealing with complex data structures. This capability is particularly useful for handling nested data objects within grid columns. By default, the grid binds complex data to column fields using the dot (.) operator. However, when you render custom elements, such as input fields, in the edit template for a complex column, you must use the (___) underscore operator instead of the dot (.) operator to bind the complex object.
+
+In the following sample, the input element is rendered in the edit template of the FirstName and LastName column. The edited changes can be saved using the name property of the input element. Since the complex data is bound to the FirstName and LastName column, The name property should be defined as Name__FirstName** and **Name__LastName, respectively, instead of using the dot notation (Name.FirstName and Name.LastName).
+
 
 ## Toolbar with edit option
 
