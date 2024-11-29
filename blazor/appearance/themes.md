@@ -32,7 +32,7 @@ The following list of themes are included in the Syncfusion Blazor components li
 
 The Syncfusion Blazor Bootstrap Theme is designed based on Bootstrap v3, whereas the Bootsrap4 theme is designed based on Bootstrap v4.
 
-## Optimized CSS files
+## Optimized CSS Themes
 
 By default, Syncfusion Blazor themes include styles for both **normal** and **bigger** size modes within the main `<theme_name>.css` file. While this ensures comprehensive styling support, it increases the file size. To address this, we offer optimized theme files named `<theme_name>-lite.css`, which include styles exclusively for the **normal** size mode, omitting the **bigger** size mode styles. Using these lightweight theme files significantly reduces the file size, improving load times and enhancing overall application performance, particularly when the bigger size mode is not required.
 
