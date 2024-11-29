@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Overview of Blazor SfPdfViewer Component | Syncfusion
-description: Checkout and learn about overview of the Syncfusion Blazor SfPdfViewer component and much more details.
+title: Overview of Blazor SfPdfViewer Component | Syncfusion®
+description: Checkout and learn about overview of the Syncfusion® Blazor SfPdfViewer component and much more details.
 platform: Blazor
 control: SfPdfViewer
 documentation: ug

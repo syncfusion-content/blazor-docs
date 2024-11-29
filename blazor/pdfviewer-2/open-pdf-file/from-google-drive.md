@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Open PDF files from Google Drive in SfPdfViewer Component | Syncfusion
-description: Learn here all about how to Open PDF files from Google Drive in Syncfusion Blazor SfPdfViewer component and much more details.
+title: Open PDF files from Google Drive in SfPdfViewer Component | Syncfusion®
+description: Learn here all about how to Open PDF files from Google Drive in Syncfusion® Blazor SfPdfViewer component and much more details.
 platform: Blazor
 control: SfPdfViewer
 documentation: ug
@@ -99,7 +99,7 @@ Start by following the steps provided in this [link](https://blazor.syncfusion.c
 
 ```
 
-N> Replace **Your Google Drive Folder ID** with your actual Google Drive folder ID, **Your Application name** with your actual application name, **File Name to be Loaded into Syncfusion SfPdfViewer** with the actual file name you want to load from the Azure container to the Syncfusion SfPdfViewer and **Your Path to the OAuth 2.0 Client IDs JSON file** with the actual path to your OAuth 2.0 Client IDs JSON file
+N> Replace **Your Google Drive Folder ID** with your actual Google Drive folder ID, **Your Application name** with your actual application name, **File Name to be Loaded into Syncfusion® SfPdfViewer** with the actual file name you want to load from the Azure container to the Syncfusion® SfPdfViewer and **Your Path to the OAuth 2.0 Client IDs JSON file** with the actual path to your OAuth 2.0 Client IDs JSON file
 
 N> The **FolderId** part is the unique identifier for the folder. For example, if your folder URL is: `https://drive.google.com/drive/folders/abc123xyz456`, then the folder ID is `abc123xyz456`.
 

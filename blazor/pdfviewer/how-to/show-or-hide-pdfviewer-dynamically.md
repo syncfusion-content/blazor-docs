@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Show or hide the pdfviewer dynamically in Blazor | Syncfusion
-description: Learn here all about how to show or hide the pdfviewer dynamically in Syncfusion Blazor PDF Viewer component and more.
+title: Show or hide the pdfviewer dynamically in Blazor | Syncfusion®
+description: Learn here all about how to show or hide the pdfviewer dynamically in Syncfusion® Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug

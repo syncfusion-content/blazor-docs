@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with SfPdfViewer in Blazor Server App | Syncfusion
+title: Getting Started with SfPdfViewer in Blazor Server App | Syncfusion®
 description: Learn how to getting started with SfPdfViewer control in Blazor Server-side application. You can view and comment on PDFs in ease and also can fill fields. 
 platform: Blazor
 control: SfPdfViewer
@@ -9,7 +9,7 @@ documentation: ug
 
 # View PDF files using PDF Viewer Component in the Blazor Server app
 
-In this section, we'll guide you through the process of adding Syncfusion's Blazor PDF Viewer (Next Gen) component to your Blazor Server app. We'll break it down into simple steps to make it easy to follow. Additionally, you can find a fully functional example project on our [GitHub repository](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/PDFViewer%20%202/BlazorServerApp/PDFViewerSample).
+In this section, we'll guide you through the process of adding Syncfusion®'s Blazor PDF Viewer (Next Gen) component to your Blazor Server app. We'll break it down into simple steps to make it easy to follow. Additionally, you can find a fully functional example project on our [GitHub repository](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/PDFViewer%20%202/BlazorServerApp/PDFViewerSample).
 
 ## Prerequisites
 
@@ -28,7 +28,7 @@ Add the following NuGet packages into the Blazor Server app.
 * [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer) 
 * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)
 
-## Register Syncfusion Blazor Service
+## Register Syncfusion® Blazor Service
 
 * In the **~/_Imports.razor** file, add the following namespaces:
 
@@ -41,7 +41,7 @@ Add the following NuGet packages into the Blazor Server app.
 {% endhighlight %}
 {% endtabs %}
 
-* Register the Syncfusion Blazor Service in the **~/Program.cs** file.
+* Register the Syncfusion® Blazor Service in the **~/Program.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="~/Program.cs" hl_lines="3 11 14" %}
@@ -58,7 +58,7 @@ builder.Services.AddServerSideBlazor();
 
 builder.Services.AddSignalR(o => { o.MaximumReceiveMessageSize = 102400000; });
 
-// Add Syncfusion Blazor service to the container.
+// Add Syncfusion® Blazor service to the container.
 builder.Services.AddSyncfusionBlazor();
 
 var app = builder.Build();
@@ -76,9 +76,9 @@ Add the following stylesheet and script to the head section of the **~/Pages/_Ho
 {% highlight cshtml %}
 
 <head>
-    <!-- Syncfusion Blazor PDF Viewer (Next Gen) control's theme style sheet -->
+    <!-- Syncfusion® Blazor PDF Viewer (Next Gen) control's theme style sheet -->
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-    <!-- Syncfusion Blazor PDF Viewer (Next Gen) control's scripts -->
+    <!-- Syncfusion® Blazor PDF Viewer (Next Gen) control's scripts -->
     <script src="_content/Syncfusion.Blazor.SfPdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
 </head>
 
@@ -87,7 +87,7 @@ Add the following stylesheet and script to the head section of the **~/Pages/_Ho
 
 ## Adding Blazor PDF Viewer (Next Gen) Component
 
-Add the Syncfusion PDF Viewer (Next Gen) component in the **~/Pages/Index.razor** file
+Add the Syncfusion® PDF Viewer (Next Gen) component in the **~/Pages/Index.razor** file
 
 {% tabs %}
 {% highlight razor %}
@@ -106,7 +106,7 @@ N> If you don't provide the [DocumentPath](https://help.syncfusion.com/cr/blazor
 
 ## Run the application
 
-Run the application, and the PDF file will be displayed using Syncfusion's Blazor PDF Viewer (Next Gen) component in your browser.
+Run the application, and the PDF file will be displayed using Syncfusion®'s Blazor PDF Viewer (Next Gen) component in your browser.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hZVzNWqXLSZpnuzc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor SfPdfViewer Component](gettingstarted-images/blazor-pdfviewer.png)" %}
 
