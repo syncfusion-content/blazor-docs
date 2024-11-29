@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Getting Started with Blazor PDF Viewer (Next Gen) Component in WSL mode
+# Getting Started with Blazor PDF Viewer (Next Gen) in WSL mode
 
 To run the Syncfusion® Blazor PDF Viewer (Next Gen) component in WSL (Windows Subsystem for Linux) mode, follow these steps:
 
