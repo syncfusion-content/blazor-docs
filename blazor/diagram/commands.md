@@ -1026,8 +1026,6 @@ The following code illustrates how to zoom-in/zoom out the diagram.
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Buttons
 
-
-
 <SfButton Content="Zoom" OnClick="@OnZoom" />
 
 <SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes" Connectors="@Connectors"/>
@@ -1083,7 +1081,6 @@ The following code illustrates how to execute nudge command.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Buttons
-
 
 <SfButton Content="NudgeLeft" OnClick="@NudgeLeft" />
 <SfDiagramComponent @ref="diagram" Height="600px" />
