@@ -19,7 +19,7 @@ Customizing the styles of rows in a Syncfusion Grid allows you to modify the app
 
 You can customize the appearance of the rows by using the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDataBound) event. This event triggers for every row when it is bound to the data source. In the event handler, you can get the [RowDataBoundEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.RowDataBoundEventArgs-1.html) object, which contains details of the row. You can use this object to modify the row’s appearance, add custom elements, or perform any other customization.
 
-Here’s an example of how you can use the `RowDataBound` event to customize the styles of rows based on the value of the Freight column. This example involves checking the value of the Freight column for each row and adding a CSS class to the row based on the value. The CSS classes below-30, below-80, and above-80 can then be defined in your stylesheet to apply the desired styles to the rows.
+Here’s an example of how you can use the `RowDataBound` event to customize the styles of rows based on the value of the **Freight** column. This example involves checking the value of the Freight column for each row and adding a CSS class to the row based on the value. The CSS classes **below-30**, **below-80**, and **above-80** can then be defined in your stylesheet to apply the desired styles to the rows.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -134,7 +134,7 @@ You can apply styles to the rows using CSS selectors. The Grid provides a class 
 
 **Customize alternate rows**
 
-You can customize the appearance of the alternate rows using CSS. This can be useful for improving the readability of the data and making it easier to distinguish between rows. By default, Syncfusion Grid provides the CSS class .e-altrow to style the alternate rows. You can customize this default style by overriding the .e-altrow class with your custom CSS styles.
+You can customize the appearance of the alternate rows using CSS. This can be useful for improving the readability of the data and making it easier to distinguish between rows. By default, Syncfusion Grid provides the CSS class **.e-altrow** to style the alternate rows. You can customize this default style by overriding the **.e-altrow** class with your custom CSS styles.
 
 To change the background color of the alternate rows, you can add the following CSS code to your application’s stylesheet:
 
@@ -223,7 +223,7 @@ To change the background color of the alternate rows, you can add the following 
 
 **Customize selected row**
 
-You can customize the appearance of the selected row using CSS. This is useful when you want to highlight the currently selected row for improve the visual appeal of the Grid. By default, the Grid provides the CSS class .e-selectionbackground to style the selected row. You can customize this default style by overriding the .e-selectionbackground class with your own custom CSS styles.
+You can customize the appearance of the selected row using CSS. This is useful when you want to highlight the currently selected row for improve the visual appeal of the Grid. By default, the Grid provides the CSS class **.e-selectionbackground** to style the selected row. You can customize this default style by overriding the **.e-selectionbackground** class with your own custom CSS styles.
 
 To change the background color of the selected row, you can add the following CSS code to your application:
 
@@ -233,7 +233,7 @@ To change the background color of the selected row, you can add the following CS
 }
 ```
 
-Here’s an example of how to use the .e-selectionbackground class to style the selected row:
+Here’s an example of how to use the **.e-selectionbackground** class to style the selected row:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -429,9 +429,9 @@ In the below example, we will demonstrate how to dynamically change the height o
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZBJWDgtqYsIJUYQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> * The `RowHeight` property can only be used to set the height of the entire grid row. It cannot be used to set the height of individual cells within a row.
-> * The `RowHeight` property applies the height to all rows in the grid, including the header and footer rows.
-> * You can also set the height for a specific row using the `RowHeight` property of the corresponding row object in the [RowDataBound](https://blazor.syncfusion.com/documentation/datagrid/events#rowdatabound) event.
+> The `RowHeight` property can only be used to set the height of the entire grid row. It cannot be used to set the height of individual cells within a row.
+> The `RowHeight` property applies the height to all rows in the grid, including the header and footer rows.
+> You can also set the height for a specific row using the `RowHeight` property of the corresponding row object in the [RowDataBound](https://blazor.syncfusion.com/documentation/datagrid/events#rowdatabound) event.
 
 ### Customize row height for particular row
 
@@ -439,7 +439,7 @@ Customizing the row height for a particular row can be useful when you want to d
 
 The `RowHeight` property of the Grid component allows you to set the height of all rows in the grid to a specific value. However, if you want to customize the row height for a specific row based on the row data, you can use the `RowDataBound` event. This event is triggered every time a request is made to access row information, element, or data, and before the row element is appended to the Grid element.
 
-In the below example, the row height for the row with OrderID as ‘10249’ is set as ‘90px’ using the `RowDataBound` event.
+In the below example, the row height for the row with **OrderID** as ‘10249’ is set as ‘90px’ using the `RowDataBound` event.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -541,7 +541,7 @@ In the below example, the row height for the row with OrderID as ‘10249’ is 
 
 The Row Hover feature in Grid provides a visual effect when the mouse pointer hovers over the rows, making it easy to highlight and identify the selected row. This feature can also improve the readability of data in the grid. The row hover effect can be enabled or disabled using the [EnableHover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableHover) property of the Grid component.
 
-By default, the `EnableHover` property is set to true, which means that the row hovering effect is enabled. To disable the row hover effect, set the `EnableHover` property to false.
+By default, the `EnableHover` property is set to **true**, which means that the row hovering effect is enabled. To disable the row hover effect, set the `EnableHover` property to **false**.
 
 Here is an example that demonstrates how to enable/disable row hover based on the Switch Component:
 
@@ -635,13 +635,13 @@ Here is an example that demonstrates how to enable/disable row hover based on th
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDhpiDUZpjrcFKJP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> The `EnableHover` property applies to the entire grid, not individual rows or columns.
+> The enableHover property applies to the entire grid, not individual rows or columns.
 
 ## Row pinning (Frozen)
 
 The Syncfusion Blazor DataGrid allows you to freeze rows to keep them visible while scrolling vertically through large datasets. This feature enhances the experience by maintaining important information within view at all times.
 
-In the following example, the [FrozenRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenRows) property is set to 2. This configuration freezes the top two rows of the grid, and they will remain fixed in their positions while the rest of the grid can be scrolled vertically.
+In the following example, the [FrozenRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenRows) property is set to **2**. This configuration freezes the top two rows of the grid, and they will remain fixed in their positions while the rest of the grid can be scrolled vertically.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -750,10 +750,10 @@ In the following example, the [FrozenRows](https://help.syncfusion.com/cr/blazor
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjrTMjUtTMnyFhpX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> * Frozen rows should not be set outside the grid view port.
-> * Frozen Grid will support row virtualization feature, which helps to improve the Grid performance while loading a large dataset.
-> * The frozen feature is supported only for the rows that are visible in the current view.
-> * You can use both [FrozenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenColumns) property and [FrozenRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenRows) property in the same application.
+> Frozen rows should not be set outside the grid view port.
+> Frozen Grid will support row virtualization feature, which helps to improve the Grid performance while loading a large dataset.
+> The frozen feature is supported only for the rows that are visible in the current view.
+> You can use both [FrozenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenColumns) property and [FrozenRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenRows) property in the same application.
 
 ### Change default frozen rows line color
 
@@ -867,9 +867,7 @@ By applying this CSS class, you can set the background color of frozen rows to t
 
 ### Limitations
 
-Frozen row is not compatible with the following features:
-
-1. Autofill
+Frozen row is not compatible with the Autofill feature.
 
 ## Adding a new row programmatically
 
@@ -877,8 +875,8 @@ The Syncfusion Blazor DataGrid provides a way to add a new row to the grid progr
 
 The `AddRecordAsync` method takes two parameters:
 
-* The **data** object representing the new row to be added
-* The **index** at which the new row should be inserted. If no index is specified, the new row will be added at the end of the Grid.
+> The **data** object representing the new row to be added
+> The **index** at which the new row should be inserted. If no index is specified, the new row will be added at the end of the Grid.
 
 Here’s an example of how to add a new row using the `AddRecordAsync` method:
 
@@ -911,7 +909,7 @@ Here’s an example of how to add a new row using the `AddRecordAsync` method:
 
     protected override void OnInitialized()
     {
-        Orders = OrderData.GetAllRecords(); // Assuming this method fetches your initial data
+        Orders = OrderData.GetAllRecords();
     }
 
     public async Task AddRow()
@@ -1023,35 +1021,142 @@ Here’s an example of how to add a new row using the `AddRecordAsync` method:
 
 Grid provides several methods to retrieve row data and elements. This feature is useful when you need to access specific rows, perform custom operations, or manipulate the data displayed in the grid.
 
-* [GetRowIndexByPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetRowIndexByPrimaryKeyAsync_System_Object_): The method allows you to retrieve the row index based on a specific primary key value or row data.
+1. [GetRowIndexByPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetRowIndexByPrimaryKeyAsync_System_Object_): The method allows you to retrieve the row index based on a specific primary key value or row data.
 
-    ```cs
-    <SfButton id="GetRowIndexByPrimaryKey" @onclick="GetDataHandler">GetRowIndexByPrimaryKey</SfButton>
-    <SfGrid @ref="grid" DataSource="@Orders">
-    ........
-    </SfGrid>
-    @code{
-    SfGrid<Order> grid;
-        private async Task GetDataHandler()
-        {
-            var rowIndex = await Grid.GetRowIndexByPrimaryKeyAsync(10250);  // pass primary key value here.
-            Console.WriteLine(rowIndex);
-        }
-    }
-    ```
-
-* [GetSelectedRowIndexesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetSelectedRowIndexesAsync): This methods allows you to get the collection of selected row indexes.
-
-    ```cs
-    <SfButton id="GetSelectedRowIndexes " @onclick="GetDataHandler">GetSelectedRowIndexes </SfButton>
-    <SfGrid @ref="grid" DataSource="@Orders">
-    ........
-    </SfGrid>
-    @code{
-    SfGrid<Order> grid;
+```cs
+<SfButton id="GetRowIndexByPrimaryKey" @onclick="GetDataHandler">GetRowIndexByPrimaryKey</SfButton>
+<SfGrid @ref="grid" DataSource="@Orders">
+ ........
+</SfGrid>
+@code{
+   SfGrid<Order> grid;
     private async Task GetDataHandler()
     {
-            var SelectedRowIndexes = await grid.GetSelectedRowIndexesAsync();  
+        var rowIndex = await Grid.GetRowIndexByPrimaryKeyAsync(10250);  // pass primary key value here.
     }
+}
+```
+
+2. [GetSelectedRowIndexesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetSelectedRowIndexesAsync): This methods allows you to get the collection of selected row indexes.
+
+```cs
+<SfButton id="GetSelectedRowIndexes " @onclick="GetDataHandler">GetSelectedRowIndexes </SfButton>
+<SfGrid @ref="grid" DataSource="@Orders">
+ ........
+</SfGrid>
+@code{
+   SfGrid<Order> grid;
+   private async Task GetDataHandler()
+   {
+        var SelectedRowIndexes = await grid.GetSelectedRowIndexesAsync();  
+   }
+}
+```
+
+## Master Detail DataGrid
+
+The DataGrid has an option to visualize details of a record in another DataGrid in a master and detail manner. By clicking the master DataGrid row, the detail DataGrid will be populated with the corresponding data. This can be achieved as follows:
+
+Using the [RowSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowSelected) event of the Master DataGrid, get the selected record details. Based on these selected record details, filter the data using the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Query) property of the Detail DataGrid and bind the resultant data to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property of the Detail DataGrid.
+
+In the following sample, click the row in the master DataGrid, which shows the details in another(detail) DataGrid.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@page "/"
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Data
+
+<SfGrid SelectedRowIndex=2 DataSource="@Employees">                
+    <GridEvents RowSelected="RowSelecthandler" TValue="EmployeeData"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(EmployeeData.CustomerName) HeaderText="Customer Name" Width="110"> </GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.CompanyName) HeaderText="Company Name" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.Address) Width="110"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.Country) Width="110"></GridColumn>
+    </GridColumns>
+</SfGrid>
+<br>
+<div class='e-statustext'>Showing orders of Customer: <b>@SelectedCustomer</b></div>
+
+<SfGrid DataSource="@GridData" Query="@(new Query().Where("EmployeeID", "equal", RowIndex))">
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" Width="110"> </GridColumn>
+        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipAddress) HeaderText="Ship Address" Width="110"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public IEnumerable<Order> GridData { get; set; }
+    public string SelectedCustomer { get; set; }
+    public int? RowIndex { get; set; } = 1003;
+
+    public void RowSelecthandler(RowSelectEventArgs<EmployeeData> Args)
+    {
+        SelectedCustomer = Args.Data.CustomerName;
+        RowIndex = Args.Data.EmployeeID;
     }
-    ```
+
+    List<EmployeeData> Employees = new List<EmployeeData>
+    {
+        new EmployeeData() {EmployeeID = 1001, CustomerName="Thomas Hardy", CompanyName="Around the Horn", Address="120 Hanover Sq.", Country="UK"},
+        new EmployeeData() {EmployeeID = 1002, CustomerName="Christina Berglund", CompanyName="Berglunds snabbköp", Address="Berguvsvägen 8", Country="Sweden"},
+        new EmployeeData() {EmployeeID = 1003, CustomerName="Frédérique Citeaux", CompanyName="Blondesddsl père et fils", Address="24, place Kléber", Country="France"},
+        new EmployeeData() {EmployeeID = 1004, CustomerName="Yang Wang", CompanyName="Chop-suey Chinese", Address="Hauptstr. 29", Country="Switzerland"},
+        new EmployeeData() {EmployeeID = 1005, CustomerName="Roland Mendel", CompanyName="Ernst Handel", Address="Kirchgasse 6", Country="Austria"},
+    };
+    List<Order> Orders = new List<Order> {
+        new Order() {EmployeeID = 1001, OrderID=001, ShipName="Around the Horn", ShipCountry="UK", ShipAddress="Brook Farm Stratford St. Mary"},
+        new Order() {EmployeeID = 1001, OrderID=002, ShipName="Around the Horn", ShipCountry="UK", ShipAddress="Brook Farm Stratford St. Mary"},
+        new Order() {EmployeeID = 1001, OrderID=003, ShipName="Around the Horn", ShipCountry="UK", ShipAddress="Brook Farm Stratford St. Mary"},
+        new Order() {EmployeeID = 1001, OrderID=004, ShipName="Around the Horn", ShipCountry="UK", ShipAddress="Brook Farm Stratford St. Mary"},
+        new Order() {EmployeeID = 1001, OrderID=005, ShipName="Around the Horn", ShipCountry="UK", ShipAddress="Brook Farm Stratford St. Mary"},
+        new Order() {EmployeeID = 1002, OrderID=006, ShipName="Berglunds snabbköp", ShipCountry="Sweden", ShipAddress="Berguvsvägen 8"},
+        new Order() {EmployeeID = 1002, OrderID=007, ShipName="Berglunds snabbköp", ShipCountry="Sweden", ShipAddress="Berguvsvägen 8"},
+        new Order() {EmployeeID = 1002, OrderID=008, ShipName="Berglunds snabbköp", ShipCountry="Sweden", ShipAddress="Berguvsvägen 8"},
+        new Order() {EmployeeID = 1002, OrderID=009, ShipName="Berglunds snabbköp", ShipCountry="Sweden", ShipAddress="Berguvsvägen 8"},
+        new Order() {EmployeeID = 1002, OrderID=010, ShipName="Berglunds snabbköp", ShipCountry="Sweden", ShipAddress="Berguvsvägen 8"},
+        new Order() {EmployeeID = 1003, OrderID=011, ShipName="Blondel père et fils", ShipCountry="France", ShipAddress="24, place Kléber"},
+        new Order() {EmployeeID = 1003, OrderID=012, ShipName="Blondel père et fils", ShipCountry="France", ShipAddress="24, place Kléber"},
+        new Order() {EmployeeID = 1003, OrderID=013, ShipName="Blondel père et fils", ShipCountry="France", ShipAddress="24, place Kléber"},
+        new Order() {EmployeeID = 1003, OrderID=014, ShipName="Blondel père et fils", ShipCountry="France", ShipAddress="24, place Kléber"},
+        new Order() {EmployeeID = 1003, OrderID=015, ShipName="Blondel père et fils", ShipCountry="France", ShipAddress="24, place Kléber"},
+        new Order() {EmployeeID = 1004, OrderID=016, ShipName="Chop-suey Chinese", ShipCountry="Switzerland", ShipAddress="Hauptstr. 31"},
+        new Order() {EmployeeID = 1004, OrderID=017, ShipName="Chop-suey Chinese", ShipCountry="Switzerland", ShipAddress="Hauptstr. 31"},
+        new Order() {EmployeeID = 1004, OrderID=018, ShipName="Chop-suey Chinese", ShipCountry="Switzerland", ShipAddress="Hauptstr. 31"},
+        new Order() {EmployeeID = 1004, OrderID=019, ShipName="Chop-suey Chinese", ShipCountry="Switzerland", ShipAddress="Hauptstr. 31"},
+        new Order() {EmployeeID = 1004, OrderID=020, ShipName="Chop-suey Chinese", ShipCountry="Switzerland", ShipAddress="Hauptstr. 31"},
+        new Order() {EmployeeID = 1005, OrderID=021, ShipName="Ernst Handel", ShipCountry="Austria", ShipAddress="Kirchgasse 6"},
+        new Order() {EmployeeID = 1005, OrderID=022, ShipName="Ernst Handel", ShipCountry="Austria", ShipAddress="Kirchgasse 6"},
+        new Order() {EmployeeID = 1005, OrderID=023, ShipName="Ernst Handel", ShipCountry="Austria", ShipAddress="Kirchgasse 6"},
+        new Order() {EmployeeID = 1005, OrderID=024, ShipName="Ernst Handel", ShipCountry="Austria", ShipAddress="Kirchgasse 6"},
+        new Order() {EmployeeID = 1005, OrderID=025, ShipName="Ernst Handel", ShipCountry="Austria", ShipAddress="Kirchgasse 6"},
+    };
+
+    protected override void OnInitialized()
+    {
+        GridData = this.Orders;
+    }
+    public class EmployeeData
+    {
+        public int? EmployeeID { get; set; }
+        public string CustomerName { get; set; }
+        public string CompanyName { get; set; }
+        public string Address { get; set; }
+        public string Country { get; set; }
+    }
+    public class Order
+    {
+        public int? EmployeeID { get; set; }
+        public int? OrderID { get; set; }
+        public string ShipName { get; set; }
+        public string ShipCountry { get; set; }
+        public string ShipAddress { get; set; }
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrzCCLcgeRbJEvv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
