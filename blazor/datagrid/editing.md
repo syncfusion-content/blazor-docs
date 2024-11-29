@@ -376,8 +376,6 @@ The following image represents the new row added at the bottom of the DataGrid,
 
 ![Adding New Row at Bottom Position of Blazor DataGrid](./images/blazor-datagrid-add-new-row.png)
 
-N>* In Batch mode, while in edit mode, you can add a new row at bottom using the TAB key when you are on the last cell of the last row.
-
 ## Troubleshoot: Editing works only for first row
 
 The Editing functionalities can be performed based on the primary key value of the selected row. If **PrimaryKey** is not defined in the datagrid, the edit or delete action is performed in the first row.
