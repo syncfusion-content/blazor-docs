@@ -15,7 +15,7 @@ To know about how to **Adaptive UI Layout** in Blazor DataGrid Component, you ca
 
 {% youtube "youtube:https://www.youtube.com/watch?v=RFMGdOyEWFo"%}
 
-## Render adaptive dialog
+## Render adaptive dialogs
 
 The Syncfusion Blazor DataGrid offers a valuable feature for rendering adaptive dialogs, specifically designed to enhance the user experience on smaller screens. This feature proves especially useful for optimizing the interface on devices with limited screen real estate. The functionality is achieved by enabling the [EnableAdaptiveUI](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableAdaptiveUI) property, allowing the grid to render filter, sort, and edit dialogs in full-screen mode.
 
