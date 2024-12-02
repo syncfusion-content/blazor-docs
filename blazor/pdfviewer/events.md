@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor PDF Viewer Component | Syncfusion
-description: Checkout and learn here all about events in Syncfusion Blazor PDF Viewer component and much more details.
+title: Events in Blazor PDF Viewer Component | Syncfusion®
+description: Checkout and learn here all about events in Syncfusion® Blazor PDF Viewer component and much more details.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
 ---
 
-N> Syncfusion recommends using [Blazor PDF Viewer (NextGen)](https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/server-side-application) Component which provides fast rendering of pages and improved performance. Also, there is no need of external Web service for processing the files and ease out the deployment complexity. It can be used in Blazor Server, WASM and MAUI applications without any changes.
+N> Syncfusion® recommends using [Blazor PDF Viewer (NextGen)](https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/server-side-application) Component which provides fast rendering of pages and improved performance. Also, there is no need of external Web service for processing the files and ease out the deployment complexity. It can be used in Blazor Server, WASM and MAUI applications without any changes.
 
 # Events in Blazor PDF Viewer Component
 
@@ -62,7 +62,7 @@ The events provided in PDF Viewer component are listed out as follows:
 
 ## Adding PDF Viewer events to Blazor component
 
-The Syncfusion PDF Viewer events has to be wrapped inside the `PdfViewerEvents` tag.
+The Syncfusion® PDF Viewer events has to be wrapped inside the `PdfViewerEvents` tag.
 
 ```cshtml
 <SfPdfViewerServer DocumentPath="@DocumentPath" Height="500px" Width="1060px" >

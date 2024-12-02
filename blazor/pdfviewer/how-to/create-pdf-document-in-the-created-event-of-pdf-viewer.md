@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Create PDF document in the PDF Viewer created event | Syncfusion
-description: Learn here all about how to create PDF document in the created event of Syncfusion Blazor PDF Viewer component and more.
+title: Create PDF document in the PDF Viewer created event | Syncfusion®
+description: Learn here all about how to create PDF document in the created event of Syncfusion® Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Load office files in Blazor SfPdfViewer | Syncfusion
-description: Learn here all about how to load the microsoft office files like powerpoint in the Syncfusion Blazor SfPdfViewer component and more.
+title: Load office files in Blazor SfPdfViewer | Syncfusion®
+description: Learn here all about how to load the microsoft office files like powerpoint in the Syncfusion® Blazor SfPdfViewer component and more.
 platform: Blazor
 control: SfPdfViewer
 documentation: ug

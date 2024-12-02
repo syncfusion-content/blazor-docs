@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Keyboard accessibility in Blazor SfPdfViewer Component | Syncfusion
-description: Checkout and learn here all about Keyboard accessibility in Syncfusion Blazor SfPdfViewer component and more.
+title: Keyboard accessibility in Blazor SfPdfViewer Component | Syncfusion®
+description: Checkout and learn here all about Keyboard accessibility in Syncfusion® Blazor SfPdfViewer component and more.
 platform: Blazor
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Accessibility in Syncfusion Blazor SfPdfViewer components
+# Accessibility in Syncfusion® Blazor SfPdfViewer components
 
 The Blazor SfPdfViewer component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 

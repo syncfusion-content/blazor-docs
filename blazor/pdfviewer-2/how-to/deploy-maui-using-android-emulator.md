@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Deploy SfPdfViewer in Blazor MAUI in windows | Syncfusion
-description: Learn how to deploy SfPdfViewer in Blazor MAUI Application on Windows in Syncfusion Blazor SfPdfViewer component and much more details.
+title: Deploy SfPdfViewer in Blazor MAUI in windows | Syncfusion®
+description: Learn how to deploy SfPdfViewer in Blazor MAUI Application on Windows in Syncfusion® Blazor SfPdfViewer component and much more details.
 platform: Blazor
 control: SfPdfViewer
 documentation: ug
@@ -15,7 +15,7 @@ Refer [here](https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-sta
 
 ## Add PDF Viewer component
 
-Add the Syncfusion PDF Viewer (Next Gen) component in the **~/Pages/Index.razor** file.
+Add the Syncfusion® PDF Viewer (Next Gen) component in the **~/Pages/Index.razor** file.
 
 {% tabs %}
 {% highlight razor %}
