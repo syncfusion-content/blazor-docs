@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Update form field using context menu in Blazor PDF Viewer | Syncfusion
-description: Learn here all about how to update form field using context menu in Syncfusion Blazor PDF Viewer component and more.
+title: Update form field using context menu in Blazor PDF Viewer | Syncfusion®
+description: Learn here all about how to update form field using context menu in Syncfusion® Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Update form field using context menu in Blazor PDF Viewer Component
 
-You can update the form field's at runtime using the FormFieldClick event and UpdateFormFieldsAsync() method of PDF Viewer. The following code example explains how to open Context menu when you click on the form field and how to update the menu item content as form field's value. In this example, the Syncfusion’s ContextMenu component is used to update form field.
+You can update the form field's at runtime using the FormFieldClick event and UpdateFormFieldsAsync() method of PDF Viewer. The following code example explains how to open Context menu when you click on the form field and how to update the menu item content as form field's value. In this example, the Syncfusion®’s ContextMenu component is used to update form field.
 
 
 ```cshtml
