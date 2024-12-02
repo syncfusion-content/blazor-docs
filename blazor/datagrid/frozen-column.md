@@ -268,17 +268,17 @@ The following example demonstrates how to change the default frozen line color u
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LZLzWrNLBIWVbdGA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Limitations of Frozen Columns and Freeze Direction  
+## Limitations of frozen columns and freeze direction  
 
 The frozen columns and freeze direction features in Syncfusion Blazor DataGrid have the following limitations:
 
-**General Limitations for Frozen Columns** 
+**General limitations for frozen columns** 
 
 * Row Template  
 * Detail Template  
 * Hierarchy DataGrid  
 
-**Additional Limitations for Freeze Direction** 
+**Additional limitations for freeze direction** 
 
 * Infinite scroll in cache mode is not supported.  
 * Freeze direction in the stacked header is incompatible with column reordering.  
