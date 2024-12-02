@@ -316,8 +316,8 @@ public class OrderData
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDBTMWBYiLcvZECc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > * If you have set the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property to **true** for a column, editing will be automatically disabled for that column.
-> * You can disble the particular row using [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event.
-> * You can disble the particular cell using [OnCellEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnCellEdit) event.
+> * You can disable the particular row using [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event.
+> * You can disable the particular cell using [OnCellEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnCellEdit) event.
 
 ## Editing template column
 
@@ -424,9 +424,9 @@ Customizing the delete confirmation dialog in Grid allows you to personalize the
 
 To customize the delete confirmation dialog, you can use the [OnActionBegin]() event of the Grid. This event lets you cancel the default delete behavior and show a custom confirmation dialog, allowing users to confirm or cancel the delete action.
 
-> Enable delete functionality in the Grid using AllowDeleting in GridEditSettings.
-> Use a SfDialog to create a custom confirmation dialog.
-> Handle the OnActionBegin event to cancel the default delete action and show the custom dialog.
+> Enable delete functionality in the Grid using [AllowDeleting]() in [GridEditSettings]().
+> Use a [SfDialog]() to create a custom confirmation dialog.
+> Handle the `OnActionBegin` event to cancel the default delete action and show the custom dialog.
 > Perform the delete operation programmatically if the user confirms the action.
 
 The following example that demonstrates how to customize the delete confirmation dialog using the custom dialog:
@@ -664,7 +664,7 @@ public class OrderData
 
 The Syncfusion Grid provides a feature that allows you to edit enum type data in a grid column. This is particularly useful when you need to edit enumerated list data efficiently.
 
-In the following example, the DropDownList component is rendered within the editTemplate for the Employee Feedback column using ngTemplate. The enumerated list data can be bound to the Employee Feedback column using the two-way binding (@bind-Value).
+In the following example, the DropDownList component is rendered within the EditTemplate for the Employee Feedback column. The enumerated list data can be bound to the Employee Feedback column using the two-way binding (@bind-Value).
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -732,6 +732,91 @@ The edit template for complex column in Grid is used to customize the editing ex
 
 In the following sample, the input element is rendered in the edit template of the FirstName and LastName column. The edited changes can be saved using the name property of the input element. Since the complex data is bound to the FirstName and LastName column, The name property should be defined as Name__FirstName** and **Name__LastName, respectively, instead of using the dot notation (Name.FirstName and Name.LastName).
 
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@page "/"
+
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Inputs
+@using BlazorApp1.Data
+
+<SfGrid DataSource="@Employees" Height="315" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field="@nameof(EmployeeDetails.EmployeeID)" HeaderText="Employee ID" TextAlign="TextAlign.Right" IsPrimaryKey="true" Width="120">
+        </GridColumn>
+        <GridColumn Field="Name.FirstName" HeaderText="First Name" Width="200">
+
+            <EditTemplate>
+                <SfTextBox ID="Name___FirstName" @bind-Value="@((context as EmployeeDetails).Name.FirstName)"></SfTextBox>
+            </EditTemplate>
+        </GridColumn>
+        <GridColumn Field="Name.LastName" HeaderText="Last Name" Width="200">
+            <EditTemplate>
+                <SfTextBox ID="Name___LastName" @bind-Value="@((context as EmployeeDetails).Name.LastName)"></SfTextBox>
+            </EditTemplate>
+        </GridColumn>
+        <GridColumn Field="@nameof(EmployeeDetails.Title)" HeaderText="Title" Width="150">
+        </GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<EmployeeDetails> Employees { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Employees = EmployeeDetails.GetAllRecords();
+    }
+}
+
+{% endhighlight %}
+{% highlight c# tabtitle="EmployeeDetails.cs" %}
+namespace BlazorApp1.Data
+{
+    public class EmployeeDetails
+    {
+        public EmployeeDetails() { }
+
+        public EmployeeDetails(int employeeID, string firstName, string lastName, string title)
+        {
+            EmployeeID = employeeID;
+            Name = new Name { FirstName = firstName, LastName = lastName };
+            Title = title;
+        }
+
+        public static List<EmployeeDetails> GetAllRecords()
+        {
+            return new List<EmployeeDetails>
+            {
+                new EmployeeDetails(1, "Nancy", "Davolio", "Sales Representative"),
+                new EmployeeDetails(2, "Andrew", "Fuller", "Vice President, Sales"),
+                new EmployeeDetails(3, "Janet", "Leverling", "Sales Manager"),
+                new EmployeeDetails(4, "Margaret", "Peacock", "Inside Sales Coordinator"),
+                new EmployeeDetails(5, "Steven", "Buchanan", "Sales Representative"),
+                new EmployeeDetails(6, "Michael", "Suyama", "Marketing Coordinator"),
+                new EmployeeDetails(7, "Robert", "King", "Sales Representative"),
+                new EmployeeDetails(8, "Laura", "Callahan", "Marketing Specialist"),
+                new EmployeeDetails(9, "Anne", "Dodsworth", "Sales Manager"),
+                new EmployeeDetails(10, "Andrew", "Davies", "Vice President, Operations")
+            };
+        }
+
+        public int EmployeeID { get; set; }
+        public Name Name { get; set; }
+        public string Title { get; set; }
+    }
+
+    public class Name
+    {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLpWBZBCPEnQmvE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Toolbar with edit option
 
