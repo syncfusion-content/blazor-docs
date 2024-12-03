@@ -111,7 +111,7 @@ The following example demonstrates how to define a `Template` for the **Employee
 {% endhighlight %}
 {% endtabs %}
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VZhAMiNMBnKKvMuz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
+![Render image in a column](./images/render-image-column-template.png)
 
 > The [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) option allows to define any HTML content within a column.
 
@@ -299,38 +299,40 @@ public class EmployeeDetails
 To render a custom component in a grid column, you need to define a [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) for the column using the column `Template` property. In the following code, we rendered the [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) component in the **Order Status** column by defining the `Template` property.
 
 ```csharp
- <SfDropDownList TValue="string" Placeholder="Order Placed" PopupWidth="150" PopupHeight="150" TItem="EmployeeNames" DataSource="@EmployeeDetails">
-                    <DropDownListFieldSettings Value="Status"></DropDownListFieldSettings>
- </SfDropDownList>
+<SfDropDownList TValue="string" Placeholder="Order Placed" PopupWidth="150" PopupHeight="150" TItem="EmployeeNames" @bind-Value="@Data.OrderStatus" DataSource="@EmployeeDetails">
+    <DropDownListFieldSettings Value="Status"></DropDownListFieldSettings>
+</SfDropDownList>
 ```
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders">
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) TextAlign="TextAlign.Right" HeaderText="Employee ID" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.OrderStatus) HeaderText="Order Status" TextAlign="TextAlign.Right" Width="150">
+        <GridColumn Field=@nameof(OrderDetails.OrderID) TextAlign="TextAlign.Right" HeaderText="Employee ID" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer ID"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" Format="C2"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.OrderStatus) HeaderText="Order Status" TextAlign="TextAlign.Right" Width="150">
             <Template>
-                <SfDropDownList TValue="string" Placeholder="Order Placed" PopupWidth="150" PopupHeight="150" TItem="EmployeeNames" DataSource="@EmployeeDetails">
-                    <DropDownListFieldSettings Value="Status"></DropDownListFieldSettings>
-                </SfDropDownList>
+                @{
+                    var Data = (context as OrderDetails);
+                    <SfDropDownList TValue="string" Placeholder="Order Placed" PopupWidth="150" PopupHeight="150" TItem="EmployeeNames" @bind-Value="@Data.OrderStatus" DataSource="@EmployeeDetails">
+                        <DropDownListFieldSettings Value="Status"></DropDownListFieldSettings>
+                    </SfDropDownList>
+                }
             </Template>
         </GridColumn>
     </GridColumns>
 </SfGrid>
 @code {
-    public List<OrderData> Orders { get; set; }
+    public List<OrderDetails> Orders { get; set; }
     public List<EmployeeNames> EmployeeDetails { get; set; }
     
     protected override void OnInitialized()
     {
-        Orders = OrderData.GetAllRecords();
+        Orders = OrderDetails.GetAllRecords();
 
         EmployeeDetails = Enumerable.Range(1, 3).Select(x => new EmployeeNames()
             {
@@ -345,54 +347,50 @@ To render a custom component in a grid column, you need to define a [Template](h
     }
 }
 {% endhighlight %}
-{% highlight c# tabtitle="OrderData.cs" %}
-public class OrderData
+{% highlight c# tabtitle="OrderDetails.cs" %}
+public class OrderDetails
+{
+    public static List<OrderDetails> order = new List<OrderDetails>();
+    public OrderDetails(int OrderID, string CustomerId, double Freight, string Orderstatus)
     {
-        public static List<OrderData> Orders = new List<OrderData>();
-        public OrderData()
-        {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerId;
+        this.Freight = Freight;
+        this.OrderStatus = Orderstatus; 
 
-        }
-        public OrderData(int? OrderID, string CustomerID, double Freight, string Title, string OrderStatus)
+    }
+    public static List<OrderDetails> GetAllRecords()
+    {
+        if (order.Count == 0)
         {
-           this.OrderID = OrderID;
-           this.CustomerID = CustomerID;
-           this.Freight = Freight;
-           this.Title = Title;
-           this.OrderStatus = OrderStatus;            
+            order.Add(new OrderDetails(10248, "VINET", 32.38, "Order Placed"));
+            order.Add(new OrderDetails(10249, "TOMSP", 11.61, "Processing"));
+            order.Add(new OrderDetails(10250, "HANAR", 65.83, "Order Placed"));
+            order.Add(new OrderDetails(10251, "VICTE", 41.34, "Order Placed"));
+            order.Add(new OrderDetails(10252, "SUPRD", 51.3, "Processing"));
+            order.Add(new OrderDetails(10253, "HANAR", 58.17, "Processing"));
+            order.Add(new OrderDetails(10254, "CHOPS", 22.98, "Order Placed"));
+            order.Add(new OrderDetails(10255, "RICSU", 148.33, "Processing"));
+            order.Add(new OrderDetails(10256, "WELLI", 13.97, "Order Placed"));
+            order.Add(new OrderDetails(10257, "HILAA", 81.91, "Processing"));
+            order.Add(new OrderDetails(10258, "ERNSH", 140.51, "Order Placed"));
+            order.Add(new OrderDetails(10259, "CENTC", 3.25, "Processing"));
+            order.Add(new OrderDetails(10260, "OTTIK", 55.09, "Order Placed"));
+            order.Add(new OrderDetails(10261, "QUEDE", 3.05, "Order Placed"));
+            order.Add(new OrderDetails(10262, "RATTC", 48.29, "Processing"));
         }
-        public static List<OrderData> GetAllRecords()
-        {
-            if (Orders.Count() == 0)
-            {
-                int code = 10;
-                for (int i = 1; i < 2; i++)
-                {
-                    Orders.Add(new OrderData(10248, "Nancy",32.14, "Sales Representative", "Order Placed"));
-                    Orders.Add(new OrderData(10249, "Andrew", 33.33, "Vice President, Sales", "Processing"));
-                    Orders.Add(new OrderData(10250, "Janet", 56.78, "Sales Manager", "Delivered"));
-                    Orders.Add(new OrderData(10251, "Margaret",43.34, "Inside Sales Coordinator", "Delivered"));
-                    Orders.Add(new OrderData(10252, "Steven", 17.98, "Sales Manager", "Delivered"));
-                    Orders.Add(new OrderData(10253, "Michael", 53.33, "Sales Representative", "Processing"));
-                    Orders.Add(new OrderData(10254, "Robert", 78.99, "Vice President, Sales", "Delivered"));
-                    Orders.Add(new OrderData(10255, "Anne", 46.66, "Inside Sales Coordinator", "Order Placed"));
-                    Orders.Add(new OrderData(10256, "Laura", 98.76, "Sales Manager", "Delivered"));
-                    code += 5;
-                }
-            }
-            return Orders;
-        }
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public double Freight { get; set; }
-        public string Title { get; set; }
-        public string OrderStatus { get; set; }
-    }  
+        return order;
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public string OrderStatus { get; set; } 
+}  
 {% endhighlight %}
 {% endtabs %}
 
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhKiMZsUppLpTZe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBJCrtKzUHwTXIk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Render Chip component in a column
 
@@ -569,7 +567,6 @@ public class OrderDetails
 
 The conditional column [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) allows you to display template elements based on specific conditions.
 
-
 In the following code, checkbox is rendered based on **Discontinued** field value in the datasource. This data can be accessed inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) using the implicit named parameter **context**.
 
 {% tabs %}
@@ -666,7 +663,6 @@ In the following code, the button component is rendered in the **Employee Data**
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
-
 
 <SfGrid @ref="Grid" ID="Grid" DataSource="@EmployeeData">
     <GridEvents TValue="EmployeeDetails" RowSelected="OnRowSelected"></GridEvents>
@@ -833,7 +829,7 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VthJiiBVViweNEBD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> Custom helpers can only be used inside the Template directive of a column.
+> Custom helpers can only be used inside the `Template` property of a column.
 
 ## Dynamically adding template column
 
@@ -1024,7 +1020,6 @@ This can be achieved by initially defining an anchor tag inside the column templ
 {% endhighlight %}
 {% endtabs %}
 
-
 In the above code, the url to be navigated is specified in the Link variable of the DataGrid data. Based on this, the page is routed to the corresponding url.
 
 After that, add new razor page for routing with routing url along with the parameters to be received, and initialize it with the required details.
@@ -1050,7 +1045,6 @@ After that, add new razor page for routing with routing url along with the param
 }  
 {% endhighlight %}
 {% endtabs %}
-
 
 The following GIF represents template routing in DataGrid
 ![Blazor DataGrid with routing template.](./images/blazor-datagrid-template-routing.gif)
