@@ -204,7 +204,7 @@ The following properties and classes are available in legend to customize the le
     </MapsLegendSettings>
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}' ShapeDataPath="Country"
-                   DataSource="MemberShipDetails" ShapePropertyPath='new string[] {"name"}' TValue="UNCouncilCountry">
+                   DataSource="MemberShipDetails" ShapePropertyPath='new string[] {"name"}' TValue="UNCouncil">
             <MapsShapeSettings ColorValuePath="Membership">
                 <MapsShapeColorMappings>
                     <MapsShapeColorMapping Value="Permanent" Color='new string[] {"#D84444"}' />
@@ -451,7 +451,7 @@ To hide the duplicate legend items in Maps, set the [RemoveDuplicateLegend](http
         new PopulationDetail
         {
             Name = "United States", Population = 325020000, Density = 33, Color = "yellow"
-        }
+        },
         new PopulationDetail
         {
             Name = "India", Population = 1198003000, Density = 364, Color = "blue"
@@ -497,11 +497,11 @@ The following properties and components are available to customize the toggle op
 @code{
     public class PopulationDetail
     {
-        public string Name;
-        public double Population;
-        public double Density;
-        public bool LegendVisibility;
-        public string Color;
+        public string Name { get; set; }
+        public double Population { get; set; }
+        public double Density { get; set; }
+        public bool LegendVisibility { get; set; }
+        public string Color { get; set; }
     };
     private List<PopulationDetail> populationDetails = new List<PopulationDetail> {
         new PopulationDetail

@@ -31,7 +31,7 @@ The [ShapeSelectionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
     </MapsZoomSettings>
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
-		    <MapsLayerSelectionSettings Enable="true">
+            <MapsLayerSelectionSettings Enable="true" Fill="Green"></MapsLayerSelectionSettings>
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
@@ -40,7 +40,7 @@ The [ShapeSelectionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
     SfMaps maps;
     public async Task ShapeSelectAsync()
     {
-        await maps.ShapeSelectionAsync(0, "Argentina", "Argentina");
+         await maps.ShapeSelectionAsync(0, "name", "Argentina");
     }
 }
 ```
@@ -66,7 +66,7 @@ The [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMap
     SfMaps maps;
     public void Refresh()
     {
-        await maps.Refresh();
+       maps.Refresh();
     }
 }
 ```
@@ -117,7 +117,7 @@ The [ZoomByPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Map
 ```cshtml
 @using Syncfusion.Blazor.Maps
 
-<button @onclick="ZoomByPosition">Print</button>
+<button @onclick="ZoomByPosition">ZoomByPosition</button>
 <SfMaps @ref="maps">
     <MapsZoomSettings Enable="true">
     </MapsZoomSettings>
@@ -153,7 +153,7 @@ The [ZoomToCoordinates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 ```cshtml
 @using Syncfusion.Blazor.Maps
 
-<button @onclick="ZoomToCoordinates">Print</button>
+<button @onclick="ZoomToCoordinates">ZoomToCoordinates</button>
 <SfMaps @ref="maps">
     <MapsZoomSettings Enable="true">
     </MapsZoomSettings>
