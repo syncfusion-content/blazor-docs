@@ -9,7 +9,7 @@ documentation: ug
 
 # Use dynamic templates in Blazor ListView based on device
 
-The Syncfusion Essential Blazor controls are desktop and mobile-friendly. So, you can use Syncfusion controls in both modes. The control templates are not always fixed. Applications may need to load various templates depending upon the device.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> Blazor controls are desktop and mobile-friendly. So, you can use Syncfusion<sup style="font-size:70%">&reg;</sup> controls in both modes. The control templates are not always fixed. Applications may need to load various templates depending upon the device.
 
 ## Integration
 

@@ -7,13 +7,13 @@ component: Common
 documentation: ug
 ---
 
-# How to upgrade Syncfusion Blazor Components to 18.1.0.36 version
+# How to upgrade Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components to 18.1.0.36 version
 
-To upgrade Syncfusion Blazor Components to 18.1.0.36 version, you need to check the following:
+To upgrade Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components to 18.1.0.36 version, you need to check the following:
 
 ## NuGet changes
 
-Previous versions of the Syncfusion Blazor NuGet package name is `Syncfusion.EJ2.Blazor`. From version 18.1.0.36, it will be `Syncfusion.Blazor`. Other Blazor packages will also have the same name changes.
+Previous versions of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor NuGet package name is `Syncfusion.EJ2.Blazor`. From version 18.1.0.36, it will be `Syncfusion.Blazor`. Other Blazor packages will also have the same name changes.
 
 For example, refer to the following table for changes in the Blazor packages name.
 
@@ -27,7 +27,7 @@ For example, refer to the following table for changes in the Blazor packages nam
 
 ## Namespace changes
 
-The previous version of Syncfusion Blazor contains the namespace `Syncfusion.EJ2.Blazor` followed by component package names such as Buttons, Charts, Grids, and Inputs. After 18.1.0.36 version, this has been modified to `Syncfusion.Blazor` followed by its package name. Check the following table for examples.
+The previous version of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor contains the namespace `Syncfusion.EJ2.Blazor` followed by component package names such as Buttons, Charts, Grids, and Inputs. After 18.1.0.36 version, this has been modified to `Syncfusion.Blazor` followed by its package name. Check the following table for examples.
 
 | Before 18.1.0.36 version | From 18.1.0.36 version |
 | ------------- | ------------- |

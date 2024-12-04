@@ -49,7 +49,7 @@ You can customize the text color of a disabled component by targeting its CSS cl
 
 ## Change remove icon color in chip
 
-To change the remove icon color in a chip within the Syncfusion Blazor MultiSelect component, you can use the following CSS style to customize it.
+To change the remove icon color in a chip within the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor MultiSelect component, you can use the following CSS style to customize it.
 
 {% highlight cshtml %}
 
