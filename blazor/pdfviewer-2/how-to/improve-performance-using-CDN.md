@@ -17,9 +17,9 @@ The Syncfusion®'s Blazor SfPdfViewer component allows to improve performance by
 ```html
 
 <head>
-    <!-- Syncfusion® Blazor PDF Viewer (Next Gen) control's theme style sheet -->
+    <!-- Syncfusion® Blazor PDF Viewer control's theme style sheet -->
     <link href="https://cdn.syncfusion.com/blazor/25.1.35/styles/bootstrap5.css" rel="stylesheet" />
-    <!-- Syncfusion® Blazor PDF Viewer (Next Gen) control's scripts -->
+    <!-- Syncfusion® Blazor PDF Viewer control's scripts -->
     <script src="https://cdn.syncfusion.com/blazor/25.1.35/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
 </head>
 
