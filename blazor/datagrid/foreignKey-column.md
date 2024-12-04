@@ -28,116 +28,102 @@ In this example, data is the local data source for the Grid, and **Employee Name
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.DropDowns
-@using BlazorApp1.Data
 
-<SfGrid DataSource="@Orders" Height="315" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
-    <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true"></GridEditSettings>
+<SfGrid DataSource="@Orders" Height="315">
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridForeignColumn Field=@nameof(OrderData.EmployeeID) HeaderText="Employee Name" ForeignKeyValue="FirstName" ForeignDataSource="@Employees" Width="150"></GridForeignColumn>
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridForeignColumn Field=@nameof(OrderDetails.EmployeeID) HeaderText="Employee Name" ForeignKeyValue="FirstName" ForeignDataSource="@Employees" Width="150"></GridForeignColumn>
+        <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipCity) HeaderText="Ship City" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 @code {
-    public List<OrderData> Orders { get; set; }
-    public List<EmployeeData> Employees { get; set; }
+    public List<OrderDetails> Orders { get; set; }
+    public List<EmployeeDetails> Employees { get; set; }
     protected override void OnInitialized()
     {
-        Orders = OrderData.GetAllRecords();
-        Employees = EmployeeData.GetAllRecords();
+        Orders = OrderDetails.GetAllRecords();
+        Employees = EmployeeDetails.GetAllRecords();
     }
 }
 {% endhighlight %}
-{% highlight c# tabtitle="OrderData.cs" %}
-    public class EmployeeData
+{% highlight c# tabtitle="OrderDetails.cs" %}
+public class OrderDetails
+{        
+    public static List<OrderDetails> order = new List<OrderDetails>();    
+    public OrderDetails(int OrderID, string Shipcity, int EmployeeId, double Freight)
     {
-        public static List<EmployeeData> Employees = new List<EmployeeData>();
-        public EmployeeData() 
-        { 
-
-        }
-        public EmployeeData(int? employeeID, string firstName)
-        {
-            EmployeeID = employeeID;
-            FirstName = firstName;
-        }
-        public static List<EmployeeData> GetAllRecords()
-        {
-            if (Employees.Count() == 0)
-            {
-                int code = 10;
-                for (int i = 1; i < 2; i++)
-                {
-                    Employees.Add(new EmployeeData( 1, "Nancy"));
-                    Employees.Add(new EmployeeData( 2, "Andrew"));
-                    Employees.Add(new EmployeeData( 3, "Janet"));
-                    Employees.Add(new EmployeeData( 4, "Nancy"));
-                    Employees.Add(new EmployeeData( 5, "Margaret"));
-                    Employees.Add(new EmployeeData( 6, "Steven"));
-                    Employees.Add(new EmployeeData( 7, "Janet"));
-                    Employees.Add(new EmployeeData( 8, "Andrew"));
-                    Employees.Add(new EmployeeData(9, "Nancy"));
-                    code += 5;
-                }
-            }
-            return Employees;
-        }
-        public int? EmployeeID { get; set; }
-        public string FirstName { get; set; }
+        this.OrderID = OrderID;
+        this.ShipCity = Shipcity;
+        this.EmployeeID = EmployeeId;
+        this.Freight = Freight; 
     }
-    public class OrderData
+    public static List<OrderDetails> GetAllRecords()
     {
-        public static List<OrderData> Orders = new List<OrderData>();        
-       
-        public OrderData()
+        if (order.Count == 0)
         {
-
+            order.Add(new OrderDetails(10248, "Reims", 5, 32.38));
+            order.Add(new OrderDetails(10249, "Münster", 6, 11.61));
+            order.Add(new OrderDetails(10250, "Rio de Janeiro", 4, 65.83));
+            order.Add(new OrderDetails(10251, "Lyon", 3, 41.34));
+            order.Add(new OrderDetails(10252, "Charleroi", 4, 51.3));
+            order.Add(new OrderDetails(10253, "Rio de Janeiro", 3, 58.17));
+            order.Add(new OrderDetails(10254, "Bern", 5, 22.98));
+            order.Add(new OrderDetails(10255, "Genève", 9, 48.33));
+            order.Add(new OrderDetails(10256, "Resende", 3, 13.97));
+            order.Add(new OrderDetails(10257, "San Cristóbal", 4, 81.91));
+            order.Add(new OrderDetails(10258, "Graz", 1, 40.51));
+            order.Add(new OrderDetails(10259, "México D.F.", 4, 3.25));
+            order.Add(new OrderDetails(10260, "Köln", 4, 55.09));
+            order.Add(new OrderDetails(10261, "Rio de Janeiro", 4, 3.05));
+            order.Add(new OrderDetails(10262, "Albuquerque", 8, 48.29));
         }
-        public OrderData(int? OrderID, int? EmployeeID, string ShipCity, double? Freight)
-        {
-           this.OrderID = OrderID;
-           this.EmployeeID = EmployeeID;
-           this.ShipCity = ShipCity;
-           this.Freight = Freight;            
-        }
-        public static List<OrderData> GetAllRecords()
-        {
-            if (Orders.Count() == 0)
-            {
-                int code = 10;
-                for (int i = 1; i < 2; i++)
-                {
-                    Orders.Add(new OrderData(10248,1, "Reims", 32.18));
-                    Orders.Add(new OrderData(10249,2, "Münster",33.33));
-                    Orders.Add(new OrderData(10250,3, "Rio de Janeiro",12.35));
-                    Orders.Add(new OrderData(10251,4, "Reims", 22.65));
-                    Orders.Add(new OrderData(10252,5, "Lyon", 63.43));
-                    Orders.Add(new OrderData(10253,6, "Charleroi",56.98));
-                    Orders.Add(new OrderData(10254,7, "Rio de Janeiro", 45.65));
-                    Orders.Add(new OrderData(10255,8, "Münster", 11.13));
-                    Orders.Add(new OrderData(10256,9, "Reims", 87.59));
-                    code += 5;
-                }
-            }
-            return Orders;
-        }
-        public int? OrderID { get; set; }
-        public int? EmployeeID { get; set; }
-        public string ShipCity { get; set; }
-        public double? Freight { get; set; }
+        return order;
     }
+    public int OrderID { get; set; }
+    public string ShipCity { get; set; }
+    public int EmployeeID { get; set; }
+    public double Freight { get; set; } 
+}
+public class EmployeeDetails
+{
+    public static List<EmployeeDetails> employee = new List<EmployeeDetails>();
+    public EmployeeDetails(int employeeID, string lastName, string firstName)
+    {
+        this.EmployeeID = employeeID;
+        this.LastName = lastName;
+        this.FirstName = firstName;
+    }
+    public static List<EmployeeDetails> GetAllRecords()
+    {
+        if (employee.Count == 0)
+        {
+            employee.Add(new EmployeeDetails(1, "Davolio", "Nancy"));
+            employee.Add(new EmployeeDetails(2, "Fuller", "Andrew"));
+            employee.Add(new EmployeeDetails(3, "Leverling", "Janet"));
+            employee.Add(new EmployeeDetails(4, "Peacock", "Margaret"));
+            employee.Add(new EmployeeDetails(5, "Buchanan", "Steven"));
+            employee.Add(new EmployeeDetails(6, "Suyama", "Michael"));
+            employee.Add(new EmployeeDetails(7, "King", "Robert"));
+            employee.Add(new EmployeeDetails(8, "Callahan", "Laura"));
+            employee.Add(new EmployeeDetails(9, "Dodsworth", "Anne"));
+        }
+        return employee;
+    }
+    public int EmployeeID { get; set; }
+    public string LastName { get; set; }
+    public string FirstName { get; set; }
+}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjrqNPVEApFgHAZq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhTWhNzzhjrqtUe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Binding remote data
 
-The Foreign key column in Syncfusion Grid allows you to bind remote data for a foreign key column. You can use  ```SfDataManager``` component instead of using ```DataSource```  property. 
+The Foreign key column in Syncfusion Grid allows you to bind remote data for a foreign key column. You can use  `SfDataManager` component instead of using `DataSource`  property. 
 
-This example demonstrates how to use the foreign key column with remote data binding using the ```ODataV4Adaptor``` in the grid:
+This example demonstrates how to use the foreign key column with remote data binding using the `ODataV4Adaptor` in the grid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -145,25 +131,25 @@ This example demonstrates how to use the foreign key column with remote data bin
 
 <SfGrid DataSource="@Orders" Height="315">
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-         <GridForeignColumn TValue="EmployeeData" Field=@nameof(OrderData.EmployeeID) HeaderText="Employee Name" ForeignKeyValue="FirstName" Width="150">
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+         <GridForeignColumn TValue="EmployeeData" Field=@nameof(OrderDetails.EmployeeID) HeaderText="Employee Name" ForeignKeyValue="FirstName" Width="150">
             <Syncfusion.Blazor.Data.SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Employees" CrossDomain="true" Adaptor=" Syncfusion.Blazor.Adaptors.ODataV4Adaptor">
             </Syncfusion.Blazor.Data.SfDataManager>
         </GridForeignColumn>
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipCity) HeaderText="Ship City" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 @code {
-    public List<OrderData> Orders { get; set; }  
+    public List<OrderDetails> Orders { get; set; }  
     protected override void OnInitialized()
     {
-        Orders = OrderData.GetAllRecords();      
+        Orders = OrderDetails.GetAllRecords();      
     }
 }
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
-      public class EmployeeData
+public class EmployeeData
     {
         public static List<EmployeeData> Employees = new List<EmployeeData>();
         public EmployeeData()
@@ -171,54 +157,52 @@ This example demonstrates how to use the foreign key column with remote data bin
 
         }
         
-        public int? EmployeeID { get; set; }
+        public int EmployeeID { get; set; }
         public string FirstName { get; set; }
     }
-    public class OrderData
+public class OrderDetails
+{    
+    public static List<OrderDetails> order = new List<OrderDetails>();
+    public OrderDetails(int OrderID, string Shipcity, int EmployeeId, double Freight)
     {
-        public static List<OrderData> Orders = new List<OrderData>();
+        this.OrderID = OrderID;
+        this.ShipCity = Shipcity;
+        this.EmployeeID = EmployeeId;
+        this.Freight = Freight; 
 
-        public OrderData()
-        {
-
-        }
-        public OrderData(int? OrderID, int? EmployeeID, string ShipCity, double? Freight)
-        {
-            this.OrderID = OrderID;
-            this.EmployeeID = EmployeeID;
-            this.ShipCity = ShipCity;
-            this.Freight = Freight;
-        }
-        public static List<OrderData> GetAllRecords()
-        {
-            if (Orders.Count() == 0)
-            {
-                int code = 10;
-                for (int i = 1; i < 2; i++)
-                {
-                    Orders.Add(new OrderData(10248, 1, "Reims", 32.18));
-                    Orders.Add(new OrderData(10249, 2, "Münster", 33.33));
-                    Orders.Add(new OrderData(10250, 3, "Rio de Janeiro", 12.35));
-                    Orders.Add(new OrderData(10251, 4, "Reims", 22.65));
-                    Orders.Add(new OrderData(10252, 5, "Lyon", 63.43));
-                    Orders.Add(new OrderData(10253, 6, "Charleroi", 56.98));
-                    Orders.Add(new OrderData(10254, 7, "Rio de Janeiro", 45.65));
-                    Orders.Add(new OrderData(10255, 8, "Münster", 11.13));
-                    Orders.Add(new OrderData(10256, 9, "Reims", 87.59));
-                    code += 5;
-                }
-            }
-            return Orders;
-        }
-        public int? OrderID { get; set; }
-        public int? EmployeeID { get; set; }
-        public string ShipCity { get; set; }
-        public double? Freight { get; set; }
     }
+    public static List<OrderDetails> GetAllRecords()
+    {
+        if (order.Count == 0)
+        {
+            order.Add(new OrderDetails(10248, "Reims", 5, 32.38));
+            order.Add(new OrderDetails(10249, "Münster", 6, 11.61));
+            order.Add(new OrderDetails(10250, "Rio de Janeiro", 4, 65.83));
+            order.Add(new OrderDetails(10251, "Lyon", 3, 41.34));
+            order.Add(new OrderDetails(10252, "Charleroi", 4, 51.3));
+            order.Add(new OrderDetails(10253, "Rio de Janeiro", 3, 58.17));
+            order.Add(new OrderDetails(10254, "Bern", 5, 22.98));
+            order.Add(new OrderDetails(10255, "Genève", 9, 48.33));
+            order.Add(new OrderDetails(10256, "Resende", 3, 13.97));
+            order.Add(new OrderDetails(10257, "San Cristóbal", 4, 81.91));
+            order.Add(new OrderDetails(10258, "Graz", 1, 40.51));
+            order.Add(new OrderDetails(10259, "México D.F.", 4, 3.25));
+            order.Add(new OrderDetails(10260, "Köln", 4, 55.09));
+            order.Add(new OrderDetails(10261, "Rio de Janeiro", 4, 3.05));
+            order.Add(new OrderDetails(10262, "Albuquerque", 8, 48.29));
+        }
+        return order;
+    }
+    public int OrderID { get; set; }
+    public string ShipCity { get; set; }
+    public int EmployeeID { get; set; }
+    public double Freight { get; set; } 
+}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "https://blazorplayground.syncfusion.com/embed/LjrJXMWBgWWmRbjx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
+<!-- cors issue {% previewsample "https://blazorplayground.syncfusion.com/embed/LjrJXMWBgWWmRbjx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}  -->
+![Foreign key column with remote data](./images/foreignkey-remote-data.png)
 
 > * For remote data, the sorting and grouping is done based on [ForeignKeyField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyField) instead of [ForeignKeyValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyValue).
 > * If [ForeignKeyField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyField) is not defined, then the column uses [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) property of **GridColumn** tag helper.
@@ -233,7 +217,6 @@ In the following code example, the Employee Name is a foreign key column. When e
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" Height="315" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
     <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true"></GridEditSettings>
@@ -247,7 +230,7 @@ In the following code example, the Employee Name is a foreign key column. When e
             </EditTemplate>
         </GridForeignColumn>
         <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 @code {
