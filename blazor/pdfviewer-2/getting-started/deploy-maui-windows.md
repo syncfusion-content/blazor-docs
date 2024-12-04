@@ -89,9 +89,9 @@ Add the following stylesheet and script to the head section of the **~/wwwroot/i
 {% highlight html %}
 
 <head>
-    <!-- Syncfusion&reg; Blazor PDF Viewer control's theme style sheet -->
+    <!-- Syncfusion Blazor PDF Viewer control's theme style sheet -->
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-    <!-- Syncfusion&reg; Blazor PDF Viewer control's scripts -->
+    <!-- Syncfusion Blazor PDF Viewer control's scripts -->
     <script src="_content/Syncfusion.Blazor.SfPdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
 </head>
 

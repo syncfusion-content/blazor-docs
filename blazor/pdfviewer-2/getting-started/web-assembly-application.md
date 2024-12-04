@@ -83,7 +83,7 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 builder.Services.AddMemoryCache();
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
-// Add Syncfusion&reg; Blazor service to the container.
+// Add Syncfusion Blazor service to the container.
 builder.Services.AddSyncfusionBlazor();
 await builder.Build().RunAsync();
 
@@ -98,9 +98,9 @@ Add the following stylesheet and script to the head section of the **wwwroot/ind
 {% highlight cshtml %}
 
 <head>
-    <!-- Syncfusion&reg; Blazor PDF Viewer control's theme style sheet -->
+    <!-- Syncfusion Blazor PDF Viewer control's theme style sheet -->
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-    <!-- Syncfusion&reg; Blazor PDF Viewer control's scripts -->
+    <!-- Syncfusion Blazor PDF Viewer control's scripts -->
     <script src="_content/Syncfusion.Blazor.SfPdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
 </head>
 

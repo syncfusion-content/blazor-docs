@@ -58,7 +58,7 @@ The following code example shows how to open and load the PDF file stored in Azu
         BlobServiceClient blobServiceClient = new BlobServiceClient(connectionString);
         //Container Name
         string containerName = "pdf-file";
-        //File Name to be loaded into Syncfusion&reg; PDF Viewer
+        //File Name to be loaded into Syncfusion PDF Viewer
         string fileName = "Python_Succinctly.pdf";
         BlobContainerClient blobContainerClient = blobServiceClient.GetBlobContainerClient(containerName);
         BlockBlobClient blockBlobClient = blobContainerClient.GetBlockBlobClient(fileName);
@@ -85,7 +85,7 @@ N> The **Azure.Storage.Blobs** NuGet package must be installed in your applicati
         //Connection String of Storage Account
         string connectionString = "Here Place Your Connection string";
         string shareName = "pdfdocument";
-        //File Name to be loaded into Syncfusion&reg; PDF Viewer
+        //File Name to be loaded into Syncfusion PDF Viewer
         string filePath = "Hive_Succinctly.pdf";
         ShareFileClient shareFileClient = new ShareFileClient(connectionString, shareName, filePath);
         Stream stream = shareFileClient.OpenRead();
@@ -135,7 +135,7 @@ N> The **System.Data.SqlClient** package must be installed in your application t
 
 ## Opening a PDF from file system
 
-There is an UI option in built-in toolbar to open the PDF file from local file system. If you want to achieve the same functionality while designing your own toolbar, you can use the following code example to load and open the PDF file. In this sample, the Syncfusion&reg;’s Uploader control is used for Blazor.
+There is an UI option in built-in toolbar to open the PDF file from local file system. If you want to achieve the same functionality while designing your own toolbar, you can use the following code example to load and open the PDF file. In this sample, the Syncfusion&reg; Uploader control is used for Blazor.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs

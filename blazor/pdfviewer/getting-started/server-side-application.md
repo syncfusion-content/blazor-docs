@@ -67,7 +67,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor().AddHubOptions(o => { o.MaximumReceiveMessageSize = 102400000; });
-// Add Syncfusion&reg; Blazor service to the container.
+// Add Syncfusion Blazor service to the container.
 builder.Services.AddSyncfusionBlazor();
 
 var app = builder.Build();
@@ -88,7 +88,7 @@ namespace BlazorApplication
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
-            // Add Syncfusion&reg; Blazor service to the container.
+            // Add Syncfusion Blazor service to the container.
             services.AddSyncfusionBlazor();
         }
         ...
@@ -110,7 +110,7 @@ Add the theme style sheet as below in the sever web app.
 {% highlight cshtml %}
 
 <head>
-    <!-- Syncfusion&reg; Blazor PDF Viewer controls theme style sheet -->
+    <!-- Syncfusion Blazor PDF Viewer controls theme style sheet -->
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
 </head>
 
@@ -132,9 +132,9 @@ Add the theme style sheet as below in the sever web app.
 
 <head>
     ....
-    <!-- Syncfusion&reg; Blazor PDF Viewer controls theme style sheet -->
+    <!-- Syncfusion Blazor PDF Viewer controls theme style sheet -->
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-    <!-- Syncfusion&reg; Blazor PDF Viewer controls scripts -->
+    <!-- Syncfusion Blazor PDF Viewer controls scripts -->
     <script src="_content/Syncfusion.Blazor.PdfViewer/scripts/syncfusion-blazor-pdfviewer.min.js" type="text/javascript"></script>
 </head>
 

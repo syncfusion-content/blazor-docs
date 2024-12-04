@@ -138,7 +138,7 @@ N> The **System.Data.SqlClient** package must be installed in your application t
 
 ## Opening a PDF from file system
 
-There is an UI option in built-in toolbar to open the PDF file from local file system. If you want to achieve the same functionality while designing your own toolbar, you can use the following code example to load and open the PDF file. In this sample, the Syncfusion&reg;’s Uploader control is used for Blazor.
+There is an UI option in built-in toolbar to open the PDF file from local file system. If you want to achieve the same functionality while designing your own toolbar, you can use the following code example to load and open the PDF file. In this sample, the Syncfusion&reg; Uploader control is used for Blazor.
 
 ```cshtml
 

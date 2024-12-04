@@ -56,7 +56,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor().AddHubOptions(o => { o.MaximumReceiveMessageSize = 102400000; });
 
-// Add Syncfusion&reg; Blazor service to the container.
+// Add Syncfusion Blazor service to the container.
 builder.Services.AddSyncfusionBlazor();
 
 var app = builder.Build();
@@ -72,9 +72,9 @@ Add the following stylesheet and script to the head section of the **~/Pages/_Ho
 {% highlight cshtml %}
 
 <head>
-    <!-- Syncfusion&reg; Blazor PDF Viewer control's theme style sheet -->
+    <!-- Syncfusion Blazor PDF Viewer control's theme style sheet -->
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-    <!-- Syncfusion&reg; Blazor PDF Viewer control's scripts -->
+    <!-- Syncfusion Blazor PDF Viewer control's scripts -->
     <script src="_content/Syncfusion.Blazor.SfPdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
 </head>
 

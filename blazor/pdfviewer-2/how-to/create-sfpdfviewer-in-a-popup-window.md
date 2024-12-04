@@ -9,7 +9,7 @@ documentation: ug
 
 # Create a SfPdfViewer within a popup window in Blazor
 
-For quick view, you might need to display the PDF file in a dialog window. The following code snippet explains how to use the SfPdfViewer component inside a dialog window. In this example, the Syncfusion&reg;’s dialog component is used for Blazor.
+For quick view, you might need to display the PDF file in a dialog window. The following code snippet explains how to use the SfPdfViewer component inside a dialog window. In this example, the Syncfusion&reg; dialog component is used for Blazor.
 
 ```cshtml
 
