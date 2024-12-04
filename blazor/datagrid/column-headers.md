@@ -488,11 +488,9 @@ In the following example, the [TextWrapSettings.WrapMode](https://help.syncfusio
         new DropDownOrder() { Text = "Header", Value = WrapMode.Header},
     };
     public async Task OnChange(ChangeEventArgs<WrapMode, DropDownOrder> Args)
-    {
-        
+    {        
         WrapModeValue = Args.Value;
-        await Grid.Refresh();
-        
+        await Grid.Refresh();        
     }  
 }
 {% endhighlight %}
@@ -1168,8 +1166,8 @@ The following example demonstrates how to customize the appearance of the **Orde
     <GridColumns>
         <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" CustomAttributes="@(new Dictionary<string, object>(){ { "class", "customcss" }})" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(OrderDetails.OrderDate) HeaderText="Order Date" CustomAttributes="@(new Dictionary<string, object>(){ { "class", "customcss" }})" Format="d" Type="Syncfusion.Blazor.Grids.ColumnType.Date" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(OrderDetails.ShippedDate) HeaderText="Shipped Date" Format="d" Type="Syncfusion.Blazor.Grids.ColumnType.Date" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.OrderDate) HeaderText="Order Date" CustomAttributes="@(new Dictionary<string, object>(){ { "class", "customcss" }})" Format="d" Type="ColumnType.Date" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShippedDate) HeaderText="Shipped Date" Format="d" Type="ColumnType.Date" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 <style>
