@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Import and Export annotations in Blazor PDF Viewer | Syncfusion®
-description: Learn here all about import and export annotations in Syncfusion® Blazor PDF Viewer component and more.
+title: Import and Export annotations in Blazor PDF Viewer | Syncfusion&reg;
+description: Learn here all about import and export annotations in Syncfusion&reg; Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
 ---
 
-N> Syncfusion® recommends using [Blazor PDF Viewer](https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/server-side-application) Component which provides fast rendering of pages and improved performance. Also, there is no need of external Web service for processing the files and ease out the deployment complexity. It can be used in Blazor Server, WASM and MAUI applications without any changes.
+N> Syncfusion&reg; recommends using [Blazor PDF Viewer](https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/server-side-application) Component which provides fast rendering of pages and improved performance. Also, there is no need of external Web service for processing the files and ease out the deployment complexity. It can be used in Blazor Server, WASM and MAUI applications without any changes.
 
 # Import and Export annotations in Blazor PDF Viewer Component
 

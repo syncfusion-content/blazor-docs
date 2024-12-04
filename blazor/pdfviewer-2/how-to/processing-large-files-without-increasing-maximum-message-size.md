@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Loading Large Files Without Increasing Maximum Message Size|Syncfusion®
+title: Loading Large Files Without Increasing Maximum Message Size|Syncfusion&reg;
 description: Learn here all about how to Processing Large Files Without Increasing Maximum Message Size in SfPdfViewer Component.
 platform: Blazor
 control: SfPdfViewer

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Suppress the error dialog in the Blazor PDF Viewer | Syncfusion®
-description: Learn here all about how to suppress the error dialog in Syncfusion® Blazor PDF Viewer component and more.
+title: Suppress the error dialog in the Blazor PDF Viewer | Syncfusion&reg;
+description: Learn here all about how to suppress the error dialog in Syncfusion&reg; Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Suppress the error dialog in Blazor PDF Viewer Component
 
-The Syncfusion®'s Blazor PDF Viewer component allows you to suppress or disable the error dialog box displayed in the PDF Viewer using the [**EnableErrorDialog**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PdfViewer.PdfViewerBase.html#Syncfusion_Blazor_PdfViewer_PdfViewerBase_EnableErrorDialog) property. The default value of the property is `true`.
+The Syncfusion&reg; Blazor PDF Viewer component allows you to suppress or disable the error dialog box displayed in the PDF Viewer using the [**EnableErrorDialog**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PdfViewer.PdfViewerBase.html#Syncfusion_Blazor_PdfViewer_PdfViewerBase_EnableErrorDialog) property. The default value of the property is `true`.
 
 The following code example shows how to suppress the error dialog.
 

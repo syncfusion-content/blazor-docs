@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Import annotations as objects in SfPdfViewer Component | Syncfusion®
-description: Learn here all about Import annotations as objects in Syncfusion® Blazor SfPdfViewer component and more.
+title: Import annotations as objects in SfPdfViewer Component | Syncfusion&reg;
+description: Learn here all about Import annotations as objects in Syncfusion&reg; Blazor SfPdfViewer component and more.
 platform: Blazor
 control: SfPdfViewer
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Import annotations as objects in Blazor SfPdfViewer Component
 
-The Syncfusion®'s Blazor SfPdfViewer component allows to import annotations from objects or streams instead of loading it as a file. To import such annotation objects, the SfPdfViewer control must export the PDF annotations as objects using the [ExportAnnotationsAsObjectAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ExportAnnotationsAsObjectAsync) method. Only the annotations objects that are exported from the SfPdfViewer can be imported.
+The Syncfusion&reg; Blazor SfPdfViewer component allows to import annotations from objects or streams instead of loading it as a file. To import such annotation objects, the SfPdfViewer control must export the PDF annotations as objects using the [ExportAnnotationsAsObjectAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ExportAnnotationsAsObjectAsync) method. Only the annotations objects that are exported from the SfPdfViewer can be imported.
 
 The following code example shows how to import annotations as objects, that are exported using the [ExportAnnotationsAsObjectAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ExportAnnotationsAsObjectAsync) method.
 

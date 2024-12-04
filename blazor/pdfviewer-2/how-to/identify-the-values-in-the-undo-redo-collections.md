@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Identify if the Viewer has values in the Undo, Redo stack | Syncfusion®
-description: Learn how to identify if the Viewer has values in Undo, Redo stack in Syncfusion® Blazor SfPdfViewer component and more.
+title: Identify if the Viewer has values in the Undo, Redo stack | Syncfusion&reg;
+description: Learn how to identify if the Viewer has values in Undo, Redo stack in Syncfusion&reg; Blazor SfPdfViewer component and more.
 platform: Blazor
 control: SfPdfViewer
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Identify if the SfPdfViewer has values in the Undo, Redo collections
 
-Syncfusion®'s Blazor SfPdfViewer component allows you to identify if the SfPdfViewer has values in the Undo and Redo collections using the [CanUndo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_CanUndo) and [CanRedo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_CanRedo) APIs of the SfPdfViewer.
+Syncfusion&reg; Blazor SfPdfViewer component allows you to identify if the SfPdfViewer has values in the Undo and Redo collections using the [CanUndo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_CanUndo) and [CanRedo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_CanRedo) APIs of the SfPdfViewer.
 
 The following code example shows how to achieve this based on the Undo Redo actions.
 

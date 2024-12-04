@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Measurement annotations in Blazor SfPdfViewer Component | Syncfusion®
-description: Checkout and learn here all about measurement annotations in Syncfusion® Blazor SfPdfViewer component and more.
+title: Measurement annotations in Blazor SfPdfViewer Component | Syncfusion&reg;
+description: Checkout and learn here all about measurement annotations in Syncfusion&reg; Blazor SfPdfViewer component and more.
 platform: Blazor
 control: SfPdfViewer
 documentation: ug

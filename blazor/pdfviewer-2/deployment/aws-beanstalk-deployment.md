@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blazor SfPdfViewer deployment in AWS BeanStalk | Syncfusion®
+title: Blazor SfPdfViewer deployment in AWS BeanStalk | Syncfusion&reg;
 description: AWS Elastic Beanstalk simplifies the deployment and management of scalable web applications and services on Linux-based infrastructure
 platform: Blazor
 control: SfPdfViewer
@@ -9,7 +9,7 @@ documentation: ug
 
 # Deploy Blazor Server App on AWS Elastic Beanstalk Linux
 
-In this section, we'll guide you through the process of adding Syncfusion®'s Blazor PDF Viewer component to your Blazor Server app and deploy it on AWS Elastic Beanstalk. We'll break it down into simple steps to make it easy to follow. Additionally, you can find a fully functional example project on our [GitHub repository](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Server%20Deployment/AWS/AWS_Elastic_Beanstalk/SfPdfViewerApp).
+In this section, we'll guide you through the process of adding Syncfusion&reg; Blazor PDF Viewer component to your Blazor Server app and deploy it on AWS Elastic Beanstalk. We'll break it down into simple steps to make it easy to follow. Additionally, you can find a fully functional example project on our [GitHub repository](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Server%20Deployment/AWS/AWS_Elastic_Beanstalk/SfPdfViewerApp).
 
 ## Prerequisites
 
@@ -28,7 +28,7 @@ Add the following NuGet packages into the Blazor Server app.
 * [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer) 
 * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)
 
-## Register Syncfusion® Blazor Service
+## Register Syncfusion&reg; Blazor Service
 
 * In the **~/_Imports.razor** file, add the following namespaces:
 
@@ -41,7 +41,7 @@ Add the following NuGet packages into the Blazor Server app.
 {% endhighlight %}
 {% endtabs %}
 
-* Register the Syncfusion® Blazor Service in the **~/Program.cs** file.
+* Register the Syncfusion&reg; Blazor Service in the **~/Program.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="~/Program.cs" hl_lines="3 9 12" %}
@@ -56,7 +56,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor().AddHubOptions(o => { o.MaximumReceiveMessageSize = 102400000; });
 
-// Add Syncfusion® Blazor service to the container.
+// Add Syncfusion&reg; Blazor service to the container.
 builder.Services.AddSyncfusionBlazor();
 
 var app = builder.Build();
@@ -72,9 +72,9 @@ Add the following stylesheet and script to the head section of the **~/Pages/_Ho
 {% highlight cshtml %}
 
 <head>
-    <!-- Syncfusion® Blazor PDF Viewer control's theme style sheet -->
+    <!-- Syncfusion&reg; Blazor PDF Viewer control's theme style sheet -->
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-    <!-- Syncfusion® Blazor PDF Viewer control's scripts -->
+    <!-- Syncfusion&reg; Blazor PDF Viewer control's scripts -->
     <script src="_content/Syncfusion.Blazor.SfPdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
 </head>
 
@@ -83,7 +83,7 @@ Add the following stylesheet and script to the head section of the **~/Pages/_Ho
 
 ## Adding Blazor PDF Viewer Component
 
-Add the Syncfusion® PDF Viewer component in the **~/Pages/Index.razor** file
+Add the Syncfusion&reg; PDF Viewer component in the **~/Pages/Index.razor** file
 
 {% tabs %}
 {% highlight razor %}
@@ -102,7 +102,7 @@ N> If you don't provide the `DocumentPath` property value, the PDF Viewer compon
 
 ## Run the application
 
-Run the application, and the PDF file will be displayed using Syncfusion®'s Blazor PDF Viewer component in your browser.
+Run the application, and the PDF file will be displayed using Syncfusion&reg; Blazor PDF Viewer component in your browser.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hZVzNWqXLSZpnuzc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor SfPdfViewer Component](aws-benstalk-deployment-images/blazor-pdfviewer.png)" %}
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Perform print in same window using SfPdfViewer | Syncfusion®
-description: Learn here all about how to perform print in same window in Syncfusion® Blazor SfPdfViewer component and more.
+title: Perform print in same window using SfPdfViewer | Syncfusion&reg;
+description: Learn here all about how to perform print in same window in Syncfusion&reg; Blazor SfPdfViewer component and more.
 platform: Blazor
 control: SfPdfViewer
 documentation: ug

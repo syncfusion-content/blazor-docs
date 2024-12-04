@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Deploy SfPdfViewer in Blazor MAUI in windows | Syncfusion®
-description: Learn how to deploy SfPdfViewer in Blazor MAUI Application on Windows in Syncfusion® Blazor SfPdfViewer component and much more details.
+title: Deploy SfPdfViewer in Blazor MAUI in windows | Syncfusion&reg;
+description: Learn how to deploy SfPdfViewer in Blazor MAUI Application on Windows in Syncfusion&reg; Blazor SfPdfViewer component and much more details.
 platform: Blazor
 control: SfPdfViewer
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # View PDF files using PDF Viewer Component in the Blazor MAUI app 
 
-In this section, we'll guide you through the process of adding Syncfusion®'s Blazor PDF Viewer component to your Blazor Maui app. We'll break it down into simple steps to make it easy to follow.
+In this section, we'll guide you through the process of adding Syncfusion&reg; Blazor PDF Viewer component to your Blazor Maui app. We'll break it down into simple steps to make it easy to follow.
 
 ## Prerequisites
 
@@ -28,7 +28,7 @@ Add the following NuGet packages into the Blazor Maui app.
 * [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer) 
 * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)
 
-## Register Syncfusion® Blazor Service
+## Register Syncfusion&reg; Blazor Service
 
 * In the **~/_Imports.razor** file, add the following namespaces:
 
@@ -41,7 +41,7 @@ Add the following NuGet packages into the Blazor Maui app.
 {% endhighlight %}
 {% endtabs %}
 
-* Register the Syncfusion® Blazor Service in the **~/MauiProgram.cs** file.
+* Register the Syncfusion&reg; Blazor Service in the **~/MauiProgram.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="~/MauiProgram.cs" hl_lines="3 20 28" %}
@@ -89,9 +89,9 @@ Add the following stylesheet and script to the head section of the **~/wwwroot/i
 {% highlight html %}
 
 <head>
-    <!-- Syncfusion® Blazor PDF Viewer control's theme style sheet -->
+    <!-- Syncfusion&reg; Blazor PDF Viewer control's theme style sheet -->
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-    <!-- Syncfusion® Blazor PDF Viewer control's scripts -->
+    <!-- Syncfusion&reg; Blazor PDF Viewer control's scripts -->
     <script src="_content/Syncfusion.Blazor.SfPdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
 </head>
 
@@ -100,7 +100,7 @@ Add the following stylesheet and script to the head section of the **~/wwwroot/i
 
 ## Add PDF Viewer component
 
-Add the Syncfusion® PDF Viewer component in the **~/Pages/Index.razor** file.
+Add the Syncfusion&reg; PDF Viewer component in the **~/Pages/Index.razor** file.
 
 {% tabs %}
 {% highlight razor %}
