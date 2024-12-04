@@ -33,7 +33,7 @@ Add the following NuGet packages into the Blazor WebAssembly app.
 * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)
 * [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor)
 
-N> On the Syncfusion side, we are using SkiaSharp.Views.Blazor version 2.88.8. Please make sure to reference this version as well.
+N> On the Syncfusion<sup style="font-size:70%">&reg;</sup> side, we are using SkiaSharp.Views.Blazor version 2.88.8. Please make sure to reference this version as well.
 
 ## Add the following PropertyGroup and ItemGroup:
 
@@ -54,7 +54,7 @@ N> On the Syncfusion side, we are using SkiaSharp.Views.Blazor version 2.88.8. P
 
 The above configuration is required only for .NET 9 projects. Please ensure you use this setup for the corresponding version.
 
-## Register Syncfusion Blazor Service
+## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
 * In the **~/_Imports.razor** file, add the following namespaces:
 
@@ -67,7 +67,7 @@ The above configuration is required only for .NET 9 projects. Please ensure you 
 {% endhighlight %}
 {% endtabs %}
 
-* Register the Syncfusion Blazor Service in the program.cs file.
+* Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the program.cs file.
 
 {% tabs %}
 {% highlight C# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="3 9 13" %}
@@ -109,7 +109,7 @@ Add the following stylesheet and script to the head section of the **wwwroot/ind
 
 ## Adding Blazor PDF Viewer (Next Gen) Component
 
-Add the Syncfusion PDF Viewer (Next Gen) component in the **~/Pages/Index.razor** file.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer (Next Gen) component in the **~/Pages/Index.razor** file.
 
 {% tabs %}
 {% highlight razor %}
