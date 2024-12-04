@@ -9,7 +9,7 @@ documentation: ug
 
 # View PDF files using PDF Viewer Component in the Blazor MAUI app 
 
-In this section, we'll guide you through the process of adding Syncfusion®'s Blazor PDF Viewer (Next Gen) component to your Blazor Maui app. We'll break it down into simple steps to make it easy to follow.
+In this section, we'll guide you through the process of adding Syncfusion®'s Blazor PDF Viewer component to your Blazor Maui app. We'll break it down into simple steps to make it easy to follow.
 
 ## Prerequisites
 
@@ -19,7 +19,7 @@ To use the MAUI project templates, install the Mobile development with the .NET 
 
 Create a new Blazor MAUI app and name it **PDFViewerGettingStarted**.
 
-N> The PDF Viewer (Next Gen) component is supported from .NET 6.0 onwards.
+N> The PDF Viewer component is supported from .NET 6.0 onwards.
 
 ## Install PDF Viewer NuGet package in Blazor Maui App
 
@@ -89,9 +89,9 @@ Add the following stylesheet and script to the head section of the **~/wwwroot/i
 {% highlight html %}
 
 <head>
-    <!-- Syncfusion® Blazor PDF Viewer (Next Gen) control's theme style sheet -->
+    <!-- Syncfusion® Blazor PDF Viewer control's theme style sheet -->
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-    <!-- Syncfusion® Blazor PDF Viewer (Next Gen) control's scripts -->
+    <!-- Syncfusion® Blazor PDF Viewer control's scripts -->
     <script src="_content/Syncfusion.Blazor.SfPdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
 </head>
 
@@ -100,7 +100,7 @@ Add the following stylesheet and script to the head section of the **~/wwwroot/i
 
 ## Add PDF Viewer component
 
-Add the Syncfusion® PDF Viewer (Next Gen) component in the **~/Pages/Index.razor** file.
+Add the Syncfusion® PDF Viewer component in the **~/Pages/Index.razor** file.
 
 {% tabs %}
 {% highlight razor %}
@@ -121,7 +121,7 @@ Add the Syncfusion® PDF Viewer (Next Gen) component in the **~/Pages/Index.razo
 {% endhighlight %}
 {% endtabs %}
 
-N> If the [DocumentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DocumentPath) property value is not provided, the PDF Viewer (Next Gen) component will be rendered without loading a PDF document. Users can then use the open option from the toolbar to browse and open a PDF as required.
+N> If the [DocumentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DocumentPath) property value is not provided, the PDF Viewer component will be rendered without loading a PDF document. Users can then use the open option from the toolbar to browse and open a PDF as required.
 
 ## Run on Windows
 
@@ -129,13 +129,13 @@ Run the sample in Windows Machine mode, and it will run Blazor MAUI in Windows.
 
 ![Run Windows machine](gettingstarted-images/Windows-machine.png)
 
-Upon successfully launching the application, the PDF Viewer (Next Gen) component will seamlessly render the specified PDF document within its interface.
+Upon successfully launching the application, the PDF Viewer component will seamlessly render the specified PDF document within its interface.
 
 ![Blazor SfPdfViewer Component](gettingstarted-images/Windows-maui-output.png)
 
 ## Run on Android
 
-To run the PDF Viewer (Next Gen) in a Blazor Android MAUI application using the Android emulator, follow these steps:
+To run the PDF Viewer in a Blazor Android MAUI application using the Android emulator, follow these steps:
 
 ![Run Windows machine](gettingstarted-images/android-maui.png)
 
