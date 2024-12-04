@@ -111,6 +111,7 @@ The following example demonstrates how to define a `Template` for the **Employee
 {% endhighlight %}
 {% endtabs %}
 
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VZhAMiNMBnKKvMuz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 ![Render image in a column](./images/render-image-column-template.png)
 
 > The [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) option allows to define any HTML content within a column.
