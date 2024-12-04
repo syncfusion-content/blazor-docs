@@ -9,11 +9,11 @@ documentation: ug
 
 # Content in Blazor Tooltip Component
 
-The Tooltip component in Blazor allows you to display additional information when users hover over or interact with elements on your web page. Here's how you can utilize different content types in your Tooltip:
+The Tooltip component in Blazor allows you to display additional information when users hover over or interact with elements on your web page. Here's how you can utilize different content types in your Tooltip.
 
 ## Simple Text Content
 
-The simplest way to use a Tooltip is with a string of text:
+The simplest way to use a Tooltip is with a string of text using the [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_Content) property. A text or a piece of information assigned to the Tooltip’s `Content` property will be displayed as the main text stream of the Tooltip.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -34,14 +34,20 @@ This displays a simple text message when users hover over the button.
 
 ## Using the Title Attribute
 
-You can also use the 'title' attribute of the target element as the Tooltip content:
+You can also use the 'title' attribute of the target element as the Tooltip content. By using the [Target](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_Target) property which allows the Tooltip to use the title attribute of the target element as its content.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Popups
 
-<SfTooltip ID="Tooltip" Target="#btn[title]">
-    <SfButton ID="btn" Content="Show Tooltip" title="Lets go green & Save Earth !!"></SfButton>
+<SfTooltip ID="Tooltip" Target="#container [title]">
+    <!-- Elements with title attributes -->
+    <div id="container">
+        <SfButton ID="btn1" Content="Show Tooltip 1" title="Go green and save energy!"></SfButton>
+        <SfButton ID="btn2" Content="Show Tooltip 2" title="Plant trees to combat climate change!"></SfButton>
+        <button title="Recycle to reduce waste">Recycle Tips</button>
+        <a href="#" title="Switch to renewable energy">Renewable Energy</a>
+    </div>
 </SfTooltip>
 
 ```
@@ -123,7 +129,7 @@ Check out the following code example to see how to include an HTML template insi
 
 ## Dynamic Content with RenderFragment
 
-For dynamic content that might include Blazor components or complex logic, use a RenderFragment:
+The SfTooltip is used to display dynamic content generated using a RenderFragment. The `<ContentTemplate>` allows you to render this dynamic content within the tooltip. A `RenderFragment` in Blazor enables you to dynamically define and render UI content, including Blazor components, HTML, and interactive logic. 
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
