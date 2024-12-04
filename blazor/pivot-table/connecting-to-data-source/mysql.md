@@ -8,7 +8,7 @@ description: "Learn how to bind data from a MySQL in the Syncfusion Blazor Pivot
 
 This section describes how to use [MySQL data](https://www.nuget.org/packages/MySql.Data) to retrieve data from a MySQL server and bind it to the Blazor Pivot Table.
 
-## Connecting a MySQL database to a Syncfusion Blazor Pivot Table
+## Connecting a MySQL database to a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table
 
 **1.** Create a simple Blazor Pivot Table by following the **"Getting Started"** documentation [link](../getting-started).
 
@@ -84,7 +84,7 @@ When you run the application, the resultant pivot table will look like this.
 
 ![Blazor Pivot Table bound with MySQL data](../images/blazor-pivottable-MySQL-databinding.png)
 
-## Connecting a MySQL to a Syncfusion Blazor Pivot Table via Web API service
+## Connecting a MySQL to a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table via Web API service
 
 ### Create a Web API service to fetch MySQL data
 
