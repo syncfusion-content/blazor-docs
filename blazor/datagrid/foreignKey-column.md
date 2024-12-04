@@ -612,6 +612,139 @@ In this example, the “EmployeeID” column is a foreign key column, and the fi
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXBAiiZngvqDDFvZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+## Perform aggregation in foreign key column
+
+By default, aggregations are not supported in a foreign key column in the Syncfusion DataGrid. However, you can achieve aggregation for a foreign key column by using `customAggregate`.
+
+To perform aggregation in a foreign key column, follow these steps:
+
+1. Define a foreign key column in the Grid.
+2. Implement a custom aggregate function to calculate the aggregation for the foreign key column.
+3. Set the `customAggregate` property of the column to the custom aggregate function.
+
+Here's an example that demonstrates how to perform aggregation in a foreign key column:
+
+In the provided example, the `customAggregateFn` function is used to filter and count the **Margaret** data based on the **FirstName** field of the foreign key column. The result is displayed in the DataGrid's footer template using the [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_FooterTemplate) property.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@OrderData" Height="315" >
+    <GridAggregates>
+        <GridAggregate>
+            <GridAggregateColumns>
+                <GridAggregateColumn Field="EmployeeID" Type="AggregateType.Custom">
+                    <FooterTemplate Context="data">
+                        Count of Margaret: @CustomAggregateFn()
+                    </FooterTemplate>
+                </GridAggregateColumn>
+            </GridAggregateColumns>
+        </GridAggregate>
+    </GridAggregates>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="100"></GridColumn>
+        <GridForeignColumn Field=@nameof(OrderDetails.EmployeeID) HeaderText="Employee Name" ForeignKeyValue="FirstName" ForeignDataSource="@EmployeeData" Width="120"></GridForeignColumn>
+        <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipCity) HeaderText="Ship City" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+    </GridColumns>
+</SfGrid>
+@code {
+    public List<OrderDetails> OrderData { get; set; }
+    public List<EmployeeDetails> EmployeeData { get; set; }
+    protected override void OnInitialized()
+    {
+        OrderData = OrderDetails.GetAllRecords();
+        EmployeeData = EmployeeDetails.GetAllRecords();
+    }
+   
+    private int CustomAggregateFn()
+    {
+        var Count=  OrderData.Count(order => EmployeeData
+            .FirstOrDefault(data => data.EmployeeID == order.EmployeeID)?.FirstName == "Margaret");
+        return Count;
+    }    
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+public class OrderDetails
+{
+    public static List<OrderDetails> order = new List<OrderDetails>();
+    
+    public OrderDetails(int OrderID, string Shipcity, int EmployeeId, double Freight)
+    {
+        this.OrderID = OrderID;
+        this.ShipCity = Shipcity;
+        this.EmployeeID = EmployeeId;
+        this.Freight = Freight; 
+
+    }
+    public static List<OrderDetails> GetAllRecords()
+    {
+        if (order.Count == 0)
+        {
+            order.Add(new OrderDetails(10248, "Reims", 5, 32.38));
+            order.Add(new OrderDetails(10249, "Münster", 6, 11.61));
+            order.Add(new OrderDetails(10250, "Rio de Janeiro", 4, 65.83));
+            order.Add(new OrderDetails(10251, "Lyon", 3, 41.34));
+            order.Add(new OrderDetails(10252, "Charleroi", 4, 51.3));
+            order.Add(new OrderDetails(10253, "Rio de Janeiro", 3, 58.17));
+            order.Add(new OrderDetails(10254, "Bern", 5, 22.98));
+            order.Add(new OrderDetails(10255, "Genève", 9, 48.33));
+            order.Add(new OrderDetails(10256, "Resende", 3, 13.97));
+            order.Add(new OrderDetails(10257, "San Cristóbal", 4, 81.91));
+            order.Add(new OrderDetails(10258, "Graz", 1, 40.51));
+            order.Add(new OrderDetails(10259, "México D.F.", 4, 3.25));
+            order.Add(new OrderDetails(10260, "Köln", 4, 55.09));
+            order.Add(new OrderDetails(10261, "Rio de Janeiro", 4, 3.05));
+            order.Add(new OrderDetails(10262, "Albuquerque", 8, 48.29));
+        }
+        return order;
+    }
+    public int OrderID { get; set; }
+    public string ShipCity { get; set; }
+    public int EmployeeID { get; set; }
+    public double Freight { get; set; } 
+}
+public class EmployeeDetails
+{
+    public static List<EmployeeDetails> employee = new List<EmployeeDetails>();
+
+    public EmployeeDetails() { }
+
+    public EmployeeDetails(int employeeID, string lastName, string firstName)
+    {
+        this.EmployeeID = employeeID;
+        this.LastName = lastName;
+        this.FirstName = firstName;
+    }
+
+    public static List<EmployeeDetails> GetAllRecords()
+    {
+        if (employee.Count == 0)
+        {
+            employee.Add(new EmployeeDetails(1, "Davolio", "Nancy"));
+            employee.Add(new EmployeeDetails(2, "Fuller", "Andrew"));
+            employee.Add(new EmployeeDetails(3, "Leverling", "Janet"));
+            employee.Add(new EmployeeDetails(4, "Peacock", "Margaret"));
+            employee.Add(new EmployeeDetails(5, "Buchanan", "Steven"));
+            employee.Add(new EmployeeDetails(6, "Suyama", "Michael"));
+            employee.Add(new EmployeeDetails(7, "King", "Robert"));
+            employee.Add(new EmployeeDetails(8, "Callahan", "Laura"));
+            employee.Add(new EmployeeDetails(9, "Dodsworth", "Anne"));
+        }
+        return employee;
+    }
+
+    public int EmployeeID { get; set; }
+    public string LastName { get; set; }
+    public string FirstName { get; set; }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVzisLyKJzudYVg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## Prevent filter query generation for foreignkey column
 
 By default, a filter query for the foreignkey column will be generated based on the foreignkey value. You can prevent the default filter query generation for the foreignkey column and add the custom filter query. This can be achieved by setting the [PreventFilterQuery](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ActionEventArgs-1.html#Syncfusion_Blazor_Grids_ActionEventArgs_1_PreventFilterQuery) argument of the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event to true.
