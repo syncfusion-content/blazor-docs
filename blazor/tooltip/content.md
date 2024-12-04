@@ -127,6 +127,7 @@ Check out the following code example to see how to include an HTML template insi
 
 ![Blazor Tooltip with Template](images/blazor-tooltip-template.gif)
 
+
 ## Dynamic Content with RenderFragment
 
 The SfTooltip is used to display dynamic content generated using a RenderFragment. The `<ContentTemplate>` allows you to render this dynamic content within the tooltip. A `RenderFragment` in Blazor enables you to dynamically define and render UI content, including Blazor components, HTML, and interactive logic. 
