@@ -9,7 +9,7 @@ documentation: ug
 
 # Managing NuGet Packages
 
-Syncfusion Blazor Playground pre-configures the `Syncfusion.Blazor` package for immediate component rendering. However, this loads the entire Syncfusion Blazor library, affecting initial page load time. You can optimize performance by using individual NuGet packages, loading only the specific components you need.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Playground pre-configures the `Syncfusion.Blazor` package for immediate component rendering. However, this loads the entire Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor library, affecting initial page load time. You can optimize performance by using individual NuGet packages, loading only the specific components you need.
 
 ## Adding NuGet packages
 
@@ -41,6 +41,6 @@ Click the `Remove` button next to the installed package details to uninstall it.
 
 Upgrade or downgrade packages by searching for the desired package name and selecting the specific version. The Playground will handle installation or updates accordingly.
 
-N>Maintain consistent versions across all Syncfusion Blazor packages to avoid compatibility issues.
+N>Maintain consistent versions across all Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages to avoid compatibility issues.
 
 ![Syncfusion Blazor Playground with Upgrade and Downgrade](images/upgrade_downgrade.gif)
