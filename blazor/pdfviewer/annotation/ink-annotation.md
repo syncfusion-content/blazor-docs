@@ -1,10 +1,10 @@
 ---
 title: "Ink Annotation in Blazor PDF Viewer Component | Syncfusion"
 component: "PDF Viewer"
-description: "This page helps to learn about the Ink Annotation support with a code example in the Syncfusion's Blazor PDF Viewer."
+description: "This page helps to learn about the Ink Annotation support with a code example in the Syncfusion Blazor PDF Viewer."
 ---
 
-N> Syncfusion recommends using [Blazor PDF Viewer (NextGen)](https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/server-side-application) Component which provides fast rendering of pages and improved performance. Also, there is no need of external Web service for processing the files and ease out the deployment complexity. It can be used in Blazor Server, WASM and MAUI applications without any changes.
+N> Syncfusion&reg; recommends using [Blazor PDF Viewer](https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/server-side-application) Component which provides fast rendering of pages and improved performance. Also, there is no need of external Web service for processing the files and ease out the deployment complexity. It can be used in Blazor Server, WASM and MAUI applications without any changes.
 
 # Ink Annotation in the Blazor PDF Viewer component
 

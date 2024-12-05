@@ -7,11 +7,11 @@ control: PDF Viewer
 documentation: ug
 ---
 
-N> Syncfusion recommends using [Blazor PDF Viewer (NextGen)](https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/server-side-application) Component which provides fast rendering of pages and improved performance. Also, there is no need of external Web service for processing the files and ease out the deployment complexity. It can be used in Blazor Server, WASM and MAUI applications without any changes.
+N> Syncfusion&reg; recommends using [Blazor PDF Viewer](https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/server-side-application) Component which provides fast rendering of pages and improved performance. Also, there is no need of external Web service for processing the files and ease out the deployment complexity. It can be used in Blazor Server, WASM and MAUI applications without any changes.
 
 # Navigation in Blazor PDF Viewer Component
 
-You can navigate between pages in Syncfusion PDF Viewer in the following ways:
+You can navigate between pages in Syncfusion&reg; PDF Viewer in the following ways:
 
 * Scroll through the pages.
 * Click Go to pages in the built-in toolbar.
