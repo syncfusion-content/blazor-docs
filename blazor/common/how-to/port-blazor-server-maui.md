@@ -7,9 +7,9 @@ component: Common
 documentation: ug
 ---
 
-# How to port Syncfusion Blazor Server App to MAUI Blazor Hybrid App
+# How to port Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Server App to MAUI Blazor Hybrid App
 
-This section explains how to port Syncfusion Blazor Server App to .NET MAUI Blazor Hybrid App using Razor Class Library (RCL). This way, you can avoid rewriting all your Blazor Server App pages for the .NET MAUI Blazor Hybrid App.
+This section explains how to port Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Server App to .NET MAUI Blazor Hybrid App using Razor Class Library (RCL). This way, you can avoid rewriting all your Blazor Server App pages for the .NET MAUI Blazor Hybrid App.
 
 ## Prerequisites
 
@@ -17,11 +17,11 @@ This section explains how to port Syncfusion Blazor Server App to .NET MAUI Blaz
 
 ## Create a new project for Blazor Server App
 
-1. Create a new [Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) with Syncfusion `Blazor Calendar` component using [Visual Studio](https://visualstudio.microsoft.com/vs/).
+1. Create a new [Blazor Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) with Syncfusion<sup style="font-size:70%">&reg;</sup> `Blazor Calendar` component using [Visual Studio](https://visualstudio.microsoft.com/vs/).
 
 2. Now, create a [Razor Class Library](https://blazor.syncfusion.com/documentation/getting-started/razor-class-library) in Visual Studio and configure it with already created Blazor Server App.
 
-3. Next, move the Syncfusion `Blazor NuGet packages`, `Razor components`, `App.razor`, `Import.razor`, `CSS`, `Shared`, and `Data` folders to the Razor class library from the Blazor server project.
+3. Next, move the Syncfusion<sup style="font-size:70%">&reg;</sup> `Blazor NuGet packages`, `Razor components`, `App.razor`, `Import.razor`, `CSS`, `Shared`, and `Data` folders to the Razor class library from the Blazor server project.
 
     ![Folders to move](images/server-folders.png)
 
@@ -44,7 +44,7 @@ This section explains how to port Syncfusion Blazor Server App to .NET MAUI Blaz
     </head>
     ```
 
-8. Now, register the Syncfusion Blazor service in the `MauiProgram.cs` file of your MAUI Blazor App.
+8. Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the `MauiProgram.cs` file of your MAUI Blazor App.
 
     {% tabs %}
     {% highlight C# tabtitle="~/MauiProgram.cs" hl_lines="1 3" %}

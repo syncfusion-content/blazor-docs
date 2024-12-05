@@ -8,7 +8,7 @@ description: "Learn how to bind data from a Oracle database in the Syncfusion Bl
 
 This section describes how to use [Oracle ManagedDataAccess Core](https://www.nuget.org/packages/Oracle.ManagedDataAccess.Core) to retrieve data from a Oracle database and bind it to the Blazor Pivot Table.
 
-## Connecting a Oracle database to a Syncfusion Blazor Pivot Table
+## Connecting a Oracle database to a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table
 
 **1.** Create a simple Blazor Pivot Table by following the **"Getting Started"** documentation [link](../getting-started).
 
@@ -95,7 +95,7 @@ When you run the application, the resultant pivot table will look like this.
 
 ![Blazor Pivot Table bound with OracleDB data](../images/blazor-pivottable-oracledb-databinding.png)
 
-## Connecting a Oracle database to a Syncfusion Blazor Pivot Table via Web API service
+## Connecting a Oracle database to a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table via Web API service
 
 ### Create a Web API service to fetch Oracle data
 
