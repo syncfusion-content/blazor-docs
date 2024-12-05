@@ -15,7 +15,7 @@ By default, Diagram’s page size is decided based on the position of its diagra
 
 * The [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageSettings.html#Syncfusion_Blazor_Diagram_PageSettings_Orientation) property of `PageSettings` is used to change the page orientation to portrait or landscape. The default orientation is landscape.
 
-* Page breaks are used as a visual guide to show how the pages are split into multiple pages. The [ShowPageBreaks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageSettings.html#Syncfusion_Blazor_Diagram_PageSettings_ShowPageBreaks) property decides the Visibility of Page breaks. By default, it is false. If it is true, then the page break lines will be visible.
+* Page breaks are used as a visual guide to show how the pages are split into multiple pages. The [ShowPageBreaks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageSettings.html#Syncfusion_Blazor_Diagram_PageSettings_ShowPageBreaks) property decides the visibility of page breaks. By default, it is false. If it is true, then the page break lines will be visible.
 
 * To explore those properties, refer to [PageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageSettings.html).
 
@@ -294,7 +294,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Responsive with parent container
 
-By setting the value in percentage, diagram gets its dimention with respect to its parent container.Specify the Width and Height as 100% to make the diagram element fill its parent container.
+By setting the value in percentage, the diagram gets its dimention with respect to its parent container.Specify the Width and Height as 100% to make the diagram element fill its parent container.
 Setting the Height to 100% requires the diagram parent element to have explicit height or you can use calc function to set explicit height based on the browser layout.
 
 The following code example illustrates how to set width and height in percentage

@@ -9,13 +9,13 @@ documentation: ug
 
 # Types and Appearance
 
-The Syncfusion Blazor Smart Paste Button component fully inherits all the properties, types, and styling options of the Syncfusion Blazor Button component. This means that you can leverage the existing features of the Syncfusion Blazor Button while benefiting from the enhanced functionality of the Smart Paste Button.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Paste Button component fully inherits all the properties, types, and styling options of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Button component. This means that you can leverage the existing features of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Button while benefiting from the enhanced functionality of the Smart Paste Button.
 
 * [Types and Styles](https://blazor.syncfusion.com/documentation/button/types-and-styles)
 * [Appearances](https://blazor.syncfusion.com/documentation/button/style-and-appearance)
 
 ## See also
 
-* [Syncfusion Blazor Button Types and Styles](https://blazor.syncfusion.com/documentation/button/types-and-styles)
-* [Getting Started with Syncfusion Blazor Smart Paste Button in Blazor Web App](https://blazor.syncfusion.com/documentation/)
-* [Getting Started with Syncfusion Blazor Smart Paste Button in Blazor Server App](https://blazor.syncfusion.com/documentation/)
+* [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Button Types and Styles](https://blazor.syncfusion.com/documentation/button/types-and-styles)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Paste Button in Blazor Web App](https://blazor.syncfusion.com/documentation/)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Paste Button in Blazor Server App](https://blazor.syncfusion.com/documentation/)
