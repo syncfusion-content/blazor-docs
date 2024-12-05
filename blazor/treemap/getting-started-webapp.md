@@ -166,7 +166,7 @@ Add a title using the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 {% endhighlight %}
 {% endtabs %}
 
-N> Refer to the [code block](#adding-treemap-component) to know the property value of the **GrowthReport**.
+N> Refer to the [code block](#adding-treemap-component) to know about the property value of the **GrowthReport**.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDVJNWgtfGUUNerG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor TreeMap with Title](images/blazor-treemap-with-title.png)" %}
 
