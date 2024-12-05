@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Free text annotations in Blazor SfPdfViewer Component | Syncfusion&reg;
+title: Free text annotations in Blazor SfPdfViewer | Syncfusion&reg;
 description: Checkout and learn here all about free text annotations in Syncfusion&reg; Blazor SfPdfViewer component and more.
 platform: Blazor
 control: SfPdfViewer

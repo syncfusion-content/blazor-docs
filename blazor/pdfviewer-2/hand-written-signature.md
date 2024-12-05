@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Handwritten Signature in Blazor SfPdfViewer Component | Syncfusion&reg;
+title: Handwritten Signature in Blazor SfPdfViewer | Syncfusion&reg;
 description: Checkout and learn here all about handwritten signature in Syncfusion&reg; Blazor SfPdfViewer component and more.
 platform: Blazor
 control: SfPdfViewer

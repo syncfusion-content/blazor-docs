@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Text markup annotations in Blazor SfPdfViewer Component | Syncfusion&reg;
+title: Text markup annotations in Blazor SfPdfViewer | Syncfusion&reg;
 description: Checkout and learn here all about text markup annotations in Syncfusion&reg; Blazor SfPdfViewer component and more.
 platform: Blazor
 control: SfPdfViewer

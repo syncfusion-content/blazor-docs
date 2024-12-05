@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with SfPdfViewer in Blazor Server App | Syncfusion&reg;
+title: Getting Started with SfPdfViewer Blazor Server App | Syncfusion&reg;
 description: Learn how to getting started with SfPdfViewer control in Blazor Server-side application. You can view and comment on PDFs in ease and also can fill fields. 
 platform: Blazor
 control: SfPdfViewer

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Annotations in Mobile View using SfPdfViewer Component | Syncfusion&reg;
+title: Annotations in Mobile View using SfPdfViewer | Syncfusion&reg;
 description: Checkout and learn everything about annotations in the mobile view using the Syncfusion&reg; Blazor SfPdfViewer component and more.
 platform: Blazor
 control: SfPdfViewer

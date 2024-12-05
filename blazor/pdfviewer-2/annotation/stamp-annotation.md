@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Stamp annotations in Blazor SfPdfViewer Component | Syncfusion&reg;
+title: Stamp annotations in Blazor SfPdfViewer | Syncfusion&reg;
 description: Checkout and learn here all about stamp annotations in Syncfusion&reg; Blazor SfPdfViewer component and more.
 platform: Blazor
 control: SfPdfViewer
