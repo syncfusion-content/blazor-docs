@@ -29,7 +29,7 @@ Here’s an example of how to enable drag and drop within the Grid:
 @using Syncfusion.Blazor.Grids
 @using BlazorApp1.Data
 
-<SfGrid DataSource="@Orders" id="Grid" AllowSelection="true" AllowRowDragAndDrop="true">
+<SfGrid DataSource="@Orders" ID="Grid" AllowSelection="true" AllowRowDragAndDrop="true">
     <GridSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></GridSelectionSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" Width="120" IsPrimaryKey="true"> </GridColumn>
@@ -125,7 +125,7 @@ Here’s an example code snippet that demonstrates how to enable Row drag and dr
 @using Syncfusion.Blazor.Grids
 @using BlazorApp1.Data
 
-<SfGrid DataSource="@Orders" id="Grid" AllowSelection="true" AllowRowDragAndDrop="true">
+<SfGrid DataSource="@Orders" ID="Grid" AllowSelection="true" AllowRowDragAndDrop="true">
     <GridRowDropSettings TargetID="DestGrid"></GridRowDropSettings>
     <GridSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></GridSelectionSettings>
     <GridColumns>
@@ -136,7 +136,7 @@ Here’s an example code snippet that demonstrates how to enable Row drag and dr
     </GridColumns>
 </SfGrid>
 <br>
-<SfGrid DataSource="@SecondGrid" id="DestGrid" AllowRowDragAndDrop="true" AllowSelection="true">
+<SfGrid DataSource="@SecondGridData" ID="DestGrid" AllowRowDragAndDrop="true" AllowSelection="true">
     <GridRowDropSettings TargetID="Grid"></GridRowDropSettings>
     <GridSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></GridSelectionSettings>
     <GridColumns>
@@ -150,7 +150,7 @@ Here’s an example code snippet that demonstrates how to enable Row drag and dr
 @code {
 
     public List<OrderData> Orders { get; set; }
-    public List<OrderData> SecondGrid { get; set; } = new List<OrderData>();
+    public List<OrderData> SecondGridData { get; set; } = new List<OrderData>();
 
     protected override void OnInitialized()
     {
@@ -215,6 +215,395 @@ namespace BlazorApp1.Data
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjBfWirtinCYhFlS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Drag and Drop to custom component
+
+The DataGrid provides the feature to drag and drop grid rows to any custom component. This feature allows you to easily move rows from one component to another without having to manually copy and paste data. To enable row drag and drop, you need to set the [AllowRowDragAndDrop] property to **true** and defining the custom component ID in the [TargetID] property of the [RowDropSettings] object. The `ID` provided in `TargetID` should correspond to the `ID` of the target component where the rows are to be dropped.
+
+In the below example, the selected grid row is dragged and dropped in to the TreeGrid component by using [RowDropped] event. Once the row is dropped into the TreeGrid component, removed the corresponding grid row from grid and its data inserted in custom component.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@page "/"
+@using Syncfusion.Blazor.Grids;
+@using Syncfusion.Blazor.TreeGrid;
+@using BlazorApp1.Data
+
+<div>
+    <SfGrid @ref="grid" ID="Grid" DataSource="@GridData" AllowRowDragAndDrop="true" AllowSelection="true">
+        <GridSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></GridSelectionSettings>
+        <GridRowDropSettings TargetID="DestGrid"></GridRowDropSettings>
+        <GridEvents TValue="WrapData" RowDropped="OnRowDrop"></GridEvents>
+        <GridColumns>
+            <GridColumn Field="TaskID" HeaderText="Task ID" Width="80" IsPrimaryKey="true" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></GridColumn>
+            <GridColumn Field="TaskName" HeaderText="Task Name" Width="160"></GridColumn>
+            <GridColumn Field="Description" HeaderText="Description" TextAlign="TextAlign.Left" Width="180"></GridColumn>
+            <GridColumn Field="Category" HeaderText="Category" TextAlign="TextAlign.Left" Width="180"></GridColumn>
+            <GridColumn Field="StartDate" HeaderText="StartDate" TextAlign="TextAlign.Left" Format="d" Type="ColumnType.Date" Width="160"></GridColumn>
+            <GridColumn Field="Duration" HeaderText="Duration" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></GridColumn>
+        </GridColumns>
+    </SfGrid>
+</div>
+<div>
+    <SfTreeGrid @ref="treegrid" ID="DestGrid" DataSource="@TreeGridData" AllowRowDragAndDrop="true" AllowSelection="true" IdMapping="TaskID" ChildMapping="Subtasks" TreeColumnIndex="1">
+        <TreeGridSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></TreeGridSelectionSettings>
+        <TreeGridRowDropSettings TargetID="Grid"></TreeGridRowDropSettings>
+        <TreeGridEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true" />
+        <TreeGridColumns>
+            <TreeGridColumn Field="TaskID" HeaderText="Task ID" Width="90" IsPrimaryKey="true" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+            <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="180" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Left"></TreeGridColumn>
+            <TreeGridColumn Field="StartDate" HeaderText="Start Date" Format="d" Type="ColumnType.Date" Width="90" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+            <TreeGridColumn Field="Duration" HeaderText="Duration" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        </TreeGridColumns>
+    </SfTreeGrid>
+</div>
+
+@code {
+    public List<WrapData> TreeGridData { get; set; } = new();
+    public List<WrapData> GridData { get; set; } = new();
+    SfTreeGrid<WrapData> treegrid;
+    SfGrid<WrapData> grid;
+
+    protected override void OnInitialized()
+    {
+        GridData = WrapData.GetSampleData();
+    }
+
+    public async Task OnRowDrop(RowDroppedEventArgs<WrapData> args)
+    {
+        if (args.Data != null && args.Data.Count > 0)
+        {
+            foreach (var item in args.Data)
+            {
+                await treegrid.AddRecordAsync(item);
+                GridData.Remove(item);
+                await grid.Refresh();
+                await treegrid.RefreshAsync();
+            }
+        }
+    }
+}
+
+{% endhighlight %}
+{% highlight c# tabtitle="WrapData.cs" %}
+namespace BlazorApp1.Data
+{
+    public class WrapData
+    {
+        public int TaskID { get; set; }
+        public string TaskName { get; set; }
+        public DateTime? StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+        public int? Duration { get; set; }
+        public int Progress { get; set; }
+        public string Priority { get; set; }
+        public bool Approved { get; set; }
+        public int Resources { get; set; }
+        public int? ParentId { get; set; }
+        public string Description { get; set; }
+        public string Category { get; set; } 
+        public List<WrapData> Subtasks { get; set; } 
+
+        public static List<WrapData> GetSampleData()
+        {
+            return new List<WrapData>
+    {
+        new WrapData
+        {
+            TaskID = 1,
+            TaskName = "Planning",
+            StartDate = new DateTime(2017, 2, 3),
+            EndDate = new DateTime(2017, 2, 7),
+            Duration = 5,
+            Progress = 100,
+            Priority = "Normal",
+            Approved = false,
+            Description = "Task description 1",
+            Category = "Task category 1",
+            Subtasks = new List<WrapData>
+            {
+                new WrapData
+                {
+                    TaskID = 2,
+                    TaskName = "Plan timeline",
+                    StartDate = new DateTime(2017, 2, 3),
+                    EndDate = new DateTime(2017, 2, 7),
+                    Duration = 5,
+                    Progress = 100,
+                    Priority = "Normal",
+                    Approved = false
+                },
+                new WrapData
+                {
+                    TaskID = 3,
+                    TaskName = "Plan budget",
+                    StartDate = new DateTime(2017, 2, 3),
+                    EndDate = new DateTime(2017, 2, 7),
+                    Duration = 5,
+                    Progress = 100,
+                    Priority = "Low",
+                    Approved = true
+                },
+                new WrapData
+                {
+                    TaskID = 4,
+                    TaskName = "Allocate resources",
+                    StartDate = new DateTime(2017, 2, 3),
+                    EndDate = new DateTime(2017, 2, 7),
+                    Duration = 5,
+                    Progress = 100,
+                    Priority = "Critical",
+                    Approved = false
+                },
+                new WrapData
+                {
+                    TaskID = 5,
+                    TaskName = "Planning complete",
+                    StartDate = new DateTime(2017, 2, 7),
+                    EndDate = new DateTime(2017, 2, 7),
+                    Duration = 0,
+                    Progress = 0,
+                    Priority = "Low",
+                    Approved = true
+                }
+            }
+        },
+        new WrapData
+        {
+            TaskID = 6,
+            TaskName = "Design",
+            StartDate = new DateTime(2017, 2, 10),
+            EndDate = new DateTime(2017, 2, 14),
+            Duration = 3,
+            Progress = 86,
+            Priority = "High",
+            Approved = false,
+            Description = "Task description 2",
+            Category = "Task category 2",
+            Subtasks = new List<WrapData>
+            {
+                new WrapData
+                {
+                    TaskID = 7,
+                    TaskName = "Software Specification",
+                    StartDate = new DateTime(2017, 2, 10),
+                    EndDate = new DateTime(2017, 2, 12),
+                    Duration = 3,
+                    Progress = 60,
+                    Priority = "Normal",
+                    Approved = false
+                },
+                new WrapData
+                {
+                    TaskID = 8,
+                    TaskName = "Develop prototype",
+                    StartDate = new DateTime(2017, 2, 10),
+                    EndDate = new DateTime(2017, 2, 12),
+                    Duration = 3,
+                    Progress = 100,
+                    Priority = "Critical",
+                    Approved = false
+                }
+            }
+        },
+        new WrapData
+        {
+            TaskID = 9,
+            TaskName = "Implementation",
+            StartDate = new DateTime(2017, 2, 15),
+            EndDate = new DateTime(2017, 2, 20),
+            Duration = 5,
+            Progress = 50,
+            Priority = "High",
+            Approved = false,
+            Description = "Task description 3",
+            Category = "Task category 3",
+            Subtasks = new List<WrapData>
+            {
+                new WrapData
+                {
+                    TaskID = 10,
+                    TaskName = "Develop code",
+                    StartDate = new DateTime(2017, 2, 15),
+                    EndDate = new DateTime(2017, 2, 17),
+                    Duration = 3,
+                    Progress = 70,
+                    Priority = "High",
+                    Approved = false
+                },
+                new WrapData
+                {
+                    TaskID = 11,
+                    TaskName = "Code review",
+                    StartDate = new DateTime(2017, 2, 18),
+                    EndDate = new DateTime(2017, 2, 20),
+                    Duration = 2,
+                    Progress = 30,
+                    Priority = "Normal",
+                    Approved = false
+                }
+            }
+        },
+        new WrapData
+        {
+            TaskID = 12,
+            TaskName = "Testing",
+            StartDate = new DateTime(2017, 2, 21),
+            EndDate = new DateTime(2017, 2, 25),
+            Duration = 4,
+            Progress = 40,
+            Priority = "Medium",
+            Approved = false,
+            Description = "Task description 4",
+            Category = "Task category 4",
+            Subtasks = new List<WrapData>
+            {
+                new WrapData
+                {
+                    TaskID = 13,
+                    TaskName = "Unit testing",
+                    StartDate = new DateTime(2017, 2, 21),
+                    EndDate = new DateTime(2017, 2, 22),
+                    Duration = 2,
+                    Progress = 50,
+                    Priority = "High",
+                    Approved = false
+                },
+                new WrapData
+                {
+                    TaskID = 14,
+                    TaskName = "Integration testing",
+                    StartDate = new DateTime(2017, 2, 23),
+                    EndDate = new DateTime(2017, 2, 25),
+                    Duration = 2,
+                    Progress = 30,
+                    Priority = "Medium",
+                    Approved = false
+                }
+            }
+        },
+        new WrapData
+        {
+            TaskID = 15,
+            TaskName = "Deployment",
+            StartDate = new DateTime(2017, 2, 26),
+            EndDate = new DateTime(2017, 2, 28),
+            Duration = 3,
+            Progress = 10,
+            Priority = "Critical",
+            Approved = false,
+            Description = "Task description 5",
+            Category = "Task category 5",
+            Subtasks = new List<WrapData>
+            {
+                new WrapData
+                {
+                    TaskID = 16,
+                    TaskName = "Prepare deployment environment",
+                    StartDate = new DateTime(2017, 2, 26),
+                    EndDate = new DateTime(2017, 2, 27),
+                    Duration = 2,
+                    Progress = 40,
+                    Priority = "High",
+                    Approved = false
+                },
+                new WrapData
+                {
+                    TaskID = 17,
+                    TaskName = "Deploy to production",
+                    StartDate = new DateTime(2017, 2, 28),
+                    EndDate = new DateTime(2017, 2, 28),
+                    Duration = 1,
+                    Progress = 0,
+                    Priority = "Critical",
+                    Approved = false
+                }
+            }
+        },
+        new WrapData
+        {
+            TaskID = 18,
+            TaskName = "Maintenance",
+            StartDate = new DateTime(2017, 3, 1),
+            EndDate = new DateTime(2017, 3, 5),
+            Duration = 5,
+            Progress = 20,
+            Priority = "Low",
+            Approved = false,
+            Description = "Task description 6",
+            Category = "Task category 6",
+            Subtasks = new List<WrapData>
+            {
+                new WrapData
+                {
+                    TaskID = 19,
+                    TaskName = "Monitor system",
+                    StartDate = new DateTime(2017, 3, 1),
+                    EndDate = new DateTime(2017, 3, 3),
+                    Duration = 3,
+                    Progress = 50,
+                    Priority = "Normal",
+                    Approved = false
+                },
+                new WrapData
+                {
+                    TaskID = 20,
+                    TaskName = "Fix bugs",
+                    StartDate = new DateTime(2017, 3, 4),
+                    EndDate = new DateTime(2017, 3, 5),
+                    Duration = 2,
+                    Progress = 10,
+                    Priority = "Low",
+                    Approved = false
+                }
+            }
+        },
+        new WrapData
+        {
+            TaskID = 21,
+            TaskName = "Documentation",
+            StartDate = new DateTime(2017, 3, 6),
+            EndDate = new DateTime(2017, 3, 8),
+            Duration = 3,
+            Progress = 70,
+            Priority = "Normal",
+            Approved = true,
+            Description = "Task description 7",
+            Category = "Task category 7",
+            Subtasks = new List<WrapData>
+            {
+                new WrapData
+                {
+                    TaskID = 22,
+                    TaskName = "Write user guide",
+                    StartDate = new DateTime(2017, 3, 6),
+                    EndDate = new DateTime(2017, 3, 7),
+                    Duration = 2,
+                    Progress = 80,
+                    Priority = "Normal",
+                    Approved = true
+                },
+                new WrapData
+                {
+                    TaskID = 23,
+                    TaskName = "Write API documentation",
+                    StartDate = new DateTime(2017, 3, 7),
+                    EndDate = new DateTime(2017, 3, 8),
+                    Duration = 2,
+                    Progress = 60,
+                    Priority = "Normal",
+                    Approved = true
+                }
+            }
+        }
+    };
+    }
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBJCrZpfJngbJCc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Drag and drop rows without drag icons
 
