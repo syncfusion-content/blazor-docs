@@ -218,7 +218,7 @@ Here, the AutoComplete component is rendered with the TValue as a string type in
 
 ## Two way binding
 
-Two-way is having a bi-directional data flow, i.e., passing the value from the property to the UI and then from the view (UI) to the property as well. The synchronization of data flow between model and view is achieved using the bind attribute in Blazor. To enable two-way binding for the Syncfusion Blazor AutoComplete component, you can use the @bind-Value directive to bind the value of the AutoComplete
+Two-way is having a bi-directional data flow, i.e., passing the value from the property to the UI and then from the view (UI) to the property as well. The synchronization of data flow between model and view is achieved using the bind attribute in Blazor. To enable two-way binding for the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor AutoComplete component, you can use the @bind-Value directive to bind the value of the AutoComplete
 
 {% highlight cshtml %}
 
