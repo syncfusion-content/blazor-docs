@@ -9,7 +9,7 @@ documentation: ug
 
 # How to Add Blazor Component into Existing ASP.NET Core MVC Application
 
-This section explains how to add Syncfusion Blazor component on an existing ASP.NET Core MVC application.
+This section explains how to add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component on an existing ASP.NET Core MVC application.
 
 1. Open your existing ASP.NET Core MVC application on Visual Studio 2022.
 
@@ -21,7 +21,7 @@ This section explains how to add Syncfusion Blazor component on an existing ASP.
 
     ![Installing Syncfusion Blazor Grid NuGet package](images/asp-mvc-install-nuget.png)
 
-4. Register Blazor server service and Syncfusion Blazor service in the `~/Program.cs` file.
+4. Register Blazor server service and Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the `~/Program.cs` file.
 
     ```c#
     using Syncfusion.Blazor;
@@ -57,7 +57,7 @@ This section explains how to add Syncfusion Blazor component on an existing ASP.
     @using Syncfusion.Blazor.Grids
     ```
 
-7. Add Blazor script references at the end of `<body>` tag and Syncfusion theme and script references inside the `<head>` tag on `~/Views/Shared/_Layout.cshtml` file.
+7. Add Blazor script references at the end of `<body>` tag and Syncfusion<sup style="font-size:70%">&reg;</sup> theme and script references inside the `<head>` tag on `~/Views/Shared/_Layout.cshtml` file.
 
     ```cshtml
     <head>
@@ -75,7 +75,7 @@ This section explains how to add Syncfusion Blazor component on an existing ASP.
 
 8. Create a new folder `~/Components` at the root of application. Right-click on the `~/Components` folder and add a new razor component by `Add -> Razor Component`.
 
-9. Add the Syncfusion Blazor component in the created razor file.
+9. Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component in the created razor file.
 
     ```cshtml
     <SfGrid DataSource="@Orders" AllowPaging="true">
@@ -120,7 +120,7 @@ This section explains how to add Syncfusion Blazor component on an existing ASP.
     <component type="typeof(MyGrid)" render-mode="ServerPrerendered" />
     ```
 
-11. Run the application by pressing `F5` key. Now, the Syncfusion Blazor Grid component will be rendered in the ASP.NET Core MVC application.
+11. Run the application by pressing `F5` key. Now, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid component will be rendered in the ASP.NET Core MVC application.
 
     ![Syncfusion Blazor Grid component rendered on ASP.NET Core MVC application](images/asp-mvc-grid.png)
 

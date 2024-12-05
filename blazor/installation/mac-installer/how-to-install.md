@@ -7,13 +7,13 @@ component: Common
 documentation: ug
 ---
 
-# Installing Syncfusion Blazor Mac Installer
+# Installing Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Mac Installer
 
-The Essential Studio Blazor Mac installer allows you to create the Blazor application in Visual Studio for Mac with the Syncfusion Blazor components.
+The Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor Mac installer allows you to create the Blazor application in Visual Studio for Mac with the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
 
 ## Steps to resolve the warning message in Catalina OS or later
 
-   While running Essential Studio Blazor Mac Installer on Catalina MacOS or later, the below alert will be displayed.
+   While running Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor Mac Installer on Catalina MacOS or later, the below alert will be displayed.
 
    ![Alert Image](images/Mac_Catalina_MacOS_Alert1.png)  
      
@@ -28,7 +28,7 @@ The Essential Studio Blazor Mac installer allows you to create the Blazor applic
 
 ## Step-by-Step Installation
 
-The steps below show how to install the Essential Studio Blazor Mac installer.
+The steps below show how to install the Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor Mac installer.
 
 1. Locate the downloaded dmg file and open the file by double click on it.
 
@@ -42,13 +42,13 @@ The steps below show how to install the Essential Studio Blazor Mac installer.
 
    ![License Agreements Confirmation](images/Mac_Installer3.png)
 
-   N> The Unlock key is not required to install the Essential Studio Blazor Mac installer.
+   N> The Unlock key is not required to install the Essential Studio<sup style="font-size:70%">&reg;</sup> Blazor Mac installer.
 
 4. And paste it in “Applications” folder shortcut.
 
    ![Destination select wizard](images/Mac_Installer4.png)
 
-5. Now you can open the folder to explore the Syncfusion Essential Studio Mac installer.
+5. Now you can open the folder to explore the Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> Mac installer.
 
    ![Installation Type wizard](images/Mac_Installer5.png)
 
@@ -64,7 +64,7 @@ After the installation, the license key is required to register the demo source 
 * For server side application register the license key in Configure method of [Startup.cs](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application#blazor-server-app)
 * For client side application register the license key in main method of [Program.cs](https://blazor.syncfusion.com/documentation/getting-started/license-key/how-to-register-in-an-application#blazor-webassembly-app)
 
-You can also find the steps for getting started with Syncfusion Blazor components in Mac,
+You can also find the steps for getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components in Mac,
 
-* Getting started with Syncfusion Blazor Components in [Blazor Server Side App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-mac/#getting-started-with-syncfusion-blazor-components-in-blazor-server-side-app-using-visual-studio-for-mac) using Visual Studio for Mac.
-* Getting started with Syncfusion Blazor Components in [Web Assembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio-mac/) using Visual Studio for Mac.
+* Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components in [Blazor Server Side App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-mac/#getting-started-with-syncfusion-blazor-components-in-blazor-server-side-app-using-visual-studio-for-mac) using Visual Studio for Mac.
+* Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components in [Web Assembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio-mac/) using Visual Studio for Mac.
