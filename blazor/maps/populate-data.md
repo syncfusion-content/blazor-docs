@@ -210,6 +210,7 @@ The **Http.GetFromJsonAsync** is used in the **OnInitializedAsync** lifecycle me
 ```cshtml
 @inject HttpClient Http;
 @using Syncfusion.Blazor.Maps
+@inject NavigationManager NavigationManager
 
 @if (PopulationDensity == null)
 {
@@ -232,7 +233,7 @@ else
     PopulationData[] PopulationDensity;
     protected override async Task OnInitializedAsync()
     {
-        PopulationDensity = await Http.GetFromJsonAsync<PopulationData[]>("sample-data/PopulationDensity.json");
+        PopulationDensity = await Http.GetFromJsonAsync<PopulationData[]>(NavigationManager.Uri + "sample-data/PopulationDensity.json");
     }
 
     public class PopulationData
