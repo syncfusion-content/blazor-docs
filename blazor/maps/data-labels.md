@@ -182,8 +182,6 @@ The data label can be added as a template in the Maps component. The [LabelTempl
 
 N>The customization properties of data label, [SmartLabelMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_SmartLabelMode), [AnimationDuration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_AnimationDuration) and [IntersectionAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_IntersectionAction) properties are not applicable to [LabelTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_LabelTemplate) property. The styles can be applied to the label template using the CSS styles of the template element.
 
-The following example shows how to add a label template with the data source **PopulationDetails** that is available in the adding data labels from a data source section.
-
 ```cshtml
 @using Syncfusion.Blazor.Maps
 
@@ -204,5 +202,31 @@ The following example shows how to add a label template with the data source **P
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
+
+@code{
+    public class PopulationDetail
+    {
+        public string Code { get; set; }
+        public double Value { get; set; }
+        public string Name { get; set; }
+        public double Population { get; set; }
+        public double Density { get; set; }
+        public string Color { get; set; }
+        public string Continent { get; set; }
+    };
+    public List<PopulationDetail> PopulationDetails = new List<PopulationDetail> {
+        new PopulationDetail {
+            Code = "AF", Value= 53, Name= "Afghanistan", Population= 29863010, Density= 119, Color = "Red", Continent = "Asia"
+        },
+        new PopulationDetail {
+            Code= "AL", Value= 117, Name= "Albania", Population= 3195000, Density= 111, Color = "Blue", Continent = "Europe"
+        },
+        new PopulationDetail {
+            Code= "DZ", Value= 15, Name= "Algeria", Population= 34895000, Density= 15, Color = "Green", Continent = "Africa"
+        }
+    };
+    public string[] ShapePropertyPath = { "name" };
+    public string ShapeDataPath = "Name";
+}
 ```
 ![Blazor Maps with Data Label Template](./images/DataLabel/blazor-maps-data-label-template.PNG)
