@@ -602,8 +602,8 @@ The Grid component provides a set of events that are triggered during drag and d
 @page "/"
 @using Syncfusion.Blazor.Grids
 @using BlazorApp1.Data
-<p>@message</p>
 
+<p>@message</p>
 <SfGrid @ref="Grid" DataSource="@Orders" ID="Grid" AllowSelection="true" AllowRowDragAndDrop="true">
     <GridEvents RowDragStarting="RowDragStartingHandler" RowDropping="RowDroppingHandler" RowDropped="RowDroppedHandler" TValue="OrderData"></GridEvents>
     <GridSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></GridSelectionSettings>
