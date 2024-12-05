@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Saving PDF file in Blazor SfPdfViewer Component | Syncfusion®
-description: Checkout and learn here all about saving PDF file in Syncfusion® Blazor SfPdfViewer component and more.
+title: Saving PDF file in Blazor SfPdfViewer Component | Syncfusion
+description: Checkout and learn here all about saving PDF file in Syncfusion Blazor SfPdfViewer component and more.
 platform: Blazor
 control: SfPdfViewer
 documentation: ug

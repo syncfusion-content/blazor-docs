@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Form filling in Blazor SfPdfViewer Component | Syncfusion®
-description: Checkout and learn here all about form filling in Syncfusion® Blazor SfPdfViewer component and much more.
+title: Form filling in Blazor SfPdfViewer Component | Syncfusion
+description: Checkout and learn here all about form filling in Syncfusion Blazor SfPdfViewer component and much more.
 platform: Blazor
 control: SfPdfViewer
 documentation: ug
