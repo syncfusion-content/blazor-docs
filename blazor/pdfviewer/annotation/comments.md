@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Comments in Blazor PDF Viewer Component | Syncfusion&reg;
-description: Checkout and learn here all about comments in Syncfusion&reg; Blazor PDF Viewer component and much more details.
+title: Comments in Blazor PDF Viewer Component | Syncfusion
+description: Checkout and learn here all about comments in Syncfusion Blazor PDF Viewer component and much more details.
 platform: Blazor
 control: PDF Viewer
 documentation: ug

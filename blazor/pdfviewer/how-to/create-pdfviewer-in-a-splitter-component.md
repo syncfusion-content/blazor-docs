@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Create PDF Viewer in a Splitter Component in Blazor | Syncfusion&reg;
-description: Learn here all about how to create PDF Viewer in a Splitter Component in Syncfusion&reg; Blazor PDF Viewer component.
+title: Create PDF Viewer in a Splitter Component in Blazor | Syncfusion
+description: Learn here all about how to create PDF Viewer in a Splitter Component in Syncfusion Blazor PDF Viewer component.
 platform: Blazor
 control: PDF Viewer
 documentation: ug

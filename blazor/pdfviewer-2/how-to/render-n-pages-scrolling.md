@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Render N number pages on scrolling | Syncfusion&reg;
-description: Learn here all about OverscanCount in Blazor application in Syncfusion&reg; Blazor SfPdfViewer component and more.
+title: Render N number pages on scrolling | Syncfusion
+description: Learn here all about OverscanCount in Blazor application in Syncfusion Blazor SfPdfViewer component and more.
 platform: Blazor
 control: SfPdfViewer
 documentation: ug

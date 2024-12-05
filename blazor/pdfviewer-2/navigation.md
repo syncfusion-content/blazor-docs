@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Navigation in Blazor SfPdfViewer Component | Syncfusion&reg;
-description: Checkout and learn here all about navigation in Syncfusion&reg; Blazor SfPdfViewer component and much more.
+title: Navigation in Blazor SfPdfViewer Component | Syncfusion
+description: Checkout and learn here all about navigation in Syncfusion Blazor SfPdfViewer component and much more.
 platform: Blazor
 control: SfPdfViewer
 documentation: ug

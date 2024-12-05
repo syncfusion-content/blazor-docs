@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Check the status of annotation in Blazor SfPdfViewer | Syncfusion&reg;
-description: Learn here all about how to check the status of annotations or comments in Syncfusion&reg; Blazor SfPdfViewer component and more.
+title: Check the status of annotations in Blazor SfPdfViewer | Syncfusion
+description: Learn here all about how to check the status of annotations or comments in Syncfusion Blazor SfPdfViewer component and more.
 platform: Blazor
 control: SfPdfViewer
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Sticky notes annotations in Blazor PDF Viewer Component | Syncfusion&reg;
-description: Checkout and learn here all about sticky notes annotations in Syncfusion&reg; Blazor PDF Viewer component and more.
+title: Sticky notes annotations in Blazor PDF Viewer Component | Syncfusion
+description: Checkout and learn here all about sticky notes annotations in Syncfusion Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug

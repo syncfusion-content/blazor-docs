@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Import annotations as objects in SfPdfViewer Component | Syncfusion&reg;
-description: Learn here all about Import annotations as objects in Syncfusion&reg; Blazor SfPdfViewer component and more.
+title: Import annotations as objects in SfPdfViewer Component | Syncfusion
+description: Learn here all about Import annotations as objects in Syncfusion Blazor SfPdfViewer component and more.
 platform: Blazor
 control: SfPdfViewer
 documentation: ug

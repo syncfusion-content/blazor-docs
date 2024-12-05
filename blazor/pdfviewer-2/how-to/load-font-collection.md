@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Load Font Collection in a PDF Viewer | Syncfusion&reg;
-description: Learn here all about Font Collection in Blazor application in Syncfusion&reg; Blazor SfPdfViewer component and more.
+title: Load Font Collection in a PDF Viewer | Syncfusion
+description: Learn here all about Font Collection in Blazor application in Syncfusion Blazor SfPdfViewer component and more.
 platform: Blazor
 control: SfPdfViewer
 documentation: ug

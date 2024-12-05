@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Identify if the Viewer has values in the Undo, Redo stack | Syncfusion&reg;
-description: Learn how to identify if the Viewer has values in Undo, Redo stack in Syncfusion&reg; Blazor SfPdfViewer component and more.
+title: Identify if the Viewer has values in the Undo, Redo stack | Syncfusion
+description: Learn how to identify if the Viewer has values in Undo, Redo stack in Syncfusion Blazor SfPdfViewer component and more.
 platform: Blazor
 control: SfPdfViewer
 documentation: ug

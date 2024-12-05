@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Reduce slowness while running the WASM sample | Syncfusion&reg;
+title: Reduce slowness while running the WASM sample | Syncfusion
 description: Learn here all about how to reduce slowness while running the WASM sample in Visual Studio and more.
 platform: Blazor
 control: SfPdfViewer

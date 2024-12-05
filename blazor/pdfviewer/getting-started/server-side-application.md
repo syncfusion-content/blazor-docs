@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with PDF Viewer in Blazor Server App | Syncfusion&reg;
+title: Getting Started with PDF Viewer in Blazor Server App | Syncfusion
 description: Learn how to getting started with PDF Viewer control in Blazor Server-side application. You can view and comment on PDFs in ease and also can fill fields.
 platform: Blazor
 control: PDF Viewer

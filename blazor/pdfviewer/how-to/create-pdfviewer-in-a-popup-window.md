@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Create PDF Viewer in a popup window in Blazor PDF Viewer | Syncfusion&reg;
-description: Learn here all about Create PDF Viewer in a popup window in Syncfusion&reg; Blazor PDF Viewer component and more.
+title: Create PDF Viewer in a popup window in Blazor PDF Viewer | Syncfusion
+description: Learn here all about Create PDF Viewer in a popup window in Syncfusion Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug

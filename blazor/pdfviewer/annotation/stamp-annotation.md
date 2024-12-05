@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Stamp annotations in Blazor PDF Viewer Component | Syncfusion&reg;
-description: Checkout and learn here all about stamp annotations in Syncfusion&reg; Blazor PDF Viewer component and more.
+title: Stamp annotations in Blazor PDF Viewer Component | Syncfusion
+description: Checkout and learn here all about stamp annotations in Syncfusion Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug

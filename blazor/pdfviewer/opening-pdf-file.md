@@ -1,7 +1,7 @@
 ---
-title: "Opening PDF file in Blazor PDF Viewer Component | Syncfusion&reg;"
+title: "Opening PDF file in Blazor PDF Viewer Component | Syncfusion"
 component: "PDF Viewer"
-description: "This page helps you to learn about how to load PDF files from various locations in Syncfusion&reg; Blazor PDF Viewer."
+description: "This page helps you to learn about how to load PDF files from various locations in Syncfusion Blazor PDF Viewer."
 platform: Blazor
 control: PDF Viewer
 documentation: ug

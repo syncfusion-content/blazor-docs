@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Globalization and RTL in Blazor SfPdfViewer | Syncfusion&reg;
-description: Checkout and learn here all about globalization and RTL in Syncfusion&reg; Blazor SfPdfViewer component and more.
+title: Globalization and RTL in Blazor SfPdfViewer Component | Syncfusion
+description: Checkout and learn here all about globalization and RTL in Syncfusion Blazor SfPdfViewer component and more.
 platform: Blazor
 control: SfPdfViewer
 documentation: ug

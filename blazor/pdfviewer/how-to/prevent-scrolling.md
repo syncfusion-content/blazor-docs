@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Prevent the PDF from scrolling | Syncfusion&reg;
-description: Learn here all about Create PDF Viewer in a popup window in Syncfusion&reg; Blazor PDF Viewer component and more.
+title: Prevent the PDF from scrolling | Syncfusion
+description: Learn here all about Create PDF Viewer in a popup window in Syncfusion Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug

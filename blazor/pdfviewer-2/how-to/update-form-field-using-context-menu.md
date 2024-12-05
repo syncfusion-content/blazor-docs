@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Update formField using contextMenu in Blazor SfPdfViewer | Syncfusion&reg;
-description: Learn here all about how to update form field using context menu in Syncfusion&reg; Blazor SfPdfViewer component and more.
+title: Update formField using contextMenu in Blazor SfPdfViewer | Syncfusion
+description: Learn here all about how to update form field using context menu in Syncfusion Blazor SfPdfViewer component and more.
 platform: Blazor
 control: SfPdfViewer
 documentation: ug

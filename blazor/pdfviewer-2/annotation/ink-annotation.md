@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Ink Annotation in Blazor SfPdfViewer Component | Syncfusion&reg;
-description: Checkout and learn here all about free Ink annotations in Syncfusion&reg; Blazor SfPdfViewer component and more.
+title: Ink Annotation in Blazor SfPdfViewer Component | Syncfusion
+description: Checkout and learn here all about free Ink annotations in Syncfusion Blazor SfPdfViewer component and more.
 platform: Blazor
 control: SfPdfViewer
 documentation: ug

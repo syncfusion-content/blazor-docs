@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Refer the SfPdfViewer script file in application | Syncfusion&reg;
-description: Learn here all about refer the SfPdfViewer script file in the application in Syncfusion&reg; Blazor SfPdfViewer component and more.
+title: Refer the SfPdfViewer script file in application | Syncfusion
+description: Learn here all about refer the SfPdfViewer script file in the application in Syncfusion Blazor SfPdfViewer component and more.
 platform: Blazor
 control: SfPdfViewer
 documentation: ug

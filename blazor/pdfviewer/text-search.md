@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Text Search in Blazor PDF Viewer Component | Syncfusion&reg;
-description: Checkout and learn here all about text search in Syncfusion&reg; Blazor PDF Viewer component and much more.
+title: Text Search in Blazor PDF Viewer Component | Syncfusion
+description: Checkout and learn here all about text search in Syncfusion Blazor PDF Viewer component and much more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug

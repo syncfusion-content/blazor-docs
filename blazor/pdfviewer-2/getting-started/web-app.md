@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with SfPdfViewer in Blazor Web App | Syncfusion&reg;
-description: Learn how to getting started with SfPdfViewer&reg; control in Blazor Web App. You can view and comment on PDFs in ease and also can fill fields.
+title: Getting Started with SfPdfViewer in Blazor Web App | Syncfusion
+description: Learn how to getting started with SfPdfViewer control in Blazor Web App. You can view and comment on PDFs in ease and also can fill fields.
 platform: Blazor
 control: SfPdfViewer
 documentation: ug

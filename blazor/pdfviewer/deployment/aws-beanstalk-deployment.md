@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blazor PDF Viewer deployment in AWS BeanStalk | Syncfusion&reg;
+title: Blazor PDF Viewer deployment in AWS BeanStalk | Syncfusion
 description: AWS Elastic Beanstalk simplifies the deployment and management of scalable web applications and services on Linux-based infrastructure
 platform: Blazor
 control: PDF Viewer

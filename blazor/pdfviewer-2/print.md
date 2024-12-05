@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Print in Blazor SfPdfViewer Component | Syncfusion&reg;
-description: Checkout and learn here all about print in Syncfusion&reg; Blazor SfPdfViewer component and much more details.
+title: Print in Blazor SfPdfViewer Component | Syncfusion
+description: Checkout and learn here all about print in Syncfusion Blazor SfPdfViewer component and much more details.
 platform: Blazor
 control: SfPdfViewer
 documentation: ug

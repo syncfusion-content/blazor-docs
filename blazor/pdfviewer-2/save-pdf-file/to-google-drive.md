@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Save PDF files to Google Drive in SfPdfViewer Component | Syncfusion&reg;
-description: Learn here all about how to save PDF files to Google Drive in Syncfusion&reg; Blazor SfPdfViewer component and much more details.
+title: Save PDF files to Google Drive in SfPdfViewer Component | Syncfusion
+description: Learn here all about how to save PDF files to Google Drive in Syncfusion Blazor SfPdfViewer component and much more details.
 platform: Blazor
 control: SfPdfViewer
 documentation: ug

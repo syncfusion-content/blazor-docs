@@ -1,7 +1,7 @@
 ---
 layout: post
-title: View the created PDF document | Syncfusion&reg;
-description: Learn here all about View the created PDF document in Syncfusion&reg; Blazor PDF Viewer component and more.
+title: View the created PDF document | Syncfusion
+description: Learn here all about View the created PDF document in Syncfusion Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug

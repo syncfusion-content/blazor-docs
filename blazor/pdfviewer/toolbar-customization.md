@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Toolbar Customization in Blazor PDF Viewer Component | Syncfusion&reg;
-description: Checkout and learn here all about toolbar customization in Syncfusion&reg; Blazor PDF Viewer component and more.
+title: Toolbar Customization in Blazor PDF Viewer Component | Syncfusion
+description: Checkout and learn here all about toolbar customization in Syncfusion Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug

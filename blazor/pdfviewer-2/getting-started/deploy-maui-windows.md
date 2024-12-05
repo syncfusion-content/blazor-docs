@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Deploy SfPdfViewer in Blazor MAUI in windows | Syncfusion&reg;
-description: Learn how to deploy SfPdfViewer in Blazor MAUI Application on Windows in Syncfusion&reg; Blazor SfPdfViewer component and much more details.
+title: Deploy SfPdfViewer in Blazor MAUI in windows | Syncfusion
+description: Learn how to deploy SfPdfViewer in Blazor MAUI Application on Windows in Syncfusion Blazor SfPdfViewer component and much more details.
 platform: Blazor
 control: SfPdfViewer
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Suppress the error dialog in the Blazor SfPdfViewer | Syncfusion&reg;
-description: Learn here all about how to suppress the error dialog in Syncfusion&reg; Blazor SfPdfViewer component and more.
+title: Suppress the error dialog in the Blazor SfPdfViewer | Syncfusion
+description: Learn here all about how to suppress the error dialog in Syncfusion Blazor SfPdfViewer component and more.
 platform: Blazor
 control: SfPdfViewer
 documentation: ug

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migration from PDF Viewer (Classic) to PDF Viewer | Syncfusion&reg;
+title: Migration from PDF Viewer (Classic) to PDF Viewer | Syncfusion
 description: This section explains the features available in the PDF Viewer control compared to PDF Viewer (Classic).
 platform: Blazor
 control: SfPdfViewer
