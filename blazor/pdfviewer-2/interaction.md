@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Interaction mode in Blazor SfPdfViewer Component | Syncfusion®
-description: Checkout and learn here all about interaction mode in Syncfusion® Blazor SfPdfViewer component and more.
+title: Interaction mode in Blazor SfPdfViewer Component | Syncfusion
+description: Checkout and learn here all about interaction mode in Syncfusion Blazor SfPdfViewer component and more.
 platform: Blazor
 control: SfPdfViewer
 documentation: ug

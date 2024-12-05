@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Get loaded PDF document's data from Blazor PDF Viewer | Syncfusion®
-description: Learn here all about how to get loaded PDF document's data in Syncfusion® Blazor PDF Viewer component and more.
+title: Get loaded PDF document's data from Blazor PDF Viewer | Syncfusion
+description: Learn here all about how to get loaded PDF document's data in Syncfusion Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug

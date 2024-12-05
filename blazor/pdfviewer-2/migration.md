@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migration from PDF Viewer (Classic) to PDF Viewer | Syncfusion®
+title: Migration from PDF Viewer (Classic) to PDF Viewer | Syncfusion
 description: This section explains the features available in the PDF Viewer control compared to PDF Viewer (Classic).
 platform: Blazor
 control: SfPdfViewer
@@ -83,9 +83,9 @@ N> The script file is same for `Server application` and `Web assembly applicatio
 {% highlight html tabtitle="(~/Layout.cshtml/Host.cshtml)" hl_lines="5" %}
 
 <head>
-    <!-- Syncfusion® Blazor PDF Viewer controls theme style sheet -->
+    <!-- Syncfusion Blazor PDF Viewer controls theme style sheet -->
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-    <!-- Syncfusion® Blazor PDF Viewer controls scripts -->
+    <!-- Syncfusion Blazor PDF Viewer controls scripts -->
     <script src="_content/Syncfusion.Blazor.PdfViewer/scripts/syncfusion-blazor-pdfviewer.min.js" type="text/javascript"></script>
 </head>
 
@@ -102,9 +102,9 @@ N> The script file is same for `Server application` and `Web assembly applicatio
 {% highlight html tabtitle="(~/Layout.cshtml/Host.cshtml)" hl_lines="5" %}
 
 <head>
-    <!-- Syncfusion® Blazor SfPdfViewer controls theme style sheet -->
+    <!-- Syncfusion Blazor SfPdfViewer controls theme style sheet -->
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-    <!-- Syncfusion® Blazor SfPdfViewer controls scripts -->
+    <!-- Syncfusion Blazor SfPdfViewer controls scripts -->
     <script src="_content/Syncfusion.Blazor.SfPdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
 </head>
 
