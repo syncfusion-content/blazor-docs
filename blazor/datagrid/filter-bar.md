@@ -9,7 +9,7 @@ documentation: ug
 
 # Filter bar in Blazor Grid component
 
-The filter bar feature provides a user-friendly way to filter data in the Syncfusion Angular Grid. It displays an input field for each column, allowing you to enter filter criteria and instantly see the filtered results.
+The filter bar feature provides a user-friendly way to filter data in the Syncfusion<sup style="font-size:70%">&reg;</sup> Angular Grid. It displays an input field for each column, allowing you to enter filter criteria and instantly see the filtered results.
 
 By defining the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) to true, then filter bar row will be rendered next to header which allows you to filter data. You can filter the records with different expressions depending upon the column type.
 
@@ -115,7 +115,7 @@ public class OrderData
 
 ## Filter bar modes
 
-The Syncfusion Blazor Grid component refers to two different ways in which the grid’s filter bar can operate when filtering criteria are applied. These modes, “OnEnter Mode” and “Immediate Mode,” offer users different experiences and behaviors when interacting with the filter bar.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid component refers to two different ways in which the grid’s filter bar can operate when filtering criteria are applied. These modes, “OnEnter Mode” and “Immediate Mode,” offer users different experiences and behaviors when interacting with the filter bar.
 
 **OnEnter Mode:**
 By Setting the filter bar [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Mode) property as [OnEnter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterBarMode.html#Syncfusion_Blazor_Grids_FilterBarMode_OnEnter) within the [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) component, the filter bar captures the filter criteria entered but doesn’t initiate filtering until the **Enter** key is pressed. This allows multiple criteria modifications without triggering immediate filtering actions.
@@ -231,7 +231,7 @@ public class OrderData
 
 ## Display filter text in pager
 
-The Syncfusion Blazor Grid component provides an option to display filter text within the pager, indicating the current filtering status. Enabling this feature provides you with a clear understanding of the applied filters and the criteria used for filtering.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid component provides an option to display filter text within the pager, indicating the current filtering status. Enabling this feature provides you with a clear understanding of the applied filters and the criteria used for filtering.
 
 To enable the display of filter text within the pager, you should set the [ShowFilterBarStatus](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_ShowFilterBarStatus) property within the [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) configuration.
 
@@ -354,9 +354,9 @@ public class OrderData
 
 ## Prevent filtering for particular column
 
-In the Syncfusion Blazor Grid, you can prevent filtering for a specific column by utilizing the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) object and setting it to **false**. This feature is useful when you want to disable filtering options for a particular column.
+In the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid, you can prevent filtering for a specific column by utilizing the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) object and setting it to **false**. This feature is useful when you want to disable filtering options for a particular column.
 
-Here’s an example that demonstrates how to remove the filter bar for the **CustomerID** column in Syncfusion Blazor Grid:
+Here’s an example that demonstrates how to remove the filter bar for the **CustomerID** column in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -439,7 +439,7 @@ By default, the filter bar is set to a disabled mode for template columns in the
 
 To hide the filter bar for a template column, you can use the  [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) property  of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). This property allows you to define a custom template for the filter bar of a column.
 
-Here’s an example that demonstrates how to hide the filter bar for a template column in the Syncfusion Blazor Grid:
+Here’s an example that demonstrates how to hide the filter bar for a template column in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -521,7 +521,7 @@ public class OrderData
 
 ## Filter bar template with custom component
 
-The [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) feature in the Syncfusion Blazor Grid allows you to customize the components displayed in the filter bar. Normally, a text box is the default element rendered in the filter bar cell. This flexibility allows you to use various components, such as datepicker, numerictextbox, combobox, and multiselect, within the filter bar based on your specific requirements.
+The [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid allows you to customize the components displayed in the filter bar. Normally, a text box is the default element rendered in the filter bar cell. This flexibility allows you to use various components, such as datepicker, numerictextbox, combobox, and multiselect, within the filter bar based on your specific requirements.
 
 To utilize this feature, you can define a custom template for the filter bar by setting the `FilterTemplate` property  of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) in your Blazor application:
 
@@ -604,12 +604,12 @@ To utilize this feature, you can define a custom template for the filter bar by 
 
     public async Task DropDownValueChange(@Syncfusion.Blazor.DropDowns.ChangeEventArgs<string, string> args)
     {
-        if (args.Value == "All")
+        if (args.Value == "All" || args.Value == null)
         {
             await Grid.ClearFiltering();
         }
         else
-        {
+        { 
             stringvalue = args.Value;
             await Grid.FilterByColumnAsync("CustomerID", "contains", args.Value);
         }
