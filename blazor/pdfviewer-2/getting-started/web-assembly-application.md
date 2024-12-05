@@ -137,3 +137,5 @@ Run the application, and the PDF file will be displayed using Syncfusion's Blazo
 * [Getting Started with Blazor PDF Viewer (Next Gen) Component in Blazor Server App](./server-side-application)
 
 * [Getting Started with Blazor PDF Viewer (Next Gen) Component in WSL mode](./wsl-application)
+
+* [.NET 9 Native Linking Issues with SkiaSharp and Emscripten 3.1.56](https://help.syncfusion.com/document-processing/faq/how-to-fix-skiasharp-native-reference-issue-in-blazor-net90-app)
