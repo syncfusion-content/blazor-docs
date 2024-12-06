@@ -7,9 +7,9 @@ component: Common
 documentation: ug
 ---
 
-# Accessibility with ADA Compliance in Syncfusion Blazor Components
+# Accessibility with ADA Compliance in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components
 
-All the Syncfusion Blazor components follow the WAI-ARIA accessibility standard by default. This enables you to build accessible web applications, which are fully navigable by users with disabilities.
+All the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components follow the WAI-ARIA accessibility standard by default. This enables you to build accessible web applications, which are fully navigable by users with disabilities.
 
 ## Accessibility overview
 
@@ -31,55 +31,55 @@ The accessibility of the components consists of the following standards and aspe
 
 [Keyboard navigation](https://www.w3.org/TR/WCAG22/#keyboard-accessible) - It refers to the ability to use a keyboard to interact with and navigate through a user interface. It is an important aspect of web accessibility, as it allows people who cannot use a mouse or other pointing device to access and use web content and applications.
 
-Syncfusion Blazor components adhere to these established standards.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components adhere to these established standards.
 
 ## Accessibility compliance
 
-The accessibility support provided by Syncfusion Blazor components is based on a collection of methodologies for adhering to and [applying recognized standards and technical specifications](#accessibility-standards) to ensure an intuitive experience for people with disabilities.
+The accessibility support provided by Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components is based on a collection of methodologies for adhering to and [applying recognized standards and technical specifications](#accessibility-standards) to ensure an intuitive experience for people with disabilities.
 
-There are several methodologies of accessibility validation that can be performed on the Syncfusion Blazor components, such as:
+There are several methodologies of accessibility validation that can be performed on the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components, such as:
 
-The [WAI-ARIA patterns](https://www.w3.org/WAI/ARIA/apg/patterns/) are followed by the Syncfusion Blazor components to enable appreciable accessibility.
+The [WAI-ARIA patterns](https://www.w3.org/WAI/ARIA/apg/patterns/) are followed by the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components to enable appreciable accessibility.
 
 Each Blazor component is subjected to manual testing with a screen reader and also automated test cases to ensure the component’s required attributes.
 
 Attributes are allocated and updated correctly during interaction as well. Each component has been assigned a distinct `Role` attribute and its own set of ARIA attributes defined by the [WCAG 2.2](https://www.w3.org/TR/WCAG22/) specification.
 
-In addition to the methodologies mentioned above, Syncfusion Blazor components are constructed to support the following accessibility aspects.
+In addition to the methodologies mentioned above, Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are constructed to support the following accessibility aspects.
 
 ### Screen reader support
 
-A screen reader allows people who are blind or visually impaired to use a computer by reading aloud the text that is displayed on the screen. Syncfusion Blazor components followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/) standards to work properly in the screen readers such as [Narrator](https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1) for Windows and [Embedded VoiceOver](https://support.apple.com/en-in/guide/voiceover/vo2706/mac) for MAC.
+A screen reader allows people who are blind or visually impaired to use a computer by reading aloud the text that is displayed on the screen. Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/) standards to work properly in the screen readers such as [Narrator](https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1) for Windows and [Embedded VoiceOver](https://support.apple.com/en-in/guide/voiceover/vo2706/mac) for MAC.
 
 ### Right-To-Left support
 
-Right-to-Left (RTL) support allows applications to effectively communicate with users who use languages that are written from right to left, such as Arabic, Hebrew, etc. Syncfusion Blazor components support the Right-to-Left feature. Refer to the [Right-to-Left documentation](https://blazor.syncfusion.com/documentation/common/right-to-left) to learn more about this support.
+Right-to-Left (RTL) support allows applications to effectively communicate with users who use languages that are written from right to left, such as Arabic, Hebrew, etc. Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components support the Right-to-Left feature. Refer to the [Right-to-Left documentation](https://blazor.syncfusion.com/documentation/common/right-to-left) to learn more about this support.
 
 ### Color contrast
 
-Syncfusion Blazor components come equipped with [predefined themes](https://blazor.syncfusion.com/documentation/appearance/themes) that guarantee the presence of satisfactory color contrast, benefiting individuals with visual impairments.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components come equipped with [predefined themes](https://blazor.syncfusion.com/documentation/appearance/themes) that guarantee the presence of satisfactory color contrast, benefiting individuals with visual impairments.
 
 ### Mobile device support
 
-Syncfusion Blazor components are more user-friendly and accessible to individuals using mobile devices, including those with disabilities. These are designed to be responsive, adaptable to various screen sizes and orientations, and touch-friendly.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are more user-friendly and accessible to individuals using mobile devices, including those with disabilities. These are designed to be responsive, adaptable to various screen sizes and orientations, and touch-friendly.
 
 ### Keyboard navigation support
 
-Syncfusion Blazor components support keyboard navigation, allowing users who rely on alternate methods to effortlessly navigate and interact with the component.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components support keyboard navigation, allowing users who rely on alternate methods to effortlessly navigate and interact with the component.
 
 ## Ensuring accessibility
 
-Ensuring the accessibility of Syncfusion Blazor components is crucial for making the product inclusive and user-friendly for individuals with disabilities. This process involves various types of accessibility testing, including:
+Ensuring the accessibility of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components is crucial for making the product inclusive and user-friendly for individuals with disabilities. This process involves various types of accessibility testing, including:
 
-* **Automated testing**: The Syncfusion Blazor component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
+* **Automated testing**: The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
 
-* **Manual testing**: This type of testing involves manually evaluating the Syncfusion Blazor components. During manual accessibility testing, testers will ensure accessibility using the screen readers such as [Narrator](https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1) for Windows and [Embedded VoiceOver](https://support.apple.com/en-in/guide/voiceover/vo2706/mac) for MAC.
+* **Manual testing**: This type of testing involves manually evaluating the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components. During manual accessibility testing, testers will ensure accessibility using the screen readers such as [Narrator](https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1) for Windows and [Embedded VoiceOver](https://support.apple.com/en-in/guide/voiceover/vo2706/mac) for MAC.
 
-Syncfusion Blazor components will keep improving when there is anything required. It also involves client feedback to make the component more accessible.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components will keep improving when there is anything required. It also involves client feedback to make the component more accessible.
 
 ## Accessibility support for specific components
 
-Consult the component-specific documents below for detailed information about how Syncfusion Blazor components ensure compliance with accessibility standards, encompassing Section 508, WAI-ARIA, WCAG 2.2, keyboard navigation, and more.
+Consult the component-specific documents below for detailed information about how Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components ensure compliance with accessibility standards, encompassing Section 508, WAI-ARIA, WCAG 2.2, keyboard navigation, and more.
 
 <!-- markdownlint-disable MD033 -->
 <table>

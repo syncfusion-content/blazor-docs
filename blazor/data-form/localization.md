@@ -9,7 +9,7 @@ documentation: ug
 
 # Localization in Blazor DataForm component
 
-DataForm component can be localized to any particular culture. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion Blazor components.
+DataForm component can be localized to any particular culture. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
 
 ## Configuring localization for label text and error messages
 

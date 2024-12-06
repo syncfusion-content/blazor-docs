@@ -33,9 +33,9 @@ In the default mode, the legends have symbols with legend labels that are used t
 <SfTreeMap DataSource="Cars" TValue="Car" WeightValuePath="Count" EqualColorValuePath="Brand">
     <TreeMapLeafItemSettings LabelPath="Name">
         <TreeMapLeafColorMappings>
-            <TreeMapLeafColorMapping Value="Ford" Color='new string[]{ "green" }'></TreeMapLeafColorMapping>
-            <TreeMapLeafColorMapping Value="Audi" Color='new string[]{ "red" }'></TreeMapLeafColorMapping>
-            <TreeMapLeafColorMapping Value="Maruti" Color='new string[]{ "orange" }'></TreeMapLeafColorMapping>
+            <TreeMapLeafColorMapping LeafValue="Ford" Color='new string[]{ "green" }'></TreeMapLeafColorMapping>
+            <TreeMapLeafColorMapping LeafValue="Audi" Color='new string[]{ "red" }'></TreeMapLeafColorMapping>
+            <TreeMapLeafColorMapping LeafValue="Maruti" Color='new string[]{ "orange" }'></TreeMapLeafColorMapping>
         </TreeMapLeafColorMappings>
     </TreeMapLeafItemSettings>
     <TreeMapLegendSettings Visible="true" Position="LegendPosition.Top">
@@ -72,9 +72,9 @@ The legends can be made interactive with an arrow mark that indicates exact rang
 <SfTreeMap DataSource="Cars" TValue="Car" WeightValuePath="Count" EqualColorValuePath="Brand">
     <TreeMapLeafItemSettings LabelPath="Name">
         <TreeMapLeafColorMappings>
-            <TreeMapLeafColorMapping Value="Ford" Color='new string[]{ "green" }'></TreeMapLeafColorMapping>
-            <TreeMapLeafColorMapping Value="Audi" Color='new string[]{ "red" }'></TreeMapLeafColorMapping>
-            <TreeMapLeafColorMapping Value="Maruti" Color='new string[]{ "orange" }'></TreeMapLeafColorMapping>
+            <TreeMapLeafColorMapping LeafValue="Ford" Color='new string[]{ "green" }'></TreeMapLeafColorMapping>
+            <TreeMapLeafColorMapping LeafValue="Audi" Color='new string[]{ "red" }'></TreeMapLeafColorMapping>
+            <TreeMapLeafColorMapping LeafValue="Maruti" Color='new string[]{ "orange" }'></TreeMapLeafColorMapping>
         </TreeMapLeafColorMappings>
     </TreeMapLeafItemSettings>
     <TreeMapLegendSettings Visible="true" Position="LegendPosition.Top" Mode="LegendMode.Interactive">
@@ -167,9 +167,9 @@ Customize the legend size by modifying the [Height](https://help.syncfusion.com/
 <SfTreeMap DataSource="Cars" WeightValuePath="Count" EqualColorValuePath="Brand">
     <TreeMapLeafItemSettings LabelPath="Name">
         <TreeMapLeafColorMappings>
-            <TreeMapLeafColorMapping Value="Ford" Color='new string[] { "green"}'></TreeMapLeafColorMapping>
-            <TreeMapLeafColorMapping Value="Audi" Color='new string[] { "red" }'></TreeMapLeafColorMapping>
-            <TreeMapLeafColorMapping Value="Maruti" Color='new string[] { "orange"}'></TreeMapLeafColorMapping>
+            <TreeMapLeafColorMapping LeafValue="Ford" Color='new string[] { "green"}'></TreeMapLeafColorMapping>
+            <TreeMapLeafColorMapping LeafValue="Audi" Color='new string[] { "red" }'></TreeMapLeafColorMapping>
+            <TreeMapLeafColorMapping LeafValue="Maruti" Color='new string[] { "orange"}'></TreeMapLeafColorMapping>
         </TreeMapLeafColorMappings>
     </TreeMapLeafItemSettings>
     <TreeMapLegendSettings Visible="true" Height="50px" Width="200px" Position="LegendPosition.Top">
@@ -207,9 +207,9 @@ TreeMap supports legend paging, if the legend items cannot be placed within the 
 <SfTreeMap DataSource="Cars" TValue="Car" WeightValuePath="Count" EqualColorValuePath="Brand">
     <TreeMapLeafItemSettings LabelPath="Name">
         <TreeMapLeafColorMappings>
-            <TreeMapLeafColorMapping Value="Ford" Color='new string[] { "green" }'></TreeMapLeafColorMapping>
-            <TreeMapLeafColorMapping Value="Audi" Color='new string[] { "red" }'></TreeMapLeafColorMapping>
-            <TreeMapLeafColorMapping Value="Maruti" Color='new string[] { "orange" }'></TreeMapLeafColorMapping>
+            <TreeMapLeafColorMapping LeafValue="Ford" Color='new string[] { "green" }'></TreeMapLeafColorMapping>
+            <TreeMapLeafColorMapping LeafValue="Audi" Color='new string[] { "red" }'></TreeMapLeafColorMapping>
+            <TreeMapLeafColorMapping LeafValue="Maruti" Color='new string[] { "orange" }'></TreeMapLeafColorMapping>
         </TreeMapLeafColorMappings>
     </TreeMapLeafItemSettings>
     <TreeMapLegendSettings Visible="true" Height="50px" Width="100px" Position="LegendPosition.Top">

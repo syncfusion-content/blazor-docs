@@ -9,7 +9,7 @@ documentation: ug
 
 # Inherited Features from TextArea
 
-The Syncfusion Blazor Smart TextArea component fully inherits all the properties, features, and styling options of the Syncfusion Blazor TextArea component. This means that you can leverage the existing features of the Syncfusion Blazor TextArea while benefiting from the enhanced functionality of the Smart TextArea.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart TextArea component fully inherits all the properties, features, and styling options of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TextArea component. This means that you can leverage the existing features of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TextArea while benefiting from the enhanced functionality of the Smart TextArea.
 
 * [Form Support](https://blazor.syncfusion.com/documentation/textarea/form-support)
 * [Floating Labels](https://blazor.syncfusion.com/documentation/textarea/floating-label)
@@ -19,7 +19,7 @@ The Syncfusion Blazor Smart TextArea component fully inherits all the properties
 
 ## See also
 
-* [Getting Started with Syncfusion Blazor Smart TextArea in Blazor Web App](https://blazor.syncfusion.com/documentation/)
-* [Getting Started with Syncfusion Blazor Smart TextArea in Blazor Server App](https://blazor.syncfusion.com/documentation/)
-* [Getting Started with Syncfusion Blazor TextArea in Blazor Web App](https://blazor.syncfusion.com/documentation/textarea/getting-started-webapp)
-* [Getting Started with Syncfusion Blazor TextArea in Blazor App](https://blazor.syncfusion.com/documentation/textarea/getting-started)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart TextArea in Blazor Web App](https://blazor.syncfusion.com/documentation/)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart TextArea in Blazor Server App](https://blazor.syncfusion.com/documentation/)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TextArea in Blazor Web App](https://blazor.syncfusion.com/documentation/textarea/getting-started-webapp)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TextArea in Blazor App](https://blazor.syncfusion.com/documentation/textarea/getting-started)

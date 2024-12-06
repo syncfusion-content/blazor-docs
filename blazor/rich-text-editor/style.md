@@ -158,7 +158,7 @@ Refer script in the `<head>` of the **~/Pages/_Host.cshtml** file.
 {% endhighlight %}
 {% endtabs %}
 
-Now, add the Syncfusion RichTextEditor component in the razor file. The RichTextEditor component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
+Now, add the Syncfusion<sup style="font-size:70%">&reg;</sup> RichTextEditor component in the razor file. The RichTextEditor component is added in the **~/Pages/Index.razor** file under the **~/Pages** folder.
 
 {% tabs %}
 {% highlight razor tabtitle="~/Index.Razor" %}

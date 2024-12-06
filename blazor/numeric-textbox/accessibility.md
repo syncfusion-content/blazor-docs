@@ -80,4 +80,4 @@ The accessibility compliance of the NumericTextBox component is shown in the fol
 
 ## See also
 
-* [Accessibility in Syncfusion components](../common/accessibility)
+* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> components](../common/accessibility)

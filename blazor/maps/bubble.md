@@ -142,7 +142,7 @@ The following properties and a class are available in [MapsBubble](https://help.
     public List<Country> PopulationDetails = new List<Country> {
        new Country
        {
-           Name ="United States", Population = 325020000
+           Name ="Australia", Population = 325020000
        },
        new Country
        {
@@ -189,15 +189,15 @@ The color for each bubble in the Maps can be set using the [ColorValuePath](http
     public List<Country> PopulationDetails = new List<Country> {
        new Country
        {
-           Name = "United States", Population = 325020000, Color = "#b5e485"
+           Name = "Australia", Population = 325020000, Color = "#0000FF"
        },
        new Country
        {
-           Name = "Russia", Population = 142905208, Color = "#7bc1e8"
+           Name = "Russia", Population = 142905208, Color = "#09156D"
        },
        new Country
        {
-           Name = "India", Population = 1198003000, Color = "#df819c"
+           Name = "India", Population = 1198003000, Color = "#C2D2D6"
        }
     };
 }

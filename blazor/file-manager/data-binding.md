@@ -109,7 +109,7 @@ To access the above File Operations, you need some model class files that have f
 
 Add your required files and folders under the `wwwroot\Files` directory.
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor FileManager component in your default web browser.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor FileManager component in your default web browser.
 
 ![Blazor FileManager Component](images/blazor-filemanager-component.png)
 

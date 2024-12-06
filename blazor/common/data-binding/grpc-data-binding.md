@@ -7,9 +7,9 @@ component: Common
 documentation: ug
 ---
 
-# Bind Data to the Syncfusion Blazor Components Using gRPC Service
+# Bind Data to the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components Using gRPC Service
 
-In this topic, you can learn how to consume data from [gRPC](https://grpc.io/) service and bind it to a Syncfusion Blazor Component.
+In this topic, you can learn how to consume data from [gRPC](https://grpc.io/) service and bind it to a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Component.
 
 ## Prerequisite software
 
@@ -201,9 +201,9 @@ public static async Task Main(string[] args)
 
 N> The **OrdersService.OrdersServiceClient** class is also generated automatically from the `.proto` file.
 
-## Add Syncfusion Blazor DataGrid package
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid package
 
-We are going to explain this data (gRPC service data) binding process using the Syncfusion DataGrid component. So, we are going to install the packages required to use the Syncfusion Blazor components. Now, right-click **Dependencies** in the project and select **Manage NuGet Packages**.
+We are going to explain this data (gRPC service data) binding process using the Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid component. So, we are going to install the packages required to use the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components. Now, right-click **Dependencies** in the project and select **Manage NuGet Packages**.
 
 ![Manage NuGet packages](../images/manage-nuget-pack.png)
 
@@ -213,16 +213,16 @@ In the **Browse** tab, search and install the `Syncfusion.Blazor.Grid` NuGet pac
 
 N> For this demo, `Syncfusion.Blazor`(19.1.0.66) NuGet package is used. A new `Syncfusion.Blazor` NuGet package with new enhancement will be released in our every-week release and main release. So, you can check and update to the [latest versions](https://www.nuget.org/packages/Syncfusion.Blazor).
 
-## Adding Syncfusion Blazor DataGrid component
+## Adding Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component
 
-Open `_Import.razor` file and add the following namespaces which are required to use Syncfusion Blazor DataGrid Component in this application.
+Open `_Import.razor` file and add the following namespaces which are required to use Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid Component in this application.
 
 ```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
 ```
 
-Open `Program.cs` file in a **Client** project and **register** the `Syncfusion service` in the **ConfigureServices** method as follows.
+Open `Program.cs` file in a **Client** project and **register** the `Syncfusion<sup style="font-size:70%">&reg;</sup> service` in the **ConfigureServices** method as follows.
 
 ```c#
 using Syncfusion.Blazor;
@@ -248,7 +248,7 @@ In this demo application, the **Bootstrap4** theme will be used. To add the them
 <link href="_content/Syncfusion.Blazor.Themes/ bootstrap4.css" rel="stylesheet" />
 ```
 
-In previous steps, we have successfully configured the Syncfusion Blazor package in the application. Now, we can add the DataGrid Component to the `Index.razor`.
+In previous steps, we have successfully configured the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor package in the application. Now, we can add the DataGrid Component to the `Index.razor`.
 
 ```cshtml
 <SfGrid>

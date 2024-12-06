@@ -14,9 +14,9 @@ The [Blazor Word Processor component](https://www.syncfusion.com/blazor-componen
 ## Key Features
 
 * Composes a document from scratch.
-* [`Opens`](../../document-editor/opening-a-document) and edits the Word (DOC, DOCX), RTF, and SFDT (Syncfusion Document Text) format files.
+* [`Opens`](../../document-editor/opening-a-document) and edits the Word (DOC, DOCX), RTF, and SFDT (Syncfusion<sup style="font-size:70%">&reg;</sup> Document Text) format files.
 * [`Saves`](../../document-editor/saving-document) and exports the documents as DOCX and SDFT at the client-side.
-* Saves and [`exports the documents as PDF`](../../document-editor/how-to/export-document-as-pdf) files with Syncfusion DocIO library.
+* Saves and [`exports the documents as PDF`](../../document-editor/how-to/export-document-as-pdf) files with Syncfusion<sup style="font-size:70%">&reg;</sup> DocIO library.
 * Prints the document.
 * [`Finds and replaces`](../../document-editor/find-and-replace) the text.
 * Allows spell checking.

@@ -12,7 +12,7 @@ documentation: ug
 This article is a comprehensive guide on improving the loading performance of the Blazor DataGrid, especially when dealing with large datasets along with large number of columns. It provides valuable insights into the steps that need to be followed to bind a large data source without experiencing any performance degradations. By offering detailed explanations and actionable tips, this resource aims to empower readers with the knowledge and best practices necessary to optimize the performance of the Blazor DataGrid during data binding, ensuring a smooth and efficient user experience
 
 ## How to improve loading performance by binding large dataset
- In Blazor, the framework takes about 0.06 milliseconds to render one component in the page. You can find more details in the official [documentation link](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance?view=aspnetcore-8.0#avoid-thousands-of-component-instances). In Syncfusion Blazor DataGrid each cell(td) is rendered as separate Blazor component so, it is recommended to render only a limited number of rows and columns to guarantee the best loading performance for the component.
+ In Blazor, the framework takes about 0.06 milliseconds to render one component in the page. You can find more details in the official [documentation link](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance?view=aspnetcore-8.0#avoid-thousands-of-component-instances). In Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid each cell(td) is rendered as separate Blazor component so, it is recommended to render only a limited number of rows and columns to guarantee the best loading performance for the component.
 
 ### Optimizing performance with paging 
 To boost the performance efficiency of your application, especially when dealing with large datasets, it is advised to implement paging. [Paging](https://blazor.syncfusion.com/documentation/datagrid/paging) allows you to display grid data in segmented pages, facilitating easier navigation through substantial datasets. This feature proves particularly beneficial in enhancing the overall performance of your application. For more information on implementing paging, you can refer to the [documentation](https://blazor.syncfusion.com/documentation/datagrid/paging) section dedicated to this feature.
@@ -58,7 +58,7 @@ builder.Services.AddSignalR(hubOptions =>
 ```
 
 ## How to improve performance of Data Grid in WASM application
-This section provides performance guidelines for using Syncfusion Data Grid component efficiently in Blazor WebAssembly application. The general framework Blazor WebAssembly performance best practice/guidelines can be found [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance?view=aspnetcore-8.0).
+This section provides performance guidelines for using Syncfusion<sup style="font-size:70%">&reg;</sup> Data Grid component efficiently in Blazor WebAssembly application. The general framework Blazor WebAssembly performance best practice/guidelines can be found [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance?view=aspnetcore-8.0).
 
 1.	[Avoid unnecessary component renders](https://blazor.syncfusion.com/documentation/datagrid/webassembly-performance#avoid-unnecessary-component-renders)
 2.	[Avoid unnecessary component renders after grid events](https://blazor.syncfusion.com/documentation/datagrid/webassembly-performance#avoid-unnecessary-component-renders-after-grid-events)
@@ -72,7 +72,7 @@ This section provides performance guidelines for using Syncfusion Data Grid comp
 * [Injecting service into CustomAdaptor](https://blazor.syncfusion.com/documentation/datagrid/custom-binding#inject-service-into-custom-adaptor)
 
 ## How to improve loading performance by referring individual script and CSS
-To improve the performance of Syncfusion Blazor DataGrid component during the initial render as well as certain actions, suggested you to refer individual NuGet package (Syncfusion.Blazor.Grid) along with its specified script files. In the consolidated package (Syncfusion.Blazor) all the components will be defined and hence size of the package will be more. Along with its script file size will be more since scripts necessary for all the Syncfusion Blazor components will be defined inside it. 
+To improve the performance of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component during the initial render as well as certain actions, suggested you to refer individual NuGet package (Syncfusion.Blazor.Grid) along with its specified script files. In the consolidated package (Syncfusion.Blazor) all the components will be defined and hence size of the package will be more. Along with its script file size will be more since scripts necessary for all the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components will be defined inside it. 
 
 When package and script file size is more, there might be delay or performance lag in rendering the component in certain specification compared to Grid rendered using individual scripts and NuGet. Individual Nuget package will contain all the necessary and required dependent component sources along with its script reference. So it is not necessary to refer the dependent component externally while referring the Individual package.
 
@@ -104,7 +104,7 @@ The Blazor DataGrid provides support for various adaptors (OData, ODataV4, WebAP
 
 ## Strategic approaches to addressing latency challenges
 
-Understanding the concerns you are facing regarding the lagging responsiveness of the Syncfusion Blazor components, your situation has been reviewed, and several factors contributing to this issue have been identified. It's important to note that when using dialog-oriented features like filtering and dialog editing, a call is made from the client to the server to share position details, resulting in some delay if the servers are located in a distant location.
+Understanding the concerns you are facing regarding the lagging responsiveness of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components, your situation has been reviewed, and several factors contributing to this issue have been identified. It's important to note that when using dialog-oriented features like filtering and dialog editing, a call is made from the client to the server to share position details, resulting in some delay if the servers are located in a distant location.
 
 Additionally, potential solutions to mitigate the delay are offered:
 

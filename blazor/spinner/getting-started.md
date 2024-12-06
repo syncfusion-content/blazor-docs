@@ -22,9 +22,9 @@ To get start quickly with Blazor Spinner component, refer to the video below or 
 
 ## Create a new Blazor App in Visual Studio
 
-You can create a **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=windows) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+You can create a **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=windows) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-## Install Syncfusion Blazor Spinner and Themes NuGet in the App
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Spinner and Themes NuGet in the App
 
 To add **Blazor Spinner** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Spinner](https://www.nuget.org/packages/Syncfusion.Blazor.Spinner) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -37,9 +37,9 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
-## Register Syncfusion Blazor Service
+## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
 Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Spinner` namespace.
 
@@ -52,7 +52,7 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor Server App or Blazor WebAssembly App.
+Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor Server App or Blazor WebAssembly App.
 
 {% tabs %}
 {% highlight C# tabtitle="Blazor Server App" hl_lines="3 10" %}
@@ -112,7 +112,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Blazor Spinner component
 
-Add the Syncfusion Blazor Spinner component with Syncfusion Blazor [Button](https://blazor.syncfusion.com/documentation/button/getting-started) component  in the **~/Pages/Index.razor** file.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Spinner component with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor [Button](https://blazor.syncfusion.com/documentation/button/getting-started) component  in the **~/Pages/Index.razor** file.
 
 {% tabs %}
 {% highlight cshtml %}
@@ -141,7 +141,7 @@ Add the Syncfusion Blazor Spinner component with Syncfusion Blazor [Button](http
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Spinner component in your default web browser.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Spinner component in your default web browser.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htrTZCUjfzWlJVVS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Spinner Component](./images/blazor-spinner.png)" %}
 

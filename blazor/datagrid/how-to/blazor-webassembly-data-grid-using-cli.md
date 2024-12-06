@@ -50,7 +50,7 @@ dotnet new blazorwasm -o BlazorApp -ho
 
 N> If you have installed multiple SDK versions and need any specific framework version (net6.0/net7.0) project, then add -f flag along with dotnet new blazorwasm comment. Refer [here](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new#blazorwasm) for the available options.
 
-## Install Syncfusion Blazor packages in the App
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor packages in the App
 
 To Add `Syncfusion.Blazor.Grid` NuGet package to the application using the following command in the command prompt (Windows) or terminal (Linux and macOS) to install a NuGet package. See [Install and manage packages using the dotnet CLI](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-dotnet-cli) topics for more details.
 
@@ -63,9 +63,9 @@ dotnet restore
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
-## Register Syncfusion Blazor Service
+## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
 Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Grids` namespace.
 
@@ -76,7 +76,7 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 
 ```
 
-Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor WebAssembly App.
+Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor WebAssembly App.
 
 {% tabs %}
 {% highlight C# tabtitle="Blazor WebAssembly App" hl_lines="3 11" %}
@@ -115,7 +115,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Blazor DataGrid component
 
-Add the Syncfusion Blazor DataGrid component in the **~/Pages/Index.razor** file.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component in the **~/Pages/Index.razor** file.
 
 {% tabs %}
 {% highlight razor %}
@@ -303,8 +303,8 @@ The grouping feature enables you to view the datagrid record in a grouped view. 
 
 ## See also
 
-* [Getting Started with Syncfusion DataGrid in Blazor WebAssembly using Visual Studio 2022](./blazor-webassembly-datagrid-using-visual-studio)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid in Blazor WebAssembly using Visual Studio 2022](./blazor-webassembly-datagrid-using-visual-studio)
 
-* [Getting Started with Syncfusion DataGrid in Blazor Server-Side using Visual Studio 2022](../getting-started)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid in Blazor Server-Side using Visual Studio 2022](../getting-started)
 
-* [Getting Started with Syncfusion DataGrid in Blazor Server-Side using .NET Core CLI](./server-side-using-cli)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid in Blazor Server-Side using .NET Core CLI](./server-side-using-cli)

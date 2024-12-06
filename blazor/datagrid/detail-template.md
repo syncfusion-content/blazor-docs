@@ -9,7 +9,7 @@ documentation: ug
 
 # Detail Template in Blazor DataGrid Component
 
-The Detail Template feature in the Syncfusion Blazor DataGrid component allows you to display expanded or collapsible sections for each row to show additional, context-specific information. This is particularly useful for scenarios where rows contain nested or supplementary data that would otherwise clutter the main grid view. You can use the [DetailTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_DetailTemplate) property to define an HTML template for the detail row, which can include any HTML element, Syncfusion component, or custom Blazor component.
+The Detail Template feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component allows you to display expanded or collapsible sections for each row to show additional, context-specific information. This is particularly useful for scenarios where rows contain nested or supplementary data that would otherwise clutter the main grid view. You can use the [DetailTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_DetailTemplate) property to define an HTML template for the detail row, which can include any HTML element, Syncfusion<sup style="font-size:70%">&reg;</sup> component, or custom Blazor component.
 
 > Before adding detail template to the datagrid, it is recommended to go through the [Template](https://blazor.syncfusion.com/documentation/datagrid/templates) section topic to configure the template.
 
@@ -574,7 +574,7 @@ public static List<EmployeeData> Employees = new List<EmployeeData>();
 
 ## Expand or collapse specific detail template row
 
-To expand or collapse a specific row of a detail template in the Syncfusion Grid, you can use the [ExpandCollapseDetailRowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExpandCollapseDetailRowAsync__0_) method. This method allows you to programmatically expand or collapse the detail template for a specific row of data by passing the data object representing that row.
+To expand or collapse a specific row of a detail template in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid, you can use the [ExpandCollapseDetailRowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExpandCollapseDetailRowAsync__0_) method. This method allows you to programmatically expand or collapse the detail template for a specific row of data by passing the data object representing that row.
 
 The following code demonstrates how to expand the particular rows using `ExpandCollapseDetailRowAsync` method of the DataGrid component when a button is clicked, using the DataGrid reference.
 

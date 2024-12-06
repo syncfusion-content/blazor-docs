@@ -189,7 +189,7 @@ It defines single/multiple classes separated by space used to specify an icon fo
 
 ![Blazor Toolbar displays Icon in Suffix Item](./images/blazor-toolbar-icon-in-suffix-item.png)
 
-N>you can refer [here](https://blazor.syncfusion.com/documentation/appearance/icons#icon-integration-in-button-component) to integrate the syncfusion icons in toolbar component.
+N>you can refer [here](https://blazor.syncfusion.com/documentation/appearance/icons#icon-integration-in-button-component) to integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> icons in toolbar component.
 
 ## TabIndex
 
@@ -238,7 +238,7 @@ It specifies the types of command to be rendered in the Toolbar. Supported types
 
 2. **Separator**: Adds a horizontal line that separates the Toolbar commands.
 
-3. **Input**: Creates an input element that is applicable to template rendering with Syncfusion controls like DropDownList, AutoComplete, etc.
+3. **Input**: Creates an input element that is applicable to template rendering with Syncfusion<sup style="font-size:70%">&reg;</sup> controls like DropDownList, AutoComplete, etc.
 
 4. **Spacer**: Adds a space within the Toolbar item. [Spacer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Type) can be used to align the Toolbar items to the left, center, and right.
 

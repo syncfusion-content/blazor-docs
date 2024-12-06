@@ -31,7 +31,7 @@ To navigate the line between two cities on the world map, [Latitude](https://hel
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
             <MapsNavigationLines>
-                <MapsNavigationLine Visible="true" Color="black" Angle="90" Width="2" DashArray="4"
+                <MapsNavigationLine Visible="true" Color="blue" Angle="90" Width="2" DashArray="4"
                                     Latitude="new double[]{ 40.7128, 36.7783 }" Longitude="new double[]{ -74.0060, -119.4179 }">
                 </MapsNavigationLine>
             </MapsNavigationLines>

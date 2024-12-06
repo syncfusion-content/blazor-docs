@@ -11,7 +11,7 @@ documentation: ug
 
 Globalization is the combination of adapting the control to various languages by parsing and formatting the dates, times, numbers or currencies (`Internationalization (L18N)`) and adding cultural-specific customizations and translating the text (`Localization (L10N)`).
 
-The Syncfusion Blazor UI components are specific to the `American English (en-US)` culture by default. It utilizes the `Blazor Internationalization` package to parse and format the number and date objects based on the chosen culture.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI components are specific to the `American English (en-US)` culture by default. It utilizes the `Blazor Internationalization` package to parse and format the number and date objects based on the chosen culture.
 
 Blazor uses the built-in .NET types from the `System.Globalization` namespace, such as the `CultureInfo` class and its `CurrentCulture` property.
 

@@ -17,7 +17,7 @@ For Blazor Web app, refer the script and style sheet fallback from [Static Web A
 
 ### Script fallback
 
-You can check the Syncfusion Blazor object for script fallback whether scripts are loaded or not. If it's not loaded, create a script tag and refer scripts externally inside the `<body>` of **~/Components/App.razor** file in server side app as in the below code.
+You can check the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor object for script fallback whether scripts are loaded or not. If it's not loaded, create a script tag and refer scripts externally inside the `<body>` of **~/Components/App.razor** file in server side app as in the below code.
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/App.razor" %}
@@ -60,7 +60,7 @@ You can refer the theme stylesheet inside the `<head>` of **~/Components/App.raz
 
 CDN links can be down by connection issues or some other problems. This will cause the site looks broken. Follow the below steps to resolve these issues in the Blazor application.
 
-If you are using CDN for style sheet references then you have to add style sheet fallback from [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) by using the [link tag helper](https://learn.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/built-in/link-tag-helper?view=aspnetcore-7.0). Syncfusion theme provides the `e-control` class. You can check the style from provided class by using link tag helper property.
+If you are using CDN for style sheet references then you have to add style sheet fallback from [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) by using the [link tag helper](https://learn.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/built-in/link-tag-helper?view=aspnetcore-7.0). Syncfusion<sup style="font-size:70%">&reg;</sup> theme provides the `e-control` class. You can check the style from provided class by using link tag helper property.
 
 * **~/Pages/_Host.cshtml** file for **.NET 7**.
 * **~/Pages/_Layout.cshtml** for **.NET 6**.
@@ -88,7 +88,7 @@ For Blazor WebAssembly app, refer the script and style sheet fallback from [Stat
 
 ### Script fallback
 
-You can check the Syncfusion Blazor object for script fallback whether scripts are loaded or not. If it's not loaded, create a script tag and refer scripts externally inside the `<head>` of **wwwroot/index.html** file in client web app as in the below code.
+You can check the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor object for script fallback whether scripts are loaded or not. If it's not loaded, create a script tag and refer scripts externally inside the `<head>` of **wwwroot/index.html** file in client web app as in the below code.
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/index.html" %}

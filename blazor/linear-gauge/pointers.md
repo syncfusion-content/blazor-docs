@@ -85,7 +85,7 @@ Image can be rendered instead of rendering a shape as a pointer. It can be achie
             </LinearGaugeMinorTicks>
             <LinearGaugeAxisLabelStyle Position="Position.Outside"></LinearGaugeAxisLabelStyle>
             <LinearGaugePointers>
-                <LinearGaugePointer PointerValue="60" Offset="-27" Height="40" Width="40" MarkerType="MarkerType.Image" ImageUrl="https://blazor.syncfusion.com/demos/_content/blazor_webapp_common_net8/images/linear-gauge/step-count.png">
+                <LinearGaugePointer PointerValue="60" Offset="-27" Height="40" Width="40" MarkerType="MarkerType.Image" ImageUrl="https://blazor.syncfusion.com/demos/_content/blazor_server_common_net8/images/linear-gauge/step-count.png">
                 </LinearGaugePointer>
             </LinearGaugePointers>
         </LinearGaugeAxis>

@@ -354,7 +354,7 @@ N> ClientApplication denotes the ApplicationNameSpace of your project.
 
 ## Internationalization
 
-* The Syncfusion Blazor UI components are specific to the `American English (en-US)` culture by default. It utilizes the `Blazor Internationalization` package to parse and format the number and date objects based on the chosen culture.
+* The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI components are specific to the `American English (en-US)` culture by default. It utilizes the `Blazor Internationalization` package to parse and format the number and date objects based on the chosen culture.
 
 * Suppose, if you want to change any specific culture, then add the corresponding culture resource (`.resx`) file by using the below reference.
 
@@ -413,4 +413,4 @@ N> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-c
 
 ## See also
 
-* [How to enable RTL based on syncfusion blazor service](https://blazor.syncfusion.com/documentation/common/right-to-left#enable-rtl-for-all-components)
+* [How to enable RTL based on Syncfusion<sup style="font-size:70%">&reg;</sup> blazor service](https://blazor.syncfusion.com/documentation/common/right-to-left#enable-rtl-for-all-components)
