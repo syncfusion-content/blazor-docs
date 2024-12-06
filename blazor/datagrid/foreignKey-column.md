@@ -808,7 +808,6 @@ In the following example, Employee Name and Ship City are foreign key columns th
 public class OrderDetails
 {
     public static List<OrderDetails> order = new List<OrderDetails>();
-
     public OrderDetails(int OrderID, string CustomerId, int EmployeeId, string Shipcountry, double Freight)
     {
         this.OrderID = OrderID;
@@ -821,21 +820,21 @@ public class OrderDetails
     {
         if (order.Count == 0)
         {
-            order.Add(new OrderDetails(10248, "VINET", 5, "France",  32.38));
-            order.Add(new OrderDetails(10249, "TOMSP", 6, "Germany",  11.61));
-            order.Add(new OrderDetails(10250, "HANAR", 4, "Brazil",  65.83));
-            order.Add(new OrderDetails(10251, "VICTE", 3, "France", 41.34));
-            order.Add(new OrderDetails(10252, "SUPRD", 4, "Belgium", 51.3));
-            order.Add(new OrderDetails(10253, "HANAR", 3, "Brazil",  58.17));
-            order.Add(new OrderDetails(10254, "CHOPS", 5, "Switzerland",  22.98));
-            order.Add(new OrderDetails(10255, "RICSU", 9, "Switzerland",  148.33));
-            order.Add(new OrderDetails(10256, "WELLI", 3, "Brazil",  13.97));
-            order.Add(new OrderDetails(10257, "HILAA", 4, "Venezuela",  81.91));
+            order.Add(new OrderDetails(10248, "VINET", 3, "France",  32.38));
+            order.Add(new OrderDetails(10249, "TOMSP", 5, "Germany",  11.61));
+            order.Add(new OrderDetails(10250, "HANAR", 1, "Brazil",  65.83));
+            order.Add(new OrderDetails(10251, "VICTE", 6, "France", 41.34));
+            order.Add(new OrderDetails(10252, "SUPRD", 2, "Belgium", 51.3));
+            order.Add(new OrderDetails(10253, "HANAR", 4, "Brazil",  58.17));
+            order.Add(new OrderDetails(10254, "CHOPS", 9, "Switzerland",  22.98));
+            order.Add(new OrderDetails(10255, "RICSU", 7, "Switzerland",  148.33));
+            order.Add(new OrderDetails(10256, "WELLI", 8, "Brazil",  13.97));
+            order.Add(new OrderDetails(10257, "HILAA", 5, "Venezuela",  81.91));
             order.Add(new OrderDetails(10258, "ERNSH", 1, "Austria",  140.51));
-            order.Add(new OrderDetails(10259, "CENTC", 4, "Mexico", 3.25));
-            order.Add(new OrderDetails(10260, "OTTIK", 4, "Germany", 55.09));
-            order.Add(new OrderDetails(10261, "QUEDE", 4, "Brazil", 3.05));
-            order.Add(new OrderDetails(10262, "RATTC", 8, "USA", 48.29));
+            order.Add(new OrderDetails(10259, "CENTC", 6, "Mexico", 3.25));
+            order.Add(new OrderDetails(10260, "OTTIK", 2, "Germany", 55.09));
+            order.Add(new OrderDetails(10261, "QUEDE", 7, "Brazil", 3.05));
+            order.Add(new OrderDetails(10262, "RATTC", 4, "USA", 48.29));
         }
         return order;
     }
@@ -857,15 +856,15 @@ public class CountryDetails
     {
         if (country.Count == 0)
         {
-            country.Add(new CountryDetails(1, "Kirkland"));
-            country.Add(new CountryDetails(2, "London"));
-            country.Add(new CountryDetails(3, "Seattle"));
-            country.Add(new CountryDetails(4, "London"));
-            country.Add(new CountryDetails(5, "Tacoma"));
-            country.Add(new CountryDetails(6, "Redmond"));
+            country.Add(new CountryDetails(1, "Seattle"));
+            country.Add(new CountryDetails(2, "Tacoma"));
+            country.Add(new CountryDetails(3, "Kirkland"));
+            country.Add(new CountryDetails(4, "Redmond"));
+            country.Add(new CountryDetails(5, "London"));
+            country.Add(new CountryDetails(6, "London"));
             country.Add(new CountryDetails(7, "London"));
-            country.Add(new CountryDetails(8, "London"));
-            country.Add(new CountryDetails(9, "Seattle"));
+            country.Add(new CountryDetails(8, "Seattle"));
+            country.Add(new CountryDetails(9, "London"));
         }
         return country;
     }
@@ -908,6 +907,6 @@ public class EmployeeDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLTirNeJykKOSmV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBJCLZnLheGLept?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > You can find the fully working sample [here](https://github.com/SyncfusionExamples/blazor-datagrid-prevent-query-generation-for-foriegnkey-column).
