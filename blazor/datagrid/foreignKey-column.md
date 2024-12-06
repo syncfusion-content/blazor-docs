@@ -9,7 +9,7 @@ documentation: ug
 
 # Foreign key column in Blazor DataGrid component
 
-The Foreign key column in the Syncfusion Grid component allows you to display related data from a foreign key data source in a column within the grid. This feature is particularly useful when you have a column in the grid that represents a foreign key relationship with another data source.
+The Foreign key column in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component allows you to display related data from a foreign key data source in a column within the grid. This feature is particularly useful when you have a column in the grid that represents a foreign key relationship with another data source.
 
 Foreign key column can be enabled by using [ForeignDataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html), [ForeignKeyField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyField) and [ForeignKeyValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyValue) properties of **GridForeignColumn** directive.
 
@@ -21,7 +21,7 @@ Define the foreign key column in the grid using the following properties:
 
 ## Binding local data
 
-The Syncfusion Grid component provides a convenient way to bind local data to a foreign key column. This allows you to display related data from a local data source within the grid. Here’s an example of how to bind local data to a Foreign Key column in Syncfusion Grid:
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component provides a convenient way to bind local data to a foreign key column. This allows you to display related data from a local data source within the grid. Here’s an example of how to bind local data to a Foreign Key column in Syncfusion<sup style="font-size:70%">&reg;</sup> Grid:
 
 In this example, data is the local data source for the Grid, and **Employee Name** is the local data source for the foreign key column. The ForeignKeyValue property is set to **FirstName** which represents the field name in the  **Employee Name** that you want to display in the foreign key column.
 
@@ -119,7 +119,7 @@ public class EmployeeDetails
 
 ## Binding remote data
 
-The Foreign key column in Syncfusion Grid allows you to bind remote data for a foreign key column. You can use  `SfDataManager` component instead of using `DataSource`  property. 
+The Foreign key column in Syncfusion<sup style="font-size:70%">&reg;</sup> Grid allows you to bind remote data for a foreign key column. You can use `SfDataManager` component instead of using `DataSource` property. 
 
 This example demonstrates how to use the foreign key column with remote data binding using the `ODataV4Adaptor` in the grid:
 
@@ -204,7 +204,7 @@ public class OrderDetails
 
 ## Use edit template in foreign key column
 
-The Syncfusion Grid provides support for using an edit template in a foreign key column. By default, a dropdown component is used for editing foreign key column. Other editable components can be rendered using the EditTemplate feature of Grid. The following example demonstrates the way of using edit template with ComboBox component in the foreign column.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid provides support for using an edit template in a foreign key column. By default, a dropdown component is used for editing foreign key column. Other editable components can be rendered using the EditTemplate feature of Grid. The following example demonstrates the way of using edit template with ComboBox component in the foreign column.
 
 In the following code example, the Employee Name is a foreign key column. When editing, the ComboBox component is rendered instead of DropDownList.
 
@@ -323,7 +323,7 @@ In the following code example, the Employee Name is a foreign key column. When e
 
 ## Customize filter UI in foreignkey column
 
-The Syncfusion Grid allows you to customize the filtering user interface (UI) for foreign key columns by using the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate)  property. By default, a dropdown component is used for filtering foreign key columns. However, you can create your own custom filtering UI by [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) property. Here’s an example that demonstrates how to create a custom filtering UI in a foreign key column:
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid allows you to customize the filtering user interface (UI) for foreign key columns by using the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) property. By default, a dropdown component is used for filtering foreign key columns. However, you can create your own custom filtering UI by [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) property. Here’s an example that demonstrates how to create a custom filtering UI in a foreign key column:
 
 > For all filter types other than FilterBar, filtering parameters will be sent in the form of `PredicateModel<T>`. Here, T represents the type of `ForeignKeyValue` property when using the foreignkey column.
 
@@ -369,7 +369,6 @@ public class OrderDetails
         this.ShipCity = Shipcity;
         this.EmployeeID = EmployeeId;
         this.Freight = Freight; 
-
     }
     public static List<OrderDetails> GetAllRecords()
     {
@@ -564,7 +563,7 @@ public class EmployeeDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBAiiZngvqDDFvZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBpiVDnrpdKsebf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Perform aggregation in foreign key column
 
@@ -610,8 +609,7 @@ In the provided example, the `customAggregateFn` function is used to filter and 
     {
         OrderData = OrderDetails.GetAllRecords();
         EmployeeData = EmployeeDetails.GetAllRecords();
-    }
-   
+    }   
     private int CustomAggregateFn()
     {
         var Count=  OrderData.Count(order => EmployeeData
@@ -623,15 +621,13 @@ In the provided example, the `customAggregateFn` function is used to filter and 
 {% highlight c# tabtitle="OrderData.cs" %}
 public class OrderDetails
 {
-    public static List<OrderDetails> order = new List<OrderDetails>();
-    
+    public static List<OrderDetails> order = new List<OrderDetails>();    
     public OrderDetails(int OrderID, string Shipcity, int EmployeeId, double Freight)
     {
         this.OrderID = OrderID;
         this.ShipCity = Shipcity;
         this.EmployeeID = EmployeeId;
         this.Freight = Freight; 
-
     }
     public static List<OrderDetails> GetAllRecords()
     {
@@ -663,35 +659,28 @@ public class OrderDetails
 public class EmployeeDetails
 {
     public static List<EmployeeDetails> employee = new List<EmployeeDetails>();
-
-    public EmployeeDetails() { }
-
-    public EmployeeDetails(int employeeID, string lastName, string firstName)
+    public EmployeeDetails(int employeeID, string firstName)
     {
         this.EmployeeID = employeeID;
-        this.LastName = lastName;
         this.FirstName = firstName;
     }
-
     public static List<EmployeeDetails> GetAllRecords()
     {
         if (employee.Count == 0)
         {
-            employee.Add(new EmployeeDetails(1, "Davolio", "Nancy"));
-            employee.Add(new EmployeeDetails(2, "Fuller", "Andrew"));
-            employee.Add(new EmployeeDetails(3, "Leverling", "Janet"));
-            employee.Add(new EmployeeDetails(4, "Peacock", "Margaret"));
-            employee.Add(new EmployeeDetails(5, "Buchanan", "Steven"));
-            employee.Add(new EmployeeDetails(6, "Suyama", "Michael"));
-            employee.Add(new EmployeeDetails(7, "King", "Robert"));
-            employee.Add(new EmployeeDetails(8, "Callahan", "Laura"));
-            employee.Add(new EmployeeDetails(9, "Dodsworth", "Anne"));
+            employee.Add(new EmployeeDetails(1, "Nancy"));
+            employee.Add(new EmployeeDetails(2, "Andrew"));
+            employee.Add(new EmployeeDetails(3, "Janet"));
+            employee.Add(new EmployeeDetails(4, "Margaret"));
+            employee.Add(new EmployeeDetails(5, "Steven"));
+            employee.Add(new EmployeeDetails(6, "Michael"));
+            employee.Add(new EmployeeDetails(7, "Robert"));
+            employee.Add(new EmployeeDetails(8, "Laura"));
+            employee.Add(new EmployeeDetails(9, "Anne"));
         }
         return employee;
     }
-
     public int EmployeeID { get; set; }
-    public string LastName { get; set; }
     public string FirstName { get; set; }
 }
 {% endhighlight %}
@@ -774,7 +763,7 @@ In the following code sample, you can prevent default filter query generation us
 
 ## Enable multiple foreign key columns
 
-The Syncfusion Grid component supports the feature of enabling multiple foreign key columns with editing options. This allows users to display columns from foreign data sources in the Grid component.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component supports the feature of enabling multiple foreign key columns with editing options. This allows users to display columns from foreign data sources in the Grid component.
 
 In the following example, Employee Name and Ship City are foreign key columns that display the FirstName and ShipCity columns from foreign data.
 
