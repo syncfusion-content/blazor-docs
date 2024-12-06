@@ -477,6 +477,57 @@ By default, the scheduler will render the overlapping events based on the start 
 ```
 ![Blazor Scheduler with Overlapping Events](images/blazor-scheduler-overlapping-events.png)
 
+## Restricting the overlapping events
+You can restrict the users to create and update more than one appointment on specific time slots.
+Which can be achieved using Scheduler's API [AllowOverlap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowOverlap) set to `false`. When try to create or update an appointment that overlaps with an existing appointment, the scheduler will prevent the action and display an conflict alert message.
+
+>Note: By default [AllowOverlap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowOverlap) is true. You can obtain details of overlapping appointments via the `args` parameter in the [PopupOpenEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.PopupOpenEventArgs-1.html).
+
+
+```cshtml
+@using Syncfusion.Blazor.Schedule
+
+<SfSchedule TValue="AppointmentData" AllowOverlap="false" Height="550px" @bind-SelectedDate="@CurrentDate">
+    <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
+</SfSchedule>
+
+@code{
+    DateTime CurrentDate = new DateTime(2020, 1, 31);
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0), 
+        EndTime = new DateTime(2020, 1, 31, 11, 0, 0) },
+        new AppointmentData { Id = 2, Subject = "Conference", StartTime = new DateTime(2020, 1, 29, 10, 0, 0), 
+        EndTime = new DateTime(2020, 1, 29, 11, 0, 0) },
+        new AppointmentData { Id = 3, Subject = "Tech discussion", StartTime = new DateTime(2020, 1, 29, 10, 30, 0), 
+        EndTime = new DateTime(2020, 1, 29, 11, 30, 0) },
+        new AppointmentData { Id = 4, Subject = "London", StartTime = new DateTime(2020, 1, 26, 12, 0, 0), 
+        EndTime = new DateTime(2020, 1, 26, 13, 0, 0) },
+        new AppointmentData { Id = 5, Subject = "New York", StartTime = new DateTime(2020, 1, 25, 13, 0, 0), 
+        EndTime = new DateTime(2020, 1, 25, 15, 0, 0) },
+    };
+    public void OnPopupOpen(PopupOpenEventArgs<AppointmentData> args)
+    {
+        List<AppointmentData> overlappingData = args.OverlapCollection;
+    }
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+    }
+}
+```
+![Blazor Scheduler with restricted Overlapping Events](images/blazor-scheduler-restrict-overlapping-events.png)
+
 ## Restricting event creation on specific time slots
 You can restrict the users to create and update more than one appointment on specific time slots. Also, you can disable the CRUD action on those time slots if it is already occupied, which can be achieved using Scheduler’s public method [IsSlotAvailableAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_IsSlotAvailableAsync__0_).
 
