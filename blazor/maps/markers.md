@@ -323,7 +323,7 @@ The latitude and longitude values are used to determine the location of each mar
 
 ### Setting different sizes for markers individually
 
-The size of the markers in a marker group can be customized using the `WidthValuePath` and `HeightValuePath` properties, which allow the user to change the width and height of the markers based on values from the given data source. Bind the data source to the [DataSource]((https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_DataSource) property of the `MapsMarker` tag, and specify the field names containing the width and height values in the data source for the `WidthValuePath` and `HeightValuePath` properties.
+The size of the markers in a marker group can be customized using the `WidthValuePath` and `HeightValuePath` properties, which allow the user to change the width and height of the markers based on values from the given data source. Bind the data source to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_DataSource) property of the `MapsMarker` tag, and specify the field names containing the width and height values in the data source for the `WidthValuePath` and `HeightValuePath` properties.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
