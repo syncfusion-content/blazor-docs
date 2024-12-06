@@ -1513,14 +1513,12 @@ public class OrderData
 
 ## Event trace while editing
 
-While editing operation is getting executed the following events will be notified,
+When performing editing operations in the Syncfusion Blazor Grid, two primary events are triggered:
 
-* OnActionBegin
-* OnActionComplete
+* [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin)
+* [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionComplete)
 
-In both of these events, the type of editing operation is returned in the **RequestType** parameter of the event arguments. In addition, the event arguments return the edited row data.
-
-The **RequestType** values for the editing operations are listed in the below table,
+These events notify the application about the execution of different editing actions. The type of editing operation is returned in the [RequestType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ActionEventArgs-1.html#Syncfusion_Blazor_Grids_ActionEventArgs_1_RequestType) parameter within the event arguments. Additionally, the event arguments also include the edited row data.
 
 | RequestType | OnActionBegin | OnActionComplete |
 |----------|---------------|---------------|
@@ -1530,45 +1528,44 @@ The **RequestType** values for the editing operations are listed in the below ta
 | Save | Before save operation begins | After save operation is completed |
 | Cancel | Before cancel operation begins | After cancel operation is completed |
 
-The following sample code demonstrates the different **RequestType** parameters returned while performing editing operations in the OnActionBegin and OnActionComplete events,
+The following sample code demonstrates the different **RequestType** parameters returned while performing editing operations in the `OnActionBegin` and `OnActionComplete` events,
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@page "/"
 @using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Inputs
+@using BlazorApp1.Data
 
-<SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" Height="315">
+<p>@actionBeginMessage</p>
+<p>@actionCompleteMessage</p>
+
+<SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
-    <GridEvents OnActionBegin="ActionBegin" OnActionComplete="ActionComplete" TValue="Order"></GridEvents>
+    <GridEvents OnActionBegin="ActionBegin" OnActionComplete="ActionComplete" TValue="OrderData"></GridEvents>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" EditType="Syncfusion.Blazor.Grids.EditType.DatePickerEdit" Format="d" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="130" Type="Syncfusion.Blazor.Grids.ColumnType.Date"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
-
-@code{
-    public List<Order> Orders { get; set; }
+<style>
+    p{
+        color:green;
+    }
+</style>
+@code {
+    public List<OrderData> Orders { get; set; }
+    string actionBeginMessage = "";
+    string actionCompleteMessage = "";
 
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
+        Orders = OrderData.GetAllRecords();
     }
 
-    public class Order
-    {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
-    }
-
-    public void ActionBegin(ActionEventArgs<Order> args)
+    public void ActionBegin(Syncfusion.Blazor.Grids.ActionEventArgs<OrderData> args)
     {
         if (args.RequestType == Syncfusion.Blazor.Grids.Action.BeginEdit)
         {
@@ -1590,9 +1587,10 @@ The following sample code demonstrates the different **RequestType** parameters 
         {
             // Triggers before delete operation starts
         }
+        actionBeginMessage = $"ActionBegin Event: Triggers when {args.RequestType.ToString()} operation starts.";
     }
 
-    public void ActionComplete(ActionEventArgs<Order> args)
+    public void ActionComplete(Syncfusion.Blazor.Grids.ActionEventArgs<OrderData> args)
     {
         if (args.RequestType == Syncfusion.Blazor.Grids.Action.BeginEdit)
         {
@@ -1614,19 +1612,92 @@ The following sample code demonstrates the different **RequestType** parameters 
         {
             // Triggers once delete operation completes
         }
+        actionCompleteMessage = $"ActionComplete Event: Triggers when {args.RequestType.ToString()} operation completes.";
     }
 }
-```
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVpsLZKzeLJxunH?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+    public OrderData() { }
+
+    public OrderData(int OrderID, string CustomerID, string ShipName, double Freight, DateTime? OrderDate, DateTime? ShippedDate, bool? IsVerified, string ShipCity, string ShipCountry, int employeeID)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;
+        this.ShipName = ShipName;
+        this.Freight = Freight;
+        this.OrderDate = OrderDate;
+        this.ShippedDate = ShippedDate;
+        this.IsVerified = IsVerified;
+        this.ShipCity = ShipCity;
+        this.ShipCountry = ShipCountry;
+        this.EmployeeID = employeeID; 
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        {
+            Orders.Add(new OrderData(10248, "VINET", "Vins et alcools Chevalier", 32.38, new DateTime(1996, 7, 4), new DateTime(1996, 08, 07), true, "Reims", "France", 1));
+            Orders.Add(new OrderData(10249, "TOMSP", "Toms Spezialitäten", 11.61, new DateTime(1996, 7, 5), new DateTime(1996, 08, 07), false, "Münster", "Germany", 2));
+            Orders.Add(new OrderData(10250, "HANAR", "Hanari Carnes", 65.83, new DateTime(1996, 7, 6), new DateTime(1996, 08, 07), true, "Rio de Janeiro", "Brazil", 3));
+            Orders.Add(new OrderData(10251, "VINET", "Vins et alcools Chevalier", 41.34, new DateTime(1996, 7, 7), new DateTime(1996, 08, 07), false, "Lyon", "France", 1));
+            Orders.Add(new OrderData(10252, "SUPRD", "Suprêmes délices", 151.30, new DateTime(1996, 7, 8), new DateTime(1996, 08, 07), true, "Charleroi", "Belgium", 2));
+            Orders.Add(new OrderData(10253, "HANAR", "Hanari Carnes", 58.17, new DateTime(1996, 7, 9), new DateTime(1996, 08, 07), false, "Bern", "Switzerland", 3));
+            Orders.Add(new OrderData(10254, "CHOPS", "Chop-suey Chinese", 22.98, new DateTime(1996, 7, 10), new DateTime(1996, 08, 07), true, "Genève", "Switzerland", 2));
+            Orders.Add(new OrderData(10255, "VINET", "Vins et alcools Chevalier", 148.33, new DateTime(1996, 7, 11), new DateTime(1996, 08, 07), false, "Resende", "Brazil", 1));
+            Orders.Add(new OrderData(10256, "HANAR", "Hanari Carnes", 13.97, new DateTime(1996, 7, 12), new DateTime(1996, 08, 07), true, "Paris", "France", 3));
+        }
+        return Orders;
+    }
+
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipName { get; set; }
+    public double? Freight { get; set; }
+    public DateTime? OrderDate { get; set; }
+    public DateTime? ShippedDate { get; set; }
+    public bool? IsVerified { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipCountry { get; set; }
+    public int EmployeeID { get; set; } 
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDBTWrDHUvvLUGmg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Perform CRUD operation using Grid events
 
-IQueryable data can be bound directly to Grid component from database without using Data Adaptors. IQueryable data bound to Grid component using DataSource property of SfGrid. While binding the Data to Grid component using **DataSource** property, CRUD actions need to be handled using Grid Action Events (i.e., using **OnActionBegin** and **OnActionComplete** events of Grid).
+The Syncfusion Blazor Grid enables seamless CRUD (Create, Read, Update, Delete) operations directly with IQueryable data from a database without requiring additional data adaptors. This functionality can be implemented using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property of the SfGrid component and handling the necessary CRUD actions through Grid Action Events such as [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) and [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionComplete).
 
 ### Create an interface layer to the database
 
-Create an interface with CRUD methods like below based on your model class.
+Define the `Book` model class along with the `ILibraryService` interface. The Book model will represent the data structure for the books, and the `ILibraryService` interface will define the CRUD methods to interact with the database.
+
+**Book Model**
+
+The Book model represents the structure of a book in a library system. It includes essential properties such as Id, Name, Author, Quantity, Price, and Available.
+
+```cs
+public class Book
+{
+    public long Id { get; set; }
+    public string Name { get; set; } = null!;
+    public string Author { get; set; } = null!;
+    public int? Quantity { get; set; }
+    public int Price { get; set; }
+    public bool? Available { get; set; }
+}
+```
+The `Book` class represents the structure of a book in the library, including properties like Id, Name, Author, Quantity, Price, and Available.
+
+**ILibraryService Interface**
+
+The `ILibraryService` interface declares the CRUD operations that interact with the database for managing `Book` data.
 
 ```csharp
 using System.Collections.Generic;
@@ -1647,7 +1718,7 @@ namespace LibraryManagement.Models
 
 ### Create an intermediate service using the interface
 
-By inheriting the interface, create a new service to retrieve the data from database and perform CRUD operation. Refer the below demonstration.
+Now, implement the `ILibraryService` interface in a service class. This service interacts with the database using Entity Framework.
 
 ```csharp
 using Microsoft.EntityFrameworkCore;
@@ -1726,12 +1797,20 @@ namespace LibraryManagement.Models
 
 ### Configure the DataGrid component to perform CRUD actions using Grid events
 
-Since data is bound to Grid using DataSource property, CRUD actions will be reflected at Grid component level only. To reflect the changes in database, you need to handle the changes in Grid action events.
+To implement CRUD (Create, Read, Update, Delete) operations effectively with the Syncfusion Blazor Grid, data is bound to the Grid using the DataSource property. However, the changes made in the Grid will only reflect at the Grid component level. To ensure the changes are also reflected in the database, you need to handle the CRUD actions through the appropriate Grid action events.
 
-**OnActionBegin** – This event will be triggered when the action gets initiated. So, while inserting/updating a record, **RequestType Save** will be sent in the event arguments to save the changes in the database. Similarly, while deleting a record, RequestType as Delete will be initiated to perform actions externally.  Since for both Update and Insert action, RequestType will be Save, you can differentiate them by using the **Args.Action** property, which will indicate the current action.
-**OnActionComplete** – It will be triggered when certain actions are completed. Here, you can refresh the Grid component with an updated datasource to reflect the changes.
+**OnActionBegin:** The `OnActionBegin` event is triggered when a CRUD action (such as inserting, updating, or deleting) is initiated. This event is useful for performing actions before the data is processed, allowing you to interact with the database.
 
-```cshtml
+* **Insert and Update Actions:** When inserting or updating a record, the event will receive `RequestType.Save` in the event arguments, indicating that the changes need to be saved in the database.
+* **Delete Action:** When deleting a record, `RequestType.Delete` is triggered to perform deletion externally.
+
+You can differentiate between an insert and an update action by checking the `Args.Action` property. This property indicates the current operation type (`GridAction.Insert` for insert actions and `GridAction.Edit` for update actions).
+
+**OnActionComplete:**  The `OnActionComplete` event is triggered after a CRUD action is completed. This event is ideal for updating the UI, such as refreshing the Grid component with the updated data source, to reflect changes in the database.
+
+It ensures that any changes made to the data are visible in the Grid after actions like insert, update, or delete.
+
+```cs
 @using LibraryManagement.Models
 @inject ILibraryService LibraryService
 
@@ -1783,7 +1862,7 @@ Since data is bound to Grid using DataSource property, CRUD actions will be refl
 }
 ```
 
-N> Find the sample from this [Github](https://github.com/SyncfusionExamples/blazor-server-datagrid-efcore-crud/) location.
+N> You can find the sample in the following [Github](https://github.com/SyncfusionExamples/blazor-server-datagrid-efcore-crud/) repository.
 
 ## See also
 
