@@ -395,7 +395,7 @@ public class OrderDetails
 
 ### Render Chip component in a column
 
-The DataGrid component provides support for rendering [Chips](https://blazor.syncfusion.com/documentation/color-picker/getting-started-with-web-app) component in a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This feature is useful when displaying data that requires a chip component to be rendered in a column.
+The DataGrid component provides support for rendering [Chips](https://blazor.syncfusion.com/documentation/chip/getting-started-with-web-app) component in a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This feature is useful when displaying data that requires a chip component to be rendered in a column.
 
 In the following code, we rendered the Chips component in the Grid **First Name** column by defining the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property.
 
