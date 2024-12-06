@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Floating Action Button Component
 
-This section briefly explains about how to include Blazor Floating Action Button component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
+This section briefly explains about how to include [Blazor Floating Action Button](https://www.syncfusion.com/blazor-components/blazor-fab) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
 To get start quickly with Floating Action Button Component using Blazor, you can check on this video or [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/FloatingActionButton) sample.
 
