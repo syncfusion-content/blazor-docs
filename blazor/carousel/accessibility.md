@@ -54,7 +54,7 @@ The Blazor carousel component is designed by considering [WAI-ARIA](https://www.
 
 ## Keyboard interaction
 
-By default, keyboard navigation is enabled. This component implements keyboard navigation support by following the WAI-ARIA practices. Once focused on the active Carousel element, you can use the following key combination for interacting with the Carousel.
+All the Carousel actions can be controlled via keyboard keys by using the [`allowKeyboardInteraction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_AllowKeyboardInteraction). This component implements keyboard navigation support by following the WAI-ARIA practices. Once focused on the active Carousel element, you can use the following key combination for interacting with the Carousel.
 
 | Key                | Description                                                     |
 | ------------------ | --------------------------------------------------------------- |
