@@ -109,7 +109,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram componen
 
 ## Run the application
 
-Run the application, and the diagram  will be displayed using Syncfusion's Blazor Diagram component in your browser.
+Run the application, and the diagram  will be displayed using the Syncfusion® Blazor Diagram component in your browser.
 
 ## Basic Blazor Diagram elements
 
