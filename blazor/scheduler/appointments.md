@@ -477,7 +477,9 @@ By default, the scheduler will render the overlapping events based on the start 
 ```
 ![Blazor Scheduler with Overlapping Events](images/blazor-scheduler-overlapping-events.png)
 
-## Restricting the overlapping events
+## Prevent Overlap Events
+By default, the scheduler permits overlapping events. To prevent this, you can either set the [AllowOverlap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowOverlap) property to false or use the Scheduler's public method [IsSlotAvailableAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_IsSlotAvailableAsync__0_).
+### Restricting the overlapping events using AllowOverlap property
 You can restrict the users to create and update more than one appointment on specific time slots.
 Which can be achieved using Scheduler's API [AllowOverlap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowOverlap) set to `false`. When try to create or update an appointment that overlaps with an existing appointment, the scheduler will prevent the action and display an conflict alert message.
 
@@ -528,7 +530,7 @@ Which can be achieved using Scheduler's API [AllowOverlap](https://help.syncfusi
 ```
 ![Blazor Scheduler with restricted Overlapping Events](images/blazor-scheduler-restrict-overlapping-events.png)
 
-## Restricting event creation on specific time slots
+### Restricting the overlapping events using IsSlotAvailableAsync method
 You can restrict the users to create and update more than one appointment on specific time slots. Also, you can disable the CRUD action on those time slots if it is already occupied, which can be achieved using Scheduler’s public method [IsSlotAvailableAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_IsSlotAvailableAsync__0_).
 
 >Note: The **IsSlotAvailableAsync** is centered around verifying appointments within the present view's date range. Yet, it does not encompass an evaluation of availability for recurrence occurrences that fall beyond this particular date range.
