@@ -188,7 +188,7 @@ To bind data for the sankey, you can assign an IEnumerable object to the [Nodes]
 {% endhighlight %}
 {% endtabs %}
 
-## Add titles
+## Add title
 
 Using the [Title]() property, you can add a title to the sankey to provide the user with quick information about the data plotted in the sankey.
 
