@@ -23,7 +23,7 @@ You can create a **Blazor Server App** using Visual Studio via [Microsoft Templa
 
 ## Install Syncfusion Blazor Sankey NuGet in the App
 
-To add **Blazor Sankey** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Sankey](https://www.nuget.org/packages/Syncfusion.Blazor.Sankey). Alternatively, you can utilize the following package manager command to achieve the same.
+To add **Blazor Sankey** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Sankey](https://www.nuget.org/packages). Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
