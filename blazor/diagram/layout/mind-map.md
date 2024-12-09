@@ -9,7 +9,7 @@ documentation: ug
 
 # Mind Map Layout in Blazor Diagram Component
 
-A mind map is a diagram that displays the nodes as a spider diagram organizes information around a central concept. To create mind map, the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Type) of layout should be set as [MindMap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutType.html#Syncfusion_Blazor_Diagram_LayoutType_MindMap).
+A mind map is a diagram that displays the nodes as a spider diagram organizes information around a central concept. To create a mind map, the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Type) of layout should be set as [MindMap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutType.html#Syncfusion_Blazor_Diagram_LayoutType_MindMap).
 
 To create a Mindmap Layout using the Blazor Diagram, refer to the below video link,
 
@@ -81,7 +81,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Blazor Mind Map Diagram](../images/blazor-mind-map-diagram.png)
 
-You can also decide the branch for mind map using [GetBranch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_GetBranch) method. The following code demonstrates how to set all branches on the right side for mind map layout using GetBranch method.
+You can also decide the branch for a mind map using the [GetBranch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_GetBranch) method. The following code demonstrates how to set all branches on the right side for a mind map layout using the GetBranch method.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
@@ -166,7 +166,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 >**Note:** In the DataSourceSettings, the type of the ID and ParentID properties is string. The provided DataSource should have a parent-child relationship. It is necessary for at least one node to have an empty ParentID.
 
-Also, you can render a mind map layout without using Datasource. The following code demonstrates how to render a mind map layout without using DataSource.
+Also, you can render a mind map layout without using a Datasource. The following code demonstrates how to render a mind map layout without using DataSource.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram

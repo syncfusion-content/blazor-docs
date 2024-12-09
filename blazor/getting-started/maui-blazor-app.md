@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI Blazor Application
 
-This section explains how to create and run the first .NET Multi-platform Blazor App UI (.NET MAUI Blazor) app with Syncfusion Blazor components.
+This section explains how to create and run the first .NET Multi-platform Blazor App UI (.NET MAUI Blazor) app with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
 
 ## What is .NET MAUI Blazor App?
 
@@ -58,7 +58,7 @@ In `MainPage.xaml`, The `BlazorWebView` is added and points to the root of the B
 
 For more details refer [Create a .NET MAUI Blazor app](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/blazorwebview#create-a-net-maui-blazor-app) topic. If you already have .NET MAUI app and want to convert use `BlazorWebView`, refer [Add a BlazorWebView to an existing app](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/blazorwebview#add-a-blazorwebview-to-an-existing-app) topic.
 
-## Install Syncfusion Blazor Calendars and Themes NuGet in the App
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendars and Themes NuGet in the App
 
 Here's an example of how to add **Blazor Calendar** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -71,9 +71,9 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
-## Register Syncfusion Blazor Service
+## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
 Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Calendars` namespace.
 
@@ -84,7 +84,7 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 
 ```
 
-Now, register the Syncfusion Blazor service in the `MauiProgram.cs` file of your MAUI Blazor App.
+Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the `MauiProgram.cs` file of your MAUI Blazor App.
 
 {% tabs %}
 {% highlight C# tabtitle="~/MauiProgram.cs" hl_lines="1 3" %}
@@ -110,9 +110,9 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 ```
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-## Add Syncfusion Blazor component
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component
 
-Now add Syncfusion Blazor component in any razor file. Here, the Calendar component is added in `~/Pages/index.razor` page under the `~/Pages` folder.
+Now add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component in any razor file. Here, the Calendar component is added in `~/Pages/index.razor` page under the `~/Pages` folder.
 
 {% tabs %}
 {% highlight razor %}
@@ -131,7 +131,7 @@ Before running the sample, make sure the mode is `Windows Machine`.
 
 N> If you want to run the application in Android or iOS refer [MAUI Getting Started](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui?view=aspnetcore-8.0#run-the-app-in-the-android-emulator) for the setup.
 
-![MAUI Blazor App with Syncfusion Blazor Components](images/maui/maui-blazor-calendar.png)
+![MAUI Blazor App with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components](images/maui/maui-blazor-calendar.png)
 
 N> Download demo from [GitHub](https://github.com/SyncfusionExamples/MAUI-Blazor-App-using-Syncfusion-Blazor-Components)
 
@@ -163,7 +163,7 @@ If you get error dialog like "There were deployment errors", Enable developer mo
 
 ### How to solve deployment errors in iOS?
 
-In iOS code is statically compiled ahead of time, so, configure Syncfusion Blazor assemblies in `MtouchExtraArgs` tag for the iOS Release configuration in the project when deploy on a real device.
+In iOS code is statically compiled ahead of time, so, configure Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor assemblies in `MtouchExtraArgs` tag for the iOS Release configuration in the project when deploy on a real device.
 
 Below are possible errors if `MtouchExtraArgs` tag is not configured,
 1. App won't load on real device with error "An unhandled error has occurred" after you compile in Release mode with Visual Studio and deploy to real device.

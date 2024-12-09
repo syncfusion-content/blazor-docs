@@ -7,7 +7,7 @@ control: Diagram
 documentation: ug
 ---
 
-N> Syncfusion recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
 
 # Events in Blazor Diagram Component
 
@@ -498,7 +498,7 @@ Triggers when editor got focus at the time of node’s label or text node editin
 
 ## Native events
 
-The Diagram control provides event support, which triggers while interacting with the diagram. Also, Syncfusion provides native event support in blazor for the following events
+The Diagram control provides event support, which triggers while interacting with the diagram. Also, Syncfusion<sup style="font-size:70%">&reg;</sup> provides native event support in blazor for the following events
 
 | Event Name | Event Type |
 | -------- | -------- |

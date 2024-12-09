@@ -9,19 +9,19 @@ documentation: ug
 
 # Overview in Blazor Diagram Component
 
-[SfDiagramOverviewComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Overview.SfDiagramOverviewComponent.html) allows you to see a preview or an overall view of the entire content of a diagram. This helps you to look at the overall picture of a large diagram and to navigate, pan, or zoom on a particular position of the page.
+The [SfDiagramOverviewComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Overview.SfDiagramOverviewComponent.html) provides a miniature view of the entire diagram content, offering a comprehensive preview at a glance. This powerful feature enables users to effortlessly navigate, pan, and zoom to specific areas of interest within large and complex diagrams. By presenting a bird's-eye view, it enhances the user's ability to understand the diagram's structure and quickly locate desired sections, significantly improving overall usability and efficiency.
 
 ## Usage Scenario
 
-When you work on a very large diagram, you may not know the part you are actually working on, or navigation from one part to another might be difficult. One solution for navigation is to zoom out the entire diagram and find where you are. Then, you can zoom in on a particular area you want. This solution is not suitable when you need some frequent navigation.
+When working with an extensive diagram, it can be challenging to maintain context or navigate efficiently between different sections. The traditional approach of zooming out to view the entire diagram and then zooming in on a specific area can be cumbersome, especially when frequent navigation is required.
 
-SfDiagramOverviewComponent solves these problems by showing a preview, that is, an overall view of the entire diagram. A rectangle indicates the viewport of the diagram. Navigation becomes easy by dragging this rectangle.
+The SfDiagramOverviewComponent offers an elegant solution to these challenges by providing a compact preview of the entire diagram. This overview displays a miniature representation of your diagram, with a rectangular viewport indicator highlighting your current focus area. Navigation becomes intuitive and effortless as you can simply drag this viewport rectangle to instantly move to different parts of the diagram, enhancing both productivity and user experience.
 
 ## Create an overview
 
-The [SourceID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Overview.SfDiagramOverviewComponent.html#Syncfusion_Blazor_Diagram_Overview_SfDiagramOverviewComponent_SourceID) property of the SfDiagramOverviewComponent should be set with the corresponding diagram [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ID) for the overall view.
+The [SourceID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Overview.SfDiagramOverviewComponent.html#Syncfusion_Blazor_Diagram_Overview_SfDiagramOverviewComponent_SourceID) property of the SfDiagramOverviewComponent is essential for linking the overview to its corresponding diagram. To establish this connection, set the SourceID to match the [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ID) of the target diagram component. This ensures that the overview displays an accurate representation of the main diagram.
 
-The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Overview.SfDiagramOverviewComponent.html#Syncfusion_Blazor_Diagram_Overview_SfDiagramOverviewComponent_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Overview.SfDiagramOverviewComponent.html#Syncfusion_Blazor_Diagram_Overview_SfDiagramOverviewComponent_Height) properties of the SfDiagramOverviewComponent allow you to define the size of the overview panel.
+To customize the dimensions of the overview panel, utilize the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Overview.SfDiagramOverviewComponent.html#Syncfusion_Blazor_Diagram_Overview_SfDiagramOverviewComponent_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Overview.SfDiagramOverviewComponent.html#Syncfusion_Blazor_Diagram_Overview_SfDiagramOverviewComponent_Height) properties of the SfDiagramOverviewComponent. These properties allow you to precisely control the size of the overview, ensuring it fits seamlessly within your application's layout.
 
 The following code illustrates how to create an overview.
 
@@ -103,12 +103,14 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Zoom and Pan
 
-In the SfDiagramOverviewComponent, the view port of the diagram is highlighted with a red color rectangle. Diagram can be zoomed/panned by interacting with that rectangle. You can interact with SfDiagramOverviewComponent as follows:
+The SfDiagramOverviewComponent displays a viewport of the diagram, highlighted by a red rectangular outline. This component allows for intuitive interaction with the diagram through the following methods:
 
-* Resize the rectangle: Zooms in/out the diagram.
-* Drag the rectangle: Pans the diagram.
-* Click at a position: Navigates to the clicked region.
-* Choose a particular region by clicking and dragging: Navigates to the specified region.
+* Resizing the rectangle: Dynamically zooms the diagram in or out.
+* Dragging the rectangle: Smoothly pans the diagram to different areas.
+* Clicking at a specific position: Instantly navigates the diagram to the clicked region.
+* Selecting a region by click-and-drag: Precisely navigates to the user-defined area.
+
+These interactions provide a seamless way to explore and navigate complex diagrams, enhancing the overall user experience and improving diagram comprehension.
 
 The following image shows how the diagram is zoomed/panned with an overview.
 

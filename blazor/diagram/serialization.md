@@ -9,11 +9,11 @@ documentation: ug
 
 # Serialization in Blazor Diagram Component
 
-Serialization is the process of saving and loading the state persistence of the diagram.
+Serialization is the process of saving and loading the persistent state of the diagram.
 
 ## Two-way binding
 
-While saving and loading the diagram, we have to use two-way binding such as @bind for nodes and connectors.
+When saving and loading the diagram, we must use two-way binding (such as @bind) for nodes and connectors.
 
 ```cshtml
 <SfDiagramComponent @ref="@diagram" @bind-Connectors="@connectors" @bind-Nodes="@nodes"></SfDiagramComponent>
@@ -21,7 +21,7 @@ While saving and loading the diagram, we have to use two-way binding such as @bi
 
 ## Save the diagram as string
 
-While saving the [diagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html) is serialized as a string. The [SaveDiagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SaveDiagram) method of the diagram helps to serialize the diagram as a string. The following code illustrates how to save the diagram.
+While saving, the [diagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html) is serialized as a string. The [SaveDiagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SaveDiagram) method of the diagram helps to serialize the diagram as a string. The following code illustrates how to save the diagram.
 
 ```cshtml
 SfDiagramComponent Diagram;
@@ -31,7 +31,7 @@ string data = Diagram.SaveDiagram();
 
 ## Load the diagram from string
 
-The [diagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html) is loaded from the serialized string data by the [LoadDiagramAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_LoadDiagramAsync_System_String_System_Boolean_) method. The following code illustrates how to load the diagram from serialized string data.
+The [diagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html) is loaded from the serialized string data using the [LoadDiagramAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_LoadDiagramAsync_System_String_System_Boolean_) method. The following code illustrates how to load the diagram from serialized string data.
 
 ```cshtml
 SfDiagramComponent Diagram;
@@ -43,7 +43,7 @@ await Diagram.LoadDiagramAsync(data);
 
 ## Load the SfDiagram JSON data string using SfDiagramComponent
 
-You can load the [SfDiagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html) serialized JSON data string into [SfDiagramComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html) using [LoadDiagramAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_LoadDiagramAsync_System_String_System_Boolean_) method. When you load SfDiagram serialized string, then the isClassicData parameter should be set to true. The default value of the isClassicData is false.
+You can load the [SfDiagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html) serialized JSON data string into [SfDiagramComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html) using the [LoadDiagramAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_LoadDiagramAsync_System_String_System_Boolean_) method. When you load the SfDiagram serialized string, the isClassicData parameter should be set to true. The default value of isClassicData is false.
 
 The following code illustrates how to load the SfDiagramComponent from SfDiagram serialized string data.
 
@@ -59,7 +59,7 @@ await Diagram.LoadDiagramAsync(data, true);
 
 ## How to save and load the diagram using file stream
 
-The diagram provides support to save and load the diagram using file stream. The below code illustrates how to download the saved diagram as a file.
+The diagram provides support to save and load the diagram using a file stream. The below code illustrates how to download the saved diagram as a file.
 
 ```cshtml
     SfDiagramComponent diagram;

@@ -8,7 +8,7 @@ description: "Learn how to bind data from a Microsoft SQL server in the Syncfusi
 
 This section describes how to use [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.8.5?_src=template) to retrieve data from a Microsoft SQL server database and bind it to the Blazor Pivot Table.
 
-## Connecting a Microsoft SQL database to a Syncfusion Blazor Pivot Table
+## Connecting a Microsoft SQL database to a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table
 
 **1.** Create a simple Blazor Pivot Table by following the **"Getting Started"** documentation [link](../getting-started).
 
@@ -81,7 +81,7 @@ When you run the application, the resultant pivot table will look like this.
 
 ![Blazor Pivot Table bound with Microsoft SQL data](../images/blazor-pivottable-Ms-SQL-databinding.png)
 
-## Connecting a Microsoft SQL to a Syncfusion Blazor Pivot Table via Web API service
+## Connecting a Microsoft SQL to a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table via Web API service
 
 ### Create a Web API service to fetch Microsoft SQL data
 

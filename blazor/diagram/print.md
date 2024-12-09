@@ -9,11 +9,11 @@ documentation: ug
 
 # Printing in Blazor Diagram Component
 
-Diagram provides support to print the content displayed in the diagram page using the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PrintAsync_) method.
+Diagram provides support to print the content displayed on the diagram page using the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PrintAsync_) method.
 
 ## Page setup
 
-Some of the print options cannot be configured through JavaScript code. So the layout, paper size, and margin options have to be customized using the browser page setup dialog. Refer to the following links to know more about the browser page setup:
+Some of the print options cannot be configured through JavaScript code. Therefore, the layout, paper size, and margin options must be customized using the browser page setup dialog. Refer to the following links to learn more about the browser page setup:
 
 * [Chrome](https://support.google.com/chrome/answer/1069693?hl=en&visit_id=1-636335333734668335-3165046395&rd=1)
 * [Firefox](https://support.mozilla.org/en-US/kb/how-print-web-pages-firefox)

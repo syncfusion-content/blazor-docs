@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Accessibility in Syncfusion&reg; Blazor PDF Viewer components
+# Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PDF Viewer components
 
 The Blazor PDF Viewer component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
@@ -89,4 +89,4 @@ The accessibility compliance of the Blazor PDF Viewer component is shown in the 
 
 ## See also
 
-* [Accessibility in Syncfusion Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)

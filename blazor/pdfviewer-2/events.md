@@ -61,7 +61,7 @@ The events provided in SfPdfViewer component are listed out as follows:
 
 ## Adding SfPdfViewer events to Blazor component
 
-The Syncfusion&reg; SfPdfViewer events has to be wrapped inside the [PdfViewerEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html) tag.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> SfPdfViewer events has to be wrapped inside the [PdfViewerEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html) tag.
 
 ```cshtml
 

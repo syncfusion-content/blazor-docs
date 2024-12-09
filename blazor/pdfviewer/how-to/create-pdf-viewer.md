@@ -9,7 +9,7 @@ documentation: ug
 
 # View the created PDF document
 
-The Syncfusion&reg; Blazor PDF Viewer component allows you to view the created PDF document using the [**Created**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_PdfViewer_PdfViewerEvents_Created) event.
+The Syncfusion's Blazor PDF Viewer component allows you to view the created PDF document using the [**Created**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_PdfViewer_PdfViewerEvents_Created) event.
 
 The following code example shows how to view the created PDF document.
 

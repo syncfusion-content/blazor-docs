@@ -9,7 +9,7 @@ documentation: ug
 
 # Styling and Appearance in Blazor DataGrid Component
 
-To modify the Grid appearance, you need to override the default CSS of grid. Find the list of CSS classes and their corresponding section in grid. Also, you have an option to create your own custom theme for all the Syncfusion Blazor components using our [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
+To modify the Grid appearance, you need to override the default CSS of grid. Find the list of CSS classes and their corresponding section in grid. Also, you have an option to create your own custom theme for all the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components using our [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
 
 |Section|CSS class|Purpose of CSS class |
 |-----|-----|----- |

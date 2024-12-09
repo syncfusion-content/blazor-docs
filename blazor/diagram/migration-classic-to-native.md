@@ -9,7 +9,7 @@ documentation: ug
 
 # Migration from the SfDiagram(classic) to SfDiagramComponent control
 
-This article describes the API migration process of the SfDiagramComponent from SfDiagram(classic).
+This comprehensive guide outlines the step-by-step API migration process for transitioning from the classic SfDiagram to the modern SfDiagramComponent in Blazor applications. It provides detailed instructions, code examples, and best practices to ensure a smooth upgrade experience.
 
 ## NuGet packages
 
@@ -27,8 +27,8 @@ This article describes the API migration process of the SfDiagramComponent from 
 
 ## Advantages
 
-A `SfDiagramComponent` blazor component performs better than the `SfDiagram` blazor control in the Blazor WebAssembly Application.
-* The user who interacts with the diagram elements programmatically for their business logic or requirements – They prefer C# level code to the same, whereas Syncfusion EJ2 Diagram is purely written in TypeScript. In Blazor, sync each interaction done changes at the client browser to the C# code through the JSInterop calls. In turn, this leads to a huge performance lack. You used a separate native blazor diagram component to avoid this performance block.
+The `SfDiagramComponent` Blazor component offers superior performance compared to the `SfDiagram` Blazor control, especially in Blazor WebAssembly applications.
+* Users who need to programmatically interact with diagram elements for their business logic or specific requirements often prefer C# code for these operations. However, the Syncfusion EJ2 Diagram is primarily written in TypeScript. In Blazor applications, synchronizing each interaction from the client browser to C# code requires JSInterop calls, which can significantly impact performance. To overcome this performance bottleneck, a separate native Blazor diagram component has been developed, eliminating the need for frequent JSInterop calls and enhancing overall efficiency.
 
 ## Feature wise API difference between SfDiagram(classic) and SfDiagramComponent
 

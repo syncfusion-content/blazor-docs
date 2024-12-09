@@ -72,10 +72,10 @@ The PDF export feature enables exporting Gantt chart data to a PDF document. To 
 
 ## Customize the PDF export
 
-The PDF export functionality in the Syncfusion Gantt Chart provides extensive customization options through the [GanttPdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html) class. By configuring the properties within this class, you can control the layout, format, and content of the exported PDF. This customization ensures that the PDF accurately represents the Gantt chart's structure and allows for tailored exports.
+The PDF export functionality in the Syncfusion<sup style="font-size:70%">&reg;</sup> Gantt Chart provides extensive customization options through the [GanttPdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html) class. By configuring the properties within this class, you can control the layout, format, and content of the exported PDF. This customization ensures that the PDF accurately represents the Gantt chart's structure and allows for tailored exports.
 
 ### Customize file name for exported document
-The PDF export functionality in the Syncfusion Gantt Chart allows you to customize the file name of the exported document. By configuring the [FileName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_FileName) property within the [GanttPdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html) class, you can assign a specific name to the generated PDF. This is especially useful for keeping your exported documents organized and easily identifiable.
+The PDF export functionality in the Syncfusion<sup style="font-size:70%">&reg;</sup> Gantt Chart allows you to customize the file name of the exported document. By configuring the [FileName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_FileName) property within the [GanttPdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttPdfExportProperties.html) class, you can assign a specific name to the generated PDF. This is especially useful for keeping your exported documents organized and easily identifiable.
 
 In this example, the exported PDF will be saved as `ProjectSchedule.pdf`.
 

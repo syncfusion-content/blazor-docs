@@ -9,7 +9,7 @@ documentation: ug
 
 # Customizing Appearance of Suggestions 
 
-The `ShowSuggestionOnPopup` attribute in Syncfusion Blazor Smart TextArea allows you to control how text suggestions are displayed to the users.
+The `ShowSuggestionOnPopup` attribute in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart TextArea allows you to control how text suggestions are displayed to the users.
 
 * If `ShowSuggestionOnPopup` is `true`, suggestions displayed in the pop-up window
 
@@ -47,5 +47,5 @@ By default `ShowSuggestionOnPopup` is `false`.
 
 ## See also
 
-* [Getting Started with Syncfusion Blazor Smart TextArea in Blazor Web App](https://blazor.syncfusion.com/documentation/)
-* [Getting Started with Syncfusion Blazor Smart TextArea with in Blazor Server App](https://blazor.syncfusion.com/documentation/)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart TextArea in Blazor Web App](https://blazor.syncfusion.com/documentation/)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart TextArea with in Blazor Server App](https://blazor.syncfusion.com/documentation/)

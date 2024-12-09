@@ -30,7 +30,7 @@ documentation: ug
 
 ## How to specify parent child relationship in Datasource
 
-The [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_ID) and [ParentID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_ParentID) types are string in DataSourceSettings. When creating a parent-child relationship, it's essential to ensure that at least one node has an empty ParentID. This node will act as the root or parent node, with other nodes linked as its children.For example, let's consider the data source settings. Within the DataSource, we have defined three specific details. The DataModel class has attributes such as ID, ParentID, and various other details. In this scenario, the initial dataset does not have a parent ID, which means we have set it as empty. This node act as parent or root node of layout.Subsequent datasets, however, do contain a ParentID. Below is a code example illustrating this:
+The [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_ID) and [ParentID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_ParentID) types are string in DataSourceSettings. When creating a parent-child relationship, it's essential to ensure that at least one node has an empty ParentID. This node will act as the root or parent node, with other nodes linked as its children. For example, let's consider the data source settings. Within the DataSource, we have defined three specific details. The DataModel class has attributes such as ID, ParentID, and various other details. In this scenario, the initial dataset does not have a parent ID, which means we have set it as empty. This node acts as the parent or root node of the layout. Subsequent datasets, however, do contain a ParentID. Below is a code example illustrating this:
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
@@ -385,7 +385,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ##  How to bind dynamicObject data with diagram
 
-Diagram is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile time. In such circumstances data can be bound to the Diagram as a list of **DynamicObject**.
+Diagram is a generic component that is strongly bound to a model type. There are cases when the model type is unknown during compile time. In such circumstances data can be bound to the Diagram as a list of **DynamicObject**.
 Diagram can also perform all kind of supported Layout operations in DynamicObject such as,
 * Hierarchical layout
 * Organization chart
@@ -393,7 +393,7 @@ Diagram can also perform all kind of supported Layout operations in DynamicObjec
 * Complex Hierarchical Tree layout
 * Radial Tree layout
 
- The **DynamicObject** can be bound to Diagram by assigning to the [DataSource] property of the [DataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html).
+ The **DynamicObject** can be bound to the Diagram by assigning it to the [DataSource] property of the [DataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html).
 The following code example illustrates how to bind DynamicObject data with the diagram.
 
 ```cshtml
@@ -656,9 +656,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to bind remote data with diagram
 
-To bind remote data to [Diagram component](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html), assign service data as an instance of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_DataSource) property or by using SfDataManager component. To interact with remote data source, provide the endpoint Url.
+To bind remote data to [Diagram component](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html), assign service data as an instance of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_DataSource) property or use the SfDataManager component. To interact with a remote data source, provide the endpoint Url.
 
-When using SfDataManager for data binding then the TValue must be provided explicitly in the diagram component. By default, SfDataManager uses ODataAdaptor for remote data-binding.
+When using SfDataManager for data binding, the TValue must be provided explicitly in the diagram component. By default, SfDataManager uses ODataAdaptor for remote data-binding.
 
 ### Binding with OData services
 
@@ -751,7 +751,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Binding with OData v4 services
 
-The ODataV4 is an improved version of OData protocols, and the SfDataManager can also retrieve and consume OData v4 services. For more details on OData v4 services, refer to the [OData documentation](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197). To bind OData v4 service, use the ODataV4Adaptor.
+The ODataV4 is an improved version of OData protocols, and the SfDataManager can also retrieve and consume OData v4 services. For more details on OData v4 services, refer to the [OData documentation](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197). To bind an OData v4 service, use the ODataV4Adaptor.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -1022,7 +1022,7 @@ The following sample code demonstrates how to bind data to the Diagram component
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/RemoteData/URLAdaptor)
 
 ### How to bind custom data
-The custom data binding can be performed in the diagram component by providing the custom adaptor class and overriding the Read or ReadAsync method of the DataAdaptor abstract class.
+The custom data binding can be performed in the diagram component by providing a custom adaptor class and overriding the Read or ReadAsync method of the DataAdaptor abstract class.
 
 The following sample code demonstrates implementing custom data binding using custom adaptor,
 
@@ -1351,7 +1351,7 @@ The following sample code demonstrates implementing CRUD operations for the cust
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/DiagramWithCustomAdaptor)
 
 ### Binding with GraphQL service
-GraphQL is a query language for APIs with which you can get exactly what you need and nothing more. The GraphQLAdaptor provides an option to retrieve data from the GraphQL server. For more details on GraphQL service, refer to the [GraphQL documentation](../data/adaptors#graphql-service-binding).
+GraphQL is a query language for APIs that allows you to can get exactly what you need and nothing more. The GraphQLAdaptor provides an option to retrieve data from a GraphQL server. For more details on GraphQL service, refer to the [GraphQL documentation](../data/adaptors#graphql-service-binding).
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -1448,9 +1448,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Performing CRUD operation using mutation
 
-You can perform the CRUD operations by setting the mutation queries in the [Mutation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html#Syncfusion_Blazor_Data_GraphQLAdaptorOptions_Mutation) property of [GraphQLAdaptorOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html).
+You can perform CRUD operations by setting the mutation queries in the [Mutation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html#Syncfusion_Blazor_Data_GraphQLAdaptorOptions_Mutation) property of [GraphQLAdaptorOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html).
 
-The following sample code demonstrates performing CRUD operation. You have to set the Insert mutation query in [Insert](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLMutation.html#Syncfusion_Blazor_Data_GraphQLMutation_Insert) property of Mutation in `GraphQLAdaptorOptions`. Similarly, you have to set the Update and Delete mutation queries in [Update](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLMutation.html#Syncfusion_Blazor_Data_GraphQLMutation_Update) and [Delete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLMutation.html#Syncfusion_Blazor_Data_GraphQLMutation_Delete) properties of Mutation in `GraphQLAdaptorOptions` respectively.
+The following sample code demonstrates performing CRUD operations. You have to set the Insert mutation query in [Insert](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLMutation.html#Syncfusion_Blazor_Data_GraphQLMutation_Insert) property of Mutation in `GraphQLAdaptorOptions`. Similarly, you have to set the Update and Delete mutation queries in [Update](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLMutation.html#Syncfusion_Blazor_Data_GraphQLMutation_Update) and [Delete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLMutation.html#Syncfusion_Blazor_Data_GraphQLMutation_Delete) properties of Mutation in `GraphQLAdaptorOptions` respectively.
 
 
 The following variables are passed as a parameter to the mutation method written for **Insert** operation in server side.
@@ -1754,7 +1754,7 @@ namespace DiagramWithRemoteData.Data
 
 ### Creating Web API Controller
 
- A Web API Controller has to be created which allows directly directly to consume data from the Entity Framework.
+ A Web API Controller has to be created which allows direct consumption of data from the Entity Framework.
 
 ```csharp
 using Microsoft.AspNetCore.Mvc;
@@ -1862,7 +1862,7 @@ namespace DiagramWithRemoteData.Controllers
 
 ### Configure diagram component using Web API adaptor
 
-Now, you can configure the diagram using the **'SfDataManager'** to interact with the created Web API and consume the data appropriately. To interact with web api, you need to use WebApiAdaptor.
+Now, you can configure the diagram using the **'SfDataManager'** to interact with the created Web API and consume the data appropriately. To interact with the web api, you need to use WebApiAdaptor.
 
 ```cshtml
 @using Syncfusion.Blazor.Data
@@ -1935,7 +1935,7 @@ Now, you can configure the diagram using the **'SfDataManager'** to interact wit
 The SfDiagramComponent supports CRUD (Create, Read, Update, Delete) operations using SfDataManager for remote data management. By making API calls to update data, the diagram automatically re-renders, ensuring real-time synchronization between the front-end diagram and the back-end. This allows users to manage and manipulate diagram data from remote databases or APIs using methods like ReadData, UpdateData, InsertData, and DeleteData.
 
 ### Read DataSource
-The SfDiagramComponent can fetch and display data from remote sources using the ReadDataAsync method. This method retrieves data from the server that we visualized as nodes and connectors in the diagram. This method is invoked when the user wants to load the raw data from the server.
+The SfDiagramComponent can fetch and display data from remote sources using the ReadDataAsync method. This method retrieves data from the server, which is then visualized as nodes and connectors in the diagram. This method is invoked when the user wants to load the raw data from the server.
 ```csharp
     //To fetch data from the remote service
     public async void Read()

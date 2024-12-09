@@ -39,7 +39,7 @@ In the following example, the value of [LabelPath](https://help.syncfusion.com/c
 <SfMaps ID="Maps">
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="PopulationDetail"
-                   DataSource="PopulationDetailss" ShapeDataPath="@ShapeDataPath" ShapePropertyPath="@ShapePropertyPath">
+                   DataSource="PopulationDetails" ShapeDataPath="@ShapeDataPath" ShapePropertyPath="@ShapePropertyPath">
             @* To add data labels *@
             <MapsDataLabelSettings Visible="true" LabelPath="Continent"></MapsDataLabelSettings>
             <MapsShapeSettings Autofill="true"></MapsShapeSettings>
@@ -58,7 +58,7 @@ In the following example, the value of [LabelPath](https://help.syncfusion.com/c
         public string Color { get; set; }
         public string Continent { get; set; }
     };
-    public List<PopulationDetail> PopulationDetailss = new List<PopulationDetail> {
+    public List<PopulationDetail> PopulationDetails = new List<PopulationDetail> {
         new PopulationDetail {
             Code = "AF", Value= 53, Name= "Afghanistan", Population= 29863010, Density= 119, Color = "Red", Continent = "Asia"
         },
@@ -187,17 +187,47 @@ N>The customization properties of data label, [SmartLabelMode](https://help.sync
 
 <SfMaps>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/usa.json"}' TValue="string">
-            @* To trim intersect labels *@
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="PopulationDetail"
+                   DataSource="PopulationDetails" ShapeDataPath="@ShapeDataPath" ShapePropertyPath="@ShapePropertyPath">
             <MapsDataLabelSettings Visible="true">
                 <LabelTemplate>
-                    @{ <p>Label</p> }
+                    @{
+                        var Data = context as PopulationDetail;
+                        <div style="width:50px; height:20px;border: 2px solid black; text-align:center;">
+                            <p style="color:red; font-size:12px;">@Data.Continent</p>
+                        </div>
+                    }
                 </LabelTemplate>
             </MapsDataLabelSettings>
-            <MapsShapeSettings Autofill="true"></MapsShapeSettings>
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
+
+@code{
+    public class PopulationDetail
+    {
+        public string Code { get; set; }
+        public double Value { get; set; }
+        public string Name { get; set; }
+        public double Population { get; set; }
+        public double Density { get; set; }
+        public string Color { get; set; }
+        public string Continent { get; set; }
+    };
+    public List<PopulationDetail> PopulationDetails = new List<PopulationDetail> {
+        new PopulationDetail {
+            Code = "AF", Value= 53, Name= "Afghanistan", Population= 29863010, Density= 119, Color = "Red", Continent = "Asia"
+        },
+        new PopulationDetail {
+            Code= "AL", Value= 117, Name= "Albania", Population= 3195000, Density= 111, Color = "Blue", Continent = "Europe"
+        },
+        new PopulationDetail {
+            Code= "DZ", Value= 15, Name= "Algeria", Population= 34895000, Density= 15, Color = "Green", Continent = "Africa"
+        }
+    };
+    public string[] ShapePropertyPath = { "name" };
+    public string ShapeDataPath = "Name";
+}
 ```
 
 ![Blazor Maps with Data Label Template](./images/DataLabel/blazor-maps-data-label-template.PNG)
