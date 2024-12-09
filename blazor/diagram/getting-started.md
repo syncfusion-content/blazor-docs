@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Diagram Component in the Blazor Server app.
 
-In this section, we'll guide you through the process of adding the Syncfusion® Blazor Diagram component to your Blazor Server app. We'll break it down into simple steps to make it easy to follow. Additionally, you can find a fully functional example project on our [GitHub repository](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DiagramComponent/BlazorServerApp/Diagramsample).
+In this section, we'll guide you through the process of adding Syncfusion® Blazor Diagram component to your Blazor Server app. We'll break it down into simple steps to make it easy to follow. Additionally, you can find a fully functional example project on our [GitHub repository](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DiagramComponent/BlazorServerApp/Diagramsample).
 
 ## Prerequisites
 
