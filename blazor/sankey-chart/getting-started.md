@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Getting Stared with Blazor Sankey Chart Component | Syncfusion
-description: Checkout and learn about getting started with Blazor Sankey Chart component in Blazor Server App using Visual Studio and more.
+title: Getting Stared with Blazor Sankey Component | Syncfusion
+description: Checkout and learn about getting started with Blazor Sankey component in Blazor Server App using Visual Studio and more.
 platform: Blazor
-control: Sankey Chart
+control: Sankey
 documentation: ug
 ---
 
 <!-- markdownlint-disable MD040 -->
 
-# Getting Started with Blazor Sankey Chart Component in Blazor Server App
+# Getting Started with Blazor Sankey Component in Blazor Server App
 
-This section briefly explains about how to include [Blazor Sankey Charts](https://www.syncfusion.com/blazor-components/blazor-charts) component in your Blazor Server App using Visual Studio.
+This section briefly explains about how to include [Blazor Sankey](https://www.syncfusion.com/blazor-components/blazor-charts) component in your Blazor Server App using Visual Studio.
 
 ## Prerequisites
 
@@ -21,14 +21,14 @@ This section briefly explains about how to include [Blazor Sankey Charts](https:
 
 You can create a **Blazor Server App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-## Install Syncfusion Blazor SankeyChart NuGet in the App
+## Install Syncfusion Blazor Sankey NuGet in the App
 
-To add **Blazor Sankey Chart** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.SankeyChart](https://www.nuget.org/packages/Syncfusion.Blazor.SankeyChart). Alternatively, you can utilize the following package manager command to achieve the same.
+To add **Blazor Sankey** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Sankey](https://www.nuget.org/packages/Syncfusion.Blazor.sankey). Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
 
-Install-Package Syncfusion.Blazor.SankeyChart -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.Sankey -Version {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
@@ -43,7 +43,7 @@ Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
 {% highlight razor tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
-@using Syncfusion.Blazor.SankeyChart
+@using Syncfusion.Blazor.Sankey
 
 {% endhighlight %}
 {% endtabs %}
@@ -86,9 +86,9 @@ The script can be accessed from NuGet through [Static Web Assets](https://blazor
 ```
 N> Check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-## Add Blazor Sankey Chart Component
+## Add Blazor Sankey Component
 
-Add the Syncfusion Blazor Sankey Chart component in the **~/Pages/Index.razor** file.
+Add the Syncfusion Blazor Sankey component in the **~/Pages/Index.razor** file.
 
 {% tabs %}
 {% highlight razor %}
@@ -142,13 +142,13 @@ Add the Syncfusion Blazor Sankey Chart component in the **~/Pages/Index.razor** 
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Sankey Chart component in your default web browser.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Sankey component in your default web browser.
 
-{% previewsample "" backgroundimage "[Blazor Sankey Chart Component](images/getting-started/blazor-sankey-chart.png)" %}
+![Blazor Sankey Component](images/getting-started/blazor-sankey.png)
 
-## Populate Blazor SankeyChart with data
+## Populate Blazor Sankey with data
 
-To bind data for the Sankey chart, you can assign an IEnumerable object to the [Nodes]() and [Links]() properties. These properties define the structure of the nodes and the relationships between them.
+To bind data for the sankey, you can assign an IEnumerable object to the [Nodes]() and [Links]() properties. These properties define the structure of the nodes and the relationships between them.
 
 {% tabs %}
 {% highlight razor %}
@@ -204,7 +204,7 @@ To bind data for the Sankey chart, you can assign an IEnumerable object to the [
 
 ## Add titles
 
-Using the [Title]() property, you can add a title to the sankey chart to provide the user with quick information about the data plotted in the chart.
+Using the [Title]() property, you can add a title to the sankey to provide the user with quick information about the data plotted in the chart.
 
 {% tabs %}
 {% highlight razor %}
@@ -215,11 +215,11 @@ Using the [Title]() property, you can add a title to the sankey chart to provide
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "" backgroundimage "[Blazor Sankey Chart with Title](images/getting-started/blazor-sankey-chart-title.png)" %}
+![Blazor Sankey with Title](images/getting-started/blazor-sankey-title.png)
 
-## Add data label
+## Add data label to node label
 
-You can add data labels to improve the readability of the sankey chart. This can be achieved by setting the [Visible]() property to **true** in the [SankeyLabelSettings]().
+You can add data labels to improve the readability of the sankey. This can be achieved by setting the [Visible]() property to **true** in the [SankeyLabelSettings]().
 
 {% tabs %}
 {% highlight razor %}
@@ -231,11 +231,11 @@ You can add data labels to improve the readability of the sankey chart. This can
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "" backgroundimage "[Blazor Column Chart with DataLabel](images/getting-started/blazor-sankey-chart-data-label.png)" %}
+![Blazor Column Chart with DataLabel](images/getting-started/blazor-sankey-data-label.png)
 
 ## Enable tooltip
 
-The tooltip can be enabled by setting the [Enable]() property in [SankeyChartTooltipSettings]() to **true**. However, the tooltip is enabled by default in the sankey chart.
+The tooltip can be enabled by setting the [Enable]() property in [SankeyTooltipSettings]() to **true**. However, the tooltip is enabled by default in the sankey.
 
 {% tabs %}
 {% highlight razor %}
@@ -247,11 +247,11 @@ The tooltip can be enabled by setting the [Enable]() property in [SankeyChartToo
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "" backgroundimage "[Blazor Sankey Chart with Tooltip](images/getting-started/blazor-sankey-chart-tooltip.png)" %}
+![Blazor Sankey with Tooltip](images/getting-started/blazor-sankey-tooltip.png)
 
 ## Enable legend
 
-You can use legend for the sankey chart by setting the [Visible]() property to **true** in [SankeyChartLegendSettings](). However, the legend is enabled by default in the sankey chart.
+You can use legend for the sankey by setting the [Visible]() property to **true** in [SankeyLegendSettings](). However, the legend is enabled by default in the sankey.
 
 {% tabs %}
 {% highlight razor %}
@@ -263,7 +263,7 @@ You can use legend for the sankey chart by setting the [Visible]() property to *
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "" backgroundimage "[Blazor Sankey Chart with Legend](images/getting-started/blazor-sankey-chart-legend.png)" %}
+![Blazor Sankey with Legend](images/getting-started/blazor-sankey-legend.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Chart).
 
