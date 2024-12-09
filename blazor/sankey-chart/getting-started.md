@@ -11,7 +11,7 @@ documentation: ug
 
 # Getting Started with Blazor Sankey Component in Blazor Server App
 
-This section briefly explains about how to include [Blazor Sankey](https://www.syncfusion.com/blazor-components/blazor-charts) component in your Blazor Server App using Visual Studio.
+This section briefly explains about how to include [Blazor Sankey](https://www.syncfusion.com/blazor-components) component in your Blazor Server App using Visual Studio.
 
 ## Prerequisites
 
@@ -264,8 +264,6 @@ You can use legend for the sankey by setting the [Visible]() property to **true*
 {% endtabs %}
 
 ![Blazor Sankey with Legend](images/getting-started/blazor-sankey-legend.png)
-
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Chart).
 
 ## See also
 

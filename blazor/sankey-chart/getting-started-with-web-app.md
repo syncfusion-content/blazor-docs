@@ -11,7 +11,7 @@ documentation: ug
 
 # Getting Started with Blazor Sankey Component in Blazor Web App
 
-This section briefly explains about how to include [Blazor Sankey](https://www.syncfusion.com/blazor-components/blazor-charts) component in your Blazor Web App using Visual Studio.
+This section briefly explains about how to include [Blazor Sankey](https://www.syncfusion.com/blazor-components) component in your Blazor Web App using Visual Studio.
 
 ## Prerequisites
 
@@ -37,46 +37,31 @@ N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.o
 
 ## Register Syncfusion Blazor Service
 
-Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
+Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Sankey` namespace.
 
-{% tabs %}
-{% highlight razor tabtitle="~/_Imports.razor" %}
+```cshtml
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Sankey
-
-{% endhighlight %}
-{% endtabs %}
+```
 
 Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor Web App.
 
-{% tabs %}
-{% highlight C# tabtitle="Blazor Web App" hl_lines="3 10" %}
+If you select an **Interactive render mode** as `WebAssembly` or `Auto (Server and WebAssembly)`, you need to register the Syncfusion Blazor service in both **~/Program.cs** files of your Blazor Web App.
 
-using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Web;
+```cshtml
+
+....
 using Syncfusion.Blazor;
-
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor();
+....
 builder.Services.AddSyncfusionBlazor();
-
-var app = builder.Build();
 ....
 
-{% endhighlight %}
-{% endtabs %}
+```
 
 ## Add script resources
 
-The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the script in the `<head>` of the main page as follows:
-
-* For **.NET 6** Blazor Web App, include it in **~/Pages/_Layout.cshtml** file.
-
-* For **.NET 7** Blazor Web App, include it in the **~/Pages/_Host.cshtml** file.
+The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the script reference at the end of the `<body>` in the **~/Components/App.razor** file as shown below:
 
 ```html
 <head>
@@ -84,6 +69,7 @@ The script can be accessed from NuGet through [Static Web Assets](https://blazor
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
 </head>
 ```
+
 N> Check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
 ## Add Blazor Sankey Component
@@ -204,7 +190,7 @@ To bind data for the sankey, you can assign an IEnumerable object to the [Nodes]
 
 ## Add titles
 
-Using the [Title]() property, you can add a title to the sankey to provide the user with quick information about the data plotted in the chart.
+Using the [Title]() property, you can add a title to the sankey to provide the user with quick information about the data plotted in the sankey.
 
 {% tabs %}
 {% highlight razor %}
@@ -264,8 +250,6 @@ You can use legend for the sankey by setting the [Visible]() property to **true*
 {% endtabs %}
 
 ![Blazor Sankey with Legend](images/getting-started/blazor-sankey-legend.png)
-
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Chart).
 
 ## See also
 

@@ -11,7 +11,7 @@ documentation: ug
 
 # Getting Started with Blazor Sankey Component in Blazor WASM App
 
-This section briefly explains about how to include [Blazor Sankey](https://www.syncfusion.com/blazor-components/blazor-charts) component in your Blazor WASM App using Visual Studio.
+This section briefly explains about how to include [Blazor Sankey](https://www.syncfusion.com/blazor-components) component in your Blazor WASM App using Visual Studio.
 
 ## Prerequisites
 
@@ -48,23 +48,23 @@ Open **~/_Imports.razor** file and import the Syncfusion.Blazor namespace.
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor WASM App.
+Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor WebAssembly App.
 
 {% tabs %}
-{% highlight C# tabtitle="Blazor WASM App" hl_lines="3 10" %}
+{% highlight C# tabtitle="Blazor WebAssembly App" hl_lines="3 11" %}
 
-using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
+using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Syncfusion.Blazor;
 
-var builder = WebApplication.CreateBuilder(args);
+var builder = WebAssemblyHostBuilder.CreateDefault(args);
+builder.RootComponents.Add<App>("#app");
+builder.RootComponents.Add<HeadOutlet>("head::after");
 
-// Add services to the container.
-builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor();
+builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+
 builder.Services.AddSyncfusionBlazor();
-
-var app = builder.Build();
+await builder.Build().RunAsync();
 ....
 
 {% endhighlight %}
@@ -74,9 +74,7 @@ var app = builder.Build();
 
 The script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the script in the `<head>` of the main page as follows:
 
-* For **.NET 6** Blazor WASM App, include it in **~/Pages/_Layout.cshtml** file.
-
-* For **.NET 7** Blazor WASM App, include it in the **~/Pages/_Host.cshtml** file.
+* For Blazor WebAssembly app, include it in the **~/index.html** file.
 
 ```html
 <head>
@@ -204,7 +202,7 @@ To bind data for the sankey, you can assign an IEnumerable object to the [Nodes]
 
 ## Add titles
 
-Using the [Title]() property, you can add a title to the sankey to provide the user with quick information about the data plotted in the chart.
+Using the [Title]() property, you can add a title to the sankey to provide the user with quick information about the data plotted in the sankey.
 
 {% tabs %}
 {% highlight razor %}
@@ -264,8 +262,6 @@ You can use legend for the sankey by setting the [Visible]() property to **true*
 {% endtabs %}
 
 ![Blazor Sankey with Legend](images/getting-started/blazor-sankey-legend.png)
-
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Chart).
 
 ## See also
 
