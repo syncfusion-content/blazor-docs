@@ -9,7 +9,7 @@ documentation: ug
 
 # Import annotations as objects in Blazor SfPdfViewer Component
 
-The Syncfusion&reg; Blazor SfPdfViewer component allows to import annotations from objects or streams instead of loading it as a file. To import such annotation objects, the SfPdfViewer control must export the PDF annotations as objects using the [ExportAnnotationsAsObjectAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ExportAnnotationsAsObjectAsync) method. Only the annotations objects that are exported from the SfPdfViewer can be imported.
+The Syncfusion's Blazor SfPdfViewer component allows to import annotations from objects or streams instead of loading it as a file. To import such annotation objects, the SfPdfViewer control must export the PDF annotations as objects using the [ExportAnnotationsAsObjectAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ExportAnnotationsAsObjectAsync) method. Only the annotations objects that are exported from the SfPdfViewer can be imported.
 
 The following code example shows how to import annotations as objects, that are exported using the [ExportAnnotationsAsObjectAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ExportAnnotationsAsObjectAsync) method.
 
@@ -48,7 +48,7 @@ The following code example shows how to import annotations as objects, that are 
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Import-Export/Annotations%20as%20JSON%20object).
 
-N> You can refer to our [Blazor SfPdfViewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor SfPdfViewer example](https://blazor.syncfusion.com/demos/pdf-viewer-2/default-functionalities?theme=bootstrap4) to understand how to explains core features of SfPdfViewer.
+N> You can refer to our [Blazor SfPdfViewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor SfPdfViewer example](https://blazor.syncfusion.com/demos/pdf-viewer-2/default-functionalities?theme=bootstrap5) to understand how to explains core features of SfPdfViewer.
 
 ## See also
 

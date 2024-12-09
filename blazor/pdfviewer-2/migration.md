@@ -1,34 +1,34 @@
 ---
 layout: post
-title: Migration from PDF Viewer (Classic) to PDF Viewer | Syncfusion
-description: This section explains the features available in the PDF Viewer control compared to PDF Viewer (Classic).
+title: Migration from PDF Viewer to PDF Viewer (NextGen) control | Syncfusion
+description: This section explains the features available in the PDF Viewer (NextGen) control over PDF Viewer.
 platform: Blazor
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Migration from PDF Viewer (Classic) to PDF Viewer
+# Migration from PDF Viewer to PDF Viewer (NextGen)
 
-## Why PDF Viewer (Classic) to PDF Viewer control
+## Why PDF Viewer to PDF Viewer (NextGen) control
 
-The migration to the PDF Viewer control brings a host of benefits, including improved performance in scrolling, pagination, and printing. These enhancements result in a smoother and more efficient user experience. Additionally, this migration eliminates the need for a Web assembly service dependency, streamlining the system and enhancing maintainability.
+The migration to the PDF Viewer (NextGen) control brings a host of benefits, including improved performance in scrolling, pagination, and printing. These enhancements result in a smoother and more efficient user experience. Additionally, this migration eliminates the need for a Web assembly service dependency, streamlining the system and enhancing maintainability.
 
 * **Enhanced Performance**:
-With the PDF Viewer control, users can expect significant improvements in performance. Scrolling through documents, navigating pages, and printing operations are now optimized for efficiency. Users will experience seamless and fluid interactions, ensuring a more productive and satisfying workflow.
+With the PDF Viewer (NextGen) control, users can expect significant improvements in performance. Scrolling through documents, navigating pages, and printing operations are now optimized for efficiency. Users will experience seamless and fluid interactions, ensuring a more productive and satisfying workflow.
 
 * **Elimination of Web Assembly Service Dependency**:
-The migration to the PDF Viewer control removes the requirement for a Web assembly service dependency.
+The migration to the PDF Viewer (NextGen) control removes the requirement for a Web assembly service dependency.
 
 * **Unified Package for Multiple Platforms**:
-The PDF Viewer control is now available as a unified package for Windows, Mac, and Linux platforms. This means that regardless of their operating system, users can effortlessly install and utilize the package.
+The PDF Viewer (NextGen) control is now available as a unified package for Windows, Mac, and Linux platforms. This means that regardless of their operating system, users can effortlessly install and utilize the package.
 
 ### Nuget Package
 
-To initialize the PDF Viewer component, need to add the following project references to your **.csproj** file
+To initialize the PDF Viewer (NextGen) component, need to add the following project references to your **.csproj** file
 
 <table>
 <tr>
-<th>PDF Viewer (Classic)</th>
+<th>PDF Viewer</th>
 </tr>
 <tr>
 <td>
@@ -50,7 +50,7 @@ To initialize the PDF Viewer component, need to add the following project refere
 </td>
 </tr>
 <tr>
-<th>PDF Viewer</th>
+<th>PDF Viewer (NextGen)</th>
 </tr>
 <tr>
 <td>
@@ -69,13 +69,13 @@ To initialize the PDF Viewer component, need to add the following project refere
 
 ### Script File
 
-To utilize the PDF Viewer component in your project, need to add the corresponding script file to the **Host.cshtml** or **Layout.cshtml** file based on your framework version.
+To utilize the PDF Viewer (NextGen) component in your project, need to add the corresponding script file to the **Host.cshtml** or **Layout.cshtml** file based on your framework version.
 
-N> The script file is same for `Server application` and `Web assembly application` for PDF Viewer component
+N> The script file is same for `Server application` and `Web assembly application` for PDF Viewer (NextGen) component
 
 <table>
 <tr>
-<th>PDF Viewer (Classic)</th>
+<th>PDF Viewer</th>
 </tr>
 <tr>
 <td>
@@ -94,7 +94,7 @@ N> The script file is same for `Server application` and `Web assembly applicatio
 </td>
 </tr>
 <tr>
-<th>PDF Viewer</th>
+<th>PDF Viewer (NextGen)</th>
 </tr>
 <tr>
 <td>
@@ -116,11 +116,11 @@ N> The script file is same for `Server application` and `Web assembly applicatio
 
 ### Program.cs
 
-Add the following line to the **Program.cs** file to use the PDF Viewer component
+Add the following line to the **Program.cs** file to use the PDF Viewer (NextGen) component
 
 <table>
 <tr>
-<th>PDF Viewer (Classic)</th>
+<th>PDF Viewer</th>
 </tr>
 <tr>
 <td>
@@ -135,7 +135,7 @@ builder.Services.AddSyncfusionBlazor();
 </tr>
 
 <tr>
-<th>PDF Viewer</th>
+<th>PDF Viewer (NextGen)</th>
 </tr>
 <tr>
 <td>
@@ -155,11 +155,11 @@ builder.Services.AddSyncfusionBlazor();
 
 ### Index.razor
 
-To render the PDF Viewer component, add the following code in the **Index.razor** file.
+To render the PDF Viewer (NextGen) component, add the following code in the **Index.razor** file.
 
 <table>
 <tr>
-<th>PDF Viewer (Classic)</th>
+<th>PDF Viewer</th>
 </tr>
 <tr>
 <td>
@@ -178,7 +178,7 @@ To render the PDF Viewer component, add the following code in the **Index.razor*
 </td>
 </tr>
 <tr>
-<th>PDF Viewer</th>
+<th>PDF Viewer (NextGen)</th>
 </tr>
 <tr>
 <td>
@@ -195,11 +195,11 @@ To render the PDF Viewer component, add the following code in the **Index.razor*
 
 ### Project.cs
 
-When using the PDF Viewer in a WebAssembly application, need to include the following lines in your **.csproj** file to ensure proper functionality and compatibility 
+When using the PDF Viewer (NextGen) in a WebAssembly application, need to include the following lines in your **.csproj** file to ensure proper functionality and compatibility 
 
 <table>
 <tr>
-<th>PDF Viewer</th>
+<th>PDF Viewer(NextGen)</th>
 </tr>
 <tr>
 <td>

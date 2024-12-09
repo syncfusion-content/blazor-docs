@@ -9,19 +9,19 @@ documentation: ug
 
 # Reference scripts in Blazor Application
 
-This section provides information about the script isolation process and how to reference scripts from CDN, Static Web Assets and Custom resource generator (CRG) for Syncfusion Blazor Components.
+This section provides information about the script isolation process and how to reference scripts from CDN, Static Web Assets and Custom resource generator (CRG) for Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components.
 
 N> The javascript interop files needs to be added to support the features that can't be implemented in native blazor.
 
 ## CDN Reference
 
-You can refer the Syncfusion Blazor scripts through the CDN resources.
+You can refer the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor scripts through the CDN resources.
 
 * For **Blazor Web App**, reference scripts in `~/Components/App.razor` file.
 * For **Blazor WASM App**, reference scripts in `~/wwwroot/index.html` file.
 * For **Blazor Server App**, reference scripts in `~/Pages/_Layout.cshtml` file for `.NET 6` project and in `~/Pages/_Host.cshtml` file for `.NET 7` project.
 
-Syncfusion Blazor components are available in CDN for each version. Make sure that the version in the URLs matches the version of the Syncfusion Blazor Package you are using .
+Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in CDN for each version. Make sure that the version in the URLs matches the version of the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Package you are using .
 
 <table>
 <tr>
@@ -30,7 +30,7 @@ Syncfusion Blazor components are available in CDN for each version. Make sure th
 </tr>
 
 <tr>
-<td><p>All components except PDF Viewer (Classic), PDF Viewer & Document Editor</p></td>
+<td><p>All components except PDF Viewer, PDF Viewer(NextGen) & Document Editor</p></td>
 <td>
 
 {% highlight cshtml %}
@@ -41,7 +41,7 @@ https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor.min
 </tr>
 
 <tr>
-<td><p>PDF Viewer (Classic)</p></td>
+<td><p>PDF Viewer</p></td>
 <td>
 
 {% highlight cshtml %}
@@ -63,7 +63,7 @@ https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor-doc
 </tr>
 
 <tr>
-<td><p>PDF Viewer</p></td>
+<td><p>PDF Viewer(NextGen)</p></td>
 <td>
 
 {% highlight cshtml %}
@@ -81,7 +81,7 @@ https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor-sfp
 </head>
 ```
 
-If you are using `PDF Viewer (Classic)`,`PDF Viewer` or `DocumentEditor`, ensure to add additional script references as follows,
+If you are using `PDF Viewer`,`PDF Viewer(NextGen)` or `DocumentEditor`, ensure to add additional script references as follows,
 
 ```html
 <head>
@@ -92,21 +92,21 @@ If you are using `PDF Viewer (Classic)`,`PDF Viewer` or `DocumentEditor`, ensure
 </head>
 ```
 
-In addition to above, Syncfusion Blazor components provides latest scripts in CDN without versioning. You can use this in development environment if you want to always use the latest version of scripts. It is not recommended to use this in production environment.
+In addition to above, Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components provides latest scripts in CDN without versioning. You can use this in development environment if you want to always use the latest version of scripts. It is not recommended to use this in production environment.
 
 | Component | CDN Script Reference |
 | --- | --- |
-|  All components except PDF Viewer (Classic), PDF Viewer & Document Editor | https://cdn.syncfusion.com/blazor/syncfusion-blazor.min.js |
-| PDF Viewer (Classic)| https://cdn.syncfusion.com/blazor/syncfusion-blazor-pdfviewer.min.js |
+|  All components except PDF Viewer, PDF Viewer(NextGen) & Document Editor | https://cdn.syncfusion.com/blazor/syncfusion-blazor.min.js |
+| PDF Viewer | https://cdn.syncfusion.com/blazor/syncfusion-blazor-pdfviewer.min.js |
 | Document Editor | https://cdn.syncfusion.com/blazor/syncfusion-blazor-documenteditor.min.js |
-| PDF Viewer | https://cdn.syncfusion.com/blazor/syncfusion-blazor-sfpdfviewer.min.js |
+| PDF Viewer(NextGen) | https://cdn.syncfusion.com/blazor/syncfusion-blazor-sfpdfviewer.min.js |
 
 
-N> To add custom PDF Viewer script file in your application, refer [How to refer SfPdfViewer script file in application](../pdfviewer-2/how-to/refer-sfpdfviewer-script-in-application).
+N> To add custom PDF Viewer(NextGen) script file in your application, refer [How to refer SfPdfViewer script file in application](../pdfviewer-2/how-to/refer-sfpdfviewer-script-in-application).
 
 ## Static web assets
 
-You can refer the Syncfusion Blazor scripts through the NuGet package's static web assets.
+You can refer the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor scripts through the NuGet package's static web assets.
 
 ### Enable static web assets usage
 
@@ -125,7 +125,7 @@ N> For **Blazor Web App with interaction mode as  Auto & Blazor WASM App**, call
     </head>
     ```
 
-* If you're using the PDF viewer (Classic), PDF Viewer or Document Editor component, use the code below to refer to script from static web assets.
+* If you're using the PDF viewer, PDF Viewer(NextGen) or Document Editor component, use the code below to refer to script from static web assets.
 
     ```html
     <head>
@@ -140,7 +140,7 @@ N> For **Blazor Web App with interaction mode as  Auto & Blazor WASM App**, call
 
 ## Individual control script reference
 
-Syncfusion Blazor components provides component-wise scripts which can be referenced externally in application. If you are using minimal components, then you can import the selected components scripts via CDN or Static web assets directly without using [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) instead of referencing single script with all components.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components provides component-wise scripts which can be referenced externally in application. If you are using minimal components, then you can import the selected components scripts via CDN or Static web assets directly without using [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) instead of referencing single script with all components.
 
 You can add a component script reference in one of the following ways based on usage,
 
@@ -448,7 +448,7 @@ The following table lists components and its script reference.
 
 ## Custom Resource Generator
 
-The Syncfusion Blazor provides an option to generate a component's interop scripts using the [Custom Resource Generator](https://blazor.syncfusion.com/crg/) (CRG) tool for the Blazor components. Refer [here to generate the component-wise scripts externally using CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator).
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor provides an option to generate a component's interop scripts using the [Custom Resource Generator](https://blazor.syncfusion.com/crg/) (CRG) tool for the Blazor components. Refer [here to generate the component-wise scripts externally using CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator).
 
 ## See also
 

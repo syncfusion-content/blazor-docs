@@ -9,7 +9,7 @@ documentation: ug
 
 # Identify if the PDF Viewer has values in the Undo, Redo collections
 
-Syncfusion&reg; Blazor PDF Viewer component allows you to identify if the PDF Viewer has values in the Undo and Redo collections using the `CanUndo` and `CanRedo` APIs of the PDF Viewer.
+Syncfusion's Blazor PDF Viewer component allows you to identify if the PDF Viewer has values in the Undo and Redo collections using the `CanUndo` and `CanRedo` APIs of the PDF Viewer.
 
 The following code example shows how to achieve this based on the Undo Redo actions.
 
