@@ -86,36 +86,56 @@ The script can be accessed from NuGet through [Static Web Assets](https://blazor
 ```
 N> Check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-## Add Blazor Chart Component
+## Add Blazor Sankey Chart Component
 
-Add the Syncfusion Blazor Chart component in the **~/Pages/Index.razor** file.
+Add the Syncfusion Blazor Sankey Chart component in the **~/Pages/Index.razor** file.
 
 {% tabs %}
 {% highlight razor %}
 
-<SfSankeyChart DataSource="@SankeyData">
-</SfSankeyChart>
+<SfSankey Nodes=@Nodes Links=@Links>
+
+</SfSankey>
+
 @code {
-    public SankeyChartData SankeyData { get; set; }
+    public List<SankeyDataNode> Nodes = new List<SankeyDataNode>();
+    public List<SankeyDataLink> Links = new List<SankeyDataLink>();
 
     protected override void OnInitialized()
     {
-        SankeyData = new SankeyChartData
+        Nodes = new List<SankeyDataNode>()
         {
-                Nodes = new List<SankeyChartDataNode>
-            {
-                new SankeyChartDataNode { Id = "Solar", Label = new SankeyChartDataLabel { Text = "Solar" } },
-                new SankeyChartDataNode { Id = "Coal", Label = new SankeyChartDataLabel { Text = "Coal" } },
-                new SankeyChartDataNode { Id = "Electricity", Label = new SankeyChartDataLabel { Text = "Electricity" } },
-                new SankeyChartDataNode { Id = "Residential", Label = new SankeyChartDataLabel { Text = "Residential" } }
-            },
-                Links = new List<SankeyChartDataLink>
-            {
-                new SankeyChartDataLink { SourceId = "Solar", TargetId = "Electricity", Value = 100 },
-                new SankeyChartDataLink { SourceId = "Coal", TargetId = "Electricity", Value = 200 },
-                new SankeyChartDataLink { SourceId = "Electricity", TargetId = "Residential", Value = 150 }
-            }
+            new SankeyDataNode() { Id = "Coffee Production" },
+            new SankeyDataNode() { Id = "Arabica" },
+            new SankeyDataNode() { Id = "Robusta" },
+            new SankeyDataNode() { Id = "Roasted Coffee" },
+            new SankeyDataNode() { Id = "Instant Coffee" },
+            new SankeyDataNode() { Id = "Green Coffee" },
+            new SankeyDataNode() { Id = "North America" },
+            new SankeyDataNode() { Id = "Europe" },
+            new SankeyDataNode() { Id = "Asia Pacific" },
         };
+        Links = new List<SankeyDataLink>()
+        {
+            new SankeyDataLink() { SourceId = "Coffee Production", TargetId = "Arabica", Value = 95 },
+            new SankeyDataLink() { SourceId = "Coffee Production", TargetId = "Robusta", Value = 65 },
+            new SankeyDataLink() { SourceId = "Arabica", TargetId = "Roasted Coffee", Value = 60 },
+            new SankeyDataLink() { SourceId = "Arabica", TargetId = "Instant Coffee", Value = 20 },
+            new SankeyDataLink() { SourceId = "Arabica", TargetId = "Green Coffee", Value = 15 },
+            new SankeyDataLink() { SourceId = "Robusta", TargetId = "Roasted Coffee", Value = 30 },
+            new SankeyDataLink() { SourceId = "Robusta", TargetId = "Instant Coffee", Value = 25 },
+            new SankeyDataLink() { SourceId = "Robusta", TargetId = "Green Coffee", Value = 10 },
+            new SankeyDataLink() { SourceId = "Roasted Coffee", TargetId = "North America", Value = 35 },
+            new SankeyDataLink() { SourceId = "Roasted Coffee", TargetId = "Europe", Value = 30 },
+            new SankeyDataLink() { SourceId = "Roasted Coffee", TargetId = "Asia Pacific", Value = 25 },
+            new SankeyDataLink() { SourceId = "Instant Coffee", TargetId = "North America", Value = 15 },
+            new SankeyDataLink() { SourceId = "Instant Coffee", TargetId = "Europe", Value = 15 },
+            new SankeyDataLink() { SourceId = "Instant Coffee", TargetId = "Asia Pacific", Value = 15 },
+            new SankeyDataLink() { SourceId = "Green Coffee", TargetId = "North America", Value = 10 },
+            new SankeyDataLink() { SourceId = "Green Coffee", TargetId = "Europe", Value = 8 },
+            new SankeyDataLink() { SourceId = "Green Coffee", TargetId = "Asia Pacific", Value = 7 },
+        };
+        base.OnInitialized();
     }
 }
 
@@ -124,81 +144,126 @@ Add the Syncfusion Blazor Chart component in the **~/Pages/Index.razor** file.
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Sankey Chart component in your default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLzNsLepwXKBvNw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Sankey Chart Component](images/getting-started/blazor-sankey-chart.png)" %}
+{% previewsample "" backgroundimage "[Blazor Sankey Chart Component](images/getting-started/blazor-sankey-chart.png)" %}
 
 ## Populate Blazor SankeyChart with data
 
-To bind data for the sankey chart component, you can assign a List to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property. It can also be provided as an instance of the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
+To bind data for the Sankey chart, you can assign an IEnumerable object to the [Nodes]() and [Links]() properties. These properties define the structure of the nodes and the relationships between them.
 
 {% tabs %}
 {% highlight razor %}
 
-public SankeyChartData SankeyData { get; set; } = new SankeyChartData
+<SfSankey Nodes=@Nodes Links=@Links>
+
+</SfSankey>
+
+@code {
+    public List<SankeyDataNode> Nodes = new List<SankeyDataNode>();
+    public List<SankeyDataLink> Links = new List<SankeyDataLink>();
+
+    protected override void OnInitialized()
     {
-        Nodes = new List<SankeyChartDataNode>
+        Nodes = new List<SankeyDataNode>()
         {
-            new SankeyChartDataNode { Id = "Solar", Label = new SankeyChartDataLabel { Text = "Solar" } },
-            new SankeyChartDataNode { Id = "Coal", Label = new SankeyChartDataLabel { Text = "Coal" } },
-            new SankeyChartDataNode { Id = "Electricity", Label = new SankeyChartDataLabel { Text = "Electricity" } },
-            new SankeyChartDataNode { Id = "Residential", Label = new SankeyChartDataLabel { Text = "Residential" } }
-        },
-        Links = new List<SankeyChartDataLink>
+            new SankeyDataNode() { Id = "Coffee Production" },
+            new SankeyDataNode() { Id = "Arabica" },
+            new SankeyDataNode() { Id = "Robusta" },
+            new SankeyDataNode() { Id = "Roasted Coffee" },
+            new SankeyDataNode() { Id = "Instant Coffee" },
+            new SankeyDataNode() { Id = "Green Coffee" },
+            new SankeyDataNode() { Id = "North America" },
+            new SankeyDataNode() { Id = "Europe" },
+            new SankeyDataNode() { Id = "Asia Pacific" },
+        };
+        Links = new List<SankeyDataLink>()
         {
-            new SankeyChartDataLink { SourceId = "Solar", TargetId = "Electricity", Value = 100 },
-            new SankeyChartDataLink { SourceId = "Coal", TargetId = "Electricity", Value = 200 },
-            new SankeyChartDataLink { SourceId = "Electricity", TargetId = "Residential", Value = 150 }
-        }
-    };
+            new SankeyDataLink() { SourceId = "Coffee Production", TargetId = "Arabica", Value = 95 },
+            new SankeyDataLink() { SourceId = "Coffee Production", TargetId = "Robusta", Value = 65 },
+            new SankeyDataLink() { SourceId = "Arabica", TargetId = "Roasted Coffee", Value = 60 },
+            new SankeyDataLink() { SourceId = "Arabica", TargetId = "Instant Coffee", Value = 20 },
+            new SankeyDataLink() { SourceId = "Arabica", TargetId = "Green Coffee", Value = 15 },
+            new SankeyDataLink() { SourceId = "Robusta", TargetId = "Roasted Coffee", Value = 30 },
+            new SankeyDataLink() { SourceId = "Robusta", TargetId = "Instant Coffee", Value = 25 },
+            new SankeyDataLink() { SourceId = "Robusta", TargetId = "Green Coffee", Value = 10 },
+            new SankeyDataLink() { SourceId = "Roasted Coffee", TargetId = "North America", Value = 35 },
+            new SankeyDataLink() { SourceId = "Roasted Coffee", TargetId = "Europe", Value = 30 },
+            new SankeyDataLink() { SourceId = "Roasted Coffee", TargetId = "Asia Pacific", Value = 25 },
+            new SankeyDataLink() { SourceId = "Instant Coffee", TargetId = "North America", Value = 15 },
+            new SankeyDataLink() { SourceId = "Instant Coffee", TargetId = "Europe", Value = 15 },
+            new SankeyDataLink() { SourceId = "Instant Coffee", TargetId = "Asia Pacific", Value = 15 },
+            new SankeyDataLink() { SourceId = "Green Coffee", TargetId = "North America", Value = 10 },
+            new SankeyDataLink() { SourceId = "Green Coffee", TargetId = "Europe", Value = 8 },
+            new SankeyDataLink() { SourceId = "Green Coffee", TargetId = "Asia Pacific", Value = 7 },
+        };
+        base.OnInitialized();
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
 ## Add titles
 
-Using the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Title) property, you can add a title to the sankey chart to provide the user with quick information about the data plotted in the chart.
+Using the [Title]() property, you can add a title to the sankey chart to provide the user with quick information about the data plotted in the chart.
 
 {% tabs %}
 {% highlight razor %}
 
-<SfSankeyChart Title="Energy Flow Diagram" DataSource="@SankeyData">
-</SfSankeyChart>
+<SfSankey Title="Global Coffee Production and Consumption Flow" Nodes=@Nodes Links=@Links>
+</SfSankey>
 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNBJjihozcpDsXHf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Sankey Chart with Title](images/getting-started/blazor-sankey-chart-title.png)" %}
+{% previewsample "" backgroundimage "[Blazor Sankey Chart with Title](images/getting-started/blazor-sankey-chart-title.png)" %}
+
+## Add data label
+
+You can add data labels to improve the readability of the sankey chart. This can be achieved by setting the [Visible]() property to **true** in the [SankeyLabelSettings]().
+
+{% tabs %}
+{% highlight razor %}
+
+<SfSankey Title="Global Coffee Production and Consumption Flow" Nodes=@Nodes Links=@Links>
+    <SankeyLabelSettings Visible="true"></SankeyLabelSettings>
+</SfSankey>
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "" backgroundimage "[Blazor Column Chart with DataLabel](images/getting-started/blazor-sankey-chart-data-label.png)" %}
 
 ## Enable tooltip
 
-The tooltip can be enabled by setting the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Enable) property in [SankeyChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html) to **true**.
+The tooltip can be enabled by setting the [Enable]() property in [SankeyChartTooltipSettings]() to **true**. However, the tooltip is enabled by default in the sankey chart.
 
 {% tabs %}
 {% highlight razor %}
 
-<SfSankeyChart DataSource="@SankeyData">
-    <SankeyChartTooltipSettings Enable="true"></SankeyChartTooltipSettings>
-</SfSankeyChart>
+<SfSankey Title="Global Coffee Production and Consumption Flow" Nodes=@Nodes Links=@Links>
+   <SankeyTooltipSettings Enable="true"></SankeyTooltipSettings>
+</SfSankey>
 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVTNChepGIwhetf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Sankey Chart with Tooltip](images/getting-started/blazor-sankey-chart-tooltip.png)" %}
+{% previewsample "" backgroundimage "[Blazor Sankey Chart with Tooltip](images/getting-started/blazor-sankey-chart-tooltip.png)" %}
 
 ## Enable legend
 
-You can use legend for the sankey chart by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_Visible) property to **true** in [SankeyChartLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html). 
+You can use legend for the sankey chart by setting the [Visible]() property to **true** in [SankeyChartLegendSettings](). However, the legend is enabled by default in the sankey chart.
 
 {% tabs %}
 {% highlight razor %}
 
-<SfSankeyChart DataSource="@SankeyData">
-    <SankeyChartLegendSettings Visible="true"></SankeyChartLegendSettings>
-</SfSankeyChart>
+<SfSankey Title="Global Coffee Production and Consumption Flow" Nodes=@Nodes Links=@Links>
+    <SankeyLegendSettings Visible="true"></SankeyLegendSettings>
+</SfSankey>
 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrTDCLIpQHyGNEq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Sankey Chart with Legend](images/getting-started/blazor-sankey-chart-legend.png)" %}
+{% previewsample "" backgroundimage "[Blazor Sankey Chart with Legend](images/getting-started/blazor-sankey-chart-legend.png)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Chart).
 
