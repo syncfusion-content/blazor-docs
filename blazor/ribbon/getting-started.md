@@ -19,7 +19,7 @@ This section briefly explains about how to include [Blazor Ribbon](https://www.s
 
 You can create a **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-## Install Syncfusion Blazor InteractiveChat and Themes NuGet in the App
+## Install Syncfusion Blazor Ribbon and Themes NuGet in the App
 
 To add **Blazor Ribbon** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install `Syncfusion.Blazor.Ribbon` and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -115,81 +115,26 @@ Add the Syncfusion Blazor Ribbon component in the **~/Pages/Index.razor** file.
 <SfRibbon>
     <RibbonTabs>
         <RibbonTab HeaderText="Home">
-        </RibbonTab>
-    </RibbonTabs>
-</SfRibbon>
-
-{% endhighlight %}
-{% endtabs %}
-
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Ribbon component in your default web browser.
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZrfCjiMCTRHTGzR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Ribbon Component](./images/default-prompt.png)" %}
-
-## Adding Ribbon Tab
-
-In SfRibbon, the options are arranged in tabs for easy access. You can use the `<RibbonTabs>` tag directive of ribbon to define the ribbon tab like below.
-
-{% tabs %}
-{% highlight razor %}
-
-<SfRibbon>
-    <RibbonTabs>
-        <RibbonTab HeaderText="Home">
-        </RibbonTab>
-    </RibbonTabs>
-</SfRibbon>
-
-{% endhighlight %}
-{% endtabs %}
-
-## Adding Ribbon Group
-
-To define a ribbon group under each tab, you can use the `<RibbonGroups>` tag directive of ribbon tab like below. The `Orientation` property of ribbon group defines whether the collection of items will be rendered column-wise or row-wise.
-
-{% tabs %}
-{% highlight razor %}
-
-<SfRibbon>
-    <RibbonTabs>
-        <RibbonTab HeaderText="Home">
             <RibbonGroups>
-                <RibbonGroup HeaderText="Clipboard" Orientation="Orientation.Row"></RibbonGroup>
-            </RibbonGroups>
-        </RibbonTab>
-    </RibbonTabs>
-</SfRibbon>
-
-{% endhighlight %}
-{% endtabs %}
-
-## Adding Ribbon Item
-
-You can use the `RibbonCollections` tag directive of ribbon group to define each ribbon collection that contains one or more items. To define each ribbon item, you can use the `items` property of ribbon collection and the `type` property of ribbon item to specify the type of control to be rendered, like a button, a drop-down button, a combo box, and more.
-
-{% tabs %}
-{% highlight razor %}
-
-<SfRibbon>
-    <RibbonTabs>
-        <RibbonTab HeaderText="Home">
-            <RibbonGroups>
-                <RibbonGroup HeaderText="Clipboard" Orientation="Orientation.Row">
+                <RibbonGroup HeaderText="Clipboard">
                     <RibbonCollections>
-                        <RibbonCollection ID="paste-collection">
+                        <RibbonCollection>
                             <RibbonItems>
                                 <RibbonItem Disabled="true" AllowedSizes=RibbonItemSize.Large Type=RibbonItemType.SplitButton ID="pastebtn">
                                     <RibbonSplitButtonSettings Content="Paste" IconCss="e-icons e-paste" Items="@formatItems"></RibbonSplitButtonSettings>
                                 </RibbonItem>
                             </RibbonItems>
                         </RibbonCollection>
-                        <RibbonCollection ID="cutcopy-collection">
+                        <RibbonCollection>
                             <RibbonItems>
                                 <RibbonItem Type=RibbonItemType.Button>
                                     <RibbonButtonSettings Content="Cut" IconCss="e-icons e-cut" ></RibbonButtonSettings>
                                 </RibbonItem>
                                 <RibbonItem Type=RibbonItemType.Button>
                                     <RibbonButtonSettings Content="Copy" IconCss="e-icons e-copy"></RibbonButtonSettings>
+                                </RibbonItem>
+                                <RibbonItem Type=RibbonItemType.Button>
+                                    <RibbonButtonSettings Content="Format Painter" IconCss="e-icons e-format-painter"></RibbonButtonSettings>
                                 </RibbonItem>
                             </RibbonItems>
                         </RibbonCollection>
@@ -212,51 +157,6 @@ You can use the `RibbonCollections` tag directive of ribbon group to define each
 {% endhighlight %}
 {% endtabs %}
 
-## Configure suggestions and responses
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Ribbon component in your default web browser.
 
-You can use the [PromptSuggestions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_PromptSuggestions) property to add prompt suggestions and the [PromptRequested](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_PromptRequested) event to add responses when the prompt matches the specified prompts data otherwise, the default response will be displayed.
-
-{% tabs %}
-{% highlight razor %}
-
-@* desired render mode define here *@
-@rendermode InteractiveAuto
-
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
-{% highlight razor %}
-
-<div class="aiassist-container" style="height: 350px; width: 650px;">
-    <SfAIAssistView PromptSuggestions="@promptSuggestions" PromptRequested="@PromptRequest"></SfAIAssistView>
-</div>
-
-@code {
-    List<string> promptSuggestions = new List<string> { "How do I prioritize my tasks?", "How can I improve my time management skills?" };
-    public class AssistModel
-    {
-        public string Prompt { get; set; }
-        public string Response { get; set; }
-    }
-    private List<AssistModel> prompts = new List<AssistModel>()
-    {
-        new AssistModel() { Prompt = "How do I prioritize my tasks?", Response = "Prioritize tasks by urgency and impact: tackle high-impact tasks first, delegate when possible, and break large tasks into smaller steps. For more assistance, feel free to ask—I’m here to help!" },
-        new AssistModel() { Prompt = "How can I improve my time management skills?", Response = "To improve time management skills, try setting clear goals, using a planner or digital tools, prioritizing tasks, breaking tasks into smaller steps, and minimizing distractions. Regularly review and adjust your approach for better efficiency" }
-    };
-    private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
-    {
-        await Task.Delay(3000);
-        var isPromptFound = prompts.Any(prompt => prompt.Prompt == args.Prompt);
-        var promptData = prompts.FirstOrDefault(prompt => prompt.Prompt == args.Prompt);
-        var defaultResponse = "For real-time prompt processing, connect the Ribbon component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
-        args.Response = isPromptFound ? promptData.Response : defaultResponse;
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhTCNsCMKFGRhuU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Ribbon default prompt](./images/default-prompt.png)" %}
-
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/AIAssistView).
+![Blazor Ribbon Component](./images/getting-started1.png)
