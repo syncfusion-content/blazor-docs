@@ -604,12 +604,12 @@ To utilize this feature, you can define a custom template for the filter bar by 
 
     public async Task DropDownValueChange(@Syncfusion.Blazor.DropDowns.ChangeEventArgs<string, string> args)
     {
-        if (args.Value == "All")
+        if (args.Value == "All" || args.Value == null)
         {
             await Grid.ClearFiltering();
         }
         else
-        {
+        { 
             stringvalue = args.Value;
             await Grid.FilterByColumnAsync("CustomerID", "contains", args.Value);
         }
