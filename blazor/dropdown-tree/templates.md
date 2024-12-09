@@ -68,9 +68,9 @@ The currently selected value that is displayed by default on the Dropdown Tree i
 
 In the following sample, the selected value is displayed as a combined text of both `Name` and `Job` in the Dropdown Tree input, which is separated by a hyphen.
 
-The template expression in Blazor should be provided using the `@` syntax directly inside the `ValueTemplate`. This allows the properties of the bound object to be rendered dynamically in the template.
-
 The variable `context` holds the data of the current node.
+
+The template expression can be provided directly inside the `ValueTemplate`, as shown in the code below.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
