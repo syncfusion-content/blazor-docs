@@ -421,10 +421,10 @@ Customizing the delete confirmation dialog in Grid allows you to personalize the
 
 To customize the delete confirmation dialog, you can use the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event of the Grid. This event lets you cancel the default delete behavior and show a custom confirmation dialog, allowing users to confirm or cancel the delete action.
 
-> Enable delete functionality in the Grid using [AllowDeleting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_AllowDeleting) in [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html).
-> Use a [SfDialog](https://blazor.syncfusion.com/documentation/dialog/getting-started-with-web-app) to create a custom confirmation dialog.
-> Handle the `OnActionBegin` event to cancel the default delete action and show the custom dialog.
-> Perform the delete operation programmatically if the user confirms the action.
+>*  Enable delete functionality in the Grid using [AllowDeleting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_AllowDeleting) in [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html).
+>* Use a [SfDialog](https://blazor.syncfusion.com/documentation/dialog/getting-started-with-web-app) to create a custom confirmation dialog.
+>* Handle the `OnActionBegin` event to cancel the default delete action and show the custom dialog.
+>* Perform the delete operation programmatically if the user confirms the action.
 
 The following example that demonstrates how to customize the delete confirmation dialog using the custom dialog:
 
@@ -1855,7 +1855,7 @@ It ensures that any changes made to the data are visible in the Grid after actio
 }
 ```
 
-N> You can find the sample in the following [Github](https://github.com/SyncfusionExamples/blazor-server-datagrid-efcore-crud/) repository.
+> You can find the sample in the following [Github](https://github.com/SyncfusionExamples/blazor-server-datagrid-efcore-crud/) repository.
 
 ## See also
 
