@@ -203,7 +203,7 @@ Using the [Title]() property, you can add a title to the sankey to provide the u
 
 ![Blazor Sankey with Title](images/getting-started/blazor-sankey-title.png)
 
-## Add data label to node label
+## Add node labels
 
 You can add data labels to improve the readability of the sankey. This can be achieved by setting the [Visible]() property to **true** in the [SankeyLabelSettings]().
 
