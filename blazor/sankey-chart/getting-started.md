@@ -231,7 +231,7 @@ You can add data labels to improve the readability of the sankey. This can be ac
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Column Chart with DataLabel](images/getting-started/blazor-sankey-data-label.png)
+![Blazor Sankey with DataLabel](images/getting-started/blazor-sankey-data-label.png)
 
 ## Enable tooltip
 
