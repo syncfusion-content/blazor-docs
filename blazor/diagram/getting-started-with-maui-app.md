@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Diagram Component in the Blazor MAUI app.
 
-In this section, we'll guide you through the process of adding Syncfusion's Blazor Diagram Component to your Blazor Maui app. We'll break it down into simple steps to make it easy to follow. Additionally, you can find a fully functional example project on our [GitHub repository](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DiagramComponent/BlazorMAUIApp/DiagramSample).
+In this section, we'll guide you through the process of adding Syncfusion® Blazor Diagram Component to your Blazor Maui app. We'll break it down into simple steps to make it easy to follow. Additionally, you can find a fully functional example project on our [GitHub repository](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DiagramComponent/BlazorMAUIApp/DiagramSample).
 
 ## Prerequisites
 
