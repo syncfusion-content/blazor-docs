@@ -1,7 +1,7 @@
 ---
 layout: post
-title: View the created PDF document | Syncfusion®
-description: Learn here all about View the created PDF document in Syncfusion® Blazor SfPdfviewer component and more.
+title: View the created PDF document | Syncfusion
+description: Learn here all about View the created PDF document in Syncfusion Blazor SfPdfviewer component and more.
 platform: Blazor
 control: SfPdfviewer
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # View the created PDF document
 
-The Syncfusion®'s Blazor SfPdfViewer component allows you to view the created PDF document using the [**Created**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_Created) event.
+The Syncfusion&reg; Blazor SfPdfViewer component allows you to view the created PDF document using the [**Created**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_Created) event.
 
 The following code example shows how to view the created PDF document.
 
