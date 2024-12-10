@@ -28,7 +28,7 @@ This comprehensive guide outlines the step-by-step API migration process for tra
 ## Advantages
 
 The `SfDiagramComponent` Blazor component offers superior performance compared to the `SfDiagram` Blazor control, especially in Blazor WebAssembly applications.
-* Users who need to programmatically interact with diagram elements for their business logic or specific requirements often prefer C# code for these operations. However, the Syncfusion EJ2 Diagram is primarily written in TypeScript. In Blazor applications, synchronizing each interaction from the client browser to C# code requires JSInterop calls, which can significantly impact performance. To overcome this performance bottleneck, a separate native Blazor diagram component has been developed, eliminating the need for frequent JSInterop calls and enhancing overall efficiency.
+* Users who need to programmatically interact with diagram elements for their business logic or specific requirements often prefer C# code for these operations. However, the Syncfusion<sup style="font-size=70%">&reg;</sup> EJ2 Diagram is primarily written in TypeScript. In Blazor applications, synchronizing each interaction from the client browser to C# code requires JSInterop calls, which can significantly impact performance. To overcome this performance bottleneck, a separate native Blazor diagram component has been developed, eliminating the need for frequent JSInterop calls and enhancing overall efficiency.
 
 ## Feature wise API difference between SfDiagram(classic) and SfDiagramComponent
 

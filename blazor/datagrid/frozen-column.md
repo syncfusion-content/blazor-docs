@@ -9,7 +9,7 @@ documentation: ug
 
 # Column Pinning (Frozen) in Blazor DataGrid component
 
-In the Syncfusion Blazor DataGrid component, you have the capability to **freeze** columns, ensuring they remain visible as you scroll through extensive datasets. This functionality significantly improves user experience by keeping critical information constantly within view, even when navigating through large volumes of data. This means that important columns remain fixed in their positions, making it easier to access and reference key data points while working with the grid.
+In the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component, you have the capability to **freeze** columns, ensuring they remain visible as you scroll through extensive datasets. This functionality significantly improves user experience by keeping critical information constantly within view, even when navigating through large volumes of data. This means that important columns remain fixed in their positions, making it easier to access and reference key data points while working with the grid.
 
 In the following example, the [FrozenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenColumns) property is set to **2**. This configuration freezes the left two columns of the grid, and they will remain fixed in their positions while the rest of the columns grid can be scrolled horizontally.
 
@@ -133,7 +133,7 @@ public class OrderDetails
 
 ## Change default frozen line color
 
-You can customize the frozen line borders of frozen columns in the Syncfusion DataGrid component by applying custom CSS styles to the specific frozen column. This allows you to change the border color of the left frozen columns, right frozen columns, and fixed frozen columns to match your application's design and theme.
+You can customize the frozen line borders of frozen columns in the Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid component by applying custom CSS styles to the specific frozen column. This allows you to change the border color of the left frozen columns, right frozen columns, and fixed frozen columns to match your application's design and theme.
 
 To change default frozen line color, use the following class name and apply the border color based on your requirement.
 
@@ -270,7 +270,7 @@ The following example demonstrates how to change the default frozen line color u
 
 ## Limitations of frozen columns and freeze direction  
 
-The frozen columns and freeze direction features in Syncfusion Blazor DataGrid have the following limitations:
+The frozen columns and freeze direction features in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid have the following limitations:
 
 **General limitations for frozen columns**  
 
@@ -287,11 +287,11 @@ The frozen columns and freeze direction features in Syncfusion Blazor DataGrid h
 
 ## Add or remove frozen columns by dragging the column separator
 
-The Syncfusion Blazor DataGrid allows you to dynamically add or remove columns from the frozen content by dragging and dropping the column separator. This provides flexibility to customize the grid layout directly through individual interactions.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to dynamically add or remove columns from the frozen content by dragging and dropping the column separator. This provides flexibility to customize the grid layout directly through individual interactions.
 
 To enable this feature, set the [AllowFreezeLineMoving](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFreezeLineMoving) property to **true** in the Grid component.
 
-Here is an example that demonstrates how to enable and use the `AllowFreezeLineMoving` property in the Syncfusion DataGrid.
+Here is an example that demonstrates how to enable and use the `AllowFreezeLineMoving` property in the Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

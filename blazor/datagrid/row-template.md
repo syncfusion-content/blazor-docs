@@ -9,9 +9,9 @@ documentation: ug
 
 # Row Template in Blazor DataGrid Component
 
-The [RowTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_RowTemplate) feature in Syncfusion Blazor DataGrid allows you to fully customize the appearance and layout of each row. This feature is particularly helpful when you need to display complex content within rows, such as images, buttons, or additional interactive controls, rather than just plain text or simple values.
+The [RowTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_RowTemplate) feature in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to fully customize the appearance and layout of each row. This feature is particularly helpful when you need to display complex content within rows, such as images, buttons, or additional interactive controls, rather than just plain text or simple values.
 
-To enable and configure the `RowTemplate` feature in Syncfusion Blazor DataGrid, follow these steps:
+To enable and configure the `RowTemplate` feature in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, follow these steps:
 
 1. **Set up the RowTemplate:** Use the `RowTemplate` to define custom row layouts.
 
@@ -199,7 +199,7 @@ public static List<EmployeeData> Employees = new List<EmployeeData>();
 
 ## Row template with formatting
 
-Typically, Syncfusion DataGrid columns can be formatted using the [Columns.Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_Format) property, which formats values displayed in each column. However, when you use row templates, the `Columns.Format` property does not apply to values displayed within the template.
+Typically, Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid columns can be formatted using the [Columns.Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_Format) property, which formats values displayed in each column. However, when you use row templates, the `Columns.Format` property does not apply to values displayed within the template.
 
 To format values inside a row template, define a global function that applies the desired formatting. This global function can then be called within the row template to format values, such as dates, currency, or custom text layouts, according to your specific requirements.
 
@@ -389,13 +389,13 @@ public static List<EmployeeData> Employees = new List<EmployeeData>();
 
 ![Row Formatting in Blazor DataGrid](./images/blazor-datagrid-row-format.png)
 
-## Render syncfusion control in row template
+## Render syncfusion<sup style="font-size:70%">&reg;</sup> control in row template
 
-The Syncfusion Blazor DataGrid allows you to render custom Syncfusion controls within the rows of the grid. This feature is helpful as it enables you to display interactive Syncfusion controls instead of field values in the grid.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to render custom Syncfusion<sup style="font-size:70%">&reg;</sup> controls within the rows of the grid. This feature is helpful as it enables you to display interactive Syncfusion<sup style="font-size:70%">&reg;</sup> controls instead of field values in the grid.
 
-To enable a Syncfusion control in a row template, you need to set the `RowTemplate` property of the Grid component. This property accepts a custom HTML template that defines the layout for each row.
+To enable a Syncfusion<sup style="font-size:70%">&reg;</sup> control in a row template, you need to set the `RowTemplate` property of the Grid component. This property accepts a custom HTML template that defines the layout for each row.
 
-Here is an example that demonstrates rendering Syncfusion controls within a row template :
+Here is an example that demonstrates rendering Syncfusion<sup style="font-size:70%">&reg;</sup> controls within a row template :
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

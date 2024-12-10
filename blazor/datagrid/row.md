@@ -13,7 +13,7 @@ Each row typically represents a single record or item from a data source. Rows i
 
 ## Customize row styles
 
-Customizing the styles of rows in a Syncfusion Grid allows you to modify the appearance of rows to meet your design requirements. This feature is useful when you want to highlight certain rows or change the font style, background color, and other properties of the row to enhance the visual appeal of the grid. To customize the row styles in the grid, you can use CSS, properties, methods, or event support provided by the Syncfusion Blazor DataGrid component.
+Customizing the styles of rows in a Syncfusion<sup style="font-size:70%">&reg;</sup> Grid allows you to modify the appearance of rows to meet your design requirements. This feature is useful when you want to highlight certain rows or change the font style, background color, and other properties of the row to enhance the visual appeal of the grid. To customize the row styles in the grid, you can use CSS, properties, methods, or event support provided by the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component.
 
 ### Using event
 
@@ -134,7 +134,7 @@ You can apply styles to the rows using CSS selectors. The Grid provides a class 
 
 **Customize alternate rows**
 
-You can customize the appearance of the alternate rows using CSS. This can be useful for improving the readability of the data and making it easier to distinguish between rows. By default, Syncfusion Grid provides the CSS class **.e-altrow** to style the alternate rows. You can customize this default style by overriding the **.e-altrow** class with your custom CSS styles.
+You can customize the appearance of the alternate rows using CSS. This can be useful for improving the readability of the data and making it easier to distinguish between rows. By default, Syncfusion<sup style="font-size:70%">&reg;</sup> Grid provides the CSS class **.e-altrow** to style the alternate rows. You can customize this default style by overriding the **.e-altrow** class with your custom CSS styles.
 
 To change the background color of the alternate rows, you can add the following CSS code to your application’s stylesheet:
 
@@ -323,7 +323,7 @@ Here’s an example of how to use the **.e-selectionbackground** class to style 
 
 ## Row height
 
-The Syncfusion Grid allows you to customize the height of rows based on your needs. This feature can be useful when you need to display more content in a row or when you want to reduce the height of rows to fit its content. You can achieve this by using the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) property of the Grid component. This property allows you to change the height of the entire grid row to your desired value.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid allows you to customize the height of rows based on your needs. This feature can be useful when you need to display more content in a row or when you want to reduce the height of rows to fit its content. You can achieve this by using the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) property of the Grid component. This property allows you to change the height of the entire grid row to your desired value.
 
 In the below example, we will demonstrate how to dynamically change the height of the rows using the `RowHeight` property.
 
@@ -639,7 +639,7 @@ Here is an example that demonstrates how to enable/disable row hover based on th
 
 ## Row pinning (Frozen)
 
-The Syncfusion Blazor DataGrid allows you to freeze rows to keep them visible while scrolling vertically through large datasets. This feature enhances the experience by maintaining important information within view at all times.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to freeze rows to keep them visible while scrolling vertically through large datasets. This feature enhances the experience by maintaining important information within view at all times.
 
 In the following example, the [FrozenRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenRows) property is set to **2**. This configuration freezes the top two rows of the grid, and they will remain fixed in their positions while the rest of the grid can be scrolled vertically.
 
@@ -757,7 +757,7 @@ In the following example, the [FrozenRows](https://help.syncfusion.com/cr/blazor
 
 ### Change default frozen rows line color
 
-You can easily customize the frozen line background color of frozen rows in the Syncfusion Blazor DataGrid component by applying custom CSS styles to the specific frozen row. This allows you to change the background color of frozen rows to match your application’s design and theme.
+You can easily customize the frozen line background color of frozen rows in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component by applying custom CSS styles to the specific frozen row. This allows you to change the background color of frozen rows to match your application’s design and theme.
 
 To change the default frozen rows line color, you can use the following CSS class:
 
@@ -871,7 +871,7 @@ Frozen row is not compatible with the Autofill feature.
 
 ## Adding a new row programmatically
 
-The Syncfusion Blazor DataGrid provides a way to add a new row to the grid programmatically. This feature is useful when you want to add a new record to the grid without having the manually enter data in the grid.This can be done using the [AddRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AddRecordAsync__0_System_Nullable_System_Int32__) method of the Grid.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides a way to add a new row to the grid programmatically. This feature is useful when you want to add a new record to the grid without having the manually enter data in the grid.This can be done using the [AddRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AddRecordAsync__0_System_Nullable_System_Int32__) method of the Grid.
 
 The `AddRecordAsync` method takes two parameters:
 
