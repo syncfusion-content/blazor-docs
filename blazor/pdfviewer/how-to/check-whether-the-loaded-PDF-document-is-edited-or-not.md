@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Check the document editing status in PDF Viewer | Syncfusion®
-description: Learn here all about how to check the editing status of the document in Syncfusion® Blazor PDF Viewer component.
+title: Check the document editing status in PDF Viewer | Syncfusion
+description: Learn here all about how to check the editing status of the document in Syncfusion Blazor PDF Viewer component.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
