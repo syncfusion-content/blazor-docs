@@ -109,6 +109,26 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 Add the Syncfusion Blazor Ribbon component in the **~/Pages/Index.razor** file.
 
+### Adding Ribbon Tab
+
+In Ribbon component, options are organized into tabs for easy access. You can use the `<RibbonTabs>` directive to group all the tabs and `<RibbonTab>` directive to define each ribbon tab as shown below:
+
+{% tabs %}
+{% highlight razor %}
+
+<SfRibbon>
+    <RibbonTabs>
+        <RibbonTab HeaderText="Home"></RibbonTab>
+    </RibbonTabs>
+</SfRibbon>
+
+{% endhighlight %}
+{% endtabs %}
+
+### Adding Ribbon Group
+
+To define a ribbon group under each tab, you can use the `<RibbonGroups>` directive like below. The `Orientation` property of ribbon group defines whether the collection of items inside the group will be rendered column-wise or row-wise.
+
 {% tabs %}
 {% highlight razor %}
 
@@ -116,11 +136,31 @@ Add the Syncfusion Blazor Ribbon component in the **~/Pages/Index.razor** file.
     <RibbonTabs>
         <RibbonTab HeaderText="Home">
             <RibbonGroups>
-                <RibbonGroup HeaderText="Clipboard">
+                <RibbonGroup HeaderText="Clipboard" Orientation="Orientation.Row"></RibbonGroup>
+            </RibbonGroups>
+        </RibbonTab>
+    </RibbonTabs>
+</SfRibbon>
+
+{% endhighlight %}
+{% endtabs %}
+
+### Adding Ribbon Item
+
+You can use the `<RibbonCollection>` directive to define each ribbon collection that contains one or more items. To define each ribbon item, you can use the `<RibbonItem>` directive with the `Type` property to specify the type of item to be rendered, like a button, a drop-down button, a combo box, and more.
+
+{% tabs %}
+{% highlight razor %}
+
+<SfRibbon>
+    <RibbonTabs>
+        <RibbonTab HeaderText="Home">
+            <RibbonGroups>
+                <RibbonGroup HeaderText="Clipboard" Orientation="Orientation.Row">
                     <RibbonCollections>
                         <RibbonCollection>
                             <RibbonItems>
-                                <RibbonItem Disabled="true" AllowedSizes=RibbonItemSize.Large Type=RibbonItemType.SplitButton ID="pastebtn">
+                                <RibbonItem Type=RibbonItemType.SplitButton Disabled=true>
                                     <RibbonSplitButtonSettings Content="Paste" IconCss="e-icons e-paste" Items="@formatItems"></RibbonSplitButtonSettings>
                                 </RibbonItem>
                             </RibbonItems>
