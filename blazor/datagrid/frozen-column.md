@@ -272,7 +272,7 @@ The following example demonstrates how to change the default frozen line color u
 
 The frozen columns and freeze direction features in Syncfusion Blazor DataGrid have the following limitations:
 
-**General limitations for frozen columns** 
+**General limitations for frozen columns**  
 
 * Row Template  
 * Detail Template  

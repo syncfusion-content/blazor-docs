@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Load Custom Fonts in a PDF Viewer | Syncfusion®
-description: Learn here all about Custom Fonts in Blazor application in Syncfusion® Blazor SfPdfViewer component and more.
+title: Load Custom Fonts in a PDF Viewer | Syncfusion
+description: Learn here all about Custom Fonts in Blazor application in Syncfusion Blazor SfPdfViewer component and more.
 platform: Blazor
 control: SfPdfViewer
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Load Custom Fonts in a PDF Viewer
 
-Syncfusion® Blazor PDF Viewer utilizes Pdfium to extract the text and convert the PDF document as images. Pdfium supports a limited set of fonts by default. To expand this capability, [CustomFonts](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_CustomFonts) can be used to load additional fonts that are not embedded within Pdfium.
+Syncfusion&reg; Blazor PDF Viewer utilizes Pdfium to extract the text and convert the PDF document as images. Pdfium supports a limited set of fonts by default. To expand this capability, [CustomFonts](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_CustomFonts) can be used to load additional fonts that are not embedded within Pdfium.
 
 To implement CustomFonts, follow these steps: 
 
