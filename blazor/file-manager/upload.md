@@ -42,7 +42,7 @@ The screenshot below shows after successfully selecting a directory it uploads a
 
 The [ChunkSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html#Syncfusion_Blazor_FileManager_FileManagerUploadSettings_ChunkSize) property specifies the size of each chunk when uploading large files. It divides the file into smaller parts, which are uploaded sequentially to the server
 
-This property allows you to enable chunked uploads for large files by specifying a `ChunkSize`. When set, the file is split into smaller chunks, and each chunk is uploaded individually to the server in sequence. This approach improves upload efficiency and reliability, especially for large files.
+This property allows you to enable chunked uploads for large files by specifying a `ChunkSize`.
 
 By specifying a `ChunkSize`, the large file is divided into smaller parts, reducing the load on the network and making the upload process more efficient.
 
@@ -70,7 +70,7 @@ While using chunk upload, the Pause and Cancel features allow users to stop the 
 
 The [AutoUpload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html#Syncfusion_Blazor_FileManager_FileManagerUploadSettings_AutoUpload) property controls whether files are automatically uploaded when they are added to the upload queue in the FileManager component.
 
-The default value is to `true`, the FileManager will automatically upload files as soon as they are added to the upload queue. If set to `false`, the files will not be uploaded automatically, giving you the chance to manipulate the files before uploading them to the server.
+The default value is `true`, the FileManager will automatically upload files as soon as they are added to the upload queue. If set to `false`, the files will not be uploaded automatically, giving you the chance to manipulate the files before uploading them to the server.
 
 ```cshtml
 
