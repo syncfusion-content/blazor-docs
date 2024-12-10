@@ -8,7 +8,7 @@ description: "Learn how to bind data from a Snowflake database in the Syncfusion
 
 This section describes how to use [Snowflake data](https://www.nuget.org/packages/Snowflake.Data) to retrieve data from a Snowflake database and bind it to the Blazor Pivot Table.
 
-## Connecting a Snowflake to a Syncfusion Blazor Pivot Table
+## Connecting a Snowflake to a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table
 
 **1.** Create a simple Blazor Pivot Table by following the **"Getting Started"** documentation [link](../getting-started).
 
@@ -88,7 +88,7 @@ When you run the application, the resultant pivot table will look like this.
 
 ![Blazor Pivot Table bound with Snowflake data](../images/blazor-pivottable-Snowflake-databinding.png)
 
-## Connecting a Snowflake database to a Syncfusion Blazor Pivot Table via Web API service
+## Connecting a Snowflake database to a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Pivot Table via Web API service
 
 ### Create a Web API service to fetch Snowflake data
 
