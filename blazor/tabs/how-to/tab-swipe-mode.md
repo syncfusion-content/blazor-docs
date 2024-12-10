@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Tab Swipe modes in Blazor Tabs Component | Syncfusion
-description: Checkout and learn here all about Tab swipe modes in Syncfusion Blazor Tabs component and more.
+description: Checkout and learn here all about how to prevent content swipe selection using swipe modes in Syncfusion Blazor Tabs component and more.
 platform: Blazor
 control: Tabs
 documentation: ug
 ---
 
-# Tab Swipe modes
+# Prevent tab content swipe selection using swipe modes
 
 In the tab, the [`SwipeMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_SwipeMode) property allows specifying whether the tab transition should occur while performing swiping via touch or mouse. The tab swiping is enabled or disabled using the bitwise operator.
 
