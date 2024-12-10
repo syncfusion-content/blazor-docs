@@ -109,7 +109,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 Add the Syncfusion Blazor Ribbon component in the **~/Pages/Index.razor** file.
 
-### Adding Ribbon Tab
+### Adding ribbon tab
 
 In Ribbon component, options are organized into tabs for easy access. You can use the `<RibbonTabs>` directive to group all the tabs and `<RibbonTab>` directive to define each ribbon tab as shown below:
 
@@ -125,7 +125,7 @@ In Ribbon component, options are organized into tabs for easy access. You can us
 {% endhighlight %}
 {% endtabs %}
 
-### Adding Ribbon Group
+### Adding ribbon group
 
 To define a ribbon group under each tab, you can use the `<RibbonGroups>` directive like below. The `Orientation` property of ribbon group defines whether the collection of items inside the group will be rendered column-wise or row-wise.
 
@@ -145,9 +145,9 @@ To define a ribbon group under each tab, you can use the `<RibbonGroups>` direct
 {% endhighlight %}
 {% endtabs %}
 
-### Adding Ribbon Item
+### Adding ribbon item
 
-You can use the `<RibbonCollection>` directive to define each ribbon collection that contains one or more items. To define each ribbon item, you can use the `<RibbonItem>` directive with the `Type` property to specify the type of item to be rendered, like a button, a drop-down button, a combo box, and more.
+You can use the `<RibbonCollection>` directive to define each ribbon collection that contains one or more items. To define each ribbon item, you can use the `<RibbonItem>` directive with the `Type` property to specify the type of item to be rendered, using the `RibbonItemType` such as Button, a DropDown, a ComboBox, and more.
 
 {% tabs %}
 {% highlight razor %}
