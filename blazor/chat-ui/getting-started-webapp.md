@@ -110,9 +110,9 @@ Add the Syncfusion Blazor Chat UI component in the **~Pages/.razor** file. If an
 
 ![Blazor Chat UI Component](./images/chat-ui-component.png)
 
-## Configure messages
+## Configure messages and user
 
-You can use the `messages` property to add messages and the `user` property to map each message to the respective user.
+You can use the `messages` property to add messages and the `user` property to configure the current user for the chat.
 
 {% tabs %}
 {% highlight razor %}
@@ -127,19 +127,19 @@ You can use the `messages` property to add messages and the `user` property to m
 {% highlight razor %}
 
 <div class="chatui-container" style="height: 400px; width: 400px;">
-    <SfChatUI ID="chatUser" User="AlbertUserModel" Messages="ChatUserMessages"></SfChatUI>
+    <SfChatUI ID="chatUser" User="CurrentUserModel" Messages="ChatUserMessages"></SfChatUI>
 </div>
 
 @code {
     private SfChatUI ChatUser1 = new SfChatUI();
-    private static UserModel AlbertUserModel = new UserModel() { ID = "User1", User = "Albert" };
+    private static UserModel CurrentUserModel = new UserModel() { ID = "User1", User = "Albert" };
     private static UserModel MichaleUserModel = new UserModel() { ID = "User2", User = "Michale Suyama" };
     
     private List<ChatMessage> ChatUserMessages = new List<ChatMessage>()
     {
-        new ChatMessage() { ID = "msg1", Text = "Want to get coffee tomorrow?", Author = AlbertUserModel },
-        new ChatMessage() { ID = "msg2", Text = "Sure! What time?", Author = MichaleUserModel },
-        new ChatMessage() { ID = "msg3", Text = "How about 10 AM?", Author = AlbertUserModel }
+        new ChatMessage() { Text = "Want to get coffee tomorrow?", Author = CurrentUserModel },
+        new ChatMessage() { Text = "Sure! What time?", Author = MichaleUserModel },
+        new ChatMessage() { Text = "How about 10 AM?", Author = CurrentUserModel }
     };
 }
 
