@@ -189,11 +189,9 @@ public class EmployeeDetails
 {% endhighlight %}
 {% endtabs %}
 
-<<<<<<< HEAD
+
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtBzshXniHTpBqBz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-=======
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZrpMMVXzoBzmrze?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
->>>>>>> remotes/origin/hotfix/hotfix-v27.2.2
+
 
 ## Render other components in a column
 
