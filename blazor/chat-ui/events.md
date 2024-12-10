@@ -15,10 +15,61 @@ This section describes the Chat UI events that will be triggered when appropriat
 
 The Chat UI component triggers the `Created` event when the component rendering is completed.
 
-## MessageSend
+```cshtml
+
+@using Syncfusion.Blazor.InteractiveChat
+
+<div class="chatui-container" style="height: 400px; width: 400px;">
+    <SfChatUI Created="Created"></SfChatUI>
+</div>
+
+@code {
+    private void Created()
+    {
+        // Your required action here
+    }
+}
+
+```
+
+## Sending message
 
 The `MessageSend` event is triggered when the message is being sent in the Chat UI component.
 
-## UserTyping
+```cshtml
+
+@using Syncfusion.Blazor.InteractiveChat
+
+<div class="chatui-container" style="height: 400px; width: 400px;">
+    <SfChatUI MessageSend="MessageSend"></SfChatUI>
+</div>
+
+@code {
+    private void MessageSend(ChatMessageSendEventArgs args)
+    {
+        // Your required action here
+    }
+}
+
+```
+
+## User typing
 
 The `UserTyping` event is triggered when the user is typing a message in the Chat UI component.
+
+```cshtml
+
+@using Syncfusion.Blazor.InteractiveChat
+
+<div class="chatui-container" style="height: 400px; width: 400px;">
+    <SfChatUI UserTyping="UserTyping"></SfChatUI>
+</div>
+
+@code {
+    private void UserTyping(ChatUserTypingEventArgs args)
+    {
+        // Your required action here
+    }
+}
+
+```
