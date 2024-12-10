@@ -99,7 +99,7 @@ Add the Syncfusion Blazor Chat UI component in the **~Pages/.razor** file. If an
 {% tabs %}
 {% highlight razor %}
 
-<div class="chatui-container" style="height: 350px; width: 350px;">
+<div class="chatui-container" style="height: 400px; width: 400px;">
     <SfChatUI></SfChatUI>
 </div>
 
@@ -126,7 +126,7 @@ You can use the `messages` property to add messages and the `user` property to m
 {% tabs %}
 {% highlight razor %}
 
-<div class="chatui-container" style="height: 400px; width: 350px;">
+<div class="chatui-container" style="height: 400px; width: 400px;">
     <SfChatUI ID="chatUser" User="Albert" Messages="UserChatMessages"></SfChatUI>
 </div>
 
