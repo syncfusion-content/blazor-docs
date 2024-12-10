@@ -1,19 +1,21 @@
 ---
 layout: post
-title: Toolbar items in Blazor Chat UI Component | Syncfusion
-description: Checkout and learn here all about Toolbar items with Syncfusion Blazor Chat UI component in Blazor Server App and Blazor WebAssembly App.
+title: Header in Blazor Chat UI Component | Syncfusion
+description: Checkout and learn here all about Header with Syncfusion Blazor Chat UI component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Chat UI
 documentation: ug
 ---
 
-# Toolbar items in Blazor Chat UI component
+# Header in Blazor Chat UI component
 
-You can render the Chat UI header toolbar items by using the `HeaderToolbar`, `HeaderToolbarItem` tag directives.
+## Show or hide header
 
-## Adding header text
+You can use `ShowHeader` property to enable or disable the chat header. It contains the following options `HeaderText` and `HeaderIconCss`.
 
-You can use the `HeaderText` property to set the text for the header area.
+### Setting header text
+
+You can use the `HeaderText` property to display the text that appears in the header, which indicates the current username or the group name, providing the context for the conversation.
 
 ```cshtml
 
@@ -27,9 +29,9 @@ You can use the `HeaderText` property to set the text for the header area.
 
 ![Blazor Chat UI HeaderText](./images/header-text.png)
 
-## Adding header iconCss
+### Setting header iconCss
 
-You can add / customize the header icons by using the `HeaderIconCss` property.
+You can use the `HeaderIconCss` property to customize the styling of the header icon.
 
 ```cshtml
 
@@ -43,11 +45,11 @@ You can add / customize the header icons by using the `HeaderIconCss` property.
 
 ![Blazor Chat UI HeaderIconCss](./images/header-iconCss.png)
 
-## Adding header toolbar items
+## Toolbar
 
-The Chat UI component allows you to add header toolbar items using the `HeaderToolbarItem` tag directive within the `HeaderToolbar`.
+You can render the Chat UI toolbar items by using the `HeaderToolbar`, `HeaderToolbarItem` tag directives.
 
-### Items
+### Setting items
 
 Items can be constructed with the following built-in command types or item template.
 

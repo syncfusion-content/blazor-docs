@@ -33,7 +33,7 @@ You can use the `Timestamp` property to indicate the date and time of the messag
 
 ### Setting timestamp format
 
-You can use the `TimestampFormat` to display specific format for the timestamp. The default value is `dd/MM/yyyy hh:mm a`, but this can be customized to meet different localization and display needs.
+You can use the `TimestampFormat` property to display a specific format for the timestamp of each message in the `Messages` property. The default value is `dd/MM/yyyy hh:mm a`, but this can be customized to meet different localization and display needs.
 
 ### Setting status
 
@@ -57,16 +57,70 @@ You can use the `ID` property to add unique `ID` for each users, which is mandat
 
 ### Adding user
 
-You can use the `User` property to configure the display name for the user in the chat. By default, the user name value is set to `Default`. 
+You can use the `User` property to configure the display name for the user in the chat. By default, the user name value is set to `Default`.
 
 ### Adding avatar url
 
-You can use the `AvatarUrl` property to define the image URL’s for the user avatar. If no URL is provided, fallback initials of the first and last name from the user’s name will be used. 
+You can use the `AvatarUrl` property to define the image URL’s for the user avatar. If no URL is provided, fallback initials of the first and last name from the user’s name will be used.
 
 ### Adding avatar background color
 
-You can use the `AvatarBgColor` property to set a specific background color for user avatars using hexadecimal values. If no color is set, a custom background color is set based on specified theme. 
+You can use the `AvatarBgColor` property to set a specific background color for user avatars using hexadecimal values. If no color is set, a custom background color is set based on specified theme.
 
-### Adding cssclass
+### Adding cssClass
 
-You can use the `CssClass` property to customize the appearance of the chat user. 
+You can use the `CssClass` property to customize the appearance of the chat user.
+
+## Messages collection
+
+You can use the `Messages` property to initialize the control with the configured message data from multiple users. It is a collection of messages, each represented by a `ChatMessage`.
+
+The message collection stores all the messages being sent. 
+
+## Enable load on demand
+
+You can use the `LoadOnDemand` property to load messages dynamically when the scroll reaches the top of the message list improving performance and reducing load times, particularly in long conversations. This ensures a smooth user experience by only fetching messages as needed rather than loading the entire conversation at once.
+
+## Display time break
+
+You can use the `ShowTimeBreak` property to display date-wise separations between all the messages which enhances the readability and message organizing. The default value is `false`, indicating time breaks are disabled unless it is enabled.
+
+## Display timestamp
+
+You can use the `ShowTimestamp` property to enable or disable timestamps for all messages which displays the exact date and time when they were sent. By default, the value is `true`.
+
+## Adding timestamp format
+
+You can use the `TimestampFormat` property to display a specific format for the timestamp. The default value is `dd/MM/yyyy hh:mm a`, but this can be customized to meet different localization and display needs.
+
+## Display typing indicators
+
+You can use the `TypingUsers` property  to display the current user’s who are typing to indicate the active participants typing response within the chat conversations.
+
+It is the instance of the `UserModel` collection, where you can update the user’s dynamically to display the current typing user.
+
+## Adding suggestions
+
+You can use the `Suggestions` property, to add the suggestions in both initial and on-demand which help users to quick-reply options above the input field. 
+
+## Setting autoScrolltoBottom
+
+You can use the `AutoScrollToBottom` property to automatically scroll the chats when a new message is received in a real-time conversation. By default, this value is set to false, requiring manual scrolling unless activated. The FAB button will be displayed, to quick access to the bottom of the view. 
+
+By default, it scrolls to bottom for each message being sent in the chat, in order to prevent the scroll for end user messages you can use the `AutoScrollToBottom` property.
+
+## Show or hide header
+
+You can use `ShowHeader` property to enable or disable the chat header. It contains the following options `HeaderText` and `HeaderIconCss`.
+
+### Adding header text
+
+You can use the `HeaderText` property to display the text that appears in the header, which indicates the current username or the group name, providing the context for the conversation.
+
+### Adding header iconCss
+
+You can use the `HeaderIconCss` property to customize the styling of the header icon.
+
+## Show or hide footer
+
+You can use `ShowFooter` property to enable or disable the chat footer.

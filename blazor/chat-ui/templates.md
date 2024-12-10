@@ -9,11 +9,11 @@ documentation: ug
 
 # Templates in Blazor Chat UI component
 
-The Chat UI provides several template options to customize the empty chat, message, suggestions, footer items, timebreak and typing users.
+The Chat UI component provides several templates for customizing the appearance of the empty conversation area, messages, typing indicator, and more. These templates provide flexibility for users to create a unique, personalized chat experience. 
 
 ## Empty chat template
 
-You can use the `EmptyChatTemplate` tag directive to display information when there are no messages, such as a welcome note, and more in the Chat UI.
+You can use the `EmptyChatTemplate` property to customize the chat interface when no messages are displayed. Personalized content, such as welcome messages or images, can be added to create an engaging and inviting experience for users starting a conversation. 
 
 ## Message template
 
@@ -25,7 +25,7 @@ You can use the `SuggestionTemplate` tag directive to customize the message sugg
 
 ## Footer template
 
-You can use the `FooterTemplate` tag directive to customize the default footer area in the Chat UI. This allows users to create unique footers that meet their specific needs.
+You can use the `FooterTemplate` property to customize the default footer area and manage message send actions with a personalized design. This flexibility allows users to create unique footers that meet their specific needs. 
 
 ## Timebreak template
 

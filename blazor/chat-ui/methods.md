@@ -11,8 +11,8 @@ documentation: ug
 
 ## Update message
 
-You can use the `UpdateMessageAsync` method to update the existing message in the Chat UI component.
+You can use the `UpdateMessageAsync` public method to update the messages in the ChatUI to modify an existing message within the chat, useful for editing or correcting sent messages. 
 
 ## Scroll to bottom
 
-You can use the `ScrollToBottomAsync` method to scroll to the last message in the conversation area of the Chat UI component.
+You can use `ScrollToBottomAsync` public method to scroll the chat view to the latest message, ensuring users see the new content updated. 
