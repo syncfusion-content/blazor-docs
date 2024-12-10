@@ -7,7 +7,11 @@ control: PDF Viewer
 documentation: ug
 ---
 
+<<<<<<< HEAD
 N> Syncfusion&reg; recommends using [Blazor PDF Viewer](https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/server-side-application) Component which provides fast rendering of pages and improved performance. Also, there is no need of external Web service for processing the files and ease out the deployment complexity. It can be used in Blazor Server, WASM and MAUI applications without any changes.
+=======
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> recommends using [Blazor PDF Viewer (NextGen)](https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/server-side-application) Component which provides fast rendering of pages and improved performance. Also, there is no need of external Web service for processing the files and ease out the deployment complexity. It can be used in Blazor Server, WASM and MAUI applications without any changes.
+>>>>>>> remotes/origin/hotfix/hotfix-v27.2.2
 
 # Open PDF files in PDF Viewer for Blazor from various storage location
 
@@ -58,7 +62,7 @@ The following code example shows how to open and load the PDF file stored in Azu
         BlobServiceClient blobServiceClient = new BlobServiceClient(connectionString);
         //Container Name
         string containerName = "pdf-file";
-        //File Name to be loaded into Syncfusion PDF Viewer
+        //File Name to be loaded into Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer
         string fileName = "Python_Succinctly.pdf";
         BlobContainerClient blobContainerClient = blobServiceClient.GetBlobContainerClient(containerName);
         BlockBlobClient blockBlobClient = blobContainerClient.GetBlockBlobClient(fileName);
@@ -85,7 +89,7 @@ N> The **Azure.Storage.Blobs** NuGet package must be installed in your applicati
         //Connection String of Storage Account
         string connectionString = "Here Place Your Connection string";
         string shareName = "pdfdocument";
-        //File Name to be loaded into Syncfusion PDF Viewer
+        //File Name to be loaded into Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer
         string filePath = "Hive_Succinctly.pdf";
         ShareFileClient shareFileClient = new ShareFileClient(connectionString, shareName, filePath);
         Stream stream = shareFileClient.OpenRead();
