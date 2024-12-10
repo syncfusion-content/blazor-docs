@@ -477,16 +477,13 @@ By default, the scheduler will render the overlapping events based on the start 
 ```
 ![Blazor Scheduler with Overlapping Events](images/blazor-scheduler-overlapping-events.png)
 
-## Prevent Overlap Events
-By default, the scheduler permits overlapping events. To prevent this, you can either set the [AllowOverlap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowOverlap) property to false or use the Scheduler's public method [IsSlotAvailableAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_IsSlotAvailableAsync__0_).
+## Preventing Overlapping Events
+By default, the scheduler permits overlapping events, but to optimize resource utilization and prevent conflicts, it's important to avoid overlapping appointments. This can be achieved by setting the [AllowOverlap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowOverlap) property to `false`, which will block any overlapping appointments and display a conflict alert message.
 
-### Restricting the overlapping events using AllowOverlap property
-To optimize resource utilization and prevent conflicts, it's important to avoid overlapping appointments. This can be achieved by setting the Scheduler's [AllowOverlap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowOverlap) API to `false`. If a user tries to create or update an overlapping appointment, the scheduler will block the action and display a conflict alert message.
-
-#### Initial load
+### Initial load
 Upon initial load, the scheduler displays appointments from the data source without overlaps and gives priority to longer and all-day appointments by default. For recurrence appointments, if there are conflicts within a series, the scheduler will show other occurrences except for the conflicting one. You can use the Scheduler's [SortBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_SortBy) property to sort appointments according to your data source, determining the display order.
 
-#### Edit/Save and Drag&Drop
+### Edit/Save and Drag&Drop
 When performing the user can edit, save, or drag and drop appointments, the scheduler will check for overlaps and prevent the action if a conflict is detected and display a conflict alert message to the user. When create or edit recurrence series, if confict is detected the scheduler wouldn't allow entire occurrences of the conflicting series.
 
 >Note: By default [AllowOverlap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowOverlap) is true. You can obtain details of overlapping appointments via the `args` parameter in the [PopupOpenEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.PopupOpenEventArgs-1.html).
@@ -536,7 +533,7 @@ When performing the user can edit, save, or drag and drop appointments, the sche
 ```
 ![Blazor Scheduler with restricted Overlapping Events](images/blazor-scheduler-restrict-overlapping-events.png)
 
-### Restricting the overlapping events using IsSlotAvailableAsync method
+## Restricting the overlapping events using IsSlotAvailableAsync method
 You can restrict the users to create and update more than one appointment on specific time slots. Also, you can disable the CRUD action on those time slots if it is already occupied, which can be achieved using Scheduler’s public method [IsSlotAvailableAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_IsSlotAvailableAsync__0_).
 
 >Note: The **IsSlotAvailableAsync** is centered around verifying appointments within the present view's date range. Yet, it does not encompass an evaluation of availability for recurrence occurrences that fall beyond this particular date range.
