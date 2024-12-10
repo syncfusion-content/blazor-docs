@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Events in Blazor SfPdfViewer Component | Syncfusion®
-description: Checkout and learn here all about events in Syncfusion® Blazor SfPdfViewer component and much more details.
+title: Events in Blazor SfPdfViewer Component | Syncfusion
+description: Checkout and learn here all about events in Syncfusion Blazor SfPdfViewer component and much more details.
 platform: Blazor
 control: SfPdfViewer
 documentation: ug
@@ -61,7 +61,7 @@ The events provided in SfPdfViewer component are listed out as follows:
 
 ## Adding SfPdfViewer events to Blazor component
 
-The Syncfusion® SfPdfViewer events has to be wrapped inside the [PdfViewerEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html) tag.
+The Syncfusion&reg; SfPdfViewer events has to be wrapped inside the [PdfViewerEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html) tag.
 
 ```cshtml
 

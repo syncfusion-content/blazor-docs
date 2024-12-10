@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Check the status of annotations in Blazor PDF Viewer | Syncfusion®
-description: Learn here all about how to check the status of annotations or comments in Syncfusion® Blazor PDF Viewer component and more.
+title: Check the status of annotations in Blazor PDF Viewer | Syncfusion
+description: Learn here all about how to check the status of annotations or comments in Syncfusion Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Check the status of annotations in Blazor PDF Viewer Component
 
-The Syncfusion®'s Blazor PDF Viewer component allows to check the status of the annotations in the PDF viewer using the [Review](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PdfViewer.Review.html) property of the [PdfAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PdfViewer.PdfAnnotation.html) class.
+The Syncfusion&reg; Blazor PDF Viewer component allows to check the status of the annotations in the PDF viewer using the [Review](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PdfViewer.Review.html) property of the [PdfAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PdfViewer.PdfAnnotation.html) class.
 
 The following code example shows the review status of the annotation.
 

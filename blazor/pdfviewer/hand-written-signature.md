@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Handwritten Signature in Blazor PDF Viewer Component | Syncfusion®
-description: Checkout and learn here all about handwritten signature in Syncfusion® Blazor PDF Viewer component and more.
+title: Handwritten Signature in Blazor PDF Viewer Component | Syncfusion
+description: Checkout and learn here all about handwritten signature in Syncfusion Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
 ---
 
-N> Syncfusion® recommends using [Blazor PDF Viewer (NextGen)](https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/server-side-application) Component which provides fast rendering of pages and improved performance. Also, there is no need of external Web service for processing the files and ease out the deployment complexity. It can be used in Blazor Server, WASM and MAUI applications without any changes.
+N> Syncfusion&reg; recommends using [Blazor PDF Viewer](https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/server-side-application) Component which provides fast rendering of pages and improved performance. Also, there is no need of external Web service for processing the files and ease out the deployment complexity. It can be used in Blazor Server, WASM and MAUI applications without any changes.
 
 # Handwritten Signature in Blazor PDF Viewer Component
 

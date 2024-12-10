@@ -86,7 +86,7 @@ Add the Syncfusion Blazor Calendar component in the **~/Pages/Index.razor** file
 
 ![Blazor Calendar Component](images/mac-output.png)
 
-N> When utilizing a PDF viewer on macOS (ARM), we highly recommend opting for our [NextGen PDF Viewer](https://blazor.syncfusion.com/documentation/pdfviewer-2/migration) since it has excellent compatibility with macOS (ARM) architecture.
+N> When utilizing a PDF viewer on macOS (ARM), we highly recommend opting for our [PDF Viewer](https://blazor.syncfusion.com/documentation/pdfviewer-2/migration) since it has excellent compatibility with macOS (ARM) architecture.
 
 ## See also
 
