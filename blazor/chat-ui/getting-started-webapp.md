@@ -99,7 +99,7 @@ Add the Syncfusion Blazor Chat UI component in the **~Pages/.razor** file. If an
 {% tabs %}
 {% highlight razor %}
 
-<div class="chatui-container" style="height: 350px; width: 350px;">
+<div class="chatui-container" style="height: 400px; width: 400px;">
     <SfChatUI></SfChatUI>
 </div>
 
@@ -126,34 +126,20 @@ You can use the `messages` property to add messages and the `user` property to m
 {% tabs %}
 {% highlight razor %}
 
-<div class="chatui-container" style="height: 400px; width: 350px;">
-    <SfChatUI ID="chatUser" User="Albert" Messages="UserChatMessages"></SfChatUI>
+<div class="chatui-container" style="height: 400px; width: 400px;">
+    <SfChatUI ID="chatUser" User="AlbertUserModel" Messages="ChatUserMessages"></SfChatUI>
 </div>
 
 @code {
-    private SfChatUI ChatUser1 = new SfChatUI();    
-    private UserModel Albert = new UserModel() { ID = "User1", User = "Albert" };
-    private List<ChatMessage> UserChatMessages = new List<ChatMessage>()
+    private SfChatUI ChatUser1 = new SfChatUI();
+    private static UserModel AlbertUserModel = new UserModel() { ID = "User1", User = "Albert" };
+    private static UserModel MichaleUserModel = new UserModel() { ID = "User2", User = "Michale Suyama" };
+    
+    private List<ChatMessage> ChatUserMessages = new List<ChatMessage>()
     {
-        new ChatMessage() { Text = "Want to get coffee tomorrow?",
-            Author = new UserModel()
-            {
-                ID = "User1",
-                User = "Albert"
-            }
-        },
-        new ChatMessage() { Text = "Sure! What time?", Author = new UserModel()
-            {
-                ID = "User2",
-                User = "Michale Suyama"
-            }
-        },
-        new ChatMessage() { Text = "How about 10 AM?", Author = new UserModel()
-            {
-                ID = "User1",
-                User = "Albert"
-            }
-        },
+        new ChatMessage() { ID = "msg1", Text = "Want to get coffee tomorrow?", Author = AlbertUserModel },
+        new ChatMessage() { ID = "msg2", Text = "Sure! What time?", Author = MichaleUserModel },
+        new ChatMessage() { ID = "msg3", Text = "How about 10 AM?", Author = AlbertUserModel }
     };
 }
 
