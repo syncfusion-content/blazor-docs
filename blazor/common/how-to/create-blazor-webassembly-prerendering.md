@@ -78,7 +78,7 @@ This section explains how to enable prerendering to a Blazor WebAssembly applica
             });
     ```
 
-7. Add Syncfusion Blazor service in the `~/Server/Program.cs` file.
+7. Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the `~/Server/Program.cs` file.
 
     ```c#
     using Syncfusion.Blazor;
@@ -97,7 +97,7 @@ When the index page is injected with the `HttpClient` and tried to prerender on 
 
 E> ***InvalidOperationException***: An invalid request URI was provided. The request URI must either be an absolute URI or BaseAddress must be set.
 
-The Syncfusion Blazor service has registered the HttpClient service itself by default. When you run the `WebAssemblyPrerendered` mode application, it tries to get the WebAPI with its absolute URI or BaseAddress.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service has registered the HttpClient service itself by default. When you run the `WebAssemblyPrerendered` mode application, it tries to get the WebAPI with its absolute URI or BaseAddress.
 
 If you configure with absolute URI in the `~/Client/Pages/Index.razor` file, you will face another runtime error.
 

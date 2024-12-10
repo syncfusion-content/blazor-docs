@@ -17,9 +17,9 @@ This section briefly explains about how to include [Blazor Carousel](https://www
 
 ## Create a new Blazor App in Visual Studio
 
-You can create a **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=windows) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+You can create a **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=windows) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-## Install Syncfusion Blazor Navigations and Themes NuGet in the App
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Navigations and Themes NuGet in the App
 
 To add **Blazor Carousel** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -32,9 +32,9 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
-## Register Syncfusion Blazor Service
+## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
 Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Navigations` namespace.
 
@@ -47,7 +47,7 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor Server App or Blazor WebAssembly App.
+Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor Server App or Blazor WebAssembly App.
 
 {% tabs %}
 {% highlight C# tabtitle="Blazor Server App" hl_lines="3 10" %}
@@ -107,7 +107,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Blazor Carousel component
 
-Add the Syncfusion Blazor Carousel component in the **~/Pages/Index.razor** file.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Carousel component in the **~/Pages/Index.razor** file.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -116,31 +116,31 @@ Add the Syncfusion Blazor Carousel component in the **~/Pages/Index.razor** file
     <SfCarousel>
         <CarouselItem>
             <figure class="img-container">
-                <img src="images/carousel/bridge.png" alt="Golden Gate Bridge, San Francisco" style="height:100%;width:100%;" />
+                <img src="https://ej2.syncfusion.com/demos/src/carousel/images/bridge.jpg" alt="Golden Gate Bridge, San Francisco" style="height:100%;width:100%;" />
                 <figcaption class="img-caption">Golden Gate Bridge, San Francisco</figcaption>
             </figure>
         </CarouselItem>
         <CarouselItem>
             <figure class="img-container">
-                <img src="images/carousel/trees.png" alt="Spring Flower Trees" style="height:100%;width:100%;" />
+                <img src="https://ej2.syncfusion.com/demos/src/carousel/images/trees.jpg" alt="Spring Flower Trees" style="height:100%;width:100%;" />
                 <figcaption class="img-caption">Spring Flower Trees</figcaption>
             </figure>
         </CarouselItem>
         <CarouselItem>
             <figure class="img-container">
-                <img src="images/carousel/waterfall.png" alt="Oddadalen Waterfalls, Norway" style="height:100%;width:100%;" />
+                <img src="https://ej2.syncfusion.com/demos/src/carousel/images/waterfall.jpg" alt="Oddadalen Waterfalls, Norway" style="height:100%;width:100%;" />
                 <figcaption class="img-caption">Oddadalen Waterfalls, Norway</figcaption>
             </figure>
         </CarouselItem>
         <CarouselItem>
             <figure class="img-container">
-                <img src="images/carousel/sea.png" alt="Anse Source d'Argent, Seychelles" style="height:100%;width:100%;" />
+                <img src="https://ej2.syncfusion.com/demos/src/carousel/images/sea.jpg" alt="Anse Source d'Argent, Seychelles" style="height:100%;width:100%;" />
                 <figcaption class="img-caption">Anse Source d'Argent, Seychelles</figcaption>
             </figure>
         </CarouselItem>
         <CarouselItem>
             <figure class="img-container">
-                <img src="images/carousel/rocks.png" alt="Stonehenge, England" style="height:100%;width:100%;" />
+                <img src="https://ej2.syncfusion.com/demos/src/carousel/images/rocks.jpg" alt="Stonehenge, England" style="height:100%;width:100%;" />
                 <figcaption class="img-caption">Stonehenge, England</figcaption>
             </figure>
         </CarouselItem>

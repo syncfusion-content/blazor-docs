@@ -28,7 +28,11 @@ Add the following NuGet packages into the Blazor Server app.
 * [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer) 
 * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)
 
+<<<<<<< HEAD
 ## Register Syncfusion&reg; Blazor Service
+=======
+## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+>>>>>>> remotes/origin/hotfix/hotfix-v27.2.2
 
 * In the **~/_Imports.razor** file, add the following namespaces:
 
@@ -41,7 +45,11 @@ Add the following NuGet packages into the Blazor Server app.
 {% endhighlight %}
 {% endtabs %}
 
+<<<<<<< HEAD
 * Register the Syncfusion&reg; Blazor Service in the **~/Program.cs** file.
+=======
+* Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file.
+>>>>>>> remotes/origin/hotfix/hotfix-v27.2.2
 
 {% tabs %}
 {% highlight c# tabtitle="~/Program.cs" hl_lines="3 11 14" %}
@@ -87,7 +95,11 @@ Add the following stylesheet and script to the head section of the **~/Pages/_Ho
 
 ## Adding Blazor PDF Viewer Component
 
+<<<<<<< HEAD
 Add the Syncfusion&reg; PDF Viewer component in the **~/Pages/Index.razor** file
+=======
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer (Next Gen) component in the **~/Pages/Index.razor** file
+>>>>>>> remotes/origin/hotfix/hotfix-v27.2.2
 
 {% tabs %}
 {% highlight razor %}
