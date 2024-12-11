@@ -19,7 +19,7 @@ You can dynamically adjust the size of the popup in the `Autocomplete` component
 
 {% endhighlight %} 
 
-![Blazor AutoComplete with AllowResize property](./images/popup-setting\blazor_autocomplete_resize.gif)
+![Blazor AutoComplete with AllowResize property](./images/popup-setting/blazor_autocomplete_resize.gif)
 
 
 ## Change the popup width
