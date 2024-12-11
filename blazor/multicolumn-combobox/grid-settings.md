@@ -62,4 +62,4 @@ The following example enables text wrapping for the header in the Blazor MultiCo
 
 {% endhighlight %}
 
-![Blazor MultiColumn ComboBox with Text Wrap](./images/blazor_multicolumn_combobox_texxt_wrap.gif)
+![Blazor MultiColumn ComboBox with Text Wrap](./images/blazor_multicolumn_combobox_text_wrap.gif)
