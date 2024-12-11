@@ -15,9 +15,9 @@ To mitigate this, developers can configure the [`SwipeMode`](https://help.syncfu
 
 The following are the different swipe modes available in the tab:
 
+* [`TabSwipeMode.Touch & TabSwipeMode.Mouse`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabSwipeMode.html) -  By default, allows the user to swipe the tabs using both touch and mouse actions.
 * [`TabSwipeMode.Touch`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabSwipeMode.html) - Allows the user to swipe the tabs using touch actions.
 * [`TabSwipeMode.Mouse`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabSwipeMode.html) - Allows the user to swipe the tabs using mouse actions.
-* [`TabSwipeMode.Touch & TabSwipeMode.Mouse`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabSwipeMode.html) - Allows the user to swipe the tabs using both touch and mouse actions.
 * [`~TabSwipeMode.Touch & ~TabSwipeMode.Mouse`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabSwipeMode.html) - Disables both touch and mouse actions.
 
 ```cshtml
