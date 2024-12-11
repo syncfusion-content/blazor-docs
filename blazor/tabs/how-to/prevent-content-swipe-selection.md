@@ -19,7 +19,7 @@ The following are the different swipe modes available in the tab:
 * [`~TabSwipeMode.Touch & ~TabSwipeMode.Mouse`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabSwipeMode.html) - Disables both touch and mouse actions.
 
 ```cshtml
-<SfTab SwipeMode="TabSwipeMode.Touch">
+<SfTab SwipeMode="~TabSwipeMode.Touch & ~TabSwipeMode.Mouse">
     <TabItems>
         <TabItem Content="India officially the Republic of India, is a country in South Asia. It is the seventh-largest country by area, the second-most populous country with over 1.2 billion people, and the most populous democracy in the world. Bounded by the Indian Ocean on the south, the Arabian Sea on the south-west, and the Bay of Bengal on the south-east, it shares land borders with Pakistan to the west;China, Nepal, and Bhutan to the north-east; and Burma and Bangladesh to the east. In the Indian Ocean, India is in the vicinity of Sri Lanka and the Maldives; in addition, India Andaman and Nicobar Islands share a maritime border with Thailand and Indonesia.">
             <ChildContent>
@@ -40,4 +40,4 @@ The following are the different swipe modes available in the tab:
 </SfTab>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhJWBXRTkcUTrZj?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBzMrWWARDOqfgG?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
