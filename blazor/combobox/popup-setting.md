@@ -23,6 +23,19 @@ In the following sample, the `PopupWidth` is set as `300px`.
 
 ![Blazor ComboBox with customizing popup width](./images/popup-setting/blazor_ComboBox_popup-width.png)
 
+## Resizing in ComboBox
+
+You can dynamically adjust the size of the popup in the `ComboBox` component by using the `AllowResize `property. When enabled, users can resize the popup, improving visibility and control, with the resized dimensions being retained across sessions for a consistent user experience.
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/allow-resize/resize.razor %}
+
+{% endhighlight %} 
+
+![Blazor ComboBox with AllowResize property](./images/popup-setting/blazor_combobox_resize.gif)
+
+
 ## Change the popup height
 
 Customize the height of the popup using the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupHeight) property. The default value of the `PopupHeight` is `300px`.

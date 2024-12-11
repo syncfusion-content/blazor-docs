@@ -44,3 +44,22 @@ The following example enables column resizing, allowing users to adjust the widt
 {% include_relative code-snippet/grid-settings/allow-column-resizing.razor %}
 
 {% endhighlight %}
+
+## TextWrap for grid
+
+The TextWrap in the Blazor `MultiColumn ComboBox` ensures proper wrapping of text within both headers and data content. By enabling `EnableTextWrap`, you can manage how text appears when it exceeds the available space.
+
+**Key features**
+* **TextWrapElement**: This is an enum(Header,Content ,Both) Defines the element where text wrapping is applied.
+
+* **TextOverflowMode**:This is an enum(Ellipsis ,EllipsisWithTooltip) Defines truncates the cell content when it overflows its area.
+
+The following example enables text wrapping for the header in the Blazor MultiColumn ComboBox, ensuring that longer text is properly displayed without overflowing.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/grid-settings/text-wrap.razor %}
+
+{% endhighlight %}
+
+![Blazor MultiColumn ComboBox with Text Wrap](./images/blazor_multicolumn_combobox_texxt_wrap.gif)

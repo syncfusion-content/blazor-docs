@@ -9,6 +9,19 @@ documentation: ug
 
 # Popup Setting in AutoComplete
 
+## Resizing in AutoComplete
+
+You can dynamically adjust the size of the popup in the `Autocomplete` component by using the `AllowResize `property. When enabled, users can resize the popup, improving visibility and control, with the resized dimensions being retained across sessions for a consistent user experience.
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/allow-resize/allowresize.razor %}
+
+{% endhighlight %} 
+
+![Blazor AutoComplete with AllowResize property](./images/popup-setting\blazor_autocomplete_resize.gif)
+
+
 ## Change the popup width
 
 Customize the width of the popup using the [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth) property. The default value of the `PopupWidth` is `100%`. If popup width unspecified, it sets based on the width of the AutoComplete component.
