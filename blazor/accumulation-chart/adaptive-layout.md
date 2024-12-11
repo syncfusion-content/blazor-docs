@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Adaptive Lao=yout in Blazor Accumulation Chart Component | Syncfusion
-description: Checkout and learn here all about AAdaptive Layout in Syncfusion Blazor Accumulation Chart component and more.
+description: Checkout and learn here all about Adaptive Layout in Syncfusion Blazor Accumulation Chart component and more.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
