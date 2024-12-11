@@ -692,9 +692,9 @@ The cluster is formed by grouping an identical and non-identical marker from the
 
 ### Clustering markers within each marker group
 
-Marker clustering can be enabled for each marker group in the map by using the `MapsMarkerClusterSettings` property within the `MapsMarker` of the [MapsLayer ](../api/maps/#layers) tag. This allows for individual customization of clusters for each marker group which group markers that are located near each other to reduce clutter and improve readability. When the `AllowClustering` property is set to **true**, the markers within each group are clustered and visually represented as separate clusters. As users zoom in, the clusters expand to reveal individual markers, enabling more detailed exploration. Clusters can also be expanded manually by setting the `AllowClusterExpand` property to **true**. The appearance of the clusters and their expansion behavior can be customized using the `MapsMarkerClusterSettings` property, similar to the `MapsMarkerClusterSettings` property, as explained in the sections above.
+Marker clustering can be enabled for each marker group in the map by using the `MapsMarkerClusterSettings` tag within the `MapsMarker` of the [MapsLayer ](../api/maps/#layers) tag. This allows for individual customization of clusters for each marker group which group markers that are located near each other to reduce clutter and improve readability. When the `AllowClustering` property is set to **true**, the markers within each group are clustered and visually represented as separate clusters. As users zoom in, the clusters expand to reveal individual markers, enabling more detailed exploration. Clusters can also be expanded manually by setting the `AllowClusterExpand` property to **true**. The appearance of the clusters and their expansion behavior can be customized using the `MapsMarkerClusterSettings` property, similar to the `MapsMarkerClusterSettings` property, as explained in the sections above.
 
-N>When the `MapsMarkerClusterSettings` property is enabled for an individual marker group, the `MapsMarkerClusterSettings` property within the layers becomes ineffective.
+N> When the `MapsMarkerClusterSettings` tag is enabled for a specific marker group, the `MapsMarkerClusterSettings` tag within the layers becomes ineffective.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
