@@ -7,7 +7,7 @@ control: Ribbon
 documentation: ug
 ---
 
-# Items in Blazor Ribbon Component
+# Items in Blazor Ribbon component
 
 ## Button item
 

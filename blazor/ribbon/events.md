@@ -7,7 +7,7 @@ control: Ribbon
 documentation: ug
 ---
 
-# Events in Blazor Ribbon Component
+# Events in Blazor Ribbon component
 
 This section describes the Ribbon events that will be triggered when appropriate actions are performed. The following events are available in the Ribbon component.
 

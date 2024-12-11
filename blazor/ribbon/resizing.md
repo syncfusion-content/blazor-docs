@@ -7,7 +7,7 @@ control: Ribbon
 documentation: ug
 ---
 
-# Resizing in Blazor Ribbon Component
+# Resizing in Blazor Ribbon component
 
 The Ribbon dynamically adjusts its elements during resizing. When the ribbon's size increases, elements expand, and when it decreases, elements collapse. Resizing is supported in both Classic and Simplified modes, with the flexibility to customize the order in which elements resize.
 
