@@ -530,7 +530,6 @@ By default, the scheduler renders overlapping events based on their start and en
 
 ### Limitations
 * On initial load, the scheduler prioritizes non-overlapping events based on their longer duration and all-day status.
-* The Scheduler's [SortBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_SortBy) property can be utilized to sort appointments according to the data source, determining the display order.
 * For recurring appointments, at the initial load, if there are conflicts within a series, the scheduler will display all occurrences except for the conflicting one.
 * When a user edits, saves, or drops appointments, the scheduler checks for overlaps. If a conflict is detected, it prevents the action and displays a conflict alert to the user.
 * When creating or editing a recurrence series dynamically, if a conflict is detected, the scheduler won't allow any occurrences of the conflicting series.
