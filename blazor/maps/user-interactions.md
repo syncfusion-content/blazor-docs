@@ -763,7 +763,7 @@ To enable the highlight for markers in Maps, set the [MapsMarkerHighlightSetting
         <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/usa.json"}' TValue="string">
             <MapsMarkerSettings>
                 <MapsMarker Visible="true" DataSource="Cities" Height="25" Width="15" TValue="City">
-                    <MapsMarkerSelectionSettings Fill="green" Enable="true"></MapsMarkerSelectionSettings>
+                    <MapsMarkerHighlightSettings Fill="green" Enable="true"></MapsMarkerHighlightSettings>
                 </MapsMarker>
             </MapsMarkerSettings>
             <MapsShapeSettings Fill="lightgray"></MapsShapeSettings>

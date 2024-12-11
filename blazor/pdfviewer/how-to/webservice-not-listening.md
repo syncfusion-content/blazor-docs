@@ -12,7 +12,11 @@ domainurl: ##DomainURL##
 
 ![Alt text](../../pdfviewer/images/webservice.png)
 
+<<<<<<< HEAD
 If you are facing a **Web-service is not listening** to error in the Syncfusion&reg; PDF Viewer, there could be several reasons for this. To troubleshoot the issue, you can use the Network tab in your browser's developer tools to gather more information. Here are the steps you can follow:
+=======
+If you are facing a **Web-service is not listening** to error in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer, there could be several reasons for this. To troubleshoot the issue, you can use the Network tab in your browser's developer tools to gather more information. Here are the steps you can follow:
+>>>>>>> remotes/origin/hotfix/hotfix-v27.2.2
 
 **Step 1:** Open the browser's developer tools by right-clicking on the page and selecting `Inspect` from the dropdown menu. Then Navigate to the `Network` tab. This will show you all of the requests that are being made by the page.
 
@@ -34,7 +38,11 @@ N> Make sure you are connected to the internet and that your connection is stabl
 
 ## File not found
 
+<<<<<<< HEAD
 If you are encountering an error message stating that the web service is not listening due to a file not being found in the Syncfusion&reg; PDF viewer, you can try the following steps to resolve the issue:
+=======
+If you are encountering an error message stating that the web service is not listening due to a file not being found in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF viewer, you can try the following steps to resolve the issue:
+>>>>>>> remotes/origin/hotfix/hotfix-v27.2.2
 
 ### Check the file path
 
@@ -42,11 +50,19 @@ Ensure that the file path you use to access the PDF file is correct and that the
 
 ## Document cache not found
 
+<<<<<<< HEAD
 The `Document cache not found` exception in Syncfusion&reg; PDF Viewer typically occurs when the cache used to store the rendered pages of a PDF document is not found or has been deleted. This can happen if the cache directory is changed or deleted or if the application is running in a different environment than it was previously.
 
 ### Check for multiple instances
 
 It's possible that you have multiple instances of the Syncfusion&reg; PDF Viewer running simultaneously, which can cause issues with the document cache. To check for this, open the Task Manager on your computer and look for any instances of the Syncfusion&reg; PDF Viewer running. If you find multiple instances, try closing them all and reopening the viewer.
+=======
+The `Document cache not found` exception in Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer typically occurs when the cache used to store the rendered pages of a PDF document is not found or has been deleted. This can happen if the cache directory is changed or deleted or if the application is running in a different environment than it was previously.
+
+### Check for multiple instances
+
+It's possible that you have multiple instances of the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer running simultaneously, which can cause issues with the document cache. To check for this, open the Task Manager on your computer and look for any instances of the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer running. If you find multiple instances, try closing them all and reopening the viewer.
+>>>>>>> remotes/origin/hotfix/hotfix-v27.2.2
 
 We can use Redis cache and distributive cache for this issue.
 
@@ -56,11 +72,19 @@ Ensure that your network connection is stable and strong enough to support the w
 
 ## The document pointer does not exist in the cache.
 
+<<<<<<< HEAD
 The `Document pointer does not exist in the cache` exception in the Syncfusion&reg; PDF Viewer usually occurs when there is an issue with loading or caching the PDF document. This error can be caused by a variety of reasons, including:
 
 To clear this error in the Syncfusion&reg; PDF Viewer, you can try the following steps:
 
 **Step 1:** Clearing the cache may help resolve the issue. To clear the cache, navigate to the cache location, which can be found in the Syncfusion&reg; PDF Viewer's settings or configuration files. Once you locate the cache folder, delete its contents.
+=======
+The `Document pointer does not exist in the cache` exception in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer usually occurs when there is an issue with loading or caching the PDF document. This error can be caused by a variety of reasons, including:
+
+To clear this error in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer, you can try the following steps:
+
+**Step 1:** Clearing the cache may help resolve the issue. To clear the cache, navigate to the cache location, which can be found in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer's settings or configuration files. Once you locate the cache folder, delete its contents.
+>>>>>>> remotes/origin/hotfix/hotfix-v27.2.2
 
 **Step 2:** Try reloading the document to ensure it is loaded correctly. You can do this by calling the controller's Load() method. Ensure the document is not already loaded before attempting to load it again.
 
@@ -68,4 +92,8 @@ To clear this error in the Syncfusion&reg; PDF Viewer, you can try the following
 
 ## Internal server error
 
+<<<<<<< HEAD
 Server-side exceptions happen for various use cases. We can't just define them if they are document-specific, provide the document, or you may need to contact Syncfusion&reg; support for further assistance.
+=======
+Server-side exceptions happen for various use cases. We can't just define them if they are document-specific, provide the document, or you may need to contact Syncfusion<sup style="font-size:70%">&reg;</sup> support for further assistance.
+>>>>>>> remotes/origin/hotfix/hotfix-v27.2.2

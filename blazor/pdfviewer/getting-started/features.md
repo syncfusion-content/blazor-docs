@@ -7,7 +7,11 @@ control: PDF Viewer
 documentation: ug
 ---
 
+<<<<<<< HEAD
 N> Syncfusion&reg; recommends using [Blazor PDF Viewer](https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/server-side-application) Component which provides fast rendering of pages and improved performance. Also, there is no need of external Web service for processing the files and ease out the deployment complexity. It can be used in Blazor Server, WASM and MAUI applications without any changes.
+=======
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> recommends using [Blazor PDF Viewer (NextGen)](https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/server-side-application) Component which provides fast rendering of pages and improved performance. Also, there is no need of external Web service for processing the files and ease out the deployment complexity. It can be used in Blazor Server, WASM and MAUI applications without any changes.
+>>>>>>> remotes/origin/hotfix/hotfix-v27.2.2
 
 # Overview of Blazor PDF Viewer Component
 
@@ -33,7 +37,11 @@ The [Blazor PDF Viewer component](https://www.syncfusion.com/blazor-components/b
 * FormFilling
 * Handwritten Signature
 
+<<<<<<< HEAD
 N> Syncfusion&reg; provides separate PDF Viewer component for Blazor Server and Blazor WebAssembly applications.
+=======
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> provides separate PDF Viewer component for Blazor Server and Blazor WebAssembly applications.
+>>>>>>> remotes/origin/hotfix/hotfix-v27.2.2
 <br />For **Blazor WebAssembly App**, use [SfPdfViewer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PdfViewer.SfPdfViewer.html) component in Syncfusion.Blazor.PdfViewer NuGet package. This component requires server-side processing to render the PDF files through web service.
 <br />For **Blazor Server App**, use the [SfPdfViewerServer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PdfViewerServer.SfPdfViewerServer.html) component in corresponding NuGet based on the operating system of the server you intend to host, as shown below.,
 <br/>* For Windows, use [Syncfusion.Blazor.PdfViewerServer.Windows](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.Windows)

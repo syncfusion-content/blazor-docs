@@ -11,7 +11,11 @@ documentation: ug
 
 ## Localization
 
+<<<<<<< HEAD
 [Blazor SfPdfViewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion&reg; Blazor components.
+=======
+[Blazor SfPdfViewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
+>>>>>>> remotes/origin/hotfix/hotfix-v27.2.2
 
 ## Right to Left
 
