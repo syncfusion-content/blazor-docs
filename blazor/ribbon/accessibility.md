@@ -114,8 +114,6 @@ The Ribbon component followed the [keyboard interaction](https://www.w3.org/WAI/
 
 The Ribbon component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the Ribbon component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/ribbon) in a new window to evaluate the accessibility of the Ribbon component with accessibility tools.
-
 ## See also
 
 * [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
