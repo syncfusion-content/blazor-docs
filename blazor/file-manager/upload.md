@@ -217,8 +217,8 @@ namespace Blazor
 
             var response = await httpClient.PostAsJsonAsync(uri, new TokenRequestModel()
             {
-                Email = "SAMPLE.COM",
-                Password = "Sample123!",
+                Email = string.Empty,
+                Password = string.Empty,
                 TwoFactorCode = string.Empty,
                 TwoFactorRecoveryCode = string.Empty
             });
