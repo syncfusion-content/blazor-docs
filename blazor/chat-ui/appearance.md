@@ -57,7 +57,7 @@ You can use the `Height` property to set the height of the Chat UI. The default 
 
 ![Blazor Chat UI Height](./images/width.png)
 
-## Setting cssClass
+## Setting CSS class
 
 You can customize the appearance of the Chat UI component by using the `CssClass` property.
 

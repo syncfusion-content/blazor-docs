@@ -264,6 +264,8 @@ If you set the `TabIndex` value to 0 for all Toolbar items, tab key navigation w
 
 ```
 
+In this case, the user can switch between the two Toolbar items using the Tab and Shift+Tab keys, and the items will be navigated in the order in which they appear in the DOM.
+
 #### Setting template
 
 You can use the `Template` tag directive to add custom header toolbar item in the Chat UI component. Template property can be given as the `HTML element` or `RenderFragment`.
