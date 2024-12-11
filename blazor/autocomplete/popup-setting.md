@@ -15,7 +15,7 @@ You can dynamically adjust the size of the popup in the `Autocomplete` component
 
 {% highlight Razor %}
 
-{% include_relative code-snippet/allow-resize/allowresize.razor %}
+{% include_relative code-snippet/allow-resize/resize.razor %}
 
 {% endhighlight %} 
 
