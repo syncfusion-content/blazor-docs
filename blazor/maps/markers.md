@@ -182,7 +182,7 @@ To render a marker as an image in Maps, set the [Shape](https://help.syncfusion.
         <MapsLayer ShapeData='new { dataOptions = "https://cdn.syncfusion.com/maps/map-data/world-map.json" }' TValue="string">
             <MapsMarkerSettings>
                 <MapsMarker Visible="true" DataSource="MarkerData" Height="25" Width="15" TValue="City"
-                            Shape="Syncfusion.Blazor.Maps.MarkerType.Image" ImageUrl="src/maps/images/ballon.png">
+                            Shape="Syncfusion.Blazor.Maps.MarkerType.Image" ImageUrl="https://blazor.syncfusion.com/demos/_content/blazor_server_common_net8/images/maps/ballon.png">
                 </MapsMarker>
             </MapsMarkerSettings>
             <MapsShapeSettings Fill="lightgray"></MapsShapeSettings>
