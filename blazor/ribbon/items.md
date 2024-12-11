@@ -23,9 +23,9 @@ You can render the built-in Ribbon button item by setting the `Type` property as
 {% endhighlight %}
 {% endtabs %}
 
-### Supported events
+### Events
 
-Below are the events that are currently supported in Button item
+The following events are available in the Button item.
 
 * `Created` - EventCallback
 * `OnClick` - MouseEventArgs
@@ -44,9 +44,9 @@ You can render the built-in Ribbon checkbox item by setting the `Type` property 
 {% endhighlight %}
 {% endtabs %}
 
-### Supported events
+### Events
 
-Below are the events that are currently supported in Checkbox item
+The following events are available in the Checkbox item.
 
 * `Created` - EventCallback
 * `ValueChange` - ChangeEventArgs
@@ -65,9 +65,9 @@ You can render the built-in Ribbon dropdown button item by setting the `Type` pr
 {% endhighlight %}
 {% endtabs %}
 
-### Supported events
+### Events
 
-Below are the events that are currently supported in DropDownButton item
+The following events are available in the DropDownButton item.
 
 * `Created` - EventCallback
 * `PopupOpening` - DropDownPopupOpenEventArgs
@@ -91,9 +91,9 @@ You can render the built-in Ribbon split button item by setting the `Type` prope
 {% endhighlight %}
 {% endtabs %}
 
-### Supported events
+### Events
 
-Below are the events that are currently supported in SplitButton item
+The following events are available in the SplitButton item.
 
 * `Created` - EventCallback
 * `Clicked` - SplitButtonClickedEventArgs
@@ -118,9 +118,9 @@ You can render the built-in Ribbon color picker item by setting the `Type` prope
 {% endhighlight %}
 {% endtabs %}
 
-### Supported events
+### Events
 
-Below are the events that are currently supported in Colorpicker item
+The following events are available in the Colorpicker item.
 
 * `Created` - EventCallback
 * `Opening` - ColorPickerOpenEventArgs
@@ -144,9 +144,9 @@ You can render the built-in Ribbon group button item by setting the `Type` prope
 {% endhighlight %}
 {% endtabs %}
 
-### Supported events
+### Events
 
-The Groupbutton item currently support following event:
+The following event is available in the Groupbutton item.
 
 * `ItemClick` - GroupButtonClickEventArgs
 
@@ -166,7 +166,7 @@ You can render the built-in Ribbon combobox item by setting the `Type` property 
 
 ### Supported events
 
-Below are the events that are currently supported in Combobox item
+The following events are available in the Combobox item.
 
 * `Created` - EventCallback
 * `PopupOpening` - ComboBoxPopupOpenEventArgs

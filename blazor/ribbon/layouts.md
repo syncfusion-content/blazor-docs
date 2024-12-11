@@ -9,7 +9,7 @@ documentation: ug
 
 # Layouts in Blazor Ribbon Component
 
-The Ribbon component allows customization of its layout through the `ActiveLayout` property. It supports two primary layouts: Classic and Simplified.
+The Ribbon component allows customization of its layout through the `ActiveLayout` property. It supports two primary layouts: `Classic` and `Simplified`.
 
 ## Classic layout
 
