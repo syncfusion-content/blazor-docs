@@ -160,7 +160,7 @@ In this layout, all chart elements such as the legend, chart title, subtitle, ax
 
 ![ Large Adaptive Layout in Blazor Chart](images/adaptive-layout/blazor-chart-adaptive-layout-large.png)
 
-The table below shows the different chart elements and their behaviour based on specific conditions related to chart's height and width:
+The table below shows the different chart elements and their behavior based on specific conditions related to chart's height and width:
 
 
 | Element      | Rules              | Description         |
