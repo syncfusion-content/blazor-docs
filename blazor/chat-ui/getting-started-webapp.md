@@ -131,7 +131,6 @@ You can use the `messages` property to add messages and the `user` property to c
 </div>
 
 @code {
-    private SfChatUI ChatUser1 = new SfChatUI();
     private static UserModel CurrentUserModel = new UserModel() { ID = "User1", User = "Albert" };
     private static UserModel MichaleUserModel = new UserModel() { ID = "User2", User = "Michale Suyama" };
     
