@@ -7,7 +7,7 @@ control: Ribbon
 documentation: ug
 ---
 
-# File Menu
+# File Menu in Blazor Ribbon Component
 
 The Ribbon component provides a built-in file menu to include menu items for performing specific actions. The file menu can be configured using the `<RibbonFileMenuSettings>` tag directive directly inside `<SfRibbon>`.
 

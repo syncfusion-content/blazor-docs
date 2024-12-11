@@ -7,11 +7,9 @@ control: Ribbon
 documentation: ug
 ---
 
-# Ribbon Items
+# Items in Blazor Ribbon Component
 
-## Built-in items
-
-### Button item
+## Button item
 
 You can render the built-in Ribbon button item by setting the `Type` property as `RibbonItemType.Button`. You can customize the button item using the `RibbonButtonSettings` tag directive, which provides options such as `IconCss`, `Content`, `IsToggle`, and more.
 
@@ -25,7 +23,14 @@ You can render the built-in Ribbon button item by setting the `Type` property as
 {% endhighlight %}
 {% endtabs %}
 
-### Checkbox item
+### Supported events
+
+Below are the events that are currently supported in Button item
+
+* `Created` - EventCallback
+* `OnClick` - MouseEventArgs
+
+## Checkbox item
 
 You can render the built-in Ribbon checkbox item by setting the `Type` property as `RibbonItemType.Checkbox`. This item is used to toggle between selected and unselected states. You can customize the checkbox using the `RibbonCheckboxSettings` tag directive with options such as `Label` and `Checked`.
 
@@ -39,7 +44,14 @@ You can render the built-in Ribbon checkbox item by setting the `Type` property 
 {% endhighlight %}
 {% endtabs %}
 
-### DropdownButton item
+### Supported events
+
+Below are the events that are currently supported in Checkbox item
+
+* `Created` - EventCallback
+* `ValueChange` - ChangeEventArgs
+
+## DropDownButton item
 
 You can render the built-in Ribbon dropdown button item by setting the `Type` property as `RibbonItemType.DropDown`. This item displays a button with a dropdown menu for additional options. The `RibbonDropDownSettings` tag directive allows you to configure properties such as `Content`, `Items` and more.
 
@@ -53,7 +65,19 @@ You can render the built-in Ribbon dropdown button item by setting the `Type` pr
 {% endhighlight %}
 {% endtabs %}
 
-### Split button item
+### Supported events
+
+Below are the events that are currently supported in DropDownButton item
+
+* `Created` - EventCallback
+* `PopupOpening` - DropDownPopupOpenEventArgs
+* `PopupClosing` - DropDownPopupCloseEventArgs
+* `PopupOpened` - DropDownPopupOpenedEventArgs
+* `PopupClosed` - DropDownPopupClosedEventArgs
+* `ItemRendering` - DropDownItemRenderEventArgs
+* `ItemSelecting` - DropDownItemSelectEventArgs
+
+## SplitButton item
 
 You can render the built-in Ribbon split button item by setting the `Type` property as `RibbonItemType.SplitButton`. This item combines a primary button with a dropdown for secondary actions. The `RibbonSplitButtonSettings` tag directive lets you configure options like `Content`, `Items` and more.
 
@@ -67,7 +91,20 @@ You can render the built-in Ribbon split button item by setting the `Type` prope
 {% endhighlight %}
 {% endtabs %}
 
-### Colorpicker item
+### Supported events
+
+Below are the events that are currently supported in SplitButton item
+
+* `Created` - EventCallback
+* `Clicked` - SplitButtonClickedEventArgs
+* `PopupOpening` - SplitButtonPopupOpenEventArgs
+* `PopupClosing` - SplitButtonPopupCloseEventArgs
+* `PopupOpened` - SplitButtonPopupOpenedEventArgs
+* `PopupClosed` - SplitButtonPopupClosedEventArgs
+* `ItemRendering` - SplitButtonItemRenderEventArgs
+* `ItemSelected` - SplitButtonItemSelectedEventArgs
+
+## Colorpicker item
 
 You can render the built-in Ribbon color picker item by setting the `Type` property as `RibbonItemType.ColorPicker`. This item provides a color selection interface, which can be customized using the `RibbonColorPickerSettings` tag directive with properties like `Value`, `Mode` and more.
 
@@ -81,7 +118,19 @@ You can render the built-in Ribbon color picker item by setting the `Type` prope
 {% endhighlight %}
 {% endtabs %}
 
-### Groupbutton item
+### Supported events
+
+Below are the events that are currently supported in Colorpicker item
+
+* `Created` - EventCallback
+* `Opening` - ColorPickerOpenEventArgs
+* `Closing` - ColorPickerCloseEventArgs
+* `Opened` - ColorPickerOpenedEventArgs
+* `TileRendering` - TileRenderEventArgs
+* `ValueChange` - ColorPickerEventArgs
+* `Selected` - ColorPickerSelectedEventArgs
+
+## Groupbutton item
 
 You can render the built-in Ribbon group button item by setting the `Type` property as `RibbonItemType.GroupButton`. This item groups multiple buttons for single or multiple selection. Use the `RibbonGroupButtonSettings` tag directive to configure options like `Items`, `Selection`, and more. `Items` accepts a collection of `GroupButtonItem`. Hence, you can use the `GroupButtonItem` tag directive to customize the groupbutton items which provides options such as Content, IconCss, Selected and more.
 
@@ -95,7 +144,13 @@ You can render the built-in Ribbon group button item by setting the `Type` prope
 {% endhighlight %}
 {% endtabs %}
 
-### Combobox item
+### Supported events
+
+The Groupbutton item currently support following event:
+
+* `ItemClick` - GroupButtonClickEventArgs
+
+## Combobox item
 
 You can render the built-in Ribbon combobox item by setting the `Type` property as `RibbonItemType.Combobox`. This item provides a dropdown with optional search and filtering capabilities. The `RibbonComboboxSettings` tag directive allows you to configure properties like `DataSource`, `AllowFiltering`, `Placeholder` and lot more.
 
@@ -108,6 +163,19 @@ You can render the built-in Ribbon combobox item by setting the `Type` property 
 
 {% endhighlight %}
 {% endtabs %}
+
+### Supported events
+
+Below are the events that are currently supported in Combobox item
+
+* `Created` - EventCallback
+* `PopupOpening` - ComboBoxPopupOpenEventArgs
+* `PopupClosing` - ComboBoxPopupCloseEventArgs
+* `PopupOpened` - ComboBoxPopupOpenedEventArgs
+* `PopupClosed` - ComboBoxPopupClosedEventArgs
+* `Filtering` - ComboBoxFilterEventArgs
+* `Selecting` - ComboBoxSelectEventArgs
+* `ValueChange` - ComboBoxChangeEventArgs
 
 ## Custom item
 

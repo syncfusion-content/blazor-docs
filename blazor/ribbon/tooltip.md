@@ -7,7 +7,7 @@ control: Ribbon
 documentation: ug
 ---
 
-# Tooltip
+# Tooltip in Blazor Ribbon Component
 
 The Ribbon component supports tooltip to show additional information in the Ribbon items. The tooltip appears when the user hovers over a Ribbon item. The tooltip can be configured using the `TooltipSettings` property within the `<RibbonItem>` directive.
 

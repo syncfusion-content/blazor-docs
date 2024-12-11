@@ -7,7 +7,7 @@ control: Ribbon
 documentation: ug
 ---
 
-# Ribbon Backstage
+# Backstage in Blazor Ribbon Component
 
 The Ribbon component supports a backstage view as an enhancement to the traditional file menu. Backstage view can be used to display options like application settings, user details, and more. It can be configured using the `<RibbonBackstageMenuSettings>` directive.
 

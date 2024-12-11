@@ -7,7 +7,7 @@ control: Ribbon
 documentation: ug
 ---
 
-# Gallery Items in Javascript Ribbon Control
+# Gallery Items in Blazor Ribbon Component
 
 The Ribbon supports a gallery view, allowing users to interact with a collection of related items such as icons, text, or images. You can render gallery items by setting the `Type` property of a Ribbon item to `RibbonItemType.Gallery` and customize it using the `<RibbonGallerySettings>` directive. The settings provide options like `Groups`, `ItemCount`, `PopupHeight`, `PopupWidth`, and more.
 

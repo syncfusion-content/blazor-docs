@@ -7,6 +7,6 @@ control: Ribbon
 documentation: ug
 ---
 
-# Help Pane
+# Help Pane in Blazor Ribbon Component
 
 The help pane is dedicated area where the users can define help contents like controlling document permissions, sharing features, and more which appears on the right side of the Ribbon. You can use the `<HelpPaneTemplate>` tag directive within the `<SfRibbon>` to set the help pane contents.
