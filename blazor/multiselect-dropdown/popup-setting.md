@@ -15,7 +15,7 @@ You can dynamically adjust the size of the popup in the `MultiSelect` component 
 
 {% highlight Razor %}
 
-{% include_relative code-snippet/allow-resize/allowresize.razor %}
+{% include_relative code-snippet/popup-setting/resize.razor %}
 
 {% endhighlight %} 
 
