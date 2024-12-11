@@ -57,7 +57,7 @@ The following keyboard shortcuts are supported by the Chat UI control.
 | **Press** | **To do this** |
 | --- | --- |
 | <kbd>Enter</kbd> | Select the focused item or send a message when the input is focused. |
-| <kbd>Tab</kbd> | Select the focused item or send a message when the input is focused. |
+| <kbd>Tab</kbd> | Moves focus forward through the interactive elements. |
 | <kbd>Shift + Tab</kbd> | Moves focus backward through the interactive elements. |
 | <kbd>Page Up</kbd> | Scroll up through chat history. |
 | <kbd>Page Down</kbd> | Scroll down through chat history. |
