@@ -197,6 +197,8 @@ You can use the `<RibbonCollection>` directive to define each ribbon collection 
 {% endhighlight %}
 {% endtabs %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVfWrMsBJMOvAYB?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Ribbon component in your default web browser.
 
 ![Blazor Ribbon Component](./images/getting-started1.png)
