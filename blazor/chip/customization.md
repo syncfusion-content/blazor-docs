@@ -185,7 +185,7 @@ Outline chip has the border with the background transparent. It can be set using
 
 ![Blazor Outline Chip with Transparent Background](./images/blazor-outline-chip-transparent-background.gif)
 
-# Template
+## Template
 
 The Chips Template property allows users to customize the layout and design of each chip. Users can include any custom HTML elements, icons, links, or additional content by specifying them in the `<Template>` tag or as direct child content inside the `<ChipItem>` tag of the SfChip component.
 
