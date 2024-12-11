@@ -11,7 +11,7 @@ documentation: ug
 
 ## Localization
 
-The [Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) component can be localized. Refer to the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion Blazor components.
+The [Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) component can be localized. Refer to the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
 
 ## Globalization
 
