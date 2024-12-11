@@ -7,17 +7,17 @@ control: Ribbon
 documentation: ug
 ---
 
-# Gallery Items in Blazor Ribbon Component
+# Gallery Items in Blazor Ribbon component
 
-The Ribbon supports a gallery view, allowing users to interact with a collection of related items such as icons, text, or images. You can render gallery items by setting the `Type` property of a Ribbon item to `RibbonItemType.Gallery` and customize it using the `<RibbonGallerySettings>` directive. The settings provide options like `Groups`, `ItemCount`, `PopupHeight`, `PopupWidth`, and more.
+The Ribbon supports a gallery view, allowing users to interact with a collection of related items such as icons, text, or images. You can render gallery items by setting the `Type` property of a Ribbon item to `RibbonItemType.Gallery` and customize it using the `<RibbonGallerySettings>` tag directive. The settings provide options like `Groups`, `ItemCount`, `PopupHeight`, `PopupWidth`, and more.
 
 ## Groups
 
-You can render groups inside the gallery using the `Groups` property of the `<RibbonGallerySettings>` directive. Groups can be customized using `<GalleryGroup>` directive with properties like `Items`, `CssClass`, `Header`, etc.
+You can render groups inside the gallery using the `Groups` property of the `<RibbonGallerySettings>` tag directive. Groups can be customized using `<GalleryGroup>` tag directive with properties like `Items`, `CssClass`, `Header`, etc.
 
 ### Adding items
 
-Gallery items can be added using `<GalleryItem>` directive within the `Items` property of a group. Items are customizable with properties such as `Content`, `IconCss`, `Disabled`, and more.
+Gallery items can be added using `<GalleryItem>` tag directive within the `Items` property of a group. Items are customizable with properties such as `Content`, `IconCss`, `Disabled`, and more.
 
 #### Adding content
 
@@ -73,7 +73,7 @@ You can customize the appearance of Ribbon gallery popup by using the `PopupTemp
 
 ## Events
 
-Below are the events that are currently supported in Ribbon Gallery
+The following events are available in the Ribbon Gallery.
 
 * `PopupOpening` - GalleryPopupOpenEventArgs
 * `PopupClosing` - GalleryPopupCloseEventArgs

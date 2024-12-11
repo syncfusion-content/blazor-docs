@@ -7,40 +7,71 @@ control: Ribbon
 documentation: ug
 ---
 
-# Events in Blazor Ribbon Component
+# Events in Blazor Ribbon component
 
-The `<SfRibbon>` component provides several events to handle and customize its behavior at different stages. These events allow developers to interact with the component's lifecycle and user interactions effectively.
+This section describes the Ribbon events that will be triggered when appropriate actions are performed. The following events are available in the Ribbon component.
 
-## Created
+|Name|Args|Description|
+|---|---|---|
+|Created|EventCallback|Triggers when the Ribbon component's rendering is fully completed
+|TabSelecting|TabSelectingEventArgs|Triggers before a tab is selected in the Ribbon component
+|TabSelected|TabSelectedEventArgs|Triggers after a tab is successfully selected in the Ribbon component
+|RibbonExpanding|ExpandEventArgs|Triggers before the Ribbon component is expanded
+|RibbonCollapsing|CollapseEventArgs|Triggers before the Ribbon component is collapsed
+|LauncherIconClick|LauncherClickEventArgs|Triggers when the launcher icon in a Ribbon group is clicked
+|OverflowPopupOpening|OverflowPopupEventArgs|before the overflow popup in the Ribbon component opens
+|OverflowPopupClosing|OverflowPopupEventArgs|before the overflow popup in the Ribbon component closes
 
-The `Created` event is triggered when the `<SfRibbon>` component's rendering is fully completed. This event can be used to perform any additional setup or initialization required after the component is rendered.
+## How to configure Ribbon events
 
-## TabSelecting
+Above defined events are available on the `<SfRibbon>` tag directive. Here, we have explained about the sample code snippets of Ribbon events.
 
-The `TabSelecting` event is triggered before a tab is selected in the `<SfRibbon>` component. This event can be used to validate or cancel the tab selection before it occurs.
+{% tabs %}
+{% highlight razor %}
 
-## TabSelected
+@using Syncfusion.Blazor.Ribbon
 
-The `TabSelected` event is triggered after a tab is successfully selected in the `<SfRibbon>` component. It is useful for executing logic based on the selected tab.
+<div style="width:25%">
+    <SfRibbon Created="Created" TabSelecting="TabSelecting" TabSelected="TabSelected" RibbonExpanding="RibbonExpanding" RibbonCollapsing="RibbonCollapsing" LauncherIconClick="LauncherIconClick" OverflowPopupOpening="OverflowPopupOpening" OverflowPopupClosing="OverflowPopupClosing">
+        <RibbonTabs>
+            <RibbonTab HeaderText="Home">
+                <RibbonGroups>
+                    <RibbonGroup HeaderText="Clipboard">
+                        <RibbonCollections>
+                            <RibbonCollection>
+                                <RibbonItems>
+                                    <RibbonItem Type=RibbonItemType.Button AllowedSizes="RibbonItemSize.Large">
+                                        <RibbonButtonSettings Content="Cut" IconCss="e-icons e-cut"></RibbonButtonSettings>
+                                    </RibbonItem>
+                                </RibbonItems>
+                            </RibbonCollection>
+                        </RibbonCollections>
+                    </RibbonGroup>
+                </RibbonGroups>
+            </RibbonTab>
+        </RibbonTabs>
+    </SfRibbon>
+</div>
 
-## RibbonExpanding
+@code {
+    private void Created() { /* your actions here */ }
 
-The `RibbonExpanding` event is triggered before the `<SfRibbon>` component is expanded. This event allows customization or validation before the expansion process starts.
+    private void TabSelecting(TabSelectingEventArgs args) { /* your actions here */ }
 
-## RibbonCollapsing
+    private void TabSelected(TabSelectedEventArgs args) { /* your actions here */ }
 
-The `RibbonCollapsing` event is triggered before the `<SfRibbon>` component is collapsed. It is useful for handling logic or validation during the collapsing phase.
+    private void RibbonExpanding(ExpandEventArgs args) { /* your actions here */ }
 
-## LauncherIconClick
+    private void RibbonCollapsing(CollapseEventArgs args) { /* your actions here */ }
 
-The `LauncherIconClick` event is triggered when the launcher icon in a `<SfRibbon>` group is clicked. This event can be used to handle specific actions or display additional information based on the clicked group.
+    private void LauncherIconClick(LauncherClickEventArgs args) { /* your actions here */ }
 
-## OverflowPopupOpening
+    private void OverflowPopupOpening(OverflowPopupEventArgs args) { /* your actions here */ }
 
-The `OverflowPopupOpening` event is triggered before the overflow popup in the `<SfRibbon>` component opens. It provides an opportunity to customize the popup content or prevent the opening process.
+    private void OverflowPopupClosing(OverflowPopupEventArgs args) { /* your actions here */ }
+}
 
-## OverflowPopupClosing
-
-The `OverflowPopupClosing` event is triggered before the overflow popup in the `<SfRibbon>` component closes. It allows for cleanup or validation before the popup is closed.
+{% endhighlight %}
+{% endtabs %}
 
 > To know about the built-in Ribbon items supported events, please refer to the corresponding item section in [Ribbon Items](./items).
