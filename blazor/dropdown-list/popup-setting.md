@@ -19,7 +19,7 @@ You can dynamically adjust the size of the popup in the `Dropdown List` componen
 
 {% endhighlight %} 
 
-![Blazor Dropdown List with AllowResize property](./images/popup-setting\blazor_dropdownlist_resize.gif)
+![Blazor Dropdown List with AllowResize property](./images/popup-setting/blazor_dropdownlist_resize.gif)
 
 ## Change the popup width
 
