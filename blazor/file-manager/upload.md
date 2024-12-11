@@ -33,7 +33,7 @@ When set to `true`, this property enables directory upload in the FileManager, a
 </SfFileManager>
 
 ```
-N> When `DirectoryUpload` is `true`, you can upload only folders and their files. When it is `false`, you can upload only individual files. You cannot upload files and folders at the same time.
+N> When `DirectoryUpload` is set to `true`, only folders can be uploaded. When it is set to `false`, only individual files can be uploaded. Simultaneous uploading of files and folders is not supported.
 
 The screenshot below shows after successfully selecting a directory it uploads all the file inside it automatically. This demonstrates how the `DirectoryUpload` property works in the Blazor FileManager component.
 
@@ -63,7 +63,7 @@ By specifying a `ChunkSize`, the large file is divided into smaller parts, reduc
 ```
 In the following example, the ChunkSize is set to 5 MB (5,242,880 bytes), and the MaxFileSize is set to 70 MB (73,728,000 bytes). This means files that are up to 70 MB will be uploaded in 5 MB chunks.
 
-While using chunk upload, the Pause and Cancel features allow users to stop the upload completely, removing the file from the queue. Both actions provide greater control over the file upload process.
+With chunk upload, the pause and resume options gives users enhanced control over the file upload process.
 
 ![Blazor FileManager with DirectoryUpload](images/blazor-filemanager-chunkupload.png)
 
@@ -144,7 +144,7 @@ If you want to allow only image files like .jpg and .png, you would set the prop
 The [UploadMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html#Syncfusion_Blazor_FileManager_FileManagerUploadSettings_UploadMode) property defines the method used to perform the upload operation in the FileManager component.
 
 This property lets you choose between two upload modes. `FormSubmit` Uses the traditional form submission method for file uploads.
-`HttpClient` Uses the HttpClient instance for the upload, providing more control over the request.
+`HttpClient` uses the HttpClient instance for the upload, providing more control over the request.
 
 By default, the `UploadMode` is set to `FormSubmit`, but you can switch to HttpClient for more control, such as managing headers or authorizing the upload response.
 
