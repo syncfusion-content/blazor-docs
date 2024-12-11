@@ -40,3 +40,9 @@ You can customize the backstage menu items and their content using the `Template
 ## Setting width and height
 
 The height and width of the backstage view can be customized using the `Height` and `Width` properties. By default, the dimensions are adjusted to fit the content.
+
+## Events
+
+Ribbon Backstage currently has support for following event:
+
+* `BackstageItemClick` - BackstageItemClickEventArgs

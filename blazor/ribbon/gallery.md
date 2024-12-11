@@ -71,4 +71,13 @@ You can customize the default appearance and content of Ribbon gallery items by 
 
 You can customize the appearance of Ribbon gallery popup by using the `PopupTemplate` property.
 
-> To know more about the built-in Ribbon items, please refer to the [Ribbon Items](./items) section.
+## Events
+
+Below are the events that are currently supported in Ribbon Gallery
+
+* `PopupOpening` - GalleryPopupOpenEventArgs
+* `PopupClosing` - GalleryPopupCloseEventArgs
+* `ItemHover` - GalleryItemHoverEventArgs
+* `ItemRendering` - GalleryItemRenderEventArgs
+* `Selecting` - GallerySelectEventArgs
+* `Selected` - GallerySelectedEventArgs

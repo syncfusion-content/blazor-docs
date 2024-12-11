@@ -26,3 +26,14 @@ By default, submenus open on mouse hover. To change this behavior and open subme
 ## Custom header text
 
 You can define custom header text for the file menu by using the `Text` property of the `<RibbonFileMenuSettings>` directive. By default, the header text is set to `File`.
+
+## Events
+
+Below are the events that are currently supported in Ribbon Filemenu
+
+* `FileMenuOpening` - FileMenuOpenEventArgs
+* `FileMenuClosing` - FileMenuCloseEventArgs
+* `FileMenuOpened` - FileMenuOpenedEventArgs
+* `FileMenuClosed` - FileMenuClosedEventArgs
+* `FileMenuItemRendering` - FileMenuItemRenderEventArgs
+* `ItemSelecting` - FileMenuItemSelectEventArgs
