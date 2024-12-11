@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Tooltip in Blazor Ribbon Component | Syncfusion
-description: Checkout and learn about Tooltip in Blazor Ribbon component in Blazor Server App and Blazor WebAssembly App.
+title: Events in Blazor Ribbon Component | Syncfusion
+description: Checkout and learn about Events in Blazor Ribbon component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Ribbon
 documentation: ug
