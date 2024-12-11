@@ -184,157 +184,147 @@ You can disable resizing for a particular column by setting the [AllowResizing](
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" AllowResizing="true">
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" MinWidth="100" MaxWidth="250" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" AllowResizing="false" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer ID" AllowResizing="false" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipCity) HeaderText="Ship City" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="100"></GridColumn>
     </GridColumns>
 </SfGrid>
 @code {
-    private SfGrid<OrderData> Grid;
-    public List<OrderData> Orders { get; set; }
-   
+    public List<OrderDetails> Orders { get; set; }   
     protected override void OnInitialized()
     {
-        Orders = OrderData.GetAllRecords();       
+        Orders = OrderDetails.GetAllRecords();       
     }  
 }
 {% endhighlight %}
-{% highlight c# tabtitle="OrderData.cs" %}
-   public class OrderData
+{% highlight c# tabtitle="OrderDetails.cs" %}
+public class OrderDetails
+{
+    public static List<OrderDetails> order = new List<OrderDetails>();
+    public OrderDetails(int OrderID, string CustomerId, double Freight, string ShipCity)
     {
-        public static List<OrderData> Orders = new List<OrderData>();      
-        public OrderData()
-        {
-
-        }
-        public OrderData(int? OrderID,string CustomerID, string ShipCity,double Freight)
-        {
-           this.OrderID = OrderID;
-           this.CustomerID = CustomerID;
-           this.ShipCity = ShipCity;   
-           this.Freight = Freight;            
-        }
-        public static List<OrderData> GetAllRecords()
-        {
-            if (Orders.Count() == 0)
-            {
-                int code = 10;
-                for (int i = 1; i < 2; i++)
-                {
-                    Orders.Add(new OrderData(10248, "VINET", "Reims",33.33));
-                    Orders.Add(new OrderData(10249, "TOMSP", "Münster",89.76));
-                    Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro",78.67));
-                    Orders.Add(new OrderData(10251, "VICTE", "Lyon",55.65));
-                    Orders.Add(new OrderData(10252, "SUPRD", "Charleroi",11.09));
-                    Orders.Add(new OrderData(10253, "HANAR", "Rio de Janeiro",98.98));
-                    Orders.Add(new OrderData(10254, "VINET", "Reims",78.75));
-                    Orders.Add(new OrderData(10255,"TOMSP", "Münster",44.07));
-                    Orders.Add(new OrderData(10256, "TOMSP", "Münster",67.74));
-                    code += 5;
-                }
-            }
-            return Orders;
-        }
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public string ShipCity { get; set; }
-        public double Freight { get; set; }
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerId;
+        this.Freight = Freight;
+        this.ShipCity = ShipCity;      
     }
+    public static List<OrderDetails> GetAllRecords()
+    {
+        if (order.Count == 0)
+        {
+            order.Add(new OrderDetails(10248, "VINET", 32.38, "Reims"));
+            order.Add(new OrderDetails(10249, "TOMSP", 11.61, "Münster"));
+            order.Add(new OrderDetails(10250, "HANAR", 65.83, "Rio de Janeiro"));
+            order.Add(new OrderDetails(10251, "VICTE", 41.34, "Lyon"));
+            order.Add(new OrderDetails(10252, "SUPRD", 51.3, "Charleroi"));
+            order.Add(new OrderDetails(10253, "HANAR", 58.17, "Rio de Janeiro"));
+            order.Add(new OrderDetails(10254, "CHOPS", 22.98, "Bern"));
+            order.Add(new OrderDetails(10255, "RICSU", 148.33, "Genève"));
+            order.Add(new OrderDetails(10256, "WELLI", 13.97, "Resende"));
+            order.Add(new OrderDetails(10257, "HILAA", 81.91, "San Cristóbal"));
+            order.Add(new OrderDetails(10258, "ERNSH", 140.51, "Graz"));
+            order.Add(new OrderDetails(10259, "CENTC", 3.25, "México D.F."));
+            order.Add(new OrderDetails(10260, "OTTIK", 55.09, "Köln"));
+            order.Add(new OrderDetails(10261, "QUEDE", 3.05, "Rio de Janeiro"));
+            order.Add(new OrderDetails(10262, "RATTC", 48.29, "Albuquerque"));
+        }
+        return order;
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCity { get; set; }
+}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjhqsiDQVjBIavlN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZhJsBsWiczvQVGx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+> You can also prevent resizing by setting `args.Cancel` to **true** in the [OnResizeStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnResizeStart) event.
 
 ## Resize stacked header column
 
-Grid component allows to resize stacked columns by clicking and dragging the right edge of the stacked column header. During the resizing action, the width of the child columns is resized at the same time. You can disable resize for any particular stacked column by setting [AllowResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowResizing) as false to its columns.
+Grid component allows to resize stacked columns by clicking and dragging the right edge of the stacked column header. During the resizing action, the width of the child columns is resized at the same time. You can disable resize for any particular stacked column by setting [AllowResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowResizing) as **false** to its columns.
 
-In this below code, we have disabled resize for ShipCountry column.
+In this below code, we have disabled resize for **Ship City** column.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" AllowResizing="true"  Height="315">
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn HeaderText=" Order Details">
             <GridColumns>
-                <GridColumn Field=@nameof(OrderData.OrderDate) Width="130" HeaderText="Order Date" Format="d" TextAlign="TextAlign.Right" AllowResizing="false" MinWidth="10"></GridColumn>
-                <GridColumn Field=@nameof(OrderData.Freight) Width="135" HeaderText="Freight($)" Format="C2" TextAlign="TextAlign.Right" MinWidth="10" AllowResizing=false></GridColumn>
+                <GridColumn Field=@nameof(OrderDetails.OrderDate) Width="130" HeaderText="Order Date" Format="d" TextAlign="TextAlign.Right" MinWidth="10"></GridColumn>
+                <GridColumn Field=@nameof(OrderDetails.Freight) Width="135" HeaderText="Freight($)" Format="C2" TextAlign="TextAlign.Right" MinWidth="10"></GridColumn>
             </GridColumns>
         </GridColumn>
         <GridColumn HeaderText=" Ship Details">
             <GridColumns>
-                <GridColumn Field=@nameof(OrderData.ShipCity) Width="130" HeaderText="Ship City" TextAlign="TextAlign.Right" AllowResizing="false" MinWidth="10"></GridColumn>
-                <GridColumn Field=@nameof(OrderData.ShipCountry) Width="135" HeaderText="Ship Country" TextAlign="TextAlign.Right" MinWidth="10" AllowResizing=false></GridColumn>
+                <GridColumn Field=@nameof(OrderDetails.ShipCity) Width="130" HeaderText="Ship City" AllowResizing="false" MinWidth="10"></GridColumn>
+                <GridColumn Field=@nameof(OrderDetails.ShipCountry) Width="135" HeaderText="Ship Country" MinWidth="10"></GridColumn>
             </GridColumns>
         </GridColumn>
     </GridColumns>
 </SfGrid>
 @code {
-    public List<OrderData> Orders { get; set; }   
+    public List<OrderDetails> Orders { get; set; }   
     protected override void OnInitialized()
     {
-        Orders = OrderData.GetAllRecords();       
+        Orders = OrderDetails.GetAllRecords();       
     }  
 }
 {% endhighlight %}
-{% highlight c# tabtitle="OrderData.cs" %}
-public class OrderData
+{% highlight c# tabtitle="OrderDetails.cs" %}
+public class OrderDetails
+{
+    public static List<OrderDetails> order = new List<OrderDetails>();
+    public OrderDetails(int OrderID, double Freight, DateTime OrderDate, string ShipCity, string ShipCountry)
     {
-        public static List<OrderData> Orders = new List<OrderData>();      
-        public OrderData()
-        {
-
-        }
-        public OrderData(int? OrderID, string ShipCity, string ShipCountry,double Freight,DateTime OrderDate)
-        {
-           this.OrderID = OrderID;
-           this.ShipCity = ShipCity;   
-           this.ShipCountry = ShipCountry;
-           this.Freight = Freight;
-           this.OrderDate = OrderDate;            
-        }
-        public static List<OrderData> GetAllRecords()
-        {
-            if (Orders.Count() == 0)
-            {
-                int code = 10;
-                for (int i = 1; i < 2; i++)
-                {
-                    Orders.Add(new OrderData(10248, "Reims", "France", 33.33,new DateTime(1996,07,07)));
-                    Orders.Add(new OrderData(10249, "Münster",  "Germany", 89.76, new DateTime(1996, 07, 12)));
-                    Orders.Add(new OrderData(10250, "Rio de Janeiro", "Brazil", 78.67, new DateTime(1996, 07, 13)));
-                    Orders.Add(new OrderData(10251, "Lyon", "Belgium",55.65, new DateTime(1996, 07, 14)));
-                    Orders.Add(new OrderData(10252, "Charleroi", "Venezuela", 11.09, new DateTime(1996, 07, 15)));
-                    Orders.Add(new OrderData(10253, "Rio de Janeiro", "Venezuela", 98.98, new DateTime(1996, 07, 16)));
-                    Orders.Add(new OrderData(10254, "Reims", "Belgium", 78.75, new DateTime(1996, 07, 17)));
-                    Orders.Add(new OrderData(10255, "Münster", "Germany", 44.07, new DateTime(1996, 07, 18)));
-                    Orders.Add(new OrderData(10256, "Münster", "France", 67.74, new DateTime(1996, 07, 19)));
-                    code += 5;
-                }
-            }
-            return Orders;
-        }
-        public int? OrderID { get; set; }
-        public string ShipCity { get; set; }
-        public string ShipCountry { get; set; }
-        public double Freight { get; set; }
-        public DateTime OrderDate { get; set; }
+        this.OrderID = OrderID;
+        this.Freight = Freight;
+        this.ShipCity = ShipCity;
+        this.OrderDate = OrderDate;
+        this.ShipCountry = ShipCountry;
     }
+    public static List<OrderDetails> GetAllRecords()
+    {
+        if (order.Count == 0)
+        {
+            order.Add(new OrderDetails(10248, 32.38, new DateTime(1996, 7, 4), "Reims", "Australia"));
+            order.Add(new OrderDetails(10249, 11.61, new DateTime(1996, 7, 5), "Münster", "Australia"));
+            order.Add(new OrderDetails(10250, 65.83, new DateTime(1996, 7, 8), "Rio de Janeiro", "United States"));
+            order.Add(new OrderDetails(10251, 41.34, new DateTime(1996, 7, 8), "Lyon", "Australia"));
+            order.Add(new OrderDetails(10252, 51.3, new DateTime(1996, 7, 9), "Charleroi","United States"));
+            order.Add(new OrderDetails(10253, 58.17, new DateTime(1996, 7, 10), "Rio de Janeiro","United States"));
+            order.Add(new OrderDetails(10254, 22.98, new DateTime(1996, 7, 11), "Bern", "Switzerland"));
+            order.Add(new OrderDetails(10255, 148.33, new DateTime(1996, 7, 12), "Genève", "Switzerland"));
+            order.Add(new OrderDetails(10256, 13.97, new DateTime(1996, 7, 15), "Resende", "Brazil"));
+            order.Add(new OrderDetails(10257, 81.91, new DateTime(1996, 7, 16), "San Cristóbal", "Venezuela"));
+            order.Add(new OrderDetails(10258, 140.51, new DateTime(1996, 7, 17), "Graz", "Austria"));
+            order.Add(new OrderDetails(10259, 3.25, new DateTime(1996, 7, 18), "México D.F.", "Mexico"));
+            order.Add(new OrderDetails(10260, 55.09, new DateTime(1996, 7, 19), "Köln", "Germany"));
+            order.Add(new OrderDetails(10261, 3.05, new DateTime(1996, 7, 19), "Rio de Janeiro", "Brazil"));
+            order.Add(new OrderDetails(10262, 48.29, new DateTime(1996, 7, 22), "Albuquerque", "USA"));
+        }
+        return order;
+    }
+    public int OrderID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCity { get; set; }
+    public DateTime OrderDate { get; set; }
+    public string ShipCountry { get; set; }
+}
 {% endhighlight %}
 {% endtabs %}
 
-Resizing of stacked header is shown below
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVqMsXsSATGJPmY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhfWrWihrtoRpwi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Touch interaction
 
@@ -354,59 +344,222 @@ The following screenshot represents the column resizing in touch device.
 
 ![Blazor DataGrid column resizing in touch interaction.](./images/blazor-datagrid-column-resizing.jpg)
 
-<!-- Resize events
+## Resizing column externally
 
-During the resizing action the grid component triggers the below events,
+Grid provides the ability to resize columns using an external button click. This can be achieved by changing the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Width) property of the column and refreshing the grid using the [RefreshColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RefreshColumnsAsync) method in the external button click function.
 
-1. [`ResizeStart`]  -  Triggers when a column resize starts.
-2. [`Resizing`]     -  Triggers when a column is getting resized continuously.
-3. [`ResizeStop`]   -  Triggers when a column resize stops.
+The following example demonstrates how to resize the columns in a grid. This is done by using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event of the DropDownList component by change the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Width) property of the selected column. This is accomplished using the [GetColumnByFieldAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetColumnByFieldAsync_System_String_) on external button click. Then, the [RefreshColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RefreshColumnsAsync) method is called on the grid component to update the displayed columns based on user interaction.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.Buttons
 
-<SfGrid DataSource="@Orders" AllowResizing="true" AllowPaging="true" Height ="315">
-<GridEvents ResizeStart="OnResizeStart" Resizing="OnResizing" ResizeStop="OnResizeStop" TValue="Order"></GridEvents>
+<div style="display:flex; margin-bottom:5px;">
+    <label style="margin: 5px 5px 0 0"> Select column name:</label>
+    <SfDropDownList TValue="string" TItem="Columns" Width="120px" Placeholder="Select a Column" DataSource="@LocalData" @bind-Value="@DropDownValue">
+        <DropDownListEvents TItem="Columns" TValue="string" ValueChange="ChangeColumn"></DropDownListEvents>
+        <DropDownListFieldSettings Value="ID" Text="Value"></DropDownListFieldSettings>
+    </SfDropDownList>
+</div>
+<div style="margin-bottom:5px">
+    <label style="margin: 5px 5px 0 0"> Enter the width:</label>
+    <SfTextBox CssClass="e-outline" @bind-Value="@ModifiedWidth" PlaceHolder="@PlaceHolder" Width="150px"></SfTextBox>
+    <SfButton OnClick="onExternalResize">Resize</SfButton>
+</div>
+<SfGrid @ref="Grid" AllowResizing="true" DataSource="@Orders">                
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerName) HeaderText="Customer Name" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" MinWidth="10" Width="120" MaxWidth="200"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="Right" Width="@IdWidth"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer ID"  Width="@CustomerWidth"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="@FreightWidth"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipCountry) HeaderText="Ship Country" Width="@CountryWidth"></GridColumn>
     </GridColumns>
 </SfGrid>
-
-@code{
-
-    public List<Order> Orders { get; set; }
-
+@code {
+    public SfGrid<OrderDetails> Grid { get; set; }
+    public List<OrderDetails> Orders { get; set; }
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerName = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
+        Orders = OrderDetails.GetAllRecords();
     }
-
-    public void OnResizeStart() {
-        // Perform required operations here
-    }
-
-    public void OnResizing() {
-        // Perform required operations here
-    }
-
-    public void OnResizeStop() {
-        // Perform required operations here
-    }
-
-    public class Order {
-        public int? OrderID { get; set; }
-        public string CustomerName { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
+    public string ModifiedWidth;
+    public string IdWidth = "100";
+    public string CustomerWidth = "120";
+    public string FreightWidth = "80";
+    public string CountryWidth = "100";
+    public string PlaceHolder { get; set; } = "Enter new width";
+    public string DropDownValue { get; set; } = "OrderID";    
+    public class Columns
+    {
+        public string ID { get; set; }
+        public string Value { get; set; }
+    }    
+    List<Columns> LocalData = new List<Columns>    {
+        new Columns() { ID= "OrderID", Value= "OrderID" },
+        new Columns() { ID= "CustomerID", Value= "CustomerID" },
+        new Columns() { ID= "Freight", Value= "Freight" },
+        new Columns() { ID= "ShipCountry", Value= "ShipCountry" },
+    };   
+    public async Task onExternalResize()
+    {        
+        var selectedColumn = await Grid.GetColumnByFieldAsync(DropDownValue); 
+        if(selectedColumn.Field == "OrderID") {
+            IdWidth = ModifiedWidth;
+        }
+        if(selectedColumn.Field == "CustomerID") {
+            CustomerWidth = ModifiedWidth;
+        }         
+        if(selectedColumn.Field == "Freight") {
+            FreightWidth = ModifiedWidth;
+        } 
+        if(selectedColumn.Field == "ShipCountry") {
+            CountryWidth = ModifiedWidth;
+        }      
+        await Grid.RefreshColumnsAsync();        
     }
 }
-``` -->
+{% endhighlight %}
+{% highlight c# tabtitle="OrderDetails.cs" %}
+public class OrderDetails
+{
+    public static List<OrderDetails> order = new List<OrderDetails>();
+    public OrderDetails(int OrderID, string CustomerId, double Freight, string ShipCountry)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerId;
+        this.Freight = Freight;
+        this.ShipCountry = ShipCountry; 
+    }
+    public static List<OrderDetails> GetAllRecords()
+    {
+        if (order.Count == 0)
+        {
+            order.Add(new OrderDetails(10248, "VINET", 32.38, "Australia"));
+            order.Add(new OrderDetails(10249, "TOMSP", 11.61, "Australia"));
+            order.Add(new OrderDetails(10250, "HANAR", 65.83, "United States"));
+            order.Add(new OrderDetails(10251, "VICTE", 41.34, "Australia"));
+            order.Add(new OrderDetails(10252, "SUPRD", 51.3, "United States"));
+            order.Add(new OrderDetails(10253, "HANAR", 58.17, "United States"));
+            order.Add(new OrderDetails(10254, "CHOPS", 22.98,"Switzerland"));
+            order.Add(new OrderDetails(10255, "RICSU", 148.33,"Switzerland"));
+            order.Add(new OrderDetails(10256, "WELLI", 13.97, "Brazil"));
+            order.Add(new OrderDetails(10257, "HILAA", 81.91, "Venezuela"));
+            order.Add(new OrderDetails(10258, "ERNSH", 140.51, "Austria"));
+            order.Add(new OrderDetails(10259, "CENTC", 3.2, "Mexico"));
+            order.Add(new OrderDetails(10260, "OTTIK", 55.09, "Germany"));
+            order.Add(new OrderDetails(10261, "QUEDE", 3.0, "Brazil"));
+            order.Add(new OrderDetails(10262, "RATTC", 48.29, "USA"));
+        }
+        return order;
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCountry { get; set; }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLzCrCWVoSJCfYw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Resizing events
+
+During the resizing action, the grid component triggers the below two events.
+
+1. The [OnResizeStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnResizeStart) event triggers when column resize starts. This event can be used to perform actions when the user begins to resize a column.
+
+2. The [ResizeStopped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ResizeStopped) event triggers when column resize ends. This event can be used to perform actions after the column is resized.
+
+The following is an example of using the resizing events, the [OnResizeStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnResizeStart) event is used to cancel the resizing of the **OrderID** column. The [ResizeStopped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ResizeStopped) event is used to display the details in the message of the resized column.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+
+<div style="text-align: center; color: red">
+    <span>@ResizeMessage</span>
+</div>
+<SfGrid @ref="Grid" DataSource="@OrderData" AllowResizing="true">
+    <GridEvents TValue="OrderDetails" OnResizeStart="OnResizeStart" ResizeStopped="ResizeStopped"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipCity) HeaderText="Ship City" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipName) HeaderText="Ship Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipCountry) HeaderText="Ship Country" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipAddress) HeaderText="Ship Address" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+@code {
+    private SfGrid<OrderDetails> Grid;
+    public List<OrderDetails> OrderData { get; set; }   
+    protected override void OnInitialized()
+    {
+        OrderData = OrderDetails.GetAllRecords();       
+    }
+    public string ResizeMessage;
+    public void OnResizeStart(ResizeArgs args)
+    {
+        if (args.Column.Field == "OrderID")
+        {
+            args.Cancel = true;
+            ResizeMessage = "OnResizeStart event is triggered. Column Resizing cancelled for " + args.Column.HeaderText + " column ";
+        }
+    }
+    public void ResizeStopped(ResizeArgs args)
+    {
+        ResizeMessage = "ResizeStopped event is triggered. " + args.Column.HeaderText + " column resizing completed.";
+    }
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderDetails.cs" %}
+public class OrderDetails
+    {
+        public static List<OrderDetails> order = new List<OrderDetails>();
+        public OrderDetails(int OrderID, string CustomerId, double Freight, string ShipCity, string ShipName, string ShipCountry, string ShipAddress)
+        {
+            this.OrderID = OrderID;
+            this.CustomerID = CustomerId;
+            this.Freight = Freight;
+            this.ShipCity = ShipCity;
+            this.ShipName = ShipName;
+            this.ShipCountry = ShipCountry;
+            this.ShipAddress = ShipAddress;      
+        }
+        public static List<OrderDetails> GetAllRecords()
+        {
+            if (order.Count == 0)
+            {
+                order.Add(new OrderDetails(10248, "VINET", 32.38, "Reims", "Vins et alcools Chevalier", "Australia", "59 rue de l Abbaye"));
+                order.Add(new OrderDetails(10249, "TOMSP", 11.61, "Münster", "Toms Spezialitäten", "Australia", "Luisenstr. 48"));
+                order.Add(new OrderDetails(10250, "HANAR", 65.83, "Rio de Janeiro", "Hanari Carnes", "United States", "Rua do Paço, 67"));
+                order.Add(new OrderDetails(10251, "VICTE", 41.34, "Lyon", "Victuailles en stock", "Australia", "2, rue du Commerce"));
+                order.Add(new OrderDetails(10252, "SUPRD", 51.3, "Charleroi", "Suprêmes délices", "United States", "Boulevard Tirou, 255"));
+                order.Add(new OrderDetails(10253, "HANAR", 58.17, "Rio de Janeiro", "Hanari Carnes", "United States", "Rua do Paço, 67"));
+                order.Add(new OrderDetails(10254, "CHOPS", 22.98, "Bern", "Chop-suey Chinese", "Switzerland", "Hauptstr. 31"));
+                order.Add(new OrderDetails(10255, "RICSU", 148.33, "Genève", "Richter Supermarkt", "Switzerland", "Starenweg 5"));
+                order.Add(new OrderDetails(10256, "WELLI", 13.97, "Resende", "Wellington Importadora", "Brazil", "Rua do Mercado, 12"));
+                order.Add(new OrderDetails(10257, "HILAA", 81.91, "San Cristóbal", "HILARION-Abastos", "Venezuela", "Carrera 22 con Ave. Carlos Soublette #8-35"));
+                order.Add(new OrderDetails(10258, "ERNSH", 140.51, "Graz", "Ernst Handel", "Austria", "Kirchgasse 6"));
+                order.Add(new OrderDetails(10259, "CENTC", 3.25, "México D.F.", "Centro comercial Moctezuma", "Mexico", "Sierras de Granada 9993"));
+                order.Add(new OrderDetails(10260, "OTTIK", 55.09, "Köln", "Ottilies Käseladen", "Germany", "Mehrheimerstr. 369"));
+                order.Add(new OrderDetails(10261, "QUEDE", 3.05, "Rio de Janeiro", "Que Delícia", "Brazil", "Rua da Panificadora, 12"));
+                order.Add(new OrderDetails(10262, "RATTC", 48.29, "Albuquerque", "Rattlesnake Canyon Grocery", "USA", "2817 Milton Dr."));
+           }
+            return order;
+        }
+        public int OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public double Freight { get; set; }
+        public string ShipCity { get; set; }
+        public string ShipName { get; set; }
+        public string ShipCountry { get; set; }
+        public string ShipAddress { get; set; }
+    }
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBTWViiLnOofXge?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
