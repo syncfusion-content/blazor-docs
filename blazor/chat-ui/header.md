@@ -15,13 +15,13 @@ You can use `ShowHeader` property to enable or disable the chat header. It conta
 
 ### Setting header text
 
-You can use the `HeaderText` property to display the text that appears in the header, which indicates the current username or the group name, providing the context for the conversation.
+You can use the `HeaderText` property to display the text that appears in the header, which indicates the current username or the group name providing the context for the conversation.
 
 ```cshtml
 
 @using Syncfusion.Blazor.InteractiveChat
 
-<div class="chatui-container" style="height: 400px; width: 400px;">
+<div style="height: 400px; width: 400px;">
     <SfChatUI HeaderText="Albert"></SfChatUI>
 </div>
 
@@ -29,7 +29,7 @@ You can use the `HeaderText` property to display the text that appears in the he
 
 ![Blazor Chat UI HeaderText](./images/header-text.png)
 
-### Setting header iconCss
+### Setting header icon CSS
 
 You can use the `HeaderIconCss` property to customize the styling of the header icon.
 
@@ -37,7 +37,7 @@ You can use the `HeaderIconCss` property to customize the styling of the header 
 
 @using Syncfusion.Blazor.InteractiveChat
 
-<div class="chatui-container" style="height: 400px; width: 400px;">
+<div style="height: 400px; width: 400px;">
     <SfChatUI HeaderIconCss="e-icons e-people"></SfChatUI>
 </div>
 
@@ -53,7 +53,7 @@ You can render the Chat UI toolbar items by using the `HeaderToolbar`, `HeaderTo
 
 Items can be constructed with the following built-in command types or item template.
 
-#### Adding iconCss
+#### Adding icon CSS
 
 You can customize the header toolbar icons by using the `IconCss` property.
 
@@ -62,7 +62,7 @@ You can customize the header toolbar icons by using the `IconCss` property.
 @using Syncfusion.Blazor.InteractiveChat
 @using Syncfusion.Blazor.Navigations
 
-<div class="chatui-container" style="height: 400px; width: 400px;">
+<div style="height: 400px; width: 400px;">
     <SfChatUI>
         <HeaderToolbar>
             <HeaderToolbarItem Type="ItemType.Spacer"></HeaderToolbarItem>
@@ -86,7 +86,7 @@ In the following example, header toolbar item type is set as `Button`.
 @using Syncfusion.Blazor.InteractiveChat
 @using Syncfusion.Blazor.Navigations
 
-<div class="chatui-container" style="height: 400px; width: 400px;">
+<div style="height: 400px; width: 400px;">
     <SfChatUI>
         <HeaderToolbar>
             <HeaderToolbarItem Type="ItemType.Spacer"></HeaderToolbarItem>
@@ -108,7 +108,7 @@ You can use the `Text` property to set the text for the header toolbar item.
 @using Syncfusion.Blazor.InteractiveChat
 @using Syncfusion.Blazor.Navigations
 
-<div class="chatui-container" style="height: 400px; width: 400px;">
+<div style="height: 400px; width: 400px;">
     <SfChatUI>
         <HeaderToolbar>
             <HeaderToolbarItem Type="ItemType.Spacer"></HeaderToolbarItem>
@@ -130,7 +130,7 @@ You can use the `Visible` property to specify whether to show or hide the header
 @using Syncfusion.Blazor.InteractiveChat
 @using Syncfusion.Blazor.Navigations
 
-<div class="chatui-container" style="height: 400px; width: 400px;">
+<div style="height: 400px; width: 400px;">
     <SfChatUI>
         <HeaderToolbar>
             <HeaderToolbarItem Type="ItemType.Spacer"></HeaderToolbarItem>
@@ -153,7 +153,7 @@ You can use the `Disabled` property to disable the header toolbar item. By defau
 @using Syncfusion.Blazor.InteractiveChat
 @using Syncfusion.Blazor.Navigations
 
-<div class="chatui-container" style="height: 400px; width: 400px;">
+<div style="height: 400px; width: 400px;">
     <SfChatUI>
         <HeaderToolbar>
             <HeaderToolbarItem Type="ItemType.Spacer"></HeaderToolbarItem>
@@ -176,7 +176,7 @@ You can use the `Tooltip` property to specify the tooltip text to be displayed o
 @using Syncfusion.Blazor.InteractiveChat
 @using Syncfusion.Blazor.Navigations
 
-<div class="chatui-container" style="height: 400px; width: 400px;">
+<div style="height: 400px; width: 400px;">
     <SfChatUI>
         <HeaderToolbar>
             <HeaderToolbarItem Type="ItemType.Spacer"></HeaderToolbarItem>
@@ -187,7 +187,7 @@ You can use the `Tooltip` property to specify the tooltip text to be displayed o
 
 ```
 
-#### Setting cssClass
+#### Setting CSS Class
 
 You can use the `CssClass` property to customize the header toolbar item.
 
@@ -196,7 +196,7 @@ You can use the `CssClass` property to customize the header toolbar item.
 @using Syncfusion.Blazor.InteractiveChat
 @using Syncfusion.Blazor.Navigations
 
-<div class="chatui-container" style="height: 400px; width: 400px;">
+<div style="height: 400px; width: 400px;">
     <SfChatUI>
         <HeaderToolbar>
             <HeaderToolbarItem Type="ItemType.Spacer"></HeaderToolbarItem>
@@ -233,7 +233,7 @@ For example, to enable tab key navigation for two Toolbar items you can use the 
 @using Syncfusion.Blazor.InteractiveChat
 @using Syncfusion.Blazor.Navigations
 
-<div class="chatui-container" style="height: 400px; width: 400px;">
+<div style="height: 400px; width: 400px;">
     <SfChatUI>
         <HeaderToolbar>
             <HeaderToolbarItem Text="Item 1" TabIndex="1"></HeaderToolbarItem>
@@ -253,7 +253,7 @@ If you set the `TabIndex` value to 0 for all Toolbar items, tab key navigation w
 @using Syncfusion.Blazor.InteractiveChat
 @using Syncfusion.Blazor.Navigations
 
-<div class="chatui-container" style="height: 400px; width: 400px;">
+<div style="height: 400px; width: 400px;">
     <SfChatUI>
         <HeaderToolbar>
             <HeaderToolbarItem Text="Item 1" TabIndex="0"></HeaderToolbarItem>
@@ -275,7 +275,7 @@ You can use the `Template` tag directive to add custom header toolbar item in th
 @using Syncfusion.Blazor.InteractiveChat
 @using Syncfusion.Blazor.Navigations
 
-<div class="chatui-container" style="height: 400px; width: 400px;">
+<div style="height: 400px; width: 400px;">
     <SfChatUI>
         <HeaderToolbar>
             <HeaderToolbarItem Type="ItemType.Spacer"></HeaderToolbarItem>
@@ -314,7 +314,7 @@ You can define `ItemClicked` event in the `HeaderToolbar` tag directive which wi
 @using Syncfusion.Blazor.InteractiveChat
 @using Syncfusion.Blazor.Navigations
 
-<div class="chatui-container" style="height: 400px; width: 400px;">
+<div style="height: 400px; width: 400px;">
     <SfChatUI>
         <HeaderToolbar ItemClicked="ToolbarItemClicked">
             <HeaderToolbarItem Type="ItemType.Spacer"></HeaderToolbarItem>

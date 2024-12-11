@@ -13,11 +13,11 @@ The Chat UI component provides several templates for customizing the appearance 
 
 ## Empty chat template
 
-You can use the `EmptyChatTemplate` property to customize the chat interface when no messages are displayed. Personalized content, such as welcome messages or images, can be added to create an engaging and inviting experience for users starting a conversation.
+You can use the `EmptyChatTemplate` tag to customize the chat interface when no messages are displayed. Personalized content, such as welcome messages or images, can be added to create an engaging and inviting experience for users starting a conversation.
 
 ```cshtml
 
-<div class="chatui-container" style="height: 400px; width: 400px;">
+<div style="height: 400px; width: 400px;">
     <SfChatUI>
         <EmptyChatTemplate>
             <div class="empty-chat-text">
@@ -43,7 +43,7 @@ You can use the `EmptyChatTemplate` property to customize the chat interface whe
 
 ## Message template
 
-You can use the `MessageTemplate` property to customize the appearance and styling of each chat message. Modify text styling, layout, and other design elements to ensure a personalized chat experience. The template context includes `Message` and `Index` items.
+You can use the `MessageTemplate` tag to customize the appearance and styling of each chat message. Modify text styling, layout, and other design elements to ensure a personalized chat experience. The template context includes `Message` and `Index` items.
 
 ```cshtml
 
@@ -91,7 +91,7 @@ You can use the `MessageTemplate` property to customize the appearance and styli
 
 ## Time break template
 
-You can use the `TimeBreakTemplate` property to customize how time breaks are displayed with using the template, such as showing "Today," "Yesterday," or specific dates. This enhances conversation organization by clearly separating messages based on time, improving readability for the user. The template context includes `Message`.
+You can use the `TimeBreakTemplate` tag to customize how time breaks are displayed with using the template, such as showing "Today," "Yesterday," or specific dates. This enhances conversation organization by clearly separating messages based on time, improving readability for the user. The template context includes `MessageDate`.
 
 ```cshtml
 
@@ -130,14 +130,14 @@ You can use the `TimeBreakTemplate` property to customize how time breaks are di
 
 ## Typing indicator template
 
-You can use the `TypingUsersTemplate` property to customize the display of users currently typing in the chat. It allows for styling and positioning of the typing indicator, enhancing the user experience. The template context includes `Users`.
+You can use the `TypingUsersTemplate` tag to customize the display of users currently typing in the chat. It allows for styling and positioning of the typing indicator, enhancing the user experience. The template context includes `Users`.
 
 ## Suggestion template
 
-You can use the `SuggestionTemplate` property to customize the quick reply suggestions that appear above the input field. Templates here can help create visually appealing and functional suggestion layouts. The template context includes `Suggestions` and `Index` items.
+You can use the `SuggestionTemplate` tag to customize the quick reply suggestions that appear above the input field. Templates here can help create visually appealing and functional suggestion layouts. The template context includes `Suggestions` and `Index` items.
 
 ## Footer template
 
-You can use the `FooterTemplate` property to customize the default footer area and manage message send actions with a personalized design. This flexibility allows users to create unique footers that meet their specific needs.
+You can use the `FooterTemplate` tag to customize the default footer area and manage message send actions with a personalized design. This flexibility allows users to create unique footers that meet their specific needs.
 
 

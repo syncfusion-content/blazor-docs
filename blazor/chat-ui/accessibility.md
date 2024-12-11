@@ -11,7 +11,7 @@ documentation: ug
 
 The Blazor Chat UI component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the Chat UI control is outlined below.
+The accessibility compliance for the Chat UI component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -31,15 +31,15 @@ The accessibility compliance for the Chat UI control is outlined below.
         margin: 0.5em 0;
     }
 </style>
-<div><img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> - All features of the control meet the requirement.</div>
+<div><img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> - All features of the component meet the requirement.</div>
 
-<div><img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> - Some features of the control do not meet the requirement.</div>
+<div><img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Intermediate"> - Some features of the component do not meet the requirement.</div>
 
-<div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The control does not meet the requirement.</div>
+<div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
 
 ## WAI-ARIA attributes
 
-The following ARIA attributes are used in the Chat UI control:
+The following ARIA attributes are used in the Chat UI component:
 
 | Attributes | Purpose |
 | ------------ | ----------------------- |
@@ -52,7 +52,7 @@ The following ARIA attributes are used in the Chat UI control:
 
 ## Keyboard interaction
 
-The following keyboard shortcuts are supported by the Chat UI control.
+The following keyboard shortcuts are supported by the Chat UI component.
 
 | **Press** | **To do this** |
 | --- | --- |
@@ -72,7 +72,7 @@ The following keyboard shortcuts are supported by the Chat UI control.
 
 ## Ensuring accessibility
 
-The Chat UI control's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The Chat UI component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
 ## See also
 

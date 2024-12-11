@@ -17,13 +17,13 @@ You can use the `UpdateMessageAsync` public method to update the messages in t
 
 @using Syncfusion.Blazor.InteractiveChat
 
-<div class="chatui-container" style="height: 400px; width: 400px;">
-    <button id="editMsg" @onclick="UpdateMessage" class="e-btn e-primary" style="margin-bottom: 10px">Update Message</button>
+<div style="height: 400px; width: 400px;">
+    <button @onclick="UpdateMessage" class="e-btn e-primary" style="margin-bottom: 10px">Update Message</button>
     <SfChatUI @ref="@ChatUser" ID="chatUser" User="CurrentUserModel" Messages="ChatUserMessages"></SfChatUI>
 </div>
 
 @code {
-    private SfChatUI ChatUser = new SfChatUI();
+    private SfChatUI ChatUser;
     private static UserModel CurrentUserModel = new UserModel() { ID = "User1", User = "Albert" };
     private static UserModel MichaleUserModel = new UserModel() { ID = "User2", User = "Michale Suyama" };
 
@@ -52,13 +52,13 @@ You can use `ScrollToBottomAsync` public method to scroll the chat view to the l
 
 @using Syncfusion.Blazor.InteractiveChat
 
-<div class="chatui-container" style="height: 400px; width: 400px;">
-    <button id="bottomScroll" @onclick="ScrollToBottom" class="e-btn e-primary" style="margin-bottom: 10px">Scroll to bottom</button>
+<div style="height: 400px; width: 400px;">
+    <button @onclick="ScrollToBottom" class="e-btn e-primary" style="margin-bottom: 10px">Scroll to bottom</button>
     <SfChatUI @ref="@ChatUser" ID="chatUser" User="CurrentUserModel" Messages="ChatUserMessages"></SfChatUI>
 </div>
 
 @code {
-    private SfChatUI ChatUser = new SfChatUI();
+    private SfChatUI ChatUser;
     private static UserModel CurrentUserModel = new UserModel() { ID = "User1", User = "Albert" };
     private static UserModel MichaleUserModel = new UserModel() { ID = "User2", User = "Michale Suyama" };
 

@@ -15,4 +15,4 @@ You can use the `ShowTimestamp` property to enable or disable timestamps for all
 
 ## Setting timestamp format
 
-You can use the `TimestampFormat` property to display time formats for all the messages which are displayed with the messages being sent. By default, the value is ` dd/MM/yyyy hh:mm a`.
+You can use the `TimestampFormat` property to display time formats for all the messages which are displayed with the messages being sent. By default, the value is `dd/MM/yy hh:mm tt`.
