@@ -205,7 +205,7 @@ namespace filemanager.Server.Controllers
 {% endhighlight %}
 {% endtabs %}
 
-## Folder Upload support
+### Folder Upload support
 
 To perform the directory(folder) upload in File Manager, set [DirectoryUpload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html#Syncfusion_Blazor_FileManager_FileManagerUploadSettings_DirectoryUpload) as true within the FileManagerUploadSettings. The directory upload feature is supported for the following file service providers:
 * Physical file service provider.
@@ -294,7 +294,7 @@ In this example, you can enable or disable the ability to upload directories by 
 
 ![Folder Upload in Blazor FileManager](images/blazor-filemanager-folder-upload.gif)
 
-### Physical file service provider
+#### Physical file service provider
 
 To achieve the directory upload in the physical file service provider, use the below code snippet in `IActionResult Upload` method in the `Controllers/FileManagerController.cs` file.
 
@@ -344,13 +344,13 @@ var fullName = Path.Combine((this.contentRootPath + path), fileName);
 
 Refer to the [GitHub](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider/blob/master/Models/PhysicalFileProvider.cs#L1185) for more details.
 
-### Azure file service provider
+#### Azure file service provider
 
 For Azure file service provider, no customizations are needed for directory upload with server side and this will work with the below default upload method code.
 
 Refer to the [GitHub](https://github.com/SyncfusionExamples/azure-aspcore-file-provider/blob/master/Controllers/AzureProviderController.cs#L94) for more details.
 
-### NodeJS file service provider
+#### NodeJS file service provider
 
 To perform the directory upload in the NodeJS file service provider, use the below code snippet in `app.post` method in the `filesystem-server.js` file.
 
@@ -388,7 +388,7 @@ if (folders.length > 1)
 
 Refer to the [GitHub](https://github.com/SyncfusionExamples/ej2-filemanager-node-filesystem/blob/master/filesystem-server.js#L788) for more details.
 
-### Amazon file service provider
+#### Amazon file service provider
 
 To perform the directory upload in the Amazon file service provider, use the below code snippet in `IActionResult AmazonS3Upload` method in the `Controllers/AmazonS3ProviderController.cs` file.
 
@@ -422,26 +422,7 @@ string name = folders[folders.Length - 1];
 
 Refer to the [GitHub](https://github.com/SyncfusionExamples/amazon-s3-aspcore-file-provider/blob/master/Models/AmazonS3FileProvider.cs#L585) for more details.
 
-## Drag and Drop upload
-
-The Blazor File Manager component allows you to easily perform drag and drop file uploads. You can drag files from your local file system and drop them directly into the FileManager. Additionally, you have the ability to customize the drop area for file uploads using the [DropArea](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html#Syncfusion_Blazor_FileManager_FileManagerUploadSettings_DropArea) property in the `FileManagerUploadSettings` class.
-
-```cshtml
-
-@using Syncfusion.Blazor.FileManager
-
-<SfFileManager TValue="FileManagerDirectoryContent">
-    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
-                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
-                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
-    </FileManagerAjaxSettings>
-    <FileManagerUploadSettings DropArea=".e-layout-content"></FileManagerUploadSettings>
-</SfFileManager>
-
-```
-
-### Image preview support
+### Get Image support
 
 To perform image preview support in the File Manager component, initialize the [GetImageUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html#Syncfusion_Blazor_FileManager_FileManagerAjaxSettings_GetImageUrl) property in a FileManagerAjaxSettings.
 

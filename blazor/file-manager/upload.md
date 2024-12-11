@@ -9,7 +9,7 @@ documentation: ug
 
 # Upload in Blazor FileManager component
 
-The Blazor FileManager component provides a [FileManagerUploadSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html) feature that allows users to upload files to the FileManager. It provides various settings and options to customize how files are uploaded, such as controlling file size, restricting file types, and enabling chunk uploads.
+The Blazor FileManager component provides a [FileManagerUploadSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html) property with various options to customize how files are uploaded, such as controlling file size, restricting file types, and enabling chunk uploads.
 
 ## Directory Upload
 
@@ -33,6 +33,7 @@ When set to `true`, this property enables directory upload in the FileManager, a
 </SfFileManager>
 
 ```
+N> When `DirectoryUpload` is `true`, you can upload only folders and their files. When it is `false`, you can upload only individual files. You cannot upload files and folders at the same time.
 
 The screenshot below shows after successfully selecting a directory it uploads all the file inside it automatically. This demonstrates how the `DirectoryUpload` property works in the Blazor FileManager component.
 
@@ -66,7 +67,7 @@ While using chunk upload, the Pause and Cancel features allow users to stop the 
 
 ![Blazor FileManager with DirectoryUpload](images/blazor-filemanager-chunkupload.png)
 
-## Auto Upload and Auto Close
+## Auto Upload
 
 The [AutoUpload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html#Syncfusion_Blazor_FileManager_FileManagerUploadSettings_AutoUpload) property controls whether files are automatically uploaded when they are added to the upload queue in the FileManager component.
 
@@ -91,7 +92,7 @@ The screenshot demonstrates the AutoUpload property set to `false`. When disable
 
 ![Blazor FileManager with AutoUpload](images/blazor-filemanager-autoupload.png)
 
-### Auto close
+## Auto Close
 
 The [AutoClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html#Syncfusion_Blazor_FileManager_FileManagerUploadSettings_AutoClose) property controls whether the upload dialog automatically closes after all the files have been uploaded.
 
@@ -111,10 +112,6 @@ The default value is set to `false`, the upload dialog remains open even after t
 </SfFileManager>
 
 ```
-
-The screenshot demonstrates after uploading the files, the upload dialog automatically closes, providing a seamless user experience once the upload is complete.
-
-![Blazor FileManager with AutoClose](images/blazor-filemanager-autoclose.png)
 
 ## Prevent upload based on file extensions
 
@@ -151,12 +148,17 @@ This property lets you choose between two upload modes. `FormSubmit` Uses the tr
 
 By default, the `UploadMode` is set to `FormSubmit`, but you can switch to HttpClient for more control, such as managing headers or authorizing the upload response.
 
-```cshtml
+{% tabs %}
+{% highlight razor %}
 
+@using Microsoft.AspNetCore.Components;
+@using Syncfusion.Blazor.FileManager;
+@using System.Net.Http.Headers;
 @using Syncfusion.Blazor.FileManager
 
 <SfFileManager TValue="FileManagerDirectoryContent">
-    <FileManagerUploadSettings  UploadMode="UploadMode.FormSubmit"></FileManagerUploadSettings>
+    <FileManagerUploadSettings  UploadMode="UploadMode.HttpClient"></FileManagerUploadSettings>
+    <FileManagerEvents TValue="FileManagerDirectoryContent" OnSend="OnBeforeSend"></FileManagerEvents>
     <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
                              UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
                              DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api//FileManager/Download"
@@ -164,9 +166,94 @@ By default, the `UploadMode` is set to `FormSubmit`, but you can switch to HttpC
     </FileManagerAjaxSettings>
 </SfFileManager>
 
-```
-![Blazor FileManager with UploadMode](images/blazor-filemanager-uploadmode.png)
+@code { 
 
+    private IApiAuthTokenService ApiAuthTokenService { get; set; }
+    
+    private async Task OnBeforeSend(BeforeSendEventArgs args)
+    {
+        var token = await ApiAuthTokenService.GetToken();
+        args.HttpClientInstance.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight cs tabtitle="Services/ApiAuthTokenServices.cs" %}
+
+namespace Blazor
+{
+    public class ApiAuthTokenService : IApiAuthTokenService
+    {
+        private readonly IHttpClientFactory _httpClientFactory;
+        private string _token;
+        private int _expiresIn = 3600;
+        private DateTime? _requestTime;
+
+        public ApiAuthTokenService(IHttpClientFactory httpClientFactory)
+        {
+            _httpClientFactory = httpClientFactory;
+        }
+
+        public async Task<string> GetToken()
+        {
+            if (!string.IsNullOrWhiteSpace(_token) && _requestTime != null)
+            {
+                var expiryTimeStamp = _requestTime.Value.AddSeconds(_expiresIn);
+                var oneMinuteAgo = DateTime.Now.AddMinutes(-1);
+
+                if (expiryTimeStamp < oneMinuteAgo)
+                {
+                    return _token;
+                }
+            }
+
+            _requestTime = DateTime.Now;
+            var httpClient = _httpClientFactory.CreateClient();
+
+            var uri = new Uri("https://localhost:7218/login?useCookies=false&useSessionCookies=false");
+
+            var response = await httpClient.PostAsJsonAsync(uri, new TokenRequestModel()
+            {
+                Email = "SAMPLE.COM",
+                Password = "Sample123!",
+                TwoFactorCode = string.Empty,
+                TwoFactorRecoveryCode = string.Empty
+            });
+
+            var apiResponse = await response.Content.ReadFromJsonAsync<TokenResponseModel>();
+
+            _expiresIn = apiResponse.ExpiresIn;
+            _token = apiResponse.AccessToken;
+
+            return _token;
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Drag and Drop upload
+
+The Blazor File Manager component allows you to easily perform drag and drop file uploads. You can drag files from your local file system and drop them directly into the FileManager. Additionally, you have the ability to customize the drop area for file uploads using the [DropArea](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html#Syncfusion_Blazor_FileManager_FileManagerUploadSettings_DropArea) property in the `FileManagerUploadSettings` class.
+
+```cshtml
+
+@using Syncfusion.Blazor.FileManager
+
+<SfFileManager TValue="FileManagerDirectoryContent">
+    <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
+                             UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
+                             DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
+                             GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
+    </FileManagerAjaxSettings>
+    <FileManagerUploadSettings DropArea=".e-layout-content"></FileManagerUploadSettings>
+</SfFileManager>
+
+```
 
 ## See also
 
