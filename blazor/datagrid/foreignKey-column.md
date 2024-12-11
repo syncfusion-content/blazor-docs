@@ -433,9 +433,9 @@ public class EmployeeDetails
 
 ## Use filter bar template in foreign key column
 
-You can use the filter  template in a foreign key column in Grid by using the **FilterTemplate** property. This allows you to customize the filter bar for the foreign key column with a custom component or HTML template. Here’s an example that demonstrates how to use a Filter  template in a foreign key column:
+You can use the filter  template in a foreign key column in Grid by using the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) property. This allows you to customize the filter bar for the foreign key column with a custom component or HTML template. Here’s an example that demonstrates how to use a Filter template in a foreign key column:
 
-In this example, the “EmployeeID” column is a foreign key column, and the filter function is used as the filter template for this column. The filter function can be defined in your component code and should return the desired component or HTML template for the filter bar. The column header shows the custom filter bar template and you can select filter value by using the DropDown options.
+In this example, the **“EmployeeID”** column is a foreign key column. The `FilterTemplate` property is used to render a Syncfusion DropDownList component as a filter, you can select filter value by using the **DropDown** options.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
