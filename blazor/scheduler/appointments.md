@@ -479,9 +479,7 @@ By default, the scheduler will render the overlapping events based on the start 
 
 ## Preventing Overlapping Events
 
-In industries like healthcare and legal services, avoiding overlapping appointments is crucial for compliance and confidentiality. Setting the `AllowOverlap` property to false prevents conflicts and triggers an alert if an overlap is attempted.
-
->Note: By default [AllowOverlap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowOverlap) is true. You can obtain details of overlapping appointments via the `args` parameter in the [PopupOpenEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.PopupOpenEventArgs-1.html).
+By default, the scheduler renders overlapping events based on their start and end times. To prevent this, set the [AllowOverlap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowOverlap) property to `false`. When this property is set, an overlap alert will be displayed during dynamic CRUD actions if new or updated events conflict with existing ones. The conflicting events will be collected in the OverlapCollection within the [PopupOpenEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.PopupOpenEventArgs-1.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -499,19 +497,21 @@ In industries like healthcare and legal services, avoiding overlapping appointme
 </SfSchedule>
 
 @code{
-    DateTime CurrentDate = new DateTime(2020, 1, 31);
+    DateTime CurrentDate = new DateTime(2024, 12, 2);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0), 
-        EndTime = new DateTime(2020, 1, 31, 11, 0, 0) },
-        new AppointmentData { Id = 2, Subject = "Conference", StartTime = new DateTime(2020, 1, 29, 10, 0, 0), 
-        EndTime = new DateTime(2020, 1, 29, 11, 0, 0) },
-        new AppointmentData { Id = 3, Subject = "Tech discussion", StartTime = new DateTime(2020, 1, 29, 10, 30, 0), 
-        EndTime = new DateTime(2020, 1, 29, 11, 30, 0) },
-        new AppointmentData { Id = 4, Subject = "London", StartTime = new DateTime(2020, 1, 26, 12, 0, 0), 
-        EndTime = new DateTime(2020, 1, 26, 13, 0, 0) },
-        new AppointmentData { Id = 5, Subject = "New York", StartTime = new DateTime(2020, 1, 25, 13, 0, 0), 
-        EndTime = new DateTime(2020, 1, 25, 15, 0, 0) },
+        new AppointmentData { Id = 1, Subject = "Board Meeting", StartTime = new DateTime(2024, 12, 1, 9, 30, 0),
+        EndTime = new DateTime(2024, 12, 1, 11, 0, 0) },
+        new AppointmentData { Id = 2, Subject = "Annual Conference", StartTime = new DateTime(2024, 12, 2, 10, 0, 0),
+        EndTime = new DateTime(2024, 12, 2, 11, 0, 0) },
+        new AppointmentData { Id = 3, Subject = "Tech Symposium", StartTime = new DateTime(2024, 12, 2, 10, 30, 0),
+        EndTime = new DateTime(2024, 12, 2, 11, 30, 0) },
+        new AppointmentData { Id = 4, Subject = "Client Meeting", StartTime = new DateTime(2024, 12, 3, 12, 0, 0),
+        EndTime = new DateTime(2024, 12, 3, 13, 0, 0) },
+        new AppointmentData { Id = 5, Subject = "Project Review", StartTime = new DateTime(2024, 12, 4, 13, 0, 0),
+        EndTime = new DateTime(2024, 12, 4, 15, 0, 0) },
+        new AppointmentData { Id = 6, Subject = "Strategy Session", StartTime = new DateTime(2024, 12, 6, 9, 30, 0),
+        EndTime = new DateTime(2024, 12, 6, 11, 0, 0) },
     };
     public void OnPopupOpen(PopupOpenEventArgs<AppointmentData> args)
     {
@@ -526,13 +526,14 @@ In industries like healthcare and legal services, avoiding overlapping appointme
     }
 }
 ```
-### Limitations
-`Initial load` - On initial load, the scheduler prioritizes displaying non-overlapping, longer, and all-day appointments. In conflicting recurrence series, only non-conflicting occurrences are shown.
-
-`Edit/Save and Drag&Drop` - Users can edit, save, or drag and drop appointments. The scheduler checks for conflicts, preventing actions and alerting users if overlaps occur. Recurrence series conflicts block all occurrences.
-
-
 ![Blazor Scheduler with restricted Overlapping Events](images/blazor-scheduler-restrict-overlapping-events.png)
+
+### Limitations
+* On initial load, the scheduler prioritizes non-overlapping events based on their longer duration and all-day status.
+* The Scheduler's [SortBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEventSettings-1.html#Syncfusion_Blazor_Schedule_ScheduleEventSettings_1_SortBy) property can be utilized to sort appointments according to the data source, determining the display order.
+* For recurring appointments, at the initial load, if there are conflicts within a series, the scheduler will display all occurrences except for the conflicting one.
+* When a user edits, saves, or drops appointments, the scheduler checks for overlaps. If a conflict is detected, it prevents the action and displays a conflict alert to the user.
+* When creating or editing a recurrence series dynamically, if a conflict is detected, the scheduler won't allow any occurrences of the conflicting series.
 
 ## Restricting event creation on specific time slots
 You can restrict the users to create and update more than one appointment on specific time slots. Also, you can disable the CRUD action on those time slots if it is already occupied, which can be achieved using Scheduler’s public method [IsSlotAvailableAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_IsSlotAvailableAsync__0_).
