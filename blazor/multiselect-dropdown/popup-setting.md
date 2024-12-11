@@ -19,7 +19,7 @@ You can dynamically adjust the size of the popup in the `MultiSelect` component 
 
 {% endhighlight %} 
 
-![Blazor MultiSelect with AllowResize property](./images/popup-setting\blazor_multiselect_resize.gif)
+![Blazor MultiSelect with AllowResize property](./images/popup-setting/blazor_multiselect_resize.gif)
 
 ## Change the PopupHeight
 
