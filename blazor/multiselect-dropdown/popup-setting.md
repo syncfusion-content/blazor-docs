@@ -149,7 +149,7 @@ You can achieve this by binding the `resize` event in window and update the heig
 
 ## Programmatically opening and closing popup
 
-You can programmatically open and close the popup by accessing the `ShowPopupAsync()` and `HidePopupAsync()` methods through an instance of the multiselecr. Bind the click event of a button to these methods. When the button is clicked, it will trigger the respective method and open or close the popup.
+You can programmatically open and close the popup by accessing the `ShowPopupAsync()` and `HidePopupAsync()` methods through an instance of the multiselect. Bind the click event of a button to these methods. When the button is clicked, it will trigger the respective method and open or close the popup.
 
 {% highlight Razor %}
 
