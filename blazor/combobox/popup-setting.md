@@ -19,7 +19,7 @@ You can dynamically adjust the size of the popup in the `ComboBox` component by 
 
 {% endhighlight %} 
 
-![Blazor ComboBox with AllowResize property](./images/popup-setting\blazor_combobox_resize.gif)
+![Blazor ComboBox with AllowResize property](./images/popup-setting/blazor_combobox_resize.gif)
 
 ## Change the popup width
 
