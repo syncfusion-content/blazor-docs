@@ -1071,7 +1071,7 @@ The following event is available in the Ribbon Backstage.
     {
         "home" => @<div class="home-wrapper"> Home content </div>
     };
-    }
+}
 
 {% endhighlight %}
 {% endtabs %}
