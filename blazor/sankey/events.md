@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events for Blazor Sankey Component | Syncfusion
-description: Understand the events supported by the Blazor Sankey component and how to use them.
+description: Learn about the events supported by the Blazor Sankey component and how to use them for interactivity and customization.
 platform: Blazor
 control: Sankey
 documentation: ug
@@ -39,9 +39,9 @@ The Sankey Chart component offers the following events:
 Here's an example demonstrating how to use some of the most common events in the Sankey component:
 
 ```razor
-<SfSankey Width="600px" Height="400px" 
-           Nodes="@Nodes" 
-           Links="@Links" 
+<SfSankey Width="600px" Height="400px"
+           Nodes="@Nodes"
+           Links="@Links"
            LegendItemRendering="OnLegendItemRendering"
            NodeClick="OnNodeClick"
            LinkRendering="OnLinkRendering"
@@ -129,9 +129,9 @@ Modify the content and appearance of tooltips for both nodes and links.
 You can combine multiple events to create more complex interactions. Here's an example that uses multiple events:
 
 ```razor
-<SfSankey Width="600px" Height="400px" 
-           Nodes="@Nodes" 
-           Links="@Links" 
+<SfSankey Width="600px" Height="400px"
+           Nodes="@Nodes"
+           Links="@Links"
            NodeClick="OnNodeClick"
            LinkEnter="OnLinkEnter"
            LinkLeave="OnLinkLeave"

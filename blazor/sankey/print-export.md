@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Print and Export for Blazor Sankey Component | Syncfusion
-description: Learn how to configure print and export in the Blazor Sankey component.
+description: Learn how to configure print and export functionalities in the Blazor Sankey component to generate high-quality outputs.
 platform: Blazor
 control: Sankey
 documentation: ug

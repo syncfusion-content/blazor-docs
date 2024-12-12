@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Nodes for Blazor Sankey Component | Syncfusion
-description: Explore how to define and configure nodes in the Blazor Sankey component effectively.
+description: Explore how to define and configure nodes in the Blazor Sankey component to create meaningful and visually appealing flow diagrams.
 platform: Blazor
 control: Sankey
 documentation: ug

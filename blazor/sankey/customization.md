@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customization for Blazor Sankey Component | Syncfusion
-description: Learn about various customization options available for the Blazor Sankey component.
+description: Explore various customization options available for enhancing the Blazor Sankey component with background style, layout, and orientation configuration.
 platform: Blazor
 control: Sankey
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Title and Subtitle in Blazor Sankey Component | Syncfusion
-description: Learn how to set and customize the title and subtitle in the Blazor Sankey component from Syncfusion.
+description: Learn how to set and customize the title and subtitle in the Blazor Sankey component from Syncfusion for better data representation.
 platform: Blazor
 control: Sankey
 documentation: ug
@@ -85,7 +85,7 @@ Here's a complete example demonstrating how to set and style the title and subti
 
 - Use meaningful and descriptive titles to give users a quick insight into the data represented in the Sankey chart.
 - Keep titles and subtitles concise while providing enough context.
-- Use the subtitle to provide additional details or timeframes related to the data.
+- Use the subtitle to provide additional details related to the data.
 - Customize the font size, family, weight, and color to ensure the title and subtitle are visually appealing and readable.
 - Ensure that the title and subtitle do not overshadow the actual chart data.
 

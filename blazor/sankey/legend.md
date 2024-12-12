@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Legends for Blazor Sankey Component | Syncfusion
-description: Learn how to configure and customize legends in the Blazor Sankey component to enhance data interpretation.
+description: Learn how to configure and customize legends in the Blazor Sankey component to enhance data interpretation and user interaction.
 platform: Blazor
 control: Sankey
 documentation: ug
