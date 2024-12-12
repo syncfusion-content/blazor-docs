@@ -134,7 +134,7 @@ Add the Syncfusion Blazor Sankey component in the **~/Pages/Index.razor** file.
 
 ## Populate Blazor Sankey with data
 
-To bind data for the sankey, you can assign an IEnumerable object to the [Nodes]() and [Links]() properties. These properties define the structure of the nodes and the relationships between them.
+To bind data for the sankey, you can assign an IEnumerable object to the  `Nodes` and `Links` properties. These properties define the structure of the nodes and the relationships between them.
 
 {% tabs %}
 {% highlight razor %}
@@ -190,7 +190,7 @@ To bind data for the sankey, you can assign an IEnumerable object to the [Nodes]
 
 ## Add title
 
-Using the [Title]() property, you can add a title to the sankey to provide the user with quick information about the data plotted in the sankey.
+Using the `Title` property, you can add a title to the sankey to provide the user with quick information about the data plotted in the sankey.
 
 {% tabs %}
 {% highlight razor %}
@@ -205,7 +205,7 @@ Using the [Title]() property, you can add a title to the sankey to provide the u
 
 ## Add node labels
 
-You can add data labels to improve the readability of the sankey. This can be achieved by setting the [Visible]() property to **true** in the [SankeyLabelSettings]().
+You can add data labels to improve the readability of the sankey. This can be achieved by setting the `Visible` property to **true** in the `SankeyLabelSettings`.
 
 {% tabs %}
 {% highlight razor %}
@@ -221,7 +221,7 @@ You can add data labels to improve the readability of the sankey. This can be ac
 
 ## Enable tooltip
 
-The tooltip can be enabled by setting the [Enable]() property in [SankeyTooltipSettings]() to **true**. However, the tooltip is enabled by default in the sankey.
+The tooltip can be enabled by setting the `Enable` property in `SankeyTooltipSettings` to **true**. However, the tooltip is enabled by default in the sankey.
 
 {% tabs %}
 {% highlight razor %}
@@ -237,7 +237,7 @@ The tooltip can be enabled by setting the [Enable]() property in [SankeyTooltipS
 
 ## Enable legend
 
-You can use legend for the sankey by setting the [Visible]() property to **true** in [SankeyLegendSettings](). However, the legend is enabled by default in the sankey.
+You can use legend for the sankey by setting the `Visible` property to **true** in `SankeyLegendSettings`. However, the legend is enabled by default in the sankey.
 
 {% tabs %}
 {% highlight razor %}
