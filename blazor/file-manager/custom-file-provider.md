@@ -7,7 +7,7 @@ control: File Manager
 documentation: ug
 ---
 
-# Custom file provider for Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager Component
+# Custom file provider for Blazor File Manager Component
 
 You can also create a custom file provider specific to your needs to connect with the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component, instead of relying on the above listed predefined providers offered by Syncfusion. Additionally, you need to ensure that the file actions requests and responses adhere to the same format used in the file system. Below are the details for each file action, to know more information about their request and response parameters.
 
