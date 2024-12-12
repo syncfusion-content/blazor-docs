@@ -44,12 +44,13 @@ The `FormName` property to the DataForm component, will assign a specified value
 The following example illustrates how add the `FormName` for DataForm component.
 
 {% tabs %}
-{% endhighlight %}
+{% highlight Razor %}
 
 {% include_relative code-snippet/form-binding/form-name.razor %}
 
-{% endhighlight %}
 {% endtabs %}
+{% endhighlight %} 
+
 
 
 
