@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Adaptive Lao=yout in Blazor Accumulation Chart Component | Syncfusion
+title: Adaptive Layout in Blazor Accumulation Chart Component | Syncfusion
 description: Checkout and learn here all about Adaptive Layout in Syncfusion Blazor Accumulation Chart component and more.
 platform: Blazor
 control: Accumulation Chart
@@ -38,7 +38,7 @@ When viewing the accumulation chart on a mobile device, some elements may not be
     {
         new PieData { Browser = "Chrome", Users = 59.28, DataLabelMappingName = "Chrome: 59.28%" },
         new PieData { Browser = "UC Browser", Users = 4.37, DataLabelMappingName = "UC Browser: 4.37%" },
-        new PieData { Browser = "Internet Explorer", Users = 6.12, DataLabelMappingName = "Internet Explorer: 6.12%" },
+        new PieData { Browser = "Internet Explorer", Users = 6.12, DataLabelMappingName = "Internet Explorer: 6 12%" },
         new PieData { Browser = "Sogou Explorer", Users = 1.37, DataLabelMappingName = "Sogou Explorer: 1.37%" },
         new PieData { Browser = "QQ", Users = 3.96, DataLabelMappingName = "QQ: 3.96%" },
         new PieData { Browser = "Safari", Users = 4.73, DataLabelMappingName = "Safari: 4.73%" },
