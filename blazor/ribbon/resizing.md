@@ -18,6 +18,39 @@ The Ribbon dynamically adjusts its elements during resizing. When the ribbon's s
 
 You can use the `AllowedSizes` property within `<RibbonItem>` to specify the sizes that an item can maintain during resizing. When set, the item's size remains constant within the defined value, irrespective of resizing.
 
+{% tabs %}
+{% highlight razor %}
+
+@using Syncfusion.Blazor.Ribbon;
+@using Syncfusion.Blazor.SplitButtons;
+
+<div style="width:25%">
+    <SfRibbon>
+        <RibbonTabs>
+            <RibbonTab HeaderText="Home">
+                <RibbonGroups>
+                    <RibbonGroup HeaderText="Clipboard">
+                        <RibbonCollections>
+                            <RibbonCollection>
+                                <RibbonItems>
+                                    <RibbonItem Type=RibbonItemType.Button AllowedSizes="RibbonItemSize.Large">
+                                        <RibbonButtonSettings Content="Cut" IconCss="e-icons e-cut"></RibbonButtonSettings>
+                                    </RibbonItem>
+                                </RibbonItems>
+                            </RibbonCollection>
+                        </RibbonCollections>
+                    </RibbonGroup>
+                </RibbonGroups>
+            </RibbonTab>
+        </RibbonTabs>
+    </SfRibbon>
+</div>
+
+{% endhighlight %}
+{% endtabs %}
+
+![Ribbon Item AllowedSizes](./images/ribbon_allowedSizes.png)
+
 ## Defining items active size
 
 The ActiveSize property within `<RibbonItem>` indicates the current size of the rendered item. By default, the value is Medium. It is a read-only property.
