@@ -65,7 +65,7 @@ In the following example, the ChunkSize is set to 5 MB (5,242,880 bytes), and th
 
 With chunk upload, the pause and resume options gives users enhanced control over the file upload process.
 
-![Blazor FileManager with DirectoryUpload](images/blazor-filemanager-chunkupload.png)
+![Blazor FileManager with chunkUpload](images/blazor-filemanager-chunkupload.png)
 
 ## Auto Upload
 
