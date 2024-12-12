@@ -168,7 +168,7 @@ You can use the `Timestamp` property to indicate the date and time of each messa
 @using Syncfusion.Blazor.InteractiveChat
 
 <div style="height: 400px; width: 400px;">
-    <SfChatUI ID="chatUser" User="CurrentUserModel" ShowTimestamp="true" Messages="ChatUserMessages"></SfChatUI>
+    <SfChatUI ID="chatUser" User="CurrentUserModel" ShowTimestamp="false" Messages="ChatUserMessages"></SfChatUI>
 </div>
 
 @code {

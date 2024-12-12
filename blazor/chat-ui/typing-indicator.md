@@ -38,7 +38,7 @@ The typing users are the `UserModel` list, where you can update the user’s dyn
 
 ```
 
-![Blazor Chat UI TypingUsersTemplate](./images/typinguser.png)
+![Blazor Chat UI TypingUsers](./images/typinguser.png)
 
 ## Typing indicator template 
 
