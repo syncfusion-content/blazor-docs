@@ -479,9 +479,15 @@ By default, the scheduler will render the overlapping events based on the start 
 
 ## Preventing Overlapping Events
 
-To prevent overlapping, you can set the [AllowOverlap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowOverlap) property to `false`.
+By default, the scheduler displays overlapping events according to their start and end times. To prevent overlapping, you can set the [AllowOverlap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowOverlap) property to `false`.
 
 When this property is set to `false`, any new or updated events that overlap with existing ones will trigger an overlap alert. The overlapping events will be collected in the [OverlapCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.PopupOpenEventArgs-1.html#Syncfusion_Blazor_Schedule_PopupOpenEventArgs_1_OverlapCollection) within the [PopupOpenEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.PopupOpenEventArgs-1.html).
+
+When the [AllowOverlap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowOverlap) property is set to false, the scheduler behaves as follows:
+* **Initial Load Behavior:** Upon initial loading, the scheduler prioritizes non-overlapping events based on their duration and all-day status. Events with longer durations and those marked as all-day receive higher priority to ensure there are no overlaps.
+* **Recurring Appointments:** If there are conflicts within a recurring appointment series during the initial load, the scheduler will display all occurrences of the series, except for the conflicting instance.
+* **Event Modifications:** When a user edits, saves, or removes appointments, the scheduler checks for potential overlaps. If a conflict is detected, the action is blocked, and a conflict alert is displayed to the user to address the issue.
+* **Dynamic Recurrence Series Creation or Editing:** When a user creates or edits a recurrence series dynamically, the scheduler will prevent any occurrences of the series from being added if a conflict is found within the series.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -528,7 +534,6 @@ When this property is set to `false`, any new or updated events that overlap wit
     }
 }
 ```
-![Blazor Scheduler with restricted Overlapping Events](images/blazor-scheduler-restrict-overlapping-events.png)
 
 ### Limitations
 * The [AllowOverlap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowOverlap) property checks for overlaps only within the currently rendered date event collection. This means that if you have events scheduled outside of the visible date range, the overlap check will not consider them by default.
