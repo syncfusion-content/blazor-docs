@@ -152,11 +152,14 @@ You can use the `<RibbonCollection>` directive to define each ribbon collection 
 {% tabs %}
 {% highlight razor %}
 
+@using Syncfusion.Blazor.Ribbon;
+@using Syncfusion.Blazor.SplitButtons;
+
 <SfRibbon>
     <RibbonTabs>
         <RibbonTab HeaderText="Home">
             <RibbonGroups>
-                <RibbonGroup HeaderText="Clipboard" Orientation="Orientation.Row">
+                <RibbonGroup HeaderText="Clipboard">
                     <RibbonCollections>
                         <RibbonCollection>
                             <RibbonItems>
