@@ -9,7 +9,7 @@ documentation: ug
 
 # Migration from the SfDiagram(classic) to SfDiagramComponent control
 
-This article describes the API migration process of the SfDiagramComponent from SfDiagram(classic).
+This comprehensive guide outlines the step-by-step API migration process for transitioning from the classic SfDiagram to the modern SfDiagramComponent in Blazor applications. It provides detailed instructions, code examples, and best practices to ensure a smooth upgrade experience.
 
 ## NuGet packages
 
