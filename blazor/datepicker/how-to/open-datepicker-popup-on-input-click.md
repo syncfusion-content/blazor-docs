@@ -33,7 +33,7 @@ The following example demonstrates how to open the DatePicker popup when the inp
 ## Open the Blazor DatePicker popup on Focus
 
 
-You can also open the DatePicker popup on input focus by setting the `OpenOnFocus` property to true.
+You can also open the DatePicker popup on input focus by setting the [OpenOnFocus](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_OpenOnFocus) property to true.
 
 The following example demonstrates how to open the DatePicker popup when the input is focused.
 
