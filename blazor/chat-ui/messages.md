@@ -277,7 +277,7 @@ You can use the `Text` property to provide information about the messages throug
             Text = "Maybe landscapes.",
             Author = CurrentUserModel,
             Status= new MessageStatusModel() {
-                Text = "seen"
+                Text = "Seen"
             }
         }
     };
@@ -312,7 +312,7 @@ You can use the `Tooltip` property to provide information about the messages by 
             Author = CurrentUserModel,
             Status= new MessageStatusModel() {
                 IconCss = "e-icons e-chat-seen",
-                Tooltip = "seen"
+                Tooltip = "Seen"
             }
         }
     };

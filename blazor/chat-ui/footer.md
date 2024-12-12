@@ -18,7 +18,7 @@ You can use `ShowFooter` property to enable or disable the chat footer.
 @using Syncfusion.Blazor.InteractiveChat
 
 <div style="height: 400px; width: 400px;">
-    <SfChatUI HeaderText="Albert" ShowFooter="false" User="CurrentUserModel" Messages="ChatUserMessages"></SfChatUI>
+    <SfChatUI ShowFooter="false" User="CurrentUserModel" Messages="ChatUserMessages"></SfChatUI>
 </div>
 
 @code {
