@@ -18,7 +18,7 @@ You can use `ShowHeader` property to enable or disable the chat header. It conta
 @using Syncfusion.Blazor.InteractiveChat
 
 <div style="height: 400px; width: 400px;">
-    <SfChatUI HeaderText="Albert" HeaderIconCss="e-icons e-people" ShowHeader="false" User="CurrentUserModel" Messages="ChatUserMessages"></SfChatUI>
+    <SfChatUI HeaderText="Michale" HeaderIconCss="e-icons e-people" ShowHeader="false" User="CurrentUserModel" Messages="ChatUserMessages"></SfChatUI>
 </div>
 
 @code {
@@ -46,7 +46,7 @@ You can use the `HeaderText` property to display the text that appears in the he
 @using Syncfusion.Blazor.InteractiveChat
 
 <div style="height: 400px; width: 400px;">
-    <SfChatUI HeaderText="Albert" User="CurrentUserModel" Messages="ChatUserMessages"></SfChatUI>
+    <SfChatUI HeaderText="Michale" User="CurrentUserModel" Messages="ChatUserMessages"></SfChatUI>
 </div>
 
 @code {
