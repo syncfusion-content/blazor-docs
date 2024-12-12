@@ -477,6 +477,122 @@ By default, the scheduler will render the overlapping events based on the start 
 ```
 ![Blazor Scheduler with Overlapping Events](images/blazor-scheduler-overlapping-events.png)
 
+## Preventing Overlapping Events
+
+By default, the scheduler displays overlapping events according to their start and end times. To prevent overlapping, you can set the [AllowOverlap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowOverlap) property to `false`.
+
+When this property is set to `false`, any new or updated events that overlap with existing ones will trigger an overlap alert. The overlapping events will be collected in the [OverlapCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.PopupOpenEventArgs-1.html#Syncfusion_Blazor_Schedule_PopupOpenEventArgs_1_OverlapCollection) within the [PopupOpenEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.PopupOpenEventArgs-1.html).
+
+When the [AllowOverlap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowOverlap) property is set to false, the scheduler behaves as follows:
+* **Initial Load Behavior:** Upon initial loading, the scheduler prioritizes non-overlapping events based on their duration and all-day status. Events with longer durations and those marked as all-day receive higher priority to ensure there are no overlaps.
+* **Recurring Appointments:** If there are conflicts within a recurring appointment series during the initial load, the scheduler will display all occurrences of the series, except for the conflicting instance.
+* **Event Modifications:** When a user edits, saves, or removes appointments, the scheduler checks for potential overlaps. If a conflict is detected, the action is blocked, and a conflict alert is displayed to the user to address the issue.
+* **Dynamic Recurrence Series Creation or Editing:** When a user creates or edits a recurrence series dynamically, the scheduler will prevent any occurrences of the series from being added if a conflict is found within the series.
+
+```cshtml
+@using Syncfusion.Blazor.Schedule
+
+<SfSchedule TValue="AppointmentData" AllowOverlap="false" Height="550px" @bind-SelectedDate="@CurrentDate">
+    <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
+</SfSchedule>
+
+@code {
+    DateTime CurrentDate = new DateTime(2024, 12, 2);
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData { Id = 1, Subject = "Board Meeting", StartTime = new DateTime(2024, 12, 1, 9, 30, 0),
+        EndTime = new DateTime(2024, 12, 1, 11, 0, 0) },
+        new AppointmentData { Id = 2, Subject = "Annual Conference", StartTime = new DateTime(2024, 12, 2, 10, 0, 0),
+        EndTime = new DateTime(2024, 12, 2, 11, 0, 0) },
+        new AppointmentData { Id = 3, Subject = "Tech Symposium", StartTime = new DateTime(2024, 12, 2, 10, 30, 0),
+        EndTime = new DateTime(2024, 12, 2, 11, 30, 0) },
+        new AppointmentData { Id = 4, Subject = "Client Meeting", StartTime = new DateTime(2024, 12, 3, 12, 0, 0),
+        EndTime = new DateTime(2024, 12, 3, 14, 0, 0), RecurrenceRule = "FREQ=DAILY;INTERVAL=1;COUNT=5" },
+        new AppointmentData { Id = 5, Subject = "Project Review", StartTime = new DateTime(2024, 12, 4, 11, 0, 0),
+        EndTime = new DateTime(2024, 12, 4, 14, 0, 0) },
+        new AppointmentData { Id = 6, Subject = "Strategy Session", StartTime = new DateTime(2024, 12, 6, 9, 30, 0),
+        EndTime = new DateTime(2024, 12, 6, 11, 0, 0) },
+    };
+
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+        public string RecurrenceException { get; set; }
+
+    }
+}
+```
+
+### Limitations
+* The [AllowOverlap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowOverlap) property checks for overlaps only within the currently rendered date event collection. This means that if you have events scheduled outside of the visible date range, the overlap check will not consider them by default.
+
+* If you need to check for overlaps with events that are outside the current rendered dates, you can trigger the [ActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnActionBegin) event. This event allows you to perform custom logic to check for overlaps across all events, including those outside the visible date range, ensuring a more comprehensive overlap check.
+
+```cshtml
+<SfSchedule TValue="AppointmentData" AllowOverlap="false" Height="550px" @bind-SelectedDate="@CurrentDate">
+    <ScheduleEvents TValue="AppointmentData" OnActionBegin="OnActionBegin"></ScheduleEvents>
+    <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
+</SfSchedule>
+
+@code {
+    DateTime CurrentDate = new DateTime(2024, 12, 2);
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData { Id = 1, Subject = "Board Meeting", StartTime = new DateTime(2024, 12, 1, 9, 30, 0),
+        EndTime = new DateTime(2024, 12, 1, 11, 0, 0) },
+        new AppointmentData { Id = 2, Subject = "Annual Conference", StartTime = new DateTime(2024, 12, 2, 10, 0, 0),
+        EndTime = new DateTime(2024, 12, 2, 11, 0, 0) },
+        new AppointmentData { Id = 3, Subject = "Tech Symposium", StartTime = new DateTime(2024, 12, 2, 10, 30, 0),
+        EndTime = new DateTime(2024, 12, 2, 11, 30, 0) },
+        new AppointmentData { Id = 4, Subject = "Client Meeting", StartTime = new DateTime(2024, 12, 3, 12, 0, 0),
+        EndTime = new DateTime(2024, 12, 3, 14, 0, 0), RecurrenceRule = "FREQ=DAILY;INTERVAL=1;COUNT=5" },
+        new AppointmentData { Id = 5, Subject = "Project Review", StartTime = new DateTime(2024, 12, 4, 11, 0, 0),
+        EndTime = new DateTime(2024, 12, 4, 14, 0, 0) },
+        new AppointmentData { Id = 6, Subject = "Strategy Session", StartTime = new DateTime(2024, 12, 6, 9, 30, 0),
+        EndTime = new DateTime(2024, 12, 6, 11, 0, 0) },
+    };
+    public void OnActionBegin(ActionEventArgs<AppointmentData> args)
+    {
+        if (args.ActionType == ActionType.EventCreate || args.ActionType == ActionType.EventChange)
+        {
+            // you can perform custom logic to check for overlaps across all events.
+        }
+    }
+
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+        public string RecurrenceException { get; set; }
+    }
+}
+```
+
 ## Restricting event creation on specific time slots
 You can restrict the users to create and update more than one appointment on specific time slots. Also, you can disable the CRUD action on those time slots if it is already occupied, which can be achieved using Scheduler’s public method [IsSlotAvailableAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_IsSlotAvailableAsync__0_).
 
