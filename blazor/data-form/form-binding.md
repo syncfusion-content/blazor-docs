@@ -37,3 +37,20 @@ The following example illustrates how the `EditContext` is bound to the DataForm
 {% endhighlight %}
 {% endtabs %}
 
+## FormName 
+
+The `FormName` property to the DataForm component, will assign a specified value to the underlying EditForm.FormName. This allows unique identification of the form for processing or validation, especially in applications with multiple forms
+
+The following example illustrates how add the `FormName` for DataForm component.
+
+{% tabs %}
+{% endhighlight %}
+
+{% include_relative code-snippet/form-binding/form-name.razor %}
+
+{% endhighlight %}
+{% endtabs %}
+
+
+
+
