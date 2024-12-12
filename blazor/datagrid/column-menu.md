@@ -29,18 +29,17 @@ The default menu items are displayed in the following table,
 @using Syncfusion.Blazor.Grids
 @using BlazorApp1.Data
 
-<SfGrid DataSource="@Orders" Height="315" AllowGrouping="true" ColumnMenuItems=@MenuItems AllowFiltering="true" ShowColumnMenu="true" AllowPaging="true">
+<SfGrid DataSource="@Orders" Height="315" AllowGrouping="true" AllowSorting="true" AllowFiltering="true" ShowColumnMenu="true" AllowPaging="true">
     <GridFilterSettings Type="FilterType.CheckBox"></GridFilterSettings>
     <GridGroupSettings ShowGroupedColumn="true"></GridGroupSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Center" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150" TextAlign="TextAlign.Center" ShowColumnMenu="false"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Center" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" TextAlign="TextAlign.Center" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 @code {
-    public string[] MenuItems = new string[] { "Group", "Ungroup", "ColumnChooser", "Filter" };
     public List<OrderData> Orders { get; set; }    
     protected override void OnInitialized()
     {
@@ -50,51 +49,46 @@ The default menu items are displayed in the following table,
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
 public class OrderData
+{
+    public static List<OrderData> Order = new List<OrderData>();
+    public OrderData(int OrderID, double Freight, string CustomerId, string ShipCity, string ShipCountry)
     {
-        public static List<OrderData> Orders = new List<OrderData>();             
-        public OrderData()
-        {
-
-        }
-        public OrderData(int? OrderID, string CustomerID, DateTime OrderDate, double Freight,string ShipCity)
-        {
-            this.OrderID = OrderID;
-            this.CustomerID = CustomerID;
-            this.Freight = Freight;
-            this.ShipCity = ShipCity;          
-        }
-        public static List<OrderData> GetAllRecords()
-        {
-            if (Orders.Count() == 0)
-            {
-                int code = 10;
-                for (int i = 1; i < 2; i++)
-                {
-                    Orders.Add(new OrderData(10248, "ALFKI",33.32, "Reims"));
-                    Orders.Add(new OrderData(10249, "ANANTR",34.32, "Münster"));
-                    Orders.Add(new OrderData(10250, "ANTON", 36.32, "Rio de Janeiro"));
-                    Orders.Add(new OrderData(10251, "BLONP", 54.31, "Lyon"));
-                    Orders.Add(new OrderData(10252, "BOLID",35.36, "Charleroi"));
-                    Orders.Add(new OrderData(10253, "ANTON", 37.35, "Lyon"));
-                    Orders.Add(new OrderData(10254, "BLONP", 33.32, "Rio de Janeiro"));
-                    Orders.Add(new OrderData(10255, "BOLID", 76.74, "Münster"));
-                    Orders.Add(new OrderData(10256, "ALFKI",55.43, "Reims"));                   
-                    code += 5;
-                }
-            }
-            return Orders;
-        }
-
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public double? Freight { get; set; }
-        public string ShipCity { get; set; }
-
+        this.OrderID = OrderID;
+        this.Freight = Freight;
+        this.CustomerID = CustomerId;
+        this.ShipCity = ShipCity;
     }
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Order.Count == 0)
+        {
+            Order.Add(new OrderData(10248, 32.38, "VINET", "Reims"));
+            Order.Add(new OrderData(10249, 11.61, "TOMSP", "Münster"));
+            Order.Add(new OrderData(10250, 65.83, "HANAR", "Rio de Janeiro"));
+            Order.Add(new OrderData(10251, 41.34, "VICTE", "Lyon"));
+            Order.Add(new OrderData(10252, 51.3, "SUPRD", "Charleroi"));
+            Order.Add(new OrderData(10253, 58.17, "HANAR", "Rio de Janeiro"));
+            Order.Add(new OrderData(10254, 22.98, "CHOPS", "Bern"));
+            Order.Add(new OrderData(10255, 148.33, "RICSU", "Genève"));
+            Order.Add(new OrderData(10256, 13.97, "WELLI", "Resende"));
+            Order.Add(new OrderData(10257, 81.91, "HILAA", "San Cristóbal"));
+            Order.Add(new OrderData(10258, 140.51, "ERNSH", "Graz"));
+            Order.Add(new OrderData(10259, 3.25, "CENTC", "México D.F."));
+            Order.Add(new OrderData(10260, 55.09, "OTTIK", "Köln"));
+            Order.Add(new OrderData(10261, 3.05, "QUEDE", "Rio de Janeiro"));
+            Order.Add(new OrderData(10262, 48.29, "RATTC", "Albuquerque"));
+        }
+        return Order;
+    }
+    public int OrderID { get; set; }
+    public double Freight { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipCity { get; set; }
+}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrUsijhhkfMyNWj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLzMLWLKTPWHQcg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > *  You can disable column menu for a particular column by defining the column's [ShowColumnMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ShowColumnMenu) property as false.
 > * You can customize the default menu items by defining the [ColumnMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ContextMenuItems) with the required items.
@@ -111,63 +105,60 @@ The following example demonstrates how to prevent the column menu for a specific
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@OrderData" Height="315" AllowSorting="true" AllowGrouping="true" AllowFiltering="true" ShowColumnMenu="true" AllowPaging="true">
+<SfGrid DataSource="@Orders" Height="315" AllowSorting="true" AllowGrouping="true" AllowFiltering="true" ShowColumnMenu="true" AllowPaging="true">
     <GridFilterSettings Type="FilterType.CheckBox"></GridFilterSettings>
     <GridGroupSettings ShowGroupedColumn="true"></GridGroupSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" ShowColumnMenu="false" TextAlign="TextAlign.Right" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer Name"  Width="100"></GridColumn>
-        <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(OrderDetails.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" ShowColumnMenu="false" TextAlign="TextAlign.Right" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
     </GridColumns>
 </SfGrid>
 @code {
-    public List<OrderDetails> OrderData { get; set; }    
+    public List<OrderData> Orders { get; set; }    
     protected override void OnInitialized()
     {
-        OrderData = OrderDetails.GetAllRecords();
+        Orders = OrderData.GetAllRecords();
     }
 }
 {% endhighlight %}
-{% highlight c# tabtitle="OrderDetails.cs" %}
-public class OrderDetails
+{% highlight c# tabtitle="OrderData.cs" %}
+public class OrderData
 {
-    public static List<OrderDetails> order = new List<OrderDetails>();
-    
-    public OrderDetails(int OrderID, string CustomerId, string Shipcity,  string Shipcountry, double Freight)
+    public static List<OrderData> Order = new List<OrderData>();    
+    public OrderData(int OrderID, string CustomerId, string Shipcity, double Freight)
     {
         this.OrderID = OrderID;
         this.CustomerID = CustomerId;
         this.ShipCity = Shipcity;
-        this.ShipCountry = Shipcountry;
         this.Freight = Freight; 
     }
-    public static List<OrderDetails> GetAllRecords()
+    public static List<OrderData> GetAllRecords()
     {
-        if (order.Count == 0)
+        if (Order.Count == 0)
         {
-            order.Add(new OrderDetails(10248, "VINET", "Reims", "France",  32.38));
-            order.Add(new OrderDetails(10249, "TOMSP", "Münster", "Germany",  11.61));
-            order.Add(new OrderDetails(10250, "HANAR", "Rio de Janeiro", "Brazil",  65.83));
-            order.Add(new OrderDetails(10251, "VICTE", "Lyon", "France", 41.34));
-            order.Add(new OrderDetails(10252, "SUPRD", "Charleroi", "Belgium", 51.3));
-            order.Add(new OrderDetails(10253, "HANAR", "Rio de Janeiro", "Brazil",  58.17));
-            order.Add(new OrderDetails(10254, "CHOPS", "Bern", "Switzerland",  22.98));
-            order.Add(new OrderDetails(10255, "RICSU", "Genève", "Switzerland",  148.33));
-            order.Add(new OrderDetails(10256, "WELLI",  "Resende", "Brazil",  13.97));
-            order.Add(new OrderDetails(10257, "HILAA", "San Cristóbal", "Venezuela",  81.91));
-            order.Add(new OrderDetails(10258, "ERNSH", "Graz", "Austria",  140.51));
-            order.Add(new OrderDetails(10259, "CENTC", "México D.F.", "Mexico", 3.25));
-            order.Add(new OrderDetails(10260, "OTTIK", "Köln",  "Germany", 55.09));
-            order.Add(new OrderDetails(10261, "QUEDE", "Rio de Janeiro", "Brazil", 3.05));
-            order.Add(new OrderDetails(10262, "RATTC", "Albuquerque", "USA", 48.29));
+            Order.Add(new OrderData(10248, "VINET", "Reims", 32.38));
+            Order.Add(new OrderData(10249, "TOMSP", "Münster", 11.61));
+            Order.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", 65.83));
+            Order.Add(new OrderData(10251, "VICTE", "Lyon", 41.34));
+            Order.Add(new OrderData(10252, "SUPRD", "Charleroi", 51.3));
+            Order.Add(new OrderData(10253, "HANAR", "Rio de Janeiro", 58.17));
+            Order.Add(new OrderData(10254, "CHOPS", "Bern", 22.98));
+            Order.Add(new OrderData(10255, "RICSU", "Genève", 148.33));
+            Order.Add(new OrderData(10256, "WELLI", "Resende", 13.97));
+            Order.Add(new OrderData(10257, "HILAA", "San Cristóbal", 81.91));
+            Order.Add(new OrderData(10258, "ERNSH", "Graz", 140.51));
+            Order.Add(new OrderData(10259, "CENTC", "México D.F.", 3.25));
+            Order.Add(new OrderData(10260, "OTTIK", "Köln", 55.09));
+            Order.Add(new OrderData(10261, "QUEDE", "Rio de Janeiro", 3.05));
+            Order.Add(new OrderData(10262, "RATTC", "Albuquerque", 48.29));
         }
-        return order;
+        return Order;
     }
     public int OrderID { get; set; }
     public string CustomerID { get; set; }
     public string ShipCity { get; set; }
-    public string ShipCountry { get; set; }
     public double Freight { get; set; } 
 }
 {% endhighlight %}
