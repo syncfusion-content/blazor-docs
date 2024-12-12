@@ -781,7 +781,7 @@ Below example demonstrates the usages of `DisplayOptions` property to control th
 
 ![Display Options Classic](./images/items/displayoption_classic.png)
 
-![Display Options Simplified & Overflow](./images/items/displayoption_simp_overflow.png)
+![Display Options Simplified and Overflow](./images/items/displayoption_simp_overflow.png)
 
 ## Enable/Disable items
 
