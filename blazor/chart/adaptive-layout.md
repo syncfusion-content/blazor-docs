@@ -86,14 +86,13 @@ The table below outlines the behavior of various chart elements under specific c
 |--------------|------------------  |---------------------|
 | Chart Title  | <kbd>Height &lt; 200</kbd> / <kbd>Width &lt; 200</kbd> | Chart title is disabled |
 | Chart Sutitle | <kbd>Height &lt; 300</kbd> / <kbd>Width &lt; 300</kbd> | Chart subtitle is disabled |
-| Axis Title | <kbd>Height &lt;= 200</kbd> / <kbd>Width &lt;= 200</kbd> | Axis title is disabled |
-| Axis Scrollbar| <kbd>Height &lt;= 200</kbd> or <kbd>Width &lt;= 200</kbd> | Axis scrollBar is disabled |
-| Axis Label  | <kbd>Height &lt; 100</kbd> / <kbd>Width &lt; 100 | Axis label is disabled |
-| Axis Label Format | <kbd>Height &lt;= 400</kbd> / <kbd>Width &lt;= 400</kbd> | Format the X axis numeric labels with M, K and B / Format the Y axis numeric labels with M, K and B |
-| Legend | <kbd>Height &lt; 300</kbd> / <kbd>Width &lt; 300</kbd> | Move to right if the width is greater than 200px or else disabled / Move to bottom if the height is greater than 200px or else disabled |
-| Marker | <kbd>Height &lt; 200</kbd> / <kbd>Width &lt; 200</kbd> | Disable marker in the chart |
+| Axes | <kbd>Height &lt;= 200</kbd> / <kbd>Width &lt;= 200</kbd> | Horizontal/Vertical axis titles and scrollbars are disabled |
+| Axes Label  | <kbd>Height &lt; 100</kbd> / <kbd>Width &lt; 100 | Horizontal/Vertical axis labels are disabled |
+| Axis Label Format | <kbd>Height &lt;= 400</kbd> / <kbd>Width &lt;= 400</kbd> | Axis numeric labels are formatted with M, K and B |
+| Legend | <kbd>Height &lt; 300</kbd> / <kbd>Width &lt; 300</kbd> | Moves to the right if the width is greater than 200px; otherwise, it is disabled / Moves to the bottom if the height is greater than 200px; otherwise, it is disabled. |
+| Marker | <kbd>Height &lt; 200</kbd> / <kbd>Width &lt; 200</kbd> | Marker is disabled in the chart |
 | Zoom Toolkit | <kbd>Height &lt; 200</kbd> / <kbd>Width &lt; 200</kbd> | Zoom toolkit is disabled |
-| Datalabel <br> (Column abd Bar Chart Types)| | Datalabel will rotate based on rect size. If the datalabel goes beyond the size, it will hide |
+| Datalabel <br> (Column and Bar Chart Types)| | Datalabel rotates based on rectangle size. If it exceeds the available size, it is hidden |
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
