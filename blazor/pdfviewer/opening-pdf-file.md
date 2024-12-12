@@ -1,13 +1,17 @@
 ---
 title: "Opening PDF file in Blazor PDF Viewer Component | Syncfusion"
 component: "PDF Viewer"
-description: "This page helps you to learn about how to load PDF files from various locations in Syncfusion's Blazor PDF Viewer."
+description: "This page helps you to learn about how to load PDF files from various locations in Syncfusion Blazor PDF Viewer."
 platform: Blazor
 control: PDF Viewer
 documentation: ug
 ---
 
+<<<<<<< HEAD
+N> Syncfusion&reg; recommends using [Blazor PDF Viewer](https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/server-side-application) Component which provides fast rendering of pages and improved performance. Also, there is no need of external Web service for processing the files and ease out the deployment complexity. It can be used in Blazor Server, WASM and MAUI applications without any changes.
+=======
 N> Syncfusion<sup style="font-size:70%">&reg;</sup> recommends using [Blazor PDF Viewer (NextGen)](https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/server-side-application) Component which provides fast rendering of pages and improved performance. Also, there is no need of external Web service for processing the files and ease out the deployment complexity. It can be used in Blazor Server, WASM and MAUI applications without any changes.
+>>>>>>> remotes/origin/hotfix/hotfix-v27.2.2
 
 # Open PDF files in PDF Viewer for Blazor from various storage location
 
@@ -135,7 +139,7 @@ N> The **System.Data.SqlClient** package must be installed in your application t
 
 ## Opening a PDF from file system
 
-There is an UI option in built-in toolbar to open the PDF file from local file system. If you want to achieve the same functionality while designing your own toolbar, you can use the following code example to load and open the PDF file. In this sample, the Syncfusion’s Uploader control is used for Blazor.
+There is an UI option in built-in toolbar to open the PDF file from local file system. If you want to achieve the same functionality while designing your own toolbar, you can use the following code example to load and open the PDF file. In this sample, the Syncfusion&reg; Uploader control is used for Blazor.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs

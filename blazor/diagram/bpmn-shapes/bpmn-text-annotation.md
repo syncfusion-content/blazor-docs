@@ -146,7 +146,6 @@ The following image shows how to drag a symbol from the palette and connect the 
 ![Auto BPMN Shape](../images/Bpmn-TextAnnotationTarget-Connect.gif)
 
 There are several types of Text annotation directions as follows:
-
 | Direction | Image |
 | -------- | -------- |
 | Auto | ![Auto BPMN Shape](../images/Bpmn-TextAnnotation-Auto.png)|

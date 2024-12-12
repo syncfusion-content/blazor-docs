@@ -11,7 +11,11 @@ documentation: ug
 
 The [OverscanCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_OverscanCount) feature in a PDF Viewer allows users to preload/render specified number of pages before and after the visible view port when opening a PDF document, thereby enhance the scrolling experience.
  
+<<<<<<< HEAD
+To utilize this capability in Syncfusion&reg; PDF Viewer, adjust the OverscanCount property. By setting this property to a desired number, users can preload pages adjacent to the active page. This ensures quicker access to specific pages without waiting for the entire document to load.
+=======
 To utilize this capability in Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer, adjust the OverscanCount property. By setting this property to a desired number, users can preload pages adjacent to the active page. This ensures quicker access to specific pages without waiting for the entire document to load.
+>>>>>>> remotes/origin/hotfix/hotfix-v27.2.2
 
 Below is a code snippet illustrating how to implement the OverscanCount:
 
