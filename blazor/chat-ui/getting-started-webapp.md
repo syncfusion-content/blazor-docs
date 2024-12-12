@@ -99,7 +99,7 @@ Add the Syncfusion Blazor Chat UI component in the **~Pages/.razor** file. If an
 {% tabs %}
 {% highlight razor %}
 
-<div class="chatui-container" style="height: 400px; width: 400px;">
+<div style="height: 400px; width: 400px;">
     <SfChatUI></SfChatUI>
 </div>
 
@@ -108,7 +108,7 @@ Add the Syncfusion Blazor Chat UI component in the **~Pages/.razor** file. If an
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Chat UI component in your default web browser.
 
-![Blazor Chat UI Component](./images/chat-ui-component.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBzMLsWBOgIaxcg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chat UI Component](./images/chat-ui-component.png)" %}
 
 ## Configure messages and user
 
@@ -126,14 +126,14 @@ You can use the `messages` property to add messages and the `user` property to c
 {% tabs %}
 {% highlight razor %}
 
-<div class="chatui-container" style="height: 400px; width: 400px;">
+<div style="height: 400px; width: 400px;">
     <SfChatUI ID="chatUser" User="CurrentUserModel" Messages="ChatUserMessages"></SfChatUI>
 </div>
 
 @code {
     private static UserModel CurrentUserModel = new UserModel() { ID = "User1", User = "Albert" };
     private static UserModel MichaleUserModel = new UserModel() { ID = "User2", User = "Michale Suyama" };
-    
+
     private List<ChatMessage> ChatUserMessages = new List<ChatMessage>()
     {
         new ChatMessage() { Text = "Want to get coffee tomorrow?", Author = CurrentUserModel },
@@ -145,4 +145,4 @@ You can use the `messages` property to add messages and the `user` property to c
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Chat UI default prompt](./images/default-messages.png)"
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDrfsLCCBkezTLUV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chat UI default prompt](./images/default-messages.png)" %}
