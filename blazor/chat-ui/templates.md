@@ -145,9 +145,17 @@ You can use the `TypingUsersTemplate` tag to customize the display of users curr
 <div class="template-chatui" style="height: 400px; width: 400px;">
     <SfChatUI ID="chatUser" User="CurrentUserModel" Messages="ChatUserMessages" TypingUsers="TypingUsers">
         <TypingUsersTemplate>
-            <span class="typing-wrapper">@(context.Users[0].User) is typing</span>
-            <span class="e-indicator"></span>
-            <span class="e-indicator"></span>
+            <div class="typing-wrapper">
+                @for (int i = 0; i < context.Users.Count; i++)
+                {
+                    if (i == context.Users.Count - 1 && i > 0)
+                    {
+                        <span>and </span>
+                    }
+                    <span class="typing-user">@context.Users[i].User</span>
+                }
+                <span> are typing...</span>
+            </div>
         </TypingUsersTemplate>
     </SfChatUI>
 </div>
@@ -155,7 +163,8 @@ You can use the `TypingUsersTemplate` tag to customize the display of users curr
 @code {
     private static UserModel CurrentUserModel = new UserModel() { ID = "User1", User = "Albert" };
     private static UserModel MichaleUserModel = new UserModel() { ID = "User2", User = "Michale Suyama" };
-    private List<UserModel> TypingUsers = new List<UserModel>() { CurrentUserModel, MichaleUserModel };
+    private static UserModel ReenaUserModel = new UserModel() { ID = "User2", User = "Reena" };
+    private List<UserModel> TypingUsers = new List<UserModel>() { MichaleUserModel, ReenaUserModel };
 
     private List<ChatMessage> ChatUserMessages = new List<ChatMessage>()
     {
@@ -167,11 +176,20 @@ You can use the `TypingUsersTemplate` tag to customize the display of users curr
 
 <style>
     .typing-wrapper {
-        background: #495b79;
-        color: white;
-        border-radius: 5px;
-        padding: 2px;
+        display: flex;
+        gap: 4px;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        color: #555;
+        margin: 5px 0;
     }
+
+    .typing-user {
+        font-weight: bold;
+        color: #0078d4;
+    }
+
 </style>
 
 ```
@@ -190,7 +208,6 @@ You can use the `SuggestionTemplate` tag to customize the quick reply suggestion
     <SfChatUI ID="chatUser" User="CurrentUserModel" Messages="ChatUserMessages" Suggestions="@Suggestions">
         <SuggestionTemplate>
             <div class='suggestion-item active'>
-                <span class="e-icons e-circle-info"></span>
                 <div class="content">@context.Suggestions</div>
             </div>
         </SuggestionTemplate>
@@ -200,13 +217,12 @@ You can use the `SuggestionTemplate` tag to customize the quick reply suggestion
 @code {
     private static UserModel CurrentUserModel = new UserModel() { ID = "User1", User = "Albert" };
     private static UserModel MichaleUserModel = new UserModel() { ID = "User2", User = "Michale Suyama" };
-    private List<string> Suggestions = new List<string>() { "I haven't decided yet.", "Do you have any ideas?" };
+    private List<string> Suggestions = new List<string>() { "Portrait", "Landscape" };
 
     private List<ChatMessage> ChatUserMessages = new List<ChatMessage>()
     {
         new ChatMessage() { Text = "Hi, thinking of painting this weekend.", Author = CurrentUserModel },
-        new ChatMessage() { Text = "That’s fun! What will you paint?", Author = MichaleUserModel },
-        new ChatMessage() { Text = "Maybe landscapes.", Author = CurrentUserModel }
+        new ChatMessage() { Text = "That’s fun! What will you paint?", Author = MichaleUserModel }
     };
 }
 
@@ -284,6 +300,10 @@ You can use the `FooterTemplate` tag to customize the default footer area and ma
 }
 
 <style>
+    .template-chatui .e-chat-ui .e-footer {
+        margin: unset;
+        align-self: auto;
+    }
     .custom-footer {
         display: flex;
         gap: 10px;
