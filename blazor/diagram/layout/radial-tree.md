@@ -17,7 +17,7 @@ The `RadialTree` layout provides support for adding space between the nodes. The
 
 ## How to create a RadialTree with DataSource
 
-You can create a radial tree layout with DataSource. The following code example illustrates how to create a radial tree layout using a data source.
+You can create a radial tree layout with a DataSource. The following code example illustrates how to create a radial tree layout using a data source.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
@@ -149,7 +149,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to create a RadialTree with nodes and connectors
 
-You can render a radial tree layout without using Datasource. The following code demonstrates how to render a radial tree layout without using DataSource.
+You can render a radial tree layout without using a Datasource. The following code demonstrates how to render a radial tree layout without using a DataSource.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Tooltip in Blazor Ribbon Component | Syncfusion
-description: Checkout and learn about Tooltip in Blazor Ribbon component in Blazor Server App and Blazor WebAssembly App.
+title: Events in Blazor Ribbon Component | Syncfusion
+description: Checkout and learn about Events in Blazor Ribbon component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Ribbon
 documentation: ug
@@ -11,36 +11,67 @@ documentation: ug
 
 This section describes the Ribbon events that will be triggered when appropriate actions are performed. The following events are available in the Ribbon component.
 
-## Created
+|Name|Args|Description|
+|---|---|---|
+|Created|EventCallback|Triggers when the Ribbon component's rendering is fully completed
+|TabSelecting|TabSelectingEventArgs|Triggers before a tab is selected in the Ribbon component
+|TabSelected|TabSelectedEventArgs|Triggers after a tab is successfully selected in the Ribbon component
+|RibbonExpanding|ExpandEventArgs|Triggers before the Ribbon component is expanded
+|RibbonCollapsing|CollapseEventArgs|Triggers before the Ribbon component is collapsed
+|LauncherIconClick|LauncherClickEventArgs|Triggers when the launcher icon in a Ribbon group is clicked
+|OverflowPopupOpening|OverflowPopupEventArgs|before the overflow popup in the Ribbon component opens
+|OverflowPopupClosing|OverflowPopupEventArgs|before the overflow popup in the Ribbon component closes
 
-The `Created` event is triggered when the Ribbon component's rendering is fully completed.
+## How to configure Ribbon events
 
-## TabSelecting
+Above defined events are available on the `<SfRibbon>` tag directive. Here, we have explained about the sample code snippets of Ribbon events.
 
-The `TabSelecting` event is triggered before a tab is selected in the Ribbon component.
+{% tabs %}
+{% highlight razor %}
 
-## TabSelected
+@using Syncfusion.Blazor.Ribbon
 
-The `TabSelected` event is triggered after a tab is successfully selected in the Ribbon component.
+<div style="width:25%">
+    <SfRibbon Created="Created" TabSelecting="TabSelecting" TabSelected="TabSelected" RibbonExpanding="RibbonExpanding" RibbonCollapsing="RibbonCollapsing" LauncherIconClick="LauncherIconClick" OverflowPopupOpening="OverflowPopupOpening" OverflowPopupClosing="OverflowPopupClosing">
+        <RibbonTabs>
+            <RibbonTab HeaderText="Home">
+                <RibbonGroups>
+                    <RibbonGroup HeaderText="Clipboard">
+                        <RibbonCollections>
+                            <RibbonCollection>
+                                <RibbonItems>
+                                    <RibbonItem Type=RibbonItemType.Button AllowedSizes="RibbonItemSize.Large">
+                                        <RibbonButtonSettings Content="Cut" IconCss="e-icons e-cut"></RibbonButtonSettings>
+                                    </RibbonItem>
+                                </RibbonItems>
+                            </RibbonCollection>
+                        </RibbonCollections>
+                    </RibbonGroup>
+                </RibbonGroups>
+            </RibbonTab>
+        </RibbonTabs>
+    </SfRibbon>
+</div>
 
-## RibbonExpanding
+@code {
+    private void Created() { /* your actions here */ }
 
-The `RibbonExpanding` event is triggered before the Ribbon component is expanded.
+    private void TabSelecting(TabSelectingEventArgs args) { /* your actions here */ }
 
-## RibbonCollapsing
+    private void TabSelected(TabSelectedEventArgs args) { /* your actions here */ }
 
-The `RibbonCollapsing` event is triggered before the Ribbon component is collapsed.
+    private void RibbonExpanding(ExpandEventArgs args) { /* your actions here */ }
 
-## LauncherIconClick
+    private void RibbonCollapsing(CollapseEventArgs args) { /* your actions here */ }
 
-The `LauncherIconClick` event is triggered when the launcher icon in a Ribbon group is clicked. 
+    private void LauncherIconClick(LauncherClickEventArgs args) { /* your actions here */ }
 
-## OverflowPopupOpening
+    private void OverflowPopupOpening(OverflowPopupEventArgs args) { /* your actions here */ }
 
-The `OverflowPopupOpening` event is triggered before the overflow popup in the Ribbon component opens.
+    private void OverflowPopupClosing(OverflowPopupEventArgs args) { /* your actions here */ }
+}
 
-## OverflowPopupClosing
-
-The `OverflowPopupClosing` event is triggered before the overflow popup in the Ribbon component closes.
+{% endhighlight %}
+{% endtabs %}
 
 > To know about the built-in Ribbon items supported events, please refer to the corresponding item section in [Ribbon Items](./items).
