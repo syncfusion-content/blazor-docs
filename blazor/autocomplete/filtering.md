@@ -39,7 +39,7 @@ The below code demonstrates the filtering functionality with [ODataAdaptor](http
 
 ## Debounce in Filtering
 
-You can use the `DebounceDelay` property for filtering, enabling you to set a delay in milliseconds. This functionality helps reduce the frequency of filtering as you type, enhancing performance and responsiveness for a smoother user experience.
+You can use the `DebounceDelay` property for filtering, enabling you to set a delay in milliseconds. This functionality helps reduce the frequency of filtering as you type, enhancing performance and responsiveness for a smoother user experience.By default, a DebounceDelay of 300ms is set. If you wish to disable this feature entirely, you can set it to 0ms.
 
 {% highlight cshtml %}
 
