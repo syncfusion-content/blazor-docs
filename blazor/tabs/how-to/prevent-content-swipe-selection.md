@@ -61,4 +61,4 @@ The following are the available [`SwipeMode`](https://help.syncfusion.com/cr/bla
 </SfTab>
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBzMrWWARDOqfgG?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjLzsrsrTlqFIhjX?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
