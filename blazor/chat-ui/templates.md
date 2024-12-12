@@ -17,6 +17,8 @@ You can use the `EmptyChatTemplate` tag to customize the chat interface when no 
 
 ```cshtml
 
+@using Syncfusion.Blazor.InteractiveChat
+
 <div style="height: 400px; width: 400px;">
     <SfChatUI>
         <EmptyChatTemplate>
@@ -46,6 +48,8 @@ You can use the `EmptyChatTemplate` tag to customize the chat interface when no 
 You can use the `MessageTemplate` tag to customize the appearance and styling of each chat message. Modify text styling, layout, and other design elements to ensure a personalized chat experience. The template context includes `Message` and `Index` items.
 
 ```cshtml
+
+@using Syncfusion.Blazor.InteractiveChat
 
 <div class="template-chatui" style="height: 400px; width: 400px;">
     <SfChatUI ID="chatUser" User="CurrentUserModel" Messages="ChatUserMessages">
@@ -95,6 +99,8 @@ You can use the `TimeBreakTemplate` tag to customize how time breaks are display
 
 ```cshtml
 
+@using Syncfusion.Blazor.InteractiveChat
+
 <div class="template-chatui" style="height: 400px; width: 400px;">
     <SfChatUI ID="chatUser" User="CurrentUserModel" Messages="ChatUserMessages" ShowTimeBreak="true">
         <TimeBreakTemplate>
@@ -134,10 +140,12 @@ You can use the `TypingUsersTemplate` tag to customize the display of users curr
 
 ```cshtml
 
+@using Syncfusion.Blazor.InteractiveChat
+
 <div class="template-chatui" style="height: 400px; width: 400px;">
     <SfChatUI ID="chatUser" User="CurrentUserModel" Messages="ChatUserMessages" TypingUsers="TypingUsers">
         <TypingUsersTemplate>
-            <span class="typing-wrapper">@(context.Users[0].User) Is Typing</span>
+            <span class="typing-wrapper">@(context.Users[0].User) is typing</span>
             <span class="e-indicator"></span>
             <span class="e-indicator"></span>
         </TypingUsersTemplate>
@@ -175,6 +183,8 @@ You can use the `TypingUsersTemplate` tag to customize the display of users curr
 You can use the `SuggestionTemplate` tag to customize the quick reply suggestions that appear above the input field. Templates here can help create visually appealing and functional suggestion layouts. The template context includes `Suggestions` and `Index` items.
 
 ```cshtml
+
+@using Syncfusion.Blazor.InteractiveChat
 
 <div class="template-chatui" style="height: 400px; width: 400px;">
     <SfChatUI ID="chatUser" User="CurrentUserModel" Messages="ChatUserMessages" Suggestions="@Suggestions">
@@ -235,6 +245,8 @@ You can use the `SuggestionTemplate` tag to customize the quick reply suggestion
 You can use the `FooterTemplate` tag to customize the default footer area and manage message send actions with a personalized design. This flexibility allows users to create unique footers that meet their specific needs.
 
 ```cshtml
+
+@using Syncfusion.Blazor.InteractiveChat
 
 <div class="template-chatui" style="height: 400px; width: 400px;">
     <SfChatUI @ref="ChatUI" ID="chatUser" User="CurrentUserModel" Messages="ChatUserMessages">

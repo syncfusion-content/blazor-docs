@@ -223,16 +223,132 @@ You can use the status property to update the status for the message(e.g., sent,
 
 You can use the `IconCss` property to update the styling of status icons associated with messages, aiding visual differentiation between statuses.
 
+```cshtml
+
+@using Syncfusion.Blazor.InteractiveChat
+
+<div style="height: 400px; width: 400px;">
+    <SfChatUI ID="chatUser" User="CurrentUserModel" Messages="ChatUserMessages"></SfChatUI>
+</div>
+
+@code {
+    private static UserModel CurrentUserModel = new UserModel() { ID = "User1", User = "Albert" };
+    private static UserModel MichaleUserModel = new UserModel() { ID = "User2", User = "Michale Suyama" };
+    
+    private List<ChatMessage> ChatUserMessages = new List<ChatMessage>()
+    {
+        new ChatMessage() { Text = "Hi, thinking of painting this weekend.", Author = CurrentUserModel },
+        new ChatMessage() { Text = "That’s fun! What will you paint?", Author = MichaleUserModel },
+        new ChatMessage() {
+            Text = "Maybe landscapes.",
+            Author = CurrentUserModel,
+            Status= new MessageStatusModel() {
+                IconCss = "e-icons e-chat-seen"
+            }
+        }
+    };
+}
+
+```
+
+![Blazor Chat UI IconCss](./images/status-icon.png)
+
 #### Setting text
 
 You can use the `Text` property to provide information about the messages through descriptive text, providing users with the context of the message.
+
+```cshtml
+
+@using Syncfusion.Blazor.InteractiveChat
+
+<div style="height: 400px; width: 400px;">
+    <SfChatUI ID="chatUser" User="CurrentUserModel" Messages="ChatUserMessages"></SfChatUI>
+</div>
+
+@code {
+    private static UserModel CurrentUserModel = new UserModel() { ID = "User1", User = "Albert" };
+    private static UserModel MichaleUserModel = new UserModel() { ID = "User2", User = "Michale Suyama" };
+    
+    private List<ChatMessage> ChatUserMessages = new List<ChatMessage>()
+    {
+        new ChatMessage() { Text = "Hi, thinking of painting this weekend.", Author = CurrentUserModel },
+        new ChatMessage() { Text = "That’s fun! What will you paint?", Author = MichaleUserModel },
+        new ChatMessage() {
+            Text = "Maybe landscapes.",
+            Author = CurrentUserModel,
+            Status= new MessageStatusModel() {
+                Text = "seen"
+            }
+        }
+    };
+}
+
+```
+
+![Blazor Chat UI Text](./images/status-text.png)
 
 #### Setting tooltip
 
 You can use the `Tooltip` property to provide information about the messages by tooltips while hovering the status icon, providing users with additional data upon hovering.
 
+```cshtml
+
+@using Syncfusion.Blazor.InteractiveChat
+
+<div style="height: 400px; width: 400px;">
+    <SfChatUI ID="chatUser" User="CurrentUserModel" Messages="ChatUserMessages"></SfChatUI>
+</div>
+
+@code {
+    private static UserModel CurrentUserModel = new UserModel() { ID = "User1", User = "Albert" };
+    private static UserModel MichaleUserModel = new UserModel() { ID = "User2", User = "Michale Suyama" };
+    
+    private List<ChatMessage> ChatUserMessages = new List<ChatMessage>()
+    {
+        new ChatMessage() { Text = "Hi, thinking of painting this weekend.", Author = CurrentUserModel },
+        new ChatMessage() { Text = "That’s fun! What will you paint?", Author = MichaleUserModel },
+        new ChatMessage() {
+            Text = "Maybe landscapes.",
+            Author = CurrentUserModel,
+            Status= new MessageStatusModel() {
+                IconCss = "e-icons e-chat-seen",
+                Tooltip = "seen"
+            }
+        }
+    };
+}
+
+```
+
 ### Setting auto scroll
 
 You can use the `AutoScrollToBottom` property to automatically scroll the chats when a new message is received in a conversation. By default, the value is false, requires manual scrolling or the FAB button to quick access to the bottom of the view. 
 
-- By default, it scrolls to bottom for each message being sent or when the scroll is maintained at the bottom in the chat, in order to prevent the automatic scroll for different user messages you can use the `AutoScrollToBottom` property. 
+- By default, it scrolls to bottom for each message being sent or when the scroll is maintained at the bottom in the chat, in order to prevent the automatic scroll for different user messages you can use the `AutoScrollToBottom` property.
+
+```cshtml
+
+@using Syncfusion.Blazor.InteractiveChat
+
+<div style="height: 400px; width: 400px;">
+    <SfChatUI ID="chatUser" User="CurrentUserModel" AutoScrollToBottom="true" Messages="ChatUserMessages"></SfChatUI>
+</div>
+
+@code {
+    private static UserModel CurrentUserModel = new UserModel() { ID = "User1", User = "Albert" };
+    private static UserModel MichaleUserModel = new UserModel() { ID = "User2", User = "Michale Suyama" };
+
+    private List<ChatMessage> ChatUserMessages = new List<ChatMessage>()
+    {
+        new ChatMessage() { Text = "Want to get coffee tomorrow?", Author = CurrentUserModel },
+        new ChatMessage() { Text = "Sure! What time?", Author = MichaleUserModel },
+        new ChatMessage() { Text = "How about 10 AM?", Author = CurrentUserModel },
+        new ChatMessage() { Text = "Perfect.", Author = MichaleUserModel },
+        new ChatMessage() { Text = "See you!", Author = CurrentUserModel },
+        new ChatMessage() { Text = "Bye!", Author = MichaleUserModel }
+    };
+}
+
+```
+
+![Blazor Chat UI AutoScrollToBottom](./images/auto-scroll-bottom.png)
