@@ -17,8 +17,10 @@ You can render the built-in Ribbon button item by setting the `Type` property as
 
 The following events are available in the Button item.
 
-* `Created` - EventCallback
-* `OnClick` - MouseEventArgs
+|Name|Args|Description|
+|---|---|---|
+|Created|EventCallback|Triggers when the button is created|
+|OnClick|MouseEventArgs|Triggers when the button is clicked|
 
 Below example demonstrates how to configure a Button item including it's events
 
@@ -71,8 +73,10 @@ You can render the built-in Ribbon checkbox item by setting the `Type` property 
 
 The following events are available in the Checkbox item.
 
-* `Created` - EventCallback
-* `ValueChange` - ChangeEventArgs
+|Name|Args|Description|
+|---|---|---|
+|Created|EventCallback|Triggers when the checkbox is created|
+|ValueChange|ChangeEventArgs|Triggers when the checkbox value changes|
 
 Below example demonstrates how to configure a Checkbox item including it's events
 
@@ -132,13 +136,15 @@ You can render the built-in Ribbon dropdown button item by setting the `Type` pr
 
 The following events are available in the DropDownButton item.
 
-* `Created` - EventCallback
-* `PopupOpening` - DropDownPopupOpenEventArgs
-* `PopupClosing` - DropDownPopupCloseEventArgs
-* `PopupOpened` - DropDownPopupOpenedEventArgs
-* `PopupClosed` - DropDownPopupClosedEventArgs
-* `ItemRendering` - DropDownItemRenderEventArgs
-* `ItemSelecting` - DropDownItemSelectEventArgs
+|Name|Args|Description|
+|---|---|---|
+|Created|EventCallback|Triggers when the dropdown button is created|
+|PopupOpening|DropDownPopupOpenEventArgs|Triggers before the dropdown popup opens|
+|PopupClosing|DropDownPopupCloseEventArgs|Triggers before the dropdown popup closes|
+|PopupOpened|DropDownPopupOpenedEventArgs|Triggers after the dropdown popup has opened|
+|PopupClosed|DropDownPopupClosedEventArgs|Triggers after the dropdown popup has closed|
+|ItemRendering|DropDownItemRenderEventArgs|Triggers during rendering of each dropdown item|
+|ItemSelecting|DropDownItemSelectEventArgs|Triggers before selecting a dropdown item|
 
 Below example demonstrates how to configure a DropDownButton item including it's events
 
@@ -158,9 +164,14 @@ Below example demonstrates how to configure a DropDownButton item including it's
                             <RibbonCollection>
                                 <RibbonItems>
                                     <RibbonItem Type=RibbonItemType.DropDown>
-                                        <RibbonDropDownSettings Content="Header" 
-                                            IconCss="e-icons e-header" 
-                                            Items="@headerItems" Created="Created" PopupOpening="PopupOpening" PopupClosing="PopupClosing" PopupOpened="PopupOpened" PopupClosed="PopupClosed" ItemRendering="ItemRendering" ItemSelecting="ItemSelecting">
+                                        <RibbonDropDownSettings Content="Header" IconCss="e-icons e-header" Items="@headerItems" 
+                                                                Created="Created" 
+                                                                PopupOpening="PopupOpening" 
+                                                                PopupClosing="PopupClosing" 
+                                                                PopupOpened="PopupOpened" 
+                                                                PopupClosed="PopupClosed" 
+                                                                ItemRendering="ItemRendering" 
+                                                                ItemSelecting="ItemSelecting">
                                         </RibbonDropDownSettings>
                                     </RibbonItem>
                                 </RibbonItems>
@@ -210,14 +221,16 @@ You can render the built-in Ribbon split button item by setting the `Type` prope
 
 The following events are available in the SplitButton item.
 
-* `Created` - EventCallback
-* `Clicked` - SplitButtonClickedEventArgs
-* `PopupOpening` - SplitButtonPopupOpenEventArgs
-* `PopupClosing` - SplitButtonPopupCloseEventArgs
-* `PopupOpened` - SplitButtonPopupOpenedEventArgs
-* `PopupClosed` - SplitButtonPopupClosedEventArgs
-* `ItemRendering` - SplitButtonItemRenderEventArgs
-* `ItemSelected` - SplitButtonItemSelectedEventArgs
+|Name|Args|Description|
+|---|---|---|
+|Created|EventCallback|Triggers when the split button is created|
+|Clicked|SplitButtonClickedEventArgs|Triggers when the split button is clicked|
+|PopupOpening|SplitButtonPopupOpenEventArgs|Triggers before the split button popup opens|
+|PopupClosing|SplitButtonPopupCloseEventArgs|Triggers before the split button popup closes|
+|PopupOpened|SplitButtonPopupOpenedEventArgs|Triggers after the split button popup has opened|
+|PopupClosed|SplitButtonPopupClosedEventArgs|Triggers after the split button popup has closed|
+|ItemRendering|SplitButtonItemRenderEventArgs|Triggers during rendering of each item in the split button|
+|ItemSelected|SplitButtonItemSelectedEventArgs|Triggers when an item in the split button is selected|
 
 Below example demonstrates how to configure a SplitButton item including it's events
 
@@ -238,7 +251,14 @@ Below example demonstrates how to configure a SplitButton item including it's ev
                                 <RibbonItems>
                                     <RibbonItem Type=RibbonItemType.SplitButton>
                                         <RibbonSplitButtonSettings Content="Paste" IconCss="e-icons e-paste" Items="@formatItems" 
-                                            Created="Created" Clicked="Clicked" PopupOpening="PopupOpening" PopupClosing="PopupClosing" PopupOpened="PopupOpened" PopupClosed="PopupClosed" ItemRendering="ItemRendering" ItemSelecting="ItemSelecting">
+                                                                    Created="Created" 
+                                                                    Clicked="Clicked" 
+                                                                    PopupOpening="PopupOpening" 
+                                                                    PopupClosing="PopupClosing" 
+                                                                    PopupOpened="PopupOpened" 
+                                                                    PopupClosed="PopupClosed" 
+                                                                    ItemRendering="ItemRendering" 
+                                                                    ItemSelecting="ItemSelecting">
                                         </RibbonSplitButtonSettings>
                                     </RibbonItem>
                                 </RibbonItems>
@@ -290,13 +310,15 @@ You can render the built-in Ribbon combobox item by setting the `Type` property 
 
 The following events are available in the Combobox item.
 
-* `PopupOpening` - ComboBoxPopupOpenEventArgs
-* `PopupClosing` - ComboBoxPopupCloseEventArgs
-* `PopupOpened` - ComboBoxPopupOpenedEventArgs
-* `PopupClosed` - ComboBoxPopupClosedEventArgs
-* `Filtering` - ComboBoxFilterEventArgs
-* `Selecting` - ComboBoxSelectEventArgs
-* `ValueChange` - ComboBoxChangeEventArgs
+|Name|Args|Description|
+|---|---|---|
+|PopupOpening|ComboBoxPopupOpenEventArgs|Triggers before the combobox popup opens|
+|PopupClosing|ComboBoxPopupCloseEventArgs|Triggers before the combobox popup closes|
+|PopupOpened|ComboBoxPopupOpenedEventArgs|Triggers after the combobox popup has opened|
+|PopupClosed|ComboBoxPopupClosedEventArgs|Triggers after the combobox popup has closed|
+|Filtering|ComboBoxFilterEventArgs|Triggers during filtering of combobox items|
+|Selecting|ComboBoxSelectEventArgs|Triggers before selecting an item in the combobox|
+|ValueChange|ComboBoxChangeEventArgs|Triggers when the combobox value changes|
 
 Below example demonstrates how to configure a Combobox item including it's events
 
@@ -318,7 +340,13 @@ Below example demonstrates how to configure a Combobox item including it's event
                                 <RibbonItems>
                                     <RibbonItem Type=RibbonItemType.ComboBox>
                                         <RibbonComboBoxSettings @bind-Value="@fontFamValue" ShowClearButton="true" AllowFiltering=true DataSource="@fontFamilyItems" FieldSettings="@fieldSetings"
-                                                                PopupOpening="PopupOpening" PopupClosing="PopupClosing" PopupOpened="PopupOpened" PopupClosed="PopupClosed" Filtering="Filtering" Selecting="Selecting" ValueChange="ValueChange">
+                                        PopupOpening="PopupOpening" 
+                                        PopupClosing="PopupClosing" 
+                                        PopupOpened="PopupOpened" 
+                                        PopupClosed="PopupClosed" 
+                                        Filtering="Filtering" 
+                                        Selecting="Selecting" 
+                                        ValueChange="ValueChange">
                                         </RibbonComboBoxSettings>
                                     </RibbonItem>
                                     <RibbonItem Type=RibbonItemType.ComboBox>
@@ -397,13 +425,15 @@ You can render the built-in Ribbon color picker item by setting the `Type` prope
 
 The following events are available in the Colorpicker item.
 
-* `Created` - EventCallback
-* `Opening` - ColorPickerOpenEventArgs
-* `Closing` - ColorPickerCloseEventArgs
-* `Opened` - ColorPickerOpenedEventArgs
-* `TileRendering` - TileRenderEventArgs
-* `ValueChange` - ColorPickerEventArgs
-* `Selected` - ColorPickerSelectedEventArgs
+|Name|Args|Description|
+|---|---|---|
+|Created|EventCallback|Triggers when the color picker is created|
+|Opening|ColorPickerOpenEventArgs|Triggers before the color picker opens|
+|Closing|ColorPickerCloseEventArgs|Triggers before the color picker closes|
+|Opened|ColorPickerOpenedEventArgs|Triggers after the color picker has opened|
+|TileRendering|TileRenderEventArgs|Triggers during the rendering of each palette tile|
+|ValueChange|ColorPickerEventArgs|Triggers when the color value of the picker changes|
+|Selected|ColorPickerSelectedEventArgs|Triggers when a color is selected in the picker or palette|
 
 Below example demonstrates how to configure a Colorpicker item including it's events
 
@@ -424,8 +454,13 @@ Below example demonstrates how to configure a Colorpicker item including it's ev
                                 <RibbonItems>
                                     <RibbonItem Type=RibbonItemType.ColorPicker AllowedSizes="RibbonItemSize.Small">
                                         <RibbonColorPickerSettings Value="#123456"
-                                                                   Created="Created" Opening="Opening" Closing="Closing" Opened="Opened" 
-                                                                   TileRendering="TileRendering" Selected="Selected" ValueChange="ValueChange">
+                                                                   Created="Created" 
+                                                                   Opening="Opening" 
+                                                                   Closing="Closing" 
+                                                                   Opened="Opened" 
+                                                                   TileRendering="TileRendering" 
+                                                                   Selected="Selected" 
+                                                                   ValueChange="ValueChange">
                                         </RibbonColorPickerSettings>
                                     </RibbonItem>
                                 </RibbonItems>
@@ -468,7 +503,9 @@ You can render the built-in Ribbon group button item by setting the `Type` prope
 
 The following event is available in the GroupButton item.
 
-* `ItemClick` - GroupButtonClickEventArgs
+|Name|Args|Description|
+|---|---|---|
+|ItemClick|GroupButtonClickEventArgs|Triggers when an item in the group button is clicked|
 
 Below example demonstrates how to configure a GroupButton item with both selection types including it's event.
 
