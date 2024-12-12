@@ -38,6 +38,7 @@ To know more about Bitwise operators, refer to the [Bitwise Operations](constrai
 |Pan|Enables or disables panning both X and Y coordinates support for the diagram.|
 |ZoomTextEdit|Enables or disables zooming the text box while editing the text.|
 |Tooltip|Enables or disables the tooltip for the diagram elements(Nodes and connectors).|
+|Routing|Determines if automatic line routing is enabled or disabled for connectors. When enabled, lines are automatically routed to avoid overlapping with nodes and other obstacles.|
 |Default|Enables or disables all constraints in diagram.|
 
 The following example shows how to disable PageEditable constraint from default diagram constraints.
@@ -244,6 +245,9 @@ The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 |Tooltip|Enables or disables tooltip for the connectors.|
 |InheritTooltip|Enables or disables inherit tooltip option from the parent object
 |ConnectToNearByElement|Enables to connect to the nearest elements.|
+|Routing|Determines if routing is enabled or disabled for the connector.|
+|InheritRouting|Specifies whether the connector should inherit the routing value from the parent object.|
+|InheritSegmentThumbShape|Indicates if the connector should inherit the segment thumb shape from the parent object.|
 |ReadOnly|Enables or disables readonly for the connector.|
 |Default|Enables all constraints for the connector.|
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Complex Hierarchical Layout in Blazor Diagram Component
 
-Complex hierarchical tree layout arranges nodes in a tree-like structure, where the child node can have more than one parent. This layout is an extended version of the hierarchical tree layout. To create a complex hierarchical tree, the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Type) property of layout should be set as [ComplexHierarchicalTree](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutType.html#Syncfusion_Blazor_Diagram_LayoutType_ComplexHierarchicalTree).
+Complex hierarchical tree layout arranges nodes in a tree-like structure, where a child node can have more than one parent. This layout is an extended version of the hierarchical tree layout. To create a complex hierarchical tree, the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Type) property of layout should be set to [ComplexHierarchicalTree](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutType.html#Syncfusion_Blazor_Diagram_LayoutType_ComplexHierarchicalTree).
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
@@ -79,7 +79,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### How to enable/disable line distribution
 
-Line distribution is used to arrange the connectors without overlapping in automatic layout. In some cases, the automatic layout connectors connecting to the nodes will be overlapped with one another. So user can decide whether the segment of each connector from a single parent node should be a same point or a different point. The [SamePoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_SamePoint) property of layout is used to enable or disable the line distribution in layout. By default the value is true.
+Line distribution is used to arrange the connectors without overlapping in automatic layout. In some cases, the automatic layout connectors connecting to the nodes will be overlapped with one another. So, the user can decide whether the segment of each connector from a single parent node should be at the same point or a different point. The [SamePoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_SamePoint) property of the layout is used to enable or disable the line distribution in the layout. By default the value is true.
 
 The following code example illustrates how to create a complex hierarchical tree with line distribution.
 
@@ -154,7 +154,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### How to enable/disable linear arrangement
 
-Linear arrangement  is used to arrange the child nodes in linear manner in the layout, that is the parent node is placed in the center, corresponding to its children. When line distribution is enabled, the linear arrangement is also activated by default. The [LinearArrangement](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_LinearArrangement) property of layout is used to enable or disable the linear arrangement in the layout. By default, the value is false.
+Linear arrangement  is used to arrange the child nodes in a linear manner in the layout, where the parent node is placed in the center, corresponding to its children. When line distribution is enabled, the linear arrangement is also activated by default. The [LinearArrangement](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_LinearArrangement) property of the layout is used to enable or disable the linear arrangement in the layout. By default, the value is false.
 The following code illustrates how to arrange the nodes in non linear manner.
 ```csharp
 @using Syncfusion.Blazor.Diagram
