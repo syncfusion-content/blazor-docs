@@ -1,12 +1,11 @@
 @using Syncfusion.Blazor.DropDowns;
 
-<SfAutoComplete TValue="string"  @ref="AutocompleteObj" TItem="Countries" AllowResize="true" Placeholder="e.g. Australia" DataSource="@Country">
+<SfAutoComplete TValue="string"  TItem="Countries" AllowResize="true" Placeholder="e.g. Australia" DataSource="@Country">
             <AutoCompleteFieldSettings Value="Name" />
 </SfAutoComplete>
 
 
 @code {
-    private SfAutoComplete<string, Countries> AutocompleteObj { get; set; }
 
     public class Countries
     {
