@@ -97,8 +97,6 @@ The `BackgroundColor` property allows you to set a solid background color for th
 
 The `BackgroundImage` property lets you set a background image for the chart.  Specify the URL or path to the image file.
 
-![Blazor Sankey Customization Background Image](images/customization/sankey-customization-background-img.webp)
-
 ```razor
 @using Syncfusion.Blazor;
 @using Syncfusion.Blazor.Sankey;
@@ -170,6 +168,8 @@ The `BackgroundImage` property lets you set a background image for the chart.  S
     }
 }
 ```
+
+![Blazor Sankey Customization Background Image](images/customization/sankey-customization-background-img.webp)
 
 ## Dimensions (Width and Height)
 
@@ -250,9 +250,22 @@ Control the sankey's dimensions using the `Width` and `Height` properties. You c
 
 ## Right-to-Left (RTL) Support
 
-Enable RTL support using the `EnableRTL` property.
+The Blazor Sankey component offers built-in support for Right-to-Left (RTL) languages, which is crucial for applications targeting audiences that read from right to left, such as Arabic or Hebrew speakers.
 
-![Blazor Sankey Customization RTL](images/customization/sankey-customization-rtl.png)
+### Enabling RTL Support
+
+To enable RTL support, simply set the `EnableRTL` property to `true`. This will flip the entire layout of the Sankey diagram, including nodes, links, and any associated labels or legends.
+
+### Effects of Enabling RTL
+
+**When you enable RTL support**
+
+1. **Node Order**: The order of nodes will be reversed, with the first node appearing on the right side of the diagram.
+2. **Link Direction**: Links between nodes will flow from right to left.
+3. **Labels**: Node and link labels will be aligned to support RTL reading.
+4. **Tooltips**: If enabled, tooltips will be positioned appropriately for RTL layout.
+5. **Legend**: If a legend is present, its layout and order will also be reversed.
+
 
 ```razor
 @using Syncfusion.Blazor;
@@ -324,11 +337,15 @@ Enable RTL support using the `EnableRTL` property.
 }
 ```
 
+![Blazor Sankey Customization RTL](images/customization/sankey-customization-rtl.png)
+
 ## Orientation
 
 The `Orientation` property controls the flow direction of the Sankey. You can set it to `Horizontal` or `Vertical`. The default `Auto` setting automatically chooses the best orientation based on the sankey's aspect ratio.
 
-![Blazor Sankey Customization Vertical](images/customization/sankey-customization-vertical.png)
+Setting the orientation to vertical can be particularly useful for certain types of data or when you want to emphasize the top-down flow of information.
+
+
 ```razor
 <SfSankey Width="@_width" Height="@_height" Nodes=@Nodes Links=@Links Orientation="SankeyOrientation.Vertical">
 </SfSankey>
@@ -395,6 +412,33 @@ The `Orientation` property controls the flow direction of the Sankey. You can se
     }
 }
 ```
+![Blazor Sankey Customization Vertical](images/customization/sankey-customization-vertical.png)
+
+### Effects of Vertical Mode
+
+When you switch the Sankey diagram to vertical orientation, several aspects of the chart change:
+
+1. **Node Placement**: Nodes are arranged vertically from top to bottom, instead of left to right.
+
+2. **Link Direction**: Links flow downward, connecting nodes from top to bottom.
+
+3. **Label Positioning**: 
+   - Node labels are typically positioned to the right of each node.
+   - Link labels, if enabled, are oriented to align with the vertical flow.
+
+4. **Space Utilization**: 
+   - Vertical orientation often allows for better use of space when dealing with many nodes or long node labels.
+   - It can be particularly effective for tall, narrow layouts.
+
+5. **Data Interpretation**: 
+   - The top-down flow can imply a hierarchical or sequential relationship between nodes.
+   - It may be more intuitive for certain types of data, such as organizational charts or process flows.
+
+6. **Responsiveness**: 
+   - Vertical layouts can sometimes be more responsive on mobile devices or narrow screen widths.
+
+7. **Scrolling Behavior**: 
+   - For large diagrams, users will scroll vertically instead of horizontally, which can be more natural on most devices.
 
 ## Key Points
 

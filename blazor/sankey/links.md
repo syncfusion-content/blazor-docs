@@ -92,7 +92,7 @@ Here's an example of how to configure links in the Sankey component:
 }
 ```
 
-In this example, we define multiple links connecting nodes across different categories such as gender, device types, and age groups.
+In this example, we define multiple links connecting nodes across different categories such as source, energy types, and usage groups.
 
 ![Blazor Sankey Link Customization](images/links/sankey-basic-link.png)
 

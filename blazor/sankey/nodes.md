@@ -93,7 +93,7 @@ Here's an example of how to configure nodes in the Sankey component:
 
 ```
 
-In this example, we define multiple nodes representing different categories such as gender, device types, and age groups.
+In this example, we define multiple nodes representing different categories such as source, energy types, and usage groups.
 
 ![Blazor Sankey Node Customization](images/nodes/sankey-node-basic.png)
 
