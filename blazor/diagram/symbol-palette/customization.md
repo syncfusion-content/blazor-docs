@@ -9,15 +9,15 @@ documentation: ug
 
 # Symbol Palette in Blazor Diagram Component
 
-The [SymbolPalette](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.html) displays a collection of [Palettes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_Palettes). The palette shows a set of nodes and connectors. It allows to drag and drop the nodes and connectors into the diagram.
+The [SymbolPalette](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.html) component showcases a collection of [Palettes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_Palettes), each containing a set of predefined nodes and connectors. This powerful feature enables users to easily drag and drop these elements into the diagram, streamlining the process of creating and modifying complex diagrams.
 
 ## How to customize the palette header
 
-Palettes can be annotated with its header texts.
+Palettes can be customized with header texts and expansion controls for better organization and user experience.
 
-The [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.Palette.html#Syncfusion_Blazor_Diagram_SymbolPalette_Palette_Title) displayed as the header text of palette.
+The [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.Palette.html#Syncfusion_Blazor_Diagram_SymbolPalette_Palette_Title) property allows you to set a descriptive header text for each palette, providing clear identification of its contents.
 
-The [IsExpanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.Palette.html#Syncfusion_Blazor_Diagram_SymbolPalette_Palette_IsExpanded) property of palette allows to expand/collapse its palette items.
+The [IsExpanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.Palette.html#Syncfusion_Blazor_Diagram_SymbolPalette_Palette_IsExpanded) property enables you to control the initial state of a palette, determining whether its items are visible (expanded) or hidden (collapsed) when the Symbol Palette is first loaded.
 
 The following code illustrates how to change the Title and IsExpanded properties at runtime.
 
@@ -30,9 +30,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to customize the size of symbols
 
-The size of the individual symbol can be customized. The [SymbolWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_SymbolWidth) and [SymbolHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_SymbolHeight) properties of symbol palette enables you to define the size of the symbols.
+The size of individual symbols in the symbol palette can be customized. The [SymbolWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_SymbolWidth) and [SymbolHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_SymbolHeight) properties of the SfSymbolPaletteComponent allow you to define the dimensions of the symbols.
 
-Also, you can update the size of the symbols at runtime.
+Furthermore, you have the flexibility to dynamically adjust the size of the symbols at runtime, providing a more interactive user experience.
 
 The following code example illustrates how to change the size of a symbol and how to update the size at runtime.
 
@@ -116,11 +116,11 @@ The following code example illustrates how to change the size of a symbol and ho
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/CustomSymbolSize)
 
 
-The [SymbolMargin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_SymbolMargin) property is used to create the space around the elements, outside of any defined borders.
+The [SymbolMargin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_SymbolMargin) property allows you to define the space around individual symbols in the palette, outside of their defined borders. This margin creates visual separation between symbols, enhancing the overall layout and appearance of the Symbol Palette.
 
 ## How to customize the symbol drag preview
 
-The symbol preview size of the palette items can be customized using the [SymbolDragPreviewSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_SymbolDiagramPreviewSize) property. The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_Height) properties of SymbolDragPreviewSize enable you to define the preview size to all the symbol palette items.
+The symbol preview size of palette items can be customized using the [SymbolDragPreviewSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_SymbolDiagramPreviewSize) property. This property allows you to define a uniform preview size for all symbol palette items. The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_Height) properties of SymbolDragPreviewSize enable you to specify the dimensions of the preview for each symbol in the palette.
 
 The following code example illustrates how to change the preview size of a palette item.
 
@@ -207,18 +207,18 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to restrict symbol dragging in a palette
 
-The [AllowDrag](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_AllowDrag) property of `SfSymbolPaletteComponent` helps to decide whether the symbols can be dragged from the palette or not.
+The [AllowDrag](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_AllowDrag) property of `SfSymbolPaletteComponent` enables or disables the ability to drag symbols from the palette. When set to `true`, users can drag symbols; when `false`, dragging is disabled. This property provides control over symbol interaction within the Symbol Palette component.
 
 ## How to get notification for expanding the palette
 
-The [Expanding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_Expanding) event of the `SfSymbolPaletteComponent` will be triggered before the item gets collapsed/expanded.
+The [Expanding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_Expanding) event of the `SfSymbolPaletteComponent` is triggered just before an item in the symbol palette is expanded or collapsed. This event provides an opportunity to perform custom actions or modifications before the expansion/collapse state changes.
 
 ## How to expand single or multiple palette
 
-The [PaletteExpandMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_PaletteExpandMode) property of `SfSymbolPaletteComponent` specifies the option to expand single or multiple palettes at a time.
- 
-* If the ExpandMode is Multiple when clicking on the collapsed icon, the clicked palette will get expanded and at the same time, the other palettes will be maintained in their previous state.
-* If the ExpandMode is Single when clicking on the collapsed icon, the clicked palette will get expanded and the rest of all the palettes will get collapsed.
+The [PaletteExpandMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_PaletteExpandMode) property of `SfSymbolPaletteComponent` determines how multiple palettes can be expanded within the symbol palette.
+
+* When set to `Multiple`, clicking on a collapsed palette icon expands that specific palette while preserving the state of other palettes. This allows multiple palettes to be expanded simultaneously.
+* When set to `Single`, clicking on a collapsed palette icon expands that palette while automatically collapsing all other palettes. This ensures only one palette is expanded at a time.
 
 ```cshtml
 <SfSymbolPaletteComponent @ref="@palette"
@@ -231,13 +231,15 @@ The [PaletteExpandMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ## How to Enable/Disable animation in symbol palette
 
-The symbol palette provides support for enabling or disabling animation when expanding and collapsing panels. This functionality is controlled through the [EnableAnimation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_EnableAnimation) property.By default, the EnableAnimation property is set to true.
+The symbol palette offers the ability to enable or disable animation when expanding and collapsing panels. This feature is controlled through the [EnableAnimation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_EnableAnimation) property. By default, EnableAnimation is set to true.
 
-When the animation is enabled, then the following effects will be applied by default.
+When animation is enabled, the following effects are applied by default:
 
-* Expand Animation: The default animation for expanding a panel is set to SlideDown.
-* Collapse Animation: The default animation for collapsing a panel is set to SlideUp.
-* Animation Duration: The duration for the collapse action animation is set to 400 milliseconds by default. This duration dictates how long the transformation takes when a panel collapses.
+* Expand Animation: The panel expands with a SlideDown effect.
+* Collapse Animation: The panel collapses with a SlideUp effect.
+* Animation Duration: The collapse animation lasts for 400 milliseconds by default. This duration determines how long it takes for a panel to fully collapse.
+
+These default settings can be customized to enhance the user experience and match your application's visual style.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
@@ -300,7 +302,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to add symbol descriptions to palette symbols
 
-The diagram provides support to add symbol description below each symbol of a palette. This descriptive representation of each symbol will enhance the details of the symbol visually. The height and width of the symbol description can also be set individually. The method [GetSymbolInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_GetSymbolInfo) can be used to add the symbol description at runtime.
+The diagram component offers support for adding descriptive text below each symbol in the palette. This enhanced visual representation provides additional details about each symbol, improving user understanding and usability. You can customize the height and width of the symbol description individually to suit your needs. To add or modify symbol descriptions at runtime, utilize the [GetSymbolInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_GetSymbolInfo) method provided by the SfSymbolPaletteComponent.
 The following code is an example to set a symbol description for symbols in the palette.
 
 ```csharp
@@ -373,29 +375,29 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to customize the appearance of symbol description
 
-Customize the appearance of a symbol description in the symbol palette by adjusting the following properties:
+Customize the appearance of symbol descriptions in the symbol palette by adjusting the following properties:
 
-[Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_Color): Sets the color of the symbol description text.
+[Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_Color): Defines the color of the symbol description text, enhancing readability and visual appeal.
 
-[Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_Fill): Defines the background color of the symbol description.
+[Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_Fill): Sets the background color of the symbol description, improving contrast and highlighting important information.
 
-[FontSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_FontSize): Specifies the font size of the symbol description text.
+[FontSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_FontSize): Adjusts the font size of the symbol description text, ensuring optimal visibility and hierarchy.
 
-[FontFamily](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_FontFamily): Sets the font family of the symbol description text.
+[FontFamily](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_FontFamily): Specifies the font family of the symbol description text, maintaining consistency with your application's typography.
 
-[Bold](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_Bold): Indicates whether the symbol description text is bold.
+[Bold](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_Bold): Toggles bold formatting for the symbol description text, emphasizing key information.
 
-[Italic](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_Italic): Indicates whether the symbol description text is italicized.
+[Italic](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_Italic): Applies italic formatting to the symbol description text, useful for creating visual distinctions.
 
-[TextDecoration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_TextDecoration): Specifies the decoration applied to the symbol description text.
+[TextDecoration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_TextDecoration): Adds decorative elements to the symbol description text, such as underline or strikethrough.
 
-[TextWrapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_TextWrapping): Defines the text wrapping behavior of the symbol description text.
+[TextWrapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_TextWrapping): Controls how the symbol description text wraps within its container, optimizing space utilization.
 
-[TextOverflow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_TextOverflow): Specifies the behavior when the text overflows the available space in the symbol description.
+[TextOverflow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_TextOverflow): Defines the behavior when the symbol description text exceeds its container, ensuring all content is accessible.
 
-[Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SymbolDescription.html#Syncfusion_Blazor_Diagram_SymbolPalette_SymbolDescription_Margin): Sets the margin around the symbol description.
+[Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SymbolDescription.html#Syncfusion_Blazor_Diagram_SymbolPalette_SymbolDescription_Margin): Adjusts the spacing around the symbol description, improving layout and readability.
 
-By adjusting these properties, you can tailor the appearance of symbol descriptions in the symbol palette to suit your application's requirements.
+By fine-tuning these properties, you can create visually appealing and user-friendly symbol descriptions that seamlessly integrate with your Blazor application's design and enhance the overall user experience.
 
 The following code is an example to change the style of a symbol description for symbols in the palette.
 
@@ -483,17 +485,17 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to provide tooltip for symbols in symbol palette
 
-Symbol palette provides supports to show tooltip when mouse hovers over any node or connector. The tooltip can be customized for each symbols in the symbol palette.
+The Symbol Palette offers tooltip support, displaying informative text when the mouse hovers over any node or connector. These tooltips can be customized individually for each symbol within the palette, enhancing user experience and providing additional context for the available elements.
 
 ### Default tooltip for symbols
 
-By default, the symbol's ID will be displayed as the tooltip for each symbol in the symbol palette. The following image illustrate how the tooltip displays when mouse hovers over the symbols in symbol palette.
+By default, the symbol's ID is displayed as the tooltip for each symbol in the symbol palette. The following image illustrates how the tooltip appears when the mouse hovers over symbols in the symbol palette.
 
 ![Default Tooltip in symbol palette](../images/defaulttooltip.png)
 
 ### Custom tooltip for symbols
 
-You can provide custom tooltip for symbols in the symbol palette by assigning custom tooltip to Tooltip property of nodes and connectors. Once custom tooltip is defined then enable the custom tooltip for symbols in the symbol palette by setting the Tooltip constraints for node and connector. This allows the custom tooltips to be displayed when hovering over symbols in the symbol palette.
+You can enhance the symbol palette by providing custom tooltips for symbols. This is achieved by assigning custom tooltip content to the Tooltip property of nodes and connectors. To enable these custom tooltips for symbols in the symbol palette, set the Tooltip constraints for both nodes and connectors. Once configured, these custom tooltips will be displayed when hovering over the corresponding symbols in the symbol palette, offering users more informative and context-specific details about each symbol.
 
 The following code example illustrates how to provide the custom tooltip for nodes.
 
@@ -664,7 +666,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Tooltip template for symbols
 
-You can provide custom template as tooltip for symbols in the symbol palette using [TooltipTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SymbolPaletteTemplates.html#Syncfusion_Blazor_Diagram_SymbolPalette_SymbolPaletteTemplates_TooltipTemplate) property of `SfDiagramComponent`. Once tooltip template is defined then enable the custom tooltip for symbols in the symbol palette by setting the Tooltip constraints for node and connector. This allows the tooltips template to be displayed when hovering over symbols in the symbol palette.
+You can provide a custom template as a tooltip for symbols in the symbol palette using the [TooltipTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SymbolPaletteTemplates.html#Syncfusion_Blazor_Diagram_SymbolPalette_SymbolPaletteTemplates_TooltipTemplate) property of the `SfDiagramComponent`. Once the tooltip template is defined, enable custom tooltips for symbols in the symbol palette by setting the Tooltip constraints for nodes and connectors. This allows the custom tooltip template to be displayed when hovering over symbols in the symbol palette, enhancing the user experience and providing more informative tooltips for each symbol.
 
 The following code example illustrates how to provide the tooltip template for nodes.
 
@@ -742,11 +744,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Palette interaction
 
-Palette interaction notifies the element enter, leave, and dragging of the symbols into the diagram.
+Palette interaction provides notifications for symbol entry, exit, and dragging within the diagram.
 
-- [DragStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DragStart) event is triggered when a symbol is dragged into the diagram from the symbol palette.
-- [Dragging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Dragging) event is triggered when an element drags over another diagram element.
-- [DragLeave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DragLeave) event is triggered when an element drags over another diagram element.
+- The [DragStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DragStart) event is triggered when a symbol is initially dragged from the symbol palette into the diagram area.
+- The [Dragging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Dragging) event is triggered continuously as an element is being dragged over other diagram elements.
+- The [DragLeave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DragLeave) event is triggered when a dragged element exits the boundaries of another diagram element.
 
 For more information about event, refer to the [Events](../events).
 
@@ -758,7 +760,11 @@ The diagram provides support to cancel the node drop from symbol palette when th
 
 ## How to enable the chunk message
 
-In the Blazor Diagram component, it is essential to calculate the bounds of paths, text, images, and SVG data from the server to the JavaScript side using JsInterop calls. When processing large data sets (greater than 32KB for a single incoming hub message) in a single JS call, connection disconnect issues can occur. To address this, we have introduced the [EnableChunkMessages](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_EnableChunkMessages) property in the Symbol Palette component. This property allows large data to be sent in smaller chunks, thereby preventing connection disconnection issues. Chunk messages facilitate the measurement of paths, images, text, and SVG data without exceeding the maximum size limit for a single incoming hub message (MaximumReceiveMessageSize of 32KB). By default, the [EnableChunkMessages](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_EnableChunkMessages) property is set to `false`.
+In the Blazor Diagram component, calculating the bounds of paths, text, images, and SVG data from the server to the JavaScript side using JsInterop calls is crucial. However, when processing large data sets (exceeding 32KB for a single incoming hub message) in a single JS call, connection disconnection issues can arise. To mitigate this problem, we have introduced the [EnableChunkMessages](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_EnableChunkMessages) property in the Symbol Palette component.
+
+This property enables the transmission of large data in smaller, manageable chunks, effectively preventing connection disconnection issues. Chunk messages facilitate the measurement of paths, images, text, and SVG data without exceeding the maximum size limit for a single incoming hub message (MaximumReceiveMessageSize of 32KB). This approach ensures smooth data transfer and processing, even for complex diagrams with substantial amounts of information.
+
+By default, the [EnableChunkMessages](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_EnableChunkMessages) property is set to `false`. However, for scenarios involving large data sets or complex diagram elements, it is recommended to enable this feature to enhance performance and prevent potential connection issues.
 
 Here is an example demonstrating how to use the [EnableChunkMessages](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_EnableChunkMessages) property:
 
