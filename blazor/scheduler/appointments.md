@@ -479,7 +479,7 @@ By default, the scheduler will render the overlapping events based on the start 
 
 ## Preventing Overlapping Events
 
-By default, the scheduler renders overlapping events based on their start and end times. To prevent this, set the [AllowOverlap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowOverlap) property to `false`. If new or updated events conflict with existing ones, an overlap alert will be displayed when this property set as `false`. The conflicting events will be collected in the [OverlapCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.PopupOpenEventArgs-1.html#Syncfusion_Blazor_Schedule_PopupOpenEventArgs_1_OverlapCollection) within the [PopupOpenEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.PopupOpenEventArgs-1.html).
+By default, the scheduler displays overlapping events according to their start and end times. To avoid this behavior, you can set the [AllowOverlap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowOverlap) property to false. When this property is set to false, an overlap alert will appear if new or updated events conflict with existing ones. The conflicting events will be gathered in the [OverlapCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.PopupOpenEventArgs-1.html#Syncfusion_Blazor_Schedule_PopupOpenEventArgs_1_OverlapCollection) inside the [PopupOpenEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.PopupOpenEventArgs-1.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -529,10 +529,13 @@ By default, the scheduler renders overlapping events based on their start and en
 ![Blazor Scheduler with restricted Overlapping Events](images/blazor-scheduler-restrict-overlapping-events.png)
 
 ### Limitations
-* On initial load, the scheduler prioritizes non-overlapping events based on their longer duration and all-day status.
-* For recurring appointments, at the initial load, if there are conflicts within a series, the scheduler will display all occurrences except for the conflicting one.
-* When a user edits, saves, or drops appointments, the scheduler checks for overlaps. If a conflict is detected, it prevents the action and displays a conflict alert to the user.
-* When creating or editing a recurrence series dynamically, if a conflict is detected, the scheduler won't allow any occurrences of the conflicting series.
+* **Initial Load Behavior:** When the scheduler loads initially, it prioritizes non-overlapping events based on their duration and all-day status. Events with longer durations and those marked as all-day are given higher priority to avoid overlaps.
+
+* **Recurring Appointments:** During the initial load, if there are conflicts within a recurring appointment series, the scheduler will display all occurrences of the series, except for the conflicting instance.
+
+* **Event Modifications:** When a user edits, saves, or drops appointments, the scheduler checks for potential overlaps. If a conflict is found, the action is prevented, and a conflict alert is shown to the user to address the issue.
+
+* **Dynamic Recurrence Series Creation or Editing:** When a user creates or edits a recurrence series dynamically, the scheduler will not allow any occurrences of the series if a conflict is detected within the series itself.
 
 ## Restricting event creation on specific time slots
 You can restrict the users to create and update more than one appointment on specific time slots. Also, you can disable the CRUD action on those time slots if it is already occupied, which can be achieved using Scheduler’s public method [IsSlotAvailableAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_IsSlotAvailableAsync__0_).
