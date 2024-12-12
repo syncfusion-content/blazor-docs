@@ -9,7 +9,7 @@ documentation: ug
 
 # Islamic Calendar in Blazor Calendar Component
 
-In addition to the Gregorian calendar, the Calendar control supports displaying the Islamic calendar (Hijri calendar). Islamic calendar or Hijri calendar is a lunar calendar consisting of 12 months in a year of 354 or 355 days.Users can select a date from the Islamic calendar. To know more about Islamic calendar [wikipedia](https://en.wikipedia.org/wiki/Islamic_calendar).
+In addition to the Gregorian calendar, the Calendar control supports displaying the Islamic calendar (Hijri calendar). Islamic calendar or Hijri calendar is a lunar calendar consisting of 12 months in a year of 354 or 355 days.Users can select a date from the Islamic calendar.
 
 Also, it consists of all Gregorian calendar functionalities as like min and max date, week number, start day of the week, multi selection, enable RTL, start and depth view, localization, highlight and customize the specific dates.By default, calendar mode is in Gregorian. You can enable the Islamic mode by setting the calendarMode as Islamic.
 
