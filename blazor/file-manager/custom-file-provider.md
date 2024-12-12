@@ -35,3 +35,5 @@ You can also create a custom file provider specific to your needs to connect wit
 * **Get Image** - This action retrieves image files from the file system. It is specifically used for handling image files and displaying them in the application. Click this [link](https://blazor.syncfusion.com/documentation/file-manager/file-operations#getting-images) to know about the request and response parameters of get image operations.
 
 Implementing these operations uniformly ensures that the File Manager component functions smoothly with your custom file provider, maintaining consistency in how files are managed and accessed across different actions.
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/filemanager-azure-nodejs-file-provider)
