@@ -854,12 +854,14 @@ You can customize the default appearance and content of Ribbon gallery items by 
 
 The following events are available in the Ribbon Gallery.
 
-* `PopupOpening` - GalleryPopupOpenEventArgs
-* `PopupClosing` - GalleryPopupCloseEventArgs
-* `ItemHover` - GalleryItemHoverEventArgs
-* `ItemRendering` - GalleryItemRenderEventArgs
-* `Selecting` - GallerySelectEventArgs
-* `Selected` - GallerySelectedEventArgs
+|Name|Args|Description|
+|---|---|---|
+|PopupOpening|GalleryPopupOpenEventArgs|Triggers before the gallery popup opens|
+|PopupClosing|GalleryPopupCloseEventArgs|Triggers before the gallery popup closes|
+|ItemHover|GalleryItemHoverEventArgs|Triggers when hovering over a gallery item|
+|ItemRendering|GalleryItemRenderEventArgs|Triggers during the rendering of a gallery item|
+|Selecting|GallerySelectEventArgs|Triggers before selecting a gallery item|
+|Selected|GallerySelectedEventArgs|Triggers after a gallery item has been selected|
 
 {% tabs %}
 {% highlight razor %}
