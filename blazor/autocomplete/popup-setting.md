@@ -11,7 +11,7 @@ documentation: ug
 
 ## Resizing in AutoComplete
 
-You can dynamically adjust the size of the popup in the `Autocomplete` component by using the `AllowResize `property. When enabled, users can resize the popup, improving visibility and control, with the resized dimensions being retained across sessions for a consistent user experience.
+You can dynamically adjust the size of the popup in the Autocomplete component by using the [AllowResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_2_AllowResize) property. When enabled, users can resize the popup, improving visibility and control, with the resized dimensions being retained across sessions for a consistent user experience.
 
 {% highlight Razor %}
 
