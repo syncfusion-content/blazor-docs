@@ -97,7 +97,7 @@ The `BackgroundColor` property allows you to set a solid background color for th
 
 The `BackgroundImage` property lets you set a background image for the chart.  Specify the URL or path to the image file.
 
-![Blazor Sankey Customization Background Image](images/customization/sankey-customization-background-img.png)
+![Blazor Sankey Customization Background Image](images/customization/sankey-customization-background-img.webp)
 
 ```razor
 @using Syncfusion.Blazor;
@@ -176,6 +176,7 @@ The `BackgroundImage` property lets you set a background image for the chart.  S
 Control the sankey's dimensions using the `Width` and `Height` properties. You can specify values in pixels or percentages.
 
 ![Blazor Sankey Customization Dimensions](images/customization/sankey-customization-size.png)
+
 ```razor
 @using Syncfusion.Blazor;
 @using Syncfusion.Blazor.Sankey;
@@ -251,7 +252,8 @@ Control the sankey's dimensions using the `Width` and `Height` properties. You c
 
 Enable RTL support using the `EnableRTL` property.
 
-![Blazor Sankey Customization RTL](/images/customization/sankey-customization-rtl.png)
+![Blazor Sankey Customization RTL](images/customization/sankey-customization-rtl.png)
+
 ```razor
 @using Syncfusion.Blazor;
 @using Syncfusion.Blazor.Sankey;
