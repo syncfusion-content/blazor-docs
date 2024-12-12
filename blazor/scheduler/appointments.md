@@ -493,8 +493,9 @@ When the [AllowOverlap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" AllowOverlap="false" Height="550px" @bind-SelectedDate="@CurrentDate">
+    <ScheduleEvents TValue="AppointmentData" OnActionBegin="OnActionBegin"></ScheduleEvents>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
-    <ScheduleEvents TValue="AppointmentData" OnPopupOpen="OnPopupOpen"></ScheduleEvents>
+    <ScheduleEvents TValue="AppointmentData"></ScheduleEvents>
     <ScheduleViews>
         <ScheduleView Option="View.Day"></ScheduleView>
         <ScheduleView Option="View.Week"></ScheduleView>
@@ -504,7 +505,7 @@ When the [AllowOverlap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
     </ScheduleViews>
 </SfSchedule>
 
-@code{
+@code {
     DateTime CurrentDate = new DateTime(2024, 12, 2);
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
@@ -515,22 +516,29 @@ When the [AllowOverlap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
         new AppointmentData { Id = 3, Subject = "Tech Symposium", StartTime = new DateTime(2024, 12, 2, 10, 30, 0),
         EndTime = new DateTime(2024, 12, 2, 11, 30, 0) },
         new AppointmentData { Id = 4, Subject = "Client Meeting", StartTime = new DateTime(2024, 12, 3, 12, 0, 0),
-        EndTime = new DateTime(2024, 12, 3, 13, 0, 0) },
-        new AppointmentData { Id = 5, Subject = "Project Review", StartTime = new DateTime(2024, 12, 4, 13, 0, 0),
-        EndTime = new DateTime(2024, 12, 4, 15, 0, 0) },
+        EndTime = new DateTime(2024, 12, 3, 14, 0, 0), RecurrenceRule = "FREQ=DAILY;INTERVAL=1;COUNT=5" },
+        new AppointmentData { Id = 5, Subject = "Project Review", StartTime = new DateTime(2024, 12, 4, 11, 0, 0),
+        EndTime = new DateTime(2024, 12, 4, 14, 0, 0) },
         new AppointmentData { Id = 6, Subject = "Strategy Session", StartTime = new DateTime(2024, 12, 6, 9, 30, 0),
         EndTime = new DateTime(2024, 12, 6, 11, 0, 0) },
     };
-    public void OnPopupOpen(PopupOpenEventArgs<AppointmentData> args)
-    {
-        List<AppointmentData> overlappingData = args.OverlapCollection;
-    }
+
     public class AppointmentData
     {
         public int Id { get; set; }
         public string Subject { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+        public string RecurrenceException { get; set; }
+
+    }
+
+    public void OnActionBegin(ActionEventArgs<AppointmentData> args)
+    {
+        // you can perform custom logic to check for overlaps across all events.
     }
 }
 ```
