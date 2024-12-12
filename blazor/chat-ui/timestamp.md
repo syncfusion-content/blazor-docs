@@ -41,7 +41,7 @@ You can use the `Timestamp` property to indicate the date and time of each messa
 
 ## Setting timestamp format
 
-You can use the `TimestampFormat` property to display time formats for all the messages which are displayed with the messages being sent. By default, the value is `dd/MM/yy hh:mm tt`.
+You can use the `TimestampFormat` property to display time formats for all the messages which are displayed with the messages being sent. By default, the value is `dd/MM/yyyy hh:mm tt`.
 
 ```cshtml
 

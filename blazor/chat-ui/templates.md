@@ -95,7 +95,7 @@ You can use the `MessageTemplate` tag to customize the appearance and styling of
 
 ## Time break template
 
-You can use the `TimeBreakTemplate` tag to customize how time breaks are displayed with using the template, such as showing "Today," "Yesterday," or specific dates. This enhances conversation organization by clearly separating messages based on time, improving readability for the user. The template context includes `MessageDate`.
+You can use the `TimeBreakTemplate` tag to customize the template, such as showing "Today," "Yesterday," or specific dates. This enhances conversation organization by clearly separating messages based on time, improving readability for the user. The template context includes `MessageDate`.
 
 ```cshtml
 
@@ -180,7 +180,7 @@ You can use the `TypingUsersTemplate` tag to customize the display of users curr
 
 ## Suggestion template
 
-You can use the `SuggestionTemplate` tag to customize the quick reply suggestions that appear above the input field. Templates here can help create visually appealing and functional suggestion layouts. The template context includes `Suggestions` and `Index` items.
+You can use the `SuggestionTemplate` tag to customize the quick reply suggestions that appear above the input field. Templates here can help create visually appealing and functional suggestion layouts. The template context includes `Suggestion` and `Index` items.
 
 ```cshtml
 

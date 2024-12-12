@@ -11,7 +11,7 @@ documentation: ug
 
 The Chat UI allows to add messages using the `Messages` property. The message collection stores all the messages being sent and received.
 
-## Configuring messages
+## Configure messages
 
 You can use the `Text` property to add message content for the user. Each message can be configured with options such as id, text, author, timestamp, and more.
 
