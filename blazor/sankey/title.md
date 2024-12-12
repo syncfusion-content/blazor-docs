@@ -13,7 +13,7 @@ The Syncfusion Blazor Sankey component allows you to add a title and subtitle to
 
 ## Setting the Title and Subtitle
 
-To add a title and subtitle to your Sankey chart, use the `Title` and `SubTitle` properties of the `SfSankey` component.
+To add a title and subtitle to your Sankey chart, use the `Title` and `SubTitle` properties of the `Sankey` component.
 
 ```razor
 <SfSankey Width="600px" Height="400px" 
@@ -61,7 +61,7 @@ The `SubTitle` property lets you provide additional information or context to th
 
 ## Example
 
-Here's a complete example demonstrating how to set and style the title and subtitle:
+Here's a complete example demonstrating how to set and style the title and subtitle.
 
 ```razor
 <SfSankey Width="800px" Height="600px" 

@@ -111,7 +111,7 @@ You can customize the appearance of legends using various properties:
 
 ### Legend Margins
 
-You can set custom margins for the legend using the `SankeyLegendMargin` class:
+You can set custom margins for the legend using the `SankeyLegendMargin` class.
 
 ```razor
 <SankeyLegendSettings>
@@ -121,7 +121,7 @@ You can set custom margins for the legend using the `SankeyLegendMargin` class:
 
 ### Legend Text and Title Styles
 
-Customize the text style of legend items and the legend title:
+Customize the text style of legend items and the legend title.
 
 ```razor
 <SankeyLegendSettings>
