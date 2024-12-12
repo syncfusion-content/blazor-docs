@@ -45,7 +45,7 @@ The following example enables column resizing, allowing users to adjust the widt
 
 {% endhighlight %}
 
-## TextWrap for grid
+## TextWrap for header and content
 
 The TextWrap in the Blazor `MultiColumn ComboBox` ensures proper wrapping of text within both headers and data content. By enabling `EnableTextWrap`, you can manage how text appears when it exceeds the available space.
 
