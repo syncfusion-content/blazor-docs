@@ -9,7 +9,11 @@ documentation: ug
 
 # Navigation in Blazor SfPdfViewer Component
 
+<<<<<<< HEAD
+You can navigate between pages in Syncfusion&reg; SfPdfViewer in the following ways:
+=======
 You can navigate between pages in Syncfusion<sup style="font-size:70%">&reg;</sup> SfPdfViewer in the following ways:
+>>>>>>> remotes/origin/hotfix/hotfix-v27.2.2
 
 * Scroll through the pages.
 * Click Go to pages in the built-in toolbar.
