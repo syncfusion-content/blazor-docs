@@ -19,43 +19,77 @@ You can customize the background of the Sankey Chart using the `BackgroundColor`
 
 The `BackgroundColor` property allows you to set a solid background color for the chart.  You can use any valid CSS color string, including hex codes, named colors, and RGB/RGBA values.
 
+![Blazor Sankey Customization Background](images/customization/sankey-customization-background.png)
 ```razor
-<SfSankey Nodes=@Nodes Links=@Links BackgroundColor="#f1d4ff"> </SfSankey>
+@using Syncfusion.Blazor;
+@using Syncfusion.Blazor.Sankey;
 
+<SfSankey BackgroundColor="@_backgroundColor" Nodes=@Nodes Links=@Links>
+    <SankeyNodeSettings Color="#1c3f60" ></SankeyNodeSettings>
+    <SankeyLinkSettings Color="#afc1d0" ></SankeyLinkSettings>
+    <SankeyLabelSettings Color="#FFFFFF" FontWeight="400" ></SankeyLabelSettings>
+    <SankeyLegendSettings Visible="false"></SankeyLegendSettings>
+</SfSankey>
 @code {
-    public List<SankeyDataNode> Nodes = new(); // Your node data
-    public List<SankeyDataLink> Links = new(); // Your link data
-
+    string _backgroundColor = "#0b1320";
+    public List<SankeyDataNode> Nodes = new List<SankeyDataNode>();
+    public List<SankeyDataLink> Links = new List<SankeyDataLink>();
     protected override void OnInitialized()
     {
-        Nodes = GetSankeyNodes();
-        Links = GetSankeyLinks();
+        Nodes = new List<SankeyDataNode>()
+        {
+            new SankeyDataNode() { Id = "Solar", Label = new SankeyDataLabel() { Text = "Solar" } },
+            new SankeyDataNode() { Id = "Wind", Label = new SankeyDataLabel() { Text = "Wind" } },
+            new SankeyDataNode() { Id = "Hydro", Label = new SankeyDataLabel() { Text = "Hydro" } },
+            new SankeyDataNode() { Id = "Nuclear", Label = new SankeyDataLabel() { Text = "Nuclear" } },
+            new SankeyDataNode() { Id = "Coal", Label = new SankeyDataLabel() { Text = "Coal" } },
+            new SankeyDataNode() { Id = "Natural Gas", Label = new SankeyDataLabel() { Text = "Natural Gas" } },
+            new SankeyDataNode() { Id = "Oil", Label = new SankeyDataLabel() { Text = "Oil" } },
+            new SankeyDataNode() { Id = "Electricity", Label = new SankeyDataLabel() { Text = "Electricity" } },
+            new SankeyDataNode() { Id = "Heat", Label = new SankeyDataLabel() { Text = "Heat" } },
+            new SankeyDataNode() { Id = "Fuel", Label = new SankeyDataLabel() { Text = "Fuel" } },
+            new SankeyDataNode() { Id = "Residential", Label = new SankeyDataLabel() { Text = "Residential" } },
+            new SankeyDataNode() { Id = "Commercial", Label = new SankeyDataLabel() { Text = "Commercial" } },
+            new SankeyDataNode() { Id = "Industrial", Label = new SankeyDataLabel() { Text = "Industrial" } },
+            new SankeyDataNode() { Id = "Transportation", Label = new SankeyDataLabel() { Text = "Transportation" } },
+            new SankeyDataNode() { Id = "Energy Services", Label = new SankeyDataLabel() { Text = "Energy Services" } },
+            new SankeyDataNode() { Id = "Losses", Label = new SankeyDataLabel() { Text = "Losses" } }
+        };
+
+        Links = new List<SankeyDataLink>()
+        {
+            // Energy Sources to Carriers
+            new SankeyDataLink() { SourceId = "Solar", TargetId = "Electricity", Value = 100 },
+            new SankeyDataLink() { SourceId = "Wind", TargetId = "Electricity", Value = 120 },
+            new SankeyDataLink() { SourceId = "Hydro", TargetId = "Electricity", Value = 80 },
+            new SankeyDataLink() { SourceId = "Nuclear", TargetId = "Electricity", Value = 90 },
+            new SankeyDataLink() { SourceId = "Coal", TargetId = "Electricity", Value = 200 },
+            new SankeyDataLink() { SourceId = "Natural Gas", TargetId = "Electricity", Value = 130 },
+            new SankeyDataLink() { SourceId = "Natural Gas", TargetId = "Heat", Value = 80 },
+            new SankeyDataLink() { SourceId = "Oil", TargetId = "Fuel", Value = 250 },
+
+            // Energy Carriers to Sectors
+            new SankeyDataLink() { SourceId = "Electricity", TargetId = "Residential", Value = 170 },
+            new SankeyDataLink() { SourceId = "Electricity", TargetId = "Commercial", Value = 160 },
+            new SankeyDataLink() { SourceId = "Electricity", TargetId = "Industrial", Value = 210 },
+            new SankeyDataLink() { SourceId = "Heat", TargetId = "Residential", Value = 40 },
+            new SankeyDataLink() { SourceId = "Heat", TargetId = "Commercial", Value = 20 },
+            new SankeyDataLink() { SourceId = "Heat", TargetId = "Industrial", Value = 20 },
+            new SankeyDataLink() { SourceId = "Fuel", TargetId = "Transportation", Value = 200 },
+            new SankeyDataLink() { SourceId = "Fuel", TargetId = "Industrial", Value = 50 },
+
+            // Sectors to End Use and Losses
+            new SankeyDataLink() { SourceId = "Residential", TargetId = "Energy Services", Value = 180 },
+            new SankeyDataLink() { SourceId = "Commercial", TargetId = "Energy Services", Value = 150 },
+            new SankeyDataLink() { SourceId = "Industrial", TargetId = "Energy Services", Value = 230 },
+            new SankeyDataLink() { SourceId = "Transportation", TargetId = "Energy Services", Value = 150 },
+            new SankeyDataLink() { SourceId = "Residential", TargetId = "Losses", Value = 30 },
+            new SankeyDataLink() { SourceId = "Commercial", TargetId = "Losses", Value = 30 },
+            new SankeyDataLink() { SourceId = "Industrial", TargetId = "Losses", Value = 50 },
+            new SankeyDataLink() { SourceId = "Transportation", TargetId = "Losses", Value = 50 }
+        };
         base.OnInitialized();
     }
-
-
-     private List<SankeyDataNode> GetSankeyNodes()
-        {
-          return new List<SankeyDataNode>()
-{
-new SankeyDataNode() { Id = "Female", Label = new SankeyDataLabel() { Text = "Female (58%)" } },
-new SankeyDataNode() { Id = "Male", Label = new SankeyDataLabel() { Text = "Male (42%)" } },
-// ... other nodes
-};
-        }
-
-        private List<SankeyDataLink> GetSankeyLinks()
-        {
-         return new List<SankeyDataLink>()
-{
-new SankeyDataLink() { SourceId = "Female", TargetId = "Tablet", Value = 12 },
-new SankeyDataLink() { SourceId = "Female", TargetId = "Mobile", Value = 14 },
-// ... other links
-};
-        }
-
-
-
 }
 ```
 
@@ -63,76 +97,152 @@ new SankeyDataLink() { SourceId = "Female", TargetId = "Mobile", Value = 14 },
 
 The `BackgroundImage` property lets you set a background image for the chart.  Specify the URL or path to the image file.
 
-```razor
-<SfSankey Nodes=@Nodes Links=@Links BackgroundImage="sankey-bck-img.png"></SfSankey>
+![Blazor Sankey Customization Background Image](images/customization/sankey-customization-background-img.png)
 
+```razor
+@using Syncfusion.Blazor;
+@using Syncfusion.Blazor.Sankey;
+
+<SfSankey BackgroundImage="sankey-bg-img.webp" Nodes=@Nodes Links=@Links>
+    <SankeyNodeSettings Color="#1c3f60" ></SankeyNodeSettings>
+    <SankeyLinkSettings Color="#afc1d0" ></SankeyLinkSettings>
+    <SankeyLabelSettings Color="#FFFFFF" FontWeight="400" ></SankeyLabelSettings>
+    <SankeyLegendSettings Visible="false"></SankeyLegendSettings>
+</SfSankey>
 @code {
-    public List<SankeyDataNode> Nodes = new(); // Your node data
-    public List<SankeyDataLink> Links = new(); // Your link data
+    public List<SankeyDataNode> Nodes = new List<SankeyDataNode>();
+    public List<SankeyDataLink> Links = new List<SankeyDataLink>();
     protected override void OnInitialized()
     {
-        Nodes = GetSankeyNodes();
-        Links = GetSankeyLinks();
+        Nodes = new List<SankeyDataNode>()
+        {
+            new SankeyDataNode() { Id = "Solar", Label = new SankeyDataLabel() { Text = "Solar" } },
+            new SankeyDataNode() { Id = "Wind", Label = new SankeyDataLabel() { Text = "Wind" } },
+            new SankeyDataNode() { Id = "Hydro", Label = new SankeyDataLabel() { Text = "Hydro" } },
+            new SankeyDataNode() { Id = "Nuclear", Label = new SankeyDataLabel() { Text = "Nuclear" } },
+            new SankeyDataNode() { Id = "Coal", Label = new SankeyDataLabel() { Text = "Coal" } },
+            new SankeyDataNode() { Id = "Natural Gas", Label = new SankeyDataLabel() { Text = "Natural Gas" } },
+            new SankeyDataNode() { Id = "Oil", Label = new SankeyDataLabel() { Text = "Oil" } },
+            new SankeyDataNode() { Id = "Electricity", Label = new SankeyDataLabel() { Text = "Electricity" } },
+            new SankeyDataNode() { Id = "Heat", Label = new SankeyDataLabel() { Text = "Heat" } },
+            new SankeyDataNode() { Id = "Fuel", Label = new SankeyDataLabel() { Text = "Fuel" } },
+            new SankeyDataNode() { Id = "Residential", Label = new SankeyDataLabel() { Text = "Residential" } },
+            new SankeyDataNode() { Id = "Commercial", Label = new SankeyDataLabel() { Text = "Commercial" } },
+            new SankeyDataNode() { Id = "Industrial", Label = new SankeyDataLabel() { Text = "Industrial" } },
+            new SankeyDataNode() { Id = "Transportation", Label = new SankeyDataLabel() { Text = "Transportation" } },
+            new SankeyDataNode() { Id = "Energy Services", Label = new SankeyDataLabel() { Text = "Energy Services" } },
+            new SankeyDataNode() { Id = "Losses", Label = new SankeyDataLabel() { Text = "Losses" } }
+        };
+
+        Links = new List<SankeyDataLink>()
+        {
+            // Energy Sources to Carriers
+            new SankeyDataLink() { SourceId = "Solar", TargetId = "Electricity", Value = 100 },
+            new SankeyDataLink() { SourceId = "Wind", TargetId = "Electricity", Value = 120 },
+            new SankeyDataLink() { SourceId = "Hydro", TargetId = "Electricity", Value = 80 },
+            new SankeyDataLink() { SourceId = "Nuclear", TargetId = "Electricity", Value = 90 },
+            new SankeyDataLink() { SourceId = "Coal", TargetId = "Electricity", Value = 200 },
+            new SankeyDataLink() { SourceId = "Natural Gas", TargetId = "Electricity", Value = 130 },
+            new SankeyDataLink() { SourceId = "Natural Gas", TargetId = "Heat", Value = 80 },
+            new SankeyDataLink() { SourceId = "Oil", TargetId = "Fuel", Value = 250 },
+
+            // Energy Carriers to Sectors
+            new SankeyDataLink() { SourceId = "Electricity", TargetId = "Residential", Value = 170 },
+            new SankeyDataLink() { SourceId = "Electricity", TargetId = "Commercial", Value = 160 },
+            new SankeyDataLink() { SourceId = "Electricity", TargetId = "Industrial", Value = 210 },
+            new SankeyDataLink() { SourceId = "Heat", TargetId = "Residential", Value = 40 },
+            new SankeyDataLink() { SourceId = "Heat", TargetId = "Commercial", Value = 20 },
+            new SankeyDataLink() { SourceId = "Heat", TargetId = "Industrial", Value = 20 },
+            new SankeyDataLink() { SourceId = "Fuel", TargetId = "Transportation", Value = 200 },
+            new SankeyDataLink() { SourceId = "Fuel", TargetId = "Industrial", Value = 50 },
+
+            // Sectors to End Use and Losses
+            new SankeyDataLink() { SourceId = "Residential", TargetId = "Energy Services", Value = 180 },
+            new SankeyDataLink() { SourceId = "Commercial", TargetId = "Energy Services", Value = 150 },
+            new SankeyDataLink() { SourceId = "Industrial", TargetId = "Energy Services", Value = 230 },
+            new SankeyDataLink() { SourceId = "Transportation", TargetId = "Energy Services", Value = 150 },
+            new SankeyDataLink() { SourceId = "Residential", TargetId = "Losses", Value = 30 },
+            new SankeyDataLink() { SourceId = "Commercial", TargetId = "Losses", Value = 30 },
+            new SankeyDataLink() { SourceId = "Industrial", TargetId = "Losses", Value = 50 },
+            new SankeyDataLink() { SourceId = "Transportation", TargetId = "Losses", Value = 50 }
+        };
         base.OnInitialized();
     }
-
-       private List<SankeyDataNode> GetSankeyNodes()
-        {
-          return new List<SankeyDataNode>()
-{
-new SankeyDataNode() { Id = "Female", Label = new SankeyDataLabel() { Text = "Female (58%)" } },
-// ... other nodes
-};
-        }
-
-        private List<SankeyDataLink> GetSankeyLinks()
-        {
-         return new List<SankeyDataLink>()
-{
-new SankeyDataLink() { SourceId = "Female", TargetId = "Tablet", Value = 12 },
-// ... other links
-};
-        }
-
-
 }
 ```
 
 ## Dimensions (Width and Height)
 
-Control the chart's dimensions using the `Width` and `Height` properties. You can specify values in pixels or percentages.
+Control the sankey's dimensions using the `Width` and `Height` properties. You can specify values in pixels or percentages.
 
+![Blazor Sankey Customization Dimensions](images/customization/sankey-customization-size.png)
 ```razor
-<SfSankey Nodes=@Nodes Links=@Links Width="800px" Height="600px"></SfSankey>
+@using Syncfusion.Blazor;
+@using Syncfusion.Blazor.Sankey;
 
+<SfSankey Width="@_width" Height="@_height" Nodes=@Nodes Links=@Links>
+</SfSankey>
 @code {
-    public List<SankeyDataNode> Nodes = new(); // Your node data
-    public List<SankeyDataLink> Links = new(); // Your link data
+    string _width = "800px";
+    string _height = "450px";
+    public List<SankeyDataNode> Nodes = new List<SankeyDataNode>();
+    public List<SankeyDataLink> Links = new List<SankeyDataLink>();
     protected override void OnInitialized()
     {
-        Nodes = GetSankeyNodes();
-        Links = GetSankeyLinks();
+        Nodes = new List<SankeyDataNode>()
+        {
+            new SankeyDataNode() { Id = "Solar", Label = new SankeyDataLabel() { Text = "Solar" } },
+            new SankeyDataNode() { Id = "Wind", Label = new SankeyDataLabel() { Text = "Wind" } },
+            new SankeyDataNode() { Id = "Hydro", Label = new SankeyDataLabel() { Text = "Hydro" } },
+            new SankeyDataNode() { Id = "Nuclear", Label = new SankeyDataLabel() { Text = "Nuclear" } },
+            new SankeyDataNode() { Id = "Coal", Label = new SankeyDataLabel() { Text = "Coal" } },
+            new SankeyDataNode() { Id = "Natural Gas", Label = new SankeyDataLabel() { Text = "Natural Gas" } },
+            new SankeyDataNode() { Id = "Oil", Label = new SankeyDataLabel() { Text = "Oil" } },
+            new SankeyDataNode() { Id = "Electricity", Label = new SankeyDataLabel() { Text = "Electricity" } },
+            new SankeyDataNode() { Id = "Heat", Label = new SankeyDataLabel() { Text = "Heat" } },
+            new SankeyDataNode() { Id = "Fuel", Label = new SankeyDataLabel() { Text = "Fuel" } },
+            new SankeyDataNode() { Id = "Residential", Label = new SankeyDataLabel() { Text = "Residential" } },
+            new SankeyDataNode() { Id = "Commercial", Label = new SankeyDataLabel() { Text = "Commercial" } },
+            new SankeyDataNode() { Id = "Industrial", Label = new SankeyDataLabel() { Text = "Industrial" } },
+            new SankeyDataNode() { Id = "Transportation", Label = new SankeyDataLabel() { Text = "Transportation" } },
+            new SankeyDataNode() { Id = "Energy Services", Label = new SankeyDataLabel() { Text = "Energy Services" } },
+            new SankeyDataNode() { Id = "Losses", Label = new SankeyDataLabel() { Text = "Losses" } }
+        };
+
+        Links = new List<SankeyDataLink>()
+        {
+            // Energy Sources to Carriers
+            new SankeyDataLink() { SourceId = "Solar", TargetId = "Electricity", Value = 100 },
+            new SankeyDataLink() { SourceId = "Wind", TargetId = "Electricity", Value = 120 },
+            new SankeyDataLink() { SourceId = "Hydro", TargetId = "Electricity", Value = 80 },
+            new SankeyDataLink() { SourceId = "Nuclear", TargetId = "Electricity", Value = 90 },
+            new SankeyDataLink() { SourceId = "Coal", TargetId = "Electricity", Value = 200 },
+            new SankeyDataLink() { SourceId = "Natural Gas", TargetId = "Electricity", Value = 130 },
+            new SankeyDataLink() { SourceId = "Natural Gas", TargetId = "Heat", Value = 80 },
+            new SankeyDataLink() { SourceId = "Oil", TargetId = "Fuel", Value = 250 },
+
+            // Energy Carriers to Sectors
+            new SankeyDataLink() { SourceId = "Electricity", TargetId = "Residential", Value = 170 },
+            new SankeyDataLink() { SourceId = "Electricity", TargetId = "Commercial", Value = 160 },
+            new SankeyDataLink() { SourceId = "Electricity", TargetId = "Industrial", Value = 210 },
+            new SankeyDataLink() { SourceId = "Heat", TargetId = "Residential", Value = 40 },
+            new SankeyDataLink() { SourceId = "Heat", TargetId = "Commercial", Value = 20 },
+            new SankeyDataLink() { SourceId = "Heat", TargetId = "Industrial", Value = 20 },
+            new SankeyDataLink() { SourceId = "Fuel", TargetId = "Transportation", Value = 200 },
+            new SankeyDataLink() { SourceId = "Fuel", TargetId = "Industrial", Value = 50 },
+
+            // Sectors to End Use and Losses
+            new SankeyDataLink() { SourceId = "Residential", TargetId = "Energy Services", Value = 180 },
+            new SankeyDataLink() { SourceId = "Commercial", TargetId = "Energy Services", Value = 150 },
+            new SankeyDataLink() { SourceId = "Industrial", TargetId = "Energy Services", Value = 230 },
+            new SankeyDataLink() { SourceId = "Transportation", TargetId = "Energy Services", Value = 150 },
+            new SankeyDataLink() { SourceId = "Residential", TargetId = "Losses", Value = 30 },
+            new SankeyDataLink() { SourceId = "Commercial", TargetId = "Losses", Value = 30 },
+            new SankeyDataLink() { SourceId = "Industrial", TargetId = "Losses", Value = 50 },
+            new SankeyDataLink() { SourceId = "Transportation", TargetId = "Losses", Value = 50 }
+        };
         base.OnInitialized();
     }
-
-            private List<SankeyDataNode> GetSankeyNodes()
-        {
-          return new List<SankeyDataNode>()
-{
-new SankeyDataNode() { Id = "Female", Label = new SankeyDataLabel() { Text = "Female (58%)" } },
-// ... other nodes
-};
-        }
-
-        private List<SankeyDataLink> GetSankeyLinks()
-        {
-         return new List<SankeyDataLink>()
-{
-new SankeyDataLink() { SourceId = "Female", TargetId = "Tablet", Value = 12 },
-// ... other links
-};
-        }
-
 }
 ```
 
@@ -141,75 +251,146 @@ new SankeyDataLink() { SourceId = "Female", TargetId = "Tablet", Value = 12 },
 
 Enable RTL support using the `EnableRTL` property.
 
+![Blazor Sankey Customization RTL](/images/customization/sankey-customization-rtl.png)
 ```razor
-<SfSankey Nodes=@Nodes Links=@Links EnableRTL="true"></SfSankey>
+@using Syncfusion.Blazor;
+@using Syncfusion.Blazor.Sankey;
 
+<SfSankey Nodes=@Nodes Links=@Links EnableRTL="true">
+</SfSankey>
 @code {
-    public List<SankeyDataNode> Nodes = new(); // Your node data
-    public List<SankeyDataLink> Links = new(); // Your link data
+    string _width = "800px";
+    string _height = "450px";
+    public List<SankeyDataNode> Nodes = new List<SankeyDataNode>();
+    public List<SankeyDataLink> Links = new List<SankeyDataLink>();
     protected override void OnInitialized()
     {
-        Nodes = GetSankeyNodes();
-        Links = GetSankeyLinks();
+        Nodes = new List<SankeyDataNode>()
+        {
+            new SankeyDataNode() { Id = "Solar", Label = new SankeyDataLabel() { Text = "Solar" } },
+            new SankeyDataNode() { Id = "Wind", Label = new SankeyDataLabel() { Text = "Wind" } },
+            new SankeyDataNode() { Id = "Hydro", Label = new SankeyDataLabel() { Text = "Hydro" } },
+            new SankeyDataNode() { Id = "Nuclear", Label = new SankeyDataLabel() { Text = "Nuclear" } },
+            new SankeyDataNode() { Id = "Coal", Label = new SankeyDataLabel() { Text = "Coal" } },
+            new SankeyDataNode() { Id = "Natural Gas", Label = new SankeyDataLabel() { Text = "Natural Gas" } },
+            new SankeyDataNode() { Id = "Oil", Label = new SankeyDataLabel() { Text = "Oil" } },
+            new SankeyDataNode() { Id = "Electricity", Label = new SankeyDataLabel() { Text = "Electricity" } },
+            new SankeyDataNode() { Id = "Heat", Label = new SankeyDataLabel() { Text = "Heat" } },
+            new SankeyDataNode() { Id = "Fuel", Label = new SankeyDataLabel() { Text = "Fuel" } },
+            new SankeyDataNode() { Id = "Residential", Label = new SankeyDataLabel() { Text = "Residential" } },
+            new SankeyDataNode() { Id = "Commercial", Label = new SankeyDataLabel() { Text = "Commercial" } },
+            new SankeyDataNode() { Id = "Industrial", Label = new SankeyDataLabel() { Text = "Industrial" } },
+            new SankeyDataNode() { Id = "Transportation", Label = new SankeyDataLabel() { Text = "Transportation" } },
+            new SankeyDataNode() { Id = "Energy Services", Label = new SankeyDataLabel() { Text = "Energy Services" } },
+            new SankeyDataNode() { Id = "Losses", Label = new SankeyDataLabel() { Text = "Losses" } }
+        };
+
+        Links = new List<SankeyDataLink>()
+        {
+            // Energy Sources to Carriers
+            new SankeyDataLink() { SourceId = "Solar", TargetId = "Electricity", Value = 100 },
+            new SankeyDataLink() { SourceId = "Wind", TargetId = "Electricity", Value = 120 },
+            new SankeyDataLink() { SourceId = "Hydro", TargetId = "Electricity", Value = 80 },
+            new SankeyDataLink() { SourceId = "Nuclear", TargetId = "Electricity", Value = 90 },
+            new SankeyDataLink() { SourceId = "Coal", TargetId = "Electricity", Value = 200 },
+            new SankeyDataLink() { SourceId = "Natural Gas", TargetId = "Electricity", Value = 130 },
+            new SankeyDataLink() { SourceId = "Natural Gas", TargetId = "Heat", Value = 80 },
+            new SankeyDataLink() { SourceId = "Oil", TargetId = "Fuel", Value = 250 },
+
+            // Energy Carriers to Sectors
+            new SankeyDataLink() { SourceId = "Electricity", TargetId = "Residential", Value = 170 },
+            new SankeyDataLink() { SourceId = "Electricity", TargetId = "Commercial", Value = 160 },
+            new SankeyDataLink() { SourceId = "Electricity", TargetId = "Industrial", Value = 210 },
+            new SankeyDataLink() { SourceId = "Heat", TargetId = "Residential", Value = 40 },
+            new SankeyDataLink() { SourceId = "Heat", TargetId = "Commercial", Value = 20 },
+            new SankeyDataLink() { SourceId = "Heat", TargetId = "Industrial", Value = 20 },
+            new SankeyDataLink() { SourceId = "Fuel", TargetId = "Transportation", Value = 200 },
+            new SankeyDataLink() { SourceId = "Fuel", TargetId = "Industrial", Value = 50 },
+
+            // Sectors to End Use and Losses
+            new SankeyDataLink() { SourceId = "Residential", TargetId = "Energy Services", Value = 180 },
+            new SankeyDataLink() { SourceId = "Commercial", TargetId = "Energy Services", Value = 150 },
+            new SankeyDataLink() { SourceId = "Industrial", TargetId = "Energy Services", Value = 230 },
+            new SankeyDataLink() { SourceId = "Transportation", TargetId = "Energy Services", Value = 150 },
+            new SankeyDataLink() { SourceId = "Residential", TargetId = "Losses", Value = 30 },
+            new SankeyDataLink() { SourceId = "Commercial", TargetId = "Losses", Value = 30 },
+            new SankeyDataLink() { SourceId = "Industrial", TargetId = "Losses", Value = 50 },
+            new SankeyDataLink() { SourceId = "Transportation", TargetId = "Losses", Value = 50 }
+        };
         base.OnInitialized();
     }
-
-       private List<SankeyDataNode> GetSankeyNodes()
-        {
-          return new List<SankeyDataNode>()
-{
-new SankeyDataNode() { Id = "Female", Label = new SankeyDataLabel() { Text = "Female (58%)" } },
-// ... other nodes
-};
-        }
-
-        private List<SankeyDataLink> GetSankeyLinks()
-        {
-         return new List<SankeyDataLink>()
-{
-new SankeyDataLink() { SourceId = "Female", TargetId = "Tablet", Value = 12 },
-// ... other links
-};
-        }
-
 }
 ```
 
 ## Orientation
 
-The `Orientation` property controls the flow direction of the Sankey diagram. You can set it to `Horizontal` or `Vertical`. The default `Auto` setting automatically chooses the best orientation based on the chart's aspect ratio.
+The `Orientation` property controls the flow direction of the Sankey. You can set it to `Horizontal` or `Vertical`. The default `Auto` setting automatically chooses the best orientation based on the sankey's aspect ratio.
 
-
+![Blazor Sankey Customization Vertical](images/customization/sankey-customization-vertical.png)
 ```razor
-<SfSankey Nodes=@Nodes Links=@Links Orientation="@Orientation.Vertical"></SfSankey>
-
+<SfSankey Width="@_width" Height="@_height" Nodes=@Nodes Links=@Links Orientation="SankeyOrientation.Vertical">
+</SfSankey>
 @code {
-    public List<SankeyDataNode> Nodes = new(); // Your node data
-    public List<SankeyDataLink> Links = new(); // Your link data
+    string _width = "650px";
+    string _height = "650px";
+    public List<SankeyDataNode> Nodes = new List<SankeyDataNode>();
+    public List<SankeyDataLink> Links = new List<SankeyDataLink>();
     protected override void OnInitialized()
     {
-        Nodes = GetSankeyNodes();
-        Links = GetSankeyLinks();
+        Nodes = new List<SankeyDataNode>()
+        {
+            new SankeyDataNode() { Id = "Solar", Label = new SankeyDataLabel() { Text = "Solar" } },
+            new SankeyDataNode() { Id = "Wind", Label = new SankeyDataLabel() { Text = "Wind" } },
+            new SankeyDataNode() { Id = "Hydro", Label = new SankeyDataLabel() { Text = "Hydro" } },
+            new SankeyDataNode() { Id = "Nuclear", Label = new SankeyDataLabel() { Text = "Nuclear" } },
+            new SankeyDataNode() { Id = "Coal", Label = new SankeyDataLabel() { Text = "Coal" } },
+            new SankeyDataNode() { Id = "Natural Gas", Label = new SankeyDataLabel() { Text = "Natural Gas" } },
+            new SankeyDataNode() { Id = "Oil", Label = new SankeyDataLabel() { Text = "Oil" } },
+            new SankeyDataNode() { Id = "Electricity", Label = new SankeyDataLabel() { Text = "Electricity" } },
+            new SankeyDataNode() { Id = "Heat", Label = new SankeyDataLabel() { Text = "Heat" } },
+            new SankeyDataNode() { Id = "Fuel", Label = new SankeyDataLabel() { Text = "Fuel" } },
+            new SankeyDataNode() { Id = "Residential", Label = new SankeyDataLabel() { Text = "Residential" } },
+            new SankeyDataNode() { Id = "Commercial", Label = new SankeyDataLabel() { Text = "Commercial" } },
+            new SankeyDataNode() { Id = "Industrial", Label = new SankeyDataLabel() { Text = "Industrial" } },
+            new SankeyDataNode() { Id = "Transportation", Label = new SankeyDataLabel() { Text = "Transportation" } },
+            new SankeyDataNode() { Id = "Energy Services", Label = new SankeyDataLabel() { Text = "Energy Services" } },
+            new SankeyDataNode() { Id = "Losses", Label = new SankeyDataLabel() { Text = "Losses" } }
+        };
+
+        Links = new List<SankeyDataLink>()
+        {
+            // Energy Sources to Carriers
+            new SankeyDataLink() { SourceId = "Solar", TargetId = "Electricity", Value = 100 },
+            new SankeyDataLink() { SourceId = "Wind", TargetId = "Electricity", Value = 120 },
+            new SankeyDataLink() { SourceId = "Hydro", TargetId = "Electricity", Value = 80 },
+            new SankeyDataLink() { SourceId = "Nuclear", TargetId = "Electricity", Value = 90 },
+            new SankeyDataLink() { SourceId = "Coal", TargetId = "Electricity", Value = 200 },
+            new SankeyDataLink() { SourceId = "Natural Gas", TargetId = "Electricity", Value = 130 },
+            new SankeyDataLink() { SourceId = "Natural Gas", TargetId = "Heat", Value = 80 },
+            new SankeyDataLink() { SourceId = "Oil", TargetId = "Fuel", Value = 250 },
+
+            // Energy Carriers to Sectors
+            new SankeyDataLink() { SourceId = "Electricity", TargetId = "Residential", Value = 170 },
+            new SankeyDataLink() { SourceId = "Electricity", TargetId = "Commercial", Value = 160 },
+            new SankeyDataLink() { SourceId = "Electricity", TargetId = "Industrial", Value = 210 },
+            new SankeyDataLink() { SourceId = "Heat", TargetId = "Residential", Value = 40 },
+            new SankeyDataLink() { SourceId = "Heat", TargetId = "Commercial", Value = 20 },
+            new SankeyDataLink() { SourceId = "Heat", TargetId = "Industrial", Value = 20 },
+            new SankeyDataLink() { SourceId = "Fuel", TargetId = "Transportation", Value = 200 },
+            new SankeyDataLink() { SourceId = "Fuel", TargetId = "Industrial", Value = 50 },
+
+            // Sectors to End Use and Losses
+            new SankeyDataLink() { SourceId = "Residential", TargetId = "Energy Services", Value = 180 },
+            new SankeyDataLink() { SourceId = "Commercial", TargetId = "Energy Services", Value = 150 },
+            new SankeyDataLink() { SourceId = "Industrial", TargetId = "Energy Services", Value = 230 },
+            new SankeyDataLink() { SourceId = "Transportation", TargetId = "Energy Services", Value = 150 },
+            new SankeyDataLink() { SourceId = "Residential", TargetId = "Losses", Value = 30 },
+            new SankeyDataLink() { SourceId = "Commercial", TargetId = "Losses", Value = 30 },
+            new SankeyDataLink() { SourceId = "Industrial", TargetId = "Losses", Value = 50 },
+            new SankeyDataLink() { SourceId = "Transportation", TargetId = "Losses", Value = 50 }
+        };
         base.OnInitialized();
     }
-     private List<SankeyDataNode> GetSankeyNodes()
-        {
-          return new List<SankeyDataNode>()
-{
-new SankeyDataNode() { Id = "Female", Label = new SankeyDataLabel() { Text = "Female (58%)" } },
-// ... other nodes
-};
-        }
-
-        private List<SankeyDataLink> GetSankeyLinks()
-        {
-         return new List<SankeyDataLink>()
-{
-new SankeyDataLink() { SourceId = "Female", TargetId = "Tablet", Value = 12 },
-// ... other links
-};
-        }
-
 }
 ```
 
@@ -218,3 +399,10 @@ new SankeyDataLink() { SourceId = "Female", TargetId = "Tablet", Value = 12 },
 * Combining background customizations can create visually appealing charts.
 * Using percentage values for `Width` and `Height` makes the chart responsive to different screen sizes.
 * `EnableRTL` is crucial for supporting right-to-left languages.
+* `Orientation` determines the layout direction of the sankey, either horizontal or vertical.
+
+## See also
+
+* [Nodes](./nodes)
+* [Links](./links)
+* [Labels](./labels)

@@ -88,7 +88,7 @@ Below is an example of how to bind data to the Sankey component in a Blazor appl
     }
 }
 ```
-
+![Blazor Sankey Data](images/data-binding/sankey-data-binding.png)
 ### Key Points
 - The `Nodes` parameter expects a collection of `SankeyDataNode` objects.
 - The `Links` parameter expects a collection of `SankeyDataLink` objects.
@@ -143,3 +143,9 @@ Ensure that your API endpoint provides a JSON response in the following format:
     ]
 }
 ```
+
+## See also
+
+* [Nodes](./nodes)
+* [Links](./links)
+* [Labels](./labels)

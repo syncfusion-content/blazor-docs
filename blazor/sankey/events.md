@@ -17,11 +17,11 @@ The Syncfusion Blazor Sankey Chart component provides a rich set of events that 
 
 The Sankey Chart component offers the following events:
 
-1. LegendItemRendering
-2. LegendItemHover
+1. NodeRendering 
+2. LegendItemRendering
 3. LabelRendering
-4. NodeRendering
-5. LinkRendering
+4. LinkRendering
+5. LegendItemHover
 6. SizeChanged
 7. TooltipRendering
 8. PrintCompleted
@@ -198,3 +198,9 @@ You can combine multiple events to create more complex interactions. Here's an e
 - Use the `Created` event for any one-time setup operations after the Sankey chart is fully rendered.
 
 By effectively utilizing the events provided by the Blazor Sankey component, you can create rich, interactive visualizations that respond to user actions and provide enhanced functionality in your Blazor applications.
+
+## See also
+
+* [Nodes](./nodes)
+* [Links](./links)
+* [Labels](./labels)

@@ -18,37 +18,81 @@ Labels in a Sankey diagram provide textual information for nodes, enhancing the 
 Labels are defined as part of the node configuration and can be further customized using the `SankeyLabelSettings`. Here's an example of how to configure labels in the Sankey component:
 
 ```razor
-<SfSankey Width="600px" Height="400px" Nodes="@Nodes" Links="@Links" Title="Device Usage" SubTitle="-2023">
-    <SankeyNodeSettings Width="30" Alignment="SankeyNodeAlign.Left" Offset="10" Padding="10"></SankeyNodeSettings>
-    <SankeyLinkSettings Color="blue" ColorType="SankeyColorType.Source" HighlightOpacity="1" InactiveOpacity="0.3" Opacity="0.7"></SankeyLinkSettings>
-    <SankeyLabelSettings Visible="true" FontSize="12" Color="black" FontFamily="Arial" FontWeight="400" Padding="8"></SankeyLabelSettings>
-</SfSankey>
+@using Syncfusion.Blazor;
+@using Syncfusion.Blazor.Sankey;
 
+<SfSankey Nodes=@Nodes Links=@Links>
+    <SankeyNodeSettings Color="#1c3f60" ></SankeyNodeSettings>
+    <SankeyLinkSettings Color="#afc1d0" ></SankeyLinkSettings>
+    <SankeyLabelSettings Color="#1c3f60" FontWeight="600" FontSize="14px" FontStyle="italic"></SankeyLabelSettings>
+    <SankeyLegendSettings Visible="false"></SankeyLegendSettings>
+</SfSankey>
 @code {
+    string _backgroundColor = "#0b1320";
     public List<SankeyDataNode> Nodes = new List<SankeyDataNode>();
     public List<SankeyDataLink> Links = new List<SankeyDataLink>();
-
     protected override void OnInitialized()
     {
-        base.OnInitialized();
         Nodes = new List<SankeyDataNode>()
         {
-            new SankeyDataNode() { Id = "Female", Label = new SankeyDataLabel() { Text = "Female (58%)" } },
-            new SankeyDataNode() { Id = "Male", Label = new SankeyDataLabel() { Text = "Male (42%)" } },
-            new SankeyDataNode() { Id = "Tablet", Label = new SankeyDataLabel() { Text = "Tablet (12%)" } },
-            new SankeyDataNode() { Id = "Mobile", Label = new SankeyDataLabel() { Text = "Mobile (40%)" } },
-            new SankeyDataNode() { Id = "Desktop", Label = new SankeyDataLabel() { Text = "Desktop (48%)" } },
-            new SankeyDataNode() { Id = "< 18", Label = new SankeyDataLabel() { Text = "< 18 years (8%)" } },
-            new SankeyDataNode() { Id = "18-26", Label = new SankeyDataLabel() { Text = "18-26 years (35%)" } },
-            new SankeyDataNode() { Id = "27-40", Label = new SankeyDataLabel() { Text = "27-40 years (38%)" } },
-            new SankeyDataNode() { Id = "> 40", Label = new SankeyDataLabel() { Text = "> 40 years (19%)" } }
+            new SankeyDataNode() { Id = "Solar", Label = new SankeyDataLabel() { Text = "Solar" } },
+            new SankeyDataNode() { Id = "Wind", Label = new SankeyDataLabel() { Text = "Wind" } },
+            new SankeyDataNode() { Id = "Hydro", Label = new SankeyDataLabel() { Text = "Hydro" } },
+            new SankeyDataNode() { Id = "Nuclear", Label = new SankeyDataLabel() { Text = "Nuclear" } },
+            new SankeyDataNode() { Id = "Coal", Label = new SankeyDataLabel() { Text = "Coal" } },
+            new SankeyDataNode() { Id = "Natural Gas", Label = new SankeyDataLabel() { Text = "Natural Gas" } },
+            new SankeyDataNode() { Id = "Oil", Label = new SankeyDataLabel() { Text = "Oil" } },
+            new SankeyDataNode() { Id = "Electricity", Label = new SankeyDataLabel() { Text = "Electricity" } },
+            new SankeyDataNode() { Id = "Heat", Label = new SankeyDataLabel() { Text = "Heat" } },
+            new SankeyDataNode() { Id = "Fuel", Label = new SankeyDataLabel() { Text = "Fuel" } },
+            new SankeyDataNode() { Id = "Residential", Label = new SankeyDataLabel() { Text = "Residential" } },
+            new SankeyDataNode() { Id = "Commercial", Label = new SankeyDataLabel() { Text = "Commercial" } },
+            new SankeyDataNode() { Id = "Industrial", Label = new SankeyDataLabel() { Text = "Industrial" } },
+            new SankeyDataNode() { Id = "Transportation", Label = new SankeyDataLabel() { Text = "Transportation" } },
+            new SankeyDataNode() { Id = "Energy Services", Label = new SankeyDataLabel() { Text = "Energy Services" } },
+            new SankeyDataNode() { Id = "Losses", Label = new SankeyDataLabel() { Text = "Losses" } }
         };
-        // ... Links initialization ...
+
+        Links = new List<SankeyDataLink>()
+        {
+            // Energy Sources to Carriers
+            new SankeyDataLink() { SourceId = "Solar", TargetId = "Electricity", Value = 100 },
+            new SankeyDataLink() { SourceId = "Wind", TargetId = "Electricity", Value = 120 },
+            new SankeyDataLink() { SourceId = "Hydro", TargetId = "Electricity", Value = 80 },
+            new SankeyDataLink() { SourceId = "Nuclear", TargetId = "Electricity", Value = 90 },
+            new SankeyDataLink() { SourceId = "Coal", TargetId = "Electricity", Value = 200 },
+            new SankeyDataLink() { SourceId = "Natural Gas", TargetId = "Electricity", Value = 130 },
+            new SankeyDataLink() { SourceId = "Natural Gas", TargetId = "Heat", Value = 80 },
+            new SankeyDataLink() { SourceId = "Oil", TargetId = "Fuel", Value = 250 },
+
+            // Energy Carriers to Sectors
+            new SankeyDataLink() { SourceId = "Electricity", TargetId = "Residential", Value = 170 },
+            new SankeyDataLink() { SourceId = "Electricity", TargetId = "Commercial", Value = 160 },
+            new SankeyDataLink() { SourceId = "Electricity", TargetId = "Industrial", Value = 210 },
+            new SankeyDataLink() { SourceId = "Heat", TargetId = "Residential", Value = 40 },
+            new SankeyDataLink() { SourceId = "Heat", TargetId = "Commercial", Value = 20 },
+            new SankeyDataLink() { SourceId = "Heat", TargetId = "Industrial", Value = 20 },
+            new SankeyDataLink() { SourceId = "Fuel", TargetId = "Transportation", Value = 200 },
+            new SankeyDataLink() { SourceId = "Fuel", TargetId = "Industrial", Value = 50 },
+
+            // Sectors to End Use and Losses
+            new SankeyDataLink() { SourceId = "Residential", TargetId = "Energy Services", Value = 180 },
+            new SankeyDataLink() { SourceId = "Commercial", TargetId = "Energy Services", Value = 150 },
+            new SankeyDataLink() { SourceId = "Industrial", TargetId = "Energy Services", Value = 230 },
+            new SankeyDataLink() { SourceId = "Transportation", TargetId = "Energy Services", Value = 150 },
+            new SankeyDataLink() { SourceId = "Residential", TargetId = "Losses", Value = 30 },
+            new SankeyDataLink() { SourceId = "Commercial", TargetId = "Losses", Value = 30 },
+            new SankeyDataLink() { SourceId = "Industrial", TargetId = "Losses", Value = 50 },
+            new SankeyDataLink() { SourceId = "Transportation", TargetId = "Losses", Value = 50 }
+        };
+        base.OnInitialized();
     }
 }
 ```
 
 In this example, we define labels for each node and use `SankeyLabelSettings` to customize their appearance.
+
+![Blazor Sankey Labels](images/labels/sankey-labels.png)
 
 ## Key Points
 
@@ -83,16 +127,6 @@ You can customize the appearance of labels using various properties in `SankeyLa
 Additional properties inherited from `SankeyBaseTextStyle`:
 - `FontStyle`: Sets the font style (e.g., "italic").
 
-## Advanced Label Configuration
-
-The example demonstrates labels with additional information:
-
-1. Gender labels include percentages: "Female (58%)", "Male (42%)"
-2. Device type labels show usage percentages: "Tablet (12%)", "Mobile (40%)", "Desktop (48%)"
-3. Age group labels display ranges and percentages: "< 18 years (8%)", "18-26 years (35%)", etc.
-
-This configuration provides a rich set of information directly in the labels, enhancing the diagram's readability.
-
 ## Key Considerations
 
 - Use clear and concise label text to avoid cluttering the diagram.
@@ -102,3 +136,10 @@ This configuration provides a rich set of information directly in the labels, en
 - Use the `Visible` property to hide labels if the diagram becomes too crowded.
 
 By effectively configuring and customizing labels in the Blazor Sankey component, you can create informative and easy-to-understand flow diagrams. Labels play a crucial role in conveying information about each node, making the overall data visualization more meaningful and accessible to users.
+
+## See also
+
+* [Nodes](./nodes)
+* [Links](./links)
+* [Legend](./legend)
+* [tooltip](./tooltip)
