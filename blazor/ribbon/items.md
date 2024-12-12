@@ -130,9 +130,9 @@ The following events are available in the Colorpicker item.
 * `ValueChange` - ColorPickerEventArgs
 * `Selected` - ColorPickerSelectedEventArgs
 
-## Groupbutton item
+## GroupButton item
 
-You can render the built-in Ribbon group button item by setting the `Type` property as `RibbonItemType.GroupButton`. This item groups multiple buttons for single or multiple selection. Use the `RibbonGroupButtonSettings` tag directive to configure options like `Items`, `Selection`, and more. `Items` accepts a collection of `GroupButtonItem`. Hence, you can use the `GroupButtonItem` tag directive to customize the groupbutton items which provides options such as Content, IconCss, Selected and more.
+You can render the built-in Ribbon group button item by setting the `Type` property as `RibbonItemType.GroupButton`. This item groups multiple buttons for single or multiple selection. Use the `RibbonGroupButtonSettings` tag directive to configure options like `Items`, `Selection`, and more. `Items` accepts a collection of `GroupButtonItem`. Hence, you can use the `GroupButtonItem` tag directive to customize the group button items which provides options such as Content, IconCss, Selected and more.
 
 {% tabs %}
 {% highlight razor %}
@@ -146,7 +146,7 @@ You can render the built-in Ribbon group button item by setting the `Type` prope
 
 ### Events
 
-The following event is available in the Groupbutton item.
+The following event is available in the GroupButton item.
 
 * `ItemClick` - GroupButtonClickEventArgs
 
@@ -164,7 +164,7 @@ You can render the built-in Ribbon combobox item by setting the `Type` property 
 {% endhighlight %}
 {% endtabs %}
 
-### Supported events
+### Events
 
 The following events are available in the Combobox item.
 
