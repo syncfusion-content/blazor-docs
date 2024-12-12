@@ -35,7 +35,7 @@ The below code demonstrates the filtering functionality with [ODataAdaptor](http
 
 {% endhighlight %}
 
-## DebounceDelay in Filtering
+## Debounce in Filtering
 
 You can use the `DebounceDelay` property for filtering, enabling you to set a delay in milliseconds. This functionality helps reduce the frequency of filtering as you type, enhancing performance and responsiveness for a smoother user experience.
 
