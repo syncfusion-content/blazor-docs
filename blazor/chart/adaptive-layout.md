@@ -87,8 +87,7 @@ The table below outlines the behavior of various chart elements under specific c
 | Chart Title  | <kbd>Height &lt; 200</kbd> / <kbd>Width &lt; 200</kbd> | Chart title is disabled |
 | Chart Sutitle | <kbd>Height &lt; 300</kbd> / <kbd>Width &lt; 300</kbd> | Chart subtitle is disabled |
 | Axes | <kbd>Height &lt;= 200</kbd> / <kbd>Width &lt;= 200</kbd> | Horizontal/Vertical axis titles and scrollbars are disabled |
-| Axes Label  | <kbd>Height &lt; 100</kbd> / <kbd>Width &lt; 100 | Horizontal/Vertical axis labels are disabled |
-| Axis Label Format | <kbd>Height &lt;= 400</kbd> / <kbd>Width &lt;= 400</kbd> | Axis numeric labels are formatted with M, K and B |
+| Axes Label  | <kbd>Height &lt; 100</kbd> / <kbd>Width &lt; 100</kbd> <br> <kbd>Height &lt; 200</kbd> / <kbd>Width &lt; 200</kbd> <br> <kbd>Height &lt;= 400</kbd> / <kbd>Width &lt;= 400</kbd>  | Horizontal/Vertical axis labels are disabled <br><br><br> Axis labels move inside the chart <br><br><br> Axis numeric labels are formatted with M, K and B |
 | Legend | <kbd>Height &lt; 300</kbd> / <kbd>Width &lt; 300</kbd> | Moves to the right if the width is greater than 200px; otherwise, it is disabled / Moves to the bottom if the height is greater than 200px; otherwise, it is disabled. |
 | Marker | <kbd>Height &lt; 200</kbd> / <kbd>Width &lt; 200</kbd> | Marker is disabled in the chart |
 | Zoom Toolkit | <kbd>Height &lt; 200</kbd> / <kbd>Width &lt; 200</kbd> | Zoom toolkit is disabled |
