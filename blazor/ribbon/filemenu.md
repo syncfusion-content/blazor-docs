@@ -95,7 +95,7 @@ Menu items can be added to the file menu by binding a collection of menu items t
 
 ## Open submenu on click
 
-By default, submenus open on mouse hover. To change this behavior and open submenus on menu item click, you can set the `ShowItemOnClick` property to `true`.
+By default, submenu opens on mouse hover. To change this behavior and open submenu on menu item click, you can set the `ShowItemOnClick` property to `true`.
 
 {% tabs %}
 {% highlight razor %}
@@ -249,7 +249,7 @@ You can define custom header text for the file menu by using the `Text` property
 
 ## Events
 
-The following events are available in the Ribbon Filemenu.
+The following events are available in the Ribbon File menu.
 
 * `FileMenuOpening` - FileMenuOpenEventArgs
 * `FileMenuClosing` - FileMenuCloseEventArgs
