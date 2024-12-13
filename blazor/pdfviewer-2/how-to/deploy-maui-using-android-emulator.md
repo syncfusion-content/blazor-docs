@@ -15,11 +15,7 @@ Refer [here](https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-sta
 
 ## Add PDF Viewer component
 
-<<<<<<< HEAD
-Add the Syncfusion&reg; PDF Viewer component in the **~/Pages/Index.razor** file.
-=======
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer (Next Gen) component in the **~/Pages/Index.razor** file.
->>>>>>> remotes/origin/hotfix/hotfix-v27.2.2
 
 {% tabs %}
 {% highlight razor %}
