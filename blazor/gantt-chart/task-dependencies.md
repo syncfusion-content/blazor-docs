@@ -91,10 +91,11 @@ The following screenshot displays the output of the above code.
 
 ![Blazor Gantt Chart displays Task Relationship](images/blazor-gantt-chart-task-relationship.png)
 
+N> If no relationship type is specified, the default type of Finish-to-Start (FS) is automatically applied.
 
-## Multiple Predecessors for a Task
+## Multiple Predecessors in a Task
 
-In the Blazor Gantt Chart component, it is possible to assign multiple predecessors to a single task. This allows for more complex dependency structures where a task may rely on the completion or initiation of multiple other tasks before it can proceed.
+In the Gantt Chart component, it is possible to assign multiple predecessors to a single task. This allows for more complex dependency structures where a task may rely on the completion or initiation of multiple other tasks before it can proceed.
 
 To define multiple predecessors for a task, you can specify them as a comma-separated string. Each predecessor is defined using the task Id and the relationship type (e.g., "2FS", "6SS"). The following example demonstrates how to configure multiple predecessors for a task.
 
@@ -147,15 +148,15 @@ Adding multiple predecessors enhances task management by allowing more detailed 
 
 ## Predecessor offset with duration units
 
-In the Gantt Chart component, you can define a delay or lead time before the successor task starts after the predecessor completes. This is done using an offset, which can be specified in various duration units:
+In the Gantt Chart component, you can define a lag or lead time before the successor task starts after the predecessor completes. This is done using an offset, which can be specified in various duration units:
 
 * Day
 * Hour
 * Minute
 
-This offset delays the commencement of the next task, allowing for planned gaps in project scheduling.
+For lag time, use a positive offset to start a task a specified period after its predecessor completes (e.g., "FS+2d" for a 2-days interval). For lead time, use a negative offset to begin a task before its predecessor completes (e.g., "FS-2d" for an earlier start).
 
-For instance, a task can start 2 days after its predecessor finishes by using an offset like "FS+2d". You can also use hours ("FS+8h") or minutes ("FS+30m") to achieve more precise control over the timing of successor tasks.
+You can also use hours ("FS+8h") or minutes ("FS+30m") to achieve more precise control over the timing of successor tasks.
 
 This can be implemented as shown in the code example below:
 
@@ -200,7 +201,6 @@ This can be implemented as shown in the code example below:
     }
 }
 ```
-The offset allows for strategic delays in tasks, ensuring that project timelines reflect real-world constraints and dependencies.
 
 The following screen shot depicts the duration unit support in the predecessor offset.
 
