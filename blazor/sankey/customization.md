@@ -263,11 +263,7 @@ Control the sankey's dimensions using the `Width` and `Height` properties. You c
 
 ## Right-to-Left (RTL) Support
 
-The Blazor Sankey component offers built-in support for Right-to-Left (RTL) languages, which is crucial for applications targeting audiences that read from right to left, such as Arabic or Hebrew speakers.
-
-### Enabling RTL Support
-
-To enable RTL support, simply set the `EnableRTL` property to `true`. This will flip the entire layout of the Sankey diagram, including nodes, links, and any associated labels or legends.
+The Blazor Sankey component offers built-in support for Right-to-Left (RTL) languages, which is crucial for applications targeting audiences that read from right to left, such as Arabic or Hebrew speakers. To enable RTL support, simply set the `EnableRTL` property to `true`. This will flip the entire layout of the Sankey diagram, including nodes, links, and any associated labels or legends.
 
 ### Effects of Enabling RTL
 
@@ -356,9 +352,33 @@ To enable RTL support, simply set the `EnableRTL` property to `true`. This will 
 
 ## Orientation
 
-The `Orientation` property controls the flow direction of the Sankey. You can set it to `Horizontal` or `Vertical`. The default `Auto` setting automatically chooses the best orientation based on the sankey's aspect ratio.
+The `Orientation` property controls the flow direction of the Sankey. You can set it to `Horizontal` or `Vertical`. The default `Auto` setting automatically chooses the best orientation based on the sankey's aspect ratio. Setting the orientation to vertical can be particularly useful for certain types of data or when you want to emphasize the top-down flow of information.
 
-Setting the orientation to vertical can be particularly useful for certain types of data or when you want to emphasize the top-down flow of information.
+### Effects of Vertical Mode
+
+When you switch the Sankey diagram to vertical orientation, several aspects of the chart change:
+
+1. **Node Placement**: Nodes are arranged vertically from top to bottom, instead of left to right.
+
+2. **Link Direction**: Links flow downward, connecting nodes from top to bottom.
+
+3. **Label Positioning**: 
+   - Node labels are typically positioned to the right of each node.
+   - Link labels, if enabled, are oriented to align with the vertical flow.
+
+4. **Space Utilization**: 
+   - Vertical orientation often allows for better use of space when dealing with many nodes or long node labels.
+   - It can be particularly effective for tall, narrow layouts.
+
+5. **Data Interpretation**: 
+   - The top-down flow can imply a hierarchical or sequential relationship between nodes.
+   - It may be more intuitive for certain types of data, such as organizational charts or process flows.
+
+6. **Responsiveness**: 
+   - Vertical layouts can sometimes be more responsive on mobile devices or narrow screen widths.
+
+7. **Scrolling Behavior**: 
+   - For large diagrams, users will scroll vertically instead of horizontally, which can be more natural on most devices.
 
 {% tabs %}
 {% highlight razor %}
@@ -432,32 +452,6 @@ Setting the orientation to vertical can be particularly useful for certain types
 {% endtabs %}
 
 ![Blazor Sankey Customization Vertical](images/customization/sankey-customization-vertical.png)
-
-### Effects of Vertical Mode
-
-When you switch the Sankey diagram to vertical orientation, several aspects of the chart change:
-
-1. **Node Placement**: Nodes are arranged vertically from top to bottom, instead of left to right.
-
-2. **Link Direction**: Links flow downward, connecting nodes from top to bottom.
-
-3. **Label Positioning**: 
-   - Node labels are typically positioned to the right of each node.
-   - Link labels, if enabled, are oriented to align with the vertical flow.
-
-4. **Space Utilization**: 
-   - Vertical orientation often allows for better use of space when dealing with many nodes or long node labels.
-   - It can be particularly effective for tall, narrow layouts.
-
-5. **Data Interpretation**: 
-   - The top-down flow can imply a hierarchical or sequential relationship between nodes.
-   - It may be more intuitive for certain types of data, such as organizational charts or process flows.
-
-6. **Responsiveness**: 
-   - Vertical layouts can sometimes be more responsive on mobile devices or narrow screen widths.
-
-7. **Scrolling Behavior**: 
-   - For large diagrams, users will scroll vertically instead of horizontally, which can be more natural on most devices.
 
 ## Key Points
 

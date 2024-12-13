@@ -17,6 +17,10 @@ Nodes are fundamental elements in a Sankey diagram, representing entities or sta
 
 To add nodes to your Sankey diagram, you need to define a collection of `SankeyDataNode` objects. Each node requires a unique ID and can have additional properties for customization.
 
+- Each node must have a unique `Id` property.
+- The `Label` property is of type `SankeyDataLabel` and defines the text displayed for the node.
+- Nodes are automatically positioned based on their connections defined in the `Links` collection.
+
 Here's an example of how to configure nodes in the Sankey component:
 
 {% tabs %}
@@ -102,33 +106,35 @@ In this example, we define multiple nodes representing different categories such
 
 ![Blazor Sankey Node Customization](images/nodes/sankey-node-basic.png)
 
-## Key Points
-
-- Each node must have a unique `Id` property.
-- The `Label` property is of type `SankeyDataLabel` and defines the text displayed for the node.
-- Nodes are automatically positioned based on their connections defined in the `Links` collection.
-
 ## Customizing Node Appearance
 
-You can customize the appearance of nodes using the `SankeyNodeSettings`:
+The nodes in a Sankey diagram represent the primary entities or data points, and their appearance can be tailored to enhance the clarity and style of your visualization. Using the `SankeyNodeSettings` in the Syncfusion Blazor Sankey component, you can configure properties like width, alignment, padding, and more to make the diagram visually distinct and avoid overlap between elements.
+
+### Node Properties
+
+- **`Width`**: Specifies the width of the nodes. The default value is `20`, but it can be increased or decreased to adjust the visual prominence of nodes in the diagram.
+- **`Alignment`**: Determines the alignment of nodes. Options include:
+  - **Left**: Aligns nodes to the left edge of the layout.
+  - **Top**: Aligns nodes to the top edge of the layout.
+  - **Stretch**: Stretches the nodes across the layout to fill available space.
+- **`Offset`**: Sets an additional offset for nodes based on their alignment, allowing fine-grained control over node placement.
+- **`Padding`**: Defines the spacing around nodes to prevent overlapping with other elements.
+- **`Color`**: Lets you customize the fill color of the nodes (not shown in the example but configurable).
+- **`Opacity`**: Adjusts the transparency level of the nodes (not shown in the example but configurable).
+
+Below is an example demonstrating the customization of node appearance:
 
 {% tabs %}
 {% highlight razor %}
 
-<SankeyNodeSettings Width="30" Alignment="SankeyNodeAlign.Left" Offset="10" Padding="10"></SankeyNodeSettings>
-
+<SankeyNodeSettings 
+    Width="30" 
+    Alignment="SankeyNodeAlign.Left" 
+    Offset="10" 
+    Padding="10">
+</SankeyNodeSettings>
 {% endhighlight %}
 {% endtabs %}
-
-
-## Node Properties
-
-- `Width`: Sets the width of the nodes (default is 20).
-- `Alignment`: Determines the alignment of nodes (Left, Top, or Stretch).
-- `Offset`: Specifies the offset of nodes based on the alignment.
-- `Padding`: Sets the padding around nodes to avoid overlapping.
-- `Color`: Defines the color of the nodes (not shown in the example, but available).
-- `Opacity`: Sets the opacity level of the nodes (not shown in the example, but available).
 
 ## Key Considerations
 

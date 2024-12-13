@@ -17,6 +17,10 @@ Links in a Sankey diagram represent the connections and flow between nodes. They
 
 To add links to your Sankey diagram, you need to define a collection of `SankeyDataLink` objects. Each link requires a source node, a target node, and a value representing the flow quantity.
 
+- Each link must have a `SourceId` and `TargetId` corresponding to existing node IDs.
+- The `Value` property determines the thickness of the link and represents the quantity flowing between nodes.
+- Links are automatically rendered based on the node positions and specified values.
+
 Here's an example of how to configure links in the Sankey component:
 
 {% tabs %}
@@ -101,35 +105,36 @@ In this example, we define multiple links connecting nodes across different cate
 
 ![Blazor Sankey Link Customization](images/links/sankey-basic-link.png)
 
-## Key Points
-
-- Each link must have a `SourceId` and `TargetId` corresponding to existing node IDs.
-- The `Value` property determines the thickness of the link and represents the quantity flowing between nodes.
-- Links are automatically rendered based on the node positions and specified values.
-
 ## Customizing Link Appearance
 
-You can customize the appearance of links using the `SankeyLinkSettings`:
+In a Sankey diagram, links represent the flow of data between nodes, and their appearance plays a critical role in making the visualization clear and aesthetically pleasing. The `SankeyLinkSettings` in the Syncfusion Blazor Sankey component allows you to customize these links to match your design requirements or emphasize specific data points.
+
+### Link Properties
+
+- **`Color`**: Specifies the color of the links, which can be provided in standard formats like HEX (`#RRGGBB`) or RGBA (`rgba(r, g, b, a)`). This setting allows you to visually distinguish different flows in the diagram.
+- **`ColorType`**: Determines how the link color is applied, offering three options:
+  - **`SankeyColorType.Source`**: The link color matches the source node, highlighting the origin of the flow.
+  - **`SankeyColorType.Target`**: The link color matches the target node, emphasizing the destination.
+  - **`SankeyColorType.Blend`**: A gradient blend of source and target node colors, illustrating the connection between them dynamically.
+- **`Opacity`**: Defines the overall transparency of the links, with values ranging from `0.0` (completely transparent) to `1.0` (fully opaque). The default value is `0.8`, ensuring a balance between visibility and unobtrusiveness.
+- **`HighlightOpacity`**: Sets the opacity of links when hovered over, enabling a visual cue for interactivity. The default value is `0.8`, but it can be adjusted for more emphasis.
+- **`InactiveOpacity`**: Specifies the opacity of inactive links (those not hovered over), providing a contrast that directs attention to the active flow. The default value is `0.2`.
+
+Below is an example configuration that demonstrates how to apply these properties to customize the links in a Sankey diagram. Adjusting these settings can help you create a visualization that aligns with your data storytelling needs.
 
 {% tabs %}
 {% highlight razor %}
 
-<SankeyLinkSettings Color="blue" ColorType="SankeyColorType.Source" HighlightOpacity="1" InactiveOpacity="0.3" Opacity="0.7"></SankeyLinkSettings>
+<SankeyLinkSettings 
+    Color="blue" 
+    ColorType="SankeyColorType.Source" 
+    HighlightOpacity="1" 
+    InactiveOpacity="0.3" 
+    Opacity="0.7">
+</SankeyLinkSettings>
 
 {% endhighlight %}
 {% endtabs %}
-
-
-## Link Properties
-
-- `Color`: Sets the color of the links. Can be specified in hex or rgba format.
-- `ColorType`: Determines how the color is applied to the links. Options are:
-  - `SankeyColorType.Source`: Color based on the source node.
-  - `SankeyColorType.Target`: Color based on the target node.
-  - `SankeyColorType.Blend`: A blend of source and target node colors.
-- `Opacity`: Sets the opacity of the links (0.0 to 1.0, default is 0.8).
-- `HighlightOpacity`: Sets the opacity of links when hovered over (0.0 to 1.0, default is 0.8).
-- `InactiveOpacity`: Sets the opacity of inactive links (0.0 to 1.0, default is 0.2).
 
 ## Key Considerations
 

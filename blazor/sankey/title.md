@@ -13,7 +13,13 @@ The Syncfusion Blazor Sankey component allows you to add a title and subtitle to
 
 ## Setting the Title and Subtitle
 
-To add a title and subtitle to your Sankey chart, use the `Title` and `SubTitle` properties of the `Sankey` component.
+Adding a title and subtitle to your Sankey chart helps provide context and clarity. Use the `Title` property for the main heading, representing the chart's purpose, and the `SubTitle` property for additional details like a specific time period or region.
+
+- **Clarity**: Highlights the chart’s purpose at a glance.
+- **Context**: Adds specific details like a year or location.
+- **Professional Presentation**: Enhances the overall design and readability.
+
+By utilizing these properties, your Sankey diagram becomes more informative and visually engaging.
 
 {% tabs %}
 {% highlight razor %}
@@ -95,7 +101,7 @@ In this example, "Energy Flow" is set as the title, and "-2024" is set as the su
 
 ## Customizing Title and Subtitle
 
-You can further customize the appearance of the title and subtitle using the `SankeyTitleStyle` and `SankeySubtitleStyle` components.
+The **Blazor Sankey** component allows you to visualize flow data with nodes and links. You can customize the appearance of the **title** and **subtitle** of your Sankey chart using the `SankeyTitleStyle` and `SankeySubtitleStyle` components. These components let you define font properties like `FontFamily`, `FontSize`, `FontStyle`, and `FontWeight` to match your design requirements.
 
 {% tabs %}
 {% highlight razor %}

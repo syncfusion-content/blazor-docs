@@ -9,13 +9,13 @@ documentation: ug
 
 # Tooltips in Blazor Sankey Component
 
-## Overview
+The **Blazor Sankey Component** is a powerful tool for visualizing energy flow, financial data, or any other system with nodes and links. The component allows you to display a flow diagram where nodes represent entities, and links represent the relationships or flows between them.
 
-Tooltips in a Sankey diagram provide additional information about nodes and links when users hover over them. This topic covers how to configure and customize tooltips in the Blazor Sankey component.
+This guide provides step-by-step instructions on how to configure and customize tooltips within the **Blazor Sankey Component**.
 
 ## Basic Tooltip Configuration
 
-Tooltips can be added to your Sankey diagram using the `SankeyTooltipSettings`. Here's an example of how to configure tooltips in the Sankey component:
+Tooltips can be added to your Sankey diagram using the `SankeyTooltipSettings`. Below is an example of how to configure tooltips in the Sankey component:
 
 {% tabs %}
 {% highlight razor %}
@@ -93,20 +93,19 @@ Tooltips can be added to your Sankey diagram using the `SankeyTooltipSettings`. 
 
 ![Blazor Sankey Tooltip](images/tooltip/sankey-tooltip.png)
 
-## Key Properties
-
-- `Enable`: Determines whether tooltips are displayed (default is true).
-- `Fill`: Sets the background color of the tooltip.
-- `Opacity`: Sets the opacity of the tooltip (0 to 1, default is 0.75).
-- `NodeFormat`: Specifies the format for node tooltips.
-- `LinkFormat`: Specifies the format for link tooltips.
-- `EnableAnimation`: Enables or disables tooltip animation (default is true).
-- `Duration`: Sets the duration of the tooltip animation in milliseconds (default is 300).
-- `FadeOutDuration`: Sets the fade-out duration for tooltips in milliseconds (default is 1000).
 
 ## Customizing Tooltip Appearance
 
-You can customize the appearance of tooltips using various properties:
+The **Blazor Sankey Component** allows you to customize the appearance and behavior of tooltips through several properties. The tooltip settings allow for full control over how tooltips appear, including their background color, opacity, and animation effects for both nodes and links.
+
+- **`Enable`**: Controls whether tooltips are displayed. Default is `true`.
+- **`Fill`**: Sets the background color of the tooltip.
+- **`Opacity`**: Adjusts the tooltip opacity (0 to 1). Default is `0.75`.
+- **`NodeFormat`**: Defines the format for node tooltips.
+- **`LinkFormat`**: Specifies the format for link tooltips.
+- **`EnableAnimation`**: Toggles tooltip animation. Default is `true`.
+- **`Duration`**: Sets the duration (in milliseconds) for the tooltip animation. Default is `300`.
+- **`FadeOutDuration`**: Specifies the fade-out duration for tooltips (in milliseconds). Default is `1000`.
 
 {% tabs %}
 {% highlight razor %}
@@ -203,7 +202,7 @@ You can customize the appearance of tooltips using various properties:
 
 ### Custom Tooltip Templates
 
-You can create custom tooltip templates for both nodes and links using the `SankeyNodeTemplate` and `SankeyLinkTemplate` properties:
+For more advanced customizations, you can use custom templates for both node and link tooltips by utilizing the `SankeyNodeTemplate` and `SankeyLinkTemplate` properties. This allows you to define HTML templates that customize the layout and content of the tooltips.
 
 {% tabs %}
 {% highlight razor %}
