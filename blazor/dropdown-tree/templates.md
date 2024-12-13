@@ -64,11 +64,9 @@ The variable `context` holds the data of the current node.
 
 ## Value template
 
-The currently selected value that is displayed by default on the Dropdown Tree input element can be customized using the `ValueTemplate` property.
+The currently selected value that is displayed by default on the Dropdown Tree input element can be customized using the [ValueTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_ValueTemplate) property. The variable `context` holds the data of the current node.
 
 In the following sample, the selected value is displayed as a combined text of both `Name` and `Job` in the Dropdown Tree input, which is separated by a hyphen.
-
-The variable `context` holds the data of the current node.
 
 The template expression can be provided directly inside the `ValueTemplate`, as shown in the code below.
 

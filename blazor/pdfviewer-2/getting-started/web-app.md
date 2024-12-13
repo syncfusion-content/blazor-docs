@@ -33,11 +33,7 @@ To add **Blazor PDF Viewer** component in the app, open the NuGet package manage
 If you select an Interactive render mode as WebAssembly or Auto, you can install the NuGet package in the client-side project to add component in Web App.
 
 N> If you select an Interactive render mode as `WebAssembly or Auto`, you can install the NuGet package in the client-side project to add component in Web App.
-<<<<<<< HEAD
-On the Syncfusion&reg; side, we are using SkiaSharp.Views.Blazor version 2.88.8. Please make sure to reference this version as well.
-=======
 On the Syncfusion<sup style="font-size:70%">&reg;</sup> side, we are using SkiaSharp.Views.Blazor version 2.88.8. Please make sure to reference this version as well.
->>>>>>> remotes/origin/hotfix/hotfix-v27.2.2
 * [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor)
 
 ![SkiaSharp Views Blazor](gettingstarted-images/skia-sharp-image.png)
@@ -63,11 +59,7 @@ Interactive render mode as WebAssembly or Auto, need to add the following proper
 
 The above configuration is required only for .NET 9 projects. Please ensure you use this setup for the corresponding version.
 
-<<<<<<< HEAD
-## Register Syncfusion&reg; Blazor Service
-=======
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
->>>>>>> remotes/origin/hotfix/hotfix-v27.2.2
 
 * In the **~/_Imports.razor** file, add the following namespaces:
 
@@ -80,15 +72,9 @@ The above configuration is required only for .NET 9 projects. Please ensure you 
 {% endhighlight %}
 {% endtabs %}
 
-<<<<<<< HEAD
-* Register the Syncfusion&reg; Blazor Service in the program.cs file of your Blazor Web App.
-
-If you select an Interactive render mode as `WebAssembly` or `Auto`, you need to register the Syncfusion&reg; Blazor service in both **~/Program.cs** files of your Blazor Web App.
-=======
 * Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the program.cs file of your Blazor Web App.
 
 If you select an Interactive render mode as `WebAssembly` or `Auto`, you need to register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in both **~/Program.cs** files of your Blazor Web App.
->>>>>>> remotes/origin/hotfix/hotfix-v27.2.2
 
 {% tabs %}
 {% highlight c# tabtitle=".NET 9 & .NET 8 (~/Program.cs) Server" hl_lines="2 9 11 13" %}
@@ -216,11 +202,7 @@ Add the following stylesheet and script to the head section of the **~/Component
 
 ## Adding Blazor PDF Viewer Component
 
-<<<<<<< HEAD
-Add the Syncfusion&reg; PDF Viewer component in the **~Pages/.razor** file. If an interactivity location as `Per page/component` in the web app, define a render mode at the top of the **~Pages/.razor** component, as follows:
-=======
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer (Next Gen) component in the **~Pages/.razor** file. If an interactivity location as `Per page/component` in the web app, define a render mode at the top of the **~Pages/.razor** component, as follows:
->>>>>>> remotes/origin/hotfix/hotfix-v27.2.2
 
 {% tabs %}
 {% highlight razor %}
@@ -233,11 +215,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer (Next Gen) c
 
 N> If an interactivity location as Global no need to mention render mode. Set the interactivity mode for whole sample.
 
-<<<<<<< HEAD
-Add the Syncfusion&reg; PDF Viewer component in the **~/Pages/Index.razor** file.
-=======
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer component in the **~/Pages/Index.razor** file.
->>>>>>> remotes/origin/hotfix/hotfix-v27.2.2
 
 {% tabs %}
 {% highlight razor %}
@@ -270,10 +248,5 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-
 * [Learn different ways to add script reference in Blazor Application](https://blazor.syncfusion.com/documentation/common/adding-script-references)
 
 * [Processing Large Files Without Increasing Maximum Message Size in SfPdfViewer Component](../how-to/processing-large-files-without-increasing-maximum-message-size)
-<<<<<<< HEAD
- 
-* [.NET 9 Native Linking Issues with SkiaSharp and Emscripten 3.1.56](https://help.syncfusion.com/document-processing/faq/how-to-fix-skiasharp-native-reference-issue-in-blazor-net90-app) 
-=======
 
 * [.NET 9 Native Linking Issues with SkiaSharp and Emscripten 3.1.56](https://help.syncfusion.com/document-processing/faq/how-to-fix-skiasharp-native-reference-issue-in-blazor-net90-app)
->>>>>>> remotes/origin/hotfix/hotfix-v27.2.2
