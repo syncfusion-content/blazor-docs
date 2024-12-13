@@ -13,6 +13,30 @@ documentation: ug
 
 You can use `ShowHeader` property to enable or disable the chat header. It contains the following options `HeaderText` and `HeaderIconCss`.
 
+```cshtml
+
+@using Syncfusion.Blazor.InteractiveChat
+
+<div style="height: 400px; width: 400px;">
+    <SfChatUI HeaderText="Michale" HeaderIconCss="e-icons e-people" ShowHeader="false" User="CurrentUserModel" Messages="ChatUserMessages"></SfChatUI>
+</div>
+
+@code {
+    private static UserModel CurrentUserModel = new UserModel() { ID = "User1", User = "Albert" };
+    private static UserModel MichaleUserModel = new UserModel() { ID = "User2", User = "Michale Suyama" };
+
+    private List<ChatMessage> ChatUserMessages = new List<ChatMessage>()
+    {
+        new ChatMessage() { Text = "Hi, thinking of painting this weekend.", Author = CurrentUserModel },
+        new ChatMessage() { Text = "That’s fun! What will you paint?", Author = MichaleUserModel },
+        new ChatMessage() { Text = "Maybe landscapes.", Author = CurrentUserModel }
+    };
+}
+
+```
+
+![Blazor Chat UI ShowHeader](./images/show-header.png)
+
 ### Setting header text
 
 You can use the `HeaderText` property to display the text that appears in the header, which indicates the current username or the group name providing the context for the conversation.
@@ -22,8 +46,20 @@ You can use the `HeaderText` property to display the text that appears in the he
 @using Syncfusion.Blazor.InteractiveChat
 
 <div style="height: 400px; width: 400px;">
-    <SfChatUI HeaderText="Albert"></SfChatUI>
+    <SfChatUI HeaderText="Michale" User="CurrentUserModel" Messages="ChatUserMessages"></SfChatUI>
 </div>
+
+@code {
+    private static UserModel CurrentUserModel = new UserModel() { ID = "User1", User = "Albert" };
+    private static UserModel MichaleUserModel = new UserModel() { ID = "User2", User = "Michale Suyama" };
+
+    private List<ChatMessage> ChatUserMessages = new List<ChatMessage>()
+    {
+        new ChatMessage() { Text = "Hi, thinking of painting this weekend.", Author = CurrentUserModel },
+        new ChatMessage() { Text = "That’s fun! What will you paint?", Author = MichaleUserModel },
+        new ChatMessage() { Text = "Maybe landscapes.", Author = CurrentUserModel }
+    };
+}
 
 ```
 
@@ -38,8 +74,20 @@ You can use the `HeaderIconCss` property to customize the styling of the header 
 @using Syncfusion.Blazor.InteractiveChat
 
 <div style="height: 400px; width: 400px;">
-    <SfChatUI HeaderIconCss="e-icons e-people"></SfChatUI>
+    <SfChatUI HeaderIconCss="e-icons e-people" User="CurrentUserModel" Messages="ChatUserMessages"></SfChatUI>
 </div>
+
+@code {
+    private static UserModel CurrentUserModel = new UserModel() { ID = "User1", User = "Albert" };
+    private static UserModel MichaleUserModel = new UserModel() { ID = "User2", User = "Michale Suyama" };
+
+    private List<ChatMessage> ChatUserMessages = new List<ChatMessage>()
+    {
+        new ChatMessage() { Text = "Hi, thinking of painting this weekend.", Author = CurrentUserModel },
+        new ChatMessage() { Text = "That’s fun! What will you paint?", Author = MichaleUserModel },
+        new ChatMessage() { Text = "Maybe landscapes.", Author = CurrentUserModel }
+    };
+}
 
 ```
 
@@ -63,13 +111,25 @@ You can customize the header toolbar icons by using the `IconCss` property.
 @using Syncfusion.Blazor.Navigations
 
 <div style="height: 400px; width: 400px;">
-    <SfChatUI>
+    <SfChatUI User="CurrentUserModel" Messages="ChatUserMessages">
         <HeaderToolbar>
             <HeaderToolbarItem Type="ItemType.Spacer"></HeaderToolbarItem>
             <HeaderToolbarItem IconCss="e-icons e-menu"></HeaderToolbarItem>
         </HeaderToolbar>
     </SfChatUI>
 </div>
+
+@code {
+    private static UserModel CurrentUserModel = new UserModel() { ID = "User1", User = "Albert" };
+    private static UserModel MichaleUserModel = new UserModel() { ID = "User2", User = "Michale Suyama" };
+
+    private List<ChatMessage> ChatUserMessages = new List<ChatMessage>()
+    {
+        new ChatMessage() { Text = "Hi, thinking of painting this weekend.", Author = CurrentUserModel },
+        new ChatMessage() { Text = "That’s fun! What will you paint?", Author = MichaleUserModel },
+        new ChatMessage() { Text = "Maybe landscapes.", Author = CurrentUserModel }
+    };
+}
 
 ```
 
@@ -87,13 +147,25 @@ In the following example, header toolbar item type is set as `Button`.
 @using Syncfusion.Blazor.Navigations
 
 <div style="height: 400px; width: 400px;">
-    <SfChatUI>
+    <SfChatUI User="CurrentUserModel" Messages="ChatUserMessages">
         <HeaderToolbar>
             <HeaderToolbarItem Type="ItemType.Spacer"></HeaderToolbarItem>
             <HeaderToolbarItem Type="ItemType.Button" IconCss="e-icons e-refresh"></HeaderToolbarItem>
         </HeaderToolbar>
     </SfChatUI>
 </div>
+
+@code {
+    private static UserModel CurrentUserModel = new UserModel() { ID = "User1", User = "Albert" };
+    private static UserModel MichaleUserModel = new UserModel() { ID = "User2", User = "Michale Suyama" };
+
+    private List<ChatMessage> ChatUserMessages = new List<ChatMessage>()
+    {
+        new ChatMessage() { Text = "Hi, thinking of painting this weekend.", Author = CurrentUserModel },
+        new ChatMessage() { Text = "That’s fun! What will you paint?", Author = MichaleUserModel },
+        new ChatMessage() { Text = "Maybe landscapes.", Author = CurrentUserModel }
+    };
+}
 
 ```
 
@@ -109,13 +181,25 @@ You can use the `Text` property to set the text for the header toolbar item.
 @using Syncfusion.Blazor.Navigations
 
 <div style="height: 400px; width: 400px;">
-    <SfChatUI>
+    <SfChatUI User="CurrentUserModel" Messages="ChatUserMessages">
         <HeaderToolbar>
             <HeaderToolbarItem Type="ItemType.Spacer"></HeaderToolbarItem>
             <HeaderToolbarItem Text="Log Out"></HeaderToolbarItem>
         </HeaderToolbar>
     </SfChatUI>
 </div>
+
+@code {
+    private static UserModel CurrentUserModel = new UserModel() { ID = "User1", User = "Albert" };
+    private static UserModel MichaleUserModel = new UserModel() { ID = "User2", User = "Michale Suyama" };
+
+    private List<ChatMessage> ChatUserMessages = new List<ChatMessage>()
+    {
+        new ChatMessage() { Text = "Hi, thinking of painting this weekend.", Author = CurrentUserModel },
+        new ChatMessage() { Text = "That’s fun! What will you paint?", Author = MichaleUserModel },
+        new ChatMessage() { Text = "Maybe landscapes.", Author = CurrentUserModel }
+    };
+}
 
 ```
 
@@ -131,7 +215,7 @@ You can use the `Visible` property to specify whether to show or hide the header
 @using Syncfusion.Blazor.Navigations
 
 <div style="height: 400px; width: 400px;">
-    <SfChatUI>
+    <SfChatUI User="CurrentUserModel" Messages="ChatUserMessages">
         <HeaderToolbar>
             <HeaderToolbarItem Type="ItemType.Spacer"></HeaderToolbarItem>
             <HeaderToolbarItem Type="ItemType.Button" IconCss="e-icons e-refresh" Visible=false></HeaderToolbarItem>
@@ -139,6 +223,18 @@ You can use the `Visible` property to specify whether to show or hide the header
         </HeaderToolbar>
     </SfChatUI>
 </div>
+
+@code {
+    private static UserModel CurrentUserModel = new UserModel() { ID = "User1", User = "Albert" };
+    private static UserModel MichaleUserModel = new UserModel() { ID = "User2", User = "Michale Suyama" };
+
+    private List<ChatMessage> ChatUserMessages = new List<ChatMessage>()
+    {
+        new ChatMessage() { Text = "Hi, thinking of painting this weekend.", Author = CurrentUserModel },
+        new ChatMessage() { Text = "That’s fun! What will you paint?", Author = MichaleUserModel },
+        new ChatMessage() { Text = "Maybe landscapes.", Author = CurrentUserModel }
+    };
+}
 
 ```
 
@@ -154,7 +250,7 @@ You can use the `Disabled` property to disable the header toolbar item. By defau
 @using Syncfusion.Blazor.Navigations
 
 <div style="height: 400px; width: 400px;">
-    <SfChatUI>
+    <SfChatUI User="CurrentUserModel" Messages="ChatUserMessages">
         <HeaderToolbar>
             <HeaderToolbarItem Type="ItemType.Spacer"></HeaderToolbarItem>
             <HeaderToolbarItem Type="ItemType.Button" IconCss="e-icons e-refresh" Disabled=true></HeaderToolbarItem>
@@ -162,6 +258,18 @@ You can use the `Disabled` property to disable the header toolbar item. By defau
         </HeaderToolbar>
     </SfChatUI>
 </div>
+
+@code {
+    private static UserModel CurrentUserModel = new UserModel() { ID = "User1", User = "Albert" };
+    private static UserModel MichaleUserModel = new UserModel() { ID = "User2", User = "Michale Suyama" };
+
+    private List<ChatMessage> ChatUserMessages = new List<ChatMessage>()
+    {
+        new ChatMessage() { Text = "Hi, thinking of painting this weekend.", Author = CurrentUserModel },
+        new ChatMessage() { Text = "That’s fun! What will you paint?", Author = MichaleUserModel },
+        new ChatMessage() { Text = "Maybe landscapes.", Author = CurrentUserModel }
+    };
+}
 
 ```
 
@@ -177,13 +285,25 @@ You can use the `Tooltip` property to specify the tooltip text to be displayed o
 @using Syncfusion.Blazor.Navigations
 
 <div style="height: 400px; width: 400px;">
-    <SfChatUI>
+    <SfChatUI User="CurrentUserModel" Messages="ChatUserMessages">
         <HeaderToolbar>
             <HeaderToolbarItem Type="ItemType.Spacer"></HeaderToolbarItem>
             <HeaderToolbarItem Type="ItemType.Button" IconCss="e-icons e-refresh" Tooltip="Refresh"></HeaderToolbarItem>
         </HeaderToolbar>
     </SfChatUI>
 </div>
+
+@code {
+    private static UserModel CurrentUserModel = new UserModel() { ID = "User1", User = "Albert" };
+    private static UserModel MichaleUserModel = new UserModel() { ID = "User2", User = "Michale Suyama" };
+
+    private List<ChatMessage> ChatUserMessages = new List<ChatMessage>()
+    {
+        new ChatMessage() { Text = "Hi, thinking of painting this weekend.", Author = CurrentUserModel },
+        new ChatMessage() { Text = "That’s fun! What will you paint?", Author = MichaleUserModel },
+        new ChatMessage() { Text = "Maybe landscapes.", Author = CurrentUserModel }
+    };
+}
 
 ```
 
@@ -197,13 +317,25 @@ You can use the `CssClass` property to customize the header toolbar item.
 @using Syncfusion.Blazor.Navigations
 
 <div style="height: 400px; width: 400px;">
-    <SfChatUI>
+    <SfChatUI User="CurrentUserModel" Messages="ChatUserMessages">
         <HeaderToolbar>
             <HeaderToolbarItem Type="ItemType.Spacer"></HeaderToolbarItem>
             <HeaderToolbarItem Type="ItemType.Button" IconCss="e-icons e-user" CssClass="custom-btn"></HeaderToolbarItem>
         </HeaderToolbar>
     </SfChatUI>
 </div>
+
+@code {
+    private static UserModel CurrentUserModel = new UserModel() { ID = "User1", User = "Albert" };
+    private static UserModel MichaleUserModel = new UserModel() { ID = "User2", User = "Michale Suyama" };
+
+    private List<ChatMessage> ChatUserMessages = new List<ChatMessage>()
+    {
+        new ChatMessage() { Text = "Hi, thinking of painting this weekend.", Author = CurrentUserModel },
+        new ChatMessage() { Text = "That’s fun! What will you paint?", Author = MichaleUserModel },
+        new ChatMessage() { Text = "Maybe landscapes.", Author = CurrentUserModel }
+    };
+}
 
 <style>
     .custom-btn .e-user::before {
@@ -274,9 +406,10 @@ You can use the `Template` tag directive to add custom header toolbar item in th
 
 @using Syncfusion.Blazor.InteractiveChat
 @using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.SplitButtons
 
 <div style="height: 400px; width: 400px;">
-    <SfChatUI>
+    <SfChatUI User="CurrentUserModel" Messages="ChatUserMessages">
         <HeaderToolbar>
             <HeaderToolbarItem Type="ItemType.Spacer"></HeaderToolbarItem>
             <HeaderToolbarItem Type="ItemType.Input">
@@ -295,6 +428,18 @@ You can use the `Template` tag directive to add custom header toolbar item in th
     </SfChatUI>
 </div>
 
+@code {
+    private static UserModel CurrentUserModel = new UserModel() { ID = "User1", User = "Albert" };
+    private static UserModel MichaleUserModel = new UserModel() { ID = "User2", User = "Michale Suyama" };
+
+    private List<ChatMessage> ChatUserMessages = new List<ChatMessage>()
+    {
+        new ChatMessage() { Text = "Hi, thinking of painting this weekend.", Author = CurrentUserModel },
+        new ChatMessage() { Text = "That’s fun! What will you paint?", Author = MichaleUserModel },
+        new ChatMessage() { Text = "Maybe landscapes.", Author = CurrentUserModel }
+    };
+}
+
 <style>
     .custom-dropdown.e-dropdown-popup ul {
         min-width: 100px;
@@ -303,7 +448,7 @@ You can use the `Template` tag directive to add custom header toolbar item in th
 
 ```
 
-![Blazor Chat UI Disabled](./images/toolbar-template.png)
+![Blazor Chat UI Template](./images/toolbar-template.png)
 
 ### Item clicked
 
