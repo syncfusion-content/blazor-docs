@@ -91,15 +91,73 @@ The following screenshot displays the output of the above code.
 
 ![Blazor Gantt Chart displays Task Relationship](images/blazor-gantt-chart-task-relationship.png)
 
+
+## Multiple Predecessors for a Task
+
+In the Blazor Gantt Chart component, it is possible to assign multiple predecessors to a single task. This allows for more complex dependency structures where a task may rely on the completion or initiation of multiple other tasks before it can proceed.
+
+To define multiple predecessors for a task, you can specify them as a comma-separated string. Each predecessor is defined using the task Id and the relationship type (e.g., "2FS", "6SS"). The following example demonstrates how to configure multiple predecessors for a task.
+
+```cshtml
+@using Syncfusion.Blazor.Gantt
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId" Dependency="Predecessor">
+    </GanttTaskFields>
+</SfGantt>
+
+@code{
+    private List<TaskData> TaskCollection { get; set; }
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public string Predecessor { get; set; }
+        public int? ParentId { get; set; }
+    }
+
+    public static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2019, 04, 05), EndDate = new DateTime(2019, 04, 21), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2019, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2019, 04, 05), Duration = "4", Progress = 40, Predecessor = "2FS,6SS", ParentId = 1 },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2019, 04, 05), Duration = "0", Progress = 30, Predecessor = "3", ParentId = 1 },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2019, 04, 06), EndDate = new DateTime(2019, 04, 21), Predecessor = "1FS", },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2019, 04, 06), Duration = "3", Progress = 30, Predecessor = "4", ParentId = 5 },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2019, 04, 06), Duration = "3", Progress = 40, Predecessor = "6", ParentId = 5 },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2019, 04, 06), Duration = "0", Progress = 30, Predecessor = "7" , ParentId = 5 },
+        };
+        return Tasks;
+    }
+}
+```
+
+Adding multiple predecessors enhances task management by allowing more detailed and synchronized scheduling, reflecting complex project dependencies.
+
+
 ## Predecessor offset with duration units
 
-In the Gantt Chart component, the predecessor offset can be defined with the following duration units:
+In the Gantt Chart component, you can define a delay or lead time before the successor task starts after the predecessor completes. This is done using an offset, which can be specified in various duration units:
 
 * Day
 * Hour
 * Minute
 
-You can define an offset with various offset duration units for predecessors by using the following code example.
+This offset delays the commencement of the next task, allowing for planned gaps in project scheduling.
+
+For instance, a task can start 2 days after its predecessor finishes by using an offset like "FS+2d". You can also use hours ("FS+8h") or minutes ("FS+30m") to achieve more precise control over the timing of successor tasks.
+
+This can be implemented as shown in the code example below:
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -142,6 +200,7 @@ You can define an offset with various offset duration units for predecessors by 
     }
 }
 ```
+The offset allows for strategic delays in tasks, ensuring that project timelines reflect real-world constraints and dependencies.
 
 The following screen shot depicts the duration unit support in the predecessor offset.
 
