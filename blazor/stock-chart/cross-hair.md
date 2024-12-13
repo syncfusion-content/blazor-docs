@@ -9,14 +9,21 @@ documentation: ug
 
 # Crosshair in Blazor Stock Chart Component
 
-Crosshair has a vertical and horizontal line to view the value of the axis at mouse or touch position. Crosshair lines can be enabled by using [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCrosshairSettings.html#Syncfusion_Blazor_Charts_StockChartCrosshairSettings_Enable) property in the `Crosshair`.
+Crosshair has a vertical and horizontal line to view the value of the axis at mouse or touch position. Crosshair lines can be enabled by using [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCrosshairSettings.html#Syncfusion_Blazor_Charts_StockChartCrosshairSettings_Enable) property in the `Crosshair`. Enabling the `SnapToData` property in the crosshair aligns it with the nearest data point instead of following the exact mouse position.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfStockChart Title="AAPL Stock Price">
-    <StockChartCrosshairSettings Enable="true"></StockChartCrosshairSettings>
+     <StockChartPrimaryXAxis>
+        <StockChartAxisCrosshairTooltip Enable="true"></StockChartAxisCrosshairTooltip>
+    </StockChartPrimaryXAxis>
+    <StockChartPrimaryYAxis>
+        <StockChartAxisCrosshairTooltip Enable="true"></StockChartAxisCrosshairTooltip>
+    </StockChartPrimaryYAxis>
+    <StockChartTooltipSettings Enable="true" Shared="true" Format="<b>${point.x}</b> : <b>${point.y}</b>" Header="" EnableMarker="false"></StockChartTooltipSettings>
+    <StockChartCrosshairSettings Enable="true" SnapToData="true" DashArray="5,5"></StockChartCrosshairSettings>
 
     <StockChartSeriesCollection>
         <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Candle" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Volume="Volume"></StockChartSeries>
@@ -51,7 +58,7 @@ Crosshair has a vertical and horizontal line to view the value of the axis at mo
 
 ```
 
-![Crosshair in Blazor Stock Chart](images/common/blazor-stock-chart-crosshair.png)
+![SnapToData Crosshair in Blazor Stock Chart](images/common/blazor-stock-chart-crosshair.png)
 
 ## Tooltip for axis
 
