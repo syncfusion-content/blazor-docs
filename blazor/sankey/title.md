@@ -15,7 +15,9 @@ The Syncfusion Blazor Sankey component allows you to add a title and subtitle to
 
 To add a title and subtitle to your Sankey chart, use the `Title` and `SubTitle` properties of the `Sankey` component.
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor;
 @using Syncfusion.Blazor.Sankey;
 
@@ -82,7 +84,10 @@ To add a title and subtitle to your Sankey chart, use the `Title` and `SubTitle`
         base.OnInitialized();
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 
 In this example, "Energy Flow" is set as the title, and "-2024" is set as the subtitle.
 
@@ -92,7 +97,9 @@ In this example, "Energy Flow" is set as the title, and "-2024" is set as the su
 
 You can further customize the appearance of the title and subtitle using the `SankeyTitleStyle` and `SankeySubtitleStyle` components.
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor;
 @using Syncfusion.Blazor.Sankey;
 
@@ -162,7 +169,10 @@ You can further customize the appearance of the title and subtitle using the `Sa
         base.OnInitialized();
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 
 ![Blazor Sankey Title Customization](images/titles/sankey-title-customization.png)
 

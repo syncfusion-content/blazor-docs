@@ -17,7 +17,9 @@ Legends in a Sankey diagram provide a visual key to interpret the different node
 
 Legends can be added to your Sankey diagram using the `SankeyLegendSettings`. Here's an example of how to configure legends in the Sankey component:
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor;
 @using Syncfusion.Blazor.Sankey;
 
@@ -88,7 +90,10 @@ Legends can be added to your Sankey diagram using the `SankeyLegendSettings`. He
         base.OnInitialized();
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 
 ![Blazor Sankey Basic Legend](images/legends/sankey-legends.png)
 
@@ -112,7 +117,9 @@ Legends can be added to your Sankey diagram using the `SankeyLegendSettings`. He
 
 You can customize the appearance of legends using various properties:
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor;
 @using Syncfusion.Blazor.Sankey;
 
@@ -194,7 +201,10 @@ You can customize the appearance of legends using various properties:
         base.OnInitialized();
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 ![Blazor Sankey Customized Legend](images/legends/sankey-legend-customization.png)
 
 ## Advanced Legend Configuration
@@ -203,17 +213,24 @@ You can customize the appearance of legends using various properties:
 
 You can set custom margins for the legend using the `SankeyLegendMargin` class.
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 <SankeyLegendSettings>
     <SankeyLegendMargin Left="20" Right="20" Top="20" Bottom="20"></SankeyLegendMargin>
 </SankeyLegendSettings>
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 
 ### Legend Text and Title Styles
 
 Customize the text style of legend items and the legend title.
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 <SankeyLegendSettings>
     <SankeyLegendTextStyle 
         FontSize="11px" 
@@ -230,7 +247,10 @@ Customize the text style of legend items and the legend title.
         FontStyle="normal">
     </SankeyLegendTitleStyle>
 </SankeyLegendSettings>
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 
 ## Key Considerations
 

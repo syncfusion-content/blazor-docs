@@ -38,7 +38,9 @@ The Sankey Chart component offers the following events:
 
 Here's an example demonstrating how to use some of the most common events in the Sankey component:
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 <SfSankey Width="600px" Height="400px"
            Nodes="@Nodes"
            Links="@Links"
@@ -98,7 +100,10 @@ Here's an example demonstrating how to use some of the most common events in the
         }
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 
 ## Key Points
 
@@ -128,7 +133,9 @@ Modify the content and appearance of tooltips for both nodes and links.
 
 You can combine multiple events to create more complex interactions. Here's an example that uses multiple events:
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 <SfSankey Width="600px" Height="400px"
            Nodes="@Nodes"
            Links="@Links"
@@ -187,7 +194,10 @@ You can combine multiple events to create more complex interactions. Here's an e
 
     // Nodes and Links initialization (omitted for brevity)
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 
 ## Key Considerations
 
