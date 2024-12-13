@@ -41,7 +41,7 @@ You cannot finish a task until the dependent task is completed.
 
 ## Define task relationship
 
-Task relationship is defined in the data source as a string value, and this value is mapped to the Gantt Chart component by using the [GanttTaskFields.Dependency](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Dependency) property. The following code example demonstrates how to enable the predecessor in the Gantt Chart component.
+In the Gantt Chart component, task dependencies are specified with a string representing the predecessor [Id](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Id) and the type of dependency, and this value is mapped using the [GanttTaskFields.Dependency](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Dependency) property. The following code example demonstrates how to enable the predecessor in the Gantt Chart component.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -91,13 +91,13 @@ The following screenshot displays the output of the above code.
 
 ![Blazor Gantt Chart displays Task Relationship](images/blazor-gantt-chart-task-relationship.png)
 
-N> If no relationship type is specified, the default type of Finish-to-Start (FS) is automatically applied.
+N> When defining a predecessor, simply using the Task Id without a specified dependency type will automatically apply the default dependency type, which is Finish-to-Start (FS).
 
 ## Multiple Predecessors in a Task
 
 In the Gantt Chart component, it is possible to assign multiple predecessors to a single task. This allows for more complex dependency structures where a task may rely on the completion or initiation of multiple other tasks before it can proceed.
 
-To define multiple predecessors for a task, you can specify them as a comma-separated string. Each predecessor is defined using the task Id and the relationship type (e.g., "2FS", "6SS"). The following example demonstrates how to configure multiple predecessors for a task.
+To define multiple predecessors for a task, you can specify them as a comma-separated string. Each predecessor is defined using the [Id](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Id) and the relationship type (e.g., "2FS", "6SS"). The following example demonstrates how to configure multiple predecessors for a task.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
