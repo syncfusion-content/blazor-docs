@@ -251,12 +251,14 @@ You can define custom header text for the file menu by using the `Text` property
 
 The following events are available in the Ribbon File menu.
 
-* `FileMenuOpening` - FileMenuOpenEventArgs
-* `FileMenuClosing` - FileMenuCloseEventArgs
-* `FileMenuOpened` - FileMenuOpenedEventArgs
-* `FileMenuClosed` - FileMenuClosedEventArgs
-* `FileMenuItemRendering` - FileMenuItemRenderEventArgs
-* `ItemSelecting` - FileMenuItemSelectEventArgs
+|Name|Args|Description|
+|---|---|---|
+|FileMenuOpening|FileMenuOpenEventArgs|Triggers before the file menu popup opens
+|FileMenuClosing|FileMenuCloseEventArgs|Triggers before the file menu popup closes
+|FileMenuOpened|FileMenuOpenedEventArgs|Triggers after the file menu popup opened
+|FileMenuClosed|FileMenuClosedEventArgs|Triggers after the file menu popup closed
+|FileMenuItemRendering|FileMenuItemRenderEventArgs|Triggers while a file menu item is being rendered
+|ItemSelecting|FileMenuItemSelectEventArgs|Triggers while a file menu item is being selected
 
 {% tabs %}
 {% highlight razor %}
@@ -267,7 +269,14 @@ The following events are available in the Ribbon File menu.
 
 <div style="width:40%">
     <SfRibbon>
-        <RibbonFileMenuSettings Visible=true MenuItems="@fileMenuItems" FileMenuOpening="FileMenuOpening" FileMenuClosing="FileMenuClosing" FileMenuOpened="FileMenuOpened" FileMenuClosed="FileMenuClosed" FileMenuItemRendering="FileMenuItemRendering" ItemSelecting="ItemSelecting">
+        <RibbonFileMenuSettings Visible=true 
+                                MenuItems="@fileMenuItems" 
+                                FileMenuOpening="FileMenuOpening" 
+                                FileMenuClosing="FileMenuClosing" 
+                                FileMenuOpened="FileMenuOpened" 
+                                FileMenuClosed="FileMenuClosed" 
+                                FileMenuItemRendering="FileMenuItemRendering" 
+                                ItemSelecting="ItemSelecting">
         </RibbonFileMenuSettings>
         <RibbonTabs>
             <RibbonTab HeaderText="Home">
