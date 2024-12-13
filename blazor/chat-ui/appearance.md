@@ -18,8 +18,20 @@ You can use the `Placeholder` property to set the placeholder text for the texta
 @using Syncfusion.Blazor.InteractiveChat
 
 <div style="height: 400px; width: 400px;">
-    <SfChatUI Placeholder="Start typing..."></SfChatUI>
+    <SfChatUI Placeholder="Start typing..." User="CurrentUserModel" Messages="ChatUserMessages"></SfChatUI>
 </div>
+
+@code {
+    private static UserModel CurrentUserModel = new UserModel() { ID = "User1", User = "Albert" };
+    private static UserModel MichaleUserModel = new UserModel() { ID = "User2", User = "Michale Suyama" };
+
+    private List<ChatMessage> ChatUserMessages = new List<ChatMessage>()
+    {
+        new ChatMessage() { Text = "Hi, thinking of painting this weekend.", Author = CurrentUserModel },
+        new ChatMessage() { Text = "That’s fun! What will you paint?", Author = MichaleUserModel },
+        new ChatMessage() { Text = "Maybe landscapes.", Author = CurrentUserModel }
+    };
+}
 
 ```
 
@@ -34,8 +46,20 @@ You can use the `Width` property to set the width of the Chat UI. The default va
 @using Syncfusion.Blazor.InteractiveChat
 
 <div style="height: 400px;">
-    <SfChatUI Width="400px"></SfChatUI>
+    <SfChatUI Width="400px" User="CurrentUserModel" Messages="ChatUserMessages"></SfChatUI>
 </div>
+
+@code {
+    private static UserModel CurrentUserModel = new UserModel() { ID = "User1", User = "Albert" };
+    private static UserModel MichaleUserModel = new UserModel() { ID = "User2", User = "Michale Suyama" };
+
+    private List<ChatMessage> ChatUserMessages = new List<ChatMessage>()
+    {
+        new ChatMessage() { Text = "Hi, thinking of painting this weekend.", Author = CurrentUserModel },
+        new ChatMessage() { Text = "That’s fun! What will you paint?", Author = MichaleUserModel },
+        new ChatMessage() { Text = "Maybe landscapes.", Author = CurrentUserModel }
+    };
+}
 
 ```
 
@@ -50,8 +74,20 @@ You can use the `Height` property to set the height of the Chat UI. The default 
 @using Syncfusion.Blazor.InteractiveChat
 
 <div style="width: 400px;">
-    <SfChatUI Height="400px"></SfChatUI>
+    <SfChatUI Height="400px" User="CurrentUserModel" Messages="ChatUserMessages"></SfChatUI>
 </div>
+
+@code {
+    private static UserModel CurrentUserModel = new UserModel() { ID = "User1", User = "Albert" };
+    private static UserModel MichaleUserModel = new UserModel() { ID = "User2", User = "Michale Suyama" };
+
+    private List<ChatMessage> ChatUserMessages = new List<ChatMessage>()
+    {
+        new ChatMessage() { Text = "Hi, thinking of painting this weekend.", Author = CurrentUserModel },
+        new ChatMessage() { Text = "That’s fun! What will you paint?", Author = MichaleUserModel },
+        new ChatMessage() { Text = "Maybe landscapes.", Author = CurrentUserModel }
+    };
+}
 
 ```
 
@@ -66,8 +102,20 @@ You can customize the appearance of the Chat UI component by using the `CssClass
 @using Syncfusion.Blazor.InteractiveChat
 
 <div style="height: 400px; width: 400px;">
-    <SfChatUI CssClass="custom-container"></SfChatUI>
+    <SfChatUI CssClass="custom-container" User="CurrentUserModel" Messages="ChatUserMessages"></SfChatUI>
 </div>
+
+@code {
+    private static UserModel CurrentUserModel = new UserModel() { ID = "User1", User = "Albert" };
+    private static UserModel MichaleUserModel = new UserModel() { ID = "User2", User = "Michale Suyama" };
+
+    private List<ChatMessage> ChatUserMessages = new List<ChatMessage>()
+    {
+        new ChatMessage() { Text = "Hi, thinking of painting this weekend.", Author = CurrentUserModel },
+        new ChatMessage() { Text = "That’s fun! What will you paint?", Author = MichaleUserModel },
+        new ChatMessage() { Text = "Maybe landscapes.", Author = CurrentUserModel }
+    };
+}
 
 <style>
     .custom-container {

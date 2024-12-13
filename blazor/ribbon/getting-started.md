@@ -111,7 +111,7 @@ Add the Syncfusion Blazor Ribbon component in the **~/Pages/Index.razor** file.
 
 ### Adding ribbon tab
 
-In Ribbon component, options are organized into tabs for easy access. You can use the `<RibbonTabs>` directive to group all the tabs and `<RibbonTab>` directive to define each ribbon tab as shown below:
+In Ribbon component, options are organized into tabs for easy access. You can use the `<RibbonTabs>` tag directive to group all the tabs and `<RibbonTab>` tag directive to define each ribbon tab as shown below:
 
 {% tabs %}
 {% highlight razor %}
@@ -127,7 +127,7 @@ In Ribbon component, options are organized into tabs for easy access. You can us
 
 ### Adding ribbon group
 
-To define a ribbon group under each tab, you can use the `<RibbonGroups>` directive like below. The `Orientation` property of ribbon group defines whether the collection of items inside the group will be rendered column-wise or row-wise.
+To define a ribbon group under each tab, you can use the `<RibbonGroups>` tag directive like below. The `Orientation` property of ribbon group defines whether the collection of items inside the group will be rendered column-wise or row-wise.
 
 {% tabs %}
 {% highlight razor %}
@@ -147,7 +147,7 @@ To define a ribbon group under each tab, you can use the `<RibbonGroups>` direct
 
 ### Adding ribbon item
 
-You can use the `<RibbonCollection>` directive to define each ribbon collection that contains one or more items. To define each ribbon item, you can use the `<RibbonItem>` directive with the `Type` property to specify the type of item to be rendered, using the `RibbonItemType` such as Button, a DropDown, a ComboBox, and more.
+You can use the `<RibbonCollection>` tag directive to define each ribbon collection that contains one or more items. To define each ribbon item, you can use the `<RibbonItem>` tag directive with the `Type` property to specify the type of item to be rendered, using the `RibbonItemType` such as Button, a DropDown, a ComboBox, and more.
 
 {% tabs %}
 {% highlight razor %}
@@ -204,4 +204,4 @@ You can use the `<RibbonCollection>` directive to define each ribbon collection 
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Ribbon component in your default web browser.
 
-![Blazor Ribbon Component](./images/getting-started1.png)
+![Blazor Ribbon Component](./images/getting-started.png)
