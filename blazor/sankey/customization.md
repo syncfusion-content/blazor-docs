@@ -20,7 +20,10 @@ You can customize the background of the Sankey Chart using the `BackgroundColor`
 The `BackgroundColor` property allows you to set a solid background color for the chart.  You can use any valid CSS color string, including hex codes, named colors, and RGB/RGBA values.
 
 ![Blazor Sankey Customization Background](images/customization/sankey-customization-background.png)
-```razor
+
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor;
 @using Syncfusion.Blazor.Sankey;
 
@@ -91,13 +94,17 @@ The `BackgroundColor` property allows you to set a solid background color for th
         base.OnInitialized();
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ### Background Image
 
 The `BackgroundImage` property lets you set a background image for the chart.  Specify the URL or path to the image file.
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor;
 @using Syncfusion.Blazor.Sankey;
 
@@ -167,7 +174,9 @@ The `BackgroundImage` property lets you set a background image for the chart.  S
         base.OnInitialized();
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ![Blazor Sankey Customization Background Image](images/customization/sankey-customization-background-img.webp)
 
@@ -177,7 +186,10 @@ Control the sankey's dimensions using the `Width` and `Height` properties. You c
 
 ![Blazor Sankey Customization Dimensions](images/customization/sankey-customization-size.png)
 
-```razor
+
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor;
 @using Syncfusion.Blazor.Sankey;
 
@@ -245,8 +257,9 @@ Control the sankey's dimensions using the `Width` and `Height` properties. You c
         base.OnInitialized();
     }
 }
-```
 
+{% endhighlight %}
+{% endtabs %}
 
 ## Right-to-Left (RTL) Support
 
@@ -266,8 +279,9 @@ To enable RTL support, simply set the `EnableRTL` property to `true`. This will 
 4. **Tooltips**: If enabled, tooltips will be positioned appropriately for RTL layout.
 5. **Legend**: If a legend is present, its layout and order will also be reversed.
 
+{% tabs %}
+{% highlight razor %}
 
-```razor
 @using Syncfusion.Blazor;
 @using Syncfusion.Blazor.Sankey;
 
@@ -335,7 +349,8 @@ To enable RTL support, simply set the `EnableRTL` property to `true`. This will 
         base.OnInitialized();
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
 ![Blazor Sankey Customization RTL](images/customization/sankey-customization-rtl.png)
 
@@ -345,8 +360,9 @@ The `Orientation` property controls the flow direction of the Sankey. You can se
 
 Setting the orientation to vertical can be particularly useful for certain types of data or when you want to emphasize the top-down flow of information.
 
+{% tabs %}
+{% highlight razor %}
 
-```razor
 <SfSankey Width="@_width" Height="@_height" Nodes=@Nodes Links=@Links Orientation="SankeyOrientation.Vertical">
 </SfSankey>
 @code {
@@ -411,7 +427,10 @@ Setting the orientation to vertical can be particularly useful for certain types
         base.OnInitialized();
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 ![Blazor Sankey Customization Vertical](images/customization/sankey-customization-vertical.png)
 
 ### Effects of Vertical Mode

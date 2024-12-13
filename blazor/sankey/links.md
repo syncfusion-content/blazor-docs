@@ -19,7 +19,9 @@ To add links to your Sankey diagram, you need to define a collection of `SankeyD
 
 Here's an example of how to configure links in the Sankey component:
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor;
 @using Syncfusion.Blazor.Sankey;
 
@@ -90,7 +92,10 @@ Here's an example of how to configure links in the Sankey component:
         base.OnInitialized();
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 
 In this example, we define multiple links connecting nodes across different categories such as source, energy types, and usage groups.
 
@@ -106,9 +111,14 @@ In this example, we define multiple links connecting nodes across different cate
 
 You can customize the appearance of links using the `SankeyLinkSettings`:
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 <SankeyLinkSettings Color="blue" ColorType="SankeyColorType.Source" HighlightOpacity="1" InactiveOpacity="0.3" Opacity="0.7"></SankeyLinkSettings>
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 
 ## Link Properties
 

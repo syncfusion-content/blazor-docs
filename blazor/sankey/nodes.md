@@ -19,7 +19,9 @@ To add nodes to your Sankey diagram, you need to define a collection of `SankeyD
 
 Here's an example of how to configure nodes in the Sankey component:
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor;
 @using Syncfusion.Blazor.Sankey;
 
@@ -91,7 +93,10 @@ Here's an example of how to configure nodes in the Sankey component:
     }
 }
 
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 
 In this example, we define multiple nodes representing different categories such as source, energy types, and usage groups.
 
@@ -107,9 +112,14 @@ In this example, we define multiple nodes representing different categories such
 
 You can customize the appearance of nodes using the `SankeyNodeSettings`:
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 <SankeyNodeSettings Width="30" Alignment="SankeyNodeAlign.Left" Offset="10" Padding="10"></SankeyNodeSettings>
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 
 ## Node Properties
 

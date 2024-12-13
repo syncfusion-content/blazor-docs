@@ -17,7 +17,9 @@ Tooltips in a Sankey diagram provide additional information about nodes and link
 
 Tooltips can be added to your Sankey diagram using the `SankeyTooltipSettings`. Here's an example of how to configure tooltips in the Sankey component:
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor;
 @using Syncfusion.Blazor.Sankey;
 
@@ -84,7 +86,10 @@ Tooltips can be added to your Sankey diagram using the `SankeyTooltipSettings`. 
         base.OnInitialized();
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 
 ![Blazor Sankey Tooltip](images/tooltip/sankey-tooltip.png)
 
@@ -103,7 +108,9 @@ Tooltips can be added to your Sankey diagram using the `SankeyTooltipSettings`. 
 
 You can customize the appearance of tooltips using various properties:
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor;
 @using Syncfusion.Blazor.Sankey;
 
@@ -185,7 +192,10 @@ You can customize the appearance of tooltips using various properties:
         base.OnInitialized();
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 
 ![Blazor Sankey Tooltip Customization](images/tooltip/sankey-tooltip-customization.png)
 
@@ -195,7 +205,9 @@ You can customize the appearance of tooltips using various properties:
 
 You can create custom tooltip templates for both nodes and links using the `SankeyNodeTemplate` and `SankeyLinkTemplate` properties:
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor;
 @using Syncfusion.Blazor.Sankey;
 
@@ -322,7 +334,10 @@ You can create custom tooltip templates for both nodes and links using the `Sank
         base.OnInitialized();
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 **Node Template**
 ![Blazor Sankey Node Tooltip Template](images/tooltip/sankey-tooltip-node-template.png)
 

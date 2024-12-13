@@ -40,7 +40,9 @@ To use the Sankey component, you need to create collections of `SankeyDataNode` 
 ### Example
 Below is an example of how to bind data to the Sankey component in a Blazor application:
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 <SfSankey Nodes=@Nodes Links=@Links>
 </SfSankey>
 
@@ -85,7 +87,10 @@ Below is an example of how to bind data to the Sankey component in a Blazor appl
         base.OnInitialized();
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 ![Blazor Sankey Data](images/data-binding/sankey-data-binding.png)
 
 ### Key Points
@@ -101,7 +106,9 @@ You can bind data from various sources such as:
 
 ### Example: Binding Data from a REST API
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @inject HttpClient HttpClient
 
 <SfSankey Nodes=@Nodes Links=@Links>
@@ -124,12 +131,18 @@ You can bind data from various sources such as:
         public List<SankeyDataLink> Links { get; set; }
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 
 ### Updated REST API Example
 Ensure that your API endpoint provides a JSON response in the following format:
 
-```json
+
+{% tabs %}
+{% highlight json %}
+
 {
     "Nodes": [
         { "Id": "Coffee Production" },
@@ -143,7 +156,10 @@ Ensure that your API endpoint provides a JSON response in the following format:
         ...
     ]
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 
 ## See also
 

@@ -17,7 +17,9 @@ Labels in a Sankey diagram provide textual information for nodes, enhancing the 
 
 Labels are defined as part of the node configuration and can be further customized using the `SankeyLabelSettings`. Here's an example of how to configure labels in the Sankey component:
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor;
 @using Syncfusion.Blazor.Sankey;
 
@@ -88,7 +90,10 @@ Labels are defined as part of the node configuration and can be further customiz
         base.OnInitialized();
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 
 In this example, we define labels for each node and use `SankeyLabelSettings` to customize their appearance.
 
@@ -104,7 +109,9 @@ In this example, we define labels for each node and use `SankeyLabelSettings` to
 
 You can customize the appearance of labels using various properties in `SankeyLabelSettings`:
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 <SankeyLabelSettings 
     Visible="true" 
     FontSize="12" 
@@ -113,7 +120,10 @@ You can customize the appearance of labels using various properties in `SankeyLa
     FontWeight="400" 
     Padding="8">
 </SankeyLabelSettings>
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 
 ## Label Properties
 

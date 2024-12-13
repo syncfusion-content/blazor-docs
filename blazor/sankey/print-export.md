@@ -15,7 +15,9 @@ This guide explains how to print and export the Blazor Sankey using its built-in
 
 The Sankey Chart offers a convenient way to print its contents directly from the browser. The `PrintAsync` method triggers the browser's print dialog, allowing users to select printing options and target printers. Note that the availability and appearance of print options depend on the user's browser and operating system.
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor;
 @using Syncfusion.Blazor.Sankey;
 
@@ -99,7 +101,10 @@ The Sankey Chart offers a convenient way to print its contents directly from the
         base.OnInitialized();
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 
 ![Blazor Sankey Print](images/print-export/sankey-print-export.png)
 
@@ -107,7 +112,9 @@ The Sankey Chart offers a convenient way to print its contents directly from the
 
 The Sankey Chart can be exported to various image formats, including PNG, JPEG, SVG, and PDF. The `ExportAsync` method handles the export process.  You provide the desired file name and format as arguments. The exported image will reflect the current state of the chart, including any customizations or user interactions.
 
-```razor
+{% tabs %}
+{% highlight razor %}
+
 @using Syncfusion.Blazor;
 @using Syncfusion.Blazor.Sankey;
 
@@ -192,7 +199,10 @@ The Sankey Chart can be exported to various image formats, including PNG, JPEG, 
     }
 }
 
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 
 ![Blazor Sankey Print](images/print-export/sankey-print-export.png)
 
