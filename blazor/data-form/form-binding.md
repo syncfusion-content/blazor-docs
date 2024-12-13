@@ -48,8 +48,8 @@ The following example illustrates how add the `FormName` for DataForm component.
 
 {% include_relative code-snippet/form-binding/form-name.razor %}
 
-{% endtabs %}
 {% endhighlight %} 
+{% endtabs %}
 
 
 
