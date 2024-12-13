@@ -434,7 +434,7 @@ In the following example, we have implemented the `ColumnReordering` and `Column
 
 <div style="text-align: center; color: red">
     <span>@ReorderMessage</span>
-</div
+</div>
 <SfGrid @ref="Grid" DataSource="@OrderData" Height="315" AllowReordering="true">
     <GridEvents TValue="OrderDetails" ColumnReordered ="ColumnReordered" ColumnReordering ="ColumnReordering"></GridEvents>
     <GridColumns>
