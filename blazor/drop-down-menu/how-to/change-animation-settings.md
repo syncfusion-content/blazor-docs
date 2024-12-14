@@ -9,7 +9,7 @@ documentation: ug
 
 # Change animation settings in Blazor Dropdown Menu Component
 
-To change the animation of the DropDownButton, [`AnimationSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_AnimationSettings) property is used. The supported effects for DropDownButton are,
+To change the animation of the DropDownButton, [`AnimationSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_.Blazor.SplitButtons.DropDownMenuAnimationSettings.html)  property is used to customize the animation of the DropDownButton popup. The supported effects for DropDownButton are,
 
 | Effect | Functionality |
 | ------------ | ----------------------- |
@@ -18,39 +18,42 @@ To change the animation of the DropDownButton, [`AnimationSettings`](https://hel
 | ZoomIn | Specifies the Dropdown popup transform with zoom in effect. |
 | FadeIn | Specifies the Dropdown popup transform with fade in effect. |
 
-In this sample, three different buttons are initialized using the DropDownButton component from Syncfusion, each showcasing a unique animation effect for the dropdown menu:
-
-SlideDown Effect: The following sample illustrates how to open DropDownButton with `SlideDown` [`effect`](../../api/drop-down-button/animationSettingsModel/#effect) with the [`duration`](../../api/drop-down-button/animationSettingsModel/#duration) of `800ms`. Also we can set [`easing`](../../api/drop-down-button/animationSettingsModel/#easing) for Dropdown popup.
-
-FadeIn Effect: The following sample illustrates how to open DropDownButton with ,`FadeIn` [`effect`](../../api/drop-down-button/animationSettingsModel/#effect) with the [`duration`](../../api/drop-down-button/animationSettingsModel/#duration) of `800ms`. Also we can set [`easing`](../../api/drop-down-button/animationSettingsModel/#easing) for Dropdown popup.
-
-ZoomIn Effect: The following sample illustrates how to open DropDownButton with ,`ZoomIn` [`effect`](../../api/drop-down-button/animationSettingsModel/#effect) with the [`duration`](../../api/drop-down-button/animationSettingsModel/#duration) of `800ms`. Also we can set [`easing`](../../api/drop-down-button/animationSettingsModel/#easing) for Dropdown popup.
+In this sample, three different DropDownButtons are rendered, each showcasing a unique animation effect for the dropdown menu:
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
 
-<SfDropDownButton CssClass="slideDownCss" Content="SlideDownButton" Items="@DropdownItems" 
-    AnimationSettings="new AnimationSettings { Effect = AnimationEffect.SlideDown, Duration = 800 }">
+<SfDropDownButton CssClass="slideDownCss" Content="SlideDownButton" Items="@DropdownItems">
+    <DropDownMenuAnimationSettings Effect="@SlideDownEffect" Duration="@Duration" Easing="@Easing"></DropDownMenuAnimationSettings>
 </SfDropDownButton>
 
-<SfDropDownButton CssClass="fadeInCss" Content="FadeInButton" Items="@DropdownItems" 
-    AnimationSettings="new AnimationSettings { Effect = AnimationEffect.FadeIn, Duration = 800 }">
+<SfDropDownButton CssClass="fadeInCss" Content="FadeInButton" Items="@DropdownItems">
+    <DropDownMenuAnimationSettings Effect="@FadeInEffect" Duration="@Duration" Easing="@Easing"></DropDownMenuAnimationSettings>
 </SfDropDownButton>
 
-<SfDropDownButton CssClass="zoomInCss" Content="ZoomInButton" Items="@DropdownItems" 
-    AnimationSettings="new AnimationSettings { Effect = AnimationEffect.ZoomIn, Duration = 800 }">
+<SfDropDownButton CssClass="zoomInCss" Content="ZoomInButton" Items="@DropdownItems">
+    <DropDownMenuAnimationSettings Effect="@ZoomInEffect" Duration="@Duration" Easing="@Easing"></DropDownMenuAnimationSettings>
 </SfDropDownButton>
 
 @code {
-    private readonly List<DropDownMenuItem> DropdownItems = new List<DropDownMenuItem>
+
+    private readonly List<DropDownMenuItem> DropdownItems = new()
     {
         new DropDownMenuItem { Text = "Unread" },
         new DropDownMenuItem { Text = "Has Attachments" },
         new DropDownMenuItem { Text = "Categorized" },
-        new DropDownMenuItem { Separator = true },  // Specifies a separator
         new DropDownMenuItem { Text = "Important" },
-        new DropDownMenuItem { Text = "More Filters" }
+        new DropDownMenuItem { Text = "More Filters" },
     };
+
+    // Animation settings for each button
+    private Syncfusion.Blazor.SplitButtons.DropDownMenuAnimationEffect SlideDownEffect = Syncfusion.Blazor.SplitButtons.DropDownMenuAnimationEffect.SlideDown;
+    private Syncfusion.Blazor.SplitButtons.DropDownMenuAnimationEffect FadeInEffect = Syncfusion.Blazor.SplitButtons.DropDownMenuAnimationEffect.FadeIn;
+    private Syncfusion.Blazor.SplitButtons.DropDownMenuAnimationEffect ZoomInEffect = Syncfusion.Blazor.SplitButtons.DropDownMenuAnimationEffect.ZoomIn;
+
+    // Common settings for animation duration and easing
+    private int Duration = 800; // Animation duration in milliseconds
+    private string Easing = "ease"; // Easing for the animation
 }
 
 <style>
