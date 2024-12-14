@@ -1,0 +1,33 @@
+@using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.DropDowns
+
+<label class="example-label">Select a country</label>
+<SfAutoComplete TValue="string" @ref="AutocompleteObj" DebounceDelay="@NumericValue" TItem="Countries" Placeholder="e.g. Australia" DataSource="@Country">
+    <AutoCompleteFieldSettings Value="Name" />
+    <AutoCompleteEvents TValue="string" TItem="Countries" />
+</SfAutoComplete>
+
+<label class="example-label">Debounce Delay</label>
+<SfNumericTextBox TValue="int" Width="50%" Format="n0" @bind-Value="@NumericValue" Min=1></SfNumericTextBox>
+            
+
+
+
+@code{
+    private SfAutoComplete<string, Countries> AutocompleteObj { get; set; }
+    private int NumericValue = 300;
+
+    public class Countries
+    {
+        public string Name { get; set; }
+        public string Code { get; set; }
+    }
+    private List<Countries> Country = new List<Countries>
+    {
+        new Countries() { Name = "Australia", Code = "AU" },
+        new Countries() { Name = "Bermuda", Code = "BM" },
+        new Countries() { Name = "Canada", Code = "CA" },
+        new Countries() { Name = "Cameroon", Code = "CM" },
+        new Countries() { Name = "Denmark", Code = "DK" }
+    };
+}

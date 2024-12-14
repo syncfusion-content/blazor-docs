@@ -9,6 +9,27 @@ documentation: ug
 
 # Configuring the Columns
 
+## TextWrap for column 
+
+The TextWrap in the Blazor `MultiColumn ComboBox` ensures proper wrapping of text within data content for a particular column. By enabling `EnableTextWrap`, you can manage how text appears when it exceeds the available space.
+
+**Key features**
+
+* **TextWrapElement**: This is an enum(Header,Content ,Both) Defines the element where text wrapping is applied.
+
+* **TextOverflowMode**:This is an enum(Ellipsis ,EllipsisWithTooltip) Defines truncates the cell content when it overflows its area.
+
+The following example enables text wrapping for a particular column in the Blazor MultiColumn ComboBox,ensuring that longer text is properly displayed without overflowing.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/column/text-wrap.razor %}
+
+{% endhighlight %}
+
+
+![Blazor MultiColumn ComboBox with Text Wrap](./images/column/blazor_multicolumncombobox_textwrapcolumn.gif)
+
 ## Setting the text align
 
 The MultiColumn ComboBox supports auto-generating columns, which simplifies the process by automatically creating columns based on the data source. Additionally, you can customize the column header text to reflect specific data, adjust the column [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.MultiColumnComboboxColumn.html#Syncfusion_Blazor_MultiColumnComboBox_MultiColumnComboboxColumn_Width) for optimal display, and set the [TextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.MultiColumnComboBox.MultiColumnComboboxColumn.html#Syncfusion_Blazor_MultiColumnComboBox_MultiColumnComboboxColumn_TextAlign) (left, center, or right) to enhance readability.
