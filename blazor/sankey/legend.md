@@ -105,8 +105,6 @@ The Sankey diagram component offers a robust set of features for legend customiz
 
 Appearance customization extends beyond basic properties, allowing for detailed adjustments to the legend's visual elements. Users can modify the dimensions of legend shapes, customize the padding between shapes and text, and even invert or reverse the order of legend items. The legend can be further enhanced with a title, adding context to the displayed information.
 
-###  Key Properties
-
 - `Visible`: Determines whether the legend is displayed (default is true).
 - `Position`: Sets the position of the legend (Auto, Top, Left, Bottom, Right).
 - `Width` and `Height`: Set the dimensions of the legend.
@@ -214,9 +212,7 @@ Appearance customization extends beyond basic properties, allowing for detailed 
 
 ### Legend Text and Title Styles
 
-For more advanced requirements, the component provides text styling options for both legend items and the title allow for typography customization, ensuring the legend's appearance aligns with the overall design aesthetic of the visualization.
-
-This comprehensive approach to legend customization empowers developers and designers to create Sankey diagrams with legends that not only complement the data representation but also enhance the overall user experience. By offering this level of flexibility and control, the Sankey diagram component caters to a wide range of visualization needs, from simple, clean designs to complex, highly customized presentations.
+The Sankey component provides advanced customization options for legend text and title styles through the `SankeyLegendTextStyle` and `SankeyLegendTitleStyle` APIs, enabling developers to configure properties such as font size, family, weight, color, and style. These APIs offer flexibility to align the legend's typography with the overall design aesthetic of the visualization, ensuring the legends complement the data representation and enhance the user experience. This level of control allows for seamless integration of legends into a wide range of visualization styles, from simple and clean to highly customized designs, as demonstrated in the following code snippet:
 
 {% tabs %}
 {% highlight razor %}
@@ -240,7 +236,6 @@ This comprehensive approach to legend customization empowers developers and desi
 
 {% endhighlight %}
 {% endtabs %}
-
 
 ## Key Considerations
 

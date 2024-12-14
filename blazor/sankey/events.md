@@ -13,42 +13,41 @@ documentation: ug
 
 The Syncfusion Blazor Sankey Chart component supports a comprehensive set of events, allowing developers to craft responsive and interactive features. These events are designed to handle user interactions and essential chart lifecycle phases, thereby enhancing the functionality and user experience of your Blazor applications.
 
-## Available Events
+## Events
 
 The Sankey Chart component includes the following events:
 
-1. **NodeRendering**: Customize nodes before they are drawn on the diagram, allowing for unique visual adjustments based on data or application state.
+1. **NodeRendering**: This event is fired before nodes are drawn on the diagram, allowing for dynamic customization of node appearance based on data or application state. Use this to apply unique visual adjustments and enhance node representation.
 
-2. **LegendItemRendering**: This event provides an opportunity to adjust legend items before rendering, enabling enhancements like color changes or text modifications to suit application branding.
+2. **LegendItemRendering**: Fired before legend items are rendered, this event enables modifications such as changing colors or altering text to align with branding needs. It helps ensure the legend matches the application's theme and improves readability.
 
-3. **LabelRendering**: Modify or format labels before they appear, ensuring they convey pertinent information clearly and comprehensively.
+3. **LabelRendering**: Triggered before labels appear on the diagram, this event allows for modification of label content or formatting. Use it to ensure labels effectively convey essential information in a clear and concise manner.
 
-4. **LinkRendering**: Customize the visual aspects of links, such as color or thickness, based on their properties or specific conditions, enhancing the clarity and significance of relationships between nodes.
+4. **LinkRendering**: This event fires when links are being rendered, offering opportunities to customize link appearance based on specific properties or conditions. Adjust link visuals to enhance clarity and emphasize relationships between nodes.
 
-5. **LegendItemHover**: Respond to user hover actions over legend items, potentially triggering additional UI changes or data displays to improve interactivity.
+5. **LegendItemHover**: Occurs when a user hovers over a legend item, enabling responsive actions such as triggering UI updates or displaying contextual data. Use this to create interactive and informative legend behaviors.
 
-6. **SizeChanged**: Detect changes to the chart's dimensions, and adapt the layout or other components accordingly to maintain a coherent and visually appealing interface.
+6. **SizeChanged**: Fired when the dimensions of the Sankey chart change, this event allows for dynamic layout adjustments. Ensure that connected components and visual elements remain coherent and visually appealing.
 
-7. **TooltipRendering**: Modify the content and style of tooltips for nodes and links to clearly communicate context-specific information and enrich user understanding.
+7. **TooltipRendering**: Triggered before tooltips for nodes and links are rendered, this event lets you customize tooltip content and style. Leverage it to provide clear, context-specific information that enhances user understanding.
 
-8. **PrintCompleted**: Execute actions following the completion of a print operation, such as updating UI status indicators or logging the event for analytic purposes.
+8. **PrintCompleted**: This event fires after a print operation completes, allowing you to update UI indicators or log the event for tracking and analytics. Use it to ensure follow-up actions are seamlessly handled post-print.
 
-9. **ExportCompleted**: Similar to print operations, this event allows you to trigger follow-up processes when an export operation finishes, including notifications or data processing tasks.
+9. **ExportCompleted**: Occurs after an export operation finishes, similar to print completion events. Use this event to trigger follow-up tasks like notifications, data processing, or analytics logging.
 
-10. **Created**: Run setup operations that should occur after the Sankey chart is fully initialized and rendered, ideal for initializing related components or logging creation events.
+10. **Created**: Fired after the Sankey chart is fully initialized and rendered, this event is useful for initializing related components or logging the creation process for monitoring and debugging purposes.
 
-11. **NodeClick**: Perform actions driven by user clicks on nodes, which can include updating other UI elements, starting data transactions, or triggering analytics.
+11. **NodeClick**: This event occurs when a user clicks on a node, enabling actions such as updating UI elements, starting data transactions, or recording analytics. Use it to respond effectively to user interactions with nodes.
 
-12. **NodeEnter**: React to the pointer entering a node region, potentially using it to highlight nodes or display informational overlays dynamically.
+12. **NodeEnter**: Triggered when the mouse pointer enters a node region, this event allows for dynamic highlights or displaying additional information. It enhances interactivity and provides immediate feedback to user actions.
 
-13. **NodeLeave**: When the pointer exits a node, utilize this event to execute cleanup operations like removing highlights or hiding additional information.
+13. **NodeLeave**: Occurs when the mouse pointer leaves a node region, supporting cleanup actions like removing highlights or hiding overlays. Use it to maintain a clean and clutter-free user interface.
 
-14. **LinkClick**: Handle user clicks on links, enabling features like detailed data viewing or reshaping interactions in connected components.
+14. **LinkClick**: Fires when a user clicks on a link within the component. Handle user clicks on links, enabling features like detailed data viewing or reshaping interactions in connected components.
 
-15. **LinkEnter**: Implement interactive behaviors when hovering over links, such as emphasizing connections or showing detailed link information.
+15. **LinkEnter**: This event is triggered when the mouse pointer hovers over a link. Implement interactive behaviors when hovering over links, such as emphasizing connections or showing detailed link information.
 
-16. **LinkLeave**: Cleanup actions can be attached to this event when the pointer moves off a link, such as resetting visual styles or removing interactive elements.
-## Basic Event Usage
+16. **LinkLeave**: It occurs when the mouse pointer exits a link. Cleanup actions can be attached to this event when the pointer moves off a link, such as resetting visual styles or removing interactive elements.
 
 Below is an example demonstrating how to implement some of the key events in the Sankey component:
 

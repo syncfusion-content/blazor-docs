@@ -99,6 +99,14 @@ In this example, labels are defined for each node with specific `SankeyLabelSett
 
 Customizing the appearance of labels in the Blazor Sankey component provides an opportunity to enhance the visual clarity and impact of your data visualization. By utilizing various properties within the SankeyLabelSettings, you can tailor labels to align with your application's design aesthetics and functional requirements. These customizations contribute to a more refined and informative diagram, making it easier for users to interpret complex data relationships.
 
+- **Visible**: Controls whether labels are shown; set to `false` to hide them if diagram space is limited.
+- **FontSize**: Adjusts the font size, accommodating different display sizes or emphasis levels.
+- **Color**: Sets the text color, important for visibility and theme coherence.
+- **FontFamily**: Defines the text font family, which can match the application's overall typography for design consistency.
+- **FontWeight**: Specifies the thickness of the text, like "400" for normal or "700" for bold, enhancing emphasis where needed.
+- **Padding**: Determines space around the text, allowing for better alignment and placement within nodes.
+- **FontStyle**: Enables styles such as "italic" for creative or hierarchical text presentation.
+
 {% tabs %}
 {% highlight razor %}
 
@@ -113,17 +121,6 @@ Customizing the appearance of labels in the Blazor Sankey component provides an 
 
 {% endhighlight %}
 {% endtabs %}
-
-## Label Properties
-
-- **Visible**: Controls whether labels are shown; set to `false` to hide them if diagram space is limited.
-- **FontSize**: Adjusts the font size, accommodating different display sizes or emphasis levels.
-- **Color**: Sets the text color, important for visibility and theme coherence.
-- **FontFamily**: Defines the text font family, which can match the application's overall typography for design consistency.
-- **FontWeight**: Specifies the thickness of the text, like "400" for normal or "700" for bold, enhancing emphasis where needed.
-- **Padding**: Determines space around the text, allowing for better alignment and placement within nodes.
-Additional properties inherited from `SankeyBaseTextStyle`:
-- **FontStyle**: Enables styles such as "italic" for creative or hierarchical text presentation.
 
 ## Key Considerations
 

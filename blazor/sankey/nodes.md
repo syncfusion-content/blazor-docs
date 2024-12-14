@@ -110,8 +110,6 @@ In this example, we define multiple nodes representing different categories such
 
 The nodes in a Sankey diagram represent the primary entities or data points, and their appearance can be tailored to enhance the clarity and style of your visualization. Using the `SankeyNodeSettings` in the Syncfusion Blazor Sankey component, you can configure properties like width, alignment, padding, and more to make the diagram visually distinct and avoid overlap between elements.
 
-### Node Properties
-
 - **`Width`**: Specifies the width of the nodes. The default value is `20`, but it can be increased or decreased to adjust the visual prominence of nodes in the diagram.
 - **`Alignment`**: Determines the alignment of nodes. Options include:
   - **Left**: Aligns nodes to the left edge of the layout.

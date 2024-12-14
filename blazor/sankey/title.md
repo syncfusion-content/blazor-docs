@@ -15,10 +15,6 @@ The Syncfusion Blazor Sankey component allows you to add a title and subtitle to
 
 Adding a title and subtitle to your Sankey chart helps provide context and clarity. Use the `Title` property for the main heading, representing the chart's purpose, and the `SubTitle` property for additional details like a specific time period or region.
 
-- **Clarity**: Highlights the chart’s purpose at a glance.
-- **Context**: Adds specific details like a year or location.
-- **Professional Presentation**: Enhances the overall design and readability.
-
 By utilizing these properties, your Sankey diagram becomes more informative and visually engaging.
 
 {% tabs %}

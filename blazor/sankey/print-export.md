@@ -105,7 +105,6 @@ The Sankey Chart offers a convenient way to print its contents directly from the
 {% endhighlight %}
 {% endtabs %}
 
-
 ![Blazor Sankey Print](images/print-export/sankey-print-export.png)
 
 ## Exporting the Sankey Chart

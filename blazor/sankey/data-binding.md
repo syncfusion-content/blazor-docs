@@ -37,7 +37,6 @@ There's no need to define these classes yourself as they are provided by the Syn
 ## Binding Data to the Sankey Component
 To use the Sankey component, you need to create collections of `SankeyDataNode` and `SankeyDataLink` objects and bind them to the component. Here's how you can do this.
 
-### Example
 Below is an example of how to bind data to the Sankey component in a Blazor application:
 
 {% tabs %}
@@ -94,11 +93,13 @@ Below is an example of how to bind data to the Sankey component in a Blazor appl
 ![Blazor Sankey Data](images/data-binding/sankey-data-binding.png)
 
 ### Key Points
+
 - The `Nodes` parameter expects a collection of `SankeyDataNode` objects.
 - The `Links` parameter expects a collection of `SankeyDataLink` objects.
 - Ensure that `SourceId` and `TargetId` in `SankeyDataLink` match the `Id` values in `SankeyDataNode`.
 
 ## Advanced Binding Scenarios
+
 You can bind data from various sources such as:
 - REST APIs: Fetch data dynamically using HTTP requests.
 - Databases: Load data using Entity Framework or similar ORM tools.
@@ -139,7 +140,6 @@ You can bind data from various sources such as:
 ### Updated REST API Example
 Ensure that your API endpoint provides a JSON response in the following format:
 
-
 {% tabs %}
 {% highlight json %}
 
@@ -159,7 +159,6 @@ Ensure that your API endpoint provides a JSON response in the following format:
 
 {% endhighlight %}
 {% endtabs %}
-
 
 ## See also
 
