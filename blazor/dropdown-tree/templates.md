@@ -107,22 +107,7 @@ The template expression can be provided directly inside the `ValueTemplate`, as 
         public string PId { get; set; }
     }
 }
-<style>
-    .control-wrapper {
-        max-width: 300px;
-        padding: 20px 0px 0px;
-        margin: 0 auto;
-    }
-    .default-label {
-        font-size: 14px;
-        margin-bottom: 6px;
-    }
-    @@media (max-width: 900px) {
-        .control-wrapper {
-            padding: 30px 0px 0px;
-        }
-    }
-</style>
+
 ```
 
 ![Blazor Dropdown Tree with ValueTemplate.](./images/template/blazor-dropdowntree-value-template.png)
