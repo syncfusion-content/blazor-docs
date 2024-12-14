@@ -1006,7 +1006,9 @@ The height and width of the backstage view can be customized using the `Height` 
 
 The following event is available in the Ribbon Backstage.
 
-* `BackstageItemClick` - BackstageItemClickEventArgs
+|Name|Args|Description|
+|---|---|---|
+|BackstageItemClick|BackstageItemClickEventArgs|Triggers when a backstage item is clicked
 
 {% tabs %}
 {% highlight razor %}
