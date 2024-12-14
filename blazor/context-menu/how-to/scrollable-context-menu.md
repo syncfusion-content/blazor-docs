@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Render Scrollable Context Menu in Blazor ContextMenu Component | Syncfusion
+title: Render Scrollable Context Menu in Blazor ContextMenu | Syncfusion
 description: Checkout and learn here all about Render Scrollable Context Menu in Syncfusion Blazor ContextMenu component and more.
 platform: Blazor
 control: Context Menu
