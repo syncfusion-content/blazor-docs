@@ -32,11 +32,7 @@ To add Blazor PDF Viewer component in Blazor Server App and deploy it to AWS Ela
 * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
 * [SkiaSharp.NativeAssets.Linux.NoDependencies](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/)
 
-<<<<<<< HEAD
-## Register Syncfusion&reg; Blazor Service
-=======
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
->>>>>>> remotes/origin/hotfix/hotfix-v27.2.2
 
 Open **~/_Imports.razor** file and import the **Syncfusion.Blazor** and **Syncfusion.Blazor.PdfViewerServer** namespaces.
 
@@ -49,11 +45,7 @@ Open **~/_Imports.razor** file and import the **Syncfusion.Blazor** and **Syncfu
 {% endhighlight %}
 {% endtabs %}
 
-<<<<<<< HEAD
-Now, register the Syncfusion&reg; Blazor Service in the Blazor Server App. Here
-=======
 Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the Blazor Server App. Here
->>>>>>> remotes/origin/hotfix/hotfix-v27.2.2
 
 {% tabs %}
 {% highlight c# tabtitle=".NET 6 (~/Program.cs)" hl_lines="3 9 11" %}
@@ -98,11 +90,7 @@ Refer script and style sheet in the `<head>` of the **~/Pages/_Layout.cshtml**.
 
 ## Adding Blazor PDF Viewer Component
 
-<<<<<<< HEAD
-Add the Syncfusion&reg; PDF Viewer component in the **~/Pages/Index.razor** file.
-=======
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer component in the **~/Pages/Index.razor** file.
->>>>>>> remotes/origin/hotfix/hotfix-v27.2.2
 
 {% tabs %}
 {% highlight razor %}
@@ -117,11 +105,7 @@ private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 {% endhighlight %}
 {% endtabs %}
 
-<<<<<<< HEAD
-Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion&reg; `Blazor PDF Viewer` component will be rendered in the default web browser.
-=======
 Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to run the application. Then, the Syncfusion<sup style="font-size:70%">&reg;</sup> `Blazor PDF Viewer` component will be rendered in the default web browser.
->>>>>>> remotes/origin/hotfix/hotfix-v27.2.2
 
 ## Steps to Configure the Linux VM used for deploying Blazor Server App in AWS Elastic Beanstalk Linux
 
