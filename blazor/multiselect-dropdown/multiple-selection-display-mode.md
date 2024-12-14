@@ -49,6 +49,8 @@ In the example below, we hide the cancel icon for both "Badminton" and "Cricket"
 
 The MultiSelect has built-in support to select multiple values through checkbox, when the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_Mode) property is set to `CheckBox`.
 
+To use checkbox, inject the `CheckBoxSelection` module in the MultiSelect.
+
 {% highlight cshtml %}
 
 {% include_relative code-snippet/display-modes/checkbox.razor %}
