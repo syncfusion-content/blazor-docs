@@ -42,8 +42,6 @@ Here is an example of configuring image restrictions using the [`uploadSettings`
 }
 ```
 
-![Blazor Image Editor with Image Restriction](./images/blazor-image-editor-redact.png)
-
 ## Minimum and Maximum Image Size
 
 The Image Editor allows users to specify the minimum and maximum size limits for uploaded image files by using the [ImageEditorUploadSettings.MinFileSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorZoomSettings.html#Syncfusion_Blazor_ImageEditor_ImageEditorZoomSettings_MinFileSize) and [ImageEditorUploadSettings.MaxFileSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorZoomSettings.html#Syncfusion_Blazor_ImageEditor_ImageEditorZoomSettings_MaxFileSize) properties. This ensures that images meet specific requirements, maintaining consistency and preventing oversized or undersized files from being processed.
@@ -74,4 +72,4 @@ Here is an example of configuring image restrictions using the [`ImageEditorUplo
 }
 ```
 
-![Blazor Image Editor with Image Restriction](./images/blazor-image-editor-redact.png)
+![Blazor Image Editor with Image Restriction](./images/blazor-image-editor-file-type-restrict.png)
