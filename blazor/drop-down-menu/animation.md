@@ -56,19 +56,6 @@ In this sample, three different DropDownButtons are rendered, each showcasing a 
     private string Easing = "ease"; // Easing for the animation
 }
 
-<style>
-    .e-caret {
-        transform: rotate(0deg);
-        transition: transform 200ms ease-in-out;
-    }
-
-    .e-caret-up .e-caret {
-        transform: rotate(180deg);
-    }
-</style>
-
 ```
 
-
-
-![Changing Caret Icon in Blazor DropDownMenu](./../images/blazor-dropdownmenu-caret-icon.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVTWhizMQTMfCYP?appbar=false&editor=false&result=true&errorlist=true&theme=bootstrap5 %}
