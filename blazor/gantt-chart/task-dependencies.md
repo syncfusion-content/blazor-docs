@@ -165,7 +165,7 @@ The Gantt Chart component supports specifying positive and negative offsets to m
 * A **positive offset** introduces a lag, meaning the successor task starts after a set period following the completion of the predecessor task (e.g., "FS+2d" for a two-day delay).
 * A **negative offset** provides lead time, allowing the successor task to begin before the predecessor task concludes (e.g., "FS-2d" for an early start).
 
-In the code snippet below, task relationships are defined with offsets to demonstrate precise control over scheduling. TaskId 3 is configured with a Finish-to-Start dependency on TaskId 2, incorporating a 2-day lag to delay the start of TaskId 3. Additionally, TaskId 4 is set with a Finish-to-Finish dependency on TaskId 3, including an offset of 960 minutes, ensuring that TaskId 4 concludes within a specified timeframe relative to TaskId 3.
+In the code snippet below, task relationships are defined with offsets to demonstrate precise control over scheduling. TaskId 3 is configured with a Finish-to-Start dependency on TaskId 2, incorporating a 2-day lag to delay the start of TaskId 3. Additionally, TaskId 4 is set with a Finish-to-Finish dependency on TaskId 3, including an offset of 960 minutes, ensuring that TaskId 4 concludes within a specified time frame relative to TaskId 3.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
