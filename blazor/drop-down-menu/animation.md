@@ -59,3 +59,5 @@ In this sample, three different DropDownButtons are rendered, each showcasing a 
 ```
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rNVTWhizMQTMfCYP?appbar=false&editor=false&result=true&errorlist=true&theme=bootstrap5 %}
+
+![Changing Blazor DropDownMenu Animation](./images/blazor-dropdownmenu-animation.gif)
