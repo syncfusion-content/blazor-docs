@@ -41,9 +41,11 @@ You cannot finish a task until the dependent task is completed.
 
 ## Define task relationship
 
-In the Gantt Chart component, task dependencies are specified with a string representing the [taskId](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Id) and the relationship type of dependency, and this value is mapped using the [GanttTaskFields.Dependency](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Dependency) property.
+In the Gantt Chart component, task dependencies are defined as a string combining the [taskId](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Id) and the dependency type. This value is assigned using the [GanttTaskFields.Dependency](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Dependency) property.
 
-In the following code snippet, task relationships are demonstrated where the task with TaskId 3 relies on the completion of the task with TaskId 2 by default, and the task with TaskId 5 has a specified Finish-to-Start relationship with the task with TaskId 1:
+For instance, in the code snippet below, task dependencies are defined as follows:
+
+The task with TaskId 3 depends on the completion of the task with TaskId 2 by default. The task with TaskId 5 specifies a Finish-to-Start relationship with the task having TaskId 1.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -93,15 +95,15 @@ The following screenshot displays the output of the above code.
 
 ![Blazor Gantt Chart displays Task Relationship](images/blazor-gantt-chart-task-relationship.png)
 
-N> When defining a predecessor, simply using the Task Id without a specified dependency type will automatically apply the default dependency type, which is Finish-to-Start (FS).
+N> When specifying a predecessor, using only the TaskId without mentioning a dependency type will automatically assign the default dependency type, Finish-to-Start (FS).
 
 ## Multiple Predecessors in a Task
 
-In the Gantt Chart component, it is possible to assign multiple predecessors to a single task. This allows for more complex dependency structures where a task may rely on the completion or initiation of multiple other tasks before it can proceed.
+In the Gantt Chart component, assigning multiple predecessors to a single task enables the creation of complex dependency structures, where a task's progression is contingent upon the completion or initiation of multiple other tasks.
 
-To define multiple predecessors for a task, you can specify them as a comma-separated string. Each predecessor is defined using the [Id](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Id) and the relationship type (e.g., "2FS", "6SS"). Adding multiple predecessors enhances task management by allowing more detailed and synchronized scheduling, reflecting complex project dependencies. 
+To specify multiple predecessors for a task, they can be defined as a comma-separated string. Each predecessor is identified using the [Id](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Id) and its corresponding dependency type (e.g., "2FS", "6SS"). This approach facilitates detailed and synchronized scheduling, accommodating intricate project dependencies.
 
-In the following code snippet, task relationships are demonstrated where the task with TaskId 3 has multiple predecessors: it relies on the completion of the task with TaskId 2 using a Finish-to-Start task relationship and the start of the task with TaskId 6 using a Start-to-Start task relationship, showcasing a complex dependency setup in the Gantt Chart.
+In the following code snippet, a sample demonstrates task relationships where the task with TaskId 3 has multiple predecessors: it relies on the completion of the task with TaskId 2 using a Finish-to-Start (FS) relationship and the start of the task with TaskId 6 using a Start-to-Start (SS) relationship. This example illustrates a complex dependency setup in the Gantt Chart.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -152,15 +154,18 @@ In the following code snippet, task relationships are demonstrated where the tas
 
 ## Predecessor offset with duration units
 
-In the Gantt Chart component, you can define a lag or lead time before the successor task starts after the predecessor task completes. This is done using an offset, which can be specified in various duration units:
-
+In the Gantt Chart component, it is possible to define a lag or lead time that determines the offset before a successor task begins after its predecessor task concludes. This offset can be specified using various duration units:
 * Day
 * Hour
 * Minute
 
-A positive offset introduces a lag, allowing a successor task to start a specified period after its predecessor task completes (e.g., 'FS+2d' for a 2-day interval). Conversely, a negative offset provides lead time, allowing a task to begin before its predecessor task concludes (e.g., 'FS-2d' for an early start).
+for flexible scheduling of dependent tasks.
 
-In the following code snippet, task relationships are demonstrated where the task with TaskId 3 includes a Finish-to-Start task relationship with a 2-day lag from TaskId 2, and TaskId 4 includes a Finish-to-Finish task relationship with an offset of 960 minutes from TaskId 3, providing precise control over task scheduling with duration offsets in the Gantt Chart.
+The Gantt Chart component supports specifying positive and negative offsets to manage task dependencies effectively:
+* A **positive offset** introduces a lag, meaning the successor task starts after a set period following the completion of the predecessor task (e.g., "FS+2d" for a two-day delay).
+* A **negative offset** provides lead time, allowing the successor task to begin before the predecessor task concludes (e.g., "FS-2d" for an early start).
+
+In the code snippet below, task relationships are defined with offsets to demonstrate precise control over scheduling. TaskId 3 is configured with a Finish-to-Start dependency on TaskId 2, incorporating a 2-day lag to delay the start of TaskId 3. Additionally, TaskId 4 is set with a Finish-to-Finish dependency on TaskId 3, including an offset of 960 minutes, ensuring that TaskId 4 concludes within a specified timeframe relative to TaskId 3.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -204,7 +209,7 @@ In the following code snippet, task relationships are demonstrated where the tas
 }
 ```
 
-The following screen shot depicts the duration unit support in the predecessor offset.
+The following screenshot depicts the duration unit support in the predecessor offset.
 
 ![Blazor Gantt Chart displays Predecessor Offset](images/blazor-gantt-chart-predecessor-with-offsets.png)
 
@@ -297,7 +302,7 @@ You can define the predecessor types in any order. The default order will be FS,
 }
 ```
 
-The following screen shot depicts the predecessor configuration support.
+The following screenshot depicts the predecessor configuration support.
 
 ![Blazor Gantt Chart with predecessor configuration](images/predecessor-configuration.gif)
 
