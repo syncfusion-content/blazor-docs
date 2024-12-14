@@ -41,11 +41,11 @@ You cannot finish a task until the dependent task is completed.
 
 ## Define task relationship
 
-In the Gantt Chart component, task dependencies are defined as a string combining the [taskId](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Id) and the dependency type. This value is assigned using the [GanttTaskFields.Dependency](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Dependency) property.
+In the Gantt Chart component, task dependencies are defined as a string combining the [taskId](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Id) and the **dependency type**. This value is assigned using the [GanttTaskFields.Dependency](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Dependency) property.
 
 For instance, in the code snippet below, task dependencies are defined as follows:
-
-The task with TaskId 3 depends on the completion of the task with TaskId 2 by default. The task with TaskId 5 specifies a Finish-to-Start relationship with the task having TaskId 1.
+* The task with TaskId 3 depends on the completion of the task with TaskId 2 by default. 
+* The task with TaskId 5 specifies a Finish-to-Start relationship with the task having TaskId 1.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -91,17 +91,15 @@ The task with TaskId 3 depends on the completion of the task with TaskId 2 by de
 }
 ```
 
-The following screenshot displays the output of the above code.
-
 ![Blazor Gantt Chart displays Task Relationship](images/blazor-gantt-chart-task-relationship.png)
 
 N> When specifying a predecessor, using only the TaskId without mentioning a dependency type will automatically assign the default dependency type, Finish-to-Start (FS).
 
 ## Multiple Predecessors in a Task
 
-In the Gantt Chart component, assigning multiple predecessors to a single task enables the creation of complex dependency structures, where a task's progression is contingent upon the completion or initiation of multiple other tasks.
+In the Gantt Chart component, assigning **multiple predecessors** to a single task enables the creation of complex dependency structures, where a task's progression is contingent upon the completion or initiation of multiple other tasks.
 
-To specify multiple predecessors for a task, they can be defined as a comma-separated string. Each predecessor is identified using the [Id](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Id) and its corresponding dependency type (e.g., "2FS", "6SS"). This approach facilitates detailed and synchronized scheduling, accommodating intricate project dependencies.
+To specify multiple predecessors for a task, they can be defined as a **comma-separated** string. Each predecessor is identified using the `TaskId` and its corresponding dependency type (e.g., "2FS", "6SS"). This approach facilitates detailed and synchronized scheduling, accommodating intricate project dependencies.
 
 In the following code snippet, a sample demonstrates task relationships where the task with TaskId 3 has multiple predecessors: it relies on the completion of the task with TaskId 2 using a Finish-to-Start (FS) relationship and the start of the task with TaskId 6 using a Start-to-Start (SS) relationship. This example illustrates a complex dependency setup in the Gantt Chart.
 
@@ -149,12 +147,9 @@ In the following code snippet, a sample demonstrates task relationships where th
 }
 ```
 
-
-
-
 ## Predecessor offset with duration units
 
-In the Gantt Chart component, it is possible to define a lag or lead time that determines the offset before a successor task begins after its predecessor task concludes. This offset can be specified using various duration units:
+In the Gantt Chart component, it is possible to define a lag or lead time that determines the **offset** before a successor task begins after its predecessor task concludes. This offset can be specified using various duration units:
 * Day
 * Hour
 * Minute
@@ -208,8 +203,6 @@ In the code snippet below, task relationships are defined with offsets to demons
     }
 }
 ```
-
-The following screenshot depicts the duration unit support in the predecessor offset.
 
 ![Blazor Gantt Chart displays Predecessor Offset](images/blazor-gantt-chart-predecessor-with-offsets.png)
 
@@ -302,7 +295,6 @@ You can define the predecessor types in any order. The default order will be FS,
 }
 ```
 
-The following screenshot depicts the predecessor configuration support.
 
 ![Blazor Gantt Chart with predecessor configuration](images/predecessor-configuration.gif)
 
