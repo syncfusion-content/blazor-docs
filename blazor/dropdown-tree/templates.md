@@ -171,18 +171,6 @@ In the following sample, the header is customized with the custom element.
     }
 }
 
-<style>
-    .custom .head {
-        height: 40px;
-        line-height: 40px;
-        font-size: 14px;
-        margin: 0 auto;
-        width: 100%;
-        padding: 0 20px;
-        font-weight: bold;
-        border-bottom: 1px solid #e0e0e0;
-    }
-</style>
 ```
 
 ![Blazor Dropdown Tree with HeaderTemplate.](./images/template/blazor-dropdowntree-header-template.png)
