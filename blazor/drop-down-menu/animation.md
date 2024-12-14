@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Change animation settings in Blazor Dropdown Menu Component | Syncfusion
+title: Animation in Blazor Dropdown Menu Component | Syncfusion
 description: Checkout and learn here all about Customize popup width in in Syncfusion Blazor Dropdown Menu component and more.
 platform: Blazor
 control: Dropdown Menu
 documentation: ug
 ---
 
-# Change animation settings in Blazor Dropdown Menu Component
+# Animation in Blazor Dropdown Menu Component
 
 To change the animation of the DropDownButton, [`AnimationSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_.Blazor.SplitButtons.DropDownMenuAnimationSettings.html)  property is used to customize the animation of the DropDownButton popup. The supported effects for DropDownButton are,
 

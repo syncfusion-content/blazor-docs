@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Change animation settings in Blazor Menu Bar Component | Syncfusion
+title: Animation in Blazor Menu Bar Component | Syncfusion
 description: Checkout and learn here all about Change animation settings in Syncfusion Blazor ContextMenu component and more.
 platform: Blazor
 control: Context Menu
 documentation: ug
 ---
 
-# Change Animation Settings in Blazor Menu Bar Component
+# Animation in Blazor Menu Bar Component
 
 To change the animation of the Menu bar component, [MenuAnimationSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuAnimationSettings.html) component is used to initialize the animation properties.
 The supported effects for Context Menu are,
