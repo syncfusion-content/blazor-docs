@@ -59,7 +59,7 @@ The table below outlines the behavior of various chart elements under specific c
 | Title  | <kbd>Height &lt; 200</kbd> / <kbd>Width &lt; 200</kbd> | Accumulation chart title is disabled |
 | Sutitle | <kbd>Height &lt; 300</kbd> / <kbd>Width &lt; 300</kbd> | Accumulation chart subtitle is disabled |
 | Datalabel | <kbd>Radius &lt; 300</kbd> / <kbd>Radius &lt; 200</kbd> | Datalabel moves inside / Datalabel is disabled |
-| Legend | <kbd>Height &lt; 300</kbd> / <kbd>Width &lt; 300 | Moves to the right if the width is greater than 200px; otherwise, it is disabled / Moves to the bottom if the height is greater than 200px; otherwise, it is disabled. |
+| Legend | <kbd>Height &lt; 300</kbd> / <kbd>Width &lt; 300 | Moves the bottom or top legend to the right if the width is greater than 200px; otherwise, it is disabled / Moves the right or left legend to the bottom if the height is greater than 200px; otherwise, it is disabled |
 
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap5) to know about the various features of accumulation charts and how it is used to represent numeric proportional data.
 
