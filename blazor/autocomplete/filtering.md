@@ -168,7 +168,7 @@ The Blazor AutoComplete component offers Google-like search suggestions. This fu
 
 You can highlight the search text in the suggested list items of the autocomplete component by using the `Highlight` property. When set to true, it will highlight the characters that match the search query in the list items.
 
-{% highlight Razor %}
+{% highlight Razor }
 
 {% include_relative code-snippet/filtering/highlight-property.razor %}
 
