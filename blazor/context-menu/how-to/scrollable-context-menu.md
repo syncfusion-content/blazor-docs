@@ -41,11 +41,7 @@ To achieve this functionality, set the `EnableScrolling` property to `true`. Add
 @code {
     private void OnBeforeOpen(BeforeOpenCloseMenuEventArgs<MenuItem> args)
     {
-        if (args.Element && args.Element.ParentElement != null)
-        {
-            // Set the height of the context menu parent element
-            args.Element.ParentElement.Style["height"] = "150px";
-        }
+        args.ScrollHeight = 150;
     }
 }
 
@@ -64,6 +60,4 @@ To achieve this functionality, set the `EnableScrolling` property to `true`. Add
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLAirrwgacxYkyN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-![Blazor ContextMenu with Animation](./../images/blazor-contextmenu-component.png)
+![Blazor ContextMenu with Scroller Support](./../images/blazor-contextmenu-scroller.png)
