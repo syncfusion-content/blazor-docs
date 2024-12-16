@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Labels for Blazor Sankey Component | Syncfusion
-description: Learn how to configure and customize labels in the Blazor Sankey component to enhance data visualization.
+title: Labels for Blazor Sankey Diagram | Syncfusion
+description: Learn how to configure and customize labels in the Blazor Sankey Diagram to enhance data visualization.
 platform: Blazor
 control: Sankey
 documentation: ug
 ---
 
-# Labels in Blazor Sankey Component
+# Labels in Blazor Sankey Diagram
 
 ## Overview
 
-Labels in a Sankey diagram provide textual information for nodes, enhancing the readability and understanding of the diagram. This topic covers how to configure and customize labels in the Blazor Sankey component.
+Labels in a Sankey Diagram are crucial for providing textual information for nodes, thereby enhancing the readability and comprehension of data flows. In the Blazor Sankey Diagram, labels can be configured and customized to meet various design and informational needs, making your diagrams more effective in conveying underlying data structures.
 
 ## Basic Label Configuration
 
-Labels are defined as part of the node configuration and can be further customized using the `SankeyLabelSettings`. Here's an example of how to configure labels in the Sankey component:
+Labels are included within the node configuration and can be tailored using `SankeyLabelSettings`. Below is an example of how to set up labels in the Sankey Diagram:
 
 {% tabs %}
 {% highlight razor %}
@@ -29,10 +29,12 @@ Labels are defined as part of the node configuration and can be further customiz
     <SankeyLabelSettings Color="#1c3f60" FontWeight="600" FontSize="14px" FontStyle="italic"></SankeyLabelSettings>
     <SankeyLegendSettings Visible="false"></SankeyLegendSettings>
 </SfSankey>
+
 @code {
     string _backgroundColor = "#0b1320";
     public List<SankeyDataNode> Nodes = new List<SankeyDataNode>();
     public List<SankeyDataLink> Links = new List<SankeyDataLink>();
+
     protected override void OnInitialized()
     {
         Nodes = new List<SankeyDataNode>()
@@ -57,7 +59,6 @@ Labels are defined as part of the node configuration and can be further customiz
 
         Links = new List<SankeyDataLink>()
         {
-            // Energy Sources to Carriers
             new SankeyDataLink() { SourceId = "Solar", TargetId = "Electricity", Value = 100 },
             new SankeyDataLink() { SourceId = "Wind", TargetId = "Electricity", Value = 120 },
             new SankeyDataLink() { SourceId = "Hydro", TargetId = "Electricity", Value = 80 },
@@ -66,8 +67,6 @@ Labels are defined as part of the node configuration and can be further customiz
             new SankeyDataLink() { SourceId = "Natural Gas", TargetId = "Electricity", Value = 130 },
             new SankeyDataLink() { SourceId = "Natural Gas", TargetId = "Heat", Value = 80 },
             new SankeyDataLink() { SourceId = "Oil", TargetId = "Fuel", Value = 250 },
-
-            // Energy Carriers to Sectors
             new SankeyDataLink() { SourceId = "Electricity", TargetId = "Residential", Value = 170 },
             new SankeyDataLink() { SourceId = "Electricity", TargetId = "Commercial", Value = 160 },
             new SankeyDataLink() { SourceId = "Electricity", TargetId = "Industrial", Value = 210 },
@@ -76,8 +75,6 @@ Labels are defined as part of the node configuration and can be further customiz
             new SankeyDataLink() { SourceId = "Heat", TargetId = "Industrial", Value = 20 },
             new SankeyDataLink() { SourceId = "Fuel", TargetId = "Transportation", Value = 200 },
             new SankeyDataLink() { SourceId = "Fuel", TargetId = "Industrial", Value = 50 },
-
-            // Sectors to End Use and Losses
             new SankeyDataLink() { SourceId = "Residential", TargetId = "Energy Services", Value = 180 },
             new SankeyDataLink() { SourceId = "Commercial", TargetId = "Energy Services", Value = 150 },
             new SankeyDataLink() { SourceId = "Industrial", TargetId = "Energy Services", Value = 230 },
@@ -94,20 +91,21 @@ Labels are defined as part of the node configuration and can be further customiz
 {% endhighlight %}
 {% endtabs %}
 
-
-In this example, we define labels for each node and use `SankeyLabelSettings` to customize their appearance.
+In this example, labels are defined for each node with specific `SankeyLabelSettings` to determine their visual style. The settings include font color, weight, size, and style, ensuring labels contribute to both functional clarity and aesthetic quality.
 
 ![Blazor Sankey Labels](images/labels/sankey-labels.png)
 
-## Key Points
-
-- Labels are defined in the `SankeyDataNode` objects using the `Label` property.
-- The `SankeyLabelSettings` component allows global customization of label appearance.
-- Labels can display additional information like percentages or values alongside node names.
-
 ## Customizing Label Appearance
 
-You can customize the appearance of labels using various properties in `SankeyLabelSettings`:
+Customizing the appearance of labels in the Blazor Sankey Diagram provides an opportunity to enhance the visual clarity and impact of your data visualization. By utilizing various properties within the SankeyLabelSettings, you can tailor labels to align with your application's design aesthetics and functional requirements. These customizations contribute to a more refined and informative diagram, making it easier for users to interpret complex data relationships.
+
+- **Visible**: Controls whether labels are shown; set to `false` to hide them if diagram space is limited.
+- **FontSize**: Adjusts the font size, accommodating different display sizes or emphasis levels.
+- **Color**: Sets the text color, important for visibility and theme coherence.
+- **FontFamily**: Defines the text font family, which can match the application's overall typography for design consistency.
+- **FontWeight**: Specifies the thickness of the text, like "400" for normal or "700" for bold, enhancing emphasis where needed.
+- **Padding**: Determines space around the text, allowing for better alignment and placement within nodes.
+- **FontStyle**: Enables styles such as "italic" for creative or hierarchical text presentation.
 
 {% tabs %}
 {% highlight razor %}
@@ -124,32 +122,19 @@ You can customize the appearance of labels using various properties in `SankeyLa
 {% endhighlight %}
 {% endtabs %}
 
-
-## Label Properties
-
-- `Visible`: Determines whether labels are displayed (default is true).
-- `FontSize`: Sets the font size of the label text.
-- `Color`: Defines the color of the label text.
-- `FontFamily`: Specifies the font family for the label text.
-- `FontWeight`: Sets the font weight (e.g., "400" for normal, "700" for bold).
-- `Padding`: Sets the padding around the label text (default is 10).
-
-Additional properties inherited from `SankeyBaseTextStyle`:
-- `FontStyle`: Sets the font style (e.g., "italic").
-
 ## Key Considerations
 
-- Use clear and concise label text to avoid cluttering the diagram.
-- Consider using different font sizes or weights to establish a visual hierarchy if needed.
-- Ensure sufficient contrast between label color and node color for readability.
-- Adjust padding to fine-tune label positioning within nodes.
-- Use the `Visible` property to hide labels if the diagram becomes too crowded.
+- Use concise yet descriptive label text to ensure clarity without cluttering the diagram.
+- Employ various font sizes and weights to create a visual hierarchy that highlights significant data points.
+- Ensure label color contrasts sufficiently with the node color to maintain readability.
+- Adjust padding to perfect label placement within nodes, preventing overlap or misalignment.
+- Use the `Visible` property strategically to manage label density based on diagram complexity.
 
-By effectively configuring and customizing labels in the Blazor Sankey component, you can create informative and easy-to-understand flow diagrams. Labels play a crucial role in conveying information about each node, making the overall data visualization more meaningful and accessible to users.
+By skillfully configuring and customizing labels within the Blazor Sankey Diagram, developers can generate informative and user-friendly flow diagrams. Effective label usage underscores the significance of nodes and enhances users' ability to interpret data visualizations easily.
 
 ## See also
 
 * [Nodes](./nodes)
 * [Links](./links)
 * [Legend](./legend)
-* [tooltip](./tooltip)
+* [Tooltip](./tooltip)
