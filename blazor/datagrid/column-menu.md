@@ -27,7 +27,6 @@ The default menu items are displayed in the following table,
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" Height="315" AllowGrouping="true" AllowSorting="true" AllowFiltering="true" ShowColumnMenu="true" AllowPaging="true">
     <GridFilterSettings Type="FilterType.CheckBox"></GridFilterSettings>
@@ -99,7 +98,7 @@ The Syncfusion Blazor DataGrid component provides the ability to prevent the app
 
 To prevent the column menu for a particular column, you can set the [ShowColumnMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ShowColumnMenu) property to **false** for that specific column configuration. This will disable the column menu options specifically for the designated column, while other columns will have the column menu enabled.
 
-The following example demonstrates how to prevent the column menu for a specific column. In this example, the column menu is disabled for the **OrderID** column by setting the `showColumnMenu` property to **false**.
+The following example demonstrates how to prevent the column menu for a specific column. In this example, the column menu is disabled for the **OrderID** column by setting the `ShowColumnMenu` property to **false**.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -356,7 +355,7 @@ public class OrderData
 
 The nested column menu feature provides an extended menu option in the grid column headers, allows you to access additional actions and options related to the columns.
 
-To enable the nested column menu feature, you need to define the **ColumnMenuItems** property in your component. The `ColumnMenuItems` property is an array that contains the items for the column menu. Each item can be a string representing a built-in menu item or an object defining a custom menu item.
+To enable the nested column menu feature, you need to define the [ColumnMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ContextMenuItems) property in your component. The `ColumnMenuItems` property is an array that contains the items for the column menu. Each item can be a string representing a built-in menu item or an object defining a custom menu item.
 
 Here is an example of how to configure the `ColumnMenuItems` property to include a nested menu:
 

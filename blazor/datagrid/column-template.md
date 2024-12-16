@@ -359,8 +359,7 @@ public class OrderDetails
         this.OrderID = OrderID;
         this.CustomerID = CustomerId;
         this.Freight = Freight;
-        this.OrderStatus = Orderstatus; 
-
+        this.OrderStatus = Orderstatus;
     }
     public static List<OrderDetails> GetAllRecords()
     {
@@ -391,7 +390,6 @@ public class OrderDetails
 }  
 {% endhighlight %}
 {% endtabs %}
-
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNBJCrtKzUHwTXIk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
