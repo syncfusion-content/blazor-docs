@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Labels for Blazor Sankey Component | Syncfusion
-description: Learn how to configure and customize labels in the Blazor Sankey component to enhance data visualization.
+title: Labels for Blazor Sankey Diagram | Syncfusion
+description: Learn how to configure and customize labels in the Blazor Sankey Diagram to enhance data visualization.
 platform: Blazor
 control: Sankey
 documentation: ug
 ---
 
-# Labels in Blazor Sankey Component
+# Labels in Blazor Sankey Diagram
 
 ## Overview
 
-Labels in a Sankey diagram are crucial for providing textual information for nodes, thereby enhancing the readability and comprehension of data flows. In the Blazor Sankey component, labels can be configured and customized to meet various design and informational needs, making your diagrams more effective in conveying underlying data structures.
+Labels in a Sankey Diagram are crucial for providing textual information for nodes, thereby enhancing the readability and comprehension of data flows. In the Blazor Sankey Diagram, labels can be configured and customized to meet various design and informational needs, making your diagrams more effective in conveying underlying data structures.
 
 ## Basic Label Configuration
 
-Labels are included within the node configuration and can be tailored using `SankeyLabelSettings`. Below is an example of how to set up labels in the Sankey component:
+Labels are included within the node configuration and can be tailored using `SankeyLabelSettings`. Below is an example of how to set up labels in the Sankey Diagram:
 
 {% tabs %}
 {% highlight razor %}
@@ -97,7 +97,7 @@ In this example, labels are defined for each node with specific `SankeyLabelSett
 
 ## Customizing Label Appearance
 
-Customizing the appearance of labels in the Blazor Sankey component provides an opportunity to enhance the visual clarity and impact of your data visualization. By utilizing various properties within the SankeyLabelSettings, you can tailor labels to align with your application's design aesthetics and functional requirements. These customizations contribute to a more refined and informative diagram, making it easier for users to interpret complex data relationships.
+Customizing the appearance of labels in the Blazor Sankey Diagram provides an opportunity to enhance the visual clarity and impact of your data visualization. By utilizing various properties within the SankeyLabelSettings, you can tailor labels to align with your application's design aesthetics and functional requirements. These customizations contribute to a more refined and informative diagram, making it easier for users to interpret complex data relationships.
 
 - **Visible**: Controls whether labels are shown; set to `false` to hide them if diagram space is limited.
 - **FontSize**: Adjusts the font size, accommodating different display sizes or emphasis levels.
@@ -130,7 +130,7 @@ Customizing the appearance of labels in the Blazor Sankey component provides an 
 - Adjust padding to perfect label placement within nodes, preventing overlap or misalignment.
 - Use the `Visible` property strategically to manage label density based on diagram complexity.
 
-By skillfully configuring and customizing labels within the Blazor Sankey component, developers can generate informative and user-friendly flow diagrams. Effective label usage underscores the significance of nodes and enhances users' ability to interpret data visualizations easily.
+By skillfully configuring and customizing labels within the Blazor Sankey Diagram, developers can generate informative and user-friendly flow diagrams. Effective label usage underscores the significance of nodes and enhances users' ability to interpret data visualizations easily.
 
 ## See also
 

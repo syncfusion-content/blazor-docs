@@ -1,27 +1,27 @@
 ---
 layout: post
-title: Links for Blazor Sankey Component | Syncfusion
-description: Learn how to define and configure links in the Blazor Sankey component to represent connections between nodes.
+title: Links for Blazor Sankey Diagram | Syncfusion
+description: Learn how to define and configure links in the Blazor Sankey Diagram to represent connections between nodes.
 platform: Blazor
 control: Sankey
 documentation: ug
 ---
 
-# Links in Blazor Sankey Component
+# Links in Blazor Sankey Diagram
 
 ## Overview
 
-Links in a Sankey diagram represent the connections and flow between nodes. They visually depict the relationships and quantities transferred between different entities or stages in a process. This topic covers how to define, customize, and work with links in the Blazor Sankey component.
+Links in a Sankey diagram represent the connections and flow between nodes. They visually depict the relationships and quantities transferred between different entities or stages in a process. This topic covers how to define, customize, and work with links in the Blazor Sankey Diagram.
 
 ## Basic Link Configuration
 
-To add links to your Sankey diagram, you need to define a collection of `SankeyDataLink` objects. Each link requires a source node, a target node, and a value representing the flow quantity.
+To add links to your Sankey Diagram, you need to define a collection of `SankeyDataLink` objects. Each link requires a source node, a target node, and a value representing the flow quantity.
 
 - Each link must have a `SourceId` and `TargetId` corresponding to existing node IDs.
 - The `Value` property determines the thickness of the link and represents the quantity flowing between nodes.
 - Links are automatically rendered based on the node positions and specified values.
 
-Here's an example of how to configure links in the Sankey component:
+Here's an example of how to configure links in the Sankey Diagram:
 
 {% tabs %}
 {% highlight razor %}
@@ -107,7 +107,7 @@ In this example, we define multiple links connecting nodes across different cate
 
 ## Customizing Link Appearance
 
-In a Sankey diagram, links represent the flow of data between nodes, and their appearance plays a critical role in making the visualization clear and aesthetically pleasing. The `SankeyLinkSettings` in the Syncfusion Blazor Sankey component allows you to customize these links to match your design requirements or emphasize specific data points.
+In a Sankey Diagram, links represent the flow of data between nodes, and their appearance plays a critical role in making the visualization clear and aesthetically pleasing. The `SankeyLinkSettings` in the Syncfusion Blazor Sankey Diagram allows you to customize these links to match your design requirements or emphasize specific data points.
 
 - **`Color`**: Specifies the color of the links, which can be provided in standard formats like HEX (`#RRGGBB`) or RGBA (`rgba(r, g, b, a)`). This setting allows you to visually distinguish different flows in the diagram.
 - **`ColorType`**: Determines how the link color is applied, offering three options:
@@ -118,7 +118,7 @@ In a Sankey diagram, links represent the flow of data between nodes, and their a
 - **`HighlightOpacity`**: Sets the opacity of links when hovered over, enabling a visual cue for interactivity. The default value is `0.8`, but it can be adjusted for more emphasis.
 - **`InactiveOpacity`**: Specifies the opacity of inactive links (those not hovered over), providing a contrast that directs attention to the active flow. The default value is `0.2`.
 
-Below is an example configuration that demonstrates how to apply these properties to customize the links in a Sankey diagram. Adjusting these settings can help you create a visualization that aligns with your data storytelling needs.
+Below is an example configuration that demonstrates how to apply these properties to customize the links in a Sankey Diagram. Adjusting these settings can help you create a visualization that aligns with your data storytelling needs.
 
 {% tabs %}
 {% highlight razor %}
@@ -141,7 +141,7 @@ Below is an example configuration that demonstrates how to apply these propertie
 - Consider using the `ColorType` property to create visually appealing color schemes that help users understand the data flow direction.
 - Utilize the `HighlightOpacity` and `InactiveOpacity` properties to improve user interaction and focus on specific data flows.
 
-By effectively configuring and customizing links in the Blazor Sankey component, you can create informative and visually appealing flow diagrams that clearly communicate the relationships and quantities in your data. The example provided demonstrates how to create a comprehensive visualization of device usage patterns across different demographic groups, showcasing the power and flexibility of the Sankey diagram.
+By effectively configuring and customizing links in the Blazor Sankey Diagram, you can create informative and visually appealing flow diagrams that clearly communicate the relationships and quantities in your data. The example provided demonstrates how to create a comprehensive visualization of device usage patterns across different demographic groups, showcasing the power and flexibility of the Sankey Diagram.
 
 ## See also
 

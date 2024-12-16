@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Customization for Blazor Sankey Component | Syncfusion
-description: Explore various customization options available for enhancing the Blazor Sankey component with background style, layout, and orientation configuration.
+title: Customization for Blazor Sankey Diagram | Syncfusion
+description: Explore various customization options available for enhancing the Blazor Sankey Diagram with background style, layout, and orientation configuration.
 platform: Blazor
 control: Sankey
 documentation: ug
 ---
 
-# Blazor Sankey Chart: Customization
+# Blazor Sankey Diagram: Customization
 
-The Blazor Sankey offers extensive customization options to tailor its appearance and behavior to your specific needs.  This guide covers customizing the background, dimensions, orientation, and right-to-left (RTL) support.
+The Blazor Sankey Diagram offers extensive customization options to tailor its appearance and behavior to your specific needs.  This guide covers customizing the background, dimensions, orientation, and right-to-left (RTL) support.
 
 ## Setting Background
 
-You can customize the background of the Sankey Chart using the `BackgroundColor` and `BackgroundImage` properties. The `BackgroundColor` property allows you to set a solid background color for the chart.  You can use any valid CSS color string, including hex codes, named colors, and RGB/RGBA values. The `BackgroundImage` property lets you set a background image for the sankey component. Specify the URL or path to the image file.
+You can customize the background of the Sankey Diagram using the `BackgroundColor` and `BackgroundImage` properties. The `BackgroundColor` property allows you to set a solid background color for the chart.  You can use any valid CSS color string, including hex codes, named colors, and RGB/RGBA values. The `BackgroundImage` property lets you set a background image for the sankey diagram. Specify the URL or path to the image file.
 
 {% tabs %}
 {% highlight razor %}
@@ -110,7 +110,7 @@ You can customize the background of the Sankey Chart using the `BackgroundColor`
 
 ## Dimensions (Width and Height)
 
-Control the sankey's dimensions using the `Width` and `Height` properties. You can specify values in pixels or percentages.
+Control the sankey diagram's dimensions using the `Width` and `Height` properties. You can specify values in pixels or percentages.
 
 {% tabs %}
 {% highlight razor %}
@@ -190,7 +190,7 @@ Control the sankey's dimensions using the `Width` and `Height` properties. You c
 
 ## Right-to-Left (RTL) Support
 
-The Blazor Sankey component offers built-in support for Right-to-Left (RTL) languages. To enable RTL support, simply set the `EnableRTL` property to `true`. This will flip the entire layout of the Sankey diagram, including nodes, links, and any associated labels or legends.
+The Blazor Sankey diagram offers built-in support for Right-to-Left (RTL) languages. To enable RTL support, simply set the `EnableRTL` property to `true`. This will flip the entire layout of the Sankey diagram, including nodes, links, and any associated labels or legends.
 
 **When you enable RTL support**
 
@@ -277,9 +277,9 @@ The Blazor Sankey component offers built-in support for Right-to-Left (RTL) lang
 
 ## Orientation
 
-The `Orientation` property controls the flow direction of the Sankey. You can set it to `Horizontal` or `Vertical`. The default `Auto` setting automatically chooses the best orientation based on the sankey's aspect ratio. Setting the orientation to vertical can be particularly useful for certain types of data or when you want to emphasize the top-down flow of information.
+The `Orientation` property controls the flow direction of the Sankey Diagram. You can set it to `Horizontal` or `Vertical`. The default `Auto` setting automatically chooses the best orientation based on the sankey diagram's aspect ratio. Setting the orientation to vertical can be particularly useful for certain types of data or when you want to emphasize the top-down flow of information.
 
-**When you switch the Sankey diagram to vertical orientation, several aspects of the sankey chart change:**
+**When you switch the Sankey Diagram to vertical orientation, several aspects of the Sankey Diagram change:**
 
 1. **Node Placement**: Nodes are arranged vertically from top to bottom, instead of left to right.
 
@@ -381,7 +381,7 @@ The `Orientation` property controls the flow direction of the Sankey. You can se
 * Combining background customizations can create visually appealing charts.
 * Using percentage values for `Width` and `Height` makes the chart responsive to different screen sizes.
 * `EnableRTL` is crucial for supporting right-to-left languages.
-* `Orientation` determines the layout direction of the sankey, either horizontal or vertical.
+* `Orientation` determines the layout direction of the sankey diagram, either horizontal or vertical.
 
 ## See also
 
