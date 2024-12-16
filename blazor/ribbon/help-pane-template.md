@@ -7,9 +7,12 @@ control: Ribbon
 documentation: ug
 ---
 
+[SfRibbon]: https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.SfRibbon.html
+[HelpPaneTemplate]: https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.HelpPaneTemplate.html
+
 # Help Pane in Blazor Ribbon component
 
-The help pane is dedicated area where the users can define help contents like controlling document permissions, sharing features, and more which appears on the right side of the Ribbon. You can use the `<HelpPaneTemplate>` tag directive within the `<SfRibbon>` to set the help pane contents.
+The help pane is dedicated area where the users can define help contents like controlling document permissions, sharing features, and more which appears on the right side of the Ribbon. You can use the [HelpPaneTemplate][HelpPaneTemplate] tag directive within the [SfRibbon][SfRibbon] to set the help pane contents.
 
 {% tabs %}
 {% highlight razor %}
