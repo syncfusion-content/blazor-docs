@@ -123,7 +123,7 @@ The following code example describes, how to define the Edit template for a part
                 @{
                     var task = (context as TaskData);
                 }
-                <SfDropDownList @ref="dropdown" Placeholder="Name" FloatLabelType="Syncfusion.Blazor.Inputs.FloatLabelType.Always" ID="TaskName" Value="task.TaskName" TItem="string" TValue="string" DataSource="@DropDownData">
+                <SfDropDownList @ref="dropdown" Placeholder="Name" FloatLabelType="Syncfusion.Blazor.Inputs.FloatLabelType.Always" ID="TaskName" @bind-Value="task.TaskName" TItem="string" TValue="string" DataSource="@DropDownData">
                 </SfDropDownList>
             </EditTemplate>
         </GanttColumn>

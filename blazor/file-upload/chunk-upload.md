@@ -17,61 +17,97 @@ To enable the chunk upload, set the size to [ChunkSize](https://help.syncfusion.
 
 ## Save and remove action for Blazor (ASP.NET Core hosted) application
 
-The Uploader sends the large file split into small chunks and transmits to the server using AJAX. You can also pause, resume, and retry the failed chunk file.
+The server-side implementation entirely depends on the application requirements and logic. The following code snippet provides the server-side logic to handle the chunk upload using the FileUpload components.
+
+>The `chunk-index` and `total-chunk` values are accessible through the form data using `Request.Form`, which retrieves these details from the incoming request.
+* `chunk-index` - Indicates the index of the current chunk being received.
+* `total-chunk` - Represents the total number of chunks for the file being uploaded.
 
 ```csharp
-[Route("api/[controller]")]
-public class SampleDataController : Controller
-{
-    public string uploads = ".\\Uploaded Files"; // replace with your directory path
+public string uploads = Path.Combine(Directory.GetCurrentDirectory(), "Uploaded Files"); // Set your desired upload directory path
 
-    [HttpPost("[action]")]
-    public async Task<IActionResult> Save(IFormFile UploadFiles) // Save the uploaded file here
+public async Task<IActionResult> Save(IFormFile UploadFiles)
+{
+    try
     {
         if (UploadFiles.Length > 0)
         {
-            //Create directory if not exists
+            var fileName = UploadFiles.FileName;
+
+            // Create upload directory if it doesn't exist
             if (!Directory.Exists(uploads))
             {
                 Directory.CreateDirectory(uploads);
             }
 
-            if (UploadFiles.Length > 0)
+            if (UploadFiles.ContentType == "application/octet-stream") //Handle chunk upload
             {
-                if (UploadFiles.ContentType == "application/octet-stream") //Handle chunk upload
+                // Fetch chunk-index and total-chunk from form data
+                var chunkIndex = Request.Form["chunk-index"];
+                var totalChunk = Request.Form["total-chunk"];
+
+                // Path to save the chunk files with .part extension
+                var tempFilePath = Path.Combine(uploads, fileName + ".part");
+
+                using (var fileStream = new FileStream(tempFilePath, chunkIndex == "0" ? FileMode.Create : FileMode.Append))
                 {
-                    var filePath = Path.Combine(uploads, UploadFiles.FileName);
-                    using (var fileStream = new FileStream(filePath, FileMode.Append))
-                    {
-                        await UploadFiles.CopyToAsync(fileStream);
-                    }
+                    await UploadFiles.CopyToAsync(fileStream);
                 }
-                else //Handle normal upload
+
+                // If all chunks are uploaded, move the file to the final destination
+                if (Convert.ToInt32(chunkIndex) == Convert.ToInt32(totalChunk) - 1)
                 {
-                    var filePath = Path.Combine(uploads, UploadFiles.FileName);
-                    using (var fileStream = new FileStream(filePath, FileMode.Create))
-                    {
-                        await UploadFiles.CopyToAsync(fileStream);
-                    }
+                    var finalFilePath = Path.Combine(uploads, fileName);
+
+                    // Move the .part file to the final destination without the .part extension
+                    System.IO.File.Move(tempFilePath, finalFilePath);
+
+                    return Ok(new { status = "File uploaded successfully" });
                 }
+
+                return Ok(new { status = "Chunk uploaded successfully" });
+            }
+            else //Handle normal upload
+            {
+                var filePath = Path.Combine(uploads, fileName);
+
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    await UploadFiles.CopyToAsync(fileStream);
+                }
+
+                return Ok(new { status = "File uploaded successfully" });
             }
         }
-        return Ok();
+
+        return BadRequest(new { status = "No file to upload" });
     }
-
-
-    [HttpPost("[action]")]
-    public void Remove(string UploadFiles) // Delete the uploaded file here
+    catch (Exception ex)
     {
-        if(UploadFiles != null)
+        return StatusCode(500, new { status = "Error", message = ex.Message });
+    }
+}
+
+// Method to handle file removal (optional if needed)
+public async Task<IActionResult> Remove(string UploadFiles)
+{
+    try
+    {
+        var filePath = Path.Combine(uploads, UploadFiles);
+
+        if (System.IO.File.Exists(filePath))
         {
-            var filePath = Path.Combine(uploads, UploadFiles);
-            if (System.IO.File.Exists(filePath))
-            {
-                //Delete the file from server
-                System.IO.File.Delete(filePath);
-            }
+            System.IO.File.Delete(filePath);
+            return Ok(new { status = "File deleted successfully" });
         }
+        else
+        {
+            return NotFound(new { status = "File not found" });
+        }
+    }
+    catch (Exception ex)
+    {
+        return StatusCode(500, new { status = "Error", message = ex.Message });
     }
 }
 ```

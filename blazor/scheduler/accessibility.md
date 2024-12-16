@@ -75,6 +75,8 @@ Keyboard shortcuts | Actions
 <kbd>Page Up</kbd> & <kbd>Page Down</kbd> |To scroll through the work cells area.
 <kbd>Home</kbd> |To move the selection to the first cell of Scheduler.
 <kbd>F12</kbd> |To have the inline option for both cells and events.
+<kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>Y</kbd> | To navigate to today date.
+<kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>N</kbd> | To open editor window.
 
 ## Ensuring accessibility
 
@@ -84,4 +86,4 @@ The accessibility compliance of the Scheduler component is shown in the followin
 
 ## See also
 
-* [Accessibility in Syncfusion Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)

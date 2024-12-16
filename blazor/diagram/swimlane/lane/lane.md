@@ -10,22 +10,22 @@ documentation: ug
 
 # Lane in Blazor Diagram Component
 
-A [Lane](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Lane.html) is a functional unit or a responsible department of a business process that helps to map a process within the functional unit or in between other functional units.
+A [Lane](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Lane.html) is a functional unit or a responsible department of a business process that helps to map a process within the functional unit or between other functional units.
 
-The number of lanes can be added to swimlane and rendered in the diagram. The lanes are automatically stacked inside swimlane based on the order they are added.
+The number of lanes can be added to a swimlane and rendered in the diagram. The lanes are automatically stacked inside the swimlane based on the order they are added.
 
 ## Create an empty lane
 
-* You can create the [Lane](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Lane.html) and add it to the [Lanes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Swimlane.html#Syncfusion_Blazor_Diagram_Swimlane_Lanes) collection of the Swimlane.
+* You can create a [Lane](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Lane.html) and add it to the [Lanes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Swimlane.html#Syncfusion_Blazor_Diagram_Swimlane_Lanes) collection of the Swimlane.
 
->Note: For the Horizontal Swimlane, you must set the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneChild.html#Syncfusion_Blazor_Diagram_SwimlaneChild_Height) of the Lane. For the Vertical Swimlane, you must set [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneChild.html#Syncfusion_Blazor_Diagram_SwimlaneChild_Width) of the Lane.
+> Note: For a Horizontal Swimlane, you must set the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneChild.html#Syncfusion_Blazor_Diagram_SwimlaneChild_Height) of the Lane. For a Vertical Swimlane, you must set the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneChild.html#Syncfusion_Blazor_Diagram_SwimlaneChild_Width) of the Lane.
 
 The following code example explains how to define a swimlane with lane.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" />
+<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" NodeCreating="@OnNodeCreating" />
 
 @code
 {
@@ -54,6 +54,25 @@ The following code example explains how to define a swimlane with lane.
         // Add swimlane.
         SwimlaneCollections.Add(swimlane);
     }
+    private void OnNodeCreating(IDiagramObject obj)
+    {
+       if (obj is Swimlane swimlane)
+       {
+         swimlane.Header.Style = new TextStyle()
+             {
+                 Fill = "#5b9bd5",
+                 StrokeColor = "#5b9bd5"
+             };
+         foreach (Phase phase in swimlane.Phases)
+         {
+             phase.Style = new ShapeStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
+         }
+         foreach (Lane lane in swimlane.Lanes)
+         {
+             lane.Header.Style = new TextStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
+         }
+       }
+    }
 }
 ``` 
 ![Lane](../Swimlane-images/Swimlane_Lane.PNG)
@@ -62,16 +81,16 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Create Lane Header and Header customization
 
-* The [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Lane.html#Syncfusion_Blazor_Diagram_Lane_Header) property of the lane allows you to textually describe the lane and to customize the appearance of the description.
-* The size of the lane header can be controlled by using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneChild.html#Syncfusion_Blazor_Diagram_SwimlaneChild_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneChild.html#Syncfusion_Blazor_Diagram_SwimlaneChild_Height) properties of the header.
-* The appearance of the lane header can be set by using the [Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneHeader.html#Syncfusion_Blazor_Diagram_SwimlaneHeader_Style) property.
+* The [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Lane.html#Syncfusion_Blazor_Diagram_Lane_Header) property of a lane allows you to textually describe the lane and customize the appearance of the description.
+* The size of the lane header can be controlled using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneChild.html#Syncfusion_Blazor_Diagram_SwimlaneChild_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneChild.html#Syncfusion_Blazor_Diagram_SwimlaneChild_Height) properties of the header.
+* The appearance of the lane header can be set using the [Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneHeader.html#Syncfusion_Blazor_Diagram_SwimlaneHeader_Style) property.
 
 The following code example explains how to define a lane header and its customization.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" />
+<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections"  NodeCreating="@OnNodeCreating"/>
 
 @code
 {
@@ -107,6 +126,21 @@ The following code example explains how to define a lane header and its customiz
             };
     // Add swimlane.
     SwimlaneCollections.Add(swimlane);
+    }
+    private void OnNodeCreating(IDiagramObject obj)
+    {
+       if (obj is Swimlane swimlane)
+       {
+           swimlane.Header.Style = new TextStyle()
+           {
+                Fill = "#5b9bd5",
+                StrokeColor = "#5b9bd5"
+           };
+           foreach (Phase phase in swimlane.Phases)
+           {
+                phase.Style = new ShapeStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
+           }
+        }
     }
 }
 ``` 
@@ -195,7 +229,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Add and Remove the lane at runtime
 
- You can add and remove the lane at runtime by using the `Add` and `Remove` methods of the [Swimlane.Lanes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Swimlane.html#Syncfusion_Blazor_Diagram_Swimlane_Lanes) Collection. The following code explains how to dynamically add and remove the lane to swimlane.
+ You can add and remove the lane at runtime by using the `Add` and `Remove` methods of the [Swimlane.Lanes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Swimlane.html#Syncfusion_Blazor_Diagram_Swimlane_Lanes) Collection. The following code explains how to dynamically add and remove the lane in a swimlane.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -203,7 +237,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 <SfButton Content="Add Lane" OnClick="@AddLane" />
 <SfButton Content="Remove Lane" OnClick="@RemoveLane" />
-<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" />
+<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" NodeCreating="@OnNodeCreating"/>
 
 @code
 {
@@ -246,6 +280,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
             Header = new SwimlaneHeader()
             {
                  Annotation = new ShapeAnnotation() { Content = "Lane title" }, Width = 30,
+                  Style = new TextStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" }
             }
         };
         SwimlaneCollections[0].Lanes.Add(newLane);
@@ -255,6 +290,25 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
     {
         Lane lane = SwimlaneCollections[0].Lanes[^1];
         SwimlaneCollections[0].Lanes.Remove(lane);
+    }
+    private void OnNodeCreating(IDiagramObject obj)
+    {
+        if (obj is Swimlane swimlane)
+        {
+            swimlane.Header.Style = new TextStyle()
+             {
+                 Fill = "#5b9bd5",
+                 StrokeColor = "#5b9bd5"
+             };
+             foreach (Phase phase in swimlane.Phases)
+             {
+                 phase.Style = new ShapeStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
+             }
+             foreach (Lane lane in swimlane.Lanes)
+             {
+                 lane.Header.Style = new TextStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
+             }
+        }
     }
 }
 ``` 
@@ -276,7 +330,7 @@ The following code example explains how to add nodes to lane.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" />
+<SfDiagramComponent Height="600px" Swimlanes="@SwimlaneCollections" NodeCreating="@OnNodeCreating"/>
 
 @code
 {
@@ -318,6 +372,33 @@ The following code example explains how to add nodes to lane.
         // Add swimlane.
         SwimlaneCollections.Add(swimlane);
     }
+    private void OnNodeCreating(IDiagramObject obj)
+    {
+        if (obj is Swimlane swimlane)
+        {
+             swimlane.Header.Style = new TextStyle()
+             {
+                 Fill = "#5b9bd5",
+                 StrokeColor = "#5b9bd5"
+             };
+             foreach (Phase phase in swimlane.Phases)
+             {
+                 phase.Style = new ShapeStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
+             }
+             foreach (Lane lane in swimlane.Lanes)
+             {
+                 lane.Header.Style = new TextStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" };
+             }
+        }
+        else if (obj is Node node)
+        {
+             node.Style = new ShapeStyle()
+             {
+                 Fill = "#5b9bd5",
+                 StrokeColor = "#5b9bd5"
+             };
+        }
+    }
 }
 ```
 
@@ -331,7 +412,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
  * You can resize the individual lane header. While resizing lane, it will maintain 20px distances from the Lane children.
 
- * When a element is resized, the [SizeChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SizeChanging) and [SizeChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SizeChanged) events get triggered.
+ * When an element is resized, the [SizeChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SizeChanging) and [SizeChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SizeChanged) events get triggered.
 
  The following image shows how to select and resize the lane header.
 

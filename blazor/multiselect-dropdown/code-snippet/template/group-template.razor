@@ -1,0 +1,29 @@
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.DropDowns
+
+<SfMultiSelect TValue="string[]" TItem="EmployeeData" Placeholder="Select a customer" Query="@Query">
+    <MultiSelectTemplates TItem="EmployeeData">
+        <GroupTemplate>
+            <span class="group">@(context.Text)</span>
+        </GroupTemplate>
+    </MultiSelectTemplates>
+    <SfDataManager Url="https://blazor.syncfusion.com/services/production/api/Employees" Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor" CrossDomain=true></SfDataManager>
+    <MultiSelectFieldSettings Value="FirstName" GroupBy="Country"></MultiSelectFieldSettings>
+</SfMultiSelect>
+
+@code {
+
+public class EmployeeData
+{
+public string FirstName { get; set; }
+public string Country { get; set; }
+}
+
+public Query Query = new Query();
+}
+
+<style>
+    .group {
+        color: slategrey;
+    }
+</style>

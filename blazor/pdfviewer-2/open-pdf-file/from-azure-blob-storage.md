@@ -61,11 +61,11 @@ Start by following the steps provided in this [link](https://blazor.syncfusion.c
 }
 ```
 
-N> Replace **Your Connection string from Azure** with the actual connection string for your Azure Blob Storage account, **File Name to be Loaded into Syncfusion SfPdfViewer** with the file name to load from the Azure container to the SfPdfViewer, and **Your container name in Azure** with the actual container name.
+N> Replace **Your Connection string from Azure** with the actual connection string for your Azure Blob Storage account, **File Name to be Loaded into Syncfusion<sup style="font-size:70%">&reg;</sup> SfPdfViewer** with the file name to load from the Azure container to the SfPdfViewer, and **Your container name in Azure** with the actual container name.
 
 N> The **Azure.Storage.Blobs** NuGet package must be installed in your application to use the previous code example.
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Open%20and%20Save%20from%20Azure%20blob%20storage-SfPdfViewer).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Open%20and%20Save%20from%20Azure%20blob%20storage).
 
 ## See also
 

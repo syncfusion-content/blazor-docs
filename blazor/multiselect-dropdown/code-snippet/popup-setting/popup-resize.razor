@@ -1,0 +1,39 @@
+@using Syncfusion.Blazor.DropDowns;
+
+
+<SfMultiSelect TValue="string[]"
+                TItem="GameField"
+                ID="multiselect"
+                Width="300px"
+                Placeholder="Supervisor"
+                DataSource="@Games">
+    <MultiSelectFieldSettings Value="id" Text="text"></MultiSelectFieldSettings>
+</SfMultiSelect>
+
+
+@code{
+    
+public GameField CurrentSelection { get; set; }
+
+public class GameField
+{
+    public string id { get; set; }
+    public string text { get; set; }
+    public bool isAvailable { get; set; }
+}
+
+List<GameField> Games = new List<GameField>() {
+    new GameField(){ id= "Game1", text= "American Football", isAvailable = true },
+    new GameField(){ id= "Game2", text= "Badminton", isAvailable = false },
+    new GameField(){ id= "Game3", text= "Basketball", isAvailable = false  },
+    new GameField(){ id= "Game4", text= "Cricket", isAvailable = true  },
+    new GameField(){ id= "Game5", text= "Football", isAvailable = true  },
+    new GameField(){ id= "Game6", text= "Golf", isAvailable = false  },
+    new GameField(){ id= "Game7", text= "Hockey", isAvailable = true  },
+    new GameField(){ id= "Game8", text= "Rugby", isAvailable = true },
+    new GameField(){ id= "Game9", text= "Snooker", isAvailable = false },
+    new GameField(){ id= "Game10", text= "Tennis", isAvailable = false }
+};
+
+
+}

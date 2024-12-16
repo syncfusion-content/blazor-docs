@@ -1,0 +1,21 @@
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor
+
+<SfMultiSelect  TValue="string[]" TItem="EmployeeData" Placeholder="Select a customer" Query="@Query">
+    <MultiSelectTemplates TItem="EmployeeData">
+        <ActionFailureTemplate>
+            <span class='norecord'>Data fetch get fails </span>
+        </ActionFailureTemplate>
+    </MultiSelectTemplates>
+    <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svcs/Employees" Adaptor="Adaptors.ODataV4Adaptor" CrossDomain=true></SfDataManager>
+    <MultiSelectFieldSettings Value="Country" Text="FirstName"></MultiSelectFieldSettings>
+</SfMultiSelect>
+
+@code {
+    public class EmployeeData
+    {
+        public string FirstName { get; set; }
+    }
+    public Query Query = new Query();
+}

@@ -9,17 +9,17 @@ documentation: ug
 
 # Localization of Blazor Components
 
-[Localization](https://learn.microsoft.com/en-us/aspnet/core/blazor/globalization-localization?view=aspnetcore-8.0) is the process of translating the application resources into different languages for specific cultures. You can localize the Syncfusion Blazor components by adding a resource file for each language.
+[Localization](https://learn.microsoft.com/en-us/aspnet/core/blazor/globalization-localization?view=aspnetcore-8.0) is the process of translating the application resources into different languages for specific cultures. You can localize the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components by adding a resource file for each language.
 
-## Localization of Syncfusion Blazor Components
+## Localization of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components
 
-The following two steps can be used to localize Syncfusion Blazor components based on culture. You can find the example codes in the below repository,
+The following two steps can be used to localize Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components based on culture. You can find the example codes in the below repository,
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-localization)
 
 ### Adding culture based resx files
 
-Syncfusion components can be localized using the Resource `.resx` files. You can find the default and culture based localization files in the following GitHub repository.
+Syncfusion<sup style="font-size:70%">&reg;</sup> components can be localized using the Resource `.resx` files. You can find the default and culture based localization files in the following GitHub repository.
 
 N> You can get default and culture based resource files from [GitHub](https://github.com/syncfusion/blazor-locale).
 
@@ -27,7 +27,7 @@ Copy the default resx file (`SfResources.resx`) and the other required resx file
 
 ![Adding Resource Files in Blazor](images/localization-resource.png)
 
-N> Update the localization files whenever you upgrade the Syncfusion NuGet packages in the application to avoid the issues occur due to localization strings.
+N> Update the localization files whenever you upgrade the Syncfusion<sup style="font-size:70%">&reg;</sup> NuGet packages in the application to avoid the issues occur due to localization strings.
 
 After adding the resource file in the application, double click default resx (`SfResources.resx`) file and open **Resource Editor**. In the Resource Editor, change **Access Modifier** option as **Public** .
 
@@ -35,7 +35,7 @@ After adding the resource file in the application, double click default resx (`S
 
 ### Create and register localization service
 
-[ISyncfusionStringLocalizer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ISyncfusionStringLocalizer.html) which acts as a middleware to connect the Syncfusion Blazor UI components and resource files, uses [ResourceManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ISyncfusionStringLocalizer.html#Syncfusion_Blazor_ISyncfusionStringLocalizer_ResourceManager) to provide culture specific resources at runtime. Create a class implementing `ISyncfusionStringLocalizer`. In the newly created class, return the `ResourceManager` created in the above step for [ResourceManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ISyncfusionStringLocalizer.html#Syncfusion_Blazor_ISyncfusionStringLocalizer_ResourceManager) property and change [GetText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ISyncfusionStringLocalizer.html#Syncfusion_Blazor_ISyncfusionStringLocalizer_GetText_System_String_) method to return localized string using resource manager.
+[ISyncfusionStringLocalizer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ISyncfusionStringLocalizer.html) which acts as a middleware to connect the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI components and resource files, uses [ResourceManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ISyncfusionStringLocalizer.html#Syncfusion_Blazor_ISyncfusionStringLocalizer_ResourceManager) to provide culture specific resources at runtime. Create a class implementing `ISyncfusionStringLocalizer`. In the newly created class, return the `ResourceManager` created in the above step for [ResourceManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ISyncfusionStringLocalizer.html#Syncfusion_Blazor_ISyncfusionStringLocalizer_ResourceManager) property and change [GetText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ISyncfusionStringLocalizer.html#Syncfusion_Blazor_ISyncfusionStringLocalizer_GetText_System_String_) method to return localized string using resource manager.
 
 In the following code, `SyncfusionLocalizer` class implements `ISyncfusionStringLocalizer` interface and `ResourceManager` configured to return the cached ResourceManager instance of default resource file created in **Adding culture based resx files** step.
 
@@ -70,11 +70,11 @@ public class SyncfusionLocalizer : ISyncfusionStringLocalizer
 
 {% endtabs %}
 
-Register the `ISyncfusionStringLocalizer` and `Syncfusion Blazor Service` in the **~/Program.cs** file of your app.
+Register the `ISyncfusionStringLocalizer` and `Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service` in the **~/Program.cs** file of your app.
 
-* If you create a Blazor Web App with an **Interactive render mode** such as `WebAssembly or Auto`, you need to ensure the registration of the `SyncfusionLocalizer and Syncfusion Blazor` services in both **~/Program.cs** files.
+* If you create a Blazor Web App with an **Interactive render mode** such as `WebAssembly or Auto`, you need to ensure the registration of the `SyncfusionLocalizer` and Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor services in both **~/Program.cs** files.
 
-* For **MAUI Blazor App**, register the Syncfusion Blazor Service in the **~/MauiProgram.cs** file.
+* For **MAUI Blazor App**, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/MauiProgram.cs** file.
 
 {% tabs %}
 
@@ -272,7 +272,7 @@ For `Blazor Web App and Blazor WASM App`, set the `BlazorWebAssemblyLoadAllGloba
 
 In `Program.cs` use JS interop to call above function and retrieve the user's culture selection from local storage. If local storage doesn't contain a culture for the user, the code sets a default value of United States English (en-US).
 
-If you create a Blazor Web App with an **Interactive render mode** such as `WebAssembly or Auto`, you need to ensure the registration of the `SyncfusionLocalizer and Syncfusion Blazor` services in both **~/Program.cs** files.
+If you create a Blazor Web App with an **Interactive render mode** such as `WebAssembly or Auto`, you need to ensure the registration of the `SyncfusionLocalizer` and Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor services in both **~/Program.cs** files.
 
 {% tabs %}
 
@@ -394,7 +394,7 @@ Add the `CultureSwitcher` component to `~/MainLayout.razor` to enable the cultur
 
 Set the app's supported cultures. Also, ensure the app is configured to process controller actions by calling `AddControllers` and `MapControllers`.
 
-If you create a Blazor Web App with an **Interactive render mode** as `Server` make sure to include the registration of SyncfusionLocalizer and Syncfusion Blazor services in the ~/Program.cs files.
+If you create a Blazor Web App with an **Interactive render mode** as `Server` make sure to include the registration of SyncfusionLocalizer and Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor services in the ~/Program.cs files.
 
 {% tabs %}
 
@@ -438,7 +438,7 @@ app.Run();
 
 {% endhighlight %}
 
-{% highlight c# tabtitle=".NET 8 (~/Program.cs)" hl_lines="4 6 7 8 9 10 13 24" %}
+{% highlight c# tabtitle=".NET 9 & .NET 8 (~/Program.cs)" hl_lines="4 6 7 8 9 10 13 24" %}
 
 builder.Services.AddControllers();
 
@@ -474,7 +474,7 @@ app.Run();
 
 For .NET 6 and 7 set the current culture in a cookie immediately after opening <body> tag of `Pages/_Host.cshtml`.
 
-For .NET 8 set the current culture in a cookie in App component file
+For .NET 9 and .NET 8 set the current culture in a cookie in App component file
 
 {% tabs %}
 {% highlight c# tabtitle=".NET 6 & .NET 7 (_Host.cshtml)" hl_lines="6 7 8 9 10 11" %}
@@ -494,7 +494,7 @@ For .NET 8 set the current culture in a cookie in App component file
 
 {% endhighlight %}
 
-{% highlight C# tabtitle=".NET 8 (App.razor)" %}
+{% highlight C# tabtitle=".NET 9 & .NET 8 (App.razor)" %}
 
 @using System.Globalization
 @using Microsoft.AspNetCore.Localization
@@ -550,7 +550,7 @@ Create `CultureSwitcher` component and place it inside shared folder to perform 
 
 {% tabs %}
 
-{% highlight razor tabtitle=".NET 6 & .NET 7 (Shared/CultureSwitcher.razor) .NET 8 (Components/Pages/CultureSwitcher.razor)" %}
+{% highlight razor tabtitle=".NET 6 & .NET 7 (Shared/CultureSwitcher.razor) .NET 9 & .NET 8 (Components/Pages/CultureSwitcher.razor)" %}
 
 @using  System.Globalization
 @inject NavigationManager NavigationManager
@@ -633,7 +633,7 @@ Add the `CultureSwitcher` component to `Shared/MainLayout.razor` to enable the c
 
 {% endhighlight %}
 
-{% highlight razor tabtitle=".NET 8 (Components/Layout/MainLayout.razor)" %}
+{% highlight razor tabtitle=".NET 9 & .NET 8 (Components/Layout/MainLayout.razor)" %}
 
  <div class="page">
     <div class="sidebar">

@@ -9,7 +9,7 @@ documentation: ug
 
 # Navigation in Blazor SfPdfViewer Component
 
-You can navigate between pages in Syncfusion SfPdfViewer in the following ways:
+You can navigate between pages in Syncfusion<sup style="font-size:70%">&reg;</sup> SfPdfViewer in the following ways:
 
 * Scroll through the pages.
 * Click Go to pages in the built-in toolbar.
@@ -181,7 +181,7 @@ The following code illustrates how to open thumbnail panel programmatically.
 
 ```
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Thumbnail/Show%20thumbnail%20panel%20-%20SfPdfViewer).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Thumbnail/Show%20thumbnail%20panel).
 
 ## Hyperlink navigation
 

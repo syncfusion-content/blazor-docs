@@ -311,10 +311,10 @@ You can get the selected row indexes by using the [GetSelectedRowIndexesAsync](h
 
 ## Touch interaction
 
-When you `tap` gantt row, tapped row will be selected.
+The touch interaction feature in the Blazor Gantt Chart component enables seamless interaction with the Gantt chart on touch screen devices. This functionality enhances usability on mobile devices and tablets, allowing users to effortlessly navigate and interact with the Gantt chart's content through touch gestures. 
 
-[Single selection](selection#selection-mode) : To select a single row or cell, perform `single tap` on it.
+[Single Row selection](selection#selection-mode) : When you tap on a row using a touch screen, the row is automatically selected, providing a simple and intuitive way to select individual rows using a touch interface.
 
-[Multiple selection](selection#multiple-row-selection) : To perform multiple selection, `tap` on the multiple selection popup, and then tap the desired rows or cells.
+[Multiple Row selection](selection#multiple-row-selection) : To select multiple rows, you can use the multi-row selection feature. When you tap on a row, a popup appears, offering the option to enable multi-row selection. Simply tap on the popup, then tap on each of the rows you wish to select. This functionality allows you to easily select and interact with multiple rows at once, enhancing efficiency and control, as demonstrated in the following image:
 
 ![Multiple selection in Blazor Gantt Chart](images/blazor-gantt-chart-multiple-selection.PNG)

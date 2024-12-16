@@ -182,7 +182,7 @@ To render a marker as an image in Maps, set the [Shape](https://help.syncfusion.
         <MapsLayer ShapeData='new { dataOptions = "https://cdn.syncfusion.com/maps/map-data/world-map.json" }' TValue="string">
             <MapsMarkerSettings>
                 <MapsMarker Visible="true" DataSource="MarkerData" Height="25" Width="15" TValue="City"
-                            Shape="Syncfusion.Blazor.Maps.MarkerType.Image" ImageUrl="src/maps/images/ballon.png">
+                            Shape="Syncfusion.Blazor.Maps.MarkerType.Image" ImageUrl="https://blazor.syncfusion.com/demos/_content/blazor_server_common_net8/images/maps/ballon.png">
                 </MapsMarker>
             </MapsMarkerSettings>
             <MapsShapeSettings Fill="lightgray"></MapsShapeSettings>
@@ -320,6 +320,42 @@ The latitude and longitude values are used to determine the location of each mar
 ```
 
 ![Setting Value Path from DataSource in Blazor Maps Marker](./images/Marker/blazor-maps-marker.PNG)
+
+### Setting different sizes for markers individually
+
+The size of the markers in a marker group can be customized using the [WidthValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_WidthValuePath) and [HeightValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_HeightValuePath) properties, which allow the user to change the width and height of the markers based on values from the given data source. Bind the data source to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_DataSource) property of the [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html) tag, and specify the field names containing the width and height values in the data source for the `WidthValuePath` and `HeightValuePath` properties.
+
+```cshtml
+@using Syncfusion.Blazor.Maps
+
+<SfMaps>
+    <MapsLayers>
+        <MapsLayer ShapeData='new { dataOptions = "https://cdn.syncfusion.com/maps/map-data/world-map.json" }' TValue="string">
+            <MapsMarkerSettings>
+                <MapsMarker Visible="true" Shape="MarkerType.Circle" DataSource="MarkerData" WidthValuePath="Width" HeightValuePath="Height" TValue="City">
+                </MapsMarker>
+            </MapsMarkerSettings>
+        <MapsShapeSettings Fill="lightgray"></MapsShapeSettings>
+        </MapsLayer>
+    </MapsLayers>
+</SfMaps>
+@code {
+    public class City
+    {
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
+        public double Width {get; set; }
+        public double Height {get; set; }
+    };
+    public List<City> MarkerData = new List<City> {
+        new City { Latitude=49.95121990866204, Longitude=18.468749999999998, Width=30, Height=30  },
+        new City { Latitude=59.88893689676585, Longitude=-109.3359375 , Width=20, Height=20 },
+        new City { Latitude=-6.64607562172573, Longitude=-55.54687499999999 , Width=10, Height=10}
+    };
+}
+```
+
+![Setting different sizes for markers from DataSource in Blazor Maps Marker](./images/Marker/blazor-maps-marker-sizes.PNG)
 
 ## Repositioning the marker using drag and drop
 
@@ -465,11 +501,49 @@ The Maps can be initially scaled to the center value based on the marker distanc
 
 ![Blazor Maps Marker with Zooming](./images/Marker/blazor-maps-marker-zooming.PNG)
 
+## Disabling Zoom on Marker Click
+
+Maps typically zoom in when you click or double-click on them. This zooming also occurs when you click on a marker. To prevent zooming when clicking on a marker, you can set [ZoomOnMarkerClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_ZoomOnMarkerClick) to **false** in the [MapsZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html). This setting disables zooming specifically for marker clicks. By default, `ZoomOnMarkerClick` is set to **true**.
+
+```cshtml
+@using Syncfusion.Blazor.Maps
+
+<SfMaps>
+    <MapsLayers>
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
+            <MapsMarkerSettings>
+                <MapsMarker Visible='true' Width="20" Height="20" AnimationDuration="0" DataSource='MarkerDataSource' TValue="MapMarkerDataSource">
+                </MapsMarker>
+            </MapsMarkerSettings>
+        </MapsLayer>
+    </MapsLayers>
+    <MapsZoomSettings Enable='true' ZoomOnClick="true" ZoomOnMarkerClick="false">
+        <MapsZoomToolbarSettings HorizontalAlignment="Alignment.Far">
+        </MapsZoomToolbarSettings>
+    </MapsZoomSettings>
+</SfMaps>
+@code {
+    public class MapMarkerDataSource
+    {
+        public double latitude { get; set; }
+        public double longitude { get; set; }
+        public string name { get; set; }
+    };
+    public List<MapMarkerDataSource> MarkerDataSource = new List<MapMarkerDataSource> {
+        new MapMarkerDataSource{ latitude= 49.95121990866204, longitude= 18.468749999999998, name= "Europe" },
+        new MapMarkerDataSource{ latitude= 59.88893689676585, longitude= -109.3359375, name= "North America" },
+        new MapMarkerDataSource{ latitude= -6.64607562172573, longitude= -55.54687499999999, name= "South America" }
+    };
+}
+```
+
+![Disabling Zoom on Marker Click in Blazor Maps](./images/Marker/blazor-maps-disabling-zooming-on-marker-click.gif)
+
 ## Marker clustering
 
-Maps provide support to cluster the markers when they overlap each other. The number on a cluster indicates how many overlapped markers it contains. If zooming is performed on any of the cluster locations in Maps, the number on the cluster will decrease, and the individual markers will be seen on the map. When zooming out, the overlapping marker will increase. So that it can cluster again and increase the count over the cluster.
+Maps support hiding and clustering markers when they overlap. The number on a cluster indicates how many overlapping markers it contains. When zooming into any cluster location on the map, the number on the cluster decreases, and individual markers become visible. When zooming out, the overlapping markers increase, causing them to cluster again, which increases the count on the cluster.
 
-To enable clustering in markers, set the [AllowClustering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerClusterSettings.html#Syncfusion_Blazor_Maps_MapsMarkerClusterSettings_AllowClustering) property of [MapsMarkerClusterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerClusterSettings.html) as **true** and customization of clustering can be done with [MapsMarkerClusterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerClusterSettings.html).
+To enable clustering for markers within a layer, set the [AllowClustering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerClusterSettings.html#Syncfusion_Blazor_Maps_MapsMarkerClusterSettings_AllowClustering) property of [MapsMarkerClusterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerClusterSettings.html) in the [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) to **true**. Customization of clustering can be done using the `MapsMarkerClusterSettings` property. 
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -513,7 +587,7 @@ To enable clustering in markers, set the [AllowClustering](https://help.syncfusi
 
 ![Blazr Maps Marker with Clustering](./images/Marker/blazor-maps-marker-clustering.png)
 
-## Customization of marker cluster
+### Customization of marker cluster
 
 The following properties and classes are available to customize the marker clustering in the Maps component.
 
@@ -573,7 +647,7 @@ The following properties and classes are available to customize the marker clust
 
 ![Blazor Maps Marker with Custom Cluster](./images/Marker/blazor-maps-custom-cluster.png)
 
-## Expanding the marker cluster
+### Expanding the marker cluster
 
 The cluster is formed by grouping an identical and non-identical marker from the surrounding area. By clicking on the cluster and setting the [AllowClusterExpand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerClusterSettings.html#Syncfusion_Blazor_Maps_MapsMarkerClusterSettings_AllowClusterExpand) property in [MapsMarkerClusterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerClusterSettings.html) as **true** to expand the identical markers. If zooming is performed in any of the locations of the cluster, the number on the cluster will decrease and the overlapping marker will be split into an individual marker on the map. When performing zoom out, it will increase the marker count and then cluster it again.
 
@@ -615,6 +689,93 @@ The cluster is formed by grouping an identical and non-identical marker from the
 ```
 
 ![Expanding Marker Cluster in Blazor Maps](./images/Marker/blazor-maps-marker-expand-cluster.PNG)
+
+### Clustering markers within each marker group
+
+Marker clustering can be enabled for each marker group in the map by using the [MapsMarkerClusterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerClusterSettings.html) tag within the [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html) of the [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) tag. This allows for individual customization of clusters for each marker group which group markers that are located near each other to reduce clutter and improve readability. When the [AllowClustering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerClusterSettings.html#Syncfusion_Blazor_Maps_MapsMarkerClusterSettings_AllowClustering) property is set to **true**, the markers within each group are clustered and visually represented as separate clusters. As users zoom in, the clusters expand to reveal individual markers, enabling more detailed exploration. Clusters can also be expanded manually by setting the [AllowClusterExpand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerClusterSettings.html#Syncfusion_Blazor_Maps_MapsMarkerClusterSettings_AllowClusterExpand) property to **true**. The appearance of the clusters and their expansion behavior can be customized using the `MapsMarkerClusterSettings` property, similar to the `MapsMarkerClusterSettings` property, as explained in the sections above.
+
+N> When the `MapsMarkerClusterSettings` tag is enabled for a specific marker group, the `MapsMarkerClusterSettings` tag within the layers becomes ineffective.
+
+```cshtml
+@using Syncfusion.Blazor.Maps
+
+<SfMaps>
+        <MapsZoomSettings Enable="true">
+            <MapsZoomToolbarSettings>
+                <MapsZoomToolbarButton ToolbarItems="new List<ToolbarItem>() { ToolbarItem.Zoom,
+                                   ToolbarItem.ZoomIn, ToolbarItem.ZoomOut, ToolbarItem.Pan, ToolbarItem.Reset }"></MapsZoomToolbarButton>
+            </MapsZoomToolbarSettings>
+        </MapsZoomSettings>
+        <MapsTitleSettings Text="Attractive places around the world">
+            <MapsTitleTextStyle Size="16px"/>
+        </MapsTitleSettings>
+        <MapsLayers>
+            <MapsLayer  ShapeData='new { dataOptions = "https://cdn.syncfusion.com/maps/map-data/world-map.json" }' TValue="string">
+                <MapsMarkerSettings>
+                    <MapsMarker Visible="true" TValue="City" DataSource="@MarkerDataFrance" Shape="MarkerType.Circle" Fill="#b38600" Height="15" Width="15">
+                        <MapsMarkerBorder Color="#e6f2ff" Width="2"></MapsMarkerBorder>
+                        <MapsMarkerClusterSettings AllowClustering="true" AllowClusterExpand="true" Shape="MarkerType.Image" ImageUrl="https://blazor.syncfusion.com/demos/_content/Blazor_Server_Common_NET9/images/maps/cluster-france.svg" Height="40" Width="40">
+                            <MapsLayerMarkerClusterLabelStyle Color="White" Size="10px"></MapsLayerMarkerClusterLabelStyle>
+                        </MapsMarkerClusterSettings>
+                        <MapsMarkerTooltipSettings Visible="true" ValuePath="Name" Format="<b>Name:<b> ${Name} <br/> <b>State:<b> ${State} <br/> <b>Country:<b> ${Country}">
+                            <MapsMarkerTooltipTextStyle FontFamily="inherit"></MapsMarkerTooltipTextStyle>
+                        </MapsMarkerTooltipSettings>
+                    </MapsMarker>
+                    <MapsMarker Visible="true" TValue="City" DataSource="@MarkerDataUSA" Shape="MarkerType.Circle" Fill="#bf4040" Height="15" Width="15">
+                        <MapsMarkerBorder Color="#e6f2ff" Width="2"></MapsMarkerBorder>
+                        <MapsMarkerClusterSettings AllowClustering="true" AllowClusterExpand="true" Shape="MarkerType.Image" ImageUrl="https://blazor.syncfusion.com/demos/_content/Blazor_Server_Common_NET9/images/maps/cluster-usa.svg" Height="40" Width="40">
+                            <MapsLayerMarkerClusterLabelStyle Color="White" Size="10px"></MapsLayerMarkerClusterLabelStyle>
+                        </MapsMarkerClusterSettings>
+                        <MapsMarkerTooltipSettings Visible="true" ValuePath="Name" Format="<b>Name:<b> ${Name} <br/> <b>State:<b> ${State} <br/> <b>Country:<b> ${Country}">
+                            <MapsMarkerTooltipTextStyle FontFamily="inherit"></MapsMarkerTooltipTextStyle>
+                        </MapsMarkerTooltipSettings>
+                    </MapsMarker>
+                    <MapsMarker Visible="true" TValue="City" DataSource="@MarkerDataIndia" Shape="MarkerType.Circle" Fill="#00b3b3" Height="15" Width="15">
+                        <MapsMarkerBorder Color="#e6f2ff" Width="2"></MapsMarkerBorder>
+                        <MapsMarkerClusterSettings AllowClustering="true" AllowClusterExpand="true" Shape="MarkerType.Image" ImageUrl="https://blazor.syncfusion.com/demos/_content/Blazor_Server_Common_NET9/images/maps/cluster-india.svg" Height="40" Width="40">
+                            <MapsLayerMarkerClusterLabelStyle Color="White" Size="10px"></MapsLayerMarkerClusterLabelStyle>
+                        </MapsMarkerClusterSettings>
+                        <MapsMarkerTooltipSettings Visible="true" ValuePath="Name" Format="<b>Name:<b> ${Name} <br/> <b>State:<b> ${State} <br/> <b>Country:<b> ${Country}">
+                            <MapsMarkerTooltipTextStyle FontFamily="inherit"></MapsMarkerTooltipTextStyle>
+                        </MapsMarkerTooltipSettings>
+                    </MapsMarker>
+                </MapsMarkerSettings>
+            </MapsLayer>
+        </MapsLayers>
+    </SfMaps>
+@code {
+    public class City
+    {
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
+        public string Name { get; set; }
+        public string State { get; set; }
+        public string Country { get; set; }
+    }
+    private List<City> MarkerDataFrance = new List<City> {
+          new City { Latitude= 48.8584, Longitude= 2.2945, Name= "Eiffel Tower", State= "Paris", Country= "France" },
+          new City { Latitude= 48.8606, Longitude= 2.3376, Name= "Louvre Museum", State= "Paris", Country= "France" },
+          new City { Latitude= 48.8529, Longitude= 2.3500, Name= "Notre-Dame Cathedral", State= "Paris", Country= "France" },
+          new City { Latitude= 48.6360, Longitude= 1.5115, Name= "Mont Saint-Michel", State= "Normandy", Country= "France" }
+    };
+    private List<City> MarkerDataUSA = new List<City> {
+          new City { Latitude= 35.019028, Longitude= -85.339439,  Name= "Ruby Falls", State= "Tennessee", Country= "United States of America" },
+          new City { Latitude= 35.654613, Longitude= -105.996979, Name= "Meow Wolf Santa Fe", State= "New Mexico", Country= "United States of America" },
+          new City { Latitude= 36.107216, Longitude= -115.175804, Name= "City Center of Las Vegas", State= "Nevada", Country= "United States of America" },
+          new City { Latitude= 36.879047, Longitude= -111.510498, Name= "Horseshoe Bend", State= "Arizona", Country= "United States of America" },
+          new City { Latitude= 36.011955, Longitude= -113.810951, Name= "Grand Canyon West Skywalk", State= "Arizona", Country= "United States of America" }
+    };
+    private List<City> MarkerDataIndia = new List<City> {
+          new City { Latitude= 26.985901, Longitude= 75.850700, Name= "Amber Fort, Amer", State= "Rajastan", Country= "India" },
+          new City { Latitude= 22.957390, Longitude= 77.625275, Name= "Bhimbetka, Raisen District", State= "Madhya Pradesh", Country= "India" },
+          new City { Latitude= 26.809330, Longitude= 75.540527, Name= "Bagru Fort, Bagru", State= "Rajasthan", Country= "India" },
+          new City { Latitude= 25.489504, Longitude= 80.330116, Name= "Kalinjar Fort, Banda", State= "Uttar Pradesh", Country= "India" },
+          new City { Latitude= 27.988890, Longitude= 76.388336, Name= "Neemrana", State= "Rajasthan", Country= "India" }
+    };
+}
+```
+
+![Clustering Marker Within Each Marker Group in Blazor Maps](./images/Marker/blazor-maps-marker-cluster-for-specific-markergroup.PNG)
 
 ## Tooltip for marker
 

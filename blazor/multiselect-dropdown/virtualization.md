@@ -19,33 +19,11 @@ The MultiSelect component can generate its list items through an array of comple
 
 In the following example, `ID` column and `Text` column from complex data have been mapped to the `Value` field and `Text` field, respectively.
 
-```cshtml
+{% highlight cshtml %}
 
-@using Syncfusion.Blazor.DropDowns
-@using Syncfusion.Blazor.Data 
+{% include_relative code-snippet/virtualization/local-data.razor %}
 
-<SfMultiSelect TValue="string[]" TItem="Record" Placeholder="Select an item" DataSource="@Records" Query="@LocalDataQuery" AllowFiltering="true" PopupHeight="160px" EnableVirtualization="true">
-    <MultiSelectFieldSettings Text="Text" Value="ID"></MultiSelectFieldSettings>
-</SfMultiSelect>
-
-@code{
-    public Query LocalDataQuery = new Query().Take(6); 
-    public class Record 
-    { 
-        public string ID { get; set; } 
-        public string Text { get; set; } 
-    } 
-    public List<Record> Records { get; set; } 
-    protected override void OnInitialized()
-    { 
-        this.Records = Enumerable.Range(1, 150).Select(i => new Record() 
-        { 
-            ID = i.ToString(), 
-            Text = "Item " + i, 
-        }).ToList(); 
-    } 
-}
-```
+{% endhighlight %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZVzZnCLLvDOtKfT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 

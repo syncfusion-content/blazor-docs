@@ -133,7 +133,7 @@ Toolbar="@(new List<string>() { "Edit", "Update", "Cancel" })">
     {
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
-            if (value != null)
+            if (value != null && value != "")
             {
                 int duration = (int)value;
                 if (duration >= 1 && duration <= 20)
@@ -155,7 +155,8 @@ Toolbar="@(new List<string>() { "Edit", "Update", "Cancel" })">
     {
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
-            if (value != null)
+            // added condition check for empty string 
+            if (value != null && value != "")
             {
                 string name = value.ToString();
                 if (name.Length >= 1 && name.Length <= 7)

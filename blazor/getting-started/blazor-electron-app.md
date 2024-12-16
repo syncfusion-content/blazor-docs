@@ -9,7 +9,7 @@ documentation: ug
 
 # Creating Desktop Application using Blazor and Electron
 
-This section explains how to create and run desktop applications using Blazor and Electron Framework with Syncfusion Blazor components.
+This section explains how to create and run desktop applications using Blazor and Electron Framework with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
 
 ## What is Electron?
 
@@ -151,4 +151,4 @@ dotnet electronize build /target osx
 dotnet electronize build /target linux
 ```
 
-N> [View the complete Blazor Server electron application with Syncfusion controls on GitHub](https://github.com/SyncfusionExamples/blazor-electron-app)
+N> [View the complete Blazor Server electron application with Syncfusion<sup style="font-size:70%">&reg;</sup> controls on GitHub](https://github.com/SyncfusionExamples/blazor-electron-app)

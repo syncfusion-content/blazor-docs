@@ -7,9 +7,9 @@ control: File Manager
 documentation: ug
 ---
 
-# Custom file provider for the Syncfusion Blazor File Manager Component
+# Custom file provider for Blazor File Manager Component
 
-You can also create a custom file provider specific to your needs to connect with the Syncfusion Blazor File Manager component, instead of relying on the above listed predefined providers offered by Syncfusion. Additionally, you need to ensure that the file actions requests and responses adhere to the same format used in the file system. Below are the details for each file action, to know more information about their request and response parameters.
+You can also create a custom file provider specific to your needs to connect with the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component, instead of relying on the above listed predefined providers offered by Syncfusion. Additionally, you need to ensure that the file actions requests and responses adhere to the same format used in the file system. Below are the details for each file action, to know more information about their request and response parameters.
 
 
 * **Read** - This action is used to read files and directories from the file system. It retrieves the list of files and subdirectories in a specified directory. Click this [link](https://blazor.syncfusion.com/documentation/file-manager/file-operations#reading-files-and-folders) to know about the request and response parameters of read operations.
@@ -35,3 +35,5 @@ You can also create a custom file provider specific to your needs to connect wit
 * **Get Image** - This action retrieves image files from the file system. It is specifically used for handling image files and displaying them in the application. Click this [link](https://blazor.syncfusion.com/documentation/file-manager/file-operations#getting-images) to know about the request and response parameters of get image operations.
 
 Implementing these operations uniformly ensures that the File Manager component functions smoothly with your custom file provider, maintaining consistency in how files are managed and accessed across different actions.
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/filemanager-azure-nodejs-file-provider)

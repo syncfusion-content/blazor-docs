@@ -15,7 +15,7 @@ Refer [here](https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-sta
 
 ## Add PDF Viewer component
 
-Add the Syncfusion PDF Viewer (Next Gen) component in the **~/Pages/Index.razor** file.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer (Next Gen) component in the **~/Pages/Index.razor** file.
 
 {% tabs %}
 {% highlight razor %}
@@ -48,11 +48,11 @@ Add the Syncfusion PDF Viewer (Next Gen) component in the **~/Pages/Index.razor*
 {% endhighlight %}
 {% endtabs %}
 
-N> When developing a Blazor Android MAUI application, passing the [DocumentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DocumentPath) to the PDF Viewer (Next Gen) component as a `base64 string` is needed. This ensures that the application can retrieve and render a PDF document correctly within the PDF Viewer (Next Gen) component.
+N> When developing a Blazor Android MAUI application, passing the [DocumentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DocumentPath) to the PDF Viewer component as a `base64 string` is needed. This ensures that the application can retrieve and render a PDF document correctly within the PDF Viewer component.
 
 ## Run on Android emulator
 
-To run the PDF Viewer (Next Gen) in a Blazor Android MAUI application using the Android emulator, follow these steps:
+To run the PDF Viewer in a Blazor Android MAUI application using the Android emulator, follow these steps:
 
 ![Run Windows machine](../getting-started/gettingstarted-images/emulator_maui.png)
 
@@ -60,19 +60,23 @@ To run the PDF Viewer (Next Gen) in a Blazor Android MAUI application using the 
 
 ![android-sdk-liscence](../getting-started/gettingstarted-images/android-sdk-liscence_maui.png)
 
-**Step 2** Install and launch the Android Device Manager. Open the Android SDK Manager, go to the `SDK Tools` tab, select the `Android Device Manager` checkbox, and click `Apply` or `OK`. This will allow you to create, manage, and launch Android Virtual Devices (AVDs) for testing and running Android applications.
+**Step 2** Right-click the **~wwwroot/data/pdf_succinctly.pdf** file in Solution Explorer, go to `Properties`, and set Build Action to `Embedded Resource` and Copy to Output Directory to `Copy Always`.
+
+![android_maui_properties](../getting-started/gettingstarted-images/android_maui_properties.png)
+
+**Step 3** Install and launch the Android Device Manager. Open the Android SDK Manager, go to the `SDK Tools` tab, select the `Android Device Manager` checkbox, and click `Apply` or `OK`. This will allow you to create, manage, and launch Android Virtual Devices (AVD's) for testing and running Android applications.
 
 ![picxel emulator](../getting-started/gettingstarted-images/pixcel-emulator_maui.png)
 
-**Step 3** Ensure the Android emulator is running. Launch the Android Device Manager and create or select an existing AVD to run the emulator.
+**Step 4** Ensure the Android emulator is running. Launch the Android Device Manager and create or select an existing AVD to run the emulator.
 
-Now, relaunch the project in emulator mode. It will render the PDF Viewer (Next Gen) component using the Blazor Android MAUI application.
+Now, relaunch the project in emulator mode. It will render the PDF Viewer component using the Blazor Android MAUI application.
 
 N> If you encounter any errors while using the Android Emulator, refer to the following link for troubleshooting guidance[Troubleshooting Android Emulator](https://learn.microsoft.com/en-us/dotnet/maui/android/emulator/troubleshooting).
 
 ![Blazor SfPdfViewer Component](../getting-started/gettingstarted-images/emulator.png)
 
->[View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Server%20Deployment/Maui/MauiBlazorAndroid%20-%20SfPdfViewer).
+>[View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Server%20Deployment/Maui/MauiBlazorAndroid).
 
 ## See also
 

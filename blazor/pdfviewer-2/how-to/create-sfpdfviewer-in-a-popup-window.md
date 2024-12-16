@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Create an SfPdfViewer within a popup window in Blazor | Syncfusion
+title: Create a SfPdfViewer within a popup window in Blazor | Syncfusion
 description: Learn here all about Create SfPdfViewer in a popup window in Syncfusion Blazor SfPdfViewer component and more.
 platform: Blazor
 control: SfPdfViewer
@@ -9,7 +9,7 @@ documentation: ug
 
 # Create a SfPdfViewer within a popup window in Blazor
 
-For quick view, you might need to display the PDF file in a dialog window. The following code snippet explains how to use the SfPdfViewer component inside a dialog window. In this example, the Syncfusion’s dialog component is used for Blazor.
+For quick view, you might need to display the PDF file in a dialog window. The following code snippet explains how to use the SfPdfViewer component inside a dialog window. In this example, the Syncfusion&reg; dialog component is used for Blazor.
 
 ```cshtml
 
@@ -28,8 +28,9 @@ For quick view, you might need to display the PDF file in a dialog window. The f
               IsModal="true"
               Header="@Header"
               ShowCloseIcon="true">
-        <DialogEvents OnOpen="OnOpen"></DialogEvents>
-        <SfPdfViewer2 @ref="Viewer" />
+        <SfPdfViewer2 @ref="Viewer">
+            <PdfViewerEvents Created="Created"></PdfViewerEvents>
+        </SfPdfViewer2>
     </SfDialog>
 
 </div>
@@ -38,12 +39,12 @@ For quick view, you might need to display the PDF file in a dialog window. The f
     public SfPdfViewer2 Viewer { get; set; }
     SfDialog Dialog;
 
-    public void OnClick(MouseEventArgs args)
+    public async void OnClick(MouseEventArgs args)
     {
-        this.Dialog.Show();
+        await this.Dialog.ShowAsync();
     }
 
-    public async void OnOpen(BeforeOpenEventArgs args)
+    private async void Created()
     {
         await Viewer.LoadAsync(DocumentPath, null);
     }
@@ -54,7 +55,7 @@ For quick view, you might need to display the PDF file in a dialog window. The f
 
 ```
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/PdfViewer%20in%20Popup%20window%20-%20SfPdfViewer)
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/PdfViewer%20in%20Popup%20window)
 
 ## See also
 

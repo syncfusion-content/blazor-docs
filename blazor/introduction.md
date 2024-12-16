@@ -7,9 +7,9 @@ component: Common
 documentation: ug
 ---
 
-# Welcome to Syncfusion Blazor Components
+# Welcome to Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components
 
-Syncfusion Blazor Components is a modern enterprise native UI components library for creating Blazor WebAssembly and Server applications. Syncfusion Blazor components library has been built from the ground up to be lightweight, responsive and touch-friendly. The Syncfusion Blazor components are native Blazor components and not wrappers over EJ2 components.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components is a modern enterprise native UI components library for creating Blazor WebAssembly and Server applications. Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components library has been built from the ground up to be lightweight, responsive and touch-friendly. The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are native Blazor components and not wrappers over EJ2 components.
 
 ## How to best read this user guide
 
@@ -78,6 +78,7 @@ padding-top: 20px;
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/datagrid/getting-started">DataGrid</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/pivot-table/getting-started">Pivot Table</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/treegrid/getting-started">TreeGrid</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/multicolumn-combobox/getting-started">Multicolumn ComboBox</a></div>
         <div><p class="controlcategory">FILE VIEWERS & EDITORS</p></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started">RichTextEditor</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/web-app">PDF Viewer</a></div>
@@ -151,6 +152,8 @@ padding-top: 20px;
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/in-place-editor/getting-started">In-place Editor</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/query-builder/getting-started">Query Builder</a></div>
 		<div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/data-form/getting-started">Data Form</a></div>
+        <div><p class="controlcategory">Interactive Chat</p></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/ai-assistview/getting-started">AI Assistview</a></div>
     </td>
     <td>
         <div><p class="controlcategory-topics">DROPDOWNS</p></div>
@@ -186,6 +189,69 @@ padding-top: 20px;
 </tr>
 </table>
 
+## Smart Component list
+
+<style>
+#table
+{
+border:0 !important;
+line-height: 160% !important;
+}
+
+tr
+{
+border:0 !important;
+}
+
+td
+{
+border:0 !important;
+vertical-align: top;
+}
+
+.controlanchorlink
+{
+font-size: 14px !important;
+text-decoration: none!important;
+text-align: left!important;
+padding: 1px 0px;
+}
+.controlcategory-topics
+{
+font-size: 14px !important;
+font-weight: 500!important;
+border:0 !important;
+line-height: 20px;
+}
+.controlcategory
+{
+font-size: 14px !important;
+font-weight: 500!important;
+border:0 !important;
+text-align: left!important;
+line-height: 20px;
+padding-top: 20px;
+}
+</style>
+
+<table id="table">
+    <tbody>
+        <colgroup>
+            <col style="width: 25%">
+            <col style="width: 25%">
+            <col style="width: 25%">
+            <col style="width: 25%">
+        </colgroup>
+    </tbody>
+    <tr>
+        <td>
+            <div><p class="controlcategory-topics">Smart AI</p></div>
+            <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/smart-paste/getting-started">Smart Paste Button</a></div>
+            <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/smart-textarea/getting-started">Smart TextArea</a></div>
+        </td>
+    </tr>
+</table>
+
 ## Getting Help
 
 * If you are still not able to find the information that you are looking for in the self-help resources mentioned above then please contact us by creating a support ticket in [our support site](https://support.syncfusion.com) or ask your query in Stack Overflow with the tag `syncfusion-blazor`.
@@ -199,17 +265,17 @@ padding-top: 20px;
     * [Product Development Life Cycle](https://www.syncfusion.com/support/product-lifecycle/estudio)
 
 * Visual Studio
-    * [Getting started with Syncfusion Blazor Components in Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
-    * [Getting started with Syncfusion Blazor Components in Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
-    * [Getting started with Syncfusion Blazor Components in WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
+    * [Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components in Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
+    * [Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components in Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
+    * [Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components in WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
 
 * .NET CLI
-    * [Getting started with Syncfusion Blazor Components in Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app-dotnet-cli)
-    * [Getting started with Syncfusion Blazor Components in Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
-    * [Getting started with Syncfusion Blazor Components in WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
+    * [Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components in Web App](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app-dotnet-cli)
+    * [Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components in Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
+    * [Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components in WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
 
 * Visual Studio for Mac
 
-    * [Getting started with Syncfusion Blazor Components in Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-mac)
+    * [Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components in Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-mac)
 
-    * [Getting started with Syncfusion Blazor Components in WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio-mac)
+    * [Getting started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components in WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio-mac)

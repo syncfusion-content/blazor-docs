@@ -122,7 +122,7 @@ The [`ZoomAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageE
 
 * zoomPoint - Specifies x and y coordinates of a point as ImageEditorPoint on image to perform zooming.
 
-### Maximum and Minimum zoom level 
+### Maximum and minimum zoom level 
 
 The [`MaxZoomFactor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorZoomSettings.html#Syncfusion_Blazor_ImageEditor_ImageEditorZoomSettings_MaxZoomFactor) property is a useful feature in the Image Editor that allows you to define the maximum level of zoom permitted for an image. This property sets a limit on how much the image can be magnified, preventing excessive zooming that may result in a loss of image quality or visibility. 
 

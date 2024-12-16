@@ -379,6 +379,55 @@ The [MarkerClusterMouseMove](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 }
 ```
 
+## MouseMove
+
+The [MouseMove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_MouseMove) event is triggered when the mouse pointer moves over the map. To learn more about the arguments for this event, refer to the documentation [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MouseMoveEventArgs.html).
+
+```cshtml
+@using Syncfusion.Blazor.Maps
+
+<SfMaps>
+    <MapsEvents MouseMove="@MouseMoveEvent"></MapsEvents>
+    <MapsZoomSettings Enable="true"></MapsZoomSettings>
+    <MapsLayers>
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
+            <MapsMarkerSettings>
+                <MapsMarker Visible="true" DataSource="LargestCities" Height="25" Width="15" TValue="City">
+                </MapsMarker>
+            </MapsMarkerSettings>
+            <MapsMarkerClusterSettings AllowClustering="true" Shape="MarkerType.Circle" Fill="#008CFF" Height="25" Width="25">
+                <MapsLayerMarkerClusterLabelStyle Color="white"></MapsLayerMarkerClusterLabelStyle>
+            </MapsMarkerClusterSettings>
+            <MapsShapeSettings Fill="lightgray">
+            </MapsShapeSettings>
+        </MapsLayer>
+    </MapsLayers>
+</SfMaps>
+
+@code {
+    public class City
+    {
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
+        public string Name { get; set; }
+        public double Area { get; set; }
+    };
+    private List<City> LargestCities = new List<City> {
+        new City { Latitude=40.6971494, Longitude= -74.2598747, Name="New York", Area=8683 },
+        new City { Latitude=40.0024137, Longitude= -75.2581194, Name="Philadelphia", Area=4661 },
+        new City { Latitude=42.3142647, Longitude= -71.11037, Name="Boston", Area=4497 },
+        new City { Latitude=42.3526257, Longitude= -83.239291, Name="Detroit", Area=3267 },
+        new City { Latitude=47.2510905, Longitude= -123.1255834, Name="Washington", Area=2996 },
+        new City { Latitude=25.7823907, Longitude= -80.2994995, Name="Miami", Area=2891 },
+        new City { Latitude=19.3892246, Longitude= -70.1305136, Name="San Juan", Area=2309 }
+    };
+    public void MouseMoveEvent(Syncfusion.Blazor.Maps.MouseMoveEventArgs  args)
+    {
+        // Here you can customize your code
+    }
+}
+```
+
 ## OnBubbleClick
 
 The [OnBubbleClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_MarkerClusterMouseMove) event will be triggered when clicking on the bubbles. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.BubbleClickEventArgs.html).

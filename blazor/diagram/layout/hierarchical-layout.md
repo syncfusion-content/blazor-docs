@@ -160,7 +160,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### How to change orientation 
 
-You can use [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Orientation) property of the Layout to change the orientation at runtime. The following code shows how to change the layout.
+You can use the [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Orientation) property of the Layout to change the orientation at runtime. The following code shows how to change the layout.
 
 ```csharp
 <SfDiagramComponent Height="600px" Width="500px" >
@@ -196,7 +196,7 @@ public void UpdateSpacing()
     Diagram.BeginUpdate();
     HorizontalSpacing += 10;
     VerticalSpacing += 10;
-    Diagram.EndUpdate();
+    Diagram.EndUpdateAsync();
 }
 ```
 
@@ -221,7 +221,7 @@ public void UpdateMargin()
     Diagram.BeginUpdate();
     left += 10;
     top += 10;
-    Diagram.EndUpdate();
+    Diagram.EndUpdateAsync();
 }
 ```
 

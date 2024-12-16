@@ -1091,31 +1091,51 @@ The upload operation triggers on the server side and find the related code detai
     [Route("Upload")]
     public IActionResult Upload(string path, IList<IFormFile> uploadFiles, string action)
     {
-        FileManagerResponse uploadResponse;
-        foreach (var file in uploadFiles)
+        try
         {
-            var folders = (file.FileName).Split('/');
-            // checking the folder upload
-            if (folders.Length > 1)
+            FileManagerResponse uploadResponse;
+            foreach (var file in uploadFiles)
             {
-                for (var i = 0; i < folders.Length - 1; i++)
+                var folders = (file.FileName).Split('/');
+                // checking the folder upload
+                if (folders.Length > 1)
                 {
-                    string newDirectoryPath = Path.Combine(this.basePath + path, folders[i]);
-                    if (!Directory.Exists(newDirectoryPath))
+                    for (var i = 0; i < folders.Length - 1; i++)
                     {
-                        this.operation.ToCamelCase(this.operation.Create(path, folders[i]));
+                        string newDirectoryPath = Path.Combine(this.basePath + path, folders[i]);
+                        // checking the directory traversal
+                        if (Path.GetFullPath(newDirectoryPath) != (Path.GetDirectoryName(newDirectoryPath) + Path.DirectorySeparatorChar + folders[i]))
+                        {
+                            throw new UnauthorizedAccessException("Access denied for Directory-traversal");
+                        }
+                        if (!Directory.Exists(newDirectoryPath))
+                        {
+                            this.operation.ToCamelCase(this.operation.Create(path, folders[i]));
+                        }
+                        path += folders[i] + "/";
                     }
-                    path += folders[i] + "/";
                 }
             }
+            uploadResponse = operation.Upload(path, uploadFiles, action, size, null);
+            if (uploadResponse.Error != null)
+            {
+                Response.Clear();
+                Response.ContentType = "application/json; charset=utf-8";
+                Response.StatusCode = Convert.ToInt32(uploadResponse.Error.Code);
+                Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = uploadResponse.Error.Message;
+            }
         }
-        uploadResponse = operation.Upload(path, uploadFiles, action, null);
-        if (uploadResponse.Error != null)
+        catch (Exception e)
         {
+            ErrorDetails er = new ErrorDetails();
+            er.Message = e.Message.ToString();
+            er.Code = "417";
+            er.Message = "Access denied for Directory-traversal";
             Response.Clear();
             Response.ContentType = "application/json; charset=utf-8";
-            Response.StatusCode = Convert.ToInt32(uploadResponse.Error.Code);
-            Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = uploadResponse.Error.Message;
+            Response.StatusCode = Convert.ToInt32(er.Code);
+            Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = er.Message;
+            return Content("");
         }
         return Content("");
     }
@@ -1455,7 +1475,7 @@ N> The fully working sample can be found [here](https://github.com/SyncfusionExa
 
 In the Blazor FileManager component, filtering support is provided. When the [FilterFilesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_FilterFilesAsync_System_Collections_Generic_List__0__) method is called, it triggers a custom operation on the controller side. Using this method, you can perform search operations by passing the SearchString as a parameter. 
 
-In the following example, the SearchStringvalue **Downloads** is passed, and based on that, a search operation is performed in the Blazor FileManager using a button click.
+In the following example, the SearchString value **Downloads** is passed, and based on that, a search operation is performed in the Blazor FileManager using a button click.
 
 ```cshtml
 

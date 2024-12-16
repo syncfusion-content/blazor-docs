@@ -7,12 +7,13 @@ component: Common
 documentation: ug
 ---
 
-# Version Compatibility of Syncfusion Blazor Components
+# Version Compatibility of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components
 
-The following table represents the supported .NET and .NET Core versions by different Syncfusion Blazor components releases.
+The following table represents the supported .NET and .NET Core versions by different Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components releases.
 
-| Version | Syncfusion Blazor Components Version |
+| Version | Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components Version |
 | ------------- | ------------- |
+| [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) | 27.2.2 and above |
 | [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) | 23.1.36 and above |
 | [.NET 7.0](https://devblogs.microsoft.com/dotnet/announcing-dotnet-7/) | 20.4.0.38 and above |
 | [.NET 6.0](https://devblogs.microsoft.com/dotnet/announcing-asp-net-core-in-net-6/) | 19.3.0.43 and above |
@@ -22,9 +23,9 @@ The following table represents the supported .NET and .NET Core versions by diff
 | [.NET Core 3.1.1](https://devblogs.microsoft.com/dotnet/net-core-january-2020/) | 17.4.0.46 to 20.3.0.61 |
 | [.NET Core 3.1](https://devblogs.microsoft.com/dotnet/asp-net-core-updates-in-net-core-3-1/) | 17.4.0.39 to 20.3.0.61 |
 
-## Syncfusion Version Information
+## Syncfusion<sup style="font-size:70%">&reg;</sup> Version Information
 
-Syncfusion follows a quarterly release schedule, introducing new volumes every three months. To track these releases and their associated changes, Syncfusion Blazor components utilize a sequence-based identifier system, employing the format **Major.Minor.Revision**. This system enables developers to easily monitor modifications made in each release.
+Syncfusion<sup style="font-size:70%">&reg;</sup> follows a quarterly release schedule, introducing new volumes every three months. To track these releases and their associated changes, Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components utilize a sequence-based identifier system, employing the format **Major.Minor.Revision**. This system enables developers to easily monitor modifications made in each release.
 
 For example, if the release package version is `23.1.36`, the version number can be interpreted as follows:
 
@@ -36,5 +37,5 @@ For example, if the release package version is `23.1.36`, the version number can
 
 ## See also
 
-* [Syncfusion Product release lifecycle](https://www.syncfusion.com/support/product-lifecycle/estudio)
+* [Syncfusion<sup style="font-size:70%">&reg;</sup> Product release lifecycle](https://www.syncfusion.com/support/product-lifecycle/estudio)
 * [.NET and .NET Core release lifecycle](https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-core)

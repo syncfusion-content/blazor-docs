@@ -143,4 +143,4 @@ Stock chart is shipped with several built-in themes such as `Material`, `Fabric`
 
 ## See Also
 
-* [Axis Customization](./axis-customization/)
+* [Axis Customization](./axis-customization)

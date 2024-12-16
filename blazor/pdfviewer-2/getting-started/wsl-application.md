@@ -7,9 +7,9 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Getting Started with Blazor PDF Viewer (Next Gen) Component in WSL mode
+# Getting Started with Blazor PDF Viewer in WSL mode
 
-To run the Syncfusion Blazor PDF Viewer (Next Gen) component in WSL (Windows Subsystem for Linux) mode, follow these steps:
+To run the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor PDF Viewer (Next Gen) component in WSL (Windows Subsystem for Linux) mode, follow these steps:
 
 **Step 1:** Enable the Windows Subsystem for Linux and the Virtual Machine Platform.
 
@@ -66,7 +66,7 @@ If the above result is not shown, please run the comments below
     dotnet
     dotnet --info
 ```
-**Step 4:** Now, run the server or webassembly sample in WSL (Windows Subsystem for Linux) mode and it will run our Blazor PDF Viewer (Next Gen) component.
+**Step 4:** Now, run the server or webassembly sample in WSL (Windows Subsystem for Linux) mode and it will run our Blazor PDF Viewer component.
 
 ![WSL-Mode](gettingstarted-images/WSL-Mode.png)
 
@@ -76,7 +76,7 @@ If the sample does not load the PDF file and throws an exception.
 
 ![Create-new-blazor-wsl-app](gettingstarted-images/exception.png)
 
-Then, in the Ubuntu command window, run the following commands one by one to install all necessary Blazor PDF Viewer (Next Gen) dependencies for a Linux run.
+Then, in the Ubuntu command window, run the following commands one by one to install all necessary Blazor PDF Viewer dependencies for a Linux run.
 
 ```
     sudo apt-get install libfontconfig1
@@ -92,6 +92,6 @@ Close the project, reopen it, and run it in WSL mode. It will run properly.
 
 ## See also
 
-* [Getting Started with Blazor PDF Viewer (Next Gen) Component in Blazor Server App](./server-side-application)
+* [Getting Started with Blazor PDF Viewer Component in Blazor Server App](./server-side-application)
 
-* [Getting Started with Blazor PDF Viewer (Next Gen) Component in Blazor WASM App](./web-assembly-application)
+* [Getting Started with Blazor PDF Viewer Component in Blazor WASM App](./web-assembly-application)

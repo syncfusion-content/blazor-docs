@@ -7,15 +7,15 @@ component: Common
 documentation: ug
 ---
 
-# NuGet Packages for Syncfusion Blazor UI components
+# NuGet Packages for Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI components
 
-Starting with v18.4.0.30 (Volume 4, 2020), the Syncfusion Blazor UI components are separately available in individual NuGet packages. The NuGet packages are segregated based on the component usage and its namespace. The complete NuGet package [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) will also be available along with the individual NuGet packages. It means its support is not deprecated yet.
+Starting with v18.4.0.30 (Volume 4, 2020), the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI components are separately available in individual NuGet packages. The NuGet packages are segregated based on the component usage and its namespace. The complete NuGet package [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) will also be available along with the individual NuGet packages. It means its support is not deprecated yet.
 
 W> Do not use both `Syncfusion.Blazor` and individual NuGet packages in the same application. It will throw ambiguous errors while compiling the project.
 
 ## Syncfusion.Blazor.Core
 
-This package contains the base component, common classes, common functionalities, and interfaces for the entire Syncfusion Blazor UI components.
+This package contains the base component, common classes, common functionalities, and interfaces for the entire Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI components.
 
 <!-- markdownlint-disable MD033 -->
 <table>
@@ -48,6 +48,86 @@ Common, Base
 </ul>
 </td>
 </tr>
+</table>
+
+## Syncfusion.Blazor.SmartComponents
+
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Components are designed to seamlessly integrate with AI and offering intelligent features that go beyond standard user interfaces.
+
+<table>
+<tr>
+<td>
+<b>NuGet package</b>
+</td>
+<td>
+<b>Components friendly name</b>
+</td>
+<td>
+<b>Components name</b>
+</td>
+<td>
+<b>Dependencies</b>
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://www.nuget.org/packages/Syncfusion.Blazor.SmartComponents/">Syncfusion.Blazor.SmartComponents</a>
+</td>
+<td>
+<ul>
+<li><a href="https://blazor.syncfusion.com/documentation/smart-paste/getting-started">Smart Paste Button</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/smart-textarea/getting-started">Smart TextArea</a></li>
+</ul>
+</td>
+<td>
+<ul>
+<li>SfSmartPasteButton</li>
+<li>SfSmartTextArea</li>
+</ul>
+</td>
+<td>
+<ul>
+<li><a href="#syncfusionblazorcore">Syncfusion.Blazor.Core</a></li>
+<li><a href="##syncfusionblazorbuttons">Syncfusion.Blazor.Buttons</a></li>
+<li><a href="#syncfusionblazorinputs">Syncfusion.Blazor.Inputs</a></li>
+<li><a href="https://www.nuget.org/packages/Azure.AI.OpenAI/">Azure.AI.OpenAI</a></li>
+</ul>
+</td>
+</tr>
+</table>
+
+## Syncfusion.Blazor.InteractiveChat
+
+The AI AssistView creates an interface through which users can interact with AI-driven suggestions and prompts.
+
+<table>
+    <tr>
+        <td>
+            <b>NuGet package</b>
+        </td>
+        <td>
+            <b>Components friendly name</b>
+        </td>
+        <td>
+            <b>Components name</b>
+        </td>
+        <td>
+            <b>Dependencies</b>
+        </td>
+    </tr>
+    <tr>
+        <td><a href="https://www.nuget.org/packages/Syncfusion.Blazor.InteractiveChat">Syncfusion.Blazor.InteractiveChat</a></td>
+        <td><a href="https://blazor.syncfusion.com/documentation/ai-assistview/getting-started">AI AssistView</a></td>
+        <td>SfAIAssistView</td>
+        <td>
+            <ul>
+                <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Core/">Syncfusion.Blazor.Core </a></li>
+                <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Inputs/">Syncfusion.Blazor.Inputs</a></li>
+                <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/">Syncfusion.Blazor.Navigations</a></li>
+                <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Notifications/">Syncfusion.Blazor.Notifications</a></li>
+            </ul>
+        </td>
+    </tr>
 </table>
 
 ## Syncfusion.Blazor.BarcodeGenerator
@@ -1090,6 +1170,38 @@ SfMaps
 </tr>
 </table>
 
+## Syncfusion.Blazor.MultiColumnComboBox
+
+<table>
+<tr>
+<td>
+<b>NuGet package</b>
+</td>
+<td>
+<b>Components friendly name</b>
+</td>
+<td>
+<b>Components name</b>
+</td>
+<td>
+<b>Dependencies</b>
+</td>
+</tr>
+<tr>
+<td><a href="https://www.nuget.org/packages/Syncfusion.Blazor.MultiColumnComboBox">Syncfusion.Blazor.MultiColumnComboBox</a></td>
+<td><a href="https://blazor.syncfusion.com/documentation/multicolumn-combobox/getting-started">MultiColumn ComboBox</a></td>
+<td>SfMultiColumnComboBox</td>
+<td>
+<ul>
+    <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Core/">Syncfusion.Blazor.Core</a></li>
+    <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Data/">Syncfusion.Blazor.Data</a></li>
+    <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Grid/">Syncfusion.Blazor.Grid</a></li>
+    <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Inputs/">Syncfusion.Blazor.Inputs</a></li>
+</ul>
+</td>
+</tr>
+</table>
+
 ## Syncfusion.Blazor.Navigations
 
 A package of Blazor navigation components such as Accordion, ContextMenu, Tabs, Toolbar, TreeView, and Sidebar.
@@ -1870,7 +1982,7 @@ SfStockChart
 
 ## Syncfusion.Blazor.Themes
 
-This package contains the Syncfusion Blazor UI components theme files.
+This package contains the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI components theme files.
 
 <table>
 <tr>
@@ -2038,10 +2150,10 @@ The Blazor Word Processor (Document Editor) is a component with editing capabili
 
 ## Benefits of using individual NuGet packages
 
-* These individual NuGet packages are extremely useful while rendering Syncfusion Blazor components in Blazor WebAssembly applications. These packages will reduce the initial loading time in Blazor WebAssembly applications.
+* These individual NuGet packages are extremely useful while rendering Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components in Blazor WebAssembly applications. These packages will reduce the initial loading time in Blazor WebAssembly applications.
 
-* While installing `Syncfusion.Blazor` NuGet package in a Blazor WebAssembly application, it will load the complete Syncfusion Blazor library in the web browser which takes more initial loading time. Whereas, the individual NuGet package installation will resolve this and load the required components assembly alone in the web browser.
+* While installing `Syncfusion.Blazor` NuGet package in a Blazor WebAssembly application, it will load the complete Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor library in the web browser which takes more initial loading time. Whereas, the individual NuGet package installation will resolve this and load the required components assembly alone in the web browser.
 
-* The [Lazy load assemblies in Blazor WebAssembly](https://learn.microsoft.com/en-us/aspnet/core/blazor/webassembly-lazy-load-assemblies?view=aspnetcore-7.0) functionality can be utilized with the Syncfusion Blazor individual NuGet packages.
+* The [Lazy load assemblies in Blazor WebAssembly](https://learn.microsoft.com/en-us/aspnet/core/blazor/webassembly-lazy-load-assemblies?view=aspnetcore-7.0) functionality can be utilized with the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor individual NuGet packages.
 
 * These individual NuGet packages can be used in the Blazor Server application to reduce the application deployment size in production.

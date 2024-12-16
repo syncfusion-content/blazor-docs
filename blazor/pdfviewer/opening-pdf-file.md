@@ -1,13 +1,13 @@
 ---
 title: "Opening PDF file in Blazor PDF Viewer Component | Syncfusion"
 component: "PDF Viewer"
-description: "This page helps you to learn about how to load PDF files from various locations in Syncfusion's Blazor PDF Viewer."
+description: "This page helps you to learn about how to load PDF files from various locations in Syncfusion Blazor PDF Viewer."
 platform: Blazor
 control: PDF Viewer
 documentation: ug
 ---
 
-N> Syncfusion recommends using [Blazor PDF Viewer (NextGen)](https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/server-side-application) Component which provides fast rendering of pages and improved performance. Also, there is no need of external Web service for processing the files and ease out the deployment complexity. It can be used in Blazor Server, WASM and MAUI applications without any changes.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> recommends using [Blazor PDF Viewer (NextGen)](https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/server-side-application) Component which provides fast rendering of pages and improved performance. Also, there is no need of external Web service for processing the files and ease out the deployment complexity. It can be used in Blazor Server, WASM and MAUI applications without any changes.
 
 # Open PDF files in PDF Viewer for Blazor from various storage location
 
@@ -33,7 +33,7 @@ If you have your PDF files in the web, you can open it in the viewer using URL.
     }
 }
 ```
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Load%20PDF%20file%20from%20URL)
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-classic-examples/tree/master/Load%20and%20Save/Load%20PDF%20file%20from%20URL)
 
 ## Opening a PDF from Cloud
 
@@ -58,7 +58,7 @@ The following code example shows how to open and load the PDF file stored in Azu
         BlobServiceClient blobServiceClient = new BlobServiceClient(connectionString);
         //Container Name
         string containerName = "pdf-file";
-        //File Name to be loaded into Syncfusion PDF Viewer
+        //File Name to be loaded into Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer
         string fileName = "Python_Succinctly.pdf";
         BlobContainerClient blobContainerClient = blobServiceClient.GetBlobContainerClient(containerName);
         BlockBlobClient blockBlobClient = blobContainerClient.GetBlockBlobClient(fileName);
@@ -85,7 +85,7 @@ N> The **Azure.Storage.Blobs** NuGet package must be installed in your applicati
         //Connection String of Storage Account
         string connectionString = "Here Place Your Connection string";
         string shareName = "pdfdocument";
-        //File Name to be loaded into Syncfusion PDF Viewer
+        //File Name to be loaded into Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer
         string filePath = "Hive_Succinctly.pdf";
         ShareFileClient shareFileClient = new ShareFileClient(connectionString, shareName, filePath);
         Stream stream = shareFileClient.OpenRead();
@@ -135,7 +135,7 @@ N> The **System.Data.SqlClient** package must be installed in your application t
 
 ## Opening a PDF from file system
 
-There is an UI option in built-in toolbar to open the PDF file from local file system. If you want to achieve the same functionality while designing your own toolbar, you can use the following code example to load and open the PDF file. In this sample, the Syncfusion’s Uploader control is used for Blazor.
+There is an UI option in built-in toolbar to open the PDF file from local file system. If you want to achieve the same functionality while designing your own toolbar, you can use the following code example to load and open the PDF file. In this sample, the Syncfusion&reg; Uploader control is used for Blazor.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -171,7 +171,7 @@ The following code snippet explains how the PDF file can be loaded in PDF Viewer
     public string DocumentPath { get; set; } = "data:application/pdf;base64," + base64String;
 }
 ```
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Load%20a%20PDF%20file%20from%20base%2064%20string)
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-classic-examples/tree/master/Load%20and%20Save/Load%20a%20PDF%20file%20from%20base%2064%20string)
 
 ## Opening a PDF from stream
 
@@ -198,6 +198,6 @@ You can load a PDF file from stream in PDF Viewer by converting the stream into 
 }
 ```
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Load%20a%20PDF%20file%20from%20memory%20stream)
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-classic-examples/tree/master/Load%20and%20Save/Load%20a%20PDF%20file%20from%20memory%20stream)
 
 N> You can refer to the [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap5) to understand how to explain core features of PDF Viewer.

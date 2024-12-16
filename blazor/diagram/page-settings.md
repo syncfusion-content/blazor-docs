@@ -15,7 +15,7 @@ By default, Diagram’s page size is decided based on the position of its diagra
 
 * The [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageSettings.html#Syncfusion_Blazor_Diagram_PageSettings_Orientation) property of `PageSettings` is used to change the page orientation to portrait or landscape. The default orientation is landscape.
 
-* Page breaks are used as a visual guide to show how the pages are split into multiple pages. The [ShowPageBreaks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageSettings.html#Syncfusion_Blazor_Diagram_PageSettings_ShowPageBreaks) property decides the Visibility of Page breaks. By default, it is false. If it is true, then the page break lines will be visible.
+* Page breaks are used as a visual guide to show how the pages are split into multiple pages. The [ShowPageBreaks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageSettings.html#Syncfusion_Blazor_Diagram_PageSettings_ShowPageBreaks) property decides the visibility of page breaks. By default, it is false. If it is true, then the page break lines will be visible.
 
 * To explore those properties, refer to [PageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageSettings.html).
 
@@ -78,9 +78,10 @@ Based on the diagramming element position, the size of the page dynamically incr
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="nodes">
+    <SnapSettings Constraints="SnapConstraints.None"></SnapSettings>
     @*Initialize the page settings with multiple page, page orientation and break lines*@
-    <PageSettings Height="300"
-                  Width="300"
+    <PageSettings Height="200"
+                  Width="200"
                   MultiplePage="true"
                   Orientation="@orientation"
                   ShowPageBreaks="true">
@@ -99,8 +100,8 @@ Based on the diagramming element position, the size of the page dynamically incr
             ID = "node6",
             Width = 50,
             Height = 50,
-            OffsetX = 150,
-            OffsetY = 100,
+            OffsetX = 200,
+            OffsetY = 200,
             Style = new ShapeStyle()
             {
                 Fill = "#6495ED",
@@ -129,9 +130,10 @@ The appearance of the pages can be customized using the following properties of 
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="nodes">
+    <SnapSettings Constraints="SnapConstraints.None"></SnapSettings>
     @*Initialize the page settings with page orientation and break lines*@
-    <PageSettings Height="300"
-                  Width="300"
+    <PageSettings Height="200"
+                  Width="200"
                   Orientation="@orientation"
                   MultiplePage="true"
                   ShowPageBreaks="true">
@@ -151,8 +153,8 @@ The appearance of the pages can be customized using the following properties of 
             ID = "node6",
             Width = 50,
             Height = 50,
-            OffsetX = 150,
-            OffsetY = 100,
+            OffsetX = 200,
+            OffsetY = 200,
             Style = new ShapeStyle()
             {
                 Fill = "#6495ED",
@@ -292,7 +294,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Responsive with parent container
 
-By setting the value in percentage, diagram gets its dimention with respect to its parent container.Specify the Width and Height as 100% to make the diagram element fill its parent container.
+By setting the value in percentage, the diagram gets its dimention with respect to its parent container.Specify the Width and Height as 100% to make the diagram element fill its parent container.
 Setting the Height to 100% requires the diagram parent element to have explicit height or you can use calc function to set explicit height based on the browser layout.
 
 The following code example illustrates how to set width and height in percentage

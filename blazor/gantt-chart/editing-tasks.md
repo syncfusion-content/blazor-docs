@@ -64,7 +64,6 @@ The following code example shows you how to enable the cell editing in Gantt Cha
         return Tasks;
     }
 }
-}
 ```
 
 N> When the edit mode is set to `Auto`, double-clicking on the Tree Grid side changes the cells to editable mode. Double-clicking on the chart side opens the edit dialog for editing the task details.

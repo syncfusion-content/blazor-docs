@@ -9,7 +9,7 @@ documentation: ug
 
 # Update the viewer size at run-time in Blazor SfPdfViewer Component
 
-You can stretch the SfPdfViewer size to its container size while resizing the container at runtime. The following code snippet explains how to update the SfPdfViewer size while resizing the Splitter at runtime. In this example, the Syncfusion’s Splitter component is used.
+You can stretch the SfPdfViewer size to its container size while resizing the container at runtime. The following code snippet explains how to update the SfPdfViewer size while resizing the Splitter at runtime. In this example, the Syncfusion&reg; Splitter component is used.
 
 ```cshtml
 
@@ -59,4 +59,4 @@ You can stretch the SfPdfViewer size to its container size while resizing the co
 
 ```
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Resize%20the%20PDF%20Viewer%20to%20its%20parent%20element%20-%20SfPdfViewer).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Resize%20the%20PDF%20Viewer%20to%20its%20parent%20element).

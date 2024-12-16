@@ -11,7 +11,7 @@ documentation: ug
 
 # Print in Blazor DataGrid Component
 
-The printing feature in Syncfusion Grid allows you to easily generate and print a representation of the grid’s content for better offline accessibility and documentation. You can enable this feature using either the grid’s Toolbar or the programmatically available [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PrintAsync) method.
+The printing feature in Syncfusion<sup style="font-size:70%">&reg;</sup> Grid allows you to easily generate and print a representation of the grid’s content for better offline accessibility and documentation. You can enable this feature using either the grid’s Toolbar or the programmatically available [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PrintAsync) method.
 
 To add the printing option to the grid’s Toolbar, simply include the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property in your grid configuration and add the **Print** as Toolbar item. This will allow you to directly initiate the printing process while click on the Print item from the toolbar
 
@@ -178,7 +178,7 @@ You can print the grid’s content using an external button by utilizing the [Pr
 
 ## Print visible Page
 
-By default, the Syncfusion Blazor Grid prints all the pages of the grid. The [PrintMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) property within the grid grants you control over the printing process. However, if you want to print only the current visible page, you can achieve this by setting the `PrintMode` property to **CurrentPage**.
+By default, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid prints all the pages of the grid. The [PrintMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) property within the grid grants you control over the printing process. However, if you want to print only the current visible page, you can achieve this by setting the `PrintMode` property to **CurrentPage**.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -438,4 +438,4 @@ Printing a large volume of data all at once in the grid can have certain limitat
 
 If printing all the data remains a requirement, an alternative approach is recommended. Exporting the grid data to formats like [Excel](https://blazor.syncfusion.com/documentation/datagrid/excel-exporting) or [CSV](https://blazor.syncfusion.com/documentation/datagrid/excel-exporting) or [Pdf](https://blazor.syncfusion.com/documentation/datagrid/pdf-export) is advised. This exported data can then be printed using non-web-based applications, mitigating the potential performance challenges associated with printing large datasets directly from the browser.
 
-> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
+> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand how to present and manipulate data.
