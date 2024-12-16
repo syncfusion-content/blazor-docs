@@ -7,9 +7,9 @@ component: Common
 documentation: ug
 ---
 
-# Syncfusion Blazor Components showcase samples
+# Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components showcase samples
 
-Syncfusion has a collection of sample applications that demonstrate the use of Syncfusion Blazor UI components.
+Syncfusion<sup style="font-size:70%">&reg;</sup> has a collection of sample applications that demonstrate the use of Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI components.
 
 | Sample Application | Description | Platform | GitHub |
 | ------------- | ------------- | ------------- | ------------- |

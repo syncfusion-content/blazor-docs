@@ -7,9 +7,9 @@ component: Common
 documentation: ug
 ---
 
-# Syncfusion Release History
+# Syncfusion<sup style="font-size:70%">&reg;</sup> Release History
 
-Every new release of Syncfusion includes exciting new features. Refer to the Syncfusion Blazor [release notes](https://blazor.syncfusion.com/documentation/release-notes/19.4.47?type=all) to know more about the changes in each releases.
+Every new release of Syncfusion<sup style="font-size:70%">&reg;</sup> includes exciting new features. Refer to the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor [release notes](https://blazor.syncfusion.com/documentation/release-notes/19.4.47?type=all) to know more about the changes in each releases.
 
 See our [Upgrade Guide](https://help.syncfusion.com/upgrade-guide/blazor-components) for Blazor to learn more about the following.
 
@@ -28,4 +28,4 @@ See our [Upgrade Guide](https://help.syncfusion.com/upgrade-guide/blazor-compone
 
 ## See also
 
-* [Version Compatibility and Syncfusion Version Information](https://blazor.syncfusion.com/documentation/common/how-to/version-compatibility)
+* [Version Compatibility and Syncfusion<sup style="font-size:70%">&reg;</sup> Version Information](https://blazor.syncfusion.com/documentation/common/how-to/version-compatibility)

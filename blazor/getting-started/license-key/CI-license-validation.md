@@ -17,11 +17,11 @@ margin-top: 1.5em;     margin-bottom: 1.5em;
 </style>
 
 
-# Syncfusion license key validation in CI services
+# Syncfusion<sup style="font-size:70%">&reg;</sup> license key validation in CI services
 
-Syncfusion license key validation in CI services ensures that Syncfusion Essential Studio components are properly licensed during CI processes. Validating the license key at the CI level can prevent licensing errors during deployment. Set up the continuous integration process to fail in case the license key validation fails. Validate the passed parameters and the registered license key again to resolve the issue.
+Syncfusion<sup style="font-size:70%">&reg;</sup> license key validation in CI services ensures that Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> components are properly licensed during CI processes. Validating the license key at the CI level can prevent licensing errors during deployment. Set up the continuous integration process to fail in case the license key validation fails. Validate the passed parameters and the registered license key again to resolve the issue.
 
-The following section shows how to validate the Syncfusion license key in CI services.
+The following section shows how to validate the Syncfusion<sup style="font-size:70%">&reg;</sup> license key in CI services.
 
 * Download and extract the LicenseKeyValidator.zip utility from the following link: [LicenseKeyValidator](https://s3.amazonaws.com/files2.syncfusion.com/Installs/LicenseKeyValidation/LicenseKeyValidator.zip).
 
@@ -83,7 +83,7 @@ steps:
 
 * To execute the script in PowerShell as part of a GitHub Actions workflow, include a step in the configuration file and update the path of the LicenseKeyValidation.ps1 script file (e.g., D:\LicenseKeyValidator\LicenseKeyValidation.ps1).
 
-The following example shows the syntax for validating the Syncfusion license key in GitHub actions.
+The following example shows the syntax for validating the Syncfusion<sup style="font-size:70%">&reg;</sup> license key in GitHub actions.
 
 {% tabs %}
 {% highlight c# tabtitle="YAML" %}
@@ -101,7 +101,7 @@ The following example shows the syntax for validating the Syncfusion license key
 
 * Include a stage in Jenkins to execute the LicenseKeyValidation.ps1 script in PowerShell. 
 
-The following example shows the syntax for validating the Syncfusion license key in the Jenkins pipeline.
+The following example shows the syntax for validating the Syncfusion<sup style="font-size:70%">&reg;</sup> license key in the Jenkins pipeline.
 
 {% tabs %}
 {% highlight json %}
@@ -143,7 +143,7 @@ bool isValid = SyncfusionLicenseProvider.ValidateLicense(Platform.Blazor);
 
 * If the ValidateLicense() method returns true, registered license key is valid and can proceed with deployment.
 
-* If the ValidateLicense() method returns false, there will be invalid license errors in deployment due to either an invalid license key or an incorrect assembly or package version that is referenced in the project. Please ensure that all the referenced Syncfusion assemblies or NuGet packages are all on the same version as the license key’s version before deployment. 
+* If the ValidateLicense() method returns false, there will be invalid license errors in deployment due to either an invalid license key or an incorrect assembly or package version that is referenced in the project. Please ensure that all the referenced Syncfusion<sup style="font-size:70%">&reg;</sup> assemblies or NuGet packages are all on the same version as the license key’s version before deployment. 
 
 ## Validate the License Key By Using the Unit Test Project 
 
