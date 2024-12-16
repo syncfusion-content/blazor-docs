@@ -7,55 +7,85 @@ control: DataGrid
 documentation: ug
 ---
 
-# Inline Editing in Blazor DataGrid Component
+# Inline editing in Blazor DataGrid component
 
-In Normal edit mode, when you start editing the currently selected record is changed to edit state. You can change the cell values and save edited data to the data source. To enable the Normal edit, set the [EditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) as **Normal**.
+The Blazor DataGrid component provides a powerful in-line editing feature that allows you to edit cell values of row directly within the grid. This feature is especially useful when you want to quickly modify data without the need for a separate edit form. In normal edit mode, the selected record is changed to an edit state, and you can modify the cell values and save the edited data to the data source.
 
-```cshtml
+To enable in-line editing in the grid component, you need to set the [EditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property of the Grid's configuration to **Normal**. This property determines the editing mode of the Grid.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" Height="315">
+<SfGrid DataSource="@OrderData" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })" Height="315">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal"></GridEditSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true})" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required=true})" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" EditType="EditType.DropDownEdit" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true})" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required=true, MinLength=5})" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" ValidationRules="@(new ValidationRules{ Required=true, Min=1, Max=1000})" Format="C2" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipCountry) HeaderText="Ship Country" EditType="EditType.DropDownEdit" Width="150"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code{
-    public List<Order> Orders { get; set; }
-
+@code {
+    public List<OrderDetails> OrderData { get; set; }
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-            ShipCountry = (new string[] { "USA", "UK", "CHINA", "RUSSIA", "INDIA" })[new Random().Next(5)]
-        }).ToList();
-    }
-
-    public class Order
-    {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
-        public string ShipCountry { get; set; }
+        OrderData = OrderDetails.GetAllRecords();
     }
 }
-```
+{% endhighlight %}
+{% highlight c# tabtitle="EmployeeDetails.cs" %}
+public class OrderDetails
+{
+    public static List<OrderDetails> Order = new List<OrderDetails>();
+    public OrderDetails(int OrderID, string CustomerId, double Freight, string ShipCountry)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerId;
+        this.Freight = Freight;
+        this.ShipCountry = ShipCountry;    
+    }
+    public static List<OrderDetails> GetAllRecords()
+    {
+        if (Order.Count == 0)
+        {
+            Order.Add(new OrderDetails(10248, "VINET", 32.38, "France"));
+            Order.Add(new OrderDetails(10249, "TOMSP", 11.61, "Germany"));
+            Order.Add(new OrderDetails(10250, "HANAR", 65.83, "Brazil"));
+            Order.Add(new OrderDetails(10251, "VICTE", 41.34, "France"));
+            Order.Add(new OrderDetails(10252, "SUPRD", 51.3, "Belgium"));
+            Order.Add(new OrderDetails(10253, "HANAR", 58.17, "Brazil"));
+            Order.Add(new OrderDetails(10254, "CHOPS", 22.98, "Switzerland"));
+            Order.Add(new OrderDetails(10255, "RICSU", 148.33, "Switzerland"));
+            Order.Add(new OrderDetails(10256, "WELLI", 13.97, "Brazil"));
+            Order.Add(new OrderDetails(10257, "HILAA", 81.91, "Venezuela"));
+            Order.Add(new OrderDetails(10258, "ERNSH", 140.51, "Austria"));
+            Order.Add(new OrderDetails(10259, "CENTC", 3.25, "Mexico"));
+            Order.Add(new OrderDetails(10260, "OTTIK", 55.09, "Germany"));
+            Order.Add(new OrderDetails(10261, "QUEDE", 3.05, "Brazil"));
+            Order.Add(new OrderDetails(10262, "RATTC", 48.29, "USA"));
+        }
+        return Order;
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCountry { get; set; }
+}
+{% endhighlight %}
+{% endtabs %}
 
-The following screenshot represents Editing in Normal Mode.
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhTWVWxfiLoTefJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor DataGrid with Normal Editing](./images/blazor-datagrid-normal-editing.png)
+> Normal edit mode is default mode of editing.
+> When enabling editing, it is necessary to set the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property value to **true** for the unique column.
 
-N> Normal edit mode is the default mode of editing.
+## Automatically update a specific column based on another column edited value
+
+You can automatically update the value of a column based on the edited value of another column using Cell Edit Template feature. This feature is useful when you want to dynamically calculate and update a column's value in real-time based on the changes made in another related column. To enable this functionality, define the [EditType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditType) of the column to specify the type of editor used for editing the column, and provide an object for the [edit](https://ej2.syncfusion.com/angular/documentation/api/grid/columnModel/#edit) property to customize the editing behavior. 
+
+In the following example, the **TotalCost** column value is updated based on changes to the **UnitPrice** and **UnitInStock** columns during batch editing.
 
 ## Provide new item or edited item using events
 
