@@ -13,7 +13,9 @@ The Blazor Maps component supports localization, allowing it to display content 
 
 You can add culture-specific resource files using **.resx** files in your application. Please refer to the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic for details on localizing Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components, and then include the Maps component.
 
-The table below shows the locale keywords and their corresponding text that can be displayed in the Blazor Maps component. These keywords represent various UI elements, such as tooltips for zoom toolbar including zoom, zoom in/out, pan and reset actions. By defining these locale keys, developers can customize the text displayed to users in different languages. For example:
+The table below shows the locale keywords and their corresponding text that can be displayed in the Blazor Maps component. These keywords represent various UI elements, such as tooltips for zoom toolbar including zoom, zoom in/out, pan and reset actions. By defining these locale keys, developers can customize the text displayed to users in different languages. 
+
+**For example:**
 
 <table>
 <tr>
