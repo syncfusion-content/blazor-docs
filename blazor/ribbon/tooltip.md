@@ -9,19 +9,19 @@ documentation: ug
 
 # Tooltip in Blazor Ribbon component
 
-The Ribbon component supports tooltip to show additional information in the Ribbon items. The tooltip appears when the user hovers over a Ribbon item. The tooltip can be configured using the `TooltipSettings` property within the `<RibbonItem>` directive.
+The Ribbon component supports tooltip to show additional information in the Ribbon items. The tooltip appears when the user hovers over a Ribbon item. The tooltip can be configured using the [TooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html#Syncfusion_Blazor_Ribbon_RibbonItem_TooltipSettings) property within the [RibbonItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html) directive.
 
 ## Adding Title
 
-You can use the `Title` property to set the tooltip title for each Ribbon item.
+You can use the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonTooltipSettings.html#Syncfusion_Blazor_Ribbon_RibbonTooltipSettings_Title) property to set the tooltip title for each Ribbon item.
 
 ## Adding Content
 
-You can use the `Content` property to set the tooltip content for each Ribbon item.
+You can use the [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonTooltipSettings.html#Syncfusion_Blazor_Ribbon_RibbonTooltipSettings_Content) property to set the tooltip content for each Ribbon item.
 
 ## Adding Icon
 
-You can use the `IconCss` property to specify the icons to be displayed in the tooltip.
+You can use the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonTooltipSettings.html#Syncfusion_Blazor_Ribbon_RibbonTooltipSettings_IconCss) property to specify the icons to be displayed in the tooltip.
 
 Below example demonstrates on how to configure `Title`, `Content` and `IconCss` in the `TooltipSettings` property.
 
@@ -96,7 +96,7 @@ Below example demonstrates on how to configure `Title`, `Content` and `IconCss` 
 
 ## Customization
 
-You can use the `CssClass` property to customize the appearance of the tooltip with your own custom styles.
+You can use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonTooltipSettings.html#Syncfusion_Blazor_Ribbon_RibbonTooltipSettings_CssClass) property to customize the appearance of the tooltip with your own custom styles.
 
 {% tabs %}
 {% highlight razor %}
