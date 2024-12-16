@@ -1,23 +1,23 @@
 ---
 layout: post
-title: Legends for Blazor Sankey Component | Syncfusion
-description: Learn how to configure and customize legends in the Blazor Sankey component to enhance data interpretation and user interaction.
+title: Legends for Blazor Sankey Diagram | Syncfusion
+description: Learn how to configure and customize legends in the Blazor Sankey Diagram to enhance data interpretation and user interaction.
 platform: Blazor
 control: Sankey
 documentation: ug
 ---
 
-# Legends in Blazor Sankey Component
+# Legends in Blazor Sankey Diagram
 
 ## Overview
 
-Legends in a Sankey diagram provide a visual key to interpret the different nodes or links in the diagram. This topic covers how to configure and customize legends in the Blazor Sankey component.
+Legends in a Sankey diagram provide a visual key to interpret the different nodes or links in the diagram. This topic covers how to configure and customize legends in the Blazor Sankey diagram.
 
 ## Basic Legend Configuration
 
-Legends in a Sankey diagram provide a visual representation of the categories or elements involved in your data flow, making it easier for users to interpret and analyze the diagram. They help identify nodes, links, or other key elements by associating them with descriptive labels or colors. The `SankeyLegendSettings` in the Sankey component allows you to customize the legend's visibility, position, size, and other settings. By enabling and configuring the legend, you can offer users a clear and interactive way to understand the connections and relationships in the data.
+Legends in a Sankey diagram provide a visual representation of the categories or elements involved in your data flow, making it easier for users to interpret and analyze the diagram. They help identify nodes, links, or other key elements by associating them with descriptive labels or colors. The `SankeyLegendSettings` in the Sankey diagram allows you to customize the legend's visibility, position, size, and other settings. By enabling and configuring the legend, you can offer users a clear and interactive way to understand the connections and relationships in the data.
 
-Below is an example of how to configure legends for a Sankey diagram. The sample demonstrates how to add and position the legend, adjust its height, and bind data to the Sankey component. This configuration can be used to create a well-organized and visually intuitive data visualization.
+Below is an example of how to configure legends for a Sankey diagram. The sample demonstrates how to add and position the legend, adjust its height, and bind data to the Sankey diagram. This configuration can be used to create a well-organized and visually intuitive data visualization.
 
 {% tabs %}
 {% highlight razor %}
@@ -212,7 +212,7 @@ Appearance customization extends beyond basic properties, allowing for detailed 
 
 ### Legend Text and Title Styles
 
-The Sankey component provides advanced customization options for legend text and title styles through the `SankeyLegendTextStyle` and `SankeyLegendTitleStyle` APIs, enabling developers to configure properties such as font size, family, weight, color, and style. These APIs offer flexibility to align the legend's typography with the overall design aesthetic of the visualization, ensuring the legends complement the data representation and enhance the user experience. This level of control allows for seamless integration of legends into a wide range of visualization styles, from simple and clean to highly customized designs, as demonstrated in the following code snippet:
+The Sankey diagram provides advanced customization options for legend text and title styles through the `SankeyLegendTextStyle` and `SankeyLegendTitleStyle` APIs, enabling developers to configure properties such as font size, family, weight, color, and style. These APIs offer flexibility to align the legend's typography with the overall design aesthetic of the visualization, ensuring the legends complement the data representation and enhance the user experience. This level of control allows for seamless integration of legends into a wide range of visualization styles, from simple and clean to highly customized designs, as demonstrated in the following code snippet:
 
 {% tabs %}
 {% highlight razor %}
@@ -249,7 +249,7 @@ The Sankey component provides advanced customization options for legend text and
 
 When `EnableHighlight` is set to true, hovering over a legend item will highlight the corresponding elements in the Sankey diagram. This feature helps users quickly identify specific data flows or node categories.
 
-By effectively configuring and customizing legends in the Blazor Sankey component, you can create more informative and user-friendly diagrams. Legends play a crucial role in helping users interpret complex Sankey diagrams, especially when dealing with multiple categories or data flows.
+By effectively configuring and customizing legends in the Blazor Sankey diagram, you can create more informative and user-friendly diagrams. Legends play a crucial role in helping users interpret complex Sankey diagrams, especially when dealing with multiple categories or data flows.
 
 ## See also
 

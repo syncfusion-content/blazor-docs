@@ -1,27 +1,27 @@
 ---
 layout: post
-title: Nodes for Blazor Sankey Component | Syncfusion
-description: Explore how to define and configure nodes in the Blazor Sankey component to create meaningful and visually appealing flow diagrams.
+title: Nodes for Blazor Sankey Diagram | Syncfusion
+description: Explore how to define and configure nodes in the Blazor Sankey Diagram to create meaningful and visually appealing flow diagrams.
 platform: Blazor
 control: Sankey
 documentation: ug
 ---
 
-# Nodes in Blazor Sankey Component
+# Nodes in Blazor Sankey Diagram
 
 ## Overview
 
-Nodes are fundamental elements in a Sankey diagram, representing entities or stages in a process flow. This topic covers how to define, customize, and work with nodes in the Blazor Sankey component.
+Nodes are fundamental elements in a Sankey Diagram, representing entities or stages in a process flow. This topic covers how to define, customize, and work with nodes in the Blazor Sankey Diagram.
 
 ## Basic Node Configuration
 
-To add nodes to your Sankey diagram, you need to define a collection of `SankeyDataNode` objects. Each node requires a unique ID and can have additional properties for customization.
+To add nodes to your Sankey Diagram, you need to define a collection of `SankeyDataNode` objects. Each node requires a unique ID and can have additional properties for customization.
 
 - Each node must have a unique `Id` property.
 - The `Label` property is of type `SankeyDataLabel` and defines the text displayed for the node.
 - Nodes are automatically positioned based on their connections defined in the `Links` collection.
 
-Here's an example of how to configure nodes in the Sankey component:
+Here's an example of how to configure nodes in the Sankey Diagram:
 
 {% tabs %}
 {% highlight razor %}
@@ -108,7 +108,7 @@ In this example, we define multiple nodes representing different categories such
 
 ## Customizing Node Appearance
 
-The nodes in a Sankey diagram represent the primary entities or data points, and their appearance can be tailored to enhance the clarity and style of your visualization. Using the `SankeyNodeSettings` in the Syncfusion Blazor Sankey component, you can configure properties like width, alignment, padding, and more to make the diagram visually distinct and avoid overlap between elements.
+The nodes in a Sankey Diagram represent the primary entities or data points, and their appearance can be tailored to enhance the clarity and style of your visualization. Using the `SankeyNodeSettings` in the Syncfusion Blazor Sankey Diagram, you can configure properties like width, alignment, padding, and more to make the diagram visually distinct and avoid overlap between elements.
 
 - **`Width`**: Specifies the width of the nodes. The default value is `20`, but it can be increased or decreased to adjust the visual prominence of nodes in the diagram.
 - **`Alignment`**: Determines the alignment of nodes. Options include:
@@ -141,7 +141,7 @@ Below is an example demonstrating the customization of node appearance:
 - Consider the relationships between nodes when defining links to accurately represent data flow.
 - Utilize the `SankeyLinkSettings` and `SankeyLabelSettings` to further customize the appearance of links and labels in the diagram.
 
-By mastering node configuration in the Blazor Sankey component, you can create rich, informative flow diagrams that effectively communicate complex processes or relationships in your data. The example provided demonstrates how to create a comprehensive visualization of device usage patterns across different demographic groups.
+By mastering node configuration in the Blazor Sankey Diagram, you can create rich, informative flow diagrams that effectively communicate complex processes or relationships in your data. The example provided demonstrates how to create a comprehensive visualization of device usage patterns across different demographic groups.
 
 ## See also
 

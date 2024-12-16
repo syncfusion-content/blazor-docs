@@ -7,15 +7,15 @@ control: Sankey
 documentation: ug
 ---
 
-# Events in Blazor Sankey Component
+# Events in Blazor Sankey Diagram
 
 ## Overview
 
-The Syncfusion Blazor Sankey Chart component supports a comprehensive set of events, allowing developers to craft responsive and interactive features. These events are designed to handle user interactions and essential chart lifecycle phases, thereby enhancing the functionality and user experience of your Blazor applications.
+The Syncfusion Blazor Sankey Diagram component supports a comprehensive set of events, allowing developers to craft responsive and interactive features. These events are designed to handle user interactions and essential diagram lifecycle phases, thereby enhancing the functionality and user experience of your Blazor applications.
 
 ## Events
 
-The Sankey Chart component includes the following events:
+The Sankey Diagram component includes the following events:
 
 1. **NodeRendering**: This event is fired before nodes are drawn on the diagram, allowing for dynamic customization of node appearance based on data or application state. Use this to apply unique visual adjustments and enhance node representation.
 
@@ -27,7 +27,7 @@ The Sankey Chart component includes the following events:
 
 5. **LegendItemHover**: Occurs when a user hovers over a legend item, enabling responsive actions such as triggering UI updates or displaying contextual data. Use this to create interactive and informative legend behaviors.
 
-6. **SizeChanged**: Fired when the dimensions of the Sankey chart change, this event allows for dynamic layout adjustments. Ensure that connected components and visual elements remain coherent and visually appealing.
+6. **SizeChanged**: Fired when the dimensions of the Sankey Diagram change, this event allows for dynamic layout adjustments. Ensure that connected components and visual elements remain coherent and visually appealing.
 
 7. **TooltipRendering**: Triggered before tooltips for nodes and links are rendered, this event lets you customize tooltip content and style. Leverage it to provide clear, context-specific information that enhances user understanding.
 
@@ -35,7 +35,7 @@ The Sankey Chart component includes the following events:
 
 9. **ExportCompleted**: Occurs after an export operation finishes, similar to print completion events. Use this event to trigger follow-up tasks like notifications, data processing, or analytics logging.
 
-10. **Created**: Fired after the Sankey chart is fully initialized and rendered, this event is useful for initializing related components or logging the creation process for monitoring and debugging purposes.
+10. **Created**: Fired after the Sankey Diagram is fully initialized and rendered, this event is useful for initializing related components or logging the creation process for monitoring and debugging purposes.
 
 11. **NodeClick**: This event occurs when a user clicks on a node, enabling actions such as updating UI elements, starting data transactions, or recording analytics. Use it to respond effectively to user interactions with nodes.
 
@@ -164,7 +164,7 @@ For more complex interactions, multiple events can be combined effectively. Here
 </div>
 
 @code {
-    private string _eventInfo = "Interact with the chart to see event information here.";
+    private string _eventInfo = "Interact with the diagram to see event information here.";
 
     // Event handlers
     private void OnNodeClick(SankeyNodeEventArgs args)
@@ -187,7 +187,7 @@ For more complex interactions, multiple events can be combined effectively. Here
 
     private void OnSizeChanged(SankeySizeChangedEventArgs args)
     {
-        _eventInfo = $"Chart resized. New size: {args.CurrentSize.Width}x{args.CurrentSize.Height}";
+        _eventInfo = $"Diagram resized. New size: {args.CurrentSize.Width}x{args.CurrentSize.Height}";
         StateHasChanged();
     }
 
@@ -214,7 +214,7 @@ For more complex interactions, multiple events can be combined effectively. Here
 - Leverage multiple events to develop complex user experiences.
 - Refresh the UI using `StateHasChanged()` when altering component state within event handlers.
 - Be mindful of performance trade-offs when dealing with frequent events, such as hover or mouse movement.
-- Utilize the `Created` event for any initial setup tasks post full rendering of the Sankey chart.
+- Utilize the `Created` event for any initial setup tasks post full rendering of the Sankey Diagram.
 
 By leveraging the robust set of events provided by the Blazor Sankey component, developers can produce rich and interactive visualizations that are both responsive to user actions and enhanced in functionality within Blazor applications.
 

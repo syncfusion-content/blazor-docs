@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Tooltips for Blazor Sankey Component | Syncfusion
-description: Learn how to configure and customize tooltips in the Blazor Sankey component to enhance data visualization and user interaction.
+title: Tooltips for Blazor Sankey Diagram | Syncfusion
+description: Learn how to configure and customize tooltips in the Blazor Sankey Diagram to enhance data visualization and user interaction.
 platform: Blazor
 control: Sankey
 documentation: ug
 ---
 
-# Tooltips in Blazor Sankey Component
+# Tooltips in Blazor Sankey Diagram
 
-The **Blazor Sankey Component** is a powerful tool for visualizing energy flow, financial data, or any other system with nodes and links. The component allows you to display a flow diagram where nodes represent entities, and links represent the relationships or flows between them.
+The **Blazor Sankey Diagram** is a powerful tool for visualizing energy flow, financial data, or any other system with nodes and links. The component allows you to display a flow diagram where nodes represent entities, and links represent the relationships or flows between them.
 
-This guide provides step-by-step instructions on how to configure and customize tooltips within the **Blazor Sankey Component**.
+This guide provides step-by-step instructions on how to configure and customize tooltips within the **Blazor Sankey Diagram**.
 
 ## Basic Tooltip Configuration
 
-Tooltips can be added to your Sankey diagram using the `SankeyTooltipSettings`. Below is an example of how to configure tooltips in the Sankey component:
+Tooltips can be added to your Sankey diagram using the `SankeyTooltipSettings`. Below is an example of how to configure tooltips in the Sankey Diagram:
 
 {% tabs %}
 {% highlight razor %}
@@ -96,7 +96,7 @@ Tooltips can be added to your Sankey diagram using the `SankeyTooltipSettings`. 
 
 ## Customizing Tooltip Appearance
 
-The **Blazor Sankey Component** allows you to customize the appearance and behavior of tooltips through several properties. The tooltip settings allow for full control over how tooltips appear, including their background color, opacity, and animation effects for both nodes and links.
+The **Blazor Sankey Diagram** allows you to customize the appearance and behavior of tooltips through several properties. The tooltip settings allow for full control over how tooltips appear, including their background color, opacity, and animation effects for both nodes and links.
 
 - **`Enable`**: Controls whether tooltips are displayed. Default is `true`.
 - **`Fill`**: Sets the background color of the tooltip.
@@ -357,7 +357,7 @@ These templates allow you to completely customize the content and appearance of 
 
 Tooltips appear when users hover over nodes or links in the Sankey diagram. The `EnableAnimation` property, when set to true, allows for smooth transitions as the tooltip moves between different elements.
 
-By effectively configuring and customizing tooltips in the Blazor Sankey component, you can create more informative and interactive diagrams. Tooltips play a crucial role in helping users understand detailed information about specific nodes and links without cluttering the main diagram view.
+By effectively configuring and customizing tooltips in the Blazor Sankey Diagram, you can create more informative and interactive diagrams. Tooltips play a crucial role in helping users understand detailed information about specific nodes and links without cluttering the main diagram view.
 
 ## See also
 
