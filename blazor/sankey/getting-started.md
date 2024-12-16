@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Stared with Blazor Sankey Component | Syncfusion
-description: Checkout and learn about getting started with Blazor Sankey component in Blazor Server App using Visual Studio and more.
+title: Getting Stared with Blazor Sankey Diagram | Syncfusion
+description: Checkout and learn about getting started with Blazor Sankey diagram in Blazor Server App using Visual Studio and more.
 platform: Blazor
 control: Sankey
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 <!-- markdownlint-disable MD040 -->
 
-# Getting Started with Blazor Sankey Component in Blazor Server App
+# Getting Started with Blazor Sankey Diagram in Blazor Server App
 
-This section briefly explains about how to include [Blazor Sankey](https://www.syncfusion.com/blazor-components) component in your Blazor Server App using Visual Studio.
+This section briefly explains about how to include [Blazor Sankey](https://www.syncfusion.com/blazor-components) diagram in your Blazor Server App using Visual Studio.
 
 ## Prerequisites
 
@@ -23,7 +23,7 @@ You can create a **Blazor Server App** using Visual Studio via [Microsoft Templa
 
 ## Install Syncfusion Blazor Sankey NuGet in the App
 
-To add **Blazor Sankey** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Sankey](https://www.nuget.org/packages). Alternatively, you can utilize the following package manager command to achieve the same.
+To add **Blazor Sankey Diagram** in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Sankey](https://www.nuget.org/packages). Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -86,9 +86,9 @@ The script can be accessed from NuGet through [Static Web Assets](https://blazor
 ```
 N> Check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-## Add Blazor Sankey Component
+## Add Blazor Sankey Diagram
 
-Add the Syncfusion Blazor Sankey component in the **~/Pages/Index.razor** file.
+Add the Syncfusion Blazor Sankey Diagram in the **~/Pages/Index.razor** file.
 
 {% tabs %}
 {% highlight razor %}
@@ -142,13 +142,13 @@ Add the Syncfusion Blazor Sankey component in the **~/Pages/Index.razor** file.
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Sankey component in your default web browser.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Sankey Diagram in your default web browser.
 
-![Blazor Sankey Component](images/getting-started/blazor-sankey.png)
+![Blazor Sankey Diagram](images/getting-started/blazor-sankey.png)
 
-## Populate Blazor Sankey with data
+## Populate Blazor Sankey Diagram with data
 
-To bind data for the sankey, you can assign an IEnumerable object to the [Nodes]() and [Links]() properties. These properties define the structure of the nodes and the relationships between them.
+To bind data for the sankey diagram, you can assign an IEnumerable object to the `Nodes` and `Links` properties. These properties define the structure of the nodes and the relationships between them.
 
 {% tabs %}
 {% highlight razor %}
@@ -204,7 +204,7 @@ To bind data for the sankey, you can assign an IEnumerable object to the [Nodes]
 
 ## Add title
 
-Using the [Title]() property, you can add a title to the sankey to provide the user with quick information about the data plotted in the sankey.
+Using the `Title` property, you can add a title to the sankey diagram to provide the user with quick information about the data plotted in the sankey diagram.
 
 {% tabs %}
 {% highlight razor %}
@@ -219,7 +219,7 @@ Using the [Title]() property, you can add a title to the sankey to provide the u
 
 ## Add node labels
 
-You can add data labels to improve the readability of the sankey. This can be achieved by setting the [Visible]() property to **true** in the [SankeyLabelSettings]().
+You can add data labels to improve the readability of the sankey diagram. This can be achieved by setting the `Visible` property to **true** in the `SankeyLabelSettings`.
 
 {% tabs %}
 {% highlight razor %}
@@ -235,7 +235,7 @@ You can add data labels to improve the readability of the sankey. This can be ac
 
 ## Enable tooltip
 
-The tooltip can be enabled by setting the [Enable]() property in [SankeyTooltipSettings]() to **true**. However, the tooltip is enabled by default in the sankey.
+The tooltip can be enabled by setting the `Enable` property in `SankeyTooltipSettings` to **true**. However, the tooltip is enabled by default in the sankey diagram.
 
 {% tabs %}
 {% highlight razor %}
@@ -251,7 +251,7 @@ The tooltip can be enabled by setting the [Enable]() property in [SankeyTooltipS
 
 ## Enable legend
 
-You can use legend for the sankey by setting the [Visible]() property to **true** in [SankeyLegendSettings](). However, the legend is enabled by default in the sankey.
+You can use legend for the sankey diagram by setting the `Visible` property to **true** in `SankeyLegendSettings`. However, the legend is enabled by default in the sankey diagram.
 
 {% tabs %}
 {% highlight razor %}
