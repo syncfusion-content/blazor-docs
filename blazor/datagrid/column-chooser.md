@@ -260,9 +260,8 @@ This can be demonstrated in the following sample:
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
-<SfGrid ID="Grid" DataSource="@Orders" ShowColumnChooser="true" Toolbar=@ToolbarItems>
+<SfGrid DataSource="@Orders" ShowColumnChooser="true" Toolbar=@ToolbarItems>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.DateOnly" TextAlign="TextAlign.Right" Width="130"></GridColumn>
@@ -276,14 +275,12 @@ This can be demonstrated in the following sample:
         max-height: 600px !important;
         width: 300px !important;
     }
-
     .e-grid .e-ccdlg .e-cc-contentdiv {
         height: 250px !important;
         width: 250px !important;
     }
 </style>
 @code {
-    private SfGrid<OrderData> DefaultGrid;
     public string[] ToolbarItems = new string[] { "ColumnChooser" };
     public List<OrderData> Orders { get; set; }   
     protected override void OnInitialized()
@@ -294,51 +291,48 @@ This can be demonstrated in the following sample:
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
 public class OrderData
+{
+    public static List<OrderData> Order = new List<OrderData>();
+    public OrderData(int OrderID, double Freight, DateTime OrderDate, string ShipCity, string ShipCountry)
     {
-        public static List<OrderData> Orders = new List<OrderData>();
-        public OrderData()
+        this.OrderID = OrderID;
+        this.Freight = Freight;
+        this.ShipCity = ShipCity;
+        this.OrderDate = OrderDate;
+        this.ShipCountry = ShipCountry;
+    }
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Order.Count == 0)
         {
-
+            Order.Add(new OrderData(10248, 32.38, new DateTime(1996, 7, 4), "Reims", "Australia"));
+            Order.Add(new OrderData(10249, 11.61, new DateTime(1996, 7, 5), "Münster", "Australia"));
+            Order.Add(new OrderData(10250, 65.83, new DateTime(1996, 7, 8), "Rio de Janeiro", "United States"));
+            Order.Add(new OrderData(10251, 41.34, new DateTime(1996, 7, 8), "Lyon", "Australia"));
+            Order.Add(new OrderData(10252, 51.3, new DateTime(1996, 7, 9), "Charleroi","United States"));
+            Order.Add(new OrderData(10253, 58.17, new DateTime(1996, 7, 10), "Rio de Janeiro","United States"));
+            Order.Add(new OrderData(10254, 22.98, new DateTime(1996, 7, 11), "Bern", "Switzerland"));
+            Order.Add(new OrderData(10255, 148.33, new DateTime(1996, 7, 12), "Genève", "Switzerland"));
+            Order.Add(new OrderData(10256, 13.97, new DateTime(1996, 7, 15), "Resende", "Brazil"));
+            Order.Add(new OrderData(10257, 81.91, new DateTime(1996, 7, 16), "San Cristóbal", "Venezuela"));
+            Order.Add(new OrderData(10258, 140.51, new DateTime(1996, 7, 17), "Graz", "Austria"));
+            Order.Add(new OrderData(10259, 3.25, new DateTime(1996, 7, 18), "México D.F.", "Mexico"));
+            Order.Add(new OrderData(10260, 55.09, new DateTime(1996, 7, 19), "Köln", "Germany"));
+            Order.Add(new OrderData(10261, 3.05, new DateTime(1996, 7, 19), "Rio de Janeiro", "Brazil"));
+            Order.Add(new OrderData(10262, 48.29, new DateTime(1996, 7, 22), "Albuquerque", "USA"));
         }
-        public OrderData(int? OrderID,string ShipCountry,double Freight,DateTime OrderDate,string ShipCity)
-        {
-           this.OrderID = OrderID;          
-           this.ShipCountry = ShipCountry;           
-           this.Freight = Freight;
-           this.OrderDate = OrderDate;     
-           this.ShipCity = ShipCity;
-        }
-        public static List<OrderData> GetAllRecords()
-        {
-            if (Orders.Count() == 0)
-            {
-                int code = 10;
-                for (int i = 1; i < 2; i++)
-                {
-                    Orders.Add(new OrderData(10248,  "France", 33.33,new DateTime(1996,07,07), "Reims"));
-                    Orders.Add(new OrderData(10249,  "Germany", 89.76, new DateTime(1996, 07, 12), "Münster"));
-                    Orders.Add(new OrderData(10250,  "Brazil",78.67, new DateTime(1996, 07, 13), "Rio de Janeiro"));
-                    Orders.Add(new OrderData(10251,  "Belgium", 55.65, new DateTime(1996, 07, 14), "Lyon"));
-                    Orders.Add(new OrderData(10252, "Venezuela",11.09, new DateTime(1996, 07, 15), "Charleroi"));
-                    Orders.Add(new OrderData(10253, "Venezuela",98.98, new DateTime(1996, 07, 16), "Lyon"));
-                    Orders.Add(new OrderData(10254, "Belgium", 78.75, new DateTime(1996, 07, 17), "Rio de Janeiro"));
-                    Orders.Add(new OrderData(10255, "Germany", 44.07, new DateTime(1996, 07, 18), "Münster"));
-                    Orders.Add(new OrderData(10256, "France", 67.74, new DateTime(1996, 07, 19), "Reims"));
-                    code += 5;
-                }
-            }
-            return Orders;
-        }
-        public int? OrderID { get; set; }                
-        public DateTime OrderDate { get; set; }      
-        public string ShipCountry { get; set; }
-        public double Freight { get; set; }
-        public string ShipCity { get; set; }
-    }  
+        return Order;
+    }
+    public int OrderID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCity { get; set; }
+    public DateTime OrderDate { get; set; }
+    public string ShipCountry { get; set; }
+}  
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVzirWrBWHnrDUC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXrfsrWdrlMlVALs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Change default search operator of the column chooser
 
@@ -428,6 +422,7 @@ The [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.Gri
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids;
 @using BlazorApp.Data
+
 <SfGrid ID="Grid" @ref="Grid" AllowPaging="true" DataSource="@Orders" ShowColumnChooser="true" Toolbar="@ToolbarItems">
     <GridColumnChooserSettings>
         <Template>
@@ -437,7 +432,6 @@ The [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.Gri
             }
         </Template>
          <FooterTemplate>
-
         </FooterTemplate>
     </GridColumnChooserSettings>
     <GridColumns>
@@ -452,21 +446,17 @@ The [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.Gri
         <GridColumn Field=@nameof(OrderData.HireDate) HeaderText="Hire Date" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
-
 <style>
     #Grid.e-grid .e-ccdlg .e-dlg-content {
         margin-top: 0px;
     }
-
     .e-list-item.e-level-1.e-checklist.e-focused {
         background-color: none;
     }
-
     #Grid_ccdlg .e-content {
         overflow-y: unset;
     }
 </style>
-
 @code
 {
     public SfGrid<OrderData> Grid { get; set; }
@@ -482,10 +472,6 @@ The [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.Gri
  public class OrderData
  {
      public static List<OrderData> Orders = new List<OrderData>();
-     public OrderData()
-     {
-
-     }
      public OrderData(int? OrderID, string CustomerID, double Freight, DateTime OrderDate, int? EmployeeID, string FirstName, string LastName, string Title, DateTime? HireDate)
      {
          this.OrderID = OrderID;
@@ -527,7 +513,6 @@ The [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.Gri
      public string LastName { get; set; }
      public string Title { get; set; }
      public DateTime? HireDate { get; set; }
-
  }
 {% endhighlight %}
 {% highlight razor tabtitle="CustomComponent.razor" %}
@@ -540,44 +525,35 @@ The [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.Gri
 <div class="setMargin">
     <SfTextBox Placeholder="Search" Input="@OnInput"></SfTextBox>
 </div>
-
 <SfListView @ref="ListView" Height="100%" ShowCheckBox="true" DataSource="@CloneData">
     <ListViewFieldSettings TValue="DataModel" Id="Id" Text="Text"></ListViewFieldSettings>
     <ListViewEvents Clicked="OnClicked" Created="@(()=>OnCreated(ColumnContext.Columns))" TValue="DataModel"></ListViewEvents>
 </SfListView>
-
 <style>
     .setMargin {
         margin-bottom: 10px;
     }
 </style>
-
 @code
 {
     public List<DataModel> CloneData { get; set; } = new List<DataModel>();
-
     [CascadingParameter]
     public SfGrid<OrderData> Grid { get; set; }
-
     [Parameter]
     public ColumnChooserTemplateContext ColumnContext { get; set; }
-
     public SfListView<DataModel> ListView { get; set; }
-
     async Task OnInput(InputEventArgs eventArgs)
     {
         CloneData = DataSource.FindAll(e => e.Text.ToLower().StartsWith(eventArgs.Value.ToLower()));
         await Task.Delay(100);
         await Preselect();
     }
-
     protected override async Task OnInitializedAsync()
     {
         CloneData = DataSource;
         await Task.Delay(100);
         await Preselect();
     }
-
     List<DataModel> DataSource = new List<DataModel>
     {
         new DataModel() { Text = "Order ID", Id = "OrderID" },
@@ -590,7 +566,6 @@ The [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.Gri
         new DataModel() { Text = "Title", Id = "Title"},
         new DataModel() { Text = "Freight", Id = "Freight"},
     };
-
     public async Task Preselect()
     {
         var cols = ColumnContext.Columns.FindAll(x => x.Visible == true).ToList();
@@ -607,12 +582,10 @@ The [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.Gri
             }
         }
     }
-
     public async Task OnCreated(List<GridColumn> args)
     {
         await Preselect();
     }
-
     public async Task OnClicked(ClickEventArgs<DataModel> args)
     {
         if (args.IsChecked)
@@ -683,7 +656,6 @@ The [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gri
 @code {
     public List<OrderData> GridData { get; set; }
     SfGrid<OrderData> grid { get; set; }
-
     protected override void OnInitialized()
     {
         GridData = OrderData.GetAllRecords();
@@ -693,11 +665,7 @@ The [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gri
 {% highlight c# tabtitle="OrderData.cs" %}
     public class OrderData
     {
-        public static List<OrderData> Orders = new List<OrderData>();        
-        public OrderData()
-        {
-
-        }
+        public static List<OrderData> Orders = new List<OrderData>();
         public OrderData(int? OrderID,string CustomerID,string ShipCountry,double Freight,DateTime OrderDate,DateTime ShippedDate,string ShipCity)
         {
            this.OrderID = OrderID;    
@@ -736,7 +704,6 @@ The [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gri
         public string ShipCountry { get; set; }
         public double Freight { get; set; }
         public string ShipCity { get; set; }
-
     } 
 {% endhighlight %}
 {% endtabs %}
