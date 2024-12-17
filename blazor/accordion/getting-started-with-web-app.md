@@ -42,28 +42,83 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
-Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Navigations` namespace .
+| Interactive Render Mode | Description |
+| -- | -- |
+| WebAssembly or Auto | Open **~/_Imports.razor** file from client project.|
+| Server | Open **~/_import.razor** file from inside `Components` folder.|
 
-```cshtml
+Import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Navigations` namespace .
+
+{% tabs %}
+{% highlight C# tabtitle="~/_Imports.razor" %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Navigations
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor Web App.
 
-If you select an **Interactive render mode** as `WebAssembly` or `Auto`, you need to register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in both **~/Program.cs** files of your Blazor Web App.
+| Interactive Render Mode | Description |
+| -- | -- |
+| WebAssembly or Auto | You can see two **~/Program.cs** file in your project (`Server` and `Client`). So, you need to register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in both **~/Program.cs** files. |
+| Server | You can see only one **~/Program.cs** file in your project. So, you need to register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in that **~/Program.cs** file only.|
 
-```cshtml
+If **Interactive Render Mode** as `WebAssembly` or `Auto`,
 
-....
+{% tabs %}
+{% highlight c# tabtitle="Server(~/_Program.cs)" hl_lines="3 11" %}
+
+using AccordionGSSample.Client.Pages;
+using AccordionGSSample.Components;
 using Syncfusion.Blazor;
-....
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddRazorComponents()
+    .AddInteractiveServerComponents()
+    .AddInteractiveWebAssemblyComponents();
 builder.Services.AddSyncfusionBlazor();
+
+var app = builder.Build();
 ....
 
-```
+{% endhighlight %}
+{% highlight c# tabtitle="Client(~/_Program.cs)" hl_lines="2 5" %}
+
+using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using Syncfusion.Blazor;
+
+var builder = WebAssemblyHostBuilder.CreateDefault(args);
+builder.Services.AddSyncfusionBlazor();
+
+await builder.Build().RunAsync();
+
+{% endhighlight %}
+{% endtabs %}
+
+If **Interactive Render Mode** as `Server`,
+
+{% tabs %}
+{% highlight c# tabtitle="~/_Program.cs" hl_lines="2 9" %}
+
+using AccordionGSSample.Components;
+using Syncfusion.Blazor;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddRazorComponents()
+    .AddInteractiveServerComponents();
+builder.Services.AddSyncfusionBlazor();
+
+var app = builder.Build();
+....
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Add stylesheet and script resources
 
@@ -87,14 +142,11 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Accordion component in the **~Pages/.razor** file. If an interactivity location as `Per page/component` in the web app, define a render mode at the top of the `~Pages/.razor` component, as follows:
 
-{% tabs %}
-{% highlight razor %}
-
-@* desired render mode define here *@
-@rendermode InteractiveAuto
-
-{% endhighlight %}
-{% endtabs %}
+| Interactivity location | RenderMode | Description |
+| --- | --- | --- |
+| Per page/component | Web Assembly or Auto | @rendermode InteractiveAuto |
+|  | Server | @rendermode InteractiveServer |
+|  | None | --- |
 
 {% tabs %}
 {% highlight razor %}
