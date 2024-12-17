@@ -129,7 +129,7 @@ Add the Syncfusion Blazor Chat UI component in the **~/Pages/Index.razor** file.
 
 ## Configure messages and user
 
-You can use the `Messages` property to add messages and the `User` property to configure the current user for the chat.
+You can use the [Messages](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_Messages) property to add messages and the [User](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_User) property to configure the current user for the chat.
 
 {% tabs %}
 {% highlight razor %}
