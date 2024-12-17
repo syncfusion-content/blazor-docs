@@ -352,3 +352,31 @@ You can use the [AutoScrollToBottom](https://help.syncfusion.com/cr/blazor/Syncf
 ```
 
 ![Blazor Chat UI AutoScrollToBottom](./images/auto-scroll-bottom.png)
+
+### Setting suggestions 
+
+You can use the [Suggestions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_Suggestions) property, to add the suggestions in both initial and on-demand which help users to quick-reply options above the input field.
+
+```cshtml
+
+@using Syncfusion.Blazor.InteractiveChat
+
+<div style="height: 400px; width: 400px;">
+    <SfChatUI ID="chatUser" User="CurrentUserModel" Messages="ChatUserMessages" Suggestions="Suggestions"></SfChatUI>
+</div>
+
+@code {
+    private static UserModel CurrentUserModel = new UserModel() { ID = "User1", User = "Albert" };
+    private static UserModel MichaleUserModel = new UserModel() { ID = "User2", User = "Michale Suyama" };
+    private List<string> Suggestions = new List<string>() { "Landscapes", "Portrait" };
+
+    private List<ChatMessage> ChatUserMessages = new List<ChatMessage>()
+    {
+        new ChatMessage() { Text = "Hi, thinking of painting this weekend.", Author = CurrentUserModel },
+        new ChatMessage() { Text = "That’s fun! What will you paint?", Author = MichaleUserModel }
+    };
+}
+
+```
+
+![Blazor Chat UI Suggestions](./images/suggestions.png)
