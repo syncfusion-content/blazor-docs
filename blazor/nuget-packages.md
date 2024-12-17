@@ -117,8 +117,19 @@ The AI AssistView creates an interface through which users can interact with AI-
     </tr>
     <tr>
         <td><a href="https://www.nuget.org/packages/Syncfusion.Blazor.InteractiveChat">Syncfusion.Blazor.InteractiveChat</a></td>
-        <td><a href="https://blazor.syncfusion.com/documentation/ai-assistview/getting-started">AI AssistView</a></td>
-        <td>SfAIAssistView</td>
+        <td>
+        <ul>
+        <li>
+        <a href="https://blazor.syncfusion.com/documentation/ai-assistview/getting-started">AI AssistView</a></li>
+        <li><a href="https://blazor.syncfusion.com/documentation/chat-ui/getting-started">Chat UI</a></li>
+        </ul>
+        </td>
+        <td>
+        <ul>
+        <li>SfAIAssistView</li>
+        <li>SfChatUI</li>
+        </ul>
+        </td>
         <td>
             <ul>
                 <li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Core/">Syncfusion.Blazor.Core </a></li>
@@ -1637,6 +1648,42 @@ SfQueryBuilder
 </tr>
 </table>
 
+## Syncfusion.Blazor.Ribbon
+
+<table>
+<tr>
+<td>
+<b>NuGet package</b>
+</td>
+<td>
+<b>Components friendly name</b>
+</td>
+<td>
+<b>Components name</b>
+</td>
+<td>
+<b>Dependencies</b>
+</td>
+</tr>
+<tr>
+<td><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Ribbon">Syncfusion.Blazor.Ribbon</a></td>
+<td><a href="https://blazor.syncfusion.com/documentation/ribbon/getting-started">Ribbon</a></td>
+<td>SfRibbon</td>
+<td>
+<ul>
+<li><a href="https://www.nuget.org/packages/Newtonsoft.Json/">Newtonsoft.Json</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Buttons/">Syncfusion.Blazor.Buttons</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Core/">Syncfusion.Blazor.Core</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns/">Syncfusion.Blazor.DropDowns</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Inputs/">Syncfusion.Blazor.Inputs</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/">Syncfusion.Blazor.Navigations</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Popups/">Syncfusion.Blazor.Popups</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.SplitButtons/">Syncfusion.Blazor.SplitButtons</a></li>
+</ul>
+</td>
+</tr>
+</table>
+
 ## Syncfusion.Blazor.RangeNavigator
 
 The Blazor Range Navigator is an interface for selecting a small range from a larger collection. It is commonly used in financial dashboards to filter a date range for data that needs to be visualized.
@@ -1717,6 +1764,38 @@ SfRichTextEditor
 <li><a href="#syncfusionblazornavigations">Syncfusion.Blazor.Navigations</a></li>
 <li><a href="#syncfusionblazorpopups">Syncfusion.Blazor.Popups</a></li>
 <li><a href="#syncfusionblazorsplitbuttons">Syncfusion.Blazor.SplitButtons</a></li>
+</ul>
+</td>
+</tr>
+</table>
+
+## Syncfusion.Blazor.Sankey
+
+<table>
+<tr>
+<td>
+<b>NuGet package</b>
+</td>
+<td>
+<b>Components friendly name</b>
+</td>
+<td>
+<b>Components name</b>
+</td>
+<td>
+<b>Dependencies</b>
+</td>
+</tr>
+<tr>
+<td><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Sankey">Syncfusion.Blazor.Sankey</a></td>
+<td><a href="https://blazor.syncfusion.com/documentation/sankey/getting-started">Sankey</a></td>
+<td>SfSankey</td>
+<td>
+<ul>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Core/">Syncfusion.Blazor.Core</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Data/">Syncfusion.Blazor.Data</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.DataVizCommon/">Syncfusion.Blazor.DataVizCommon</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.PdfExport.Net.Core/">Syncfusion.PdfExport.Net.Core</a></li>
 </ul>
 </td>
 </tr>
