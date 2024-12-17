@@ -11,7 +11,7 @@ documentation: ug
 
 ## Setting placeholder
 
-You can use the `Placeholder` property to set the placeholder text for the textarea. The default value is `Type your message…`.
+You can use the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_Placeholder) property to set the placeholder text for the textarea. The default value is `Type your message…`.
 
 ```cshtml
 
@@ -39,7 +39,7 @@ You can use the `Placeholder` property to set the placeholder text for the texta
 
 ## Setting width
 
-You can use the `Width` property to set the width of the Chat UI. The default value is `100%`.
+You can use the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_Width) property to set the width of the Chat UI. The default value is `100%`.
 
 ```cshtml
 
@@ -67,7 +67,7 @@ You can use the `Width` property to set the width of the Chat UI. The default va
 
 ## Setting height
 
-You can use the `Height` property to set the height of the Chat UI. The default value is `100%`.
+You can use the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_Height) property to set the height of the Chat UI. The default value is `100%`.
 
 ```cshtml
 
@@ -95,7 +95,7 @@ You can use the `Height` property to set the height of the Chat UI. The default 
 
 ## Setting CSS class
 
-You can customize the appearance of the Chat UI component by using the `CssClass` property.
+You can customize the appearance of the Chat UI component by using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_CssClass) property.
 
 ```cshtml
 
