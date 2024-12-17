@@ -106,7 +106,7 @@ You can customize the background of the Sankey Diagram using the `BackgroundColo
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Sankey Customization Background Image](images/customization/sankey-customization-background-img.webp)
+![Blazor Sankey Customization Background Image](images/customization/sankey-customization-background-img.png)
 
 ## Dimensions (Width and Height)
 
