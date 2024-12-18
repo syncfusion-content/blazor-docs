@@ -106,7 +106,7 @@ Add the Syncfusion Blazor Chat UI component in the **~Pages/.razor** file. If an
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBfMLiHUEAVqRkp?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBfMLiHUEAVqRkp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Chat UI component in your default web browser.
 
@@ -147,6 +147,6 @@ You can use the [Messages](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 {% endhighlight %}
 {% endtabs %}
  
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLfWBixUbETBpmk?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLfWBixUbETBpmk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Chat UI default prompt](./images/default-messages.png)
