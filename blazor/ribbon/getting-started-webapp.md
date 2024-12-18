@@ -187,7 +187,7 @@ You can use the [RibbonCollection](https://help.syncfusion.com/cr/blazor/Syncfus
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZrJCLsRVGKvCOVj?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZrJCLsRVGKvCOVj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Ribbon component in your default web browser.
 
