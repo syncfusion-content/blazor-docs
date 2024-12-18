@@ -13,7 +13,7 @@ You can highlight the search text in the suggested list items of the autocomplet
 
 {% highlight Razor %}
 
-{% include_relative code-snippet/filtering/highlight-property.razor %}
+{% include_relative code-snippet/filtering/high-light-property.razor %}
 
 {% endhighlight %} 
 
