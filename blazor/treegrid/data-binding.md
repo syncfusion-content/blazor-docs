@@ -555,6 +555,8 @@ The Tree Grid component provides an option to load child records on demand when 
 
 *The parent records are rendered in an **collapsed** state. 
 
+*Child records are loaded only after **expanding** the corresponding parent records.
+
 This feature is particularly useful for applications that have a large number of child records. If we want the child records to be readily accessible without additional user interaction for expanding nodes, we need to set **LoadChildOnDemand*** to **false**.
 
 The following code example describes the behavior of the `LoadChildOnDemand` feature of Tree Grid.
