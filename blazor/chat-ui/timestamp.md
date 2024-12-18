@@ -11,9 +11,9 @@ documentation: ug
 
 ## Show or hide timestamp
 
-You can use the `ShowTimestamp` property to enable or disable timestamps for all messages which displays the exact date and time when they were sent. By default, the value is `true`.
+You can use the [ShowTimestamp](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_ShowTimestamp) property to enable or disable timestamps for all messages which displays the exact date and time when they were sent. By default, the value is `true`.
 
-You can use the `Timestamp` property to indicate the date and time of each message being sent. By default it is set to the current date and time when the message is sent.
+You can use the [Timestamp](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.ChatMessage.html#Syncfusion_Blazor_InteractiveChat_ChatMessage_Timestamp) property to indicate the date and time of each message being sent. By default it is set to the current date and time when the message is sent.
 
 ```cshtml
 
@@ -41,7 +41,7 @@ You can use the `Timestamp` property to indicate the date and time of each messa
 
 ## Setting timestamp format
 
-You can use the `TimestampFormat` property to display time formats for all the messages which are displayed with the messages being sent. By default, the value is `dd/MM/yyyy hh:mm tt`.
+You can use the [TimestampFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_TimestampFormat) property to display time formats for all the messages which are displayed with the messages being sent. By default, the value is `dd/MM/yyyy hh:mm tt`.
 
 ```cshtml
 

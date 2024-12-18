@@ -21,7 +21,7 @@ You can create a **Blazor Server App** or **Blazor WebAssembly App** using Visua
 
 ## Install Syncfusion Blazor Ribbon and Themes NuGet in the App
 
-To add **Blazor Ribbon** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install `Syncfusion.Blazor.Ribbon` and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
+To add **Blazor Ribbon** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Ribbon](https://www.nuget.org/packages/Syncfusion.Blazor.Ribbon/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -111,7 +111,7 @@ Add the Syncfusion Blazor Ribbon component in the **~/Pages/Index.razor** file.
 
 ### Adding ribbon tab
 
-In Ribbon component, options are organized into tabs for easy access. You can use the `<RibbonTabs>` tag directive to group all the tabs and `<RibbonTab>` tag directive to define each ribbon tab as shown below:
+In Ribbon component, options are organized into tabs for easy access. You can use the [RibbonTabs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonTabs.html) tag directive to group all the tabs and [RibbonTab](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonTab.html) tag directive to define each ribbon tab as shown below:
 
 {% tabs %}
 {% highlight razor %}
@@ -127,7 +127,7 @@ In Ribbon component, options are organized into tabs for easy access. You can us
 
 ### Adding ribbon group
 
-To define a ribbon group under each tab, you can use the `<RibbonGroups>` tag directive like below. The `Orientation` property of ribbon group defines whether the collection of items inside the group will be rendered column-wise or row-wise.
+To define a ribbon group under each tab, you can use the [RibbonGroups](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGroups.html) tag directive like below. The [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGroup.html#Syncfusion_Blazor_Ribbon_RibbonGroup_Orientation) property of ribbon group defines whether the collection of items inside the group will be rendered column-wise or row-wise.
 
 {% tabs %}
 {% highlight razor %}
@@ -147,7 +147,7 @@ To define a ribbon group under each tab, you can use the `<RibbonGroups>` tag di
 
 ### Adding ribbon item
 
-You can use the `<RibbonCollection>` tag directive to define each ribbon collection that contains one or more items. To define each ribbon item, you can use the `<RibbonItem>` tag directive with the `Type` property to specify the type of item to be rendered, using the `RibbonItemType` such as Button, a DropDown, a ComboBox, and more.
+You can use the [RibbonCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonCollection.html) tag directive to define each ribbon collection that contains one or more items. To define each ribbon item, you can use the [RibbonItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonItem.html) tag directive with the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGroup.html#Syncfusion_Blazor_Ribbon_RibbonGroup_Orientation) property to specify the type of item to be rendered, using the [RibbonItemType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonGroup.html#Syncfusion_Blazor_Ribbon_RibbonGroup_Orientation) such as Button, a DropDown, a ComboBox, and more.
 
 {% tabs %}
 {% highlight razor %}
@@ -200,7 +200,7 @@ You can use the `<RibbonCollection>` tag directive to define each ribbon collect
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVfWrMsBJMOvAYB?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZrJCLsRVGKvCOVj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Ribbon component in your default web browser.
 

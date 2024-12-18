@@ -11,9 +11,9 @@ documentation: ug
 
 ## Show or hide typing indicator
 
-You can use the `TypingUsers` property to display the current user’s who are typing to indicate the active participants typing response within the chat conversations. If the property is empty the typing indicators will be removed.
+You can use the [TypingUsers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_TypingUsers) property to display the current user’s who are typing to indicate the active participants typing response within the chat conversations. If the property is empty the typing indicators will be removed.
 
-The typing users are the `UserModel` list, where you can update the user’s dynamically to display the current typing user.
+The typing users are the [UserModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.UserModel.html) list, where you can update the user’s dynamically to display the current typing user.
 
 ```cshtml
 

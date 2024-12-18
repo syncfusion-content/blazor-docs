@@ -13,7 +13,7 @@ The Chat UI component provides several templates for customizing the appearance 
 
 ## Empty chat template
 
-You can use the `EmptyChatTemplate` tag to customize the chat interface when no messages are displayed. Personalized content, such as welcome messages or images, can be added to create an engaging and inviting experience for users starting a conversation.
+You can use the [EmptyChatTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_EmptyChatTemplate) tag to customize the chat interface when no messages are displayed. Personalized content, such as welcome messages or images, can be added to create an engaging and inviting experience for users starting a conversation.
 
 ```cshtml
 
@@ -45,7 +45,7 @@ You can use the `EmptyChatTemplate` tag to customize the chat interface when no 
 
 ## Message template
 
-You can use the `MessageTemplate` tag to customize the appearance and styling of each chat message. Modify text styling, layout, and other design elements to ensure a personalized chat experience. The template context includes `Message` and `Index` items.
+You can use the [MessageTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_MessageTemplate) tag to customize the appearance and styling of each chat message. Modify text styling, layout, and other design elements to ensure a personalized chat experience. The template context includes `Message` and `Index` items.
 
 ```cshtml
 
@@ -95,7 +95,7 @@ You can use the `MessageTemplate` tag to customize the appearance and styling of
 
 ## Time break template
 
-You can use the `TimeBreakTemplate` tag to customize the template, such as showing "Today," "Yesterday," or specific dates. This enhances conversation organization by clearly separating messages based on time, improving readability for the user. The template context includes `MessageDate`.
+You can use the [TimeBreakTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_TimeBreakTemplate) tag to customize the template, such as showing "Today," "Yesterday," or specific dates. This enhances conversation organization by clearly separating messages based on time, improving readability for the user. The template context includes [MessageDate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.TimeBreakTemplateContext.html#Syncfusion_Blazor_InteractiveChat_TimeBreakTemplateContext_MessageDate).
 
 ```cshtml
 
@@ -136,7 +136,7 @@ You can use the `TimeBreakTemplate` tag to customize the template, such as showi
 
 ## Typing indicator template
 
-You can use the `TypingUsersTemplate` tag to customize the display of users currently typing in the chat. It allows for styling and positioning of the typing indicator, enhancing the user experience. The template context includes `Users`.
+You can use the [TypingUsersTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_TypingUsersTemplate) tag to customize the display of users currently typing in the chat. It allows for styling and positioning of the typing indicator, enhancing the user experience. The template context includes [Users](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.TypingUsersTemplateContext.html#Syncfusion_Blazor_InteractiveChat_TypingUsersTemplateContext_Users).
 
 ```cshtml
 
@@ -198,7 +198,7 @@ You can use the `TypingUsersTemplate` tag to customize the display of users curr
 
 ## Suggestion template
 
-You can use the `SuggestionTemplate` tag to customize the quick reply suggestions that appear above the input field. Templates here can help create visually appealing and functional suggestion layouts. The template context includes `Suggestion` and `Index` items.
+You can use the [SuggestionTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_SuggestionTemplate) tag to customize the quick reply suggestions that appear above the input field. Templates here can help create visually appealing and functional suggestion layouts. The template context includes [Suggestion](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SuggestionTemplateContext.html#Syncfusion_Blazor_InteractiveChat_SuggestionTemplateContext_Suggestions) and [Index](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SuggestionTemplateContext.html#Syncfusion_Blazor_InteractiveChat_SuggestionTemplateContext_Index) items.
 
 ```cshtml
 
@@ -258,7 +258,7 @@ You can use the `SuggestionTemplate` tag to customize the quick reply suggestion
 
 ## Footer template
 
-You can use the `FooterTemplate` tag to customize the default footer area and manage message send actions with a personalized design. This flexibility allows users to create unique footers that meet their specific needs.
+You can use the [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_FooterTemplate) tag to customize the default footer area and manage message send actions with a personalized design. This flexibility allows users to create unique footers that meet their specific needs.
 
 ```cshtml
 

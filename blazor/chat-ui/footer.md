@@ -11,7 +11,7 @@ documentation: ug
 
 ## Show or hide footer
 
-You can use `ShowFooter` property to enable or disable the chat footer.
+You can use [ShowFooter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_ShowFooter) property to enable or disable the chat footer.
 
 ```cshtml
 

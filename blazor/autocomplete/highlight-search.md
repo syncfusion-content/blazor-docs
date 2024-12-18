@@ -13,7 +13,7 @@ You can highlight the search text in the suggested list items of the autocomplet
 
 {% highlight Razor %}
 
-{% include_relative code-snippet/filtering/highlight-property.razor %}
+{% include_relative code-snippet/filtering/high-light-property.razor %}
 
 {% endhighlight %} 
 
@@ -23,7 +23,7 @@ You can highlight the search text in the suggested list items of the autocomplet
 
 ## Highlight with template
 
-You can highlight the search text in the suggested list items of the autocomplete component by using the `HighLightSearch` method. It accepts several arguments, including `textValue`, `ignoreCase`, `filtertype` and `highLighText`. When called, it will highlight the characters that match the search query in the list items."
+You can highlight the search text in the suggested list items of the autocomplete component by using the `HighLightSearch` method. It accepts several arguments, including `textValue`, `ignoreCase`, `filterType` and `highLightText`. When called, it will highlight the characters that match the search query in the list items."
 
 * `textValue` - The text to be highlighted in the list item.
 * `ignoreCase` - A boolean value which when set to true performs the search text based on casing.
