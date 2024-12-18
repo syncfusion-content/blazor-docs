@@ -89,7 +89,7 @@ Two behaviors are available in Tree Grid paging to display certain number of rec
 * **All** : The number of records in a page is based on [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridPageSettings_PageSize) property.
 * **Root** : This is the default mode. The number of root nodes or the 0th level records to be displayed per page is based on [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridPageSettings_PageSize) property. With [PageSizeMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridPageSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridPageSettings_PageSizeMode) property as **Root**, only the root level or the 0th level records are considered in records count.
 
-N> By default, the **Remote** data functionality is limited to the **Root** mode for its **PageSizeMode**, as the **ALL** mode is not supported in this configuration.
+N> The **ALL** mode of **PageSizeMode** is not supported with remote data binding in the Tree Grid.
 
 {% tabs %}
 
