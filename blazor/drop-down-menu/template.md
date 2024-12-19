@@ -9,7 +9,7 @@ documentation: ug
 
 # Item template in Blazor Dropdown Menu Component
 
-The [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownMenuItem.html#Syncfusion_Blazor_SplitButtons_ItemTemplate.html) property in the DropDownButton component allows for the definition of custom templates to display dropdown items. This feature is especially useful for customizing the appearance and layout of dropdown items beyond the default options provided. By utilizing this property, diverse content such as icons, formatted text, and other visual elements can be integrated into the dropdown items for a more engaging and tailored user interface.
+The [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_ItemTemplate) property in the DropDownButton component allows for the definition of custom templates to display dropdown items. This feature is especially useful for customizing the appearance and layout of dropdown items beyond the default options provided. By utilizing this property, diverse content such as icons, formatted text, and other visual elements can be integrated into the dropdown items for a more engaging and tailored user interface.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
