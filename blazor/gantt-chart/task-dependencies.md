@@ -236,7 +236,7 @@ The Gantt Chart component leverages a flexible system for managing task dependen
 
 3. **Simplified Visualization**: Immediate visual feedback when changing dependencies, aiding in effective planning.
 
-4. **Streamlined Task Management**: Set default dependency types to ease the cre
+4. **Streamlined Task Management**: Set default dependency types to ease the creation and management of tasks.
 
 You can implement customized predecessor configurations using several methods within the Gantt component. Here is a code snippet to demonstrate how to configure and modify dependencies:
 
@@ -367,7 +367,7 @@ When working with task dependencies in the Gantt Chart component, you may encoun
 
 2. **Incorrect Dependency Type Application**: Ensure that the correct dependency type is specified for each task. If no type is mentioned, the default Finish-to-Start (FS) is applied. Verify that Id in the Predecessor field match the intended dependencies.
 
-3. **Misconfigured Task Hierarchy**: Parent and child task relationships must be set up correctly to maintain project coherence. Verify that parent tasks encompass all relevant subtasks and that dependencies do not bypass hierarchy rules.
+3. **Incorrect Task Hierarchy Setup**: Parent and child task relationships must be set up correctly to maintain project coherence. Verify that parent tasks encompass all relevant subtasks and that dependencies do not bypass hierarchy rules.
 
 4. **Offset Mismatches**: Check that offsets (lag or lead time) are appropriately set. Only Day units are supported currently, so be sure to align expectations with this limitation.
 
