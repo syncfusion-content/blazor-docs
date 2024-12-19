@@ -324,6 +324,130 @@ Performing CRUD actions programmatically refers to the ability to create, read, 
 
 > In both normal and dialog editing modes, these methods can be used.
 
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
+
+<div style="margin-bottom:5px">
+    <SfButton CssClass="e-outline" Content="Add" OnClick="GridAddAction"></SfButton>
+    <SfButton CssClass="e-outline" Content="Edit" OnClick="GridEditAction"></SfButton>
+    <SfButton CssClass="e-outline" Content="Delete" OnClick="GridDeleteAction"></SfButton>
+    <SfButton CssClass="e-outline" Content="Update Row" OnClick="UpdateRowAction"></SfButton>
+    <SfButton CssClass="e-outline" Content="Update Cell" OnClick="UpdateCellAction"></SfButton>
+</div>
+<SfGrid @ref="Grid" DataSource="@OrderData" Height="315">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true})" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer ID" ValidationRules="@(new ValidationRules{ Required=true, MinLength=5})" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipCity) HeaderText="Ship City" ValidationRules="@(new ValidationRules{ Required=true})" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipName) HeaderText="Ship Name" ValidationRules="@(new ValidationRules{ Required=true})" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public SfGrid<OrderDetails> Grid;
+    public List<OrderDetails> OrderData { get; set; }
+    protected override void OnInitialized()
+    {
+        OrderData = OrderDetails.GetAllRecords();
+    }
+    public async Task GridAddAction()
+    {
+        var newRecord = new OrderDetails(
+            new Random().Next(100000),
+            GenerateCustomerId(),
+            GenerateShipCity(),
+            GenerateShipName()
+        );
+        await Grid.AddRecordAsync(newRecord);
+    }
+    public async Task GridEditAction()
+    {
+        await Grid.StartEditAsync();
+    }
+    public async Task GridDeleteAction()
+    {
+        await Grid.DeleteRecordAsync();
+    }
+    public async Task UpdateRowAction()
+    {
+        var UpdatedData = new OrderDetails(10248, "RTER", "America", "Hanari");
+        await Grid.UpdateRowAsync(0, UpdatedData);
+    }
+    public async Task UpdateCellAction()
+    {
+        var firstRecord = Grid.CurrentViewData.FirstOrDefault();
+        if (firstRecord != null)
+        {
+            if (firstRecord is OrderDetails record)  // Strongly typed check
+            {
+                await Grid.SetCellValueAsync(record.OrderID, "CustomerID", "Value Changed");
+            }            
+        }        
+    }
+    private string GenerateCustomerId()
+    {
+        const string characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        var random = new Random();
+        return new string(Enumerable.Repeat(characters, 5).Select(s => s[random.Next(s.Length)]).ToArray());
+    }
+    private string GenerateShipCity()
+    {
+        var cities = new[] { "London", "Paris", "New York", "Tokyo", "Berlin" };
+        return cities[new Random().Next(cities.Length)];
+    }
+    private string GenerateShipName()
+    {
+        var names = new[] { "Que Delícia", "Bueno Foods", "Island Trading", "Laughing Bacchus Winecellars" };
+        return names[new Random().Next(names.Length)];
+    }
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderDetails.cs" %}
+public class OrderDetails
+{
+    public static List<OrderDetails> Order = new List<OrderDetails>();
+    public OrderDetails(int OrderID, string CustomerId, string ShipCity, string ShipName)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerId;
+        this.ShipCity = ShipCity;
+        this.ShipName = ShipName;
+    }
+    public static List<OrderDetails> GetAllRecords()
+    {
+        if (Order.Count == 0)
+        {
+            Order.Add(new OrderDetails(10248, "VINET", "Reims", "Vins et alcools Chevalier"));
+            Order.Add(new OrderDetails(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+            Order.Add(new OrderDetails(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+            Order.Add(new OrderDetails(10251, "VICTE", "Lyon", "Victuailles en stock"));
+            Order.Add(new OrderDetails(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+            Order.Add(new OrderDetails(10253, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+            Order.Add(new OrderDetails(10254, "CHOPS", "Bern", "Chop-suey Chinese"));
+            Order.Add(new OrderDetails(10255, "RICSU", "Genève", "Richter Supermarkt"));
+            Order.Add(new OrderDetails(10256, "WELLI", "Resende", "Wellington Importadora"));
+            Order.Add(new OrderDetails(10257, "HILAA", "San Cristóbal", "HILARION-Abastos"));
+            Order.Add(new OrderDetails(10258, "ERNSH", "Graz", "Ernst Handel"));
+            Order.Add(new OrderDetails(10259, "CENTC", "México D.F.", "Centro comercial Moctezuma"));
+            Order.Add(new OrderDetails(10260, "OTTIK", "Köln", "Ottilies Käseladen"));
+            Order.Add(new OrderDetails(10261, "QUEDE", "Rio de Janeiro", "Que Delícia"));
+            Order.Add(new OrderDetails(10262, "RATTC", "Albuquerque", "Rattlesnake Canyon Grocery"));
+        }
+        return Order;
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htBTWrWOgendnpyr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## Show confirmation dialog while deleting
 
 Displaying a confirmation dialog adds an extra layer of confirmation when deleting a record from the grid. This dialog prompts for confirmation before proceeding with the deletion, ensuring that accidental or undesired deletions are avoided. The deletion can proceed only if the decision is certain. The grid component provides a built-in confirmation dialog that can be used to confirm a deleting action.
@@ -336,8 +460,8 @@ To enable the confirmation dialog for the delete operation in the Grid, you can 
 @using Syncfusion.Blazor.Buttons
 
 <div style="margin-bottom:5px">
-<label> Enable or Disable show delete confirmation dialog:</label>
-<SfSwitch ValueChange="Change" TChecked="bool" style="margin-top:5px"></SfSwitch>
+    <label> Enable or Disable show delete confirmation dialog:</label>
+    <SfSwitch ValueChange="Change" TChecked="bool" style="margin-top:5px"></SfSwitch>
 </div>
 <SfGrid DataSource="@OrderData" Toolbar="@(new List<string>() { "Add", "Delete", "Update", "Cancel" })" Height="315">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal" ShowDeleteConfirmDialog="@DeleteConfirmDialog"></GridEditSettings>
@@ -362,7 +486,7 @@ To enable the confirmation dialog for the delete operation in the Grid, you can 
     }
 }
 {% endhighlight %}
-{% highlight c# tabtitle="EmployeeDetails.cs" %}
+{% highlight c# tabtitle="OrderDetails.cs" %}
 public class OrderDetails
 {
     public static List<OrderDetails> Order = new List<OrderDetails>();
@@ -431,7 +555,7 @@ Here's an example of how to set a default value for a column:
 
 @code {
     public string CustomerValue { get; set; } = "HANAR";
-    public int FreightValue { get; set; } = 1;
+    public double FreightValue { get; set; } = 1.0;
     public string CountryValue { get; set; } = "France";
     public List<OrderDetails> OrderData { get; set; }
     protected override void OnInitialized()
@@ -440,7 +564,7 @@ Here's an example of how to set a default value for a column:
     }
 }
 {% endhighlight %}
-{% highlight c# tabtitle="EmployeeDetails.cs" %}
+{% highlight c# tabtitle="OrderDetails.cs" %}
 public class OrderDetails
 {
     public static List<OrderDetails> Order = new List<OrderDetails>();
@@ -481,8 +605,426 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLfWhibzndxwzNc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVJCLsuBDjebSEM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+## Delete multiple rows
+
+The delete multiple rows feature in the grid component allows you to easily remove multiple rows from the grid at once. This feature is useful when you want to delete multiple records simultaneously. There are two approaches to implement this feature: using the inbuilt toolbar delete option or using a method.
+
+**Using the inbuilt toolbar delete option**
+
+The grid component provides a user-friendly interface for performing various actions, including deleting rows using the inbuilt toolbar. To enable the delete multiple rows using the toolbar, you need to configure the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property of the grid and set the [GridSelectionSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Type) property as **multiple** to enable multiple row selection.
+
+To delete multiple selected records in the grid, first you need to select multiple rows in the grid by highlighting or checking the corresponding checkboxes. Once the desired rows are selected, you can click on the delete icon located in the toolbar. This action will initiate the deletion process and remove the selected records from the grid.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@OrderData" AllowSelection="true" Toolbar="@(new List<string>() { "Delete" })" Height="315">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal"></GridEditSettings>
+    <GridSelectionSettings Type="SelectionType.Multiple"></GridSelectionSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true})" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required=true, MinLength=5})" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" ValidationRules="@(new ValidationRules{ Required=true, Min=1, Max=1000})" Format="C2" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipCountry) HeaderText="Ship Country" EditType="EditType.DropDownEdit" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<OrderDetails> OrderData { get; set; }
+    protected override void OnInitialized()
+    {
+        OrderData = OrderDetails.GetAllRecords();
+    }
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderDetails.cs" %}
+public class OrderDetails
+{
+    public static List<OrderDetails> Order = new List<OrderDetails>();
+    public OrderDetails(int OrderID, string CustomerId, double Freight, string ShipCountry)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerId;
+        this.Freight = Freight;
+        this.ShipCountry = ShipCountry;    
+    }
+    public static List<OrderDetails> GetAllRecords()
+    {
+        if (Order.Count == 0)
+        {
+            Order.Add(new OrderDetails(10248, "VINET", 32.38, "France"));
+            Order.Add(new OrderDetails(10249, "TOMSP", 11.61, "Germany"));
+            Order.Add(new OrderDetails(10250, "HANAR", 65.83, "Brazil"));
+            Order.Add(new OrderDetails(10251, "VICTE", 41.34, "France"));
+            Order.Add(new OrderDetails(10252, "SUPRD", 51.3, "Belgium"));
+            Order.Add(new OrderDetails(10253, "HANAR", 58.17, "Brazil"));
+            Order.Add(new OrderDetails(10254, "CHOPS", 22.98, "Switzerland"));
+            Order.Add(new OrderDetails(10255, "RICSU", 148.33, "Switzerland"));
+            Order.Add(new OrderDetails(10256, "WELLI", 13.97, "Brazil"));
+            Order.Add(new OrderDetails(10257, "HILAA", 81.91, "Venezuela"));
+            Order.Add(new OrderDetails(10258, "ERNSH", 140.51, "Austria"));
+            Order.Add(new OrderDetails(10259, "CENTC", 3.25, "Mexico"));
+            Order.Add(new OrderDetails(10260, "OTTIK", 55.09, "Germany"));
+            Order.Add(new OrderDetails(10261, "QUEDE", 3.05, "Brazil"));
+            Order.Add(new OrderDetails(10262, "RATTC", 48.29, "USA"));
+        }
+        return Order;
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCountry { get; set; }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLpiBMkLcuVmJPN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+> Also delete the selected records using keyboard shortcut key **delete**.
+
+**Using method**
+
+You can delete multiple rows programmatically by using [DeleteRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DeleteRecordAsync) method. This method allows you to delete a record with the given options. If the **fieldname** (field name of the primary key column) and **data** parameters are not provided, the grid will delete the selected records.
+
+```ts
+    Grid.DeleteRecordAsync();
+```
+
+> * The `GridSelectionSettings.Type` property is set to **Multiple** to enable multiple row selection.
+> * To prevent accidental or undesired deletions, it is recommended to enable the `ShowDeleteConfirmDialog` property of the `EditSettings` configuration.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
+
+<SfButton CssClass="e-outline" Content="Delete Multiple" OnClick="GridDeleteAction" style="margin-bottom:5px"></SfButton>
+<SfGrid DataSource="@OrderData" AllowSelection="true" Height="315">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal"></GridEditSettings>
+    <GridSelectionSettings Type="SelectionType.Multiple"></GridSelectionSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true})" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required=true, MinLength=5})" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" ValidationRules="@(new ValidationRules{ Required=true, Min=1, Max=1000})" Format="C2" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipCountry) HeaderText="Ship Country" EditType="EditType.DropDownEdit" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+@code {
+    public SfGrid<OrderDetails> Grid;
+    public List<OrderDetails> OrderData { get; set; }
+    protected override void OnInitialized()
+    {
+        OrderData = OrderDetails.GetAllRecords();
+    }
+    private async Task GridDeleteAction()
+    {
+        await Grid.DeleteRecordAsync();
+    }
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderDetails.cs" %}
+public class OrderDetails
+{
+    public static List<OrderDetails> Order = new List<OrderDetails>();
+    public OrderDetails(int OrderID, string CustomerId, double Freight, string ShipCountry)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerId;
+        this.Freight = Freight;
+        this.ShipCountry = ShipCountry;    
+    }
+    public static List<OrderDetails> GetAllRecords()
+    {
+        if (Order.Count == 0)
+        {
+            Order.Add(new OrderDetails(10248, "VINET", 32.38, "France"));
+            Order.Add(new OrderDetails(10249, "TOMSP", 11.61, "Germany"));
+            Order.Add(new OrderDetails(10250, "HANAR", 65.83, "Brazil"));
+            Order.Add(new OrderDetails(10251, "VICTE", 41.34, "France"));
+            Order.Add(new OrderDetails(10252, "SUPRD", 51.3, "Belgium"));
+            Order.Add(new OrderDetails(10253, "HANAR", 58.17, "Brazil"));
+            Order.Add(new OrderDetails(10254, "CHOPS", 22.98, "Switzerland"));
+            Order.Add(new OrderDetails(10255, "RICSU", 148.33, "Switzerland"));
+            Order.Add(new OrderDetails(10256, "WELLI", 13.97, "Brazil"));
+            Order.Add(new OrderDetails(10257, "HILAA", 81.91, "Venezuela"));
+            Order.Add(new OrderDetails(10258, "ERNSH", 140.51, "Austria"));
+            Order.Add(new OrderDetails(10259, "CENTC", 3.25, "Mexico"));
+            Order.Add(new OrderDetails(10260, "OTTIK", 55.09, "Germany"));
+            Order.Add(new OrderDetails(10261, "QUEDE", 3.05, "Brazil"));
+            Order.Add(new OrderDetails(10262, "RATTC", 48.29, "USA"));
+        }
+        return Order;
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCountry { get; set; }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhpMhskgzmGebem?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Adding a new row at the bottom of the grid
+
+The grid component allows you to add a new row at the bottom of the grid, allowing you to insert a new record at the end of the existing data set. This feature is particularly useful when you want to conveniently add new records without the need of scroll up or manually reposition the newly added row.
+
+By default, when adding a new row in the grid component, the row is inserted at the top of the grid. However, you can change this behavior by setting the [NewRowPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_NewRowPosition) property of the `GridEditSettings` configuration to **Bottom**. This property determines the position where the new row will be inserted.
+
+Here's an example of how to enable adding new rows at the bottom of the grid:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.DropDowns
+
+<div style="margin-bottom:5px">
+<label> Select new row position: </label>
+<SfDropDownList TValue="NewRowPosition" TItem="DropDownOrder" DataSource="@DropDownValue" Width="100px">
+    <DropDownListFieldSettings Text="Text" Value="Value"></DropDownListFieldSettings>
+    <DropDownListEvents ValueChange="OnChange" TValue="NewRowPosition" TItem="DropDownOrder"></DropDownListEvents>
+</SfDropDownList>
+</div>
+<SfGrid DataSource="@OrderData" Toolbar="@(new List<string>() { "Add", "Edit","Delete", "Update", "Cancel" })" Height="315">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="Syncfusion.Blazor.Grids.EditMode.Normal" NewRowPosition="@RowPosition"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true})" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required=true, MinLength=5})" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" ValidationRules="@(new ValidationRules{ Required=true, Min=1, Max=1000})" Format="C2" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.OrderDate) HeaderText="Order Date" EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipCountry) HeaderText="Ship Country" EditType="EditType.DropDownEdit" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+@code {
+    public List<OrderDetails> OrderData { get; set; }
+    protected override void OnInitialized()
+    {
+        OrderData = OrderDetails.GetAllRecords();
+    }
+    public NewRowPosition RowPosition { get; set; } = NewRowPosition.Top;  
+    public class DropDownOrder
+    {
+        public string Text { get; set; }
+        public NewRowPosition Value { get; set; }
+    }    
+    public void OnChange(ChangeEventArgs<NewRowPosition, DropDownOrder> Args)
+    {
+        RowPosition = Args.Value;
+    }
+    List<DropDownOrder> DropDownValue = new List<DropDownOrder>
+    {
+        new DropDownOrder() { Text = "Top", Value = NewRowPosition.Top },
+        new DropDownOrder() { Text = "Bottom", Value = NewRowPosition.Bottom},
+    };
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderDetails.cs" %}
+public class OrderDetails
+{
+    public static List<OrderDetails> Order = new List<OrderDetails>();
+    public OrderDetails(int OrderID, string CustomerID, double Freight, string ShipCountry, DateTime OrderDate)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;
+        this.Freight = Freight;
+        this.ShipCountry = ShipCountry;
+        this.OrderDate = OrderDate;
+    }
+    public static List<OrderDetails> GetAllRecords()
+    {
+        if (Order.Count == 0)
+        {
+            Order.Add(new OrderDetails(10248, "VINET", 32.38, "France", new DateTime(1996, 7, 4)));
+            Order.Add(new OrderDetails(10249, "TOMSP", 11.61, "Germany", new DateTime(1996, 7, 5)));
+            Order.Add(new OrderDetails(10250, "HANAR", 65.83, "Brazil", new DateTime(1996, 7, 8)));
+            Order.Add(new OrderDetails(10251, "VICTE", 41.34, "France", new DateTime(1996, 7, 8)));
+            Order.Add(new OrderDetails(10252, "SUPRD", 51.3, "Belgium", new DateTime(1996, 7, 9)));
+            Order.Add(new OrderDetails(10253, "HANAR", 58.17, "Brazil", new DateTime(1996, 7, 10)));
+            Order.Add(new OrderDetails(10254, "CHOPS", 22.98, "Switzerland", new DateTime(1996, 7, 11)));
+            Order.Add(new OrderDetails(10255, "RICSU", 148.33, "Switzerland", new DateTime(1996, 7, 12)));
+            Order.Add(new OrderDetails(10256, "WELLI", 13.97, "Brazil", new DateTime(1996, 7, 15)));
+            Order.Add(new OrderDetails(10257, "HILAA", 81.91, "Venezuela", new DateTime(1996, 7, 16)));
+            Order.Add(new OrderDetails(10258, "ERNSH", 140.51, "Austria", new DateTime(1996, 7, 17)));
+            Order.Add(new OrderDetails(10259, "CENTC", 3.25, "Mexico", new DateTime(1996, 7, 18)));
+            Order.Add(new OrderDetails(10260, "OTTIK", 55.09, "Germany", new DateTime(1996, 7, 19)));
+            Order.Add(new OrderDetails(10261, "QUEDE", 3.05, "Brazil", new DateTime(1996, 7, 19)));
+            Order.Add(new OrderDetails(10262, "RATTC", 48.29, "USA", new DateTime(1996, 7, 22)));
+        }
+        return Order;
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCountry { get; set; }
+    public DateTime OrderDate { get; set; }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZhTCBWEJgzWWmwI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+> Add `newRowPostion` is supported for **Normal** and **Batch** editing modes.
+
+## Show add new row always in grid
+
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid simplifies the addition of new records by consistently presenting a blank, “add new row” form within the grid. To enable this feature, you can set the [ShowAddNewRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_ShowAddNewRow) property within the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) configuration to **true**. This allows for continuous addition of new records. You can display the add a new row at either the top or bottom of the grid content, depending on the [NewRowPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_NewRowPosition) property of `GridEditSettings`. By default, the add new row is displayed at the top row of the grid content.
+
+The following sample demonstrates how to add a new record continuously using `ShowAddNewRow` property.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@OrderData" Toolbar="@(new List<string>() { "Add", "Edit","Delete", "Update", "Cancel" })" Height="315">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="Syncfusion.Blazor.Grids.EditMode.Normal" NewRowPosition="Syncfusion.Blazor.Grids.NewRowPosition.Top" ShowAddNewRow="true"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true})" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required=true, MinLength=5})" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" ValidationRules="@(new ValidationRules{ Required=true, Min=1, Max=1000})" Format="C2" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipCountry) HeaderText="Ship Country" EditType="EditType.DropDownEdit" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+@code {
+    public List<OrderDetails> OrderData { get; set; }
+    protected override void OnInitialized()
+    {
+        OrderData = OrderDetails.GetAllRecords();
+    }
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderDetails.cs" %}
+public class OrderDetails
+{
+    public static List<OrderDetails> Order = new List<OrderDetails>();
+    public OrderDetails(int OrderID, string CustomerId, double Freight, string ShipCountry)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerId;
+        this.Freight = Freight;
+        this.ShipCountry = ShipCountry;    
+    }
+    public static List<OrderDetails> GetAllRecords()
+    {
+        if (Order.Count == 0)
+        {
+            Order.Add(new OrderDetails(10248, "VINET", 32.38, "France"));
+            Order.Add(new OrderDetails(10249, "TOMSP", 11.61, "Germany"));
+            Order.Add(new OrderDetails(10250, "HANAR", 65.83, "Brazil"));
+            Order.Add(new OrderDetails(10251, "VICTE", 41.34, "France"));
+            Order.Add(new OrderDetails(10252, "SUPRD", 51.3, "Belgium"));
+            Order.Add(new OrderDetails(10253, "HANAR", 58.17, "Brazil"));
+            Order.Add(new OrderDetails(10254, "CHOPS", 22.98, "Switzerland"));
+            Order.Add(new OrderDetails(10255, "RICSU", 148.33, "Switzerland"));
+            Order.Add(new OrderDetails(10256, "WELLI", 13.97, "Brazil"));
+            Order.Add(new OrderDetails(10257, "HILAA", 81.91, "Venezuela"));
+            Order.Add(new OrderDetails(10258, "ERNSH", 140.51, "Austria"));
+            Order.Add(new OrderDetails(10259, "CENTC", 3.25, "Mexico"));
+            Order.Add(new OrderDetails(10260, "OTTIK", 55.09, "Germany"));
+            Order.Add(new OrderDetails(10261, "QUEDE", 3.05, "Brazil"));
+            Order.Add(new OrderDetails(10262, "RATTC", 48.29, "USA"));
+        }
+        return Order;
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCountry { get; set; }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLfiLskTTrNxaux?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+> To save the newly added records, you can either hit the **Enter** key or click on the **Update** button located on the toolbar after filling in the new add form.
+
+### Limitations
+
+* This feature is supported only for Inline/Normal editing mode and is not compatible with other edit modes.
+* The new blank add row form will always be displayed at the top, even if you have set the new row position as the bottom for Virtual Scrolling and Infinite Scrolling enabled grid.
+* This feature is not compatible with the column virtualization feature.
+
+## Disable editing for a particular row
+
+In the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component, you can prevent editing of specific rows based on certain conditions. This feature is useful when you want to restrict editing for certain rows , such as read-only data, calculated values, or protected information. It helps maintain data integrity and ensures that only authorized changes can be made in the grid.
+
+To disable editing for a particular row, use the [RowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowEditing) event of the grid. You can then set the **args.Cancel** property to **true** to prevent editing for that row.
+
+In the below demo, the rows which are having the value for **ShipCountry** column as **France** is prevented from editing.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@OrderData" Toolbar="@(new List<string>() { "Add", "Edit","Delete", "Update", "Cancel" })" Height="315">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal" ></GridEditSettings>
+    <GridEvents TValue="OrderDetails" RowEditing="RowEditingHandler"></GridEvents>
+        <GridColumns>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true})" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required=true, MinLength=5})" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" ValidationRules="@(new ValidationRules{ Required=true, Min=1, Max=1000})" Format="C2" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipCountry) HeaderText="Ship Country" EditType="EditType.DropDownEdit" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+@code {
+    public List<OrderDetails> OrderData { get; set; }
+    protected override void OnInitialized()
+    {
+        OrderData = OrderDetails.GetAllRecords();
+    }
+    public void RowEditingHandler(RowEditingEventArgs<OrderDetails> Args)
+    {
+        if (Args.Data.ShipCountry == "France") 
+        {
+            Args.Cancel = true;
+        }
+    }
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderDetails.cs" %}
+public class OrderDetails
+{
+    public static List<OrderDetails> Order = new List<OrderDetails>();
+    public OrderDetails(int OrderID, string CustomerId, double Freight, string ShipCountry)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerId;
+        this.Freight = Freight;
+        this.ShipCountry = ShipCountry;    
+    }
+    public static List<OrderDetails> GetAllRecords()
+    {
+        if (Order.Count == 0)
+        {
+            Order.Add(new OrderDetails(10248, "VINET", 32.38, "France"));
+            Order.Add(new OrderDetails(10249, "TOMSP", 11.61, "Germany"));
+            Order.Add(new OrderDetails(10250, "HANAR", 65.83, "Brazil"));
+            Order.Add(new OrderDetails(10251, "VICTE", 41.34, "France"));
+            Order.Add(new OrderDetails(10252, "SUPRD", 51.3, "Belgium"));
+            Order.Add(new OrderDetails(10253, "HANAR", 58.17, "Brazil"));
+            Order.Add(new OrderDetails(10254, "CHOPS", 22.98, "Switzerland"));
+            Order.Add(new OrderDetails(10255, "RICSU", 148.33, "Switzerland"));
+            Order.Add(new OrderDetails(10256, "WELLI", 13.97, "Brazil"));
+            Order.Add(new OrderDetails(10257, "HILAA", 81.91, "Venezuela"));
+            Order.Add(new OrderDetails(10258, "ERNSH", 140.51, "Austria"));
+            Order.Add(new OrderDetails(10259, "CENTC", 3.25, "Mexico"));
+            Order.Add(new OrderDetails(10260, "OTTIK", 55.09, "Germany"));
+            Order.Add(new OrderDetails(10261, "QUEDE", 3.05, "Brazil"));
+            Order.Add(new OrderDetails(10262, "RATTC", 48.29, "USA"));
+        }
+        return Order;
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCountry { get; set; }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNrTsLCYJloGZbCS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Provide new item or edited item using events
 
@@ -560,115 +1102,3 @@ In the following example:
 }
 
 ```
-
-## Confirmation dialog
-
-The delete confirms dialog can be shown on deleting a record by setting the [ShowDeleteConfirmDialog](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_ShowDeleteConfirmDialog) property of the [GridEditSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component as **true**.
-
-The following sample code demonstrates enabling delete confirmation dialog in the DataGrid component,
-
-```cshtml
-@using Syncfusion.Blazor.Grids
-
-<SfGrid DataSource="@Orders" Height="315" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
-    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" ShowDeleteConfirmDialog="true"></GridEditSettings>
-    <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-    </GridColumns>
-</SfGrid>
-
-@code{
-    public List<Order> Orders { get; set; }
-
-    protected override void OnInitialized()
-    {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
-    }
-
-    public class Order
-    {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
-    }
-}
-```
-
-The following GIF represents the delete confirmation dialog displayed while deleting a record in DataGrid,
-
-![Blazor DataGrid displays Delete Confirmation Dialog](./images/blazor-datagrid-delete-confirm-dialog.gif)
-
-N> The [ShowDeleteConfirmDialog](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_ShowDeleteConfirmDialog) supports all type of edit modes.
-
-## Show add new row always in grid
-
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid simplifies the addition of new records by consistently presenting a blank, “add new row” form within the grid. To enable this feature, you can set the [ShowAddNewRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_ShowAddNewRow) property within the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) configuration to **true**. This allows for continuous addition of new records. You can display the add a new row at either the top or bottom of the grid content, depending on the [NewRowPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_NewRowPosition) property of `GridEditSettings`. By default, the add new row is displayed at the top row of the grid content.
-
-The following sample demonstrates how to add a new record continuously using `ShowAddNewRow` property.
-
-```cshtml
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor.Grids
-
-<SfGrid DataSource="@Orders" ID="Grid" @ref="Grid" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" Height="315">
-     <GridEditSettings AllowAdding="true" AllowDeleting="true" ShowAddNewRow="true" AllowEditing="true"></GridEditSettings>
-    <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new Syncfusion.Blazor.Grids.ValidationRules{ Required=true})" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" ValidationRules="@(new Syncfusion.Blazor.Grids.ValidationRules{ Required=true})" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" EditType="Syncfusion.Blazor.Grids.EditType.NumericEdit" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" EditType="Syncfusion.Blazor.Grids.EditType.DatePickerEdit" Format="d" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="130" Type="Syncfusion.Blazor.Grids.ColumnType.Date"></GridColumn>
-        <GridColumn Field=@nameof(Orders.OrderTime) HeaderText="Order Time" Type="ColumnType.TimeOnly" TextAlign="TextAlign.Right" Width="140"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" EditType="Syncfusion.Blazor.Grids.EditType.DropDownEdit" Width="150"></GridColumn>
-    </GridColumns>
-</SfGrid>
-
-@code {
-    public List<Order> Orders { get; set; }
-
-    SfGrid<Order> Grid {get;set;}
-
-    protected override void OnInitialized()
-    {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-            {
-                OrderID = 1000 + x,
-                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-                Freight = 2.1 * x,
-                OrderDate = DateTime.Now.AddDays(-x),
-                OrderTime = DateTime.Now.AddHours(x),
-                ShipCountry = (new string[] { "USA", "UK", "CHINA", "RUSSIA", "INDIA" })[new Random().Next(5)]
-            }).ToList();
-    }
-
-    public class Order
-    {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public double? Freight { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public DateTime? OrderTime { get; set; }
-        public string ShipCountry { get; set; }
-    }
-}
-```
-
-![Show Add New Row](../datagrid/images/show-add-new-row.gif)
-
-N> To save the newly added records, you can either hit the **Enter** key or click on the **Update** button located on the toolbar after filling in the new add form.
-
-**Limitations**
-
-* This feature is supported only for Inline/Normal editing mode and is not compatible with other edit modes.
-* The new blank add row form will always be displayed at the top, even if you have set the new row position as the bottom for Virtual Scrolling and Infinite Scrolling enabled grid.
-* This feature is not compatible with the column virtualization feature.
