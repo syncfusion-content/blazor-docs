@@ -1478,6 +1478,141 @@ public class EmployeeData
 
 ![Render images in the DropDownList editor component using the ItemTemplate](./images/blazor-datagrid-render-image-using-item-template.gif)
 
+### Render Multiple columns in DropDownList component
+
+The Syncfusion Blazor DataGrid allows you to render a DropDownList component within the Grid's edit form for a specific column. This feature is particularly useful when you want to display more detailed information for each item in the dropdown list during editing a specific column.
+
+To render a DropDownList in the edit form, you need to define an [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) for the Grid column. The `EditTemplate` property specifies the cell edit template that used as an editor for a particular column. It can accept either a template string or an HTML element ID.
+
+The DropDownList has been provided with several options to customize each list item, group title, selected value, header, and footer element. By default, list items can be rendered as a single column in the DropDownList component. Instead of this, multiple columns can be rendered. This can be achieved by using the [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_HeaderTemplate) and [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ItemTemplate) properties of the DropDownList component.
+
+The following example demonstrates how to render a DropDownList component with multiple columns within in the ShipCountry column. 
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@page "/"
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.DropDowns
+@using BlazorApp1.Data
+
+<SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
+    <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true})" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required=true})" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" EditType="EditType.DropDownEdit" Width="150">
+            <EditTemplate>
+                @if (context is OrderData order)
+                {
+                    <SfDropDownList TValue="string" TItem="Country"
+                                    @bind-Value="order.ShipCountry" DataSource="@Countries"
+                                    Placeholder="Select Country" CssClass="e-multi-column">
+                        <DropDownListFieldSettings Value="CountryName" Text="CountryName" />
+                        <DropDownListTemplates TItem="Country">
+                            <HeaderTemplate>
+                                <div>
+                                    <span>ID</span>
+                                    <span>Country</span>
+                                </div>
+                            </HeaderTemplate>
+                            <ItemTemplate Context="country">
+                                <div>
+                                    <span>@country.ID</span>
+                                    <span>@country.CountryName</span>
+                                </div>
+                            </ItemTemplate>
+                        </DropDownListTemplates>
+                    </SfDropDownList>
+                }
+            </EditTemplate>
+        </GridColumn>
+    </GridColumns>
+</SfGrid>
+@code {
+    public List<OrderData> Orders { get; set; }
+    public List<Country> Countries { get; set; } = new List<Country>()
+    {
+        new Country(){ CountryName="France", ID=1},
+        new Country(){ CountryName="Germany", ID=2},
+        new Country(){ CountryName="India", ID=3},
+        new Country(){ CountryName="Switzerland", ID=4},
+        new Country(){ CountryName="Belgium", ID=5},
+    };
+
+    public class Country
+    {
+        public string CountryName { get; set; }
+        public int ID { get; set; }
+    }
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }
+}
+
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData() { }
+
+    public OrderData(int OrderID, string CustomerID, string ShipName, double Freight, DateTime? OrderDate, DateTime? ShippedDate, bool? IsVerified, string ShipCity, string ShipCountry, string ShipAddress, int employeeID, TimeOnly? OrderTime)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;
+        this.ShipName = ShipName;
+        this.Freight = Freight;
+        this.OrderDate = OrderDate;
+        this.ShippedDate = ShippedDate;
+        this.IsVerified = IsVerified;
+        this.ShipCity = ShipCity;
+        this.ShipCountry = ShipCountry;
+        this.ShipAddress = ShipAddress;
+        this.EmployeeID = employeeID;
+        this.OrderTime = OrderTime;
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        {
+            Orders.Add(new OrderData(10248, "VINET", "Vins et alcools Chevalier", 32.38, new DateTime(1996, 7, 4), new DateTime(1996, 08, 07), true, "Reims", "France", "12 Rue des Fleurs", 1, new TimeOnly(9, 30, 0)));
+            Orders.Add(new OrderData(10249, "TOMSP", "Toms Spezialitäten", 11.61, new DateTime(1996, 7, 5), new DateTime(1996, 08, 07), false, "Münster", "Germany", "45 Straße der Nationen", 2, new TimeOnly(10, 0, 0)));
+            Orders.Add(new OrderData(10250, "HANAR", "Hanari Carnes", 65.83, new DateTime(1996, 7, 6), new DateTime(1996, 08, 07), true, "Rio de Janeiro", "India", "89 MG Road", 3, new TimeOnly(14, 15, 0)));
+            Orders.Add(new OrderData(10251, "VINET", "Vins et alcools Chevalier", 41.34, new DateTime(1996, 7, 7), new DateTime(1996, 08, 07), false, "Lyon", "France", "23 Rue Victor Hugo", 1, new TimeOnly(11, 45, 0)));
+            Orders.Add(new OrderData(10252, "SUPRD", "Suprêmes délices", 151.30, new DateTime(1996, 7, 8), new DateTime(1996, 08, 07), true, "Charleroi", "Belgium", "78 Rue de l'Industrie", 2, new TimeOnly(13, 0, 0)));
+            Orders.Add(new OrderData(10253, "HANAR", "Hanari Carnes", 58.17, new DateTime(1996, 7, 9), new DateTime(1996, 08, 07), false, "Bern", "Switzerland", "5 Bahnhofstrasse", 3, new TimeOnly(16, 30, 0)));
+            Orders.Add(new OrderData(10254, "CHOPS", "Chop-suey Chinese", 22.98, new DateTime(1996, 7, 10), new DateTime(1996, 08, 07), true, "Genève", "Switzerland", "12 Rue de Mont Blanc", 2, new TimeOnly(8, 0, 0)));
+            Orders.Add(new OrderData(10255, "VINET", "Vins et alcools Chevalier", 148.33, new DateTime(1996, 7, 11), new DateTime(1996, 08, 07), false, "Resende", "India", "7 Residency Road", 1, new TimeOnly(10, 30, 0)));
+            Orders.Add(new OrderData(10256, "HANAR", "Hanari Carnes", 13.97, new DateTime(1996, 7, 12), new DateTime(1996, 08, 07), true, "Paris", "France", "15 Rue de Rivoli", 3, new TimeOnly(9, 45, 0)));
+        }
+        return Orders;
+    }
+
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipName { get; set; }
+    public double? Freight { get; set; }
+    public DateTime? OrderDate { get; set; }
+    public DateTime? ShippedDate { get; set; }
+    public bool? IsVerified { get; set; }
+    public string? ShipCity { get; set; }
+    public string ShipCountry { get; set; }
+    public string ShipAddress { get; set; }
+    public int EmployeeID { get; set; }
+    public TimeOnly? OrderTime { get; set; }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhJMLWbrwBsJFQa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+> To learn more about the available templates in the DropDownList component, check the [documentation](https://blazor.syncfusion.com/documentation/dropdown-list/templates).
+
 ### Render ComboBox component in edit form 
 
 The Syncfusion Blazor DataGrid allows you to render a ComboBox component within the Grid's edit form for a specific column. This feature is especially valuable when you need to provide a drop-down selection with auto-suggestions for data entry.
@@ -1588,4 +1723,216 @@ public class OrderData
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BNVpWVMQfcIDGLDJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+### Render TimePicker component in edit form
+
+The Syncfusion Blazor DataGrid allows you to render a TimePicker component within the Grid’s edit form for a specific column. This feature is especially valuable when you need to provide a time input, such as appointment times, event schedules, or any other time-related data for editing in the Grid.
+
+To render a TimePicker in the edit form, you need to define an [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) in the GridColumn. The `EditTemplate` property specifies the cell edit template that used as an editor for a particular column. It can accept either a template string or an HTML element ID.
+
+The following example demonstrates how to render a TimePicker component in the **OrderDate** column of the Syncfusion Grid.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@page "/"
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Calendars
+@using BlazorApp1.Data
+
+<SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
+    <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true})" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required=true})" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" EditType="EditType.DropDownEdit" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="hh:mm tt" DefaultValue="DateTime.Now" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.DateTime">
+            <EditTemplate>
+                <SfTimePicker TValue="DateTime?" @bind-Value="@((context as OrderData).OrderDate)"></SfTimePicker>
+            </EditTemplate>
+        </GridColumn>
+    </GridColumns>
+</SfGrid>
+@code {
+    public List<OrderData> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }
+}
+
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData() { }
+
+    public OrderData(int OrderID, string CustomerID, string ShipName, double Freight, DateTime? OrderDate, DateTime? ShippedDate, bool? IsVerified, string ShipCity, string ShipCountry, string ShipAddress, int employeeID, TimeOnly? OrderTime, string CustomerNumber)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;
+        this.ShipName = ShipName;
+        this.Freight = Freight;
+        this.OrderDate = OrderDate;
+        this.ShippedDate = ShippedDate;
+        this.IsVerified = IsVerified;
+        this.ShipCity = ShipCity;
+        this.ShipCountry = ShipCountry;
+        this.ShipAddress = ShipAddress;
+        this.EmployeeID = employeeID;
+        this.OrderTime = OrderTime;
+        this.CustomerNumber = CustomerNumber;
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        {
+            Orders.Add(new OrderData(10248, "VINET", "Vins et alcools Chevalier", 32.38, new DateTime(1996, 7, 4, 9, 30, 0), new DateTime(1996, 08, 07), true, "Reims", "France", "12 Rue des Fleurs", 1, new TimeOnly(9, 30, 0), "9755378589"));
+            Orders.Add(new OrderData(10249, "TOMSP", "Toms Spezialitäten", 11.61, new DateTime(1996, 7, 5, 10, 0, 0), new DateTime(1996, 08, 07), false, "Münster", "Germany", "45 Straße der Nationen", 2, new TimeOnly(10, 0, 0), "9876543210"));
+            Orders.Add(new OrderData(10250, "HANAR", "Hanari Carnes", 65.83, new DateTime(1996, 7, 6, 14, 15, 0), new DateTime(1996, 08, 07), true, "Rio de Janeiro", "India", "89 MG Road", 3, new TimeOnly(14, 15, 0), "9123456789"));
+            Orders.Add(new OrderData(10251, "VINET", "Vins et alcools Chevalier", 41.34, new DateTime(1996, 7, 7, 11, 45, 0), new DateTime(1996, 08, 07), false, "Lyon", "France", "23 Rue Victor Hugo", 4, new TimeOnly(11, 45, 0), "9012345678"));
+            Orders.Add(new OrderData(10252, "SUPRD", "Suprêmes délices", 151.30, new DateTime(1996, 7, 8, 13, 0, 0), new DateTime(1996, 08, 07), true, "Charleroi", "Belgium", "78 Rue de l'Industrie", 5, new TimeOnly(13, 0, 0), "8888888888"));
+            Orders.Add(new OrderData(10253, "HANAR", "Hanari Carnes", 58.17, new DateTime(1996, 7, 9, 16, 30, 0), new DateTime(1996, 08, 07), false, "Bern", "Switzerland", "5 Bahnhofstrasse", 6, new TimeOnly(16, 30, 0), "7777777777"));
+            Orders.Add(new OrderData(10254, "CHOPS", "Chop-suey Chinese", 22.98, new DateTime(1996, 7, 10, 8, 0, 0), new DateTime(1996, 08, 07), true, "Genève", "Switzerland", "12 Rue de Mont Blanc", 7, new TimeOnly(8, 0, 0), "6666666666"));
+            Orders.Add(new OrderData(10255, "VINET", "Vins et alcools Chevalier", 148.33, new DateTime(1996, 7, 11, 10, 30, 0), new DateTime(1996, 08, 07), false, "Resende", "India", "7 Residency Road", 8, new TimeOnly(10, 30, 0), "9999999999"));
+            Orders.Add(new OrderData(10256, "HANAR", "Hanari Carnes", 13.97, new DateTime(1996, 7, 12, 9, 45, 0), new DateTime(1996, 08, 07), true, "Paris", "France", "15 Rue de Rivoli", 9, new TimeOnly(9, 45, 0), "5555555555"));
+        }
+        return Orders;
+    }
+
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipName { get; set; }
+    public double? Freight { get; set; }
+    public DateTime? OrderDate { get; set; }
+    public DateTime? ShippedDate { get; set; }
+    public bool? IsVerified { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipCountry { get; set; }
+    public string ShipAddress { get; set; }
+    public int EmployeeID { get; set; }
+    public TimeOnly? OrderTime { get; set; }
+    public string CustomerNumber { get; set; } 
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLJiLsFKiBkUUQg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+### Render MultiSelect component in edit form
+
+The Syncfusion Blazor DataGrid allows you to render a MultiSelect component within the Grid’s edit form, enabling you to select multiple values from a dropdown list when editing a specific column. This feature is particularly useful when you need to handle situations where multiple selections are required for a column.
+
+To render a TimePicker in the edit form, you need to define an [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) in the GridColumn. The `EditTemplate` property specifies the cell edit template that used as an editor for a particular column. It can accept either a template string or an HTML element ID.
+
+The following example demonstrates how to render a MultiSelect component in the ShipCity column of the Syncfusion Grid:
+
+### Render RichTextEditor component in edit form
+
+The Syncfusion Grid allows you to render the RichTextEditor component within the edit form. This feature is valuable when you need to format and style text content using various formatting options such as bold, italic, underline, bullet lists, numbered lists, and more during editing a specific column.
+
+To render a RichTextEditor in the edit form, you need to define an [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) in the GridColumn. The `EditTemplate` property specifies the cell edit template that used as an editor for a particular column. It can accept either a template string or an HTML element ID.
+
+Additionally, you need set the [AllowTextWrap]() property of the corresponding grid column to **true**. By enabling this property, the rich text editor component will automatically adjust its width and wrap the text content to fit within the boundaries of the column.
+
+The following example demonstrates how to render a RichTextEditor component in the ShipAddress column of the Syncfusion Grid. 
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@page "/"
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.RichTextEditor
+@using BlazorApp1.Data
+
+<SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
+    <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="@Syncfusion.Blazor.Grids.EditMode.Normal"></GridEditSettings>
+    <GridColumns>
+    <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true})" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID"   Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText=" Order Date" EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="100" Type="ColumnType.Date"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipAddress) HeaderText="Ship Address" Width="150" DisableHtmlEncode=false>
+            <EditTemplate>
+                <SfRichTextEditor ID="ShipAddress" @bind-value="@((context as OrderData).ShipAddress)" />
+            </EditTemplate>
+        </GridColumn> 
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<OrderData> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData() { }
+
+    public OrderData(int OrderID, string CustomerID, string ShipName, double Freight, DateTime? OrderDate, DateTime? ShippedDate, bool? IsVerified, string ShipCity, string ShipCountry, string ShipAddress, int employeeID, TimeOnly? OrderTime)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;
+        this.ShipName = ShipName;
+        this.Freight = Freight;
+        this.OrderDate = OrderDate;
+        this.ShippedDate = ShippedDate;
+        this.IsVerified = IsVerified;
+        this.ShipCity = ShipCity;
+        this.ShipCountry = ShipCountry;
+        this.ShipAddress = ShipAddress;
+        this.EmployeeID = employeeID;
+        this.OrderTime = OrderTime;
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        {
+            Orders.Add(new OrderData(10248, "VINET", "Vins et alcools Chevalier", 32.38, new DateTime(1996, 7, 4), new DateTime(1996, 08, 07), true, "Reims", "France", "12 Rue des Fleurs", 1, new TimeOnly(9, 30, 0)));
+            Orders.Add(new OrderData(10249, "TOMSP", "Toms Spezialitäten", 11.61, new DateTime(1996, 7, 5), new DateTime(1996, 08, 07), false, "Münster", "Germany", "45 Straße der Nationen", 2, new TimeOnly(10, 0, 0)));
+            Orders.Add(new OrderData(10250, "HANAR", "Hanari Carnes", 65.83, new DateTime(1996, 7, 6), new DateTime(1996, 08, 07), true, "Rio de Janeiro", "India", "89 MG Road", 3, new TimeOnly(14, 15, 0)));
+            Orders.Add(new OrderData(10251, "VINET", "Vins et alcools Chevalier", 41.34, new DateTime(1996, 7, 7), new DateTime(1996, 08, 07), false, "Lyon", "France", "23 Rue Victor Hugo", 1, new TimeOnly(11, 45, 0)));
+            Orders.Add(new OrderData(10252, "SUPRD", "Suprêmes délices", 151.30, new DateTime(1996, 7, 8), new DateTime(1996, 08, 07), true, "Charleroi", "Belgium", "78 Rue de l'Industrie", 2, new TimeOnly(13, 0, 0)));
+            Orders.Add(new OrderData(10253, "HANAR", "Hanari Carnes", 58.17, new DateTime(1996, 7, 9), new DateTime(1996, 08, 07), false, "Bern", "Switzerland", "5 Bahnhofstrasse", 3, new TimeOnly(16, 30, 0)));
+            Orders.Add(new OrderData(10254, "CHOPS", "Chop-suey Chinese", 22.98, new DateTime(1996, 7, 10), new DateTime(1996, 08, 07), true, "Genève", "Switzerland", "12 Rue de Mont Blanc", 2, new TimeOnly(8, 0, 0)));
+            Orders.Add(new OrderData(10255, "VINET", "Vins et alcools Chevalier", 148.33, new DateTime(1996, 7, 11), new DateTime(1996, 08, 07), false, "Resende", "India", "7 Residency Road", 1, new TimeOnly(10, 30, 0)));
+            Orders.Add(new OrderData(10256, "HANAR", "Hanari Carnes", 13.97, new DateTime(1996, 7, 12), new DateTime(1996, 08, 07), true, "Paris", "France", "15 Rue de Rivoli", 3, new TimeOnly(9, 45, 0)));
+        }
+        return Orders;
+    }
+
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipName { get; set; }
+    public double? Freight { get; set; }
+    public DateTime? OrderDate { get; set; }
+    public DateTime? ShippedDate { get; set; }
+    public bool? IsVerified { get; set; }
+    public string? ShipCity { get; set; }
+    public string ShipCountry { get; set; }
+    public string ShipAddress { get; set; }
+    public int EmployeeID { get; set; }
+    public TimeOnly? OrderTime { get; set; }
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Render Upload component in edit form
+
+The Syncfusion Grid allows you to render an Upload component within the Grid’s edit form. This feature is especially valuable when you need to upload and manage files or images in a specific column during data editing.
+
+To render a RichTextEditor in the edit form, you need to define an [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) in the GridColumn. The `EditTemplate` property specifies the cell edit template that used as an editor for a particular column. It can accept either a template string or an HTML element ID.
+
+The following example demonstrates how to render a Upload component in the Order Image column of the Syncfusion Grid. 
 
