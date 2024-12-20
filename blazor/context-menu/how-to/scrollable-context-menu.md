@@ -9,9 +9,9 @@ documentation: ug
 
 # Render Scrollable Context Menu in Blazor ContextMenu Component
 
-To enable scrolling for the Context Menu, use the [EnableScrolling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfContextMenu-1.html#Syncfusion_Blazor_Navigations_SfContextMenu_1_EnableScrolling) property to manage the overflow behavior of menu items by enabling or disabling scroll functionality. This is especially useful when dealing with a large number of menu items that exceed the viewport height, ensuring the context menu remains accessible without affecting the page layout.
+To enable scrolling for the Context Menu, use the `EnableScrolling` property to manage the overflow behavior of menu items by enabling or disabling scroll functionality. This is especially useful when dealing with a large number of menu items that exceed the viewport height, ensuring the context menu remains accessible without affecting the page layout.
 
-To achieve this functionality, set the `EnableScrolling` property to `true`. Additionally, use the [`BeforeOpenCloseMenuEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuEvents-1.html#Syncfusion_Blazor_Navigations_MenuEvents_1_BeforeOpenCloseMenuEventArg.html) event to adjust the height of the menu's parent element, ensuring the scrollable area is applied correctly.
+To achieve this functionality, set the `EnableScrolling` property to `true`. Additionally, use the `BeforeOpenCloseMenuEventArgs` event to adjust the height of the menu's parent element, ensuring the scrollable area is applied correctly.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
