@@ -54,7 +54,7 @@ The Blazor carousel component is designed by considering [WAI-ARIA](https://www.
 
 ## Keyboard interaction
 
-All Carousel actions can be controlled using keyboard keys through the [`allowKeyboardInteraction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_AllowKeyboardInteraction) property, which is enabled by default. If you wish to disable the default keyboard interactions, you can set this property to `false`. This is particularly useful if the carousel contains input elements, as pressing the arrow keys might cause the carousel to move unexpectedly. By disabling keyboard interaction, the carousel remains static, allowing the user to focus on the input fields without any interruptions.
+All Carousel actions can be controlled using keyboard keys through the [`AllowKeyboardInteraction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_AllowKeyboardInteraction) property, which is enabled by default. If you wish to disable the default keyboard interactions, you can set this property to `false`. This is particularly useful if the carousel contains input elements, as pressing the arrow keys might cause the carousel to move unexpectedly. By disabling keyboard interaction, the carousel remains static, allowing the user to focus on the input fields without any interruptions.
 
 This control implements keyboard navigation support by following WAI-ARIA practices. Once focused on the active Carousel element, you can use the following key combinations to interact with the Carousel.
 
