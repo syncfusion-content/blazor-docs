@@ -987,8 +987,10 @@ In the following sample, the SfPager component is rendered on top of the grid. I
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Grids
 
-<SfPager @ref="Page" PageSize="@TakeValue" PageSizes=@pagesizes PageSizeChanged="PageSize"  NumericItemsCount=4 TotalItemsCount="@count" ShowAllInPageSizes="true" ItemClick="Click">
-</SfPager>
+<div @onkeydown=HandleKeyDown>
+    <SfPager @ref="Page" PageSize="@TakeValue"  PageSizes=@pagesizes PageSizeChanged="PageSize" NumericItemsCount=4 TotalItemsCount="@count" ShowAllInPageSizes="true" ItemClick="Click">
+    </SfPager>
+</div>
 
 @{
     var Data = GridData.Skip(SkipValue).Take(TakeValue).ToList();
@@ -1012,13 +1014,23 @@ In the following sample, the SfPager component is rendered on top of the grid. I
     public SfPager Page { get; set; }
     public List<int> pagesizes = new List<int> { 5, 10, 12, 20 };
 
-    public async Task Click(PagerItemClickEventArgs args)
+    public void HandleKeyDown(KeyboardEventArgs args) 
+    { 
+        if (args.Code == "Enter" || args.Key == "Enter")
+        {
+            var currentPage = Page.CurrentPage; 
+            SkipValue = (currentPage * Page.PageSize) - Page.PageSize;
+            TakeValue = Page.PageSize;
+        } 
+    }
+
+    public void Click(PagerItemClickEventArgs args)
     {
         SkipValue = (args.CurrentPage * Page.PageSize) - Page.PageSize;
         TakeValue = Page.PageSize;
     }
    
-    public async Task PageSize(PageSizeChangedArgs args)
+    public void PageSize(PageSizeChangedArgs args)
     {
         int page = Grid.PageSettings.CurrentPage;
         SkipValue = (page * Page.PageSize) - Page.PageSize;
@@ -1082,7 +1094,7 @@ In the following sample, the SfPager component is rendered on top of the grid. I
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNhJXsMiVRBvwccP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BthpChMvrRAWDWAS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > * Here, default pager action of the Grid component is disabled.
 > * During the paging action, the pager component triggers the below three events.

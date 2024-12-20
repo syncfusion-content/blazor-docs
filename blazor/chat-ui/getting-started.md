@@ -121,11 +121,15 @@ Add the Syncfusion Blazor Chat UI component in the **~/Pages/Index.razor** file.
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Chat UI component in your default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBzMLsWBOgIaxcg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chat UI Component](./images/chat-ui-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBfMLiHUEAVqRkp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Chat UI component in your default web browser.
+
+![Blazor Chat UI Component](./images/chat-ui-component.png)
 
 ## Configure messages and user
 
-You can use the `messages` property to add messages and the `user` property to configure the current user for the chat.
+You can use the [Messages](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_Messages) property to add messages and the [User](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_User) property to configure the current user for the chat.
 
 {% tabs %}
 {% highlight razor %}
@@ -158,4 +162,6 @@ You can use the `messages` property to add messages and the `user` property to c
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDrfsLCCBkezTLUV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chat UI default prompt](./images/default-messages.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLfWBixUbETBpmk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+![Blazor Chat UI default prompt](./images/default-messages.png)

@@ -11,11 +11,9 @@ documentation: ug
 
 ## Edit message
 
-You can use the `UpdateMessageAsync` public method to update the messages in the ChatUI to modify an existing message within the chat, useful for editing or correcting sent messages.
+You can use the [UpdateMessageAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_UpdateMessageAsync_Syncfusion_Blazor_InteractiveChat_ChatMessage_System_String_) public method to update the messages in the ChatUI to modify an existing message within the chat, useful for editing or correcting sent messages.
 
 ```cshtml
-
-@using Syncfusion.Blazor.InteractiveChat
 
 <div style="height: 400px; width: 400px;">
     <button @onclick="UpdateMessage" class="e-btn e-primary" style="margin-bottom: 10px">Update Message</button>
@@ -29,14 +27,14 @@ You can use the `UpdateMessageAsync` public method to update the messages in t
 
     private List<ChatMessage> ChatUserMessages = new List<ChatMessage>()
     {
-        new ChatMessage() { ID="msg1", Text = "Want to get coffee tomorrow?", Author = CurrentUserModel },
-        new ChatMessage() { Text = "Sure! What time?", Author = MichaleUserModel },
-        new ChatMessage() { Text = "How about 10 AM?", Author = CurrentUserModel }
+        new ChatMessage() { ID = "msg1", Text = "Hi, thinking of painting this weekend.", Author = CurrentUserModel },
+        new ChatMessage() { Text = "That’s fun! What will you paint?", Author = MichaleUserModel },
+        new ChatMessage() { Text = "Maybe landscapes.", Author = CurrentUserModel }
     };
 
     private async void UpdateMessage()
     {
-        await ChatUser.UpdateMessageAsync(new ChatMessage() { Text = "Want to get breakfast today?", Author = CurrentUserModel }, "msg1");
+        await ChatUser.UpdateMessageAsync(new ChatMessage() { Text = "Hi Michale, thinking of painting today.", Author = CurrentUserModel }, "msg1");
     }
 }
 
@@ -46,7 +44,7 @@ You can use the `UpdateMessageAsync` public method to update the messages in t
 
 ## Scroll to bottom
 
-You can use `ScrollToBottomAsync` public method to scroll the chat view to the latest message, ensuring users see the new content updated.
+You can use [ScrollToBottomAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfChatUI.html#Syncfusion_Blazor_InteractiveChat_SfChatUI_ScrollToBottomAsync) public method to scroll the chat view to the latest message, ensuring users see the new content updated.
 
 ```cshtml
 
