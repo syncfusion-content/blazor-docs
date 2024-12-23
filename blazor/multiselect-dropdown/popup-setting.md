@@ -9,6 +9,18 @@ documentation: ug
 
 # Popup Setting in MultiSelect
 
+## Popup resize
+
+You can dynamically adjust the size of the popup in the MultiSelect component by using the [AllowResize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_AllowResize) property. When enabled, users can resize the popup, improving visibility and control, with the resized dimensions being retained across sessions for a consistent user experience.
+
+{% highlight Razor %}
+
+{% include_relative code-snippet/popup-setting/resize.razor %}
+
+{% endhighlight %} 
+
+![Blazor MultiSelect with AllowResize property](./images/popup-setting/blazor_multiselect_resize.gif)
+
 ## Change the PopupHeight
 
 Use the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_PopupHeight) property to change the height of the popup. The default value of the `PopupHeight` is `300px`.
@@ -137,7 +149,7 @@ You can achieve this by binding the `resize` event in window and update the heig
 
 ## Programmatically opening and closing popup
 
-You can programmatically open and close the popup by accessing the `ShowPopupAsync()` and `HidePopupAsync()` methods through an instance of the multiselecr. Bind the click event of a button to these methods. When the button is clicked, it will trigger the respective method and open or close the popup.
+You can programmatically open and close the popup by accessing the `ShowPopupAsync()` and `HidePopupAsync()` methods through an instance of the multiselect. Bind the click event of a button to these methods. When the button is clicked, it will trigger the respective method and open or close the popup.
 
 {% highlight Razor %}
 

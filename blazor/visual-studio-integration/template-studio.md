@@ -7,23 +7,23 @@ component: Common
 documentation: ug
 ---
 
-# Syncfusion Blazor Template Studio
+# Syncfusion® Blazor Template Studio
 
-Syncfusion provides the Blazor Template Studio, which allows you to create a Syncfusion Blazor application with Syncfusion components. The Syncfusion Blazor app is created with the required component Syncfusion NuGet references, namespaces, styles, and component render code. The Template Studio provides an easy-to-use project wizard that walks you through the process of creating an application with Syncfusion components.
+Syncfusion® provides the Blazor Template Studio, which allows you to create a Syncfusion Blazor application with Syncfusion® components. The Syncfusion® Blazor app is created with the required component Syncfusion NuGet references, namespaces, styles, and component render code. The Template Studio provides an easy-to-use project wizard that walks you through the process of creating an application with Syncfusion® components.
 
 The steps below will assist you to create your **Syncfusion Blazor Application** through **Visual Studio 2022**:
 
-> **Note:** The Syncfusion Blazor Extensions for Visual Studio 2019 are available on Essential Studio release "20.3.0.56" and below.
+> **Note:** The Syncfusion® Blazor Extensions for Visual Studio 2019 are available on Essential Studio® release "20.3.0.56" and below.
 
 N> Before use the Syncfusion Blazor Project Template, check whether the Syncfusion Blazor Template Studio Extension installed or not in Visual Studio Extension Manager by clicking on the Extensions -> Manage Extensions -> Installed. If this extension not installed, install the extension by follow the steps from the [download and installation](https://blazor.syncfusion.com/documentation/visual-studio-integration/download-and-installation) help topic.
 
 1. Open Visual Studio 2022.
 
-2. To create a Syncfusion Blazor application, use either one of the following options:
+2. To create a Syncfusion® Blazor application, use either one of the following options:
 
      **Option 1**
 
-     Choose **Extension -> Syncfusion -> Essential Studio for Blazor -> Create New Syncfusion Project...** from the **Visual Studio menu**.
+     Choose **Extension -> Syncfusion -> Essential Studio® for Blazor -> Create New Syncfusion Project...** from the **Visual Studio menu**.
 
      ![CreateMenu](images/createmenu.png)
 
@@ -43,7 +43,7 @@ N> Before use the Syncfusion Blazor Project Template, check whether the Syncfusi
 
      **Project type section**
 
-     Choose one of the Syncfusion Blazor application types based on the version of the .NET SDK you are using.
+     Choose one of the Syncfusion® Blazor application types based on the version of the .NET SDK you are using.
 
     | .NET SDK version | Supported Syncfusion Blazor Application Type |
     | ---------------- | -------------------------------------------- |
@@ -82,7 +82,7 @@ N> Before use the Syncfusion Blazor Project Template, check whether the Syncfusi
 
      > **Note:** The Progressive Web Application will be enabled if .NET 6.0 version or higher is installed.
 
-5. Click either **Next** or the **Controls** tab. The Syncfusion Blazor components you can add to the application are listed.
+5. Click either **Next** or the **Controls** tab. The Syncfusion® Blazor components you can add to the application are listed.
 
      ![Controls Section](images/controlssection1.png)
 
@@ -122,13 +122,13 @@ N> Before use the Syncfusion Blazor Project Template, check whether the Syncfusi
 
      ![ProjectDetails](images/rightsideprojectdetails.png)
 
-8. Click **Create** button. The Syncfusion Blazor application has been created. The created Syncfusion Blazor app has the Syncfusion NuGet packages, styles, and the render code for the selected Syncfusion component.
+8. Click **Create** button. The Syncfusion® Blazor application has been created. The created Syncfusion® Blazor app has the Syncfusion NuGet packages, styles, and the render code for the selected Syncfusion® component.
 
      ![Readme](images/readme.png)
 
-9. The Syncfusion Blazor application configures with most recent Syncfusion Blazor NuGet packages version, selected style, namespaces, selected authentication, and component render code for Syncfusion components.
+9. The Syncfusion Blazor application configures with most recent Syncfusion Blazor NuGet packages version, selected style, namespaces, selected authentication, and component render code for Syncfusion® components.
 
-10. If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion license key to your application since Syncfusion introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion license key to your application. Refer to this [blog](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2.aspx) post for understanding the licensing changes introduced in Essential Studio.
+10. If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion® license key to your application since Syncfusion® introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio® release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion® license key to your application. Refer to this [blog](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2.aspx) post for understanding the licensing changes introduced in Essential Studio®.
 
 ## Authentication Configuration
 
@@ -324,7 +324,7 @@ We need to register the created application in Google Platform API Console for I
 
 ### Run application
 
-You can run the application and see the Syncfusion components you selected. Select a component to see component output.
+You can run the application and see the Syncfusion® components you selected. Select a component to see component output.
 
 ![Blazor Template output page](images/homepage.png)
 

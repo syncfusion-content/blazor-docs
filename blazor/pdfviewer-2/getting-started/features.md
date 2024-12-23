@@ -19,15 +19,15 @@ We have enhanced the performance in rendering, scrolling, zooming, panning, and 
 
 ## Elimination of Service Dependency
 
-The old PDF viewer component required a separate [Service URL](https://blazor.syncfusion.com/documentation/pdfviewer/getting-started/web-assembly-application) to load the document. However, in the [NextGen PDF Viewer](https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/web-assembly-application), we have eliminated the need for a service URL. Now, the document can be loaded offline without making a service call. 
+The old PDF viewer component required a separate [Service URL](https://blazor.syncfusion.com/documentation/pdfviewer/getting-started/web-assembly-application) to load the document. However, in the [PDF Viewer](https://blazor.syncfusion.com/documentation/pdfviewer-2/getting-started/web-assembly-application), we have eliminated the need for a service URL. Now, the document can be loaded offline without making a service call. 
 
 ## Common Package
 
-In the previous component, we had different packages for different operating systems such as [Windows](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.Windows), [Linux](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.Linux), and [OSX](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.OSX). In the [NextGen](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer) version, we have introduced common packages that work across all environments. 
+In the previous component, we had different packages for different operating systems such as [Windows](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.Windows), [Linux](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.Linux), and [OSX](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.OSX). In the [SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer) version, we have introduced common packages that work across all environments. 
 
 ## Reduced Server Calls
 
-The old PDF viewer component required numerous C# calls to retrieve document information such as text on the page, hyperlinks, and page images. In the NextGen PDF Viewer, we have shifted these functionalities to the client side, resulting in improved performance. 
+The old PDF viewer component required numerous C# calls to retrieve document information such as text on the page, hyperlinks, and page images. In the PDF Viewer, we have shifted these functionalities to the client side, resulting in improved performance. 
 
 ## Some of the key features are listed below
 
@@ -79,7 +79,7 @@ The table below provides a list of supported and non-supported features on both 
 
 N> Enable desktop mode on mobile devices using the [EnableDesktopMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableDesktopMode) property to view the toolbar as in desktop.
 
-N> Syncfusion provides the SfPdfViewer component for both Blazor Server and Blazor WebAssembly applications.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> provides the SfPdfViewer component for both Blazor Server and Blazor WebAssembly applications.
 <br />For both **Blazor WebAssembly App** and **Blazor Server App** use [SfPdfViewer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PdfViewer.SfPdfViewer.html) component in Syncfusion.Blazor.SfPdfViewer NuGet package. This component will not requires server-side processing to render the PDF files through web service.
 <br/>* For Windows, Linux and Mac (OSX) uses the sample Nuget [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer)
 
