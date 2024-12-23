@@ -30,7 +30,7 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available
 </tr>
 
 <tr>
-<td><p>All components except PDF Viewer, PDF Viewer(NextGen) & Document Editor</p></td>
+<td><p>All components except PDF Viewer (Classic), PDF Viewer & Document Editor</p></td>
 <td>
 
 {% highlight cshtml %}
@@ -41,7 +41,7 @@ https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor.min
 </tr>
 
 <tr>
-<td><p>PDF Viewer</p></td>
+<td><p>PDF Viewer (Classic)</p></td>
 <td>
 
 {% highlight cshtml %}
@@ -63,7 +63,7 @@ https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor-doc
 </tr>
 
 <tr>
-<td><p>PDF Viewer(NextGen)</p></td>
+<td><p>PDF Viewer</p></td>
 <td>
 
 {% highlight cshtml %}
@@ -81,7 +81,7 @@ https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor-sfp
 </head>
 ```
 
-If you are using `PDF Viewer`,`PDF Viewer(NextGen)` or `DocumentEditor`, ensure to add additional script references as follows,
+If you are using `PDF Viewer (Classic)`,`PDF Viewer` or `DocumentEditor`, ensure to add additional script references as follows,
 
 ```html
 <head>
@@ -96,13 +96,13 @@ In addition to above, Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor co
 
 | Component | CDN Script Reference |
 | --- | --- |
-|  All components except PDF Viewer, PDF Viewer(NextGen) & Document Editor | https://cdn.syncfusion.com/blazor/syncfusion-blazor.min.js |
-| PDF Viewer | https://cdn.syncfusion.com/blazor/syncfusion-blazor-pdfviewer.min.js |
+|  All components except PDF Viewer (Classic), PDF Viewer & Document Editor | https://cdn.syncfusion.com/blazor/syncfusion-blazor.min.js |
+| PDF Viewer (Classic)| https://cdn.syncfusion.com/blazor/syncfusion-blazor-pdfviewer.min.js |
 | Document Editor | https://cdn.syncfusion.com/blazor/syncfusion-blazor-documenteditor.min.js |
-| PDF Viewer(NextGen) | https://cdn.syncfusion.com/blazor/syncfusion-blazor-sfpdfviewer.min.js |
+| PDF Viewer | https://cdn.syncfusion.com/blazor/syncfusion-blazor-sfpdfviewer.min.js |
 
 
-N> To add custom PDF Viewer(NextGen) script file in your application, refer [How to refer SfPdfViewer script file in application](../pdfviewer-2/how-to/refer-sfpdfviewer-script-in-application).
+N> To add custom PDF Viewer script file in your application, refer [How to refer SfPdfViewer script file in application](../pdfviewer-2/how-to/refer-sfpdfviewer-script-in-application).
 
 ## Static web assets
 
@@ -125,7 +125,7 @@ N> For **Blazor Web App with interaction mode as  Auto & Blazor WASM App**, call
     </head>
     ```
 
-* If you're using the PDF viewer, PDF Viewer(NextGen) or Document Editor component, use the code below to refer to script from static web assets.
+* If you're using the PDF viewer (Classic), PDF Viewer or Document Editor component, use the code below to refer to script from static web assets.
 
     ```html
     <head>

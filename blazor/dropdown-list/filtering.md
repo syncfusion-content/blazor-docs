@@ -37,6 +37,19 @@ The below code demonstrates the filtering functionality with [ODataAdaptor](http
 
 ![Blazor DropdownList with Remote Data filtering](./images/filtering/blazor_dropdown_remote-data.png)
 
+
+## Debounce delay
+
+You can use the [DebounceDelay](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_DebounceDelay) property for filtering, enabling you to set a delay in milliseconds. This functionality helps reduce the frequency of filtering as you type, enhancing performance and responsiveness for a smoother user experience.By default, a DebounceDelay of 300ms is set. If you wish to disable this feature entirely, you can set it to 0ms.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/filtering/debounce-delay.razor %}
+
+{% endhighlight %}
+
+![Blazor DropdownList with DebounceDelay in filtering](./images/filtering/blazor_dropdownlist_debounce-delay.gif)
+
 ## Filter type
 
 You can use [FilterType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_FilterType) property to specify on which filter type needed to be considered on the search action of the component. The available `FilterType` and its supported data types are:
