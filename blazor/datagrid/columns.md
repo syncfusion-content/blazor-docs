@@ -9,7 +9,7 @@ documentation: ug
 
 # Columns in Blazor DataGrid Component
 
-In Syncfusion Blazor DataGrid, Columns are fundamental elements that play a pivotal role in organizing and displaying data within your application. They serve as the building blocks for data presentation, allowing you to specify what data fields to show, how to format and style them, and how to enable various interactions within the grid.
+In Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, Columns are fundamental elements that play a pivotal role in organizing and displaying data within your application. They serve as the building blocks for data presentation, allowing you to specify what data fields to show, how to format and style them, and how to enable various interactions within the grid.
 
 ## Column types
 
@@ -499,7 +499,7 @@ Type="ColumnType.Date" Format="dMM/dd/yyyy hh:mm:ss tt" | 04/07/1996 12:00 AM
 
 ### Format the date column based on localization
 
-In Syncfusion Blazor Grid, you can format date columns to match the user’s locale settings by configuring the application’s localization. By setting up the application culture and using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Format) property in Grid columns, you can display dates in a format appropriate for the user’s region.
+In Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid, you can format date columns to match the user’s locale settings by configuring the application’s localization. By setting up the application culture and using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Format) property in Grid columns, you can display dates in a format appropriate for the user’s region.
 
 **Enabling Localization in a Blazor Application**
 
@@ -511,7 +511,7 @@ To enable localization in your Blazor application:
 
 2. **Register Locale Files:**
 
-    Follow the localization setup guidelines provided in the [Syncfusion Localization Documentation](https://blazor.syncfusion.com/documentation/common/localization) to register and configure the locale files in your project.
+    Follow the localization setup guidelines provided in the [Syncfusion<sup style="font-size:70%">&reg;</sup> Localization Documentation](https://blazor.syncfusion.com/documentation/common/localization) to register and configure the locale files in your project.
 
 3. **Set the Application Culture:**
 
@@ -523,7 +523,7 @@ To enable localization in your Blazor application:
     CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo("es-AR");
     ```
 
-Once localization is enabled, you can specify a custom date format for each date column in the Syncfusion Blazor Grid by using the `Format` property. This property allows you to define how dates will be displayed, enhancing user experience by ensuring date formats are familiar to the user.
+Once localization is enabled, you can specify a custom date format for each date column in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid by using the `Format` property. This property allows you to define how dates will be displayed, enhancing user experience by ensuring date formats are familiar to the user.
 
 In the example below, the date format is set to **yyyy-MMM-dd** to align with the Spanish culture configured in the application.
 
@@ -610,11 +610,11 @@ namespace LocalizationSample.Client
 
 ![Format the date column based on localization](./images/blazor-datagrid-format-localization.png)
 
-> [Syncfusion GitHub Sample for Blazor Localization](https://github.com/SyncfusionExamples/blazor-localization)
+> [Syncfusion<sup style="font-size:70%">&reg;</sup> GitHub Sample for Blazor Localization](https://github.com/SyncfusionExamples/blazor-localization)
 
 ### Format template column value
 
-In the Syncfusion Blazor DataGrid, you have the ability to customize the display of data in a column through the use of template columns. Formatting template column values is essential for enhancing the visual representation of data in a web application. It allows the customization of the appearance of specific column data, such as dates and numbers, to improve readability and user understanding.
+In the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, you have the ability to customize the display of data in a column through the use of template columns. Formatting template column values is essential for enhancing the visual representation of data in a web application. It allows the customization of the appearance of specific column data, such as dates and numbers, to improve readability and user understanding.
 
 To illustrate how to format a template column value, consider the following example where the OrderDate column is formatted to display dates in the ‘dd/MMM/yyyy’ format.
 
@@ -717,7 +717,7 @@ public class OrderData
 
 ### Custom formatting
 
-Syncfusion Blazor DataGrid allows you to customize the formatting of data in the grid columns. You can apply custom formats to numeric or date columns to display data in a specific way according to the requirements. To apply custom formatting to grid columns in Syncfusion Grid, you can use the format property. Here’s an example of how you can use custom formatting for numeric and date columns:
+Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to customize the formatting of data in the grid columns. You can apply custom formats to numeric or date columns to display data in a specific way according to the requirements. To apply custom formatting to grid columns in Syncfusion<sup style="font-size:70%">&reg;</sup> Grid, you can use the format property. Here’s an example of how you can use custom formatting for numeric and date columns:
 
 In the below example, the numberFormatOptions object is used as the format property for the ‘Freight’ column to apply a custom numeric format with four decimal places. Similarly, the dateFormatOptions object is used as the format property for the ‘OrderDate’ column to apply a custom date format displaying the date in the format of day-of-the-week, month abbreviation, day, and 2-digit year (e.g. Sun, May 8, 23).
 
