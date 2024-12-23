@@ -9,17 +9,21 @@ documentation: ug
 
 # Crosshair and Trackball in Blazor Charts Component
 
-Inspect or target any data point on mouse move or touch with the help of crosshair. A thin horizontal line and vertical line indicate the data point with the information displayed in an interactive tooltip. The crosshair can be enabled using the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCrosshairSettings.html#Syncfusion_Blazor_Charts_ChartCrosshairSettings_Enable) property in the [ChartCrosshairSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCrosshairSettings.html).
+Inspect or target any data point on mouse move or touch with the help of crosshair. A thin horizontal line and vertical line indicate the data point with the information displayed in an interactive tooltip. The crosshair can be enabled using the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCrosshairSettings.html#Syncfusion_Blazor_Charts_ChartCrosshairSettings_Enable) property in the [ChartCrosshairSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCrosshairSettings.html). Enabling the `SnapToData` property in the crosshair aligns it with the nearest data point instead of following the exact mouse position.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime"></ChartPrimaryXAxis>
-
-    <ChartCrosshairSettings Enable="true"></ChartCrosshairSettings>
-
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime">
+        <ChartAxisCrosshairTooltip Enable="true"></ChartAxisCrosshairTooltip>
+    </ChartPrimaryXAxis>
+    <ChartPrimaryYAxis Minimum="2" Maximum="5">
+        <ChartAxisCrosshairTooltip Enable="true"></ChartAxisCrosshairTooltip>
+    </ChartPrimaryYAxis>
+    <ChartCrosshairSettings Enable="true" SnapToData="true" DashArray="5,5"></ChartCrosshairSettings>
+    <ChartTooltipSettings Enable="true" Shared="true" Format="<b>${point.x}</b> : ${point.y}" Header="" EnableMarker="false"></ChartTooltipSettings>
     <ChartSeriesCollection>
         <ChartSeries XName="X" YName="Y" DataSource="@SalesDetails" Type="ChartSeriesType.Line">
         </ChartSeries>
@@ -46,7 +50,7 @@ Inspect or target any data point on mouse move or touch with the help of crossha
 
 ```
 
-![Crosshair in Blazor Line Chart](images/crosshair/blazor-line-chart-with-crosshair.png)
+![SnapToData Crosshair in Blazor Line Chart](images/crosshair/blazor-line-chart-with-crosshair.png)
 
 ## Enable Tooltip
 
