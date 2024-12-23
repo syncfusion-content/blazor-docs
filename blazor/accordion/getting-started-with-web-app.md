@@ -60,9 +60,9 @@ Import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Navigations` namespace .
 
 Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor Web App.
 
-If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, you need to register the Syncfusion® Blazor service in both **~/Program.cs** files of your Blazor Web App.
+If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, you need to register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in both **~/Program.cs** files of your Blazor Web App.
 
-If the **Interactive Render Mode** is set to `Server`, your project will contain a single **~/Program.cs** file. So, you should register the Syncfusion® Blazor Service only in that **~/Program.cs** file.
+If the **Interactive Render Mode** is set to `Server`, your project will contain a single **~/Program.cs** file. So, you should register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service only in that **~/Program.cs** file.
 
 If **Interactive Render Mode** as `WebAssembly` or `Auto`,
 
@@ -146,7 +146,6 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Accordion compon
 | Per page/component | WebAssembly or Auto | @rendermode InteractiveAuto |
 |  | Server | @rendermode InteractiveServer |
 |  | None | --- |
-
 
 N> If an **Interactivity Location** is set to `Global` and the **Render Mode** is set to `Auto` or `WebAssembly` or `Server`, the render mode is configured in the `App.razor` file by default.
 
