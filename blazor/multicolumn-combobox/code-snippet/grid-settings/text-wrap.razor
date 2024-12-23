@@ -1,0 +1,42 @@
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.MultiColumnComboBox
+
+<SfMultiColumnComboBox @bind-Value="@Value" DataSource="@Employees" Width="300px" PopupWidth="600px" ValueField="Name" TextField="Name" Placeholder="Select an employee" EnableTextWrap="true" TextWrapElement="TextWrapElement.Header" TextOverflowMode="TextOverflowMode.EllipsisWithTooltip">
+        <MultiColumnComboboxColumns>
+        <MultiColumnComboboxColumn Field="Name" Header="Name of the employee" Width="150"></MultiColumnComboboxColumn>
+        <MultiColumnComboboxColumn Field="Position" Header="Position" Width="100" Format="C2"></MultiColumnComboboxColumn>
+        <MultiColumnComboboxColumn Field="Department" Header="Department" Width="100"></MultiColumnComboboxColumn>
+        <MultiColumnComboboxColumn Field="Salary" Format="c2" Header="Salary" Width="100"></MultiColumnComboboxColumn>
+        <MultiColumnComboboxColumn Field="Rating" Header="Rating" Width="100"></MultiColumnComboboxColumn>
+        </MultiColumnComboboxColumns>
+</SfMultiColumnComboBox>
+
+@code {
+    public class Employee
+    {
+        public string Name { get; set; }
+        public string Position { get; set; }
+        public string Department { get; set; }
+        public decimal Salary { get; set; }
+        public double Rating { get; set; }
+    }
+    private List<Employee> Employees = new List<Employee>();
+    private string Value { get; set; } = "Jonathan Alexander Smith";
+    protected override Task OnInitializedAsync()
+    {
+    Employees = new List<Employee>
+    {
+        new Employee { Name = "Jonathan Alexander Smith", Position = "Senior Software Engineer", Department = "Engineering Department", Salary = 105000m, Rating = 4.8 },
+        new Employee { Name = "Sophia Elizabeth Johnson", Position = "Lead Product Designer", Department = "Design & UX Team", Salary = 95000m, Rating = 4.7 },
+        new Employee { Name = "Alexander James Thompson", Position = "Chief Marketing Officer", Department = "Marketing Division", Salary = 125000m, Rating = 4.9 },
+        new Employee { Name = "Madeline Grace Harris", Position = "Project Manager for Enterprise Solutions", Department = "Project Management Office", Salary = 85000m, Rating = 4.5 },
+        new Employee { Name = "Christopher Daniel Roberts", Position = "Data Scientist with AI Expertise", Department = "Data Analytics & AI", Salary = 115000m, Rating = 4.6 },
+        new Employee { Name = "Rebecca Olivia Martinez", Position = "Human Resources Manager", Department = "Human Resources & Recruiting", Salary = 77000m, Rating = 4.3 },
+        new Employee { Name = "James Benjamin Lee", Position = "Senior Web Developer and Full Stack Specialist", Department = "Engineering & Development", Salary = 98000m, Rating = 4.7 },
+        new Employee { Name = "Chloe Isabelle Cooper", Position = "Product Marketing Manager", Department = "Product Strategy & Marketing", Salary = 87000m, Rating = 4.4 },
+        new Employee { Name = "William Joseph Anderson", Position = "Senior IT Infrastructure Architect", Department = "IT Infrastructure & Operations", Salary = 102000m, Rating = 4.6 },
+        new Employee { Name = "Charlotte Emily Carter", Position = "Customer Success Lead for Global Clients", Department = "Customer Success Team", Salary = 92000m, Rating = 4.8 },
+    };
+        return base.OnInitializedAsync();
+    }
+}

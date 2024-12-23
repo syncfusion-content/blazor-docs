@@ -9,7 +9,7 @@ documentation: ug
 
 # Headers in Blazor DataGrid component
 
-The Syncfusion Blazor DataGrid component provides a comprehensive set of options to customize and manage headers efficiently. Headers play a crucial role in organizing and presenting data effectively in the grid.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component provides a comprehensive set of options to customize and manage headers efficiently. Headers play a crucial role in organizing and presenting data effectively in the grid.
 
 ## Header text
 
@@ -552,11 +552,11 @@ You can use CSS to override the default height of the **.e-grid .e-headercell** 
 
 ## Change header text dynamically
 
-The Syncfusion Grid component provides a way to modify the header text of a corresponding column in real-time based on events or other events. This feature can be useful in various scenarios, such as displaying a custom header text for a specific column or updating the header text dynamically based on input. By allowing for dynamic changes to the header text, the Grid provides a more flexible and customizable experience.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component provides a way to modify the header text of a corresponding column in real-time based on events or other events. This feature can be useful in various scenarios, such as displaying a custom header text for a specific column or updating the header text dynamically based on input. By allowing for dynamic changes to the header text, the Grid provides a more flexible and customizable experience.
 
 **Using Event**
 
-To modify the header text of a corresponding column dynamically, you can use the [HeaderCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_HeaderCellInfo) event provided by the Syncfusion Grid. This event is triggered for each header cell element rendered in the Grid.
+To modify the header text of a corresponding column dynamically, you can use the [HeaderCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_HeaderCellInfo) event provided by the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid. This event is triggered for each header cell element rendered in the Grid.
 
 When the `HeaderCellInfo` event is triggered, it provides a **HeaderCellInfoEventArgs** object as a parameter. This object contains the following properties:
 
@@ -922,7 +922,7 @@ This is demonstrated in the following sample:
 
 ## Custom tooltip for header
 
-Custom tooltips for headers provide additional information when hovering over a column header in the Syncfusion DataGrid. This can be useful in situations where there is not enough space to display all of the information related to a column, or when there is additional context that may be helpful.
+Custom tooltips for headers provide additional information when hovering over a column header in the Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid. This can be useful in situations where there is not enough space to display all of the information related to a column, or when there is additional context that may be helpful.
 
 To enable custom tooltips for headers in the Grid, you can use the [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderTemplate) feature by rendering the [SfTooltip](https://blazor.syncfusion.com/documentation/tooltip/getting-started) components within the template.
 
@@ -1322,7 +1322,7 @@ public class OrderDetails
 
 ## How to refresh header 
 
-The refresh header feature in the Syncfusion Blazor DataGrid allows you to update the header section of the grid whenever changes are made to the grid's columns. This feature is useful when you want to reflect changes in the header immediately, such as modifying the column header text, width, or alignment.
+The refresh header feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to update the header section of the grid whenever changes are made to the grid's columns. This feature is useful when you want to reflect changes in the header immediately, such as modifying the column header text, width, or alignment.
 
 To use the refresh header feature, you can call the [RefreshHeaderAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RefreshHeaderAsync) method of the DataGrid component. This method updates the grid header with the latest changes made to the columns.
 

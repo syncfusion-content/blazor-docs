@@ -189,7 +189,9 @@ public class EmployeeDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZrpMMVXzoBzmrze?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBzshXniHTpBqBz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 
 ## Render other components in a column
 
@@ -197,7 +199,7 @@ The column template has options to render a custom component in a DataGrid colum
 
 ### Render LineChart component in a column
 
-The [LineChart](https://blazor.syncfusion.com/documentation/sparkline/getting-started-webapp) component of Syncfusion provides an elegant way to represent and compare data over time. It displays data points connected by straight line segments to visualize trends in data.
+The [LineChart](https://blazor.syncfusion.com/documentation/sparkline/getting-started-webapp) component of Syncfusion<sup style="font-size:70%">&reg;</sup> provides an elegant way to represent and compare data over time. It displays data points connected by straight line segments to visualize trends in data.
 
 In the following example, we rendered the Sparkline Chart component in the Grid column by defining the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property.
 
@@ -482,7 +484,7 @@ public class EmployeeDetails
 
 ### Render ProgressBar component in a column
 
-The Syncfusion Grid component supports rendering the [Progress Bar](https://blazor.syncfusion.com/documentation/progress-bar/getting-started-webapp) component within a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. Displaying the `Progress Bar` component in a grid column allows users to visually track the progress of tasks or operations associated with specific records. This feature is particularly useful for applications involving processes such as data loading, task completion, or other progressive activities.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component supports rendering the [Progress Bar](https://blazor.syncfusion.com/documentation/progress-bar/getting-started-webapp) component within a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. Displaying the `Progress Bar` component in a grid column allows users to visually track the progress of tasks or operations associated with specific records. This feature is particularly useful for applications involving processes such as data loading, task completion, or other progressive activities.
 
 In the following code, the `Progress Bar` component render in the Grid **Freight** column by defining the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property.
 
@@ -750,7 +752,7 @@ public class EmployeeDetails
 
 ## Use custom helper inside the template
 
-The Syncfusion Grid allows you to use custom helpers inside the `Template` directive of a column. This feature allows you to create complex templates that can incorporate additional helper functions that are not available through the default [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) syntax.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid allows you to use custom helpers inside the `Template` directive of a column. This feature allows you to create complex templates that can incorporate additional helper functions that are not available through the default [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) syntax.
 
 To use the custom helper function inside a column template, you must first add the function to the template's context.
 
@@ -834,7 +836,7 @@ public class OrderDetails
 
 ## Dynamically adding template column
 
-The Syncfusion Grid component allows you to dynamically add template columns at runtime. This capability is particularly useful when the structure of the grid needs to be modified based on individual interactions or other dynamic conditions.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component allows you to dynamically add template columns at runtime. This capability is particularly useful when the structure of the grid needs to be modified based on individual interactions or other dynamic conditions.
 
 Dynamically adding template columns involves creating and inserting columns with custom templates after the grid has been initialized. This approach provides flexibility in presenting data in a highly customizable manner.
 
