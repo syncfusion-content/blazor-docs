@@ -1,0 +1,29 @@
+@using Syncfusion.Blazor.DataForm
+@using Syncfusion.Blazor.Buttons
+@using System.ComponentModel.DataAnnotations
+
+<SfDataForm ID="MyForm" Model="@exampleModel" FormName="UserRegistrationForm">
+    <FormValidator>
+        <DataAnnotationsValidator></DataAnnotationsValidator>
+    </FormValidator>
+    <FormItems>
+        <FormAutoGenerateItems></FormAutoGenerateItems>
+    </FormItems>
+    <FormButtons>
+        <SfButton typeof="submit">Register</SfButton>
+    </FormButtons>
+</SfDataForm>
+
+@code {
+    public class ExampleModel
+    {
+        [Required(ErrorMessage = "Enter your name")]
+        public string FirstName { get; set; }
+
+        [Required(ErrorMessage = "Enter your email")]
+        public string Email { get; set; }
+    }
+
+    private ExampleModel exampleModel = new ExampleModel();
+}
+

@@ -106,7 +106,7 @@ In the following example, the [Blazor Toggle Switch](https://www.syncfusion.com/
 
 ## Autowrap the grid content
 
-The auto wrap feature allows the cell content in the grid to wrap to the next line when it exceeds the boundary of the specified cell width. The cell content wrapping works based on the position of white space between words. To support the Autowrap functionality in Syncfusion Grid, you should set the appropriate width for the columns. The column width defines the maximum width of a column and helps to wrap the content automatically.
+The auto wrap feature allows the cell content in the grid to wrap to the next line when it exceeds the boundary of the specified cell width. The cell content wrapping works based on the position of white space between words. To support the Autowrap functionality in Syncfusion<sup style="font-size:70%">&reg;</sup> Grid, you should set the appropriate width for the columns. The column width defines the maximum width of a column and helps to wrap the content automatically.
 
  To enable auto wrap, set the [AllowTextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowTextWrap) property to **true**. You can configure the auto wrap mode by setting the [TextWrapSettings.WrapMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) property.
 
@@ -650,7 +650,7 @@ The following example demonstrates, how to set the [ClipMode](https://help.syncf
 
 ## Tooltip
 
-The Syncfusion Grid allows you to display information about the grid columns to the user when they hover over them with the mouse.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid allows you to display information about the grid columns to the user when they hover over them with the mouse.
 
 ### Display custom tooltip for columns
 

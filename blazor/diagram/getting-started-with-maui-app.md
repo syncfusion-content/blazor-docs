@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Diagram Component in the Blazor MAUI app.
 
-In this section, we'll guide you through the process of adding Syncfusion's Blazor Diagram Component to your Blazor Maui app. We'll break it down into simple steps to make it easy to follow. Additionally, you can find a fully functional example project on our [GitHub repository](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DiagramComponent/BlazorMAUIApp/DiagramSample).
+In this section, we'll guide you through the process of adding Syncfusion® Blazor Diagram Component to your Blazor Maui app. We'll break it down into simple steps to make it easy to follow. Additionally, you can find a fully functional example project on our [GitHub repository](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DiagramComponent/BlazorMAUIApp/DiagramSample).
 
 ## Prerequisites
 
@@ -27,7 +27,7 @@ Add the following NuGet packages into the Blazor Maui app.
 * [Syncfusion.Blazor.Diagram](https://www.nuget.org/packages/Syncfusion.Blazor.Diagram) 
 * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)
 
-## Register Syncfusion Blazor Service
+## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
 * In the **~/_Imports.razor** file, add the following namespaces:
 
@@ -40,7 +40,7 @@ Add the following NuGet packages into the Blazor Maui app.
 {% endhighlight %}
 {% endtabs %}
 
-* Register the Syncfusion Blazor Service in the **~/MauiProgram.cs** file.
+* Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/MauiProgram.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="~/MauiProgram.cs" hl_lines="3 20 28" %}
@@ -100,7 +100,7 @@ If you are using Syncfusion.Blazor.Diagram && Syncfusion.Blazor.Themes NuGet pac
 
 ## Add Diagram component
 
-Add the Syncfusion Diagram component in the **~/Pages/Index.razor** file.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Diagram component in the **~/Pages/Index.razor** file.
 
 {% tabs %}
 {% highlight razor %}
