@@ -1066,7 +1066,7 @@ In the following sample, the `SfDateRangePicker` component is rendered in the fi
     public async Task FilteringHandler(FilteringEventArgs args)
 
     {
-        if (args.ColumnName == "OrderDate")
+        if (args.ColumnName == "OrderDate" && args.FilterPredicates != null)
         {
             args.Cancel = true; //cancel default filter action
             if (Grid.FilterSettings.Columns == null)
@@ -1156,7 +1156,7 @@ In the following sample, the `SfDateRangePicker` component is rendered in the fi
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBfNiqZXNASChsV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLJCLClyfCMmKmA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Troubleshoot filter menu operator issue
 
