@@ -202,7 +202,7 @@ The dependency string in the Gantt Chart follows a specific structure to define 
 
 Here's a detailed explanation of each component:
 
-1. **TaskId (Predecessor Id)**: 
+1. **TaskId**: 
    - This is the unique identifier of the predecessor task.
    - It must match the `Id` field specified in your `GanttTaskFields` mapping.
 
