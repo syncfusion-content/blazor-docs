@@ -11,7 +11,7 @@ documentation: ug
 
 The Blazor DataGrid component provides a powerful in-line editing feature that allows you to edit cell values of row directly within the grid. This feature is especially useful when you want to quickly modify data without the need for a separate edit form. In normal edit mode, the selected record is changed to an edit state, and you can modify the cell values and save the edited data to the data source.
 
-To enable in-line editing in the grid component, you need to set the [EditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property of the Grid's configuration to **Normal**. This property determines the editing mode of the Grid.
+To enable in-line editing in the grid component, you need to set the [GridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property of the Grid's configuration to **Normal**. This property determines the editing mode of the Grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -35,7 +35,7 @@ To enable in-line editing in the grid component, you need to set the [EditSettin
     }
 }
 {% endhighlight %}
-{% highlight c# tabtitle="EmployeeDetails.cs" %}
+{% highlight c# tabtitle="OrderDetails.cs" %}
 public class OrderDetails
 {
     public static List<OrderDetails> Order = new List<OrderDetails>();
@@ -231,9 +231,7 @@ In the below demo, prevent the CRUD operation based on the **Role** column value
 @code {
     private string Content => IsAddable ? "Grid is Addable" : "Grid is Not Addable";
     private bool IsAddable = true;
-
-    public List<EmployeeDetails> EmployeeData { get; set; }
-    
+    public List<EmployeeDetails> EmployeeData { get; set; }    
     protected override void OnInitialized()
     {
         EmployeeData = EmployeeDetails.GetAllRecords();
@@ -381,7 +379,7 @@ Performing CRUD actions programmatically refers to the ability to create, read, 
         var firstRecord = Grid.CurrentViewData.FirstOrDefault();
         if (firstRecord != null)
         {
-            if (firstRecord is OrderDetails record)  // Strongly typed check
+            if (firstRecord is OrderDetails record)
             {
                 await Grid.SetCellValueAsync(record.OrderID, "CustomerID", "Value Changed");
             }            
@@ -452,7 +450,7 @@ public class OrderDetails
 
 Displaying a confirmation dialog adds an extra layer of confirmation when deleting a record from the grid. This dialog prompts for confirmation before proceeding with the deletion, ensuring that accidental or undesired deletions are avoided. The deletion can proceed only if the decision is certain. The grid component provides a built-in confirmation dialog that can be used to confirm a deleting action.
 
-To enable the confirmation dialog for the delete operation in the Grid, you can set the [ShowDeleteConfirmDialog](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_ShowDeleteConfirmDialog) property of the `EditSettings` configuration to **true**. By default, this property is set to **false**.
+To enable the confirmation dialog for the delete operation in the Grid, you can set the [ShowDeleteConfirmDialog](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_ShowDeleteConfirmDialog) property of the `GridEditSettings` configuration to **true**. By default, this property is set to **false**.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -535,7 +533,7 @@ public class OrderDetails
 
 This feature is useful when you want to pre-fill certain column values with default values to streamline the data entry process. The grid component allows you to set default values for columns when adding a new record. 
 
-To set a default value for a specific column in the Grid, you can use the [DefaultValue](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#defaultvalue) property of the `Columns` configuration. By providing a default value, the grid will automatically populate that value in the corresponding column when a new row is added.
+To set a default value for a specific column in the Grid, you can use the [DefaultValue](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#defaultvalue) property of the `GridColumns` configuration. By providing a default value, the grid will automatically populate that value in the corresponding column when a new row is added.
 
 Here's an example of how to set a default value for a column:
 
@@ -694,7 +692,7 @@ You can delete multiple rows programmatically by using [DeleteRecordAsync](https
 ```
 
 > * The `GridSelectionSettings.Type` property is set to **Multiple** to enable multiple row selection.
-> * To prevent accidental or undesired deletions, it is recommended to enable the `ShowDeleteConfirmDialog` property of the `EditSettings` configuration.
+> * To prevent accidental or undesired deletions, it is recommended to enable the `ShowDeleteConfirmDialog` property of the `GridEditSettings` configuration.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -866,7 +864,7 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZhTCBWEJgzWWmwI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> Add `newRowPostion` is supported for **Normal** and **Batch** editing modes.
+> Add `NewRowPostion` is supported for **Normal** and **Batch** editing modes.
 
 ## Show add new row always in grid
 
