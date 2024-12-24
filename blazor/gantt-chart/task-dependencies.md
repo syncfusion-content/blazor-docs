@@ -52,15 +52,22 @@ To implement task dependencies in your Blazor Gantt Chart, follow these steps:
 
 2. **Map the dependency field**: Use the [Dependency](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Dependency) property of [GanttTaskFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html) to map your dependency field.
 
-3. **Specify dependencies**: For each task, define its dependencies using the format: `<PredecessorID><DependencyType>`.
+3. **Specify dependencies**: For each task, specify its dependencies by indicating the **Predecessor's Task ID** followed by the **Dependency Type** (e.g., Finish-to-Start, Start-to-Start).
+
+4. **Predecessor configuration**: The [DependencyTypes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_DependencyTypes) property manages task dependencies, using [DependencyType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.DependencyType.html) enums to define relationships. You can configure the order of predecessor types such as FS, SS, FF, and SF.
 
 The following code snippets demonstrate how to define and configure task dependencies in the Gantt Chart component.
 
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.DropDowns
 
-<SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
+<SfDropDownList TItem="Types" TValue="string" PopupHeight="230px" Width="250px" @bind-Value="@DropDownValue" DataSource="@PTypes">
+    <DropDownListEvents TItem="Types" TValue="string" ValueChange="OnChange" />
+    <DropDownListFieldSettings Text="Text" Value="ID" />
+</SfDropDownList>
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="650px" DependencyTypes="@types" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
     <GanttTaskFields Id="TaskId"
                      Name="TaskName"
                      StartDate="StartDate"
@@ -71,28 +78,61 @@ The following code snippets demonstrate how to define and configure task depende
                      ParentID="ParentId">
     </GanttTaskFields>
 </SfGantt>
-
 @code {
     public List<TaskData> TaskCollection { get; set; }
-
+    public List<DependencyType> types = new List<DependencyType>() { DependencyType.FS, DependencyType.SS, DependencyType.SF, DependencyType.FF };
+    public class Types
+    {
+        public string ID { get; set; }
+        public string Text { get; set; }
+    }
+    private List<Types> PTypes = new List<Types>()
+    {
+        new Types(){ ID= "Type1", Text= "FS" },
+        new Types(){ ID= "Type2", Text= "FS, SS" },
+        new Types(){ ID= "Type3", Text= "FS, SS, SF" },
+        new Types(){ ID= "Type4", Text= "FS, SS, SF, FF" }
+     };
+    public string DropDownValue = "Type4";
+    public void OnChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string, Types> args)
+    {
+        if (args.ItemData.ID == "Type1")
+        {
+            types = new List<DependencyType>() { DependencyType.FS };
+        }
+        else if (args.ItemData.ID == "Type2")
+        {
+            types = new List<DependencyType>() { DependencyType.FS, DependencyType.SS };
+        }
+        else if (args.ItemData.ID == "Type3")
+        {
+            types = new List<DependencyType>() { DependencyType.FS, DependencyType.SS, DependencyType.SF };
+        }
+        if (args.ItemData.ID == "Type4")
+        {
+            types = new List<DependencyType>() { DependencyType.FS, DependencyType.SS, DependencyType.SF, DependencyType.FF };
+        }
+    }
     protected override void OnInitialized()
     {
         TaskCollection = new List<TaskData>
         {
-            new TaskData { TaskId = 1, TaskName = "Project Kickoff", StartDate = new DateTime(2023, 04, 02), Duration = "2", Progress = 20 },
-            new TaskData { TaskId = 2, TaskName = "Planning", StartDate = new DateTime(2023, 04, 04), Duration = "3", Progress = 40 , ParentId = 1 },
-            new TaskData { TaskId = 3, TaskName = "Design", StartDate = new DateTime(2023, 04, 09), Duration = "2", Predecessor = "2FS", ParentId = 1 },
-            new TaskData { TaskId = 4, TaskName = "Implementation", StartDate = new DateTime(2023, 04, 13), Duration = "3", Predecessor = "3FS",  ParentId = 1 },
-            new TaskData { TaskId = 5, TaskName = "Testing", StartDate = new DateTime(2023, 04, 18), Duration = "2", Predecessor = "4FS",  ParentId = 1 }
+            new TaskData { TaskId = 1, TaskName = "Project Initiation", StartDate = new DateTime(2023, 04, 02), EndDate = new DateTime(2023, 04, 21) },
+            new TaskData { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2023, 04, 02), Duration = "0", Progress = 30, ParentId = 1 },
+            new TaskData { TaskId = 3, TaskName = "Perform Soil test", StartDate = new DateTime(2023, 04, 02), Duration = "4", Progress = 40, Predecessor = "2FS", ParentId = 1 },
+            new TaskData { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2023, 04, 02), Duration = "0", Progress = 30, Predecessor = "3FF", ParentId = 1 },
+            new TaskData { TaskId = 5, TaskName = "Project Estimation", StartDate = new DateTime(2023, 04, 02), EndDate = new DateTime(2023, 04, 21) },
+            new TaskData { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2023, 04, 04), Duration = "3", Progress = 30, ParentId = 5 },
+            new TaskData { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2023, 04, 04), Duration = "3", Progress = 40, Predecessor = "6SS", ParentId = 5 },
+            new TaskData { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2023, 04, 04), Duration = "0", Progress = 30, Predecessor = "7SF", ParentId = 5 }
         };
     }
-
     public class TaskData
     {
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public string Predecessor { get; set; }
@@ -100,10 +140,9 @@ The following code snippets demonstrate how to define and configure task depende
     }
 }
 ```
+The example initially sets the `DependencyTypes` property with all task dependency types: Finish-to-Start (FS), Start-to-Start (SS), Start-to-Finish (SF), and Finish-to-Finish (FF). A dropdown allows you to dynamically change which types are active. As you select different options, the Gantt Chart immediately updates the dependencies based on the current `DependencyTypes` configuration.
 
-In this example, tasks are linked sequentially using Finish-to-Start dependencies.
-
-![Blazor Gantt Chart displays Task Dependency](images/blazor-gantt-chart-task-dependency.png)
+![Blazor Gantt Chart with predecessor configuration](images/predecessor-configuration.gif)
 
 ## Relationship between task levels
 
@@ -127,7 +166,7 @@ These relationships define dependencies between tasks at different hierarchical 
 
 **Example:** The "Project Review" task (parent task) cannot start until all "Module Testing" tasks (child tasks) are completed.
 
-## Predecessor offset with duration units
+## Predecessor offset with duration unit
 
 Offsets in task dependencies allow for more precise scheduling by introducing lag (delay) or lead (overlap) time between tasks. The Gantt Chart supports specifying these offsets using day units.
 
@@ -135,27 +174,31 @@ Offsets in task dependencies allow for more precise scheduling by introducing la
 
 A positive offset introduces a delay between the end of the predecessor and the start of the successor.
 
-**Syntax:** `<PredecessorID><DependencyType>+<duration>`
+**Format:**     
+    **Predecessor's Task ID**, **Dependency Type**, then add the duration of lag with **+**.
 
-**Example:** `2FS+3d` means the task starts 3 days after Task 2 finishes.
+**Example:**    
+    **2FS+3d** means the task starts 3 days after Task 2 finishes.
 
 ### Negative offset (lead)
 
 A negative offset allows a task to start before its predecessor completes, creating an overlap.
 
-**Syntax:** `<PredecessorID><DependencyType>-<duration>`
+**Format:**                            
+    **Predecessor's Task ID**, **Dependency Type**, then add the duration of lead with **-**. 
 
-**Example:** `3SS-1d` means the task starts 1 day before Task 3 starts.
+**Example:**                       
+    **3SS-1d** means the task starts 1 day before Task 3 starts.
 
 ## Understanding dependency string structure
 
 The dependency string in the Gantt Chart follows a specific structure to define relationships between tasks. Let's break down an example:
 
-`2FS+3d`
+**2FS+3d**
 
-- `2`: This is the TaskId of the predecessor task. It corresponds to the [Id](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Id) field mapped in the `GanttTaskFields`.
-- `FS`: This represents the dependency type (Finish-to-Start in this case).
-- `+3d`: This is the offset, indicating a 3-day lag after the predecessor finishes.
+- **2**: This is the TaskId of the predecessor task. It corresponds to the [Id](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Id) field mapped in the `GanttTaskFields`.
+- **FS**: This represents the dependency type (Finish-to-Start in this case).
+- **+3d**: This is the offset, indicating a 3-day lag after the predecessor finishes.
 
 Here's a detailed explanation of each component:
 
@@ -164,21 +207,21 @@ Here's a detailed explanation of each component:
    - It must match the `Id` field specified in your `GanttTaskFields` mapping.
 
 2. **Dependency type**:
-   - `FS`: Finish-to-Start (default if not specified)
-   - `SS`: Start-to-Start
-   - `FF`: Finish-to-Finish
-   - `SF`: Start-to-Finish
+   - **FS**: Finish-to-Start (default if not specified)
+   - **SS**: Start-to-Start
+   - **FF**: Finish-to-Finish
+   - **SF**: Start-to-Finish
 
 3. **Offset (Optional)**:
-   - `+Nd`: Positive offset (lag) of N days
-   - `-Nd`: Negative offset (lead) of N days
+   - **+Nd**: Positive offset (lag) of N days
+   - **-Nd**: Negative offset (lead) of N days
 
 ### Examples of dependency strings:
 
-1. `3FS`: Task starts when Task 3 finishes (Finish-to-Start, no offset)
-2. `4SS+1d`: Task starts 1 day after Task 4 starts (Start-to-Start with 1-day lag)
-3. `5FF-2d`: Task finishes 2 days before Task 5 finishes (Finish-to-Finish with 2-day lead)
-4. `6SF`: Task finishes when Task 6 starts (Start-to-Finish, no offset)
+1. **3FS**: Task starts when Task 3 finishes (Finish-to-Start, no offset)
+2. **4SS+1d**: Task starts 1 day after Task 4 starts (Start-to-Start with 1-day lag)
+3. **5FF-2d**: Task finishes 2 days before Task 5 finishes (Finish-to-Finish with 2-day lead)
+4. **6SF**: Task finishes when Task 6 starts (Start-to-Finish, no offset)
 
 ## Implementing complex dependencies
 
