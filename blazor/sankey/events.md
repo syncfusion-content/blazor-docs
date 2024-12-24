@@ -7,36 +7,49 @@ control: Sankey
 documentation: ug
 ---
 
-# Events in Blazor Sankey Component
+# Events in Blazor Sankey Diagram
 
 ## Overview
 
-The Syncfusion Blazor Sankey Chart component provides a rich set of events that allow you to respond to various user interactions and chart lifecycle moments. These events enable you to create dynamic and interactive Sankey diagrams, enhancing the user experience of your Blazor applications.
+The Syncfusion Blazor Sankey Diagram component supports a comprehensive set of events, allowing developers to craft responsive and interactive features. These events are designed to handle user interactions and essential diagram lifecycle phases, thereby enhancing the functionality and user experience of your Blazor applications.
 
-## Available Events
+## Events
 
-The Sankey Chart component offers the following events:
+The Sankey Diagram component includes the following events:
 
-1. NodeRendering 
-2. LegendItemRendering
-3. LabelRendering
-4. LinkRendering
-5. LegendItemHover
-6. SizeChanged
-7. TooltipRendering
-8. PrintCompleted
-9. ExportCompleted
-10. Created
-11. NodeClick
-12. NodeEnter
-13. NodeLeave
-14. LinkClick
-15. LinkEnter
-16. LinkLeave
+1. **NodeRendering**: This event is fired before nodes are drawn on the diagram, allowing for dynamic customization of node appearance based on data or application state. Use this to apply unique visual adjustments and enhance node representation.
 
-## Basic Event Usage
+2. **LegendItemRendering**: Fired before legend items are rendered, this event enables modifications such as changing colors or altering text to align with branding needs. It helps ensure the legend matches the application's theme and improves readability.
 
-Here's an example demonstrating how to use some of the most common events in the Sankey component:
+3. **LabelRendering**: Triggered before labels appear on the diagram, this event allows for modification of label content or formatting. Use it to ensure labels effectively convey essential information in a clear and concise manner.
+
+4. **LinkRendering**: This event fires when links are being rendered, offering opportunities to customize link appearance based on specific properties or conditions. Adjust link visuals to enhance clarity and emphasize relationships between nodes.
+
+5. **LegendItemHover**: Occurs when a user hovers over a legend item, enabling responsive actions such as triggering UI updates or displaying contextual data. Use this to create interactive and informative legend behaviors.
+
+6. **SizeChanged**: Fired when the dimensions of the Sankey Diagram change, this event allows for dynamic layout adjustments. Ensure that connected components and visual elements remain coherent and visually appealing.
+
+7. **TooltipRendering**: Triggered before tooltips for nodes and links are rendered, this event lets you customize tooltip content and style. Leverage it to provide clear, context-specific information that enhances user understanding.
+
+8. **PrintCompleted**: This event fires after a print operation completes, allowing you to update UI indicators or log the event for tracking and analytics. Use it to ensure follow-up actions are seamlessly handled post-print.
+
+9. **ExportCompleted**: Occurs after an export operation finishes, similar to print completion events. Use this event to trigger follow-up tasks like notifications, data processing, or analytics logging.
+
+10. **Created**: Fired after the Sankey Diagram is fully initialized and rendered, this event is useful for initializing related components or logging the creation process for monitoring and debugging purposes.
+
+11. **NodeClick**: This event occurs when a user clicks on a node, enabling actions such as updating UI elements, starting data transactions, or recording analytics. Use it to respond effectively to user interactions with nodes.
+
+12. **NodeEnter**: Triggered when the mouse pointer enters a node region, this event allows for dynamic highlights or displaying additional information. It enhances interactivity and provides immediate feedback to user actions.
+
+13. **NodeLeave**: Occurs when the mouse pointer leaves a node region, supporting cleanup actions like removing highlights or hiding overlays. Use it to maintain a clean and clutter-free user interface.
+
+14. **LinkClick**: Fires when a user clicks on a link within the component. Handle user clicks on links, enabling features like detailed data viewing or reshaping interactions in connected components.
+
+15. **LinkEnter**: This event is triggered when the mouse pointer hovers over a link. Implement interactive behaviors when hovering over links, such as emphasizing connections or showing detailed link information.
+
+16. **LinkLeave**: It occurs when the mouse pointer exits a link. Cleanup actions can be attached to this event when the pointer moves off a link, such as resetting visual styles or removing interactive elements.
+
+Below is an example demonstrating how to implement some of the key events in the Sankey component:
 
 {% tabs %}
 {% highlight razor %}
@@ -56,7 +69,7 @@ Here's an example demonstrating how to use some of the most common events in the
 
     protected override void OnInitialized()
     {
-        // Initialize Nodes and Links (omitted for brevity)
+        // Initialize Nodes and Links (initialization code is omitted for brevity)
     }
 
     private void OnLegendItemRendering(SankeyLegendRenderEventArgs args)
@@ -100,38 +113,36 @@ Here's an example demonstrating how to use some of the most common events in the
         }
     }
 }
-
 {% endhighlight %}
 {% endtabs %}
 
-
 ## Key Points
 
-- Events are bound to the Sankey component using attributes that match the event names.
-- Each event provides specific event arguments that contain relevant information about the event.
-- You can use these events to customize the appearance, behavior, or to perform additional actions based on user interactions.
+- Events are linked to the Sankey component via attributes that correspond with event names.
+- Each event delivers distinct event arguments, offering detailed information relevant to the event.
+- These events facilitate customizing appearance, enhancing behavior, and executing additional actions based on user interactions.
 
 ## Customizing with Events
 
 ### LegendItemRendering
 
-Use this event to customize the appearance of legend items before they are rendered.
+This event allows you to adjust the appearance of legend items prior to rendering. You can tailor the visual style, such as colors and labels, to align with the application's design language or thematic consistency. Customization here can enhance visual coherence and aid user interpretation.
 
 ### NodeClick
 
-Respond to user clicks on nodes, allowing for interactive features or data updates.
+Utilize this event to trigger actions in response to user interactions with nodes, offering opportunities to display detailed information, update related UI components, or log interactions for analytic purposes. This event drives engagement by making visual data exploration more interactive and informative.
 
 ### LinkRendering
 
-Customize the appearance of links based on their properties or other conditions.
+Adjust the appearance of links for a more customized visualization, based on dynamic conditions such as link weight or status. By modifying visual properties like color or thickness, you can convey additional information through the visual representation of links, aiding user comprehension of complex networks.
 
 ### TooltipRendering
 
-Modify the content and appearance of tooltips for both nodes and links.
+Modify both the content and appearance of tooltips to deliver tailored real-time information relevant to the user's context. Tooltips can be adapted to reflect current node or link data, thereby enhancing user interaction and understanding through efficient data presentation.
 
 ## Advanced Event Usage
 
-You can combine multiple events to create more complex interactions. Here's an example that uses multiple events:
+For more complex interactions, multiple events can be combined effectively. Here's an example utilizing several events:
 
 {% tabs %}
 {% highlight razor %}
@@ -153,7 +164,7 @@ You can combine multiple events to create more complex interactions. Here's an e
 </div>
 
 @code {
-    private string _eventInfo = "Interact with the chart to see event information here.";
+    private string _eventInfo = "Interact with the diagram to see event information here.";
 
     // Event handlers
     private void OnNodeClick(SankeyNodeEventArgs args)
@@ -176,7 +187,7 @@ You can combine multiple events to create more complex interactions. Here's an e
 
     private void OnSizeChanged(SankeySizeChangedEventArgs args)
     {
-        _eventInfo = $"Chart resized. New size: {args.CurrentSize.Width}x{args.CurrentSize.Height}";
+        _eventInfo = $"Diagram resized. New size: {args.CurrentSize.Width}x{args.CurrentSize.Height}";
         StateHasChanged();
     }
 
@@ -192,22 +203,20 @@ You can combine multiple events to create more complex interactions. Here's an e
         StateHasChanged();
     }
 
-    // Nodes and Links initialization (omitted for brevity)
+    // Nodes and Links initialization (initialization code is omitted for brevity)
 }
-
 {% endhighlight %}
 {% endtabs %}
 
-
 ## Key Considerations
 
-- Use events to create interactive and dynamic Sankey diagrams.
-- Combine multiple events to create complex user experiences.
-- Update the UI (using `StateHasChanged()`) when modifying component state in event handlers.
-- Consider performance implications when handling frequent events like hover or mouse move.
-- Use the `Created` event for any one-time setup operations after the Sankey chart is fully rendered.
+- Employ events to construct interactive and dynamic Sankey diagrams.
+- Leverage multiple events to develop complex user experiences.
+- Refresh the UI using `StateHasChanged()` when altering component state within event handlers.
+- Be mindful of performance trade-offs when dealing with frequent events, such as hover or mouse movement.
+- Utilize the `Created` event for any initial setup tasks post full rendering of the Sankey Diagram.
 
-By effectively utilizing the events provided by the Blazor Sankey component, you can create rich, interactive visualizations that respond to user actions and provide enhanced functionality in your Blazor applications.
+By leveraging the robust set of events provided by the Blazor Sankey component, developers can produce rich and interactive visualizations that are both responsive to user actions and enhanced in functionality within Blazor applications.
 
 ## See also
 

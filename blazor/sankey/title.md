@@ -1,19 +1,21 @@
 ---
 layout: post
-title: Title and Subtitle in Blazor Sankey Component | Syncfusion
-description: Learn how to set and customize the title and subtitle in the Blazor Sankey component from Syncfusion for better data representation.
+title: Title and Subtitle in Blazor Sankey Diagram | Syncfusion
+description: Learn how to set and customize the title and subtitle in the Blazor Sankey Diagram from Syncfusion for better data representation.
 platform: Blazor
 control: Sankey
 documentation: ug
 ---
 
-# Title and Subtitle in Blazor Sankey Component
+# Title and Subtitle in Blazor Sankey Diagram
 
-The Syncfusion Blazor Sankey component allows you to add a title and subtitle to your chart, providing context and description for the data visualization. This topic covers how to set and customize the title and subtitle in the Sankey chart.
+The Syncfusion Blazor Sankey Diagram allows you to add a title and subtitle to your chart, providing context and description for the data visualization. This topic covers how to set and customize the title and subtitle in the Sankey Diagram.
 
 ## Setting the Title and Subtitle
 
-To add a title and subtitle to your Sankey chart, use the `Title` and `SubTitle` properties of the `Sankey` component.
+Adding a title and subtitle to your Sankey diagram helps provide context and clarity. Use the `Title` property for the main heading, representing the chart's purpose, and the `SubTitle` property for additional details like a specific time period or region.
+
+By utilizing these properties, your Sankey diagram becomes more informative and visually engaging.
 
 {% tabs %}
 {% highlight razor %}
@@ -95,7 +97,7 @@ In this example, "Energy Flow" is set as the title, and "-2024" is set as the su
 
 ## Customizing Title and Subtitle
 
-You can further customize the appearance of the title and subtitle using the `SankeyTitleStyle` and `SankeySubtitleStyle` components.
+The **Blazor Sankey Diagram** allows you to visualize flow data with nodes and links. You can customize the appearance of the **title** and **subtitle** of your Sankey Diagram using the `SankeyTitleStyle` and `SankeySubtitleStyle` components. These components let you define font properties like `FontFamily`, `FontSize`, `FontStyle`, and `FontWeight` to match your design requirements.
 
 {% tabs %}
 {% highlight razor %}
@@ -178,13 +180,13 @@ You can further customize the appearance of the title and subtitle using the `Sa
 
 ## Key Considerations
 
-- Use meaningful and descriptive titles to give users a quick insight into the data represented in the Sankey chart.
+- Use meaningful and descriptive titles to give users a quick insight into the data represented in the Sankey Diagram.
 - Keep titles and subtitles concise while providing enough context.
 - Use the subtitle to provide additional details related to the data.
 - Customize the font size, family, weight, and color to ensure the title and subtitle are visually appealing and readable.
 - Ensure that the title and subtitle do not overshadow the actual chart data.
 
-By effectively utilizing the title and subtitle features of the Blazor Sankey component, you can create more informative and user-friendly data visualizations that clearly communicate the purpose and context of your Sankey diagrams.
+By effectively utilizing the title and subtitle features of the Blazor Sankey Diagram, you can create more informative and user-friendly data visualizations that clearly communicate the purpose and context of your Sankey diagrams.
 
 ## See also
 

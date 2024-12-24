@@ -218,7 +218,7 @@ Here is an example of changing the text color using the [ShapeChanging](https://
 
 ![Blazor Image Editor with Custom text an image](./images/blazor-image-editor-custom-text.png)
 
-### Add Additional font family
+### Add additional font family
 
 The [`ImageEditorFontFamily`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorFontFamily.html) option in the Blazor Image Editor component provides the flexibility to incorporate supplementary font families, expanding your options for text styling and ensuring a broader range of fonts can be utilized within your design or content.
 
@@ -657,7 +657,7 @@ In the following example, you can use the [`DrawImageAsync`](https://help.syncfu
 
 ![Blazor Image Editor with Add Image in an image](./images/blazor-image-editor-add-image.png)
 
-### Customize Default Stroke Color for Shapes 
+### Customize default stroke color for shapes 
 
 We provide default settings for stroke color, stroke width, fill color, and other customizations. If users wish to modify only the default options while preserving their previously selected customizations, they can do so by utilizing the [`ShapeChanging`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_ShapeChanging) event. Within this event, users can update the values in the [`CurrentShapeSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ShapeChangeEventArgs.html#Syncfusion_Blazor_ImageEditor_ShapeChangeEventArgs_CurrentShapeSettings) object to apply their own preferences instead of the defaults. This approach allows conditional updates to the [`CurrentShapeSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ShapeChangeEventArgs.html#Syncfusion_Blazor_ImageEditor_ShapeChangeEventArgs_CurrentShapeSettings), ensuring that only the desired defaults are changed while maintaining the other settings.
 
