@@ -450,7 +450,7 @@ The [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.Gri
     #Grid.e-grid .e-ccdlg .e-dlg-content {
         margin-top: 0px;
     }
-    .e-list-item.e-level-1.e-checklist.e-focused {
+    #Grid.e-grid .e-ccdlg .e-dlg-content .e-list-container .e-list-item.e-level-1.e-checklist.e-focused {
         background-color: none;
     }
     #Grid_ccdlg .e-content {
@@ -615,7 +615,7 @@ namespace Model
 > * You can build reusable custom component based on your customization need as like above code example.
 > * In the above example, Syncfusion<sup style="font-size:70%">&reg;</sup> [ListView](https://blazor.syncfusion.com/documentation/listview/getting-started) component is used as custom component in the content template to show/hide columns.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBTXUszLlWhsBgB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLJiLVTWKyyPjml?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Column chooser content template in Blazor DataGrid.](./images/blazor-datagrid-column-chooser-content-template.png)
 
