@@ -9,7 +9,7 @@ documentation: ug
 
 # Grouping Bar in Blazor Pivot Table Component
 
-To have a quick glance on how to enable grouping bar in the Blazor Pivot Table, watch this video:
+To have a quick glance about **Grouping Bar** in the Blazor Pivot Table, watch this video:
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=Odkh7RkvjoY&t=109s"%}
