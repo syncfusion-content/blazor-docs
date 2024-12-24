@@ -113,7 +113,7 @@ In a Gantt Chart, tasks can have hierarchical relationships which define how par
 
 Parent-parent relationships occur when dependencies are defined between two parent tasks. These relationships affect the overall project structure and timeline.
 
-**Example:** In a software development project, the "Backend Development" phase (parent task) cannot start until the "Requirements Gathering" phase (another parent task) is completed.
+**Example:** In a software development project, the "Back end Development" phase (parent task) cannot start until the "Requirements Gathering" phase (another parent task) is completed.
 
 ### Child-child relationships
 
@@ -350,14 +350,12 @@ For more advanced topics related to task dependencies and project management in 
 
 1. [Predecessor Validation](https://blazor.syncfusion.com/documentation/gantt-chart/predecessor-validation): Learn how to validate and manage task dependencies to ensure project integrity.
 
-2. [Critical Path](https://blazor.syncfusion.com/documentation/gantt-chart/critical-path): Understand how to identify and visualize the critical path in your project, which is crucial for project timeline management.
+2. [Critical Path](https://blazor.syncfusion.com/documentation/gantt-chart/criticalpath): Understand how to identify and visualize the critical path in your project, which is crucial for project timeline management.
 
 3. [Baseline](https://blazor.syncfusion.com/documentation/gantt-chart/baseline): Explore how to set and compare task progress against a baseline schedule.
 
-4. [Resource Allocation](https://blazor.syncfusion.com/documentation/gantt-chart/resource-view): Discover how to manage resources in conjunction with task dependencies for optimal project planning.
+4. [Resource Allocation](https://blazor.syncfusion.com/documentation/gantt-chart/resources): Discover how to manage resources in conjunction with task dependencies for optimal project planning.
 
-5. [Task Constraints](https://blazor.syncfusion.com/documentation/gantt-chart/task-constraints): Learn about different types of task constraints and how they interact with dependencies.
-
-6. [Timeline](https://blazor.syncfusion.com/documentation/gantt-chart/timeline): Understand how to customize the timeline view to better visualize your project schedule and dependencies.
+5. [Timeline](https://blazor.syncfusion.com/documentation/gantt-chart/time-line): Understand how to customize the timeline view to better visualize your project schedule and dependencies.
 
 For more detailed information and advanced usage scenarios, refer to the [Syncfusion Blazor Gantt Chart documentation](https://blazor.syncfusion.com/documentation/gantt-chart/getting-started).
