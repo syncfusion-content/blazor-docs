@@ -11,6 +11,11 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/).
 
+To get start quickly with Blazor Web App Scheduler, you can check on this video:
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=PwjvHHMtL3U"%}
+
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
