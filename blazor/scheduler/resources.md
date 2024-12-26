@@ -1834,6 +1834,11 @@ Some of the default changes made for compact Scheduler to render in desktop devi
 * Today icon is added to the header instead of the Today button.
 * With Multiple resources – only one resource has been shown to enhance the view experience of resource events details clearly. To switch to other resources, there is a TreeView on the left that lists all other available resources, clicking on which will display that particular resource and its related events.
 
+To get start quickly about adaptive UI in our Scheduler, you can check on this video:
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=Jmm3HzkpHP0-0"%}
+
 ```cshtml
 @using Syncfusion.Blazor.Schedule
 
@@ -1901,4 +1906,5 @@ Some of the default changes made for compact Scheduler to render in desktop devi
 
 ## See also
 
+[How to use blazor Scheduler to create an Airfare Calendar] (https://www.youtube.com/watch?v=QlzdcZTmOrU-0)
 [How to expand or collapse a resource programmatically](./how-to/expand-collapse-resource-dynamically)
