@@ -9,7 +9,7 @@ documentation: ug
 
 # Animation in Blazor Dropdown Menu Component
 
-To change the animation of the DropDownButton, [`AnimationSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_.Blazor.SplitButtons.DropDownMenuAnimationSettings.html)  property is used to customize the animation of the DropDownButton popup. The supported effects for DropDownButton are,
+To change the animation of the DropDownButton, [`AnimationSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownMenuAnimationSettings.html)  property is used to customize the animation of the DropDownButton popup. The supported effects for DropDownButton are,
 
 | Effect | Functionality |
 | ------------ | ----------------------- |
