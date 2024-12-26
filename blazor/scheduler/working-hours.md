@@ -18,6 +18,11 @@ The Scheduler can be customized on various aspects as well as it inherits almost
 - To show/hide weekend days
 - To show the week number
 
+To get start quickly about customize the working days and hours in our Scheduler, you can check on this video:
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=PcFr6bc_yhE-0"%}
+
 ## Set working days
 
 By default, Scheduler considers the week days from Monday to Friday as `WorkDays` and therefore defaults to [1,2,3,4,5] - where 1 represents Monday, 2 represents Tuesday and so on. The days which are not defined in this working days collection are considered as non-working days. Therefore, when the weekend days are set to hide from Scheduler, all those non-working days too get hidden from the layout.
