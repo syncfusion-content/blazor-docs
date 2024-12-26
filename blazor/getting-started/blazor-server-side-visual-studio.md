@@ -11,6 +11,9 @@ documentation: ug
 
 This article provides a step-by-step instructions for building Blazor Server App with `Blazor Calendar` component using [Visual Studio](https://visualstudio.microsoft.com/vs/). 
 
+{% youtube
+"youtube:https://www.youtube.com/watch?v=cQZYzOlTm0Q" %}
+
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)

@@ -11,6 +11,9 @@ documentation: ug
 
 This section explains how to create and run the first WPF Blazor App UI (.NET WPF Blazor) app with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
 
+{% youtube
+"youtube:https://www.youtube.com/watch?v=MxSGEbPUbMg" %}
+
 ## What is WPF Blazor App?
 
 WPF Blazor App is an app where `Blazor web app` is hosted in WPF app using `BlazorWebView` control. This enable a Blazor web app to be integrated with platform features and UI controls. Also, BlazorWebView can be added to any page of WPF Blazor app, and pointed to the root of the Blazor app. The Blazor components run natively in the .NET process and render web UI to an embedded web view control. WPF Blazor apps can run on all the platforms supported by WPF.

@@ -12,6 +12,9 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor Smart TextArea](https://www.syncfusion.com/blazor-components/blazor-smartpaste-button) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/).
 
+{% youtube
+"youtube:https://www.youtube.com/watch?v=RjHkC3idOdg" %}
+
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
