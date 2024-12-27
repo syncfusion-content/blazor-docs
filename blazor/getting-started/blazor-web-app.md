@@ -11,7 +11,7 @@ documentation: ug
 
 This article provides a step-by-step instructions for building `Blazor Web App` with `Blazor Accordion` component using [Visual Studio](https://visualstudio.microsoft.com/vs/).
 
-To get start quickly with Blazor Web App in Visual Studio, you can check on this video.
+To get start quickly with Blazor Web App, you can check on this video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=hjPGxApA5W8" %}

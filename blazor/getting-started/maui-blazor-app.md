@@ -11,7 +11,7 @@ documentation: ug
 
 This section explains how to create and run the first .NET Multi-platform Blazor App UI (.NET MAUI Blazor) app with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
 
-To get start quickly with Blazor MAUI App in Visual Studio, you can check on this video.
+To get start quickly with Blazor MAUI App, you can check on this video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=wnceZx-Xezs" %}
