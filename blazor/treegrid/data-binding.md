@@ -14,6 +14,10 @@ It supports two kinds of data binding method:
 * List binding
 * Remote service binding
 
+To learn about how to bind local or remote data to Tree Grid, check out this video:
+
+{% youtube "https://www.youtube.com/watch?v=YgSRj7yTebI" %}
+
 ## List binding
 
 In List binding, data source for rendering the Tree Grid component is retrieved from the same application locally.
