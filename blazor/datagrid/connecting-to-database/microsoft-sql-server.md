@@ -19,7 +19,7 @@ The [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-a
 
 To know about how to connect Microsoft SQL Server to Blazor DataGrid with UrlAdaptor in Blazor DataGrid Component, you can check this video.
 
-{% youtube "youtube:https://www.youtube.com/watch?v=Y3grzt0ZdLk"%}
+{% youtube "youtube:https://www.youtube.com/watch?v=Y3grzt0ZdLk" %}
 
 * **Using CustomAdaptor**
 
@@ -27,7 +27,7 @@ The [CustomAdaptor](https://blazor.syncfusion.com/documentation/datagrid/custom-
 
 To know about how to connect Microsoft SQL Server to Blazor DataGrid with custom adaptor in Blazor DataGrid Component, you can check this video.
 
-{% youtube "youtube:https://www.youtube.com/watch?v=8yLpSCJLcXI"%}
+{% youtube "youtube:https://www.youtube.com/watch?v=8yLpSCJLcXI" %}
 
 ## Binding data from Microsoft SQL Server using an API service
 
@@ -44,7 +44,7 @@ This section describes step by step process how to retrieve data from a Microsof
 **4.** In an API controller (aka, GridController), connect to Microsoft SQL Server. In the **Get()** method **SqlConnection** helps to connect the Microsoft SQL Server database. Next, using **SqlCommand** and **SqlDataAdapter** you can process the desired SQL query string and retrieve data from the database. The **Fill** method of the **DataAdapter** is used to populate the SQL data into a **DataTable** as shown in the following code snippet.
 
 {% tabs %}
-{% highlight razor tabtitle="GridController.cs"%}
+{% highlight razor tabtitle="GridController.cs" %}
 using Microsoft.AspNetCore.Mvc;
 using System.Data;
 using System.Data.SqlClient;
@@ -189,7 +189,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 **4.** The `UrlAdaptor` acts as the base adaptor for interacting with remote data service. Most of the built-in adaptors are derived from the `UrlAdaptor`.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor"%}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor
@@ -251,7 +251,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
     }
 }
 {% endhighlight %}
-{% highlight c# tabtitle="GridController.cs"%}
+{% highlight c# tabtitle="GridController.cs" %}
     public class GridController : ControllerBase
     {
         /// <summary>
@@ -660,7 +660,7 @@ This section describes step by step process how to retrieve data from a Microsof
     SfGrid<Order> Grid { get; set; }
 }
 {% endhighlight %}
-{% highlight razor tabtitle="Orderdata.cs"%}
+{% highlight razor tabtitle="Orderdata.cs" %}
   public class Order
   {
       public int? OrderID { get; set; }
@@ -1051,7 +1051,7 @@ Let’s see how to perform CRUD operation using Microsoft SQL Server data with S
 To execute the insert operation, you will need to override the [Insert](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Insert_Syncfusion_Blazor_DataManager_System_Object_System_String_) or [InsertAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_InsertAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_) method of the `CustomAdaptor`. Then, integrate the following code snippet into the `CustomAdaptor` class. The below code snippet demonstrated how to handle the insertion of new records within the `InsertAsync` method of `CustomAdaptor` component. Modify the logic within this method according to the requirements of your application.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor"%}
+{% highlight razor tabtitle="Index.razor" %}
 /// <summary>
 /// Inserts a new data item into the data collection.
 /// </summary>
@@ -1067,7 +1067,7 @@ public override async Task<object> InsertAsync(DataManager DataManager, object V
     return Value;
 }
 {% endhighlight %}
-{% highlight razor tabtitle="Orderdata.cs"%}
+{% highlight razor tabtitle="Orderdata.cs" %}
         public async Task AddOrderAsync(Order Value)
         {
             //Create query to insert the specific into the database by accessing its properties 
@@ -1088,7 +1088,7 @@ public override async Task<object> InsertAsync(DataManager DataManager, object V
 To execute the update operation, override the [Update](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Update_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) or [UpdateAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_UpdateAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) method of the `CustomAdaptor`. Then, integrate the following code snippet into the `CustomAdaptor` class. The below code snippet demonstrated how to handle the updating of existing records within the `UpdateAsync` method of the `CustomAdaptor` component. Modify the logic within this method according to the requirements of your application.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor"%}
+{% highlight razor tabtitle="Index.razor" %}
 /// <summary>
 /// Updates an existing data item in the data collection.
 /// </summary>
@@ -1105,7 +1105,7 @@ public override async Task<object> UpdateAsync(DataManager DataManager, object V
     return Value;
 }
 {% endhighlight %}
-{% highlight razor tabtitle="Orderdata.cs"%}
+{% highlight razor tabtitle="Orderdata.cs" %}
 public async Task UpdateOrderAsync(Order Value)
 {
     //Create query to update the changes into the database by accessing its properties
@@ -1126,7 +1126,7 @@ public async Task UpdateOrderAsync(Order Value)
 To perform the delete operation, you need to override the [Remove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Remove_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) or [RemoveAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_RemoveAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) method of the `CustomAdaptor`. Below is the code snippet that you can add to `CustomAdaptor` class. The below code snippet demonstrated how to handle the deletion of existing records within the `RemoveAsync` method of `CustomAdaptor` component. Modify the logic within this method according to the requirements of your application.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor"%}
+{% highlight razor tabtitle="Index.razor" %}
 /// <summary>
 /// Removes a data item from the data collection.
 /// </summary>
@@ -1143,7 +1143,7 @@ public override async Task<object> RemoveAsync(DataManager DataManager, object V
     return Value;
 }
 {% endhighlight %}
-{% highlight razor tabtitle="Orderdata.cs"%}
+{% highlight razor tabtitle="Orderdata.cs" %}
 public async Task RemoveOrderAsync(int? Key)
 {
     //Create query to remove the specific from database by passing the primary key column value.
