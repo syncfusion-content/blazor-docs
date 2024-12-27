@@ -11,6 +11,10 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor Image Editor](https://www.syncfusion.com/blazor-components/blazor-image-editor) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
+To get started quickly with the Blazor Image Editor in a Blazor Web app, watch the following video or explore the [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/imageEditor) sample:
+
+{% youtube "youtube:https://www.youtube.com/watch?v=lBB8oHvTuII"%}
+
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
