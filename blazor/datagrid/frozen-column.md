@@ -11,6 +11,10 @@ documentation: ug
 
 In the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component, you have the capability to **freeze** columns, ensuring they remain visible as you scroll through extensive datasets. This functionality significantly improves user experience by keeping critical information constantly within view, even when navigating through large volumes of data. This means that important columns remain fixed in their positions, making it easier to access and reference key data points while working with the grid.
 
+To know about frozen columns in Blazor DataGrid Component, you can check this video.
+
+{% youtube "youtube:https://www.youtube.com/watch?v=L2NvKyBomhM"%}
+
 In the following example, the [FrozenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenColumns) property is set to **2**. This configuration freezes the left two columns of the grid, and they will remain fixed in their positions while the rest of the columns grid can be scrolled horizontally.
 
 {% tabs %}

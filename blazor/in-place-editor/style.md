@@ -11,6 +11,10 @@ documentation: ug
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 
+To get started quickly with customizing the Blazor In-place Editor, watch the following video or explore the [GitHub](https://github.com/SyncfusionExamples/how-to-customize-the-blazor-in-place-editor-component) sample:
+
+{% youtube "youtube:https://www.youtube.com/watch?v=YWRsFm32Rso"%}
+
 ## Customizing the In-place Editor text
 
 Use the following CSS to customize the default In-place Editor's text content properties like font-family, font-size, color and border bottom.

@@ -641,6 +641,10 @@ Here is an example that demonstrates how to enable/disable row hover based on th
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to freeze rows to keep them visible while scrolling vertically through large datasets. This feature enhances the experience by maintaining important information within view at all times.
 
+To know about frozen rows in Blazor DataGrid Component, you can check this video.
+
+{% youtube "youtube:https://www.youtube.com/watch?v=L2NvKyBomhM"%}
+
 In the following example, the [FrozenRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenRows) property is set to **2**. This configuration freezes the top two rows of the grid, and they will remain fixed in their positions while the rest of the grid can be scrolled vertically.
 
 {% tabs %}
