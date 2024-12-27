@@ -143,7 +143,8 @@ Here, the Pager component is integrated with the ListView component. So, the fir
 
 | Interactivity location | RenderMode | Code |
 | --- | --- | --- |
-| Per page/component | WebAssembly or Auto | @rendermode InteractiveAuto |
+| Per page/component | Auto | @rendermode InteractiveAuto |
+|  | WebAssembly | @rendermode InteractiveWebAssembly |
 |  | Server | @rendermode InteractiveServer |
 |  | None | --- |
 

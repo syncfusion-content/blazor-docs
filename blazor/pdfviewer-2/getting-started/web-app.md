@@ -213,7 +213,8 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer (Next Gen) c
 
 | Interactivity location | RenderMode | Code |
 | --- | --- | --- |
-| Per page/component | WebAssembly or Auto | @rendermode InteractiveAuto |
+| Per page/component | Auto | @rendermode InteractiveAuto |
+|  | WebAssembly | @rendermode InteractiveWebAssembly |
 |  | Server | @rendermode InteractiveServer |
 |  | None | --- |
 

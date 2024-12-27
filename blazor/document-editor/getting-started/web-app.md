@@ -143,11 +143,10 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DocumentEditor c
 
 | Interactivity location | RenderMode | Code |
 | --- | --- | --- |
-| Per page/component | WebAssembly or Auto | @rendermode InteractiveAuto |
+| Per page/component | Auto | @rendermode InteractiveAuto |
+|  | WebAssembly | @rendermode InteractiveWebAssembly |
 |  | Server | @rendermode InteractiveServer |
 |  | None | --- |
-
-N> If an **Interactivity Location** is set to `Global` and the **Render Mode** is set to `Auto` or `WebAssembly` or `Server`, the render mode is configured in the `App.razor` file by default.
 
 {% tabs %}
 {% highlight razor %}

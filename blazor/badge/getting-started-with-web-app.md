@@ -58,7 +58,8 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Badge component 
 
 | Interactivity location | RenderMode | Code |
 | --- | --- | --- |
-| Per page/component | WebAssembly or Auto | @rendermode InteractiveAuto |
+| Per page/component | Auto | @rendermode InteractiveAuto |
+|  | WebAssembly | @rendermode InteractiveWebAssembly |
 |  | Server | @rendermode InteractiveServer |
 |  | None | --- |
 

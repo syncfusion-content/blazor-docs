@@ -143,7 +143,8 @@ Add the Syncfusion Blazor Chat UI component in the **~Pages/.razor** file. If an
 
 | Interactivity location | RenderMode | Code |
 | --- | --- | --- |
-| Per page/component | WebAssembly or Auto | @rendermode InteractiveAuto |
+| Per page/component | Auto | @rendermode InteractiveAuto |
+|  | WebAssembly | @rendermode InteractiveWebAssembly |
 |  | Server | @rendermode InteractiveServer |
 |  | None | --- |
 
