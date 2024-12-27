@@ -11,6 +11,11 @@ documentation: ug
 
 This article provides a step-by-step instructions for building `Blazor Web App` with `Blazor Accordion` component using [Visual Studio](https://visualstudio.microsoft.com/vs/).
 
+To get start quickly with Blazor Web App, you can check on this video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=hjPGxApA5W8" %}
+
 ## Using Playground
 
 [Blazor Playground](https://blazor.syncfusion.com/documentation/blazor-playground/overview) allows you to interact with our Blazor components directly in your web browser without need to install any required NuGet packages. By default, the `Syncfusion.Blazor` package is included in this.
