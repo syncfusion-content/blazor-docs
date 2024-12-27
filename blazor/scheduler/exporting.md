@@ -423,6 +423,11 @@ You can export the Scheduler data with specific date format, by defining the [`D
 
 You can export the Scheduler events to a calendar (.ics) file format, and open it on any of the other default calendars such as Google or Outlook.
 
+To get start quickly about exporting and importing calendar events  in our Scheduler, you can check on this video:
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=YMISOARH8tM-0"%}
+
 The following code example shows how the Scheduler events are exported to a calendar (.ics) file by making use of the [`ExportToICalendarAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_ExportToICalendarAsync_System_String_System_Collections_Generic_List__0__) public method.
 
 ```cshtml
