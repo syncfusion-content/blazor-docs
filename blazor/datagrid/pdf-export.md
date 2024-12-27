@@ -14,6 +14,10 @@ documentation: ug
 PDF export allows exporting DataGrid data to PDF document. You need to use the
  **PdfExport** method for exporting. To enable PDF export in the datagrid, set the [AllowPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPdfExport) as true.
 
+To know about how to export blazor datagrid component to pdf document, you can check this video.
+
+{% youtube "youtube:https://www.youtube.com/watch?v=HwERozt9fuY"%}
+
 ```cshtml
 @using Syncfusion.Blazor.Grids
 
@@ -1486,6 +1490,10 @@ function saveAsFile(filename, bytesBase64) {
 ### Converting Memory Stream to File Stream for PDF Export
 
 This section explains the process of converting a memory stream obtained from the `ExportToPdfAsync` method into a file stream to export pdf document.
+
+To know about exporting Blazor DataGrid as a Stream to a PDF document in Blazor DataGrid Component, you can check this video.
+
+{% youtube "youtube:https://www.youtube.com/watch?v=H5rqB_hBpUM"%}
 
 The example provided demonstrates this process of exporting the pdf document from the file stream.
 
