@@ -345,22 +345,69 @@ The Gantt Chart automatically renders dependency lines between related tasks. Th
 
 ## Customizing dependency appearance
 
-Customize dependency lines and arrows using CSS for better visualization:
+The Gantt Chart includes styling options that enable you to customize the appearance of dependency lines. The [ConnectorLineBackground](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ConnectorLineBackground) property allows you to set the color of the connector lines using CSS color values, such as "#ff00ff". Additionally, the [ConnectorLineWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ConnectorLineWidth) property lets you adjust the thickness of these lines in pixels, defaulting to 1 pixel. These properties are designed to enhance the visual clarity and appeal of task dependencies within the chart.
+
+Here is a code snippet that shows how to modify the color of dependency lines:
+
+```cshtml
+@using Syncfusion.Blazor.Gantt
+<SfGantt DataSource="@TaskCollection" ConnectorLineBackground="#ff0000" ConnectorLineWidth="2" Height="450px" Width="750px">
+    <GanttTaskFields Id="TaskId"
+                     Name="TaskName"
+                     StartDate="StartDate"
+                     EndDate="EndDate"
+                     Duration="Duration"
+                     Progress="Progress"
+                     Dependency="Predecessor"
+                     ParentID="ParentId">
+    </GanttTaskFields>
+</SfGantt>
+@code {
+    public List<TaskData> TaskCollection { get; set; }
+
+    protected override void OnInitialized()
+    {
+        TaskCollection = new List<TaskData>
+        {
+            new TaskData { TaskId = 1, TaskName = "Research Phase", StartDate = new DateTime(2023, 05, 01) },
+            new TaskData { TaskId = 2, TaskName = "Literature Review", StartDate = new DateTime(2023, 05, 01), Duration = "4", Progress = 50, ParentId = 1 },
+            new TaskData { TaskId = 3, TaskName = "Data Collection", StartDate = new DateTime(2023, 05, 05), Duration = "3", Progress = 0, Predecessor = "2FS", ParentId = 1 },
+            new TaskData { TaskId = 4, TaskName = "Concurrent Task Preparation", StartDate = new DateTime(2023, 05, 11), Duration = "3", Progress = 0, Predecessor = "3SS" },
+            new TaskData { TaskId = 5, TaskName = "Data Analysis", StartDate = new DateTime(2023, 05, 14), Duration = "3", Progress = 0, Predecessor = "4FF" },
+            new TaskData { TaskId = 6, TaskName = "Report Writing", StartDate = new DateTime(2023, 05, 18), Duration = "4", Progress = 0, Predecessor = "5SF" }
+        };
+    }
+
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public string Predecessor { get; set; }
+        public int? ParentId { get; set; }
+    }
+}
+```
+
+Additionally, you can modify the colors of the dependency lines and arrows using CSS for better visualization:
 
 ```html
 <style>
-    .e-gantt .e-connector-line-wrapper .e-connector-line {
-        stroke: #ff0000; /* Set line color to red */
-        stroke-width: 2;/* Make line thicker */
+    .e-gantt .e-connector-line {
+        stroke: #ff0000 !important; /* Set line color to red */
+        stroke-width: 2 !important;/* Make line thicker */
     }
-    .e-gantt .e-connector-line-wrapper .e-connector-line-right-arrow,
-    .e-gantt .e-connector-line-wrapper .e-connector-line-left-arrow {
-        fill: #ff0000;/* Set arrow color to red */
+    .e-gantt .e-connector-line-arrow {
+        fill: #ff0000 !important;/* Set arrow color to red */
     }
 </style>
 ```
+![Blazor Gantt Chart displays Customizing Dependency Appearance](images/blazor-gantt-chart-dependency-appearance.png)
 
-This CSS customizes dependency lines to be red and thicker.
+This customization makes the dependency lines and arrows red and thicker for better visibility in the Gantt Chart.
 
 ## Handling circular dependencies
 
