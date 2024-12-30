@@ -56,6 +56,15 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Avatar component in the **~Pages/.razor** file. If an interactivity location as `Per page/component` in the web app, define a render mode at the top of the `~Pages/.razor` component, as follows:
 
+| Interactivity location | RenderMode | Code |
+| --- | --- | --- |
+| Per page/component | Auto | @rendermode InteractiveAuto |
+|  | WebAssembly | @rendermode InteractiveWebAssembly |
+|  | Server | @rendermode InteractiveServer |
+|  | None | --- |
+
+N> If an **Interactivity Location** is set to `Global` and the **Render Mode** is set to `Auto` or `WebAssembly` or `Server`, the render mode is configured in the `App.razor` file by default.
+
 {% tabs %}
 {% highlight razor %}
 
