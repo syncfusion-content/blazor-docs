@@ -11,6 +11,10 @@ documentation: ug
 
 The grid offers the option to export the column, detail, and caption templates to a PDF document. The template contains images, hyperlinks, and customized text.
 
+To know about exporting Blazor DataGrid with custom templates to a PDF Document in Blazor DataGrid Component, you can check this video.
+
+{% youtube "youtube:https://www.youtube.com/watch?v=-cjoxysUWcg"%}
+
 ## Exporting with column template
 
 The PDF export functionality allows you to export Grid columns that include images, hyperlinks, and custom text to a PDF document. Export the template columns of the DataGrid by defining the [IncludeTemplateColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_IncludeTemplateColumn) of [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) as **true**.
