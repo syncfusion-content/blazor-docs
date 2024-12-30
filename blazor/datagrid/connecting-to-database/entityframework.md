@@ -21,9 +21,17 @@ Entity Framework is an open-source [ORM framework](https://en.wikipedia.org/wiki
 
 The [UrlAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor) serves as the base adaptor for facilitating communication between remote data services and an UI component. It enables the remote binding of data to the Blazor DataGrid component by connecting to an existing pre-configured API service linked to the Microsoft SQL Server database. While the Blazor DataGrid component supports various adaptors to fulfill this requirement, including [Web API](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor), [OData](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor), [ODataV4](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor), [Url](https://blazor.syncfusion.com/documentation/data/adaptors#url-adaptor), and [GraphQL](https://blazor.syncfusion.com/documentation/data/adaptors#graphql-service-binding), the `UrlAdaptor` is particularly useful for the scenarios where a custom API service with unique logic for handling data and CRUD operations is in place. This approach allows for custom handling of data and CRUD operations, and the resultant data returned in the `result` and `count` format for display in the Blazor DataGrid component.
 
+To know about how to connect SQL Server to Blazor DataGrid with URL Adaptor using Entity Framework in Blazor DataGrid Component, you can check this video.
+
+{% youtube "youtube:https://www.youtube.com/watch?v=3JOwTx0h9MI" %}
+
 * **Using CustomAdaptor**
 
 The [CustomAdaptor](https://blazor.syncfusion.com/documentation/datagrid/custom-binding) serves as a mediator between the UI component and the database for data binding. While the data source from the database can be directly bound to the `SfGrid` component locally using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property, the `CustomAdaptor` approach is preferred as it allows for customization of both data operations and CRUD operations according to specific requirements. In this approach, for every action in the Blazor DataGrid component, a corresponding request with action details is sent to the `CustomAdaptor`. The Blazor DataGrid component provides predefined methods to perform data operations such as **searching**, **filtering**, **sorting**, **aggregation**, **paging** and **grouping**. Alternatively, your own custom methods can be employed to execute operations and return the data in the `Result` and `Count` format of the `DataResult` class for displaying in the Blazor DataGrid component. Additionally, for CRUD operations, predefined methods can be overridden to provide custom functionality. Further details on this can be found in the latter part of the documentation.
+
+To know about how to connect SQL Server to Blazor DataGrid with custom adaptor using Entity Framework in Blazor DataGrid Component, you can check this video.
+
+{% youtube "youtube:https://www.youtube.com/watch?v=1qnPg1TZo8Q" %}
 
 ## Binding data using Entity Framework from Microsoft SQL Server via an API service.
 
@@ -40,7 +48,7 @@ This section describes step by step process how to use Entity Framework to retri
 **4** In the API controller (aka, GridController), a connection is established to Microsoft SQL Server within the **Get()** method using **OrderDbContext**. This class extends **DbContext** and is configured to connect to a Microsoft SQL Server database using the provided connection string. It includes a **DbSet<Order>** property, enabling interaction with the Orders table in the database. The method retrieves all orders from the database asynchronously and returns them as a list of `Order` objects as shown in the following code snippet.
 
 {% tabs %}
-{% highlight razor tabtitle="GridController.cs"%}
+{% highlight razor tabtitle="GridController.cs" %}
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using Syncfusion.Blazor.Data;
@@ -185,7 +193,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 **4.** The `UrlAdaptor` acts as the base adaptor for interacting with remote data service. Most of the built-in adaptors are derived from the `UrlAdaptor`.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor"%}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor
@@ -246,7 +254,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
     }
 }
 {% endhighlight %}
-{% highlight c# tabtitle="GridController.cs"%}
+{% highlight c# tabtitle="GridController.cs" %}
     public class GridController : ControllerBase
     {
         /// <summary>
@@ -640,7 +648,7 @@ This section describes step by step process how to use Entity Framework to retri
     SfGrid<Order> Grid { get; set; }
 }
 {% endhighlight %}
-{% highlight razor tabtitle="Orderdata.cs"%}
+{% highlight razor tabtitle="Orderdata.cs" %}
   public class Order
   {
       public int? OrderID { get; set; }
@@ -1033,7 +1041,7 @@ Let's see how to perform CRUD operations using `Entity Framework` in Microsoft S
 To execute the insert operation, you will need to override the [Insert](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Insert_Syncfusion_Blazor_DataManager_System_Object_System_String_) or [InsertAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_InsertAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_) method of the `CustomAdaptor`. Then, integrate the following code snippet into the `CustomAdaptor` class. The below code snippet demonstrated how to handle the insertion of new records within the `InsertAsync` method of `CustomAdaptor` component. Modify the logic within this method according to the requirements of your application. Utilizing `Entity Framework` simplifies database tasks by managing database connections and queries through object-oriented programming, making it easier to work with databases in C# code, as shown in the following code snippet.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor"%}
+{% highlight razor tabtitle="Index.razor" %}
 /// <summary>
 /// Inserts a new data item into the data collection.
 /// </summary>
@@ -1049,7 +1057,7 @@ public override async Task<object> InsertAsync(DataManager DataManager, object V
     return Value;
 }
 {% endhighlight %}
-{% highlight razor tabtitle="Orderdata.cs"%}
+{% highlight razor tabtitle="Orderdata.cs" %}
 public async Task AddOrderAsync(Order Value)
 {
     using (var Context = new OrderDbContext(ConnectionString))
@@ -1068,7 +1076,7 @@ public async Task AddOrderAsync(Order Value)
 To execute the update operation, override the [Update](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Update_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) or [UpdateAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_UpdateAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) method of the `CustomAdaptor`. Then, integrate the following code snippet into the `CustomAdaptor` class. The below code snippet demonstrated how to handle the updating of existing records within the `UpdateAsync` method of the `CustomAdaptor` component. Modify the logic within this method according to the requirements of your application. Utilizing `Entity Framework` simplifies database tasks by managing database connections and queries through object-oriented programming, making it easier to work with databases in C# code, as shown in the following code snippet.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor"%}
+{% highlight razor tabtitle="Index.razor" %}
 /// <summary>
 /// Updates an existing data item in the data collection.
 /// </summary>
@@ -1085,7 +1093,7 @@ public override async Task<object> UpdateAsync(DataManager DataManager, object V
     return Value;
 }
 {% endhighlight %}
-{% highlight razor tabtitle="Orderdata.cs"%}
+{% highlight razor tabtitle="Orderdata.cs" %}
 public async Task UpdateOrderAsync(Order Value)
 {
     using (var Context = new OrderDbContext(ConnectionString))
@@ -1104,7 +1112,7 @@ public async Task UpdateOrderAsync(Order Value)
 To perform the delete operation, you need to override the [Remove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Remove_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) or [RemoveAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_RemoveAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) method of the `CustomAdaptor`. Below is the code snippet that you can add to `CustomAdaptor` class. The below code snippet demonstrated how to handle the deletion of existing records within the `RemoveAsync` method of `CustomAdaptor` component. Modify the logic within this method according to the requirements of your application. Utilizing `Entity Framework` simplifies database tasks by managing database connections and queries through object-oriented programming, making it easier to work with databases in C# code, as shown in the following code snippet.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor"%}
+{% highlight razor tabtitle="Index.razor" %}
 /// <summary>
 /// Removes a data item from the data collection.
 /// </summary>
@@ -1121,7 +1129,7 @@ public override async Task<object> RemoveAsync(DataManager DataManager, object V
     return Value;
 }
 {% endhighlight %}
-{% highlight razor tabtitle="Orderdata.cs"%}
+{% highlight razor tabtitle="Orderdata.cs" %}
 public async Task RemoveOrderAsync(int? Key)
 {
     using (var Context = new OrderDbContext(ConnectionString))
