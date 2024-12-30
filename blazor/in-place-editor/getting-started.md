@@ -13,6 +13,10 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor In-place Editor](https://www.syncfusion.com/blazor-components/blazor-in-place-editor) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
+To get started quickly with the Blazor In-place Editor in a Blazor WebAssembly app, watch the following video or explore the [GitHub](https://github.com/SyncfusionExamples/how-to-add-a-blazor-in-place-editor-to-a-blazor-webassembly-app) sample:
+
+{% youtube "youtube:https://www.youtube.com/watch?v=yv5TvEjdjBM"%}
+
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
