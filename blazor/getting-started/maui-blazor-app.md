@@ -11,6 +11,11 @@ documentation: ug
 
 This section explains how to create and run the first .NET Multi-platform Blazor App UI (.NET MAUI Blazor) app with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
 
+To get start quickly with Blazor MAUI App, you can check on this video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=wnceZx-Xezs" %}
+
 ## What is .NET MAUI Blazor App?
 
 .NET MAUI Blazor App is a .NET MAUI App where `Blazor web app` is hosted in .NET MAUI app using `BlazorWebView` control. This enable a Blazor web app to be integrated with platform features and UI controls. Also, BlazorWebView can be added to any page of .NET MAUI app, and pointed to the root of the Blazor app. The Blazor components run natively in the .NET process and render web UI to an embedded web view control. .NET MAUI Blazor apps can run on all the platforms supported by .NET MAUI.
@@ -131,7 +136,7 @@ Before running the sample, make sure the mode is `Windows Machine`.
 
 N> If you want to run the application in Android or iOS refer [MAUI Getting Started](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui?view=aspnetcore-8.0#run-the-app-in-the-android-emulator) for the setup.
 
-![MAUI Blazor App with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Components](images/maui/maui-blazor-calendar.png)
+![MAUI Blazor App with Syncfusion Blazor Components](images/maui/maui-blazor-calendar.png)
 
 N> Download demo from [GitHub](https://github.com/SyncfusionExamples/MAUI-Blazor-App-using-Syncfusion-Blazor-Components)
 
