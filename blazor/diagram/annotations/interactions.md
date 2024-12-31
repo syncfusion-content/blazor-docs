@@ -77,3 +77,10 @@ The [rotationReference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/Interactions/RotationReference)
 
+## See also
+
+* [How to add or remove annotation constraints](../constraints#annotation-constraints)
+
+* [How to add annotation for Node](./node-annotation)
+
+* [How to add annotation for Connector](./connector-annotation)
