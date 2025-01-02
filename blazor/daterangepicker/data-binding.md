@@ -49,7 +49,7 @@ Two-way binding can be achieved by using the `bind-StartDate` and `bind-EndDate`
 
 <p>DateRangePickers StarteDate and EndDate is: <strong>@StartValue</strong> and <strong>@EndValue</strong></p>
 
-<SfDateRangePicker TValue="DateTime?" @bind-StartDate="@StartValue" EndDate="@EndValue" ></SfDateRangePicker>
+<SfDateRangePicker TValue="DateTime?" @bind-StartDate="@StartValue" @bind-EndDate="@EndValue" ></SfDateRangePicker>
 
 @code {
 
