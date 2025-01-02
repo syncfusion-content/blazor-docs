@@ -78,8 +78,8 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LXhTWVWxfiLoTefJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> Normal edit mode is default mode of editing.
-> When enabling editing, it is necessary to set the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property value to **true** for the unique column.
+> * Normal edit mode is default mode of editing.
+> * When enabling editing, it is necessary to set the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property value to **true** for the unique column.
 
 ## Automatically update a specific column based on another column edited value
 
@@ -533,7 +533,7 @@ public class OrderDetails
 
 This feature is useful when you want to pre-fill certain column values with default values to streamline the data entry process. The grid component allows you to set default values for columns when adding a new record. 
 
-To set a default value for a specific column in the Grid, you can use the [DefaultValue](https://ej2.syncfusion.com/angular/documentation/api/grid/column/#defaultvalue) property of the `GridColumns` configuration. By providing a default value, the grid will automatically populate that value in the corresponding column when a new row is added.
+To set a default value for a specific column in the Grid, you can use the [DefaultValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_DefaultValue) property of the `GridColumns` configuration. By providing a default value, the grid will automatically populate that value in the corresponding column when a new row is added.
 
 Here's an example of how to set a default value for a column:
 
@@ -764,7 +764,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhpMhskgzmGebem?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLStsZBUpReRDUm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Adding a new row at the bottom of the grid
 
@@ -780,11 +780,11 @@ Here's an example of how to enable adding new rows at the bottom of the grid:
 @using Syncfusion.Blazor.DropDowns
 
 <div style="margin-bottom:5px">
-<label> Select new row position: </label>
-<SfDropDownList TValue="NewRowPosition" TItem="DropDownOrder" DataSource="@DropDownValue" Width="100px">
-    <DropDownListFieldSettings Text="Text" Value="Value"></DropDownListFieldSettings>
-    <DropDownListEvents ValueChange="OnChange" TValue="NewRowPosition" TItem="DropDownOrder"></DropDownListEvents>
-</SfDropDownList>
+    <label> Select new row position: </label>
+    <SfDropDownList TValue="NewRowPosition" TItem="DropDownOrder" DataSource="@DropDownValue" Width="100px">
+        <DropDownListFieldSettings Text="Text" Value="Value"></DropDownListFieldSettings>
+        <DropDownListEvents ValueChange="OnChange" TValue="NewRowPosition" TItem="DropDownOrder"></DropDownListEvents>
+    </SfDropDownList>
 </div>
 <SfGrid DataSource="@OrderData" Toolbar="@(new List<string>() { "Add", "Edit","Delete", "Update", "Cancel" })" Height="315">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="Syncfusion.Blazor.Grids.EditMode.Normal" NewRowPosition="@RowPosition"></GridEditSettings>
