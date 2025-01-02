@@ -944,6 +944,93 @@ public class OrderDetails
 * The new blank add row form will always be displayed at the top, even if you have set the new row position as the bottom for Virtual Scrolling and Infinite Scrolling enabled grid.
 * This feature is not compatible with the column virtualization feature.
 
+## Enable editing in single click
+
+Enabling single-click editing in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid's **Normal** editing mode is a valuable feature that allows you to make a row editable with just one click.This can be achieved by using the [StartEditAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_StartEditAsync) and [EndEditAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EndEditAsync) methods.
+
+To implement this feature, you need to bind the [OnRecordClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnRecordClick) event of the Grid. Within the event handler, call the `StartEditAsync` method to begin editing the clicked row and the `EndEditAsync` method to save or cancel editing for a previously edited row. This ensures that the editing mode is triggered when a specific record in the Grid is clicked.
+    
+The following sample demonstrates how to enable editing in a single click using the `OnRecordClick` event:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+<SfGrid @ref="Grid" DataSource="@OrderData" Toolbar="@(new List<string>() { "Add", "Edit","Delete", "Update", "Cancel" })" Height="315">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal" ></GridEditSettings>
+    <GridEvents OnRecordClick="RecordClickHandler" TValue="OrderDetails"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true})" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required=true, MinLength=5})" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" ValidationRules="@(new ValidationRules{ Required=true, Min=1, Max=1000})" Format="C2" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipCountry) HeaderText="Ship Country" EditType="EditType.DropDownEdit" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+@code {
+    public SfGrid<OrderDetails> Grid { get; set; }
+    public List<OrderDetails> OrderData { get; set; }
+    protected override void OnInitialized()
+    {
+        OrderData = OrderDetails.GetAllRecords();
+    }
+    private int? CurrentRowIndex { get; set; } = null;
+    public async Task RecordClickHandler(Syncfusion.Blazor.Grids.RecordClickEventArgs<OrderDetails> args)
+    {
+        if (Grid.IsEdit && CurrentRowIndex != args.RowIndex)
+        {
+            // End editing for the previously edited row
+            await Grid.EndEditAsync();
+        }
+        // Update the currently selected row index
+        CurrentRowIndex = args.RowIndex;
+        await Grid.SelectRowAsync(args.RowIndex);
+        // Start editing the clicked row
+        await Grid.StartEditAsync();
+    }
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderDetails.cs" %}
+public class OrderDetails
+{
+    public static List<OrderDetails> Order = new List<OrderDetails>();
+    public OrderDetails(int OrderID, string CustomerId, double Freight, string ShipCountry)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerId;
+        this.Freight = Freight;
+        this.ShipCountry = ShipCountry;    
+    }
+    public static List<OrderDetails> GetAllRecords()
+    {
+        if (Order.Count == 0)
+        {
+            Order.Add(new OrderDetails(10248, "VINET", 32.38, "France"));
+            Order.Add(new OrderDetails(10249, "TOMSP", 11.61, "Germany"));
+            Order.Add(new OrderDetails(10250, "HANAR", 65.83, "Brazil"));
+            Order.Add(new OrderDetails(10251, "VICTE", 41.34, "France"));
+            Order.Add(new OrderDetails(10252, "SUPRD", 51.3, "Belgium"));
+            Order.Add(new OrderDetails(10253, "HANAR", 58.17, "Brazil"));
+            Order.Add(new OrderDetails(10254, "CHOPS", 22.98, "Switzerland"));
+            Order.Add(new OrderDetails(10255, "RICSU", 148.33, "Switzerland"));
+            Order.Add(new OrderDetails(10256, "WELLI", 13.97, "Brazil"));
+            Order.Add(new OrderDetails(10257, "HILAA", 81.91, "Venezuela"));
+            Order.Add(new OrderDetails(10258, "ERNSH", 140.51, "Austria"));
+            Order.Add(new OrderDetails(10259, "CENTC", 3.25, "Mexico"));
+            Order.Add(new OrderDetails(10260, "OTTIK", 55.09, "Germany"));
+            Order.Add(new OrderDetails(10261, "QUEDE", 3.05, "Brazil"));
+            Order.Add(new OrderDetails(10262, "RATTC", 48.29, "USA"));
+        }
+        return Order;
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCountry { get; set; }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtryNWXVhqPKVwhQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## Disable editing for a particular row
 
 In the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component, you can prevent editing of specific rows based on certain conditions. This feature is useful when you want to restrict editing for certain rows , such as read-only data, calculated values, or protected information. It helps maintain data integrity and ensures that only authorized changes can be made in the grid.
