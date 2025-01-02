@@ -9,6 +9,11 @@ documentation: ug
 
 # Markers in Blazor Maps Component
 
+This section shows how to add and customize the markers in the Maps component. The below video demonstrates the same.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=0Mr7FhIw3Wc"%}
+
 Markers are notes that are used to leave a message on the Maps. It indicates or marks a specific location with desired symbols on the Maps. It can be enabled by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_Visible) property of the [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html) to **true**.
 
 ## Adding marker
@@ -540,6 +545,11 @@ Maps typically zoom in when you click or double-click on them. This zooming also
 ![Disabling Zoom on Marker Click in Blazor Maps](./images/Marker/blazor-maps-disabling-zooming-on-marker-click.gif)
 
 ## Marker clustering
+
+This section shows how to customize the marker clusters in the Maps component. The below video demonstrates the same.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=dsUvoD6lUBg"%}
 
 Maps support hiding and clustering markers when they overlap. The number on a cluster indicates how many overlapping markers it contains. When zooming into any cluster location on the map, the number on the cluster decreases, and individual markers become visible. When zooming out, the overlapping markers increase, causing them to cluster again, which increases the count on the cluster.
 

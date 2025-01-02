@@ -11,6 +11,11 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor Maps](https://www.syncfusion.com/blazor-components/blazor-map) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
+The below video demonstrates how to get started with a Blazor Server application, along with the key features of the Blazor Maps component.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=AkWI90I7ncE"%}
+
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)

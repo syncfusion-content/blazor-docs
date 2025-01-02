@@ -9,6 +9,11 @@ documentation: ug
 
 # Annotations in Blazor Maps component
 
+This section shows how to add and customize the annotations in the Maps component. The below video demonstrates the same.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=5VKuHxPwEbo"%}
+
 Annotations are used to mark the specific area of interest in the Maps with texts, shapes, or images. Any number of annotations can be added to the Maps component.
 
 ## Annotation
