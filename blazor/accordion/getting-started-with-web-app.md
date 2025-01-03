@@ -47,7 +47,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 | WebAssembly or Auto | Open **~/_Imports.razor** file from the client project.|
 | Server | Open **~/_import.razor** file, which is located in the `Components` folder.|
 
-Import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Navigations` namespace .
+Import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Navigations` namespace.
 
 {% tabs %}
 {% highlight C# tabtitle="~/_Imports.razor" %}
@@ -145,6 +145,15 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Accordion compon
 |  | None | --- |
 
 N> If an **Interactivity Location** is set to `Global` and the **Render Mode** is set to `Auto` or `WebAssembly` or `Server`, the render mode is configured in the `App.razor` file by default.
+
+{% tabs %}
+{% highlight razor %}
+
+@* desired render mode define here *@
+@rendermode InteractiveAuto
+
+{% endhighlight %}
+{% endtabs %}
 
 {% tabs %}
 {% highlight razor %}
