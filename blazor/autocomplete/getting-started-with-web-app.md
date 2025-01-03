@@ -47,7 +47,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 | WebAssembly or Auto | Open **~/_Imports.razor** file from the client project.|
 | Server | Open **~/_import.razor** file, which is located in the `Components` folder.|
 
-Import the `Syncfusion.Blazor` and `Syncfusion.Blazor.DropDowns` namespace .
+Import the `Syncfusion.Blazor` and `Syncfusion.Blazor.DropDowns` namespace.
 
 {% tabs %}
 {% highlight C# tabtitle="~/_Imports.razor" %}
@@ -61,10 +61,6 @@ Import the `Syncfusion.Blazor` and `Syncfusion.Blazor.DropDowns` namespace .
 Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor Web App.
 
 If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, you need to register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in both **~/Program.cs** files of your Blazor Web App.
-
-If the **Interactive Render Mode** is set to `Server`, your project will contain a single **~/Program.cs** file. So, you should register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service only in that **~/Program.cs** file.
-
-If **Interactive Render Mode** as `WebAssembly` or `Auto`,
 
 {% tabs %}
 {% highlight c# tabtitle="Server(~/_Program.cs)" hl_lines="3 11" %}
@@ -98,7 +94,7 @@ await builder.Build().RunAsync();
 {% endhighlight %}
 {% endtabs %}
 
-If **Interactive Render Mode** as `Server`,
+If the **Interactive Render Mode** is set to `Server`, your project will contain a single **~/Program.cs** file. So, you should register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service only in that **~/Program.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="~/_Program.cs" hl_lines="2 9" %}
