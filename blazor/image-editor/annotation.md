@@ -687,9 +687,9 @@ We provide default settings for stroke color, stroke width, fill color, and othe
 ```
 ![Blazor Image Editor with Default Color](./images/blazor-image-editor-default-stroke-color.jpeg)
 
-## Show or hide the annotation option
+## Show or hide the annotation options
 
-Using the [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_Toolbar) property of image editor component, we can hide or show the annotation options from annotation dropdown menu.
+Using the [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_Toolbar) property of image editor component, you can hide or show the annotation options from annotation dropdown menu.
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
