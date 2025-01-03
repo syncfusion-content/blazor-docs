@@ -1059,11 +1059,11 @@ In the below demo, the rows which are having the value for **ShipCountry** colum
     {
         OrderData = OrderDetails.GetAllRecords();
     }
-    public void RowEditingHandler(RowEditingEventArgs<OrderDetails> Args)
+    public void RowEditingHandler(RowEditingEventArgs<OrderDetails> args)
     {
-        if (Args.Data.ShipCountry == "France") 
+        if (args.Data.ShipCountry == "France") 
         {
-            Args.Cancel = true;
+            args.Cancel = true;
         }
     }
 }
@@ -1109,81 +1109,99 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNrTsLCYJloGZbCS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZLotiNrUuudyXpE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Provide new item or edited item using events
 
 Grid uses `Activator.CreateInstance<TValue>()` to create or clone new record instance during add and edit operations, so it must have parameterless constructors defined for the model class and any referenced complex type classes.
 
-There are cases where custom logic is required for creating new object or new object instance cannot be created using  `Activator.CreateInstance<TValue>()`. In such cases you can provide model object instance manually using events.
+There are cases where custom logic is required to create a new object, or a new object instance cannot be created using `Activator.CreateInstance<TValue>()`. In such cases, you can manually provide model object instance using events.
 
-You can use OnActionBegin event to provide new object instance during editing operation. The new object should be assigned to the `OnActionBegin<TValue>.Data` property.
+You can use the [RowCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowCreating) and [OnBeginEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBeginEdit) events to provide a new object instance during creation and editing operations. The new object should be assigned to the `RowCreating<TValue>.Data` and `OnBeginEdit<TValue>.RowData` properties.
 
 In the following example:
 
-* A model class with no parameter-less constructor is bound with the grid.
+* A model class without parameter-less constructor is bound with the grid.
 * Enabled inline editing feature in grid.
-* `OnActionBegin` event callback is assigned in which `Data` property is assigned with custom object for both add and edit operation.
+* The `RowCreating` event is used to assign default values for new rows.
+* The `OnBeginEdit` event is used to clone the current row's data when editing an existing item.
 
-```csharp
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
-    <GridEditSettings AllowEditing="true" AllowAdding="true" Mode="EditMode.Normal"></GridEditSettings>
+<SfGrid @ref="Grid" DataSource="@OrderData" Toolbar="@(new List<string>() { "Add", "Edit","Delete", "Update", "Cancel" })" Height="315">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal"></GridEditSettings>
+    <GridEvents OnBeginEdit="OnBeginEdit" RowCreating="RowCreating" TValue="OrderDetails"></GridEvents>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true})" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required=true, MinLength=5})" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" ValidationRules="@(new ValidationRules{ Required=true, Min=1, Max=1000})" Format="C2" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipCountry) HeaderText="Ship Country" EditType="EditType.DropDownEdit" Width="150"></GridColumn>
     </GridColumns>
-    <GridEvents TValue="Order" OnActionBegin="ActionBegin"></GridEvents>
 </SfGrid>
 
 @code {
-
-    List<Order> Orders { get; set; }
-
+    public SfGrid<OrderDetails> Grid { get; set; }
+    public List<OrderDetails> OrderData { get; set; }
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 10).Select(x => new Order(1000 + x)
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI",
-                "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = (new double[] { 2, 1, 4, 5, 3 })[new Random().Next(5)] * x,
-            OrderDate = (new DateTime[] { new DateTime(2019, 01, 01), new DateTime(2019, 01, 02) })[new Random().Next(2)]
-        }).ToList();
+        OrderData = OrderDetails.GetAllRecords();
     }
-
-    public void ActionBegin(ActionEventArgs<Order> arg)
+    private int LatestOrderID { get; set; } = 101;
+    public void RowCreating(RowCreatingEventArgs<OrderDetails> args)
     {
-        //Handles add operation
-        if (arg.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Add))
-        {
-            arg.Data = new Order(0) { CustomerID = "Customer ID" };
-        }
-
-        //Handles edit operation. During edit operation, original object will be cloned.
-        if (arg.RequestType.Equals(Syncfusion.Blazor.Grids.Action.BeginEdit))
-        {
-            arg.Data = new Order(arg.RowData.OrderID)
-            {
-                CustomerID = arg.RowData.CustomerID,
-                Freight = arg.RowData.Freight,
-                OrderDate = arg.RowData.OrderDate
-            };
-        }
+        args.Data.OrderID = LatestOrderID; 
+        args.Data.CustomerID = "HANAR"; 
+        args.Data.Freight = 5;
+        args.Data.ShipCountry = "Brazil";
+        LatestOrderID += 1;
     }
-
-    // This class does not contain any parameter-less constructor, hence this cannot be instantiated using Activator.CreateInstance.
-    public class Order
+    public void OnBeginEdit(BeginEditArgs<OrderDetails> args)
     {
-        public Order(int? orderid) => OrderID = orderid;
-
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
+        args.RowData = new OrderDetails(args.RowData.OrderID, args.RowData.CustomerID, args.RowData.Freight, args.RowData.ShipCountry);
     }
 }
+{% endhighlight %}
+{% highlight c# tabtitle="OrderDetails.cs" %}
+public class OrderDetails
+{
+    public static List<OrderDetails> Order = new List<OrderDetails>();
+    public OrderDetails(int OrderID, string CustomerId, double Freight, string ShipCountry)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerId;
+        this.Freight = Freight;
+        this.ShipCountry = ShipCountry;    
+    }
+    public static List<OrderDetails> GetAllRecords()
+    {
+        if (Order.Count == 0)
+        {
+            Order.Add(new OrderDetails(10248, "VINET", 32.38, "France"));
+            Order.Add(new OrderDetails(10249, "TOMSP", 11.61, "Germany"));
+            Order.Add(new OrderDetails(10250, "HANAR", 65.83, "Brazil"));
+            Order.Add(new OrderDetails(10251, "VICTE", 41.34, "France"));
+            Order.Add(new OrderDetails(10252, "SUPRD", 51.3, "Belgium"));
+            Order.Add(new OrderDetails(10253, "HANAR", 58.17, "Brazil"));
+            Order.Add(new OrderDetails(10254, "CHOPS", 22.98, "Switzerland"));
+            Order.Add(new OrderDetails(10255, "RICSU", 148.33, "Switzerland"));
+            Order.Add(new OrderDetails(10256, "WELLI", 13.97, "Brazil"));
+            Order.Add(new OrderDetails(10257, "HILAA", 81.91, "Venezuela"));
+            Order.Add(new OrderDetails(10258, "ERNSH", 140.51, "Austria"));
+            Order.Add(new OrderDetails(10259, "CENTC", 3.25, "Mexico"));
+            Order.Add(new OrderDetails(10260, "OTTIK", 55.09, "Germany"));
+            Order.Add(new OrderDetails(10261, "QUEDE", 3.05, "Brazil"));
+            Order.Add(new OrderDetails(10262, "RATTC", 48.29, "USA"));
+        }
+        return Order;
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCountry { get; set; }
+}
+{% endhighlight %}
+{% endtabs %}
 
-```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LthINCtgBmWlAIwy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
