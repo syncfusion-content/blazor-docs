@@ -15,9 +15,9 @@ To initialize the tools, use the following code. You can change the tool's name 
 {% highlight razor %}
 
 private List<ToolbarItemModel> Items = new List<ToolbarItemModel>()
-    {
-        new ToolbarItemModel() { Command = ToolbarCommand.Bold }
-    } 
+{
+    new ToolbarItemModel() { Command = ToolbarCommand.Bold }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -197,7 +197,7 @@ Remove the build-in tools from the toolbar by using the [RichTextEditorToolbarSe
 {% tabs %}
 {% highlight razor %}
 
-<SfRichTextEditor>
+<SfRichTextEditor EditorMode="EditorMode.Markdown">
     <RichTextEditorToolbarSettings Items="@Tools" />
 The Rich Text Editor component is WYSIWYG ('what you see is what you get') editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.
 </SfRichTextEditor>
