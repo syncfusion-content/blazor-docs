@@ -63,6 +63,10 @@ N> As per the discussion thread [#30064](https://github.com/dotnet/aspnetcore/is
 
 You can open the Word documents from Cloud storage. The following code example shows how to open and load the Word document file stored in Azure Blob Storage.
 
+To open and save document from cloud quickly with Blazor DocumentEditor component, you can check the video below.
+
+{% youtube "https://www.youtube.com/watch?v=sVINSXKPM4E" %}
+
 ```cshtml
 @using Syncfusion.Blazor.DocumentEditor
 @using System.IO
