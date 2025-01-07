@@ -15,6 +15,9 @@ The [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Split
 @using Syncfusion.Blazor.SplitButtons
 
 <SfDropDownButton CssClass="custom-dropdown" Content="Custom Dropdown" Items="@DropdownItems">
+    <ChildContent>
+        <DropDownButtonEvents ItemSelected="ItemSelected"></DropDownButtonEvents>
+    </ChildContent>
     <ItemTemplate>
         @{
             var menuItem = context;
@@ -51,6 +54,11 @@ The [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Split
         new DropDownMenuItem { Separator = true },
         new DropDownMenuItem { Text = "Syncfusion", IconCss = "e-icons e-mouse-pointer", Url = "http://www.syncfusion.com" }
     };
+
+    private void ItemSelected(MenuEventArgs args)
+    {
+        var selectedItem = args.Item;
+    }
 }
 
 
