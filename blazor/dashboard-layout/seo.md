@@ -1,6 +1,6 @@
 ---
 layout: post
-title: SEO Analysis Dashboard in Blazor Dashboard Layout Component | Syncfusion
+title: SEO Analysis in Blazor Dashboard Layout Component | Syncfusion
 description: Checkout and learn here all about SEO Analysis Dashboard in Syncfusion Blazor Dashboard Layout component and more.
 platform: Blazor
 control: Dashboard Layout
