@@ -764,6 +764,10 @@ N> When using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
 The ODataV4 is an improved version of OData protocols, and the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) can also retrieve and consume OData v4 services. For more details on OData v4 services, refer to the [OData documentation](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197). To bind OData v4 service, use the **ODataV4Adaptor**.
 
+To know about how to bind ODatav4 services in Blazor DataGrid Component, you can check this video.
+
+{% youtube "youtube:https://www.youtube.com/watch?v=MrpjneRHSeA"%}
+
 ```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
@@ -1734,6 +1738,10 @@ N> * In this [sample](https://github.com/SyncfusionExamples/blazor-grid-sqldatab
 ## Entity Framework
 
 You need to follow the below steps to consume data from the **Entity Framework** in the datagrid component.
+
+To know about how to consume data from the Entity Framework and handle CRUD operations in Blazor DataGrid Component, you can check this video.
+
+{% youtube "youtube:https://www.youtube.com/watch?v=MEdHxxqeY9A"%}
 
 ### Create DBContext class
 

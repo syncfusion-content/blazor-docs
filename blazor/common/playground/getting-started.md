@@ -11,6 +11,11 @@ documentation: ug
 
 The Blazor playground allows you to develop and test any Blazor component, including both general components and pre-built Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
 
+To get start quickly with Blazor Playground, you can check on this video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=tMu19E-xkyk" %}
+
 ## Blazor Component
 
 You can create a Blazor component in Blazor playground by following the given steps below:
