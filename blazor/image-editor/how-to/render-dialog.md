@@ -47,7 +47,7 @@ Rendering the Image Editor in a dialog involves displaying the image editor comp
 
     private async void OpenAsync()
     {
-        await ImageEditor.OpenAsync("/Image/bridge.jpg");
+        await ImageEditor.OpenAsync("nature.png");
     }
 
     private void BeforeDialogOpen(BeforeOpenEventArgs args)
