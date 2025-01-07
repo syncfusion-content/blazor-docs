@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor FileManager Component | Syncfusion
-description: Checkout and learn about getting started with Blazor FileManager component in Blazor WebAssembly App.
+title: Getting Started with Blazor File Manager Component | Syncfusion
+description: Checkout and learn about getting started with Blazor File Manager component in Blazor WebAssembly App.
 platform: Blazor
 control: File Manager
 documentation: ug
@@ -9,9 +9,14 @@ documentation: ug
 
 <!-- markdownlint-disable MD024 -->
 
-# Getting Started with Blazor FileManager Component
+# Getting Started with Blazor File Manager Component
 
-This section briefly explains about how to include [Blazor FileManager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component in your Blazor WebAssembly App using Visual Studio.
+This section briefly explains about how to include [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component in your Blazor WebAssembly App using Visual Studio.
+
+To get start quickly with Blazor WebAssembly App of File Manager component, you can check on this video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=qcH3B8FTPao" %}
 
 ## Prerequisites
 
@@ -21,9 +26,9 @@ This section briefly explains about how to include [Blazor FileManager](https://
 
 You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=windows) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor FileManager and Themes NuGet in the App
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager and Themes NuGet in the App
 
-To add **Blazor FileManager** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.FileManager](https://www.nuget.org/packages/Syncfusion.Blazor.FileManager) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
+To add **Blazor File Manager** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.FileManager](https://www.nuget.org/packages/Syncfusion.Blazor.FileManager) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
