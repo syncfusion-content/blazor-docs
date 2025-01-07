@@ -108,7 +108,7 @@ In the following sample, first 6 products from the Product table of NorthWind da
 
 You need to follow the below steps to consume data from the **Entity Framework** in the ListView component.
 
-To bind data easily in the Blazor ListView control using Entity Framework, you can check on this video.
+To bind data easily in the Blazor ListView component using Entity Framework, you can check on this video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=iEM_W4HP9pk" %}
