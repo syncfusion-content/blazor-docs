@@ -125,7 +125,7 @@ To drag and drop an item or group of item between two listbox can achieved by se
 
 ## Dual ListBox with drag and drop
 
-The toolbar and drag and drop actions between two listboxes can be enabled by setting a listbox unique id and the same Scope property value.
+The toolbar and drag and drop actions between two listboxes can be enabled by setting a listbox unique id and the same [Scope](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_Scope) property value.
 
 ```
 @using Syncfusion.Blazor.DropDowns
