@@ -23,33 +23,31 @@ Rendering the Image Editor in a dialog involves displaying the image editor comp
         <SfButton OnClick="OpenDialogAsync">Open Image</SfButton>
     }
 </div>
- <SfDialog Height="75%" Width="435px" Target="#target" ShowCloseIcon="true" @bind-Visible="Visibility">
+<SfDialog Height="75%" Width="435px" Target="#target" ShowCloseIcon="true" @bind-Visible="Visibility">
     <DialogTemplates>
         <Content>
-                <div class="dialogContent">
-                   
-                        <SfImageEditor @ref="ImageEditor" Height="400px">
-                            <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
-                        </SfImageEditor>
-                </div>
+            <div class="dialogContent">
+                <SfImageEditor @ref="ImageEditor" Height="400px">
+                </SfImageEditor>
+            </div>
         </Content>
     </DialogTemplates>
-    <DialogEvents OnOpen="@BeforeDialogOpen" Closed="@DialogClosed"></DialogEvents> 
+    <DialogEvents OnOpen="@BeforeDialogOpen" Opened="OpenAsync" Closed="@DialogClosed"></DialogEvents>
 </SfDialog>
 
 @code {
     private bool Visibility { get; set; } = false;
     private bool ShowButton { get; set; } = true;
-    SfImageEditor ImageEditor; 
+    SfImageEditor ImageEditor;
 
-    private async void OpenDialogAsync() 
-    { 
+    private async void OpenDialogAsync()
+    {
         this.Visibility = true;
     }
 
-    private async void OpenAsync() 
-    { 
-        await ImageEditor.OpenAsync("nature.png"); 
+    private async void OpenAsync()
+    {
+        await ImageEditor.OpenAsync("/Image/bridge.jpg");
     }
 
     private void BeforeDialogOpen(BeforeOpenEventArgs args)
