@@ -11,6 +11,8 @@ documentation: ug
 
 Serialization is the process of saving and loading the persistent state of the diagram.
 
+{% youtube "youtube:https://www.youtube.com/watch?v=2hhl00gMObc" %} 
+
 ## Two-way binding
 
 When saving and loading the diagram, we must use two-way binding (such as @bind) for nodes and connectors.

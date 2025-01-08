@@ -15,6 +15,11 @@ Blazor TreeView has `load on demand` (Lazy load), by default. It reduces the ban
 
 By default, the `LoadOnDemand` is set to true. By disabling this property, all the tree nodes are rendered at the beginning itself. The `DataBound` event can be used to perform actions. This event will be triggered once the data source is populated in the TreeView.
 
+To bind list data and service URLs to the Syncfusion Blazor TreeView component , you can check on this video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=yvzewBlBRrI" %}
+
 ## Local data
 
 To bind local data to the Blazor TreeView, assign a list of objects to the `DataSource` property. The Blazor TreeView component requires three fields (Id, Text, and ParentID) to render local data source. When mapper fields are not specified, it takes the default values as the mapping fields. Local data source can also be provided as an instance of the `DataManager`. It supports two kinds of local data binding methods.

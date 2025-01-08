@@ -162,14 +162,16 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 {% tabs %}
 {% highlight razor %}
 
-<SfTimeline>
-    <TimelineItems>
-        <TimelineItem></TimelineItem>
-        <TimelineItem></TimelineItem>
-        <TimelineItem></TimelineItem>
-        <TimelineItem></TimelineItem>
-    </TimelineItems>
-</SfTimeline>
+<div style="height: 250px;">
+    <SfTimeline>
+        <TimelineItems>
+            <TimelineItem></TimelineItem>
+            <TimelineItem></TimelineItem>
+            <TimelineItem></TimelineItem>
+            <TimelineItem></TimelineItem>
+        </TimelineItems>
+    </SfTimeline>
+</div>
 
 {% endhighlight %}
 {% endtabs %}
