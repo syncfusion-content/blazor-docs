@@ -11,6 +11,11 @@ documentation: ug
 
 The DropDownList has been provided with several options to customize each list item, group title, selected value, header, and footer elements.
 
+
+To get started quickly with Templates in the Blazor DropDown List component, you can check the video below.
+
+{% youtube "https://www.youtube.com/watch?v=OfOnp3bwVfc" %}
+
 ## Value template
 
 The currently selected value that is displayed by default on the DropDownList input element can be customized using the [ValueTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ValueTemplate) property.
