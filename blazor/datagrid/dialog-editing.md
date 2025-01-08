@@ -19,7 +19,7 @@ Here's an example how to enable dialog editing in the blazor grid component:
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 
-<SfGrid @ref="Grid" DataSource="@OrderData" Toolbar="@(new List<string>() { "Add", "Edit","Delete", "Update", "Cancel" })" Height="315">
+<SfGrid DataSource="@OrderData" Toolbar="@(new List<string>() { "Add", "Edit","Delete", "Update", "Cancel" })" Height="315">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Dialog" ></GridEditSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true })" TextAlign="TextAlign.Right" Width="120"></GridColumn>
@@ -177,7 +177,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVIZWXgfDGOMyvy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVyZWjvKbTMIaIU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > * The Grid add or edit dialog element has the max-height property, which is calculated based on the available window height. So, in the normal window (1920 x 1080), it is possible to set the dialog's height up to 658px.
 > * You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
@@ -322,6 +322,240 @@ public class OrderDetails
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXrzWVLAqtMKVgod?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Use wizard like dialog editing
+
+Wizard-like dialog editing is a powerful feature in the Grid component that enables the creation of intuitive step-by-step forms. This feature provides a structured approach to form completion or data entry by breaking down the process into manageable steps.This feature is particularly useful when you have complex forms that need to be broken down into smaller sections to guide you through the data entry process.
+
+To achieve wizard-like dialog editing in the grid component, you can use the template feature. This feature allows you to define your own custom editing template using the [GridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property set to **Dialog** and the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) property of `GridEditSettings` to specify the template variable that defines the editors for each step of the wizard.
+
+The following example demonstrate the wizard like editing in the grid with the unobtrusive validation.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.DropDowns
+
+<SfGrid @ref="Grid" DataSource="@OrderData" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })" Height="315">
+    <GridEvents TValue="OrderDetails" RowCreating="RowCreating" OnBeginEdit="OnBeginEdit"></GridEvents>
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="Syncfusion.Blazor.Grids.EditMode.Dialog">
+        <Template>
+            @{
+                var Order = (context as OrderDetails);
+                <div>
+                    @if (CurrentTab == 0)
+                    {
+                        <div id="tab0" class='tab'>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <SfNumericTextBox ID="OrderID" @bind-Value="@(Order.OrderID)" Enabled="@Check" FloatLabelType="FloatLabelType.Always" Placeholder="Order ID"></SfNumericTextBox>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <SfTextBox ID="CustomerID" @bind-Value="@(Order.CustomerID)" Placeholder="Customer Name" FloatLabelType="@FloatLabelType.Auto"></SfTextBox>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    else if (CurrentTab == 1)
+                    {
+                        <div id="tab1" class='tab'>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <SfNumericTextBox ID="Freight" @bind-Value="@(Order.Freight)" TValue="double" Placeholder="Freight" FloatLabelType="FloatLabelType.Always">
+                                    </SfNumericTextBox>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <SfDropDownList ID="ShipCity" TItem="City" @bind-Value="@(Order.ShipCity)" TValue="string" DataSource="@CityName" FloatLabelType="FloatLabelType.Always" Placeholder="Ship City">
+                                        <DropDownListFieldSettings Value="ShipCity" Text="ShipCity"></DropDownListFieldSettings>
+                                    </SfDropDownList>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    else if (CurrentTab == 2)
+                    {
+                        <div id="tab2" class='tab'>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <SfDropDownList ID="ShipCountry" TItem="Country" @bind-Value="@(Order.ShipCountry)" TValue="string" DataSource="@CountryName" FloatLabelType="FloatLabelType.Always" Placeholder="Ship Country">
+                                        <DropDownListFieldSettings Value="ShipCountry" Text="ShipCountry"></DropDownListFieldSettings>
+                                    </SfDropDownList>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <SfCheckBox @bind-Checked="@(Order.Verified)" Label="Verified"></SfCheckBox>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+        </Template>
+        <FooterTemplate>
+            <div style="float: left;">
+                @if (CurrentTab != 0)
+                {
+                    <SfButton CssClass="e-info"  OnClick="@PreviousDialog" IsPrimary="true">Previous</SfButton>
+                }
+            </div>
+            <div style="float: right;">
+                <SfButton CssClass="e-info" OnClick="@SaveDialog">Save</SfButton>
+                @if (CurrentTab != 2)
+                {
+                    <SfButton CssClass="e-info" OnClick="@NextDialog" IsPrimary="true">Next</SfButton>
+                }
+            </div>
+        </FooterTemplate>
+    </GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true})" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required=true})" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" ValidationRules="@(new ValidationRules{ Required=true, Min=1,})" Format="C2" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipCity) HeaderText="Ship City" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipCountry) HeaderText="Ship Country" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.Verified) HeaderText="Verified" Type="ColumnType.Boolean" DisplayAsCheckBox="true" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private SfGrid<OrderDetails> Grid;
+    private Boolean Check = false;
+    private OrderDetails CurrentEditingRecord { get; set; }
+    public List<OrderDetails> OrderData { get; set; }
+    protected override void OnInitialized()
+    {
+        OrderData = OrderDetails.GetAllRecords();
+    }
+    private bool IsCurrentTabValid()
+    {
+        if (CurrentEditingRecord == null) return false;
+        if (CurrentTab == 0)
+        {
+            return CurrentEditingRecord.OrderID != 0 && !string.IsNullOrWhiteSpace(CurrentEditingRecord.CustomerID);
+        }
+        else if (CurrentTab == 1)
+        {
+            return CurrentEditingRecord.Freight > 0;
+        }
+        return true;
+    }
+    private int CurrentTab { get; set; } = 0;    
+    public void PreviousDialog()
+    {
+        if (IsCurrentTabValid() && CurrentTab > 0)
+        {
+            CurrentTab--;
+            Grid.PreventRender(false);
+        }
+    }
+    public void NextDialog()
+    {
+        if (IsCurrentTabValid() && CurrentTab < 2)
+        {
+            CurrentTab++;
+            Grid.PreventRender(false);
+        }
+    }
+    public void SaveDialog()
+    {
+        Grid.EndEditAsync();
+    }  
+    public void RowCreating(RowCreatingEventArgs<OrderDetails> args)
+    {
+        Check = true;
+        CurrentTab = 0;
+        CurrentEditingRecord = args.Data;
+    }
+    public void OnBeginEdit(BeginEditArgs<OrderDetails> args)
+    {
+        Check = false;
+        CurrentTab = 0;
+        CurrentEditingRecord = args.RowData;
+    }
+    public class City
+    {
+        public string ShipCity { get; set; }
+    }
+    List<City> CityName = new List<City>
+    {
+        new City() { ShipCity= "Reims" },
+        new City() { ShipCity= "Münster" },
+        new City() { ShipCity = "Rio de Janeiro" },
+        new City() { ShipCity = "Lyon" },
+        new City() { ShipCity = "Charleroi" },
+        new City() { ShipCity = "Genève" },
+        new City() { ShipCity = "Resende" },
+        new City() { ShipCity = "San Cristóbal" },
+        new City() { ShipCity = "Graz" },
+        new City() { ShipCity = "México D.F." },
+        new City() { ShipCity = "Köln" },
+        new City() { ShipCity = "Albuquerque" },
+    };
+    public class Country
+    {
+        public string ShipCountry { get; set; }
+    }
+    List<Country> CountryName = new List<Country>
+    {
+        new Country() { ShipCountry= "France"},
+        new Country() { ShipCountry= "Brazil"},
+        new Country() { ShipCountry= "Germany"},
+        new Country() { ShipCountry= "Belgium"},
+        new Country() { ShipCountry= "Austria"},
+        new Country() { ShipCountry= "Switzerland"},
+        new Country() { ShipCountry= "Venezuela"},        
+        new Country() { ShipCountry= "Mexico"},
+        new Country() { ShipCountry= "USA"},
+    };
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderDetails.cs" %}
+public class OrderDetails
+{
+    public static List<OrderDetails> Order = new List<OrderDetails>();
+    public OrderDetails(int OrderID, string CustomerId, double Freight, string ShipCountry, string ShipCity, bool Verified)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerId;
+        this.Freight = Freight;
+        this.ShipCountry = ShipCountry;
+        this.ShipCity = ShipCity;
+        this.Verified = Verified;
+    }
+    public static List<OrderDetails> GetAllRecords()
+    {
+        if (Order.Count == 0)
+        {
+            Order.Add(new OrderDetails(10248, "VINET", 32.38, "France", "Reims", true));
+            Order.Add(new OrderDetails(10249, "TOMSP", 11.61, "Germany", "Münster", false));
+            Order.Add(new OrderDetails(10250, "HANAR", 65.83, "Brazil", "Rio de Janeiro", true));
+            Order.Add(new OrderDetails(10251, "VICTE", 41.34, "France", "Lyon", true));
+            Order.Add(new OrderDetails(10252, "SUPRD", 51.3, "Belgium", "Charleroi", true));
+            Order.Add(new OrderDetails(10253, "HANAR", 58.17, "Brazil", "Rio de Janeiro", true));
+            Order.Add(new OrderDetails(10254, "CHOPS", 22.98, "Switzerland", "Bern", false));
+            Order.Add(new OrderDetails(10255, "RICSU", 148.33, "Switzerland", "Genève", true));
+            Order.Add(new OrderDetails(10256, "WELLI", 13.97, "Brazil", "Resende", false));
+            Order.Add(new OrderDetails(10257, "HILAA", 81.91, "Venezuela", "San Cristóbal", true));
+            Order.Add(new OrderDetails(10258, "ERNSH", 140.51, "Austria", "Graz", true));
+            Order.Add(new OrderDetails(10259, "CENTC", 3.25, "Mexico", "México D.F.", false));
+            Order.Add(new OrderDetails(10260, "OTTIK", 55.09, "Germany", "Köln", true));
+            Order.Add(new OrderDetails(10261, "QUEDE", 3.05, "Brazil", "Rio de Janeiro", false));
+            Order.Add(new OrderDetails(10262, "RATTC", 48.29, "USA", "Albuquerque", true));
+        }
+        return Order;
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCountry { get; set; }
+    public string ShipCity { get; set; }
+    public bool Verified { get; set; }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLyZMjvJXWZYAiP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Customize add/edit dialog footer
 
