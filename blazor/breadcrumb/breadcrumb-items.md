@@ -63,3 +63,47 @@ You can generate the Breadcrumb items by providing the [Url](https://help.syncfu
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtLAMBWpzqZWfPfm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-static-url.png)
+
+## Add or remove the breadcrumb items
+
+Using the [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_Items) property of Breadcrumb, we can dynamically add or remove the items of breadcrumb.
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.Buttons
+
+<SfBreadcrumb class="e-custom" Items="@items">
+</SfBreadcrumb>
+
+<SfButton OnClick="click">Insert - before </SfButton>
+<SfButton OnClick="click1">Insert - After </SfButton>
+<SfButton OnClick="click2">Remove </SfButton>
+
+@code{
+    List<BreadcrumbItem> items = new List<BreadcrumbItem>
+    {
+        new BreadcrumbItem { IconCss = "e-icons e-home"},
+        new BreadcrumbItem { Text = "Open", IconCss = "e-icons e-folder-open", Url = "https://blazor.syncfusion.com/demos/datagrid/overview"},
+        new BreadcrumbItem { Text = "New", IconCss = "e-icons e-file-new"}
+    };
+
+    private void click()
+    {
+        var index = items.IndexOf(items.Where(item => item.Text == "Open").FirstOrDefault());
+        items.Insert(index, new BreadcrumbItem {Text = "Save", IconCss = "e-icons e-save"});
+    }
+
+    private void click1()
+    {
+        var index = items.IndexOf(items.Where(item => item.Text == "New").FirstOrDefault());
+        items.Insert((index + 1), new BreadcrumbItem { Text = "Delete", IconCss = "e-icons e-delete" });
+    }
+
+    private void click2()
+    {
+        items.RemoveAt(items.Count() - 1);
+    }
+}
+
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBStMNFgGHPMWew?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
