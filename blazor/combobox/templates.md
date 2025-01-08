@@ -11,6 +11,10 @@ documentation: ug
 
 The ComboBox has been provided with several options to customize each list item, group title, selected value, header, and footer elements.
 
+To quickly get started with Templates in the Blazor ComboBox component, you can watch the video below.
+
+{% youtube "https://www.youtube.com/watch?v=Powq8aAGeAA" %}
+
 ## Item template
 
 The content of each list item within the ComboBox can be customized with the help of [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ItemTemplate) property.
