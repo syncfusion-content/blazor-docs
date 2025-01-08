@@ -69,9 +69,9 @@ In the Gantt Chart component, you can add tasks above, below and child of a sele
 
 When you right-click on a row, the context menu displays an `Add` option. Clicking on this option reveals a sub-context menu with the following choices:
 
-*Above* : Adds a new task above the selected row.
-*Below*: Adds a new task below the selected row.
-*Child*: Adds a new task as a child of the selected row.
+* **Above**: Adds a new task above the selected row.
+* **Below**: Adds a new task below the selected row.
+* **Child**: Adds a new task as a child of the selected row.
 
 When you select one of these submenu item, a new task will be added to the Gantt chart.
 
