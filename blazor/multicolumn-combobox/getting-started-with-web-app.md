@@ -11,6 +11,11 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor MultiColumn ComboBox](https://www.syncfusion.com/blazor-components/blazor-multicolumn-combobox) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/).
 
+
+To get started quickly with Blazor MultiColumn ComboBox component, you can check the video below.
+
+{% youtube "https://www.youtube.com/watch?v=2B5ctnHw4vk" %}
+
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
