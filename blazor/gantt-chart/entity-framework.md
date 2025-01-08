@@ -12,18 +12,20 @@ documentation: ug
 
 You need to follow the below steps to consume data from the **Entity Framework** in the Gantt Chart component.
 
-**Step 1:** The first step is to create a SQL database in your Blazor project. Refer this [link](https://docs.microsoft.com/en-us/visualstudio/data-tools/create-a-sql-database-by-using-a-designer?view=vs-2019) to create SQL database.
+**Step 1:** The first step is to create a SQL database in your Blazor project. Follow the guide in this [link](https://docs.microsoft.com/en-us/visualstudio/data-tools/create-a-sql-database-by-using-a-designer?view=vs-2019) for detailed instructions on creating and configuring a SQL database within your Blazor project.
 
-**Step 2:** Install the below packages for Entity Framework Support using Nuget or Package manager console using the below command.
+**Step 2:** To use Entity Framework with SQL Server in your Blazor project, you need to install the necessary Entity Framework packages. These packages will enable data operations and connectivity.
+
+You can install them using NuGet Package Manager or by running the following commands in the Package Manager Console:
 
 ```bash
-Install-Package Microsoft.EntityFrameworkCore.Tools -Version 3.0.0
+Install-Package Microsoft.EntityFrameworkCore.Tools -Version 9.0.0
 
-Install-Package Microsoft.EntityFrameworkCore.SqlServer -Version 3.0.0
+Install-Package Microsoft.EntityFrameworkCore.SqlServer -Version 9.0.0
 
 ```
 
-**Step 3:** Create a model class `GanttDataDetails.cs` for the existing database file.
+**Step 3:** Create a model class `GanttDataDetails.cs` to represent your data structure for the Gantt Chart. This class will map to your database table that holds the task details.
 
 ```csharp
 
@@ -120,7 +122,7 @@ namespace GanttEF.Models
 }
 ```
 
-**Step 5:** Update the connection string in the appsettings.json file.
+**Step 5:** Update the connection string in the **appsettings.json** file.
 
 ```csharp
 

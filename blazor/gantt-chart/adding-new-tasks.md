@@ -13,7 +13,7 @@ Tasks can be dynamically added to the Gantt Chart project by enabling the [Gantt
 
 ## Toolbar
 
-A row can be added to the Gantt Chart component from the toolbar while the `GanttEditSettings.AllowAdding` property is set to `true`. After clicking the toolbar add icon, you should provide the task information in the add dialog.
+To add a new row in the Gantt Chart component using the toolbar, set the `GanttEditSettings.AllowAdding` property to `true` and enable the add icon in the toolbar. When the user clicks the `Add` icon in the toolbar, a dialog will be displayed, allowing them to provide task information.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -65,7 +65,15 @@ N> By default, a new row will be added to the top most row in the Gantt Chart co
 
 ## Context menu
 
-A row can also be added above, below or child of the selected row by using context menu support. For this, you need to enable the property `EnableContextMenu`.
+In the Gantt Chart component, you can add tasks above, below and child of a selected row using the context menu. To enable this functionality, set the `EnableContextMenu` property to true in the SfGantt component.
+
+When you right-click on a row, the context menu displays an `Add` option. Clicking on this option reveals a sub-context menu with the following choices:
+
+*Above* : Adds a new task above the selected row.
+*Below*: Adds a new task below the selected row.
+*Child*: Adds a new task as a child of the selected row.
+
+When you select one of these submenu item, a new task will be added to the Gantt chart.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -112,13 +120,16 @@ A row can also be added above, below or child of the selected row by using conte
 
 ## Using method
 
-You can add rows to the Gantt Chart component dynamically using the [AddRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AddRecordAsync__0_System_Nullable_System_Double__System_Nullable_Syncfusion_Blazor_Gantt_RowPosition__) method and you can define the add position of the default new record by using the `RowPosition` property. You can also pass the `RowIndex` as an additional parameter.
+You can add rows to the Gantt Chart component dynamically or externally using the [AddRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AddRecordAsync__0_System_Nullable_System_Double__System_Nullable_Syncfusion_Blazor_Gantt_RowPosition__) method and you can define the add position of the default new record by using the `RowPosition` property. You can also pass the `RowIndex` as an additional parameter.
 
-* Top of all the rows.
-* Bottom to all the existing rows.
-* Above the selected row.
-* Below the selected row.
-* As child to the selected row.
+| **Row Position** | **Description** |
+| --- | --- |
+| `Top` | Adds the task to the top of the Gantt chart.|
+| `Bottom` | Adds the task to the bottom of the Gantt chart.|
+| `Above`  | Adds the task above the selected row index.|
+| `Below`  | Adds the task below the selected row index.|
+| `Child` | Adds the task as a child of the selected row index.|
+
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -172,3 +183,60 @@ You can add rows to the Gantt Chart component dynamically using the [AddRecordAs
 ```
 
 ![Adding New Record in Blazor Gantt Chart](images/blazor-gantt-chart-add-new-record.png)
+
+## Prevent adding new records using event
+
+In the Gantt Chart component, the [RowUpdating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_RowUpdating%E2%80%AF) event is triggered before a save action is performed. To prevent the addition of a new record dynamically, you can set the [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.RowUpdatingEventArgs-1.html#Syncfusion_Blazor_Grids_RowUpdatingEventArgs_1_Cancel) property of the event argument to `true`.
+
+```cshtml
+@using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Grids
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" Toolbar="@(new List<string>() { "Add"})">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
+    Duration="Duration" Progress="Progress" ParentID="ParentId">
+    </GanttTaskFields>
+    <GanttEditSettings AllowAdding="true" AllowEditing="true"></GanttEditSettings>
+    <GanttEvents TValue="TaskData" RowUpdating="RowUpdatingHandler"></GanttEvents>
+</SfGantt>
+
+@code{
+    public SfGantt<TaskData> Gantt;
+    private List<TaskData> TaskCollection { get; set; }
+
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+
+    public void RowUpdatingHandler(GanttRowUpdatingEventArgs<TaskData> args)
+    {
+        args.Cancel = true;
+    }
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+    }
+
+    private static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+    {
+        new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 23), },
+        new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+        new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 40, ParentId = 1, },
+        new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+        new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 23), },
+        new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 30, ParentId = 5, },
+        new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 40, ParentId = 5, },
+        new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 06), Duration = "0", Progress = 30, ParentId = 5, }
+    };
+        return Tasks;
+    }
+}
+```
