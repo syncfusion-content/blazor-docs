@@ -11,13 +11,13 @@ documentation: ug
 
 The ListView control triggers events based on its actions. The events can be used as extension points to perform custom operations. Refer to the following steps to trace the ListView events:
 
-1. Render the ListView with `DataSource`, and bind the `OnActionBegin`, `OnActionComplete`, and `Clicked` events.
+1. Render the ListView with `DataSource`, and bind the [`OnActionBegin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewEvents-1.html#Syncfusion_Blazor_Lists_ListViewEvents_1_OnActionBegin), [`OnActionComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewEvents-1.html#Syncfusion_Blazor_Lists_ListViewEvents_1_OnActionComplete), and [`Clicked`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewEvents-1.html#Syncfusion_Blazor_Lists_ListViewEvents_1_Clicked) events.
 
 2. Perform custom operations in `OnActionBegin`, `OnActionComplete`, and `Clicked` events.
 
 3. Provide event log details for `OnActionBegin` and `OnActionComplete` events, and they will be displayed in the event trace panel when the ListView action starts and the dataSource bound successfully.
 
-4. Get the clicked item details from the `ClickEventArgs` in the Clicked event, and display the clicked list item text in the event trace panel while clicking list items.
+4. Get the clicked item details from the [`ClickEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ClickEventArgs-1.html) in the Clicked event, and display the clicked list item text in the event trace panel while clicking list items.
 
 5. Use clear button to remove event trace information.
 

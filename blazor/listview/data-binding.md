@@ -33,7 +33,7 @@ Local data can be represented in Array of JSON data:
 
 ### Array of JSON data
 
-ListView can generate its list items through an array of complex data. To get it work properly, you should map the appropriate columns to the field property.
+ListView can generate its list items through an array of complex data. To get it work properly, you should map the appropriate columns to the [`field`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewFieldSettings-1.html) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Lists

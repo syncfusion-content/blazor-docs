@@ -26,7 +26,7 @@ The dual list supports:
 * Moving selected data from one list to another.
 * Filtering the list by using a client-side typed character.
 
-In the ListView control, sorting is enabled using the `SortOrder` property, and the `Clicked` event is triggered while selecting an item. Here, the `Clicked` event is triggered to enable and disable button states.
+In the ListView control, sorting is enabled using the [`SortOrder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_SortOrder) property, and the [`Clicked`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewEvents-1.html#Syncfusion_Blazor_Lists_ListViewEvents_1_Clicked) event is triggered while selecting an item. Here, the `Clicked` event is triggered to enable and disable button states.
 
 ## Manipulating data
 

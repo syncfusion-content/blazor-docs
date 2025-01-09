@@ -9,7 +9,7 @@ documentation: ug
 
 # Get selected items from Blazor ListView Component
 
-Single or many items can be selected by users in the ListView control. An API is used to get selected items from the list items. This is called as the `GetCheckedItemsAsync` method.
+Single or many items can be selected by users in the ListView control. An API is used to get selected items from the list items. This is called as the [`GetCheckedItemsAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_GetCheckedItemsAsync) method.
 
 **`GetCheckedItemsAsync` method**
 
