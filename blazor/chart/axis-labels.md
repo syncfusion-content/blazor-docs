@@ -13,6 +13,10 @@ documentation: ug
 
 When the axis labels overlap, the [LabelIntersectAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_LabelIntersectAction) property in the axis can be used to intelligently arrange them.
 
+To learn how to customize axis labels, you can watch this video.
+
+{% youtube "youtube:https://www.youtube.com/watch?v=FzH0Pl_LnvQ" %}
+
 **Case 1:** When [LabelIntersectAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_LabelIntersectAction) is set to **Hide**.
 
 ```cshtml

@@ -13,6 +13,10 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor Accumulation Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfAccumulationChart.html) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
+To learn how to get started with the Blazor Accumulation Chart Component, you can watch this video.
+
+{% youtube "youtube:https://www.youtube.com/watch?v=ol8c_iH7ebk" %}
+
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
