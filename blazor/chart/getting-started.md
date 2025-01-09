@@ -13,6 +13,10 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) component in your Blazor Server App using Visual Studio.
 
+To learn how to get started with the Blazor Chart Component, you can watch this video.
+
+{% youtube "youtube:https://www.youtube.com/watch?v=0xwwOvmYQ6E" %}
+
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)

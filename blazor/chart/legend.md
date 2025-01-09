@@ -15,6 +15,10 @@ The [legend](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Char
 
 To display the legend for the chart, set the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_Visible) property in [ChartLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html) to **true**.
 
+To learn how to Adding Legends to Blazor Charts, you can watch this video.
+
+{% youtube "youtube:https://www.youtube.com/watch?v=mra9AP4HBPc" %}
+
 ```cshtml
 
 @using Syncfusion.Blazor.Charts

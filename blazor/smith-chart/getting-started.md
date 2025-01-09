@@ -11,6 +11,10 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor Smith Chart](https://www.syncfusion.com/blazor-components/blazor-smith-chart) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
+To learn how to Get Started with the Blazor Smith Chart Component, you can watch this video.
+
+{% youtube "youtube:https://www.youtube.com/watch?v=44vemwNNXio" %}
+
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)

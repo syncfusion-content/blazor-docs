@@ -17,6 +17,10 @@ When the mouse is moved over a point on the chart, the tooltip will provide info
 
 When space constraints prevent displaying information using data labels, the tooltip comes in useful. The [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Enable) property in [ChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html) can be set to **true** to enable the tooltip.
 
+To learn how to Show Informative Tooltips in Blazor Charts, you can watch this video.
+
+{% youtube "youtube:https://www.youtube.com/watch?v=4g8JTwHuTz4" %}
+
 ```cshtml
 
 @using Syncfusion.Blazor.Charts

@@ -11,7 +11,13 @@ documentation: ug
 
 ## Line
 
-[Line Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/line-chart) represents and visualizes the time-dependent data to show the trends at equal intervals. To render a [Line](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/line-chart) series in your chart, define the series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) as [`Line`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Line) in your chart configuration. This indicates that the data should be represented as a line chart, which is ideal for visualizing trends over time or across categories.
+[Line Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/line-chart) represents and visualizes the time-dependent data to show the trends at equal intervals.
+
+To learn how to Create and Customize the Line Chart, you can watch this video.
+
+{% youtube "youtube:https://www.youtube.com/watch?v=pZ0unpq0_-c" %}
+
+To render a [Line](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/line-chart) series in your chart, define the series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) as [`Line`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Line) in your chart configuration. This indicates that the data should be represented as a line chart, which is ideal for visualizing trends over time or across categories.
 
 ```cshtml
 

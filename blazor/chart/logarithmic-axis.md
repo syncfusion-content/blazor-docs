@@ -13,6 +13,10 @@ documentation: ug
 
 When data contains numeric values in both the lower order of magnitude (eg: 10<sup>-6</sup>) and the upper order of magnitude (eg: 10<sup>6</sup>), a logarithmic axis is highly useful in visualizing it.
 
+To learn how to customize the logarithmic axis, you can watch this video.
+
+{% youtube "youtube:https://www.youtube.com/watch?v=_67hCchVOu4" %}
+
 ```cshtml
 
 @using Syncfusion.Blazor.Charts

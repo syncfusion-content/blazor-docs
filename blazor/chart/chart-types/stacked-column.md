@@ -11,7 +11,13 @@ documentation: ug
 
 ## Stacked Column
 
-[Stacked Column Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stacked-column-chart) is a chart with Y values stacked over one another in the series order. It shows the relation between individual values to the total sum of the points. To render a [stacked column](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stacked-column-chart) series in your chart, define the series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) as [`StackingColumn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_StackingColumn) in your chart configuration. This indicates that the data should be represented as a stacked column chart, where each column consists of multiple segments stacked on top of each other.
+[Stacked Column Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stacked-column-chart) is a chart with Y values stacked over one another in the series order. It shows the relation between individual values to the total sum of the points.
+
+To learn how to Create and Customize the Stacked Column Chart, you can watch this video.
+
+{% youtube "youtube:https://www.youtube.com/watch?v=4ZOjppZFzAw" %}
+
+To render a [stacked column](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stacked-column-chart) series in your chart, define the series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) as [`StackingColumn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_StackingColumn) in your chart configuration. This indicates that the data should be represented as a stacked column chart, where each column consists of multiple segments stacked on top of each other.
 
 ```cshtml
 

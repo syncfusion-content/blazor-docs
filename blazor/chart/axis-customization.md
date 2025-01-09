@@ -13,6 +13,10 @@ documentation: ug
 
 An axis can be positioned in the chart area using [CrossesAt](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_CrossesAt) and [CrossesInAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_CrossesInAxis) properties. The [CrossesAt](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_CrossesAt) property specifies the values (numeric, datetime or logarithmic) at which the axis line has to be intersected with the vertical axis or vice-versa, and the [CrossesInAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_CrossesInAxis) property specifies the axis name with which the axis line has to be crossed.
 
+To learn how to customize the axis, you can watch this video.
+
+{% youtube "youtube:https://www.youtube.com/watch?v=SiMYNPE51wU" %}
+
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
