@@ -26,15 +26,13 @@ Rendering the Image Editor in a dialog involves displaying the image editor comp
  <SfDialog Height="75%" Width="435px" Target="#target" ShowCloseIcon="true" @bind-Visible="Visibility">
     <DialogTemplates>
         <Content>
-                <div class="dialogContent">
-                   
-                        <SfImageEditor @ref="ImageEditor" Height="400px">
-                            <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
-                        </SfImageEditor>
-                </div>
+            <div class="dialogContent">
+                <SfImageEditor @ref="ImageEditor" Height="400px">
+                </SfImageEditor>
+            </div>
         </Content>
     </DialogTemplates>
-    <DialogEvents OnOpen="@BeforeDialogOpen" Closed="@DialogClosed"></DialogEvents> 
+    <DialogEvents OnOpen="@BeforeDialogOpen" Opened="OpenAsync" Closed="@DialogClosed"></DialogEvents> 
 </SfDialog>
 
 @code {
