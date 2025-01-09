@@ -7,7 +7,7 @@ control: Range Slider
 documentation: ug
 ---
 
-# Date Range Slider in Blazor Range Slider Component
+# Date Range Slider in Blazor
 
 The date formatting can be achieved using [`TicksRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderEvents-1.html#Syncfusion_Blazor_Inputs_SliderEvents_1_TicksRendering) and [`OnTooltipChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderEvents-1.html#Syncfusion_Blazor_Inputs_SliderEvents_1_OnTooltipChange) events. The process of date formatting is explained in the below sample.
 
