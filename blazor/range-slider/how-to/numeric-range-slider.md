@@ -9,7 +9,7 @@ documentation: ug
 
 # Numeric Range Slider in Blazor Range Slider Component
 
-The numeric values can be formatted into different decimal digits or fixed number of whole numbers or to represent the units. The Numeric processing is demonstrated below.
+The numeric values can be formatted into different decimal digits or fixed number of whole numbers or to represent the units. The numeric processing is demonstrated below.
 
 There are numeric range sliders, which can be formatted in any way of your choice. In the examples found below, the first one demonstrates the visualization of ticks in km.
 

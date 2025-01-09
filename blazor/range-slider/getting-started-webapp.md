@@ -162,6 +162,8 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 {% tabs %}
 {% highlight razor %}
 
+@using Syncfusion.Blazor.Inputs
+
 <SfSlider Value="30"></SfSlider>
 
 {% endhighlight %}
