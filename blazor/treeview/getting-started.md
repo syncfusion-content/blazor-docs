@@ -119,6 +119,8 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor TreeView compone
 {% tabs %}
 {% highlight razor %}
 
+@using Syncfusion.Blazor.Navigations
+
 <SfTreeView TValue="MailItem">
     <TreeViewFieldsSettings TValue="MailItem" Id="Id" DataSource="@MyFolder" Text="FolderName" ParentID="ParentId" HasChildren="HasSubFolders" Expanded="Expanded"></TreeViewFieldsSettings>
 </SfTreeView>

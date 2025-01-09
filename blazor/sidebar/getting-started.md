@@ -119,6 +119,8 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Sidebar componen
 {% tabs %}
 {% highlight razor %}
 
+@using Syncfusion.Blazor.Navigations
+
 <div id="header" style="height:45px;text-align: center;color:white;background-color:midnightblue;font-size:1.2rem;line-height:45px;">
     Header
 </div>

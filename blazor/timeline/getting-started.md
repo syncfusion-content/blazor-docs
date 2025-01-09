@@ -112,6 +112,8 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Timeline compone
 {% tabs %}
 {% highlight razor %}
 
+@using Syncfusion.Blazor.Layouts
+
 <div style="height: 250px;">
     <SfTimeline>
         <TimelineItems>
