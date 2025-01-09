@@ -15,7 +15,7 @@ N> On mobile devices, Tooltips appear when you tap and hold the element, even if
 <br/> Tooltips are also displayed as long as the element is continued to tap and hold. On lift, it disappears in the next 1.5 seconds.
 <br/> If there is another action before that time ends, then the Tooltip disappears.
 
-The `OpensOn` property can take either a single or a combination of multiple values, separated by space from the following options. The table below explains how the Tooltip opens on both desktop and mobile based on the value(s) assigned to the `OpensOn` property. By default, it takes `Auto` value.
+The [`OpensOn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_OpensOn) property can take either a single or a combination of multiple values, separated by space from the following options. The table below explains how the Tooltip opens on both desktop and mobile based on the value(s) assigned to the `OpensOn` property. By default, it takes `Auto` value.
 
 | Values | Desktop | Mobile |
 | ------------- | ------------- | ------------- |
@@ -94,7 +94,7 @@ N> `Auto` value cannot be used with any combination for multiple values.
 
 ## Sticky mode
 
-With this mode set to `true`, Tooltips can be made to show up on the screen as long as the close icon is pressed. In this mode, close icon is attached to the Tooltip located at the top right corner. This mode can be enabled or disabled using the `IsSticky` property.
+With this mode set to `true`, Tooltips can be made to show up on the screen as long as the close icon is pressed. In this mode, close icon is attached to the Tooltip located at the top right corner. This mode can be enabled or disabled using the [`IsSticky`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_IsSticky) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Popups
@@ -126,7 +126,7 @@ With this mode set to `true`, Tooltips can be made to show up on the screen as l
 
 ## Open or Close tooltip with delay
 
-The Tooltips can be opened or closed after some delay by using the `OpenDelay` and `CloseDelay` properties.
+The Tooltips can be opened or closed after some delay by using the [`OpenDelay`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_OpenDelay) and [`CloseDelay`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_CloseDelay) properties.
 
 ```cshtml
 @using Syncfusion.Blazor.Popups

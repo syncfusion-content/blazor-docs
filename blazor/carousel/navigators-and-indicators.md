@@ -11,6 +11,11 @@ documentation: ug
 
 The navigators and indicators are used to transition the slides manually.
 
+To customize the appearance of indicators, and previous and next navigators, using a template with Blazor Carousel component, you can check on this video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=A5A9eM39nW0" %}
+
 ## Navigators
 
 ### Show or hide previous and next button

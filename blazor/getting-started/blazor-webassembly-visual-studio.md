@@ -11,6 +11,11 @@ documentation: ug
 
 This article provides a step-by-step instructions for building Blazor WebAssembly App with `Blazor Calendar` component using [Visual Studio](https://visualstudio.microsoft.com/vs/).
 
+To get start quickly with Blazor WebAssembly App, you can check on this video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=zKU580cOqjg" %}
+
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
@@ -96,8 +101,6 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendar compone
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendar component in your default web browser.
 
-
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LDBgirsJBGDheWFi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
 
 ![Blazor Calendar Component](images/output-calendar-using-blazor-webassembly.png)

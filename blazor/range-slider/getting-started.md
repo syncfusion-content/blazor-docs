@@ -13,6 +13,11 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor Range Slider](https://www.syncfusion.com/blazor-components/blazor-range-slider) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
+To get start quickly with Blazor Range Slider component, you can check on this video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=UeSbfQtK-5I" %}
+
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
@@ -113,6 +118,8 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Range Slider com
 
 {% tabs %}
 {% highlight razor %}
+
+@using Syncfusion.Blazor.Inputs
 
 <SfSlider Value="30"></SfSlider>
 

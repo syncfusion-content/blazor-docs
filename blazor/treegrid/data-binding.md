@@ -14,6 +14,10 @@ It supports two kinds of data binding method:
 * List binding
 * Remote service binding
 
+To learn about how to bind local or remote data to Tree Grid, check out this video:
+
+{% youtube "https://www.youtube.com/watch?v=YgSRj7yTebI" %}
+
 ## List binding
 
 In List binding, data source for rendering the Tree Grid component is retrieved from the same application locally.
@@ -551,13 +555,13 @@ On remote data binding, all tree grid actions such as paging, loading child on-d
 
 ### LoadChildOnDemand
 
-The Tree Grid component provides option to load child records during the initial rendering itself when using remote data binding by setting [LoadChildOnDemand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_LoadChildOnDemand)  to `true`.The behavior of the [LoadChildOnDemand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_LoadChildOnDemand) feature of Tree Grid described below.
+The Tree Grid component provides an option to load child records on demand when using remote data binding by setting [LoadChildOnDemand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_LoadChildOnDemand)  to `true`.The behavior of the [LoadChildOnDemand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_LoadChildOnDemand) feature of Tree Grid are described below.
 
-*The parent records are rendered in an expanded state. 
+* The parent records are rendered in an **collapsed** state. 
 
-*Child records are loaded along with the parent records during the initial rendering.
+* Child records are loaded only when the corresponding parent records are **expanded**.
 
-This feature is particularly useful for applications that require hierarchical data to be readily accessible without additional user interaction for expanding nodes.
+This feature is particularly useful for applications that have a large number of child records. If we want the child records to be readily accessible without additional user interaction for expanding nodes, we need to set **LoadChildOnDemand*** to **false**.
 
 The following code example describes the behavior of the `LoadChildOnDemand` feature of Tree Grid.
 

@@ -61,6 +61,11 @@ The above configuration is required only for .NET 9 projects. Please ensure you 
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
+| Interactive Render Mode | Description |
+| -- | -- |
+| WebAssembly or Auto | Open **~/_Imports.razor** file from the client project.|
+| Server | Open **~/_import.razor** file, which is located in the `Components` folder.|
+
 * In the **~/_Imports.razor** file, add the following namespaces:
 
 {% tabs %}
@@ -74,7 +79,9 @@ The above configuration is required only for .NET 9 projects. Please ensure you 
 
 * Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the program.cs file of your Blazor Web App.
 
-If you select an Interactive render mode as `WebAssembly` or `Auto`, you need to register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in both **~/Program.cs** files of your Blazor Web App.
+If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, you need to register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in both **~/Program.cs** files of your Blazor Web App.
+
+If the **Interactive Render Mode** is set to `Server`, your project will contain a single **~/Program.cs** file. So, you should register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service only in that **~/Program.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET 9 & .NET 8 (~/Program.cs) Server" hl_lines="2 9 11 13" %}
@@ -203,6 +210,15 @@ Add the following stylesheet and script to the head section of the **~/Component
 ## Adding Blazor PDF Viewer Component
 
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer (Next Gen) component in the **~Pages/.razor** file. If an interactivity location as `Per page/component` in the web app, define a render mode at the top of the **~Pages/.razor** component, as follows:
+
+| Interactivity location | RenderMode | Code |
+| --- | --- | --- |
+| Per page/component | Auto | @rendermode InteractiveAuto |
+|  | WebAssembly | @rendermode InteractiveWebAssembly |
+|  | Server | @rendermode InteractiveServer |
+|  | None | --- |
+
+N> If an **Interactivity Location** is set to `Global` and the **Render Mode** is set to `Auto` or `WebAssembly` or `Server`, the render mode is configured in the `App.razor` file by default.
 
 {% tabs %}
 {% highlight razor %}
