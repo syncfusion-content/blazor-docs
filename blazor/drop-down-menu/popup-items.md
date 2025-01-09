@@ -151,6 +151,9 @@ You can populate multilevel sub menu items in DropDown menu by using context men
 @using Syncfusion.Blazor.SplitButtons
 
 <SfDropDownButton @ref="FileButton" Id="btnFileMenu" Content="File" CssClass="e-dropDown-button">
+    <ChildContent>
+        <DropDownButtonEvents Opened="Opened" Closed="Closed"></DropDownButtonEvents>
+    </ChildContent>
     <PopupContent>
         <SfContextMenu @ref="ContextMenu" Items="FileMenuItems" TValue="ContextMenuItemModel" ShowItemOnClick="true">
             <MenuFieldSettings Text="Content"></MenuFieldSettings>
@@ -210,6 +213,16 @@ You can populate multilevel sub menu items in DropDown menu by using context men
     public async Task OnMenuCreated()
     {
         await ContextMenu.OpenAsync();
+    }
+
+    private void Opened()
+    {
+        
+    }
+
+    private void Closed()
+    {
+
     }
 }
 
