@@ -13,6 +13,12 @@ The following list of themes are included in the Syncfusion<sup style="font-size
 
 |Theme	|Style Sheet Name|
 |--------|--------|
+|Tailwind 3.4 | tailwind3.css |
+|Tailwind 3.4 Dark | tailwind3-dark.css |
+|Bootstrap 5.3 | bootstrap5.3.css |
+|Bootstrap 5.3 Dark | bootstrap5.3-dark.css |
+|Fluent 2 | fluent2.css |
+|Fluent 2 Dark | fluent2-dark.css |
 |Material 3 | material3.css |
 |Material 3 Dark | material3-dark.css |
 |Bootstrap 5	| bootstrap5.css |
@@ -156,6 +162,12 @@ To refer to optimized CSS files, use the following syntax:
 
 | Theme Name | CDN Reference |
 |--- | --- |
+| Tailwind 3.4 | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind3.css |
+| Tailwind 3.4 Dark | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind3-dark.css |
+| Bootstrap 5.3 | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5.3.css |
+| Bootstrap 5.3 Dark | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5.3-dark.css |
+| Fluent 2 | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fluent2.css |
+| Fluent 2 Dark | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fluent2-dark.css |
 | Material 3 | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material3.css |
 | Material 3 Lite | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material3-lite.css |
 | Material 3 Dark | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material3-dark.css |

@@ -11,6 +11,11 @@ documentation: ug
 
 The ListView component is designed to customize each list items and group title. It uses Blazor `Template engine` to render the elements.
 
+To customize the Blazor ListView component header, items, and group header using templates, you can check on this video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=SZyehayHi_4" %}
+
 ## Header Template
 
 Listview header can be customized with the help of the `HeaderTemplate` property. To customize header template in your application, set your customized template string to `HeaderTemplate` property along with `ShowHeader` property as `true` to display the Listview header.
