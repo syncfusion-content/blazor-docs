@@ -13,9 +13,9 @@ The Syncfusion Blazor DataGrid component supports template editing, providing a 
 
 > Before implementing Template Editing, it is recommended to review the [Template](https://blazor.syncfusion.com/documentation/datagrid/templates) section to understand the configuration of templates in the grid.
 
-## Inline template
+## Inline template editing
 
-The inline template editing feature in Syncfusion DataGrid allows customization of the default inline editing behavior by enabling individuals to define their custom editors for grid rows. This is achieved by setting the [GridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property to **Normal** and wrapping the desired editor elements inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) property of the [GridEditSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html)GridEditSettings. This feature is particularly useful when there is a need to include additional fields not present in the column model or to render highly customized editors.
+The inline template editing feature in Syncfusion DataGrid allows customization of the default inline editing behavior by enabling individuals to define their custom editors for grid rows. This is achieved by setting the [GridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property to **Normal** and wrapping the desired editor elements inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) property of the [GridEditSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html). This feature is particularly useful when there is a need to include additional fields not present in the column model or to render highly customized editors.
 
 > Custom HTML elements or components can be used as editors, and two-way data binding (**@bind-Value**) must be implemented to ensure synchronization with the grid's data.
 
@@ -31,7 +31,7 @@ In the following sample, grid enabled with inline template editing.
 @using Syncfusion.Blazor.Inputs
 
 <SfGrid DataSource="@OrderData" Toolbar="@(new string[] { "Add", "Edit", "Delete", "Update", "Cancel" })">
-    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="Syncfusion.Blazor.Grids.EditMode.Normal">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal">
         <Template>
             @{
                 var Order = (context as OrderDetails);
@@ -185,7 +185,7 @@ public class OrderDetails
 
 > In the above sample, the textbox rendered for **OrderID** column inside the inline editing template is disabled using its `Enabled` property to prevent editing of the primary key column.
 
-## Dialog template
+## Dialog template editing
 
 To know about customizing the **Dialog Template** in Blazor DataGrid Component, you can check this video.
 
@@ -202,6 +202,11 @@ In the following sample, grid enabled with dialog template editing.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Calendars
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Inputs
+
 <SfGrid DataSource="@OrderData" Toolbar="@(new string[] { "Add", "Edit", "Delete", "Update", "Cancel" })">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Dialog="DialogParams" Mode="EditMode.Dialog">
         <Template>
@@ -357,12 +362,15 @@ In the Syncfusion DataGrid, you can disable specific components rendered inside 
 
 To dynamically modify the `Enabled` property of components within the dialog template, you can use the [RowCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowCreating) and [OnBeginEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBeginEdit) events of the grid. These events are triggered before adding a new record or editing an existing record, respectively, allowing you to conditionally disable components based on your requirements.
 
-You can use the [RowCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowCreating) and [OnBeginEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnBeginEdit) events triggered before an add action and edit is executed in the grid.
-
 In the following sample, the `Enabled` property of the **OrderID** textbox is toggled based on the operation type (add or edit) using the `RowCreating` and `OnBeginEdit` events.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Calendars
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Inputs
+
 <SfGrid DataSource="@OrderData" Toolbar="@(new string[] { "Add", "Edit", "Delete", "Update", "Cancel" })">
     <GridEvents OnBeginEdit="OnBeginEdit" RowCreating="RowCreating" TValue="OrderDetails"></GridEvents>
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Dialog">
@@ -519,101 +527,542 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LDLSDiXETysiUAfk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
-### Set focus to editor
+### Get value from editor
 
-By default, the first input element in the dialog will be focused while opening it. If the first input element is in the a disabled or hidden state, you can set focus to the required input element in the corresponding components **Created** or **DataBound** event.
+The get value from editor feature in the Syncfusion Grid allows you to read, format, and update the current editor value before it is saved. This feature is particularly valuable when you need to perform specific actions on the data, such as formatting before it is committed to the underlying data source. 
 
-This is demonstrated in the following sample code, where the first input element is in disabled state. So the  **CustomerID** Autocomplete component is focused by invoking its [FocusIn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FocusIn) method in the AutoComplete's [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteEvents-2.html#Syncfusion_Blazor_DropDowns_AutoCompleteEvents_2_DataBound) event.
+To achieve this feature, you can utilize the [RowUpdating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowUpdating) event, which is triggered before the save action is performed in the grid.
 
-```cshtml
+In the following sample, the freight value has been formatted and updated using `RowUpdating`.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Calendars
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Inputs
 
-<SfGrid DataSource="@GridData" Toolbar="@(new string[] {"Add", "Edit" ,"Delete","Update","Cancel" })">
-    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="@EditMode.Dialog">
+<SfGrid DataSource="@OrderData" Toolbar="@(new string[] { "Add", "Edit", "Delete", "Update", "Cancel" })">
+    <GridEvents RowUpdating="RowUpdating" TValue="OrderDetails"></GridEvents>
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Dialog">
         <Template>
             @{
-                var Order = (context as OrdersDetails);
-                <div style="width:305px; height:380px;">
-                    <label>Order ID</label>
-                    <SfNumericTextBox ID="OrderID" @bind-Value="@(Order.OrderID)" Enabled="@((Order.OrderID == null) ? true : false)"></SfNumericTextBox>
-
-                    <label>Customer Name</label>
-                    <SfAutoComplete ID="customerID" @ref="AutoComplete" TItem="OrdersDetails" @bind-Value="@(Order.CustomerID)" TValue="string" DataSource="@GridData">
-                        <AutoCompleteFieldSettings Value="CustomerID"></AutoCompleteFieldSettings>
-                        <AutoCompleteEvents TValue="string" TItem="OrdersDetails" DataBound="FocusAutoComplete"></AutoCompleteEvents>
-                    </SfAutoComplete>
-
-                    <label>Freight</label>
-                    <SfNumericTextBox ID="Freight" @bind-Value="@(Order.Freight)" TValue="double?"></SfNumericTextBox>
-
-                    <label>Order Date</label>
-                    <SfDatePicker ID="OrderDate" @bind-Value="@(Order.OrderDate)"></SfDatePicker>
-
-                    <label>Ship Country</label>
-                    <SfDropDownList ID="ShipCountry" @bind-Value="@(Order.ShipCountry)" TItem="OrdersDetails" TValue="string" DataSource="@GridData">
-                        <DropDownListFieldSettings Value="ShipCountry" Text="ShipCountry"></DropDownListFieldSettings>
-                    </SfDropDownList>
-
-                    <label>Ship City</label>
-                    <SfDropDownList ID="ShipCity" @bind-Value="@(Order.ShipCity)" TItem="OrdersDetails" TValue="string" DataSource="@GridData">
-                        <DropDownListFieldSettings Value="ShipCity" Text="ShipCity"></DropDownListFieldSettings>
-                    </SfDropDownList>
-
-                    <label>Ship Address</label>
-                    <SfTextBox ID="ShipAddress" @bind-Value="@(Order.ShipAddress)"></SfTextBox>
+                var Order = (context as OrderDetails);
+                <div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <SfNumericTextBox ID="OrderID" @bind-Value="@(Order.OrderID)" Enabled="@((Order.OrderID == 0) ? true : false)" FloatLabelType="FloatLabelType.Always" Placeholder="Order ID"></SfNumericTextBox>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <SfTextBox ID="CustomerID" @bind-Value="@(Order.CustomerID)" TValue="string" FloatLabelType="FloatLabelType.Always" Placeholder="Customer Name">
+                            </SfTextBox>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <SfNumericTextBox ID="Freight" @bind-Value="@(Order.Freight)" TValue="double" FloatLabelType="FloatLabelType.Always" Placeholder="Freight"></SfNumericTextBox>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <SfDatePicker ID="OrderDate" @bind-Value="@(Order.OrderDate)" FloatLabelType="FloatLabelType.Always" Placeholder="Order Date">
+                            </SfDatePicker>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <SfDropDownList ID="ShipCountry" TItem="Country" @bind-Value="@(Order.ShipCountry)" TValue="string" DataSource="@CountryName" FloatLabelType="FloatLabelType.Always" Placeholder="Ship Country">
+                                <DropDownListFieldSettings Value="ShipCountry" Text="ShipCountry"></DropDownListFieldSettings>
+                            </SfDropDownList>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <SfDropDownList ID="ShipCity" TItem="City" @bind-Value="@(Order.ShipCity)" TValue="string" DataSource="@CityName" FloatLabelType="FloatLabelType.Always" Placeholder="Ship City">
+                                <DropDownListFieldSettings Value="ShipCity" Text="ShipCity"></DropDownListFieldSettings>
+                            </SfDropDownList>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <SfTextBox ID="ShipAddress" Multiline="true" @bind-Value="@(Order.ShipAddress)" FloatLabelType="FloatLabelType.Always" Placeholder="Ship Address"></SfTextBox>
+                        </div>
+                    </div>
                 </div>
             }
-        </Template>
+        </Template>        
     </GridEditSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(OrdersDetails.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="@TextAlign.Center" HeaderTextAlign="@TextAlign.Center" Width="140"></GridColumn>
-        <GridColumn Field=@nameof(OrdersDetails.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(OrdersDetails.Freight) HeaderText="Freight" Format="C2" Width="140" TextAlign="@TextAlign.Right" HeaderTextAlign="@TextAlign.Right"></GridColumn>
-        <GridColumn Field=@nameof(OrdersDetails.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" Width="160"></GridColumn>
-        <GridColumn Field=@nameof(OrdersDetails.ShipCountry) HeaderText="Ship Country" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true})" TextAlign="TextAlign.Right" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required=true})"  Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" ValidationRules="@(new ValidationRules{ Required=true, Min=1})" Format="C2" Width="140" TextAlign="TextAlign.Right"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.OrderDate) HeaderText="Order Date" ValidationRules="@(new ValidationRules{ Required=true})" Format="d" TextAlign="TextAlign.Right" Type="ColumnType.Date" Width="160"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipCountry) HeaderText="Ship Country" Width="150"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 @code {
-    SfAutoComplete<string, OrdersDetails> AutoComplete { get; set; }
-    public List<OrdersDetails> GridData = new List<OrdersDetails>
+    public List<OrderDetails> OrderData { get; set; }
+    protected override void OnInitialized()
     {
-    new OrdersDetails() { OrderID = 10248, CustomerID = "VINET", Freight = 32.38, ShipCity = "Berlin", OrderDate = DateTime.Now.AddDays(-2), ShipName = "Vins et alcools Chevalier", ShipCountry = "Denmark", ShipAddress = "Kirchgasse 6" },
-    new OrdersDetails() { OrderID = 10249, CustomerID = "TOMSP", Freight = 11.61, ShipCity = "Madrid", OrderDate = DateTime.Now.AddDays(-5), ShipName = "Toms Spezialitäten", ShipCountry = "Brazil", ShipAddress = "Avda. Azteca 123" },
-    new OrdersDetails() { OrderID = 10250, CustomerID = "HANAR", Freight = 65.83, ShipCity = "Cholchester", OrderDate = DateTime.Now.AddDays(-12), ShipName = "Hanari Carnes", ShipCountry = "Germany", ShipAddress = "Carrera 52 con Ave. Bolívar #65-98 Llano Largo" },
-    new OrdersDetails() { OrderID = 10251, CustomerID = "VICTE", Freight = 41.34, ShipCity = "Marseille", OrderDate = DateTime.Now.AddDays(-18), ShipName = "Victuailles en stock", ShipCountry = "Austria", ShipAddress = "Magazinweg 7" },
-    new OrdersDetails() { OrderID = 10252, CustomerID = "SUPRD", Freight = 51.3, ShipCity = "Tsawassen", OrderDate = DateTime.Now.AddDays(-22), ShipName = "Suprêmes délices", ShipCountry = "Switzerland", ShipAddress = "1029 - 12th Ave. S." },
-    new OrdersDetails() { OrderID = 10253, CustomerID = "HANAR", Freight = 58.17, ShipCity = "Tsawassen", OrderDate = DateTime.Now.AddDays(-26), ShipName = "Hanari Carnes", ShipCountry = "Switzerland", ShipAddress = "1029 - 12th Ave. S." },
-    new OrdersDetails() { OrderID = 10254, CustomerID = "CHOPS", Freight = 22.98, ShipCity = "Berlin", OrderDate = DateTime.Now.AddDays(-34), ShipName = "Chop-suey Chinese", ShipCountry = "Denmark", ShipAddress = "Kirchgasse 6" },
-    new OrdersDetails() { OrderID = 10255, CustomerID = "RICSU", Freight = 148.33, ShipCity = "Madrid", OrderDate = DateTime.Now.AddDays(-39), ShipName = "Richter Supermarket", ShipCountry = "Brazil", ShipAddress = "Avda. Azteca 123" },
-    new OrdersDetails() { OrderID = 10256, CustomerID = "WELLI", Freight = 13.97, ShipCity = "Madrid", OrderDate = DateTime.Now.AddDays(-43), ShipName = "Wellington Importadora", ShipCountry = "Brazil", ShipAddress = "Avda. Azteca 123" },
-    new OrdersDetails() { OrderID = 10257, CustomerID = "HILAA", Freight = 81.91, ShipCity = "Cholchester", OrderDate = DateTime.Now.AddDays(-48), ShipName = "HILARION-Abastos", ShipCountry = "Germany", ShipAddress = "Carrera 52 con Ave. Bolívar #65-98 Llano Largo" }
-};
-
-    public class OrdersDetails
+        OrderData = OrderDetails.GetAllRecords();
+    }
+    public void RowUpdating(RowUpdatingEventArgs<OrderDetails> args)
     {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public double? Freight { get; set; }
+        args.Data.Freight = Convert.ToInt32(args.Data.Freight);
+    }
+    public class City
+    {
         public string ShipCity { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public string ShipName { get; set; }
-        public string ShipCountry { get; set; }
-        public string ShipAddress { get; set; }
     }
-    private async Task FocusAutoComplete()
+    List<City> CityName = new List<City>
     {
-        await this.AutoComplete.FocusAsync();
+        new City() { ShipCity= "Reims" },
+        new City() { ShipCity= "Münster" },
+        new City() { ShipCity = "Rio de Janeiro" },
+        new City() { ShipCity = "Lyon" },
+        new City() { ShipCity = "Charleroi" },
+        new City() { ShipCity = "Genève" },
+        new City() { ShipCity = "Resende" },
+        new City() { ShipCity = "San Cristóbal" },
+        new City() { ShipCity = "Graz" },
+        new City() { ShipCity = "México D.F." },
+        new City() { ShipCity = "Köln" },
+        new City() { ShipCity = "Albuquerque" },
+    };
+    public class Country
+    {
+        public string ShipCountry { get; set; }
     }
+    List<Country> CountryName = new List<Country>
+    {
+        new Country() { ShipCountry= "France"},
+        new Country() { ShipCountry= "Brazil"},
+        new Country() { ShipCountry= "Germany"},
+        new Country() { ShipCountry= "Belgium"},
+        new Country() { ShipCountry= "Austria"},
+        new Country() { ShipCountry= "Switzerland"},
+        new Country() { ShipCountry= "Venezuela"},
+        new Country() { ShipCountry= "Mexico"},
+        new Country() { ShipCountry= "USA"},
+    };
 }
-```
+{% endhighlight %}
+{% highlight c# tabtitle="OrderDetails.cs" %}
+public class OrderDetails
+{
+    public static List<OrderDetails> Order = new List<OrderDetails>();
+    public OrderDetails(int OrderID, string CustomerId, double Freight, string ShipCountry, string ShipCity, string ShipAddress, DateTime OrderDate)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerId;
+        this.Freight = Freight;
+        this.ShipCountry = ShipCountry;
+        this.ShipCity = ShipCity;
+        this.ShipAddress = ShipAddress;
+        this.OrderDate = OrderDate;
+    }
+    public static List<OrderDetails> GetAllRecords()
+    {
+        if (Order.Count == 0)
+        {
+            Order.Add(new OrderDetails(10248, "VINET", 32.38, "France", "Reims", "59 rue de l Abbaye", new DateTime(1996, 7, 4)));
+            Order.Add(new OrderDetails(10249, "TOMSP", 11.61, "Germany", "Münster", "Luisenstr. 48", new DateTime(1996, 7, 5)));
+            Order.Add(new OrderDetails(10250, "HANAR", 65.83, "Brazil", "Rio de Janeiro", "Rua do Paço, 67", new DateTime(1996, 7, 8)));
+            Order.Add(new OrderDetails(10251, "VICTE", 41.34, "France", "Lyon", "2, rue du Commerce", new DateTime(1996, 7, 8)));
+            Order.Add(new OrderDetails(10252, "SUPRD", 51.3, "Belgium", "Charleroi", "Boulevard Tirou, 255", new DateTime(1996, 7, 9)));
+            Order.Add(new OrderDetails(10253, "HANAR", 58.17, "Brazil", "Rio de Janeiro", "Rua do Paço, 67", new DateTime(1996, 7, 10)));
+            Order.Add(new OrderDetails(10254, "CHOPS", 22.98, "Switzerland", "Bern", "Hauptstr. 31", new DateTime(1996, 7, 11)));
+            Order.Add(new OrderDetails(10255, "RICSU", 148.33, "Switzerland", "Genève", "Starenweg 5", new DateTime(1996, 7, 12)));
+            Order.Add(new OrderDetails(10256, "WELLI", 13.97, "Brazil", "Resende", "Rua do Mercado, 12", new DateTime(1996, 7, 15)));
+            Order.Add(new OrderDetails(10257, "HILAA", 81.91, "Venezuela", "San Cristóbal", "Carrera 22 con Ave. Carlos Soublette #8-35", new DateTime(1996, 7, 16)));
+            Order.Add(new OrderDetails(10258, "ERNSH", 140.51, "Austria", "Graz", "Kirchgasse 6", new DateTime(1996, 7, 17)));
+            Order.Add(new OrderDetails(10259, "CENTC", 3.25, "Mexico", "México D.F.", "Sierras de Granada 9993", new DateTime(1996, 7, 18)));
+            Order.Add(new OrderDetails(10260, "OTTIK", 55.09, "Germany", "Köln", "Mehrheimerstr. 369", new DateTime(1996, 7, 19)));
+            Order.Add(new OrderDetails(10261, "QUEDE", 3.05, "Brazil", "Rio de Janeiro", "Rua da Panificadora, 12", new DateTime(1996, 7, 19)));
+            Order.Add(new OrderDetails(10262, "RATTC", 48.29, "USA", "Albuquerque", "2817 Milton Dr.", new DateTime(1996, 7, 22)));
+        }
+        return Order;
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCountry { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipAddress { get; set; }
+    public DateTime OrderDate { get; set; }
+}
+{% endhighlight %}
+{% endtabs %}
 
-The following image represents the AutoComplete component in focused state inside the dialog template of the DataGrid component,
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVSDiMXgcVQdJxD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
-![Blazor DataGrid displays Dynamic Focus of Components](./images/blazor-datagrid-dynamic-focus-component.png)
+### Set focus to particular column editor
+
+The Syncfusion Grid allows you to control the focus behavior of input elements in edit forms. By default, the first input element in the dialog receives focus when the dialog is opened. However, in scenarios where the first input element is disabled or hidden, you can specify which valid input element should receive focus. This can be achieved using the `Created` or `DataBound` event of the corresponding components.
+
+In the following sample, the **CustomerID** column is focused by invoking its [FocusAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FocusAsync) method within the AutoComplete's [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteEvents-2.html#Syncfusion_Blazor_DropDowns_AutoCompleteEvents_2_DataBound) event.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Calendars
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Inputs
+
+<SfGrid DataSource="@OrderData" Toolbar="@(new string[] { "Add", "Edit", "Delete", "Update", "Cancel" })">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Dialog">
+        <Template>
+            @{
+                var Order = (context as OrderDetails);
+                <div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <SfNumericTextBox ID="OrderID" @bind-Value="@(Order.OrderID)" Enabled="@((Order.OrderID == 0) ? true : false)" FloatLabelType="FloatLabelType.Always" Placeholder="Order ID"></SfNumericTextBox>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <SfAutoComplete ID="CustomerID" @ref="AutoComplete" TItem="OrderDetails" @bind-Value="@(Order.CustomerID)" TValue="string" DataSource="@OrderData" FloatLabelType="FloatLabelType.Always" Placeholder="Customer Name">
+                                <AutoCompleteFieldSettings Value="CustomerID"></AutoCompleteFieldSettings>
+                                <AutoCompleteEvents TValue="string" TItem="OrderDetails" DataBound="FocusCustomerColumn"></AutoCompleteEvents>
+                            </SfAutoComplete>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <SfNumericTextBox ID="Freight" @bind-Value="@(Order.Freight)" TValue="double" FloatLabelType="FloatLabelType.Always" Placeholder="Freight"></SfNumericTextBox>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <SfDatePicker ID="OrderDate" @bind-Value="@(Order.OrderDate)" FloatLabelType="FloatLabelType.Always" Placeholder="Order Date">
+                            </SfDatePicker>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <SfDropDownList ID="ShipCountry" TItem="Country" @bind-Value="@(Order.ShipCountry)" TValue="string" DataSource="@CountryName" FloatLabelType="FloatLabelType.Always" Placeholder="Ship Country">
+                                <DropDownListFieldSettings Value="ShipCountry" Text="ShipCountry"></DropDownListFieldSettings>
+                            </SfDropDownList>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <SfDropDownList ID="ShipCity" TItem="City" @bind-Value="@(Order.ShipCity)" TValue="string" DataSource="@CityName" FloatLabelType="FloatLabelType.Always" Placeholder="Ship City">
+                                <DropDownListFieldSettings Value="ShipCity" Text="ShipCity"></DropDownListFieldSettings>
+                            </SfDropDownList>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <SfTextBox ID="ShipAddress" Multiline="true" @bind-Value="@(Order.ShipAddress)" FloatLabelType="FloatLabelType.Always" Placeholder="Ship Address"></SfTextBox>
+                        </div>
+                    </div>
+                </div>
+            }
+        </Template>        
+    </GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true})" TextAlign="TextAlign.Right" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required=true})"  Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" ValidationRules="@(new ValidationRules{ Required=true, Min=1})" Format="C2" Width="140" TextAlign="TextAlign.Right"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.OrderDate) HeaderText="Order Date" ValidationRules="@(new ValidationRules{ Required=true})" Format="d" TextAlign="TextAlign.Right" Type="ColumnType.Date" Width="160"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipCountry) HeaderText="Ship Country" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public SfAutoComplete<string, OrderDetails> AutoComplete { get; set; }
+    public List<OrderDetails> OrderData { get; set; }
+    protected override void OnInitialized()
+    {
+        OrderData = OrderDetails.GetAllRecords();
+    }
+    public async Task FocusCustomerColumn()
+    {
+        await AutoComplete.FocusAsync();
+    }
+    public class City
+    {
+        public string ShipCity { get; set; }
+    }
+    List<City> CityName = new List<City>
+    {
+        new City() { ShipCity= "Reims" },
+        new City() { ShipCity= "Münster" },
+        new City() { ShipCity = "Rio de Janeiro" },
+        new City() { ShipCity = "Lyon" },
+        new City() { ShipCity = "Charleroi" },
+        new City() { ShipCity = "Genève" },
+        new City() { ShipCity = "Resende" },
+        new City() { ShipCity = "San Cristóbal" },
+        new City() { ShipCity = "Graz" },
+        new City() { ShipCity = "México D.F." },
+        new City() { ShipCity = "Köln" },
+        new City() { ShipCity = "Albuquerque" },
+    };
+    public class Country
+    {
+        public string ShipCountry { get; set; }
+    }
+    List<Country> CountryName = new List<Country>
+    {
+        new Country() { ShipCountry= "France"},
+        new Country() { ShipCountry= "Brazil"},
+        new Country() { ShipCountry= "Germany"},
+        new Country() { ShipCountry= "Belgium"},
+        new Country() { ShipCountry= "Austria"},
+        new Country() { ShipCountry= "Switzerland"},
+        new Country() { ShipCountry= "Venezuela"},
+        new Country() { ShipCountry= "Mexico"},
+        new Country() { ShipCountry= "USA"},
+    };
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderDetails.cs" %}
+public class OrderDetails
+{
+    public static List<OrderDetails> Order = new List<OrderDetails>();
+    public OrderDetails(int OrderID, string CustomerId, double Freight, string ShipCountry, string ShipCity, string ShipAddress, DateTime OrderDate)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerId;
+        this.Freight = Freight;
+        this.ShipCountry = ShipCountry;
+        this.ShipCity = ShipCity;
+        this.ShipAddress = ShipAddress;
+        this.OrderDate = OrderDate;
+    }
+    public static List<OrderDetails> GetAllRecords()
+    {
+        if (Order.Count == 0)
+        {
+            Order.Add(new OrderDetails(10248, "VINET", 32.38, "France", "Reims", "59 rue de l Abbaye", new DateTime(1996, 7, 4)));
+            Order.Add(new OrderDetails(10249, "TOMSP", 11.61, "Germany", "Münster", "Luisenstr. 48", new DateTime(1996, 7, 5)));
+            Order.Add(new OrderDetails(10250, "HANAR", 65.83, "Brazil", "Rio de Janeiro", "Rua do Paço, 67", new DateTime(1996, 7, 8)));
+            Order.Add(new OrderDetails(10251, "VICTE", 41.34, "France", "Lyon", "2, rue du Commerce", new DateTime(1996, 7, 8)));
+            Order.Add(new OrderDetails(10252, "SUPRD", 51.3, "Belgium", "Charleroi", "Boulevard Tirou, 255", new DateTime(1996, 7, 9)));
+            Order.Add(new OrderDetails(10253, "HANAR", 58.17, "Brazil", "Rio de Janeiro", "Rua do Paço, 67", new DateTime(1996, 7, 10)));
+            Order.Add(new OrderDetails(10254, "CHOPS", 22.98, "Switzerland", "Bern", "Hauptstr. 31", new DateTime(1996, 7, 11)));
+            Order.Add(new OrderDetails(10255, "RICSU", 148.33, "Switzerland", "Genève", "Starenweg 5", new DateTime(1996, 7, 12)));
+            Order.Add(new OrderDetails(10256, "WELLI", 13.97, "Brazil", "Resende", "Rua do Mercado, 12", new DateTime(1996, 7, 15)));
+            Order.Add(new OrderDetails(10257, "HILAA", 81.91, "Venezuela", "San Cristóbal", "Carrera 22 con Ave. Carlos Soublette #8-35", new DateTime(1996, 7, 16)));
+            Order.Add(new OrderDetails(10258, "ERNSH", 140.51, "Austria", "Graz", "Kirchgasse 6", new DateTime(1996, 7, 17)));
+            Order.Add(new OrderDetails(10259, "CENTC", 3.25, "Mexico", "México D.F.", "Sierras de Granada 9993", new DateTime(1996, 7, 18)));
+            Order.Add(new OrderDetails(10260, "OTTIK", 55.09, "Germany", "Köln", "Mehrheimerstr. 369", new DateTime(1996, 7, 19)));
+            Order.Add(new OrderDetails(10261, "QUEDE", 3.05, "Brazil", "Rio de Janeiro", "Rua da Panificadora, 12", new DateTime(1996, 7, 19)));
+            Order.Add(new OrderDetails(10262, "RATTC", 48.29, "USA", "Albuquerque", "2817 Milton Dr.", new DateTime(1996, 7, 22)));
+        }
+        return Order;
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCountry { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipAddress { get; set; }
+    public DateTime OrderDate { get; set; }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhSNCsjpMQvVsVT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
+
+## Render tab component inside the dialog template
+
+You can enhance the editing experience in the Grid by rendering a [Tab](https://blazor.syncfusion.com/documentation/tabs/getting-started-webapp) component inside the dialog template. This feature is especially useful when you want to present multiple editing sections or categories in a tabbed layout, ensuring a more intuitive and easily navigable interface for data editing.
+
+To enable this functionality, you need to set the [GridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property of the Grid to **Dialog**. This configures the Grid to use the dialog editing mode. Additionally, you can use the [GridEditSettings.Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) property to define a template variable that contains the `Tab` component and its corresponding content.
+
+The following example renders a tab component inside the edit dialog. The tab component has two tabs, and once you fill in the first tab and navigate to the second one, the validation for the first tab is performed before navigating to the second.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.Buttons
+
+<SfGrid @ref="Grid" DataSource="@OrderData" Toolbar="@(new string[] { "Add", "Edit", "Delete", "Update", "Cancel" })">
+    <GridEvents TValue="OrderDetails" RowCreating="RowCreating" OnBeginEdit="OnBeginEdit"></GridEvents>
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Dialog">
+        <Template>
+            @{
+                var Order = (context as OrderDetails);
+                <SfTab @ref="Tab">
+                    <TabItems>
+                        <TabItem>
+                            <ChildContent>
+                                <TabHeader Text="Details"></TabHeader>
+                            </ChildContent>
+                            <ContentTemplate>
+                                <div id="tab1">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <SfNumericTextBox ID="OrderID" @bind-Value="@(Order.OrderID)" Enabled="@((Order.OrderID == 0) ? true : false)" FloatLabelType="FloatLabelType.Always" Placeholder="Order ID"></SfNumericTextBox>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <SfTextBox ID="CustomerID" @bind-Value="@(Order.CustomerID)" TValue="string" FloatLabelType="FloatLabelType.Always" Placeholder="Customer Name">
+                                            </SfTextBox>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <SfDropDownList ID="ShipCountry" TItem="Country" @bind-Value="@(Order.ShipCountry)" TValue="string" DataSource="@CountryName" FloatLabelType="FloatLabelType.Always" Placeholder="Ship Country">
+                                            <DropDownListFieldSettings Value="ShipCountry" Text="ShipCountry"></DropDownListFieldSettings>
+                                        </SfDropDownList>
+                                    </div>
+                                    <div style="float: right; margin-top:5px">
+                                        <SfButton CssClass="e-info" Content="Next" OnClick="MoveNext"></SfButton>
+                                    </div>
+                                </div>
+                            </ContentTemplate>
+                        </TabItem>
+                        <TabItem>
+                            <ChildContent>
+                                <TabHeader Text="Verify"></TabHeader>
+                            </ChildContent>
+                            <ContentTemplate>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <SfNumericTextBox ID="Freight" @bind-Value="@(Order.Freight)" TValue="double" FloatLabelType="FloatLabelType.Always" Placeholder="Freight">
+                                        </SfNumericTextBox>
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <SfTextBox ID="ShipAddress" Multiline="true" @bind-Value="@(Order.ShipAddress)" FloatLabelType="FloatLabelType.Always" Placeholder="Ship Address"></SfTextBox>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <SfCheckBox @bind-Checked="@(Order.Verified)" Label="Verified"></SfCheckBox>
+                                    </div>
+                                </div>
+                                <div style="float: right;">
+                                    <SfButton CssClass="e-info" Content="Submit" OnClick="Submit"></SfButton>
+                                </div>
+                            </ContentTemplate>
+                        </TabItem>
+                    </TabItems>
+                </SfTab>
+            }
+        </Template>
+        <FooterTemplate>
+        </FooterTemplate>
+    </GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true})" TextAlign="TextAlign.Right" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required=true})" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipCountry) HeaderText="Ship Country" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" ValidationRules="@(new ValidationRules{ Required=true, Min=1})" Format="C2" Width="140" TextAlign="TextAlign.Right"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipAddress) HeaderText="Ship Address" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.Verified) HeaderText="Verified" Type="ColumnType.Boolean" DisplayAsCheckBox="true" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public SfGrid<OrderDetails> Grid;
+    private SfTab Tab;
+    public List<OrderDetails> OrderData { get; set; }
+    protected override void OnInitialized()
+    {
+        OrderData = OrderDetails.GetAllRecords();
+    }
+    private OrderDetails CurrentEditingRecord { get; set; }
+    private void MoveNext()
+    {
+        if (CurrentEditingRecord.OrderID == 0 || string.IsNullOrWhiteSpace(CurrentEditingRecord.CustomerID))
+        {
+            Tab.PreventRender(false);
+        }
+        else{
+            Tab.SelectAsync(1);
+        }
+    }
+    private void Submit()
+    {
+        Grid.EndEditAsync();
+    }
+    public void RowCreating(RowCreatingEventArgs<OrderDetails> args)
+    {
+        CurrentEditingRecord = args.Data;
+    }
+    public void OnBeginEdit(BeginEditArgs<OrderDetails> args)
+    {
+        CurrentEditingRecord = args.RowData;
+    }
+    public class City
+    {
+        public string ShipCity { get; set; }
+    }
+    List<City> CityName = new List<City>
+    {
+        new City() { ShipCity= "Reims" },
+        new City() { ShipCity= "Münster" },
+        new City() { ShipCity = "Rio de Janeiro" },
+        new City() { ShipCity = "Lyon" },
+        new City() { ShipCity = "Charleroi" },
+        new City() { ShipCity = "Genève" },
+        new City() { ShipCity = "Resende" },
+        new City() { ShipCity = "San Cristóbal" },
+        new City() { ShipCity = "Graz" },
+        new City() { ShipCity = "México D.F." },
+        new City() { ShipCity = "Köln" },
+        new City() { ShipCity = "Albuquerque" },
+        new City() { ShipCity = "Bern" },
+    };
+    public class Country
+    {
+        public string ShipCountry { get; set; }
+    }
+    List<Country> CountryName = new List<Country>
+    {
+        new Country() { ShipCountry= "France"},
+        new Country() { ShipCountry= "Brazil"},
+        new Country() { ShipCountry= "Germany"},
+        new Country() { ShipCountry= "Belgium"},
+        new Country() { ShipCountry= "Austria"},
+        new Country() { ShipCountry= "Switzerland"},
+        new Country() { ShipCountry= "Venezuela"},
+        new Country() { ShipCountry= "Mexico"},
+        new Country() { ShipCountry= "USA"},
+    };
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderDetails.cs" %}
+public class OrderDetails
+{
+    public static List<OrderDetails> Order = new List<OrderDetails>();
+    public OrderDetails(int OrderID, string CustomerId, double Freight, string ShipCountry, string ShipAddress, bool Verified)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerId;
+        this.Freight = Freight;
+        this.ShipCountry = ShipCountry;
+        this.ShipAddress = ShipAddress;
+        this.Verified = Verified;
+    }
+    public static List<OrderDetails> GetAllRecords()
+    {
+        if (Order.Count == 0)
+        {
+            Order.Add(new OrderDetails(10248, "VINET", 32.38, "France", "59 rue de l Abbaye", true));
+            Order.Add(new OrderDetails(10249, "TOMSP", 11.61, "Germany", "Luisenstr. 48", false));
+            Order.Add(new OrderDetails(10250, "HANAR", 65.83, "Brazil", "Rua do Paço, 67", true));
+            Order.Add(new OrderDetails(10251, "VICTE", 41.34, "France", "2, rue du Commerce", true));
+            Order.Add(new OrderDetails(10252, "SUPRD", 51.3, "Belgium", "Boulevard Tirou, 255", true));
+            Order.Add(new OrderDetails(10253, "HANAR", 58.17, "Brazil", "Rua do Paço, 67", true));
+            Order.Add(new OrderDetails(10254, "CHOPS", 22.98, "Switzerland", "Hauptstr. 31", false));
+            Order.Add(new OrderDetails(10255, "RICSU", 148.33, "Switzerland", "Starenweg 5", true));
+            Order.Add(new OrderDetails(10256, "WELLI", 13.97, "Brazil", "Rua do Mercado, 12", false));
+            Order.Add(new OrderDetails(10257, "HILAA", 81.91, "Venezuela", "Carrera 22 con Ave. Carlos Soublette #8-35", true));
+            Order.Add(new OrderDetails(10258, "ERNSH", 140.51, "Austria", "Kirchgasse 6", true));
+            Order.Add(new OrderDetails(10259, "CENTC", 3.25, "Mexico", "Sierras de Granada 9993", false));
+            Order.Add(new OrderDetails(10260, "OTTIK", 55.09, "Germany", "Mehrheimerstr. 369", true));
+            Order.Add(new OrderDetails(10261, "QUEDE", 3.05, "Brazil", "Rua da Panificadora, 12", false));
+            Order.Add(new OrderDetails(10262, "RATTC", 48.29, "USA", "2817 Milton Dr.", true));
+        }
+        return Order;
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCountry { get; set; }
+    public string ShipAddress { get; set; }
+    public bool Verified { get; set; }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBoDCMZJRmMszYW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
 ### Complex data binding with dialog template
 
