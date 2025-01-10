@@ -119,7 +119,7 @@ The canToggleSelection property in [DiagramSelectionSettings](https://help.syncf
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction/UnselectSample)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction/UnSelectSample)
 
 ![Toggle Selection in Blazor Diagram](images/UnselectSample.gif)
 
