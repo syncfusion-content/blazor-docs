@@ -12,7 +12,7 @@ documentation: ug
 This guide demonstrates how to implement a custom printing solution for large PDF documents in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor SfPdfViewer component.
 
 ### Implement Print Handler
-Add a custom print toolbar item to the primary toolbar of the SfPdfViewer, and create a click handler for the custom print toolbar item.
+Add a custom print toolbar item to the primary toolbar of the SfPdfViewer, and implement a click handler to handle its functionality. The handler retrieves the byte array of the loaded PDF document and invokes a JavaScript function to print the PDF on the client-side.
 
 ```cshtml
 private async Task ClickAction(ClickEventArgs Item)
@@ -30,7 +30,7 @@ private async Task ClickAction(ClickEventArgs Item)
 ```
 
 ### Add JavaScript Function
-Add a `printPDF` function to your JavaScript file that converts the byte array into a Blob object and generates a Blob URL:
+Add a `printPDF` function to your JavaScript file that converts the byte array into a Blob object and generates a Blob URL for the loaded PDF. The Blob URL is then used to open the PDF in a new tab or trigger the print dialog.
 
 ```javascript
 // Convert the byte array to a Blob object
@@ -53,7 +53,7 @@ const tryPrint = () => {
 >N : Ensure that users have pop-ups enabled for your site in their browser settings, as this solution opens the PDF in a new window or tab for printing.
 ![Allow pop-up for large page print window](../../pdfviewer-2/images/allow-popup-largepage-print.png)
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Print/Print%20Large%page%20document).
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Print/Print%20Large%20page%20document).
 
 ## See also
 
