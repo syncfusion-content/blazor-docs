@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Virtualization in Blazor ListView Component | Syncfusion
-description: Checkout and learn here all about virtualization in Syncfusion Blazor ListView component and much more.
+title: UI Virtualization in Blazor ListView Component | Syncfusion
+description: Checkout and learn here all about UI Virtualization in Syncfusion Blazor ListView component and much more.
 platform: Blazor
 control: Listview
 documentation: ug
 ---
 
-# Virtualization in Blazor ListView Component
+# UI Virtualization in Blazor ListView Component
 
-UI virtualization loads only viewable list items in a view port, which will improve the ListView performance while loading a large number of data.
+UI Virtualization loads only viewable list items in a view port, which will improve the ListView performance while loading a large number of data.
 
 ## Getting started
 
-UI virtualization can be enabled in the ListView by setting the [`EnableVirtualization`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_EnableVirtualization) property to true. It has two types of scrollers as follows:
+UI Virtualization can be enabled in the ListView by setting the [`EnableVirtualization`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_EnableVirtualization) property to true. It has two types of scrollers as follows:
 
 **Window scroll**: This scroller is used in the ListView by default.
 
@@ -105,7 +105,7 @@ UI virtualization can be enabled in the ListView by setting the [`EnableVirtuali
 
 ![Virtualization in Blazor ListView](./images/list/blazor-listview-virtualization.png)
 
-## Limitations for virtualization
+## Limitations for Virtualization
 
-* When enabling virtualization for ListView, it is important to specify the height in pixels. Percentage values are not accepted.
+* When enabling Virtualization for ListView, it is important to specify the height in pixels. Percentage values are not accepted.
 * If you prefer to use a percentage value, you can render the component within a div container with a specific pixel value set for height (It will be rendered based on the parent container height).
