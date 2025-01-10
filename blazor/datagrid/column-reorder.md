@@ -328,7 +328,7 @@ public class OrderDetails
 
 ### Reorder column based on field names
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to programmatically reorder columns using the [ReorderColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ReorderColumnAsync_System_String_System_String_) and [ReorderColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ReorderColumnAsync_System_String_System_String_) methods. These methods provide flexibility for dynamically rearranging columns based on their field names.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to programmatically reorder columns using the [ReorderColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ReorderColumnAsync_System_String_System_String_) and [ReorderColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ReorderColumnsAsync_System_Collections_Generic_List_System_String__System_String_) methods. These methods provide flexibility for dynamically rearranging columns based on their field names.
 
 1. `ReorderColumnAsync`: This method is used to reorder a single column by specifying its current field name and the target column's field name. It takes the following arguments:
     * **FromFieldName**: The field name of the column to be moved.
