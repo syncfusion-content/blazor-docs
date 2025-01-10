@@ -9,7 +9,7 @@ documentation: ug
 
 # Navigation in Blazor TreeView Component
 
-Using the **NavigateUrl** of the Blazor TreeView component, you can navigate from one page to another based on the node selection and link provided in the corresponding nodes.
+Using the [**NavigateUrl**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_NavigateUrl) of the Blazor TreeView component, you can navigate from one page to another based on the node selection and link provided in the corresponding nodes.
 
 To perform navigation in the TreeView component, use and map the **NavigateUrl** field in the data source.
 

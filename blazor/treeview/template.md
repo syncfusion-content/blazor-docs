@@ -9,7 +9,7 @@ documentation: ug
 
 # Template in Blazor TreeView Component
 
-The Blazor TreeView component allows to customize the look of TreeView nodes using the `NodeTemplate` property. The `NodeTemplate` tag is nested inside the TreeViewTemplates tag, where the custom structure for TreeView can be defined. Inside the NodeTemplate tag, a generic type context property is used to access the tree node details.
+The Blazor TreeView component allows to customize the look of TreeView nodes using the [`NodeTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewTemplates-1.html#Syncfusion_Blazor_Navigations_TreeViewTemplates_1_NodeTemplate) property. The `NodeTemplate` tag is nested inside the TreeViewTemplates tag, where the custom structure for TreeView can be defined. Inside the NodeTemplate tag, a generic type context property is used to access the tree node details.
 
 To customize Blazor TreeView items easily using a template and the CssClass property, you can check on this video.
 
@@ -168,7 +168,7 @@ In the following sample, employee information such as employee photo, name, and 
 
 ## Apply template to Header
 
-The Blazor TreeView component provides the ability to customize the appearance of its nodes through the use of the `NodeTemplate` property. This property is nested within the `TreeViewTemplates` tag, which defines the custom structure for the TreeView. However, in this section this template is only applied to parent nodes.
+The Blazor TreeView component provides the ability to customize the appearance of its nodes through the use of the [`NodeTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewTemplates-1.html#Syncfusion_Blazor_Navigations_TreeViewTemplates_1_NodeTemplate) property. This property is nested within the `TreeViewTemplates` tag, which defines the custom structure for the TreeView. However, in this section this template is only applied to parent nodes.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
