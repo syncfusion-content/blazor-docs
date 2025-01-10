@@ -11,64 +11,8 @@ documentation: ug
 
 This guide demonstrates how to implement a custom printing solution for large PDF documents in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor SfPdfViewer component.
 
-### Customize the Primary Toolbar
-Add a custom print toolbar item to the SfPdfViewer's primary toolbar:
-
-```cshtml
-@using Syncfusion.Blazor;
-@using Syncfusion.Blazor.SfPdfViewer;
-@using Syncfusion.Blazor.Navigations;
-@inject IJSRuntime JSRuntime;
-
-<SfPdfViewer2 @ref="@Viewer" DocumentPath="@documentPath" Height="100%" Width="100%">
-    <PdfViewerToolbarSettings CustomToolbarItems="@CustomToolbarItems" ToolbarItems="@ToolbarItems" />
-    <PdfViewerEvents ToolbarClicked="ClickAction"></PdfViewerEvents>
-</SfPdfViewer2>
-
-@code {
-    public SfPdfViewer2? Viewer { get; set; }
-    public string? documentPath { get; set; } = "wwwroot/test.pdf";
-  
-    // Custom toolbar item for printing
-    public List<PdfToolbarItem> CustomToolbarItems = new List<PdfToolbarItem>()
-    {
-        new PdfToolbarItem (){ Index = 1, Template = @GetTemplate("Print")}
-    };
-
-    // Default toolbar items list provided for the toolbaritems
-    public List<Syncfusion.Blazor.SfPdfViewer.ToolbarItem> ToolbarItems = new List<Syncfusion.Blazor.SfPdfViewer.ToolbarItem>()
-    {
-        Syncfusion.Blazor.SfPdfViewer.ToolbarItem.OpenOption,
-        Syncfusion.Blazor.SfPdfViewer.ToolbarItem.PageNavigationTool,
-        Syncfusion.Blazor.SfPdfViewer.ToolbarItem.MagnificationTool,
-        Syncfusion.Blazor.SfPdfViewer.ToolbarItem.SelectionTool,
-        Syncfusion.Blazor.SfPdfViewer.ToolbarItem.PanTool,
-        Syncfusion.Blazor.SfPdfViewer.ToolbarItem.UndoRedoTool,
-        Syncfusion.Blazor.SfPdfViewer.ToolbarItem.AnnotationEditTool,
-        Syncfusion.Blazor.SfPdfViewer.ToolbarItem.DownloadOption,
-    };
-
-    // Template for the custom print button
-    private static RenderFragment GetTemplate(string name)
-    {
-        return __builder =>
-        {
-            if (name == "Print")
-            {
-                <ToolbarItem PrefixIcon="e-pv-print-document-icon e-pv-icon"
-                             TooltipText="Print"
-                             Id="print"
-                             Align="ItemAlign.Right">
-                </ToolbarItem>
-            }
-        };
-    }
-}
-
-```
-
 ### Implement Print Handler
-Create a click handler for the custom print toolbar item:
+Add a custom print toolbar item to the primary toolbar of the SfPdfViewer, and create a click handler for the custom print toolbar item.
 
 ```cshtml
 private async Task ClickAction(ClickEventArgs Item)
