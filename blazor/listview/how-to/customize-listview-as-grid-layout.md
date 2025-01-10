@@ -113,7 +113,7 @@ In the below sample, you can remove by hovering the item which will show delete 
 
 ### Sort Items
 
-Listview can be sorted either in Ascending or Descending order. To enable sorting in your ListView, set `SortOrder` as `Ascending` or `Descending`. You can also set sorting after control initialization.
+Listview can be sorted either in Ascending or Descending order. To enable sorting in your ListView, set [`SortOrder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_SortOrder) as `Ascending` or `Descending`. You can also set sorting after component initialization.
 
 In the below sample, it is sorted in `Ascending` order. To sort it in descending, click on sort order icon and vice versa.
 
