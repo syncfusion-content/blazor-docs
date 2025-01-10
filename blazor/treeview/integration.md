@@ -254,7 +254,7 @@ This is demonstrated in an example where the TreeView operations are manipulated
 
 ## Badge
 
-The Blazor TreeView component can integrate with the Badge component and allows for customizing the node structure using the `NodeTemplate` tag, which allows for creating a tree node with any custom structure, such as a web mail folder with a name and unread message count using the Badge component.
+The Blazor TreeView component can integrate with the Badge component and allows for customizing the node structure using the [`NodeTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewTemplates-1.html#Syncfusion_Blazor_Navigations_TreeViewTemplates_1_NodeTemplate) tag, which allows for creating a tree node with any custom structure, such as a web mail folder with a name and unread message count using the Badge component.
 
 ```cshtml
 @using Syncfusion.Blazor.Lists
@@ -453,7 +453,7 @@ The Blazor TreeView component can integrate with the Badge component and allows 
 
 ## Icons Library
 
-The Blazor TreeView component has the built-in option to customize each node's appearance with Icons by mapping the **IconCss** fields.
+The Blazor TreeView component has the built-in option to customize each node's appearance with Icons by mapping the [**IconCss**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_IconCss) fields.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -616,7 +616,7 @@ The Blazor TreeView component has the built-in option to customize each node's a
 
 ## Navigation within Sidebar
 
-The Blazor TreeView component's **NavigateUrl** field is used to navigate from one page to other pages using TreeView node selection. 
+The Blazor TreeView component's [**NavigateUrl**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_NavigateUrl) field is used to navigate from one page to other pages using TreeView node selection. 
 
 In this example, TreeView's `NavigateUrl` is mapped to move one page to another page inside the Sidebar component.
 

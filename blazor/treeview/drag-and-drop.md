@@ -9,7 +9,7 @@ documentation: ug
 
 # Drag and Drop in Blazor TreeView Component
 
-The Blazor TreeView component allows to drag and drop any node by setting `AllowDragAndDrop` &nbsp;to **true**. Nodes can be dragged and dropped at all levels of the same TreeView.
+The Blazor TreeView component allows to drag and drop any node by setting [`AllowDragAndDrop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_AllowDragAndDrop) to **true**. Nodes can be dragged and dropped at all levels of the same TreeView.
 
 The dragged nodes can be dropped at any level by indicator lines with **line**, **plus/minus**, and **restrict** icons. It represents the exact position where the node is to be dropped as sibling or child.
 
@@ -21,11 +21,11 @@ The following table explains the usage of indicator icons.
 | Minus or restrict icon |Indicates that the dragged node is not to be dropped at the hovered region. |
 | In between icon | Indicates that the dragged node is to be added as siblings of hovered region. |
 
-* In order to prevent dragging action for a particular node, the `OnNodeDragStart` event can be used which is triggered when the node drag is started. The `OnNodeDragged` event is triggered when the drag is stopped.
+* In order to prevent dragging action for a particular node, the [`OnNodeDragStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_OnNodeDragStart) event can be used which is triggered when the node drag is started. The [`OnNodeDragged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_OnNodeDragged) event is triggered when the drag is stopped.
 
-* The `NodeDropped` event is triggered when the TreeView node is dropped on the target element successfully.
+* The [`NodeDropped`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeDropped) event is triggered when the TreeView node is dropped on the target element successfully.
 
-N> In the **OnNodeDragged** event currently there is no option to cancel the event. However the other event arguments could be accessed.
+N> In the [**OnNodeDragged**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_OnNodeDragged) event currently there is no option to cancel the event. However the other event arguments could be accessed.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

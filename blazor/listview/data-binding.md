@@ -33,7 +33,7 @@ Local data can be represented in Array of JSON data:
 
 ### Array of JSON data
 
-ListView can generate its list items through an array of complex data. To get it work properly, you should map the appropriate columns to the field property.
+ListView can generate its list items through an array of complex data. To get it work properly, you should map the appropriate columns to the [`field`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewFieldSettings-1.html) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Lists
@@ -74,7 +74,7 @@ ListView can generate its list items through an array of complex data. To get it
 
 ## Bind to remote data
 
-The ListView supports to retrieve the data from remote data services with the help of DataManager control. The Query property allows to fetch data and return it to the ListView from the database.
+The ListView supports to retrieve the data from remote data services with the help of DataManager component. The Query property allows to fetch data and return it to the ListView from the database.
 
 In the following sample, first 6 products from the Product table of NorthWind data service are displayed.
 
