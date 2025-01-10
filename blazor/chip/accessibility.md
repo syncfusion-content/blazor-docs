@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Chip Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor Chip component and much more details.
+title: Accessibility in Blazor Chips Component | Syncfusion
+description: Checkout and learn here all about Accessibility in Syncfusion Blazor Chips component and much more details.
 platform: Blazor
-control: Chip
+control: Chips
 documentation: ug
 ---
 
-# Accessibility in Blazor Chip Component
+# Accessibility in Blazor Chips Component
 
 The [Blazor Chips](https://www.syncfusion.com/blazor-components/blazor-chips) component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
@@ -45,26 +45,26 @@ The Blazor Chips component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/a
 | -- | -- |
 | `role=listbox` | Indicates the ChipList component wrapper element as `listbox`. |
 | `role=option` | Used to convey a significant and contextual message to the user(ChipList). |
-| `role=button` | Used to convey a significant and contextual message to the user(Single Chip). |
-| `aria-label` | Provides an accessible name for the Chip. |
+| `role=button` | Used to convey a significant and contextual message to the user(Single Chips). |
+| `aria-label` | Provides an accessible name for the Chips. |
 | `aria-selected` | Indicates the element is selected. |
 | `aria-disabled` | Indicates element is perceivable but disabled. |
 | `aria-multiselectable` | Indicates multiple items to be selected. |
 
 ## Keyboard interaction
 
-The following shortcut keys are used to access the Blazor Chip component without any interruption.
+The following shortcut keys are used to access the Blazor Chips component without any interruption.
 
 | Keyboard shortcuts | Actions |
 |------------|-------------------|
-| <kbd>Enter</kbd> | Selects the targeted chip from the Chip/ChipItems. |
-| <kbd>Delete</kbd> | Deletes the targeted chip from the Chip/ChipItems. |
+| <kbd>Enter</kbd> | Selects the targeted Chips from the Chips/ChipItems. |
+| <kbd>Delete</kbd> | Deletes the targeted Chips from the Chips/ChipItems. |
 
 ## Ensuring accessibility
 
 The Blazor Chips component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) software tool during automated testing.
 
-The accessibility compliance of the Chip component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/chips) in a new window to evaluate the accessibility of the Chip component with accessibility tools.
+The accessibility compliance of the Chips component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/chips) in a new window to evaluate the accessibility of the Chips component with accessibility tools.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -97,7 +97,7 @@ The accessibility compliance of the Chip component is shown in the following sam
 
 ```
 
-![Accessibility in Blazor Chip](./images/blazor-chip-accessibility.gif)
+![Accessibility in Blazor Chips](./images/blazor-chip-accessibility.gif)
 
 ## See also
 
