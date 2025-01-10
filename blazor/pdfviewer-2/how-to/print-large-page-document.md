@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Print large page document in SfPdfViewer | Syncfusion
-description: Learn here all about how to print large page documents in Syncfusion Blazor SfPdfViewer component
+description: Learn how to efficiently print large page documents using the SfPdfViewer with optimized memory usage and custom toolbar actions
 platform: Blazor
 control: SfPdfViewer
 documentation: ug
