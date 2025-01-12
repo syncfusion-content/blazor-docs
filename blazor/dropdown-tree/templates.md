@@ -13,7 +13,7 @@ The Dropdown Tree has been provided with several options to customize each list 
 
 ## Item template
 
-The content of each list item within the Dropdown Tree can be customized with the help of the `ItemTemplate` property.
+The content of each list item within the Dropdown Tree can be customized with the help of the [`ItemTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_ItemTemplate) property.
 
 In the following sample, the Dropdown Tree list items are customized with employee information such as **name** and **job** using the **ItemTemplate** property. 
 The variable `context` holds the data of the current node.
@@ -114,7 +114,7 @@ The template expression can be provided directly inside the `ValueTemplate`, as 
 
 ## Header template
 
-The header element is shown statically at the top of the popup list items within Dropdown Tree, and any custom element can be placed as a header element using the `HeaderTemplate` property.
+The header element is shown statically at the top of the popup list items within Dropdown Tree, and any custom element can be placed as a header element using the [`HeaderTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_HeaderTemplate) property.
 
 In the following sample, the header is customized with the custom element.
 
@@ -174,7 +174,7 @@ In the following sample, the header is customized with the custom element.
 
 ## Footer template
 
-The Dropdown Tree has options to show a footer element at the bottom of the list items in the popup list. Here, you can place any custom element as a footer element using the `FooterTemplate` property.
+The Dropdown Tree has options to show a footer element at the bottom of the list items in the popup list. Here, you can place any custom element as a footer element using the [`FooterTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_FooterTemplate) property.
 
 In the following sample, the footer element displays the total number of employees present in the Dropdown Tree.
 
@@ -235,7 +235,7 @@ In the following sample, the footer element displays the total number of employe
 
 ## No records template
 
-The Dropdown Tree is provided with support to custom design the popup list content when no data is found and no matches found on search with the help of `NoRecordsTemplate` property.
+The Dropdown Tree is provided with support to custom design the popup list content when no data is found and no matches found on search with the help of [`NoRecordsTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_NoRecordsTemplate) property.
 
 In the following sample, popup list content displays the notification of no data available.
 
@@ -270,7 +270,7 @@ In the following sample, popup list content displays the notification of no data
 
 ## Action failure template
 
-There is also an option to custom design the popup list content when the data fetch request fails at the remote server. This can be achieved using the `ActionFailureTemplate` property.
+There is also an option to custom design the popup list content when the data fetch request fails at the remote server. This can be achieved using the [`ActionFailureTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_ActionFailureTemplate) property.
 
 In the following sample, when the data fetch request fails, the Dropdown Tree displays the notification.
 
