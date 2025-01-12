@@ -158,6 +158,8 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 {% tabs %}
 {% highlight razor %}
 
+@using Syncfusion.Blazor.Layouts
+
 <SfDashboardLayout>
     <DashboardLayoutPanels>
         <DashboardLayoutPanel>
@@ -174,18 +176,20 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 
 ## Defining panels
 
-A dashboard layout can be rendered with multiple panels to design a template with its basic properties.
+A Dashboard Layout can be rendered with multiple panels to design a template with its basic properties.
 
-A dashboard layout panel consists of two sections, which are Header and Content section. [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_HeaderTemplate) is used to render the Header section and [ContentTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_ContentTemplate) is used to render the content section.
+A Dashboard Layout panel consists of two sections, which are Header and Content section. [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_HeaderTemplate) is used to render the Header section and [ContentTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_ContentTemplate) is used to render the content section.
 
 Also, it is easy to interact with the panels by dragging, floating, and resizing functionality of panels.
 
 ### Panels with simple data
 
-A dashboard layout panel is rendered with simple data. The header of a panel is defined by `HeaderTemplate` and content of a panel is defined by `ContentTemplate`.
+A Dashboard Layout panel is rendered with simple data. The header of a panel is defined by `HeaderTemplate` and content of a panel is defined by `ContentTemplate`.
 
 {% tabs %}
 {% highlight razor %}
+
+@using Syncfusion.Blazor.Layouts
 
 <SfDashboardLayout>
     <DashboardLayoutPanels>
@@ -210,13 +214,13 @@ A dashboard layout panel is rendered with simple data. The header of a panel is 
 {% endhighlight %}
 {% endtabs %}
 
-The Dashboard layout with simple content will be rendered in the web browser as demonstrated in the following screenshot.
+The Dashboard Layout with simple content will be rendered in the web browser as demonstrated in the following screenshot.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDLzXChErUwBJvMB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DashboardLayout with Single Data](images/blazor-dashboard-layout-single-content.png)" %}
 
 ### Panels with components
 
-A dashboard layout can be rendered with the components like the chart, grids, maps, gauge, and more as a content of dashboard layout panel.
+A Dashboard Layout can be rendered with the components like the chart, grids, maps, gauge, and more as a content of Dashboard Layout panel.
 
 These complex data (components) are placed as the panel content by assigning the corresponding component element as the `ContentTemplate` of the panel.
 
@@ -275,7 +279,6 @@ These complex data (components) are placed as the panel content by assigning the
                             </ChartSeriesCollection>
                         </SfChart>
                     </div>
-
                 </ContentTemplate>
             </DashboardLayoutPanel>
             <DashboardLayoutPanel Id="Panel4" SizeX=3 SizeY=2 Row=2 Column=0>
@@ -315,6 +318,7 @@ These complex data (components) are placed as the panel content by assigning the
         </DashboardLayoutPanels>
     </SfDashboardLayout>
 </div>
+
 @code
  { SfChart chartObj;
     SfChart barchartObj;
@@ -387,7 +391,7 @@ To get started quickly with designing a Blazor Dashboard Layout with UI Componen
 {% youtube
 "youtube:https://www.youtube.com/watch?v=KOetW4f6_v4" %}
 
-By default, the dashboard layout control is rendered with auto adjustable and [responsive](https://blazor.syncfusion.com/documentation/dashboard-layout/responsive-adaptive) according to the parent dimensions.
+By default, the Dashboard Layout component is rendered with auto adjustable and [responsive](https://blazor.syncfusion.com/documentation/dashboard-layout/responsive-adaptive) according to the parent dimensions.
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DashboardLayout).
 
