@@ -3,7 +3,7 @@ layout: post
 title: Context Menu in Blazor FileManager Component | Syncfusion
 description: Checkout and learn here all about Context Menu in Syncfusion Blazor FileManager component and much more.
 platform: Blazor
-control: File Manager
+control: FileManager
 documentation: ug
 ---
 
@@ -212,7 +212,7 @@ In the following example, the **Cut** context menu item is disabled for the fold
 
 ## Showing or Hiding Items
 
-In the Blazor FileManager component, you can control the visibility of context menu items by setting the [Hidden](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.MenuItemModel.html#Syncfusion_Blazor_FileManager_MenuItemModel_Hidden) value of the [MenuOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_MenuOpened) event arguments to **true** or **false**. 
+In the Blazor FileManager component, you can component the visibility of context menu items by setting the [Hidden](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.MenuItemModel.html#Syncfusion_Blazor_FileManager_MenuItemModel_Hidden) value of the [MenuOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_MenuOpened) event arguments to **true** or **false**. 
 
 In the following example, the **Cut** context menu item is shown for the files.
 

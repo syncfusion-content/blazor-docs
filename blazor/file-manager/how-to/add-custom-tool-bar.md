@@ -3,7 +3,7 @@ layout: post
 title: Adding Custom Item to Toolbar in Blazor FileManager | Syncfusion
 description: Learn here all about adding custom item to toolbar in Syncfusion Blazor FileManager component and more.
 platform: Blazor
-control: File Manager
+control: FileManager
 documentation: ug
 ---
 

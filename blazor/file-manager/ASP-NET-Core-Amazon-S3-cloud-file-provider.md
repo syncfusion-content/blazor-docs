@@ -3,7 +3,7 @@ layout: post
 title: Amazon S3 cloud Provider in Blazor FileManager Component | Syncfusion
 description: Checkout and learn here all about ASP.NET Core Amazon S3 cloud file provider in Syncfusion Blazor FileManager component and more.
 platform: Blazor
-control: File Manager
+control: FileManager
 documentation: ug
 ---
 
@@ -31,7 +31,7 @@ After registering the Amazon client account details, just build and run the proj
 
 ```cshtml
 
-@*Initializing File Manager with ASP.NET Core Amazon service*@
+@*Initializing FileManager with ASP.NET Core Amazon service*@
 
 @* Replace the hosted port number in the place of "{port}" *@
 
@@ -45,7 +45,7 @@ After registering the Amazon client account details, just build and run the proj
 
 ```
 
-To perform file operations (Read, Create, Rename, Delete, Get file details, Search, Copy, Move, Upload, Download, GetImage) in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component using the ASP.NET Core Amazon S3 cloud file provider, you need to initialize the Amazon S3 cloud file provider in the controller.
+To perform file operations (Read, Create, Rename, Delete, Get file details, Search, Copy, Move, Upload, Download, GetImage) in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor FileManager component using the ASP.NET Core Amazon S3 cloud file provider, you need to initialize the Amazon S3 cloud file provider in the controller.
 
 To initialize a local service with the above-mentioned file operations, create a new folder named `Controllers` inside the server part of the project. Then, create a new file with the extension `.cs` inside the Controllers folder and add the necessary file operations code available in the `AmazonS3ProviderController.cs` found at this [link](https://github.com/SyncfusionExamples/amazon-s3-aspcore-file-provider/blob/master/Controllers/AmazonS3ProviderController.cs). Additionally, you can check out all the necessary file operation method details for this provider in the same GitHub repository.
 

@@ -3,17 +3,17 @@ layout: post
 title: Toolbar in Blazor FileManager Component | Syncfusion
 description: Checkout and learn here all about Toolbar module in Syncfusion Blazor FileManager component and much more.
 platform: Blazor
-control: File Manager
+control: FileManager
 documentation: ug
 ---
 
 # Toolbar in Blazor FileManager Component
 
-The Toolbar in the File Manager provides a user-friendly interface for performing various file operations. It contains pre-defined items that correspond to specific actions. Here are some key points about the toolbar.
+The Toolbar in the FileManager provides a user-friendly interface for performing various file operations. It contains pre-defined items that correspond to specific actions. Here are some key points about the toolbar.
 
 ## Built-in Toolbar items
 
-By default, the File Manager includes several pre-defined toolbar items. These items are ready to use and come with associated actions. This collection can be modified by defining the required items in [FileManagerToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerToolbarSettings.html).
+By default, the FileManager includes several pre-defined toolbar items. These items are ready to use and come with associated actions. This collection can be modified by defining the required items in [FileManagerToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerToolbarSettings.html).
 
 Some common built-in toolbar items include:
 

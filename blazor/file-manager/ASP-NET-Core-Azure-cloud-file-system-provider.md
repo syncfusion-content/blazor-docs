@@ -3,7 +3,7 @@ layout: post
 title: Azure cloud provider in Blazor FileManager Component | Syncfusion
 description: Checkout and learn here all about ASP.NET Core Azure cloud file system provider in Syncfusion Blazor FileManager component and more.
 platform: Blazor
-control: File Manager
+control: FileManager
 documentation: ug
 ---
 
@@ -52,11 +52,11 @@ public AzureProviderController(IHostingEnvironment hostingEnvironment)
 
 ``` 
 
-After setting the blob container references, just build and run the project. Now, the project will be hosted in `http://localhost:{port}:{port}` and just mapping the **ajaxSettings** property of the FileManager component to the appropriate controller methods allows to manage the Azure blob storage.
+After setting the blob container references, just build and run the project. Now, the project will be hosted in `http://localhost:{port}:{port}` and just mapping the [**ajaxSettings**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html) property of the FileManager component to the appropriate controller methods allows to manage the Azure blob storage.
 
 ```cshtml
 
-@*Initializing File Manager with Azure service.*@
+@*Initializing FileManager with Azure service.*@
 
 @* Replace the hosted port number in the place of "{port}" *@
 
@@ -80,7 +80,7 @@ Use the following command to install the NuGet package in an application.
 
 ```
 
-To perform file operations (Read, Create, Rename, Delete, Get file details, Search, Copy, Move, Upload, Download, GetImage) in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component using the ASP.NET Core Azure cloud file system provider, you need to initialize the Azure cloud provider in the controller.
+To perform file operations (Read, Create, Rename, Delete, Get file details, Search, Copy, Move, Upload, Download, GetImage) in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor FileManager component using the ASP.NET Core Azure cloud file system provider, you need to initialize the Azure cloud provider in the controller.
 
 To initialize a local service with the above-mentioned file operations, create a new folder named `Controllers` inside the server part of the project. Then, create a new file with the extension `.cs` inside the Controllers folder and add the necessary file operations code available in the `AzureProviderController.cs` found at this [link](https://github.com/SyncfusionExamples/azure-aspcore-file-provider/blob/master/Controllers/AzureProviderController.cs). Additionally, you can check out all the necessary file operation method details for this provider in the same GitHub repository.
 

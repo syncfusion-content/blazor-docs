@@ -3,7 +3,7 @@ layout: post
 title: Data Binding in Blazor FileManager Component | Syncfusion
 description: Checkout and learn here all about Data Binding in Syncfusion Blazor FileManager component and much more.
 platform: Blazor
-control: File Manager
+control: FileManager
 documentation: ug
 ---
 
@@ -41,9 +41,9 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Features;
-//File Manager's base functions are available in the below namespace.
+//FileManager's base functions are available in the below namespace.
 using Syncfusion.EJ2.FileManager.Base;
-//File Manager's operations are available in the below namespace.
+//FileManager's operations are available in the below namespace.
 using Syncfusion.EJ2.FileManager.PhysicalFileProvider;
 using Newtonsoft.Json;
 using System.Linq;
@@ -65,7 +65,7 @@ namespace filemanager.Server.Controllers
             this.operation.RootFolder(this.basePath + "\\" + this.root); // It denotes in which files and folders are available.
         }
 
-        // Processing the File Manager operations.
+        // Processing the FileManager operations.
         [Route("FileOperations")]
         public object FileOperations([FromBody] FileManagerDirectoryContent args)
         {
@@ -207,7 +207,7 @@ namespace filemanager.Server.Controllers
 
 ### Folder Upload
 
-To perform the directory(folder) upload in File Manager, set [DirectoryUpload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html#Syncfusion_Blazor_FileManager_FileManagerUploadSettings_DirectoryUpload) as true within the FileManagerUploadSettings. The directory upload feature is supported for the following file service providers:
+To perform the directory(folder) upload in FileManager, set [DirectoryUpload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html#Syncfusion_Blazor_FileManager_FileManagerUploadSettings_DirectoryUpload) as true within the FileManagerUploadSettings. The directory upload feature is supported for the following file service providers:
 * Physical file service provider.
 * Azure file service provider.
 * NodeJS file service provider.
@@ -424,7 +424,7 @@ Refer to the [GitHub](https://github.com/SyncfusionExamples/amazon-s3-aspcore-fi
 
 ### Get Image
 
-To perform image preview support in the File Manager component, initialize the [GetImageUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html#Syncfusion_Blazor_FileManager_FileManagerAjaxSettings_GetImageUrl) property in a FileManagerAjaxSettings.
+To perform image preview support in the FileManager component, initialize the [GetImageUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html#Syncfusion_Blazor_FileManager_FileManagerAjaxSettings_GetImageUrl) property in a FileManagerAjaxSettings.
 
 {% tabs %}
 {% highlight razor %}
@@ -600,7 +600,7 @@ To render the root-level folder, specify the ParentID as null, or there is no ne
             HasChild = false,
             Id = "5",
             IsFile = true,
-            Name = "EJ2 File Manager.docx",
+            Name = "EJ2 FileManager.docx",
             ParentId = "1",
             ShowHiddenItems = false,
             Size = 12403,
@@ -616,7 +616,7 @@ To render the root-level folder, specify the ParentID as null, or there is no ne
             HasChild = false,
             Id = "6",
             IsFile = true,
-            Name = "EJ2 File Manager.pdf",
+            Name = "EJ2 FileManager.pdf",
             ParentId = "1",
             ShowHiddenItems = false,
             Size = 90099,
