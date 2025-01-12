@@ -119,6 +119,8 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor ListView compone
 {% tabs %}
 {% highlight razor %}
 
+@using Syncfusion.Blazor.Lists
+
 <SfListView DataSource="@Data">
     <ListViewFieldSettings TValue="DataModel" Id="Id" Text="Text"></ListViewFieldSettings>
 </SfListView>
