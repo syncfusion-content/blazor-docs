@@ -3,7 +3,7 @@ layout: post
 title: Accessibility in Blazor FileManager Component | Syncfusion
 description: Checkout and learn here all about Accessibility in Syncfusion Blazor FileManager component and more.
 platform: Blazor
-control: File Manager
+control: FileManager
 documentation: ug
 ---
 
@@ -45,9 +45,9 @@ The Blazor FileManager component followed the [WAI-ARIA](https://www.w3.org/WAI/
 
 | **Attributes** | **Purpose** |
 | --- | --- |
-| aria-disabled | Indicates whether the File Manager component is in disabled state.|
+| aria-disabled | Indicates whether the FileManager component is in disabled state.|
 | aria-haspopup | Indicates whether the Toolbar element has a suggestion list. |
-| aria-orientation | Indicates whether the File Manager element is oriented horizontally or vertically. |
+| aria-orientation | Indicates whether the FileManager element is oriented horizontally or vertically. |
 | aria-expanded | Indicates whether the Treeview node has been expanded. |
 | aria-owns | Contains the ID of the suggestion list to indicate popup as a child element. |
 | aria-activedescendent | Holds the ID of the active list item to focus its descendant child element. |
@@ -70,7 +70,7 @@ The Blazor FileManager component followed the [WAI-ARIA](https://www.w3.org/WAI/
 
 ## Keyboard interaction
 
-You can use the following key shortcuts to access the File Manager without interruptions.
+You can use the following key shortcuts to access the FileManager without interruptions.
 
 | **Keyboard shortcuts** | **Actions** |
 | --- | --- |
@@ -80,9 +80,9 @@ You can use the following key shortcuts to access the File Manager without inter
 | <kbd>Tab</kbd> | Focuses on the first element of toolbar and navigates through the next tab indexed element. |
 | <kbd>Esc(Escape)</kbd> | Closes the image when it is in open state. |
 | <kbd>Alt+N</kbd> | Creates a new folder dialog.|
-| <kbd>F5</kbd> | Refresh the file manager element. |
-| <kbd>Ctrl+Shift+1</kbd> | Changes the file manager layout to Grid view. |
-| <kbd>Ctrl+Shift+2</kbd> | Changes the file manager layout to Details view. |
+| <kbd>F5</kbd> | Refresh the FileManager element. |
+| <kbd>Ctrl+Shift+1</kbd> | Changes the FileManager layout to Grid view. |
+| <kbd>Ctrl+Shift+2</kbd> | Changes the FileManager layout to Details view. |
 
 ## Ensuring accessibility
 

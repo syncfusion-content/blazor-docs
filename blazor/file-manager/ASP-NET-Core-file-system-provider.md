@@ -3,7 +3,7 @@ layout: post
 title: ASP.NET Core provider in Blazor FileManager Component | Syncfusion
 description: Checkout and learn here all about ASP.NET Core File System Provider in Syncfusion Blazor FileManager component and more.
 platform: Blazor
-control: File Manager
+control: FileManager
 documentation: ug
 ---
 
@@ -25,7 +25,7 @@ After setting the root directory of the file system, just build and run the proj
 
 ```cshtml
 
-@* Initializing File Manager with ASP.NET Core service *@
+@* Initializing FileManager with ASP.NET Core service *@
 
 @* Replace the hosted port number in the place of "{port}" *@
 
@@ -39,7 +39,7 @@ After setting the root directory of the file system, just build and run the proj
 
 ```
 
-To perform file operations (Read, Create, Rename, Delete, Get file details, Search, Copy, Move, Upload, Download, GetImage) in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component using the ASP.NET Core file system provider, you need to initialize the physical service in the controller.
+To perform file operations (Read, Create, Rename, Delete, Get file details, Search, Copy, Move, Upload, Download, GetImage) in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor FileManager component using the ASP.NET Core file system provider, you need to initialize the physical service in the controller.
 
 To initialize a local service with the above-mentioned file operations, create a new folder named `Controllers` inside the server part of the project. Then, create a new file with the extension `.cs` inside the Controllers folder and add the necessary file operations code available in the `FileManagerController.cs` found at this [link](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider/blob/master/Controllers/FileManagerController.cs). Additionally, you can check out all the necessary file operation method details for this provider in the same GitHub repository.
 

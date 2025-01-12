@@ -3,13 +3,13 @@ layout: post
 title: Virtualization in Blazor FileManager Component | Syncfusion
 description: Checkout and learn here all about virtualization in Syncfusion Blazor FileManager component and more.
 platform: Blazor
-control: File Manager
+control: FileManager
 documentation: ug
 ---
 
 # Virtualization in Blazor FileManager Component
 
-File Manager’s UI virtualization allows you for the dynamic loading of a large number of directories and files in both the ViewType of [Details](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.ViewType.html#Syncfusion_Blazor_FileManager_ViewType_Details) and [LargeIcons](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.ViewType.html#Syncfusion_Blazor_FileManager_ViewType_LargeIcons) without degrading its performance. The virtualization of the File Manager component is based on the height and width of the viewport. The items will be loaded in both **Details** and **LargeIcons** based on the viewport size.
+FileManager’s UI virtualization allows you for the dynamic loading of a large number of directories and files in both the ViewType of [Details](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.ViewType.html#Syncfusion_Blazor_FileManager_ViewType_Details) and [LargeIcons](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.ViewType.html#Syncfusion_Blazor_FileManager_ViewType_LargeIcons) without degrading its performance. The virtualization of the FileManager component is based on the height and width of the viewport. The items will be loaded in both **Details** and **LargeIcons** based on the viewport size.
 
 In order to enable virtualization, you must set the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_EnableVirtualization) to true. 
 

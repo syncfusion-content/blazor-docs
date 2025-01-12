@@ -3,7 +3,7 @@ layout: post
 title: End User Capabilities in Blazor FileManager Component | Syncfusion
 description: Checkout and learn here all about End User Capabilities in Syncfusion Blazor FileManager component and more.
 platform: Blazor
-control: File Manager
+control: FileManager
 documentation: ug
 ---
 
@@ -35,7 +35,7 @@ The `Toolbar` provides easy access to the file operations using different button
 
 If the Toolbar items exceed the size of the Toolbar, then the exceeding Toolbar size will be moved to Toolbar popup with a dropdown button at the end of Toolbar.
 
-Refer [Toolbar](./file-operations.md#toolbar) section in file operations to know more about the buttons present in Toolbar.
+Refer [Toolbar](https://blazor.syncfusion.com/documentation/file-manager/file-operations#action-buttons) section in file operations to know more about the buttons present in Toolbar.
 
 ![Blazor FileManager with Toolbar](./images/blazor-filemanager-toolbar.png)
 
@@ -45,7 +45,7 @@ The Context Menu appears on user interaction such as right-click. The FileManage
 
 Context menu can be customized using the [ContextMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerContextMenuSettings.html), [MenuOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_MenuOpened), and [OnMenuClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_OnMenuClick) events.
 
-Refer [Context Menu](./context-menu.md#context-menu-in-blazor-filemanager-component) section to know more about the menu items present in Context Menu.
+Refer [Context Menu](https://blazor.syncfusion.com/documentation/file-manager/context-menu) section to know more about the menu items present in Context Menu.
 
 ![Blazor FileManager with Context Menu](./images/blazor-filemanager-contextmenu.png)
 
@@ -107,7 +107,7 @@ In the Blazor FileManager component, you can select files and folders using the 
 
 You can perform multiple selections by pressing the Ctrl key or Shift key and selecting the files and folders, or by using the checkbox. To select all files in the current directory, you can use the Ctrl + A shortcut. 
 
-The [FileSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_FileSelected) event will be triggered when an item in the FileManager control is selected or unselected.
+The [FileSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_FileSelected) event will be triggered when an item in the FileManager component is selected or unselected.
 
 ![File and folder selection in Blazor FileManger](./images/blazor-filemanager-selection.png)
 
@@ -149,6 +149,6 @@ In the Blazor FileManager component, you are able to [search](./file-operations.
 
 You can perform the **cut**, **copy**, and **paste** operation for the files and folders in the Blazor FileManager component with the help of the Toolbar items button or by using Context Menu items.
 
-Refer to the [Toolbar](./file-operations.md#toolbar)and [Context Menu](./context-menu.md#context-menu-in-blazor-filemanager-component) sections to learn more about the items that are present in the Toolbar and Context Menu.
+Refer to the [Toolbar](https://blazor.syncfusion.com/documentation/file-manager/toolbar)and [Context Menu](https://blazor.syncfusion.com/documentation/file-manager/context-menu) sections to learn more about the items that are present in the Toolbar and Context Menu.
 
 ![File operations in Blazor FileManager](./images/blazor-filemanager-cut-copy-paste.png)

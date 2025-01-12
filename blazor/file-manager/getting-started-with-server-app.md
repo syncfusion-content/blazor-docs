@@ -3,7 +3,7 @@ layout: post
 title: Getting Started with Blazor FileManager Component | Syncfusion
 description: Checkout and learn about getting started with Blazor FileManager component in Blazor Server Application.
 platform: Blazor
-control: File Manager
+control: FileManager
 documentation: ug
 ---
 
@@ -95,6 +95,8 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor FileManager comp
 {% tabs %}
 {% highlight razor %}
 
+@using Syncfusion.Blazor.FileManager
+
 <SfFileManager TValue="FileManagerDirectoryContent">
     <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
                              UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
@@ -116,18 +118,18 @@ To initialize a local service, create a new folder name with `Controllers` insid
 
 Make sure your controller `FileManagerController.cs` uses the model classes you've created. Import the model namespace at the top of your controller file
 
-File Manager's base functions are available in the below namespace.
+FileManager's base functions are available in the below namespace.
 ```cshtml
 using Syncfusion.EJ2.FileManager.Base;
 ````
-File Manager's operations are available in the below namespace.
+FileManager's operations are available in the below namespace.
 ````cshtml
 using Syncfusion.EJ2.FileManager.PhysicalFileProvider;
 ````
 
 ## Initialize the service in controller
 
-File Manager supports the basic file actions like Read, Delete, Copy, Move, Get Details, Search, Rename, and Create New Folder.
+FileManager supports the basic file actions like Read, Delete, Copy, Move, Get Details, Search, Rename, and Create New Folder.
 
 To initialize a local service, create a new folder name with `Controllers` inside the server part of the project. Then, create a new file `FileManagerController` with extension `.cs` inside the `Controllers` folder and add the following code in that file.
 
@@ -140,9 +142,9 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Features;
-//File Manager's base functions are available in the below namespace.
+//FileManager's base functions are available in the below namespace.
 using Syncfusion.EJ2.FileManager.Base;
-//File Manager's operations are available in the below namespace.
+//FileManager's operations are available in the below namespace.
 using Syncfusion.EJ2.FileManager.PhysicalFileProvider;
 using System.IO;
 using System.Linq;
@@ -164,7 +166,7 @@ namespace filemanager.Server.Controllers
             this.operation.RootFolder(this.basePath + "\\" + this.root); // It denotes in which files and folders are available.
         }
 
-        // Processing the File Manager operations.
+        // Processing the FileManager operations.
         [Route("FileOperations")]
         public object FileOperations([FromBody] FileManagerDirectoryContent args)
         {
@@ -222,6 +224,8 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor FileManager comp
 {% tabs %}
 {% highlight razor %}
 
+@using Syncfusion.Blazor.FileManager
+
 <SfFileManager TValue="FileManagerDirectoryContent">
     <FileManagerAjaxSettings Url="/api/FileManager/FileOperations"
                              UploadUrl="/api/FileManager/Upload"
@@ -248,6 +252,8 @@ To perform the download operation, initialize the [DownloadUrl](https://help.syn
 
 {% tabs %}
 {% highlight razor %}
+
+@using Syncfusion.Blazor.FileManager
 
 <SfFileManager TValue="FileManagerDirectoryContent">
     <FileManagerAjaxSettings Url="/api/FileManager/FileOperations"
@@ -291,6 +297,8 @@ To perform the upload operation, initialize the [UploadUrl](https://help.syncfus
 
 {% tabs %}
 {% highlight razor %}
+
+@using Syncfusion.Blazor.FileManager
 
 <SfFileManager TValue="FileManagerDirectoryContent">
     <FileManagerAjaxSettings Url="/api/FileManager/FileOperations"
@@ -371,10 +379,12 @@ namespace filemanager.Server.Controllers
 
 ## Image preview support
 
-To perform image preview support in the File Manager component, initialize the [GetImageUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html#Syncfusion_Blazor_FileManager_FileManagerAjaxSettings_GetImageUrl) property in a FileManagerAjaxSettings.
+To perform image preview support in the FileManager component, initialize the [GetImageUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html#Syncfusion_Blazor_FileManager_FileManagerAjaxSettings_GetImageUrl) property in a FileManagerAjaxSettings.
 
 {% tabs %}
 {% highlight razor %}
+
+@using Syncfusion.Blazor.FileManager
 
 <SfFileManager TValue="FileManagerDirectoryContent">
     <FileManagerAjaxSettings Url="/api/FileManager/FileOperations"

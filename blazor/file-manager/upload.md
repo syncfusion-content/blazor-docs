@@ -3,7 +3,7 @@ layout: post
 title: Upload in Blazor FileManager Component | Syncfusion
 description: Checkout and learn here all about available Upload in Syncfusion Blazor FileManager component and much more.
 platform: Blazor
-control: File Manager
+control: FileManager
 documentation: ug
 ---
 
@@ -63,7 +63,7 @@ By specifying a `ChunkSize`, the large file is divided into smaller parts, reduc
 ```
 In the following example, the ChunkSize is set to 5 MB (5,242,880 bytes), and the MaxFileSize is set to 70 MB (73,728,000 bytes). This means files that are up to 70 MB will be uploaded in 5 MB chunks.
 
-With chunk upload, the pause and resume options gives users enhanced control over the file upload process.
+With chunk upload, the pause and resume options gives users enhanced component over the file upload process.
 
 ![Blazor FileManager with chunkUpload](images/blazor-filemanager-chunkupload.png)
 
@@ -88,7 +88,7 @@ The default value is `true`, the FileManager will automatically upload files as 
 
 ```
 
-The screenshot demonstrates the AutoUpload property set to `false`. When disabled, files are added to the queue without being automatically uploaded, and the `Upload` and `Clear` buttons remain visible for manual control.
+The screenshot demonstrates the AutoUpload property set to `false`. When disabled, files are added to the queue without being automatically uploaded, and the `Upload` and `Clear` buttons remain visible for manual component.
 
 ![Blazor FileManager with AutoUpload](images/blazor-filemanager-autoupload.png)
 
@@ -238,7 +238,7 @@ namespace Blazor
 
 ## Drag and Drop upload
 
-The Blazor File Manager component allows you to easily perform drag and drop file uploads. You can drag files from your local file system and drop them directly into the FileManager. Additionally, you have the ability to customize the drop area for file uploads using the [DropArea](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html#Syncfusion_Blazor_FileManager_FileManagerUploadSettings_DropArea) property in the `FileManagerUploadSettings` class.
+The Blazor FileManager component allows you to easily perform drag and drop file uploads. You can drag files from your local file system and drop them directly into the FileManager. Additionally, you have the ability to customize the drop area for file uploads using the [DropArea](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html#Syncfusion_Blazor_FileManager_FileManagerUploadSettings_DropArea) property in the `FileManagerUploadSettings` class.
 
 ```cshtml
 

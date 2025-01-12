@@ -3,15 +3,15 @@ layout: post
 title: File Operations in Blazor FileManager Component | Syncfusion
 description: Checkout and learn here all about File Operations in Syncfusion Blazor FileManager component and more.
 platform: Blazor
-control: File Manager
+control: FileManager
 documentation: ug
 ---
 
 # File Operations in Blazor FileManager Component
 
-The file manager component is used to browse, manage, and organize the files and folders in a file system through a web application. All basic file operations like creating a new folder, uploading and downloading of files in the file system, and deleting and renaming of existing files and folders are available in the file manager component.  Additionally, previewing of image files is also provided in the file manager component.
+The FileManager component is used to browse, manage, and organize the files and folders in a file system through a web application. All basic file operations like creating a new folder, uploading and downloading of files in the file system, and deleting and renaming of existing files and folders are available in the FileManager component.  Additionally, previewing of image files is also provided in the FileManager component.
 
-The following table represents the basic operations available in the file manager and their corresponding functions.
+The following table represents the basic operations available in the FileManager and their corresponding functions.
 
 |Operation Name|Function|
 |----|----|
@@ -26,11 +26,11 @@ The following table represents the basic operations available in the file manage
 |upload|Upload files to the current path or directory in the file system.|
 |download|Downloads the file from the server and the multiple files can be downloaded as ZIP files.|
 
-N> The *CreateFolder*, *Remove*, and *Rename* actions will be reflected in the file manager only after the successful response from the server.
+N> The *CreateFolder*, *Remove*, and *Rename* actions will be reflected in the FileManager only after the successful response from the server.
 
 ## Request and Response Contents Format in Blazor FileManager component
 
-The following table represents the contents of *data, cwd, and files* in the file manager request and response.
+The following table represents the contents of *data, cwd, and files* in the FileManager request and response.
 
 |Parameter|Type|Default|Explanation|
 |----|----|----|----|
@@ -43,7 +43,7 @@ The following table represents the contents of *data, cwd, and files* in the fil
 |size|Number|-|File size|
 |type|String|-|File extension|
 
-The following table represents the contents of *error* in the file manager request and response.
+The following table represents the contents of *error* in the FileManager request and response.
 
 |Parameter|Type|Default|Explanation|
 |----|----|----|----|
@@ -51,7 +51,7 @@ The following table represents the contents of *error* in the file manager reque
 |message|String|-|Error message|
 |fileExists|String[]|-|List of duplicate file names|
 
-The following table represents the contents of *details* in the file manager request and response.
+The following table represents the contents of *details* in the FileManager request and response.
 
 |Parameter|Type|Default|Explanation|
 |----|----|----|----|
@@ -697,7 +697,7 @@ The following example demonstrates how to define custom sort comparer function t
 @* SfFileManager component with a custom sorting SortComparer property *@
 <SfFileManager TValue="FileManagerDirectoryContent" SortComparer="new NaturalSortComparer()">
     <FileManagerEvents TValue="FileManagerDirectoryContent" OnRead="OnReadAsync"></FileManagerEvents>
-    @* FileManagerDetailsViewSettings component for configuring the details view of the file manager *@
+    @* FileManagerDetailsViewSettings component for configuring the details view of the FileManager *@
     <FileManagerDetailsViewSettings>
         <FileManagerColumns>
             @* FileManagerColumn for the 'Name' field with a custom sorting SortComparer property *@
@@ -1302,7 +1302,7 @@ The following table represents the request parameters of *GetImage* operations.
 
 Return the image as a file stream in response.
 
-The request from the file manager can be customized using the `OnSend` event. Additional information can be passed to the file manager in file operation response and can be used in customization.
+The request from the FileManager can be customized using the `OnSend` event. Additional information can be passed to the FileManager in file operation response and can be used in customization.
 
 GetImage operation triggers on the server side and find the related code details.
 
@@ -1321,7 +1321,7 @@ N> Refer to the [Providers](https://blazor.syncfusion.com/documentation/file-man
 
 ## Request and Response Contents Format
 
-The following table represents the contents of *data, cwd, and files* in the file manager request and response.
+The following table represents the contents of *data, cwd, and files* in the FileManager request and response.
 
 |Parameter|Type|Default|Explanation|
 |----|----|----|----|
@@ -1334,7 +1334,7 @@ The following table represents the contents of *data, cwd, and files* in the fil
 |size|Number|-|File size|
 |type|String|-|File extension|
 
-The following table represents the contents of *error* in the file manager request and response.
+The following table represents the contents of *error* in the FileManager request and response.
 
 |Parameter|Type|Default|Explanation|
 |----|----|----|----|
@@ -1342,7 +1342,7 @@ The following table represents the contents of *error* in the file manager reque
 |message|String|-|Error message|
 |fileExists|String[]|-|List of duplicate file names|
 
-The following table represents the contents of *details* in the file manager request and response.
+The following table represents the contents of *details* in the FileManager request and response.
 
 |Parameter|Type|Default|Explanation|
 |----|----|----|----|
@@ -1942,7 +1942,7 @@ The [UploadListCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 ```
 ## Action buttons
 
-The file manager has several menu buttons to access the file operations. The list of menu buttons available in the file manager is given in the following table.
+The FileManager has several menu buttons to access the file operations. The list of menu buttons available in the FileManager is given in the following table.
 
 |Menu Button|Behavior|
 |----|----|
