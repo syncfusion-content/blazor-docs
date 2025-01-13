@@ -97,7 +97,7 @@ Below is an example of how to configure legends for a Sankey diagram. The sample
 {% endtabs %}
 
 
-![Blazor Sankey Basic Legend.](images/legends/blazor-sankey-legends.png)
+![Blazor Sankey Basic Legend.](images/legends/blazor-sankey-legend.png)
 
 ## Legend Customization and Configuration
 
@@ -208,7 +208,7 @@ Appearance customization extends beyond basic properties, allowing for detailed 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Sankey Customized Legend.](images/legends/blazor-sankey-legends-customization.png)
+![Blazor Sankey Customized Legend.](images/legends/blazor-sankey-legend-customization.png)
 
 ### Legend Text and Title Styles
 
