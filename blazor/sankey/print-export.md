@@ -203,7 +203,7 @@ The Sankey Diagram can be exported to various image formats, including PNG, JPEG
 {% endtabs %}
 
 
-![Blazor Sankey Print](images/print-export/sankey-print-export.png)
+![Blazor Sankey Print.](images/print-export/blazor-sankey-print-export.png)
 
 ## Key Considerations
 
