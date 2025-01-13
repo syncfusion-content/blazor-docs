@@ -50,11 +50,11 @@ const tryPrint = () => {
 };
 ```
 
->N : Ensure that users have pop-ups enabled for your site in their browser settings, as this solution opens the PDF in a new window or tab for printing.
+>N> Ensure that users have pop-ups enabled for your site in their browser settings, as this solution opens the PDF in a new window or tab for printing.
 ![Allow pop-up for large page print window](../../pdfviewer-2/images/allow-popup-largepage-print.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Print/Print%20Large%20page%20document).
 
 ## See also
 
-* [Primary Toolbar Customization in SfPdfViewer](../toolbar-customization.md)
+* [Primary Toolbar Customization in SfPdfViewer](../toolbar-customization)
