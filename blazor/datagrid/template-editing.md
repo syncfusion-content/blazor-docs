@@ -883,6 +883,7 @@ The following example renders a tab component inside the edit dialog. The tab co
                 var Order = (context as OrderDetails);
                 <SfTab @ref="Tab">
                     <TabItems>
+                       <TabEvents Selecting="OnTabSelecting"></TabEvents>
                         <TabItem>
                             <ChildContent>
                                 <TabHeader Text="Details"></TabHeader>
@@ -970,6 +971,13 @@ The following example renders a tab component inside the edit dialog. The tab co
     private void Submit()
     {
         Grid.EndEditAsync();
+    }
+    public void OnTabSelecting(SelectingEventArgs args)
+    {
+        if (CurrentEditingRecord.OrderID == 0 || string.IsNullOrWhiteSpace(CurrentEditingRecord.CustomerID) || CurrentEditingRecord.Freight <= 0)
+        {
+            args.Cancel = true;
+        }
     }
     public void RowCreating(RowCreatingEventArgs<OrderDetails> args)
     {
@@ -1062,154 +1070,180 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBoDCMZJRmMszYW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjroDWiAVWieIsqG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
 ### Complex data binding with dialog template
 
-You can edit the complex objects in the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) using the dialog template in the following way.
+The Syncfusion DataGrid allows editing of complex objects in the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) by utilizing a dialog template. This feature provides flexibility for managing hierarchical or nested data structures.
 
-In the following sample, **SfNumericTextBox** is rendered in the dialog template and changes can be updated in the `GridColumn` using the two-way(**@bind-Value**) binding.
+To bind and edit complex objects, you can render desired HTML editor elements or components such as `SfNumericTextBox` inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) property of the [GridEditSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html). The values of these components can be dynamically updated in the `GridColumn` using two-way (**@bind-Value**) data binding, ensuring real-time updates to the data.
 
-N> Also, ensure to define **ID** property for the complex column as (`___`) replacing the (`.`) operator in the Field value.
+> When working with complex columns, ensure that the **ID** property for the complex column is defined appropriately. Replace the dot operator (.) in the field value with ___ to maintain proper mapping and prevent runtime issues.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Inputs
 
-<SfGrid DataSource="@Employees" Height="315">
-    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="@EditMode.Dialog">
+<SfGrid DataSource="@EmployeeData" Toolbar="@(new string[] { "Add", "Edit", "Delete", "Update", "Cancel" })">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="Syncfusion.Blazor.Grids.EditMode.Dialog">
         <Template>
             @{
-                var order = (context as EmployeeData);
+                var Employee = (context as EmployeeDetails);
             }
-            <div>
-                <div class="mb-4"><SfNumericTextBox TValue="int?" ID="EmployeeID" Enabled="@((order.EmployeeID == null) ? true : false)" @bind-Value="order.EmployeeID"></SfNumericTextBox></div>
-                <div class="mb-4"><SfNumericTextBox TValue="int?" ID="EmpDetails__DepartmentID" @bind-Value="order.EmpDetails.DepartmentID"></SfNumericTextBox></div>
-                <div class="mb-4"><SfNumericTextBox TValue="int?" ID="EmpDetails__salarydetails__Salary" @bind-Value="order.EmpDetails.salarydetails.Salary"></SfNumericTextBox></div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <SfNumericTextBox TValue="int" ID="EmployeeID" Enabled="@((Employee.EmployeeID == 0) ? true : false)" @bind-Value="Employee.EmployeeID" FloatLabelType="FloatLabelType.Always" Placeholder="Employee ID"></SfNumericTextBox>
+                </div>
+                <div class="form-group col-md-6">
+                    <SfTextBox ID="EmpDetails.FirstName" @bind-Value="@(Employee.EmpDetails.FirstName)" TValue="string" FloatLabelType="FloatLabelType.Always" Placeholder="First Name">
+                    </SfTextBox>
+                </div>
+                <div class="form-group col-md-6">
+                    <SfTextBox ID="EmpDetails.LastName" @bind-Value="@(Employee.EmpDetails.LastName)" TValue="string" FloatLabelType="FloatLabelType.Always" Placeholder="Last Name">
+                    </SfTextBox>
+                </div>
+                <div class="form-group col-md-6">
+                    <SfNumericTextBox TValue="int" ID="EmpDetails__SalaryDetails__Salary" @bind-Value="Employee.EmpDetails.SalaryDetails.Salary" Step=50 FloatLabelType="FloatLabelType.Always" Placeholder="Salary"></SfNumericTextBox>
+                </div>
+                 <div class="form-group col-md-6">
+                    <SfTextBox ID="Title" @bind-Value="@(Employee.Title)" TValue="string" FloatLabelType="FloatLabelType.Always" Placeholder="Title">
+                    </SfTextBox>
+                </div>
             </div>
         </Template>
     </GridEditSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(EmployeeData.EmployeeID) HeaderText="EmployeeID" IsPrimaryKey="true"  Width="120"></GridColumn>
-        <GridColumn Field="EmpDetails.FirstName" HeaderText="First Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeDetails.EmployeeID) HeaderText="EmployeeID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true })" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field="EmpDetails.FirstName" HeaderText="First Name" ValidationRules="@(new ValidationRules{ Required=true })" Width="150"></GridColumn>
         <GridColumn Field="EmpDetails.LastName" HeaderText="Last Name" Width="130"></GridColumn>
-        <GridColumn Field="EmpDetails.DepartmentID" HeaderText="DepID" Width="150"></GridColumn>
-        <GridColumn Field="EmpDetails.salarydetails.Salary" HeaderText="Salary" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Job Title" Width="120"></GridColumn>
+        <GridColumn Field="EmpDetails.SalaryDetails.Salary" HeaderText="Salary" ValidationRules="@(new ValidationRules{ Required=true })" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeDetails.Title) HeaderText="Job Title" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 @code{
-    public List<EmployeeData> Employees { get; set; }
-
+    public List<EmployeeDetails> EmployeeData { get; set; }
     protected override void OnInitialized()
     {
-        Employees = Enumerable.Range(1, 9).Select(x => new EmployeeData()
-        {
-            EmployeeID = x,
-            EmpDetails = new EmployeeDetails()
-            {
-                FirstName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" })[new Random().Next(5)],
-                LastName = (new string[] { "Davolio", "Fuller", "Leverling", "Peacock", "Buchanan" })[new Random().Next(5)],
-                DepartmentID = x,
-                salarydetails = new SalaryDetails()
-                {
-                    Salary = x * 1000
-                }
-            },
-            Title = (new string[] { "Sales Representative", "Vice President, Sales", "Sales Manager",
-                                          "Inside Sales Coordinator" })[new Random().Next(4)],
-        }).ToList();
-    }
-
-    public class EmployeeData
-    {
-        public int? EmployeeID { get; set; }
-        public EmployeeDetails EmpDetails { get; set; }
-        public string Title { get; set; }
-    }
-
-    public class EmployeeDetails
-    {
-        public int? DepartmentID { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public SalaryDetails salarydetails { get; set; }
-    }
-
-    public class SalaryDetails
-    {
-        public int? Salary { get; set; }
+        EmployeeData = EmployeeDetails.GetAllRecords();
     }
 }
-```
+{% endhighlight %}
+{% highlight c# tabtitle="EmployeeDetails.cs" %}
+public class EmployeeDetails
+{
+    public static List<EmployeeDetails> Employees = new List<EmployeeDetails>();
+    public EmployeeDetails(int employeeID, string firstName, string lastName, string title, int salary)
+    {
+        EmployeeID = employeeID;
+        EmpDetails = new EmployeeInfo
+        {
+            FirstName = firstName,
+            LastName = lastName,
+            salarydetails = new SalaryDetails { Salary = salary }
+        };
+        Title = title;
+    }
+    public static List<EmployeeDetails> GetAllRecords()
+    {
+        if (Employees.Count == 0)
+        {
+            Employees.Add(new EmployeeDetails(1, "Nancy", "Davolio", "Sales Representative", 60000));
+            Employees.Add(new EmployeeDetails(2, "Andrew", "Fuller", "Vice President, Sales", 120000));
+            Employees.Add(new EmployeeDetails(3, "Janet", "Leverling", "Sales Representative", 70000));
+            Employees.Add(new EmployeeDetails(4, "Margaret", "Peacock", "Sales Representative", 68000));
+            Employees.Add(new EmployeeDetails(5, "Steven", "Buchanan", "Sales Manager", 95000));
+            Employees.Add(new EmployeeDetails(6, "Michael", "Suyama", "Sales Representative", 62000));
+            Employees.Add(new EmployeeDetails(7, "Robert", "King", "Sales Representative", 65000));
+            Employees.Add(new EmployeeDetails(8, "Laura", "Callahan", "Inside Sales Coordinator", 72000));
+            Employees.Add(new EmployeeDetails(9, "Anne", "Dodsworth", "Sales Representative", 60000));
+        }
+        return Employees;
+    }
+    public int EmployeeID { get; set; }
+    public EmployeeInfo EmpDetails { get; set; }
+    public string Title { get; set; }
+}
+public class EmployeeInfo
+{
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+    public SalaryDetails salarydetails { get; set; }
+}
+public class SalaryDetails
+{
+    public int Salary { get; set; }
+}
+{% endhighlight %}
+{% endtabs %}
 
-![Complex Data Binding with Dialog Template in Blazor DataGrid](./images/blazor-datagrid-complex-data-binding-with-dialog-template.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLetiCKJZroywnF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Use FileUploader in Grid dialog edit template
 
 You can upload an image while adding or editing the column and show that image in the grid column using the Column Template and Dialog Template features of the grid. The Column Template feature is used to display the image in a grid column, and the Dialog Template feature is used to render the `SfUploader` component for uploading the image while performing dialog editing.
 
-In the following sample, the add and edit operations of dialog editing are performed using the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) and [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionComplete) events of the grid. The image file selecting and uploading actions are performed using the [FileSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_FileSelected) and [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_ValueChange) events of the `SfUploader`.
+In the following sample, the add, edit and save operations of dialog editing are performed using the [RowCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowCreating), [RowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowEditing) and [RowUpdating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowUpdating) events of the grid. The image file selecting and uploading actions are performed using the [FileSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_FileSelected) and [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_ValueChange) events of the `SfUploader`.
 
-```cshtml
+```C#
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Inputs
 @using System.IO 
 
-<SfGrid AllowPaging="true" @ref="MyGrid" DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
-    <GridEvents OnActionBegin="BeginHandler" OnActionComplete="ActionComplete" TValue="Order"></GridEvents>
+<SfGrid AllowPaging="true" @ref="Grid" DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
+    <GridEvents TValue="Order" RowEditing="RowEditingHandler" RowCreating="RowAddingHandler" RowUpdating="RowUpdatingHandler"></GridEvents>
     <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="EditMode.Dialog">
-           <Template>
-                @{
-                    var Order = (context as Order);
-                }
-                <div>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <span>Employee Name</span>
-                                </td>
-                                <td>
-                                    <b style="margin-left: -50px;">@Order.CustomerID</b><br>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span>Employee Image</span>
-                                </td>
-                                <td>
-                                    <div class="image"><img class="upload-image" style="margin-top: 10px;margin-left: -50px;" src="@Order.Imagesrc"/></div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <div class="image" style="margin-top: 10px; width: 300px">
-                                    <SfUploader ID="uploadFiles" AllowedExtensions=".jpg,.png,.jpeg">
-                                    <UploaderEvents  ValueChange="OnChange" FileSelected="Selected"></UploaderEvents>
-                                    <UploaderTemplates>
-                                        <Template Context="HttpContext">
-                                        @{ 
-                                            <table>
-                                            <tr>
-                                                <td>
-                                                    <span>Updated Employee Image</span>
-                                                </td>
-                                                <td>
-                                                    <img class="upload-image" style="margin-left:10px;" src="@(files.Count >0 ? files.Where(item=>item.Name == HttpContext.Name)?.FirstOrDefault()?.Path : string.Empty)">    
-                                                </td>
-                                            </tr>
-                                            </table>
-                                        }
-                                        </Template>
-                                    </UploaderTemplates>
-                                    </SfUploader>
-                                </div>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </Template>
+        <Template>
+            @{
+                var Order = (context as Order);
+            }
+            <div>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span>Employee Name</span>
+                            </td>
+                            <td>
+                                <b style="margin-left: -50px;">@Order.CustomerID</b><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>Employee Image</span>
+                            </td>
+                            <td>
+                                <div class="image"><img class="upload-image" style="margin-top: 10px;margin-left: -50px;" src="@Order.Imagesrc"/></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <div class="image" style="margin-top: 10px; width: 300px">
+                                <SfUploader ID="uploadFiles" AllowedExtensions=".jpg,.png,.jpeg">
+                                <UploaderEvents  ValueChange="OnChange" FileSelected="Selected"></UploaderEvents>
+                                <UploaderTemplates>
+                                    <Template Context="HttpContext">
+                                    @{ 
+                                        <table>
+                                        <tr>
+                                            <td>
+                                                <span>Updated Employee Image</span>
+                                            </td>
+                                            <td>
+                                                <img class="upload-image" style="margin-left:10px;" src="@(files.Count >0 ? files.Where(item=>item.Name == HttpContext.Name)?.FirstOrDefault()?.Path : string.Empty)">    
+                                            </td>
+                                        </tr>
+                                        </table>
+                                    }
+                                    </Template>
+                                </UploaderTemplates>
+                                </SfUploader>
+                            </div>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </Template>
     </GridEditSettings>
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Employee ID" IsPrimaryKey="true" TextAlign="@TextAlign.Center" Width="140"></GridColumn>
@@ -1236,20 +1270,25 @@ In the following sample, the add and edit operations of dialog editing are perfo
 </style>
 
 @code{
-
     public List<fileInfo> files = new List<fileInfo>();
-    public SfGrid<Order> MyGrid { get; set; }
+    public SfGrid<Order> Grid { get; set; }
     public string UploadedFile { get; set; }
     public List<Order> Orders { get; set; }
 
-    public void ActionComplete(ActionEventArgs<Order> args)
+    public void RowAddingHandler(RowCreatingEventArgs<Order> args)
     {
-        if (args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Add) || args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.BeginEdit))
-        {
-            MyGrid.PreventRender(false);
-        }
+        Grid.PreventRender(false);
+        args.Data.Imagesrc = "scripts/Images/Employees/" + UploadedFile;            
     }
-
+    public void RowEditingHandler(RowEditingEventArgs<Order> args)
+    {
+        Grid.PreventRender(false);
+        args.Data.Imagesrc = "scripts/Images/Employees/" + UploadedFile;
+    }
+    public void RowUpdatingHandler(RowUpdatingEventArgs<Order> args)
+    {
+        args.Data.Imagesrc = "scripts/Images/Employees/" + UploadedFile;
+    }
     public void OnChange(UploadChangeEventArgs args)
     {
         files = new List<fileInfo>();
@@ -1263,25 +1302,10 @@ In the following sample, the add and edit operations of dialog editing are perfo
             files.Add(new fileInfo() { Path = "scripts/Images/Employees/" + file.FileInfo.Name , Name = file.FileInfo.Name, Size = file.FileInfo.Size });         
         }
     }
-  
-    public void BeginHandler(ActionEventArgs<Order> Args)
+    public void Selected(SelectedEventArgs args)
     {
-        if (Args.RequestType == Syncfusion.Blazor.Grids.Action.Save && Args.Action == "Add")
-        {
-            Args.Data.Imagesrc = "scripts/Images/Employees/"+UploadedFile;
-        } else if (Args.RequestType == Syncfusion.Blazor.Grids.Action.Save && Args.Action == "Edit")
-        {
-            Args.Data.Imagesrc = "scripts/Images/Employees/" + UploadedFile;
-        }
-
+        UploadedFile = args.FilesData[0].Name;       
     }
-
-    public void Selected(SelectedEventArgs Args)
-    {
-        UploadedFile = Args.FilesData[0].Name;
-       
-    }
-
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 9).Select(x => new Order()
@@ -1294,17 +1318,15 @@ In the following sample, the add and edit operations of dialog editing are perfo
             OrderDate = DateTime.Now.AddDays(-x),
         }).ToList();
     }
-
     public class Order
     {
-        public int? OrderID { get; set; }
+        public int OrderID { get; set; }
         public int EmployeeID { get; set; }
         public string CustomerID { get; set; }
         public DateTime? OrderDate { get; set; }
         public string Imagesrc { get; set; }
         public double? Freight { get; set; }
     }
-
     public class fileInfo
     {
         public string Path { get; set; }
@@ -1314,7 +1336,7 @@ In the following sample, the add and edit operations of dialog editing are perfo
 }
 ```
 
-N> You can find the fully working sample [here](https://github.com/SyncfusionExamples/blazor-datagrid-crud-dialog-fileuploader)
+> You can find the fully working sample [here](https://github.com/SyncfusionExamples/blazor-datagrid-crud-dialog-fileuploader)
 
 ## See Also
 
