@@ -1,9 +1,9 @@
 ---
 layout: post
-title: SQL database provider in Blazor FileManager Component | Syncfusion
-description: Checkout and learn here all about SQL database file system provider in Syncfusion Blazor FileManager component and more.
+title: SQL database provider in Blazor File Manager Component | Syncfusion
+description: Checkout and learn here all about SQL database file system provider in Syncfusion Blazor File Manager component and more.
 platform: Blazor
-control: FileManager
+control: File Manager
 documentation: ug
 ---
 
@@ -43,13 +43,13 @@ void SetSQLConnection(string name, string tableName, string tableID)\
 
 ```
 
-N> Refer to this [FileManager.mdf](https://github.com/SyncfusionExamples/ej2-sql-server-database-aspcore-file-provider/blob/master/App_Data/FileManager.mdf) to learn about the pre-defined file system SQL database for the Blazor FileManager.
+N> Refer to this [FileManager.mdf](https://github.com/SyncfusionExamples/ej2-sql-server-database-aspcore-file-provider/blob/master/App_Data/FileManager.mdf) to learn about the pre-defined file system SQL database for the Blazor File Manager.
 
-After configuring the connection, just build and run the project. Now, the project will be hosted in `http://localhost:{port}` and just mapping the [**ajaxSettings**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html) property of the FileManager component to the appropriate controller methods allows to manage the files in the SQL database table.
+After configuring the connection, just build and run the project. Now, the project will be hosted in `http://localhost:{port}` and just mapping the [**ajaxSettings**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html) property of the File Manager component to the appropriate controller methods allows to manage the files in the SQL database table.
 
 ```cshtml
 
-@*Initializing FileManager with SQL database file system service*@
+@*Initializing File Manager with SQL database file system service*@
 
 @* Replace the hosted port number in the place of "{port}" *@
 
@@ -63,7 +63,7 @@ After configuring the connection, just build and run the project. Now, the proje
 
 ```
 
-To perform file operations (Read, Create, Rename, Delete, Get file details, Search, Copy, Move, Upload, Download, GetImage) in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor FileManager component using the SQL database file system provider, you need to initialize the SQL database file system provider in the controller.
+To perform file operations (Read, Create, Rename, Delete, Get file details, Search, Copy, Move, Upload, Download, GetImage) in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component using the SQL database file system provider, you need to initialize the SQL database file system provider in the controller.
 
 To initialize a local service with the above-mentioned file operations, create a new folder named `Controllers` inside the server part of the project. Then, create a new file with the extension `.cs` inside the Controllers folder and add the necessary file operations code available in the `SQLProviderController.cs` found at this [link](https://github.com/SyncfusionExamples/sql-server-database-aspcore-file-provider/blob/master/Controllers/SQLProviderController.cs). Additionally, you can check out all the necessary file operation method details for this provider in the same GitHub repository.
 

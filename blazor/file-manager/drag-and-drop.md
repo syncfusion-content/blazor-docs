@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Drag and Drop in Blazor FileManager Component | Syncfusion
-description: Checkout and learn here all about drag and drop in Syncfusion Blazor FileManager component and more.
+title: Drag and Drop in Blazor File Manager Component | Syncfusion
+description: Checkout and learn here all about drag and drop in Syncfusion Blazor File Manager component and more.
 platform: Blazor
-control: FileManager
+control: File Manager
 documentation: ug
 ---
 
-# Drag and Drop in Blazor FileManager Component
+# Drag and Drop in Blazor File Manager Component
 
-The FileManager allows files and folders to be moved within the file system by drag and dropping them. This support can be enabled or disabled using the [AllowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_AllowDragAndDrop) property of the FileManager.
+The File Manager allows files and folders to be moved within the file system by drag and dropping them. This support can be enabled or disabled using the [AllowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_AllowDragAndDrop) property of the File Manager.
 
-To disable multiple file selection and enable drag-drop operations in a Blazor FileManager component, you can check on this video.
+To disable multiple file selection and enable drag-drop operations in a Blazor File Manager component, you can check on this video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=KU3RwdzDvJ0" %}
@@ -42,4 +42,4 @@ After successful compilation of your application, simply press `F5` to run the a
 
 
 
-![Drag and Drop in Blazor FileManager](images/blazor-filemanager-drag-and-drop.gif)
+![Drag and Drop in Blazor File Manager](images/blazor-filemanager-drag-and-drop.gif)

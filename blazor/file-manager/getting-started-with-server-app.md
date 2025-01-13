@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Getting Started with Blazor FileManager Component | Syncfusion
-description: Checkout and learn about getting started with Blazor FileManager component in Blazor Server Application.
+title: Getting Started with Blazor File Manager Component | Syncfusion
+description: Checkout and learn about getting started with Blazor File Manager component in Blazor Server Application.
 platform: Blazor
-control: FileManager
+control: File Manager
 documentation: ug
 ---
 
 <!-- markdownlint-disable MD024 -->
 
-# Getting Started with Blazor FileManager Component
+# Getting Started with Blazor File Manager Component
 
-This section briefly explains about how to include [Blazor FileManager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component in your Blazor Server App using Visual Studio.
+This section briefly explains about how to include [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component in your Blazor Server App using Visual Studio.
 
 ## Prerequisites
 
@@ -21,9 +21,9 @@ This section briefly explains about how to include [Blazor FileManager](https://
 
 You can create a **Blazor Server App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=windows) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor FileManager and Themes NuGet in the App
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager and Themes NuGet in the App
 
-To add **Blazor FileManager** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.FileManager](https://www.nuget.org/packages/Syncfusion.Blazor.FileManager) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
+To add **Blazor File Manager** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.File Manager](https://www.nuget.org/packages/Syncfusion.Blazor.File Manager) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -88,9 +88,9 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 ```
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-## Add Blazor FileManager component
+## Add Blazor File Manager component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor FileManager component in the **~/Pages/Index.razor** file.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component in the **~/Pages/Index.razor** file.
 
 {% tabs %}
 {% highlight razor %}
@@ -118,18 +118,18 @@ To initialize a local service, create a new folder name with `Controllers` insid
 
 Make sure your controller `FileManagerController.cs` uses the model classes you've created. Import the model namespace at the top of your controller file
 
-FileManager's base functions are available in the below namespace.
+File Manager's base functions are available in the below namespace.
 ```cshtml
 using Syncfusion.EJ2.FileManager.Base;
 ````
-FileManager's operations are available in the below namespace.
+File Manager's operations are available in the below namespace.
 ````cshtml
 using Syncfusion.EJ2.FileManager.PhysicalFileProvider;
 ````
 
 ## Initialize the service in controller
 
-FileManager supports the basic file actions like Read, Delete, Copy, Move, Get Details, Search, Rename, and Create New Folder.
+File Manager supports the basic file actions like Read, Delete, Copy, Move, Get Details, Search, Rename, and Create New Folder.
 
 To initialize a local service, create a new folder name with `Controllers` inside the server part of the project. Then, create a new file `FileManagerController` with extension `.cs` inside the `Controllers` folder and add the following code in that file.
 
@@ -142,9 +142,9 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Features;
-//FileManager's base functions are available in the below namespace.
+//File Manager's base functions are available in the below namespace.
 using Syncfusion.EJ2.FileManager.Base;
-//FileManager's operations are available in the below namespace.
+//File Manager's operations are available in the below namespace.
 using Syncfusion.EJ2.FileManager.PhysicalFileProvider;
 using System.IO;
 using System.Linq;
@@ -166,7 +166,7 @@ namespace filemanager.Server.Controllers
             this.operation.RootFolder(this.basePath + "\\" + this.root); // It denotes in which files and folders are available.
         }
 
-        // Processing the FileManager operations.
+        // Processing the File Manager operations.
         [Route("FileOperations")]
         public object FileOperations([FromBody] FileManagerDirectoryContent args)
         {
@@ -219,7 +219,7 @@ This will configure and map the controller in your Blazor App.
 
 ## Create Web Server App
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor FileManager component in `~/Pages/Index.razor` file.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component in `~/Pages/Index.razor` file.
 
 {% tabs %}
 {% highlight razor %}
@@ -240,9 +240,9 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor FileManager comp
 Add your required files and folders under the `wwwroot\Files` directory.
 * In your  project, the `wwwroot` directory is where static files are served from. It is typically found at the root level of your server project.
 * Inside the `wwwroot` directory, create a new folder named `Files`. This will be used to store static files like images, documents, or other resources that you want to serve directly.
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor FileManager component in your default web browser.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component in your default web browser.
 
-![Blazor FileManager Component](images/blazor-filemanager-component.png)
+![Blazor File Manager Component](images/blazor-filemanager-component.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/FileManager).
 
@@ -379,7 +379,7 @@ namespace filemanager.Server.Controllers
 
 ## Image preview support
 
-To perform image preview support in the FileManager component, initialize the [GetImageUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html#Syncfusion_Blazor_FileManager_FileManagerAjaxSettings_GetImageUrl) property in a FileManagerAjaxSettings.
+To perform image preview support in the File Manager component, initialize the [GetImageUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html#Syncfusion_Blazor_FileManager_FileManagerAjaxSettings_GetImageUrl) property in a FileManagerAjaxSettings.
 
 {% tabs %}
 {% highlight razor %}
@@ -417,7 +417,7 @@ namespace filemanager.Server.Controllers
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor FileManager with Image Preview](images/blazor-filemanager-image-preview.png)
+![Blazor File Manager with Image Preview](images/blazor-filemanager-image-preview.png)
 
 Refer the sample [link](https://www.syncfusion.com/downloads/support/directtrac/general/ze/FileManager1055616812).
 

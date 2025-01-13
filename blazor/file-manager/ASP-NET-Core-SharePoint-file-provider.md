@@ -1,9 +1,9 @@
 ---
 layout: post
-title: SharePoint provider in Blazor FileManager Component | Syncfusion
-description: Checkout and learn here all about SharePoint Provider in Syncfusion Blazor FileManager component and more.
+title: SharePoint provider in Blazor File Manager Component | Syncfusion
+description: Checkout and learn here all about SharePoint Provider in Syncfusion Blazor File Manager component and more.
 platform: Blazor
-control: FileManager
+control: File Manager
 documentation: ug
 ---
 
@@ -58,11 +58,11 @@ To set up the SharePoint service provider, follow these steps:
 
 Replace **<--User Site Name-->**, **<--User Drive ID-->**, **tenantId**, **clientId**, and **clientSecret** with your actual values.
 
-After configuring the SharePoint file provider, build and run the project. Now, the project will be hosted in `http://localhost:{port}` and just mapping the ajaxSettings property of the FileManager component to the appropriate controller methods allows to manage the files in the Microsoft SharePoint.
+After configuring the SharePoint file provider, build and run the project. Now, the project will be hosted in `http://localhost:{port}` and just mapping the ajaxSettings property of the File Manager component to the appropriate controller methods allows to manage the files in the Microsoft SharePoint.
 
 ```cshtml
 
-@* Initializing FileManager with ASP.NET Core service *@
+@* Initializing File Manager with ASP.NET Core service *@
 
 @* Replace the hosted port number in the place of "{port}" *@
 
@@ -76,7 +76,7 @@ After configuring the SharePoint file provider, build and run the project. Now, 
 
 ```
 
-To perform file operations (Read, Create, Rename, Delete, Get file details, Search, Copy, Move, Upload, Download, GetImage) in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor FileManager component using the ASP.NET Core SharePoint file provider, you need to initialize the SharePoint service in the controller.
+To perform file operations (Read, Create, Rename, Delete, Get file details, Search, Copy, Move, Upload, Download, GetImage) in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component using the ASP.NET Core SharePoint file provider, you need to initialize the SharePoint service in the controller.
 
 To initialize a local service with the above-mentioned file operations, create a new folder named `Controllers` inside the server part of the project. Then, create a new file with the extension `.cs` inside the Controllers folder and add the necessary file operations code available in the `SharePointProviderController.cs` found at this [link](https://github.com/SyncfusionExamples/sharepoint-aspcore-file-provider/blob/master/Controllers/SharePointController.cs). Additionally, you can check out all the necessary file operation method details for this provider in the same GitHub repository.
 

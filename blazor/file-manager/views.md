@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Views in Blazor FileManager Component | Syncfusion
-description: Checkout and learn here all about available Views module in Syncfusion Blazor FileManager component and much more.
+title: Views in Blazor File Manager Component | Syncfusion
+description: Checkout and learn here all about available Views module in Syncfusion Blazor File Manager component and much more.
 platform: Blazor
-control: FileManager
+control: File Manager
 documentation: ug
 ---
 
-# Views in Blazor FileManager component
+# Views in Blazor File Manager component
 
-The Blazor FileManager component provides both the `Large Icons View` for visual recognition and the `Details View` for organized information.
+The Blazor File Manager component provides both the `Large Icons View` for visual recognition and the `Details View` for organized information.
 
 ## Large Icons View
 
-The `Large Icons View` is the default starting view in the FileManager. The view can be changed by using the [Toolbar](./end-user-capabilities.md/#toolbar) view button or by using the view menu in [Context Menu](./end-user-capabilities.md/#context-menu). The [View](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_View) API can also be used to change the initial view of the FileManager.
+The `Large Icons View` is the default starting view in the File Manager. The view can be changed by using the [Toolbar](./end-user-capabilities.md/#toolbar) view button or by using the view menu in [Context Menu](./end-user-capabilities.md/#context-menu). The [View](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_View) API can also be used to change the initial view of the File Manager.
 
 In the large icons view, the thumbnail icons will be shown in a larger size, which displays the data in a form that best suits their content. For image type files, a **preview** will be displayed. Extension thumbnails will be displayed for other type files.
 

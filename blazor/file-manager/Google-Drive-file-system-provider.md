@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Google Drive provider in Blazor FileManager Component | Syncfusion
-description: Checkout and learn here all about Google Drive file system provider in Syncfusion Blazor FileManager component and more.
+title: Google Drive provider in Blazor File Manager Component | Syncfusion
+description: Checkout and learn here all about Google Drive file system provider in Syncfusion Blazor File Manager component and more.
 platform: Blazor
-control: FileManager
+control: File Manager
 documentation: ug
 ---
 
@@ -26,11 +26,11 @@ After generating the client secret data, copy the JSON data to the following spe
 * EJ2FileManagerService > credentials > client_secret.json
 * GoogleOAuth2.0Base > credentials > client_secret.json
 
-After updating the credentials, just build and run the project. Now, the project will be hosted in `http://localhost:{port}`, and it will ask to log on to the Gmail account for which created the client secret credentials. Then, provide permission to access the Google Drive files by clicking the allow access button in the page. Now, just mapping the [**ajaxSettings**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html) property of the FileManager component to the appropriate controller methods will allow to manage the files from the Google Drive.
+After updating the credentials, just build and run the project. Now, the project will be hosted in `http://localhost:{port}`, and it will ask to log on to the Gmail account for which created the client secret credentials. Then, provide permission to access the Google Drive files by clicking the allow access button in the page. Now, just mapping the [**ajaxSettings**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.File Manager.FileManagerAjaxSettings.html) property of the File Manager component to the appropriate controller methods will allow to manage the files from the Google Drive.
 
 ```cshtml
 
-@*Initializing FileManager with Google Drive file system service.*@
+@*Initializing File Manager with Google Drive file system service.*@
 
 @* Replace the hosted port number in the place of "{port}" *@
 
@@ -44,7 +44,7 @@ After updating the credentials, just build and run the project. Now, the project
 
 ```
 
-To perform file operations (Read, Create, Rename, Delete, Get file details, Search, Copy, Move, Upload, Download, GetImage) in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor FileManager component using the Google Drive file system provider, you need to initialize the Google Drive file system provider in the controller.
+To perform file operations (Read, Create, Rename, Delete, Get file details, Search, Copy, Move, Upload, Download, GetImage) in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component using the Google Drive file system provider, you need to initialize the Google Drive file system provider in the controller.
 
 To initialize a local service with the above-mentioned file operations, create a new folder named `Controllers` inside the server part of the project. Then, create a new file with the extension `.cs` inside the Controllers folder and add the necessary file operations code available in the `GoogleDriveProviderController.cs` found at this [link](https://github.com/SyncfusionExamples/google-drive-aspcore-file-provider/blob/master/EJ2GoogleDriveFileProvider/Controllers/GoogleDriveProviderController.cs). Additionally, you can check out all the necessary file operation method details for this provider in the same GitHub repository.
 
