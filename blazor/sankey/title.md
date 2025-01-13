@@ -93,7 +93,7 @@ By utilizing these properties, your Sankey diagram becomes more informative and 
 
 In this example, "Energy Flow" is set as the title, and "-2024" is set as the subtitle.
 
-![Blazor Sankey Title](images/titles/sankey-title.png)
+![Blazor Sankey Title.](images/titles/blazor-sankey-title.png)
 
 ## Customizing Title and Subtitle
 
@@ -176,7 +176,7 @@ The **Blazor Sankey Diagram** allows you to visualize flow data with nodes and l
 {% endtabs %}
 
 
-![Blazor Sankey Title Customization](images/titles/sankey-title-customization.png)
+![Blazor Sankey Title Customization.](images/titles/blazor-sankey-title-customization.png)
 
 ## Key Considerations
 
