@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Getting Started with Syncfusion Blazor Chip Component in Web App
-description: Checkout and learn about the documentation for getting started with Blazor Chip Component in Blazor Web App.
+title: Getting Started with Syncfusion Blazor Chips Component in Web App
+description: Checkout and learn about the documentation for getting started with Blazor Chips Component in Blazor Web App.
 platform: Blazor
-component: Chip
+component: Chips
 documentation: ug
 ---
 
-# Getting Started with Blazor Chip Component in Web App
+# Getting Started with Blazor Chips Component in Web App
 
-This section briefly explains about how to include [Blazor Chip](https://www.syncfusion.com/blazor-components/blazor-chips) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/).
+This section briefly explains about how to include [Blazor Chips](https://www.syncfusion.com/blazor-components/blazor-chips) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/).
 
 ## Prerequisites
 
@@ -23,7 +23,7 @@ You need to configure the corresponding [Interactive render mode](https://learn.
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Buttons and Themes NuGet in the Blazor Web App
 
-To add **Blazor Chip** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Buttons](https://www.nuget.org/packages/Syncfusion.Blazor.Buttons/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+To add **Blazor Chips** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Buttons](https://www.nuget.org/packages/Syncfusion.Blazor.Buttons/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
 If you utilize `WebAssembly or Auto` render modes in the Blazor Web App need to be install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components NuGet packages within the client project.
 
@@ -133,9 +133,9 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Chip component
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Chips component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Chip component in `.razor` file inside the `Pages` folder. If an interactivity location as `Per page/component` in the web app, define a render mode at top of the component, as follows:
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Chips component in `.razor` file inside the `Pages` folder. If an interactivity location as `Per page/component` in the web app, define a render mode at top of the component, as follows:
 
 | Interactivity location | RenderMode | Code |
 | --- | --- | --- |
@@ -158,6 +158,8 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 {% tabs %}
 {% highlight razor %}
 
+@using Syncfusion.Blazor.Buttons
+
 <SfChip>
     <ChipItems>
         <ChipItem Text="Janet Leverling"></ChipItem>
@@ -167,17 +169,18 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Chip component in your default web browser.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Chips component in your default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrTNCBaiGVbwHyL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chip Component](./images/blazor-chip-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXrTNCBaiGVbwHyL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chips Component](./images/blazor-chip-component.png)" %}
 
-## Render chip items from collection
+## Render Chip items from collection
 
-You can render the chip items from collection using for loop in Blazor Chip component as follows.
+You can render the Chips items from collection using for loop in Blazor Chips component as follows.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Buttons
+
 @if(ChipData.Count != 0) {
 <SfChip EnableDelete="true">
     <ChipItems>
@@ -227,7 +230,7 @@ You can render the chip items from collection using for loop in Blazor Chip comp
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrfZWrksmKnbVhg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chip Component](./images/blazor-chip-sample.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZrfZWrksmKnbVhg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Chips Component](./images/blazor-chip-sample.png)" %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Chip).
 
