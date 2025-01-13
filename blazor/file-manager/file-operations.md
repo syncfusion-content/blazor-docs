@@ -1,17 +1,17 @@
 ---
 layout: post
-title: File Operations in Blazor FileManager Component | Syncfusion
-description: Checkout and learn here all about File Operations in Syncfusion Blazor FileManager component and more.
+title: File Operations in Blazor File Manager Component | Syncfusion
+description: Checkout and learn here all about File Operations in Syncfusion Blazor File Manager component and more.
 platform: Blazor
-control: FileManager
+control: File Manager
 documentation: ug
 ---
 
-# File Operations in Blazor FileManager Component
+# File Operations in Blazor File Manager Component
 
-The FileManager component is used to browse, manage, and organize the files and folders in a file system through a web application. All basic file operations like creating a new folder, uploading and downloading of files in the file system, and deleting and renaming of existing files and folders are available in the FileManager component.  Additionally, previewing of image files is also provided in the FileManager component.
+The File Manager component is used to browse, manage, and organize the files and folders in a file system through a web application. All basic file operations like creating a new folder, uploading and downloading of files in the file system, and deleting and renaming of existing files and folders are available in the File Manager component.  Additionally, previewing of image files is also provided in the File Manager component.
 
-The following table represents the basic operations available in the FileManager and their corresponding functions.
+The following table represents the basic operations available in the File Manager and their corresponding functions.
 
 |Operation Name|Function|
 |----|----|
@@ -26,11 +26,11 @@ The following table represents the basic operations available in the FileManager
 |upload|Upload files to the current path or directory in the file system.|
 |download|Downloads the file from the server and the multiple files can be downloaded as ZIP files.|
 
-N> The *CreateFolder*, *Remove*, and *Rename* actions will be reflected in the FileManager only after the successful response from the server.
+N> The *CreateFolder*, *Remove*, and *Rename* actions will be reflected in the File Manager only after the successful response from the server.
 
-## Request and Response Contents Format in Blazor FileManager component
+## Request and Response Contents Format in Blazor File Manager component
 
-The following table represents the contents of *data, cwd, and files* in the FileManager request and response.
+The following table represents the contents of *data, cwd, and files* in the File Manager request and response.
 
 |Parameter|Type|Default|Explanation|
 |----|----|----|----|
@@ -43,7 +43,7 @@ The following table represents the contents of *data, cwd, and files* in the Fil
 |size|Number|-|File size|
 |type|String|-|File extension|
 
-The following table represents the contents of *error* in the FileManager request and response.
+The following table represents the contents of *error* in the File Manager request and response.
 
 |Parameter|Type|Default|Explanation|
 |----|----|----|----|
@@ -51,7 +51,7 @@ The following table represents the contents of *error* in the FileManager reques
 |message|String|-|Error message|
 |fileExists|String[]|-|List of duplicate file names|
 
-The following table represents the contents of *details* in the FileManager request and response.
+The following table represents the contents of *details* in the File Manager request and response.
 
 |Parameter|Type|Default|Explanation|
 |----|----|----|----|
@@ -656,10 +656,10 @@ Move operation triggers on the server side and find the related code details.
 
 ## Sorting Files and Folders 
 
-In the Blazor FileManager component, you can perform sorting operations for both folders and files using the [SortBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_SortBy) and [SortOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_SortOrder) properties. Additionally, you can use the **Sort by** toolbar button available in the FileManager component to perform sorting operations.
+In the Blazor File Manager component, you can perform sorting operations for both folders and files using the [SortBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_SortBy) and [SortOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_SortOrder) properties. Additionally, you can use the **Sort by** toolbar button available in the FileManager component to perform sorting operations.
 
-**SortBy** - A field name used to sort the folders and files in the FileManager component. The default value is Name.
-**SortOrder** - sort order for the files and folders in the FileManager component.
+**SortBy** - A field name used to sort the folders and files in the File Manager component. The default value is Name.
+**SortOrder** - sort order for the files and folders in the File Manager component.
 
 The available options for the sort order are:
 
@@ -683,7 +683,7 @@ The available options for the sort order are:
 
 ## Custom sorting
 
-The FileManager component provides a way to customize the default sort action for the LargeIconsView by defining the [`SortComparer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_SortComparer) property and for sorting individual columns in the DetailsView by defining the `SortComparer` property in the [`FileManagerColumn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerColumn.html) class.The `SortComparer` class should implement the [IComparer](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.icomparer-1?view=net-8.0) interface.
+The File Manager component provides a way to customize the default sort action for the LargeIconsView by defining the [`SortComparer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_SortComparer) property and for sorting individual columns in the DetailsView by defining the `SortComparer` property in the [`FileManagerColumn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerColumn.html) class.The `SortComparer` class should implement the [IComparer](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.icomparer-1?view=net-8.0) interface.
 
 The following example demonstrates how to define custom sort comparer function to achieve natural sorting behavior for the Name column in both DetailsView and LargeIconsView.
 
@@ -1226,7 +1226,7 @@ Download operation triggers on the server side and find the related code details
 
 ```
 
-In the Blazor FileManager component, you are able to download the selected files dynamically using our [DownloadFilesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_DownloadFilesAsync_System_String___) method instead of our default download toolbar button.
+In the Blazor File Manager component, you are able to download the selected files dynamically using our [DownloadFilesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_DownloadFilesAsync_System_String___) method instead of our default download toolbar button.
 
 To use this method, you need to pass the selected files or folders as parameters.
 
@@ -1257,9 +1257,9 @@ To use this method, you need to pass the selected files or folders as parameters
 
 ### Prevent Downloading File
 
-In the Blazor FileManager component, you are able to prevent the download action for any types of files or folders by setting the [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.BeforeDownloadEventArgs-1.html#Syncfusion_Blazor_FileManager_BeforeDownloadEventArgs_1_Cancel) argument to **true** of the [BeforeDownload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforeDownload) event. 
+In the Blazor File Manager component, you are able to prevent the download action for any types of files or folders by setting the [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.BeforeDownloadEventArgs-1.html#Syncfusion_Blazor_FileManager_BeforeDownloadEventArgs_1_Cancel) argument to **true** of the [BeforeDownload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforeDownload) event. 
 
-The following example demonstrates how to prevent the download actions for all types of files in the Blazor FileManager component.
+The following example demonstrates how to prevent the download actions for all types of files in the Blazor File Manager component.
 
 ```cshtml
 
@@ -1302,7 +1302,7 @@ The following table represents the request parameters of *GetImage* operations.
 
 Return the image as a file stream in response.
 
-The request from the FileManager can be customized using the `OnSend` event. Additional information can be passed to the FileManager in file operation response and can be used in customization.
+The request from the File Manager can be customized using the `OnSend` event. Additional information can be passed to the File Manager in file operation response and can be used in customization.
 
 GetImage operation triggers on the server side and find the related code details.
 
@@ -1321,7 +1321,7 @@ N> Refer to the [Providers](https://blazor.syncfusion.com/documentation/file-man
 
 ## Request and Response Contents Format
 
-The following table represents the contents of *data, cwd, and files* in the FileManager request and response.
+The following table represents the contents of *data, cwd, and files* in the File Manager request and response.
 
 |Parameter|Type|Default|Explanation|
 |----|----|----|----|
@@ -1334,7 +1334,7 @@ The following table represents the contents of *data, cwd, and files* in the Fil
 |size|Number|-|File size|
 |type|String|-|File extension|
 
-The following table represents the contents of *error* in the FileManager request and response.
+The following table represents the contents of *error* in the File Manager request and response.
 
 |Parameter|Type|Default|Explanation|
 |----|----|----|----|
@@ -1342,7 +1342,7 @@ The following table represents the contents of *error* in the FileManager reques
 |message|String|-|Error message|
 |fileExists|String[]|-|List of duplicate file names|
 
-The following table represents the contents of *details* in the FileManager request and response.
+The following table represents the contents of *details* in the File Manager request and response.
 
 |Parameter|Type|Default|Explanation|
 |----|----|----|----|
@@ -1358,11 +1358,11 @@ The following table represents the contents of *details* in the FileManager requ
 
 ## Previewing Files
 
-In the Blazor FileManager component, you can preview PDF files using the PDF viewer component, docx files using the DocumentEditor component, and play videos within the dialog component.
+In the Blazor File Manager component, you can preview PDF files using the PDF viewer component, docx files using the DocumentEditor component, and play videos within the dialog component.
 
 ### Previewing PDF and Word File in Dialog
 
-In the Blazor FileManager component, you can view PDF files using the PDF viewer component and docx files using the DocumentEditor component by setting the proper file path in these components.
+In the Blazor File Manager component, you can view PDF files using the PDF viewer component and docx files using the DocumentEditor component by setting the proper file path in these components.
 
 The following example demonstrates how to preview PDF and docx files by utilizing the PDF viewer and DocumentEditor components within the Dialog component.
 
@@ -1473,9 +1473,9 @@ N> The fully working sample can be found [here](https://github.com/SyncfusionExa
 
 ## Perform Custom Filtering
 
-In the Blazor FileManager component, filtering support is provided. When the [FilterFilesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_FilterFilesAsync_System_Collections_Generic_List__0__) method is called, it triggers a custom operation on the controller side. Using this method, you can perform search operations by passing the SearchString as a parameter. 
+In the Blazor File Manager component, filtering support is provided. When the [FilterFilesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_FilterFilesAsync_System_Collections_Generic_List__0__) method is called, it triggers a custom operation on the controller side. Using this method, you can perform search operations by passing the SearchString as a parameter. 
 
-In the following example, the SearchString value **Downloads** is passed, and based on that, a search operation is performed in the Blazor FileManager using a button click.
+In the following example, the SearchString value **Downloads** is passed, and based on that, a search operation is performed in the Blazor File Manager using a button click.
 
 ```cshtml
 
@@ -1559,13 +1559,13 @@ namespace BlazorFileManager.Controllers
 
 ## Events 
 
-The Blazor FileManager component has a list of events that can be triggered for certain actions. These events can be bound to the FileManager using the **FileManagerEvents**, which requires the **TValue** to be provided.
+The Blazor File Manager component has a list of events that can be triggered for certain actions. These events can be bound to the File Manager using the **FileManagerEvents**, which requires the **TValue** to be provided.
 
 N> All the events should be provided in a single **FileManagerEvents** component.
 
 ### BeforeDownload
 
-The [BeforeDownload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforeDownload) event of the Blazor FileManager component is triggered before sending the download request to the server.
+The [BeforeDownload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforeDownload) event of the Blazor File Manager component is triggered before sending the download request to the server.
 
 ```cshtml
 
@@ -1592,7 +1592,7 @@ The [BeforeDownload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Fil
 
 ### BeforeImageLoad
 
-The [BeforeImageLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforeImageLoad) event of the Blazor FileManager component is triggered before sending the image request to the server.
+The [BeforeImageLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforeImageLoad) event of the Blazor File Manager component is triggered before sending the image request to the server.
 
 ```cshtml
 
@@ -1619,7 +1619,7 @@ The [BeforeImageLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Fi
 
 ### BeforePopupClose
 
-The [BeforePopupClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforePopupClose) event of the Blazor FileManager component is triggered before the dialog is closed.
+The [BeforePopupClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforePopupClose) event of the Blazor File Manager component is triggered before the dialog is closed.
 
 ```cshtml
 
@@ -1646,7 +1646,7 @@ The [BeforePopupClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.F
 
 ### BeforePopupOpen
 
-The [BeforePopupOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforePopupOpen) event of the Blazor FileManager component is triggered before the dialog is opened.
+The [BeforePopupOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforePopupOpen) event of the Blazor File Manager component is triggered before the dialog is opened.
 
 ```cshtml
 
@@ -1673,7 +1673,7 @@ The [BeforePopupOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Fi
 
 ### Created
 
-The [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_Created) event of the Blazor FileManager component is triggered when the FileManager component is created.
+The [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_Created) event of the Blazor File Manager component is triggered when the FileManager component is created.
 
 ```cshtml
 
@@ -1700,7 +1700,7 @@ The [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManage
 
 ### Destroyed
 
-The [Destroyed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_Destroyed) event of the Blazor FileManager component is triggered when the FileManager component is destroyed.
+The [Destroyed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_Destroyed) event of the Blazor File Manager component is triggered when the File Manager component is destroyed.
 
 ```cshtml
 
@@ -1727,7 +1727,7 @@ The [Destroyed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileMana
 
 ### OnError
 
-The [OnError](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_OnError) event of the Blazor FileManager component is triggered when the AJAX request fails.
+The [OnError](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_OnError) event of the Blazor File Manager component is triggered when the AJAX request fails.
 
 ```cshtml
 
@@ -1754,7 +1754,7 @@ The [OnError](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManage
 
 ### OnFileLoad
 
-The [OnFileLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_OnFileLoad) event of the Blazor FileManager component is triggered before the file or folder is rendered.
+The [OnFileLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_OnFileLoad) event of the Blazor File Manager component is triggered before the file or folder is rendered.
 
 ```cshtml
 
@@ -1781,7 +1781,7 @@ The [OnFileLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileMan
 
 ### OnFileOpen
 
-The [OnFileOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_OnFileOpen) event of the Blazor FileManager component is triggered before the file or folder is opened.
+The [OnFileOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_OnFileOpen) event of the Blazor File Manager component is triggered before the file or folder is opened.
 
 ```cshtml
 
@@ -1808,7 +1808,7 @@ The [OnFileOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileMan
 
 ### OnSend
 
-The [OnSend](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_OnSend) event of the Blazor FileManager component is triggered before sending the HttpClient request to the server.
+The [OnSend](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_OnSend) event of the Blazor File Manager component is triggered before sending the HttpClient request to the server.
 
 ```cshtml
 
@@ -1835,7 +1835,7 @@ The [OnSend](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager
 
 ### OnSuccess
 
-The [OnSuccess](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_OnSuccess) event of the Blazor FileManager component is triggered when the HttpClient request is successful.
+The [OnSuccess](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_OnSuccess) event of the Blazor File Manager component is triggered when the HttpClient request is successful.
 
 ```cshtml
 
@@ -1862,7 +1862,7 @@ The [OnSuccess](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileMana
 
 ### PopupClosed
 
-The [PopupClosed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_PopupClosed) event of the Blazor FileManager component is triggered when the dialog is closed.
+The [PopupClosed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_PopupClosed) event of the Blazor File Manager component is triggered when the dialog is closed.
 
 ```cshtml
 
@@ -1889,7 +1889,7 @@ The [PopupClosed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileMa
 
 ### PopupOpened
 
-The [PopupOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_PopupOpened) event of the Blazor FileManager component is triggered when the dialog is opened.
+The [PopupOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_PopupOpened) event of the Blazor File Manager component is triggered when the dialog is opened.
 
 ```cshtml
 
@@ -1916,7 +1916,7 @@ The [PopupOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileMa
 
 ### UploadListCreated
 
-The [UploadListCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_UploadListCreated) event of the Blazor FileManager component is triggered before rendering each file item in the upload dialog box.
+The [UploadListCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_UploadListCreated) event of the Blazor File Manager component is triggered before rendering each file item in the upload dialog box.
 
 ```cshtml
 
@@ -1942,7 +1942,7 @@ The [UploadListCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 ```
 ## Action buttons
 
-The FileManager has several menu buttons to access the file operations. The list of menu buttons available in the FileManager is given in the following table.
+The File Manager has several menu buttons to access the file operations. The list of menu buttons available in the File Manager is given in the following table.
 
 |Menu Button|Behavior|
 |----|----|
