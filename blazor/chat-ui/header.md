@@ -35,7 +35,7 @@ You can use [ShowHeader](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ```
 
-![Blazor Chat UI ShowHeader](./images/show-header.png)
+![Blazor Chat UI ShowHeader.](./images/blazor-chat-show-header.png)
 
 ### Setting header text
 
