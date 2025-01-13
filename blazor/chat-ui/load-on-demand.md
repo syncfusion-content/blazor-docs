@@ -39,4 +39,4 @@ You can use the [LoadOnDemand](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 ```
 
-![Blazor Chat UI LoadOnDemand](./images/load-on-demand.png)
+![Blazor Chat UI LoadOnDemand.](./images/blazor-chat-load-on-demand.png)
