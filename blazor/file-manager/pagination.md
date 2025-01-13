@@ -92,13 +92,13 @@ Below is a screenshot illustrating the `CurrentPage` property in the File Manage
 
 ## Pager Template in Blazor File Manager
 
-The [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.File Manager.FileManagerPageSettings.html#Syncfusion_Blazor_FileManager_FileManagerPageSettings_Template) property in the [FileManagerPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.File Manager.FileManagerPageSettings.html) allows you to insert custom UI elements, such as buttons or any HTML elements into the File Manager page settings. This offers greater flexibility and customization for the paging interface.
+The [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerPageSettings.html#Syncfusion_Blazor_FileManager_FileManagerPageSettings_Template) property in the [FileManagerPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerPageSettings.html) allows you to insert custom UI elements, such as buttons or any HTML elements into the File Manager page settings. This offers greater flexibility and customization for the paging interface.
 
 ### How to navigate to particular page
 
 By invoking the [GoToPageAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_GoToPageAsync_System_Int32_) method within the pager template for the Blazor File Manager component, you can navigate to a specific page by passing the page number to the method.
 
-Below is an example on how to customize pagination in the Syncfusion<sup style="font-size:70%">&reg;</sup> File Manager by adding a custom button and using the [GoToPageAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_GoToPageAsync_System_Int32_) method in the pager template for specific page navigation.
+Below is an example on how to customize pagination in the Syncfusion<sup style="font-size:70%">&reg;</sup>  by adding a custom button and using the [GoToPageAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_GoToPageAsync_System_Int32_) method in the pager template for specific page navigation.
 
 ````cshtml
 @using Syncfusion.Blazor.FileManager;
