@@ -448,7 +448,7 @@ You can use the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 ```
 
-![Blazor Chat UI Template](./images/toolbar-template.png)
+![Blazor Chat UI Template.](./images/blazor-chat-template-toolbar.png)
 
 ### Item clicked
 
