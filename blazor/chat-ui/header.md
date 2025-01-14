@@ -35,7 +35,7 @@ You can use [ShowHeader](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ```
 
-![Blazor Chat UI ShowHeader](./images/show-header.png)
+![ShowHeader in Blazor Chat UI ShowHeader.](./images/blazor-chat-show-header.png)
 
 ### Setting header text
 
@@ -63,7 +63,7 @@ You can use the [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 
 ```
 
-![Blazor Chat UI HeaderText](./images/header-text.png)
+![Setting header text in Blazor Chat UI.](./images/blazor-chat-header-text.png)
 
 ### Setting header icon CSS
 
@@ -91,7 +91,7 @@ You can use the [HeaderIconCss](https://help.syncfusion.com/cr/blazor/Syncfusion
 
 ```
 
-![Blazor Chat UI HeaderIconCss](./images/header-iconCss.png)
+![header icon CSS in Blazor Chat UI.](./images/blazor-chat-header-iconCss.png)
 
 ## Toolbar
 
@@ -133,7 +133,7 @@ You can customize the header toolbar icons by using the [IconCss](https://help.s
 
 ```
 
-![Blazor Chat UI IconCss](./images/toolbar-iconCss.png)
+![Adding icon CSS in Blazor Chat UI.](./images/blazor-chat-adding-iconCss.png)
 
 #### Setting item type
 
@@ -169,7 +169,7 @@ In the following example, header toolbar item type is set as `Button`.
 
 ```
 
-![Blazor Chat UI ItemType](./images/item-type.png)
+![Item type in Blazor Chat UI.](./images/blazor-chat-item-type.png)
 
 #### Setting text
 
@@ -203,7 +203,7 @@ You can use the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.I
 
 ```
 
-![Blazor Chat UI Text](./images/toolbar-text.png)
+![setting Text Blazor Chat UI.](./images/blazor-chat-text-toolbar.png)
 
 #### Show or hide toolbar item
 
@@ -238,7 +238,7 @@ You can use the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ```
 
-![Blazor Chat UI Visible](./images/toolbar-visible.png)
+![Visible toolbar item in Blazor Chat UI.](./images/blazor-chat-visible-toolbar.png)
 
 #### Setting disabled
 
@@ -273,7 +273,7 @@ You can use the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 ```
 
-![Blazor Chat UI Disabled](./images/toolbar-disable.png)
+![Disabled setting in Blazor Chat UI.](./images/blazor-chat-disabled-toolbar.png)
 
 #### Setting tooltip text
 
@@ -350,7 +350,7 @@ You can use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 ```
 
-![Blazor Chat UI CssClass](./images/toolbar-cssclass.png)
+![Setting CSS class in Blazor Chat UI.](./images/blazor-chat-cssclass-toolbar.png)
 
 #### Enabling tab key navigation in toolbar
 
@@ -448,7 +448,7 @@ You can use the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 ```
 
-![Blazor Chat UI Template](./images/toolbar-template.png)
+![Template setting in Blazor Chat UI.](./images/blazor-chat-template-toolbar.png)
 
 ### Item clicked
 
