@@ -37,7 +37,7 @@ You can use the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.I
 
 ```
 
-![Configure messages in Blazor Chat UI.](./images/blazor-chat-Configure-messages.png)
+![Configure messages in Blazor Chat UI.](./images/blazor-chat-configure-messages.png)
 
 ### Define current user
 
@@ -94,7 +94,7 @@ You can use the [AvatarUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 ```
 
-![Blazor Chat UI Setting avatar URL.](./images/blazor-chat-avatar-url.png)
+![Blazor Chat UI setting avatar URL.](./images/blazor-chat-avatar-url.png)
 
 #### Setting avatar background color
 
@@ -157,7 +157,7 @@ You can use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 ```
 
-![CSS class in Blazor Chat UI.](./images/blazor-chat-CSSclass.png)
+![CSS class in Blazor Chat UI.](./images/blazor-chat-CSS-class.png)
 
 ### Define timestamp
 
@@ -213,7 +213,7 @@ You can use the [TimestampFormat](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 ```
 
-![TimestampFormat in Blazor Chat UI.](./images/blazor-chat-timestamp-format.png)
+![Timestampformat in Blazor Chat UI.](./images/blazor-chat-timestamp-format.png)
 
 ### Define message status
 
@@ -251,7 +251,7 @@ You can use the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ```
 
-![Blazor Chat UI IconCss status.](./images/blazor-chat-iconCss-status.png)
+![Blazor Chat UI icon Css status.](./images/blazor-chat-icon-Css-status.png)
 
 #### Setting text
 
@@ -379,4 +379,4 @@ You can use the [Suggestions](https://help.syncfusion.com/cr/blazor/Syncfusion
 
 ```
 
-![Blazor Chat UI Suggestions.](./images/blazor-chat-suggestions.png)
+![Blazor Chat UI suggestions.](./images/blazor-chat-suggestions.png)
