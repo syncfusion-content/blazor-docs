@@ -779,9 +779,9 @@ Below example demonstrates the usages of `DisplayOptions` property to control th
 {% endhighlight %}
 {% endtabs %}
 
-![ Blazor Ribbon display-options classic.](./images/items/blazor-ribbon-displayoption-classic.png)
+![ Blazor Ribbon display options classic.](./images/items/blazor-ribbon-display-option-classic.png)
 
-![Blazor Ribbon Display Options Simplified and Overflow.](./images/items/blazor-ribbon-displayoption-simp-overflow.png)
+![Blazor Ribbon display options simplified and overflow.](./images/items/blazor-ribbon-display-option-simp-overflow.png)
 
 ## Enable/Disable items
 

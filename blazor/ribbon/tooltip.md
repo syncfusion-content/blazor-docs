@@ -204,4 +204,4 @@ You can use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Ribbon tooltip template.](./images/tooltip/blazor-ribbon-tooltip-emplate.png)
+![Blazor Ribbon tooltip template.](./images/tooltip/blazor-ribbon-tooltip-template.png)
