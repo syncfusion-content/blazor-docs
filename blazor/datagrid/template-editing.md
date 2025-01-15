@@ -1218,7 +1218,7 @@ In the following sample, the add, edit and save operations of dialog editing are
                                 <span>Employee Image</span>
                             </td>
                             <td>
-                                <div class="image"><img class="upload-image" style="margin-top: 10px;margin-left: -50px;" src="@Employee.Imagesrc" /></div>
+                                <div class="image"><img class="upload-image" style="margin-top: 10px;margin-left: -50px;" src="@Employee.ImageUrl" /></div>
                             </td>
                         </tr>
                         <tr>
@@ -1252,10 +1252,10 @@ In the following sample, the add, edit and save operations of dialog editing are
     <GridColumns>
         <GridColumn Field=@nameof(EmployeeDetails.EmployeeID) HeaderText="Employee ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true})" TextAlign="@TextAlign.Right" Width="140"></GridColumn>
         <GridColumn Field=@nameof(EmployeeDetails.EmployeeName) HeaderText="Employee Name" Width="140"></GridColumn>
-        <GridColumn Field="Imagesrc" HeaderText="Employee Image" Width="200">
+        <GridColumn Field="ImageUrl" HeaderText="Employee Image" Width="200">
             <Template>
                 @{
-                    var imageUrl = (context as EmployeeDetails).Imagesrc;
+                    var imageUrl = (context as EmployeeDetails).ImageUrl;
                     <div class="image">
                         <img src="@imageUrl" />
                     </div>
@@ -1288,7 +1288,7 @@ In the following sample, the add, edit and save operations of dialog editing are
     }
     public void RowUpdatingHandler(RowUpdatingEventArgs<EmployeeDetails> args)
     {
-       args.Data.Imagesrc = "scripts/Images/Employees/" + UploadedFile;
+       args.Data.ImageUrl = "scripts/Images/Employees/" + UploadedFile;
     }
     public void OnChange(UploadChangeEventArgs args)
     {
@@ -1313,14 +1313,14 @@ In the following sample, the add, edit and save operations of dialog editing are
             {
                 EmployeeID = x,
                 EmployeeName = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-                Imagesrc = "scripts/Images/Employees/" + x + ".png",
+                ImageUrl = "scripts/Images/Employees/" + x + ".png",
             }).ToList();
     }
     public class EmployeeDetails
     {
         public int EmployeeID { get; set; }
         public string EmployeeName { get; set; }
-        public string Imagesrc { get; set; }
+        public string ImageUrl { get; set; }
     }
     public class fileInfo
     {
