@@ -62,4 +62,4 @@ The help pane is dedicated area where the users can define help contents like co
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Ribbon Help Pane Template.](./images/blazor-ribbon-helppane.png)
+![Blazor Ribbon help pane template.](./images/blazor-ribbon-helppane.png)

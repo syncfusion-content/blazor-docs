@@ -63,7 +63,7 @@ Below example demonstrates how to configure a Button item including it's events
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Ribbon Button Item.](./images/items/blazor-ribbon-button-item.png)
+![Blazor Ribbon button item.](./images/items/blazor-ribbon-button-item.png)
 
 ## Checkbox item
 
@@ -126,7 +126,7 @@ Below example demonstrates how to configure a Checkbox item including it's event
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Ribbon Checkbox Item.](./images/items/blazor-ribbon-checkbox-item.png)
+![Blazor Ribbon checkbox item.](./images/items/blazor-ribbon-checkbox-item.png)
 
 ## DropDownButton item
 
@@ -211,7 +211,7 @@ Below example demonstrates how to configure a DropDownButton item including it's
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Ribbon DropDown Item.](./images/items/blazor-ribbon-dropdown-item.png)
+![Blazor Ribbon dropdown item.](./images/items/blazor-ribbon-dropdown-item.png)
 
 ## SplitButton item
 
@@ -300,7 +300,7 @@ Below example demonstrates how to configure a SplitButton item including it's ev
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Ribbon SplitButton Item.](./images/items/blazor-ribbon-splitbutton-item.png)
+![Blazor Ribbon splitbutton item.](./images/items/blazor-ribbon-splitbutton-item.png)
 
 ## Combobox item
 
@@ -415,7 +415,7 @@ Below example demonstrates how to configure a Combobox item including it's event
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Ribbon Combobox Item.](./images/items/blazor-ribbon-combobox-item.png)
+![Blazor Ribbon combobox item.](./images/items/blazor-ribbon-combobox-item.png)
 
 ## Colorpicker item
 
@@ -493,7 +493,7 @@ Below example demonstrates how to configure a Colorpicker item including it's ev
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Ribbon Colorpicker Item.](./images/items/blazor-ribbon-colorpicker-item.png)
+![Blazor Ribbon colorpicker item.](./images/items/blazor-ribbon-colorpicker-item.png)
 
 ## GroupButton item
 
@@ -617,7 +617,7 @@ Below example demonstrates how to configure a GroupButton item with both selecti
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Ribbon GroupButton Item.](./images/items/blazor-ribbon-groupbutton-item.png)
+![Blazor Ribbon groupbutton item.](./images/items/blazor-ribbon-groupbutton-item.png)
 
 ## Custom item
 
@@ -693,7 +693,7 @@ The Ribbon supports rendering non-built-in items or your own HTML content by set
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Ribbon Custom Item.](./images/items/blazor-ribbon-custom-item.png)
+![Blazor Ribbon custom item.](./images/items/blazor-ribbon-custom-item.png)
 
 ## Items display mode
 
@@ -779,7 +779,7 @@ Below example demonstrates the usages of `DisplayOptions` property to control th
 {% endhighlight %}
 {% endtabs %}
 
-![ Blazor Ribbon Display Options Classic.](./images/items/blazor-ribbon-displayoption-classic.png)
+![ Blazor Ribbon display-options classic.](./images/items/blazor-ribbon-displayoption-classic.png)
 
 ![Blazor Ribbon Display Options Simplified and Overflow.](./images/items/blazor-ribbon-displayoption-simp-overflow.png)
 
@@ -840,4 +840,4 @@ You can use the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Ribbon Item Disabled.](./images/items/blazor-ribbon-disabled-item.png)
+![Blazor Ribbon disabled item.](./images/items/blazor-ribbon-disabled-item.png)
