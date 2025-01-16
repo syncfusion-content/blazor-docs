@@ -35,7 +35,7 @@ You can use [ShowHeader](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ```
 
-![Blazor Chat UI ShowHeader](./images/show-header.png)
+![Blazor Chat UI show header](./images/blazor-chat-show-header.png)
 
 ### Setting header text
 
@@ -448,7 +448,7 @@ You can use the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 ```
 
-![Blazor Chat UI Template.](./images/blazor-chat-template-toolbar.png)
+![Blazor Chat UI template.](./images/blazor-chat-toolbar-template.png)
 
 ### Item clicked
 

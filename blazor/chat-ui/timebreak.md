@@ -35,7 +35,7 @@ You can use the [ShowTimeBreak](https://help.syncfusion.com/cr/blazor/Syncfusion
 
 ```
 
-![Show timeBreak in Blazor Chat UI.](./images/blazor-chat-timebreak.png)
+![Blazor Chat UI show time break.](./images/blazor-chat-time-break.png)
 
 ## Time break template
 

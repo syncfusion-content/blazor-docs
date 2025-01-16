@@ -38,7 +38,7 @@ The typing users are the [UserModel](https://help.syncfusion.com/cr/blazor/Syncf
 
 ```
 
-![Show typing indicator in Blazor Chat UI.](./images/blazor-chat-typinguser.png)
+![Blazor Chat UI typing users.](./images/blazor-chat-typinguser.png)
 
 ## Typing indicator template 
 
