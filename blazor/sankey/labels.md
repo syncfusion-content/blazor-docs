@@ -93,7 +93,7 @@ Labels are included within the node configuration and can be tailored using `San
 
 In this example, labels are defined for each node with specific `SankeyLabelSettings` to determine their visual style. The settings include font color, weight, size, and style, ensuring labels contribute to both functional clarity and aesthetic quality.
 
-![Blazor Sankey Labels.](images/labels/blazor-sankey-labels.png)
+![Blazor Sankey labels.](images/labels/blazor-sankey-labels.png)
 
 ## Customizing Label Appearance
 
