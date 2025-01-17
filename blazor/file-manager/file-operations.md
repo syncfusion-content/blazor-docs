@@ -697,7 +697,7 @@ The following example demonstrates how to define custom sort comparer function t
 @* SfFileManager component with a custom sorting SortComparer property *@
 <SfFileManager TValue="FileManagerDirectoryContent" SortComparer="new NaturalSortComparer()">
     <FileManagerEvents TValue="FileManagerDirectoryContent" OnRead="OnReadAsync"></FileManagerEvents>
-    @* FileManagerDetailsViewSettings component for configuring the details view of the FileManager *@
+    @* FileManagerDetailsViewSettings component for configuring the details view of the File Manager *@
     <FileManagerDetailsViewSettings>
         <FileManagerColumns>
             @* FileManagerColumn for the 'Name' field with a custom sorting SortComparer property *@

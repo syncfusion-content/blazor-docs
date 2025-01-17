@@ -76,7 +76,7 @@ Use the following command to install the NuGet package in an application.
 
 ```
 
- dotnet add package Syncfusion.EJ2.File Manager.AzureFileProvider.AspNet.Core
+ dotnet add package Syncfusion.EJ2.FileManager.AzureFileProvider.AspNet.Core
 
 ```
 
