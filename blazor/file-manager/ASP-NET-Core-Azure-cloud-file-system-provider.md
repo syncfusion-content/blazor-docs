@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Azure cloud provider in Blazor FileManager Component | Syncfusion
-description: Checkout and learn here all about ASP.NET Core Azure cloud file system provider in Syncfusion Blazor FileManager component and more.
+title: Azure cloud provider in Blazor File Manager Component | Syncfusion
+description: Checkout and learn here all about ASP.NET Core Azure cloud file system provider in Syncfusion Blazor File Manager component and more.
 platform: Blazor
 control: File Manager
 documentation: ug
@@ -17,7 +17,7 @@ git clone https://github.com/SyncfusionExamples/ej2-azure-aspcore-file-provider 
 
 ```
 
-After cloning, just open the project in Visual Studio and restore the NuGet packages. Now, you need to register the Azure storage by passing details like name, password, and blob name to the Register Azure method in the FileManager controller.
+After cloning, just open the project in Visual Studio and restore the NuGet packages. Now, you need to register the Azure storage by passing details like name, password, and blob name to the Register Azure method in the File Manager controller.
 
 ```csharp
 
@@ -40,7 +40,7 @@ public AzureProviderController(IHostingEnvironment hostingEnvironment)
 
 ```
 
-N> Also, **blobPath** is a container path in Azure Blob Storage, and **filePath** is the file location path. For example, create a **files** container in the mentioned Azure blob storage. Inside that container, create a new folder, **Files** which includes all files and folders that need to be viewed in FileManager. Check out the below path for an example.
+N> Also, **blobPath** is a container path in Azure Blob Storage, and **filePath** is the file location path. For example, create a **files** container in the mentioned Azure blob storage. Inside that container, create a new folder, **Files** which includes all files and folders that need to be viewed in File Manager. Check out the below path for an example.
 
 ```csharp
 
@@ -52,7 +52,7 @@ public AzureProviderController(IHostingEnvironment hostingEnvironment)
 
 ``` 
 
-After setting the blob container references, just build and run the project. Now, the project will be hosted in `http://localhost:{port}:{port}` and just mapping the **ajaxSettings** property of the FileManager component to the appropriate controller methods allows to manage the Azure blob storage.
+After setting the blob container references, just build and run the project. Now, the project will be hosted in `http://localhost:{port}:{port}` and just mapping the [**ajaxSettings**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html) property of the File Manager component to the appropriate controller methods allows to manage the Azure blob storage.
 
 ```cshtml
 
