@@ -327,7 +327,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid allows you to customiz
 
 > For all filter types other than FilterBar, filtering parameters will be sent in the form of `PredicateModel<T>`. Here, T represents the type of `ForeignKeyValue` property when using the foreignkey column.
 
-In this example, a DropDownList component is rendered as the filter UI for the **“EmployeeID”** foreign key column. The  **DataSource** property of the `SfDropDownList` component is set to the employees data, and the Fields property is configured to display the **FirstName** field as the text and EmployeeID field as the value. The `value` property is set to the current filter value of the column.
+In this example, a DropDownList component is rendered as the filter UI for the **“EmployeeID”** foreign key column. The  **DataSource** property of the `SfDropDownList` component is set to the employees data, and the Fields property is configured to display the **FirstName** field as the text and **EmployeeID** field as the value. The `value` property is set to the current filter value of the column.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

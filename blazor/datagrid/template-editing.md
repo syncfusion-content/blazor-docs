@@ -1086,7 +1086,7 @@ To bind and edit complex objects, you can render desired HTML editor elements or
 @using Syncfusion.Blazor.Inputs
 
 <SfGrid DataSource="@EmployeeData" Toolbar="@(new string[] { "Add", "Edit", "Delete", "Update", "Cancel" })">
-    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="Syncfusion.Blazor.Grids.EditMode.Dialog">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Dialog">
         <Template>
             @{
                 var Employee = (context as EmployeeDetails);
