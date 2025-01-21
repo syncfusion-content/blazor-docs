@@ -217,7 +217,7 @@ namespace TreeGridComponent. Data
 
 Apart from using default validation and custom validation, there are cases where you might want to use your validator component to validate the tree grid edit form. Such cases can be achieved using the `Validator` property of the `TreeGridEditSettings` component which accepts a validation component and inject it inside the `EditForm` of the tree grid. Inside the `Validator` , you can access the data using the implicit named parameter context which is of type [ValidatorTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ValidatorTemplateContext.html).
 
-For creating a form validator component you can refer [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/forms/?view=aspnetcore-8.0#validator-components).
+For creating a form validator component you can refer [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/forms-and-input-components?view=aspnetcore-5.0#validator-components).
 
 In the below code example, the following things have been done.
 
