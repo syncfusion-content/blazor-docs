@@ -15,7 +15,7 @@ To get started quickly with validation in the Blazor In-place Editor, watch the 
 
 {% youtube "youtube:https://www.youtube.com/watch?v=Pg3hrFZVdyM"%}
 
-Refer to the following link for more details,[EditForm Validation](https://learn.microsoft.com/en-us/aspnet/core/blazor/forms-and-input-components?view=aspnetcore-5.0). Validation for the `TextBox` is achieved in the following sample using the EditForm validation with a custom error message and validation rules.
+Refer to the following link for more details,[EditForm Validation](https://learn.microsoft.com/en-us/aspnet/core/blazor/forms/?view=aspnetcore-8.0). Validation for the `TextBox` is achieved in the following sample using the EditForm validation with a custom error message and validation rules.
 
 ```cshtml
 
