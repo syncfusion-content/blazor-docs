@@ -34,7 +34,7 @@ You can create a **Blazor Server App** or **Blazor WebAssembly App** using Visua
 
 You can create a **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
 
-Alternatively, you can create a Server or WebAssemly application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+Alternatively, you can create a Server or WebAssembly application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
 
 {% tabs %}
 
@@ -79,21 +79,21 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% tabcontent Visual Studio Code %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>`</kbd>(backtick) to open the integrated terminal in Visual Studio Code.
+* Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
 * Ensure you’re in the project root directory where your `.csproj` file is located.
 * Run the following command to install a [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package and ensure all dependencies are installed.
 
-{% tabs %}
+    {% tabs %}
 
-{% highlight c# tabtitle="Package command" %}
+    {% highlight c# tabtitle="Package command" %}
 
-dotnet add package Syncfusion.Blazor.Navigations -v 28.1.33
-dotnet add package Syncfusion.Blazor.Themes -v 28.1.33
-dotnet restore
+    dotnet add package Syncfusion.Blazor.Navigations -v 28.1.33
+    dotnet add package Syncfusion.Blazor.Themes -v 28.1.33
+    dotnet restore
 
-{% endhighlight %}
+    {% endhighlight %}
 
-{% endtabs %}
+    {% endtabs %}
 
 {% endtabcontent %}
 
