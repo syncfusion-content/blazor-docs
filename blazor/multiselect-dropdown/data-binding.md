@@ -75,7 +75,7 @@ In the following example, `Code.ID` column and `Country.CountryID` column from c
 
 ### Expando object binding
 
-Bind the [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-5.0) data to the MultiSelect component. In the following example, the `ExpandoObject` is bound to the collection of vehicles data.
+Bind the [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-8.0) data to the MultiSelect component. In the following example, the `ExpandoObject` is bound to the collection of vehicles data.
 
 {% highlight cshtml %}
 
@@ -99,7 +99,7 @@ Bind the [ObservableCollection](https://blazor.syncfusion.com/documentation/comm
 
 ### Dynamic object binding
 
-Bind the [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-5.0) data to the MultiSelect component. In the following example, the `DynamicObject` is bound to the collection of customer data.
+Bind the [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-8.0) data to the MultiSelect component. In the following example, the `DynamicObject` is bound to the collection of customer data.
 
 {% highlight cshtml %}
 
@@ -123,7 +123,7 @@ Convert the Enum data into a list of strings and bind it to the [DataSource](htt
 
 ### ValueTuple data binding
 
-Bind the [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-5.0) data to the MultiSelect component. The following code helps you to get a string value from the enumeration data by using [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-5.0).
+Bind the [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-8.0) data to the MultiSelect component. The following code helps you to get a string value from the enumeration data by using [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-8.0).
 
 {% highlight cshtml %}
 
