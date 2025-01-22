@@ -7,52 +7,84 @@ control: DataGrid
 documentation: ug
 ---
 
-# Column Validation in Blazor DataGrid Component
+# Validation in Blazor DataGrid component
 
-Column validation allows you to validate the edited or added row data and it display errors for invalid fields before saving data. DataGrid uses **Form Validator** library for column validation. You can set validation rules by defining the [ValidationRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ValidationRules).
+Validation is a crucial aspect of data integrity in any application. The Blazor Grid component in Syncfusion provides built-in support for easy and effective data validation. This feature ensures that the data entered or modified adheres to predefined rules, preventing errors and guaranteeing the accuracy of the displayed information.
 
-N> Validation in datagrid works based on the Microsoft Blazor EditForm behavior. So once the validation message is shown then it will be again validated only during the form submit or when you focus out from that particular field. Refer the [Microsoft Validation](https://learn.microsoft.com/en-us/aspnet/core/blazor/forms-and-input-components?view=aspnetcore-5.0#data-annotations-validator-component-and-custom-validation) for further reference.
+## Column validation
 
-```cshtml
+Column validation allows you to validate the edited or added row data before saving it. This feature is particularly useful when you need to enforce specific rules or constraints on individual columns to ensure data integrity. By applying validation rules to columns, you can display error messages for invalid fields and prevent the saving of erroneous data. This feature leverages the **Form Validator** library to perform the validation. You can define validation rules using the [GridColumn.ValidationRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ValidationRules) property to specify the criteria for validating column values.
+
+> Validation in datagrid works based on the Microsoft Blazor EditForm behavior. So once the validation message is shown then it will be again validated only during the form submit or when you focus out from that particular field. Refer the [Microsoft Validation](https://learn.microsoft.com/en-us/aspnet/core/blazor/forms/validation?view=aspnetcore-5.0#data-annotations-validator-component-and-custom-validation) for further reference.
+
+The following code example demonstrates how to define a validation rule for grid column:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Orders" Height="315" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
-    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
+<SfGrid DataSource="@OrderData" Toolbar="@(new List<string>() { "Add", "Edit","Delete", "Update", "Cancel" })">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal"></GridEditSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required= true })" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="120" ValidationRules="@(new ValidationRules{ Required= true, MinLength = 3 })"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true, Min=1})" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required=true, MinLength=3})" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" ValidationRules="@(new ValidationRules{ Required=true, Min=1, Max=1000})" Format="C2" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.OrderDate) HeaderText="Order Date" EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipCountry) HeaderText="Ship Country" EditType="EditType.DropDownEdit" Width="150"></GridColumn>
     </GridColumns>
 </SfGrid>
-
-@code{
-    public List<Order> Orders { get; set; }
-
+@code {
+    public List<OrderDetails> OrderData { get; set; }
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
-    }
-
-    public class Order
-    {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
+        OrderData = OrderDetails.GetAllRecords();
     }
 }
-```
+{% endhighlight %}
+{% highlight c# tabtitle="OrderDetails.cs" %}
+public class OrderDetails
+{
+    public static List<OrderDetails> Order = new List<OrderDetails>();
+    public OrderDetails(int OrderID, string CustomerID, double Freight, string ShipCountry, DateTime OrderDate)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;
+        this.Freight = Freight;
+        this.ShipCountry = ShipCountry;
+        this.OrderDate = OrderDate;
+    }
+    public static List<OrderDetails> GetAllRecords()
+    {
+        if (Order.Count == 0)
+        {
+            Order.Add(new OrderDetails(10248, "VINET", 32.38, "France", new DateTime(1996, 7, 4)));
+            Order.Add(new OrderDetails(10249, "TOMSP", 11.61, "Germany", new DateTime(1996, 7, 5)));
+            Order.Add(new OrderDetails(10250, "HANAR", 65.83, "Brazil", new DateTime(1996, 7, 8)));
+            Order.Add(new OrderDetails(10251, "VICTE", 41.34, "France", new DateTime(1996, 7, 8)));
+            Order.Add(new OrderDetails(10252, "SUPRD", 51.3, "Belgium", new DateTime(1996, 7, 9)));
+            Order.Add(new OrderDetails(10253, "HANAR", 58.17, "Brazil", new DateTime(1996, 7, 10)));
+            Order.Add(new OrderDetails(10254, "CHOPS", 22.98, "Switzerland", new DateTime(1996, 7, 11)));
+            Order.Add(new OrderDetails(10255, "RICSU", 148.33, "Switzerland", new DateTime(1996, 7, 12)));
+            Order.Add(new OrderDetails(10256, "WELLI", 13.97, "Brazil", new DateTime(1996, 7, 15)));
+            Order.Add(new OrderDetails(10257, "HILAA", 81.91, "Venezuela", new DateTime(1996, 7, 16)));
+            Order.Add(new OrderDetails(10258, "ERNSH", 140.51, "Austria", new DateTime(1996, 7, 17)));
+            Order.Add(new OrderDetails(10259, "CENTC", 3.25, "Mexico", new DateTime(1996, 7, 18)));
+            Order.Add(new OrderDetails(10260, "OTTIK", 55.09, "Germany", new DateTime(1996, 7, 19)));
+            Order.Add(new OrderDetails(10261, "QUEDE", 3.05, "Brazil", new DateTime(1996, 7, 19)));
+            Order.Add(new OrderDetails(10262, "RATTC", 48.29, "USA", new DateTime(1996, 7, 22)));
+        }
+        return Order;
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCountry { get; set; }
+    public DateTime OrderDate { get; set; }
+}
+{% endhighlight %}
+{% endtabs %}
 
-The following screenshot represents the Column Validation in Normal Editing.
-
-![Blazor DataGrid with Validation in Editing](./images/blazor-datagrid-validation-in-editing.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXVyjCrhrHDetIYc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Data annotation
 
@@ -66,104 +98,128 @@ More information on the data annotation can be found in this [documentation](htt
 
 ## Custom validation
 
-Custom Validation allows the users to customize the validations manually according to the user's criteria.
+Custom Validation allows the users to customize the validations manually according to the individuals criteria.
 
 Custom Validation can be used by overriding the IsValid method inside the class inherits the Validation Attribute. All the validations are done inside the IsValid method.
 
-The following sample code demonstrates custom validations implemented in the fields EmployeeID and Freight.
+The following sample code demonstrates custom validations implemented in the fields **EmployeeID** and **Freight**.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids;
-@using System.ComponentModel.DataAnnotations;
-@using System.Text.RegularExpressions;
 
-<SfGrid DataSource="EmployeeList" AllowPaging="true" Toolbar="toolbar">
-    <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true"></GridEditSettings>
+<SfGrid DataSource="OrderData" Toolbar="@(new List<string>() { "Add", "Edit","Delete", "Update", "Cancel" })">
+    <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode="EditMode.Normal"></GridEditSettings>
     <GridColumns>
-        <GridColumn Field="@nameof(EmployeeDetails.OrderID)" HeaderText="Order ID" TextAlign="TextAlign.Right" IsPrimaryKey="true" > </GridColumn>
-        <GridColumn Field="@nameof(EmployeeDetails.CustomerName)" HeaderText="Customer Name" TextAlign="TextAlign.Left"> </GridColumn>
-        <GridColumn Field="@nameof(EmployeeDetails.EmployeeID)" HeaderText="Employee ID" TextAlign="TextAlign.Right"> </GridColumn>
-        <GridColumn Field="@nameof(EmployeeDetails.Freight)" HeaderText="Freight" TextAlign="TextAlign.Right" Format="C2"> </GridColumn>
-        <GridColumn Field="@nameof(EmployeeDetails.ShipCity)" HeaderText="Ship City" TextAlign="TextAlign.Left"> </GridColumn>
-        <GridColumn Field="@nameof(EmployeeDetails.ShipName)" HeaderText="Ship Name" TextAlign="TextAlign.Left"> </GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" IsPrimaryKey="true" ></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer Name"> </GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.EmployeeID) HeaderText="Employee ID" TextAlign="TextAlign.Right"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Format="C2"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipCountry) HeaderText="Ship Country" EditType="EditType.DropDownEdit" Width="150"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code
-{
-    List<EmployeeDetails> EmployeeList;
-    string[] toolbar = new string[] { "Add", "Edit", "Delete", "Update", "Cancel" };
+@code{
+    public List<OrderDetails> OrderData { get; set; }
     protected override void OnInitialized()
     {
-        base.OnInitialized();
-        EmployeeList = Enumerable.Range(1, 20).Select(x => new EmployeeDetails()
-        {
-            OrderID = 10240 + x,
-            CustomerName = new string[] { "VINET", "TOSMP", "HANAR", "VICTE" }[new Random().Next(4)],
-            EmployeeID = x,
-            Freight = new float[] { 32.28f, 22.90f, 30.99f, 50.52f }[new Random().Next(4)],
-            ShipCity = new string[] { "Reims", "Munster", "Rio de Janeir", "Lyon" }[new Random().Next(4)],
-            ShipName = new string[] { "Vins et alocools chevalie", "Toms Spezialitaten", "Hanari Carnes", "Supremes delices" }[new Random().Next(4)]
-        }).ToList();
+        OrderData = OrderDetails.GetAllRecords();
     }
-    public class EmployeeDetails
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderDetails.cs" %}
+public class OrderDetails
+{
+    public static List<OrderDetails> Order = new List<OrderDetails>();
+    public OrderDetails(int OrderID, string CustomerID, double Freight, string ShipCountry, int EmployeeID)
     {
-        [Required]
-        public int? OrderID { get; set; }
-        public string CustomerName { get; set; }
-        [CustomValidationEmployeeID]
-        public int EmployeeID { get; set; }
-        [CustomValidationFreight]
-        public float Freight { get; set; }
-        public string ShipCity { get; set; }
-        public string ShipName { get; set; }
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;
+        this.Freight = Freight;
+        this.ShipCountry = ShipCountry;
+        this.EmployeeID = EmployeeID;
     }
-    public class CustomValidationEmployeeID : ValidationAttribute
+    public static List<OrderDetails> GetAllRecords()
     {
-        protected override ValidationResult IsValid(object value, ValidationContext validationContext)
+        if (Order.Count == 0)
         {
-            if (value != null)
+            Order.Add(new OrderDetails(10248, "VINET", 32.38, "France", 5));
+            Order.Add(new OrderDetails(10249, "TOMSP", 11.61, "Germany", 6));
+            Order.Add(new OrderDetails(10250, "HANAR", 65.83, "Brazil", 4));
+            Order.Add(new OrderDetails(10251, "VICTE", 41.34, "France", 3));
+            Order.Add(new OrderDetails(10252, "SUPRD", 51.3, "Belgium", 4));
+            Order.Add(new OrderDetails(10253, "HANAR", 58.17, "Brazil", 3));
+            Order.Add(new OrderDetails(10254, "CHOPS", 22.98, "Switzerland", 5));
+            Order.Add(new OrderDetails(10255, "RICSU", 148.33, "Switzerland", 9));
+            Order.Add(new OrderDetails(10256, "WELLI", 13.97, "Brazil", 3));
+            Order.Add(new OrderDetails(10257, "HILAA", 81.91, "Venezuela", 4));
+            Order.Add(new OrderDetails(10258, "ERNSH", 140.51, "Austria", 1));
+            Order.Add(new OrderDetails(10259, "CENTC", 3.25, "Mexico", 4));
+            Order.Add(new OrderDetails(10260, "OTTIK", 55.09, "Germany", 4));
+            Order.Add(new OrderDetails(10261, "QUEDE", 3.05, "Brazil", 4));
+            Order.Add(new OrderDetails(10262, "RATTC", 48.29, "USA", 8));
+        }
+        return Order;
+    }
+    [Required]
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    [CustomValidationFreight]
+    public double Freight { get; set; }
+    public string ShipCountry { get; set; }
+    [CustomValidationEmployeeID]
+    public int EmployeeID { get; set; }
+}
+
+public class CustomValidationEmployeeID : ValidationAttribute
+{
+    protected override ValidationResult IsValid(object value, ValidationContext validationContext)
+    {
+        if (value != null)
+        {
+            int EmployeeIdValue = Convert.ToInt32(value);
+            if (EmployeeIdValue >= 1)
             {
-                int employeeID = Convert.ToInt16(value);
-                if (employeeID >= 1)
-                {
-                    return ValidationResult.Success;
-                }
-                else
-                {
-                    return new ValidationResult("Employee ID value should be greater than zero");
-                }
+                return ValidationResult.Success;
             }
             else
             {
-                return new ValidationResult("Employee ID value is required");
+                return new ValidationResult("Employee ID value should be greater than zero");
             }
         }
-    }
-    public class CustomValidationFreight : ValidationAttribute
-    {
-        protected override ValidationResult IsValid(object value, ValidationContext validationContext)
+        else
         {
-            if (value != null)
-            {
-                float freight = (float)value;
-                if (freight >= 1 && freight <= 10000)
-                {
-                    return ValidationResult.Success;
-                }
-                else
-                {
-                    return new ValidationResult("Freight value should between 1 and 10,000");
-                }
-            }
-            else
-            {
-                return new ValidationResult("Freight value  is required");
-            }
+            return new ValidationResult("Employee ID value is required");
         }
     }
 }
-```
+
+public class CustomValidationFreight : ValidationAttribute
+{
+    protected override ValidationResult IsValid(object value, ValidationContext validationContext)
+    {
+        if (value != null)
+        {
+            double FreightValue = Convert.ToDouble(value);
+            if (FreightValue >= 1 && FreightValue <= 10000)
+            {
+                return ValidationResult.Success;
+            }
+            else
+            {
+                return new ValidationResult("Freight value should be between 1 and 10,000");
+            }
+        }
+        else
+        {
+            return new ValidationResult("Freight value is required");
+        }
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrojMBhUyZJfcXd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Validate complex column using data annotation attribute
 
