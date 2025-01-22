@@ -13,7 +13,7 @@ Batch editing is a powerful feature in the Grid component that allows you to edi
 
 In batch edit mode, when you double-click on a grid cell, the target cell changes to an editable state. You can perform bulk update of the added, changed, and deleted data by either clicking on the toolbar's **Update** button or by externally invoking the [ApplyBatchChangesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ApplyBatchChangesAsync_Syncfusion_Blazor_Grids_BatchChanges__0__) method.
 
-To enable batch editing mode, you need to set the [EditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property to **Batch**. This property determines the editing mode of the Grid and allows you to activate the batch editing feature.
+To enable batch editing mode, you need to set the [GridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property to **Batch**. This property determines the editing mode of the Grid and allows you to activate the batch editing feature.
 
 Here's an example how to enable batch editing in the blazor grid component:
 
@@ -105,7 +105,7 @@ In the following example, the **TotalCost** column value is updated based on cha
         </GridColumn>
         <GridColumn Field="@nameof(ProductDetails.UnitPrice)" HeaderText="Unit Price" Width="150" TextAlign="TextAlign.Right" ValidationRules="@(new ValidationRules { Required = true, Min = 1 })" Format="C2"></GridColumn>
         <GridColumn Field="@nameof(ProductDetails.UnitsInStock)" HeaderText="Units In Stock" Width="150" TextAlign="TextAlign.Right" ValidationRules="@(new ValidationRules { Required = true, Min = 1 })"></GridColumn>
-        <GridColumn Field="@nameof(ProductDetails.TotalCost)" HeaderText="Total Cost" Width="150" AllowEditing="false" Format="C2" TextAlign="TextAlign.Right">
+        <GridColumn Field="@nameof(ProductDetails.TotalCost)" HeaderText="Total Cost" Width="150" AllowEditing="false" AllowAdding="false" Format="C2" TextAlign="TextAlign.Right">
             <Template>
                 @{
                     var Order = (context as ProductDetails);
@@ -193,7 +193,7 @@ public class ProductDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZryNCCGTyYUaXZA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjrejMhCfPQMlvUW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Cancel edit based on condition
 
@@ -598,7 +598,7 @@ public class OrderDetails
 
 You can prevent editing of specific cells based on certain conditions in the Grid component. This feature is useful when you want to restrict editing for certain cells, such as read-only data, calculated values, or protected information. It helps maintain data integrity and ensures that only authorized changes can be made in the grid.
 
-To disable editing for a particular cell in batch mode, use the [OnCellEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnCellEdit) event of the grid. You can then use the **args.cancel** property and set it to **true**  to prevent editing for that cell.
+To disable editing for a particular cell in batch mode, use the [OnCellEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnCellEdit) event of the grid. You can then use the **args.Cancel** property and set it to **true**  to prevent editing for that cell.
 
 Here's an example demonstrating how you can disable editing for cells containing the value **France** using the `OnCellEdit` event:
 
@@ -624,7 +624,7 @@ Here's an example demonstrating how you can disable editing for cells containing
     }
     public void CellEditHandler(CellEditArgs<OrderDetails> args)
     {
-        if (args.Data.ShipCountry == "France") 
+        if (args.Data.ShipCountry == "France" && args.Column.Field == "ShipCountry")
         {
             args.Cancel = true;
         }
@@ -672,7 +672,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXrejWLDgfnZGnIW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBoZshVWCZLddwb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Save or update the changes immediately
 
@@ -885,7 +885,8 @@ In the following example:
     private int LatestOrderID { get; set; } = 101;
     public void BeforeAdd(BeforeBatchAddArgs<OrderDetails> args)
     {
-        args.DefaultData = new OrderDetails(101, "HANAR", 33, "Brazil", new DateTime(1999, 8, 7));
+        args.DefaultData = new OrderDetails(LatestOrderID, "HANAR", 33, "Brazil", new DateTime(1999, 8, 7));
+        LatestOrderID += 1;
     }
     public void CellEdit(CellEditArgs<OrderDetails> args)
     {
@@ -941,7 +942,7 @@ public class OrderDetails
 
 ## How to perform bulk changes using a method
 
-To perform bulk changes, including adding, editing, and deleting records, you can utilize the [ApplyBatchChangesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ApplyBatchChangesAsync) method. This method streamlines the process of updating new, edited, and deleted records within the current page of the Grid. It is primarily designed to efficiently apply bulk changes all at once.
+To perform bulk changes, including adding, editing, and deleting records, you can utilize the [ApplyBatchChangesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ApplyBatchChangesAsync_Syncfusion_Blazor_Grids_BatchChanges__0__) method. This method streamlines the process of updating new, edited, and deleted records within the current page of the Grid. It is primarily designed to efficiently apply bulk changes all at once.
 
 When you make edits or add new records, these changes will be visually highlighted with green highlighting within the current view page. This visual cue provides you with the choice to either save or cancel the changes, allowing for a seamless and efficient management of bulk modifications.
 
@@ -1091,4 +1092,4 @@ window.selectContent = function () {
 }
 ```
 
-N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-select-text-in-a-cell-when-batch-editing)
+> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-select-text-in-a-cell-when-batch-editing)
