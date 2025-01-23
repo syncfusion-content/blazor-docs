@@ -15,7 +15,7 @@ In TreeView component, you can customise the appearance of each node with images
 
 ## Images in Blazor TreeView Component
 
-The Blazor TreeView component has the built-in option to customize each node's appearance with images by mapping the **ImageUrl** fields.
+The Blazor TreeView component has the built-in option to customize each node's appearance with images by mapping the [**ImageUrl**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_ImageUrl) fields.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -526,7 +526,7 @@ In the Blazor TreeView component, you can show or hide particular TreeView nodes
 
 ## Enable Tooltip in Blazor TreeView Component
 
-The TreeView control allows to set tooltip option to tree nodes using the **Tooltip** property. 
+The TreeView control allows to set tooltip option to tree nodes using the [**Tooltip**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_Tooltip) property. 
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

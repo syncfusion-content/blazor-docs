@@ -12,7 +12,7 @@ documentation: ug
 ListView can be customized as chat window. To achieve that, use the ListView `Template` .
 
 * The Listview template is used to showcase the ListView as chat window.
-* Avatar control is used to design the image of contact person.
+* Avatar component is used to design the image of contact person.
 
 ```cshtml
 <div class="flex item__container">

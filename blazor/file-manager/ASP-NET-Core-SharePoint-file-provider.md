@@ -1,7 +1,7 @@
 ---
 layout: post
-title: SharePoint provider in Blazor FileManager Component | Syncfusion
-description: Checkout and learn here all about SharePoint Provider in Syncfusion Blazor FileManager component and more.
+title: SharePoint provider in Blazor File Manager Component | Syncfusion
+description: Checkout and learn here all about SharePoint Provider in Syncfusion Blazor File Manager component and more.
 platform: Blazor
 control: File Manager
 documentation: ug
@@ -56,7 +56,7 @@ To set up the SharePoint service provider, follow these steps:
 }
 ```
 
-Replace "<--User Site Name-->", "<--User Drive ID-->", "tenantId", "clientId", and "clientSecret" with your actual values.
+Replace **<--User Site Name-->**, **<--User Drive ID-->**, **tenantId**, **clientId**, and **clientSecret** with your actual values.
 
 After configuring the SharePoint file provider, build and run the project. Now, the project will be hosted in `http://localhost:{port}` and just mapping the ajaxSettings property of the File Manager component to the appropriate controller methods allows to manage the files in the Microsoft SharePoint.
 
