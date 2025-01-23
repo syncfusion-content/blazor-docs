@@ -9,12 +9,12 @@ documentation: ug
 
 # Data labels in Blazor Maps Component
 
-This section shows how to customize the data labels in the Maps component. The below video demonstrates the same.
+Data labels provide information to users about the shapes of the Maps component. It can be enabled by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_Visible) property of the [MapsDataLabelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html) to **true**.
+
+The video below demonstrates how to customize data labels in the Maps component.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=fmLO0Ngj5CI"%}
-
-Data labels provide information to users about the shapes of the Maps component. It can be enabled by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_Visible) property of the [MapsDataLabelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html) to **true**.
 
 ## Adding data labels
 

@@ -888,7 +888,7 @@ On mouse over or touch end event, the tooltip is used to get more information ab
 
 ### Customization
 
-The below video demonstrates the customization of the tooltip in the Maps component.
+The video below demonstrates how to customize the tooltip in the Maps component.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=aWPvs__CDEQ"%}
