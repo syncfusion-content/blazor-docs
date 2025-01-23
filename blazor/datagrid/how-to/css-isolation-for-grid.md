@@ -64,4 +64,4 @@ Index.razor.css
 }
 ```
 
-N> You can get more information on CSS Isolation [here](https://docs.microsoft.com/en-us/aspnet/core/blazor/components/css-isolation?view=aspnetcore-5.0#child-component-support).
+N> You can get more information on CSS Isolation [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/css-isolation?view=aspnetcore-8.0#child-component-support).
