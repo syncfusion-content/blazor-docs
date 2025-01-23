@@ -11,6 +11,11 @@ documentation: ug
 
 Annotations are used to mark the specific area of interest in the Maps with texts, shapes, or images. Any number of annotations can be added to the Maps component.
 
+The video below demonstrates how to add and customize annotations in the Maps component.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=5VKuHxPwEbo"%}
+
 ## Annotation
 
 By using the `ContentTemplate` property of [MapsAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsAnnotation.html), text content or an HTML element can be specified to render a new HTML element in Maps.
