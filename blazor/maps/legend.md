@@ -11,6 +11,11 @@ documentation: ug
 
 A Legend is a visual representation of the symbols used on the Maps. It can be represented in various colors, shapes or other identifiers based on the data and provides valuable information for interpreting what the Maps are displaying. It explains what each symbol in the Maps represents. Legends are enabled by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Visible) property of [MapsLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html) to **true**.
 
+The video below demonstrates how to customize legends in the Maps component.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=Bkkmpu65bE8"%}
+
 ## Modes of legend
 
 Legend had two types of mode.

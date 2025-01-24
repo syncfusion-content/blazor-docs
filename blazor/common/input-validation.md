@@ -9,7 +9,7 @@ documentation: ug
 
 # Input Form Validation and Data Annotation
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI input and editor components can be validated by the standards defined in the Blazor [Form Validation](https://learn.microsoft.com/en-us/aspnet/core/blazor/forms-and-input-components?view=aspnetcore-5.0). The user's input value can be validated based on the [DataAnnotation attributes](https://learn.microsoft.com/en-us/aspnet/core/mvc/models/validation?view=aspnetcore-8.0) defined in the model class.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI input and editor components can be validated by the standards defined in the Blazor [Form Validation](https://learn.microsoft.com/en-us/aspnet/core/blazor/forms/?view=aspnetcore-8.0). The user's input value can be validated based on the [DataAnnotation attributes](https://learn.microsoft.com/en-us/aspnet/core/mvc/models/validation?view=aspnetcore-8.0) defined in the model class.
 
 ## How to validate Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor UI components
 
