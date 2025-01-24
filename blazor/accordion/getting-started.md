@@ -81,8 +81,8 @@ cd BlazorApp
 
 {% highlight c# tabtitle="Package Manager" %}
 
-dotnet add package Syncfusion.Blazor.Navigations -v 28.1.33
-dotnet add package Syncfusion.Blazor.Themes -v 28.1.33
+dotnet add package Syncfusion.Blazor.Navigations -v {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
 dotnet restore
 
 {% endhighlight %}
