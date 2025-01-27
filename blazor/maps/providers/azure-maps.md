@@ -9,30 +9,51 @@ documentation: ug
 
 # Azure Maps in Blazor Maps Component
 
-Azure Maps is yet another online Maps provider, owned by Microsoft. As like OSM and Bing Maps, it provides Maps tile images based on our requests and combines those images into a single one to display Maps area.
+Azure Maps, an online map service owned by Microsoft, provides map tile images based on user requests. The Syncfusion EJ2 Maps control combines these images into a single view to display the map. You can display Azure Maps by specifying their tile service URL in the [UrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_UrlTemplate) property.
 
-## Adding Azure Maps
+## Displaying Azure Maps
 
-The Azure Maps can be rendered by setting the [UrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_UrlTemplate) property with the tile server URL provided by online map providers. In the meantime, a subscription key is required for Azure Maps. Follow the steps in this [link](https://docs.microsoft.com/en-us/azure/search/search-security-api-keys) to generate an API key, and then added the key to the URL.
+The Azure map tile service can be accessed via the following URL:
+https://atlas.microsoft.com/map/tile?api-version=2024-04-01&tilesetId=microsoft.base.darkgrey&zoom={zoom}&x={x}&y={y}&subscription-key=Your_Key
+
+In the above URL template,
+
+* {zoom} - It represents the zoom level of the map.
+* {x} - It represents the horizontal position of the tile.
+* {y} - It represents the vertical position of the tile. 
+
+These placeholders are replaced by **level**, **tileX**, and **tileY**, respectively, to retrieve the correct map tile. 
+
+>You can refer this documentation [link](https://learn.microsoft.com/en-us/rest/api/maps/render/get-map-tile?view=rest-maps-2024-04-01&tabs=HTTP) for the latest tile service URL for Azure Maps.
+
+The **subscription_key** is required and must be included in the URL to authenticate and access the map tiles. Follow the steps in this [link](https://docs.microsoft.com/en-us/azure/search/search-security-api-keys) to generate an API key, and then add this key to the URL.
 
 N>Refer to [Azure Maps Licensing](https://azure.microsoft.com/en-in/support/legal/).
+
+You can customize various tile types in Azure Maps by modifying the **tilesetId** value in the URL. In the example below, the **microsoft.base.road** tile type is specified in the URL, allowing these tile images to be displayed in the Syncfusion Maps control. To explore the available tile types in Azure Maps, follow the link below.
+
+https://learn.microsoft.com/en-us/rest/api/maps/render/get-map-tile?view=rest-maps-2023-06-01&tabs=HTTP#tilesetid
+ 
+N>Syncfusion Maps only support displaying maps with raster images in **PNG** or **JPG** formats.
+
+In the following example, Azure Maps can be rendered using the `UrlTemplate` property with its tile server URL.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
     <MapsLayers>
-        <MapsLayer UrlTemplate="https://atlas.microsoft.com/map/imagery/png?subscription-key=Your-Key &api-version=1.0&style=satellite&zoom=level&x=tileX&y=tileY" TValue="string">
+        <MapsLayer UrlTemplate="https://atlas.microsoft.com/map/tile?api-version=2022-08-01&tilesetId=microsoft.base.darkgrey&zoom=level&x=tileX&y=tileY&subscription-key=Your_Key" TValue="string">
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
 ```
 
-![Blazor Azure Maps](../images/MapProviders/blazor-azure-map.png)
+![Blazor Azure Maps](../images/MapProviders/Azure-maps/blazor-azure-maps.PNG)
 
-## Enable zooming and panning
+## Enabling zooming and panning
 
-The Azure Maps layer can be zoomed and panned. Zooming helps to get a closer look at a particular area on a map for in-depth analysis. Panning helps to move a map around to focus the targeted area.
+The Azure Maps layer supports both zooming and panning. Zooming allows you to take a closer look at a particular area on the map for in-depth analysis, while panning enables you to move the map around to focus on the target area.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -46,17 +67,17 @@ The Azure Maps layer can be zoomed and panned. Zooming helps to get a closer loo
         </MapsZoomToolbarSettings>
     </MapsZoomSettings>
     <MapsLayers>
-        <MapsLayer UrlTemplate="https://atlas.microsoft.com/map/imagery/png?subscription-key=Your-Key &api-version=1.0&style=satellite&zoom=level&x=tileX&y=tileY" TValue="string">
+        <MapsLayer UrlTemplate="https://atlas.microsoft.com/map/tile?api-version=2022-08-01&tilesetId=microsoft.base.darkgrey&zoom=level&x=tileX&y=tileY&subscription-key=Your_Key" TValue="string">
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
 ```
 
-![Blazor Azure Maps with zooming and panning](../images/MapProviders/blazor-azure-map-zooming.png)
+![Blazor Azure Maps with zooming and panning](../images/MapProviders/Azure-maps/blazor-azure-maps-zooming.PNG)
 
 ## Adding markers and navigation line
 
-Markers can be added to the layers of Azure Maps by setting the corresponding location's coordinates of latitude and longitude using [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html). Navigation lines can be added on top of the Azure Maps layer for highlighting a path among various places by setting the corresponding location's coordinates of latitude and longitude in the [MapsNavigationLine](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html).
+Markers can be added to the Azure map layer by setting the latitude and longitude coordinates of the desired location using [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html). Additionally, navigation lines can be added on top of the Azure map layer to highlight paths between various places by specifying the corresponding latitude and longitude coordinates in the [MapsNavigationLine](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html).
 
 ```csharp
 @using Syncfusion.Blazor.Maps
@@ -65,7 +86,7 @@ Markers can be added to the layers of Azure Maps by setting the corresponding lo
     <MapsZoomSettings ZoomFactor="4"></MapsZoomSettings>
     <MapsCenterPosition Latitude="29.394708" Longitude="-94.954653"></MapsCenterPosition>
     <MapsLayers>
-        <MapsLayer UrlTemplate="https://atlas.microsoft.com/map/imagery/png?subscription-key=Your-Key &api-version=1.0&style=satellite&zoom=level&x=tileX&y=tileY" TValue="string">
+        <MapsLayer UrlTemplate="https://atlas.microsoft.com/map/tile?api-version=2022-08-01&tilesetId=microsoft.base.darkgrey&zoom=level&x=tileX&y=tileY&subscription-key=Your_Key" TValue="string">
             @* Add markers *@
             <MapsMarkerSettings>
                 <MapsMarker Visible="true" Height="25" Width="15" DataSource="Cities" TValue="City">
@@ -95,18 +116,18 @@ Markers can be added to the layers of Azure Maps by setting the corresponding lo
 }
 ```
 
-![Blazor Azure Maps with markers and navigation line](../images/MapProviders/blazor-azure-map-marker-and-line.png)
+![Blazor Azure Maps with markers and navigation line](../images/MapProviders/Azure-maps/blazor-azure-maps-marker-and-line.PNG)
 
 ## Adding sublayer
 
-Any GeoJSON shape can be rendered as a sublayer on top of the Azure Maps layer for highlighting a particular continent or country in Azure maps by adding another layer and specifying the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_Type) property of [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) to **SubLayer**.
+Any GeoJSON shape can be rendered as a sublayer on top of the Azure Maps layer to highlight a particular continent or country. This is achieved by adding another layer and setting the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_Type) property of [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) to **SubLayer**.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
     <MapsLayers>
-        <MapsLayer UrlTemplate="https://atlas.microsoft.com/map/imagery/png?subscription-key=Your-Key &api-version=1.0&style=satellite&zoom=level&x=tileX&y=tileY" TValue="string">
+        <MapsLayer UrlTemplate="https://atlas.microsoft.com/map/tile?api-version=2022-08-01&tilesetId=microsoft.base.darkgrey&zoom=level&x=tileX&y=tileY&subscription-key=Your_Key" TValue="string">
         </MapsLayer>
         @* To add geometry shape as sublayer *@
         <MapsLayer ShapeData='new {dataOptions = "https://cdn.syncfusion.com/maps/map-data/africa.json"}'
@@ -117,11 +138,13 @@ Any GeoJSON shape can be rendered as a sublayer on top of the Azure Maps layer f
 </SfMaps>
 ```
 
-![Blazor Azure Maps with sublayer](../images/MapProviders/blazor-azure-map-sublayer.png)
+![Blazor Azure Maps with sublayer](../images/MapProviders/Azure-maps/blazor-azure-maps-sublayer.PNG)
 
-## Enable legend
+## Enabling legend
 
 The legend can be added to the Azure Maps by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Visible) property of [MapsLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html) to **true**.
+
+In the example below, the legend is added to the markers on the Azure Maps layer.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -139,7 +162,7 @@ The legend can be added to the Azure Maps by setting the [Visible](https://help.
         <MapsTitleTextStyle Size="16px" FontFamily="inherit" />
     </MapsTitleSettings>
     <MapsLayers>
-        <MapsLayer UrlTemplate="https://atlas.microsoft.com/map/imagery/png?subscription-key=Your-Key &api-version=1.0&style=satellite&zoom=level&x=tileX&y=tileY" TValue="string">
+        <MapsLayer UrlTemplate="https://atlas.microsoft.com/map/tile?api-version=2022-08-01&tilesetId=microsoft.base.darkgrey&zoom=level&x=tileX&y=tileY&subscription-key=Your_Key" TValue="string">
         <MapsMarkerSettings>
                 <MapsMarker Visible="true" TValue="PopulationCityDetails" DataSource="@PopulatedCities" Shape="MarkerType.Circle" Fill="#FFFFFF" ColorValuePath="Color" LegendText="Name" Height="15" Width="15">
                     <MapsMarkerTooltipSettings Visible="true" ValuePath="Population" Format="City Name: ${Name}</br>Population: ${Population} million">
@@ -176,4 +199,4 @@ The legend can be added to the Azure Maps by setting the [Visible](https://help.
 
 ```
 
-![Blazor Azure Maps with legend](../images/MapProviders/blazor-azure-map-legend.png)
+![Blazor Azure Maps with legend](../images/MapProviders/Azure-maps/blazor-azure-maps-legend.PNG)
