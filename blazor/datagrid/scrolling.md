@@ -7,154 +7,215 @@ control: DataGrid
 documentation: ug
 ---
 
-# Scrolling in Blazor DataGrid Component
+# Scrolling in Blazor DataGrid component
 
- The scrollbar will be displayed in the datagrid when content exceeds the element [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Width) or [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height). The vertical and horizontal scrollbars will be displayed based on the following criteria:
+The scrolling feature in the Blazor Grid component allows you to navigate through the content that extends beyond the visible area of the grid . It provides scrollbars that are automatically displayed when the content exceeds the specified `Width` or `Height` of the grid element. This feature is useful when you have a large amount of data or when the content needs to be displayed within a limited space. The vertical and horizontal scrollbars will be displayed based on the following criteria:
 
-* The vertical scrollbar appears when the total height of rows present in the datagrid exceeds its element height.
-* The horizontal scrollbar appears when the sum of columns width exceeds the datagrid element width.
-* The [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Width) are used to set the datagrid height and width, respectively.
+* The vertical scrollbar appears when the total height of rows present in the grid exceeds its element height.
+* The horizontal scrollbar appears when the sum of columns width exceeds the grid element width.
+* The [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Width) are used to set the grid height and width, respectively.
 
-N> The default value for [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Width) is **auto**.
+> The default value for `Height`and `Width` is `auto`.
 
 ## Set width and height
 
 To specify the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) of the scroller in the pixel, set the pixel value to a number.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Orders" Height="315" Width="400">
+<SfGrid DataSource="@OrderData" Height="315" Width="400">
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.EmployeeID) HeaderText="Employee ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipCity) HeaderText="Ship City" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipCountry) HeaderText="Ship Country" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipName) HeaderText="Ship Name" Width="150"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 @code{
-    public List<Order> Orders { get; set; }
-
+    public List<OrderDetails> OrderData { get; set; }
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-            ShipCountry = (new string[] { "USA", "UK", "JAPAN" })[new Random().Next(3)]
-        }).ToList();
+        OrderData = OrderDetails.GetAllRecords();
     }
-
-    public class Order {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
-        public string ShipCountry { get; set; }
-    }
-
 }
-```
+{% endhighlight %}
+{% highlight c# tabtitle="OrderDetails.cs" %}
+public class OrderDetails
+{
+    public static List<OrderDetails> order = new List<OrderDetails>();    
+    public OrderDetails(int OrderID, string CustomerId, int EmployeeId, string ShipCity, string ShipName, string ShipCountry)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerId;
+        this.EmployeeID = EmployeeId;
+        this.ShipCity = ShipCity;
+        this.ShipName = ShipName;
+        this.ShipCountry = ShipCountry;
+    }
+    public static List<OrderDetails> GetAllRecords()
+    {
+        if (order.Count == 0)
+        {
+            order.Add(new OrderDetails(10248, "VINET", 5, "Reims", "Vins et alcools Chevalier", "Australia"));
+            order.Add(new OrderDetails(10249, "TOMSP", 6, "Münster", "Toms Spezialitäten", "Australia"));
+            order.Add(new OrderDetails(10250, "HANAR", 4, "Rio de Janeiro", "Hanari Carnes", "United States"));
+            order.Add(new OrderDetails(10251, "VICTE", 3, "Lyon", "Victuailles en stock", "Australia"));
+            order.Add(new OrderDetails(10252, "SUPRD", 4, "Charleroi", "Suprêmes délices", "United States"));
+            order.Add(new OrderDetails(10253, "HANAR", 3, "Rio de Janeiro", "Hanari Carnes", "United States"));
+            order.Add(new OrderDetails(10254, "CHOPS", 5, "Bern", "Chop-suey Chinese", "Switzerland"));
+            order.Add(new OrderDetails(10255, "RICSU", 9, "Genève", "Richter Supermarkt", "Switzerland"));
+            order.Add(new OrderDetails(10256, "WELLI", 3, "Resende", "Wellington Importadora", "Brazil"));
+            order.Add(new OrderDetails(10257, "HILAA", 4, "San Cristóbal", "HILARION-Abastos", "Venezuela"));
+            order.Add(new OrderDetails(10258, "ERNSH", 1, "Graz", "Ernst Handel", "Austria"));
+            order.Add(new OrderDetails(10259, "CENTC", 4, "México D.F.", "Centro comercial Moctezuma", "Mexico"));
+            order.Add(new OrderDetails(10260, "OTTIK", 4, "Köln", "Ottilies Käseladen", "Germany"));
+            order.Add(new OrderDetails(10261, "QUEDE", 4, "Rio de Janeiro", "Que Delícia", "Brazil"));
+            order.Add(new OrderDetails(10262, "RATTC", 8, "Albuquerque", "Rattlesnake Canyon Grocery", "USA"));
+        }
+        return order;
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public int EmployeeID { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+    public string ShipCountry { get; set; }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjryNWBTfUaCEgqf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Responsive with parent container
 
-Specify the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) as **100%** to make the datagrid element fill its parent container. Setting the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) to **100%** requires the datagrid parent element to have explicit height or you can use calc function to set explicit height based on the browser layout.
+The Grid component allows you to create a responsive layout by making it fill its parent container and automatically adjust its size based on the available space and changes in the container's dimensions. This capability is particularly useful for building applications that need to adapt to various screen sizes and devices.
 
-```cshtml
+To achieve this, you need to specify the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) properties of the Grid as 100%. However, keep in mind that setting the height property to 100% requires the Grid's parent element to have an explicit height defined.
+
+In the following example, the parent container has explicit height and width set, and the Grid container's height and width are both set to 100%. This ensures that the Grid adjusts its size responsively based on the dimensions of the parent container:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 
-<div style="width:calc(100vw - 20rem); height:calc(100vh - 7rem);">
-@*Change the rem values based on your browser page layout*@
-<SfGrid DataSource="@Orders" Height="100%" Width="100%">
-    <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" Width="150"></GridColumn>
-    </GridColumns>
-</SfGrid>
+<div style="width:calc(100vw - 20rem); height:calc(100vh - 7rem);"> @*Change the rem values based on your browser page layout*@
+    <SfGrid DataSource="@OrderData" Height="100%" Width="100%">
+        <GridColumns>
+            <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+            <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+            <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Width="100"></GridColumn>
+            <GridColumn Field=@nameof(OrderDetails.ShipAddress) HeaderText="Ship Address" Width="120"></GridColumn>
+        </GridColumns>
+    </SfGrid>
 </div>
 
 @code{
-    public List<Order> Orders { get; set; }
-
+    public List<OrderDetails> OrderData { get; set; }
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-            ShipCountry = (new string[] { "USA", "UK", "JAPAN" })[new Random().Next(3)]
-        }).ToList();
-    }
-
-    public class Order {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
-        public string ShipCountry { get; set; }
+        OrderData = LazyLoadData.CreateLazyLoadData();
     }
 }
-```
+{% endhighlight %}
+{% highlight c# tabtitle="OrderDetails.cs" %}
+public class LazyLoadDetails
+{
+    public static List<LazyLoadDetails> CreateLazyLoadData()
+    {
+        var lazyLoadData = new List<LazyLoadDetails>();
+        var customerIds = new[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD", "HANAR", "CHOPS", "RICSU", "WELLI", "HILAA", "ERNSH", "CENTC", "OTTIK", "QUEDE", "RATTC", "FOLKO", "BLONP", "WARTH" };
+        var shipAddresses = new[] { "507 - 20th Ave. E.\nApt. 2A", "908 W. Capital Way", "722 Moss Bay Blvd.", "4110 Old Redmond Rd.", "14 Garrett Hill" };
+        var freights = new[] { 10, 24, 12, 48, 36, 102, 18 };
+        int orderId = 10248;
+        var random = new Random();
+        for (int i = 0; i < 50; i++)
+        {
+            lazyLoadData.Add(new LazyLoadDetails
+            {
+                OrderID = orderId + i,
+                CustomerID = customerIds[random.Next(customerIds.Length)],
+                ShipAddress = shipAddresses[random.Next(shipAddresses.Length)],
+                Freight = freights[random.Next(freights.Length)]
+            });
+        }
+        return lazyLoadData;
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipAddress { get; set; }
+    public double Freight { get; set; }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLIjMBcAgEnKHGz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Sticky header
 
-You can make the Grid column headers remain fixed while scrolling by using the `EnableStickyHeader` property.
+The Blazor Grid component provides a feature that allows you to make column headers remain fixed while scrolling, ensuring they stay visible at all times. To achieve this, you can utilize the [EnableStickyHeader](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableStickyHeader) property by setting it to **true**.
 
-In the following sample, the Grid headers will be sticky while scrolling the Grid’s parent div element.
+In the below demo, the Grid headers will be sticky while scrolling the Grid's parent div element.
 
-```csharp
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 
-<div> You can make Grid column headers remain fixed while scrolling its first scrollable parent element by using the <b>EnableStickyHeader</b> property.</div>
-<br>
-<br>
-
-<SfGrid DataSource="@Orders" EnableStickyHeader ="true">
-    <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey=true TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Left" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Left" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" Width="150"></GridColumn>
-    </GridColumns>
-</SfGrid>
+<div style="width:calc(100vw - 20rem); height:calc(100vh - 7rem);"> @*Change the rem values based on your browser page layout*@
+    <SfGrid DataSource="@OrderData" Height="100%" Width="100%">
+        <GridColumns>
+            <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+            <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+            <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Width="100"></GridColumn>
+            <GridColumn Field=@nameof(OrderDetails.ShipAddress) HeaderText="Ship Address" Width="120"></GridColumn>
+        </GridColumns>
+    </SfGrid>
+</div>
 
 @code{
-    public List<Order> Orders { get; set; }
-
+    public List<OrderDetails> OrderData { get; set; }
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 100).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-            ShipCountry = (new string[] { "USA", "UK", "JAPAN" })[new Random().Next(3)]
-        }).ToList();
-    }
-
-    public class Order {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
-        public string ShipCountry { get; set; }
+        OrderData = LazyLoadData.CreateLazyLoadData();
     }
 }
+{% endhighlight %}
+{% highlight c# tabtitle="LazyLoadData.cs" %}
+public class LazyLoadDetails
+{
+    public static List<LazyLoadDetails> CreateLazyLoadData()
+    {
+        var lazyLoadData = new List<LazyLoadDetails>();
+        var customerIds = new[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD", "HANAR", "CHOPS", "RICSU", "WELLI", "HILAA", "ERNSH", "CENTC", "OTTIK", "QUEDE", "RATTC", "FOLKO", "BLONP", "WARTH" };
+        var shipAddresses = new[] { "507 - 20th Ave. E.\nApt. 2A", "908 W. Capital Way", "722 Moss Bay Blvd.", "4110 Old Redmond Rd.", "14 Garrett Hill" };
+        var freights = new[] { 10, 24, 12, 48, 36, 102, 18 };
+        int orderId = 10248;
+        var random = new Random();
+        for (int i = 0; i < 50; i++)
+        {
+            lazyLoadData.Add(new LazyLoadDetails
+            {
+                OrderID = orderId + i,
+                CustomerID = customerIds[random.Next(customerIds.Length)],
+                ShipAddress = shipAddresses[random.Next(shipAddresses.Length)],
+                Freight = freights[random.Next(freights.Length)]
+            });
+        }
+        return lazyLoadData;
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipAddress { get; set; }
+    public double Freight { get; set; }
+}
+{% endhighlight %}
+{% endtabs %}
 
-```
-
-![Sticky header in Blazor DataGrid.](./images/blazor-datagrid-sticky-header.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBytWVcUTZgQUiC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Customize grid scroll bar
 
