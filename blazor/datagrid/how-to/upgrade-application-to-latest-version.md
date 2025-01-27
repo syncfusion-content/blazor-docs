@@ -15,7 +15,7 @@ documentation: ug
 
 ## Compatible .NET version
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components in the latest version `'{:nuget-version:}'` are compatible with the latest version of .NET 9.0. So, we suggest you to upgrade the .NET 9.0 SDK in your machine before upgrading to the latest version.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components in the latest version `'{:nuget-version:}'` are compatible with the latest version of .NET Core 9.0. So, we suggest you to upgrade the .NET Core 9.0 SDK in your machine before upgrading to the latest version.
 
 ## Client resource file references
 
