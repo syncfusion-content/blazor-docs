@@ -35,7 +35,6 @@ Add the following NuGet packages into the Blazor WebAssembly app.
 
 N> On the Syncfusion<sup style="font-size:70%">&reg;</sup> side, we are using SkiaSharp.Views.Blazor version 3.116.1. Please make sure to reference this version as well.
 
-
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
 * In the **~/_Imports.razor** file, add the following namespaces:
