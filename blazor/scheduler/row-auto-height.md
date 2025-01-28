@@ -19,6 +19,11 @@ Now, let's see how it works on those applicable views with examples.
 
 When the feature [`EnableAutoRowHeight`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_EnableAutoRowHeight) is enabled, the row height gets auto-adjusted based on the number of overlapping events occupied on the same time range, which is demonstrated in the following example.
 
+To get start quickly about row auto height in our Scheduler, you can check on this video:
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=qFQvbFQbxPk-0"%}
+
 ```cshtml
 @using Syncfusion.Blazor.Schedule
 

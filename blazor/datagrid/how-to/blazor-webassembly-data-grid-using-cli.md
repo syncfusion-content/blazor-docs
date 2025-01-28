@@ -11,7 +11,7 @@ documentation: ug
 
 # Blazor DataGrid Component in WebAssembly App using CLI
 
-This article provides a step-by-step instructions for building Blazor WebAssembly App with Blazor DataGrid component using the [.NET CLI](https://dotnet.microsoft.com/en-us/download/dotnet/3.1).
+This article provides a step-by-step instructions for building Blazor WebAssembly App with Blazor DataGrid component using the [.NET CLI](https://dotnet.microsoft.com/en-us/download/dotnet/8.0).
 
 ## Prerequisites
 

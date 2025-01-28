@@ -75,7 +75,7 @@ In the following example, the `Code.ID` column and `Country.CountryID` column fr
 
 ### Expando object binding
 
-Bind the [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-5.0) data to the DropDownList component. In the following example, the `ExpandoObject` is bound to the collection of vehicles data.
+Bind the [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-8.0) data to the DropDownList component. In the following example, the `ExpandoObject` is bound to the collection of vehicles data.
 
 {% highlight cshtml %}
 
@@ -99,7 +99,7 @@ Bind the [ObservableCollection](https://blazor.syncfusion.com/documentation/comm
 
 ### Dynamic object binding
 
-Bind the [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-5.0) data to the DropDownList component. In the following example, the `DynamicObject` is bound to the collection of customer data.
+Bind the [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-8.0) data to the DropDownList component. In the following example, the `DynamicObject` is bound to the collection of customer data.
 
 {% highlight cshtml %}
 
@@ -123,7 +123,7 @@ Bind the enum data to the DropDownList component. The following code helps you t
 
 ### ValueTuple data binding
 
-Bind the [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-5.0) data to the DropDownList component. The following code helps you to get a string value from the enumeration data by using `ValueTuple`
+Bind the [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-8.0) data to the DropDownList component. The following code helps you to get a string value from the enumeration data by using `ValueTuple`
 
 {% highlight cshtml %}
 
@@ -384,7 +384,7 @@ Add the new item in the popup with the help of [AddItemsAsync](https://help.sync
 
 ### Getting datasource using instance
 
-To retrieve the data source from a Syncfusion Blazor DropDownList component, you can access the `DataSource` property of the component instance. An example of how this can be done is by binding the component to a list of objects as its data source and then, in the button click event, calling the `GetDataSource` method which in turn retrieves the data source by accessing the DataSource property of the DropDownList instance.
+To retrieve the data source from a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DropDownList component, you can access the `DataSource` property of the component instance. An example of how this can be done is by binding the component to a list of objects as its data source and then, in the button click event, calling the `GetDataSource` method which in turn retrieves the data source by accessing the DataSource property of the DropDownList instance.
 
 {% highlight cshtml %}
 
@@ -394,7 +394,7 @@ To retrieve the data source from a Syncfusion Blazor DropDownList component, you
 
 ### Getting datasource using variable
 
-To obtain the data source for a Syncfusion Blazor DropDownList using a variable, you can define a variable in your component to hold the data source, and then use this variable to access the data source. In this example, the `GetDataSource` method is triggered when the button is clicked. This method retrieves the data source for the DropDownList by accessing the Countries variable, which holds the list of countries for the DropDownList.
+To obtain the data source for a Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DropDownList using a variable, you can define a variable in your component to hold the data source, and then use this variable to access the data source. In this example, the `GetDataSource` method is triggered when the button is clicked. This method retrieves the data source for the DropDownList by accessing the Countries variable, which holds the list of countries for the DropDownList.
 
 {% highlight cshtml %}
 

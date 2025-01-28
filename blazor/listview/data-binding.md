@@ -108,6 +108,11 @@ In the following sample, first 6 products from the Product table of NorthWind da
 
 You need to follow the below steps to consume data from the **Entity Framework** in the ListView component.
 
+To bind data easily in the Blazor ListView component using Entity Framework, you can check on this video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=iEM_W4HP9pk" %}
+
 ### Handle CRUD in data access layer class
 
 Now, add methods **AddProduct, DeleteProduct** in the **“DataAccessLayer.cs”** to handle the insert and remove operations respectively. The **CRUD** list items are bound to the **Products** parameter.

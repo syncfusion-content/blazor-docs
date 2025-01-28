@@ -47,6 +47,10 @@ In the example below, we hide the cancel icon for both "Badminton" and "Cricket"
 
 ## Checkbox mode
 
+To get started quickly with Checkbox mode in the Blazor MultiSelect Dropdown component, you can check the video below.
+
+{% youtube "https://www.youtube.com/watch?v=SvpRCnmo9Dk" %}
+
 The MultiSelect has built-in support to select multiple values through checkbox, when the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_Mode) property is set to `CheckBox`.
 
 To use checkbox, inject the `CheckBoxSelection` module in the MultiSelect.

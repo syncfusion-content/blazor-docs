@@ -1179,6 +1179,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 You need to follow the below steps to consume data from the **Entity Framework** in our Scheduler component.
 
+To get start quickly about CRUD action using entity framework in our Scheduler, you can check on this video:
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=QlzdcZTmOrU-0"%}
+
 ### Create DBContext class
 
 The first step is to create a DBContext class called **ScheduleDataContext** to connect to a Microsoft SQL Server database.

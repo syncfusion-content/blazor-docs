@@ -59,7 +59,7 @@ This approach is useful when you want to enhance existing HTML title attributes 
 
 ## Using Template
 
-The Tooltip's Template property enables you to completely customize the layout and incorporate custom elements into the Tooltip. You can insert any content or HTML elements as Tooltip content by specifying them within the `ContentTemplate` property of the Tooltip component. Additionally, the `ContentTemplate` property supports the `RenderFragment` type, enabling dynamic and interactive content within the Tooltip.
+The Tooltip's Template property enables you to completely customize the layout and incorporate custom elements into the Tooltip. You can insert any content or HTML elements as Tooltip content by specifying them within the [`ContentTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_ContentTemplate) property of the Tooltip component. Additionally, the [`ContentTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_ContentTemplate) property supports the `RenderFragment` type, enabling dynamic and interactive content within the Tooltip.
 
 Check out the following code example to see how to include an HTML template inside the Tooltip.
 
@@ -130,7 +130,7 @@ Check out the following code example to see how to include an HTML template insi
 
 ## Dynamic Content with RenderFragment
 
-The SfTooltip is used to display dynamic content generated using a RenderFragment. The `ContentTemplate` property allows you to render this dynamic content within the tooltip. A `RenderFragment` in Blazor enables you to dynamically define and render UI content, including Blazor components, HTML, and interactive logic. 
+The SfTooltip is used to display dynamic content generated using a RenderFragment. The [`ContentTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_ContentTemplate)property allows you to render this dynamic content within the tooltip. A `RenderFragment` in Blazor enables you to dynamically define and render UI content, including Blazor components, HTML, and interactive logic. 
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -181,7 +181,7 @@ This approach gives you full control over the Tooltip's content, allowing for in
 
 ##  Rendering HTML content using MarkupString
 
-By default, the Tooltip can show any kind of formatted content. To improve its layout or create a custom visual element, utilize the `ContentTemplate` property to establish the desired structure. You can also use [`@(MarkupString)`](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.markupstring?view=aspnetcore-7.0) to dynamically render HTML content.
+By default, the Tooltip can show any kind of formatted content. To improve its layout or create a custom visual element, utilize the [`ContentTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_ContentTemplate) property to establish the desired structure. You can also use [`@(MarkupString)`](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.markupstring?view=aspnetcore-7.0) to dynamically render HTML content.
 
 
 ```cshtml

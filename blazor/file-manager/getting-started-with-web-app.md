@@ -62,10 +62,6 @@ Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Servic
 
 If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, you need to register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in both **~/Program.cs** files of your Blazor Web App.
 
-If the **Interactive Render Mode** is set to `Server`, your project will contain a single **~/Program.cs** file. So, you should register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service only in that **~/Program.cs** file.
-
-If **Interactive Render Mode** as `WebAssembly` or `Auto`,
-
 {% tabs %}
 {% highlight c# tabtitle="Server(~/_Program.cs)" hl_lines="3 11" %}
 
@@ -98,7 +94,7 @@ await builder.Build().RunAsync();
 {% endhighlight %}
 {% endtabs %}
 
-If **Interactive Render Mode** as `Server`,
+If the **Interactive Render Mode** is set to `Server`, your project will contain a single **~/Program.cs** file. So, you should register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service only in that **~/Program.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="~/_Program.cs" hl_lines="2 9" %}
@@ -223,7 +219,7 @@ namespace filemanager.Server.Controllers
         public string basePath;
         string root = "wwwroot\\Files";
         [Obsolete]
-        public FileManagerController(IHostingEnvironment hostingEnvironment)
+        public FileManagerController(IWebHostEnvironment hostingEnvironment)
         {
             this.basePath = hostingEnvironment.ContentRootPath;
             this.operation = new PhysicalFileProvider();
@@ -279,7 +275,7 @@ builder.Services.AddControllers();
 ...
 
 app.UseRouting();
-app.MapControllers();.
+app.MapControllers();
 
 ```
 
@@ -365,10 +361,12 @@ namespace filemanager.Server.Controllers
         [Route("Download")]
         public IActionResult Download(string downloadInput)
         {
-            //Invoking download operation with the required parameters.
-            // path - Current path where the file is downloaded; Names - Files to be downloaded;
-            FileManagerDirectoryContent args = JsonConvert.DeserializeObject<FileManagerDirectoryContent>(downloadInput);
-            return operation.Download(args.Path, args.Names);
+            var options = new JsonSerializerOptions
+            {
+                PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+            };
+            FileManagerDirectoryContent args = JsonSerializer.Deserialize<FileManagerDirectoryContent>(downloadInput, options);
+            return operation.Download(args.Path, args.Names, args.Data);
         }
     }
 }
@@ -404,18 +402,53 @@ namespace filemanager.Server.Controllers
     {
         // Processing the Upload operation.
         [Route("Upload")]
-        public IActionResult Upload(string path, IList<IFormFile> uploadFiles, string action)
+        [DisableRequestSizeLimit]
+        public IActionResult Upload(string path, long size, IList<IFormFile> uploadFiles, string action)
         {
-            //Invoking upload operation with the required parameters.
-            // path - Current path where the file is to uploaded; uploadFiles - Files to be uploaded; action - name of the operation(upload)
-            FileManagerResponse uploadResponse;
-            uploadResponse = operation.Upload(path, uploadFiles, action, null);
-            if (uploadResponse.Error != null)
+            try
             {
+                FileManagerResponse uploadResponse;
+                foreach (var file in uploadFiles)
+                {
+                    var folders = (file.FileName).Split('/');
+                    // checking the folder upload
+                    if (folders.Length > 1)
+                    {
+                        for (var i = 0; i < folders.Length - 1; i++)
+                        {
+                            string newDirectoryPath = Path.Combine(this.basePath + path, folders[i]);
+                            if (Path.GetFullPath(newDirectoryPath) != (Path.GetDirectoryName(newDirectoryPath) + Path.DirectorySeparatorChar + folders[i]))
+                            {
+                                throw new UnauthorizedAccessException("Access denied for Directory-traversal");
+                            }
+                            if (!Directory.Exists(newDirectoryPath))
+                            {
+                                this.operation.ToCamelCase(this.operation.Create(path, folders[i]));
+                            }
+                            path += folders[i] + "/";
+                        }
+                    }
+                }
+                uploadResponse = operation.Upload(path, uploadFiles, action, size, null);
+                if (uploadResponse.Error != null)
+                {
+                    Response.Clear();
+                    Response.ContentType = "application/json; charset=utf-8";
+                    Response.StatusCode = Convert.ToInt32(uploadResponse.Error.Code);
+                    Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = uploadResponse.Error.Message;
+                }
+            }
+            catch (Exception e)
+            {
+                ErrorDetails er = new ErrorDetails();
+                er.Message = e.Message.ToString();
+                er.Code = "417";
+                er.Message = "Access denied for Directory-traversal";
                 Response.Clear();
                 Response.ContentType = "application/json; charset=utf-8";
-                Response.StatusCode = Convert.ToInt32(uploadResponse.Error.Code);
-                Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = uploadResponse.Error.Message;
+                Response.StatusCode = Convert.ToInt32(er.Code);
+                Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = er.Message;
+                return Content("");
             }
             return Content("");
         }
@@ -455,9 +488,7 @@ namespace filemanager.Server.Controllers
         [Route("GetImage")]
         public IActionResult GetImage(FileManagerDirectoryContent args)
         {
-            //Invoking GetImage operation with the required parameters.
-            // path - Current path of the image file; Id - Image file id;
-            return this.operation.GetImage(args.Path, args.Id, false, null, null);
+            return this.operation.GetImage(args.Path, args.Id,false,null, null);
         }
     }
 }
