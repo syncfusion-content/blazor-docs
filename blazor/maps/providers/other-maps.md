@@ -19,24 +19,24 @@ Sample Template: https://< domain_name >/maps/basic/{z}/{x}/{y}.png
 
 In this case, the key generated for those online map service providers can also be appended to the URL. This allows to create personalized Maps with your own content and imagery.
 
-Following is an example of how to add a TomTom map. You can generate an API key by following the steps in this [link](https://developer.tomtom.com/map-display-api/documentation/product-information/introduction) and then adding the key to the URL.
+Following is an example of how to add a France OpenStreetMap.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
     <MapsLayers>
-        <MapsLayer UrlTemplate="http://api.tomtom.com/map/1/tile/basic/main/level/tileX/tileY.png?key=subscription_key" TValue="string">
+        <MapsLayer UrlTemplate="https://a.tile.openstreetmap.fr/osmfr/level/tileX/tileY.png" TValue="string">
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
 ```
 
-![Blazor TomTom Maps](../images/MapProviders/blazor-tomtom-maps.png)
+![Blazor OpenStreeMap France](../images/MapProviders/Other-maps/blazor-osm-france.png)
 
-**Enable zooming and panning**
+## Enabling zooming and panning
 
-Tile Maps layer can be zoomed and panned. Zooming helps to get a closer look at a particular area on a Maps for in-depth analysis. Panning helps to move Maps around to focus the targeted area.
+Tile Maps layer can be zoomed and panned. Zooming helps to get a closer look at a particular area on a Maps for in-depth analysis. Panning helps to move a Maps around to focus the targeted area.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -50,17 +50,17 @@ Tile Maps layer can be zoomed and panned. Zooming helps to get a closer look at 
         </MapsZoomToolbarSettings>
     </MapsZoomSettings>
     <MapsLayers>
-        <MapsLayer UrlTemplate="http://api.tomtom.com/map/1/tile/basic/main/level/tileX/tileY.png?key=subscription_key" TValue="string">
+        <MapsLayer UrlTemplate="https://a.tile.openstreetmap.fr/osmfr/level/tileX/tileY.png" TValue="string">
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
 ```
 
-![Blazor TomTom Maps with Zooming and Panning](../images/MapProviders/blazor-tomtom-maps-zooming.png)
+![Blazor OpenStreeMap with Zooming and Panning](../images/MapProviders/Other-maps/blazor-osm-france-zooming.png)
 
-**Adding markers and navigation line**
+## Adding markers and navigation line
 
-Markers can be added to the layers of tile Maps by setting the corresponding location's coordinates of latitude and longitude using [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html) class. Navigation lines can be added on top of the tile Maps layer for highlighting a path among various places by setting the corresponding location's coordinates of latitude and longitude in the [MapsNavigationLine](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html).
+Markers can be added to the layers of tile Maps by setting the corresponding location's coordinates of latitude and longitude using [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html) class. Navigation lines can be added on top of an tile Maps layer for highlighting a path among various places by setting the corresponding location's coordinates of latitude and longitude in the [MapsNavigationLine](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html).
 
 ```csharp
 @using Syncfusion.Blazor.Maps
@@ -69,7 +69,7 @@ Markers can be added to the layers of tile Maps by setting the corresponding loc
     <MapsZoomSettings ZoomFactor="4"></MapsZoomSettings>
     <MapsCenterPosition Latitude="29.394708" Longitude="-94.954653"></MapsCenterPosition>
     <MapsLayers>
-        <MapsLayer UrlTemplate="http://api.tomtom.com/map/1/tile/basic/main/level/tileX/tileY.png?key=subscription_key" TValue="string">
+        <MapsLayer UrlTemplate="https://a.tile.openstreetmap.fr/osmfr/level/tileX/tileY.png" TValue="string">
             @* Add markers *@
             <MapsMarkerSettings>
                 <MapsMarker Visible="true" Height="25" Width="15" DataSource="Cities" TValue="City">
@@ -99,18 +99,18 @@ Markers can be added to the layers of tile Maps by setting the corresponding loc
 }
 ```
 
-![Blazor TomTom Maps with Markers and Navigation Line](../images/MapProviders/blazor-tomtom-maps-marker-and-line.png)
+![Blazor OpenStreeMap France with Markers and Navigation Line](../images/MapProviders/Other-maps/blazor-osm-france-marker-and-line.png)
 
 **Adding sublayer**
 
-Any GeoJSON shape can be rendered as a sublayer on top of the tile Maps layer for highlighting a particular continent or country in tile maps by adding another layer and specifying the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_Type) property of [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) to **SubLayer**.
+Any GeoJSON shape can be rendered as a sublayer on top of the tile Maps layer for highlighting a particular continent or country in tile Maps by adding another layer and specifying the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_Type) property of [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) to **SubLayer**.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
     <MapsLayers>
-        <MapsLayer UrlTemplate="http://api.tomtom.com/map/1/tile/basic/main/level/tileX/tileY.png?key=subscription_key" TValue="string">
+        <MapsLayer UrlTemplate="https://a.tile.openstreetmap.fr/osmfr/level/tileX/tileY.png" TValue="string">
         </MapsLayer>
         @* To add geometry shape as sublayer *@
         <MapsLayer ShapeData='new {dataOptions = "https://cdn.syncfusion.com/maps/map-data/africa.json"}'
@@ -121,11 +121,13 @@ Any GeoJSON shape can be rendered as a sublayer on top of the tile Maps layer fo
 </SfMaps>
 ```
 
-![Blazor TomTom Maps with Sublayer](../images/MapProviders/blazor-tomtom-map-sublayer.png)
+![Blazor OpenStreeMap France with Sublayer](../images/MapProviders/Other-maps/blazor-osm-france-sublayer.png)
 
-**Enable legend**
+## Enabling legend
 
 The legend can be added to the tile Maps by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Visible) property of [MapsLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html) to **true**.
+
+In the example below, the legend is added to the markers on the OpenStreetMap layer.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -143,7 +145,7 @@ The legend can be added to the tile Maps by setting the [Visible](https://help.s
         <MapsTitleTextStyle Size="16px" FontFamily="inherit" />
     </MapsTitleSettings>
     <MapsLayers>
-        <MapsLayer UrlTemplate="http://api.tomtom.com/map/1/tile/basic/main/level/tileX/tileY.png?key=subscription_key" TValue="string">
+        <MapsLayer UrlTemplate="https://a.tile.openstreetmap.fr/osmfr/level/tileX/tileY.png" TValue="string">
         <MapsMarkerSettings>
                 <MapsMarker Visible="true" TValue="PopulationCityDetails" DataSource="@PopulatedCities" Shape="MarkerType.Circle" Fill="#FFFFFF" ColorValuePath="Color" LegendText="Name" Height="15" Width="15">
                     <MapsMarkerTooltipSettings Visible="true" ValuePath="Population" Format="City Name: ${Name}</br>Population: ${Population} million">
@@ -180,28 +182,4 @@ The legend can be added to the tile Maps by setting the [Visible](https://help.s
 
 ```
 
-![Blazor TomTom Maps with Legend](../images/MapProviders/blazor-tomtom-map-legend.png)
-
-## Other supportive online map service providers
-
-The Maps component can also render the following online map service providers, which are listed below.
-
-* MapBox
-* ESRI
-
-```cshtml
-@using Syncfusion.Blazor.Maps
-
-<SfMaps>
-    <MapsLayers>
-        @* Renders Mapbox map *@
-        <MapsLayer UrlTemplate="https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/level/tileX/tileY?access_token=" TValue="string">
-        </MapsLayer>
-        @* Renders ESRI map *@
-        <!--<MapsLayer UrlTemplate="https://ibasemaps-api.arcgis.com/arcgis/rest/services/World_Imagery/MapServer/tile/level/tileY/tileX?apiKey=subscription_key" TValue="string">
-        </MapsLayer>-->
-    </MapsLayers>
-</SfMaps>
-```
-
-![Blazor MapBox Map](../images/MapProviders/blazor-mapbox-map.png)
+![Blazor OpenStreeMap France with Legend](../images/MapProviders/Other-maps/blazor-osm-france-legend.png)
