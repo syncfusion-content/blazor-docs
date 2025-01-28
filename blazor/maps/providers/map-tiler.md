@@ -65,7 +65,7 @@ The MapTiler map layer supports both zooming and panning. Zooming allows you to 
 </SfMaps>
 ```
 
-![Blazor MapTiler with Zooming and Panning](../images/MapProviders/MapTiler/blazor-maptiler-zooming.PNG)
+![Blazor MapTiler with Zooming and Panning](../images/MapProviders/MapTiler/blazor-maptiler-zooming.png)
 
 ## Adding markers and navigation line
 
@@ -108,7 +108,7 @@ Markers can be added to the MapTiler map layer by setting the latitude and longi
 }
 ```
 
-![Blazor MapTiler map with Markers and Navigation Line](../images/MapProviders/MapTiler/blazor-maptiler-marker-and-line.PNG)
+![Blazor MapTiler map with Markers and Navigation Line](../images/MapProviders/MapTiler/blazor-maptiler-marker-and-line.png)
 
 ## Adding sublayer
 
@@ -130,7 +130,7 @@ Any GeoJSON shape can be rendered as a sublayer on top of the MapTiler map layer
 </SfMaps>
 ```
 
-![Blazor MapTiler with Sublayer](../images/MapProviders/MapTiler/blazor-maptiler-sublayer.PNG)
+![Blazor MapTiler with Sublayer](../images/MapProviders/MapTiler/blazor-maptiler-sublayer.png)
 
 ## Enabling legend
 
@@ -191,4 +191,4 @@ In the example below, the legend is added to the markers on the MapTiler map lay
 
 ```
 
-![Blazor MapTiler with Legend](../images/MapProviders/MapTiler/blazor-maptiler-legend.PNG)
+![Blazor MapTiler with Legend](../images/MapProviders/MapTiler/blazor-maptiler-legend.png)

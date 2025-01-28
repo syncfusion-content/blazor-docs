@@ -43,7 +43,7 @@ In the following example, TomTom map can be rendered using the `UrlTemplate` pro
 </SfMaps>
 ```
 
-![Blazor TomTom map](../images/MapProviders/TomTom/blazor-tomtom-map.png)
+![Blazor TomTom map](../images/MapProviders/TomTom/blazor-tomtom-map.PNG)
 
 ## Enabling zooming and panning
 
@@ -67,7 +67,7 @@ The TomTom map layer supports both zooming and panning. Zooming allows you to ta
 </SfMaps>
 ```
 
-![Blazor TomTom Map with Zooming and Panning](../images/MapProviders/TomTom/blazor-tomtom-map-zooming.PNG)
+![Blazor TomTom Map with Zooming and Panning](../images/MapProviders/TomTom/blazor-tomtom-map-zooming.png)
 
 ## Adding markers and navigation line
 
@@ -110,7 +110,7 @@ Markers can be added to the TomTom map layer by setting the latitude and longitu
 }
 ```
 
-![Blazor TomTom Map with Markers and Navigation Line](../images/MapProviders/TomTom/blazor-tomtom-map-marker-and-line.PNG)
+![Blazor TomTom Map with Markers and Navigation Line](../images/MapProviders/TomTom/blazor-tomtom-map-marker-and-line.png)
 
 ## Adding sublayer
 
@@ -132,7 +132,7 @@ Any GeoJSON shape can be rendered as a sublayer on top of the OpenStreetMap laye
 </SfMaps>
 ```
 
-![Blazor TomTom Map with Sublayer](../images/MapProviders/TomTom/blazor-tomtom-map-sublayer.PNG)
+![Blazor TomTom Map with Sublayer](../images/MapProviders/TomTom/blazor-tomtom-map-sublayer.png)
 
 ## Enabling legend
 
@@ -193,4 +193,4 @@ In the example below, the legend is added to the markers on the TomTom map layer
 
 ```
 
-![Blazor TomTom Map with Legend](../images/MapProviders/TomTom/blazor-tomtom-map-legend.PNG)
+![Blazor TomTom Map with Legend](../images/MapProviders/TomTom/blazor-tomtom-map-legend.png)

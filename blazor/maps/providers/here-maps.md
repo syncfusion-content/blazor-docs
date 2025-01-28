@@ -41,7 +41,7 @@ In the following example, HERE map can be rendered using the `UrlTemplate` prope
 </SfMaps>
 ```
 
-![Blazor HERE Map](../images/MapProviders/Here-map/blazor-here-map.PNG)
+![Blazor HERE Map](../images/MapProviders/Here-map/blazor-here-map.png)
 
 ## Enabling zooming and panning
 
@@ -65,7 +65,7 @@ The HERE map layer supports both zooming and panning. Zooming allows you to take
 </SfMaps>
 ```
 
-![Blazor HERE Map with Zooming and Panning](../images/MapProviders/Here-map/blazor-here-map-zooming.PNG)
+![Blazor HERE Map with Zooming and Panning](../images/MapProviders/Here-map/blazor-here-map-zooming.png)
 
 ## Adding markers and navigation line
 
@@ -108,7 +108,7 @@ Markers can be added to the HERE map layer by setting the latitude and longitude
 }
 ```
 
-![Blazor HERE Map with Markers and Navigation Line](../images/MapProviders/Here-map/blazor-here-map-marker-and-line.PNG)
+![Blazor HERE Map with Markers and Navigation Line](../images/MapProviders/Here-map/blazor-here-map-marker-and-line.png)
 
 ## Adding sublayer
 
@@ -130,7 +130,7 @@ Any GeoJSON shape can be rendered as a sublayer on top of the HERE map layer to 
 </SfMaps>
 ```
 
-![Blazor HERE Map with Sublayer](../images/MapProviders/Here-map/blazor-here-map-sublayer.PNG)
+![Blazor HERE Map with Sublayer](../images/MapProviders/Here-map/blazor-here-map-sublayer.png)
 
 ## Enabling legend
 
@@ -191,4 +191,4 @@ In the example below, the legend is added to the markers on the HERE map layer.
 
 ```
 
-![Blazor HERE Map with Legend](../images/MapProviders/Here-map/blazor-here-map-legend.PNG)
+![Blazor HERE Map with Legend](../images/MapProviders/Here-map/blazor-here-map-legend.png)

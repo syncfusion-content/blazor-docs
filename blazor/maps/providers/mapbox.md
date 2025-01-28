@@ -41,7 +41,7 @@ In the following example, Mapbox can be rendered using the `UrlTemplate` propert
 </SfMaps>
 ```
 
-![Blazor Mapbox](../images/MapProviders/Mapbox/blazor-mapbox.PNG)
+![Blazor Mapbox](../images/MapProviders/Mapbox/blazor-mapbox.png)
 
 ## Enabling zooming and panning
 
@@ -65,7 +65,7 @@ The Mapbox layer supports both zooming and panning. Zooming allows you to take a
 </SfMaps>
 ```
 
-![Blazor Mapbox with Zooming and Panning](../images/MapProviders/Mapbox/blazor-mapbox-zooming.PNG)
+![Blazor Mapbox with Zooming and Panning](../images/MapProviders/Mapbox/blazor-mapbox-zooming.png)
 
 ## Adding markers and navigation line
 
@@ -108,7 +108,7 @@ Markers can be added to the Mapbox layer by setting the latitude and longitude c
 }
 ```
 
-![Blazor Mapbox with Markers and Navigation Line](../images/MapProviders/Mapbox/blazor-mapbox-marker-and-line.PNG)
+![Blazor Mapbox with Markers and Navigation Line](../images/MapProviders/Mapbox/blazor-mapbox-marker-and-line.png)
 
 ## Adding sublayer
 
@@ -130,7 +130,7 @@ Any GeoJSON shape can be rendered as a sublayer on top of the Mapbox map layer t
 </SfMaps>
 ```
 
-![Blazor Mapbox with Sublayer](../images/MapProviders/Mapbox/blazor-mapbox-sublayer.PNG)
+![Blazor Mapbox with Sublayer](../images/MapProviders/Mapbox/blazor-mapbox-sublayer.png)
 
 ## Enabling legend
 
@@ -191,4 +191,4 @@ In the example below, the legend is added to the markers on the Mapbox layer.
 
 ```
 
-![Blazor Mapbox with Legend](../images/MapProviders/Mapbox/blazor-mapbox-legend.PNG)
+![Blazor Mapbox with Legend](../images/MapProviders/Mapbox/blazor-mapbox-legend.png)

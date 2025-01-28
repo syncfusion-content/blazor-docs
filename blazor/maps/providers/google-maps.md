@@ -235,7 +235,7 @@ In the following example, the Google maps is displayed by setting the `UrlTempla
 }
 ```
 
-![Blazor Google Maps](../images/MapProviders/Google-maps/blazor-google-maps.PNG)
+![Blazor Google Maps](../images/MapProviders/Google-maps/blazor-google-maps.png)
 
 ## Enable zooming and panning
 
@@ -261,7 +261,7 @@ N>You can refer to the method for obtaining the session token can be explained i
 </SfMaps>
 ```
 
-![Blazor Google Maps with Zooming and Panning](../images/MapProviders/Google-maps/blazor-google-maps-zooming.PNG)
+![Blazor Google Maps with Zooming and Panning](../images/MapProviders/Google-maps/blazor-google-maps-zooming.png)
 
 ## Adding markers and navigation line
 
@@ -306,7 +306,7 @@ N>You can refer to the method for obtaining the session token can be explained i
 }
 ```
 
-![Blazor Google Maps with Markers and Navigation Line](../images/MapProviders//Google-maps/blazor-google-maps-marker-and-line.PNG)
+![Blazor Google Maps with Markers and Navigation Line](../images/MapProviders//Google-maps/blazor-google-maps-marker-and-line.png)
 
 ## Adding sublayer
 
@@ -330,7 +330,7 @@ N>You can refer to the method for obtaining the session token can be explained i
 </SfMaps>
 ```
 
-![Blazor Google Maps with Sublayer](../images/MapProviders/Google-maps/blazor-google-maps-sublayer.PNG)
+![Blazor Google Maps with Sublayer](../images/MapProviders/Google-maps/blazor-google-maps-sublayer.png)
 
 ## Enable legend
 
@@ -393,4 +393,4 @@ In the example below, the legend is added to the markers on the Google Maps laye
 
 ```
 
-![Blazor Google Maps with Legend](../images/MapProviders/Google-maps/blazor-google-maps-legend.PNG)
+![Blazor Google Maps with Legend](../images/MapProviders/Google-maps/blazor-google-maps-legend.png)

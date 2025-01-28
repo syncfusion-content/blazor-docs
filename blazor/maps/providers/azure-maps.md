@@ -49,7 +49,7 @@ In the following example, Azure Maps can be rendered using the `UrlTemplate` pro
 </SfMaps>
 ```
 
-![Blazor Azure Maps](../images/MapProviders/Azure-maps/blazor-azure-maps.PNG)
+![Blazor Azure Maps](../images/MapProviders/Azure-maps/blazor-azure-maps.png)
 
 ## Enabling zooming and panning
 
@@ -73,7 +73,7 @@ The Azure Maps layer supports both zooming and panning. Zooming allows you to ta
 </SfMaps>
 ```
 
-![Blazor Azure Maps with zooming and panning](../images/MapProviders/Azure-maps/blazor-azure-maps-zooming.PNG)
+![Blazor Azure Maps with zooming and panning](../images/MapProviders/Azure-maps/blazor-azure-maps-zooming.png)
 
 ## Adding markers and navigation line
 
@@ -116,7 +116,7 @@ Markers can be added to the Azure map layer by setting the latitude and longitud
 }
 ```
 
-![Blazor Azure Maps with markers and navigation line](../images/MapProviders/Azure-maps/blazor-azure-maps-marker-and-line.PNG)
+![Blazor Azure Maps with markers and navigation line](../images/MapProviders/Azure-maps/blazor-azure-maps-marker-and-line.png)
 
 ## Adding sublayer
 
@@ -138,7 +138,7 @@ Any GeoJSON shape can be rendered as a sublayer on top of the Azure Maps layer t
 </SfMaps>
 ```
 
-![Blazor Azure Maps with sublayer](../images/MapProviders/Azure-maps/blazor-azure-maps-sublayer.PNG)
+![Blazor Azure Maps with sublayer](../images/MapProviders/Azure-maps/blazor-azure-maps-sublayer.png)
 
 ## Enabling legend
 
@@ -199,4 +199,4 @@ In the example below, the legend is added to the markers on the Azure Maps layer
 
 ```
 
-![Blazor Azure Maps with legend](../images/MapProviders/Azure-maps/blazor-azure-maps-legend.PNG)
+![Blazor Azure Maps with legend](../images/MapProviders/Azure-maps/blazor-azure-maps-legend.png)
