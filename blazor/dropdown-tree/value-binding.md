@@ -13,7 +13,7 @@ Value binding is the process of passing values between a component and its paren
 
 ## Preselected value through API  
 
-The Blazor Dropdown Tree component provides the capability to select specific nodes during initialization or dynamically through the two-way binding provided by the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_Value) property. This property allows for the selection of particular nodes by passing in an list collection of the corresponding node IDs as TValue. Also you can dynamically assign the node IDs using a button click.
+The Blazor Dropdown Tree component provides the capability to select specific nodes during initialization or dynamically through the two-way binding provided by the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_Value)property. This property allows for the selection of particular nodes by passing in an list collection of the corresponding node IDs as TValue. Also you can dynamically assign the node IDs using a button click.
 
 In the following example, the two nodes are preselected using [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_Value) property.
 

@@ -18,7 +18,7 @@ The **Dashboard Layout** is a grid structured component, which can be split into
 
 ## Modifying cell size
 
-The size of grid cells can be modified to the required size using the [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_Columns) and [`CellAspectRatio`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_CellAspectRatio) properties.
+The size of grid cells can be modified to the required size using the `Columns` and `CellAspectRatio` properties.
 
 ```cshtml
 
@@ -56,13 +56,13 @@ In the above sample, width of the parent element is divided into five equal cell
 
 The height of these cells will be 50px based on the CellAspectRatio value 100/50 (that is for every 100px of width, 50px will be the height of the cell).
 
-The following output demonstrates the setting of `cellAspectRatio` and `Columns` properties in the Dashboard Layout component.
+The following output demonstrates the setting of `cellAspectRatio` and `Columns` properties in the dashboard component.
 
 ![Changing Cell Size of Blazor Dashboard Layout](images/blazor-dashboard-layout-cell-size.png)
 
 ## Setting cell spacing
 
-The spacing between each panel in a row and column can be defined using the [`CellSpacing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_CellSpacing) property. Adding space between the panels will make the layout effective and provides a clear data representation.
+The spacing between each panel in a row and column can be defined using the `CellSpacing` property. Adding space between the panels will make the layout effective and provides a clear data representation.
 
 ```cshtml
 
@@ -96,13 +96,13 @@ The spacing between each panel in a row and column can be defined using the [`Ce
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjLKMBhQpMKkevti?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-The following output demonstrates the neat and clear representation of data by setting the `cellSpacing` property in Dashboard Layout component.
+The following output demonstrates the neat and clear representation of data by setting the `cellSpacing` property in dashboard component.
 
 ![Blazor DashboardLayout with Cell Spacing](images/blazor-dashboard-layout-cell-space.png)
 
 ## Graphical representation of grid layout
 
-These cells combinedly form a grid-structured layout, which will be hidden initially. This grid-structured layout can be made visible by enabling the [`ShowGridLines`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_ShowGridLines) property, which clearly shows the cells split-up within the layout. These gridlines are helpful in panels sizing and placement within the layout during initial designing of a Dashboard Layout.
+These cells combinedly form a grid-structured layout, which will be hidden initially. This grid-structured layout can be made visible by enabling the `ShowGridLines` property, which clearly shows the cells split-up within the layout. These gridlines are helpful in panels sizing and placement within the layout during initial designing of a dashboard.
 
 ```cshtml
 

@@ -9,13 +9,13 @@ documentation: ug
 
 # Node Editing in Blazor TreeView Component
 
-The Blazor TreeView allows to edit nodes by setting the [`AllowEditing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_AllowEditing) property to **true**. To directly edit the nodes in place, **double click** the TreeView node or **select** the node and press **F2** key.
+The Blazor TreeView allows to edit nodes by setting the `AllowEditing` property to **true**. To directly edit the nodes in place, **double click** the TreeView node or **select** the node and press **F2** key.
 
 When editing is completed by focus out or by pressing the **Enter** key, the modified node’s text saves automatically. If you do not want to save the modified node’s text in TreeView node, press **Escape** key. It does not save the edited text to the TreeView node.
 
-* Node editing can also be performed programmatically by using the [`BeginEditAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_BeginEditAsync_System_String_) method. On passing the node ID or element through this method, the edit textbox will be created for the particular node thus allowing us to edit it.
+* Node editing can also be performed programmatically by using the `BeginEdit` method. On passing the node ID or element through this method, the edit textbox will be created for the particular node thus allowing us to edit it.
 
-* In order to validate or prevent editing, the [`NodeEditing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeEditing) event can be used which is triggered before the TreeView node is renamed. On successfully renaming a node the [`NodeEdited`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeEdited) event will be triggered.
+* In order to validate or prevent editing, the `NodeEditing` event can be used which is triggered before the TreeView node is renamed. On successfully renaming a node the `NodeEdited` event will be triggered.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

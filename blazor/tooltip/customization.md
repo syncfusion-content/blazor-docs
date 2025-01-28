@@ -9,7 +9,7 @@ documentation: ug
 
 # Customization in Blazor Tooltip Component
 
-The Tooltip can be customized by using the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_CssClass) property, which accepts custom CSS class names that define the specific user-defined styles and themes to be applied on the Tooltip element.
+The Tooltip can be customized by using the `CssClass` property, which accepts custom CSS class names that defines the specific user-defined styles and themes to be applied on the Tooltip element.
 
 ## Tip pointer customization
 

@@ -1,24 +1,24 @@
 ---
 layout: post
-title: Types in Blazor Chips Component | Syncfusion
-description: Checkout and learn here all about Chips Types in Syncfusion Blazor Chips component and much more details.
+title: Types in Blazor Chip Component | Syncfusion
+description: Checkout and learn here all about Chip Types in Syncfusion Blazor Chip component and much more details.
 platform: Blazor
-control: Chips
+control: Chip
 documentation: ug
 ---
 
-# Types in Blazor Chips Component
+# Types in Blazor Chip Component
 
-The Chips component has the following types.
+The Chip control has the following types.
 
-* Input Chips
-* Choice Chips
-* Filter Chips
-* Action Chips
+* Input Chip
+* Choice Chip
+* Filter Chip
+* Action Chip
 
-## Input Chips
+## Input Chip
 
-Input Chips holds information in compact form. It converts user input into chips.
+Input Chip holds information in compact form. It converts user input into chips.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -35,11 +35,11 @@ Input Chips holds information in compact form. It converts user input into chips
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VtLAWVrmVySxGUhD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor Chips with Input Items](./images/blazor-chip-input-items.png)
+![Blazor Chip with Input Items](./images/blazor-chip-input-items.png)
 
-## Choice Chips
+## Choice Chip
 
-Choice Chips allows you to select a single Chips from the set of Chips/ChipItems. It can be enabled by setting the [`Selection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfChip.html#Syncfusion_Blazor_Buttons_SfChip_Selection) property to `Single`.
+Choice Chip allows you to select a single chip from the set of Chip/ChipItems. It can be enabled by setting the `Selection` property to `Single`.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -56,11 +56,11 @@ Choice Chips allows you to select a single Chips from the set of Chips/ChipItems
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LXrgihLQrIIaiZzR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Single Selection in Blazor Chips](./images/blazor-chip-single-selection.gif)
+![Single Selection in Blazor Chip](./images/blazor-chip-single-selection.gif)
 
-## Filter Chips
+## Filter Chip
 
-Filter Chips allows you to select a multiple Chips from the set of Chips/ChipItems. It can be enabled by setting the [`Selection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfChip.html#Syncfusion_Blazor_Buttons_SfChip_Selection) property to `Multiple`.
+Filter Chip allows you to select a multiple chip from the set of Chip/ChipItems. It can be enabled by setting the `Selection` property to `Multiple`.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -78,11 +78,11 @@ Filter Chips allows you to select a multiple Chips from the set of Chips/ChipIte
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rjVUChLGrodMJCaU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
-![Multiple Selection in Blazor Chips](./images/blazor-chip-multiple-selection.gif)
+![Multiple Selection in Blazor Chip](./images/blazor-chip-multiple-selection.gif)
 
-## Action Chips
+## Action Chip
 
-The Action Chips triggers the event like [`OnClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipEvents.html#Syncfusion_Blazor_Buttons_ChipEvents_OnClick) or [`OnDelete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipEvents.html#Syncfusion_Blazor_Buttons_ChipEvents_OnDelete), which helps to do action based on the event.
+The Action Chip triggers the event like click or delete, which helps to do action based on the event.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -112,11 +112,11 @@ The Action Chips triggers the event like [`OnClick`](https://help.syncfusion.com
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjLgCrLGBSnHjcxB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
-![Blazor Action Chips](./images/blazor-action-chip.gif)
+![Blazor Action Chip](./images/blazor-action-chip.gif)
 
-### Deletable Chips
+### Deletable Chip
 
-Deletable Chips allows you to delete a Chips from Chips/ChipItems. It can be enabled by setting the [`EnableDelete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfChip.html#Syncfusion_Blazor_Buttons_SfChip_EnableDelete) property to `true`.
+Deletable Chip allows you to delete a chip from Chip/ChipItems. It can be enabled by setting the `EnableDelete` property to `true`.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons

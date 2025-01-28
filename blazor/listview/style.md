@@ -39,7 +39,7 @@ Use the following CSS to customize the items of ListView.
 
 ## Customizing ListView's header
 
-Use the following CSS to customize the header of ListView component.
+Use the following CSS to customize the header of ListView control.
 
 ```CSS
 
@@ -64,7 +64,7 @@ Use the following CSS to customize the category of the group items.
 
 ```
 
-## Customizing the hover state of ListView component
+## Customizing the hover state of ListView control
 
 Use the following CSS to customize the list item when hovering.
 
@@ -90,7 +90,7 @@ Use the following CSS to customize the list item when hovering.
 
 ```
 
-## Customizing selected item of ListView component
+## Customizing selected item of ListView control
 
 Use the following CSS to customize the selected list item.
 

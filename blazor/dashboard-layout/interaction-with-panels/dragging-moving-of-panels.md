@@ -48,13 +48,13 @@ N> The complete panel will act as the handler for dragging the panel such that t
 
 The above sample demonstrates dragging and pushing of panels. For example, while dragging the panel 0 over panel 1, these panels get collided and push the panel 1 towards the feasible direction, so that, the panel 0 gets placed in the panel 1 position.
 
-The following output demonstrates the dragging functionality of Dashboard Layout component.
+The following output demonstrates the dragging functionality of dashboard component.
 
 ![Drag and Drop Panels in Blazor DashboardLayout](../images/blazor-dashboard-layout-drag-and-drop.gif)
 
 ## Customizing the dragging handler
 
-The dragging handler for the panels can be customized using the [`DraggableHandle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_DraggableHandle) property to restrict the dragging action within a particular element in the panel.
+The dragging handler for the panels can be customized using the `DraggableHandle` property to restrict the dragging action within a particular element in the panel.
 
 ```cshtml
 
