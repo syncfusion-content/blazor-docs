@@ -129,7 +129,6 @@ The toolbar and drag and drop actions between two listboxes can be enabled by se
 
 ```
 @using Syncfusion.Blazor.DropDowns
-
 <div id="listbox1">
     <h4>Group A</h4>
     <SfListBox TValue="string[]" id="scope1" Scope="scope1" DataSource="@GroupA" TItem="CountryCode" AllowDragAndDrop="true">
@@ -143,7 +142,6 @@ The toolbar and drag and drop actions between two listboxes can be enabled by se
         <ListBoxFieldSettings Text="Name"></ListBoxFieldSettings>
     </SfListBox>
 </div>
-
 @code {
     public string[] Items = new string[] { "MoveTo", "MoveFrom", "MoveAllTo", "MoveAllFrom" };
     public List<CountryCode> GroupA = new List<CountryCode>
@@ -154,7 +152,6 @@ The toolbar and drag and drop actions between two listboxes can be enabled by se
         new CountryCode{ Name = "Cameroon", Code = "CM" },
         new CountryCode{ Name = "Denmark", Code = "DK" }
     };
-
     public List<CountryCode> GroupB = new List<CountryCode>
     {
         new CountryCode{ Name = "India", Code = "IN" },
@@ -163,20 +160,17 @@ The toolbar and drag and drop actions between two listboxes can be enabled by se
         new CountryCode{ Name = "Mexico", Code = "MX" },
         new CountryCode{ Name = "Norway", Code = "NO" },
     };
-
     public class CountryCode
     {
         public string Name { get; set; }
         public string Code { get; set; }
     }
 }
-
 <style>
     #listbox1 {
         width: 48%;
         float: left;
     }
-
     #listbox2 {
         width: 48%;
         float: right;

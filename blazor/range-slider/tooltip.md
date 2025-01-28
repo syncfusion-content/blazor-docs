@@ -9,7 +9,7 @@ documentation: ug
 
 # Tooltip in Blazor Range Slider Component
 
-The Slider displays the tooltip to indicate the current value by clicking the Slider bar or drag the Slider handle. The Tooltip position can be customized by using the [`Placement`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderTooltip.html#Syncfusion_Blazor_Inputs_SliderTooltip_Placement) property. Also decides the tooltip display mode on a page, i.e., on hovering, focusing, or clicking on the Slider handle and it always remains/displays on the page.
+The Slider displays the tooltip to indicate the current value by clicking the Slider bar or drag the Slider handle. The Tooltip position can be customized by using the `Placement` property. Also decides the tooltip display mode on a page, i.e., on hovering, focusing, or clicking on the Slider handle and it always remains/displays on the page.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -27,11 +27,9 @@ The Slider displays the tooltip to indicate the current value by clicking the Sl
 
 ## Buttons
 
-The Slider can be equipped with increase and decrease buttons to change its value. This functionality is enabled by setting the [`ShowButtons`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSlider-1.html#Syncfusion_Blazor_Inputs_SfSlider_1_ShowButtons) property to true. In a Range Slider, clicking these buttons will, by default, adjust the value of the first handle. To change the value of a different handle, first focus on that handle and then use the buttons.
+The Slider value can be changed by using the Increase and Decrease buttons. In Range Slider, by default the first handle value will be changed while clicking the button. Change the handle focus and press the button to change the last focused handle value.
 
 N> After enabling the slider buttons if the 'Tab' key is pressed, the focus goes to the handle and not to the button.
-
-Here's an example of how to implement buttons in a Slider:
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs

@@ -11,7 +11,7 @@ documentation: ug
 
 ## Height and width
 
-The Tooltip can either be assigned with auto height and width values or specific pixel values. The [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_Width) and [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_Height) properties are used to set the outer dimension of the Tooltip element. The default value for both the properties is `auto`. It also accepts string and number values in pixels.
+The Tooltip can either be assigned with auto height and width values or specific pixel values. The `Width` and `Height` properties are used to set the outer dimension of the Tooltip element. The default value for both the properties is `auto`. It also accepts string and number values in pixels.
 
 
 ```cshtml
@@ -32,7 +32,7 @@ The Tooltip can either be assigned with auto height and width values or specific
 
 ### Scroll mode
 
-When [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_Height) is specified with a certain pixel value and the Tooltip content overflows, the scrolling mode gets enabled.
+When `Height` is specified with a certain pixel value and the Tooltip content overflows, the scrolling mode gets enabled.
 
 ```cshtml
 @using Syncfusion.Blazor.Popups
@@ -57,4 +57,4 @@ When [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.S
 
 ![Scrolling in Blazor Tooltip](images/blazor-tooltip-scrolling.gif)
 
-N> The scrolling mode can best be seen when the sticky mode of the Tooltip is enabled. To enable sticky mode, set the [`IsSticky`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_IsSticky) property to true.
+N> The scrolling mode can best be seen when the sticky mode of the Tooltip is enabled. To enable sticky mode, set the `IsSticky` property to true.

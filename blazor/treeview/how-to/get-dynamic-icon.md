@@ -9,7 +9,7 @@ documentation: ug
 
 # Get iconCss dynamically in Blazor TreeView Component
 
-In the TreeView component, get the original bound data using the [`GetTreeData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_GetTreeData_System_String_) method. For this method, if the id of the tree node is passed, it returns the corresponding node information, or otherwise the overall tree nodes information will be returned. This method can be used to get the bound IconCss class in the [`NodeChecking`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeChecking) event.
+In the TreeView component, get the original bound data using the `GetTreeData` method. For this method, if the id of the tree node is passed, it returns the corresponding node information, or otherwise the overall tree nodes information will be returned. This method can be used to get the bound IconCss class in the `NodeChecking` event.
 
 ```csharp
 
