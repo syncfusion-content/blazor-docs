@@ -69,7 +69,7 @@ The MapTiler map layer supports both zooming and panning. Zooming allows you to 
 
 ## Adding markers and navigation line
 
-Markers can be added to the MapTiler map layer by setting the latitude and longitude coordinates of the desired location using [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html) class. Additionally, navigation lines can be added on top of the ArcGIS layer to highlight paths between various places by specifying the corresponding latitude and longitude coordinates in the [MapsNavigationLine](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html).
+Markers can be added to the MapTiler map layer by setting the latitude and longitude coordinates of the desired location using [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html) class. Additionally, navigation lines can be added on top of the MapTiler map layer to highlight paths between various places by specifying the corresponding latitude and longitude coordinates in the [MapsNavigationLine](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html).
 
 ```csharp
 @using Syncfusion.Blazor.Maps
@@ -112,7 +112,7 @@ Markers can be added to the MapTiler map layer by setting the latitude and longi
 
 ## Adding sublayer
 
-Any GeoJSON shape can be rendered as a sublayer on top of the ArcGIS layer to highlight a particular continent or country. This is achieved by adding another layer and setting the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_Type) property of [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) to **SubLayer**.
+Any GeoJSON shape can be rendered as a sublayer on top of the MapTiler map layer to highlight a particular continent or country. This is achieved by adding another layer and setting the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_Type) property of [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) to **SubLayer**.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
