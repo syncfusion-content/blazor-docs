@@ -104,25 +104,25 @@ In the following example, the parent container has explicit height and width set
 @using Syncfusion.Blazor.Grids
 
 <div style="width:calc(100vw - 20rem); height:calc(100vh - 7rem);"> @*Change the rem values based on your browser page layout*@
-    <SfGrid DataSource="@OrderData" Height="100%" Width="100%">
+    <SfGrid DataSource="@LazyLoadData" Height="100%" Width="100%">
         <GridColumns>
-            <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-            <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
-            <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Width="100"></GridColumn>
-            <GridColumn Field=@nameof(OrderDetails.ShipAddress) HeaderText="Ship Address" Width="120"></GridColumn>
+            <GridColumn Field=@nameof(LazyLoadDetails.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
+            <GridColumn Field=@nameof(LazyLoadDetails.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+            <GridColumn Field=@nameof(LazyLoadDetails.Freight) HeaderText="Freight" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="100"></GridColumn>
+            <GridColumn Field=@nameof(LazyLoadDetails.ShipAddress) HeaderText="Ship Address" Width="120"></GridColumn>
         </GridColumns>
     </SfGrid>
 </div>
 
 @code{
-    public List<OrderDetails> OrderData { get; set; }
+    public List<LazyLoadDetails> LazyLoadData { get; set; }
     protected override void OnInitialized()
     {
-        OrderData = LazyLoadData.CreateLazyLoadData();
+        LazyLoadData = LazyLoadDetails.CreateLazyLoadData();
     }
 }
 {% endhighlight %}
-{% highlight c# tabtitle="OrderDetails.cs" %}
+{% highlight c# tabtitle="LazyLoadDetails.cs" %}
 public class LazyLoadDetails
 {
     public static List<LazyLoadDetails> CreateLazyLoadData()
@@ -164,27 +164,39 @@ In the below demo, the Grid headers will be sticky while scrolling the Grid's pa
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
 
-<div style="width:calc(100vw - 20rem); height:calc(100vh - 7rem);"> @*Change the rem values based on your browser page layout*@
-    <SfGrid DataSource="@OrderData" Height="100%" Width="100%">
+<div>
+    <label> Enable or Disable Sticky Header</label>
+    <SfSwitch ValueChange="Change" TChecked="bool" style="margin-top:5px"></SfSwitch>
+</div>
+<div style="height:350px; margin-top:5px"> 
+    <SfGrid @ref="Grid" DataSource="@LazyLoadData" EnableStickyHeader="@IsStickyHeader">
         <GridColumns>
-            <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-            <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
-            <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Width="100"></GridColumn>
-            <GridColumn Field=@nameof(OrderDetails.ShipAddress) HeaderText="Ship Address" Width="120"></GridColumn>
+            <GridColumn Field=@nameof(LazyLoadDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+            <GridColumn Field=@nameof(LazyLoadDetails.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+            <GridColumn Field=@nameof(LazyLoadDetails.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Width="100"></GridColumn>
+            <GridColumn Field=@nameof(LazyLoadDetails.ShipAddress) HeaderText="Ship Address" Width="120"></GridColumn>
         </GridColumns>
     </SfGrid>
 </div>
 
 @code{
-    public List<OrderDetails> OrderData { get; set; }
+    private SfGrid<LazyLoadDetails> Grid;
+    public List<LazyLoadDetails> LazyLoadData { get; set; }
     protected override void OnInitialized()
     {
-        OrderData = LazyLoadData.CreateLazyLoadData();
+        LazyLoadData = LazyLoadDetails.CreateLazyLoadData();
+    }
+    public bool IsStickyHeader;
+    private void Change(Syncfusion.Blazor.Buttons.ChangeEventArgs<bool> args)
+    {
+        IsStickyHeader = args.Checked;
+        Grid.Refresh();
     }
 }
 {% endhighlight %}
-{% highlight c# tabtitle="LazyLoadData.cs" %}
+{% highlight c# tabtitle="LazyLoadDetails.cs" %}
 public class LazyLoadDetails
 {
     public static List<LazyLoadDetails> CreateLazyLoadData()
@@ -217,13 +229,123 @@ public class LazyLoadDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjBytWVcUTZgQUiC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+## Scroll to selected row
+
+The Blazor Grid component allows you to scroll the grid content to the position of the selected row, ensuring that the selected row is automatically brought into view. This feature is particularly useful when dealing with a large dataset and wanting to maintain focus on the selected row. To achieve this, you can utilize the [RowSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowSelected) event provided by the Grid.
+
+The following example that demonstrates how to use the `RowSelected` event to scroll to the selected row:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.DropDowns
+
+<div>
+    <label style="padding: 30px 2px 0 0">Select row index:</label>
+    <SfDropDownList TValue="string" TItem="Rows" Placeholder="Select count" Width="220px" DataSource="DropDownData" @bind-Value="SelectedValue">
+        <DropDownListFieldSettings Text="Text" Value="Value"></DropDownListFieldSettings>
+        <DropDownListEvents ValueChange="ValueChanged" TValue="string" TItem="Rows"></DropDownListEvents>
+    </SfDropDownList>
+</div>
+<div style="height:350px; margin-top:5px">
+    <SfGrid @ref="Grid" DataSource="@LazyLoadData" Height="315" Width="100%">
+        <GridEvents RowSelected="RowselectedHandler" TValue="LazyLoadDetails"></GridEvents>>
+        <GridColumns>
+            <GridColumn Field=@nameof(LazyLoadDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+            <GridColumn Field=@nameof(LazyLoadDetails.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+            <GridColumn Field=@nameof(LazyLoadDetails.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Width="100"></GridColumn>
+            <GridColumn Field=@nameof(LazyLoadDetails.ShipAddress) HeaderText="Ship Address" Width="120"></GridColumn>
+        </GridColumns>
+    </SfGrid>
+</div>
+
+@code{
+    private SfGrid<LazyLoadDetails> Grid;
+    public List<LazyLoadDetails> LazyLoadData { get; set; }
+    protected override void OnInitialized()
+    {
+        LazyLoadData = LazyLoadDetails.CreateLazyLoadData();
+    }
+    public string SelectedValue { get; set; }
+    public class Rows
+    {
+        public string Text { get; set; }
+        public string Value { get; set; }
+    }
+    private List<Rows> DropDownData = new List<Rows>
+    {
+        new Rows() { Text = "Select count" },
+        new Rows() { Text = "10", Value = "10" },
+        new Rows() { Text = "20", Value = "20" },
+        new Rows() { Text = "30", Value = "30" },
+        new Rows() { Text = "80", Value = "80" },
+        new Rows() { Text = "100", Value = "100" },
+        new Rows() { Text = "200", Value = "200" },
+        new Rows() { Text = "232", Value = "232" },
+        new Rows() { Text = "300", Value = "300" },
+        new Rows() { Text = "500", Value = "500" },
+        new Rows() { Text = "800", Value = "800" },
+        new Rows() { Text = "820", Value = "820" },
+        new Rows() { Text = "920", Value = "920" },
+        new Rows() { Text = "2020", Value = "2020" },
+        new Rows() { Text = "3000", Value = "3000" },
+        new Rows() { Text = "4000", Value = "4000" },
+        new Rows() { Text = "4999", Value = "4999" }
+    };
+    public async Task ValueChanged(ChangeEventArgs<string, Rows> Args)
+    {
+        if (int.TryParse(SelectedValue, out int rowIndex))
+        {
+            await Grid.SelectRowAsync(rowIndex);
+            await Grid.ScrollIntoViewAsync(rowIndex);
+        }
+    }
+    public void RowselectedHandler(RowSelectEventArgs<LazyLoadDetails> args)
+    {
+        Grid.PreventRender(false);
+    }
+}
+{% endhighlight %}
+{% highlight c# tabtitle="LazyLoadDetails.cs" %}
+public class LazyLoadDetails
+{
+    public static List<LazyLoadDetails> CreateLazyLoadData()
+    {
+        var lazyLoadData = new List<LazyLoadDetails>();
+        var customerIds = new[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD", "HANAR", "CHOPS", "RICSU", "WELLI", "HILAA", "ERNSH", "CENTC", "OTTIK", "QUEDE", "RATTC", "FOLKO", "BLONP", "WARTH" };
+        var shipAddresses = new[] { "507 - 20th Ave. E.\nApt. 2A", "908 W. Capital Way", "722 Moss Bay Blvd.", "4110 Old Redmond Rd.", "14 Garrett Hill" };
+        var freights = new[] { 10, 24, 12, 48, 36, 102, 18 };
+        int orderId = 10248;
+        var random = new Random();
+        for (int i = 0; i < 5000; i++)
+        {
+            lazyLoadData.Add(new LazyLoadDetails
+            {
+                OrderID = orderId + i,
+                CustomerID = customerIds[random.Next(customerIds.Length)],
+                ShipAddress = shipAddresses[random.Next(shipAddresses.Length)],
+                Freight = freights[random.Next(freights.Length)]
+            });
+        }
+        return lazyLoadData;
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipAddress { get; set; }
+    public double Freight { get; set; }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVoZiLPivFixBPP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## Customize grid scroll bar
 
 The Grid component uses the native browser scroll bar to scroll through the content when the content is larger than the Grid. Refer to [this](https://css-tricks.com/almanac/properties/s/scrollbar/) to customize the appearance of the scroll bar.
 
 By referring to the above link, we have customized the appearance of the scroll bar in the following sample.
 
-N> You can find the fully working sample [here](https://github.com/SyncfusionExamples/blazor-datagrid-customize-default-scrollbar).
+> You can find the fully working sample [here](https://github.com/SyncfusionExamples/blazor-datagrid-customize-default-scrollbar).
 
 ```csharp
 @using Syncfusion.Blazor.Grids
@@ -240,7 +362,6 @@ N> You can find the fully working sample [here](https://github.com/SyncfusionExa
 
 @code{
     public List<Order> Orders { get; set; }
-
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
@@ -252,7 +373,6 @@ N> You can find the fully working sample [here](https://github.com/SyncfusionExa
             ShipCountry = (new string[] { "USA", "UK", "JAPAN" })[new Random().Next(3)]
         }).ToList();
     }
-
     public class Order {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
@@ -261,7 +381,6 @@ N> You can find the fully working sample [here](https://github.com/SyncfusionExa
         public string ShipCountry { get; set; }
     }
 }
-
 <style>
     ::-webkit-scrollbar-thumb {
         background-color: #888;
@@ -274,7 +393,6 @@ N> You can find the fully working sample [here](https://github.com/SyncfusionExa
         background-color: #bbbbbb;
     }
 </style>
-
 ```
 
 ![Customizing the scroll bar in Blazor DataGrid.](./images/blazor-datagrid-scrollbar-customization.png)
