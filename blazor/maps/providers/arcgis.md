@@ -59,7 +59,7 @@ The ArcGIS map layer supports both zooming and panning. Zooming allows you to ta
         </MapsZoomToolbarSettings>
     </MapsZoomSettings>
     <MapsLayers>
-        <MapsLayer UrlTemplate="http://api.tomtom.com/map/1/tile/basic/main/level/tileX/tileY.png?key=subscription_key" TValue="string">
+        <MapsLayer UrlTemplate="https://ibasemaps-api.arcgis.com/arcgis/rest/services/World_Imagery/MapServer/tile/level/tileY/tileX?apiKey=Your_Key" TValue="string">
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
@@ -191,4 +191,4 @@ In the example below, the legend is added to the markers on the ArcGIS map layer
 
 ```
 
-![Blazor TomTom Maps with Legend](../images/MapProviders/Arcgis/blazor-arcgis-legend.png)
+![Blazor ArcGIS Map with Legend](../images/MapProviders/Arcgis/blazor-arcgis-legend.png)

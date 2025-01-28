@@ -26,7 +26,7 @@ These placeholders are replaced by **level**, **tileX**, and **tileY**, respecti
 
 N>You can refer this documentation [link](https://docs.mapbox.com/api/maps/raster-tiles/) for the latest URL template for Mapbox.
 
-The subscription_key is required and must be included in the URL to authenticate and access the map tiles. Follow the steps in this [link](https://docs.mapbox.com/help/dive-deeper/access-tokens/#creating-secret-access-tokens) to generate an API key, and then added the key to the URL.
+The **subscription_key** is required and must be included in the URL to authenticate and access the map tiles. Follow the steps in this [link](https://docs.mapbox.com/help/dive-deeper/access-tokens/#creating-secret-access-tokens) to generate an API key, and then add this key to the URL.
 
 In the following example, Mapbox can be rendered using the `UrlTemplate` property with its tile server URL.
 
@@ -45,7 +45,7 @@ In the following example, Mapbox can be rendered using the `UrlTemplate` propert
 
 ## Enabling zooming and panning
 
-The Mapbox layer supports both zooming and panning. Zooming allows you to take a closer look at a particular area on the map for in-depth analysis, while panning enables you to move the map around to focus on the target area.
+The Mapbox map layer supports both zooming and panning. Zooming allows you to take a closer look at a particular area on the map for in-depth analysis, while panning enables you to move the map around to focus on the target area.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -69,7 +69,7 @@ The Mapbox layer supports both zooming and panning. Zooming allows you to take a
 
 ## Adding markers and navigation line
 
-Markers can be added to the Mapbox layer by setting the latitude and longitude coordinates of the desired location using [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html) class. Additionally, navigation lines can be added on top of the Mapbox map layer to highlight paths between various places by specifying the corresponding latitude and longitude coordinates in the [MapsNavigationLine](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html).
+Markers can be added to the Mapbox map layer by setting the latitude and longitude coordinates of the desired location using [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html) class. Additionally, navigation lines can be added on top of the Mapbox map layer to highlight paths between various places by specifying the corresponding latitude and longitude coordinates in the [MapsNavigationLine](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html).
 
 ```csharp
 @using Syncfusion.Blazor.Maps
