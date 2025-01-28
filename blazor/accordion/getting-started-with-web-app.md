@@ -56,7 +56,7 @@ You need to configure the corresponding [Interactive render mode](https://learn.
 
 Alternatively, you can create a **Blazor Web App** using the command prompt or terminal. Refer this [link](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app#using-syncfusion-blazor-template).
 
-For example, A Blazor Web App with `Auto` interactive render mode and `Per page/component` interactivity location, use the following commands,
+For example, in a Blazor Web App with the `Auto` interactive render mode, use the following commands.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET CLI" %}
