@@ -77,7 +77,7 @@ The Azure Maps layer supports both zooming and panning. Zooming allows you to ta
 
 ## Adding markers and navigation line
 
-Markers can be added to the Azure map layer by setting the latitude and longitude coordinates of the desired location using [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html). Additionally, navigation lines can be added on top of the Azure map layer to highlight paths between various places by specifying the corresponding latitude and longitude coordinates in the [MapsNavigationLine](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html).
+Markers can be added to the Azure Maps layer by setting the latitude and longitude coordinates of the desired location using [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html). Additionally, navigation lines can be added on top of the Azure Maps layer to highlight paths between various places by specifying the corresponding latitude and longitude coordinates in the [MapsNavigationLine](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html).
 
 ```csharp
 @using Syncfusion.Blazor.Maps
