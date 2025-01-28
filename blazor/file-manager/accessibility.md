@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Accessibility in Blazor File Manager Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor File Manager component and more.
+title: Accessibility in Blazor FileManager Component | Syncfusion
+description: Checkout and learn here all about Accessibility in Syncfusion Blazor FileManager component and more.
 platform: Blazor
 control: File Manager
 documentation: ug
 ---
 
-# Accessibility in Blazor File Manager Component
+# Accessibility in Blazor FileManager Component
 
-The [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component has been designed with keeping the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) specifications in mind, and applied the `WAI-ARIA` roles, states, and properties along with `keyboard support`. This component is characterized by complete keyboard interaction support and ARIA accessibility support, which makes navigation easy for people who use assistive technologies (AT) or for users who completely rely on keyboard navigation.
+The [Blazor FileManager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component has been designed with keeping the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) specifications in mind, and applied the `WAI-ARIA` roles, states, and properties along with `keyboard support`. This component is characterized by complete keyboard interaction support and ARIA accessibility support, which makes navigation easy for people who use assistive technologies (AT) or for users who completely rely on keyboard navigation.
 
-The Blazor File Manager component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Blazor FileManager component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the Blazor File Manager component is outlined below.
+The accessibility compliance for the Blazor FileManager component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -41,7 +41,7 @@ The accessibility compliance for the Blazor File Manager component is outlined b
 
 ## WAI-ARIA attributes
 
-The Blazor File Manager component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) patterns to meet the accessibility. The following ARIA attributes are used in the File Manager component:
+The Blazor FileManager component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) patterns to meet the accessibility. The following ARIA attributes are used in the FileManager component:
 
 | **Attributes** | **Purpose** |
 | --- | --- |
@@ -80,15 +80,15 @@ You can use the following key shortcuts to access the File Manager without inter
 | <kbd>Tab</kbd> | Focuses on the first element of toolbar and navigates through the next tab indexed element. |
 | <kbd>Esc(Escape)</kbd> | Closes the image when it is in open state. |
 | <kbd>Alt+N</kbd> | Creates a new folder dialog.|
-| <kbd>F5</kbd> | Refresh the File Manager element. |
-| <kbd>Ctrl+Shift+1</kbd> | Changes the File Manager layout to Grid view. |
-| <kbd>Ctrl+Shift+2</kbd> | Changes the File Manager layout to Details view. |
+| <kbd>F5</kbd> | Refresh the file manager element. |
+| <kbd>Ctrl+Shift+1</kbd> | Changes the file manager layout to Grid view. |
+| <kbd>Ctrl+Shift+2</kbd> | Changes the file manager layout to Details view. |
 
 ## Ensuring accessibility
 
-The Blazor File Manager component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) software tool during automated testing.
+The Blazor FileManager component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) software tool during automated testing.
 
-The accessibility compliance of the File Manager component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/filemanager) in a new window to evaluate the accessibility of the File Manager component with accessibility tools.
+The accessibility compliance of the FileManager component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/filemanager) in a new window to evaluate the accessibility of the FileManager component with accessibility tools.
 
 ## See also
 

@@ -9,10 +9,10 @@ documentation: ug
 
 # Header and Content in Blazor Dashboard Layout Component
 
-Basically, Dashboard Layout Component have two templates to render the data in panels.
+Basically, Dashboard layout Component have two templates to render the data in panels.
 
-* [**ContentTemplate**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_ContentTemplate): To render data or any HTML template as the content.
-* [**HeaderTemplate**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_HeaderTemplate): A word or phrase that summarizes the panel’s content can be added as the header on the top of each panel.
+* ContentTemplate: To render data or any HTML template as the content.
+* HeaderTemplate: A word or phrase that summarizes the panel’s content can be added as the header on the top of each panel.
 
 ```cshtml
 

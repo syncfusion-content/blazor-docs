@@ -53,7 +53,7 @@ Specify the boolean value to the [Disabled](https://help.syncfusion.com/cr/blazo
 
 ## CssClass  
 
-Specifies the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_CssClass ) name that can be appended with the root element of the Dropdown Tree. One or more custom CSS classes can be added to a Dropdown Tree.
+Specifies the CSS class name that can be appended with the root element of the Dropdown Tree. One or more custom CSS classes can be added to a Dropdown Tree.
 
 Some of the predefined values are
 
@@ -318,7 +318,7 @@ Add the additional html attributes such as styles, class, and more to the root e
 
 ## Set the various font family for Dropdown Tree elements
 
-The font-family of the Dropdown Tree can be changed by overriding using the following selector. The overridden can be applied to specific component by adding a class name through the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_CssClass) property.
+The font-family of the Dropdown tree can be changed by overriding using the following selector. The overridden can be applied to specific component by adding a class name through the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_CssClass) property.
 
 In the following sample, the font family of the Dropdown Tree, ListItem text in Dropdown Tree and filterInput text are changed.
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Check list in Blazor ListView Component
 
-The [Blazor ListView](https://www.syncfusion.com/blazor-components/blazor-listview) supports checkbox in default and group-lists which is used to select multiple items. The checkbox can be enabled by the [`ShowCheckBox`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_ShowCheckBox) property.
+The [Blazor ListView](https://www.syncfusion.com/blazor-components/blazor-listview) supports checkbox in default and group-lists which is used to select multiple items. The checkbox can be enabled by the `ShowCheckBox` property.
 
 The Checkbox will be useful in the scenario where there is a need to select multiple options. For example, in shipping cart it is possible to select or unselect the desired items before checkout and also it will be useful in selecting multiple items that belongs to same category using the group list.
 
@@ -50,7 +50,7 @@ private DataModel[] Data = {
 
 ## Checkbox Position
 
-In ListView the checkbox can be positioned into either `Left` or `Right` side of the list-item text. This can be achieved by [`CheckBoxPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_CheckBoxPosition) property. By default, checkbox will be positioned to `Left` of list-item text.
+In ListView the checkbox can be positioned into either `Left` or `Right` side of the list-item text. This can be achieved by `CheckBoxPosition` property. By default, checkbox will be positioned to `Left` of list-item text.
 
 ```cshtml
 @using Syncfusion.Blazor.Lists

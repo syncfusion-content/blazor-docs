@@ -98,11 +98,12 @@ Using the [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Naviga
         var index = items.IndexOf(items.Where(item => item.Text == "New").FirstOrDefault());
         items.Insert((index + 1), new BreadcrumbItem { Text = "Delete", IconCss = "e-icons e-delete" });
     }
-    
+
     private void Remove()
     {
         items.RemoveAt(items.Count() - 1);
     }
 }
+
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BXBStMNFgGHPMWew?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}

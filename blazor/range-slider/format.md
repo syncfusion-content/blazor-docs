@@ -9,7 +9,7 @@ documentation: ug
 
 # Formatting in Blazor Range Slider Component
 
-The `Format` feature is used to customize the display of Slider values in a desired format. This formatting applies to the slider ticks, tooltip, and ARIA attributes. The `Format` property can be set for both [`SliderTicks`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderTicks.html#Syncfusion_Blazor_Inputs_SliderTicks_Format) and [`SliderTooltip`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderTooltip.html#Syncfusion_Blazor_Inputs_SliderTooltip_Format) to achieve consistent formatting across the Slider component.
+The `Format` feature used to customize the units of Slider values to desired format. The formatted values will also be applied to the ARIA attributes of the slider. There are two ways of achieving formatting in slider.
 
 N> Use the `Format` API of slider which utilizes our Internationalization to format values.
 
@@ -30,7 +30,7 @@ N> Use the `Format` API of slider which utilizes our Internationalization to for
 
 ## Using format API
 
-Slider provides different predefined formatting styles like Numeric **(N)**, Percentage **(P)**, Currency **(C)** and **#** specifiers.
+Slider provides different predefined formatting styles like Numeric (N), Percentage (P), Currency (C) and # specifiers.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
