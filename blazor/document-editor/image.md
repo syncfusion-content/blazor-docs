@@ -32,6 +32,7 @@ int height = await container.DocumentEditor.Selection.ImageFormat.GetHeightAsync
 int width = await container.DocumentEditor.Selection.ImageFormat.GetWidthAsync();
 await container.DocumentEditor.Selection.ImageFormat.ResizeAsync(width + 10, height + 10);
 ```
+>Note: When the image element is configured to have a width of 100%, the images appear in their original size on the display. You may modify the image by [Image resizing](../document-editor/image#image-resizing) or [Changing size](../document-editor/image#changing-size) to suit your requirements.
 
 ## Text wrapping style
 
