@@ -7,7 +7,7 @@ control: Range Slider
 documentation: ug
 ---
 
-# Validation in Blazor Range Slider Component
+# Validation of Slider in Blazor Range Slider Component
 
 The Slider component can be validated using our FormValidator. The following steps walk-through slider validation. Render slider component inside a form, by giving the required styles.
 

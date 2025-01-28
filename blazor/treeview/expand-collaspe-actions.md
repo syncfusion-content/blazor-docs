@@ -9,7 +9,7 @@ documentation: ug
 
 # Expand/Collapse Actions in Blazor TreeView Component
 
-By clicking on the respective arrow icons, you can expand or collapse the parent TreeView nodes in the Blazor TreeView component. The [**Expanded**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_Expanded) field or [ExpandedNodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_ExpandedNodes) property can be used to perform expand action in the TreeView component.
+By clicking on the respective arrow icons, you can expand or collapse the parent TreeView nodes in the Blazor TreeView component. The **Expanded** field or [ExpandedNodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_ExpandedNodes) property can be used to perform expand action in the TreeView component.
 
 If you use the **Expanded** field, you can map it directly in the data source.
 
