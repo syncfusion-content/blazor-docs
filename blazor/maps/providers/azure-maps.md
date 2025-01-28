@@ -14,7 +14,7 @@ Azure Maps, an online map service owned by Microsoft, provides map tile images b
 ## Displaying Azure Maps
 
 The Azure map tile service can be accessed via the following URL:
-https://atlas.microsoft.com/map/tile?api-version=2024-04-01&tilesetId=microsoft.base.darkgrey&zoom={zoom}&x={x}&y={y}&subscription-key=Your_Key
+https://atlas.microsoft.com/map/tile?api-version=2024-04-01&tilesetId=microsoft.base.road&zoom={zoom}&x={x}&y={y}&subscription-key=Your_Key
 
 In the above URL template,
 
@@ -43,7 +43,7 @@ In the following example, Azure Maps can be rendered using the `UrlTemplate` pro
 
 <SfMaps>
     <MapsLayers>
-        <MapsLayer UrlTemplate="https://atlas.microsoft.com/map/tile?api-version=2022-08-01&tilesetId=microsoft.base.darkgrey&zoom=level&x=tileX&y=tileY&subscription-key=Your_Key" TValue="string">
+        <MapsLayer UrlTemplate="https://atlas.microsoft.com/map/tile?api-version=2022-08-01&tilesetId=microsoft.base.road&zoom=level&x=tileX&y=tileY&subscription-key=Your_Key" TValue="string">
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
@@ -67,7 +67,7 @@ The Azure Maps layer supports both zooming and panning. Zooming allows you to ta
         </MapsZoomToolbarSettings>
     </MapsZoomSettings>
     <MapsLayers>
-        <MapsLayer UrlTemplate="https://atlas.microsoft.com/map/tile?api-version=2022-08-01&tilesetId=microsoft.base.darkgrey&zoom=level&x=tileX&y=tileY&subscription-key=Your_Key" TValue="string">
+        <MapsLayer UrlTemplate="https://atlas.microsoft.com/map/tile?api-version=2022-08-01&tilesetId=microsoft.base.road&zoom=level&x=tileX&y=tileY&subscription-key=Your_Key" TValue="string">
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
@@ -86,7 +86,7 @@ Markers can be added to the Azure map layer by setting the latitude and longitud
     <MapsZoomSettings ZoomFactor="4"></MapsZoomSettings>
     <MapsCenterPosition Latitude="29.394708" Longitude="-94.954653"></MapsCenterPosition>
     <MapsLayers>
-        <MapsLayer UrlTemplate="https://atlas.microsoft.com/map/tile?api-version=2022-08-01&tilesetId=microsoft.base.darkgrey&zoom=level&x=tileX&y=tileY&subscription-key=Your_Key" TValue="string">
+        <MapsLayer UrlTemplate="https://atlas.microsoft.com/map/tile?api-version=2022-08-01&tilesetId=microsoft.base.road&zoom=level&x=tileX&y=tileY&subscription-key=Your_Key" TValue="string">
             @* Add markers *@
             <MapsMarkerSettings>
                 <MapsMarker Visible="true" Height="25" Width="15" DataSource="Cities" TValue="City">
@@ -127,7 +127,7 @@ Any GeoJSON shape can be rendered as a sublayer on top of the Azure Maps layer t
 
 <SfMaps>
     <MapsLayers>
-        <MapsLayer UrlTemplate="https://atlas.microsoft.com/map/tile?api-version=2022-08-01&tilesetId=microsoft.base.darkgrey&zoom=level&x=tileX&y=tileY&subscription-key=Your_Key" TValue="string">
+        <MapsLayer UrlTemplate="https://atlas.microsoft.com/map/tile?api-version=2022-08-01&tilesetId=microsoft.base.road&zoom=level&x=tileX&y=tileY&subscription-key=Your_Key" TValue="string">
         </MapsLayer>
         @* To add geometry shape as sublayer *@
         <MapsLayer ShapeData='new {dataOptions = "https://cdn.syncfusion.com/maps/map-data/africa.json"}'
@@ -162,7 +162,7 @@ In the example below, the legend is added to the markers on the Azure Maps layer
         <MapsTitleTextStyle Size="16px" FontFamily="inherit" />
     </MapsTitleSettings>
     <MapsLayers>
-        <MapsLayer UrlTemplate="https://atlas.microsoft.com/map/tile?api-version=2022-08-01&tilesetId=microsoft.base.darkgrey&zoom=level&x=tileX&y=tileY&subscription-key=Your_Key" TValue="string">
+        <MapsLayer UrlTemplate="https://atlas.microsoft.com/map/tile?api-version=2022-08-01&tilesetId=microsoft.base.road&zoom=level&x=tileX&y=tileY&subscription-key=Your_Key" TValue="string">
         <MapsMarkerSettings>
                 <MapsMarker Visible="true" TValue="PopulationCityDetails" DataSource="@PopulatedCities" Shape="MarkerType.Circle" Fill="#FFFFFF" ColorValuePath="Color" LegendText="Name" Height="15" Width="15">
                     <MapsMarkerTooltipSettings Visible="true" ValuePath="Population" Format="City Name: ${Name}</br>Population: ${Population} million">
