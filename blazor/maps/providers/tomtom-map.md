@@ -9,7 +9,7 @@ documentation: ug
 
 # TomTom map in Blazor Maps component
 
-TomTom Map, an online map provider owned by TomTom N.V.(Naamloze Vennootschap), offers map tile images based on user requests. The Syncfusion EJ2 Maps control then combines these images into a single display to present the map. To display an TomTom map, you can specify its tile service URL in [UrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_UrlTemplate) property.
+TomTom Map, an online map provider owned by TomTom N.V.(Naamloze Vennootschap), offers map tile images based on user requests. The Syncfusion Blazor Maps component then combines these images into a single display to present the map. To display an TomTom map, you can specify its tile service URL in [UrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_UrlTemplate) property.
 
 ## Displaying TomTom map
 
@@ -28,7 +28,7 @@ N>You can refer this documentation [link](https://developer.tomtom.com/map-displ
 
 The subscription_key is required and must be included in the URL to authenticate and access the map tiles. Follow the steps in this [link](https://developer.tomtom.com/platform/documentation/dashboard/api-key-management#start-using-your-api-key) to generate an API key, and then added the key to the URL.
 
-You can customize the tile types in TomTom Map by adjusting the **style** parameter in the URL. For example, setting the style to **street-light** in the URL displays light-themed tiles, which can be rendered in the Syncfusion Maps control. Similarly, setting the style to **street-dark** switches to dark-themed tiles.
+You can customize the tile types in TomTom Map by adjusting the **style** parameter in the URL. For example, setting the style to **street-light** in the URL displays light-themed tiles, which can be rendered in the Syncfusion Maps component. Similarly, setting the style to **street-dark** switches to dark-themed tiles.
 
 In the following example, TomTom map can be rendered using the `UrlTemplate` property with its tile server URL.
 

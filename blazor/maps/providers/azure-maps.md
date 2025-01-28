@@ -9,7 +9,7 @@ documentation: ug
 
 # Azure Maps in Blazor Maps Component
 
-Azure Maps, an online map service owned by Microsoft, provides map tile images based on user requests. The Syncfusion EJ2 Maps control combines these images into a single view to display the map. You can display Azure Maps by specifying their tile service URL in the [UrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_UrlTemplate) property.
+Azure Maps, an online map service owned by Microsoft, provides map tile images based on user requests. The Syncfusion Blazor Maps component combines these images into a single view to display the map. You can display Azure Maps by specifying their tile service URL in the [UrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_UrlTemplate) property.
 
 ## Displaying Azure Maps
 
@@ -30,7 +30,7 @@ The **subscription_key** is required and must be included in the URL to authenti
 
 N>Refer to [Azure Maps Licensing](https://azure.microsoft.com/en-in/support/legal/).
 
-You can customize various tile types in Azure Maps by modifying the **tilesetId** value in the URL. In the example below, the **microsoft.base.road** tile type is specified in the URL, allowing these tile images to be displayed in the Syncfusion Maps control. To explore the available tile types in Azure Maps, follow the link below.
+You can customize various tile types in Azure Maps by modifying the **tilesetId** value in the URL. In the example below, the **microsoft.base.road** tile type is specified in the URL, allowing these tile images to be displayed in the Syncfusion Maps component. To explore the available tile types in Azure Maps, follow the link below.
 
 https://learn.microsoft.com/en-us/rest/api/maps/render/get-map-tile?view=rest-maps-2023-06-01&tabs=HTTP#tilesetid
  

@@ -9,7 +9,7 @@ documentation: ug
 
 # MapTiler map in Blazor Maps component
 
-MapTiler, an online map provider owned by MapTiler AG, a Swiss company, offers map tile images based on user requests. The Syncfusion EJ2 Maps control then combines these images into a single display to present the map. To display an MapTiler map, you can specify its tile service URL in the [UrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_UrlTemplate) property.
+MapTiler, an online map provider owned by MapTiler AG, a Swiss company, offers map tile images based on user requests. The Syncfusion Blazor Maps component then combines these images into a single display to present the map. To display an MapTiler map, you can specify its tile service URL in the [UrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_UrlTemplate) property.
 
 ## Displaying MapTiler map
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Bing Maps in Blazor Maps Component
 
-Bing Maps is an online maps provider owned by Microsoft. It provides map tile images based on requests, and the Syncfusion Maps control combines those images into a single one to display the map.
+Bing Maps is an online maps provider owned by Microsoft. It provides map tile images based on requests, and the Syncfusion Maps component combines those images into a single one to display the map.
 
 ## Displaying Bing Maps
 
