@@ -9,11 +9,11 @@ documentation: ug
 
 # Data Binding in Blazor Dropdown Tree Component
 
-The Blazor Dropdown Tree component provides the option to load data either from the local data sources or from remote data services. This can be done through [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#Syncfusion_Blazor_Navigations_DropDownTreeField_1_DataSource) property that is a member of the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#constructors) property. The `DataSource` property supports list of objects and `DataManager`. It also supports different kinds of data services such as OData, OData V4, Web API, URL, and JSON with the help of `DataManager` adaptors.
+The Blazor Dropdown Tree component provides the option to load data either from the local data sources or from remote data services. This can be done through `DataSource` property that is a member of the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#constructors) property. The `DataSource` property supports list of objects and `DataManager`. It also supports different kinds of data services such as OData, OData V4, Web API, URL, and JSON with the help of `DataManager` adaptors.
 
 ## Binding local data 
 
-To bind local data to the Blazor Dropdown Tree, assign a list of objects to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#Syncfusion_Blazor_Navigations_DropDownTreeField_1_DataSource) property. The Blazor Dropdown Tree component requires three fields (**Id**, **Text**, and **ParentID**) to render local data source. When mapper fields are not specified, it takes the default values as the mapping fields. Local data source can also be provided as an instance of the `DataManager`. It supports two kinds of local data binding methods.
+To bind local data to the Blazor Dropdown Tree, assign a list of objects to the `DataSource` property. The Blazor Dropdown Tree component requires three fields (Id, Text, and ParentID) to render local data source. When mapper fields are not specified, it takes the default values as the mapping fields. Local data source can also be provided as an instance of the `DataManager`. It supports two kinds of local data binding methods.
 
 * Hierarchical data
 
@@ -21,7 +21,7 @@ To bind local data to the Blazor Dropdown Tree, assign a list of objects to the 
 
 ### Hierarchical data
 
-Blazor Dropdown Tree can be populated with hierarchical data source that contains nested list of objects. A hierarchical data can be directly assigned to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#Syncfusion_Blazor_Navigations_DropDownTreeField_1_DataSource) property, and map all the field members with corresponding keys from the hierarchical data to [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#constructors) property.
+Blazor Dropdown Tree can be populated with hierarchical data source that contains nested list of objects. A hierarchical data can be directly assigned to the `DataSource` property, and map all the field members with corresponding keys from the hierarchical data to [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#constructors) property.
 
 In the following example, **Id**, **FolderName**, and **SubFolders** columns from hierarchical data have been mapped to **ID**, **Text**, and **Child** fields, respectively.
 
@@ -104,9 +104,9 @@ In the following example, **Id**, **FolderName**, and **SubFolders** columns fro
 
 ### Self-referential data
 
-Blazor Dropdown Tree can be populated from self-referential data structure that contains list of objects with [`ParentID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#Syncfusion_Blazor_Navigations_DropDownTreeField_1_ParentID) mapping. The self-referential data can be directly assigned to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#Syncfusion_Blazor_Navigations_DropDownTreeField_1_DataSource) property, and map all the field members with corresponding keys from self-referential data to [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#constructors) property.
+Blazor Dropdown Tree can be populated from self-referential data structure that contains list of objects with `ParentID` mapping. The self-referential data can be directly assigned to the `DataSource` property, and map all the field members with corresponding keys from self-referential data to [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#constructors) property.
 
-To render the root level nodes, specify the ParentID as null or no need to specify the ParentID in [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#Syncfusion_Blazor_Navigations_DropDownTreeField_1_DataSource). In the following example, **Id**, **Pid**, **HasSubFolders**, and **FolderName** columns from self-referential data have been mapped to **ID**, **ParentId**, **HasChildren**, and **Text** fields, respectively.
+To render the root level nodes, specify the ParentID as null or no need to specify the ParentID in `DataSource`. In the following example, **Id**, **Pid**, **HasSubFolders**, and **FolderName** columns from self-referential data have been mapped to **ID**, **ParentId**, **HasChildren**, and **Text** fields, respectively.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -143,7 +143,7 @@ To render the root level nodes, specify the ParentID as null or no need to speci
 
 ### ExpandoObject binding 
 
-The Blazor Dropdown Tree is a generic component that is strongly bound to a specific model type, but in cases where the model type is unknown at compile time, the Dropdown Tree can be bound to a list of ExpandoObjects using the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#Syncfusion_Blazor_Navigations_DropDownTreeField_1_DataSource) property. This allows the Dropdown Tree to perform all supported data operations.
+The Blazor Dropdown Tree is a generic component that is strongly bound to a specific model type, but in cases where the model type is unknown at compile time, the Dropdown Tree can be bound to a list of ExpandoObjects using the `DataSource` property. This allows the Dropdown Tree to perform all supported data operations.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

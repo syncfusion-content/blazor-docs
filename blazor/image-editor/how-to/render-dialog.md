@@ -32,7 +32,8 @@ Rendering the Image Editor in a dialog involves displaying the image editor comp
             </div>
         </Content>
     </DialogTemplates>
-    <DialogEvents OnOpen="@BeforeDialogOpen" Opened="OpenAsync" Closed="@DialogClosed"></DialogEvents> 
+    <DialogEvents OnOpen="@BeforeDialogOpen" Opened="OpenAsync" Closed="@DialogClosed"></DialogEvents>
+
 </SfDialog>
 
 @code {

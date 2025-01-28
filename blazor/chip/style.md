@@ -1,19 +1,19 @@
 ---
 layout: post
-title: CSS Structure in Blazor Chips Component | Syncfusion
-description: Checkout and learn here all about CSS Structure in Syncfusion Blazor Chips component and much more details.
+title: CSS Structure in Blazor Chip Component | Syncfusion
+description: Checkout and learn here all about CSS Structure in Syncfusion Blazor Chip component and much more details.
 platform: Blazor
-control: Chips
+control: Chip
 documentation: ug
 ---
 
-# CSS Structure in Blazor Chips Component
+# CSS Structure in Blazor Chip Component
 
-The following content provides the exact CSS structure that can be used to modify the component's appearance based on the user preference.
+The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 
-## Customizing the Chips text
+## Customizing the chip text
 
-Use the following CSS to customize the Chips text properties.
+Use the following CSS to customize the chip text properties.
 
 ```css
 .e-chip .e-chip-text {
@@ -23,9 +23,9 @@ Use the following CSS to customize the Chips text properties.
 }
 ```
 
-## Customizing the Chips icon
+## Customizing the chip icon
 
-Use the following CSS to customize the Chips icon properties.
+Use the following CSS to customize the chip icon properties.
 
 ```css
 .e-chip .e-icon {
@@ -34,9 +34,9 @@ Use the following CSS to customize the Chips icon properties.
 }
 ```
 
-## Customizing the Chips delete button
+## Customizing the chip delete button
 
-Use the following CSS to customize the Chips delete button.
+Use the following CSS to customize the chip delete button.
 
 ```css
 .e-chip-list .e-chip .e-chip-delete.e-dlt-btn {
@@ -45,9 +45,9 @@ Use the following CSS to customize the Chips delete button.
 }
 ```
 
-## Customizing the Chips outline
+## Customizing the chip outline
 
-Use the following CSS to customize the Chips outline.
+Use the following CSS to customize the chip outline.
 
 ```css
 .e-chip-list .e-chip.e-outline {
@@ -56,27 +56,27 @@ Use the following CSS to customize the Chips outline.
 }
 ```
 
-## Customizing the Chips on selection
+## Customizing the chip on selection
 
-Use the following CSS to customize the Chips on selection.
+Use the following CSS to customize the chip on selection.
 
 ```css
-/* To customize single Chips on selection */
+/* To customize single chip on selection */
 .e-chip-list.e-selection .e-chip.e-active {
     background-color: #ffca1c;
     color: #e3165b;
 }
 
-/* To customize multiple Chips on selection */
+/* To customize multiple chip on selection */
 .e-chip-list .e-chip.e-active {
     background-color: #e3165b;
     color: white;
 }
 ```
 
-## Customizing the Chips avatar text
+## Customizing the chip avatar text
 
-Use the following CSS to customize the Chips avatar text properties.
+Use the following CSS to customize the chip avatar text properties.
 
 ```css
 .e-chip-list .e-chip .e-chip-avatar {

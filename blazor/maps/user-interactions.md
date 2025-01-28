@@ -9,11 +9,6 @@ documentation: ug
 
 # User Interactions in Blazor Maps Component
 
-This section explains the zooming and panning features of the Maps component. The below video demonstrates the same.
-
-{% youtube
-"youtube:https://www.youtube.com/watch?v=82tIMSbj_l0"%}
-
 ## Zooming
 
 The zooming feature is used to zoom in and out of Maps to show in-depth information. It is controlled by the [ZoomFactor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_ZoomFactor) property of the [MapsZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) class. The [ZoomFactor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_ZoomFactor) is increased or decreased dynamically based on zoom in and out interaction.
@@ -887,11 +882,6 @@ On mouse over or touch end event, the tooltip is used to get more information ab
 ![Blazor Maps with Tooltip](./images/UserInteraction/blazor-maps-tooltip.PNG)
 
 ### Customization
-
-The video below demonstrates how to customize the tooltip in the Maps component.
-
-{% youtube
-"youtube:https://www.youtube.com/watch?v=aWPvs__CDEQ"%}
 
 The following properties are available to customize the tooltip of the Maps component.
 

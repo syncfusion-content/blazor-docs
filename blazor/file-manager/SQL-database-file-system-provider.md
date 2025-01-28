@@ -1,7 +1,7 @@
 ---
 layout: post
-title: SQL database provider in Blazor File Manager Component | Syncfusion
-description: Checkout and learn here all about SQL database file system provider in Syncfusion Blazor File Manager component and more.
+title: SQL database provider in Blazor FileManager Component | Syncfusion
+description: Checkout and learn here all about SQL database file system provider in Syncfusion Blazor FileManager component and more.
 platform: Blazor
 control: File Manager
 documentation: ug
@@ -45,7 +45,7 @@ void SetSQLConnection(string name, string tableName, string tableID)\
 
 N> Refer to this [FileManager.mdf](https://github.com/SyncfusionExamples/ej2-sql-server-database-aspcore-file-provider/blob/master/App_Data/FileManager.mdf) to learn about the pre-defined file system SQL database for the Blazor File Manager.
 
-After configuring the connection, just build and run the project. Now, the project will be hosted in `http://localhost:{port}` and just mapping the [**ajaxSettings**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerAjaxSettings.html) property of the File Manager component to the appropriate controller methods allows to manage the files in the SQL database table.
+After configuring the connection, just build and run the project. Now, the project will be hosted in `http://localhost:{port}` and just mapping the ajaxSettings property of the FileManager component to the appropriate controller methods allows to manage the files in the SQL database table.
 
 ```cshtml
 

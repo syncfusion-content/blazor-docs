@@ -94,7 +94,6 @@ await builder.Build().RunAsync();
 {% endhighlight %}
 {% endtabs %}
 
-<<<<<<< HEAD
 If the **Interactive Render Mode** is set to `Server`, your project will contain a single **~/Program.cs** file. So, you should register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service only in that **~/Program.cs** file.
 
 {% tabs %}
