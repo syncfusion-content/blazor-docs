@@ -11,6 +11,9 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor Timeline](https://www.syncfusion.com/blazor-components/blazor-timeline) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
+To get started quickly with Blazor Timeline component, you can check out this video:
+{% youtube "https://www.youtube.com/watch?v=TEh3_LkmSVE" %}
+
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
