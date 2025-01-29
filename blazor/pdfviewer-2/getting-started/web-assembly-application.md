@@ -33,26 +33,7 @@ Add the following NuGet packages into the Blazor WebAssembly app.
 * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes)
 * [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor)
 
-N> On the Syncfusion<sup style="font-size:70%">&reg;</sup> side, we are using SkiaSharp.Views.Blazor version 2.88.8. Please make sure to reference this version as well.
-
-## Add the following PropertyGroup and ItemGroup:
-
-{% tabs %}
-{% highlight c# hl_lines="2 3 7" %}
-
-<PropertyGroup>
-	<WasmNativeStrip>true</WasmNativeStrip>
-	<WasmBuildNative>true</WasmBuildNative>
-</PropertyGroup>
-
-<ItemGroup>
-    <NativeFileReference Include="$(SkiaSharpStaticLibraryPath)\3.1.34\st\*.a" />
-</ItemGroup>
-
-{% endhighlight %}
-{% endtabs %}
-
-The above configuration is required only for .NET 9 projects. Please ensure you use this setup for the corresponding version.
+N> On the Syncfusion<sup style="font-size:70%">&reg;</sup> side, we are using SkiaSharp.Views.Blazor version 3.116.1. Please make sure to reference this version as well.
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
