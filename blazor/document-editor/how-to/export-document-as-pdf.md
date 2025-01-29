@@ -11,7 +11,7 @@ documentation: ug
 
 In this article, we are going to see how to export the document as PDF format.
 
-With the help of [`Syncfusion<sup style="font-size:70%">&reg;</sup> DocIO`](https://help.syncfusion.com/file-formats/docio/word-to-pdf), you can export the document as PDF.
+With the help of [`Syncfusion`<sup style="font-size:70%">&reg;</sup>` DocIO`](https://help.syncfusion.com/file-formats/docio/word-to-pdf), you can export the document as PDF.
 
 The following way illustrates how to convert the document as PDF:
 

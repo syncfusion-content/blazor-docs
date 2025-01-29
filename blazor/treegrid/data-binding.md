@@ -14,6 +14,10 @@ It supports two kinds of data binding method:
 * List binding
 * Remote service binding
 
+To learn about how to bind local or remote data to Tree Grid, check out this video:
+
+{% youtube "https://www.youtube.com/watch?v=YgSRj7yTebI" %}
+
 ## List binding
 
 In List binding, data source for rendering the Tree Grid component is retrieved from the same application locally.
@@ -147,7 +151,7 @@ Tree Grid is a generic component which is strongly bound to a model type. There 
 
 **DynamicObject** can be bound to tree grid by assigning to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_DataSource) property. Tree Grid can also perform all kind of supported data operations and editing in DynamicObject.
 
-N> The [GetDynamicMemberNames](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames?view=netcore-3.1) method of DynamicObject class must be overridden and return the property names to render and perform data operations, editing etc., while using DynamicObject.
+N> The [GetDynamicMemberNames](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames?view=net-8.0) method of DynamicObject class must be overridden and return the property names to render and perform data operations, editing etc., while using DynamicObject.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid

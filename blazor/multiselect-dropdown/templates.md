@@ -11,7 +11,7 @@ documentation: ug
 
 The MultiSelect has been provided with several options to customize each list item, group title, selected value, header, and footer elements.
 
-To get started quickly with templates in the Blazor MultiSelect Dropdown component, you can check the video below.
+To get started quickly with Templates in the Blazor MultiSelect Dropdown component, you can check the video below.
 
 {% youtube "https://www.youtube.com/watch?v=6A61PDatD0s" %}
 
