@@ -112,6 +112,32 @@ For **Azure OpenAI**, first [deploy an Azure OpenAI Service resource and model](
 
 If you are using **OpenAI**, create an API key and place it at `apiKey`, leave the `endpoint` as `""`. The value for `deploymentName` is the model you wish to use (e.g., `gpt-3.5-turbo`, `gpt-4`, etc.).
 
+### Using Ollama 
+
+If you are using [Ollama](https://ollama.com/), set SelfHosted to true and provide the Endpoint URL where the model is hosted (e.g., http://localhost:11434). The value for DeploymentName should be the specific [model](https://ollama.com/library) you wish to use (e.g., `llama2:13b`, `mistral:7b`, etc.).
+
+Add the following settings to the **~/Program.cs** file in your Blazor Server app.
+
+{% tabs %}
+{% highlight C# tabtitle="Blazor Server App" hl_lines="7 8 9 11 12 13" %}
+
+using Syncfusion.Blazor.SmartComponents;
+var builder = WebApplication.CreateBuilder(args);
+
+....
+
+builder.Services.AddSyncfusionBlazor();
+
+builder.Services.AddSyncfusionSmartComponents()
+.ConfigureCredentials(new AIServiceCredentials { SelfHosted=true, Endpoint= new Uri("Your self-hosted end point url") ,DeploymentName = "Your model name" })
+.InjectOpenAIInference();
+
+var app = builder.Build();
+....
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Add stylesheet and script resources
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows:
