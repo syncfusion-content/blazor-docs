@@ -52,7 +52,7 @@ Here is an example of resizing the image using the [`ImageResizeAsync`](https://
 
     private async void NonAspectClick()
     {
-        await ImageEditor.ImageResizeAsync(400, 100, true);
+        await ImageEditor.ImageResizeAsync(400, 100, false);
     }
 
 }
