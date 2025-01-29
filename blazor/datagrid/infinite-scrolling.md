@@ -7,73 +7,77 @@ control: DataGrid
 documentation: ug
 ---
 
-# Infinite Scrolling in Blazor DataGrid
+# Infinite scroll in Blazor Grid component
 
-The Infinite Scrolling feature in the DataGrid is a powerful tool for seamlessly handling extensive data sets without compromising grid performance. It operates on a "load-on-demand" concept, ensuring that data is fetched only when needed. In the default infinite scrolling mode, a new block of data is loaded each time the scrollbar reaches the end of the vertical scroller. This approach significantly enhances the user experience when working with large data collections in the Blazor DataGrid.
+The infinite scrolling feature in the Grid is a powerful tool for seamlessly handling extensive data sets without compromising grid performance. It operates on a “load-on-demand” concept, ensuring that data is fetched only when needed. In the default infinite scrolling mode, a new block of data is loaded each time the scrollbar reaches the end of the vertical scroller. This approach significantly enhances the user experience when working with large data collections in the Blazor Grid.
 
-In this mode, a block of data accumulates every time the scrollbar reaches the end of the scroller. To clarify, in this context, a "block" represents the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSize) of the Grid. If the `PageSize` is not explicitly specified, the Grid will automatically calculate it based on the grid viewport height and row height.
+In this mode, a block of data accumulates every time the scrollbar reaches the end of the scroller. To clarify, in this context, a **block** represents the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSize) of the Grid. If the `PageSize` is not explicitly specified, the Grid will automatically calculate it based on the grid viewport height and row height.
 
-To enable infinite scrolling, you need to define
-[EnableInfiniteScrolling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableInfiniteScrolling) as true and content height by [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) property.
+To enable infinite scrolling, you need to define [EnableInfiniteScrolling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableInfiniteScrolling) as **true** and content height by [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) property.
 
-N> In this feature, the Grid will not initiate a new data request when revisiting the same page.
+> In this feature, the Grid will not initiate a new data request when revisiting the same page.
+> The `Height` property must be specified when enabling `EnableInfiniteScrolling`.
 
-N> The [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height)  property must be specified when enabling `EnableInfiniteScrolling`.
+The following an example that demonstrates how to enable infinite scroll in the Grid:
 
-```csharp
-
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 
-<SfGrid @ref="Grid" ID="Grid" DataSource="@Orders" Height="300" EnableInfiniteScrolling="true">
-    <GridPageSettings PageSize="20"></GridPageSettings>
+<SfGrid DataSource="@TaskData" Height="300" EnableInfiniteScrolling="true">
+    <GridPageSettings PageSize="50"></GridPageSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey=true Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="ShipCountry" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(TaskDetails.TaskID) HeaderText="TaskID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(TaskDetails.Engineer) HeaderText="Engineer" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(TaskDetails.Designation) HeaderText="Designation" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(TaskDetails.Estimation) HeaderText="Estimation" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(TaskDetails.Status) HeaderText="Status" Width="150"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code {
-    public List<Order> Orders { get; set; }
-    public SfGrid<Order> Grid { get; set; }
+@code{
+    public List<TaskDetails> TaskData { get; set; }
     protected override void OnInitialized()
     {
-        Orders = GetAllRecords();
-    }
-    public List<Order> GetAllRecords()
-    {
-        List<Order> data = new List<Order>();
-        int count = 0;
-        int id = 10;
-        for (int i = 0; i < 200; i++)
-        {
-            data.Add(new Order() { OrderID = count + 1, CustomerID = "ANTON", OrderDate = new DateTime(1995, 05, 15), Freight = 25.7 * 2, ShipCountry = "USA" });
-            data.Add(new Order() { OrderID = count + 2, CustomerID = "BOLID", OrderDate = new DateTime(1994, 04, 04), Freight = 26.7 * 2, ShipCountry = "UK" });
-            data.Add(new Order() { OrderID = count + 3, CustomerID = "BLONP", OrderDate = new DateTime(1993, 03, 10), Freight = 27.7 * 2, ShipCountry = "RUSSIA" });
-            data.Add(new Order() { OrderID = count + 4, CustomerID = "ANATR", OrderDate = new DateTime(1992, 02, 14), Freight = 28.7 * 2, ShipCountry = "CHINA" });
-            data.Add(new Order() { OrderID = count + 5, CustomerID = "ALFKI", OrderDate = new DateTime(1991, 01, 18), Freight = 29.7 * 2, ShipCountry = "JAPAN" });
-            count += 5;
-            id += 5;
-        }
-        return data;
-    }
-
-    public class Order
-    {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
-        public string ShipCountry { get; set; }
-    }
+        TaskData = TaskDetails.GenerateData(5000);
+    }  
 }
-```
+{% endhighlight %}
+{% highlight c# tabtitle="TaskDetails.cs" %}
+public class TaskDetails
+{
+    public static List<TaskDetails> GenerateData(int count)
+    {
+        var names = new List<string> { "TOM", "Hawk", "Jon", "Chandler", "Monica", "Rachel", "Phoebe", "Gunther", "Ross", "Geller", "Joey", "Bing", "Tribbiani", "Janice", "Bong", "Perk", "Green", "Ken", "Adams" };
+        var hours = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        var designations = new List<string> { "Manager", "Engineer 1", "Engineer 2", "Developer", "Tester" };
+        var statusValues = new List<string> { "Completed", "Open", "In Progress", "Review", "Testing" };
+        var random = new Random();
+        var result = new List<TaskDetails>();
+        // Generate random data
+        for (int i = 0; i < count; i++)
+        {
+            result.Add(new TaskDetails
+            {
+                TaskID = i + 1,
+                Engineer = names[random.Next(names.Count)],
+                Designation = designations[random.Next(designations.Count)],
+                Estimation = hours[random.Next(hours.Count)],
+                Status = statusValues[random.Next(statusValues.Count)]
+            });
+        }
+        return result;
+    }
+    public int TaskID { get; set; }
+    public string Engineer { get; set; }
+    public string Designation { get; set; }
+    public int Estimation { get; set; }
+    public string Status { get; set; }
+}
+{% endhighlight %}
+{% endtabs %}
 
-The following GIF represents the infinite scrolling functionality in DataGrid
-
-![Infinite Scrolling in Blazor DataGrid](./images/blazor-datagrid-infinite-scrolling.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjreXMrOAPkHeOht?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Number of blocks rendered during initial loading
 
@@ -81,7 +85,67 @@ The number of blocks to be initially rendered when the Grid is loaded. Each bloc
 
 You can define the initial loading pages count by using [InitialBlocks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridInfiniteScrollSettings.html) property of [GridInfiniteScrollSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridInfiniteScrollSettings.html) class. By default, this property loads three pages during the initial rendering. Subsequently, additional data is buffered and loaded based on either the page size or the number of rows rendered within the provided height.
 
-In the below demo, `InitialBlocks` property value is changed as 4 instead of 3.
+The following an example of how you can use the `InitialBlocks` property to set the initial loading pages based on **DropDownList** input:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@TaskData" Height="300" EnableInfiniteScrolling="true">
+    <GridPageSettings PageSize="50"></GridPageSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(TaskDetails.TaskID) HeaderText="TaskID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(TaskDetails.Engineer) HeaderText="Engineer" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(TaskDetails.Designation) HeaderText="Designation" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(TaskDetails.Estimation) HeaderText="Estimation" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(TaskDetails.Status) HeaderText="Status" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public List<TaskDetails> TaskData { get; set; }
+    protected override void OnInitialized()
+    {
+        TaskData = TaskDetails.GenerateData(5000);
+    }  
+}
+{% endhighlight %}
+{% highlight c# tabtitle="TaskDetails.cs" %}
+public class TaskDetails
+{
+    public static List<TaskDetails> GenerateData(int count)
+    {
+        var names = new List<string> { "TOM", "Hawk", "Jon", "Chandler", "Monica", "Rachel", "Phoebe", "Gunther", "Ross", "Geller", "Joey", "Bing", "Tribbiani", "Janice", "Bong", "Perk", "Green", "Ken", "Adams" };
+        var hours = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        var designations = new List<string> { "Manager", "Engineer 1", "Engineer 2", "Developer", "Tester" };
+        var statusValues = new List<string> { "Completed", "Open", "In Progress", "Review", "Testing" };
+        var random = new Random();
+        var result = new List<TaskDetails>();
+        // Generate random data
+        for (int i = 0; i < count; i++)
+        {
+            result.Add(new TaskDetails
+            {
+                TaskID = i + 1,
+                Engineer = names[random.Next(names.Count)],
+                Designation = designations[random.Next(designations.Count)],
+                Estimation = hours[random.Next(hours.Count)],
+                Status = statusValues[random.Next(statusValues.Count)]
+            });
+        }
+        return result;
+    }
+    public int TaskID { get; set; }
+    public string Engineer { get; set; }
+    public string Designation { get; set; }
+    public int Estimation { get; set; }
+    public string Status { get; set; }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjreXMrOAPkHeOht?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ```csharp
 
 @using Syncfusion.Blazor.Grids
