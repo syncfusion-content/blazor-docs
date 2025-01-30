@@ -231,9 +231,9 @@ public class LazyLoadDetails
 
 ## Scroll to selected row
 
-The Blazor Grid component allows you to scroll the grid content to the position of the selected row, ensuring that the selected row is automatically brought into view. This feature is particularly useful when dealing with a large dataset and wanting to maintain focus on the selected row. To achieve this, you can utilize the [RowSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowSelected) event provided by the Grid.
+The Blazor Grid component allows you to scroll the grid content to the position of the selected row, ensuring that the selected row is automatically brought into view. This feature is particularly useful when dealing with a large dataset and wanting to maintain focus on the selected row. To achieve this, you can utilize the [ScrollIntoViewAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ScrollIntoViewAsync_System_Int32_System_Int32_System_Int32_) method provided by the Grid.
 
-The following example that demonstrates how to use the `RowSelected` event to scroll to the selected row:
+The following example that demonstrates how to use the `ScrollIntoViewAsync` method to scroll to the selected row:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
