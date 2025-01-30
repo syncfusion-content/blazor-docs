@@ -160,15 +160,15 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component can be imp
 
 The following methods can be used to render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components dynamically:
 
-1. [RenderFragment](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.renderfragment?view=aspnetcore-5.0) with [Razor Template Syntax](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/?view=aspnetcore-5.0#razor-templates)
-2. [RenderFragment](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.renderfragment?view=aspnetcore-5.0) with [RenderTreeBuilder](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.rendering.rendertreebuilder?view=aspnetcore-5.0) methods
+1. [RenderFragment](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.renderfragment?view=aspnetcore-8.0) with [Razor Template Syntax](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/?view=aspnetcore-8.0#razor-templates)
+2. [RenderFragment](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.renderfragment?view=aspnetcore-8.0) with [RenderTreeBuilder](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.rendering.rendertreebuilder?view=aspnetcore-8.0) methods
 3. [BuildRenderTree](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.componentbase.buildrendertree?view=aspnetcore-7.0) method
 
 ### RenderFragment with Razor Syntax
 
 The `RenderFragment` represents the segments of UI content that can be reused in the view page based on the application logic.
 
-You can use [Razor Template Syntax](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/?view=aspnetcore-5.0#razor-templates) to define the `RenderFragment` in the view page.
+You can use [Razor Template Syntax](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/?view=aspnetcore-8.0#razor-templates) to define the `RenderFragment` in the view page.
 
 The following code demonstrates the RenderFragment that renders the `SfButton` component.
 
@@ -212,9 +212,9 @@ The following code demonstrates the RenderFragment that renders the `SfGrid` com
 
 ## RenderFragment with RenderTreeBuilder methods
 
-You can define the RenderFragment delegate with [RenderTreeBuilder](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.rendering.rendertreebuilder?view=aspnetcore-5.0)'s methods.
+You can define the RenderFragment delegate with [RenderTreeBuilder](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.rendering.rendertreebuilder?view=aspnetcore-8.0)'s methods.
 
-N> Refer to [Manual RenderTreeBuilder logic](https://learn.microsoft.com/en-us/aspnet/core/blazor/advanced-scenarios?view=aspnetcore-5.0#manual-rendertreebuilder-logic) to know more about RenderTreeBuilder.
+N> Refer to [Manual RenderTreeBuilder logic](https://learn.microsoft.com/en-us/aspnet/core/blazor/advanced-scenarios?view=aspnetcore-8.0#manual-rendertreebuilder-logic) to know more about RenderTreeBuilder.
 
 ```cshtml
 @RenderSfButton()
