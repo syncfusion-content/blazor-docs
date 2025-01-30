@@ -48,13 +48,11 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 {% tabcontent Visual Studio Code %}
 
-## Create a new Blazor Web App
+## Create a new Blazor Web App in Visual Studio Code
 
 You can create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
 
 You need to configure the corresponding [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) while creating a Blazor Web Application.
-
-Alternatively, you can create a **Blazor Web App** using the command prompt or terminal. Refer this [link](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app#using-syncfusion-blazor-template).
 
 For example, in a Blazor Web App with the `Auto` interactive render mode, use the following commands.
 
@@ -67,6 +65,8 @@ cd BlazorWebApp.Client
 
 {% endhighlight %}
 {% endtabs %}
+
+N> For more information on creating a **Blazor Web App** with various interactive modes and locations, refer to this [link](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app#using-syncfusion-blazor-template).
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Navigations and Themes NuGet in the App
 
