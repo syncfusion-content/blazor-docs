@@ -197,7 +197,7 @@ These shortcuts allow for undoing and redoing recent changes.
 
 ### Other Actions
 
-These shortcuts provide additional functionalities like fullscreen mode.
+These shortcuts provide additional functionalities like full screen mode.
 
 | Actions | Windows | Mac | 
 |----------------|---------| --------- |
