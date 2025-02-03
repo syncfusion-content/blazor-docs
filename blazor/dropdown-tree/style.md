@@ -169,7 +169,7 @@ You can customize the dropdown [icon](https://ej2.syncfusion.com/documentation/a
 
 ## Replace the dropdown icon with svg
 
-To customize the dropdown icon in the Dropdown Tree component, utilize the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_CssClass) property and apply `content` style to the `.e-custom .e-ddt-icon` class, which targets the icon element within the Dropdown Tree. This method enables you to replace the default icon with a personalized SVG design.
+To replace the default dropdown icon in the Dropdown Tree component with an SVG, use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_CssClass) property and apply custom styles to the `.e-custom .e-ddt-icon` class. This allows for a personalized SVG design instead of the default icon.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
