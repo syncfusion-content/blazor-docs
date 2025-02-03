@@ -15,7 +15,7 @@ The scrolling feature in the Blazor Grid component allows you to navigate throug
 * The horizontal scrollbar appears when the sum of columns width exceeds the grid element width.
 * The [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Width) are used to set the grid height and width, respectively.
 
-> The default value for `Height`and `Width` is `auto`.
+> The default value for `Height` and `Width` is `auto`.
 
 ## Set width and height
 
@@ -317,7 +317,7 @@ public class LazyLoadDetails
         var freights = new[] { 10, 24, 12, 48, 36, 102, 18 };
         int orderId = 10248;
         var random = new Random();
-        for (int i = 0; i < 5000; i++)
+        for (int i = 0; i < 1000; i++)
         {
             lazyLoadData.Add(new LazyLoadDetails
             {
@@ -337,7 +337,7 @@ public class LazyLoadDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BjVoZiLPivFixBPP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjroNWAMLmoWziOq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Customize grid scroll bar
 

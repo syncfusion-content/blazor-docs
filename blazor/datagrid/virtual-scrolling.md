@@ -168,6 +168,31 @@ public class OrderDetails
 
 > The `OverscanCount` property supports both local and remote data.
 
+### Limitation
+
+* Row virtual scrolling is not compatible with the following feature
+	1. Batch editing
+	2. Detail template
+	3. Row template
+	4. Rowspan
+	5. Autofill
+	6. Hierarchy grid
+* When row virtual scrolling is activated, compatibility for copy-paste and drag-and-drop operations is limited to the data items visible in the current viewport of the grid.
+* The cell-based selection is not supported for row virtual scrolling. 
+* Using different row heights with a template column, when the template height differs for each row, is not supported.
+* Group expand and collapse state will not be persisted.
+* Due to the element height limitation in browsers, the maximum number of records loaded by the Grid is limited by the browser capability.
+* The height of the grid content is calculated using the row height and total number of records in the data source and hence features which changes row height such as text wrapping are not supported.
+* If you want to increase the row height to accommodate the content then you can specify the row height as below to ensure all the table rows are in same height.
+
+    ```css
+    .e-grid .e-row {
+        height: 2em;
+    }
+    ```
+* Since data is virtualized in grid, the aggregated information and total group items are displayed based on the current view items. 
+* It is necessary to set a static height for the component or its parent container when using row virtualization. The 100% height will work only if the component height is set to 100%, and its parent container has a static height.
+
 ## Column virtualization
 
 Column virtualization feature in the Syncfusion Grid that allows you to optimize the rendering of columns by displaying only the columns that are currently within the viewport. It allows horizontal scrolling to view additional columns. This feature is particularly useful when dealing with grids that have a large number of columns, as it helps to improve the performance and reduce the initial loading time.
@@ -864,7 +889,7 @@ public class OrderDetails
         if (order.Count == 0)
         {
             int Code = 10247;
-            for (int i = 1; i < 10000; i++)
+            for (int i = 1; i < 1000; i++)
             {
                 order.Add(new OrderDetails(Code + 1, "VINET", i + 0, new DateTime(1991, 05, 15), 32.38, "Denmark", "Berlin", "Kirchgasse 6", new DateTime(1996, 7, 16), false));
                 order.Add(new OrderDetails(Code + 2, "HANAR", i + 2, new DateTime(1990, 04, 04), 58.17, "Brazil", "Madrid", "Avda. Azteca 123", new DateTime(1996, 9, 11), true));
@@ -892,95 +917,11 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjrotMgNKGXhbHbT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-```cshtml
-@using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.Buttons
-
-ColumnIndex : <input @bind-value = "@ColumnIndex" />
-<SfButton @onclick="Scroll" Content="Scroll Horizontally"></SfButton>
-
-RowIndex : <input @bind-value = "@RowIndex" />
-<SfButton @onclick="Scroll" Content="Scroll Vertically"></SfButton>
-
-<SfGrid DataSource="@GridData" @ref="Grid" Height="500" RowHeight="35" Width="600" EnableVirtualization="true" EnableColumnVirtualization="true">
-    <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.EmployeeID) HeaderText="Employee ID" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" Width="160" TextAlign="TextAlign.Right"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipAddress) HeaderText="Ship Address" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShippedDate) HeaderText="Shipped Date" TextAlign="TextAlign.Right"  Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.Verified) HeaderText="Verified" Width="200"></GridColumn>
-    </GridColumns>
-</SfGrid>
-
-@code{
-    public List<Order> GridData { get; set; }
-    SfGrid<Order> Grid { get; set; }
-    public int ColumnIndex { get; set; } = -1;
-    public int RowIndex { get; set; } = -1;
-    public int RowHeight { get; set; } = -1;
-
-    protected override void OnInitialized()
-    {
-        List<Order> Order = new List<Order>();
-        int Code = 10000;
-        for (int i = 1; i < 10000; i++)
-        {
-            Order.Add(new Order(Code + 1, "ALFKI", i + 0, 2.3 * i, false, new DateTime(1991, 05, 15), "Berlin", "Denmark", new DateTime(1996, 7, 16), "Kirchgasse 6"));
-            Order.Add(new Order(Code + 2, "ANATR", i + 2, 3.3 * i, true, new DateTime(1990, 04, 04), "Madrid", "Brazil", new DateTime(1996, 9, 11), "Avda. Azteca 123"));
-            Order.Add(new Order(Code + 3, "ANTON", i + 1, 4.3 * i, true, new DateTime(1957, 11, 30), "Cholchester", "Germany", new DateTime(1996, 10, 7), "Carrera 52 con Ave. Bolívar #65-98 Llano Largo"));
-            Order.Add(new Order(Code + 4, "BLONP", i + 3, 5.3 * i, false, new DateTime(1930, 10, 22), "Marseille", "Austria", new DateTime(1996, 12, 30), "Magazinweg 7"));
-            Order.Add(new Order(Code + 5, "BOLID", i + 4, 6.3 * i, true, new DateTime(1953, 02, 18), "Tsawassen", "Switzerland", new DateTime(1997, 12, 3), "1029 - 12th Ave. S."));
-            Code += 5;
-        }
-        GridData = Order;
-    }
-
-    public async Task Scroll()
-    {
-        await Grid.ScrollIntoViewAsync(ColumnIndex, RowIndex, RowHeight);
-    }
-
-    public class Order
-    {
-        public Order(int OrderID, string CustomerID, int EmployeeID, double Freight, bool Verified, DateTime OrderDate, string ShipCity, string ShipCountry, DateTime ShippedDate, string ShipAddress)
-        {
-            this.OrderID = OrderID;
-            this.CustomerID = CustomerID;
-            this.EmployeeID = EmployeeID;
-            this.Freight = Freight;
-            this.Verified = Verified;
-            this.OrderDate = OrderDate;
-            this.ShipCity = ShipCity;
-            this.ShipCountry = ShipCountry;
-            this.ShippedDate = ShippedDate;
-            this.ShipAddress = ShipAddress;
-        }
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public int? EmployeeID { get; set; }
-        public double? Freight { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public bool Verified { get; set; }
-        public DateTime? ShippedDate { get; set; }
-        public string ShipCountry { get; set; }
-        public string ShipCity { get; set; }
-        public string ShipAddress { get; set; }
-    }
-}
-```
-
-![Blazor DataGrid Scroll Virtualizationcontent](images/blazor-datagrid-scroll-virtualizationcontent.gif)
-
 ## Refresh virtualized grid externally
 
-The [UpdatePageSizeAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_UpdatePageSizeAsync_System_Int32_System_Int32_) method refresh the virtualized grid [`PageSize`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) externally by using the given grid height/grid container height and row height. This method calculates the grid `PageSize` programmatically and refreshes the virtualized grid with the newly calculated `PageSize`.
+The [UpdatePageSizeAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_UpdatePageSizeAsync_System_Int32_System_Int32_) method refresh the virtualized grid [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) externally by using the given grid height/grid container height and row height. This method calculates the grid `PageSize` programmatically and refreshes the virtualized grid with the newly calculated `PageSize`.
 
-To refresh virtualized grid externally, set the [`EnableVirtualization`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) as true.
+To refresh virtualized grid externally, set the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) as true.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1050,7 +991,7 @@ To refresh virtualized grid externally, set the [`EnableVirtualization`](https:/
 }
 ```
 
-N> If <b>rowHeight</b> is given, then the page size is calculated by given row height. Otherwise, rowHeight will be considered from the offset height of the grid row element.
+> If `RowHeight` is given, then the page size is calculated by given row height. Otherwise, RowHeight will be considered from the offset height of the grid row element.
 
 ## Limitations for Virtualization
 
@@ -1064,8 +1005,8 @@ N> If <b>rowHeight</b> is given, then the page size is calculated by given row h
 * The height of the datagrid content is calculated using the row height and total number of records in the data source and hence features which changes row height such as text wrapping are not supported. If you want to increase the row height to accommodate the content then you can specify the row height using **RowHeight** property to ensure all the table rows are in same height.
 * Programmatic selection using the **SelectRows** method is not supported in virtual scrolling.
 
+> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
+
 ## See also
 
 * [Row virtualization with Lazy load grouping in DataGrid](https://blazor.syncfusion.com/documentation/datagrid/lazy-load-grouping#lazy-load-grouping-with-virtual-scrolling)
-
-N> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
