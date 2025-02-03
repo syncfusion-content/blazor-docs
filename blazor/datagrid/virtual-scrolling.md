@@ -44,7 +44,7 @@ The following example enable row virtualization using `EnableVirtualization` pro
     public List<TaskDetails> TaskData { get; set; }
     protected override void OnInitialized()
     {
-        TaskData = TaskDetails.GenerateData(5000);
+        TaskData = TaskDetails.GenerateData(1000);
     }  
 }
 {% endhighlight %}
@@ -82,12 +82,13 @@ public class TaskDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBotirPhGvGeYbS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXreXrDghESsUlpk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Render buffered data using Overscan count
 
 The [OverscanCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_OverscanCount) property plays a crucial role in optimizing scrolling performance. It allows for the rendering of extra records before and after the viewport of the grid. It effectively reduce the frequency of data fetch requests while scrolling vertically. 
-In the following demonstration, the `OverscanCount` property value is set as 5, showcasing its impact on scroll efficiency.
+
+The following example demonstrates how to set the `OverscanCount` property to **5**, allowing five additional records to be preloaded before and after the current viewport.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -138,7 +139,7 @@ public class OrderDetails
         if (order.Count == 0)
         {
             int Code = 10247;
-            for (int i = 1; i < 10000; i++)
+            for (int i = 1; i < 500; i++)
             {
                 order.Add(new OrderDetails(Code + 1, "VINET", i + 0, new DateTime(1991, 05, 15), 32.38, "Denmark", "Berlin", "Kirchgasse 6", new DateTime(1996, 7, 16), false));
                 order.Add(new OrderDetails(Code + 2, "HANAR", i + 2, new DateTime(1990, 04, 04), 58.17, "Brazil", "Madrid", "Avda. Azteca 123", new DateTime(1996, 9, 11), true));
@@ -164,7 +165,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjhyXCBlTqiSsgkD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBeDLNqVYqUifpB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > The `OverscanCount` property supports both local and remote data.
 
@@ -174,9 +175,8 @@ public class OrderDetails
 	1. Batch editing
 	2. Detail template
 	3. Row template
-	4. Rowspan
-	5. Autofill
-	6. Hierarchy grid
+	4. Autofill
+	5. Hierarchy grid
 * When row virtual scrolling is activated, compatibility for copy-paste and drag-and-drop operations is limited to the data items visible in the current viewport of the grid.
 * The cell-based selection is not supported for row virtual scrolling. 
 * Using different row heights with a template column, when the template height differs for each row, is not supported.
@@ -191,6 +191,7 @@ public class OrderDetails
     }
     ```
 * Since data is virtualized in grid, the aggregated information and total group items are displayed based on the current view items. 
+* The page size provided must be two times larger than the number of visible rows in the datagrid. If the page size is failed to meet this condition then the size will be determined by datagrid.
 * It is necessary to set a static height for the component or its parent container when using row virtualization. The 100% height will work only if the component height is set to 100%, and its parent container has a static height.
 
 ## Column virtualization
@@ -430,7 +431,7 @@ public class OrderDetails
         if (order.Count == 0)
         {
             int Code = 10247;
-            for (int i = 1; i < 10000; i++)
+            for (int i = 1; i < 500; i++)
             {
                 order.Add(new OrderDetails(Code + 1, "VINET", i + 0, new DateTime(1991, 05, 15), 32.38, "Denmark", "Berlin", "Kirchgasse 6", new DateTime(1996, 7, 16), false));
                 order.Add(new OrderDetails(Code + 2, "HANAR", i + 2, new DateTime(1990, 04, 04), 58.17, "Brazil", "Madrid", "Avda. Azteca 123", new DateTime(1996, 9, 11), true));
@@ -456,7 +457,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVoDiLEinMmyZFA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLIZrZgBlddsUQU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Column virtualization with paging
 
@@ -511,7 +512,7 @@ public class OrderDetails
         if (order.Count == 0)
         {
             int Code = 10247;
-            for (int i = 1; i < 10000; i++)
+            for (int i = 1; i < 500; i++)
             {
                 order.Add(new OrderDetails(Code + 1, "VINET", i + 0, new DateTime(1991, 05, 15), 32.38, "Denmark", "Berlin", "Kirchgasse 6", new DateTime(1996, 7, 16), false));
                 order.Add(new OrderDetails(Code + 2, "HANAR", i + 2, new DateTime(1990, 04, 04), 58.17, "Brazil", "Madrid", "Avda. Azteca 123", new DateTime(1996, 9, 11), true));
@@ -537,16 +538,44 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrojsVuseeqluvX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtVejhtAVPeiBUyd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > * Column's [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Width) is required for column virtualization. If column's width is not defined then DataGrid will consider its value as **200px**.
 > * The collapsed/expanded state will persist only for local dataSource while scrolling.
+
+### Limitations 
+
+* While using column virtual scrolling, column width should be in pixel. Percentage values are not accepted.
+* Selected column details are only retained within the viewport. When the next set of columns is loaded, the selection for previously visible columns is lost.
+* The cell selection is not supported for column virtual scrolling.
+* The **Ctrl + Home** and **Ctrl + End** keys are not supported when using column virtual scrolling.
+* The following features are compatible with column virtualization and work within the viewport:
+   1. Column resizing
+   2. Column reordering
+   3. Column chooser
+   4. Auto-fit
+   5. Print
+   6. Clipboard
+   7. Column menu - Column chooser, AutofitAll
+* Column virtual scrolling is not compatible with the following feature
+    1. Grouping
+    2. Batch editing
+    3. Column with infinite scrolling
+    4. Stacked header
+    5. Row template
+    6. Detail template
+    7. Hierarchy grid
+    8. Autofill
+    9. Column chooser
 
 ## Enable Cell placeholder during Virtualization
 
 This enable cell placeholder during virtualization feature much of a muchness of row virtualization and column virtualization feature and the difference is loading placeholder indicator was shown on the cells while loading the new data. Also same set of DOM elements is reused to improve performance.
 
-To setup the enable cell placeholder during virtualization, you need to define [EnableVirtualMaskRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualMaskRow) as true along with [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization)/[EnableColumnVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableColumnVirtualization) property.
+To setup the enable cell placeholder during virtualization, you need to define [EnableVirtualMaskRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualMaskRow) property to **true** along with either:
+
+* [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) for row virtualization, or
+* [EnableColumnVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableColumnVirtualization) for column virtualization.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -991,19 +1020,7 @@ To refresh virtualized grid externally, set the [EnableVirtualization](https://h
 }
 ```
 
-> If `RowHeight` is given, then the page size is calculated by given row height. Otherwise, RowHeight will be considered from the offset height of the grid row element.
-
-## Limitations for Virtualization
-
-* While using column virtualization, column width should be in the pixel. Percentage values are not accepted.
-* Due to the element height limitation in browsers, the maximum number of records loaded by the datagrid is limited by the browser capability.
-* Cell selection will not be persisted in both row and column virtualization.
-* Virtual scrolling is not compatible with detail template, and hierarchy features
-* Group expand and collapse state will not be persisted.
-* Since data is virtualized in datagrid, the aggregated information and total group items are displayed based on the current view items.
-* The page size provided must be two times larger than the number of visible rows in the datagrid. If the page size is failed to meet this condition then the size will be determined by datagrid.
-* The height of the datagrid content is calculated using the row height and total number of records in the data source and hence features which changes row height such as text wrapping are not supported. If you want to increase the row height to accommodate the content then you can specify the row height using **RowHeight** property to ensure all the table rows are in same height.
-* Programmatic selection using the **SelectRows** method is not supported in virtual scrolling.
+> If [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) is given, then the page size is calculated by given row height. Otherwise, RowHeight will be considered from the offset height of the grid row element.
 
 > You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
 

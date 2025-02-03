@@ -185,7 +185,7 @@ To enable cache mode, you need to define [EnableCache](https://help.syncfusion.c
 
 To enable maximum blocks, you need to define `MaximumBlocks` count of `GridInfiniteScrollSettings`, By default this property value is 3.
 
-The following example that demonstrates how to enable/disable cache mode in infinite scrolling of the grid based on a [Toggle Switch Button](https://blazor.syncfusion.com/documentation/toggle-switch-button/getting-started-webapp) component[ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_ValueChange) event:
+The following example that demonstrates how to enable/disable cache mode in infinite scrolling of the grid based on a [Toggle Switch Button](https://blazor.syncfusion.com/documentation/toggle-switch-button/getting-started-webapp) component [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_ValueChange) event:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -274,13 +274,11 @@ public class TaskDetails
 * Infinite scrolling is not compatible with the following features:
     1. Batch editing
     2. Normal editing
-    3. Row spanning
-    4. Column spanning
-    5. Row template
-    6. Row virtual scrolling
-    8. Detail template
-    9. Hierarchy features
-    10. Autofill
+    3. Row template
+    4. Row virtual scrolling
+    5. Detail template
+    6. Hierarchy features
+    7. Autofill
 * Limitations of row drag and drop with infinite scrolling
     1. In cache mode, the grid refreshes automatically if the content's **tr** element count exceeds the cache limit of the grid's content after the drop action.
     2. When performing row drag and drop with lazy load grouping, the grid will refresh automatically.
