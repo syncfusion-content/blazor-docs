@@ -19,6 +19,24 @@ The following example demonstrates how to enable track changes.
 <SfDocumentEditorContainer ID="cont" @ref="container" EnableTrackChanges="true" EnableToolbar="true">
 </SfDocumentEditorContainer>
 ```
+>Track changes are document level settings. When opening a document, if the document does not have track changes enabled, then enableTrackChanges will be disabled even if we set enableTrackChanges={true} in the initial rendering. If you want to enable track changes for all the documents, then we recommend enabling track changes during the document change event. The following example demonstrates how to enable Track changes for the all the Document while Opening.
+
+```csharp
+<SfDocumentEditorContainer @ref="container" Height="590px" EnableToolbar=true>
+    <DocumentEditorContainerEvents  DocumentChanged="OnDocumentChange" >
+    </DocumentEditorContainerEvents>
+</SfDocumentEditorContainer>
+ 
+@code { 
+    SfDocumentEditorContainer container; 
+     public void OnDocumentChange()
+    {
+        if(container != null){
+            container.EnableTrackChanges = true;
+        }
+    }
+};
+```
 
 ## Show/Hide Revisions Pane
  
