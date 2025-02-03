@@ -230,15 +230,6 @@ You can use the [PromptSuggestions](https://help.syncfusion.com/cr/blazor/Syncfu
 {% tabs %}
 {% highlight razor %}
 
-@* desired render mode define here *@
-@rendermode InteractiveAuto
-
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
-{% highlight razor %}
-
 <div class="aiassist-container" style="height: 350px; width: 650px;">
     <SfAIAssistView PromptSuggestions="@promptSuggestions" PromptRequested="@PromptRequest"></SfAIAssistView>
 </div>
