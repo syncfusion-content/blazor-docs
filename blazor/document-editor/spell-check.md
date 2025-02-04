@@ -9,7 +9,7 @@ documentation: ug
 
 # Spell Check
 
-Document Editor supports performing spell checking for any input text. You can perform spell checking for the text in Document Editor and it will provide suggestions for the mis-spelled words through dialog and in context menu. Document editor's spell checker is compatible with [hunspell dictionary files](https://github.com/wooorm/dictionaries).
+Document Editor supports performing spell checking for any input text. You can perform spell checking for the text in Document Editor and it will provide suggestions for the mis-spelled words through dialog and in context menu. Document editor's spell checker is compatible with [Hunspell dictionary files](https://github.com/wooorm/dictionaries).
 
 ```cshtml
 @using Syncfusion.Blazor.DocumentEditor 
@@ -79,7 +79,7 @@ spellcheck.SetLanguageIDAsync(1033); //LCID of "en-us";
 
 ### EnableOptimizedSpellCheck
 
-Document Editor provides option to spellcheck page by page when loading the documents. The default value of this property is false, so when opening the document spellcheck web API will be called for each word in the document. To optimize the frequency of spellcheck web API calls, you can enable this property.
+Document Editor provides option to spell check page by page when loading the documents. The default value of this property is false, so when opening the document spell check web API will be called for each word in the document. To optimize the frequency of spell check web API calls, you can enable this property.
 
 The following code example illustrates how to enable optimized spell checking.
 
