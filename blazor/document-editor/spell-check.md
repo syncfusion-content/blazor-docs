@@ -147,7 +147,7 @@ spellChecker.AddNewWord("en.dic","en.aff", "construct", new string[] { "construc
 
 Right click on error word to open the context menu with spell check options. Please see below screenshot for your reference.
 
-![Spell check option in JavaScript document editor context menu](images/spell-check-menu.png)
+![Spell check option in Blazor document editor context menu](images/spell-check-menu.png)
 
 ### Suggestions
 
@@ -169,4 +169,4 @@ Ignore All: ignore all occurrence of a word from error in the entire document.
 
 Using this option, you can open spell check dialog. Please see below screenshot for your reference.
 
-![Spell check dialog in JavaScript document editor](images/spell-check-dialog.png)
+![Spell check dialog in Blazor document editor](images/spell-check-dialog.png)
