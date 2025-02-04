@@ -138,9 +138,11 @@ If you find any root word is missing in the dictionary file, then you can add th
 The following code example demonstrates how to add a new root word to the dictionary along with the rule to form the possible words.
 
 ```csharp
+
 SpellChecker spellChecker = new SpellChecker();
 // Adds the specified new root word to the dictionary along with the rule to form the possible words.
 spellChecker.AddNewWord("en.dic","en.aff", "construct", new string[] { "constructs", "reconstruct", "constructed", "constructive" });
+
 ```
 
 ## Context menu
