@@ -167,6 +167,48 @@ You can customize the dropdown [icon](https://ej2.syncfusion.com/documentation/a
 
 ![Blazor Dropdown Tree icon color](./images/styles/blazor-dropdowntree-component-icon.png)
 
+## Replace the dropdown icon with svg
+
+To replace the default dropdown icon in the Dropdown Tree component with an SVG, use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_CssClass) property and apply custom styles to the `.e-custom .e-ddt-icon` class. This allows for a personalized SVG design instead of the default icon.
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+<SfDropDownTree TItem="EmployeeData" TValue="string" Placeholder="Select an employee" Width="500px" CssClass="e-custom">
+    <DropDownTreeField TItem="EmployeeData" DataSource="Data" ID="Id" Text="Name" HasChildren="HasChild" ParentID="PId"></DropDownTreeField>
+</SfDropDownTree>
+@code {
+    List<EmployeeData> Data = new List<EmployeeData>
+    {
+        new EmployeeData() { Id = "1", Name = "Steven Buchanan", Job = "General Manager", HasChild = true, Expanded = true },
+        new EmployeeData() { Id = "2", PId = "1", Name = "Laura Callahan", Job = "Product Manager", HasChild = true },
+        new EmployeeData() { Id = "3", PId = "2", Name = "Andrew Fuller", Job = "Team Lead", HasChild = true },
+        new EmployeeData() { Id = "4", PId = "3", Name = "Anne Dodsworth", Job = "Developer" },
+        new EmployeeData() { Id = "10", PId = "3", Name = "Lilly", Job = "Developer" },
+        new EmployeeData() { Id = "5", PId = "1", Name = "Nancy Davolio", Job = "Product Manager", HasChild = true },
+        new EmployeeData() { Id = "6", PId = "5", Name = "Michael Suyama", Job = "Team Lead", HasChild = true },
+        new EmployeeData() { Id = "7", PId = "6", Name = "Robert King", Job = "Developer" },
+        new EmployeeData() { Id = "11", PId = "6", Name = "Mary", Job = "Developer" },
+        new EmployeeData() { Id = "9", PId = "1", Name = "Janet Leverling", Job = "HR"}
+    };
+    class EmployeeData
+    {
+        public string Id { get; set; }
+        public string Name { get; set; }
+        public string Job { get; set; }
+        public bool HasChild { get; set; }
+        public bool Expanded { get; set; }
+        public string PId { get; set; }
+    }
+}
+<style>
+.e-custom .e-ddt-icon::before {
+    content: url("/icons/chevron_down.svg");
+}
+</style>
+```
+
+![Blazor Dropdown Tree svg icon](./images/styles/blazor-dropdowntree-component-svg.png)
+
 ## Customizing the appearance of container element
 
 You can customize the appearance of the container element within the Dropdown Tree component by targeting its CSS class `.e-input`, which indicates the parent element of the input, and allows you to apply any desired styles to the component.
