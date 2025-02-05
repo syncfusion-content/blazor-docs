@@ -232,15 +232,6 @@ You can use the [Messages](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 {% tabs %}
 {% highlight razor %}
 
-@* desired render mode define here *@
-@rendermode InteractiveAuto
-
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
-{% highlight razor %}
-
 <div style="height: 400px; width: 400px;">
     <SfChatUI ID="chatUser" User="CurrentUserModel" Messages="ChatUserMessages"></SfChatUI>
 </div>
