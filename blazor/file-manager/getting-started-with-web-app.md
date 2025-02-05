@@ -15,7 +15,11 @@ This section briefly explains about how to include [Blazor FileManager](https://
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-## Create a new Blazor Web App
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+## Create a new Blazor Web App in Visual Studio
 
 You can create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
@@ -40,6 +44,56 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code %}
+
+## Create a new Blazor Web App in Visual Studio Code
+
+You can create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
+
+You need to configure the corresponding [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) while creating a Blazor Web Application.
+
+For example, in a Blazor Web App with the `Auto` interactive render mode, use the following commands.
+
+{% tabs %}
+{% highlight c# tabtitle="Blazor Web App" %}
+
+dotnet new blazor -o BlazorWebApp -int Auto
+cd BlazorWebApp
+cd BlazorWebApp.Client
+
+{% endhighlight %}
+{% endtabs %}
+
+N> For more information on creating a **Blazor Web App** with various interactive modes and locations, refer to this [link](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app#using-syncfusion-blazor-template).
+
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor FileManager and Themes NuGet in the App
+
+If you utilize `WebAssembly` or `Auto` render modes in the Blazor Web App need to be install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components NuGet packages within the client project.
+
+* Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
+* Ensure you’re in the project root directory where your `.csproj` file is located.
+* Run the following command to install a [Syncfusion.Blazor.FileManager](https://www.nuget.org/packages/Syncfusion.Blazor.FileManager) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package and ensure all dependencies are installed.
+
+{% tabs %}
+
+{% highlight c# tabtitle="Package Manager" %}
+
+dotnet add package Syncfusion.Blazor.FileManager -v {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
+dotnet restore
+
+{% endhighlight %}
+
+{% endtabs %}
+
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+
+{% endtabcontent %}
+
+{% endtabcontents %}
+
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
 | Interactive Render Mode | Description |
@@ -61,10 +115,6 @@ Import the `Syncfusion.Blazor` and `Syncfusion.Blazor.FileManager` namespace.
 Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor Web App.
 
 If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, you need to register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in both **~/Program.cs** files of your Blazor Web App.
-
-If the **Interactive Render Mode** is set to `Server`, your project will contain a single **~/Program.cs** file. So, you should register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service only in that **~/Program.cs** file.
-
-If **Interactive Render Mode** as `WebAssembly` or `Auto`,
 
 {% tabs %}
 {% highlight c# tabtitle="Server(~/_Program.cs)" hl_lines="3 11" %}
@@ -98,7 +148,7 @@ await builder.Build().RunAsync();
 {% endhighlight %}
 {% endtabs %}
 
-If **Interactive Render Mode** as `Server`,
+If the **Interactive Render Mode** is set to `Server`, your project will contain a single **~/Program.cs** file. So, you should register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service only in that **~/Program.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="~/_Program.cs" hl_lines="2 9" %}
@@ -223,7 +273,7 @@ namespace filemanager.Server.Controllers
         public string basePath;
         string root = "wwwroot\\Files";
         [Obsolete]
-        public FileManagerController(IHostingEnvironment hostingEnvironment)
+        public FileManagerController(IWebHostEnvironment hostingEnvironment)
         {
             this.basePath = hostingEnvironment.ContentRootPath;
             this.operation = new PhysicalFileProvider();
@@ -279,7 +329,7 @@ builder.Services.AddControllers();
 ...
 
 app.UseRouting();
-app.MapControllers();.
+app.MapControllers();
 
 ```
 
@@ -365,10 +415,12 @@ namespace filemanager.Server.Controllers
         [Route("Download")]
         public IActionResult Download(string downloadInput)
         {
-            //Invoking download operation with the required parameters.
-            // path - Current path where the file is downloaded; Names - Files to be downloaded;
-            FileManagerDirectoryContent args = JsonConvert.DeserializeObject<FileManagerDirectoryContent>(downloadInput);
-            return operation.Download(args.Path, args.Names);
+            var options = new JsonSerializerOptions
+            {
+                PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+            };
+            FileManagerDirectoryContent args = JsonSerializer.Deserialize<FileManagerDirectoryContent>(downloadInput, options);
+            return operation.Download(args.Path, args.Names, args.Data);
         }
     }
 }
@@ -404,18 +456,53 @@ namespace filemanager.Server.Controllers
     {
         // Processing the Upload operation.
         [Route("Upload")]
-        public IActionResult Upload(string path, IList<IFormFile> uploadFiles, string action)
+        [DisableRequestSizeLimit]
+        public IActionResult Upload(string path, long size, IList<IFormFile> uploadFiles, string action)
         {
-            //Invoking upload operation with the required parameters.
-            // path - Current path where the file is to uploaded; uploadFiles - Files to be uploaded; action - name of the operation(upload)
-            FileManagerResponse uploadResponse;
-            uploadResponse = operation.Upload(path, uploadFiles, action, null);
-            if (uploadResponse.Error != null)
+            try
             {
+                FileManagerResponse uploadResponse;
+                foreach (var file in uploadFiles)
+                {
+                    var folders = (file.FileName).Split('/');
+                    // checking the folder upload
+                    if (folders.Length > 1)
+                    {
+                        for (var i = 0; i < folders.Length - 1; i++)
+                        {
+                            string newDirectoryPath = Path.Combine(this.basePath + path, folders[i]);
+                            if (Path.GetFullPath(newDirectoryPath) != (Path.GetDirectoryName(newDirectoryPath) + Path.DirectorySeparatorChar + folders[i]))
+                            {
+                                throw new UnauthorizedAccessException("Access denied for Directory-traversal");
+                            }
+                            if (!Directory.Exists(newDirectoryPath))
+                            {
+                                this.operation.ToCamelCase(this.operation.Create(path, folders[i]));
+                            }
+                            path += folders[i] + "/";
+                        }
+                    }
+                }
+                uploadResponse = operation.Upload(path, uploadFiles, action, size, null);
+                if (uploadResponse.Error != null)
+                {
+                    Response.Clear();
+                    Response.ContentType = "application/json; charset=utf-8";
+                    Response.StatusCode = Convert.ToInt32(uploadResponse.Error.Code);
+                    Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = uploadResponse.Error.Message;
+                }
+            }
+            catch (Exception e)
+            {
+                ErrorDetails er = new ErrorDetails();
+                er.Message = e.Message.ToString();
+                er.Code = "417";
+                er.Message = "Access denied for Directory-traversal";
                 Response.Clear();
                 Response.ContentType = "application/json; charset=utf-8";
-                Response.StatusCode = Convert.ToInt32(uploadResponse.Error.Code);
-                Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = uploadResponse.Error.Message;
+                Response.StatusCode = Convert.ToInt32(er.Code);
+                Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = er.Message;
+                return Content("");
             }
             return Content("");
         }
@@ -455,9 +542,7 @@ namespace filemanager.Server.Controllers
         [Route("GetImage")]
         public IActionResult GetImage(FileManagerDirectoryContent args)
         {
-            //Invoking GetImage operation with the required parameters.
-            // path - Current path of the image file; Id - Image file id;
-            return this.operation.GetImage(args.Path, args.Id, false, null, null);
+            return this.operation.GetImage(args.Path, args.Id,false,null, null);
         }
     }
 }

@@ -838,6 +838,12 @@ The look and feel of the built-in quick popup window, which opens when single cl
 
 The quick popup accepts the template that customizes both the cell click quick popup and event click quick popup or only cell click quick popup or event click quick popup by making use of `TemplateType` option which is `TemplateType.Both` by default and also accepts `TemplateType.Cell` or `TemplateType.Event` value.
 
+To get start quickly about customizing quick popup in our Scheduler, you can check on this video:
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=G9OCn_JOUG4-0"%}
+
+
 ### Customizing quick popup on cell
 
 The quick popup accepts the template that customizes quick popup only on cell by giving `TemplateType.Cell` to the `TemplateType` option in [`ScheduleQuickInfoTemplates`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleQuickInfoTemplates.html).
