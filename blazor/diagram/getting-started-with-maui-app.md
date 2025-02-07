@@ -54,7 +54,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 * Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/MauiProgram.cs** file.
 
 {% tabs %}
-{% highlight c# tabtitle="~/MauiProgram.cs" hl_lines="3 20 28" %}
+{% highlight c# tabtitle="~/MauiProgram.cs" hl_lines="3 20" %}
 
 using Microsoft.Extensions.Logging;
 using MauiBlazorWindow.Data;
