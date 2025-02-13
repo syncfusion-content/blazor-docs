@@ -16,6 +16,10 @@ To get start quickly with Blazor Server App, you can check on this video.
 {% youtube
 "youtube:https://www.youtube.com/watch?v=cQZYzOlTm0Q" %}
 
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
@@ -38,6 +42,65 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endtabs %}
 
 N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details. 
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code %}
+
+## Prerequisites
+
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
+
+If you previously installed the SDK, you can determine the installed version by executing the following command in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
+
+{% tabs %}
+{% highlight c# tabtitle="SDK version" %}
+
+dotnet --version
+
+{% endhighlight %}
+{% endtabs %}
+
+## Create a new Blazor Server App in Visual Studio Code
+
+You can create a **Blazor Server App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
+
+Alternatively, you can create a Server application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+
+{% tabs %}
+{% highlight c# tabtitle="Blazor Server App" %}
+
+dotnet new blazorserver -o BlazorApp
+cd BlazorApp
+
+{% endhighlight %}
+{% endtabs %}
+
+This command creates new Blazor app project and places it in a new directory called `BlazorApp` inside your current location. See [Create Blazor app topic](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create) and [dotnet new command](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new) topics for more details.
+
+N> If you have installed multiple SDK versions and need any specific framework version (net6.0/net7.0) project, then add `-f` flag along with `dotnet new blazorserver` comment. Refer [here](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new) for the available options.
+
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendars and Themes NuGet in the App
+
+* Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
+* Ensure you’re in the project root directory where your `.csproj` file is located.
+* Run the following command to install a [Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package and ensure all dependencies are installed.
+
+{% tabs %}
+{% highlight c# tabtitle="Package Manager" %}
+
+dotnet add package Syncfusion.Blazor.Calendars -Version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
+dotnet restore
+
+{% endhighlight %}
+{% endtabs %}
+
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+
+{% endtabcontent %}
+
+{% endtabcontents %}
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
