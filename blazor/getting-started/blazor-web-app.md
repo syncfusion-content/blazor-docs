@@ -26,21 +26,23 @@ To use the individual component in Blazor playground, uninstall the existing pac
 
 ![Blazor Playground with Accordion component](images/pg-accordion.png)
 
-{% tabcontents %}
-
-{% tabcontent Visual Studio %}
-
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-## Create a new Blazor Web App
+## Manually Creating a Project
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+### Create a new Blazor Web App in Visual Studio
 
 You can create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 You need to configure the corresponding [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows) while creating a Blazor Web Application.
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Navigations and Themes NuGet in the Blazor Web App
+### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Navigations and Themes NuGet in the Blazor Web App
 
 Here's an example of how to add **Blazor Accordion** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
@@ -63,39 +65,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 {% tabcontent Visual Studio Code %}
 
-## Prerequisites
-
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-
-If you previously installed the SDK, you can determine the installed version by executing the following command in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
-
-{% tabs %}
-{% highlight c# tabtitle="SDK version" %}
-
-dotnet --version
-
-{% endhighlight %}
-{% endtabs %}
-
-## Create a new Blazor Web App in Visual Studio Code
-
-You can create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
-
-You need to configure the corresponding [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) while creating a Blazor Web Application.
-
-For example, in a Blazor Web App with the `Auto` interactive render mode, use the following commands.
-
-{% tabs %}
-{% highlight c# tabtitle="Blazor Web App" %}
-
-dotnet new blazor -o BlazorWebApp -int Auto
-cd BlazorWebApp
-cd BlazorWebApp.Client
-
-{% endhighlight %}
-{% endtabs %}
-
-Run the following command to create a new **Blazor Web App** with various interactive modes and locations in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
+#### Render Interactive Modes
 
 If you set the Authentication Type as `None` and Interactivity location as `Per page/component`, you need to use the following command.
 
@@ -263,7 +233,27 @@ dotnet new blazor -o BlazorApp8 -int None -ai
 
 N> If you want to see more available templates, you need to run the `dotnet new blazor --help` or `dotnet new blazor -h` command.
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Navigations and Themes NuGet in the App
+### Create a new Blazor Web App in Visual Studio Code
+
+You can create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
+
+You need to configure the corresponding [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) while creating a Blazor Web Application.
+
+For example, in a Blazor Web App with the `Auto` interactive render mode, use the following commands.
+
+{% tabs %}
+{% highlight c# tabtitle="Blazor Web App" %}
+
+dotnet new blazor -o BlazorWebApp -int Auto
+cd BlazorWebApp
+cd BlazorWebApp.Client
+
+{% endhighlight %}
+{% endtabs %}
+
+Run the following command to create a new **Blazor Web App** with various interactive modes and locations in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
+
+### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Navigations and Themes NuGet in the App
 
 If you utilize `WebAssembly` or `Auto` render modes in the Blazor Web App need to be install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components NuGet packages within the client project.
 
@@ -289,7 +279,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 {% endtabcontents %}
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+### Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
 | Interactive Render Mode | Description |
 | -- | -- |
@@ -364,7 +354,7 @@ var app = builder.Build();
 {% endhighlight %}
 {% endtabs %}
 
-## Add stylesheet and script resources
+### Add stylesheet and script resources
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet reference in the `<head>` section and the script reference at the end of the `<body>` in the **~/Components/App.razor** file as shown below:
 
@@ -383,7 +373,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Accordion component
+### Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Accordion component
 
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Accordion component in the **~/Components/Pages/*.razor** file. If an interactivity location as `Per page/component` in the web app, define a render mode at the top of the `~Pages/*.razor` component, as follows:
 
