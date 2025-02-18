@@ -82,7 +82,7 @@ Filter Chip allows you to select a multiple chip from the set of Chip/ChipItems.
 
 ## Action Chip
 
-The Action Chip triggers the event like [`OnClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipEvents.html#Syncfusion_Blazor_Buttons_ChipEvents_OnClick) or delete, which helps to do action based on the event.
+The Action Chip triggers the event like [`OnClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipEvents.html#Syncfusion_Blazor_Buttons_ChipEvents_OnClick) or [`OnDelete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipEvents.html#Syncfusion_Blazor_Buttons_ChipEvents_OnDelete), which helps to do action based on the event.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
