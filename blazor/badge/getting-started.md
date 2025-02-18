@@ -11,7 +11,7 @@ documentation: ug
 
 # Getting Started with Blazor Badge Component
 
-This section briefly explains about how to include Blazor `Badge` component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
+This section briefly explains about how to include [`Blazor Badge`](https://blazor.syncfusion.com/demos/badge/defaultfunctionalities?theme=bootstrap5) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
 To get start quickly with Blazor Badge, you can check on this video:
 
@@ -119,7 +119,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Badge component 
 {% tabs %}
 {% highlight razor %}
 
-<h1>Badge Component <span class="e-badge">New</span></h1>
+<h1>Badge Component <span class="e-badge e-badge-primary">New</span></h1>
 
 {% endhighlight %}
 {% endtabs %}
