@@ -98,7 +98,7 @@ The spacing between each panel in a row and column can be defined using the [`Ce
 
 The following output demonstrates the neat and clear representation of data by setting the `cellSpacing` property in dashboard component.
 
-![Blazor DashboardLayout with Cell Spacing](images/blazor-dashboard-layout-cell-space.png)
+![Blazor Dashboard Layout with Cell Spacing](images/blazor-dashboard-layout-cell-space.png)
 
 ## Graphical representation of grid layout
 
@@ -138,4 +138,4 @@ These cells combinedly form a grid-structured layout, which will be hidden initi
 
 The following output demonstrates the gridlines indicating the cells split-up of the layout and the data containers placed over these cells are known as panels.
 
-![Blazor DashboardLayout with GridLines](images/blazor-dashboard-layout-gridlines.png)
+![Blazor Dashboard Layout with GridLines](images/blazor-dashboard-layout-gridlines.png)
