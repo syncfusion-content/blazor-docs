@@ -13,7 +13,7 @@ This section explains the customization of styles, leading icons, avatar, and tr
 
 ## Styles
 
-The Chip control has the following predefined styles that can be defined using the `CssClass` property.
+The Chip control has the following predefined styles that can be defined using the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfChip.html#Syncfusion_Blazor_Buttons_SfChip_CssClass) property.
 
 | Class | Description |
 | -------- | -------- |
@@ -44,7 +44,7 @@ The Chip control has the following predefined styles that can be defined using t
 
 ## Leading icon
 
-You can add and customize the leading icon of chip using the `LeadingIconCss` property.
+You can add and customize the leading icon of chip using the [`LeadingIconCss`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipItem.html#Syncfusion_Blazor_Buttons_ChipItem_LeadingIconCss) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -59,19 +59,19 @@ You can add and customize the leading icon of chip using the `LeadingIconCss` pr
 
 <style>
     #chip-avatar .anne {
-        background-image: url('./anne.png')
+        background-image: url('https://ej2.syncfusion.com/demos/src/chips/images/anne.png')
     }
 
     #chip-avatar .margaret {
-        background-image: url('./margaret.png')
+        background-image: url('https://ej2.syncfusion.com/demos/src/chips/images/margaret.png')
     }
 
     #chip-avatar .laura {
-        background-image: url('./laura.png')
+        background-image: url('https://ej2.syncfusion.com/demos/src/chips/images/laura.png')
     }
 
     #chip-avatar .janet {
-        background-image: url('./janet.png')
+        background-image: url('https://ej2.syncfusion.com/demos/src/chips/images/janet.png')
     }
 </style>
 
@@ -83,7 +83,7 @@ You can add and customize the leading icon of chip using the `LeadingIconCss` pr
 
 ## Avatar
 
-You can add and customize the avatar of chip using the `LeadingIconCss` property.
+You can add and customize the avatar of chip using the [`LeadingIconCss`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipItem.html#Syncfusion_Blazor_Buttons_ChipItem_LeadingIconCss) property.
 
 ```csharp
 
@@ -97,20 +97,20 @@ You can add and customize the avatar of chip using the `LeadingIconCss` property
 </SfChip>
 
 <style>
-    .chip-avatar .andrew {
-        background-image: url('./andrew.png')
+    .e-chip-avatar.andrew {
+        background-image: url('https://ej2.syncfusion.com/demos/src/chips/images/andrew.png')
     }
 
-    .chip-avatar .margaret {
-        background-image: url('./margaret.png')
+    .e-chip-avatar.margaret {
+        background-image: url('https://ej2.syncfusion.com/demos/src/chips/images/margaret.png')
     }
 
-    .chip-avatar .laura {
-        background-image: url('./laura.png')
+    .e-chip-avatar.laura {
+        background-image: url('https://ej2.syncfusion.com/demos/src/chips/images/laura.png')
     }
 
-    .chip-avatar .janet {
-        background-image: url('./janet.png')
+    .e-chip-avatar.janet {
+        background-image: url('https://ej2.syncfusion.com/demos/src/chips/images/janet.png')
     }
 </style>
 
@@ -122,7 +122,7 @@ You can add and customize the avatar of chip using the `LeadingIconCss` property
 
 ## Leading content
 
-You can add and customize the avatar content of chip using the `LeadingText` property.
+You can add and customize the avatar content of chip using the [`LeadingText`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipItem.html#Syncfusion_Blazor_Buttons_ChipItem_LeadingText) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -143,7 +143,7 @@ You can add and customize the avatar content of chip using the `LeadingText` pro
 
 ## Trailing icon
 
-You can add and customize the trailing icon of chip using the `TrailingIconCss` property.
+You can add and customize the trailing icon of chip using the [`TrailingIconCss`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.ChipItem.html#Syncfusion_Blazor_Buttons_ChipItem_TrailingIconCss) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -165,7 +165,7 @@ You can add and customize the trailing icon of chip using the `TrailingIconCss` 
 
 ## Outline chip
 
-Outline chip has the border with the background transparent. It can be set using the `CssClass` property.
+Outline chip has the border with the background transparent. It can be set using the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfChip.html#Syncfusion_Blazor_Buttons_SfChip_CssClass) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
