@@ -9,7 +9,7 @@ documentation: ug
 
 # SEO Analysis Dashboard in Blazor Dashboard Layout Component
 
-The Blazor DashboardLayout component is used for creating dynamic and responsive layouts in Blazor applications. This documentation provides a comprehensive guide on how to utilize the DashboardLayout component for real-time SEO data analysis within the context of a Blazor application.
+The Blazor Dashboard Layout component is used for creating dynamic and responsive layouts in Blazor applications. This documentation provides a comprehensive guide on how to utilize the Dashboard Layout component for real-time SEO data analysis within the context of a Blazor application.
 
 ```cshtml
 

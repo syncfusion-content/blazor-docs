@@ -54,7 +54,7 @@ The following output demonstrates the dragging functionality of dashboard compon
 
 ## Customizing the dragging handler
 
-The dragging handler for the panels can be customized using the `DraggableHandle` property to restrict the dragging action within a particular element in the panel.
+The dragging handler for the panels can be customized using the [`DraggableHandle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_DraggableHandle) property to restrict the dragging action within a particular element in the panel.
 
 ```cshtml
 
