@@ -22,7 +22,6 @@ ListView provides an option to load the data either from local dataSource or rem
 | Child | string | Specifies child dataSource fields. |
 | Tooltip | string | Specifies tooltip title text field. |
 | GroupBy | string | Specifies category of each list item. |
-| SortBy | string | Specifies sorting field, that is used to sort the listview data. |
 | HtmlAttributes | string | Specifies list item html attributes field. |
 
 N> When complex data bind to ListView, you should map the ListViewFieldSettings properly. Otherwise, the ListView properties remains as undefined or null.
