@@ -136,6 +136,24 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Selector Border Blazor Diagram](images/SelectorBorder.png)
 
+## How to customize highlights for selected diagram elements
+
+To customize the appearance of highlighter for selected diagram elements, apply the following CSS styles:
+
+```cshtml
+<style>
+ .e-diagram-first-selection-indicator {
+    stroke: red !important;
+  }
+  .e-diagram-selection-indicator {
+    stroke: red !important;
+  }
+</style>
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples)
+
+![Rotate Handle Blazor Diagram](images/SelectionHighlighter.png)
+
 ## How to customize the rotate handle
 
 To customize the appearance of the rotation handle, apply the following CSS code to your Blazor diagram:
