@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Physical file system provider in Blazor FileManager Component | Syncfusion
+title: Physical provider in Blazor FileManager Component | Syncfusion
 description: Checkout and learn here all about Physical file system provider in Syncfusion Blazor FileManager component and more.
 platform: Blazor
 control: File Manager
