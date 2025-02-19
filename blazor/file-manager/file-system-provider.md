@@ -13,10 +13,10 @@ The file system provider allows the File Manager component to manage the files a
 
 The following file providers are added in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component.
 
-* [Physical file system provider](https://blazor.syncfusion.com/documentation/file-manager/physical-file-system-provider)
-* [Azure cloud file system Provider](https://blazor.syncfusion.com/documentation/file-manager/azure-cloud-file-system-provider)
-* [Amazon S3 cloud file provider](https://blazor.syncfusion.com/documentation/file-manager/amazon-S3-cloud-file-provider)
-* [SharePoint file provider](https://blazor.syncfusion.com/documentation/file-manager/sharePoint-file-provider)
+* [Physical file system provider](https://blazor.syncfusion.com/documentation/file-manager/ASP-NET-Core-file-system-provider)
+* [Azure cloud file system Provider](https://blazor.syncfusion.com/documentation/file-manager/ASP-NET-Core-Azure-cloud-file-system-provider)
+* [Amazon S3 cloud file provider](https://blazor.syncfusion.com/documentation/file-manager/ASP-NET-Core-Amazon-S3-cloud-file-provider)
+* [SharePoint file provider](https://blazor.syncfusion.com/documentation/file-manager/ASP-NET-Core-SharePoint-file-provider)
 * [File Transfer Protocol file system provider](https://blazor.syncfusion.com/documentation/file-manager/File-Transfer-Protocol-file-system-provider)
 * [SQL database file system provider](https://blazor.syncfusion.com/documentation/file-manager/SQL-database-file-system-provider)
 * [Google Drive file system provider](https://blazor.syncfusion.com/documentation/file-manager/Google-Drive-file-system-provider)
