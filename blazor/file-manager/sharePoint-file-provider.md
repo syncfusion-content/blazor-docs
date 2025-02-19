@@ -7,9 +7,9 @@ control: File Manager
 documentation: ug
 ---
 
-# ASP.NET Core SharePoint file provider
+# SharePoint file provider
 
-The ASP.NET Core SharePoint file provider allows users to access and manage files within Microsoft SharePoint. To get started, clone the [SharePoint ASP.NET Core File Provider](https://github.com/SyncfusionExamples/sharepoint-aspcore-file-provider) using the following command.
+The SharePoint file provider allows users to access and manage files within Microsoft SharePoint. To get started, clone the [SharePoint File Provider](https://github.com/SyncfusionExamples/sharepoint-aspcore-file-provider) using the following command.
 
 
 ```
@@ -62,7 +62,7 @@ After configuring the SharePoint file provider, build and run the project. Now, 
 
 ```cshtml
 
-@* Initializing File Manager with ASP.NET Core service *@
+@* Initializing File Manager with SharePoint file provider *@
 
 @* Replace the hosted port number in the place of "{port}" *@
 
@@ -76,8 +76,8 @@ After configuring the SharePoint file provider, build and run the project. Now, 
 
 ```
 
-To perform file operations (Read, Create, Rename, Delete, Get file details, Search, Copy, Move, Upload, Download, GetImage) in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component using the ASP.NET Core SharePoint file provider, you need to initialize the SharePoint service in the controller.
+To perform file operations (Read, Create, Rename, Delete, Get file details, Search, Copy, Move, Upload, Download, GetImage) in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component using the SharePoint file provider, you need to initialize the SharePoint service in the controller.
 
 To initialize a local service with the above-mentioned file operations, create a new folder named `Controllers` inside the server part of the project. Then, create a new file with the extension `.cs` inside the Controllers folder and add the necessary file operations code available in the `SharePointProviderController.cs` found at this [link](https://github.com/SyncfusionExamples/sharepoint-aspcore-file-provider/blob/master/Controllers/SharePointController.cs). Additionally, you can check out all the necessary file operation method details for this provider in the same GitHub repository.
 
-N> To learn more about file actions that can be performed with ASP.NET Core SharePoint file provider, refer to this [link](https://github.com/SyncfusionExamples/sharepoint-aspcore-file-provider#key-features)
+N> To learn more about file actions that can be performed with SharePoint file provider, refer to this [link](https://github.com/SyncfusionExamples/sharepoint-aspcore-file-provider#key-features)
