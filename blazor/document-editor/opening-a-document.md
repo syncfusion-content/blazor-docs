@@ -20,6 +20,7 @@ If you have your Word document file in the web, you can open it in [Blazor Word 
 @using System.IO
 @using System.Net
 @using System.Text.Json
+@inject HttpClient Http
 
 <SfDocumentEditorContainer @ref="container" EnableToolbar=true>
     <DocumentEditorContainerEvents Created="OnLoad"></DocumentEditorContainerEvents>
@@ -27,32 +28,23 @@ If you have your Word document file in the web, you can open it in [Blazor Word 
 
 @code {
     SfDocumentEditorContainer container;
-    string sfdtString;
-
-    protected override void OnInitialized()
-    {
-        string fileUrl = "https://www.syncfusion.com/downloads/support/directtrac/general/doc/Getting_Started1018066633.docx";
-        WebClient webClient = new WebClient();
-        byte[] byteArray = webClient.DownloadData(fileUrl);
-        Stream stream = new MemoryStream(byteArray);
-        //To observe the memory go down, null out the reference of byteArray variable.
-        byteArray = null;
-        WordDocument document = WordDocument.Load(stream, ImportFormatType.Docx);
-        stream.Dispose();
-        //To observe the memory go down, null out the reference of stream variable.
-        stream = null;
-        sfdtString = JsonSerializer.Serialize(document);
-        document.Dispose();
-        //To observe the memory go down, null out the reference of document variable.
-        document = null;
-    }
 
     public async void OnLoad(object args)
     {
-        SfDocumentEditor editor = container.DocumentEditor;
-        await editor.OpenAsync(sfdtString);
-        //To observe the memory go down, null out the reference of sfdtString variable.
-        sfdtString = null;
+        //add your fileUrl in which you want to open document inside the ""
+        string fileUrl = " ";
+        
+        HttpClient httpClient = new HttpClient();
+
+        // Load the document from wwwroot folder
+        Stream stream  = await httpClient.GetStreamAsync(fileUrl);
+
+        // Open the Document stream in Editor
+        await container.DocumentEditor.OpenAsync(stream, ImportFormatType.Docx);
+        stream.Dispose();
+        stream = null;
+        httpClient.Dispose();
+        httpClient = null;
     }
 }
 ```
@@ -67,6 +59,7 @@ To open and save document from cloud quickly with Blazor DocumentEditor componen
 
 {% youtube "https://www.youtube.com/watch?v=sVINSXKPM4E" %}
 
+
 ```cshtml
 @using Syncfusion.Blazor.DocumentEditor
 @using System.IO
@@ -80,9 +73,8 @@ To open and save document from cloud quickly with Blazor DocumentEditor componen
 
 @code {
     SfDocumentEditorContainer container;
-    string sfdtString;
 
-    protected override void OnInitialized()
+    public async void OnLoad(object args)
     {
         //Connection string of storage account
         string connectionString = "Here Place Your Connection string";
@@ -96,21 +88,12 @@ To open and save document from cloud quickly with Blazor DocumentEditor componen
         CloudBlockBlob cloudBlockBlob = cloudBlobContainer.GetBlockBlobReference(fileName);
         MemoryStream memoryStream = new MemoryStream();
         cloudBlockBlob.DownloadToStream(memoryStream);
-        WordDocument document = WordDocument.Load(memoryStream, ImportFormatType.Docx);
+       
+        // Open the Document stream in Editor
+        await container.DocumentEditor.OpenAsync(memoryStream, ImportFormatType.Docx);
         memoryStream.Dispose();
         //To observe the memory go down, null out the reference of memoryStream variable.
-        memoryStream = null;
-        sfdtString = JsonSerializer.Serialize(document);
-        document.Dispose();
-        //To observe the memory go down, null out the reference of document variable.
-        document = null;
-    }
-    public async void OnLoad(object args)
-    {
-        SfDocumentEditor editor = container.DocumentEditor;
-        await editor.OpenAsync(sfdtString);
-        //To observe the memory go down, null out the reference of sfdtString variable.
-        sfdtString = null;
+        memoryStream = null;     
     }
 }
 ```
@@ -132,11 +115,9 @@ You can open the Word documents from Azure File Storage using the following code
 
 @code {
     SfDocumentEditorContainer container;
-    string sfdtString;
-
-    protected override void OnInitialized()
+    public async void OnLoad(object args)
     {
-        //Connection string of storage account
+       //Connection string of storage account
         string connectionString = "Here Place Your Connection string";
         //Container name
         string shareReference = "document";
@@ -158,25 +139,13 @@ You can open the Word documents from Azure File Storage using the following code
                 MemoryStream memoryStream = new MemoryStream();
                 //Download file to local disk
                 file.DownloadToStream(memoryStream);
-                WordDocument document = WordDocument.Load(memoryStream, ImportFormatType.Docx);
+                
+                // Open the Document stream in Editor
+                await container.DocumentEditor.OpenAsync(memoryStream, ImportFormatType.Docx);
                 memoryStream.Dispose();
                 //To observe the memory go down, null out the reference of memoryStream variable.
-                memoryStream = null;
-                sfdtString = JsonSerializer.Serialize(document);
-                document.Dispose();
-                //To observe the memory go down, null out the reference of document variable.
-                document = null;
+                memoryStream = null;     
             }
-        }
-    }
-    public async void OnLoad(object args)
-    {
-        if (!String.IsNullOrEmpty(sfdtString))
-        {
-            SfDocumentEditor editor = container.DocumentEditor;
-            await editor.OpenAsync(sfdtString);
-            //To observe the memory go down, null out the reference of sfdtString variable.
-            sfdtString = null;
         }
     }
 }
@@ -193,6 +162,7 @@ The following code example shows how to open the Word document file in viewer fr
 @using Syncfusion.Blazor.DocumentEditor
 @using System.Data.SqlClient
 @using System.Text.Json
+@inject HttpClient Http
 
 <SfDocumentEditorContainer @ref="container" EnableToolbar=true>
     <DocumentEditorContainerEvents Created="OnLoad"></DocumentEditorContainerEvents>
@@ -212,23 +182,26 @@ The following code example shows how to open the Word document file in viewer fr
         connection.Open();
         SqlDataReader read = command.ExecuteReader();
         read.Read();
-        //Reads the Word document data as byte array from the database
-        byte[] byteArray = (byte[])read["Data"];
+
+        // Assuming the URL of the document is stored in the "DocumentUrl" column
+        string documentUrl = read["DocumentUrl"].ToString();
+
+        // Use HttpClient to fetch the Word document as a byte array
+        HttpClient httpClient = new HttpClient();
+        byte[] byteArray = await httpClient.GetByteArrayAsync(documentUrl);
+
+        // Convert the byte array into a MemoryStream
         Stream stream = new MemoryStream(byteArray);
+
         //To observe the memory go down, null out the reference of byteArray variable.
         byteArray = null;
-        WordDocument document = WordDocument.Load(stream, ImportFormatType.Docx);
+        
+        // Open the Document stream in Editor
+        await container.DocumentEditor.OpenAsync(stream, ImportFormatType.Docx);
         stream.Dispose();
         //To observe the memory go down, null out the reference of stream variable.
-        stream = null;
-        string json = JsonSerializer.Serialize(document);
-        document.Dispose();
-        //To observe the memory go down, null out the reference of document variable.
-        document = null;
-        SfDocumentEditor editor = container.DocumentEditor;
-        await editor.OpenAsync(json);
-        //To observe the memory go down, null out the reference of json variable.
-        json = null;
+        stream = null;     
+
     }
 }
 ```
