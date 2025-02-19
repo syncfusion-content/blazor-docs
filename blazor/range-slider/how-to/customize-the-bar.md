@@ -240,6 +240,18 @@ How It Works:
     }
 }
 
+<style>
+    #sliderTracks.e-slider .e-range, #sliderTracks.e-slider .e-handle {
+        background-color: #FF9800;
+    }
+
+    #sliderTracks.e-slider .e-handle {
+        border-radius: 50%;
+        border: 0;
+    }
+
+</style>
+
 ```
 
 ![Blazor RangeSlider with track color](images/blazor-rangeslider-track.png)
