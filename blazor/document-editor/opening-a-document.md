@@ -35,14 +35,19 @@ If you have your Word document file in the web, you can open it in [Blazor Word 
         string fileUrl = " ";
         
         HttpClient httpClient = new HttpClient();
-
         // Load the document from wwwroot folder
-        Stream stream  = await httpClient.GetStreamAsync(fileUrl);
+        Stream stream = await httpClient.GetStreamAsync(fileUrl);
+        MemoryStream memoryStream = new MemoryStream();
+        await stream.CopyToAsync(memoryStream);
+        memoryStream.Seek(0, SeekOrigin.Begin);
 
         // Open the Document stream in Editor
-        await container.DocumentEditor.OpenAsync(stream, ImportFormatType.Docx);
+        await container.DocumentEditor.OpenAsync(memoryStream, ImportFormatType.Docx);
+        
         stream.Dispose();
         stream = null;
+        memoryStream.Dispose();
+        memoryStream = null;
         httpClient.Dispose();
         httpClient = null;
     }
