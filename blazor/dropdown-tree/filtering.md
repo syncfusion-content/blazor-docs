@@ -39,12 +39,12 @@ The following code demonstrates the filtering functionality with local data in t
 
     class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Job { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Job { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
-        public string PId { get; set; }
+        public string? PId { get; set; }
     }
 }
 ```
@@ -56,6 +56,10 @@ The following code demonstrates the filtering functionality with local data in t
 The following code demonstrates the filtering functionality with remote data in the Dropdown Tree component.
 
 ```cshtml
+
+@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.Data
+
 <SfDropDownTree TValue="int?" TItem="TreeData" Placeholder="Select an employee" Width="500px" AllowFiltering="true">
     <DropDownTreeField TItem="TreeData" Query="@Query" ID="EmployeeID" Text="FirstName" HasChildren="EmployeeID">
         <SfDataManager Url="http://services.odata.org/V4/Northwind/Northwind.svc" Adaptor="@Syncfusion.Blazor.Adaptors.ODataV4Adaptor" CrossDomain="true"></SfDataManager>
@@ -115,12 +119,12 @@ In the following example, `Contains` filter type has been mapped to the [FilterT
 
     class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Job { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Job { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
-        public string PId { get; set; }
+        public string? PId { get; set; }
     }
 }
 ```
@@ -186,9 +190,9 @@ In the following example, the limit is set to 2.
 
     class Listdata
     {
-        public string Id { get; set; }
-        public string Pid { get; set; }
-        public string Name { get; set; }
+        public string? Id { get; set; }
+        public string? Pid { get; set; }
+        public string? Name { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
     }
