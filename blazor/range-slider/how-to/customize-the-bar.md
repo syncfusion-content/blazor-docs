@@ -209,3 +209,37 @@ Color bar can be customized in quite a number of ways.
 ```
 
 ![Blazor RangeSlider with Bar](./../images/blazor-rangeslider-with-bar.gif)
+
+## Customizing the Range Slider Track with Color Segments
+
+You can enhance the Blazor Range Slider by defining different track colors for specific value ranges. This is done using the `ColorRange` child elements within the [`SliderColorRanges`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderColorRanges.html) tag.
+
+How It Works:
+
+* ``Start``: Defines where the color segment begins.
+* ``End``: Defines where the color segment stops.
+* ``Color``: Specifies the color for the segment.
+
+```cshtml
+@using Syncfusion.Blazor.Inputs
+
+<SfSlider ID="sliderTracks" @ref="SliderObj" TValue="int[]" Value=@RangeValue Type="SliderType.Range">
+    <SliderEvents TValue="int[]" Created="Created"></SliderEvents>
+    <SliderColorRanges>
+        <ColorRange Start="0" End="50" Color="green"></ColorRange>
+        <ColorRange Start="51" End="100" Color="red"></ColorRange>
+    </SliderColorRanges>
+</SfSlider>
+
+@code{
+
+    SfSlider<int[]> SliderObj;
+    public int[] RangeValue = { 30, 70 };
+    private async Task Created() {
+        await SliderObj.RepositionAsync();
+    }
+}
+
+```
+
+![Blazor RangeSlider with track color](images/blazor-rangeslider-track.png)
