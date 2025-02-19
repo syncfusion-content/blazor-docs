@@ -16,13 +16,13 @@ To get start quickly with Blazor Server App, you can check on this video.
 {% youtube
 "youtube:https://www.youtube.com/watch?v=cQZYzOlTm0Q" %}
 
-{% tabcontents %}
-
-{% tabcontent Visual Studio %}
-
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
 
 ## Create a new Blazor Server App in Visual Studio
 
@@ -46,20 +46,6 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
-
-## Prerequisites
-
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-
-If you previously installed the SDK, you can determine the installed version by executing the following command in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
-
-{% tabs %}
-{% highlight c# tabtitle="SDK version" %}
-
-dotnet --version
-
-{% endhighlight %}
-{% endtabs %}
 
 ## Create a new Blazor Server App in Visual Studio Code
 
