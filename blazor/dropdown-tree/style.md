@@ -496,9 +496,9 @@ The following code demonstrates how to display a tooltip when hovering over the 
 
 ![Blazor Dropdown Tree with different font family](./images/styles/blazor-dropdowntree-component-tooltip.png)
 
-### Tooltip using HTMLAttribute in dropdown component
+### Tooltip using HTMLAttribute in Dropdown Tree component
 
-To display the tooltip in the dropdown component, add the `Title` attribute through the [HTMLAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_HtmlAttributes) property.
+To display the tooltip in the Dropdown Tre component, add the `Title` attribute through the [HTMLAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_HtmlAttributes) property.
 
 In the following example, the `HtmlAttributes` property is used to add the title attribute to the root input element of the Dropdown Tree with the value `Dropdown Tree Component`. This will display a tooltip with the text `Dropdown Tree Component` when the user hovers over the input element.
 
