@@ -65,7 +65,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 {% tabcontent Visual Studio Code %}
 
-#### Render Interactive Modes
+### Render Interactive Modes
 
 If you set the Authentication Type as `None` and Interactivity location as `Per page/component`, you need to use the following command.
 
@@ -250,8 +250,6 @@ cd BlazorWebApp.Client
 
 {% endhighlight %}
 {% endtabs %}
-
-Run the following command to create a new **Blazor Web App** with various interactive modes and locations in a command prompt (Windows) or terminal (macOS) or command shell (Linux).
 
 ### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Navigations and Themes NuGet in the App
 
