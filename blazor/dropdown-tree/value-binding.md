@@ -13,7 +13,7 @@ Value binding is the process of passing values between a component and its paren
 
 ## Preselected value through API  
 
-The Blazor Dropdown Tree component provides the capability to select specific nodes during initialization or dynamically through the two-way binding provided by the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_Value)property. This property allows for the selection of particular nodes by passing in an list collection of the corresponding node IDs as TValue. Also you can dynamically assign the node IDs using a button click.
+The Blazor Dropdown Tree component provides the capability to select specific nodes during initialization or dynamically through the two-way binding provided by the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_Value) property. This property allows for the selection of particular nodes by passing in an list collection of the corresponding node IDs as TValue. Also you can dynamically assign the node IDs using a button click.
 
 In the following example, the two nodes are preselected using [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_Value) property.
 
@@ -49,12 +49,12 @@ In the following example, the two nodes are preselected using [Value](https://he
 
     class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Job { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Job { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
-        public string PId { get; set; }
+        public string? PId { get; set; }
     }
 }
 ```
@@ -106,12 +106,12 @@ In this example, the selected value is obtained through two-way binding using th
 
     class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Job { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Job { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
-        public string PId { get; set; }
+        public string? PId { get; set; }
     }
 }
 ```
@@ -148,18 +148,18 @@ In this example, you have the option to eliminate the selection by utilizing the
     };
 
     class EmployeeData
-        {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Job { get; set; }
+    {
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Job { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
-        public string PId { get; set; }
-        }
+        public string? PId { get; set; }
+    }
     async Task ClearNode()
-        {
+    {
         await sfDropDownTree.ClearAsync();
-        }
+    }
 }
 ```
 
@@ -188,13 +188,13 @@ The value binding can be achieved by using the [@bind-Value](https://help.syncfu
         new EmployeeData() { Id = "9", PId = "1", Name = "Janet Leverling", Job = "HR"}
     };
     class EmployeeData
-        {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Job { get; set; }
+    {
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Job { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
-        public string PId { get; set; }
-        }
+        public string? PId { get; set; }
+    }
 }
 ```

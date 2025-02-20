@@ -39,12 +39,12 @@ In the following sample, the `PopupWidth` is set as `300px`.
     
     class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Job { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Job { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
-        public string PId { get; set; }
+        public string? PId { get; set; }
     }
 }
 ```
@@ -79,12 +79,12 @@ Customize the height of the popup using the [PopupHeight](https://help.syncfusio
     
     class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Job { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Job { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
-        public string PId { get; set; }
+        public string? PId { get; set; }
     }
 }
 ```
@@ -125,12 +125,12 @@ You can achieve this by binding the `resize` event in window and update the heig
     
     class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Job { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Job { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
-        public string PId { get; set; }
+        public string? PId { get; set; }
     }
 }
 ```
@@ -156,7 +156,7 @@ You can achieve this by binding the `resize` event in window and update the heig
 
 ## Programmatically opening and closing popup
 
-You can programmatically open and close the popup by accessing the `ShowPopupAsync()` and `HidePopupAsync()` methods through an instance of the Dropdown Tree. Bind the click event of a button to these methods. When the button is clicked, it will trigger the respective method and open or close the popup.
+You can programmatically open and close the popup by accessing the [`ShowPopupAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_ShowPopupAsync) and [`HidePopupAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_HidePopupAsync) methods through an instance of the Dropdown Tree. Bind the click event of a button to these methods. When the button is clicked, it will trigger the respective method and open or close the popup.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -198,12 +198,12 @@ You can programmatically open and close the popup by accessing the `ShowPopupAsy
     }
     class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Job { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Job { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
-        public string PId { get; set; }
+        public string? PId { get; set; }
     }
 }
 ```
@@ -238,17 +238,17 @@ You can achieve this by using [ShowPopupAsync()](https://help.syncfusion.com/cr/
     };
 
     class EmployeeData
-        {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Job { get; set; }
+    {
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Job { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
-        public string PId { get; set; }
-        }
-        async Task OnCreated(){
-          await  sfDropDownTree.ShowPopupAsync();
-        }
+        public string? PId { get; set; }
+    }
+    async Task OnCreated(){
+        await  sfDropDownTree.ShowPopupAsync();
+    }
 }
 ```
 ![Show or Hide Popup in Blazor Dropdown Tree](./images/blazor-dropdowntree-component.png)
