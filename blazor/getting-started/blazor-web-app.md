@@ -22,19 +22,33 @@ To get start quickly with Blazor Web App, you can check on this video.
 
 [https://blazorplayground.syncfusion.com/](https://blazorplayground.syncfusion.com/)
 
-To use the individual component in Blazor playground, uninstall the existing package and then install the needed NuGet package.
+## Using Syncfusion Templates
 
-![Blazor Playground with Accordion component](images/pg-accordion.png)
+{% tabcontents %}
 
-## Prerequisites
+{% tabcontent Visual Studio %}
 
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
+You can create a Blazor Web App using [Syncfusion Blazor Templates](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio) in Visual Studio.
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code %}
+
+You can create a Blazor Web App using [Syncfusion Blazor Templates](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project) in Visual Studio Code.
+
+{% endtabcontent %}
+
+{% endtabcontents %}
 
 ## Manually Creating a Project
 
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
+
+## Prerequisites
+
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
 ### Create a new Blazor Web App in Visual Studio
 
@@ -65,14 +79,20 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 {% tabcontent Visual Studio Code %}
 
+## Prerequisites
+
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
+
+## Manually Creating a Project
+
 ### Render Interactive Modes
 
 If you set the Authentication Type as `None` and Interactivity location as `Per page/component`, you need to use the following command.
 
-<table>
+<table style="width:100%">
 <tr>
-<th>Interactive Render Mode</th>
-<th>Command</th>
+<th style="width:30%">Interactive Render Mode</th>
+<th style="width:70%">Command</th>
 </tr>
 <tr>
 <td>Server</td>
@@ -110,10 +130,10 @@ dotnet new blazor -o BlazorApp -int None
 
 If you set the Authentication Type as `Individual Accounts` and Interactivity location as `Per page/component`, you need to use the following command.
 
-<table>
+<table style="width:100%">
 <tr>
-<th>Interactive Render Mode</th>
-<th>Command</th>
+<th style="width:30%">Interactive Render Mode</th>
+<th style="width:70%">Command</th>
 </tr>
 <tr>
 <td>Server</td>
