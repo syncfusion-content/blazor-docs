@@ -53,7 +53,7 @@ When the fields of event instances has the default mapping name, it is not manda
 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
     <ScheduleEventSettings DataSource="@DataSource">
-        <ScheduleField Id="TravelId">
+        <ScheduleField Id="TravelId" IsBlock="IsDisabled">
             <FieldSubject Name="TravelSummary"></FieldSubject>
             <FieldLocation Name="Source"></FieldLocation>
             <FieldDescription Name="Comments"></FieldDescription>
@@ -78,7 +78,9 @@ When the fields of event instances has the default mapping name, it is not manda
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
         new AppointmentData { TravelId = 1, TravelSummary = "Paris", DepartureTime = new DateTime(2020, 1, 10, 10, 0, 0) , ArrivalTime = new DateTime(2020, 1, 10, 12, 30, 0),
-        Source = "London", Comments = "Summer vacation planned for outstation.", Origin= "Asia/Yekaterinburg", Destination= "Asia/Yekaterinburg" }
+        Source = "London", Comments = "Summer vacation planned for outstation.", Origin= "Asia/Yekaterinburg", Destination= "Asia/Yekaterinburg" },
+        new AppointmentData { TravelId = 2, TravelSummary = "Tokyo", DepartureTime = new DateTime(2020, 1, 11, 10, 0, 0), ArrivalTime = new DateTime(2020, 1, 11, 12, 30, 0),
+        Source = "Beijing", Comments = "Conference on emerging technologies.", Origin = "Asia/Yekaterinburg", Destination = "Asia/Yekaterinburg", IsDisabled = true }
     };
     public class AppointmentData
     {
@@ -91,6 +93,7 @@ When the fields of event instances has the default mapping name, it is not manda
         public string Comments { get; set; }
         public string Origin { get; set; }
         public string Destination { get; set; }
+        public bool IsDisabled { get; set; }
     }
 }
 ```

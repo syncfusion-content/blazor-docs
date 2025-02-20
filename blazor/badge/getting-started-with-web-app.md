@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Badge Component in Blazor Web App
 
-This section briefly explains about how to include `Blazor Badge` component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/).
+This section briefly explains about how to include [`Blazor Badge`](https://blazor.syncfusion.com/demos/badge/defaultfunctionalities?theme=bootstrap5) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/).
 
 ## Prerequisites
 
@@ -130,7 +130,7 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 {% tabs %}
 {% highlight razor %}
 
-<h1>Badge Component <span class="e-badge">New</span></h1>
+<h1>Badge Component <span class="e-badge e-badge-primary">New</span></h1>
 
 {% endhighlight %}
 {% endtabs %}
