@@ -9,9 +9,9 @@ documentation: ug
 
 # Customize HTTP handler
 
-In a Blazor FileManager component, you can customize the HTTP handler to access authenticated server responses. This involves using authentication and passing user tokens through the FileManager component's HTTP client.
+In a Blazor File Manager component, you can customize the HTTP handler to access authenticated server responses. This involves using authentication and passing user tokens through the File Manager component's HTTP client.
 
-## Create client windows authenticated Blazor FileManager application
+## Create client windows authenticated Blazor File Manager application
 
 You can create a Blazor server application with Windows authentication using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
@@ -25,9 +25,9 @@ Include the [Microsoft.AspNetCore.Authentication.JwtBearer](https://www.nuget.or
 
 {% endtabs %}
 
-Initialize the FileManager component in the **~/Pages/Index.razor** file using the [Getting Started with Blazor FileManager Component](https://blazor.syncfusion.com/documentation/file-manager/getting-started) documentation.
+Initialize the File Manager component in the **~/Pages/Index.razor** file using the [Getting Started with Blazor File Manager Component](https://blazor.syncfusion.com/documentation/file-manager/getting-started) documentation.
 
-To authorize the FileManager component server response, generate a user token in the **onInitialized** method based on the user's authentication state. Then, pass this user token as a header through the FileManager component's HTTP client instance in the component's [OnSend](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_OnSend) event.
+To authorize the File Manager component server response, generate a user token in the **onInitialized** method based on the user's authentication state. Then, pass this user token as a header through the File Manager component's HTTP client instance in the component's [OnSend](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_OnSend) event.
 
 ```cshtml
 
@@ -82,7 +82,7 @@ To authorize the FileManager component server response, generate a user token in
     {
         if (isRead && args.Action == "read")
         {
-            //Pass the user token through FileManager HTTP client instance.
+            //Pass the user token through File Manager HTTP client instance.
             args.HttpClientInstance.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", Token);
             isRead = false;
         }
@@ -91,9 +91,9 @@ To authorize the FileManager component server response, generate a user token in
 
 ```
 
-## Create service application for FileManager action
+## Create service application for File Manager action
 
-Create a new **ASP Core web application** with the required FileManager service models and controller, or clone the required service provider from the [file-system-provider](https://blazor.syncfusion.com/documentation/file-manager/file-system-provider) documentation that contains the available file service provider.
+Create a new **ASP Core web application** with the required File Manager service models and controller, or clone the required service provider from the [file-system-provider](https://blazor.syncfusion.com/documentation/file-manager/file-system-provider) documentation that contains the available file service provider.
 
 To demonstrate behavior with a physical service provider, include the [Microsoft.AspNetCore.Authentication.JwtBearer](), [Microsoft.IdentityModel.Tokens](https://www.nuget.org/packages/Microsoft.IdentityModel.Tokens) and [System.IdentityModel.Tokens.Jwt](https://www.nuget.org/packages/System.IdentityModel.Tokens.Jwt) packages for accessing the authorized token value on the service application.
 
@@ -160,7 +160,7 @@ app.Run();
 
 ```
 
-Now it can authorize the FileManager server response based on the authorized role that is assigned by the client application, as shown below.
+Now it can authorize the File Manager server response based on the authorized role that is assigned by the client application, as shown below.
 
 ```cshtml
 

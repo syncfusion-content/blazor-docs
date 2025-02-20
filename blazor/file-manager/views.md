@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Views in Blazor FileManager Component | Syncfusion
-description: Checkout and learn here all about available Views module in Syncfusion Blazor FileManager component and much more.
+title: Views in Blazor File Manager Component | Syncfusion
+description: Checkout and learn here all about available Views module in Syncfusion Blazor File Manager component and much more.
 platform: Blazor
 control: File Manager
 documentation: ug
 ---
 
-# Views in Blazor FileManager component
+# Views in Blazor File Manager component
 
-The Blazor FileManager component provides both the `Large Icons View` for visual recognition and the `Details View` for organized information.
+The Blazor File Manager component provides both the `Large Icons View` for visual recognition and the `Details View` for organized information.
 
 ## Large Icons View
 
-The `Large Icons View` is the default starting view in the FileManager. The view can be changed by using the [Toolbar](./end-user-capabilities.md/#toolbar) view button or by using the view menu in [Context Menu](./end-user-capabilities.md/#context-menu). The [View](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_View) API can also be used to change the initial view of the FileManager.
+The `Large Icons View` is the default starting view in the FileManager. The view can be changed by using the [Toolbar](https://blazor.syncfusion.com/documentation/file-manager/file-operations#toolbar) view button or by using the view menu in [Context Menu](https://blazor.syncfusion.com/documentation/file-manager/context-menu). The [View](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.SfFileManager-1.html#Syncfusion_Blazor_FileManager_SfFileManager_1_View) API can also be used to change the initial view of the FileManager.
 
 In the large icons view, the thumbnail icons will be shown in a larger size, which displays the data in a form that best suits their content. For image type files, a **preview** will be displayed. Extension thumbnails will be displayed for other type files.
 
@@ -29,7 +29,7 @@ To add a custom column to the details view, use the [FileManagerColumn](https://
 
 @using Syncfusion.Blazor.FileManager
 
-<SfFileManager TValue="FileManagerDirectoryContent">
+<SfFileManager TValue="FileManagerDirectoryContent" View="ViewType.Details">
     <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
                              UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
                              DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
@@ -65,7 +65,7 @@ The details view settings like, column [Width](https://help.syncfusion.com/cr/bl
 
 @using Syncfusion.Blazor.FileManager
 
-<SfFileManager TValue="FileManagerDirectoryContent">
+<SfFileManager TValue="FileManagerDirectoryContent" View="ViewType.Details">
     <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
                              UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
                              DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"

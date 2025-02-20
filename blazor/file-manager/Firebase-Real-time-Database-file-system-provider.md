@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Firebase provider in Blazor FileManager Component | Syncfusion
-description: Checkout and learn here all about Firebase file system provider in Syncfusion Blazor FileManager component and more.
+title: Firebase provider in Blazor File Manager Component | Syncfusion
+description: Checkout and learn here all about Firebase file system provider in Syncfusion Blazor File Manager component and more.
 platform: Blazor
 control: File Manager
 documentation: ug
@@ -21,7 +21,7 @@ Follow the given steps to generate the secret access key:
 
 * In the new dialog window, click the **Other service account** option to navigate to the Google service accounts console to generate the secret key.
 
-![Blazor FileManager displays File System Authentication](images/blazor-filemanager-file-system.png)
+![Blazor File Manager displays File System Authentication](images/blazor-filemanager-file-system.png)
 
 * Now, open the Firebase service project from the Google services console, and generate a Secret key.
 

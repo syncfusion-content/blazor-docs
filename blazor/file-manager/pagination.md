@@ -53,7 +53,6 @@ The [NumericItemsCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
                              DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/Download"
                              GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/GetImage">
     </FileManagerAjaxSettings>
-    <FileManagerEvents TValue="FileManagerDirectoryContent" PageChanging="OnChanging" PageChanged="OnChanged"></FileManagerEvents>
     <FileManagerPageSettings NumericItemsCount="5"></FileManagerPageSettings>
 </SfFileManager>
  ````
@@ -140,7 +139,7 @@ Here is a sample demonstrating how `PageSizes` property is used when Pagination 
 
 @using Syncfusion.Blazor.FileManager
 
-    <SfFileManager TValue="FileManagerDirectoryContent" AllowPaging="true" Path="/Text Documents/" SortComparer="new NaturalSortComparer()">
+    <SfFileManager TValue="FileManagerDirectoryContent" AllowPaging="true" Path="/Text Documents/">
         <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/FileOperations"
                                  UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/Upload"
                                  DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/Virtualization/Download"
