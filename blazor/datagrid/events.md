@@ -4287,5 +4287,140 @@ N> This event is raised specifically for the `Menu`, `CheckBox` and `Excel` [Fil
 }
 ```
 
+## FreezeLineMoving
+
+The [FreezeLineMoving](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_FreezeLineMoving) event is triggered when freeze line is moving.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" Height="364" AllowFreezeLineMoving="true" AllowSorting="true">
+     <GridEvents FreezeLineMoving ="FreezeLineMovingHandler" TValue="Order"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" Freeze="FreezeDirection.Left" IsFrozen="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="170"></GridColumn>
+        <GridColumn Field=@nameof(Order.EmployeeID) HeaderText="Employee ID" TextAlign="TextAlign.Right" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" Freeze="FreezeDirection.Right" IsFrozen="true" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipAddress) HeaderText="Ship Address" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.Mail) HeaderText="Mail" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.Location) HeaderText="Location" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<Order> Orders { get; set; }
+    public SfGrid<Order> Grid { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            EmployeeID = x,
+            OrderDate = DateTime.Now.AddDays(-x),
+            ShipCountry = (new string[] { "USA", "UK", "JAPAN" })[new Random().Next(3)],
+            ShipName = "MOS",
+            ShipCity = (new string[] { "New york", "London", "Hue" })[new Random().Next(3)],
+            ShipAddress = (new string[] { "55, Baker street", "65/5 Kings landing", "56, Winterfell" })[new Random().Next(3)],
+            Mail = (new string[] { "alf32@arpy.com", "anat81@jourrapide.com", "anton99@rpy.com", "blonp97@gmail.com", "bolid@mail.com" })[new Random().Next(5)],
+            Location = (new string[] { "Morbi Leo", "Sed Blandit", "Congue Nisi", "Aliquet Lectus", "Viverra Mauris In" })[new Random().Next(5)]
+            }).ToList();
+        }
+
+        public class Order
+        {
+            public int? OrderID { get; set; }
+            public string CustomerID { get; set; }
+            public int? EmployeeID { get; set; }
+            public DateTime? OrderDate { get; set; }
+            public double? Freight { get; set; }
+            public string ShipCountry { get; set; }
+            public string ShipCity { get; set; }
+            public string ShipName { get; set; }
+            public string ShipAddress { get; set; }
+            public string Mail { get; set; }
+            public string Location { get; set; }
+        }
+
+        public void FreezeLineMovingHandler(FreezeLineMovingEventArgs args)
+        {
+            // Here, you can get the error details in the args.
+        }
+}
+```
+
+## FreezeLineMoved
+
+The [FreezeLineMoved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_FreezeLineMoved) event is triggered after moved the freeze line.
+
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" Height="364" AllowFreezeLineMoving="true" AllowSorting="true">
+     <GridEvents FreezeLineMoved ="FreezeLineMovedHandler" TValue="Order"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" Freeze="FreezeDirection.Left" IsFrozen="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="170"></GridColumn>
+        <GridColumn Field=@nameof(Order.EmployeeID) HeaderText="Employee ID" TextAlign="TextAlign.Right" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" Freeze="FreezeDirection.Right" IsFrozen="true" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipAddress) HeaderText="Ship Address" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.Mail) HeaderText="Mail" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.Location) HeaderText="Location" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+
+    public List<Order> Orders { get; set; }
+    public SfGrid<Order> Grid { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            EmployeeID = x,
+            OrderDate = DateTime.Now.AddDays(-x),
+            ShipCountry = (new string[] { "USA", "UK", "JAPAN" })[new Random().Next(3)],
+            ShipName = "MOS",
+            ShipCity = (new string[] { "New york", "London", "Hue" })[new Random().Next(3)],
+            ShipAddress = (new string[] { "55, Baker street", "65/5 Kings landing", "56, Winterfell" })[new Random().Next(3)],
+            Mail = (new string[] { "alf32@arpy.com", "anat81@jourrapide.com", "anton99@rpy.com", "blonp97@gmail.com", "bolid@mail.com" })[new Random().Next(5)],
+            Location = (new string[] { "Morbi Leo", "Sed Blandit", "Congue Nisi", "Aliquet Lectus", "Viverra Mauris In" })[new Random().Next(5)]
+            }).ToList();
+        }
+
+        public class Order
+        {
+            public int? OrderID { get; set; }
+            public string CustomerID { get; set; }
+            public int? EmployeeID { get; set; }
+            public DateTime? OrderDate { get; set; }
+            public double? Freight { get; set; }
+            public string ShipCountry { get; set; }
+            public string ShipCity { get; set; }
+            public string ShipName { get; set; }
+            public string ShipAddress { get; set; }
+            public string Mail { get; set; }
+            public string Location { get; set; }
+        }
+
+        public void FreezeLineMovedHandler(FreezeLineMovedEventArgs args)
+        {
+            // Here, you can get the error details in the args.
+        }
+}
+
 N> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
 
