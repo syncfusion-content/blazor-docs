@@ -143,24 +143,24 @@ When the Dropdown Tree input is valid, the form is ready to be submitted. If the
     {
         [Required(ErrorMessage = "Please select your role.")]
         [MinLength(1, ErrorMessage = "Please select your role.")]
-        public List<string> Role { get; set; }
+        public List<string>? Role { get; set; }
         [Required(ErrorMessage = "Please select your skill.")]
         [MinLength(2, ErrorMessage = "Please select atleast 2 skills.")]
-        public List<string> Skills { get; set; }
+        public List<string>? Skills { get; set; }
     }
     class Skills
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string ParentId { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? ParentId { get; set; }
         public bool HasChildren { get; set; }
         public bool Expanded { get; set; }
     }
     class Roles
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string ParentId { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? ParentId { get; set; }
         public bool Expanded { get; set; }
         public bool HasChild { get; set; }
     }
