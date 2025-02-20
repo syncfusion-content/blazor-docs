@@ -55,6 +55,7 @@ To enhance the customization of toolbar items, the [FileManagerToolbarSettings](
 ```cshtml
 
 @using Syncfusion.Blazor.FileManager
+@using Syncfusion.Blazor.Buttons
 
     <SfFileManager TValue="FileManagerDirectoryContent">
         <FileManagerAjaxSettings Url="/api/SampleData/FileOperations"

@@ -154,7 +154,6 @@ By default, the `UploadMode` is set to `FormSubmit`, but you can switch to HttpC
 @using Microsoft.AspNetCore.Components;
 @using Syncfusion.Blazor.FileManager;
 @using System.Net.Http.Headers;
-@using Syncfusion.Blazor.FileManager
 
 <SfFileManager TValue="FileManagerDirectoryContent">
     <FileManagerUploadSettings  UploadMode="UploadMode.HttpClient"></FileManagerUploadSettings>

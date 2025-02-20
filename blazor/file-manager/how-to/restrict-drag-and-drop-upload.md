@@ -17,14 +17,13 @@ The following example demonstrates how to prevent the external drag and drop upl
 
 @using Syncfusion.Blazor.FileManager
 
-<SfFileManager @ref="FileManager" TValue="FileManagerDirectoryContent">
+<SfFileManager TValue="FileManagerDirectoryContent">
     <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
                                 UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
                                 DownloadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
                                 GetImageUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage">
     </FileManagerAjaxSettings>
     <FileManagerUploadSettings DropArea="null"></FileManagerUploadSettings>
-    </FileManagerEvents>
 </SfFileManager>
 
 ```
