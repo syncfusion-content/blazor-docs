@@ -16,6 +16,7 @@ The Blazor Tooltip component allows you to display additional information when u
 The simplest way to use a Tooltip is with a string of text using the [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_Content) property. A text or a piece of information assigned to the Tooltip’s `Content` property will be displayed as the main text stream of the Tooltip.
 
 ```cshtml
+@using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 
 <SfTooltip ID="Tooltip" Target="#btn" Content="@Content">

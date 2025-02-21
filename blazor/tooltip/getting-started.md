@@ -173,6 +173,7 @@ Integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Tooltip co
 {% tabs %}
 {% highlight razor %}
 
+@using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 
 <SfTooltip ID="Tooltip" Target="#btn" Content="@Content">

@@ -24,9 +24,15 @@ contains two handles that is used to select a range of values and a shadow is co
 ```cshtml
 @using Syncfusion.Blazor.Inputs
 
+<label class="labeltext">Default</label>
 <SfSlider Value="30"></SfSlider>
+
+<label class="labeltext">MinRange</label>
 <SfSlider Value="40" Type="SliderType.MinRange"></SfSlider>
+
+<label class="labeltext">Range</label>
 <SfSlider Value=@RangeValue Type="SliderType.Range"></SfSlider>
+
 
 @code{
     public int[] RangeValue = { 30, 70 };

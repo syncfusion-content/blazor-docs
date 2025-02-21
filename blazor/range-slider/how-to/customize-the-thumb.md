@@ -48,6 +48,7 @@ Slider appearance can be customized through CSS. By overriding the slider CSS cl
         margin: 0 auto;
         min-width: 185px;
     }
+
     .slider-userselect {
         -webkit-user-select: none;
         /* Safari 3.1+ */
@@ -58,70 +59,52 @@ Slider appearance can be customized through CSS. By overriding the slider CSS cl
         user-select: none;
         /* Standard syntax */
     }
+
     .labelText {
         text-align: -webkit-left;
         font-weight: 500;
         font-size: 13px;
         padding-bottom: 10px;
     }
+
     .slider_container {
         margin-top: 40px;
     }
-    .e-bigger .content-wrapper {
-        width: 80%;
-    }
+
     #square_slider.e-control.e-slider .e-handle {
         border-radius: 0%;
         background-color: #f9920b;
         border: 0;
     }
+
     #circle_slider.e-control.e-slider .e-handle {
         background-color: #f9920b;
         border-radius: 50%;
         border: 0;
     }
-    .material.e-bigger .e-slider-container.e-horizontal #image_slider.e-slider .e-handle,
-    .material .e-slider-container.e-bigger.e-horizontal #image_slider.e-slider .e-handle {
-        top: calc(50% - 7px);
-    }
-    .material.e-bigger .e-slider-container.e-horizontal #image_slider.e-slider .e-handle.e-handle-active,
-        .material .e-slider-container.e-bigger.e-horizontal #image_slider.e-slider .e-handle.e-handle-active {
-            top: calc(50% - 6px);
-            transform: scale(1.3) !important;
-    }
-    .e-bigger .e-slider-container.e-horizontal #image_slider.e-slider .e-handle,
-    .e-slider-container.e-bigger.e-horizontal #image_slider.e-slider .e-handle {
-        top: calc(50% - 9px);
-    }
+
     #image_slider.e-control.e-slider .e-handle {
         height: 25px;
         width: 24px;
         background-size: 24px;
     }
-    .material #image_slider.e-control.e-slider .e-handle {
-        height: 20px;
-        width: 20px;
-        background-size: 20px;
-    }
-    .material #image_slider.e-control.e-slider .e-handle {
-        background-image: url(./../slider/images/thumb-mat.png);
-        background-repeat: no-repeat;
-        background-color: transparent;
-        border: 0;
-    }
+
     #image_slider.e-control.e-slider .e-handle {
         background-image: url(https://ej2.syncfusion.com/demos/src/slider/images/thumb.png);
         background-repeat: no-repeat;
         background-color: transparent;
         border: 0;
     }
+
     #square_slider .e-tab-handle::after,
     #circle_slider .e-tab-handle::after {
         background-color: #f9920b;
     }
+
     #image_slider .e-tab-handle::after {
         background-color: transparent;
     }
+
     #oval_slider.e-control.e-slider .e-handle {
         height: 25px;
         width: 8px;

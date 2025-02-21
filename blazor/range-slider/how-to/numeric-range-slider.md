@@ -78,10 +78,6 @@ The complete code for the above Numeric Range Slider can be found below.
         margin-top: 40px;
     }
 
-    .e-bigger .content-wrapper {
-        width: 80%;
-    }
-
     .sliderwrap label {
         padding-bottom: 26px;
         font-size: 13px;
