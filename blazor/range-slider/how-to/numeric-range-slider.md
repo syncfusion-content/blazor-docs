@@ -11,7 +11,7 @@ documentation: ug
 
 The numeric values can be formatted into different decimal digits or fixed number of whole numbers or to represent the units. The Numeric processing is demonstrated below.
 
-There are numeric range sliders, which can be formatted in any way of your choice. In the examples found below, the first one demonstrates the visualization of ticks in km.
+There are Numeric Range Sliders, which can be formatted in any way of your choice. In the examples found below, the first one demonstrates the visualization of ticks in km.
 
 ```cshtml
 <SliderTicks ShowSmallTicks="true" Placement="Placement.After" LargeStep="20" SmallStep="10" Format="##.##km"> </SliderTicks>
@@ -54,7 +54,7 @@ The complete code for the above Numeric Range Slider can be found below.
             </SfSlider>
         </div>
         <div class="sliderwrap">
-            <label class="labeltext userselect">Range slider</label>
+            <label class="labeltext userselect">Range Slider</label>
             <SfSlider @bind-Value="@Value" Type=SliderType.Range>
                 <SliderTicks ShowSmallTicks="true" Placement="Placement.After" LargeStep="20" SmallStep="10" Format="0000#"> </SliderTicks>
                 <SliderTooltip IsVisible="true" Placement="TooltipPlacement.Before" Format="0000#"></SliderTooltip>
@@ -94,4 +94,4 @@ The complete code for the above Numeric Range Slider can be found below.
 </style>
 ```
 
-![Blazor RangeSlider with NumericSlider](./../images/blazor-rangeslider-with-numeric.gif)
+![Blazor Range Slider with NumericSlider](./../images/blazor-rangeslider-with-numeric.gif)

@@ -9,7 +9,7 @@ documentation: ug
 
 # Types in Blazor Range Slider Component
 
-The types of Slider are as follows:
+The [**Type**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSlider-1.html#Syncfusion_Blazor_Inputs_SfSlider_1_Type) of Slider are as follows:
 
 | **Types** | **Usage** |
 | --- | --- |
@@ -18,8 +18,7 @@ The types of Slider are as follows:
 | Range | Selects a range of values. It also displays the shadow in-between the selection range. |
 
 N> Both the Default Slider and Min-Range Slider have same behavior that is used to select a single value.
-In Min-Range Slider, a shadow is considered from the start value to current handle position. But the Range Slider
-contains two handles that is used to select a range of values and a shadow is considered in between the two handles.
+In Min-Range Slider, a shadow is considered from the start value to current handle position. But the Range Slider contains two handles that is used to select a range of values and a shadow is considered in between the two handles.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs

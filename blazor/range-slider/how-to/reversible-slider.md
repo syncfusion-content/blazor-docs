@@ -9,7 +9,7 @@ documentation: ug
 
 # Reversible Slider in Blazor Range Slider Component
 
-You can create a Range Slider rendered with values in reverse order by setting the `Min` property to the maximum value and the `Max` property to the minimum value. An example of how to achieve a Reversible Slider is shown below
+You can create a Range Slider rendered with values in reverse order by setting the [`Min`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSlider-1.html#Syncfusion_Blazor_Inputs_SfSlider_1_Min) property to the maximum value and the [`Max`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSlider-1.html#Syncfusion_Blazor_Inputs_SfSlider_1_Max) property to the minimum value. An example of how to achieve a Reversible Slider is shown below
 
 ```cshtml
 @using System.Globalization;

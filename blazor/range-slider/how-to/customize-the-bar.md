@@ -184,4 +184,4 @@ Color bar can be customized in quite a number of ways.
 
 ```
 
-![Blazor RangeSlider with Bar](./../images/blazor-rangeslider-with-bar.gif)
+![Blazor Range Slider with Bar](./../images/blazor-rangeslider-with-bar.gif)
