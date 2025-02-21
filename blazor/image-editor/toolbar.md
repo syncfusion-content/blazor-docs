@@ -63,7 +63,7 @@ Here is an example of adding custom toolbar items to rotate and flip transformat
 
     private async void OpenAsync()
     {
-        await ImageEditor.OpenAsync("nature.png");
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
 
     private async void ToolbarItemClicked(Syncfusion.Blazor.Navigations.ClickEventArgs args)
@@ -97,7 +97,7 @@ Here is an example of hiding the toolbar of the image editor using [`Toolbar`](h
 
     private async void OpenAsync()
     {
-        await ImageEditor.OpenAsync("nature.png");
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
 }
 ```
@@ -132,7 +132,7 @@ Here is an example of hiding the cropping and selection toolbar items using [`To
 
     private async void OpenAsync()
     {
-        await ImageEditor.OpenAsync("nature.png");
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
 }
 ```
@@ -168,7 +168,7 @@ Here is an example of disabling the custom toolbar item using [`Toolbar`](https:
 
     private async void OpenAsync()
     {
-        await ImageEditor.OpenAsync("nature.png");
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
 }
 ```
@@ -187,9 +187,11 @@ The toolbar of the Image Editor can be replaced with the user specific UI using 
 @using Syncfusion.Blazor.Buttons
 
 <SfImageEditor @ref="ImageEditor" Height="400">
-    <ImageEditorTemplates> 
-        <ToolbarTemplate> 
-            <SfButton OnClick="EnableFreehandDrawAsync">Enable FreeHandDraw</SfButton>
+    <ImageEditorTemplates>
+        <ToolbarTemplate>
+            <div class='e-toolbar'>
+                <SfButton OnClick="EnableFreehandDrawAsync">Enable FreeHandDraw</SfButton>
+            </div>
         </ToolbarTemplate>
     </ImageEditorTemplates>
     <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
@@ -197,10 +199,9 @@ The toolbar of the Image Editor can be replaced with the user specific UI using 
 
 @code {
     SfImageEditor ImageEditor;
-
     private async void OpenAsync()
     {
-        await ImageEditor.OpenAsync("nature.png");
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
 
     private async void EnableFreehandDrawAsync()
@@ -237,7 +238,7 @@ In the following example, the contextual toolbar for freehand drawing will be re
 
     private async void OpenAsync()
     {
-        await ImageEditor.OpenAsync("nature.png");
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
 
     private void ToolbarUpdating(ToolbarEventArgs args)
@@ -267,22 +268,26 @@ Here is an example of toolbar item clicking event using [`ToolbarItemClicked`](h
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
 
-<SfImageEditor @ref="ImageEditor" Height="400">
+<SfImageEditor @ref="ImageEditor" Height="400" Toolbar="customToolbarItem">
     <ImageEditorEvents Created="OpenAsync" ToolbarItemClicked="ToolbarItemClicked"></ImageEditorEvents>
 </SfImageEditor>
 
 @code {
     SfImageEditor ImageEditor;
-
+    private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>(){
+        new ImageEditorToolbarItemModel { Text = "Custom" }
+    };
     private async void OpenAsync()
     {
-        await ImageEditor.OpenAsync("nature.png");
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
-
-    private void ToolbarItemClicked(Syncfusion.Blazor.Navigations.ClickEventArgs args) 
-    { 
-        //Customize the code 
-    } 
+    private void ToolbarItemClicked(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Text == "Custom")
+        {
+            ImageEditor.RotateAsync(90);
+        }
+    }
 }
 ```
 
