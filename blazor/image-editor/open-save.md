@@ -22,6 +22,10 @@ When it comes to saving the edited image, the default file type is set as PNG. T
 
 The [`OpenAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_OpenAsync_System_Object_) method in the Blazor Image Editor component offers the capability to open an image by providing it in different formats. This method accepts various types of arguments, such as a base64-encoded string, raw image data, or a hosted/online URL. You can pass either the file name or the actual image data as an argument to the [`OpenAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_OpenAsync_System_Object_) method, and it will load the specified image into the image editor component. This flexibility allows you to work with images from different sources and formats, making it easier to integrate and manipulate images within the Image Editor component.
 
+### Opening Local Images in the Blazor Image Editor 
+
+Users can easily open local images in the Image Editor. Simply place the image in the same folder as the sample. By specifying the local file name directly in the open method, the image will be loaded seamlessly into the editor.
+
 Note: To load the image in the image editor, the image is placed within the application's "wwwroot" folder.
 
 ```cshtml
@@ -51,33 +55,39 @@ Users can easily open images in the Image Editor using a Base64-encoded string. 
 `Note:` You can obtain the Base64 representation of an image from the Image Editor using the [`GetImageDataUrlAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetImageDataUrlAsync_System_Boolean_) method. This process will be explained in the upcoming section.
 
 ```cshtml
-@using Syncfusion.Blazor.ImageEditor 
+@using Syncfusion.Blazor.ImageEditor
+@using Syncfusion.Blazor.Buttons
+
 <div style="padding-bottom: 15px">
     <SfButton OnClick="SaveAsync">Save</SfButton>
     <SfButton OnClick="OpenBaseAsync">Open base64</SfButton>
 </div>
 <SfImageEditor @ref="ImageEditor" Height="400">
     <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
-</SfImageEditor> 
+</SfImageEditor>
 
-@code { 
+@code {
     SfImageEditor ImageEditor;
     private string base64String;
 
-    private async void OpenAsync() 
-    { 
-        await ImageEditor.OpenAsync("nature.png"); 
+    private async void OpenAsync()
+    {
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
 
-    private async void SaveAsync() 
-    { 
-        var imageData = await ImageEditor.GetImageDataUrlAsync();
-        base64String = Convert.ToBase64String(imageData);
+    private async void SaveAsync()
+    {
+        var imageDataUrl = await ImageEditor.GetImageDataUrlAsync();
+        if (!string.IsNullOrEmpty(imageDataUrl))
+        {
+            int base64Index = imageDataUrl.IndexOf(',') + 1;
+            base64String = imageDataUrl.Substring(base64Index);
+        }
     }
 
     private async void OpenBaseAsync()
     {
-       await ImageEditor.OpenAsync("data:image/png;base64," + base64String);
+        await ImageEditor.OpenAsync("data:image/png;base64," + base64String);
     }
 }
 ```
@@ -138,13 +148,13 @@ You can utilize the ‘[`FileOpenEventArgs`](https://help.syncfusion.com/cr/blaz
 
     private async void OpenAsync() 
     { 
-        await ImageEditor.OpenAsync("nature.png"); 
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png"); 
     }
 
     private async void FileOpenedAsync() 
     { 
-       ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
-        await ImageEditor.DrawTextAsync(Dimension.X.Value + 100, Dimension.Y.Value + 100, "Enter\nText", "Arial", 40, false, false, "#80330075");
+        ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
+        await ImageEditor.DrawTextAsync(Dimension.X.Value, Dimension.Y.Value, "Enter\nText", "Arial", 40, false, false, "#80330075");
     }
 }
 ```
@@ -173,7 +183,7 @@ In the following example, the [`ExportAsync`](https://help.syncfusion.com/cr/bla
 
     private async void OpenAsync() 
     { 
-        await ImageEditor.OpenAsync("nature.png"); 
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png"); 
     }
 
     private async void ExportAsync()
@@ -190,27 +200,33 @@ In the following example, the [`ExportAsync`](https://help.syncfusion.com/cr/bla
 To save an image as a base64 format, use the [`GetImageDataUrlAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetImageDataUrlAsync_System_Boolean_) method of the editor to retrieve the image data and convert it into a Data URL, which contains the base64-encoded string. By invoking the [`OpenAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_OpenAsync_System_Object_System_Boolean_System_String_) on the Syncfusion<sup style="font-size:70%">&reg;</sup> Image Editor instance, you can load this Data URL into the editor. The resulting base64 string can then be embedded directly in HTML or CSS or transmitted over data channels without requiring an external file.
 
 ```cshtml
-@using Syncfusion.Blazor.ImageEditor 
+@using Syncfusion.Blazor.ImageEditor
+@using Syncfusion.Blazor.Buttons
+
 <div style="padding-bottom: 15px">
     <SfButton OnClick="SaveAsync">Save</SfButton>
 </div>
 <SfImageEditor @ref="ImageEditor" Height="400">
     <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
-</SfImageEditor> 
+</SfImageEditor>
 
-@code { 
+@code {
     SfImageEditor ImageEditor;
     private string base64String;
 
-    private async void OpenAsync() 
-    { 
-        await ImageEditor.OpenAsync("nature.png"); 
+    private async void OpenAsync()
+    {
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
 
-    private async void SaveAsync() 
-    { 
-        var imageData = await ImageEditor.GetImageDataUrlAsync();
-        base64String = Convert.ToBase64String(imageData);
+    private async void SaveAsync()
+    {
+        var imageDataUrl = await ImageEditor.GetImageDataUrlAsync();
+        if (!string.IsNullOrEmpty(imageDataUrl))
+        {
+            int base64Index = imageDataUrl.IndexOf(',') + 1;
+            base64String = imageDataUrl.Substring(base64Index);
+        }
     }
 }
 ```
@@ -221,28 +237,37 @@ To save an image as a byte array, use the [`GetImageDataAsync`](https://help.syn
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
- 
-<SfImageEditor @ref="imageEditor" Height="400px" />
- 
-<button @onclick="SaveImageAsByteArray">Save Image</button>
-<button @onclick="OpenImage">Open Image</button>
- 
+@using Syncfusion.Blazor.Buttons
+
+<div style="padding-bottom: 15px">
+    <SfButton OnClick="SaveImageAsByteArray">Save</SfButton>
+    <SfButton OnClick="OpenImage">Open Image</SfButton>
+</div>
+<SfImageEditor @ref="ImageEditor" Height="400">
+    <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
+</SfImageEditor>
+
 @code {
-    private SfImageEditor imageEditor;
-    private byte[] savedImageData; // Variable to hold the saved image data
- 
+    SfImageEditor ImageEditor;
+    private byte[] savedImageData;
+
+    private async void OpenAsync()
+    {
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
+    }
+
     private async Task SaveImageAsByteArray()
     {
-        savedImageData = await imageEditor.GetImageDataAsync(); 
+        savedImageData = await ImageEditor.GetImageDataAsync();
     }
- 
+
     private async Task OpenImage()
     {
         if (savedImageData != null)
         {
             string base64String = Convert.ToBase64String(savedImageData);
             base64String = "data:image/png;base64," + base64String;
-            await imageEditor.OpenAsync(base64String);
+            await ImageEditor.OpenAsync(base64String);
         }
     }
 }
@@ -268,33 +293,36 @@ User can leverage the [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
-@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.Buttons
 
-<div>
-    <SfImageEditor @ref="ImageEditor" Height="400px" Width="500px" Toolbar="@customToolbar">
-    </SfImageEditor>
-    <button @onclick="SaveImage">Save to Server</button>
+<div style="padding-bottom: 15px">
+    <SfButton OnClick="SaveImage">Save to Server</SfButton>
 </div>
+
+<SfImageEditor @ref="ImageEditor" Height="400px" Width="500px" Toolbar="@customToolbar">
+    <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
+</SfImageEditor>
 
 @code {
     private SfImageEditor ImageEditor;
-    
-    // Define the custom toolbar items
+    private string base64String;
+    private async void OpenAsync()
+    {
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
+    }
     private List<ImageEditorToolbarItemModel> customToolbar = new List<ImageEditorToolbarItemModel>()
     {
-        new ImageEditorToolbarItemModel { Name = "Zoom" },
+        new ImageEditorToolbarItemModel { Name = "Crop" },
         new ImageEditorToolbarItemModel { Name = "Annotation" },
         new ImageEditorToolbarItemModel { Name = "Filter" },
-        new ImageEditorToolbarItemModel { Name = "Crop" },
-        new ImageEditorToolbarItemModel { Text = "Rotate", TooltipText = "Rotate", Align = ItemAlign.Center }
     };
     private async Task SaveImage()
     {
-        var imageData = await ImageEditor.GetImageDataUrlAsync();
-        if (!string.IsNullOrEmpty(imageData) && imageData.Contains(","))
+        var imageDataUrl = await ImageEditor.GetImageDataUrlAsync();
+        if (!string.IsNullOrEmpty(imageDataUrl))
         {
-            var base64Data = imageData.Split(',')[1];
-            byte[] imageBytes = Convert.FromBase64String(base64Data);
+            int base64Index = imageDataUrl.IndexOf(',') + 1;
+            base64String = imageDataUrl.Substring(base64Index);
         }
     }
 }
@@ -307,16 +335,19 @@ User can make use of the [`Saving`](https://help.syncfusion.com/cr/blazor/Syncfu
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
 @using System.IO
- 
+
 <div>
-<SfImageEditor @ref="ImageEditor" Height="400px" Width="500px">
-<ImageEditorEvents Saving="OnBeforeSave"></ImageEditorEvents>
-</SfImageEditor>
+    <SfImageEditor @ref="ImageEditor" Height="400px" Width="500px">
+        <ImageEditorEvents Created="OpenAsync" Saving="OnBeforeSave"></ImageEditorEvents>
+    </SfImageEditor>
 </div>
- 
+
 @code {
     private SfImageEditor ImageEditor;
- 
+    private async void OpenAsync()
+    {
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
+    }
     private async Task OnBeforeSave(SaveEventArgs args)
     {
         args.Cancel = true;

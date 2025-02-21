@@ -35,19 +35,19 @@ Here is an example of square selection using the [`SelectAsync`](https://help.sy
 @using Syncfusion.Blazor.Buttons
 
 <div style="padding-bottom: 15px">
-    <SfButton OnClick="SelectAsync">Select</SfButton>
+    <SfButton OnClick="SelectAsync">Square Selection</SfButton>
 </div>
 <SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="400">
     <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
-</SfImageEditor> 
+</SfImageEditor>
 
 @code {
-    SfImageEditor ImageEditor; 
-    private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>() { }; 
+    SfImageEditor ImageEditor;
+    private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>() { };
 
-    private async void OpenAsync() 
-    { 
-        await ImageEditor.OpenAsync("nature.png"); 
+    private async void OpenAsync()
+    {
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
 
     private async void SelectAsync()
@@ -76,19 +76,19 @@ Here is an example of ratio selection using the [`SelectAsync`](https://help.syn
 @using Syncfusion.Blazor.Buttons
 
 <div style="padding-bottom: 15px">
-    <SfButton OnClick="SelectAsync">Select</SfButton>
+    <SfButton OnClick="SelectAsync">Ratio Selection</SfButton>
 </div>
 <SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="400">
     <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
-</SfImageEditor> 
+</SfImageEditor>
 
 @code {
-    SfImageEditor ImageEditor; 
-    private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>() { }; 
+    SfImageEditor ImageEditor;
+    private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>() { };
 
-    private async void OpenAsync() 
-    { 
-        await ImageEditor.OpenAsync("nature.png"); 
+    private async void OpenAsync()
+    {
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
 
     private async void SelectAsync()
@@ -99,55 +99,6 @@ Here is an example of ratio selection using the [`SelectAsync`](https://help.syn
 ```
 
 ![Blazor Image Editor with Ratio select](./images/blazor-image-editor-custom-ratio.jpg)
-
-## Resize selections
-
-The selection region can be changed programmatically by using [`OnSelectionResizeStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_OnSelectionResizeStart) and [`OnSelectionResizeEnd`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_OnSelectionResizeEnd) event. This event is activated during resizing the selection using mouse, and it allows for alterations to the selection region by adjusting the specified properties. 
-
-The [`SelectionChangeEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SelectionChangeEventArgs.html) is used in these events to customize the selection and it has the following parameters.
-
-SelectionChangeEventArgs.Action - The type of action such as inserting or resizing 
-
-SelectionChangeEventArgs.Cancel - Specifies to cancel the selection. 
-
-SelectionChangeEventArgs.CurrentSelectionPoint - Represents all the details of the selection including its type, position, width, and height after the current action as [`CropSelectionSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.CropSelectionSettings.html). 
-
-SelectionChangeEventArgs.PreviousSelectionPoint - Represents all the details of the selection including its type, position, width, and height before this current action as [`CropSelectionSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.CropSelectionSettings.html) 
-
-Here is an example of changing the selection region using the [`SelectionChangeEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SelectionChangeEventArgs.html) event.
-
-```cshtml
-@using Syncfusion.Blazor.ImageEditor
-
-<SfImageEditor @ref="ImageEditor" Height="400" Toolbar="customToolbarItem">
-    <ImageEditorEvents Created="OpenAsync" OnSelectionResizeStart="OnSelectionResizeStart"></ImageEditorEvents>
-</SfImageEditor>
-
-@code {
-    SfImageEditor ImageEditor;
-    private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>()
-    {
-        new ImageEditorToolbarItemModel { Name = "Crop" },
-        new ImageEditorToolbarItemModel { Name = "Reset" },
-        new ImageEditorToolbarItemModel { Name = "Confirm" }
-    };
-
-    private async void OpenAsync()
-    {
-        await ImageEditor.OpenAsync("nature.png");
-    }
-
-    private void OnSelectionResizeStart(SelectionChangeEventArgs args)
-    {
-        if (args.CurrentSelectionSettings.Type == "Custom")
-        {
-            args.CurrentSelectionSettings.Height = 200;
-        }
-    }
-}
-```
-
-![Blazor Image Editor with Resize the custom selection](./images/blazor-image-editor-resize-selection.jpg)
 
 ## Crop an image
 
@@ -160,19 +111,19 @@ Here is an example of circle cropping using the [`SelectAsync`](https://help.syn
 @using Syncfusion.Blazor.Buttons
 
 <div style="padding-bottom: 15px">
-    <SfButton OnClick="CropAsync">Crop</SfButton>
+    <SfButton OnClick="CropAsync">Circle Crop</SfButton>
 </div>
 <SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="400">
     <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
-</SfImageEditor> 
+</SfImageEditor>
 
 @code {
-    SfImageEditor ImageEditor; 
-    private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>() { }; 
+    SfImageEditor ImageEditor;
+    private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>() { };
 
-    private async void OpenAsync() 
-    { 
-        await ImageEditor.OpenAsync("nature.png"); 
+    private async void OpenAsync()
+    {
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
 
     private async void CropAsync()
@@ -203,27 +154,99 @@ In the image editor, when an image is cropped, it is usually enlarged or scaled 
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
-@using Syncfusion.Blazor.Buttons
 
-<div style="padding-bottom: 15px">
-    <SfButton OnClick="CropAsync">Crop</SfButton>
-</div>
-<SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="400">
+<SfImageEditor @ref="ImageEditor" Height="400">
     <ImageEditorEvents Created="OpenAsync" Cropping="CroppingAsync"></ImageEditorEvents>
-</SfImageEditor> 
+</SfImageEditor>
 
 @code {
-    SfImageEditor ImageEditor; 
-    private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>() { }; 
-
-    private async void OpenAsync() 
-    { 
-        await ImageEditor.OpenAsync("nature.png"); 
+    SfImageEditor ImageEditor;
+    private async void OpenAsync()
+    {
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
 
     private async void CroppingAsync(CropEventArgs args)
     {
-       args.preventScaling = true;
+        args.PreventScaling = true;
     }
 }
 ```
+
+## Resize selections
+
+The selection region can be changed programmatically by using [`OnSelectionResizeStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_OnSelectionResizeStart) and [`OnSelectionResizeEnd`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_OnSelectionResizeEnd) event. This event is activated during resizing the selection using mouse, and it allows for alterations to the selection region by adjusting the specified properties. 
+
+The [`SelectionChangeEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SelectionChangeEventArgs.html) is used in these events to customize the selection and it has the following parameters.
+
+SelectionChangeEventArgs.Action - The type of action such as inserting or resizing 
+
+SelectionChangeEventArgs.Cancel - Specifies to cancel the selection. 
+
+SelectionChangeEventArgs.CurrentSelectionPoint - Represents all the details of the selection including its type, position, width, and height after the current action as [`CropSelectionSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.CropSelectionSettings.html). 
+
+SelectionChangeEventArgs.PreviousSelectionPoint - Represents all the details of the selection including its type, position, width, and height before this current action as [`CropSelectionSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.CropSelectionSettings.html) 
+
+### Locking selection area during cropping 
+
+When selecting an area for cropping, users can typically resize the selection from all corners and edges. If you want to prevent the resizing of the selection area, you can bind to the [`OnSelectionResizeStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_OnSelectionResizeStart) and [`OnSelectionResizeEnd`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_OnSelectionResizeEnd) event. Check if the action is `resize`, and if it is, set `Cancel` value to `true`. This will lock the selection area, preventing any adjustments to its size.
+
+```cshtml
+@using Syncfusion.Blazor.ImageEditor
+
+<SfImageEditor @ref="ImageEditor" Height="400">
+    <ImageEditorEvents Created="OpenAsync" OnSelectionResizeStart="OnSelectionResizeStartAsync"></ImageEditorEvents>
+</SfImageEditor>
+
+@code {
+    SfImageEditor ImageEditor;
+    private async void OpenAsync()
+    {
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
+    }
+
+    private async void OnSelectionResizeStartAsync(SelectionChangeEventArgs args)
+    {
+        args.Cancel = true;
+    }
+}
+```
+
+### Cropping with custom ratio selection
+
+Users can perform cropping either through the toolbar or by using our public methods. While predefined ratio selections are available in the toolbar, users can also crop with custom ratios using our public method, select. Regardless of the ratio type used, the selection will adhere to the specified ratio, even when resizing the selection area.
+
+Here is an example of cropping with a custom ratio selection using the [`OnSelectionResizeStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_OnSelectionResizeStart) event.
+
+```cshtml
+@using Syncfusion.Blazor.ImageEditor
+
+<SfImageEditor @ref="ImageEditor" Height="400" Toolbar="customToolbarItem">
+    <ImageEditorEvents Created="OpenAsync" OnSelectionResizeStart="OnSelectionResizeStart"></ImageEditorEvents>
+</SfImageEditor>
+
+@code {
+    SfImageEditor ImageEditor;
+    private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>()
+    {
+        new ImageEditorToolbarItemModel { Name = "Crop" },
+        new ImageEditorToolbarItemModel { Name = "Reset" },
+        new ImageEditorToolbarItemModel { Name = "Confirm" }
+    };
+
+    private async void OpenAsync()
+    {
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
+    }
+
+    private void OnSelectionResizeStart(SelectionChangeEventArgs args)
+    {
+        if (args.CurrentSelectionSettings.Type == "Custom")
+        {
+            args.CurrentSelectionSettings.Height = 200;
+        }
+    }
+}
+```
+
+![Blazor Image Editor with Resize the custom selection](./images/blazor-image-editor-resize-selection.jpg)
