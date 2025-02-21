@@ -28,7 +28,7 @@ To get start quickly with Blazor WebAssembly App, you can check on this video.
 
 You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendars and Themes NuGet in the App in the App
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendars and Themes NuGet in the App
 
 Here's an example of how to add **Blazor Calendar** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -153,7 +153,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendar compone
 {% tabs %}
 {% highlight razor %}
 
-<SfCalendar TValue="DateTime" />
+<SfCalendar TValue="DateTime" Value="DateTime.Now" />
 
 {% endhighlight %}
 {% endtabs %}
