@@ -20,11 +20,15 @@ To get start quickly with Blazor WebAssembly App, you can check on this video.
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
 ## Create a new Blazor WebAssembly App in Visual Studio
 
 You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendars and Themes NuGet in the App in the App
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendars and Themes NuGet in the App
 
 Here's an example of how to add **Blazor Calendar** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -38,6 +42,61 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endtabs %}
 
 N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code %}
+
+## Create a Blazor WebAssembly App in Visual Studio Code
+
+You can create a **Blazor WebAssembly App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
+
+Alternatively, you can create a WebAssembly application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+
+{% tabs %}
+{% highlight c# tabtitle="Blazor WASM App" %}
+
+dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
+
+{% endhighlight %}
+{% endtabs %}
+
+For a hosted Blazor WebAssembly experience, add the hosted option (-ho or --hosted) option to the command.
+
+{% tabs %}
+{% highlight c# tabtitle="Blazor WASM App" %}
+
+dotnet new blazorwasm -o BlazorApp -ho
+
+{% endhighlight %}
+{% endtabs %}
+
+This command creates new Blazor WebAssembly app project and places it in a new directory called `BlazorApp` inside your current location. See [Create Blazor app topic](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create) and [dotnet new command](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new) topics for more details.
+
+N> If you have installed multiple SDK versions and need any specific framework version (net6.0/net7.0) project, then add `-f` flag along with `dotnet new blazorwasm` comment. Refer [here](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new#blazorwasm) for the available options.
+
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendars and Themes NuGet in the App
+
+* Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
+* Ensure you’re in the project root directory where your `.csproj` file is located.
+* Run the following command to install a [Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package and ensure all dependencies are installed.
+
+{% tabs %}
+{% highlight c# tabtitle="Package Manager" %}
+
+dotnet add package Syncfusion.Blazor.Calendars -Version {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
+dotnet restore
+
+{% endhighlight %}
+{% endtabs %}
+
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+
+{% endtabcontent %}
+
+{% endtabcontents %}
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
@@ -94,7 +153,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendar compone
 {% tabs %}
 {% highlight razor %}
 
-<SfCalendar TValue="DateTime" />
+<SfCalendar TValue="DateTime" Value="DateTime.Now" />
 
 {% endhighlight %}
 {% endtabs %}

@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Upload in Blazor FileManager Component | Syncfusion
-description: Checkout and learn here all about available Upload in Syncfusion Blazor FileManager component and much more.
+title: Upload in Blazor File Manager Component | Syncfusion
+description: Checkout and learn here all about available Upload in Syncfusion Blazor File Manager component and much more.
 platform: Blazor
 control: File Manager
 documentation: ug
 ---
 
-# Upload in Blazor FileManager component
+# Upload in Blazor File Manager component
 
-The Blazor FileManager component provides a [FileManagerUploadSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html) property with various options to customize how files are uploaded, such as controlling file size, restricting file types, and enabling chunk uploads.
+The Blazor File Manager component provides a [FileManagerUploadSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html) property with various options to customize how files are uploaded, such as controlling file size, restricting file types, and enabling chunk uploads.
 
 ## Directory Upload
 
-The [DirectoryUpload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html#Syncfusion_Blazor_FileManager_FileManagerUploadSettings_DirectoryUpload) property controls whether users can browse and upload entire directories (folders) in the Syncfusion Blazor FileManager component. 
+The [DirectoryUpload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html#Syncfusion_Blazor_FileManager_FileManagerUploadSettings_DirectoryUpload) property controls whether users can browse and upload entire directories (folders) in the Syncfusion Blazor File Manager component. 
 
 To enable directory upload, set the `DirectoryUpload` property to `true` in the `FileManagerUploadSettings` configuration.
 
@@ -35,9 +35,9 @@ When set to `true`, this property enables directory upload in the FileManager, a
 ```
 N> When `DirectoryUpload` is set to `true`, only folders can be uploaded. When it is set to `false`, only individual files can be uploaded. Simultaneous uploading of files and folders is not supported.
 
-The screenshot below shows after successfully selecting a directory it uploads all the file inside it automatically. This demonstrates how the `DirectoryUpload` property works in the Blazor FileManager component.
+The screenshot below shows after successfully selecting a directory it uploads all the file inside it automatically. This demonstrates how the `DirectoryUpload` property works in the Blazor File Manager component.
 
-![Blazor FileManager with DirectoryUpload](images/blazor-filemanager-directoryupload.png)
+![Blazor File Manager with DirectoryUpload](images/blazor-filemanager-directoryupload.png)
 
 ## Chunk Upload
 
@@ -65,13 +65,13 @@ In the following example, the ChunkSize is set to 5 MB (5,242,880 bytes), and th
 
 With chunk upload, the pause and resume options gives users enhanced control over the file upload process.
 
-![Blazor FileManager with chunkUpload](images/blazor-filemanager-chunkupload.png)
+![Blazor File Manager with chunkUpload](images/blazor-filemanager-chunkupload.png)
 
 ## Auto Upload
 
-The [AutoUpload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html#Syncfusion_Blazor_FileManager_FileManagerUploadSettings_AutoUpload) property controls whether files are automatically uploaded when they are added to the upload queue in the FileManager component.
+The [AutoUpload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html#Syncfusion_Blazor_FileManager_FileManagerUploadSettings_AutoUpload) property controls whether files are automatically uploaded when they are added to the upload queue in the File Manager component.
 
-The default value is `true`, the FileManager will automatically upload files as soon as they are added to the upload queue. If set to `false`, the files will not be uploaded automatically, giving you the chance to manipulate the files before uploading them to the server.
+The default value is `true`, the File Manager will automatically upload files as soon as they are added to the upload queue. If set to `false`, the files will not be uploaded automatically, giving you the chance to manipulate the files before uploading them to the server.
 
 ```cshtml
 
@@ -90,7 +90,7 @@ The default value is `true`, the FileManager will automatically upload files as 
 
 The screenshot demonstrates the AutoUpload property set to `false`. When disabled, files are added to the queue without being automatically uploaded, and the `Upload` and `Clear` buttons remain visible for manual control.
 
-![Blazor FileManager with AutoUpload](images/blazor-filemanager-autoupload.png)
+![Blazor File Manager with AutoUpload](images/blazor-filemanager-autoupload.png)
 
 ## Auto Close
 
@@ -115,7 +115,7 @@ The default value is set to `false`, the upload dialog remains open even after t
 
 ## Prevent upload based on file extensions
 
-The [AllowedExtensions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html#Syncfusion_Blazor_FileManager_FileManagerUploadSettings_AllowedExtensions) property specifies which file types are allowed for upload in the FileManager component by defining their extensions.
+The [AllowedExtensions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html#Syncfusion_Blazor_FileManager_FileManagerUploadSettings_AllowedExtensions) property specifies which file types are allowed for upload in the File Manager component by defining their extensions.
 
 This property lets you define which file types can be uploaded by specifying allowed extensions, separated by commas. For example, to allow only image files, you would set the `AllowedExtensions` property to .jpg,.png.
 
@@ -137,11 +137,11 @@ If you want to allow only image files like .jpg and .png, you would set the prop
 </SfFileManager>
 
 ```
-![Blazor FileManager with AllowedExtensions](images/blazor-filemanager-allowextension.png)
+![Blazor File Manager with AllowedExtensions](images/blazor-filemanager-allowextension.png)
 
 ## Upload Mode
 
-The [UploadMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html#Syncfusion_Blazor_FileManager_FileManagerUploadSettings_UploadMode) property defines the method used to perform the upload operation in the FileManager component.
+The [UploadMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html#Syncfusion_Blazor_FileManager_FileManagerUploadSettings_UploadMode) property defines the method used to perform the upload operation in the File Manager component.
 
 This property lets you choose between two upload modes. `FormSubmit` Uses the traditional form submission method for file uploads.
 `HttpClient` uses the HttpClient instance for the upload, providing more control over the request.
@@ -154,7 +154,6 @@ By default, the `UploadMode` is set to `FormSubmit`, but you can switch to HttpC
 @using Microsoft.AspNetCore.Components;
 @using Syncfusion.Blazor.FileManager;
 @using System.Net.Http.Headers;
-@using Syncfusion.Blazor.FileManager
 
 <SfFileManager TValue="FileManagerDirectoryContent">
     <FileManagerUploadSettings  UploadMode="UploadMode.HttpClient"></FileManagerUploadSettings>
