@@ -26,8 +26,8 @@ The tree nodes can be customized level wise by adding custom CssClass to the com
 @code{
     public class DriveData
     {
-        public string NodeId { get; set; }
-        public string NodeText { get; set; }
+        public string? NodeId { get; set; }
+        public string? NodeText { get; set; }
         public bool Expanded { get; set; }
         public bool Selected { get; set; }
         public List<DriveData> Children;

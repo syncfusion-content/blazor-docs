@@ -116,9 +116,9 @@ The Blazor TreeView component allows the expansion of specific nodes during init
     public string[] ExpandedNodes = new string[] { "1" };
     public class MusicAlbum
     {
-        public string Id { get; set; }
-        public string ParentId { get; set; }
-        public string Name { get; set; }
+        public string? Id { get; set; }
+        public string? ParentId { get; set; }
+        public string? Name { get; set; }
         public bool Expanded { get; set; }
         public bool? IsChecked { get; set; }
         public bool HasChild { get; set; }
@@ -359,9 +359,9 @@ The [CollapseAllAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.N
     SfTreeView<MusicAlbum>? treeview;
     public class MusicAlbum
     {
-        public string Id { get; set; }
-        public string ParentId { get; set; }
-        public string Name { get; set; }
+        public string? Id { get; set; }
+        public string? ParentId { get; set; }
+        public string? Name { get; set; }
         public bool Expanded { get; set; }
         public bool? IsChecked { get; set; }
         public bool HasChild { get; set; }
@@ -525,9 +525,9 @@ The [CollapseAllAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.N
     SfTreeView<MusicAlbum>? treeview;
     public class MusicAlbum
     {
-        public string Id { get; set; }
-        public string ParentId { get; set; }
-        public string Name { get; set; }
+        public string? Id { get; set; }
+        public string? ParentId { get; set; }
+        public string? Name { get; set; }
         public bool Expanded { get; set; }
         public bool? IsChecked { get; set; }
         public bool HasChild { get; set; }
@@ -617,10 +617,10 @@ In the following example, the expanded nodes are collapsed while the **Gospel** 
 
 <SfTreeView TValue="MusicAlbum" @ref="treeview" ShowCheckBox="true" AutoCheck="true">
     <TreeViewFieldsSettings TValue="MusicAlbum" Id="Id" DataSource="@Albums" Text="Name" ParentID="ParentId" HasChildren="HasChild" Expanded="Expanded" IsChecked="IsChecked"></TreeViewFieldsSettings>
-    <TreeViewEvents TValue="MusicAlbum" NodeExpanding="nodeEpanding"></TreeViewEvents>
+    <TreeViewEvents TValue="MusicAlbum" NodeExpanding="nodeExpanding"></TreeViewEvents>
 </SfTreeView>
 @code {
-    public void nodeEpanding(NodeExpandEventArgs args)
+    public void nodeExpanding(NodeExpandEventArgs args)
     {
         if (args.NodeData.Text == "Gospel")
         {
@@ -715,7 +715,7 @@ In the following example, the expand action for the **Discover Music** node is c
 
 <SfTreeView TValue="MusicAlbum" ShowCheckBox="true" AutoCheck="true">
     <TreeViewFieldsSettings TValue="MusicAlbum" Id="Id" DataSource="@Albums" Text="Name" ParentID="ParentId" HasChildren="HasChild" Expanded="Expanded" IsChecked="IsChecked"></TreeViewFieldsSettings>
-    <TreeViewEvents TValue="MusicAlbum" NodeExpanding="nodeEpanding" NodeCollapsing="NodeCollapsing"></TreeViewEvents>
+    <TreeViewEvents TValue="MusicAlbum" NodeExpanding="nodeEpanding"></TreeViewEvents>
 </SfTreeView>
 @code {
     public void nodeEpanding(NodeExpandEventArgs args)

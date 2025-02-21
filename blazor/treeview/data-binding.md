@@ -43,10 +43,10 @@ In the following example, **Id**, **FolderName**, and **SubFolders** columns fro
 @code{
     public class MailItem
     {
-        public string Id { get; set; }
-        public string FolderName { get; set; }
+        public string? Id { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
-        public List<MailItem> SubFolders { get; set; }
+        public List<MailItem>? SubFolders { get; set; }
     }
     List<MailItem> MyFolder = new List<MailItem>();
     protected override void OnInitialized()
@@ -135,9 +135,9 @@ To render the root level nodes, specify the ParentID as null or no need to speci
 @code{
     public class MailItem
     {
-        public string Id { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? Id { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
     }
@@ -223,12 +223,12 @@ The Blazor TreeView is a generic component that is strongly bound to a specific 
 @using Syncfusion.Blazor.Navigations
 @using System.Dynamic
 <SfTreeView TValue="ExpandoObject">
-    <TreeViewFieldsSettings TValue="ExpandoObject" Id="ID" DataSource="@TreeData" Text="Name" ParentID="ParentID" HasChildren="ChildRecordID" Expanded="Expanded"></TreeViewFieldsSettings>
+    <TreeViewFieldsSettings TValue="ExpandoObject" Id="ID" DataSource="@TreeData" Text="Name" ParentID="ParentID" HasChildren="HasChildren" Expanded="Expanded"></TreeViewFieldsSettings>
 </SfTreeView>
 
 @code {
-    SfTreeView<ExpandoObject> TreeGrid;
-    public List<ExpandoObject> TreeData { get; set; }
+    SfTreeView<ExpandoObject>? TreeGrid;
+    public List<ExpandoObject>? TreeData { get; set; }
     protected override void OnInitialized()
     {
         this.TreeData = GetData().ToList();
@@ -248,6 +248,7 @@ The Blazor TreeView is a generic component that is strongly bound to a specific 
             ParentRecord.Name = "Parent " + i;
             ParentRecord.ParentID = null;
             ParentRecord.Expanded = true;
+            ParentRecord.HasChildren = true;
             Data.Add(ParentRecord);
             AddChildRecords(ParentRecordID);
         }
@@ -276,12 +277,12 @@ The Blazor TreeView is a generic component that is strongly bound to a specific 
 @using Syncfusion.Blazor.Navigations
 @using System.Dynamic
 <SfTreeView TValue="DynamicDictionary" AllowEditing="true">
-    <TreeViewFieldsSettings TValue="DynamicDictionary" Id="ID" DataSource="@TreeData" Text="Name" ParentID="ParentID" HasChildren="ChildRecordID" Expanded="Expanded"></TreeViewFieldsSettings>
+    <TreeViewFieldsSettings TValue="DynamicDictionary" Id="ID" DataSource="@TreeData" Text="Name" ParentID="ParentID" HasChildren="HasChildren" Expanded="Expanded"></TreeViewFieldsSettings>
 </SfTreeView>
 
 @code {
-    SfTreeView<DynamicDictionary> TreeView;
-    public List<DynamicDictionary> TreeData { get; set; }
+    SfTreeView<DynamicDictionary>? TreeView;
+    public List<DynamicDictionary>? TreeData { get; set; }
     protected override void OnInitialized()
     {
         this.TreeData = GetData().ToList();
@@ -302,6 +303,7 @@ The Blazor TreeView is a generic component that is strongly bound to a specific 
             ParentRecord.Name = "Parent " + i;
             ParentRecord.ParentID = null;
             ParentRecord.Expanded = true;
+            ParentRecord.HasChildren = true;
             Data.Add(ParentRecord);
             AddChildRecords(ParentRecordID);
         }
@@ -391,8 +393,8 @@ The **OrderID**, **EmployeeID**, and **ShipName** columns from orders table have
     {
         public int? EmployeeID { get; set; }
         public int OrderID { get; set; }
-        public string ShipName { get; set; }
-        public string FirstName { get; set; }
+        public string? ShipName { get; set; }
+        public string? FirstName { get; set; }
     }
 }
 
@@ -423,8 +425,8 @@ The **OrderID**, **EmployeeID**, and **ShipName** columns from orders table have
     {
         public int? EmployeeID { get; set; }
         public int OrderID { get; set; }
-        public string ShipName { get; set; }
-        public string FirstName { get; set; }
+        public string? ShipName { get; set; }
+        public string? FirstName { get; set; }
     }
 }
 
@@ -533,7 +535,7 @@ namespace BlazorTreeView.Controller
                 this.haschild = haschild;
             }
             public int? ProductID { get; set; }
-            public string ProductName { get; set; }
+            public string? ProductName { get; set; }
             public int? pid { get; set; }
             public bool haschild { get; set; } 
         }
@@ -556,14 +558,14 @@ To add custom parameters to the data request in the Blazor TreeView component, u
     </SfTreeView>
 </div>
 @code {
-    SfTreeView<MailItem> treeview;
-    public string ParamValue = "true";
-    public Query Query { get; set; }
+    SfTreeView<MailItem>? treeview;
+    public string? ParamValue = "true";
+    public Query? Query { get; set; }
     public class MailItem
     {
-        public string ID { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? ID { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
     }
@@ -1461,7 +1463,7 @@ namespace BlazorTreeView.Controller
                 this.haschild = haschild;
             }
             public int? ProductID { get; set; }
-            public string ProductName { get; set; }
+            public string? ProductName { get; set; }
             public int? pid { get; set; }
             public bool haschild { get; set; } 
         }
@@ -1486,9 +1488,9 @@ In this example, a tree node is being rendered with 25 levels of child nodes.
 @code {
     public class MailItem
     {
-        public string ID { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? ID { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
     }
@@ -1720,7 +1722,7 @@ The Blazor TreeView component allows you to render tree nodes with a **GUID**. T
     public class DriveData
     {
         public Guid NodeId { get; set; }
-        public string NodeText { get; set; }
+        public string? NodeText { get; set; }
         public bool Expanded { get; set; }
         public bool Selected { get; set; }
         public List<DriveData> Children;

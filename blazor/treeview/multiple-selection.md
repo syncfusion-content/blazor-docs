@@ -26,7 +26,7 @@ N> Multi selection is not applicable through touch interactions.
     {
         public int Id { get; set; }
         public int? ParentId { get; set; }
-        public string Name { get; set; }
+        public string? Name { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
         public bool IsSelected { get; set; }

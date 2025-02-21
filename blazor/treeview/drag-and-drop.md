@@ -36,8 +36,8 @@ N> In the **OnNodeDragged** event currently there is no option to cancel the eve
 @code{
     public class TeamDetails
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
         public bool Expanded { get; set; }
         public bool Selected { get; set; }
         public List<TeamDetails> Children;
@@ -128,8 +128,8 @@ To drag and drop more than one node, enable the [AllowMultiSelection](https://he
 @code{
     public class TeamDetails
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
         public bool Expanded { get; set; }
         public bool Selected { get; set; }
         public List<TeamDetails> Children;
@@ -228,9 +228,9 @@ The default value of `AllowDragAndDrop` property is false.
 @code {
     public class MailItem
     {
-        public string ID { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? ID { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
     }
@@ -317,9 +317,9 @@ The Blazor TreeView component has built-in support for drag and drop functionali
 @code {
     public class TeamDetails
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Text { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Text { get; set; }
         public bool Expanded { get; set; }
         public bool Selected { get; set; }
         public List<TeamDetails> Children;
@@ -557,9 +557,9 @@ For example, in the following code snippet, the drag and drop is prevented for t
 @code {
     public class MailItem
     {
-        public string ID { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? ID { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
     }
@@ -633,13 +633,13 @@ In the example shown, the value of the `DropIndex` is displayed in the Syncfusio
 @code{
     public class TeamDetails
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
         public bool Expanded { get; set; }
         public bool Selected { get; set; }
         public List<TeamDetails> Children;
     }
-    public string dropIndexValue { get; set; }
+    public string? dropIndexValue { get; set; }
 
     public void nodeDragStop(DragAndDropEventArgs args)
     {

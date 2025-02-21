@@ -52,9 +52,9 @@ This is demonstrated in an example where the TreeView operations are manipulated
 
     public class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Pid { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Pid { get; set; }
         public bool HasChild { get; set; }
     }
 
@@ -375,9 +375,9 @@ The Blazor TreeView component can integrate with the Badge component and allows 
     }
     class TreeData
     {
-        public string Id { get; set; }
-        public string Pid { get; set; }
-        public string Name { get; set; }
+        public string? Id { get; set; }
+        public string? Pid { get; set; }
+        public string? Name { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
         public int Count { get; set; }
@@ -402,30 +402,6 @@ The Blazor TreeView component can integrate with the Badge component and allows 
     .treeCount.e-badge {
         padding: 0.4em;
         vertical-align: text-bottom;
-    }
-
-    .material .treeCount.e-badge {
-        vertical-align: middle;
-    }
-
-    .bootstrap5.e-bigger .treeCount.e-badge,
-    .tailwind.e-bigger .treeCount.e-badge,
-    .tailwind-dark.e-bigger .treeCount.e-badge,
-    .bootstrap5-dark.e-bigger .treeCount.e-badge {
-        line-height: 10px;
-    }
-
-    .bootstrap4 .treeviewdiv .treeCount.e-badge,
-    .bootstrap5 .treeviewdiv .treeCount.e-badge,
-    .bootstrap .treeviewdiv .treeCount.e-badge,
-    .bootstrap-dark .treeviewdiv .treeCount.e-badge,
-    .highcontrast .treeviewdiv .treeCount.e-badge,
-    .bootstrap5-dark .treeviewdiv .treeCount.e-badge {
-        background-color: #008800;
-    }
-
-    .highcontrast .treeviewdiv .treeCount.e-badge {
-        color: white;
     }
 
     .nodetext {
@@ -539,10 +515,10 @@ The Blazor TreeView component has the built-in option to customize each node's a
     }
     class TreeItem
     {
-        public string NodeId { get; set; }
-        public string NodeText { get; set; }
-        public string Icon { get; set; }
-        public string ImageUrl { get; set; }
+        public string? NodeId { get; set; }
+        public string? NodeText { get; set; }
+        public string? Icon { get; set; }
+        public string? ImageUrl { get; set; }
         public bool Expanded { get; set; }
         public bool Selected { get; set; }
         public List<TreeItem> Child;
@@ -572,11 +548,6 @@ The Blazor TreeView component has the built-in option to customize each node's a
     .e-treeview .e-list-icon.folder {
         background-position: -197px -552px
     }
-
-    .e-bigger .e-treeview .e-list-icon.folder {
-        background-position: -197px -549px;
-    }
-
     .e-treeview .e-list-icon.docx {
         background-position: -197px -20px
     }
@@ -644,7 +615,7 @@ In this example, TreeView's `NavigateUrl` is mapped to move one page to another 
                 </SfToolbar>
             </div>
             @*Initialize the Sidebar component*@
-            <SfSidebar HtmlAttributes="@HtmlAttribute" Width="290px" Target=".e-main-content" MediaQuery="(min-width:600px)" @bind-IsOpen="SidebarToggle">
+            <SfSidebar @attributes="@HtmlAttribute" Width="290px" Target=".e-main-content" MediaQuery="(min-width:600px)" @bind-IsOpen="SidebarToggle">
                 <ChildContent>
                     <div class="main-menu">
                         <div class="table-content">
@@ -696,12 +667,12 @@ In this example, TreeView's `NavigateUrl` is mapped to move one page to another 
     SfTreeView<TreeData> tree;
     public class TreeData
     {
-        public string NodeId { get; set; }
-        public string NodeText { get; set; }
-        public string IconCss { get; set; }
+        public string? NodeId { get; set; }
+        public string? NodeText { get; set; }
+        public string? IconCss { get; set; }
         public bool HasChild { get; set; }
-        public string Pid { get; set; }
-        public string NavigateUrl { get; set; }
+        public string? Pid { get; set; }
+        public string? NavigateUrl { get; set; }
     }
     private List<TreeData> Treedata = new List<TreeData>();
     protected override void OnInitialized()
@@ -729,12 +700,6 @@ In this example, TreeView's `NavigateUrl` is mapped to move one page to another 
     .sidebar-treeview .e-treeview .e-icon-expandable {
         margin: 3px;
     }
-
-    .e-bigger .sidebar-treeview .e-treeview .e-icon-collapsible,
-    .e-bigger .sidebar-treeview .e-treeview .e-icon-expandable {
-        margin: 8px;
-    }
-    /* Specific styles for TreeView component*/
     .sidebar-treeview .e-treeview,
     .sidebar-treeview .e-treeview .e-ul {
         padding: 0;
@@ -745,29 +710,23 @@ In this example, TreeView's `NavigateUrl` is mapped to move one page to another 
         z-index: 20 !important;
         top: 40px !important;
     }
-        /* Specific styles for main-menu-header element */
-        .sidebar-treeview .main-menu .main-menu-header {
-            color: #656a70;
-            padding: 15px 15px 15px 0;
-            font-size: 14px;
-            width: 13em;
-            margin: 0;
-        }
+    /* Specific styles for main-menu-header element */
+    .sidebar-treeview .main-menu .main-menu-header {
+        color: #656a70;
+        padding: 15px 15px 15px 0;
+        font-size: 14px;
+        width: 13em;
+        margin: 0;
+    }
 
     #main-text .sidebar-heading {
         font-size: 16px;
     }
 
-    .e-bigger #main-text .sidebar-heading {
-        font-size: 18px;
-    }
     /* specifies the table of content area styles */
     .sidebar-treeview .table-content {
         padding: 20px 18px;
         height: 8em;
-    }
-    .e-bigger .sidebar-treeview .table-content {
-        padding: 20px 27px;
     }
     /*Specific styles for content area elements */
     #main-text .sidebar-content .line {
@@ -780,10 +739,6 @@ In this example, TreeView's `NavigateUrl` is mapped to move one page to another 
     #main-text .sidebar-content {
         padding: 15px;
         font-size: 14px;
-    }
-
-    .e-bigger #main-text .sidebar-content {
-        font-size: 16px;
     }
 
     #main-text .paragraph-content {
@@ -819,10 +774,6 @@ In this example, TreeView's `NavigateUrl` is mapped to move one page to another 
         font-family: 'Material_toolbar';
     }
 
-    .e-bigger .e-folder {
-        font-size: 18px;
-    }
-
     .e-folder {
         text-align: center;
         font-weight: 500;
@@ -831,10 +782,6 @@ In this example, TreeView's `NavigateUrl` is mapped to move one page to another 
     /* Specific styles for TreeView component*/
     .sidebar-treeview .e-treeview .e-text-content {
         padding-left: 18px;
-    }
-
-    .e-bigger .sidebar-treeview .e-treeview .e-text-content {
-        padding-left: 22px;
     }
 
     .sidebar-treeview .main-treeview .icon-microchip::before {
@@ -848,16 +795,8 @@ In this example, TreeView's `NavigateUrl` is mapped to move one page to another 
     .sidebar-treeview .main-treeview .icon-docs::before {
         content: '\e802';
     }
-    /* Specific styles for Toolbar component */
-    .bootstrap5 #wrapper .e-toolbar {
-        border-bottom: 1px solid #d2d6de;
-    }
-
     #wrapper .main-content {
         height: 380px;
-    }
-    .bootstrap5 .sidebar-treeview {
-        border-right: 1px solid #dee2e6 !important;
     }
 </style>
 
@@ -891,9 +830,9 @@ Implemented the functionality to display a Syncfusion<sup style="font-size:70%">
     }
     public class MailItem
     {
-        public string Id { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? Id { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
     }
@@ -1007,9 +946,9 @@ In the sample provided, the code snippet for the [Error Boundary component](http
 
     public class MailItem
     {
-        public string Id { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? Id { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
     }

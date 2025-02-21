@@ -26,12 +26,12 @@ In the Blazor TreeView component, use the **NavigateUrl** property to specify th
 @code {
     public class MailItem
     {
-        public string ID { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? ID { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
-        public string NavigateUrl { get; set; }
+        public string? NavigateUrl { get; set; }
     }
     List<MailItem> MyFolder = new List<MailItem>();
     protected override void OnInitialized()
@@ -93,12 +93,12 @@ The TreeView [FullRowNavigable](https://help.syncfusion.com/cr/blazor/Syncfusion
 @code{
     public class MailItem
     {
-        public string ID { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? ID { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
-        public string NavigateUrl { get; set; }
+        public string? NavigateUrl { get; set; }
     }
     List<MailItem> MyFolder = new List<MailItem>();
     protected override void OnInitialized()
@@ -187,9 +187,9 @@ In the Blazor TreeView component, when clicking on the TreeView node, you can ge
     SfTreeView<MailItem> tree;
     public class MailItem
     {
-        public string ID { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? ID { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
         public Dictionary<string, object> HtmlAttributes { get; set; }
@@ -234,9 +234,9 @@ In the Blazor TreeView component, when clicking on the TreeView node, you can ge
             });
 
     }
-    public string ID;
-    public string Text;
-    public string ParentID;
+    public string? ID;
+    public string? Text;
+    public string? ParentID;
     public void nodeClicked(NodeClickEventArgs args)
     {
         ID = (args.NodeData.Id);
@@ -247,7 +247,7 @@ In the Blazor TreeView component, when clicking on the TreeView node, you can ge
 <style>
     .containers {
         margin-top: -200px;
-        margin-left: 500px;
+        margin-left: 800px;
     }
     .tree{
         width:50%;
@@ -270,12 +270,12 @@ The **NavigateUrl** property is used to navigate from one page to other pages on
 @code{
     public class MailItem
     {
-        public string ID { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? ID { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
-        public string NavigateUrl { get; set; }
+        public string? NavigateUrl { get; set; }
     }
     List<MailItem> MyFolder = new List<MailItem>();
     protected override void OnInitialized()

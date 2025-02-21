@@ -126,8 +126,8 @@ This section shows how to get the child nodes from corresponding Parent ID. Usin
 
     public class TreeData
     {
-        public string Code { get; set; }
-        public string Name { get; set; }
+        public string? Code { get; set; }
+        public string? Name { get; set; }
         public bool Expanded { get; set; }
         public bool Selected { get; set; }
         public List<TreeData> Child;

@@ -115,7 +115,6 @@ The Blazor TreeView component provides the capability to select specific nodes d
 @using Syncfusion.Blazor.Navigations
 
 <SfTreeView TValue="MusicAlbum" ShowCheckBox="true" AllowMultiSelection="true" AutoCheck="true" @bind-SelectedNodes="SelectedNodes">
-    <TreeViewEvents TValue="MusicAlbum" NodeSelecting="NodeSelecting"></TreeViewEvents>
     <TreeViewFieldsSettings TValue="MusicAlbum" Id="Id" DataSource="@Albums" Text="Name" ParentID="ParentId" HasChildren="HasChild" Expanded="Expanded" IsChecked="IsChecked"></TreeViewFieldsSettings>
 </SfTreeView>
 
@@ -683,7 +682,7 @@ In the Blazor TreeView component, you can select all TreeView nodes using a butt
 @using Syncfusion.Blazor.Buttons
 
 <SfButton OnClick="SelectAll">Select All Nodes</SfButton>
-<SfTreeView TValue="MusicAlbum" ShowCheckBox="true" AllowMultiSelection="true" AutoCheck="true" @bind-SelectedNodes="SelectedNodes">
+<SfTreeView @ref="tree" TValue="MusicAlbum" ShowCheckBox="true" AllowMultiSelection="true" AutoCheck="true" @bind-SelectedNodes="SelectedNodes">
     <TreeViewFieldsSettings TValue="MusicAlbum" Id="Id" DataSource="@Albums" Text="Name" ParentID="ParentId" HasChildren="HasChild" Expanded="Expanded" IsChecked="IsChecked"></TreeViewFieldsSettings>
 </SfTreeView>
 
@@ -876,7 +875,7 @@ In the Blazor TreeView component, you can select particular TreeView nodes using
 
 ## Retrieve indices of selected nodes
 
-In the Blazor treeview component, you can show the index value of the selected TreeView nodes in the UI. You can obtain the index of selected items values with the help of the TreeView's [GetTreeData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_GetTreeData_System_String_) method in the [NodeSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeSelecting) event.
+In the Blazor TreeView component, you can show the index value of the selected TreeView nodes in the UI. You can obtain the index of selected items values with the help of the TreeView's [GetTreeData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_GetTreeData_System_String_) method in the [NodeSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeSelecting) event.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -910,9 +909,9 @@ In the Blazor treeview component, you can show the index value of the selected T
 
     public class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string PId { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? PId { get; set; }
         public bool HasChild { get; set; }
     }
 

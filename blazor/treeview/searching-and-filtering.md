@@ -40,152 +40,171 @@ The Blazor TreeView component allows for searching and filtering of TreeView nod
     { 
         
         List<Listdata> TempDataSource = new List<Listdata>(){
-                new Listdata
+            new Listdata
             {
                 Id = 1,
                 Name = "Australia",
                 HasChild = true,
                 Expanded = false,
                 Icon = "folder"
-            },new Listdata
-    {
-        Id = 2,
-        Pid = 1,
-        Name = "New South Wales",
-         Icon = "folder"
-    },new Listdata
-    {
-        Id = 3,
-        Pid = 1,
-        Name = "Victoria",
-         Icon = "folder"
-    },new Listdata
-    {
-        Id = 4,
-        Pid = 1,
-        Name = "South Australia",
-        Icon = "folder"
-    },new Listdata
-    {
-        Id = 6,
-        Pid = 1,
-        Name = "Western Australia",
-        Icon = "folder"
-    },new Listdata
-    {
-        Id = 7,
-        Name = "Brazil",
-        HasChild = true,
-        Icon = "folder"
-    },new Listdata
-    {
-        Id = 8,
-        Pid = 7,
-        Name = "Paraná",
-        Icon = "folder"
-    },new Listdata
-    {
-        Id = 9,
-        Pid = 7,
-        Name = "Ceará",
-        Icon = "folder"
-    },new Listdata
-    {
-        Id = 10,
-        Pid = 7,
-        Name = "Acre",
-        Icon = "folder"
-    },new Listdata
-    {
-        Id = 11,
-        Name = "China",
-        HasChild = true,
-        Icon = "folder"
-    },new Listdata
-    {
-        Id = 12,
-        Pid = 11,
-        Name = "Guangzhou",
-        Icon = "folder"
-    },new Listdata
-    {
-        Id = 13,
-        Pid = 11,
-        Name = "Shanghai",
-        Icon = "folder"
-    },new Listdata
-    {
-        Id = 14,
-        Pid = 11,
-        Name = "Beijing",
-        Icon = "folder"
-    },new Listdata
-    {
-        Id = 15,
-        Pid = 11,
-        Name = "Shantou",
-        Icon = "folder"
-    },new Listdata
-    {
-        Id = 16,
-        Name = "France",
-        Icon = "folder",
-        HasChild = true
-    },new Listdata
-    {
-        Id = 17,
-        Pid = 16,
-        Name = "Pays de la Loire",
-        Icon = "folder"
-    },new Listdata
-    {
-        Id = 18,
-        Pid = 16,
-        Name = "Aquitaine",
-         Icon = "folder"
-    },new Listdata
-    {
-        Id = 19,
-        Pid = 16,
-        Name = "Brittany",
-         Icon = "folder"
-    },new Listdata
-    {
-        Id = 20,
-        Pid = 16,
-        Name = "Lorraine",
-         Icon = "folder"
-    },new Listdata
-    {
-        Id = 21,
-        Name = "India",
-        HasChild = true,
-         Icon = "folder"
-    },new Listdata
-    {
-        Id = 22,
-        Pid = 21,
-        Name = "Assam",
-         Icon = "folder"
-    },new Listdata
-    {
-        Id = 23,
-        Pid = 21,
-        Name = "Bihar",
-         Icon = "folder"
-    },new Listdata
-    {
-        Id = 24,
-        Pid = 21,
-        Name = "Tamil Nadu",
-         Icon = "folder"
-    }
+            },
+            new Listdata
+            {
+                Id = 2,
+                Pid = 1,
+                Name = "New South Wales",
+                Icon = "folder"
+            },
+            new Listdata
+            {
+                Id = 3,
+                Pid = 1,
+                Name = "Victoria",
+                Icon = "folder"
+            },
+            new Listdata
+            {
+                Id = 4,
+                Pid = 1,
+                Name = "South Australia",
+                Icon = "folder"
+            },
+            new Listdata
+            {
+                Id = 6,
+                Pid = 1,
+                Name = "Western Australia",
+                Icon = "folder"
+            },
+            new Listdata
+            {
+                Id = 7,
+                Name = "Brazil",
+                HasChild = true,
+                Icon = "folder"
+            },
+            new Listdata
+            {
+                Id = 8,
+                Pid = 7,
+                Name = "Paraná",
+                Icon = "folder"
+            },
+            new Listdata
+            {
+                Id = 9,
+                Pid = 7,
+                Name = "Ceará",
+                Icon = "folder"
+            },
+            new Listdata
+            {
+                Id = 10,
+                Pid = 7,
+                Name = "Acre",
+                Icon = "folder"
+            },
+            new Listdata
+            {
+                Id = 11,
+                Name = "China",
+                HasChild = true,
+                Icon = "folder"
+            },
+            new Listdata
+            {
+                Id = 12,
+                Pid = 11,
+                Name = "Guangzhou",
+                Icon = "folder"
+            },
+            new Listdata
+            {
+                Id = 13,
+                Pid = 11,
+                Name = "Shanghai",
+                Icon = "folder"
+            },
+            new Listdata
+            {
+                Id = 14,
+                Pid = 11,
+                Name = "Beijing",
+                Icon = "folder"
+            },
+            new Listdata
+            {
+                Id = 15,
+                Pid = 11,
+                Name = "Shantou",
+                Icon = "folder"
+            },
+            new Listdata
+            {
+                Id = 16,
+                Name = "France",
+                Icon = "folder",
+                HasChild = true
+            },
+            new Listdata
+            {
+                Id = 17,
+                Pid = 16,
+                Name = "Pays de la Loire",
+                Icon = "folder"
+            },
+            new Listdata
+            {
+                Id = 18,
+                Pid = 16,
+                Name = "Aquitaine",
+                Icon = "folder"
+            },
+            new Listdata
+            {
+                Id = 19,
+                Pid = 16,
+                Name = "Brittany",
+                Icon = "folder"
+            },
+            new Listdata
+            {
+                Id = 20,
+                Pid = 16,
+                Name = "Lorraine",
+                Icon = "folder"
+            },
+            new Listdata
+            {
+                Id = 21,
+                Name = "India",
+                HasChild = true,
+                Icon = "folder"
+            },
+            new Listdata
+            {
+                Id = 22,
+                Pid = 21,
+                Name = "Assam",
+                Icon = "folder"
+            },
+            new Listdata
+            {
+                Id = 23,
+                Pid = 21,
+                Name = "Bihar",
+                Icon = "folder"
+            },
+            new Listdata
+            {
+                Id = 24,
+                Pid = 21,
+                Name = "Tamil Nadu",
+                Icon = "folder"
+            }
+        };
 
-
-
-};
-
-        return TempDataSource;
+        return TempDataSource;    
     }
 
     public void OnInput(InputEventArgs eventArgs)
@@ -234,7 +253,7 @@ The Blazor TreeView component allows for searching and filtering of TreeView nod
     {
         if (isFiltered)
         {
-            this.tree.ExpandAll();
+            this.tree.ExpandAllAsync();
         }
         else
         {
@@ -248,10 +267,10 @@ The Blazor TreeView component allows for searching and filtering of TreeView nod
     {
         public int Id { get; set; }
         public int? Pid { get; set; } = null;
-        public string Name { get; set; }
+        public string? Name { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
-        public string Icon { get; set; }
+        public string? Icon { get; set; }
     } 
 }
 

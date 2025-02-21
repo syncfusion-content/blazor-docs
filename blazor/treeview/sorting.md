@@ -30,9 +30,9 @@ In the following example, the `SortOrder` property is dynamically updated on the
     public SortOrder sortOrder;
     public class MailItem
     {
-        public string Id { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? Id { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
     }

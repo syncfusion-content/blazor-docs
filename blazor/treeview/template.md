@@ -28,7 +28,7 @@ In the following sample, employee information such as employee photo, name, and 
         <NodeTemplate>
             @{
                 var employee = ((context as EmployeeDetails));
-                <img class="eimage" src="@UriHelper.ToAbsoluteUri($"/css/images/Employees/{@employee.Image}.png")" alt="@employee.Image" />
+                <img class="eimage" src="@($"https://ej2.syncfusion.com/demos/src/treeview/images/employees/{employee.Image}.png")" alt="@employee.Image" />
                 <div class="ename">@((@context as EmployeeDetails).EmployeeName)</div>
                 <div class="ejob">@((@context as EmployeeDetails).Designation)</div>
             }
@@ -40,14 +40,14 @@ In the following sample, employee information such as employee photo, name, and 
 {
     public class EmployeeDetails
     {
-        public string EmployeeName { get; set; }
+        public string? EmployeeName { get; set; }
         public int EmployeeId { get; set; }
         public int? ParentId { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
         public bool Selected { get; set; }
-        public string Image { get; set; }
-        public string Designation { get; set; }
+        public string? Image { get; set; }
+        public string? Designation { get; set; }
     }
 
     List<EmployeeDetails> Employee = new List<EmployeeDetails>();
@@ -285,9 +285,9 @@ The Blazor TreeView component provides the ability to customize the appearance o
     }
     class TreeData
     {
-        public string Id { get; set; }
-        public string Pid { get; set; }
-        public string Name { get; set; }
+        public string? Id { get; set; }
+        public string? Pid { get; set; }
+        public string? Name { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
         public int Count { get; set; }

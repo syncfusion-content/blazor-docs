@@ -102,10 +102,10 @@ The Blazor TreeView component has the built-in option to customize each node's a
     }
     class TreeItem
     {
-        public string NodeId { get; set; }
-        public string NodeText { get; set; }
-        public string Icon { get; set; }
-        public string ImageUrl { get; set; }
+        public string? NodeId { get; set; }
+        public string? NodeText { get; set; }
+        public string? Icon { get; set; }
+        public string? ImageUrl { get; set; }
         public bool Expanded { get; set; }
         public bool Selected { get; set; }
         public List<TreeItem> Child;
@@ -182,9 +182,9 @@ The default value of the `AllowTextWrap` property is false.
     SfTreeView<MailItem> treeview;
     public class MailItem
     {
-        public string ID { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? ID { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
     }
@@ -244,9 +244,9 @@ In the Blazor TreeView component, you are able to disable individual nodes on in
     SfTreeView<MailItem> tree;
     public class MailItem
     {
-        public string ID { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? ID { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
     }
@@ -314,9 +314,9 @@ In the Blazor TreeView component, you are able to enable or disable individual n
     SfTreeView<MailItem> tree;
     public class MailItem
     {
-        public string ID { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? ID { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
     }
@@ -432,9 +432,9 @@ In the Blazor TreeView component, you can show or hide particular TreeView nodes
 
     public class MailItem
     {
-        public string ID { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? ID { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
     
@@ -514,9 +514,9 @@ In the Blazor TreeView component, you can show or hide particular TreeView nodes
 
     public class MailItem
     {
-        public string ID { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? ID { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
     
@@ -600,10 +600,10 @@ The TreeView control allows to set tooltip option to tree nodes using the **Tool
     }
     class DriveData
     {
-        public string NodeId { get; set; }
-        public string NodeText { get; set; }
-        public string Tooltip { get; set; }
-        public string Icon { get; set; }
+        public string? NodeId { get; set; }
+        public string? NodeText { get; set; }
+        public string? Tooltip { get; set; }
+        public string? Icon { get; set; }
         public bool Expanded { get; set; }
         public bool Selected { get; set; }
         public List<DriveData> Child { get; set; }
@@ -624,36 +624,36 @@ In the Blazor TreeView component, you are unable to customize the native tooltip
     <TreeViewTemplates TValue="EmployeeDetails">
         <NodeTemplate>
             @{
-                    var employee = ((context as EmployeeDetails));
-                    <SfTooltip Target="#def">
-                        <TooltipTemplates>
-                            <Content>
-                                @employee.EmployeeName
-                            </Content>
-                        </TooltipTemplates>
-                        <div id="def">
-                            <div class="ename">@((@context as EmployeeDetails).EmployeeName)</div>
-                            <div class="ejob">@((@context as EmployeeDetails).Designation)</div>
-                        </div>
-                    </SfTooltip>
-                }
-            </NodeTemplate>
-        </TreeViewTemplates>
-        <TreeViewEvents TValue="EmployeeDetails"></TreeViewEvents>
+                var employee = ((context as EmployeeDetails));
+                <SfTooltip Target="#def">
+                    <ContentTemplate>
+                            @employee.EmployeeName @employee.EmployeeId
+                    </ContentTemplate>
+                    <ChildContent>
+                    <div id="def">
+                        <div class="ename">@((@context as EmployeeDetails).EmployeeName)</div>
+                        <div class="ejob">@((@context as EmployeeDetails).Designation)</div>
+                    </div>
+                    </ChildContent>
+                </SfTooltip>
+            }
+        </NodeTemplate>
+    </TreeViewTemplates>
+    <TreeViewEvents TValue="EmployeeDetails"></TreeViewEvents>
 </SfTreeView>
 
 @code
     {
     public class EmployeeDetails
     {
-        public string EmployeeName { get; set; }
+        public string? EmployeeName { get; set; }
         public int EmployeeId { get; set; }
         public int? ParentId { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
         public bool Selected { get; set; }
-        public string Image { get; set; }
-        public string Designation { get; set; }
+        public string? Image { get; set; }
+        public string? Designation { get; set; }
     }
 
     List<EmployeeDetails> Employee = new List<EmployeeDetails>();
@@ -794,9 +794,9 @@ In the Blazor TreeView component, you can get all TreeView node details using th
     SfTreeView<MailItem> tree;
     public class MailItem
     {
-        public string ID { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? ID { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
     }
