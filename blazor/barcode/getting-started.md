@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Barcode Component | Syncfusion
-description: Checkout and learn about getting started with Blazor Barcode component in Blazor WebAssembly App.
+description: Checkout and learn about getting started with Blazor Barcode component in Blazor WebAssembly Application.
 platform: Blazor
 control: Barcode
 documentation: ug

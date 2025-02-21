@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Accordion Component | Syncfusion
-description: Checkout and learn about getting started with Blazor Accordion component in Blazor WebAssembly App.
+description: Checkout and learn about getting started with Blazor Accordion component in Blazor WebAssembly Application.
 platform: Blazor
 control: Accordion
 documentation: ug
