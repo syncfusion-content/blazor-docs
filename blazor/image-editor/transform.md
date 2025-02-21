@@ -34,7 +34,7 @@ Note: It is recommended to pass values in multiples of 90° (e.g., 90, 180, -90)
 
     private async void OpenAsync()
     {
-        await ImageEditor.OpenAsync("nature.png");
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
 
     private async void RotateAsync()
@@ -72,7 +72,7 @@ Here is an example of flipping an image in a button click event.
 
     private async void OpenAsync()
     {
-        await ImageEditor.OpenAsync("nature.png");
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
 
     private async void FlipAsync()
@@ -99,16 +99,25 @@ Here is an example of straightening the image.
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
 @using Syncfusion.Blazor.Buttons
- 
+
+<div style="padding-bottom: 15px">
+    <SfButton OnClick="Straighten">Straighten</SfButton>
+</div>
+
 <SfImageEditor @ref="ImageEditor" Height="400">
     <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
 </SfImageEditor>
- 
+
 @code {
     SfImageEditor ImageEditor;
     private async void OpenAsync()
     {
-        await ImageEditor.OpenAsync("nature.png");
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
+    }
+
+    private async void Straighten()
+    {
+        await ImageEditor.StraightenImageAsync(45);
     }
 }
 ```
@@ -158,7 +167,7 @@ Here is an example of specifying [`MinZoomFactor`](https://help.syncfusion.com/c
 
     private async void OpenAsync()
     {
-        await ImageEditor.OpenAsync("nature.png");
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
 
     private async void ZoomInAsync()
@@ -213,13 +222,11 @@ Using the [`ZoomTrigger`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 @code {
     SfImageEditor ImageEditor;
-
     private async void Created()
     {
-        await ImageEditor.OpenAsync("bridge.png");
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
 }
-
 ```
 ![Blazor Image Editor with ZoomWheel](./images/blazor-image-editor-zoomwheel.png)
 
