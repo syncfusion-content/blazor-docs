@@ -9,7 +9,7 @@ documentation: ug
 
 # Validate the text when renaming the tree node in Blazor TreeView
 
-The tree node text could be validated while editing using `NodeEdited` event of the TreeView. Following is an example that shows how to validate and prevent empty values in tree node.
+The tree node text could be validated while editing using [`NodeEdited`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeEdited) event of the TreeView. Following is an example that shows how to validate and prevent empty values in tree node.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

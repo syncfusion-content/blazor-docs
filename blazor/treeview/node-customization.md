@@ -11,11 +11,11 @@ documentation: ug
 
 The TreeView nodes in the Blazor TreeView component can be customised based on your needs.
 
-In TreeView component, you can customise the appearance of each node with images by mapping the **ImageUrl** field, enable or disable wrapping the text using the [AllowTextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_AllowTextWrap) property, enable or disable the nodes on initial load or dynamically, show or hide the nodes on initial load or dynamically, and enable or customise the tooltip for tree nodes, and more.
+In TreeView component, you can customise the appearance of each node with images by mapping the [**ImageUrl**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_ImageUrl) field, enable or disable wrapping the text using the [AllowTextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_AllowTextWrap) property, enable or disable the nodes on initial load or dynamically, show or hide the nodes on initial load or dynamically, and enable or customise the tooltip for tree nodes, and more.
 
 ## Images in Blazor TreeView Component
 
-The Blazor TreeView component has the built-in option to customize each node's appearance with images by mapping the **ImageUrl** fields.
+The Blazor TreeView component has the built-in option to customize each node's appearance with images by mapping the [**ImageUrl**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_ImageUrl) fields.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -134,9 +134,6 @@ The Blazor TreeView component has the built-in option to customize each node's a
     /* Specify the Icon positions based upon the class name */
     .e-treeview .e-list-icon.folder {
         background-position: -197px -552px
-    }
-    .e-bigger .e-treeview .e-list-icon.folder {
-        background-position: -197px -549px;
     }
     .e-treeview .e-list-icon.docx {
         background-position: -197px -20px

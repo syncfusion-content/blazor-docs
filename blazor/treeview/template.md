@@ -9,7 +9,7 @@ documentation: ug
 
 # Template in Blazor TreeView Component
 
-The Blazor TreeView component allows to customize the look of TreeView nodes using the `NodeTemplate` property. The `NodeTemplate` tag is nested inside the TreeViewTemplates tag, where the custom structure for TreeView can be defined. Inside the NodeTemplate tag, a generic type context property is used to access the tree node details.
+The Blazor TreeView component allows to customize the look of TreeView nodes using the `NodeTemplate` property. The [`NodeTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewTemplates-1.html#Syncfusion_Blazor_Navigations_TreeViewTemplates_1_NodeTemplate) tag is nested inside the TreeViewTemplates tag, where the custom structure for TreeView can be defined. Inside the NodeTemplate tag, a generic type context property is used to access the tree node details.
 
 To customize Blazor TreeView items easily using a template and the CssClass property, you can check on this video.
 
@@ -168,7 +168,7 @@ In the following sample, employee information such as employee photo, name, and 
 
 ## Apply template to Header
 
-The Blazor TreeView component provides the ability to customize the appearance of its nodes through the use of the `NodeTemplate` property. This property is nested within the `TreeViewTemplates` tag, which defines the custom structure for the TreeView. However, in this section this template is only applied to parent nodes.
+The Blazor TreeView component provides the ability to customize the appearance of its nodes through the use of the [`NodeTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewTemplates-1.html#Syncfusion_Blazor_Navigations_TreeViewTemplates_1_NodeTemplate) property. This property is nested within the [`TreeViewTemplates`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewTemplates-1.html) tag, which defines the custom structure for the TreeView. However, in this section this template is only applied to parent nodes.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -314,46 +314,13 @@ The Blazor TreeView component provides the ability to customize the appearance o
         vertical-align: text-bottom;
     }
 
-    .material .treeCount.e-badge {
-        vertical-align: middle;
-    }
-
-    .bootstrap5.e-bigger .treeCount.e-badge,
-    .tailwind.e-bigger .treeCount.e-badge,
-    .tailwind-dark.e-bigger .treeCount.e-badge,
-    .bootstrap5-dark.e-bigger .treeCount.e-badge {
-        line-height: 10px;
-    }
-
-    .bootstrap4 .treeviewdiv .treeCount.e-badge,
-    .bootstrap5 .treeviewdiv .treeCount.e-badge,
-    .bootstrap .treeviewdiv .treeCount.e-badge,
-    .bootstrap-dark .treeviewdiv .treeCount.e-badge,
-    .highcontrast .treeviewdiv .treeCount.e-badge,
-    .bootstrap5-dark .treeviewdiv .treeCount.e-badge {
-        background-color: #008800;
-    }
-
-    .highcontrast .treeviewdiv .treeCount.e-badge {
-        color: white;
-    }
-
     .nodetext {
         float: left;
-    }
-
-    .e-rtl .nodetext {
-        float: right;
     }
 
     .nodebadge {
         float: right;
         margin-right: 5px
-    }
-
-    .e-rtl .nodebadge {
-        float: left;
-        margin-left: 5px
     }
 </style>
 

@@ -787,18 +787,9 @@ The Blazor TreeView component with template support also allows for the dynamic 
         float: left;
     }
 
-    .e-rtl .nodetext {
-        float: right;
-    }
-
     .nodebadge {
         float: right;
         margin-right: 5px
-    }
-
-    .e-rtl .nodebadge {
-        float: left;
-        margin-left: 5px
     }
 </style>
 
@@ -1377,18 +1368,9 @@ The Blazor TreeView component with template enables dynamic editing of specific 
         float: left;
     }
 
-    .e-rtl .nodetext {
-        float: right;
-    }
-
     .nodebadge {
         float: right;
         margin-right: 5px
-    }
-
-    .e-rtl .nodebadge {
-        float: left;
-        margin-left: 5px
     }
 </style>
 

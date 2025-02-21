@@ -104,7 +104,7 @@ By default, the checkbox state of parent and child nodes are dependent on each o
 
 ## Check nodes through data binding
 
-You can check a specific node by setting the **IsChecked** field to true for the corresponding node in the data source, which specifies the field for the checked state of the TreeView node.
+You can check a specific node by setting the [**IsChecked**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_IsChecked) field to true for the corresponding node in the data source, which specifies the field for the checked state of the TreeView node.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
