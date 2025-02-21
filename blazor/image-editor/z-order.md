@@ -13,13 +13,14 @@ We are excited to introduce `z-order` support in the Image Editor. It's a powerf
 
 Types of adjustment in the Image Editor `z-order` support.
 
-* Sent Backward - Switch the selected annotation with the annotation one layer behind it.
+* [Bring forward](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_BringForwardAsync_System_String_) - Switch the selected annotation with the annotation one layer ahead of it.
 
-* Send to Back - Move the selected annotation to behind all other annotations.
+* [Sent Backward](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_SendBackwardAsync_System_String_) - Switch the selected annotation with the annotation one layer behind it.
 
-* Bring to Front - Move the selected annotation to ahead of all other annotations.
+* [Bring to Front](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_BringToFrontAsync_System_String_) - Move the selected annotation to ahead of all other annotations.
 
-* Bring forward - Switch the selected annotation with the annotation one layer ahead of it.
+* [Send to Back](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_SendToBackAsync_System_String_) - Move the selected annotation to behind all other annotations.
+
 
 In the following example, you can use the `z-order` support.
 

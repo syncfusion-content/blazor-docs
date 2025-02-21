@@ -47,6 +47,8 @@ The [`DrawTextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Im
 
 * strokeWidth: Specifies the outline stroke width of the text annotation.
 
+* transformCollection: Specifies the transform collection of the text annotation.
+
 By utilizing the [`DrawTextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawTextAsync_System_Nullable_System_Double__System_Nullable_System_Double__System_String_System_String_System_Nullable_System_Int32__System_Boolean_System_Boolean_System_String_) method with these parameters, you can precisely position and customize text annotations within the image. This provides the flexibility to add labels, captions, or other text elements with specific font styles, sizes, and colors, enhancing the visual presentation and clarity of the image. 
 
 Here is an example of adding a text in a button click using [`DrawTextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawTextAsync_System_Nullable_System_Double__System_Nullable_System_Double__System_String_System_String_System_Nullable_System_Int32__System_Boolean_System_Boolean_System_String_) method. 
@@ -597,6 +599,36 @@ Here is an example of deleting rectangle, ellipse, arrow, path, and line in a bu
 
 ![Blazor Image Editor with Delete text an image](./images/blazor-image-editor-delete-text.png)
 
+## Customize default stroke color for shapes 
+
+We provide default settings for stroke color, stroke width, fill color, and other customizations. If users wish to modify only the default options while preserving their previously selected customizations, they can do so by utilizing the [`ShapeChanging`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_ShapeChanging) event. Within this event, users can update the values in the [`CurrentShapeSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ShapeChangeEventArgs.html#Syncfusion_Blazor_ImageEditor_ShapeChangeEventArgs_CurrentShapeSettings) object to apply their own preferences instead of the defaults. This approach allows conditional updates to the [`CurrentShapeSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ShapeChangeEventArgs.html#Syncfusion_Blazor_ImageEditor_ShapeChangeEventArgs_CurrentShapeSettings), ensuring that only the desired defaults are changed while maintaining the other settings.
+
+```cshtml
+@using Syncfusion.Blazor.ImageEditor
+
+<SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="400">
+    <ImageEditorEvents Created="CreatedAsync" ShapeChanging="ShapeChangingAsync"></ImageEditorEvents>
+</SfImageEditor> 
+
+@code {
+    SfImageEditor ImageEditor; 
+    private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>() { }; 
+
+    private async void CreatedAsync() 
+    { 
+        await ImageEditor.OpenAsync("nature.png"); 
+    }
+
+    private async void ShapeChangingAsync(ShapeChangingEventArgs args)
+    {
+        if (args.action === "insert" && args.currentShapeSettings?.type === "FreehandDraw") {
+            args.currentShapeSettings.strokeColor = "red";
+        }
+    }
+}
+```
+![Blazor Image Editor with Default Color](./images/blazor-image-editor-default-stroke-color.jpeg)
+
 ## Image annotation
 
 The image annotation feature in the Image Editor provides the capability to add and customize images directly onto the image. With this feature, you can easily insert image or icons at specific locations within the image and customize various aspects of the image to meet your requirements. You have control over the customization options including rotate, flip, transparency for the image annotation.
@@ -656,36 +688,6 @@ In the following example, you can use the [`DrawImageAsync`](https://help.syncfu
 ```
 
 ![Blazor Image Editor with Add Image in an image](./images/blazor-image-editor-add-image.png)
-
-### Customize default stroke color for shapes 
-
-We provide default settings for stroke color, stroke width, fill color, and other customizations. If users wish to modify only the default options while preserving their previously selected customizations, they can do so by utilizing the [`ShapeChanging`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_ShapeChanging) event. Within this event, users can update the values in the [`CurrentShapeSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ShapeChangeEventArgs.html#Syncfusion_Blazor_ImageEditor_ShapeChangeEventArgs_CurrentShapeSettings) object to apply their own preferences instead of the defaults. This approach allows conditional updates to the [`CurrentShapeSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ShapeChangeEventArgs.html#Syncfusion_Blazor_ImageEditor_ShapeChangeEventArgs_CurrentShapeSettings), ensuring that only the desired defaults are changed while maintaining the other settings.
-
-```cshtml
-@using Syncfusion.Blazor.ImageEditor
-
-<SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="400">
-    <ImageEditorEvents Created="CreatedAsync" ShapeChanging="ShapeChangingAsync"></ImageEditorEvents>
-</SfImageEditor> 
-
-@code {
-    SfImageEditor ImageEditor; 
-    private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>() { }; 
-
-    private async void CreatedAsync() 
-    { 
-        await ImageEditor.OpenAsync("nature.png"); 
-    }
-
-    private async void ShapeChangingAsync(ShapeChangingEventArgs args)
-    {
-        if (args.action === "insert" && args.currentShapeSettings?.type === "FreehandDraw") {
-            args.currentShapeSettings.strokeColor = "red";
-        }
-    }
-}
-```
-![Blazor Image Editor with Default Color](./images/blazor-image-editor-default-stroke-color.jpeg)
 
 ## Show or hide the annotation options
 

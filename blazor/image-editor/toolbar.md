@@ -17,12 +17,23 @@ In the Image Editor, the toolbar property provides the ability to customize the 
 
 Specifies the toolbar items to perform UI interactions. Refer to the built-in toolbar items for the default value.
 
+* Open
+* Undo
+* Redo
+* ZoomIn
+* ZoomOut
 * Crop
-* Annotation
-* Zoom
+* RotateLeft
+* RotateRight
+* HorizontalFlip
+* VerticalFlip
+* Straightening
+* Annotate
 * Finetune
 * Filter
-* Confirm
+* Frame
+* Resize
+* Redact
 * Reset
 * Save
 
@@ -205,7 +216,7 @@ The toolbar of the Image Editor can be replaced with the user specific UI using 
 
 The [`ToolbarUpdating`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_ToolbarUpdating) event is triggered when inserting or selecting annotations, which opens the contextual toolbar in the Blazor Image Editor. Within this event, the [`ToolbarItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ToolbarEventArgs.html#Syncfusion_Blazor_ImageEditor_ToolbarEventArgs_ToolbarItems) property in the [`ToolbarEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ToolbarEventArgs.html) is utilized to add or remove contextual toolbar items.
 
-In the following example, the contextual toolbar for rectangle will be rendered with only stroke color by excluding fill color and stroke width using toolbarUpdating event.
+In the following example, the contextual toolbar for freehand drawing will be rendered with only the stroke color, while the stroke width, remove, and separator options are excluded using the toolbarUpdating event.
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
