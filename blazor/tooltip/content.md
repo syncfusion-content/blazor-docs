@@ -16,6 +16,7 @@ The Blazor Tooltip component allows you to display additional information when u
 The simplest way to use a Tooltip is with a string of text using the [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_Content) property. A text or a piece of information assigned to the Tooltip’s `Content` property will be displayed as the main text stream of the Tooltip.
 
 ```cshtml
+@using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 
 <SfTooltip ID="Tooltip" Target="#btn" Content="@Content">
@@ -34,7 +35,7 @@ This displays a simple text message when users hover over the button.
 
 ## Using the Title Attribute
 
-You can also use the 'title' attribute of the target element as the Tooltip content. By using the [Target](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_Target) property which allows the Tooltip to use the title attribute of the target element as its content.
+You can also use the **title** attribute of the target element as the Tooltip content. By using the [Target](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_Target) property which allows the Tooltip to use the title attribute of the target element as its content.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -166,7 +167,7 @@ The SfTooltip is used to display dynamic content generated using a RenderFragmen
                     <li>List item 2</li>
                     <li>List item 3</li>
                 </ul>
-                <button @onclick="@(() => Console.WriteLine("Button in tooltip clicked!"))">
+                <button @onclick="@(() => Console.WriteLine("Button in Tooltip clicked!"))">
                     Click me!
                 </button>
                 <SfButton ID="btn" IsPrimary="true" Content="HTML Template"></SfButton>
