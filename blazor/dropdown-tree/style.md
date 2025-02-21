@@ -39,12 +39,12 @@ Specify the boolean value to the [Disabled](https://help.syncfusion.com/cr/blazo
 
     class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Job { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Job { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
-        public string PId { get; set; }
+        public string? PId { get; set; }
     }
 }
 ```
@@ -87,12 +87,12 @@ Some of the predefined values are
 
     class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Job { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Job { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
-        public string PId { get; set; }
+        public string? PId { get; set; }
     }
 }
 ```
@@ -137,12 +137,12 @@ You can customize the dropdown icon for the particular component using the [CssC
 
     class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Job { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Job { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
-        public string PId { get; set; }
+        public string? PId { get; set; }
     }
 }
 
@@ -190,14 +190,15 @@ To replace the default dropdown icon in the Dropdown Tree component with an SVG,
         new EmployeeData() { Id = "11", PId = "6", Name = "Mary", Job = "Developer" },
         new EmployeeData() { Id = "9", PId = "1", Name = "Janet Leverling", Job = "HR"}
     };
+
     class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Job { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Job { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
-        public string PId { get; set; }
+        public string? PId { get; set; }
     }
 }
 <style>
@@ -264,12 +265,12 @@ You can customize the color of the Dropdown Tree component when it is in a focus
 
     class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Job { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Job { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
-        public string PId { get; set; }
+        public string? PId { get; set; }
     }
 }
 
@@ -344,14 +345,15 @@ Add the additional html attributes such as styles, class, and more to the root e
         {"style", "background-color: #0bebd6; text-align: right" },
         {"title", "Syncfusion DropDownTree" }
     };
+    
     class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Job { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Job { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
-        public string PId { get; set; }
+        public string? PId { get; set; }
     }
 }
 ```
@@ -388,12 +390,12 @@ In the following sample, the font family of the Dropdown Tree, ListItem text in 
     
     class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Job { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Job { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
-        public string PId { get; set; }
+        public string? PId { get; set; }
     }
 }
 
@@ -482,21 +484,21 @@ The following code demonstrates how to display a tooltip when hovering over the 
     
     class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Job { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Job { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
-        public string PId { get; set; }
+        public string? PId { get; set; }
     }
 }
 ```
 
 ![Blazor Dropdown Tree with different font family](./images/styles/blazor-dropdowntree-component-tooltip.png)
 
-### Tooltip using HTMLAttribute in dropdown component
+### Tooltip using HTMLAttribute in Dropdown Tree component
 
-To display the tooltip in the dropdown component, add the `Title` attribute through the [HTMLAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_HtmlAttributes) property.
+To display the tooltip in the Dropdown Tre component, add the `Title` attribute through the [HTMLAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfDropDownTree-2.html#Syncfusion_Blazor_Navigations_SfDropDownTree_2_HtmlAttributes) property.
 
 In the following example, the `HtmlAttributes` property is used to add the title attribute to the root input element of the Dropdown Tree with the value `Dropdown Tree Component`. This will display a tooltip with the text `Dropdown Tree Component` when the user hovers over the input element.
 
@@ -529,12 +531,12 @@ In the following example, the `HtmlAttributes` property is used to add the title
     
     class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Job { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Job { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
-        public string PId { get; set; }
+        public string? PId { get; set; }
     }
 }
 ```
@@ -567,12 +569,12 @@ You can customize the width of the component using [Width](https://help.syncfusi
     
     class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Job { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Job { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
-        public string PId { get; set; }
+        public string? PId { get; set; }
     }
 }
 ```
@@ -609,14 +611,14 @@ In the following example, by enabling the `TextWrap` the selected items will app
     
     class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Job { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Job { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
         public bool Selected { get; set; }
         public bool IsChecked { get; set; }
-        public string PId { get; set; }
+        public string? PId { get; set; }
     }
 }
 ```

@@ -17,7 +17,7 @@ git clone https://github.com/SyncfusionExamples/ej2-azure-aspcore-file-provider 
 
 ```
 
-After cloning, just open the project in Visual Studio and restore the NuGet packages. Now, you need to register the Azure storage by passing details like name, password, and blob name to the Register Azure method in the FileManager controller.
+After cloning, just open the project in Visual Studio and restore the NuGet packages. Now, you need to register the Azure storage by passing details like name, password, and blob name to the Register Azure method in the File Manager controller.
 
 ```csharp
 
@@ -52,7 +52,7 @@ public AzureProviderController(IHostingEnvironment hostingEnvironment)
 
 ``` 
 
-After setting the blob container references, just build and run the project. Now, the project will be hosted in `http://localhost:{port}:{port}` and just mapping the **ajaxSettings** property of the FileManager component to the appropriate controller methods allows to manage the Azure blob storage.
+After setting the blob container references, just build and run the project. Now, the project will be hosted in `http://localhost:{port}:{port}` and just mapping the **ajaxSettings** property of the File Manager component to the appropriate controller methods allows to manage the Azure blob storage.
 
 ```cshtml
 
