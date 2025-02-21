@@ -223,21 +223,17 @@ How It Works:
 ```cshtml
 @using Syncfusion.Blazor.Inputs
 
-<SfSlider ID="sliderTracks" @ref="SliderObj" TValue="int[]" Value=@RangeValue Type="SliderType.Range">
-    <SliderEvents TValue="int[]" Created="Created"></SliderEvents>
+<SfSlider ID="sliderTracks" TValue="int[]" Value=@RangeValue Type="SliderType.Range" Width="400px">
+    <SliderTicks Placement="Placement.Both" ShowSmallTicks="true" LargeStep="20" SmallStep="5"></SliderTicks>
+    <SliderTooltip IsVisible="true" Placement="TooltipPlacement.Before" ShowOn="TooltipShowOn.Always"></SliderTooltip>
     <SliderColorRanges>
         <ColorRange Start="0" End="50" Color="green"></ColorRange>
         <ColorRange Start="51" End="100" Color="red"></ColorRange>
     </SliderColorRanges>
 </SfSlider>
 
-@code{
-
-    SfSlider<int[]> SliderObj;
+@code {
     public int[] RangeValue = { 30, 70 };
-    private async Task Created() {
-        await SliderObj.RepositionAsync();
-    }
 }
 
 <style>
