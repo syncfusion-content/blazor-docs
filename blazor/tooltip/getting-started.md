@@ -168,11 +168,12 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Blazor Tooltip component
 
-Integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Tooltip component with the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor [Button](https://blazor.syncfusion.com/documentation/button/getting-started) component in the ~/Pages/Index.razor file.
+Integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Tooltip component with the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor [Button](https://blazor.syncfusion.com/documentation/button/getting-started) component in the **~/Pages/Index.razor** file.
 
 {% tabs %}
 {% highlight razor %}
 
+@using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 
 <SfTooltip ID="Tooltip" Target="#btn" Content="@Content">

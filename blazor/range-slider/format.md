@@ -9,7 +9,7 @@ documentation: ug
 
 # Formatting in Blazor Range Slider Component
 
-The `Format` feature used to customize the units of Slider values to desired format. The formatted values will also be applied to the ARIA attributes of the slider. There are two ways of achieving formatting in slider.
+The [`Format`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderTicks.html#Syncfusion_Blazor_Inputs_SliderTicks_Format) feature used to customize the units of Slider values to desired format. The formatted values will also be applied to the ARIA attributes of the slider. There are two ways of achieving formatting in slider.
 
 N> Use the `Format` API of slider which utilizes our Internationalization to format values.
 
@@ -46,4 +46,4 @@ Slider provides different predefined formatting styles like Numeric (N), Percent
 
 ```
 
-![Blazor RangeSlider Format API](images/blazor-rangeslider-format-api.gif)
+![Blazor Range Slider Format API](images/blazor-rangeslider-format-api.gif)
