@@ -66,15 +66,15 @@ In the following example, you can using the DrawTextAsync method in the button c
 </div>
 <SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="400">
     <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
-</SfImageEditor> 
+</SfImageEditor>
 
 @code {
-    SfImageEditor ImageEditor; 
-    private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>() { }; 
+    SfImageEditor ImageEditor;
+    private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>() { };
 
-    private async void OpenAsync() 
-    { 
-        await ImageEditor.OpenAsync("nature.png"); 
+    private async void OpenAsync()
+    {
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
 
     private async void DrawTextAsync()
@@ -85,12 +85,14 @@ In the following example, you can using the DrawTextAsync method in the button c
     private async void DrawTextOutlineAsync()
     {
         ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
-         await ImageEditor.DrawTextAsync(Dimension.X.Value + 50, Dimension.Y.Value + 50, "Syncfusion", "Arial", 40, false, false, "", false, 0, "", "green", 8);
+        await ImageEditor.DrawTextAsync(Dimension.X.Value + 50, Dimension.Y.Value + 50, "Syncfusion", "Arial", 40, false, false,
+        "", false, 0, "", "green", 8);
     }
     private async void DrawTextBackgroundColorAsync()
     {
         ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
-        await ImageEditor.DrawTextAsync(Dimension.X.Value + 100, Dimension.Y.Value + 100, "Syncfusion", "Arial", 40, false, false, "", false, 0, "red", "", 0);
+        await ImageEditor.DrawTextAsync(Dimension.X.Value + 100, Dimension.Y.Value + 100, "Syncfusion", "Arial", 40, false,
+        false, "", false, 0, "red", "", 0);
     }
 }
 ```
@@ -108,25 +110,25 @@ Here is an example of adding a multiline text in a button click using [`DrawText
 @using Syncfusion.Blazor.Buttons
 
 <div style="padding-bottom: 15px">
-    <SfButton OnClick="DrawTextAsync">Draw Text</SfButton>
+    <SfButton OnClick="DrawTextAsync">Draw MultiLine Text</SfButton>
 </div>
 <SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="400">
     <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
-</SfImageEditor> 
+</SfImageEditor>
 
 @code {
-    SfImageEditor ImageEditor; 
-    private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>() { }; 
+    SfImageEditor ImageEditor;
+    private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>() { };
 
-    private async void OpenAsync() 
-    { 
-        await ImageEditor.OpenAsync("nature.png"); 
+    private async void OpenAsync()
+    {
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
 
     private async void DrawTextAsync()
     {
         ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
-        await ImageEditor.DrawTextAsync(Dimension.X.Value + 100, Dimension.Y.Value + 100, "Enter\nText");
+        await ImageEditor.DrawTextAsync(Dimension.X.Value, Dimension.Y.Value, "Enter\nText");
     }
 }
 ```
@@ -153,21 +155,21 @@ Here is an example of deleting a text in a button click using [`DeleteShapeAsync
 </div>
 <SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="400">
     <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
-</SfImageEditor> 
+</SfImageEditor>
 
 @code {
-    SfImageEditor ImageEditor; 
-    private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>() { }; 
+    SfImageEditor ImageEditor;
+    private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>() { };
 
-    private async void OpenAsync() 
-    { 
-        await ImageEditor.OpenAsync("nature.png"); 
+    private async void OpenAsync()
+    {
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
 
     private async void DrawTextAsync()
     {
         ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
-        await ImageEditor.DrawTextAsync(Dimension.X.Value + 100, Dimension.Y.Value + 100, "Enter\nText");
+        await ImageEditor.DrawTextAsync(Dimension.X.Value, Dimension.Y.Value);
     }
 
     private async void DeleteShapeAsync()
@@ -179,7 +181,7 @@ Here is an example of deleting a text in a button click using [`DeleteShapeAsync
 
 ![Blazor Image Editor with Delete text an image](./images/blazor-image-editor-delete-text.png)
 
-### Customize a text color 
+### Customize font family and text color
 
 The [ShapeChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_ShapeChanging) event in the Blazor Image Editor component is triggered when a text annotation is being modified or changed through the toolbar interaction. This event provides an opportunity to make alterations to the text's color and font family by adjusting the relevant properties. 
 
@@ -190,22 +192,15 @@ Here is an example of changing the text color using the [ShapeChanging](https://
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
 
-<SfImageEditor @ref="ImageEditor" Height="400" Toolbar="customToolbarItem">
+<SfImageEditor @ref="ImageEditor" Height="400">
     <ImageEditorEvents Created="OpenAsync" ShapeChanging="ShapeChanging"></ImageEditorEvents>
 </SfImageEditor>
 
 @code {
     SfImageEditor ImageEditor;
-    private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>()
-    {
-        new ImageEditorToolbarItemModel { Name = "Annotation" },
-        new ImageEditorToolbarItemModel { Name = "Reset" },
-        new ImageEditorToolbarItemModel { Name = "Confirm" }
-    };
-
     private async void OpenAsync()
     {
-        await ImageEditor.OpenAsync("nature.png");
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
 
     private void ShapeChanging(ShapeChangeEventArgs args)
@@ -213,6 +208,7 @@ Here is an example of changing the text color using the [ShapeChanging](https://
         if (args.CurrentShapeSettings.Type == ShapeType.Text)
         {
             args.CurrentShapeSettings.Color = "red";
+            args.CurrentShapeSettings.FontFamily = "italic";
         }
     }
 }
@@ -231,12 +227,12 @@ Here is an example of adding additional font family using the [`ImageEditorFontF
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
 @using Syncfusion.Blazor.Buttons
- 
+
 <SfImageEditor @ref="ImageEditor" Height="400">
     <ImageEditorFontFamily Items="@CustomItems" Default="Arial"></ImageEditorFontFamily>
     <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
 </SfImageEditor>
- 
+
 @code {
     SfImageEditor ImageEditor;
     private List<ImageEditorDropDownItemModel> CustomItems = new List<ImageEditorDropDownItemModel>
@@ -247,12 +243,13 @@ Here is an example of adding additional font family using the [`ImageEditorFontF
         new ImageEditorDropDownItemModel { Text = "Times New Roman", Value = "times new roman"},
         new ImageEditorDropDownItemModel { Text = "Courier New", Value = "courier new" }
     };
-    private async void OpenAsync() 
-    { 
-        await ImageEditor.OpenAsync("nature.png"); 
+    private async void OpenAsync()
+    {
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
 }
 ```
+
 ![Blazor Image Editor with Custom font family in an image](./images/blazor-image-editor-font.png)
         
 ## Freehand drawing
@@ -277,22 +274,19 @@ Here is an example of using the [`EnableFreehandDrawAsync`](https://help.syncfus
 </div>
 <SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="400">
     <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
-</SfImageEditor> 
+</SfImageEditor>
 
 @code {
-    SfImageEditor ImageEditor; 
-    private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>() { }; 
-
-    private async void OpenAsync() 
-    { 
-        await ImageEditor.OpenAsync("nature.png"); 
+    SfImageEditor ImageEditor;
+    private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>() { };
+    private async void OpenAsync()
+    {
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
-
     private async void EnableFreehandDrawAsync()
     {
         await ImageEditor.EnableFreehandDrawAsync();
     }
-
     private async void DisableFreehandDrawAsync()
     {
         await ImageEditor.DisableFreehandDrawAsync();
@@ -314,30 +308,22 @@ Here is an example of changing the freehand draw stroke width and color using th
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
 
-<SfImageEditor @ref="ImageEditor" Height="400" Toolbar="customToolbarItem">
+<SfImageEditor @ref="ImageEditor" Height="400">
     <ImageEditorEvents Created="OpenAsync" ShapeChanging="ShapeChanging"></ImageEditorEvents>
 </SfImageEditor>
 
 @code {
     SfImageEditor ImageEditor;
-    private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>()
-    {
-        new ImageEditorToolbarItemModel { Name = "Annotation" },
-        new ImageEditorToolbarItemModel { Name = "Reset" },
-        new ImageEditorToolbarItemModel { Name = "Confirm" }
-    };
-
     private async void OpenAsync()
     {
-        await ImageEditor.OpenAsync("nature.png");
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
-
     private void ShapeChanging(ShapeChangeEventArgs args)
     {
         if (args.CurrentShapeSettings.Type == ShapeType.FreehandDraw)
         {
             args.CurrentShapeSettings.StrokeColor = "red";
-            args.CurrentShapeSettings.StrokeWidth = 4;
+            args.CurrentShapeSettings.StrokeWidth = 5;
         }
     }
 }
@@ -371,17 +357,14 @@ Here is an example of deleting a freehand annotation in a button click using [`D
 @code {
     SfImageEditor ImageEditor;
     private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>() { };
-
     private async void OpenAsync()
     {
-        await ImageEditor.OpenAsync("nature.png");
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
-
     private async void EnableFreehandDrawAsync()
     {
         await ImageEditor.EnableFreehandDrawAsync();
     }
-
     private async void DeleteShapeAsync()
     {
         await ImageEditor.DeleteShapeAsync("pen_1");
@@ -504,9 +487,9 @@ Here is an example of inserting rectangle, ellipse, arrow, path, and line in a b
 <div style="padding-bottom: 15px">
     <SfButton OnClick="RectangleAsync">Draw Rectangle</SfButton>
     <SfButton OnClick="EllipseAsync">Draw Ellipse</SfButton>
+    <SfButton OnClick="LineAsync">Draw Line</SfButton>
     <SfButton OnClick="ArrowAsync">Draw Arrow</SfButton>
     <SfButton OnClick="PathAsync">Draw Path</SfButton>
-    <SfButton OnClick="LineAsync">Draw Line</SfButton>
 </div>
 
 <SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="400">
@@ -516,37 +499,43 @@ Here is an example of inserting rectangle, ellipse, arrow, path, and line in a b
 @code {
     SfImageEditor ImageEditor;
     private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>() { };
-    private ImageEditorPoint[] points = new ImageEditorPoint[] { new ImageEditorPoint { X = 400, Y = 200 }, new ImageEditorPoint { X = 500, Y = 300 }, new ImageEditorPoint { X = 350, Y = 400 } };
-
     private async void CreatedAsync()
     {
-        await ImageEditor.OpenAsync("nature.png");
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
-
     private async void RectangleAsync()
     {
-        await ImageEditor.DrawRectangleAsync(250, 50, 120, 60, 4, "#fff", "blue");
-        await ImageEditor.DrawRectangleAsync(450, 200, 120, 60, 4, "#fff", "blue", 0, false, 8);
+        ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
+        await ImageEditor.DrawRectangleAsync(Dimension.X.Value + 10, Dimension.Y.Value + 60, 150, 70);
+        await ImageEditor.DrawRectangleAsync(Dimension.X.Value + 250, Dimension.Y.Value + 60, 150, 70, 2, "", "", 0, false, 8);
     }
-
     private async void EllipseAsync()
     {
-        await ImageEditor.DrawEllipseAsync(500, 50, 70, 70, 4, "#fff", "green");
+        ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
+        await ImageEditor.DrawEllipseAsync(Dimension.X.Value, Dimension.Y.Value + 200);
     }
-
     private async void ArrowAsync()
     {
-        await ImageEditor.DrawArrowAsync(250, 200, 400, 200, 5, "red", ImageEditorArrowHeadType.SolidCircle);
+        ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
+        await ImageEditor.DrawArrowAsync(Dimension.X.Value + 150, Dimension.Y.Value + 150, Dimension.X.Value + 300,
+        Dimension.Y.Value + 150, 10);
     }
-
-    private async void PathAsync()
+    private async Task PathAsync()
     {
-        await ImageEditor.DrawPathAsync(points, 5, "yellow");
+        ImageDimension dimension = await ImageEditor.GetImageDimensionAsync();
+        ImageEditorPoint[] points = new ImageEditorPoint[]
+        {
+            new ImageEditorPoint { X = dimension.X.Value, Y = dimension.Y.Value },
+            new ImageEditorPoint { X = dimension.X.Value + 50, Y = dimension.Y.Value + 50 },
+            new ImageEditorPoint { X = dimension.X.Value + 20, Y = dimension.Y.Value + 50 }
+        };
+        await ImageEditor.DrawPathAsync(points, 8);
     }
-
     private async void LineAsync()
     {
-        await ImageEditor.DrawLineAsync(250, 300, 400, 400, 5, "brown");
+        ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
+        await ImageEditor.DrawLineAsync(Dimension.X.Value + 100, Dimension.Y.Value + 50, Dimension.X.Value + 300,
+        Dimension.Y.Value + 50);
     }
 }
 ```
@@ -578,18 +567,15 @@ Here is an example of deleting rectangle, ellipse, arrow, path, and line in a bu
 @code {
     SfImageEditor ImageEditor;
     private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>() { };
-
     private async void OpenAsync()
     {
-        await ImageEditor.OpenAsync("nature.png");
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
-
     private async void DrawTextAsync()
     {
         ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
         await ImageEditor.DrawTextAsync(Dimension.X.Value + 100, Dimension.Y.Value + 100, "Enter\nText");
     }
-
     private async void DeleteShapeAsync()
     {
         await ImageEditor.DeleteShapeAsync("shape_1");
@@ -606,23 +592,21 @@ We provide default settings for stroke color, stroke width, fill color, and othe
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
 
-<SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="400">
+<SfImageEditor @ref="ImageEditor" Height="400">
     <ImageEditorEvents Created="CreatedAsync" ShapeChanging="ShapeChangingAsync"></ImageEditorEvents>
 </SfImageEditor> 
 
 @code {
-    SfImageEditor ImageEditor; 
-    private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>() { }; 
-
-    private async void CreatedAsync() 
-    { 
-        await ImageEditor.OpenAsync("nature.png"); 
-    }
-
-    private async void ShapeChangingAsync(ShapeChangingEventArgs args)
+    SfImageEditor ImageEditor;
+    private async void CreatedAsync()
     {
-        if (args.action === "insert" && args.currentShapeSettings?.type === "FreehandDraw") {
-            args.currentShapeSettings.strokeColor = "red";
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
+    }
+    private async void ShapeChangingAsync(ShapeChangeEventArgs args)
+    {
+        if (args.Action == "insert" && args.CurrentShapeSettings?.Type == ShapeType.FreehandDraw)
+        {
+            args.CurrentShapeSettings.StrokeColor = "red";
         }
     }
 }
@@ -668,21 +652,20 @@ In the following example, you can use the [`DrawImageAsync`](https://help.syncfu
 </div>
 <SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="400">
     <ImageEditorEvents Created="CreatedAsync"></ImageEditorEvents>
-</SfImageEditor> 
+</SfImageEditor>
 
 @code {
-    SfImageEditor ImageEditor; 
-    private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>() { }; 
-
-    private async void CreatedAsync() 
-    { 
-        await ImageEditor.OpenAsync("nature.png"); 
+    SfImageEditor ImageEditor;
+    private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>() { };
+    private async void CreatedAsync()
+    {
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
-
     private async void DrawImageAsync()
     {
         ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
-        await ImageEditor.DrawImageAsync("bridge.png", Dimension.X.Value + 100, Dimension.Y.Value + 100, 200, 200, true);
+        await ImageEditor.DrawImageAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png",
+        Dimension.X.Value, Dimension.Y.Value, 200, 200, true);
     }
 }
 ```
@@ -722,7 +705,7 @@ Using the [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Im
     };
     private async void Created()
     {
-        await ImageEditor.OpenAsync("nature.png");
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
 }
 
