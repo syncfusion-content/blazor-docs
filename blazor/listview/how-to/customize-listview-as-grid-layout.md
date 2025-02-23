@@ -65,12 +65,12 @@ In the below sample, we have rendered List items in grid layout.
         float: left;
     }
 
-        #container .e-listview .e-list-item .e-text-content {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-        }
+    #container .e-listview .e-list-item .e-text-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
 
     #container .e-listview .e-list-text {
         width: unset;
@@ -113,11 +113,12 @@ In the below sample, you can remove by hovering the item which will show delete 
 
 ### Sort Items
 
-Listview can be sorted either in Ascending or Descending order. To enable sorting in your ListView, set `SortOrder` as `Ascending` or `Descending`. You can also set sorting after control initialization.
+Listview can be sorted either in Ascending or Descending order. To enable sorting in your ListView, set [`SortOrder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_SortOrder) as `Ascending` or `Descending`. You can also set sorting after control initialization.
 
 In the below sample, it is sorted in `Ascending` order. To sort it in descending, click on sort order icon and vice versa.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Lists
@@ -135,22 +136,21 @@ In the below sample, it is sorted in `Ascending` order. To sort it in descending
                             class="e-btn e-small e-round e-primary e-icon-btn"
                             title="Sort"
                             @onclick="@(e => ListSortOrder = (ListSortOrder == ListviewSort.Ascending) ? ListviewSort.Descending : ListviewSort.Ascending)">
-                        <span class="e-btn-icon e-icons e-sort-icon-ascending"></span>
+                        <span class="e-btn-icon e-icons @(ListSortOrder == ListviewSort.Ascending ? "e-sort-icon-ascending" : "e-sort-icon-descending")"></span>
                     </button>
                     <button id="add"
                             class="e-btn e-small e-round e-primary e-icon-btn"
                             title="Add"
-                            @onclick="@(e => DialogObj.Show())">
+                            @onclick="@(e => DialogObj.ShowAsync())">
                         <span class="e-btn-icon e-icons e-add-icon"></span>
                     </button>
                     <SfDialog @ref="DialogObj"
-
-                               Target="#container"
-                               ShowCloseIcon="true"
-                               Header="@("Add item")"
-                               @bind-Visible="@Visible"
-                               Width="300px"
-                               Height="230px">
+                              Target="#container"
+                              ShowCloseIcon="true"
+                              Header="@("Add item")"
+                              @bind-Visible="@Visible"
+                              Width="300px"
+                              Height="230px">
                         <DialogTemplates>
                             <Content>
                                 <div id="listDialog">
@@ -162,14 +162,14 @@ In the below sample, it is sorted in `Ascending` order. To sort it in descending
                             </Content>
                         </DialogTemplates>
                         <DialogButtons>
-                            <DialogButton OnClick="@(e => Add())" ButtonModel="@DialogBtn"></DialogButton>
+                            <DialogButton OnClick="@(e => Add())" Content = "Add" IsPrimary = "true" CssClass = "e-flat"></DialogButton>
                         </DialogButtons>
                     </SfDialog>
                 </div>
             </div>
             <div>
                 <div class="listview-container">
-                    <SfListView DataSource="@DataSource" SortOrder="@ListSortOrder">
+                    <SfListView ID="element" DataSource="@DataSource" SortOrder="@ListSortOrder">
                         <ListViewFieldSettings TValue="ListDataModel" Id="Id" Text="Text"></ListViewFieldSettings>
                         <ListViewTemplates TValue="ListDataModel">
                             <Template>
@@ -177,10 +177,10 @@ In the below sample, it is sorted in `Ascending` order. To sort it in descending
                                     ListDataModel currentData = (ListDataModel)context;
                                     <div>
                                         @currentData.Text
-                                        <span class="e-badge e-badge-notification e-badge-overlap e-badge-danger e-badge-circle"
+                                        <button class="delete e-control e-btn e-small e-round e-delete-btn e-primary e-icon-btn"
                                               @onclick="@(e => Remove(currentData))">
-                                            <span class="delete-icon"></span>
-                                        </span>
+                                            <span class="e-btn-icon e-icons delete-icon"></span>
+                                        </button>
                                     </div>
                                 }
                             </Template>
@@ -198,22 +198,25 @@ In the below sample, it is sorted in `Ascending` order. To sort it in descending
 
     ListviewSort ListSortOrder = ListviewSort.Ascending;
 
-    DialogButtonModel DialogBtn = new DialogButtonModel { Content = "Add", IsPrimary = true, CssClass = "e-flat" };
-
     string Value = "";
 
     string SearchValue = "";
 
     bool Visible = false;
+    private bool Visibility { get; set; } = true;
+    private void OnBtnClick()
+    {
+        this.Visibility = true;
+    }
 
     List<ListDataModel> DataSourceOG = new List<ListDataModel>(
         Enumerable.Range(10, 22)
             .Select(
             index => new ListDataModel
-            {
-                Id = index.ToString(),
-                Text = "Item " + index.ToString(),
-            }
+                {
+                    Id = index.ToString(),
+                    Text = "Item " + index.ToString(),
+                }
         ).ToList()
     );
 
@@ -229,7 +232,8 @@ In the below sample, it is sorted in `Ascending` order. To sort it in descending
         if (value != "")
         {
             DataSource = new List<ListDataModel>(DataSourceOG.Where(e => e.Text.ToLower().Contains(value.ToLower())));
-        } else
+        }
+        else
         {
             DataSource = new List<ListDataModel>(DataSourceOG);
         }
@@ -244,7 +248,7 @@ In the below sample, it is sorted in `Ascending` order. To sort it in descending
 
     void Add()
     {
-        DialogObj.Hide();
+        DialogObj.HideAsync();
         DataSourceOG.Add(new ListDataModel { Id = Guid.NewGuid().ToString(), Text = Value });
         DataSource = new List<ListDataModel>(DataSourceOG);
         Value = "";
@@ -252,16 +256,8 @@ In the below sample, it is sorted in `Ascending` order. To sort it in descending
 
     public class ListDataModel
     {
-        public string Id
-        {
-            get;
-            set;
-        }
-        public string Text
-        {
-            get;
-            set;
-        }
+        public string Id { get; set; }
+        public string Text { get; set; }
     }
 }
 <style>
@@ -312,8 +308,8 @@ In the below sample, it is sorted in `Ascending` order. To sort it in descending
     }
 
     .headerContainer .e-input-search::before {
-        font-family: 'e-icons';
-        content: '\e961';
+        
+        content: '\e754';
         margin-top: 3px;
     }
 
@@ -322,18 +318,17 @@ In the below sample, it is sorted in `Ascending` order. To sort it in descending
     }
 
     .headerContainer .e-sort-icon-ascending::before {
-        content: '\e840';
+        content: '\e7d8';
     }
 
     .headerContainer .e-sort-icon-descending::before {
-        content: '\e83f';
+        content: '\e7df';
     }
 
     .headerContainer .e-add-icon::before {
-        content: '\e823';
+        content: '\e805';
     }
-</style>
-<style>
+
     #container .e-listview {
         box-shadow: 0 1px 4px #ddd;
         border-bottom: 1px solid #ddd;
@@ -353,34 +348,42 @@ In the below sample, it is sorted in `Ascending` order. To sort it in descending
         padding: 0;
     }
 
-        #container .e-listview .e-list-item .e-blazor-template {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            height: 100%;
-        }
-
-        #container .e-listview .e-list-item .delete-icon {
-            font-size: 9px;
-            font-family: 'e-icons';
-        }
-
-    #container .e-listview .e-badge {
-        z-index: 10;
-        display: none;
+    #container .e-listview .e-list-item .e-blazor-template {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        height: 100%;
     }
 
-    #container .e-listview .e-hover .e-badge {
-        display: unset;
+    #container .e-listview .e-list-item .delete-icon {
+        font-size: 9px;
+            
     }
 
-    #container .e-listview .e-active .e-badge {
-        display: unset;
+    #element .e-delete-btn {
+        float: right;
+        visibility: hidden;
+        margin-top: -10px;
+    }
+
+    #element .e-delete-btn.e-btn.e-small.e-round {
+        width: 2em;
+        height: 2em;
+    }
+
+    #element .e-btn.e-small.e-round .e-btn-icon.delete-icon {
+        font-size: 9px;
+    }
+
+    #element .e-list-item:hover .e-delete-btn {
+        visibility: visible;
+        background: red;
+        border-radius: 50%;
     }
 
     #container .e-listview .e-list-item .delete-icon::before {
-        content: '\e7fc';
+        content: '\e7e7';
         color: white;
     }
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Data Binding in Blazor ListView Component
 
-ListView provides an option to load the data either from local dataSource or remote data services. This can be done through the dataSource property that supports the data type of array or DataManager. ListView supports different kind of data services such as OData, OData V4, and Web API, and data formats like XML, JSON, and, JSONP with the help of DataManager Adaptors.
+ListView provides an option to load the data either from local dataSource or remote data services. This can be done through the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_DataSource) property that supports the data type of array or [`DataManager`](https://blazor.syncfusion.com/documentation/data/getting-started). ListView supports different kind of data services such as OData, OData V4, and Web API, and data formats like XML, JSON, and, JSONP with the help of DataManager Adaptors.
 
 | Fields | Type | Description |
 |------|------|-------------|
@@ -32,7 +32,7 @@ Local data can be represented in Array of JSON data:
 
 ### Array of JSON data
 
-ListView can generate its list items through an array of complex data. To get it work properly, you should map the appropriate columns to the field property.
+ListView can generate its list items through an array of complex data. To get it work properly, you should map the appropriate columns to the [`Field`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewFieldSettings-1.html) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Lists
@@ -73,7 +73,7 @@ ListView can generate its list items through an array of complex data. To get it
 
 ## Bind to remote data
 
-The ListView supports to retrieve the data from remote data services with the help of DataManager control. The Query property allows to fetch data and return it to the ListView from the database.
+The ListView supports to retrieve the data from remote data services with the help of [`DataManager`](https://blazor.syncfusion.com/documentation/data/getting-started) control. The `Query` property allows to fetch data and return it to the ListView from the database.
 
 In the following sample, first 6 products from the Product table of NorthWind data service are displayed.
 
@@ -214,7 +214,7 @@ namespace EFListView.Server.Controllers
 
 ### Configure the ListView to perform CRUD operations
 
-You can perform CRUD operations like Add and Delete by using the `AddItem`, `RemoveItem` methods.
+You can perform CRUD operations like Add and Delete by using the `AddItem`, [`RemoveItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_RemoveItems_System_Collections_Generic_IEnumerable__0__) methods.
 
 * `AddItem` - Add a new list item into the ListView.
 * `RemoveItem` - Delete a selected list item in the ListView.
