@@ -203,12 +203,6 @@ In the below sample, it is sorted in `Ascending` order. To sort it in descending
     string SearchValue = "";
 
     bool Visible = false;
-    private bool Visibility { get; set; } = true;
-    private void OnBtnClick()
-    {
-        this.Visibility = true;
-    }
-
     List<ListDataModel> DataSourceOG = new List<ListDataModel>(
         Enumerable.Range(10, 22)
             .Select(

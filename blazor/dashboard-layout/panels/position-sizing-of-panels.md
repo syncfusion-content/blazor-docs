@@ -17,7 +17,7 @@ The following table represents all the available panel properties and the corres
 | --- | --- | --- |
 | <kbd>Id</kbd> | null | Specifies the ID value of the panel. |
 | <kbd>Row</kbd> | 0 | Specifies the row value in which the panel to be placed. |
-| <kbd>Col</kbd> | 0 | Specifies the column value in which the panel to be placed. |
+| <kbd>Column</kbd> | 0 | Specifies the column value in which the panel to be placed. |
 | <kbd>SizeX</kbd> | 1 | Specifies the width of the panel in cells count. |
 | <kbd>SizeY</kbd> | 1 | Specifies the height of the panel in cells count. |
 | <kbd>MinSizeX</kbd> | 1 | Specifies the minimum width of the panel in cells count. |
@@ -30,7 +30,7 @@ The following table represents all the available panel properties and the corres
 
 ## Positioning of panels
 
-The panels within the layout can be easily positioned or ordered using the [`Row`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_Row) and [`Col`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_Col) properties of the panels. Positioning of panels will be beneficial to represent the data in any desired order.
+The panels within the layout can be easily positioned or ordered using the [`Row`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_Row) and [`Column`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_Column) properties of the panels. Positioning of panels will be beneficial to represent the data in any desired order.
 
 ```cshtml
 

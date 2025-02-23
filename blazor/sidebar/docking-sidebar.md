@@ -13,7 +13,7 @@ documentation: ug
 
 Dock state of the [Blazor Sidebar](https://www.syncfusion.com/blazor-components/blazor-sidebar) reserves some space on the page that always remains in a visible state when the Sidebar is collapsed. It is used to show the short term of a content like icons alone instead of lengthy text.
 
-In the following sample, the list item has icon with text representation. On dock state only the icon listed out to interact. It can be achieved by using `EnableDock` property
+In the following sample, the list item has icon with text representation. On dock state only the icon listed out to interact. It can be achieved by using [`EnableDock`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfSidebar.html#Syncfusion_Blazor_Navigations_SfSidebar_EnableDock) property
 
 ```cshtml
 
@@ -66,7 +66,6 @@ In the following sample, the list item has icon with text representation. On doc
 }
 
 <style>
-    /* Content area styles */
     .title {
         font-size: 20px;
     }
@@ -102,8 +101,6 @@ In the following sample, the list item has icon with text representation. On doc
     .e-sidebar.e-right .expand::before {
         content: '\e10e';
     }
-
-    /* end of dockbar icon Style */
 
     .e-sidebar.e-dock.e-close span.e-text {
         display: none;
@@ -163,7 +160,6 @@ In the following sample, the list item has icon with text representation. On doc
     .main > div {
         padding: 0px !important;
     }
-    /* end of sidebar styles */
 </style>
 
 ```

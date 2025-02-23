@@ -21,7 +21,7 @@ In the following example, the Sidebar is rendered with ListView component in its
 @using Syncfusion.Blazor.Lists
 @using Syncfusion.Blazor.Buttons
 
-<SfSidebar @ref="sidebarObj" Type="@Type" Width="100%" HtmlAttributes="@htmlAttribute" @bind-IsOpen="SidebarToggle">
+<SfSidebar @ref="sidebarObj" Type="@Type" Width="100%" @attributes="@htmlAttribute" @bind-IsOpen="SidebarToggle">
     <ChildContent>
         <div class="title1"> Menu </div>
         <div class="closebtn">
@@ -38,11 +38,10 @@ In the following example, the Sidebar is rendered with ListView component in its
             </SfListView>
         </div>
         <div class="sub-title">
-            ListView component is placed inside the sidebar content area.
+            ListView component is placed inside the Sidebar content area.
         </div>
     </ChildContent>
 </SfSidebar>
-<!-- end of sidebar element -->
 <!-- main content declaration -->
 <div>
     <div class="title2">Main content</div>
