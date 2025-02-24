@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor AppBar Component
 
-This section briefly explains about how to include Blazor AppBar component in your Blazor WebAssembly App using Visual Studio.
+This section briefly explains about how to include Blazor AppBar component in your Blazor WebAssembly App using Visual Studio and Visual Studio Code.
 
 To get started quickly with Blazor AppBar, check on the following video:
 

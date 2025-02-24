@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Breadcrumb Component
 
-This section briefly explains about how to include [Blazor Breadcrumb](https://www.syncfusion.com/blazor-components/blazor-breadcrumb) component in your Blazor WebAssembly App using Visual Studio.
+This section briefly explains about how to include [Blazor Breadcrumb](https://www.syncfusion.com/blazor-components/blazor-breadcrumb) component in your Blazor WebAssembly App using Visual Studio and Visual Studio Code.
 
 ## Prerequisites
 

@@ -11,7 +11,7 @@ documentation: ug
 
 # Getting Started with Blazor Badge Component
 
-This section briefly explains about how to include Blazor `Badge` component in your Blazor WebAssembly App using Visual Studio.
+This section briefly explains about how to include Blazor `Badge` component in your Blazor WebAssembly App using Visual Studio and Visual Studio Code.
 
 To get start quickly with Blazor Badge, you can check on this video:
 

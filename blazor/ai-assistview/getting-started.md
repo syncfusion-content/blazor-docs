@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor AI AssistView Component
 
-This section briefly explains about how to include [Blazor AI AssistView](https://www.syncfusion.com/blazor-components/blazor-ai-assistview) component in your Blazor WebAssembly App using Visual Studio.
+This section briefly explains about how to include [Blazor AI AssistView](https://www.syncfusion.com/blazor-components/blazor-ai-assistview) component in your Blazor WebAssembly App using Visual Studio and Visual Studio Code.
 
 To get started quickly with Blazor AI AssistView component, you can check out this video:
 {% youtube "https://www.youtube.com/watch?v=VCr01E-EPHw" %}
