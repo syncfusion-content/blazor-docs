@@ -31,7 +31,7 @@ By default, the checkbox state of parent and child nodes are dependent on each o
     {
         public int Id { get; set; }
         public int? ParentId { get; set; }
-        public string Name { get; set; }
+        public string? Name { get; set; }
         public bool Expanded { get; set; }
         public bool? IsChecked { get; set; }
         public bool HasChild { get; set; }
@@ -104,7 +104,7 @@ By default, the checkbox state of parent and child nodes are dependent on each o
 
 ## Check nodes through data binding
 
-You can check a specific node by setting the **IsChecked** field to true for the corresponding node in the data source, which specifies the field for the checked state of the TreeView node.
+You can check a specific node by setting the [**IsChecked**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_IsChecked) field to true for the corresponding node in the data source, which specifies the field for the checked state of the TreeView node.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -117,7 +117,7 @@ You can check a specific node by setting the **IsChecked** field to true for the
     {
         public int Id { get; set; }
         public int? ParentId { get; set; }
-        public string Name { get; set; }
+        public string? Name { get; set; }
         public bool Expanded { get; set; }
         public bool? IsChecked { get; set; }
         public bool HasChild { get; set; }
@@ -293,9 +293,9 @@ The example demonstrates the usage of these methods within the context of a butt
     SfTreeView<MusicAlbum>? treeview;
     public class MusicAlbum
     {
-        public string Id { get; set; }
-        public string ParentId { get; set; }
-        public string Name { get; set; }
+        public string? Id { get; set; }
+        public string? ParentId { get; set; }
+        public string? Name { get; set; }
         public bool Expanded { get; set; }
         public bool? IsChecked { get; set; }
         public bool HasChild { get; set; }
@@ -425,7 +425,7 @@ The Blazor TreeView component provides the capability to pre-select specific nod
     // Specify the reference of TreeView element.
     SfTreeView<MusicAlbum>? TreeRef;
     // Specifies the CheckedNodes value for TreeView component.
-    public string[] CheckedNodes = new string[] { "2","4" };
+    public string[] CheckedNodes = new string[] { "2", "4" };
     public class MusicAlbum
     {
         public string? Id { get; set; }
@@ -550,7 +550,7 @@ The Blazor TreeView component allows for single selection of nodes with checkbox
     {
         public int Id { get; set; }
         public int? ParentId { get; set; }
-        public string Name { get; set; }
+        public string? Name { get; set; }
         public bool Expanded { get; set; }
         public bool? IsChecked { get; set; }
         public bool HasChild { get; set; }
@@ -644,7 +644,7 @@ The Blazor TreeView component allows for the rendering of checkboxes before each
     {
         public int Id { get; set; }
         public int? ParentId { get; set; }
-        public string Name { get; set; }
+        public string? Name { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
         public bool IsSelected { get; set; }
