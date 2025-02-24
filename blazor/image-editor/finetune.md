@@ -47,7 +47,7 @@ Here is an example of hue, exposure, blur, and opacity fine-tuning using the [`F
 
     private async void OpenAsync()
     {
-        await ImageEditor.OpenAsync("nature.png");
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
 
     private async void BrightnessClick()
@@ -77,7 +77,7 @@ Here is an example of hue, exposure, blur, and opacity fine-tuning using the [`F
 
     private async void OpacityClick()
     {
-        await ImageEditor.FinetuneImageAsync(ImageFinetuneOption.Opacity, 10);
+        await ImageEditor.FinetuneImageAsync(ImageFinetuneOption.Opacity, 70);
     }
 }
 ```

@@ -61,7 +61,7 @@ Here is an example of Frame using the [`DrawFrameAsync`](https://help.syncfusion
 
     private async void CreatedAsync()
     {
-        await ImageEditor.OpenAsync("nature.png");
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
 
     private async void MatClick()
@@ -88,7 +88,6 @@ Here is an example of Frame using the [`DrawFrameAsync`](https://help.syncfusion
     {
         await ImageEditor.DrawFrameAsync(FrameType.Hook, "red", "blue", 20, 20, 20, 20, FrameLineStyle.Solid, 1);
     }
-
 }
 ```
 

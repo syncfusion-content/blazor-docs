@@ -38,7 +38,7 @@ Here is an example of adding the custom toolbar item to the quick access toolbar
 
     private async void OpenAsync()
     {
-        await ImageEditor.OpenAsync("nature.png");
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
 
     private void QuickAccessToolbarOpening(QuickAccessToolbarEventArgs args)

@@ -30,14 +30,14 @@ Here is an example of configuring image restrictions using the [`uploadSettings`
 </div>
 
 <SfImageEditor @ref="ImageEditor" Height="400">
-<ImageEditorUploadSettings @ref="UploadSettings" AllowedExtensions="@AllowedExtensions"></ImageEditorUploadSettings>
+    <ImageEditorUploadSettings AllowedExtensions="@AllowedExtensions"></ImageEditorUploadSettings>
 </SfImageEditor>
 @code {
     private SfImageEditor ImageEditor;
-    string AllowedExtensions = ".jpeg, .jpg";
+    string AllowedExtensions = ".jpg, .svg";
     private async void LoadInvalidImage()
     {
-        await ImageEditor.OpenAsync("nature.png");
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
 }
 ```
@@ -59,7 +59,7 @@ Here is an example of configuring image restrictions using the [`ImageEditorUplo
 </div>
 
 <SfImageEditor @ref="ImageEditor" Height="400">
-<ImageEditorUploadSettings @ref="UploadSettings" MinFileSize="@MinFileSize" MaxFileSize="@MaxFileSize" ></ImageEditorUploadSettings>
+    <ImageEditorUploadSettings MinFileSize="@MinFileSize" MaxFileSize="@MaxFileSize"></ImageEditorUploadSettings>
 </SfImageEditor>
 @code {
     private SfImageEditor ImageEditor;
@@ -67,7 +67,7 @@ Here is an example of configuring image restrictions using the [`ImageEditorUplo
     double MaxFileSize = 100;
     private async void LoadInvalidImage()
     {
-        await ImageEditor.OpenAsync("nature.png");
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
 }
 ```

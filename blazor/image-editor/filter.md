@@ -41,7 +41,7 @@ Here is an example of filtering using the [`ApplyImageFilterAsync`](https://help
 
     private async void OpenAsync()
     {
-        await ImageEditor.OpenAsync("nature.png");
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
 
     private async void ChromeClick()

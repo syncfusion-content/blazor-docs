@@ -25,18 +25,57 @@ Types of adjustment in the Image Editor `z-order` support.
 In the following example, you can use the `z-order` support.
 
 ```cshtml
-@using Syncfusion.Blazor.ImageEditor 
+@using Syncfusion.Blazor.ImageEditor
+@using Syncfusion.Blazor.Buttons
 
-<SfImageEditor @ref="ImageEditor" Height="400">
+<div style="padding-bottom: 15px">
+    <SfButton OnClick="DrawShapes">Draw Shapes</SfButton>
+    <SfButton OnClick="BringForward">Bring Forward</SfButton>
+    <SfButton OnClick="SendBackward">Send Backward</SfButton>
+    <SfButton OnClick="BringToFront">Bring To Front</SfButton>
+    <SfButton OnClick="SendToBack">Send To Back</SfButton>
+</div>
+
+<SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="400">
     <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
-</SfImageEditor> 
+</SfImageEditor>
 
-@code { 
-    SfImageEditor ImageEditor; 
-    private async void OpenAsync() 
-    { 
-        await ImageEditor.OpenAsync("nature.png"); 
-    } 
+@code {
+    SfImageEditor ImageEditor;
+    private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>() { };
+    private async void OpenAsync()
+    {
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
+    }
+
+    private async void DrawShapes()
+    {
+        ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
+        await ImageEditor.DrawRectangleAsync(Dimension.X.Value + 10, Dimension.Y.Value + 10, 150, 70, 2, "", "red");
+        await ImageEditor.DrawRectangleAsync(Dimension.X.Value + 20, Dimension.Y.Value + 20, 150, 70, 2, "", "red");
+        await ImageEditor.DrawRectangleAsync(Dimension.X.Value + 30, Dimension.Y.Value + 30, 150, 70, 2, "", "green");
+        await ImageEditor.DrawRectangleAsync(Dimension.X.Value + 40, Dimension.Y.Value + 40, 150, 70, 2, "", "red");
+    }
+
+    private async void BringForward()
+    {
+        await ImageEditor.BringForwardAsync("shape_3");
+    }
+
+    private async void SendBackward()
+    {
+        await ImageEditor.SendBackwardAsync("shape_3");
+    }
+
+    private async void BringToFront()
+    {
+        await ImageEditor.BringToFrontAsync("shape_3");
+    }
+
+    private async void SendToBack()
+    {
+        await ImageEditor.SendToBackAsync("shape_3");
+    }
 }
 ```
 
