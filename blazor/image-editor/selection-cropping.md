@@ -220,7 +220,7 @@ When selecting an area for cropping, users can typically resize the selection fr
 
 Users can perform cropping either through the toolbar or by using our public methods. While predefined ratio selections are available in the toolbar, users can also crop with custom ratios using our public method, select. Regardless of the ratio type used, the selection will adhere to the specified ratio, even when resizing the selection area.
 
-Here is an example of cropping with a custom ratio selection using the [`OnSelectionResizeStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_OnSelectionResizeStart) event.
+Here is an example of cropping with a custom ratio selection using the [`OnSelectionResizeStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_OnSelectionResizeStart) and [`OnSelectionResizeEnd`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_OnSelectionResizeEnd) event.
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
