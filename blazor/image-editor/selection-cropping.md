@@ -175,7 +175,7 @@ In the image editor, when an image is cropped, it is usually enlarged or scaled 
 
 ![Blazor Image Editor with Crop an image](./images/blazor-image-editor-original-size.jpg)
 
-## Resize selections
+## SelectionResize events
 
 The selection region can be changed programmatically by using [`OnSelectionResizeStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_OnSelectionResizeStart) and [`OnSelectionResizeEnd`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_OnSelectionResizeEnd) event. This event is activated during resizing the selection using mouse, and it allows for alterations to the selection region by adjusting the specified properties. 
 
