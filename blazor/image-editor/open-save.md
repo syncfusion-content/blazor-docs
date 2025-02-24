@@ -104,34 +104,35 @@ User can easily open images in the Image Editor using a file uploader. This meth
 @using System.IO
 
 <div class="e-img-editor-sample">
-    <SfUploader AllowedExtensions=".jpg,.jpeg,.png" AutoUpload="false" @ref="uploader" Selected="@OnImageSelected">
+    <SfUploader AllowedExtensions=".jpg,.jpeg,.png" @ref="uploader" ShowFileList=false>
+        <UploaderEvents ValueChange="@OnImageSelected"></UploaderEvents>
     </SfUploader>
-    <SfImageEditor @ref="imageEditor" Height="350px"></SfImageEditor>
+    <SfImageEditor @ref="ImageEditor" Height="350px"></SfImageEditor>
 </div>
 
 @code {
     private SfUploader uploader;
-    private SfImageEditor imageEditor;
+    private SfImageEditor ImageEditor;
 
     private async Task OnImageSelected(UploadChangeEventArgs args)
     {
-        if (args.Files != null && args.Files.Count > 0)
+        if (args.Files?.Count > 0)
         {
             var file = args.Files[0];
             if (file != null)
             {
-                using (var memoryStream = new MemoryStream())
-                {
-                    await file.File.OpenReadStream(long.MaxValue).CopyToAsync(memoryStream);
-                    string base64String = Convert.ToBase64String(memoryStream.ToArray());
-                    string dataUrl = "data:image/png;base64," + base64String;
-                    await imageEditor.OpenAsync(dataUrl);
-                }
+                using var memoryStream = new MemoryStream();
+                await file.File.OpenReadStream(long.MaxValue).CopyToAsync(memoryStream);
+                string base64String = Convert.ToBase64String(memoryStream.ToArray());
+                string dataUrl = $"data:image/png;base64,{base64String}";
+                await ImageEditor.OpenAsync(dataUrl);
             }
         }
     }
 }
 ```
+
+![Blazor Image Editor with File uploader](./images/blazor-image-editor-uploader.jpg)
 
 ### Add watermarks while opening an image 
 
