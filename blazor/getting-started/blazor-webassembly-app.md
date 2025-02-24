@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor WebAssembly App in Visual Studio
 
-This article provides a step-by-step instructions for building Blazor WebAssembly App with `Blazor Calendar` component using [Visual Studio](https://visualstudio.microsoft.com/vs/).
+This article provides a step-by-step instructions for building Blazor WebAssembly App with `Blazor Calendar` component using [Visual Studio](https://visualstudio.microsoft.com/vs/) and Visual Studio Code.
 
 To get start quickly with Blazor WebAssembly App, you can check on this video.
 
