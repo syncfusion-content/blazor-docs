@@ -9,11 +9,11 @@ documentation: ug
 
 # Data Binding in Blazor TreeView Component
 
-The Blazor TreeView component provides the option to load data either from the local data sources or from remote data services. This can be done through `DataSource` property that is a member of the `Fields` property. The `DataSource` property supports list of objects and `DataManager`. It also supports different kinds of data services such as OData, OData V4, Web API, URL, and JSON with the help of `DataManager` adaptors.
+The Blazor TreeView component provides the option to load data either from the local data sources or from remote data services. This can be done through [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_DataSource) property that is a member of the [`Fields`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldsSettings-1.html) property. The `DataSource` property supports list of objects and `DataManager`. It also supports different kinds of data services such as OData, OData V4, Web API, URL, and JSON with the help of `DataManager` adaptors.
 
 Blazor TreeView has `load on demand` (Lazy load), by default. It reduces the bandwidth size when consuming huge data. It loads first level nodes initially, and when parent node is expanded, loads the child nodes based on the `ParentID/Child` member.
 
-By default, the `LoadOnDemand` is set to true. By disabling this property, all the tree nodes are rendered at the beginning itself. The `DataBound` event can be used to perform actions. This event will be triggered once the data source is populated in the TreeView.
+By default, the [`LoadOnDemand`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_LoadOnDemand) is set to true. By disabling this property, all the tree nodes are rendered at the beginning itself. The [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_DataBound) event can be used to perform actions. This event will be triggered once the data source is populated in the TreeView.
 
 To bind list data and service URLs to the Syncfusion Blazor TreeView component , you can check on this video.
 
@@ -22,7 +22,7 @@ To bind list data and service URLs to the Syncfusion Blazor TreeView component ,
 
 ## Local data
 
-To bind local data to the Blazor TreeView, assign a list of objects to the `DataSource` property. The Blazor TreeView component requires three fields (Id, Text, and ParentID) to render local data source. When mapper fields are not specified, it takes the default values as the mapping fields. Local data source can also be provided as an instance of the `DataManager`. It supports two kinds of local data binding methods.
+To bind local data to the Blazor TreeView, assign a list of objects to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_DataSource) property. The Blazor TreeView component requires three fields (Id, Text, and ParentID) to render local data source. When mapper fields are not specified, it takes the default values as the mapping fields. Local data source can also be provided as an instance of the [`DataManager`](https://blazor.syncfusion.com/documentation/data/getting-started). It supports two kinds of local data binding methods.
 
 * Hierarchical data
 
@@ -30,7 +30,7 @@ To bind local data to the Blazor TreeView, assign a list of objects to the `Data
 
 ### Hierarchical data
 
-Blazor TreeView can be populated with hierarchical data source that contains nested list of objects. A hierarchical data can be directly assigned to the `DataSource` property, and map all the field members with corresponding keys from the hierarchical data to `Fields` property.
+Blazor TreeView can be populated with hierarchical data source that contains nested list of objects. A hierarchical data can be directly assigned to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_DataSource) property, and map all the field members with corresponding keys from the hierarchical data to [`Fields`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldsSettings-1.html) property.
 
 In the following example, **Id**, **FolderName**, and **SubFolders** columns from hierarchical data have been mapped to **Id**, **Text**, and **Child** fields, respectively.
 
@@ -43,10 +43,10 @@ In the following example, **Id**, **FolderName**, and **SubFolders** columns fro
 @code{
     public class MailItem
     {
-        public string Id { get; set; }
-        public string FolderName { get; set; }
+        public string? Id { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
-        public List<MailItem> SubFolders { get; set; }
+        public List<MailItem>? SubFolders { get; set; }
     }
     List<MailItem> MyFolder = new List<MailItem>();
     protected override void OnInitialized()
@@ -122,7 +122,7 @@ In the following example, **Id**, **FolderName**, and **SubFolders** columns fro
 
 ### Self-referential data
 
-Blazor TreeView can be populated from self-referential data structure that contains list of objects with `ParentID` mapping. The self-referential data can be directly assigned to the `DataSource` property, and map all the field members with corresponding keys from self-referential data to `Fields` property.
+Blazor TreeView can be populated from self-referential data structure that contains list of objects with `ParentID` mapping. The self-referential data can be directly assigned to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_DataSource) property, and map all the field members with corresponding keys from self-referential data to [`Fields`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldsSettings-1.html) property.
 
 To render the root level nodes, specify the ParentID as null or no need to specify the ParentID in `DataSource`. In the following example, **Id**, **Pid**, **HasSubFolders**, and **FolderName** columns from self-referential data have been mapped to **Id**, **ParentId**, **HasChildren**, and **Text** fields, respectively.
 
@@ -135,9 +135,9 @@ To render the root level nodes, specify the ParentID as null or no need to speci
 @code{
     public class MailItem
     {
-        public string Id { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? Id { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
     }
@@ -217,18 +217,18 @@ To render the root level nodes, specify the ParentID as null or no need to speci
 
 ### ExpandoObject binding 
 
-The Blazor TreeView is a generic component that is strongly bound to a specific model type, but in cases where the model type is unknown at compile time, the TreeView can be bound to a list of ExpandoObjects using the `DataSource` property. This allows the TreeView to perform all supported data operations.
+The Blazor TreeView is a generic component that is strongly bound to a specific model type, but in cases where the model type is unknown at compile time, the TreeView can be bound to a list of ExpandoObjects using the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_DataSource) property. This allows the TreeView to perform all supported data operations.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
 @using System.Dynamic
 <SfTreeView TValue="ExpandoObject">
-    <TreeViewFieldsSettings TValue="ExpandoObject" Id="ID" DataSource="@TreeData" Text="Name" ParentID="ParentID" HasChildren="ChildRecordID" Expanded="Expanded"></TreeViewFieldsSettings>
+    <TreeViewFieldsSettings TValue="ExpandoObject" Id="ID" DataSource="@TreeData" Text="Name" ParentID="ParentID" HasChildren="HasChildren" Expanded="Expanded"></TreeViewFieldsSettings>
 </SfTreeView>
 
 @code {
-    SfTreeView<ExpandoObject> TreeGrid;
-    public List<ExpandoObject> TreeData { get; set; }
+    SfTreeView<ExpandoObject>? TreeGrid;
+    public List<ExpandoObject>? TreeData { get; set; }
     protected override void OnInitialized()
     {
         this.TreeData = GetData().ToList();
@@ -248,6 +248,7 @@ The Blazor TreeView is a generic component that is strongly bound to a specific 
             ParentRecord.Name = "Parent " + i;
             ParentRecord.ParentID = null;
             ParentRecord.Expanded = true;
+            ParentRecord.HasChildren = true;
             Data.Add(ParentRecord);
             AddChildRecords(ParentRecordID);
         }
@@ -270,18 +271,18 @@ The Blazor TreeView is a generic component that is strongly bound to a specific 
 
 ### DynamicObject binding
 
-The Blazor TreeView is a generic component that is strongly bound to a specific model type, but in cases where the model type is unknown at compile time, the data can be bound to the TreeView as a list of DynamicObjects. The TreeView can also perform all supported data operations on DynamicObjects when they are assigned to the DataSource property.
+The Blazor TreeView is a generic component that is strongly bound to a specific model type, but in cases where the model type is unknown at compile time, the data can be bound to the TreeView as a list of DynamicObjects. The TreeView can also perform all supported data operations on DynamicObjects when they are assigned to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_DataSource) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
 @using System.Dynamic
 <SfTreeView TValue="DynamicDictionary" AllowEditing="true">
-    <TreeViewFieldsSettings TValue="DynamicDictionary" Id="ID" DataSource="@TreeData" Text="Name" ParentID="ParentID" HasChildren="ChildRecordID" Expanded="Expanded"></TreeViewFieldsSettings>
+    <TreeViewFieldsSettings TValue="DynamicDictionary" Id="ID" DataSource="@TreeData" Text="Name" ParentID="ParentID" HasChildren="HasChildren" Expanded="Expanded"></TreeViewFieldsSettings>
 </SfTreeView>
 
 @code {
-    SfTreeView<DynamicDictionary> TreeView;
-    public List<DynamicDictionary> TreeData { get; set; }
+    SfTreeView<DynamicDictionary>? TreeView;
+    public List<DynamicDictionary>? TreeData { get; set; }
     protected override void OnInitialized()
     {
         this.TreeData = GetData().ToList();
@@ -302,6 +303,7 @@ The Blazor TreeView is a generic component that is strongly bound to a specific 
             ParentRecord.Name = "Parent " + i;
             ParentRecord.ParentID = null;
             ParentRecord.Expanded = true;
+            ParentRecord.HasChildren = true;
             Data.Add(ParentRecord);
             AddChildRecords(ParentRecordID);
         }
@@ -346,7 +348,7 @@ The Blazor TreeView is a generic component that is strongly bound to a specific 
 
 ## Remote data
 
-Blazor TreeView can also be populated from a remote data service with the help of `DataManager` component and `Query` property. It supports different kinds of data services such as OData, OData V4, Web API, URL, and JSON with the help of `DataManager` adaptors. A service data can be assigned as an instance of `DataManager` to the `DataSource` property. To interact with remote data source, provide the endpoint `url`.
+Blazor TreeView can also be populated from a remote data service with the help of `DataManager` component and `Query` property. It supports different kinds of data services such as OData, OData V4, Web API, URL, and JSON with the help of `DataManager` adaptors. A service data can be assigned as an instance of `DataManager` to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_DataSource) property. To interact with remote data source, provide the endpoint `url`.
 
 The `DataManager` that acts as an interface between the service endpoint and the TreeView requires the following information to interact with service endpoint properly.
 
@@ -391,8 +393,8 @@ The **OrderID**, **EmployeeID**, and **ShipName** columns from orders table have
     {
         public int? EmployeeID { get; set; }
         public int OrderID { get; set; }
-        public string ShipName { get; set; }
-        public string FirstName { get; set; }
+        public string? ShipName { get; set; }
+        public string? FirstName { get; set; }
     }
 }
 
@@ -423,8 +425,8 @@ The **OrderID**, **EmployeeID**, and **ShipName** columns from orders table have
     {
         public int? EmployeeID { get; set; }
         public int OrderID { get; set; }
-        public string ShipName { get; set; }
-        public string FirstName { get; set; }
+        public string? ShipName { get; set; }
+        public string? FirstName { get; set; }
     }
 }
 
@@ -533,7 +535,7 @@ namespace BlazorTreeView.Controller
                 this.haschild = haschild;
             }
             public int? ProductID { get; set; }
-            public string ProductName { get; set; }
+            public string? ProductName { get; set; }
             public int? pid { get; set; }
             public bool haschild { get; set; } 
         }
@@ -556,14 +558,14 @@ To add custom parameters to the data request in the Blazor TreeView component, u
     </SfTreeView>
 </div>
 @code {
-    SfTreeView<MailItem> treeview;
-    public string ParamValue = "true";
-    public Query Query { get; set; }
+    SfTreeView<MailItem>? treeview;
+    public string? ParamValue = "true";
+    public Query? Query { get; set; }
     public class MailItem
     {
-        public string ID { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? ID { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
     }
@@ -1461,7 +1463,7 @@ namespace BlazorTreeView.Controller
                 this.haschild = haschild;
             }
             public int? ProductID { get; set; }
-            public string ProductName { get; set; }
+            public string? ProductName { get; set; }
             public int? pid { get; set; }
             public bool haschild { get; set; } 
         }
@@ -1473,7 +1475,7 @@ namespace BlazorTreeView.Controller
 
 ### Render more nodes with more levels
 
-By default, the TreeView component includes performance optimization features. Additionally, the LoadOnDemand feature can be used to enhance performance and reduce the amount of data transmitted when working with large amounts of data.
+By default, the TreeView component includes performance optimization features. Additionally, the [LoadOnDemand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_LoadOnDemand) feature can be used to enhance performance and reduce the amount of data transmitted when working with large amounts of data.
 
 In this example, a tree node is being rendered with 25 levels of child nodes.
 
@@ -1486,9 +1488,9 @@ In this example, a tree node is being rendered with 25 levels of child nodes.
 @code {
     public class MailItem
     {
-        public string ID { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? ID { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
     }
@@ -1720,7 +1722,7 @@ The Blazor TreeView component allows you to render tree nodes with a **GUID**. T
     public class DriveData
     {
         public Guid NodeId { get; set; }
-        public string NodeText { get; set; }
+        public string? NodeText { get; set; }
         public bool Expanded { get; set; }
         public bool Selected { get; set; }
         public List<DriveData> Children;
