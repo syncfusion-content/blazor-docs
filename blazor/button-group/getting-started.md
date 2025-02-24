@@ -11,7 +11,7 @@ documentation: ug
 
 # Getting Started with Blazor ButtonGroup Component
 
-This section briefly explains about how to include [Blazor ButtonGroup](https://www.syncfusion.com/blazor-components/blazor-button-group) component in your Blazor WebAssembly App using Visual Studio.
+This section briefly explains about how to include [Blazor ButtonGroup](https://www.syncfusion.com/blazor-components/blazor-button-group) component in your Blazor WebAssembly App using Visual Studio and Visual Studio Code.
 
 ## Prerequisites
 

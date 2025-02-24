@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor AutoComplete Component
 
-This section briefly explains about how to include [Blazor AutoComplete](https://www.syncfusion.com/blazor-components/blazor-autocomplete) component in your Blazor WebAssembly App using Visual Studio.
+This section briefly explains about how to include [Blazor AutoComplete](https://www.syncfusion.com/blazor-components/blazor-autocomplete) component in your Blazor WebAssembly App using Visual Studio and Visual Studio Code.
 
 To get started quickly with Blazor AutoComplete component, you can check on this video or [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/AutoComplete)
 

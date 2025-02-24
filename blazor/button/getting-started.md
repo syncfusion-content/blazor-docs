@@ -11,7 +11,7 @@ documentation: ug
 
 # Getting Started with Blazor Button Component
 
-This section briefly explains about how to include [Blazor Button](https://www.syncfusion.com/blazor-components/blazor-button) component in your Blazor WebAssembly App using Visual Studio.
+This section briefly explains about how to include [Blazor Button](https://www.syncfusion.com/blazor-components/blazor-button) component in your Blazor WebAssembly App using Visual Studio and Visual Studio Code.
 
 To get start quickly with Button Component using Blazor, you can check on this video or [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Button) sample:
 

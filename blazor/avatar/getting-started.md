@@ -11,7 +11,7 @@ documentation: ug
 
 # Getting Started with Blazor Avatar Component
 
-This section briefly explains about how to include [Blazor Avatar](https://blazor.syncfusion.com/documentation/avatar/getting-started) component in your Blazor WebAssembly App using Visual Studio.
+This section briefly explains about how to include [Blazor Avatar](https://blazor.syncfusion.com/documentation/avatar/getting-started) component in your Blazor WebAssembly App using Visual Studio and Visual Studio Code.
 
 To get start quickly with Avatar component using Blazor, you can check on this video:
 
