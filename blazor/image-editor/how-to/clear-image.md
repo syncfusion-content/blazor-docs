@@ -36,3 +36,5 @@ The [`ClearImageAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
     }
 }
 ```
+
+![Blazor Image Editor with Resize the custom selection](../images/blazor-image-editor-clear-image.jpg)

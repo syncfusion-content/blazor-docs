@@ -62,3 +62,5 @@ Rendering the Image Editor in a dialog involves displaying the image editor comp
     }
 }
 ```
+
+![Blazor Image Editor with Resize the custom selection](../images/blazor-image-editor-dialog.jpg)
