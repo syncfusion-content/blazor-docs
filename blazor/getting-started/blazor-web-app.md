@@ -417,7 +417,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Accordion compon
 <tr>
 <td></td>
 <td>WebAssembly</td>
-<td>@rendermode InteractiveWebAssemly</td>
+<td>@rendermode InteractiveWebAssembly</td>
 </tr>
 <tr>
 <td></td>
