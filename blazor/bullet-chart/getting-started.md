@@ -9,7 +9,9 @@ documentation: ug
 
 # Getting Started with Blazor Bullet Chart Component
 
-This section briefly explains about how to include [Blazor Bullet Chart](https://www.syncfusion.com/blazor-components/blazor-bullet-chart) component in your Blazor WebAssembly App using Visual Studio. To get start quickly with Bullet Chart Component using Blazor, you can check on this video or [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/BulletChart) sample:
+This section briefly explains about how to include [Blazor Bullet Chart](https://www.syncfusion.com/blazor-components/blazor-bullet-chart) component in your Blazor WebAssembly App using Visual Studio and Visual Studio Code.
+
+To get start quickly with Bullet Chart Component using Blazor, you can check on this video or [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/BulletChart) sample:
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=rWXSysqy5YE"%}

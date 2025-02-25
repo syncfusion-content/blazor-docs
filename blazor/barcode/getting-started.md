@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Barcode Component
 
-This section briefly explains about how to include [Blazor Barcode](https://www.syncfusion.com/blazor-components/blazor-barcode) component in your Blazor WebAssembly App using Visual Studio.
+This section briefly explains about how to include [Blazor Barcode](https://www.syncfusion.com/blazor-components/blazor-barcode) component in your Blazor WebAssembly App using Visual Studio and Visual Studio Code.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=CuApVvYbQtI" %}
 
