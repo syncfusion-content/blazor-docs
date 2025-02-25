@@ -28,13 +28,13 @@ To get start quickly with Blazor Web App, you can check on this video.
 
 {% tabcontent Visual Studio %}
 
-<p style="text-align:center">You can create a Blazor Web App using <a href="https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio">Syncfusion Blazor Templates</a> in Visual Studio.</p>
+<p style="vertical-align:middle">You can create a Blazor Web App using <a href="https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio">Syncfusion Blazor Templates</a> in Visual Studio.</p>
 
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
 
-<p style="text-align:center">You can create a Blazor Web App using <a href="https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project">Syncfusion Blazor Templates</a> in Visual Studio Code.</p>
+<p style="vertical-align:middle">You can create a Blazor Web App using <a href="https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project">Syncfusion Blazor Templates</a> in Visual Studio Code.</p>
 
 {% endtabcontent %}
 
