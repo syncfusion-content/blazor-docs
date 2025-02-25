@@ -9,7 +9,7 @@ documentation: ug
 
 # Drag and Drop in Blazor TreeView Component
 
-The Blazor TreeView component allows to drag and drop any node by setting `AllowDragAndDrop` &nbsp;to **true**. Nodes can be dragged and dropped at all levels of the same TreeView.
+The Blazor TreeView component allows to drag and drop any node by setting [`AllowDragAndDrop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_AllowDragAndDrop) property to **true**. Nodes can be dragged and dropped at all levels of the same TreeView.
 
 The dragged nodes can be dropped at any level by indicator lines with **line**, **plus/minus**, and **restrict** icons. It represents the exact position where the node is to be dropped as sibling or child.
 
@@ -21,11 +21,11 @@ The following table explains the usage of indicator icons.
 | Minus or restrict icon |Indicates that the dragged node is not to be dropped at the hovered region. |
 | In between icon | Indicates that the dragged node is to be added as siblings of hovered region. |
 
-* In order to prevent dragging action for a particular node, the `OnNodeDragStart` event can be used which is triggered when the node drag is started. The `OnNodeDragged` event is triggered when the drag is stopped.
+* In order to prevent dragging action for a particular node, the [`OnNodeDragStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_OnNodeDragStart) event can be used which is triggered when the node drag is started. The [`OnNodeDragged`]((https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_OnNodeDragged)) event is triggered when the drag is stopped.
 
-* The `NodeDropped` event is triggered when the TreeView node is dropped on the target element successfully.
+* The [`NodeDropped`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeDropped) event is triggered when the TreeView node is dropped on the target element successfully.
 
-N> In the **OnNodeDragged** event currently there is no option to cancel the event. However the other event arguments could be accessed.
+N> In the [**OnNodeDragged**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_OnNodeDragged) event currently there is no option to cancel the event. However the other event arguments could be accessed.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -36,8 +36,8 @@ N> In the **OnNodeDragged** event currently there is no option to cancel the eve
 @code{
     public class TeamDetails
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
         public bool Expanded { get; set; }
         public bool Selected { get; set; }
         public List<TeamDetails> Children;
@@ -128,8 +128,8 @@ To drag and drop more than one node, enable the [AllowMultiSelection](https://he
 @code{
     public class TeamDetails
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
         public bool Expanded { get; set; }
         public bool Selected { get; set; }
         public List<TeamDetails> Children;
@@ -228,9 +228,9 @@ The default value of `AllowDragAndDrop` property is false.
 @code {
     public class MailItem
     {
-        public string ID { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? ID { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
     }
@@ -317,9 +317,9 @@ The Blazor TreeView component has built-in support for drag and drop functionali
 @code {
     public class TeamDetails
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Text { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Text { get; set; }
         public bool Expanded { get; set; }
         public bool Selected { get; set; }
         public List<TeamDetails> Children;
@@ -444,12 +444,6 @@ The Blazor TreeView component has built-in support for drag and drop functionali
         border: 0;
     }
 
-    .e-bigger #list, .e-bigger #tree1, .e-bigger #tree2 {
-        height: 354px;
-        overflow: auto;
-        border: 0;
-    }
-
     .tree1-data, .tree2-data, .tree3-data {
         padding: 15px;
         margin-bottom: 25px;
@@ -466,12 +460,6 @@ The Blazor TreeView component has built-in support for drag and drop functionali
         border-radius: 3px;
         min-height: 288px;
     }
-    /* Specifies the styles for custom elements in the ListView component */
-    .material-dark .custom-delete::before, .fabric-dark .custom-delete::before,
-    .bootstrap-dark .custom-delete::before, .tailwind-dark .custom-delete::before,
-    .bootstrap5-dark .custom-delete::before, .fluent-dark .custom-delete::before {
-        color: rgba(255, 255, 255, 0.54);
-    }
 
     .custom-delete::before {
         content: "\e700";
@@ -482,41 +470,9 @@ The Blazor TreeView component has built-in support for drag and drop functionali
         float: right;
     }
 
-    .material .custom-delete::before {
-        vertical-align: top;
-    }
-
     .custom-delete {
         float: right;
         font-family: 'cross-circle';
-    }
-
-    .bootstrap5 .custom-delete,
-    .bootstrap5-dark .custom-delete {
-        margin-top: 3px;
-    }
-
-    .highcontrast .custom-delete::before {
-        color: #fff;
-    }
-
-    .highcontrast .e-active.e-list-item .custom-delete::before {
-        color: #000;
-    }
-
-    .bootstrap4.e-bigger #list, .bootstrap4.e-bigger #tree1, .bootstrap4.e-bigger #tree2 {
-        height: 384px;
-        overflow: auto;
-    }
-
-    .bootstrap4 #list, .bootstrap4 #tree1, .bootstrap4 #tree2 {
-        height: 320px;
-        overflow: auto;
-        border: 0;
-    }
-
-    .bootstrap4.e-bigger .e-drag-item.e-treeview .e-list-text {
-        margin-left: 12px;
     }
 
     @@media (max-width: 1200px) {
@@ -557,9 +513,9 @@ For example, in the following code snippet, the drag and drop is prevented for t
 @code {
     public class MailItem
     {
-        public string ID { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? ID { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
     }
@@ -633,13 +589,13 @@ In the example shown, the value of the `DropIndex` is displayed in the Syncfusio
 @code{
     public class TeamDetails
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
         public bool Expanded { get; set; }
         public bool Selected { get; set; }
         public List<TeamDetails> Children;
     }
-    public string dropIndexValue { get; set; }
+    public string? dropIndexValue { get; set; }
 
     public void nodeDragStop(DragAndDropEventArgs args)
     {
