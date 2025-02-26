@@ -64,15 +64,18 @@ In Blazor Range Slider component, the DataAnnotation Validator is used here.
     .e-float-text {
         font-weight: 500;
     }
+
     table,
     td,
     th {
         padding: 5px;
     }
+
     .form-horizontal {
         margin-left: 0;
         margin-right: 0;
     }
+
     form {
         border: 1px solid #ccc;
         box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.36);
@@ -83,6 +86,7 @@ In Blazor Range Slider component, the DataAnnotation Validator is used here.
         margin: auto;
         max-width: 650px;
     }
+    
     .form-title {
         width: 100%;
         text-align: center;

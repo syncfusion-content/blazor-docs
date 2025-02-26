@@ -9,7 +9,7 @@ documentation: ug
 
 # Customize the tick label in Blazor Range Slider Component
 
-Slider can be customized via CSS. By overriding the slider CSS classes, you can customize the ticks. The ticks in slider allows to easily identify the current value/values of the slider. It contains `smallStep` and `largeStep`. By default, slider has class `e-tick` for slider ticks. You can override the class as per your requirement. Refer to the following code snippet to render ticks.
+Slider can be customized via CSS. By overriding the slider CSS classes, you can customize the ticks. The ticks in slider allows to easily identify the current value/values of the slider. It contains [`SmallStep`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderTicks.html#Syncfusion_Blazor_Inputs_SliderTicks_SmallStep) and [`LargeStep`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderTicks.html#Syncfusion_Blazor_Inputs_SliderTicks_LargeStep). By default, slider has class `e-tick` for slider ticks. You can override the class as per your requirement. Refer to the following code snippet to render ticks.
 
 ```css
 .e-scale .e-tick.e-custom::before {
