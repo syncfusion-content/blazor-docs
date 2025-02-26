@@ -77,9 +77,9 @@ In the following example, the [ShowSelectAll](https://help.syncfusion.com/cr/bla
 <SfButton OnClick="UnSelectAllNode">UnSelect all node</SfButton>
 
 <div style="padding-top:20px">
-<SfDropDownTree @ref="sfDropDownTree" TItem="EmployeeData" TValue="string" Placeholder="Select an employee" Width="500px"  ShowCheckBox ShowSelectAll>
-<DropDownTreeField TItem="EmployeeData" DataSource="Data" ID="Id" Text="Name" HasChildren="HasChild" ParentID="PId"></DropDownTreeField>
-</SfDropDownTree>
+    <SfDropDownTree @ref="sfDropDownTree" TItem="EmployeeData" TValue="string" Placeholder="Select an employee" Width="500px"  ShowCheckBox ShowSelectAll>
+        <DropDownTreeField TItem="EmployeeData" DataSource="Data" ID="Id" Text="Name" HasChildren="HasChild" ParentID="PId"></DropDownTreeField>
+    </SfDropDownTree>
 </div>
 
  
