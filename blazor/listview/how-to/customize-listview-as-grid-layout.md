@@ -221,9 +221,9 @@ In the below sample, it is sorted in `Ascending` order. To sort it in descending
         DataSource = new List<ListDataModel>(DataSourceOG);
     }
 
-    void Search(string value)
+    private void Search(string value)
     {
-        if (value != "")
+        if (!string.IsNullOrEmpty(value))
         {
             DataSource = new List<ListDataModel>(DataSourceOG.Where(e => e.Text.ToLower().Contains(value.ToLower())));
         }
@@ -231,18 +231,17 @@ In the below sample, it is sorted in `Ascending` order. To sort it in descending
         {
             DataSource = new List<ListDataModel>(DataSourceOG);
         }
-
     }
 
-    void Remove(ListDataModel data)
+    async void Remove(ListDataModel data)
     {
-        DataSourceOG.RemoveAt(DataSourceOG.FindIndex(e => e.Id == data.Id));
+        await DataSourceOG.RemoveAt(DataSourceOG.FindIndex(e => e.Id == data.Id));
         DataSource = new List<ListDataModel>(DataSourceOG);
     }
 
-    void Add()
+    async void Add()
     {
-        DialogObj.HideAsync();
+        await DialogObj.HideAsync();
         DataSourceOG.Add(new ListDataModel { Id = Guid.NewGuid().ToString(), Text = Value });
         DataSource = new List<ListDataModel>(DataSourceOG);
         Value = "";

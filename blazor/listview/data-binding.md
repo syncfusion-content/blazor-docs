@@ -24,7 +24,7 @@ ListView provides an option to load the data either from local dataSource or rem
 | GroupBy | string | Specifies category of each list item. |
 | HtmlAttributes | string | Specifies list item html attributes field. |
 
-N> When complex data bind to ListView, you should map the ListViewFieldSettings properly. Otherwise, the ListView properties remains as undefined or null.
+N> When complex data bind to ListView, you should map the [`ListViewFieldSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewFieldSettings-1.html) properly. Otherwise, the ListView properties remains as undefined or null.
 
 ## Bind to local data
 
@@ -32,7 +32,7 @@ Local data can be represented in Array of JSON data:
 
 ### Array of JSON data
 
-ListView can generate its list items through an array of complex data. To get it work properly, you should map the appropriate columns to the [`Field`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewFieldSettings-1.html) property.
+ListView can generate its list items through an array of complex data. To get it work properly, you should map the appropriate columns to the [`ListViewFieldSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewFieldSettings-1.html) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Lists
@@ -217,7 +217,7 @@ namespace EFListView.Server.Controllers
 You can perform CRUD operations like Add and Delete by using the `AddItem`, [`RemoveItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_RemoveItems_System_Collections_Generic_IEnumerable__0__) methods.
 
 * `AddItem` - Add a new list item into the ListView.
-* `RemoveItem` - Delete a selected list item in the ListView.
+* `RemoveItems` - Delete a selected list item in the ListView.
 
 ```cshtml
 @using Syncfusion.Blazor
@@ -262,7 +262,7 @@ You can perform CRUD operations like Add and Delete by using the `AddItem`, [`Re
         {
             selectedItems = items.Data;
             Products list = new Products() { ProductID = selectedItems[0].ProductID, ProductName = selectedItems[0].ProductName };
-            await this.List.RemoveItem(list);
+            await this.List.RemoveItems(list);
         }
     }
 }

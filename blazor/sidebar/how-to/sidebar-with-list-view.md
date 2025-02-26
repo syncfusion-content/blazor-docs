@@ -118,9 +118,9 @@ In the following example, the Sidebar is rendered with ListView component in its
         border: none;
     }
 
-        .close-btn:hover {
-            color: #fafafa;
-        }
+    .close-btn:hover {
+        color: #fafafa;
+    }
 
     .e-icons.close-icon { /* csslint allow: adjoining-classes*/
         line-height: 2.2;
