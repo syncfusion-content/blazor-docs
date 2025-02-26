@@ -118,7 +118,7 @@ To create ButtonGroup with icons, [IconCss](https://help.syncfusion.com/cr/blazo
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjrUMBVBCbpNXWhK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjByDhrHzXmJmyeK?appbar=true&editor=true&result=true&errorlist=true&theme=material" %}
 
 
 ![Blazor ButtonGroup with Icon](./images/blazor-buttongroup-icon.png)

@@ -26,7 +26,10 @@ The template allows to define our own widgets for column values. Use the [ValueT
             <QueryBuilderColumn Field="PaymentMode" Label="PaymentMode" Type=Syncfusion.Blazor.QueryBuilder.ColumnType.String>
                 <QueryBuilderTemplates>
                     <ValueTemplate>
-                        <SfDropDownList TValue="string" TItem="ItemFields" DataSource="@Items" @bind-Value="@DefaultValue">
+                        @{
+                            string value = context.Value != null ? context.Value : DefaultValue;
+                        }
+                        <SfDropDownList TValue="string" TItem="ItemFields" DataSource="@Items" @bind-Value="@value">
                             <DropDownListFieldSettings Text="Id"></DropDownListFieldSettings>
                             <DropDownListEvents TItem="ItemFields" TValue="string" ValueChange="e => OnChange(e, context)"></DropDownListEvents>
                         </SfDropDownList>
