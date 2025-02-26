@@ -13,7 +13,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-s
 
 ## Integration
 
-In the ListView control, template support is being used. In some cases, the control wrapper is always responsive across all devices, but the template contents are dynamically changed with unspecified (sample side) dimensions. CSS customization is also needed in sample-side to align template content responsively in both mobile and desktop modes. Here, two templates have been loaded for mobile and desktop modes. To check the device mode, use the Microsoft.AspNetCore.Http package and check for the UserAgent to detect mobile or desktop.
+In the ListView control, [`template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewTemplates-1.html) support is being used. In some cases, the control wrapper is always responsive across all devices, but the template contents are dynamically changed with unspecified (sample side) dimensions. CSS customization is also needed in sample-side to align template content responsively in both mobile and desktop modes. Here, two templates have been loaded for mobile and desktop modes. To check the device mode, use the **Microsoft.AspNetCore.Http** package and check for the **UserAgent** to detect mobile or desktop.
 
 ```cshtml
 @using Syncfusion.Blazor.Lists

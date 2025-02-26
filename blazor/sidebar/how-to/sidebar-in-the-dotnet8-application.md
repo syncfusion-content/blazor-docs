@@ -52,7 +52,6 @@ Integrate the Blazor Sidebar component into the `MainLayout.razor` page of the .
                 </div>
             </ChildContent>
         </SfSidebar>
-        <!-- end of sidebar element -->
         @*main-content declaration*@
         <div class="main-content" id="main-text">
             <div class="sidebar-content">
@@ -67,7 +66,7 @@ Integrate the Blazor Sidebar component into the `MainLayout.razor` page of the .
 @code {
     // Specifies the value of TreeView component ExpanOn property.
     public ExpandAction Expand = ExpandAction.Click;
-    // Specify the value of Sidebar component state. It indicates whether the sidebar component is in an open/close state.
+    // Specify the value of Sidebar component state. It indicates whether the Sidebar component is in an open/close state.
     public bool SidebarToggle = false;
     // Specifies the value of Sidebar HTMLAttribute property.
     Dictionary<string, object> HtmlAttribute = new Dictionary<string, object>()
