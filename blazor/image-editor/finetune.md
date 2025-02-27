@@ -32,6 +32,7 @@ Here is an example of hue, exposure, blur, and opacity fine-tuning using the [`F
     <SfButton OnClick="BrightnessClick">Brightness</SfButton>
     <SfButton OnClick="BlurClick">Blur</SfButton>
     <SfButton OnClick="ContrastClick">Contrast</SfButton>
+    <SfButton OnClick="SaturationClick">Contrast</SfButton>
     <SfButton OnClick="ExposureClick">Exposure</SfButton>
     <SfButton OnClick="HueClick">Hue</SfButton>
     <SfButton OnClick="OpacityClick">Opacity</SfButton>
@@ -63,6 +64,11 @@ Here is an example of hue, exposure, blur, and opacity fine-tuning using the [`F
     private async void ContrastClick()
     {
         await ImageEditor.FinetuneImageAsync(ImageFinetuneOption.Contrast, 10);
+    }
+
+    private async void SaturationClick()
+    {
+        await ImageEditor.FinetuneImageAsync(ImageFinetuneOption.Saturation, 100);
     }
 
     private async void ExposureClick()
