@@ -212,6 +212,8 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 {% tabs %}
 {% highlight razor %}
 
+@using Syncfusion.Blazor.Buttons
+
 <SfChip>
     <ChipItems>
         <ChipItem Text="Janet Leverling"></ChipItem>

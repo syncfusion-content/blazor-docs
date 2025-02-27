@@ -13,7 +13,7 @@ The filtered data can be displayed in the ListView control depending on the user
 
 * Render a textbox to get input for filtering data.
 
-* Render ListView with `DataSource`, and set the `SortOrder` property.
+* Render ListView with [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_DataSource), and set the [`SortOrder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_SortOrder) property.
 
 * Bind the `Input` event for textbox to perform filtering operation. To filter list data, pass the text value to `OnInput` to manipulate the data, and then update filtered data as ListView dataSource.
 

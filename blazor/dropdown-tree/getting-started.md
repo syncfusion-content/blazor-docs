@@ -190,11 +190,11 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Dropdown Tree co
     };
     public class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
-        public string PId { get; set; }
+        public string? PId { get; set; }
     }
 }
 

@@ -11,9 +11,9 @@ documentation: ug
 
 # Sidebar for specific content in Blazor Sidebar Component
 
-By default,[Blazor Sidebar](https://www.syncfusion.com/blazor-components/blazor-sidebar) initializes context to the body element. Using the `Target` property, set context element to initialize Sidebar inside any HTML element apart from the body element.
+By default, [Blazor Sidebar](https://www.syncfusion.com/blazor-components/blazor-sidebar) initializes context to the body element. Using the [`Target`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfSidebar.html#Syncfusion_Blazor_Navigations_SfSidebar_Target) property, set context element to initialize Sidebar inside any HTML element apart from the body element.
 
-In the following sample, click the toggle button to expand or collapse the sidebar and add button in sidebar element.
+In the following sample, click the toggle button to expand or collapse the Sidebar and add button in Sidebar element.
 
 ```cshtml
 

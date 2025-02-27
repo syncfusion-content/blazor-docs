@@ -17,10 +17,10 @@ The Dropdown Tree component can be used inside an EditForm to create a form that
 
 When the Dropdown Tree input is valid, the form is ready to be submitted. If the input is invalid, an error message will be displayed until a valid value is chosen.
 
-* The EditForm component wraps the entire form, has the Model attribute set to the treeModel variable of type Countries, and triggers the handleSubmit() method when the form is submitted.
+* The EditForm component wraps the entire form, has the Model attribute set to the treeModel variable of type Countries, and triggers the **handleSubmit()** method when the form is submitted.
 * The DataAnnotationsValidator component enables validation based on the Data Annotations attributes applied on the treeModel properties.
 * The ValidationMessage component displays a validation error message for the Name property of the treeModel variable.
-* The submit button submits the form and triggers the OnValidSubmit() method when clicked.
+* The submit button submits the form and triggers the **OnValidSubmit()** method when clicked.
 
 ```cshtml
 @using System.ComponentModel.DataAnnotations;
@@ -143,24 +143,24 @@ When the Dropdown Tree input is valid, the form is ready to be submitted. If the
     {
         [Required(ErrorMessage = "Please select your role.")]
         [MinLength(1, ErrorMessage = "Please select your role.")]
-        public List<string> Role { get; set; }
+        public List<string>? Role { get; set; }
         [Required(ErrorMessage = "Please select your skill.")]
         [MinLength(2, ErrorMessage = "Please select atleast 2 skills.")]
-        public List<string> Skills { get; set; }
+        public List<string>? Skills { get; set; }
     }
     class Skills
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string ParentId { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? ParentId { get; set; }
         public bool HasChildren { get; set; }
         public bool Expanded { get; set; }
     }
     class Roles
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string ParentId { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? ParentId { get; set; }
         public bool Expanded { get; set; }
         public bool HasChild { get; set; }
     }
