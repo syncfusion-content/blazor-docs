@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Smith Chart in Blazor Web App
 
-This section briefly explains about how to include [Blazor Smith Chart](https://www.syncfusion.com/blazor-components/blazor-smith-chart) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/).
+This section briefly explains about how to include [Blazor Smith Chart](https://www.syncfusion.com/blazor-components/blazor-smith-chart) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and Visual Studio Code.
 
 ## Prerequisites
 

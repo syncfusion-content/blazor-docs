@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Range Selector in Web App
 
-This section briefly explains about how to include [Blazor Range Selector](https://www.syncfusion.com/blazor-components/blazor-range-selector) (RangeNavigator) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/).
+This section briefly explains about how to include [Blazor Range Selector](https://www.syncfusion.com/blazor-components/blazor-range-selector) (RangeNavigator) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and Visual Studio Code.
 
 ## Prerequisites
 

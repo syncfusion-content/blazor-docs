@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting started with Blazor NumericTextBox in Blazor Web App
 
-This section briefly explains about how to include [Blazor NumericTextBox](https://www.syncfusion.com/blazor-components/blazor-numeric-textbox) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/).
+This section briefly explains about how to include [Blazor NumericTextBox](https://www.syncfusion.com/blazor-components/blazor-numeric-textbox) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and Visual Studio Code.
 
 ## Prerequisites
 

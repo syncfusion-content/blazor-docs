@@ -11,7 +11,7 @@ documentation: ug
 
 # Getting Started with Blazor 3D Chart Component in Blazor WASM App
 
-This section briefly explains about how to include `Blazor 3D Charts` component in your Blazor WebAssembly (WASM) App using Visual Studio.
+This section briefly explains about how to include `Blazor 3D Charts` component in your Blazor WebAssembly (WASM) App using Visual Studio and Visual Studio Code.
 
 ## Prerequisites
 

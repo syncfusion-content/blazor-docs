@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Accordion Component
 
-This section briefly explains about how to include [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
+This section briefly explains about how to include [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio and Visual Studio Code.
 
 To get started quickly with Blazor Accordion, check on the following video or [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Accordion) sample:
 
