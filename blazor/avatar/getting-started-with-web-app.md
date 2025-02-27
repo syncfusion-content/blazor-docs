@@ -145,6 +145,12 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 <!-- xLarge Avatar-->
 <div class="e-avatar e-avatar-xlarge image"></div>
 
+<style>
+    .e-avatar {
+        background-image: url(https://ej2.syncfusion.com/demos/src/avatar/images/pic01.png);
+    }
+</style>
+
 {% endhighlight %}
 {% endtabs %}
 

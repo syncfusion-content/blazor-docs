@@ -9,7 +9,7 @@ documentation: ug
 
 # Virtualization in Blazor TreeView Component
 
-The TreeView supports UI virtualization to improve the performance for a large amount of data. This feature initially gathers all the data, but doesn’t render out the entire data source on initial rendering. It loads the N number of items in the initial rendering and the remaining set number of items will load on each scrolling action in the TreeView container. To setup the virtualization, define the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_EnableVirtualization) as true and TreeView container height by [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_Height) property.
+The TreeView supports UI Virtualization to improve the performance for a large amount of data. This feature initially gathers all the data, but doesn’t render out the entire data source on initial rendering. It loads the N number of items in the initial rendering and the remaining set number of items will load on each scrolling action in the TreeView container. To setup the Virtualization, define the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_EnableVirtualization) as true and TreeView container height by [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_Height) property.
 
 The following sample shows the example of Virtualization.
 
@@ -70,15 +70,15 @@ The following sample shows the example of Virtualization.
     }
     class TreeData
     {
-        public string Id { get; set; }
-        public string Pid { get; set; }
+        public string? Id { get; set; }
+        public string? Pid { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
-        public string Name { get; set; }
+        public string? Name { get; set; }
     }
 }
 ```
 
-![Blazor TreeView with virtualization](./images/virtualization.gif)
+![Blazor TreeView with Virtualization](./images/virtualization.gif)
 
 N> Virtualization is not compatible with expand and collapse animation. Select all action will select only visible items in UI.

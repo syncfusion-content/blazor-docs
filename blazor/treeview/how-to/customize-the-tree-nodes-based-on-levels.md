@@ -9,7 +9,7 @@ documentation: ug
 
 # Customize the tree nodes based on levels in Blazor TreeView Component
 
-The tree nodes can be customized level wise by adding custom CssClass to the component and enabling styles.
+The tree nodes can be customized level wise by adding custom [**CssClass**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_CssClass) to the component and enabling styles.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -26,8 +26,8 @@ The tree nodes can be customized level wise by adding custom CssClass to the com
 @code{
     public class DriveData
     {
-        public string NodeId { get; set; }
-        public string NodeText { get; set; }
+        public string? NodeId { get; set; }
+        public string? NodeText { get; set; }
         public bool Expanded { get; set; }
         public bool Selected { get; set; }
         public List<DriveData> Children;
