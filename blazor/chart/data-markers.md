@@ -154,7 +154,7 @@ By default, the chart [marker shape](https://help.syncfusion.com/cr/blazor/Syncf
 
 ## Images
 
-Apart from shapes, one can also add custom images to mark the data point using the [ImageUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMarker.html#Syncfusion_Blazor_Charts_ChartCommonMarker_ImageUrl) property.
+Apart from shapes, one can also add custom images to mark the data point using the [ImageUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMarker.html#Syncfusion_Blazor_Charts_ChartCommonMarker_ImageUrl) property by specifying [Image](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartShape.html#Syncfusion_Blazor_Charts_ChartShape_Image) shape for marker.
 
 ```cshtml
 
@@ -163,7 +163,7 @@ Apart from shapes, one can also add custom images to mark the data point using t
 <SfChart>
     <ChartSeriesCollection>
         <ChartSeries DataSource="@ConsumerReports" XName="X" YName="Y" Type="ChartSeriesType.Line">
-            <ChartMarker Visible="true" Height="10" Width="10" ImageUrl="https://ej2.syncfusion.com/demos/src/chart/images/cloud.png">
+            <ChartMarker Visible="true" Shape="ChartShape.Image" Height="20" Width="20" ImageUrl="https://ej2.syncfusion.com/demos/src/chart/images/cloud.png">
             </ChartMarker>
         </ChartSeries>
     </ChartSeriesCollection>
@@ -189,6 +189,8 @@ Apart from shapes, one can also add custom images to mark the data point using t
 }
 
 ```
+
+![Blazor Chart with image marker shape](images/marker/blazor-line-chart-image-marker.png)
 
 ## Fill marker with series color
 
