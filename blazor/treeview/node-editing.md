@@ -26,11 +26,11 @@ When editing is completed by focus out or by pressing the **Enter** key, the mod
 @code {
     public class DriveData
     {
-        public string NodeId { get; set; }
-        public string NodeText { get; set; }
+        public string? NodeId { get; set; }
+        public string? NodeText { get; set; }
         public bool Expanded { get; set; }
         public bool Selected { get; set; }
-        public List<DriveData> Children;
+        public List<DriveData>? Children;
     }
 
     List<DriveData> Drive = new List<DriveData>();
@@ -176,9 +176,9 @@ The example provided demonstrates how to use the `ItemSelected` event of the con
 
     public class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Pid { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Pid { get; set; }
         public bool HasChild { get; set; }
     }
 
@@ -407,9 +407,9 @@ The Blazor TreeView component allows for the dynamic addition or removal of spec
 
     public class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Pid { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Pid { get; set; }
         public bool HasChild { get; set; }
     }
 
@@ -755,9 +755,9 @@ The Blazor TreeView component with template support also allows for the dynamic 
     }
     class TreeData
     {
-        public string Id { get; set; }
-        public string Pid { get; set; }
-        public string Name { get; set; }
+        public string? Id { get; set; }
+        public string? Pid { get; set; }
+        public string? Name { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
         public int Count { get; set; }
@@ -787,18 +787,9 @@ The Blazor TreeView component with template support also allows for the dynamic 
         float: left;
     }
 
-    .e-rtl .nodetext {
-        float: right;
-    }
-
     .nodebadge {
         float: right;
         margin-right: 5px
-    }
-
-    .e-rtl .nodebadge {
-        float: left;
-        margin-left: 5px
     }
 </style>
 
@@ -836,7 +827,7 @@ In the Blazor TreeView component, it is possible to add a new tree node using a 
     {
         this.IsVisible = true;
     }
-    public string newNodeName;
+    public string? newNodeName;
     async Task AddNodeInPopup()
     {
         // Expand the selected nodes
@@ -859,9 +850,9 @@ In the Blazor TreeView component, it is possible to add a new tree node using a 
 
     public class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Pid { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Pid { get; set; }
         public bool HasChild { get; set; }
     }
 
@@ -1036,9 +1027,9 @@ The Blazor TreeView component enables dynamic editing of specific nodes. This ca
 
     public class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Pid { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Pid { get; set; }
         public bool HasChild { get; set; }
     }
 
@@ -1345,9 +1336,9 @@ The Blazor TreeView component with template enables dynamic editing of specific 
     }
     class TreeData
     {
-        public string Id { get; set; }
-        public string Pid { get; set; }
-        public string Name { get; set; }
+        public string? Id { get; set; }
+        public string? Pid { get; set; }
+        public string? Name { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
         public int Count { get; set; }
@@ -1377,18 +1368,9 @@ The Blazor TreeView component with template enables dynamic editing of specific 
         float: left;
     }
 
-    .e-rtl .nodetext {
-        float: right;
-    }
-
     .nodebadge {
         float: right;
         margin-right: 5px
-    }
-
-    .e-rtl .nodebadge {
-        float: left;
-        margin-left: 5px
     }
 </style>
 
@@ -1407,9 +1389,9 @@ The Blazor TreeView component can be set to read-only mode by disabling certain 
 @code {
     public class MailItem
     {
-        public string Id { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? Id { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
     }
@@ -1517,9 +1499,9 @@ An example of this can be seen in the provided code snippet, where the node edit
 
     public class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Pid { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Pid { get; set; }
         public bool HasChild { get; set; }
     }
 
@@ -1731,9 +1713,9 @@ In the Blazor TreeView component, you can obtain the index value of the editing 
 
     public class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Pid { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Pid { get; set; }
         public bool HasChild { get; set; }
     }
 
@@ -1913,9 +1895,9 @@ The default value of `AllowEditing` property is false.
 @code {
     public class MailItem
     {
-        public string Id { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? Id { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
     }
@@ -2006,9 +1988,9 @@ An example of this can be seen in the provided code snippet, where the node edit
 
     public class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Pid { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Pid { get; set; }
         public bool HasChild { get; set; }
     }
 

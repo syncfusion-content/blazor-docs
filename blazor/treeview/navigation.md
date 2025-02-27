@@ -9,13 +9,13 @@ documentation: ug
 
 # Navigation in Blazor TreeView Component
 
-Using the **NavigateUrl** of the Blazor TreeView component, you can navigate from one page to another based on the node selection and link provided in the corresponding nodes.
+Using the [**NavigateUrl**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_NavigateUrl) of the Blazor TreeView component, you can navigate from one page to another based on the node selection and link provided in the corresponding nodes.
 
 To perform navigation in the TreeView component, use and map the **NavigateUrl** field in the data source.
 
 ## Navigation URL binding in Blazor TreeView Component
 
-In the Blazor TreeView component, use the **NavigateUrl** property to specify the URL to navigate to when the tree node is selected.
+In the Blazor TreeView component, use the [**NavigateUrl**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_NavigateUrl) property to specify the URL to navigate to when the tree node is selected.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -26,12 +26,12 @@ In the Blazor TreeView component, use the **NavigateUrl** property to specify th
 @code {
     public class MailItem
     {
-        public string ID { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? ID { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
-        public string NavigateUrl { get; set; }
+        public string? NavigateUrl { get; set; }
     }
     List<MailItem> MyFolder = new List<MailItem>();
     protected override void OnInitialized()
@@ -93,12 +93,12 @@ The TreeView [FullRowNavigable](https://help.syncfusion.com/cr/blazor/Syncfusion
 @code{
     public class MailItem
     {
-        public string ID { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? ID { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
-        public string NavigateUrl { get; set; }
+        public string? NavigateUrl { get; set; }
     }
     List<MailItem> MyFolder = new List<MailItem>();
     protected override void OnInitialized()
@@ -187,9 +187,9 @@ In the Blazor TreeView component, when clicking on the TreeView node, you can ge
     SfTreeView<MailItem> tree;
     public class MailItem
     {
-        public string ID { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? ID { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
         public Dictionary<string, object> HtmlAttributes { get; set; }
@@ -234,9 +234,9 @@ In the Blazor TreeView component, when clicking on the TreeView node, you can ge
             });
 
     }
-    public string ID;
-    public string Text;
-    public string ParentID;
+    public string? ID;
+    public string? Text;
+    public string? ParentID;
     public void nodeClicked(NodeClickEventArgs args)
     {
         ID = (args.NodeData.Id);
@@ -247,7 +247,7 @@ In the Blazor TreeView component, when clicking on the TreeView node, you can ge
 <style>
     .containers {
         margin-top: -200px;
-        margin-left: 500px;
+        margin-left: 800px;
     }
     .tree{
         width:50%;
@@ -258,7 +258,7 @@ In the Blazor TreeView component, when clicking on the TreeView node, you can ge
 
 ## Tree node as hyperlink in Blazor TreeView Component
 
-The **NavigateUrl** property is used to navigate from one page to other pages on tree node selection. Using the CSS styles, you can customize the TreeView node as a hyperlink.
+The [**NavigateUrl**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_NavigateUrl) property is used to navigate from one page to other pages on tree node selection. Using the CSS styles, you can customize the TreeView node as a hyperlink.
 
 ```cshtml
 
@@ -270,12 +270,12 @@ The **NavigateUrl** property is used to navigate from one page to other pages on
 @code{
     public class MailItem
     {
-        public string ID { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? ID { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
-        public string NavigateUrl { get; set; }
+        public string? NavigateUrl { get; set; }
     }
     List<MailItem> MyFolder = new List<MailItem>();
     protected override void OnInitialized()

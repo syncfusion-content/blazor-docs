@@ -9,7 +9,7 @@ documentation: ug
 
 # Get all child nodes through parentID in Blazor TreeView Component
 
-This section shows how to get the child nodes from corresponding Parent ID. Using the `GetTreeData` method, the node details of the TreeView is achieved.
+This section shows how to get the child nodes from corresponding Parent ID. Using the [`GetTreeData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_GetTreeData_System_String_) method, the node details of the TreeView is achieved.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -126,8 +126,8 @@ This section shows how to get the child nodes from corresponding Parent ID. Usin
 
     public class TreeData
     {
-        public string Code { get; set; }
-        public string Name { get; set; }
+        public string? Code { get; set; }
+        public string? Name { get; set; }
         public bool Expanded { get; set; }
         public bool Selected { get; set; }
         public List<TreeData> Child;

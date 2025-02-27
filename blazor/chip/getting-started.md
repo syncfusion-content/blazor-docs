@@ -168,6 +168,8 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Chip component i
 {% tabs %}
 {% highlight razor %}
 
+@using Syncfusion.Blazor.Buttons
+
 <SfChip>
     <ChipItems>
         <ChipItem Text="Janet Leverling"></ChipItem>

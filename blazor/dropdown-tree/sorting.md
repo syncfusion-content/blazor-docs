@@ -53,12 +53,12 @@ In the following example, the [SortOrder](https://help.syncfusion.com/cr/blazor/
     }
     class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Job { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Job { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
-        public string PId { get; set; }
+        public string? PId { get; set; }
     }
 }
 ```
