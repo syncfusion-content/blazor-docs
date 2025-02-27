@@ -9,7 +9,7 @@ documentation: ug
 
 # Customize the expand and collapse icons in Blazor TreeView Component
 
-TreeView expand and collapse icons could be customized by using the `CssClass` &nbsp;property of TreeView. Refer to the sample to customize expand or collapse icons.
+TreeView expand and collapse icons could be customized by using the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_CssClass) property of TreeView. Refer to the sample to customize expand or collapse icons.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -20,8 +20,8 @@ TreeView expand and collapse icons could be customized by using the `CssClass` &
 @code{
     public class DriveData
     {
-        public string NodeId { get; set; }
-        public string NodeText { get; set; }
+        public string? NodeId { get; set; }
+        public string? NodeText { get; set; }
         public bool Expanded { get; set; }
         public bool Selected { get; set; }
         public List<DriveData> Children;
@@ -117,9 +117,14 @@ TreeView expand and collapse icons could be customized by using the `CssClass` &
         font-family: "Customize-icon";
     }
 
-    .custom.e-treeview .e-list-item .e-icon-expandable::before, .custom.e-treeview .e-list-item .e-icon-collapsible:before {
+    .custom.e-treeview .e-list-item div.e-icons.e-icon-expandable::before,
+    .custom.e-treeview .e-list-item div.e-icons.e-icon-collapsible::before {
         content: '\e700';
         font-size: 12px;
+    }
+
+    .e-treeview.custom .e-icons.e-icon-collapsible, .e-treeview.custom .e-icons.e-icon-expandable {
+        margin-top: 8px;
     }
 
     @@font-face {
@@ -150,11 +155,11 @@ The expand or collapse icon's position and color can also customized using follo
 {
     public class TreeViewData
     {
-        public string NodeId { get; set; }
-        public string NodeText { get; set; }
-        public string ParentId { get; set; }
+        public string? NodeId { get; set; }
+        public string? NodeText { get; set; }
+        public string? ParentId { get; set; }
         public bool HasChild { get; set; }
-        public string IconCss { get; set; }
+        public string? IconCss { get; set; }
         public bool Expanded { get; set; }
 
     }
@@ -321,7 +326,9 @@ The expand or collapse icon's position and color can also customized using follo
     .e-treeview.custom-tree .e-icon-collapsible::before, .e-treeview.custom-tree .e-icon-expandable::before {
         color: white;
     }
-
+    .e-treeview.custom-tree .e-icons.e-icon-collapsible, .e-treeview.custom-tree .e-icons.e-icon-expandable {
+        margin-top:8px;
+    }
     /*To change the text color for treeview*/
     .e-treeview .e-text-content > .e-list-text {
         color: white;

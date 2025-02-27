@@ -1,7 +1,7 @@
 ---
 layout: post
-title: SharePoint provider in Blazor FileManager Component | Syncfusion
-description: Checkout and learn here all about SharePoint Provider in Syncfusion Blazor FileManager component and more.
+title: SharePoint provider in Blazor File Manager Component | Syncfusion
+description: Checkout and learn here all about SharePoint Provider in Syncfusion Blazor File Manager component and more.
 platform: Blazor
 control: File Manager
 documentation: ug

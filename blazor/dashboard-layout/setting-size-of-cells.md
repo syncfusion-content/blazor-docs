@@ -110,7 +110,7 @@ These cells combinedly form a grid-structured layout, which will be hidden initi
 
 <SfDashboardLayout CellSpacing="@(new double[]{10 ,10 })" Columns="5" ShowGridLines="true">
     <DashboardLayoutPanels>
-        <DashboardLayoutPanel Col=1>
+        <DashboardLayoutPanel Column=1>
             <ContentTemplate><div>0</div></ContentTemplate>
         </DashboardLayoutPanel>
         <DashboardLayoutPanel SizeX=1 SizeY=2 Column=2>

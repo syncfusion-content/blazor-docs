@@ -98,7 +98,7 @@ In the Blazor TreeView component, by default, there is no height property, and i
     {
         public int Id { get; set; }
         public int? ParentId { get; set; }
-        public string Name { get; set; }
+        public string? Name { get; set; }
         public bool Expanded { get; set; }
         public bool? IsChecked { get; set; }
         public bool HasChild { get; set; }
@@ -337,9 +337,9 @@ The [HtmlAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Nav
     }
     class TreeItem
     {
-        public string NodeId { get; set; }
-        public string NodeText { get; set; }
-        public string Icon { get; set; }
+        public string? NodeId { get; set; }
+        public string? NodeText { get; set; }
+        public string? Icon { get; set; }
         public bool Expanded { get; set; }
         public bool Selected { get; set; }
         public List<TreeItem> Child { get; set; }
@@ -359,3 +359,4 @@ The [HtmlAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Nav
 </style>
 
 ```
+

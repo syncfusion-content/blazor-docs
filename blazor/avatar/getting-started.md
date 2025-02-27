@@ -135,6 +135,12 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Avatar component
 <!-- xLarge Avatar-->
 <div class="e-avatar e-avatar-xlarge image"></div>
 
+<style>
+    .e-avatar {
+        background-image: url(https://ej2.syncfusion.com/demos/src/avatar/images/pic01.png);
+    }
+</style>
+
 {% endhighlight %}
 {% endtabs %}
 
