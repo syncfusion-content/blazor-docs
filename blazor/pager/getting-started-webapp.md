@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting started with Blazor Pager Component in Blazor Web App
 
-This section briefly explains about how to include `Blazor Pager` component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/).
+This section briefly explains about how to include `Blazor Pager` component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and Visual Studio Code.
 
 ## Prerequisites
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Toast in Blazor Web App
 
-This section briefly explains about how to include [Blazor Toast](https://www.syncfusion.com/blazor-components/blazor-toast) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/).
+This section briefly explains about how to include [Blazor Toast](https://www.syncfusion.com/blazor-components/blazor-toast) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and Visual Studio Code.
 
 ## Prerequisites
 

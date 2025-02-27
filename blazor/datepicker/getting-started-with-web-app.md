@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor DatePicker Component in Web App
 
-This section briefly explains about how to include [Blazor DatePicker](https://www.syncfusion.com/blazor-components/blazor-datepicker) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/).
+This section briefly explains about how to include [Blazor DatePicker](https://www.syncfusion.com/blazor-components/blazor-datepicker) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and Visual Studio Code.
 
 ## Prerequisites
 

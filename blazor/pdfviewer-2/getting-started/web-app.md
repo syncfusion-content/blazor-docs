@@ -9,7 +9,7 @@ documentation: ug
 
 # View PDF files using PDF Viewer Component in the Blazor Web app
 
-In this section, we’ll guide you through the process of adding Syncfusion&reg; Blazor PDF Viewer component to your Blazor web app using [Visual Studio](https://visualstudio.microsoft.com/vs/). We’ll break it down into simple steps to make it easy to follow.
+In this section, we’ll guide you through the process of adding Syncfusion&reg; Blazor PDF Viewer component to your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and Visual Studio Code. We’ll break it down into simple steps to make it easy to follow.
 
 ## Prerequisites
 

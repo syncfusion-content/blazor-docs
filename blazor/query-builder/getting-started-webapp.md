@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor QueryBuilder in Blazor Web App
 
-This section briefly explains about how to include [Blazor QueryBuilder](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap5) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/).
+This section briefly explains about how to include [Blazor QueryBuilder](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap5) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and Visual Studio Code.
 
 N> You can also explore our [Blazor QueryBuilder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap5) to know how to render and configure the query builder.
 

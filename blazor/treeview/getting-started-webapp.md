@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor TreeView in Blazor Web App
 
-This section briefly explains about how to include [Blazor TreeView](https://www.syncfusion.com/blazor-components/blazor-treeview) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/).
+This section briefly explains about how to include [Blazor TreeView](https://www.syncfusion.com/blazor-components/blazor-treeview) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and Visual Studio Code.
 
 ## Prerequisites
 
