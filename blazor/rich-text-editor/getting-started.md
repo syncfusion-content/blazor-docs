@@ -11,7 +11,7 @@ documentation: ug
 
 # Getting Started with Rich Text Editor in Blazor
 
-This section briefly explains about how to include [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
+This section briefly explains about how to include [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
 
 To get start quickly with Blazor Rich Text Editor components, you can check on this video or [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/RichTextEditor) sample.
 
