@@ -123,7 +123,7 @@ Here is an example of straightening the image.
 }
 ```
 
-![Blazor Image Editor with Straighten](./images/blazor-image-editor-straighten.png)
+![Blazor Image Editor with Straighten](./images/blazor-image-editor-straighten.jpg)
 
 ## Zoom in or out an image 
 
