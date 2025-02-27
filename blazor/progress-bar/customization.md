@@ -173,3 +173,18 @@ The progress bar visibility can be changed by using the [Visible](https://help.s
 ```
 
 ![Blazor ProgressBar Visibility](images/progress-bar-visibility.gif)
+
+## Progress Bar Margin
+
+The spacing between the progress bar and its container can be adjusted using the [ProgressBarMargin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarMargin.html) property. By default, the [Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarMargin.html#Syncfusion_Blazor_ProgressBar_ProgressBarMargin_Left), [Right](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarMargin.html#Syncfusion_Blazor_ProgressBar_ProgressBarMargin_Right), [Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarMargin.html#Syncfusion_Blazor_ProgressBar_ProgressBarMargin_Top), and [Bottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarMargin.html#Syncfusion_Blazor_ProgressBar_ProgressBarMargin_Bottom) margins are set to 10px, ensuring uniform spacing around the progress bar. These values can be modified as needed to increase or decrease the spacing, allowing for precise layout customization.
+
+```cshtml
+@using Syncfusion.Blazor.ProgressBar
+<SfProgressBar Type="ProgressType.Circular" Height="150px" Width="150px" 
+       Value="80" Minimum="0" Maximum="100" TrackThickness="20" ProgressThickness="20">
+    <ProgressBarMargin Left="0" Right="0" Bottom="0" Top="0">
+    </ProgressBarMargin>
+</SfProgressBar>
+```
+
+![Margin in Blazor ProgressBar](images/blazor-progressbar-margin.png)
