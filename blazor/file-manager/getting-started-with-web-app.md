@@ -212,6 +212,8 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 {% tabs %}
 {% highlight razor %}
 
+@using Syncfusion.Blazor.FileManager
+
 <SfFileManager TValue="FileManagerDirectoryContent">
     <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
                              UploadUrl="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
@@ -342,6 +344,8 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager com
 {% tabs %}
 {% highlight razor %}
 
+@using Syncfusion.Blazor.FileManager
+
 <SfFileManager TValue="FileManagerDirectoryContent">
     <FileManagerAjaxSettings Url="/api/FileManager/FileOperations"
                              UploadUrl="/api/FileManager/Upload"
@@ -392,6 +396,8 @@ To perform the download operation, initialize the [DownloadUrl](https://help.syn
 {% tabs %}
 {% highlight razor %}
 
+@using Syncfusion.Blazor.FileManager
+
 <SfFileManager TValue="FileManagerDirectoryContent">
     <FileManagerAjaxSettings Url="/api/FileManager/FileOperations"
                                 DownloadUrl="/api/FileManager/Download">
@@ -434,6 +440,8 @@ To perform the upload operation, initialize the [UploadUrl](https://help.syncfus
 
 {% tabs %}
 {% highlight razor %}
+
+@using Syncfusion.Blazor.FileManager
 
 <SfFileManager TValue="FileManagerDirectoryContent">
     <FileManagerAjaxSettings Url="/api/FileManager/FileOperations"
@@ -518,6 +526,8 @@ To perform image preview support in the File Manager component, initialize the [
 
 {% tabs %}
 {% highlight razor %}
+
+@using Syncfusion.Blazor.FileManager
 
 <SfFileManager TValue="FileManagerDirectoryContent">
     <FileManagerAjaxSettings Url="/api/FileManager/FileOperations"
