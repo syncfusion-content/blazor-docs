@@ -13,13 +13,13 @@ In this section, we'll guide you through the process of adding Syncfusion® Blaz
 
 {% youtube "youtube:https://www.youtube.com/watch?v=Dq-GYr2UGvo" %}
 
-## Prerequisites
-
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
+
+## Prerequisites
+
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
 ## Step 1: Create a new Blazor App in Visual Studio
 
@@ -119,6 +119,10 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram componen
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
+
+## Prerequisites
+
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
 ## Step 1: Create a new Blazor App in Visual Studio Code
 
