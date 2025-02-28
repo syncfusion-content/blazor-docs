@@ -16,13 +16,13 @@ To get started quickly with Blazor Dashboard Layout component, check on the foll
 {% youtube
 "youtube:https://www.youtube.com/watch?v=K6i0KU7tbLQ" %}
 
-## Prerequisites
-
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
+
+## Prerequisites
+
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
 ## Create a new Blazor App in Visual Studio
 
@@ -46,6 +46,10 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
+
+## Prerequisites
+
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
 ## Create a new Blazor App in Visual Studio Code
 

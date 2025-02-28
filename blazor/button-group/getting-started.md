@@ -13,13 +13,13 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor ButtonGroup](https://www.syncfusion.com/blazor-components/blazor-button-group) component in your Blazor WebAssembly App using Visual Studio and Visual Studio Code.
 
-## Prerequisites
-
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
+
+## Prerequisites
+
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
 ## Create a new Blazor App in Visual Studio
 
@@ -43,6 +43,10 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
+
+## Prerequisites
+
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
 ## Create a new Blazor App in Visual Studio Code
 

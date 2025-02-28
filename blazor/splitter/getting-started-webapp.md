@@ -11,13 +11,13 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor Splitter](https://www.syncfusion.com/blazor-components/blazor-splitter) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and Visual Studio Code.
 
-## Prerequisites
-
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
+
+## Prerequisites
+
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
 ## Create a new Blazor Web App in Visual Studio
 
@@ -47,6 +47,10 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
+
+## Prerequisites
+
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
 ## Create a new Blazor Web App in Visual Studio Code
 
