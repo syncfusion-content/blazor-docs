@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Web App
 
-This article provides a step-by-step instructions for building `Blazor Web App` with `Blazor Accordion` component using [Visual Studio](https://visualstudio.microsoft.com/vs/).
+This article provides a step-by-step instructions for building `Blazor Web App` with `Blazor Accordion` component using [Visual Studio](https://visualstudio.microsoft.com/vs/) and Visual Studio Code.
 
 To get start quickly with Blazor Web App, you can check on this video.
 
@@ -22,19 +22,21 @@ To get start quickly with Blazor Web App, you can check on this video.
 
 [https://blazorplayground.syncfusion.com/](https://blazorplayground.syncfusion.com/)
 
-To use the individual component in Blazor playground, uninstall the existing package and then install the needed NuGet package.
+## Using Syncfusion Blazor Templates
 
-![Blazor Playground with Accordion component](images/pg-accordion.png)
-
-## Prerequisites
-
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
+You can create a Blazor Web App using Syncfusion Blazor Templates in both [Visual Studio](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio) and [Visual Studio Code](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
 
 ## Manually Creating a Project
+
+This section provides a brief explanation on how to manually create a Blazor Web App using either Visual Studio or Visual Studio Code.
 
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
+
+### Prerequisites
+
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
 ### Create a new Blazor Web App in Visual Studio
 
@@ -65,14 +67,18 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 {% tabcontent Visual Studio Code %}
 
+### Prerequisites
+
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
+
 ### Render Interactive Modes
 
 If you set the Authentication Type as `None` and Interactivity location as `Per page/component`, you need to use the following command.
 
-<table>
+<table style="width:100%">
 <tr>
-<th>Interactive Render Mode</th>
-<th>Command</th>
+<th style="width:30%">Interactive Render Mode</th>
+<th style="width:70%">Command</th>
 </tr>
 <tr>
 <td>Server</td>
@@ -110,10 +116,10 @@ dotnet new blazor -o BlazorApp -int None
 
 If you set the Authentication Type as `Individual Accounts` and Interactivity location as `Per page/component`, you need to use the following command.
 
-<table>
+<table style="width:100%">
 <tr>
-<th>Interactive Render Mode</th>
-<th>Command</th>
+<th style="width:30%">Interactive Render Mode</th>
+<th style="width:70%">Command</th>
 </tr>
 <tr>
 <td>Server</td>
@@ -151,10 +157,10 @@ dotnet new blazor -o BlazorApp -au Individual -int None
 
 If you set the Authentication Type as `Individual Accounts` and Interactivity location as `Global`, you need to use the following command.
 
-<table>
+<table style="width:100%">
 <tr>
-<th>Interactive Render Mode</th>
-<th>Command</th>
+<th style="width:30%">Interactive Render Mode</th>
+<th style="width:70%">Command</th>
 </tr>
 <tr>
 <td>Server</td>
@@ -192,10 +198,10 @@ dotnet new blazor -o BlazorApp -au Individual -int None -ai
 
 If you set the Authentication Type as `None` and Interactivity location as `Global`, you need to use the following command.
 
-<table>
+<table style="width:100%">
 <tr>
-<th>Interactive Render Mode</th>
-<th>Command</th>
+<th style="width:30%">Interactive Render Mode</th>
+<th style="width:70%">Command</th>
 </tr>
 <tr>
 <td>Server</td>
@@ -279,10 +285,20 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 ### Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
-| Interactive Render Mode | Description |
-| -- | -- |
-| WebAssembly or Auto | Open **~/_Imports.razor** file from the client project.|
-| Server | Open **~/_import.razor** file, which is located in the `Components` folder.|
+<table style="width:100%">
+<tr>
+<th style="width:30%">Interactive Render Mode</th>
+<th style="width:70%">Description</th>
+</tr>
+<tr>
+<td>WebAssembly or Auto</td>
+<td> Open <b>~/_Imports.razor</b> file from the client project.</td>
+</tr>
+<tr>
+<td>Server</td>
+<td>Open <b>~/_import.razor</b> file, which is located in the `Components` folder.</td>
+</tr>
+</table>
 
 Import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Navigations` namespace.
 
@@ -375,12 +391,33 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Accordion component in the **~/Components/Pages/*.razor** file. If an interactivity location as `Per page/component` in the web app, define a render mode at the top of the `~Pages/*.razor` component, as follows:
 
-| Interactivity location | RenderMode | Code |
-| --- | --- | --- |
-| Per page/component | Auto | @rendermode InteractiveAuto |
-|  | WebAssembly | @rendermode InteractiveWebAssembly |
-|  | Server | @rendermode InteractiveServer |
-|  | None | --- |
+<table style="width:100%">
+<tr>
+<th style="width:30%">Interactivity location</th>
+<th style="width:20%">RenderMode</th>
+<th style="width:50%">Code</th>
+</tr>
+<tr>
+<td>Per page/component</td>
+<td>Auto</td>
+<td>@rendermode InteractiveAuto</td>
+</tr>
+<tr>
+<td></td>
+<td>WebAssembly</td>
+<td>@rendermode InteractiveWebAssembly</td>
+</tr>
+<tr>
+<td></td>
+<td>Server</td>
+<td>@rendermode InteractiveServer</td>
+</tr>
+<tr>
+<td></td>
+<td>None</td>
+<td>---</td>
+</tr>
+</table>
 
 N> If an **Interactivity Location** is set to `Global` and the **Render Mode** is set to `Auto` or `WebAssembly` or `Server`, the render mode is configured in the `App.razor` file by default.
 
