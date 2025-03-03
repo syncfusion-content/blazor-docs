@@ -11,16 +11,16 @@ documentation: ug
 
 In this section, we’ll guide you through the process of adding Syncfusion&reg; Blazor PDF Viewer component to your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and Visual Studio Code. We’ll break it down into simple steps to make it easy to follow.
 
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
 * If you choose an Interactive render mode such as WebAssembly or Auto, ensure that you have the necessary .NET workloads installed to use the PDF Viewer component in a Blazor WebApp application with SkiaSharp. To do this, execute the following commands in the command prompt:
     * dotnet workload install wasm-tools
-
-{% tabcontents %}
-
-{% tabcontent Visual Studio %}
 
 ## Create a new Blazor Web App in Visual Studio
 
@@ -45,6 +45,13 @@ N> On the Syncfusion<sup style="font-size:70%">&reg;</sup> side, we are using Sk
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
+
+## Prerequisites
+
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
+
+* If you choose an Interactive render mode such as WebAssembly or Auto, ensure that you have the necessary .NET workloads installed to use the PDF Viewer component in a Blazor WebApp application with SkiaSharp. To do this, execute the following commands in the command prompt:
+    * dotnet workload install wasm-tools
 
 ## Create a new Blazor Web App in Visual Studio Code
 

@@ -11,16 +11,16 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor Smart Paste Button](https://www.syncfusion.com/blazor-components/blazor-smartpaste-button) component in your Blazor Server App using Visual Studio.
 
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 * OpenAI or Azure OpenAI Account
 
 N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Components are compatible with both `OpenAI` and `Azure OpenAI`, and fully support Server Interactivity mode apps.
-
-{% tabcontents %}
-
-{% tabcontent Visual Studio %}
 
 ## Create a new Blazor App in Visual Studio
 
@@ -44,6 +44,13 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
+
+## Prerequisites
+
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
+* OpenAI or Azure OpenAI Account
+
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Components are compatible with both `OpenAI` and `Azure OpenAI`, and fully support Server Interactivity mode apps.
 
 ## Create a new Blazor App in Visual Studio Code
 
