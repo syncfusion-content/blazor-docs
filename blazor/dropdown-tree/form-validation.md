@@ -17,10 +17,10 @@ The Dropdown Tree component can be used inside an EditForm to create a form that
 
 When the Dropdown Tree input is valid, the form is ready to be submitted. If the input is invalid, an error message will be displayed until a valid value is chosen.
 
-* The EditForm component wraps the entire form, has the Model attribute set to the treeModel variable of type Countries, and triggers the handleSubmit() method when the form is submitted.
+* The EditForm component wraps the entire form, has the Model attribute set to the treeModel variable of type Countries, and triggers the **handleSubmit()** method when the form is submitted.
 * The DataAnnotationsValidator component enables validation based on the Data Annotations attributes applied on the treeModel properties.
 * The ValidationMessage component displays a validation error message for the Name property of the treeModel variable.
-* The submit button submits the form and triggers the OnValidSubmit() method when clicked.
+* The submit button submits the form and triggers the **OnValidSubmit()** method when clicked.
 
 ```cshtml
 @using System.ComponentModel.DataAnnotations;

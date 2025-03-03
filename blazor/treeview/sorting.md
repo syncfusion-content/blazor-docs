@@ -9,7 +9,7 @@ documentation: ug
 
 # Sort order in Blazor TreeView Component
 
-The `SortOrder` property is used to sort the TreeView nodes in ascending or descending order in the Blazor TreeView component. The default value of `SortOrder` property is none.
+The [`SortOrder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_SortOrder) property is used to sort the TreeView nodes in ascending or descending order in the Blazor TreeView component. The default value of `SortOrder` property is none.
 
 * **Ascending** - specifies the TreeView nodes are sorted in the ascending order.
 * **Descending** - specifies the TreeView nodes are sorted in the descending order.
@@ -30,9 +30,9 @@ In the following example, the `SortOrder` property is dynamically updated on the
     public SortOrder sortOrder;
     public class MailItem
     {
-        public string Id { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? Id { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
     }

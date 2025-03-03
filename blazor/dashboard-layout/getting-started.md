@@ -147,6 +147,8 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Dashboard Layout
 {% tabs %}
 {% highlight razor %}
 
+@using Syncfusion.Blazor.Layouts
+
 <SfDashboardLayout>
     <DashboardLayoutPanels>
         <DashboardLayoutPanel>
@@ -177,6 +179,8 @@ A Dashboard Layout panel is rendered with simple data. The header of a panel is 
 
 {% tabs %}
 {% highlight razor %}
+
+@using Syncfusion.Blazor.Layouts
 
 <SfDashboardLayout>
     <DashboardLayoutPanels>

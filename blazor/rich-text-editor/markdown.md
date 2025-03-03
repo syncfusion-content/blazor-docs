@@ -23,7 +23,7 @@ The Rich Text Editor supports to editing the markdown content by using the [Edit
 
 ## Markdown  commands
 
-The [Blazor Markdown editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor/wysiwyg-markdown-editor) supports the following commands to format the markdown content:
+The [Blazor Markdown editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor/wysiwyg-markdown-editor) supports the following commands to format the markdown content:
 
 |Commands|Syntax| Description |
 |--------|------------------------------------------|------------|
@@ -124,5 +124,5 @@ The Rich Text Editor allows you to customize the markdown syntax by overriding i
 
 ## See also
 
-* [How to change the editor mode](./editor-modes/#markdown-editor)
+* [How to change the editor mode](./editor-modes#markdown-editor)
 * [How to convert Markdown string to HTML](https://support.syncfusion.com/kb/article/10983/how-to-convert-markdown-string-to-html-using-blazor-rich-text-editor)
