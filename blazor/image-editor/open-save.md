@@ -188,7 +188,7 @@ User can easily open images in the Image Editor using a file uploader. This meth
 
 ### Open an image from Treeview 
 
-Users can open images in the Syncfusion Image Editor by selecting a node from a tree view. When a user clicks on an image node, the corresponding image is loaded into the editor using the open method. This allows for a seamless image editing experience directly from the TreeView component.
+Users can open images in the Syncfusion Image Editor by selecting a node from a tree view. When a user clicks on an image node, the corresponding image is loaded into the editor using the [`OpenAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_OpenAsync_System_Object_System_Boolean_System_String_) method. This allows for a seamless image editing experience directly from the TreeView component.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
