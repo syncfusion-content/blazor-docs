@@ -186,6 +186,144 @@ User can easily open images in the Image Editor using a file uploader. This meth
 
 ![Blazor Image Editor with File uploader](./images/blazor-image-editor-uploader.jpg)
 
+### Open an image from File Manager 
+
+User can easily open images in the Image Editor using the File Manager. This method allows you to browse and select an image file directly from the File Manager and load it into the editor. Once the image is selected, pass the file to the [`OpenAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_OpenAsync_System_Object_System_Boolean_System_String_) method, and the image will be seamlessly loaded into the editor. 
+
+```cshtml
+@using Syncfusion.Blazor.FileManager
+@using Syncfusion.Blazor.ImageEditor
+@inject NavigationManager UriHelper
+
+<div class="control-section">
+    <div class="control_wrapper">
+        <SfFileManager TValue="FileManagerDirectoryContent" @ref="fileManager" Height="200px">
+            <FileManagerEvents TValue="FileManagerDirectoryContent" OnRead="OnReadAsync"
+                BeforeImageLoad="BeforeImageLoadAsync" OnFileOpen="OnFileOpenAsync"
+                BeforePopupOpen="BeforePopupOpenAsync">
+            </FileManagerEvents>
+        </SfFileManager>
+    </div>
+    <SfImageEditor @ref="imageEditor" Height="350px"></SfImageEditor>
+</div>
+@code {
+    private SfImageEditor imageEditor;
+    private SfFileManager<FileManagerDirectoryContent> fileManager;
+    public FileManagerService FileService = new FileManagerService();
+    public async Task OnReadAsync(ReadEventArgs<FileManagerDirectoryContent> args)
+    {
+        args.Response = await FileService.ReadAsync(args.Path, args.Folder);
+    }
+    public void BeforeImageLoadAsync(BeforeImageLoadEventArgs<FileManagerDirectoryContent> args)
+    {
+        string relativePath = $"https://ej2.syncfusion.com/react/demos/src/image-editor/images/{args.FileDetails.Name}";
+        args.ImageUrl = UriHelper.ToAbsoluteUri(relativePath).ToString();
+    }
+    private async Task OnFileOpenAsync(FileOpenEventArgs<FileManagerDirectoryContent> args)
+    {
+        if (args.FileDetails != null && args.FileDetails.IsFile)
+        {
+            string relativePath = $"https://ej2.syncfusion.com/react/demos/src/image-editor/images/{args.FileDetails.Name}";
+            await imageEditor.OpenAsync(relativePath);
+        }
+    }
+    public void BeforePopupOpenAsync(BeforePopupOpenCloseEventArgs args)
+    {
+        args.Cancel = true;
+    }
+
+    public class FileManagerService
+    {
+        public List<FileManagerDirectoryContent> Data = new List<FileManagerDirectoryContent>();
+        public FileManagerService()
+        {
+            this.GetData();
+        }
+        private void GetData()
+        {
+            Data.Add(new FileManagerDirectoryContent()
+            {
+                CaseSensitive = false,
+                DateCreated = new DateTime(2022, 1, 2),
+                DateModified = new DateTime(2022, 2, 3),
+                FilterPath = "",
+                FilterId = "",
+                HasChild = true,
+                Id = "0",
+                IsFile = false,
+                Name = "Pictures",
+                ParentId = null,
+                ShowHiddenItems = false,
+                Size = 1779448,
+                Type = "folder"
+            });
+            Data.Add(new FileManagerDirectoryContent()
+            {
+                CaseSensitive = false,
+                DateCreated = new DateTime(2022, 1, 2),
+                DateModified = new DateTime(2022, 2, 3),
+                FilterId = "0/",
+                FilterPath = "/Pictures/",
+                HasChild = false,
+                Id = "1",
+                IsFile = true,
+                Name = "bridge.png",
+                ParentId = "0",
+                ShowHiddenItems = false,
+                Size = 680786,
+                Type = ".png",
+            });
+            Data.Add(new FileManagerDirectoryContent()
+            {
+                CaseSensitive = false,
+                DateCreated = new DateTime(2022, 1, 2),
+                DateModified = new DateTime(2022, 2, 3),
+                FilterId = "0/",
+                FilterPath = "/Pictures/",
+                HasChild = false,
+                Id = "1",
+                IsFile = true,
+                Name = "flower.png",
+                ParentId = "0",
+                ShowHiddenItems = false,
+                Size = 680786,
+                Type = ".png",
+            });
+        }
+
+        public async Task<FileManagerResponse<FileManagerDirectoryContent>> ReadAsync(string path,
+        List<FileManagerDirectoryContent> fileDetails)
+        {
+            FileManagerResponse<FileManagerDirectoryContent> response = new FileManagerResponse<FileManagerDirectoryContent>();
+            if (path == "/")
+            {
+                string ParentId = Data
+                .Where(x => x.FilterPath == string.Empty)
+                .Select(x => x.Id).First();
+                response.CWD = Data
+                .Where(x => x.FilterPath == string.Empty).First();
+                response.Files = Data
+                .Where(x => x.ParentId == ParentId).ToList();
+            }
+            else
+            {
+                var id = fileDetails.Count > 0 && fileDetails[0] != null ? fileDetails[0].Id : Data
+                .Where(x => x.FilterPath == path)
+                .Select(x => x.ParentId).First();
+                response.CWD = Data
+                .Where(x => x.Id == (fileDetails.Count > 0 && fileDetails[0] != null ? fileDetails[0].Id : id)).First();
+                response.Files = Data
+                .Where(x => x.ParentId == (fileDetails.Count > 0 && fileDetails[0] != null ? fileDetails[0].Id : id)).ToList();
+            }
+            await Task.Yield();
+            return await Task.FromResult(response);
+        }
+    }
+}
+```
+
+![Blazor Image Editor with File uploader](./images/blazor-image-editor-file-manager.jpg)
+
 ### Open an image from Treeview 
 
 Users can open images in the Syncfusion Image Editor by selecting a node from a tree view. When a user clicks on an image node, the corresponding image is loaded into the editor using the [`OpenAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_OpenAsync_System_Object_System_Boolean_System_String_) method. This allows for a seamless image editing experience directly from the TreeView component.
