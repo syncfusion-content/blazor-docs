@@ -41,7 +41,7 @@ Here is an example of filtering using the [`ApplyImageFilterAsync`](https://help
 
     private async void OpenAsync()
     {
-        await ImageEditor.OpenAsync("nature.png");
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
 
     private async void ChromeClick()
@@ -87,5 +87,3 @@ The parameter available in the [`ImageFilterEventArgs`](https://help.syncfusion.
 ImageFilterEventArgs.Filter - The type of filtering as ImageFilterOption to be applied in the image editor.
 
 ImageFilterEventArgs.Cancel – Specifies to cancel the filtering action.
-
-> Please note that the Filter and Finetune features were unavailable on iOS due to the non-functioning CanvasContext.filter property on this platform.

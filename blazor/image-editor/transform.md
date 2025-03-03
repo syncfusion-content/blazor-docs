@@ -13,7 +13,9 @@ The [Blazor Image Editor](https://www.syncfusion.com/blazor-components/blazor-im
 
 ## Rotate an image
 
-The [`RotateAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_RotateAsync_System_Int32_) method allows to rotate the image and with annotations by a specific number of degrees clockwise or anti-clockwise. This method takes a single parameter: the angle of rotation in degrees. A positive value will rotate the image clockwise, while a negative value will rotate it anti-clockwise. 
+The [`RotateAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_RotateAsync_System_Int32_) method allows to rotate the image and with annotations by a specific number of degrees clockwise or anti-clockwise. This method takes a single parameter: the angle of rotation in degrees. A positive value will rotate the image clockwise, while a negative value will rotate it anti-clockwise.
+
+`Note:` It is recommended to pass values in multiples of 90° (e.g., 90, 180, -90) for proper rotation alignment.
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
@@ -33,7 +35,7 @@ The [`RotateAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Imag
 
     private async void OpenAsync()
     {
-        await ImageEditor.OpenAsync("nature.png");
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
 
     private async void RotateAsync()
@@ -71,7 +73,7 @@ Here is an example of flipping an image in a button click event.
 
     private async void OpenAsync()
     {
-        await ImageEditor.OpenAsync("nature.png");
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
 
     private async void FlipAsync()
@@ -98,21 +100,30 @@ Here is an example of straightening the image.
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
 @using Syncfusion.Blazor.Buttons
- 
+
+<div style="padding-bottom: 15px">
+    <SfButton OnClick="Straighten">Straighten</SfButton>
+</div>
+
 <SfImageEditor @ref="ImageEditor" Height="400">
     <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
 </SfImageEditor>
- 
+
 @code {
     SfImageEditor ImageEditor;
     private async void OpenAsync()
     {
-        await ImageEditor.OpenAsync("nature.png");
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
+    }
+
+    private async void Straighten()
+    {
+        await ImageEditor.StraightenImageAsync(45);
     }
 }
 ```
 
-![Blazor Image Editor with Straighten](./images/blazor-image-editor-straighten.png)
+![Blazor Image Editor with Straighten](./images/blazor-image-editor-straighten.jpg)
 
 ## Zoom in or out an image 
 
@@ -122,15 +133,15 @@ The [`ZoomAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageE
 
 * zoomPoint - Specifies x and y coordinates of a point as ImageEditorPoint on image to perform zooming.
 
-### Maximum and minimum zoom level 
-
-The [`MaxZoomFactor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorZoomSettings.html#Syncfusion_Blazor_ImageEditor_ImageEditorZoomSettings_MaxZoomFactor) property is a useful feature in the Image Editor that allows you to define the maximum level of zoom permitted for an image. This property sets a limit on how much the image can be magnified, preventing excessive zooming that may result in a loss of image quality or visibility. 
-
-By default, the [`MaxZoomFactor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorZoomSettings.html#Syncfusion_Blazor_ImageEditor_ImageEditorZoomSettings_MaxZoomFactor) value is set to 10, meaning that the image can be zoomed in up to 10 times its original size. This ensures that the zooming functionality remains within reasonable bounds and maintains the integrity of the image. 
+### Minimum and Maximum zoom level 
 
 The [`MinZoomFactor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorZoomSettings.html#Syncfusion_Blazor_ImageEditor_ImageEditorZoomSettings_MinZoomFactor) property allows you to specify the minimum level of zoom that is allowed for an image. By setting this property, you can prevent the image from being zoomed out beyond a certain point, ensuring that it remains visible and usable even at the smallest zoom level. 
 
 By default, the [`MinZoomFactor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorZoomSettings.html#Syncfusion_Blazor_ImageEditor_ImageEditorZoomSettings_MinZoomFactor) value is set to 0.1, meaning that the image can be zoomed out up to 10 times from its original size. 
+
+The [`MaxZoomFactor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorZoomSettings.html#Syncfusion_Blazor_ImageEditor_ImageEditorZoomSettings_MaxZoomFactor) property is a useful feature in the Image Editor that allows you to define the maximum level of zoom permitted for an image. This property sets a limit on how much the image can be magnified, preventing excessive zooming that may result in a loss of image quality or visibility. 
+
+By default, the [`MaxZoomFactor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorZoomSettings.html#Syncfusion_Blazor_ImageEditor_ImageEditorZoomSettings_MaxZoomFactor) value is set to 10, meaning that the image can be zoomed in up to 10 times its original size. This ensures that the zooming functionality remains within reasonable bounds and maintains the integrity of the image. 
 
 Here is an example of specifying [`MinZoomFactor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorZoomSettings.html#Syncfusion_Blazor_ImageEditor_ImageEditorZoomSettings_MinZoomFactor) and [`MaxZoomFactor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorZoomSettings.html#Syncfusion_Blazor_ImageEditor_ImageEditorZoomSettings_MaxZoomFactor) property in [`ImageEditorZoomSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorZoomSettings.html) options in an image editor.
 
@@ -157,7 +168,7 @@ Here is an example of specifying [`MinZoomFactor`](https://help.syncfusion.com/c
 
     private async void OpenAsync()
     {
-        await ImageEditor.OpenAsync("nature.png");
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
 
     private async void ZoomInAsync()
@@ -212,13 +223,11 @@ Using the [`ZoomTrigger`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 @code {
     SfImageEditor ImageEditor;
-
     private async void Created()
     {
-        await ImageEditor.OpenAsync("bridge.png");
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
 }
-
 ```
 ![Blazor Image Editor with ZoomWheel](./images/blazor-image-editor-zoomwheel.png)
 

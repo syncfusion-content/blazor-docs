@@ -45,19 +45,18 @@ Here is an example of resizing the image using the [`ImageResizeAsync`](https://
 
     private async void CreatedAsync()
     {
-        await ImageEditor.OpenAsync("nature.png");
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
 
     private async void AspectClick()
     {
-        await ImageEditor.ImageResizeAsync(300, 342, true);
+        await ImageEditor.ImageResizeAsync(300, 400, true);
     }
 
     private async void NonAspectClick()
     {
-        await ImageEditor.ImageResizeAsync(400, 100, true);
+        await ImageEditor.ImageResizeAsync(400, 100, false);
     }
-
 }
 ```
 

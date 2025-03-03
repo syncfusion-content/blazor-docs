@@ -20,14 +20,14 @@ The [`ClearImageAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 </div>
 <SfImageEditor @ref="ImageEditor" Height="400">
     <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
-</SfImageEditor> 
+</SfImageEditor>
 
 @code {
-    SfImageEditor ImageEditor; 
+    SfImageEditor ImageEditor;
 
-    private async void OpenAsync() 
-    { 
-        await ImageEditor.OpenAsync("nature.png"); 
+    private async void OpenAsync()
+    {
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
 
     private async void ClearImageAsync()
@@ -36,3 +36,5 @@ The [`ClearImageAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
     }
 }
 ```
+
+![Blazor Image Editor with Resize the custom selection](../images/blazor-image-editor-clear-image.jpg)
