@@ -11,13 +11,13 @@ documentation: ug
 
 In this section, we'll guide you through the process of adding the Blazor Diagram component component to your Blazor WebAssembly (WASM) app. We'll break it down into simple steps to make it easy to follow. Additionally, you can find a fully functional example project on our [GitHub repository](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DiagramComponent/BlazorWASMApp/DiagramSample).
 
-## Prerequisites
-
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
+
+## Prerequisites
+
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
 ## Step 1: Create a new Blazor App in Visual Studio    
 
@@ -112,6 +112,10 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram componen
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
+
+## Prerequisites
+
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
 ## Step 1: Create a new Blazor App in Visual Studio Code
 

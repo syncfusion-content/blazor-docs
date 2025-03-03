@@ -9,19 +9,19 @@ documentation: ug
 
 # Getting Started with Blazor DocumentEditor Component in Blazor Server
 
-This section briefly explains about how to include [Blazor DocumentEditor](https://www.syncfusion.com/blazor-components/blazor-word-processor) component in your Blazor Server App using Visual Studio.
+This section briefly explains about how to include [Blazor DocumentEditor](https://www.syncfusion.com/blazor-components/blazor-word-processor) component in your Blazor Server App using Visual Studio and Visual Studio Code.
 
 To get started quickly with Blazor DocumentEditor component, you can check the video below.
 
 {% youtube "https://www.youtube.com/watch?v=85rMT46LLgY" %}
 
-## Prerequisites
-
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
+
+## Prerequisites
+
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
 ## Create a new Blazor App in Visual Studio
 
@@ -45,6 +45,10 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
+
+## Prerequisites
+
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
 ## Create a new Blazor App in Visual Studio Code
 

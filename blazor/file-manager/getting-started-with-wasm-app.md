@@ -11,20 +11,20 @@ documentation: ug
 
 # Getting Started with Blazor File Manager Component
 
-This section briefly explains about how to include [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component in your Blazor WebAssembly App using Visual Studio.
+This section briefly explains about how to include [Blazor File Manager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component in your Blazor WebAssembly App using Visual Studio and Visual Studio Code.
 
 To get start quickly with Blazor WebAssembly App of File Manager component, you can check on this video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=qcH3B8FTPao" %}
 
-## Prerequisites
-
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
+
+## Prerequisites
+
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
 ## Create a new Blazor App in Visual Studio
 
@@ -48,6 +48,10 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
+
+## Prerequisites
+
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
 ## Create a new Blazor App in Visual Studio Code
 
