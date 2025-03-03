@@ -9,20 +9,20 @@ documentation: ug
 
 # Getting Started with Blazor ProgressBar Component
 
-This section briefly explains about how to include [Blazor ProgressBar](https://www.syncfusion.com/blazor-components/blazor-progressbar) component in your Blazor WebAssembly App using Visual Studio.
+This section briefly explains about how to include [Blazor ProgressBar](https://www.syncfusion.com/blazor-components/blazor-progressbar) component in your Blazor WebAssembly App using Visual Studio and Visual Studio Code.
 
 To get start quickly with Bullet Chart Component using Blazor, you can check on this video or [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/ProgressBar) sample.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=Kf04zbPJmHM"%}
 
-## Prerequisites
-
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
-
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
+
+## Prerequisites
+
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
 ## Create a new Blazor App in Visual Studio
 
@@ -46,6 +46,10 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
+
+## Prerequisites
+
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
 ## Create a new Blazor App in Visual Studio Code
 
