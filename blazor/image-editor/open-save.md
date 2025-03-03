@@ -186,6 +186,73 @@ User can easily open images in the Image Editor using a file uploader. This meth
 
 ![Blazor Image Editor with File uploader](./images/blazor-image-editor-uploader.jpg)
 
+### Open an image from Treeview 
+
+Users can easily open images in the Syncfusion Image Editor by dragging and dropping nodes from a tree view. This feature allows users to select an image from a tile view interface and load it into the editor. When a node is dropped into the image editor, you can pass the file to the editor’s open method to seamlessly load the image. 
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.ImageEditor
+
+@inject Microsoft.AspNetCore.Components.NavigationManager UriHelper
+
+<div class="control-section">
+    <div class="control_wrapper">
+        <SfTreeView TValue="TreeItem" @ref="treeView" SortOrder="Syncfusion.Blazor.Navigations.SortOrder.Ascending">
+            <TreeViewFieldsSettings DataSource="@TreeDataSource" Id="NodeId" Text="NodeText" Expanded="Expanded"
+                Child="@("Child")" IconCss="Icon" ImageUrl="ImageUrl"></TreeViewFieldsSettings>
+            <TreeViewEvents TValue="TreeItem" NodeSelected="NodeSelected"></TreeViewEvents>
+        </SfTreeView>
+    </div>
+    <SfImageEditor @ref="imageEditor" Height="350px"></SfImageEditor>
+</div>
+
+@code {
+    private SfImageEditor imageEditor;
+    private SfTreeView<TreeItem> treeView;
+    private string selectedId;
+    List<TreeItem> TreeDataSource = new List<TreeItem>();
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        TreeDataSource.Add(new TreeItem
+        {
+            NodeId = "01",
+            NodeText = "Pictures",
+            Icon = "folder",
+            Expanded = true,
+            Child = new List<TreeItem>()
+            {
+                new TreeItem { NodeId = "01-01", NodeText = "Flower", ImageUrl = "https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png" },
+                new TreeItem { NodeId = "01-02", NodeText = "Bridge", ImageUrl = "https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png" },
+            },
+        });
+    }
+
+    public async void NodeSelected(NodeSelectEventArgs args)
+    {
+        List<TreeItem> selectedNodes = treeView.GetTreeData(args.NodeData.Id);
+        if (selectedNodes.Count > 0 && selectedNodes[0].ImageUrl != null)
+        {
+            await imageEditor.OpenAsync(selectedNodes[0].ImageUrl);
+        }
+    }
+
+    class TreeItem
+    {
+        public string? NodeId { get; set; }
+        public string? NodeText { get; set; }
+        public string? Icon { get; set; }
+        public string? ImageUrl { get; set; }
+        public bool Expanded { get; set; }
+        public List<TreeItem> Child { get; set; } = new();
+    }
+}
+```
+
+![Blazor Image Editor with File uploader](./images/blazor-image-editor-treeview.jpg)
+
 ### Add watermarks while opening an image 
 
 You can utilize the ‘[`FileOpenEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.FileOpenEventArgs.html)’ event, which triggers once the image is loaded into the image editor. After this event, you can use the ‘[`DrawTextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawTextAsync_System_Double_System_Double_System_String_System_String_System_Int32_System_Boolean_System_Boolean_System_String_System_Boolean_System_Int32_System_String_System_String_System_Int32_)’ method to add a watermark. This approach allows the watermark to be automatically drawn on the canvas every time an image is opened in the editor, making it useful for handling copyright-related content.
