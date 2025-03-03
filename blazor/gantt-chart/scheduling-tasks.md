@@ -17,6 +17,11 @@ The Gantt Chart component supports three types of modes. They are:
 * `Manual`: All the tasks will be manually validated by the user.
 * `Custom`: Tasks will be validated as Auto or Manual based on the value mapped in the data source.
 
+To learn more about the task scheduling feature in the Blazor Gantt Chart component, check out this video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=NaJboeV7q44"%}
+
 N> The default value of `TaskMode` is `Auto`.
 
 ## Automatically scheduled tasks

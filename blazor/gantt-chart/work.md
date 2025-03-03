@@ -13,6 +13,11 @@ documentation: ug
 
 The work is the total hours required to complete a task. Work can be mapped from the data source field using the property [GanttTaskFields.Work](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Work). Work can be measured in `Hour`, `Day`, `Minute`. By default, work is measured in `Hour` and it can be changed by using the property `WorkUnit`.
 
+To learn more about the work calculation feature in the Blazor Gantt Chart component, check out this video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=Kwn79hqwCgg"%}
+
 N> When the work field is mapped from the data source, the default task type will be `FixedWork`.
 
 ```cshtml
@@ -124,6 +129,12 @@ The work, duration and resource unit fields of a task depends upon each other an
 * [FixedDuration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.TaskType.html#Syncfusion_Blazor_Gantt_TaskType_FixedDuration) - Duration task field will remain constant while updating resource unit or work field.
 * [FixedWork](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.TaskType.html#Syncfusion_Blazor_Gantt_TaskType_FixedWork) - Work field will remain constant while updating resource unit or duration fields.
 * [FixedUnit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.TaskType.html#Syncfusion_Blazor_Gantt_TaskType_FixedUnit) - Resource units will remain constant while updating duration or work field.
+
+To learn more about the task type feature in the Blazor Gantt Chart component, check out this video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=Kwn79hqwCgg"%}
+
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt

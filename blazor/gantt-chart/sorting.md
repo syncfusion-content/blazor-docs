@@ -11,6 +11,11 @@ documentation: ug
 
 Sorting enables you to sort data in the ascending or descending order. To sort a column, click the column header. To sort multiple columns, press and hold the CTRL key and click the column header. You can clear sorting of any one of the multi-sorted columns by pressing and holding the SHIFT key and clicking the specific column header.
 
+To learn more about the sorting feature in the Blazor Gantt Chart component, you can check out this video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=STXw6v4qODo"%}
+
 To enable sorting in the Gantt Chart component, set the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AllowSorting) property to true. Sorting options can be configured through the [GanttSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttSortSettings.html) property.
 
 ```cshtml
