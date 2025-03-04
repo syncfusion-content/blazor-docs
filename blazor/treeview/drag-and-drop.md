@@ -432,12 +432,12 @@ The Blazor TreeView component has built-in support for drag and drop functionali
         overflow: auto;
     }
 
-        .custom-tree .control-wrapper {
-            position: relative;
-            min-width: 700px;
-            min-height: 400px;
-            overflow: auto;
-        }
+    .custom-tree .control-wrapper {
+        position: relative;
+        min-width: 700px;
+        min-height: 400px;
+        overflow: auto;
+    }
 
     #list {
         min-height: 288px;

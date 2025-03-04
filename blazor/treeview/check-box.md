@@ -635,7 +635,7 @@ The Blazor TreeView component allows for the rendering of checkboxes before each
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
-<SfTreeView TValue="Country" ShowCheckBox="true" CssClass="CustomTree">
+<SfTreeView TValue="Country" ShowCheckBox="true" CssClass="customTree">
     <TreeViewFieldsSettings TValue="Country" Id="Id" DataSource="@Countries" Text="Name" ParentID="ParentId" HasChildren="HasChild" Expanded="Expanded" Selected="IsSelected"></TreeViewFieldsSettings>
 </SfTreeView>
 
@@ -727,7 +727,7 @@ The Blazor TreeView component allows for the rendering of checkboxes before each
 }
 
 <style>
-    .CustomTree .e-list-item.e-level-1 .e-text-content.e-icon-wrapper
+    .customTree .e-list-item.e-level-1 .e-text-content.e-icon-wrapper
     .e-checkbox-wrapper {
         display: none
     }

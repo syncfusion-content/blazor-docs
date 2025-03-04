@@ -188,13 +188,13 @@ Color bar can be customized in quite a number of ways.
 
 ## Customizing the Range Slider Track with Color Segments
 
-You can enhance the Blazor Range Slider by defining different track colors for specific value ranges. This is done using the `ColorRange` child elements within the [`SliderColorRanges`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderColorRanges.html) tag.
+You can enhance the Blazor Range Slider by defining different track colors for specific value ranges. This is done using the [`ColorRange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.ColorRange.html) child elements within the [`SliderColorRanges`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderColorRanges.html) tag.
 
-How It Works:
+**How It Works:**
 
-* ``Start``: Defines where the color segment begins.
-* ``End``: Defines where the color segment stops.
-* ``Color``: Specifies the color for the segment.
+* [``Start``](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.ColorRange.html#Syncfusion_Blazor_Inputs_ColorRange_Start): Defines where the color segment begins.
+* [``End``](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.ColorRange.html#Syncfusion_Blazor_Inputs_ColorRange_End): Defines where the color segment stops.
+* [``Color``](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.ColorRange.html#Syncfusion_Blazor_Inputs_ColorRange_Color): Specifies the color for the segment.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -204,7 +204,7 @@ How It Works:
     <SliderTooltip IsVisible="true" Placement="TooltipPlacement.Before" ShowOn="TooltipShowOn.Always"></SliderTooltip>
     <SliderColorRanges>
         <ColorRange Start="0" End="50" Color="green"></ColorRange>
-        <ColorRange Start="51" End="100" Color="red"></ColorRange>
+        <ColorRange Start="50" End="100" Color="red"></ColorRange>
     </SliderColorRanges>
 </SfSlider>
 
@@ -226,4 +226,4 @@ How It Works:
 
 ```
 
-![Blazor RangeSlider with track color](images/blazor-rangeslider-track.png)
+![Blazor RangeSlider with track color](./../images/blazor-rangeslider-track.png)

@@ -9,7 +9,7 @@ documentation: ug
 
 # Data Binding in Blazor TreeView Component
 
-The Blazor TreeView component provides the option to load data either from the local data sources or from remote data services. This can be done through [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_DataSource) property that is a member of the [`Fields`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldsSettings-1.html) property. The `DataSource` property supports list of objects and `DataManager`. It also supports different kinds of data services such as OData, OData V4, Web API, URL, and JSON with the help of `DataManager` adaptors.
+The Blazor TreeView component provides the option to load data either from the local data sources or from remote data services. This can be done through [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_DataSource) property that is a member of the [`TreeViewFieldsSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldsSettings-1.html) property. The `DataSource` property supports list of objects and `DataManager`. It also supports different kinds of data services such as OData, OData V4, Web API, URL, and JSON with the help of `DataManager` adaptors.
 
 Blazor TreeView has `load on demand` (Lazy load), by default. It reduces the bandwidth size when consuming huge data. It loads first level nodes initially, and when parent node is expanded, loads the child nodes based on the `ParentID/Child` member.
 
@@ -30,7 +30,7 @@ To bind local data to the Blazor TreeView, assign a list of objects to the [`Dat
 
 ### Hierarchical data
 
-Blazor TreeView can be populated with hierarchical data source that contains nested list of objects. A hierarchical data can be directly assigned to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_DataSource) property, and map all the field members with corresponding keys from the hierarchical data to [`Fields`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldsSettings-1.html) property.
+Blazor TreeView can be populated with hierarchical data source that contains nested list of objects. A hierarchical data can be directly assigned to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_DataSource) property, and map all the field members with corresponding keys from the hierarchical data to [`TreeViewFieldsSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldsSettings-1.html) property.
 
 In the following example, **Id**, **FolderName**, and **SubFolders** columns from hierarchical data have been mapped to **Id**, **Text**, and **Child** fields, respectively.
 
@@ -122,7 +122,7 @@ In the following example, **Id**, **FolderName**, and **SubFolders** columns fro
 
 ### Self-referential data
 
-Blazor TreeView can be populated from self-referential data structure that contains list of objects with `ParentID` mapping. The self-referential data can be directly assigned to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_DataSource) property, and map all the field members with corresponding keys from self-referential data to [`Fields`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldsSettings-1.html) property.
+Blazor TreeView can be populated from self-referential data structure that contains list of objects with `ParentID` mapping. The self-referential data can be directly assigned to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_DataSource) property, and map all the field members with corresponding keys from self-referential data to [`TreeViewFieldsSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldsSettings-1.html) property.
 
 To render the root level nodes, specify the ParentID as null or no need to specify the ParentID in `DataSource`. In the following example, **Id**, **Pid**, **HasSubFolders**, and **FolderName** columns from self-referential data have been mapped to **Id**, **ParentId**, **HasChildren**, and **Text** fields, respectively.
 
@@ -348,7 +348,7 @@ The Blazor TreeView is a generic component that is strongly bound to a specific 
 
 ## Remote data
 
-Blazor TreeView can also be populated from a remote data service with the help of `DataManager` component and `Query` property. It supports different kinds of data services such as OData, OData V4, Web API, URL, and JSON with the help of `DataManager` adaptors. A service data can be assigned as an instance of `DataManager` to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_DataSource) property. To interact with remote data source, provide the endpoint `url`.
+Blazor TreeView can also be populated from a remote data service with the help of [`DataManager`](https://blazor.syncfusion.com/documentation/data/getting-started) component and `Query` property. It supports different kinds of data services such as OData, OData V4, Web API, URL, and JSON with the help of `DataManager` adaptors. A service data can be assigned as an instance of `DataManager` to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_DataSource) property. To interact with remote data source, provide the endpoint `url`.
 
 The `DataManager` that acts as an interface between the service endpoint and the TreeView requires the following information to interact with service endpoint properly.
 

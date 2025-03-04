@@ -17,7 +17,7 @@ The following are the six options in the slider's limits object. Each API in the
 * [``MinStart``](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderLimits.html#Syncfusion_Blazor_Inputs_SliderLimits_MinStart): Sets the minimum limit for the first handle.
 * [``MinEnd``](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderLimits.html#Syncfusion_Blazor_Inputs_SliderLimits_MinEnd): Sets the maximum limit for the first handle.
 * [``MaxStart``](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderLimits.html#Syncfusion_Blazor_Inputs_SliderLimits_MaxStart): Sets the minimum limit for the second handle.
-*[ ``MaxEnd``](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderLimits.html#Syncfusion_Blazor_Inputs_SliderLimits_MaxEnd): Sets the maximum limit for the second handle.
+* [``MaxEnd``](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderLimits.html#Syncfusion_Blazor_Inputs_SliderLimits_MaxEnd): Sets the maximum limit for the second handle.
 * [``StartHandleFixed``](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderLimits.html#Syncfusion_Blazor_Inputs_SliderLimits_StartHandleFixed): Locks the first handle.
 * [``EndHandleFixed``](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SliderLimits.html#Syncfusion_Blazor_Inputs_SliderLimits_EndHandleFixed): Locks the second handle.
 

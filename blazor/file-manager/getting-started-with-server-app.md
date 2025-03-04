@@ -11,15 +11,15 @@ documentation: ug
 
 # Getting Started with Blazor File Manager Component
 
-This section briefly explains about how to include [Blazor FileManager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component in your Blazor Server App using Visual Studio.
-
-## Prerequisites
-
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
+This section briefly explains about how to include [Blazor FileManager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component in your Blazor Server App using Visual Studio and Visual Studio Code.
 
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
+
+## Prerequisites
+
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
 ## Create a new Blazor App in Visual Studio
 
@@ -43,6 +43,10 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
+
+## Prerequisites
+
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
 ## Create a new Blazor App in Visual Studio Code
 
@@ -143,6 +147,8 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager com
 
 {% tabs %}
 {% highlight razor %}
+
+@using Syncfusion.Blazor.FileManager
 
 <SfFileManager TValue="FileManagerDirectoryContent">
     <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
@@ -271,6 +277,8 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager com
 {% tabs %}
 {% highlight razor %}
 
+@using Syncfusion.Blazor.FileManager
+
 <SfFileManager TValue="FileManagerDirectoryContent">
     <FileManagerAjaxSettings Url="/api/FileManager/FileOperations"
                              UploadUrl="/api/FileManager/Upload"
@@ -297,6 +305,8 @@ To perform the download operation, initialize the [DownloadUrl](https://help.syn
 
 {% tabs %}
 {% highlight razor %}
+
+@using Syncfusion.Blazor.FileManager
 
 <SfFileManager TValue="FileManagerDirectoryContent">
     <FileManagerAjaxSettings Url="/api/FileManager/FileOperations"
@@ -340,6 +350,8 @@ To perform the upload operation, initialize the [UploadUrl](https://help.syncfus
 
 {% tabs %}
 {% highlight razor %}
+
+@using Syncfusion.Blazor.FileManager
 
 <SfFileManager TValue="FileManagerDirectoryContent">
     <FileManagerAjaxSettings Url="/api/FileManager/FileOperations"
@@ -424,6 +436,8 @@ To perform image preview support in the File Manager component, initialize the [
 
 {% tabs %}
 {% highlight razor %}
+
+@using Syncfusion.Blazor.FileManager
 
 <SfFileManager TValue="FileManagerDirectoryContent">
     <FileManagerAjaxSettings Url="/api/FileManager/FileOperations"
