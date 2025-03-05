@@ -41,7 +41,7 @@ In the following example:
     {
         rteObj.PreventRender();
         currentCount++;
-    };
+    }
 }
 ```
 
