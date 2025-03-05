@@ -11,11 +11,6 @@ documentation: ug
 
 In [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart), the resources are represented by staff, equipment, materials, and so on. It allows for the allocation of resources, such as human resources, to each task.
 
-To learn more about the resource assignment feature in the Blazor Gantt Chart component, check out this video.
-
-{% youtube
-"youtube:https://www.youtube.com/watch?v=XdH3xKinvZU"%}
-
 ## Binding data source for resource collection and assigning resource to tasks
 
 Resources are a list of `TResources` objects, mapped to the Gantt Chart component using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResource-2.html#Syncfusion_Blazor_Gantt_GanttResource_2_DataSource) property in [GanttResource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResource-2.html). To link the resource collection with task collection, the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAssignmentFields-2.html#Syncfusion_Blazor_Gantt_GanttAssignmentFields_2_DataSource) property of the [GanttAssignmentFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAssignmentFields-2.html) component is essential to use. It is crucial to structure this collection thoughtfully to establish a strong foreign key relationship. This involves linking the [TaskID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAssignmentFields-2.html#Syncfusion_Blazor_Gantt_GanttAssignmentFields_2_TaskID) and [ResourceID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttAssignmentFields-2.html#Syncfusion_Blazor_Gantt_GanttAssignmentFields_2_ResourceID) properties of `GanttAssignmentFields` with the [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Id) property value of [GanttTaskFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html) for tasks and the [Id](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttResource-2.html#Syncfusion_Blazor_Gantt_GanttResource_2_Id) property of `GanttResource` for resources.
