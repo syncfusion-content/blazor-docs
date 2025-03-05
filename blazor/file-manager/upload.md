@@ -15,7 +15,7 @@ The Blazor File Manager component provides a [FileManagerUploadSettings](https:/
 
 The [DirectoryUpload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html#Syncfusion_Blazor_FileManager_FileManagerUploadSettings_DirectoryUpload) property controls whether users can browse and upload entire directories (folders) in the Syncfusion Blazor File Manager component. 
 
-To enable directory upload, set the `DirectoryUpload` property to `true` in the `FileManagerUploadSettings` configuration.
+To enable directory upload, set the `DirectoryUpload` property to `true` in the [FileManagerUploadSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html) configuration.
 
 When set to `true`, this property enables directory upload in the FileManager, allowing users to upload entire folders. If set to `false`, only individual files can be uploaded.
 
@@ -237,7 +237,7 @@ namespace Blazor
 
 ## Drag and Drop upload
 
-The Blazor File Manager component allows you to easily perform drag and drop file uploads. You can drag files from your local file system and drop them directly into the FileManager. Additionally, you have the ability to customize the drop area for file uploads using the [DropArea](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html#Syncfusion_Blazor_FileManager_FileManagerUploadSettings_DropArea) property in the `FileManagerUploadSettings` class.
+The Blazor File Manager component allows you to easily perform drag and drop file uploads. You can drag files from your local file system and drop them directly into the FileManager. Additionally, you have the ability to customize the drop area for file uploads using the [DropArea](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html#Syncfusion_Blazor_FileManager_FileManagerUploadSettings_DropArea) property in the [FileManagerUploadSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html) class.
 
 ```cshtml
 
