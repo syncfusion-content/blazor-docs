@@ -13,7 +13,7 @@ The resize feature in an Image Editor is a valuable tool that empowers users to 
 
 ## Apply resize to the image 
 
-The Image Editor control includes a [`ImageResizeAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_ImageResizeAsync_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Boolean__) method, which allows you to adjust the size of an image. This method takes three parameters that define how the resizing should be carried out:
+The Image Editor control includes a [`ImageResizeAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_ImageResizeAsync_System_Int32_System_Int32_System_Boolean_) method, which allows you to adjust the size of an image. This method takes three parameters that define how the resizing should be carried out:
 
 * width: Specifies the resizing width of the image.
 
@@ -24,7 +24,7 @@ The Image Editor control includes a [`ImageResizeAsync`](https://help.syncfusion
     * When set to `false`, the image is resized according to the specified width and height, without maintaining the aspect ratio.
     * The default value is `false`.
 
-Here is an example of resizing the image using the [`ImageResizeAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_ImageResizeAsync_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Boolean__) method.  
+Here is an example of resizing the image using the `ImageResizeAsync` method.  
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor

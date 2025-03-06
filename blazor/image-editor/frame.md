@@ -13,11 +13,11 @@ The frame feature in an Image Editor provides users with the capability to add d
 
 ## Apply frame to the Image
 
-The [`DrawFrameAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawFrameAsync_Syncfusion_Blazor_ImageEditor_FrameType_System_String_System_String_System_Int32_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__Syncfusion_Blazor_ImageEditor_FrameLineStyle_System_Nullable_System_Int32__) method is a function designed to enable the application of various frame options to an image. This method simplifies the process of adding decorative frames, such as mat, bevel, line, hook, and inset, to an image by allowing users to specify their desired frame type.
+The [`DrawFrameAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawFrameAsync_Syncfusion_Blazor_ImageEditor_FrameType_System_String_System_String_System_Int32_System_Int32_System_Int32_System_Int32_Syncfusion_Blazor_ImageEditor_FrameLineStyle_System_Int32_) method is a function designed to enable the application of various frame options to an image. This method simplifies the process of adding decorative frames, such as mat, bevel, line, hook, and inset, to an image by allowing users to specify their desired frame type.
 
 Depending on the frame type selected, users may have additional customization options, such as adjusting the frame's thickness, color, texture, or other attributes. This allows for fine-tuning the appearance of the frame to match the image's theme or the user's preferences
 
-The [`DrawFrameAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawFrameAsync_Syncfusion_Blazor_ImageEditor_FrameType_System_String_System_String_System_Int32_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__Syncfusion_Blazor_ImageEditor_FrameLineStyle_System_Nullable_System_Int32__) method in the Image Editor control takes nine parameters to define the properties of the frame to the image:
+The `DrawFrameAsync` method in the Image Editor control takes nine parameters to define the properties of the frame to the image:
 
 * frameType - Specified the image data or url of the image to be inserted.
 
@@ -37,7 +37,7 @@ The [`DrawFrameAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.I
 
 * lineCount - Specifies the line count for the line type frame.
 
-Here is an example of Frame using the [`DrawFrameAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawFrameAsync_Syncfusion_Blazor_ImageEditor_FrameType_System_String_System_String_System_Int32_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__Syncfusion_Blazor_ImageEditor_FrameLineStyle_System_Nullable_System_Int32__) method.
+Here is an example of Frame using the `DrawFrameAsync` method.
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor

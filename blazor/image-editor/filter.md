@@ -10,13 +10,14 @@ documentation: ug
 # Filters in the Blazor Image Editor component
 
 Filters are pre-defined effects that can be applied to an image to alter its appearance or mood. Image filters can be used to add visual interest or to enhance certain features of the image. Some common types of image filters include cold, warm, chrome, sepia, and invert.
+
 ## Apply filter effect
 
 The [`ApplyImageFilterAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_ApplyImageFilterAsync_Syncfusion_Blazor_ImageEditor_ImageFilterOption_) method is utilized to apply filters to an image. By passing the desired filter type as the first parameter of the method, specified as [`ImageFilterOption`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageFilterOption.html) the method applies the corresponding filter to the image. This allows for easy and convenient application of various filters to enhance or modify the image based on the chosen filter type.
 
-The [`ApplyImageFilterAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_ApplyImageFilterAsync_Syncfusion_Blazor_ImageEditor_ImageFilterOption_) method is used to perform filtering by specifying the type of filter as [`ImageFilterOption`]() and send it a first parameter of the method.
+The `ApplyImageFilterAsync` method is used to perform filtering by specifying the type of filter as `ImageFilterOption` and send it a first parameter of the method.
 
-Here is an example of filtering using the [`ApplyImageFilterAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_ApplyImageFilterAsync_Syncfusion_Blazor_ImageEditor_ImageFilterOption_) method.
+Here is an example of filtering using the `ApplyImageFilterAsync` method.
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
