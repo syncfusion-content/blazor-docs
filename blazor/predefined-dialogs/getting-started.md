@@ -139,7 +139,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 * Now, add `SfDialogProvider` in the **~/_MainLayout.razor** file.
 
 {% tabs %}
-{% highlight razor tabtitle=".NET 6 (~/_MainLayout.razor)" %}
+{% highlight razor tabtitle=".NET 8 (~/_MainLayout.razor)" %}
 
 <Syncfusion.Blazor.Popups.SfDialogProvider/>
 
