@@ -35,6 +35,8 @@ Image zooming can be performed in the following ways.
 
 * Using keyboard.
 
+![Blazor Image Editor with Zoom In/ Out an image showcase](./images/blazor-image-editor-end-zoom.jpg)
+
 ### Using toolbar
 
 To zoom in or out the image in the image editor, do the following steps.
@@ -64,8 +66,6 @@ To zoom in or out the image in the image editor, do the following steps.
 * Press the ctrl key with ‘+’ button from the keyboard to zoom in an image.
 
 * Press the ctrl key with ‘-’ button from the keyboard to zoom out an image.
-
-![Blazor Image Editor with Zoom In/ Out an image showcase](./images/blazor-image-editor-zoom.gif)
 
 ## Panning
 
@@ -97,7 +97,7 @@ To crop an image in the image editor, do the following steps.
 
 * Once the cropping region is finalized in the image click the tick icon at the top right of the toolbar to crop the image.
 
-![Blazor Image Editor with Cropping and Image Transformation showcase](./images/blazor-image-editor-crop-transform.gif)
+![Blazor Image Editor with Cropping and Image Transformation showcase](./images/blazor-image-editor-end-crop.jpg)
 
 ## Image annotation
 
@@ -113,7 +113,7 @@ To add annotations to an image in the image editor, do the following steps.
 
 * When annotations are selected in the image editor, the quick access toolbar becomes active, providing convenient access to various actions such as duplicating, deleting, or editing text associated with the selected annotation. This toolbar enables users to perform these common operations quickly and efficiently, streamlining their workflow and enhancing the overall editing experience.
 
-![Blazor Image Editor with annotation showcase](./images/blazor-image-editor-annotation.gif)
+![Blazor Image Editor with annotation showcase](./images/blazor-image-editor-end-annotation.jpg)
 
 ## Filtering and fine-tune
 
@@ -125,6 +125,8 @@ To perform fine-tuning on an image in the image editor, do the following steps.
 
 * Click on the canvas or tick icon at the right corner of the toolbar in the image editor to apply the modifications.
 
+![Blazor Image Editor with Filtering and finetune showcase](./images/blazor-image-editor-end-finetune.jpg)
+
 To apply filters on an image in the image editor, do the following steps.
 
 * Click the filter button which displays the list of filters available in the image editor.
@@ -133,7 +135,7 @@ To apply filters on an image in the image editor, do the following steps.
 
 * Click on the canvas or tick icon at the right corner of the toolbar in the image editor to apply the modifications.
 
-![Blazor Image Editor with Filtering and finetune showcase](./images/blazor-image-editor-filter-finetune.gif)
+![Blazor Image Editor with Filtering and finetune showcase](./images/blazor-image-editor-end-filter.jpg)
 
 ## Undo and redo the operations
 
@@ -157,8 +159,6 @@ To revert all the changes done in an image editor, do the following steps.
 
 * This will revert all the changes performed in the image editor.
 
-![Blazor Image Editor with Reset an image showcase](./images/blazor-image-editor-reset.gif)
-
 ## Export an image
 
 To save the modified image in the Image Editor, follow these steps:
@@ -179,4 +179,4 @@ applied modifications.
 * Use Keyboard Shortcut (Ctrl + S)
     * Press Ctrl + S to download the image in the same format as the loaded image without opening the Save dialog. For example, if the loaded image is PNG, it will be saved as PNG.
 
-![Blazor Image Editor with Export an image showcase](./images/blazor-image-editor-save.gif)
+![Blazor Image Editor with Export an image showcase](./images/blazor-image-editor-end-save.jpg)
