@@ -48,7 +48,7 @@ Rendering the Image Editor in a dialog involves displaying the image editor comp
 
     private async void OpenAsync() 
     { 
-        await ImageEditor.OpenAsync("nature.png"); 
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png"); 
     }
 
     private void BeforeDialogOpen(BeforeOpenEventArgs args)
@@ -62,3 +62,5 @@ Rendering the Image Editor in a dialog involves displaying the image editor comp
     }
 }
 ```
+
+![Blazor Image Editor with Resize the custom selection](../images/blazor-image-editor-dialog.jpg)
