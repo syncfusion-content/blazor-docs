@@ -164,3 +164,5 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Timeline compone
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Timeline component in your default web browser.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDrzZJtMfhknPrWl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Timeline Component](./images/blazor-timeline-component.png)" %}
+
+N> You can also explore our [Blazor Timeline example](https://blazor.syncfusion.com/demos/timeline/default-functionalities?theme=bootstrap5) that shows you how to render and configure the Timeline.
