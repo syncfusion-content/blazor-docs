@@ -11,7 +11,13 @@ documentation: ug
 
 ## Candle
 
-[Candle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Candle) series is similar to Hilo Open Close series. It is used to represent the **Low**, **High**, **Open and Closing** prices over time. It is commonly used in financial charts to visualize stock price movements. To render a [`Candle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Candle) series in your chart, you need to follow a few steps to configure it correctly. Here's a concise guide on how to do this:
+[Candle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Candle) series is similar to Hilo Open Close series. It is used to represent the **Low**, **High**, **Open and Closing** prices over time. It is commonly used in financial charts to visualize stock price movements.
+
+To learn how to create a Candle chart, you can watch this video.
+
+{% youtube "youtube:https://www.youtube.com/watch?v=KDOI77kV34Q" %}
+
+To render a [`Candle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Candle) series in your chart, you need to follow a few steps to configure it correctly. Here's a concise guide on how to do this:
 
 1. **Set the series type**: Define the series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) as [`Candle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Candle) in your chart configuration. This indicates that the data should be represented as a candle chart, providing a detailed view of stock price fluctuations by displaying the high, low, open, and close values for each time period.
 

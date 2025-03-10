@@ -15,6 +15,10 @@ This section briefly explains about how to include [Blazor Range Selector](https
 
 {% tabcontent Visual Studio %}
 
+To learn how to Get Started with the Blazor Range Selector Component, you can watch this video.
+
+{% youtube "youtube:https://www.youtube.com/watch?v=Xtt1h-1QH58" %}
+
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
