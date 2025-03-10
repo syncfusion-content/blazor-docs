@@ -56,7 +56,14 @@ The following sample shows the color palette with custom no color option.
 @using Syncfusion.Blazor.SplitButtons
 
 <div id="preview" style="@colorValue"></div>
-<SfSplitButton @ref="splitBtn" IconCss="e-icons e-picker" CssClass="color-picker">
+<SfSplitButton @ref="splitBtn" CssClass="color-picker">
+    <ChildContent>
+        @{
+            var spanStyle = colorValue + "; display: block; height: 2px";
+        }
+        <span class="e-icons e-picker"></span>
+        <span style="@spanStyle"></span>
+    </ChildContent>
     <PopupContent>
         <ul class="e-dropdown-menu" tabindex="0">
             <li class="e-item e-palette-item">

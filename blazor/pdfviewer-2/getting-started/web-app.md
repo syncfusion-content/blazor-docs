@@ -9,7 +9,11 @@ documentation: ug
 
 # View PDF files using PDF Viewer Component in the Blazor Web app
 
-In this section, we’ll guide you through the process of adding Syncfusion&reg; Blazor PDF Viewer component to your Blazor web app using [Visual Studio](https://visualstudio.microsoft.com/vs/). We’ll break it down into simple steps to make it easy to follow.
+In this section, we’ll guide you through the process of adding Syncfusion&reg; Blazor PDF Viewer component to your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and Visual Studio Code. We’ll break it down into simple steps to make it easy to follow.
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
 
 ## Prerequisites
 
@@ -17,10 +21,6 @@ In this section, we’ll guide you through the process of adding Syncfusion&reg;
 
 * If you choose an Interactive render mode such as WebAssembly or Auto, ensure that you have the necessary .NET workloads installed to use the PDF Viewer component in a Blazor WebApp application with SkiaSharp. To do this, execute the following commands in the command prompt:
     * dotnet workload install wasm-tools
-
-{% tabcontents %}
-
-{% tabcontent Visual Studio %}
 
 ## Create a new Blazor Web App in Visual Studio
 
@@ -46,6 +46,13 @@ N> On the Syncfusion<sup style="font-size:70%">&reg;</sup> side, we are using Sk
 
 {% tabcontent Visual Studio Code %}
 
+## Prerequisites
+
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
+
+* If you choose an Interactive render mode such as WebAssembly or Auto, ensure that you have the necessary .NET workloads installed to use the PDF Viewer component in a Blazor WebApp application with SkiaSharp. To do this, execute the following commands in the command prompt:
+    * dotnet workload install wasm-tools
+
 ## Create a new Blazor Web App in Visual Studio Code
 
 You can create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
@@ -64,7 +71,7 @@ cd BlazorWebApp.Client
 {% endhighlight %}
 {% endtabs %}
 
-N> For more information on creating a **Blazor Web App** with various interactive modes and locations, refer to this [link](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app#using-syncfusion-blazor-template).
+N> For more information on creating a **Blazor Web App** with various interactive modes and locations, refer to this [link](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code#render-interactive-modes).
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor SfPdfViewer and Themes NuGet in the App
 
