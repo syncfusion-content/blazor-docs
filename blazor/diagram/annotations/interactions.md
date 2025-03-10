@@ -40,7 +40,7 @@ The [rotationReference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
                 new ShapeAnnotation 
                 { 
                     Content = "Node1",
-                    RotationReference = RotationReference.Parent,
+                    RotationReference = AnnotationRotationReference.Parent,
                 }
             },
            
@@ -57,7 +57,7 @@ The [rotationReference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
                 new ShapeAnnotation 
                 { 
                     Content = "Node2",
-                    RotationReference = RotationReference.Page,
+                    RotationReference = AnnotationRotationReference.Page,
                 }
             },
            
