@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Badge Component | Syncfusion
-description: Checkout and learn about getting started with Blazor Badge component in Blazor WebAssembly Application.
+description: Checkout and learn about getting started with Blazor Badge component in Blazor Blazor WebAssembly Application.
 platform: Blazor
 control: Badge
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 # Getting Started with Blazor Badge Component
 
-This section briefly explains about how to include Blazor `Badge` component in your Blazor WebAssembly App using Visual Studio and Visual Studio Code.
+This section briefly explains about how to include [`Blazor Badge`](https://blazor.syncfusion.com/demos/badge/defaultfunctionalities?theme=bootstrap5) component in your Blazor WebAssembly App using Visual Studio and Visual Studio Code.
 
 To get start quickly with Blazor Badge, you can check on this video:
 
@@ -93,7 +93,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 ## Add Stylesheet
 
-The theme stylesheet can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet reference within the `<head>` section of the **~/index.html** file.
+The theme stylesheet can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet reference in the `<head>` section of the **~/index.html** file.
 
 ```html
 <head>
@@ -110,7 +110,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Badge component 
 {% tabs %}
 {% highlight razor %}
 
-<h1>Badge Component <span class="e-badge">New</span></h1>
+<h1>Badge Component <span class="e-badge e-badge-primary">New</span></h1>
 
 {% endhighlight %}
 {% endtabs %}

@@ -233,11 +233,11 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
     };
     public class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
-        public string PId { get; set; }
+        public string? PId { get; set; }
     }
 }
 

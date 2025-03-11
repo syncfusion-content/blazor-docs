@@ -216,6 +216,8 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 {% tabs %}
 {% highlight razor %}
 
+@using Syncfusion.Blazor.Layouts
+
 <div style="height: 250px;">
     <SfTimeline>
         <TimelineItems>
