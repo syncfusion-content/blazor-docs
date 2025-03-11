@@ -149,11 +149,7 @@ You can download a complete working sample from [GitHub]().
 
 ![Blazor Diagram Container Header](images/ContainerImages/ContainerWithHeader.png)
 
-### Header editing
-
-The diagram provides support to edit container headers at runtime. You can achieve the header editing by double-clicking the region of the container's header, or by pressing F2.
-
-![Header Editing](Swimlane-images/Header_Edit.gif).
+>Note: You can edit the header by double-clicking the region of the container’s header, or by pressing F2.
 
 ### Container from Symbol palette
 
