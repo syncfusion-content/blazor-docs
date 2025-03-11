@@ -308,7 +308,7 @@ The following example for remote data binding and enabled offline mode,
 
 ### ValueTuple data binding
 
-You can bind [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-5.0) data to the ComboBox component. The following code helps you to get a string value from the enumeration data by using [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-5.0).
+You can bind [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-8.0) data to the ComboBox component. The following code helps you to get a string value from the enumeration data by using [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-8.0).
 
 ```csharp
 
@@ -326,7 +326,7 @@ You can bind [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.va
 
 ## Binding ExpandoObject
 
-You can bind [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-5.0) data to the ComboBox component. The following example `ExpandoObject` is bound to the collection of vehicles data.
+You can bind [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-8.0) data to the ComboBox component. The following example `ExpandoObject` is bound to the collection of vehicles data.
 
 ```csharp
 
@@ -359,7 +359,7 @@ You can bind [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system
 
 ## Binding DynamicObject
 
-You can bind [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-5.0) data to the ComboBox component. The following example `DynamicObject` is bound to the collection of customers data.
+You can bind [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-8.0) data to the ComboBox component. The following example `DynamicObject` is bound to the collection of customers data.
 
 ```csharp
 
@@ -410,7 +410,7 @@ You can bind [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system
 
 ## Binding ObservableCollection
 
-You can bind [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-5.0) data to the ComboBox component. The following example `Observable Data` is bound to a collection of colors data.
+You can bind [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-8.0) data to the ComboBox component. The following example `Observable Data` is bound to a collection of colors data.
 
 ```csharp
 

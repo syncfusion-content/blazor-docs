@@ -11,7 +11,11 @@ documentation: ug
 
 # Getting Started with Blazor Sankey Diagram in Blazor WASM App
 
-This section briefly explains about how to include [Blazor Sankey](https://www.syncfusion.com/blazor-components) diagram in your Blazor WASM App using Visual Studio.
+This section briefly explains about how to include [Blazor Sankey](https://www.syncfusion.com/blazor-components) diagram in your Blazor WASM App using Visual Studio and Visual Studio Code.
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
 
 ## Prerequisites
 
@@ -34,6 +38,54 @@ Install-Package Syncfusion.Blazor.Sankey -Version {{ site.releaseversion }}
 {% endtabs %}
 
 N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code %}
+
+## Prerequisites
+
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
+
+## Create a new Blazor App in Visual Studio Code
+
+You can create a **Blazor WebAssembly App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
+
+Alternatively, you can create a WebAssembly application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+
+{% tabs %}
+
+{% highlight c# tabtitle="Blazor WASM App" %}
+
+dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Sankey NuGet in the App
+
+* Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
+* Ensure you’re in the project root directory where your `.csproj` file is located.
+* Run the following command to install a [Syncfusion.Blazor.Sankey](https://www.nuget.org/packages/Syncfusion.Blazor.Sankey) NuGet package and ensure all dependencies are installed.
+
+{% tabs %}
+
+{% highlight c# tabtitle="Package Manager" %}
+
+dotnet add package Syncfusion.Blazor.Sankey -v {{ site.releaseversion }}
+dotnet restore
+
+{% endhighlight %}
+
+{% endtabs %}
+
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+
+{% endtabcontent %}
+
+{% endtabcontents %}
 
 ## Register Syncfusion Blazor Service
 

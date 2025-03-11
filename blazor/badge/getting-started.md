@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Badge Component | Syncfusion
-description: Checkout and learn about getting started with Blazor Badge component in Blazor Server App and Blazor WebAssembly App.
+description: Checkout and learn about getting started with Blazor Badge component in Blazor WebAssembly Application.
 platform: Blazor
 control: Badge
 documentation: ug
@@ -11,11 +11,15 @@ documentation: ug
 
 # Getting Started with Blazor Badge Component
 
-This section briefly explains about how to include Blazor `Badge` component in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
+This section briefly explains about how to include Blazor `Badge` component in your Blazor WebAssembly App using Visual Studio and Visual Studio Code.
 
 To get start quickly with Blazor Badge, you can check on this video:
 
 {% youtube "https://www.youtube.com/watch?v=CNkXfjZDGUQ" %}
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
 
 ## Prerequisites
 
@@ -23,7 +27,7 @@ To get start quickly with Blazor Badge, you can check on this video:
 
 ## Create a new Blazor App in Visual Studio
 
-You can create a **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Themes NuGet in the App
 
@@ -39,15 +43,57 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code %}
+
+## Prerequisites
+
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
+
+## Create a new Blazor App in Visual Studio Code
+
+You can create a **Blazor WebAssembly App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
+
+Alternatively, you can create a WebAssembly application using the following command in the terminal(<kbd>Ctrl</kbd>+<kbd>`</kbd>).
+
+{% tabs %}
+
+{% highlight c# tabtitle="Blazor WASM App" %}
+
+dotnet new blazorwasm -o BlazorApp
+cd BlazorApp
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Themes NuGet in the App
+
+* Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
+* Ensure you’re in the project root directory where your `.csproj` file is located.
+* Run the following command to install a [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package and ensure all dependencies are installed.
+
+{% tabs %}
+
+{% highlight c# tabtitle="Package Manager" %}
+
+dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
+dotnet restore
+
+{% endhighlight %}
+
+{% endtabs %}
+
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+
+{% endtabcontent %}
+
+{% endtabcontents %}
+
 ## Add Stylesheet
 
-The theme stylesheet can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet in the `<head>` of the main page as follows:
-
-* For **.NET 6** Blazor Server app, include it in **~/Pages/_Layout.cshtml** file.
-
-* For **.NET 7** Blazor Server app, include it in the **~/Pages/_Host.cshtml** file.
-
-* For Blazor WebAssembly app, include it in the **~/index.html** file.
+The theme stylesheet can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet reference within the `<head>` section of the **~/index.html** file.
 
 ```html
 <head>
