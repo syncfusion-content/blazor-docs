@@ -13,7 +13,7 @@ documentation: ug
  
 [Radar](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/radar-chart) series visualizes data in terms of values and angles. It provides option for visual comparison between several quantitative or qualitative aspects of a situation. 
 
-To learn how to create a Radar chart, you can watch this video.
+You can learn how to create a Radar chart using Blazor Charts by watching the video below.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=Q5odgrcbSO0" %}
 

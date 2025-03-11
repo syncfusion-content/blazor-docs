@@ -9,13 +9,13 @@ documentation: ug
 
 # Annotation in Blazor Charts Component
 
-Annotations are texts, shapes, or images that are used to highlight a specific region of interest in a chart. The [ChartAnnotations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAnnotations.html) property allows to add annotations to the chart.
+Annotations are texts, shapes, or images that are used to highlight a specific region of interest in a chart.
 
-To learn how to Adding Annotations to Blazor Charts, you can watch this video.
+You can learn how to add annotations to Blazor Charts by watching the video below.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=TpUoXrYlCkU" %}
 
-Specify the ID of the element that needs to be displayed in the chart area by using the [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAnnotation.html#Syncfusion_Blazor_Charts_ChartAnnotation_Content) property of the annotation.
+ The [ChartAnnotations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAnnotations.html) property allows to add annotations to the chart. Specify the ID of the element that needs to be displayed in the chart area by using the [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAnnotation.html#Syncfusion_Blazor_Charts_ChartAnnotation_Content) property of the annotation.
 
 ```cshtml
 

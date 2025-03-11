@@ -9,13 +9,15 @@ documentation: ug
 
 # Axis Labels in Blazor Charts Component
 
+This section provides a brief explanation on how to customize the Blazor Charts axis labels.
+
+You can learn how to customize the chart axis labels by watching the video below.
+
+{% youtube "youtube:https://www.youtube.com/watch?v=FzH0Pl_LnvQ" %}
+
 ## Smart Axis Labels
 
 When the axis labels overlap, the [LabelIntersectAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_LabelIntersectAction) property in the axis can be used to intelligently arrange them.
-
-To learn how to customize axis labels, you can watch this video.
-
-{% youtube "youtube:https://www.youtube.com/watch?v=FzH0Pl_LnvQ" %}
 
 **Case 1:** When [LabelIntersectAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_LabelIntersectAction) is set to **Hide**.
 

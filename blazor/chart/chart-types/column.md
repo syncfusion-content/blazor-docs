@@ -13,7 +13,7 @@ documentation: ug
 
 [Column Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/column-chart) is the most common chart type that is used to compare **Frequency**, **Count**, **Total**, or **Average** of data in different categories. It is ideal for showing variations in the value of an item over time.
 
-To learn how to Create and Customize the Column Chart, you can watch this video.
+You can learn how to create a column chart using Blazor Charts by watching the video below.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=IQb0sJPlvZI" %}
 

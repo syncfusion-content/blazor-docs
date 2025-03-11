@@ -13,7 +13,7 @@ documentation: ug
 
 [Stacked Column Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stacked-column-chart) is a chart with Y values stacked over one another in the series order. It shows the relation between individual values to the total sum of the points.
 
-To learn how to Create and Customize the Stacked Column Chart, you can watch this video.
+You can learn how to create and customize the Stacked Column chart using Blazor Charts by watching the video below.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=4ZOjppZFzAw" %}
 

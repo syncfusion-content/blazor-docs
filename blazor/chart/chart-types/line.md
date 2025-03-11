@@ -13,7 +13,7 @@ documentation: ug
 
 [Line Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/line-chart) represents and visualizes the time-dependent data to show the trends at equal intervals.
 
-To learn how to Create and Customize the Line Chart, you can watch this video.
+You can learn how to create a line chart using Blazor Charts by watching the video below.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=pZ0unpq0_-c" %}
 

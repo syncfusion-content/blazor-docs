@@ -15,7 +15,7 @@ documentation: ug
 
 The [DateTime](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html#Syncfusion_Blazor_Charts_ValueType_DateTime) axis uses a date time scale and displays date time values as axis labels in the format specified.
 
-To learn how to customize the DateTime axis, you can watch this video.
+You can learn how to customize the DateTime axis by watching the video below.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=vi1nzev22Uc" %}
 

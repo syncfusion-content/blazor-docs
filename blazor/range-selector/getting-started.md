@@ -11,13 +11,13 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor Range Selector](https://www.syncfusion.com/blazor-components/blazor-range-selector) component in your Blazor WebAssembly App using Visual Studio and Visual Studio Code.
 
+You can get started with the Blazor Range Selector component by watching the video below.
+
+{% youtube "youtube:https://www.youtube.com/watch?v=Xtt1h-1QH58" %}
+
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
-
-To learn how to Get Started with the Blazor Range Selector Component, you can watch this video.
-
-{% youtube "youtube:https://www.youtube.com/watch?v=Xtt1h-1QH58" %}
 
 ## Prerequisites
 

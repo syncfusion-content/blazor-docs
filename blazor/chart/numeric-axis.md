@@ -13,7 +13,7 @@ documentation: ug
 
 Numeric axis can be used to represent numeric values in a chart. The [ValueType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_ValueType) of an axis is [Double](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html#Syncfusion_Blazor_Charts_ValueType_Double) by default.
 
-To learn how to customize the numeric axis, you can watch this video.
+You can learn how to customize the numeric axis by watching the video below.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=sZbkeHLqEco" %}
 

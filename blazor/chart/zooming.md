@@ -9,6 +9,10 @@ documentation: ug
 
 # Zooming in Blazor Charts Component
 
+You can learn how to zoom and pan in Blazor Charts by watching the video below.
+
+{% youtube "youtube:https://www.youtube.com/watch?v=-fqwvVMI9Ec" %}
+
 ## Enable zooming
 
 The chart can be zoomed in three different ways.
@@ -16,10 +20,6 @@ The chart can be zoomed in three different ways.
 * Selection - By setting [EnableSelectionZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html#Syncfusion_Blazor_Charts_ChartZoomSettings_EnableSelectionZooming) property to **true** in [ChartZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html), the chart can be zoomed using the rubber band selection.
 * Mouse Wheel - By setting [EnableMouseWheelZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html#Syncfusion_Blazor_Charts_ChartZoomSettings_EnableMouseWheelZooming) property to **true** in [ChartZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html), the chart can be zoomed-in and zoomed-out by scrolling the mouse wheel.
 * Pinch - By setting [EnablePinchZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html#Syncfusion_Blazor_Charts_ChartZoomSettings_EnablePinchZooming) property to **true** in [ChartZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html), the chart can be zoomed through pinch gesture in touch enabled devices.
-
-To learn how to Zooming and Panning in Blazor Charts, you can watch this video.
-
-{% youtube "youtube:https://www.youtube.com/watch?v=-fqwvVMI9Ec" %}
 
  N> 
  * Pinch zooming is only usable in browsers that support multi-touch gestures.
