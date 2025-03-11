@@ -31,14 +31,18 @@ The [FlipDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diag
 
 ### How to change the flip mode
 
-The [FlipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramFlipMode.html) property is utilized to manage the flipping behavior of diagram objects. It determines whether the object should be flipped along with its associated ports and content, or if these elements should remain in their original orientation during the flip operation.
+The [FlipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramFlipMode.html) property is utilized to manage the flipping behavior of diagram objects. It determines whether the object should be flipped along with its associated ports , content and content text, or if these elements should remain in their original orientation during the flip operation.
 
 | DiagramFlipMode | Description | 
 | -------- | -------- |
-|Content| It enables or disables the flip for an object’s content.|
+|Content| It flips the content along with the object while keeping the text readable.|
 |Port| It enables or disables the flip for an object’s port.|
-|All| It enables or disables the flip for both the object’s content and port.|
-|None| It is used to disable all the flip mode behavior.|
+|All| It enables or disables the flip for both the object’s content,content text and port.|
+|ContentText| It flips the object and inverts the content text without changing its position.|
+|PortAndContent| It flips the port and content along with the object while keeping the text readable.|
+|PortAndContentText| It flips the port and content text along with the object.|
+|ContentAndContentText| It flips the content and content text along with the Object.|
+
 
 **Note:** The [FlipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramFlipMode.html) property is exclusively applicable to nodes within the diagram. It does not affect connectors or any other diagram elements.
 
@@ -222,16 +226,28 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 | FlipDirection | DiagramFlipMode | Output|
 | -------- | -------- | -------- |
-|Horizontal|Port| ![HorizontalDirection with Port Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-port.png)|
-|Horizontal|Content|![HorizontalDirection with Content Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-content.png)|
+|Horizontal|Content| ![HorizontalDirection with Content Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-Content.png)|
+|Horizontal|Port|![HorizontalDirection with Port Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-content.png)|
+|Horizontal|Content Text| ![HorizontalDirection with Content Text Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-ContentText.png)|
+|Horizontal|Port And Content |![HorizontalDirection with Port And Content Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-portAndcontent.png)|
+|Horizontal|Port And Content Text| ![HorizontalDirection with Port And Content Text Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-PortAndContentText.png)|
+|Horizontal|Content And Content Text|![HorizontalDirection with Content And Content Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-ContentAndContentText.png)|
 |Horizontal|All|![HorizontalDirection with All Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-all.png)|
 |Horizontal|None|![HorizontalDirection with None Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-none.png)|
-|Vertical|Port|![VerticalDirection with Port Mode](./images/blazor-diagram-flip-direction-as-vertical-flip-mode-as-port.png)|
-|Vertical|Content|![VerticalDirection with Content Mode](./images/blazor-diagram-flip-direction-as-vertical-flip-mode-as-content.png)|
-|Vertical|All|![VerticalDirection with All Mode](./images/blazor-diagram-flip-direction-as-vertical-flip-mode-as-both.png)|
+|Vertical|Content| ![VerticalDirection with Content Mode](./images/blazor-diagram-flip-direction-as-Vertical-flip-mode-as-Content.png)|
+|Vertical|Port|![VerticalDirection with Port Mode](./images/blazor-diagram-flip-direction-as-Vertical-flip-mode-as-content.png)|
+|Vertical|Content Text| ![VerticalDirection with Content Text Mode](./images/blazor-diagram-flip-direction-as-Vertical-flip-mode-as-ContentText.png)|
+|Vertical|Port And Content |![VerticalDirection with Port And Content Mode](./images/blazor-diagram-flip-direction-as-Vertical-flip-mode-as-portAndcontent.png)|
+|Vertical|Port And Content Text| ![VerticalDirection with Port And Content Text Mode](./images/blazor-diagram-flip-direction-as-Vertical-flip-mode-as-PortAndContentText.png)|
+|Vertical|Content And Content Text|![VerticalDirection with Content And Content Mode](./images/blazor-diagram-flip-direction-as-Vertical-flip-mode-as-ContentAndContentText.png)|
+|Vertical|All|![VerticalDirection with All Mode](./images/blazor-diagram-flip-direction-as-vertical-flip-mode-as-All.png)|
 |Vertical|None|![VerticalDirection with None Mode](./images/blazor-diagram-flip-direction-as-vertical-flip-mode-as-none.png)|
-|Both|Port|![BothDirection with Port Mode](./images/blazor-diagram-flip-direction-as-both-flip-mode-as-port.png)|
-|Both|Content|![BothDirection with Content Mode](./images/blazor-diagram-flip-direction-as-both-flip-mode-as-content.png)|
+|Both|Content| ![BothDirection with Content Mode](./images/blazor-diagram-flip-direction-as-Both-flip-mode-as-Content.png)|
+|Both|Port|![BothDirection with Port Mode](./images/blazor-diagram-flip-direction-as-Both-flip-mode-as-content.png)|
+|Both|Content Text| ![BothDirection with Content Text Mode](./images/blazor-diagram-flip-direction-as-Both-flip-mode-as-ContentText.png)|
+|Both|Port And Content |![BothDirection with Port And Content Mode](./images/blazor-diagram-flip-direction-as-Both-flip-mode-as-portAndcontent.png)|
+|Both|Port And Content Text| ![BothDirection with Port And Content Text Mode](./images/blazor-diagram-flip-direction-as-Both-flip-mode-as-PortAndContentText.png)|
+|Both|Content And Content Text|![BothDirection with Content And Content Mode](./images/blazor-diagram-flip-direction-as-Both-flip-mode-as-ContentAndContentText.png)|
 |Both|All|![BothDirection with All Mode](./images/blazor-diagram-flip-direction-as-both-flip-mode-as-all.png)|
 |Both|None|![BothDirection with None Mode](./images/blazor-diagram-flip-direction-as-both-flip-mode-as-none.png)|
 
