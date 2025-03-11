@@ -193,7 +193,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Tooltip component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Tooltip component with the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor [Button](https://blazor.syncfusion.com/documentation/button/getting-started) component in the **~Pages/.razor** file. If an interactivity location as `Per page/component` in the web app, define a render mode at the top of the `~Pages/.razor` component, as follows:
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Tooltip component with the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor [Button](https://blazor.syncfusion.com/documentation/button/getting-started) component in the **~Pages/.razor** file. If an interactivity location as `Per page/component` in the web app, define a render mode at the top of the **~Pages/.razor** component, as follows:
 
 | Interactivity location | RenderMode | Code |
 | --- | --- | --- |
@@ -216,6 +216,7 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 {% tabs %}
 {% highlight razor %}
 
+@using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 
 <SfTooltip ID="Tooltip" Target="#btn" Content="@Content">
