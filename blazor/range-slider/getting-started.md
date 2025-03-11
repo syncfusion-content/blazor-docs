@@ -149,6 +149,8 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Range Slider com
 {% tabs %}
 {% highlight razor %}
 
+@using Syncfusion.Blazor.Inputs
+
 <SfSlider Value="30"></SfSlider>
 
 {% endhighlight %}

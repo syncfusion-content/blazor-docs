@@ -64,11 +64,8 @@ And on implementing the above code snippet in the below slider control's Blazor 
     .sliderwrap {
         margin-top: 45px;
     }
-    .e-bigger .content-wrapper {
-        width: 80%;
-    }
     .e-control-wrapper.e-slider-container.e-horizontal .e-limits {
-    background-color: rgba(69, 100, 233, 0.46);
+        background-color: rgba(69, 100, 233, 0.46);
      }
     .sliderwrap label {
         padding-bottom: 50px;

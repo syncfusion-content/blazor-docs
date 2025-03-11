@@ -9,7 +9,7 @@ documentation: ug
 
 # Chat window user interface using Blazor ListView Component
 
-ListView can be customized as chat window. To achieve that, use the ListView `Template` .
+ListView can be customized as chat window. To achieve that, use the ListView [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewTemplates-1.html).
 
 * The Listview template is used to showcase the ListView as chat window.
 * Avatar control is used to design the image of contact person.
