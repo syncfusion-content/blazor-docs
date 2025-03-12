@@ -63,10 +63,10 @@ You can add keytips to all the ribbon items by using the [KeyTip](https://help.s
                                 <RibbonCollection>
                                     <RibbonItems>
                                         <RibbonItem Type=RibbonItemType.ComboBox KeyTip="O">
-                                            <RibbonComboBoxSettings  AllowFiltering=true DataSource="@fontFamilyItems" Index="2" Width="150px"></RibbonComboBoxSettings>
+                                            <RibbonComboBoxSettings  AllowFiltering=true DataSource="@fontFamilyItems" @bind-Index="@fontFamIndex" Width="150px"></RibbonComboBoxSettings>
                                         </RibbonItem>
                                         <RibbonItem Type=RibbonItemType.ComboBox>
-                                            <RibbonComboBoxSettings DataSource="@fontSizeItems" Width="65px" PopupWidth="85px" FieldSettings="@fieldSetings" Index="4" ></RibbonComboBoxSettings>
+                                            <RibbonComboBoxSettings DataSource="@fontSizeItems" Width="65px" PopupWidth="85px" FieldSettings="@fieldSetings" @bind-Index="@fontSizeIndex" ></RibbonComboBoxSettings>
                                         </RibbonItem>
                                     </RibbonItems>
                                 </RibbonCollection>
@@ -79,7 +79,7 @@ You can add keytips to all the ribbon items by using the [KeyTip](https://help.s
                                             </RibbonGroupButtonSettings>
                                         </RibbonItem>
                                         <RibbonItem Type=RibbonItemType.ColorPicker  KeyTip="CP">
-                                            <RibbonColorPickerSettings Value="#123456"></RibbonColorPickerSettings>
+                                            <RibbonColorPickerSettings @bind-Value="@colorPickerValue"></RibbonColorPickerSettings>
                                         </RibbonItem>
                                     </RibbonItems>
                                 </RibbonCollection>
@@ -112,13 +112,13 @@ You can add keytips to all the ribbon items by using the [KeyTip](https://help.s
                                 <RibbonCollection>
                                     <RibbonItems>
                                         <RibbonItem Type=RibbonItemType.CheckBox KeyTip="R1">
-                                            <RibbonCheckBoxSettings Label="Ruler" Checked="false"></RibbonCheckBoxSettings>
+                                            <RibbonCheckBoxSettings Label="Ruler"></RibbonCheckBoxSettings>
                                         </RibbonItem>
                                         <RibbonItem Type=RibbonItemType.CheckBox KeyTip="R2">
-                                            <RibbonCheckBoxSettings Label="Gridlines" Checked="false"></RibbonCheckBoxSettings>
+                                            <RibbonCheckBoxSettings Label="Gridlines"></RibbonCheckBoxSettings>
                                         </RibbonItem>
                                         <RibbonItem Type=RibbonItemType.CheckBox KeyTip="R3">
-                                            <RibbonCheckBoxSettings Label="Navigation Pane" Checked="false"></RibbonCheckBoxSettings>
+                                            <RibbonCheckBoxSettings Label="Navigation Pane" @bind-Checked="@checkedState"></RibbonCheckBoxSettings>
                                         </RibbonItem>
                                     </RibbonItems>
                                 </RibbonCollection>
@@ -132,6 +132,11 @@ You can add keytips to all the ribbon items by using the [KeyTip](https://help.s
 </div>
 
 @code {
+
+    private int? fontFamIndex = 2;
+    private int? fontSizeIndex = 4;
+    private string colorPickerValue = "#123456";
+    private bool checkedState = true;
 
     private class ComboBoxItem
     {
