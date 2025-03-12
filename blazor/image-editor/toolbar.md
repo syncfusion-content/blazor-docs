@@ -122,7 +122,7 @@ Here is an example of hiding the cropping and selection toolbar items using `Too
     private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>()
     {
         new ImageEditorToolbarItemModel { Name = "Zoom" },
-        new ImageEditorToolbarItemModel { Name = "Annotation" },
+        new ImageEditorToolbarItemModel { Name = "Annotate" },
         new ImageEditorToolbarItemModel { Name = "Finetune" },
         new ImageEditorToolbarItemModel { Name = "Filter" },
         new ImageEditorToolbarItemModel { Name = "Confirm" },
