@@ -11,6 +11,11 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor Chip](https://www.syncfusion.com/blazor-components/blazor-chips) component in your Blazor WebAssembly App using Visual Studio and Visual Studio Code.
 
+To get started quickly with Blazor Chip component, check on the following video:
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=YJtHD8jPwW0" %}
+
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
