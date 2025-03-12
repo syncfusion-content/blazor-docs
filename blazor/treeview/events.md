@@ -28,9 +28,9 @@ The Blazor TreeView component's [Created](https://help.syncfusion.com/cr/blazor/
 @code {
     public class MailItem
     {
-        public string Id { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? Id { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
     }
@@ -95,9 +95,9 @@ The Blazor TreeView's [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusi
 @code {
     public class MailItem
     {
-        public string Id { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? Id { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
     }
@@ -162,9 +162,9 @@ The [DataSourceChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 @code {
     public class MailItem
     {
-        public string Id { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? Id { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
     }
@@ -229,9 +229,9 @@ The Blazor TreeView's [Destroyed](https://help.syncfusion.com/cr/blazor/Syncfusi
 @code {
     public class MailItem
     {
-        public string Id { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? Id { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
     }
@@ -296,9 +296,9 @@ The Blazor TreeView [NodeChecked](https://help.syncfusion.com/cr/blazor/Syncfusi
 @code {
     public class MailItem
     {
-        public string Id { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? Id { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
     }
@@ -363,9 +363,9 @@ The Blazor TreeView [NodeChecking](https://help.syncfusion.com/cr/blazor/Syncfus
 @code {
     public class MailItem
     {
-        public string Id { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? Id { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
     }
@@ -430,9 +430,9 @@ The Blazor TreeView component's [NodeClicked](https://help.syncfusion.com/cr/bla
 @code {
     public class MailItem
     {
-        public string Id { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? Id { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
     }
@@ -497,9 +497,9 @@ The Blazor TreeView component's [NodeCollapsed](https://help.syncfusion.com/cr/b
 @code {
     public class MailItem
     {
-        public string Id { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? Id { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
     }
@@ -565,9 +565,9 @@ The Blazor TreeView component's [NodeCollapsing](https://help.syncfusion.com/cr/
 @code {
     public class MailItem
     {
-        public string Id { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? Id { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
     }
@@ -632,9 +632,9 @@ The Blazor TreeView component's [NodeDropped](https://help.syncfusion.com/cr/bla
 @code {
     public class MailItem
     {
-        public string Id { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? Id { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
     }
@@ -699,9 +699,9 @@ The [NodeEdited](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigat
 @code {
     public class MailItem
     {
-        public string Id { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? Id { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
     }
@@ -766,9 +766,9 @@ The Blazor TreeView component's [NodeEditing](https://help.syncfusion.com/cr/bla
 @code {
     public class MailItem
     {
-        public string Id { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? Id { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
     }
@@ -833,9 +833,9 @@ The Blazor TreeView component's [NodeExpanded](https://help.syncfusion.com/cr/bl
 @code {
     public class MailItem
     {
-        public string Id { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? Id { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
     }
@@ -900,9 +900,9 @@ The Blazor TreeView component [NodeExpanding](https://help.syncfusion.com/cr/bla
 @code {
     public class MailItem
     {
-        public string Id { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? Id { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
     }
@@ -967,9 +967,9 @@ The Blazor TreeView component [NodeSelected](https://help.syncfusion.com/cr/blaz
 @code {
     public class MailItem
     {
-        public string Id { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? Id { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
     }
@@ -1034,9 +1034,9 @@ The Blazor TreeView component [NodeSelecting](https://help.syncfusion.com/cr/bla
 @code {
     public class MailItem
     {
-        public string Id { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? Id { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
     }
@@ -1123,8 +1123,8 @@ The Blazor TreeView component's [OnActionFailure](https://help.syncfusion.com/cr
     {
         public int? EmployeeID { get; set; }
         public int OrderID { get; set; }
-        public string ShipName { get; set; }
-        public string FirstName { get; set; }
+        public string? ShipName { get; set; }
+        public string? FirstName { get; set; }
     }
 }
 <style>
@@ -1158,9 +1158,9 @@ The [OnKeyPress](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigat
 @code {
     public class MailItem
     {
-        public string Id { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? Id { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
     }
@@ -1225,9 +1225,9 @@ The [OnNodeDragged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navi
 @code {
     public class MailItem
     {
-        public string Id { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? Id { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
     }
@@ -1292,9 +1292,9 @@ The [OnNodeDragStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Na
 @code {
     public class MailItem
     {
-        public string Id { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? Id { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
     }
@@ -1359,9 +1359,9 @@ The [OnNodeDragStop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Nav
 @code {
     public class MailItem
     {
-        public string Id { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? Id { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
     }
@@ -1428,9 +1428,9 @@ N> The OnNodeRender event, which is triggered frequently, may cause performance 
 @code {
     public class MailItem
     {
-        public string Id { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? Id { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
     }
