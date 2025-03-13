@@ -1,0 +1,29 @@
+@using Syncfusion.Blazor.DropDowns;
+
+<SfMultiSelect TItem="Country" TValue="string[]" Placeholder="e.g. Australia" Mode="VisualMode.CheckBox" DataSource="@Countries" ShowSelectAll="true">
+    <MultiSelectFieldSettings Value="Code" Text="Name"></MultiSelectFieldSettings>
+</SfMultiSelect>
+
+@code {
+    public class Country
+    {
+        public string Name { get; set; }
+        public string Code { get; set; }
+    }
+    List<Country> Countries = new List<Country>
+    {
+        new Country() { Name = "Australia", Code = "AU" },
+        new Country() { Name = "Bermuda", Code = "BM" },
+        new Country() { Name = "Canada", Code = "CA" },
+        new Country() { Name = "Cameroon", Code = "CM" },
+        new Country() { Name = "Denmark", Code = "DK" },
+        new Country() { Name = "France", Code = "FR" },
+        new Country() { Name = "Finland", Code = "FI" },      
+    };
+}
+
+<style>
+    .e-popup.e-ddl, .e-popup.e-ddl .e-dropdownbase {
+        border-radius: 25px;
+    }
+</style>
