@@ -11,6 +11,11 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor Signature](https://www.syncfusion.com/blazor-components/blazor-signature) component in your Blazor WebAssembly App using Visual Studio and Visual Studio Code.
 
+To get started quickly with Blazor Signature component, check on the following video:
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=dBXwBVhmjTg" %}
+
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}

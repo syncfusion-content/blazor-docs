@@ -11,6 +11,11 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor Ribbon](https://www.syncfusion.com/blazor-components/blazor-ribbon) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and Visual Studio Code.
 
+To get started quickly with Blazor Ribbon component, check on the following video:
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=bJCpW22KqJM" %}
+
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}

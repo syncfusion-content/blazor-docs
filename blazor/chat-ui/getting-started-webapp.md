@@ -11,6 +11,11 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor Chat UI](https://www.syncfusion.com/blazor-components/blazor-chat-ui) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and Visual Studio Code.
 
+To get started quickly with Blazor Chat UI component, check on the following video:
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=jNeuk12Kurw" %}
+
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
