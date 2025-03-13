@@ -35,6 +35,30 @@ Use the following CSS to customize the DatePicker icon element
 }
 ```
 
+## Customizing the appearance of the DatePicker label 
+
+To customize the appearance of the DatePicker label, you can use the CssClass property in combination with custom CSS. 
+
+```cshtml
+@using Syncfusion.Blazor.Calendars
+
+<SfDatePicker TValue="DateTime?" Placeholder="earliest date..." FloatLabelType="@FloatLabelType.Always" CssClass="e-small data-color" Width="150px">
+</SfDatePicker>
+
+```
+```css
+    .data-color.e-float-input.e-control-wrapper label.e-float-text,
+    .data-color.e-float-input input:valid~label.e-float-text, 
+    .data-color.e-float-input input~label.e-label-top.e-float-text,
+    .data-color.e-float-input.e-input-focus label.e-float-text,
+    .data-color.e-float-input:not(.e-error) input:valid~label.e-float-text, 
+    .data-color.e-float-input:not(.e-error) input~label.e-label-top.e-float-text
+      {
+      font-size : 10px;
+      color: blue;
+    }
+```
+
 ## Adding background color to DatePicker container element
 
 You can customize the background color of the container element for the DatePicker by targeting its CSS class, `input.e-input`, and setting the desired color to the `background-color` property.
