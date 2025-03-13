@@ -37,7 +37,7 @@ Use the following CSS to customize the DatePicker icon element
 
 ## Customizing the appearance of the DatePicker label 
 
-To customize the appearance of the DatePicker label, you can use the CssClass property in combination with custom CSS. 
+To customize the appearance of the DatePicker label, you can use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfInputTextBase-1.html#Syncfusion_Blazor_Inputs_SfInputTextBase_1_CssClass) property in combination with custom CSS. 
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
