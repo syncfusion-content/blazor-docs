@@ -115,6 +115,18 @@ You can customize the dropdown [icon](https://ej2.syncfusion.com/documentation/a
 
 ![Blazor Multiselect DropDown icon color](./images/style/blazor_multiselect_icon-color.png)
 
+## Customizing the dropdown border radius
+
+You can customize the border-radius of the MultiSelect dropdown by targeting the `.e-popup.e-ddl` CSS class, which represents the popup element. Simply set the desired value to the `border-radius` property to achieve the preferred styling
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/dropdown-border-radius.razor %}
+
+{% endhighlight %}
+
+![Blazor Multiselect DropDown border radius](./images/style/blazor_multiselect_dropdown_border_radius.png)
+
 ## CssClass
 
 Specifies the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectModel-1.html#Syncfusion_Blazor_DropDowns_MultiSelectModel_1_CssClass) name that can be appended with the root element of the MultiSelect. One or more custom CSS classes can be added to a MultiSelect.
