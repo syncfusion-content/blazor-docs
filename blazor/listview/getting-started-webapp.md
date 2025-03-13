@@ -216,6 +216,8 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 {% tabs %}
 {% highlight razor %}
 
+@using Syncfusion.Blazor.Lists
+
 <SfListView DataSource="@Data">
     <ListViewFieldSettings TValue="DataModel" Id="Id" Text="Text"></ListViewFieldSettings>
 </SfListView>
