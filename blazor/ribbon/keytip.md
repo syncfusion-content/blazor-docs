@@ -1,21 +1,23 @@
 ---
 layout: post
-title: Ribbon Keytip in Blazor Ribbon Component | Syncfusion
-description: Checkout and learn about Ribbon Keytip in Blazor Ribbon component in Blazor Server App and Blazor WebAssembly App.
+title: Keytips in Blazor Ribbon Component | Syncfusion
+description: Checkout and learn about Keytips in Blazor Ribbon component in Blazor Server App and Blazor WebAssembly App.
 platform: Blazor
 control: Ribbon
 documentation: ug
 ---
 
-# Ribbon Keytips
+# KeyTips in Blazor Ribbon component
 
-The Ribbon supports keyboard navigations to interact the ribbon items using the keytips which can be enabled by setting the [EnableKeyTips](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.SfRibbon.html#Syncfusion_Blazor_Ribbon_SfRibbon_Enablekeytips) property.
+The Blazor Ribbon component supports keyboard navigation through KeyTips, enabling users to interact with Ribbon interface without using a mouse. KeyTips can be enabled by setting the `EnableKeyTips` property, allowing users to quickly access commands using shortcut keys.
 
-The keytips will be shown when the `Alt + Windows/Command` keys are pressed.
+KeyTips are displayed when the user presses **Alt + Windows (or Command on macOS)**, revealing shortcut labels on Ribbon items for easy navigation.
 
-## Ribbon items keytip
+## KeyTips for Different Ribbon Elements
 
-You can add keytips to all the ribbon items by using the [KeyTip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.SfRibbon.html#Syncfusion_Blazor_Ribbon_SfRibbon_KeyTip) property.
+### Ribbon items keytip
+
+You can assign keytips to individual Ribbon items using the `KeyTip` property in the `RibbonItem` directive. This allows users to trigger buttons, dropdowns, or ribbon items using keyboard shortcuts.
 
 {% tabs %}
 {% highlight razor %}
@@ -46,7 +48,7 @@ You can add keytips to all the ribbon items by using the [KeyTip](https://help.s
                                 <RibbonCollection>
                                     <RibbonItems>
                                         <RibbonItem Type=RibbonItemType.Button KeyTip="CU">
-                                            <RibbonButtonSettings Content="Cut" IconCss="e-icons e-cut" ></RibbonButtonSettings>
+                                            <RibbonButtonSettings Content="Cut" IconCss="e-icons e-cut"></RibbonButtonSettings>
                                         </RibbonItem>
                                         <RibbonItem Type=RibbonItemType.Button KeyTip="CO">
                                             <RibbonButtonSettings Content="Copy" IconCss="e-icons e-copy"></RibbonButtonSettings>
@@ -58,27 +60,26 @@ You can add keytips to all the ribbon items by using the [KeyTip](https://help.s
                                 </RibbonCollection>
                             </RibbonCollections>
                         </RibbonGroup>
-                        <RibbonGroup Orientation=Syncfusion.Blazor.Ribbon.Orientation.Row GroupIconCss="e-icons e-bold"  EnableGroupOverflow="true" HeaderText="Font" CssClass="font-group" KeyTip="FB">
+                        <RibbonGroup Orientation=Syncfusion.Blazor.Ribbon.Orientation.Row GroupIconCss="e-icons e-bold" EnableGroupOverflow="true" HeaderText="Font" CssClass="font-group" KeyTip="FB">
                             <RibbonCollections>
                                 <RibbonCollection>
                                     <RibbonItems>
-                                        <RibbonItem Type=RibbonItemType.ComboBox KeyTip="O">
-                                            <RibbonComboBoxSettings  AllowFiltering=true DataSource="@fontFamilyItems" @bind-Index="@fontFamIndex" Width="150px"></RibbonComboBoxSettings>
+                                        <RibbonItem Type=RibbonItemType.ComboBox KeyTip="FF">
+                                            <RibbonComboBoxSettings AllowFiltering=true DataSource="@fontFamilyItems" @bind-Index="@fontFamIndex" Width="150px" FieldSettings="@fieldSetings"></RibbonComboBoxSettings>
                                         </RibbonItem>
-                                        <RibbonItem Type=RibbonItemType.ComboBox>
-                                            <RibbonComboBoxSettings DataSource="@fontSizeItems" Width="65px" PopupWidth="85px" FieldSettings="@fieldSetings" @bind-Index="@fontSizeIndex" ></RibbonComboBoxSettings>
+                                        <RibbonItem Type=RibbonItemType.ComboBox KeyTip="FS">
+                                            <RibbonComboBoxSettings DataSource="@fontSizeItems" Width="65px" PopupWidth="85px" FieldSettings="@fieldSetings" @bind-Index="@fontSizeIndex"></RibbonComboBoxSettings>
                                         </RibbonItem>
                                     </RibbonItems>
                                 </RibbonCollection>
                                 <RibbonCollection>
                                     <RibbonItems>
                                         <RibbonItem Type=RibbonItemType.GroupButton ID="formatGroup" KeyTip="GB">
-                                            <RibbonGroupButtonSettings
-                                            Selection=GroupButtonSelection.Single
-                                            Items="@formatGroupItems">
+                                            <RibbonGroupButtonSettings Selection=GroupButtonSelection.Single
+                                                                       Items="@formatGroupItems">
                                             </RibbonGroupButtonSettings>
                                         </RibbonItem>
-                                        <RibbonItem Type=RibbonItemType.ColorPicker  KeyTip="CP">
+                                        <RibbonItem Type=RibbonItemType.ColorPicker KeyTip="CP">
                                             <RibbonColorPickerSettings @bind-Value="@colorPickerValue"></RibbonColorPickerSettings>
                                         </RibbonItem>
                                     </RibbonItems>
@@ -90,7 +91,7 @@ You can add keytips to all the ribbon items by using the [KeyTip](https://help.s
                                 <RibbonCollection>
                                     <RibbonItems>
                                         <RibbonItem Type=RibbonItemType.Gallery KeyTip="GY">
-                                            <RibbonGallerySettings ItemCount="3" Groups="galleryGroups" ></RibbonGallerySettings>
+                                            <RibbonGallerySettings ItemCount="3" Groups="galleryGroups"></RibbonGallerySettings>
                                         </RibbonItem>
                                     </RibbonItems>
                                 </RibbonCollection>
@@ -276,11 +277,11 @@ You can add keytips to all the ribbon items by using the [KeyTip](https://help.s
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon File Menu Keytip](./images/keytip/file-menu-keytip.png)
+![Ribbon Items Keytip](./images/keytip/items-keytip.png)
 
-## File menu keytip
+### File menu keytip
 
-You can add keytips to the file menu by using the [KeyTip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.SfRibbon.html#Syncfusion_Blazor_Ribbon_SfRibbon_KeyTip) property.
+You can assign a keytip to the File menu using the `KeyTip` property, enabling quick access to file-related actions such as opening, saving, or exporting files.
 
 {% tabs %}
 {% highlight razor %}
@@ -351,9 +352,9 @@ You can add keytips to the file menu by using the [KeyTip](https://help.syncfusi
 
 ![Ribbon File Menu Keytip](./images/keytip/file-menu-keytip.png)
 
-## Backstage menu keytip
+### Backstage menu keytip
 
-You can add keytips to backstage menu items by using the [KeyTip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.SfRibbon.html#Syncfusion_Blazor_Ribbon_SfRibbon_KeyTip) property.
+You can assign keytips for the backstage menu items using `KeyTip` property which allows you to navigate and interact with menu options and other backstage functionalities.
 
 {% tabs %}
 {% highlight razor %}
@@ -425,9 +426,9 @@ You can add keytips to backstage menu items by using the [KeyTip](https://help.s
 
 ![Ribbon Backstage menu keytip](./images/keytip/backstage-keytip.png)
 
-## Ribbon layout switcher keytip
+### Ribbon layout switcher keytip
 
-You can add keytip to the layout switcher by using the [LayoutSwitcherKeyTip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.SfRibbon.html#Syncfusion_Blazor_Ribbon_SfRibbon_LayoutSwitcherKeyTip) property.
+You can use the `LayoutSwitcherKeyTip` property to assign a shortcut for switching between **Classic** and **Simplified** Ribbon layouts.
 
 {% tabs %}
 {% highlight razor %}
@@ -498,9 +499,9 @@ You can add keytip to the layout switcher by using the [LayoutSwitcherKeyTip](ht
 
 ![Ribbon layout switcher keytip](./images/keytip/layout-switcher-keytip.png)
 
-## Ribbon launcher icon keytip
+### Ribbon launcher icon keytip
 
-You can add keytip to the launcher icon by using the [LauncherIconKeyTip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.SfRibbon.html#Syncfusion_Blazor_Ribbon_SfRibbon_LauncherIconKeyTip) property.
+The `LauncherIconKeyTip` property assigns a shortcut to the group's launcher icon, allowing you to quickly open advanced settings or additional options in Ribbon groups.
 
 {% tabs %}
 {% highlight razor %}
@@ -575,22 +576,103 @@ You can add keytip to the launcher icon by using the [LauncherIconKeyTip](https:
 
 ### Show keytips
 
-You can use the [ShowKeyTips](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.SfRibbon.html#Syncfusion_Blazor_Ribbon_SfRibbon_ShowKeyTips) method to shown the keytips dynamically.
+You can use the `ShowKeyTipsAsync` method to dynamically display keytips.
 
-In order to show specific keytips, pass the key string as an argument in the `ShowKeyTips('H')` method.
+- To activate a specific key action, pass the corresponding keytip string as an argument.
+- For example, calling `ShowKeyTipsAsync('H')` will look for the specific item associated with the **H** key and trigger its respective action.
 
 ### Hide keytips
 
-You can use the [HideKeyTips](https://ej2.syncfusion.com/javascript/documentation/api/ribbon/ribbonKeyTip/#hidekeytips) method in Ribbon to remove the keytips dynamically. This will remove all the visible keytips.
+You can use the `HideKeyTipsAsync` method to remove all visible keytips from the Ribbon dynamically, restoring the default view.
+
+{% tabs %}
+{% highlight razor %}
+
+@using Syncfusion.Blazor.Ribbon;
+@using  Syncfusion.Blazor.Buttons;
+@using Syncfusion.Blazor.DropDowns;
+@using Syncfusion.Blazor.Navigations;
+@using Syncfusion.Blazor.SplitButtons;
+
+<div class="col-lg-12 control-section default-ribbon-section">
+    <div id="ribbonContainer">
+        <SfButton @onclick="handleShowKeyTips">ShowKeyTips</SfButton>
+        <SfButton @onclick="handleHideKeyTips">HideKeyTips</SfButton>
+        <SfRibbon ID="ribbon" EnableKeyTips="true" @ref="ribbon">
+            <RibbonFileMenuSettings Visible=true MenuItems="@fileMenuItems"></RibbonFileMenuSettings>
+            <RibbonTabs>
+                <RibbonTab HeaderText="Home" KeyTip="H">
+                    <RibbonGroups>
+                        <RibbonGroup HeaderText="Clipboard" ShowLauncherIcon="true" LauncherIconKeyTip="L">
+                            <RibbonCollections>
+                                <RibbonCollection>
+                                    <RibbonItems>
+                                        <RibbonItem Type=RibbonItemType.SplitButton AllowedSizes="RibbonItemSize.Large" KeyTip="V">
+                                            <RibbonSplitButtonSettings Content="Paste" IconCss="e-icons e-paste" Items="@formatItems"></RibbonSplitButtonSettings>
+                                        </RibbonItem>
+                                    </RibbonItems>
+                                    <RibbonItems>
+                                        <RibbonItem Type=RibbonItemType.Button KeyTip="X">
+                                            <RibbonButtonSettings Content="Cut" IconCss="e-icons e-cut"></RibbonButtonSettings>
+                                        </RibbonItem>
+                                        <RibbonItem Type=RibbonItemType.Button KeyTip="C">
+                                            <RibbonButtonSettings Content="Copy" IconCss="e-icons e-copy"></RibbonButtonSettings>
+                                        </RibbonItem>
+                                    </RibbonItems>
+                                </RibbonCollection>
+                            </RibbonCollections>
+                        </RibbonGroup>
+                    </RibbonGroups>
+                </RibbonTab>
+            </RibbonTabs>
+        </SfRibbon>
+    </div>
+</div>
+
+@code {
+
+    SfRibbon ribbon;
+
+    private async Task handleShowKeyTips()
+    {
+        await ribbon.ShowKeyTipsAsync();
+    }
+    private async Task handleHideKeyTips()
+    {
+        await ribbon.HideKeyTipsAsync();
+    }
+
+    List<DropDownMenuItem> formatItems = new List<DropDownMenuItem>()
+    {
+        new DropDownMenuItem{ Text = "Keep Source Format" },
+        new DropDownMenuItem{ Text = "Merge Format" },
+        new DropDownMenuItem{ Text = "Keep Text Only" }
+    };
+
+    List<MenuItem> fileMenuItems = new List<MenuItem>()
+    {
+        new MenuItem { Text = "New", IconCss = "e-icons e-file-new", Id = "new" },
+        new MenuItem { Text = "Open", IconCss = "e-icons e-folder-open", Id = "open" },
+        new MenuItem { Text = "Rename", IconCss = "e-icons e-rename", Id = "rename" },
+        new MenuItem {
+            Text = "Save",
+            IconCss = "e-icons e-save",
+            Id = "save",
+        }
+    };
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Guidelines for adding keytips
 
-Before adding keytips to the ribbon items consider the following:
+To ensure an efficient and conflict-free KeyTip experience, follow these best practices:
 
-* Avoid using the same keytip setting on multiple items.
+* Use Unique KeyTips
 
-> For example: When you add the keytip text `H` or `HF` for the same items, it activates the first item occurrence of `H`, while any subsequent instances of `H` or `HF` are ignored.
+> Each keytip should be distinct. If multiple items share the same keytip (e.g., `H` or `HF`), only the first occurrence will be activated, while any subsequent instances of H or HF are ignored.
 
-* Do not use the same first letter for the single and double keytip items.
+* Avoid Overlapping First Letters
 
-> For example: When accessing keytip text `F`, `FP` and `FPF` added for the different ribbon items and pressing `F` key, only the `F` key tip associated item will be activated while the `FP`, `FPF` configured ribbon items will be ignored.
+> When using multi-character keytips (e.g., `F`, `FP`, and `FPF`) for different items, pressing `F` will activate only the first-level keytip (`F`), while `FP` and `FPF` will not be triggered.

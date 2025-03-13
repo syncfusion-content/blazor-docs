@@ -7,17 +7,17 @@ control: Ribbon
 documentation: ug
 ---
 
-# contextual tabs in Blazor Ribbon component
+# Contextual tabs in Blazor Ribbon component
 
 The Ribbon Contextual tabs are similar to the Ribbon tabs that are displayed on demand based on their needs, such as an image or a table tabs. It supports adding all built-in and custom ribbon items to perform specific actions.
 
-## Visible tabs
+## Controlling tab visibility 
 
-You can utilize the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonContextualTabSettings.html#Syncfusion_Blazor_Ribbon_RibbonContextualTabSettings_Visible) property to control the visibility of each contextual tab.
+The `Visible` property enables you to control the visibility of each contextual tab. By setting this property, you can show or hide tabs as needed.
 
 ## Adding contextual tabs
 
-You can utilize the [ContextualTabs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.ContextualTabs.html#Syncfusion_Blazor_Ribbon_ContextualTabs) property to add contextual tabs in the Ribbon. This property accepts an array of Ribbon tabs, where you can add multiple tabs based on your needs.
+You can utilize the `RibbonContextualTabs` tag directive to define contextual tabs within the Ribbon This allows you to group related commands and display them only when required.
 
 {% tabs %}
 {% highlight razor %}
@@ -52,7 +52,7 @@ You can utilize the [ContextualTabs](https://help.syncfusion.com/cr/blazor/Syncf
                 </RibbonTab>
             </RibbonTabs>
             <RibbonContextualTabs>
-                <RibbonContextualTab Visible="true">
+                <RibbonContextualTab @bind-Visible="@isVisible">
                     <RibbonTabs>
                         <RibbonTab ID="ShapeFormat" HeaderText="Shape Format">
                             <RibbonGroups>
@@ -110,14 +110,18 @@ You can utilize the [ContextualTabs](https://help.syncfusion.com/cr/blazor/Syncf
     </div>
 </div>
 
+@code {
+    bool isVisible = true;
+}
+
 {% endhighlight %}
 {% endtabs %}
 
 ![Ribbon Contextual Tabs](./images/contextual-tabs/contextual-tabs.png)
 
-## Selected tabs
+## Selecting a contextual tab
 
-By using the [IsSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.RibbonContextualTabSettings.html#Syncfusion_Blazor_Ribbon_RibbonContextualTabSettings_IsSelected) property you can control the selected state of each contextual tab and indicates which tab is currently active.
+The `IsSelected` property determines the active state of a contextual tab. Setting this property to `true` makes the tab active, allowing you to focus on context-specific commands without manual selection.
 
 {% tabs %}
 {% highlight razor %}
@@ -152,7 +156,7 @@ By using the [IsSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
                 </RibbonTab>
             </RibbonTabs>
             <RibbonContextualTabs>
-                <RibbonContextualTab Visible="true" >
+                <RibbonContextualTab @bind-Visible=@isVisible @bind-IsSelected=@isSelected>
                     <RibbonTabs>
                         <RibbonTab HeaderText="Styles">
                             <RibbonGroups>
@@ -182,6 +186,11 @@ By using the [IsSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
     </div>
 </div>
 
+@code {
+    bool isVisible = true;
+    bool isSelected = true;
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -189,13 +198,13 @@ By using the [IsSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ## Methods
 
-### Show tab
+### Showing a Contextual Tab
 
-You can use the [ShowTab](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.ContextualTabs.html#Syncfusion_Blazor_Ribbon_ShowTab) method to make the specific Contextual tab visible in the Ribbon.
+You can use the `ShowTabAsync` method to programmatically display a specific contextual tab in the ribbon when a relevant action is performed.
 
-### Hide tab
+### Hiding a Contextual Tab
 
-You can use the [HideTab](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ribbon.ContextualTabs.html#Syncfusion_Blazor_Ribbon_HideTab) method to hide specific Contextual tab in the Ribbon.
+You can use the `HideTabAsync` method allows you to hide a contextual tab in the ribbon when it is no longer needed.
 
 {% tabs %}
 {% highlight razor %}
@@ -232,7 +241,7 @@ You can use the [HideTab](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
                 </RibbonTab>
             </RibbonTabs>
             <RibbonContextualTabs>
-                <RibbonContextualTab>
+                <RibbonContextualTab @bind-Visible=@isVisible @bind-IsSelected=@isSelected>
                     <RibbonTabs>
                         <RibbonTab HeaderText="Arrange & View" ID="ArrangeView">
                             <RibbonGroups>
@@ -263,15 +272,17 @@ You can use the [HideTab](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 </div>
 
 @code {
+    bool isVisible = true;
+    bool isSelected = true;
 
     SfRibbon ribbon;
-    private void handleShowTab()
+    private async Task handleShowTab()
     {
-        ribbon.ShowTabAsync("ArrangeView");
+        await ribbon.ShowTabAsync("ArrangeView");
     }
-    private void handleHideTab()
+    private async Task handleHideTab()
     {
-        ribbon.HideTabAsync("ArrangeView");
+        await ribbon.HideTabAsync("ArrangeView");
     }
 }
 
