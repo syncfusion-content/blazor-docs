@@ -9,7 +9,11 @@ documentation: ug
 
 # View PDF files using PDF Viewer Component in the Blazor WASM app
 
-In this section, we'll guide you through the process of adding Syncfusion&reg; Blazor PDF Viewer component to your Blazor WebAssembly (WASM) app. We'll break it down into simple steps to make it easy to follow. Additionally, you can find a fully functional example project on our [GitHub repository](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Getting%20Started/Client-side%20application).
+In this section, we'll guide you through the process of adding Syncfusion&reg; Blazor PDF Viewer component to your Blazor WebAssembly (WASM) app using Visual Studio and Visual Studio Code. We'll break it down into simple steps to make it easy to follow. Additionally, you can find a fully functional example project on our [GitHub repository](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Getting%20Started/Client-side%20application).
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
 
 {% tabcontents %}
 

@@ -11,7 +11,7 @@ documentation: ug
 
 # Getting Started with Rich Text Editor in Blazor
 
-This section briefly explains about how to include [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) component in your Blazor WebAssembly App using Visual Studio and Visual Studio Code.
+This section briefly explains about how to include [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) component in your Blazor WebAssembly App using Visual Studio and Visual Studio Code.
 
 To get start quickly with Blazor Rich Text Editor components, you can check on this video or [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/RichTextEditor) sample.
 
@@ -229,7 +229,7 @@ Configure the toolbar with the tools using [RichTextEditorToolbarSettings.Items]
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hthTNWAZUAqIpYkv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Rich Text Editor with Toolbar](./images/blazor-richtexteditor-toolbar.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZreDqjoLgZqvbHU?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" backgroundimage "[Blazor Rich Text Editor with Toolbar](./images/blazor-richtexteditor-toolbar.png)" %}
 
 ## Insert images and links
 
@@ -246,7 +246,7 @@ Specifies the items to be rendered in quick toolbar based on the target elements
     <p>Rich Text Editor allows to insert images from online source as well as local computer where you want to insert the image in your content.</p>
     <p><b>Get started Quick Toolbar to click on the image</b></p>
     <p>It is possible to add custom style on the selected image inside the Rich Text Editor through quick toolbar.</p>
-    <img alt='Logo' style='width: 300px; height: 300px; transform: rotate(0deg);' src='https://blazor.syncfusion.com/demos/_content/blazor_webapp_common_net8/images/rich-text-editor/rte-image-feather.png' />
+    <img alt='Logo' style='width: 300px; height: 300px; transform: rotate(0deg);' src='https://cdn.syncfusion.com/ej2/richtexteditor-resources/RTE-Portrait.png' />
 </SfRichTextEditor>
 
 @code {
@@ -324,7 +324,7 @@ To retrieve the editor contents in HTML format, use the [Value](https://help.s
     private string Content;
     private bool Visibility = false;
     private string Header = "Rich Text Editor's Value";
-    private string RteValue = @"<p>Rich Text Editor allows to insert images from online source as well as local computer where you want to insert the image in your content.</p><p><b>Get started Quick Toolbar to click on the image</b></p><p>It is possible to add custom style on the selected image inside the Rich Text Editor through quick toolbar.</p><img alt='Logo' style='width: 300px; height: 300px; transform: rotate(0deg);' src='https://blazor.syncfusion.com/demos/images/RichTextEditor/RTEImage-Feather.png' />";
+    private string RteValue = @"<p>Rich Text Editor allows to insert images from online source as well as local computer where you want to insert the image in your content.</p><p><b>Get started Quick Toolbar to click on the image</b></p><p>It is possible to add custom style on the selected image inside the Rich Text Editor through quick toolbar.</p><img alt='Logo' style='width: 300px; height: 300px; transform: rotate(0deg);' src='https://cdn.syncfusion.com/ej2/richtexteditor-resources/RTE-Portrait.png' />";
     private async Task GetValue()
     {
         this.Content = this.RteValue;
@@ -373,10 +373,11 @@ To retrieve the maximum number of characters in the Rich Text Editor's content, 
     private string Content;
     private bool Visibility = false;
     private string Header = "Rich Text Editor's Value";
-    private string RteValue = @"<p>Rich Text Editor allows to insert images from online source as well as local computer where you want to insert the image in your content.</p><p><b>Get started Quick Toolbar to click on the image</b></p><p>It is possible to add custom style on the selected image inside the Rich Text Editor through quick toolbar.</p><img alt='Logo' style='width: 300px; height: 300px; transform: rotate(0deg);' src='https://blazor.syncfusion.com/demos/images/RichTextEditor/RTEImage-Feather.png' />";
+    private string RteValue = @"<p>Rich Text Editor allows to insert images from online source as well as local computer where you want to insert the image in your content.</p><p><b>Get started Quick Toolbar to click on the image</b></p><p>It is possible to add custom style on the selected image inside the Rich Text Editor through quick toolbar.</p><img alt='Logo' style='width: 300px; height: 300px; transform: rotate(0deg);' src='https://cdn.syncfusion.com/ej2/richtexteditor-resources/RTE-Portrait.png' />";
     private async Task GetCharCount()
     {
-        this.Content = await this.RteObj.GetCharCountAsync();
+        double charCount = await this.RteObj.GetCharCountAsync();
+        this.Content = charCount.ToString(); // Convert double to string
         await this.DialogObj.ShowAsync();
     }
     private async Task DlgButtonClick(object arg)

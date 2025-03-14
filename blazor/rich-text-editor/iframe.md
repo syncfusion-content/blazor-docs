@@ -58,7 +58,7 @@ Similarly, add the external script file to the `<iframe>` element using the `Ric
     <p>Rich Text Editor allows to insert images from online source as well as local computer where you want to insert the image in your content.</p>
     <p><b>Get started Quick Toolbar to click on the image</b></p>
     <p>It is possible to add custom style on the selected image inside the Rich Text Editor through quick toolbar.</p>
-    <img alt='Logo' style='width: 300px; height: 300px; transform: rotate(0deg);' src='https://blazor.syncfusion.com/demos/images/RichTextEditor/RTEImage-Feather.png' />
+    <img alt='Logo' style='width: 300px; height: 300px; transform: rotate(0deg);' src='https://cdn.syncfusion.com/ej2/richtexteditor-resources/RTE-Portrait.png' />
 </SfRichTextEditor>
 
 @code {
