@@ -80,6 +80,18 @@ During a single click, any existing item in the selection list is cleared, and o
 
 Clicking and dragging the diagram area allows to create a rectangular region. The elements that are covered under the rectangular region are selected at the end.
 
+## Diagram Element Highlighter
+
+The Diagram Element Highlighter feature enhances the selection process by visually distinguishing selected elements and indicating which elements are part of a selection when performing multiple selection actions.
+
+* Rubber Band Selection: The first added diagram element will be highlighted with a 2px stroke width, while other selected elements will have a 1px stroke width.
+
+* Ctrl+Click: The first selected element will have a 2px stroke width, while other selected elements will have a 1px stroke width.
+
+* Single Selection: The selection highlighter is not applicable.
+
+For more information about customizing the Diagram Element Highlighter, refer [Customize Highlights for Selected Diagram Elements](./style.md/#how-to-customize-highlights-for-selected-diagram-elements).
+
 ![Multiple Selection in Blazor Diagram](images/blazor-diagram-multiple-selection.gif)
 
 ## Select/Unselect elements using program
