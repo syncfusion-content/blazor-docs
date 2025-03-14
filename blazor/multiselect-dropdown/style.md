@@ -35,6 +35,7 @@ The SfMultiSelect component has an [Enabled](https://help.syncfusion.com/cr/blaz
 
 ![Blazor MultiSelect DropDown with Disable property](./images/style/blazor_multiselect_disable-property.png)
 
+
 ### Customizing the disabled component’s text color
 
 You can customize the text color of a disabled component by targeting its CSS class `.e-multiselect.e-disabled`, which indicates the input element in a disabled state, and set the desired color to the `-webkit-text-fill-color` property.
