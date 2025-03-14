@@ -47,12 +47,12 @@ In the following example, the [AutoUpdateCheckState](https://help.syncfusion.com
 
     class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Job { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Job { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
-        public string PId { get; set; }
+        public string? PId { get; set; }
     }
 }
 ```
@@ -77,9 +77,9 @@ In the following example, the [ShowSelectAll](https://help.syncfusion.com/cr/bla
 <SfButton OnClick="UnSelectAllNode">UnSelect all node</SfButton>
 
 <div style="padding-top:20px">
-<SfDropDownTree @ref="sfDropDownTree" TItem="EmployeeData" TValue="string" Placeholder="Select an employee" Width="500px"  ShowCheckBox ShowSelectAll>
-<DropDownTreeField TItem="EmployeeData" DataSource="Data" ID="Id" Text="Name" HasChildren="HasChild" ParentID="PId"></DropDownTreeField>
-</SfDropDownTree>
+    <SfDropDownTree @ref="sfDropDownTree" TItem="EmployeeData" TValue="string" Placeholder="Select an employee" Width="500px"  ShowCheckBox ShowSelectAll>
+        <DropDownTreeField TItem="EmployeeData" DataSource="Data" ID="Id" Text="Name" HasChildren="HasChild" ParentID="PId"></DropDownTreeField>
+    </SfDropDownTree>
 </div>
 
  
@@ -112,12 +112,12 @@ In the following example, the [ShowSelectAll](https://help.syncfusion.com/cr/bla
  
     class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Job { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Job { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
-        public string PId { get; set; }
+        public string? PId { get; set; }
     }
 }
 ```

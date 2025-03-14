@@ -9,6 +9,10 @@ documentation: ug
 
 # Zooming in Blazor Charts Component
 
+You can learn how to zoom and pan in Blazor Charts by watching the video below.
+
+{% youtube "youtube:https://www.youtube.com/watch?v=-fqwvVMI9Ec" %}
+
 ## Enable zooming
 
 The chart can be zoomed in three different ways.
