@@ -13,6 +13,11 @@ The Blazor LinearGauge is an ideal component for visualizing numeric values in a
 
 This section briefly explains about how to include [Blazor LinearGauge](https://www.syncfusion.com/blazor-components/blazor-linear-gauge) component in your Blazor WebAssembly App using Visual Studio and Visual Studio Code.
 
+To get started quickly with Blazor LinearGauge component, check on the following video:
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=u6MZxPv1df4" %}
+
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}

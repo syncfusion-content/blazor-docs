@@ -25,7 +25,7 @@ The Blazor Rich Text Editor allows for improved customization of the dialogs by 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor DialogSettings](./images/dialog-settings.png)
+![Blazor RichTextEditor DialogSettings](../images/dialog-Settings.png)
 
 ## See also
 
