@@ -155,7 +155,7 @@ namespace ImageUpload.Controllers
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor with image](../images/blazor-richtexteditor-with-image.png)
+![Blazor RichTextEditor with image](../images/blazor-richtexteditor-image.png)
 
 #### Save image in application path
 

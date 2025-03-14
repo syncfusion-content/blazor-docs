@@ -13,7 +13,7 @@ The redact feature in an Image Editor is a valuable tool that empowers users to 
 
 ## Apply redact to the image
 
-The Image Editor control includes a [`DrawRedactAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawRedactAsync_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Boolean__) method, which allows you to draw redaction on an image. This method takes six parameters that define how the redact should be carried out:
+The Image Editor control includes a [`DrawRedactAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawRedactAsync_Syncfusion_Blazor_ImageEditor_RedactType_System_Double_System_Double_System_Double_System_Double_System_Int32_) method, which allows you to draw redaction on an image. This method takes six parameters that define how the redact should be carried out:
 
 * redactType: Specifies the type of redaction to be drawn on the image such as blur or pixelate. If not specified, the redaction drawing is initiated with the default blur value.
 
@@ -29,19 +29,19 @@ The Image Editor control includes a [`DrawRedactAsync`](https://help.syncfusion.
 
 ## Selecting a redact
 
-The Image Editor control includes a [`SelectRedactAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_SelectRedactAsync_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Boolean__) method, which allows you to select a redaction based on the given redaction id. Use [`GetRedactsAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetRedactsAsync _System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Boolean__) method to get the redaction id which is then passed to perform selection. This method takes one parameter that define how the redact should be carried out:
+The Image Editor control includes a [`SelectRedactAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_SelectRedactAsync_System_String_) method, which allows you to select a redaction based on the given redaction id. Use [`GetRedactsAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetRedactsAsync) method to get the redaction id which is then passed to perform selection. This method takes one parameter that define how the redact should be carried out:
 
 * id: Specifies the redact id to select a redact on an image.
 
 ## Deleting a redact
 
-The Image Editor control includes a [`DeleteRedactAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DeleteRedactAsync_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Boolean__) method, which allows you to delete a redaction based on the given redaction id. Use [`GetRedactsAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetRedactsAsync _System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Boolean__) method to get the redaction id which is then passed to perform selection. This method takes one parameter that define how the redact should be carried out:
+The Image Editor control includes a [`DeleteRedactAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DeleteRedactAsync_System_String_) method, which allows you to delete a redaction based on the given redaction id. Use [`GetRedactsAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetRedactsAsync) method to get the redaction id which is then passed to perform selection. This method takes one parameter that define how the redact should be carried out:
 
 * id: Specifies the redact id to delete a redact on an image.
 
 ## Updating a redact
 
-The Image Editor control includes a [`UpdateRedactAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_UpdateRedactAsync_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Boolean__) method, which allows you to update the existing redacts by changing its height, width, blur, and pixel size in the component. Use [`GetRedactsAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetRedactsAsync _System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Boolean__) method to get the redacts which is then passed to change the options of a redacts. This method takes two parameters that define how the redact should be carried out:
+The Image Editor control includes a [`UpdateRedactAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_UpdateRedactAsync_Syncfusion_Blazor_ImageEditor_RedactSettings_System_Boolean_) method, which allows you to update the existing redacts by changing its height, width, blur, and pixel size in the component. Use [`GetRedactsAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetRedactsAsync) method to get the redacts which is then passed to change the options of a redacts. This method takes two parameters that define how the redact should be carried out:
 
 * setting: Specifies the redact settings to be updated for the shape on an image.
 
@@ -49,9 +49,9 @@ The Image Editor control includes a [`UpdateRedactAsync`](https://help.syncfusio
 
 ## Getting redacts
 
-The Image Editor control includes a [`GetRedactsAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetRedactsAsync _System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Boolean__) method, which allows you to get all the redact details which is drawn on an image editor.
+The Image Editor control includes a [`GetRedactsAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetRedactsAsync) method, which allows you to get all the redact details which is drawn on an image editor.
 
-Here's an example demonstrating how to draw, select, delete, update, and get redacts on an image using the [`DrawRedactAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawRedactAsync_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Boolean__), [`SelectRedactAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_SelectRedactAsync_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Boolean__), [`DeleteRedactAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DeleteRedactAsync_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Boolean__), [`UpdateRedactAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_UpdateRedactAsync_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Boolean__) and [`GetRedactsAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetRedactsAsync _System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Boolean__) methods.
+Here's an example demonstrating how to draw, select, delete, update, and get redacts on an image using the [`DrawRedactAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawRedactAsync_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Boolean__), [`SelectRedactAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_SelectRedactAsync_System_String_), [`DeleteRedactAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DeleteRedactAsync_System_String_), [`UpdateRedactAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_UpdateRedactAsync_Syncfusion_Blazor_ImageEditor_RedactSettings_System_Boolean_) and [`GetRedactsAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_GetRedactsAsync) methods.
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
@@ -72,7 +72,7 @@ Here's an example demonstrating how to draw, select, delete, update, and get red
     private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>() { };
     private async void OpenAsync()
     {
-        await ImageEditor.OpenAsync("nature.png");
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
     private async void addRedact()
     {

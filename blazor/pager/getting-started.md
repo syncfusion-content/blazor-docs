@@ -11,6 +11,11 @@ documentation: ug
 
 This section briefly explains about how to include Blazor Pager component in your Blazor WebAssembly App using Visual Studio and Visual Studio Code.
 
+To get started quickly with Blazor Pager component, check on the following video:
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=Nfg8b_bbIfI" %}
+
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
