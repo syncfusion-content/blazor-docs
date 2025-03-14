@@ -11,35 +11,15 @@ documentation: ug
 
 The Form Designer feature in the Blazor PDF Viewer component allows users to add, edit, and manipulate form fields directly in a PDF document. This feature provides an intuitive user interface to design interactive forms efficiently. 
 
-
-## Supported Form Fields:
-
-The following form fields are supported in the Form Designer: 
-
-* Textbox Field
-
-* Password Field
-
-* Checkbox Field
-
-* Radio Button
-
-* Dropdown Field
-
-* List box Field
-
-* Button Field
-
-* Signature Field
-
-
 ## Form Field Interactions: 
 
 ### Adding Form Fields: 
 
-Click the Edit Form Fields icon on the toolbar, add the required form field, and place it onto the PDF document.
+Click the **Edit Form Fields** icon on the toolbar, add the required form field, and place it onto the PDF document.
 
 ![Add Form Fields in Form designer in SfPdfViewer](../form-designer/form-designer-images/add-formfields-formdesigner-sfpdfviewer.gif)
+
+N> Users can also add form fields programmatically in SfPdfViewer for greater flexibility in customization.
 
 ### Dragging Form Fields: 
 
@@ -53,13 +33,55 @@ Users can resize form fields by dragging the resize handles at the edges or corn
 
 ![Resizing Form Fields in Form designer in SfPdfViewer](../form-designer/form-designer-images/resize-formfields-formdesigner-sfpdfviewer.gif)
 
-### Editing or Updating Form Fields: 
+### Editing or Updating Form Fields:
 
-Form fields can be edited dynamically using the Form Field Properties window. This window can be accessed by selecting the Properties option from the context menu that appears when right-clicking a form field. Users can customize various properties, such as the field name, placeholder text, value, and styles, to modify the appearance and behavior of the form field.
+Users can edit form fields dynamically using the Form Field Properties window. This window can be accessed by selecting the Properties option from the context menu that appears when right-clicking a form field.
+
+The Form Field Properties window consists of three tabs, each offering different customization options:
+
+N> Users can also edit form fields programmatically in SfPdfViewer for greater flexibility in customization.
+
+#### General Tab:
+
+* Modify the Field Name to assign a unique identifier.
+
+* Add a Tooltip to provide additional information about the field.
+
+* Set or update the Value of the field.
+
+* Configure the field’s Visibility settings.
+
+* Enable or disable the Read-Only mode to prevent user modifications.
+
+* Mark the field as Required, ensuring it must be filled before form submission.
+
+* Enable Multiline input for text fields to allow multiple lines of text.
 
 ![Edit Properties in Textbox field](../form-designer/form-designer-images/textbox-propertypanel-sfpdfviewer.png)
 
+### Appearance Tab:
+
+* Customize the Font Family of the text.
+
+* Apply Bold or Italic styles.
+
+* Adjust the Font Size for better readability.
+
+* Set the Border Color and Fill Color for visual distinction.
+
+* Modify the Border Thickness to adjust the field’s outline.
+
+* Align text using the Alignment settings.
+
+* Define the Maximum Length of text input.
+
 ![Edit Properties in Password field](../form-designer/form-designer-images/password-properypanel-apperance-formdesigner-sfpdfviewer.png)
+
+### Options Tab (For Dropdown and Listbox Fields):
+
+* Add, modify, or remove selectable Options for dropdowns and list boxes.
+
+* Ensure dynamic customization to display the required choices for users.
 
 ![Edit Properties in Dropdown field](../form-designer/form-designer-images/dropdown-properypanel-options-sfpdfviewer.png)
 
@@ -76,3 +98,10 @@ Additionally, users can revert the last change using Undo (Ctrl + Z) or restore 
 Users can remove form fields by selecting the desired field and clicking the Delete icon in the Form Designer toolbar or choosing the Delete option from the context menu.
 
 ![Delete formfield through UI](../form-designer/form-designer-images/delete-formfields-formdesigner-sfpdfviewer.png)
+
+N> Users can also delete form fields programmatically in SfPdfViewer
+
+## See also
+
+* [Programmmatical Support in Form Designer](./hand-written-signature)
+* [Events in Form Designer](./hand-written-signature)
