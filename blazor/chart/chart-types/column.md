@@ -11,7 +11,13 @@ documentation: ug
 
 ## Column
 
-[Column Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/column-chart) is the most common chart type that is used to compare **Frequency**, **Count**, **Total**, or **Average** of data in different categories. It is ideal for showing variations in the value of an item over time. To render a [Column Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/column-chart) series in your chart, define the series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) as [`Column`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Column) in your chart configuration. This indicates that the data should be represented as a column chart, which is ideal for visualizing for comparing different categories of data or tracking changes over time.
+[Column Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/column-chart) is the most common chart type that is used to compare **Frequency**, **Count**, **Total**, or **Average** of data in different categories. It is ideal for showing variations in the value of an item over time.
+
+You can learn how to create a column chart using Blazor Charts by watching the video below.
+
+{% youtube "youtube:https://www.youtube.com/watch?v=IQb0sJPlvZI" %}
+
+To render a [Column Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/column-chart) series in your chart, define the series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) as [`Column`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Column) in your chart configuration. This indicates that the data should be represented as a column chart, which is ideal for visualizing for comparing different categories of data or tracking changes over time.
 
 ```cshtml
 
