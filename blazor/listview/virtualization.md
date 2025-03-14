@@ -13,7 +13,7 @@ UI virtualization loads only viewable list items in a view port, which will impr
 
 ## Getting started
 
-UI virtualization can be enabled in the ListView by setting the `EnableVirtualization` property to true. It has two types of scrollers as follows:
+UI virtualization can be enabled in the ListView by setting the [`EnableVirtualization`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_EnableVirtualization) property to true. It has two types of scrollers as follows:
 
 **Window scroll**: This scroller is used in the ListView by default.
 

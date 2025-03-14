@@ -143,7 +143,7 @@ In [AlternateReverse](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.La
 @using Syncfusion.Blazor.Layouts
 
 <div class="container" style="height: 350px">
-    <SfTimeline Alignment="TimelineAlignment.Before">
+    <SfTimeline Alignment="TimelineAlignment.AlternateReverse">
         <TimelineItems>
             @foreach (var item in timelineItems)
             {

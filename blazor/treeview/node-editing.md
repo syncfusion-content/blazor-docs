@@ -9,13 +9,13 @@ documentation: ug
 
 # Node Editing in Blazor TreeView Component
 
-The Blazor TreeView allows to edit nodes by setting the `AllowEditing` property to **true**. To directly edit the nodes in place, **double click** the TreeView node or **select** the node and press **F2** key.
+The Blazor TreeView allows to edit nodes by setting the [`AllowEditing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_AllowEditing) property to **true**. To directly edit the nodes in place, **double click** the TreeView node or **select** the node and press **F2** key.
 
 When editing is completed by focus out or by pressing the **Enter** key, the modified node’s text saves automatically. If you do not want to save the modified node’s text in TreeView node, press **Escape** key. It does not save the edited text to the TreeView node.
 
-* Node editing can also be performed programmatically by using the `BeginEdit` method. On passing the node ID or element through this method, the edit textbox will be created for the particular node thus allowing us to edit it.
+* Node editing can also be performed programmatically by using the [BeginEditAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_BeginEditAsync_System_String_) method. On passing the node ID or element through this method, the edit textbox will be created for the particular node thus allowing us to edit it.
 
-* In order to validate or prevent editing, the `NodeEditing` event can be used which is triggered before the TreeView node is renamed. On successfully renaming a node the `NodeEdited` event will be triggered.
+* In order to validate or prevent editing, the [`NodeEditing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeEditing) event can be used which is triggered before the TreeView node is renamed. On successfully renaming a node the [`NodeEdited`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeEdited) event will be triggered.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -23,100 +23,103 @@ When editing is completed by focus out or by pressing the **Enter** key, the mod
     <TreeViewFieldsSettings TValue="DriveData" Id="NodeId" Text="NodeText" Child="Children" DataSource="@Drive" Expanded="Expanded"></TreeViewFieldsSettings>
 </SfTreeView>
 
-@code{
+@code {
     public class DriveData
     {
-        public string NodeId { get; set; }
-        public string NodeText { get; set; }
+        public string? NodeId { get; set; }
+        public string? NodeText { get; set; }
         public bool Expanded { get; set; }
         public bool Selected { get; set; }
-        public List<DriveData> Children;
+        public List<DriveData>? Children;
     }
 
-    object Child;
     List<DriveData> Drive = new List<DriveData>();
     protected override void OnInitialized()
     {
         base.OnInitialized();
+        InitializeTreeData();
+    }
+    private void InitializeTreeData()
+    {
         List<DriveData> Folder1 = new List<DriveData>();
 
         Drive.Add(new DriveData
-        {
-            NodeId = "01",
-            NodeText = "Local Disk (C:)",
-            Children = Folder1,
-        });
+            {
+                NodeId = "01",
+                NodeText = "Local Disk (C:)",
+                Children = Folder1,
+            });
 
         List<DriveData> File1 = new List<DriveData>();
 
         Folder1.Add(new DriveData
-        {
-            NodeId = "01-01",
-            NodeText = "Program Files",
-            Children = File1
-        });
+            {
+                NodeId = "01-01",
+                NodeText = "Program Files",
+                Children = File1
+            });
         File1.Add(new DriveData
-        {
-            NodeId = "01-01-01",
-            NodeText = "Windows NT"
-        });
+            {
+                NodeId = "01-01-01",
+                NodeText = "Windows NT"
+            });
 
         List<DriveData> File2 = new List<DriveData>();
 
         Folder1.Add(new DriveData
-        {
-            NodeId = "01-02",
-            NodeText = "Users",
-            Expanded = true,
-            Children = File2
-        });
+            {
+                NodeId = "01-02",
+                NodeText = "Users",
+                Expanded = true,
+                Children = File2
+            });
         File2.Add(new DriveData
-        {
-            NodeId = "01-02-01",
-            NodeText = "Smith"
-        });
+            {
+                NodeId = "01-02-01",
+                NodeText = "Smith"
+            });
 
         List<DriveData> File3 = new List<DriveData>();
 
         Folder1.Add(new DriveData
-        {
-            NodeId = "01-03",
-            NodeText = "Windows",
-            Children = File3
-        });
+            {
+                NodeId = "01-03",
+                NodeText = "Windows",
+                Children = File3
+            });
         File3.Add(new DriveData
-        {
-            NodeId = "01-03-01",
-            NodeText = "Boot"
-        });
+            {
+                NodeId = "01-03-01",
+                NodeText = "Boot"
+            });
 
         List<DriveData> Folder2 = new List<DriveData>();
 
         Drive.Add(new DriveData
-        {
-            NodeId = "02",
-            NodeText = "Local Disk (D:)",
-            Children = Folder2,
-            Expanded = true,
-        });
+            {
+                NodeId = "02",
+                NodeText = "Local Disk (D:)",
+                Children = Folder2,
+                Expanded = true,
+            });
 
         List<DriveData> File4 = new List<DriveData>();
 
         Folder2.Add(new DriveData
-        {
-            NodeId = "02-01",
-            NodeText = "Personals"
-        });
+            {
+                NodeId = "02-01",
+                NodeText = "Personals"
+            });
         Folder2.Add(new DriveData
-        {
-            NodeId = "02-02",
-            NodeText = "Projects"
-        });
+            {
+                NodeId = "02-02",
+                NodeText = "Projects"
+            });
         Folder2.Add(new DriveData
-        {
-            NodeId = "02-03",
-            NodeText = "Office"
-        });
+            {
+                NodeId = "02-03",
+                NodeText = "Office"
+            });
     }
 }
 
@@ -173,9 +176,9 @@ The example provided demonstrates how to use the `ItemSelected` event of the con
 
     public class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Pid { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Pid { get; set; }
         public bool HasChild { get; set; }
     }
 
@@ -249,6 +252,10 @@ The example provided demonstrates how to use the `ItemSelected` event of the con
     protected override void OnInitialized()
     {
         base.OnInitialized();
+        InitializeTreeData();
+    }
+    private void InitializeTreeData()
+    {
         ListData = new List<EmployeeData>();
         ListData.Add(new EmployeeData
             {
@@ -400,9 +407,9 @@ The Blazor TreeView component allows for the dynamic addition or removal of spec
 
     public class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Pid { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Pid { get; set; }
         public bool HasChild { get; set; }
     }
 
@@ -450,6 +457,10 @@ The Blazor TreeView component allows for the dynamic addition or removal of spec
     protected override void OnInitialized()
     {
         base.OnInitialized();
+        InitializeTreeData();
+    }
+    private void InitializeTreeData()
+    {
         ListData = new List<EmployeeData>();
         ListData.Add(new EmployeeData
             {
@@ -581,7 +592,7 @@ The Blazor TreeView component with template support also allows for the dynamic 
 
 <SfButton OnClick="AddNodes"> Add Node</SfButton>
 <SfButton OnClick="RemoveNodes"> Remove Node</SfButton>
-<div class="control_wrapper">        
+<div class="control_wrapper">
     <SfTreeView TValue="TreeData" @ref="tree" @bind-SelectedNodes="@selectedNodes" @bind-ExpandedNodes="expandedNodes">
         <TreeViewFieldsSettings Id="Id" Text="Name" ParentID="Pid" HasChildren="HasChild" Selected="Selected" Expanded="Expanded" DataSource="@LocalData"></TreeViewFieldsSettings>
         <TreeViewEvents TValue="TreeData" NodeSelected="OnSelect" NodeClicked="nodeClicked"></TreeViewEvents>
@@ -657,6 +668,10 @@ The Blazor TreeView component with template support also allows for the dynamic 
     protected override void OnInitialized()
     {
         base.OnInitialized();
+        InitializeTreeData();
+    }
+    private void InitializeTreeData()
+    {
         LocalData.Add(new TreeData
             {
                 Id = "1",
@@ -740,9 +755,9 @@ The Blazor TreeView component with template support also allows for the dynamic 
     }
     class TreeData
     {
-        public string Id { get; set; }
-        public string Pid { get; set; }
-        public string Name { get; set; }
+        public string? Id { get; set; }
+        public string? Pid { get; set; }
+        public string? Name { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
         public int Count { get; set; }
@@ -768,46 +783,13 @@ The Blazor TreeView component with template support also allows for the dynamic 
         vertical-align: text-bottom;
     }
 
-    .material .treeCount.e-badge {
-        vertical-align: middle;
-    }
-
-    .bootstrap5.e-bigger .treeCount.e-badge,
-    .tailwind.e-bigger .treeCount.e-badge,
-    .tailwind-dark.e-bigger .treeCount.e-badge,
-    .bootstrap5-dark.e-bigger .treeCount.e-badge {
-        line-height: 10px;
-    }
-
-    .bootstrap4 .treeviewdiv .treeCount.e-badge,
-    .bootstrap5 .treeviewdiv .treeCount.e-badge,
-    .bootstrap .treeviewdiv .treeCount.e-badge,
-    .bootstrap-dark .treeviewdiv .treeCount.e-badge,
-    .highcontrast .treeviewdiv .treeCount.e-badge,
-    .bootstrap5-dark .treeviewdiv .treeCount.e-badge {
-        background-color: #008800;
-    }
-
-    .highcontrast .treeviewdiv .treeCount.e-badge {
-        color: white;
-    }
-
     .nodetext {
         float: left;
-    }
-
-    .e-rtl .nodetext {
-        float: right;
     }
 
     .nodebadge {
         float: right;
         margin-right: 5px
-    }
-
-    .e-rtl .nodebadge {
-        float: left;
-        margin-left: 5px
     }
 </style>
 
@@ -824,13 +806,13 @@ In the Blazor TreeView component, it is possible to add a new tree node using a 
 
 <SfButton @onclick="@OpenDialog">Open Dialog Popup</SfButton>
 <SfDialog Width="300px" CssClass="dialog" ShowCloseIcon="true" IsModal="true" @bind-Visible="@IsVisible">
-        <DialogTemplates>
-            <Header> Dialog </Header>
-            <Content>
-                <input type="text" placeholder="Enter new node name" @bind="newNodeName" />
-                <SfButton OnClick="AddNodeInPopup"> Add</SfButton>
-            </Content>
-        </DialogTemplates>
+    <DialogTemplates>
+        <Header> Dialog </Header>
+        <Content>
+            <input type="text" placeholder="Enter new node name" @bind="newNodeName" />
+            <SfButton OnClick="AddNodeInPopup"> Add</SfButton>
+        </Content>
+    </DialogTemplates>
 </SfDialog>
 <SfTreeView TValue="EmployeeData" @ref="tree" AllowEditing="true" AllowDragAndDrop="true" @bind-SelectedNodes="@selectedNodes">
     <TreeViewFieldsSettings Id="Id" ParentID="Pid" DataSource="@ListData" Text="Name" HasChildren="HasChild"></TreeViewFieldsSettings>
@@ -845,7 +827,7 @@ In the Blazor TreeView component, it is possible to add a new tree node using a 
     {
         this.IsVisible = true;
     }
-    public string newNodeName;
+    public string? newNodeName;
     async Task AddNodeInPopup()
     {
         // Expand the selected nodes
@@ -868,9 +850,9 @@ In the Blazor TreeView component, it is possible to add a new tree node using a 
 
     public class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Pid { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Pid { get; set; }
         public bool HasChild { get; set; }
     }
 
@@ -893,6 +875,10 @@ In the Blazor TreeView component, it is possible to add a new tree node using a 
     protected override void OnInitialized()
     {
         base.OnInitialized();
+        InitializeTreeData();
+    }
+    private void InitializeTreeData()
+    {
         ListData = new List<EmployeeData>();
         ListData.Add(new EmployeeData
             {
@@ -1041,9 +1027,9 @@ The Blazor TreeView component enables dynamic editing of specific nodes. This ca
 
     public class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Pid { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Pid { get; set; }
         public bool HasChild { get; set; }
     }
 
@@ -1072,6 +1058,10 @@ The Blazor TreeView component enables dynamic editing of specific nodes. This ca
     protected override void OnInitialized()
     {
         base.OnInitialized();
+        InitializeTreeData();
+    }
+    private void InitializeTreeData()
+    {
         ListData = new List<EmployeeData>();
         ListData.Add(new EmployeeData
             {
@@ -1202,7 +1192,7 @@ The Blazor TreeView component with template enables dynamic editing of specific 
 @using Syncfusion.Blazor.Buttons
 
 <SfButton OnClick="EditNodes"> Edit Node</SfButton>
-<div class="control_wrapper">        
+<div class="control_wrapper">
     <SfTreeView TValue="TreeData" @ref="tree" @bind-SelectedNodes="@selectedNodes" @bind-ExpandedNodes="expandedNodes">
         <TreeViewFieldsSettings Id="Id" Text="Name" ParentID="Pid" HasChildren="HasChild" Selected="Selected" Expanded="Expanded" DataSource="@LocalData"></TreeViewFieldsSettings>
         <TreeViewEvents TValue="TreeData" NodeSelected="OnSelect" NodeClicked="nodeClicked"></TreeViewEvents>
@@ -1259,6 +1249,10 @@ The Blazor TreeView component with template enables dynamic editing of specific 
     protected override void OnInitialized()
     {
         base.OnInitialized();
+        InitializeTreeData();
+    }
+    private void InitializeTreeData()
+    {
         LocalData.Add(new TreeData
             {
                 Id = "1",
@@ -1342,9 +1336,9 @@ The Blazor TreeView component with template enables dynamic editing of specific 
     }
     class TreeData
     {
-        public string Id { get; set; }
-        public string Pid { get; set; }
-        public string Name { get; set; }
+        public string? Id { get; set; }
+        public string? Pid { get; set; }
+        public string? Name { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
         public int Count { get; set; }
@@ -1370,46 +1364,13 @@ The Blazor TreeView component with template enables dynamic editing of specific 
         vertical-align: text-bottom;
     }
 
-    .material .treeCount.e-badge {
-        vertical-align: middle;
-    }
-
-    .bootstrap5.e-bigger .treeCount.e-badge,
-    .tailwind.e-bigger .treeCount.e-badge,
-    .tailwind-dark.e-bigger .treeCount.e-badge,
-    .bootstrap5-dark.e-bigger .treeCount.e-badge {
-        line-height: 10px;
-    }
-
-    .bootstrap4 .treeviewdiv .treeCount.e-badge,
-    .bootstrap5 .treeviewdiv .treeCount.e-badge,
-    .bootstrap .treeviewdiv .treeCount.e-badge,
-    .bootstrap-dark .treeviewdiv .treeCount.e-badge,
-    .highcontrast .treeviewdiv .treeCount.e-badge,
-    .bootstrap5-dark .treeviewdiv .treeCount.e-badge {
-        background-color: #008800;
-    }
-
-    .highcontrast .treeviewdiv .treeCount.e-badge {
-        color: white;
-    }
-
     .nodetext {
         float: left;
-    }
-
-    .e-rtl .nodetext {
-        float: right;
     }
 
     .nodebadge {
         float: right;
         margin-right: 5px
-    }
-
-    .e-rtl .nodebadge {
-        float: left;
-        margin-left: 5px
     }
 </style>
 
@@ -1428,9 +1389,9 @@ The Blazor TreeView component can be set to read-only mode by disabling certain 
 @code {
     public class MailItem
     {
-        public string Id { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? Id { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
     }
@@ -1450,6 +1411,10 @@ The Blazor TreeView component can be set to read-only mode by disabling certain 
     protected override void OnInitialized()
     {
         base.OnInitialized();
+        InitializeTreeData();
+    }
+    private void InitializeTreeData()
+    {
         MyFolder.Add(new MailItem
             {
                 Id = "1",
@@ -1534,9 +1499,9 @@ An example of this can be seen in the provided code snippet, where the node edit
 
     public class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Pid { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Pid { get; set; }
         public bool HasChild { get; set; }
     }
 
@@ -1575,6 +1540,10 @@ An example of this can be seen in the provided code snippet, where the node edit
     protected override void OnInitialized()
     {
         base.OnInitialized();
+        InitializeTreeData();
+    }
+    private void InitializeTreeData()
+    {
         ListData = new List<EmployeeData>();
         ListData.Add(new EmployeeData
             {
@@ -1744,9 +1713,9 @@ In the Blazor TreeView component, you can obtain the index value of the editing 
 
     public class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Pid { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Pid { get; set; }
         public bool HasChild { get; set; }
     }
 
@@ -1785,6 +1754,10 @@ In the Blazor TreeView component, you can obtain the index value of the editing 
     protected override void OnInitialized()
     {
         base.OnInitialized();
+        InitializeTreeData();
+    }
+    private void InitializeTreeData()
+    {
         ListData = new List<EmployeeData>();
         ListData.Add(new EmployeeData
             {
@@ -1922,9 +1895,9 @@ The default value of `AllowEditing` property is false.
 @code {
     public class MailItem
     {
-        public string Id { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? Id { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
     }
@@ -1932,6 +1905,10 @@ The default value of `AllowEditing` property is false.
     protected override void OnInitialized()
     {
         base.OnInitialized();
+        InitializeTreeData();
+    }
+    private void InitializeTreeData()
+    {
         MyFolder.Add(new MailItem
             {
                 Id = "1",
@@ -2011,9 +1988,9 @@ An example of this can be seen in the provided code snippet, where the node edit
 
     public class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Pid { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Pid { get; set; }
         public bool HasChild { get; set; }
     }
 
@@ -2052,6 +2029,10 @@ An example of this can be seen in the provided code snippet, where the node edit
     protected override void OnInitialized()
     {
         base.OnInitialized();
+        InitializeTreeData();
+    }
+    private void InitializeTreeData()
+    {
         ListData = new List<EmployeeData>();
         ListData.Add(new EmployeeData
             {
