@@ -32,6 +32,36 @@ To create a container, you have to define the container object and add it to the
 
     protected override void OnInitialized()
     {
+        // Create container
+        Container container = new Container()
+        {
+            ID = "container",
+            Height = 300, Width = 500, OffsetX = 500, OffsetY = 300,
+        };
+        nodes.Add(container);
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Container/ContainerNode).
+
+### Adding Children to a Container
+
+To add child elements to a container, define the child nodes and assign their IDs to the container’s `Children` property. When child nodes are added to a container, they become part of its structure while remaining individually editable. The following code illustrates how to create a container with children.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes">
+</SfDiagramComponent>
+
+@code
+{
+    public SfDiagramComponent diagram;
+    //Initialize the node collection
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+
+    protected override void OnInitialized()
+    {
         Node node1 = new Node()
             {
                 ID = "node1",
@@ -69,7 +99,7 @@ To create a container, you have to define the container object and add it to the
 }
 ```
 
-You can download a complete working sample from [GitHub]().
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Container/ContainerSample).
 
 ### Container Header
 
@@ -145,7 +175,7 @@ The following code example explains how to define a container header and its cus
 } 
 ```
 
-You can download a complete working sample from [GitHub]().
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Container/ContainerHeaderSample).
 
 ![Blazor Diagram Container Header](images/ContainerImages/ContainerWithHeader.png)
 
@@ -239,7 +269,7 @@ The following code example explains how to define a container and add it to the 
       }
 }
 ```
-You can download a complete working sample from [GitHub]().
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Container/ContainerPalette).
 
 ![Blazor Diagram Container Palette](images/ContainerImages/ContainerPalette.png)
 
@@ -270,7 +300,7 @@ Container can be selected by clicking (tapping) on it. Also, it can be selected 
 
 * A selected container is surrounded by eight resize thumbs. Dragging these thumbs adjusts the container’s size.
 * When dragging one corner, the opposite corner remains fixed.
-* To maintain the container's aspect ratio during resizing, enable the `AspectRatio` constraint in NodeConstraints.
+* To maintain the container's aspect ratio during resizing, enable the [AspectRatio](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_AspectRatio) constraint in NodeConstraints.
 * A container can be resized either by resizing the selector or the tight bounds of the child object. If the child node moves to the edge of the container, it will be automatically resized.
 
 ![Blazor Diagram Resize Container](images/ContainerImages/ContainerResize.gif)
