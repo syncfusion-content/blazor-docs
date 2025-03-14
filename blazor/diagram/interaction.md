@@ -88,6 +88,42 @@ The [Select](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfD
 
 Get the currently selected items from the [Nodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Nodes) and [Connectors](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Connectors) collection of the [SelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionSettings) property of the diagram model.
 
+## Toggle selection
+
+You can toggle the selection state of diagram elements, including nodes, connectors, groups, and swimlanes, by clicking on them at runtime. The CanToggleSelection property in [DiagramSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramSelectionSettings.html) determines whether the selection state of a diagram element should toggle with a mouse click at runtime. By default, this property is set to false.
+In the following example, the node can be selected with the first click and unselected with the second click.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Height="600px" Nodes="@nodes" SelectionSettings="@selectionSettings" />
+
+@code
+{
+    DiagramObjectCollection<Node> nodes;
+    DiagramSelectionSettings selectionSettings = new DiagramSelectionSettings() { CanToggleSelection = true };
+
+    protected override void OnInitialized()
+    {
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
+            {
+                ID = "node1",
+                OffsetX = 250,
+                OffsetY = 250,
+                Width = 100,
+                Height = 100,
+                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
+            };
+        nodes.Add(node);
+        
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction/UnSelectSample)
+
+![Toggle Selection in Blazor Diagram](images/UnselectSample.gif)
+
 ## Select entire elements in diagram programmatically
 
 The [SelectAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectAll) method is used to select all the elements such as nodes/connectors in the diagram. Refer to the following link which shows how to use SelectAll method on the diagram.
