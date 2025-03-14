@@ -11,9 +11,10 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor Sparkline](https://www.syncfusion.com/blazor-components/blazor-sparkline) component in your Blazor WebAssembly App using Visual Studio and Visual Studio Code.
 
-You can get started with the Blazor Sparkline component by watching the video below.
+To get started quickly with Blazor Sparkline component, check on the following video:
 
-{% youtube "youtube:https://www.youtube.com/watch?v=f6CS_zwDvqg" %}
+{% youtube
+"youtube:https://www.youtube.com/watch?v=f6CS_zwDvqg" %}
 
 {% tabcontents %}
 
