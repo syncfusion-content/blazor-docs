@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Diagram Component in the Blazor WASM app
 
-In this section, we'll guide you through the process of adding the Blazor Diagram component component to your Blazor WebAssembly (WASM) app. We'll break it down into simple steps to make it easy to follow. Additionally, you can find a fully functional example project on our [GitHub repository](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DiagramComponent/BlazorWASMApp/DiagramSample).
+In this section, we'll guide you through the process of adding the Blazor Diagram component component to your Blazor WebAssembly (WASM) app using Visual Studio and Visual Studio Code. We'll break it down into simple steps to make it easy to follow. Additionally, you can find a fully functional example project on our [GitHub repository](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DiagramComponent/BlazorWASMApp/DiagramSample).
 
 {% tabcontents %}
 

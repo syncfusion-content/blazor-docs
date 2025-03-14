@@ -16,6 +16,10 @@ This section provides information about creating Razor Class Library with the Sy
 * [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/)
 * [.NET 9.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0)/[.NET 8.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)/[.NET 7.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0)/[.NET 6.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
 
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
 ## Create a Razor Class Library in Visual Studio 2022
 
 1. Choose **Create a new project** from the Visual Studio dashboard.
@@ -71,6 +75,71 @@ This Blazor component is defined in the <strong>RazorClassLibrary</strong> packa
 * Refer to the [Blazor Tooling documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows) to create a new **Blazor Web App** using Visual Studio.
 
 * Refer to the [Blazor Tooling documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=windows) to create a new **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio.
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code %}
+
+## Create a Razor class library in Visual Studio Code
+
+You can create a Razor class library using visual studio code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/razor-pages/ui-class?view=aspnetcore-9.0&tabs=net-cli).
+
+{% tabs %}
+
+{% highlight c# %}
+
+dotnet new razorclasslib -o RazorUIClassLib
+cd RazorUIClassLib
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Navigations and Themes NuGet in the App
+
+If you utilize `WebAssembly` or `Auto` render modes in the Blazor Web App need to be install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components NuGet packages within the client project.
+
+* Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
+* Ensure you’re in the project root directory where your `.csproj` file is located.
+* Run the following command to install a [Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet package and ensure all dependencies are installed.
+
+{% tabs %}
+
+{% highlight c# tabtitle="Package Manager" %}
+
+dotnet add package Syncfusion.Blazor.Calendars -v {{ site.releaseversion }}
+dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
+dotnet restore
+
+{% endhighlight %}
+
+{% endtabs %}
+
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+
+## Importing Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component in Razor Class Library
+
+Now, import and add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components in the `~/Component1.razor` file. For example, the Calendar component is imported and added in the **~/Component1.razor** page.
+
+```html
+
+@using Syncfusion.Blazor.Calendars
+
+<div class="my-component">
+This Blazor component is defined in the <strong>RazorClassLibrary</strong> package.
+</div><br />
+
+<SfCalendar TValue="DateTime"></SfCalendar>
+
+```
+
+## Create a Blazor project in Visual Studio Code
+
+You can create a **Blazor Web App** or **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio Code via [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
+
+{% endtabcontent %}
+
+{% endtabcontents %}
 
 ## Configure the Razor Class Library and Blazor Application
 
