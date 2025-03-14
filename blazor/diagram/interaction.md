@@ -90,7 +90,7 @@ The Diagram Element Highlighter feature enhances the selection process by visual
 
 * Single Selection: The selection highlighter is not applicable.
 
-To customize the Diagram Element Highlighter, you can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction/DiagramHighlighter)
+For more information about customizing the Diagram Element Highlighter, refer [Customize Highlights for Selected Diagram Elements](./style.md/#how-to-customize-highlights-for-selected-diagram-elements).
 
 ![Multiple Selection in Blazor Diagram](images/blazor-diagram-multiple-selection.gif)
 
