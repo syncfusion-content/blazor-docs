@@ -13,15 +13,18 @@ The resize feature in an Image Editor is a valuable tool that empowers users to 
 
 ## Apply resize to the image 
 
-The Image Editor control includes a [`ImageResizeAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_ImageResizeAsync_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Boolean__) method, which allows you to adjust the size of an image. This method takes three parameters that define how the resizing should be carried out:
+The Image Editor control includes a [`ImageResizeAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_ImageResizeAsync_System_Int32_System_Int32_System_Boolean_) method, which allows you to adjust the size of an image. This method takes three parameters that define how the resizing should be carried out:
 
 * width: Specifies the resizing width of the image.
 
 * height: Specifies the resizing height of the image.
 
-* isAspectRatio: Specifies a boolean value indicating whether the image should maintain its original aspect ratio during resizing. When set to true, the image will be resized while preserving its aspect ratio 
+* isAspectRatio: Specifies a boolean value indicating whether the image should maintain its original aspect ratio during resizing.
+    * When set to `true`, the image maintains its original aspect ratio. The width is applied as specified, and the height is automatically adjusted to maintain the aspect ratio.
+    * When set to `false`, the image is resized according to the specified width and height, without maintaining the aspect ratio.
+    * The default value is `false`.
 
-Here is an example of resizing the image using the [`ImageResizeAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_ImageResizeAsync_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Boolean__) method.  
+Here is an example of resizing the image using the `ImageResizeAsync` method.  
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
@@ -42,19 +45,18 @@ Here is an example of resizing the image using the [`ImageResizeAsync`](https://
 
     private async void CreatedAsync()
     {
-        await ImageEditor.OpenAsync("nature.png");
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
 
     private async void AspectClick()
     {
-        await ImageEditor.ImageResizeAsync(300, 342, true);
+        await ImageEditor.ImageResizeAsync(300, 400, true);
     }
 
     private async void NonAspectClick()
     {
-        await ImageEditor.ImageResizeAsync(400, 100, true);
+        await ImageEditor.ImageResizeAsync(400, 100, false);
     }
-
 }
 ```
 

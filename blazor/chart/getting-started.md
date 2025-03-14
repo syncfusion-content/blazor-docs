@@ -11,15 +11,19 @@ documentation: ug
 
 # Getting Started with Blazor Chart Component in Blazor Server App
 
-This section briefly explains about how to include [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) component in your Blazor Server App using Visual Studio.
+This section briefly explains about how to include [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) component in your Blazor Server App using Visual Studio and Visual Studio Code.
 
-## Prerequisites
+You can get started with the Blazor Chart component by watching the following video.
 
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
+{% youtube "youtube:https://www.youtube.com/watch?v=0xwwOvmYQ6E" %}
 
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
+
+## Prerequisites
+
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
 ## Create a new Blazor App in Visual Studio
 
@@ -42,6 +46,10 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
+
+## Prerequisites
+
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
 ## Create a new Blazor App in Visual Studio Code
 

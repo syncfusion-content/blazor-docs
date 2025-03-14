@@ -13,15 +13,15 @@ In this section, the list of events of Stock Chart component is provided which w
 
 The following are the number of events supported for Stock Chart component.
 
-* [OnLoaded](events/#Onloaded)
-* [OnPointClick](events/#onpointclick)
-* [PointMoved](events/#pointmoved)
-* [RangeChange](events/#rangechange)
-* [OnStockChartMouseClick](events/#onstockchartmouseclick)
-* [OnStockChartMouseDown](events/#onstockchartmousedown)
-* [OnStockChartMouseLeave](events/#onstockchartmouseleave)
-* [OnStockChartMouseMove](events/#onstockchartmousemove)
-* [OnStockChartMouseUp](events/#onstockchartmouseup)
+* [OnLoaded](events#Onloaded)
+* [OnPointClick](events#onpointclick)
+* [PointMoved](events#pointmoved)
+* [RangeChange](events#rangechange)
+* [OnStockChartMouseClick](events#onstockchartmouseclick)
+* [OnStockChartMouseDown](events#onstockchartmousedown)
+* [OnStockChartMouseLeave](events#onstockchartmouseleave)
+* [OnStockChartMouseMove](events#onstockchartmousemove)
+* [OnStockChartMouseUp](events#onstockchartmouseup)
 
 ## OnLoaded
 

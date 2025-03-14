@@ -44,12 +44,12 @@ The Blazor Dropdown Tree component's [Created](https://help.syncfusion.com/cr/bl
 
     class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Job { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Job { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
-        public string PId { get; set; }
+        public string? PId { get; set; }
     }
 }
 ```
@@ -87,12 +87,12 @@ The Blazor Dropdown Tree's [Destroyed](https://help.syncfusion.com/cr/blazor/Syn
 
     class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Job { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Job { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
-        public string PId { get; set; }
+        public string? PId { get; set; }
     }
 }
 ```
@@ -131,12 +131,12 @@ The Blazor Dropdown Tree [OnPopupOpen](https://help.syncfusion.com/cr/blazor/Syn
 
     class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Job { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Job { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
-        public string PId { get; set; }
+        public string? PId { get; set; }
     }
 }
 ```
@@ -175,12 +175,12 @@ The Blazor Dropdown Tree [OnPopupClose](https://help.syncfusion.com/cr/blazor/Sy
 
     class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Job { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Job { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
-        public string PId { get; set; }
+        public string? PId { get; set; }
     }
 }
 ```
@@ -255,12 +255,12 @@ The Blazor Dropdown Tree component's [ValueChanging](https://help.syncfusion.com
 
     class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Job { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Job { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
-        public string PId { get; set; }
+        public string? PId { get; set; }
     }
 }
 ```
@@ -300,12 +300,12 @@ The Blazor Dropdown Tree component's [ValueChanged](https://help.syncfusion.com/
 
     class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Job { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Job { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
-        public string PId { get; set; }
+        public string? PId { get; set; }
     }
 }
 ```
@@ -343,12 +343,12 @@ The Blazor Dropdown Tree component's [Filtering](https://help.syncfusion.com/cr/
 
     class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Job { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Job { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
-        public string PId { get; set; }
+        public string? PId { get; set; }
     }
 }
 ```
@@ -367,7 +367,7 @@ The Blazor Dropdown Tree component's [OnActionFailure](https://help.syncfusion.c
         <DropDownTreeField TItem="TreeData" Query="@employeeQuery" ID="EmployeeID" Text="FirstName" HasChildren="EmployeeID">
             <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc" Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor" CrossDomain="true"></SfDataManager>
         </DropDownTreeField>
-        <DropDownTreeField TItem="TreeData" Level="1" Query="@orderQuery" Id="OrderID" Text="ShipName" ParentID="EmployeeID">
+        <DropDownTreeField TItem="TreeData" Query="@orderQuery" Id="OrderID" Text="ShipName" ParentID="EmployeeID">
             <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svs" Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor" CrossDomain="true"></SfDataManager>
         </DropDownTreeField>
     </ChildContent>
@@ -379,8 +379,8 @@ The Blazor Dropdown Tree component's [OnActionFailure](https://help.syncfusion.c
 @code {
     List<string> EmployeeDetails { get; set; } = new List<string>() { "EmployeeID", "FirstName", "Title" };
     List<string> OrderDetails { get; set; } = new List<string>() { "OrderID", "EmployeeID", "ShipName" };
-    Query employeeQuery;
-    Query orderQuery;
+    Query? employeeQuery;
+    Query? orderQuery;
 
     protected override void OnInitialized()
     {
@@ -391,14 +391,15 @@ The Blazor Dropdown Tree component's [OnActionFailure](https://help.syncfusion.c
 
     void OnActionFailureTemplate()
     {
-        
+
     }
     class TreeData
     {
         public int? EmployeeID { get; set; }
         public int OrderID { get; set; }
-        public string ShipName { get; set; }
-        public string FirstName { get; set; }
+        public string? ShipName { get; set; }
+        public string? FirstName { get; set; }
     }
 }
+
 ```

@@ -9,7 +9,15 @@ documentation: ug
 
 # View PDF files using PDF Viewer Component in the Blazor WASM app
 
-In this section, we'll guide you through the process of adding Syncfusion&reg; Blazor PDF Viewer component to your Blazor WebAssembly (WASM) app. We'll break it down into simple steps to make it easy to follow. Additionally, you can find a fully functional example project on our [GitHub repository](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Getting%20Started/Client-side%20application).
+In this section, we'll guide you through the process of adding Syncfusion&reg; Blazor PDF Viewer component to your Blazor WebAssembly (WASM) app using Visual Studio and Visual Studio Code. We'll break it down into simple steps to make it easy to follow. Additionally, you can find a fully functional example project on our [GitHub repository](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Getting%20Started/Client-side%20application).
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
 
 ## Prerequisites
 
@@ -17,11 +25,7 @@ In this section, we'll guide you through the process of adding Syncfusion&reg; B
 
 * To use the PDF Viewer component in a Blazor WebAssembly application with SkiaSharp, make sure to have the required .NET workloads installed by executing the following commands in the command prompt.
     * dotnet workload install wasm-tools
-    * dotnet workload install wasm-tools-net6
-
-{% tabcontents %}
-
-{% tabcontent Visual Studio %}
+    * dotnet workload install wasm-tools-net8
 
 ## Create a new Blazor App in Visual Studio    
 
@@ -42,6 +46,14 @@ N> On the Syncfusion<sup style="font-size:70%">&reg;</sup> side, we are using Sk
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
+
+## Prerequisites
+
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
+
+* To use the PDF Viewer component in a Blazor WebAssembly application with SkiaSharp, make sure to have the required .NET workloads installed by executing the following commands in the command prompt.
+    * dotnet workload install wasm-tools
+    * dotnet workload install wasm-tools-net8
 
 ## Create a new Blazor App in Visual Studio Code
 

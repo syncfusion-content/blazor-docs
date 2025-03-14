@@ -236,6 +236,95 @@ This code snippet will edit the free text annotation programmatically within the
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Programmatic%20Support/Free%20Text/Edit).
 
+## Custom Font Support for FreeText Annotation
+
+The Blazor SfPdfViewer allows you to load, edit, and save custom fonts in FreeText annotations using the [FallbackFontCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_FallbackFontCollection) and [FontFamilies](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_FontFamilies) properties
+
+### Loading Custom Font Collection in SfPdfViewer
+If the custom font is not installed on the system, the FallbackFontCollection property is required to save the FreeText annotation with the custom font.
+
+The following example demonstrates how to load custom font collections, such as Arial Black and Courier New, as TTF files in SfPdfViewer.
+
+```cshtml
+@using Syncfusion.Blazor;
+@using Syncfusion.Blazor.SfPdfViewer;
+
+<SfPdfViewer2 @ref="pdfViewer" Height="100%" Width="100%" DocumentPath="@DocumentPath">
+    <PdfViewerEvents Created="@Created"></PdfViewerEvents>
+</SfPdfViewer2>
+
+@code {
+    private SfPdfViewer2? pdfViewer;
+    private string DocumentPath { get; set; } = "wwwroot/PDF/Arial Black.pdf";
+
+    public void Created()
+    {
+        // Use FallbackFontCollection to save the custom font
+        // Maps the font family name to its corresponding TTF file as a memory stream  
+        pdfViewer.FallbackFontCollection.Add("Arial", new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/Fonts/ARIAL.ttf")));
+        pdfViewer.FallbackFontCollection.Add("Arial Black", new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/Fonts/ARIBLK.ttf")));
+        pdfViewer.FallbackFontCollection.Add("Courier New", new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/Fonts/COUR.ttf")));
+    }
+}
+```
+### Adding Custom Font Families to the Annotation Toolbar Dropdown
+The FontFamilies property is used to add custom font families to the Font Family dropdown in the annotation toolbar.
+
+The following example demonstrates how to add custom font families as a string array to the Font Family dropdown in the annotation toolbar:
+
+```cshtml
+@using Syncfusion.Blazor;
+@using Syncfusion.Blazor.SfPdfViewer;
+
+<SfPdfViewer2 @ref="pdfViewer" Height="100%" Width="100%" DocumentPath="@DocumentPath" FontFamilies="@FontFamilies">
+</SfPdfViewer2>
+
+@code {
+    private SfPdfViewer2? pdfViewer;
+    
+    // Use the FontFamilies property to add custom font families to the Font Family dropdown in the annotation toolbar
+    internal string[] FontFamilies { get; set; } = { "Helvetica", "Courier", "Symbol", "Times New Roman", "Arial Black", "Courier New", "Arial" };
+    private string DocumentPath { get; set; } = "wwwroot/PDF/Arial Black.pdf";
+}
+```
+
+![FontFamilies Property in Blazor SfPdfViewer](../images/FontFamilies_API_SfPdfViewer.png)
+
+
+The following example demonstrates how to load, edit, and save custom fonts in FreeText annotations
+
+```cshtml
+@using Syncfusion.Blazor;
+@using Syncfusion.Blazor.SfPdfViewer;
+
+<SfPdfViewer2 @ref="pdfViewer" Height="100%" Width="100%" DocumentPath="@DocumentPath" FontFamilies="@FontFamilies">
+    <PdfViewerEvents Created="@Created"></PdfViewerEvents>
+</SfPdfViewer2>
+
+@code {
+    private SfPdfViewer2? pdfViewer;
+
+    // Use the FontFamilies property to add custom font families to the annotation toolbar dropdown
+    internal string[] FontFamilies { get; set; } = { "Helvetica", "Courier", "Symbol", "Times New Roman", "Arial Black", "Courier New", "Arial" };
+
+    private string DocumentPath { get; set; } = "wwwroot/PDF/Arial Black.pdf";
+
+    public void Created()
+    {
+        // Use FallbackFontCollection to save the custom font
+        // Maps the font family name to its corresponding TTF file as a memory stream  
+        pdfViewer.FallbackFontCollection.Add("Arial", new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/Fonts/ARIAL.ttf")));
+        pdfViewer.FallbackFontCollection.Add("Arial Black", new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/Fonts/ARIBLK.ttf")));
+        pdfViewer.FallbackFontCollection.Add("Courier New", new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/Fonts/COUR.ttf")));
+    }
+}
+```
+
+![Custom Font Support for FreeText annotation in Blazor SfPdfViewer](../images/customFont_support_freeText.png)
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/FreeText/Custom%20Font%20Support%20For%20FreeText%20Annotation).
+
 ## See also
 
 * [How to delete the annotation programmatically](./text-markup-annotation#delete-annotation-programmatically)
+* [How to Load the Font Collection in SfPdfViewer](../how-to/load-font-collection)
