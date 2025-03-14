@@ -20,6 +20,7 @@ Click the **Edit Form Fields** icon on the toolbar, add the required form field,
 ![Add Form Fields in Form designer in SfPdfViewer](../form-designer/form-designer-images/add-formfields-formdesigner-sfpdfviewer.gif)
 
 N> Users can also add form fields programmatically in SfPdfViewer for greater flexibility in customization.
+[Programmatically Add the Form fields](./hand-written-signature)
 
 ### Dragging Form Fields: 
 
@@ -39,7 +40,8 @@ Users can edit form fields dynamically using the Form Field Properties window. T
 
 The Form Field Properties window consists of three tabs, each offering different customization options:
 
-N> Users can also edit form fields programmatically in SfPdfViewer for greater flexibility in customization.
+N> Users can also edit form fields programmatically in SfPdfViewer, allowing for more precise customization.
+[Programmatically Edit the Form Fields](./hand-written-signature)
 
 #### General Tab:
 
@@ -100,6 +102,7 @@ Users can remove form fields by selecting the desired field and clicking the Del
 ![Delete formfield through UI](../form-designer/form-designer-images/delete-formfields-formdesigner-sfpdfviewer.png)
 
 N> Users can also delete form fields programmatically in SfPdfViewer
+[Programmatically Delete the Form fields](./hand-written-signature)
 
 ## See also
 
