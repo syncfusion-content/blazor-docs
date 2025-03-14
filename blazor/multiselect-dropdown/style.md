@@ -25,7 +25,7 @@ Specify the boolean value to the [Readonly](https://help.syncfusion.com/cr/blazo
 
 ## Disable State 
 
-The SfMultiSelect component has an [Enabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_Enabled) property that controls whether the MultiSelect is interactive. Setting `Enabled` to `false` disables the component, making it unclickable and inactive. In contrast, the [Readonly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_Readonly) property, when set to `true`, allows users to view existing selections without modifying them.
+The SfMultiSelect component has an [Enabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_Enabled) property that controls whether the MultiSelect is interactive. Setting `Enabled` to `false` disables the component, making it uncheckable and inactive. In contrast, the [Readonly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_Readonly) property, when set to `true`, allows users to view existing selections without modifying them.
 
 {% highlight Razor %}
 
