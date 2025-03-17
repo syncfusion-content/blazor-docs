@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Creating Form Fields Programmatically in Blazor SfPdfViewer  
+# Create Fields Programmatically in Blazor SfPdfViewer  
 
 The Blazor SfPdfViewer component provides programmatic control over form fields in a PDF document. This enables seamless form handling and enhances user interaction through code.  
 
