@@ -11,7 +11,7 @@ documentation: ug
 
 The Blazor Ribbon component supports keyboard navigation through KeyTips, enabling users to interact with Ribbon interface without using a mouse. KeyTips can be enabled by setting the `EnableKeyTips` property, allowing users to quickly access commands using shortcut keys.
 
-KeyTips are displayed when the user presses **Alt + Windows (or Command on macOS)**, revealing shortcut labels on Ribbon items for easy navigation.
+The keyTips will be shown when the **Alt + Windows/Command(on macOS)** keys are pressed.
 
 ## KeyTips for Different Ribbon Elements
 
