@@ -28,14 +28,14 @@ Below are the key events provided by the Form Designer to handle form field inte
 | **FormFieldFocusOut**     | Triggered when focus leaves a form field. |
 | **FormFieldMouseEnter**   | Triggered when the mouse hovers over a form field. |
 | **FormFieldMouseLeave**   | Triggered when the mouse leaves a form field. |
+| **FormFieldPropertyChanged** | Triggered when a form field's properties are modified. |
+| **IsDesignerModeChanged** | Triggered when the designer mode state changes in the PDF Viewer. |
 | **FormFieldsExporting**   | Triggered before form fields are exported, allowing customization of the export process. |
 | **FormFieldsImporting**   | Triggered before form fields are imported, allowing validation or modifications. |
 | **FormFieldsExported**    | Triggered when form fields are successfully exported. |
 | **FormFieldsImported**    | Triggered when form fields are successfully imported. |
 | **FormFieldsExportFailed** | Triggered when form fields export operation fails. |
 | **FormFieldsImportFailed** | Triggered when form fields import operation fails. |
-| **FormFieldPropertyChanged** | Triggered when a form field's properties are modified. |
-| **IsDesignerModeChanged** | Triggered when the designer mode state changes in the PDF Viewer. |
 
 ### FormFieldAdding Event
 
@@ -135,7 +135,7 @@ Triggered when a user clicks on a form field while designer mode is off. This ev
 ```
 ### FormFieldDoubleClick Event
 
-Occurs when a form field is double-clicked. This event is useful for opening detailed property editors or triggering additional actions.
+Triggers when a form field is double-clicked. This event is useful for triggering additional actions.
 
 ```cshtml
 @using Syncfusion.Blazor;
@@ -233,7 +233,7 @@ Fires when a form field is resized. This event is useful for applying constraint
 
 ### ValidateFormFields Event
 
-This event is triggered  when form fields are validated before submission, saving, or printing the PDF. It helps ensure that required fields are filled correctly. To trigger this event, the EnableFormFieldsValidation property must be set to true in the SfPdfViewer2 component.
+This event is triggered  when form fields are validated before submission, saving, or printing the PDF. It helps ensure that required fields are filled correctly. To trigger this event, the [EnableFormFieldsValidation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableFormFieldsValidation) property must be set to true in the SfPdfViewer2 component.
 
 ```cshtml
 @using Syncfusion.Blazor;
@@ -356,9 +356,58 @@ This event is triggered when the mouse leaves a form field. It is useful for hid
 }
 ```
 
+### FormFieldPropertyChanged Event
+
+Fires when a form field properties are modified. This event helps in tracking changes and dynamically updating UI elements.
+
+```cshtml
+@using Syncfusion.Blazor;
+@using Syncfusion.Blazor.SfPdfViewer;
+
+<SfPdfViewer2 Height="100%" Width="100%" DocumentPath="@DocumentPath">
+    <PdfViewerEvents FormFieldPropertyChanged="@OnFormFieldPropertyChanged"></PdfViewerEvents>
+</SfPdfViewer2>
+
+@code {
+    private string DocumentPath = "wwwroot/data/events.pdf";
+
+    void OnFormFieldPropertyChanged(FormFieldPropertyChangedEventArgs args)
+    {
+        // Access details about the property changed form field
+        Console.WriteLine($"Form field property changed: {args.NewValue}");
+
+        // Implement additional logic, such as logging or UI updates
+    }
+}
+```
+
+### IsDesignerModeChanged Event
+
+This event triggers whenever the designer mode is enabled or disabled in the  component. It enables developers to implement custom logic in response to the mode change, such as updating UI elements, logging events, or modifying interactions.
+
+```cshtml
+@using Syncfusion.Blazor;
+@using Syncfusion.Blazor.SfPdfViewer;
+
+<SfPdfViewer2 Height="100%" Width="100%" DocumentPath="@DocumentPath" IsDesignerModeChanged="IsDesignerModeChanged">
+</SfPdfViewer2>
+
+@code {
+    private string DocumentPath = "wwwroot/data/events.pdf";
+
+    void IsDesignerModeChanged(bool args)
+    {
+        // Check the state of Designer mode
+        Console.WriteLine($"Designer mode is: {args}");
+
+        // Implement additional logic, such as logging or UI updates
+    }
+}
+```
+
 ### FormFieldsExporting Event
 
-This event is triggered before form fields are exported. It allows customization of the export process or data transformation. The export process can be canceled by setting args.Cancel = true.
+This event triggers when the form fields export process starts in the  component. It allows customization of the export process or data transformation. The export process can be canceled by setting args.Cancel = true.
 
 ```cshtml
 @using Syncfusion.Blazor;
@@ -397,10 +446,52 @@ This event is triggered before form fields are exported. It allows customization
 
 ### FormFieldsImporting Event
 
-Triggered before form fields are imported into the document. This event allows validation or modification of the import process.
+This event triggers when the form fields import process starts in the  component. It allows validation or modification of the import process. The import operation can be canceled by setting args.Cancel = true.
 
 ```cshtml
+@using Syncfusion.Blazor;
+@using Syncfusion.Blazor.Buttons;
+@using Syncfusion.Blazor.SfPdfViewer;
 
+<SfButton OnClick="ExportFields">Export Form Fields</SfButton>
+<SfButton OnClick="ImportFields">Import Form Fields</SfButton>
+<SfPdfViewer2 @ref="Viewer" Height="100%" Width="100%" DocumentPath="@DocumentPath">
+    <PdfViewerEvents FormFieldsImporting="OnFormFieldsImporting"></PdfViewerEvents>
+</SfPdfViewer2>
+
+@code {
+    SfPdfViewer2? Viewer;
+    private string DocumentPath = "wwwroot/data/events.pdf";
+    Stream JSONStream = new MemoryStream();
+
+    void OnFormFieldsImporting(FormFieldsImportEventArgs args)
+    {
+        Console.WriteLine($"Form fields are being imported");
+
+        args.Cancel = true; //cancels the import process
+
+        // Implement additional logic, such as logging or UI updates
+    }
+
+    private async void ExportFields()
+    {
+        // Export form fields as JSON Stream
+        if (Viewer != null)
+        {
+            JSONStream = await Viewer.ExportFormFieldsAsync(FormFieldDataFormat.Json);
+        }
+    }
+
+    private async void ImportFields()
+    {
+        // Import form fields as JSON Stream
+        if (JSONStream != null && Viewer != null)
+        {
+            // Import JSON data into the viewer
+            await Viewer.ImportFormFieldsAsync(JSONStream, FormFieldDataFormat.Json);
+        }
+    }
+}
 ```
 
 ### FormFieldsExported Event
@@ -408,15 +499,78 @@ Triggered before form fields are imported into the document. This event allows v
 Triggered when form fields are successfully exported. It allows for further processing or confirmation.
 
 ```cshtml
+@using Syncfusion.Blazor;
+@using Syncfusion.Blazor.Buttons;
+@using Syncfusion.Blazor.SfPdfViewer;
 
+<SfButton OnClick="ExportFields">Export Form Fields</SfButton>
+<SfPdfViewer2 @ref="Viewer" Height="100%" Width="100%" DocumentPath="@DocumentPath">
+    <PdfViewerEvents FormFieldsExported="OnFormFieldsExported"></PdfViewerEvents>
+</SfPdfViewer2>
+
+@code {
+    SfPdfViewer2? Viewer;
+    private string DocumentPath = "wwwroot/data/events.pdf";
+    Stream JSONStream = new MemoryStream();
+
+    void OnFormFieldsExported(FormFieldsExportedEventArgs args)
+    {
+        Console.WriteLine($"Form fields are exported Successfully");
+        // Implement additional logic, such as logging or UI updates
+    }
+
+    private async void ExportFields()
+    {
+        // Export form fields as JSON Stream
+        if (Viewer != null)
+        {
+            JSONStream = await Viewer.ExportFormFieldsAsync(FormFieldDataFormat.Json);
+        }
+    }
+}
 ```
 
 ### FormFieldsImported Event
 
-Occurs when form fields are successfully imported into the document. This event is useful for mapping imported fields to existing data.
+Triggers when form fields are successfully imported into the document. This event is useful for mapping imported fields to existing data.
 
 ```cshtml
+@using Syncfusion.Blazor;
+@using Syncfusion.Blazor.Buttons;
+@using Syncfusion.Blazor.SfPdfViewer;
 
+<SfButton OnClick="ExportFields">Export Form Fields</SfButton>
+<SfButton OnClick="ImportFields">Import Form Fields</SfButton>
+<SfPdfViewer2 @ref="Viewer" Height="100%" Width="100%" DocumentPath="@DocumentPath">
+    <PdfViewerEvents FormFieldsImported="OnFormFieldsImported"></PdfViewerEvents>
+</SfPdfViewer2>
+@code {
+    SfPdfViewer2? Viewer;
+    private string DocumentPath = "wwwroot/data/events.pdf";
+    Stream JSONStream = new MemoryStream();
+    void OnFormFieldsImported(FormFieldsImportedEventArgs args)
+    {
+        Console.WriteLine($"Form fields are imported Successfully");
+        // Implement additional logic, such as logging or UI updates
+    }
+    private async void ExportFields()
+    {
+        // Export form fields as JSON Stream
+        if (Viewer != null)
+        {
+            JSONStream = await Viewer.ExportFormFieldsAsync(FormFieldDataFormat.Json);
+        }
+    }
+    private async void ImportFields()
+    {
+        // Import form fields as JSON Stream
+        if (JSONStream != null && Viewer != null)
+        {
+            // Import JSON data into the viewer
+            await Viewer.ImportFormFieldsAsync(JSONStream, FormFieldDataFormat.Json);
+        }
+    }
+}
 ```
 
 ### FormFieldsExportFailed Event
@@ -424,7 +578,35 @@ Occurs when form fields are successfully imported into the document. This event 
 Fired when form fields export operation fails. This event can be used for error handling and debugging.
 
 ```cshtml
+@using Syncfusion.Blazor;
+@using Syncfusion.Blazor.Buttons;
+@using Syncfusion.Blazor.SfPdfViewer;
 
+<SfButton OnClick="ExportFields">Export Form Fields</SfButton>
+<SfPdfViewer2 @ref="Viewer" Height="100%" Width="100%" DocumentPath="@DocumentPath">
+    <PdfViewerEvents FormFieldsExportFailed="OnFormFieldsExportFailed"></PdfViewerEvents>
+</SfPdfViewer2>
+
+@code {
+    SfPdfViewer2? Viewer;
+    private string DocumentPath = "wwwroot/data/events.pdf";
+    Stream JSONStream = new MemoryStream();
+
+    void OnFormFieldsExportFailed(FormFieldsExportFailedEventArgs args)
+    {
+        Console.WriteLine($"Form field export is failed: {args.ErrorDetails}");
+        // Implement additional logic, such as logging or UI updates
+    }
+
+    private async void ExportFields()
+    {
+        // Export form fields as JSON Stream
+        if (Viewer != null)
+        {
+            JSONStream = await Viewer.ExportFormFieldsAsync(FormFieldDataFormat.Json);
+        }
+    }
+}
 ```
 
 ### FormFieldsImportFailed Event
@@ -432,21 +614,44 @@ Fired when form fields export operation fails. This event can be used for error 
 Triggered when form fields import operation fails. It helps in identifying issues and providing fallback mechanisms.
 
 ```cshtml
+@using Syncfusion.Blazor;
+@using Syncfusion.Blazor.Buttons;
+@using Syncfusion.Blazor.SfPdfViewer;
 
-```
+<SfButton OnClick="ExportFields">Export Form Fields</SfButton>
+<SfButton OnClick="ImportFields">Import Form Fields</SfButton>
+<SfPdfViewer2 @ref="Viewer" Height="100%" Width="100%" DocumentPath="@DocumentPath">
+    <PdfViewerEvents FormFieldsImportFailed="OnFormFieldsImportFailed"></PdfViewerEvents>
+</SfPdfViewer2>
 
-### FormFieldPropertyChanged Event
+@code {
+    SfPdfViewer2? Viewer;
+    private string DocumentPath = "wwwroot/data/events.pdf";
+    Stream JSONStream = new MemoryStream();
 
-Fires when a form field's properties are modified. This event helps in tracking changes and dynamically updating UI elements.
+    void OnFormFieldsImportFailed(FormFieldsImportFailedEventArgs args)
+    {
+        Console.WriteLine($"Form field Import is failed: {args.ErrorDetails}");
+        // Implement additional logic, such as logging or UI updates
+    }
 
-```cshtml
+    private async void ExportFields()
+    {
+        // Export form fields as JSON Stream
+        if (Viewer != null)
+        {
+            JSONStream = await Viewer.ExportFormFieldsAsync(FormFieldDataFormat.Json);
+        }
+    }
 
-```
-
-### IsDesignerModeChanged Event
-
-This event occurs whenever the designer mode is enabled or disabled in the SfPdfViewer2 component. It enables developers to implement custom logic in response to the mode change, such as updating UI elements, logging events, or modifying interactions.
-
-```cshtml
-
+    private async void ImportFields()
+    {
+        // Import form fields as JSON Stream
+        if (JSONStream != null && Viewer != null)
+        {
+            // Import JSON data into the viewer
+            await Viewer.ImportFormFieldsAsync(JSONStream, FormFieldDataFormat.Json);
+        }
+    }
+}
 ```
