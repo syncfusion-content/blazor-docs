@@ -212,7 +212,7 @@ You can use the `Text` property to display the start listening text and `StopSta
 @code {
     SpeechToTextButtonSettings buttonSettings = new SpeechToTextButtonSettings()
     {
-        Text = "Start Listening", // Displays when idle  
+        Text = "Start Listening", // Displays when idle
         StopStateText = "Stop Listening" // Displays when speech recognition is active 
     };
 }
