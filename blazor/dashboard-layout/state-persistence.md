@@ -56,11 +56,11 @@ N> Dashboard Layout component [ID](https://help.syncfusion.com/cr/blazor/Syncfus
 
 The Blazor Dashboard Layout component allows you to manage its state manually using built-in persistence methods. This enables save, load, and reset the panel positions explicitly based on user interactions.
 
-The [GetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_GetPersistDataAsync) method retrieves the current state of the dashboard layout as a string, which is suitable for sending them over network and storing in database.
+The [GetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_GetPersistDataAsync) method retrieves the current state of the Dashboard Layout as a string, which is suitable for sending them over network and storing in database.
 
-The [SetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_SetPersistDataAsync) method is used to restore a previously saved dashboard layout state.
+The [SetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_SetPersistDataAsync) method is used to restore a previously saved Dashboard Layout state.
 
-The [ResetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_ResetPersistDataAsync) method reset the dashboard layout state to its original state. This will clear persisted data in window local storage and renders layout with its original property values.
+The [ResetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_ResetPersistDataAsync) method reset the Dashboard Layout state to its original state. This will clear persisted data in window local storage and renders Dashboard Layout with its original property values.
 
 ```cshtml
 
@@ -112,7 +112,6 @@ The [ResetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
         }
     }
-    
     private async Task ResetState()
     {
         if (dashboardObject != null)
