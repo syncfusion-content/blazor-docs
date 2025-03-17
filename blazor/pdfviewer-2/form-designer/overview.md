@@ -34,15 +34,15 @@ The SfPdfViewer enables efficient form field management by supporting opening, s
 
 ### Open the PDF Documents with Interactive Form Fields
 
-SfPdfViewer enables smooth loading of PDFs with interactive form fields, preserving their properties and data. This ensures seamless modifications, validations, and data retention, even in large documents. A saved PDF with form fields can be opened using the Open icon in the toolbar. Refer to the GIF below for details.
+SfPdfViewer enables smooth loading of PDFs with interactive form fields, preserving their properties and data. This ensures seamless modifications, validations, and data retention, even in large documents. A saved PDF with form fields can be opened using the Open icon in the toolbar. Refer to the Image below for details.
 
-![Open PDF Document with Exsiting Form Fileds](form-designer-images/Open_PDF_Document_With_Exsiting_Form_Fileds.gif)
+![Open PDF Document with Exsiting Form Fileds](form-designer-images/Open_PDF_Document_With_Exsiting_Form_Fileds.png)
 
 ### Saving Form Fields
 
-SfPdfViewer saves form fields within the PDF without modifying the original file. Selecting the Download icon preserves all field data and properties for future use. Refer to the GIF below for details.
+SfPdfViewer saves form fields within the PDF without modifying the original file. Selecting the Download icon preserves all field data and properties for future use. Refer to the Image below for details.
 
-![Download PDF Document with Form Fileds](form-designer-images/Download_PDF_Document_With_Form_Fileds.gif)
+![Download PDF Document with Form Fileds](form-designer-images/Download_PDF_Document_With_Form_Fileds.png)
 
 ### Printing Form Fields
 
@@ -300,7 +300,7 @@ The code demonstrates how to exporting form fields as FDF at a stream and import
 }
 ```
 
-![Export and Import FDF Format](form-designer-images/Export_Import_FDF_Format.gif)
+![Export and Import FDF Format](form-designer-images/Export_Import_FDF_Format.png)
 
 [View sample in GitHub]().
 
@@ -355,7 +355,7 @@ The following code shows how to export the form fields as an XFDF data stream an
 }
 ```
 
-![Export and Import XFDF Format](form-designer-images/Export_Import_XFDF_Format.gif)
+![Export and Import XFDF Format](form-designer-images/Export_Import_XFDF_Format.png)
 
 [View sample in GitHub]().
 
@@ -411,7 +411,7 @@ The code demonstrates how to exporting form fields as JSON at a stream and impor
 }
 ```
 
-![Export and Import JSON Format](form-designer-images/Export_Import_JSON_Format.gif)
+![Export and Import JSON Format](form-designer-images/Export_Import_JSON_Format.png)
 
 [View sample in GitHub]().
 
@@ -467,7 +467,7 @@ The following code shows how to export the form fields as an XFDF data stream an
 }
 ```
 
-![Export and Import Object Format](form-designer-images/Export_Import_Object_Format.gif)
+![Export and Import Object Format](form-designer-images/Export_Import_Object_Format.png)
 
 [View sample in GitHub]().
 
@@ -499,12 +499,12 @@ This method allows exporting the form field data and saving it as a JSON file, w
 }
 ```
 
-![Export and Import JSON File](form-designer-images/Export_JSON_File.gif)
+![Export and Import JSON File](form-designer-images/Export_JSON_File.png)
 
 [View sample in GitHub]().
 
 Additionally, the component provides a built-in Submit button that allows exporting form field data as a JSON file directly from the PDF document. The following sections demonstrate different ways to export and import form field data.
 
-Refer to the GIF below for details.
+Refer to the Image below for details.
 
-![Export and Import Object Format](form-designer-images/Export_Submit_JSON.gif)
+![Export and Import Object Format](form-designer-images/Export_Submit_JSON.png)
