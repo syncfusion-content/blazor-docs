@@ -41,6 +41,8 @@ Below are the key events provided by the Form Designer to handle form field inte
 
 This event is triggered before a form field addition starts in the SfPdfViewer2 component. Developers can use this event to validate or modify the field before it is inserted into the document.
 
+Additionally, the event provides a Cancel property, which can be set to true to prevent the form field from being added to the document conditionally.
+
 ```cshtml
 @using Syncfusion.Blazor;
 @using Syncfusion.Blazor.SfPdfViewer;
@@ -55,11 +57,13 @@ This event is triggered before a form field addition starts in the SfPdfViewer2 
     {
         // Access details about the adding form field
         Console.WriteLine($"Form Field being added: {args.Field.Name}");
+        args.Cancel = true; // Prevents the form field from being added
         // Additional processing logic
     }
 }
 
 ```
+By setting args.Cancel = true;, developers can conditionally prevent the addition of form fields based on custom logic.
 
 ### FormFieldAdded Event
 
@@ -158,7 +162,24 @@ Occurs when a form field is double-clicked. This event is useful for opening det
 This event is triggered when a form field is selected. It can be used to show additional options or highlight the selected field.
 
 ```cshtml
+@using Syncfusion.Blazor;
+@using Syncfusion.Blazor.SfPdfViewer;
 
+<SfPdfViewer2 Height="100%" Width="100%" DocumentPath="@DocumentPath">
+    <PdfViewerEvents FormFieldSelected="@OnFormFieldSelected"></PdfViewerEvents>
+</SfPdfViewer2>
+
+@code {
+    private string DocumentPath = "wwwroot/data/events.pdf";
+
+    void OnFormFieldSelected(FormFieldSelectedEventArgs args)
+    {
+        // Access details about the selected form field
+        Console.WriteLine($"Form field selected: {args.Field.Name}");
+
+        // Implement additional logic, such as logging or UI updates
+    }
+}
 ```
 
 ### FormFieldUnselected Event
@@ -166,38 +187,123 @@ This event is triggered when a form field is selected. It can be used to show ad
 Triggered when a selected form field is unselected. This event helps in resetting UI elements or hiding additional options.
 
 ```cshtml
+@using Syncfusion.Blazor;
+@using Syncfusion.Blazor.SfPdfViewer;
 
+<SfPdfViewer2 Height="100%" Width="100%" DocumentPath="@DocumentPath">
+    <PdfViewerEvents FormFieldUnselected="@OnFormFieldUnSelected"></PdfViewerEvents>
+</SfPdfViewer2>
+
+@code {
+    private string DocumentPath = "wwwroot/data/events.pdf";
+
+    void OnFormFieldUnSelected(FormFieldUnselectedEventArgs args)
+    {
+        // Access details about the unselected form field
+        Console.WriteLine($"Form field unselected: {args.Field.Name}");
+
+        // Implement additional logic, such as logging or UI updates
+    }
+}
 ```
 ### FormFieldResized Event
 
 Fires when a form field is resized. This event is useful for applying constraints on form field sizes or updating layout dynamically.
 
 ```cshtml
+@using Syncfusion.Blazor;
+@using Syncfusion.Blazor.SfPdfViewer;
 
+<SfPdfViewer2 Height="100%" Width="100%" DocumentPath="@DocumentPath">
+    <PdfViewerEvents FormFieldResized="@OnFormFieldResized"></PdfViewerEvents>
+</SfPdfViewer2>
+
+@code {
+    private string DocumentPath = "wwwroot/data/events.pdf";
+
+    void OnFormFieldResized(FormFieldResizedEventArgs args)
+    {
+        // Access details about the resized form field
+        Console.WriteLine($"Form field resized: {args.Field.Name}");
+
+        // Implement additional logic, such as logging or UI updates
+    }
+}
 ```
 
 ### ValidateFormFields Event
 
-Occurs when form fields are validated before submission. This event can be used to check for required fields and input correctness.
+This event is triggered  when form fields are validated before submission, saving, or printing the PDF. It helps ensure that required fields are filled correctly. To trigger this event, the EnableFormFieldsValidation property must be set to true in the SfPdfViewer2 component.
 
 ```cshtml
+@using Syncfusion.Blazor;
+@using Syncfusion.Blazor.SfPdfViewer;
 
+<SfPdfViewer2 Height="100%" Width="100%" DocumentPath="@DocumentPath" EnableFormFieldsValidation="true">
+    <PdfViewerEvents ValidateFormFields="@OnFormFieldValidated"></PdfViewerEvents>
+</SfPdfViewer2>
+
+@code {
+    private string DocumentPath = "wwwroot/data/events.pdf";
+
+    void OnFormFieldValidated(ValidateFormFieldsArgs args)
+    {
+        // Access details about the validated form field
+        Console.WriteLine($"Form field Validated: {args.Fields[0].Name}");
+
+        // Implement additional logic, such as logging or UI updates
+    }
+}
 ```
 
 ### FormFieldFocusIn Event
 
-Triggered when focus enters a form field. It can be used to provide dynamic styling or suggestions.
+Triggered when focus enters a form field while designer mode is off. It can be used to provide dynamic styling or suggestions.
 
 ```cshtml
+@using Syncfusion.Blazor;
+@using Syncfusion.Blazor.SfPdfViewer;
 
+<SfPdfViewer2 Height="100%" Width="100%" DocumentPath="@DocumentPath" EnableFormFieldsValidation="true">
+    <PdfViewerEvents FormFieldFocusIn="@OnFormFieldFocusIn"></PdfViewerEvents>
+</SfPdfViewer2>
+
+@code {
+    private string DocumentPath = "wwwroot/data/events.pdf";
+
+    void OnFormFieldFocusIn(FormFieldFocusInEventArgs args)
+    {
+        // Access details about the focused in form field
+        Console.WriteLine($"Form field focused in: {args.Field.Name}");
+
+        // Implement additional logic, such as logging or UI updates
+    }
+}
 ```
 
 ### FormFieldFocusOut Event
 
-Occurs when focus leaves a form field. This event is useful for saving data or performing validation.
+This event is triggered when focus leaves a form field while designer mode is off. It is useful for saving data or performing validation.
 
 ```cshtml
+@using Syncfusion.Blazor;
+@using Syncfusion.Blazor.SfPdfViewer;
 
+<SfPdfViewer2 Height="100%" Width="100%" DocumentPath="@DocumentPath" EnableFormFieldsValidation="true">
+    <PdfViewerEvents FormFieldFocusOut="@OnFormFieldFocusOut"></PdfViewerEvents>
+</SfPdfViewer2>
+
+@code {
+    private string DocumentPath = "wwwroot/data/events.pdf";
+
+    void OnFormFieldFocusOut(FormFieldFocusOutEventArgs args)
+    {
+        // Access details about the focused out form field
+        Console.WriteLine($"Form field focused out: {args.Field.Name}");
+
+        // Implement additional logic, such as logging or UI updates
+    }
+}
 ```
 
 ### FormFieldMouseEnter Event
@@ -205,23 +311,88 @@ Occurs when focus leaves a form field. This event is useful for saving data or p
 The FormFieldMouseEnter event triggers when the mouse enters a form field in the PDF Viewer.
 
 ```cshtml
+@using Syncfusion.Blazor;
+@using Syncfusion.Blazor.SfPdfViewer;
 
+<SfPdfViewer2 Height="100%" Width="100%" DocumentPath="@DocumentPath">
+    <PdfViewerEvents FormFieldMouseEnter="@OnFormFieldMouseEnter"></PdfViewerEvents>
+</SfPdfViewer2>
+
+@code {
+    private string DocumentPath = "wwwroot/data/events.pdf";
+
+    void OnFormFieldMouseEnter(FormFieldMouseEnterEventArgs args)
+    {
+        // Access details about the mouse entered form field
+        Console.WriteLine($"Form field Mouse entered: {args.Field.Name}");
+
+        // Implement additional logic, such as logging or UI updates
+    }
+}
 ```
 
 ### FormFieldMouseLeave Event
 
-Occurs when the mouse leaves a form field. This event is useful for hiding tooltips or resetting styling.
+This event is triggered when the mouse leaves a form field. It is useful for hiding tooltips or resetting styling.
 
 ```cshtml
+@using Syncfusion.Blazor;
+@using Syncfusion.Blazor.SfPdfViewer;
 
+<SfPdfViewer2 Height="100%" Width="100%" DocumentPath="@DocumentPath">
+    <PdfViewerEvents FormFieldMouseLeave="@OnFormFieldMouseLeave"></PdfViewerEvents>
+</SfPdfViewer2>
+
+@code {
+    private string DocumentPath = "wwwroot/data/events.pdf";
+
+    void OnFormFieldMouseLeave(FormFieldMouseLeaveEventArgs args)
+    {
+        // Access details about the mouse leaved form field
+        Console.WriteLine($"Form field Mouse leaved: {args.Field.Name}");
+
+        // Implement additional logic, such as logging or UI updates
+    }
+}
 ```
 
 ### FormFieldsExporting Event
 
-Triggered before form fields are exported. It allows customization of the export process or data transformation.
+This event is triggered before form fields are exported. It allows customization of the export process or data transformation. The export process can be canceled by setting args.Cancel = true.
 
 ```cshtml
+@using Syncfusion.Blazor;
+@using Syncfusion.Blazor.Buttons;
+@using Syncfusion.Blazor.SfPdfViewer;
 
+<SfButton OnClick="ExportFields">Export Form Fields</SfButton>
+<SfPdfViewer2 @ref="Viewer" Height="100%" Width="100%" DocumentPath="@DocumentPath">
+    <PdfViewerEvents FormFieldsExporting="OnFormFieldsExporting"></PdfViewerEvents>
+</SfPdfViewer2>
+
+@code {
+    SfPdfViewer2? Viewer;
+    private string DocumentPath = "wwwroot/data/events.pdf";
+    Stream JSONStream = new MemoryStream();
+
+    void OnFormFieldsExporting(FormFieldsExportEventArgs args)
+    {
+        Console.WriteLine($"Form fields are being exported");
+
+        args.Cancel = true; // Cancels the export process
+
+        // Implement additional logic, such as logging or UI updates
+    }
+
+    private async void ExportFields()
+    {
+        // Export form fields as JSON Stream
+        if (Viewer != null)
+        {
+            JSONStream = await Viewer.ExportFormFieldsAsync(FormFieldDataFormat.Json);
+        }
+    }
+}
 ```
 
 ### FormFieldsImporting Event
