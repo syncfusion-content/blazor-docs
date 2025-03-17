@@ -138,7 +138,7 @@ The script can be accessed from NuGet through [Static Web Assets](https://blazor
 ```
 N> Check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-## Add Blazor SpeechToText
+## Adding Blazor SpeechToText
 
 Add the Syncfusion Blazor SpeechToText in the **~/Pages/Index.razor** file.
 
@@ -156,7 +156,7 @@ Add the Syncfusion Blazor SpeechToText in the **~/Pages/Index.razor** file.
 
 ![Blazor SpeechToText Component](images/getting-started.png)
 
-## Add Button Content
+## Adding button content
 
 You can use the `Text` property to display the start listening text and `StopStateText` property to display the stop listening text by using the `ButtonSettings` property.
 
