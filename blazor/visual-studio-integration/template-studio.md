@@ -48,8 +48,8 @@ N> Before use the Syncfusion Blazor Project Template, check whether the Syncfusi
     | .NET SDK version | Supported Syncfusion Blazor Application Type |
     | ---------------- | -------------------------------------------- |
     | [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0), [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) | Syncfusion Blazor Web App |
-    | [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0), [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0), [.NET 7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0), [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) | Syncfusion Blazor WebAssembly App |
-    | [.NET 7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0), [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) | Syncfusion Blazor Server App |
+    | [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0), [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) | Syncfusion Blazor WebAssembly App |
+
 
     In the **Syncfusion Blazor Web App** application type, you can configure the following options:
 
@@ -76,11 +76,11 @@ N> Before use the Syncfusion Blazor Project Template, check whether the Syncfusi
 
     ![WebAppTemplate](images/webapptemplate.png)
 
-     In the **Syncfusion Blazor WebAssembly App** application type, you can choose ASP.NET Core hosted, Progressive Web Application, or both.
+     In the **Syncfusion Blazor WebAssembly App** application type, you can choose Progressive Web Application.
 
      ![WASMTemplate](images/wasmtemplate.png)
 
-     > **Note:** The Progressive Web Application will be enabled if .NET 6.0 version or higher is installed.
+     > **Note:** The Progressive Web Application will be enabled if .NET 8.0 version or higher is installed.
 
 5. Click either **Next** or the **Controls** tab. The Syncfusion® Blazor components you can add to the application are listed.
 
@@ -98,7 +98,7 @@ N> Before use the Syncfusion Blazor Project Template, check whether the Syncfusi
 
 6. Click either **Next** or the **Features** tab, and you will see the features listed for the selected controls. You can choose the required features.
 
-7. Click **Next** or the **Configuration** tab to load the Configuration section. You can choose the required (.NET 9.0, .NET 8.0, .NET 7.0, and .NET 6.0), themes, https configuration, localization option, authentication type, Blazor Web App, and Blazor Web Assembly application types.
+7. Click **Next** or the **Configuration** tab to load the Configuration section. You can choose the required (.NET 9.0 and .NET 8.0), themes, https configuration, localization option, authentication type, Blazor Web App, and Blazor Web Assembly application types.
 
      Depending on your Syncfusion Blazor Application Type, refer to the table below for supported authentication types.
 
@@ -112,7 +112,7 @@ N> Before use the Syncfusion Blazor Project Template, check whether the Syncfusi
 
      ![WebAppConfiguration](images/webappconfig.png)
 
-     If you choose the **Blazor Web Assembly App** application type, you can customize the ASP.NET Core hosted and Progressive Web Application options.
+     If you choose the **Blazor Web Assembly App** application type, you can customize the Progressive Web Application option.
 
      ![WASMConfiguration](images/wasmconfig.png)
 
