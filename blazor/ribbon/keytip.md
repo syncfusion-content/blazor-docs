@@ -13,7 +13,7 @@ The Blazor Ribbon component supports keyboard navigation through KeyTips, enabli
 
 The keyTips will be shown when the **Alt + Windows/Command(on macOS)** keys are pressed.
 
-## KeyTips for Different Ribbon Elements
+## KeyTips for different ribbon elements
 
 ### Ribbon items keytip
 
