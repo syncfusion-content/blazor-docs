@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Creating Form Fields Programmatically in Blazor SfPdfViewer | Syncfusion
+title: Create Fields Programmatically in Blazor SfPdfViewer | Syncfusion
 description: Learn how to create, modify, and manage form fields programmatically in the Syncfusion Blazor SfPdfViewer component.
 platform: Blazor
 control: SfPdfViewer
@@ -616,7 +616,7 @@ The following image illustrates updating the appearance of form fields in Blazor
 ![Update Form Field Appearance in Blazor SfPdfViewer](../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-update-apperance.png)
 
 ### Behavior Properties
-Defines how form fields interact, such as visibility (show or hide), ismultiline (textbox field), maxlength (textbox and password fields), read-only mode (prevent editing), and required fields (ensuring user input is mandatory). These settings determine the usability and restrictions applied to form fields.
+Defines how form fields interact, such as visibility (show or hide), isMultiline (textbox field), maxLength (textbox and password fields), read-only mode (prevent editing), and required fields (ensuring user input is mandatory). These settings determine the usability and restrictions applied to form fields.
 
 ```razor
 @page "/"
