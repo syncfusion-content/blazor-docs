@@ -9,7 +9,7 @@ documentation: ug
 
 # Setting Authorization Header for GetImage Operations in Blazor File Manager Component
 
-In secured applications, retrieving images often requires authentication. The File Manager component now provides enhanced support for adding authorization headers to image requests through the BeforeImageLoad event.
+In secured applications, retrieving images often requires authentication. The File Manager component now provides enhanced support for adding authorization headers to image requests through the [BeforeImageLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforeImageLoad) event.
 
 ## Understanding the Challenge
 
