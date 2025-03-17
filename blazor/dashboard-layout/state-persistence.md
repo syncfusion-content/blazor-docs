@@ -52,13 +52,11 @@ N> Dashboard Layout component [ID](https://help.syncfusion.com/cr/blazor/Syncfus
 
 ```
 
-## Handling Dashboard Layout state manually
+## Handling Blazor Dashboard Layout state manually
 
 The Blazor Dashboard Layout component allows you to manage its state manually using built-in persistence methods. This enables save, load, and reset the panel positions explicitly based on user interactions.
 
-### Methods for State Management
-
-The [GetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_GetPersistDataAsync) method retrieves the current state of the dashboard layout as a string, which is suitable for sending them over network and storing in data bases
+The [GetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_GetPersistDataAsync) method retrieves the current state of the dashboard layout as a string, which is suitable for sending them over network and storing in database.
 
 The [SetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfDashboardLayout.html#Syncfusion_Blazor_Layouts_SfDashboardLayout_SetPersistDataAsync) method is used to restore a previously saved dashboard layout state.
 
