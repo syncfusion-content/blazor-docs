@@ -9,15 +9,15 @@ documentation: ug
 
 # Contextual tabs in Blazor Ribbon component
 
-The Ribbon Contextual tabs are similar to the Ribbon tabs that are displayed on demand based on their needs, such as an image or a table tabs. It supports adding all built-in and custom ribbon items to perform specific actions.
+The Ribbon Contextual tabs are similar to the Ribbon tabs that are displayed on demand based on their needs, such as an image or a table tabs. It supports adding all built-in and custom Ribbon items to perform specific actions.
 
 ## Controlling tab visibility 
 
-The `Visible` property enables you to control the visibility of each contextual tab. By setting this property, you can show or hide tabs as needed.
+You can utilize the `Visible` property to control the visibility of each contextual tab. By default the value is `false`.
 
 ## Adding contextual tabs
 
-You can utilize the `RibbonContextualTabs` tag directive to define contextual tabs within the Ribbon This allows you to group related commands and display them only when required.
+You can utilize the `RibbonContextualTabs` tag directive to define contextual tabs within the Ribbon. This allows you to group collection of Ribbon tabs and display them only when required.
 
 {% tabs %}
 {% highlight razor %}
@@ -119,9 +119,9 @@ You can utilize the `RibbonContextualTabs` tag directive to define contextual ta
 
 ![Ribbon Contextual Tabs](./images/contextual-tabs/contextual-tabs.png)
 
-## Selecting a contextual tab
+## Selected tabs
 
-The `IsSelected` property determines the active state of a contextual tab. Setting this property to `true` makes the tab active, allowing you to focus on context-specific commands without manual selection.
+By using the `IsSelected` property you can control the selected state of each contextual tab and indicates which tab is currently active when set to `true`. By default the value is `false`.
 
 {% tabs %}
 {% highlight razor %}
@@ -198,13 +198,13 @@ The `IsSelected` property determines the active state of a contextual tab. Setti
 
 ## Methods
 
-### Showing a Contextual Tab
+### Show tab
 
-You can use the `ShowTabAsync` method to programmatically display a specific contextual tab in the ribbon when a relevant action is performed.
+You can use the `ShowTabAsync` method to programmatically display a specific contextual tab in the Ribbon.
 
-### Hiding a Contextual Tab
+### Hide tab
 
-You can use the `HideTabAsync` method allows you to hide a contextual tab in the ribbon when it is no longer needed.
+You can use the `HideTabAsync` method allows you to hide the specific contextual tab in the Ribbon.
 
 {% tabs %}
 {% highlight razor %}

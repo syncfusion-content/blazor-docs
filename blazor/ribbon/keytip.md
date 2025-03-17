@@ -17,7 +17,7 @@ KeyTips are displayed when the user presses **Alt + Windows (or Command on macOS
 
 ### Ribbon items keytip
 
-You can assign keytips to individual Ribbon items using the `KeyTip` property in the `RibbonItem` directive. This allows users to trigger buttons, dropdowns, or ribbon items using keyboard shortcuts.
+You can add keytips to the Ribbon items by using the `KeyTip` property in the `RibbonItem` directive.
 
 {% tabs %}
 {% highlight razor %}
@@ -281,7 +281,7 @@ You can assign keytips to individual Ribbon items using the `KeyTip` property in
 
 ### File menu keytip
 
-You can assign a keytip to the File menu using the `KeyTip` property, enabling quick access to file-related actions such as opening, saving, or exporting files.
+You can add keytip to the File menu by using the `KeyTip` property.
 
 {% tabs %}
 {% highlight razor %}
@@ -354,7 +354,7 @@ You can assign a keytip to the File menu using the `KeyTip` property, enabling q
 
 ### Backstage menu keytip
 
-You can assign keytips for the backstage menu items using `KeyTip` property which allows you to navigate and interact with menu options and other backstage functionalities.
+You can add keytips for the backstage button and menu items by using `KeyTip` property.
 
 {% tabs %}
 {% highlight razor %}
@@ -428,7 +428,7 @@ You can assign keytips for the backstage menu items using `KeyTip` property whic
 
 ### Ribbon layout switcher keytip
 
-You can use the `LayoutSwitcherKeyTip` property to assign a shortcut for switching between **Classic** and **Simplified** Ribbon layouts.
+You can add keytip to the layout switcher by using the `LayoutSwitcherKeyTip` property for switching between **Classic** and **Simplified** Ribbon layouts.
 
 {% tabs %}
 {% highlight razor %}
@@ -501,7 +501,7 @@ You can use the `LayoutSwitcherKeyTip` property to assign a shortcut for switchi
 
 ### Ribbon launcher icon keytip
 
-The `LauncherIconKeyTip` property assigns a shortcut to the group's launcher icon, allowing you to quickly open advanced settings or additional options in Ribbon groups.
+You can add keytip to the launcher icon by using `LauncherIconKeyTip` property allowing you to quickly open additional options in Ribbon groups.
 
 {% tabs %}
 {% highlight razor %}
@@ -583,7 +583,7 @@ You can use the `ShowKeyTipsAsync` method to dynamically display keytips.
 
 ### Hide keytips
 
-You can use the `HideKeyTipsAsync` method to remove all visible keytips from the Ribbon dynamically, restoring the default view.
+You can use the `HideKeyTipsAsync` method to remove all visible keytips from the Ribbon dynamically.
 
 {% tabs %}
 {% highlight razor %}
@@ -667,12 +667,12 @@ You can use the `HideKeyTipsAsync` method to remove all visible keytips from the
 
 ## Guidelines for adding keytips
 
-To ensure an efficient and conflict-free KeyTip experience, follow these best practices:
+Before adding keytips to the Ribbon items, follow these best practices:
 
-* Use Unique KeyTips
+* Avoid using the same keytip setting on multiple items.
 
 > Each keytip should be distinct. If multiple items share the same keytip (e.g., `H` or `HF`), only the first occurrence will be activated, while any subsequent instances of H or HF are ignored.
 
-* Avoid Overlapping First Letters
+* Do not use the same first letter for the single and double keytip items.
 
-> When using multi-character keytips (e.g., `F`, `FP`, and `FPF`) for different items, pressing `F` will activate only the first-level keytip (`F`), while `FP` and `FPF` will not be triggered.
+> When using multi-character keytips (e.g., `F`, `FP`, and `FPF`) for different items, pressing `F` will activate only the first-level keytip (`F`), while `FP` and `FPF` will be ignored.
