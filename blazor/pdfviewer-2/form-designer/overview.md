@@ -183,7 +183,7 @@ This functionality allows you to save, transfer, or restore form field values ef
 > 2. FDF 
 > 3. XFDF 
 > 4. JSON
-> 5. Object-based JSON export
+> 5. Object-based
 
 The ExportFormFieldsAsync and ImportFormFieldsAsync methods allow you to export the form field data as a stream, which can later be used to import the saved data into another PDF document.
 
@@ -252,7 +252,7 @@ The following code shows how to export the form fields as an XML data stream and
 
 Exports form field data in Forms Data Format (FDF) and allows importing the same data back into a PDF document.
 
-The code demonstrates how to exporting form fields as FDF ata stream and importing the data back into the current PDF document through a button click.
+The code demonstrates how to exporting form fields as FDF at a stream and importing the data back into the current PDF document through a button click.
 
 ```cshtml
 @using Syncfusion.Blazor.SfPdfViewer;
@@ -363,7 +363,7 @@ The following code shows how to export the form fields as an XFDF data stream an
 
 Exports form field data in JSON format, which can be easily read and imported back into the PDF Viewer.
 
-The code demonstrates how to exporting form fields as JSON ata stream and importing the data back into the current PDF document through a button click.
+The code demonstrates how to exporting form fields as JSON at a stream and importing the data back into the current PDF document through a button click.
 
 ```cshtml
 @using Syncfusion.Blazor.SfPdfViewer;
@@ -504,5 +504,7 @@ This method allows exporting the form field data and saving it as a JSON file, w
 [View sample in GitHub]().
 
 Additionally, the component provides a built-in Submit button that allows exporting form field data as a JSON file directly from the PDF document. The following sections demonstrate different ways to export and import form field data.
+
+Refer to the GIF below for details.
 
 ![Export and Import Object Format](form-designer-images/Export_Submit_JSON.gif)
