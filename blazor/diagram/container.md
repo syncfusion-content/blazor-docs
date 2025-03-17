@@ -283,12 +283,12 @@ Diagram elements can be added or removed from a container at runtime. When an el
 
 Diagram provides support to select, drag or resize the container interactively. 
 
-### How to select the container
+### Select 
 Container can be selected by clicking (tapping) on it. Also, it can be selected at runtime by using the [Select](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Select_System_Collections_ObjectModel_ObservableCollection_Syncfusion_Blazor_Diagram_IDiagramObject__System_Nullable_System_Boolean__) method and clear the selection in the diagram by using the [ClearSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ClearSelection)
 
 ![Blazor Diagram Container Selection](images/ContainerImages/ContainerSelection.png)
 
-### How to drag the container 
+### Drag 
 
 * A container can be moved by clicking and dragging it within the diagram.
 
