@@ -43,7 +43,7 @@ You can use the `ShowTooltip` property to specify the tooltip text to be display
 
 ## Setting disabled
 
-You can use the `Disabled` property to disable the SpeechToText, preventing user interaction when set to `true`. By default, the value is `false`.
+You can use the `Disabled` property to disable the SpeechToText component, preventing user interaction when set to `true`. By default, the value is `false`.
 
 ## Setting html attributes
 

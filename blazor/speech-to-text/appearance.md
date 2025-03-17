@@ -9,7 +9,7 @@ documentation: ug
 
 # Appearance in Blazor SpeechToText component
 
-## Configuring button
+## Customizing the button
 
 You can use the `ButtonSettings` property to customize the appearance of the start and stop buttons in the speech to text conversion.
 
@@ -37,7 +37,49 @@ You can display the icon on the top, bottom, left, or right side of the button t
 
 You can use the `IsPrimary` property to configure the button as a primary action button.
 
-## Configuring tooltips
+Below code sample demonstrates how to configure the button with above mentioned properties.
+
+{% tabs %}
+{% highlight razor %}
+
+@using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.Buttons
+
+<div class="speechtext-container">
+    <SfSpeechToText ButtonSettings="@buttonSettings" @bind-Transcript="@transcript"></SfSpeechToText>
+    <SfTextArea RowCount="5" ColumnCount="50" @bind-Value="@transcript" ResizeMode="Resize.None" Placeholder="Transcribed text will be shown here..."></SfTextArea>
+</div>
+
+@code {
+    string transcript = "";
+    SpeechToTextButtonSettings buttonSettings = new SpeechToTextButtonSettings()
+    {
+        Text = "Start",
+        StopStateText = "Stop",
+        IconCss = "e-icons e-play",
+        StopIconCss = "e-icons e-pause",
+        IconPosition = IconPosition.Right,
+        isPrimary = true
+    };
+}
+
+<style>
+    .speechtext-container {
+        margin: 50px auto;
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+</style>
+
+{% endhighlight %}
+{% endtabs %}
+
+![Blazor SpeechToText Button Customization(Idle state)](images/customize-btn-idle-state.png)
+![Blazor SpeechToText Button Customization(Listening state)](images/customize-btn-listening-state.png)
+
+## Customizing the tooltips
 
 You can use the `TooltipSettings` property to customize the content and positions of the tooltip.
 
@@ -52,6 +94,54 @@ You can use the `StopStateText` property to customize the stop button tooltip te
 ### Setting tooltip position
 
 You can use the `Position` property to determine the placement of tooltips relative to the button.
+
+Below code sample demonstrates how to configure the tooltip settings with above mentioned properties.
+
+{% tabs %}
+{% highlight razor %}
+
+@using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.Buttons
+
+<div class="speechtext-container">
+    <SfSpeechToText ButtonSettings="@buttonSettings" TooltipSettings="@tooltipSettings" @bind-Transcript="@transcript"></SfSpeechToText>
+    <SfTextArea RowCount="5" ColumnCount="50" @bind-Value="@transcript" ResizeMode="Resize.None" Placeholder="Transcribed text will be shown here..."></SfTextArea>
+</div>
+
+@code {
+    string transcript = "";
+    SpeechToTextButtonSettings buttonSettings = new SpeechToTextButtonSettings()
+    {
+        Text = "Start",
+        StopStateText = "Stop",
+        IconCss = "e-icons e-play",
+        StopIconCss = "e-icons e-pause",
+        IconPosition = IconPosition.Right,
+        isPrimary = true
+    };
+
+    SpeechToTextTooltipSettings tooltipSettings = new SpeechToTextTooltipSettings()
+    {
+        Position = TooltipPosition.BottomRight,
+        Text = "Click the button to start recognition",
+        StopStateText = "Click the button to stop recognition"
+    };
+}
+
+<style>
+    .speechtext-container {
+        margin: 50px auto;
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+</style>
+
+{% endhighlight %}
+{% endtabs %}
+
+![Blazor SpeechToText Tooltip](images/speechtotext-tooltip.png)
 
 ## Setting button styles
 
@@ -69,3 +159,45 @@ The SpeechToText component supports the following predefined styles that can be 
 ## Setting cssclass
 
 You can use the `CssClass` property to customize the appearance of the SpeechToText component.
+
+Below code sample demonstrates how to configure cssclass and customize the button.
+
+{% tabs %}
+{% highlight razor %}
+
+@using Syncfusion.Blazor.Inputs
+
+<div class="speechtext-container">
+    <SfSpeechToText CssClass="customSpeechBtn" @bind-Transcript="@transcript"></SfSpeechToText>
+    <SfTextArea RowCount="5" ColumnCount="50" @bind-Value="@transcript" ResizeMode="Resize.None" Placeholder="Transcribed text will be shown here..."></SfTextArea>
+</div>
+
+@code {
+    string transcript = "";
+}
+
+<style>
+    .speechtext-container {
+        margin: 50px auto;
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .e-speech-to-text.customSpeechBtn {
+        background-color: #ff6347;
+        color: #fff;
+        border-radius: 5px;
+    }
+
+    .e-speech-to-text.customSpeechBtn:hover,
+    .e-speech-to-text.customSpeechBtn:focus {
+        background-color: #ff4500;
+    }
+</style>
+
+{% endhighlight %}
+{% endtabs %}
+
+![Blazor SpeechToText Tooltip](images/speechtotext-cssClass.png)
