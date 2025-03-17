@@ -107,4 +107,4 @@ N> Users can also delete form fields programmatically in SfPdfViewer
 ## See also
 
 * [Programmatic Support in Form Designer](./hand-written-signature)
-* [Events in Form Designer](./hand-written-signature)
+* [Events in Form Designer](./events)
