@@ -9,7 +9,7 @@ documentation: ug
 
 # Appearance in Blazor SpeechToText component
 
-## Configuring button
+## Customizing the button
 
 You can use the `ButtonSettings` property to customize the appearance of the start and stop buttons in the speech to text conversion.
 
@@ -37,7 +37,7 @@ You can display the icon on the top, bottom, left, or right side of the button t
 
 You can use the `IsPrimary` property to configure the button as a primary action button.
 
-## Configuring tooltips
+## Customizing the tooltips
 
 You can use the `TooltipSettings` property to customize the content and positions of the tooltip.
 
