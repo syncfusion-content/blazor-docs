@@ -188,8 +188,8 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor SpeechToText com
 {% highlight razor %}
 
 <div class="speechtext-container">
-    <SfSpeechToText TranscriptChanging="@HandleTranscriptChange"></SfSpeechToText>
-    <SfTextArea RowCount="5" ColumnCount="50" @bind-Value="@textAreaValue" ResizeMode="Resize.None" Placeholder="Transcribed text will be shown here..."></SfTextArea>
+    <SfSpeechToText @bind-Transcript="@transcript"></SfSpeechToText>
+    <SfTextArea RowCount="5" ColumnCount="50" @bind-Value="@transcript" ResizeMode="Resize.None" Placeholder="Transcribed text will be shown here..."></SfTextArea>
 </div>
 
 <style>
@@ -203,11 +203,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor SpeechToText com
 </style>
 
 @code {
-    string textAreaValue = "";
-
-    private void HandleTranscriptChange(TranscriptChangeEventArgs args) {
-        textAreaValue = args.Transcript;
-    }
+    string transcript = "";
 }
 
 {% endhighlight %}
@@ -225,8 +221,8 @@ You can use the `Text` property to display the start listening text and `StopSta
 {% highlight razor %}
 
 <div class="speechtext-container">
-    <SfSpeechToText ButtonSettings="@buttonSettings" TranscriptChanging="@HandleTranscriptChange"></SfSpeechToText>
-    <SfTextArea RowCount="5" ColumnCount="50" @bind-Value="@textAreaValue" ResizeMode="Resize.None" Placeholder="Transcribed text will be shown here..."></SfTextArea>
+    <SfSpeechToText ButtonSettings="@buttonSettings" @bind-Transcript="@transcript"></SfSpeechToText>
+    <SfTextArea RowCount="5" ColumnCount="50" @bind-Value="@transcript" ResizeMode="Resize.None" Placeholder="Transcribed text will be shown here..."></SfTextArea>
 </div>
 
 <style>
@@ -240,16 +236,12 @@ You can use the `Text` property to display the start listening text and `StopSta
 </style>
 
 @code {
-    string textAreaValue = "";
+    string transcript = "";
     SpeechToTextButtonSettings buttonSettings = new SpeechToTextButtonSettings()
-        {
-            Text = "Start Listening", // Displays when idle
-            StopStateText = "Stop Listening" // Displays when speech recognition is active
-        };
-
-    private void HandleTranscriptChange(TranscriptChangeEventArgs args) {
-        textAreaValue = args.Transcript;
-    }
+    {
+        Text = "Start Listening", // Displays when idle
+        StopStateText = "Stop Listening" // Displays when speech recognition is active
+    };
 }
 
 {% endhighlight %}
