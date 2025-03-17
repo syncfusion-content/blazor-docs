@@ -439,3 +439,85 @@ You can customize the appearance of the toolbar icons. The below code illustrate
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Toolbar/Custom%20Toolbar/Primary%20Custom%20Toolbar/Icon-Style-Change).
 
 N> This is applicable only for custom toolbar.
+
+## How to customize the Annotation Toolbar
+
+The Annotation Toolbar in SfPdfViewer enables users to add various annotations like underline, stamps, free text, and more. You can customize this toolbar to display only the necessary tools, ensuring that only those tools are available and usable within the viewer.
+
+The following example demonstrates how to customize the annotation toolbar by specifying a selected set of tools.
+
+```cshtml
+<!-- SfPdfViewer2 component with Form Designer enabled -->
+<SfPdfViewer2 @ref="PdfViewerInstance" EnableFormDesigner="true" 
+                DocumentPath="wwwroot/data/Form_Designer.pdf"
+                Height="650px"
+                Width="100%">
+                
+                <!-- Configuring the Form Designer Toolbar items -->
+                <PdfViewerToolbarSettings FormDesignerToolbarItems="FormDesignerToolbarItems"></PdfViewerToolbarSettings>
+</SfPdfViewer2>
+
+@code {
+    // Reference to the SfPdfViewer2 instance
+    SfPdfViewer2 PdfViewerInstance { get; set; }
+
+    // Define a list of form designer toolbar items to be displayed and usable
+    List<FormDesignerToolbarItem> FormDesignerToolbarItems { get; set; } = new List<FormDesignerToolbarItem>() 
+    {
+        FormDesignerToolbarItem.TextBox,
+        FormDesignerToolbarItem.CheckBox,
+        FormDesignerToolbarItem.ListBox,
+        FormDesignerToolbarItem.Delete
+    };
+}
+```
+Refer to the image below for the desktop view.
+
+![Blazor PDFViewer with Custom Toolbar](./images/Annotation_Toolbar_Customization_Desktop.png)
+
+Refer to the image below for the mobile view.
+
+![Blazor PDFViewer with Custom Toolbar](./images/Annotation_Toolbar_Customization_Mobile.png)
+
+[View sample in GitHub]().
+
+## How to customize the Form Designer Toolbar
+
+The Form Designer Toolbar in SfPdfViewer provides tools for adding interactive form fields such as text boxes, checkboxes, and dropdowns. By customizing this toolbar, you can control which tools are displayed and ensure that only those tools are available for use in the PDF Viewer.
+
+The following example demonstrates how to customize the Form Designer Toolbar by specifying a selected set of tools.
+
+```cshtml
+<SfPdfViewer2 @ref="PdfViewerInstance" EnableFormDesigner="true" 
+                  DocumentPath="wwwroot/data/Form_Designer.pdf"
+                  Height="650px"
+                  Width="100%">
+                  
+                  <!-- Configuring the Form Designer Toolbar items -->
+                  <PdfViewerToolbarSettings FormDesignerToolbarItems="FormDesignerToolbarItems"></PdfViewerToolbarSettings>
+</SfPdfViewer2>
+
+@code {
+    // Reference to the SfPdfViewer2 instance
+    SfPdfViewer2 PdfViewerInstance { get; set; }
+
+    // Define a list of form designer toolbar items to be displayed and usable
+    List<FormDesignerToolbarItem> FormDesignerToolbarItems { get; set; } = new List<FormDesignerToolbarItem>() 
+    {
+        FormDesignerToolbarItem.TextBox,   
+        FormDesignerToolbarItem.CheckBox,  
+        FormDesignerToolbarItem.ListBox,   
+        FormDesignerToolbarItem.Delete    
+    };
+}
+```
+
+Refer to the image below for the desktop view.
+
+![Blazor PDFViewer with Custom Toolbar](./images/Form_Designer_Toolbar_Customization_Desktop.png)
+
+Refer to the image below for the mobile view.
+
+![Blazor PDFViewer with Custom Toolbar](./images/Form_Designer_Toolbar_Customization_Mobile.png)
+
+[View sample in GitHub]().
