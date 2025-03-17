@@ -157,7 +157,10 @@ Below is an example demonstrating how to set and clear the form field drawing mo
 ```
 The following image illustrates setting and clearing the form field mode in Blazor SfPdfViewer:  
 
-![Set and Clear Form Field Mode in Blazor SfPdfViewer](../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-setmode.gif)
+<p align="center">
+    <img src="../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-setmode.gif" 
+         alt="Set and Clear Form Field Mode in Blazor SfPdfViewer">
+</p>
 
 [View sample in GitHub]().
 
