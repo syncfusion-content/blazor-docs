@@ -108,7 +108,10 @@ This code below is for thickness. You can also configure **background color, bor
 ```
 The following image illustrates the listbox field thickness customization in Blazor SfPdfViewer:
 
-![Form Field Thickness Customization in Blazor SfPdfViewer](../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-setting-thickness.png)
+<p align="center">
+    <img src="../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-setting-thickness.png" 
+         alt="Form Field Thickness Customization in Blazor SfPdfViewer">
+</p>
 
 [View sample in GitHub]().
 
@@ -203,7 +206,10 @@ Controls the visual aspects of form fields, including background color, border c
 ```
 The following image illustrates updating the appearance of a button form field in Blazor SfPdfViewer:  
 
-![Update Form Field Appearance in Blazor SfPdfViewer](../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-update-apperance.png)
+<p align="center">
+    <img src="../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-update-apperance.png" 
+         alt="Update Form Field Appearance in Blazor SfPdfViewer">
+</p>
 
 [View sample in GitHub]().
 
@@ -244,7 +250,10 @@ Includes properties like name (unique identifier) and value (storing user input 
 ```
 The following image illustrates updating the metadata of dropdown field in Blazor SfPdfViewer:  
 
-![Update Form Field Metadata in Blazor SfPdfViewer](../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-update-value.png)
+<p align="center">
+    <img src="../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-update-value.png" 
+         alt="Update Form Field Metadata in Blazor SfPdfViewer">
+</p>
 
 [View sample in GitHub]().
 
@@ -277,7 +286,10 @@ When multiple fields share the same name, changes apply to all linked fields. Up
 ```
 The following image illustrates updating linked properties of a radio button form field in Blazor SfPdfViewer:  
 
-![Update Linked Field Properties in Blazor SfPdfViewer](../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-linked-properties.png)
+<p align="center">
+    <img src="../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-linked-properties.png" 
+         alt="Update Linked Field Properties in Blazor SfPdfViewer">
+</p>
 
 [View sample in GitHub]().
 
@@ -433,7 +445,10 @@ To select a form field using its unique identifier, pass the field's ID to the `
 ```
 The following image illustrates selecting a button field by its ID in Blazor SfPdfViewer:  
 
-![Select Button Field by ID in Blazor SfPdfViewer](../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-select-id.png)
+<p align="center">
+    <img src="../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-select-id.png" 
+         alt="Select Button Field by ID in Blazor SfPdfViewer">
+</p>
 
 [View sample in GitHub]().
 
@@ -473,7 +488,10 @@ Alternatively, you can retrieve all available form fields using `GetFormFieldsAs
 ```
 The following image illustrates selecting a checkbox field in Blazor SfPdfViewer:  
 
-![Select Button Field in Blazor SfPdfViewer](../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-select-field.png)
+<p align="center">
+    <img src="../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-select-field.png" 
+         alt="Select CheckBox Field in Blazor SfPdfViewer">
+</p>
 
 [View sample in GitHub]().
 
