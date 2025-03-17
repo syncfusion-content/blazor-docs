@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Setting Authorization Header for GetImage Operations in Blazor File Manager Component | Syncfusion
+title: Setting Authorization Header for GetImage Operations | Syncfusion
 description: Checkout and learn here all about Setting Authorization Header for GetImage Operations in Syncfusion Blazor File Manager component and more.
 platform: Blazor
 control: File Manager
@@ -22,6 +22,15 @@ The Blazor File Manager component offers a solution by supporting HTTP Client-ba
 * Add authorization headers to image requests
 * Maintain security when retrieving images from protected endpoints
 * Control how images are loaded and processed
+
+## BeforeImageLoad Event: UseImageAsUrl Property
+
+The [BeforeImageLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforeImageLoad) event provides the [UseImageAsUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.BeforeImageLoadEventArgs-1.html#Syncfusion_Blazor_FileManager_BeforeImageLoadEventArgs_1_UseImageAsUrl) property which determines how images are loaded:
+
+* When `UseImageAsUrl` is `true` (default), images are loaded directly via URL in image tags, which doesn't allow for custom headers.
+* When `UseImageAsUrl` is `false`, images are loaded using HTTP client requests, enabling the addition of custom headers like authorization tokens.
+
+Setting `UseImageAsUrl` to `false` is essential for secure environments where image requests must include authentication.
 
 ## Implementation Steps
 
