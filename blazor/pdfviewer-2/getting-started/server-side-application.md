@@ -9,7 +9,7 @@ documentation: ug
 
 # View PDF files using PDF Viewer Component in the Blazor Server app
 
-In this section, we'll guide you through the process of adding Syncfusion&reg; Blazor PDF Viewer component to your Blazor Server app. We'll break it down into simple steps to make it easy to follow. Additionally, you can find a fully functional example project on our [GitHub repository](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/PDFViewer%20%202/BlazorServerApp/PDFViewerSample).
+In this section, we'll guide you through the process of adding Syncfusion&reg; Blazor PDF Viewer component to your Blazor Server app using Visual Studio and Visual Studio Code. We'll break it down into simple steps to make it easy to follow. Additionally, you can find a fully functional example project on our [GitHub repository](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/PDFViewer%20%202/BlazorServerApp/PDFViewerSample).
 
 {% tabcontents %}
 
