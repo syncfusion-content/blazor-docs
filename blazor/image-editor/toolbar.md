@@ -102,7 +102,7 @@ Here is an example of hiding the toolbar of the image editor using `Toolbar` pro
 }
 ```
 
-![Blazor Image Editor with Hide a Toolbar](./images/blazor-image-editor-hide-toolbar.png)
+![Blazor Image Editor with Hide a Toolbar](./images/blazor-image-editor-hide-toolbar.jpg)
 
 ## Show or hide a toolbar item
 
