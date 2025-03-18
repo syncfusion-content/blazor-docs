@@ -213,7 +213,7 @@ The following image illustrates updating the appearance of a button form field i
 
 ![Update Form Field Appearance in Blazor SfPdfViewer](../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-update-apperance.png)
 
-[View sample in GitHub]().
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/UpdateApperanceProperties.razor).
 
 ### Identification & Metadata Properties
 Includes properties like name (unique identifier) and value (storing user input or assigned data). These attributes help distinguish and manage form fields efficiently.
