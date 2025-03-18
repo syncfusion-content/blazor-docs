@@ -11,6 +11,8 @@ documentation: ug
 
 The Form Designer in [SfPdfViewer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.html) enables seamless creation, editing, and management of interactive form fields. It supports dynamic module injection, allowing the designer to be added or removed while updating relevant UI elements. Various form fields, including [Textbox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.TextBoxField.html), [Password](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PasswordField.html), [Radio Button](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.RadioButtonField.html), [Check Box](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.CheckBoxField.html), [Dropdown](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.DropDownField.html), [List Box](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ListBoxField.html), [Signature Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SignatureField.html) and [Button](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ButtonField.html), can be added with custom naming, grouping, and data consistency across pages.
 
+![Form Designer Feature](form-designer-images/Form_Designer_Feature.gif)
+
 Fields retain their properties when downloaded or reloaded, even in large documents. Essential operations like cut, copy, paste, zoom, and resize work smoothly while preserving data integrity. Additional features include read-only and required field modes, validation, extensive customization, undo/redo functionality, and form submission controls.
 
 ## Supported Form Fields
@@ -99,9 +101,13 @@ The following code snippet explains how to add a form field that is visible in t
 }
 ```
 
-Refer to the GIF below for more details.
+Refer to the image below for the viewer.
 
-![Form Field with VisibleNotPrintable Mode](form-designer-images/Form_Field_with_VisibleNotPrintable_Mode.gif)
+![Form Field with VisibleNotPrintable Mode in Viewer](form-designer-images/Form_Field_with_VisibleNotPrintable_Mode_Viewer.png)
+
+Refer to the image below for the print preview.
+
+![Form Field with VisibleNotPrintable Mode in PrintPreview](form-designer-images/Form_Field_with_VisibleNotPrintable_Mode_PrintPreview.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/Visibility.razor).
 
@@ -173,7 +179,7 @@ This functionality allows you to save, transfer, or restore form field values ef
 > 4. JSON
 > 5. Object-based
 
-The [ExportFormFieldsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ImportFormFieldsAsync_System_IO_Stream_Syncfusion_Blazor_SfPdfViewer_FormFieldDataFormat_) and [ImportFormFieldsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ImportFormFieldsAsync_System_IO_Stream_Syncfusion_Blazor_SfPdfViewer_FormFieldDataFormat_) methods allow you to export the form field data as a stream, which can later be used to import the saved data into another PDF document.
+The [ExportFormFieldsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ExportFormFieldsAsync_Syncfusion_Blazor_SfPdfViewer_FormFieldDataFormat_) and [ImportFormFieldsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ImportFormFieldsAsync_System_IO_Stream_Syncfusion_Blazor_SfPdfViewer_FormFieldDataFormat_) methods allow you to export the form field data as a stream, which can later be used to import the saved data into another PDF document.
 
 ### Types of Form Fields Export and Import
 
@@ -512,5 +518,5 @@ Refer to the Image below for details.
 ## See also
 
 * [UI interactions in form Designer]()
-* [Programmatic Support in Form Designer]()
+* [Programmatic Support in Form Designer](./create-programmatically.md)
 * [Events in Form Designer]()
