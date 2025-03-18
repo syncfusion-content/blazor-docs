@@ -13,9 +13,10 @@ The Blazor SfPdfViewer component provides programmatic control over form fields 
 
 ## Adding Form Fields Programmatically
 
-The Blazor SfPdfViewer offers a way to add form fields programmatically using the `AddFormFieldsAsync` method. This method accepts a list of `FormFieldInfo` objects, where each object represents a form field with specific properties.  
+The Blazor SfPdfViewer offers a way to add form fields programmatically using the [`AddFormFieldsAsync`]() method. This method accepts a list of [`FormFieldInfo`]() objects, where each object represents a form field with specific properties.  
 
-### Example: Adding Form Fields to a PDF Document
+The example below demonstrates how to add form fields in the PdfViewer component:
+
 ```razor
 @page "/"
 
@@ -65,7 +66,7 @@ N> Users can also add form fields through the UI in SfPdfViewer, allowing for an
 
 ## Form Field Settings  
 
-The Blazor SfPdfViewer provides `FormFieldSettings` to configure the appearance of form fields in a PDF document. These settings allow defining the border, background, text styles, and other properties.
+The Blazor SfPdfViewer provides [`FormFieldSettings`]() to configure the appearance of form fields in a PDF document. These settings allow defining the border, background, text styles, and other properties.
 
 This code below is for thickness. You can also configure **background color, border color, text color, font family, font size, and font style**.
 
@@ -108,16 +109,13 @@ This code below is for thickness. You can also configure **background color, bor
 ```
 The following image illustrates the listbox field thickness customization in Blazor SfPdfViewer:
 
-<p align="center">
-    <img src="../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-setting-thickness.png" 
-         alt="Form Field Thickness Customization in Blazor SfPdfViewer">
-</p>
+![Form Field Thickness Customization in Blazor SfPdfViewer](../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-setting-thickness.png)
 
 [View sample in GitHub]().
 
-## Set and Clear Form Field Mode
+## Activating and Deactivating Form Field Mode
 
-The `SetFormDrawingModeAsync` method allows defining the type of form field that can be drawn in the PDF Viewer. This enables users to add form fields interactively. The `ClearFormDrawingModeAsync` method resets the mode, disabling form field selection.
+The [`SetFormDrawingModeAsync`]() method allows defining the type of form field that can be drawn in the PDF Viewer. This enables users to add form fields interactively. The [`ClearFormDrawingModeAsync`]() method resets the mode, disabling form field selection.
 
 ### Usage
 
@@ -141,32 +139,36 @@ Below is an example demonstrating how to set and clear the form field drawing mo
 </SfPdfViewer2>
 
 @code {
+    // Reference to the PDF Viewer instance
     private SfPdfViewer2 viewer;
+
+    // Path to the PDF document to be loaded in the viewer
     private string DocumentPath = "wwwroot/data/formDesigner_Empty.pdf";
 
+    // Method to enable form field drawing mode with a specific field type
     async Task SetFormDrawingMode()
     {
+        // Sets the form field drawing mode to DropDown, allowing users to add dropdown fields
         await viewer.SetFormDrawingModeAsync(FormFieldType.DropDown);
     }
 
+    // Method to disable form field drawing mode
     async Task ClearFormDrawingMode()
     {
+        // Clears the form field drawing mode, preventing further form field additions
         await viewer.SetFormDrawingModeAsync();
     }
 }
 ```
 The following image illustrates setting and clearing the form field mode in Blazor SfPdfViewer:  
 
-<p align="center">
-    <img src="../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-setmode.gif" 
-         alt="Set and Clear Form Field Mode in Blazor SfPdfViewer">
-</p>
+![Set and Clear Form Field Mode in Blazor SfPdfViewer](../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-setmode.gif)
 
 [View sample in GitHub]().
 
 ## Update Form Fields
 
-The Update functionality enables dynamic modification of form field properties in a PDF document by retrieving fields via `GetFormFieldsAsync()` and updating their values, appearance, or behavior. These changes are applied using `UpdateFormFieldsAsync()`, ensuring they reflect in the viewer.
+The Update functionality enables dynamic modification of form field properties in a PDF document by retrieving fields via [`GetFormFieldsAsync()`]() and updating their values, appearance, or behavior. These changes are applied using [`UpdateFormFieldsAsync()`](), ensuring they reflect in the viewer.
 
 ### Appearance Properties
 Controls the visual aspects of form fields, including background color, border color, text color, thickness, maxLength, visibility, font size, font family, font style and text alignment. These properties help customize the look and feel of form fields in the document.
@@ -209,10 +211,7 @@ Controls the visual aspects of form fields, including background color, border c
 ```
 The following image illustrates updating the appearance of a button form field in Blazor SfPdfViewer:  
 
-<p align="center">
-    <img src="../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-update-apperance.png" 
-         alt="Update Form Field Appearance in Blazor SfPdfViewer">
-</p>
+![Update Form Field Appearance in Blazor SfPdfViewer](../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-update-apperance.png)
 
 [View sample in GitHub]().
 
@@ -253,14 +252,11 @@ Includes properties like name (unique identifier) and value (storing user input 
 ```
 The following image illustrates updating the metadata of dropdown field in Blazor SfPdfViewer:  
 
-<p align="center">
-    <img src="../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-update-value.png" 
-         alt="Update Form Field Metadata in Blazor SfPdfViewer">
-</p>
+![Update Form Field Metadata in Blazor SfPdfViewer](../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-update-value.png)
 
 [View sample in GitHub]().
 
-### Linked Field Properties
+### Grouping and Synchronizing Form Fields Properties
 
 When multiple fields share the same name, changes apply to all linked fields. Updates to **Value, Required, Readonly, Multiline, and Tooltip** reflect instantly. This ensures consistency across the document.
 
@@ -289,10 +285,7 @@ When multiple fields share the same name, changes apply to all linked fields. Up
 ```
 The following image illustrates updating linked properties of a radio button form field in Blazor SfPdfViewer:  
 
-<p align="center">
-    <img src="../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-linked-properties.png" 
-         alt="Update Linked Field Properties in Blazor SfPdfViewer">
-</p>
+![Update Linked Field Properties in Blazor SfPdfViewer](../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-linked-properties.png)
 
 [View sample in GitHub]().
 
@@ -301,7 +294,7 @@ N> Users can also Update form fields through the UI in SfPdfViewer, allowing for
 
 ## Delete Form Fields
 
-The `DeleteFormFieldsAsync()` method enables the removal of form fields from the document, allowing users to manage and modify form structures efficiently.  
+The [`DeleteFormFieldsAsync()`]() method enables the removal of form fields from the document, allowing users to manage and modify form structures efficiently.  
 
 ### Delete All Form Fields  
 Removes all form fields from the document, clearing all interactive elements at once.
@@ -411,11 +404,11 @@ N> Users can also Delete form fields through the UI in SfPdfViewer, allowing for
 
 ## Select Form Field in SfPdfViewer2
 
-Form fields in SfPdfViewer2 can be programmatically selected using the `SelectFormFieldAsync` method. This allows users to highlight specific form fields based on either their unique identifier or their object reference.
+Form fields in SfPdfViewer2 can be programmatically selected using the [`SelectFormFieldAsync`]() method. This allows users to highlight specific form fields based on either their unique identifier or their object reference.
 
 ### Select Form Field by ID
 
-To select a form field using its unique identifier, pass the field's ID to the `SelectFormFieldAsync` method.
+To select a form field using its unique identifier, pass the field's ID to the [`SelectFormFieldAsync`]() method.
 
 ```razor
 @page "/"
@@ -448,16 +441,13 @@ To select a form field using its unique identifier, pass the field's ID to the `
 ```
 The following image illustrates selecting a button field by its ID in Blazor SfPdfViewer:  
 
-<p align="center">
-    <img src="../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-select-id.png" 
-         alt="Select Button Field by ID in Blazor SfPdfViewer">
-</p>
+![Select Button Field by ID in Blazor SfPdfViewer](../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-select-id.png)
 
 [View sample in GitHub]().
 
 ### Select Form Field by Object Reference
 
-Alternatively, you can retrieve all available form fields using `GetFormFieldsAsync`, then select a specific field by passing its object reference to `SelectFormFieldAsync`.
+Alternatively, you can retrieve all available form fields using [`GetFormFieldsAsync`](), then select a specific field by passing its object reference to [`SelectFormFieldAsync`]().
 
 ```razor
 @page "/"
@@ -491,10 +481,7 @@ Alternatively, you can retrieve all available form fields using `GetFormFieldsAs
 ```
 The following image illustrates selecting a checkbox field in Blazor SfPdfViewer:  
 
-<p align="center">
-    <img src="../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-select-field.png" 
-         alt="Select CheckBox Field in Blazor SfPdfViewer">
-</p>
+![Select CheckBox Field in Blazor SfPdfViewer](../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-select-field.png)
 
 [View sample in GitHub]().
 
@@ -503,4 +490,6 @@ Refer to the documentation for enabling form field toolbar [Interaction mode]().
 
 ## See also
 
+* [Overview of Form Designer]()
 * [How to Add Form Fields Using UI Interaction]()
+* [Events in Form Designer]()
