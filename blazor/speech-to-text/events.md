@@ -19,9 +19,7 @@ This section describes the SpeechToText events that will be triggered when appro
 |SpeechRecognitionError|SpeechRecognitionErrorEventArgs|Triggers when an error occurs during speech recognition or while listening. For list of possible errors, refer to the [Error handling](./speech-recognition#error-handling) section.|
 |TranscriptChanging|TranscriptChangeEventArgs|Triggers when a transcription change occurs during the speech recognition.|
 
-## How to configure Ribbon events
-
-The following example demonstrates how to configure above mentioned events in the Blazor SpeechToText component.
+The following example demonstrates how to configure the Blazor SpeechToText events.
 
 {% tabs %}
 {% highlight razor %}

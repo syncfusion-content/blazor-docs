@@ -9,11 +9,11 @@ documentation: ug
 
 # Methods in Blazor SpeechToText component
 
-## Startlistening
+## Start listening
 
 You can use the `StartListeningAsync` public method to initiate the speech recognition and begins the conversion of the speech to text.
 
-## Stoplistening
+## Stop listening
 
 You can use the `StopListeningAsync` public method to stop capturing your speech and ends the speech recognition.
 
