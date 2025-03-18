@@ -11,7 +11,7 @@ documentation: ug
 
 The Form Designer in [SfPdfViewer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.html) enables seamless creation, editing, and management of interactive form fields. It supports dynamic module injection, allowing the designer to be added or removed while updating relevant UI elements. Various form fields, including [Textbox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.TextBoxField.html), [Password](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PasswordField.html), [Radio Button](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.RadioButtonField.html), [Check Box](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.CheckBoxField.html), [Dropdown](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.DropDownField.html), [List Box](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ListBoxField.html), [Signature Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SignatureField.html) and [Button](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ButtonField.html), can be added with custom naming, grouping, and data consistency across pages.
 
-Fields retain properties when downloaded or reloaded, even for large documents. Operations like cut, copy, paste, zoom, and resize function smoothly while maintaining data integrity. Additional features include read-only and required field modes, validation, extensive customization, undo/redo, and form submission controls.
+Fields retain their properties when downloaded or reloaded, even in large documents. Essential operations like cut, copy, paste, zoom, and resize work smoothly while preserving data integrity. Additional features include read-only and required field modes, validation, extensive customization, undo/redo functionality, and form submission controls.
 
 ## Supported Form Fields
 
@@ -30,23 +30,27 @@ These fields ensure seamless interaction, customization, and data consistency, e
 
 ## Form Field Management
 
-The SfPdfViewer enables efficient form field management by supporting opening, saving, and printing PDFs while maintaining field integrity.
+The [SfPdfViewer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.html) enables efficient form field management by supporting opening, saving, and printing PDFs while maintaining field integrity.
 
 ### Open the PDF Documents with Interactive Form Fields
 
-SfPdfViewer enables smooth loading of PDFs with interactive form fields, preserving their properties and data. This ensures seamless modifications, validations, and data retention, even in large documents. A saved PDF with form fields can be opened using the Open icon in the toolbar. Refer to the Image below for details.
+The [SfPdfViewer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.html) component enables smooth loading of PDFs with interactive form fields, preserving their properties and data. This ensures seamless modifications, validations, and data retention, even in large documents. A saved PDF with form fields can be opened using the Open icon in the toolbar. Refer to the Image below for details.
 
 ![Open PDF Document with Exsiting Form Fileds](form-designer-images/Open_PDF_Document_With_Exsiting_Form_Fileds.png)
 
+Also, refer to [Open PDF files in SfPdfViewer](https://blazor.syncfusion.com/documentation/pdfviewer-2/opening-pdf-file) for more details.
+
 ### Saving Form Fields
 
-SfPdfViewer saves form fields within the PDF without modifying the original file. Selecting the Download icon preserves all field data and properties for future use. Refer to the Image below for details.
+The [SfPdfViewer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.html) saves form fields within the PDF without modifying the original file. Selecting the Download icon preserves all field data and properties for future use. Refer to the Image below for details.
 
 ![Download PDF Document with Form Fileds](form-designer-images/Download_PDF_Document_With_Form_Fileds.png)
 
+Also, refer to [Saving PDF file in Blazor SfPdfViewer Component](https://blazor.syncfusion.com/documentation/pdfviewer-2/saving-pdf-file) for more details.
+
 ### Printing Form Fields
 
-In SfPdfViewer, form fields can have different visibility modes that control their appearance in the viewer and printed documents.
+In [SfPdfViewer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.html), form fields can have different visibility modes that control their appearance in the viewer and printed documents.
 
 To control the [Visibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldInfo.html#Syncfusion_Blazor_SfPdfViewer_FormFieldInfo_Visibility) of form fields in print mode, the [VisibilityMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.VisibilityMode.html) enum provides the following options:
 
@@ -59,13 +63,9 @@ To control the [Visibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 | [VisibleNotPrintable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.VisibilityMode.html#Syncfusion_Blazor_SfPdfViewer_VisibilityMode_VisibleNotPrintable)  | Visible in viewer but excluded from printing. |
 | [HiddenPrintable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.VisibilityMode.html#Syncfusion_Blazor_SfPdfViewer_VisibilityMode_HiddenPrintable)      | Hidden in viewer but appears in print. |
 
-> Note: The [**Visible**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.VisibilityMode.html#Syncfusion_Blazor_SfPdfViewer_VisibilityMode_Visible)  mode is the **default** mode for form fields in [**SfPdfViewer**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.html).
-
----
+N> The [**Visible**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.VisibilityMode.html#Syncfusion_Blazor_SfPdfViewer_VisibilityMode_Visible)  mode is the **default** mode for form fields in [**SfPdfViewer**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.html).
 
 This flexibility ensures precise control over which form fields are displayed or printed as needed. 
-
-#### Example code for the Visibility property
 
 The following code snippet explains how to add a form field that is visible in the viewer but does not appear in print in the SfPdfViewer component.
 
@@ -103,17 +103,17 @@ Refer to the GIF below for more details.
 
 ![Form Field with VisibleNotPrintable Mode](form-designer-images/Form_Field_with_VisibleNotPrintable_Mode.gif)
 
-[View sample in GitHub]().
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/Visibility.razor).
 
 ### Enable or Disable Form Designer Module in SfPdfViewer
 
-The Form Designer module in SfPdfViewer allows users to add and modify form fields within a PDF document.
+The Form Designer module in [SfPdfViewer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.html) allows users to add and modify form fields within a PDF document.
 
 To enable the Form Designer icon on the toolbar, the FormDesigner module must be injected, and the [EnableFormDesigner](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableFormDesigner) property must be set to `true`.  
 
 If set to `false`, the PDF Viewer remains in **Form Filling Mode only**, and the Form Designer feature is disabled.    
 
-> Note: By default, [`EnableFormDesigner`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableFormDesigner) is set to `true`.
+N> By default, [`EnableFormDesigner`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableFormDesigner) is set to `true`.
 
 #### Example code for Injecting Form Designer Module
 
@@ -131,19 +131,17 @@ The following code snippet explains how to inject the FormDesigner module and en
 
 ![Enable Form Designer Module](form-designer-images/Enable_Form_Designer_Module.png)
 
-[View sample in GitHub]().
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/EnableFormDesigner.razor).
 
 ### Enable or Disable Designer Mode in Form Designer
 
-The Designer Mode in SfPdfViewer allows users to interact with form field design elements.
+The Designer Mode in [SfPdfViewer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.html) allows users to interact with form field design elements.
 
 When Designer Mode is enabled, users can edit, move, and manipulate form fields within the PDF Viewer. 
 
 If disabled, form fields remain static and can only be filled without modification.
 
-> Note: By default, [`IsDesignerMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_IsDesignerMode) is set to `false`, meaning form fields can be filled but not modified.
-
-#### Example for Enable or Disable Designer Mode Dynamically
+N> By default, [`IsDesignerMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_IsDesignerMode) is set to `false`, meaning form fields can be filled but not modified.
 
 The following example demonstrates how to Enable Designer Mode using SfButton components.
 
@@ -161,11 +159,11 @@ The following example demonstrates how to Enable Designer Mode using SfButton co
 
 ![Enable or Disable Designer Mode](form-designer-images/Enable_Disable_Designer_Mode.gif)
 
-[View sample in GitHub]().
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/InteractionMode.razor).
 
 ## Export and Import Form Fields Data
 
-The SfPdfViewer control provides support for exporting and importing form field data in multiple formats. 
+The [SfPdfViewer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.html) control provides support for exporting and importing form field data in multiple formats. 
 
 This functionality allows you to save, transfer, or restore form field values efficiently using the following supported formats:
 
@@ -238,7 +236,7 @@ The following code shows how to export the form fields as an XML data stream and
 
 ![Export and Import XML Format](form-designer-images/Export_Import_XML_Format.gif)
 
-[View sample in GitHub]().
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/XMLFormat.razor).
 
 #### Export and Import as FDF
 
@@ -296,7 +294,7 @@ The code demonstrates how to exporting form fields as FDF at a stream and import
 
 ![Export and Import FDF Format](form-designer-images/Export_Import_FDF_Format.png)
 
-[View sample in GitHub]().
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/FDFFormat.razor).
 
 #### Export and Import as XFDF
 
@@ -353,7 +351,7 @@ The following code shows how to export the form fields as an XFDF data stream an
 
 ![Export and Import XFDF Format](form-designer-images/Export_Import_XFDF_Format.png)
 
-[View sample in GitHub]().
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/XFDFFormat.razor).
 
 #### Export and Import as JSON
 
@@ -411,7 +409,7 @@ The code demonstrates how to exporting form fields as JSON at a stream and impor
 
 ![Export and Import JSON Format](form-designer-images/Export_Import_JSON_Format.png)
 
-[View sample in GitHub]().
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/JSONFormat.razor).
 
 #### Export and Import as an Object
 
@@ -469,7 +467,7 @@ The following code shows how to export the form fields as an XFDF data stream an
 
 ![Export and Import Object Format](form-designer-images/Export_Import_Object_Format.png)
 
-[View sample in GitHub]().
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/ObjectFormat.razor).
 
 #### Export Form Fields as a JSON File
 
@@ -503,7 +501,7 @@ N> If [`ExportFormFieldsAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion
 
 ![Export and Import JSON File](form-designer-images/Export_JSON_File.png)
 
-[View sample in GitHub]().
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/ExportJSONFile.razor).
 
 Additionally, the component provides a built-in Submit button that allows exporting form field data as a JSON file directly from the PDF document. The following sections demonstrate different ways to export and import form field data.
 

@@ -442,9 +442,9 @@ N> This is applicable only for custom toolbar.
 
 ## How to customize the Annotation Toolbar
 
-The Annotation Toolbar in SfPdfViewer enables users to add various annotations like underline, stamps, free text, and more. You can customize this toolbar to display only the necessary tools, ensuring that only those tools are available and usable within the viewer.
+The [`PdfViewerToolbarSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html) in [SfPdfViewer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.html) allows customization of the Annotation Toolbar by specifying which annotation tools should be displayed. The [`AnnotationToolbarItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_AnnotationToolbarItems) property accepts a list of [`AnnotationToolbarItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationToolbarItem.html) values, ensuring that only the selected tools are available while hiding others. This helps create a simplified and user-friendly toolbar based on the application's needs.
 
-The following example demonstrates how to customize the annotation toolbar by specifying a selected set of tools.
+The following example demonstrates how to customize the Annotation Toolbar by specifying a selected set of tools using [`AnnotationToolbarItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationToolbarItem.html).
 
 ```cshtml
 <!-- SfPdfViewer2 component with Form Designer enabled -->
@@ -479,13 +479,13 @@ Refer to the image below for the mobile view.
 
 ![Blazor PDFViewer with Custom Toolbar](./images/Annotation_Toolbar_Customization_Mobile.png)
 
-[View sample in GitHub]().
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/CustomAnnotationToolbar.razor).
 
 ## How to customize the Form Designer Toolbar
 
-The Form Designer Toolbar in SfPdfViewer provides tools for adding interactive form fields such as text boxes, checkboxes, and dropdowns. By customizing this toolbar, you can control which tools are displayed and ensure that only those tools are available for use in the PDF Viewer.
+The [`PdfViewerToolbarSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html) component in [SfPdfViewer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.html) enables customization of the Form Designer Toolbar by defining the available form design tools. The [`FormDesignerToolbarItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerToolbarSettings.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerToolbarSettings_FormDesignerToolbarItems) property takes a list of [`FormDesignerToolbarItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormDesignerToolbarItem.html) values, allowing you to display only the necessary tools while hiding others. This ensures a more focused and user-friendly form designing experience.
 
-The following example demonstrates how to customize the Form Designer Toolbar by specifying a selected set of tools.
+The following example demonstrates how to customize the Form Designer Toolbar by configuring specific tools using [`FormDesignerToolbarItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormDesignerToolbarItem.html).
 
 ```cshtml
 <SfPdfViewer2 @ref="PdfViewerInstance" EnableFormDesigner="true" 
@@ -520,4 +520,4 @@ Refer to the image below for the mobile view.
 
 ![Blazor PDFViewer with Custom Toolbar](./images/Form_Designer_Toolbar_Customization_Mobile.png)
 
-[View sample in GitHub]().
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/CustomFormDesignerToolbar.razor).
