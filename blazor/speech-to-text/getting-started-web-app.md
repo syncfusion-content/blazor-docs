@@ -187,6 +187,8 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor SpeechToText com
 {% tabs %}
 {% highlight razor %}
 
+@using Syncfusion.Blazor.Inputs
+
 <div class="speechtext-container">
     <SfSpeechToText @bind-Transcript="@transcript"></SfSpeechToText>
     <SfTextArea RowCount="5" ColumnCount="50" @bind-Value="@transcript" ResizeMode="Resize.None" Placeholder="Transcribed text will be shown here..."></SfTextArea>
@@ -219,6 +221,8 @@ You can use the `Text` property to display the start listening text and `StopSta
 
 {% tabs %}
 {% highlight razor %}
+
+@using Syncfusion.Blazor.Inputs
 
 <div class="speechtext-container">
     <SfSpeechToText ButtonSettings="@buttonSettings" @bind-Transcript="@transcript"></SfSpeechToText>
