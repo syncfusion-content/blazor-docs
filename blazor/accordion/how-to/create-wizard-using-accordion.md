@@ -9,9 +9,9 @@ documentation: ug
 
 # Create Wizard in Blazor Accordion Component
 
-Accordion items can be disabled and expanded dynamically using the accordion item's [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_Disabled) and [Expanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_Expanded) properties.
+You can create a wizard-like interface using the Accordion component by dynamically controlling the expansion and disabled states of accordion items. This is accomplished through the accordion item's [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_Disabled) and [Expanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_Expanded) properties.
 
-The following demo is designed for simple payment module that enable or disable Accordion based on the sequential validation of each Accordion content.
+The following example demonstrates a simple payment module that enables or disables Accordion panels based on sequential validation of each section's content.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -222,7 +222,21 @@ The following demo is designed for simple payment module that enable or disable 
     }
 </style>
 ```
+
+In this example, we've created a three-step wizard using the Accordion component:
+
+1. **Sign In** - Collects user credentials
+2. **Delivery Address** - Gathers shipping information 
+3. **Card Details** - Processes payment information
+
+The wizard functions by:
+
+- Initially disabling all steps except the first one
+- Validating each step's required fields before proceeding
+- Enabling subsequent steps only after the current step is completed
+- Providing back navigation between steps
+- Displaying a confirmation dialog upon successful completion
+
+This pattern can be customized to create multi-step forms, registration processes, or any sequential workflow in your Blazor applications.
+
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VNBgWVMgUGQmZvwB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-
-![Blazor Accordion Component Wizard](../images/blazor-accordion-wizard.png)
