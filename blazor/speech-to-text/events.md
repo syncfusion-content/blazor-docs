@@ -24,6 +24,8 @@ The following example demonstrates how to configure the Blazor SpeechToText even
 {% tabs %}
 {% highlight razor %}
 
+@using Syncfusion.Blazor.Inputs
+
 <div class="speechtext-container">
     <SfSpeechToText SpeechRecognitionStarted="@HandleStartRecognition"
                     SpeechRecognitionStopped="@HandleStopRecognition"

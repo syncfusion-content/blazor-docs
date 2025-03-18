@@ -256,6 +256,8 @@ You can use the `ShowTooltip` property to specify the tooltip text to be display
 {% tabs %}
 {% highlight razor %}
 
+@using Syncfusion.Blazor.Inputs
+
 <div class="speechtext-container">
     <SfSpeechToText ShowTooltip="false" @bind-Transcript="@transcript"></SfSpeechToText>
     <SfTextArea RowCount="5" ColumnCount="50" @bind-Value="@transcript" ResizeMode="Resize.None" Placeholder="Transcribed text will be shown here..."></SfTextArea>
@@ -286,6 +288,8 @@ You can use the `Disabled` property to disable the SpeechToText component, preve
 
 {% tabs %}
 {% highlight razor %}
+
+@using Syncfusion.Blazor.Inputs
 
 <div class="speechtext-container">
     <SfSpeechToText Disabled="true" @bind-Transcript="@transcript"></SfSpeechToText>

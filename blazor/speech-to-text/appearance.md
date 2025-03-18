@@ -101,31 +101,21 @@ Below code sample demonstrates how to configure the tooltip settings with above 
 {% highlight razor %}
 
 @using Syncfusion.Blazor.Inputs
-@using Syncfusion.Blazor.Buttons
 
 <div class="speechtext-container">
-    <SfSpeechToText ButtonSettings="@buttonSettings" TooltipSettings="@tooltipSettings" @bind-Transcript="@transcript"></SfSpeechToText>
+    <SfSpeechToText TooltipSettings="@tooltipSettings" @bind-Transcript="@transcript"></SfSpeechToText>
     <SfTextArea RowCount="5" ColumnCount="50" @bind-Value="@transcript" ResizeMode="Resize.None" Placeholder="Transcribed text will be shown here..."></SfTextArea>
 </div>
 
 @code {
     string transcript = "";
-    SpeechToTextButtonSettings buttonSettings = new SpeechToTextButtonSettings()
-    {
-        Text = "Start",
-        StopStateText = "Stop",
-        IconCss = "e-icons e-play",
-        StopIconCss = "e-icons e-pause",
-        IconPosition = IconPosition.Right,
-        isPrimary = true
-    };
 
     SpeechToTextTooltipSettings tooltipSettings = new SpeechToTextTooltipSettings()
-    {
-        Position = TooltipPosition.BottomRight,
-        Text = "Click the button to start recognition",
-        StopStateText = "Click the button to stop recognition"
-    };
+        {
+            Position = TooltipPosition.BottomRight,
+            Text = "Click the button to start recognition",
+            StopStateText = "Click the button to stop recognition"
+        };
 }
 
 <style>
