@@ -76,8 +76,8 @@ Below code sample demonstrates how to configure the button with above mentioned 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor SpeechToText Button Customization(Idle state)](images/customize-btn-idle-state.png)
-![Blazor SpeechToText Button Customization(Listening state)](images/customize-btn-listening-state.png)
+![Blazor SpeechToText Button Idle state](images/customize-btn-idle-state.png)
+![Blazor SpeechToText Button Listening state](images/customize-btn-listening-state.png)
 
 ## Customizing the tooltips
 
