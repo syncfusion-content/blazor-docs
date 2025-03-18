@@ -18,7 +18,7 @@ This method accepts a list of [`FormFieldInfo`](https://help.syncfusion.com/cr/b
 
 The example below demonstrates how to add form fields in the PdfViewer component:
 
-```razor
+```cshtml
 @page "/"
 
 <!-- PDF Viewer component with reference binding and document loading -->
@@ -71,7 +71,7 @@ The Blazor SfPdfViewer provides [`FormFieldSettings`](https://help.syncfusion.co
 
 This code below is for thickness. You can also configure **background color, border color, text color, font family, font size, and font style**.
 
-```razor
+```cshtml
 @page "/"
 
 <!-- PDF Viewer component with reference binding and document loading -->
@@ -127,7 +127,7 @@ The [`SetFormDrawingModeAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion
 
 Below is an example demonstrating how to set and clear the form field drawing mode:
 
-```razor
+```cshtml
 @page "/"
 @using Syncfusion.Blazor.Buttons
 
@@ -174,7 +174,7 @@ The Update functionality enables dynamic modification of form field properties i
 ### Appearance Properties
 Controls the visual aspects of form fields, including background color, border color, text color, thickness, maxLength, visibility, font size, font family, font style and text alignment. These properties help customize the look and feel of form fields in the document.
 
-```razor
+```cshtml
 @page "/"
 
 <!-- PDF Viewer component with reference binding and document loading -->
@@ -219,7 +219,7 @@ The following image illustrates updating the appearance of a button form field i
 ### Identification & Metadata Properties
 Includes properties like name (unique identifier) and value (storing user input or assigned data). These attributes help distinguish and manage form fields efficiently.
 
-```razor
+```cshtml
 @page "/"
 
 <!-- PDF Viewer component with reference binding and document loading -->
@@ -261,7 +261,7 @@ The following image illustrates updating the metadata of dropdown field in Blazo
 
 When multiple fields share the same name, changes apply to all linked fields. Updates to **Value, Required, Readonly, Multiline, and Tooltip** reflect instantly. This ensures consistency across the document.
 
-```razor
+```cshtml
 @page "/"
 
 <!-- PDF Viewer component with reference binding and document loading -->
@@ -300,7 +300,7 @@ The [`DeleteFormFieldsAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion
 ### Delete All Form Fields  
 Removes all form fields from the document using [`DeleteFormFieldsAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DeleteFormFieldsAsync_System_Boolean_) , clearing all interactive elements at once.
 
-```razor
+```cshtml
 @page "/"
 @using Syncfusion.Blazor.Buttons
 
@@ -334,7 +334,7 @@ The following image illustrates deleting all form fields in Blazor SfPdfViewer:
 ### Delete Selected Form Fields  
 Deletes only the currently selected form field using [`DeleteFormFieldsAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DeleteFormFieldsAsync_System_Boolean_), enabling users to modify the document while keeping the rest of the form structure intact.
 
-```razor
+```cshtml
 @page "/"
 @using Syncfusion.Blazor.Buttons
 
@@ -368,7 +368,7 @@ The following image illustrates deleting a selected password field in Blazor SfP
 ### Delete Form Fields by IDs  
 Removes specific form fields using [`DeleteFormFieldsAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DeleteFormFieldsAsync_System_Collections_Generic_List_System_String__) based on their unique identifiers, allowing precise control over which fields are deleted without affecting others.  
 
- ```razor
+```cshtml
 @page "/"
 @using Syncfusion.Blazor.Buttons
 
@@ -411,7 +411,7 @@ Form field can be programmatically selected using the [`SelectFormFieldAsync`](h
 
 To select a form field using its unique identifier, pass the field's ID to the [`SelectFormFieldAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SelectFormFieldAsync_System_String_) method.
 
-```razor
+```cshtml
 @page "/"
 @using Syncfusion.Blazor.Buttons
 
@@ -450,7 +450,7 @@ The following image illustrates selecting a button field by its ID in Blazor SfP
 
 Alternatively, you can retrieve all available form fields using [`GetFormFieldsAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_GetFormFieldsAsync), then select a specific field by passing its object reference to [`SelectFormFieldAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SelectFormFieldAsync_Syncfusion_Blazor_SfPdfViewer_FormFieldInfo_).
 
-```razor
+```cshtml
 @page "/"
 @using Syncfusion.Blazor.Buttons
 
