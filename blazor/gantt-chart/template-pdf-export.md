@@ -194,3 +194,132 @@ The following code snippet demonstrates how to use the `PdfColumnHeaderQueryCell
     }
 }
 ```
+## Exporting with task label template
+
+The PDF export functionality allows for customization of Gantt chart task labels, including the inclusion of images, background colors, and custom text. This can be achieved using the [PdfQueryTaskbarInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfQueryTaskbarInfo) event. By handling this event, you can define how each task label in the Gantt chart is rendered in the exported PDF.
+
+The following code snippet demonstrates how to use the `PdfQueryTaskbarInfo` event to export Gantt task label with custom text and image on the task name column header,
+``` cshtml
+@using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Navigations
+@using Syncfusion.PdfExport
+@using System.Net
+
+<SfGantt @ref="Gantt" ID="GanttExport" DataSource="@TaskCollection" Height="450px" Width="900px" AllowPdfExport="true" Toolbar="toolbarItem" 
+    ProjectStartDate="new DateTime(2022,03,28)" ProjectEndDate="new DateTime(2022,04,17)">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Dependency="Predecessor"
+    Duration="Duration" Progress="Progress" ParentID="ParentId">
+    </GanttTaskFields>
+    <GanttColumns>
+        <GanttColumn Field="TaskId" HeaderText="Task Id" Width="100" HeaderTextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></GanttColumn>
+        <GanttColumn Field="TaskName" HeaderText="Task Name"></GanttColumn>
+        <GanttColumn Field="StartDate" HeaderText="Start Date" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></GanttColumn>
+        <GanttColumn Field="EndDate" HeaderText="End Date"></GanttColumn>
+        <GanttColumn Field="Duration" HeaderText="Duration"></GanttColumn>
+        <GanttColumn Field="Predecessor" HeaderText="Dependency"></GanttColumn>
+    </GanttColumns>
+    <GanttLabelSettings TValue="TaskData">
+        <RightLabelTemplate>
+            @{
+                @if ((context as TaskData).TaskId == 5)
+                {
+                    <div class="e-right-label-inner-div" style="height:22px;margin-top:7px;">
+                        <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" />
+                    </div>
+                }
+                else
+                {
+                    <div class="e-right-label-inner-div" style="height:22px;margin-top:7px;">
+                        <span class="e-label">@((context as TaskData).TaskName)</span>
+                    </div>
+                }
+            }
+        </RightLabelTemplate>
+        <LeftLabelTemplate>
+            @if ((context as TaskData).TaskId == 2)
+            {
+                <div class="e-left-label-inner-div" style="height:22px;margin-top:7px;">
+                    <span class="e-label">Updated Value</span>
+                </div>
+            }
+            else
+            {
+                <div class="e-left-label-inner-div" style="height:22px;margin-top:7px;">
+                    <span class="e-label">@((context as TaskData).TaskName)</span>
+                </div>
+            }
+
+        </LeftLabelTemplate>
+    </GanttLabelSettings>
+    <GanttEvents OnToolbarClick="ToolbarClickHandler" PdfQueryTaskbarInfo="PdfQueryTaskbarInfoHandler" TValue="TaskData"></GanttEvents>
+</SfGantt>
+
+@code {
+    private List<TaskData> TaskCollection { get; set; }
+    private SfGantt<TaskData> Gantt;
+    private List<object> toolbarItem = new List<Object>() { new ToolbarItem() { Text = "PDF Export", TooltipText = "PDF Export", Id = "PdfExport", PrefixIcon = "e-pdfexport" } };
+    private static WebClient webClient = new WebClient();
+    private static byte[] imageBytes = webClient.DownloadData("https://cdn.syncfusion.com/content/images/landing-page/yes.png");
+    private static MemoryStream imageStream = new MemoryStream(imageBytes);
+    public static PdfImage image = PdfImage.FromStream(imageStream);
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+    public async void ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Id == "PdfExport")
+        {
+            await Gantt.ExportToPdfAsync();
+        }
+    }
+    public void PdfQueryTaskbarInfoHandler(PdfQueryTaskbarInfoEventArgs<TaskData> args)
+    {
+        if (args.Data.TaskId == 2)
+        {
+            args.LabelSettings.LeftLabelValue = "Updated Value";
+        }
+        else
+        {
+            args.LabelSettings.LeftLabelValue = args.Data.TaskName;
+        }
+
+        if (args.Data.TaskId == 5)
+        {
+            args.LabelSettings.RightLabel = new PdfElementStyle() { Image = image };
+        }
+        else
+        {
+            args.LabelSettings.RightLabelValue = args.Data.TaskName;
+        }
+    }
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+        public string Predecessor { get; set; }
+    }
+
+    public static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 05), EndDate = new DateTime(2022, 04, 21), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 05), Duration = "4", Progress = 40, ParentId = 1, Predecessor = "2" },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 05), Duration = "0", Progress = 30, ParentId = 1 , Predecessor = "3" },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 21), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, ParentId = 5 },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, ParentId = 5 },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 06), Duration = "0", Progress = 30, ParentId = 5 }
+        };
+        return Tasks;
+    }
+}
+```
