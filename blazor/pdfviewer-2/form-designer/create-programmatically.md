@@ -62,7 +62,7 @@ The following image illustrates the programmatic addition of form fields in Blaz
 N> Users can also add form fields through the UI in SfPdfViewer, allowing for an intuitive and interactive customization experience.  
 [Interactively Add Form Fields]()
 
-[View sample in GitHub]().
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/AddFormField.razor).
 
 ## Form Field Settings  
 
@@ -111,7 +111,7 @@ The following image illustrates the listbox field thickness customization in Bla
 
 ![Form Field Thickness Customization in Blazor SfPdfViewer](../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-setting-thickness.png)
 
-[View sample in GitHub]().
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/FieldSetting.razor).
 
 ## Activating and Deactivating Form Field Mode
 
@@ -164,7 +164,7 @@ The following image illustrates setting and clearing the form field mode in Blaz
 
 ![Set and Clear Form Field Mode in Blazor SfPdfViewer](../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-setmode.gif)
 
-[View sample in GitHub]().
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/SetMode.razor).
 
 ## Update Form Fields
 
@@ -254,7 +254,7 @@ The following image illustrates updating the metadata of dropdown field in Blazo
 
 ![Update Form Field Metadata in Blazor SfPdfViewer](../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-update-value.png)
 
-[View sample in GitHub]().
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/UpdateValueProperties.razor).
 
 ### Grouping and Synchronizing Form Fields Properties
 
@@ -287,7 +287,7 @@ The following image illustrates updating linked properties of a radio button for
 
 ![Update Linked Field Properties in Blazor SfPdfViewer](../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-linked-properties.png)
 
-[View sample in GitHub]().
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/UpdateLinkedProperties.razor).
 
 N> Users can also Update form fields through the UI in SfPdfViewer, allowing for an intuitive and interactive customization experience.  
 [Interactively Update Form Fields]()
@@ -328,7 +328,7 @@ The following image illustrates deleting all form fields in Blazor SfPdfViewer:
 
 ![Delete All Form Fields in Blazor SfPdfViewer](../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-delete-all.png)
 
-[View sample in GitHub]().
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/DeleteAllFields.razor).
 
 ### Delete Selected Form Fields  
 Deletes only the currently selected form fields, enabling users to modify the document while keeping the rest of the form structure intact.
@@ -362,7 +362,7 @@ The following image illustrates deleting a selected password field in Blazor SfP
 
 ![Delete Selected Password Field in Blazor SfPdfViewer](../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-delete-selected.png)
 
-[View sample in GitHub]().
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/DeleteSelectedField.razor).
 
 ### Delete Form Fields by IDs  
 Removes specific form fields based on their unique identifiers, allowing precise control over which fields are deleted without affecting others.  
@@ -397,14 +397,14 @@ The following image illustrates deleting form fields by their IDs in Blazor SfPd
 
 ![Delete Form Fields by IDs in Blazor SfPdfViewer](../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-delete-ids.png)
 
-[View sample in GitHub]().
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/DeleteById.razor).
 
 N> Users can also Delete form fields through the UI in SfPdfViewer, allowing for an intuitive and interactive customization experience.  
 [Interactively Delete Form Fields]()
 
-## Select Form Field in SfPdfViewer2
+## Select Form Field
 
-Form fields in SfPdfViewer2 can be programmatically selected using the [`SelectFormFieldAsync`]() method. This allows users to highlight specific form fields based on either their unique identifier or their object reference.
+Form field can be programmatically selected using the [`SelectFormFieldAsync`]() method. This allows users to highlight specific form field based on either their unique identifier or their object reference.
 
 ### Select Form Field by ID
 
@@ -443,7 +443,7 @@ The following image illustrates selecting a button field by its ID in Blazor SfP
 
 ![Select Button Field by ID in Blazor SfPdfViewer](../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-select-id.png)
 
-[View sample in GitHub]().
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/SelectFieldById.razor).
 
 ### Select Form Field by Object Reference
 
@@ -483,7 +483,7 @@ The following image illustrates selecting a checkbox field in Blazor SfPdfViewer
 
 ![Select CheckBox Field in Blazor SfPdfViewer](../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-select-field.png)
 
-[View sample in GitHub]().
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/SelectByField.razor).
 
 N> Ensure form field interaction mode is enabled before selecting a field.
 Refer to the documentation for enabling form field toolbar [Interaction mode]().
