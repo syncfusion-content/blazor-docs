@@ -76,7 +76,7 @@ Here is an example of adding custom toolbar items to rotate and flip transformat
 }
 ```
 
-![Blazor Image Editor with Toolbar](./images/blazor-image-editor-custom-toolbar.png)
+![Blazor Image Editor with Toolbar](./images/blazor-image-editor-custom-toolbar.jpg)
 
 ## Show or hide a toolbar 
 
@@ -137,7 +137,7 @@ Here is an example of hiding the cropping and selection toolbar items using `Too
 }
 ```
 
-![Blazor Image Editor with Hide a Toolbar](./images/blazor-image-editor-hide-crop-toolbar.png)
+![Blazor Image Editor with Hide a Toolbar](./images/blazor-image-editor-hide-crop-toolbar.jpg)
 
 ## Enable or disable a toolbar item
 
@@ -173,7 +173,7 @@ Here is an example of disabling the custom toolbar item using `Toolbar` property
 }
 ```
 
-![Blazor Image Editor with Disable a Toolbar](./images/blazor-image-editor-disable-toolbar.png)
+![Blazor Image Editor with Disable a Toolbar](./images/blazor-image-editor-disable-toolbar.jpg)
 
 ## Enable or disable a contextual toolbar item
 
@@ -219,7 +219,7 @@ In the following example, the contextual toolbar for freehand drawing will be re
 }
 ```
 
-![Blazor Image Editor with Customize Toolbar](./images/blazor-image-editor-customize-toolbar.png)
+![Blazor Image Editor with Customize Toolbar](./images/blazor-image-editor-customize-toolbar.jpg)
 
 ## Toolbar created event
 
@@ -295,4 +295,4 @@ The toolbar of the Image Editor can be replaced with the user specific UI using 
 }
 ```
 
-![Blazor Image Editor with Toolbar template](./images/blazor-image-editor-toolbar-template.png)
+![Blazor Image Editor with Toolbar template](./images/blazor-image-editor-toolbar-template.jpg)
