@@ -257,7 +257,7 @@ Here is an example of toolbar item clicking event using `ToolbarItemClicked` pro
 }
 ```
 
-![Blazor Image Editor with Item click Toolbar](./images/blazor-image-editor-toolbar.click.png)
+![Blazor Image Editor with Item click Toolbar](./images/blazor-image-editor-toolbar-click.jpg)
 
 ## Toolbar template
 

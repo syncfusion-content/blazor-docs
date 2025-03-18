@@ -207,8 +207,8 @@ Here is an example of changing the text color using the `ShapeChanging` event.
     {
         if (args.CurrentShapeSettings.Type == ShapeType.Text)
         {
-            args.CurrentShapeSettings.Color = "red";
-            args.CurrentShapeSettings.FontFamily = "italic";
+            args.CurrentShapeSettings.Color = "Red";
+            args.CurrentShapeSettings.FontFamily = "Times New Roman";
         }
     }
 }
