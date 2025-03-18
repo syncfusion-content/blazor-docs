@@ -25,7 +25,7 @@ Specify the boolean value to the [Readonly](https://help.syncfusion.com/cr/blazo
 
 ## Disable State 
 
-The SfMultiSelect component has an [Enabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_Enabled) property that controls whether the MultiSelect is interactive. Setting `Enabled` to `false` disables the component, making it uncheckable and inactive. In contrast, the [Readonly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_Readonly) property, when set to `true`, allows users to view existing selections without modifying them.
+The SfMultiSelect component has an [Enabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_Enabled) property that controls whether the MultiSelect is interactive. Setting `Enabled` to `false` disables the component, making it unclickable and inactive. In contrast, the [Readonly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_Readonly) property, when set to `true`, allows users to view existing selections without modifying them.
 
 {% highlight Razor %}
 
@@ -118,7 +118,7 @@ You can customize the dropdown [icon](https://ej2.syncfusion.com/documentation/a
 
 ## Customizing the dropdown border radius
 
-You can customize the border-radius of the MultiSelect dropdown by targeting the `.e-popup.e-ddl` CSS class, which represents the popup element. Simply set the desired value to the `border-radius` property to achieve the preferred styling
+You can customize the border-radius of the MultiSelect popup by targeting the `.e-popup.e-ddl` CSS class, which represents the popup element. Simply set the desired value to the `border-radius` property to achieve the preferred styling
 
 {% highlight cshtml %}
 
