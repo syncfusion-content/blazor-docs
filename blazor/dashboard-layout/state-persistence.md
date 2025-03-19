@@ -9,7 +9,7 @@ documentation: ug
 
 # State Persistence in Blazor Dashboard Layout Component
 
-State persistence allows users to save and restore the Dashboard Layout state. This ensures that users' custom layouts remain unchanged even after refreshing the page or navigating to a different view
+State persistence allows users to save and restore the Dashboard Layout state. This ensures that users' custom layouts remain unchanged even after refreshing the page or navigating to a different view.
 
 ## Enabling persistence in Dashboard Layout
 
