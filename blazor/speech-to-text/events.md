@@ -18,3 +18,30 @@ This section describes the SpeechToText events that will be triggered when appro
 |SpeechRecognitionStopped|SpeechRecognitionStoppedEventArgs|Triggers when speech recognition stops|
 |SpeechRecognitionError|SpeechRecognitionErrorEventArgs|Triggers when an error occurs during speech recognition or while listening. For list of possible errors, refer to the [Error handling](./speech-recognition#error-handling) section.|
 |TranscriptChanging|TranscriptChangeEventArgs|Triggers when a transcription change occurs during the speech recognition.|
+
+The following example demonstrates how to configure the Blazor SpeechToText events.
+
+{% tabs %}
+{% highlight razor %}
+
+@using Syncfusion.Blazor.Inputs
+
+<div class="speechtext-container">
+    <SfSpeechToText SpeechRecognitionStarted="@HandleStartRecognition"
+                    SpeechRecognitionStopped="@HandleStopRecognition"
+                    SpeechRecognitionError="@HandleSpeechRecognitionError"
+                    TranscriptChanging="@HandleTranscriptChange">
+    </SfSpeechToText>
+</div>
+
+@code {
+
+    private void HandleStartRecognition(SpeechRecognitionStartedEventArgs args) { /* Required action here */ }
+    private void HandleStopRecognition(SpeechRecognitionStoppedEventArgs args) { /* Required action here */ }
+    private void HandleSpeechRecognitionError(SpeechRecognitionErrorEventArgs args) { /* Required action here */ }
+    private void HandleTranscriptChange(TranscriptChangeEventArgs args) { /* Required action here */ }
+
+}
+
+{% endhighlight %}
+{% endtabs %}

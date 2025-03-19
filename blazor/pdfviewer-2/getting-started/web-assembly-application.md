@@ -15,10 +15,6 @@ In this section, we'll guide you through the process of adding Syncfusion&reg; B
 
 {% tabcontent Visual Studio %}
 
-{% tabcontents %}
-
-{% tabcontent Visual Studio %}
-
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
