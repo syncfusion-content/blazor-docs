@@ -194,11 +194,11 @@ The following code snippet demonstrates how to use the `PdfColumnHeaderQueryCell
     }
 }
 ```
-## Exporting with task label template
+## Custom label for Gantt Chart PDF export
 
-The PDF export functionality allows for customization of Gantt chart task labels, including the inclusion of images, background colors, and custom text. This can be achieved using the [PdfQueryTaskbarInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfQueryTaskbarInfo) event. By handling this event, you can define how each task label in the Gantt chart is rendered in the exported PDF.
+The PDF export feature of the Gantt chart allows for detailed customization of labels such as right label, left label, and task label. This functionality includes the ability to include images, change background colors, and add custom text. These customizations are managed using the [PdfQueryTaskbarInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_PdfQueryTaskbarInfo) event. By handling this event, you can specify how each label in the Gantt chart will appear in the exported PDF. 
 
-The following code snippet demonstrates how to use the `PdfQueryTaskbarInfo` event to export Gantt task label with custom text and image on the task name column header,
+The following example demonstrates how to implement the `PdfQueryTaskbarInfo` event to customize the PDF export of Gantt chart labels with specific text and images,
 ``` cshtml
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids
@@ -206,10 +206,10 @@ The following code snippet demonstrates how to use the `PdfQueryTaskbarInfo` eve
 @using Syncfusion.PdfExport
 @using System.Net
 
-<SfGantt @ref="Gantt" ID="GanttExport" DataSource="@TaskCollection" Height="450px" Width="900px" AllowPdfExport="true" Toolbar="toolbarItem" 
-    ProjectStartDate="new DateTime(2022,03,28)" ProjectEndDate="new DateTime(2022,04,17)">
+<SfGantt @ref="Gantt" ID="GanttExport" DataSource="@TaskCollection" Height="450px" Width="900px" AllowPdfExport="true" Toolbar="toolbarItem"
+         ProjectStartDate="new DateTime(2022,03,28)" ProjectEndDate="new DateTime(2022,04,17)">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Dependency="Predecessor"
-    Duration="Duration" Progress="Progress" ParentID="ParentId">
+                     Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
     <GanttColumns>
         <GanttColumn Field="TaskId" HeaderText="Task Id" Width="100" HeaderTextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></GanttColumn>
@@ -251,6 +251,20 @@ The following code snippet demonstrates how to use the `PdfQueryTaskbarInfo` eve
             }
 
         </LeftLabelTemplate>
+        <TaskLabelTemplate>
+            @if ((context as TaskData).TaskId == 3)
+            {
+                <div class="e-task-label-inner-div" style="line-height:21px; height:22px;">
+                    <span class="e-label" style="color:white;">-@((context as TaskData).Progress)%</span>
+                </div>
+            }
+            else
+            {
+                <div class="e-task-label-inner-div" style="line-height:21px; height:22px;">
+                    <span class="e-label" style="color:white;">@((context as TaskData).Progress)%</span>
+                </div>
+            }
+        </TaskLabelTemplate>
     </GanttLabelSettings>
     <GanttEvents OnToolbarClick="ToolbarClickHandler" PdfQueryTaskbarInfo="PdfQueryTaskbarInfoHandler" TValue="TaskData"></GanttEvents>
 </SfGantt>
@@ -292,6 +306,14 @@ The following code snippet demonstrates how to use the `PdfQueryTaskbarInfo` eve
         else
         {
             args.LabelSettings.RightLabelValue = args.Data.TaskName;
+        }
+        if (args.Data.TaskId == 3)
+        {
+            args.LabelSettings.TaskbarLabelValue = $"-{args.Data.Progress}%";
+        }
+        else
+        {
+            args.LabelSettings.TaskbarLabelValue = $"{args.Data.Progress}%";
         }
     }
     public class TaskData
