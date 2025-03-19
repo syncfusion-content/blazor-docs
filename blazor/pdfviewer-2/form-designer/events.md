@@ -657,9 +657,9 @@ By setting args.Cancel = true;, developers can conditionally prevent the additio
 }
 ```
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Keyboard%20accessibility/Command%20Manager)
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/Events.razor).
 
 ## See also
 
-* [Programmatic Support in Form Designer](./hand-written-signature)
+* [Programmatic Support in Form Designer](./create-programmatically)
 * [UI Interactions in Form Designer](./ui-interactions)

@@ -517,6 +517,6 @@ Refer to the Image below for details.
 
 ## See also
 
-* [UI interactions in form Designer]()
-* [Programmatic Support in Form Designer](./create-programmatically.md)
-* [Events in Form Designer]()
+* [UI interactions in form Designer](./ui-interactions)
+* [Programmatic Support in Form Designer](./create-programmatically)
+* [Events in Form Designer](./events)

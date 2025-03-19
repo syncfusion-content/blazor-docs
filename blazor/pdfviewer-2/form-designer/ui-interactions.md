@@ -17,22 +17,22 @@ The Form Designer feature in the Blazor PDF Viewer component allows users to add
 
 Click the **Edit Form Fields** icon on the toolbar, add the required form field, and place it onto the PDF document.
 
-![Add Form Fields in Form designer in SfPdfViewer](../form-designer/form-designer-images/add-formfields-formdesigner-sfpdfviewer.gif)
+![Add Form Fields in Form designer in SfPdfViewer](form-designer-images/add-formfields-formdesigner-sfpdfviewer.gif)
 
 N> Users can also add form fields programmatically in SfPdfViewer for greater flexibility in customization.
-[Programmatically Add the Form fields](./hand-written-signature)
+[Programmatically Add the Form fields](./create-programmatically)
 
 ### Dragging Form Fields: 
 
 Users can drag form fields to reposition them anywhere within the document. By clicking and holding a form field, users can move it to the desired location, and alignment guides may appear to help ensure precise placement before releasing the field.
 
-![Dragging Form Fields in Form designer in SfPdfViewer](../form-designer/form-designer-images/drag-formfields-formdesigner-sfpdfviewer.gif)
+![Dragging Form Fields in Form designer in SfPdfViewer](form-designer-images/drag-formfields-formdesigner-sfpdfviewer.gif)
 
 ### Resizing Form Fields: 
 
 Users can resize form fields by dragging the resize handles at the edges or corners. This allows precise adjustments to fit the required dimensions within the document.
 
-![Resizing Form Fields in Form designer in SfPdfViewer](../form-designer/form-designer-images/resize-formfields-formdesigner-sfpdfviewer.gif)
+![Resizing Form Fields in Form designer in SfPdfViewer](form-designer-images/resize-formfields-formdesigner-sfpdfviewer.gif)
 
 ### Editing or Updating Form Fields:
 
@@ -41,7 +41,7 @@ Users can edit form fields dynamically using the Form Field Properties window. T
 The Form Field Properties window consists of three tabs, each offering different customization options:
 
 N> Users can also edit form fields programmatically in SfPdfViewer, allowing for more precise customization.
-[Programmatically Edit the Form Fields](./hand-written-signature)
+[Programmatically Edit the Form Fields](./create-programmatically)
 
 #### General Tab:
 
@@ -59,7 +59,7 @@ N> Users can also edit form fields programmatically in SfPdfViewer, allowing for
 
 * Enable Multiline input for text fields to allow multiple lines of text.
 
-![Edit Properties in Textbox field](../form-designer/form-designer-images/textbox-propertypanel-sfpdfviewer.png)
+![Edit Properties in Textbox field](form-designer-images/textbox-propertypanel-sfpdfviewer.png)
 
 ### Appearance Tab:
 
@@ -77,7 +77,7 @@ N> Users can also edit form fields programmatically in SfPdfViewer, allowing for
 
 * Define the Maximum Length of text input.
 
-![Edit Properties in Password field](../form-designer/form-designer-images/password-properypanel-apperance-formdesigner-sfpdfviewer.png)
+![Edit Properties in Password field](form-designer-images/password-properypanel-apperance-formdesigner-sfpdfviewer.png)
 
 ### Options Tab (For Dropdown and Listbox Fields):
 
@@ -85,7 +85,7 @@ N> Users can also edit form fields programmatically in SfPdfViewer, allowing for
 
 * Ensure dynamic customization to display the required choices for users.
 
-![Edit Properties in Dropdown field](../form-designer/form-designer-images/dropdown-properypanel-options-sfpdfviewer.png)
+![Edit Properties in Dropdown field](form-designer-images/dropdown-properypanel-options-sfpdfviewer.png)
 
 ### Form Field Operations
 
@@ -93,18 +93,18 @@ Users can efficiently manage form fields using various operations such as copy, 
 
 Additionally, users can revert the last change using Undo (Ctrl + Z) or restore an undone action with Redo (Ctrl + Y), ensuring smooth workflow adjustments.
 
-![Form Field Operations through Context Menu](../form-designer/form-designer-images/formfield-operations-sfpdfviewer.png)
+![Form Field Operations through Context Menu](form-designer-images/formfield-operations-sfpdfviewer.png)
 
 ### Deleting a Form Field
 
 Users can remove form fields by selecting the desired field and clicking the Delete icon in the Form Designer toolbar or choosing the Delete option from the context menu.
 
-![Delete formfield through UI](../form-designer/form-designer-images/delete-formfields-formdesigner-sfpdfviewer.png)
+![Delete formfield through UI](form-designer-images/delete-formfields-formdesigner-sfpdfviewer.png)
 
 N> Users can also delete form fields programmatically in SfPdfViewer
-[Programmatically Delete the Form fields](./hand-written-signature)
+[Programmatically Delete the Form fields](./create-programmatically)
 
 ## See also
 
-* [Programmatic Support in Form Designer](./hand-written-signature)
+* [Programmatic Support in Form Designer](./create-programmatically)
 * [Events in Form Designer](./events)
