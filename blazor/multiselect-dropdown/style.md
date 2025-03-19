@@ -35,6 +35,7 @@ The SfMultiSelect component has an [Enabled](https://help.syncfusion.com/cr/blaz
 
 ![Blazor MultiSelect DropDown with Disable property](./images/style/blazor_multiselect_disable-property.png)
 
+
 ### Customizing the disabled component’s text color
 
 You can customize the text color of a disabled component by targeting its CSS class `.e-multiselect.e-disabled`, which indicates the input element in a disabled state, and set the desired color to the `-webkit-text-fill-color` property.
@@ -114,6 +115,18 @@ You can customize the dropdown [icon](https://ej2.syncfusion.com/documentation/a
 {% endhighlight %}
 
 ![Blazor Multiselect DropDown icon color](./images/style/blazor_multiselect_icon-color.png)
+
+## Customizing the dropdown border radius
+
+You can customize the border-radius of the MultiSelect popup by targeting the `.e-popup.e-ddl` CSS class, which represents the popup element. Simply set the desired value to the `border-radius` property to achieve the preferred styling
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/style/dropdown-border-radius.razor %}
+
+{% endhighlight %}
+
+![Blazor Multiselect DropDown border radius](./images/style/blazor_multiselect_dropdown_border_radius.png)
 
 ## CssClass
 
