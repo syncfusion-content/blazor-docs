@@ -270,6 +270,44 @@ Using the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VNBJjihozcpDsXHf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Column Chart with Title](images/getting-started/blazor-chart-title.png)" %}
 
+## Title position customization
+
+Using [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitleStyle.html#Syncfusion_Blazor_Charts_ChartTitleStyle_Position) property in [ChartTitleStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitleStyle.html) helps to customize the position of the title. We can set the position as [Top](), [Bottom](), [Left](), [Right]() and [Custom]().
+
+This provides greater flexibility for aligning the title with different chart layouts.
+
+```cshtml
+<SfChart Title="Sales Analysis">
+    <ChartTitleStyle Position="ChartTitlePosition.Custom" X="300" Y="50"></ChartTitleStyle>
+    <ChartPrimaryXAxis Title="Month" ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartPrimaryYAxis Title="Sales in Dollar"></ChartPrimaryYAxis>
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code {
+    public class SalesInfo
+    {
+        public string Month { get; set; }
+        public double SalesValue { get; set; }
+    }
+
+    public List<SalesInfo> Sales = new List<SalesInfo>
+    {
+        new SalesInfo { Month = "Jan", SalesValue = 35 },
+        new SalesInfo { Month = "Feb", SalesValue = 28 },
+        new SalesInfo { Month = "Mar", SalesValue = 34 },
+        new SalesInfo { Month = "Apr", SalesValue = 32 },
+        new SalesInfo { Month = "May", SalesValue = 40 },
+        new SalesInfo { Month = "Jun", SalesValue = 32 },
+        new SalesInfo { Month = "Jul", SalesValue = 35 }
+    };
+}
+```
+![Blazor Chart Title Position](images/getting-started/blazor-chart-title-position.png)
+
 ## Add data label
 
 You can add data labels to improve the readability of the chart. This can be achieved by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Visible) property to **true** in the [ChartDataLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html).
