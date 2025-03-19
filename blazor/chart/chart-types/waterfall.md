@@ -149,6 +149,62 @@ The negative changes of waterfall charts are represented by using [NegativeFillC
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjhTtuiqSypahHvu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+## Corner radius
+
+The [ChartSeriesCornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html) property is used to customize the corner radius of the series. This allows you to create stacked bars with rounded corners, giving your chart a more polished appearance.The corner radius can be set for each corner individually using the [BottomLeft](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html#Syncfusion_Blazor_Charts_ChartCornerRadius_BottomLeft), [BottomRight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html#Syncfusion_Blazor_Charts_ChartCornerRadius_BottomRight), [TopLeft](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html#Syncfusion_Blazor_Charts_ChartCornerRadius_TopLeft), [TopRight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html#Syncfusion_Blazor_Charts_ChartCornerRadius_TopRight).
+
+We can also use the corner radius in [onPointRender](https://blazor.syncfusion.com/documentation/chart/events#onpointrender) event to customize the specific bar in the chart.
+
+```cshtml
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartEvents OnPointRender="PointRenderEvent"></ChartEvents>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+    </ChartPrimaryXAxis>
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@SalesReports" SummaryFillColor="#e56590" NegativeFillColor="#f8b883" XName="XValue" YName="YValue" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Waterfall" IntermediateSumIndexes="@index" SumIndexes="@sumIndex">
+            <ChartMarker Height="10" Width="10" Visible="true"></ChartMarker>
+            <ChartCornerRadius TopLeft="5" TopRight="5"></ChartCornerRadius>
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code {
+    double[] index = new double[] { 4 };
+    double[] sumIndex = new double[] { 8 };
+
+    public class ChartData
+    {
+        public string XValue { get; set; }
+        public double YValue { get; set; }
+    }
+
+    public List<ChartData> SalesReports = new List<ChartData>
+    {
+        new ChartData { XValue = "Income", YValue = 4711 },
+        new ChartData { XValue = "Sales", YValue = -1015 },
+        new ChartData { XValue = "Development", YValue = -688 },
+        new ChartData { XValue = "Revenue", YValue = 1030 },
+        new ChartData { XValue = "Balance" },
+        new ChartData { XValue = "Expense", YValue = -361 },
+        new ChartData { XValue = "Tax", YValue = -695 },
+        new ChartData { XValue = "Net Profit" },
+    };
+
+    public void PointRenderEvent(PointRenderEventArgs args)
+    {
+        if (args.Point.X == "Sales" || args.Point.X == "Development" || args.Point.X == "Tax" || args.Point.X == "Expense")
+        {
+            args.CornerRadius.BottomLeft = 5;
+            args.CornerRadius.BottomRight = 5;
+        }
+    }
+}
+```
+![Blazor Waterfall Chart with corner radius](../images/chart-types-images/blazor-waterfall-chart-corner-radius.png)
+
 ## Empty points
 
 Data points with `null`, `double.NaN` or `undefined` values are considered empty. Empty data points are ignored and not plotted on the chart.
