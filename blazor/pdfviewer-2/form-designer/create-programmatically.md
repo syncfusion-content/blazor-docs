@@ -61,7 +61,7 @@ The following image illustrates the programmatic addition of form fields in Blaz
 ![Programmatical Add Form Fields in Blazor SfPdfViewer](../../pdfviewer-2/form-designer/form-designer-images/blazor-pdfviewer-form-designer-add.png)
 
 N> Users can also add form fields through the UI in SfPdfViewer, allowing for an intuitive and interactive customization experience.  
-[Interactively Add Form Fields]()
+[Interactively Add Form Fields](./ui-interactions)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/AddFormField.razor).
 
@@ -291,7 +291,7 @@ The following image illustrates updating linked properties of a radio button for
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/UpdateLinkedProperties.razor).
 
 N> Users can also Update form fields through the UI in SfPdfViewer, allowing for an intuitive and interactive customization experience.  
-[Interactively Update Form Fields]()
+[Interactively Update Form Fields](./ui-interactions)
 
 ## Delete Form Fields
 
@@ -401,7 +401,7 @@ The following image illustrates deleting form fields by their IDs in Blazor SfPd
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/DeleteById.razor).
 
 N> Users can also Delete form fields through the UI in SfPdfViewer, allowing for an intuitive and interactive customization experience.  
-[Interactively Delete Form Fields]()
+[Interactively Delete Form Fields](./ui-interactions)
 
 ## Select Form Field
 
@@ -487,10 +487,10 @@ The following image illustrates selecting a checkbox field in Blazor SfPdfViewer
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/SelectByField.razor).
 
 N> Ensure form field interaction mode is enabled before selecting a field.
-Refer to the documentation for enabling form field toolbar [Interaction mode]().
+Refer to the documentation for enabling form field toolbar [Interaction mode](./overview).
 
 ## See also
 
 * [Overview of Form Designer](./overview)
-* [How to Add Form Fields Using UI Interaction](./ui-interactions)
+* [UI interactions in form Designer](./ui-interactions)
 * [Events in Form Designer](./events)
