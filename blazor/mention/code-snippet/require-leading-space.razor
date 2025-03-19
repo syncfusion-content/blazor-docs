@@ -1,0 +1,44 @@
+@using Syncfusion.Blazor.DropDowns
+
+<SfMention TItem="Countries" DataSource="@data" PopupHeight="200px" PopupWidth="250px" RequireLeadingSpace="false">
+    <TargetComponent>
+        <div id="commentsMention" placeholder="Type @@ and tag country" ></div>
+    </TargetComponent>
+    <ChildContent>
+        <MentionFieldSettings Text="Country" Value="Code"></MentionFieldSettings>
+    </ChildContent>
+</SfMention>
+
+<style>
+    #commentsMention {
+        min-height: 100px;
+        border: 1px solid #D7D7D7;
+        border-radius: 4px;
+        padding: 8px;
+        font-size: 14px;
+        width: 600px;
+    }
+    div#commentsMention[placeholder]:empty:before {
+        content: attr(placeholder);
+        color: #555;
+    }
+</style>
+
+@code {
+
+    public class Countries
+    {
+        public string Country { get; set; }
+        public string Code { get; set; }
+    }
+
+    public List<Countries> data = new List<Countries>()
+    {
+        new Countries() { Country = "Australia", Code = "AU" },
+        new Countries() { Country = "Bermuda" , Code = "BM" },
+        new Countries() { Country = "Canada" , Code =  "CA" },
+        new Countries() { Country = "Cameroon" , Code = "CM" },
+        new Countries() { Country = "Denmark" , Code = "DK" }
+    };
+
+}

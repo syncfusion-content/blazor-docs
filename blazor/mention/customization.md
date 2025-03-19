@@ -56,3 +56,17 @@ The [MentionChar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDo
 {% endhighlight %}
 
 ![Blazor Mention with trigger character](./images/blazor-mention-trigger-char.png)
+
+## Leading Space Requirement
+
+You can control whether a space is required before the mention character using the [RequireLeadingSpace](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMention-1.html#Syncfusion_Blazor_DropDowns_SfMention_1_MentionChar) property in the Mention component. When set to `true` (default), a space character must precede the mention character to trigger the suggestion popup. When set to `false`, the mention character can trigger suggestions without requiring a leading space.
+
+By default, the RequireLeadingSpace property is set to `true`. This means users must type a space before the mention character (for example, " @") to display the suggestion list. When you set it to `false`, users can trigger the mention dropdown by typing the mention character anywhere in the text without a preceding space.
+
+{% highlight razor %}
+
+{% include_relative code-snippet/require-leading-space.razor %}
+
+{% endhighlight %}
+
+![Blazor Mention with leading space configuration](./images/blazor-mention-popup-list.png)
