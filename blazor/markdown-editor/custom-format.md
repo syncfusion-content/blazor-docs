@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customizing Markdown Syntax in Blazor Markdown Editor Component | Syncfusion
+title: Customize Markdown Syntax in Blazor Markdown Editor | Syncfusion
 description: Checkout and learn here all about Customizing Markdown Syntax in Syncfusion Blazor Markdown Editor component and more.
 platform: Blazor
 control: MarkdownEditor

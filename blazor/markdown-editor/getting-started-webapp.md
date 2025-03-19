@@ -274,8 +274,7 @@ Configure the toolbar with the tools using [RichTextEditorToolbarSettings.Items]
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVotqWlVILIIHdX?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" backgroundimage "
-[Blazor Markdown Editor with Toolbar](./images/blazor-markdownteditor-toolbar.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVotqWlVILIIHdX?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" backgroundimage "[Blazor Markdown Editor with Toolbar](./images/blazor-markdownteditor-toolbar.png)" %}
 
 ## Retrieve the formatted content
 
