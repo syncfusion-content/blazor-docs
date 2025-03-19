@@ -258,4 +258,4 @@ Get the complete object list of the selected value in the [ValueChange](https://
 * [Getting Started with Syncfusion Blazor for Server-side in Visual Studio](../getting-started/blazor-web-app)
 * [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](../getting-started/blazor-web-app)
 
-N> You can also explore our [Blazor Dropdown List example](https://blazor.syncfusion.com/demos/dropdown-list/default-functionalities?theme=bootstrap5) to knows how to present and manipulate data.
+N> You can also explore our [Blazor Dropdown List example](https://blazor.syncfusion.com/demos/dropdown-list/default-functionalities?theme=bootstrap5) that shows you how to render the Dropdown List in Blazor.
