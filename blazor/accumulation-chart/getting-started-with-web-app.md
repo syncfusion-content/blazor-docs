@@ -357,5 +357,5 @@ Legend is used for the accumulation chart by setting the [Visible](https://help.
 ## See also
 
 
-1. [Getting Started with Syncfusion Blazor Web Assembly App in Visual Studio or .NET CLI](.https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
+1. [Getting Started with Syncfusion Blazor Web Assembly App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
 2. [Getting Started with Syncfusion Blazor Web App in Visual Studio or .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app)
