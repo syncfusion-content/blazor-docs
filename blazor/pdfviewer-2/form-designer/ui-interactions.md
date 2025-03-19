@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Create with User Interface Interaction
+# Form Designer UI Interactions in Blazor PDF Viewer
 
 The Form Designer feature in the Blazor PDF Viewer component allows users to add, edit, and manipulate form fields directly in a PDF document. This feature provides an intuitive user interface to design interactive forms efficiently. 
 

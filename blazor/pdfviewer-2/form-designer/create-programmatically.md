@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Create Fields Programmatically in Blazor SfPdfViewer | Syncfusion
+title: Programmatic Support for Form Designer in Blazor SfPdfViewer | Syncfusion
 description: Learn how to create, modify, and manage form fields programmatically in the Syncfusion Blazor SfPdfViewer component.
 platform: Blazor
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Create Fields Programmatically in Blazor SfPdfViewer  
+# Programmatic Support for Form Designer in Blazor PDF Viewer
 
 The Blazor SfPdfViewer component provides programmatic control over form fields in a PDF document. This enables seamless form handling and enhances user interaction through code.  
 
@@ -69,7 +69,7 @@ N> Users can also add form fields through the UI in SfPdfViewer, allowing for an
 
 The Blazor SfPdfViewer provides [`FormFieldSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldSettings.html) to configure the appearance of form fields in a PDF document. These settings allow defining the border, background, text styles, and other properties.
 
-This code below is for thickness. You can also configure **background color, border color, text color, font family, font size, and font style**.
+This code below is for [thickness](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldSettings.html#Syncfusion_Blazor_SfPdfViewer_FormFieldSettings_Thickness). You can also configure **[background color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldSettings.html#Syncfusion_Blazor_SfPdfViewer_FormFieldSettings_BackgroundColor), [border color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldSettings.html#Syncfusion_Blazor_SfPdfViewer_FormFieldSettings_BorderColor), [text color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldSettings.html#Syncfusion_Blazor_SfPdfViewer_FormFieldSettings_Color), [font family](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldSettings.html#Syncfusion_Blazor_SfPdfViewer_FormFieldSettings_FontFamily), [font size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldSettings.html#Syncfusion_Blazor_SfPdfViewer_FormFieldSettings_FontSize), and [font style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldSettings.html#Syncfusion_Blazor_SfPdfViewer_FormFieldSettings_FontStyle)**.
 
 ```cshtml
 @page "/"
@@ -172,7 +172,7 @@ The following image illustrates setting and clearing the form field mode in Blaz
 The Update functionality enables dynamic modification of form field properties in a PDF document by retrieving fields via [`GetFormFieldsAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_GetFormFieldsAsync) and updating their values, appearance, or behavior. These changes are applied using [`UpdateFormFieldsAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_UpdateFormFieldsAsync_Syncfusion_Blazor_SfPdfViewer_FormField_), ensuring they reflect in the viewer.
 
 ### Appearance Properties
-Controls the visual aspects of form fields, including background color, border color, text color, thickness, maxLength, visibility, font size, font family, font style and text alignment. These properties help customize the look and feel of form fields in the document.
+Controls the visual aspects of form fields, including [background color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldInfo.html#Syncfusion_Blazor_SfPdfViewer_FormFieldInfo_BackgroundColor), [border color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldInfo.html#Syncfusion_Blazor_SfPdfViewer_FormFieldInfo_BorderColor), [text color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldInfo.html#Syncfusion_Blazor_SfPdfViewer_FormFieldInfo_Color), [thickness](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldInfo.html#Syncfusion_Blazor_SfPdfViewer_FormFieldInfo_Thickness), maxLength, [visibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldInfo.html#Syncfusion_Blazor_SfPdfViewer_FormFieldInfo_Visibility), [font size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldInfo.html#Syncfusion_Blazor_SfPdfViewer_FormFieldInfo_FontSize), [font family](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldInfo.html#Syncfusion_Blazor_SfPdfViewer_FormFieldInfo_FontFamily), [font style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldInfo.html#Syncfusion_Blazor_SfPdfViewer_FormFieldInfo_FontStyle) and [text alignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldInfo.html#Syncfusion_Blazor_SfPdfViewer_FormFieldInfo_TextAlignment). These properties help customize the look and feel of form fields in the document.
 
 ```cshtml
 @page "/"
@@ -217,7 +217,7 @@ The following image illustrates updating the appearance of a button form field i
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/UpdateApperanceProperties.razor).
 
 ### Identification & Metadata Properties
-Includes properties like name (unique identifier) and value (storing user input or assigned data). These attributes help distinguish and manage form fields efficiently.
+Includes properties like [name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ListItem.html#Syncfusion_Blazor_SfPdfViewer_ListItem_Name) (unique identifier) and [value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ListItem.html#Syncfusion_Blazor_SfPdfViewer_ListItem_Value) (storing user input or assigned data). These attributes help distinguish and manage form fields efficiently.
 
 ```cshtml
 @page "/"
