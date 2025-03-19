@@ -93,6 +93,43 @@ The [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfAcc
 ![Customizing Title in Blazor Accumulation Chart](images/title/blazor-accumulation-chart-title-customization.png)
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtBUMVCpMmDIcLry?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+## Title position customization
+
+Using [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTitleStyle.html#Syncfusion_Blazor_Charts_AccumulationChartTitleStyle_Position) property in [AccumulationChartTitleStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTitleStyle.html) helps to customize the position of the title. You can set the position as [Top](), [Bottom](), [Left](), [Right]() and [Custom]().
+
+This provides greater flexibility for aligning the title with different chart layouts.
+
+```cshtml
+<SfAccumulationChart Title="Olympic Medal Details">
+    <AccumulationChartTitleStyle Position="ChartTitlePosition.Custom" X="300" Y="400">
+    </AccumulationChartTitleStyle>
+    <AccumulationChartSeriesCollection>
+        <AccumulationChartSeries DataSource="@MedalDetails" XName="Country" YName="Medals">
+        </AccumulationChartSeries>
+    </AccumulationChartSeriesCollection>
+</SfAccumulationChart>
+@code{
+    public class ChartData
+    {
+        public string Country { get; set; }
+        public double Medals { get; set; }
+    }
+
+    public List<ChartData> MedalDetails = new List<ChartData>
+    {
+        new ChartData { Country= "United States of America", Medals= 46 },
+        new ChartData { Country= "Great Britain", Medals= 27 },
+        new ChartData { Country= "China", Medals= 26 },
+        new ChartData { Country= "United Kingdom", Medals= 23 },
+        new ChartData { Country= "Australia", Medals= 16 },
+        new ChartData { Country= "India", Medals= 36 },
+        new ChartData { Country= "Nigeria", Medals= 12 },
+        new ChartData { Country= "Brazil", Medals= 20 },
+     };
+}
+```
+![Blazor Accumulation Chart Title position customization](images/title/blazor-accumulation-chart-title-position-customization.png)
+
 ## Subtitle
 
 The [SubTitle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_SubTitle) property can be used to give the accumulation chart a subtitle in-order to provide an additional information about the data displayed.
