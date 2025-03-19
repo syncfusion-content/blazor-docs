@@ -153,7 +153,48 @@ The negative changes of waterfall charts are represented by using [NegativeFillC
 
 The [ChartSeriesCornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html) property is used to customize the corner radius of the series. This allows you to create stacked bars with rounded corners, giving your chart a more polished appearance.The corner radius can be set for each corner individually using the [BottomLeft](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html#Syncfusion_Blazor_Charts_ChartCornerRadius_BottomLeft), [BottomRight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html#Syncfusion_Blazor_Charts_ChartCornerRadius_BottomRight), [TopLeft](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html#Syncfusion_Blazor_Charts_ChartCornerRadius_TopLeft), [TopRight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html#Syncfusion_Blazor_Charts_ChartCornerRadius_TopRight).
 
-We can also use the corner radius in [onPointRender](https://blazor.syncfusion.com/documentation/chart/events#onpointrender) event to customize the specific bar in the chart.
+```cshtml
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+    </ChartPrimaryXAxis>
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@SalesReports" SummaryFillColor="#e56590" NegativeFillColor="#f8b883" XName="XValue" YName="YValue" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Waterfall" IntermediateSumIndexes="@index" SumIndexes="@sumIndex">
+            <ChartMarker Height="10" Width="10" Visible="true"></ChartMarker>
+            <ChartCornerRadius TopLeft="5" TopRight="5"></ChartCornerRadius>
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code {
+    double[] index = new double[] { 4 };
+    double[] sumIndex = new double[] { 8 };
+
+    public class ChartData
+    {
+        public string XValue { get; set; }
+        public double YValue { get; set; }
+    }
+
+    public List<ChartData> SalesReports = new List<ChartData>
+    {
+        new ChartData { XValue = "Income", YValue = 4711 },
+        new ChartData { XValue = "Sales", YValue = 1015 },
+        new ChartData { XValue = "Development", YValue = 688 },
+        new ChartData { XValue = "Revenue", YValue = 1030 },
+        new ChartData { XValue = "Balance" },
+        new ChartData { XValue = "Expense", YValue = 361 },
+        new ChartData { XValue = "Tax", YValue = 695 },
+        new ChartData { XValue = "Net Profit" },
+    };
+}
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBIXqMOJoXzFxrp?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+![Blazor Waterfall Chart with corner radius](../images/chart-types-images/blazor-waterfall-chart-corner-radius.png)
+
+We can also access specific bars and customize their corner radius in the [onPointRender](https://blazor.syncfusion.com/documentation/chart/events#onpointrender) event by using its corner radius argument. This approach also works for bars with negative values.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -203,7 +244,8 @@ We can also use the corner radius in [onPointRender](https://blazor.syncfusion.c
     }
 }
 ```
-![Blazor Waterfall Chart with corner radius](../images/chart-types-images/blazor-waterfall-chart-corner-radius.png)
+
+![Blazor Waterfall Chart with corner radius](../images/chart-types-images/blazor-waterfall-chart-corner-radius-onPointRender.png)
 
 ## Empty points
 
