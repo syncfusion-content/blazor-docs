@@ -603,14 +603,14 @@ We provide default settings for stroke color, stroke width, fill color, and othe
     }
     private async void ShapeChangingAsync(ShapeChangeEventArgs args)
     {
-        if (args.Action == "insert" && args.CurrentShapeSettings?.Type == ShapeType.FreehandDraw)
+        if (args.Action == "insert" && args.CurrentShapeSettings?.Type == ShapeType.Rectangle)
         {
             args.CurrentShapeSettings.StrokeColor = "red";
         }
     }
 }
 ```
-![Blazor Image Editor with Default Color](./images/blazor-image-editor-default-stroke-color.jpeg)
+![Blazor Image Editor with Default Color](./images/blazor-image-editor-default-stroke-color.jpg)
 
 ## Image annotation
 
