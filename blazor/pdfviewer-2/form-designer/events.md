@@ -627,7 +627,7 @@ The FormFieldsImporting event provides [FormFieldsImportEventArgs](https://help.
 [FormFieldsExportFailed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_FormFieldsExportFailed) is triggered when form fields export operation fails. This event can be used for error handling and debugging.
 
 #### Event Arguments
-The FormFieldsExportFailed event provides [FormFieldsExportFailedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldsExportFailedEventArgs.html), which contains properties like [ErrorDetails](hhttps://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldsExportFailedEventArgs.html#Syncfusion_Blazor_SfPdfViewer_FormFieldsExportFailedEventArgs_ErrorDetails) (reason for failure). It helps in handling export errors and implementing fallback mechanisms.
+The FormFieldsExportFailed event provides [FormFieldsExportFailedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldsExportFailedEventArgs.html), which contains properties like [ErrorDetails](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.FormFieldsExportFailedEventArgs.html#Syncfusion_Blazor_SfPdfViewer_FormFieldsExportFailedEventArgs_ErrorDetails) (reason for failure). It helps in handling export errors and implementing fallback mechanisms.
 
 ```cshtml
 @using Syncfusion.Blazor;
