@@ -19,6 +19,10 @@ To get started quickly with Blazor DocumentEditor component, you can check the v
 
 {% tabcontent Visual Studio %}
 
+To get started quickly with Blazor DocumentEditor component, you can check the video below.
+
+{% youtube "https://www.youtube.com/watch?v=85rMT46LLgY" %}
+
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
