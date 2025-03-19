@@ -233,6 +233,18 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Accordion/BlazorWebapp)
 
+## Initialize Blazor Accordion using Template
+
+The following code explains how to initialize Blazor Accordion using header and content template.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/getting-started.razor %}
+
+{% endhighlight %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBzXirSVLuZFLkH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Accordion with header and content Template](images/blazor-accordion-header-template.png)" %}
+
 ## See also
 
 1. [Getting Started with Syncfusion Blazor Web Assembly App in Visual Studio or .NET CLI](.https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app)
