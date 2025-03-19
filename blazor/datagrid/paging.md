@@ -482,7 +482,7 @@ The following example demonstrates how to render a **NumericTextBox** component 
         <Template>
 
             @{
-                var Paging = ( context as PagerModel );
+                var Paging = ( context as PagerTemplateContext );
 
             <div>
                 <div>
