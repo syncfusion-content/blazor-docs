@@ -92,7 +92,7 @@ Below example demonstrates on how to configure `Title`, `Content` and `IconCss` 
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Tooltip](./images/tooltip/ribbon_tooltip.png)
+![Blazor Ribbon tooltip.](./images/tooltip/blazor-ribbon-tooltip.png)
 
 ## Customization
 
@@ -204,4 +204,4 @@ You can use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 {% endhighlight %}
 {% endtabs %}
 
-![Ribbon Tooltip Template](./images/tooltip/ribbon_tooltip_template.png)
+![Blazor Ribbon tooltip template.](./images/tooltip/blazor-ribbon-tooltip-template.png)
