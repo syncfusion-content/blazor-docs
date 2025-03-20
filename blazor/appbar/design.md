@@ -115,7 +115,9 @@ Media Query is used to adjusting the AppBar for different screen sizes. Resize t
 ```
 
 ![Blazor AppBar with Media Query.](./images/blazor-appbar-media-quary.png)
+
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDVUWBsJrBofaJVB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## Designing AppBar with Menu
 
 **SfMenu** component can be rendered as a child content of AppBar. You can inherit the AppBar component styles by setting CSS class as `e-inherit` to SfMenu component.
