@@ -65,7 +65,7 @@ The following demo depicts the example for `Fade` animation,
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNrUMrhrhmDEXNND?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Carousel fade animation](images/fade_animation.gif)
+![Blazor Carousel fade animation.](images/blazor-carousel-fade-animation.gif)
 
 ### Custom animation
 
@@ -158,7 +158,7 @@ The following demo depicts the example for `parallax` custom animation
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VjhgWrBrLGWiDURZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Carousel custom animation](images/custom_animation.gif)
+![Blazor Carousel custom animation.](images/blazor-carousel-custom-animation.gif)
 
 ## Intervals between slides
 
@@ -348,7 +348,7 @@ In the carousel, slides transitions are repeated continuously when you reach the
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LXrgiVVhrwLArCWL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Carousel Looping Slides](images/looping_slides.png)
+![Blazor Carousel Looping Slides.](images/blazor-carousel-looping-slides.png)
 
 ## Slide changing events
 
@@ -511,4 +511,4 @@ The following are the different swipe modes available in the carousel:
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LZhgMVVVhQADiviB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Carousel Swipe Mode](images/swipe.gif)
+![Blazor-Carousel Swipe Mode.](images/blazor-carousel-swipe-mode.gif)
