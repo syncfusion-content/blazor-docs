@@ -124,5 +124,5 @@ The Rich Text Editor allows you to customize the markdown syntax by overriding i
 
 ## See also
 
-* [How to change the editor mode](./editor-modes/#markdown-editor)
+* [How to change the editor mode](./editor-modes#markdown-editor)
 * [How to convert Markdown string to HTML](https://support.syncfusion.com/kb/article/10983/how-to-convert-markdown-string-to-html-using-blazor-rich-text-editor)
