@@ -462,6 +462,7 @@ You can define user handle style using a template in the [UserHandleTemplate](ht
 
 @code
 {
+    SfDiagramComponent Diagram;
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
     // Defines diagram's SelectionSettings.
@@ -809,7 +810,7 @@ You can define fixed user handle style using a template in the [FixedUserHandleT
 <SfDiagramComponent @ref="@diagram" Height="600px" Nodes = "@nodes" Connectors="@connectors">
     <DiagramTemplates>
         <FixedUserHandleTemplate>
-            if ((context as FixedUserHandle).ID == "user1" || (context as FixedUserHandle).ID == "user2")
+            @if ((context as FixedUserHandle).ID == "user1" || (context as FixedUserHandle).ID == "user2")
             {
                 <div id="button" style="height: 100%; width: 100%;">
                     <input type="button" value="Button1" />

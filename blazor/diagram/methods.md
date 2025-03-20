@@ -1414,7 +1414,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
  You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/GetCustomTool)
 
 
- ## How to zoom and pan the diagram
+## How to zoom and pan the diagram
 
 [Zoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Zoom_System_Double_Syncfusion_Blazor_Diagram_DiagramPoint_) allows to user to zoom in and zoom out the diagram. [Pan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Pan_System_Double_System_Double_Syncfusion_Blazor_Diagram_DiagramPoint_) is used to pan the diagram to the horizontal and vertical offset.
 

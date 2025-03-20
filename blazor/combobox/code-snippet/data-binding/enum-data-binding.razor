@@ -1,0 +1,21 @@
+@using Syncfusion.Blazor.DropDowns;
+
+<SfComboBox TValue="Values" TItem="string" Placeholder="e.g. Australia" DataSource="@EnumValues" @bind-Value="@ddlVal" Width="300px">
+</SfComboBox>
+
+@code {
+
+    public string[] EnumValues = Enum.GetNames(typeof(Values));
+    public Values ddlVal { get; set; } = Values.Canada;
+
+    public enum Values
+    {
+        Australia,
+        Bermuda,
+        Canada,
+        Denmark,
+        India,
+        US
+
+    }
+}

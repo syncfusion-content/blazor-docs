@@ -1,0 +1,29 @@
+
+@using Syncfusion.Blazor.DropDowns
+
+
+<SfComboBox TValue="string" TItem="Games" Width="300px" Placeholder="Select a game" DataSource="@LocalData" @bind-Index="@ComboIndex">
+    <ComboBoxFieldSettings Value="ID" Text="Game"></ComboBoxFieldSettings>
+</SfComboBox>
+
+@code {
+    private int? ComboIndex { get; set; } = 1;
+
+    public class Games
+    {
+        public string ID { get; set; }
+        public string Game { get; set; }
+    }
+    List<Games> LocalData = new List<Games> {
+    new Games() { ID= "Game1", Game= "American Football" },
+    new Games() { ID= "Game2", Game= "Badminton" },
+    new Games() { ID= "Game3", Game= "Basketball" },
+    new Games() { ID= "Game4", Game= "Cricket" },
+    new Games() { ID= "Game5", Game= "Football" },
+    new Games() { ID= "Game6", Game= "Golf" },
+    new Games() { ID= "Game7", Game= "Hockey" },
+    new Games() { ID= "Game8", Game= "Rugby"},
+    new Games() { ID= "Game9", Game= "Snooker" },
+    new Games() { ID= "Game10", Game= "Tennis"},
+  };
+}

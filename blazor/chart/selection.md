@@ -181,6 +181,8 @@ Set [SelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
 
 In the drag complete event, the selected data will be returned as an array collection.
 
+N> To select a rectangular area on a chart using a touch device, quickly double-tap and then drag your finger to define the selection area.
+
 ```cshtml
 
 @using Syncfusion.Blazor.Charts

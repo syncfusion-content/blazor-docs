@@ -258,7 +258,7 @@ The following code snippet explains how to define the working time range for the
     </GanttDayWorkingTimeCollection>
     <GanttTimelineSettings TimelineUnitSize="75">
         <GanttTopTierSettings Unit="TimelineViewMode.Day" Format="MMM dd,yyyy"></GanttTopTierSettings>
-        <GanttBottomTierSettings Unit="TimelineViewMode.Hour" Format="h.mm tt"></GanttBottomTierSettings>
+        <GanttBottomTierSettings Unit="TimelineViewMode.Hour" Format="hh:mm tt"></GanttBottomTierSettings>
     </GanttTimelineSettings>
 </SfGantt>
 
