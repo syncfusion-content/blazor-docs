@@ -409,9 +409,9 @@ The [ChartSeriesBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 ``` 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXLpXEsqfecVJWHB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Corner radius
+## Corner Radius
 
-The [ChartSeriesCornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html) property is used to customize the corner radius of the series. This allows you to create columns with rounded corners, giving your chart a more polished appearance.The corner radius can be set for each corner individually using the [BottomLeft](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html#Syncfusion_Blazor_Charts_ChartCornerRadius_BottomLeft), [BottomRight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html#Syncfusion_Blazor_Charts_ChartCornerRadius_BottomRight), [TopLeft](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html#Syncfusion_Blazor_Charts_ChartCornerRadius_TopLeft), [TopRight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html#Syncfusion_Blazor_Charts_ChartCornerRadius_TopRight).
+The [ChartCornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html) property is used to customize the corner radius for Stacked Column series. This allows you to create columns with rounded corners, giving your chart a more polished appearance. You can customize each corner of the columns using the [BottomLeft](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html#Syncfusion_Blazor_Charts_ChartCornerRadius_BottomLeft), [BottomRight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html#Syncfusion_Blazor_Charts_ChartCornerRadius_BottomRight), [TopLeft](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html#Syncfusion_Blazor_Charts_ChartCornerRadius_TopLeft), [TopRight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html#Syncfusion_Blazor_Charts_ChartCornerRadius_TopRight) properties.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -421,13 +421,16 @@ The [ChartSeriesCornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
     <ChartSeriesCollection>
         <ChartSeries DataSource="@StackedDataList" XName="X" YName="Y" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn">
+            <ChartCornerRadius BottomRight="5" TopRight="5" BottomLeft="5" TopLeft="5"></ChartCornerRadius>
         </ChartSeries>
         <ChartSeries DataSource="@StackedDataList" XName="X" YName="Y1" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn">
+            <ChartCornerRadius BottomRight="5" TopRight="5" BottomLeft="5" TopLeft="5"></ChartCornerRadius>
         </ChartSeries>
         <ChartSeries DataSource="@StackedDataList" XName="X" YName="Y2" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn">
+            <ChartCornerRadius BottomRight="5" TopRight="5" BottomLeft="5" TopLeft="5"></ChartCornerRadius>
         </ChartSeries>
         <ChartSeries DataSource="@StackedDataList" XName="X" YName="Y3" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn">
-            <ChartCornerRadius TopLeft="5" TopRight="5"></ChartCornerRadius>
+            <ChartCornerRadius BottomRight="5" TopRight="5" BottomLeft="5" TopLeft="5"></ChartCornerRadius>
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
@@ -441,8 +444,7 @@ The [ChartSeriesCornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.B
         public double Y2 { get; set; }
         public double Y3 { get; set; }
     }
-
-
+s
     public List<StackedData> StackedDataList = new List<StackedData>
     {
         new StackedData { X = "2014", Y = 111.1, Y1 = 76.9, Y2 = 66.1, Y3 = 34.1 },
@@ -455,11 +457,10 @@ The [ChartSeriesCornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.B
     };
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVIZAWafzlssOdW?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 ![Blazor Stacked column Chart with Corner radius.](../images/chart-types-images/blazor-stacked-column-chart-corner-radius.png)
 
-We can also access specific columns and customize their corner radius in the [onPointRender](https://blazor.syncfusion.com/documentation/chart/events#onpointrender) event by using its corner radius argument. This approach also works for columns with negative values.
+We can also customize the corner radius for individual points in the chart series using the [OnPointRender](https://blazor.syncfusion.com/documentation/chart/events#onpointrender) event by utilizing its `CornerRadius` argument.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -493,7 +494,7 @@ We can also access specific columns and customize their corner radius in the [on
 
     public List<StackedData> StackedDataList = new List<StackedData>
     {
-        new StackedData { X = "2014", Y = 111.1, Y1 = 76.9, Y2 = 66.1, Y3 = -34.1 },
+        new StackedData { X = "2014", Y = 111.1, Y1 = 76.9, Y2 = 66.1, Y3 = 34.1 },
         new StackedData { X = "2015", Y = 127.3, Y1 = 99.5, Y2 = 79.3, Y3 = 38.2 },
         new StackedData { X = "2016", Y = 143.4, Y1 = 121.7, Y2 = 91.3, Y3 = 44.0 },
         new StackedData { X = "2017", Y = 159.9, Y1 = 142.5, Y2 = 102.4, Y3 = 51.6 },
@@ -504,10 +505,12 @@ We can also access specific columns and customize their corner radius in the [on
 
     public void PointRenderEvent(PointRenderEventArgs args)
     {
-        if (args.Point.X == "2014" && args.Point.Y.Equals(-34.1))
+        if (args.Point.X == "2015" || args.Point.X == "2017" || args.Point.X == "2019")
         {
-            args.CornerRadius.TopLeft = 5;
-            args.CornerRadius.TopRight = 5;
+            args.CornerRadius.BottomRight = 10;
+            args.CornerRadius.BottomLeft = 10;
+            args.CornerRadius.TopRight = 10;
+            args.CornerRadius.TopLeft = 10;
         }
     }
 }

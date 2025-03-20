@@ -284,6 +284,115 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartT
 
 ![Blazor Column Chart with Custom Tooltip](images/tooltip/blazor-column-chart-custom-tooltip.png)
 
+## EnableHighlight
+
+By enabling the `EnableHighlight` property in [ChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html), all points in the hovered series will be highlighted, while points in other series are dimmed. This enhances focus and clarity by drawing attention to the selected series.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfChart Title="Unemployment Rates 1975-2010">
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="StepChartValues" Type="ChartSeriesType.StepLine" XName="Year" YName="Y" Name="China">
+            <ChartMarker Visible="true" Width="10" Height="10">
+            </ChartMarker>
+        </ChartSeries>
+        <ChartSeries DataSource="StepChartValues" Type="ChartSeriesType.StepLine" XName="Year" YName="Y1" Name="Australia">
+            <ChartMarker Visible="true" Width="10" Height="10">
+            </ChartMarker>
+        </ChartSeries>
+        <ChartSeries DataSource="StepChartValues" Type="ChartSeriesType.StepLine" XName="Year" YName="Y2" Name="Japan">
+            <ChartMarker Visible="true" Width="10" Height="10">
+            </ChartMarker>
+        </ChartSeries>
+    </ChartSeriesCollection>
+    <ChartTooltipSettings Enable="true" EnableHighlight="true">
+    </ChartTooltipSettings>
+</SfChart>
+
+@code {
+    public List<StepChartData> StepChartValues = new List<StepChartData>
+    {
+        new StepChartData { Year = "1975", Y = 16, Y1 = 10, Y2 = 4.5 },
+        new StepChartData { Year = "1980", Y = 12.5, Y1 = 7.5, Y2 = 5},
+        new StepChartData { Year = "1985", Y = 19, Y1 = 11, Y2 = 6.5 },
+        new StepChartData { Year = "1990", Y = 14.4, Y1 = 7, Y2 = 4.4 },
+        new StepChartData { Year = "1995", Y = 11.5, Y1 = 8, Y2 = 5 },
+        new StepChartData { Year = "2000", Y = 14, Y1 = 6, Y2 = 1.5 },
+        new StepChartData { Year = "2005", Y = 10, Y1 = 3.5, Y2 = 2.5 },
+        new StepChartData { Year = "2010", Y = 16, Y1 = 7, Y2 = 3.7 }
+    };
+
+    public class StepChartData
+    {
+        public string Year { get; set; }
+        public double Y { get; set; }
+        public double Y1 { get; set; }
+        public double Y2 { get; set; }
+    }
+}
+
+```
+
+![Blazor Chart Tooltip with Highlight Series](images/tooltip/blazor-tooltip-enable-highlight.png)
+
+## ShowNearestTooltip
+
+The `ShowNearestTooltip` property displays tooltips for the nearest data point to the cursor. It automatically identifies and highlights the closest point within a defined interaction zone, improving usability and accessibility, especially when working with densely packed or overlapping data points.
+
+N> By default, `ShowNearestTooltip` is set to true for the series. However, by disabling this property in the [ChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html), you can customize the tooltip behavior for a specific series.
+
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfChart Title="Unemployment Rates 1975-2010">
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="StepChartValues" Type="ChartSeriesType.StepLine" XName="Year" YName="Y" Name="China">
+            <ChartMarker Visible="true" Width="10" Height="10">
+            </ChartMarker>
+        </ChartSeries>
+        <ChartSeries DataSource="StepChartValues" Type="ChartSeriesType.StepLine" XName="Year" YName="Y1" Name="Australia" ShowNearestTooltip="false">
+            <ChartMarker Visible="true" Width="10" Height="10">
+            </ChartMarker>
+        </ChartSeries>
+        <ChartSeries DataSource="StepChartValues" Type="ChartSeriesType.StepLine" XName="Year" YName="Y2" Name="Japan">
+            <ChartMarker Visible="true" Width="10" Height="10">
+            </ChartMarker>
+        </ChartSeries>
+    </ChartSeriesCollection>
+    <ChartTooltipSettings Enable="true" ShowNearestTooltip="true">
+    </ChartTooltipSettings>
+</SfChart>
+
+@code {
+    public List<StepChartData> StepChartValues = new List<StepChartData>
+    {
+        new StepChartData { Year = "1975", Y = 16, Y1 = 10, Y2 = 4.5 },
+        new StepChartData { Year = "1980", Y = 12.5, Y1 = 7.5, Y2 = 5},
+        new StepChartData { Year = "1985", Y = 19, Y1 = 11, Y2 = 6.5 },
+        new StepChartData { Year = "1990", Y = 14.4, Y1 = 7, Y2 = 4.4 },
+        new StepChartData { Year = "1995", Y = 11.5, Y1 = 8, Y2 = 5 },
+        new StepChartData { Year = "2000", Y = 14, Y1 = 6, Y2 = 1.5 },
+        new StepChartData { Year = "2005", Y = 10, Y1 = 3.5, Y2 = 2.5 },
+        new StepChartData { Year = "2010", Y = 16, Y1 = 7, Y2 = 3.7 }
+    };
+
+    public class StepChartData
+    {
+        public string Year { get; set; }
+        public double Y { get; set; }
+        public double Y1 { get; set; }
+        public double Y2 { get; set; }
+    }
+}
+
+```
+
+![Blazor Chart Shows Nearest Tooltip](images/tooltip/blazor-chart-nearest-tooltip.png)
+
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See also

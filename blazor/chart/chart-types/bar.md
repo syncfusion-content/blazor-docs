@@ -327,11 +327,12 @@ The [ChartSeriesBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtBTtuWUTuOhOKlj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Corner radius
+## Corner Radius
 
-The [ChartSeriesCornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html) property is used to customize the corner radius of the series. This allows you to create bars with rounded corners, giving your chart a more polished appearance.The corner radius can be set for each corner individually using the [BottomLeft](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html#Syncfusion_Blazor_Charts_ChartCornerRadius_BottomLeft), [BottomRight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html#Syncfusion_Blazor_Charts_ChartCornerRadius_BottomRight), [TopLeft](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html#Syncfusion_Blazor_Charts_ChartCornerRadius_TopLeft), [TopRight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html#Syncfusion_Blazor_Charts_ChartCornerRadius_TopRight).
+The [ChartCornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html) property is used to customize the corner radius for bar series. This allows you to create bars with rounded corners, giving your chart a more polished appearance. You can customize each corner of the bars using the [BottomLeft](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html#Syncfusion_Blazor_Charts_ChartCornerRadius_BottomLeft), [BottomRight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html#Syncfusion_Blazor_Charts_ChartCornerRadius_BottomRight), [TopLeft](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html#Syncfusion_Blazor_Charts_ChartCornerRadius_TopLeft), [TopRight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html#Syncfusion_Blazor_Charts_ChartCornerRadius_TopRight) properties.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
@@ -356,25 +357,25 @@ The [ChartSeriesCornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.B
         new ChartData { X= "Feb", Y= 28 },
         new ChartData { X= "Mar", Y= 34 },
         new ChartData { X= "Apr", Y= 32 },
-        new ChartData { X= "May", Y= 40 },
+        new ChartData { X= "May", Y= -38 },
         new ChartData { X= "Jun", Y= 32 },
         new ChartData { X= "Jul", Y= 35 },
-        new ChartData { X= "Aug", Y= 55 },
+        new ChartData { X= "Aug", Y= -30 },
         new ChartData { X= "Sep", Y= 38 },
         new ChartData { X= "Oct", Y= 30 },
-        new ChartData { X= "Nov", Y= 25 },
+        new ChartData { X= "Nov", Y= -25 },
         new ChartData { X= "Dec", Y= 32 }
     };
 }
+
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBeXUiuURAmgUHN?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 ![Blazor Bar Chart Corner Radius](../images/chart-types-images/blazor-bar-chart-corner-radius.png)
 
-We can also access specific bars and customize their corner radius in the [onPointRender](https://blazor.syncfusion.com/documentation/chart/events#onpointrender) event by using its corner radius argument. This approach also works for bars with negative values.
+We can also customize the corner radius for individual points in the chart series using the [OnPointRender](https://blazor.syncfusion.com/documentation/chart/events#onpointrender) event by utilizing its `CornerRadius` argument.
 
 ```cshtml
-@using Syncfusion.Blazor.Charts
+ @using Syncfusion.Blazor.Charts
 
 <SfChart>
     <ChartEvents OnPointRender="PointRenderEvent"></ChartEvents>
@@ -398,27 +399,28 @@ We can also access specific bars and customize their corner radius in the [onPoi
         new ChartData { X= "Feb", Y= 28 },
         new ChartData { X= "Mar", Y= 34 },
         new ChartData { X= "Apr", Y= 32 },
-        new ChartData { X= "May", Y= 40 },
+        new ChartData { X= "May", Y= -38 },
         new ChartData { X= "Jun", Y= 32 },
         new ChartData { X= "Jul", Y= 35 },
-        new ChartData { X= "Aug", Y= 55 },
+        new ChartData { X= "Aug", Y= -30 },
         new ChartData { X= "Sep", Y= 38 },
         new ChartData { X= "Oct", Y= 30 },
         new ChartData { X= "Nov", Y= -25 },
-        new ChartData { X= "Dec", Y= -32 }
+        new ChartData { X= "Dec", Y= 32 }
     };
 
     public void PointRenderEvent(PointRenderEventArgs args)
     {
-        if (args.Point.X == "Jan" || args.Point.X == "Feb" || args.Point.X == "Mar" || args.Point.X == "Apr" || args.Point.X == "May")
+        if (args.Point.X == "Jan" || args.Point.X == "Mar" || args.Point.X == "May" || args.Point.X == "Aug" || args.Point.X == "Nov")
         {
             args.CornerRadius.TopRight = 5;
             args.CornerRadius.BottomRight = 5;
         }
     }
 }
+
 ```
-![Blazor bar chart corner radius using onPointRender event](../images/chart-types-images/blazor-bar-chart-corner-radius-onPointRender.png)
+![Blazor bar chart corner radius using OnPointRender event](../images/chart-types-images/blazor-bar-chart-corner-radius-using_onPointRenderEvent.png)
 
 ## Bar space and width
 

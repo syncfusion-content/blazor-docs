@@ -335,17 +335,15 @@ The [ChartSeriesBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDVptaigJiSoAyNW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Corner radius
+## Corner Radius
 
-The [ChartSeriesCornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html) property is used to customize the corner radius of the series. This allows you to create columns with rounded corners, giving your chart a more polished appearance.The corner radius can be set for each corner individually using the [BottomLeft](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html#Syncfusion_Blazor_Charts_ChartCornerRadius_BottomLeft), [BottomRight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html#Syncfusion_Blazor_Charts_ChartCornerRadius_BottomRight), [TopLeft](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html#Syncfusion_Blazor_Charts_ChartCornerRadius_TopLeft), [TopRight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html#Syncfusion_Blazor_Charts_ChartCornerRadius_TopRight).
+The [ChartCornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html) property is used to customize the corner radius for column series. This allows you to create columns with rounded corners, giving your chart a more polished appearance. You can customize each corner of the columns using the [BottomLeft](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html#Syncfusion_Blazor_Charts_ChartCornerRadius_BottomLeft), [BottomRight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html#Syncfusion_Blazor_Charts_ChartCornerRadius_BottomRight), [TopLeft](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html#Syncfusion_Blazor_Charts_ChartCornerRadius_TopLeft), [TopRight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html#Syncfusion_Blazor_Charts_ChartCornerRadius_TopRight) properties.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Charts
-
 <SfChart>
-
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Sales" XName="Month" YName="Income" Type="ChartSeriesType.Column">
             <ChartMarker Visible="true">
@@ -354,14 +352,12 @@ The [ChartSeriesCornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.B
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
-
 @code {
     public class SalesInfo
     {
         public string Month { get; set; }
         public double Income { get; set; }
     }
-
     public List<SalesInfo> Sales = new List<SalesInfo>
     {
         new SalesInfo { Month = "Jan", Income = 35 },
@@ -373,12 +369,12 @@ The [ChartSeriesCornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.B
         new SalesInfo { Month = "Jul", Income = -35 }
     };
 }
+
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZhSZqCagdOLSRfA?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 ![Blazor Column Chart with Corner radius](../images/chart-types-images/blazor-column-chart-corner-radius.png)
 
-We can also access specific columns and customize their corner radius in the [onPointRender](https://blazor.syncfusion.com/documentation/chart/events#onpointrender) event by using its corner radius argument. This approach also works for columns with negative values.
+We can also customize the corner radius for individual points in the chart series using the [OnPointRender](https://blazor.syncfusion.com/documentation/chart/events#onpointrender) event by utilizing its `CornerRadius` argument.
 
 ```cshtml
 
