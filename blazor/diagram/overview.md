@@ -10,6 +10,8 @@ documentation: ug
 # SfDiagramComponent Overview
  The Blazor Diagram component is a fast and powerful library for visualizing, creating, and editing interactive diagrams. It supports creating flowcharts, organizational charts, mind maps, and more.
 
+ {% youtube "youtube:https://www.youtube.com/watch?v=LIlVk9iOo2U" %}
+
  ![SfDiagramComponent Overview](images/flowchart.png)
 
 ## Key features of SfDiagramComponent are as follows:

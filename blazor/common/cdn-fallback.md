@@ -13,11 +13,11 @@ This section provides information about how to refer fallback [scripts](https://
 
 ## Blazor Server App
 
-CDN links can be down by connection issues or some other problems. This will cause the site looks broken. Follow the below steps to resolve these issues in the Blazor application. 
+CDN links can be down by connection issues or some other problems. This will cause the site looks broken. Follow the below steps to resolve these issues in the Blazor application.
 
-If you are using CDN for style sheet references then you have to add style sheet fallback from [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) by using the [link tag helper](https://docs.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/built-in/link-tag-helper). Syncfusion theme provides the `e-control` class. You can check the style from provided class by using link tag helper property. 
+If you are using CDN for style sheet references then you have to add style sheet fallback from [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) by using the [link tag helper](https://learn.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/built-in/link-tag-helper?view=aspnetcore-7.0). Syncfusion theme provides the `e-control` class. You can check the style from provided class by using link tag helper property.
 
-* **~/Pages/_Host.cshtml** file for **.NET 3.X, .NET 5 and .NET 7**.
+* **~/Pages/_Host.cshtml** file for **.NET 7**.
 * **~/Pages/_Layout.cshtml** for **.NET 6**.
 
 {% tabs %}
@@ -33,7 +33,7 @@ If you are using CDN for style sheet references then you have to add style sheet
 </head>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle=".NET 3.X, .NET 5 & .NET 7 (~/_Host.cshtml)" %}
+{% highlight cshtml tabtitle=".NET 7 (~/_Host.cshtml)" %}
 
 <head>
     ...
@@ -55,7 +55,7 @@ For Blazor WebAssembly app, refer the script and style sheet fallback from [Stat
 
 ### Script Fallback
 
-You can check the Syncfusion Blazor object for script fallback whether scripts are loaded or not. If it's not loaded, create a script tag and refer scripts externally inside the `<head>` of **wwwroot/index.html** file in client web app as in the below code. 
+You can check the Syncfusion Blazor object for script fallback whether scripts are loaded or not. If it's not loaded, create a script tag and refer scripts externally inside the `<head>` of **wwwroot/index.html** file in client web app as in the below code.
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/index.html" %}
@@ -77,7 +77,7 @@ You can check the Syncfusion Blazor object for script fallback whether scripts a
 
 ### Style Sheet Fallback
 
-You can refer the theme style sheet inside the `<head>` of **wwwroot/index.html** file in client web app like below. 
+You can refer the theme style sheet inside the `<head>` of **wwwroot/index.html** file in client web app like below.
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/index.html" %}

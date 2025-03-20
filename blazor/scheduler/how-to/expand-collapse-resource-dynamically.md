@@ -97,5 +97,3 @@ In Blazor Scheduler, a resource can be expanded or collapsed by clicking the exp
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LtVqXmWsqyHFlpeJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

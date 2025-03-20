@@ -22,8 +22,8 @@ The baseline feature enables users to view the deviation between the planned dat
 </SfGantt>
 
 @code{
-    private DateTime ProjectStart = new DateTime(2019, 04, 01);
-    private DateTime ProjectEnd = new DateTime(2019, 04, 30);
+    private DateTime ProjectStart = new DateTime(2022, 04, 01);
+    private DateTime ProjectEnd = new DateTime(2022, 04, 30); 
     private List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
     {
@@ -35,9 +35,9 @@ The baseline feature enables users to view the deviation between the planned dat
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
-        public DateTime BaselineStartDate { get; set; }
-        public DateTime BaselineEndDate { get; set; }
+        public DateTime? EndDate { get; set; }
+        public DateTime? BaselineStartDate { get; set; }
+        public DateTime? BaselineEndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }

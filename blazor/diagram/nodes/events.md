@@ -313,7 +313,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to enable or disable certain behaviors of the node
 
-The Constraints property of node allows you to enable or disable certain features. For more information about node constraints, refer to the [Node Constraints](../constraints).
+The Constraints property of node allows you to enable or disable certain features. For more information about node constraints, refer to the [Node Constraints](https://blazor.syncfusion.com/documentation/diagram/constraints#node-constraints).
 
 ## See also
 

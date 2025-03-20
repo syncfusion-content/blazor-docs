@@ -27,7 +27,7 @@ A node can be selected at runtime by using the [Select](https://help.syncfusion.
 
 @code
 {
-    // reference of the diagram
+    // Reference of the diagram
     SfDiagramComponent diagram;
     // To define node collection
     DiagramObjectCollection<Node> nodes;
@@ -86,7 +86,7 @@ A node can be dragged at runtime by using the [Drag](https://help.syncfusion.com
 
 @code
 {
-    // reference of the diagram
+    // Reference of the diagram
     SfDiagramComponent Diagram;
     // To define node collection
     DiagramObjectCollection<Node> nodes;
@@ -139,7 +139,7 @@ A node can be resized at runtime by using the [Scale](https://help.syncfusion.co
 
 @code
 {
-    // reference of the diagram
+    // Reference of the diagram
     SfDiagramComponent diagram;
     // To define node collection
     DiagramObjectCollection<Node> nodes;
@@ -193,7 +193,7 @@ A node can be rotated at runtime by using the [Rotate](https://help.syncfusion.c
 
 @code
 {
-    // reference of the diagram
+    // Reference of the diagram
     SfDiagramComponent diagram;
     // To define node collection
     DiagramObjectCollection<Node> nodes;

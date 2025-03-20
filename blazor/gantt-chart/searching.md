@@ -30,7 +30,7 @@ You can search for records in the Gantt Chart component by using the [SearchAsyn
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -57,7 +57,6 @@ You can search for records in the Gantt Chart component by using the [SearchAsyn
 The following screenshot shows the output of searching for string in Gantt Chart component.
 
 ![Searching in Blazor Gantt Chart](images/blazor-gantt-chart-searching.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hXrANwCmzTiFOpGH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Initial search
 
@@ -85,7 +84,7 @@ In the Gantt Chart component, you can load a task with some search criteria by u
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -110,7 +109,6 @@ In the Gantt Chart component, you can load a task with some search criteria by u
 ```
 
 ![Blazor Gantt Chart with Initial Search](images/blazor-gantt-chart-initial-search.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BNLUjwiczzopuAmy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Search operators
 
@@ -157,7 +155,7 @@ To search the Gantt Chart records from an external button, invoke the `SearchAsy
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -182,7 +180,6 @@ To search the Gantt Chart records from an external button, invoke the `SearchAsy
 ```
 
 ![Searching in Blazor Gantt Chart](images/blazor-gantt-chart-search.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hjhKDQWcTzHpQrvR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> You should set the `AllowFiltering` property to `true` for searching the content externally.
 
@@ -210,7 +207,7 @@ By default, the Gantt Chart component searches all the columns. You can search s
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -270,7 +267,7 @@ You can pass the `empty` string to the `SearchAsync` method to clear the searche
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -293,5 +290,3 @@ You can pass the `empty` string to the `SearchAsync` method to clear the searche
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hNBUXcWGJzcvHhjY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

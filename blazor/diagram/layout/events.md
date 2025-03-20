@@ -18,74 +18,88 @@ The following code example explains the data loaded event in the diagram.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" DataLoaded="@DataLoaded" Nodes="@nodes" Connectors="@connectors" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating">
-    <Layout Type="LayoutType.HierarchicalTree" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-VerticalSpacing="@VerticalSpacing">
+<SfDiagramComponent @ref="diagram" Width="100%" Height="600px" DataLoaded="@DataLoaded" NodeCreating="NodeCreating" ConnectorCreating="ConnectorCreating">
+    <DataSourceSettings DataSource="DataSource" ID="Id" ParentID="Manager"></DataSourceSettings>
+    <Layout @bind-Type="type" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-FixedNode="@FixedNode" @bind-Orientation="@oreintation" @bind-VerticalSpacing="@VerticalSpacing" @bind-HorizontalAlignment="@horizontalAlignment" @bind-VerticalAlignment="@verticalAlignment">
+        <LayoutMargin @bind-Top="@top" @bind-Bottom="@bottom" @bind-Right="@right" @bind-Left="@left"></LayoutMargin>
     </Layout>
-    <SnapSettings>
-        <HorizontalGridLines LineColor="white" LineDashArray="2,2">
-        </HorizontalGridLines>
-        <VerticalGridLines LineColor="white" LineDashArray="2,2">
-        </VerticalGridLines>
-    </SnapSettings>
+    <SnapSettings></SnapSettings>
 </SfDiagramComponent>
 
-@code 
+@code
 {
-    int left = 40;
-    int top = 50;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
-    int HorizontalSpacing = 40;
-    int VerticalSpacing = 40;
+    public SfDiagramComponent diagram;
+    double top = 50;
+    double bottom = 50;
+    double right = 50;
+    double left = 50;
+    LayoutType type = LayoutType.OrganizationalChart;
+    LayoutOrientation oreintation = LayoutOrientation.TopToBottom;
+    HorizontalAlignment horizontalAlignment = HorizontalAlignment.Auto;
+    VerticalAlignment verticalAlignment = VerticalAlignment.Auto;
+    int HorizontalSpacing = 30;
+    int VerticalSpacing = 30;
+    private string FixedNode = null;
+    public class HierarchicalDetails
+    {
+        public string Id { get; set; }
+        public string Role { get; set; }
+        public string Manager { get; set; }
+        public string ChartType { get; set; }
+        public string Color { get; set; }
+    }
+    public List<HierarchicalDetails> DataSource = new List<HierarchicalDetails>()
+    {
+            new HierarchicalDetails()   { Id= "parent", Role= "Board", Color= "#71AF17" },
+            new HierarchicalDetails()   { Id= "1", Role= "General Manager", Manager= "parent", ChartType= "right", Color= "#71AF17" },
+            new HierarchicalDetails()   { Id= "11", Role= "Assistant Manager", Manager= "1", Color= "#71AF17" },
+            new HierarchicalDetails()   { Id= "2", Role= "Human Resource Manager", Manager= "1", ChartType= "right", Color= "#1859B7" },
+            new HierarchicalDetails()   { Id= "3", Role= "Trainers", Manager= "2", Color= "#2E95D8" },
+            new HierarchicalDetails()   { Id= "4", Role= "Recruiting Team", Manager= "2", Color= "#2E95D8" },
+            new HierarchicalDetails()   { Id= "5", Role= "Finance Asst. Manager", Manager= "2", Color= "#2E95D8" },
+            new HierarchicalDetails()   { Id= "6", Role= "Design Manager", Manager= "1",ChartType= "right", Color= "#1859B7" },
+            new HierarchicalDetails()   { Id= "7", Role= "Design Supervisor", Manager= "6", Color= "#2E95D8" },
+            new HierarchicalDetails()   { Id= "8", Role= "Development Supervisor", Manager= "6", Color= "#2E95D8" },
+            new HierarchicalDetails()   { Id= "9", Role= "Drafting Supervisor", Manager= "6", Color= "#2E95D8" },
+            new HierarchicalDetails()   { Id= "10", Role= "Operation Manager", Manager= "1", ChartType= "right", Color= "#1859B7" },
+            new HierarchicalDetails()   { Id= "11", Role= "Statistic Department", Manager= "10", Color= "#2E95D8" },
+            new HierarchicalDetails()   { Id= "12", Role= "Logistic Department", Manager= "10", Color= "#2E95D8" },
+            new HierarchicalDetails()   { Id= "16", Role= "Marketing Manager", Manager= "1", ChartType= "right", Color= "#1859B7" },
+            new HierarchicalDetails()   { Id= "17", Role= "Oversea sales Manager", Manager= "16", Color= "#2E95D8" },
+            new HierarchicalDetails()   { Id= "18", Role= "Petroleum Manager", Manager= "16", Color= "#2E95D8" },
+            new HierarchicalDetails()   { Id= "20", Role= "Service Dept. Manager", Manager= "16", Color= "#2E95D8" },
+            new HierarchicalDetails()   { Id= "21", Role= "Quality Department", Manager= "16", Color= "#2E95D8" }
 
-    private void OnNodeCreating(IDiagramObject obj)
+    };
+    private void NodeCreating(IDiagramObject obj)
     {
         Node node = obj as Node;
-        node.Height = 40;
-        node.Width = 100;
-        //Initialize the default node's shape style.
-        node.Style = new ShapeStyle() { Fill = "darkcyan", StrokeWidth = 3, StrokeColor = "Black" };
+        if (node.Data is System.Text.Json.JsonElement)
+        {
+            node.Data = System.Text.Json.JsonSerializer.Deserialize<HierarchicalDetails>(node.Data.ToString());
+        }
+        HierarchicalDetails hierarchicalData = node.Data as HierarchicalDetails;
+        node.Width = 150;
+        node.Height = 50;
+        node.Style.Fill = hierarchicalData.Color;
+        // node.IsVisible = false;
         node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
         {
-            new ShapeAnnotation 
-            { 
-                Content = node.Annotations[0].Content,
-                Style = new TextStyle() { Color = "white", Bold = true }, 
+            new ShapeAnnotation()
+            {
+                Content = hierarchicalData.Role,
+                Style =new TextStyle(){Color = "white"}
             }
         };
+    }
+    private void ConnectorCreating(IDiagramObject connector)
+    {
+        (connector as Connector).Type = ConnectorSegmentType.Orthogonal;
+        (connector as Connector).TargetDecorator.Shape = DecoratorShape.None;
     }
     private void DataLoaded(object args)
     {
         //Action to be performed.
-    }
-
-    private void OnConnectorCreating(IDiagramObject connector)
-    {
-        (connector as Connector).Type = ConnectorSegmentType.Orthogonal;
-    }
-
-    protected override void OnInitialized()
-    {
-        //Initialize the node and connectors.
-        nodes = new DiagramObjectCollection<Node>()
-        {
-            new Node() { ID="node1", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="Steve-Ceo"} } },
-            new Node() { ID="node2", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="Kevin-Manager"} } },
-            new Node() { ID="node3", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="Peter-Manager"} } },
-            new Node() { ID="node4", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="Jim-CSE"} } },
-            new Node() { ID="node5", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="Martin-CSE"} } },
-            new Node() { ID="node6", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="John-Manager"} } },
-            new Node() { ID="node7", Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation{Content="Mary-CSE"} } },
-        };
-        connectors = new DiagramObjectCollection<Connector>()
-        {
-            new Connector() { ID="connector1", SourceID="node1", TargetID="node2" },
-            new Connector() { ID="connector2", SourceID="node1", TargetID="node3" },
-            new Connector() { ID="connector3", SourceID="node2", TargetID="node4" },
-            new Connector() { ID="connector4", SourceID="node2", TargetID="node5" },
-            new Connector() { ID="connector5", SourceID="node3", TargetID="node6" },
-            new Connector() { ID="connector6", SourceID="node3", TargetID="node7" },
-        };
     }
 }
 ```

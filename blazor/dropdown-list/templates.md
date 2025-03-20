@@ -109,7 +109,7 @@ In the following sample, when the data fetch request fails, the DropDownList dis
 
 ![Blazor DropDownList with Action Failure Template](./images/template/blazor-dropdownlist-action-failure-template.png)
 
-## See Also
+## See also
 
 * [Select a value in Blazor DropDownList during bUnit test](https://www.syncfusion.com/forums/172141/how-can-i-select-a-value-in-an-sfdropdown-during-a-bunit-test)
 * [Client side validation in Blazor DropDownList](https://www.syncfusion.com/forums/172516/client-side-validation-on-dropdown-list)

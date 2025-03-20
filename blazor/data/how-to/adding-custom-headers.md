@@ -11,9 +11,9 @@ documentation: ug
 
 # Adding Custom Headers in Blazor DataManager Component
 
-Custom headers can be added to the [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) request using its [Headers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Headers) property.
+Custom headers can be added to the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) request using its [Headers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Headers) property.
 
-The following sample code demonstrates adding custom headers to the [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) request which is bound with the DataGrid component,
+The following sample code demonstrates adding custom headers to the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) request which is bound with the DataGrid component,
 
 ```cshtml
 @using Syncfusion.Blazor

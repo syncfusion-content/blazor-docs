@@ -43,7 +43,7 @@ This support is used to view all the tasks available in a project to specific ti
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public string Predecessor { get; set; }
@@ -69,7 +69,6 @@ This support is used to view all the tasks available in a project to specific ti
 ```
 
 ![Zooming in Blazor Gantt Chart](images/blazor-gantt-chart-zooming.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hDrUjGWbpZfNEyhr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Zoom action by methods
 
@@ -109,7 +108,7 @@ In the Gantt chart, the zoom-in and zoom-out actions are performed based on the 
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public string Predecessor { get; set; }
@@ -133,5 +132,5 @@ In the Gantt chart, the zoom-in and zoom-out actions are performed based on the 
     }
 }
 ```
+
 ![Customizing zooming levels in Blazor Gantt Chart](images/blazor-gantt-chart-custom-zooming-levels.gif)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rDrqXQibzCycQoXw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

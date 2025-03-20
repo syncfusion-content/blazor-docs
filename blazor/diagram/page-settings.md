@@ -19,6 +19,10 @@ By default, Diagram’s page size is decided based on the position of its diagra
 
 * To explore those properties, refer to [PageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageSettings.html).
 
+To learn more about customization of diagram page, refer to the below video link,
+
+{% youtube "https://www.youtube.com/watch?v=iKuBSy8mOpE&t=74s" %}
+
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 

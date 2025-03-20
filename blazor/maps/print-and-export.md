@@ -122,8 +122,8 @@ The image can be exported as base64 string for the JPEG, PNG and PDF formats. Th
 }
 ```
 
-N>Add the below service in startup.cs file if the size of the Maps is too large.
-services.AddServerSideBlazor().AddHubOptions(o => { o.MaximumReceiveMessageSize = 102400000; });
+N>Add the below service in Program.cs file if the size of the Maps is too large.
+builder.Services.AddServerSideBlazor().AddHubOptions(o => { o.MaximumReceiveMessageSize = 102400000; });
 
 ### Export the tile Maps
 

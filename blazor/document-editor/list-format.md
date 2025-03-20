@@ -23,7 +23,7 @@ Bullets are usually used for unordered lists. To apply bulleted list for selecte
 Refer to the following sample code.
 
 ```csharp
-documentEditor.Editor.ApplyBulletAsync("\uf0b7", "Symbol");
+await container.DocumentEditor.Editor.ApplyBulletAsync("\uf0b7", "Symbol");
 ```
 
 ## Create numbered list
@@ -38,7 +38,7 @@ Numbered lists are usually used for ordered lists. To apply numbered list for se
 Refer to the following example.
 
 ```csharp
-documentEditor.Editor.ApplyNumberingAsync("%1)", ListLevelPattern.UpRoman);
+await container.DocumentEditor.Editor.ApplyNumberingAsync("%1)", ListLevelPattern.UpRoman);
 ```
 
 ## Clear list
@@ -46,7 +46,7 @@ documentEditor.Editor.ApplyNumberingAsync("%1)", ListLevelPattern.UpRoman);
 You can also clear the list formatting applied for selected paragraphs. Refer to the following sample code.
 
 ```csharp
-documentEditor.Editor.ClearListAsync();
+await container.DocumentEditor.Editor.ClearListAsync();
 ```
 
 ## Editing numbered list

@@ -9,7 +9,7 @@ documentation: ug
 
 # Custom Binding in Blazor DataGrid Component
 
-The [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) has custom adaptor support which allows you to perform manual operations on the data. This can be utilized for implementing custom data binding and editing operations in the DataGrid component.
+The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) has custom adaptor support which allows you to perform manual operations on the data. This can be utilized for implementing custom data binding and editing operations in the DataGrid component.
 
 For implementing custom data binding in DataGrid, the **DataAdaptor** class is used. This abstract class acts as a base class for the custom adaptor.
 
@@ -160,8 +160,8 @@ The following sample code demonstrates implementing custom data binding using cu
 N> If the **DataManagerRequest.RequiresCounts** value is **true**, then the Read/ReadAsync return value must be of **DataResult** with properties **Result** whose value is a collection of records and **Count** whose value is the total number of records. If the **DataManagerRequest.RequiresCounts** is **false**, then simply send the collection of records.
 
 The following image shows the custom bound data displayed in the DataGrid component,
+
 ![Custom Binding in Blazor DataGrid](./images/blazor-datagrid-custom-binding.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rZVUDxBDVBdyGymu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> If the Read/ReadAsync method is not overridden in the custom adaptor, then it will be handled by the default read handler.
 
@@ -169,16 +169,14 @@ N> If the Read/ReadAsync method is not overridden in the custom adaptor, then it
 
 If you want to inject some of your service into Custom Adaptor and use the service, then you can achieve your requirement by using below way.
 
-Initially, you need to add CustomAdaptor class as AddScoped in `StartUp.cs` file.
+Initially, you need to add CustomAdaptor class as AddScoped in `Program.cs` file.
 
 ```csharp
-public void ConfigureServices(IServiceCollection services)
-{
-    ...
-    services.AddSingleton<OrderDataAccessLayer>();
-    services.AddScoped<CustomAdaptor>();
-    services.AddScoped<ServiceClass>();
-}
+
+builder.Services.AddSingleton<OrderDataAccessLayer>();
+builder.Services.AddScoped<CustomAdaptor>();
+builder.Services.AddScoped<ServiceClass>();
+
 ```
 
 The following sample code demonstrates injecting service into Custom Adaptor,
@@ -247,14 +245,10 @@ The following sample code demonstrates injecting service into Custom Adaptor,
 
 Custom Adaptor can be created as a component when `DataAdaptor` is extended from `OwningComponentBase`. You can create Custom Adaptor from any of the two versions of the class, `DataAdaptor` and `DataAdaptor<T>`.
 
-Ensure to register your service in **Startup.cs** file.
+Ensure to register your service in **Program.cs** file.
 
 ```csharp
-public void ConfigureServices(IServiceCollection services)
-{
-    ...
-    services.AddScoped<Order>();
-}
+builder.Services.AddScoped<Order>();
 ```
 
 The following sample code demonstrates creating Custom Adaptor as a component,
@@ -555,10 +549,10 @@ The following sample code demonstrates implementing CRUD operations for the cust
 ```
 
 The following GIF displays the CRUD operations performed on the custom bound data displayed in the DataGrid component,
-![Editing Custom Data in Blazor DataGrid](./images/blazor-datagrid-editing-custom-data.gif)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rDhUNxrDVKvbDDQW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
-N> You can refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
+![Editing Custom Data in Blazor DataGrid](./images/blazor-datagrid-editing-custom-data.gif)
+
+N> You can refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand how to present and manipulate data.
 
 ## Handling Aggregates in Custom Adaptor
 
@@ -664,8 +658,6 @@ The following sample code demonstrates implementing the aggregates for the custo
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rDVgZxrNBTtbSZmz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 ## Handling Grouping in Custom Adaptor
 
 When using Custom Adaptor, the grouping operation has to be handled in the Read/ReadAsync method of Custom adaptor.
@@ -744,8 +736,6 @@ The following sample code demonstrates implementing the grouping operation for t
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VtVqNxhNVTLmHKZt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 ## Handling Filtering in Custom Adaptor
 
 When using a custom adaptor, the filtering operation has to be handled by overriding the Read/ReadAsync method of the DataAdaptor abstract class. In the DataManagerRequest class, you can get the grid action details as shown in the below image.
@@ -823,7 +813,6 @@ The following sample code demonstrates implementing the filtering operation for 
 
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hDVANdBjrTSqYlYa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-filtering-with-custom-adaptor)
 
@@ -903,8 +892,6 @@ The following sample code demonstrates implementing the sorting operation for th
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rNBUZdhtBeMxlaID?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-sorting-with-custom-adaptor)
 
 ## How to pass additional parameters to custom adaptor
@@ -930,7 +917,7 @@ The following sample code demonstrates sending additional parameters to the cust
 
 @code{
     public static List<Order> Orders { get; set; }
-    public Query Query = new Query().AddParams("Code", 10); 
+    public Query Query = new Query().AddParams("Code", 10);
 
     protected override void OnInitialized()
     {
@@ -999,5 +986,5 @@ The following sample code demonstrates sending additional parameters to the cust
 }
 
 ```
+
 ![Passing Additional Parameters to Custom Adaptor in Blazor DataGrid](./images/blazor-datagrid-passing-additional-parameter-to-custom-adaptor.gif)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LtLUZnLXBSgMKMry?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

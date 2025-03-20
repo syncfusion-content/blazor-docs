@@ -9,7 +9,7 @@ documentation: ug
 
 # Styles and Appearances in Blazor ContextMenu Component
 
-To modify the [Blazor Context Menu](https://www.syncfusion.com/blazor-components/blazor-context-menu) appearance, you need to override the default CSS of ContextMenu component. Find the list of CSS classes and its corresponding section in ContextMenu component. Also, you have an option to create your own custom theme for the controls using our [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
+To modify the [Blazor Context Menu](https://www.syncfusion.com/blazor-components/blazor-context-menu) appearance, you need to override the default CSS of ContextMenu component. Find the list of CSS classes and its corresponding section in ContextMenu component. Also, you have an option to create your own custom theme for the controls using our [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=bootstrap5).
 
 | CSS Class | Purpose of Class |
 | ----- | ----- |

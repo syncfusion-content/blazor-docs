@@ -9,9 +9,9 @@ documentation: ug
 
 # Create Dropdown List in Popup of Blazor Dropdown Menu Component
 
-We have render the `DropDownList` component in `DropDownMenu` popup using `PopupContent` property.
+We have render the [DropDownList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html) component in [DropDownMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html) popup using [PopupContent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_PopupContent) property.
 
-In the following example, render `DropDownList` component in popup.
+In the following example, render [DropDownList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html) component in popup.
 
 ```cshtml
 

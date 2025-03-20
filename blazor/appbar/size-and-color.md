@@ -69,7 +69,7 @@ This height mode can be set to the AppBar by setting `AppBarMode.Prominent` to t
         line-height: 50px;
     }
     .control-container .e-appbar.prominent-appbar {
-        background-image: url("https://blazor.syncfusion.com/demos/_content/BlazorServerCommon_NET6/images/appbar/prominent.png");
+        background-image: url("https://blazor.syncfusion.com/demos/_content/blazor_server_common_net8/images/appbar/prominent.png");
         background-size: 100% 400px;
         color: #ffffff;
         background-repeat: no-repeat;

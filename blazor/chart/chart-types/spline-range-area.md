@@ -48,7 +48,6 @@ documentation: ug
 ```
 
 ![Blazor Spline Range Area Chart](../images/chart-types-images/blazor-spline-range-area-chart.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rNhgtwtfBYfxjPvM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 > Refer to our [Blazor Spline Range Area Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/range-area-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Spline Range Area Chart Example](https://blazor.syncfusion.com/demos/chart/range-area?theme=bootstrap4) to know how to show variations in the data values for a given time.
 
@@ -99,7 +98,6 @@ The following properties can be used to customize the [Spline Range Area](https:
 ```
 
 ![Blazor Spline Range Area Chart with Custom Series](../images/chart-types-images/blazor-spline-range-area-chart-custom-series.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BDhKtQXzralNCdmF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 > Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

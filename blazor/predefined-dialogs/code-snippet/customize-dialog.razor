@@ -5,24 +5,33 @@
     <div>
         <SfButton @onclick="@PromptBtn">Prompt</SfButton>
     </div>
+    <div>
+        <span class="status">
+            @DialogStatus
+        </span>
+    </div>
 @code {
+    private string InputValue { get; set; }
+
+    private string DialogStatus { get; set; }
+
     private async Task PromptBtn()
     {
         string promptText = await DialogService.PromptAsync(null, "Join Chat Group", new DialogOptions()
-            {
-              
-        ChildContent = @<table class="Table">
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <label>Enter your name: </label>
-                                </td>
-                                <td>
-                                <SfTextBox Value="text" Type="InputType.Text"></SfTextBox>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+        {
+            ChildContent = @<table class="Table">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <label>Enter your name: </label>
+                                        </td>
+                                        <td>
+                                            <SfTextBox Type="InputType.Text" @bind-Value="InputValue"></SfTextBox>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
         });
+        this.DialogStatus = $"The user's input is returned as \"{InputValue}\".";
     }
 }

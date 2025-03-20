@@ -32,7 +32,7 @@ To enable sorting in the Gantt Chart component, set the [AllowSorting](https://h
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -59,7 +59,6 @@ To enable sorting in the Gantt Chart component, set the [AllowSorting](https://h
 The following screenshot shows the output of multicolumn sorting in Gantt Chart component.
 
 ![MultiColumn Sorting in Blazor Gantt Chart](images/blazor-gantt-chart-multi-column-sorting.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rjhKXGsPLfjLdFCB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> * Gantt Chart columns are sorted in the ascending order. If you click the already sorted column, the sort direction toggles.
 <br/> * To disable sorting for a particular column, set the `GanttColumn.AllowSorting` property to false.
@@ -94,7 +93,7 @@ The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gan
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -117,8 +116,6 @@ The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gan
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rjrgDcsFhJcsDFbR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Sorting column dynamically
 
@@ -149,7 +146,7 @@ Columns in the Gantt Chart component can be sorted dynamically using the [SortBy
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -174,7 +171,6 @@ Columns in the Gantt Chart component can be sorted dynamically using the [SortBy
 ```
 
 ![Sorting in Blazor Gantt Chart](images/blazor-gantt-chart-sorting.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VZBKZGilLSXqrcyq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Clear all the sorted columns dynamically
 
@@ -211,7 +207,7 @@ In the Gantt Chart component, you can clear all the sorted columns and return to
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -236,7 +232,6 @@ In the Gantt Chart component, you can clear all the sorted columns and return to
 ```
 
 ![Clear Sorting in Blazor Gantt Chart](images/blazor-gantt-chart-clear-sorting.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rZrgtwWPrnCeTlQb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Sorting events
 
@@ -270,7 +265,7 @@ During the sort action, the Gantt Chart component triggers two events. The [OnAc
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -293,8 +288,6 @@ During the sort action, the Gantt Chart component triggers two events. The [OnAc
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/htrgjQsFBRLATSVN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> The `args.RequestType` is the current action name. For example, for sorting the `args.RequestType`, value is **Sorting**.
 
@@ -336,7 +329,7 @@ The following code snippets explains how to achieve this.
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -361,4 +354,10 @@ The following code snippets explains how to achieve this.
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VDBAZGibrRgwCXOF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
+## Touch interaction
+
+To perform `tap` action on a column header, trigger [Sorting](sorting/#sorting) operation to the selected column. A popup is displayed for multi-column sorting. To sort multiple columns, tap the popup, and then tap the desired column headers.
+
+The following screenshot shows Gantt touch sorting,
+
+![Multiple Sorting in Blazor Gantt Chart](images/blazor-gantt-chart-multiple-sorting.png)

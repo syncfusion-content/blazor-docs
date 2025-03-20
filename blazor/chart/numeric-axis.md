@@ -11,7 +11,7 @@ documentation: ug
 
 # Numeric Axis in Blazor Charts Component
 
-Numeric axis can be used to represent numeric values in a chart. The [ValueType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_ValueType) of an axis is [Double](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html#Syncfusion_Blazor_Charts_ValueType_Double) by default.
+Numeric axis can be used to represent numeric values in a chart. The [ValueType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_ValueType) of an axis is [Double](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html#Syncfusion_Blazor_Charts_ValueType_Double) by default.
 
 ```cshtml
 
@@ -46,11 +46,10 @@ Numeric axis can be used to represent numeric values in a chart. The [ValueType]
 ```
 
 ![Blazor Line Chart with Numeric Axis](images/numeric-axis/blazor-line-chart-numeric-axis.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hNLUtnVbhQyOmAtf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Range and interval
 
-The axis range will be calculated automatically based on the provided data; however, the axis range can also be customized using [Minimum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Minimum), [Maximum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Maximum), and [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Interval) properties.
+The axis range will be calculated automatically based on the provided data; however, the axis range can also be customized using [Minimum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Minimum), [Maximum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Maximum), and [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Interval) properties.
 
 ```cshtml
 
@@ -86,11 +85,10 @@ The axis range will be calculated automatically based on the provided data; howe
 ```
 
 ![Changing Blazor Line Chart Axis based on Range](images/numeric-axis/blazor-line-chart-axis-range.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BtBUNxhlLQQAbkej?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Range padding
 
-The [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_RangePadding) property can be used to apply padding to the minimum and maximum extremes of range. The following types of padding are supported by the numeric axis:
+The [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_RangePadding) property can be used to apply padding to the minimum and maximum extremes of range. The following types of padding are supported by the numeric axis:
 
 * None
 * Round
@@ -100,7 +98,7 @@ The [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 
 **Numeric - None**
 
-When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_RangePadding) is set to **None**, the minimum and maximum of an axis is based on the data.
+When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_RangePadding) is set to **None**, the minimum and maximum of an axis is based on the data.
 
 ```cshtml
 
@@ -136,11 +134,10 @@ When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 ```
 
 ![Blazor Line Chart without RangePadding](images/numeric-axis/blazor-line-chart-range-without-padding.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rNLAXRhlVPjjrCVb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 **Numeric - Round**
 
-When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_RangePadding) is set to **Round**, the minimum and maximum will be rounded to the nearest possible value divisible by interval. For example, when the minimum is 3.5 and the interval is 1, then the minimum will be rounded to 3.
+When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_RangePadding) is set to **Round**, the minimum and maximum will be rounded to the nearest possible value divisible by interval. For example, when the minimum is 3.5 and the interval is 1, then the minimum will be rounded to 3.
 
 ```cshtml
 
@@ -176,11 +173,10 @@ When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 ```
 
 ![Blazor Line Chart with Round RangePadding](images/numeric-axis/blazor-line-chart-round-range-padding.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rDBAZxLlrPyiCcTK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 **Numeric - Additional**
 
-When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_RangePadding) is set to **Additional**, interval of an axis will be padded to the minimum and maximum of the axis.
+When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_RangePadding) is set to **Additional**, interval of an axis will be padded to the minimum and maximum of the axis.
 
 ```cshtml
 
@@ -216,11 +212,10 @@ When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 ```
 
 ![Blazor Line Chart with Additional RangePadding](images/numeric-axis/blazor-line-chart-additional-range-padding.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BtVqjnhvLluEizUC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 **Numeric - Normal**
 
-When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_RangePadding) is set to **Normal**, padding is applied to the axis based on default range calculation.
+When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_RangePadding) is set to **Normal**, padding is applied to the axis based on default range calculation.
 
 ```cshtml
 
@@ -256,11 +251,10 @@ When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 ```
 
 ![Blazor Line Chart with Normal RangePadding](images/numeric-axis/blazor-line-chart-normal-range-padding.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VDhAXnVvVuXxMKVG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 **Numeric - Auto**
 
-When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_RangePadding) is set to **Auto**, horizontal numeric axis takes **None** as padding calculation, while the vertical numeric axis takes **Normal** as padding calculation.
+When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_RangePadding) is set to **Auto**, horizontal numeric axis takes **None** as padding calculation, while the vertical numeric axis takes **Normal** as padding calculation.
 
 ```cshtml
 
@@ -297,11 +291,10 @@ When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 ```
 
 ![Blazor Line Chart with Auto RangePadding](images/numeric-axis/blazor-line-chart-auto-rangepadding.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rjBgNRBlVOWoYCyb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Label format
 
-Using the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_LabelFormat) property on an axis, it is possible to format the numeric labels to all globalize formats.
+Using the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_LabelFormat) property on an axis, it is possible to format the numeric labels to all globalize formats.
 
 ```cshtml
 
@@ -342,7 +335,6 @@ Using the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 ```
 
 ![Label Formatting in Blazor Line Chart](images/numeric-axis/blazor-line-chart-label-format.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hZrKZRrvVaRNOkTX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 The table below shows the results of applying various commonly used label formats to numeric data.
 
@@ -443,7 +435,6 @@ Axis also supports custom label format using placeholders such as {value}K, wher
 ```
 
 ![Blazor Line Chart with Custom Label Format](images/numeric-axis/blazor-line-chart-custom-label-format.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rXLgZxLlrEPwsweX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

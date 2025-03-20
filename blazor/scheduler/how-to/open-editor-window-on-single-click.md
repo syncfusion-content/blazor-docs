@@ -63,5 +63,3 @@ By default, the editor window will open on double clicking the cell or appointme
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BtBAjciWAXHiypMJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

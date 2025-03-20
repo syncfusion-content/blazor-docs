@@ -409,17 +409,18 @@ The following code example illustrates how to execute the space commands.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" value="Left" @onclick="@OnDistributeLeft" />
-<input type="button" value="Right" @onclick="@OnDistributeRight" />
-<input type="button" value="Top" @onclick="@OnDistributeTop" />
-<input type="button" value="Bottom" @onclick="@OnDistributeBottom" />
-<input type="button" value="Center" @onclick="@OnDistributeCenter" />
-<input type="button" value="Middle" @onclick="@OnDistributeMiddle" />
-<input type="button" value="BottomToTop" @onclick="@OnDistributeBottomToTop" />
-<input type="button" value="RightToLeft" @onclick="@OnDistributeRightToLeft" />
+<SfButton Content="DistributeLeft" OnClick="@OnDistributeLeft" />
+<SfButton Content="DistributeRight" OnClick="@OnDistributeRight" />
+<SfButton Content="DistributeTop" OnClick="@OnDistributeTop" />
+<SfButton Content="DistributeBottom" OnClick="@OnDistributeBottom" />
+<SfButton Content="DistributeCenter" OnClick="@OnDistributeCenter" />
+<SfButton Content="DistributeMiddle" OnClick="@OnDistributeMiddle" />
+<SfButton Content="DistributeBottomToTop" OnClick="@OnDistributeBottomToTop" />
+<SfButton Content="DistributeRightToLeft" OnClick="@OnDistributeRightToLeft" />
 
-<SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" Nodes="@nodes" Connectors="@Connectors"/>
+<SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" Nodes="@nodes" Connectors="@Connectors" />
 
 @code
 {
@@ -427,37 +428,37 @@ The following code example illustrates how to execute the space commands.
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     DiagramObjectCollection<Connector> Connectors = new DiagramObjectCollection<Connector>();
 
-     protected override void OnInitialized()
+    protected override void OnInitialized()
     {
         Node node1 = new Node()
-        {
-            ID = "node1",
-            Width = 50,
-            Height = 30,
-            OffsetX = 500,
-            OffsetY = 100,
-            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
-        };
+            {
+                ID = "node1",
+                Width = 50,
+                Height = 30,
+                OffsetX = 500,
+                OffsetY = 100,
+                Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
+            };
         nodes.Add(node1);
         Node node2 = new Node()
-        {
-            ID = "node2",
-            Width = 60,
-            Height = 40,
-            OffsetX = 400,
-            OffsetY = 200,
-            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
-        };
+            {
+                ID = "node2",
+                Width = 60,
+                Height = 40,
+                OffsetX = 400,
+                OffsetY = 200,
+                Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
+            };
         nodes.Add(node2);
         Node node3 = new Node()
-        {
-            ID = "node3",
-            Width = 70,
-            Height = 50,
-            OffsetX = 500,
-            OffsetY = 300,
-            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
-        };
+            {
+                ID = "node3",
+                Width = 70,
+                Height = 50,
+                OffsetX = 500,
+                OffsetY = 300,
+                Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle }
+            };
         nodes.Add(node3);
     }
 
@@ -510,7 +511,7 @@ The following code example illustrates how to execute the space commands.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/SetDistributeCommands)
 ## Sizing Commands
 
 Sizing [SetSameSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SetSameSize_Syncfusion_Blazor_Diagram_SizingMode_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) commands are used to resize all selected object based on width, height, and size of the reference object (FirstSelectedItem).
@@ -1141,217 +1142,7 @@ The [Undo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDia
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/NudgeCommand/NudgeCommand)
 
 
-## Command manager
-
-Diagram provides support to map or bind command execution with desired combination of key gestures. Diagram provides some built-in commands.
-The [CommandManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.CommandManager.html) provides support to define custom commands. The custom commands are executed when the specified key gesture is recognized.
-
-### Command Execution
-
-The [Execute](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.CommandManager.html#Syncfusion_Blazor_Diagram_CommandManager_Execute) event call back method will invoke when executing the custom command in the diagram.
-
-The [CanExecute](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.CommandManager.html#Syncfusion_Blazor_Diagram_CommandManager_CanExecute) event determines whether this command can execute in its current state.
-
-### How to create custom command
-
-To define a custom command, specify the following properties:
-* [Gesture](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.KeyboardCommand.html#Syncfusion_Blazor_Diagram_KeyboardCommand_Gesture): A combination of [Key](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.KeyGesture.html#Syncfusion_Blazor_Diagram_KeyGesture_Key) and [Modifiers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.KeyGesture.html#Syncfusion_Blazor_Diagram_KeyGesture_Modifiers).
-* [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.KeyboardCommand.html#Syncfusion_Blazor_Diagram_KeyboardCommand_Name): Defines the name of the command.
-
-To explore the properties of custom commands, refer to the [Commands](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.CommandManager.html#Syncfusion_Blazor_Diagram_CommandManager_Commands).
-
-The following code example shows how to define a custom command.
-
-```cshtml
-@using Syncfusion.Blazor.Diagram
-
-<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes">
-    @* Initializing the custom commands *@
-    <CommandManager>
-        <CommandManager Commands="@command" Execute="@CommandExecute" CanExecute="@CanExe">
-        </CommandManager>
-    </CommandManager>
-</SfDiagramComponent>
-
-@code
-{
-    // Reference to diagram.
-    SfDiagramComponent diagram;
-    DiagramObjectCollection<KeyboardCommand> command = new DiagramObjectCollection<KeyboardCommand>()
-    {
-        new KeyboardCommand()
-        {
-            Name = "CustomGroup",
-            Gesture = new KeyGesture() { Key = DiagramKeys.G, Modifiers = ModifierKeys.Control }
-        },
-        new KeyboardCommand()
-        {
-            Name = "CustomUngroup",
-            Gesture = new KeyGesture() { Key = DiagramKeys.U, Modifiers = ModifierKeys.Control }
-        },
-     };
-    // Defines diagram's nodes collection.
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-
-    protected override void OnInitialized()
-    {
-        Node node1 = new Node()
-        {
-            ID = "node1",
-            OffsetX = 100,
-            OffsetY = 100,
-            Width = 100,
-            Height = 100,
-            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
-            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
-            {
-                new ShapeAnnotation() { Content = "Node" }
-            }
-        };
-        nodes.Add(node1);
-        Node node2 = new Node()
-        {
-            ID = "node2",
-            OffsetX = 300,
-            OffsetY = 100,
-            Width = 100,
-            Height = 100,
-            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
-            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
-            {
-                new ShapeAnnotation() { Content = "Node1" }
-            }
-        };
-        nodes.Add(node2);
-    }
-
-    public void CanExe(CommandKeyArgs args)
-    {
-        args.CanExecute = true;
-    }
-
-    /// <summary>
-    /// Custom command execution.
-    /// </summary>
-    public void CommandExecute(CommandKeyArgs args)
-    {
-        if (args.Gesture.Modifiers == ModifierKeys.Control && args.Gesture.Key == DiagramKeys.G)
-        {
-            //Custom command to group the selected nodes.
-            diagram.Group();
-        }
-        if (args.Gesture.Modifiers == ModifierKeys.Control && args.Gesture.Key == DiagramKeys.U)
-        {
-            DiagramSelectionSettings selector = diagram.SelectionSettings;
-            //Custom command to ungroup the selected items.
-            if (selector.Nodes.Count > 0 && selector.Nodes[0] is NodeGroup)
-            {
-                if ((selector.Nodes[0] as NodeGroup).Children.Length > 0)
-                {
-                    diagram.Ungroup();
-                }
-            }
-        }
-    }
-}
-```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/CustomCommands)
-
-
-### Modify the existing command
-
-When any one of the default commands is not desired, it can be disabled. To change the functionality of a specific command, the command can be completely modified.
-
-The following code example shows how to disable a command and how to modify the built-in commands.
-
-```cshtml
-@using Syncfusion.Blazor.Diagram
-
-<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes">
-    @* Initializing the custom commands *@
-    <CommandManager>
-        <CommandManager Commands="@commands" Execute="@CommandExecute" CanExecute="@CanExe">
-        </CommandManager>
-    </CommandManager>
-</SfDiagramComponent>
-
-@code
-{
-    // Reference to diagram.
-    SfDiagramComponent diagram;
-    // Defines diagram's nodes collection.
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    DiagramObjectCollection<KeyboardCommand> commands = new DiagramObjectCollection<KeyboardCommand>()
-    {
-        new KeyboardCommand()
-        {
-            Name = "SelectAll",
-            Gesture = new KeyGesture() { Key = DiagramKeys.A, Modifiers = ModifierKeys.Control }
-        },
-        new KeyboardCommand()
-        {
-            Name = "Copy",
-            Gesture = new KeyGesture() { Key = DiagramKeys.C, Modifiers = ModifierKeys.Control }
-        }
-    };
-
-    protected override void OnInitialized()
-    {
-        Node node1 = new Node()
-        {
-            ID = "node1",
-            OffsetX = 100,
-            OffsetY = 100,
-            Width = 100,
-            Height = 100,
-            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
-            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
-            {
-                new ShapeAnnotation() { Content = "Node" }
-            }
-        };
-        nodes.Add(node1);
-        Node node2 = new Node()
-        {
-            ID = "node2",
-            OffsetX = 300,
-            OffsetY = 100,
-            Width = 100,
-            Height = 100,
-            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
-            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
-            {
-                new ShapeAnnotation() { Content = "Node1" }
-            }
-        };
-        nodes.Add(node2);
-    }
-
-    public void CanExe(CommandKeyArgs args)
-    {
-        args.CanExecute = true;
-    }
-
-    /// <summary>
-    /// Custom command execution event.
-    /// </summary>
-    public void CommandExecute(CommandKeyArgs args)
-    {
-        if (args.Gesture.Modifiers == ModifierKeys.Control && args.Gesture.Key == DiagramKeys.A)
-        {
-            //to disable a built-in command and none of action execute
-        }
-        if (args.Gesture.Modifiers == ModifierKeys.Control && args.Gesture.Key == DiagramKeys.C)
-        {
-            //Modify the existing copy command to cut command.
-            diagram.Cut();
-        }
-    }
-}
-```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/ModifyExistingCommands)
-
-### How to bring the specific element into the viewport of the diagram
+## How to bring the specific element into the viewport of the diagram
 
 The [BringIntoView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_BringIntoView_Syncfusion_Blazor_Diagram_DiagramRect_) command brings a specified rectangular region into the viewport of the diagram.
 
@@ -1588,7 +1379,7 @@ The [Region](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Dia
 
 ![Region](./images/Region.gif)
 
-#### CanZoomIn 
+## CanZoomIn 
 
 The [CanZoomIn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FitOptions.html#Syncfusion_Blazor_Diagram_FitOptions_CanZoomIn) property enables/disables zooming to fit the smaller content into a larger viewport.
 

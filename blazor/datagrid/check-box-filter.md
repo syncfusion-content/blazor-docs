@@ -54,5 +54,5 @@ CheckBox filter contains an option such as searching and Clear filter.
 ```
 
 The following screenshot represents Checkbox filter
+
 ![Blazor DataGrid with CheckBox Filter](./images/blazor-datagrid-checkbox-filtering.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BXrANnLCJLHXKhyP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

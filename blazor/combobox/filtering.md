@@ -102,8 +102,6 @@ In the following example, the isTyped flag is used to track whether the filterin
 
 {% endhighlight %}
 
-![Prevent Popup opening in filtering in Blazor ComboBox](./images/filtering/)
-
 ## Autofill
 
 Specifies whether the input field of the control will automatically suggest and fill in the first matched item, as the user types based on the items in the control's data source. If no matches are found, the input field will not be filled and no action will occur. Default value of [Autofill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html#Syncfusion_Blazor_DropDowns_SfComboBox_2_Autofill) is `false`.

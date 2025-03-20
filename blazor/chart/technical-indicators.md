@@ -120,7 +120,6 @@ Accumulation Distribution combines price and volume to show how money may be flo
 ```
 
 ![Accumulation Distribution in Blazor Candle Chart](images/technical-indicator/blazor-candle-chart-accumulation-distribution.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rtrAtmXqKKbpkeYn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Average True Range (ATR)
 
@@ -227,8 +226,6 @@ Average True Range (ATR) measures the stock volatility by comparing the current 
 
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hXLUXcZKAJmnhOjp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 ## Bollinger Bands
 
 A chart overlay that shows the upper and lower limits of normal price movements based on the standard deviation of prices. To render Bollinger Bands, set indicator [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_Type) as [BollingerBands](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TechnicalIndicators.html#Syncfusion_Blazor_Charts_TechnicalIndicators_BollingerBands). Bollinger Bands will be represented by three lines - upper line, lower line, and signal line. In Bollinger Bands, default value of the [Period](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_Period) is **14** and the [StandardDeviations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_StandardDeviation) is **2**.
@@ -333,7 +330,6 @@ A chart overlay that shows the upper and lower limits of normal price movements 
 ```
 
 ![Bollinger Bands in Blazor Candle Chart](images/technical-indicator/blazor-candle-chart-bollinger-bands.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BjBqDwjUKHeCQpRz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 **Customization of Bollinger Bands**
 
@@ -439,7 +435,6 @@ The upper line's [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 ```
 
 ![Blazor Candle Chart with Custom Bollinger Bands](images/technical-indicator/blazor-candle-chart-custom-bollinger-bands.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VZVqNGNqqvyAVQBV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Exponential Moving Average (EMA)
 
@@ -553,7 +548,6 @@ Moving Average Indicators are used to define the direction of the trend. To rend
 ```
 
 ![Exponential Moving Average in Blazor Candle Chart](images/technical-indicator/blazor-candle-chart-exponential-moving-average.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VXrAZmZqqbwBlSNw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Momentum
 
@@ -680,7 +674,6 @@ Momentum shows the speed at which the price of the stock is changing. To render 
 ```
 
 ![Momentum in Blazor Candle Chart](images/technical-indicator/blazor-candle-chart-momentum.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hZVgNQNKquJMMMqo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 **Customization of Momentum Indicator**
 
@@ -809,7 +802,6 @@ The upper line's [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 ```
 
 ![Blazor Candle Chart with Custom Momentum Indicator](images/technical-indicator/blazor-candle-chart-custom-momentum-indicator.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LZVUDQDKKkdioTJT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Moving Average Convergence Divergence (MACD)
 
@@ -935,7 +927,6 @@ Moving Average Convergence Divergence (MACD) is based on the difference between 
 ```
 
 ![Moving Average Convergence Divergence in Blazor Candle Chart](images/technical-indicator/blazor-candle-chart-macd.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BXrKNGXKTDtutaFN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 **Customization of MACD**
 
@@ -1064,7 +1055,6 @@ The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Chart
 ```
 
 ![Blazor Candle Chart with Custom Moving Average Convergence Divergence](images/technical-indicator/blazor-candle-chart-custom-macd.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hjBqDGDgpjeKvBxU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Relative Strength Index (RSI)
 
@@ -1196,7 +1186,6 @@ Relative Strength Index (RSI) shows how strongly a stock is moving in its curren
 ```
 
 ![Relative Strength Index in Blazor Candle Chart](images/technical-indicator/blazor-candle-chart-rsi.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LtBgZwDgTWMyWCHe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Simple Moving Average (SMA)
 
@@ -1302,8 +1291,6 @@ Moving Average Indicators are used to define the direction of the trend. To rend
 }
 
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rXLKDwtUfMxZyppo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Stochastic
 
@@ -1442,7 +1429,6 @@ The **Width** and **Color** of upper line, lower line and period line can be cus
 ```
 
 ![Stochastic in Blazor Candle Chart](images/technical-indicator/blazor-candle-chart-stochastic.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hjBqXwjApBjyoLXs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Triangular Moving Average (TMA)
 
@@ -1551,7 +1537,6 @@ Triangular Moving Average (TMA) Indicator is used to define the direction of the
 ```
 
 ![Triangular Moving Average in Blazor Candle Chart](images/technical-indicator/blazor-candle-chart-tma.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hDLqNGjqJrICQCkG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 **Data Source**
 
@@ -1658,8 +1643,6 @@ N> Technical indicators can also be added without series using [DataSource](http
 }
 
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LDrqNQDqzrcfUpvg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

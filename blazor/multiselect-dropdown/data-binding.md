@@ -44,9 +44,54 @@ Data binding can be achieved by using the `bind-Value` attribute and its support
 }
 ```
 
+## Enum binding
+
+Convert the Enum data into a list of strings and bind it to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property of the SfMultiSelect component to bind Enum types to the MultiSelect Dropdown component.
+
+```cshtml
+
+@using Syncfusion.Blazor.DropDowns
+
+<SfMultiSelect TValue="List<string>" TItem="string" Placeholder="Select a color" DataSource="@MultiSelectDataSource"
+@bind-Value="SelectedValues">
+    <MultiSelectFieldSettings Value="Value" Text="Text"></MultiSelectFieldSettings>
+</SfMultiSelect>
+
+@if (SelectedValues != null)
+{
+    <p>Selected Colors: @string.Join(", ", SelectedValues)</p>
+}
+
+@code {
+    public enum Color
+    {
+        Red,
+        Blue,
+        Green,
+        Yellow
+    }
+
+    public class EnumModel
+    {
+        public Color Value { get; set; }
+        public string Text { get; set; }
+    }
+
+    private List<string> MultiSelectDataSource { get; set; } = new List<string>();
+    private List<string> SelectedValues { get; set; }
+
+    protected override void OnInitialized()
+    {
+        MultiSelectDataSource = Enum.GetNames(typeof(Color)).ToList();
+        SelectedValues = new List<string> { Enum.GetName(typeof(Color), 2) };
+    }
+}
+
+```
+
 ## Customizing the Change Event
 
-MultiSelect component by default fires the `Change event` when the component loses focus. However, if you want the Change event to be fired every time a value is selected or removed, you can disable the [EnabledChangeOnBlur](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_EnableChangeOnBlur) property. This will make the Change event to be fired on every value selection and removal instead of just when the component loses focus. Default value of `EnableChangeOnBlur` is `true`.
+MultiSelect component by default fires the `Change event` when the component loses focus. However, if you want the Change event to be fired every time a value is selected or removed, disable the [EnabledChangeOnBlur](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_EnableChangeOnBlur) property. This will make the Change event be fired on every value selection and removal instead of just when the component loses focus. The default value of `EnableChangeOnBlur` is `true.`
 
 {% highlight Razor %}
 

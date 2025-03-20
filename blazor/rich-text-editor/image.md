@@ -203,5 +203,5 @@ N> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/bla
 
 ## See Also
 
-* [How to edit the quick toolbar settings](./toolbar/#quick-inline-toolbar)
-* [How to use link editing option in the toolbar items](./link/)
+* [How to edit the quick toolbar settings](./toolbar#quick-inline-toolbar)
+* [How to use link editing option in the toolbar items](./link)

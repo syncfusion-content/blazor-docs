@@ -123,7 +123,7 @@ public void AddConnector()
 
 Connectors can be predefined and added to the symbol palette. You can drop those connectors into the diagram when required.
 
-For more information about adding connectors from symbol palette, refer to the [Symbol Palette](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Diagrams.SymbolPalettePalette.html).
+For more information about adding connectors from symbol palette, refer to the [Symbol Palette](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SymbolPalettePalette.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams

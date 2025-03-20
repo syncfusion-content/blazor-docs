@@ -47,7 +47,7 @@ To specify the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -70,8 +70,6 @@ To specify the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BtLANQsFBHmenccQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Responsive with the parent container
 
@@ -108,7 +106,7 @@ Specify the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gan
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -131,8 +129,6 @@ Specify the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gan
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rtBgNwibVnvfzFBS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Auto scroll to taskbar
 
@@ -157,7 +153,7 @@ Taskbar that is not visible in the viewport can be auto scrolled to make it visi
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -180,7 +176,6 @@ Taskbar that is not visible in the viewport can be auto scrolled to make it visi
 }
 ```
 ![Blazor Gantt Chart taskbar auto focus](images/scroll-to-taskbar-on-click.gif)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BtVANQiFBGXiyLKo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Scroll the content by external button
 
@@ -250,7 +245,7 @@ RowIndex : <input @bind-value = "@RowIndex" />
                     ProjectStartDate = new DateTime(2022, 1, 9),
                     ProjectEndDate = new DateTime(2022, 1, 13),
                     ProjectDuration = "10",
-                    ProjectProgress = random.Next(100),
+                    ProjectProgress =  x + 20,
                     ParentId = null,
                     Predecessor = null,
                 };
@@ -265,21 +260,21 @@ RowIndex : <input @bind-value = "@RowIndex" />
                         ProjectStartDate = new DateTime(2022, 1, 9),
                         ProjectEndDate = new DateTime(2022, 1, 13),
                         ProjectDuration = "10",
-                        ProjectProgress = random.Next(100),
+                        ProjectProgress = x + 20,
                         ParentId = Parent.ProjectId,
                         Predecessor = i + "FS",
                         Field1 = Names[name],
-                        FIELD2 = 1967 + random.Next(0, 10),
-                        FIELD3 = 395 + random.Next(100, 600),
-                        FIELD4 = 87 + random.Next(50, 250),
-                        FIELD5 = 410 + random.Next(100, 600),
-                        FIELD6 = 67 + random.Next(50, 250),
-                        Field7 = (int)Math.Floor(random.NextDouble() * 100),
-                        Field8 = (int)Math.Floor(random.NextDouble() * 10),
-                        Field9 = (int)Math.Floor(random.NextDouble() * 10),
-                        Field10 = (int)Math.Floor(random.NextDouble() * 100),
-                        Field11 = (int)Math.Floor(random.NextDouble() * 100),
-                        Field12 = (int)Math.Floor(random.NextDouble() * 1000),
+                        FIELD2 = 1967 + x + 10,
+                        FIELD3 = 395 + x + 10,
+                        FIELD4 = 87 + x + 10,
+                        FIELD5 = 410 + x + 10,
+                        FIELD6 = 67 + x + 10,
+                        Field7 = (x + 10 * 100),
+                        Field8 = (x + 10 * 10),
+                        Field9 = (x + 10 * 10),
+                        Field10 = (x + 10 * 100),
+                        Field11 = (x + 10 * 100),
+                        Field12 = (x + 10 * 1000),
                     });
                 }
             }
@@ -290,8 +285,8 @@ RowIndex : <input @bind-value = "@RowIndex" />
     {
         public int ProjectId { get; set; }
         public string ProjectName { get; set; }
-        public DateTime ProjectStartDate { get; set; }
-        public DateTime ProjectEndDate { get; set; }
+        public DateTime? ProjectStartDate { get; set; }
+        public DateTime? ProjectEndDate { get; set; }
         public string ProjectDuration { get; set; }
         public int ProjectProgress { get; set; }
         public int? ParentId { get; set; }
@@ -312,6 +307,5 @@ RowIndex : <input @bind-value = "@RowIndex" />
 }
 ```
 ![Blazor GanttChart with cloumn virtualization](./images/column-virtual-scroll.gif)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BNBqDwiFBGBVkoBA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 * You can also programmatically scroll to the taskbar using  [ScrollToTaskbarAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ScrollToTaskbarAsync_System_Int32_) method and scroll to the timeline using [ScrollToTimelineAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ScrollToTimelineAsync_System_DateTime_).

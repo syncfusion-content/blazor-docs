@@ -38,7 +38,7 @@ Interaction keys |Description
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public string Predecessor { get; set; }
@@ -62,8 +62,6 @@ Interaction keys |Description
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BthKDQsEpJNvXuQm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Copy to clipboard by external buttons
 
@@ -109,7 +107,7 @@ To copy the data of the selected rows or cells into the clipboard with the help 
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public string Predecessor { get; set; }
@@ -134,9 +132,7 @@ To copy the data of the selected rows or cells into the clipboard with the help 
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/htLqXGCYTzAKCgWn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
-## Copy Hierarchy Modes
+## Copy hierarchy modes
 
 Gantt Chart provides support for a set of copy modes with the [CopyHierarchyMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.CopyHierarchyType.html) property. The following are the type of filter modes available in the Gantt Chart.
 
@@ -226,7 +222,7 @@ Gantt Chart provides support for a set of copy modes with the [CopyHierarchyMode
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public string Predecessor { get; set; }
@@ -250,8 +246,6 @@ Gantt Chart provides support for a set of copy modes with the [CopyHierarchyMode
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VXLADQMOposalYUy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Paste
 
@@ -336,7 +330,7 @@ In the following code example, selected rows are copied by using the [BeforeCopy
             for (var i = 0; i < CopiedRecords.Count; i++)
             {
                 CopiedRecords[i].ParentId = parentID;
-                GanttChart.AddRecordAsync(CopiedRecords[i], SelectedIndex, RowPosition.Above);
+                GanttChart.AddRecordAsync(CopiedRecords[i],(int)SelectedIndex, RowPosition.Above);
             }
             CopiedRecords = new List<TaskData>();
         }
@@ -347,7 +341,7 @@ In the following code example, selected rows are copied by using the [BeforeCopy
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -396,7 +390,7 @@ In the following code example, selected cells are copied and pasted by using the
     private SfGantt<TaskData> GanttChart;
     private List<TaskData> TaskCollection { get; set; }
     public int SelectedIndex { get; set; }
-    private List<ValueTuple<double, double>> clonedRecordIndex;
+    private List<ValueTuple<int, int>> clonedRecordIndex;
 
     public void CellDeSelected(CellDeselectEventArgs<TaskData> Args)
     {
@@ -466,7 +460,7 @@ In the following code example, selected cells are copied and pasted by using the
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -583,7 +577,7 @@ With this customization, users can easily and quickly update multiple cells in t
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -608,4 +602,3 @@ With this customization, users can easily and quickly update multiple cells in t
 
 ```
 ![Custom AutoFIll in Blazor Gantt Chart](./images/blazor-gantt-chart-autofill.gif)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VtVgjmiEpSHqdbsr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

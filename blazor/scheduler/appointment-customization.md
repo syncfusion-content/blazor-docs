@@ -68,8 +68,6 @@ The following code example customizes the appointment.
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LXVKtmXHgFGlvdQf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 N> All the built-in fields that are mapped to the appropriate field properties within the `ScheduleEventSettings`, as well as custom mapped fields from the Scheduler dataSource can be accessed within the template code.
 
 ## Using EventRendered event
@@ -125,8 +123,6 @@ In the following code example, the custom class has been added to events using [
 </style>
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LNhqXGtdqvFQtJSC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 Also, we can customize the events by adding or modifying its element attribute using [Attributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.EventRenderedArgs-1.html#Syncfusion_Blazor_Schedule_EventRenderedArgs_1_Attributes). In the following code example, event attributes have been modified through the `Attributes` to apply color to the events.
 
 ```cshtml
@@ -170,8 +166,6 @@ Also, we can customize the events by adding or modifying its element attribute u
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hXLKtwZdAbuOJWNs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Using CssClass
 
@@ -227,8 +221,6 @@ The customization of events can also be achieved using the built-in field [CssCl
 </style>
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LXhKXmXHAONSwADv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 Also, the customization of events can be achieved using [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_CssClass) property of the Scheduler. In the following example, the background of appointments has been changed using the CssClass.
 
 ```cshtml
@@ -275,7 +267,5 @@ Also, the customization of events can be achieved using [CssClass](https://help.
     }
 </style>
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hDLgNcZnUOWUhgJO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> The events can't be customized using the styles that are `height`, `width`, `top`, `left`, `right`, and `display`.

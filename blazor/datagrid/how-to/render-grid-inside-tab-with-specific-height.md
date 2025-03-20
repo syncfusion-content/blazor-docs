@@ -118,5 +118,3 @@ This can be demonstrated in the following sample:
     }
 </style>
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rtLUtnBwUPCpowyZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

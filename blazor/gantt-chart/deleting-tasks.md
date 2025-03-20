@@ -7,7 +7,9 @@ control: Gantt Chart
 documentation: ug
 ---
 
-# Deleting tasks in Blazor Gantt Chart Component
+# Deleting Tasks in Blazor Gantt Chart Component
+
+## Deleting Tasks
 
 A task delete option in the Gantt Chart component can be enabled by enabling the [GanttEditSettings.AllowDeleting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEditSettings.html#Syncfusion_Blazor_Gantt_GanttEditSettings_AllowDeleting) property. Tasks can be deleted by clicking the delete toolbar item or using the `[DeleteRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_DeleteRecordAsync_System_Nullable_System_Int32__) method. You can call this method dynamically on any custom actions like button click. The following code example shows how to enable the delete option in the Gantt Chart component.
 
@@ -39,7 +41,7 @@ A task delete option in the Gantt Chart component can be enabled by enabling the
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -64,7 +66,6 @@ A task delete option in the Gantt Chart component can be enabled by enabling the
 ```
 
 ![Deleting Record in Blazor Gantt Chart](images/blazor-gantt-chart-delete-record.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BDhKDmWvsvgKovLz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> You should set the `AllowDeleting` value to `true` to delete the record dynamically.
 
@@ -94,7 +95,7 @@ The following code snippet explains how to enable the delete confirmation messag
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -119,4 +120,3 @@ The following code snippet explains how to enable the delete confirmation messag
 ```
 
 ![Blazor Gantt Chart displays Delete Confirmation Dialog](images/blazor-gantt-chart-delete-confirmation-dialog.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hjhgXwWPsFfCdMeU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

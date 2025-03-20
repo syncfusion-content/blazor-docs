@@ -28,7 +28,6 @@ In the following sample, configured the following properties with popup dimensio
 {% endhighlight %}
 
 ![Blazor RichTextEditor mention integration](./images/blazor-richtexteditor-mention-integration.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LDhgZwMqBivjbfnK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 > [View Sample](https://blazor.syncfusion.com/demos/rich-text-editor/mention-integration?theme=bootstrap5)
 

@@ -72,4 +72,4 @@ In the following template sample, before submitting data to the server, the even
 
 ## See Also
 
-* [Built-in Controls](./controls/)
+* [Built-in Controls](./controls)

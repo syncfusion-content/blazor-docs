@@ -29,9 +29,9 @@ You can copy the selected contents using the [`CopyAsync`](https://help.syncfusi
 
 @code {
     SfDocumentEditorContainer container;
-    protected void CopyClick(object args)
+    protected async void CopyClick(object args)
     {
-        container.DocumentEditor.Selection.CopyAsync();
+        await container.DocumentEditor.Selection.CopyAsync();
     }
 }
 ```
@@ -48,9 +48,9 @@ You can cut the selected content using the ['Cut'](https://help.syncfusion.com/c
 
 @code {
     SfDocumentEditorContainer container;
-    protected void CutClick(object args)
+    protected async void CutClick(object args)
     {
-        container.DocumentEditor.Editor.CutAsync();
+        await container.DocumentEditor.Editor.CutAsync();
     }
 }
 
@@ -69,9 +69,9 @@ The following code example shows how to perform the paste operation from the loc
 <SfDocumentEditorContainer @ref="container" EnableToolbar=true EnableLocalPaste=true></SfDocumentEditorContainer>
 @code {
     SfDocumentEditorContainer container;
-    protected void PasteClick(object args)
+    protected async void PasteClick(object args)
     {
-        container.DocumentEditor.Editor.PasteAsync();
+        await container.DocumentEditor.Editor.PasteAsync();
     }
 }
 

@@ -65,6 +65,4 @@ This is demonstrated in the below sample code where the [GetSelectedRowCellIndex
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LNVqZxrGqZaSNUhh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
-N> For getting the rowcell index value, the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Mode) property of the [GridSelectionSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html) component should be set as **Cell**.
+N> For getting the rowcell index value, the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Mode) property of the [GridSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html) component should be set as **Cell**.

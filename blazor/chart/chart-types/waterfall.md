@@ -54,7 +54,6 @@ documentation: ug
 ``` 
 
 ![Blazor Waterfall Chart](../images/othertypes/blazor-waterfall-chart.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rjVgjwtIrPCuudYC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> Explore our [Blazor Waterfall Chart Example](https://blazor.syncfusion.com/demos/chart/waterfall?theme=bootstrap4) to know how to render and configure the Waterfall type chart.
 

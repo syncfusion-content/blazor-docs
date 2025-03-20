@@ -79,7 +79,6 @@ To change the default labels such as Title, Location and other field names in th
 ```
 
 ![Editor Window with Custom Label in Blazor Scheduler](images/blazor-scheduler-custom-label.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VXrAXwZGhBHgbAdp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Field validation
 
@@ -133,7 +132,6 @@ It is possible to validate the required fields of the editor window before submi
 ```
 
 ![Editor window with Validation in Blazor Scheduler](images/blazor-scheduler-validation.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rjrKjGtmBKdsswbO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Customizing the default time duration in editor window
 
@@ -182,8 +180,6 @@ In default event editor window, start and end time duration are processed based 
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LthKNGDGVqmIAGyg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 ### How to prevent the display of editor and quick popups
 
 It is possible to prevent the display of editor and quick popup windows by passing the value `true` to `cancel` option within the `OnPopupOpen` event.
@@ -231,8 +227,6 @@ It is possible to prevent the display of editor and quick popup windows by passi
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LNrgDcDchpMsbwpV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 In case, in order to prevent only specific popups on Scheduler, check the condition based on the popup type. The types of the popup that can be checked within the `OnPopupOpen` event are as follows.
 
 | Type | Description |
@@ -251,7 +245,7 @@ In case, in order to prevent only specific popups on Scheduler, check the condit
 
 It is possible to open the editor window manually for a specific time or certain events by using the `OpenEditorAsync` method which allows the [TValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_OpenEditor__0_Syncfusion_Blazor_Schedule_CurrentAction_) or [CellClickEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_OpenEditor_Syncfusion_Blazor_Schedule_CellClickEventArgs_Syncfusion_Blazor_Schedule_CurrentAction_System_Nullable_Syncfusion_Blazor_Schedule_RepeatType__) and `CurrentAction` as parameters.
 
-N> [Here](https://blazor.syncfusion.com/documentation/scheduler/how-to/open-editor-window-on-single-click/) is the example to open the editor window on a single click.
+N> [Here](https://blazor.syncfusion.com/documentation/scheduler/how-to/open-editor-window-on-single-click) is the example to open the editor window on a single click.
 
 ## Customizing event editor using template
 
@@ -348,7 +342,135 @@ To get start quickly on customizing editor window using template, you can check 
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VjhUZGNwrJHbxcXI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
+### How to customize header and footer using template
+
+The editor window's header and footer can be enhanced with custom designs using the `EditorHeaderTemplate` and `EditorFooterTemplate` options.
+
+In this demo, we tailor the editor's header according to the appointment's subject field using the `EditorHeaderTemplate`. Furthermore, we make use of the `EditorFooterTemplate` to handle the functionality of validating specific fields before proceeding with the save action or canceling it if validation requirements are not met.
+
+```cshtml
+@using Syncfusion.Blazor.Schedule
+@using Syncfusion.Blazor.Buttons
+<SfSchedule TValue="AppointmentData" Height="650px" @ref="scheduleObj">
+    <ScheduleEvents TValue="AppointmentData" OnPopupClose="OnPopupClose"></ScheduleEvents>
+    <ScheduleTemplates>
+        <EditorHeaderTemplate>
+            @{
+                var subject = (context as AppointmentData)?.Subject;
+            }
+            @if (string.IsNullOrEmpty(subject))
+            {
+                <div>Create New Event</div>
+            }
+            else
+            {
+                <div>@subject</div>
+            }
+        </EditorHeaderTemplate>
+        <EditorFooterTemplate>
+            <div id="event-footer">
+                <div id="verify">
+                    <SfCheckBox @bind-Checked="@isChecked" @onchange="@(() => isSaveButtonDisabled = !isChecked)">
+                        <label htmlFor="check-box" id="text">Verified</label>
+                    </SfCheckBox>
+                </div><div id="right-button">
+                    <SfButton IsPrimary="true" Disabled="@isSaveButtonDisabled" OnClick="@(() => FooterButtonClick(true))">Save</SfButton>
+                    <SfButton IsPrimary="true" OnClick="@(() => FooterButtonClick(false))">Cancel</SfButton>
+                </div>
+            </div>
+        </EditorFooterTemplate>
+    </ScheduleTemplates>
+    <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+</SfSchedule>
+
+@code {
+    SfSchedule<AppointmentData> scheduleObj;
+    private bool isSaveClick = false;
+    private bool isChecked = false;
+    private bool isSaveButtonDisabled = true;
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData
+        {
+            Id = 1,
+            Subject = "Surgery - Andrew",
+            StartTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 9, 0, 0),
+            EndTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 10, 0, 0),
+            IsAllDay = false
+        },
+        new AppointmentData
+        {
+            Id = 2,
+            Subject = "Consulting - John",
+            StartTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 10, 0, 0),
+            EndTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 11, 30, 0),
+            IsAllDay = false
+        },
+        new AppointmentData
+        {
+            Id = 3,
+            Subject = "Therapy - Robert",
+            StartTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 11, 30, 0),
+            EndTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 12, 30, 0),
+            IsAllDay = false
+        },
+        new AppointmentData
+        {
+            Id = 4,
+            Subject = "Observation - Steven",
+            StartTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 12, 30, 0),
+            EndTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 13, 30, 0),
+            IsAllDay = false
+        }
+    };
+    public async Task OnPopupClose(PopupCloseEventArgs<AppointmentData> args)
+    {
+        if (args.Type == PopupType.Editor && args.Data != null && isSaveClick)
+        {
+            if (args.Data.Id != 0)
+            {
+                await scheduleObj.SaveEventAsync(args.Data);
+            }
+            else
+            {
+                args.Data.Id = await scheduleObj.GetMaxEventIdAsync<int>();
+                await scheduleObj.AddEventAsync(args.Data);
+            }
+
+        }
+    }
+    private void FooterButtonClick(bool isSave)
+    {
+        isSaveClick = isSave;
+        scheduleObj.CloseEditor();
+    }
+
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+    }
+}
+<style>
+    #verify {
+        position: fixed;
+        padding: 0 20px;
+    }
+
+    #right-button {
+        padding: 0 10px;
+    }
+</style>
+```
+![Add customize header and footer using template in Blazor Scheduler](images/blazor-scheduler-custom-editor-header-footer.png)
 
 ### How to add resource options within editor template
 
@@ -447,7 +569,6 @@ The resource field can be added within editor template with the following code e
 ```
 
 ![Add Resource Options within Editor Template in Blazor Scheduler](images/blazor-scheduler-custom-window-with-resource.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rXVKjmDGBzFKCGPK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> EditorTemplate is not applicable when we set `AllowMutiple` as true without enabling `AllowGroupEdit`, so in that case use custom editor window.
 
@@ -550,7 +671,6 @@ N> EditorTemplate is not applicable when we set `AllowMutiple` as true without e
 ```
 
 ![Add Recurrence Options within Editor Template in Blazor Scheduler](images/blazor-scheduler-custom-window-with-recurrence.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BDhqjGtwheIHwbVc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Apply validations on editor template fields
 
@@ -659,7 +779,6 @@ In the following code example, validation has been added to the `EventType` fiel
 ```
 
 ![Editor Template with Validation in Blazor Scheduler](images/blazor-scheduler-custom-window-validation.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LtrUNmXcBRVTKimS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Quick popups
 
@@ -701,8 +820,6 @@ By default, these popups are displayed over cells and appointments of Scheduler 
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hXBgZwjwhHIABcES?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> The quick popup that opens while single clicking on the cells are not applicable on mobile devices.
 
@@ -1423,8 +1540,6 @@ By default, the `QuickInfoOnSelectionEnd` property is set to `false` to prevent 
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VNLqDGNmrbTngiVF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 ### How to enable/disable the multiple days selection
 
 By default, the Scheduler allows the user to select multiple days. We can prevent this action by setting `false` to `AllowMultiRowSelection` property whereas its default value is `true`.
@@ -1465,8 +1580,6 @@ By default, the Scheduler allows the user to select multiple days. We can preven
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VjBKNQNwVbPBxxYs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### How to close quick info popup manually
 
@@ -1516,8 +1629,6 @@ The quick info popup can be closed in scheduler by using the `CloseQuickInfoPopu
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rXrgNGjGhuiNuVdi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## More events indicator and popup
 
@@ -1569,7 +1680,6 @@ The same indicator is displayed on all-day row in calendar views such as day, we
 ```
 
 ![More Event Popup in Blazor Scheduler](images/blazor-scheduler-more-event-popup.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BtVKtmXGLOYdcLMB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### How to prevent the display of popup when clicking on the more text indicator
 
@@ -1617,5 +1727,3 @@ It is possible to prevent the display of popup window by passing the value `true
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BZrUNcNcqtZmSrSD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

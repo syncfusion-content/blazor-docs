@@ -48,7 +48,7 @@ Items| Description
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public double Progress { get; set; }
         public string Predecessor { get; set; }
@@ -71,8 +71,6 @@ Items| Description
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LtBqZGMbKsgGeXvU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Custom context menu items
 
@@ -113,7 +111,7 @@ The following sample code demonstrates defining a custom context menu item and i
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -136,7 +134,6 @@ The following sample code demonstrates defining a custom context menu item and i
 }
 ```
 ![Custom context menu items in Blazor Gantt Chart](./images/gantt-custom-context-menu-items.gif)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LXhKjmilghCdyZFF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Built-in and custom context menu items
 
@@ -175,7 +172,7 @@ The following sample code demonstrates defining built-in and custom context menu
     public int TaskId { get; set; }
     public string TaskName { get; set; }
     public DateTime StartDate { get; set; }
-    public DateTime EndDate { get; set; }
+    public DateTime? EndDate { get; set; }
     public string Duration { get; set; }
     public int Progress { get; set; }
     public int? ParentId { get; set; }
@@ -197,8 +194,6 @@ The following sample code demonstrates defining built-in and custom context menu
     }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VXVgDQWFKBxdPZDh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 ## Sub context menu items
 
 The sub-context menu items can be added by defining the collection of **MenuItems** for **Items** Property in [ContextMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ContextMenuItems). Actions for these customized items can be defined in the [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_ContextMenuItemClicked) event.
@@ -214,6 +209,7 @@ The following sample code demonstrates defining the sub-context menu item and it
 <SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="700px" ContextMenuItems="@contextMenuItems">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
+    <GanttEditSettings AllowEditing="true"></GanttEditSettings>
     <GanttEvents ContextMenuItemClicked=ContextMenuItemClickedHandler TValue="TaskData"></GanttEvents>
 </SfGantt>
 
@@ -247,7 +243,7 @@ The following sample code demonstrates defining the sub-context menu item and it
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -271,11 +267,14 @@ The following sample code demonstrates defining the sub-context menu item and it
 ```
 ## Disable the context menu for specific columns
 
-Context Menu can be prevented for specific columns using [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events/#contextmenuopen) event of Gantt. This event will be triggered before opening the ContextMenu. You can prevent the context menu from opening by defining the **Cancel** arguments of [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events/#contextmenuopen) to **false**.
+Context Menu can be prevented for specific columns using [ContextMenuOpen](https://blazor.syncfusion.com/documentation/gantt-chart/events#contextmenuopen) event of Gantt. This event will be triggered before opening the ContextMenu. You can prevent the context menu from opening by defining the **Cancel** arguments of ContextMenuOpen to **false**.
 
-The following sample code demonstrates how to disable the context for specific column using event arguments of [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events/#contextmenuopen) event,
+The following sample code demonstrates how to disable the context for specific column using event arguments of ContextMenuOpen event,
 
 ```cshtml
+@using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Grids
+
 <SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="700px" ContextMenuItems="@contextMenuItems">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
@@ -297,7 +296,7 @@ The following sample code demonstrates how to disable the context for specific c
     };
     public void OnContextMenuOpen(ContextMenuOpenEventArgs<TaskData> Args)
     {
-        if (Args.Column.Field == "Duration")
+        if (Args.Column != null && Args.Column.Field == "Duration")
         {
             Args.Cancel = true; // To prevent the context menu from opening
         }
@@ -315,7 +314,7 @@ The following sample code demonstrates how to disable the context for specific c
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -338,8 +337,6 @@ The following sample code demonstrates how to disable the context for specific c
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LZhqXQWvUgDtbTsG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 ## Disable context menu items dynamically 
 
 You can enable or disable the context menu items using the **Disabled** property. Here, you can enable and disable the **Edit** context menu items in [ContextMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_ContextMenuOpen) event of Gantt. This event will be triggered before opening the ContextMenu. You can disable the context menu item by defining the corresponding context menu items **Disabled** property as **true**.
@@ -354,6 +351,7 @@ The following sample code demonstrates how to enable or disable context menu ite
 <SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="700px" ContextMenuItems="@contextMenuItems">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
+    <GanttEditSettings AllowEditing="true"></GanttEditSettings>
     <GanttEvents ContextMenuOpen="OnContextMenuOpen" ContextMenuItemClicked=ContextMenuItemClickedHandler TValue="TaskData"></GanttEvents>
 </SfGantt>
 
@@ -384,7 +382,7 @@ The following sample code demonstrates how to enable or disable context menu ite
     public void OnContextMenuOpen(ContextMenuOpenEventArgs<TaskData> Args)
     {
 #pragma warning disable BL0005
-        if (Args.Column.Field == "Duration")  // You can check condition based on your requirement
+        if (Args.Column != null && Args.Column.Field == "Duration")  // You can check condition based on your requirement
         {
             Args.ContextMenuObj.Items[0].Disabled = true; // To disable edit context menu item
         }
@@ -400,7 +398,7 @@ The following sample code demonstrates how to enable or disable context menu ite
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }

@@ -50,7 +50,7 @@ To enable single selection in the ListBox, [Mode](https://help.syncfusion.com/cr
 
 ## Multiple selection
 
-To enable multiple selection in the ListBox, `Mode` should be set as `Multiple` in `SelectionSettings` property. To select multiple items, use the SHIFT, CTRL, and arrow keys to make selections.
+To enable multiple selection in the ListBox, [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxSelectionSettings.html#Syncfusion_Blazor_DropDowns_ListBoxSelectionSettings_Mode) should be set as `Multiple` in [SelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxSelectionSettings.html) property. To select multiple items, use the SHIFT, CTRL, and arrow keys to make selections.
 
 N> By default, the selection mode is set as `Multiple`.
 
@@ -122,3 +122,9 @@ To select all the items in the ListBox, enable the [ShowSelectAll](https://help.
 ```
 
 ![Blazor ListBox with Checkbox Selection](./images/blazor-listbox-with-checkbox-selection.png)
+
+### Maximum Selection Length
+
+The [MaximumSelectionLength](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_MaximumSelectionLength) property gets or sets the maximum length of items that can be selected in the ListBox. This property should be set based on the length of your data source. By setting this limitation, the selection of items in the list will be prevented.
+
+N> The default value of MaximumSelectionLength property is `500`.

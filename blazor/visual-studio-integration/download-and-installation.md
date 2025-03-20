@@ -20,9 +20,9 @@ Syncfusion publishes the Visual Studio extension in the below Visual Studio mark
 
 The following software prerequisites must be installed to install the Syncfusion Blazor extension, as well as to creating, adding snippet, converting, and upgrading Syncfusion Blazor applications.
 
-* [Visual Studio 2019 16.3 or later](https://visualstudio.microsoft.com/downloads).
+* [Visual Studio 2019 16.3 or later](https://visualstudio.microsoft.com/downloads/).
 
-* [.NET Core 3.0 or later](https://dotnet.microsoft.com/download/dotnet-core).
+* [.NET Core 3.0 or later](https://dotnet.microsoft.com/en-us/download/dotnet).
 
 ## Install through the Visual Studio Manage Extensions
 

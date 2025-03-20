@@ -55,4 +55,3 @@ Refer to the following code sample for the custom tool with the tooltip text, wh
 {% endtabs %}
 
 ![Blazor RichTextEditor customize toolbar](../images/blazor-richtexteditor-custom-tool.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LthKDQMBJoBWfpWi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

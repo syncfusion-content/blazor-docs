@@ -57,7 +57,6 @@ The chart can be zoomed in three different ways.
 ```
 
 ![Zooming in Blazor Column Chart](images/zoom/blazor-column-chart-zooming.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BZBqNmtAMIEECcUQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 A zooming toolbar will show after zooming the chart, featuring options for **Zoom**, **Zoom In**, **Zoom Out**, **Pan**, and **Reset**. The **Pan** option allows you to pan the chart, while the **Reset** option allows you to reset the zoomed chart.
 
@@ -108,7 +107,6 @@ There are three types of modes.
 ```
 
 ![Horizontal Zooming in Blazor Column Chart](images/zoom/blazor-column-chart-horizontal-zooming.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hXLgtwjKsxJabjtr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Toolbar
 
@@ -155,7 +153,6 @@ By default, zoom in, zoom out, pan, and reset buttons are available in the toolb
 ```
 
 ![Zooming Option in Blazor Column Chart Toolbar](images/zoom/blazor-column-chart-zoom-in-toolbar.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LNVqjcZAWGwkylwu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Toolbar display mode
 
@@ -197,7 +194,6 @@ By default, the zooming toolbar appears only when the chart is zoomed. However, 
 ```
 
 ![Toolbar displayed during the initial load](images/zoom/blazor-column-chart-zoom-toolbar-displaymode.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VZVUZmjAMGOaDUsu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Enable pan
 
@@ -240,7 +236,6 @@ By using the [EnablePan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 ```
 
 ![Zooming with Pan in Blazor Column Chart Toolbar](images/zoom/blazor-column-chart-zoom-pan.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VNBUjmZUWbXHBJci?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Enable scrollbar
 
@@ -372,7 +367,7 @@ The axis interval will be calculated automatically with respect to the zoomed ra
 
 ![Auto Interval on Zooming in Blazor Area Chart](images/zoom/blazor-area-chart-auto-interval-zooming.png)
 
-N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See Also
 

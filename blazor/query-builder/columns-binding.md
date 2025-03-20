@@ -109,7 +109,7 @@ N> By default the Step value is 1.
 
 ```
 
-N> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to know how to render and configure the query builder.
+N> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap5) to know how to render and configure the query builder.
 
 ## Format
 
@@ -154,7 +154,7 @@ In the following sample, the date field is formatted as MM/yyyy/dd and the numbe
 
 ![Formatting in Blazor QueryBuilder](./images/blazor-querybuilder-format.png)
 
-N> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to know how to render and configure the query builder.
+N> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap5) to know how to render and configure the query builder.
 
 ## Validations
 

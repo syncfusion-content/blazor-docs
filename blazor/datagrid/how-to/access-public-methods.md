@@ -63,6 +63,4 @@ This is demonstrated in the following sample code where the [Print](https://help
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hjhUtRhwruraooWc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
-N> Similarly all the public methods of the DataGrid can be invoked. The available public methods can be found in this [link](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.SfGrid-1.html).
+N> Similarly all the public methods of the DataGrid can be invoked. The available public methods can be found in this [link](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html).

@@ -62,6 +62,4 @@ This is demonstrated in the following sample code where the value for **FinalCos
     }
 }
 ```
-
 ![Calculating Column Value Based on Other Columns in Blazor DataGrid](../images/blazor-datagrid-calculate-column-values.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VXVKNHrmgImYfSDG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

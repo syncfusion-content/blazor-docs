@@ -63,8 +63,6 @@ N> The state will be persisted based on **ID** property. So, it is recommended t
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LDLANRLRBpodXsih?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 You can use [ResetPersistData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ResetPersistData) method to reset grid state to its original state. This will clear persisted data in window local storage and renders grid with its original property values.
 
 ## Handling grid state manually
@@ -115,7 +113,5 @@ You can handle the grid's state manually by using in-built state persistence met
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BXrqXHLxBojibiqa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.

@@ -118,6 +118,4 @@ When the mouse is moved over the chart series points, the tooltip is displayed i
 
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LZBgZwXJMygYsjEx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.

@@ -59,8 +59,6 @@ PDF export allows exporting DataGrid data to PDF document. You need to use the
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VthUtnLnVYYrugrO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 <!-- Multiple exporting
 
 PDF export provides an option for exporting multiple grids to same file. In this exported document, each datagrid will be exported to new page of document in same file.
@@ -188,8 +186,6 @@ You can assign the file name for the exported document by defining **fileName** 
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rXrKNHhHKDKMQXDl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 <!-- Default fonts for pdf exporting
 
@@ -420,8 +416,6 @@ The following sample code demonstrates adding text and customizing its styles in
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BDhqjHrRgZzKMOHx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 #### How to draw a line in header/footer
 
 You can add line either in the Header or Footer area of the exported PDF document using [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_Header) and [Footer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_Footer) properties of the [PdfExportProperties](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) class.
@@ -495,8 +489,6 @@ The following sample code demonstrates adding line in the Header section of the 
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LNhAtdBngtIsKtVx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 #### How to add repeat headers in PDF Export
 
 You can add headers for every page of PDF exported document by enabling [IsRepeatHeader](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_IsRepeatHeader) property of the [PdfExportProperties](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) class.
@@ -547,8 +539,6 @@ You can add headers for every page of PDF exported document by enabling [IsRepea
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LDrUDRVdqNHFXzez?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 #### How to export the Grid with specific columns
 
@@ -681,8 +671,6 @@ The following sample code demonstrates adding page number in the Header section 
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BjBKXRVRqshJYDBb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 #### Insert an image in header/footer
 
 Image (Base64 string) can be added in header/footer area of the exported PDF document using [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_Header) and [Footer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_Footer) properties of the [PdfExportProperties](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) class.
@@ -748,8 +736,6 @@ The following sample code demonstrates inserting image in the Header section of 
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VthqZRLnqiUJpllv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 ### How to change page orientation
 
 Page orientation can be changed Landscape(Default Portrait) for the exported document using the export properties.
@@ -800,8 +786,6 @@ Page orientation can be changed Landscape(Default Portrait) for the exported doc
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BtVgjRrHUrPoQogp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### How to change page size
 
@@ -883,8 +867,6 @@ Supported page sizes are:
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hZVKDRhdKUNTFoPh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Export current page
 
@@ -988,8 +970,6 @@ PDF export provides an option to export hidden columns of DataGrid by defining t
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hXBKZHrRUqfmLgpd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 ### Export the selected records only
 
 The Grid has an option to export the selected records in a pdf exported document. This can be achieved by using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_DataSource) property of the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) class and the [GetSelectedRecordsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetSelectedRecordsAsync) method of the Grid.
@@ -1052,8 +1032,6 @@ In the following sample, selected records will be gotten from the `GetSelectedRe
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hZVqtxrxKgljjltL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Export template columns
 
@@ -1119,8 +1097,6 @@ PDF export provides an option to export template columns of the DataGrid by defi
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LXBUtRrHqUEYKNiX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Theme
 
@@ -1211,8 +1187,6 @@ To apply theme in exported PDF, define the **theme** in export properties.
 
 N> By default, material theme is applied to exported PDF document.
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LXBgXnrnKeMXjwqC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 ### Customize column width in exported PDF document
 
 The PDF export provides an option to customize the column being exported to a PDF format using the [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_Columns) property of the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) class. While defining the column, we can change its width as per the requirement.
@@ -1269,8 +1243,6 @@ In the following code sample, we have customized the column width for the PDF ex
 }
 
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BXhUjnVxKIwQMdpZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> You can find the fully working sample [here](https://github.com/SyncfusionExamples/blazor-datagrid-customize-column-in-pdf-exported-document).
 
@@ -1376,7 +1348,6 @@ In the following demo, the [DrawString](https://help.syncfusion.com/cr/file-form
 ```
 
 ![PDF Exported Grid Cell Customization in Blazor DataGrid](./images/blazor-datagrid-pdf-exported-grid-cell-customization.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rZrAZRVRUxseaVki?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 <!-- Show or hide columns on exported pdf
 
@@ -1492,8 +1463,6 @@ The following sample code demonstrates dynamically modifying the data source bef
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BXBqXHVxAHgKBegX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## See also
 

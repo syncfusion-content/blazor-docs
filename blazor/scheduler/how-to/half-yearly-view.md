@@ -121,5 +121,3 @@ In the following code example, you can see how to render only the last six month
 </style>
 
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rZLANmWCUVrYuDJq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

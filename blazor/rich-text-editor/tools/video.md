@@ -41,8 +41,6 @@ To configure `Video` toolbar item, refer to the below code.
 {% endhighlight %}
 {% endtabs %}
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LXrUNmsBKulodZcQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 ## Insert video from web
 
 To insert a video from the hosted link or local machine, you should enable the video tool on the editor’s toolbar. By default, the video tool opens the dialog, allowing you to insert a video as an embedded URL. You can switch to a web URL to insert the video file from the online source.
@@ -72,8 +70,6 @@ In the following example, the video size has been validated before uploading and
 
 {% endhighlight %}
 {% endtabs %}
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hZVUDciVTXOiBkRX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Server-side action
 
@@ -218,8 +214,6 @@ N> The default `layoutOption` property is set to `Inline`.
 
 {% endhighlight %}
 {% endtabs %}
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LDLKZwCVpMMxYTVP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Resize video
 

@@ -60,8 +60,6 @@ To specify the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BNLqjRhKhkxWpTBj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 ## Responsive with parent container
 
 Specify the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) as **100%** to make the datagrid element fill its parent container. Setting the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) to **100%** requires the datagrid parent element to have explicit height or you can use calc function to set explicit height based on the browser layout.
@@ -106,8 +104,6 @@ Specify the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grid
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rZhUjnBArYQtnWSs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Sticky header
 
@@ -159,7 +155,6 @@ In the following sample, the Grid headers will be sticky while scrolling the Gri
 ```
 
 ![Sticky Header in Blazor DataGrid](./images/blazor-datagrid-sticky-header.gif)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LjLAXHrqgNnphRdL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Frozen rows and columns
 
@@ -218,8 +213,6 @@ is set as '3'. Hence, the left two columns and top three rows are frozen.
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rZLqZRBggsduWOSn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 ### Freeze particular columns
 
 To freeze particular column in the datagrid, the [IsFrozen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsFrozen) property of **GridColumn** component can be used.
@@ -277,8 +270,6 @@ the [IsFrozen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.Gri
 
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rNBqXHBUqLqxEHbW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> Frozen rows and columns should not be set outside the datagrid view port.
 
@@ -353,8 +344,8 @@ The following demo shows how to change the default frozen line color.
 ```
 
 The following screenshots represent a datagrid by customizing frozen line color.
+
 ![Changing Frozen Line Color in Blazor DataGrid](./images/blazor-datagrid-frozen-line-color.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rNrKZnVqqpRwtwFp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Limitations
 
@@ -438,8 +429,8 @@ In this demo, the **OrderID** column is frozen at the left and the **ShipCountry
 ```
 
 The following screenshots represent a frozen direction.
+
 ![Freezing Blazor DataGrid Columns on Right Side](./images/blazor-datagrid-frozen-right-side.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LjhgXxVqATlgXBzJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Limitations of freeze direction
 
@@ -518,8 +509,8 @@ The [GridColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.
 ```
 
 N> If frozen columns are not specified, the frozen column separator will be displayed at the left and right ends. You can dynamically change the frozen columns by dragging the column separator.
+
 ![Add or Remove Frozen Blazor DataGrid Columns by Dragging the Column Separator](./images/blazor-datagrid-drag-and-drop-the-column-separator.gif)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BZLUDdhKAzaoxYDf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Customize grid scroll bar
 
@@ -582,4 +573,3 @@ N> You can find the fully working sample [here](https://github.com/SyncfusionExa
 ```
 
 ![Customizing the Scroll bar in the Blazor DataGrid](./images/blazor-datagrid-scrollbar-customization.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hDVqDRVAUyDyXjKx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

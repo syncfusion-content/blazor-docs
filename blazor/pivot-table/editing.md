@@ -287,6 +287,64 @@ Users can also add, delete, or update the underlying raw items of any data point
 
 ## Events
 
+### EditCompleted
+
+The event [`EditCompleted`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_EditCompleted) triggers when values cells are edited completely. The event provides edited cell(s) information along with its previous cell value. It also helps to do the CRUD operation by manually updating the database which is connected to the component. It has the following parameters.
+
+* `AddedData` - It holds the newly added raw data of the current edited cell which is used to add them in the datasource.
+
+* `ModifiedData` - It holds the modified raw data of the current edited cell as well as their current index, which is used to identify and update them in the datasource.
+
+* `RemovedData` - It holds the current edited cell's removed raw data as well as their current index, which is used to identify and remove them from the datasource.
+
+* `Cancel` - It is a boolean property and if it is set as **true**, the editing won’t be reflected in the pivot table.
+
+```cshtml
+@using Syncfusion.Blazor.PivotView
+
+<SfPivotView TValue="ProductDetails" ShowFieldList="true" ShowGroupingBar="true">
+    <PivotViewDataSourceSettings DataSource="@data">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+    <PivotViewCellEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode=EditMode.Dialog></PivotViewCellEditSettings>
+    <PivotViewEvents TValue="ProductDetails" EditCompleted="EditCompleted"></PivotViewEvents>
+</SfPivotView>
+
+@code {
+    private List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+    }
+    private void EditCompleted(EditCompletedEventArgs<PivotProductDetails> args)
+    {
+        // Here you can obtain all the newly added raw data for the current edited cell which is used to add them in the datasource.
+        List<PivotProductDetails> addedData = args.AddedData;
+
+        // Here you can obtain all the modified raw data of the current edited cell as well as their current index, which is used to identify and update them in the datasource.
+        Dictionary<int, PivotProductDetails> modifiedData = args.ModifiedData;
+
+        // Here you can obtain the current edited cell's all the removed raw data as well as their current index, which is used to identify and remove them from the datasource.
+        Dictionary<int, PivotProductDetails> removeData = args.RemovedData;
+    }
+}
+```
+
 ### OnActionBegin
 
 The event [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnActionBegin) triggers when the UI actions such as CRUD operations (via dialog) and inline editing begin. This allows user to identify the current action being performed at runtime. It has the following parameters:

@@ -20,7 +20,6 @@ The Rich Text Editor can be dynamically resized, allowing users to change the si
 {% endtabs %}
 
 ![Blazor RichTextEditor resizing](./images/blazor-richtexteditor-resizing.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BjLqtcMqAiZXxHdj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Restrict resize
 
@@ -59,6 +58,5 @@ To have a restricted resizable area for the Rich Text Editor, you need to specif
 {% endtabs %}
 
 ![Blazor RichTextEditor restrict resize](./images/blazor-richtexteditor-restrict-resize.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LDBqDQCAqMfrQFbh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to know how to render and configure the rich text editor tools.

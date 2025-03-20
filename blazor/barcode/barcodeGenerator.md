@@ -124,7 +124,6 @@ The last seven characters of Code Sets A and B (character values 96 - 102) and t
 
 ![Code 128 Special Characters in Blazor Barcode](images/blazor-code128-barcode.png)
 
-
 ## Customizing the Barcode color
 
 A page or printed media with barcode often appears colorful in the background and surrounding region with other contents. In such cases, the barcode can also be customized to suit the needs. You can achieve this by using for [ForeColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.SfBarcodeGenerator.html#Syncfusion_Blazor_BarcodeGenerator_SfBarcodeGenerator_ForeColor) property.

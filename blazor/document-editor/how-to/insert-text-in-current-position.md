@@ -19,7 +19,7 @@ The following example code illustrates how to add the text in current selection.
 
 ```csharp
 // It will insert the provided text in current selection
-container.DocumentEditor.Editor.InsertTextAsync("Syncfusion");
+await container.DocumentEditor.Editor.InsertTextAsync("Syncfusion");
 
 <button @onclick="InsertText">Insert Text</button>
 <SfDocumentEditorContainer @ref="container" EnableToolbar="true"  Height="590px" >
@@ -28,9 +28,9 @@ container.DocumentEditor.Editor.InsertTextAsync("Syncfusion");
     SfDocumentEditorContainer container;
 
     // It will insert the provided text in current selection
-    public void InsertText()
+    public async void InsertText()
     {
-        container.DocumentEditor.Editor.InsertTextAsync("Syncfusion");
+        await container.DocumentEditor.Editor.InsertTextAsync("Syncfusion");
     }
 }
 ```
@@ -43,7 +43,7 @@ The following example code illustrates how to add the new paragraph in current s
 
 ```csharp
 // It will add the new paragraph in current selection
-container.DocumentEditor.Editor.InsertTextAsync('\n');
+await container.DocumentEditor.Editor.InsertTextAsync('\n');
 ```
 
 ## Insert the rich-text content
@@ -71,7 +71,7 @@ The following example illustrates how to insert the HTML content at current curs
         string htmltags = "<?xml version='1.0' encoding='utf - 8'?><!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN''http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'><html xmlns ='http://www.w3.org/1999/xhtml' xml:lang='en' lang ='en'><body><h1>The img element</h1><img src='https://www.w3schools.com/images/lamp.jpg' alt ='Lamp Image' width='500' height='600'/></body></html>";
         // You can also load HTML file/string .
         Syncfusion.Blazor.DocumentEditor.WordDocument document = Syncfusion.Blazor.DocumentEditor.WordDocument.LoadString(htmltags, ImportFormatType.Html); // Convert the HTML to SFDT format.
-        string sfdtString = Newtonsoft.Json.JsonConvert.SerializeObject(document);
+        string sfdtString = JsonSerializer.Serialize(document);
         document.Dispose();
         // Insert the sfdt content in cursor position using paste API
         await container.DocumentEditor.Editor.PasteAsync(sfdtString);

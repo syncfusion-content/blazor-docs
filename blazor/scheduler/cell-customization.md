@@ -66,7 +66,6 @@ The height and width of the Scheduler cells can be customized either to increase
 ```
 
 ![Cell Dimensions in Vertical Views in Blazor Scheduler](images/blazor-scheduler-celldimension-verticalviews.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rZBUNcWXUQWgenyy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Setting cell dimensions in Timeline Views
 
@@ -111,7 +110,6 @@ The height and width of the Scheduler cells can be customized either to increase
 ```
 
 ![Cell Dimensions in Timeline Views in Blazor Scheduler](images/blazor-scheduler-celldimension-timelineviews.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hNrAZQiXAQAyYkAq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Customizing cells using CellTemplate
 
@@ -202,7 +200,6 @@ The `CellTemplate` is used to customize the cell background with specific images
 ```
 
 ![Using CellTemplate in Blazor Scheduler](images/blazor-scheduler-celldimension-celltemplate.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VjrqZcWDAmcVeFzX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Customizing cell header in month view
 
@@ -244,7 +241,6 @@ The month header of each date cell in the month view can be customized using the
 ```
 
 ![Customizing Cell Header in Blazor Scheduler](images/blazor-scheduler-celldimension-cellheader.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BNrKjwsXAcYBSOAg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Customizing cells using OnRenderCell event
 
@@ -301,8 +297,6 @@ The cells can also be customized by using `OnRenderCell` event. In the `OnRender
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BZhUDwWjgvqHoVSc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 ## Customizing the minimum and maximum date values
 
 Providing the `MinDate` and `MaxDate` property with some date values, allows the Scheduler to set the minimum and maximum date range. The Scheduler date that lies beyond this minimum and maximum date range will be in a disabled state so that the date navigation will be blocked beyond the specified date range.
@@ -332,10 +326,8 @@ Providing the `MinDate` and `MaxDate` property with some date values, allows the
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LtrqNmWtqPyndXXz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 ## How to disable multiple cell and row selection in Schedule
 
-By default, the [AllowMultiCellSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowMultiCellSelection) and [AllowMultiRowSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowMultiRowSelection) properties of the Schedule are set to true that allows user to select multiple cells and rows. If you want disable the multiple cell/row selection, you can disable the [AllowMultiCellSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowMultiCellSelection)  and [AllowMultiRowSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowMultiRowSelection) properties.
+By default, the [AllowMultiCellSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowMultiCellSelection) and [AllowMultiRowSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowMultiRowSelection) properties of the Schedule are set to true that allows user to select multiple cells and rows. If you want disable the multiple cell/row selection, you can disable the [AllowMultiCellSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowMultiCellSelection) and [AllowMultiRowSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowMultiRowSelection) properties.
 
 N> By default, the `MinDate` property value is set to new DateTime(1900, 1, 1) and `MaxDate` property value is set to new DateTime(2099, 12, 31). The user can also set the customized `MinDate` and `MaxDate` property values.

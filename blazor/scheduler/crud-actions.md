@@ -16,7 +16,7 @@ Events, a.k.a. Appointments, play an important role in Scheduler with which the 
 Any kind of appointments such as normal, all-day, spanned or recurring events can be easily added on Scheduler using any one of the following ways.
 
 * [Creation using editor window](#creation-using-editor-window)
-* [Creation using AddEventAsync method](#creation-using-AddEventAsync-method)
+* [Creation using AddEventAsync method](#creation-using-addeventasync-method)
 
 ### Creation using editor window
 
@@ -79,8 +79,6 @@ The appointments can be created dynamically by using `AddEventAsync` method.
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VjLgNGXcsoQREIxl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 ### Inline creation
 
 Another easier way to create the appointments is enabling the `AllowInline` property. By single clicking on the scheduler cells or pressing `enter` key on selected cells, the appointment like textbox will be displayed in which you can enter the Subject of the appointment. Pressing enter key or clicking out of the text box will create the appointment in the scheduler.
@@ -120,8 +118,6 @@ Another easier way to create the appointments is enabling the `AllowInline` prop
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BDBUXQXQiIPuDceA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Inserting events into database at server-side
 
@@ -209,8 +205,6 @@ Additionally, the regex condition has been added to the Location field, so that 
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LZLKNGjcCRMzAJVi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 You can also dynamically prevent the creation of appointments on Scheduler. For example, say if you want to decline the creation of appointments on weekend days, you can check for its appropriate condition within the `OnActionBegin` event.
 
 ```cshtml
@@ -264,14 +258,12 @@ You can also dynamically prevent the creation of appointments on Scheduler. For 
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VXrKNcDmiHLLnEhP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 ## Edit
 
 The same way the appointments such as normal, all-day, spanned or recurring events are created, it can be easily edited using any of the following ways.
 
 * [Update using editor window](#update-using-editor-window)
-* [Update using SaveEventAsync method](#update-using-SaveEventAsync-method)
+* [Update using SaveEventAsync method](#update-using-saveeventasync-method)
 
 ### Update using editor window
 
@@ -336,8 +328,6 @@ Here, an event with ID `1` is edited and its subject is changed with a new text.
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BNLUtwtwMcLvslgK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 ### Inline editing
 
 Another easier way to edit the appointments is enabling the `AllowInline` property. By single clicking on the appointments, you can edit the Subject of the appointment. Pressing enter key or clicking out of the appointment will edit the existing appointment.
@@ -377,8 +367,6 @@ Another easier way to edit the appointments is enabling the `AllowInline` proper
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hXBAZmZwWbJernSP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Updating events in database at server-side
 
@@ -519,7 +507,7 @@ if (param.action == "remove" || (param.action == "batch" && param.deleted != nul
 }
 ```
 
-N> To know more about handling recurrence exceptions, refer the [Adding exceptions](./recurring-events/#adding-exceptions) topic.
+N> To know more about handling recurrence exceptions, refer the [Adding exceptions](https://blazor.syncfusion.com/documentation/scheduler/recurring-events#adding-exceptions) topic.
 
 ### Restricting edit action based on specific criteria
 
@@ -591,8 +579,6 @@ You can also dynamically prevent the editing of appointments on Scheduler. For e
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rDhKjwjcWlRlwuXm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 ## Delete
 
 The appointments can be deleted in either of the following ways,
@@ -658,8 +644,6 @@ The appointments can be removed manually using the `DeleteEventAsync` method. Th
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hZhgZwtQMvuPSSLf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 **Recurring Event** - The recurring events can be removed as an entire series or simply removing single occurrence by using the `DeleteEventAsync` method which takes in either the `DeleteSeries` or `DeleteOccurrence` parameters.
 
 ```cshtml
@@ -716,8 +700,6 @@ The appointments can be removed manually using the `DeleteEventAsync` method. Th
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BjhUjwjQCaLADEhq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Removing events from database at server-side
 
@@ -850,8 +832,6 @@ N> By default, when you drag a recurring instance, only the occurrence of the ev
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LNrKtQDQWOzeDMIm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 ## Resize
 
 When you resize a normal event on the Scheduler, the event editing action takes place. When a recurring event is resized to a new desired time, the batch action explained in `Editing a single occurrence` process will takes place - thus allowing both the `Add` and `Edit` action to take place together.
@@ -892,5 +872,3 @@ N> By default, when you resize a recurring instance, only the occurrence of the 
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rNLKXwtwWYQwKeYu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

@@ -133,4 +133,3 @@ In the following example, the remote request does not fetch the search data unti
 
 ![Blazor DropdownList with Minimum filter length](./images/filtering/blazor_dropdown_minimum-filter-length.png)
 
-

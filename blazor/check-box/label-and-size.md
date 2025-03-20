@@ -57,6 +57,6 @@ The different Checkbox sizes available are default and small. To reduce the size
 
 ![Changing Blazor CheckBox Size](./images/blazor-checkbox-size.png)
 
-## See Also
+## See also
 
 * [Checkbox customization](./how-to/customized-checkbox)

@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor Numeric TextBox Component
 
-The NumericTextBox is characterized with complete ARIA Accessibility support that helps to be accessible by on-screen readers and other assistive technology devices. This component designed with the reference of the guidelines document given in [WAI ARAI Accessibility practices](http://www.w3.org/TR/wai-aria-practices-1.1/#spinbutton).
+The NumericTextBox is characterized with complete ARIA Accessibility support that helps to be accessible by on-screen readers and other assistive technology devices. This component designed with the reference of the guidelines document given in [WAI ARAI Accessibility practices](https://www.w3.org/WAI/ARIA/apg/#spinbutton).
 
 The NumericTextBox uses the `spin button` role and following ARIA properties to its element based on its state.
 
@@ -26,7 +26,7 @@ The NumericTextBox uses the `spin button` role and following ARIA properties to 
 
 ## Keyboard interaction
 
-Keyboard interaction of the NumericTextBox component has been designed based on [WAI-ARIA Practices](http://www.w3.org/TR/wai-aria-practices-1.1/#spinbutton) described for the NumericTextBox and it is an alternative to mouse actions to interact with the NumericTextBox.
+Keyboard interaction of the NumericTextBox component has been designed based on [WAI-ARIA Practices](https://www.w3.org/WAI/ARIA/apg/#spinbutton) described for the NumericTextBox and it is an alternative to mouse actions to interact with the NumericTextBox.
 
 The following table shows shortcut keys and its corresponding usage.
 

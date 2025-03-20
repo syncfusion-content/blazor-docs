@@ -63,8 +63,6 @@ N> Multiple events drag and drop is not supported on mobile devices.
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BjhgNcXnUtsflTrr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 ## Disable the drag action
 
 By default, the events can be dragged and dropped within any of the applicable scheduler views, and to disable it, set **false** to the [AllowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowDragAndDrop) property.
@@ -104,8 +102,6 @@ By default, the events can be dragged and dropped within any of the applicable s
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LjhKZwtHUDkxeLGV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Preventing drag and drop on specific targets
 
@@ -151,8 +147,6 @@ It is possible to prevent the drag action on particular target, by passing the t
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BjVqDmDRgihvMuBg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Disable scrolling on drag action
 
@@ -245,8 +239,6 @@ The speed of the scrolling action while dragging an appointment to the Scheduler
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VjhANmXdgiGCQoKN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 ## Auto navigation of date ranges on dragging an event
 
 When an event is dragged either to the left or right extreme edges of the Scheduler and kept hold for few seconds without dropping, the auto navigation of date ranges will be enabled allowing the Scheduler to navigate from current date range to back and forth respectively. This action is set to `false` by default and to enable it, set `Navigation` to true within the [OnDragStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnDragStart) event.
@@ -295,8 +287,6 @@ By default, the navigation delay is set to 2000ms. The navigation delay decides 
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/htVAZmNxqBjJbNUb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 ## Setting drag time interval
 
 By default, while dragging an appointment, it moves at an interval of 30 minutes. To change the dragging time interval, pass the appropriate values to the `Interval` option within the [OnDragStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnDragStart) event.
@@ -341,8 +331,6 @@ By default, while dragging an appointment, it moves at an interval of 30 minutes
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hjLgNmjHgrWePzbK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Drag and drop items from external source
 
@@ -454,8 +442,6 @@ In this example, the tree view control is used as an external source and the chi
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BjBUNcNHUVpaYxFP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 ## Drag and drop items to external source
 
 You can drag and drop the events to external source by setting the target to the property [EventDragArea](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_EventDragArea). In the following code example, we have two Scheduler and events from the first scheduler that can be dropped to the second scheduler. In the [Dragged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_Dragged) event of the first scheduler, the dragged event has been deleted from the first scheduler and added to the second scheduler.
@@ -525,8 +511,6 @@ You can drag and drop the events to external source by setting the target to the
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LtBgDQZRKAXoNLNU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 ## Opening the editor window on drag stop
 
 There are scenarios where you want to open the editor filled with data on newly dropped location and may need to proceed to save it, only when `Save` button is clicked on the editor. Clicking on the cancel button should revert these changes. This can be achieved using the [Dragged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_Dragged) event of Scheduler.
@@ -573,5 +557,3 @@ There are scenarios where you want to open the editor filled with data on newly 
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LDhKXQtdqqoLpvXf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

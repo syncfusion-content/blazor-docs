@@ -650,7 +650,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to provide tooltip for symbols in symbol palette
 
-Symbol palette provides supports to show tooltip when mouse hovers over any node or connector. The tooltip can be customized for each symbols in the symbol palette.
+Symbol palette provides supports to show toolip when mouse hovers over any node or connector. The tooltip can be customized for each symbols in the symbol palette.
 
 ### Default tooltip for symbols
 

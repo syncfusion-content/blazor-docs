@@ -114,7 +114,7 @@ In the following sample, navigation URL for Flipkart, Amazon, and Snapdeal actio
 
 ### Item Templating
 
-Popup items can be customized using the `CssClass` property. We have customize the items using CSS style.
+Popup items can be customized using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_CssClass) property. We have customize the items using CSS style.
 
 ```cshtml
 
@@ -144,7 +144,7 @@ Popup items can be customized using the `CssClass` property. We have customize t
 
 ## Populate multilevel sub menu items
 
-You can populate multilevel sub menu items in DropDown menu by using context menu in `PopupContent` directive tag.
+You can populate multilevel sub menu items in DropDown menu by using context menu in [PopupContent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_PopupContent) directive tag.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

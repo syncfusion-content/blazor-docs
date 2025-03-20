@@ -203,7 +203,7 @@ Using the items property, you can set different intervals for each item to trans
 </style>
 ```
 
-**Note**: Interval property can accept value in terms of milliseconds.
+N> Interval property can accept value in terms of milliseconds.
 
 ## Auto play slides
 
@@ -503,4 +503,3 @@ The following are the different swipe modes available in the carousel:
 ```
 
 ![Carousel Swipe Mode](images/swipe.gif)
-

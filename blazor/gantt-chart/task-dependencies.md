@@ -62,7 +62,7 @@ Task relationship is defined in the data source as a string value, and this valu
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public string Predecessor { get; set; }
@@ -90,7 +90,6 @@ Task relationship is defined in the data source as a string value, and this valu
 The following screenshot displays the output of the above code.
 
 ![Blazor Gantt Chart displays Task Relationship](images/blazor-gantt-chart-task-relationship.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VjhKtmCbhjbAPTkd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Predecessor offset with duration units
 
@@ -120,7 +119,7 @@ You can define an offset with various offset duration units for predecessors by 
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public string Predecessor { get; set; }
@@ -147,7 +146,6 @@ You can define an offset with various offset duration units for predecessors by 
 The following screen shot depicts the duration unit support in the predecessor offset.
 
 ![Blazor Gantt Chart displays Predecessor Offset](images/blazor-gantt-chart-predecessor-with-offsets.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LNBKZwsvBMtVcsqK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Predecessor configuration
 
@@ -215,7 +213,7 @@ You can define the predecessor types in any order. The default order will be FS,
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public string Predecessor { get; set; }
@@ -241,7 +239,6 @@ You can define the predecessor types in any order. The default order will be FS,
 The following screen shot depicts the predecessor configuration support.
 
 ![Blazor Gantt Chart with predecessor configuration](images/predecessor-configuration.gif)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hDBUDGilBWhnlRGI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> Based on the types configured, respective connector points appear on hovering the taskbar. Also, the dropdown-data of the type column in the dependency tab of add or edit dialog populates based on the type configured.
 
@@ -249,4 +246,4 @@ N> Based on the types configured, respective connector points appear on hovering
 
 * Currently, there is no support for establishing relationship for manual parent tasks.
 
-N> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to know how to render and configure the Gantt.
+N> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap5) to know how to render and configure the Gantt.

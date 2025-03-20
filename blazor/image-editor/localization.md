@@ -12,4 +12,4 @@ documentation: ug
 
 [Blazor Image editor](https://www.syncfusion.com/blazor-components/blazor-image-editor) component can be localized. Refer to [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion Blazor components.
 
-N> You can also explore our [Blazor Image editor example](https://blazor.syncfusion.com/demos/image-editor/default-functionalities?theme=bootstrap4) to know how to render and configure the image editor.
+N> You can also explore our [Blazor Image editor example](https://blazor.syncfusion.com/demos/image-editor/default-functionalities?theme=bootstrap5) to know how to render and configure the image editor.

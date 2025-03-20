@@ -164,5 +164,3 @@ You can programmatically open and close the popup by accessing the `ShowPopupAsy
 {% endhighlight %} 
 
 ![Show or Hide Popup in Blazor DropdownList](./images/popup-setting/blazor_dropdown_show-or-hide-popup.gif)
-
-

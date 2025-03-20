@@ -46,7 +46,7 @@ The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gan
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -63,7 +63,7 @@ The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gan
             new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 06), EndDate = new DateTime(2022, 04, 21), },
             new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 30, ParentId = 5 },
             new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 06), Duration = "3", Progress = 40, ParentId = 5 },
-            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 0), Duration = "0", Progress = 30, ParentId = 5 }
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 07), Duration = "0", Progress = 30, ParentId = 5 }
         };
         return Tasks;
     }
@@ -105,7 +105,7 @@ By default, the `EnableToggle` property is set to `false`.
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -128,8 +128,6 @@ By default, the `EnableToggle` property is set to `false`.
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BtBqXwWJTzLUsyqD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Drag selection
 
@@ -160,7 +158,7 @@ The Gantt Chart allows to select range of cells or rows by mouse or touch draggi
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -183,8 +181,8 @@ The Gantt Chart allows to select range of cells or rows by mouse or touch draggi
     }
 }
 ```
+
 ![Blazor Gantt Chart Allow Drag Selection](images/gantt-allow-drag-selection.gif)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VtVUjGMJpTqmGouW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Clear selection
 
@@ -207,7 +205,7 @@ You can clear the selected cells and selected rows by using a method called [Cle
     public SfGantt<TaskData> Gantt;
     public void select()
     {
-        this.Gantt.SelectRowsAsync(new double[] {1,2,3});
+        this.Gantt.SelectRowsAsync(new int[] {1,2,3});
     }
     public void clear() {
         this.Gantt.ClearSelectionAsync();
@@ -222,7 +220,7 @@ You can clear the selected cells and selected rows by using a method called [Cle
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
          public int? ParentId { get; set; }
@@ -262,10 +260,18 @@ You can get the selected row indexes by using the [GetSelectedRowIndexesAsync](h
 
 @code{
     public SfGantt<TaskData> Gantt;
-    public void rowSelect(RowSelectEventArgs<TaskData> args)
+    public async Task rowSelect(RowSelectEventArgs<TaskData> args)
     {
-        Console.WriteLine(this.Gantt.GetSelectedRowIndexesAsync());
-        Console.WriteLine(this.Gantt.GetSelectedRecordsAsync());
+        var selectedRowIndexes = await this.Gantt.GetSelectedRowIndexesAsync();
+        foreach (int rowIndex in selectedRowIndexes)
+        {
+            Console.WriteLine(rowIndex);
+        }
+        var selectedRecords = await this.Gantt.GetSelectedRecordsAsync();
+        foreach (var record in selectedRecords)
+        {
+            Console.WriteLine(record.TaskId);
+        }
     }
 
     private List<TaskData> TaskCollection { get; set; }
@@ -279,7 +285,7 @@ You can get the selected row indexes by using the [GetSelectedRowIndexesAsync](h
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -303,4 +309,12 @@ You can get the selected row indexes by using the [GetSelectedRowIndexesAsync](h
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LtLqZwiJTpIlYRSK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
+## Touch interaction
+
+When you `tap` gantt row, tapped row will be selected.
+
+[Single selection](selection/#selection-mode) : To select a single row or cell, perform `single tap` on it.
+
+[Multiple selection](selection/#multiple-row-selection) : To perform multiple selection, `tap` on the multiple selection popup, and then tap the desired rows or cells.
+
+![Multiple selection in Blazor Gantt Chart](images/blazor-gantt-chart-multiple-selection.PNG)

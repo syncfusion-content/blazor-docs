@@ -37,7 +37,7 @@ It is possible to change the height of the row in Gantt Chart by setting row hei
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -62,7 +62,6 @@ It is possible to change the height of the row in Gantt Chart by setting row hei
 ```
 
 ![Changing Row Height in Blazor Gantt Chart](images/blazor-gantt-chart-row-height.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BjhqNQsaBGGDPqHn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Expand or collapse row
 
@@ -94,7 +93,7 @@ All tasks available in Gantt Chart are rendered in collapsed state by setting th
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -119,32 +118,40 @@ All tasks available in Gantt Chart are rendered in collapsed state by setting th
 ```
 
 ![Blazor Gantt Chart with Collapsed Row](images/blazor-gantt-chart-with-collapse-row.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LZrgtwiarbjdKsDK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
-Define expand/collapse status of tasks
+### Define Expand/Collapse Status of Tasks
 
 In Gantt Chart, you can render some tasks in collapsed state and some tasks in expanded state by defining expand status of the task in the data source. This value was mapped to Gantt Chart component by using [GanttTaskFields.ExpandState](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_ExpandState) property. The following code example shows how to use this property.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
+
 <SfGantt DataSource="@TaskCollection" CollapseAllParentTasks="true" Height="450px" Width="900px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
                      Duration="Duration" Progress="Progress" ParentID="ParentId" ExpandState="isExpand">
     </GanttTaskFields>
 </SfGantt>
+
 @code{
     private List<TaskData> TaskCollection { get; set; }
+
     protected override void OnInitialized()
     {
         this.TaskCollection = GetTaskCollection();
-Expand All
-	@@ -146,80 +148,29 @@ In Gantt Chart, you can render some tasks in collapsed state and some tasks in e
-        public DateTime EndDate { get; set; }
+    }
+
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
         public bool isExpand { get; set; }
     }
+
     private static List<TaskData> GetTaskCollection()
     {
         List<TaskData> Tasks = new List<TaskData>()
@@ -208,7 +215,7 @@ You can use [GanttEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -232,8 +239,6 @@ You can use [GanttEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VthqtGskVldAZfVB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Drag and drop
 
@@ -276,7 +281,7 @@ You can dynamically rearrange the rows in the Gantt Chart component by using the
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -300,8 +305,6 @@ You can dynamically rearrange the rows in the Gantt Chart component by using the
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VtBgjmiuBOgQjTMd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Multiple row drag and drop
 
@@ -345,7 +348,7 @@ Gantt also supports dragging multiple rows at a time and dropping them on any ro
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -369,8 +372,6 @@ Gantt also supports dragging multiple rows at a time and dropping them on any ro
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BDBgZcWOrknhlxWj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ### Drag and drop events
 
@@ -523,7 +524,7 @@ The following code example shows how to drag and drop a row on button click acti
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -546,8 +547,6 @@ The following code example shows how to drag and drop a row on button click acti
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LjhUXmWuKNUDGGVK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Customize rows
 
@@ -594,7 +593,7 @@ You can use [GanttEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -619,7 +618,6 @@ You can use [GanttEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 ```
 
 ![Customizing Rows in Blazor Gantt Chart](images/blazor-gantt-chart-row-customization.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LXBqDQMagDcXFrkZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Styling alternate rows
 
@@ -656,7 +654,7 @@ You can use [GanttEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -681,7 +679,6 @@ You can use [GanttEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 ```
 
 ![Changing Row Style in Blazor Gantt Chart](images/blazor-gantt-chart-row-style.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hNBKjmsYUCxvmRCQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Accessing row task model information programmatically
 
@@ -747,7 +744,7 @@ This is demonstrated in the below sample code, where the [GetRowTaskModel](https
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -772,3 +769,4 @@ This is demonstrated in the below sample code, where the [GetRowTaskModel](https
 ```
 ![Row Task Model Properties](images/blazor-gantt-chart-GetRowTaskModel.png)
 
+N> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to know how to render and configure the Gantt.

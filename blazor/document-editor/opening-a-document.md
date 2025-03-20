@@ -47,10 +47,10 @@ If you have your Word document file in the web, you can open it in [Blazor Word 
         document = null;
     }
 
-    public void OnLoad(object args)
+    public async void OnLoad(object args)
     {
         SfDocumentEditor editor = container.DocumentEditor;
-        editor.OpenAsync(sfdtString);
+        await editor.OpenAsync(sfdtString);
         //To observe the memory go down, null out the reference of sfdtString variable.
         sfdtString = null;
     }
@@ -101,10 +101,10 @@ You can open the Word documents from Cloud storage. The following code example s
         //To observe the memory go down, null out the reference of document variable.
         document = null;
     }
-    public void OnLoad(object args)
+    public async void OnLoad(object args)
     {
         SfDocumentEditor editor = container.DocumentEditor;
-        editor.OpenAsync(sfdtString);
+        await editor.OpenAsync(sfdtString);
         //To observe the memory go down, null out the reference of sfdtString variable.
         sfdtString = null;
     }
@@ -165,12 +165,12 @@ You can open the Word documents from Azure File Storage using the following code
             }
         }
     }
-    public void OnLoad(object args)
+    public async void OnLoad(object args)
     {
         if (!String.IsNullOrEmpty(sfdtString))
         {
             SfDocumentEditor editor = container.DocumentEditor;
-            editor.OpenAsync(sfdtString);
+            await editor.OpenAsync(sfdtString);
             //To observe the memory go down, null out the reference of sfdtString variable.
             sfdtString = null;
         }
@@ -197,7 +197,7 @@ The following code example shows how to open the Word document file in viewer fr
 @code {
     SfDocumentEditorContainer container;
 
-    public void OnLoad(object args)
+    public async void OnLoad(object args)
     {
         string documentID = "GettingStarted.docx";
         string connectionString = "Data Source=(LocalDB)//MSSQLLocalDB;AttachDbFilename=C://database.mdf;";
@@ -222,7 +222,7 @@ The following code example shows how to open the Word document file in viewer fr
         //To observe the memory go down, null out the reference of document variable.
         document = null;
         SfDocumentEditor editor = container.DocumentEditor;
-        editor.OpenAsync(json);
+        await editor.OpenAsync(json);
         //To observe the memory go down, null out the reference of json variable.
         json = null;
     }
@@ -250,7 +250,7 @@ There is an UI option in built-in toolbar to open the Word documents from local 
 @code {
     SfDocumentEditorContainer container;
 
-    public void OnSuccess(UploadingEventArgs action)
+    public async void OnSuccess(UploadingEventArgs action)
     {
         string base64 = action.FileData.RawFile.ToString();
         string fileName = action.FileData.Name;
@@ -264,7 +264,7 @@ There is an UI option in built-in toolbar to open the Word documents from local 
             //To observe the memory go down, null out the reference of document variable.
             document = null;
             SfDocumentEditor editor = container.DocumentEditor;
-            editor.OpenAsync(sfdtString);
+            await editor.OpenAsync(sfdtString);
             //To observe the memory go down, null out the reference of sfdtString variable.
             sfdtString = null;
         }
@@ -289,7 +289,7 @@ The Word document can be opened on control initialization, in this sample, the d
 @code {
     SfDocumentEditorContainer container;
 
-    public void OnLoad(object args)
+    public async void OnLoad(object args)
     {
         string filePath = "wwwroot/data/GettingStarted.docx";
         using (FileStream fileStream = new FileStream(filePath, System.IO.FileMode.Open, System.IO.FileAccess.Read))
@@ -300,7 +300,7 @@ The Word document can be opened on control initialization, in this sample, the d
             //To observe the memory go down, null out the reference of document variable.
             document = null;
             SfDocumentEditor editor = container.DocumentEditor;
-            editor.OpenAsync(json);
+            await editor.OpenAsync(json);
             //To observe the memory go down, null out the reference of json variable.
             json = null;
         }

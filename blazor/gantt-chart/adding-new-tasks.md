@@ -35,7 +35,7 @@ A row can be added to the Gantt Chart component from the toolbar while the `Gant
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -60,7 +60,6 @@ A row can be added to the Gantt Chart component from the toolbar while the `Gant
 ```
 
 ![Adding New Task in Blazor Gantt Chart](images/blazor-gantt-chart-add-new-row.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BZLqXGCGTyJooioa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> By default, a new row will be added to the top most row in the Gantt Chart component.
 
@@ -87,7 +86,7 @@ A row can also be added above, below or child of the selected row by using conte
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public double Progress { get; set; }
         public string Predecessor { get; set; }
@@ -111,8 +110,6 @@ A row can also be added above, below or child of the selected row by using conte
 }
 ```
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BZLAtQWGzyoVKJSG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 ## Using method
 
 You can add rows to the Gantt Chart component dynamically using the [AddRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_AddRecordAsync__0_System_Nullable_System_Double__System_Nullable_Syncfusion_Blazor_Gantt_RowPosition__) method and you can define the add position of the default new record by using the `RowPosition` property. You can also pass the `RowIndex` as an additional parameter.
@@ -135,7 +132,7 @@ You can add rows to the Gantt Chart component dynamically using the [AddRecordAs
 
 @code{
     public SfGantt<TaskData> Gantt;
-    public TaskData record = new TaskData() { TaskId = 9, TaskName = "New Added Record", StartDate = new DateTime(2019, 04, 05), Duration = "3", Progress = 50};
+    public TaskData record = new TaskData() { TaskId = 9, TaskName = "New Added Record", StartDate = new DateTime(2022, 04, 05), Duration = "3", Progress = 50};
 
     public void AddRow()
     {
@@ -152,7 +149,7 @@ You can add rows to the Gantt Chart component dynamically using the [AddRecordAs
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -175,4 +172,3 @@ You can add rows to the Gantt Chart component dynamically using the [AddRecordAs
 ```
 
 ![Adding New Record in Blazor Gantt Chart](images/blazor-gantt-chart-add-new-record.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VtVqNwiGpIHNVRrj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

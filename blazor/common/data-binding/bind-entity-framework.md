@@ -9,7 +9,7 @@ documentation: ug
 
 # Bind Data from SQL Server to Syncfusion Blazor Components
 
-In this section, you can learn how to retrieve data from SQL database using [Entity Framework](https://docs.microsoft.com/en-us/ef/core/) to bind it to the Grid component and perform CRUD operations.  
+In this section, you can learn how to retrieve data from SQL database using [Entity Framework](https://learn.microsoft.com/en-us/ef/core/) to bind it to the Grid component and perform CRUD operations.
 Entity Framework is an open-source object-relational mapper (O/RM) from Microsoft. Entity Framework works with many databases. But here, we are going to discuss the step-by-step procedure to create an Entity Framework using the [MS SQL Server](https://en.wikipedia.org/wiki/Microsoft_SQL_Server) database and connect it to the Syncfusion component to perform CRUD operations in a Blazor Server Application.
 
 ## Prerequisite software
@@ -18,13 +18,13 @@ The following software are needed
 
 * Visual Studio 2019 v16.9.0 or later
 * .NET SDK 5.0 or later.
-* SQL Server 2019
+* SQL Server 2019 or later
 
 ## Create the database
 
 The first step is to create a Library database and a table named Book to hold a list of books.
 
-* Open SQL Server 2019.
+* Open SQL Server.
 * Now, create a new database named Library.
 * Right-click on the created database and select New Query.
 * Use the following SQL query to create a table named Book.
@@ -53,7 +53,7 @@ In the next window, provide the project name as LibraryManagement and click Next
 
 ![Give Project name as LibraryManagement in Blazor](../images/project-name.png)
 
-Now, select Target Framework as (.NET 5.0) in the project template and click Create button to create the Blazor Server application.
+Now, select Target Framework as (.NET 6.0 or .NET 7.0) in the project template and click Create button to create the Blazor Server application.
 
 ![Create Project in Blazor](../images/create-project.png)
 
@@ -61,10 +61,20 @@ Now, select Target Framework as (.NET 5.0) in the project template and click Cre
 
 Now, scaffold DbContext and model classes from the existing Library database. To perform scaffolding and work with the SQL Server database in our application, you need to install the following NuGet packages.
 
+* [Microsoft.EntityFrameworkCore.Tools](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Tools): This package creates database context and model classes from the database.
+* [Microsoft.EntityFrameworkCore.SqlServer](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer/): The database provider that allows Entity Framework Core to work with SQL Server.
+
 Run the following commands in the Package Manager Console.
 
-* **Install-Package Microsoft.EntityFrameworkCore.Tools -Version 5.0.6**: This package creates database context and model classes from the database.
-* **Install-Package Microsoft.EntityFrameworkCore.SqlServer -Version 5.0.6**: The database provider that allows Entity Framework Core to work with SQL Server.
+{% tabs %}
+{% highlight C# tabtitle="Package Manager" %}
+
+Install-Package Microsoft.EntityFrameworkCore.Tools -Version 7.0.11
+
+Install-Package Microsoft.EntityFrameworkCore.SqlServer -Version 7.0.11
+
+{% endhighlight %}
+{% endtabs %}
 
 Once the above packages are installed, you can scaffold DbContext and Model classes. Run the following command in the Package Manager Console under the LibraryManagement project.
 
@@ -90,40 +100,13 @@ It is not recommended to have a connection string with sensitive information in 
 
 ![Move connection string to appsettings.json in Blazor](../images/change-connection-string.png)
 
-Now, the **DbContext** must be configured using connection string and registered as scoped service using the **AddDbContext** method in **Startup.cs** in .NET 5 and .NET 3.X application and in **Program.cs** file in .NET 6 application.
+Now, the **DbContext** must be configured using connection string and registered as scoped service using the **AddDbContext** method in **Program.cs** file in .NET 6 and .NET 7 application.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
 
 builder.Services.AddDbContext<LibraryContext>(option =>
                 option.UseSqlServer(builder.Configuration.GetConnectionString("LibraryDatabase")));
-
-{% endhighlight %}
-{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" %}
-
-namespace ODataServiceProject
-{
-    public class Startup
-    {
-        public Startup(IConfiguration configuration)
-        {
-            Configuration = configuration;
-        }
-
-        public IConfiguration Configuration { get; }
-        // This method gets called by the runtime. Use this method to add services to the container.
-        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
-        public void ConfigureServices(IServiceCollection services)
-        {
-            
-            services.AddDbContext<LibraryContext>(option => 
-                option.UseSqlServer(Configuration.GetConnectionString("LibraryDatabase")));
-            ...
-        }
-        ....
-        ....
-    }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -224,9 +207,9 @@ namespace LibraryManagement.Models
 
 {% endhighlight %}
 
-## Register the service in Startup.cs
+## Register the service in Program.cs
 
-Now, you need to register the **LibraryService** and **ILibraryService** as services in the **startup.cs** file for .NET 5 and .NET 3.X applications and in **Program.cs** file for .NET6 applications. Register the Scoped Services like below.
+Now, you need to register the **LibraryService** and **ILibraryService** as services in the **Program.cs** file for .NET6 and .NET7 applications. Register the Scoped Services like below.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
@@ -234,33 +217,6 @@ Now, you need to register the **LibraryService** and **ILibraryService** as serv
 builder.Services.AddScoped<ILibraryService, LibraryService>();
 builder.Services.AddDbContext<LibraryContext>(option =>
                 option.UseSqlServer(builder.Configuration.GetConnectionString("LibraryDatabase")));
-
-{% endhighlight %}
-{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" %}
-
-namespace ODataServiceProject
-{
-    public class Startup
-    {
-        public Startup(IConfiguration configuration)
-        {
-            Configuration = configuration;
-        }
-
-        public IConfiguration Configuration { get; }
-        // This method gets called by the runtime. Use this method to add services to the container.
-        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
-        public void ConfigureServices(IServiceCollection services)
-        {
-            services.AddScoped<ILibraryService, LibraryService>();            
-            services.AddDbContext<LibraryContext>(option => 
-                option.UseSqlServer(Configuration.GetConnectionString("LibraryDatabase")));
-            ...
-        }
-        ....
-        ....
-    }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -275,7 +231,7 @@ Now, in the Browse tab, search and install the **Syncfusion.Blazor.Grid** NuGet 
 
 ![Install Syncfusion Blazor Grid NuGet](../images/grid-package.png)
 
-N> For this demo, **Syncfusion.Blazor.Grid(19.1.0.66)** NuGet package is used. A new Syncfusion.Blazor NuGet package with new enhancement has been released in our every-week release and main release. So, you can check and update to the latest versions by using the following link.
+N> For this demo, **Syncfusion.Blazor.Grid(19.1.0.66)** NuGet package is used. The package with new enhancement has been released in our every-week release and main release. So, you can check and update to the latest versions by using the following link.
 
 [Grid Editing](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)
 
@@ -288,7 +244,7 @@ Open **_Import.razor** file and add the following namespaces which are required 
 
 {% endhighlight %}
 
-Open **Startup.cs** file in .NET 5 and .NET 3.X applications, **Program.cs** file in .NET 6 application and register the Syncfusion service in the **ConfigureServices** method as follows.
+Open **Program.cs** file in .NET 6 and .NET 7 application and register the Syncfusion service.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
@@ -297,17 +253,6 @@ builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
 builder.Services.AddSyncfusionBlazor();
-
-{% endhighlight %}
-{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" %}
-
-public void ConfigureServices(IServiceCollection services)
-{
-    services.AddRazorPages();
-    services.AddServerSideBlazor();
-    services.AddSingleton<WeatherForecastService>();
-    services.AddSyncfusionBlazor();
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -341,7 +286,7 @@ In previous steps, we have successfully configured the Syncfusion Blazor package
 
 ## Bind data to Blazor DataGrid component using Entity Framework
 
-To consume data from the database using **Entity Framework**, you need to inject the LibraryService into the razor page and assign it to the DataGrid’s datasource variable. Here, the **DataSource** property of the DataGrid component is used to bind the SQL data using Entity Framework in the Server-side application  
+To consume data from the database using **Entity Framework**, you need to inject the LibraryService into the razor page and assign it to the DataGrid’s datasource variable. Here, the **DataSource** property of the DataGrid component is used to bind the SQL data using Entity Framework in the Server-side application
 
 {% highlight razor %}
 
@@ -375,7 +320,7 @@ Grid columns can be defined using the **GridColumn** component. We are going to 
 
 @using LibraryManagement.Models
 @inject ILibraryService LibraryService
-  
+
 <SfGrid DataSource="@LibraryBooks" TValue="Book">
     <GridColumns>
         <GridColumn Field="@nameof(Book.Id)" IsPrimaryKey="true" IsIdentity="true" Visible="false"></GridColumn>
@@ -398,7 +343,7 @@ Grid columns can be defined using the **GridColumn** component. We are going to 
 
 {% endhighlight %}
 
-Now, the data from the SQL server is loaded into the DataGrid component. Refer to the following screenshot for the output of above.  
+Now, the data from the SQL server is loaded into the DataGrid component. Refer to the following screenshot for the output of above.
 
 ![SQL Server Grid in Blazor](../images/grid-component.png)
 
@@ -406,13 +351,13 @@ Now, the data from the SQL server is loaded into the DataGrid component. Refer t
 
 You can enable editing in the grid component using the **GridEditSettings** component. Grid provides various modes of editing options such as Inline/Normal, Dialog, and Batch editing. Refer to the following documentation for your reference.
 
-[Grid Editing in Blazor](https://blazor.syncfusion.com/documentation/datagrid/editing/#editing)
+[Grid Editing in Blazor](https://blazor.syncfusion.com/documentation/datagrid/editing#editing)
 
 Here, inline edit mode and **Toolbar** property are used to show toolbar items for editing.
 While using the DataSource property of Grid, changes will be reflected only in the Grid datasource. To reflect them in the database, handle the CRUD operations externally using the OnActionBegin and OnActionComplete events of Grid.
 
 * **OnActionBegin** – This event will be triggered when the action gets initiated. So, while inserting/updating a record, RequestType Save will be sent in the event arguments to save the changes in the database. Similarly, while deleting a record, RequestType as Delete will be initiated to perform actions externally. Since for both Update and Insert action, RequestType will be Save, you can differentiate them by using the Args.Action property, which will indicate the current action.
-* **OnActionComplete** – It will be triggered when certain actions are completed. Here, you can refresh the Grid component with an updated datasource to reflect the changes.  
+* **OnActionComplete** – It will be triggered when certain actions are completed. Here, you can refresh the Grid component with an updated datasource to reflect the changes.
 
 We have added the DataGrid editing, toolbar, and OnActionBegin and OnActionComplete event code with the previous Grid model.
 
@@ -491,7 +436,7 @@ To edit a row, select any row and click the **Edit** toolbar button. The edit fo
 
 ![After Clicking a update button in Blazor](../images/update.png)
 
-Now, the Price column value is changed to 125 from 250. Clicking the **Update** toolbar button will initiate the update action and trigger the OnActionBegin event with **Save RequestType**. Here, you can update the record in the Book table by calling the **UpdateBook()** method of the LibraryService when **Args.Action** is **Edit**.  Refer to the following code example.  
+Now, the Price column value is changed to 125 from 250. Clicking the **Update** toolbar button will initiate the update action and trigger the OnActionBegin event with **Save RequestType**. Here, you can update the record in the Book table by calling the **UpdateBook()** method of the LibraryService when **Args.Action** is **Edit**.  Refer to the following code example.
 
 {% highlight c# %}
 

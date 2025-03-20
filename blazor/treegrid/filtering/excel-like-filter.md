@@ -162,9 +162,9 @@ namespace TreeGridComponent.Data {
 
 ## Customize the height and width of filter popup
 
-You can customize the height and width of each column’s filter dialog using the CSS style in the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnActionBegin) event of the tree grid.
+You can customize the height and width of each column’s filter dialog using the CSS style in the [FilterDialogOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_FilterDialogOpening) event of the tree grid.
 
-Before opening a filter dialog for each column, the `OnActionBegin` event will be triggered with the [RequestType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ActionEventArgs-1.html#Syncfusion_Blazor_Grids_ActionEventArgs_1_RequestType) argument as `FilterBeforeOpen`. At that point, we can set the height and width of filter popup dynamically using CSS.
+Before opening a filter dialog for each column, the `FilterDialogOpening` event will be triggered. At that point, we can set the height and width of filter popup dynamically using CSS.
 
 In the following sample we have set the height and width of the TaskId and TaskName column's filter dialog using the CSS style.
 
@@ -178,7 +178,7 @@ In the following sample we have set the height and width of the TaskId and TaskN
 @using Syncfusion.Blazor.Data;
 
 <SfTreeGrid ID= "TreeGrid" Width="900px" DataSource="@TreeGridData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1" AllowFiltering="true">
-    <TreeGridEvents OnActionBegin="OnActionBegin" TValue="BusinessObject"></TreeGridEvents>
+    <TreeGridEvents FilterDialogOpening="FilterDialogOpeningHandler" TValue="BusinessObject"></TreeGridEvents>
     <TreeGridFilterSettings HierarchyMode="FilterHierarchyMode.Parent" Type="Syncfusion.Blazor.TreeGrid.FilterType.Excel"></TreeGridFilterSettings>
     <TreeGridColumns>
         <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
@@ -215,25 +215,22 @@ In the following sample we have set the height and width of the TaskId and TaskN
     public bool IsLarge;
     public bool IsSmall;
 
-    public void OnActionBegin(ActionEventArgs<BusinessObject> Args)
+    public void FilterDialogOpeningHandler(FilterDialogOpeningEventArgs args)
     {
-        if (Args.RequestType == Syncfusion.Blazor.Grids.Action.FilterBeforeOpen)
+        if(Args.ColumnName == "TaskName")
         {
-            if(Args.ColumnName == "TaskName")
-            {
-                IsLarge = true;
-                IsSmall = false;
-            }
-            else if(Args.ColumnName == "TaskId")
-            {
-                IsSmall = true;
-                IsLarge = false;
-            }
-            else
-            {
-                IsLarge = false;
-                IsSmall = false;
-            }
+            IsLarge = true;
+            IsSmall = false;
+        }
+        else if(Args.ColumnName == "TaskId")
+        {
+            IsSmall = true;
+            IsLarge = false;
+        }
+        else
+        {
+            IsLarge = false;
+            IsSmall = false;
         }
     }
 

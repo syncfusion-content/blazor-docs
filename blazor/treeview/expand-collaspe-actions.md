@@ -815,12 +815,10 @@ The [TreeViewNodeAnimationSettings](https://help.syncfusion.com/cr/blazor/Syncfu
 
 <SfTreeView TValue="MailItem">
     <TreeViewFieldsSettings TValue="MailItem" Id="Id" DataSource="@MyFolder" Text="FolderName" ParentID="ParentId" HasChildren="HasSubFolders" Expanded="Expanded"></TreeViewFieldsSettings>
-    <b>
         <TreeViewNodeAnimationSettings>
             <TreeViewAnimationExpand Duration="5000" Effect="Syncfusion.Blazor.AnimationEffect.SlideDown" Easing="Linear"></TreeViewAnimationExpand>
             <TreeViewAnimationCollapse Duration="1000" Effect="Syncfusion.Blazor.AnimationEffect.SlideUp" Easing="Linear"></TreeViewAnimationCollapse>
         </TreeViewNodeAnimationSettings>
-    </b>
 </SfTreeView>
 @code {
     public class MailItem

@@ -9,9 +9,9 @@ documentation: ug
 
 # WebAssembly Performance in Blazor Scheduler Component
 
-This section provides performance guidelines for using Syncfusion Scheduler component efficiently in Blazor WebAssembly application. The best practice or guidelines for general framework Blazor WebAssembly performance can be found [here](https://docs.microsoft.com/en-us/aspnet/core/blazor/webassembly-performance-best-practices).
+This section provides performance guidelines for using Syncfusion Scheduler component efficiently in Blazor WebAssembly application. The best practice or guidelines for general framework Blazor WebAssembly performance can be found [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance?view=aspnetcore-7.0).
 
-N> You can refer to our Getting Started with [Blazor Server-Side Scheduler](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) and [Blazor WebAssembly Scheduler](./how-to/#blazor-web-assembly-scheduler) documentation pages for configuration specifications.
+N> You can refer to our Getting Started with [Blazor Server-Side Scheduler](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) and [Blazor WebAssembly Scheduler](./how-to/blazor-web-assembly-scheduler) documentation pages for configuration specifications.
 
 ## Avoid unnecessary component renders
 
@@ -63,8 +63,6 @@ In the following example:
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VDLAZGCiBopEObLC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> * **PreventRender** method accepts boolean argument that accepts true or false to disable or enable rendering respectively.
 <br/> * **PreventRender** method can be used only after Scheduler component completed initial rendering. Calling this method during initial rendering will not have any effect.
@@ -130,8 +128,6 @@ In the following example:
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LXhUNwMMhSQgYVjZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> * **PreventRender** method internally overrides the **ShouldRender** method of the Scheduler to prevent rendering.
 <br/> * It is recommended to use **PreventRender** method for user interactive events such as OnCellClick, OnEventClick etc. for better performance.

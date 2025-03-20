@@ -45,7 +45,6 @@ documentation: ug
 ``` 
 
 ![Blazor Area Chart](../images/chart-types-images/blazor-area-chart.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BXhUNQXzVowTcWSA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> Refer to our [Blazor Area Charts](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/area-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Area Chart Example](https://blazor.syncfusion.com/demos/chart/area?theme=bootstrap4) to know how to represent time-dependent data, showing trends at equal intervals.
 
@@ -91,7 +90,6 @@ To render a multicolored area series, specify the [Type](https://help.syncfusion
 ``` 
 
 ![Blazor Multicolored Area Chart](../images/chart-types-images/blazor-multicolor-area-chart.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LDVKXmZJLHirTFsI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Series customization
 
@@ -134,7 +132,6 @@ The following properties can be used to customize the [Area](https://help.syncfu
 ```
 
 ![Blazor Area Chart with Custom Series](../images/chart-types-images/blazor-area-chart-fill.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VNBAXGDzBnrmWjMs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Area Border
 
@@ -176,7 +173,6 @@ The following properties in the [ChartSeriesBorder](https://help.syncfusion.com/
 ```
 
 ![Blazor Area Chart with Border](../images/chart-types-images/blazor-area-border.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LjBAXctfLdgmfQXj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

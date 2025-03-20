@@ -65,8 +65,8 @@ N/A |N/A |`equal` operator will always be used for Boolean filter. |Boolean
 ```
 
 The following screenshot shows filtering using FilterBar
+
 ![Filtering in Blazor DataGrid](./images/blazor-datagrid-filtering.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VNrAZHLiqFuVUGeH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Filter bar template with custom component
 
@@ -147,8 +147,8 @@ To access the filtered values inside the FilterTemplate, you can use the implici
 ```
 
 The following screenshot shows filtering using custom component
+
 ![Filtering with Custom Component in Blazor DataGrid](./images/blazor-datagrid-custom-filter.PNG)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LDBKtHhiAYKxKvCs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Change default filter operator
 
@@ -195,8 +195,8 @@ In the following sample, we have changed the default operator for CustomerID col
 ```
 
 The following screenshot represents Filter with change in default operator as contains
+
 ![Changing Filter Operator in Blazor DataGrid](./images/blazor-datagrid-filter-operator.PNG)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BjVKNHVsUuPtJOSU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Filter modes
 
@@ -243,5 +243,3 @@ The [ImmediateModeDelay](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 }
 
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rjrUjHLCquPkMndg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

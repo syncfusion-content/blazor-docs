@@ -11,7 +11,7 @@ documentation: ug
 
 You might need to open and view the PDF files from various location. In this section, you can find the information about how to open PDF files from URL, Cloud, database, local file system, and as base64 string.
 
-## Opening a PDF from URL
+## Opening a PDF from remote URL
 
 If you have your PDF files in the web, you can open it in the viewer using URL.
 
@@ -25,18 +25,10 @@ If you have your PDF files in the web, you can open it in the viewer using URL.
 </SfPdfViewer2>
 
 @code {
-    public string DocumentPath { get; set; }
-    protected override void OnInitialized()
-    {
-        string Url = "https://s3.amazonaws.com/files2.syncfusion.com/dtsupport/directtrac/general/pd/HTTP_Succinctly-1719682472.pdf";
-        System.Net.WebClient webClient = new System.Net.WebClient();
-        byte[] byteArray = webClient.DownloadData(Url);
-        DocumentPath = "data:application/pdf;base64," + Convert.ToBase64String(byteArray);
-    }
+    public string DocumentPath { get; set; } = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 }
 
 ```
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Load%20and%20Save/Load%20PDF%20file%20from%20URL-SfPdfViewer)
 
 ## Opening a PDF from Cloud
 

@@ -10,10 +10,10 @@ documentation: ug
 
 # Bind Data from RESTful Web Services to Syncfusion Blazor Components
 
-In this topic, you can learn how to retrieve data from RESTful web services, bind data to a Grid component, and perform CRUD operations. Here, data is fetched from the ODataV4 service using [ODataV4Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors/#odatav4-adaptor) of `SfDataManger`.
+In this topic, you can learn how to retrieve data from RESTful web services, bind data to a Grid component, and perform CRUD operations. Here, data is fetched from the ODataV4 service using [ODataV4Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor) of `SfDataManger`.
 
 It is recommended to choose the suitable adaptor based on the RESTful service which you are using to bind data for the Syncfusion Blazor component. Refer to the following documentation to know about the available Adaptors of SfDataManager.
- * [Adaptors](https://blazor.syncfusion.com/documentation/data/adaptors/)
+ * [Adaptors](https://blazor.syncfusion.com/documentation/data/adaptors)
 
 ## Prerequisite software
 
@@ -23,7 +23,7 @@ The following software are needed
 
 ## Create the database
 
-Open Visual Studio 2019 Preview, select **View -> SQL Server Object Explorer**. Right-click on the Databases folder to create a new Database and name it as OrdersDetails.
+Open Visual Studio , select **View -> SQL Server Object Explorer**. Right-click on the Databases folder to create a new Database and name it as OrdersDetails.
 
 ![Add new database in Blazor](../images/odata-add-db.png)
 ![Adding database name and location in Blazor](../images/odata-db-name.png)
@@ -53,17 +53,31 @@ Now, click on **Update Database**.
 
 ## Create OData service project
 
-Open Visual Studio 2019 and create an empty ASP.NET Core Web Application and name it as ODataServiceProject. After creating the application, install **Microsoft.AspNetCore.OData** package by running the following command in the Package Manager Console.
-* **Install-Package Microsoft.AspNetCore.OData -Version 7.3.0**: This package contains everything you need to create OData v4.0 endpoints using ASP.NET Core MVC and to support OData query syntax for your web APIs.
+Open Visual Studio 2019 and create an empty ASP.NET Core Web Application and name it as ODataServiceProject. After creating the application, install [Microsoft.AspNetCore.OData](https://www.nuget.org/packages/Microsoft.AspNetCore.OData/) package by running the following command in the Package Manager Console.
+
+```
+Install-Package Microsoft.AspNetCore.OData -Version 8.2.3
+
+```
+This package contains everything you need to create OData v4.0 endpoints using ASP.NET Core MVC and to support OData query syntax for your web APIs.
 
 ### Generate DbContext and model class from the database
 
 Now, you need to scaffold **DbContext** and **model classes** from the existing **OrdersDetails** database. To perform scaffolding and work with the SQL Server database in our application, install the following NuGet packages.
 
+* [Microsoft.EntityFrameworkCore.Tools](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Tools) : This package creates database context and model classes from the database.
+
+* [Microsoft.EntityFrameworkCore.SqlServer](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer/) :The database provider that allows Entity Framework Core to work with SQL Server.
+
 Run the following commands in the **Package Manager Console**.
 
-* **Install-Package Microsoft.EntityFrameworkCore.Tools -Version 3.0.0**: This package creates database context and model classes from the database.
-* **Install-Package Microsoft.EntityFrameworkCore.SqlServer -Version 3.0.0**: The database provider that allows Entity Framework Core to work with SQL Server.
+```
+Install-Package Microsoft.EntityFrameworkCore.Tools -Version 7.0.11
+```
+```
+Install-Package Microsoft.EntityFrameworkCore.SqlServer -Version 7.0.11
+
+```
 
 Once the above packages are installed, you can scaffold DbContext and Model classes. Run the following command in the **Package Manager Console**.
 
@@ -140,40 +154,13 @@ It is not recommended to have a connection string with sensitive information in 
 {% endhighlight %}
 {% endtabs %}
 
-Now, the DbContext must be configured using connection string and registered as scoped service using the AddDbContext method in **Startup.cs**.
+Now, the DbContext must be configured using connection string and registered as scoped service using the AddDbContext method in **Program.cs**.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
 
 builder.Services.AddDbContext<OrdersDetailsContext>(option =>
                 option.UseSqlServer(builder.Configuration.GetConnectionString("OrdersDetailsDatabase")));
-
-{% endhighlight %}
-{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" %}
-
-namespace ODataServiceProject
-{
-    public class Startup
-    {
-        public Startup(IConfiguration configuration)
-        {
-            Configuration = configuration;
-        }
-
-        public IConfiguration Configuration { get; }
-        // This method gets called by the runtime. Use this method to add services to the container.
-        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
-        public void ConfigureServices(IServiceCollection services)
-        {
-            
-            services.AddDbContext<OrdersDetailsContext>(option => 
-                option.UseSqlServer(Configuration.GetConnectionString("OrdersDetailsDatabase")));
-            ...
-        }
-        ....
-        ....
-    }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -279,7 +266,7 @@ Add the following line in the **launchSettings.json** file.
 {% endhighlight %}
 {% endtabs %}
 
-Open **Startup.cs** file in .NET 5 and .NET 3.X applications, **Program.cs** file in .NET 6 application and configure by referring to the following codes.
+Open **Program.cs** file in .NET 6 and .NET 7 application and configure by referring to the following codes.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
@@ -289,7 +276,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 static IEdmModel GetEdmModel()
-{   
+{
     ODataConventionModelBuilder builder = new ODataConventionModelBuilder();
     var books = builder.EntitySet<Orders>("Orders");
     FunctionConfiguration myFirstFunction = books.EntityType.Collection.Function("MyFirstFunction");
@@ -323,55 +310,6 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
-
-{% endhighlight %}
-{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" %}
-
-namespace ODataServiceProject
-{
-    public class Startup
-    {
-        public Startup(IConfiguration configuration)
-        {
-            Configuration = configuration;
-        }
-        public IConfiguration Configuration { get; }
-        public void ConfigureServices(IServiceCollection services)
-        {
-            services.AddDbContext<OrdersDetailsContext>(option => option.UseSqlServer(Configuration.GetConnectionString("OrdersDetailsDatabase")));
-            services.AddOData();
-            services.AddMvc(option => option.EnableEndpointRouting = false).SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-        }
-        private static IEdmModel GetEdmModel()
-        {
-            ODataConventionModelBuilder builder = new ODataConventionModelBuilder();
-            var books = builder.EntitySet<Orders>("Orders");
-            FunctionConfiguration myFirstFunction = books.EntityType.Collection.Function("MyFirstFunction");
-            myFirstFunction.ReturnsCollectionFromEntitySet<Orders>("Orders");
-            return builder.GetEdmModel();
-        }
-        // This method gets called at the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-        {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-            app.UseMvc(routes =>
-            {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
-                routes.Count().Filter().OrderBy().Expand().Select().MaxTop(null);
-                routes.MapODataServiceRoute(
-                 "odata",
-                 "odata",
-                 model: GetEdmModel()
-               );
-            });
-        }
-    }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -421,7 +359,7 @@ In this demo application, the **Bootstrap4** theme will be used.
 
 * For **.NET 6** app, add theme in the `<head>` of the **~/Pages/_Layout.cshtml** file.
 
-* For **.NET 3.X, .NET 5 and .NET 7** app, add theme in the `<head>` of the **~/Pages/_Host.cshtml** file.
+* For **.NET 7** app, add theme in the `<head>` of the **~/Pages/_Host.cshtml** file.
 
 {% tabs %}
 
@@ -431,7 +369,7 @@ In this demo application, the **Bootstrap4** theme will be used.
 
 {% endhighlight %}
 
-{% highlight cshtml tabtitle=".NET 3.X, .NET 5 and .NET 7 (~/_Host.cshtml)" %}
+{% highlight cshtml tabtitle=".NET 7 (~/_Host.cshtml)" %}
 
 <link href="_content/Syncfusion.Blazor.Themes/fabric.css" rel="stylesheet" />
 
@@ -455,7 +393,7 @@ In previous steps, we have successfully configured the Syncfusion Blazor package
 
 To consume data from the OData Controller, you need to add the **SfDataManager** with **ODataV4Adaptor**. Refer to the following documentation for more details on ODataV4Adaptor.
 
-[ODataV4Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors/#odatav4-adaptor)
+[ODataV4Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor)
 
 {% tabs %}
 {% highlight razor %}
@@ -469,7 +407,7 @@ To consume data from the OData Controller, you need to add the **SfDataManager**
 
 N> In the above code example, we have used our localhost address from our application. Instead of localhost, you can give the exact URL of your OData service.
 
-Grid columns can be defined by using the [GridColumn](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component. We are going to create columns using the following code.
+Grid columns can be defined by using the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) component. We are going to create columns using the following code.
 
 {% tabs %}
 {% highlight razor %}
@@ -514,7 +452,7 @@ public class OrdersController : ODataController
 
 ## Handling CRUD operations with our Syncfusion Blazor DataGrid component
 
-You can enable editing in the grid component using the [GridEditSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component. Grid provides various modes of editing options such as [Inline/Normal](https://blazor.syncfusion.com/documentation/datagrid/editing/#normal), [Dialog](https://blazor.syncfusion.com/documentation/datagrid/editing/#dialog), and [Batch](https://blazor.syncfusion.com/documentation/datagrid/editing/#batch) editing.
+You can enable editing in the grid component using the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component. Grid provides various modes of editing options such as [Inline/Normal](https://blazor.syncfusion.com/documentation/datagrid/in-line-editing), [Dialog](https://blazor.syncfusion.com/documentation/datagrid/dialog-editing), and [Batch](https://blazor.syncfusion.com/documentation/datagrid/batch-editing) editing.
 
 Here, we are using **Inline** edit mode and used Toolbar property to show toolbar items for editing.
 We have added the DataGrid Editing and Toolbar code with previous Grid model.

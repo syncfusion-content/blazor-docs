@@ -37,7 +37,7 @@ The following code example shows how to display the critical path in the Gantt c
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -61,9 +61,8 @@ The following code example shows how to display the critical path in the Gantt c
 }
 ```
 ![Blazor Gantt Chart with Critical Path](images/blazor-gantt-chart-critical-path.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VZBAXcBjWdxxCvVg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
-## Critical Path Settings in Gantt Chart Component
+## Critical path settings in Gantt Chart Component
 
 The critical path settings in the Gantt Chart component determine the default slack value and validate it. Here is an example of how to add slack value to the Gantt Chart component.
 
@@ -96,7 +95,7 @@ By adjusting the slackValue, you can control which tasks are critical and ensure
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -120,7 +119,6 @@ By adjusting the slackValue, you can control which tasks are critical and ensure
 }
 ```
 ![Critical Path with slack value](images/blazor-gantt-chart-critical-path-with-slack-value.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hNrADGLNCRwYxGye?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Customize taskbar in critical path
 
@@ -160,7 +158,7 @@ The following code example shows how to customize the critical path taskbar in t
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -194,4 +192,3 @@ The following code example shows how to customize the critical path taskbar in t
 </style>
 ```
 ![Customize taskbar](images/blazor-gantt-chart-critical-path-customize-taskbar.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VDLKDGhZCHYtznzW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->

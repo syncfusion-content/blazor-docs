@@ -49,8 +49,8 @@ To enable grouping in the datagrid, set the [AllowGrouping](https://help.syncfus
 ```
 
 The following GIF image represents a DataGrid Grouping.
+
 ![Grouping in Blazor DataGrid](images/blazor-datagrid-grouping.gif)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hjLgDxhChQSxbQyx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 > * You can group and ungroup columns by using the **GroupColumn** and **UngroupColumn** methods.
 > * To disable grouping for a particular column, set the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowGrouping) to false in **GridColumn** component.
@@ -99,8 +99,8 @@ To apply group at initial rendering, set the column field name in the [Columns](
 ```
 
 The following screenshot represents a DataGrid with initial grouping.
+
 ![Blazor DataGrid with Initial Grouping](./images/blazor-datagrid-initialgrouping.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LjLAjxriVcFvoRxT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Hide drop area
 
@@ -146,8 +146,8 @@ To avoid ungrouping or further grouping of a column after initial column groupin
 ```
 
 The following screenshot represents hiding the Group drop area in DataGrid.
+
 ![Hiding Group Drop Area in Blazor DataGrid](./images/blazor-datagrid-hide-drop-area.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BZVgXdrMhFNlisyU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Group by format
 
@@ -191,8 +191,6 @@ By default, a column will be grouped by the data or value present for the partic
     }
 }
 ```
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VDBUjxVsVPJqgWFU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Grouping events
 
@@ -242,7 +240,6 @@ During the group action, the datagrid component triggers two events. The [OnActi
 
 > The **args.RequestType** is based on the current action name. For example, when grouping, the **args.RequestType** value will be 'grouping'.
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/BNLgDnhiBuxVmGDp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Caption template
 
@@ -298,7 +295,7 @@ The following sample code demonstrates the above,
 ```
 
 The following screenshot represents a DataGrid with customized group caption,
+
 ![Blazor DataGrid with Custom Group Caption](./images/blazor-datagrid-custom-group-caption.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rjLKjnhsADicMYLt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 > You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.

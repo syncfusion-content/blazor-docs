@@ -51,7 +51,6 @@ Error bars are graphical representations of the variability of data that are use
 ``` 
 
 ![Blazor Line Chart with Error Bar](../images/othertypes/blazor-error-bar-chart.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/LDLKNwjIKsFYzAgi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Error bar type
 
@@ -93,8 +92,6 @@ To change the error bar rendering type, set [Type](https://help.syncfusion.com/c
 }
 
 ``` 
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hZLKjQZIUrtBTKdR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Customizing error bar type
 
@@ -139,7 +136,6 @@ To customize the error bar type, specify the [Type](https://help.syncfusion.com/
 ``` 
 
 ![Blazor Line Chart with Custom Error Bar](../images/chart-types-images/blazor-line-chart-custom-error-bar.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hDhAtGDyqrhqZYEt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Error bar mode
 
@@ -182,8 +178,6 @@ Error bar mode is used to define whether the error bar line should be drawn hori
 
 ``` 
 
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/rNLAjctoKrAeGabC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
-
 ## Error bar direction
 
 To change the error bar direction to plus, minus, or both sides, use [Direction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartErrorBarSettings.html#Syncfusion_Blazor_Charts_ChartErrorBarSettings_Direction) property in [ChartErrorBarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartErrorBarSettings.html).
@@ -224,8 +218,6 @@ To change the error bar direction to plus, minus, or both sides, use [Direction]
 }
 
 ``` 
-
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/hjrKDwZoKrInePeH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 ## Customizing error bar cap
 
@@ -270,7 +262,6 @@ To customize the error bar cap [Length](https://help.syncfusion.com/cr/blazor/Sy
 ``` 
 
 ![Blazor Line Chart with Custom Error Bar Cap](../images/othertypes/blazor-line-chart-custom-error-bar-cap.png)
-<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VtLUNQXIUrmLKPYh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

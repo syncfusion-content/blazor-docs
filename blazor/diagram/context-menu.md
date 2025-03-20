@@ -37,7 +37,6 @@ The following code shows how to disable the default context menu items.
     </ContextMenuSettings>
 </SfDiagramComponent>
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ContextMenu)
 
 ## How to add custom items to the context menu
 
