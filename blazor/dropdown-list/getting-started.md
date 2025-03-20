@@ -11,9 +11,9 @@ documentation: ug
 
 ## Overview
 
-The [Blazor Dropdown List](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) is a dynamic replacement of HTML select tags. It has a rich appearance and allows you to select a single value that is non-editable from a list of predefined values. It has several out-of-the-box features such as data binding, filtering, grouping, UI customization, accessibility, and preselected values.
+The [Blazor Dropdown List](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) is a dynamic replacement of HTML select tags. It has a rich appearance and allows you to select a single value that is non-editable from a list of predefined values. It has several out-of-the-box features such as [data binding](https://blazor.syncfusion.com/documentation/dropdown-list/data-binding), [filtering](https://blazor.syncfusion.com/documentation/dropdown-list/filtering), grouping, UI customization, [accessibility](https://blazor.syncfusion.com/documentation/dropdown-list/accessibility), and preselected values.
 
-This section briefly explains about how to include [Blazor DropDown List](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) component in your Blazor WebAssembly App using Visual Studio and Visual Studio Code.
+This section briefly explains about how to include [Blazor DropDown List component](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) in your Blazor WebAssembly App using Visual Studio and Visual Studio Code.
 
 To get start quickly with Blazor DropDownList component, you can check on this video or [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DropDownList) sample.
 
@@ -109,7 +109,7 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor WebAssembly App.
+Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your [Blazor WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app).
 
 {% tabs %}
 {% highlight C# tabtitle="~/Program.cs" hl_lines="3 11" %}
@@ -158,11 +158,11 @@ Add the Syncfusion Blazor DropDown List component in the **~/Pages/Index.razor**
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor DropDown List component in your default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLTDChuUITQFPJn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DropDownList Component](./images/blazor-dropdownlist-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLTDChuUITQFPJn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DropDownList Component.](./images/blazor-dropdownlist-component.webp)" %}
 
 ## Binding data source
 
-After initialization, populate the DropDownList with data using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property.
+After initialization, populate the Blazor DropDownList with data using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property.
 
 {% tabs %}
 {% highlight razor %}
@@ -194,11 +194,11 @@ After initialization, populate the DropDownList with data using the [DataSource]
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVfZWVOAySCbMYl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Data Binding in Blazor DropDownList](./images/blazor-dropdownlist-data-binding.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVfZWVOAySCbMYl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Data Binding in Blazor DropDownList.](./images/blazor-dropdownlist-data-binding.png)" %}
 
 ## Configure the popup list
 
-By default, the width of the popup list automatically adjusts according to the DropDownList input element's width, and the height of the popup list has `350px`. The height and width of the popup list can also be customized using the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupHeight) and [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth) properties respectively.
+By default, the width of the popup list automatically adjusts according to the Blazor DropDownList input element's width, and the height of the popup list has `350px`. The height and width of the popup list can also be customized using the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupHeight) and [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth) properties respectively.
 
 {% tabs %}
 {% highlight razor %}
@@ -234,7 +234,7 @@ By default, the width of the popup list automatically adjusts according to the D
 
 ## Get selected value
 
-Get the selected value of the DropDownList component in the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event using [ChangeEventArgs.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ChangeEventArgs-2.html#Syncfusion_Blazor_DropDowns_ChangeEventArgs_2_Value) property.
+Get the selected value of the [Blazor DropDownList component](https://www.syncfusion.com/forums/181974/dropdown-list) in the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event using [ChangeEventArgs.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ChangeEventArgs-2.html#Syncfusion_Blazor_DropDowns_ChangeEventArgs_2_Value) property.
 
 
 {% highlight cshtml %}
@@ -254,8 +254,8 @@ Get the complete object list of the selected value in the [ValueChange](https://
 
 ## See also
 
-* [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](../getting-started/blazor-webassembly-app)
-* [Getting Started with Syncfusion Blazor for Server-side in Visual Studio](../getting-started/blazor-web-app)
-* [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](../getting-started/blazor-web-app)
+* [How to implement custom filtering in Blazor Dropdown List](https://support.syncfusion.com/kb/article/16093/how-to-implement-custom-filtering-in-blazor-dropdown-list)
+* [Getting Started with Syncfusion Blazor Web Assembly App in Visual Studio or .NET CLI](../getting-started/blazor-webassembly-app)
+* [Getting Started with Syncfusion Blazor Web App in Visual Studio or .NET CLI](../getting-started/blazor-web-app)
 
 N> You can also explore our [Blazor Dropdown List example](https://blazor.syncfusion.com/demos/dropdown-list/default-functionalities?theme=bootstrap5) that shows you how to render the Dropdown List in Blazor.
