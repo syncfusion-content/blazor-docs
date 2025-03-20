@@ -24,14 +24,14 @@ When working with secured APIs, all operations need proper authentication. There
 
 The Blazor File Manager component offers solutions for all these challenges:
 
-* For regular file operations and uploads: Use the `OnSend` event to add authentication headers
-* For upload operations: Configure `FileManagerUploadSettings` with `UploadMode.HttpClient`
-* For image operations: Use the `BeforeImageLoad` event with `UseImageAsUrl = false`
-* For download operations: Use the `BeforeDownload` event with `UseFormPost = false`
+* For regular file operations and uploads: Use the [OnSend](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_OnSend) event to add authentication headers
+* For upload operations: Configure [FileManagerUploadSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerUploadSettings.html) with [UploadMode.HttpClient](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.UploadMode.html#Syncfusion_Blazor_FileManager_UploadMode_HttpClient)
+* For image operations: Use the [BeforeImageLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforeImageLoad) event with [UseImageAsUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.BeforeImageLoadEventArgs-1.html#Syncfusion_Blazor_FileManager_BeforeImageLoadEventArgs_1_UseImageAsUrl) as `false`
+* For download operations: Use the [BeforeDownload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforeDownload) event with [UseFormPost](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.BeforeDownloadEventArgs-1.html#Syncfusion_Blazor_FileManager_BeforeDownloadEventArgs_1_UseFormPost) as `false`
 
 ## Setting Authorization Headers for File Operations and Uploads
 
-For regular file operations (listing files, delete, rename, etc.) and uploads, you can add authorization headers using the `OnSend` event. To enable HTTP client-based uploads, set the `UploadMode` to `HttpClient`:
+For regular file operations (listing files, delete, rename, etc.) and uploads, you can add authorization headers using the [OnSend](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_OnSend) event. To enable HTTP client-based uploads, set the [UploadMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.UploadMode.html#Syncfusion_Blazor_FileManager_UploadMode) to [HttpClient](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.UploadMode.html#Syncfusion_Blazor_FileManager_UploadMode_HttpClient):
 
 ```csharp
 <SfFileManager TValue="FileManagerDirectoryContent">
@@ -54,7 +54,7 @@ For regular file operations (listing files, delete, rename, etc.) and uploads, y
 }
 ```
 
-The `OnSend` event is triggered for various file operations including:
+The [OnSend](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_OnSend) event is triggered for various file operations including:
 * read - For listing files and folders
 * delete - For deleting files and folders
 * copy - For copying files and folders
@@ -67,7 +67,7 @@ The `OnSend` event is triggered for various file operations including:
 
 ## Setting Authorization Headers for Image Operations
 
-For image operations, you'll need to use the `BeforeImageLoad` event with the `UseImageAsUrl` property:
+For image operations, you'll need to use the [BeforeImageLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforeImageLoad) event with the [UseImageAsUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.BeforeImageLoadEventArgs-1.html#Syncfusion_Blazor_FileManager_BeforeImageLoadEventArgs_1_UseImageAsUrl) property:
 
 ```csharp
 <SfFileManager TValue="FileManagerDirectoryContent">
@@ -103,7 +103,7 @@ For image operations, you'll need to use the `BeforeImageLoad` event with the `U
 
 ## Setting Authorization Headers for Download Operations
 
-For download operations, you can use the `BeforeDownload` event with the `UseFormPost` property:
+For download operations, you can use the [BeforeDownload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerEvents-1.html#Syncfusion_Blazor_FileManager_FileManagerEvents_1_BeforeDownload) event with the [UseFormPost](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.BeforeDownloadEventArgs-1.html#Syncfusion_Blazor_FileManager_BeforeDownloadEventArgs_1_UseFormPost) property:
 
 ```csharp
 <SfFileManager TValue="FileManagerDirectoryContent">
