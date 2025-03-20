@@ -345,3 +345,19 @@ The following example demonstrates how to implement the `PdfQueryTaskbarInfo` ev
     }
 }
 ```
+### Troubleshooting PDF Export Customization
+
+1. **Customizations Not Appearing in PDF**
+   - **Check Event Handler**: Ensure that the `PdfQueryTaskbarInfo` event is correctly implemented and bound in your code. Double-check the event handler's logic to verify that conditions for customization are being met.
+   - **Data Matching**: Ensure that the task data (like `TaskId`) used in the event matches the data in the task collection. Mismatches can prevent customizations from applying.
+
+2. **Images Not Displaying**
+   - **Image URL**: Verify that the image URLs are correct and accessible. Ensure that external images are hosted on a server with public access rights.
+   - **Supported Formats**: Use compatible image formats such as JPG, PNG, or GIF. Unsupported formats may not render correctly in a PDF.
+
+3. **Performance Issues**
+   - **Optimize Resources**: Large images or complex styling may slow down the PDF export process. Consider optimizing image size and simplifying styles.
+
+4. **Color Code Customization**
+    - **Use Valid Color Codes**: You can use HEX (`#RRGGBB`), RGB (`rgb(r,g,b)`), or standard color names like `red`, `blue`, etc. Ensure all color codes or names used are supported and valid.
+   - **Consistency Across Styles**: Maintain consistent use of color codes in the styles to avoid unexpected color changes or conflicts during PDF rendering.
