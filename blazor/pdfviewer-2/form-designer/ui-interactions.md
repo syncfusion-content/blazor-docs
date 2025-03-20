@@ -61,7 +61,7 @@ N> Users can also edit form fields programmatically in SfPdfViewer, allowing for
 
 ![Edit Properties in Textbox field](form-designer-images/textbox-propertypanel-sfpdfviewer.png)
 
-### Appearance Tab:
+#### Appearance Tab:
 
 * Customize the Font Family of the text.
 
@@ -79,7 +79,7 @@ N> Users can also edit form fields programmatically in SfPdfViewer, allowing for
 
 ![Edit Properties in Password field](form-designer-images/password-properypanel-apperance-formdesigner-sfpdfviewer.png)
 
-### Options Tab (For Dropdown and Listbox Fields):
+#### Options Tab (For Dropdown and Listbox Fields):
 
 * Add, modify, or remove selectable Options for dropdowns and list boxes.
 
