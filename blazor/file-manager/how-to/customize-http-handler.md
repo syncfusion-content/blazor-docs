@@ -253,7 +253,7 @@ To authorize the File Manager component server response, generate a user token i
 
 Create a new **ASP Core web application** with the required File Manager service models and controller, or clone the required service provider from the [file-system-provider](https://blazor.syncfusion.com/documentation/file-manager/file-system-provider) documentation that contains the available file service provider.
 
-To demonstrate behavior with a physical service provider, include the [Microsoft.AspNetCore.Authentication.JwtBearer](), [Microsoft.IdentityModel.Tokens](https://www.nuget.org/packages/Microsoft.IdentityModel.Tokens) and [System.IdentityModel.Tokens.Jwt](https://www.nuget.org/packages/System.IdentityModel.Tokens.Jwt) packages for accessing the authorized token value on the service application.
+To demonstrate behavior with a physical service provider, include the [Microsoft.AspNetCore.Authentication.JWTBearer](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.JwtBearer), [Microsoft.IdentityModel.Tokens](https://www.nuget.org/packages/Microsoft.IdentityModel.Tokens) and [System.IdentityModel.Tokens.JWT](https://www.nuget.org/packages/System.IdentityModel.Tokens.Jwt) packages for accessing the authorized token value on the service application.
 
 Open **appsettings.json** and add the following key, issuer, and audience in the server application.
 
