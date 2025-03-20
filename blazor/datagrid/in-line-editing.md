@@ -182,3 +182,152 @@ The following GIF represents the delete confirmation dialog displayed while dele
 ![Blazor DataGrid displays Delete Confirmation Dialog](./images/blazor-datagrid-delete-confirm-dialog.gif)
 
 N> The [ShowDeleteConfirmDialog](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_ShowDeleteConfirmDialog) supports all type of edit modes.
+
+## Hiding Columns During Normal Editing in Blazor Grid
+
+To hide specific columns during the editing process in a Blazor Grid component.
+
+In the provided sample, this demonstrates how to hide specific columns while editing a record in a Blazor Grid. During editing, the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event and [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event are triggered. Within these events, the default action is prevented, the index of the selected record is stored, and the hiding of columns for editing is initiated using the HideAndEdit function. Inside the HideAndEdit function, the code utilizes the Grid's [HideColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_HideColumnsAsync_System_String___System_String_) method to hide those columns. Subsequently, the Grid is refreshed to display the changes. Afterward, the [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionComplete) event is triggered. If the **RequestType** is "Refresh" and the StartEdit flag is set to "true," the code chooses the same row once again by employing the [SelectRowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRowAsync_System_Int32_System_Nullable_System_Boolean__) method, which was stored during the initial edit. This is followed by initiating editing using the [StartEditAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_StartEditAsync) method. In case the **RequestType** is "Save" or "Cancel," the columns are displayed again after editing, facilitated by the [ShowColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowColumnsAsync_System_String___System_String_) method.
+
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+
+<SfGrid @ref="Grid" DataSource="@GridData" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })"  Height="315">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal"></GridEditSettings>
+    <GridEvents OnToolbarClick="ToolbarClickHandler" OnActionBegin="ActionBeginHandler" OnActionComplete="ActionCompletedHandler" TValue="OrderData"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<OrderData> GridData { get; set; }
+    public SfGrid<OrderData> Grid { get; set; }
+
+    public string[] cols = new string[] { "Order ID", "Ship City" };
+    public bool StartEdit = false;
+    public int SelectedRowIndex { get; set; }
+
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs Args)
+    {
+        if (Args.Item.Text == "Edit")
+        {
+            //Cancel the default action
+            Args.Cancel = true;
+            var val = await Grid.GetSelectedRowIndexesAsync();
+            //Store the selected record index
+            SelectedRowIndex = val[0];
+            //Hide the columns and refresh the Grid
+            await HideAndEdit();
+        }
+    }
+    public async Task HideAndEdit()
+    {
+        //Boolean to indicate that hiding is initiate for editing operation.
+        StartEdit = true;
+        //Hide the columns
+        await Grid.HideColumnsAsync(cols, "HeaderText");
+        //Refreshing the Grid after hiding the column
+        await Grid.Refresh();
+
+    }
+    public async Task ActionBeginHandler(ActionEventArgs<OrderData> Args)
+    {
+        if (Args.RequestType == Syncfusion.Blazor.Grids.Action.BeginEdit)
+        {
+            if (!StartEdit)
+            {
+                //Preventing the default edit operation.
+                Args.Cancel = true;
+                //Storing the selecting record index
+                SelectedRowIndex = Args.RowIndex;
+                //Hiding the column
+                await HideAndEdit();
+            }
+        }
+    }
+    public async Task ActionCompletedHandler(ActionEventArgs<OrderData> Args)
+    {
+        if (Args.RequestType == Syncfusion.Blazor.Grids.Action.Refresh && StartEdit)
+        {
+            //While refreshing this RequestType will trigger and based on boolean StartEdit, we select the record
+            await Grid.SelectRowAsync(SelectedRowIndex);
+            //Editing the selected record
+            await Grid.StartEditAsync();
+        }
+        if (Args.RequestType == Syncfusion.Blazor.Grids.Action.Save || Args.RequestType == Syncfusion.Blazor.Grids.Action.Cancel)
+        {
+            //Updating the boolean variable
+            StartEdit = false;
+            //Displaying the columns again after editing
+            await Grid.ShowColumnsAsync(cols, "HeaderText");
+        }
+    }
+
+
+    protected override void OnInitialized()
+    {
+        GridData = OrderData.GetAllRecords();
+    }
+
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+ public class OrderData
+    {
+        public static List<OrderData> Orders = new List<OrderData>();
+
+
+        public OrderData()
+        {
+
+        }
+        public OrderData(int? OrderID, string CustomerID, string ShipCity, string ShipName)
+        {
+            this.OrderID = OrderID;
+            this.CustomerID = CustomerID;
+            this.ShipCity = ShipCity;
+            this.ShipName = ShipName;
+
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "VINET", "Reims", "Vins et alcools Chevali"));
+                    Orders.Add(new OrderData(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+                    Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10251, "VICTE", "Lyon", "Victuailles en stock"));
+                    Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+                    Orders.Add(new OrderData(10253, "HANAR", "Lyon", "Hanari Carnes"));
+                    Orders.Add(new OrderData(10254, "CHOPS", "Rio de Janeiro", "Chop-suey Chinese"));
+                    Orders.Add(new OrderData(10255, "RICSU", "Münster", "Richter Supermarkt"));
+                    Orders.Add(new OrderData(10256, "WELLI", "Reims", "Wellington Import"));
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
+
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public string ShipCity { get; set; }
+        public string ShipName { get; set; }
+
+
+    }
+{% endhighlight %}
+{% endtabs %}
+
+The following screenshot shows Hiding Columns During Normal Editing,
+
+![Hiding Columns During Dialog Editing in Blazor DataGrid](./images/Hiding-Columns-During-Normal-Editing.gif)
