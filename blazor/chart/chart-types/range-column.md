@@ -584,7 +584,7 @@ We can also customize the corner radius for individual points in the chart serie
 }
 
 ```
-![Blazor Range column Chart with Corner radius.](../images/chart-types-images/blazor-range-column-corner-radius-onPointRender.png)
+![Blazor Range column Chart with Corner radius](../images/chart-types-images/blazor-range-column-corner-radius-onPointRender.png)
 
 ## Empty points
 

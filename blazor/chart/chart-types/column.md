@@ -422,7 +422,7 @@ We can also customize the corner radius for individual points in the chart serie
 }
 ```
 
-![Blazor column Chart with Corner radius.](../images/chart-types-images/blazor-column-chart-corner-radius-onPointRender.png)
+![Blazor column Chart with Corner radius](../images/chart-types-images/blazor-column-chart-corner-radius-onPointRender.png)
 
 ## Column space and width
 

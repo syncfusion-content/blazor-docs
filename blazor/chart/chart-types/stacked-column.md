@@ -515,7 +515,7 @@ We can also customize the corner radius for individual points in the chart serie
     }
 }
 ```
-![Blazor Stacked column Chart with Corner radius.](../images/chart-types-images/blazor-stacked-column-chart-corner-radius-onPointRender.png)
+![Blazor Stacked column Chart with Corner radius](../images/chart-types-images/blazor-stacked-column-chart-corner-radius-onPointRender.png)
 
 ## Stacking group
 

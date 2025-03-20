@@ -334,6 +334,7 @@ The [DashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.C
         public double Y3 { get; set; }
     }
 
+
     public List<StackedData> StackedDataList = new List<StackedData>
     {
         new StackedData { X = "2014", Y = 111.1, Y1 = 76.9, Y2 = 66.1, Y3 = 34.1 },
@@ -452,7 +453,7 @@ The [ChartCornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ```
 
-![Blazor Stacked bar Chart with Corner radius.](../images/chart-types-images/blazor-stacked-bar-chart-corner-radius.png)
+![Blazor Stacked bar Chart with Corner radius](../images/chart-types-images/blazor-stacked-bar-chart-corner-radius.png)
 
 We can also customize the corner radius for individual points in the chart series using the [OnPointRender](https://blazor.syncfusion.com/documentation/chart/events#onpointrender) event by utilizing its `CornerRadius` argument.
 

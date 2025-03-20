@@ -239,7 +239,6 @@ We can also customize the corner radius for individual points in the chart serie
             args.CornerRadius.BottomRight = 5;
             args.CornerRadius.TopLeft = 5;
             args.CornerRadius.TopRight = 5;
-
         }
     }
 }
