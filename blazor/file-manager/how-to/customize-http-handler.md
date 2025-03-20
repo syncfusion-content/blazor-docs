@@ -149,12 +149,6 @@ You can create a Blazor server application with Windows authentication using Vis
 
 Include the [Microsoft.AspNetCore.Authentication.JwtBearer](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.JwtBearer) package for generating user tokens.
 
-{% tabs %}
-
-<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.8" />
-
-{% endtabs %}
-
 Initialize the File Manager component in the **~/Pages/Index.razor** file using the [Getting Started with Blazor File Manager Component](https://blazor.syncfusion.com/documentation/file-manager/getting-started) documentation.
 
 ### Implementing JWT Token Generation and Authorization
@@ -261,15 +255,7 @@ Create a new **ASP Core web application** with the required File Manager service
 
 To demonstrate behavior with a physical service provider, include the [Microsoft.AspNetCore.Authentication.JwtBearer](), [Microsoft.IdentityModel.Tokens](https://www.nuget.org/packages/Microsoft.IdentityModel.Tokens) and [System.IdentityModel.Tokens.Jwt](https://www.nuget.org/packages/System.IdentityModel.Tokens.Jwt) packages for accessing the authorized token value on the service application.
 
-{% tabs %}
-
-<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.8" />
-<PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.22.1" />
-<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.22.1" />
-
-{% endtabs %}
-
-Open **appsetting.json** and add the following key, issuer, and audience in the server application.
+Open **appsettings.json** and add the following key, issuer, and audience in the server application.
 
 ```json
 
