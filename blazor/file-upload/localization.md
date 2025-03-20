@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Localization in Blazor File Upload Component | Syncfusion
-description: Checkout and learn here all about Localization in Syncfusion Blazor File Upload component and much more.
+description: Checkout and learn here all about localization support in Syncfusion Blazor File Upload component, it's elements and more.
 platform: Blazor
 control: File Upload
 documentation: ug
