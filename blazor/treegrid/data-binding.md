@@ -143,7 +143,7 @@ Tree Grid is a generic component which is strongly bound to a model type. There 
 
 **DynamicObject** can be bound to tree grid by assigning to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_DataSource) property. Tree Grid can also perform all kind of supported data operations and editing in DynamicObject.
 
-N> The [GetDynamicMemberNames](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames?view=netcore-3.1) method of DynamicObject class must be overridden and return the property names to render and perform data operations, editing etc., while using DynamicObject.
+N> The [GetDynamicMemberNames](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames?view=netcore-3.1) method of DynamicObject class must be overridden and return the property names to render and perform data operations, editing etc., while using DynamicObject.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeGrid
@@ -895,6 +895,6 @@ Now, the Tree Grid can be configured using the **'SfDataManager'** to interact w
 }
 ```
 
-To perform Tree Grid CRUD operation using Entity Framework. You can refer [here](./edit/#entity-framework).
+To perform Tree Grid CRUD operation using Entity Framework. You can refer [here](./editing/entity-frame-work).
 
 N> You can find the fully working sample [here](https://github.com/SyncfusionExamples/Blazor-TreeGrid-With-EntityFramework).
