@@ -347,32 +347,32 @@ The following example demonstrates how to implement the `PdfQueryTaskbarInfo` ev
 ```
 ## Best practices for exporting PDF with templates
 
-- **Optimize PdfQueryCellInfo Event Usage**: Use the `PdfQueryCellInfo` event to customize individual cell appearances efficiently. Minimize complex logic to maintain performance.
+- **Optimize PdfQueryCellInfo event usage**: Use the `PdfQueryCellInfo` event to customize individual cell appearances efficiently. Minimize complex logic to maintain performance.
 
-- **Utilize PdfColumnHeaderQueryCellInfo Effectively**: Apply the `PdfColumnHeaderQueryCellInfo` event for custom header styles and content, focusing on clarity and readability.
-- **Accessibility and Clarity**: Keep header elements simple and accessible. Use straightforward text and icons to convey column purposes clearly.
+- **Utilize PdfColumnHeaderQueryCellInfo effectively**: Apply the `PdfColumnHeaderQueryCellInfo` event for custom header styles and content, focusing on clarity and readability.
+- **Accessibility and clarity**: Keep header elements simple and accessible. Use straightforward text and icons to convey column purposes clearly.
 
-- **Efficient Use of PdfQueryTaskbarInfo**: Utilize the `PdfQueryTaskbarInfo` event to apply label customizations based on task data conditions for effective communication of task statuses.
-- **Consistent Label Styling**: Ensure consistent theme across labels with uniform font styles, colors, and sizes.
+- **Efficient use of PdfQueryTaskbarInfo**: Utilize the `PdfQueryTaskbarInfo` event to apply label customizations based on task data conditions for effective communication of task statuses.
+- **Consistent label styling**: Ensure consistent theme across labels with uniform font styles, colors, and sizes.
 
 ## Image handling across events
 - **Base64 and MemoryStream**: Convert images to Base64 strings, then use `MemoryStream` to convert them to `PdfImage`. This avoids reliance on potentially inaccessible web links.
-- **Height and Width Management**: Scale images to fit designated areas to prevent default resizing that reflects cell or row heights. Maintain a professional PDF layout.
-- **Compression and Optimization**: Compress images prior to Base64 conversion to reduce file size while maintaining quality, optimizing the final PDF document size.
+- **Height and width management**: Scale images to fit designated areas to prevent default resizing that reflects cell or row heights. Maintain a professional PDF layout.
+- **Compression and optimization**: Compress images prior to Base64 conversion to reduce file size while maintaining quality, optimizing the final PDF document size.
 
 ## Troubleshooting PDF export
 
-1. **Customizations Not Appearing in PDF**
-   - **Check Event Handler**: Ensure that the `PdfQueryTaskbarInfo` event is correctly implemented and bound in your code. Double-check the event handler's logic to verify that conditions for customization are being met.
-   - **Data Matching**: Ensure that the task data (like `TaskId`) used in the event matches the data in the task collection. Mismatches can prevent customizations from applying.
+1. **Customizations not appearing in PDF**
+   - **Check event handler**: Ensure that the `PdfQueryTaskbarInfo` event is correctly implemented and bound in your code. Double-check the event handler's logic to verify that conditions for customization are being met.
+   - **Data matching**: Ensure that the task data (like `TaskId`) used in the event matches the data in the task collection. Mismatches can prevent customizations from applying.
 
-2. **Images Not Displaying**
+2. **Images not displaying**
    - **Image URL**: Verify that the image URLs are correct and accessible. Ensure that external images are hosted on a server with public access rights.
-   - **Supported Formats**: Use compatible image formats such as JPG, PNG, or GIF. Unsupported formats may not render correctly in a PDF.
+   - **Supported formats**: Use compatible image formats such as JPG, PNG, or GIF. Unsupported formats may not render correctly in a PDF.
 
-3. **Performance Issues**
-   - **Optimize Resources**: Large images or complex styling may slow down the PDF export process. Consider optimizing image size and simplifying styles.
+3. **Performance issues**
+   - **Optimize resources**: Large images or complex styling may slow down the PDF export process. Consider optimizing image size and simplifying styles.
 
-4. **Color Code Customization**
-    - **Use Valid Color Codes**: You can use HEX (`#RRGGBB`), or standard color names like `red`, `blue`, etc. Ensure all color codes or names used are supported and valid.
-   - **Consistency Across Styles**: Maintain consistent use of color codes in the styles to avoid unexpected color changes or conflicts during PDF rendering.
+4. **Color code customization**
+    - **Use valid color codes**: You can use HEX (`#RRGGBB`), or standard color names like `red`, `blue`, etc. Ensure all color codes or names used are supported and valid.
+   - **Consistency across styles**: Maintain consistent use of color codes in the styles to avoid unexpected color changes or conflicts during PDF rendering.
