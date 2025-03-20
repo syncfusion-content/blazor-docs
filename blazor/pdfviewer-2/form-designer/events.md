@@ -15,7 +15,7 @@ Below are the key events provided by the Form Designer to handle form field inte
 
 | Event Name                | Description |
 |---------------------------|-------------|
-| **FormFieldAdding**       | Triggered before a new form field is added, allowing validation or modifications before insertion. |
+| **FormFieldAdding**       | Triggered before a new form field is added, allowing validation before insertion. |
 | **FormFieldAdded**        | Triggered when a form field is added to the PDF document. |
 | **FormFieldDeleted**      | Triggered when a form field is removed from the document. |
 | **FormFieldClick**        | Triggered when a user clicks on a form field while designer mode is off. |

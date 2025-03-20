@@ -11,9 +11,9 @@ documentation: ug
 
 The Form Designer feature in the Blazor PDF Viewer component allows users to add, edit, and manipulate form fields directly in a PDF document. This feature provides an intuitive user interface to design interactive forms efficiently. 
 
-## Form Field Interactions: 
+## Form Field Interactions
 
-### Adding Form Fields: 
+### Adding Form Fields
 
 Click the **Edit Form Fields** icon on the toolbar, add the required form field, and place it onto the PDF document.
 
@@ -22,19 +22,19 @@ Click the **Edit Form Fields** icon on the toolbar, add the required form field,
 N> Users can also add form fields programmatically in SfPdfViewer for greater flexibility in customization.
 [Programmatically Add the Form fields](./create-programmatically)
 
-### Dragging Form Fields: 
+### Dragging Form Fields
 
 Users can drag form fields to reposition them anywhere within the document. By clicking and holding a form field, users can move it to the desired location, and alignment guides may appear to help ensure precise placement before releasing the field.
 
 ![Dragging Form Fields in Form designer in SfPdfViewer](form-designer-images/drag-formfields-formdesigner-sfpdfviewer.gif)
 
-### Resizing Form Fields: 
+### Resizing Form Fields
 
 Users can resize form fields by dragging the resize handles at the edges or corners. This allows precise adjustments to fit the required dimensions within the document.
 
 ![Resizing Form Fields in Form designer in SfPdfViewer](form-designer-images/resize-formfields-formdesigner-sfpdfviewer.gif)
 
-### Editing or Updating Form Fields:
+### Editing or Updating Form Fields
 
 Users can edit form fields dynamically using the Form Field Properties window. This window can be accessed by selecting the Properties option from the context menu that appears when right-clicking a form field.
 
@@ -43,7 +43,7 @@ The Form Field Properties window consists of three tabs, each offering different
 N> Users can also edit form fields programmatically in SfPdfViewer, allowing for more precise customization.
 [Programmatically Edit the Form Fields](./create-programmatically)
 
-#### General Tab:
+#### General Tab
 
 * Modify the Field Name to assign a unique identifier.
 
@@ -61,7 +61,7 @@ N> Users can also edit form fields programmatically in SfPdfViewer, allowing for
 
 ![Edit Properties in Textbox field](form-designer-images/textbox-propertypanel-sfpdfviewer.png)
 
-#### Appearance Tab:
+#### Appearance Tab
 
 * Customize the Font Family of the text.
 
@@ -79,7 +79,7 @@ N> Users can also edit form fields programmatically in SfPdfViewer, allowing for
 
 ![Edit Properties in Password field](form-designer-images/password-properypanel-apperance-formdesigner-sfpdfviewer.png)
 
-#### Options Tab (For Dropdown and Listbox Fields):
+#### Options Tab (For Dropdown and Listbox Fields)
 
 * Add, modify, or remove selectable Options for dropdowns and list boxes.
 
