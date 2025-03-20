@@ -55,7 +55,7 @@ Bezier segments are used to create curve segments, and the curves are configurab
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments/Bezier)
 
-![Connector with Bezier Segment in Blazor Diagram](../../images/blazor-diagram-connector-with-bezier.png)
+![Connector with Bezier Segment in Blazor Diagram](../../../images/blazor-diagram-connector-with-bezier.png)
 
  [Point1](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierSegment.html#Syncfusion_Blazor_Diagram_BezierSegment_Point1) and [Point2](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierSegment.html#Syncfusion_Blazor_Diagram_BezierSegment_Point2) properties are used to control the points of the bezier connector, and the [vector1](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierSegment.html#Syncfusion_Blazor_Diagram_BezierSegment_Vector1) and [Vector2](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierSegment.html#Syncfusion_Blazor_Diagram_BezierSegment_Vector2) properties are used to define the length and angle between the source point and target point, respectively. The following code example illustrates how to use these properties in our control.
 
@@ -102,7 +102,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 * A segment control point of the Bezier connector is used to change the bezier vectors and points of the connector.
 
-![Editing Bezier Segment in Blazor Diagram](../../images/blazor-diagram-edit-bezier-segment.gif)
+![Editing Bezier Segment in Blazor Diagram](../../../images/blazor-diagram-edit-bezier-segment.gif)
 
 ## Avoid overlapping with bezier
 
@@ -242,4 +242,4 @@ Also, if you provide segments during the initial rendering, the segment collecti
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments).
 
-![Avoid overlapping with bezier](../../images/bezierOverlap.png)
+![Avoid overlapping with bezier](../../../images/bezierOverlap.png)
