@@ -18,9 +18,11 @@ To customize the appearance of indicators, and previous and next navigators, usi
 
 ## Navigators
 
+Navigators in the Blazor Carousel component include previous and next buttons that allow users to manually control slide transitions. You can customize the visibility, appearance, and behavior of these navigation buttons to match your application's design requirements.
+
 ### Show or hide previous and next button
 
-In navigators, the previous and next slide transition buttons are used to perform slide transitions manually. You can show/hide the navigators using the [ButtonsVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_ButtonsVisibility) property. The possible property values are as follows:
+You can show/hide the navigators using the [ButtonsVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_ButtonsVisibility) property. The possible property values are as follows:
 
 - `Hidden` – the navigator’s buttons are not visible.
 - `Visible` – the navigator’s buttons are visible.
@@ -206,9 +208,11 @@ Template options are provided to customize the previous button using [PreviousBu
 
 ## Indicators
 
+Indicators provide users with visual cues about the number of slides in the carousel and highlight which slide is currently active. They typically appear as a series of dots or other visual elements at the bottom of the carousel. Indicators help users understand their position within the content and allow them to navigate directly to a specific slide by clicking on the corresponding indicator.
+
 ### Show or hide indicators
 
-In indicators, the total slides and current slide state have been depicted. You can show/hide the indicators using the [ShowIndicators](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_ShowIndicators) property. The following example depicts the code to hide the indicators in the carousel.
+You can show/hide the indicators using the [ShowIndicators](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_ShowIndicators) property. The following example depicts the code to hide the indicators in the carousel.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -426,7 +430,7 @@ A default indicator in a carousel is a set of dots that indicate the current pos
 @using Syncfusion.Blazor.Navigations
 
 <div class="control-container">
-    <SfCarousel IndicatorsType="Default">
+    <SfCarousel IndicatorsType=CarouselIndicatorsType.Default>
         <CarouselItem>
             <div class="slide-content">Slide 1</div>
         </CarouselItem>
@@ -462,7 +466,7 @@ A default indicator in a carousel is a set of dots that indicate the current pos
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBKsBVhKsaLlNlA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNreNgrDgRrkvpRl?appbar=true&editor=true&result=true&errorlist=true&theme=material" %}
 
 ![Carousel indicators type default](images/indicator-default.png)
 
@@ -474,7 +478,7 @@ A dynamic indicator in a carousel provides visual cues or markers that dynamical
 @using Syncfusion.Blazor.Navigations
 
 <div class="control-container">
-    <SfCarousel IndicatorsType="Dynamic">
+    <SfCarousel IndicatorsType=CarouselIndicatorsType.Dynamic>
         <CarouselItem>
             <div class="slide-content">Slide 1</div>
         </CarouselItem>
@@ -510,7 +514,7 @@ A dynamic indicator in a carousel provides visual cues or markers that dynamical
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBqsLBhACumvJUW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrSZgVDURoUhXBG?appbar=true&editor=true&result=true&errorlist=true&theme=material" %}
 
 ![Carousel indicators type dynamic](images/indicator-dynamic.png)
 
@@ -522,7 +526,7 @@ The fraction indicator type displays the current slide index and total slide cou
 @using Syncfusion.Blazor.Navigations
 
 <div class="control-container">
-    <SfCarousel IndicatorsType="Fraction">
+    <SfCarousel IndicatorsType=CarouselIndicatorsType.Fraction>
         <CarouselItem>
             <div class="slide-content">Slide 1</div>
         </CarouselItem>
@@ -558,7 +562,7 @@ The fraction indicator type displays the current slide index and total slide cou
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBUCBhhqVZMmiMz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLoZgLNURdscxiB?appbar=true&editor=true&result=true&errorlist=true&theme=material" %}
 
 ![Carousel indicators type fraction](images/indicator-fraction.png)
 
@@ -570,7 +574,7 @@ The Progress Indicator type displays the current slide as a progress bar. The Pr
 @using Syncfusion.Blazor.Navigations
 
 <div class="control-container">
-    <SfCarousel IndicatorsType="Progress">
+    <SfCarousel IndicatorsType=CarouselIndicatorsType.Progress>
         <CarouselItem>
             <div class="slide-content">Slide 1</div>
         </CarouselItem>
@@ -606,11 +610,13 @@ The Progress Indicator type displays the current slide as a progress bar. The Pr
     }
 </style>
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBgChBrqhNyvyRO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVyZqBtqxdaNrxQ?appbar=true&editor=true&result=true&errorlist=true&theme=material" %}
 
 ![Carousel indicators type progress](images/indicator-progress.png)
 
 ## Play button
+
+The play button in the Blazor Carousel component gives users control over the automatic slide transitions. When displayed, it allows users to pause and resume the carousel's automatic cycling through slides.
 
 ### Show or hide the play button
 

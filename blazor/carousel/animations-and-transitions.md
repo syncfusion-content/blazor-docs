@@ -9,7 +9,11 @@ documentation: ug
 
 # Animations and Transitions with Blazor Carousel Component
 
+This section demonstrates how to customize animations, control slide intervals, manage autoplay behavior, and implement touch interactions for an enhanced user experience.
+
 ## Animations
+
+The Blazor Carousel component provides various animation options to create engaging and interactive slide transitions. 
 
 ### Fade animation
 
@@ -162,7 +166,7 @@ The following demo depicts the example for `parallax` custom animation
 
 ## Intervals between slides
 
-Using the items property, you can set different intervals for each item to transition between slides. The default interval is `5000 ms` (5 seconds). The following example depicts the code for setting the different intervals between each item.
+Using the [`Interval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.CarouselItem.html#Syncfusion_Blazor_Navigations_CarouselItem_Interval) property, you can set different intervals for each item to transition between slides. The default interval is `5000 ms` (5 seconds). The following example depicts the code for setting the different intervals between each item.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

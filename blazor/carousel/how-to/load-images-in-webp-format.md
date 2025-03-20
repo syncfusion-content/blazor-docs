@@ -60,3 +60,5 @@ You can load the carousel image in the webp format, which aims to create smaller
 
 </style>
 ```
+
+![Carousel webp](images/blazor-carousel-webp-image.png)
