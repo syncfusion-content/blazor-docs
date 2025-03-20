@@ -283,32 +283,7 @@ This section explains the list of events of the MultiSelect component which will
 `DataBound` event triggers when the data source is populated in the popup list.
 
 ```cshtml
-@using Syncfusion.Blazor.DropDowns
 
-<SfMultiSelect TItem="GameFields" TValue="string[]" DataSource="@Games">
-    <MultiSelectEvents TItem="GameFields" TValue="string[]" DataBound="@DataBoundHandler"></MultiSelectEvents>
-    <MultiSelectFieldSettings Text="Text" Value="ID"></MultiSelectFieldSettings>
-</SfMultiSelect>
-
-@code {
-    public class GameFields
-    {
-        public string ID { get; set; }
-        public string Text { get; set; }
-    }
-
-    private List<GameFields> Games = new List<GameFields>() {
-        new GameFields(){ ID= "Game1", Text= "American Football" },
-        new GameFields(){ ID= "Game2", Text= "Badminton" },
-        new GameFields(){ ID= "Game3", Text= "Basketball" },
-        new GameFields(){ ID= "Game4", Text= "Cricket" },
-     };
-
-    private void DataBoundHandler(DataBoundEventArgs args)
-    {
-        // Here you can customize your code
-    }
-}
 ```
 
 ## Filtering

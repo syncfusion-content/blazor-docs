@@ -22,58 +22,7 @@ The MultiSelect also supports different kinds of data services such as OData, OD
 
 N> When binding complex data to the MultiSelect, fields should be mapped correctly. Otherwise, the selected item remains undefined.
 
-## Binding local data
 
-Local data can be represented in two ways as described below.
-
-### Array of object
-
-The MultiSelect can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html) property.
-
-In the following example, `Name` column from complex data have been mapped to the `Value` field.
-
-```cshtml
-@using Syncfusion.Blazor.DropDowns
-
-<SfMultiSelect TValue="string[]" TItem="Country" Placeholder="e.g. Australia" DataSource="@Countries">
-    <MultiSelectFieldSettings Text="Name" Value="Code"></MultiSelectFieldSettings>
-</SfMultiSelect>
-
-@code {
-
-    public class Country
-    {
-        public string Name { get; set; }
-
-        public string Code { get; set; }
-    }
-
-    List<Country>Countries = new List<Country>
-    {
-        new Country() { Name = "Australia", Code = "AU" },
-        new Country() { Name = "Bermuda", Code = "BM" },
-        new Country() { Name = "Canada", Code = "CA" },
-        new Country() { Name = "Cameroon", Code = "CM" },
-        new Country() { Name = "Denmark", Code = "DK" },
-        new Country() { Name = "France", Code = "FR" },
-        new Country() { Name = "Finland", Code = "FI" },
-        new Country() { Name = "Germany", Code = "DE" },
-        new Country() { Name = "Greenland", Code = "GL" },
-        new Country() { Name = "Hong Kong", Code = "HK" },
-        new Country() { Name = "India", Code = "IN" },
-        new Country() { Name = "Italy", Code = "IT" },
-        new Country() { Name = "Japan", Code = "JP" },
-        new Country() { Name = "Mexico", Code = "MX" },
-        new Country() { Name = "Norway", Code = "NO" },
-        new Country() { Name = "Poland", Code = "PL" },
-        new Country() { Name = "Switzerland", Code = "CH" },
-        new Country() { Name = "United Kingdom", Code = "GB" },
-        new Country() { Name = "United States", Code = "US" },
-    };
-}
-```
-
-![Binding Blazor MultiSelect DropDown Items](./images/blazor-multiselect-dropdown-binding-items.png)
 
 ### Array of complex object
 
