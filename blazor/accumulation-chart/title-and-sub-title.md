@@ -135,6 +135,45 @@ N> The subtitle, which appears below the title, will also be positioned along wi
 ```
 ![Position customization of title in Blazor Accumulation Chart](images/title/blazor-accumulation-chart-subtitle-position.png)
 
+When the `Position` is set to `Custom`, the title can be placed at any specific location on the chart using `X` and `Y` coordinates in [AccumulationChartTitleStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTitleStyle.html). This allows for precise control over the title’s position, enabling customization to suit the design or layout needs. The `X` and `Y` values define the horizontal and vertical offsets, respectively, allowing the title to be positioned anywhere on the chart.
+
+```cshtml 
+
+@using Syncfusion.Blazor.Charts
+
+<SfAccumulationChart Title="Mobile Browser Statistics" SubTitle="In the year 2014 - 2015">
+    <AccumulationChartTitleStyle Position="ChartTitlePosition.Custom"></AccumulationChartTitleStyle>
+    <AccumulationChartSeriesCollection>
+        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users"
+                                 Name="Browser">
+        </AccumulationChartSeries>
+    </AccumulationChartSeriesCollection>
+
+    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
+</SfAccumulationChart>
+
+@code{
+    public class Statistics
+    {
+        public string Browser { get; set; }
+        public double Users { get; set; }
+    }
+
+    public List<Statistics> StatisticsDetails = new List<Statistics>
+	{
+        new Statistics { Browser = "Chrome", Users = 37 },
+        new Statistics { Browser = "UC Browser", Users = 17 },
+        new Statistics { Browser = "iPhone", Users = 19 },
+        new Statistics { Browser = "Others", Users = 4  },
+        new Statistics { Browser = "Opera", Users = 11 },
+        new Statistics { Browser = "Android", Users = 12 },
+    };
+}
+
+```
+![Custom Position  of title in Blazor Accumulation Chart](images/title/blazor-accumulation-chart-subtitle-position-custom.png)
+
+
 ## Subtitle
 
 The [SubTitle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_SubTitle) property can be used to give the accumulation chart a subtitle in-order to provide an additional information about the data displayed.
