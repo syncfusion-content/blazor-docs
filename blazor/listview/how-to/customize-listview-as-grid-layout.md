@@ -101,21 +101,92 @@ In the below sample, we have rendered List items in grid layout.
 
 ## Data manipulation
 
-In this section, ListView data manipulations have been discussed.
+This section covers the functionalities available for manipulating data within a ListView, specifically adding, removing, and sorting items. The interactive features implemented provide users with a seamless data management experience.
 
 ### Add Item
 
-In the below sample, you can add new item by clicking add button which will open dialog box with name text box. After entering the item details, click the add button. This will add your new item.
+To add a new item to the ListView, the code uses a dialog box that allows users to enter the item details. When the `Add` button is clicked, the dialog opens, letting the user input text. Then, upon clicking the `Add` button within the dialog, the new item is added to the list.
+
+```cshtml
+
+<button id="add"
+        class="e-btn e-small e-round e-primary e-icon-btn"
+        title="Add"
+        @onclick="@(e => DialogObj.ShowAsync())">
+    <span class="e-btn-icon e-icons e-add-icon"></span>
+</button>
+<SfDialog @ref="DialogObj"
+          Target="#container"
+          ShowCloseIcon="true"
+          Header="@("Add item")"
+          @bind-Visible="@Visible"
+          Width="300px"
+          Height="230px">
+    <DialogTemplates>
+        <Content>
+            <div id="listDialog">
+                <div class="input_name">
+                    <label for="name">Item text: </label>
+                    <input id="name" class="e-input" type="text" placeholder="Enter text" @bind-value="@Value" />
+                </div>
+            </div>
+        </Content>
+    </DialogTemplates>
+    <DialogButtons>
+        <DialogButton OnClick="@(e => Add())" Content = "Add" IsPrimary = "true" CssClass = "e-flat"></DialogButton>
+    </DialogButtons>
+</SfDialog>
+
+@code
+{
+    async void Add()
+    {
+        await DialogObj.HideAsync();
+        DataSourceOG.Add(new ListDataModel { Id = Guid.NewGuid().ToString(), Text = Value });
+        DataSource = new List<ListDataModel>(DataSourceOG);
+        Value = "";
+    }
+}
+
+```
 
 ### Remove item
 
-In the below sample, you can remove by hovering the item which will show delete button and click that delete button to delete that from your list.
+To effectively manage item removal, a delete button is introduced, which becomes visible upon hovering over a list item. Clicking this button will immediately remove the selected item from the list.
+
+```cshtml
+
+<ListViewTemplates TValue="ListDataModel">
+    <Template>
+        @{
+            ListDataModel currentData = (ListDataModel)context;
+            <div>
+                @currentData.Text
+                <button class="delete e-control e-btn e-small e-round e-delete-btn e-primary e-icon-btn"
+                      @onclick="@(e => Remove(currentData))">
+                    <span class="e-btn-icon e-icons delete-icon"></span>
+                </button>
+            </div>
+        }
+    </Template>
+</ListViewTemplates>
+
+@code
+{
+    async void Remove(ListDataModel data)
+    {
+        await DataSourceOG.RemoveAt(DataSourceOG.FindIndex(e => e.Id == data.Id));
+        DataSource = new List<ListDataModel>(DataSourceOG);
+    }
+}
+
+```
 
 ### Sort Items
 
-Listview can be sorted either in Ascending or Descending order. To enable sorting in your ListView, set [`SortOrder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_SortOrder) as `Ascending` or `Descending`. You can also set sorting after control initialization.
+ListView items can be sorted in either `Ascending` or `Descending` order. To activate sorting, set the [`SortOrder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_SortOrder) property accordingly. Users can toggle the sort order interactively by clicking the sort icon.
 
-In the below sample, it is sorted in `Ascending` order. To sort it in descending, click on sort order icon and vice versa.
+The below code explains adding, removing, searching and sorting within a list of items.
 
 ```cshtml
 

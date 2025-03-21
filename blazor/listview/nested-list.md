@@ -193,4 +193,4 @@ The ListView component supports Nested list. For that, the [`Child`](https://hel
 
 ```
 
-![Blazor ListView with Nested List](./images/list/blazor-listview-with-nested-list.png)
+![Blazor ListView with Nested List](./images/list/nested-list.gif)

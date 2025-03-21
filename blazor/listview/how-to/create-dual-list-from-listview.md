@@ -3,44 +3,46 @@ layout: post
 title: Create dual list using Blazor ListView Component | Syncfusion
 description: Check out and learn here all about creating dual list using Syncfusion Blazor ListView component and much more.
 platform: Blazor
-control: Listview
+control: ListView
 documentation: ug
 ---
 
 # Create dual list using Blazor ListView Component
 
-The dual list contains two ListView. This allows to move list items from one list to another using the client-side events. This section explains how to integrate the ListView control to achieve dual list.
+The dual list implementation consists of two ListView components that enable moving items between lists using client-side events. This guide explains how to integrate the ListView component to create a dual list.
 
 ## Use cases
 
 * Stock exchanges of two different countries
-* Job applications (skill sets)
+* Job applications (skill set management)
 
 ## Integration of Dual List
 
-Here, two ListView controls have been used to display the list items. An Blazor Button is used to transfer data between the ListView, and a textbox is used to achieve the UI of filtering support.
+This setup involves using two ListView components to display items. A Blazor Button facilitates data transfer between ListViews, while a textbox provides a UI for filtering items.
 
 The dual list supports:
 
-* Moving whole data from one list to another.
-* Moving selected data from one list to another.
+* Move all items from one list to another.
+* Move only the selected items between lists.
 * Filtering the list by using a client-side typed character.
 
-In the ListView control, sorting is enabled using the [`SortOrder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_SortOrder) property, and the [`Clicked`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewEvents-1.html#Syncfusion_Blazor_Lists_ListViewEvents_1_Clicked) event is triggered while selecting an item. Here, the `Clicked` event is triggered to enable and disable button states.
+In the ListView component, sorting is enabled using the [`SortOrder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_SortOrder) property, and the [`Clicked`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewEvents-1.html#Syncfusion_Blazor_Lists_ListViewEvents_1_Clicked) event allows for enabling and disabling button states through item selection.
 
 ## Manipulating data
 
-## Moving whole data from the first list to the second list(>>)
+### Moving All Items from First to Second List (>>)
 
-Here, the whole data can be moved from the first ListView to the second by clicking the first button. When clicking the button, the whole list items are sliced, and `concat` with the second ListView. This button is enabled only when the data source of the first ListView is not empty.
+By clicking the first button, all items from the first ListView are transferred to the second, and the first list is cleared. The button activates when the first ListView contains items.
 
-## Moving whole data from the second list to the first list(<<)**
+### Moving All Items from Second to First List (<<)
 
-The functionality of the second button is the same as above, and the data is transferred from the second list to the first list. This button is enabled only when the data source of the second ListView is not empty.
+Similarly, the second button moves all items from the second ListView to the first. It is enabled when the second ListView has items.
 
-## Moving selected item from one list to another list (>) and (<)**
+### Moving Selected Items (>) and (<)
 
-The [`Clicked`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewEvents-1.html#Syncfusion_Blazor_Lists_ListViewEvents_1_Clicked) event is triggered when clicking a list item in the ListView. The selected items can be transferred between two lists. These buttons will be enabled when selecting an item in lists.
+When an item is clicked in a ListView, the [`Clicked`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewEvents-1.html#Syncfusion_Blazor_Lists_ListViewEvents_1_Clicked) event activates the corresponding button to move selected items between lists.
+
+The following example demonstrates how to manipulate data between two ListView components:
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -212,16 +214,8 @@ The [`Clicked`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.Li
 
     public class ListDataModel
     {
-        public string Id
-        {
-            get;
-            set;
-        }
-        public string Text
-        {
-            get;
-            set;
-        }
+        public string Id { get; set; }
+        public string Text { get; set; }
     }
 }
 
