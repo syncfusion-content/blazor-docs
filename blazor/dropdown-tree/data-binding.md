@@ -366,7 +366,7 @@ The **OrderID**, **EmployeeID**, and **ShipName** columns from orders table have
 
 ### Web API Adaptor
 
-In the following example, `WebApiAdaptor` is  used to fetch data from server side.
+In the following example, `WebApiAdaptor` is  used to fetch data from server side. In the initial request, entire data will be returned.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -415,23 +415,8 @@ namespace DropDownTreeSample.Controllers
                 new NodeResult { ProductID = 5, ProductName = "SubChild1", pid = 3, haschild = false },
                 new NodeResult { ProductID = 6, ProductName = "SubChild2", pid = 3, haschild = false },
             };
-
             var data = localData.ToList();
-            var queryString = Request.Query;
-
-            if (queryString.Keys.Contains("$filter"))
-            {
-                string filter = string.Join("", queryString["$filter"].ToString().Split(' ').Skip(2)); // get filter from querystring
-                // filter the data based on the expand node id.
-                data = data.Where(d => d.pid.ToString() == filter).ToList();
-                return data;
-            }
-            else
-            {
-                // if the parent id is null.
-                data = data.Where(d => d.pid == null).ToList();
-                return data;
-            }
+            return data;
         }
 
         public class NodeResult
@@ -804,7 +789,7 @@ namespace DBTree.Data
 
 #### Creating web API controller
 
- A Web API Controller has to be created, which allows the Dropdown Tree to directly consume data from the Entity Framework.
+ A Web API Controller has to be created, which allows the Dropdown Tree to directly consume data from the Entity Framework. In the initial request, entire data will be returned.
 
 ```csharp
 using DBTree.Data;
@@ -823,22 +808,7 @@ namespace DBTree.Controller
         {
             // Get the DataSource from Database
             var data = db.GetAllEmployees().ToList();
-            var queryString = Request.Query;
-            if (queryString.Keys.Contains("$filter"))
-            {
-                StringValues Skip;
-                StringValues Take;
-                int skip = (queryString.TryGetValue("$skip", out Skip)) ? Convert.ToInt32(Skip[0]) : 0;
-                int top = (queryString.TryGetValue("$top", out Take)) ? Convert.ToInt32(Take[0]) : data.Count();
-                string filter = string.Join("", queryString["$filter"].ToString().Split(' ').Skip(2)); // get filter from querystring
-                data = data.Where(d => d.PId?.ToString() == filter).ToList();
-                return data.Skip(skip).Take(top);
-            }
-            else
-            {
-                data = data.Where(d => d.PId == null).ToList();
-                return data;
-            }
+            return data;
         }
     }
 }
