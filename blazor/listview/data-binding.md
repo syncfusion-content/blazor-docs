@@ -16,7 +16,6 @@ ListView provides an option to load the data either from local dataSource or rem
 | Id | string | Specifies ID attribute of list item, mapped in dataSource. |
 | Text | string | Specifies list item display text field. |
 | IsChecked | string | Specifies checked status of list item. |
-| IsVisible | string | Specifies visibility state of list item. |
 | Enabled | string | Specifies enabled state of list item. |
 | IconCss | string | Specifies the icon class of each list item that will be added before to the list item text. |
 | Child | string | Specifies child dataSource fields. |
