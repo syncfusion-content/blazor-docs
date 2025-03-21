@@ -72,8 +72,10 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 | (1,1) | ![Blazor Diagram with Annotation in Right Bottom Position](../images/blazor-diagram-annotation-in-rightbottom-position.png) |
 
 
-N>* Type of the offset property for node’s shape annotation is [DiagramPoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramPoint.html).
-<br/>* Type of the offset property for a connector’s path annotation is double.
+>**Note:**
+> * Type of the offset property for node’s shape annotation is [DiagramPoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramPoint.html).
+> * Type of the offset property for a connector’s path annotation is double.
+> * Node annotation's Id should not start with numbers or special characters and should not contain special characters such as underscores(_) or spaces.
 
 ## How to change the alignment of an annotation
 
