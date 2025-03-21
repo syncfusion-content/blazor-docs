@@ -142,7 +142,7 @@ When the `Position` is set to `Custom`, the title can be placed at any specific 
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart Title="Mobile Browser Statistics" SubTitle="In the year 2014 - 2015">
-    <AccumulationChartTitleStyle Position="ChartTitlePosition.Custom"></AccumulationChartTitleStyle>
+    <AccumulationChartTitleStyle Position="ChartTitlePosition.Custom" X="150" Y="90"></AccumulationChartTitleStyle>
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users"
                                  Name="Browser">
