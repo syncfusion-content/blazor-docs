@@ -73,6 +73,9 @@ The optional parameters for this method are,
 
 @using Syncfusion.Blazor.Charts
 @using Syncfusion.Blazor.Buttons
+@using Microsoft.AspNetCore.Components.Web;
+@using Syncfusion.PdfExport;
+@using Syncfusion.ExcelExport;
 
 <SfAccumulationChart @ref="ChartObj" Title="Mobile Browser Statistics" EnableSmartLabels="true">
     <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
@@ -134,6 +137,8 @@ The `Exporting` event allows users to customize the exported Excel sheet by modi
 ```cshtml
  
 @using Syncfusion.Blazor.Charts
+@using Microsoft.AspNetCore.Components.Web;
+@using Syncfusion.PdfExport;
 @using Syncfusion.ExcelExport;
 
 <div id="button">
@@ -219,7 +224,7 @@ The `Exporting` event allows users to customize the exported Excel sheet by modi
             args.Width = 500;
         }
     }
-    
+
     public List<Statistics> StatisticsDetails = new List<Statistics>
     {
         new Statistics { Browser = "Chrome", Users = 37 },

@@ -119,9 +119,10 @@ The `Exporting` event allows users to customize the exported Excel sheet by modi
 
 
 ```cshtml
- 
+@using Microsoft.AspNetCore.Components.Web;
+@using Syncfusion.PdfExport;
+@using Syncfusion.ExcelExport; 
 @using Syncfusion.Blazor.Charts
-@using Syncfusion.ExcelExport;
 
 <SfStockChart Title="AAPL Stock Price">
     <StockChartSeriesCollection>

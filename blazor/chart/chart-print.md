@@ -393,6 +393,7 @@ The `Exporting` event allows users to customize the exported Excel sheet by modi
 @using Microsoft.AspNetCore.Components.Web;
 @using Syncfusion.PdfExport;
 @using Syncfusion.ExcelExport;
+
 <div id="button">
     <button onclick="@ExportChart">
         Export
