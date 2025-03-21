@@ -348,7 +348,7 @@ The [ChartCornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
         <ChartSeries DataSource="@Sales" XName="Month" YName="Income" Type="ChartSeriesType.Column">
             <ChartMarker Visible="true">
             </ChartMarker>
-            <ChartCornerRadius TopLeft="4" TopRight="4"></ChartCornerRadius>
+            <ChartCornerRadius TopLeft="10" TopRight="10"></ChartCornerRadius>
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
@@ -415,8 +415,8 @@ We can also customize the corner radius for individual points in the chart serie
     {
         if (args.Point.X == "Jan" || args.Point.X == "May")
         {
-            args.CornerRadius.TopLeft = 5;
-            args.CornerRadius.TopRight = 5;
+            args.CornerRadius.TopLeft = 10;
+            args.CornerRadius.TopRight = 10;
         } 
     }
 }
