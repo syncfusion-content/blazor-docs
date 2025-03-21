@@ -1,11 +1,11 @@
 @using Syncfusion.Blazor.DropDowns
 
-<SfMention TItem="Countries" DataSource="@data" PopupHeight="200px" PopupWidth="250px" RequireLeadingSpace="false">
+<SfMention TItem="UserData" DataSource="@data" RequireLeadingSpace="false">
     <TargetComponent>
-        <div id="commentsMention" placeholder="Type @@ and tag country" ></div>
+        <div id="commentsMention" placeholder="Type @@ and tag user" ></div>
     </TargetComponent>
     <ChildContent>
-        <MentionFieldSettings Text="Country" Value="Code"></MentionFieldSettings>
+        <MentionFieldSettings Text="Name" Value="EmailId"></MentionFieldSettings>
     </ChildContent>
 </SfMention>
 
@@ -26,19 +26,19 @@
 
 @code {
 
-    public class Countries
+    public class UserData
     {
-        public string Country { get; set; }
-        public string Code { get; set; }
+        public string Name { get; set; }
+        public string EmailId { get; set; }
     }
 
-    public List<Countries> data = new List<Countries>()
+    public List<UserData> data = new List<UserData>()
     {
-        new Countries() { Country = "Australia", Code = "AU" },
-        new Countries() { Country = "Bermuda" , Code = "BM" },
-        new Countries() { Country = "Canada" , Code =  "CA" },
-        new Countries() { Country = "Cameroon" , Code = "CM" },
-        new Countries() { Country = "Denmark" , Code = "DK" }
+        new UserData { Name = "Selma Rose", EmailId = "selma@gmail.com" },
+        new UserData { Name = "Maria", EmailId = "maria@gmail.com" },
+        new UserData { Name = "Russo kay", EmailId = "russo@gmail.com" },
+        new UserData { Name = "Robert", EmailId = "robert@gmail.com" },
+        new UserData { Name = "Garth", EmailId = "garth@gmail.com" }
     };
 
 }
