@@ -93,7 +93,7 @@ The [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfAcc
 ![Customizing Title in Blazor Accumulation Chart](images/title/blazor-accumulation-chart-title-customization.png)
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtBUMVCpMmDIcLry?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-### Title Position
+### Title position
 
 The `Position` property customizes the placement of the accumulation chart title. It supports the following options: `Right`, `Left`, `Bottom`, `Top`, and `Custom`, providing flexible title alignment based on layout requirements. By default, the accumulation chart title appears at the top of the chart.
 
@@ -135,7 +135,7 @@ N> The subtitle, which appears below the title, will also be positioned along wi
 ```
 ![Position customization of title in Blazor Accumulation Chart](images/title/blazor-accumulation-chart-subtitle-position.png)
 
-When the `Position` is set to `Custom`, the title can be placed at any specific location on the chart using `X` and `Y` coordinates in [AccumulationChartTitleStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTitleStyle.html). This allows for precise control over the title’s position, enabling customization to suit the design or layout needs. The `X` and `Y` values define the horizontal and vertical offsets, respectively, allowing the title to be positioned anywhere on the chart.
+When the `Position` is set to `Custom`, the title can be positioned anywhere on the chart using the `X` and `Y` properties in [AccumulationChartTitleStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTitleStyle.html). This provides precise control over the title’s location, enabling customization to fit specific design or layout needs. The `X` and `Y` values specify the horizontal and vertical coordinates, respectively.
 
 ```cshtml 
 
@@ -171,7 +171,7 @@ When the `Position` is set to `Custom`, the title can be placed at any specific 
 }
 
 ```
-![Custom Position  of title in Blazor Accumulation Chart](images/title/blazor-accumulation-chart-subtitle-position-custom.png)
+![Custom position of title in Blazor Accumulation Chart](images/title/blazor-accumulation-chart-subtitle-position-custom.png)
 
 
 ## Subtitle
