@@ -13,7 +13,7 @@ documentation: ug
 
 The [Blazor Dropdown List](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) is a dynamic replacement of HTML select tags. It has a rich appearance and allows you to select a single value that is non-editable from a list of predefined values. It has several out-of-the-box features such as [data binding](https://blazor.syncfusion.com/documentation/dropdown-list/data-binding), [filtering](https://blazor.syncfusion.com/documentation/dropdown-list/filtering), grouping, UI customization, [accessibility](https://blazor.syncfusion.com/documentation/dropdown-list/accessibility), and preselected values.
 
-This section briefly explains about how to include [Blazor DropDown List component](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) in your Blazor WebAssembly App using Visual Studio and Visual Studio Code.
+This section briefly explains about how to include [Blazor DropDown List](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) component in your Blazor WebAssembly App using Visual Studio and Visual Studio Code.
 
 To get start quickly with Blazor DropDownList component, you can check on this video or [GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DropDownList) sample.
 
@@ -234,7 +234,7 @@ By default, the width of the popup list automatically adjusts according to the B
 
 ## Get selected value
 
-Get the selected value of the [Blazor DropDownList component](https://www.syncfusion.com/forums/181974/dropdown-list) in the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event using [ChangeEventArgs.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ChangeEventArgs-2.html#Syncfusion_Blazor_DropDowns_ChangeEventArgs_2_Value) property.
+Get the selected value of the Blazor DropDownList component in the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event using [ChangeEventArgs.Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ChangeEventArgs-2.html#Syncfusion_Blazor_DropDowns_ChangeEventArgs_2_Value) property.
 
 
 {% highlight cshtml %}
