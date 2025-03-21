@@ -366,7 +366,7 @@ The **OrderID**, **EmployeeID**, and **ShipName** columns from orders table have
 
 ### Web API Adaptor
 
-In the following example, `WebApiAdaptor` is  used to fetch data from server side. Within the initial request entire data will be returned.
+In the following example, `WebApiAdaptor` is  used to fetch data from server side. In the initial request, entire data will be returned.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -789,7 +789,7 @@ namespace DBTree.Data
 
 #### Creating web API controller
 
- A Web API Controller has to be created, which allows the Dropdown Tree to directly consume data from the Entity Framework. Within the initial request entire data will be returned.
+ A Web API Controller has to be created, which allows the Dropdown Tree to directly consume data from the Entity Framework. In the initial request, entire data will be returned.
 
 ```csharp
 using DBTree.Data;
