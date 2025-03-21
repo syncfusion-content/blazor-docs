@@ -22,8 +22,8 @@ The following example illustrates how to configure the File Upload component wit
     <div class="col-lg-8 control-section sb-property-border">
         <div class="control-wrapper">
             <SfUploader HttpClientInstance="@httpClient">
-                <UploaderAsyncSettings SaveUrl="https://blazor.syncfusion.com/services/production/api/FileUploader/Save"
-                                       RemoveUrl="https://blazor.syncfusion.com/services/production/api/FileUploader/Remove"></UploaderAsyncSettings>
+                <UploaderAsyncSettings SaveUrl="https://your_api.com/Save"
+                                       RemoveUrl="https://your_api.com/Remove"></UploaderAsyncSettings>
             </SfUploader>
         </div>
     </div>
@@ -56,7 +56,7 @@ builder.Services.AddScoped(sp =>
 {
     var httpClient = new HttpClient
     {
-        BaseAddress = new Uri("https://yourapi.com/")
+        BaseAddress = new Uri("https://your_api.com/")
     };
 
     // Add custom header
