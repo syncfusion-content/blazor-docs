@@ -331,7 +331,7 @@ In this example, the `Paste` event can be utilized to intercept the event detail
                     <GridColumn Field="CustomerID" HeaderText="Customer ID" Width="100"></GridColumn>
                     <GridColumn Field="ShipCity" HeaderText="Ship City" Width="100"></GridColumn>
                     <GridColumn Field="ShipName" HeaderText="Ship Name" Width="130"></GridColumn>
-                    <GridColumn Field="OrderDate" HeaderText="Order Date" Width="100" Format="yMd" Type="ColumnType.Date"></GridColumn>
+                    <GridColumn Field="OrderDate" HeaderText="Order Date" Width="100" Format="d" Type="ColumnType.Date"></GridColumn>
                 </GridColumns>
             </SfGrid>
         </div>
