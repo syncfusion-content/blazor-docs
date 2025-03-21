@@ -102,7 +102,7 @@ Get the currently selected items from the [Nodes](https://help.syncfusion.com/cr
 
 ## Toggle selection
 
-You can toggle the selection state of diagram elements, including nodes, connectors, groups, and swimlanes, by clicking on them at runtime. The CanToggleSelection property in [DiagramSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramSelectionSettings.html) determines whether the selection state of a diagram element should toggle with a mouse click at runtime. By default, this property is set to false.
+You can toggle the selection state of diagram elements, including nodes, connectors, groups, and swimlanes, by clicking on them at runtime. The [CanToggleSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramSelectionSettings.html#Syncfusion_Blazor_Diagram_DiagramSelectionSettings_CanToggleSelection) property in [DiagramSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramSelectionSettings.html) determines whether the selection state of a diagram element should toggle with a mouse click at runtime. By default, this property is set to false.
 In the following example, the node can be selected with the first click and unselected with the second click.
 
 ```cshtml
