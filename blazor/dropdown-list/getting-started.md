@@ -158,7 +158,7 @@ Add the Syncfusion Blazor DropDown List component in the **~/Pages/Index.razor**
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor DropDown List component in your default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLTDChuUITQFPJn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DropDownList Component.](./images/blazor-dropdownlist-component.webp)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLTDChuUITQFPJn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor DropDownList Component.](./images/blazor-dropdownlist-component.png)" %}
 
 ## Binding data source
 
