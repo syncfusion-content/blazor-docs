@@ -7,7 +7,11 @@ control: ListView
 documentation: ug
 ---
 
-# Get selected items from Blazor ListView Component
+# Retrieving Selected Items in Syncfusion Blazor ListView
+
+The Syncfusion Blazor ListView component allows users to choose multiple items from a list. To retrieve these selected items, you can refer the below implementation in ListView component. This functionality is especially useful for applications that need to process or display data based on user selections.
+
+## Get selected items from ListView Component
 
 The ListView component in Syncfusion Blazor allows to select multiple items. The [`GetCheckedItemsAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_GetCheckedItemsAsync) method is utilized to retrieve these selected items. Below are the details of this API:
 
@@ -107,7 +111,7 @@ Here's a code snippet illustrating the implementation:
 ![Getting Selected Item in Blazor ListView](../images/list/get-selected-items-from-listview.png)
 
 
-# Get selected items from custom template in Blazor ListView Component
+## Get selected items from custom template in Blazor ListView Component
 
 In scenarios where you build custom templates in Blazor ListView Component, you can select multiple items. It's essential to map the `Id` and `Text` attributes properly using [`ListViewFieldSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewFieldSettings-1.html). This ensures that selected item data is returned correctly in templates:
 
