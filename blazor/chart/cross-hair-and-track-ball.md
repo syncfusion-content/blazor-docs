@@ -215,9 +215,9 @@ The trackball is used to track the data point that is closest to the mouse or to
 
 ![Trackball in Blazor Line Chart](images/crosshair/blazor-line-chart-with-trackball.png)
 
-## Crosshair Highlight Category
+## Highlighting data range with Crosshair
 
-The `HighlightCategory`property in [ChartCrosshairSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCrosshairSettings.html) enhances data visualization by highlighting the entire background of a category when hovered over. It helps with trend analysis across multiple data points, particularly in time series or category axis charts, making comparisons clearer and more visually distinct.
+The `HighlightCategory`property in [ChartCrosshairSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCrosshairSettings.html) enhances data visualization by highlighting the entire range of the corresponding category's data point when hovered over. This feature aids in trend analysis across multiple data points, especially in time series or category axis charts, making comparisons clearer and more visually distinct.
 
 ```cshtml
 
@@ -274,7 +274,7 @@ The `HighlightCategory`property in [ChartCrosshairSettings](https://help.syncfus
 
 ```
 
-![Crosshair in Blazor Line Chart with Highlight Background](images/crosshair/blazor-line-chart-with-highlight-background-trackball.png)
+![Crosshair in Blazor Line Chart with highlight background](images/crosshair/blazor-line-chart-with-highlight-background-trackball.png)
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

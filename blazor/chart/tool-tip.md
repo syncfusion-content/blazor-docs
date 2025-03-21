@@ -284,9 +284,9 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartT
 
 ![Blazor Column Chart with Custom Tooltip](images/tooltip/blazor-column-chart-custom-tooltip.png)
 
-## EnableHighlight
+## Enabling highlight for series with tooltip
 
-By enabling the `EnableHighlight` property in [ChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html), all points in the hovered series will be highlighted, while points in other series are dimmed. This enhances focus and clarity by drawing attention to the selected series.
+By enabling the `EnableHighlight` property in [ChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html), all points in the hovered series will be highlighted, while points in other series are dimmed. This feature enhances focus and clarity by drawing attention to the selected series.
 
 ```cshtml
 
@@ -335,14 +335,13 @@ By enabling the `EnableHighlight` property in [ChartTooltipSettings](https://hel
 
 ```
 
-![Blazor Chart Tooltip with Highlight Series](images/tooltip/blazor-tooltip-enable-highlight.png)
+![Blazor Chart tooltip with highlight series](images/tooltip/blazor-tooltip-enable-highlight.png)
 
-## ShowNearestTooltip
+## Displaying tooltip for nearest data point
 
-The `ShowNearestTooltip` property displays tooltips for the nearest data point to the cursor. It automatically identifies and highlights the closest point within a defined interaction zone, improving usability and accessibility, especially when working with densely packed or overlapping data points.
+The `ShowNearestTooltip` property in the [ChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html) displays tooltips for the data point nearest to the cursor. It automatically identifies and highlights the closest point within a defined interaction zone, enhancing usability and accessibility, especially when dealing with densely packed or overlapping data points.
 
-N> By default, `ShowNearestTooltip` is set to true for the series. However, by disabling this property in the [ChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html), you can customize the tooltip behavior for a specific series.
-
+N> By default, `ShowNearestTooltip` property in [ChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html) is set to true by default for all series. By disabling this property in a specific `ChartSeries`, you can prevent the tooltip from appearing for that series.
 
 ```cshtml
 
@@ -391,7 +390,7 @@ N> By default, `ShowNearestTooltip` is set to true for the series. However, by d
 
 ```
 
-![Blazor Chart Shows Nearest Tooltip](images/tooltip/blazor-chart-nearest-tooltip.png)
+![Blazor Chart shows nearest tooltip](images/tooltip/blazor-chart-nearest-tooltip.png)
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

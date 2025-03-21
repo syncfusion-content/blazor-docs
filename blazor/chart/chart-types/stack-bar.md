@@ -403,7 +403,7 @@ The [ChartSeriesBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 ``` 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXBpDkMAeBRSeNjy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Corner Radius
+### Corner Radius
 
 The [ChartCornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html) property is used to customize the corner radius for 100% Stacked Bar series. This allows you to create bars with rounded corners, giving your chart a more polished appearance. You can customize each corner of the bars using the [BottomLeft](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html#Syncfusion_Blazor_Charts_ChartCornerRadius_BottomLeft), [BottomRight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html#Syncfusion_Blazor_Charts_ChartCornerRadius_BottomRight), [TopLeft](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html#Syncfusion_Blazor_Charts_ChartCornerRadius_TopLeft), [TopRight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html#Syncfusion_Blazor_Charts_ChartCornerRadius_TopRight) properties.
 
@@ -455,7 +455,7 @@ The [ChartCornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ![Blazor Stacked bar 100 with corner radius](../images/chart-types-images/blazor-stacked-bar-100-chart-corner-radius.png)
 
-We can also customize the corner radius for individual points in the chart series using the [OnPointRender](https://blazor.syncfusion.com/documentation/chart/events#onpointrender) event by utilizing its `CornerRadius` argument.
+We can also customize the corner radius for individual points in the chart series using the [OnPointRender](https://blazor.syncfusion.com/documentation/chart/events#onpointrender) event by utilizing the `CornerRadius` property in its event argument.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
