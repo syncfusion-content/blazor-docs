@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Form Designer Overview
+# Overview of the Form Designer in Blazor SfPdfViewer Component
 
 The Form Designer in [SfPdfViewer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.html) enables seamless creation, editing, and management of interactive form fields. It supports dynamic module injection, allowing the designer to be added or removed while updating relevant UI elements. Various form fields, including [Textbox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.TextBoxField.html), [Password](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PasswordField.html), [Radio Button](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.RadioButtonField.html), [Check Box](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.CheckBoxField.html), [Dropdown](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.DropDownField.html), [List Box](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ListBoxField.html), [Signature Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.SignatureField.html) and [Button](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.ButtonField.html), can be added with custom naming, grouping, and data consistency across pages.
 
@@ -143,9 +143,7 @@ The following code snippet explains how to inject the FormDesigner module and en
 
 The Designer Mode in [SfPdfViewer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.html) allows users to interact with form field design elements.
 
-When Designer Mode is enabled, users can edit, move, and manipulate form fields within the PDF Viewer. 
-
-If disabled, form fields remain static and can only be filled without modification.
+When Designer Mode is enabled, users can edit, move, and manipulate form fields within the PDF Viewer.If disabled, form fields remain static and can only be filled without modification.
 
 N> By default, [`IsDesignerMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_IsDesignerMode) is set to `false`, meaning form fields can be filled but not modified.
 
@@ -517,6 +515,6 @@ Refer to the Image below for details.
 
 ## See also
 
-* [UI interactions in form Designer]()
-* [Programmatic Support in Form Designer](./create-programmatically.md)
-* [Events in Form Designer]()
+* [UI interactions in form Designer](./ui-interactions)
+* [Programmatic Support in Form Designer](./create-programmatically)
+* [Events in Form Designer](./events)

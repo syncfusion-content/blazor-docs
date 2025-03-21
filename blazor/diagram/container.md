@@ -16,7 +16,7 @@ A container can be created and added to the diagram, either programmatically or 
 
 ### Add a Container
 
-To create a container, you have to define the container object and add it to the [Nodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Nodes) collection of the diagram. The following code illustrates how to create a Container Node.
+To create a container, you have to define the [Container](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Container.html) object and add it to the [Nodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Nodes) collection of the diagram. The following code illustrates how to create a Container Node.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -44,9 +44,12 @@ To create a container, you have to define the container object and add it to the
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Container/ContainerNode).
 
+
+>**Note:** Container's Id should not start with numbers or special characters and should not contain special characters such as underscore(_) or space.
+
 ### Adding Children to a Container
 
-To add child elements to a container, define the child nodes and assign their IDs to the container’s `Children` property. When child nodes are added to a container, they become part of its structure while remaining individually editable. The following code illustrates how to create a container with children.
+To add child elements to a container, define the child nodes and assign their IDs to the container’s [Children](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeGroup.html#Syncfusion_Blazor_Diagram_NodeGroup_Children) property. When child nodes are added to a container, they become part of its structure while remaining individually editable. The following code illustrates how to create a container with children.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -103,7 +106,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Container Header
 
-Containers can include descriptive text to identify their purpose or contents through the `Header` property. This feature enhances diagram readability by providing clear labels for grouped elements. The header's visual presentation is fully customizable using the `Style` property.  
+Containers can include descriptive text to identify their purpose or contents through the [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Container.html#Syncfusion_Blazor_Diagram_Container_Header) property. This feature enhances diagram readability by providing clear labels for grouped elements. The header's visual presentation is fully customizable using the [Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ContainerHeader.html#Syncfusion_Blazor_Diagram_ContainerHeader_Style) property.  
 
 The following code example explains how to define a container header and its customization:
 

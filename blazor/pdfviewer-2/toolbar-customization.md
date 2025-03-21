@@ -447,27 +447,31 @@ The [`PdfViewerToolbarSettings`](https://help.syncfusion.com/cr/blazor/Syncfusio
 The following example demonstrates how to customize the Annotation Toolbar by specifying a selected set of tools using [`AnnotationToolbarItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.AnnotationToolbarItem.html).
 
 ```cshtml
-<!-- SfPdfViewer2 component with Form Designer enabled -->
-<SfPdfViewer2 @ref="PdfViewerInstance" EnableFormDesigner="true" 
-                DocumentPath="wwwroot/data/Form_Designer.pdf"
-                Height="650px"
-                Width="100%">
-                
-                <!-- Configuring the Form Designer Toolbar items -->
-                <PdfViewerToolbarSettings FormDesignerToolbarItems="FormDesignerToolbarItems"></PdfViewerToolbarSettings>
-</SfPdfViewer2>
+<!-- Container for the PDF Viewer -->
+<div class="Pdf-viewer-container">
+    <!-- SfPdfViewer2 component with Annotation Toolbar enabled -->
+    <SfPdfViewer2 @ref="PdfViewerInstance" EnableFormDesigner="true" 
+                  DocumentPath="wwwroot/data/Form_Designer.pdf"
+                  Height="650px"
+                  Width="100%">
+                  
+                  <!-- Configuring the Annotation Toolbar items -->
+                  <PdfViewerToolbarSettings AnnotationToolbarItems="AnnotationToolbarItems"></PdfViewerToolbarSettings>
+    </SfPdfViewer2>
+</div>
 
 @code {
     // Reference to the SfPdfViewer2 instance
     SfPdfViewer2 PdfViewerInstance { get; set; }
 
-    // Define a list of form designer toolbar items to be displayed and usable
-    List<FormDesignerToolbarItem> FormDesignerToolbarItems { get; set; } = new List<FormDesignerToolbarItem>() 
+    // Define a list of annotation toolbar items to be displayed and usable
+    List<AnnotationToolbarItem> AnnotationToolbarItems { get; set; } = new List<AnnotationToolbarItem>() 
     {
-        FormDesignerToolbarItem.TextBox,
-        FormDesignerToolbarItem.CheckBox,
-        FormDesignerToolbarItem.ListBox,
-        FormDesignerToolbarItem.Delete
+        AnnotationToolbarItem.UnderlineTool,
+        AnnotationToolbarItem.StampAnnotationTool,
+        AnnotationToolbarItem.FreeTextAnnotationTool,
+        AnnotationToolbarItem.FontSizeAnnotationTool,
+        AnnotationToolbarItem.CloseTool
     };
 }
 ```
