@@ -117,6 +117,122 @@ The optional parameters for this method are,
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZBAshMJWGLIalWX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+### Customizing the exported Chart using Exporting event
+
+The `Exporting` event allows users to customize the exported accumulation chart before it is generated. The `ChartExportEventArgs` class provides options for customizing the exported accumulation chart and specifies the following properties available for the Exporting event of the chart component:
+
+* Cancel: Used to stop the export process.
+* Height: Specifies the height of the exported chart. Not applicable for XLSX and CSV formats.
+* Width: Specifies the width of the exported chart. Not applicable for XLSX and CSV formats.
+* Workbook: Represents the workbook that is generated during export. This is applicable only for XLSX and CSV formats.
+
+#### Exporting Excel Sheet
+
+The `Exporting` event allows users to customize the exported Excel sheet by modifying the properties of rows, columns, and cells before the file is generated. You can apply cell styling, such as changing the font color, font size, font name, making the text bold, and setting a background color to improve the appearance of the cells. Furthermore, you can center-align the text within the cells for a more polished look. If needed, you can also remove specific values from the cells during the export process.
+
+
+```cshtml
+ 
+@using Syncfusion.Blazor.Charts
+@using Syncfusion.ExcelExport;
+
+<div id="button">
+    <button onclick="@ExportChart">
+        Export
+    </button>
+</div>
+
+<SfAccumulationChart @ref="accumulationChart" EnableBorderOnMouseMove="false" Title="Browser Market Share" EnableAnimation="true" Theme="Syncfusion.Blazor.Theme.Tailwind3">
+    <AccumulationChartTooltipSettings Header="" Format="<b>${point.x}</b><br>Browser Share: <b>${point.y}%</b>" Enable="true"></AccumulationChartTooltipSettings>
+    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
+    <AccumulationChartSeriesCollection>
+        <AccumulationChartSeries DataSource="@PieChartPoints" XName="Browser" YName="Users" Radius="@Radius" Name="Browser" StartAngle="@StartAngle"
+                                 InnerRadius="0%" ExplodeIndex="0" Explode="true" ExplodeOffset="@ExplodeRadius">
+            <AccumulationDataLabelSettings Visible="true" Name="DataLabelMappingName" Position="AccumulationLabelPosition.Outside">
+                <AccumulationChartDataLabelFont Size=@Size FontWeight="600"></AccumulationChartDataLabelFont>
+                <AccumulationChartConnector Length=@ConnectorLength Type="ConnectorType.Curve"></AccumulationChartConnector>
+            </AccumulationDataLabelSettings>
+        </AccumulationChartSeries>
+    </AccumulationChartSeriesCollection>
+    <AccumulationChartEvents Exporting="BeforeExport"></AccumulationChartEvents>
+</SfAccumulationChart>
+
+@code {
+    public int ExplodeIndex { get; set; } = 1;
+    public string ExplodeRadius = "10%";
+    public string Radius { get; set; } = "60%";
+    public string ConnectorLength { get; set; } = "20px";
+    public int StartAngle = 30;
+    public string Size { get; set; } = "12px";
+    public List<PieData> PieChartPoints { get; set; } = new List<PieData>
+   {
+        new PieData { Browser = "Chrome", Users = 59.28, DataLabelMappingName = "Chrome: 59.28%"},
+        new PieData { Browser = "UC Browser", Users = 4.37, DataLabelMappingName = "UC Browser: 4.37%"},
+        new PieData { Browser = "Internet Explorer", Users = 6.12, DataLabelMappingName = "Internet Explorer: 6.12%"},
+        new PieData { Browser = "Sogou Explorer", Users = 1.37, DataLabelMappingName = "Sogou Explorer: 1.37%"},
+        new PieData { Browser = "QQ", Users = 3.96, DataLabelMappingName = "QQ: 3.96%"},
+        new PieData { Browser = "Safari", Users = 4.73, DataLabelMappingName = "Safari: 4.73%"},
+        new PieData { Browser = "Opera", Users = 3.12, DataLabelMappingName = "Opera: 3.12%"},
+        new PieData { Browser = "Edge", Users = 7.48, DataLabelMappingName = "Edge: 7.48%"},
+        new PieData { Browser = "Others", Users = 9.57, DataLabelMappingName = "Others: 9.57%"},
+    };
+
+
+    public class PieData
+    {
+        public string Browser { get; set; }
+        public double Users { get; set; }
+        public string DataLabelMappingName { get; set; }
+    }
+    private SfAccumulationChart accumulationChart;
+    public class Statistics
+    {
+        public string Browser { get; set; }
+        public double Users { get; set; }
+    }
+
+    public async Task ExportChart(MouseEventArgs args)
+    {
+        await accumulationChart.ExportAsync(ExportType.XLSX, "Statistics");
+    }
+
+    public void BeforeExport(ChartExportEventArgs args)
+    {
+        if (args.Workbook != null)
+        {
+            Worksheet firstSheet = args.Workbook.Worksheets.First();
+            firstSheet.Columns[0].Width = 200;
+            firstSheet.Columns[1].Width = 200;
+            firstSheet.Rows[0].Cells[0].CellStyle.BackColor = "#FFA07A";
+            
+            firstSheet.Rows[1].Cells[1].Value = "Users";
+
+            for (int i = 2; i < firstSheet.Rows.Count; i++)
+            {
+                for (int j = 0; j < 2; j++)
+                {
+                    firstSheet.Rows[i].Cells[1].CellStyle.HAlign = HAlignType.Center;
+                    firstSheet.Rows[i].Cells[1].CellStyle.VAlign = VAlignType.Center;
+                }
+            }
+        } else {
+            args.Width = 500;
+        }
+    }
+    
+    public List<Statistics> StatisticsDetails = new List<Statistics>
+    {
+        new Statistics { Browser = "Chrome", Users = 37 },
+        new Statistics { Browser = "UC Browser", Users = 17 },
+        new Statistics { Browser = "iPhone", Users = 19 },
+        new Statistics { Browser = "Others", Users = 4  },
+        new Statistics { Browser = "Opera", Users = 11 },
+        new Statistics { Browser = "Android", Users = 12 },
+    };
+}
+
+```
+
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See also
