@@ -44,6 +44,9 @@ To create a container, you have to define the [Container](https://help.syncfusio
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Container/ContainerNode).
 
+
+>**Note:** Container's Id should not start with numbers or special characters and should not contain special characters such as underscore(_) or space.
+
 ### Adding Children to a Container
 
 To add child elements to a container, define the child nodes and assign their IDs to the container’s [Children](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeGroup.html#Syncfusion_Blazor_Diagram_NodeGroup_Children) property. When child nodes are added to a container, they become part of its structure while remaining individually editable. The following code illustrates how to create a container with children.
