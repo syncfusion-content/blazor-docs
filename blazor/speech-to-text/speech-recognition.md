@@ -11,7 +11,7 @@ documentation: ug
 
 ## Retrieving transcripts
 
-You can use the `Transcript` property to retrieve the transcribed text from the spoken text. This property allows to display the transcribed text once the speech recognition process is started.
+You can use the [Transcript](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html#Syncfusion_Blazor_Inputs_SfSpeechToText_Transcript) property to retrieve the transcribed text from the spoken text. This property allows to display the transcribed text once the speech recognition process is started.
 
 {% tabs %}
 {% highlight razor %}
@@ -42,7 +42,7 @@ You can use the `Transcript` property to retrieve the transcribed text from the 
 
 ## Setting language
 
-You can use the `Language` property to specify the language for speech recognition. Setting this property ensures that the recognition engine interprets the spoken words correctly based on the specified locale such as `en-US` for American `English`, `fr-FR` for `French`, and more.
+You can use the [Language](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html#Syncfusion_Blazor_Inputs_SfSpeechToText_Language) property to specify the language for speech recognition. Setting this property ensures that the recognition engine interprets the spoken words correctly based on the specified locale such as `en-US` for American `English`, `fr-FR` for `French`, and more.
 
 {% tabs %}
 {% highlight razor %}
@@ -73,7 +73,7 @@ You can use the `Language` property to specify the language for speech recogniti
 
 ## Allowing interim results
 
-You can use the `AllowInterimResults` property to enable or disable interim results. When set to `true`, the recognized speech will be displayed in real time as words are spoken. When set to `false`, only final results will be displayed after recognition is complete. By default, the value is `true`.
+You can use the [AllowInterimResults](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html#Syncfusion_Blazor_Inputs_SfSpeechToText_AllowInterimResults) property to enable or disable interim results. When set to `true`, the recognized speech will be displayed in real time as words are spoken. When set to `false`, only final results will be displayed after recognition is complete. By default, the value is `true`.
 
 {% tabs %}
 {% highlight razor %}
@@ -104,7 +104,7 @@ You can use the `AllowInterimResults` property to enable or disable interim resu
 
 ## Managing listening state
 
-You can use the `ListeningState` property to manage the listening state of the component. The possible values are `Inactive`, `Listening` and `Stopped`. By default, the value is `Inactive`.
+You can use the [ListeningState](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html#Syncfusion_Blazor_Inputs_SfSpeechToText_ListeningState) property to manage the listening state of the component. The possible values are `Inactive`, `Listening` and `Stopped`. By default, the value is `Inactive`.
 
 ### Inactive
 
@@ -118,7 +118,7 @@ It is actively listening which captures and transcribes speech with a stop icon 
 
 Denotes the speech recognition has ended, and no further speech is being processed.
 
-Below sample demonstrates the usage of `ListeningState` property.
+Below sample demonstrates the usage of [ListeningState](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html#Syncfusion_Blazor_Inputs_SfSpeechToText_ListeningState) property.
 
 {% tabs %}
 {% highlight razor %}
@@ -251,7 +251,7 @@ Below sample demonstrates the usage of `ListeningState` property.
 
 ## Show or hide tooltip
 
-You can use the `ShowTooltip` property to specify the tooltip text to be displayed on hovering the SpeechToText button. By default, the value is `true`.
+You can use the [ShowTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html#Syncfusion_Blazor_Inputs_SfSpeechToText_ShowTooltip) property to specify the tooltip text to be displayed on hovering the SpeechToText button. By default, the value is `true`.
 
 {% tabs %}
 {% highlight razor %}
@@ -284,7 +284,7 @@ You can use the `ShowTooltip` property to specify the tooltip text to be display
 
 ## Setting disabled
 
-You can use the `Disabled` property to disable the SpeechToText component, preventing user interaction when set to `true`. By default, the value is `false`.
+You can use the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html#Syncfusion_Blazor_Inputs_SfSpeechToText_Disabled) property to disable the SpeechToText component, preventing user interaction when set to `true`. By default, the value is `false`.
 
 {% tabs %}
 {% highlight razor %}
@@ -317,7 +317,7 @@ You can use the `Disabled` property to disable the SpeechToText component, preve
 
 ## Setting html attributes
 
-You can use the `HtmlAttributes` property to assign custom attributes to the SpeechToText component for the button element.
+You can use the [HtmlAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html#Syncfusion_Blazor_Inputs_SfSpeechToText_HtmlAttributes) property to assign custom attributes to the SpeechToText component for the button element.
 
 ## Error handling
 
@@ -336,7 +336,7 @@ The SpeechToText component handles various errors that may occur during speech r
 
 ## Browser support
 
-The SpeechToText component relies on the `Speech Recognition API` for processing the speech input. Ensure that the browser supports this API before implementation.
+The SpeechToText component relies on the [Speech Recognition API](https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition) for processing the speech input. Ensure that the browser supports this API before implementation.
 
 |    Browser    |    Supported versions    |
 |--------------|---------------|

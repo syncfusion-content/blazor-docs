@@ -11,31 +11,31 @@ documentation: ug
 
 ## Customizing the button
 
-You can use the `ButtonSettings` property to customize the appearance of the start and stop buttons in the speech to text conversion.
+You can use the [ButtonSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html#Syncfusion_Blazor_Inputs_SfSpeechToText_ButtonSettings) property to customize the appearance of the start and stop buttons in the speech to text conversion.
 
 ### Setting start content
 
-You can use the `Text` property to define text content for the listening start state in the SpeechToText button.
+You can use the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SpeechToTextButtonSettings.html#Syncfusion_Blazor_Inputs_SpeechToTextButtonSettings_Text) property to define text content for the listening start state in the SpeechToText button.
 
 ### Setting stop content
 
-You can use the `StopStateText` property to define text content for the listening stop state in the SpeechToText button.
+You can use the [StopStateText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SpeechToTextButtonSettings.html#Syncfusion_Blazor_Inputs_SpeechToTextButtonSettings_StopStateText) property to define text content for the listening stop state in the SpeechToText button.
 
 ### Setting iconcss
 
-You can use the `IconCss` property to apply a CSS class to customize the icon appearance for the listening start state.
+You can use the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SpeechToTextButtonSettings.html#Syncfusion_Blazor_Inputs_SpeechToTextButtonSettings_IconCss) property to apply a CSS class to customize the icon appearance for the listening start state.
 
 ### Setting stop iconcss
 
-You can use the `StopIconCss` property to apply a CSS class to customize the icon appearance for the listening stop state.
+You can use the [StopIconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SpeechToTextButtonSettings.html#Syncfusion_Blazor_Inputs_SpeechToTextButtonSettings_StopIconCss) property to apply a CSS class to customize the icon appearance for the listening stop state.
 
 ### Setting icon position
 
-You can display the icon on the top, bottom, left, or right side of the button text content using the `IconPosition` property.
+You can display the icon on the top, bottom, left, or right side of the button text content using the [IconPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SpeechToTextButtonSettings.html#Syncfusion_Blazor_Inputs_SpeechToTextButtonSettings_IconPosition) property.
 
 ### Setting primary
 
-You can use the `IsPrimary` property to configure the button as a primary action button.
+You can use the [IsPrimary](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SpeechToTextButtonSettings.html#Syncfusion_Blazor_Inputs_SpeechToTextButtonSettings_isPrimary) property to configure the button as a primary action button.
 
 Below code sample demonstrates how to configure the button with above mentioned properties.
 
@@ -81,19 +81,19 @@ Below code sample demonstrates how to configure the button with above mentioned 
 
 ## Customizing the tooltips
 
-You can use the `TooltipSettings` property to customize the content and positions of the tooltip.
+You can use the [TooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html#Syncfusion_Blazor_Inputs_SfSpeechToText_TooltipSettings) property to customize the content and positions of the tooltip.
 
 ### Setting start content
 
-You can use the `Text` property to customize the content to be displayed in the tooltip when the speech recognition begins.
+You can use the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SpeechToTextTooltipSettings.html#Syncfusion_Blazor_Inputs_SpeechToTextTooltipSettings_Text) property to customize the content to be displayed in the tooltip when the speech recognition begins.
 
 ### Setting stop content
 
-You can use the `StopStateText` property to customize the stop button tooltip text which is displayed on-hover.
+You can use the [StopStateText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SpeechToTextTooltipSettings.html#Syncfusion_Blazor_Inputs_SpeechToTextTooltipSettings_StopStateText) property to customize the stop button tooltip text which is displayed on-hover.
 
 ### Setting tooltip position
 
-You can use the `Position` property to determine the placement of tooltips relative to the button.
+You can use the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SpeechToTextTooltipSettings.html#Syncfusion_Blazor_Inputs_SpeechToTextTooltipSettings_Position) property to determine the placement of tooltips relative to the button.
 
 Below code sample demonstrates how to configure the tooltip settings with above mentioned properties.
 
@@ -135,7 +135,7 @@ Below code sample demonstrates how to configure the tooltip settings with above 
 
 ## Setting button styles
 
-The SpeechToText component supports the following predefined styles that can be defined using the `CssClass` property. You can customize by adding the cssClass property with the below defined class. 
+The SpeechToText component supports the following predefined styles that can be defined using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html#Syncfusion_Blazor_Inputs_SfSpeechToText_CssClass) property. You can customize by adding the cssClass property with the below defined class. 
 
 | CssClass | Description | 
 | -------- | -------- | 
@@ -148,7 +148,7 @@ The SpeechToText component supports the following predefined styles that can be 
 
 ## Setting cssclass
 
-You can use the `CssClass` property to customize the appearance of the SpeechToText component.
+You can use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html#Syncfusion_Blazor_Inputs_SfSpeechToText_CssClass) property to customize the appearance of the SpeechToText component.
 
 Below code sample demonstrates how to configure cssclass and customize the button.
 

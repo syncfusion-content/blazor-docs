@@ -11,11 +11,11 @@ documentation: ug
 
 ## Start listening
 
-You can use the `StartListeningAsync` public method to initiate the speech recognition and begins the conversion of the speech to text.
+You can use the [StartListeningAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html#Syncfusion_Blazor_Inputs_SfSpeechToText_StartListeningAsync) public method to initiate the speech recognition and begins the conversion of the speech to text.
 
 ## Stop listening
 
-You can use the `StopListeningAsync` public method to stop capturing your speech and ends the speech recognition.
+You can use the [StopListeningAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfSpeechToText.html#Syncfusion_Blazor_Inputs_SfSpeechToText_StopListeningAsync) public method to stop capturing your speech and ends the speech recognition.
 
 Below sample demonstrates the SpeechToText component configured with above methods.
 
