@@ -120,22 +120,22 @@ The optional parameters for this method are,
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZBAshMJWGLIalWX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-### Customizing the exported Chart using Exporting event
+### Customizing the exported chart using Exporting event
 
-The `Exporting` event allows users to customize the exported accumulation chart before it is generated. The `ChartExportEventArgs` class provides options for customizing the exported accumulation chart and specifies the following properties available for the Exporting event of the chart component:
+The `Exporting` event allows users to customize the exported accumulation chart before it is generated. The `ChartExportEventArgs` class provides the following options for customizing the exported accumulation chart:
 
-* Cancel: Used to stop the export process.
-* Height: Specifies the height of the exported chart. Not applicable for XLSX and CSV formats.
-* Width: Specifies the width of the exported chart. Not applicable for XLSX and CSV formats.
-* Workbook: Represents the workbook that is generated during export. This is applicable only for XLSX and CSV formats.
+* `Cancel`: This property cancels the export process when set to **true**.
+* `Height`: This property specifies the height of the exported chart. When the value is changed, the chart's height is updated. It is not applicable for **XLSX** and **CSV** formats.
+* `Width`: This property specifies the width of the exported chart. Changing the value updates the chart's width. It is not applicable for **XLSX** and **CSV** formats.
+* `Workbook`: Represents the workbook generated during export, applicable only for **XLSX** and **CSV** formats.
 
-#### Exporting Excel Sheet
+#### Customizing the exported Excel documents
 
-The `Exporting` event allows users to customize the exported Excel sheet by modifying the properties of rows, columns, and cells before the file is generated. You can apply cell styling, such as changing the font color, font size, font name, making the text bold, and setting a background color to improve the appearance of the cells. Furthermore, you can center-align the text within the cells for a more polished look. If needed, you can also remove specific values from the cells during the export process.
+The `Workbook` property in the event argument of `Exporting` event allows the users to customize the exported Excel sheet by modifying the properties of rows, columns, and cells, such as changing the font color, font size, font name, making the text bold, setting a background color, and center-aligning the text within the cells, before the file is generated.
 
+In the code example below, the accumulation chart is exported to Excel format. The exported Excel document is customized using the `Exporting` event. If the `ExportType` parameter in the `ExportAsync` method is set to something other than **XLSX** or **CSV**, the `Workbook` property will be **null**, and the chart's width will be set to **500px**.
 
 ```cshtml
- 
 @using Syncfusion.Blazor.Charts
 @using Microsoft.AspNetCore.Components.Web;
 @using Syncfusion.PdfExport;

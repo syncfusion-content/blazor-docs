@@ -104,19 +104,20 @@ Empty the value of `ExportType` to disable the Export.
 
 ![Disabling Export and Print in Blazor Stock Chart](images/print/blazor-stock-chart-disable-print-export.png)
 
-### Customizing the exported Chart using Exporting event
+### Customizing the exported chart using Exporting event
 
-The `Exporting` event allows users to customize the exported stock chart before it is generated. The `ChartExportEventArgs` class provides options for customizing the exported stock chart and specifies the following properties available for the Exporting event of the chart component:
+The `Exporting` event allows users to customize the exported stock chart before it is generated. The `ChartExportEventArgs` class provides the following options for customizing the exported stock chart:
 
-* Cancel: Used to stop the export process.
-* Height: Specifies the height of the exported chart. Not applicable for XLSX and CSV formats.
-* Width: Specifies the width of the exported chart. Not applicable for XLSX and CSV formats.
-* Workbook: Represents the workbook that is generated during export. This is applicable only for XLSX and CSV formats.
+* `Cancel`: This property cancels the export process when set to **true**.
+* `Height`: This property specifies the height of the exported chart. When the value is changed, the chart's height is updated. It is not applicable for **XLSX** and **CSV** formats.
+* `Width`: This property specifies the width of the exported chart. Changing the value updates the chart's width. It is not applicable for **XLSX** and **CSV** formats.
+* `Workbook`: Represents the workbook generated during export, applicable only for **XLSX** and **CSV** formats.
 
-#### Exporting Excel Sheet
+#### Customizing the exported Excel documents
 
-The `Exporting` event allows users to customize the exported Excel sheet by modifying the properties of rows, columns, and cells before the file is generated. You can apply cell styling, such as changing the font color, font size, font name, making the text bold, and setting a background color to improve the appearance of the cells. Furthermore, you can center-align the text within the cells for a more polished look. If needed, you can also remove specific values from the cells during the export process.
+The `Workbook` property in the event argument of `Exporting` event allows the users to customize the exported Excel sheet by modifying the properties of rows, columns, and cells, such as changing the font color, font size, font name, making the text bold, setting a background color, and center-aligning the text within the cells, before the file is generated.
 
+In the code below, when the stock chart is exported to Excel format, the exported Excel document is customized using the `Exporting` event. If export types other than **XLSX** or **CSV** are selected, the `Workbook` property will be **null**, and the chart's width will be set to **500px**.
 
 ```cshtml
 @using Microsoft.AspNetCore.Components.Web;
@@ -181,9 +182,9 @@ The `Exporting` event allows users to customize the exported Excel sheet by modi
                     firstSheet.Rows[i].Cells[1].CellStyle.HAlign = HAlignType.Center;
                     firstSheet.Rows[i].Cells[1].CellStyle.VAlign = VAlignType.Center;
                 }
-            } else {
-                args.Width = 500;
             }
+        } else {
+            args.Width = 500;
         }
     }
 }
