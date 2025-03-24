@@ -297,7 +297,7 @@ You can use the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 ```
 
-![Blazor Timeline Component with Disabled Item](./images/Blazor-disabled)
+![Blazor Timeline Component with Disabled Item](./images/Blazor-disabled.png)
 
 ## CSS class
 
