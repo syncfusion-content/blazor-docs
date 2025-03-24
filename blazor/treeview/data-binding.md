@@ -1218,7 +1218,7 @@ N> The CRUD operation has been performed in the TreeView component using the con
     // To edit a tree node
     async void RenameNodes()
     {
-        tree.BeginEdit(this.selectedId);
+        tree.BeginEditAsync(this.selectedId);
     }
 
     // Triggers when context menu is selected
