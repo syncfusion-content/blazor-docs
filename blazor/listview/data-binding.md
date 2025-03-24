@@ -3,7 +3,7 @@ layout: post
 title: Data Binding in Blazor ListView Component | Syncfusion
 description: Checkout and learn here all about data binding in Syncfusion Blazor ListView component and much more.
 platform: Blazor
-control: Listview
+control: ListView
 documentation: ug
 ---
 
@@ -16,7 +16,6 @@ ListView provides an option to load the data either from local dataSource or rem
 | Id | string | Specifies ID attribute of list item, mapped in dataSource. |
 | Text | string | Specifies list item display text field. |
 | IsChecked | string | Specifies checked status of list item. |
-| IsVisible | string | Specifies visibility state of list item. |
 | Enabled | string | Specifies enabled state of list item. |
 | IconCss | string | Specifies the icon class of each list item that will be added before to the list item text. |
 | Child | string | Specifies child dataSource fields. |
@@ -75,7 +74,7 @@ ListView can generate its list items through an array of complex data. To get it
 
 The ListView supports to retrieve the data from remote data services with the help of [`DataManager`](https://blazor.syncfusion.com/documentation/data/getting-started) control. The `Query` property allows to fetch data and return it to the ListView from the database.
 
-In the following sample, first 6 products from the Product table of NorthWind data service are displayed.
+In the following sample, `first 6 products` from the **Product** table of **NorthWind** data service are displayed.
 
 ```cshtml
 @using Syncfusion.Blazor.Lists
@@ -89,7 +88,7 @@ In the following sample, first 6 products from the Product table of NorthWind da
 @code {
 
     public static List<string> column = new List<string>()
-{
+    {
         "ProductID","ProductName"
     };
     Query query = new Query().From("Products").Select(column).Take(6);
