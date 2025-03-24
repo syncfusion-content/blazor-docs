@@ -49,6 +49,9 @@ The following code example explains how to create a simple business process.
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnShape/BpmnShape)
 
+
+>**Note:** Node's Id should not start with numbers or special characters and should not contain special characters such as underscore(_) or space.
+
 ![Activity Shape](../images/Task.png) 
 
 The list of supported BPMN shapes are as follows:
