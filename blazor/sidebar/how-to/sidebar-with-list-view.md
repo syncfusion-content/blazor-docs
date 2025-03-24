@@ -132,13 +132,7 @@ In the following example, the Sidebar is rendered with ListView component in its
         right: 10px;
     }
     /* Sample level styles */
-    .title1 {
-        text-align: center;
-        font-size: 20px;
-        padding: 15px;
-    }
-
-    .title2 {
+    .title1, .title2 {
         text-align: center;
         font-size: 20px;
         padding: 15px;
