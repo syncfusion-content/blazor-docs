@@ -3,7 +3,7 @@ layout: post
 title: Chat window user interface using Blazor ListView | Syncfusion
 description: Learn here all about creating chat window user interface using Syncfusion Blazor ListView component and more.
 platform: Blazor
-control: Listview
+control: ListView
 documentation: ug
 ---
 
@@ -11,7 +11,7 @@ documentation: ug
 
 ListView can be customized as chat window. To achieve that, use the ListView [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewTemplates-1.html).
 
-* The Listview template is used to showcase the ListView as chat window.
+* The ListView template is used to showcase the ListView as chat window.
 * Avatar control is used to design the image of contact person.
 
 ```cshtml
@@ -176,76 +176,39 @@ void OnSend()
 
     public class ListDataModel
     {
-        public string Id
-        {
-            get;
-            set;
-        }
-        public string Chat
-        {
-            get;
-            set;
-        }
-        public string Pic
-        {
-            get;
-            set;
-        }
-        public string Avatar
-        {
-            get;
-            set;
-        }
-        public string Text
-        {
-            get;
-            set;
-        }
-        public string Contact
-        {
-            get;
-            set;
-        }
+        public string? Id { get; set; }
+        public string? Chat { get; set; }
+        public string? Pic { get; set; }
+        public string? Avatar { get; set; }
+        public string? Text { get; set; }
+        public string? Contact { get; set; }
     }
 }
 
 <style>
+    
     #list {
         box-shadow: 0 1px 4px #ddd;
-        border-bottom: 1px solid #ddd;
-    }
-
-    #sample {
-        height: 220px;
+        border: 1px solid #ddd;
         margin: 0 auto;
-        display: block;
-        max-width: 350px;
     }
 
-    #list {
-        margin: 0 auto;
-        border: 1px solid #ccc;
+    .e-list-item {
+        height: auto;
+        cursor: pointer;
+        line-height: 22px;
+        padding: 8px;
     }
 
-        #list .e-list-item {
-            height: auto;
-            cursor: pointer;
-            line-height: 22px;
-            padding: 8px;
-        }
+    #list.e-listview .e-list-header {
+        background-color: #0278d7;
+        color: white;
+    }
 
-        #list.e-listview .e-list-header {
-            background-color: #0278d7;
-            color: white;
-        }
-
-        #list .e-list-item.e-active {
-            background-color: transparent;
-        }
-
-        #list .e-list-item.e-hover {
-            background-color: transparent;
-        }
+    #list .e-list-item.e-active,
+    #list .e-list-item.e-hover {
+        background-color: transparent;
+    }
 
     .padding {
         padding: 4px;
@@ -282,34 +245,6 @@ void OnSend()
         flex-direction: column;
     }
 
-    .flex__order__1 {
-        order: 1;
-    }
-
-    .flex__order__2 {
-        order: 2;
-    }
-
-    .flex__1 {
-        flex: 1;
-    }
-
-    .flex__2 {
-        flex: 2;
-    }
-
-    .flex__3 {
-        flex: 3;
-    }
-
-    .flex__5 {
-        flex: 5;
-    }
-
-    .flex__8 {
-        flex: 8;
-    }
-
     .bold {
         font-weight: 500;
     }
@@ -324,21 +259,18 @@ void OnSend()
         margin: 2px 0;
     }
 
-    .pic01 {
-        background-image: url("https://ej2.syncfusion.com/demos/src/grid/images/1.png");
-    }
+    .pic01 { background-image: url("https://ej2.syncfusion.com/demos/src/grid/images/1.png"); }
+    .pic02 { background-image: url("https://ej2.syncfusion.com/demos/src/grid/images/3.png"); }
+    .pic03 { background-image: url("https://ej2.syncfusion.com/demos/src/grid/images/5.png"); }
+    .pic04 { background-image: url("https://ej2.syncfusion.com/demos/src/grid/images/2.png"); }
 
-    .pic02 {
-        background-image: url("https://ej2.syncfusion.com/demos/src/grid/images/3.png");
-    }
-
-    .pic03 {
-        background-image: url("https://ej2.syncfusion.com/demos/src/grid/images/5.png");
-    }
-
-    .pic04 {
-        background-image: url("https://ej2.syncfusion.com/demos/src/grid/images/2.png");
-    }
+    .flex__order__1 { order: 1; }
+    .flex__order__2 { order: 2; }
+    .flex__1 { flex: 1; }
+    .flex__2 { flex: 2; }
+    .flex__3 { flex: 3; }
+    .flex__5 { flex: 5; }
+    .flex__8 { flex: 8; }
 </style>
 
 ```

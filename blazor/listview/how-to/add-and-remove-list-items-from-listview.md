@@ -13,6 +13,10 @@ You can add or remove list items from the ListView control using the `Observable
 
 Refer to the following steps to add or remove a list item.
 
+* Render the ListView with `ObservableCollection DataSource`, and use the [`ListViewTemplates`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewTemplates-1.html) to append the delete icon for each list item. Also, bind the click event for the delete icon.
+
+* Render the Add Item button, and bind the click event. On the click event handler, pass data with random id to the **DataSource** using **Add method** to add a new list item on clicking the Add Item button.
+
 * Bind the `onclick` handler to the delete icon created in step 1. Within the click event, remove the list item by passing the delete icon list item to `OnDelete` method.
 
 ```cshtml
