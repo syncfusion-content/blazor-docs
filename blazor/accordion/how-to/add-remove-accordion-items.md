@@ -9,9 +9,9 @@ documentation: ug
 
 # Add/Remove Accordion Items in Blazor Accordion Component
 
-Accordion can be added/removed dynamically by iteration of the Accordion Items using conditional **foreach** loop.
+You can dynamically add or remove Accordion items by iterating through the Accordion Items using a conditional **foreach** loop.
 
-In the following demo, initially there are three accordion items in the [AccordionItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItems.html). On clicking the `Add Item` button, a new item is added to the `AccordionItems` resulting in the addition of fourth accordion item to the Accordion component. On clicking the `Remove Item`, the first item of the `AccordionItems` is removed from the Accordion component.
+In the following example, the Accordion initially contains three accordion items in the [AccordionItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItems.html) collection. When you click the `Add Item` button, a new item is added to the `AccordionItems` collection, resulting in the addition of a fourth accordion item to the component. When you click the `Remove Item` button, the first item in the `AccordionItems` collection is removed from the Accordion component.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
