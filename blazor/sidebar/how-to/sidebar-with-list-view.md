@@ -161,4 +161,4 @@ In the following example, the Sidebar is rendered with ListView component in its
 
 ```
 
-![Blazor Sidebar with ListView](./../images/blazor-sidebar-listview.png)
+![Blazor Sidebar with ListView](./../images/OpenCloseSidebar.gif)
