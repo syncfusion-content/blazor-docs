@@ -178,32 +178,17 @@ In the following example, the **Cut** context menu item is disabled for the fold
 
 @code {
 
-    public void MenuOpened(MenuOpenEventArgs<FileManagerDirectoryContent> args)
+    public void MenuOpened(MenuOpenEventArgs<FileManagerDirectoryContent> args) 
     {
-        for (int i = 0; i < args.FileDetails.Count(); i++)
+        bool isFile = args.FileDetails.Any(detail => !detail.IsFile);
+
+        foreach (var item in args.Items)
         {
-            if (!args.FileDetails[i].IsFile)
+            if (item.Text == "Cut")
             {
-                for (int j = 0; j < args.Items.Count(); j++)
-                {
-                    if (args.Items[j].Text == "Cut")
-                    {
-                        args.Items[j].Disabled = true;
-                    }
-                }
-            }
-            else
-            {
-                for (int j = 0; j < args.Items.Count(); j++)
-                {
-                    if (args.Items[j].Disabled == true;)
-                    {
-                        args.Items[j].Disabled = false;
-                    }
-                }
+                item.Disabled = isFile;
             }
         }
-        
     }
 }
 
@@ -234,30 +219,15 @@ In the following example, the **Cut** context menu item is shown for the files.
 
     public void MenuOpened(MenuOpenEventArgs<FileManagerDirectoryContent> args)
     {
-        for (int i = 0; i < args.FileDetails.Count(); i++)
+        bool isFile = args.FileDetails.Any(file => !file.IsFile);
+
+        foreach (var item in args.Items)
         {
-            if (!args.FileDetails[i].IsFile)
+            if (item.Text == "Cut")
             {
-                for (int j = 0; j < args.Items.Count(); j++)
-                {
-                    if (args.Items[j].Text == "Cut")
-                    {
-                        args.Items[j].Hidden = true;
-                    }
-                }
-            }
-            else
-            {
-                for (int j = 0; j < args.Items.Count(); j++)
-                {
-                    if (args.Items[j].Hidden == true)
-                    {
-                        args.Items[j].Hidden = false;
-                    }
-                }
+                item.Hidden = isFile;
             }
         }
-        
     }
 }
 
