@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Nested items in Blazor File Manager Component | Syncfusion
-description: Learn here all about nested items in Syncfusion Blazor File Manager component and more.
+description: Checkout and learn here all about nested items in Syncfusion Blazor File Manager component and more.
 platform: Blazor
 control: File Manager
 documentation: ug
