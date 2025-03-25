@@ -132,13 +132,7 @@ In the following example, the Sidebar is rendered with ListView component in its
         right: 10px;
     }
     /* Sample level styles */
-    .title1 {
-        text-align: center;
-        font-size: 20px;
-        padding: 15px;
-    }
-
-    .title2 {
+    .title1, .title2 {
         text-align: center;
         font-size: 20px;
         padding: 15px;
@@ -167,4 +161,4 @@ In the following example, the Sidebar is rendered with ListView component in its
 
 ```
 
-![Blazor Sidebar with ListView](./../images/blazor-sidebar-listview.png)
+![Blazor Sidebar with ListView](./../images/OpenCloseSidebar.gif)
