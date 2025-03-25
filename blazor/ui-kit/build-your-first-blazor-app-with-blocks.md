@@ -157,7 +157,7 @@ If you choose **Bootstrap 5.3** theme, follow these steps to configure it.
 4. **OPTIONAL**: If you wish to use our font icons prepared for **Bootstrap 5.3**, you can include the following CDN link:
 
     ```html
-    <link href="https://cdn.syncfusion.com/ej2/angular/ui-kit/font-icons/bootstrap5.3-icons.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/blazor/ui-kit/font-icons/bootstrap5.3-icons.css" rel="stylesheet" />
     ```
 
 You can refer to the consolidated screenshot below for more details.
