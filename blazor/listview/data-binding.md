@@ -116,10 +116,10 @@ Now, add methods **AddProduct** and **DeleteProduct** in the **DataAccessLayer.c
 
 ```csharp
 
-using BlazorApp1.Shared.Models;
+using EFListView.Shared.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace BlazorApp1.Shared.DataAccess
+namespace EFListView.Shared.DataAccess
 {
     public class DataAccessLayer
     {
@@ -174,12 +174,12 @@ Now you need to create new **Post** and **Delete** methods in the Web API contro
 
 ```csharp
 
-using BlazorApp1.Shared.DataAccess;
-using BlazorApp1.Shared.Models;
+using EFListView.Shared.DataAccess;
+using EFListView.Shared.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace BlazorApp1.Server.Controllers
+namespace EFListView.Server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -237,7 +237,7 @@ You can perform CRUD operations like Add and Delete using the `Add` and `Delete 
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Lists
 @using Syncfusion.Blazor.Buttons
-@using BlazorApp1.Shared.Models
+@using EFListView.Shared.Models
 @inject HttpClient Http
 
 <div class="btn-cls">
@@ -247,7 +247,7 @@ You can perform CRUD operations like Add and Delete using the `Add` and `Delete 
 
 <div class="row">
     <div class="col-md-4">
-        <SfListView CssClass="listview" TValue="Products" Height="400px" @ref="List" @bind-DataSource="@datasource">
+        <SfListView CssClass="listview" TValue="Products" Width="400px" Height="400px" @ref="List" @bind-DataSource="@datasource">
             <ListViewFieldSettings TValue="Products" Text="ProductName" Id="ProductID"></ListViewFieldSettings>
             <SfDataManager Url="api/Products" Adaptor="Adaptors.WebApiAdaptor" CrossDomain="true"></SfDataManager>
             <ListViewEvents TValue="Products" Clicked="OnClicked"></ListViewEvents>
@@ -305,3 +305,8 @@ You can perform CRUD operations like Add and Delete using the `Add` and `Delete 
 </style>
 
 ```
+
+N> You can find the fully working sample [here](https://github.com/SyncfusionExamples/Blazor-ListView-Entity-Framework).
+
+The following GIF represents the ListView with Add and Delete the list items.
+![Blazor ListView with CRUD Operations](./images/blazor-listview-crud-operation.gif)
