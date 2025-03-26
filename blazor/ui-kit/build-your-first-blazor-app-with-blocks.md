@@ -7,37 +7,18 @@ control: UI Kit
 documentation: ug
 ---
 
-# Build your first Blazor Web App with our blocks
+# Build your first Blazor App with our blocks
 
-## Create a new Blazor Web App
-A Blazor Web App is used for this example. To create a new app, follow the official setup guide [here](https://learn.microsoft.com/en-us/training/modules/build-your-first-blazor-web-app/3-exercise-configure-environment?pivots=vscode). This tutorial then walks through the step-by-step process of adding a simple sign-in block to the newly created app, named MyBlazorApp.
+## Create a new Blazor App
+A Blazor Web App is used for this example. To create a new app, follow the official setup guide [here](https://learn.microsoft.com/en-us/training/modules/build-your-first-blazor-web-app/3-exercise-configure-environment?pivots=vscode). This tutorial then walks through the step-by-step process of adding a simple sign-in block to the newly created app, named **MyBlazorApp*.
 
 > This tutorial focuses on using Blazor Server rendering mode rather than Blazor WebAssembly.
 
-**Steps to create the Blazor Web App:**
-
-1. Open Visual Studio Code.
-
-2. Open the Terminal (Ctrl + ~ on Windows/Linux or Cmd + ~ on Mac).
-
-3. Run the following command to create a new Blazor Web App:
-
-    ```bash
-    dotnet new blazor -o MyBlazorApp
-    ```
-
-    * blazor → Creates a Blazor Web App.
-
-    * -o MyBlazorApp → Creates a folder named MyBlazorApp for the project.
-
-4. Navigate into the project folder and opent the project in Visual Studio Code:
-    ```bash
-    cd MyBlazorApp
-    code .
-    ```
 ![New Blazor App](images/new-blazor-app.png)
 
 ## Setting up Tailwind or Bootstrap 5.3 theme in the app
+
+After creating the new Blazor app named **MyBlazorApp*, open it in Visual Studio Code (which we’ll be using throughout this walkthrough). The next step is to choose a theme, either Tailwind or Bootstrap 5.3, in either light or dark mode, and configure the app accordingly.
 
 ### Tailwind configuration
 
@@ -95,13 +76,13 @@ If you choose **Tailwind** theme, follow these steps to configure it.
    - For **light mode**:
 
      ```html
-     <link href="_content/Syncfusion.Blazor.Themes/tailwind.css" rel="stylesheet" />
+     <link href="https://cdn.syncfusion.com/blazor/29.1.33/styles/tailwind.css" rel="stylesheet"/>
      ```
 
    - For **dark mode**:
 
      ```html
-     <link href="_content/Syncfusion.Blazor.Themes/tailwind-dark.css" rel="stylesheet" />
+     <link href="https://cdn.syncfusion.com/blazor/29.1.33/styles/tailwind.css" rel="stylesheet" />
      ```
 
 4. **OPTIONAL**: If you wish to use our font icons prepared for **Tailwind**, you can include the following CDN link:
@@ -145,13 +126,13 @@ If you choose **Bootstrap 5.3** theme, follow these steps to configure it.
    - For **light mode**:
 
      ```html
-     <link href="https://cdn.syncfusion.com/ej2/27.1.48/bootstrap5.3.css" rel="stylesheet">
+     <link href="https://cdn.syncfusion.com/blazor/29.1.33/styles/bootstrap5.3.css" rel="stylesheet">
      ```
 
    - For **dark mode**:
 
      ```html
-     <link href="https://cdn.syncfusion.com/ej2/27.1.48/bootstrap5.3-dark.css" rel="stylesheet" />
+     <link href="https://cdn.syncfusion.com/blazor/29.1.33/styles/bootstrap5.3-dark.css" rel="stylesheet" />
      ```
 
 4. **OPTIONAL**: If you wish to use our font icons prepared for **Bootstrap 5.3**, you can include the following CDN link:
@@ -184,7 +165,7 @@ Now that **MyBlazorApp** is set up with the desired theme configuration, the nex
 
     ![Copy HTML code snippet to clipboard](images/copy-HTML-code-snippet-to-clipboard.png)
 
-4. If CSS is provided, copy the CSS code, create a new file **Components -> Pages -> Home.razor.css**, and paste the code into it. Otherwise, you can ignore this step.
+4. If CSS is provided, copy the CSS code, create a new file **Components -> Pages -> Home.razor.css**, and paste the code into it. Similarly, if a C# code file is provided, create a new file **Components -> Pages -> Home.razor.cs** and paste the C# code into it. Otherwise, you can ignore this step.
 
 ### Steps to explore and copy block code snippets from the GitHub source
 
@@ -194,18 +175,17 @@ Now that **MyBlazorApp** is set up with the desired theme configuration, the nex
 
 2. Inside, you'll find a list of folders, each corresponding to a specific block. Open the **SignIn** block folder, where you'll see the demo arranged sequentially.
 
-3. Go to the first folder, **Components/Pages/BlocksSection/SignIn/SignIn1**, where you'll find the Razor (HTML) and CSS files of the simple sign-in block. You can copy the code directly from these files.
+3. Go to the first folder, **Components/Pages/BlocksSection/SignIn/SignIn1**, where you'll find the Razor (HTML) file of the simple sign-in block. You can copy the code directly from this file.
 
     ![View the sign-in block demo files](images/view-the-sign-in-block-demo-files.png)
 
 > **Note:**
-> 
-> 1. In the Razor file, the **Tailwind** and **Bootstrap 5.3** design code is placed in their respective switch case statements. You can copy and paste as per your requirement.
+> 1. In the Razor file, the **Tailwind** and **Bootstrap 5.3** design code is placed in their respective if-else statements. You can copy and paste as per your requirement.
 > 2. Ignore the code within the **"SB Code - Start"** and **"SB Code - End"** comments, as it is intended solely for sample browser purposes.
 
 ## Steps to install and configure Syncfusion Blazor components
 
-While copying and pasting the Razr (HTML) code, you'll notice that Syncfusion Blazor components are used. To incorporate them into **MyBlazorApp**, install the necessary packages and import the corresponding namespaces to the **Components -> _Imports.razor** file for the app to run.
+While copying and pasting the Razor (HTML) code, you'll notice that Syncfusion Blazor components are used. To incorporate them into **MyBlazorApp**, install the necessary packages and import the corresponding namespaces to the **Components -> _Imports.razor** file for the app to run.
 
 In the simple sign-in block, components such as textbox, checkbox and button are used. After copying and pasting HTML code into the Razor file, open the **MyBlazorApp.csproj** file and add the required nuget packages: `Syncfusion.Blazor.Buttons` and `Syncfusion.Blazor.Inputs`. For more details about other Syncfusion Blazor component packages, refer to this [link](https://www.nuget.org/packages?q=Syncfusion.Blazor)
 
@@ -217,7 +197,7 @@ Once the necessary packages are added, run the follwing command via the terminal
     dotnet restore
     ```
 
-Finally, again check the [online demo](https://blazor.syncfusion.com/essential-ui-kit/blocks) or the [GitHub repository](https://github.com/syncfusion/essential-ui-kit-for-blazor) and copy the required HTML, and CSS code for the simple sign-in block into your app as outlined in the previous topic.
+Finally, again check the [online demo](https://blazor.syncfusion.com/essential-ui-kit/blocks) or the [GitHub repository](https://github.com/syncfusion/essential-ui-kit-for-blazor) and copy the required HTML code for the simple sign-in block into your app as outlined in the previous topic.
 
 ## Steps to download and add assets to the app
 

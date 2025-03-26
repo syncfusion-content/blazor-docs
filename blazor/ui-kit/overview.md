@@ -9,7 +9,7 @@ documentation: ug
 
 # Overview: Essential UI Kit for Blazor
 
-The Essential UI Kit for Blazor comprises over 160 responsive, ready-to-use, easy-to-implement, and customizable blocks designed to help you quickly build web applications. These blocks are developed using HTML (Razor), CSS, C#, and Syncfusion Blazor components, delivering robust functionality and ease of use. They are compatible with both Tailwind and Bootstrap 5.3 CSS frameworks, supporting light and dark modes to offer flexibility and seamless integration across different user preferences. The UI kit includes blocks for the following categories:
+The Essential UI Kit for Blazor comprises over 120 responsive, ready-to-use, easy-to-implement, and customizable blocks designed to help you quickly build web applications. These blocks are developed using HTML (Razor), CSS, C#, and Syncfusion Blazor components, delivering robust functionality and ease of use. They are compatible with both Tailwind and Bootstrap 5.3 CSS frameworks, supporting light and dark modes to offer flexibility and seamless integration across different user preferences. The UI kit includes blocks for the following categories:
 
 <table>
   <tr>
@@ -34,17 +34,13 @@ The Essential UI Kit for Blazor comprises over 160 responsive, ready-to-use, eas
     <td>Layouts</td>
     <td>
       <ul>
-        <li>Header</li>
         <li>Navigation Bar</li>
         <li>Sidebar</li>
         <li>Search</li>
         <li>Grid</li>
         <li>List View</li>
-        <li>Statistics</li>
         <li>Cards</li>
-        <li>Filter Panel</li>
         <li>Tile View</li>
-        <li>Modals</li>
         <li>Floating Menu</li>
         <li>Calendar</li>
         <li>Pagination</li>
