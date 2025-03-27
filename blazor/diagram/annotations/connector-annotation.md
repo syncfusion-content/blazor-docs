@@ -74,7 +74,9 @@ The following image shows the relationship between the annotation position and o
 
 ![Displaying Annotation based on Offset in Blazor Diagram](../images/blazor-diagram-annotation-basedon-offset.png)
 
-N> By default, offset value of the connector annotation is 0.5.
+>**Note:**
+> * By default, offset value of the connector annotation is 0.5.
+> * Connector annotation's Id should not start with numbers or special characters and should not contain special characters such as underscores(_) or spaces.
 
 ## How to change the alignment of an annotation
 
