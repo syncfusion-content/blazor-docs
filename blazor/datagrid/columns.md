@@ -1113,83 +1113,78 @@ The [AutoFitColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 The Autofit feature is utilized to display columns in a datagrid based on the defined width specified in the columns declaration. If the total width of the columns is less than the width of the grid, this means that white space will be displayed in the grid instead of the columns auto-adjusting to fill the entire grid width.
 
-You can enable this feature by setting the [AutoFit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AutoFit) property set to **true** in `GridColumn` component. This feature ensures that the column width is rendered only as defined in the DataGrid column definition.
+You can enable this feature by setting the [AutoFit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AutoFit) property set to **true**. This feature ensures that the column width is rendered only as defined in the DataGrid column definition.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
-<SfGrid DataSource="@Orders" Height="315" AllowResizing="true" Width="800">
+<SfGrid DataSource="@OrderData" Height="315" AllowResizing="true" AutoFit="true" Width="800">
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" MinWidth="100" MaxWidth="200" AutoFit=true TextAlign="TextAlign.Right" Width="200"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" MinWidth="8" Width="150" AutoFit=true></GridColumn>
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" MinWidth="10" AutoFit=true Width="150"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" MinWidth="8" AutoFit=true Width="180"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" MinWidth="8" Width="150" AutoFit=true></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" MinWidth="100" MaxWidth="200" TextAlign="TextAlign.Right" Width="200"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer ID" MinWidth="8" Width="150" ></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" MinWidth="10"  Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipCity) HeaderText="Ship City" AllowResizing="false" MinWidth="8"  Width="180"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipCountry) HeaderText="Ship Country" MinWidth="8" Width="150"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 @code {
-    public List<OrderData> Orders { get; set; }
+    public List<OrderDetails> OrderData { get; set; }
    
     protected override void OnInitialized()
     {
-        Orders = OrderData.GetAllRecords();
+        OrderData = OrderDetails.GetAllRecords();
     }    
 }
 {% endhighlight %}
-{% highlight c# tabtitle="OrderData.cs" %}
-    public class OrderData
+{% highlight c# tabtitle="OrderDetails.cs" %}
+public class OrderDetails
+{
+    public static List<OrderDetails> order = new List<OrderDetails>();
+    public OrderDetails() { }
+    public OrderDetails(int OrderID, string CustomerId, double Freight, DateTime OrderDate, string ShipCity, string ShipCountry)
     {
-        public static List<OrderData> Orders = new List<OrderData>();
-        public OrderData()
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerId;
+        this.Freight = Freight;
+        this.OrderDate = OrderDate;
+        this.ShipCity = ShipCity;
+        this.ShipCountry = ShipCountry;
+    }
+    public static List<OrderDetails> GetAllRecords()
+    {
+        if (order.Count == 0)
         {
-
+            order.Add(new OrderDetails(10248, "VINET", 32.38, new DateTime(1996, 7, 4), "Reims", "Australia"));
+            order.Add(new OrderDetails(10249, "TOMSP", 11.61, new DateTime(1996, 7, 5), "Münster", "Australia"));
+            order.Add(new OrderDetails(10250, "HANAR", 65.83, new DateTime(1996, 7, 8), "Rio de Janeiro", "United States"));
+            order.Add(new OrderDetails(10251, "VICTE", 41.34, new DateTime(1996, 7, 8), "Lyon", "Australia"));
+            order.Add(new OrderDetails(10252, "SUPRD", 51.3, new DateTime(1996, 7, 9), "Charleroi", "United States"));
+            order.Add(new OrderDetails(10253, "HANAR", 58.17, new DateTime(1996, 7, 10), "Rio de Janeiro", "United States"));
+            order.Add(new OrderDetails(10254, "CHOPS", 22.98, new DateTime(1996, 7, 11), "Bern", "Switzerland"));
+            order.Add(new OrderDetails(10255, "RICSU", 148.33, new DateTime(1996, 7, 12), "Genève", "Switzerland"));
+            order.Add(new OrderDetails(10256, "WELLI", 13.97, new DateTime(1996, 7, 15), "Resende", "Brazil"));
+            order.Add(new OrderDetails(10257, "HILAA", 81.91, new DateTime(1996, 7, 16), "San Cristóbal", "Venezuela"));
+            order.Add(new OrderDetails(10258, "ERNSH", 140.51, new DateTime(1996, 7, 17), "Graz", "Austria"));
+            order.Add(new OrderDetails(10259, "CENTC", 3.25, new DateTime(1996, 7, 18), "México D.F.", "Mexico"));
+            order.Add(new OrderDetails(10260, "OTTIK", 55.09, new DateTime(1996, 7, 19), "Köln", "Germany"));
+            order.Add(new OrderDetails(10261, "QUEDE", 3.05, new DateTime(1996, 7, 19), "Rio de Janeiro", "Brazil"));
+            order.Add(new OrderDetails(10262, "RATTC", 48.29, new DateTime(1996, 7, 22), "Albuquerque", "USA"));
         }
-        public OrderData(int? OrderID, string CustomerID,double Freight,string ShipCity, string ShipCountry)
-        {
-            this.OrderID = OrderID;
-            this.CustomerID = CustomerID;   
-            this.Freight = Freight;
-            this.ShipCity = ShipCity;
-            this.ShipCountry = ShipCountry;
-           
-        }
-
-        public static List<OrderData> GetAllRecords()
-        {
-            if (Orders.Count() == 0)
-            {
-                int code = 10;
-                for (int i = 1; i < 2; i++)
-                {
-                    Orders.Add(new OrderData(10248, "VINET", 32.38, "Reims", "France"));
-                    Orders.Add(new OrderData(10249, "TOMSP", 11.61, "Münster","Germany"));
-                    Orders.Add(new OrderData(10250, "HANAR", 65.83, "Rio de Janei","Brazil"));
-                    Orders.Add(new OrderData(10251, "VINET", 41.34, "Lyon","France"));
-                    Orders.Add(new OrderData(10252, "SUPRD", 51.30, "Charleroi","Belgium"));
-                    Orders.Add(new OrderData(10253, "HANAR", 58.17, "Rio de Janei","Brazil"));
-                    Orders.Add(new OrderData(10254, "CHOPS", 22.98, "Bern", "Switzerland"));
-                    Orders.Add(new OrderData(10255, "VINET",148.53, "Genève", "Switzerland"));
-                    Orders.Add(new OrderData(10256, "HANAR", 13.97, "Resende","Brazil"));
-                    code += 5;
-                }
-            }
-            return Orders;
-        }
-
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public double Freight { get; set; }
-        public string ShipCity { get; set; }
-        public string ShipCountry{ get; set; }
-       
-    } 
+        return order;
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public DateTime OrderDate { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipCountry { get; set; }
+}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLKiNKislriVlUg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZhIXArmpFNzqjka?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > If any one of the column width is undefined, then the particular column will automatically adjust to fill the entire width of the datagrid table, even if you have enabled the `AutoFit` property of the grid.
 
@@ -1553,6 +1548,97 @@ public class OrderData
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VtrqsjUMKTBTIoOw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Removing hidden column elements from the DOM
+
+The Syncfusion Blazor DataGrid component allows you to control whether the cell elements of hidden columns should be rendered in the DOM. By default, hidden columns are included in the DOM but are visually hidden using CSS. However, when dealing with large datasets or multiple hidden columns, rendering these elements may impact performance.
+
+You can set the [ShouldRenderHiddenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShouldRenderHiddenColumns) property to **false** to remove hidden column elements from the DOM, improving performance when handling large datasets with multiple hidden columns.
+
+The following example demonstrates how to use the ShouldRenderHiddenColumns property to remove hidden columns from the DOM.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@OrderData" ShouldRenderHiddenColumns="false">
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID"  TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.EmployeeID) HeaderText="Employee ID" Visible='false' TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipCountry) HeaderText="Ship Country" Visible="false" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" Format="C2" Visible="false" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipCity) HeaderText="Ship City" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipName) HeaderText="Ship Name" Visible="false" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<OrderDetails> OrderData { get; set; }      
+    protected override void OnInitialized()
+    {
+        OrderData = OrderDetails.GetAllRecords();
+    }     
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+public class OrderDetails
+{
+    public static List<OrderDetails> order = new List<OrderDetails>();
+    public OrderDetails() { }
+    public OrderDetails(int OrderID, string CustomerId, int EmployeeId, double Freight, DateTime OrderDate, string ShipCity, string ShipName, string ShipCountry, string ShipAddress, string shipRegion, string shipPostalCode)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerId;
+        this.EmployeeID = EmployeeId;
+        this.Freight = Freight;
+        this.ShipCity = ShipCity;
+        this.OrderDate = OrderDate;
+        this.ShipName = ShipName;
+        this.ShipCountry = ShipCountry;
+        this.ShipAddress = ShipAddress;
+        this.ShipRegion = shipRegion;
+        this.ShipPostalCode = shipPostalCode;
+    }
+    public static List<OrderDetails> GetAllRecords()
+    {
+        if (order.Count == 0)
+        {
+            order.Add(new OrderDetails(10248, "VINET", 5, 32.38, new DateTime(1996, 7, 4), "Reims", "Vins et alcools Chevalier", "Australia", "59 rue de l Abbaye", "51100", "CJ"));
+            order.Add(new OrderDetails(10249, "TOMSP", 6, 11.61, new DateTime(1996, 7, 5), "Münster", "Toms Spezialitäten", "Australia", "Luisenstr. 48", "44087", "CJ"));
+            order.Add(new OrderDetails(10250, "HANAR", 4, 65.83, new DateTime(1996, 7, 8), "Rio de Janeiro", "Hanari Carnes", "United States", "Rua do Paço, 67", "05454-876", "RJ"));
+            order.Add(new OrderDetails(10251, "VICTE", 3, 41.34, new DateTime(1996, 7, 8), "Lyon", "Victuailles en stock", "Australia", "2, rue du Commerce", "69004", "CJ"));
+            order.Add(new OrderDetails(10252, "SUPRD", 4, 51.3, new DateTime(1996, 7, 9), "Charleroi", "Suprêmes délices", "United States", "Boulevard Tirou, 255", "B-6000", "CJ"));
+            order.Add(new OrderDetails(10253, "HANAR", 3, 58.17, new DateTime(1996, 7, 10), "Rio de Janeiro", "Hanari Carnes", "United States", "Rua do Paço, 67", "05454-876", "RJ"));
+            order.Add(new OrderDetails(10254, "CHOPS", 5, 22.98, new DateTime(1996, 7, 11), "Bern", "Chop-suey Chinese", "Switzerland", "Hauptstr. 31", "3012", "CJ"));
+            order.Add(new OrderDetails(10255, "RICSU", 9, 148.33, new DateTime(1996, 7, 12), "Genève", "Richter Supermarkt", "Switzerland", "Starenweg 5", "1204", "CJ"));
+            order.Add(new OrderDetails(10256, "WELLI", 3, 13.97, new DateTime(1996, 7, 15), "Resende", "Wellington Importadora", "Brazil", "Rua do Mercado, 12", "08737-363", "SP"));
+            order.Add(new OrderDetails(10257, "HILAA", 4, 81.91, new DateTime(1996, 7, 16), "San Cristóbal", "HILARION-Abastos", "Venezuela", "Carrera 22 con Ave. Carlos Soublette #8-35", "5022", "Táchira"));
+            order.Add(new OrderDetails(10258, "ERNSH", 1, 140.51, new DateTime(1996, 7, 17), "Graz", "Ernst Handel", "Austria", "Kirchgasse 6", "8010", "CJ"));
+            order.Add(new OrderDetails(10259, "CENTC", 4, 3.25, new DateTime(1996, 7, 18), "México D.F.", "Centro comercial Moctezuma", "Mexico", "Sierras de Granada 9993", "05022", "CJ"));
+            order.Add(new OrderDetails(10260, "OTTIK", 4, 55.09, new DateTime(1996, 7, 19), "Köln", "Ottilies Käseladen", "Germany", "Mehrheimerstr. 369", "50739", "CJ"));
+            order.Add(new OrderDetails(10261, "QUEDE", 4, 3.05, new DateTime(1996, 7, 19), "Rio de Janeiro", "Que Delícia", "Brazil", "Rua da Panificadora, 12", "02389-673", "RJ"));
+            order.Add(new OrderDetails(10262, "RATTC", 8, 48.29, new DateTime(1996, 7, 22), "Albuquerque", "Rattlesnake Canyon Grocery", "USA", "2817 Milton Dr.", "87110", "NM"));
+        }
+        return order;
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public int EmployeeID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCity { get; set; }
+    public DateTime OrderDate { get; set; }
+    public string ShipName { get; set; }
+    public string ShipCountry { get; set; }
+    public string ShipAddress { get; set; }
+    public string ShipRegion { get; set; }
+    public string ShipPostalCode { get; set; }
+} 
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBoXArcIDgwDoEZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Controlling Grid actions
 
