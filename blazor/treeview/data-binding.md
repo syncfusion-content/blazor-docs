@@ -1139,7 +1139,7 @@ N> The CRUD operation has been performed in the TreeView component using the con
         </TreeViewFieldsSettings>
         <TreeViewEvents TValue="Employee" NodeClicked="nodeClicked"></TreeViewEvents>
         <SfContextMenu TValue="MenuItem" @ref="menu" Target="#treeview" Items="@MenuItems">
-            <ContextMenuEvents TValue="MenuItem" ItemSelected="MenuSelect"></ContextMenuEvents>
+            <MenuEvents TValue="MenuItem" ItemSelected="MenuSelect"></MenuEvents>
         </SfContextMenu>
     </SfTreeView>
 </div>
@@ -1175,8 +1175,10 @@ N> The CRUD operation has been performed in the TreeView component using the con
 
     protected override async Task OnInitializedAsync()
     {
+        var response = await Http.GetStringAsync("api/Default");
+        var employees = JsonConvert.DeserializeObject<List<Employee>>(response);
         // To get the last item index from the db
-        var count = await Http.GetJsonAsync<int>("api/Default/index");
+        var count = await Http.GetFromJsonAsync<int>("api/Default/index");
         this.index = count + 1;
     }
 
@@ -1189,7 +1191,7 @@ N> The CRUD operation has been performed in the TreeView component using the con
         if ((eventParameters["which"]).ToString() == "3")
         {
             // To get the selected node id upon context menu click
-            this.selectedId = (await args.Node.GetAttribute("data-uid")).ToString();
+           this.selectedId = (await args.NodeData.GetAttribute("data-uid")).ToString();
         }
     }
 
@@ -1218,7 +1220,7 @@ N> The CRUD operation has been performed in the TreeView component using the con
     // To edit a tree node
     async void RenameNodes()
     {
-        tree.BeginEdit(this.selectedId);
+        tree.BeginEditAsync(this.selectedId);
     }
 
     // Triggers when context menu is selected
