@@ -290,19 +290,9 @@ The frozen columns and freeze direction features in Syncfusion<sup style="font-s
 
 ## Detail template with frozen columns
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports frozen columns in combination with the [Detail Template feature](https://blazor.syncfusion.com/documentation/datagrid/detail-template), allowing you to display additional information about a specific row while keeping certain columns fixed during horizontal scrolling.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid allows columns to be **frozen** while using a [detail template]((https://blazor.syncfusion.com/documentation/datagrid/detail-template)). The detail template in the DataGrid component enables you to display additional information about a specific row by expanding or collapsing its detail content.
 
-**Enabling Frozen Columns with Detail Template**
-
-You can freeze columns in the DataGrid using:
-
-* The [FrozenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenColumns) property at the grid level to freeze a specified number of columns from the left.
-
-* The [IsFrozen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsFrozen) property at the column level to freeze individual columns explicitly. You can also freeze a specific column in a particular direction using [Freeze](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Freeze) property.
-
-> The `IsFrozen` and `FrozenColumns` properties are incompatible and cannot be used simultaneously.
-
-The following example demonstrates how to freeze the **FirstName** column using the `IsFrozen` property while displaying additional details using the Detail Template feature.
+Here’s an example of using the **detail template** alongside **frozen columns** in the DataGrid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -430,6 +420,8 @@ public class EmployeeDetails
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZheNULQpBltUNaZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+> You can freeze the DataGrid columns either by using the [IsFrozen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsFrozen) or [FrozenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenColumns) properties.
 
 ## Add or remove frozen columns by dragging the column separator
 
