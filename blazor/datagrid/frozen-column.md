@@ -279,7 +279,6 @@ The frozen columns and freeze direction features in Syncfusion<sup style="font-s
 **General limitations for frozen columns** 
 
 * Row Template  
-* Detail Template  
 * Hierarchy DataGrid  
 
 **Additional limitations for freeze direction** 
@@ -287,7 +286,150 @@ The frozen columns and freeze direction features in Syncfusion<sup style="font-s
 * Infinite scroll in cache mode is not supported.  
 * Freeze direction in the stacked header is incompatible with column reordering.  
 * Using a cell template or text wrap in any one of the panels may cause variable row heights between the panels. The height is recalculated based on the DOM offset height and applied uniformly across all rows to maintain consistency. This can lead to visual glitches. You can resolve this problem by setting static values for the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) property in `SfGrid`.  
-* The [Freeze](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Freeze) and [FrozenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenColumns) properties are incompatible and cannot be used simultaneously.  
+* The [Freeze](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Freeze) and [FrozenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenColumns) properties are incompatible and cannot be used simultaneously.
+
+## Detail template with frozen columns
+
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid supports frozen columns in combination with the [Detail Template feature](https://blazor.syncfusion.com/documentation/datagrid/detail-template), allowing you to display additional information about a specific row while keeping certain columns fixed during horizontal scrolling.
+
+**Enabling Frozen Columns with Detail Template**
+
+You can freeze columns in the DataGrid using:
+
+* The [FrozenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenColumns) property at the grid level to freeze a specified number of columns from the left.
+
+* The [IsFrozen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsFrozen) property at the column level to freeze individual columns explicitly. You can also freeze a specific column in a particular direction using [Freeze](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Freeze) property.
+
+> The `IsFrozen` and `FrozenColumns` properties are incompatible and cannot be used simultaneously.
+
+The following example demonstrates how to freeze the **FirstName** column using the `IsFrozen` property while displaying additional details using the Detail Template feature.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@EmployeeData">
+    <GridTemplates>
+        <DetailTemplate>
+            @{
+                var employee = (context as EmployeeDetails);
+                <table class="detailtable" width="100%">
+                    <colgroup>
+                        <col width="50%">
+                        <col width="50%">
+                    </colgroup>
+                    <tbody>
+                        <tr>                            
+                            <td>
+                                <span style="font-weight: 500;">Employee Name: </span> @employee.FirstName
+                            </td>
+                            <td>
+                                <span style="font-weight: 500;">Hire Date: </span> @employee.HireDate.ToShortDateString()
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span style="font-weight: 500;">Last Name: </span> @employee.LastName
+                            </td>
+                            <td>
+                                <span style="font-weight: 500;">ReportsTo: </span> @employee.ReportsTo
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span style="font-weight: 500;">E-mail: </span> @employee.Email
+                            </td>
+                            <td>
+                                <span style="font-weight: 500;">Phone: </span> @employee.Phone
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            }
+        </DetailTemplate>
+    </GridTemplates>
+    <GridColumns>
+        <GridColumn Field=@nameof(EmployeeDetails.FirstName) HeaderText="First Name" IsFrozen='true' Width="110"> </GridColumn>
+        <GridColumn Field=@nameof(EmployeeDetails.LastName) HeaderText="Last Name" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeDetails.Title) Width="200"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeDetails.Address) Width="250"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeDetails.City) Width="120"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeDetails.Country) Width="110"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+<style type="text/css" class="cssStyles">
+    .detailtable td {
+        font-size: 13px;
+        padding: 4px;
+        max-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+</style>
+
+@code {
+    public List<EmployeeDetails> EmployeeData { get; set; }
+    protected override void OnInitialized()
+    {
+        EmployeeData = EmployeeDetails.GetAllRecords();
+    }
+}
+{% endhighlight %}
+{% highlight c# tabtitle="EmployeeDetails.cs" %}
+public class EmployeeDetails
+{
+    public EmployeeDetails() { }
+    public EmployeeDetails(int EmployeeID, string FirstName, string LastName, string Title, DateTime BirthDate, DateTime HireDate, int ReportsTo, string Address, string PostalCode, string Phone, string City, string Country, string mail)
+    {
+        this.EmployeeID = EmployeeID;
+        this.FirstName = FirstName;
+        this.LastName = LastName;
+        this.Title = Title;
+        this.BirthDate = BirthDate;
+        this.HireDate = HireDate;
+        this.ReportsTo = ReportsTo;
+        this.Address = Address;
+        this.PostalCode = PostalCode;
+        this.Phone = Phone;
+        this.City = City;
+        this.Country = Country;
+        this.Email = mail;
+    }    
+    public static List<EmployeeDetails> GetAllRecords()
+    {
+        List<EmployeeDetails> Emp = new List<EmployeeDetails>();
+        Emp.Add(new EmployeeDetails(1, "Nancy", "Davolio", "Sales Representative", new DateTime(1948, 12, 08), new DateTime(1992, 05, 01), 2, "507 - 20th Ave. E.Apt. 2A ", " 98122", "(206) 555-9857 ", "Seattle ", "USA", "nancy_davolio@gmail.com"));
+        Emp.Add(new EmployeeDetails(2, "Andrew", "Fuller", "Vice President, Sales", new DateTime(1952, 02, 19), new DateTime(1992, 08, 14), 4, "908 W. Capital Way", "98401 ", "(206) 555-9482 ", "Kirkland ", "USA", "andrew_fuller@gmail.com"));
+        Emp.Add(new EmployeeDetails(3, "Janet", "Leverling", "Sales Representative", new DateTime(1963, 08, 30), new DateTime(1992, 04, 01), 3, " 4110 Old Redmond Rd.", "98052 ", "(206) 555-8122", "Redmond ", "USA", "Janet_leverling@gmail.com"));
+        Emp.Add(new EmployeeDetails(4, "Margaret", "Peacock", "Sales Representative", new DateTime(1937, 09, 19), new DateTime(1993, 05, 03), 6, "14 Garrett Hill ", "SW1 8JR ", "(71) 555-4848 ", "London ", "UK", "margaret_peacock@gmail.com"));
+        Emp.Add(new EmployeeDetails(5, "Steven", "Buchanan", "Sales Manager", new DateTime(1955, 03, 04), new DateTime(1993, 10, 17), 8, "Coventry HouseMiner Rd. ", "EC2 7JR ", " (206) 555-8122", "Tacoma ", " USA", "steven_buchanan@gmail.com"));
+        Emp.Add(new EmployeeDetails(6, "Michael", "Suyama", "Sales Representative", new DateTime(1963, 07, 02), new DateTime(1993, 10, 17), 2, " 7 Houndstooth Rd.", " WG2 7LT", "(71) 555-4444 ", "London ", "UK", "michael_suyama@gmail.com"));
+        Emp.Add(new EmployeeDetails(7, "Robert", "King", "Sales Representative", new DateTime(1960, 05, 29), new DateTime(1994, 01, 02), 7, "Edgeham HollowWinchester Way ", "RG1 9SP ", "(71) 555-5598 ", "London", "UK", "robert_king@gmail.com"));
+        Emp.Add(new EmployeeDetails(8, "Laura", "Callahan", "Inside Sales Coordinator", new DateTime(1958, 01, 09), new DateTime(1994, 03, 05), 9, "722 Moss Bay Blvd. ", "98033 ", " (206) 555-3412", "Seattle ", "USA ", "laura_callahan@gmail.com"));
+        Emp.Add(new EmployeeDetails(9, "Anne", "Dodsworth", "Sales Representative", new DateTime(1966, 01, 27), new DateTime(1994, 11, 15), 5, "4726 - 11th Ave. N.E. ", "98105 ", "(71) 555-5598 ", " London", "UK", "anne_dodsworth@gmail.com"));
+
+        return Emp;
+    }
+    public int EmployeeID { get; set; }
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+    public string Title { get; set; }
+    public DateTime BirthDate { get; set; }
+    public DateTime HireDate { get; set; }
+    public int ReportsTo { get; set; }
+    public string Address { get; set; }
+    public string PostalCode { get; set; }
+    public string Phone { get; set; }
+    public string City { get; set; }
+    public string Country { get; set; }
+    public string Email { get; set; }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZheNULQpBltUNaZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Add or remove frozen columns by dragging the column separator
 
