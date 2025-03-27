@@ -32,7 +32,7 @@ To use these shortcuts, simply click on the appointment and press **Ctrl+C** to 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@SelectedDate" AllowClipboard="true" AllowKeyboardInteraction="true">
+<SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@SelectedDate" AllowClipboard="true" AllowKeyboardInteraction="true" ShowQuickInfo="false">
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
     <ScheduleViews>
         <ScheduleView Option="View.Day"></ScheduleView>
@@ -107,7 +107,7 @@ To use these shortcuts, simply click on the appointment and press **Ctrl+C** to 
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDhyjqhCrpcLjdbK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBojgVmMamGGqYM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5 %}
 
 N> For Mac users, use **Cmd** instead of **Ctrl** for copy, cut, and paste operations.
 
@@ -287,7 +287,7 @@ By using these methods, you can programmatically cut, copy, and paste appointmen
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNrItqrsLdoAlvZU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5 %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVojqVGhZgDmVrp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5 %}
 
 ## Modifying content before pasting
 
@@ -450,4 +450,4 @@ In this example, the `Paste` event can be utilized to intercept the event detail
 
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjByjUrsKqIRunRo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5 %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXroNUhmrDOIbXBe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5 %}
