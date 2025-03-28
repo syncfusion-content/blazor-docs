@@ -11,9 +11,9 @@ documentation: ug
 
 The Clipboard functionality in the Syncfusion Scheduler enhances scheduling efficiency by enabling users to cut, copy, and paste appointments with ease. This feature is especially beneficial for those managing multiple appointments, as it eliminates the need for repetitive data entry and allows users to quickly adjust their schedules without hassle.
 
-To activate the clipboard feature in the scheduler, simply set the `allowClipboard` property to **true**.
+To activate the clipboard feature in the scheduler, simply set the [`AllowClipboard`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowKeyboardInteraction) property to **true**.
 
-N> The [`allowKeyboardInteraction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowKeyboardInteraction) property must be true for proper functionality of the clipboard feature.
+N> The [`AllowKeyboardInteraction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowKeyboardInteraction) property must be true for proper functionality of the clipboard feature.
 
 ## Cut, copy and paste using keyboard
 
