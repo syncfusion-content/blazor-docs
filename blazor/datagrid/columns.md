@@ -1556,7 +1556,7 @@ public class OrderData
 
 ## Removing hidden column elements from the DOM
 
-The Syncfusion Blazor DataGrid component provides control over whether the cell elements of hidden columns are rendered in the DOM. By default, hidden columns are included in the DOM, but you can prevent their rendering using the [ShouldRenderHiddenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShouldRenderHiddenColumns) property. This optimization improves performance, especially when multiple hidden columns are present.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component provides control over whether the cell elements of hidden columns are rendered in the DOM. By default, hidden columns are included in the DOM, but you can prevent their rendering using the [ShouldRenderHiddenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShouldRenderHiddenColumns) property. This optimization improves performance, especially when multiple hidden columns are present.
 
 You can set the `ShouldRenderHiddenColumns` property to **false** to remove hidden column elements from the DOM, improving performance when handling large datasets with multiple hidden columns.
 
