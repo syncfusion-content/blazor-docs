@@ -333,3 +333,185 @@ else
 ```
 
 ![Blazor Maps with JSON Data Source using Blazor Server App](./images/populatedata/blazor-map-data-binding.png)
+
+## Improving Performance with Local GeoJSON Processing
+
+When working with large GeoJSON files, fetching data fromremote URLs can slow down yourapplication. By processing GeoJSON locally, you can significantly improve the rendering performance of your Maps component.
+
+### Loading GeoJSON Files Locally
+
+Instead of using remote URLs for [ShapeData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html?_gl=1*1r9l0no*_ga*MTEwNjczMjY0NC4xNzQxMTc0NzIw*_ga_41J4HFMX1J*MTc0MzE1MzI3Mi4zMC4xLjE3NDMxNTQwMjAuMC4wLjA.#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeData), you can include the GeoJSON file in your project and process it locally.
+
+```cshtml
+@using System.Text.Json
+@using System.Text.Json.Serialization
+@using System.Net.Http
+@using Syncfusion.Blazor.Maps
+
+@if (geoJson != null)
+{
+    <SfMaps>
+        <MapsLayers>
+            <MapsLayer ShapeData="@geoJson" TValue="string" ShapePropertyPath='new string[] {"name"}'>
+                <MapsShapeSettings Fill="Grey"></MapsShapeSettings>
+                <MapsLayerTooltipSettings Visible="true" ValuePath="name"
+                                          Format="<b>${iso_3166_2}</b><br>Finalist: <b>${name}</b>">
+                </MapsLayerTooltipSettings>
+            </MapsLayer>
+        </MapsLayers>
+    </SfMaps>
+}
+else
+{
+    <p>Loading map data...</p>
+}
+
+@code {
+    private GeoJson geoJson { get; set; }
+
+    [Inject]
+    private HttpClient Http { get; set; }
+
+    public class Geometry
+    {
+        [JsonPropertyName("type")]
+        public string Type { get; set; }
+
+        [JsonPropertyName("coordinates")]
+        [JsonConverter(typeof(CoordinatesConverter))]
+        public object Coordinates { get; set; }
+
+        // Accessor properties based on type
+        public List<List<List<double>>> PolygonCoordinates { get; private set; }
+        public List<List<List<List<double>>>> MultiPolygonCoordinates { get; private set; }
+        public List<double> PointCoordinates { get; private set; }
+        public List<List<double>> MultiPointCoordinates { get; private set; }
+        public List<List<double>> LineStringCoordinates { get; private set; }
+        public List<List<List<double>>> MultiLineStringCoordinates { get; private set; }
+
+        // Method to set appropriate coordinate type upon deserialization
+        public void SetCoordinates(object coords)
+        {
+            switch (Type)
+            {
+                case "Polygon":
+                    PolygonCoordinates = coords as List<List<List<double>>>;
+                    break;
+                case "MultiPolygon":
+                    MultiPolygonCoordinates = coords as List<List<List<List<double>>>>;
+                    break;
+                case "Point":
+                    PointCoordinates = coords as List<double>;
+                    break;
+                case "MultiPoint":
+                    MultiPointCoordinates = coords as List<List<double>>;
+                    break;
+                case "LineString":
+                    LineStringCoordinates = coords as List<List<double>>;
+                    break;
+                case "MultiLineString":
+                    MultiLineStringCoordinates = coords as List<List<List<double>>>;
+                    break;
+            }
+        }
+    }
+
+    public class CoordinatesConverter : JsonConverter<object>
+    {
+        public override object Read(ref Utf8JsonReader reader, System.Type typeToConvert, JsonSerializerOptions options)
+        {
+            using (JsonDocument document = JsonDocument.ParseValue(ref reader))
+            {
+                var element = document.RootElement;
+                if (element.ValueKind != JsonValueKind.Array)
+                    throw new JsonException("Invalid JSON format for coordinates. Expected an array.");
+
+                if (element[0].ValueKind == JsonValueKind.Number)
+                    return element.Deserialize<List<double>>(options); // Point
+                else if (element[0][0].ValueKind == JsonValueKind.Number)
+                    return element.Deserialize<List<List<double>>>(options); // LineString, MultiPoint
+                else if (element[0][0][0].ValueKind == JsonValueKind.Number)
+                    return element.Deserialize<List<List<List<double>>>>(options); // Polygon, MultiLineString
+                else if (element[0][0][0][0].ValueKind == JsonValueKind.Number)
+                    return element.Deserialize<List<List<List<List<double>>>>>(options); // MultiPolygon
+
+                throw new JsonException("Unsupported JSON format for geometry coordinates.");
+            }
+        }
+
+        public override void Write(Utf8JsonWriter writer, object value, JsonSerializerOptions options)
+        {
+            JsonSerializer.Serialize(writer, value, options);
+        }
+    }
+
+    public class GeoJson
+    {
+        [JsonPropertyName("type")]
+        public string Type { get; set; }
+
+        [JsonPropertyName("features")]
+        public List<GeoJsonFeature> Features { get; set; }
+
+        [JsonPropertyName("bbox")]
+        public JsonElement BoundingBox { get; set; }
+    }
+
+    public class GeoJsonFeature
+    {
+        [JsonPropertyName("type")]
+        public string Type { get; set; }
+
+        // Change properties type to a dictionary
+        [JsonPropertyName("properties")]
+        public Dictionary<string, string> Properties { get; set; }
+
+        private Geometry _geometry;
+
+        [JsonPropertyName("geometry")]
+        public Geometry Geometry
+        {
+            get => _geometry;
+            set
+            {
+                _geometry = value;
+                _geometry.SetCoordinates(_geometry.Coordinates);
+            }
+        }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            // Assuming usa.json is in the wwwroot directory.
+            geoJson = await Http.GetFromJsonAsync<GeoJson>("australia.json", new JsonSerializerOptions
+                {
+                    Converters = { new CoordinatesConverter() },
+                    PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+                });
+        }
+        catch (Exception ex)
+        {
+            Console.Error.WriteLine($"Error loading JSON: {ex.Message}");
+        }
+    }
+}
+```
+
+### Implementation Steps
+
+1. **Add GeoJSON Files**: Place youe GeoJson files in the wwwroot directory of your Blazor project.
+2. **Create Data Models**: Implement classes to deserialize the GeoJSON format.
+3. **Implement Custom Converters**: Handle different geometry types and coordinate structures.
+4. **Load Data**: Use HttpClient to load the files from your local project.
+5. **Bind to Maps**: Pass the processing, you can significantly reduce the initial load time of your maps, especially for complex or large geoJSON files.
+
+### Benefits of Local GeoJSON Processing
+
+1. **Improved Performance**: Reduces network overhead by loading GeoJSON files locally.
+2. **Reduced Latency**: Elimates external dependency on CDN or remote servers.
+3. **Offline Support**: Maps can be rendered without internet connectivity.
+4. **Full Control**: Custom processing of GeoJSON data based on application needs.
+
+![Blazor Maps with Improved Performance with Local GeoJSON Processing](./images/populatedata/blazor-map-geojson.png)
