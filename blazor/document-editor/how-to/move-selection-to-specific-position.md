@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Move to selection position in Blazor DocumentEditor | Syncfusion
-description: Learn how to disable optimized text measuring in Syncfusion Blazor DocumentEditor component and much more.
+description: Learn how to Move to selection position in Syncfusion Blazor DocumentEditor component and much more.
 platform: Blazor
 control: DocumentEditor
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Move selection to specific position in ##Platform_Name## Document editor
 
-Using [`SelectAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_SelectAsync_Syncfusion_Blazor_DocumentEditor_SelectionSettings_) API in selection module, You can set cursor position to anywhere in the document.
+Using [`SelectAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_SelectAsync_System_String_System_String_) API in selection module, You can set cursor position to anywhere in the document.
 
 ## Selects content based on start and end hierarchical index
 
