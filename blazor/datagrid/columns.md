@@ -1279,8 +1279,7 @@ Here's an example code snippet in Blazor that demonstrates how to auto fit colum
 
 ## Fixed columns
 
-The Blazor DataGrid component allows you to fix specific columns at the beginning of the DataGrid, preventing them from being **reordered** or **grouped** while ensuring they remain in a fixed position.
-You can fix multiple columns, and they will appear in the same order as defined in the column collection.
+The Blazor DataGrid component allows you to fix specific columns at the beginning of the DataGrid, preventing them from being **reordered** or **grouped** while ensuring they remain in a fixed position. You can fix multiple columns, and they will appear in the same order as defined in the column collection.
 
 To enable fixed columns in the DataGrid, set the [FixedColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FixedColumn) property to **true** for the respective columns.
 

@@ -272,25 +272,9 @@ The following example demonstrates how to change the default frozen line color u
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LZLzWrNLBIWVbdGA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Limitations of frozen columns and freeze direction  
-
-The frozen columns and freeze direction features in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid have the following limitations:
-
-**General limitations for frozen columns** 
-
-* Row Template  
-* Hierarchy DataGrid  
-
-**Additional limitations for freeze direction** 
-
-* Infinite scroll in cache mode is not supported.  
-* Freeze direction in the stacked header is incompatible with column reordering.  
-* Using a cell template or text wrap in any one of the panels may cause variable row heights between the panels. The height is recalculated based on the DOM offset height and applied uniformly across all rows to maintain consistency. This can lead to visual glitches. You can resolve this problem by setting static values for the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) property in `SfGrid`.  
-* The [Freeze](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Freeze) and [FrozenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenColumns) properties are incompatible and cannot be used simultaneously.
-
 ## Detail template with frozen columns
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid allows columns to be **frozen** while using a [detail template]((https://blazor.syncfusion.com/documentation/datagrid/detail-template)). The detail template in the DataGrid component enables you to display additional information about a specific row by expanding or collapsing its detail content.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid allows columns to be **frozen** while using a [detail template](https://blazor.syncfusion.com/documentation/datagrid/detail-template). The detail template in the DataGrid component enables you to display additional information about a specific row by expanding or collapsing its detail content.
 
 Here’s an example of using the **detail template** alongside **frozen columns** in the DataGrid:
 
@@ -519,6 +503,21 @@ public class OrderDetails
 
 > If frozen columns are not specified, the frozen column separator will be displayed at the left and right ends. You can dynamically change the frozen columns by dragging the column separator.
 
+## Limitations of frozen columns and freeze direction  
+
+The frozen columns and freeze direction features in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid have the following limitations:
+
+**General limitations for frozen columns** 
+
+* Row Template  
+* Hierarchy DataGrid  
+
+**Additional limitations for freeze direction** 
+
+* Infinite scroll in cache mode is not supported.  
+* Freeze direction in the stacked header is incompatible with column reordering.  
+* Using a cell template or text wrap in any one of the panels may cause variable row heights between the panels. The height is recalculated based on the DOM offset height and applied uniformly across all rows to maintain consistency. This can lead to visual glitches. You can resolve this problem by setting static values for the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) property in `SfGrid`.  
+* The [Freeze](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Freeze) and [FrozenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenColumns) properties are incompatible and cannot be used simultaneously.
 
 > You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
 
