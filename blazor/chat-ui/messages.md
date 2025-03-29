@@ -37,7 +37,7 @@ You can use the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.I
 
 ```
 
-![Blazor Chat UI Text](./images/width.png)
+![Blazor Chat UI Text.](./images/blazor-chat-text-messages.png)
 
 ### Define current user
 
@@ -67,7 +67,7 @@ You can use the [Author](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ```
 
-![Blazor Chat UI User](./images/width.png)
+![Blazor Chat UI User.](./images/blazor-chat-user.png)
 
 #### Setting avatar URL
 
@@ -94,7 +94,7 @@ You can use the [AvatarUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 ```
 
-![Blazor Chat UI AvatarUrl](./images/avatarurl.png)
+![Blazor Chat UI avatar url.](./images/blazor-chat-avatar-url.png)
 
 #### Setting avatar background color
 
@@ -121,7 +121,7 @@ You can use the [AvatarBgColor](https://help.syncfusion.com/cr/blazor/Syncfusion
 
 ```
 
-![Blazor Chat UI AvatarUrl](./images/avatarbgcolor.png)
+![Blazor Chat UI avatar url background color.](./images/blazor-chat-background-color.png)
 
 #### Setting CSS class
 
@@ -157,7 +157,7 @@ You can use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 ```
 
-![Blazor Chat UI CssClass](./images/avatarcss.png)
+![Blazor Chat UI css class.](./images/blazor-chat-css-class.png)
 
 ### Define timestamp
 
@@ -185,7 +185,7 @@ You can use the [Timestamp](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 ```
 
-![Blazor Chat UI Timestamp](./images/timestamp.png)
+![Blazor Chat UI timestamp.](./images/blazor-chat-timestamp.png)
 
 #### Setting timestamp format
 
@@ -213,7 +213,7 @@ You can use the [TimestampFormat](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 ```
 
-![Blazor Chat UI TimestampFormat](./images/timestamp-format.png)
+![Blazor Chat UI timestamp format.](./images/blazor-chat-timestamp-format.png)
 
 ### Define message status
 
@@ -251,7 +251,7 @@ You can use the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ```
 
-![Blazor Chat UI IconCss](./images/status-icon.png)
+![Blazor Chat UI icon css.](./images/blazor-chat-icon-Css-status.png)
 
 #### Setting text
 
@@ -285,7 +285,7 @@ You can use the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.I
 
 ```
 
-![Blazor Chat UI Text](./images/status-text.png)
+![Blazor Chat UI text.](./images/blazor-chat-text-setting.png)
 
 #### Setting tooltip
 
@@ -351,7 +351,7 @@ You can use the [AutoScrollToBottom](https://help.syncfusion.com/cr/blazor/Syncf
 
 ```
 
-![Blazor Chat UI AutoScrollToBottom](./images/auto-scroll-bottom.png)
+![Blazor Chat UI auto scroll to bottom.](./images/blazor-chat-auto-scroll-bottom.png)
 
 ### Setting suggestions 
 
@@ -379,4 +379,4 @@ You can use the [Suggestions](https://help.syncfusion.com/cr/blazor/Syncfusion
 
 ```
 
-![Blazor Chat UI Suggestions](./images/suggestions.png)
+![Blazor Chat UI suggestions.](./images/blazor-chat-suggestions.png)
