@@ -105,7 +105,7 @@ The Sankey Diagram offers a convenient way to print its contents directly from t
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Sankey Print](images/print-export/sankey-print-export.png)
+![Blazor Sankey print.](images/print-export/blazor-sankey-print-export.png)
 
 ## Exporting the Sankey Diagram
 
@@ -203,7 +203,7 @@ The Sankey Diagram can be exported to various image formats, including PNG, JPEG
 {% endtabs %}
 
 
-![Blazor Sankey Print](images/print-export/sankey-print-export.png)
+![Blazor Sankey print.](images/print-export/blazor-sankey-print-export.png)
 
 ## Key Considerations
 

@@ -97,7 +97,7 @@ Below is an example of how to configure legends for a Sankey diagram. The sample
 {% endtabs %}
 
 
-![Blazor Sankey Basic Legend](images/legends/sankey-legends.png)
+![Blazor Sankey Basic legend.](images/legends/blazor-sankey-legend.png)
 
 ## Legend Customization and Configuration
 
@@ -208,12 +208,11 @@ Appearance customization extends beyond basic properties, allowing for detailed 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor Sankey Customized Legend](images/legends/sankey-legend-customization.png)
+![Blazor Sankey customized legend.](images/legends/blazor-sankey-legend-customization.png)
 
 ### Legend Text and Title Styles
 
 The Sankey diagram provides advanced customization options for legend text and title styles through the `SankeyLegendTextStyle` and `SankeyLegendTitleStyle` APIs, enabling developers to configure properties such as font size, family, weight, color, and style. These APIs offer flexibility to align the legend's typography with the overall design aesthetic of the visualization, ensuring the legends complement the data representation and enhance the user experience. This level of control allows for seamless integration of legends into a wide range of visualization styles, from simple and clean to highly customized designs, as demonstrated in the following code snippet:
-
 {% tabs %}
 {% highlight razor %}
 
