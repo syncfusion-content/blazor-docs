@@ -1,7 +1,8 @@
 ---
 title: "Oracle database Data Binding in Blazor Pivot Table Component | Syncfusion"
 component: "Pivot Table"
-description: "Learn how to bind data from a Oracle database in the Syncfusion Blazor Pivot Table and more."
+description: "Learn here all about how to bind data from a Oracle database in the Syncfusion Essential Blazor Pivot Table component, it's elements, and more."
+
 ---
 
 # Oracle Data Binding
