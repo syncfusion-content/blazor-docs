@@ -1,0 +1,52 @@
+@using Syncfusion.Blazor.DropDowns;
+
+<div class=button>
+    <button  @onclick="Show">Show</button>
+</div>
+<div class=button>
+    <button  @onclick="Hide">Hide</button>
+</div>
+<div class=content>
+<SfMultiSelect @ref="MultiSelectObj" TValue="string[]" TItem="Games" Placeholder="Favorite Sports" DataSource="@LocalData" @bind-Value="@GameValue"> 
+    <MultiSelectFieldSettings Text="Text" Value="ID"></MultiSelectFieldSettings>
+</SfMultiSelect>
+</div>
+
+@code {
+    SfMultiSelect<string[],Games> MultiSelectObj;
+    public class Games
+    {
+        public string ID { get; set; }
+        public string Text { get; set; }
+    }
+    List<Games> LocalData = new List<Games> {
+    new Games() { ID= "Game1", Text= "American Football" },
+    new Games() { ID= "Game2", Text= "Badminton" },
+    new Games() { ID= "Game3", Text= "Basketball" },
+    new Games() { ID= "Game4", Text= "Cricket" },
+    new Games() { ID= "Game5", Text= "Football" },
+    new Games() { ID= "Game6", Text= "Golf" },
+    new Games() { ID= "Game7", Text= "Hockey" },
+    new Games() { ID= "Game8", Text= "Rugby"},
+    new Games() { ID= "Game9", Text= "Snooker" },
+    new Games() { ID= "Game10", Text= "Tennis"},
+    };
+
+    public string[] GameValue { get; set; } = { "Game5"};
+
+    public void Show()
+    {
+        this.MultiSelectObj.ShowPopupAsync();
+    }
+
+    public void Hide()
+    {
+        this.MultiSelectObj.HidePopupAsync();
+    }
+
+}
+<style>
+    .button{
+        margin-top: 5px;
+    }
+</style>
