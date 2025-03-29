@@ -1629,6 +1629,6 @@ In this example, there are two memory streams: *streamDoc1* and *streamDoc2*. st
 
 
 ## See also
-* [How to import data from Excel sheet and bind to Blazor Grid?](https://www.syncfusion.com/kb/13131/how-to-import-data-from-excel-sheet-and-bind-to-blazor-grid)
+* [How to import data from Excel sheet and bind to Blazor Grid?](https://support.syncfusion.com/kb/article/11560/how-to-import-data-from-excel-sheet-and-bind-to-blazor-grid)
 * [Export data from Grid to Excel in different worksheets in Blazor](https://www.syncfusion.com/forums/175479/export-data-to-excel-in-different-worksheets)
 
