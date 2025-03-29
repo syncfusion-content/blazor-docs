@@ -30,38 +30,28 @@ Styling the tip pointer's size, background, and border colors can be done using 
 
 <style>
     #target {
-        background-color: #ececec;
-        border: 1px solid #c8c8c8;
+        background-color: #cfd8dc;
+        border: 3px solid #eceff1;
         box-sizing: border-box;
-        margin: 70px auto;
-        padding: 20px;
+        margin: 80px auto;
+        padding: 20px 0;
         width: 200px;
+        text-align: center;
+        color: #424242;
+        font-size: 20px;
+        user-select: none;
     }
-
-    /* csslint ignore:start */
 
     .customtip.e-tooltip-wrap {
         padding: 4px;
     }
 
-    .customtip.e-tooltip-wrap .e-arrow-tip.e-tip-bottom {
-        height: 20px;
-        width: 12px;
-    }
-
-    .customtip.e-tooltip-wrap .e-arrow-tip.e-tip-top {
-        height: 20px;
-        width: 12px;
-    }
-
-    .customtip.e-tooltip-wrap .e-arrow-tip.e-tip-left {
-        height: 12px;
-        width: 20px;
-    }
-
+    .customtip.e-tooltip-wrap .e-arrow-tip.e-tip-bottom,
+    .customtip.e-tooltip-wrap .e-arrow-tip.e-tip-top,
+    .customtip.e-tooltip-wrap .e-arrow-tip.e-tip-left,    
     .customtip.e-tooltip-wrap .e-arrow-tip.e-tip-right {
-        height: 12px;
-        width: 20px;
+        height: 20px;
+        width: 12px;
     }
 
     .customtip.e-tooltip-wrap .e-arrow-tip-outer.e-tip-bottom {
