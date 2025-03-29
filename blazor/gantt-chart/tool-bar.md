@@ -11,6 +11,11 @@ documentation: ug
 
 The Gantt Chart component provides the toolbar support to handle Gantt Chart actions. The [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_Toolbar) property accepts the collection of built-in toolbar items and `ToolbarItem` objects for custom toolbar items.
 
+To learn more about the toolbar feature in the Blazor Gantt Chart component, you can check out this video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=Y42u-hY5MqI"%}
+
 ## Built-in toolbar items
 
 Built-in toolbar items execute standard actions of the Gantt Chart component, and these items can be added to toolbar by defining the `Toolbar` as a collection of built-in items. It renders the button with icon and text.
