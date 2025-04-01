@@ -9,11 +9,11 @@ documentation: ug
 
 # Alignment in Blazor Timeline component
 
-You can display the Timeline content `Before`, `After`, `Alternate` and `AlternateReverse` by using the [Alignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfTimeline.html#Syncfusion_Blazor_Layouts_SfTimeline_Alignment) property. The oppositeContent will be displayed parallel to the content when configured in the [TimelineItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineItem.html) directive.
+You can display the Timeline content `Before`, `After`, `Alternate` and `AlternateReverse` by using the [Alignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfTimeline.html#Syncfusion_Blazor_Layouts_SfTimeline_Alignment) property. The `oppositeContent` will be displayed parallel to the content when configured in the [TimelineItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineItem.html) directive.
 
 ## Before
 
-In [Before](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineAlignment.html) alignment, for `horizontal` orientation the item content is placed at the top and oppositeContent at the bottom whereas in `vertical`, the content to the left and oppositeContent to the right.
+In [Before](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineAlignment.html) alignment, for `horizontal` orientation the item content is placed at the top and `oppositeContent` at the bottom whereas in `vertical`, the content to the left and `oppositeContent` to the right.
 
 ```cshtml
 
@@ -54,7 +54,7 @@ In [Before](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.Time
 
 ## After
 
-In [After](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineAlignment.html) alignment, for `horizontal` orientation the item content is placed at the bottom and oppositeContent at the top whereas in `vertical`, the content to the right and oppositeContent to the left.
+In [After](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineAlignment.html) alignment, for `horizontal` orientation the item content is placed at the bottom and `oppositeContent` at the top whereas in `vertical`, the content to the right and `oppositeContent` to the left.
 
 ```cshtml
 
