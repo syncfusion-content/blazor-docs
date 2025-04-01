@@ -10,7 +10,7 @@ documentation: ug
 # Build your first Blazor App with our blocks
 
 ## Create a new Blazor App
-A Blazor Web App is used for this example. To create a new app, follow the official setup guide [here](https://learn.microsoft.com/en-us/training/modules/build-your-first-blazor-web-app/3-exercise-configure-environment?pivots=vscode). This tutorial then walks through the step-by-step process of adding a simple sign-in block to the newly created app, named **MyBlazorApp*.
+A Blazor Web App is used for this example. To create a new app, follow the official setup guide [here](https://learn.microsoft.com/en-us/training/modules/build-your-first-blazor-web-app/3-exercise-configure-environment?pivots=vscode). This tutorial then walks through the step-by-step process of adding a simple sign-in block to the newly created app, named **MyBlazorApp**.
 
 > This tutorial focuses on using Blazor Server rendering mode rather than Blazor WebAssembly.
 
@@ -18,7 +18,7 @@ A Blazor Web App is used for this example. To create a new app, follow the offic
 
 ## Setting up Tailwind or Bootstrap 5.3 theme in the app
 
-After creating the new Blazor app named **MyBlazorApp*, open it in Visual Studio Code (which we’ll be using throughout this walkthrough). The next step is to choose a theme, either Tailwind or Bootstrap 5.3, in either light or dark mode, and configure the app accordingly.
+After creating the new Blazor app named **MyBlazorApp**, open it in Visual Studio Code (which we’ll be using throughout this walkthrough). The next step is to choose a theme, either Tailwind or Bootstrap 5.3, in either light or dark mode, and configure the app accordingly.
 
 ### Tailwind configuration
 
