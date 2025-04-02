@@ -62,3 +62,5 @@ Below sample demonstrates the SpeechToText component configured with above metho
 
 {% endhighlight %}
 {% endtabs %}
+
+![Blazor SpeechToText with Start and Stop Listening Methods](images/methods.png)
