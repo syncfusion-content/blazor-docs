@@ -1589,7 +1589,7 @@ A package of Blazor popup components Dialog and Tooltip are used to display info
 <td>
 <ul>
 <li><a href="https://blazor.syncfusion.com/documentation/dialog">Dialog</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/predefined-dialogs/getting-started-webapp">PreDefined Dialog</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/predefined-dialogs/getting-started-webapp">Predefined Dialog</a></li>
 <li><a href="https://blazor.syncfusion.com/documentation/tooltip/getting-started-webapp">Tooltip</a></li>
 </ul>
 </td>
