@@ -161,11 +161,13 @@ Now that **MyBlazorApp** is set up with the desired theme configuration, the nex
 
     ![Choose Tailwind or Bootstrap theme](images/choose-tailwind-or-bootstrap-theme.png)
 
-3. In the **Code** tab, copy the Razor (HTML) code using the **Copy to Clipboard** option and paste it into the **Components -> Pages -> Home.razor** file.
+3. In the **Code** tab, copy the Razor (HTML) code using the **Copy to Clipboard** option and paste it into the **Components -> Pages -> Home.razor** file, replacing its content with the provided "Hello, world!" example.
+
+>  Ensure that you do not remove the **@page** directive and **<PageTitle>** element while replacing the content. These are essential for routing and setting the page title.
 
     ![Copy HTML code snippet to clipboard](images/copy-HTML-code-snippet-to-clipboard.png)
 
-4. If CSS is provided, copy the CSS code, create a new file **Components -> Pages -> Home.razor.css**, and paste the code into it. Similarly, if a C# code file is provided, create a new file **Components -> Pages -> Home.razor.cs** and paste the C# code into it. Otherwise, you can ignore this step.
+4. If CSS is provided, copy the CSS code, create a new file **Components -> Pages -> Home.razor.css**, and paste the code into it. Similarly, if a C# code is provided, create a new file **Components -> Pages -> Home.razor.cs** and paste the C# code into it. Otherwise, you can ignore this step.
 
 ### Steps to explore and copy block code snippets from the GitHub source
 
@@ -187,25 +189,28 @@ Now that **MyBlazorApp** is set up with the desired theme configuration, the nex
 
 While copying and pasting the Razor (HTML) code, you'll notice that Syncfusion Blazor components are used. To incorporate them into **MyBlazorApp**, install the necessary packages and import the corresponding namespaces to the **Components -> _Imports.razor** file for the app to run.
 
-In the simple sign-in block, components such as textbox, checkbox and button are used. After copying and pasting HTML code into the Razor file, open the **MyBlazorApp.csproj** file and add the required nuget packages: `Syncfusion.Blazor.Buttons` and `Syncfusion.Blazor.Inputs`. For more details about other Syncfusion Blazor component packages, refer to this [link](https://www.nuget.org/packages?q=Syncfusion.Blazor)
+In the simple sign-in block, components such as textbox, checkbox and button are used. After copying and pasting Razor (HTML) code into the Razor file, open the **MyBlazorApp.csproj** file and add the required nuget packages: `Syncfusion.Blazor.Buttons` and `Syncfusion.Blazor.Inputs`. For more details about other Syncfusion Blazor component packages, refer to this [link](https://www.nuget.org/packages?q=Syncfusion.Blazor)
 
 ![Adding required packages for Syncfusion components](images/adding-required-packages-for-syncfusion-components.png)
 
-Once the necessary packages are added, run the follwing command via the terminal to install those packages.
+Once the necessary packages are added, run the following command via the terminal to install those packages.
 
     ```bash
     dotnet restore
     ```
+After restoring the packages, import the required namespaces `Syncfusion.Blazor.Buttons` and `Syncfusion.Blazor.Inputs` in the _Imports.razor file to enable Syncfusion components in the application.
 
-Finally, again check the [online demo](https://blazor.syncfusion.com) or the [GitHub repository](https://github.com/syncfusion/essential-ui-kit-for-blazor) and copy the required HTML code for the simple sign-in block into your app as outlined in the previous topic.
+![Importing Syncfusion Namespaces](images/import-syncfusion-namespaces.png)
+
+Finally, again check the [online demo](https://blazor.syncfusion.com) or the [GitHub repository](https://github.com/syncfusion/essential-ui-kit-for-blazor) and copy the required Razor (HTML) code for the simple sign-in block into your app as outlined in the previous topic.
 
 ## Steps to download and add assets to the app
 
-If you want to view and experience the images used in our design, you can download the **assets** folder from the following [GitHub repository](https://github.com/syncfusion/essential-ui-kit-for-blazor), place it inside the **wwwroot** folder of **MyBlazorApp**, and modify the image URLs in the HTML if necessary.
+If you want to view and experience the images used in our design, you can download the **assets** folder from the following [GitHub repository](https://github.com/syncfusion/essential-ui-kit-for-blazor), place it inside the **wwwroot** folder of **MyBlazorApp**, and modify the image URLs in the Razor (HTML) if necessary.
 
 ## Steps to run the app
 
-Now that everything is set up in **MyBlazorApp** — including the Razor (HTML), CSS (if applicable), and assets (optional) — you are ready to build and launch the app. Type the following command in the terminal, and you will see a localhost URL provided by the Blazor development server.
+Now that everything is set up in **MyBlazorApp** — including the Razor (HTML), CSS (if applicable), C# (if applicable), and assets (optional) — you are ready to build and launch the app. Type the following command in the terminal, and you will see a localhost URL provided by the Blazor development server.
 
     ```bash
     dotnet run
