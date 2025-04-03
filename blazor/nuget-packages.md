@@ -413,6 +413,41 @@ The Blazor Chart is a well-crafted charting component to visualize data. It cont
 </tr>
 </table>
 
+## Syncfusion.Blazor.Chart3D
+
+The Blazor 3D Chart is a graphical representation of data in three dimensions, showcasing relationships and trends among variables.
+
+<table>
+<tr>
+<td>
+<b>NuGet package</b>
+</td>
+<td>
+<b>Components friendly name</b>
+</td>
+<td>
+<b>Components name</b>
+</td>
+<td>
+<b>Dependencies</b>
+</td>
+</tr>
+<tr>
+<td><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Chart3D">Syncfusion.Blazor.Chart3D</a></td>
+<td><a href="https://blazor.syncfusion.com/documentation/3d-chart/getting-started-with-web-app">3D Chart</a></td>
+<td>SfChart3D</td>
+<td>
+<ul>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Core/">Syncfusion.Blazor.Core</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.Data/">Syncfusion.Blazor.Data</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.Blazor.DataVizCommon/">Syncfusion.Blazor.DataVizCommon</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.ExcelExport.Net.Core/">Syncfusion.ExcelExport.Net.Core</a></li>
+<li><a href="https://www.nuget.org/packages/Syncfusion.PdfExport.Net.Core/">Syncfusion.PdfExport.Net.Core</a></li>
+</ul>
+</td>
+</tr>
+</table>
+
 ## Syncfusion.Blazor.CircularGauge
 
 The Blazor Circular Gauge is used for visualizing numeric values on a circular scale with features like multiple axes, rounded corners, and more. The appearance of the gauge can be completely customized to simulate a speedometer, meter gauge, analog clock, etc.
@@ -948,6 +983,9 @@ A package of Blazor input components comes with a collection of form components.
 <li><a href="https://blazor.syncfusion.com/documentation/textbox/getting-started-webapp">TextBox</a></li>
 <li><a href="https://blazor.syncfusion.com/documentation/file-upload/getting-started-with-web-app">File Upload</a></li>
 <li><a href="https://blazor.syncfusion.com/documentation/signature/getting-started-webapp">Signature</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/textarea/getting-started-webapp">TextArea</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/otp-input/getting-started-webapp">OTP Input</li>
+<li><a href="https://blazor.syncfusion.com/documentation/speech-to-text/getting-started-web-app">Speech To Text</a></li>
 </ul>
 </td>
 <td>
@@ -960,6 +998,9 @@ A package of Blazor input components comes with a collection of form components.
 <li>SfTextBox</li>
 <li>SfUploader</li>
 <li>SfSignature</li>
+<li>SfTextArea</li>
+<li>SfOtpInput</li>
+<li>SfSpeechToText</li>
 </ul>
 </td>
 <td>
@@ -1548,6 +1589,7 @@ A package of Blazor popup components Dialog and Tooltip are used to display info
 <td>
 <ul>
 <li><a href="https://blazor.syncfusion.com/documentation/dialog">Dialog</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/predefined-dialogs/getting-started-webapp">Predefined Dialog</a></li>
 <li><a href="https://blazor.syncfusion.com/documentation/tooltip/getting-started-webapp">Tooltip</a></li>
 </ul>
 </td>
@@ -1751,7 +1793,10 @@ The Rich Text Editor component is the HTML and markdown editor that provides the
 <a href="https://www.nuget.org/packages/Syncfusion.Blazor.RichTextEditor/">Syncfusion.Blazor.RichTextEditor</a>
 </td>
 <td>
-<a href="https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started-webapp">RichTextEditor</a>
+<ul>
+<li><a href="https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started-webapp">RichTextEditor</a></li>
+<li><a href="https://blazor.syncfusion.com/documentation/markdown-editor/getting-started-webapp">Markdown Editor</a></li>
+</ul>
 </td>
 <td>
 SfRichTextEditor
