@@ -67,4 +67,4 @@ By adding the license key, you ensure seamless browsing and usage of the blocks,
 
 ## Get Started by Viewing the Online Demo
 
-If you prefer a quick demo instead of downloading the app, you can explore the blocks directly through the online demo. Simply visit the official [Essential UI Kit for Blazor](https://ej2.syncfusion.com/angular/essential-ui-kit/#/blocks) website to interact with the blocks.
+If you prefer a quick demo instead of downloading the app, you can explore the blocks directly through the online demo. Simply visit the official [Essential UI Kit for Blazor](https://blazor.syncfusion.com) website to interact with the blocks.
