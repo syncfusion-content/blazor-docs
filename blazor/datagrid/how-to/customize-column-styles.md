@@ -75,7 +75,6 @@ Add the custom CSS class to the specified column by using the [CustomAttributes]
 }
 ```
 
-
 ![Customizing Column Style in Blazor DataGrid](../images/blazor-datagrid-column-style-customization.PNG)
 
 ## Customize column header style

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Native Events in Blazor Button Component | Syncfusion
-description: Checkout and learn here all about Native Events in Syncfusion Blazor Button component and much more.
+description: Checkout and learn here all about native events support in Syncfusion Blazor Button component, it's elements and more.
 platform: Blazor
 control: Button
 documentation: ug
@@ -56,6 +56,6 @@ The `onclick` attribute is used to bind the click event for button. Here, we hav
 }
 ```
 
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrqMVBhCcqcrEoi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Native Event Button](./images/blazor-native-event-button.png)

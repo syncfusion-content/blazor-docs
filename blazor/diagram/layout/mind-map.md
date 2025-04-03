@@ -9,7 +9,7 @@ documentation: ug
 
 # Mind Map Layout in Blazor Diagram Component
 
-A mind map is a diagram that displays the nodes as a spider diagram organizes information around a central concept. To create mind map, the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Type) of layout should be set as [MindMap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutType.html#Syncfusion_Blazor_Diagram_LayoutType_MindMap).
+A mind map is a diagram that displays the nodes as a spider diagram organizes information around a central concept. To create a mind map, the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Type) of layout should be set as [MindMap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutType.html#Syncfusion_Blazor_Diagram_LayoutType_MindMap).
 
 To create a Mindmap Layout using the Blazor Diagram, refer to the below video link,
 
@@ -77,11 +77,11 @@ To create a Mindmap Layout using the Blazor Diagram, refer to the below video li
     };
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/MindmapSample1)
 
 ![Blazor Mind Map Diagram](../images/blazor-mind-map-diagram.png)
 
-You can also decide the branch for mind map using [GetBranch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_GetBranch) method. The following code demonstrates how to set all branches on the right side for mind map layout using GetBranch method.
+You can also decide the branch for a mind map using the [GetBranch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_GetBranch) method. The following code demonstrates how to set all branches on the right side for a mind map layout using the GetBranch method.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
@@ -160,24 +160,30 @@ You can also decide the branch for mind map using [GetBranch](https://help.syncf
     };
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/MindmapSample2)
 
 ![Blazor Mind Map Diagram with Branches](../images/blazor-mind-map-diagram-with-branches.png)
 
-Also, you can render a mind map layout without using Datasource. The following code demonstrates how to render a mind map layout without using DataSource.
+>**Note:** In the DataSourceSettings, the type of the ID and ParentID properties is string. The provided DataSource should have a parent-child relationship. It is necessary for at least one node to have an empty ParentID.
+
+Also, you can render a mind map layout without using a Datasource. The following code demonstrates how to render a mind map layout without using DataSource.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating">
-    <Layout Type="LayoutType.MindMap"  Root="@root">
+<SfDiagramComponent Height="600px" Nodes="@nodes" Connectors="@connectors" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating">
+    <Layout Type="LayoutType.MindMap" Root="@root">
         <LayoutMargin Top="20" Left="20"></LayoutMargin>
     </Layout>
 </SfDiagramComponent>
 
-@code 
+@code
 {
-      string root = "node4";
+    //Initialize the diagram's nodes collection
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    //Initialize the diagram's connectors collection
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    string root = "node4";
     //Creates connectors with some default values.
     private void OnNodeCreating(IDiagramObject obj)
     {
@@ -186,16 +192,8 @@ Also, you can render a mind map layout without using Datasource. The following c
         node.Width = 100;
         node.Style = new ShapeStyle() { Fill = "#6495ED", StrokeWidth = 1, StrokeColor = "white" };
         node.Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Ellipse };
-        MindMapDetails mindMapData = node.Data as MindMapDetails;
-        node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
-        {
-            new ShapeAnnotation()
-            {
-                Content = mindMapData.Label
-            }
-        };
     }
-    
+
     //Creates node with some default values.
     private void OnConnectorCreating(IDiagramObject connector)
     {
@@ -203,19 +201,19 @@ Also, you can render a mind map layout without using Datasource. The following c
         connectors.Type = ConnectorSegmentType.Bezier;
         connectors.Style = new TextStyle() { StrokeColor = "#6495ED", StrokeWidth = 2 };
         connectors.TargetDecorator = new DecoratorSettings
-        {
-            Shape = DecoratorShape.None,
-        };
+            {
+                Shape = DecoratorShape.None,
+            };
     }
 
     protected override void OnInitialized()
     {
         Node node1 = new Node()
-        {
-            ID = "node1",
-            Width = 70,
-            Height = 70,
-            Ports = new DiagramObjectCollection<PointPort>()
+            {
+                ID = "node1",
+                Width = 70,
+                Height = 70,
+                Ports = new DiagramObjectCollection<PointPort>()
 {
                 new PointPort()
                 {
@@ -227,13 +225,13 @@ Also, you can render a mind map layout without using Datasource. The following c
                     Offset = new DiagramPoint() { X = 0, Y = 0.5},
                 }
             },
-        };
+            };
         nodes.Add(node1);
         Node node2 = new Node()
-        {
-            ID = "node2",
-            Width = 70,
-            Ports = new DiagramObjectCollection<PointPort>()
+            {
+                ID = "node2",
+                Width = 70,
+                Ports = new DiagramObjectCollection<PointPort>()
 {
                 new PointPort()
                 {
@@ -241,14 +239,14 @@ Also, you can render a mind map layout without using Datasource. The following c
                     Offset = new DiagramPoint() { X = 0, Y = 0.5},
                 }
             },
-            Height = 70
-        };
+                Height = 70
+            };
         nodes.Add(node2);
         Node node3 = new Node()
-        {
-            ID = "node3",
-            Width = 70,
-            Ports = new DiagramObjectCollection<PointPort>()
+            {
+                ID = "node3",
+                Width = 70,
+                Ports = new DiagramObjectCollection<PointPort>()
 {
                 new PointPort()
                 {
@@ -256,102 +254,102 @@ Also, you can render a mind map layout without using Datasource. The following c
                     Offset = new DiagramPoint() { X = 1, Y = 0.5},
                 }
             },
-            Height = 70
-        };
+                Height = 70
+            };
         nodes.Add(node3);
         Node node4 = new Node()
-        {
-            ID = "node4",
-            Width = 70,
-            Height = 70
-        };
+            {
+                ID = "node4",
+                Width = 70,
+                Height = 70
+            };
         nodes.Add(node4);
         Node node5 = new Node()
-        {
-            ID = "node5",
-            Width = 70,
-            Height = 70
-        };
+            {
+                ID = "node5",
+                Width = 70,
+                Height = 70
+            };
         nodes.Add(node5);
         Node node6 = new Node()
-        {
-            ID = "node6",
-            Width = 70,
-            Height = 70
-        };
+            {
+                ID = "node6",
+                Width = 70,
+                Height = 70
+            };
         nodes.Add(node6);
         Node node7 = new Node()
-        {
-            ID = "node7",
-            Width = 70,
-            Height = 70
-        };
+            {
+                ID = "node7",
+                Width = 70,
+                Height = 70
+            };
         nodes.Add(node7);
         Node node8 = new Node()
-        {
-            ID = "node8",
-            Width = 70,
-            Height = 70
-        };
+            {
+                ID = "node8",
+                Width = 70,
+                Height = 70
+            };
         nodes.Add(node8);
         Node node9 = new Node()
-        {
-            ID = "node9",
-            Width = 70,
-            Height = 70
-        };
+            {
+                ID = "node9",
+                Width = 70,
+                Height = 70
+            };
         nodes.Add(node9);
         Node node10 = new Node()
-        {
-            ID = "node10",
-            Width = 70,
-            Height = 70
-        };
+            {
+                ID = "node10",
+                Width = 70,
+                Height = 70
+            };
         nodes.Add(node10);
         Node node11 = new Node()
-        {
-            ID = "node11",
-            Width = 70,
-            Height = 70,
-        };
+            {
+                ID = "node11",
+                Width = 70,
+                Height = 70,
+            };
         nodes.Add(node11);
         Node node12 = new Node()
-        {
-            ID = "node12",
-            Width = 70,
-            Height = 70
-        };
+            {
+                ID = "node12",
+                Width = 70,
+                Height = 70
+            };
         nodes.Add(node12);
         Node node13 = new Node()
-        {
-            ID = "node13",
-            Width = 70,
-            Height = 70
-        };
+            {
+                ID = "node13",
+                Width = 70,
+                Height = 70
+            };
         nodes.Add(node13);
         Node node14 = new Node()
-        {
-            ID = "node14",
-            Width = 70,
-            Height = 70
-        };
+            {
+                ID = "node14",
+                Width = 70,
+                Height = 70
+            };
         Node node15 = new Node()
-        {
-            ID = "node15",
-            Width = 70,
-            Height = 70
-        };
+            {
+                ID = "node15",
+                Width = 70,
+                Height = 70
+            };
         Node node16 = new Node()
-        {
-            ID = "node16",
-            Width = 70,
-            Height = 70
-        };
+            {
+                ID = "node16",
+                Width = 70,
+                Height = 70
+            };
         nodes.Add(node14);
         Node node17 = new Node()
-        {
-            ID = "node17",
-            Ports = new DiagramObjectCollection<PointPort>()
+            {
+                ID = "node17",
+                Ports = new DiagramObjectCollection<PointPort>()
 {
                 new PointPort()
                 {
@@ -359,9 +357,9 @@ Also, you can render a mind map layout without using Datasource. The following c
                     Offset = new DiagramPoint() { X = 1, Y = 0.5},
                 }
             },
-            Width = 70,
-            Height = 70,
-        };
+                Width = 70,
+                Height = 70,
+            };
         nodes.Add(node15);
         nodes.Add(node16);
         nodes.Add(node17);
@@ -405,7 +403,7 @@ Also, you can render a mind map layout without using Datasource. The following c
 }
 ```
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/MindMapWithoutDataSource)
 
 ## See also
 

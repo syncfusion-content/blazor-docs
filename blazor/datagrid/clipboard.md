@@ -109,7 +109,7 @@ To copy selected rows or cells data into the clipboard with help of toolbar butt
 }
 ```
 
-N> You can refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
+N> You can refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand how to present and manipulate data.
 
 ## AutoFill
 
@@ -154,6 +154,7 @@ AutoFill Feature allows to copy the data of selected cells and paste it to anoth
 ```
 
 The following represents Autofill in DataGrid
+
 ![Autofill in Blazor DataGrid](images/blazor-datagrid-autofill.gif)
 
 N> * If [EnableAutoFill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableAutoFill) is set to true, then the autofill icon will be displayed on cell selection to copy cells.

@@ -231,6 +231,7 @@ The `Http.GetJsonAsync` method is used in the  `OnInitializedAsync` life cycle m
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap
+@inject NavigationManager Navigation
 @inject HttpClient Http;
 
 @if (GrowthReports == null)
@@ -240,20 +241,19 @@ The `Http.GetJsonAsync` method is used in the  `OnInitializedAsync` life cycle m
 else
 {
     <SfTreeMap WeightValuePath="GDP" TValue="GDPReport" DataSource="GrowthReports">
-        <TreeMapLeafItemSettings LabelPath="State">
+        <TreeMapLeafItemSettings LabelPath="Country">
         </TreeMapLeafItemSettings>
     </SfTreeMap>
 }
 @code{
     public List<GDPReport> GrowthReports { get; set; }
-    protected override Task OnInitializedAsync()
+    protected async override Task OnInitializedAsync()
     {
-        GrowthReports = await Http.GetJsonAsync<List<GDPReport>>("sample-data/product-growth.json");
-        return base.OnInitializedAsync();
+         GrowthReports = await Http.GetFromJsonAsync<List<GDPReport>>(Navigation.ToAbsoluteUri("sample-data/product-growth.json"));
     }
     public class GDPReport
     {
-        public string State { get; set; }
+        public string Country { get; set; }
         public int GDP { get; set; }
         public double Percentage { get; set; }
         public int Rank { get; set; }
@@ -263,6 +263,8 @@ else
 
 ![Loading Blazor TreeMap Data from JSON File](images/Databinding/blazor-treemap-flat-data.png)
 
+N> Refer the data values for [product_growth](https://www.syncfusion.com/downloads/support/directtrac/general/ze/product-growth-360857189) here. 
+
 ## Remote data
 
 To interact with the remote data source, provide the endpoint [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) within the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) class along with an appropriate [Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors). By default, the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) uses [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors/#odata-adaptor) for remote data-binding.
@@ -271,7 +273,7 @@ N> If [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Da
 
 ### Binding with OData services
 
-[OData](https://blazor.syncfusion.com/documentation/data/adaptors/#odata-adaptor) is a standardized protocol for creating and consuming data. User can retrieve data from [OData](https://blazor.syncfusion.com/documentation/data/adaptors/#odata-adaptor) service using the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
+[OData](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) is a standardized protocol for creating and consuming data. User can retrieve data from [OData](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) service using the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap
@@ -307,9 +309,9 @@ N> If [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Da
 
 ### Binding with OData V4 services
 
-The [OData V4](https://blazor.syncfusion.com/documentation/data/adaptors/#odatav4-adaptor) is an improved version of [OData](https://blazor.syncfusion.com/documentation/data/adaptors/#odata-adaptor) protocols, and the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) can be used to retrieve and consume [OData V4](https://blazor.syncfusion.com/documentation/data/adaptors/#odatav4-adaptor) services.
+The [OData V4](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor) is an improved version of [OData](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) protocols, and the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) can be used to retrieve and consume [OData V4](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor) services.
 
-N> For more details on OData V4 services, refer to the [OData documentation](https://blazor.syncfusion.com/documentation/data/adaptors/#odata-adaptor) to bind [OData V4](https://blazor.syncfusion.com/documentation/data/adaptors/#odatav4-adaptor) service using the [OData V4 Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors/#odatav4-adaptor).
+N> For more details on OData V4 services, refer to the [OData documentation](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) to bind [OData V4](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor) service using the [OData V4 Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor).
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap
@@ -568,7 +570,7 @@ For instance, bind the data directly from the **OrderDataAccessLayer** class and
     }
 ```
 
-On the other hand, to configure the TreeMap using Web API, provide the appropriate endpoint URL in the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) along with [Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors). Here, [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors/?no-cache=1#web-api-adaptor) is used to interact with the Web API to consume data from the Entity Framework appropriately.
+On the other hand, to configure the TreeMap using Web API, provide the appropriate endpoint URL in the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) along with [Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors). Here, [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors?no-cache=1#web-api-adaptor) is used to interact with the Web API to consume data from the Entity Framework appropriately.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap

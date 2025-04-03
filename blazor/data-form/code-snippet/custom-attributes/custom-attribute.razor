@@ -1,0 +1,27 @@
+<SfDataForm ID="MyForm"
+            EditContext="@UserEditContext"
+            ColumnCount=6
+            ColumnSpacing="10px"
+            Width="70%"
+            ButtonsAlignment="FormButtonsAlignment.Right">
+    <FormValidator>
+        <DataAnnotationsValidator></DataAnnotationsValidator>
+    </FormValidator>
+    <FormItems>
+        <FormAutoGenerateItems></FormAutoGenerateItems>
+    </FormItems>
+    <FormButtons>
+        <SfButton>Pay $@PaymentDetails.PaymentAmount </SfButton>
+    </FormButtons>
+</SfDataForm>
+
+@code {
+    EditContext UserEditContext { get; set; }
+    public char PromptCharacter = ' ';
+    protected override Task OnInitializedAsync()
+    {
+        UserEditContext = new EditContext(PaymentDetails);
+        return base.OnInitializedAsync();
+    }
+    private PaymentDetailsModel PaymentDetails = new PaymentDetailsModel();
+}

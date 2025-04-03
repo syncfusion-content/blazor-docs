@@ -43,10 +43,7 @@ The following code example illustrates how to create an organizational chart.
         node.Width = 100;
         //Initializing the default node's shape style.
         node.Style = new ShapeStyle() { Fill = "darkcyan", StrokeWidth = 3, StrokeColor = "Black" };
-        node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
-        {
-            new ShapeAnnotation { Style = new TextStyle() { Color = "white", Bold = true },Content = node.Annotations[0].Content }
-        };
+        node.Annotations[0].Style = new TextStyle() { Color = "white", Bold = true };
     }
 
     private void OnConnectorCreating(IDiagramObject connector)
@@ -104,17 +101,19 @@ The following code example illustrates how to create an organizational chart.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/OrganizationLayout1)
 
 ![Blazor Organization Chart Diagram](../images/blazor-organization-chart.png)
 
-Organizational chart layout starts parsing from root and iterate through all its child elements. The [GetLayoutInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_GetLayoutInfo) event callback method provides necessary information about a node’s children and the way to arrange them(direction, orientation, offsets, etc.). The arrangements can be customized by overriding this function as explained.
+Organizational chart layout starts parsing from root and iterates through all its child elements. The [GetLayoutInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_GetLayoutInfo) event callback method provides necessary information about a node’s children and the way to arrange them(direction, orientation, offsets, etc.). The arrangements can be customized by overriding this function as explained.
 
-**GetLayoutInfo** set chart orientations, chart types, and offset to be left between parent and child nodes. The GetLayoutInfo event callback method is called to configure every subtree of the organizational chart. It takes the following arguments.
+**GetLayoutInfo** sets chart orientations, chart types, and offset to be left between parent and child nodes. The GetLayoutInfo event callback method is called to configure every subtree of the organizational chart. It takes the following arguments.
 
 1. **IDiagramObject**: Parent node to that options are to be customized.
 2. **TreeInfo**: Object to set the customizable properties.
 3. **TreeInfo**: Returns an object value to be customized.
+
+>**Note:** In the DataSourceSettings, the type of the ID and ParentID properties is string. The provided DataSource should have a parent-child relationship. It is necessary for at least one node to have an empty ParentID.
 
 ## Customize layout
 
@@ -224,7 +223,7 @@ The following code example illustrates how to set the vertical right arrangement
     };
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/OrganizationLayout2)
 
 ![Blazor Organization Diagram ChildNode in Vertical Right](../images/blazor-diagram-childnode-at-vertical-right.png)
 
@@ -253,7 +252,7 @@ Layout provides support to add some blank space between the layout bounds/viewpo
 
 ### How to change orientation
 
-Diagram provides support to customize the `Orientation` of layout. You can set the desired orientation using `LayoutOrientation`.
+Diagram provides support to customize the `Orientation` of the layout. You can set the desired orientation using `LayoutOrientation`.
 
 The following code illustrates how to arrange the nodes in a BottomToTop orientation.
 
@@ -268,7 +267,6 @@ The following code illustrates how to arrange the nodes in a BottomToTop orienta
     LayoutOrientation orientation = LayoutOrientation.TopToBottom;
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout)
 
 ### Fixed node
 
@@ -294,7 +292,7 @@ Layout provides support to arrange the nodes with reference to the position of a
 
 [Assistants](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TreeInfo.html#Syncfusion_Blazor_Diagram_TreeInfo_Assistants) are child items that have a different relationship with the parent node. They are laid out in a dedicated part of the tree. A node can be specified as an assistant of its parent by adding it to the assistants property of the argument `Assistants`.
 
-In the [Root](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Root)property, define the node set to be the parent of the assistant node. In the `Assistant` property, define the node set to be assistant for the parent node. Both properties should be defined in the "LayoutInfo" property.
+In the [Root](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Root) property, define the node set to be the parent of the assistant node. In the `Assistant` property, define the node set to be assistant for the parent node. Both properties should be defined in the "LayoutInfo" property.
 
 The following code example illustrates how to add assistants to the layout.
 
@@ -302,13 +300,13 @@ The following code example illustrates how to add assistants to the layout.
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
 
- <SfDiagramComponent @ref="diagram" Width="900px" Height="800px" NodeCreating="NodeCreating" ConnectorCreating="ConnectorCreating">
-        <DataSourceSettings DataSource="DataSource" ID="Id" ParentID="Manager"></DataSourceSettings>
-            <Layout @bind-Type="type" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-FixedNode="@FixedNode" @bind-Orientation="@oreintation" @bind-VerticalSpacing="@VerticalSpacing" @bind-HorizontalAlignment="@horizontalAlignment" @bind-VerticalAlignment="@verticalAlignment" GetLayoutInfo="GetLayoutInfo">
-                <LayoutMargin @bind-Top="@top" @bind-Bottom="@bottom" @bind-Right="@right" @bind-Left="@left"></LayoutMargin>               
-            </Layout>
-            <SnapSettings></SnapSettings>
-    </SfDiagramComponent>
+<SfDiagramComponent @ref="diagram" Width="900px" Height="800px" >
+    <DataSourceSettings DataSource="DataSource" ID="Id" ParentID="Manager"></DataSourceSettings>
+        <Layout @bind-Type="type" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-FixedNode="@FixedNode" @bind-Orientation="@oreintation" @bind-VerticalSpacing="@VerticalSpacing" @bind-HorizontalAlignment="@horizontalAlignment" @bind-VerticalAlignment="@verticalAlignment" GetLayoutInfo="GetLayoutInfo">
+            <LayoutMargin @bind-Top="@top" @bind-Bottom="@bottom" @bind-Right="@right" @bind-Left="@left"></LayoutMargin>               
+        </Layout>
+        <SnapSettings></SnapSettings>
+</SfDiagramComponent>
 
 @code {
     SfDiagramComponent diagram;
@@ -337,12 +335,13 @@ The following code example illustrates how to add assistants to the layout.
     }
     private TreeInfo GetLayoutInfo(IDiagramObject obj, TreeInfo options)
     {
-          Node node = obj as Node;
-           if ((node.Data as HierarchicalDetails).Role == "General Manager")
-            {
-                options.Assistants.Add(options.Children[0]);
-                options.Children.RemoveAt(0);
-            }
+        Node node = obj as Node;
+        if ((node.Data as HierarchicalDetails).Role == "General Manager")
+        {
+            options.Assistants.Add(options.Children[0]);
+            options.Children.RemoveAt(0);
+        }
+        return options;
     }
     public List<HierarchicalDetails> DataSource = new List<HierarchicalDetails>()
     {
@@ -371,11 +370,11 @@ The following code example illustrates how to add assistants to the layout.
 
 ## How to refresh the layout
 
-Diagram allows to refresh the layout at runtime by using the [DoLayout](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DoLayout) method. Use the following code example to refresh the layout.
+Diagram allows you to refresh the layout at runtime by using the [DoLayoutAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DoLayoutAsync) method. Use the following code example to refresh the layout.
 
 ```csharp
 //Update the layout at runtime.
-diagram.DoLayout();
+diagram.DoLayoutAsync();
 
 //Here, diagram is instance of SfDiagramComponent.
 ```
@@ -386,6 +385,6 @@ diagram.DoLayout();
 
 * [How to create a connector](../connectors/connectors)
 
-* [How to create and render the Organization chart diagram by using SQL database](https://www.syncfusion.com/kb/13881/how-to-create-and-render-the-organization-chart-diagram-by-using-sql-database)
+* [How to create and render the Organization chart diagram by using SQL database](https://support.syncfusion.com/kb/article/12329/how-to-create-and-render-the-organization-chart-diagram-by-using-sql-database)
 
-* [How to create and render the Organization chart diagram by using MDF database](https://www.syncfusion.com/kb/13888/how-to-create-and-render-the-org-chart-diagram-by-using-mdf-database)
+* [How to create and render the Organization chart diagram by using MDF database](https://support.syncfusion.com/kb/article/12128/how-to-create-and-render-the-org-chart-diagram-by-using-mdf-database)

@@ -9,45 +9,36 @@ documentation: ug
 
 # How to Add Blazor Component into Existing ASP.NET Core MVC Application
 
-This section explains how to add Syncfusion Blazor component on an existing ASP.NET Core MVC application.
+This section explains how to add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component on an existing ASP.NET Core MVC application.
 
-1. Open your existing ASP.NET Core MVC application on Visual Studio 2019.
+1. Open your existing ASP.NET Core MVC application on Visual Studio 2022.
 
 2. Right-click on the project and select `Manage NuGet Package`.
 
     ![Manage NuGet package on ASP.NET Core MVC app](images/asp-mvc-manage-nuget-package.png)
 
-3. Search `Syncfusion.Blazor.Grid` and install the NuGet package.
+3. Search the `Syncfusion.Blazor.Grid` and `Syncfusion.Blazor.Themes` NuGet packages and install them.
 
     ![Installing Syncfusion Blazor Grid NuGet package](images/asp-mvc-install-nuget.png)
 
-4. Register Blazor server service and Syncfusion Blazor service in the `ConfigureServices` method on `~/Startup.cs` file.
+4. Register Blazor server service and Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the `~/Program.cs` file.
 
     ```c#
     using Syncfusion.Blazor;
+    ....
+    builder.Services.AddServerSideBlazor();
+    builder.Services.AddSyncfusionBlazor();
 
-    public void ConfigureServices(IServiceCollection services)
-    {
-        ....
-        ....
-        services.AddServerSideBlazor();
-        services.AddSyncfusionBlazor();
-    }
     ```
 
-5. Add BlazorHub endpoint in the `Configure` method on `~/Startup.cs` file.
+5. Add BlazorHub in the `~/Program.cs` file.
 
     ```c#
-    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-    {
-        app.UseEndpoints(endpoints =>
-        {
-            ....
-            ....
-            // Map Blazor SignalR hub.
-            endpoints.MapBlazorHub();
-        });
-    }
+    // Map your endpoints here...
+
+    app.MapRazorPages();
+    app.MapBlazorHub();
+    app.MapFallbackToPage("/_Host");
     ```
 
 6. Create `~/_Imports.razor` file in the root of your application and add the below namespaces.
@@ -66,13 +57,14 @@ This section explains how to add Syncfusion Blazor component on an existing ASP.
     @using Syncfusion.Blazor.Grids
     ```
 
-7. Add Blazor script references at the end of `<body>` tag and Syncfusion theme reference inside the `<head>` tag on `~/Views/Shared/_Layout.cshtml` file.
+7. Add Blazor script references at the end of `<body>` tag and Syncfusion<sup style="font-size:70%">&reg;</sup> theme and script references inside the `<head>` tag on `~/Views/Shared/_Layout.cshtml` file.
 
     ```cshtml
     <head>
         ....
         ....
         <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+        <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
     </head>
     <body>
         ....
@@ -83,7 +75,7 @@ This section explains how to add Syncfusion Blazor component on an existing ASP.
 
 8. Create a new folder `~/Components` at the root of application. Right-click on the `~/Components` folder and add a new razor component by `Add -> Razor Component`.
 
-9. Add the Syncfusion Blazor component in the created razor file.
+9. Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component in the created razor file.
 
     ```cshtml
     <SfGrid DataSource="@Orders" AllowPaging="true">
@@ -128,11 +120,11 @@ This section explains how to add Syncfusion Blazor component on an existing ASP.
     <component type="typeof(MyGrid)" render-mode="ServerPrerendered" />
     ```
 
-11. Run the application by pressing `F5` key. Now, the Syncfusion Blazor Grid component will be rendered in the ASP.NET Core MVC application.
+11. Run the application by pressing `F5` key. Now, the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid component will be rendered in the ASP.NET Core MVC application.
 
     ![Syncfusion Blazor Grid component rendered on ASP.NET Core MVC application](images/asp-mvc-grid.png)
 
 ## See Also
 
-* [Component Tag Helper in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/built-in/component-tag-helper?view=aspnetcore-5.0)
+* [Component Tag Helper in ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/built-in/component-tag-helper?view=aspnetcore-7.0)
 * [Integrating Blazor Components on Existing ASP.NET Core MVC apps](https://devblogs.microsoft.com/premier-developer/integrating-blazor-components-into-existing-asp-net-core-mvc-apps/)

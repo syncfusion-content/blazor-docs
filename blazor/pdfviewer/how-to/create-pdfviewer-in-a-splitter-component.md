@@ -9,7 +9,7 @@ documentation: ug
 
 # Create PDF Viewer in Splitter Component in Blazor PDF Viewer Component
 
-You can use Splitter to render the PDF Viewer while rendering more than one component. The following code snippet explains how to render the PDF Viewer component inside a Splitter pane. In this example, the Syncfusion’s Splitter component is used to render PDF Viewer.
+You can use Splitter to render the PDF Viewer while rendering more than one component. The following code snippet explains how to render the PDF Viewer component inside a Splitter pane. In this example, the Syncfusion&reg; Splitter component is used to render PDF Viewer.
 
 ```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
@@ -43,6 +43,6 @@ You can use Splitter to render the PDF Viewer while rendering more than one comp
 }
 ```
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Render%20the%20PDF%20Viewer%20on%20Splitter).
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-classic-examples/tree/master/Common/Render%20the%20PDF%20Viewer%20on%20Splitter).
 
 N> You can refer to our [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explains core features of PDF Viewer.

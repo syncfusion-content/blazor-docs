@@ -9,17 +9,17 @@ documentation: ug
 
 # Data Binding in Blazor Gantt Chart Component
 
-The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) uses [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html), which supports both RESTful JSON data services binding and IEnumerable binding. The `DataSource` value can be assigned either with the property values from `SfDataManager` or list of business objects.
+The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) uses [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html), which supports both RESTful JSON data services binding and IEnumerable binding. The `DataSource` value can be assigned either with the property values from `SfDataManager` or list of business objects.
 It supports the following kinds of data binding method:
 
 * List binding
 * Remote data
 
-N> When using `DataSource` as `IEnumerable<T>`, component type(TValue) will be inferred from its value. When using [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) for data binding, the **TValue** must be provided explicitly in the Gantt component.
+N> When using `DataSource` as `IEnumerable<T>`, component type(TValue) will be inferred from its value. When using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) for data binding, the **TValue** must be provided explicitly in the Gantt component.
 
 ## List binding
 
-To bind list binding to the Gantt component, you can assign a IEnumerable object to the `DataSource` property. The list data source can also be provided as an instance of the [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) or by using `SfDataManager` component.
+To bind list binding to the Gantt component, you can assign a IEnumerable object to the `DataSource` property. The list data source can also be provided as an instance of the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) or by using `SfDataManager` component.
 
 ### Hierarchical data Binding
 
@@ -44,7 +44,7 @@ public class TaskData
     public int TaskId { get; set; }
     public string TaskName { get; set; }
     public DateTime StartDate { get; set; }
-    public DateTime EndDate { get; set; }
+    public DateTime? EndDate { get; set; }
     public string Duration { get; set; }
     public int Progress { get; set; }
     public List<TaskData> SubTasks { get; set; }
@@ -67,10 +67,10 @@ N> * Indent/Outdent is not supported for Hierarchy Data.
 
 ### Self-Referential / Flat Data Binding
 
-The Gantt Chart component can be bound with self-referential data by mapping the data source field values to the `Id` and `ParentID` properties.
+The Gantt Chart component uses a self-referential data binding model to represent hierarchical tasks, in which two key fields from your data source has to be mapped to the [Id](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_Id) field and the [ParentID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_ParentID) field of [GanttTaskFields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html). Together, these two fields define the parent-child relationship between tasks.
 
-* ID field: This field contains unique values used to identify each individual task and it is mapped to the `Id` property.
-* Parent ID field: This field contains values that indicate parent tasks and it is mapped to the `ParentID` property.
+* **Id field**: A field in each data object of the data source that uniquely identifies the task. This field name is mapped to the `Id` property of `GanttTaskFields`.
+* **ParentID field**: A field in each data object of the data source that contains a value corresponding to the **Id Field** to establish a parent-child relationship between tasks. This field name is mapped to the `ParentID` property of `GanttTaskFields`.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -119,7 +119,7 @@ Gantt Chart is a generic component which is strongly bound to a model type. Ther
 
 **DynamicObject** can be bound to gantt chart by assigning to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_DataSource) property. Gantt Chart can also perform all kind of supported data operations and editing in DynamicObject.
 
-N> The [GetDynamicMemberNames](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames?view=netcore-3.1) method of DynamicObject class must be overridden and return the property names to render and perform data operations, editing etc., while using DynamicObject.
+N> The [GetDynamicMemberNames](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames?view=net-8.0) method of DynamicObject class must be overridden and return the property names to render and perform data operations, editing etc., while using DynamicObject.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -225,6 +225,7 @@ ExpandoObject can be bound to Gantt by assigning to the `DataSource` property. G
 ```cshtml
 
 @using Syncfusion.Blazor.Gantt
+@using System.Dynamic
 
 <SfGantt TValue="ExpandoObject" DataSource="@TreeData" @ref="Gantt" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" Duration="Duration"
@@ -284,16 +285,6 @@ ExpandoObject can be bound to Gantt by assigning to the `DataSource` property. G
             Data.Add(ChildRecord);
         }
     }
-    public class ExpandoObject
-    {
-        public int TaskID { get; set; }
-        public string TaskName { get; set; }
-        public DateTime? StartDate { get; set; }
-        public DateTime? EndDate { get; set; }
-        public int Progress { get; set; }
-        public string Duration { get; set; }
-        public int? ParentID { get; set; }
-    }
 }
 ```
 
@@ -317,9 +308,9 @@ checkboxState | Specifies the checkbox state of a record
 
 The Gantt chart supports to automatically update data based on `INotifyCollectionChanged` and `INotifyPropertyChanged` interface.
 
-### Observable Collection
+### Observable collection
 
-The [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-6.0) (dynamic data collection) provides notifications when items are added, removed, and moved. The implemented [INotifyCollectionChanged](https://docs.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=net-6.0) provides notification when the dynamic changes of adding, removing, moving, and clearing the collection occur.
+The [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-6.0) (dynamic data collection) provides notifications when items are added, removed, and moved. The implemented [INotifyCollectionChanged](https://learn.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=net-6.0) provides notification when the dynamic changes of adding, removing, moving, and clearing the collection occur.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -444,7 +435,7 @@ The [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/system.co
 
 ### INotifyPropertyChanged
 
-The Gantt chart provides support to update its data without any additional refresh call when changing property value of item if an item implements [INotifyPropertyChanged](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=net-6.0) interface. `INotifyPropertyChanged` interface is used to notify, that a property value has changed.
+The Gantt chart provides support to update its data without any additional refresh call when changing property value of item if an item implements [INotifyPropertyChanged](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=net-6.0) interface. `INotifyPropertyChanged` interface is used to notify, that a property value has changed.
 
 In the below example, `TaskData` implements `INotifyPropertyChanged` and it raises the event when the TaskName property value was changed. Gantt chart automatically updates its property values are changed in data object by listening to `PropertyChanged` event.
 
@@ -528,14 +519,17 @@ In the below example, `TaskData` implements `INotifyPropertyChanged` and it rais
     public class TaskData : INotifyPropertyChanged
     {
         public int TaskId { get; set; }
-        public string taskName { get; set; }
+        private string taskName { get; set; }
         public string TaskName
         {
             get { return taskName; }
             set
             {
-                taskName = value;
-                NotifyPropertyChanged("TaskName");
+                if (value != taskName)
+                {
+                    taskName = value;
+                    NotifyPropertyChanged("TaskName");
+                }
             }
         }
 
@@ -561,10 +555,10 @@ In the below example, `TaskData` implements `INotifyPropertyChanged` and it rais
 
 ## Remote Data
 
-To bind remote data to Gantt component, assign service data as an instance of [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) to the `DataSource` property or by using `SfDataManager` component. To interact with remote data source, provide the endpoint **Url**.
+To bind remote data to Gantt component, assign service data as an instance of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) to the `DataSource` property or by using `SfDataManager` component. To interact with remote data source, provide the endpoint **Url**.
 
- N> When using [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) for data binding,  the **TValue** must be provided explicitly in the Gantt component.
-<br/> By default, [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) uses **ODataAdaptor** for remote data-binding.
+ N> When using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) for data binding,  the **TValue** must be provided explicitly in the Gantt component.
+<br/> By default, [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) uses **ODataAdaptor** for remote data-binding.
 
 ### Web API
 
@@ -585,8 +579,8 @@ You can use **WebApiAdaptor** to bind datagrid with Web API created using **ODat
     {
         public int TaskId { get; set; }
         public string TaskName { get; set; }
-        public DateTime StartDate { get; set; }
-        public int Duration { get; set; }
+        public DateTime? StartDate { get; set; }
+        public int? Duration { get; set; }
         public int Progress { get; set; }
         public string Predecessor { get; set; }
         public List<GanttRemoteData>SubTasks { get; set; }
@@ -596,7 +590,171 @@ You can use **WebApiAdaptor** to bind datagrid with Web API created using **ODat
 
 ![Data Binding in Blazor Gantt Chart](images/blazor-gantt-chart-data-binding.png)
 
-### Load Child on Demand
+### Binding with OData v4 services
+
+The ODataV4 is an improved version of OData protocols, and the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) can also retrieve and consume OData v4 services. For more details on OData v4 services, refer to the [OData documentation](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197). To bind OData v4 service, use the **ODataV4Adaptor**.
+
+{% tabs %}
+
+{% highlight razor %}
+
+@using ODataAdap.Models
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor
+
+<SfGantt TValue="TaskDatum" Height="450px" Width="100%" HighlightWeekends="true" AllowFiltering="true" AllowSorting="true" Toolbar="@(new List<string>(){ "Add", "Edit", "Update", "Delete", "Cancel", "ExpandAll", "CollapseAll","Indent","Outdent"})" AllowSelection="true" GridLines="GridLine.Both"
+TreeColumnIndex="1">
+    <SfDataManager Url="odata/Gantt" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId"></GanttTaskFields>
+    <GanttEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" AllowTaskbarEditing="true" ShowDeleteConfirmDialog="true"></GanttEditSettings>
+    <GanttColumns>
+        <GanttColumn Field="TaskId" Width="100"></GanttColumn>
+        <GanttColumn Field="TaskName" HeaderText="Job Name" Width="250" ClipMode="Syncfusion.Blazor.Grids.ClipMode.EllipsisWithTooltip"></GanttColumn>
+        <GanttColumn Field="StartDate" HeaderText="Start Date"></GanttColumn>
+        <GanttColumn Field="EndDate" HeaderText="End Date"></GanttColumn>
+        <GanttColumn Field="Duration" HeaderText="Duration"></GanttColumn>
+    </GanttColumns>
+    <GanttLabelSettings LeftLabel="TaskName" TValue="TaskDatum">
+    </GanttLabelSettings>
+    <GanttSplitterSettings Position="40%"> </GanttSplitterSettings>
+</SfGantt>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="TaskDatum.cs" %}
+
+namespace ODataAdap.Models;
+
+public partial class TaskDatum
+{
+    public long Id { get; set; }
+    public int TaskId { get; set; }
+    public string? TaskName { get; set; }
+    public DateTime? StartDate { get; set; }
+    public DateTime? EndDate { get; set; }
+    public int? ParentId { get; set; }
+    public int? Progress { get; set; }
+    public int? Duration { get; set; }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="GanttController.cs" %}
+
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.OData.Deltas;
+using Microsoft.AspNetCore.OData.Formatter;
+using Microsoft.AspNetCore.OData.Query;
+using Microsoft.AspNetCore.OData.Routing.Controllers;
+using ODataAdap.Models;
+
+namespace ODataAdap.Controllers
+{
+    [Route("api/[controller]")]
+    public class GanttController : ODataController
+    {
+        private OdataContext _db;
+        public GanttController(OdataContext context)
+        {
+            _db = context;
+        }
+        [HttpGet]
+        [EnableQuery]
+        public IActionResult Get()
+        {
+            return Ok(_db.TaskData);
+        }
+        [EnableQuery]
+        public async Task<IActionResult> Post([FromBody] TaskDatum data)
+        {
+            _db.TaskData.Add(data);
+            _db.SaveChanges();
+            return Created(data);
+        }
+        [EnableQuery]
+        public async Task<IActionResult> Patch([FromODataUri] long key, [FromBody] Delta<TaskDatum> data)
+        {
+            var entity = await _db.TaskData.FindAsync(key);
+            data.Patch(entity);
+            await _db.SaveChangesAsync();
+            return Updated(entity);
+        }
+        [EnableQuery]
+        public long Delete([FromODataUri] long key)
+        {
+            var deleterow = _db.TaskData.Find(key);
+            _db.TaskData.Remove(deleterow);
+            _db.SaveChanges();
+            return key;
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="Program.cs" %}
+
+using Microsoft.AspNetCore.OData;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.OData.Edm;
+using Microsoft.OData.ModelBuilder;
+using ODataAdap.Data;
+using ODataAdap.Models;
+using Syncfusion.Blazor;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+static IEdmModel GetEdmModel()
+{
+    ODataConventionModelBuilder builder = new ODataConventionModelBuilder();
+    var datas = builder.EntitySet<TaskDatum>("Gantt");
+    FunctionConfiguration myFirstFunction = datas.EntityType.Collection.Function("MyFirstFunction");
+    myFirstFunction.ReturnsCollectionFromEntitySet<TaskDatum>("Gantt");
+    return builder.GetEdmModel();
+}
+builder.Services.AddMvc(options => options.EnableEndpointRouting = false);
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
+builder.Services.AddSyncfusionBlazor();
+
+builder.Services.AddDbContext<OdataContext>(option =>
+                option.UseSqlServer(builder.Configuration.GetConnectionString("GanttDatabase")));
+
+builder.Services.AddControllers().AddOData(opt => opt.AddRouteComponents("odata", GetEdmModel()).Count().Filter().OrderBy().Expand().Select().SetMaxTop(null));
+builder.Services.AddControllersWithViews();
+builder.Services.AddEndpointsApiExplorer();
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Error");
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseHsts();
+}
+
+app.UseHttpsRedirection();
+
+app.UseStaticFiles();
+
+app.UseRouting();
+app.MapControllers();
+app.UseMvcWithDefaultRoute();
+app.MapBlazorHub();
+app.MapFallbackToPage("/_Host");
+
+app.Run();
+
+{% endhighlight %}
+
+{% endtabs %}
+
+N>You can find the sample for load on demand [here](https://github.com/SyncfusionExamples/BlazorGantt-OData-Adaptor-sample).
+
+### Load child on demand
 
 To render child records on demand, assign a remote service URL in the instance of **SfDataManager** to the **Url** property. To interact with the remote data source,  provide the endpoint **URL** and also define the [GanttTaskFields.HasChildMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttTaskFields.html#Syncfusion_Blazor_Gantt_GanttTaskFields_HasChildMapping) property of Gantt Chart.
 

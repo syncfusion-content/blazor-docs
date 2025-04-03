@@ -16,7 +16,7 @@ documentation: ug
 Using [`InsertCommentAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_InsertCommentAsync_System_String_) method, comments can be inserted to the selected text.
 
 ```csharp
-container.DocumentEditor.Editor.InsertCommentAsync("Test comment");
+await container.DocumentEditor.Editor.InsertCommentAsync("Test comment");
 ```
 
 ## Comment navigation
@@ -25,10 +25,10 @@ Next and previous comments can be navigated using the below code snippet.
 
 ```csharp
 //Navigate to next comment
-container.DocumentEditor.Selection.NavigateNextCommentAsync();
+await container.DocumentEditor.Selection.NavigateNextCommentAsync();
 
 //Navigate to previous comment
-container.DocumentEditor.Selection.NavigatePreviousCommentAsync();
+await container.DocumentEditor.Selection.NavigatePreviousCommentAsync();
 ```
 
 ## Delete comment
@@ -36,7 +36,7 @@ container.DocumentEditor.Selection.NavigatePreviousCommentAsync();
 You can delete current comment in the document using [`DeleteCommentsAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_DeleteCommentAsync) method as shown in the following code snippet.
 
 ```csharp
-container.DocumentEditor.Editor.DeleteCommentAsync();
+await container.DocumentEditor.Editor.DeleteCommentAsync();
 ```
 
 ## Delete all comment
@@ -44,7 +44,7 @@ container.DocumentEditor.Editor.DeleteCommentAsync();
 You can delete all the comments in the document using [`DeleteAllCommentsAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_DeleteAllCommentsAsync) method as shown in the following code snippet.
 
 ```csharp
-container.DocumentEditor.Editor.DeleteAllCommentsAsync();
+await container.DocumentEditor.Editor.DeleteAllCommentsAsync();
 ```
 
 ## Protect the document in comments only mode
@@ -63,12 +63,12 @@ The following example code illustrates how to enforce and stop protection in Doc
 
 @code {
     SfDocumentEditorContainer container;
-    protected void protectDocument(object args)
+    protected async void protectDocument(object args)
     {
         //enforce protection
-        container.DocumentEditor.Editor.EnforceProtectionAsync("123", ProtectionType.CommentsOnly);
+        await container.DocumentEditor.Editor.EnforceProtectionAsync("123", ProtectionType.CommentsOnly);
         //stop the document protection
-        container.DocumentEditor.Editor.StopProtectionAsync("123");
+        await container.DocumentEditor.Editor.StopProtectionAsync("123");
     }
 }
 ```

@@ -1,0 +1,8 @@
+@using Syncfusion.Blazor.DropDowns;
+
+<SfAutoComplete TValue="string" TItem="string" ShowClearButton=false Width="300px" DataSource="@data">
+</SfAutoComplete>
+
+@code {
+    public string[] data = { "Badminton", "Basketball", "Cricket", "Football", "Golf", "Hockey" };
+}

@@ -13,7 +13,7 @@ Connectors are objects used to create link between two points, nodes or ports to
 
 ## Create connector
 
-Connector can be created by defining the source and target point of the connector. The path to be drawn can be defined with a collection of segments.
+Connector can be created by defining the source and target points of the connector. The path to be drawn can be defined with a collection of segments.
 
 To create and customize the connectors easily in the Blazor Diagram component, refer to the below video link.
 
@@ -23,7 +23,7 @@ To create and customize the connectors easily in the Blazor Diagram component, r
 
 The [SourcePoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_SourcePoint) and [TargetPoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_TargetPoint) properties of connector allow you to define the endpoints of a connector.
 
-The following code example illustrates how to add a connector through connector collection,
+The following code example illustrates how to add a connector through the connector collection,
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -53,12 +53,13 @@ The following code example illustrates how to add a connector through connector 
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/ActionofConnectors)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/ActionofConnectors/AddConnectorThroughConnectorCollection)
 
 ![Blazor Diagram Connector](../images/blazor-diagram-connector.png)
 
-N> [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_ID) for each connector should be unique and so it is further used to find the connector at runtime and do any customization.
->**Note:** Do not use underscore(_) for connector's id.
+>**Note:** 
+> * [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_ID) for each connector should be unique and so it is further used to find the connector at runtime and perform any customization. 
+> * Connectors' Id should not start with numbers or special characters and should not contain special characters such as underscores(_) or spaces.
 
 ## How to add connectors at runtime
 
@@ -66,8 +67,10 @@ You can add a connector at runtime by adding connector to the connectors collect
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" value="Add Connector" @onclick="@AddConnector">
+
+<SfButton Content="Add Connector" OnClick="@AddConnector" />
 <SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors"></SfDiagramComponent>
 
 @code
@@ -102,15 +105,17 @@ You can add a connector at runtime by adding connector to the connectors collect
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/ActionofConnectors)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/ActionofConnectors/AddConnectorAtRuntime)
 ### How to clone the connector at runtime
-[Clone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_Clone) is a virtual method of the connector that is used to create a copy of a diagram object. After cloning, we need to set the ID for cloned connectors. The following code demonstrates how to clone the connector during runtime.
+[Clone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_Clone) is a virtual method of the connector that is used to create a copy of a diagram object. After cloning, we need to set the ID for the cloned connectors. The following code demonstrates how to clone the connector during runtime.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
+@using Syncfusion.Blazor.Buttons
 @inject IJSRuntime js
-<input type="button" id="add" value="Clone Connector" @onclick="@CloneConnector" />
+
+<SfButton Content="Clone Connector" OnClick="@CloneConnector" />
 <SfDiagramComponent @ref="diagram" Width="50%" Height="500px" @bind-Connectors="@Connectors"></SfDiagramComponent>
 
 @functions
@@ -129,7 +134,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
         connector.ID = RandomId();
         connector.SourcePoint = new DiagramPoint { X = 100, Y = 100 };
         connector.TargetPoint = new DiagramPoint { X = 200, Y = 100 };
-        await diagram.AddDiagramElements(new DiagramObjectCollection<NodeBase>() { connector });
+        await diagram.AddDiagramElementsAsync(new DiagramObjectCollection<NodeBase>() { connector });
 
     }
     internal string RandomId()
@@ -144,18 +149,19 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/ActionofConnectors)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/CloneConnector)
 ![Clonning Node](../images/CloneConnector.gif)
 ## How to add connector with annotations at runtime
 
-You can add connector with annotation at runtime in the diagram component by using the [AddDiagramElements](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_AddDiagramElements_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) method.
+You can add a connector with annotation at runtime in the diagram component by using the [AddDiagramElementsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_AddDiagramElementsAsync_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) method.
 
-The following code explains how to add an connector with annotation  at runtime by using `AddDiagramElements` method.
+The following code explains how to add a connector with annotation  at runtime by using the `AddDiagramElementsAsync` method.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" value="Add Connector" @onclick="@AddConnector">
+<SfButton Content="Add Connector" OnClick="@AddConnector" />
 <SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors"></SfDiagramComponent>
 
 @code
@@ -178,7 +184,7 @@ The following code explains how to add an connector with annotation  at runtime 
         connectors.Add(Connector);
     }
 
-    public void AddConnector()
+    public async void AddConnector()
     {
         Connector NewConnector = new Connector()
         { 
@@ -195,7 +201,7 @@ The following code explains how to add an connector with annotation  at runtime 
             },
         };
         NodeCollection.Add(NewConnector);
-       await Diagram.AddDiagramElements(NodeCollection);
+       await Diagram.AddDiagramElementsAsync(NodeCollection);
     }
 }
 ```
@@ -278,13 +284,13 @@ Connectors can be predefined and added to the symbol palette. You can drop those
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/ActionofConnectors)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/ActionofConnectors/ConnectorFromPalette)
 
 ![Connector from Palette in Blazor Diagram](../images/blazor-diagram-connector-from-palette.gif)
 
 ## How to draw connectors using drawing object
 
-Connectors can be interactively drawn by clicking and dragging on the diagram surface by using [DrawingObject](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DrawingObject).
+Connectors can be interactively drawn by clicking and dragging on the diagram surface by using the [DrawingObject](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DrawingObject).
 
 ![Drawing Connector in Blazor Diagram](../images/blazor-diagram-draw-connector.gif)
 
@@ -296,47 +302,46 @@ The following code shows how to remove a connector at runtime.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" value="Remove Connector" @onclick="@RemoveConnector">
+
+<SfButton Content="Remove Connector" OnClick="@RemoveConnector" />
 <SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors">
     <SnapSettings Constraints="@snapConstraints"></SnapSettings>
 </SfDiagramComponent>
-
-@code 
-{
+@code {
+    //Defines snap consttraints
     SnapConstraints snapConstraints = SnapConstraints.None;
-    //Defines diagram's connector collection.
+    //Defines diagram's connector collection
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
-
     protected override void OnInitialized()
     {
         Connector Connector = new Connector()
-        {
-            ID = "connector1",
-            // Set the source and target point of the connector.
-            SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
-            TargetPoint = new DiagramPoint() { X = 200, Y = 200 },
-            TargetDecorator = new DecoratorSettings()
             {
-                Shape = DecoratorShape.Arrow,
-                // Style of the connector segment.
-                Style = new ShapeStyle() { Fill = "#6f409f", StrokeColor = "#6f409f", StrokeWidth = 1 }
-            },
-            Style = new ShapeStyle() { StrokeColor = "#6f409f", StrokeWidth = 1 },
-            // Type of the connector.
-            Type = ConnectorSegmentType.Straight,
-        };
+                ID = "connector1",
+                // Set the source and target point of the connector
+                SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
+                TargetPoint = new DiagramPoint() { X = 200, Y = 200 },
+                TargetDecorator = new DecoratorSettings()
+                {
+                    Shape = DecoratorShape.Arrow,
+                    // Style of the connector segment
+                    Style = new ShapeStyle() { Fill = "#6f409f", StrokeColor = "#6f409f", StrokeWidth = 1 }
+                },
+                Style = new ShapeStyle() { StrokeColor = "#6f409f", StrokeWidth = 1 },
+                // Type of the connector
+                Type = ConnectorSegmentType.Straight,
+            };
         connectors.Add(Connector);
     }
-
     public void RemoveConnector()
     {
-        // Remove Node at runtime.
+        // Remove connector at runtime
         connectors.Remove(connectors[0]);
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/ActionofConnectors)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/ActionofConnectors/RemoveConnectorsAtRunTime)
 
 A connector can be removed from the diagram by using the native `RemoveAt` method. Refer to the following example that shows how to remove the connector at runtime.
 
@@ -355,50 +360,51 @@ The following code example explains how to change the connector properties.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" value="Update Connector" @onclick="@UpdateConnector">
+
+<SfButton Content="Update Connector" OnClick="@UpdateConnector" />
 <SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px" Connectors="@connectors">
     <SnapSettings Constraints="@snapConstraints"></SnapSettings>
 </SfDiagramComponent>
-
-@code
-{
+@code {
+    //Reference the diagram
     SfDiagramComponent Diagram;
+    //Defines the snap constraints
     SnapConstraints snapConstraints = SnapConstraints.None;
-    //Defines diagram's connector collection.
+    //Defines diagram's connector collection
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
-
     protected override void OnInitialized()
     {
         Connector Connector = new Connector()
-        {
-            ID = "connector1",
-            SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
-            TargetPoint = new DiagramPoint() { X = 200, Y = 200 },
-            TargetDecorator = new DecoratorSettings() { Shape = DecoratorShape.Arrow, Style = new ShapeStyle() { Fill = "#6f409f", StrokeColor = "#6f409f", StrokeWidth = 1 } },
-            Style = new ShapeStyle() { StrokeColor = "#6f409f", StrokeWidth = 1 },
-            // Type of the connector.
-            Type = ConnectorSegmentType.Straight,
-        };
+            {
+                ID = "connector1",
+                SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
+                TargetPoint = new DiagramPoint() { X = 200, Y = 200 },
+                TargetDecorator = new DecoratorSettings() { Shape = DecoratorShape.Arrow, Style = new ShapeStyle() { Fill = "#6f409f", StrokeColor = "#6f409f", StrokeWidth = 1 } },
+                Style = new ShapeStyle() { StrokeColor = "#6f409f", StrokeWidth = 1 },
+                // Type of the connector
+                Type = ConnectorSegmentType.Straight,
+            };
         connectors.Add(Connector);
     }
-
+    //Method to update connector at runtime.
     public void UpdateConnector()
     {
         Diagram.BeginUpdate();
         Diagram.Connectors[0].SourcePoint.X = 50;
         Diagram.Connectors[0].SourcePoint.Y = 50;
-        Diagram.EndUpdate();
+        Diagram.EndUpdateAsync();
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/ActionofConnectors)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/ActionofConnectors/UpdateConnectorAtRunTime)
 
-N> BeginUpdate and EndUpdate methods allow you to stop the continuous update of control and resume it finally.
+N> BeginUpdate and EndUpdateAsync methods allow you to temporarily stop the continuous update of the control and resume it once the updates are complete.
 
 ## Connections
 
-A connectors are used to create a link between two points, nodes or ports to represent the relationships between them.
+Connectors are used to create a link between two points, nodes or ports to represent the relationships between them.
 
 ### Connections with nodes
 
@@ -470,13 +476,13 @@ The following code example illustrates how to connect two nodes.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/ActionofConnectors)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/ActionofConnectors/ConnectWithNode)
 
 ![Displaying Connection between Nodes in Blazor Diagram](../images/blazor-diagram-node-to-node-connection.png)
 
 * When you remove [NodeConstraints.InConnect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_InConnect) from Default, the node accepts only an outgoing connection to dock in it. Similarly, when you remove [NodeConstraints.OutConnect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_OutConnect) from Default, the node accepts only an incoming connection to dock in it.
 
-* When you remove both InConnect and OutConnect [NodeConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html) from [Default](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_Default), the node restricts connector to establish connection in it.
+* When you remove both InConnect and OutConnect [NodeConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html) from [Default](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_Default), the node restricts connectors from establishing a connection to it.
 
 ### Connections with ports
 
@@ -574,12 +580,12 @@ The following code example illustrates how to create port to port connections.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/ActionofConnectors)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/ActionofConnectors/ConnectWithPort)
 
 ![Connection between Ports in Blazor Diagram](../images/blazor-diagram-port-to-port-connection.png)
 
 * When you set [PortConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html) to [InConnect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html#Syncfusion_Blazor_Diagram_PortConstraints_InConnect), the port accepts only an incoming connection to dock in it. Similarly, when you set PortConstraints to [OutConnect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html#Syncfusion_Blazor_Diagram_PortConstraints_OutConnect), the port accepts only an outgoing connection to dock in it.
-* When you set PortConstraints to [None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html#Syncfusion_Blazor_Diagram_PortConstraints_None), the port restricts connector to establish connection in it.
+* When you set PortConstraints to [None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html#Syncfusion_Blazor_Diagram_PortConstraints_None), the port restricts connectors from establishing a connection to it.
 
 ## See also
 

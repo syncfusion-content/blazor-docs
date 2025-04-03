@@ -107,7 +107,7 @@ Stock chart is shipped with several built-in themes such as `Material`, `Fabric`
 
 @using Syncfusion.Blazor.Charts
 
-<SfStockChart Title="AAPL Stock Price" Theme="Theme.HighContrast">
+<SfStockChart Title="AAPL Stock Price" Theme="Theme.Fluent2">
     <StockChartSeriesCollection>
         <StockChartSeries DataSource="@DataSource" Type="ChartSeriesType.Line" XName="XValue" YName="YValue"></StockChartSeries>
     </StockChartSeriesCollection>
@@ -143,4 +143,4 @@ Stock chart is shipped with several built-in themes such as `Material`, `Fabric`
 
 ## See Also
 
-* [Axis Customization](./axis-customization/)
+* [Axis Customization](./axis-customization)

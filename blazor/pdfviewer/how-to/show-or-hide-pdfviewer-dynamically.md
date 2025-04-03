@@ -77,4 +77,4 @@ In the below code, the PDF Viewer is hidden at page load. Then, on clicking a bu
 }
 ```
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Render%20the%20PDF%20Viewer%20on%20a%20button%20click).
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-classic-examples/tree/master/Common/Render%20the%20PDF%20Viewer%20on%20a%20button%20click).

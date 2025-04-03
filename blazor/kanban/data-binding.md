@@ -116,7 +116,7 @@ To get start quickly with Blazor Kanban component using ExpandoObject and Dynami
 
 DynamicObject can be bound to Kanban by assigning DynamicObject to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_DataSource) property. Kanban can also perform all kinds of supported data operations and editing in DynamicObject.
 
-N> The [GetDynamicMemberNames](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames?view=netcore-3.1) method of DynamicObject class must be overridden and return the property names to perform data operations and editing while using DynamicObject.
+N> The [GetDynamicMemberNames](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames?view=net-8.0) method of DynamicObject class must be overridden and return the property names to perform data operations and editing while using DynamicObject.
 
 ```cshtml
 @using Syncfusion.Blazor.Kanban
@@ -287,7 +287,7 @@ You can use WebApiAdaptor to bind Kanban with Web API created using OData endpoi
 @using Syncfusion.Blazor.Kanban
 
 <SfKanban TValue="TasksModel" KeyField="Status" AllowDragAndDrop="false">
-    <SfDataManager Url="https://ej2services.syncfusion.com/production/web-services/api/Kanban" Adaptor="@Syncfusion.Blazor.Adaptors.WebApiAdaptor"></SfDataManager>
+    <SfDataManager Url="https://blazor.syncfusion.com/services/production/api/Kanban" Adaptor="@Syncfusion.Blazor.Adaptors.WebApiAdaptor"></SfDataManager>
     <KanbanColumns>
         @foreach (ColumnModel item in columnData)
         {
@@ -331,7 +331,7 @@ The following sample code demonstrates enabling data manager condition in the Ka
 <SfKanban TValue="TasksModel" KeyField="Status" AllowDragAndDrop="false">
     @if (IsInitialRender)
     {
-        <SfDataManager Url="https://ej2services.syncfusion.com/production/web-services/api/Kanban" Adaptor="@Syncfusion.Blazor.Adaptors.WebApiAdaptor"></SfDataManager>
+        <SfDataManager Url="https://blazor.syncfusion.com/services/production/api/Kanban" Adaptor="@Syncfusion.Blazor.Adaptors.WebApiAdaptor"></SfDataManager>
     }
     <KanbanColumns>
         @foreach (ColumnModel item in columnData)
@@ -386,7 +386,7 @@ The following sample code demonstrates sending additional parameters using the Q
 @using Syncfusion.Blazor.Kanban
 
 <SfKanban TValue="TasksModel" KeyField="Status" AllowDragAndDrop="false" Query=@KanbanQuery>
-    <SfDataManager Url="https://ej2services.syncfusion.com/production/web-services/api/Kanban" Adaptor="@Syncfusion.Blazor.Adaptors.WebApiAdaptor"></SfDataManager>
+    <SfDataManager Url="https://blazor.syncfusion.com/services/production/api/Kanban" Adaptor="@Syncfusion.Blazor.Adaptors.WebApiAdaptor"></SfDataManager>
     <KanbanColumns>
         @foreach (ColumnModel item in columnData)
         {

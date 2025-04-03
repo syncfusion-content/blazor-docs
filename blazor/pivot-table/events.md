@@ -11,7 +11,7 @@ documentation: ug
 
 ## AggregateMenuOpen
 
-To know more about this event, refer [here](./grouping-bar/#aggregatemenuopen).
+To know more about this event, refer [here](./grouping-bar#aggregatemenuopen).
 
 ## BeforeColumnsRender
 
@@ -65,7 +65,7 @@ The event [BeforeColumnsRender](https://help.syncfusion.com/cr/blazor/Syncfusion
 
 ## BeforeExport
 
-To know more about this event, refer [here](./tool-bar/#beforeexport).
+To know more about this event, refer [here](./tool-bar#beforeexport).
 
 ## BeginDrillThrough
 
@@ -114,11 +114,11 @@ N> In this event, the parameter [GridObj](https://help.syncfusion.com/cr/blazor/
 
 ## CalculatedFieldCreate
 
-To know more about this event, refer [here](./calculated-field/#calculatedfieldcreate).
+To know more about this event, refer [here](./calculated-field#calculatedfieldcreate).
 
 ## CellClick
 
-The event [CellClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_CellClick) is triggered whenever a cell is clicked in the Pivot Table component. It has following parameters - [CurrentCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.CellClickEventArgs.html#Syncfusion_Blazor_PivotView_CellClickEventArgs_CurrentCell) and [Data](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.CellClickEventArgs.html#Syncfusion_Blazor_PivotView_CellClickEventArgs_Data). For instance, using this event end user can either add or remove CSS class name from the respective cell and also perform many other DOM manipulations.
+The [CellClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_CellClick) event is triggered whenever a cell in the Pivot Table component is clicked. This event has an argument named [Data](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.CellClickEventArgs.html#Syncfusion_Blazor_PivotView_CellClickEventArgs_Data). Using this event, end users may customize the information in the selected cell to their specific requirements.
 
 ```cshtml
 
@@ -142,6 +142,14 @@ The event [CellClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Pi
     <PivotViewEvents TValue="ProductDetails" CellClick="cellClick"></PivotViewEvents>
 </SfPivotView>
 
+<style>
+    .e-pivotview .e-custom {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 12px !important;
+        background: pink !important;
+    }
+</style>
+
 @code{
     public List<ProductDetails> data { get; set; }
     protected override void OnInitialized()
@@ -151,7 +159,12 @@ The event [CellClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Pi
     }
     private void cellClick(CellClickEventArgs args)
     {
-        args.CurrentCell.AddClass(new string[] { "e-test" });
+        // Here, we check that the selected cell belongs to the "France" row, and the "FY 2015" column, and that its value is "450".
+        if (args.Data.RowHeaders == "France" && args.Data.ColumnHeaders == "FY 2015" && args.Data.FormattedText == "450")
+        {
+            // If it does, we apply custom styles to the selected cell
+            args.Data.CssClass = "e-custom";
+        }
     }
 }
 
@@ -159,7 +172,7 @@ The event [CellClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Pi
 
 ## CellSelected
 
-To know more about this event, refer [here](./row-and-column/#event).
+To know more about this event, refer [here](./row-and-column#event).
 
 ## CellSelecting
 
@@ -417,6 +430,10 @@ The event [DrillThrough](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ```
 
+## EditCompleted
+
+To know more about this event, refer [here](./editing#editcompleted).
+
 ## EnginePopulating
 
 The [EnginePopulating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_EnginePopulating) event is available in both Pivot Table and Field List.
@@ -466,15 +483,15 @@ This event will be triggered before engine framing works gets initiated and allo
 
 ## EnginePopulated
 
-The [EnginePopulated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFieldListEvents-1.html#Syncfusion_Blazor_PivotView_PivotFieldListEvents_1_EnginePopulated) event is available in both Pivot Table and Field List. To know more about this event, refer [here](./field-list/#enginepopulated).
+The [EnginePopulated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFieldListEvents-1.html#Syncfusion_Blazor_PivotView_PivotFieldListEvents_1_EnginePopulated) event is available in both Pivot Table and Field List. To know more about this event, refer [here](./field-list#enginepopulated).
 
 ## ExcelHeaderQueryCellInfo
 
-To know more about this event, refer [here](./excel-export/#excelheaderquerycellinfo).
+To know more about this event, refer [here](./excel-export#excelheaderquerycellinfo).
 
 ## ExcelQueryCellInfo
 
-To know more about this event, refer [here](./excel-export/#excelquerycellinfo).
+To know more about this event, refer [here](./excel-export#excelquerycellinfo).
 
 ## ExportCompleted 
 
@@ -536,85 +553,85 @@ The event [`ExportCompleted`](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
 ## FetchReport
 
-To know more about this event, refer [here](./tool-bar/#fetchreport).
+To know more about this event, refer [here](./tool-bar#fetchreport).
 
 ## FieldListRefreshed
 
-To know more about this event, refer [here](./field-list/#fieldlistrefreshed).
+To know more about this event, refer [here](./field-list#fieldlistrefreshed).
 
 ## FieldDragStart
 
-To know more about this event, refer [here](./grouping-bar/#fielddragstart).
+To know more about this event, refer [here](./grouping-bar#fielddragstart).
 
 ## FieldDrop
 
-To know more about this event, refer [here](./grouping-bar/#fielddrop).
+To know more about this event, refer [here](./grouping-bar#fielddrop).
 
 ## FieldDropped
 
 The [FieldDropped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFieldListEvents-1.html#Syncfusion_Blazor_PivotView_PivotFieldListEvents_1_FieldDropped) event is available in both Grouping Bar and Field List.
 
-To know more about this event with respect to field list operation, refer [here](./field-list/#fielddropped).
+To know more about this event with respect to field list operation, refer [here](./field-list#fielddropped).
 
-To know more about this event with respect to grouping bar operation, refer [here](./grouping-bar/#fielddropped).
+To know more about this event with respect to grouping bar operation, refer [here](./grouping-bar#fielddropped).
 
 ## FieldRemove
 
-To know more about this event, refer [here](./grouping-bar/#fieldremove).
+To know more about this event, refer [here](./grouping-bar#fieldremove).
 
 ## HyperlinkCellClicked
 
-To know more about this event, refer [here](./hyper-link/#event).
+To know more about this event, refer [here](./hyper-link#event).
 
 ## LoadReport
 
-To know more about this event, refer [here](./tool-bar/#loadreport).
+To know more about this event, refer [here](./tool-bar#loadreport).
 
 ## MemberEditorOpen
 
-To know more about this event, refer [here](./filtering/#membereditoropen).
+To know more about this event, refer [here](./filtering#membereditoropen).
 
 ## NewReport
 
-To know more about this event, refer [here](./tool-bar/#newreport).
+To know more about this event, refer [here](./tool-bar#newreport).
 
 ## OnActionBegin
 
-To know more about this event, refer [here](./tool-bar/#onactionbegin).
+To know more about this event, refer [here](./tool-bar#onactionbegin).
 
 ## OnActionComplete
 
-To know more about this event, refer [here](./tool-bar/#onactioncomplete).
+To know more about this event, refer [here](./tool-bar#onactioncomplete).
 
 ## OnActionFailure
 
-To know more about this event, refer [here](./tool-bar/#onactionfailure).
+To know more about this event, refer [here](./tool-bar#onactionfailure).
 
 ## OnLoad
 
 The [OnLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewEvents-1.html#Syncfusion_Blazor_PivotView_PivotViewEvents_1_OnLoad) event is available in both Pivot Table and Field List.
 
-To know more about this event, refer [here](./data-binding/#event).
+To know more about this event, refer [here](./data-binding#event).
 
 ## PdfHeaderQueryCellInfo
 
-To know more about this event, refer [here](./pdf-export/#pdfheaderquerycellinfo).
+To know more about this event, refer [here](./pdf-export#pdfheaderquerycellinfo).
 
 ## PdfQueryCellInfo
 
-To know more about this event, refer [here](./pdf-export/#pdfquerycellinfo).
+To know more about this event, refer [here](./pdf-export#pdfquerycellinfo).
 
 ## RenameReport
 
-To know more about this event, refer [here](./tool-bar/#renamereport).
+To know more about this event, refer [here](./tool-bar#renamereport).
 
 ## RemoveReport
 
-To know more about this event, refer [here](./tool-bar/#removereport).
+To know more about this event, refer [here](./tool-bar#removereport).
 
 ## SaveReport
 
-To know more about this event, refer [here](./tool-bar/#savereport).
+To know more about this event, refer [here](./tool-bar#savereport).
 
 ## ToolbarRendered
 
@@ -686,4 +703,4 @@ The event [ToolbarRendered](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 ```
 
-N> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the pivot table.
+N> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap5) to know how to render and configure the pivot table.

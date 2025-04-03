@@ -1,0 +1,34 @@
+@using Syncfusion.Blazor.DataForm
+@using System.ComponentModel.DataAnnotations
+
+
+<SfDataForm ID="MyForm"
+            Model="@EditorTypeModel"
+            Width="50%"
+            AutoComplete="on">
+
+    <FormValidator>
+        <DataAnnotationsValidator></DataAnnotationsValidator>
+    </FormValidator>
+
+    <FormItems>
+        <FormItem Field="@nameof(EditorTypeModel.NumericTextBoxField)" ID="numeric-textbox" Placeholder="Enter the value" LabelText="Numeric TextBox Editor"></FormItem>
+        <FormItem Field="@nameof(EditorTypeModel.TextBoxField)" ID="textbox" Placeholder="Enter the value" LabelText="TextBox Editor"></FormItem>
+        <FormItem Field="@nameof(EditorTypeModel.DisabledTextBoxField)" ID="diabled" IsEnabled="false" Placeholder="Enter the value" LabelText="TextBox Editor"></FormItem>
+        <FormItem Field="@nameof(EditorTypeModel.TextAreaField)" CssClass="e-warning" LabelText="TextArea Editor" Placeholder="Enter the value" EditorType="FormEditorType.TextArea"></FormItem>
+        <FormItem Field="@nameof(EditorTypeModel.DropDownListField)" LabelText="DropDownList Editor" CssClass="e-warning" Placeholder="Select the value" EditorType="FormEditorType.DropDownList"></FormItem>
+        <FormItem Field="@nameof(EditorTypeModel.AutoCompleteField)" LabelText="AutoComplete Editor" Placeholder="Select the value" EditorType="FormEditorType.AutoComplete"></FormItem>
+        <FormItem Field="@nameof(EditorTypeModel.ComboBoxField)" LabelText="ComboBox Editor" Placeholder="Select the value" EditorType="FormEditorType.ComboBox"></FormItem>
+        <FormItem Field="@nameof(EditorTypeModel.PasswordField)" LabelText="Password Editor" Placeholder="Enter the value" EditorType="FormEditorType.Password"></FormItem>
+        <FormItem Field="@nameof(EditorTypeModel.DateTimePickerField)" LabelText="DateTimePicker Editor" Placeholder="Enter the value" EditorType="FormEditorType.DateTimePicker"></FormItem>
+        <FormItem Field="@nameof(EditorTypeModel.DatePickerField)" LabelText="DatePicker Editor" Placeholder="Enter the value" EditorType="FormEditorType.DatePicker"></FormItem>
+        <FormItem Field="@nameof(EditorTypeModel.TimePickerField)" LabelText="TimePicker Editor" Placeholder="Enter the value" EditorType="FormEditorType.TimePicker"></FormItem>
+        <FormItem Field="@nameof(EditorTypeModel.CheckBoxField)" LabelText="Checkbox Editor"></FormItem>
+        <FormItem Field="@nameof(EditorTypeModel.SwitchField)" LabelText="Switch Editor" EditorType="FormEditorType.Switch"></FormItem>
+    </FormItems>
+</SfDataForm>
+
+
+@code {
+    private EditorTypes EditorTypeModel = new EditorTypes();
+}

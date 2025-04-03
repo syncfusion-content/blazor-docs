@@ -9,7 +9,7 @@ documentation: ug
 
 # Update form field using context menu in Blazor PDF Viewer Component
 
-You can update the form field's at runtime using the FormFieldClick event and UpdateFormFieldsAsync() method of PDF Viewer. The following code example explains how to open Context menu when you click on the form field and how to update the menu item content as form field's value. In this example, the Syncfusion’s ContextMenu component is used to update form field.
+You can update the form field's at runtime using the FormFieldClick event and UpdateFormFieldsAsync() method of PDF Viewer. The following code example explains how to open Context menu when you click on the form field and how to update the menu item content as form field's value. In this example, the Syncfusion&reg; ContextMenu component is used to update form field.
 
 
 ```cshtml
@@ -98,6 +98,6 @@ You can update the form field's at runtime using the FormFieldClick event and Up
 }
 ```
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Common/Update%20form%20fileds%20using%20Context%20Menu).
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-classic-examples/tree/master/Common/Update%20form%20fileds%20using%20Context%20Menu).
 
 N> You can refer to our [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explains core features of PDF Viewer.

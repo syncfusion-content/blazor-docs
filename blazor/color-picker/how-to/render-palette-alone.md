@@ -19,6 +19,7 @@ In the following sample, the [ShowButtons](https://help.syncfusion.com/cr/blazor
 <h4>Choose a color</h4>
 <SfColorPicker Mode="ColorPickerMode.Palette" ModeSwitcher="false" ShowButtons="false"></SfColorPicker>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLKiLLGUoxTFJzx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Rendering Palette Alone in Blazor ColorPicker](./../images/blazor-colorpicker-with-palette-alone.png)
 

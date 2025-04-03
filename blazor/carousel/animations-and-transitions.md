@@ -63,6 +63,7 @@ The following demo depicts the example for `Fade` animation,
 
 </style>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrUMrhrhmDEXNND?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Carousel fade animation](images/fade_animation.gif)
 
@@ -155,6 +156,7 @@ The following demo depicts the example for `parallax` custom animation
 
 </style>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjhgWrBrLGWiDURZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Carousel custom animation](images/custom_animation.gif)
 
@@ -202,8 +204,9 @@ Using the items property, you can set different intervals for each item to trans
     }
 </style>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZBAshBVVwCUQGvt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
-**Note**: Interval property can accept value in terms of milliseconds.
+N> Interval property can accept value in terms of milliseconds.
 
 ## Auto play slides
 
@@ -249,6 +252,7 @@ In the carousel, all slides transitions are performed continuously after the spe
     }
 </style>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZrAihLBhwCyYryK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Pause on hover
 
@@ -296,6 +300,7 @@ The following example depicts the code to play the slides when hovering the mous
     }
 </style>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXrKWLLhhGsvUQay?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Looping slides
 
@@ -341,6 +346,7 @@ In the carousel, slides transitions are repeated continuously when you reach the
     }
 </style>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXrgiVVhrwLArCWL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Carousel Looping Slides](images/looping_slides.png)
 
@@ -397,6 +403,7 @@ The following demo depicts the example for carousel events,
     }
 </style>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtLKCrLrrQLIIQtX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Disable touch swiping
 
@@ -442,3 +449,66 @@ In the carousel, you can able to perform swipe the carousel slides using touch a
     }
 </style>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNBUMrhBVGVwHmZw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Swipe modes
+
+In the carousel, the [`SwipeMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_SwipeMode) property allows specifying whether the slide transition should occur while performing swiping via touch or mouse. The slide swiping is enabled or disabled using the bitwise operator.
+
+The following are the different swipe modes available in the carousel:
+
+* [`CarouselSwipeMode.Touch`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.CarouselSwipeMode.html) - Allows the user to slide the slides using touch actions.
+* [`CarouselSwipeMode.Mouse`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.CarouselSwipeMode.html) - Allows the user to slide the slides using mouse actions.
+* [`CarouselSwipeMode.Touch & CarouselSwipeMode.Mouse`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.CarouselSwipeMode.html) - Allows the user to slide the slides using both touch and mouse actions.
+* [`~CarouselSwipeMode.Touch & ~CarouselSwipeMode.Mouse`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.CarouselSwipeMode.html) - Disables both touch and mouse actions.
+
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+
+<div class="control-container">
+    <SfCarousel SwipeMode="CarouselSwipeMode.Mouse & CarouselSwipeMode.Touch">
+        <CarouselItem>
+            <figure class="img-container"><img src="https://ej2.syncfusion.com/products/images/carousel/cardinal.png" alt="cardinal" style="height:100%;width:100%;" /><figcaption class="img-caption">Cardinal</figcaption></figure>
+        </CarouselItem>
+        <CarouselItem>
+            <figure class="img-container"><img src="https://ej2.syncfusion.com/products/images/carousel/hunei.png" alt="kingfisher" style="height:100%;width:100%;" /><figcaption class="img-caption">Kingfisher</figcaption></figure>
+        </CarouselItem>
+        <CarouselItem>
+            <figure class="img-container"><img src="https://ej2.syncfusion.com/products/images/carousel/costa-rica.png" alt="keel-billed-toucan" style="height:100%;width:100%;" /><figcaption class="img-caption">Keel-billed-toucan</figcaption></figure>
+        </CarouselItem>
+        <CarouselItem>
+            <figure class="img-container"><img src="https://ej2.syncfusion.com/products/images/carousel/kaohsiung.png" alt="yellow-warbler" style="height:100%;width:100%;" /><figcaption class="img-caption">Yellow-warbler</figcaption></figure>
+        </CarouselItem>
+        <CarouselItem>
+           <figure class="img-container"><img src="https://ej2.syncfusion.com/products/images/carousel/bee-eater.png" alt="bee-eater" style="height:100%;width:100%;" /><figcaption class="img-caption">Bee-eater</figcaption></figure>
+        </CarouselItem>
+    </SfCarousel>
+</div>
+
+<style>
+    .control-container {
+        height: 300px;
+        margin: 0 auto;
+        width: 500px;
+    }
+
+    .img-container {
+        height: 100%;
+        margin: 0;
+    }
+
+    .img-caption {
+        color: #fff;
+        font-size: 1rem;
+        position: absolute;
+        bottom: 3rem;
+        width: 100%;
+        text-align: center;
+    }
+
+</style>
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhgMVVVhQADiviB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+![Carousel Swipe Mode](images/swipe.gif)

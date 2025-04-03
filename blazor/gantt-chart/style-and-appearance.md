@@ -38,9 +38,8 @@ To modify the Gantt Chart appearance, you need to override the default CSS of Ga
 | |e-resize-handler|This class is added to the resize handler of the gantt chart splitter.
 | |e-arrow-left|This class is added to the left arrow of the resize handler.
 | |e-arrow-right|This class is added to the right arrow of the resize handler.
-|**Connector Lines**|e-line|This class is added to the connector lines.
-| |e-connector-line-right-arrow|This class is added to the right arrow of the connector line.
-| |e-connector-line-left-arrow|This class is added to the left arrow of the connector line.
+|**Connector Lines**|e-connector-line|This class is added to the connector lines.
+| |e-connector-line-arrow|This class is added to the arrow of the connector line.
 |**Labels**|e-task-label|This class is added to the task labels.
 | |e-right-label-container|This class is added to the right label.
 | |e-left-label-container|This class is added to the left label.
@@ -56,57 +55,137 @@ To modify the Gantt Chart appearance, you need to override the default CSS of Ga
                      BaselineEndDate="BaselineEndDate">
     </GanttTaskFields>
     <GanttLabelSettings RightLabel="TaskName" TValue="TaskData"></GanttLabelSettings>
-        <GanttEventMarkers>
-            <GanttEventMarker Day="@Event" Label="Project approval and kick-off"></GanttEventMarker>
-        </GanttEventMarkers>
+    <GanttEventMarkers>
+        <GanttEventMarker Day="@Event" Label="Project approval and kick-off"></GanttEventMarker>
+    </GanttEventMarkers>
 </SfGantt>
 <style>
-    .e-split-bar, .e-headercell {
-        background: #add8e6 !important
+     .e-split-bar, .e-headercell {
+        background: #add8e6 !important; /* Set splitter and header cell background color */
     }
+
     .e-timeline-header-container, .e-weekend-header-cell {
-        background: #add8e6 !important;
+        background: #add8e6 !important; /* Set timeline header and weekend cell background color */
     }
+
     .e-gantt-parent-taskbar-inner-div {
-        background-color: #7ab748 !important;
+        background-color: #7ab748 !important; /* Set parent taskbar color */
     }
+
     .e-gantt-parent-progressbar-inner-div {
-        background-color: #4b732a !important;
+        background-color: #4b732a !important; /* Set parent progress bar color */
     }
-    .e-milestone-top {
-        border-bottom-color: #ad7a66 !important;
+
+    .e-gantt-milestone {
+        background-color: #ad7a66 !important; /* Set milestone color */
     }
-    .e-milestone-bottom {
-        border-top-color: #ad7a66 !important;
-    }
+
     .e-gantt-child-taskbar-inner-div {
-        background-color: #6d619b !important;
+        background-color: #6d619b !important; /* Set child taskbar color */
     }
+
     .e-gantt-child-progressbar-inner-div {
-        background-color: #4e466e !important;
+        background-color: #4e466e !important; /* Set child progress bar color */
     }
+
     .e-tooltip-wrap {
-        background: #a9e0f4 !important;
+        background: #a9e0f4 !important; /* Set tooltip background color */
     }
-    .e-event-marker {
-        border-left-color: #05088f !important;
+
+    .e-event-markers {
+        border-left-color: #05088f !important; /* Set event marker color */
     }
+
+    .e-event-markers .e-span-label {
+        background-color: #f3e5f5 !important; /* Set event marker label background color */
+        color: #6a1b9a !important; /* Set event marker label text color */
+    }
+
+    .e-baseline-gantt-milestone-container{
+        background-color: #fdb9c9 !important; /* Set baseline milestone color */
+    }
+
     .e-baseline-bar {
-        background-color: #fdb9c9 !important;
+        background-color: #fdb9c9 !important; /* Set baseline bar color */
     }
+
     .e-label {
-        color: #1e74ca !important;
+        color: #1e74ca !important; /* Set label text color */
     }
-    .e-line {
-        border-color: #ab6060fc !important;
+
+    .e-connector-line {
+        stroke: #ab6060fc !important; /* Set line color */
     }
-    .e-connector-line-right-arrow {
-        border-left-color: #ab6060fc !important;
+
+    .e-connector-line-arrow {
+        fill: #ab6060fc !important; /* Set arrow color */
     }
 </style>
+@code {
+    private List<TaskData> TaskCollection { get; set; }
+    public DateTime Event = new DateTime(2022, 01, 16);
+
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = GetTaskCollection();
+    }
+
+    public class TaskData
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+        public string Duration { get; set; }
+        public int Progress { get; set; }
+        public DateTime? BaselineStartDate { get; set; }
+        public DateTime? BaselineEndDate { get; set; }
+        public string Predecessor { get; set; }
+        public int? ParentId { get; set; }
+    }
+
+    private static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>()
+        {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 21), },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), BaselineStartDate = new DateTime(2022, 01, 04), BaselineEndDate = new DateTime(2022, 01, 07), Duration = "4", Progress = 40, ParentId = 1, Predecessor="2", },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "0", BaselineStartDate = new DateTime(2022, 01, 05, 08, 00, 00), BaselineEndDate = new DateTime(2022, 01, 05, 08, 00, 00), Progress = 30, ParentId = 1, Predecessor="3", },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 21), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 30, ParentId = 5, Predecessor="4", },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), BaselineStartDate = new DateTime(2022, 01, 09), BaselineEndDate = new DateTime(2022, 01, 14), Duration = "3", Progress = 40, ParentId = 5, Predecessor="6", },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 06), Duration = "0", Progress = 30, ParentId = 5, Predecessor="7", }
+        };
+        return Tasks;
+    }
+}
+```
+![Styles and appearance in Blazor Gantt Chart](images/stylesAndAppearance.png)
+
+## Grid lines
+
+In the Gantt Chart component, you can show or hide the grid lines in the Tree Grid side and chart side by using the `GridLines` property.
+
+The following options are available in the Gantt Chart component for rendering the grid lines:
+
+* Horizontal: The horizontal grid lines alone will be visible.
+* Vertical: The vertical grid lines alone will be visible.
+* Both: Both the horizontal and vertical grid lines will be visible on the Tree Grid and chart sides.
+* None: Gridlines will not be visible on Tree Grid and chart sides.
+
+N> By default, the `GridLines` property is set to `Horizontal` type.
+
+```cshtml
+@using Syncfusion.Blazor.Gantt
+
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="800px" GridLines="Syncfusion.Blazor.Gantt.GridLine.Both">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
+    </GanttTaskFields>
+</SfGantt>
+
 @code{
     private List<TaskData> TaskCollection { get; set; }
-    public DateTime Event = new DateTime(2021, 04, 27);
 
     protected override void OnInitialized()
     {
@@ -121,9 +200,6 @@ To modify the Gantt Chart appearance, you need to override the default CSS of Ga
         public DateTime EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public DateTime BaselineStartDate { get; set; }
-        public DateTime BaselineEndDate { get; set; }
-        public string Predecessor { get; set; }
         public int? ParentId { get; set; }
     }
 
@@ -131,20 +207,23 @@ To modify the Gantt Chart appearance, you need to override the default CSS of Ga
     {
         List<TaskData> Tasks = new List<TaskData>()
         {
-            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 21), },
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 17), },
             new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
-            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 40, ParentId = 1, Predecessor="2", },
-            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentId = 1, Predecessor="3", },
-            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 21), },
-            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 30, ParentId = 5, Predecessor="4", },
-            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 40, ParentId = 5, Predecessor="6", },
-            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 06), Duration = "0", Progress = 30, ParentId = 5, Predecessor="7", }
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 01, 04), Duration = "4", Progress = 40, ParentId = 1, },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 01, 04), Duration = "0", Progress = 30, ParentId = 1, },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 01, 04), EndDate = new DateTime(2022, 01, 17), },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 30, ParentId = 5, },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 01, 06), Duration = "3", Progress = 40, ParentId = 5, },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 01, 06), Duration = "0", Progress = 30, ParentId = 5, }
         };
         return Tasks;
     }
 }
+
 ```
-![Styles and appearance in Blazor Gantt Chart](images/stylesAndAppearance.png)
+
+![Hiding Grid Lines in Blazor Gantt Chart](images/blazor-gantt-chart-hide-grid-lines.png)
+
 
 ## See also
 

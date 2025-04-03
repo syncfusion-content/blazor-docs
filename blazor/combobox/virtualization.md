@@ -9,37 +9,51 @@ documentation: ug
 
 # Virtualization in Blazor ComboBox Component
 
-The ComboBox has been provided virtualization to improve the UI performance for a large amount of data when [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_EnableVirtualization) is true. This feature doesn’t render out the entire data source on initial component rendering. It loads the N number of items in the popup on initial rendering and the remaining set number of items will load on each scrolling action in the popup. It can work with both local and remote data.
+The ComboBox component includes a virtual scrolling feature designed to enhance UI performance, particularly for handling large datasets. By enabling the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_EnableVirtualization) option, the ComboBox intelligently manages data rendering, ensuring only a subset of items is initially loaded when the component is rendered. As you interact with the dropdown, additional items are dynamically loaded as you scroll, creating a smooth and efficient user experience.
 
-In the following code 150 items bound to the component, but only 5 items will load to the popup when you open the popup. Remaining set number of items will load on each scrolling action in the popup.
+This feature is applicable to both local and remote data scenarios, providing flexibility in its implementation. For instance, consider a case where the ComboBox is bound to a dataset containing 150 items. Upon opening the dropdown, only a few items are loaded initially, based on the height of the popup. As you scroll through the list, additional items are fetched and loaded on-demand, allowing you to effortlessly explore the complete dataset.
 
-```cshtml
+## Local data
 
-@using Syncfusion.Blazor.DropDowns
-@using Syncfusion.Blazor.Data
+{% highlight cshtml %}
 
-<SfComboBox TValue="string" TItem="Record" Placeholder="Select an item" DataSource="@Records" Query="@LocalDataQuery" PopupHeight="130px" EnableVirtualization="true">
-    <ComboBoxFieldSettings Text="Text" Value="ID"></ComboBoxFieldSettings>
-</SfComboBox>
+{% include_relative code-snippet/virtualization/local-data.razor %}
 
-@code{
-    public Query LocalDataQuery = new Query().Take(6); 
-    public class Record 
-    { 
-        public string ID { get; set; } 
-        public string Text { get; set; } 
-    } 
-    public List<Record> Records { get; set; } 
-    protected override void OnInitialized()
-    { 
-        this.Records = Enumerable.Range(1, 150).Select(i => new Record() 
-        { 
-            ID = i.ToString(), 
-            Text = "Item " + i, 
-        }).ToList(); 
-    } 
-}
-```
+{% endhighlight %}
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBgCVBQqlgGofzc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor ComboBox with virtualization](./images/blazor_combobox_virtualization.gif)
+
+## Remote data
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/virtualization/remote-data.razor %}
+
+{% endhighlight %}
+
+![Blazor ComboBox with virtualization](./images/blazor_combobox_remote-data-virtualization.gif)
+
+## Grouping with Virtualization
+
+The Combobox component supports grouping with Virtualization. It allows you to organize elements into groups based on different categories. Each item in the list can be classified using the [GroupBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxFieldSettings.html#Syncfusion_Blazor_DropDowns_ComboBoxFieldSettings_GroupBy) field in the data table. After grouping, virtualization works similarly to local data binding, providing a seamless user experience. When the data source is bound to remote data, an initial request is made to retrieve all data for the purpose of grouping. Subsequently, the grouped data works in the same way as local data binding virtualization, enhancing performance and responsiveness.
+
+The following sample shows the example for Grouping with Virtualization.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/virtualization/grouping-virtualization.razor %}
+
+{% endhighlight %}
+
+## Keyboard interaction
+
+Users can navigate through the scrollable content using keyboard keys. This feature loads the next or next set of items based on the key inputs in the popup.The ComboBox supports the following keyboard shortcuts.
+
+| Key | Action |
+|-----|-----|
+| `ArrowDown` | Loads the next virtual list item if the selection is present in last item of the current page. |
+| `ArrowUp` | Loads the previous virtual list item if the selection is present in first item of the current page. |
+| `PageDown` | Loads the next page and selects the last item in it. |
+| `PageUp` | Loads the previous page and selects the first item in it. |

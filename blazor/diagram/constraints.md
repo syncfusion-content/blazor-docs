@@ -38,6 +38,7 @@ To know more about Bitwise operators, refer to the [Bitwise Operations](constrai
 |Pan|Enables or disables panning both X and Y coordinates support for the diagram.|
 |ZoomTextEdit|Enables or disables zooming the text box while editing the text.|
 |Tooltip|Enables or disables the tooltip for the diagram elements(Nodes and connectors).|
+|Routing|Determines if automatic line routing is enabled or disabled for connectors. When enabled, lines are automatically routed to avoid overlapping with nodes and other obstacles.|
 |Default|Enables or disables all constraints in diagram.|
 
 The following example shows how to disable PageEditable constraint from default diagram constraints.
@@ -169,7 +170,7 @@ The following example shows how to disable rotate constraint from the default no
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Constraints)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Constraints/NodeConstraints)
 
 ![Node Constraints in Blazor Diagram](images/blazor-diagram-node-constraints.png)
 
@@ -228,9 +229,9 @@ The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 | Constraints | Description |
 | -------- | -------- |
 |None|Disable all connector Constraints.|
-|Select|Enables or disables node to be selected.|
-|Delete|Enables or disables node to be deleted.|
-|Drag|Enables or disables node to be dragged.|
+|Select|Enables or disables connector to be selected.|
+|Delete|Enables or disables connector to be deleted.|
+|Drag|Enables or disables connector to be dragged.|
 |DragSourceEnd|Enables connectors source end to be selected.|
 |DragTargetEnd|Enables connectors target end to be selected.|
 |DragSegmentThumb|Enables control point and end point of every segment in a connector for editing.|
@@ -244,6 +245,9 @@ The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 |Tooltip|Enables or disables tooltip for the connectors.|
 |InheritTooltip|Enables or disables inherit tooltip option from the parent object
 |ConnectToNearByElement|Enables to connect to the nearest elements.|
+|Routing|Determines if routing is enabled or disabled for the connector.|
+|InheritRouting|Specifies whether the connector should inherit the routing value from the parent object.|
+|InheritSegmentThumbShape|Indicates if the connector should inherit the segment thumb shape from the parent object.|
 |ReadOnly|Enables or disables readonly for the connector.|
 |Default|Enables all constraints for the connector.|
 
@@ -275,9 +279,9 @@ The following code shows how to disable select constraint from the default const
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Constraints)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Constraints/ConnectorConstraints)
 
-The following example shows how to add Bridging constraint to the default constraints of connector.
+The following example shows how to add Bridging constraint to the default constraints of a connector.
 
 ```csharp
 ConnectorConstraints ConnectorConstraints = ConnectorConstraints.Default | ConnectorConstraints.Bridging;
@@ -366,7 +370,7 @@ The following code shows how to disable creating connections with a port.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Constraints)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Constraints/PortConstraints)
 
 The following code example shows how to modify the port constraints to accept target connection alone.
 
@@ -445,7 +449,7 @@ The following code shows how to enable read-only mode for the annotations.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Constraints)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Constraints/AnnotationConstraints)
 
 For more details about annotation constraints, refer to the [AnnotationConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AnnotationConstraints.html).
 
@@ -508,7 +512,7 @@ The following code shows how to hide rotator.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Constraints)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Constraints/SelectorConstraints)
 
 ![Selector Constraints in Blazor Diagram](images/blazor-diagram-node-constraints.png)
 
@@ -566,7 +570,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 |![ToolTip During hover the node with selectorconstraints](images/blazor-diagram-selectorconstraintsnode.gif) | 
 
-N> Element should be in selected state, then only Rotator, UserHandle and Resizer thumbs will be visible.
+N> Element should be in a selected state, then only Rotator, UserHandle and Resizer thumbs will be visible.
 
 The following code example shows how to disable the userhandle functionality for the selected item.
 
@@ -642,7 +646,7 @@ The following code shows how to show only horizontal gridlines.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Constraints)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Constraints/SnapConstraints)
 
 The snap constraints are provided as flagged enumerations, so that multiple behaviors can be added or removed from the default constraints using the [Bitwise Operations](constraints#bitwise-operations).
 
@@ -706,7 +710,7 @@ The following code shows how to limit the interaction done inside a diagram with
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Constraints)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Constraints/BoundaryConstraints)
 
 For more information about selector constraints, refer to the [BoundaryConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BoundaryConstraints.html).
 
@@ -756,13 +760,13 @@ The following code example shows how to inherit the line bridging behavior from 
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Constraints)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Constraints/InheritBehaviors)
 
 ## Bitwise operations
 
 Bitwise operations are used to manipulate the flagged enumerations `enum`. In this section, Bitwise operations are shown by using the node constraints. The same is applicable when working with node constraints, connector constraints, or port constraints.
 
-## Add operation
+### Add operation
 
 You can add or enable multiple values at a time by using the Bitwise `|` (OR) operator.
 
@@ -780,7 +784,7 @@ The following code shows how to add bridging constraints into the default diagra
 }
 ```
 
-## Remove operation
+### Remove operation
 
 You can remove or disable values by using the Bitwise ‘&~’ (XOR) operator.
 
@@ -799,7 +803,7 @@ The following code shows to remove zoom and pan constraints from the default con
 }
 ```
 
-## Check operation
+### Check operation
 
 You can check any value by using the Bitwise ‘&’ (AND) operator.
 

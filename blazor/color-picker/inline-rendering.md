@@ -20,6 +20,7 @@ The following sample shows the inline type rendering of ColorPicker.
 <SfColorPicker Value="035a" Inline="true" ShowButtons="false"></SfColorPicker>
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVKsVrQgIVKJnGz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Inline Rendering in Blazor ColorPicker](./images/blazor-colorpicker-inline-rendering.png)
 

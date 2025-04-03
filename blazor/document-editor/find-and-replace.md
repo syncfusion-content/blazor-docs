@@ -29,7 +29,7 @@ You can programmatically toggle the visibility of navigation pane using the `Sho
     SfDocumentEditorContainer container;
     protected void OpenOptionsPane(object args)
     {
-        container.DocumentEditor.ShowOptionsPane();
+        container.DocumentEditor.OpenOptionsPane();
     }
 }
 ```
@@ -46,9 +46,9 @@ You can invoke the search or find text functionality programmatically using the 
 
 @code {
     SfDocumentEditorContainer container;
-    protected void FindAll(object args)
+    protected async void FindAll(object args)
     {
-        container.DocumentEditor.Search.FindAllAsync("Some text", FindOption.None);
+        await container.DocumentEditor.Search.FindAllAsync("Some text", FindOption.None);
     }
 }
 ```

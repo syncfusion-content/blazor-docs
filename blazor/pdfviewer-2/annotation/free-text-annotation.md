@@ -16,9 +16,7 @@ The SfPdfViewer control provides the options to add, edit and delete the free te
 The free text annotations can be added to the PDF document using the annotation toolbar.
 
 * Click the **Edit Annotation** button in the SfPdfViewer toolbar. A toolbar appears below it. 
-
 * Select the **Free Text Annotation** button in the annotation toolbar. It enables the Free Text Annotation mode.
-
 * You can add the text over the pages of the PDF document.
 
 In the pan mode, if the free text annotation mode is entered, the SfPdfViewer control will switch to text select mode.
@@ -31,17 +29,15 @@ In the pan mode, if the free text annotation mode is entered, the SfPdfViewer co
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfButton OnClick="OnClick">Free Text</SfButton>
-
 <SfPdfViewer2 @ref="viewer" DocumentPath=@DocumentPath Height="100%" Width="100%" ></SfPdfViewer2>
 
 @code {
     SfPdfViewer2 viewer;
-
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
-    public void OnClick(MouseEventArgs args)
+    public async void OnClick(MouseEventArgs args)
     {
-        viewer.SetAnnotationMode(AnnotationType.FreeText);
+        await viewer.SetAnnotationModeAsync(AnnotationType.FreeText);
     }
 }
 
@@ -120,7 +116,6 @@ FreeTextSettings=@FreeTextSettings></SfPdfViewer2>
 
 @code {
     SfPdfViewer2 viewer;
-    
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
     
     PdfViewerFreeTextSettings FreeTextSettings = new PdfViewerFreeTextSettings 
@@ -132,3 +127,204 @@ FreeTextSettings=@FreeTextSettings></SfPdfViewer2>
 }
 
 ```
+
+## Add free text annotation programmatically
+
+The Blazor SfPdfViewer offers the capability to programmatically add the free text annotation within the SfPdfViewer control using the [AddAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_AddAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method.
+
+Below is an example demonstrating how you can use this method to add free text annotation to a PDF document:
+
+```cshtml
+
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.SfPdfViewer
+
+<SfButton OnClick="@AddFreeTextAnnotationAsync">Add FreeText Annotation</SfButton>
+<SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
+
+@code {
+    SfPdfViewer2 Viewer;
+    public string DocumentPath { get; set; } = "wwwroot/Data/Free_Text_Annotation.pdf";
+
+    public async void AddFreeTextAnnotationAsync(MouseEventArgs args)
+    {
+        PdfAnnotation annotation = new PdfAnnotation();
+        // Set the annotation type of free text
+        annotation.Type = AnnotationType.FreeText;
+        // Set the PageNumber starts from 0. So, if set 0 it repersent the page 1.
+        annotation.PageNumber = 0;
+
+        // Bound of the free text annotation
+        annotation.Bound = new Bound();
+        annotation.Bound.X = 200;
+        annotation.Bound.Y = 150;
+        annotation.Bound.Width = 150;
+        annotation.Bound.Height = 30;
+        // Add free text annotation
+        await Viewer.AddAnnotationAsync(annotation);
+    }
+}
+
+```
+
+This code will add a free text annotation to the first page of the PDF document.
+
+![Programmatically Added Free Text Annotation in Blazor SfPdfViewer](../images/blazor-sfpdfviewer-programmatically-add-freetext-annotation.png)
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Programmatic%20Support/Free%20Text/Add).
+
+## Edit free text annotation programmatically
+
+The Blazor SfPdfViewer offers the capability to programmatically edit the free text annotation within the SfPdfViewer control using the [EditAnnotationAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EditAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method.
+
+Below is an example demonstrating how you can utilize this method to edit the free text annotation programmatically:
+
+```cshtml
+
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.SfPdfViewer
+
+<SfButton OnClick="@EditFreeTextAnnotationAsync">Edit FreeText Annotation</SfButton>
+<SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
+
+@code {
+    SfPdfViewer2 Viewer;
+    public string DocumentPath { get; set; } = "wwwroot/Data/Free_Text_Annotation.pdf";
+
+    public async void EditFreeTextAnnotationAsync(MouseEventArgs args)
+    {
+        // Get annotation collection
+        List<PdfAnnotation> annotationCollection = await Viewer.GetAnnotationsAsync();
+        // Select the annotation want to edit
+        PdfAnnotation annotation = annotationCollection[0];
+        // Change the position of the free text annotation
+        annotation.Bound.X = 125;
+        annotation.Bound.Y = 125;
+        // Change the width and height of the free text annotation
+        annotation.Bound.Width = 250;
+        annotation.Bound.Height = 40;
+        // Change the font style of free text annotation like bold, italic, underline strikethrough
+        annotation.FontStyle = FontStyle.Bold | FontStyle.Italic;
+        // Change the font size of free text annotation
+        annotation.FontSize = 20;
+        // Change the font color of free text annotation
+        annotation.FontColor = "#00008B";
+        // Change the font family of free text annotation
+        annotation.FontFamily = "Symbol";
+        // Change the border width of free text annotation
+        annotation.BorderWidth = 3;
+        // Change the border color of free text annotation
+        annotation.BorderColor = "#000000";
+        // Change the text of free text annotation
+        annotation.DynamicText = "Modified Free Text";
+        // Change the text align of free text annotation
+        annotation.TextAlignment = TextAlignment.Center;
+        // Change the fill color of free text annotation
+        annotation.FillColor = "#FFFF00";
+        // Change the Opacity (0 to 1) of free text annotation
+        annotation.Opacity = 0.5;
+        // Edit the free text annotation
+        await Viewer.EditAnnotationAsync(annotation);
+    }
+}
+
+```
+
+This code snippet will edit the free text annotation programmatically within the SfPdfViewer control.
+
+![Programmatically Edit Free Text Annotation in Blazor SfPdfViewer](../images/blazor-sfpdfviewer-programmatically-edit-freetext-annotation.png)
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Programmatic%20Support/Free%20Text/Edit).
+
+## Custom Font Support for FreeText Annotation
+
+The Blazor SfPdfViewer allows you to load, edit, and save custom fonts in FreeText annotations using the [FallbackFontCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_FallbackFontCollection) and [FontFamilies](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_FontFamilies) properties
+
+### Loading Custom Font Collection in SfPdfViewer
+If the custom font is not installed on the system, the FallbackFontCollection property is required to save the FreeText annotation with the custom font.
+
+The following example demonstrates how to load custom font collections, such as Arial Black and Courier New, as TTF files in SfPdfViewer.
+
+```cshtml
+@using Syncfusion.Blazor;
+@using Syncfusion.Blazor.SfPdfViewer;
+
+<SfPdfViewer2 @ref="pdfViewer" Height="100%" Width="100%" DocumentPath="@DocumentPath">
+    <PdfViewerEvents Created="@Created"></PdfViewerEvents>
+</SfPdfViewer2>
+
+@code {
+    private SfPdfViewer2? pdfViewer;
+    private string DocumentPath { get; set; } = "wwwroot/PDF/Arial Black.pdf";
+
+    public void Created()
+    {
+        // Use FallbackFontCollection to save the custom font
+        // Maps the font family name to its corresponding TTF file as a memory stream  
+        pdfViewer.FallbackFontCollection.Add("Arial", new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/Fonts/ARIAL.ttf")));
+        pdfViewer.FallbackFontCollection.Add("Arial Black", new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/Fonts/ARIBLK.ttf")));
+        pdfViewer.FallbackFontCollection.Add("Courier New", new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/Fonts/COUR.ttf")));
+    }
+}
+```
+### Adding Custom Font Families to the Annotation Toolbar Dropdown
+The FontFamilies property is used to add custom font families to the Font Family dropdown in the annotation toolbar.
+
+The following example demonstrates how to add custom font families as a string array to the Font Family dropdown in the annotation toolbar:
+
+```cshtml
+@using Syncfusion.Blazor;
+@using Syncfusion.Blazor.SfPdfViewer;
+
+<SfPdfViewer2 @ref="pdfViewer" Height="100%" Width="100%" DocumentPath="@DocumentPath" FontFamilies="@FontFamilies">
+</SfPdfViewer2>
+
+@code {
+    private SfPdfViewer2? pdfViewer;
+    
+    // Use the FontFamilies property to add custom font families to the Font Family dropdown in the annotation toolbar
+    internal string[] FontFamilies { get; set; } = { "Helvetica", "Courier", "Symbol", "Times New Roman", "Arial Black", "Courier New", "Arial" };
+    private string DocumentPath { get; set; } = "wwwroot/PDF/Arial Black.pdf";
+}
+```
+
+![FontFamilies Property in Blazor SfPdfViewer](../images/FontFamilies_API_SfPdfViewer.png)
+
+
+The following example demonstrates how to load, edit, and save custom fonts in FreeText annotations
+
+```cshtml
+@using Syncfusion.Blazor;
+@using Syncfusion.Blazor.SfPdfViewer;
+
+<SfPdfViewer2 @ref="pdfViewer" Height="100%" Width="100%" DocumentPath="@DocumentPath" FontFamilies="@FontFamilies">
+    <PdfViewerEvents Created="@Created"></PdfViewerEvents>
+</SfPdfViewer2>
+
+@code {
+    private SfPdfViewer2? pdfViewer;
+
+    // Use the FontFamilies property to add custom font families to the annotation toolbar dropdown
+    internal string[] FontFamilies { get; set; } = { "Helvetica", "Courier", "Symbol", "Times New Roman", "Arial Black", "Courier New", "Arial" };
+
+    private string DocumentPath { get; set; } = "wwwroot/PDF/Arial Black.pdf";
+
+    public void Created()
+    {
+        // Use FallbackFontCollection to save the custom font
+        // Maps the font family name to its corresponding TTF file as a memory stream  
+        pdfViewer.FallbackFontCollection.Add("Arial", new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/Fonts/ARIAL.ttf")));
+        pdfViewer.FallbackFontCollection.Add("Arial Black", new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/Fonts/ARIBLK.ttf")));
+        pdfViewer.FallbackFontCollection.Add("Courier New", new MemoryStream(System.IO.File.ReadAllBytes("wwwroot/Fonts/COUR.ttf")));
+    }
+}
+```
+
+![Custom Font Support for FreeText annotation in Blazor SfPdfViewer](../images/customFont_support_freeText.png)
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/FreeText/Custom%20Font%20Support%20For%20FreeText%20Annotation).
+
+## See also
+
+* [How to delete the annotation programmatically](./text-markup-annotation#delete-annotation-programmatically)
+* [How to Load the Font Collection in SfPdfViewer](../how-to/load-font-collection)

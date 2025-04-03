@@ -231,9 +231,240 @@ In heat map, you can place the axis label in an opposite position of its default
 
 ![Blazor HeatMap Chart with Opposed Axis](images/axis/blazor-heatmap-chart-opposed-axis.png)
 
-## Label formatting
+## Axis labels customization
 
-Heat map supports formatting the axis labels by using the `LabelFormat` property. Using this property, you can customize the axis label by global string format (‘P’, ‘C’, etc) or customized format like ‘{value}°C’.
+### Customizing the text style
+
+The text style of the axis labels can be customized using the following options available in the [HeatMapXAxisTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapXAxisTextStyle.html) for x-axis and [HeatMapYAxisTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapYAxisTextStyle.html) for y-axis.
+
+* `Color` - It is used to change the text color of the axis labels.
+* `FontFamily` - It is used to change the font family of the axis labels.
+* `FontStyle` - It is used to change the font style of the axis labels.
+* `FontWeight` - It is used to change the font weight of the axis labels.
+* `Size` - It is used to change the font size of the axis labels.
+* `TextAlignment` - It is used to position and align the axis labels. This property takes values such as **Near**, **Center**, and **Far**.
+* `TextOverflow` - When the axis label exceeds the intended space, this property is used to trim or wrap it. This property takes values such as **None**, **Trim**, and **Wrap**.
+
+```cshtml
+
+@using Syncfusion.Blazor.HeatMap
+
+<SfHeatMap DataSource="@HeatMapData">
+    <HeatMapTitleSettings Text="Product wise Monthly sales revenue for a e-commerce website">
+        <HeatMapTitleTextStyle Size="15px" FontWeight="500" FontStyle="Normal" FontFamily="Segoe UI"></HeatMapTitleTextStyle>
+    </HeatMapTitleSettings>
+    <HeatMapXAxis Labels="@XAxisLabels" OpposedPosition="true">
+        <HeatMapXAxisTextStyle Color="Red" Size="15px" FontWeight="650" FontStyle="Normal" FontFamily="Segoe UI" TextAlignment="Alignment.Center" TextOverflow="TextOverflow.Wrap"></HeatMapXAxisTextStyle>
+    </HeatMapXAxis>
+    <HeatMapYAxis Labels="@YAxisLabels" MaxLabelLength="70">
+        <HeatMapYAxisTextStyle Color="Red" Size="15px" FontWeight="650" FontStyle="Normal" FontFamily="Segoe UI" TextAlignment="Alignment.Center" TextOverflow="TextOverflow.Wrap"></HeatMapYAxisTextStyle>
+    </HeatMapYAxis>
+    <HeatMapPaletteSettings>
+        <HeatMapPalettes>
+            <HeatMapPalette Color="#F0C27B"></HeatMapPalette>
+            <HeatMapPalette Color="#4B1248"></HeatMapPalette>
+        </HeatMapPalettes>
+    </HeatMapPaletteSettings>
+    <HeatMapLegendSettings Visible="false">
+    </HeatMapLegendSettings>
+</SfHeatMap>
+
+@code {
+    int[,] GetDefaultData()
+    {
+        int[,] dataSource = new int[,]
+        {
+            {52, 65, 67, 45, 37, 52, 32},
+            {68, 52, 63, 51, 30, 51, 51},
+            {60, 50, 42, 53, 66, 70, 41},
+            {66, 64, 46, 40, 47, 41, 45},
+            {65, 42, 58, 32, 36, 44, 49},
+            {54, 46, 61, 46, 40, 39, 41},
+            {48, 46, 61, 47, 49, 41, 41},
+            {69, 52, 41, 44, 41, 52, 46},
+            {50, 59, 44, 43, 27, 42, 26},
+            {47, 49, 66, 53, 50, 34, 31},
+            {61, 40, 62, 26, 34, 54, 56}
+        };
+        return dataSource;
+    }
+    string[] XAxisLabels = new string[] { "Month of Feburary 2023", "Month of March 2023", "Month of April 2023", "Month of May 2023", "Month of June 2023", "Month of July 2023", "Month of August 2023", "Month of September 2023", "Month of October 2023", "Month of November 2023", "Month of December 2023" };
+    string[] YAxisLabels = new string[] { "Ace Apparels", "Alpha Apparels", "RL Garments", "RRD Garments", "RRD Apparels", "RR Garments", "SR Garments" };
+    public object HeatMapData { get; set; }
+    protected override void OnInitialized()
+    {
+        HeatMapData = GetDefaultData();
+    }
+}
+
+```
+
+![Text style customization for the axis labels in Blazor HeatMap Chart](images/axis/blazor-heatmap-chart-label-with-text-style-customization.png)
+
+### Providing line breaks
+
+Axis labels with line breaks improve the readability of the HeatMap by splitting the text on an axis into multiple lines. The **"\<br>"** character is used to add line breaks to the axis labels.
+
+```cshtml
+
+@using Syncfusion.Blazor.HeatMap
+
+<SfHeatMap DataSource="@HeatMapData">
+    <HeatMapXAxis Labels="@XAxisLabels"></HeatMapXAxis>
+    <HeatMapYAxis Labels="@YAxisLabels" MaxLabelLength="60"></HeatMapYAxis>
+</SfHeatMap>
+
+@code {
+    int[,] GetDefaultData()
+    {
+        int[,] dataSource = new int[,]
+        {
+            {1, 76},
+            {19, 3}
+        };
+        return dataSource;
+    }
+    string[] XAxisLabels = new string[] { "Actual<br>Accept", "Actual<br>Reject" };
+    string[] YAxisLabels = new string[] { "Actual<br>Accept", "Actual<br>Reject" };
+    public object HeatMapData { get; set; }
+    protected override void OnInitialized()
+    {
+        HeatMapData = GetDefaultData();
+    }
+}
+
+```
+
+![Axis Labels with line breaks in Blazor HeatMap Chart](images/axis/blazor-heatmap-chart-axis-labels-with-line-breaks.png)
+
+### Customizing axis labels when intersecting
+
+When the axis labels intersect, [LabelIntersectAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCommonAxis.html#Syncfusion_Blazor_HeatMap_HeatMapCommonAxis_LabelIntersectAction) property is used to handle the intersection. The `LabelIntersectAction` property can take the following values.
+
+* **None** - It specifies that no action is taken when the axis labels intersect.
+* **Trim** - It specifies to trim the axis labels when they intersect.
+* **Rotate45** - When the axis labels intersect, they are rotated to 45 degrees.
+* **MultipleRows** - It specifies to show all the axis labels as multiple rows when they intersect.
+
+The below example demonstrates to trim the axis labels by using the `LabelIntersectAction` property.
+
+```cshtml
+
+@using Syncfusion.Blazor.HeatMap
+
+<SfHeatMap DataSource="@HeatMapData">
+    <HeatMapTitleSettings Text="Product wise Monthly sales revenue for a e-commerce website">
+        <HeatMapTitleTextStyle Size="15px" FontWeight="500" FontStyle="Normal" FontFamily="Segoe UI"></HeatMapTitleTextStyle>
+    </HeatMapTitleSettings>
+    <HeatMapXAxis Labels="@XAxisLabels" OpposedPosition="true" EnableTrim="true" LabelIntersectAction="LabelIntersectAction.Trim">
+        <HeatMapXAxisTextStyle Color="Red" Size="15px" FontWeight="650" FontStyle="Normal" FontFamily="Segoe UI" TextAlignment="Alignment.Center" TextOverflow="TextOverflow.Wrap"></HeatMapXAxisTextStyle>
+    </HeatMapXAxis>
+    <HeatMapYAxis Labels="@YAxisLabels" EnableTrim="true" LabelIntersectAction="LabelIntersectAction.Trim">
+        <HeatMapYAxisTextStyle Color="Red" Size="15px" FontWeight="650" FontStyle="Normal" FontFamily="Segoe UI" TextAlignment="Alignment.Center" TextOverflow="TextOverflow.Wrap"></HeatMapYAxisTextStyle>
+    </HeatMapYAxis>
+    <HeatMapPaletteSettings>
+        <HeatMapPalettes>
+            <HeatMapPalette Color="#F0C27B"></HeatMapPalette>
+            <HeatMapPalette Color="#4B1248"></HeatMapPalette>
+        </HeatMapPalettes>
+    </HeatMapPaletteSettings>
+    <HeatMapLegendSettings Visible="false">
+    </HeatMapLegendSettings>
+</SfHeatMap>
+
+@code {
+    int[,] GetDefaultData()
+    {
+        int[,] dataSource = new int[,]
+        {
+            {52, 65, 67, 45, 37, 52, 32},
+            {68, 52, 63, 51, 30, 51, 51},
+            {60, 50, 42, 53, 66, 70, 41},
+            {66, 64, 46, 40, 47, 41, 45},
+            {65, 42, 58, 32, 36, 44, 49},
+            {54, 46, 61, 46, 40, 39, 41},
+            {48, 46, 61, 47, 49, 41, 41},
+            {69, 52, 41, 44, 41, 52, 46},
+            {50, 59, 44, 43, 27, 42, 26},
+            {47, 49, 66, 53, 50, 34, 31},
+            {61, 40, 62, 26, 34, 54, 56}
+        };
+        return dataSource;
+    }
+    string[] XAxisLabels = new string[] { "Month of Feburary 2023", "Month of March 2023", "Month of April 2023", "Month of May 2023", "Month of June 2023", "Month of July 2023", "Month of August 2023", "Month of September 2023", "Month of October 2023", "Month of November 2023", "Month of December 2023" };
+    string[] YAxisLabels = new string[] { "Ace Apparels", "Alpha Apparels", "RL Garments", "RRD Garments", "RRD Apparels", "RR Garments", "SR Garments" };
+    public object HeatMapData { get; set; }
+    protected override void OnInitialized()
+    {
+        HeatMapData = GetDefaultData();
+    }
+}
+
+```
+
+![Label customization when intersecting with other labels in Blazor HeatMap Chart](images/axis/blazor-heatmap-chart-label-when-intersecting-with-other-labels.png)
+
+### Rotating axis labels
+
+The axis labels can be rotated to a desired angle by using the [LabelRotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCommonAxis.html#Syncfusion_Blazor_HeatMap_HeatMapCommonAxis_LabelRotation) property.
+
+```cshtml
+
+@using Syncfusion.Blazor.HeatMap
+
+<SfHeatMap DataSource="@HeatMapData">
+    <HeatMapTitleSettings Text="Product wise Monthly sales revenue for a e-commerce website">
+        <HeatMapTitleTextStyle Size="15px" FontWeight="500" FontStyle="Normal" FontFamily="Segoe UI"></HeatMapTitleTextStyle>
+    </HeatMapTitleSettings>
+    <HeatMapXAxis Labels="@XAxisLabels" LabelRotation="90" OpposedPosition="true">
+    </HeatMapXAxis>
+    <HeatMapYAxis Labels="@YAxisLabels" LabelRotation="45">
+    </HeatMapYAxis>
+    <HeatMapPaletteSettings>
+        <HeatMapPalettes>
+            <HeatMapPalette Color="#F0C27B"></HeatMapPalette>
+            <HeatMapPalette Color="#4B1248"></HeatMapPalette>
+        </HeatMapPalettes>
+    </HeatMapPaletteSettings>
+    <HeatMapLegendSettings Visible="false">
+    </HeatMapLegendSettings>
+</SfHeatMap>
+
+@code {
+    int[,] GetDefaultData()
+    {
+        int[,] dataSource = new int[,]
+        {
+            {52, 65, 67, 45, 37, 52, 32},
+            {68, 52, 63, 51, 30, 51, 51},
+            {60, 50, 42, 53, 66, 70, 41},
+            {66, 64, 46, 40, 47, 41, 45},
+            {65, 42, 58, 32, 36, 44, 49},
+            {54, 46, 61, 46, 40, 39, 41},
+            {48, 46, 61, 47, 49, 41, 41},
+            {69, 52, 41, 44, 41, 52, 46},
+            {50, 59, 44, 43, 27, 42, 26},
+            {47, 49, 66, 53, 50, 34, 31},
+            {61, 40, 62, 26, 34, 54, 56}
+        };
+        return dataSource;
+    }
+    string[] XAxisLabels = new string[] { "Month of Feburary 2023", "Month of March 2023", "Month of April 2023", "Month of May 2023", "Month of June 2023", "Month of July 2023", "Month of August 2023", "Month of September 2023", "Month of October 2023", "Month of November 2023", "Month of December 2023" };
+    string[] YAxisLabels = new string[] { "Ace Apparels", "Alpha Apparels", "RL Garments", "RRD Garments", "RRD Apparels", "RR Garments", "SR Garments" };
+    public object HeatMapData { get; set; }
+    protected override void OnInitialized()
+    {
+        HeatMapData = GetDefaultData();
+    }
+}
+
+```
+
+![Label rotation in Blazor HeatMap Chart](images/axis/blazor-heatmap-chart-label-rotation.png)
+
+### Label formatting
+
+The HeatMap supports formatting the axis labels by using the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCommonAxis.html#Syncfusion_Blazor_HeatMap_HeatMapCommonAxis_LabelFormat) property. Using this property, you can customize the axis label by global string format (‘P’, ‘C’, etc) or customized format like ‘{value}°C’.
 
 ```cshtml
 

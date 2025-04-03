@@ -1,0 +1,41 @@
+@using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.DropDowns;
+@using System.Net;
+@using System.Text.Json;
+
+<SfAutoComplete @ref="AutoCompleteRef" Placeholder="Search something" TValue="string" TItem="GoogleSearch" Width="500px">
+    <AutoCompleteFieldSettings Value="SuggestionText" />
+    <AutoCompleteEvents TItem="GoogleSearch" TValue="string" Filtering="@OnCustomFiltering" />
+</SfAutoComplete>
+@code {
+    SfAutoComplete<string, GoogleSearch> AutoCompleteRef { get; set; }
+    static readonly HttpClient client = new HttpClient();
+    class GoogleSearch
+    {
+        public string SuggestionText { get; set; } = String.Empty;
+    }
+    private async Task OnCustomFiltering(FilteringEventArgs args)
+    {
+        var suggestions = new List<GoogleSearch>();
+        var url = "https://suggestqueries.google.com/complete/search?client=firefox&q=" + args.Text;
+
+        var response = await client.GetAsync(url);
+        response.EnsureSuccessStatusCode();
+        using (var stream = await response.Content.ReadAsStreamAsync())
+        using (var reader = new StreamReader(stream))
+        {
+            var result = reader.ReadToEnd();
+            var json = JsonDocument.Parse(result);
+            var array = json.RootElement.EnumerateArray();
+            foreach (var item in array.Skip(1).Take(1).ToList())
+
+            {
+                foreach (var suggestion in item.EnumerateArray())
+                {
+                    suggestions.Add(new GoogleSearch { SuggestionText = suggestion.GetString() });
+                }
+            }
+        }
+        await AutoCompleteRef.FilterAsync(suggestions);
+    }
+}

@@ -1,0 +1,59 @@
+@using Syncfusion.Blazor.DataForm
+@using System.ComponentModel.DataAnnotations
+
+<SfDataForm ID="MyForm" Model="@FieldTypeModel" Width="50%">
+           
+    <FormValidator>
+        <DataAnnotationsValidator></DataAnnotationsValidator>
+    </FormValidator>
+
+    <FormItems>
+        <FormAutoGenerateItems />
+    </FormItems>
+
+</SfDataForm>
+
+
+@code {
+
+    public enum Countries
+    {
+        Australia,
+        Bermuda,
+        Canada
+    }
+
+    public class FieldTypes
+    {
+        [Required(ErrorMessage = "Please enter a value for the IntField")]
+        [Display(Name = "Integer field")]
+        public int? IntField { get; set; }
+
+        [Required(ErrorMessage = "Please enter a value for the StringField")]
+        [Display(Name = "String field")]
+        public string StringField { get; set; }
+
+        [Required(ErrorMessage = "Please enter a value for the StringField")]
+        [Display(Name = "Enumeration Field")]
+        public Countries EnumField { get; set; }
+
+        [Required(ErrorMessage = "Please select a date for the DateTimeField")]
+        [Display(Name = "DateTime field")]
+        public DateTime? DateTimeField { get; set; }
+
+        [Required(ErrorMessage = "Please select a date for the DateOnlyField")]
+        [Display(Name = "DateOnly field")]
+        public DateOnly? DateOnlyField { get; set; }
+
+        [Required(ErrorMessage = "Please select a time for the TimeOnlyField")]
+        [Display(Name = "TimeOnly field")]
+        public TimeOnly? TimeOnlyField { get; set; }
+
+        [Required(ErrorMessage = "Please check the BoolField")]
+        [Range(typeof(bool), "true", "true", ErrorMessage = "The BoolField must be checked")]
+        [Display(Name = "Boolean field")]
+        public bool BoolField { get; set; }
+    }
+
+    private FieldTypes FieldTypeModel = new FieldTypes();
+}

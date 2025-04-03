@@ -1,0 +1,12 @@
+@using Syncfusion.Blazor.DropDowns
+
+<SfAutoComplete TValue="string" TItem="string" Placeholder="Select a game" DataSource="@data" Width="300px"></SfAutoComplete>
+
+@code {
+    List<string> data = new List<string>() { "Cricket", "Badminton", "Football" };
+}
+<style>
+    .e-ddl.e-input-group input.e-input::placeholder {
+        color: red;
+    }
+</style>

@@ -9,7 +9,7 @@ documentation: ug
 
 # Expand/Collapse Actions in Blazor TreeView Component
 
-By clicking on the respective arrow icons, you can expand or collapse the parent TreeView nodes in the Blazor TreeView component. The **Expanded** field or [ExpandedNodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_ExpandedNodes) property can be used to perform expand action in the TreeView component.
+By clicking on the respective arrow icons, you can expand or collapse the parent TreeView nodes in the Blazor TreeView component. The [**Expanded**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_Expanded) field or [ExpandedNodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_ExpandedNodes) property can be used to perform expand action in the TreeView component.
 
 If you use the **Expanded** field, you can map it directly in the data source.
 
@@ -17,7 +17,7 @@ In the TreeView component, the [ExpandedNodes](https://help.syncfusion.com/cr/bl
 
 ## Expand nodes through data binding
 
-The Blazor TreeView component allows for specific nodes to be expanded upon initialization by using the **Expanded** field. Setting the Expanded field to true for a parent node in the data source will expand that particular parent node in the user interface. 
+The Blazor TreeView component allows for specific nodes to be expanded upon initialization by using the [**Expanded**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_Expanded) field. Setting the Expanded field to true for a parent node in the data source will expand that particular parent node in the user interface. 
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -116,9 +116,9 @@ The Blazor TreeView component allows the expansion of specific nodes during init
     public string[] ExpandedNodes = new string[] { "1" };
     public class MusicAlbum
     {
-        public string Id { get; set; }
-        public string ParentId { get; set; }
-        public string Name { get; set; }
+        public string? Id { get; set; }
+        public string? ParentId { get; set; }
+        public string? Name { get; set; }
         public bool Expanded { get; set; }
         public bool? IsChecked { get; set; }
         public bool HasChild { get; set; }
@@ -359,9 +359,9 @@ The [CollapseAllAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.N
     SfTreeView<MusicAlbum>? treeview;
     public class MusicAlbum
     {
-        public string Id { get; set; }
-        public string ParentId { get; set; }
-        public string Name { get; set; }
+        public string? Id { get; set; }
+        public string? ParentId { get; set; }
+        public string? Name { get; set; }
         public bool Expanded { get; set; }
         public bool? IsChecked { get; set; }
         public bool HasChild { get; set; }
@@ -525,9 +525,9 @@ The [CollapseAllAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.N
     SfTreeView<MusicAlbum>? treeview;
     public class MusicAlbum
     {
-        public string Id { get; set; }
-        public string ParentId { get; set; }
-        public string Name { get; set; }
+        public string? Id { get; set; }
+        public string? ParentId { get; set; }
+        public string? Name { get; set; }
         public bool Expanded { get; set; }
         public bool? IsChecked { get; set; }
         public bool HasChild { get; set; }
@@ -617,10 +617,10 @@ In the following example, the expanded nodes are collapsed while the **Gospel** 
 
 <SfTreeView TValue="MusicAlbum" @ref="treeview" ShowCheckBox="true" AutoCheck="true">
     <TreeViewFieldsSettings TValue="MusicAlbum" Id="Id" DataSource="@Albums" Text="Name" ParentID="ParentId" HasChildren="HasChild" Expanded="Expanded" IsChecked="IsChecked"></TreeViewFieldsSettings>
-    <TreeViewEvents TValue="MusicAlbum" NodeExpanding="nodeEpanding"></TreeViewEvents>
+    <TreeViewEvents TValue="MusicAlbum" NodeExpanding="nodeExpanding"></TreeViewEvents>
 </SfTreeView>
 @code {
-    public void nodeEpanding(NodeExpandEventArgs args)
+    public void nodeExpanding(NodeExpandEventArgs args)
     {
         if (args.NodeData.Text == "Gospel")
         {
@@ -715,7 +715,7 @@ In the following example, the expand action for the **Discover Music** node is c
 
 <SfTreeView TValue="MusicAlbum" ShowCheckBox="true" AutoCheck="true">
     <TreeViewFieldsSettings TValue="MusicAlbum" Id="Id" DataSource="@Albums" Text="Name" ParentID="ParentId" HasChildren="HasChild" Expanded="Expanded" IsChecked="IsChecked"></TreeViewFieldsSettings>
-    <TreeViewEvents TValue="MusicAlbum" NodeExpanding="nodeEpanding" NodeCollapsing="NodeCollapsing"></TreeViewEvents>
+    <TreeViewEvents TValue="MusicAlbum" NodeExpanding="nodeEpanding"></TreeViewEvents>
 </SfTreeView>
 @code {
     public void nodeEpanding(NodeExpandEventArgs args)
@@ -815,12 +815,10 @@ The [TreeViewNodeAnimationSettings](https://help.syncfusion.com/cr/blazor/Syncfu
 
 <SfTreeView TValue="MailItem">
     <TreeViewFieldsSettings TValue="MailItem" Id="Id" DataSource="@MyFolder" Text="FolderName" ParentID="ParentId" HasChildren="HasSubFolders" Expanded="Expanded"></TreeViewFieldsSettings>
-    <b>
         <TreeViewNodeAnimationSettings>
             <TreeViewAnimationExpand Duration="5000" Effect="Syncfusion.Blazor.AnimationEffect.SlideDown" Easing="Linear"></TreeViewAnimationExpand>
             <TreeViewAnimationCollapse Duration="1000" Effect="Syncfusion.Blazor.AnimationEffect.SlideUp" Easing="Linear"></TreeViewAnimationCollapse>
         </TreeViewNodeAnimationSettings>
-    </b>
 </SfTreeView>
 @code {
     public class MailItem

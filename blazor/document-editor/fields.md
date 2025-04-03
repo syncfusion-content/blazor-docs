@@ -18,9 +18,9 @@ You can add a field to the document by using [`InsertFieldAsync`](https://help.s
 The following example code illustrates how to insert merge field programmatically by providing the field code and field result.
 
 ```csharp
-string fieldCode = 'MERGEFIELD  First Name  \\* MERGEFORMAT ';
-string fieldResult = '«First Name»';
-container.DocumentEditor.Editor.InsertFieldAsync(fieldCode, fieldResult);
+string fieldCode = "MERGEFIELD  First Name  \\* MERGEFORMAT ";
+string fieldResult = "«First Name»";
+await container.DocumentEditor.Editor.InsertFieldAsync(fieldCode, fieldResult);
 ```
 
 N> Document editor does not validate/process the field code/field result. it simply inserts the field with specified field information.
@@ -31,7 +31,7 @@ Document Editor provides support for updating bookmark cross reference field. Th
 
 ```csharp
 //Update all the bookmark cross reference field in the document.
-container.DocumentEditor.updateFieldsAsync();
+await container.DocumentEditor.UpdateFieldsAsync();
 ```
 
 Bookmark cross reference fields can be updated through UI by using update fields option in `Toolbar`.
@@ -50,7 +50,7 @@ You can get field code and field result of the current selected field by using [
 
 ```csharp
 //Gets the field information of the selected field.
-FieldInfo fieldInfo = container.DocumentEditor.Selection.GetFieldInfoAsync();
+FieldInfo fieldInfo = await container.DocumentEditor.Selection.GetFieldInfoAsync();
 ```
 
 N> For nested fields, this method returns combined field code and result.
@@ -61,16 +61,16 @@ You can modify the field code and field result of the current selected field by 
 
 ```csharp
 //Gets the field information for the selected field.
-FieldInfo fieldInfo = container.DocumentEditor.Selection.GetFieldInfoAsync();
+FieldInfo fieldInfo = await container.DocumentEditor.Selection.GetFieldInfoAsync();
 
 //Modify field code
-fieldInfo.Code = 'MERGEFIELD  First Name  \\* MERGEFORMAT ';
+fieldInfo.Code = "MERGEFIELD  First Name  \\* MERGEFORMAT ";
 
 //Modify field result
-fieldInfo.Result = '«First Name»';
+fieldInfo.Result = "«First Name»";
 
 //Modify field code and result of the current selected field.
-container.DocumentEditor.Editor.SetFieldInfoAsync(fieldInfo);
+await container.DocumentEditor.Editor.SetFieldInfoAsync(fieldInfo);
 ```
 
 N> For nested field, entire field gets replaced completely with the specified field information.

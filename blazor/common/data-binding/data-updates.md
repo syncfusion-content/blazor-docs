@@ -9,11 +9,11 @@ documentation: ug
 
 # Observable Collection and INotifyPropertyChanged in Blazor
 
-Syncfusion Blazor components supports to automatically update data based on `INotifyCollectionChanged` (`ObservableCollection`) and `INotifyPropertyChanged` interfaces. 
+Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components supports to automatically update data based on `INotifyCollectionChanged` (`ObservableCollection`) and `INotifyPropertyChanged` interfaces. 
 
 ## Observable Collection
 
-The data-bound components (like DataGrid, Kanban, Scheduler) provides support to update its data without any additional refresh call when using `ObservableCollection` as data source and perform add, remove, clear actions in collection. ObservableCollection notifies the collection changes using [INotifyCollectionChanged](https://docs.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged) interface.  
+The data-bound components (like DataGrid, Kanban, Scheduler) provides support to update its data without any additional refresh call when using `ObservableCollection` as data source and perform add, remove, clear actions in collection. ObservableCollection notifies the collection changes using [INotifyCollectionChanged](https://learn.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=net-7.0) interface.  
 
 In the following code example, DataGrid automatically updates its data when add, remove items in the `ObservableCollection`.
 
@@ -73,7 +73,7 @@ In the following code example, DataGrid automatically updates its data when add,
 }
 ```
 
-### List of Syncfusion Components supports ObservableCollection
+### List of Syncfusion<sup style="font-size:70%">&reg;</sup> Components supports ObservableCollection
 
 * AutoComplete
 * Breadcrumb
@@ -104,9 +104,9 @@ In the following code example, DataGrid automatically updates its data when add,
 
 ## INotifyPropertyChanged
 
-The data-bound components (like DataGrid, Kanban, Scheduler) provides support to update its data without any additional refresh call when changing property value of item if an item implements [INotifyPropertyChanged ](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view) interface. `INotifyPropertyChanged` interface is used to notify, that a property value has changed.
+The data-bound components (like DataGrid, Kanban, Scheduler) provides support to update its data without any additional refresh call when changing property value of item if an item implements [INotifyPropertyChanged ](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=net-7.0) interface. `INotifyPropertyChanged` interface is used to notify, that a property value has changed.
 
-In the below example, `DataOrder` implements `INotifyPropertyChanged` interface and raises a [PropertyChanged](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged.propertychanged) event when property values are changed. DataGrid automatically updates its property values are changed in data object by listening to `PropertyChanged` event.
+In the below example, `DataOrder` implements `INotifyPropertyChanged` interface and raises a [PropertyChanged](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged.propertychanged?view=net-7.0) event when property values are changed. DataGrid automatically updates its property values are changed in data object by listening to `PropertyChanged` event.
 
 ```cshtml
 @using System.Collections.ObjectModel;

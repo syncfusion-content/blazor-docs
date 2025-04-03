@@ -9,7 +9,7 @@ documentation: ug
 
 # Column Menu in Blazor DataGrid
 
-The column menu has options to integrate features like sorting, grouping, filtering, column chooser, and autofit in it. When the user clicks on multiple icon of the column this menu gets displayed. To enable column menu, you need to define the [ShowColumnMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ShowColumnMenu) property as true.
+The column menu in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid component provides options to enable features such as sorting, grouping, filtering, column chooser, and autofit. When users click on the column header’s menu icon, a menu will be displayed with these integrated features. To enable the column menu, you need to set the [ShowColumnMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ShowColumnMenu) property to true in the Grid configuration.
 
 The default menu items are displayed in the following table,
 
@@ -24,294 +24,606 @@ The default menu items are displayed in the following table,
 | **ColumnChooser** | Choose the column visibility. |
 | **Filter** | Show the filter option as given in filterSettings [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Type) property |
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Orders" Height="315" AllowGrouping="true" ColumnMenuItems=@MenuItems AllowFiltering="true" ShowColumnMenu="true" AllowPaging="true">
+<SfGrid DataSource="@Orders" Height="315" AllowGrouping="true" AllowSorting="true" AllowFiltering="true" ShowColumnMenu="true" AllowPaging="true">
     <GridFilterSettings Type="FilterType.CheckBox"></GridFilterSettings>
     <GridGroupSettings ShowGroupedColumn="true"></GridGroupSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Center" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150" TextAlign="TextAlign.Center" ShowColumnMenu="false"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Center" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Center" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
-
-@code{
-    public string[] MenuItems = new string[] { "Group", "Ungroup", "ColumnChooser", "Filter" };
-
-    public List<Order> Orders { get; set; }
-
+@code {
+    public List<OrderData> Orders { get; set; }    
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
-    }
-
-    public class Order
-    {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
+        Orders = OrderData.GetAllRecords();
     }
 }
-```
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+public class OrderData
+{
+    public static List<OrderData> Order = new List<OrderData>();
+    public OrderData(int OrderID, double Freight, string CustomerId, string ShipCity, string ShipCountry)
+    {
+        this.OrderID = OrderID;
+        this.Freight = Freight;
+        this.CustomerID = CustomerId;
+        this.ShipCity = ShipCity;
+    }
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Order.Count == 0)
+        {
+            Order.Add(new OrderData(10248, 32.38, "VINET", "Reims"));
+            Order.Add(new OrderData(10249, 11.61, "TOMSP", "Münster"));
+            Order.Add(new OrderData(10250, 65.83, "HANAR", "Rio de Janeiro"));
+            Order.Add(new OrderData(10251, 41.34, "VICTE", "Lyon"));
+            Order.Add(new OrderData(10252, 51.3, "SUPRD", "Charleroi"));
+            Order.Add(new OrderData(10253, 58.17, "HANAR", "Rio de Janeiro"));
+            Order.Add(new OrderData(10254, 22.98, "CHOPS", "Bern"));
+            Order.Add(new OrderData(10255, 148.33, "RICSU", "Genève"));
+            Order.Add(new OrderData(10256, 13.97, "WELLI", "Resende"));
+            Order.Add(new OrderData(10257, 81.91, "HILAA", "San Cristóbal"));
+            Order.Add(new OrderData(10258, 140.51, "ERNSH", "Graz"));
+            Order.Add(new OrderData(10259, 3.25, "CENTC", "México D.F."));
+            Order.Add(new OrderData(10260, 55.09, "OTTIK", "Köln"));
+            Order.Add(new OrderData(10261, 3.05, "QUEDE", "Rio de Janeiro"));
+            Order.Add(new OrderData(10262, 48.29, "RATTC", "Albuquerque"));
+        }
+        return Order;
+    }
+    public int OrderID { get; set; }
+    public double Freight { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipCity { get; set; }
+}
+{% endhighlight %}
+{% endtabs %}
 
-N> * You can disable column menu for a particular column by defining the column's [ShowColumnMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ShowColumnMenu) property as false.
-<br/> * You can customize the default menu items by defining the [ColumnMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) with the required items.
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLzMLWLKTPWHQcg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-The following image represents DataGrid with column menu property enabled,
-![Blazor DataGrid with Column Menu](images/blazor-datagrid-column-menu.gif)
+> *  You can disable column menu for a particular column by defining the column's [ShowColumnMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ShowColumnMenu) property as false.
+> * You can customize the default menu items by defining the [ColumnMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ColumnMenuItems) with the required items.
 
-## Custom column menu
+## Prevent column menu for particular column
 
-Custom column menu items can be added by defining [ColumnMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ColumnMenuItems) as a collection of [ColumnMenuItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnMenuItemModel.html) class. Actions for the customized column menu item can be defined in the [ColumnMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnMenuItemClicked) event of the Grid.
+The Syncfusion Blazor DataGrid component provides the ability to prevent the appearance of the column menu for specific columns. This feature is useful when you want to restrict certain columns from being customizable through the column menu.
 
-In the following sample, Order ID, Order Date, and Freight columns are sorted at initial rendering. When clicking the custom column menu item in the OrderID column, sorting will be cleared using the [ClearSortingAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearSortingAsync_System_Collections_Generic_List_System_String__) method in the `ColumnMenuItemClicked` event.
+To prevent the column menu for a particular column, you can set the [ShowColumnMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ShowColumnMenu) property to **false** for that specific column configuration. This will disable the column menu options specifically for the designated column, while other columns will have the column menu enabled.
 
-```cshtml
+The following example demonstrates how to prevent the column menu for a specific column. In this example, the column menu is disabled for the **OrderID** column by setting the `ShowColumnMenu` property to **false**.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 
-<SfGrid @ref="Grid" DataSource="@Orders" Height="315" ColumnMenuItems="@(new List<ColumnMenuItemModel>() { new ColumnMenuItemModel { Text = "Clear Sorting", Id = "OrderID" } })" ShowColumnMenu="true" AllowPaging="true" AllowSorting="true">
+<SfGrid DataSource="@Orders" Height="315" AllowSorting="true" AllowGrouping="true" AllowFiltering="true" ShowColumnMenu="true" AllowPaging="true">
+    <GridFilterSettings Type="FilterType.CheckBox"></GridFilterSettings>
+    <GridGroupSettings ShowGroupedColumn="true"></GridGroupSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" ShowColumnMenu="false" TextAlign="TextAlign.Right" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
+    </GridColumns>
+</SfGrid>
+@code {
+    public List<OrderData> Orders { get; set; }    
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+public class OrderData
+{
+    public static List<OrderData> Order = new List<OrderData>();    
+    public OrderData(int OrderID, string CustomerId, string Shipcity, double Freight)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerId;
+        this.ShipCity = Shipcity;
+        this.Freight = Freight; 
+    }
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Order.Count == 0)
+        {
+            Order.Add(new OrderData(10248, "VINET", "Reims", 32.38));
+            Order.Add(new OrderData(10249, "TOMSP", "Münster", 11.61));
+            Order.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", 65.83));
+            Order.Add(new OrderData(10251, "VICTE", "Lyon", 41.34));
+            Order.Add(new OrderData(10252, "SUPRD", "Charleroi", 51.3));
+            Order.Add(new OrderData(10253, "HANAR", "Rio de Janeiro", 58.17));
+            Order.Add(new OrderData(10254, "CHOPS", "Bern", 22.98));
+            Order.Add(new OrderData(10255, "RICSU", "Genève", 148.33));
+            Order.Add(new OrderData(10256, "WELLI", "Resende", 13.97));
+            Order.Add(new OrderData(10257, "HILAA", "San Cristóbal", 81.91));
+            Order.Add(new OrderData(10258, "ERNSH", "Graz", 140.51));
+            Order.Add(new OrderData(10259, "CENTC", "México D.F.", 3.25));
+            Order.Add(new OrderData(10260, "OTTIK", "Köln", 55.09));
+            Order.Add(new OrderData(10261, "QUEDE", "Rio de Janeiro", 3.05));
+            Order.Add(new OrderData(10262, "RATTC", "Albuquerque", 48.29));
+        }
+        return Order;
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipCity { get; set; }
+    public double Freight { get; set; } 
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBfiCVHTnFFingT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Add custom column menu item
+
+The custom column menu item feature allows you to add additional menu items to the column menu in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid. These custom menu items can be defined using the [ColumnMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ColumnMenuItems) property, which accepts a collection of [ColumnMenuItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnMenuItemModel.html) class.You can define the actions for these custom items in the [ColumnMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnMenuItemClicked) event.
+
+Consider the following example, which demonstrates how to add a custom column menu item to clear the sorting and grouping of the Grid using the [ClearSortingAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearSortingAsync_System_Collections_Generic_List_System_String__)  and [ClearGroupingAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearGroupingAsync) method in the `ColumnMenuItemClicked` event:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+
+<SfGrid @ref="Grid" DataSource="@Orders" Height="315" ColumnMenuItems="@MenuItems" ShowColumnMenu="true" AllowGrouping="true" AllowPaging="true" AllowSorting="true">
     <GridSortSettings>
         <GridSortColumns>
             <GridSortColumn Field="OrderID" Direction="SortDirection.Ascending"></GridSortColumn>
-            <GridSortColumn Field="OrderDate" Direction="SortDirection.Ascending"></GridSortColumn>
-            <GridSortColumn Field="Freight" Direction="SortDirection.Descending"></GridSortColumn>
         </GridSortColumns>
     </GridSortSettings>
-    <GridEvents ColumnMenuItemClicked="ColumnMenuItemClickedHandler" TValue="Order"></GridEvents>
+    <GridGroupSettings ShowGroupedColumn="true" Columns=@InitialGrouping></GridGroupSettings>
+    <GridEvents ColumnMenuItemClicked="ColumnMenuItemClickedHandler" TValue="OrderData"></GridEvents>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID)  HeaderText="Order ID" TextAlign="TextAlign.Center" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150" TextAlign="TextAlign.Center" ShowColumnMenu="false"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Center" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Center" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Center" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="120" ShowColumnMenu="false"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Center" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
+@code {
+    private SfGrid<OrderData> Grid;
+    public string[] InitialGrouping = (new string[] { "Freight" });
+    public List<ColumnMenuItemModel> MenuItems = new List<ColumnMenuItemModel>() { 
+        new ColumnMenuItemModel { Text = "Clear Sorting", Id = "sort" },
+        new ColumnMenuItemModel { Text = "Clear Grouping", Id = "group" }
+    };
+    public List<OrderData> Orders { get; set; }
 
-@code{
-    SfGrid<Order> Grid { get; set; }
-    public List<Order> Orders { get; set; }
-    public List<string> columns = new List<string>(){ "OrderID"};
-
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }
     public void ColumnMenuItemClickedHandler(ColumnMenuClickEventArgs args)
     {
-     Grid.ClearSortingAsync(columns);
-    }
-
-    protected override void OnInitialized()
-    {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        switch (args.Item.Id)
         {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
-    }
-    public class Order
-    {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
-    }
-}
-
-```
-
-![Customize Column Menu in Blazor DataGrid](images/blazor-datagrid-custom-column-menu.gif)
-
-<!-- Column menu events
-
-The grid component triggers the below events when column menu operations are performed,
-
-1. [`ColumnMenuOpen`]   -  Triggers before the column menu opens
-2. [`ColumnMenuItemClicked`]  -  Triggers when a column menu is clicked
-
-```cshtml
-@using Syncfusion.Blazor.Grids
-
-<SfGrid DataSource="@Orders" ShowColumnMenu="true" AllowGrouping="true" AllowFiltering="true" AllowPaging="true" Height ="315">
-<GridEvents ColumnMenuOpen="OnMenuOpen" ColumnMenuItemClicked="OnMenuClick" TValue="Order"></GridEvents>
-    <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerName) HeaderText="Customer Name" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" MinWidth="10" Width="120" MaxWidth="200"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
-    </GridColumns>
-</SfGrid>
-
-@code{
-
-    public List<Order> Orders { get; set; }
-
-    protected override void OnInitialized()
-    {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerName = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
-    }
-
-    public void OnMenuOpen() {
-        // Perform required operations here
-    }
-
-    public void OnMenuClick() {
-        // Perform required operations here
-    }
-
-    public class Order {
-        public int? OrderID { get; set; }
-        public string CustomerName { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
-    }
-}
-``` -->
-
-<!-- Custom column menu item
-
-Custom column menu items can be added by defining the [`ColumnMenuItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) as a collection of the [`ColumnMenuItemModel`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.ColumnMenuItemModel.html).
-
-Actions for the customized items can be defined in the [`ColumnMenuItemClicked`] event.
-
-```cshtml
-@using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.Navigations
-
-<SfGrid @ref="Grid" DataSource="@Orders" Height="315" ColumnMenuItems=@MenuItems AllowSorting="true" ShowColumnMenu="true" AllowPaging="true">
-    <GridEvents ColumnMenuItemClicked="OnMenuClick" TValue="Order"></GridEvents>
-    <GridSortSettings Columns=@SortSettings></GridSortSettings>
-    <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Center" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150" TextAlign="TextAlign.Center" ShowColumnMenu="false"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Center" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Center" Width="120"></GridColumn>
-    </GridColumns>
-</SfGrid>
-
-@code{
-
-    private SfGrid<Order> Grid;
-
-    public List<ColumnMenuItemModel> MenuItems = new List<ColumnMenuItemModel>()
-    {
-        new ColumnMenuItemModel() { Text = "Clear Sorting", Id = "gridclearsorting" }
-    };
-
-    public List<SortDescriptorModel> SortSettings = new List<SortDescriptorModel>()
-    {
-        new SortDescriptorModel() { Direction = SortDirection.Ascending, Field = "OrderID" }
-    };
-
-    public class SortSetting
-    {
-        public string Direction { get; set; }
-        public string Field { get; set; }
-    }
-
-    public List<Order> Orders { get; set; }
-
-    protected override void OnInitialized()
-    {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
-    }
-
-    public class Order
-    {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
-    }
-
-    public void OnMenuClick(MenuEventArgs args)
-    {
-        if (args.Item.Id == "gridclearsorting") {
-            this.Grid.ClearSorting();
+            case "sort":
+                Grid.ClearSortingAsync();
+                break;
+            case "group":
+                Grid.ClearGroupingAsync();
+                break;
         }
     }
-
 }
-``` 
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+public class OrderData
+{
+    public static List<OrderData> Order = new List<OrderData>();
+    public OrderData(int OrderID, double Freight, string CustomerId, string ShipCity)
+    {
+        this.OrderID = OrderID;
+        this.Freight = Freight;
+        this.CustomerID = CustomerId;
+        this.ShipCity = ShipCity;
+    }
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Order.Count == 0)
+        {
+            Order.Add(new OrderData(10248, 32.38, "VINET", "Reims"));
+            Order.Add(new OrderData(10249, 11.61, "TOMSP", "Münster"));
+            Order.Add(new OrderData(10250, 65.83, "HANAR", "Rio de Janeiro"));
+            Order.Add(new OrderData(10251, 41.34, "VICTE", "Lyon"));
+            Order.Add(new OrderData(10252, 51.3, "SUPRD", "Charleroi"));
+            Order.Add(new OrderData(10253, 58.17, "HANAR", "Rio de Janeiro"));
+            Order.Add(new OrderData(10254, 22.98, "CHOPS", "Bern"));
+            Order.Add(new OrderData(10255, 148.33, "RICSU", "Genève"));
+            Order.Add(new OrderData(10256, 13.97, "WELLI", "Resende"));
+            Order.Add(new OrderData(10257, 81.91, "HILAA", "San Cristóbal"));
+            Order.Add(new OrderData(10258, 140.51, "ERNSH", "Graz"));
+            Order.Add(new OrderData(10259, 3.25, "CENTC", "México D.F."));
+            Order.Add(new OrderData(10260, 55.09, "OTTIK", "Köln"));
+            Order.Add(new OrderData(10261, 3.05, "QUEDE", "Rio de Janeiro"));
+            Order.Add(new OrderData(10262, 48.29, "RATTC", "Albuquerque"));
+        }
+        return Order;
+    }
+    public int OrderID { get; set; }
+    public double Freight { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipCity { get; set; }
+}
+{% endhighlight %}
+{% endtabs %}
 
-The following GIF shows the sorting cleared on clicking the custom column menu item in Grid
--->
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htVJMrMgCLBDWpXz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-<!-- Customize menu items for particular columns
+## Customize menu items for particular columns
 
-Sometimes, you may need to hide an item from column menu for particular columns alone. For this case, you need to set the [`Hide`] property of the [`ColumnMenuOpenEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnMenuOpenEventArgs.html#Syncfusion_Blazor_Grids_ColumnMenuOpenEventArgs__ctor) as true in the [`ColumnMenuOpen`] event.
+Sometimes, you have a scenario that to hide an item from column menu for particular columns. In that case, you need to define the [MenuItem.Hidden](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Hidden) property as **true** in the [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnColumnMenuOpen) event.
 
-In the following sample code, Filter item is hidden in column menu for the OrderID column.
+The following sample, **Filter** item was hidden in column menu when opens for the **OrderID** column.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Orders" Height="315" AllowSorting="true" AllowFiltering="true" AllowGrouping="true"  ShowColumnMenu="true" AllowPaging="true">
-    <GridEvents ColumnMenuOpen="OnMenuOpen" TValue="Order"></GridEvents>
-    <GridFilterSettings Type=FilterType.Menu></GridFilterSettings>
+<SfGrid @ref="Grid" DataSource="@Orders" Height="315" AllowFiltering="true" AllowGrouping="true" ShowColumnChooser="true" AllowSorting="true" ShowColumnMenu="true">
+    <GridEvents OnColumnMenuOpen="OnColumnMenuOpenHandler" TValue="OrderData"></GridEvents>
+    <GridFilterSettings Type="FilterType.Menu"></GridFilterSettings>
+    <GridGroupSettings ShowGroupedColumn="true"></GridGroupSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Center" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150" TextAlign="TextAlign.Center" ShowColumnMenu="false"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Center" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Center" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
-
-@code{
-    public List<Order> Orders { get; set; }
-
+@code {
+    private SfGrid<OrderData> DefaultGrid;
+    public List<OrderData> Orders { get; set; }
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        Orders = OrderData.GetAllRecords();
+    }
+    public void OnColumnMenuOpenHandler(ColumnMenuOpenEventArgs args)
+    {
+        foreach (var item in args.Items)
         {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
-    }
-
-    public class Order
-    {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
-    }
-
-    public void OnMenuOpen(MenuEventArgs args)
-    {
-        foreach (ColumnMenuItemModel Item in args.Items) {
-            if (Item.Text == "Filter" && args.Column.Field == "OrderID") {
-                Item.Hide = true;
-            } else {
-                Item.Hide = false;
+            // Hide the "Filter" option for the "OrderID" column
+            if (item.Text == "Filter" && args.Column.Field == "OrderID")
+            {
+                item.Hidden = true;
+            }
+            else
+            {
+                item.Hidden = false;
             }
         }
     }
 }
-``` 
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+public class OrderData
+{
+    public static List<OrderData> Order = new List<OrderData>();
+    public OrderData(int OrderID, double Freight, string CustomerId, string ShipCity, string ShipCountry)
+    {
+        this.OrderID = OrderID;
+        this.Freight = Freight;
+        this.ShipCity = ShipCity;
+        this.CustomerID = CustomerId;
+        this.ShipCountry = ShipCountry;
+    }
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Order.Count == 0)
+        {
+            Order.Add(new OrderData(10248, 32.38, "VINET", "Reims", "Australia"));
+            Order.Add(new OrderData(10249, 11.61, "TOMSP", "Münster", "Australia"));
+            Order.Add(new OrderData(10250, 65.83, "HANAR", "Rio de Janeiro", "United States"));
+            Order.Add(new OrderData(10251, 41.34, "VICTE", "Lyon", "Australia"));
+            Order.Add(new OrderData(10252, 51.3, "SUPRD", "Charleroi","United States"));
+            Order.Add(new OrderData(10253, 58.17, "HANAR", "Rio de Janeiro","United States"));
+            Order.Add(new OrderData(10254, 22.98, "CHOPS", "Bern", "Switzerland"));
+            Order.Add(new OrderData(10255, 148.33, "RICSU", "Genève", "Switzerland"));
+            Order.Add(new OrderData(10256, 13.97, "WELLI", "Resende", "Brazil"));
+            Order.Add(new OrderData(10257, 81.91, "HILAA", "San Cristóbal", "Venezuela"));
+            Order.Add(new OrderData(10258, 140.51, "ERNSH", "Graz", "Austria"));
+            Order.Add(new OrderData(10259, 3.25, "CENTC", "México D.F.", "Mexico"));
+            Order.Add(new OrderData(10260, 55.09, "OTTIK", "Köln", "Germany"));
+            Order.Add(new OrderData(10261, 3.05, "QUEDE", "Rio de Janeiro", "Brazil"));
+            Order.Add(new OrderData(10262, 48.29, "RATTC", "Albuquerque", "USA"));
+        }
+        return Order;
+    }
+    public int OrderID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCity { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipCountry { get; set; }
+}
+{% endhighlight %}
+{% endtabs %}
 
-The following GIF shows the customized column menu item for particular column in Grid -->
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtrJWVWUgqiNTWDr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Render nested column menu
+
+The nested column menu feature provides an extended menu option in the grid column headers, allows you to access additional actions and options related to the columns.
+
+To enable the nested column menu feature, you need to define the [ColumnMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ColumnMenuItems) property in your component. The `ColumnMenuItems` property is an array that contains the items for the column menu. Each item can be a string representing a built-in menu item or an object defining a custom menu item.
+
+Here is an example of how to configure the `ColumnMenuItems` property to include a nested menu:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Navigations
+
+<SfGrid @ref="DefaultGrid" DataSource="@Orders" Height="315" AllowGrouping="true" ShowColumnChooser="true" AllowSorting="true" ShowColumnMenu="true" AllowFiltering="true" ColumnMenuItems=@menuItem>
+    <GridEvents ColumnMenuItemClicked="ColumnMenuItemClickedHandler" TValue="Order"></GridEvents>
+    <GridFilterSettings Type="FilterType.CheckBox"></GridFilterSettings>
+    <GridGroupSettings ShowGroupedColumn="true"></GridGroupSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Center" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="150" TextAlign="TextAlign.Center"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Center" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" TextAlign="TextAlign.Center" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+@code {
+    private SfGrid<OrderData> DefaultGrid;
+    public List<ColumnMenuItemModel> menuItem = new List<ColumnMenuItemModel> { new ContextMenuItemModel { Text = "Group", Id = "group" }, new ContextMenuItemModel { Text = "UnGroup", Id = "UnGroup" }, new ContextMenuItemModel { Text = "ColumnChooser", Id = "ColumnChooser" }, new ContextMenuItemModel { Text = "SubMenu", Id = "SubMenu", Items = (new List<MenuItem> { new MenuItem { Text = "Option1", Id = "Uniq", Items = (new List<MenuItem> { new MenuItem { Text = "Nested", Id = "New" } }) } }) } };
+
+    public List<OrderData> Orders { get; set; }
+   
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }
+    public void ColumnMenuItemClickedHandler(ColumnMenuClickEventArgs args)
+    {
+        if (args.Item.Text == "Group")
+        {
+            DefaultGrid.GroupColumnAsync("CustomerID");
+        }
+        else if (args.Item.Text == "UnGroup")
+        {
+            DefaultGrid.UngroupColumnAsync("CustomerID");
+        }
+        else if (args.Item.Text == "ColumnChooser")
+        {
+            DefaultGrid.OpenColumnChooserAsync(10, 10);
+        }
+        else if (args.Item.Text == "Option1")
+        {
+             // custom function
+            // Here, you can customize your code.
+        }
+        else
+        {
+            // Here, you can customize your code.
+        }
+    }
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+    public OrderData(int? OrderID, string CustomerID, double Freight,string ShipCity)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;
+        this.Freight = Freight;
+        this.ShipCountry = ShipCity;
+    }
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count() == 0)
+        {
+            int code = 10;
+            for (int i = 1; i < 2; i++)
+            {
+                Orders.Add(new OrderData(10248, "ALFKI",33.32, "France"));
+                Orders.Add(new OrderData(10249, "ANANTR", 34.32, "Germany"));
+                Orders.Add(new OrderData(10250, "ANTON", 36.32, "Brazil"));
+                Orders.Add(new OrderData(10251, "BLONP", 54.31, "Belgium"));
+                Orders.Add(new OrderData(10252, "BOLID",35.36, "Switzerland"));
+                Orders.Add(new OrderData(10253, "ANTON", 37.35, "Switzerland"));
+                Orders.Add(new OrderData(10254, "BLONP", 33.32, "Germany"));
+                Orders.Add(new OrderData(10255, "BOLID", 76.74, "Germany"));
+                Orders.Add(new OrderData(10256, "ALFKI",55.43, "Belgium"));                   
+                code += 5;
+            }
+        }
+        return Orders;
+    }
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }      
+    public double? Freight { get; set; }
+    public string ShipCountry { get; set; }
+}
+{% endhighlight %}
+{% endtabs %}
+
+## Customize the icon of column menu
+
+To customize the column menu icon, you need to override the default grid class `.e-icons.e-columnmenu` with a custom CSS property called **content**. By specifying a Unicode character or an icon font’s CSS class, you can change the icon displayed in the column menu.
+
+1. Add the necessary CSS code to override the default grid class:
+
+```css
+.e-grid .e-columnheader .e-icons.e-columnmenu::before {
+   content: "\e99a";
+}
+```
+2. Import the required icon stylesheets. You can use either the material or bootstrap5 style, depending on your preference. Add the following code to import the stylesheets:
+
+```css
+<link href="https://cdn.syncfusion.com/ej2/ej2-icons/styles/material.css" rel="stylesheet" />
+<link href="https://cdn.syncfusion.com/ej2/ej2-icons/styles/bootstrap5.css" rel="stylesheet" />
+```
+Here is an example that demonstrates how to customize the column menu icon in the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowPaging="true" ShowColumnMenu="true">
+    <GridPageSettings PageSize="8"></GridPageSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Center" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" TextAlign="TextAlign.Center" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Center" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" TextAlign="TextAlign.Center" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+<style>
+    .e-grid .e-columnheader .e-icons.e-columnmenu::before {
+       content: "\e99a";
+    }
+</style>
+@code { 
+    public List<OrderData> Orders { get; set; }   
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+    public OrderData(int OrderID, string CustomerID, double Freight,string ShipCity)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;
+        this.Freight = Freight;
+        this.ShipName = ShipCity; 
+    }
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count() == 0)
+        {
+            int code = 10;
+            for (int i = 1; i < 2; i++)
+            {
+                Orders.Add(new OrderData(10248, "ALFKI",33.32, "France"));
+                Orders.Add(new OrderData(10249, "ANANTR", 34.32, "Germany"));
+                Orders.Add(new OrderData(10250, "ANTON", 36.32, "Brazil"));
+                Orders.Add(new OrderData(10251, "BLONP", 54.31, "Belgium"));
+                Orders.Add(new OrderData(10252, "BOLID", 35.36, "Switzerland"));
+                Orders.Add(new OrderData(10253, "ANTON", 37.35, "Switzerland"));
+                Orders.Add(new OrderData(10254, "BLONP", 33.32, "Germany"));
+                Orders.Add(new OrderData(10255, "BOLID", 76.74, "Germany"));
+                Orders.Add(new OrderData(10256, "ALFKI",55.43, "Belgium"));                   
+                code += 5;
+            }
+        }
+        return Orders;
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public string ShipName { get; set; }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXrgCMDHftqrDkea?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Column menu events
+
+The column menu in Syncfusion Blazor DataGrid provides a set of events that allow customization of behavior and performing actions when the column menu is opened or clicked. The below events are helpful for adding additional functionality or implementing specific actions based on user interactions with the column menu.
+
+1. The [OnColumnMenuOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnColumnMenuOpen) event triggers before the column menu opens.
+
+2. The [ColumnMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ColumnMenuItemClicked) event triggers when the user clicks the column menu of the grid.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+
+<div style="text-align: center; color: red">
+    <span>@ColumnMenuMessage</span>
+</div>
+<SfGrid @ref="Grid" DataSource="@Orders" Height="315" ShowColumnMenu="true" AllowFiltering="true" AllowGrouping="true" AllowPaging="true" AllowSorting="true">
+    <GridFilterSettings Type="FilterType.Excel"></GridFilterSettings>
+    <GridGroupSettings ShowGroupedColumn="true"></GridGroupSettings>
+    <GridEvents ColumnMenuItemClicked="ColumnMenuItemClickedHandler" OnColumnMenuOpen="OnColumnMenuOpenHandler" TValue="OrderData"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Center" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Center" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+@code {
+    private SfGrid<OrderData> Grid;
+    public string ColumnMenuMessage;    
+    public List<OrderData> Orders { get; set; }
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }
+    public void OnColumnMenuOpenHandler(ColumnMenuOpenEventArgs args)
+    {
+        ColumnMenuMessage= "OnColumnMenuOpen event triggered";
+    }
+    public void ColumnMenuItemClickedHandler(ColumnMenuClickEventArgs args)
+    {
+        ColumnMenuMessage= "ColumnMenuItemClicked event triggered";    
+    }
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+public class OrderData
+{
+    public static List<OrderData> Order = new List<OrderData>();
+    public OrderData(int OrderID, double Freight, string CustomerId, string ShipCity)
+    {
+        this.OrderID = OrderID;
+        this.Freight = Freight;
+        this.CustomerID = CustomerId;
+        this.ShipCity = ShipCity;
+    }
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Order.Count == 0)
+        {
+            Order.Add(new OrderData(10248, 32.38, "VINET", "Reims"));
+            Order.Add(new OrderData(10249, 11.61, "TOMSP", "Münster"));
+            Order.Add(new OrderData(10250, 65.83, "HANAR", "Rio de Janeiro"));
+            Order.Add(new OrderData(10251, 41.34, "VICTE", "Lyon"));
+            Order.Add(new OrderData(10252, 51.3, "SUPRD", "Charleroi"));
+            Order.Add(new OrderData(10253, 58.17, "HANAR", "Rio de Janeiro"));
+            Order.Add(new OrderData(10254, 22.98, "CHOPS", "Bern"));
+            Order.Add(new OrderData(10255, 148.33, "RICSU", "Genève"));
+            Order.Add(new OrderData(10256, 13.97, "WELLI", "Resende"));
+            Order.Add(new OrderData(10257, 81.91, "HILAA", "San Cristóbal"));
+            Order.Add(new OrderData(10258, 140.51, "ERNSH", "Graz"));
+            Order.Add(new OrderData(10259, 3.25, "CENTC", "México D.F."));
+            Order.Add(new OrderData(10260, 55.09, "OTTIK", "Köln"));
+            Order.Add(new OrderData(10261, 3.05, "QUEDE", "Rio de Janeiro"));
+            Order.Add(new OrderData(10262, 48.29, "RATTC", "Albuquerque"));
+        }
+        return Order;
+    }
+    public int OrderID { get; set; }
+    public double Freight { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipCity { get; set; }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rthfMhiKzNimycPe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 <!-- Column spanning
 

@@ -15,9 +15,9 @@ The events should be provided to the Scheduler using **ScheduleEvents** tag. Whe
 
 ## ActionCompleted
 
-`ActionCompleted` event triggers on successful completion of the Scheduler actions.
+[`ActionCompleted`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_ActionCompleted) event triggers on successful completion of the Scheduler actions.
 
-The action type that can be checked within the `ActionCompleted` event are as follows.
+The action type that can be checked within the [`ActionCompleted`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_ActionCompleted) event are as follows.
 
 | ActionType | Description |
 |------|-------------|
@@ -77,7 +77,7 @@ The action type that can be checked within the `ActionCompleted` event are as fo
 
 ## Created
 
-`Created` event triggers after the Scheduler component is created.
+[`Created`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_Created) event triggers after the Scheduler component is created.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -122,7 +122,7 @@ The action type that can be checked within the `ActionCompleted` event are as fo
 
 ## DataBinding
 
-`DataBinding` event triggers before the data binds to the Scheduler.
+[`DataBinding`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_DataBinding) event triggers before the data binds to the Scheduler.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -167,7 +167,7 @@ The action type that can be checked within the `ActionCompleted` event are as fo
 
 ## DataBound
 
-`DataBound` event triggers once the event data is bound to the Scheduler.
+[`DataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_DataBound) event triggers once the event data is bound to the Scheduler.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -213,7 +213,7 @@ The action type that can be checked within the `ActionCompleted` event are as fo
 
 ## Destroyed
 
-`Destroyed` event triggers when the Scheduler component is destroyed.
+[`Destroyed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_Destroyed) event triggers when the Scheduler component is destroyed.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -258,7 +258,7 @@ The action type that can be checked within the `ActionCompleted` event are as fo
 
 ## Dragged
 
-`Dragged` event triggers when the dragging of appointment is stopped.
+[`Dragged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_Dragged) event triggers when the dragging of appointment is stopped.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -304,7 +304,7 @@ The action type that can be checked within the `ActionCompleted` event are as fo
 
 ## EventRendered
 
-`EventRendered` event triggers before each of the event getting rendered on the Scheduler user interface.
+[`EventRendered`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_EventRendered) event triggers before each of the event getting rendered on the Scheduler user interface.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -358,7 +358,7 @@ The action type that can be checked within the `ActionCompleted` event are as fo
 
 ## MoreEventsClicked
 
-`MoreEventsClicked` event triggers when the more events indicator are clicked.
+[`MoreEventsClicked`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_MoreEventsClicked) event triggers when the more events indicator are clicked.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -406,7 +406,7 @@ The action type that can be checked within the `ActionCompleted` event are as fo
 
 ## Navigating
 
-`Navigating` event triggers before the date or view navigation takes place on Scheduler.
+[`Navigating`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_Navigating) event triggers before the date or view navigation takes place on Scheduler.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -453,9 +453,9 @@ The action type that can be checked within the `ActionCompleted` event are as fo
 
 ## OnActionBegin
 
-`OnActionBegin` event triggers on beginning of every Scheduler action.
+[`OnActionBegin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnActionBegin) event triggers on beginning of every Scheduler action.
 
-The request type that can be checked within the `OnActionBegin` event are as follows.
+The request type that can be checked within the [`OnActionBegin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnActionBegin) event are as follows.
 
 | ActionType | Description |
 |------|-------------|
@@ -513,7 +513,7 @@ The request type that can be checked within the `OnActionBegin` event are as fol
 
 ## OnActionFailure
 
-`OnActionFailure` event triggers when a Scheduler action gets failed or interrupted.
+[`OnActionFailure`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnActionFailure) event triggers when a Scheduler action gets failed or interrupted.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -558,7 +558,7 @@ The request type that can be checked within the `OnActionBegin` event are as fol
 
 ## OnCellClick
 
-`OnCellClick` event triggers when the Scheduler cells are single clicked or on single tap on the same cells in mobile devices.
+[`OnCellClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnCellClick) event triggers when the Scheduler cells are single clicked or on single tap on the same cells in mobile devices.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -605,7 +605,7 @@ The request type that can be checked within the `OnActionBegin` event are as fol
 
 ## OnCellDoubleClick
 
-`OnCellDoubleClick` event triggers when the Scheduler cells are double clicked.
+[`OnCellDoubleClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnCellDoubleClick) event triggers when the Scheduler cells are double clicked.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -650,7 +650,7 @@ The request type that can be checked within the `OnActionBegin` event are as fol
 
 ## OnDragStart
 
-`OnDragStart` event triggers when an appointment is started to drag.
+[`OnDragStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnDragStart) event triggers when an appointment is started to drag.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -695,7 +695,7 @@ The request type that can be checked within the `OnActionBegin` event are as fol
 
 ## OnEventClick
 
-`OnEventClick` event triggers when the events are single clicked or on single tapping the events on the mobile devices.
+[`OnEventClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnEventClick) event triggers when the events are single clicked or on single tapping the events on the mobile devices.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -742,7 +742,7 @@ The request type that can be checked within the `OnActionBegin` event are as fol
 
 ## OnEventDoubleClick
 
-`OnEventDoubleClick` event triggers when the events are double clicked.
+[`OnEventDoubleClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnEventDoubleClick) event triggers when the events are double clicked.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -790,9 +790,9 @@ The request type that can be checked within the `OnActionBegin` event are as fol
 
 ## OnPopupClose
 
-`OnPopupClose` event triggers before any of the Scheduler popups close on the page.
+[`OnPopupClose`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnPopupClose) event triggers before any of the Scheduler popups close on the page.
 
-In case, if you need to prevent only specific popups on Scheduler, then you can check the condition based on the popup type. The types of the popup that can be checked within the `OnPopupClose` event are as follows.
+In case, if you need to prevent only specific popups on Scheduler, then you can check the condition based on the popup type. The types of the popup that can be checked within the [`OnPopupClose`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnPopupClose) event are as follows.
 
 | PopupType | Description |
 |------|-------------|
@@ -852,9 +852,9 @@ In case, if you need to prevent only specific popups on Scheduler, then you can 
 
 ## OnPopupOpen
 
-`OnPopupOpen` event triggers before any of the Scheduler popups opens on the page.
+[`OnPopupOpen`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnPopupOpen) event triggers before any of the Scheduler popups opens on the page.
 
-In case, if you need to prevent only specific popups on Scheduler, then you can check the condition based on the popup type. The types of the popup that can be checked within the `OnPopupOpen` event are as follows.
+In case, if you need to prevent only specific popups on Scheduler, then you can check the condition based on the popup type. The types of the popup that can be checked within the [`OnPopupOpen`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnPopupOpen) event are as follows.
 
 | PopupType | Description |
 |------|-------------|
@@ -914,9 +914,9 @@ In case, if you need to prevent only specific popups on Scheduler, then you can 
 
 ## OnRenderCell
 
-`OnRenderCell` event triggers before each element of the Schedule rendering on the page.
+[`OnRenderCell`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnRenderCell) event triggers before each element of the Schedule rendering on the page.
 
-The ElementType that can be checked within the `OnRenderCell` event are as follows.
+The ElementType that can be checked within the [`OnRenderCell`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnRenderCell) event are as follows.
 
 | ElementType | Description |
 |------|-------------|
@@ -983,7 +983,7 @@ The ElementType that can be checked within the `OnRenderCell` event are as follo
 
 ## OnResizeStart
 
-`OnResizeStart` event triggers when an appointment is started to resize.
+[`OnResizeStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnResizeStart) event triggers when an appointment is started to resize.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -1029,7 +1029,7 @@ The ElementType that can be checked within the `OnRenderCell` event are as follo
 
 ## Resized
 
-`Resized` event triggers when the resizing of appointment is stopped.
+[`Resized`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_Resized) event triggers when the resizing of appointment is stopped.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule

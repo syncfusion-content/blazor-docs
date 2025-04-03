@@ -9,9 +9,9 @@ documentation: ug
 
 # Data Source in Blazor ComboBox Component
 
-The ComboBox loads the data either from local data sources or remote data services using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property. It supports the data type of `array` or [DataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.DataManager.html).
+The ComboBox loads the data either from local data sources or remote data services using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property. It supports the data type of `array` or [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
 
-The ComboBox also supports different kinds of data services such as OData, OData V4, and Web API, and data formats such as XML, JSON, and JSONP with the help of [DataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.DataManager.html) adaptors.
+The ComboBox also supports different kinds of data services such as OData, OData V4, and Web API, and data formats such as XML, JSON, and JSONP with the help of [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) adaptors.
 
 | Fields | Type | Description |
 |------|------|-------------|
@@ -72,7 +72,7 @@ In the following example, `Name` column from complex data has been mapped to the
     };
 }
 ```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBKsLLcKnxcdvLv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Binding Blazor ComboBox Items](./images/blazor-combobox-binding-items.png)
 
@@ -121,6 +121,7 @@ public IEnumerable<Complex> LocalData { get; set; } = new Complex().GetData();
 }
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZrqiLVwKHwhTfxb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Binding Complex Items with Blazor ComboBox](./images/blazor-combobox-complex-data.png)
 
@@ -158,7 +159,7 @@ In the following sample, First 6 contacts are displayed from the **Customers** t
     }
 }
 ```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VthUChrmAnbDTsys?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor ComboBox with Data Binding](./images/blazor-combobox-binding-data.png)
 
@@ -187,13 +188,13 @@ Use the `WebApiAdaptor` to bind ComboBox with Web API created using OData.
     }
 }
 ```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjBgiVLwKnloDWBQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor ComboBox with Web API Data](./images/blazor-combobox-web-api-data.png)
 
 ### Custom adaptor
 
-The [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) has custom adaptor support which allows you to perform manual operations on the data. This can be utilized for implementing custom data binding and editing operations in the ComboBox component.
+The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) has custom adaptor support which allows you to perform manual operations on the data. This can be utilized for implementing custom data binding and editing operations in the ComboBox component.
 
 For implementing custom data binding in ComboBox, the `DataAdaptor` class is used. This abstract class acts as a base class for the custom adaptor.
 
@@ -275,7 +276,7 @@ The following sample code demonstrates implementing custom data binding using cu
 
 ### Offline mode
 
-To avoid post back for every action, set the ComboBox to load all data on initialization and make the actions process in client-side. To enable this behavior, use the `Offline` property of [DataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.DataManager.html).
+To avoid post back for every action, set the ComboBox to load all data on initialization and make the actions process in client-side. To enable this behavior, use the `Offline` property of [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
 
 The following example for remote data binding and enabled offline mode,
 
@@ -301,13 +302,13 @@ The following example for remote data binding and enabled offline mode,
 }
 ```
 
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBACrBQKGCrmiJb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor ComboBox in Offline Mode](./images/blazor-combobox-web-api-data.png)
 
 ### ValueTuple data binding
 
-You can bind [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-5.0) data to the ComboBox component. The following code helps you to get a string value from the enumeration data by using [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-5.0).
+You can bind [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-8.0) data to the ComboBox component. The following code helps you to get a string value from the enumeration data by using [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-8.0).
 
 ```csharp
 
@@ -319,13 +320,13 @@ You can bind [ValueTuple](https://learn.microsoft.com/en-us/dotnet/api/system.va
 </SfComboBox>
 
 ```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrKihrcgcMdJUXG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor ComboBox ValueTuple Data](./images/blazor_combobox_valuetuple.png)
 
 ## Binding ExpandoObject
 
-You can bind [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-5.0) data to the ComboBox component. The following example `ExpandoObject` is bound to the collection of vehicles data.
+You can bind [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-8.0) data to the ComboBox component. The following example `ExpandoObject` is bound to the collection of vehicles data.
 
 ```csharp
 
@@ -358,7 +359,7 @@ You can bind [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system
 
 ## Binding DynamicObject
 
-You can bind [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-5.0) data to the ComboBox component. The following example `DynamicObject` is bound to the collection of customers data.
+You can bind [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-8.0) data to the ComboBox component. The following example `DynamicObject` is bound to the collection of customers data.
 
 ```csharp
 
@@ -409,7 +410,7 @@ You can bind [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system
 
 ## Binding ObservableCollection
 
-You can bind [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-5.0) data to the ComboBox component. The following example `Observable Data` is bound to a collection of colors data.
+You can bind [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-8.0) data to the ComboBox component. The following example `Observable Data` is bound to a collection of colors data.
 
 ```csharp
 
@@ -447,7 +448,7 @@ You can bind [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api
 }
 
 ```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBgCBVcAmhLLFOi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
 ![Blazor ComboBox with observable collection data binding](./images/blazor_combobox_observable-collection.png)
@@ -587,6 +588,7 @@ Now, you can configure the ComboBox using the **'SfDataManager'** to interact wi
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjBqiBLcAGhEHVHQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Configure cascading in the Blazor ComboBox component
 

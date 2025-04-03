@@ -57,10 +57,11 @@ This is demonstrated in the following sample code,
 
 <style>
     .e-grid .e-columnheader .e-icons.e-columnmenu::before {
-        .content: "\e84f";
+        content: "\e84f";
     }
 </style>
 ```
 
 The following image represents datagrid with customized column menu icon
+
 ![Customizing Column Menu Icon in Blazor DataGrid](../images/blazor-datagrid-column-menu-icon.png)

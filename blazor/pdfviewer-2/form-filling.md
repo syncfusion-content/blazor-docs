@@ -31,7 +31,10 @@ The SfPdfViewer control provides an option to disable the form fields feature. T
 
 @using Syncfusion.Blazor.SfPdfViewer
 
-<SfPdfViewer2 Height="100%" Width="100%" DocumentPath="@DocumentPath" EnableFormFields=false />
+<SfPdfViewer2 Height="100%"
+              Width="100%"
+              DocumentPath="@DocumentPath"
+              EnableFormFields=false />
 
 @code{
     public string DocumentPath { get; set; } = "wwwroot/Data/FormFillingDocument.pdf";
@@ -82,17 +85,17 @@ The following code shows how to export the form fields as an XML data stream and
 @using Syncfusion.Blazor.Buttons
 
 <SfButton OnClick="@ExportAsStream">Export XML</SfButton>
-
 <SfButton OnClick="@ImportFromStream">Import XML</SfButton>
 
-<SfPdfViewer2 @ref=Viewer DocumentPath="@DocumentPath" Height="100%" Width="100%" />
+<SfPdfViewer2 @ref=Viewer
+              DocumentPath="@DocumentPath"
+              Height="100%"
+              Width="100%" />
 
 @code 
 {
     SfPdfViewer2 Viewer;
-
     public string DocumentPath { get; set; } = "wwwroot/Data/FormFillingDocument.pdf";
-
     Stream stream;
 
     // Event triggers on Export XML button click.
@@ -124,14 +127,15 @@ The following code shows how to export the form fields as an FDF data stream and
 <SfButton OnClick="@ExportAsStream">Export FDF</SfButton>
 <SfButton OnClick="@ImportFromStream">Import FDF</SfButton>
 
-<SfPdfViewer2 @ref=Viewer DocumentPath="@DocumentPath" Height="100%" Width="100%" />
+<SfPdfViewer2 @ref=Viewer
+              DocumentPath="@DocumentPath"
+              Height="100%"
+              Width="100%" />
 
 @code
 {
     SfPdfViewer2 Viewer;
-
     public string DocumentPath { get; set; } = "wwwroot/Data/FormFillingDocument.pdf";
-
     Stream stream;
 
     // Event triggers on Export FDF button click.
@@ -163,14 +167,15 @@ The following code shows how to export the form fields as an XFDF data stream an
 <SfButton OnClick="@ExportAsStream">Export XFDF</SfButton>
 <SfButton OnClick="@ImportFromStream">Import XFDF</SfButton>
 
-<SfPdfViewer2 @ref=Viewer DocumentPath="@DocumentPath" Height="100%" Width="100%" />
+<SfPdfViewer2 @ref=Viewer
+              DocumentPath="@DocumentPath"
+              Height="100%"
+              Width="100%" />
 
 @code
 {
     SfPdfViewer2 Viewer;
-
     public string DocumentPath { get; set; } = "wwwroot/Data/FormFillingDocument.pdf";
-
     Stream stream;
 
     // Event triggers on Export XFDF button click.
@@ -202,14 +207,15 @@ The following code shows how to export the form fields as a JSON data stream and
 <SfButton OnClick="@ExportAsStream">Export JSON</SfButton>
 <SfButton OnClick="@ImportFromStream">Import JSON</SfButton>
 
-<SfPdfViewer2 @ref=Viewer DocumentPath="@DocumentPath" Height="100%" Width="100%" />
+<SfPdfViewer2 @ref=Viewer
+              DocumentPath="@DocumentPath"
+              Height="100%"
+              Width="100%" />
 
 @code
 {
     SfPdfViewer2 Viewer;
-
     public string DocumentPath { get; set; } = "wwwroot/Data/FormFillingDocument.pdf";
-
     Stream stream;
 
     // Event triggers on Export JSON button click.
@@ -239,12 +245,13 @@ The following code shows how to export the form fields as a JSON data stream and
 
 <SfButton OnClick="@OnExportFormFieldsClick">Export JSON</SfButton>
 
-<SfPdfViewer2 Height="100%" Width="100%" DocumentPath="@DocumentPath" @ref="@Viewer"/>
+<SfPdfViewer2 Height="100%"
+              Width="100%"
+              DocumentPath="@DocumentPath"
+              @ref="@Viewer" />
 
 @code {
-
     SfPdfViewer2 Viewer;
-
     public string DocumentPath { get; set; } = "wwwroot/Data/FormFillingDocument.pdf";
 
     // Event triggers on Export JSON button click.
@@ -267,15 +274,16 @@ The following code shows how to export the form fields as a JSON data stream and
 <SfButton OnClick="@OnExportFormFieldsClick">Export Data</SfButton>
 <SfButton OnClick="@OnImportFormFieldsClick">Import Data</SfButton>
 
-<SfPdfViewer2 @ref="@Viewer" DocumentPath="@DocumentPath"  Height="100%" Width="100%">
+<SfPdfViewer2 @ref="@Viewer"
+              DocumentPath="@DocumentPath"
+              Height="100%"
+              Width="100%">
 </SfPdfViewer2>
 
 @code
 {
     SfPdfViewer2 Viewer;
-
     public string DocumentPath { get; set; } = "wwwroot/Data/FormFillingDocument.pdf";
-
     Dictionary<string, string> dictionary;
 
     // Event triggers on Export Data button click.
@@ -294,3 +302,7 @@ The following code shows how to export the form fields as a JSON data stream and
 }
 
 ```
+
+## See also
+
+* [Handwritten Signature in Blazor SfPdfViewer Component](./hand-written-signature)

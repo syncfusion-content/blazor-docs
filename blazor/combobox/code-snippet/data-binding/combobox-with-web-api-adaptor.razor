@@ -1,0 +1,16 @@
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.DropDowns
+
+<SfComboBox TValue="string" TItem="Order" Placeholder="Select a Country">
+    <SfDataManager Url="api/Default" Adaptor="Adaptors.WebApiAdaptor" CrossDomain="true"></SfDataManager>
+    <ComboBoxFieldSettings Text="ShipCountry" Value="OrderID"></ComboBoxFieldSettings>
+</SfComboBox>
+
+@code {
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string ShipCountry { get; set; }
+    }
+}

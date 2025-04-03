@@ -98,7 +98,7 @@ In the Blazor TreeView component, by default, there is no height property, and i
     {
         public int Id { get; set; }
         public int? ParentId { get; set; }
-        public string Name { get; set; }
+        public string? Name { get; set; }
         public bool Expanded { get; set; }
         public bool? IsChecked { get; set; }
         public bool HasChild { get; set; }
@@ -217,73 +217,146 @@ In the Blazor TreeView component, by default, there is no height property, and i
 
 ## Customizing the TreeView using HtmlAttributes
 
-The [HtmlAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_HtmlAttributes) property in the Blazor TreeView component allows for easy mapping and application of HTML attributes to the TreeView component.
+The [HtmlAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_HtmlAttributes) property of the Blazor TreeView component allows you to define a mapping field for applying custom HTML attributes to individual TreeView nodes.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
 
-<SfTreeView TValue="MailItem" HtmlAttributes="@HtmlAttribute">
-    <TreeViewFieldsSettings TValue="MailItem" Id="Id" DataSource="@MyFolder" Text="FolderName" ParentID="ParentId" HasChildren="HasSubFolders" Expanded="Expanded"></TreeViewFieldsSettings>
-</SfTreeView>
-
+<div class="control-section">
+    <div class="control_wrapper">
+        @*Initialize the TreeView component*@
+        <SfTreeView TValue="TreeItem" CssClass="custom_tree">
+            <TreeViewFieldsSettings DataSource="@TreeDataSource" Id="NodeId" Text="NodeText" Expanded="Expanded" Child="@("Child")" HtmlAttributes="HtmlAttribute"></TreeViewFieldsSettings>
+        </SfTreeView>
+    </div>
+</div>
 @code {
-    // Specify the value of TreeView component HTMLAttribute property.
-    Dictionary<string, object> HtmlAttribute = new Dictionary<string, object>()
-    {
-        { "class", "treeview" }
-    };
-    public class MailItem
-    {
-        public string Id { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
-        public bool Expanded { get; set; }
-        public bool HasSubFolders { get; set; }
-    }
-    List<MailItem> MyFolder = new List<MailItem>();
+    // Specifies the DataSource value for TreeView component.
+    List<TreeItem> TreeDataSource = new List<TreeItem>();
     protected override void OnInitialized()
     {
         base.OnInitialized();
-        MyFolder.Add(new MailItem
+        TreeDataSource.Add(new TreeItem
             {
-                Id = "1",
-                FolderName = "Inbox",
-                HasSubFolders = true,
-                Expanded = true
-            });
-        MyFolder.Add(new MailItem
-            {
-                Id = "2",
-                ParentId = "1",
-                FolderName = "Categories",
+                NodeId = "01",
+                NodeText = "Local Disk (C:)",
                 Expanded = true,
-                HasSubFolders = true
-            });
-        MyFolder.Add(new MailItem
+                HtmlAttribute = new Dictionary<string, object>() { { "class", "e-node-one" } },
+                Child = new List<TreeItem>()
             {
-                Id = "3",
-                ParentId = "2",
-                FolderName = "Primary"
+                new TreeItem { NodeId = "01-01", NodeText = "Program Files",
+                    Child = new List<TreeItem>()
+                    {
+                        new TreeItem { NodeId = "01-01-01", NodeText = "Windows NT" },
+                        new TreeItem { NodeId = "01-01-02", NodeText = "Windows Mail" },
+                        new TreeItem { NodeId = "01-01-03", NodeText = "Windows Photo Viewer" }
+                    },
+                },
+                new TreeItem { NodeId = "01-02", NodeText = "Users", Expanded = true,
+                    Child = new List<TreeItem>()
+                    {
+                        new TreeItem { NodeId = "01-02-01", NodeText = "Smith" },
+                        new TreeItem { NodeId = "01-02-02", NodeText = "Public" },
+                        new TreeItem { NodeId = "01-02-03", NodeText = "Admin" },
+                    },
+                },
+                new TreeItem { NodeId = "01-03", NodeText = "Windows",
+                    Child = new List<TreeItem>()
+                    {
+                        new TreeItem { NodeId = "01-03-01", NodeText = "Boot" },
+                        new TreeItem { NodeId = "01-03-02", NodeText = "Media" },
+                        new TreeItem { NodeId = "01-03-03", NodeText = "System32" },
+                    }
+                },
+            },
             });
-        MyFolder.Add(new MailItem
+        TreeDataSource.Add(new TreeItem
             {
-                Id = "4",
-                ParentId = "2",
-                FolderName = "Social"
-            });
-        MyFolder.Add(new MailItem
+                NodeId = "02",
+                NodeText = "Local Disk (D:)",
+                Child = new List<TreeItem>()
             {
-                Id = "5",
-                ParentId = "2",
-                FolderName = "Promotions"
+                new TreeItem { NodeId = "02-01", NodeText = "Personals",
+                    Child = new List<TreeItem>()
+                    {
+                        new TreeItem { NodeId = "02-01-01", NodeText = "My photo.png" },
+                        new TreeItem { NodeId = "02-01-02", NodeText = "Rental document.docx" },
+                        new TreeItem { NodeId = "02-01-03", NodeText = "Payslip.pdf" },
+                    },
+                },
+                new TreeItem { NodeId = "02-02", NodeText = "Projects",
+                    Child = new List<TreeItem>()
+                    {
+                        new TreeItem { NodeId = "02-02-01", NodeText = "Blazor Application " },
+                        new TreeItem { NodeId = "02-02-02", NodeText = "TypeScript Application" },
+                        new TreeItem { NodeId = "02-02-03", NodeText = "React Application" },
+                    }
+                },
+                new TreeItem { NodeId = "02-03", NodeText = "Office",
+                    Child = new List<TreeItem>()
+                    {
+                        new TreeItem { NodeId = "02-03-01", NodeText = "Work details.docx " },
+                        new TreeItem { NodeId = "02-03-02", NodeText = "Weekly report.docx" },
+                        new TreeItem { NodeId = "02-03-03", NodeText = "Wishlist.csv" },
+                    }
+                },
+            },
             });
+        TreeDataSource.Add(new TreeItem
+            {
+                NodeId = "03",
+                NodeText = "Local Disk (E:)",
+                Child = new List<TreeItem>()
+            {
+                new TreeItem { NodeId = "03-01", NodeText = "Pictures",
+                    Child = new List<TreeItem>()
+                    {
+                        new TreeItem { NodeId = "03-01-01", NodeText = "Wind.jpg " },
+                        new TreeItem { NodeId = "03-01-02", NodeText = "Stone.jpg" },
+                        new TreeItem { NodeId = "03-01-03", NodeText = "Home.jpg" },
+                    }
+                },
+                new TreeItem { NodeId = "03-02", NodeText = "Documents", Icon = "docx",
+                    Child = new List<TreeItem>()
+                    {
+                        new TreeItem { NodeId = "03-02-01", NodeText = "Environment Pollution.docx " },
+                        new TreeItem { NodeId = "03-02-02", NodeText = "Global Warming.ppt" },
+                        new TreeItem { NodeId = "03-02-03", NodeText = "Social Network.pdf" },
+                    },
+                },
+                new TreeItem { NodeId = "03-03", NodeText = "Study Materials",
+                    Child = new List<TreeItem>()
+                    {
+                        new TreeItem { NodeId = "03-03-01", NodeText = "UI-Guide.pdf" },
+                        new TreeItem { NodeId = "03-03-02", NodeText = "Tutorials.zip" },
+                        new TreeItem { NodeId = "03-03-03", NodeText = "TypeScript.7z" },
+                    }
+                },
+            },
+            });
+    }
+    class TreeItem
+    {
+        public string? NodeId { get; set; }
+        public string? NodeText { get; set; }
+        public string? Icon { get; set; }
+        public bool Expanded { get; set; }
+        public bool Selected { get; set; }
+        public List<TreeItem> Child { get; set; }
+        public Dictionary<string, object> HtmlAttribute { get; set; }
     }
 }
 <style>
-    .treeview {
-        border: 1px solid black;
-        height: 250px;
+    /* Sample specific styles */
+    .control_wrapper {
+        max-width: 500px;
+        margin: auto;
+        border: 1px solid #dddddd;
+        border-radius: 3px;
+        max-height: 470px;
+        overflow: auto;
     }
 </style>
 
 ```
+

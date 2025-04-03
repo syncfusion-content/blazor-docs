@@ -60,8 +60,11 @@ The operator for a column can be defined in the [Columns](https://help.syncfusio
 | Operators | Description | Supported Types |
 | ------------ | ----------------------- | ------------------ |
 | startswith  | Checks whether the value begins with the specified value. | String |
+| notstartswith  | Checks whether the value does not begin with the specified prefix. | String |
 | endswith  | Checks whether the value ends with the specified value. | String |
+| notendswith  | Checks whether the value does not end with the specified value. | String |
 | contains | Checks whether the value contains the specified value. | String |
+| notcontains | Checks whether the value does not include the specified value. | String |
 | equal | Checks whether the value is equal to the specified value. | String, Number ,Date, Boolean |
 | notequal | Checks for values not equal to the specified value. | String, Number, Date, Boolean |
 | greaterthan | Checks whether the value is greater than the specified value. | Date, Number |
@@ -109,7 +112,7 @@ N> By default the Step value is 1.
 
 ```
 
-N> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to know how to render and configure the query builder.
+N> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap5) to know how to render and configure the query builder.
 
 ## Format
 
@@ -154,7 +157,7 @@ In the following sample, the date field is formatted as MM/yyyy/dd and the numbe
 
 ![Formatting in Blazor QueryBuilder](./images/blazor-querybuilder-format.png)
 
-N> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to know how to render and configure the query builder.
+N> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap5) to know how to render and configure the query builder.
 
 ## Validations
 
@@ -166,7 +169,7 @@ N> You can set `Min` and `Max` values for number values.
 @using Syncfusion.Blazor.QueryBuilder
 
 <SfQueryBuilder TValue="EmployeeDetails" AllowValidation="true">
-    <QueryBuilderColumnValidation Max="0" Min="100"></QueryBuilderColumnValidation>
+    <QueryBuilderColumnValidation Max="100" Min="0"></QueryBuilderColumnValidation>
     <QueryBuilderColumns>
         <QueryBuilderColumn Field="EmployeeID" Label="Employee ID" Type="ColumnType.Number"></QueryBuilderColumn>
         <QueryBuilderColumn Field="FirstName" Label="First Name" Type="ColumnType.String"></QueryBuilderColumn>

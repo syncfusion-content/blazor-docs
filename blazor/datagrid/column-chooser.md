@@ -9,115 +9,406 @@ documentation: ug
 
 # Column Chooser in Blazor DataGrid
 
-The column chooser has options to show or hide columns dynamically. It can be enabled by defining the [ShowColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) as true.
+The column chooser feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid component allows you to dynamically show or hide columns. This feature can be enabled by defining the [ShowColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowColumnChooser) property as **true**.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Employees" ShowColumnChooser="true" Toolbar=@ToolbarItems>
+<SfGrid DataSource="@Orders" ShowColumnChooser="true" Toolbar=@ToolbarItems>
     <GridColumns>
-        <GridColumn Field=@nameof(EmployeeData.EmployeeID) TextAlign="TextAlign.Center" HeaderText="Employee ID" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.FirstName) HeaderText="First Name" ShowInColumnChooser="false" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.LastName) HeaderText="Last Name" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Title" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.HireDate) HeaderText="Hire Date" Format="d" TextAlign="TextAlign.Right" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.DateOnly" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Visible="false" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
-
-@code{
+@code {
     public string[] ToolbarItems = new string[] { "ColumnChooser" };
-
-    public List<EmployeeData> Employees { get; set; }
-
+    public List<OrderData> Orders { get; set; }   
     protected override void OnInitialized()
     {
-        Employees = Enumerable.Range(1, 9).Select(x => new EmployeeData()
-        {
-            EmployeeID = x,
-            FirstName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" })[new Random().Next(5)],
-            LastName = (new string[] { "Davolio", "Fuller", "Leverling", "Peacock", "Buchanan" })[new Random().Next(5)],
-            Title = (new string[] { "Sales Representative", "Vice President, Sales", "Sales Manager",
-                                    "Inside Sales Coordinator" })[new Random().Next(4)],
-            HireDate = DateTime.Now.AddDays(-x),
-        }).ToList();
-    }
-
-    public class EmployeeData
-    {
-        public int? EmployeeID { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Title { get; set; }
-        public DateTime? HireDate { get; set; }
-    }
+        Orders = OrderData.GetAllRecords();       
+    }  
 }
-```
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+ public class OrderData
+{
+    public static List<OrderData> Order = new List<OrderData>();
+    public OrderData(int OrderID, double Freight, DateTime OrderDate, string ShipCity, string ShipCountry)
+    {
+        this.OrderID = OrderID;
+        this.Freight = Freight;
+        this.ShipCity = ShipCity;
+        this.OrderDate = OrderDate;
+        this.ShipCountry = ShipCountry;
+    }
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Order.Count == 0)
+        {
+            Order.Add(new OrderData(10248, 32.38, new DateTime(1996, 7, 4), "Reims", "Australia"));
+            Order.Add(new OrderData(10249, 11.61, new DateTime(1996, 7, 5), "Münster", "Australia"));
+            Order.Add(new OrderData(10250, 65.83, new DateTime(1996, 7, 8), "Rio de Janeiro", "United States"));
+            Order.Add(new OrderData(10251, 41.34, new DateTime(1996, 7, 8), "Lyon", "Australia"));
+            Order.Add(new OrderData(10252, 51.3, new DateTime(1996, 7, 9), "Charleroi","United States"));
+            Order.Add(new OrderData(10253, 58.17, new DateTime(1996, 7, 10), "Rio de Janeiro","United States"));
+            Order.Add(new OrderData(10254, 22.98, new DateTime(1996, 7, 11), "Bern", "Switzerland"));
+            Order.Add(new OrderData(10255, 148.33, new DateTime(1996, 7, 12), "Genève", "Switzerland"));
+            Order.Add(new OrderData(10256, 13.97, new DateTime(1996, 7, 15), "Resende", "Brazil"));
+            Order.Add(new OrderData(10257, 81.91, new DateTime(1996, 7, 16), "San Cristóbal", "Venezuela"));
+            Order.Add(new OrderData(10258, 140.51, new DateTime(1996, 7, 17), "Graz", "Austria"));
+            Order.Add(new OrderData(10259, 3.25, new DateTime(1996, 7, 18), "México D.F.", "Mexico"));
+            Order.Add(new OrderData(10260, 55.09, new DateTime(1996, 7, 19), "Köln", "Germany"));
+            Order.Add(new OrderData(10261, 3.05, new DateTime(1996, 7, 19), "Rio de Janeiro", "Brazil"));
+            Order.Add(new OrderData(10262, 48.29, new DateTime(1996, 7, 22), "Albuquerque", "USA"));
+        }
+        return Order;
+    }
+    public int OrderID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCity { get; set; }
+    public DateTime OrderDate { get; set; }
+    public string ShipCountry { get; set; }
+}
+{% endhighlight %}
+{% endtabs %}
 
-N> You can hide the column names in column chooser by defining the [ShowInColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ShowInColumnChooser) property as false.
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLfsVirCTHjHXFK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-The following GIF represents the column chooser functionality in DataGrid
-![Show or Hide Columns in Blazor DataGrid](./images/blazor-datagrid-show-or-hide-column.gif)
+> The column chooser dialog displays the header text of each column by default. If the header text is not defined for a column, the corresponding column field name is displayed instead.
+
+## Hide column in column chooser dialog
+
+You can hide the column names in column chooser by defining the [ShowInColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ShowInColumnChooser) property as false. This feature is useful when working with a large number of columns or when you want to limit the number of columns that are available for selection in the column chooser dialog.
+
+In this example, the [ShowInColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ShowInColumnChooser) property is set to false for the OrderID column. As a result, the OrderID column will not be displayed in the column chooser dialog.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" ShowColumnChooser="true" Toolbar=@ToolbarItems>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" ShowInColumnChooser="false" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.DateOnly" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" Visible="false" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Visible="false" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+@code {
+    public string[] ToolbarItems = new string[] { "ColumnChooser" };
+    public List<OrderData> Orders { get; set; }   
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();       
+    }  
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+public class OrderData
+{
+    public static List<OrderData> Order = new List<OrderData>();
+    public OrderData(int OrderID, double Freight, DateTime OrderDate, string ShipCity, string ShipCountry)
+    {
+        this.OrderID = OrderID;
+        this.Freight = Freight;
+        this.ShipCity = ShipCity;
+        this.OrderDate = OrderDate;
+        this.ShipCountry = ShipCountry;
+    }
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Order.Count == 0)
+        {
+            Order.Add(new OrderData(10248, 32.38, new DateTime(1996, 7, 4), "Reims", "Australia"));
+            Order.Add(new OrderData(10249, 11.61, new DateTime(1996, 7, 5), "Münster", "Australia"));
+            Order.Add(new OrderData(10250, 65.83, new DateTime(1996, 7, 8), "Rio de Janeiro", "United States"));
+            Order.Add(new OrderData(10251, 41.34, new DateTime(1996, 7, 8), "Lyon", "Australia"));
+            Order.Add(new OrderData(10252, 51.3, new DateTime(1996, 7, 9), "Charleroi","United States"));
+            Order.Add(new OrderData(10253, 58.17, new DateTime(1996, 7, 10), "Rio de Janeiro","United States"));
+            Order.Add(new OrderData(10254, 22.98, new DateTime(1996, 7, 11), "Bern", "Switzerland"));
+            Order.Add(new OrderData(10255, 148.33, new DateTime(1996, 7, 12), "Genève", "Switzerland"));
+            Order.Add(new OrderData(10256, 13.97, new DateTime(1996, 7, 15), "Resende", "Brazil"));
+            Order.Add(new OrderData(10257, 81.91, new DateTime(1996, 7, 16), "San Cristóbal", "Venezuela"));
+            Order.Add(new OrderData(10258, 140.51, new DateTime(1996, 7, 17), "Graz", "Austria"));
+            Order.Add(new OrderData(10259, 3.25, new DateTime(1996, 7, 18), "México D.F.", "Mexico"));
+            Order.Add(new OrderData(10260, 55.09, new DateTime(1996, 7, 19), "Köln", "Germany"));
+            Order.Add(new OrderData(10261, 3.05, new DateTime(1996, 7, 19), "Rio de Janeiro", "Brazil"));
+            Order.Add(new OrderData(10262, 48.29, new DateTime(1996, 7, 22), "Albuquerque", "USA"));
+        }
+        return Order;
+    }
+    public int OrderID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCity { get; set; }
+    public DateTime OrderDate { get; set; }
+    public string ShipCountry { get; set; }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjVJihiLMwbAZjZk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+> * The `ShowInColumnChooser` property is applied to each element individually. By setting it to false, you can hide specific columns from the column chooser dialog.
+> * To work with showing and hiding columns, it is necessary to have at least one column of the grid in a visible state.
 
 ## Open column chooser by external button
 
-The column chooser has options to show or hide columns dynamically. It can be enabled by defining the [ShowColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) as true.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid provides the flexibility to open the column chooser dialog on a web page using an external button. By default, the column chooser button is displayed in the right corner of the grid component, and clicking the button opens the column chooser dialog below it. However, you can programmatically open the column chooser dialog at specific X and Y axis positions by using the [OpenColumnChooserAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_OpenColumnChooserAsync_System_Nullable_System_Double__System_Nullable_System_Double__) method.
 
-In this following example, we have opened column chooser using external button click.
+Here’s an example of how to open the column chooser in the Grid using an external button:
 
-```cshtml
-@using Syncfusion.Blazor.Buttons
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
 
-<SfButton OnClick="Show" CssClass="e-primary" IsPrimary="true" Content="Open column chooser"></SfButton>
-
-<SfGrid @ref="DefaultGrid" DataSource="@Employees" ShowColumnChooser="true" Toolbar=@ToolbarItems>
+<SfButton style="margin-bottom:5px" OnClick="Show" CssClass="e-outline" Content="Open column chooser"></SfButton>
+<SfGrid @ref="Grid" DataSource="@Orders" ShowColumnChooser="true">
     <GridColumns>
-        <GridColumn Field=@nameof(EmployeeData.EmployeeID) TextAlign="TextAlign.Center" HeaderText="Employee ID" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.FirstName) HeaderText="First Name" ShowInColumnChooser="false" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.LastName) HeaderText="Last Name" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Title" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.HireDate) HeaderText="Hire Date" Format="d" TextAlign="TextAlign.Right" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" ShowInColumnChooser="false" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.DateOnly" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Visible="false" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
-
-@code{
-    private SfGrid<EmployeeData> DefaultGrid;
-
-    public string[] ToolbarItems = new string[] { "ColumnChooser" };
-
-    public List<EmployeeData> Employees { get; set; }
-
+@code {
+    private SfGrid<OrderData> Grid;
+    public List<OrderData> Orders { get; set; }   
     protected override void OnInitialized()
     {
-        Employees = Enumerable.Range(1, 9).Select(x => new EmployeeData()
-        {
-            EmployeeID = x,
-            FirstName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" })[new Random().Next(5)],
-            LastName = (new string[] { "Davolio", "Fuller", "Leverling", "Peacock", "Buchanan" })[new Random().Next(5)],
-            Title = (new string[] { "Sales Representative", "Vice President, Sales", "Sales Manager",
-                                    "Inside Sales Coordinator" })[new Random().Next(4)],
-            HireDate = DateTime.Now.AddDays(-x),
-        }).ToList();
-    }
-
+        Orders = OrderData.GetAllRecords();       
+    }  
     public void Show()
     {
-        this.DefaultGrid.OpenColumnChooser(200, 50);
-    }
-
-    public class EmployeeData
-    {
-        public int? EmployeeID { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Title { get; set; }
-        public DateTime? HireDate { get; set; }
+        Grid.OpenColumnChooserAsync(100, 40);
     }
 }
-```
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+public class OrderData
+{
+    public static List<OrderData> Order = new List<OrderData>();
+    public OrderData(int OrderID, double Freight, DateTime OrderDate, string ShipCity, string ShipCountry)
+    {
+        this.OrderID = OrderID;
+        this.Freight = Freight;
+        this.ShipCity = ShipCity;
+        this.OrderDate = OrderDate;
+        this.ShipCountry = ShipCountry;
+    }
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Order.Count == 0)
+        {
+            Order.Add(new OrderData(10248, 32.38, new DateTime(1996, 7, 4), "Reims", "Australia"));
+            Order.Add(new OrderData(10249, 11.61, new DateTime(1996, 7, 5), "Münster", "Australia"));
+            Order.Add(new OrderData(10250, 65.83, new DateTime(1996, 7, 8), "Rio de Janeiro", "United States"));
+            Order.Add(new OrderData(10251, 41.34, new DateTime(1996, 7, 8), "Lyon", "Australia"));
+            Order.Add(new OrderData(10252, 51.3, new DateTime(1996, 7, 9), "Charleroi","United States"));
+            Order.Add(new OrderData(10253, 58.17, new DateTime(1996, 7, 10), "Rio de Janeiro","United States"));
+            Order.Add(new OrderData(10254, 22.98, new DateTime(1996, 7, 11), "Bern", "Switzerland"));
+            Order.Add(new OrderData(10255, 148.33, new DateTime(1996, 7, 12), "Genève", "Switzerland"));
+            Order.Add(new OrderData(10256, 13.97, new DateTime(1996, 7, 15), "Resende", "Brazil"));
+            Order.Add(new OrderData(10257, 81.91, new DateTime(1996, 7, 16), "San Cristóbal", "Venezuela"));
+            Order.Add(new OrderData(10258, 140.51, new DateTime(1996, 7, 17), "Graz", "Austria"));
+            Order.Add(new OrderData(10259, 3.25, new DateTime(1996, 7, 18), "México D.F.", "Mexico"));
+            Order.Add(new OrderData(10260, 55.09, new DateTime(1996, 7, 19), "Köln", "Germany"));
+            Order.Add(new OrderData(10261, 3.05, new DateTime(1996, 7, 19), "Rio de Janeiro", "Brazil"));
+            Order.Add(new OrderData(10262, 48.29, new DateTime(1996, 7, 22), "Albuquerque", "USA"));
+        }
+        return Order;
+    }
+    public int OrderID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCity { get; set; }
+    public DateTime OrderDate { get; set; }
+    public string ShipCountry { get; set; }
+}
+{% endhighlight %}
+{% endtabs %}
 
-The following GIF represents opening column chooser functionality in DataGrid using external button.
-![Opening Column Chooser in Blazor DataGrid](./images/blazor-datagrid-open-column-chooser.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLTMhsLCaIRtynp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Customize column chooser dialog size
+
+The column chooser dialog in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid comes with default size, but you can modify its height and width as per your specific needs using CSS styles.
+
+To customize the column chooser dialog size, you can use the following CSS styles:
+
+```csharp
+<style> 
+    .e-grid .e-dialog.e-ccdlg {         
+        max-height: 600px !important; 
+        width: 300px !important; 
+    } 
+    .e-grid .e-ccdlg .e-cc-contentdiv { 
+        height: 250px !important; 
+        width: 250px !important;         
+    } 
+</style> 
+```
+> Here, **!important** attribute is used to apply custom styles since the column chooser dialog position will be calculated dynamically based on content.
+
+This can be demonstrated in the following sample:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" ShowColumnChooser="true" Toolbar=@ToolbarItems>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.DateOnly" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" Visible="false" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Visible="false" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+<style>
+    .e-grid .e-dialog.e-ccdlg {
+        max-height: 600px !important;
+        width: 300px !important;
+    }
+    .e-grid .e-ccdlg .e-cc-contentdiv {
+        height: 250px !important;
+        width: 250px !important;
+    }
+</style>
+@code {
+    public string[] ToolbarItems = new string[] { "ColumnChooser" };
+    public List<OrderData> Orders { get; set; }   
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();       
+    }  
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+public class OrderData
+{
+    public static List<OrderData> Order = new List<OrderData>();
+    public OrderData(int OrderID, double Freight, DateTime OrderDate, string ShipCity, string ShipCountry)
+    {
+        this.OrderID = OrderID;
+        this.Freight = Freight;
+        this.ShipCity = ShipCity;
+        this.OrderDate = OrderDate;
+        this.ShipCountry = ShipCountry;
+    }
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Order.Count == 0)
+        {
+            Order.Add(new OrderData(10248, 32.38, new DateTime(1996, 7, 4), "Reims", "Australia"));
+            Order.Add(new OrderData(10249, 11.61, new DateTime(1996, 7, 5), "Münster", "Australia"));
+            Order.Add(new OrderData(10250, 65.83, new DateTime(1996, 7, 8), "Rio de Janeiro", "United States"));
+            Order.Add(new OrderData(10251, 41.34, new DateTime(1996, 7, 8), "Lyon", "Australia"));
+            Order.Add(new OrderData(10252, 51.3, new DateTime(1996, 7, 9), "Charleroi","United States"));
+            Order.Add(new OrderData(10253, 58.17, new DateTime(1996, 7, 10), "Rio de Janeiro","United States"));
+            Order.Add(new OrderData(10254, 22.98, new DateTime(1996, 7, 11), "Bern", "Switzerland"));
+            Order.Add(new OrderData(10255, 148.33, new DateTime(1996, 7, 12), "Genève", "Switzerland"));
+            Order.Add(new OrderData(10256, 13.97, new DateTime(1996, 7, 15), "Resende", "Brazil"));
+            Order.Add(new OrderData(10257, 81.91, new DateTime(1996, 7, 16), "San Cristóbal", "Venezuela"));
+            Order.Add(new OrderData(10258, 140.51, new DateTime(1996, 7, 17), "Graz", "Austria"));
+            Order.Add(new OrderData(10259, 3.25, new DateTime(1996, 7, 18), "México D.F.", "Mexico"));
+            Order.Add(new OrderData(10260, 55.09, new DateTime(1996, 7, 19), "Köln", "Germany"));
+            Order.Add(new OrderData(10261, 3.05, new DateTime(1996, 7, 19), "Rio de Janeiro", "Brazil"));
+            Order.Add(new OrderData(10262, 48.29, new DateTime(1996, 7, 22), "Albuquerque", "USA"));
+        }
+        return Order;
+    }
+    public int OrderID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCity { get; set; }
+    public DateTime OrderDate { get; set; }
+    public string ShipCountry { get; set; }
+}  
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXrfsrWdrlMlVALs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Change default search operator of the column chooser
+
+The column chooser dialog in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid provides a search box that allows you to search for column names. By default, the search functionality uses the **StartsWith** operator to match columns and display the results in the column chooser dialog. However, there might be cases where you need to change the default search operator to achieve more precise data matching.
+
+To change the default search operator of the column chooser in Syncfusion<sup style="font-size:70%">&reg;</sup> Grid, you need to use the [Operator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Operator.html) property of the [GridColumnChooserSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html) class.
+
+Here’s an example of how to change the default search operator of the column chooser to **Contains** in the Blazor Grid:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" ShowColumnChooser="true" Toolbar=@ToolbarItems>
+    <GridColumnChooserSettings Operator="Operator.Contains"></GridColumnChooserSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.DateOnly" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Visible="false" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+@code {
+    public string[] ToolbarItems = new string[] { "ColumnChooser" };
+    public List<OrderData> Orders { get; set; }   
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();       
+    }
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+public class OrderData
+{
+    public static List<OrderData> Order = new List<OrderData>();
+    public OrderData(int OrderID, double Freight, DateTime OrderDate, string ShipCity, string ShipCountry)
+    {
+        this.OrderID = OrderID;
+        this.Freight = Freight;
+        this.ShipCity = ShipCity;
+        this.OrderDate = OrderDate;
+        this.ShipCountry = ShipCountry;
+    }
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Order.Count == 0)
+        {
+            Order.Add(new OrderData(10248, 32.38, new DateTime(1996, 7, 4), "Reims", "Australia"));
+            Order.Add(new OrderData(10249, 11.61, new DateTime(1996, 7, 5), "Münster", "Australia"));
+            Order.Add(new OrderData(10250, 65.83, new DateTime(1996, 7, 8), "Rio de Janeiro", "United States"));
+            Order.Add(new OrderData(10251, 41.34, new DateTime(1996, 7, 8), "Lyon", "Australia"));
+            Order.Add(new OrderData(10252, 51.3, new DateTime(1996, 7, 9), "Charleroi","United States"));
+            Order.Add(new OrderData(10253, 58.17, new DateTime(1996, 7, 10), "Rio de Janeiro","United States"));
+            Order.Add(new OrderData(10254, 22.98, new DateTime(1996, 7, 11), "Bern", "Switzerland"));
+            Order.Add(new OrderData(10255, 148.33, new DateTime(1996, 7, 12), "Genève", "Switzerland"));
+            Order.Add(new OrderData(10256, 13.97, new DateTime(1996, 7, 15), "Resende", "Brazil"));
+            Order.Add(new OrderData(10257, 81.91, new DateTime(1996, 7, 16), "San Cristóbal", "Venezuela"));
+            Order.Add(new OrderData(10258, 140.51, new DateTime(1996, 7, 17), "Graz", "Austria"));
+            Order.Add(new OrderData(10259, 3.25, new DateTime(1996, 7, 18), "México D.F.", "Mexico"));
+            Order.Add(new OrderData(10260, 55.09, new DateTime(1996, 7, 19), "Köln", "Germany"));
+            Order.Add(new OrderData(10261, 3.05, new DateTime(1996, 7, 19), "Rio de Janeiro", "Brazil"));
+            Order.Add(new OrderData(10262, 48.29, new DateTime(1996, 7, 22), "Albuquerque", "USA"));
+        }
+        return Order;
+    }
+    public int OrderID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCity { get; set; }
+    public DateTime OrderDate { get; set; }
+    public string ShipCountry { get; set; }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhfsrsLBUKAKYLo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Column chooser template
 
@@ -125,122 +416,144 @@ Using the column chooser template, you can customize the column chooser dialog u
 
 ### Customize the content of column chooser
 
- The [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html#Syncfusion_Blazor_Grids_GridColumnChooserSettings_Template) tag in the [GridColumnChooserSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html) component is used to customize the content in the column chooser dialog. You can type cast the context as [ColumnChooserTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnChooserTemplateContext.html) to get columns inside content template.
+The [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html#Syncfusion_Blazor_Grids_GridColumnChooserSettings_Template) tag in the [GridColumnChooserSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html) component is used to customize the content in the column chooser dialog. You can type cast the context as [ColumnChooserTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnChooserTemplateContext.html) to get columns inside content template.
 
- ```csharp
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids;
-@using Model
+@using BlazorApp.Data
 
 <SfGrid ID="Grid" @ref="Grid" AllowPaging="true" DataSource="@Orders" ShowColumnChooser="true" Toolbar="@ToolbarItems">
     <GridColumnChooserSettings>
         <Template>
-                @{
-                    var ContextData = context as ColumnChooserTemplateContext;
-                    <CustomComponent @key="ContextData.Columns.Count" ColumnContext="ContextData"></CustomComponent>
-                }
+            @{
+                var ContextData = context as ColumnChooserTemplateContext;
+                <CustomComponent @key="ContextData.Columns.Count" ColumnContext="ContextData"></CustomComponent>
+            }
         </Template>
+         <FooterTemplate>
+        </FooterTemplate>
     </GridColumnChooserSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"> </GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="150"> </GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Visible="false" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) Visible="false" HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.EmployeeID) Visible="false" HeaderText="Employee ID" TextAlign="TextAlign.Right" Width="120"> </GridColumn>
-        <GridColumn Field=@nameof(Order.FirstName) Visible="false" HeaderText="First Name" Width="150"> </GridColumn>
-        <GridColumn Field=@nameof(Order.LastName) HeaderText="Last Name" Visible="false" Format="d" Type="ColumnType.Date" Width="130"> </GridColumn>
-        <GridColumn Field=@nameof(Order.Title) HeaderText="Title" Visible="false"  Width="120"> </GridColumn>
-        <GridColumn Field=@nameof(Order.HireDate) HeaderText="Hire Date" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"> </GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="150"> </GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Visible="false" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) Visible="false" HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.EmployeeID) Visible="false" HeaderText="Employee ID" TextAlign="TextAlign.Right" Width="120"> </GridColumn>
+        <GridColumn Field=@nameof(OrderData.FirstName) Visible="false" HeaderText="First Name" Width="150"> </GridColumn>
+        <GridColumn Field=@nameof(OrderData.LastName) HeaderText="Last Name" Visible="false" Format="d" Type="ColumnType.Date" Width="130"> </GridColumn>
+        <GridColumn Field=@nameof(OrderData.Title) HeaderText="Title" Visible="false" Width="120"> </GridColumn>
+        <GridColumn Field=@nameof(OrderData.HireDate) HeaderText="Hire Date" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
-
 <style>
     #Grid.e-grid .e-ccdlg .e-dlg-content {
         margin-top: 0px;
     }
-
-    .e-list-item.e-level-1.e-checklist.e-focused {
+    #Grid.e-grid .e-ccdlg .e-dlg-content .e-list-container .e-list-item.e-level-1.e-checklist.e-focused {
         background-color: none;
     }
-
     #Grid_ccdlg .e-content {
         overflow-y: unset;
     }
 </style>
-
 @code
 {
-    public SfGrid<Order> Grid { get; set; }
+    public SfGrid<OrderData> Grid { get; set; }
     public string[] ToolbarItems = new string[] { "ColumnChooser" };
-    public List<Order> Orders { get; set; }
-
+    public List<OrderData> Orders { get; set; }
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 500).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-            EmployeeID = x,
-            FirstName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" })[new Random().Next(5)],
-            LastName = (new string[] { "Davolio", "Fuller", "Leverling", "Peacock", "Buchanan" })[new Random().Next(5)],
-            Title = (new string[] { "Sales Representative", "Vice President, Sales", "Sales Manager", "Inside Sales Coordinator" })[new Random().Next(4)],
-            HireDate = DateTime.Now.AddDays(-x),
-        }).ToList();
+        Orders = OrderData.GetAllRecords();
     }
 }
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+ public class OrderData
+ {
+     public static List<OrderData> Orders = new List<OrderData>();
+     public OrderData(int? OrderID, string CustomerID, double Freight, DateTime OrderDate, int? EmployeeID, string FirstName, string LastName, string Title, DateTime? HireDate)
+     {
+         this.OrderID = OrderID;
+         this.CustomerID = CustomerID;
+         this.Freight = Freight;
+         this.OrderDate = OrderDate;
+         this.EmployeeID = EmployeeID;
+         this.FirstName = FirstName;
+         this.LastName = LastName;
+         this.Title = Title;
+         this.HireDate = HireDate;
+     }
+     public static List<OrderData> GetAllRecords()
+     {
+         if (Orders.Count() == 0)
+         {
+             int code = 10247;
+             int EmployeeID = 0;
+             for (int i = 1; i < 5; i++)
+             {
+                 Orders.Add(new OrderData(code + 1, "ALFKI", 33.33, new DateTime(1996, 07, 07), EmployeeID + 1, "Nancy", "Davolio", "Sales Representative", new DateTime(1992, 05, 01)));
+                 Orders.Add(new OrderData(code + 2, "ANANTR", 89.76, new DateTime(1996, 07, 12), EmployeeID + 2, "Andrew", "Fuller", "Vice President, Sales", new DateTime(1992, 08, 14)));
+                 Orders.Add(new OrderData(code + 3, "ANTON", 78.67, new DateTime(1996, 07, 13), EmployeeID + 3, "Janet", "Leverling", "Sales Manager", new DateTime(1993, 05, 03)));
+                 Orders.Add(new OrderData(code + 4, "BLONP", 55.65, new DateTime(1996, 07, 14), EmployeeID + 4, "Margaret", "Peacock", "Inside Sales Coordinator", new DateTime(1963, 08, 30)));
+                 Orders.Add(new OrderData(code + 5, "BOLID", 65.65, new DateTime(1996, 07, 15), EmployeeID + 5, "Steven", "Buchanan", "Sales Manager", new DateTime(1973, 08, 25)));
+                 code += 5;
+                 EmployeeID += 5;
+             }
+         }
+         return Orders;
+     }
 
-```
-
-N> * You can build reusable custom component based on your customization need as like above code example.
-<br/> * In the above example, Syncfusion [ListView](https://blazor.syncfusion.com/documentation/listview/getting-started) component is used as custom component in the content template to show/hide columns.
-
-```csharp
+     public int? OrderID { get; set; }
+     public string CustomerID { get; set; }
+     public DateTime? OrderDate { get; set; }
+     public double? Freight { get; set; }
+     public int? EmployeeID { get; set; }
+     public string FirstName { get; set; }
+     public string LastName { get; set; }
+     public string Title { get; set; }
+     public DateTime? HireDate { get; set; }
+ }
+{% endhighlight %}
+{% highlight razor tabtitle="CustomComponent.razor" %}
 @using Syncfusion.Blazor.Lists;
 @using Syncfusion.Blazor.Inputs;
+@using Syncfusion.Blazor.Grids;
+@using BlazorApp.Data
 @using Model
 
 <div class="setMargin">
     <SfTextBox Placeholder="Search" Input="@OnInput"></SfTextBox>
 </div>
-
 <SfListView @ref="ListView" Height="100%" ShowCheckBox="true" DataSource="@CloneData">
-    <ListViewFieldSettings TValue="DataModel" Id="Id" Text="Text" ></ListViewFieldSettings>
+    <ListViewFieldSettings TValue="DataModel" Id="Id" Text="Text"></ListViewFieldSettings>
     <ListViewEvents Clicked="OnClicked" Created="@(()=>OnCreated(ColumnContext.Columns))" TValue="DataModel"></ListViewEvents>
 </SfListView>
-
 <style>
-    .setMargin{
+    .setMargin {
         margin-bottom: 10px;
     }
 </style>
-
 @code
 {
     public List<DataModel> CloneData { get; set; } = new List<DataModel>();
-
     [CascadingParameter]
-    public SfGrid<Order> Grid { get; set; }
-
+    public SfGrid<OrderData> Grid { get; set; }
     [Parameter]
     public ColumnChooserTemplateContext ColumnContext { get; set; }
-
     public SfListView<DataModel> ListView { get; set; }
-
     async Task OnInput(InputEventArgs eventArgs)
     {
         CloneData = DataSource.FindAll(e => e.Text.ToLower().StartsWith(eventArgs.Value.ToLower()));
         await Task.Delay(100);
         await Preselect();
     }
-
     protected override async Task OnInitializedAsync()
     {
         CloneData = DataSource;
         await Task.Delay(100);
         await Preselect();
     }
-
     List<DataModel> DataSource = new List<DataModel>
     {
         new DataModel() { Text = "Order ID", Id = "OrderID" },
@@ -253,7 +566,6 @@ N> * You can build reusable custom component based on your customization need as
         new DataModel() { Text = "Title", Id = "Title"},
         new DataModel() { Text = "Freight", Id = "Freight"},
     };
-
     public async Task Preselect()
     {
         var cols = ColumnContext.Columns.FindAll(x => x.Visible == true).ToList();
@@ -270,31 +582,24 @@ N> * You can build reusable custom component based on your customization need as
             }
         }
     }
-
     public async Task OnCreated(List<GridColumn> args)
     {
         await Preselect();
     }
-
     public async Task OnClicked(ClickEventArgs<DataModel> args)
     {
         if (args.IsChecked)
         {
-            await Grid.HideColumnAsync(args.Text);
+            await Grid.ShowColumnAsync(args.Text);
         }
         else
         {
-            await Grid.ShowColumnAsync(args.Text);
+            await Grid.HideColumnAsync(args.Text);
         }
     }
 }
-```
-
-N> * The model class used in the above example is enclosed in the Model.cs file.
-
-```csharp
-using System;
-
+{% endhighlight %}
+{% highlight c# tabtitle="Model.cs" %}
 namespace Model
 {
     public class DataModel
@@ -303,33 +608,28 @@ namespace Model
         public string Text { get; set; }
         public string Type { get; set; }
     }
-
-    public class Order
-    {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
-        public int? EmployeeID { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Title { get; set; }
-        public DateTime? HireDate { get; set; }
-    }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
-![Blazor DataGrid with ListView in Column Chooser](./images/blazor-datagrid-column-chooser-content-template.png)
+> * You can build reusable custom component based on your customization need as like above code example.
+> * In the above example, Syncfusion<sup style="font-size:70%">&reg;</sup> [ListView](https://blazor.syncfusion.com/documentation/listview/getting-started) component is used as custom component in the content template to show/hide columns.
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNLJiLVTWKyyPjml?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+![Column chooser content template in Blazor DataGrid.](./images/blazor-datagrid-column-chooser-content-template.png)
 
 ### Customize the footer of column chooser
 
- The [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html#Syncfusion_Blazor_Grids_GridColumnChooserSettings_FooterTemplate) tag in the  [GridColumnChooserSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html) component is used to customize the footer in the column chooser dialog. You can type cast the context as [ColumnChooserFooterTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnChooserFooterTemplateContext.html) to get columns inside FooterTemplate.
+The [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html#Syncfusion_Blazor_Grids_GridColumnChooserSettings_FooterTemplate) tag in the  [GridColumnChooserSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html) component is used to customize the footer in the column chooser dialog. You can type cast the context as [ColumnChooserFooterTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnChooserFooterTemplateContext.html) to get columns inside FooterTemplate.
 
-```csharp
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
+@using BlazorApp1.Data
 
-<SfGrid @ref="grid" TValue="OrdersDetails" DataSource="@GridData" ShowColumnChooser="true" Toolbar="@( new List<string>() { "ColumnChooser"})" AllowPaging="true">
+<SfGrid @ref="grid" TValue="OrderData" DataSource="@GridData" ShowColumnChooser="true" Toolbar="@( new List<string>() { "ColumnChooser"})" AllowPaging="true">
     <GridColumnChooserSettings>
         <FooterTemplate>
             @{
@@ -344,169 +644,68 @@ namespace Model
         </FooterTemplate>
     </GridColumnChooserSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(OrdersDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" IsPrimaryKey="true" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrdersDetails.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(OrdersDetails.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(OrdersDetails.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrdersDetails.ShippedDate) HeaderText="Shipped Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(OrdersDetails.ShipCountry) HeaderText="Ship Country" Visible="false" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(OrdersDetails.ShipCity) HeaderText="Ship City" Visible="false" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" IsPrimaryKey="true" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShippedDate) HeaderText="Shipped Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" Visible="false" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Visible="false" Width="150"></GridColumn>
     </GridColumns>
 </SfGrid>
-
-@code{
-    public List<OrdersDetails> GridData { get; set; }
-    SfGrid<OrdersDetails> grid { get; set; }
-
+@code {
+    public List<OrderData> GridData { get; set; }
+    SfGrid<OrderData> grid { get; set; }
     protected override void OnInitialized()
     {
-        GridData = Enumerable.Range(1, 75).Select(x => new OrdersDetails()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-            ShippedDate = DateTime.Now.AddDays(+x),
-            ShipCountry = (new string[] { "Denmark", "Brazil", "Germany", "Austria" })[new Random().Next(4)],
-            ShipCity = (new string[] { "Berlin", "Madrid", "Marseille" })[new Random().Next(3)]
-        }).ToList();
-    }
-
-    public class OrdersDetails
+        GridData = OrderData.GetAllRecords();
+    }   
+}
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+    public class OrderData
     {
+        public static List<OrderData> Orders = new List<OrderData>();
+        public OrderData(int? OrderID,string CustomerID,string ShipCountry,double Freight,DateTime OrderDate,DateTime ShippedDate,string ShipCity)
+        {
+           this.OrderID = OrderID;    
+           this.CustomerID = CustomerID;
+           this.ShipCountry = ShipCountry;           
+           this.Freight = Freight;
+           this.OrderDate = OrderDate;     
+           this.ShippedDate = ShippedDate;     
+           this.ShipCity = ShipCity;
+        }
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count() == 0)
+            {
+                int code = 10;
+                for (int i = 1; i < 2; i++)
+                {
+                    Orders.Add(new OrderData(10248, "ALFKI", "France", 33.33,new DateTime(1996,07,07), new DateTime(1996, 08, 07), "Reims"));
+                    Orders.Add(new OrderData(10249, "ANANTR", "Germany", 89.76, new DateTime(1996, 07, 12), new DateTime(1996, 08, 08), "Münster"));
+                    Orders.Add(new OrderData(10250, "ANTON", "Brazil", 78.67, new DateTime(1996, 07, 13), new DateTime(1996, 08, 09), "Rio de Janeiro"));
+                    Orders.Add(new OrderData(10251, "BLONP", "Belgium", 55.65, new DateTime(1996, 07, 14), new DateTime(1996, 08, 10), "Lyon"));
+                    Orders.Add(new OrderData(10252, "BOLID", "Venezuela",11.09, new DateTime(1996, 07, 15), new DateTime(1996, 08, 11), "Charleroi"));
+                    Orders.Add(new OrderData(10253, "BLONP", "Venezuela",98.98, new DateTime(1996, 07, 16), new DateTime(1996, 08, 12), "Lyon"));
+                    Orders.Add(new OrderData(10254, "ANTON", "Belgium", 78.75, new DateTime(1996, 07, 17), new DateTime(1996, 08, 13), "Rio de Janeiro"));
+                    Orders.Add(new OrderData(10255, "ANANTR", "Germany", 44.07, new DateTime(1996, 07, 18), new DateTime(1996, 08, 14), "Münster"));
+                    Orders.Add(new OrderData(10256, "ALFKI", "France", 67.74, new DateTime(1996, 07, 19), new DateTime(1996, 08, 15), "Reims"));
+                    code += 5;
+                }
+            }
+            return Orders;
+        }
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
-        public DateTime? ShippedDate { get; set; }
+        public DateTime OrderDate { get; set; }
+        public DateTime ShippedDate { get; set; }      
         public string ShipCountry { get; set; }
+        public double Freight { get; set; }
         public string ShipCity { get; set; }
-    }
-}
-```
-
-![Customizing Column Chooser Footer in Blazor DataGrid](./images/blazor-datagrid-footer-template.png)
-
-## Customize column chooser dialog size
-
-You can customize the height and width of the column chooser dialog by using the below CSS styles.
-
-```csharp
-<style> 
-    #Grid .e-dialog.e-ccdlg {         
-        max-height: 600px !important; 
-        width: 300px !important; 
     } 
-    #Grid .e-ccdlg .e-cc-contentdiv { 
-        height: 250px !important; 
-        width: 250px !important;         
-    } 
-</style> 
-```
-N> Here, **!important** attribute is used to apply custom styles since the column chooser dialog position will be calculated dynamically based on content.
+{% endhighlight %}
+{% endtabs %}
 
-This can be demonstrated in the following sample:
-
-```cshtml
-@using Syncfusion.Blazor.Grids
-
-<SfGrid DataSource="@Employees" ShowColumnChooser="true" Toolbar=@ToolbarItems ID="Grid">
-    <GridColumns>
-        <GridColumn Field=@nameof(EmployeeData.EmployeeID) TextAlign="TextAlign.Center" HeaderText="Employee ID" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.FirstName) HeaderText="First Name" ShowInColumnChooser="false" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.LastName) HeaderText="Last Name" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Title" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.HireDate) HeaderText="Hire Date" Format="d" TextAlign="TextAlign.Right" Width="150"></GridColumn>
-    </GridColumns>
-</SfGrid>
-
-@code{
-    public string[] ToolbarItems = new string[] { "ColumnChooser" };
-
-    public List<EmployeeData> Employees { get; set; }
-
-    protected override void OnInitialized()
-    {
-        Employees = Enumerable.Range(1, 9).Select(x => new EmployeeData()
-        {
-            EmployeeID = x,
-            FirstName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" })[new Random().Next(5)],
-            LastName = (new string[] { "Davolio", "Fuller", "Leverling", "Peacock", "Buchanan" })[new Random().Next(5)],
-            Title = (new string[] { "Sales Representative", "Vice President, Sales", "Sales Manager",
-                                    "Inside Sales Coordinator" })[new Random().Next(4)],
-            HireDate = DateTime.Now.AddDays(-x),
-        }).ToList();
-    }
-
-    public class EmployeeData
-    {
-        public int? EmployeeID { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Title { get; set; }
-        public DateTime? HireDate { get; set; }
-    }
-}
-
-<style> 
-    #Grid .e-dialog.e-ccdlg {         
-        max-height: 600px !important; 
-        width: 300px !important; 
-    } 
-    #Grid .e-ccdlg .e-cc-contentdiv { 
-        height: 250px !important; 
-        width: 250px !important;         
-    } 
-</style> 
-```
-
-![Customize Column Chooser Dialog Size](./images/blazor-datagrid-customize-column-chooser-dialog.png)
-
-## Change default search operator of the column chooser
-
-The default operator for the search box in the column chooser is **StartsWith**. It is possible to change the default operator using the [Operator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Operator.html) property of the [GridColumnChooserSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html) class.
-
-In the following sample, the search box operator for the column chooser is set to **Contains** in the `GridColumnChooserSettings` class.
-
-```cshtml
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.Grids
-
-<SfGrid DataSource="@Employees" ShowColumnChooser="true" Toolbar=@ToolbarItems>
-    <GridColumnChooserSettings Operator="Operator.Contains"></GridColumnChooserSettings>
-    <GridColumns>
-        <GridColumn Field=@nameof(EmployeeData.EmployeeID) TextAlign="TextAlign.Center" HeaderText="Employee ID" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.FirstName) HeaderText="First Name" ShowInColumnChooser="false" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.LastName) HeaderText="Last Name" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Title" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.HireDate) HeaderText="Hire Date" Format="d" TextAlign="TextAlign.Right" Width="150"></GridColumn>
-    </GridColumns>
-</SfGrid>
-
-@code{
-    public string[] ToolbarItems = new string[] { "ColumnChooser" };
-    public List<EmployeeData> Employees { get; set; }
-
-    protected override void OnInitialized()
-    {
-        Employees = Enumerable.Range(1, 9).Select(x => new EmployeeData()
-        {
-            EmployeeID = x,
-            FirstName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" })[new Random().Next(5)],
-            LastName = (new string[] { "Davolio", "Fuller", "Leverling", "Peacock", "Buchanan" })[new Random().Next(5)],
-            Title = (new string[] { "Sales Representative", "Vice President, Sales", "Sales Manager",
-                                    "Inside Sales Coordinator" })[new Random().Next(4)],
-            HireDate = DateTime.Now.AddDays(-x),
-        }).ToList();
-    }
-
-    public class EmployeeData
-    {
-        public int? EmployeeID { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Title { get; set; }
-        public DateTime? HireDate { get; set; }
-    }
-}
-```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhUiMtVWQPZQjGs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

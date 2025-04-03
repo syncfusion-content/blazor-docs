@@ -1,0 +1,15 @@
+@using Syncfusion.Blazor.MultiColumnComboBox
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Data
+
+<SfMultiColumnComboBox TItem="Order" TValue="string" AllowFiltering=true ValueField="ShipCountry" TextField="ShipCountry" PopupWidth="1000px" Placeholder="e.g. Andrew">
+    <SfDataManager Url="api/Default" Adaptor="Adaptors.WebApiAdaptor" CrossDomain="true"></SfDataManager>
+</SfMultiColumnComboBox>
+
+@code {
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string ShipCountry { get; set; }
+    }
+}

@@ -9,7 +9,7 @@ documentation: ug
 
 # CSS Customization in Blazor TimePicker Component
 
-TimePicker allows to customize the text box and popup list appearance to suit the application by using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Calendars.SfTimePicker%601~CssClass.html) property.
+TimePicker allows to customize the text box and popup list appearance to suit the application by using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.TimePickerModel-1.html#Syncfusion_Blazor_Calendars_TimePickerModel_1_CssClass) property.
 
 The following code demonstrates customization of text appearance in a text box, popup button, and popup list along with hover and active state by using the `e-custom-style` class. Following is the list of available classes used to customize the entire TimePicker component:
 

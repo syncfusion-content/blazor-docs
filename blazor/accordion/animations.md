@@ -9,11 +9,11 @@ documentation: ug
 
 # Animations in Blazor Accordion Component
 
-[Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) supports custom animations for both expand and collapse actions from the provided animation option of the `Animation` library.  The animation property also allows to set [Easing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionAnimationCollapse.html#Syncfusion_Blazor_Navigations_AccordionAnimationCollapse_Easing), [Duration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionAnimationCollapse.html#Syncfusion_Blazor_Navigations_AccordionAnimationCollapse_Duration), and various other effects of an individual's choice.
+The [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) component supports custom animations for both expand and collapse actions using the animation options provided by the `Animation` library. The animation property allows you to customize various aspects including [Easing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionAnimationCollapse.html#Syncfusion_Blazor_Navigations_AccordionAnimationCollapse_Easing), [Duration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionAnimationCollapse.html#Syncfusion_Blazor_Navigations_AccordionAnimationCollapse_Duration), and other effects according to your preference.
 
-Default animation is given as `SlideDown` for expanding the panel using the [Expand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionAnimationSettings.html#Syncfusion_Blazor_Navigations_AccordionAnimationSettings_Expand) animation property and `SlideUp` for collapsing the panel using the [Collapse](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionAnimationSettings.html#Syncfusion_Blazor_Navigations_AccordionAnimationSettings_Collapse) animation property. The animation can be disabled by setting the animation [Effect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionAnimationCollapse.html#Syncfusion_Blazor_Navigations_AccordionAnimationCollapse_Effect) as `None`.
+By default, the accordion uses `SlideDown` animation for expanding panels (set through the [Expand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionAnimationSettings.html#Syncfusion_Blazor_Navigations_AccordionAnimationSettings_Expand) property) and `SlideUp` animation for collapsing panels (set through the [Collapse](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionAnimationSettings.html#Syncfusion_Blazor_Navigations_AccordionAnimationSettings_Collapse) property). You can disable animations completely by setting the animation [Effect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionAnimationCollapse.html#Syncfusion_Blazor_Navigations_AccordionAnimationCollapse_Effect) to `None`.
 
-The sample demonstrates the types of animation that suits Accordion. All the animation effects can be checked here.
+The following example demonstrates various animation types that can be applied to the Accordion component:
 
 ```cshtml
 @using Syncfusion.Blazor
@@ -91,6 +91,7 @@ The sample demonstrates the types of animation that suits Accordion. All the ani
 }
 ```
 
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhqWBsqAJzMiZJi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
 ![Customize Accordion expand or collapse animation behavior](./images/blazor-accordion-animation.gif)

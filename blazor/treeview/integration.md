@@ -52,9 +52,9 @@ This is demonstrated in an example where the TreeView operations are manipulated
 
     public class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Pid { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Pid { get; set; }
         public bool HasChild { get; set; }
     }
 
@@ -254,7 +254,7 @@ This is demonstrated in an example where the TreeView operations are manipulated
 
 ## Badge
 
-The Blazor TreeView component can integrate with the Badge component and allows for customizing the node structure using the `NodeTemplate` tag, which allows for creating a tree node with any custom structure, such as a web mail folder with a name and unread message count using the Badge component.
+The Blazor TreeView component can integrate with the Badge component and allows for customizing the node structure using the [`NodeTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewTemplates-1.html#Syncfusion_Blazor_Navigations_TreeViewTemplates_1_NodeTemplate) tag, which allows for creating a tree node with any custom structure, such as a web mail folder with a name and unread message count using the Badge component.
 
 ```cshtml
 @using Syncfusion.Blazor.Lists
@@ -375,9 +375,9 @@ The Blazor TreeView component can integrate with the Badge component and allows 
     }
     class TreeData
     {
-        public string Id { get; set; }
-        public string Pid { get; set; }
-        public string Name { get; set; }
+        public string? Id { get; set; }
+        public string? Pid { get; set; }
+        public string? Name { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
         public int Count { get; set; }
@@ -404,46 +404,13 @@ The Blazor TreeView component can integrate with the Badge component and allows 
         vertical-align: text-bottom;
     }
 
-    .material .treeCount.e-badge {
-        vertical-align: middle;
-    }
-
-    .bootstrap5.e-bigger .treeCount.e-badge,
-    .tailwind.e-bigger .treeCount.e-badge,
-    .tailwind-dark.e-bigger .treeCount.e-badge,
-    .bootstrap5-dark.e-bigger .treeCount.e-badge {
-        line-height: 10px;
-    }
-
-    .bootstrap4 .treeviewdiv .treeCount.e-badge,
-    .bootstrap5 .treeviewdiv .treeCount.e-badge,
-    .bootstrap .treeviewdiv .treeCount.e-badge,
-    .bootstrap-dark .treeviewdiv .treeCount.e-badge,
-    .highcontrast .treeviewdiv .treeCount.e-badge,
-    .bootstrap5-dark .treeviewdiv .treeCount.e-badge {
-        background-color: #008800;
-    }
-
-    .highcontrast .treeviewdiv .treeCount.e-badge {
-        color: white;
-    }
-
     .nodetext {
         float: left;
-    }
-
-    .e-rtl .nodetext {
-        float: right;
     }
 
     .nodebadge {
         float: right;
         margin-right: 5px
-    }
-
-    .e-rtl .nodebadge {
-        float: left;
-        margin-left: 5px
     }
 </style>
 
@@ -453,7 +420,7 @@ The Blazor TreeView component can integrate with the Badge component and allows 
 
 ## Icons Library
 
-The Blazor TreeView component has the built-in option to customize each node's appearance with Icons by mapping the **IconCss** fields.
+The Blazor TreeView component has the built-in option to customize each node's appearance with Icons by mapping the [**IconCss**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_IconCss) fields.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -539,10 +506,10 @@ The Blazor TreeView component has the built-in option to customize each node's a
     }
     class TreeItem
     {
-        public string NodeId { get; set; }
-        public string NodeText { get; set; }
-        public string Icon { get; set; }
-        public string ImageUrl { get; set; }
+        public string? NodeId { get; set; }
+        public string? NodeText { get; set; }
+        public string? Icon { get; set; }
+        public string? ImageUrl { get; set; }
         public bool Expanded { get; set; }
         public bool Selected { get; set; }
         public List<TreeItem> Child;
@@ -572,11 +539,6 @@ The Blazor TreeView component has the built-in option to customize each node's a
     .e-treeview .e-list-icon.folder {
         background-position: -197px -552px
     }
-
-    .e-bigger .e-treeview .e-list-icon.folder {
-        background-position: -197px -549px;
-    }
-
     .e-treeview .e-list-icon.docx {
         background-position: -197px -20px
     }
@@ -616,7 +578,7 @@ The Blazor TreeView component has the built-in option to customize each node's a
 
 ## Navigation within Sidebar
 
-The Blazor TreeView component's **NavigateUrl** field is used to navigate from one page to other pages using TreeView node selection. 
+The Blazor TreeView component's [**NavigateUrl**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_NavigateUrl) field is used to navigate from one page to other pages using TreeView node selection. 
 
 In this example, TreeView's `NavigateUrl` is mapped to move one page to another page inside the Sidebar component.
 
@@ -644,7 +606,7 @@ In this example, TreeView's `NavigateUrl` is mapped to move one page to another 
                 </SfToolbar>
             </div>
             @*Initialize the Sidebar component*@
-            <SfSidebar HtmlAttributes="@HtmlAttribute" Width="290px" Target=".e-main-content" MediaQuery="(min-width:600px)" @bind-IsOpen="SidebarToggle">
+            <SfSidebar @attributes="@HtmlAttribute" Width="290px" Target=".e-main-content" MediaQuery="(min-width:600px)" @bind-IsOpen="SidebarToggle">
                 <ChildContent>
                     <div class="main-menu">
                         <div class="table-content">
@@ -696,12 +658,12 @@ In this example, TreeView's `NavigateUrl` is mapped to move one page to another 
     SfTreeView<TreeData> tree;
     public class TreeData
     {
-        public string NodeId { get; set; }
-        public string NodeText { get; set; }
-        public string IconCss { get; set; }
+        public string? NodeId { get; set; }
+        public string? NodeText { get; set; }
+        public string? IconCss { get; set; }
         public bool HasChild { get; set; }
-        public string Pid { get; set; }
-        public string NavigateUrl { get; set; }
+        public string? Pid { get; set; }
+        public string? NavigateUrl { get; set; }
     }
     private List<TreeData> Treedata = new List<TreeData>();
     protected override void OnInitialized()
@@ -729,12 +691,6 @@ In this example, TreeView's `NavigateUrl` is mapped to move one page to another 
     .sidebar-treeview .e-treeview .e-icon-expandable {
         margin: 3px;
     }
-
-    .e-bigger .sidebar-treeview .e-treeview .e-icon-collapsible,
-    .e-bigger .sidebar-treeview .e-treeview .e-icon-expandable {
-        margin: 8px;
-    }
-    /* Specific styles for TreeView component*/
     .sidebar-treeview .e-treeview,
     .sidebar-treeview .e-treeview .e-ul {
         padding: 0;
@@ -745,29 +701,23 @@ In this example, TreeView's `NavigateUrl` is mapped to move one page to another 
         z-index: 20 !important;
         top: 40px !important;
     }
-        /* Specific styles for main-menu-header element */
-        .sidebar-treeview .main-menu .main-menu-header {
-            color: #656a70;
-            padding: 15px 15px 15px 0;
-            font-size: 14px;
-            width: 13em;
-            margin: 0;
-        }
+    /* Specific styles for main-menu-header element */
+    .sidebar-treeview .main-menu .main-menu-header {
+        color: #656a70;
+        padding: 15px 15px 15px 0;
+        font-size: 14px;
+        width: 13em;
+        margin: 0;
+    }
 
     #main-text .sidebar-heading {
         font-size: 16px;
     }
 
-    .e-bigger #main-text .sidebar-heading {
-        font-size: 18px;
-    }
     /* specifies the table of content area styles */
     .sidebar-treeview .table-content {
         padding: 20px 18px;
         height: 8em;
-    }
-    .e-bigger .sidebar-treeview .table-content {
-        padding: 20px 27px;
     }
     /*Specific styles for content area elements */
     #main-text .sidebar-content .line {
@@ -780,10 +730,6 @@ In this example, TreeView's `NavigateUrl` is mapped to move one page to another 
     #main-text .sidebar-content {
         padding: 15px;
         font-size: 14px;
-    }
-
-    .e-bigger #main-text .sidebar-content {
-        font-size: 16px;
     }
 
     #main-text .paragraph-content {
@@ -819,10 +765,6 @@ In this example, TreeView's `NavigateUrl` is mapped to move one page to another 
         font-family: 'Material_toolbar';
     }
 
-    .e-bigger .e-folder {
-        font-size: 18px;
-    }
-
     .e-folder {
         text-align: center;
         font-weight: 500;
@@ -831,10 +773,6 @@ In this example, TreeView's `NavigateUrl` is mapped to move one page to another 
     /* Specific styles for TreeView component*/
     .sidebar-treeview .e-treeview .e-text-content {
         padding-left: 18px;
-    }
-
-    .e-bigger .sidebar-treeview .e-treeview .e-text-content {
-        padding-left: 22px;
     }
 
     .sidebar-treeview .main-treeview .icon-microchip::before {
@@ -848,22 +786,114 @@ In this example, TreeView's `NavigateUrl` is mapped to move one page to another 
     .sidebar-treeview .main-treeview .icon-docs::before {
         content: '\e802';
     }
-    /* Specific styles for Toolbar component */
-    .bootstrap5 #wrapper .e-toolbar {
-        border-bottom: 1px solid #d2d6de;
-    }
-
     #wrapper .main-content {
         height: 380px;
-    }
-    .bootstrap5 .sidebar-treeview {
-        border-right: 1px solid #dee2e6 !important;
     }
 </style>
 
 ```
 
 ![Navigation within Sidebar](./images/blazor-treeview-navigation-within-sidebar.png)
+
+## Tooltip in Blazor TreeView Component
+
+Implemented the functionality to display a Syncfusion<sup style="font-size:70%">&reg;</sup> Tooltip when hovering over nodes in the Blazor TreeView component. This was achieved by utilizing the Tooltip component's [OnRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_OnRender) event and performing a JavaScript interop call to dynamically update the [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_Content) based on the node being hovered over.
+
+```cshtml
+
+@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.Popups
+@inject IJSRuntime JSRuntime
+
+<div class="control_wrapper">
+    <SfTooltip Target=".e-text-content" Content="@content" OnRender="OnRender">
+        <SfTreeView TValue="MailItem" ShowCheckBox="true">
+            <TreeViewFieldsSettings  TValue="MailItem" Id="Id" DataSource="@MyFolder" Text="FolderName" ParentID="ParentId" HasChildren="HasSubFolders" Expanded="Expanded"></TreeViewFieldsSettings>
+        </SfTreeView>
+    </SfTooltip>
+</div>
+@code {
+    public string content = "...Loading";
+    public async Task OnRender(TooltipEventArgs args)
+    {
+        string returnValue = await JSRuntime.InvokeAsync<string>("content", args);
+        content = returnValue;
+    }
+    public class MailItem
+    {
+        public string? Id { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
+        public bool Expanded { get; set; }
+        public bool HasSubFolders { get; set; }
+    }
+    List<MailItem> MyFolder = new List<MailItem>();
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        MyFolder.Add(new MailItem
+            {
+                Id = "1",
+                FolderName = "Inbox",
+                HasSubFolders = true,
+                Expanded = true
+            });
+        MyFolder.Add(new MailItem
+            {
+                Id = "2",
+                ParentId = "1",
+                FolderName = "Categories",
+                Expanded = true,
+                HasSubFolders = true
+            });
+        MyFolder.Add(new MailItem
+            {
+                Id = "3",
+                ParentId = "2",
+                FolderName = "Primary"
+            });
+        MyFolder.Add(new MailItem
+            {
+                Id = "4",
+                ParentId = "2",
+                FolderName = "Social"
+            });
+        MyFolder.Add(new MailItem
+            {
+                Id = "5",
+                ParentId = "2",
+                FolderName = "Promotions"
+            });
+    }
+
+}
+
+<style>
+    /* Sample specific styles */
+
+    .e-treeview.e-fullrow-wrap .e-text-content {
+        pointer-events: auto;
+    }
+
+    .control_wrapper {
+        max-width: 500px;
+        margin: auto;
+        border: 1px solid #dddddd;
+        border-radius: 3px;
+        max-height: 470px;
+        overflow: auto;
+    }
+</style>
+
+<script>
+    function content(args) {
+        var cellElement = document.elementFromPoint(args.left, args.top);
+        var content= cellElement.innerText;
+        return (content)
+    }
+</script>
+
+```
 
 ## Blazor Error Boundary
 
@@ -907,9 +937,9 @@ In the sample provided, the code snippet for the [Error Boundary component](http
 
     public class MailItem
     {
-        public string Id { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? Id { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
     }

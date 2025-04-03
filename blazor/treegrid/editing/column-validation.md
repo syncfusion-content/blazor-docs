@@ -133,7 +133,7 @@ Toolbar="@(new List<string>() { "Edit", "Update", "Cancel" })">
     {
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
-            if (value != null)
+            if (value != null && value != "")
             {
                 int duration = (int)value;
                 if (duration >= 1 && duration <= 20)
@@ -155,7 +155,8 @@ Toolbar="@(new List<string>() { "Edit", "Update", "Cancel" })">
     {
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
-            if (value != null)
+            // added condition check for empty string 
+            if (value != null && value != "")
             {
                 string name = value.ToString();
                 if (name.Length >= 1 && name.Length <= 7)
@@ -207,7 +208,7 @@ namespace TreeGridComponent. Data
 
 Apart from using default validation and custom validation, there are cases where you might want to use your validator component to validate the tree grid edit form. Such cases can be achieved using the `Validator` property of the `TreeGridEditSettings` component which accepts a validation component and inject it inside the `EditForm` of the tree grid. Inside the `Validator` , you can access the data using the implicit named parameter context which is of type [ValidatorTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ValidatorTemplateContext.html).
 
-For creating a form validator component you can refer [here](https://docs.microsoft.com/en-us/aspnet/core/blazor/forms-validation?view=aspnetcore-5.0#validator-components).
+For creating a form validator component you can refer [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/forms/?view=aspnetcore-8.0#validator-components).
 
 In the below code example, the following things have been done.
 
@@ -526,15 +527,15 @@ N> The validation message for fields that are not defined in the tree grid colum
 @using System.ComponentModel.DataAnnotations
 
 <SfTreeGrid DataSource="@TreeGridData" AllowPaging="true" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
-    <TreeGridEvents TValue="TreeData" OnActionComplete="OnComplete"></TreeGridEvents>
+    <TreeGridEvents TValue="TreeData" RowCreated="RowCreatedEventHandler"></TreeGridEvents>
     <TreeGridEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true" Mode="Syncfusion.Blazor.TreeGrid.EditMode.Dialog" NewRowPosition="RowPosition.Child">
         <Validator>
             <DataAnnotationsValidator></DataAnnotationsValidator>
         </Validator>
         <Template>
             @{
-               var employee = (context as TreeData);
-             }
+                var employee = (context as TreeData);
+            }
             <div>
                 <ValidationMessage For="() => employee.TaskName" />
                 <div class="form-row">
@@ -560,8 +561,8 @@ N> The validation message for fields that are not defined in the tree grid colum
                         <SfDropDownList ID="Priority" TItem="TreeData" @bind-Value="@(employee.Priority)" TValue="string" DataSource="@TreeGridData" FloatLabelType="FloatLabelType.Always" Placeholder="Priority">
                             <DropDownListFieldSettings Value="Priority" Text="Priority"></DropDownListFieldSettings>
                         </SfDropDownList>
-                    </div>                    
-                </div>                
+                    </div>
+                </div>
             </div>
         </Template>
     </TreeGridEditSettings>
@@ -586,7 +587,7 @@ N> The validation message for fields that are not defined in the tree grid colum
     }
 </style>
 
-@code{
+@code {
     private Boolean Check = false;
 
     public List<TreeData> TreeGridData { get; set; }
@@ -596,39 +597,32 @@ N> The validation message for fields that are not defined in the tree grid colum
         this.TreeGridData = TreeData.GetSelfDataSource().ToList();
     }
 
-    private void OnComplete(ActionEventArgs<TreeData> args)
+    private void RowCreatedEventHandler(RowCreatedEventArgs<TreeData> args)
     {
-        if (args.RequestType.ToString() == "Add")
-        {
-            Check = true;
-        }
-        else
-        {
-            Check = false;
-        }
+        Check = true;
     }
     public class TreeData
     {
-            public int TaskId { get; set;}
-            [Required]
-            public string TaskName { get; set;}
-            public int? Duration { get; set;}
-            public int? Progress { get; set;}
-            public string Priority { get; set;}
-            public int? ParentId { get; set;}
-       
+        public int TaskId { get; set; }
+        [Required]
+        public string TaskName { get; set; }
+        public int? Duration { get; set; }
+        public int? Progress { get; set; }
+        public string Priority { get; set; }
+        public int? ParentId { get; set; }
+
         public static List<TreeData> GetSelfDataSource()
         {
             List<TreeData> TreeDataCollection = new List<TreeData>();
-            TreeDataCollection.Add(new TreeData() { TaskId = 1,TaskName = "Parent Task 1",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null});
-            TreeDataCollection.Add(new TreeData() { TaskId = 2,TaskName = "Child task 1",Progress = 80,Priority = "Low",Duration = 50,ParentId = 1 });
-            TreeDataCollection.Add(new TreeData() { TaskId = 3,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Critical",ParentId = 2 });
-            TreeDataCollection.Add(new TreeData() { TaskId = 4,TaskName = "Child task 3",Duration = 6,Priority = "High",Progress = 77,ParentId = 3 });
-            TreeDataCollection.Add(new TreeData() { TaskId = 5,TaskName = "Parent Task 2",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null});
-            TreeDataCollection.Add(new TreeData() { TaskId = 6,TaskName = "Child task 1",Duration = 4,Progress = 80,Priority = "Critical",ParentId = 5});
-            TreeDataCollection.Add(new TreeData() { TaskId = 7,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Low",ParentId = 5});
-            TreeDataCollection.Add(new TreeData() { TaskId = 8,TaskName = "Child task 3",Duration = 6,Progress = 77,Priority = "High",ParentId = 5});
-            TreeDataCollection.Add(new TreeData() { TaskId = 9,TaskName = "Child task 4",Duration = 6,Progress = 77,Priority = "Low",ParentId = 5});
+            TreeDataCollection.Add(new TreeData() { TaskId = 1, TaskName = "Parent Task 1", Duration = 10, Progress = 70, Priority = "Critical", ParentId = null });
+            TreeDataCollection.Add(new TreeData() { TaskId = 2, TaskName = "Child task 1", Progress = 80, Priority = "Low", Duration = 50, ParentId = 1 });
+            TreeDataCollection.Add(new TreeData() { TaskId = 3, TaskName = "Child Task 2", Duration = 5, Progress = 65, Priority = "Critical", ParentId = 2 });
+            TreeDataCollection.Add(new TreeData() { TaskId = 4, TaskName = "Child task 3", Duration = 6, Priority = "High", Progress = 77, ParentId = 3 });
+            TreeDataCollection.Add(new TreeData() { TaskId = 5, TaskName = "Parent Task 2", Duration = 10, Progress = 70, Priority = "Critical", ParentId = null });
+            TreeDataCollection.Add(new TreeData() { TaskId = 6, TaskName = "Child task 1", Duration = 4, Progress = 80, Priority = "Critical", ParentId = 5 });
+            TreeDataCollection.Add(new TreeData() { TaskId = 7, TaskName = "Child Task 2", Duration = 5, Progress = 65, Priority = "Low", ParentId = 5 });
+            TreeDataCollection.Add(new TreeData() { TaskId = 8, TaskName = "Child task 3", Duration = 6, Progress = 77, Priority = "High", ParentId = 5 });
+            TreeDataCollection.Add(new TreeData() { TaskId = 9, TaskName = "Child task 4", Duration = 6, Progress = 77, Priority = "Low", ParentId = 5 });
             return TreeDataCollection;
         }
     }

@@ -31,7 +31,7 @@ Radio Button caption can be defined by using the [Label](https://help.syncfusion
 
 ## Size
 
-The different Radio Button sizes available are default and small. To reduce the size of the default Radio Button to small, set the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfRadioButton-1.html) property to `e-small`.
+The different Radio Button sizes available are default and small. To reduce the size of the default Radio Button to small, set the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfInputBase-1.html#Syncfusion_Blazor_Buttons_SfInputBase_1_CssClass) property to `e-small`.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons

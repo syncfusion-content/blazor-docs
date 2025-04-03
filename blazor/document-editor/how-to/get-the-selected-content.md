@@ -78,13 +78,13 @@ The following example code illustrates how to get the content of a bookmark and 
     public async void OnLoad(object args)
     {
         // To insert text in cursor position
-        container.DocumentEditor.Editor.InsertTextAsync("Document editor");
+        await container.DocumentEditor.Editor.InsertTextAsync("Document editor");
         // To select all the content in document
-        container.DocumentEditor.Selection.SelectAllAsync();
+        await container.DocumentEditor.Selection.SelectAllAsync();
         // Insert bookmark to selected content
-        container.DocumentEditor.Editor.InsertBookmarkAsync("Bookmark1");
+        await container.DocumentEditor.Editor.InsertBookmarkAsync("Bookmark1");
         //Select the bookmark
-        container.DocumentEditor.Selection.SelectBookmarkAsync("Bookmark1");
+        await container.DocumentEditor.Selection.SelectBookmarkAsync("Bookmark1");
         // To get the selected content as sfdt
         string selectedContent =await container.DocumentEditor.Selection.GetSfdtAsync();
         // Insert the sfdt content in cursor position using paste API

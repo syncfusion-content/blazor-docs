@@ -13,6 +13,10 @@ A cascading ComboBox allows you to select an item from a list of options, and th
 
 In the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_ValueChange) event handler of the first ComboBox, you can load the data for the second ComboBox based on the selected value of the first ComboBox. This process can be repeated between the second and third ComboBoxes to create a cascading effect.
 
+To quickly get started with Cascading in the Blazor ComboBox component, you can watch the video below.
+
+{% youtube "https://www.youtube.com/watch?v=zGGntfBPQNI" %}
+
 In the following example, when a country is selected in the first ComboBox, the list of states for that country is loaded in the second ComboBox. Similarly, when a state is selected in the second ComboBox, the list of cities for that state is loaded in the third ComboBox.
 
 {% highlight cshtml %}
@@ -20,6 +24,8 @@ In the following example, when a country is selected in the first ComboBox, the 
 {% include_relative code-snippet/cascading/cascading.razor %}
 
 {% endhighlight %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLUsVBmKweKQSWe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Cascading in Blazor ComboBox](./images/cascading/blazor_combobox_cascading.gif)
 
@@ -34,6 +40,8 @@ In the following example, the ComboBox displays a list of countries, and the tex
 {% include_relative code-snippet/cascading/cascading-with-other-form-fields.razor %}
 
 {% endhighlight %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BthKWhhGKcenJwTt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Cascading with other form field in Blazor ComboBox](./images/cascading/blazor_combobox_cascading-with-other-form-field.png)
 

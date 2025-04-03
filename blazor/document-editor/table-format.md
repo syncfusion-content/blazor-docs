@@ -17,26 +17,26 @@ You can customize the cell margins by using the following sample code.
 
 ```csharp
 //To change the left margin.
-documentEditor.Selection.CellFormat.SetLeftMargin(5);
+await documentEditor.Selection.CellFormat.SetLeftMarginAsync(5);
 //To change the right margin.
-documentEditor.Selection.CellFormat.SetRightMargin(5);
+await documentEditor.Selection.CellFormat.SetRightMarginAsync(5);
 //To change the top margin.
-documentEditor.Selection.CellFormat.SetTopMargin(5);
+await documentEditor.Selection.CellFormat.SetTopMarginAsync(5);
 //To change the bottom margin.
-documentEditor.Selection.CellFormat.SetBottomMargin(5);
+await documentEditor.Selection.CellFormat.SetBottomMarginAsync(5);
 ```
 
 You can also define the default cell margins for a table. If the specific cell margin value is not defined explicitly in the cell formatting, the corresponding value will be retrieved from default cells margin of the table. Refer to the following sample code.
 
 ```csharp
 //To change the left margin.
-documentEditor.Selection.TableFormat.SetLeftMargin(5);
+await documentEditor.Selection.TableFormat.SetLeftMarginAsync(5);
 //To change the right margin.
-documentEditor.Selection.TableFormat.SetRightMargin(5);
+await documentEditor.Selection.TableFormat.SetRightMarginAsync(5);
 //To change the top margin.
-documentEditor.Selection.TableFormat.SetTopMargin(5);
+await documentEditor.Selection.TableFormat.SetTopMarginAsync(5);
 //To change the bottom margin.
-documentEditor.Selection.TableFormat.SetBottomMargin(5);
+await documentEditor.Selection.TableFormat.SetBottomMarginAsync(5);
 ```
 
 ## Background color
@@ -44,13 +44,13 @@ documentEditor.Selection.TableFormat.SetBottomMargin(5);
 You can explicitly set the background color of selected cells using the following sample code.
 
 ```csharp
-documentEditor.Selection.CellFormat.SetBackground("#E0E0E0");
+await documentEditor.Selection.CellFormat.SetBackgroundAsync("#E0E0E0");
 ```
 
 Refer to the following sample code to customize the background color of the table.
 
 ```csharp
-documentEditor.Selection.TableFormat.SetBackground("#E0E0E0");
+await documentEditor.Selection.TableFormat.SetBackgroundAsync("#E0E0E0");
 ```
 
 ## Cell spacing
@@ -58,7 +58,7 @@ documentEditor.Selection.TableFormat.SetBackground("#E0E0E0");
 Refer to the following sample code to customize the spacing between each cell in a table.
 
 ```csharp
-documentEditor.Selection.TableFormat.SetCellSpacing(2);
+await documentEditor.Selection.TableFormat.SetCellSpacingAsync(2);
 ```
 
 ## Cell vertical alignment
@@ -66,7 +66,7 @@ documentEditor.Selection.TableFormat.SetCellSpacing(2);
 The content is aligned within a table cell to `Top`, `Center`, or `Bottom`. You can customize this property of selected cells. Refer to the following sample code.
 
 ```csharp
-documentEditor.Selection.CellFormat.SetVerticalAlignment(CellVerticalAlignment.Bottom);
+await documentEditor.Selection.CellFormat.SetVerticalAlignmentAsync(CellVerticalAlignment.Bottom);
 ```
 
 ## Table alignment
@@ -74,7 +74,7 @@ documentEditor.Selection.CellFormat.SetVerticalAlignment(CellVerticalAlignment.B
 The tables are aligned in document editor to `Left`, `Right`, or `Center`. Refer to the following sample code.
 
 ```csharp
-documentEditor.Selection.TableFormat.SetTableAlignment(TableAlignment.Center);
+await documentEditor.Selection.TableFormat.SetTableAlignmentAsync(TableAlignment.Center);
 ```
 
 ## Cell width
@@ -89,11 +89,11 @@ Set the desired width of table cells that will be considered when the table is l
 
 @code {
     SfDocumentEditor documentEditor;
-    protected void OnLoad(object args)
+    protected async void OnLoad(object args)
     {
-        documentEditor.Editor.InsertTableAsync(2, 2);
-        documentEditor.Selection.CellFormat.SetPreferredWidth(100);
-        documentEditor.Selection.CellFormat.SetPreferredWidthType(WidthType.Point);
+        await documentEditor.Editor.InsertTableAsync(2, 2);
+        await documentEditor.Selection.CellFormat.SetPreferredWidthAsync(100);
+        await documentEditor.Selection.CellFormat.SetPreferredWidthTypeAsync(WidthType.Point);
     }
 }
 ```
@@ -110,11 +110,11 @@ You can set the desired width of a table in `Point` or `Percent` type. Refer to 
 
 @code {
     SfDocumentEditor documentEditor;
-    protected void OnLoad(object args)
+    protected async void OnLoad(object args)
     {
-        documentEditor.Editor.InsertTable(2, 2);
-        documentEditor.Selection.TableFormat.SetPreferredWidth(300);
-        documentEditor.Selection.TableFormat.SetPreferredWidthType(WidthType.Point);
+        await documentEditor.Editor.InsertTableAsync(2, 2);
+        await documentEditor.Selection.TableFormat.SetPreferredWidthAsync(300);
+        await documentEditor.Selection.TableFormat.SetPreferredWidthTypeAsync(WidthType.Point);
     }
 }
 ```
@@ -135,11 +135,11 @@ You can customize the height of a table row as `Auto`, `AtLeast`, or `Exactly`. 
 
 @code {
     SfDocumentEditor documentEditor;
-    protected void OnLoad(object args)
+    protected async void OnLoad(object args)
     {
-        documentEditor.Editor.InsertTableAsync(2, 2);
-        documentEditor.Selection.RowFormat.SetHeight(20);
-        documentEditor.Selection.RowFormat.SetHeightType(HeightType.Exactly);
+        await documentEditor.Editor.InsertTableAsync(2, 2);
+        await documentEditor.Selection.RowFormat.SetHeightAsync(20);
+        await documentEditor.Selection.RowFormat.SetHeightTypeAsync(HeightType.Exactly);
     }
 }
 ```
@@ -149,7 +149,7 @@ You can customize the height of a table row as `Auto`, `AtLeast`, or `Exactly`. 
 The header row describes the content of a table. A table can optionally have a header row. Only the first row of a table can be the header row. If the cursor position is at first row of the table, then you can define whether it is a header row or not using the following sample code.
 
 ```csharp
-documentEditor.Selection.RowFormat.SetIsHeader(true);
+await documentEditor.Selection.RowFormat.SetIsHeaderAsync(true);
 ```
 
 ## Allow row break across pages
@@ -157,7 +157,23 @@ documentEditor.Selection.RowFormat.SetIsHeader(true);
 This property is valid if a table row does not fit in the current page during table layout. It defines whether a table row can be allowed to break. If the value is false, the entire row will be moved to the start of next page. You can modify this property for selected rows using the following sample code.
 
 ```csharp
-documentEditor.Selection.RowFormat.SetAllowBreakAcrossPages(false);
+await documentEditor.Selection.RowFormat.SetAllowBreakAcrossPagesAsync(false);
+```
+
+### Title
+
+Document Editor expose API to get or set the table title of the selected table. Refer to the following sample code to set title.
+
+```csharp
+await documentEditor.Selection.TableFormat.SetTitleAsync("Shipping Details");
+```
+
+### Description
+
+Document Editor expose API to get or set the table description of the selected image. Refer to the following sample code to set description.
+
+```csharp
+await documentEditor.Selection.TableFormat.SetDescriptionAsync("Freight cost and shipping details");
 ```
 
 You can also explore our [Blazor Word Processor](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) example to know how to render and configure the document editor.

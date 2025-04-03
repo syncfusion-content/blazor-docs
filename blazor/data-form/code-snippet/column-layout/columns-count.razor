@@ -1,0 +1,60 @@
+@using Syncfusion.Blazor.DataForm
+@using System.ComponentModel.DataAnnotations
+
+<SfDataForm Width="50%"
+            Model="@RegistrationDetailsModel" ColumnCount="2" ColumnSpacing="20px">
+
+    <FormValidator>
+        <DataAnnotationsValidator></DataAnnotationsValidator>
+    </FormValidator>
+
+    <FormItems>
+        <FormItem Field="@nameof(RegistrationDetailsModel.FirstName)" LabelText="First Name"></FormItem>
+        <FormItem Field="@nameof(RegistrationDetailsModel.LastName)" LabelText="Last Name"></FormItem>
+        <FormItem Field="@nameof(RegistrationDetailsModel.DOB)" LabelText="Date of birth" Placeholder="M/d/yyyy" EditorType="FormEditorType.DatePicker"></FormItem>
+        <FormItem Field="@nameof(RegistrationDetailsModel.PhoneNumber)" LabelText="Phone number"></FormItem>
+        <FormItem Field="@nameof(RegistrationDetailsModel.Sex)" LabelText="Gender"></FormItem>
+        <FormItem Field="@nameof(RegistrationDetailsModel.Email)" LabelText="Email" Placeholder="someone@example.com"></FormItem>
+    </FormItems>
+
+</SfDataForm>
+
+
+@code {
+    public enum Gender
+    {
+        Male,
+        Female,
+        Others
+    }
+
+    public class RegistrationDetails
+    {
+
+        [Required(ErrorMessage = "Please enter your first name")]
+        public string FirstName { get; set; }
+
+        [Required(ErrorMessage = "Please enter your phone number")]
+        [Phone(ErrorMessage ="Please enter valid phone number")]
+        public string PhoneNumber { get; set; }
+
+        [Required(ErrorMessage = "Please enter your last name")]
+        public string LastName { get; set; }
+
+        [Required(ErrorMessage = "Please enter your date of birth")]
+        public DateTime? DOB { get; set; }
+
+        [Required(ErrorMessage = "Please choose your gender")]
+        public Gender Sex { get; set; }
+
+        [Required(ErrorMessage = "Please enter your email address")]
+        [EmailAddress(ErrorMessage = "Please enter valid email address")]
+        public string Email { get; set; }
+    }
+
+    private RegistrationDetails RegistrationDetailsModel = new RegistrationDetails()
+        {
+            FirstName = "John",
+            LastName = "Smith"
+        };
+}

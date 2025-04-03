@@ -132,9 +132,7 @@ When pasting a large text into the editor it displays `Attempting to reconnect` 
 
 ### Blazor Server App
 
-* For **.NET 6 and .NET 7** app, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
-
-* For **.NET 5 and .NET 3.X** app, open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
+* For **.NET 6 and .NET 7** app, open the **~/Program.cs** file and register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="11" %}
@@ -155,33 +153,11 @@ var app = builder.Build();
 ....
 
 {% endhighlight %}
-
-{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" hl_lines="13" %}
-
-using Syncfusion.Blazor;
-
-namespace BlazorApplication
-{
-    public class Startup
-    {
-        ...
-        public void ConfigureServices(IServiceCollection services)
-        {
-            services.AddRazorPages();
-            services.AddServerSideBlazor();
-            services.AddSyncfusionBlazor();
-            services.AddSignalR(e => { e.MaximumReceiveMessageSize = 1024000000; });
-        }
-        ...
-    }
-}
-
-{% endhighlight %}
 {% endtabs %}
 
 ### Blazor WebAssembly App
 
-Open **~/Program.cs** file and register the Syncfusion Blazor Service in the client web app.
+Open **~/Program.cs** file and register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the client web app.
 
 {% tabs %}
 {% highlight C# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="13" %}
@@ -200,26 +176,6 @@ builder.Services.AddSyncfusionBlazor();
 builder.Services.AddSignalR(e => { e.MaximumReceiveMessageSize = 1024000000; });
 await builder.Build().RunAsync();
 ....
-
-{% endhighlight %}
-
-{% highlight c# tabtitle=".NET 5 & .NET 3.X (~/Program.cs)" hl_lines="11" %}
-
-using Syncfusion.Blazor;
-
-namespace WebApplication1
-{
-    public class Program
-    {
-        public static async Task Main(string[] args)
-        {
-            ....
-            builder.Services.AddSyncfusionBlazor();
-            builder.Services.AddSignalR(e => { e.MaximumReceiveMessageSize = 1024000000; });
-            await builder.Build().RunAsync();
-        }
-    }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -246,4 +202,4 @@ You can get the pasted text as HTML text using the [AfterPasteCleanup](https://h
 {% endtabs %}
 
 
-N> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to know how to render and configure the rich text editor tools.
+N> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap5) example to know how to render and configure the rich text editor tools.

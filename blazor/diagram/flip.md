@@ -9,17 +9,17 @@ documentation: ug
 
 # Flip in Blazor Diagram Component
 
-The diagram Provides support to flip the node, connector and group. The flip is performed to give the mirrored image of the original element.
+The diagram component offers functionality to flip nodes, connectors, and groups. Flipping creates a mirror image of the original element, allowing for versatile visual representations within the diagram.
 
 ## How to flip the node or group
 
-The [Flip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_Flip) command is used to flip the content, and the port of the chosen object is mirrored across  in either the horizontal, vertical, or both directions on the diagram page.
+The [Flip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_Flip) command is used to mirror the content and ports of selected objects across either the horizontal, vertical, or both directions on the diagram page. This transformation allows for quick and easy reorientation of diagram elements.
 
-**Note:** We can flip the nodegroup as well as the selected child nodes.
+**Note:** The Flip command can be applied to both individual nodes and node groups, including their selected child nodes.
 
 ### How to change the flip direction
 
-The [FlipDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FlipDirection.html) is used to flip the node or group or connector so that it is mirrored across in either the horizontal, vertical, or both directions.
+The [FlipDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FlipDirection.html) property is used to mirror nodes, groups, or connectors across horizontal, vertical, or both directions. This feature allows you to create symmetrical or reversed representations of diagram elements, enhancing the flexibility and visual appeal of your Blazor diagrams.
 
 | FlipDirection | Description | 
 | -------- | -------- |
@@ -31,7 +31,7 @@ The [FlipDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diag
 
 ### How to change the flip mode
 
-The [FlipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramFlipMode.html) is used to control the behavior of the flip object whether to flip the object along with the port and content.
+The [FlipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramFlipMode.html) property is utilized to manage the flipping behavior of diagram objects. It determines whether the object should be flipped along with its associated ports and content, or if these elements should remain in their original orientation during the flip operation.
 
 | DiagramFlipMode | Description | 
 | -------- | -------- |
@@ -40,108 +40,112 @@ The [FlipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.D
 |All| It enables or disables the flip for both the object’s content and port.|
 |None| It is used to disable all the flip mode behavior.|
 
-**Note:** [FlipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramFlipMode.html) is only applicable to nodes, not connectors.
+**Note:** The [FlipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramFlipMode.html) property is exclusively applicable to nodes within the diagram. It does not affect connectors or any other diagram elements.
 
 The following code example shows how to flip the node.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" value="HorizontalPort" @onclick="@HorizontalPort" />
-<input type="button" value="HorizontalContent" @onclick="@HorizontalContent" />
-<input type="button" value="HorizontalAll" @onclick="@HorizontalAll" />
-<input type="button" value="HorizontalNone" @onclick="@HorizontalNone" />      
-<SfDiagramComponent @ref="diagram" Width="1000px" Height="1000px"  Nodes="@NodeCollection" Connectors="@connectors">
+<SfButton Content="HorizontalPort" OnClick="@HorizontalPort" />
+<SfButton Content="HorizontalContent" OnClick="@HorizontalContent" />
+<SfButton Content="HorizontalAll" OnClick="@HorizontalAll" />
+<SfButton Content="HorizontalNone" OnClick="@HorizontalNone" />
+
+<SfDiagramComponent @ref="diagram" Width="1000px" Height="1000px" Nodes="@NodeCollection" Connectors="@connectors">
 </SfDiagramComponent>
 @code
 {
+    //Initialize the diagram connector collection
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    //Reference the diagram
     public SfDiagramComponent diagram;
+    //Define diagram nodes collection
     DiagramObjectCollection<Node> NodeCollection;
     protected override void OnInitialized()
     {
         Node node1 = new Node()
-        {
-            ID = "node1",
-            Width = 100,
-            Height = 100,
-            OffsetX = 700,
-            OffsetY = 100,
-            Flip=FlipDirection.Horizontal,
-            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
-                new ShapeAnnotation 
+                ID = "node1",
+                Width = 100,
+                Height = 100,
+                OffsetX = 700,
+                OffsetY = 100,
+                Flip = FlipDirection.Horizontal,
+                Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+            {
+                new ShapeAnnotation
                 {
                    ID="node1annotation",
-                   Content = "Offset(0,0)", 
-                   Offset = new DiagramPoint() { X = 0, Y = 0 } 
+                   Content = "Offset(0,0)",
+                   Offset = new DiagramPoint() { X = 0, Y = 0 }
                 }
             },
-             Style = new ShapeStyle() 
-            { 
-                Fill = "#6495ED", 
-            },
-            Shape= new FlowShape()
-            {
-                Type=NodeShapes.Flow,
-                Shape=NodeFlowShapes.Card                   
-            },
-            Ports = new DiagramObjectCollection<PointPort>()
+                Style = new ShapeStyle()
+                {
+                    Fill = "#6495ED",
+                },
+                Shape = new FlowShape()
+                {
+                    Type = NodeShapes.Flow,
+                    Shape = NodeFlowShapes.Card
+                },
+                Ports = new DiagramObjectCollection<PointPort>()
             {
                 new PointPort()
                 {
                     ID="ports",
                     Style = new ShapeStyle(){ Fill = "gray" },
-                    Offset = new DiagramPoint() { X = 0, Y = 0 }, 
-                    Visibility = PortVisibility.Visible,                  
+                    Offset = new DiagramPoint() { X = 0, Y = 0 },
+                    Visibility = PortVisibility.Visible,
                 }
             }
-        };
+            };
         Node node2 = new Node()
-        {
-            ID = "node2",
-            Width = 100,
-            Height = 100,
-            OffsetX = 900,
-            OffsetY = 100,
-            Flip=FlipDirection.Horizontal,
-            FlipMode=DiagramFlipMode.Port,
-            Style = new ShapeStyle() 
-            { 
-                Fill = "#6495ED", 
-            },
-            Shape= new FlowShape()
             {
-                Type=NodeShapes.Flow,
-                Shape=NodeFlowShapes.Card           
-            },
-            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
-            {
-                new ShapeAnnotation 
+                ID = "node2",
+                Width = 100,
+                Height = 100,
+                OffsetX = 900,
+                OffsetY = 100,
+                Flip = FlipDirection.Horizontal,
+                FlipMode = DiagramFlipMode.Port,
+                Style = new ShapeStyle()
                 {
-                    Content = "Offset(0,0)", 
-                    Offset = new DiagramPoint() { X = 0, Y = 0.5 } 
+                    Fill = "#6495ED",
+                },
+                Shape = new FlowShape()
+                {
+                    Type = NodeShapes.Flow,
+                    Shape = NodeFlowShapes.Card
+                },
+                Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+            {
+                new ShapeAnnotation
+                {
+                    Content = "Offset(0,0)",
+                    Offset = new DiagramPoint() { X = 0, Y = 0.5 }
                 }
             },
-            Ports = new DiagramObjectCollection<PointPort>()
+                Ports = new DiagramObjectCollection<PointPort>()
             {
                new PointPort()
-               {  
+               {
                    Style = new ShapeStyle(){ Fill = "gray" },
-                   Offset = new DiagramPoint() { X = 0, Y = 0 }, 
+                   Offset = new DiagramPoint() { X = 0, Y = 0 },
                    Visibility = PortVisibility.Visible
                }
             }
-        };       
-        NodeCollection = new DiagramObjectCollection<Node>() {node1,node2};       
+            };
+        NodeCollection = new DiagramObjectCollection<Node>() { node1, node2 };
     }
-    
+
     public void HorizontalPort()
-    {     
+    {
         if (diagram.SelectionSettings.Nodes.Count > 0)
         {
-            for(int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
+            for (int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
             {
                 diagram.SelectionSettings.Nodes[i].FlipMode = DiagramFlipMode.Port;
                 if (diagram.SelectionSettings.Nodes[i].Flip.HasFlag(FlipDirection.Horizontal))
@@ -151,15 +155,16 @@ The following code example shows how to flip the node.
                 else
                 {
                     diagram.SelectionSettings.Nodes[i].Flip |= FlipDirection.Horizontal;
-                }               
+                }
             }
-        }            
+        }
     }
+    //Method to flip the content horizontally
     public void HorizontalContent()
-    {     
+    {
         if (diagram.SelectionSettings.Nodes.Count > 0)
         {
-            for(int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
+            for (int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
             {
                 diagram.SelectionSettings.Nodes[i].FlipMode = DiagramFlipMode.Content;
                 if (diagram.SelectionSettings.Nodes[i].Flip.HasFlag(FlipDirection.Horizontal))
@@ -169,15 +174,16 @@ The following code example shows how to flip the node.
                 else
                 {
                     diagram.SelectionSettings.Nodes[i].Flip |= FlipDirection.Horizontal;
-                }               
+                }
             }
-        }            
+        }
     }
+    //Method to flip the content and port horizontally
     public void HorizontalAll()
-    {     
+    {
         if (diagram.SelectionSettings.Nodes.Count > 0)
         {
-            for(int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
+            for (int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
             {
                 diagram.SelectionSettings.Nodes[i].FlipMode = DiagramFlipMode.All;
                 if (diagram.SelectionSettings.Nodes[i].Flip.HasFlag(FlipDirection.Horizontal))
@@ -187,15 +193,16 @@ The following code example shows how to flip the node.
                 else
                 {
                     diagram.SelectionSettings.Nodes[i].Flip |= FlipDirection.Horizontal;
-                }              
+                }
             }
-        }            
+        }
     }
+    //Method to disable the flip operation
     public void HorizontalNone()
-    {     
+    {
         if (diagram.SelectionSettings.Nodes.Count > 0)
         {
-            for(int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
+            for (int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
             {
                 diagram.SelectionSettings.Nodes[i].FlipMode = DiagramFlipMode.None;
                 if (diagram.SelectionSettings.Nodes[i].Flip.HasFlag(FlipDirection.Horizontal))
@@ -205,13 +212,13 @@ The following code example shows how to flip the node.
                 else
                 {
                     diagram.SelectionSettings.Nodes[i].Flip |= FlipDirection.Horizontal;
-                }                               
+                }
             }
-        }       
+        }
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Flip)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Flip/FlipDirection)
 
 | FlipDirection | DiagramFlipMode | Output|
 | -------- | -------- | -------- |
@@ -233,48 +240,50 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 The following code example shows how to flip the group.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Diagram
 <input type="button" value="HorizontalPort" @onclick="@HorizontalPort" />
 <input type="button" value="HorizontalContent" @onclick="@HorizontalContent" />
 <input type="button" value="HorizontalAll" @onclick="@HorizontalAll" />
-<input type="button" value="HorizontalNone" @onclick="@HorizontalNone" />  
-<SfDiagramComponent @ref="diagram" Width="1000px" Height="1000px"  Nodes="@NodeCollection" Connectors="@connectors">
+<input type="button" value="HorizontalNone" @onclick="@HorizontalNone" />
+<SfDiagramComponent @ref="diagram" Width="1000px" Height="1000px" Nodes="@NodeCollection" Connectors="@connectors">
     <SnapSettings Constraints="@SnapConstraints.None"></SnapSettings>
 </SfDiagramComponent>
 @code
 {
+    //Initialize the diagram's connector collection
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    //Reference the diagram
     public SfDiagramComponent diagram;
+    //Define diagram's nodes collection
     DiagramObjectCollection<Node> NodeCollection;
-      protected override void OnInitialized()
+    protected override void OnInitialized()
     {
         Node node3 = new Node()
-        {
-            ID = "node3",
-            Width = 100,
-            Height = 60,
-            OffsetX = 500,
-            OffsetY = 300, 
-            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
-                new ShapeAnnotation 
+                ID = "node3",
+                Width = 100,
+                Height = 60,
+                OffsetX = 500,
+                OffsetY = 300,
+                Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+            {
+                new ShapeAnnotation
                 {
                     ID="ano3",
-                    Content = "node1", 
-                    Offset = new DiagramPoint() { X = 0.5, Y = 0.5 } 
+                    Content = "node1",
+                    Offset = new DiagramPoint() { X = 0.5, Y = 0.5 }
                 }
             },
-            Style = new ShapeStyle() 
-            { 
-                Fill = "#6495ED", 
-            },
-            Shape= new FlowShape()
-            {
-                Type=NodeShapes.Flow,
-                Shape=NodeFlowShapes.Card                   
-            },
-            Ports = new DiagramObjectCollection<PointPort>()
+                Style = new ShapeStyle()
+                {
+                    Fill = "#6495ED",
+                },
+                Shape = new FlowShape()
+                {
+                    Type = NodeShapes.Flow,
+                    Shape = NodeFlowShapes.Card
+                },
+                Ports = new DiagramObjectCollection<PointPort>()
             {
                new PointPort()
                {   ID="port3",
@@ -284,76 +293,76 @@ The following code example shows how to flip the group.
                    Visibility = PortVisibility.Visible
                }
             },
-        };
+            };
         Node node4 = new Node()
-        {
-            ID = "node4",
-            Width = 100,
-            Height = 60,
-            OffsetX = 700,
-            OffsetY = 400,
-            Style = new ShapeStyle() 
-            { 
-                Fill = "#6495ED", 
-            },
-            Shape= new FlowShape()
             {
-                Type=NodeShapes.Flow,
-                Shape=NodeFlowShapes.Card                   
-            },
-            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+                ID = "node4",
+                Width = 100,
+                Height = 60,
+                OffsetX = 700,
+                OffsetY = 400,
+                Style = new ShapeStyle()
+                {
+                    Fill = "#6495ED",
+                },
+                Shape = new FlowShape()
+                {
+                    Type = NodeShapes.Flow,
+                    Shape = NodeFlowShapes.Card
+                },
+                Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
-                new ShapeAnnotation 
-                { 
+                new ShapeAnnotation
+                {
                     ID="anno4",
-                    Content = "node2", 
-                    Offset = new DiagramPoint() { X = 0.5, Y = 0.5 } 
+                    Content = "node2",
+                    Offset = new DiagramPoint() { X = 0.5, Y = 0.5 }
                 }
             },
-            Ports = new DiagramObjectCollection<PointPort>()
+                Ports = new DiagramObjectCollection<PointPort>()
             {
                new PointPort()
                {   ID="port4",
                    Style = new ShapeStyle(){ Fill = "gray" },
-                   Offset = new DiagramPoint() { X = 0, Y = 0 }, 
+                   Offset = new DiagramPoint() { X = 0, Y = 0 },
                    Width=14,Height=14,
                    Visibility = PortVisibility.Visible
                }
             },
-          };
-        NodeCollection = new DiagramObjectCollection<Node>() {node3,node4 };
+            };
+        NodeCollection = new DiagramObjectCollection<Node>() { node3, node4 };
         NodeGroup groupNode = new NodeGroup()
-        {
-                ID="group",
+            {
+                ID = "group",
                 Children = new string[] { "node3", "node4" },
                 Annotations = new DiagramObjectCollection<ShapeAnnotation>()
                 {
-                    new ShapeAnnotation 
-                    { 
+                    new ShapeAnnotation
+                    {
                         ID="anno4",
-                        Content = "GroupNode", 
-                        Offset = new DiagramPoint() { X = 0.5, Y = 0.5 } 
+                        Content = "GroupNode",
+                        Offset = new DiagramPoint() { X = 0.5, Y = 0.5 }
                     }
                 },
-            Ports = new DiagramObjectCollection<PointPort>()
+                Ports = new DiagramObjectCollection<PointPort>()
             {
                new PointPort()
                {   ID="port4",
                    Style = new ShapeStyle(){ Fill = "gray" },
-                   Offset = new DiagramPoint() { X = 0, Y = 0}, 
+                   Offset = new DiagramPoint() { X = 0, Y = 0},
                     Width=14,Height=14,
                    Visibility = PortVisibility.Visible
                }
             },
-        };
+            };
         NodeCollection.Add(groupNode);
     }
-    
+    //Method to flip the port horizontally
     public void HorizontalPort()
-    {     
+    {
         if (diagram.SelectionSettings.Nodes.Count > 0)
         {
-            for(int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
+            for (int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
             {
                 diagram.SelectionSettings.Nodes[i].FlipMode = DiagramFlipMode.Port;
                 if (diagram.SelectionSettings.Nodes[i].Flip.HasFlag(FlipDirection.Horizontal))
@@ -363,15 +372,16 @@ The following code example shows how to flip the group.
                 else
                 {
                     diagram.SelectionSettings.Nodes[i].Flip |= FlipDirection.Horizontal;
-                }               
+                }
             }
-        }            
+        }
     }
+    //Method to flip the content horizontally
     public void HorizontalContent()
-    {     
+    {
         if (diagram.SelectionSettings.Nodes.Count > 0)
         {
-            for(int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
+            for (int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
             {
                 diagram.SelectionSettings.Nodes[i].FlipMode = DiagramFlipMode.Content;
                 if (diagram.SelectionSettings.Nodes[i].Flip.HasFlag(FlipDirection.Horizontal))
@@ -381,15 +391,16 @@ The following code example shows how to flip the group.
                 else
                 {
                     diagram.SelectionSettings.Nodes[i].Flip |= FlipDirection.Horizontal;
-                }               
+                }
             }
-        }            
+        }
     }
+    //Method to flip the content and port horizontally
     public void HorizontalAll()
-    {     
+    {
         if (diagram.SelectionSettings.Nodes.Count > 0)
         {
-            for(int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
+            for (int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
             {
                 diagram.SelectionSettings.Nodes[i].FlipMode = DiagramFlipMode.All;
                 if (diagram.SelectionSettings.Nodes[i].Flip.HasFlag(FlipDirection.Horizontal))
@@ -399,15 +410,15 @@ The following code example shows how to flip the group.
                 else
                 {
                     diagram.SelectionSettings.Nodes[i].Flip |= FlipDirection.Horizontal;
-                }              
+                }
             }
-        }            
+        }
     }
     public void HorizontalNone()
-    {     
+    {
         if (diagram.SelectionSettings.Nodes.Count > 0)
         {
-            for(int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
+            for (int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
             {
                 diagram.SelectionSettings.Nodes[i].FlipMode = DiagramFlipMode.None;
                 if (diagram.SelectionSettings.Nodes[i].Flip.HasFlag(FlipDirection.Horizontal))
@@ -417,9 +428,9 @@ The following code example shows how to flip the group.
                 else
                 {
                     diagram.SelectionSettings.Nodes[i].Flip |= FlipDirection.Horizontal;
-                }                               
+                }
             }
-        }       
+        }
     }
 }
 ```
@@ -432,13 +443,13 @@ The following code example shows how to flip the group.
 |Horizontal|None|![HorizontalDirection with NoneMode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-none.png)|
 
 For more information about node interaction, refer to [Node Interaction](./nodes/interaction).
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Flip)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Flip/FlipGroup)
 
 ## How to flip the connector
 
-The [Flip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_Flip) command is used to flip the chosen object is mirrored across in either the horizontal, vertical, or both directions on the diagram page.
+The [Flip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_Flip) command is used to mirror selected objects across horizontal, vertical, or both directions on the diagram page. This feature allows for quick and easy creation of symmetrical designs or reversed orientations of diagram elements.
 
-**Note:** [FlipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramFlipMode.html) is applicable only for Nodes not for Connectors.
+**Note:** The [FlipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramFlipMode.html) property is applicable only to Nodes and does not affect Connectors. This limitation ensures that connection logic remains intact while allowing individual node elements to be flipped as needed.
 
 The following code example shows how to flip the connector.
 
@@ -455,7 +466,7 @@ The following code example shows how to flip the connector.
 {
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
     public SfDiagramComponent diagram;
-    DiagramObjectCollection<Node> NodeCollection;
+    DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
     protected override void OnInitialized()
     {     
         Connector Connector = new Connector()

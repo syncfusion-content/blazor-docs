@@ -16,7 +16,7 @@ To know about customizing the Dialog Template in Blazor tree grid component, you
 {% youtube
 "youtube:https://www.youtube.com/watch?v=TxHrtyVwY4A"%}
 
-The dialog template editing provides an option to customize the default behavior of dialog editing. Using the dialog template, render your own editors by defining the [TreeGridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEditSettings~Mode.html) as **Dialog** and [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEditSettings~Template.html) using the **Template** of the **TreeGridEditSettings**.
+The dialog template editing provides an option to customize the default behavior of dialog editing. Using the dialog template, render your own editors by defining the [TreeGridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridEditSettings_Mode) as **Dialog** and [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridEditSettings_Template) using the **Template** of the **TreeGridEditSettings**.
 
 In some cases, the new field editors must be added in the dialog which are not present in the column model. In that situation, the dialog template will help to customize the default edit dialog.
 
@@ -30,7 +30,7 @@ In some cases, the new field editors must be added in the dialog which are not p
 @using Syncfusion.Blazor.DropDowns;
 
 <SfTreeGrid DataSource="@TreeGridData" AllowPaging="true" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
-    <TreeGridEvents TValue="TreeData" OnActionComplete="OnComplete"></TreeGridEvents>
+    <TreeGridEvents TValue="TreeData" RowCreated="RowCreatedHandler"></TreeGridEvents>
     <TreeGridEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true" Mode="Syncfusion.Blazor.TreeGrid.EditMode.Dialog" NewRowPosition="RowPosition.Child">
         <Template>
             @{
@@ -85,18 +85,10 @@ In some cases, the new field editors must be added in the dialog which are not p
         this.TreeGridData = TreeData.GetSelfDataSource().ToList();
     }
 
-    private void OnComplete(ActionEventArgs<TreeData> args)
+    public void RowCreatedHandler(RowCreatedEventArgs<TreeData.BusinessObject> args)
     {
-        if (args.RequestType.ToString() == "Add")
-        {
-            Check = true;
-        }
-        else
-        {
-            Check = false;
-        }
+        Check = true;
     }
-
 }
 
 {% endhighlight %}
@@ -143,7 +135,7 @@ N> The template form editors should have **name** attribute.
 
 It is possible to disable particular components rendered inside the dialog template using the data source value. This can be achieved by utilizing the `Enabled` property of the components which specifies whether the component is enabled or disabled.
 
-This is demonstrated in the following sample code, where if the `RequestType` argument value of the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_OnActionBegin) event is **BeginEdit**, the `Enabled` property of the **TaskId** and **TaskName** Textbox is set to false.
+This is demonstrated in the following sample code, by using [BeforeRowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_BeforeRowEditing) event, the `Enabled` property of the **TaskId** and **TaskName** Textbox is set to false.
 
 {% tabs %}
 
@@ -158,7 +150,7 @@ This is demonstrated in the following sample code, where if the `RequestType` ar
 
 
 <SfTreeGrid DataSource="@TreeGridData" AllowPaging="true" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
-    <TreeGridEvents TValue="TreeData" OnActionBegin="ActionBeginHandler"></TreeGridEvents>
+    <TreeGridEvents TValue="TreeData" BeforeRowEditing="BeforeRowEditingHandler"></TreeGridEvents>
     <TreeGridEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true" Mode="Syncfusion.Blazor.TreeGrid.EditMode.Dialog" NewRowPosition="RowPosition.Child">
         <Template>
             @{
@@ -213,17 +205,10 @@ This is demonstrated in the following sample code, where if the `RequestType` ar
         this.TreeGridData = TreeData.GetSelfDataSource().ToList();
     }
 
-    public void ActionBeginHandler(ActionEventArgs<TreeData> args)
+    public void BeforeRowEditingHandler(OnRowEditStartEventArgs args)
     {
-        if (args.RequestType == Syncfusion.Blazor.Grids.Action.BeginEdit)
-        {
-            // The Textbox component is disabled using its Enabled property
-            this.Enabled = false;
-        }
-        else
-        {
-            this.Enabled = true;
-        }
+        // The Textbox component is disabled using its Enabled property
+        this.Enabled = false;       
     }
 }
 

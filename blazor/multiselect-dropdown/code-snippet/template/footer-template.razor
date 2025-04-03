@@ -1,0 +1,32 @@
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor
+
+<SfMultiSelect TValue="string[]" TItem="EmployeeData" Query="@Query" Placeholder="Select a customer">
+    <MultiSelectTemplates TItem="EmployeeData">
+        <FooterTemplate>
+            <span class='footer'>Total list Item: 6 </span>
+        </FooterTemplate>
+    </MultiSelectTemplates>
+    <SfDataManager Url="https://ej2services.syncfusion.com/production/web-services/api/Employees" Adaptor="Adaptors.WebApiAdaptor" CrossDomain=true></SfDataManager>
+    <MultiSelectFieldSettings Value="Country" Text="FirstName"></MultiSelectFieldSettings>
+</SfMultiSelect>
+
+@code {
+
+    public class EmployeeData
+    {
+        public string FirstName { get; set; }
+    }
+    public Query Query = new Query();
+}
+
+<style>
+    .footer {
+        text-indent: 1.2em;
+        display: block;
+        font-size: 15px;
+        line-height: 40px;
+        border-top: 1px solid #e0e0e0;
+    }
+</style>

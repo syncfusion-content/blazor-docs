@@ -9,7 +9,7 @@ documentation: ug
 
 # Custom Binding in Blazor Gantt Chart Component
 
-The [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Data.SfDataManager.html) has custom adaptor support which allows you to perform manual operations on the data. This can be utilized for implementing custom data binding and editing operations in the Gantt component.
+The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) has custom adaptor support which allows you to perform manual operations on the data. This can be utilized for implementing custom data binding and editing operations in the Gantt component.
 
 For implementing custom data binding in Gantt, the **DataAdaptor** class is used. This abstract class acts as a base class for the custom adaptor. The **DataAdaptor** abstract class has both synchronous and asynchronous method signatures which can be overridden in the custom adaptor. Following are the method signatures present in this class,
 
@@ -94,7 +94,7 @@ The following sample code demonstrates implementing custom data binding using cu
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public int Progress { get; set; }
-        public string Duration { get; set; }
+        public int Duration { get; set; }
         public int? ParentID { get; set; }
         public TaskData() { }
     }
@@ -108,7 +108,7 @@ The following sample code demonstrates implementing custom data binding using cu
                 string math = (20 % 3) == 0 ? "High" : (20 % 2) == 0 ? "Release Breaker" : "Critical";
                 root++;
                 int rootItem = gantt.Count + root + 1;
-                gantt.Add(new TaskData() { TaskID = rootItem, TaskName = "Parent Task " + rootItem.ToString(), StartDate = new DateTime(2022, 06, 07), EndDate = new DateTime(2022, 08, 25), Progress = 70, ParentID = null, Duration = 20;
+                gantt.Add(new TaskData() { TaskID = rootItem, TaskName = "Parent Task " + rootItem.ToString(), StartDate = new DateTime(2022, 06, 07), EndDate = new DateTime(2022, 08, 25), Progress = 70, ParentID = null, Duration = 20 });
                 int parent = gantt.Count;
                 for (var c = 0; c < 3; c++)
                 {
@@ -116,14 +116,14 @@ The following sample code demonstrates implementing custom data binding using cu
                     string val = ((parent + c + 1) % 3 == 0) ? "Low" : "Critical";
                     int parn = parent + c + 1;
                     int iD = gantt.Count + root + 1;
-                    gantt.Add(new TaskData() { TaskID = iD, TaskName = "Child Task " + iD.ToString(), StartDate = new DateTime(2022, 06, 07), EndDate = new DateTime(2022, 08, 25), Progress = 30, ParentID = rootItem, Duration = 5;
+                    gantt.Add(new TaskData() { TaskID = iD, TaskName = "Child Task " + iD.ToString(), StartDate = new DateTime(2022, 06, 07), EndDate = new DateTime(2022, 08, 25), Progress = 30, ParentID = rootItem, Duration = 5 });
                     if ((((parent + c + 1) % 3) == 0))
                     {
                         int immParent = gantt.Count;
                         for (var s = 0; s <= 1; s++)
                         {
                             root++;
-                            gantt.Add(new TaskData() { TaskID = gantt.Count + root + 1, TaskName = "Sub Task " + (gantt.Count + root + 1).ToString(), StartDate = new DateTime(2022, 06, 07), EndDate = new DateTime(2022, 08, 25), Progress = 50, ParentID = iD, Duration = 8;
+                            gantt.Add(new TaskData() { TaskID = gantt.Count + root + 1, TaskName = "Sub Task " + (gantt.Count + root + 1).ToString(), StartDate = new DateTime(2022, 06, 07), EndDate = new DateTime(2022, 08, 25), Progress = 50, ParentID = iD, Duration = 8 });
                         }
                     }
                 }
@@ -178,23 +178,19 @@ The following sample code demonstrates implementing custom data binding using cu
 }
 ```
 
-N> If the **DataManagerRequest.RequiresCounts** value is **true**, then the Read/ReadAsync return value must be of **DataResult** with properties **Result** whose value is a collection of records and **Count** whose value is the total number of records. If the **DataManagerRequest.RequiresCounts** is **false**, then simply send the collection of records. 
+N> If the **DataManagerRequest.RequiresCounts** value is **true**, then the Read/ReadAsync return value must be of **DataResult** with properties **Result** whose value is a collection of records and **Count** whose value is the total number of records. If the **DataManagerRequest.RequiresCounts** is **false**, then simply send the collection of records.
 <br/> <br /> If the Read/ReadAsync method is not overridden in the custom adaptor then it will be handled by the default read handler.
 
-## Inject service into Custom Adaptor
+## Inject service into custom adaptor
 
 If you want to inject some of your service into Custom Adaptor and use the service, then you can achieve your requirement by using below way.
 
-Initially you need to add CustomAdaptor class as AddScoped in `StartUp.cs` file.
+Initially you need to add CustomAdaptor class as AddScoped in `Program.cs` file.
 
 ```csharp
-public void ConfigureServices(IServiceCollection services)
-{
-    ...
-    services.AddSingleton<TaskDataAccessLayer>();
-    services.AddScoped<CustomAdaptor>();
-    services.AddScoped<ServiceClass>();
-}
+builder.Services.AddSingleton<TaskDataAccessLayer>();
+builder.Services.AddScoped<CustomAdaptor>();
+builder.Services.AddScoped<ServiceClass>();
 ```
 
 The following sample code demonstrates injecting service into Custom Adaptor,
@@ -220,7 +216,7 @@ The following sample code demonstrates injecting service into Custom Adaptor,
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public int Progress { get; set; }
-        public string Duration { get; set; }
+        public int Duration { get; set; }
         public int? ParentID { get; set; }
         public TaskData() { }
     }
@@ -234,7 +230,7 @@ The following sample code demonstrates injecting service into Custom Adaptor,
                 string math = (60 % 3) == 0 ? "High" : (60 % 2) == 0 ? "Release Breaker" : "Critical";
                 root++;
                 int rootItem = gantt.Count + root + 1;
-                gantt.Add(new TaskData() { TaskID = rootItem, TaskName = "Parent Task " + rootItem.ToString(), StartDate = new DateTime(2022, 06, 07), EndDate = new DateTime(2022, 08, 25), Progress = 70, ParentID = null, Duration = 20;
+                gantt.Add(new TaskData() { TaskID = rootItem, TaskName = "Parent Task " + rootItem.ToString(), StartDate = new DateTime(2022, 06, 07), EndDate = new DateTime(2022, 08, 25), Progress = 70, ParentID = null, Duration = 20 });
                 int parent = gantt.Count;
                 for (var c = 0; c < 3; c++)
                 {
@@ -242,14 +238,14 @@ The following sample code demonstrates injecting service into Custom Adaptor,
                     string val = ((parent + c + 1) % 3 == 0) ? "Low" : "Critical";
                     int parn = parent + c + 1;
                     int iD = gantt.Count + root + 1;
-                    gantt.Add(new TaskData() { TaskID = iD, TaskName = "Child Task " + iD.ToString(), StartDate = new DateTime(2022, 06, 07), EndDate = new DateTime(2022, 08, 25), Progress = 30, ParentID = rootItem, Duration = 5;
+                    gantt.Add(new TaskData() { TaskID = iD, TaskName = "Child Task " + iD.ToString(), StartDate = new DateTime(2022, 06, 07), EndDate = new DateTime(2022, 08, 25), Progress = 30, ParentID = rootItem, Duration = 5 });
                     if ((((parent + c + 1) % 3) == 0))
                     {
                         int immParent = gantt.Count;
                         for (var s = 0; s <= 1; s++)
                         {
                             root++;
-                            gantt.Add(new TaskData() { TaskID = gantt.Count + root + 1, TaskName = "Sub Task " + (gantt.Count + root + 1).ToString(), StartDate = new DateTime(2022, 06, 07), EndDate = new DateTime(2022, 08, 25), Progress = 50, ParentID = iD, Duration = 8;
+                            gantt.Add(new TaskData() { TaskID = gantt.Count + root + 1, TaskName = "Sub Task " + (gantt.Count + root + 1).ToString(), StartDate = new DateTime(2022, 06, 07), EndDate = new DateTime(2022, 08, 25), Progress = 50, ParentID = iD, Duration = 8 });
                         }
                     }
                 }
@@ -330,11 +326,19 @@ The following sample code demonstrates implementing CRUD operations for the cust
     <GanttTaskFields Id="TaskID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Progress="Progress" Duration="Duration"  ParentID="ParentID">
     </GanttTaskFields>
      <GanttEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true"></GanttEditSettings>
+     <GanttEvents RowUpdating="RowUpdatingHandler" TValue="TaskData"></GanttEvents>
 </SfGantt>
 
 @code{
     public static List<TaskData> GanttData { get; set; }
     public static List<TaskData> gantt = new List<TaskData>();
+    public static int index = 0;
+
+    public void RowUpdatingHandler(GanttRowUpdatingEventArgs<TaskData> args)
+    {
+        index = args.Index;
+    }
+
     public class TaskData
     {
         public int? TaskID { get; set; }
@@ -342,7 +346,7 @@ The following sample code demonstrates implementing CRUD operations for the cust
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public int Progress { get; set; }
-        public string Duration { get; set; }
+        public int Duration { get; set; }
         public int? ParentID { get; set; }
         public TaskData() { }
     }
@@ -361,7 +365,7 @@ The following sample code demonstrates implementing CRUD operations for the cust
                 string math = (42 % 3) == 0 ? "High" : (42 % 2) == 0 ? "Release Breaker" : "Critical";
                 root++;
                 int rootItem = gantt.Count + root + 1;
-                gantt.Add(new TaskData() { TaskID = rootItem, TaskName = "Parent Task " + rootItem.ToString(), StartDate = new DateTime(2022, 06, 07), EndDate = new DateTime(2022, 08, 25), Progress = 70, ParentID = null, Duration = 20;
+                gantt.Add(new TaskData() { TaskID = rootItem, TaskName = "Parent Task " + rootItem.ToString(), StartDate = new DateTime(2022, 06, 07), EndDate = new DateTime(2022, 08, 25), Progress = 70, ParentID = null, Duration = 20 });
                 int parent = gantt.Count;
                 for (var c = 0; c < 3; c++)
                 {
@@ -369,14 +373,14 @@ The following sample code demonstrates implementing CRUD operations for the cust
                     string val = ((parent + c + 1) % 3 == 0) ? "Low" : "Critical";
                     int parn = parent + c + 1;
                     int iD = gantt.Count + root + 1;
-                    gantt.Add(new TaskData() { TaskID = iD, TaskName = "Child Task " + iD.ToString(), StartDate = new DateTime(2022, 06, 07), EndDate = new DateTime(2022, 08, 25), Progress = 30, ParentID = rootItem, Duration = 5;
+                    gantt.Add(new TaskData() { TaskID = iD, TaskName = "Child Task " + iD.ToString(), StartDate = new DateTime(2022, 06, 07), EndDate = new DateTime(2022, 08, 25), Progress = 30, ParentID = rootItem, Duration = 5 });
                     if ((((parent + c + 1) % 3) == 0))
                     {
                         int immParent = gantt.Count;
                         for (var s = 0; s <= 1; s++)
                         {
                             root++;
-                            gantt.Add(new TaskData() { TaskID = gantt.Count + root + 1, TaskName = "Sub Task " + (gantt.Count + root + 1).ToString(), StartDate = new DateTime(2022, 06, 07), EndDate = new DateTime(2022, 08, 25), Progress = 50, ParentID = iD, Duration = 8;
+                            gantt.Add(new TaskData() { TaskID = gantt.Count + root + 1, TaskName = "Sub Task " + (gantt.Count + root + 1).ToString(), StartDate = new DateTime(2022, 06, 07), EndDate = new DateTime(2022, 08, 25), Progress = 50, ParentID = iD, Duration = 8 });
                         }
                     }
                 }
@@ -425,7 +429,7 @@ The following sample code demonstrates implementing CRUD operations for the cust
         }
         public override object Insert(DataManager dm, object value, string key)
         {
-            GanttData.Insert(0, value as TaskData);
+            GanttData.Insert(index, value as TaskData);
             return value;
         }
 

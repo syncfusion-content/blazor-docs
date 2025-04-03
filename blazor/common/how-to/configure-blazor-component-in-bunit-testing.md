@@ -1,23 +1,23 @@
 ---
 layout: post
-title: Configure Syncfusion Blazor Components in bUnit Testing | Syncfusion	
+title: Configure Syncfusion Blazor Components in bUnit Testing | Syncfusion
 description: Checkout and learn here all about configuring syncfusion Blazor Components in bUnit Testing and much more.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# How to Configure Syncfusion Blazor Component in bUnit Testing
+# How to Configure Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Component in bUnit Testing
 
-This section explains how to configure Syncfusion Blazor component in bUnit testing.
+This section explains how to configure Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component in bUnit testing.
 
 ## Configure bUnit with xUnit Test Project
 
 ### Create xUnit Test Project
 
-1. Open Visual Studio 2019 and create a new `xUnit Test Project`.
+1. Open Visual Studio 2022 and create a new `xUnit Test Project`.
 
-    ![xUnit project creation in VS 2019](images/bunit/xunit-project.png)
+    ![xUnit project creation in VS 2022](images/bunit/xunit-project.png)
 
 2. Specify the project name and click the `Next` button.
 
@@ -41,13 +41,13 @@ This section explains how to configure Syncfusion Blazor component in bUnit test
 
     ![Add existing Blazor project](images/bunit/xunit-add-existing-project.png)
 
-    N> Refer to [Blazor Server Getting Started](../../getting-started/visual-studio-2019/#getting-started-with-blazor-server-application) documentation, if you don't have any existing application.
+    N> Refer to [Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) documentation, if you don't have any existing application.
 
 2. Now, right-click on the xUnit project and select `Add -> Project Reference` and select the added project reference.
 
     ![Add existing project reference on xUnit project](images/bunit/xunit-add-project-reference.png)
 
-3. Add the below Syncfusion Button sample in `~/Pages/Index.razor` file on the Blazor project for testing purpose. You can test your Blazor component from your application instead of the below example component.
+3. Add the below Syncfusion<sup style="font-size:70%">&reg;</sup> Button sample in `~/Pages/Home.razor or Index.razor` file on the Blazor project for testing purpose. You can test your Blazor component from your application instead of the below example component.
 
     ```cshtml
     @using Syncfusion.Blazor.Buttons
@@ -74,10 +74,12 @@ This section explains how to configure Syncfusion Blazor component in bUnit test
     ```c#
     using Xunit;
     using Bunit;
-    using BlazorServerApp.Pages;
+    using {Your App namespace}.Pages;
     using Syncfusion.Blazor;
     using Syncfusion.Blazor.Buttons;
     using Microsoft.Extensions.DependencyInjection;
+    using Microsoft.AspNetCore.Components;
+    using Microsoft.Extensions.DependencyInjection.Extensions;
 
     namespace BlazorXUnitTesting
     {
@@ -89,11 +91,11 @@ This section explains how to configure Syncfusion Blazor component in bUnit test
                 using var testContext = new TestContext();
 
                 // Add Syncfusion Blazor service.
-                testContext.Services.AddSyncfusionBlazor();
+                testContext.Services.AddSyncfusionBlazor().Replace(ServiceDescriptor.Transient<IComponentActivator, SfComponentActivator>());
                 testContext.Services.AddOptions();
 
-                // Rendering application Index component (~/Pages/Index.razor).
-                var indexComponent = testContext.RenderComponent<Index>();
+                // Rendering application Home component (~/Pages/Home.razor).
+                var indexComponent = testContext.RenderComponent<Home>();
                 // Find Syncfusion Button component.
                 var sfButton = indexComponent.FindComponent<SfButton>();
                 // Find span element.
@@ -115,24 +117,24 @@ This section explains how to configure Syncfusion Blazor component in bUnit test
 
     From the above code snippet:
 
-    * Created a new `TestContext` and added Syncfusion Blazor Service.
+    * Created a new `TestContext` and added Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service.
 
     ```c#
     using var testContext = new TestContext();
 
     // Add Syncfusion Blazor service.
-    testContext.Services.AddSyncfusionBlazor();
+    testContext.Services.AddSyncfusionBlazor().Replace(ServiceDescriptor.Transient<IComponentActivator, SfComponentActivator>());
     testContext.Services.AddOptions();
     ```
 
-    * Rendered the Blazor application's `Index` component which we added in the 3rd step.
+    * Rendered the Blazor application's `Home` component which we added in the 3rd step.
 
     ```c#
-    // Rendering application Index component (~/Pages/Index.razor).
-    var indexComponent = testContext.RenderComponent<Index>();
+    // Rendering application Home component (~/Pages/Home.razor).
+    var indexComponent = testContext.RenderComponent<Home>();
     ```
 
-    * Find Syncfusion Button component and span element from the rendered `Index` component.
+    * Find Syncfusion<sup style="font-size:70%">&reg;</sup> Button component and span element from the rendered `Home` component.
 
     ```c#
     // Find Syncfusion Button component.
@@ -148,7 +150,7 @@ This section explains how to configure Syncfusion Blazor component in bUnit test
     span.MarkupMatches("<span class=\"alert alert-info\">Count: 0</span>");
     ```
 
-    * Find the button element from Syncfusion Button component and trigger the click action. Test the span element's markup state after the button click.
+    * Find the button element from Syncfusion<sup style="font-size:70%">&reg;</sup> Button component and trigger the click action. Test the span element's markup state after the button click.
 
     ```c#
     // Click Syncfusion Button component.
@@ -165,9 +167,9 @@ This section explains how to configure Syncfusion Blazor component in bUnit test
 
 ### Create NUnit Test Project
 
-1. Open Visual Studio 2019 and create a new `NUnit 3 Text Project`.
+1. Open Visual Studio 2022 and create a new `NUnit 3 Text Project`.
 
-    ![NUnit project creation in VS 2019](images/bunit/nunit-project.png)
+    ![NUnit project creation in VS 2022](images/bunit/nunit-project.png)
 
 2. Specify the project name and click the `Next` button.
 
@@ -191,13 +193,13 @@ This section explains how to configure Syncfusion Blazor component in bUnit test
 
     ![Add existing Blazor project](images/bunit/nunit-add-existing-project.png)
 
-    N> Refer to [Blazor Server Getting Started](../../getting-started/visual-studio-2019/#getting-started-with-blazor-server-application) documentation, if you don't have any existing application.
+    N> Refer to [Blazor Web App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app) documentation, if you don't have any existing application.
 
 2. Now, right-click on the NUnit project and select `Add -> Project Reference` and select the added project reference.
 
     ![Add existing project reference on NUnit project](images/bunit/nunit-add-project-reference.png)
 
-3. Add the below Syncfusion Button sample in `~/Pages/Index.razor` file on the Blazor project for testing purpose. You can test your Blazor component from your application instead of the below example component.
+3. Add the below Syncfusion<sup style="font-size:70%">&reg;</sup> Button sample in `~/Pages/Home.razor or Index.razor` file on the Blazor project for testing purpose. You can test your Blazor component from your application instead of the below example component.
 
     ```cshtml
     @using Syncfusion.Blazor.Buttons
@@ -224,10 +226,13 @@ This section explains how to configure Syncfusion Blazor component in bUnit test
     ```c#
     using Bunit;
     using NUnit.Framework;
-    using BlazorServerApp.Pages;
+    using {Your App namespace}.Pages;
     using Syncfusion.Blazor;
     using Syncfusion.Blazor.Buttons;
     using Microsoft.Extensions.DependencyInjection;
+    using Microsoft.AspNetCore.Components;
+    using Microsoft.Extensions.DependencyInjection.Extensions;
+    
 
     namespace BlazorNUnitTesting
     {
@@ -240,11 +245,11 @@ This section explains how to configure Syncfusion Blazor component in bUnit test
                 using var testContext = new Bunit.TestContext();
 
                 // Add Syncfusion Blazor service.
-                testContext.Services.AddSyncfusionBlazor();
+                testContext.Services.AddSyncfusionBlazor().Replace(ServiceDescriptor.Transient<IComponentActivator, SfComponentActivator>());
                 testContext.Services.AddOptions();
 
-                // Rendering application Index component (~/Pages/Index.razor).
-                var indexComponent = testContext.RenderComponent<Index>();
+                // Rendering application Home component (~/Pages/Home.razor).
+                var indexComponent = testContext.RenderComponent<Home>();
                 // Find Syncfusion Button component.
                 var sfButton = indexComponent.FindComponent<SfButton>();
                 // Find span element.
@@ -266,24 +271,24 @@ This section explains how to configure Syncfusion Blazor component in bUnit test
 
     From the above code snippet:
 
-    * Created a new `TestContext` and added Syncfusion Blazor Service.
+    * Created a new `TestContext` and added Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service.
 
     ```c#
     using var testContext = new Bunit.TestContext();
 
     // Add Syncfusion Blazor service.
-    testContext.Services.AddSyncfusionBlazor();
+    testContext.Services.AddSyncfusionBlazor().Replace(ServiceDescriptor.Transient<IComponentActivator, SfComponentActivator>());
     testContext.Services.AddOptions();
     ```
 
-    * Rendered the Blazor application's `Index` component which we added in the 3rd step.
+    * Rendered the Blazor application's `Home` component which we added in the 3rd step.
 
     ```c#
-    // Rendering application Index component (~/Pages/Index.razor).
-    var indexComponent = testContext.RenderComponent<Index>();
+    // Rendering application Home component (~/Pages/Home.razor).
+    var indexComponent = testContext.RenderComponent<Home>();
     ```
 
-    * Find Syncfusion Button component and span element from the rendered `Index` component.
+    * Find Syncfusion<sup style="font-size:70%">&reg;</sup> Button component and span element from the rendered `Home` component.
 
     ```c#
     // Find Syncfusion Button component.
@@ -299,7 +304,7 @@ This section explains how to configure Syncfusion Blazor component in bUnit test
     span.MarkupMatches("<span class=\"alert alert-info\">Count: 0</span>");
     ```
 
-    * Find the button element from Syncfusion Button component and trigger the click action. Test the span element's markup state after the button click.
+    * Find the button element from Syncfusion<sup style="font-size:70%">&reg;</sup> Button component and trigger the click action. Test the span element's markup state after the button click.
 
     ```c#
     // Click Syncfusion Button component.
@@ -317,17 +322,19 @@ This section explains how to configure Syncfusion Blazor component in bUnit test
 You can set the Blazor component parameter using `SetParametersAndRender` method.
 
 ```c#
+using Microsoft.AspNetCore.Components;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 [Fact]
 public void TestParameter()
 {
     using var testContext = new TestContext();
 
     // Add Syncfusion Blazor service.
-    testContext.Services.AddSyncfusionBlazor();
+    testContext.Services.AddSyncfusionBlazor().Replace(ServiceDescriptor.Transient<IComponentActivator, SfComponentActivator>());
     testContext.Services.AddOptions();
 
-    // Rendering application Index component (~/Pages/Index.razor).
-    var indexComponent = testContext.RenderComponent<Index>();
+    // Rendering application Home component (~/Pages/Home.razor).
+    var indexComponent = testContext.RenderComponent<Home>();
     // Set Index component parameter Step value.
     indexComponent.SetParametersAndRender(parameters => parameters.Add(p => p.Step, 5));
 
@@ -351,4 +358,4 @@ public void TestParameter()
 ## See Also
 
 * [Create a new bUnit Test Project](https://bunit.dev/docs/getting-started/create-test-project.html?tabs=xunit)
-* [Test components in ASP.NET Core Blazor](https://docs.microsoft.com/en-us/aspnet/core/blazor/test?view=aspnetcore-5.0)
+* [Test components in ASP.NET Core Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/test?view=aspnetcore-8.0)

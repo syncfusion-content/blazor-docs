@@ -48,7 +48,7 @@ The following example illustrates how to add OnRequestNavigate event for Documen
 If the selection is in hyperlink, trigger this event by calling [`NavigateHyperlinkAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_NavigateHyperlinkAsync) method of ‘Selection’ instance. Refer to the following example.
 
 ```csharp
- container.DocumentEditor.Selection.NavigateHyperlinkAsync();
+await container.DocumentEditor.Selection.NavigateHyperlinkAsync();
 ```
 
 ## Copy link
@@ -56,7 +56,7 @@ If the selection is in hyperlink, trigger this event by calling [`NavigateHyperl
 [Blazor Document Editor](https://www.syncfusion.com/blazor-components/blazor-word-processor) copies link text of a hyperlink field to the clipboard if the selection is in hyperlink. Refer to the following example.
 
 ```csharp
-container.DocumentEditor.Selection.CopyHyperlinkAsync();
+await container.DocumentEditor.Selection.CopyHyperlinkAsync();
 ```
 
 ## Add hyperlink
@@ -74,7 +74,7 @@ Also Document Editor expose API [`InsertHyperlinkAsync`](https://help.syncfusion
 Refer to the following sample code.
 
 ```csharp
-container.DocumentEditor.Editor.InsertHyperlinkAsync("https://www.google.com", "Google");
+await container.DocumentEditor.Editor.InsertHyperlinkAsync("https://www.google.com", "Google");
 ```
 
 ## Remove hyperlink
@@ -82,7 +82,7 @@ container.DocumentEditor.Editor.InsertHyperlinkAsync("https://www.google.com", "
 To remove link from hyperlink in the document, press Backspace key at the end of a hyperlink. By removing the link, it will be converted as plain text. You can use [`RemoveHyperlinkAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_RemoveHyperlinkAsync) method of ‘Editor’ instance if the selection is in hyperlink. Refer to the following example.
 
 ```csharp
-container.DocumentEditor.Editor.RemoveHyperlinkAsync();
+await container.DocumentEditor.Editor.RemoveHyperlinkAsync();
 ```
 
 ## Hyperlink dialog
@@ -92,7 +92,7 @@ container.DocumentEditor.Editor.RemoveHyperlinkAsync();
 Refer to the following example to open Hyperlink dialog.
 
 ```csharp
-container.DocumentEditor.ShowDialog(DialogType.Hyperlink);
+container.DocumentEditor.OpenDialog(DialogType.Hyperlink);
 ```
 
 You can use the following keyboard shortcut to open the hyperlink dialog if the selection is in hyperlink.

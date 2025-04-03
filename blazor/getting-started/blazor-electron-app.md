@@ -9,7 +9,7 @@ documentation: ug
 
 # Creating Desktop Application using Blazor and Electron
 
-This section explains how to create and run desktop applications using Blazor and Electron Framework with Syncfusion Blazor components.
+This section explains how to create and run desktop applications using Blazor and Electron Framework with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
 
 ## What is Electron?
 
@@ -76,28 +76,9 @@ var app = builder.Build();
 ....
 
 {% endhighlight %}
-{% highlight c# tabtitle=".NET 5 & .NET 3.X (~/Program.cs)" hl_lines="1 12" %}
-
-using ElectronNET.API;
-
-public class Program
-{
-    .....
-    .....
-
-    public static IHostBuilder CreateHostBuilder(string[] args) =>
-    Host.CreateDefaultBuilder(args)
-    .ConfigureWebHostDefaults(webBuilder =>
-    {
-        webBuilder.UseElectron(args);
-        webBuilder.UseStartup<Startup>();
-    });
-}
-
-{% endhighlight %}
 {% endtabs %}
 
-6.To open the Electron window add the below code in the **~/Startup.cs** file of .NET 3.X and .NET 5 applications, in **~/Program.cs** file of .NET 6 and .NET 7 applications.
+6.To open the Electron window add the below code in the **~/Program.cs** file of .NET 6 and .NET 7 applications.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="9 10 12 13 14 15" %}
@@ -122,27 +103,6 @@ var app = builder.Build();
 ....
 
 {% endhighlight %}
-{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" hl_lines="13 14 15" %}
-
-using ElectronNET.API;
-
-public class Startup
-{
-    ……
-    ……
-
-    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-    {
-        ……
-        ……
-        // Open the Electron-Window
-            Task.Run(async () => {
-                var window = await Electron.WindowManager.CreateWindowAsync();
-            });
-    }
-}
-
-{% endhighlight %}
 {% endtabs %}
 
 7.Run the application using the below command.
@@ -153,7 +113,7 @@ dotnet electronize start
 
 ![Electron app output](images\electron\electron-grid-output.png)
 
-N> To close the electron app when closed the electron window add the below code in **//Open the Electron-Window** in step 6 in the **~/Startup.cs** file of .NET 3.X and .NET 5 applications, in **~/Program.cs** file of .NET 6 and .NET 7 applications.
+N> To close the electron app when closed the electron window add the below code in **//Open the Electron-Window** in step 6 in the **~/Program.cs** file of .NET 6 and .NET 7 applications.
 
 {% tabs %}
 {% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="14 15 16" %}
@@ -181,30 +141,6 @@ var app = builder.Build();
 ....
 
 {% endhighlight %}
-{% highlight c# tabtitle=".NET 5 and .NET 3.X (~/Startup.cs)" hl_lines="15 16 17" %}
-
-using ElectronNET.API;
-
-public class Startup
-{
-    ……
-    ……
-
-    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-    {
-        ……
-        ……
-        // Open the Electron-Window
-        Task.Run(async () => {
-            var window = await Electron.WindowManager.CreateWindowAsync();
-            window.OnClosed += () => {
-                Electron.App.Quit();
-            };
-        });
-    }
-}
-
-{% endhighlight %}
 {% endtabs %}
 
 8.Run the below command lines to do production builds based on platform
@@ -215,4 +151,4 @@ dotnet electronize build /target osx
 dotnet electronize build /target linux
 ```
 
-N> [View the complete Blazor Server electron application with Syncfusion controls on GitHub](https://github.com/SyncfusionExamples/blazor-electron-app)
+N> [View the complete Blazor Server electron application with Syncfusion<sup style="font-size:70%">&reg;</sup> controls on GitHub](https://github.com/SyncfusionExamples/blazor-electron-app)

@@ -9,9 +9,9 @@ documentation: ug
 
 # Enable or Disable Item in Blazor Accordion Component
 
-Accordion provides a support to enable or disable the specified accordion item using accordion item [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_Disabled) property.
+The Accordion component provides support to enable or disable specific accordion items using the accordion item's [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_Disabled) property.
 
-In the following demo, specified accordion item is enabled or disabled dynamically when the **Enable/Disable First Item** button is clicked.
+In the following example, the first accordion item is enabled or disabled dynamically when the **Enable/Disable First Item** button is clicked.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -37,6 +37,6 @@ In the following demo, specified accordion item is enabled or disabled dynamical
 }
 ```
 
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLgiLiUUImofYGa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Enabling or Disabling Item in Blazor Accordion](../images/blazor-accordion-enable-disable-item.gif)

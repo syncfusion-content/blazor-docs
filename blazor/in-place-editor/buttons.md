@@ -20,7 +20,7 @@ N> Without buttons, the value will be processed in the following ways.
 
 In the following sample, the `Content` and `CssClass` properties of the `Button` value are assigned to the `InPlaceEditorSaveButton` and `InPlaceEditorCancelButton` properties to customize its appearance. Also, check or uncheck the checkbox buttons rendered or removed from the editor.
 
-N> For more details about buttons, refer this documentation [section](../button/).
+N> For more details about buttons, refer this documentation [section](../button/getting-started-with-web-app).
 
 ```cshtml
 

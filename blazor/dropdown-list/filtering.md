@@ -37,6 +37,19 @@ The below code demonstrates the filtering functionality with [ODataAdaptor](http
 
 ![Blazor DropdownList with Remote Data filtering](./images/filtering/blazor_dropdown_remote-data.png)
 
+
+## Debounce delay
+
+You can use the [DebounceDelay](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_DebounceDelay) property for filtering, enabling you to set a delay in milliseconds. This functionality helps reduce the frequency of filtering as you type, enhancing performance and responsiveness for a smoother user experience.By default, a DebounceDelay of 300ms is set. If you wish to disable this feature entirely, you can set it to 0ms.
+
+{% highlight cshtml %}
+
+{% include_relative code-snippet/filtering/debounce-delay.razor %}
+
+{% endhighlight %}
+
+![Blazor DropdownList with DebounceDelay in filtering](./images/filtering/blazor_dropdownlist_debounce-delay.gif)
+
 ## Filter type
 
 You can use [FilterType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_FilterType) property to specify on which filter type needed to be considered on the search action of the component. The available `FilterType` and its supported data types are:
@@ -83,7 +96,7 @@ You can use [FilterBarPlaceholder](https://help.syncfusion.com/cr/blazor/Syncfus
 
 ## Custom filtering
 
-DropDownList component filter queries can be customized using [Filter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_Filtering) event. You can also filter the text in multiple columns in the data source.
+DropDownList component filter queries can be customized using [Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_Filtering) event. You can also filter the text in multiple columns in the data source.
 
 In the below sample demonstration, filter the data using its `FirstName` or `LastName` field. Hence in the Filtering event, [Predicate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_Condition) is used with `or` condition for filtering both the fields. 
 
@@ -99,7 +112,7 @@ For instance , the data source item consists of `FirstName` as `Nancy` and `Last
 
 ## Multi column filtering 
 
-In the built-in Syncfusion Blazor theme files, support for multi column can be enabled by adding `e-multi-column` class in the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html#Syncfusion_Blazor_DropDowns_DropDownListModel_2_CssClass) property.
+In the built-in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor theme files, support for multi column can be enabled by adding `e-multi-column` class in the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html#Syncfusion_Blazor_DropDowns_DropDownListModel_2_CssClass) property.
 
 {% highlight cshtml %}
 
@@ -132,5 +145,4 @@ In the following example, the remote request does not fetch the search data unti
 {% endhighlight %}
 
 ![Blazor DropdownList with Minimum filter length](./images/filtering/blazor_dropdown_minimum-filter-length.png)
-
 

@@ -1,0 +1,47 @@
+@using Syncfusion.Blazor.MultiColumnComboBox
+@using Syncfusion.Blazor.Buttons
+
+
+<SfMultiColumnComboBox TItem="Games" TValue="string" DataSource="LocalData" PopupClosed="OnClose" AllowFiltering=true ValueField="Game" Placeholder="Select a game" TextField="Game" PopupWidth="600px">
+</SfMultiColumnComboBox>
+
+<SfMultiColumnComboBox TItem="Games" @ref="@multicolumnObj" TValue="string" DataSource="LocalData"  AllowFiltering=true ValueField="Game" Placeholder="Select a game" TextField="Game" PopupWidth="600px">
+</SfMultiColumnComboBox>
+
+
+@code {
+    public string comboBoxValue { get; set; }
+
+    SfMultiColumnComboBox<string, Games> multicolumnObj;
+
+    public class Games
+    {
+        public string ID { get; set; }
+        public string Game { get; set; }
+        public string Category { get; set; } 
+    }
+    List<Games> LocalData = new List<Games> {
+    new Games() { ID= "Game1", Game= "American Football", Category= "Outdoor" },
+    new Games() { ID= "Game2", Game= "Badminton", Category= "Indoor" },
+    new Games() { ID= "Game3", Game= "Basketball", Category= "Outdoor" },
+    new Games() { ID= "Game4", Game= "Cricket", Category= "Outdoor" },
+    new Games() { ID= "Game5", Game= "Football", Category= "Outdoor" },
+    new Games() { ID= "Game6", Game= "Golf", Category= "Outdoor" },
+    new Games() { ID= "Game7", Game= "Hockey", Category= "Outdoor" },
+    new Games() { ID= "Game8", Game= "Rugby", Category= "Outdoor" },
+    new Games() { ID= "Game9", Game= "Snooker", Category= "Indoor" }
+    };
+
+    public async Task OnClose(object args)
+    {
+        Thread tread = new Thread(
+             async () =>
+             {
+                 Thread.Sleep(5);
+                 await multicolumnObj.FocusAsync();
+             }
+          );
+        tread.Start();
+        await Task.CompletedTask;
+    }
+}

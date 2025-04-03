@@ -1,0 +1,54 @@
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Data
+@using System.IO
+
+<SfComboBox @ref="comboObj" AllowFiltering="true" TValue="Moc" TItem="Moc" DataSource="@data" CssClass="e-multi-column">
+    <ComboBoxFieldSettings Text="Text" Value="ID"></ComboBoxFieldSettings>
+    <ComboBoxEvents Filtering="OnFiltering" TValue="Moc" TItem="Moc"></ComboBoxEvents>
+    <ComboBoxTemplates TItem="Moc">
+        <HeaderTemplate>
+            <table><tr><th>ID</th><th>Text</th></tr></table>
+        </HeaderTemplate>
+        <ItemTemplate Context="itemContext">
+            <table>
+                <tbody>
+                    <tr>
+                        @if (!string.IsNullOrEmpty((itemContext as Moc).ID))
+                        {
+                            <td><span>@((itemContext as Moc).ID)</span></td>
+                            <td><span>@((itemContext as Moc).Text)</span></td>
+                        }
+                    </tr>
+                </tbody>
+            </table>
+        </ItemTemplate>
+    </ComboBoxTemplates>
+</SfComboBox>
+
+@code {
+    SfComboBox<Moc, Moc> comboObj;
+
+    public Query query { get; set; }
+    public class Moc
+    {
+        public string ID { get; set; }
+        public string Text { get; set; }
+    }
+    List<Moc> data = new List<Moc>
+{
+      new Moc() { ID= "12H", Text= "American Football" },
+      new Moc() { ID= "14G", Text= "Badminton" },
+      new Moc() { ID= "17F", Text= "Basketball" }
+    };
+    public async Task OnFiltering(FilteringEventArgs args)
+    {
+        args.PreventDefaultAction = true;
+        var orWhere = WhereFilter.Or(new List<WhereFilter> {
+            new WhereFilter() { Field = "Text", Operator = "contains", value = args.Text, IgnoreCase = true },
+            new WhereFilter() { Field = "ID", Operator = "contains", value = args.Text, IgnoreCase = true }
+        });
+        var query = new Query().Where(orWhere);
+        query = !string.IsNullOrEmpty(args.Text) ? query : new Query();
+        await comboObj.FilterAsync(data, query);
+    }
+}

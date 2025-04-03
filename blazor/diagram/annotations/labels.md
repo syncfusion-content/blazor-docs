@@ -13,7 +13,7 @@ The [Annotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
 
 ## How to create annotation
 
-An annotation can be added to a node or connector by defining the annotation object and adding that to the annotation collection of the node or connector. The [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Content) property of annotation defines the text to be displayed. 
+An annotation can be added to a node or connector by defining the annotation object and adding it to the annotation collection of the node or connector. The [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Content) property of the annotation defines the text to be displayed. 
 
 
 To create and add annotation to Nodes and Connectors using the Blazor Diagram, refer to the below video link,
@@ -69,25 +69,26 @@ The following code explains how to create an annotation.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/CreateAnnotation/CreateAnnotation)
 
 ![Blazor Diagram Node with Annotation](../images/blazor-diagram-node-with-annotation.png)
 
 N>* [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_ID) for each annotation should be unique and so it is further used to find the annotation at runtime and do any customization.
 <br/>* By default, node’s annotation positioned in center point of the shape.
 <br/>* By default, connector’s path annotation positioned in center point of its path.
->**Note:** Do not use underscore(_) for annotation's id.
+>**Note:** Do not use underscores(_) for annotation's id.
 
 ## How to add annotation at runtime
 
-You can add Annotation at runtime to the Annotations collection of the node/connector in the diagram component by using the `Add` method.
+You can add an annotation at runtime to the Annotations collection of the node/connector in the diagram component by using the `Add` method.
 
 The following code explains how to add an annotation to a node at runtime by using `Add` method.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input value="AddLabel" type="button" @onclick="@AddLabel" name="AddLabel" />
+<SfButton Content="Addlabel" OnClick="@AddLabel" />
 <SfDiagramComponent Height="600px" @ref="@diagram" Nodes="@nodes">
 </SfDiagramComponent>
 
@@ -121,9 +122,9 @@ The following code explains how to add an annotation to a node at runtime by usi
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/AddAnnotationAtRunTime)
 
-Also, the annotations can be added at runtime by using the [AddAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramObjectCollection-1.html#Syncfusion_Blazor_Diagram_DiagramObjectCollection_1_AddAsync__0_) method. The `await` operator suspends evaluation of the enclosing async method until the asynchronous operation represented by its operand completes.
+Also, the annotations can be added at runtime by using the [AddAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramObjectCollection-1.html#Syncfusion_Blazor_Diagram_DiagramObjectCollection_1_AddAsync__0_) method. The `await` operator suspends the evaluation of the enclosing async method until the asynchronous operation represented by its operand completes.
 
 The following code explains how to add an annotation to a node at runtime by using the `AddAsync` method.
 
@@ -141,12 +142,14 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to remove annotations at runtime
 
-A collection of annotations can be removed from the node by using the `RemoveAt` method. The following code explains how to remove an annotation from a node.
+A collection of annotations can be removed from a node by using the `RemoveAt` method. The following code explains how to remove an annotation from a node.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input value="RemoveLabel" type="button" @onclick="@RemoveLabel" name="RemoveLabel" />
+
+<SfButton Content="Removelabel" OnClick="@RemoveLabel" />
 
 <SfDiagramComponent Height="600px" @ref="@diagram" Nodes="@nodes" />
 
@@ -183,7 +186,7 @@ A collection of annotations can be removed from the node by using the `RemoveAt`
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/RemoveAnnotation/RemoveAnnotation)
 
 Also, a collection of annotations can be removed from the node by using the `Remove` method.
 
@@ -196,7 +199,7 @@ Also, a collection of annotations can be removed from the node by using the `Rem
     }
 ```
 
-N>* You can delete multiple annotations from node to pass the collection of annotation objects as argument.
+N>* You can delete multiple annotations from a node to pass the collection of annotation objects as argument.
 <br/>* The `Add`, `Remove`, and `RemoveAt` methods are applicable for connectors too.
 
 ## How to update annotation at runtime
@@ -207,8 +210,10 @@ The following code sample shows how the annotation of the node changed at runtim
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input value="UpdateLabel" type="button" @onclick="@UpdateLabel" name="UpdateLabel" />
+
+<SfButton Content="Updatelabel" OnClick="@UpdateLabel" />
 
 <SfDiagramComponent Height="600px" @ref="@diagram" Nodes="@nodes" />
 
@@ -245,7 +250,7 @@ The following code sample shows how the annotation of the node changed at runtim
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/UpdateAnnotation/UpdateAnnotation)
 
 ## See also
 

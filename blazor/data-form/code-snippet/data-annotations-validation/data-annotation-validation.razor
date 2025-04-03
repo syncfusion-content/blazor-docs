@@ -1,0 +1,57 @@
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.DataForm
+@using Syncfusion.Blazor.Buttons
+@using System.ComponentModel.DataAnnotations
+@using Syncfusion.Blazor.Inputs
+
+<SfDataForm ID="MyForm"
+            Model="@SignUpModel"
+            Width="50%"
+            ButtonsAlignment="FormButtonsAlignment.Right">
+    <FormValidator>
+        <DataAnnotationsValidator></DataAnnotationsValidator>
+        <ValidationSummary></ValidationSummary>
+    </FormValidator>
+    <FormItems>
+        <FormItem Field="@nameof(SignUpModel.FirstName)" LabelText="First Name"></FormItem>
+        <FormItem Field="@nameof(SignUpModel.LastName)" LabelText="Last Name"> </FormItem>
+        <FormItem Field="@nameof(SignUpModel.Email)" LabelText="Email Id"> </FormItem>
+        <FormItem Field="@nameof(SignUpModel.Password)" LabelText="Password" EditorType="FormEditorType.Password"> </FormItem>
+        <FormItem Field="@nameof(SignUpModel.ConfirmPassword)" LabelText="Confirm Password" EditorType="FormEditorType.Password"> </FormItem>
+        <FormItem Field="@nameof(SignUpModel.Accept)" LabelText="Agree to the terms and conditions"> </FormItem>
+    </FormItems>
+
+    <FormButtons>
+        <SfButton>SignUp</SfButton>
+    </FormButtons>
+
+</SfDataForm>
+
+
+@code {
+
+    public class SignUpDetails
+    {
+
+        [Required(ErrorMessage = "Please enter first name")]
+        public string FirstName { get; set; }
+
+        [Required(ErrorMessage = "Please enter last name")]
+        public string LastName { get; set; }
+
+        [Required(ErrorMessage = "Please enter password")]
+        public string Password { get; set; }
+
+        [Required(ErrorMessage = "Please enter confirm password")]
+        public string ConfirmPassword { get; set; }
+
+        [Required(ErrorMessage = "Please enter the email id")]
+        public string Email { get; set; }
+
+        [Required(ErrorMessage = "You need to agree to the Terms and Conditions")]
+        [Range(typeof(bool), "true", "true", ErrorMessage = "You need to agree to the Terms and Conditions")]
+        public bool Accept { get; set; }
+    }
+
+    private SignUpDetails SignUpModel = new SignUpDetails();
+}

@@ -1,0 +1,18 @@
+@using Syncfusion.Blazor.DataForm
+@using System.ComponentModel.DataAnnotations
+
+<SfDataForm ID="MyForm"
+            Model="@EventRegistrationModel">
+    <FormValidator>
+        <DataAnnotationsValidator></DataAnnotationsValidator>
+    </FormValidator>
+    <FormItems>
+        <FormItem Field="@nameof(EventRegistration.Name)" CssClass="e-warning"></FormItem>
+        <FormItem Field="@nameof(EventRegistration.Email)"></FormItem>
+    </FormItems>
+    </SfDataForm>
+
+@code {
+
+    private EventRegistration EventRegistrationModel = new EventRegistration();
+}

@@ -9,6 +9,8 @@ documentation: ug
 
 # Column Reordering in Blazor Gantt Chart Component
 
+## Column reordering
+
 The column reordering can be done by dragging a column header from one index to another index within the Tree Grid. To enable reordering, set the `AllowReordering` property to true.
 
 ```cshtml
@@ -31,7 +33,7 @@ The column reordering can be done by dragging a column header from one index to 
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -59,15 +61,16 @@ The column reordering can be done by dragging a column header from one index to 
 
 N> You can disable the reordering of a particular column by setting the `GanttColumn.AllowReordering` property to `false`.
 
-#### Reorder single column
+### Reorder single column
 
 Gantt chart has option to reorder single column either by Interaction or by using the [ReorderColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ReorderColumnsAsync_System_Collections_Generic_List_System_String__System_String_) method. In the following sample, **Duration** column is reordered to last column position by using the method.
 
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Buttons
 <SfButton OnClick="ReorderBtn" CssClass="e-primary" IsPrimary="true" Content="Reorder Freight"></SfButton>
-<SfGantt DataSource="@TaskCollection" Height="450px" Width="700px" AllowReordering="true">
+<SfGantt DataSource="@TaskCollection" @ref="Gantt" Height="450px" Width="700px" AllowReordering="true">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
              Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
@@ -81,6 +84,7 @@ Gantt chart has option to reorder single column either by Interaction or by usin
 </SfGantt>
 
 @code{
+    public SfGantt<TaskData> Gantt;
     private List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
     {
@@ -114,13 +118,13 @@ Gantt chart has option to reorder single column either by Interaction or by usin
         return Tasks;
     }
 
-    public void ReorderBtn()
+    public async void ReorderBtn()
     {
-        this.DefaultGrid.ReorderColumns("Duration", "Progress");
+        await this.Gantt.ReorderColumnsAsync(new List<string>() { "Duration" }, "Progress");
     }
 }
 ```
-## Reorder multiple columns
+### Reorder multiple columns
 
 Multiple columns can be reordered at a time by using the `ReorderColumnsAsync` method.
 
@@ -159,10 +163,10 @@ Multiple columns can be reordered at a time by using the `ReorderColumnsAsync` m
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public List<TaskData> SubTasks { get; set; }
+        public int? ParentId { get; set; }
     }
 
     public static List<TaskData> GetTaskCollection()

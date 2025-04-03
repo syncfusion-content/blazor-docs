@@ -30,7 +30,8 @@ The following example depicts the code to provide spacing between the home and p
 </div>
 ```
 
-![Blazor AppBar with Spacer](./images/spacer_appbar.png)
+![Blazor AppBar with Spacer.](./images/blazor-appbar-spacer.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htLKWVizhrJGeHZk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Separator
 
@@ -65,8 +66,9 @@ The following example depicts the code to provide a vertical line between a grou
     }
 </style>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZrUWhizrrSDjGWv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor AppBar with Separator](./images/separator_appbar.png)
+![Blazor AppBar with Separator.](./images/blazor-appbar-separator.png)
 
 ## Media Query
 
@@ -112,8 +114,8 @@ Media Query is used to adjusting the AppBar for different screen sizes. Resize t
 </style>
 ```
 
-![Blazor AppBar with Media Query](./images/media_appbar.png)
-
+![Blazor AppBar with Media Query.](./images/blazor-appbar-media-quary.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVUWBsJrBofaJVB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 ## Designing AppBar with Menu
 
 **SfMenu** component can be rendered as a child content of AppBar. You can inherit the AppBar component styles by setting CSS class as `e-inherit` to SfMenu component.
@@ -171,7 +173,8 @@ Media Query is used to adjusting the AppBar for different screen sizes. Resize t
 </style>
 ```
 
-![Blazor AppBar with Menu](./images/menu_appbar.png)
+![Blazor AppBar with Menu.](./images/blazor-appbar-menu.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrgCrsfhVRDMsdT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Designing AppBar with Buttons
 
@@ -206,7 +209,8 @@ Media Query is used to adjusting the AppBar for different screen sizes. Resize t
 </style>
 ```
 
-![Blazor AppBar with Buttons](./images/buttons_appbar.png)
+![Blazor AppBar with Buttons.](./images/blazor-appbar-buttons.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVgMBMTLrdehyCb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Designing AppBar with SideBar
 
@@ -324,10 +328,6 @@ AppBar toggle button used to control the expand and collapse state of **SfSideba
     #main-text .sidebar-heading {
         font-size: 16px;
     }
-    .sidebar-treeview .table-content {
-        padding: 20px 18px;
-        height: 8em;
-    }
     #main-text .sidebar-content .line {
         width: 100%;
         height: 1px;
@@ -370,5 +370,6 @@ AppBar toggle button used to control the expand and collapse state of **SfSideba
     }
 </style>
 ```
+![Blazor AppBar with SideBar.](./images/blazor-appbar-sidebar.png)
 
-![Blazor AppBar with SideBar](./images/sidebar_appbar.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVKirMTrrRbKrNE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

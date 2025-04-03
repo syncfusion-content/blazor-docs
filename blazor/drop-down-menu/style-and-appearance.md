@@ -9,7 +9,7 @@ documentation: ug
 
 # Styles and Appearances in Blazor Dropdown Menu Component
 
-To modify the DropDownButton appearance, you need to override the default CSS of DropDownButton component. Find the list of CSS classes and its corresponding section in DropDownButton. Also, you have an option to create your own custom theme for the controls using our [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
+To modify the DropDownButton appearance, you need to override the default CSS of DropDownButton component. Find the list of CSS classes and its corresponding section in DropDownButton. Also, you have an option to create your own custom theme for the controls using our [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=bootstrap5).
 
 |CSS Class | Purpose of Class|
 |-----|-----|

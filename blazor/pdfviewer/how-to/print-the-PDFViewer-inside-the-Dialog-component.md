@@ -62,4 +62,4 @@ The following code illustrates how to perform print action once PDF Viewer is lo
 }
 ```
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Print/PDF%20Viewer%20in%20a%20Dialog).
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-classic-examples/tree/master/Print/PDF%20Viewer%20in%20a%20Dialog).

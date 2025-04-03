@@ -53,7 +53,6 @@ In the below example, the `RowHeight` is set as '60'.
 }
 ```
 
-
 ![Customizing Row Height in Blazor DataGrid](./images/blazor-datagrid-row-height-customization.png)
 
 ## Customize row height for particular row
@@ -116,8 +115,6 @@ In the below example, the row height for the row with OrderID as '1003' is set a
     }
 }
 ```
-
-
 
 ![Customizing Specific Row Height in Blazor DataGrid](./images/blazor-datagrid-specific-row-height-customization.png)
 

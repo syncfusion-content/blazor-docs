@@ -26,7 +26,10 @@ The template allows to define our own widgets for column values. Use the [ValueT
             <QueryBuilderColumn Field="PaymentMode" Label="PaymentMode" Type=Syncfusion.Blazor.QueryBuilder.ColumnType.String>
                 <QueryBuilderTemplates>
                     <ValueTemplate>
-                        <SfDropDownList TValue="string" TItem="ItemFields" DataSource="@Items" @bind-Value="@DefaultValue">
+                        @{
+                            string value = context.Value != null ? context.Value : DefaultValue;
+                        }
+                        <SfDropDownList TValue="string" TItem="ItemFields" DataSource="@Items" @bind-Value="@value">
                             <DropDownListFieldSettings Text="Id"></DropDownListFieldSettings>
                             <DropDownListEvents TItem="ItemFields" TValue="string" ValueChange="e => OnChange(e, context)"></DropDownListEvents>
                         </SfDropDownList>
@@ -360,4 +363,4 @@ In the following sample, the SFDropDownList component is used as the custom comp
 
 ![Blazor QueryBuilder with Header Template](./images/blazor-querybuilder-header-template.png)
 
-N> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to know how to render and configure the query builder.
+N> You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap5) to know how to render and configure the query builder.

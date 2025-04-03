@@ -32,13 +32,13 @@ The following example code illustrates how to get the bookmark content as plain 
     public async void OnCreated(object args)
     {
         // To insert text in cursor position
-        container.DocumentEditor.Editor.InsertTextAsync("Document editor");
+        await container.DocumentEditor.Editor.InsertTextAsync("Document editor");
         // To select all the content in document
-        container.DocumentEditor.Selection.SelectAllAsync();
+        await container.DocumentEditor.Selection.SelectAllAsync();
         // Insert bookmark to selected content
-        container.DocumentEditor.Editor.InsertBookmarkAsync("Bookmark1");
+        await container.DocumentEditor.Editor.InsertBookmarkAsync("Bookmark1");
         // Provide your bookmark name to navigate to specific bookmark
-        container.DocumentEditor.Selection.SelectBookmarkAsync("Bookmark1");
+        await container.DocumentEditor.Selection.SelectBookmarkAsync("Bookmark1");
         // To get the selected content as text
         string selectedContent =await container.DocumentEditor.Selection.GetTextAsync();
     }
@@ -66,11 +66,11 @@ The following example code illustrates how to get the whole document content as 
     public async void OnCreated(object args)
     {
         // To insert text in cursor position
-        container.DocumentEditor.Editor.InsertTextAsync("Document editor");
+        await container.DocumentEditor.Editor.InsertTextAsync("Document editor");
         // To select all the content in document
-        container.DocumentEditor.Selection.SelectAllAsync();
+        await container.DocumentEditor.Selection.SelectAllAsync();
         // To get the selected content as text
-        string selectedContent =await container.DocumentEditor.Selection.GetTextAsync();
+        string selectedContent = await container.DocumentEditor.Selection.GetTextAsync();
     }
 }
 ```
@@ -94,7 +94,7 @@ The following example code illustrates how to get the whole document content as 
     public async void OnCreated(object args)
     {
         // To insert text in cursor position
-        container.DocumentEditor.Editor.InsertTextAsync("Document editor");
+        await container.DocumentEditor.Editor.InsertTextAsync("Document editor");
         // To get the content as SFDT
         string selectedContent = await container.DocumentEditor.SerializeAsync();
     }
@@ -119,11 +119,11 @@ The following example code illustrates how to get the header content as plain te
 
     public async void OnCreated(object args)
     {
-        container.DocumentEditor.Selection.GoToHeaderAsync();
+        await container.DocumentEditor.Selection.GoToHeaderAsync();
         // To insert text in cursor position
-        container.DocumentEditor.Editor.InsertTextAsync("Document editor");
+        await container.DocumentEditor.Editor.InsertTextAsync("Document editor");
         // To select all the content in header
-        container.DocumentEditor.Selection.SelectAllAsync();
+        await container.DocumentEditor.Selection.SelectAllAsync();
         // To get the selected content as text
         string selectedContent = await container.DocumentEditor.Selection.GetTextAsync();
     }

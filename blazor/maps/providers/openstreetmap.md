@@ -122,7 +122,7 @@ The legend can be added to the tile Maps by setting the [Visible](https://help.s
 ```cshtml
 @using Syncfusion.Blazor.Maps
 
-<SfMaps Format="N0" UseGroupingSeparator="true">
+<SfMaps Format="N0" EnableGroupingSeparator="true">
     <MapsZoomSettings Enable="true">
         <MapsZoomToolbarSettings>
             <MapsZoomToolbarTooltipSettings FontFamily="inherit"></MapsZoomToolbarTooltipSettings>

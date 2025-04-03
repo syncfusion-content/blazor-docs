@@ -1,0 +1,64 @@
+@using System.ComponentModel.DataAnnotations
+@using Syncfusion.Blazor.DataForm
+
+
+<div class="mt-4" style="margin: 0 auto;">
+    <SfDataForm Model="@MyModel" Width="50%">
+        <FormValidator>
+            <ObjectGraphDataAnnotationsValidator></ObjectGraphDataAnnotationsValidator>
+        </FormValidator> 
+        <FormItems>
+            <FormItem Field="@nameof(MyModel.Name)"  LabelText="Name"></FormItem>
+            <FormItem Field="@nameof(MyModel.Child.GrandChild.Email)" LabelText="Email" Placeholder="someone@example.com"> </FormItem>
+            <FormItem Field="@nameof(MyModel.Child.GrandChild.Password)" EditorType="FormEditorType.Password"  LabelText="Password"></FormItem>
+            <FormItem Field="@nameof(MyModel.Child.GrandChild.ConfirmPassword)" EditorType="FormEditorType.Password" LabelText="Confirm Password"></FormItem>
+        </FormItems>
+    </SfDataForm>
+</div>
+@code {
+    UserDetails MyModel { get; set; } = new UserDetails();
+
+    abstract class Credential
+    {
+       
+        [Required(ErrorMessage = "Enter Password here")]
+        public string Password { get; set; }
+
+        [Required(ErrorMessage = "Enter Confirm Password here")]
+        public string ConfirmPassword { get; set; }
+
+        [Required(ErrorMessage = "Enter Email here")]
+        public string Email { get; set; }
+    }
+
+    class GrandChildModel : Credential
+    {
+    }
+
+    class ChildModel : Credential
+    {
+        [ValidateComplexType]
+        public GrandChildModel GrandChild { get; set; }
+
+        public ChildModel()
+        {
+            GrandChild = new GrandChildModel();
+        }
+    }
+
+    class UserDetails : Credential
+    {
+        public int Id { get; set; }
+
+        [Required(ErrorMessage = "Enter FirstName here")]
+        public string Name { get; set; }
+
+        [ValidateComplexType]
+        public ChildModel Child { get; set; }
+
+        public UserDetails()
+        {
+            Child = new ChildModel();
+        }
+    }
+}

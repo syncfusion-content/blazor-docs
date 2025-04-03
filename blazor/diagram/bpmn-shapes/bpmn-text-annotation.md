@@ -68,7 +68,7 @@ documentation: ug
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnTextAnnotation)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnTextAnnotation/BpmnTextAnnotation)
 
 ![Auto BPMN Shape](../images/Bpmn-TextAnnotation-Auto.png)
 
@@ -134,22 +134,23 @@ The following code example represents how to create a TextAnnotation and connect
 }
 
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnTextAnnotation)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/BpmnEditor/BpmnTextAnnotation/TextAnnotationTarget)
 
 ![Auto BPMN Shape](../images/bpmn-text-annotation_WithTarget.png) 
 
 ## How to connect the TextAnnotation to BPMNNode
-Drag and drop any bpmn shapes from the palette to diagram and connect the BPMN Node and TextAnnotation.
+Drag and drop any bpmn shapes from the palette to the diagram and connect the BPMN Node and TextAnnotation.
 
 The following image shows how to drag a symbol from the palette and connect the TextAnnotation to the BPMNNode with interaction.
 
 ![Auto BPMN Shape](../images/Bpmn-TextAnnotationTarget-Connect.gif)
 
 There are several types of Text annotation directions as follows:
+
 | Direction | Image |
 | -------- | -------- |
-| Auto | ![Auto BPMN Shape](../images/Bpmn-TextAnnotation-Auto.png) |
-| Left | ![Left TextAnnotation BPMN Shape](../images/Bpmn-TextAnnotation-Auto.png) |
-| Right | ![Right TextAnnotation BPMN Shape](../images/Bpmn-TextAnnotation-Right.png) |
-| Top | ![Top TextAnnotation BPMN Shape](../images/Bpmn-TextAnnotation-Top.png) |
-| Bottom | ![Bottom TextAnnotation BPMN Shape](../images/Bpmn-TextAnnotation-Bottom.png) |
+| Auto | ![Auto BPMN Shape](../images/Bpmn-TextAnnotation-Auto.png)|
+| Left | ![Left TextAnnotation BPMN Shape](../images/Bpmn-TextAnnotation-Auto.png)|
+| Right | ![Right TextAnnotation BPMN Shape](../images/Bpmn-TextAnnotation-Right.png)|
+| Top | ![Top TextAnnotation BPMN Shape](../images/Bpmn-TextAnnotation-Top.png)|
+| Bottom | ![Bottom TextAnnotation BPMN Shape](../images/Bpmn-TextAnnotation-Bottom.png)|

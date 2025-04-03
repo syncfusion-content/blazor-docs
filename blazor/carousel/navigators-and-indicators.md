@@ -11,6 +11,11 @@ documentation: ug
 
 The navigators and indicators are used to transition the slides manually.
 
+To customize the appearance of indicators, and previous and next navigators, using a template with Blazor Carousel component, you can check on this video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=A5A9eM39nW0" %}
+
 ## Navigators
 
 ### Show or hide previous and next button
@@ -63,6 +68,7 @@ The following example depicts the code to hide the navigators in the carousel.
     }
 </style>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhKCBVhAsyEmfKw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Carousel Navigators](images/navigators_hidden.png)
 
@@ -110,6 +116,7 @@ In the carousel, you can show the previous and next buttons only on mouse hover 
     }
 </style>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrAiBrLAMdVnAce?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Carousel Navigators OnHover](images/navigators_onhover.gif)
 
@@ -193,6 +200,7 @@ Template options are provided to customize the previous button using [PreviousBu
     }
 </style>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVUihrBKinwfomJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Carousel Navigators Template](images/navigators_template.png)
 
@@ -242,6 +250,7 @@ In indicators, the total slides and current slide state have been depicted. You 
     }
 </style>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBAsVBBgWwAAeOK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Carousel Indicators](images/indicators_hidden.png)
 
@@ -319,6 +328,7 @@ Template option is provided to customize the indicators by using the [Indicators
     }
 </style>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLqshhrUWwRrjbh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Carousel Indicators](images/indicators_template.png)
 
@@ -395,8 +405,210 @@ You can customize the indicators by showing the preview image of each slide usin
     }
 </style>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLAsVBBgMwagdvn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Carousel Indicators](images/indicators_preview.png)
+
+### Indicators Types
+
+Choose different types of indicators available using the [`IndicatorsType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_IndicatorsType) property. The indicator types are categorized as follows:
+
+* [Default Indicator](#default-indicator)
+* [Dynamic Indicator](#dynamic-indicator)
+* [Fraction Indicator](#fraction-indicator)
+* [Progress Indicator](#progress-indicator)
+
+#### Default Indicator
+
+A default indicator in a carousel is a set of dots that indicate the current position of the slide in the carousel. The Default indicator can be achieved by setting the [`IndicatorsType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_IndicatorsType) to `Default`.
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+
+<div class="control-container">
+    <SfCarousel IndicatorsType="Default">
+        <CarouselItem>
+            <div class="slide-content">Slide 1</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="slide-content">Slide 2</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="slide-content">Slide 3</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="slide-content">Slide 4</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="slide-content">Slide 5</div>
+        </CarouselItem>
+    </SfCarousel>
+</div>
+
+<style>
+    .control-container {
+        background-color: #adb5bd;
+        height: 300px;
+        margin: 0 auto;
+        width: 500px;
+    }
+
+    .e-carousel .slide-content {
+        align-items: center;
+        display: flex;
+        font-size: 1.25rem;
+        height: 100%;
+        justify-content: center;
+    }
+</style>
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBKsBVhKsaLlNlA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+![Carousel indicators type default](images/indicator-default.png)
+
+#### Dynamic Indicator
+
+A dynamic indicator in a carousel provides visual cues or markers that dynamically change or update to indicate the current position. The Dynamic indicator can be achieved by setting the [`IndicatorsType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_IndicatorsType) to `Dynamic`.
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+
+<div class="control-container">
+    <SfCarousel IndicatorsType="Dynamic">
+        <CarouselItem>
+            <div class="slide-content">Slide 1</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="slide-content">Slide 2</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="slide-content">Slide 3</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="slide-content">Slide 4</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="slide-content">Slide 5</div>
+        </CarouselItem>
+    </SfCarousel>
+</div>
+
+<style>
+    .control-container {
+        background-color: #adb5bd;
+        height: 300px;
+        margin: 0 auto;
+        width: 500px;
+    }
+
+    .e-carousel .slide-content {
+        align-items: center;
+        display: flex;
+        font-size: 1.25rem;
+        height: 100%;
+        justify-content: center;
+    }
+</style>
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBqsLBhACumvJUW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+![Carousel indicators type dynamic](images/indicator-dynamic.png)
+
+#### Fraction Indicator
+
+The fraction indicator type displays the current slide index and total slide count as a fraction. The Fraction indicator can be achieved by setting the [`IndicatorsType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_IndicatorsType) to `Fraction`.
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+
+<div class="control-container">
+    <SfCarousel IndicatorsType="Fraction">
+        <CarouselItem>
+            <div class="slide-content">Slide 1</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="slide-content">Slide 2</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="slide-content">Slide 3</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="slide-content">Slide 4</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="slide-content">Slide 5</div>
+        </CarouselItem>
+    </SfCarousel>
+</div>
+
+<style>
+    .control-container {
+        background-color: #adb5bd;
+        height: 300px;
+        margin: 0 auto;
+        width: 500px;
+    }
+
+    .e-carousel .slide-content {
+        align-items: center;
+        display: flex;
+        font-size: 1.25rem;
+        height: 100%;
+        justify-content: center;
+    }
+</style>
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXBUCBhhqVZMmiMz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+![Carousel indicators type fraction](images/indicator-fraction.png)
+
+#### Progress Indicator
+
+The Progress Indicator type displays the current slide as a progress bar. The Progress indicator can be achieved by setting the [`IndicatorsType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfCarousel.html#Syncfusion_Blazor_Navigations_SfCarousel_IndicatorsType) to `Progress`.
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+
+<div class="control-container">
+    <SfCarousel IndicatorsType="Progress">
+        <CarouselItem>
+            <div class="slide-content">Slide 1</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="slide-content">Slide 2</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="slide-content">Slide 3</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="slide-content">Slide 4</div>
+        </CarouselItem>
+        <CarouselItem>
+            <div class="slide-content">Slide 5</div>
+        </CarouselItem>
+    </SfCarousel>
+</div>
+
+<style>
+    .control-container {
+        background-color: #adb5bd;
+        height: 300px;
+        margin: 0 auto;
+        width: 500px;
+    }
+
+    .e-carousel .slide-content {
+        align-items: center;
+        display: flex;
+        font-size: 1.25rem;
+        height: 100%;
+        justify-content: center;
+    }
+</style>
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBgChBrqhNyvyRO?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+![Carousel indicators type progress](images/indicator-progress.png)
 
 ## Play button
 
@@ -444,6 +656,7 @@ In the carousel, [AutoPlay](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
     }
 </style>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htLUCBVrgBjuRDmo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Carousel Indicators](images/play_button.png)
 
@@ -524,5 +737,6 @@ Template option is provided to customize the play button by using the [PlayButto
     }
 </style>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htrgsVVhgVCgSyAJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Carousel Indicators](images/play_button_template.png)

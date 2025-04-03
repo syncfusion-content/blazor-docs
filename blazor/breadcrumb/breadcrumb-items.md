@@ -31,6 +31,7 @@ The [Blazor Breadcrumb](https://www.syncfusion.com/blazor-components/blazor-brea
     </BreadcrumbItems>
 </SfBreadcrumb>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjBqCLsJJBaogECl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-tag.png)
 
@@ -43,6 +44,7 @@ The Breadcrumb items can be generated based on the current URL of the page when 
 
 <SfBreadcrumb></SfBreadcrumb>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhUWVWJzVObSwiI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-current-url.png)
 
@@ -58,5 +60,50 @@ You can generate the Breadcrumb items by providing the [Url](https://help.syncfu
 <SfBreadcrumb Url="https://blazor.syncfusion.com/demos/breadcrumb/navigation">
 </SfBreadcrumb>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLAMBWpzqZWfPfm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-static-url.png)
+
+## Add or remove the Breadcrumb items
+
+Using the [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_Items) property of Breadcrumb, we can dynamically add or remove the items of Breadcrumb.
+
+```cshtml
+@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.Buttons
+
+<SfBreadcrumb class="e-custom" Items="@items">
+</SfBreadcrumb>
+
+<SfButton OnClick="AddBefore">Insert - before </SfButton>
+<SfButton OnClick="AddAfter">Insert - After </SfButton>
+<SfButton OnClick="Remove">Remove </SfButton>
+
+@code{
+    List<BreadcrumbItem> items = new List<BreadcrumbItem>
+    {
+        new BreadcrumbItem { IconCss = "e-icons e-home"},
+        new BreadcrumbItem { Text = "Open", IconCss = "e-icons e-folder-open", Url = "https://blazor.syncfusion.com/demos/datagrid/overview"},
+        new BreadcrumbItem { Text = "New", IconCss = "e-icons e-file-new"}
+    };
+
+    private void AddBefore()
+    {
+        var index = items.IndexOf(items.Where(item => item.Text == "Open").FirstOrDefault());
+        items.Insert(index, new BreadcrumbItem {Text = "Save", IconCss = "e-icons e-save"});
+    }
+
+    private void AddAfter()
+    {
+        var index = items.IndexOf(items.Where(item => item.Text == "New").FirstOrDefault());
+        items.Insert((index + 1), new BreadcrumbItem { Text = "Delete", IconCss = "e-icons e-delete" });
+    }
+
+    private void Remove()
+    {
+        items.RemoveAt(items.Count() - 1);
+    }
+}
+
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBStMNFgGHPMWew?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}

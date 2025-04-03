@@ -17,7 +17,7 @@ The editor window usually opens on the Scheduler, when a cell or event is double
 
 In mobile devices, the detailed editor window can be opened in edit mode by clicking the edit icon on the popup, that opens on single tapping an event. You can also open it in add mode by single tapping a cell, which will display a `+` indication, clicking on it again will open the editor window.
 
-N> You can also prevent the editor window from opening, by rendering Scheduler in a `Readonly` mode or by doing code customization within the `OnPopupOpen` event.
+N> You can also prevent the editor window from opening, by rendering Scheduler in a [`Readonly`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_Readonly) mode or by doing code customization within the [`OnPopupOpen`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnPopupOpen) event.
 
 ### How to change the editor window header title and text of footer buttons
 
@@ -135,7 +135,7 @@ It is possible to validate the required fields of the editor window before submi
 
 ### Customizing the default time duration in editor window
 
-In default event editor window, start and end time duration are processed based on the `Interval` value set within the `ScheduleTimeScale` property. By default, `Interval` value is set to 30, and therefore the start and end time duration within the event editor will be in a 30 minutes time difference. This duration value can be changed by changing the `Duration` option within the `OnPopupOpen` event.
+In default event editor window, start and end time duration are processed based on the [`Interval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleTimeScale.html#Syncfusion_Blazor_Schedule_ScheduleTimeScale_Interval) value set within the [`ScheduleTimeScale`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleTimeScale.html) property. By default, [`Interval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleTimeScale.html#Syncfusion_Blazor_Schedule_ScheduleTimeScale_Interval) value is set to 30, and therefore the start and end time duration within the event editor will be in a 30 minutes time difference. This duration value can be changed by changing the [`Duration`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.PopupOpenEventArgs-1.html#Syncfusion_Blazor_Schedule_PopupOpenEventArgs_1_Duration) option within the [`OnPopupOpen`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnPopupOpen) event.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -182,7 +182,7 @@ In default event editor window, start and end time duration are processed based 
 
 ### How to prevent the display of editor and quick popups
 
-It is possible to prevent the display of editor and quick popup windows by passing the value `true` to `cancel` option within the `OnPopupOpen` event.
+It is possible to prevent the display of editor and quick popup windows by passing the value `true` to `cancel` option within the [`OnPopupOpen`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnPopupOpen) event.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -227,7 +227,7 @@ It is possible to prevent the display of editor and quick popup windows by passi
 }
 ```
 
-In case, in order to prevent only specific popups on Scheduler, check the condition based on the popup type. The types of the popup that can be checked within the `OnPopupOpen` event are as follows.
+In case, in order to prevent only specific popups on Scheduler, check the condition based on the popup type. The types of the popup that can be checked within the [`OnPopupOpen`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnPopupOpen) event are as follows.
 
 | Type | Description |
 |------|-------------|
@@ -243,13 +243,13 @@ In case, in order to prevent only specific popups on Scheduler, check the condit
 
 ### How to open editor window manually
 
-It is possible to open the editor window manually for a specific time or certain events by using the `OpenEditorAsync` method which allows the [TValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_OpenEditor__0_Syncfusion_Blazor_Schedule_CurrentAction_) or [CellClickEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_OpenEditor_Syncfusion_Blazor_Schedule_CellClickEventArgs_Syncfusion_Blazor_Schedule_CurrentAction_System_Nullable_Syncfusion_Blazor_Schedule_RepeatType__) and `CurrentAction` as parameters.
+It is possible to open the editor window manually for a specific time or certain events by using the [`OpenEditorAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_OpenEditorAsync__0_Syncfusion_Blazor_Schedule_CurrentAction_) method which allows the [TValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_OpenEditor__0_Syncfusion_Blazor_Schedule_CurrentAction_) or [CellClickEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.CellClickEventArgs.html) and `CurrentAction` as parameters.
 
-N> [Here](https://blazor.syncfusion.com/documentation/scheduler/how-to/open-editor-window-on-single-click/) is the example to open the editor window on a single click.
+N> [Here](https://blazor.syncfusion.com/documentation/scheduler/how-to/open-editor-window-on-single-click) is the example to open the editor window on a single click.
 
 ## Customizing event editor using template
 
-The event editor window can be customized by making use of the `EditorTemplate` option. Each field defined within template must use two way binding for the `Value` property of the components used within the template to perform CRUD actions.
+The event editor window can be customized by making use of the [`EditorTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleTemplates.html#Syncfusion_Blazor_Schedule_ScheduleTemplates_EditorTemplate) option. Each field defined within template must use two way binding for the `Value` property of the components used within the template to perform CRUD actions.
 
 To get start quickly on customizing editor window using template, you can check on this video:
 
@@ -341,6 +341,137 @@ To get start quickly on customizing editor window using template, you can check 
     }
 }
 ```
+
+### How to customize header and footer using template
+
+The editor window's header and footer can be enhanced with custom designs using the [`EditorHeaderTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleTemplates.html#Syncfusion_Blazor_Schedule_ScheduleTemplates_EditorHeaderTemplate) and [`EditorFooterTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleTemplates.html#Syncfusion_Blazor_Schedule_ScheduleTemplates_EditorFooterTemplate) options.
+
+In this demo, we tailor the editor's header according to the appointment's subject field using the [`EditorHeaderTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleTemplates.html#Syncfusion_Blazor_Schedule_ScheduleTemplates_EditorHeaderTemplate). Furthermore, we make use of the [`EditorFooterTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleTemplates.html#Syncfusion_Blazor_Schedule_ScheduleTemplates_EditorFooterTemplate) to handle the functionality of validating specific fields before proceeding with the save action or canceling it if validation requirements are not met.
+
+```cshtml
+@using Syncfusion.Blazor.Schedule
+@using Syncfusion.Blazor.Buttons
+<SfSchedule TValue="AppointmentData" Height="650px" @ref="scheduleObj">
+    <ScheduleEvents TValue="AppointmentData" OnPopupClose="OnPopupClose"></ScheduleEvents>
+    <ScheduleTemplates>
+        <EditorHeaderTemplate>
+            @{
+                var subject = (context as AppointmentData)?.Subject;
+            }
+            @if (string.IsNullOrEmpty(subject))
+            {
+                <div>Create New Event</div>
+            }
+            else
+            {
+                <div>@subject</div>
+            }
+        </EditorHeaderTemplate>
+        <EditorFooterTemplate>
+            <div id="event-footer">
+                <div id="verify">
+                    <SfCheckBox @bind-Checked="@isChecked" @onchange="@(() => isSaveButtonDisabled = !isChecked)">
+                        <label htmlFor="check-box" id="text">Verified</label>
+                    </SfCheckBox>
+                </div><div id="right-button">
+                    <SfButton IsPrimary="true" Disabled="@isSaveButtonDisabled" OnClick="@(() => FooterButtonClick(true))">Save</SfButton>
+                    <SfButton IsPrimary="true" OnClick="@(() => FooterButtonClick(false))">Cancel</SfButton>
+                </div>
+            </div>
+        </EditorFooterTemplate>
+    </ScheduleTemplates>
+    <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+</SfSchedule>
+
+@code {
+    SfSchedule<AppointmentData> scheduleObj;
+    private bool isSaveClick = false;
+    private bool isChecked = false;
+    private bool isSaveButtonDisabled = true;
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData
+        {
+            Id = 1,
+            Subject = "Surgery - Andrew",
+            StartTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 9, 0, 0),
+            EndTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 10, 0, 0),
+            IsAllDay = false
+        },
+        new AppointmentData
+        {
+            Id = 2,
+            Subject = "Consulting - John",
+            StartTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 10, 0, 0),
+            EndTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 11, 30, 0),
+            IsAllDay = false
+        },
+        new AppointmentData
+        {
+            Id = 3,
+            Subject = "Therapy - Robert",
+            StartTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 11, 30, 0),
+            EndTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 12, 30, 0),
+            IsAllDay = false
+        },
+        new AppointmentData
+        {
+            Id = 4,
+            Subject = "Observation - Steven",
+            StartTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 12, 30, 0),
+            EndTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 13, 30, 0),
+            IsAllDay = false
+        }
+    };
+    public async Task OnPopupClose(PopupCloseEventArgs<AppointmentData> args)
+    {
+        if (args.Type == PopupType.Editor && args.Data != null && isSaveClick)
+        {
+            if (args.Data.Id != 0)
+            {
+                await scheduleObj.SaveEventAsync(args.Data);
+            }
+            else
+            {
+                args.Data.Id = await scheduleObj.GetMaxEventIdAsync<int>();
+                await scheduleObj.AddEventAsync(args.Data);
+            }
+
+        }
+    }
+    private void FooterButtonClick(bool isSave)
+    {
+        isSaveClick = isSave;
+        scheduleObj.CloseEditor();
+    }
+
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+    }
+}
+<style>
+    #verify {
+        position: fixed;
+        padding: 0 20px;
+    }
+
+    #right-button {
+        padding: 0 10px;
+    }
+</style>
+```
+
+![Add customize header and footer using template in Blazor Scheduler](images/blazor-scheduler-custom-editor-header-footer.png)
 
 ### How to add resource options within editor template
 
@@ -654,7 +785,7 @@ In the following code example, validation has been added to the `EventType` fiel
 
 The quick info popups are the ones that gets opened, when a cell or appointment is single clicked on the desktop mode. On single clicking a cell, you can simply provide a subject and save it. Also, while single clicking on an event, a popup will be displayed where you can get the overview of the event information. You can also edit or delete those events through the options available in it.
 
-By default, these popups are displayed over cells and appointments of Scheduler and to disable this action, set `false` to `ShowQuickInfo` property.
+By default, these popups are displayed over cells and appointments of Scheduler and to disable this action, set `false` to [`ShowQuickInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_ShowQuickInfo) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -699,7 +830,7 @@ By default, `Add Title` text is displayed on the subject field of quick popup. T
 
 ### Customizing quick popups
 
-The look and feel of the built-in quick popup window, which opens when single clicked on the cells or appointments can be customized by making use of the `ScheduleQuickInfoTemplates` option of the Scheduler. There are 3 sub-options available to customize them easily,
+The look and feel of the built-in quick popup window, which opens when single clicked on the cells or appointments can be customized by making use of the [`ScheduleQuickInfoTemplates`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleQuickInfoTemplates.html) option of the Scheduler. There are 3 sub-options available to customize them easily,
 
 * Header - Accepts the template design that customizes the header part of the quick popup.
 * Content - Accepts the template design that customizes the content part of the quick popup.
@@ -707,9 +838,15 @@ The look and feel of the built-in quick popup window, which opens when single cl
 
 The quick popup accepts the template that customizes both the cell click quick popup and event click quick popup or only cell click quick popup or event click quick popup by making use of `TemplateType` option which is `TemplateType.Both` by default and also accepts `TemplateType.Cell` or `TemplateType.Event` value.
 
+To get start quickly about customizing quick popup in our Scheduler, you can check on this video:
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=G9OCn_JOUG4-0"%}
+
+
 ### Customizing quick popup on cell
 
-The quick popup accepts the template that customizes quick popup only on cell by giving `TemplateType.Cell` to the `TemplateType` option in `ScheduleQuickInfoTemplates`.
+The quick popup accepts the template that customizes quick popup only on cell by giving `TemplateType.Cell` to the `TemplateType` option in [`ScheduleQuickInfoTemplates`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleQuickInfoTemplates.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -904,7 +1041,7 @@ The quick popup accepts the template that customizes quick popup only on cell by
 
 ### Customizing quick popup on event
 
-The quick popup accepts the template that customizes quick popup only on event by giving `TemplateType.Event` to the `TemplateType` option in `ScheduleQuickInfoTemplates`.
+The quick popup accepts the template that customizes quick popup only on event by giving `TemplateType.Event` to the `TemplateType` option in [`ScheduleQuickInfoTemplates`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleQuickInfoTemplates.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -1085,7 +1222,7 @@ The quick popup accepts the template that customizes quick popup only on event b
 
 ### Customizing the different combinations for cell and event quick popups
 
-The quick popup accepts the template that customizes only event click quick popup by giving `TemplateType.Both` to the `TemplateType` option in `ScheduleQuickInfoTemplates`.
+The quick popup accepts the template that customizes only event click quick popup by giving `TemplateType.Both` to the `TemplateType` option in [`ScheduleQuickInfoTemplates`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleQuickInfoTemplates.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -1371,7 +1508,7 @@ The quick popup accepts the template that customizes only event click quick popu
 
 ### How to enable/disable quick popup on selection end
 
-By default, the `QuickInfoOnSelectionEnd` property is set to `false` to prevent the quick popup at the end of multiple cell selection. The quick popup will be shown at the selection end by setting `true` value to this property.
+By default, the [`QuickInfoOnSelectionEnd`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_QuickInfoOnSelectionEnd) property is set to `false` to prevent the quick popup at the end of multiple cell selection. The quick popup will be shown at the selection end by setting `true` value to this property.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -1412,7 +1549,7 @@ By default, the `QuickInfoOnSelectionEnd` property is set to `false` to prevent 
 
 ### How to enable/disable the multiple days selection
 
-By default, the Scheduler allows the user to select multiple days. We can prevent this action by setting `false` to `AllowMultiRowSelection` property whereas its default value is `true`.
+By default, the Scheduler allows the user to select multiple days. We can prevent this action by setting `false` to [`AllowMultiRowSelection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_AllowMultiRowSelection) property whereas its default value is `true`.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -1453,7 +1590,7 @@ By default, the Scheduler allows the user to select multiple days. We can preven
 
 ### How to close quick info popup manually
 
-The quick info popup can be closed in scheduler by using the `CloseQuickInfoPopupAsync` public method.
+The quick info popup can be closed in scheduler by using the [`CloseQuickInfoPopupAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_CloseQuickInfoPopupAsync) public method.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -1504,7 +1641,7 @@ The quick info popup can be closed in scheduler by using the `CloseQuickInfoPopu
 
 When the number of appointments count that lies on a particular time range * default appointment height exceeds the default height of a cell in month view and all other timeline views, a `+ more` text indicator will be displayed at the bottom of those cells. This indicator denotes that the cell contains few more appointments in it and clicking on that will display a popup displaying all the appointments present on that day.
 
-N> To disable this option of showing popup with all hidden appointments, while clicking on the text indicator, you can do code customization within the `OnPopupOpen` event.
+N> To disable this option of showing popup with all hidden appointments, while clicking on the text indicator, you can do code customization within the [`OnPopupOpen`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_OnPopupOpen) event.
 
 The same indicator is displayed on all-day row in calendar views such as day, week and work week views alone, when the number of appointment count present in a cell exceeds three. Clicking on the text indicator here will not open a popup, but will allow the expand/collapse option for viewing the remaining appointments present in the all-day row.
 
@@ -1553,7 +1690,7 @@ The same indicator is displayed on all-day row in calendar views such as day, we
 
 ### How to prevent the display of popup when clicking on the more text indicator
 
-It is possible to prevent the display of popup window by passing the value `true` to `Cancel` option within the `MoreEventsClicked` event.
+It is possible to prevent the display of popup window by passing the value `true` to `Cancel` option within the [`MoreEventsClicked`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleEvents-1.html#Syncfusion_Blazor_Schedule_ScheduleEvents_1_MoreEventsClicked) event.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -1563,7 +1700,7 @@ It is possible to prevent the display of popup window by passing the value `true
        <ScheduleViews>
            <ScheduleView Option="View.Month"></ScheduleView>
        </ScheduleViews>
-    <ScheduleEvents TValue="AppointmentData" MoreEventsClicked="OnMoreEventsCliecked"></ScheduleEvents>
+    <ScheduleEvents TValue="AppointmentData" MoreEventsClicked="OnMoreEventsClicked"></ScheduleEvents>
 </SfSchedule>
 
 @code{
@@ -1572,7 +1709,7 @@ It is possible to prevent the display of popup window by passing the value `true
 
     private DateTime SelectedDate = new DateTime(2020, 1, 31);
 
-    private void OnMoreEventsCliecked(MoreEventsClickArgs args)
+    private void OnMoreEventsClicked(MoreEventsClickArgs args)
     {
         args.Cancel = true;
     }

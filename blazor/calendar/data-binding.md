@@ -35,6 +35,7 @@ You can bind the value to the Calendar component directly for `Value` property a
     }
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXhKiVLVVoLNbXdK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Two-Way data binding
 
@@ -51,6 +52,7 @@ Two-way binding can be achieved by using `bind-Value` attribute and it supports 
 public DateTime? DateValue { get; set; } = DateTime.Now;
 }
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhgWLhrrSBqdcMZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Dynamic value binding
 
@@ -78,3 +80,5 @@ private void onChange(Syncfusion.Blazor.Calendars.ChangedEventArgs<DateTime?> ar
     }
 }
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhKMBhBreLoYIse?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

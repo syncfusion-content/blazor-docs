@@ -17,17 +17,17 @@ N> From `v18.4.*`, a few additional following events are added to the Accumulati
 
 Event Name|
 -----|
-[OnDataLabelRender](events/#ondatalabelrender)|
-[OnLegendItemRender](events/#onlegenditemrender)|
-[OnPointRender](events/#onpointrender)|
+[OnDataLabelRender](events#ondatalabelrender)|
+[OnLegendItemRender](events#onlegenditemrender)|
+[OnPointRender](events#onpointrender)|
 
 N> From `v18.4.*`, some event names are different from the previous releases. The following are the event name changes from `v18.3.*` to `v18.4.*`
 
 Event Name(`v18.3.*`) |Event Name(`v18.4.*`)
 -----|-----
-AfterExport |[OnExportComplete](events/#onexportcomplete)
-OnPrint |[OnPrintComplete](events/#onprintcomplete)
-Resized |[SizeChanged](events/#sizechanged)
+AfterExport |[OnExportComplete](events#onexportcomplete)
+OnPrint |[OnPrintComplete](events#onprintcomplete)
+Resized |[SizeChanged](events#sizechanged)
 
 N> From `v18.4.*`, the following previous release events are removed from the Accumulation Chart component.
 

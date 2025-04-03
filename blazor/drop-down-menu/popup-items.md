@@ -114,7 +114,7 @@ In the following sample, navigation URL for Flipkart, Amazon, and Snapdeal actio
 
 ### Item Templating
 
-Popup items can be customized using the `CssClass` property. We have customize the items using CSS style.
+Popup items can be customized using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_CssClass) property. We have customize the items using CSS style.
 
 ```cshtml
 
@@ -144,7 +144,7 @@ Popup items can be customized using the `CssClass` property. We have customize t
 
 ## Populate multilevel sub menu items
 
-You can populate multilevel sub menu items in DropDown menu by using context menu in `PopupContent` directive tag.
+You can populate multilevel sub menu items in DropDown menu by using context menu in [PopupContent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_PopupContent) directive tag.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -152,12 +152,12 @@ You can populate multilevel sub menu items in DropDown menu by using context men
 
 <SfDropDownButton @ref="FileButton" Id="btnFileMenu" Content="File" CssClass="e-dropDown-button">
     <ChildContent>
-        <DropDownButtonEvents OnClose="@DropDownButtonClose"></DropDownButtonEvents>
+        <DropDownButtonEvents Opened="Opened" Closed="Closed"></DropDownButtonEvents>
     </ChildContent>
     <PopupContent>
         <SfContextMenu @ref="ContextMenu" Items="FileMenuItems" TValue="ContextMenuItemModel" ShowItemOnClick="true">
             <MenuFieldSettings Text="Content"></MenuFieldSettings>
-            <MenuEvents TValue="ContextMenuItemModel" OnClose="BeforeClose" Created="OnMenuCreated" ItemSelected="Selected"></MenuEvents>
+            <MenuEvents TValue="ContextMenuItemModel" OnClose="BeforeClose" Created="OnMenuCreated"></MenuEvents>
         </SfContextMenu>
     </PopupContent>
 </SfDropDownButton>
@@ -165,15 +165,10 @@ You can populate multilevel sub menu items in DropDown menu by using context men
 @code {
     SfDropDownButton FileButton;
     SfContextMenu<ContextMenuItemModel> ContextMenu;
-    public bool isClose = false;
 
-    private void DropDownButtonClose(BeforeOpenCloseMenuEventArgs args)
-    {
-        args.Cancel = true;
-    }
     private void BeforeClose(BeforeOpenCloseMenuEventArgs<ContextMenuItemModel> args)
     {
-        if (!isClose)
+        if (args.ParentItem == null)
         {
             FileButton.Toggle();
         }
@@ -187,49 +182,47 @@ You can populate multilevel sub menu items in DropDown menu by using context men
         public Boolean Separator { get; set; }
     }
     private List<ContextMenuItemModel> FileMenuItems = new List<ContextMenuItemModel>{
-                new ContextMenuItemModel {Id ="FileMenuItemsNew", Content = "Align" , Items = new List<ContextMenuItemModel> {
-                        new ContextMenuItemModel { Content="Left" },
-                        new ContextMenuItemModel { Content="Right" },
-                        new ContextMenuItemModel { Content="Center" },
-                        new ContextMenuItemModel { Content="Top"},
-                        new ContextMenuItemModel { Content="Bottom" },
-                        new ContextMenuItemModel { Content="Middle"}
-                    }},
-                new ContextMenuItemModel {Id ="FileMenuItemsOpen", Content = "Open" },
-                new ContextMenuItemModel { Separator = true },
-                new ContextMenuItemModel { Id ="FileMenuItemsSave",Content = "Space", Items = new List<ContextMenuItemModel> {
-                        new ContextMenuItemModel { Content="Double" },
-                        new ContextMenuItemModel { Content="Single" },
-                        new ContextMenuItemModel { Content="Small" },
-                        new ContextMenuItemModel { Content="Big"},
-                        new ContextMenuItemModel { Content="Large" },
-                    }},
-                new ContextMenuItemModel { Id ="FileMenuItemsSaveAs",Content = "Save As", Items = new List<ContextMenuItemModel> {
-                        new ContextMenuItemModel { Content="PDF" },
-                        new ContextMenuItemModel { Content="Excel" },
-                        new ContextMenuItemModel { Content="Word" },
-                        new ContextMenuItemModel { Content=".XLS"},
-                    } },
-                new ContextMenuItemModel {Id ="FileMenuItemsExport", Content = "Export"},
-                new ContextMenuItemModel { Separator = true},
-                new ContextMenuItemModel { Id ="FileMenuItemsPrint",Content = "Print" }
-            };
+        new ContextMenuItemModel {Id ="FileMenuItemsNew", Content = "Align" , Items = new List<ContextMenuItemModel> {
+            new ContextMenuItemModel { Content="Left" },
+            new ContextMenuItemModel { Content="Right" },
+            new ContextMenuItemModel { Content="Center" },
+            new ContextMenuItemModel { Content="Top"},
+            new ContextMenuItemModel { Content="Bottom" },
+            new ContextMenuItemModel { Content="Middle"}
+        }},
+        new ContextMenuItemModel {Id ="FileMenuItemsOpen", Content = "Open" },
+        new ContextMenuItemModel { Separator = true },
+        new ContextMenuItemModel { Id ="FileMenuItemsSave",Content = "Space", Items = new List<ContextMenuItemModel> {
+            new ContextMenuItemModel { Content="Double" },
+            new ContextMenuItemModel { Content="Single" },
+            new ContextMenuItemModel { Content="Small" },
+            new ContextMenuItemModel { Content="Big"},
+            new ContextMenuItemModel { Content="Large" },
+        }},
+        new ContextMenuItemModel { Id ="FileMenuItemsSaveAs",Content = "Save As", Items = new List<ContextMenuItemModel> {
+            new ContextMenuItemModel { Content="PDF" },
+            new ContextMenuItemModel { Content="Excel" },
+            new ContextMenuItemModel { Content="Word" },
+            new ContextMenuItemModel { Content=".XLS"},
+        } },
+        new ContextMenuItemModel {Id ="FileMenuItemsExport", Content = "Export"},
+        new ContextMenuItemModel { Separator = true},
+        new ContextMenuItemModel { Id ="FileMenuItemsPrint",Content = "Print" }
+    };
 
-    public void OnMenuCreated()
+    public async Task OnMenuCreated()
     {
-        ContextMenu.Open();
+        await ContextMenu.OpenAsync();
     }
 
-    public void Selected(MenuEventArgs<ContextMenuItemModel> args)
+    private void Opened()
     {
-        if (args.Item.Content == "Space" || args.Item.Content == "Save As" || args.Item.Content == "Align")
-        {
-            isClose = true;
-        }
-        else
-        {
-            isClose = false;
-        }
+        
+    }
+
+    private void Closed()
+    {
+
     }
 }
 

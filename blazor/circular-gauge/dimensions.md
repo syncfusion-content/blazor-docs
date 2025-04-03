@@ -22,6 +22,7 @@ You can set the size of the Circular Gauge in pixel as demonstrated below.
 
 <SfCircularGauge Width= "200px" Height= "200px"></SfCircularGauge>
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrKihBwKMBZGKzB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Changing Blazor Circular Gauge Size in Pixel](./images/blazor-circulargauge-size.png)
 
@@ -36,6 +37,8 @@ By setting value in percentage, gauge gets its dimension with respect to its con
     <SfCircularGauge Width="50%" Height="50%"></SfCircularGauge>
 </div>
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDhKsVVGACLBzBrP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Changing Blazor Circular Gauge Size in Percentage](./images/blazor-circulargauge-size.png)
 

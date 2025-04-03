@@ -52,4 +52,4 @@ In the following example, if either the value is changed in checkbox or splitter
 
 ## See Also
 
-* [Resizable split panes](./resizing/)
+* [Resizable split panes](./resizing)

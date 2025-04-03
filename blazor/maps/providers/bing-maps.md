@@ -13,7 +13,7 @@ Bing Maps is an online Maps provider, owned by Microsoft, for accessing the exte
 
 ## Adding Bing Maps
 
-The Bing Maps can be rendered by setting the [UrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_UrlTemplate) property with the URL generated from the `GetBingUrlTemplate` method in the Maps component. The format of the required URL of Bing Maps varies from other map providers. As a result, a built-in `GetBingUrlTemplate` method has been included that returns the URL in a generic format. In the meantime, a subscription key is required for Bing Maps. Follow the steps in this [link](https://www.microsoft.com/en-us/maps/create-a-bing-maps-key) to generate an API key, then append it to the Bing Maps URL before passing it to the `GetBingUrlTemplate` method. The URL returned by this method must be passed to the `UrlTemplate` property.
+The Bing Maps can be rendered by setting the [UrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_UrlTemplate) property with the URL generated from the `GetBingUrlTemplate` method in the Maps component. The format of the required URL of Bing Maps varies from other map providers. As a result, a built-in `GetBingUrlTemplate` method has been included that returns the URL in a generic format. In the meantime, a subscription key is required for Bing Maps. Follow the steps in this [link](https://www.microsoft.com/en-us/maps/bing-maps/create-a-bing-maps-key) to generate an API key, then append it to the Bing Maps URL before passing it to the `GetBingUrlTemplate` method. The URL returned by this method must be passed to the `UrlTemplate` property.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -193,7 +193,7 @@ The legend can be added to the tile Maps by setting the [Visible](https://help.s
 ```cshtml
 @using Syncfusion.Blazor.Maps
 
-<SfMaps Format="N0" UseGroupingSeparator="true">
+<SfMaps Format="N0" EnableGroupingSeparator="true">
     <MapsZoomSettings Enable="true">
         <MapsZoomToolbarSettings>
             <MapsZoomToolbarTooltipSettings FontFamily="inherit"></MapsZoomToolbarTooltipSettings>
@@ -242,7 +242,7 @@ The legend can be added to the tile Maps by setting the [Visible](https://help.s
     public string UrlTemplate;
     protected override async Task OnInitializedAsync()
     {
-        UrlTemplate = await SfMaps.GetBingUrlTemplate("https://dev.virtualearth.net/REST/V1/Imagery/Metadata/RoadOnDemand?output=json&uriScheme=https&key=AuQazZ3PUo3p2_c2KPhqMku-iKvee5fKcRREIg46MENqVTM9dp2ZyTbrHJpR9esZ");
+        UrlTemplate = await SfMaps.GetBingUrlTemplate("https://dev.virtualearth.net/REST/V1/Imagery/Metadata/RoadOnDemand?output=json&uriScheme=https&key=");
     }
 }
 

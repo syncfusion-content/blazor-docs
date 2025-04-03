@@ -82,6 +82,7 @@ You can save the current layout of the pivot table by using [GetPersistDataAsync
 </SfPivotView>
 
 @code{
+    SfPivotView<ProductDetails> pivot;
     public List<ProductDetails> data { get; set; }
     protected override void OnInitialized()
     {
@@ -101,4 +102,4 @@ You can save the current layout of the pivot table by using [GetPersistDataAsync
 
 ```
 
-N> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to know how to render and configure the pivot table.
+N> You can refer to the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore the [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap5) to know how to render and configure the pivot table.

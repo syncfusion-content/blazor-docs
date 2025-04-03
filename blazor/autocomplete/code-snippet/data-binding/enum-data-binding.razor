@@ -1,0 +1,20 @@
+@using Syncfusion.Blazor.DropDowns;
+
+<SfAutoComplete TValue="Values" TItem="string" Placeholder="e.g. Australia" Width="300px" DataSource="@EnumValues" @bind-Value="@SelectedValue">
+</SfAutoComplete>
+
+@code {
+
+    public string[] EnumValues = Enum.GetNames(typeof(Values));
+    public Values SelectedValue { get; set; } = Values.Canada;
+
+    public enum Values
+    {
+        Australia,
+        Bermuda,
+        Canada,
+        Denmark,
+        India,
+        US
+    }
+}

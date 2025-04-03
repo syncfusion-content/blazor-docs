@@ -363,6 +363,7 @@ The following sample code demonstrates the customization applied to DatePicker c
 }
 ```
 
+
 N> Similar way customization can be applied to default DateTimePicker Component using same `DateEditCellParams`
 
 ### TimePickerEdit
@@ -428,6 +429,7 @@ The following sample code demonstrates the customization applied to TimePicker c
 }
 ```
 
+
 ## Custom editors using template/Cell edit template
 
 N> Before adding edit template to the datagrid, it is recommended to go through the [template](./templates/#templates) section topic to configure the template.
@@ -486,6 +488,7 @@ You can able to render SfAutoComplete component in EditTemplate. In the below sa
 ```
 
 In the following image, **Autocomplete** component is rendered with **EditTemplate** in Customer ID column
+
 ![Blazor DataGrid with CellEdit Template](./images/blazor-datagrid-celledit-template.png)
 
 ### Using DropDownList in EditTemplate
@@ -551,6 +554,7 @@ You can able to render SfDropDownList component in EditTemplate. In the below sa
 ```
 
 In the following image, **SfDropDownList** component is rendered with **EditTemplate** in ShipCountry column
+
 ![Blazor DataGrid with Editing in Custom DropDownList](./images/blazor-datagrid-editing-in-custom-dropdownlist.png)
 
 ### Using ComboBox in EditTemplate
@@ -660,6 +664,7 @@ You can render the [SfNumericTextBox](https://help.syncfusion.com/cr/blazor/Sync
         public double? Freight { get; set; }
         public string ShipCountry { get; set; }
     }
+}
 ```
 
 ### Using TimePicker in EditTemplate
@@ -714,6 +719,7 @@ You can able to render SfTimePicker component in EditTemplate. In the below samp
 ```
 
 In the following image, **SfTimePicker** component is rendered with **EditTemplate** in OrderDate column
+
 ![Blazor DataGrid with Editing in Custom TimePicker](./images/blazor-datagrid-editing-in-custom-timepicker.png)
 
 ### Using MultiSelect Dropdown in EditTemplate
@@ -738,7 +744,14 @@ You can able to render SfMultiSelect component in EditTemplate. In the below sam
             <Template>
                 @{
                     var d = (context as Order).ChosenItems;
-                    <span>@String.Join(",", d)</span>
+                    if (d != null)
+                    {
+                        <span>@String.Join(",", d)</span>
+                    }
+                    else
+                    {
+                        <span>@String.Empty</span>
+                    }
                 }
             </Template>
         </GridColumn>
@@ -783,6 +796,7 @@ You can able to render SfMultiSelect component in EditTemplate. In the below sam
 ```
 
 In the following image, **SfMultiSelect** component is rendered with **EditTemplate** in ChosenItems column
+
 ![Blazor DataGrid with Editing in Custom MultiSelect](./images/blazor-datagrid-editing-in-custom-multiselect.png)
 
 ### Using RichTextEditor in EditTemplate
@@ -846,6 +860,7 @@ You can render the **SfRichTextEditor** component in [EditTemplate](https://help
 ```
 
 In the following image, **SfRichTextEditor** component is rendered with **EditTemplate** in Customer ID column
+
 ![Blazor DataGrid with Editing in Custom RichTextEditor](./images/blazor-datagrid-editing-in-custom-richtexteditor.png)
 
 ### DynamicObject data binding with edit template feature

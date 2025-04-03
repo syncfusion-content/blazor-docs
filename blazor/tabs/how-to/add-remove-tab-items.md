@@ -88,7 +88,7 @@ In the following demo, initially there are three tabs as the **TabItems** has th
 }
 ```
 
-![Adding or Removing TabItems in Blazor Tabs](../images/blazor-tabs-add-remove-items.gif)
+![Adding or Removing TabItems in Blazor Tabs](../images/blazor-tabs-add-remove-item.png)
 
 ## Using public methods
 

@@ -84,32 +84,7 @@ This section explains the list of events of the MultiSelect component which will
 `Closed` event triggers after the popup has been closed.
 
 ```cshtml
-@using Syncfusion.Blazor.DropDowns
 
-<SfMultiSelect TItem="GameFields" TValue="string[]" DataSource="@Games">
-    <MultiSelectEvents TItem="GameFields" TValue="string[]" Closed="@CloseHandler"></MultiSelectEvents>
-    <MultiSelectFieldSettings Text="Text" Value="ID"></MultiSelectFieldSettings>
-</SfMultiSelect>
-
-@code {
-    public class GameFields
-    {
-        public string ID { get; set; }
-        public string Text { get; set; }
-    }
-
-    private List<GameFields> Games = new List<GameFields>() {
-        new GameFields(){ ID= "Game1", Text= "American Football" },
-        new GameFields(){ ID= "Game2", Text= "Badminton" },
-        new GameFields(){ ID= "Game3", Text= "Basketball" },
-        new GameFields(){ ID= "Game4", Text= "Cricket" },
-     };
-
-    private void CloseHandler(ClosedEventArgs args)
-    {
-        // Here you can customize your code
-    }
-}
 ```
 
 ## Created
@@ -216,32 +191,7 @@ This section explains the list of events of the MultiSelect component which will
 `OnOpen` event triggers when the popup is opened. If you cancel this event, the popup remains closed.
 
 ```cshtml
-@using Syncfusion.Blazor.DropDowns
 
-<SfMultiSelect TItem="GameFields" TValue="string[]" DataSource="@Games">
-    <MultiSelectEvents TItem="GameFields" TValue="string[]" OnOpen="@OnOpenHandler"></MultiSelectEvents>
-    <MultiSelectFieldSettings Text="Text" Value="ID"></MultiSelectFieldSettings>
-</SfMultiSelect>
-
-@code {
-    public class GameFields
-    {
-        public string ID { get; set; }
-        public string Text { get; set; }
-    }
-
-    private List<GameFields> Games = new List<GameFields>() {
-        new GameFields(){ ID= "Game1", Text= "American Football" },
-        new GameFields(){ ID= "Game2", Text= "Badminton" },
-        new GameFields(){ ID= "Game3", Text= "Basketball" },
-        new GameFields(){ ID= "Game4", Text= "Cricket" },
-     };
-
-    private void OnOpenHandler(BeforeOpenEventArgs args)
-    {
-        // Here you can customize your code
-    }
-}
 ```
 
 ## OnClose
@@ -250,32 +200,7 @@ This section explains the list of events of the MultiSelect component which will
 
 ```cshtml
 
-@using Syncfusion.Blazor.DropDowns
 
-<SfMultiSelect TItem="GameFields" TValue="string[]" DataSource="@Games">
-    <MultiSelectEvents TItem="GameFields" TValue="string[]" OnClose="@OnCloseHandler"></MultiSelectEvents>
-    <MultiSelectFieldSettings Text="Text" Value="ID"></MultiSelectFieldSettings>
-</SfMultiSelect>
-
-@code {
-    public class GameFields
-    {
-        public string ID { get; set; }
-        public string Text { get; set; }
-    }
-
-    private List<GameFields> Games = new List<GameFields>() {
-        new GameFields(){ ID= "Game1", Text= "American Football" },
-        new GameFields(){ ID= "Game2", Text= "Badminton" },
-        new GameFields(){ ID= "Game3", Text= "Basketball" },
-        new GameFields(){ ID= "Game4", Text= "Cricket" },
-     };
-
-    private void OnCloseHandler(PopupEventArgs args)
-    {
-        // Here you can customize your code
-    }
-}
 ```
 
 ## DataBound
@@ -460,32 +385,6 @@ This section explains the list of events of the MultiSelect component which will
 `Opened` event triggers when the popup opens.
 
 ```cshtml
-@using Syncfusion.Blazor.DropDowns
-
-<SfMultiSelect TItem="GameFields" TValue="string[]" AllowFiltering="true" DataSource="@Games">
-    <MultiSelectEvents TItem="GameFields" TValue="string[]" Opened="@Openedhandler"></MultiSelectEvents>
-    <MultiSelectFieldSettings Text="Text" Value="ID"></MultiSelectFieldSettings>
-</SfMultiSelect>
-
-@code {
-    public class GameFields
-    {
-        public string ID { get; set; }
-        public string Text { get; set; }
-    }
-
-    private List<GameFields> Games = new List<GameFields>() {
-        new GameFields(){ ID= "Game1", Text= "American Football" },
-        new GameFields(){ ID= "Game2", Text= "Badminton" },
-        new GameFields(){ ID= "Game3", Text= "Basketball" },
-        new GameFields(){ ID= "Game4", Text= "Cricket" },
-     };
-
-    private void Openedhandler(PopupEventArgs args)
-    {
-        // Here you can customize your code
-    }
-}
 
 ```
 
@@ -564,7 +463,7 @@ This section explains the list of events of the MultiSelect component which will
 @using Syncfusion.Blazor.DropDowns
 
 <SfMultiSelect TItem="GameFields" TValue="string[]" AllowFiltering="true" DataSource="@Games">
-    <MultiSelectEvents TItem="GameFields" TValue="string[]" Cleared="@Clearedhandler"></MultiSelectEvents>
+    <MultiSelectEvents TItem="GameFields" TValue="string[]" OnChipTag="@ChipTagHandler"></MultiSelectEvents>
     <MultiSelectFieldSettings Text="Text" Value="ID"></MultiSelectFieldSettings>
 </SfMultiSelect>
 
@@ -582,7 +481,7 @@ This section explains the list of events of the MultiSelect component which will
         new GameFields(){ ID= "Game4", Text= "Cricket" },
      };
 
-    private void Clearedhandler(MouseEventArgs args)
+    private void ChipTagHandler(TaggingEventArgs<GameFields> args)
     {
         // Here you can customize your code
     }

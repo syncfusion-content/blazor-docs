@@ -102,6 +102,117 @@ The number of records displayed in the Gantt chart is determined implicitly by t
     {
         public int ID { get; set; }
         public string TaskName { get; set; }
+        public DateTime? StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+        public string Duration { get; set; }
+        public string Assignee { get; set; }
+        public string Reporter { get; set; }
+        public int Progress { get; set; }
+        public int? ParentId { get; set; }
+        public string Predecessor { get; set; }
+    }
+}
+```
+
+### Managing records count
+
+By default, the number of records rendered per page will be twice the Gantt chart's height. You can customize the row rendering count using the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_PageSize) and [OverscanCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_OverscanCount) properties. Here's an explanation of these properties:
+
+* `PageSize`:
+    •	The `PageSize` property determines the number of rows rendered per page in the Gantt Chart.
+    •	It allows you to control how many rows are loaded and displayed at initial rendering and also while scrolling, helping to improve performance by reducing the number of DOM elements rendered.
+* `OverscanCount`:
+    •	The `OverscanCount` property is used to render additional rows before and after the Gantt Chart's current page rows.
+    •	During both virtual scrolling and initial rendering, extra rows are rendered to provide a buffer around the current page area. This minimizes the need for frequent rendering during scrolling, providing a smoother user experience.
+
+```csharp
+@using Syncfusion.Blazor.Gantt
+
+<SfGantt @ref="GanttChart" PageSize="15" OverscanCount="5" ID="GanttContainer" EnableContextMenu="true" AllowFiltering="true" AllowSorting="true" DataSource="@TaskCollection" Height="450px" Width="100%" TreeColumnIndex="1" EnableRowVirtualization="true" EnableTimelineVirtualization="true" ProjectStartDate="ProjectStartDate" ProjectEndDate="ProjectEndDate"
+         Toolbar="@(new List<string>() { "Add", "Delete", "Edit","Cancel","ExpandAll","CollapseAll" })" ScrollToTaskbarOnClick="true">
+    <GanttLabelSettings LeftLabel="TaskName" TValue="TaskData"></GanttLabelSettings>
+    <GanttTaskFields ParentID="ParentId" Work="Work" Id="ID" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" TaskType="TaskType" Dependency="Predecessor">
+    </GanttTaskFields>
+    <GanttColumns>
+        <GanttColumn Field="ID" HeaderText="TaskId" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center"></GanttColumn>
+        <GanttColumn Field="TaskName" HeaderText="TaskName"></GanttColumn>
+        <GanttColumn Field="StartDate" HeaderText="Start Date"></GanttColumn>
+        <GanttColumn Field="EndDate" HeaderText="End Date"></GanttColumn>
+        <GanttColumn Field="Duration" HeaderText="Duration"></GanttColumn>
+        <GanttColumn Field="Assignee" HeaderText="Assignee"></GanttColumn>
+        <GanttColumn Field="Reporter" HeaderText="Reporter"></GanttColumn>
+        <GanttColumn Field="Progress" HeaderText="Progress" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Center"></GanttColumn>
+    </GanttColumns>
+    <GanttEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode="Syncfusion.Blazor.Gantt.EditMode.Dialog" AllowTaskbarEditing="true" ShowDeleteConfirmDialog="true">
+    </GanttEditSettings>
+    <GanttSplitterSettings Position="40%"></GanttSplitterSettings>
+</SfGantt>       
+         
+ @code {
+    SfGantt<TaskData> GanttChart { get; set; }
+    private DateTime ProjectStartDate = new DateTime(2000, 1, 1);
+    private DateTime ProjectEndDate = new DateTime(2021, 12, 31);
+    public int Value { get; set; } = 1000;
+    private List<TaskData> TaskCollection { get; set; }
+    protected override void OnInitialized()
+    {
+        this.TaskCollection = VirtualData.GetTreeVirtualData(500);
+    }
+
+    public class VirtualData
+    {
+        public static List<TaskData> GetTreeVirtualData(int count)
+        {
+            List<TaskData> DataCollection = new List<TaskData>();
+            Random rand = new Random();
+            var x = 0;
+            int duration = 0;
+            DateTime startDate = new DateTime(2000, 1, 5);
+            DateTime endDate = new DateTime(2000, 1, 12);
+            string[] assignee = { "Allison Janney", "Bryan Fogel", "Richard King", "Alex Gibson" };
+            string[] reporter = { "James Ivory", "Jordan Peele", "Guillermo del Toro", "Gary Oldman" };
+            for (var i = 1; i <= count / 5; i++)
+            {
+                var name = rand.Next(0, 100);
+                TaskData Parent = new TaskData()
+                    {
+                        ID = ++x,
+                        TaskName = "Task " + x,
+                        StartDate = startDate,
+                        EndDate = startDate.AddDays(26),
+                        Duration = "20",
+                        Assignee = "Mark Bridges",
+                        Reporter = "Kobe Bryant",
+                        Progress = rand.Next(100),
+                        Predecessor = null
+                    };
+                DataCollection.Add(Parent);
+                for (var j = 1; j <= 4; j++)
+                {
+                    startDate = startDate.AddDays(j == 1 ? 0 : duration + 2);
+                    duration = 5;
+                    DataCollection.Add(new TaskData()
+                        {
+                            ID = ++x,
+                            TaskName = "Task " + x,
+                            StartDate = startDate,
+                            EndDate = startDate.AddDays(5),
+                            Duration = duration.ToString(),
+                            Assignee = assignee[j - 1],
+                            Reporter = reporter[j - 1],
+                            Progress = rand.Next(100),
+                            ParentId = Parent.ID,
+                            Predecessor = j > 1 ? (x - 1) + "FS" : ""
+                        });
+                }
+            }
+            return DataCollection;
+        }
+    }
+    public class TaskData
+    {
+        public int ID { get; set; }
+        public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public string Duration { get; set; }
@@ -109,9 +220,12 @@ The number of records displayed in the Gantt chart is determined implicitly by t
         public string Reporter { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
+        public string Predecessor { get; set; }
     }
 }
 ```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLKWMBZrKaVXJhQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Column virtualization
 
@@ -194,12 +308,12 @@ To enable the column virtualization, set the [EnableRowVirtualization](https://h
                         FIELD4 = 87 + 250,
                         FIELD5 = 410 + 600,
                         FIELD6 = 67 + 250,
-                        Field7 = (int)Math.Floor(10 * 100),
-                        Field8 = (int)Math.Floor(15 * 10),
-                        Field9 = (int)Math.Floor(20 * 10),
-                        Field10 = (int)Math.Floor(25 * 100),
-                        Field11 = (int)Math.Floor(30 * 100),
-                        Field12 = (int)Math.Floor(35 * 1000),
+                        Field7 = (int)Math.Floor(10 * 100.0),
+                        Field8 = (int)Math.Floor(15 * 10.0),
+                        Field9 = (int)Math.Floor(20 * 10.0),
+                        Field10 = (int)Math.Floor(25 * 100.0),
+                        Field11 = (int)Math.Floor(30 * 100.0),
+                        Field12 = (int)Math.Floor(35 * 1000.0),
                     });
                 }
             }
@@ -210,8 +324,8 @@ To enable the column virtualization, set the [EnableRowVirtualization](https://h
     {
         public int ProjectId { get; set; }
         public string ProjectName { get; set; }
-        public DateTime ProjectStartDate { get; set; }
-        public DateTime ProjectEndDate { get; set; }
+        public DateTime? ProjectStartDate { get; set; }
+        public DateTime? ProjectEndDate { get; set; }
         public string ProjectDuration { get; set; }
         public int ProjectProgress { get; set; }
         public int? ParentId { get; set; }
@@ -328,12 +442,12 @@ Timeline virtualization allows you to load data sources having a large timespan 
                         FIELD4 = 87 + 250,
                         FIELD5 = 410 + 600,
                         FIELD6 = 67 + 250,
-                        Field7 = (int)Math.Floor(10 * 100),
-                        Field8 = (int)Math.Floor(15 * 10),
-                        Field9 = (int)Math.Floor(20 * 10),
-                        Field10 = (int)Math.Floor(25 * 100),
-                        Field11 = (int)Math.Floor(30 * 100),
-                        Field12 = (int)Math.Floor(35 * 1000),
+                        Field7 = (int)Math.Floor(10 * 100.0),
+                        Field8 = (int)Math.Floor(15 * 10.0),
+                        Field9 = (int)Math.Floor(20 * 10.0),
+                        Field10 = (int)Math.Floor(25 * 100.0),
+                        Field11 = (int)Math.Floor(30 * 100.0),
+                        Field12 = (int)Math.Floor(35 * 1000.0),
                     });
                 }
             }
@@ -344,8 +458,8 @@ Timeline virtualization allows you to load data sources having a large timespan 
     {
         public int ProjectId { get; set; }
         public string ProjectName { get; set; }
-        public DateTime ProjectStartDate { get; set; }
-        public DateTime ProjectEndDate { get; set; }
+        public DateTime? ProjectStartDate { get; set; }
+        public DateTime? ProjectEndDate { get; set; }
         public string ProjectDuration { get; set; }
         public int ProjectProgress { get; set; }
         public int? ParentId { get; set; }

@@ -1,0 +1,25 @@
+@using Syncfusion.Blazor.DropDowns
+
+<SfMultiSelect TValue="string[]" TItem="Games" ShowClearButton=true Width="300px" Placeholder="Select a game" DataSource="@LocalData">
+    <MultiSelectFieldSettings Value="ID" Text="Game"></MultiSelectFieldSettings>
+</SfMultiSelect>
+
+@code {
+public class Games
+{
+public int? ID { get; set; }
+public string Game { get; set; }
+}
+List<Games> LocalData = new List<Games> {
+new Games() { ID= 1, Game= "American Football" },
+new Games() { ID= 2, Game= "Badminton" },
+new Games() { ID= 3, Game= "Basketball" },
+new Games() { ID= 4, Game= "Cricket" },
+new Games() { ID= 5, Game= "Football" },
+new Games() { ID= 6, Game= "Golf" },
+new Games() { ID= 7, Game= "Hockey" },
+new Games() { ID= 8, Game= "Rugby"},
+new Games() { ID= 9, Game= "Snooker" },
+new Games() { ID= 10, Game= "Tennis"},
+};
+}

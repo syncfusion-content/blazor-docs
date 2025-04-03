@@ -15,89 +15,13 @@ By default, Diagram’s page size is decided based on the position of its diagra
 
 * The [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageSettings.html#Syncfusion_Blazor_Diagram_PageSettings_Orientation) property of `PageSettings` is used to change the page orientation to portrait or landscape. The default orientation is landscape.
 
-* Page breaks are used as a visual guide to show how the pages are split into multiple pages. The [ShowPageBreaks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageSettings.html#Syncfusion_Blazor_Diagram_PageSettings_ShowPageBreaks) property decides the Visibility of Page breaks. By default, it is false. If it is true, then the page break lines will be visible.
+* Page breaks are used as a visual guide to show how the pages are split into multiple pages. The [ShowPageBreaks](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageSettings.html#Syncfusion_Blazor_Diagram_PageSettings_ShowPageBreaks) property decides the visibility of page breaks. By default, it is false. If it is true, then the page break lines will be visible.
 
 * To explore those properties, refer to [PageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageSettings.html).
 
-```cshtml
-@using Syncfusion.Blazor.Diagram
+To learn more about customization of diagram page, refer to the below video link,
 
-<SfDiagramComponent Height="600px">
-    @*Initialize the page settings with page orientation and break lines*@
-    <PageSettings Height="300" 
-                  Width="300" 
-                  Orientation="@orientation" 
-                  ShowPageBreaks="true">
-    </PageSettings>
-</SfDiagramComponent>
-
-@code
-{
-    //Sets the page orientation as landscape.
-    public PageOrientation orientation = PageOrientation.Landscape;
-}
-```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/PageSettings)
-
-|Orientation|Output|
-|-------|-------|
-|Landscape|![Landscape Orientation](./images/LandscapeOrientation.png)|
-|Portrait|![Portrait Orientation](./images/PortraitOrientation.png)|
-
-## How to enable the multiple page
-
-Based on the diagramming element position, the size of the page dynamically increases or decreases in multiples of page width and height using the [MultiplePage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageSettings.html#Syncfusion_Blazor_Diagram_PageSettings_MultiplePage) property of `PageSettings`.
-
-```cshtml
-@using Syncfusion.Blazor.Diagram
-
-<SfDiagramComponent Height="600px" Nodes="nodes">
-    @*Initialize the page settings with multiple page, page orientation and break lines*@
-    <PageSettings Height="300"
-                  Width="300"
-                  MultiplePage="true"
-                  Orientation="@orientation"
-                  ShowPageBreaks="true">
-    </PageSettings>
-</SfDiagramComponent>
-
-@code
-{
-    //Sets the page orientation as landscape.
-    public PageOrientation orientation = PageOrientation.Landscape;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    protected override void OnInitialized()
-    {
-        Node node = new Node()
-        {
-            ID = "node6",
-            Width = 50,
-            Height = 50,
-            OffsetX = 150,
-            OffsetY = 100,
-            Style = new ShapeStyle()
-            {
-                Fill = "#6495ED",
-                StrokeColor = "white"
-            }
-        };
-        nodes.Add(node);
-    }
-}
-```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/PageSettings)
-
-![Multiple Page](./images/MultiplePage.png)
-
-## How to change the page appearance
-
-The appearance of the pages can be customized using the following properties of the `PageSettings` class:
-
-* The `Background` property of [BackgroundStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BackgroundStyle.html) is used to customize the background color of the page.
-
-* The [Image Source](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BackgroundStyle.html#Syncfusion_Blazor_Diagram_BackgroundStyle_ImageSource) property of the [Background Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BackgroundStyle.html) allows you to set the path of the image.
-
-* The [Image Scale](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BackgroundStyle.html#Syncfusion_Blazor_Diagram_BackgroundStyle_ImageScale) and [Image Align](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BackgroundStyle.html#Syncfusion_Blazor_Diagram_BackgroundStyle_ImageAlign) properties of the `BackgroundStyle` help to stretch/align the background images.
+{% youtube "https://www.youtube.com/watch?v=iKuBSy8mOpE&t=74s" %}
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -121,12 +45,116 @@ The appearance of the pages can be customized using the following properties of 
     protected override void OnInitialized()
     {
         Node node = new Node()
+            {
+                ID = "node6",
+                Width = 50,
+                Height = 50,
+                OffsetX = 150,
+                OffsetY = 100,
+                Style = new ShapeStyle()
+                {
+                    Fill = "#6495ED",
+                    StrokeColor = "white"
+                }
+            };
+        nodes.Add(node);
+    }
+    //Set the page orientation as landscape.
+    public PageOrientation orientation = PageOrientation.Landscape;
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/PageSettings/PageAppearance)
+
+|Orientation|Output|
+|-------|-------|
+|Landscape|![Landscape Orientation](./images/LandscapeOrientation.png)|
+|Portrait|![Portrait Orientation](./images/PortraitOrientation.png)|
+
+## How to enable the multiple page
+
+Based on the diagramming element position, the size of the page dynamically increases or decreases in multiples of page width and height using the [MultiplePage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageSettings.html#Syncfusion_Blazor_Diagram_PageSettings_MultiplePage) property of `PageSettings`.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Height="600px" Nodes="nodes">
+    <SnapSettings Constraints="SnapConstraints.None"></SnapSettings>
+    @*Initialize the page settings with multiple page, page orientation and break lines*@
+    <PageSettings Height="200"
+                  Width="200"
+                  MultiplePage="true"
+                  Orientation="@orientation"
+                  ShowPageBreaks="true">
+    </PageSettings>
+</SfDiagramComponent>
+
+@code
+{
+    //Sets the page orientation as landscape.
+    public PageOrientation orientation = PageOrientation.Landscape;
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    protected override void OnInitialized()
+    {
+        Node node = new Node()
         {
             ID = "node6",
             Width = 50,
             Height = 50,
-            OffsetX = 150,
-            OffsetY = 100,
+            OffsetX = 200,
+            OffsetY = 200,
+            Style = new ShapeStyle()
+            {
+                Fill = "#6495ED",
+                StrokeColor = "white"
+            }
+        };
+        nodes.Add(node);
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/PageSettings/MultiplePage)
+
+![Multiple Page](./images/MultiplePage.png)
+
+## How to change the page appearance
+
+The appearance of the pages can be customized using the following properties of the `PageSettings` class:
+
+* The `Background` property of [BackgroundStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BackgroundStyle.html) is used to customize the background color of the page.
+
+* The [Image Source](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BackgroundStyle.html#Syncfusion_Blazor_Diagram_BackgroundStyle_ImageSource) property of the [Background Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BackgroundStyle.html) allows you to set the path of the image.
+
+* The [Image Scale](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BackgroundStyle.html#Syncfusion_Blazor_Diagram_BackgroundStyle_ImageScale) and [Image Align](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BackgroundStyle.html#Syncfusion_Blazor_Diagram_BackgroundStyle_ImageAlign) properties of the `BackgroundStyle` help to stretch/align the background images.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Height="600px" Nodes="nodes">
+    <SnapSettings Constraints="SnapConstraints.None"></SnapSettings>
+    @*Initialize the page settings with page orientation and break lines*@
+    <PageSettings Height="200"
+                  Width="200"
+                  Orientation="@orientation"
+                  MultiplePage="true"
+                  ShowPageBreaks="true">
+        @*Set the page background color*@
+        <BackgroundStyle Background="LightGreen" />
+        <PageMargin Left="10" Top="10" Bottom="10" />
+    </PageSettings>
+</SfDiagramComponent>
+
+@code
+{
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    protected override void OnInitialized()
+    {
+        Node node = new Node()
+        {
+            ID = "node6",
+            Width = 50,
+            Height = 50,
+            OffsetX = 200,
+            OffsetY = 200,
             Style = new ShapeStyle()
             {
                 Fill = "#6495ED",
@@ -139,7 +167,7 @@ The appearance of the pages can be customized using the following properties of 
     public PageOrientation orientation = PageOrientation.Landscape;
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/PageSettings)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/PageSettings/PageAppearance)
 
 ![PageBackground Color](./images/PageBackground.png)
 
@@ -172,7 +200,7 @@ Refer to the following code example on how to change the stroke, stroke-dasharra
     </PageSettings>
 </SfDiagramComponent>
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/PageSettings)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/PageSettings/PageBreak)
 
 ![Pagebreak Color](./images/Pagebreak.png)
 
@@ -194,7 +222,7 @@ The area between the maintain content of a page and the page edges can be change
     </PageSettings>
 </SfDiagramComponent>
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/PageSettings)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/PageSettings/Margin)
 
 ## Boundary constraints
 
@@ -262,11 +290,11 @@ The following code example illustrates how to define boundary constraints with r
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/PageSettings)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/PageSettings/BoundaryConstraints)
 
 ## Responsive with parent container
 
-By setting the value in percentage, diagram gets its dimention with respect to its parent container.Specify the Width and Height as 100% to make the diagram element fill its parent container.
+By setting the value in percentage, the diagram gets its dimention with respect to its parent container.Specify the Width and Height as 100% to make the diagram element fill its parent container.
 Setting the Height to 100% requires the diagram parent element to have explicit height or you can use calc function to set explicit height based on the browser layout.
 
 The following code example illustrates how to set width and height in percentage
@@ -295,7 +323,7 @@ The following code example illustrates how to set width and height in percentage
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/PageSettings)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/PageSettings/ResponsiveWithParentContainer)
 
 ## CallBack Methods
 

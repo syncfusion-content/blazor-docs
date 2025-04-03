@@ -23,32 +23,37 @@ Use the following CSS to customize the [Accordion](https://help.syncfusion.com/c
 
 ```
 
+![Accordion border](./images/blazor-accordion-border-style.png)
+
 ## Customizing the accordion items
 
 Use the following CSS to customize the items of Accordion.
 
 ```CSS
 
-.e-accordion .e-acrdn-item {
+.e-accordion .e-acrdn-item.e-select {
     text-align: center;
-    color: pink;
-    background-color: #2fa1ff;
+    background-color: #a76cdd;
 }
 
 ```
 
-## Customizing accordion item header
+![Accordion item style customization](./images/blazor-accordion-item-styles.png)
 
-Use the following CSS to customize the header of Accordion control.
+## Customizing accordion item header content
+
+Use the following CSS to customize the header content of Accordion control.
 
 ```CSS
 
-.e-accordion .e-acrdn-item.e-select > .e-acrdn-header {
-    background: #2fa1ff !important;
-    justify-content: center;
+.e-accordion .e-acrdn-item .e-acrdn-header .e-acrdn-header-content {
+    color: #c526a1;
+    font-style: italic;
 }
 
 ```
+
+![Accordion item header content style customization](./images/blazor-accordion-header-content-style.png)
 
 ## Customizing accordion expand and collapse icons
 
@@ -57,10 +62,12 @@ The following CSS can be viewed to customize the expand and collapse icons of th
 ```CSS
 
 .e-accordion .e-acrdn-item .e-acrdn-header .e-toggle-icon .e-icons {
-     color: pink;
+     color: #ff0000;
 }
 
 ```
+
+![Accordion toggle icon style customization](./images/blazor-accordion-expand-collapse-icon-style.png)
 
 ## Customizing the hover state of accordion
 
@@ -76,27 +83,34 @@ Use the following CSS to customize the [accordion item](https://help.syncfusion.
 
 ## Customizing selected item of accordion
 
-Use the following CSS to customize the selected accordion item.
+Use the following CSS to customize the selected accordion item and focus state.
 
 ```CSS
 
-.e-accordion .e-acrdn-item.e-select.e-active>.e-acrdn-header,
-.e-accordion .e-acrdn-item.e-select.e-item-focus>.e-acrdn-header {
-    background-color: rgb(0, 15, 100) !important;
+.e-accordion .e-acrdn-item.e-select.e-selected.e-expand-state>.e-acrdn-header, 
+.e-accordion .e-acrdn-item.e-select.e-expand-state>.e-acrdn-header,
+.e-accordion .e-acrdn-item.e-selected.e-select>.e-acrdn-header,
+.e-accordion .e-acrdn-item.e-selected.e-select.e-expand-state>.e-acrdn-header:focus {
+    background-color: rgb(0, 15, 100);
 }
 
 ```
+
+![Accordion selected item header customization](./images/blazor-accordion-selected-item-style.png)
 
 Use the following CSS to customize the selected accordion item text.
 
 ```CSS
 
-.e-accordion .e-acrdn-item.e-select.e-active>.e-acrdn-header .e-acrdn-header-content,
-.e-accordion .e-acrdn-item.e-select.e-item-focus>.e-acrdn-header .e-acrdn-header-content {
-    color: #2fa1ff !important;
+.e-accordion .e-acrdn-item.e-select.e-selected.e-expand-state>.e-acrdn-header .e-acrdn-header-content,
+.e-accordion .e-acrdn-item.e-select.e-expand-state>.e-acrdn-header .e-acrdn-header-content,
+.e-accordion .e-acrdn-item.e-selected>.e-acrdn-header>.e-acrdn-header-content {
+    color: #ff0000;
 }
 
 ```
+
+![Accordion selected item header text customization](./images/blazor-accordion-selected-item-text-style.png)
 
 ## Customize each accordion item header
 
@@ -130,5 +144,7 @@ You can customize each accordion item header by setting [AccordionItem.CssClass]
 </style>
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBqWBsAATytYBFq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Accordion Item Header Appearance Customization](./images/accordino-item-header-appearance.png)
+
+![Accordion Item Header Appearance Customization](./images/blazor-accordion-item-cssclass-style.png)

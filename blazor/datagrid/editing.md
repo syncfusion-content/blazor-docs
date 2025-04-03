@@ -62,6 +62,7 @@ Deletion of the record is possible by selecting the required row and click on **
 ```
 
 The following screenshot represents Editing with Default Mode.
+
 ![Editing in Blazor DataGrid](./images/blazor-datagrid-editing.png)
 
 N> * Grid uses `Activator.CreateInstance<TValue>()` to generate a new record when an insert operation is invoked, so it must have a parameterless constructors defined for the model class and any referenced complex type classes. To provide custom logic for object creation during editing, you can refer [here](#provide-new-item-or-edited-item-using-events).
@@ -122,11 +123,12 @@ You can define this by using the [Toolbar](https://help.syncfusion.com/cr/blazor
 ```
 
 The following screenshot represents Toolbar with Edit option.
+
 ![Blazor DataGrid displays Edit option in Toolbar](./images/blazor-datagrid-editing.png)
 
 ## Default column values on adding new record
 
-The datagrid provides an option to set the default value for the columns when adding a new record in it. To set a default value for a particular column you need to define it in the [DefaultValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_DefaultValue) property of the [GridColumn](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component.
+The datagrid provides an option to set the default value for the columns when adding a new record in it. To set a default value for a particular column you need to define it in the [DefaultValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_DefaultValue) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) component.
 
 The following sample code demonstrates setting default value as **ANTON** to the **CustomerID** column,
 
@@ -168,11 +170,12 @@ The following sample code demonstrates setting default value as **ANTON** to the
 ```
 
 The following image represents the default value displayed in the **CustomerID** column while adding a new record in DataGrid,
+
 ![Adding New Record in Default Column Value of Blazor DataGrid](./images/blazor-datagrid-default-column-value.png)
 
 ## Disable editing for particular column
 
-You can disable editing for particular columns by setting value as **false** to the [AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowEditing) property of the [GridColumn](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component.
+You can disable editing for particular columns by setting value as **false** to the [AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowEditing) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) component.
 
 The following sample code demonstrates editing disabled for the **CustomerID** column,
 
@@ -216,6 +219,7 @@ The following sample code demonstrates editing disabled for the **CustomerID** c
 N> Similarly [AllowAdding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowAdding) property at the column level helps us to disable the particular column from inserting value to it.
 
 The following screenshot represents the editing disabled for the **CustomerID** column in DataGrid,
+
 ![Disable Editing for Specific Column in Blazor DataGrid](./images/blazor-datagrid-disable-editing.png)
 
 ## Disable editing for a particular row or cell
@@ -328,7 +332,7 @@ N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagri
 
 ## Adding a new row at the bottom of the datagrid
 
-By default, a new row will be added at the top of the datagrid. You can change it by setting [NewRowPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_NewRowPosition) property of the [GridEditSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component as **Bottom**.
+By default, a new row will be added at the top of the datagrid. You can change it by setting [NewRowPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_NewRowPosition) property of the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component as **Bottom**.
 
 The following sample code demonstrates changing the position of the new row that gets added in the DataGrid component,
 
@@ -369,9 +373,8 @@ The following sample code demonstrates changing the position of the new row that
 ```
 
 The following image represents the new row added at the bottom of the DataGrid,
-![Adding New Row at Bottom Position of Blazor DataGrid](./images/blazor-datagrid-add-new-row.png)
 
-N>* In Batch mode, while in edit mode, you can add a new row at bottom using the TAB key when you are on the last cell of the last row.
+![Adding New Row at Bottom Position of Blazor DataGrid](./images/blazor-datagrid-add-new-row.png)
 
 ## Troubleshoot: Editing works only for first row
 
@@ -486,9 +489,9 @@ The following sample code demonstrates the different **RequestType** parameters 
 
 ## Perform CRUD operation for complex object using EditTemplate
 
-Before performing CRUD operations with complex Objects, it is recommended to go through the [Complex DataBinding](https://blazor.syncfusion.com/documentation/datagrid/columns/#complex-data-binding) documentation.
+Before performing CRUD operations with complex Objects, it is recommended to go through the [Complex DataBinding](https://blazor.syncfusion.com/documentation/datagrid/columns#complex-data-binding) documentation.
 
-To customize the default Grid EditForm TextBox component, we will use [EditTemplate](https://blazor.syncfusion.com/documentation/datagrid/editing/#cell-edit-template) to customize the Grid EditForm.
+To customize the default Grid EditForm TextBox component, we will use [EditTemplate](https://blazor.syncfusion.com/documentation/datagrid/editing#cell-edit-template) to customize the Grid EditForm.
 
 You can edit the complex objects using EditTemplate inside the GridColumn component by defining two-way (**@bind-Value**) binding to reflect the changes in DataGrid.
 
@@ -638,6 +641,7 @@ You can perform CRUD operations like **Add**, **Update**, **Delete** by using th
 ```
 
 The following GIF represents the datagrid with Add, Update, Delete items,
+
 ![CRUD operations in Blazor DataGrid Editing](./images/blazor-datagrid-editing-in-crud-operation.gif)
 
 ## Perform CRUD operation using Grid events
@@ -1128,6 +1132,7 @@ You can perform the edit operation of Datagrid in a Custom external form. The ed
 ```
 
 The following GIF represent the datagrid with Custom External form editing,
+
 ![Blazor DataGrid with Custom External Form Editing](./images/blazor-datagrid-custom-form-editing.gif)
 
 ## Use edit template in foreign key column

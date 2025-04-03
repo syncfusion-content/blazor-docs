@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor ListView Component with hyper-link navigation
 
-The `anchor` tag can be used along with `href` attribute in the ListView `Template` property for navigation.
+The `anchor` tag can be used along with `href` attribute in the ListView [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewTemplates-1.html) property for navigation.
 
 ```cshtml
 @using Syncfusion.Blazor.Lists

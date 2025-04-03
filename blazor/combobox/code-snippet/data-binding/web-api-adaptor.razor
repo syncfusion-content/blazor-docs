@@ -1,0 +1,20 @@
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.DropDowns
+
+<SfComboBox TValue="string" TItem="EmployeeData" Placeholder="Select a Employee" Query="@Query" @bind-Value="@EmployeeValue" Width="300px">
+    <SfDataManager Url="https://ej2services.syncfusion.com/production/web-services/api/Employees" Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor" CrossDomain=true></SfDataManager>
+    <ComboBoxFieldSettings Text="FirstName" Value="FirstName"></ComboBoxFieldSettings>
+</SfComboBox>
+
+@code {
+    public string EmployeeValue { get; set; } = "Janet Leverling";
+    public Query Query = new Query();
+
+    public class EmployeeData
+    {
+        public int EmployeeID { get; set; }
+        public string FirstName { get; set; }
+        public string Designation { get; set; }
+        public string Country { get; set; }
+    }
+}

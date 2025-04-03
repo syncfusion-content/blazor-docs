@@ -9,6 +9,12 @@ documentation: ug
 
 # Axis Customization in Blazor Charts Component
 
+This section provides a brief explanation on how to customize the Blazor Charts axis.
+
+You can learn how to customize the chart axis by watching the video below.
+
+{% youtube "youtube:https://www.youtube.com/watch?v=SiMYNPE51wU" %}
+
 ## Axis crossing
 
 An axis can be positioned in the chart area using [CrossesAt](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_CrossesAt) and [CrossesInAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_CrossesInAxis) properties. The [CrossesAt](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_CrossesAt) property specifies the values (numeric, datetime or logarithmic) at which the axis line has to be intersected with the vertical axis or vice-versa, and the [CrossesInAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_CrossesInAxis) property specifies the axis name with which the axis line has to be crossed.
@@ -48,6 +54,7 @@ An axis can be positioned in the chart area using [CrossesAt](https://help.syncf
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrUChLRrTftoDAz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column Chart with Cross Axis](images/axis-customization/blazor-column-chart-cross-axis.png)
 
@@ -90,8 +97,55 @@ A title can be added to the axis using [Title](https://help.syncfusion.com/cr/bl
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhUihhRhzzqpdFC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
 
 ![Blazor Column Chart with Axis Title](images/axis-customization/blazor-column-chart-axis-title.png)
+
+### Axis title alignment
+
+The axis title's position can be aligned using the `TextAlignment` property in [ChartAxisTitleStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxisTitleStyle.html). The `TextAlignment` property allows you to specify the alignment of the title relative to the axis. You can set it to `Alignment.Near`, `Alignment.Center`, or `Alignment.Far` to position the title near the start, at the center, or far from the start of the axis, respectively. 
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfChart Title="Olympic Medals">
+    <ChartPrimaryXAxis Title="Countries" ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+        <ChartAxisTitleStyle Size="16px" FontFamily="Segoe UI" FontWeight="bold" TextAlignment="Syncfusion.Blazor.Charts.Alignment.Near" />
+    </ChartPrimaryXAxis>
+    <ChartPrimaryYAxis Title="Medal Counts">
+        <ChartAxisTitleStyle Size="16px" FontFamily="Segoe UI" FontWeight="bold" TextAlignment="Syncfusion.Blazor.Charts.Alignment.Far" />
+    </ChartPrimaryYAxis>
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Column" />
+    </ChartSeriesCollection>
+</SfChart>
+
+@code {
+    public class ChartData
+    {
+        public string X { get; set; }
+        public double YValue { get; set; }
+    }
+
+    public List<ChartData> MedalDetails = new List<ChartData>
+    {
+         new ChartData { X= "USA", YValue= 46 },
+         new ChartData { X= "GBR", YValue= 27 },
+         new ChartData { X= "CHN", YValue= 26 },
+         new ChartData { X= "UK", YValue= 26 },
+         new ChartData { X= "AUS", YValue= 26 },
+         new ChartData { X= "IND", YValue= 26 },
+         new ChartData { X= "DEN", YValue= 26 },
+         new ChartData { X= "MEX", YValue= 26 },
+    };
+}
+
+```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZVfDHirzNGCVAZq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} 
+
+![Blazor Column Chart with Axis Title Alignment](images/axis-customization/blazor-column-chart-axis-title-alignment.png)
 
 ## Tick lines
 
@@ -134,6 +188,7 @@ The width, color, and size of the minor and major tick lines can be customi
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLgiBBdLTzRploJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column Chart with Custom Tick Lines](images/axis-customization/blazor-column-chart-custom-tick-lines.png)
 
@@ -177,6 +232,7 @@ The width, color, and dash array of the minor and major grid lines can be c
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVAWVVnBzoAhreS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column Chart with Custom GridLines](images/axis-customization/blazor-column-chart-custom-gridline.png)
 
@@ -223,6 +279,7 @@ The [ChartAxes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.C
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVqirBHhzyoYHVs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column Chart with Multiple Axes](images/axis-customization/blazor-column-chart-multiple-axes.png)
 
@@ -271,6 +328,7 @@ When an axis is inversed, the greatest value on the axis moves closer to the ori
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhgMBBRLzoOWYHq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column Chart with Inversed Axis](images/axis-customization/blazor-column-chart-inversed-axis.png)
 
@@ -313,12 +371,13 @@ To place an axis in the opposite position of its original position, set its [Opp
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLqMVhHrJGZtGLh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Blazor Column Chart Axis in Opposed Position](images/axis-customization/blazor-column-chart-axis-at-opposed-position.png)
 
-N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
-## See Also
+## See also
 
 * [Data Label](./data-labels)
 * [Tooltip](./tool-tip)

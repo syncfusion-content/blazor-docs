@@ -1,0 +1,29 @@
+@using Syncfusion.Blazor.DropDowns
+
+<p>Selected Value is: @SelectedValue.Name</p>
+
+<SfAutoComplete TValue="Games" TItem="Games" Width="300px" Placeholder="Select a game" DataSource="@LocalData" @bind-Value="@SelectedValue">
+    <AutoCompleteFieldSettings Value="Name"/>
+</SfAutoComplete>
+
+@code {
+
+    public Games SelectedValue { get; set; } = new Games() { ID = "Game7", Name = "Hockey" };
+    public class Games
+    {
+        public string ID { get; set; }
+        public string Name { get; set; }
+    }
+    List<Games> LocalData = new List<Games> {
+    new Games() { ID= "Game1", Name= "American Football" },
+    new Games() { ID= "Game2", Name= "Badminton" },
+    new Games() { ID= "Game3", Name= "Basketball" },
+    new Games() { ID= "Game4", Name= "Cricket" },
+    new Games() { ID= "Game5", Name= "Football" },
+    new Games() { ID= "Game6", Name= "Golf" },
+    new Games() { ID= "Game7", Name= "Hockey" },
+    new Games() { ID= "Game8", Name= "Rugby"},
+    new Games() { ID= "Game9", Name= "Snooker" },
+    new Games() { ID= "Game10", Name= "Tennis"},
+  };
+}

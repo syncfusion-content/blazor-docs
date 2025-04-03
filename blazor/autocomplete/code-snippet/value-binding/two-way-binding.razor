@@ -1,0 +1,27 @@
+@using Syncfusion.Blazor.DropDowns;
+
+
+<SfAutoComplete Placeholder="Select Assignee" Width="300px" TItem="MemberModel" TValue="string" DataSource="@Members" @bind-Value="@selectedAssignee.SelectedValue">
+    <AutoCompleteFieldSettings Value="Name" />
+</SfAutoComplete>
+
+@code {
+
+    public MemberModel selectedAssignee = new MemberModel();
+
+    public class MemberModel
+    {
+        public int? Id { get; set; }
+        public string Name { get; set; }
+        public string SelectedValue { get; set; } = "Robert";
+    }
+
+    List<MemberModel> Members = new List<MemberModel>()
+    {
+        new MemberModel() {Id = 0, Name="John" },
+        new MemberModel() {Id = 1, Name="Andrews" },
+        new MemberModel() {Id = 2, Name="Robert" },
+
+    };
+
+} 

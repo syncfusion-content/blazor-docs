@@ -9,7 +9,7 @@ documentation: ug
 
 # Legend in Blazor Maps Component
 
-A Legend is a visual representation of the symbols used on the Maps. It can be represented in various colors, shapes or other identifiers based on the data and provides valuable information for interpreting what the Maps are displaying. It explains what each symbol in the Maps represents. Legends are enabled by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Visible) property of [MapsLegendSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html) to **true**.
+A Legend is a visual representation of the symbols used on the Maps. It can be represented in various colors, shapes or other identifiers based on the data and provides valuable information for interpreting what the Maps are displaying. It explains what each symbol in the Maps represents. Legends are enabled by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Visible) property of [MapsLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html) to **true**.
 
 ## Modes of legend
 
@@ -19,11 +19,11 @@ Legend had two types of mode.
 
 ### Default mode
 
-Default mode legends have symbols with legend labels which are used to identify the shape or bubble or marker color. Enable this option by setting the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Mode) property of [MapsLegendSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html) as **Default**.
+Default mode legends have symbols with legend labels which are used to identify the shape or bubble or marker color. Enable this option by setting the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Mode) property of [MapsLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html) as **Default**.
 
 ### Interactive mode
 
-The legends can be made interactive with an arrow mark indicating the exact range color in the legend when the mouse hovers over the corresponding shapes. To enable this type of mode by setting the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Mode) property of [MapsLegendSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html) as **Interactive**. The [InvertedPointer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_InvertedPointer) property is used to enable or disable the visibility of the inverted pointer in interactive legend in Maps.
+The legends can be made interactive with an arrow mark indicating the exact range color in the legend when the mouse hovers over the corresponding shapes. To enable this type of mode by setting the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Mode) property of [MapsLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html) as **Interactive**. The [InvertedPointer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_InvertedPointer) property is used to enable or disable the visibility of the inverted pointer in interactive legend in Maps.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -87,7 +87,7 @@ Legends are positioned in the following locations within the container. The [Pos
 * Bottom
 * Right
 
-The above four positions can be aligned with combination of **Near**, **Center**, and **Far** using [Alignment](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.Alignment.html) property in [MapsLegendSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html). So, the legend can be aligned to 12 positions.
+The above four positions can be aligned with combination of **Near**, **Center**, and **Far** using [Alignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.Alignment.html) property in [MapsLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html). So, the legend can be aligned to 12 positions.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -204,7 +204,7 @@ The following properties and classes are available in legend to customize the le
     </MapsLegendSettings>
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}' ShapeDataPath="Country"
-                   DataSource="MemberShipDetails" ShapePropertyPath='new string[] {"name"}' TValue="UNCouncilCountry">
+                   DataSource="MemberShipDetails" ShapePropertyPath='new string[] {"name"}' TValue="UNCouncil">
             <MapsShapeSettings ColorValuePath="Membership">
                 <MapsShapeColorMappings>
                     <MapsShapeColorMapping Value="Permanent" Color='new string[] {"#D84444"}' />
@@ -451,7 +451,7 @@ To hide the duplicate legend items in Maps, set the [RemoveDuplicateLegend](http
         new PopulationDetail
         {
             Name = "United States", Population = 325020000, Density = 33, Color = "yellow"
-        }
+        },
         new PopulationDetail
         {
             Name = "India", Population = 1198003000, Density = 364, Color = "blue"
@@ -497,11 +497,11 @@ The following properties and components are available to customize the toggle op
 @code{
     public class PopulationDetail
     {
-        public string Name;
-        public double Population;
-        public double Density;
-        public bool LegendVisibility;
-        public string Color;
+        public string Name { get; set; }
+        public double Population { get; set; }
+        public double Density { get; set; }
+        public bool LegendVisibility { get; set; }
+        public string Color { get; set; }
     };
     private List<PopulationDetail> populationDetails = new List<PopulationDetail> {
         new PopulationDetail

@@ -294,7 +294,7 @@ Here, New tab items added when user clicks on the `Button` inside `HeaderTemplat
 
 ![Blazor Tabs with Floating button](./images/blazor-tabs-floating-button.png)
 
-[View Sample in GitHub](https://github.com/SyncfusionExamples/How-to-add-floating-button-to-the-right-of-tabs-in-Blazor-Tab)
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/How-to-add-floating-button-to-the-right-of-tabs-in-Blazor-Tab)
 
 ## See Also
 

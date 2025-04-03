@@ -1,0 +1,41 @@
+@using Syncfusion.Blazor.DataForm
+@using Syncfusion.Blazor.Buttons
+@using System.ComponentModel.DataAnnotations
+
+<SfDataForm ID="MyForm"
+            Model="@EmployeeDetailsModel">
+
+    <FormValidator>
+        <DataAnnotationsValidator></DataAnnotationsValidator>
+    </FormValidator>
+
+    <FormItems>
+        <FormGroup LabelText="Employee Information" ID="employee-information-group">
+            <FormItem Field="@nameof(EmployeeDetailsModel.EmployeeId)" LabelText="Employee Id" />
+            <FormItem Field="@nameof(EmployeeDetailsModel.FirstName)"  LabelText="First Name" />
+            <FormItem Field="@nameof(EmployeeDetailsModel.LastName)"  LabelText="Last Name" />
+            <FormItem Field="@nameof(EmployeeDetailsModel.Designation)"  LabelText="Designation" />
+            <FormItem Field="@nameof(EmployeeDetailsModel.ReportingPerson)" LabelText="Reporting Person" />
+            <FormItem Field="@nameof(EmployeeDetailsModel.ManagerName)"  LabelText="Manager Name" />
+        </FormGroup>
+    </FormItems>
+
+    <FormButtons>
+        <SfButton>Update</SfButton>
+    </FormButtons>
+
+</SfDataForm>
+
+@code {
+
+    private EmployeeDetails EmployeeDetailsModel = new EmployeeDetails()
+        {
+            EmployeeId = 1001,
+            FirstName = "Anne",
+            LastName = "Dodsworth",
+            Department = "Web",
+            Designation = "Developer",
+            ReportingPerson = "Andrew Fuller",
+            ManagerName = "Nancy Davolio"
+        };
+}

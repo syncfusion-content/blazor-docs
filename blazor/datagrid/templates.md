@@ -13,10 +13,10 @@ Blazor has templated components that accept one or more UI segments as input and
 
 The available template options in datagrid are as follows,
 
-* [Column template](./columns/#column-template) - Used to customize cell content.
-* [Header template](./columns/#header-template) - Used to customize header cell content.
-* [Row template](./row/#row-template) - Used to customize row content.
-* [Detail template](./row/#detail-template) - Used to customize the detail cell content.
+* [Column template](./columns#column-template) - Used to customize cell content.
+* [Header template](./columns#header-template) - Used to customize header cell content.
+* [Row template](./row#row-template) - Used to customize row content.
+* [Detail template](./row#detail-template) - Used to customize the detail cell content.
 
 ## Template context
 
@@ -225,4 +225,4 @@ N> From `v17.4.39`,the `ModelType` property has been removed from the DataGrid C
 The following image represents the Row Template
 ![Blazor DataGrid with Row Template](./images/blazor-datagrid-rows.png)
 
-N> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
+N> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand how to present and manipulate data.

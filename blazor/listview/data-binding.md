@@ -3,29 +3,27 @@ layout: post
 title: Data Binding in Blazor ListView Component | Syncfusion
 description: Checkout and learn here all about data binding in Syncfusion Blazor ListView component and much more.
 platform: Blazor
-control: Listview
+control: ListView
 documentation: ug
 ---
 
 # Data Binding in Blazor ListView Component
 
-ListView provides an option to load the data either from local dataSource or remote data services. This can be done through the dataSource property that supports the data type of array or DataManager. ListView supports different kind of data services such as OData, OData V4, and Web API, and data formats like XML, JSON, and, JSONP with the help of DataManager Adaptors.
+ListView provides an option to load the data either from local dataSource or remote data services. This can be done through the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_DataSource) property that supports the data type of array or [`DataManager`](https://blazor.syncfusion.com/documentation/data/getting-started). ListView supports different kind of data services such as OData, OData V4, and Web API, and data formats like XML, JSON, and, JSONP with the help of DataManager Adaptors.
 
 | Fields | Type | Description |
 |------|------|-------------|
 | Id | string | Specifies ID attribute of list item, mapped in dataSource. |
 | Text | string | Specifies list item display text field. |
 | IsChecked | string | Specifies checked status of list item. |
-| IsVisible | string | Specifies visibility state of list item. |
 | Enabled | string | Specifies enabled state of list item. |
 | IconCss | string | Specifies the icon class of each list item that will be added before to the list item text. |
 | Child | string | Specifies child dataSource fields. |
 | Tooltip | string | Specifies tooltip title text field. |
 | GroupBy | string | Specifies category of each list item. |
-| SortBy | string | Specifies sorting field, that is used to sort the listview data. |
 | HtmlAttributes | string | Specifies list item html attributes field. |
 
-N> When complex data bind to ListView, you should map the ListViewFieldSettings properly. Otherwise, the ListView properties remains as undefined or null.
+N> When complex data bind to ListView, you should map the [`ListViewFieldSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewFieldSettings-1.html) properly. Otherwise, the ListView properties remains as undefined or null.
 
 ## Bind to local data
 
@@ -33,7 +31,7 @@ Local data can be represented in Array of JSON data:
 
 ### Array of JSON data
 
-ListView can generate its list items through an array of complex data. To get it work properly, you should map the appropriate columns to the field property.
+ListView can generate its list items through an array of complex data. To get it work properly, you should map the appropriate columns to the [`ListViewFieldSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewFieldSettings-1.html) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Lists
@@ -74,9 +72,9 @@ ListView can generate its list items through an array of complex data. To get it
 
 ## Bind to remote data
 
-The ListView supports to retrieve the data from remote data services with the help of DataManager control. The Query property allows to fetch data and return it to the ListView from the database.
+The ListView supports to retrieve the data from remote data services with the help of [`DataManager`](https://blazor.syncfusion.com/documentation/data/getting-started) control. The `Query` property allows to fetch data and return it to the ListView from the database.
 
-In the following sample, first 6 products from the Product table of NorthWind data service are displayed.
+In the following sample, `first 6 products` from the **Product** table of **NorthWind** data service are displayed.
 
 ```cshtml
 @using Syncfusion.Blazor.Lists
@@ -90,7 +88,7 @@ In the following sample, first 6 products from the Product table of NorthWind da
 @code {
 
     public static List<string> column = new List<string>()
-{
+    {
         "ProductID","ProductName"
     };
     Query query = new Query().From("Products").Select(column).Take(6);
@@ -106,17 +104,19 @@ In the following sample, first 6 products from the Product table of NorthWind da
 
 ## Entity Framework
 
-You need to follow the below steps to consume data from the **Entity Framework** in the ListView component.
+You need to follow the steps below to consume data from the **Entity Framework** in the ListView component.
+
+To easily bind data in the Blazor ListView component using Entity Framework, you can check out this video.
+
+{% youtube "youtube:https://www.youtube.com/watch?v=iEM_W4HP9pk" %}
 
 ### Handle CRUD in data access layer class
 
-Now, add methods **AddProduct, DeleteProduct** in the **“DataAccessLayer.cs”** to handle the insert and remove operations respectively. The **CRUD** list items are bound to the **Products** parameter.
+Now, add methods **AddProduct** and **DeleteProduct** in the **DataAccessLayer.cs** to handle the insert and remove operations, respectively. The **CRUD** list items are bound to the **Products** parameter.
 
 ```csharp
-using System.Collections.Generic;
-using System.Linq;
+
 using EFListView.Shared.Models;
-using EFListView.Shared.DataAccess;
 using Microsoft.EntityFrameworkCore;
 
 namespace EFListView.Shared.DataAccess
@@ -137,7 +137,7 @@ namespace EFListView.Shared.DataAccess
                 throw;
             }
         }
-  
+
         public void AddProduct(Products products)
         {
             try
@@ -165,22 +165,22 @@ namespace EFListView.Shared.DataAccess
         }
     }
 }
+
 ```
 
 ### Enable CRUD in Web API
 
-Now you have to create a new **Post** and **Delete** method in the Web API controller which will perform the CRUD operations and returns the appropriate resultant data. The **‘SfDataManager’** will make requests to this action based on route name.
+Now you need to create new **Post** and **Delete** methods in the Web API controller, which will perform the CRUD operations and return the appropriate result. The **SfDataManager** will make requests to these actions based on the route name.
 
 ```csharp
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.AspNetCore.Mvc;
+
 using EFListView.Shared.DataAccess;
 using EFListView.Shared.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace EFListView.Server.Controllers
-{  
+{
     [Route("api/[controller]")]
     [ApiController]
     public class ProductsController : ControllerBase
@@ -193,73 +193,104 @@ namespace EFListView.Server.Controllers
         }
 
         [HttpPost]
-        public object Post([FromBody]Products product)
+        public async Task<IActionResult> Post([FromBody] Products product)
         {
+            if (product == null || string.IsNullOrWhiteSpace(product.ProductName))
+            {
+                return BadRequest("Invalid product data.");
+            }
+
             db.AddProduct(product);
-            return product;
+            return Ok(await db.GetAllProducts().ToListAsync());
         }
 
-        [HttpDelete]
-        public void Delete([FromBody]Products product)
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
         {
+
+            var product = await db.GetAllProducts().FirstOrDefaultAsync(p => p.ProductID == id);
+            if (product == null)
+            {
+                return NotFound("Product not found.");
+            }
+
             db.DeleteProduct(product);
+            return Ok(await db.GetAllProducts().ToListAsync());
         }
+
     }
 }
+
 ```
 
 ### Configure the ListView to perform CRUD operations
 
-You can perform CRUD operations like Add and Delete by using the `AddItem`, `RemoveItem` methods.
+You can perform CRUD operations like Add and Delete using the `Add` and `Delete the selected item` buttons.
 
-* `AddItem` - Add a new list item into the ListView.
-* `RemoveItem` - Delete a selected list item in the ListView.
+* `Add button` – Adds a new list item to the ListView using the ListView component's [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_DataSource) property.
+* `Delete the selected item button` - Deletes a selected list item in the ListView using the ListView component's [RemoveItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_RemoveItems_System_Collections_Generic_IEnumerable__0__) method.
 
 ```cshtml
+
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Lists
 @using Syncfusion.Blazor.Buttons
 @using EFListView.Shared.Models
+@inject HttpClient Http
 
 <div class="btn-cls">
-    <SfButton @onclick="Add"> Add </SfButton>
-    <SfButton @onclick="Delete"> Delete the selected item </SfButton>
+    <SfButton @onclick="Add">Add</SfButton>
+    <SfButton @onclick="Delete">Delete the selected item</SfButton>
 </div>
 
 <div class="row">
     <div class="col-md-4">
-        <SfListView CssClass="listview" TValue="Products" Height="400px" @ref="List">
+        <SfListView CssClass="listview" TValue="Products" Width="400px" Height="400px" @ref="List" @bind-DataSource="@datasource">
             <ListViewFieldSettings TValue="Products" Text="ProductName" Id="ProductID"></ListViewFieldSettings>
             <SfDataManager Url="api/Products" Adaptor="Adaptors.WebApiAdaptor" CrossDomain="true"></SfDataManager>
+            <ListViewEvents TValue="Products" Clicked="OnClicked"></ListViewEvents>
         </SfListView>
     </div>
 </div>
 
-@code{
+@code {
+    private SfListView<Products> List;
+    private List<Products> datasource;
+    private List<Products> selectedItems = new List<Products>();
+    private int carCounter = 1;
 
-    SfListView<Products> List;
-    List<Products> selectedItems = new List<Products>();
-
-    List<Products> product = new List<Products>()
+    private async Task Add()
     {
-        new Products{ ProductID = 100, ProductName = "Alice"}
-    };
-
-    public void Add()
-    {
-        this.List.AddItem(product, null);
+        var newProduct = new Products { ProductName = $"Zenvo Automotive {carCounter}" };
+        var response = await Http.PostAsJsonAsync("api/Products", newProduct);
+        if (response.IsSuccessStatusCode)
+        {
+            datasource = await response.Content.ReadFromJsonAsync<List<Products>>();
+            carCounter++;
+        }
     }
 
-    async void Delete()
+    private async Task Delete()
     {
-        var items = await this.List.GetSelectedItems();
-        if (items.Data != null)
+        if (selectedItems.Count == 0)
         {
-            selectedItems = items.Data;
-            Products list = new Products() { ProductID = selectedItems[0].ProductID, ProductName = selectedItems[0].ProductName };
-            await this.List.RemoveItem(list);
+            return;
         }
+
+        var productId = selectedItems[0].ProductID;
+        var response = await Http.DeleteAsync($"api/Products/{productId}");
+        if (response.IsSuccessStatusCode)
+        {
+            List.RemoveItems(selectedItems);
+        }
+    }
+
+    private void OnClicked(ClickEventArgs<Products> args)
+    {
+        selectedItems.Clear();
+        selectedItems.Add(args.ItemData);
     }
 }
 
@@ -272,6 +303,7 @@ You can perform CRUD operations like Add and Delete by using the `AddItem`, `Rem
         margin: 0px 5px 10px 5px;
     }
 </style>
+
 ```
 
 N> You can find the fully working sample [here](https://github.com/SyncfusionExamples/Blazor-ListView-Entity-Framework).

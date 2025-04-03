@@ -9,6 +9,11 @@ documentation: ug
 
 # Bubble HeatMap in Blazor HeatMap Chart Component
 
+This section shows how to customize the appearance of the HeatMap cells as bubbles. The below video demonstrates the same.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=MXrqp-YHUgU"%}
+
 Data points represent the data source values with **gradient** or **fixed** colors in the HeatMap. You can customize the appearance of these data points by changing the `Color` and `Size` attributes.
 
 The data points can be represented in color fill or bubble shape by defining the [TileType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.HeatMap.HeatMapCellSettings.html#Syncfusion_Blazor_HeatMap_HeatMapCellSettings_TileType) property. By default, the data points are color filled with gradient or fixed colors and this depiction of data points is defined as `Rect` in the `TileType` property.

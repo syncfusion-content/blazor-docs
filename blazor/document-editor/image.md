@@ -12,7 +12,7 @@ documentation: ug
 [`Blazor Document Editor`](https://www.syncfusion.com/blazor-components/blazor-word-processor) supports common raster format images like PNG, BMP, JPEG, SVG and GIF. You can insert an image file or online image in the document using the [`InsertImageAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_InsertImageAsync_System_String_System_Nullable_System_Double__System_Nullable_System_Double__) method.
 
 ```csharp
-container.DocumentEditor.Editor.InsertImageAsync("<<base64String>>");
+await container.DocumentEditor.Editor.InsertImageAsync("<<base64String>>");
 ```
 
 Image files will be internally converted to base64 string. Whereas, online images are preserved as URL.
@@ -30,7 +30,7 @@ Document editor expose API to get or resize the selected image. Refer to the fol
 ```csharp
 int height = await container.DocumentEditor.Selection.ImageFormat.GetHeightAsync();
 int width = await container.DocumentEditor.Selection.ImageFormat.GetWidthAsync();
-container.DocumentEditor.Selection.ImageFormat.ResizeAsync(width + 10, height + 10);
+await container.DocumentEditor.Selection.ImageFormat.ResizeAsync(width + 10, height + 10);
 ```
 
 ## Text wrapping style

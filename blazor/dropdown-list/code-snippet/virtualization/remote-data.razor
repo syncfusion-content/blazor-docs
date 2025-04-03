@@ -1,7 +1,7 @@
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Data 
 <SfDropDownList TValue="string" TItem="OrderDetails" Width="300px" EnableVirtualization=true Placeholder="Select a name" Query="@RemoteDataQuery">
-     <SfDataManager Url="https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders" CrossDomain="true" Adaptor="Syncfusion.Blazor.Adaptors.ODataAdaptor"/>
+     <SfDataManager Url="https://blazor.syncfusion.com/services/production/api/Orders" CrossDomain="true" Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor"/>
      <DropDownListFieldSettings Text="CustomerID" Value="CustomerID"/>
 </SfDropDownList>
 @code{

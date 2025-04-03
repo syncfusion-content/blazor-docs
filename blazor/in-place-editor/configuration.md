@@ -102,7 +102,7 @@ In-place Editor popup mode can be customized by using the `InPlaceEditorPopupSet
 
 Popup mode is rendered by using the Blazor Tooltip component, so you can use the tooltip properties and events to customize the behavior of popup via the `InPlaceEditorPopupSettings` by configuring tooltip properties.
 
-N> For more details, refer to the tooltip documentation [section](../tooltip/).
+N> For more details, refer to the tooltip documentation [section](../tooltip/getting-started-webapp).
 
 ## Event actions for editing
 

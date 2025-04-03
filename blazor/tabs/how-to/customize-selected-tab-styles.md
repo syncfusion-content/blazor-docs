@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Style Customization for active item in Blazor Tabs | Syncfusion
-description: Learn here all about Style Customization for active item in Syncfusion Blazor Tabs component and more.
+description: Learn here all about style customization for active item in Syncfusion Blazor Tabs component, it's elements and more.
 platform: Blazor
 control: Tabs
 documentation: ug
@@ -113,4 +113,4 @@ The style of tabs can be customized by overriding its header and active tab CSS 
 </style>
 ```
 
-![Customizing Active TabItem in Blazor Tabs](../images/blazor-tabs-custom-active-tabitem.png)
+![Customizing active tabitem in Blazor Tabs](../images/blazor-tabs-custom-active-tabitem.png)

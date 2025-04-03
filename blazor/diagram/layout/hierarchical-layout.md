@@ -41,14 +41,7 @@ The hierarchical tree layout arranges nodes in a tree-like structure, where the 
         node.Width = 100;
         //Initializing the default node's shape style.
         node.Style = new ShapeStyle() { Fill = "darkcyan", StrokeWidth = 3, StrokeColor = "Black" };
-        node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
-        {
-            new ShapeAnnotation 
-            { 
-                Content = node.Annotations[0].Content,
-                Style = new TextStyle() { Color = "white", Bold = true }, 
-            }
-        };
+       node.Annotations[0].Style = new TextStyle() { Color = "white", Bold = true };
     }
 
     private void OnConnectorCreating(IDiagramObject connector)
@@ -82,7 +75,7 @@ The hierarchical tree layout arranges nodes in a tree-like structure, where the 
 }
 
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/HeirarchicalLayout)
 
 ![Blazor Hierarchical Diagram](../images/blazor-hierarchical-diagram.png)
 
@@ -159,13 +152,15 @@ You can create a hierarchical layout with DataSource. The following code demonst
     };
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/HierarchicalTreeWithDataSource)
+
+>**Note:** In the DataSourceSettings, the type of the ID and ParentID properties is string. The provided DataSource should have a parent-child relationship. It is necessary for at least one node to have an empty ParentID.
 
 ## Customizing the properties
 
 ### How to change orientation 
 
-You can use [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Orientation) property of the Layout to change the orientation at runtime. The following code shows how to change the layout.
+You can use the [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Orientation) property of the Layout to change the orientation at runtime. The following code shows how to change the layout.
 
 ```csharp
 <SfDiagramComponent Height="600px" Width="500px" >
@@ -201,7 +196,7 @@ public void UpdateSpacing()
     Diagram.BeginUpdate();
     HorizontalSpacing += 10;
     VerticalSpacing += 10;
-    Diagram.EndUpdate();
+    Diagram.EndUpdateAsync();
 }
 ```
 
@@ -226,7 +221,7 @@ public void UpdateMargin()
     Diagram.BeginUpdate();
     left += 10;
     top += 10;
-    Diagram.EndUpdate();
+    Diagram.EndUpdateAsync();
 }
 ```
 

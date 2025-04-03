@@ -11,7 +11,11 @@ documentation: ug
 
 Now, validation can be done by using the EditForm validation on the server-side. You need to handle the validation from the application level and the custom validation can also be achieved by using this.
 
-Refer to the following link for more details,[EditForm Validation](https://docs.microsoft.com/en-us/aspnet/core/blazor/forms-validation?view=aspnetcore-5.0). Validation for the `TextBox` is achieved in the following sample using the EditForm validation with a custom error message and validation rules.
+To get started quickly with validation in the Blazor In-place Editor, watch the following video or explore the [GitHub](https://github.com/SyncfusionExamples/how-to-validate-a-textbox-in-blazor-in-place-editor-component) sample:
+
+{% youtube "youtube:https://www.youtube.com/watch?v=Pg3hrFZVdyM"%}
+
+Refer to the following link for more details,[EditForm Validation](https://learn.microsoft.com/en-us/aspnet/core/blazor/forms/?view=aspnetcore-8.0). Validation for the `TextBox` is achieved in the following sample using the EditForm validation with a custom error message and validation rules.
 
 ```cshtml
 

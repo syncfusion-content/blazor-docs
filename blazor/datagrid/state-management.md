@@ -67,15 +67,15 @@ You can use [ResetPersistData](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 ## Handling grid state manually
 
-You can handle the grid's state manually by using in-built state persistence methods. You can use [GetPersistData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetPersistData), [SetPersistData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SetPersistData_System_String_), [ResetPersistData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ResetPersistData) methods of grid to save, load and reset the Grid's persisted state manually. [GetPersistData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetPersistData) method will return grid current state as a string value, which is suitable for sending them over network and storing in data bases.
+You can handle the grid's state manually by using in-built state persistence methods. You can use [GetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetPersistDataAsync), [SetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SetPersistDataAsync_System_String_), [ResetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ResetPersistDataAsync) methods of grid to save, load and reset the Grid's persisted state manually. [GetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetPersistDataAsync) method will return grid current state as a string value, which is suitable for sending them over network and storing in data bases.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
 
-<SfButton OnClick="@(async () => _state = await Grid.GetPersistData())">Save State</SfButton>
-<SfButton OnClick="@(() => Grid.SetPersistData(_state))">Set State</SfButton>
-<SfButton OnClick="@(() => Grid.ResetPersistData())">Reset State</SfButton>
+<SfButton OnClick="@(async () => _state = await Grid.GetPersistDataAsync())">Save State</SfButton>
+<SfButton OnClick="@(async() => await Grid.SetPersistDataAsync(_state))">Set State</SfButton>
+<SfButton OnClick="@(async() =>await Grid.ResetPersistDataAsync())">Reset State</SfButton>
 
 <SfGrid @ref="Grid" ID="GridOneTwo" DataSource="@Orders" Height="315" AllowPaging="true" AllowFiltering="true" AllowGrouping="true" AllowSorting="true">
     <GridColumns>
@@ -114,4 +114,4 @@ You can handle the grid's state manually by using in-built state persistence met
 }
 ```
 
-N> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
+N> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand how to present and manipulate data.

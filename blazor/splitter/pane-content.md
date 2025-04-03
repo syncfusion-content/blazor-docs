@@ -21,9 +21,36 @@ Splitter is a layout based container component. The pane contents can be rendere
 
 <SfSplitter Height="200px" Width="600px">
     <SplitterPanes>
-        <SplitterPane Content="@Content1" Size="200px"></SplitterPane>
-        <SplitterPane Content="@Content2" Size="200px"></SplitterPane>
-        <SplitterPane Content="@Content3" Size="200px"></SplitterPane>
+        <SplitterPane Size="200px">
+           <ContentTemplate>
+                <div>
+                    <div class="content">
+                        <h3 class="h3">Grid </h3>
+                        The ASP.NET DataGrid control, or DataTable is a feature-rich control used to display data in a tabular format.
+                    </div>
+                </div>
+            </ContentTemplate>
+        </SplitterPane>
+        <SplitterPane Size="200px">
+             <ContentTemplate>
+                <div>
+                    <div class="content">
+                        <h3 class="h3">Schedule </h3>
+                        The ASP.NET Scheduler, a.k.a. event calendar, facilitates almost all calendar features, thus allowing users to manage their time efficiently
+                    </div>
+                </div>
+            </ContentTemplate>
+        </SplitterPane>
+        <SplitterPane Size="200px">
+              <ContentTemplate>
+                <div>
+                    <div class="content">
+                        <h3 class="h3">Chart </h3>
+                        ASP.NET charts, a well-crafted easy-to-use charting package, is used to add beautiful charts in web and mobile applications
+                    </div>
+                </div>
+            </ContentTemplate>
+        </SplitterPane>
     </SplitterPanes>
 </SfSplitter>
 
@@ -33,20 +60,6 @@ Splitter is a layout based container component. The pane contents can be rendere
     }
 </style>
 
-@code {
-    private string Content1 = "<div class='content'>" +
-                    "<h3 class='h3'>Grid </h3>" +
-                    "The ASP.NET DataGrid control, or DataTable is a feature-rich control used to display data in a tabular format.</div>";
-
-    private string Content2 = "<div class='content'>" +
-                    "<h3 class='h3'>Schedule </h3>" +
-                    "The ASP.NET Scheduler, a.k.a. event calendar, facilitates almost all calendar features, thus allowing users to manage their time efficiently </div>";
-
-    private string Content3 = "<div class='content'>" +
-                    "<h3 class='h3'>Chart </h3>" +
-                    "ASP.NET charts, a well-crafted easy-to-use charting package, is used to add beautiful charts in web and mobile applications </div>";
-}
-
 ```
 
 ![Blazor Splitter Content with HTML Markup](./images/blazor-splitter-content-html-markup.png)
@@ -55,7 +68,7 @@ Splitter is a layout based container component. The pane contents can be rendere
 
 Any Blazor components can be rendered along with their native and control events within splitter as pane content.
 
-Refer [Listview within splitter](https://blazor.syncfusion.com/demos/splitter/details-view?theme=bootstrap4) example.
+Refer [Listview within splitter](https://blazor.syncfusion.com/demos/splitter/details-view?theme=bootstrap5) example.
 
 ## Plain content
 
@@ -67,9 +80,27 @@ The plain text can be added as a pane contents using either inner HTML or `Conte
 
 <SfSplitter Height="200px" Width="600px">
     <SplitterPanes>
-        <SplitterPane Content="@Content1" Size="200px"></SplitterPane>
-        <SplitterPane Content="@Content2" Size="200px"></SplitterPane>
-        <SplitterPane Content="@Content3" Size="200px"></SplitterPane>
+        <SplitterPane  Size="200px">
+          <ContentTemplate>
+            <div>
+               Left pane
+            </div>
+          </ContentTemplate>
+        </SplitterPane>
+        <SplitterPane  Size="200px">
+           <ContentTemplate>
+            <div>
+               Middle pane
+            </div>
+          </ContentTemplate>
+        </SplitterPane>
+        <SplitterPane  Size="200px">
+           <ContentTemplate>
+            <div>
+               Left pane
+            </div>
+          </ContentTemplate>
+        </SplitterPane>
     </SplitterPanes>
 </SfSplitter>
 
@@ -80,12 +111,6 @@ The plain text can be added as a pane contents using either inner HTML or `Conte
         display: grid;
     }
 </style>
-
-@code {
-    private string Content1 = "Left pane";
-    private string Content2 = "Middle pane";
-    private string Content3 = "Left pane";
-}
 
 ```
 

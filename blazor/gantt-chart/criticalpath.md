@@ -11,7 +11,7 @@ documentation: ug
 
 The critical path in a project is indicated by a single task or a series of tasks. If a task in critical path is delayed, the entire project will be delayed. A task is considered to be critical if any delay to this task would affect the project end date.
 
-The critical path can be enabled in Gantt by using the built-in toolbar button or [EnableCriticalPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableCriticalPath) property.
+The critical path can be enabled in the Gantt Chart by using the built-in toolbar button or by setting the [EnableCriticalPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_EnableCriticalPath) property to true in the [SfGantt](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html) component.
 
 The following code example shows how to display the critical path in the Gantt control:
 
@@ -62,15 +62,15 @@ The following code example shows how to display the critical path in the Gantt c
 ```
 ![Blazor Gantt Chart with Critical Path](images/blazor-gantt-chart-critical-path.png)
 
-## Critical Path Settings in Gantt Chart Component
+## Critical path settings in Gantt Chart Component
 
 The critical path settings in the Gantt Chart component determine the default slack value and validate it. Here is an example of how to add slack value to the Gantt Chart component.
 
 Slack is a measure of how many days a task can be delayed without affecting the project's completion. By default, tasks with zero or negative slack values are critical, while tasks with positive slack values are non-critical. If a task's end date is the same as the project's end date, the slack value is 0, and the task is considered critical.
 
-You can change the default behavior of critical tasks by using the slackValue property of `GanttCriticalPathSettings`. This property defines how many days a task can be delayed before it is considered critical. For instance, in the following code example, tasks with two days of slack are shown on the critical path, so potential issues can be detected earlier.
+You can change the default behavior of critical tasks by using the [SlackValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttCriticalPathSettings.html#Syncfusion_Blazor_Gantt_GanttCriticalPathSettings_SlackValue) property of [GanttCriticalPathSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttCriticalPathSettings.html). This property defines how many days a task can be delayed before it is considered critical. For instance, in the following code example, tasks with two days of slack are shown on the critical path, so potential issues can be detected earlier.
 
-By adjusting the slackValue, you can control which tasks are critical and ensure that potential issues are identified and addressed in a timely manner.
+By adjusting the `SlackValue`, you can control which tasks are critical and ensure that potential issues are identified and addressed in a timely manner.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -95,7 +95,7 @@ By adjusting the slackValue, you can control which tasks are critical and ensure
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -124,7 +124,7 @@ By adjusting the slackValue, you can control which tasks are critical and ensure
 
 The taskbar in critical path can be customized by using [QueryChartRowInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_QueryChartRowInfo) event. The [GanttTaskModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.QueryChartRowInfoEventArgs-1.html#Syncfusion_Blazor_Gantt_QueryChartRowInfoEventArgs_1_GanttTaskModel) in the event argument is used to retrieve taskbar information.
 
-The following code example shows how to customize the critical path taskbar in the Gantt control:
+The following code snippet demonstrates how to customize the appearance of critical path taskbars in a Gantt Chart:
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -158,7 +158,7 @@ The following code example shows how to customize the critical path taskbar in t
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -192,3 +192,5 @@ The following code example shows how to customize the critical path taskbar in t
 </style>
 ```
 ![Customize taskbar](images/blazor-gantt-chart-critical-path-customize-taskbar.png)
+
+>If the [ProjectEndDate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ProjectEndDate) property is set in the `SfGantt`, any task that ends on or after this date is considered critical. If the `ProjectEndDate` is not set, the maximum end date from the task records is used to determine which tasks are critical.

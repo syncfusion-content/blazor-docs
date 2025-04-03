@@ -30,7 +30,7 @@ You can search for records in the Gantt Chart component by using the [SearchAsyn
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -84,7 +84,7 @@ In the Gantt Chart component, you can load a task with some search criteria by u
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -155,7 +155,7 @@ To search the Gantt Chart records from an external button, invoke the `SearchAsy
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -207,7 +207,7 @@ By default, the Gantt Chart component searches all the columns. You can search s
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }
@@ -230,6 +230,8 @@ By default, the Gantt Chart component searches all the columns. You can search s
     }
 }
 ```
+
+<!-- {% previewsample "https://blazorplayground.syncfusion.com/embed/VXhKjmicpzmLzyfA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %} -->
 
 N> In above sample, you can search only `TaskName` and `Duration` column values.
 
@@ -265,7 +267,7 @@ You can pass the `empty` string to the `SearchAsync` method to clear the searche
         public int TaskId { get; set; }
         public string TaskName { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
         public int? ParentId { get; set; }

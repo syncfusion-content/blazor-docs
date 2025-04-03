@@ -7,7 +7,7 @@ control: Diagram
 documentation: ug
 ---
 
-N> Syncfusion recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> recommends using [Blazor Diagram Component](https://blazor.syncfusion.com/documentation/diagram/getting-started) which provides better performance than this diagram control. Blazor Diagram Component will be actively developed in the future.
 
 # Actions of Connectors in Blazor Diagram Component
 
@@ -123,7 +123,7 @@ public void AddConnector()
 
 Connectors can be predefined and added to the symbol palette. You can drop those connectors into the diagram when required.
 
-For more information about adding connectors from symbol palette, refer to the [Symbol Palette](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Diagrams.SymbolPalettePalette.html).
+For more information about adding connectors from symbol palette, refer to the [Symbol Palette](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SymbolPalettePalette.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams

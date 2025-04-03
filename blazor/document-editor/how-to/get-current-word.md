@@ -30,9 +30,9 @@ The following example code illustrates how to select and get the current word as
     public async void OnCreated(object args)
     {
         // To insert text in cursor position
-        container.DocumentEditor.Editor.InsertTextAsync("Document editor");
+        await container.DocumentEditor.Editor.InsertTextAsync("Document editor");
         // To select the current word in document
-        container.DocumentEditor.Selection.SelectCurrentWordAsync();
+        await container.DocumentEditor.Selection.SelectCurrentWordAsync();
         // To get the selected content as text
         string selectedContent = await container.DocumentEditor.Selection.GetTextAsync();
     }
@@ -60,9 +60,9 @@ The following example code illustrates how to select and get the current paragra
     public async void OnCreated(object args)
     {
         // To insert text in cursor position
-        container.DocumentEditor.Editor.InsertTextAsync("Document editor");
+        await container.DocumentEditor.Editor.InsertTextAsync("Document editor");
         // To select the current paragraph in document
-        container.DocumentEditor.Selection.SelectParagraphAsync();
+        await container.DocumentEditor.Selection.SelectParagraphAsync();
         // To get the selected content as SFDT
         string selectedContent = await container.DocumentEditor.Selection.GetSfdtAsync();
     }

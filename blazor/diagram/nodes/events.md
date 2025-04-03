@@ -11,7 +11,7 @@ documentation: ug
 
 ## Events
 
-Diagram provides some events support for node that triggers when interacting with the node.
+Diagram provides several events support for node that triggers when interacting with the node.
 
 ## Selection change event
 
@@ -75,7 +75,7 @@ The following code example explains how to get the selection change event in the
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events/SelectionChange)
 
 ## Position change event
 
@@ -137,7 +137,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events/PositionChange)
 
 ## Size change event
 
@@ -198,7 +198,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events/SizeChange)
 
 ## Rotate change event
 
@@ -259,7 +259,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events/RotationChange)
 
 ## NodeCreating event
 
@@ -309,57 +309,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 }
 ```
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events)
-## NodeCreating event
-
-* The [NodeCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_NodeCreating)  helps you to define the default properties of the node. The node creation is triggered when the diagram is initialized. In the node creating event, you can customize the node properties.
-
-```cshtml
-@using Syncfusion.Blazor.Diagram
-
-<SfDiagramComponent Height="600px" 
-                    Nodes="@nodes" 
-                    NodeCreating="OnNodeCreating" />
-
-@code
-{
-    // Define the node collection.
-    DiagramObjectCollection<Node> nodes;
-
-    protected override void OnInitialized()
-    {
-        nodes = new DiagramObjectCollection<Node>();
-        //  A node is created and stored in node collection.
-        Node node = new Node()
-        {
-            // Position of the node.
-            OffsetX = 250,
-            OffsetY = 250,
-            // Size of the node.
-            Width = 100,
-            Height = 100,
-            Style = new ShapeStyle() 
-            { 
-                Fill = "#6BA5D7", 
-                StrokeColor = "white" 
-            }
-        };
-        // Add node.
-        nodes.Add(node);
-    }
-
-    public void OnNodeCreating(IDiagramObject args)
-    { 
-        Node node = obj as Node;
-        node.Style.Fill = "#357BD2";
-        node.Style.StrokeColor = "White";
-        node.Style.Opacity = 1;
-    }
-```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events/NodeCreatingEvent)
 
 ## How to enable or disable certain behaviors of the node
 
-The Constraints property of node allows you to enable or disable certain features. For more information about node constraints, refer to the [Node Constraints](../constraints).
+The Constraints property of node allows you to enable or disable certain features. For more information about node constraints, refer to the [Node Constraints](https://blazor.syncfusion.com/documentation/diagram/constraints#node-constraints).
 
 ## See also
 

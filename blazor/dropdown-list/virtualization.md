@@ -9,22 +9,14 @@ documentation: ug
 
 # Virtualization in DropDown List
 
-The DropDownList has been provided with virtualization to improve the UI performance for a large amount of data when the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_EnableVirtualization) is true. 
-This feature doesn’t render out the entire data source on initial component rendering. It loads the N number of items in the popup on initial rendering and the remaining number of items will be loaded on each scrolling action in the popup. It can work with both local and remote data.
+To get started quickly with Virtualization in the Blazor DropDown List component, you can check the video below.
 
-Specify the count of the items to be appended in the popup element using [ItemsCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ItemsCount) property when the `EnableVirtualization` is enabled. 
+{% youtube "https://www.youtube.com/watch?v=ysctYSeGZYE" %}
 
-In the following sample, if the scroll action takes place, it will append 20 more items to the popup element.
+The DropDownList component includes a virtual scrolling feature designed to enhance UI performance, particularly for handling large datasets. By enabling the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_EnableVirtualization) option, the DropDownList intelligently manages data rendering, ensuring only a subset of items is initially loaded when the component is rendered. As you interact with the dropdown, additional items are dynamically loaded as you scroll, creating a smooth and efficient user experience.
 
-{% highlight cshtml %}
+This feature is applicable to both local and remote data scenarios, providing flexibility in its implementation. For instance, consider a case where the DropDownList is bound to a dataset containing 150 items. Upon opening the dropdown, only a few items are loaded initially, based on the height of the popup. As you scroll through the list, additional items are fetched and loaded on-demand, allowing you to effortlessly explore the complete dataset.
 
-{% include_relative code-snippet/virtualization/item-count.razor %}
-
-{% endhighlight %}
-
-## Local data
-
-In the following code, 150 local data items bound to the component but only 6 items will be loaded to the popup when you open the popup. Remaining number of items will be loaded on each scrolling action in the popup.
 
 {% highlight cshtml %}
 
@@ -34,33 +26,28 @@ In the following code, 150 local data items bound to the component but only 6 it
 
 ![Blazor DropDownList with virtualization of local data](./images/virtualization/blazor_dropdownlist_virtualization-local-data.gif)
 
-## Remote data 
 
-In the following code, the remote data bound to the DropDownList component, but only 10 items will be loaded to the popup when you open the popup. Remaining number of items will be loaded on each scrolling action in the popup.
+## Grouping with Virtualization
 
-{% highlight cshtml %}
+The DropDownList component supports grouping with Virtualization. It allows you to organize elements into groups based on different categories. Each item in the list can be classified using the [DropDownListFieldSettings.GroupBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListFieldSettings.html#Syncfusion_Blazor_DropDowns_DropDownListFieldSettings_GroupBy) field in the data table. After grouping, virtualization works similarly to local data binding, providing a seamless user experience. When the data source is bound to remote data, an initial request is made to retrieve all data for the purpose of grouping. Subsequently, the grouped data works in the same way as local data binding on virtualization. 
 
-{% include_relative code-snippet/virtualization/remote-data.razor %}
-
-{% endhighlight %}
-
-![Blazor DropDownList with virtualization of remote data](./images/virtualization/blazor_dropdown_virtualization-remote-data.gif)
-
-## ItemsCount     
-
-The data can be fetched in popup based on [ItemsCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ItemsCount), when enabled the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_EnableVirtualization). ItemsCount is applicable only when `EnableVirtualization` is used as true. ItemsCount is depends on `EnableVirtualization`
-
-Default value of `ItemsCount` is `5`.
+The following sample shows the example for Grouping with Virtualization. 
 
 {% highlight cshtml %}
 
-{% include_relative code-snippet/virtualization/item-count.razor %}
+{% include_relative code-snippet/virtualization/group.razor %}
 
 {% endhighlight %}
 
-## Limitation of virtualization
+## Keyboard interaction
 
-* Virtualization is not supported in the grouping feature.
+Users can navigate through the scrollable content using keyboard actions. This feature loads the next or next set of items based on the key inputs in the popup.
 
-
-
+| Key | Action |
+|-----|-----|
+| `ArrowDown` | Loads the next virtual list item if the selection is present in last item of the current page. |
+| `ArrowUp` | Loads the previous virtual list item if the selection is present in first item of the current page. |
+| `PageDown` | Loads the next page and selects the last item in it. |
+| `PageUp` | Loads the previous page and selects the first item in it. |
+| `Home` | Loads the initial set of items and selects first item in it. |
+| `End` | Loads the last set of items and selects last item in it. |

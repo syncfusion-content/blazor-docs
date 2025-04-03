@@ -11,7 +11,7 @@ documentation: ug
 
 ## Localization
 
-The [Blazor DropDownList](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) component can be localized. Refer to the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion Blazor components.
+The [Blazor DropDownList](https://www.syncfusion.com/blazor-components/blazor-dropdown-list) component can be localized. Refer to the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
 
 ## Globalization
 
@@ -28,5 +28,3 @@ Specifies the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 {% endhighlight %}
 
 ![Blazor DropDownList with EnableRtl](./images/localization/blazor_dropdown_enableRtl.png)
-
-

@@ -13,7 +13,7 @@ documentation: ug
 
 ## Title
 
-A title can be added to the axis using the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartModel.html#Syncfusion_Blazor_Charts_StockChartModel_Title) property to provide quick information to the user about the data plotted in the axis. Title style can be customized using the [TitleStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartModel.html#Syncfusion_Blazor_Charts_StockChartModel_TitleStyle) property of the axis.
+A title can be added to the axis using the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfStockChart.html#Syncfusion_Blazor_Charts_SfStockChart_Title) property to provide quick information to the user about the data plotted in the axis. Title style can be customized using the [TitleStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTitleStyle.html) property of the axis.
 
 ```cshtml
 
@@ -99,7 +99,7 @@ The `Width`, `Color` and `Size` of the minor and major tick lines can be cu
 
 ## Grid Lines Customization
 
-The `Width`, `Color` and `DashArray` of the minor and major grid lines can be customized using the [MajorGridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AxisModel~MajorGridLines.html) and the [MinorGridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AxisModel~MinorGridLines.html) properties in the axis.
+The `Width`, `Color` and `DashArray` of the minor and major grid lines can be customized using the [MajorGridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_MajorGridLines) and the [MinorGridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_MinorGridLines) properties in the axis.
 
 ```cshtml
 

@@ -16,13 +16,11 @@ The SfPdfViewer control provides the support to import and export annotations us
 ![Blazor SfPdfViewer with Edit Button](../../pdfviewer/images/blazor-pdfviewer-edit-button.png)
 
 * The annotation toolbar will appear.
-
 * Click the Comment Panel button in the annotation toolbar.
 
 ![Blazor SfPdfViewer with Comment Panel](../../pdfviewer/images/blazor-pdfviewer-edit-sticknotes-comment.png)
 
 * The comments panel will be displayed.
-
 * Click the **More Option** button in the comment panel container.
 
 ![Displaying More Option in Blazor SfPdfViewer](../../pdfviewer/images/blazor-pdfviewer-show-more-option.png)
@@ -30,15 +28,10 @@ The SfPdfViewer control provides the support to import and export annotations us
 ## Importing annotation to the PDF document
 
 * Click the Add or Edit annotation button in the SfPdfViewer toolbar.
-
 * The annotation toolbar will appear.
-
 * Click the Comment Panel button in the annotation toolbar.
-
 * The comments panel will displayed.
-
 * Click the **More Option** button in the comment panel container.
-
 * Select the Import Annotations Option.
 
 ![Importing Annotation in Blazor SfPdfViewer](../../pdfviewer/images/blazor-pdfviewer-import-annotation.png)
@@ -57,12 +50,10 @@ You can import annotations using JSON file or JSON object in code behind like th
 @using Syncfusion.Blazor.SfPdfViewer
 
 <SfButton OnClick="@OnImportAnnotationsClick">Import Annotation</SfButton>
-
 <SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
 
 @code {
     SfPdfViewer2 Viewer;
-    
     public string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
     public async void OnImportAnnotationsClick(MouseEventArgs args)
@@ -75,7 +66,7 @@ You can import annotations using JSON file or JSON object in code behind like th
 
 ```
 
-N> [View sample in GitHub]().
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Import-Export/Annotations%20as%20JSON%20object).
 
 N>The JSON file for importing the annotation should be placed in the desired location and the path has to be provided correctly.
 
@@ -104,13 +95,10 @@ You can export annotations as JSON file in code behind like the following code s
 @using Syncfusion.Blazor.Buttons
 
 <SfButton OnClick="@OnExportAnnotationsClick">Export Annotation</SfButton>
-
 <SfPdfViewer2 Width="100%" Height="100%" DocumentPath="@DocumentPath" @ref="@Viewer" />
 
 @code {
-
     SfPdfViewer2 Viewer;
-
     public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
 
     public async void OnExportAnnotationsClick(MouseEventArgs args)
@@ -120,4 +108,8 @@ You can export annotations as JSON file in code behind like the following code s
 }
 
 ```
-N> [View sample in GitHub]().
+[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Import-Export/Annotations%20as%20JSON%20stream%20and%20file).
+
+## See also
+
+* [How to import annotations as objects](../how-to/import-annotations-as-objects)

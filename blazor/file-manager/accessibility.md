@@ -1,21 +1,49 @@
 ---
 layout: post
-title: Accessibility in Blazor FileManager Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor FileManager component and more.
+title: Accessibility in Blazor File Manager Component | Syncfusion
+description: Checkout and learn here all about Accessibility in Syncfusion Blazor File Manager component and more.
 platform: Blazor
 control: File Manager
 documentation: ug
 ---
 
-# Accessibility in Blazor FileManager Component
+# Accessibility in Blazor File Manager Component
 
-The File Manager component has been designed with keeping the `WAI-ARIA` specifications in mind, and applied the `WAI-ARIA` roles, states, and properties along with `keyboard support`. This component is characterized by complete keyboard interaction support and ARIA accessibility support, which makes navigation easy for people who use assistive technologies (AT) or for users who completely rely on keyboard navigation.
+The [Blazor FileManager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component has been designed with keeping the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) specifications in mind, and applied the `WAI-ARIA` roles, states, and properties along with `keyboard support`. This component is characterized by complete keyboard interaction support and ARIA accessibility support, which makes navigation easy for people who use assistive technologies (AT) or for users who completely rely on keyboard navigation.
 
-## ARIA attributes
+The Blazor File Manager component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
- The following `ARIA` Attributes denote the state of File Manager.
+The accessibility compliance for the Blazor File Manager component is outlined below.
 
- | **Property** | **Functionalities** |
+| Accessibility Criteria | Compatibility |
+| -- | -- |
+| [WCAG 2.2](https://www.w3.org/TR/WCAG22/) Support | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| [Section 508](https://www.section508.gov/) Support | <img src="https://cdn.syncfusion.com/content/images/documentation/full.png" alt="Yes"> |
+| Screen Reader Support | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| Right-To-Left Support | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| Color Contrast | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| Mobile Device Support | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| Keyboard Navigation Support | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+| [Axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) Accessibility Validation | <img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> |
+
+<style>
+    .post .post-content img {
+        display: inline-block;
+        margin: 0.5em 0;
+    }
+</style>
+
+<div><img src="https://cdn.syncfusion.com/content/images/landing-page/yes.png" alt="Yes"> - All features of the component meet the requirement.</div>
+
+<div><img src="https://cdn.syncfusion.com/content/images/documentation/partial.png" alt="Partial"> - Some features of the component do not meet the requirement.</div>
+
+<div><img src="https://cdn.syncfusion.com/content/images/landing-page/no.png" alt="No"> - The component does not meet the requirement.</div>
+
+## WAI-ARIA attributes
+
+The Blazor File Manager component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/) patterns to meet the accessibility. The following ARIA attributes are used in the File Manager component:
+
+| **Attributes** | **Purpose** |
 | --- | --- |
 | aria-disabled | Indicates whether the File Manager component is in disabled state.|
 | aria-haspopup | Indicates whether the Toolbar element has a suggestion list. |
@@ -52,6 +80,16 @@ You can use the following key shortcuts to access the File Manager without inter
 | <kbd>Tab</kbd> | Focuses on the first element of toolbar and navigates through the next tab indexed element. |
 | <kbd>Esc(Escape)</kbd> | Closes the image when it is in open state. |
 | <kbd>Alt+N</kbd> | Creates a new folder dialog.|
-| <kbd>F5</kbd> | Refresh the file manager element. |
-| <kbd>Ctrl+Shift+1</kbd> | Changes the file manager layout to Grid view. |
-| <kbd>Ctrl+Shift+2</kbd> | Changes the file manager layout to Details view. |
+| <kbd>F5</kbd> | Refresh the File Manager element. |
+| <kbd>Ctrl+Shift+1</kbd> | Changes the File Manager layout to Grid view. |
+| <kbd>Ctrl+Shift+2</kbd> | Changes the File Manager layout to Details view. |
+
+## Ensuring accessibility
+
+The Blazor File Manager component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) software tool during automated testing.
+
+The accessibility compliance of the File Manager component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/filemanager) in a new window to evaluate the accessibility of the File Manager component with accessibility tools.
+
+## See also
+
+* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)

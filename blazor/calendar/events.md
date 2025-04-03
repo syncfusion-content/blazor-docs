@@ -15,8 +15,8 @@ N> From `v17.2.*` added only the limited number of events for the Calendar compo
 
 Event Name(`v17.1.*`) |Event Name(`v17.2.*`)
 -----|-----
-change |[ValueChange](events/#valuechange)
-renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
+change |[ValueChange](events#valuechange)
+renderDayCell |[OnRenderDayCell](events#onrenderdaycell)
 
 ## OnRenderDayCell
 
