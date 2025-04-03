@@ -120,6 +120,8 @@ In the following example, **Id**, **FolderName**, and **SubFolders** columns fro
 
 ![Blazor TreeView with Hierarchical Data](./images/blazor-treeview-hierarchical-data.png)
 
+N> In the Blazor TreeView component, observable collection support is provided only for the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_DataSource) property, not for the [`Child`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_Child) property. The Child property supports only the **List<T>** data type.
+
 ### Self-referential data
 
 Blazor TreeView can be populated from self-referential data structure that contains list of objects with `ParentID` mapping. The self-referential data can be directly assigned to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_DataSource) property, and map all the field members with corresponding keys from self-referential data to [`TreeViewFieldsSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldsSettings-1.html) property.
