@@ -104,18 +104,18 @@ Empty the value of `ExportType` to disable the Export.
 
 ![Disabling Export and Print in Blazor Stock Chart](images/print/blazor-stock-chart-disable-print-export.png)
 
-### Customizing the exported chart using Exporting event
+## Customizing the exported chart using Exporting event
 
-The `Exporting` event allows users to customize the exported stock chart before it is generated. The `ChartExportEventArgs` class provides the following options for customizing the exported stock chart:
+The [Exporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_Exporting) event allows users to customize the exported stock chart before it is generated. The [ChartExportEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartExportEventArgs.html) class provides the following options for customizing the exported stock chart:
 
 * `Cancel`: This property cancels the export process when set to **true**.
 * `Height`: This property specifies the height of the exported chart. When the value is changed, the chart's height is updated. It is not applicable for **XLSX** and **CSV** formats.
 * `Width`: This property specifies the width of the exported chart. Changing the value updates the chart's width. It is not applicable for **XLSX** and **CSV** formats.
 * `Workbook`: Represents the workbook generated during export, applicable only for **XLSX** and **CSV** formats.
 
-#### Customizing the exported Excel documents
+### Customizing the exported Excel documents
 
-The `Workbook` property in the event argument of `Exporting` event allows the users to customize the exported Excel sheet by modifying the properties of rows, columns, and cells, such as changing the font color, font size, font name, making the text bold, setting a background color, and center-aligning the text within the cells, before the file is generated.
+The [Workbook](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartExportEventArgs.html#Syncfusion_Blazor_Charts_ChartExportEventArgs_Workbook) property in the event argument of [Exporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_Exporting) event allows the users to customize the exported Excel sheet by modifying the properties of rows, columns, and cells, such as changing the font color, font size, font name, making the text bold, setting a background color, and center-aligning the text within the cells, before the file is generated.
 
 In the code below, when the stock chart is exported to Excel format, the exported Excel document is customized using the `Exporting` event. If export types other than **XLSX** or **CSV** are selected, the `Workbook` property will be **null**, and the chart's width will be set to **500px**.
 
