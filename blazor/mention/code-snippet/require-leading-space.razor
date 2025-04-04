@@ -1,0 +1,44 @@
+@using Syncfusion.Blazor.DropDowns
+
+<SfMention TItem="UserData" DataSource="@data" RequireLeadingSpace="false">
+    <TargetComponent>
+        <div id="commentsMention" placeholder="Type @@ and tag user" ></div>
+    </TargetComponent>
+    <ChildContent>
+        <MentionFieldSettings Text="Name" Value="EmailId"></MentionFieldSettings>
+    </ChildContent>
+</SfMention>
+
+<style>
+    #commentsMention {
+        min-height: 100px;
+        border: 1px solid #D7D7D7;
+        border-radius: 4px;
+        padding: 8px;
+        font-size: 14px;
+        width: 600px;
+    }
+    div#commentsMention[placeholder]:empty:before {
+        content: attr(placeholder);
+        color: #555;
+    }
+</style>
+
+@code {
+
+    public class UserData
+    {
+        public string Name { get; set; }
+        public string EmailId { get; set; }
+    }
+
+    public List<UserData> data = new List<UserData>()
+    {
+        new UserData { Name = "Selma Rose", EmailId = "selma@gmail.com" },
+        new UserData { Name = "Maria", EmailId = "maria@gmail.com" },
+        new UserData { Name = "Russo kay", EmailId = "russo@gmail.com" },
+        new UserData { Name = "Robert", EmailId = "robert@gmail.com" },
+        new UserData { Name = "Garth", EmailId = "garth@gmail.com" }
+    };
+
+}
