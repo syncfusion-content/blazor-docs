@@ -454,6 +454,7 @@ The [ChartCornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 ```
 
 ![Stacked Column 100 Chart with corner radius](../images/chart-types-images/blazor-stacked-column-100-chart-corner-radius.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDrytzZpqmFAhCEn?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 We can also customize the corner radius for individual points in the chart series using the [OnPointRender](https://blazor.syncfusion.com/documentation/chart/events#onpointrender) event by utilizing the [CornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_CornerRadius) property in its event argument.
 
@@ -499,7 +500,7 @@ We can also customize the corner radius for individual points in the chart serie
 
     public void PointRenderEvent(PointRenderEventArgs args)
     {
-        if (args.Point.X == "2015" || args.Point.X == "2017" || args.Point.X == "2019")
+        if ((args.Point.X as string) == "2015" || (args.Point.X as string) == "2017" || (args.Point.X as string) == "2019")
         {
             args.CornerRadius.BottomRight = 20;
             args.CornerRadius.BottomLeft = 20;
@@ -511,6 +512,7 @@ We can also customize the corner radius for individual points in the chart serie
 
 ```
 ![Stacked Column 100 Chart with corner radius using OnPointRender event](../images/chart-types-images/blazor-stacked-column-100-chart-corner-radius-onPointRender.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjroXTtTUvBXPRDt?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 ## Empty points
 

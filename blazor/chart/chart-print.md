@@ -428,7 +428,7 @@ In the code example below, the chart is exported to Excel format. The exported E
     private SfChart chartInstance;
     public string FileName { get; set; } = "Charts";
     public string Format { get; set; } = "{value} GW";
-    public LabelIntersectAction Label { get; set; } = LabelIntersectAction.Trim;
+    public Syncfusion.Blazor.Charts.LabelIntersectAction Label { get; set; } = Syncfusion.Blazor.Charts.LabelIntersectAction.Trim;
     public List<ExportData> ChartPoints { get; set; } = new List<ExportData>
     {
         new ExportData { Country="India", GigaWatts = 35.5 },
@@ -444,7 +444,7 @@ In the code example below, the chart is exported to Excel format. The exported E
     };
     public async Task ExportChart(MouseEventArgs args)
     {
-        await chartInstance.ExportAsync(ExportType.XLSX, FileName);
+        await chartInstance.ExportAsync(Syncfusion.Blazor.Charts.ExportType.XLSX, FileName);
     }
     public void BeforeExport(ChartExportEventArgs args)
     {

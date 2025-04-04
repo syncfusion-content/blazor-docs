@@ -198,7 +198,7 @@ In the code example below, the accumulation chart is exported to Excel format. T
 
     public async Task ExportChart(MouseEventArgs args)
     {
-        await accumulationChart.ExportAsync(ExportType.XLSX, "Statistics");
+        await accumulationChart.ExportAsync(Syncfusion.Blazor.Charts.ExportType.XLSX, "Statistics");
     }
 
     public void BeforeExport(ChartExportEventArgs args)
