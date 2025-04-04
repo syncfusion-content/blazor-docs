@@ -468,6 +468,124 @@ The [ColumnSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
 ``` 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjLUWrrnTnRLsksm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+### Corner radius
+
+The [ChartCornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html) property is used to customize the corner radius for range column series. This allows you to create columns with rounded corners, giving your chart a more polished appearance. You can customize each corner of the columns using the [BottomLeft](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html#Syncfusion_Blazor_Charts_ChartCornerRadius_BottomLeft), [BottomRight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html#Syncfusion_Blazor_Charts_ChartCornerRadius_BottomRight), [TopLeft](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html#Syncfusion_Blazor_Charts_ChartCornerRadius_TopLeft), [TopRight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html#Syncfusion_Blazor_Charts_ChartCornerRadius_TopRight) properties.
+
+
+```cshtml
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@Sales1" XName="X" High="High" Low="Low" Type="ChartSeriesType.RangeColumn">
+            <ChartCornerRadius TopLeft="4" TopRight="4" BottomLeft="4" BottomRight="4"></ChartCornerRadius>
+        </ChartSeries>
+        <ChartSeries DataSource="@Sales2" XName="X" High="High" Low="Low" Type="ChartSeriesType.RangeColumn">
+            <ChartCornerRadius TopLeft="4" TopRight="4" BottomLeft="4" BottomRight="4"></ChartCornerRadius>
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code {
+    public class SalesInfo
+    {
+        public string X { get; set; }
+        public double Low { get; set; }
+        public double High { get; set; }
+    }
+
+    public List<SalesInfo> Sales1 = new List<SalesInfo>
+    {
+        new SalesInfo { X= "Sun", Low= 3.1, High= 10.8 },
+        new SalesInfo { X= "Mon", Low= 5.7, High= 14.4 },
+        new SalesInfo { X= "Tue", Low= 8.4, High= 16.9 },
+        new SalesInfo { X= "Wed", Low= 10.6, High= 19.2 },
+        new SalesInfo { X= "Thu", Low= 8.5, High= 16.1 },
+        new SalesInfo { X= "Fri", Low= 6.0, High= 12.5 },
+        new SalesInfo { X= "Sat", Low= 1.5, High= 6.9 }
+    };
+
+    public List<SalesInfo> Sales2 = new List<SalesInfo>
+    {
+        new SalesInfo { X= "Sun", Low= 2.5, High= 9.8 },
+        new SalesInfo { X= "Mon", Low= 4.7, High= 11.4 },
+        new SalesInfo { X= "Tue", Low= 6.4, High= 14.4 },
+        new SalesInfo { X= "Wed", Low= 9.6, High= 17.2 },
+        new SalesInfo { X= "Thu", Low= 7.5, High= 15.1 },
+        new SalesInfo { X= "Fri", Low= 3.0, High= 10.5 },
+        new SalesInfo { X= "Sat", Low= 1.2, High= 7.9 }
+    };
+}
+```
+![Blazor Range Column Chart with corner radius](../images/chart-types-images/blazor-range-column-corner-radius.png)
+
+We can also customize the corner radius for individual points in the chart series using the [OnPointRender](https://blazor.syncfusion.com/documentation/chart/events#onpointrender) event by utilizing the `CornerRadius` property in its event argument.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartEvents OnPointRender="PointRenderEvent"></ChartEvents>
+
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@Sales1" XName="X" High="High" Low="Low" Type="ChartSeriesType.RangeColumn">
+        </ChartSeries>
+        <ChartSeries DataSource="@Sales2" XName="X" High="High" Low="Low" Type="ChartSeriesType.RangeColumn">
+        </ChartSeries>
+    </ChartSeriesCollection>    `
+</SfChart>
+
+@code {
+    public class SalesInfo
+    {
+        public string X { get; set; }
+        public double Low { get; set; }
+        public double High { get; set; }
+    }
+
+    public List<SalesInfo> Sales1 = new List<SalesInfo>
+    {
+        new SalesInfo { X= "Sun", Low= 3.1, High= 10.8 },
+        new SalesInfo { X= "Mon", Low= 5.7, High= 14.4 },
+        new SalesInfo { X= "Tue", Low= 8.4, High= 16.9 },
+        new SalesInfo { X= "Wed", Low= 10.6, High= 19.2 },
+        new SalesInfo { X= "Thu", Low= 8.5, High= 16.1 },
+        new SalesInfo { X= "Fri", Low= 6.0, High= 12.5 },
+        new SalesInfo { X= "Sat", Low= 1.5, High= 6.9 }
+    };
+
+    public List<SalesInfo> Sales2 = new List<SalesInfo>
+    {
+        new SalesInfo { X= "Sun", Low= 2.5, High= 9.8 },
+        new SalesInfo { X= "Mon", Low= 4.7, High= 11.4 },
+        new SalesInfo { X= "Tue", Low= 6.4, High= 14.4 },
+        new SalesInfo { X= "Wed", Low= 9.6, High= 17.2 },
+        new SalesInfo { X= "Thu", Low= 7.5, High= 15.1 },
+        new SalesInfo { X= "Fri", Low= 3.0, High= 10.5 },
+        new SalesInfo { X= "Sat", Low= 1.2, High= -7.9 }
+    };
+
+    public void PointRenderEvent(PointRenderEventArgs args)
+    {
+        if (args.Point.X == "Sun" || args.Point.X == "Wed" || args.Point.X == "Sat")
+        {
+            args.CornerRadius.TopLeft = 5;
+            args.CornerRadius.TopRight = 5;
+            args.CornerRadius.BottomLeft = 5;
+            args.CornerRadius.BottomRight = 5;
+        }
+    }
+}
+
+```
+![Blazor Range Column Chart with corner radius using OnPointRender event](../images/chart-types-images/blazor-range-column-corner-radius-onPointRender.png)
+
 ## Empty points
 
 Data points with `null` or `undefined` values are considered empty. Empty data points are ignored and not plotted on the chart.

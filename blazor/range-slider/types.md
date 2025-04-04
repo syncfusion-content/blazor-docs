@@ -13,9 +13,9 @@ The [**Type**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.Sf
 
 | **Types** | **Usage** |
 | --- | --- |
-| Default | Shows a default Slider to select a single value. |
-| MinRange | Displays the shadow from the start value to the current selected value. |
-| Range | Selects a range of values. It also displays the shadow in-between the selection range. |
+| Default | Allows to select a single value in the Slider. |
+| MinRange | Allows to select a single value in the Slider. Its display’s a shadow from the start to the current value. |
+| Range | Allows to select a range of values in the Slider. It displays shadow in-between the selection range. |
 
 N> Both the Default Slider and Min-Range Slider have same behavior that is used to select a single value.
 In Min-Range Slider, a shadow is considered from the start value to current handle position. But the Range Slider contains two handles that is used to select a range of values and a shadow is considered in between the two handles.
