@@ -208,7 +208,7 @@ Here is an example of changing the text color using the `ShapeChanging` event.
         if (args.CurrentShapeSettings.Type == ShapeType.Text)
         {
             args.CurrentShapeSettings.Color = "red";
-            args.CurrentShapeSettings.FontFamily = "italic";
+            args.CurrentShapeSettings.FontFamily = "Times New Roman";
         }
     }
 }
@@ -541,7 +541,7 @@ Here is an example of inserting rectangle, ellipse, arrow, path, and line in a b
 
 ![Blazor Image Editor with Annotation an image](./images/blazor-image-editor-annotation.png)
 
-## Delete a shape 
+### Delete a shape 
 
 The [`DeleteShapeAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DeleteShapeAsync_System_String_) method allows you to remove a shape annotation from the Blazor Image Editor component. To use this method, you need to pass the [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ShapeSettings.html#Syncfusion_Blazor_ImageEditor_ShapeSettings_ID) of the annotation as a parameter. 
 
@@ -556,10 +556,10 @@ Here is an example of deleting rectangle, ellipse, arrow, path, and line in a bu
 @using Syncfusion.Blazor.Buttons
 
 <div style="padding-bottom: 15px">
-    <SfButton OnClick="DrawTextAsync">Draw Text</SfButton>
+    <SfButton OnClick="DrawShapeAsync">Draw Shape</SfButton>
     <SfButton OnClick="DeleteShapeAsync">Delete Shape</SfButton>
 </div>
-<SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="400">
+<SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="400" width="600px">
     <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
 </SfImageEditor>
 
@@ -570,10 +570,10 @@ Here is an example of deleting rectangle, ellipse, arrow, path, and line in a bu
     {
         await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
-    private async void DrawTextAsync()
+    private async void DrawShapeAsync()
     {
         ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
-        await ImageEditor.DrawTextAsync(Dimension.X.Value + 100, Dimension.Y.Value + 100, "Enter\nText");
+        await ImageEditor.DrawEllipseAsync(Dimension.X.Value + 50, Dimension.Y.Value + 50);
     }
     private async void DeleteShapeAsync()
     {
@@ -582,9 +582,9 @@ Here is an example of deleting rectangle, ellipse, arrow, path, and line in a bu
 }
 ```
 
-![Blazor Image Editor with Delete text an image](./images/blazor-image-editor-delete-text.png)
+![Blazor Image Editor with Delete text an image](./images/blazor-image-editor-delete-shape.jpg)
 
-## Customize default stroke color for shapes 
+### Customize default stroke color for shapes 
 
 We provide default settings for stroke color, stroke width, fill color, and other customizations. If users wish to modify only the default options while preserving their previously selected customizations, they can do so by utilizing the [`ShapeChanging`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ImageEditorEvents.html#Syncfusion_Blazor_ImageEditor_ImageEditorEvents_ShapeChanging) event. Within this event, users can update the values in the [`CurrentShapeSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.ShapeChangeEventArgs.html#Syncfusion_Blazor_ImageEditor_ShapeChangeEventArgs_CurrentShapeSettings) object to apply their own preferences instead of the defaults. This approach allows conditional updates to the `CurrentShapeSettings`, ensuring that only the desired defaults are changed while maintaining the other settings.
 
@@ -603,14 +603,14 @@ We provide default settings for stroke color, stroke width, fill color, and othe
     }
     private async void ShapeChangingAsync(ShapeChangeEventArgs args)
     {
-        if (args.Action == "insert" && args.CurrentShapeSettings?.Type == ShapeType.FreehandDraw)
+        if (args.Action == "insert" && args.CurrentShapeSettings?.Type == ShapeType.Rectangle)
         {
             args.CurrentShapeSettings.StrokeColor = "red";
         }
     }
 }
 ```
-![Blazor Image Editor with Default Color](./images/blazor-image-editor-default-stroke-color.jpeg)
+![Blazor Image Editor with Default Color](./images/blazor-image-editor-default-stroke-color.jpg)
 
 ## Image annotation
 
