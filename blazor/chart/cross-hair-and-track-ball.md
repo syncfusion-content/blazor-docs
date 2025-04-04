@@ -217,7 +217,7 @@ The trackball is used to track the data point that is closest to the mouse or to
 
 ## Highlighting data range with crosshair
 
-The `HighlightCategory`property in [ChartCrosshairSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCrosshairSettings.html) enhances data visualization by highlighting the entire range of the corresponding category's data point when hovered over. This feature aids in trend analysis across multiple data points, especially in time series or category axis charts, making comparisons clearer and more visually distinct.
+The [HighlightCategory](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCrosshairSettings.html#Syncfusion_Blazor_Charts_ChartCrosshairSettings_HighlightCategory) property in [ChartCrosshairSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCrosshairSettings.html) enhances data visualization by highlighting the entire range of the corresponding category's data point when hovered over. This feature aids in trend analysis across multiple data points, especially in time series or category axis charts, making comparisons clearer and more visually distinct.
 
 ```cshtml
 
