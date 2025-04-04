@@ -9,9 +9,9 @@ documentation: ug
 
 # Data Binding in Blazor Accordion Component
 
-[Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) component provides an option to get the accordion items from the local data. It can be done through iteration of the Accordion Items using conditional **foreach** loop. Accordion only supports the local data for data binding. The [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_HeaderTemplate) and [ContentTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_ContentTemplate) properties can be used to render the accordion header and content respectively.
+The [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) component provides an option to populate accordion items from local data. This can be accomplished by iterating through accordion items using a conditional **foreach** loop. The Accordion component currently supports only local data for data binding. The [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_HeaderTemplate) and [ContentTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_ContentTemplate) properties can be used to render the accordion header and content respectively.
 
-The following sample explains how to initialize accordion items through `templates`.
+The following example demonstrates how to initialize accordion items using `templates`:
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

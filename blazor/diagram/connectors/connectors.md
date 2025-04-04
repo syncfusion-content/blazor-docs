@@ -57,8 +57,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Blazor Diagram Connector](../images/blazor-diagram-connector.png)
 
-N> [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_ID) for each connector should be unique and so it is further used to find the connector at runtime and perform any customization.
->**Note:** Connectors' Id should not start with numbers or special characters and should not contain special characters such as underscores(_) or spaces.
+>**Note:** 
+> * [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_ID) for each connector should be unique and so it is further used to find the connector at runtime and perform any customization. 
+> * Connectors' Id should not start with numbers or special characters and should not contain special characters such as underscores(_) or spaces.
 
 ## How to add connectors at runtime
 

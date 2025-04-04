@@ -403,6 +403,115 @@ The [ChartSeriesBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 ``` 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjLfNkWqJvLPaVvE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+### Corner radius
+
+The [ChartCornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html) property is used to customize the corner radius for 100% Stacked Column series. This allows you to create columns with rounded corners, giving your chart a more polished appearance. You can customize each corner of the columns using the [BottomLeft](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html#Syncfusion_Blazor_Charts_ChartCornerRadius_BottomLeft), [BottomRight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html#Syncfusion_Blazor_Charts_ChartCornerRadius_BottomRight), [TopLeft](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html#Syncfusion_Blazor_Charts_ChartCornerRadius_TopLeft), [TopRight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html#Syncfusion_Blazor_Charts_ChartCornerRadius_TopRight) properties.
+
+```cshtml
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@StackedDataList" XName="X" YName="Y" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn100">
+            <ChartCornerRadius BottomRight="5" TopRight="5" BottomLeft="5" TopLeft="5"></ChartCornerRadius>
+        </ChartSeries>
+        <ChartSeries DataSource="@StackedDataList" XName="X" YName="Y1" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn100">
+            <ChartCornerRadius BottomRight="5" TopRight="5" BottomLeft="5" TopLeft="5"></ChartCornerRadius>
+        </ChartSeries>
+        <ChartSeries DataSource="@StackedDataList" XName="X" YName="Y2" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn100">
+            <ChartCornerRadius BottomRight="5" TopRight="5" BottomLeft="5" TopLeft="5"></ChartCornerRadius>
+        </ChartSeries>
+        <ChartSeries DataSource="@StackedDataList" XName="X" YName="Y3" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn100">
+            <ChartCornerRadius BottomRight="5" TopRight="5" BottomLeft="5" TopLeft="5"></ChartCornerRadius>
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code {
+    public class StackedData
+    {
+        public string X { get; set; }
+        public double Y { get; set; }
+        public double Y1 { get; set; }
+        public double Y2 { get; set; }
+        public double Y3 { get; set; }
+    }
+
+    public List<StackedData> StackedDataList = new List<StackedData>
+    {
+        new StackedData { X = "2014", Y = 111.1, Y1 = 76.9, Y2 = 66.1, Y3 = 34.1 },
+        new StackedData { X = "2015", Y = 127.3, Y1 = 99.5, Y2 = 79.3, Y3 = 38.2 },
+        new StackedData { X = "2016", Y = 143.4, Y1 = 121.7, Y2 = 91.3, Y3 = 44.0 },
+        new StackedData { X = "2017", Y = 159.9, Y1 = 142.5, Y2 = 102.4, Y3 = 51.6 },
+        new StackedData { X = "2018", Y = 175.4, Y1 = 166.7, Y2 = 112.9, Y3 = 61.9 },
+        new StackedData { X = "2019", Y = 189.0, Y1 = 182.9, Y2 = 122.4, Y3 = 71.5 },
+        new StackedData { X = "2020", Y = 202.7, Y1 = 197.3, Y2 = 120.9, Y3 = 82.0 }
+    };
+}
+
+```
+
+![Stacked Column 100 Chart with corner radius](../images/chart-types-images/blazor-stacked-column-100-chart-corner-radius.png)
+
+We can also customize the corner radius for individual points in the chart series using the [OnPointRender](https://blazor.syncfusion.com/documentation/chart/events#onpointrender) event by utilizing the [CornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_CornerRadius) property in its event argument.
+
+```cshtml
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartEvents OnPointRender="PointRenderEvent"></ChartEvents>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@StackedDataList" XName="X" YName="Y" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn100">
+        </ChartSeries>
+        <ChartSeries DataSource="@StackedDataList" XName="X" YName="Y1" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn100">
+        </ChartSeries>
+        <ChartSeries DataSource="@StackedDataList" XName="X" YName="Y2" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn100">
+        </ChartSeries>
+        <ChartSeries DataSource="@StackedDataList" XName="X" YName="Y3" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn100">
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code {
+    public class StackedData
+    {
+        public string X { get; set; }
+        public double Y { get; set; }
+        public double Y1 { get; set; }
+        public double Y2 { get; set; }
+        public double Y3 { get; set; }
+    }
+
+    public List<StackedData> StackedDataList = new List<StackedData>
+    {
+        new StackedData { X = "2014", Y = 111.1, Y1 = 76.9, Y2 = 66.1, Y3 = 34.1 },
+        new StackedData { X = "2015", Y = 127.3, Y1 = 99.5, Y2 = 79.3, Y3 = 38.2 },
+        new StackedData { X = "2016", Y = 143.4, Y1 = 121.7, Y2 = 91.3, Y3 = 44.0 },
+        new StackedData { X = "2017", Y = 159.9, Y1 = 142.5, Y2 = 102.4, Y3 = 51.6 },
+        new StackedData { X = "2018", Y = 175.4, Y1 = 166.7, Y2 = 112.9, Y3 = 61.9 },
+        new StackedData { X = "2019", Y = 189.0, Y1 = 182.9, Y2 = 122.4, Y3 = 71.5 },
+        new StackedData { X = "2020", Y = 202.7, Y1 = 197.3, Y2 = 120.9, Y3 = 82.0 }
+    };
+
+    public void PointRenderEvent(PointRenderEventArgs args)
+    {
+        if (args.Point.X == "2015" || args.Point.X == "2017" || args.Point.X == "2019")
+        {
+            args.CornerRadius.BottomRight = 20;
+            args.CornerRadius.BottomLeft = 20;
+            args.CornerRadius.TopRight = 20;
+            args.CornerRadius.TopLeft = 20;
+        }
+    }
+}
+
+```
+![Stacked Column 100 Chart with corner radius using OnPointRender event](../images/chart-types-images/blazor-stacked-column-100-chart-corner-radius-onPointRender.png)
+
 ## Empty points
 
 Data points with `null`, `double.NaN` or `undefined` values are considered empty. Empty data points are ignored and not plotted on the chart.
