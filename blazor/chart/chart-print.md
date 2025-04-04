@@ -373,6 +373,116 @@ If you set `IsBase64` parameter to **true** while calling the [ExportAsync](http
 
 ```
 
+### Customizing the exported chart using Exporting event
+
+The `Exporting` event allows users to customize the exported chart before it is generated. The `ChartExportEventArgs` class provides the following options for customizing the exported chart:
+
+* `Cancel`: This property cancels the export process when set to **true**.
+* `Height`: This property specifies the height of the exported chart. When the value is changed, the chart's height is updated. It is not applicable for **XLSX** and **CSV** formats.
+* `Width`: This property specifies the width of the exported chart. Changing the value updates the chart's width. It is not applicable for **XLSX** and **CSV** formats.
+* `Workbook`: Represents the workbook generated during export, applicable only for **XLSX** and **CSV** formats.
+
+#### Customizing the exported Excel documents
+
+The `Workbook` property in the event argument of `Exporting` event allows the users to customize the exported Excel sheet by modifying the properties of rows, columns, and cells, such as changing the font color, font size, font name, making the text bold, setting a background color, and center-aligning the text within the cells, before the file is generated.
+
+In the code example below, the chart is exported to Excel format. The exported Excel document is customized using the `Exporting` event. If the `ExportType` parameter in the `ExportAsync` method is set to something other than **XLSX** or **CSV**, the `Workbook` property will be **null**, and the chart's width will be set to **500px**.
+
+```cshtml
+@using Syncfusion.Blazor.Charts;
+@using Microsoft.AspNetCore.Components.Web;
+@using Syncfusion.PdfExport;
+@using Syncfusion.ExcelExport;
+
+<div id="button">
+    <button onclick="@ExportChart">
+        Export
+    </button>
+</div>
+<div id="chart">
+    <SfChart @ref="@chartInstance" Title="Top 10 Countries Using Solar Power" Theme=" Syncfusion.Blazor.Theme.Tailwind3">
+        <ChartArea><ChartAreaBorder Width="0"></ChartAreaBorder></ChartArea>
+        <ChartPrimaryXAxis Title="XaxisTitle" ValueType="Syncfusion.Blazor.Charts.ValueType.Category" Interval="1" LabelIntersectAction="@Label" LabelRotation="-45">
+            <ChartAxisMajorGridLines Width="0"></ChartAxisMajorGridLines>
+            <ChartAxisMajorTickLines Width="0"></ChartAxisMajorTickLines>
+        </ChartPrimaryXAxis>
+        <ChartPrimaryYAxis Minimum="0" Maximum="40" Interval="10" Title="Measurements (in Gigawatt)" LabelFormat="@Format">
+            <ChartAxisMajorGridLines Width="0"></ChartAxisMajorGridLines>
+            <ChartAxisLineStyle Width="0"></ChartAxisLineStyle>
+            <ChartAxisMajorGridLines Width="2"></ChartAxisMajorGridLines>
+            <ChartAxisMajorTickLines Width="0"></ChartAxisMajorTickLines>
+        </ChartPrimaryYAxis>
+        <ChartSeriesCollection>
+            <ChartSeries DataSource="@ChartPoints" XName="Country" YName="GigaWatts" Type="ChartSeriesType.Column">
+                <ChartMarker>
+                    <ChartDataLabel Visible="true" Position="Syncfusion.Blazor.Charts.LabelPosition.Top">
+                        <ChartDataLabelFont FontWeight="600" Size="9px" Color="#ffffff"></ChartDataLabelFont>
+                    </ChartDataLabel>
+                </ChartMarker>
+            </ChartSeries>
+        </ChartSeriesCollection>
+        <ChartEvents Exporting="BeforeExport"></ChartEvents>
+    </SfChart>
+</div>
+@code {
+    private SfChart chartInstance;
+    public string FileName { get; set; } = "Charts";
+    public string Format { get; set; } = "{value} GW";
+    public LabelIntersectAction Label { get; set; } = LabelIntersectAction.Trim;
+    public List<ExportData> ChartPoints { get; set; } = new List<ExportData>
+    {
+        new ExportData { Country="India", GigaWatts = 35.5 },
+        new ExportData { Country="China", GigaWatts = 18.3 },
+        new ExportData { Country="Italy", GigaWatts = 17.6 },
+        new ExportData { Country="Japan", GigaWatts = 13.6 },
+        new ExportData { Country="United state", GigaWatts = 12 },
+        new ExportData { Country="Spain", GigaWatts = 5.6 },
+        new ExportData { Country="France", GigaWatts = 4.6 },
+        new ExportData { Country="Australia", GigaWatts = 3.3 },
+        new ExportData { Country="Belgium", GigaWatts = 3 },
+        new ExportData { Country="United Kingdom", GigaWatts = 2.9 },
+    };
+    public async Task ExportChart(MouseEventArgs args)
+    {
+        await chartInstance.ExportAsync(ExportType.XLSX, FileName);
+    }
+    public void BeforeExport(ChartExportEventArgs args)
+    {
+        if (args.Workbook != null)
+        {
+            Worksheet firstSheet = args.Workbook.Worksheets.First();
+            firstSheet.Columns[0].Width = 500;
+            firstSheet.Columns[1].Width = 500;
+            firstSheet.Rows[1].Cells[0].Value = "Country";
+            firstSheet.Rows[1].Cells[1].Value = "GigaWatts";
+            firstSheet.Rows[0].Cells[0].CellStyle.BackColor = "#FFA07A";
+            for (int i = 0; i < 2; i++)
+            {
+                firstSheet.Rows[1].Cells[i].CellStyle.Bold = true;
+                firstSheet.Rows[1].Cells[i].CellStyle.BackColor = "#FFFF00";
+            }
+            for (int i = 2; i < firstSheet.Rows.Count; i++)
+            {
+                for (int j = 0; j < 2; j++)
+                {
+                    firstSheet.Rows[i].Height = 50;
+                    firstSheet.Rows[i].Cells[1].CellStyle.HAlign = HAlignType.Center;
+                    firstSheet.Rows[i].Cells[1].CellStyle.VAlign = VAlignType.Center;
+                }
+            }
+        } else {
+            args.Width = 500;
+        }
+    }
+    public class ExportData
+    {
+        public string Country { get; set; }
+        public double GigaWatts { get; set; }
+    }
+}
+
+```
+
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See Also
