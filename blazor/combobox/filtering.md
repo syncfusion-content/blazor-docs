@@ -21,7 +21,7 @@ The following code demonstrates the filtering functionality with local data in t
 
 {% endhighlight %}
 
-![Blazor ComboBox with local data filtering.](./images/filtering/blazor-combobox-with-local-data-filtering.png)
+![Blazor ComboBox with local data filtering.](images/filtering/blazor-combobox-with-local-data-filtering.png)
 
 ## Remote data
 
@@ -45,7 +45,7 @@ You can use the [DebounceDelay](https://help.syncfusion.com/cr/blazor/Syncfusion
 
 {% endhighlight %}
 
-![Blazor ComboBox with DebounceDelay in filtering.](./images/filtering/blazor-combobox-debounce-delay-in-filtering.gif)
+![Blazor ComboBox with DebounceDelay in filtering.](images/filtering/blazor-combobox-debounce-delay-in-filtering.gif)
 
 ## Filter type
 
@@ -65,7 +65,7 @@ In the following example, `EndsWith` filter type has been mapped to the `FilterT
 
 {% endhighlight %}
 
-![Blazor ComboBox with Filter Type.](./images/filtering/blazor-combobox-filter-type.png)
+![Blazor ComboBox with Filter Type.](images/filtering/blazor-combobox-filter-type.png)
 
 ## Minimum filter length
 
@@ -79,7 +79,7 @@ In the following example, the remote request does not fetch the search data unti
 
 {% endhighlight %}
 
-![Blazor ComboBox with Minimum filter length.](./images/filtering/blazor-combobox-minimum-filter-length.gif)
+![Blazor ComboBox with Minimum filter length.](images/filtering/blazor-combobox-minimum-filter-length.gif)
 
 ## Multi column filtering 
 
@@ -91,7 +91,7 @@ In the built-in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor theme fi
 
 {% endhighlight %}
 
-![Blazor ComboBox with Multi Column filtering.](./images/filtering/blazor-combobox-multi-column.png)
+![Blazor ComboBox with Multi Column filtering.](images/filtering/blazor-combobox-multi-column.png)
 
 You can achieve multiple column(field) filtering by passing the List of [predicates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_predicates) to the [And](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_And_Syncfusion_Blazor_Data_WhereFilter_) or [Or](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter_Or_Syncfusion_Blazor_Data_WhereFilter_) methods of [WhereFilters](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.WhereFilter.html#Syncfusion_Blazor_Data_WhereFilter__ctor).
 
@@ -101,7 +101,7 @@ You can achieve multiple column(field) filtering by passing the List of [predica
 
 {% endhighlight %}
 
-![Blazor ComboBox with Multi Column filtering.](./images/filtering/blazor-combobox-multi-colum-filtering.gif)
+![Blazor ComboBox with Multi Column filtering.](images/filtering/blazor-combobox-multi-colum-filtering.gif)
 
 ## Case sensitive filtering
 
