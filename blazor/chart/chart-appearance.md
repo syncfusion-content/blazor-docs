@@ -289,6 +289,94 @@ The [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfCha
 
 ![Blazor Column Chart with Title](images/appearance/blazor-column-chart-title.png)
 
+### Title position
+
+The [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitleStyle.html#Syncfusion_Blazor_Charts_ChartTitleStyle_Position) property customizes the placement of the chart title. It supports the following options: [Right](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitlePosition.html#Syncfusion_Blazor_Charts_ChartTitlePosition_Right), [Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitlePosition.html#Syncfusion_Blazor_Charts_ChartTitlePosition_Left), [Bottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitlePosition.html#Syncfusion_Blazor_Charts_ChartTitlePosition_Bottom), [Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitlePosition.html#Syncfusion_Blazor_Charts_ChartTitlePosition_Top), and [Custom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitlePosition.html#Syncfusion_Blazor_Charts_ChartTitlePosition_Custom), providing flexible title alignment based on layout requirements. By default, the chart title appears at the top of the chart.
+
+N> The subtitle, which appears below the title, will also be positioned along with the title when the `Position` property is set.
+
+```cshtml 
+
+@using Syncfusion.Blazor.Charts
+
+<SfChart Title="Olympic Medals" SubTitle="Medals">
+    <ChartTitleStyle Position="ChartTitlePosition.Bottom"></ChartTitleStyle>
+
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+    </ChartPrimaryXAxis>
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@MedalDetails" XName="Country" YName="Gold" Type="ChartSeriesType.Column">
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code{
+    public class ChartData
+    {
+        public string Country { get; set; }
+        public double Gold { get; set; }
+    }
+
+    public List<ChartData> MedalDetails = new List<ChartData>
+	{
+		new ChartData{ Country= "USA", Gold=50  },
+		new ChartData{ Country="China", Gold=40 },
+		new ChartData{ Country= "Japan", Gold=70 },
+		new ChartData{ Country= "Australia", Gold=60},
+		new ChartData{ Country= "France", Gold=50 },
+		new ChartData{ Country= "Germany", Gold=40 },
+		new ChartData{ Country= "Italy", Gold=40 },
+		new ChartData{ Country= "Sweden", Gold=30 }
+    };
+}
+
+```
+![Position customization of title in Blazor Chart](images/appearance/blazor-chart-title-position.png)
+
+When the `Position` is set to `Custom`, the title can be positioned anywhere on the chart using the [X](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitleStyle.html#Syncfusion_Blazor_Charts_ChartTitleStyle_X) and [Y](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitleStyle.html#Syncfusion_Blazor_Charts_ChartTitleStyle_Y) properties in [ChartTitleStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitleStyle.html). This provides precise control over the title’s location, enabling customization to fit specific design or layout needs. The `X` and `Y` values specify the horizontal and vertical coordinates, respectively.
+
+```cshtml 
+
+@using Syncfusion.Blazor.Charts
+
+<SfChart Title="Olympic Medals" SubTitle="Medals">
+
+    <ChartTitleStyle Position="ChartTitlePosition.Custom" X="335" Y="60"></ChartTitleStyle>
+
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+        <ChartAxisMajorGridLines Width="0"></ChartAxisMajorGridLines>
+    </ChartPrimaryXAxis>
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@MedalDetails" XName="Country" YName="Gold" Type="ChartSeriesType.Column">
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code{
+    public class ChartData
+    {
+        public string Country { get; set; }
+        public double Gold { get; set; }
+    }
+
+    public List<ChartData> MedalDetails = new List<ChartData>
+	{
+		new ChartData{ Country= "USA", Gold=50  },
+		new ChartData{ Country="China", Gold=40 },
+		new ChartData{ Country= "Japan", Gold=70 },
+		new ChartData{ Country= "Australia", Gold=60},
+		new ChartData{ Country= "France", Gold=50 },
+		new ChartData{ Country= "Germany", Gold=40 },
+		new ChartData{ Country= "Italy", Gold=40 },
+		new ChartData{ Country= "Sweden", Gold=30 }
+    };
+}
+
+```
+![Custom position of title in Blazor Chart](images/appearance/blazor-chart-title-position-custom.png)
+
 ## Chart subtitle
 
 The [SubTitle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_SubTitle) property can be used to add a subtitle to the chart in-order to provide additional information about the data displayed.
