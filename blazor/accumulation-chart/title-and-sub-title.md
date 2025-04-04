@@ -134,6 +134,7 @@ N> The subtitle, which appears below the title, will also be positioned along wi
 
 ```
 ![Position customization of title in Blazor Accumulation Chart](images/title/blazor-accumulation-chart-subtitle-position.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLSZJNzBeDlhwIW?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 When the `Position` is set to `Custom`, the title can be positioned anywhere on the chart using the [X](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTitleStyle.html#Syncfusion_Blazor_Charts_AccumulationChartTitleStyle_X) and [Y](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTitleStyle.html#Syncfusion_Blazor_Charts_AccumulationChartTitleStyle_Y) properties in [AccumulationChartTitleStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTitleStyle.html). This provides precise control over the title’s location, enabling customization to fit specific design or layout needs. The `X` and `Y` values specify the horizontal and vertical coordinates, respectively.
 
@@ -172,6 +173,7 @@ When the `Position` is set to `Custom`, the title can be positioned anywhere on 
 
 ```
 ![Custom position of title in Blazor Accumulation Chart](images/title/blazor-accumulation-chart-subtitle-position-custom.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZheZfjfhogXJzAw?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 
 ## Subtitle

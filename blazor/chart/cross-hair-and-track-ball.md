@@ -235,15 +235,15 @@ The [HighlightCategory](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
     <ChartCrosshairSettings Enable="true" LineType="LineType.Vertical" HighlightCategory="true"></ChartCrosshairSettings>
     <ChartTooltipSettings Enable="true" Shared="true" Format="${series.name} : ${point.x} : ${point.y}"></ChartTooltipSettings>
     <ChartSeriesCollection>
-        <ChartSeries DataSource="StepChartValues" Type="ChartSeriesType.Line" XName="Year" YName="Y" Name="China">
+        <ChartSeries DataSource="StepChartValues" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Line" XName="Year" YName="Y" Name="China">
             <ChartMarker Visible="true" Width="10" Height="10">
             </ChartMarker>
         </ChartSeries>
-        <ChartSeries DataSource="StepChartValues" Type="ChartSeriesType.Line" XName="Year" YName="Y1" Name="Australia">
+        <ChartSeries DataSource="StepChartValues" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Line" XName="Year" YName="Y1" Name="Australia">
             <ChartMarker Visible="true" Width="10" Height="10">
             </ChartMarker>
         </ChartSeries>
-        <ChartSeries DataSource="StepChartValues" Type="ChartSeriesType.Line" XName="Year" YName="Y2" Name="Japan">
+        <ChartSeries DataSource="StepChartValues" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Line" XName="Year" YName="Y2" Name="Japan">
             <ChartMarker Visible="true" Width="10" Height="10">
             </ChartMarker>
         </ChartSeries>
@@ -275,6 +275,7 @@ The [HighlightCategory](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 ```
 
 ![Crosshair in Blazor Line Chart with highlight background](images/crosshair/blazor-line-chart-with-highlight-background-trackball.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBIjJjJztIfQRsg?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
