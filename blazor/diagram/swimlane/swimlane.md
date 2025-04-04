@@ -64,6 +64,8 @@ To create a swimlane, you have to define the swimlane object and add it to the [
 }
 ```
 
+>**Note:** Swimlane's Id should not start with numbers or special characters and should not contain special characters such as underscore(_) or space.
+
 Now, the swimlane will be as follows.
 
 ![Add swimlane](Swimlane-images/Swimlane_Empty.PNG)
