@@ -1770,73 +1770,60 @@ The toolbar can be divided into two sections as right and left. Whenever the too
 The following table provides the toolbar buttons that appear based on the selection.
 
 <!-- markdownlint-disable MD033 -->
-<table>
-<tr>
-<td> <b>Selected Items Count</b> </td>
-<td> <b>Left section </b></td>
-<td> <b>Right section </b></td>
-</tr>
-
-<tr>
-<td>
-
-`0` (none of the item )
-</td>
-<td>
-
-* SortBy
-* Refresh
-* NewFolder
-* Upload
-
-</td>
-<td>
-
-* View
-* Details
-
-</td>
-</tr>
-
-<tr>
-<td>
-
-`1` (single item selected)
-</td>
-<td>
-
-* Delete
-* Download
-* Rename
-
-</td>
-<td>
-
-* Selected items count
-* View
-* Details
-
-</td>
-</tr>
-
-<tr>
-<td>
-
-`>1` (multiple selection)
-</td>
-<td>
-
-* Delete
-* Download
-
-</td>
-<td>
-
-* Selected items count
-* View
-* Details
-
-</td>
-</tr>
-
+<table border="1">
+    <tr>
+        <th>Selected Items Count</th>
+        <th>Left section</th>
+        <th>Right section</th>
+    </tr>
+    <tr>
+        <td>`0` (none of the items)</td>
+        <td>
+            <ul>
+                <li>SortBy</li>
+                <li>Refresh</li>
+                <li>NewFolder</li>
+                <li>Upload</li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>View</li>
+                <li>Details</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>`1` (single item selected)</td>
+        <td>
+            <ul>
+                <li>Delete</li>
+                <li>Download</li>
+                <li>Rename</li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>Selected items count</li>
+                <li>View</li>
+                <li>Details</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>`>1` (multiple selection)</td>
+        <td>
+            <ul>
+                <li>Delete</li>
+                <li>Download</li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>Selected items count</li>
+                <li>View</li>
+                <li>Details</li>
+            </ul>
+        </td>
+    </tr>
 </table>
