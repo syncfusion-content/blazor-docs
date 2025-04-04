@@ -419,6 +419,93 @@ You can export the Scheduler data with specific date format, by defining the [`D
 
 ![Excel Exporting with Date Format in Blazor Scheduler](images/blazor-scheduler-excel-date-format.png)
 
+### How to customize the excel sheet on before exporting
+
+Customizing an Excel sheet before export is made easy with the [`ExcelExport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_ExcelExport) API. This API provides users with robust flexibility to tailor the exported data, format it according to specific needs, and include additional elements for enhanced presentation.
+
+With the [`ExcelExport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_ExcelExport) API, you can:
+
+- **Adjust the formatting:** Apply specific styles such as font type, size, color, and cell formatting to make the output visually appealing and consistent with your requirements.
+
+- **Customize headers and footers:** Personalize the Excel sheet by modifying the header and footer content, offering more control over the exported document.
+
+- **Cancel the export:** The API supports cancellation of the export process by setting the `cancel` property to `true`. This feature ensures you can prevent export based on specific conditions, offering you full control over the Excel export workflow.
+
+Here’s an example of how you can add a custom header and footer to an Excel sheet before exporting using the [`ExcelExport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_ExcelExport) API:
+
+```cshtml
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.XlsIO
+@using System.Globalization
+@using Syncfusion.ExcelExport
+
+  < div class="col-lg-12" style = "padding-top:15px" >
+    <SfButton Content="Export to Excel" OnClick="OnExportToExcel"></SfButton>
+</div >
+  <div class="col-lg-12 control-section">
+    <SfSchedule @ref="ScheduleRef" TValue="ScheduleData.AppointmentData" Width="100%" Height="650px"
+    @bind-SelectedDate="@CurrentDate">
+    <ScheduleEventSettings DataSource="@EventDataSource"></ScheduleEventSettings>
+    <ScheduleEvents TValue="ScheduleData.AppointmentData" ExcelExporting="OnExcelExporting"></ScheduleEvents>
+    <ScheduleViews>
+      <ScheduleView Option="View.Week"></ScheduleView>
+    </ScheduleViews>
+  </SfSchedule>
+</div >
+
+  @code {
+    private DateTime CurrentDate { get; set; } = DateTime.Today;
+  SfSchedule < ScheduleData.AppointmentData > ScheduleRef;
+    private List < ScheduleData.AppointmentData > EventDataSource = new ScheduleData().GetExportingData();
+ 
+    public List < ExportFieldInfo > exportFieldsGlobal = new List<ExportFieldInfo>();
+ 
+    public async Task OnExportToExcel()
+  {
+    List < ExportFieldInfo > exportFields = new List<ExportFieldInfo>
+    {
+      new ExportFieldInfo { Name = "Id", Text = "Id" },
+      new ExportFieldInfo { Name = "Subject", Text = "Summary" },
+      new ExportFieldInfo { Name = "StartTime", Text = "Start Date" },
+      new ExportFieldInfo { Name = "EndTime", Text = "End Date" },
+      new ExportFieldInfo { Name = "Location", Text = "Location" }
+    };
+
+    exportFieldsGlobal = exportFields;
+ 
+        ExportOptions options = new ExportOptions()
+    {
+      ExportType = ExcelFormat.Xlsx,
+        FieldsInfo = exportFields
+    };
+
+    await ScheduleRef.ExportToExcelAsync(options);
+  }
+    private void OnExcelExporting(ExcelExportEventArgs args)
+  {
+    var worksheet = args.Worksheet;
+    Row headerRow = worksheet.Rows.Add();
+    var headerCell = headerRow.Cells.Add();
+    headerCell.Index = 1;
+    headerCell.Value = "Custom Header";
+    headerCell.CellStyle.FontSize = 14;
+    headerCell.CellStyle.Bold = true;
+    worksheet.Rows.Insert(0, headerRow);
+    worksheet.Rows.RemoveAt(worksheet.Rows.Count - 1);
+    // Add a footer
+    Row footerRow = worksheet.Rows.Add();
+    var footerCell = footerRow.Cells.Add();
+    footerCell.Index = 1;
+    footerCell.Value = "Custom Footer";
+    footerCell.CellStyle.FontSize = 12;
+    footerCell.CellStyle.Italic = true;
+    for (var i = 0; i < worksheet.Rows.Count; i++) {
+    worksheet.Rows[i].Index = i + 1;
+    }
+  }
+}
+```
+
 ## Exporting calendar events as ICS file
 
 You can export the Scheduler events to a calendar (.ics) file format, and open it on any of the other default calendars such as Google or Outlook.
