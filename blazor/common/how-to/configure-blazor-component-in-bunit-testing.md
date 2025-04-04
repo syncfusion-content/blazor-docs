@@ -78,6 +78,8 @@ This section explains how to configure Syncfusion<sup style="font-size:70%">&reg
     using Syncfusion.Blazor;
     using Syncfusion.Blazor.Buttons;
     using Microsoft.Extensions.DependencyInjection;
+    using Microsoft.AspNetCore.Components;
+    using Microsoft.Extensions.DependencyInjection.Extensions;
 
     namespace BlazorXUnitTesting
     {
@@ -89,7 +91,7 @@ This section explains how to configure Syncfusion<sup style="font-size:70%">&reg
                 using var testContext = new TestContext();
 
                 // Add Syncfusion Blazor service.
-                testContext.Services.AddSyncfusionBlazor();
+                testContext.Services.AddSyncfusionBlazor().Replace(ServiceDescriptor.Transient<IComponentActivator, SfComponentActivator>());
                 testContext.Services.AddOptions();
 
                 // Rendering application Home component (~/Pages/Home.razor).
@@ -121,7 +123,7 @@ This section explains how to configure Syncfusion<sup style="font-size:70%">&reg
     using var testContext = new TestContext();
 
     // Add Syncfusion Blazor service.
-    testContext.Services.AddSyncfusionBlazor();
+    testContext.Services.AddSyncfusionBlazor().Replace(ServiceDescriptor.Transient<IComponentActivator, SfComponentActivator>());
     testContext.Services.AddOptions();
     ```
 
@@ -228,6 +230,9 @@ This section explains how to configure Syncfusion<sup style="font-size:70%">&reg
     using Syncfusion.Blazor;
     using Syncfusion.Blazor.Buttons;
     using Microsoft.Extensions.DependencyInjection;
+    using Microsoft.AspNetCore.Components;
+    using Microsoft.Extensions.DependencyInjection.Extensions;
+    
 
     namespace BlazorNUnitTesting
     {
@@ -240,7 +245,7 @@ This section explains how to configure Syncfusion<sup style="font-size:70%">&reg
                 using var testContext = new Bunit.TestContext();
 
                 // Add Syncfusion Blazor service.
-                testContext.Services.AddSyncfusionBlazor();
+                testContext.Services.AddSyncfusionBlazor().Replace(ServiceDescriptor.Transient<IComponentActivator, SfComponentActivator>());
                 testContext.Services.AddOptions();
 
                 // Rendering application Home component (~/Pages/Home.razor).
@@ -272,7 +277,7 @@ This section explains how to configure Syncfusion<sup style="font-size:70%">&reg
     using var testContext = new Bunit.TestContext();
 
     // Add Syncfusion Blazor service.
-    testContext.Services.AddSyncfusionBlazor();
+    testContext.Services.AddSyncfusionBlazor().Replace(ServiceDescriptor.Transient<IComponentActivator, SfComponentActivator>());
     testContext.Services.AddOptions();
     ```
 
@@ -317,13 +322,15 @@ This section explains how to configure Syncfusion<sup style="font-size:70%">&reg
 You can set the Blazor component parameter using `SetParametersAndRender` method.
 
 ```c#
+using Microsoft.AspNetCore.Components;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 [Fact]
 public void TestParameter()
 {
     using var testContext = new TestContext();
 
     // Add Syncfusion Blazor service.
-    testContext.Services.AddSyncfusionBlazor();
+    testContext.Services.AddSyncfusionBlazor().Replace(ServiceDescriptor.Transient<IComponentActivator, SfComponentActivator>());
     testContext.Services.AddOptions();
 
     // Rendering application Home component (~/Pages/Home.razor).
