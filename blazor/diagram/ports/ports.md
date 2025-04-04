@@ -71,11 +71,11 @@ To create and customize the ports in the Blazor Diagram, refer to the below vide
     }
 }
 ```
->**Note:** Port's Id should not start with numbers or special characters and should not contain special characters such as underscores(_) or spaces.
-
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ActionofPorts/CreatePorts)
 
 ![Creating Port in Blazor Diagram](../images/blazor-diagram-create-port.png)
+
+>**Note:** Port's Id should not start with numbers or special characters and should not contain special characters such as underscores(_) or spaces.
 
 ## How to add ports at runtime
 
