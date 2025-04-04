@@ -163,9 +163,9 @@ Now that **MyBlazorApp** is set up with the desired theme configuration, the nex
 
 3. In the **Code** tab, copy the Razor (HTML) code using the **Copy to Clipboard** option and paste it into the **Components -> Pages -> Home.razor** file, replacing its content with the provided "Hello, world!" example.
 
->  Ensure that you do not remove the **@page** directive and **<PageTitle>** element while replacing the content. These are essential for routing and setting the page title.
-
     ![Copy HTML code snippet to clipboard](images/copy-HTML-code-snippet-to-clipboard.png)
+
+>  Ensure that you do not remove the `@page` directive and `<PageTitle>` element while replacing the content. These are essential for routing and setting the page title.
 
 4. If CSS is provided, copy the CSS code, create a new file **Components -> Pages -> Home.razor.css**, and paste the code into it. Similarly, if a C# code is provided, create a new file **Components -> Pages -> Home.razor.cs** and paste the C# code into it. Otherwise, you can ignore this step.
 
@@ -195,9 +195,10 @@ In the simple sign-in block, components such as textbox, checkbox and button are
 
 Once the necessary packages are added, run the following command via the terminal to install those packages.
 
-    ```bash
-    dotnet restore
-    ```
+```bash
+dotnet restore
+```
+
 After restoring the packages, import the required namespaces `Syncfusion.Blazor.Buttons` and `Syncfusion.Blazor.Inputs` in the _Imports.razor file to enable Syncfusion components in the application.
 
 ![Importing Syncfusion Namespaces](images/import-syncfusion-namespaces.png)
@@ -212,9 +213,9 @@ If you want to view and experience the images used in our design, you can downlo
 
 Now that everything is set up in **MyBlazorApp** — including the Razor (HTML), CSS (if applicable), C# (if applicable), and assets (optional) — you are ready to build and launch the app. Type the following command in the terminal, and you will see a localhost URL provided by the Blazor development server.
 
-    ```bash
-    dotnet run
-    ```
+```bash
+dotnet run
+```
 
 ![Build and launch the app](images/build-and-launch-the-app.png)
 
