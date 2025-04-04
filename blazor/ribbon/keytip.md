@@ -665,6 +665,8 @@ You can use the `HideKeyTipsAsync` method to remove all visible keytips from the
 {% endhighlight %}
 {% endtabs %}
 
+![Ribbon Show Hide keytips](./images/keytip/show-hide-keytip.png)
+
 ## Guidelines for adding keytips
 
 Before adding keytips to the Ribbon items, follow these best practices:
