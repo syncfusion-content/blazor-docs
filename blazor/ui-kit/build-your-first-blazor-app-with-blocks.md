@@ -153,7 +153,7 @@ Now that **MyBlazorApp** is set up with the desired theme configuration, the nex
 
 ### Steps to explore and copy block code snippets from the online demo
 
-1. In the [online demo](https://blazor.syncfusion.com), navigate to the **Authentication** category and select the **Sign In** block. This will direct you to the appropriate demo page.
+1. In the [online demo](https://blazor.syncfusion.com/essential-ui-kit), navigate to the **Authentication** category and select the **Sign In** block. This will direct you to the appropriate demo page.
 
     ![Navigate to the sign-in block demo](images/navigate-to-the-sign-in-block-demo.png)
 
@@ -203,11 +203,11 @@ After restoring the packages, import the required namespaces `Syncfusion.Blazor.
 
 ![Importing Syncfusion Namespaces](images/import-syncfusion-namespaces.png)
 
-Finally, again check the [online demo](https://blazor.syncfusion.com) or the [GitHub repository](https://github.com/syncfusion/essential-ui-kit-for-blazor) and copy the required Razor (HTML) code for the simple sign-in block into your app as outlined in the previous topic.
+Finally, again check the [online demo](https://blazor.syncfusion.com/essential-ui-kit) or the [GitHub repository](https://github.com/syncfusion/essential-ui-kit-for-blazor) and copy the required Razor (HTML) code for the simple sign-in block into your app as outlined in the previous topic.
 
 ## Steps to download and add assets to the app
 
-If you want to view and experience the images used in our design, you can download the **assets** folder from the following [GitHub repository](https://github.com/syncfusion/essential-ui-kit-for-blazor), place it inside the **wwwroot** folder of **MyBlazorApp**, and modify the image URLs in the Razor (HTML) if necessary.
+If you want to view and experience the images used in our design, you can download the **assets** folder from the following [GitHub repository](https://github.com/syncfusion/essential-ui-kit-for-blazor/tree/master/UI_Blocks/wwwroot/assets), place it inside the **wwwroot** folder of **MyBlazorApp**, and modify the image URLs in the Razor (HTML) if necessary.
 
 ## Steps to run the app
 
