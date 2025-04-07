@@ -1191,7 +1191,7 @@ N> The CRUD operation has been performed in the TreeView component using the con
         if ((eventParameters["which"]).ToString() == "3")
         {
             // To get the selected node id upon context menu click
-           this.selectedId = (await args.NodeData.GetAttribute("data-uid")).ToString();
+            this.selectedId = (await args.NodeData.GetAttribute("data-uid")).ToString();
         }
     }
 
