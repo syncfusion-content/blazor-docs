@@ -50,3 +50,56 @@ To modify the Scheduler appearance, you need to override the default CSS of Sche
 | .e-schedule .e-timeline-month-view .e-resource-cells| Resource cells in timeline month view of scheduler. |
 | e-parent-node | Parent resource cells in timeline views of scheduler. |
 | e-child-node | Child resource cells in timeline views of scheduler. |
+
+# Work cells in vertical views of scheduler
+
+This class targets work cells (the individual time slots) in the vertical view of the Syncfusion Scheduler.
+
+```cshtml
+
+@using Syncfusion.Blazor.Schedule
+<div class="component-container">
+    <SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
+        <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+        <ScheduleViews>
+            <ScheduleView Option="View.Day"></ScheduleView>
+            <ScheduleView Option="View.Week"></ScheduleView>
+            <ScheduleView Option="View.WorkWeek"></ScheduleView>
+            <ScheduleView Option="View.Month"></ScheduleView>
+            <ScheduleView Option="View.Agenda"></ScheduleView>
+        </ScheduleViews>
+    </SfSchedule>
+</div>
+
+@code{
+    DateTime CurrentDate = new DateTime(2020, 2, 14);
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData { Id = 1, Subject = "Paris", StartTime = new DateTime(2020, 2, 13, 10, 0, 0) , EndTime = new DateTime(2020, 2, 13, 12, 0, 0) },
+        new AppointmentData { Id = 2, Subject = "Germany", StartTime = new DateTime(2020, 2, 15, 10, 0, 0) , EndTime = new DateTime(2020, 2, 15, 12, 0, 0) }
+    };
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+    }
+} 
+<style>
+    .e-schedule .e-vertical-view .e-work-cells
+    {
+        background-color: #ebf3ff;
+        border: 1px solid #cceeff;
+    }
+</style>
+
+```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLSjzXQfGnvGHlh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Work cells in vertical views](images/blazor-scheduler-verticalview-workcells.png)" %}
