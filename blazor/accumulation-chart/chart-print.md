@@ -196,7 +196,7 @@ In the code example below, the accumulation chart is exported to Excel format. T
         public double Users { get; set; }
     }
 
-    public async Task ExportChart(MouseEventArgs args)
+    public async Task ExportChart(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
     {
         await accumulationChart.ExportAsync(Syncfusion.Blazor.Charts.ExportType.XLSX, "Statistics");
     }
@@ -237,6 +237,7 @@ In the code example below, the accumulation chart is exported to Excel format. T
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htryXJtGrZTUKjJB?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

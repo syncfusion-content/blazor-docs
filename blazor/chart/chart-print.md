@@ -442,7 +442,7 @@ In the code example below, the chart is exported to Excel format. The exported E
         new ExportData { Country="Belgium", GigaWatts = 3 },
         new ExportData { Country="United Kingdom", GigaWatts = 2.9 },
     };
-    public async Task ExportChart(MouseEventArgs args)
+    public async Task ExportChart(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
     {
         await chartInstance.ExportAsync(Syncfusion.Blazor.Charts.ExportType.XLSX, FileName);
     }
@@ -482,6 +482,7 @@ In the code example below, the chart is exported to Excel format. The exported E
 }
 
 ```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrStfNGMaalzwin?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
