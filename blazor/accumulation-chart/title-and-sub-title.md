@@ -143,7 +143,7 @@ When the `Position` is set to `Custom`, the title can be positioned anywhere on 
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart Title="Mobile Browser Statistics" SubTitle="In the year 2014 - 2015">
-    <AccumulationChartTitleStyle Position="ChartTitlePosition.Custom" X="150" Y="90"></AccumulationChartTitleStyle>
+    <AccumulationChartTitleStyle Position="ChartTitlePosition.Custom" X="320" Y="10"></AccumulationChartTitleStyle>
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users"
                                  Name="Browser">
@@ -173,7 +173,7 @@ When the `Position` is set to `Custom`, the title can be positioned anywhere on 
 
 ```
 ![Custom position of title in Blazor Accumulation Chart](images/title/blazor-accumulation-chart-subtitle-position-custom.png)
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZheZfjfhogXJzAw?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhoNJNQqAoFwbVK?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 
 ## Subtitle
