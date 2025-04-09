@@ -691,7 +691,7 @@ To control the visibility of context menu items:
 
 2. Within the event handler, access the `Args.ContextMenu.Items` collection to modify the visibility of specific menu items.
 
-3. Set the `Hidden` property of the desired item(s) to **true** or **false** based on your conditions.  By default, the `Hidden` property is set to **false**.
+3. Set the `Hidden` property of the desired item(s) to **true** or **false** based on your conditions.
 
 The following example demonstrates how to dynamically Show or hide **Edit** context menu items in the Grid using the `ContextMenuOpen` event:
 
