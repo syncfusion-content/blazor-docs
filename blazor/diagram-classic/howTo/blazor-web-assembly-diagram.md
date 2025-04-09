@@ -9,13 +9,13 @@ documentation: ug
 
 # Blazor WebAssembly Diagram in Blazor Diagram Component
 
-This article provides a step-by-step instructions to configure Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram in a simple Blazor WebAssembly application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).
+This article provides a step-by-step instructions to configure Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram in a simple Blazor WebAssembly application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs).
 
 **Note**: Starting with version 17.4.0.39 (2019 Volume 4), you need to include a valid license key (either paid or trial key) within your applications. Refer to this help topic for more information.
 
 ## Prerequisites
 
-* [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
+* [Visual Studio 2019](https://visualstudio.microsoft.com/vs)
 * [.NET Core SDK 3.1.3](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
 **Note**: .NET Core SDK 3.1.3 requires Visual Studio 2019 16.6 or later.
