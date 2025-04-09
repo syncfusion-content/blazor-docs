@@ -7,61 +7,446 @@ control: DataGrid
 documentation: ug
 ---
 
-<!-- markdownlint-disable MD033 -->
+# Pdf export in Blazor Grid 
 
-# PDF Export in Blazor DataGrid Component
+The PDF export feature in the Syncfusion Blazor Grid allows you to export grid data to a PDF document, providing the ability to generate printable reports or share data in a standardized format.
 
-PDF export allows exporting DataGrid data to PDF document. You need to use the
- **PdfExport** method for exporting. To enable PDF export in the datagrid, set the [AllowPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPdfExport) as true.
+To enable PDF export in the grid, you need to set the [AllowPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPdfExport) property to **true** and use the **PdfExport** method for exporting. 
 
-To know about how to export blazor datagrid component to PDF document, you can check this video.
+The following example demonstrates how to perform a PDF export action in the grid.
 
-{% youtube "youtube:https://www.youtube.com/watch?v=HwERozt9fuY"%}
-
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 
-<SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" Toolbar="@(new List<string>() { "PdfExport" })" AllowPdfExport="true" AllowPaging="true">
-    <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="Order"></GridEvents>
+<SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" Height="315" Toolbar="@(new List<string>() { "PdfExport" })" AllowPdfExport="true">
+    <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="OrderDetails"></GridEvents>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipCity) HeaderText="Ship City" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipName) HeaderText="Ship Name" Width="150"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code{
-    private SfGrid<Order> DefaultGrid;
-    public List<Order> Orders { get; set; }
+@code {
+    private SfGrid<OrderDetails> DefaultGrid;
+    public List<OrderDetails> Orders { get; set; }
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-       if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Grid's ID and itemname
+        if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Grid's ID and itemname
         {
             await this.DefaultGrid.PdfExport();
         }
     }
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
-    }
-
-    public class Order
-    {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
+        Orders = OrderDetails.GetAllRecords();
     }
 }
-```
+
+{% endhighlight %}
+{% highlight c# tabtitle="OrderDetails.cs" %}
+
+public class OrderDetails
+{
+    public static List<OrderDetails> order = new List<OrderDetails>();
+    public OrderDetails(int OrderID, string CustomerId, string ShipCity, string ShipName)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerId;
+        this.ShipCity = ShipCity;
+        this.ShipName = ShipName;
+    }
+    public static List<OrderDetails> GetAllRecords()
+    {
+        if (order.Count == 0)
+        {
+            order.Add(new OrderDetails(10248, "VINET", "Reims", "Vins et alcools Chevalier"));
+            order.Add(new OrderDetails(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+            order.Add(new OrderDetails(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+            order.Add(new OrderDetails(10251, "VICTE", "Lyon", "Victuailles en stock"));
+            order.Add(new OrderDetails(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+            order.Add(new OrderDetails(10253, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+            order.Add(new OrderDetails(10254, "CHOPS", "Bern", "Chop-suey Chinese"));
+            order.Add(new OrderDetails(10255, "RICSU", "Genève", "Richter Supermarkt"));
+            order.Add(new OrderDetails(10256, "WELLI", "Resende", "Wellington Importadora"));
+            order.Add(new OrderDetails(10257, "HILAA", "San Cristóbal", "HILARION-Abastos"));
+            order.Add(new OrderDetails(10258, "ERNSH", "Graz", "Ernst Handel"));
+            order.Add(new OrderDetails(10259, "CENTC", "México D.F.", "Centro comercial Moctezuma"));
+            order.Add(new OrderDetails(10260, "OTTIK", "Köln", "Ottilies Käseladen"));
+            order.Add(new OrderDetails(10261, "QUEDE", "Rio de Janeiro", "Que Delícia"));
+            order.Add(new OrderDetails(10262, "RATTC", "Albuquerque", "Rattlesnake Canyon Grocery"));
+        }
+        return order;
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBIDpZEKtBzeKSd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Show spinner while exporting
+
+Showing a spinner while exporting in the Syncfusion Blazor Grid enhances the experience by displaying a spinner during the export process. This feature provides a visual indication of the export progress, improving the understanding of the exporting process.
+
+To show or hide a spinner while exporting the grid, you can utilize the [ShowSpinnerAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowSpinnerAsync) and [HideSpinnerAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_HideSpinnerAsync) methods provided by the Grid within the [OnToolbarClick](https://blazor.syncfusion.com/documentation/datagrid/events#ontoolbarclick) event.
+
+The `OnToolbarClick` event is triggered when a toolbar item in the Grid is clicked. Within the event handler, the code checks if the clicked **item** is related with PDF export, specifically the **Grid_pdfexport** item. If a match is found, the `ShowSpinnerAsync` method is used on the Grid instance to display the spinner. 
+
+To hide the spinner after the exporting is completed, bind the [ExportComplete](https://blazor.syncfusion.com/documentation/datagrid/events#exportcomplete) event and use the `HideSpinnerAsync` method on the Grid instance to hide the spinner.
+
+The following example demonstrates how to show and hide the spinner during PDF export in a grid.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+
+<SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" Height="315" Toolbar="@(new List<string>() { "PdfExport" })" AllowPdfExport="true">
+    <GridEvents ExportComplete="ExportCompleteHandler" OnToolbarClick="ToolbarClickHandler" TValue="OrderDetails"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipCity) HeaderText="Ship City" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipName) HeaderText="Ship Name" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private SfGrid<OrderDetails> DefaultGrid;
+    public List<OrderDetails> Orders { get; set; }
+
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Grid's ID and itemname
+        {
+            await this.DefaultGrid.ShowSpinnerAsync();
+            await this.DefaultGrid.PdfExport();
+        }
+    }
+    public async void ExportCompleteHandler(object args)
+    {
+
+        await this.DefaultGrid.HideSpinnerAsync();
+    }
+    protected override void OnInitialized()
+    {
+        Orders = OrderDetails.GetAllRecords();
+    }
+}
+
+{% endhighlight %}
+{% highlight c# tabtitle="OrderDetails.cs" %}
+
+public class OrderDetails
+{
+    public static List<OrderDetails> order = new List<OrderDetails>();
+    public OrderDetails(int OrderID, string CustomerId, string ShipCity, string ShipName)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerId;
+        this.ShipCity = ShipCity;
+        this.ShipName = ShipName;
+    }
+    public static List<OrderDetails> GetAllRecords()
+    {
+        if (order.Count == 0)
+        {
+            order.Add(new OrderDetails(10248, "VINET", "Reims", "Vins et alcools Chevalier"));
+            order.Add(new OrderDetails(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+            order.Add(new OrderDetails(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+            order.Add(new OrderDetails(10251, "VICTE", "Lyon", "Victuailles en stock"));
+            order.Add(new OrderDetails(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+            order.Add(new OrderDetails(10253, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+            order.Add(new OrderDetails(10254, "CHOPS", "Bern", "Chop-suey Chinese"));
+            order.Add(new OrderDetails(10255, "RICSU", "Genève", "Richter Supermarkt"));
+            order.Add(new OrderDetails(10256, "WELLI", "Resende", "Wellington Importadora"));
+            order.Add(new OrderDetails(10257, "HILAA", "San Cristóbal", "HILARION-Abastos"));
+            order.Add(new OrderDetails(10258, "ERNSH", "Graz", "Ernst Handel"));
+            order.Add(new OrderDetails(10259, "CENTC", "México D.F.", "Centro comercial Moctezuma"));
+            order.Add(new OrderDetails(10260, "OTTIK", "Köln", "Ottilies Käseladen"));
+            order.Add(new OrderDetails(10261, "QUEDE", "Rio de Janeiro", "Que Delícia"));
+            order.Add(new OrderDetails(10262, "RATTC", "Albuquerque", "Rattlesnake Canyon Grocery"));
+        }
+        return order;
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVetptuKCqkceUU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Binding custom data source while exporting
+
+The Syncfusion Blazor Grid provides a convenient way to export data to a PDF format. With the PDF export feature, you can define a custom data source while exporting. This allows you to export data that is not necessarily bind to the grid, which can be generated or retrieved based on your application logic.
+
+To export data, you need to define the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_DataSource) property within the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) object. This property represents the data source that will be used for the PDF export.
+
+The following example demonstrates how to render custom data source during PDF export. By utilizing the **PdfExport** method and passing the `PdfExportProperties` object through the grid instance, the grid data will be exported to a PDF using the dynamically defined data source.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+
+<SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" Height="315" Toolbar="@(new List<string>() { "PdfExport" })" AllowPdfExport="true">
+    <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="OrderDetails"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipCity) HeaderText="Ship City" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipName) HeaderText="Ship Name" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private SfGrid<OrderDetails> DefaultGrid;
+    public List<OrderDetails> Orders { get; set; }
+    public List<ChangeData> newOrders { get; set; }
+
+    private List<OrderDetails> ConvertToOrderDetails(List<ChangeData> changes)
+    {
+        return changes.Select(c => new OrderDetails(c.OrderID, c.CustomerID, c.ShipCity, c.ShipName)).ToList();
+    }
+
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Id == "Grid_pdfexport")  // Id = Grid ID + _ + Toolbar Item Name
+        {
+            var convertedOrders = ConvertToOrderDetails(newOrders);
+            PdfExportProperties PdfProperties = new PdfExportProperties
+                {
+                    DataSource = convertedOrders
+                };
+            await this.DefaultGrid.PdfExport(PdfProperties);
+        }
+    }
+    protected override void OnInitialized()
+    {
+        Orders = OrderDetails.GetAllRecords();
+        newOrders = ChangeData.GetAllRecords();
+    }
+}
+
+{% endhighlight %}
+{% highlight c# tabtitle="OrderDetails.cs" %}
+
+public class OrderDetails
+{
+    public static List<OrderDetails> order = new List<OrderDetails>();
+    public OrderDetails(int OrderID, string CustomerId, string ShipCity, string ShipName)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerId;
+        this.ShipCity = ShipCity;
+        this.ShipName = ShipName;
+    }
+    public static List<OrderDetails> GetAllRecords()
+    {
+        if (order.Count == 0)
+        {
+            order.Add(new OrderDetails(10248, "VINET", "Reims", "Vins et alcools Chevalier"));
+            order.Add(new OrderDetails(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+            order.Add(new OrderDetails(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+            order.Add(new OrderDetails(10251, "VICTE", "Lyon", "Victuailles en stock"));
+            order.Add(new OrderDetails(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+            order.Add(new OrderDetails(10253, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+            order.Add(new OrderDetails(10254, "CHOPS", "Bern", "Chop-suey Chinese"));
+            order.Add(new OrderDetails(10255, "RICSU", "Genève", "Richter Supermarkt"));
+            order.Add(new OrderDetails(10256, "WELLI", "Resende", "Wellington Importadora"));
+            order.Add(new OrderDetails(10257, "HILAA", "San Cristóbal", "HILARION-Abastos"));
+            order.Add(new OrderDetails(10258, "ERNSH", "Graz", "Ernst Handel"));
+            order.Add(new OrderDetails(10259, "CENTC", "México D.F.", "Centro comercial Moctezuma"));
+            order.Add(new OrderDetails(10260, "OTTIK", "Köln", "Ottilies Käseladen"));
+            order.Add(new OrderDetails(10261, "QUEDE", "Rio de Janeiro", "Que Delícia"));
+            order.Add(new OrderDetails(10262, "RATTC", "Albuquerque", "Rattlesnake Canyon Grocery"));
+        }
+        return order;
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="ChangeData.cs" %}
+
+public class ChangeData
+{
+    public static List<ChangeData> newOrders = new List<ChangeData>();
+
+    public ChangeData(int OrderID, string CustomerId, string ShipCity, string ShipName)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerId;
+        this.ShipCity = ShipCity;
+        this.ShipName = ShipName;
+    }
+
+    public static List<ChangeData> GetAllRecords()
+    {
+        if (newOrders.Count == 0)
+        {
+            newOrders.Add(new ChangeData(20201, "BLAUS", "Madrid", "Blauer See Delikatessen"));
+            newOrders.Add(new ChangeData(20202, "FAMIA", "Sevilla", "Familia Arquibaldo"));
+            newOrders.Add(new ChangeData(20203, "GODOS", "Lisbon", "Godos Gourmet"));
+            newOrders.Add(new ChangeData(20204, "LINOD", "Porto", "Lino Delicias"));
+            newOrders.Add(new ChangeData(20205, "ALFKI", "Berlin", "Alfreds Futterkiste"));
+            newOrders.Add(new ChangeData(20206, "FRANK", "Paris", "Frankenversand"));
+            newOrders.Add(new ChangeData(20207, "LAMAI", "Milan", "La Maison du Délice"));
+            newOrders.Add(new ChangeData(20208, "TRADH", "Zürich", "Tradição Hipermercado"));
+            newOrders.Add(new ChangeData(20209, "WOLZA", "Hamburg", "Wolski Zajazd"));
+            newOrders.Add(new ChangeData(20210, "PICCO", "Naples", "Piccolo Ristorante"));
+            newOrders.Add(new ChangeData(20211, "BERGS", "Oslo", "Berglunds snabbköp"));
+            newOrders.Add(new ChangeData(20212, "BONAP", "Marseille", "Bon app'"));
+            newOrders.Add(new ChangeData(20213, "FOLKO", "Stockholm", "Folk och fä HB"));
+            newOrders.Add(new ChangeData(20214, "LEHMS", "Copenhagen", "Lehmanns Marktstand"));
+            newOrders.Add(new ChangeData(20215, "QUEEN", "London", "Queen Cozinha"));
+        }
+        return newOrders;
+    }
+
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXryXfDOqaghyKye?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Exporting with custom aggregate
+
+Custom aggregates in the Syncfusion Blazor Grid involves exporting grid data that includes additional calculated values based on specific requirements. This feature enables you to show the comprehensive view of the data in the exported file by incorporating the specific aggregated information you need for analysis or reporting purposes.
+
+In order to utilize custom aggregation, you need to specify the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html?_gl=1*n3kv9z*_gcl_aw*R0NMLjE3MzgwNjYwODYuQ2p3S0NBaUFuZUs4QmhBVkVpd0FveTJIWVFDU1Nhbm1XaWRsRGpDb2lSTEZBZEhPR21xMERSM2VxSGZRRzVGUVA3WEZsNjV1NndrRG14b0NqMHNRQXZEX0J3RQ..*_ga*NzE4Mzg0MjU3LjE3NDEwOTIxNDg.*_ga_41J4HFMX1J*MTc0NDE5NjE5My4xMjAuMS4xNzQ0MTk3ODY5LjAuMC4w#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) property as **Custom**.
+
+Within the **CustomAggregateFunction** function, it takes an input data that contains a result property. The function calculates the count of objects in this data where the **ShipCountry** field value is equal to **Brazil** and returns the count with a descriptive label.
+
+The following example shows how to export the grid with a custom aggregate that shows the calculation of the **Brazil** count of the **ShipCountry** column.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+
+<SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@OrderData" Toolbar="@(new List<string>() {"PdfExport"})" AllowPdfExport="true">
+    <GridEvents TValue="OrderDetails" OnToolbarClick="ToolbarClickHandler" PdfAggregateTemplateInfo="PdfAggregateTemplateInfoHandler"></GridEvents>
+
+    <GridAggregates>
+        <GridAggregate>
+            <GridAggregateColumns>
+                <GridAggregateColumn Field=@nameof(OrderDetails.ShipCountry) Type="AggregateType.Custom">
+                    <FooterTemplate>
+                        @{
+                            <div>
+                                <p>Brazil Count: @CustomAggregateFunction()</p>
+                            </div>
+                        }
+                    </FooterTemplate>
+                </GridAggregateColumn>
+            </GridAggregateColumns>
+        </GridAggregate>
+    </GridAggregates>
+
+    <GridColumns>
+        <GridColumn Field="OrderID" HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field="CustomerID" HeaderText="Customer ID" Width="150"></GridColumn>
+        <GridColumn Field="Freight" HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field="ShipCountry" HeaderText="Ship Country" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private SfGrid<OrderDetails> DefaultGrid;
+    public List<OrderDetails> OrderData { get; set; }
+
+    protected override void OnInitialized()
+    {
+        OrderData = OrderDetails.GetAllRecords();
+    }
+
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Id == "Grid_pdfexport")  // "Grid" + "_" + "Toolbar Item"
+        {
+            await DefaultGrid.PdfExport();
+        }
+    }
+
+    private int CustomAggregateFunction()
+    {
+        return OrderData.Count(x => x.ShipCountry.Contains("Brazil"));
+    }
+
+    public void PdfAggregateTemplateInfoHandler(PdfAggregateEventArgs args)
+    {
+        if (args.Column.Field == "ShipCountry")
+        {
+            args.Cell.Value = $"Brazil Count: {CustomAggregateFunction()}";
+        }
+    }
+}
+
+{% endhighlight %}
+{% highlight c# tabtitle="OrderDetails.cs" %}
+
+public class OrderDetails
+{
+    public static List<OrderDetails> Order = new List<OrderDetails>();
+    public OrderDetails(int OrderID, string CustomerId, double Freight, string ShipCountry)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerId;
+        this.Freight = Freight;
+        this.ShipCountry = ShipCountry;
+    }
+    public static List<OrderDetails> GetAllRecords()
+    {
+        if (Order.Count == 0)
+        {
+            Order.Add(new OrderDetails(10248, "VINET", 32.38, "France"));
+            Order.Add(new OrderDetails(10249, "TOMSP", 11.61, "Germany"));
+            Order.Add(new OrderDetails(10250, "HANAR", 65.83, "Brazil"));
+            Order.Add(new OrderDetails(10251, "VICTE", 41.34, "France"));
+            Order.Add(new OrderDetails(10252, "SUPRD", 51.3, "Belgium"));
+            Order.Add(new OrderDetails(10253, "HANAR", 58.17, "Brazil"));
+            Order.Add(new OrderDetails(10254, "CHOPS", 22.98, "Switzerland"));
+            Order.Add(new OrderDetails(10255, "RICSU", 148.33, "Switzerland"));
+            Order.Add(new OrderDetails(10256, "WELLI", 13.97, "Brazil"));
+            Order.Add(new OrderDetails(10257, "HILAA", 81.91, "Venezuela"));
+            Order.Add(new OrderDetails(10258, "ERNSH", 140.51, "Austria"));
+            Order.Add(new OrderDetails(10259, "CENTC", 3.25, "Mexico"));
+            Order.Add(new OrderDetails(10260, "OTTIK", 55.09, "Germany"));
+            Order.Add(new OrderDetails(10261, "QUEDE", 3.05, "Brazil"));
+            Order.Add(new OrderDetails(10262, "RATTC", 48.29, "USA"));
+        }
+        return Order;
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCountry { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNrINftYJMQFuKca?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 <!-- Multiple exporting
 
