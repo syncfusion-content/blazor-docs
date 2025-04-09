@@ -18,70 +18,66 @@ The context menu items can be added for the files, folders, and layout in the Bl
 The following table provides the default context menu item and the corresponding target areas.
 
 <!-- markdownlint-disable MD033 -->
-<table>
-<tr>
-<td> <b>Menu Name</b> </td>
-<td> <b>Menu Items </b></td>
-<td> <b>Target </b></td>
-</tr>
-
-<tr>
-<td>Layout</td>
-<td>
-
-* SortBy
-* View
-* Refresh
-* NewFolder
-* Upload
-* Details
-* Select all
-
-</td>
-<td>
-
-* Empty space in the view section (details view and large icon view area).
-* Empty folder content.
-
-</td>
-</tr>
-
-<tr>
-<td>Folders</td>
-<td>
-
-* Open
-* Delete
-* Rename
-* Downloads
-* Details
-
-</td>
-<td>
-
-* Folders in treeview, details view, and large icon view.
-
-</td>
-</tr>
-
-<tr>
-<td>Files</td>
-<td>
-
-* Open
-* Delete
-* Rename
-* Downloads
-* Details
-
-</td>
-<td>
-
-* Files in details view and large icon view.
-
-</td>
-</tr>
-
+<table border="1">
+    <tr>
+        <th>Menu Name</th>
+        <th>Menu Items</th>
+        <th>Target</th>
+    </tr>
+    <tr>
+        <td>Layout</td>
+        <td>
+            <ul>
+                <li>SortBy</li>
+                <li>View</li>
+                <li>Refresh</li>
+                <li>NewFolder</li>
+                <li>Upload</li>
+                <li>Details</li>
+                <li>Select all</li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>Empty space in the view section (details view and large icon view area).</li>
+                <li>Empty folder content.</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>Folders</td>
+        <td>
+            <ul>
+                <li>Open</li>
+                <li>Delete</li>
+                <li>Rename</li>
+                <li>Downloads</li>
+                <li>Details</li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>Folders in treeview, details view, and large icon view.</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>Files</td>
+        <td>
+            <ul>
+                <li>Open</li>
+                <li>Delete</li>
+                <li>Rename</li>
+                <li>Downloads</li>
+                <li>Details</li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>Files in details view and large icon view.</li>
+            </ul>
+        </td>
+    </tr>
 </table>
 
 ## Adding Custom Items
@@ -178,32 +174,17 @@ In the following example, the **Cut** context menu item is disabled for the fold
 
 @code {
 
-    public void MenuOpened(MenuOpenEventArgs<FileManagerDirectoryContent> args)
+    public void MenuOpened(MenuOpenEventArgs<FileManagerDirectoryContent> args) 
     {
-        for (int i = 0; i < args.FileDetails.Count(); i++)
+        bool isFile = args.FileDetails.Any(detail => !detail.IsFile);
+
+        foreach (var item in args.Items)
         {
-            if (!args.FileDetails[i].IsFile)
+            if (item.Text == "Cut")
             {
-                for (int j = 0; j < args.Items.Count(); j++)
-                {
-                    if (args.Items[j].Text == "Cut")
-                    {
-                        args.Items[j].Disabled = true;
-                    }
-                }
-            }
-            else
-            {
-                for (int j = 0; j < args.Items.Count(); j++)
-                {
-                    if (args.Items[j].Disabled == true;)
-                    {
-                        args.Items[j].Disabled = false;
-                    }
-                }
+                item.Disabled = isFile;
             }
         }
-        
     }
 }
 
@@ -234,30 +215,15 @@ In the following example, the **Cut** context menu item is shown for the files.
 
     public void MenuOpened(MenuOpenEventArgs<FileManagerDirectoryContent> args)
     {
-        for (int i = 0; i < args.FileDetails.Count(); i++)
+        bool isFile = args.FileDetails.Any(file => !file.IsFile);
+
+        foreach (var item in args.Items)
         {
-            if (!args.FileDetails[i].IsFile)
+            if (item.Text == "Cut")
             {
-                for (int j = 0; j < args.Items.Count(); j++)
-                {
-                    if (args.Items[j].Text == "Cut")
-                    {
-                        args.Items[j].Hidden = true;
-                    }
-                }
-            }
-            else
-            {
-                for (int j = 0; j < args.Items.Count(); j++)
-                {
-                    if (args.Items[j].Hidden == true)
-                    {
-                        args.Items[j].Hidden = false;
-                    }
-                }
+                item.Hidden = isFile;
             }
         }
-        
     }
 }
 

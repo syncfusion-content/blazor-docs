@@ -41,8 +41,9 @@ This section explains the list of events of the RichTextEditor component which w
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
-   <RichTextEditorEvents OnActionComplete="@OnActionCompleteHandler"><RichTextEditorEvents>
+    <RichTextEditorEvents OnActionComplete="@OnActionCompleteHandler" ></RichTextEditorEvents>
 </SfRichTextEditor>
+
 @code{
 
     public void OnActionCompleteHandler(ActionCompleteEventArgs args)
@@ -59,10 +60,11 @@ This section explains the list of events of the RichTextEditor component which w
 
 ```cshtml
 
+@using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
-   <RichTextEditorEvents OnDialogOpen="@OnDialogOpenHandler"><RichTextEditorEvents>
+    <RichTextEditorEvents OnDialogOpen="@OnDialogOpenHandler"></RichTextEditorEvents>
 </SfRichTextEditor>
 @code{
 
@@ -80,10 +82,11 @@ This section explains the list of events of the RichTextEditor component which w
 
 ```cshtml
 
+@using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
-   <RichTextEditorEvents DialogOpened="@DialogOpenedHandler"><RichTextEditorEvents>
+   <RichTextEditorEvents DialogOpened="@DialogOpenedHandler"></RichTextEditorEvents>
 </SfRichTextEditor>
 @code{
 
@@ -101,10 +104,11 @@ This section explains the list of events of the RichTextEditor component which w
 
 ```cshtml
 
+@using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
-   <RichTextEditorEvents OnDialogClose="@OnDialogCloseHandler"><RichTextEditorEvents>
+   <RichTextEditorEvents OnDialogClose="@OnDialogCloseHandler"></RichTextEditorEvents>
 </SfRichTextEditor>
 @code{
 
@@ -122,10 +126,11 @@ This section explains the list of events of the RichTextEditor component which w
 
 ```cshtml
 
+@using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
-   <RichTextEditorEvents DialogClosed="@DialogClosedHandler"><RichTextEditorEvents>
+   <RichTextEditorEvents DialogClosed="@DialogClosedHandler"></RichTextEditorEvents>
 </SfRichTextEditor>
 @code{
 
@@ -146,8 +151,7 @@ This section explains the list of events of the RichTextEditor component which w
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
-   <RichTextEditorEvents OnQuickToolbarOpen="@OnQuickToolbarOpenHandler">
-   <RichTextEditorEvents>
+   <RichTextEditorEvents OnQuickToolbarOpen="@OnQuickToolbarOpenHandler"></RichTextEditorEvents>
 </SfRichTextEditor>
 @code{
 
@@ -168,8 +172,7 @@ This section explains the list of events of the RichTextEditor component which w
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
-   <RichTextEditorEvents QuickToolbarOpened="@QuickToolbarOpenedHandler">
-   <RichTextEditorEvents>
+   <RichTextEditorEvents QuickToolbarOpened="@QuickToolbarOpenedHandler"></RichTextEditorEvents>
 </SfRichTextEditor>
 @code{
 
@@ -190,8 +193,7 @@ This section explains the list of events of the RichTextEditor component which w
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
-   <RichTextEditorEvents QuickToolbarClosed="@QuickToolbarClosedHandler">
-   <RichTextEditorEvents>
+   <RichTextEditorEvents QuickToolbarClosed="@QuickToolbarClosedHandler"></RichTextEditorEvents>
 </SfRichTextEditor>
 @code{
 
@@ -209,11 +211,11 @@ This section explains the list of events of the RichTextEditor component which w
 
 ```cshtml
 
+@using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
-   <RichTextEditorEvents OnImageSelected="@OnImageSelectedHandler">
-   <RichTextEditorEvents>
+   <RichTextEditorEvents OnImageSelected="@OnImageSelectedHandler"></RichTextEditorEvents>
 </SfRichTextEditor>
 @code{
 
@@ -234,8 +236,7 @@ This section explains the list of events of the RichTextEditor component which w
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
-   <RichTextEditorEvents BeforeUploadImage ="@BeforeUploadImageHandler">
-   <RichTextEditorEvents>
+   <RichTextEditorEvents BeforeUploadImage ="@BeforeUploadImageHandler"></RichTextEditorEvents>
 </SfRichTextEditor>
 @code{
 
@@ -256,8 +257,7 @@ This section explains the list of events of the RichTextEditor component which w
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
-   <RichTextEditorEvents OnImageUploadSuccess="@OnImageUploadSuccessHandler">
-   <RichTextEditorEvents>
+   <RichTextEditorEvents OnImageUploadSuccess="@OnImageUploadSuccessHandler"></RichTextEditorEvents>
 </SfRichTextEditor>
 @code{
 
@@ -278,8 +278,7 @@ This section explains the list of events of the RichTextEditor component which w
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
-   <RichTextEditorEvents OnImageUploadFailed="@OnImageUploadFailedHandler">
-   <RichTextEditorEvents>
+   <RichTextEditorEvents OnImageUploadFailed="@OnImageUploadFailedHandler"></RichTextEditorEvents>
 </SfRichTextEditor>
 @code{
 
@@ -300,8 +299,7 @@ This section explains the list of events of the RichTextEditor component which w
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
-   <RichTextEditorEvents OnImageRemoving="@OnImageRemovingHandler">
-   <RichTextEditorEvents>
+   <RichTextEditorEvents OnImageRemoving="@OnImageRemovingHandler"></RichTextEditorEvents>
 </SfRichTextEditor>
 @code{
 
@@ -313,17 +311,16 @@ This section explains the list of events of the RichTextEditor component which w
 
 ```
 
-## OnImageDelete
+## ImageDelete
 
-`OnImageDelete` event triggers when the selected image is cleared from the Rich Text Editor Content.
+`ImageDelete` event triggers when the selected image is cleared from the Rich Text Editor Content.
 
 ```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
-   <RichTextEditorEvents OnImageDelete="@OnImageDeleteHandler">
-   <RichTextEditorEvents>
+   <RichTextEditorEvents ImageDelete="@OnImageDeleteHandler"></RichTextEditorEvents>
 </SfRichTextEditor>
 @code{
 
@@ -344,7 +341,7 @@ This section explains the list of events of the RichTextEditor component which w
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
-   <RichTextEditorEvents Created="@CreatedHandler"><RichTextEditorEvents>
+   <RichTextEditorEvents Created="@CreatedHandler"></RichTextEditorEvents>
 </SfRichTextEditor>
 @code{
 
@@ -365,7 +362,7 @@ This section explains the list of events of the RichTextEditor component which w
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
-   <RichTextEditorEvents Destroyed="@DestroyedHandler"><RichTextEditorEvents>
+   <RichTextEditorEvents Destroyed="@DestroyedHandler"></RichTextEditorEvents>
 </SfRichTextEditor>
 @code{
 
@@ -386,7 +383,7 @@ This section explains the list of events of the RichTextEditor component which w
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
-   <RichTextEditorEvents Blur="@BlurHandler"><RichTextEditorEvents>
+   <RichTextEditorEvents Blur="@BlurHandler"></RichTextEditorEvents>
 </SfRichTextEditor>
 @code{
 
@@ -407,7 +404,7 @@ This section explains the list of events of the RichTextEditor component which w
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
-   <RichTextEditorEvents OnToolbarClick="@OnToolbarClickHandler"><RichTextEditorEvents>
+   <RichTextEditorEvents OnToolbarClick="@OnToolbarClickHandler"></RichTextEditorEvents>
 </SfRichTextEditor>
 @code{
 
@@ -428,11 +425,11 @@ This section explains the list of events of the RichTextEditor component which w
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
-   <RichTextEditorEvents Focus="@FocusHandler"><RichTextEditorEvents>
+   <RichTextEditorEvents Focus="@FocusHandler"></RichTextEditorEvents>
 </SfRichTextEditor>
 @code{
 
-    public void FocusHandler(FocusEventArgs args)
+    public void FocusHandler(Syncfusion.Blazor.RichTextEditor.FocusEventArgs args)
     {
         // Here you can customize your code
     }
@@ -449,11 +446,11 @@ This section explains the list of events of the RichTextEditor component which w
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
-   <RichTextEditorEvents ValueChange="@ValueChangeHandler"><RichTextEditorEvents>
+   <RichTextEditorEvents ValueChange="@ValueChangeHandler"></RichTextEditorEvents>
 </SfRichTextEditor>
 @code{
 
-    public void ValueChangeHandler(ChangeEventArgs args)
+    public void ValueChangeHandler(Syncfusion.Blazor.RichTextEditor.ChangeEventArgs args)
     {
         // Here you can customize your code
     }
@@ -470,7 +467,7 @@ This section explains the list of events of the RichTextEditor component which w
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
-   <RichTextEditorEvents OnResizeStart="@OnResizeStartHandler"><RichTextEditorEvents>
+   <RichTextEditorEvents OnResizeStart="@OnResizeStartHandler"></RichTextEditorEvents>
 </SfRichTextEditor>
 @code{
 
@@ -491,7 +488,7 @@ This section explains the list of events of the RichTextEditor component which w
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
-   <RichTextEditorEvents OnResizeStop="@OnResizeStopHandler"><RichTextEditorEvents>
+   <RichTextEditorEvents OnResizeStop="@OnResizeStopHandler"></RichTextEditorEvents>
 </SfRichTextEditor>
 @code{
 
@@ -512,7 +509,7 @@ This section explains the list of events of the RichTextEditor component which w
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
-   <RichTextEditorEvents AfterPasteCleanup="@AfterPasteCleanupHandler"><RichTextEditorEvents>
+   <RichTextEditorEvents AfterPasteCleanup="@AfterPasteCleanupHandler"></RichTextEditorEvents>
 </SfRichTextEditor>
 @code{
 

@@ -11,6 +11,11 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor File Upload](https://www.syncfusion.com/blazor-components/blazor-file-upload) component in your Blazor WebAssembly App using Visual Studio and Visual Studio Code.
 
+To get started quickly with Blazor File Upload component, check on the following video:
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=MxyrifDwud4" %}
+
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
