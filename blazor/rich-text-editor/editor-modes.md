@@ -9,14 +9,14 @@ documentation: ug
 
 # Editor Modes in Blazor RichTextEditor Component
 
-The [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) component is used to create and edit the content and return valid HTML markup or markdown (MD) of the content. It supports the following two editing formations:
+The [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) component is used to create and edit the content and return valid HTML markup or markdown (MD) of the content. It supports the following two editing formations:
 
 * HTML Editor
 * Markdown Editor
 
 ## HTML editor
 
-Rich Text Editor is a [WYSIWYG Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) component for formatting the word content as HTML. The HTML editing mode is the default mode in Rich Text Editor to format the content through the available toolbar items to return the valid HTML markup. Set the `EditorMode` property to `HTML`.
+Rich Text Editor is a [WYSIWYG Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) component for formatting the word content as HTML. The HTML editing mode is the default mode in Rich Text Editor to format the content through the available toolbar items to return the valid HTML markup. Set the `EditorMode` property to `HTML`.
 
 ```cshtml
 
