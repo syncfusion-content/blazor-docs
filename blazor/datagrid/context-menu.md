@@ -8,7 +8,6 @@ documentation: ug
 ---
 
 
-
 # Context menu in Syncfusion Blazor DataGrid
 
 The Syncfusion Blazor DataGrid component comes equipped with a context menu feature, which is triggered when a user right-clicks anywhere within the grid. This feature serves to enrich the user experience by offering immediate access to a variety of supplementary actions and operations that can be executed on the data displayed in the grid.
@@ -104,6 +103,7 @@ The following example demonstrates how to enable context menu feature in the gri
 }
 
 {% endhighlight %}
+
 {% highlight c# tabtitle="OrderData.cs" %}
 
 public class OrderData
@@ -162,7 +162,7 @@ To incorporate custom context menu items in the Syncfusion Blazor DataGrid, you 
 
 Furthermore, you can assign actions to these custom items by utilizing the [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuClickEventArgs-1.html) event. This event provides you with the means to handle user interactions with the custom context menu items, enabling you to execute specific actions or operations when these items are clicked. 
 
-The following example demonstrates how to add custom context menu items in the Grid component.
+The following example demonstrates how to add custom context menu items in the Grid component. The [CopyAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_CopyAsync_System_Nullable_System_Boolean__) method is used to copy the selected rows or cells data to the clipboard, including headers.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -199,7 +199,8 @@ The following example demonstrates how to add custom context menu items in the G
 }
 
 {% endhighlight %}
-{% highlight c# tabtitle="OrderData.cs" %}
+
+{% highlight c# tabtitle="EmployeeData.cs" %}
 
 public class EmployeeData
 {
@@ -247,107 +248,128 @@ public class EmployeeData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LZhyjfNPfRjqsIah?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZVyDfNYsPWaHXLo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Show context menu on left click
+## Built-in and Custom context menu items
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Angular Grid provides the ability to show the context menu items on a left mouse click instead of the default right mouse click action. 
+The Syncfusion Blazor DataGrid provides the flexibility to use both built-in and custom context menu items simultaneously. This is useful when you want to extend the default functionalities (like copy, delete, or edit) with your own custom actions, such as Copy with headers, Export row, or other application-specific commands.
 
-This can be achieved by using the [created](https://ej2.syncfusion.com/angular/documentation/api/grid/#created) event and the context menu's `beforeOpen` event of the Grid.
+You can achieve this by defining a list containing both built-in menu item strings and custom context menu items using the [ContextMenuItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuItemModel.html) in the [ContextMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuItemModel.html) property of the Grid. The actions for custom context menu items can be handled using the [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuClickEventArgs-1.html) event.
 
-By using the `onclick` event listener of the Grid, you can obtain the clicked position values through the `ngAfterViewInit` method. This method is appropriate for interacting with the Document Object Model (DOM) and performing operations that require access to the rendered elements. The obtained positions are then sent to the `open` method of the context menu within the `onclick` event of the Grid. Additionally, the default action of right-clicking to open the context menu items items is prevented by utilizing the `created` event of the Grid.
-
-The following example demonstrates how to show context menu on left click using `created` event.
-
+The following example demonstrates how to define both built-in and custom context menu items, and how to handle the custom item action in the `ContextMenuItemClicked` event. The [CopyAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_CopyAsync_System_Nullable_System_Boolean__) method is used to copy the selected rows or cells data to the clipboard, including headers.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
+@using Syncfusion.Blazor.Grids
 
+<SfGrid @ref="Grid" DataSource="@Orders" AllowPaging="true" ContextMenuItems="@(new List<Object>() { "Copy", new ContextMenuItemModel { Text = "Copy with headers", Target = ".e-content", Id = "copywithheader" } })">
+    <GridEvents ContextMenuItemClicked="OnContextMenuClick" TValue="Order"></GridEvents>
+    <GridPageSettings PageSize="8"></GridPageSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150" />
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120" />
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="150" />
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private SfGrid<OrderData> Grid;
+    public List<OrderData> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }
+
+    public async Task OnContextMenuClick(ContextMenuClickEventArgs<OrderData> args)
+    {
+        if (args.Item.Id == "copywithheader")
+        {
+            await Grid.CopyAsync(true);
+        }
+    }
+}
 
 {% endhighlight %}
+
 {% highlight c# tabtitle="OrderData.cs" %}
 
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData(int orderID, string customerID, double freight, string shipCity)
+    {
+        this.OrderID = orderID;
+        this.CustomerID = customerID;
+        this.Freight = freight;
+        this.ShipCity = shipCity;
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        {
+            Orders.Add(new OrderData(10248, "VINET", 32.38, "Reims"));
+            Orders.Add(new OrderData(10249, "TOMSP", 11.61, "Münster"));
+            Orders.Add(new OrderData(10250, "HANAR", 65.83, "Rio de Janeiro"));
+            Orders.Add(new OrderData(10251, "VICTE", 41.34, "Lyon"));
+            Orders.Add(new OrderData(10252, "SUPRD", 51.3, "Charleroi"));
+            Orders.Add(new OrderData(10253, "HANAR", 58.17, "Rio de Janeiro"));
+            Orders.Add(new OrderData(10254, "CHOPS", 22.98, "Bern"));
+            Orders.Add(new OrderData(10255, "RICSU", 148.33, "Genève"));
+            Orders.Add(new OrderData(10256, "WELLI", 13.97, "Resende"));
+            Orders.Add(new OrderData(10257, "HILAA", 81.91, "San Cristóbal"));
+            Orders.Add(new OrderData(10258, "ERNSH", 140.51, "Graz"));
+            Orders.Add(new OrderData(10259, "CENTC", 3.25, "México D.F."));
+            Orders.Add(new OrderData(10260, "OTTIK", 55.09, "Köln"));
+            Orders.Add(new OrderData(10261, "QUEDE", 3.05, "Rio de Janeiro"));
+            Orders.Add(new OrderData(10262, "RATTC", 48.29, "Albuquerque"));
+        }
+
+        return Orders;
+    }
+
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCity { get; set; }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-## Built-in and Custom context menu items
-
-DataGrid has an option to use both built-in and custom context menu items at same time.
-
-The following sample code demonstrates defining built-in and custom context menu items and custom context menu item corresponding action in the [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuClickEventArgs-1.html) event,
-
-```cshtml
-@using Syncfusion.Blazor.Grids
-
-<SfGrid @ref="DefaultGrid" DataSource="@Orders" AllowPaging="true" ContextMenuItems="@(new List<Object>() { "Copy", new ContextMenuItemModel { Text = "Copy with headers", Target = ".e-content", Id = "copywithheader" } })">
-    <GridEvents ContextMenuItemClicked="OnContextMenuClick" TValue="Order"></GridEvents>
-    <GridPageSettings PageSize="8"></GridPageSettings>
-    <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-    </GridColumns>
-</SfGrid>
-
-@code{
-    public List<Order> Orders { get; set; }
-
-    private SfGrid<Order> DefaultGrid;
-
-    protected override void OnInitialized()
-    {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
-    }
-
-    public class Order
-    {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
-    }
-
-    public void OnContextMenuClick(ContextMenuClickEventArgs<Order> args)
-    {
-        if (args.Item.Id == "copywithheader")
-        {
-            this.DefaultGrid.Copy(true);
-        }
-    }
-}
-```
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNBSNftEhBsXumEv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Sub context menu items in DataGrid
 
-The sub context menu items can be added by defining the collection of **MenuItems** for **Items** Property in [ContextMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuItemModel.html). Actions for these customized items can be defined in the [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuClickEventArgs-1.html) event.
+The Syncfusion Blazor DataGrid supports hierarchical context menu structures, allowing you to define sub-context menu items that appear as child options under a parent item in the context menu. This feature is useful when organizing multiple related actions under a single top-level context menu item.
 
-The following sample code demonstrates defining sub context menu item and its corresponding action in the [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuClickEventArgs-1.html) event,
+To define sub-context menu items in the Blazor DataGrid:
+
+1. Use the [ContextMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuItemModel.html) property to define a list of [ContextMenuItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuItemModel.html) objects.
+
+2. Set the `Items` property of a parent `ContextMenuItemModel` to define child `MenuItem` objects.
+
+3. Use the [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuClickEventArgs-1.html) event to handle actions for each menu item.
+
+
+The following example demonstrates how to create a sub context menu titled **Clipboard**, with sub-items **Copy** and **Copy With Header**. The corresponding actions are triggered when the `ContextMenuItemClicked` event is fired. The [CopyAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_CopyAsync_System_Nullable_System_Boolean__) method is used to copy the selected rows or cells to the clipboard, with or without headers.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
-@using Syncfusion.Blazor.Navigations
 
-<SfGrid @ref="Grid" DataSource="@Orders" AllowPaging="true"
-        ContextMenuItems="@ContextMenuItems" ID="Grid">
+<SfGrid @ref="Grid" DataSource="@Orders" AllowPaging="true" ContextMenuItems="@ContextMenuItems" >
     <GridEvents TValue="OrderData" ContextMenuItemClicked="OnContextMenuClick"></GridEvents>
     <GridPageSettings PageSize="8"></GridPageSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150" />
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" EditType="EditType.NumericEdit" TextAlign="TextAlign.Right" Width="120" />
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120" />
         <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="150" />
     </GridColumns>
 </SfGrid>
@@ -375,36 +397,91 @@ The following sample code demonstrates defining sub context menu item and its co
         Orders = OrderData.GetAllRecords();
     }
 
-    public void OnContextMenuClick(ContextMenuClickEventArgs<OrderData> args)
+    public async Task OnContextMenuClick(ContextMenuClickEventArgs<OrderData> args)
     {
         if (args.Item.Id == "copy")
         {
-            this.Grid.Copy(false);
+            await Grid.CopyAsync(false);
         }
         else if (args.Item.Id == "copywithheader")
         {
-            this.Grid.Copy(true); 
+            await Grid.CopyAsync(true);
         }
     }
 }
 
 {% endhighlight %}
+
 {% highlight c# tabtitle="OrderData.cs" %}
 
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData(int orderID, string customerID, double freight, string shipCity)
+    {
+        this.OrderID = orderID;
+        this.CustomerID = customerID;
+        this.Freight = freight;
+        this.ShipCity = shipCity;
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        {
+            Orders.Add(new OrderData(10248, "VINET", 32.38, "Reims"));
+            Orders.Add(new OrderData(10249, "TOMSP", 11.61, "Münster"));
+            Orders.Add(new OrderData(10250, "HANAR", 65.83, "Rio de Janeiro"));
+            Orders.Add(new OrderData(10251, "VICTE", 41.34, "Lyon"));
+            Orders.Add(new OrderData(10252, "SUPRD", 51.3, "Charleroi"));
+            Orders.Add(new OrderData(10253, "HANAR", 58.17, "Rio de Janeiro"));
+            Orders.Add(new OrderData(10254, "CHOPS", 22.98, "Bern"));
+            Orders.Add(new OrderData(10255, "RICSU", 148.33, "Genève"));
+            Orders.Add(new OrderData(10256, "WELLI", 13.97, "Resende"));
+            Orders.Add(new OrderData(10257, "HILAA", 81.91, "San Cristóbal"));
+            Orders.Add(new OrderData(10258, "ERNSH", 140.51, "Graz"));
+            Orders.Add(new OrderData(10259, "CENTC", 3.25, "México D.F."));
+            Orders.Add(new OrderData(10260, "OTTIK", 55.09, "Köln"));
+            Orders.Add(new OrderData(10261, "QUEDE", 3.05, "Rio de Janeiro"));
+            Orders.Add(new OrderData(10262, "RATTC", 48.29, "Albuquerque"));
+        }
+
+        return Orders;
+    }
+
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCity { get; set; }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNhStpDbIqjevvuG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVyjfjkrhfaJLAr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Disable the Context menu for specific columns in DataGrid
 
-Context Menu can be prevented for specific columns using [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events#contextmenuopen) event of DataGrid. This event will be triggered before opening the ContextMenu. You can prevent the context menu from opening by defining the **Cancel** arguments of [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events#contextmenuopen) to **false**.
+In certain scenarios, you may want to restrict the context menu from appearing on specific columns within the Syncfusion Blazor DataGrid. This can be helpful to prevent actions like copying or editing on columns that contain sensitive or read-only data. 
 
-The following sample code demonstrates how to disable the context for specific column using event arguments of [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events#contextmenuopen) event,
+You can achieve this by using the [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events#contextmenuopen)  event. This event is triggered before the context menu is opened, allowing you to cancel it conditionally.
+
+To prevent the context menu from opening on a specific column:
+
+1. Handle the `ContextMenuOpen` event of the Grid.
+
+2.  In the event handler, use the `Column.Field` property to identify the target column.
+
+3. Set `Args.Cancel` as **true** to prevent the menu from opening on that column.
+
+
+The following example prevents the context menu from opening when the you right-clicks on the **Freight** column. The [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuClickEventArgs-1.html) event is used to handle actions when context menu items are clicked. The [CopyAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_CopyAsync_System_Nullable_System_Boolean__) method is used to copy the selected rows or cells, including headers, to the clipboard
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
 
 <SfGrid @ref="Grid" DataSource="@Orders" AllowPaging="true" ContextMenuItems="@(new List<ContextMenuItemModel>() { new ContextMenuItemModel { Text = "Copy with headers", Target = ".e-content", Id = "copywithheader" }})">
     <GridEvents TValue="OrderData" ContextMenuItemClicked="OnContextMenuClick" ContextMenuOpen="OnContextMenuOpen"></GridEvents>
@@ -412,7 +489,7 @@ The following sample code demonstrates how to disable the context for specific c
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150" />
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" EditType="EditType.NumericEdit" TextAlign="TextAlign.Right" Width="120" />
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120" />
         <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="150" />
     </GridColumns>
 </SfGrid>
@@ -435,23 +512,66 @@ The following sample code demonstrates how to disable the context for specific c
         }
     }
 
-    public void OnContextMenuClick(ContextMenuClickEventArgs<OrderData> args)
+    public async Task OnContextMenuClick(ContextMenuClickEventArgs<OrderData> args)
     {
         if (args.Item.Id == "copywithheader")
         {
-            this.Grid.Copy(true);
+            await Grid.CopyAsync(true);
         }
     }
 }
 
 {% endhighlight %}
+
 {% highlight c# tabtitle="OrderData.cs" %}
 
+
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData(int orderID, string customerID, double freight, string shipCity)
+    {
+        this.OrderID = orderID;
+        this.CustomerID = customerID;
+        this.Freight = freight;
+        this.ShipCity = shipCity;
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        {
+            Orders.Add(new OrderData(10248, "VINET", 32.38, "Reims"));
+            Orders.Add(new OrderData(10249, "TOMSP", 11.61, "Münster"));
+            Orders.Add(new OrderData(10250, "HANAR", 65.83, "Rio de Janeiro"));
+            Orders.Add(new OrderData(10251, "VICTE", 41.34, "Lyon"));
+            Orders.Add(new OrderData(10252, "SUPRD", 51.3, "Charleroi"));
+            Orders.Add(new OrderData(10253, "HANAR", 58.17, "Rio de Janeiro"));
+            Orders.Add(new OrderData(10254, "CHOPS", 22.98, "Bern"));
+            Orders.Add(new OrderData(10255, "RICSU", 148.33, "Genève"));
+            Orders.Add(new OrderData(10256, "WELLI", 13.97, "Resende"));
+            Orders.Add(new OrderData(10257, "HILAA", 81.91, "San Cristóbal"));
+            Orders.Add(new OrderData(10258, "ERNSH", 140.51, "Graz"));
+            Orders.Add(new OrderData(10259, "CENTC", 3.25, "México D.F."));
+            Orders.Add(new OrderData(10260, "OTTIK", 55.09, "Köln"));
+            Orders.Add(new OrderData(10261, "QUEDE", 3.05, "Rio de Janeiro"));
+            Orders.Add(new OrderData(10262, "RATTC", 48.29, "Albuquerque"));
+        }
+
+        return Orders;
+    }
+
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCity { get; set; }
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrItfZvoquroDAw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htBeNTjaVhQWEiHK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Disable context menu items dynamically in DataGrid
 
