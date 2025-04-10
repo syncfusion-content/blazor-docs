@@ -594,39 +594,37 @@ You can use the `HideKeyTipsAsync` method to remove all visible keytips from the
 @using Syncfusion.Blazor.Navigations;
 @using Syncfusion.Blazor.SplitButtons;
 
-<div class="col-lg-12 control-section default-ribbon-section">
-    <div id="ribbonContainer">
-        <SfButton @onclick="handleShowKeyTips">ShowKeyTips</SfButton>
-        <SfButton @onclick="handleHideKeyTips">HideKeyTips</SfButton>
-        <SfRibbon ID="ribbon" EnableKeyTips="true" @ref="ribbon">
-            <RibbonFileMenuSettings Visible=true MenuItems="@fileMenuItems"></RibbonFileMenuSettings>
-            <RibbonTabs>
-                <RibbonTab HeaderText="Home" KeyTip="H">
-                    <RibbonGroups>
-                        <RibbonGroup HeaderText="Clipboard" ShowLauncherIcon="true" LauncherIconKeyTip="L">
-                            <RibbonCollections>
-                                <RibbonCollection>
-                                    <RibbonItems>
-                                        <RibbonItem Type=RibbonItemType.SplitButton AllowedSizes="RibbonItemSize.Large" KeyTip="V">
-                                            <RibbonSplitButtonSettings Content="Paste" IconCss="e-icons e-paste" Items="@formatItems"></RibbonSplitButtonSettings>
-                                        </RibbonItem>
-                                    </RibbonItems>
-                                    <RibbonItems>
-                                        <RibbonItem Type=RibbonItemType.Button KeyTip="X">
-                                            <RibbonButtonSettings Content="Cut" IconCss="e-icons e-cut"></RibbonButtonSettings>
-                                        </RibbonItem>
-                                        <RibbonItem Type=RibbonItemType.Button KeyTip="C">
-                                            <RibbonButtonSettings Content="Copy" IconCss="e-icons e-copy"></RibbonButtonSettings>
-                                        </RibbonItem>
-                                    </RibbonItems>
-                                </RibbonCollection>
-                            </RibbonCollections>
-                        </RibbonGroup>
-                    </RibbonGroups>
-                </RibbonTab>
-            </RibbonTabs>
-        </SfRibbon>
-    </div>
+<div id="ribbonContainer">
+    <SfButton @onclick="handleShowKeyTips">ShowKeyTips</SfButton>
+    <SfButton @onclick="handleHideKeyTips">HideKeyTips</SfButton> <br/><br/>
+    <SfRibbon ID="ribbon" EnableKeyTips="true" @ref="ribbon">
+        <RibbonFileMenuSettings Visible=true MenuItems="@fileMenuItems"></RibbonFileMenuSettings>
+        <RibbonTabs>
+            <RibbonTab HeaderText="Home" KeyTip="H">
+                <RibbonGroups>
+                    <RibbonGroup HeaderText="Clipboard" ShowLauncherIcon="true" LauncherIconKeyTip="L">
+                        <RibbonCollections>
+                            <RibbonCollection>
+                                <RibbonItems>
+                                    <RibbonItem Type=RibbonItemType.SplitButton AllowedSizes="RibbonItemSize.Large" KeyTip="V">
+                                        <RibbonSplitButtonSettings Content="Paste" IconCss="e-icons e-paste" Items="@formatItems"></RibbonSplitButtonSettings>
+                                    </RibbonItem>
+                                </RibbonItems>
+                                <RibbonItems>
+                                    <RibbonItem Type=RibbonItemType.Button KeyTip="X">
+                                        <RibbonButtonSettings Content="Cut" IconCss="e-icons e-cut"></RibbonButtonSettings>
+                                    </RibbonItem>
+                                    <RibbonItem Type=RibbonItemType.Button KeyTip="C">
+                                        <RibbonButtonSettings Content="Copy" IconCss="e-icons e-copy"></RibbonButtonSettings>
+                                    </RibbonItem>
+                                </RibbonItems>
+                            </RibbonCollection>
+                        </RibbonCollections>
+                    </RibbonGroup>
+                </RibbonGroups>
+            </RibbonTab>
+        </RibbonTabs>
+    </SfRibbon>
 </div>
 
 @code {
