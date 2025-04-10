@@ -28,108 +28,106 @@ You can add keytips to the Ribbon items by using the `KeyTip` property in the `R
 @using Syncfusion.Blazor.DropDowns;
 @using Syncfusion.Blazor.SplitButtons;
 
-<div class="col-lg-12 control-section default-ribbon-section">
-    <div id="ribbonContainer">
-        <SfRibbon ID="ribbon" EnableKeyTips="true">
-            <RibbonFileMenuSettings Visible=true MenuItems="@fileMenuItems"></RibbonFileMenuSettings>
-            <RibbonTabs>
-                <RibbonTab HeaderText="Home" KeyTip="H">
-                    <RibbonGroups>
-                        <RibbonGroup HeaderText="Clipboard" GroupIconCss="e-icons e-paste" KeyTip="CD">
-                            <RibbonCollections>
-                                <RibbonCollection>
-                                    <RibbonItems>
-                                        <RibbonItem AllowedSizes=RibbonItemSize.Large Type=RibbonItemType.SplitButton KeyTip="PA">
-                                            <RibbonTooltipSettings Title="Paste" CssClass="custom-tooltip" IconCss="e-icons e-paste" Content="Paste content here.</br> Add content on the clipboard to your document."></RibbonTooltipSettings>
-                                            <RibbonSplitButtonSettings Content="Paste" IconCss="e-icons e-paste" Items="@formatItems"></RibbonSplitButtonSettings>
-                                        </RibbonItem>
-                                    </RibbonItems>
-                                </RibbonCollection>
-                                <RibbonCollection>
-                                    <RibbonItems>
-                                        <RibbonItem Type=RibbonItemType.Button KeyTip="CU">
-                                            <RibbonButtonSettings Content="Cut" IconCss="e-icons e-cut"></RibbonButtonSettings>
-                                        </RibbonItem>
-                                        <RibbonItem Type=RibbonItemType.Button KeyTip="CO">
-                                            <RibbonButtonSettings Content="Copy" IconCss="e-icons e-copy"></RibbonButtonSettings>
-                                        </RibbonItem>
-                                        <RibbonItem Type=RibbonItemType.Button KeyTip="CS">
-                                            <RibbonButtonSettings Content="Format Painter" IconCss="e-icons e-format-painter"></RibbonButtonSettings>
-                                        </RibbonItem>
-                                    </RibbonItems>
-                                </RibbonCollection>
-                            </RibbonCollections>
-                        </RibbonGroup>
-                        <RibbonGroup Orientation=Syncfusion.Blazor.Ribbon.Orientation.Row GroupIconCss="e-icons e-bold" EnableGroupOverflow="true" HeaderText="Font" CssClass="font-group" KeyTip="FB">
-                            <RibbonCollections>
-                                <RibbonCollection>
-                                    <RibbonItems>
-                                        <RibbonItem Type=RibbonItemType.ComboBox KeyTip="FF">
-                                            <RibbonComboBoxSettings AllowFiltering=true DataSource="@fontFamilyItems" @bind-Index="@fontFamIndex" Width="150px" FieldSettings="@fieldSetings"></RibbonComboBoxSettings>
-                                        </RibbonItem>
-                                        <RibbonItem Type=RibbonItemType.ComboBox KeyTip="FS">
-                                            <RibbonComboBoxSettings DataSource="@fontSizeItems" Width="65px" PopupWidth="85px" FieldSettings="@fieldSetings" @bind-Index="@fontSizeIndex"></RibbonComboBoxSettings>
-                                        </RibbonItem>
-                                    </RibbonItems>
-                                </RibbonCollection>
-                                <RibbonCollection>
-                                    <RibbonItems>
-                                        <RibbonItem Type=RibbonItemType.GroupButton ID="formatGroup" KeyTip="GB">
-                                            <RibbonGroupButtonSettings Selection=GroupButtonSelection.Single
-                                                                       Items="@formatGroupItems">
-                                            </RibbonGroupButtonSettings>
-                                        </RibbonItem>
-                                        <RibbonItem Type=RibbonItemType.ColorPicker KeyTip="CP">
-                                            <RibbonColorPickerSettings @bind-Value="@colorPickerValue"></RibbonColorPickerSettings>
-                                        </RibbonItem>
-                                    </RibbonItems>
-                                </RibbonCollection>
-                            </RibbonCollections>
-                        </RibbonGroup>
-                        <RibbonGroup GroupIconCss="e-icons e-paste" HeaderText="Gallery">
-                            <RibbonCollections>
-                                <RibbonCollection>
-                                    <RibbonItems>
-                                        <RibbonItem Type=RibbonItemType.Gallery KeyTip="GY">
-                                            <RibbonGallerySettings ItemCount="3" Groups="galleryGroups"></RibbonGallerySettings>
-                                        </RibbonItem>
-                                    </RibbonItems>
-                                </RibbonCollection>
-                            </RibbonCollections>
-                        </RibbonGroup>
-                        <RibbonGroup HeaderText="Tables" GroupIconCss="e-icons e-table">
-                            <RibbonCollections>
-                                <RibbonCollection>
-                                    <RibbonItems>
-                                        <RibbonItem Type=RibbonItemType.DropDown AllowedSizes="RibbonItemSize.Large" KeyTip="T">
-                                            <RibbonDropDownSettings Content="Table" IconCss="e-icons e-table" Items="@tableItems"></RibbonDropDownSettings>
-                                        </RibbonItem>
-                                    </RibbonItems>
-                                </RibbonCollection>
-                            </RibbonCollections>
-                        </RibbonGroup>
-                        <RibbonGroup HeaderText="Show" GroupIconCss="e-icons e-copy">
-                            <RibbonCollections>
-                                <RibbonCollection>
-                                    <RibbonItems>
-                                        <RibbonItem Type=RibbonItemType.CheckBox KeyTip="R1">
-                                            <RibbonCheckBoxSettings Label="Ruler"></RibbonCheckBoxSettings>
-                                        </RibbonItem>
-                                        <RibbonItem Type=RibbonItemType.CheckBox KeyTip="R2">
-                                            <RibbonCheckBoxSettings Label="Gridlines"></RibbonCheckBoxSettings>
-                                        </RibbonItem>
-                                        <RibbonItem Type=RibbonItemType.CheckBox KeyTip="R3">
-                                            <RibbonCheckBoxSettings Label="Navigation Pane" @bind-Checked="@checkedState"></RibbonCheckBoxSettings>
-                                        </RibbonItem>
-                                    </RibbonItems>
-                                </RibbonCollection>
-                            </RibbonCollections>
-                        </RibbonGroup>
-                    </RibbonGroups>
-                </RibbonTab>
-            </RibbonTabs>
-        </SfRibbon>
-    </div>
+<div id="ribbonContainer">
+    <SfRibbon ID="ribbon" EnableKeyTips="true">
+        <RibbonFileMenuSettings Visible=true MenuItems="@fileMenuItems"></RibbonFileMenuSettings>
+        <RibbonTabs>
+            <RibbonTab HeaderText="Home" KeyTip="H">
+                <RibbonGroups>
+                    <RibbonGroup HeaderText="Clipboard" GroupIconCss="e-icons e-paste" KeyTip="CD">
+                        <RibbonCollections>
+                            <RibbonCollection>
+                                <RibbonItems>
+                                    <RibbonItem AllowedSizes=RibbonItemSize.Large Type=RibbonItemType.SplitButton KeyTip="PA">
+                                        <RibbonTooltipSettings Title="Paste" CssClass="custom-tooltip" IconCss="e-icons e-paste" Content="Paste content here.</br> Add content on the clipboard to your document."></RibbonTooltipSettings>
+                                        <RibbonSplitButtonSettings Content="Paste" IconCss="e-icons e-paste" Items="@formatItems"></RibbonSplitButtonSettings>
+                                    </RibbonItem>
+                                </RibbonItems>
+                            </RibbonCollection>
+                            <RibbonCollection>
+                                <RibbonItems>
+                                    <RibbonItem Type=RibbonItemType.Button KeyTip="CU">
+                                        <RibbonButtonSettings Content="Cut" IconCss="e-icons e-cut"></RibbonButtonSettings>
+                                    </RibbonItem>
+                                    <RibbonItem Type=RibbonItemType.Button KeyTip="CO">
+                                        <RibbonButtonSettings Content="Copy" IconCss="e-icons e-copy"></RibbonButtonSettings>
+                                    </RibbonItem>
+                                    <RibbonItem Type=RibbonItemType.Button KeyTip="CS">
+                                        <RibbonButtonSettings Content="Format Painter" IconCss="e-icons e-format-painter"></RibbonButtonSettings>
+                                    </RibbonItem>
+                                </RibbonItems>
+                            </RibbonCollection>
+                        </RibbonCollections>
+                    </RibbonGroup>
+                    <RibbonGroup Orientation=Syncfusion.Blazor.Ribbon.Orientation.Row GroupIconCss="e-icons e-bold" EnableGroupOverflow="true" HeaderText="Font" CssClass="font-group" KeyTip="FB">
+                        <RibbonCollections>
+                            <RibbonCollection>
+                                <RibbonItems>
+                                    <RibbonItem Type=RibbonItemType.ComboBox KeyTip="FF">
+                                        <RibbonComboBoxSettings AllowFiltering=true DataSource="@fontFamilyItems" @bind-Index="@fontFamIndex" Width="150px" FieldSettings="@fieldSetings"></RibbonComboBoxSettings>
+                                    </RibbonItem>
+                                    <RibbonItem Type=RibbonItemType.ComboBox KeyTip="FS">
+                                        <RibbonComboBoxSettings DataSource="@fontSizeItems" Width="65px" PopupWidth="85px" FieldSettings="@fieldSetings" @bind-Index="@fontSizeIndex"></RibbonComboBoxSettings>
+                                    </RibbonItem>
+                                </RibbonItems>
+                            </RibbonCollection>
+                            <RibbonCollection>
+                                <RibbonItems>
+                                    <RibbonItem Type=RibbonItemType.GroupButton ID="formatGroup" KeyTip="GB">
+                                        <RibbonGroupButtonSettings Selection=GroupButtonSelection.Single
+                                                                   Items="@formatGroupItems">
+                                        </RibbonGroupButtonSettings>
+                                    </RibbonItem>
+                                    <RibbonItem Type=RibbonItemType.ColorPicker KeyTip="CP">
+                                        <RibbonColorPickerSettings @bind-Value="@colorPickerValue"></RibbonColorPickerSettings>
+                                    </RibbonItem>
+                                </RibbonItems>
+                            </RibbonCollection>
+                        </RibbonCollections>
+                    </RibbonGroup>
+                    <RibbonGroup GroupIconCss="e-icons e-paste" HeaderText="Gallery">
+                        <RibbonCollections>
+                            <RibbonCollection>
+                                <RibbonItems>
+                                    <RibbonItem Type=RibbonItemType.Gallery KeyTip="GY">
+                                        <RibbonGallerySettings ItemCount="3" Groups="galleryGroups"></RibbonGallerySettings>
+                                    </RibbonItem>
+                                </RibbonItems>
+                            </RibbonCollection>
+                        </RibbonCollections>
+                    </RibbonGroup>
+                    <RibbonGroup HeaderText="Tables" GroupIconCss="e-icons e-table">
+                        <RibbonCollections>
+                            <RibbonCollection>
+                                <RibbonItems>
+                                    <RibbonItem Type=RibbonItemType.DropDown AllowedSizes="RibbonItemSize.Large" KeyTip="T">
+                                        <RibbonDropDownSettings Content="Table" IconCss="e-icons e-table" Items="@tableItems"></RibbonDropDownSettings>
+                                    </RibbonItem>
+                                </RibbonItems>
+                            </RibbonCollection>
+                        </RibbonCollections>
+                    </RibbonGroup>
+                    <RibbonGroup HeaderText="Show" GroupIconCss="e-icons e-copy">
+                        <RibbonCollections>
+                            <RibbonCollection>
+                                <RibbonItems>
+                                    <RibbonItem Type=RibbonItemType.CheckBox KeyTip="R1">
+                                        <RibbonCheckBoxSettings Label="Ruler"></RibbonCheckBoxSettings>
+                                    </RibbonItem>
+                                    <RibbonItem Type=RibbonItemType.CheckBox KeyTip="R2">
+                                        <RibbonCheckBoxSettings Label="Gridlines"></RibbonCheckBoxSettings>
+                                    </RibbonItem>
+                                    <RibbonItem Type=RibbonItemType.CheckBox KeyTip="R3">
+                                        <RibbonCheckBoxSettings Label="Navigation Pane" @bind-Checked="@checkedState"></RibbonCheckBoxSettings>
+                                    </RibbonItem>
+                                </RibbonItems>
+                            </RibbonCollection>
+                        </RibbonCollections>
+                    </RibbonGroup>
+                </RibbonGroups>
+            </RibbonTab>
+        </RibbonTabs>
+    </SfRibbon>
 </div>
 
 @code {
@@ -292,37 +290,35 @@ You can add keytip to the File menu by using the `KeyTip` property.
 @using Syncfusion.Blazor.DropDowns;
 @using Syncfusion.Blazor.SplitButtons;
 
-<div class="col-lg-12 control-section default-ribbon-section">
-    <div id="ribbonContainer">
-        <SfRibbon ID="ribbon" EnableKeyTips="true">
-            <RibbonFileMenuSettings Visible=true MenuItems="@fileMenuItems" KeyTip="F"></RibbonFileMenuSettings>
-            <RibbonTabs>
-                <RibbonTab HeaderText="Home">
-                    <RibbonGroups>
-                        <RibbonGroup HeaderText="Clipboard">
-                            <RibbonCollections>
-                                <RibbonCollection>
-                                    <RibbonItems>
-                                        <RibbonItem Type=RibbonItemType.SplitButton AllowedSizes="RibbonItemSize.Large">
-                                            <RibbonSplitButtonSettings Content="Paste" IconCss="e-icons e-paste" Items="@formatItems"></RibbonSplitButtonSettings>
-                                        </RibbonItem>
-                                    </RibbonItems>
-                                    <RibbonItems>
-                                        <RibbonItem Type=RibbonItemType.Button>
-                                            <RibbonButtonSettings Content="Cut" IconCss="e-icons e-cut"></RibbonButtonSettings>
-                                        </RibbonItem>
-                                        <RibbonItem Type=RibbonItemType.Button>
-                                            <RibbonButtonSettings Content="Copy" IconCss="e-icons e-copy"></RibbonButtonSettings>
-                                        </RibbonItem>
-                                    </RibbonItems>
-                                </RibbonCollection>
-                            </RibbonCollections>
-                        </RibbonGroup>
-                    </RibbonGroups>
-                </RibbonTab>
-            </RibbonTabs>
-        </SfRibbon>
-    </div>
+<div id="ribbonContainer">
+    <SfRibbon ID="ribbon" EnableKeyTips="true">
+        <RibbonFileMenuSettings Visible=true MenuItems="@fileMenuItems" KeyTip="F"></RibbonFileMenuSettings>
+        <RibbonTabs>
+            <RibbonTab HeaderText="Home">
+                <RibbonGroups>
+                    <RibbonGroup HeaderText="Clipboard">
+                        <RibbonCollections>
+                            <RibbonCollection>
+                                <RibbonItems>
+                                    <RibbonItem Type=RibbonItemType.SplitButton AllowedSizes="RibbonItemSize.Large">
+                                        <RibbonSplitButtonSettings Content="Paste" IconCss="e-icons e-paste" Items="@formatItems"></RibbonSplitButtonSettings>
+                                    </RibbonItem>
+                                </RibbonItems>
+                                <RibbonItems>
+                                    <RibbonItem Type=RibbonItemType.Button>
+                                        <RibbonButtonSettings Content="Cut" IconCss="e-icons e-cut"></RibbonButtonSettings>
+                                    </RibbonItem>
+                                    <RibbonItem Type=RibbonItemType.Button>
+                                        <RibbonButtonSettings Content="Copy" IconCss="e-icons e-copy"></RibbonButtonSettings>
+                                    </RibbonItem>
+                                </RibbonItems>
+                            </RibbonCollection>
+                        </RibbonCollections>
+                    </RibbonGroup>
+                </RibbonGroups>
+            </RibbonTab>
+        </RibbonTabs>
+    </SfRibbon>
 </div>
 
 @code {
@@ -365,43 +361,41 @@ You can add keytips for the backstage button and menu items by using `KeyTip` pr
 @using Syncfusion.Blazor.DropDowns;
 @using Syncfusion.Blazor.SplitButtons;
 
-<div class="col-lg-12 control-section default-ribbon-section">
-    <div id="ribbonContainer">
-        <SfRibbon ID="ribbon" EnableKeyTips="true">
-            <RibbonBackstageMenuSettings KeyTip="F" Visible="true" BackButtonSettings="@backStageBackButton">
-                <BackstageMenuItems>
-                    <BackstageMenuItem KeyTip="H" ID="home" Text="Home" IconCss="e-icons e-home"></BackstageMenuItem>
-                    <BackstageMenuItem KeyTip="N" ID="new" Text="New" IconCss="e-icons e-file-new"></BackstageMenuItem>
-                    <BackstageMenuItem KeyTip="O" ID="open" Text="Open" IconCss="e-icons e-folder-open"></BackstageMenuItem>
-                </BackstageMenuItems>
-            </RibbonBackstageMenuSettings>
-            <RibbonTabs>
-                <RibbonTab HeaderText="Home">
-                    <RibbonGroups>
-                        <RibbonGroup HeaderText="Clipboard">
-                            <RibbonCollections>
-                                <RibbonCollection>
-                                    <RibbonItems>
-                                        <RibbonItem Type=RibbonItemType.SplitButton AllowedSizes="RibbonItemSize.Large">
-                                            <RibbonSplitButtonSettings Content="Paste" IconCss="e-icons e-paste" Items="@formatItems"></RibbonSplitButtonSettings>
-                                        </RibbonItem>
-                                    </RibbonItems>
-                                    <RibbonItems>
-                                        <RibbonItem Type=RibbonItemType.Button>
-                                            <RibbonButtonSettings Content="Cut" IconCss="e-icons e-cut"></RibbonButtonSettings>
-                                        </RibbonItem>
-                                        <RibbonItem Type=RibbonItemType.Button>
-                                            <RibbonButtonSettings Content="Copy" IconCss="e-icons e-copy"></RibbonButtonSettings>
-                                        </RibbonItem>
-                                    </RibbonItems>
-                                </RibbonCollection>
-                            </RibbonCollections>
-                        </RibbonGroup>
-                    </RibbonGroups>
-                </RibbonTab>
-            </RibbonTabs>
-        </SfRibbon>
-    </div>
+<div id="ribbonContainer">
+    <SfRibbon ID="ribbon" EnableKeyTips="true">
+        <RibbonBackstageMenuSettings KeyTip="F" Visible="true" BackButtonSettings="@backStageBackButton">
+            <BackstageMenuItems>
+                <BackstageMenuItem KeyTip="H" ID="home" Text="Home" IconCss="e-icons e-home"></BackstageMenuItem>
+                <BackstageMenuItem KeyTip="N" ID="new" Text="New" IconCss="e-icons e-file-new"></BackstageMenuItem>
+                <BackstageMenuItem KeyTip="O" ID="open" Text="Open" IconCss="e-icons e-folder-open"></BackstageMenuItem>
+            </BackstageMenuItems>
+        </RibbonBackstageMenuSettings>
+        <RibbonTabs>
+            <RibbonTab HeaderText="Home">
+                <RibbonGroups>
+                    <RibbonGroup HeaderText="Clipboard">
+                        <RibbonCollections>
+                            <RibbonCollection>
+                                <RibbonItems>
+                                    <RibbonItem Type=RibbonItemType.SplitButton AllowedSizes="RibbonItemSize.Large">
+                                        <RibbonSplitButtonSettings Content="Paste" IconCss="e-icons e-paste" Items="@formatItems"></RibbonSplitButtonSettings>
+                                    </RibbonItem>
+                                </RibbonItems>
+                                <RibbonItems>
+                                    <RibbonItem Type=RibbonItemType.Button>
+                                        <RibbonButtonSettings Content="Cut" IconCss="e-icons e-cut"></RibbonButtonSettings>
+                                    </RibbonItem>
+                                    <RibbonItem Type=RibbonItemType.Button>
+                                        <RibbonButtonSettings Content="Copy" IconCss="e-icons e-copy"></RibbonButtonSettings>
+                                    </RibbonItem>
+                                </RibbonItems>
+                            </RibbonCollection>
+                        </RibbonCollections>
+                    </RibbonGroup>
+                </RibbonGroups>
+            </RibbonTab>
+        </RibbonTabs>
+    </SfRibbon>
 </div>
 
 @code {
@@ -439,37 +433,35 @@ You can add keytip to the layout switcher by using the `LayoutSwitcherKeyTip` pr
 @using Syncfusion.Blazor.DropDowns;
 @using Syncfusion.Blazor.SplitButtons;
 
-<div class="col-lg-12 control-section default-ribbon-section">
-    <div id="ribbonContainer">
-        <SfRibbon ID="ribbon" EnableKeyTips="true" LayoutSwitcherKeyTip="LS">
-            <RibbonFileMenuSettings Visible=true MenuItems="@fileMenuItems"></RibbonFileMenuSettings>
-            <RibbonTabs>
-                <RibbonTab HeaderText="Home">
-                    <RibbonGroups>
-                        <RibbonGroup HeaderText="Clipboard">
-                            <RibbonCollections>
-                                <RibbonCollection>
-                                    <RibbonItems>
-                                        <RibbonItem Type=RibbonItemType.SplitButton AllowedSizes="RibbonItemSize.Large">
-                                            <RibbonSplitButtonSettings Content="Paste" IconCss="e-icons e-paste" Items="@formatItems"></RibbonSplitButtonSettings>
-                                        </RibbonItem>
-                                    </RibbonItems>
-                                    <RibbonItems>
-                                        <RibbonItem Type=RibbonItemType.Button>
-                                            <RibbonButtonSettings Content="Cut" IconCss="e-icons e-cut"></RibbonButtonSettings>
-                                        </RibbonItem>
-                                        <RibbonItem Type=RibbonItemType.Button>
-                                            <RibbonButtonSettings Content="Copy" IconCss="e-icons e-copy"></RibbonButtonSettings>
-                                        </RibbonItem>
-                                    </RibbonItems>
-                                </RibbonCollection>
-                            </RibbonCollections>
-                        </RibbonGroup>
-                    </RibbonGroups>
-                </RibbonTab>
-            </RibbonTabs>
-        </SfRibbon>
-    </div>
+<div id="ribbonContainer">
+    <SfRibbon ID="ribbon" EnableKeyTips="true" LayoutSwitcherKeyTip="LS">
+        <RibbonFileMenuSettings Visible=true MenuItems="@fileMenuItems"></RibbonFileMenuSettings>
+        <RibbonTabs>
+            <RibbonTab HeaderText="Home">
+                <RibbonGroups>
+                    <RibbonGroup HeaderText="Clipboard">
+                        <RibbonCollections>
+                            <RibbonCollection>
+                                <RibbonItems>
+                                    <RibbonItem Type=RibbonItemType.SplitButton AllowedSizes="RibbonItemSize.Large">
+                                        <RibbonSplitButtonSettings Content="Paste" IconCss="e-icons e-paste" Items="@formatItems"></RibbonSplitButtonSettings>
+                                    </RibbonItem>
+                                </RibbonItems>
+                                <RibbonItems>
+                                    <RibbonItem Type=RibbonItemType.Button>
+                                        <RibbonButtonSettings Content="Cut" IconCss="e-icons e-cut"></RibbonButtonSettings>
+                                    </RibbonItem>
+                                    <RibbonItem Type=RibbonItemType.Button>
+                                        <RibbonButtonSettings Content="Copy" IconCss="e-icons e-copy"></RibbonButtonSettings>
+                                    </RibbonItem>
+                                </RibbonItems>
+                            </RibbonCollection>
+                        </RibbonCollections>
+                    </RibbonGroup>
+                </RibbonGroups>
+            </RibbonTab>
+        </RibbonTabs>
+    </SfRibbon>
 </div>
 
 @code {
@@ -512,37 +504,36 @@ You can add keytip to the launcher icon by using `LauncherIconKeyTip` property a
 @using Syncfusion.Blazor.DropDowns;
 @using Syncfusion.Blazor.SplitButtons;
 
-<div class="col-lg-12 control-section default-ribbon-section">
-    <div id="ribbonContainer">
-        <SfRibbon ID="ribbon" EnableKeyTips="true">
-            <RibbonFileMenuSettings Visible=true MenuItems="@fileMenuItems"></RibbonFileMenuSettings>
-            <RibbonTabs>
-                <RibbonTab HeaderText="Home" KeyTip="H">
-                    <RibbonGroups>
-                        <RibbonGroup HeaderText="Clipboard" ShowLauncherIcon="true" LauncherIconKeyTip="L">
-                            <RibbonCollections>
-                                <RibbonCollection>
-                                    <RibbonItems>
-                                        <RibbonItem Type=RibbonItemType.SplitButton AllowedSizes="RibbonItemSize.Large">
-                                            <RibbonSplitButtonSettings Content="Paste" IconCss="e-icons e-paste" Items="@formatItems"></RibbonSplitButtonSettings>
-                                        </RibbonItem>
-                                    </RibbonItems>
-                                    <RibbonItems>
-                                        <RibbonItem Type=RibbonItemType.Button>
-                                            <RibbonButtonSettings Content="Cut" IconCss="e-icons e-cut"></RibbonButtonSettings>
-                                        </RibbonItem>
-                                        <RibbonItem Type=RibbonItemType.Button>
-                                            <RibbonButtonSettings Content="Copy" IconCss="e-icons e-copy"></RibbonButtonSettings>
-                                        </RibbonItem>
-                                    </RibbonItems>
-                                </RibbonCollection>
-                            </RibbonCollections>
-                        </RibbonGroup>
-                    </RibbonGroups>
-                </RibbonTab>
-            </RibbonTabs>
-        </SfRibbon>
-    </div>
+
+<div id="ribbonContainer">
+    <SfRibbon ID="ribbon" EnableKeyTips="true">
+        <RibbonFileMenuSettings Visible=true MenuItems="@fileMenuItems"></RibbonFileMenuSettings>
+        <RibbonTabs>
+            <RibbonTab HeaderText="Home" KeyTip="H">
+                <RibbonGroups>
+                    <RibbonGroup HeaderText="Clipboard" ShowLauncherIcon="true" LauncherIconKeyTip="L">
+                        <RibbonCollections>
+                            <RibbonCollection>
+                                <RibbonItems>
+                                    <RibbonItem Type=RibbonItemType.SplitButton AllowedSizes="RibbonItemSize.Large">
+                                        <RibbonSplitButtonSettings Content="Paste" IconCss="e-icons e-paste" Items="@formatItems"></RibbonSplitButtonSettings>
+                                    </RibbonItem>
+                                </RibbonItems>
+                                <RibbonItems>
+                                    <RibbonItem Type=RibbonItemType.Button>
+                                        <RibbonButtonSettings Content="Cut" IconCss="e-icons e-cut"></RibbonButtonSettings>
+                                    </RibbonItem>
+                                    <RibbonItem Type=RibbonItemType.Button>
+                                        <RibbonButtonSettings Content="Copy" IconCss="e-icons e-copy"></RibbonButtonSettings>
+                                    </RibbonItem>
+                                </RibbonItems>
+                            </RibbonCollection>
+                        </RibbonCollections>
+                    </RibbonGroup>
+                </RibbonGroups>
+            </RibbonTab>
+        </RibbonTabs>
+    </SfRibbon>
 </div>
 
 @code {
