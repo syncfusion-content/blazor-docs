@@ -448,6 +448,274 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNrINftYJMQFuKca?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+## Exporting with cell and row spanning 
+
+Exporting data from the Grid with cell and row spanning enables you to maintain cell and row layout in the exported data. This feature is useful when you have merged cells or rows in the Grid and you want to maintain the same structure in the exported file.
+
+To achieve this, you can utilize the `rowSpan` and `colSpan` properties in the [QueryCellInfo](https://blazor.syncfusion.com/documentation/datagrid/events#querycellinfo) event of the Grid. This event allows you to define the span values for specific cells. Additionally, you can customize the appearance of the grid cells during the export using the [PdfQueryCellInfo](https://blazor.syncfusion.com/documentation/datagrid/events#pdfquerycellinfoevent) event of the Grid.
+
+The following example demonstrates how to perform export with cell and row spanning using `queryCellInfo` and `PdfQueryCellInfo` events of the Grid.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+
+<SfGrid ID="Grid" @ref="Grid" DataSource="@Orders" AllowPdfExport="true" Toolbar="@(new List<string>() { "PdfExport" })" Height="348">
+    <GridEvents PdfQueryCellInfoEvent="PdfQueryCellInfoHandler" QueryCellInfo="QueryCellInfoHandler" OnToolbarClick="ToolbarClickHandler" TValue="OrderData"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Visible="false" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private SfGrid<OrderData> Grid;
+    public List<OrderData> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords(); // Populate the grid with initial data
+    }
+
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Id == "Grid_pdfexport")
+        {
+
+            await this.Grid.ExportToPdfAsync();
+        }
+    }
+
+    public void PdfQueryCellInfoHandler(PdfQueryCellInfoEventArgs<OrderData> args)
+    {
+        var orderId = (args.Data).OrderID;
+        switch (orderId)
+        {
+            case 10248:
+                if ((args.Column).Field == "CustomerID")
+                {
+                    args.Cell.RowSpan = 2;
+                }
+                break;
+            case 10250:
+                if ((args.Column).Field == "CustomerID")
+                {
+                    args.Cell.ColumnSpan = 2;
+                }
+                break;
+            case 10252:
+                if (args.Column.Field == "OrderID")
+                {
+                    args.Cell.RowSpan = 3;
+                }
+                break;
+            case 10256:
+                if (args.Column.Field == "CustomerID")
+                {
+                    args.Cell.ColumnSpan = 3;
+                }
+                break;
+            case 10261:
+                if (args.Column.Field == "Freight")
+                {
+                    args.Cell.ColumnSpan = 2;
+                }
+                break;
+        }
+    }
+
+    public void QueryCellInfoHandler(Syncfusion.Blazor.Grids.QueryCellInfoEventArgs<OrderData> args)
+    {
+        var orderId = (args.Data).OrderID;
+        switch (orderId)
+        {
+            case 10248:
+                if (args.Column.Field == "CustomerID")
+                {
+                    args.RowSpan = 2;
+                }
+                break;
+            case 10250:
+                if (args.Column.Field == "CustomerID")
+                {
+                    args.ColSpan = 2;
+                }
+                break;
+            case 10252:
+                if (args.Column.Field == "OrderID")
+                {
+                    args.RowSpan = 3;
+                }
+                break;
+            case 10256:
+                if (args.Column.Field == "CustomerID")
+                {
+                    args.ColSpan = 3;
+                }
+                break;
+            case 10261:
+                if (args.Column.Field == "Freight")
+                {
+                    args.ColSpan = 2;
+                }
+                break;
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="OrderData.cs" %}
+
+public class OrderData
+{
+    public OrderData(int orderID, string customerID, double freight, string shipCity, string shipCountry)
+    {
+        this.OrderID = orderID;
+        this.CustomerID = customerID;
+        this.Freight = freight;
+        this.ShipCity = shipCity;
+        this.ShipCountry = shipCountry;
+    }
+    public static List<OrderData> GetAllRecords()
+    {
+        return new List<OrderData>
+        {
+            new OrderData(10248, "VINET", 32.38, "Reims", "France"),
+            new OrderData(10249, "TOMSP", 11.61, "Münster", "Germany"),
+            new OrderData(10250, "HANAR", 65.83, "Rio de Janeiro", "Brazil"),
+            new OrderData(10251, "VICTE", 41.34, "Lyon", "France"),
+            new OrderData(10252, "SUPRD", 51.30, "Charleroi", "Belgium"),
+            new OrderData(10253, "HANAR", 58.17, "Rio de Janeiro", "Brazil"),
+            new OrderData(10254, "CHOPS", 22.98, "Bern", "Switzerland"),
+            new OrderData(10255, "RICSU", 148.33, "Genève", "France"),
+            new OrderData(10256, "WELLI", 13.97, "Resende", "Brazil"),
+            new OrderData(10257, "HILAA", 81.91, "San Cristóbal", "Mexico"),
+            new OrderData(10258, "ERNSH", 140.51, "Graz", "Austria"),
+            new OrderData(10259, "CENTC", 3.25, "México D.F.", "Mexico"),
+            new OrderData(10260, "OTTIK", 55.09, "Köln", "Germany"),
+            new OrderData(10261, "QUEDE", 3.05, "Rio de Janeiro", "Brazil"),
+            new OrderData(10262, "RATTC", 48.29, "Albuquerque", "USA")
+        };
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipCountry { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhINJWZJaPXBXHs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Exporting with custom date format
+
+The exporting functionality in the Syncfusion Blazor Grid allows you to export grid data, including custom date format. This feature is useful when you need to export grid data with customized date values. 
+
+To apply a custom date format to grid columns during the export, you can utilize the [columns.format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html?_gl=1*menbkd*_gcl_aw*R0NMLjE3MzgwNjYwODYuQ2p3S0NBaUFuZUs4QmhBVkVpd0FveTJIWVFDU1Nhbm1XaWRsRGpDb2lSTEZBZEhPR21xMERSM2VxSGZRRzVGUVA3WEZsNjV1NndrRG14b0NqMHNRQXZEX0J3RQ..*_ga*NzE4Mzg0MjU3LjE3NDEwOTIxNDg.*_ga_41J4HFMX1J*MTc0NDI2NjE5MC4xMjIuMS4xNzQ0MjY3NTQ1LjAuMC4w#Syncfusion_Blazor_Grids_GridColumn_Format) property. This property allows you to define a custom format using format options.
+
+The following example demonstrates how to export the grid data with custom date format. In this example, the formatOptions object is used as the `columns.format` property for the **OrderDate** column. This custom date format displays the date in the format of day-of-the-week, month abbreviation, day, and 2-digit year (e.g., Thu, Jul 4, '96).
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+
+<SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" Toolbar="@(new List<string>() { "PdfExport" })" AllowPdfExport="true" AllowPaging="true">
+    <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="OrderData"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Type="Syncfusion.Blazor.Grids.ColumnType.Date" Format="@FormatOptions" Width="100">
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Width="80"></GridColumn>
+        </GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private SfGrid<OrderData> DefaultGrid;
+    public List<OrderData> Orders { get; set; }
+    public string FormatOptions = "ddd, MMM d, ''yy";
+
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Grid's ID and itemname
+        {
+            await this.DefaultGrid.PdfExport();
+
+        }
+    }
+
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+
+    }
+}
+
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData() { }
+
+    public OrderData(int OrderID, string CustomerID, string ShipName, double Freight, DateTime? OrderDate, DateTime? ShippedDate, bool? IsVerified, string ShipCity, string ShipCountry, int employeeID)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;
+        this.ShipName = ShipName;
+        this.Freight = Freight;
+        this.OrderDate = OrderDate;
+        this.ShippedDate = ShippedDate;
+        this.IsVerified = IsVerified;
+        this.ShipCity = ShipCity;
+        this.ShipCountry = ShipCountry;
+        this.EmployeeID = employeeID;
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        {
+            Orders.Add(new OrderData(10248, "VINET", "Vins et alcools Chevalier", 32.38, new DateTime(1996, 7, 4), new DateTime(1996, 08, 07), true, "Reims", "France", 1));
+            Orders.Add(new OrderData(10249, "TOMSP", "Toms Spezialitäten", 11.61, new DateTime(1996, 7, 5), new DateTime(1996, 08, 07), false, "Münster", "Germany", 2));
+            Orders.Add(new OrderData(10250, "HANAR", "Hanari Carnes", 65.83, new DateTime(1996, 7, 6), new DateTime(1996, 08, 07), true, "Rio de Janeiro", "Brazil", 3));
+            Orders.Add(new OrderData(10251, "VINET", "Vins et alcools Chevalier", 41.34, new DateTime(1996, 7, 7), new DateTime(1996, 08, 07), false, "Lyon", "France", 1));
+            Orders.Add(new OrderData(10252, "SUPRD", "Suprêmes délices", 151.30, new DateTime(1996, 7, 8), new DateTime(1996, 08, 07), true, "Charleroi", "Belgium", 2));
+            Orders.Add(new OrderData(10253, "HANAR", "Hanari Carnes", 58.17, new DateTime(1996, 7, 9), new DateTime(1996, 08, 07), false, "Bern", "Switzerland", 3));
+            Orders.Add(new OrderData(10254, "CHOPS", "Chop-suey Chinese", 22.98, new DateTime(1996, 7, 10), new DateTime(1996, 08, 07), true, "Genève", "Switzerland", 2));
+            Orders.Add(new OrderData(10255, "VINET", "Vins et alcools Chevalier", 148.33, new DateTime(1996, 7, 11), new DateTime(1996, 08, 07), false, "Resende", "Brazil", 1));
+            Orders.Add(new OrderData(10256, "HANAR", "Hanari Carnes", 13.97, new DateTime(1996, 7, 12), new DateTime(1996, 08, 07), true, "Paris", "France", 3));
+        }
+        return Orders;
+    }
+
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipName { get; set; }
+    public double? Freight { get; set; }
+    public DateTime? OrderDate { get; set; }
+    public DateTime? ShippedDate { get; set; }
+    public bool? IsVerified { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipCountry { get; set; }
+    public int EmployeeID { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVSNfWZIXZQsIfM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 <!-- Multiple exporting
 
 PDF export provides an option for exporting multiple grids to same file. In this exported document, each datagrid will be exported to new page of document in same file.
