@@ -787,7 +787,6 @@ public IActionResult BatchUpdate([FromBody] CRUDModel<OrdersDetails> batchmodel)
             OrdersDetails.GetAllRecords().Insert(0, addedOrder);
         }
     }
-
     // Check if there are any changed records in the batch model.
     if (batchmodel.changed != null)
     {
@@ -807,7 +806,6 @@ public IActionResult BatchUpdate([FromBody] CRUDModel<OrdersDetails> batchmodel)
             }
         }
     }
-
     // Check if there are any deleted records in the batch model.
     if (batchmodel.deleted != null)
     {
@@ -836,7 +834,7 @@ public IActionResult BatchUpdate([FromBody] CRUDModel<OrdersDetails> batchmodel)
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor
 
-<SfGrid TValue="OrdersDetails" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })" Height="348">
+<SfGrid TValue="OrdersDetails" Toolbar="@(new List<string>() { "Add", "Delete", "Update", "Cancel" })" Height="348">
     <SfDataManager Url="https://localhost:xxxx/api/grid" BatchUrl="https://localhost:xxxx/api/grid/BatchUpdate" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
     <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="EditMode.Batch"></GridEditSettings>
     <GridColumns>
