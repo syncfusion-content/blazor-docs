@@ -25,15 +25,20 @@ Using the NuGet package manager in Visual Studio (Tools → NuGet Package Manage
 
 **3. Create a model class**
  
-Create a new folder named **Models**. Then, add a model class named **OrdersDetails.cs** in the **Models** folder to represent the order data.
+Create a new folder named **Models**. Then, add a model class named **OrdersDetails.cs** to the **Models** folder under `ODataV4Adaptor.Client` to represent the order data.
  
 ```csharp
-namespace ODataV4Adaptor.Models
+
+using System.ComponentModel.DataAnnotations;
+
+namespace ODataV4Adaptor.Client.Models
 {
     public class OrdersDetails
     {
         public static List<OrdersDetails> order = new List<OrdersDetails>();
+
         public OrdersDetails() { }
+        
         public OrdersDetails(
         int OrderID, string CustomerId, int EmployeeId, string ShipCountry)
         {
@@ -67,10 +72,12 @@ namespace ODataV4Adaptor.Models
         public string? ShipCountry { get; set; }
     }
 }
+
 ```
+
 **4. Build the Entity Data Model**
 
-To construct the Entity Data Model for your OData service, use the `ODataConventionModelBuilder` to define the model’s structure in the `Program.cs` file. Start by creating an instance of the `ODataConventionModelBuilder`, then register the entity set **Orders** using the `EntitySet<T>` method, where `OrdersDetails` represents the CLR type containing order details.
+To construct the Entity Data Model for your OData service, use the `ODataConventionModelBuilder` to define the model’s structure in the `Program.cs` file of the `ODataV4Adaptor` project. Start by creating an instance of the `ODataConventionModelBuilder`, and then register the entity set **Orders** using the `EntitySet<T>` method, where `OrdersDetails` represents the CLR type containing order details.
 
 ```csharp
 // Create an ODataConventionModelBuilder to build the OData model.
@@ -82,7 +89,7 @@ modelBuilder.EntitySet<OrdersDetails>("Grid");
 
 **5. Register the OData services**
 
-After building the Entity Data Model, register the OData services in your application. Follow these steps:
+After building the Entity Data Model, register the OData services in the `Program.cs` file of your application. Follow these steps:
 
 ```cs
 // Add controllers with OData support to the service collection.
@@ -94,7 +101,7 @@ builder.Services.AddControllers().AddOData(
  
 **6. Create an API controller**
  
-Create a new folder named **Controllers**. Then, add a controller named **GridController.cs** in the **Controllers** folder to handle data communication.
+Create a new folder named **Controllers** under the `ODataV4Adaptor` folder. Then, add a controller named **GridController.cs** to the **Controllers** folder to handle data communication.
  
 ```csharp
  
@@ -104,9 +111,6 @@ using ODataV4Adaptor.Models;
 
 namespace ODataV4Adaptor.Controllers
 {
-    /// <summary>
-    /// Handles HTTP requests for grid data operations via OData.
-    /// </summary>
     [ApiController]
     [Route("[controller]")]    
     public class GridController : ControllerBase
@@ -135,7 +139,7 @@ namespace ODataV4Adaptor.Controllers
 
 **7. Register controllers in `Program.cs`**
  
-Add the following lines in the `Program.cs` file to register controllers:
+Add the following lines in the `Program.cs` file under the `ODataV4Adaptor` project to register controllers:
  
 ```csharp
 // Register controllers in the service container.
@@ -145,17 +149,13 @@ builder.Services.AddControllers();
 app.MapControllers();
 ```
 
-**8. Run the Application:**
+**8. Run the application:**
 
-Run the application in Visual Studio. It will be accessible on a URL like **https://localhost:xxxx**. 
+Run the application in Visual Studio. It will be hosted at the URL **https://localhost:xxxx**. 
 
-After running the application, you can verify that the server-side API controller is successfully returning the order data in the URL(https://localhost:xxxx/odata/grid). Here **xxxx** denotes the port number.
- 
-**5. Run the application**
- 
-Run the application in Visual Studio. The API will be accessible at a URL like **https://localhost:xxxx/api/grid** (replace **xxxx** with the port number). Verify that the API returns the order data.
- 
-![ODataV4-Adaptor-data](../images/odatav4-adaptors-data.png)
+After running the application, you can verify that the server-side API controller successfully returns the order data at the URL **https://localhost:xxxx/odata/grid**. Here, **xxxx** denotes the port number.
+
+![Odatav4 adaptor data](../images/odatav4-adaptors-data.png)
 
 ## Connecting Syncfusion Blazor DataGrid to an OData V4 Service
 
@@ -163,7 +163,7 @@ To integrate the Syncfusion Blazor DataGrid into your project using Visual Studi
 
 **1. Install Syncfusion Blazor Grid and Themes NuGet packages**
 
-- Open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*).
+- Open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*) of `ODataV4Adaptor.Client` project.
 - Search for and install the following packages:
     - [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)
     - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
@@ -184,7 +184,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 @using Syncfusion.Blazor.Grids
 ```
 
-- Register the Syncfusion Blazor service in the **~/Program.cs** file.
+- Register the Syncfusion Blazor service in the **~/Program.cs** file of `ODataV4Adaptor.Client` project.
 
 ```csharp
 using Syncfusion.Blazor;
@@ -220,7 +220,7 @@ To connect the Blazor DataGrid to an OData V4 service, use the [Url](https://hel
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
-@using ODataV4Adaptor.Models
+@using ODataV4Adaptor.Client.Models
  
 <SfGrid TValue="OrderDetails" Height="348">
     <SfDataManager Url="https://localhost:xxxx/odata/grid" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
@@ -234,17 +234,14 @@ To connect the Blazor DataGrid to an OData V4 service, use the [Url](https://hel
  
 {% endhighlight %}
  
-{% highlight c# tabtitle="GridController.cs"%}
+{% highlight cs tabtitle="GridController.cs" %}
  
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.OData.Query;
-using ODataV4Adaptor.Models;
+using ODataV4Adaptor.Client.Models;
 
 namespace ODataV4Adaptor.Controllers
 {
-    /// <summary>
-    /// Handles HTTP requests for grid data operations via OData.
-    /// </summary>
     [ApiController]
     [Route("[controller]")]    
     public class GridController : ControllerBase
@@ -278,13 +275,282 @@ namespace ODataV4Adaptor.Controllers
  
 When you run the application, the Blazor DataGrid  will display data fetched from the OData V4 service.
 
-![ODataV4-Adaptor-data](../images/blazor-odatav4-adaptors.gif)
+![Odatav4 adaptor data](../images/blazor-odatav4-adaptors.gif)
 
 > Replace `https://localhost:xxxx/odata/` with the actual URL of your OData V4 service.
 
-> * The Syncfusion Blazor DataGrid supports server-side operations such as **searching**, **sorting**, **filtering**, **aggregating**, and **paging**. These operations are automatically handled by the ODataV4Adaptor in compliance with the OData V4 protocol.
-> * Refer to the [ODataV4Adaptor documentation](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor) for more details on advanced configurations and features.
+## Handling filtering operation
 
-## Handling searching operation
+To enable filtering operations in your web application using OData, you first need to configure OData support in your service collection. This involves adding the `Filter` method within the OData setup, allowing you to filter data based on specified criteria. Once enabled, clients can utilize the **$filter** query option in their requests to retrieve specific data entries.
 
-To enable search operations in your web application using OData, you first need to configure the OData support in your service collection. This involves adding the `Filter` method within the OData setup, allowing you to filter data based on specified criteria. Once enabled, clients can utilize the **$filter** query option in their requests to search for specific data entries.
+{% tabs %}
+{% highlight cs tabtitle="program.cs" %}
+
+// Create a new instance of the web application builder.
+var builder = WebApplication.CreateBuilder(args);
+
+// Create an ODataConventionModelBuilder to build the OData model.
+var modelBuilder = new ODataConventionModelBuilder();
+
+// Register the "Grid" entity set with the OData model builder.
+modelBuilder.EntitySet<OrdersDetails>("Grid");
+
+// Add services to the container.
+
+// Add controllers with OData support to the service collection.
+builder.Services.AddControllers().AddOData(
+    options => options
+    .Count()
+    .Filter() // filtering
+    .AddRouteComponents("odata", modelBuilder.GetEdmModel())
+);
+
+{% endhighlight %}
+{% highlight razor tabtitle="Index.razor"%}
+
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Data
+@using ODataV4Adaptor.Client.Models
+ 
+<SfGrid TValue="OrderDetails" AllowFiltering="true" Height="348">
+    <SfDataManager Url="https://localhost:xxxx/odata/grid" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
+    <GridColumns>
+        <GridColumn Field="OrderID" HeaderText="Order ID" Width="100" TextAlign="TextAlign.Right"></GridColumn>
+        <GridColumn Field="CustomerID" HeaderText="Customer Name" Width="100"></GridColumn>
+        <GridColumn Field="EmployeeID" HeaderText="Employee ID" TextAlign="TextAlign.Right" Width="100"></GridColumn>
+        <GridColumn Field="ShipCountry" HeaderText="Ship Country" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+{% endhighlight %}
+
+**Single column filtering**
+![Single column filtering query](../images/odatav4-adaptor-filtering.png)
+
+**Multi column filtering**
+![Multi column filtering query](../images/odatav4-adaptor-multi-filtering.png)
+
+## Handling sorting operation
+
+To enable sorting operations in your web application using OData, you first need to configure OData support in your service collection. This involves adding the `OrderBy` method within the OData setup, allowing you to sort data based on specified criteria. Once enabled, clients can utilize the **$orderby** query option in their requests to sort data entries according to the desired attributes.
+
+{% tabs %}
+{% highlight cs tabtitle="program.cs" %}
+
+// Create a new instance of the web application builder.
+var builder = WebApplication.CreateBuilder(args);
+
+// Create an ODataConventionModelBuilder to build the OData model.
+var modelBuilder = new ODataConventionModelBuilder();
+
+// Register the "Grid" entity set with the OData model builder.
+modelBuilder.EntitySet<OrdersDetails>("Grid");
+
+// Add services to the container.
+
+// Add controllers with OData support to the service collection.
+builder.Services.AddControllers().AddOData(
+    options => options
+    .Count()
+    .OrderBy() // sorting
+    .AddRouteComponents("odata", modelBuilder.GetEdmModel())
+);
+
+{% endhighlight %}
+{% highlight razor tabtitle="Index.razor"%}
+
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Data
+@using ODataV4Adaptor.Client.Models
+ 
+<SfGrid TValue="OrderDetails" AllowSorting="true" Height="348">
+    <SfDataManager Url="https://localhost:xxxx/odata/grid" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
+    <GridColumns>
+        <GridColumn Field="OrderID" HeaderText="Order ID" Width="100" TextAlign="TextAlign.Right"></GridColumn>
+        <GridColumn Field="CustomerID" HeaderText="Customer Name" Width="100"></GridColumn>
+        <GridColumn Field="EmployeeID" HeaderText="Employee ID" TextAlign="TextAlign.Right" Width="100"></GridColumn>
+        <GridColumn Field="ShipCountry" HeaderText="Ship Country" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+{% endhighlight %}
+
+**Single column sorting**
+![Single column sorting](../images/odatav4-adaptor-sorting.png)
+
+**Multi column sorting**
+![Multi column sorting](../images/odatav4-adaptor-multi-sorting.png)
+
+## Handling paging operation
+
+To implement paging operations in your web application using OData, you can utilize the `SetMaxTop` method within your OData setup to limit the maximum number of records that can be returned per request. While you configure the maximum limit, clients can utilize the **$skip** and **$top** query options in their requests to specify the number of records to skip and the number of records to take, respectively.
+
+{% tabs %}
+{% highlight cs tabtitle="program.cs" %}
+
+// Create a new instance of the web application builder.
+var builder = WebApplication.CreateBuilder(args);
+
+// Create an ODataConventionModelBuilder to build the OData model.
+var modelBuilder = new ODataConventionModelBuilder();
+
+// Register the "Grid" entity set with the OData model builder.
+modelBuilder.EntitySet<OrdersDetails>("Grid");
+
+var recordCount= OrdersDetails.GetAllRecords().Count;
+
+// Add services to the container.
+
+// Add controllers with OData support to the service collection.
+builder.Services.AddControllers().AddOData(
+    options => options
+    .Count()
+    .SetMaxTop(recordCount)
+    .AddRouteComponents(
+        "odata",
+        modelBuilder.GetEdmModel()
+    )
+);
+
+{% endhighlight %}
+{% highlight razor tabtitle="Index.razor"%}
+
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Data
+@using ODataV4Adaptor.Client.Models
+ 
+<SfGrid TValue="OrderDetails" AllowPaging="true" Height="348">
+    <SfDataManager Url="https://localhost:xxxx/odata/grid" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
+    <GridColumns>
+        <GridColumn Field="OrderID" HeaderText="Order ID" Width="100" TextAlign="TextAlign.Right"></GridColumn>
+        <GridColumn Field="CustomerID" HeaderText="Customer Name" Width="100"></GridColumn>
+        <GridColumn Field="EmployeeID" HeaderText="Employee ID" TextAlign="TextAlign.Right" Width="100"></GridColumn>
+        <GridColumn Field="ShipCountry" HeaderText="Ship Country" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+{% endhighlight %}
+
+![odatav4 adaptor paging query](../images/odatav4-adaptor-paging.png)
+
+## Handling CRUD operations
+
+To manage CRUD (Create, Read, Update, and Delete) operations using the ODataV4Adaptor, follow the provided guide for configuring the Syncfusion DataGrid for [editing](https://blazor.syncfusion.com/documentation/datagrid/editing) and utilize the sample implementation of the `GridController` in your server application. This controller handles HTTP requests for CRUD operations, including GET, POST, PATCH, and DELETE.
+
+To enable CRUD operations in the Syncfusion DataGrid within your application, follow these steps. In the example below, the inline edit [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) is enabled, and the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property is configured to display toolbar items for editing.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Data
+@using ODataV4Adaptor.Client.Models
+
+<SfGrid TValue="OrdersDetails" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })" Height="348">
+    <SfDataManager Url="https://localhost:xxxx/odata/grid" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
+    <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="EditMode.Normal"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field="OrderID" HeaderText="Order ID" IsPrimaryKey="true" Width="100" TextAlign="TextAlign.Right"></GridColumn>
+        <GridColumn Field="CustomerID" HeaderText="Customer Name" Width="100"></GridColumn>
+        <GridColumn Field="ShipCity" HeaderText="Ship City" Width="100"></GridColumn>
+        <GridColumn Field="ShipCountry" HeaderText="Ship Country" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+{% endhighlight %}
+{% endtabs %}
+
+> Normal/Inline editing is the default edit [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) for the Grid. To enable CRUD operations, ensure that the [isPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property is set to **true** for a specific Grid column, ensuring that its value is unique.
+
+**Insert Record**
+
+To insert a new record into your Syncfusion DataGrid, you can utilize the `HttpPost` method in your server application. Below is a sample implementation of inserting a record using the **GridController**:
+
+{% tabs %}
+{% highlight cs tabtitle="GridController.cs" %}
+
+/// <summary>
+/// Inserts a new order to the collection.
+/// </summary>
+/// <param name="addRecord">The order to be inserted.</param>
+/// <returns>It returns the newly inserted record detail.</returns>
+[HttpPost]
+[EnableQuery]
+public IActionResult Post([FromBody] OrdersDetails addRecord)
+{
+    if (addRecord == null)
+    {
+      return BadRequest("Null order");
+    }
+    OrdersDetails.GetAllRecords().Insert(0, addRecord);
+    return new JsonResult(addRecord);
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Odatav4 adaptor insert record](../images/odatav4-adaptor-insert-record.png)
+
+**Update Record**
+
+Updating a record in the Syncfusion DataGrid can be achieved by utilizing the `HttpPatch` method in your controller. Here's a sample implementation of updating a record:
+
+{% tabs %}
+{% highlight cs tabtitle="GridController.cs" %}
+
+/// <summary>
+/// Updates an existing order.
+/// </summary>
+/// <param name="key">The ID of the order to update.</param>
+/// <param name="updateRecord">The updated order details.</param>
+/// <returns>It returns the updated order details.</returns>
+[HttpPatch("{key}")]
+public IActionResult Patch(int key, [FromBody] OrdersDetails updateRecord)
+{
+    if (updateRecord == null)
+    {
+        return BadRequest("No records");
+    }
+    var existingOrder = OrdersDetails.GetAllRecords().FirstOrDefault(order => order.OrderID == key);
+    if (existingOrder != null)
+    {
+        // If the order exists, update its properties.
+        existingOrder.CustomerID = updateRecord.CustomerID ?? existingOrder.CustomerID;
+        existingOrder.EmployeeID = updateRecord.EmployeeID ?? existingOrder.EmployeeID;
+        existingOrder.ShipCountry = updateRecord.ShipCountry ?? existingOrder.ShipCountry;
+    }
+    return new JsonResult(updateRecord);
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Odatav4 adaptor update record](../images/odatav4-adaptor-update-record.png)
+
+**Delete Record**
+
+To delete a record from your Syncfusion DataGrid, you can utilize the `HttpDelete` method in your controller. Below is a sample implementation:
+
+{% tabs %}
+{% highlight cs tabtitle="GridController.cs" %}
+
+/// <summary>
+/// Deletes an order.
+/// </summary>
+/// <param name="key">The ID of the order to delete.</param>
+/// <returns>It returns the deleted record detail</returns>
+[HttpDelete("{key}")]
+public IActionResult Delete(int key)
+{
+    var deleteRecord = OrdersDetails.GetAllRecords().FirstOrDefault(order => order.OrderID == key);
+    if (deleteRecord != null)
+    {
+        OrdersDetails.GetAllRecords().Remove(deleteRecord);
+    }
+    return new JsonResult(deleteRecord);
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Odatav4 adaptor delete record](../images/odatav4-adaptor-delete-record.png)
