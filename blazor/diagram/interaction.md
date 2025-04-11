@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Interaction in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about interaction in Syncfusion Blazor Diagram component and much more details.
+title: Blazor Diagram Interaction: Select and Customize Elements
+description: Learn how to select, unselect, and customize elements in Blazor Diagram using clicks, Ctrl, and programmatic methods.
 platform: Blazor
 control: Diagram Component
 documentation: ug
