@@ -307,6 +307,8 @@ You can use the [Tooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ```
 
+![Blazor Chat UI tooltip text](./images/tooltip-text.png)
+
 #### Setting CSS Class
 
 You can use the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.HeaderToolbarItem.html#Syncfusion_Blazor_InteractiveChat_HeaderToolbarItem_CssClass) property to customize the header toolbar item.
