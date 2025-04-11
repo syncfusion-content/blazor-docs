@@ -650,7 +650,7 @@ To enable CRUD operations in the Syncfusion Blazor DataGrid component, follow th
 
 To insert a new record into your Syncfusion Grid, you can utilize the `HttpPost` method in your server application. Below is a sample implementation of inserting a record using the **GridController**:
 
-![Insert record](../images/web-api-adaptor-insert-record.png)
+![Insert record](../images/web-api-adaptor-insert.png)
 
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
@@ -673,7 +673,7 @@ public void Post([FromBody] OrdersDetails newRecord)
 
 Updating a record in the Syncfusion Grid can be achieved by utilizing the `HttpPut` method in your controller. Here's a sample implementation of updating a record:
 
-![Update record](../images/web-api-adaptor-update-record.png)
+![Update record](../images/web-api-adaptor-update.png)
 
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
@@ -705,7 +705,7 @@ public void Put([FromBody] OrdersDetails updatedOrder)
 
 To delete a record from your Syncfusion Blazor DataGrid, you can use the `HttpDelete` method in your controller. Below is a sample implementation:
 
-![Delete Record](../images/web-api-adaptor-delete-record.png)
+![Delete Record](../images/web-api-adaptor-delete.png)
 
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
