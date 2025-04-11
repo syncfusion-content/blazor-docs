@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Interaction in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about interaction in Syncfusion Blazor Diagram component and much more details.
+title: Interaction Features for Diagrams in Blazor | Syncfusion
+description: Discover how to interact with nodes, connectors, and groups using Blazor Diagram’s powerful selection and movement features from Syncfusion.
 platform: Blazor
 control: Diagram Component
 documentation: ug
