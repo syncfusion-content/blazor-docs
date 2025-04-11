@@ -220,11 +220,11 @@ Include the theme stylesheet and script references in the **~/Components/App.raz
 To connect the Blazor DataGrid to a hosted API, use the [Url]( https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property of [SfDataManager]( https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html). Update the **Index.razor** file as follows.
  
 {% tabs %}
-{% highlight razor tabtitle="Index.razor"%}
+{% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor
+@using URLAdaptor.Models
  
 <SfGrid TValue="OrderDetails" Height="348">
     <SfDataManager Url="https://localhost:xxxx/api/grid" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
@@ -238,7 +238,7 @@ To connect the Blazor DataGrid to a hosted API, use the [Url]( https://help.sync
  
 {% endhighlight %}
  
-{% highlight c# tabtitle="GridController.cs"%}
+{% highlight cs tabtitle="GridController.cs" %}
  
 using Microsoft.AspNetCore.Mvc;
 using Syncfusion.Blazor.Data;
@@ -335,7 +335,7 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor
+@using URLAdaptor.Models
 
 <SfGrid TValue="OrdersDetails" Toolbar="@(new List<string>() { "Search" })" Height="348">
     <SfDataManager Url="https://localhost:xxxx/api/grid" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
@@ -401,7 +401,7 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor
+@using URLAdaptor.Models
 
 <SfGrid TValue="OrdersDetails" AllowFiltering="true" Height="348">
     <SfDataManager Url="https://localhost:xxxx/api/grid" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
@@ -461,7 +461,7 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor
+@using URLAdaptor.Models
 
 <SfGrid TValue="OrdersDetails" AllowSorting="true" Height="348">
     <SfDataManager Url="https://localhost:xxxx/api/grid" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
@@ -522,7 +522,7 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor
+@using URLAdaptor.Models
 
 <SfGrid TValue="OrdersDetails" AllowPaging="true" Height="348">
     <SfDataManager Url="https://localhost:xxxx/api/grid" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
@@ -558,7 +558,7 @@ To enable editing in Blazor DataGrid, refer to the editing [documentation](https
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor
+@using URLAdaptor.Models
 
 <SfGrid TValue="OrdersDetails" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })" Height="348">
     <SfDataManager Url="https://localhost:xxxx/api/grid" InsertUrl="https://localhost:xxxx/api/grid/Insert" UpdateUrl="https://localhost:xxxx/api/grid/Update" RemoveUrl="https://localhost:xxxx/api/grid/Remove" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
@@ -684,7 +684,6 @@ public void Remove([FromBody] CRUDModel<OrdersDetails> deletedRecord)
         // Remove the record from the data collection.
         OrdersDetails.GetAllRecords().Remove(data);
     }
-    ```
 }
 
 {% endhighlight %}
@@ -745,7 +744,7 @@ public void CrudUpdate([FromBody] CRUDModel<OrdersDetails> request)
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor
+@using URLAdaptor.Models
 
 <SfGrid TValue="OrdersDetails" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })" Height="348">
     <SfDataManager Url="https://localhost:xxxx/api/grid" CrudUrl="https://localhost:xxxx/api/grid/CrudUpdate" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
@@ -832,7 +831,7 @@ public IActionResult BatchUpdate([FromBody] CRUDModel<OrdersDetails> batchmodel)
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor
+@using URLAdaptor.Models
 
 <SfGrid TValue="OrdersDetails" Toolbar="@(new List<string>() { "Add", "Delete", "Update", "Cancel" })" Height="348">
     <SfDataManager Url="https://localhost:xxxx/api/grid" BatchUrl="https://localhost:xxxx/api/grid/BatchUpdate" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
