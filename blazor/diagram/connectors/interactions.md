@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Blazor Diagram Connector Actions: Select, Drag, and Route
-description: Learn how to select, drag, and route connectors in Blazor diagrams with events and runtime interaction support.
+title: Interaction in Blazor Diagram Features | Syncfusion
+description: Learn how to select, drag, and route connectors in Blazor Diagram. Enhance interactions with events, constraints, and routing types.
 platform: Blazor
 control: Diagram Component
 documentation: ug
