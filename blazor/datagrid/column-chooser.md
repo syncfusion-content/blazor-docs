@@ -617,7 +617,7 @@ namespace Model
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BNLJiLVTWKyyPjml?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Column chooser content template in Blazor DataGrid.](./images/blazor-datagrid-column-chooser-content-template.png)
+![Column chooser content template in Blazor DataGrid.](images/blazor-datagrid-column-chooser-content-template.png)
 
 ### Customize the footer of column chooser
 
