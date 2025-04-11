@@ -92,7 +92,7 @@ documentation: ug
     **Cause:**
 
     1. You may used `SfPdfViewer` or `SfDocumentEditor` components along with other Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components in your application.
-    2. You may installed both [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor) and [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) in the same application.
+    2. You may installed both [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) and [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) in the same application.
 
     **Solution**
 
@@ -167,7 +167,7 @@ documentation: ug
 
     Open the browser dev tool by pressing the `F12` key and navigate to the `Console` tab.
 
-    Check the console error with the following topics to resolve the issue or report us the console error through our [support ticket](https://support.syncfusion.com).
+    Check the console error with the following topics to resolve the issue or report us the console error through our [support ticket](https://support.syncfusion.com/).
 
 * **Unhandled exception rendering component: Could not find 'loadScripts' in 'window.sfBlazor'.**
 
