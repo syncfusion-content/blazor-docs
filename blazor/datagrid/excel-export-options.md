@@ -1,0 +1,1487 @@
+---
+layout: post
+title: Excel Export in Blazor DataGrid Component | Syncfusion
+description: Checkout and learn here all about Excel Export in Syncfusion Blazor DataGrid component and much more.
+platform: Blazor
+control: DataGrid
+documentation: ug
+---
+
+# Excel export options in Blazor DataGrid 
+
+The Syncfusion Blazor DataGrid allows you to customize the Excel or CSV export options functionality. This flexibility enables you to have greater control over the exported content and layout to meet your specific requirements.
+
+The Excel or CSV export action can be customized based on your requirements using the [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) property. By using the `ExcelExportProperties` property, you can export specific columns, exclude or include hidden column, export with custom data source, enable filter in the exported excel or CSV file, change the file name, add header and footer, multiple grid exporting, customize the data based on query, define delimiter for CSV exporting and set the theme.
+
+## Export current page records
+
+Exporting the current page in Syncfusion Blazor DataGrid to a Excel or CSV document provides the ability to export the currently displayed page records. This feature allows for generating Excel or CSV documents that specifically include the content from the current page of the Grid. 
+
+To export the current page of the Grid to an Excel or CSV document, you need to specify the [ExportType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_ExportType) property. This property allows you to define which records you want to export. You can choose between two options:
+
+1. **CurrentPage**: Exports only the records on the current Grid page.
+2. **AllPages**: Exports all the records from the Grid.
+
+The following example demonstrates how to export current page to a Excel document when a toolbar item is clicked.
+
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.DropDowns
+
+<div style="display: flex; align-items: center; margin-bottom: 15px;font-weight: bold">
+    <label style="padding-right: 10px;">Change export type:</label>
+    <SfDropDownList TValue="string" TItem="DropDownOrder" @bind-Value="SelectedExportType" DataSource="@DropDownValue" Width="150px">
+        <DropDownListFieldSettings Text="Text" Value="Value" />
+    </SfDropDownList>
+</div>
+
+<SfGrid ID="Grid" @ref="Grid" DataSource="@Orders" AllowPaging="true" AllowExcelExport="true"
+        Toolbar="@(new List<string>() { "ExcelExport" })" Height="300">
+    <GridEvents TValue="EmployeeData" OnToolbarClick="ToolbarClickHandler"></GridEvents>
+    <GridPageSettings PageSizes="true" PageSize="8"></GridPageSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(EmployeeData.EmployeeID) HeaderText="Employee ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
+        <GridColumn Field=@nameof(EmployeeData.FirstName) HeaderText="First Name" Width="150" />
+        <GridColumn Field=@nameof(EmployeeData.LastName) HeaderText="Last Name" Width="150" />
+        <GridColumn Field=@nameof(EmployeeData.City) HeaderText="City" Width="150" />
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private SfGrid<EmployeeData> Grid;
+    public List<EmployeeData> Orders { get; set; }
+    private string SelectedExportType = "CurrentPage"; 
+    List<DropDownOrder> DropDownValue = new List<DropDownOrder>
+    {
+        new DropDownOrder { Text = "CurrentPage", Value = "CurrentPage" },
+        new DropDownOrder { Text = "AllPages", Value = "AllPages" },
+    };
+
+    protected override void OnInitialized()
+    {
+        Orders = EmployeeData.GetAllRecords();
+    }
+
+    public async Task ToolbarClickHandler(ClickEventArgs args)
+    {
+        if (args.Item.Id == "Grid_excelexport")
+        {
+            var exportProperties = new ExcelExportProperties
+            {
+                ExportType = SelectedExportType == "AllPages" ? ExportType.AllPages : ExportType.CurrentPage
+            };
+            await Grid.ExportToExcelAsync(exportProperties);
+        }
+    }
+
+    public class DropDownOrder
+    {
+        public string Text { get; set; }
+        public string Value { get; set; }
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="EmployeeData.cs" %}
+
+public class EmployeeData
+{
+    public static List<EmployeeData> Employees = new List<EmployeeData>();
+
+    public EmployeeData(int employeeID, string firstName, string lastName, string city)
+    {
+        this.EmployeeID = employeeID;
+        this.FirstName = firstName;
+        this.LastName = lastName;
+        this.City = city;
+    }
+
+    public static List<EmployeeData> GetAllRecords()
+    {
+        if (Employees.Count == 0)
+        {
+            Employees.Add(new EmployeeData(1001, "Nancy", "Davolio", "Seattle"));
+            Employees.Add(new EmployeeData(1002, "Andrew", "Fuller", "Tacoma"));
+            Employees.Add(new EmployeeData(1003, "Janet", "Leverling", "Kirkland"));
+            Employees.Add(new EmployeeData(1004, "Margaret", "Peacock", "Redmond"));
+            Employees.Add(new EmployeeData(1005, "Steven", "Buchanan", "London"));
+            Employees.Add(new EmployeeData(1006, "Michael", "Suyama", "London"));
+            Employees.Add(new EmployeeData(1007, "Robert", "King", "London"));
+            Employees.Add(new EmployeeData(1008, "Laura", "Callahan", "Seattle"));
+            Employees.Add(new EmployeeData(1009, "Anne", "Dodsworth", "London"));
+        }
+
+        return Employees;
+    }
+
+    public int EmployeeID { get; set; }
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+    public string City { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBejpMDzobgsSwy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Export the selected records 
+
+Exporting only the selected records from the Grid allows generating Excel or CSV document that include only the desired data from the Grid. This feature provides the flexibility to export specific records that are relevant to the needs, enabling more focused and targeted Excel or CSV exports.
+
+To export only the selected records by utilizing the `ExportProperties.DataSource` property in the `toolbarClick` event.
+
+To export the selected records from the grid to a Excel or CSV file, you can follow these steps:
+
+1. Handle the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event of the Grid.
+
+2. Retrieve the selected records using the [GetSelectedRecords](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetSelectedRecordsAsync) method.
+
+3. Assign the selected data to the [ExportProperties.DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_DataSource) property.
+
+4. Trigger the export operation using the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) or [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToCsvAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_)  method.
+
+The following example demonstrates how to export the selected records to a Excel document when a toolbar item is clicked.
+
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+
+<SfGrid ID="Grid" @ref="Grid" DataSource="@Orders" AllowPaging="true" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport" })" Height="348">
+    <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="OrderData"></GridEvents>
+    <GridSelectionSettings EnableSimpleMultiRowSelection="true" Type="SelectionType.Multiple"></GridSelectionSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150" />
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120" />
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="150" />
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private SfGrid<OrderData> Grid;
+    public List<OrderData> Orders { get; set; }
+
+
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }
+
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Id == "Grid_excelexport")
+        {
+            var selectedRecords = await Grid.GetSelectedRecordsAsync();
+            ExcelExportProperties exportProperties = new ExcelExportProperties
+            {
+                DataSource = selectedRecords
+            };
+            await Grid.ExportToExcelAsync(exportProperties);
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="OrderData.cs" %}
+
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData(int orderID, string customerID, double freight, string shipCity)
+    {
+        this.OrderID = orderID;
+        this.CustomerID = customerID;
+        this.Freight = freight;
+        this.ShipCity = shipCity;
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        {
+            Orders.Add(new OrderData(10248, "VINET", 32.38, "Reims"));
+            Orders.Add(new OrderData(10249, "TOMSP", 11.61, "Münster"));
+            Orders.Add(new OrderData(10250, "HANAR", 65.83, "Rio de Janeiro"));
+            Orders.Add(new OrderData(10251, "VICTE", 41.34, "Lyon"));
+            Orders.Add(new OrderData(10252, "SUPRD", 51.3, "Charleroi"));
+            Orders.Add(new OrderData(10253, "HANAR", 58.17, "Rio de Janeiro"));
+            Orders.Add(new OrderData(10254, "CHOPS", 22.98, "Bern"));
+            Orders.Add(new OrderData(10255, "RICSU", 148.33, "Genève"));
+            Orders.Add(new OrderData(10256, "WELLI", 13.97, "Resende"));
+            Orders.Add(new OrderData(10257, "HILAA", 81.91, "San Cristóbal"));
+            Orders.Add(new OrderData(10258, "ERNSH", 140.51, "Graz"));
+            Orders.Add(new OrderData(10259, "CENTC", 3.25, "México D.F."));
+            Orders.Add(new OrderData(10260, "OTTIK", 55.09, "Köln"));
+            Orders.Add(new OrderData(10261, "QUEDE", 3.05, "Rio de Janeiro"));
+            Orders.Add(new OrderData(10262, "RATTC", 48.29, "Albuquerque"));
+        }
+
+        return Orders;
+    }
+
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCity { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDVeNziNTHvZEmUU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Exporting grouped records
+
+The Syncfusion Blazor DataGrid provides an outline option for grouped records, allowing you to hide detailed data for better viewing in the exported document. This feature is particularly useful when you need to share data that is grouped based on specific columns and maintain the grouping structure in the exported file.
+
+To achieve this functionality, you need to enable grouping in the Grid by setting the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property to **true** . Additionally, you need define the [GroupSettings.Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_Columns) property to specify the columns by which you want to group the data.
+
+The following example demonstrates how to export grouped records to an Excel document when a toolbar item is clicked:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+
+<SfGrid ID="Grid" @ref="Grid" DataSource="@Orders" AllowPaging="true" AllowGrouping="true" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport" })" Height="348">
+    <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="OrderData"></GridEvents>
+    <GridGroupSettings Columns="@Initial"></GridGroupSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150" />
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120" />
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="150" />
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private SfGrid<OrderData> Grid;
+    public List<OrderData> Orders { get; set; }
+    public string[] Initial = (new string[] { "CustomerID", "ShipCity" });
+
+
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }
+
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Id == "Grid_excelexport")
+        {
+            await Grid.ExportToExcelAsync();
+        }
+    }
+}
+
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="OrderData.cs" %}
+
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData(int orderID, string customerID, double freight, string shipCity)
+    {
+        this.OrderID = orderID;
+        this.CustomerID = customerID;
+        this.Freight = freight;
+        this.ShipCity = shipCity;
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        {
+            Orders.Add(new OrderData(10248, "VINET", 32.38, "Reims"));
+            Orders.Add(new OrderData(10249, "TOMSP", 11.61, "Münster"));
+            Orders.Add(new OrderData(10250, "HANAR", 65.83, "Rio de Janeiro"));
+            Orders.Add(new OrderData(10251, "VICTE", 41.34, "Lyon"));
+            Orders.Add(new OrderData(10252, "SUPRD", 51.3, "Charleroi"));
+            Orders.Add(new OrderData(10253, "HANAR", 58.17, "Rio de Janeiro"));
+            Orders.Add(new OrderData(10254, "CHOPS", 22.98, "Bern"));
+            Orders.Add(new OrderData(10255, "RICSU", 148.33, "Genève"));
+            Orders.Add(new OrderData(10256, "WELLI", 13.97, "Resende"));
+            Orders.Add(new OrderData(10257, "HILAA", 81.91, "San Cristóbal"));
+            Orders.Add(new OrderData(10258, "ERNSH", 140.51, "Graz"));
+            Orders.Add(new OrderData(10259, "CENTC", 3.25, "México D.F."));
+            Orders.Add(new OrderData(10260, "OTTIK", 55.09, "Köln"));
+            Orders.Add(new OrderData(10261, "QUEDE", 3.05, "Rio de Janeiro"));
+            Orders.Add(new OrderData(10262, "RATTC", 48.29, "Albuquerque"));
+        }
+
+        return Orders;
+    }
+
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCity { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDhSNTiDpmrJDsrV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Export with hidden columns
+
+Exporting hidden columns in the Syncfusion Blazor DataGrid allows you to include hidden columns in the exported Excel or CSV document. This feature is useful when you have columns that are hidden in the UI but still need to be included in the exported document.
+
+To export hidden columns of the Grid to a Excel or CSV file, you need to set the [includeHiddenColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_IncludeHiddenColumn) property as **true** in the [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) property.
+
+The following example demonstrates how to export hidden columns to a Excel file. In this example, the **ShipCity** column, which is not visible in the UI, is exported to the Excel document. You can also export the Grid by changing the `ExcelExportProperties.IncludeHiddenColumn` property based on the switch toggle using the `bind-Checked` property of the [EJ2 Toggle Switch Button](https://blazor.syncfusion.com/documentation/toggle-switch-button/getting-started-webapp).
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
+
+<div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+    <label style="font-weight: bold">Include or exclude hidden columns</label>
+    <SfSwitch @bind-Checked="IncludeHiddenColumns"></SfSwitch>
+</div>
+
+<SfGrid ID="Grid" @ref="Grid" DataSource="@Orders" AllowPaging="true" AllowExcelExport="true"
+        Toolbar="@(new List<string>() { "ExcelExport" })" Height="348">
+    <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="OrderData"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150" />
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120" />
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="150" Visible="false" />
+        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" Width="150" />
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private SfGrid<OrderData> Grid;
+    public List<OrderData> Orders { get; set; }
+
+    public bool IncludeHiddenColumns { get; set; } = false;
+
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }
+
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Id == "Grid_excelexport")
+        {
+            ExcelExportProperties exportProperties = new ExcelExportProperties
+            {
+                IncludeHiddenColumn = IncludeHiddenColumns
+            };
+            await Grid.ExportToExcelAsync(exportProperties);
+        }
+    }
+}
+
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="OrderData.cs" %}
+
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData(int orderID, string customerID, double freight, string shipCity, string shipCountry)
+    {
+        this.OrderID = orderID;
+        this.CustomerID = customerID;
+        this.Freight = freight;
+        this.ShipCity = shipCity;
+        this.ShipCountry = shipCountry;
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        {
+            Orders.Add(new OrderData(10248, "VINET", 32.38, "Reims", "France"));
+            Orders.Add(new OrderData(10249, "TOMSP", 11.61, "Münster", "Germany"));
+            Orders.Add(new OrderData(10250, "HANAR", 65.83, "Rio de Janeiro", "Brazil"));
+            Orders.Add(new OrderData(10251, "VICTE", 41.34, "Lyon", "France"));
+            Orders.Add(new OrderData(10252, "SUPRD", 51.3, "Charleroi", "Belgium"));
+            Orders.Add(new OrderData(10253, "HANAR", 58.17, "Rio de Janeiro", "Brazil"));
+            Orders.Add(new OrderData(10254, "CHOPS", 22.98, "Bern", "Switzerland"));
+            Orders.Add(new OrderData(10255, "RICSU", 148.33, "Genève", "Switzerland"));
+            Orders.Add(new OrderData(10256, "WELLI", 13.97, "Resende", "Brazil"));
+            Orders.Add(new OrderData(10257, "HILAA", 81.91, "San Cristóbal", "Venezuela"));
+            Orders.Add(new OrderData(10258, "ERNSH", 140.51, "Graz", "Austria"));
+            Orders.Add(new OrderData(10259, "CENTC", 3.25, "México D.F.", "Mexico"));
+            Orders.Add(new OrderData(10260, "OTTIK", 55.09, "Köln", "Germany"));
+            Orders.Add(new OrderData(10261, "QUEDE", 3.05, "Rio de Janeiro", "Brazil"));
+            Orders.Add(new OrderData(10262, "RATTC", 48.29, "Albuquerque", "USA"));
+        }
+
+        return Orders;
+    }
+
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipCountry { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtByNpMDplOKPhoQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Show or hide columns while exporting
+
+The Syncfusion Blazor DataGrid provides the functionality to show or hide columns dynamically during the export process. This feature allows you to selectively display or hide specific columns based on your requirements.
+
+To show or hide columns based on user interaction during the export process, you can follow these steps:
+
+1. Handle the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick)  event of the Grid.
+
+2. Update the visibility of the desired columns by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Visible) property of the column to **true** or **false**.
+
+3. Export the grid to Excel or CSV.
+
+4. Handle the [ExportComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExportComplete) event to restore the column visibility to its original state.
+
+In the following example, the **CustomerID** is initially a hidden column in the grid. However, during the export process, the **CustomerID** column is made visible, while the **ShipCity** column is hidden.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+
+<SfGrid ID="Grid" @ref="Grid" DataSource="@Orders"  AllowExcelExport="true"
+Toolbar="@(new List<string>() { "ExcelExport" })" Height="348">
+    <GridEvents OnToolbarClick="ToolbarClickHandler" ExportComplete="ExportCompleteHandler" TValue="OrderData"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Visible="@CustomerIDVisible" Width="150" />
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120" />
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Visible="@ShipCityVisible" Width="150" />
+        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" Width="150" />
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private SfGrid<OrderData> Grid;
+    public List<OrderData> Orders { get; set; }
+    public bool CustomerIDVisible { get; set; } = false;
+    public bool ShipCityVisible { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }
+
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Id == "Grid_excelexport")
+        {
+            CustomerIDVisible = true;
+            ShipCityVisible=false;
+            await Grid.ExportToExcelAsync();
+        }
+    }
+
+    public void ExportCompleteHandler(object args)
+    {
+        CustomerIDVisible = false;
+        ShipCityVisible=true;
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="OrderData.cs" %}
+
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData(int orderID, string customerID, double freight, string shipCity, string shipName, string shipCountry)
+    {
+        this.OrderID = orderID;
+        this.CustomerID = customerID;
+        this.Freight = freight;
+        this.ShipCity = shipCity;
+        this.ShipName = shipName;
+        this.ShipCountry = shipCountry;
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        {
+            Orders.Add(new OrderData(10248, "VINET", 32.38, "Reims", "Vins et alcools Chevalier", "France"));
+            Orders.Add(new OrderData(10249, "TOMSP", 11.61, "Münster", "Toms Spezialitäten", "Germany"));
+            Orders.Add(new OrderData(10250, "HANAR", 65.83, "Rio de Janeiro", "Hanari Carnes", "Brazil"));
+            Orders.Add(new OrderData(10251, "VICTE", 41.34, "Lyon", "Victuailles en stock", "France"));
+            Orders.Add(new OrderData(10252, "SUPRD", 51.3, "Charleroi", "Suprêmes délices", "Belgium"));
+            Orders.Add(new OrderData(10253, "HANAR", 58.17, "Rio de Janeiro", "Hanari Carnes", "Brazil"));
+            Orders.Add(new OrderData(10254, "CHOPS", 22.98, "Bern", "Chop-suey Chinese", "Switzerland"));
+            Orders.Add(new OrderData(10255, "RICSU", 148.33, "Genève", "Richter Supermarkt", "Switzerland"));
+            Orders.Add(new OrderData(10256, "WELLI", 13.97, "Resende", "Wellington Import Export", "Brazil"));
+            Orders.Add(new OrderData(10257, "HILAA", 81.91, "San Cristóbal", "Hila Alimentos", "Venezuela"));
+            Orders.Add(new OrderData(10258, "ERNSH", 140.51, "Graz", "Ernst Handel", "Austria"));
+            Orders.Add(new OrderData(10259, "CENTC", 3.25, "México D.F.", "Centro comercial", "Mexico"));
+            Orders.Add(new OrderData(10260, "OTTIK", 55.09, "Köln", "Ottilies Käseladen", "Germany"));
+            Orders.Add(new OrderData(10261, "QUEDE", 3.05, "Rio de Janeiro", "Que delícia", "Brazil"));
+            Orders.Add(new OrderData(10262, "RATTC", 48.29, "Albuquerque", "Rattlesnake Canyon Grocery", "USA"));
+        }
+
+        return Orders;
+    }
+
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+    public string ShipCountry { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLeDpWWTcPQCFoF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Define file name
+
+The Syncfusion Blazor DataGrid allows you to specify a custom file name for the exported Excel or CSV document. This feature enables you to provide a meaningful and descriptive name for the exported file, making it easier to identify and manage the exported data.
+
+To assign a custom file name for the exported document, you can set the [FileName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_FileName) property of the [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) property to the desired file name.
+
+The following example demonstrates how to define a file name using `ExcelExportProperties.FileName` property when exporting to Excel, based on the entered value as the file name.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Inputs
+
+<div style="display: flex; align-items: center; padding: 0px 0 20px 0;">
+    <label style="margin-right: 17px; white-space: nowrap;font-weight:bold">Enter file name:</label>
+    <SfTextBox @bind-Value="FileName" Placeholder="Enter file name" Width="120px"></SfTextBox>
+</div>
+<SfGrid ID="Grid" @ref="Grid" DataSource="@Orders" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport" })" Height="348">
+    <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="OrderData"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150" />
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120" />
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="150" />
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="150" />
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private SfGrid<OrderData> Grid;
+    public List<OrderData> Orders { get; set; }
+    public string FileName { get; set; } = string.Empty;
+
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }
+
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Id == "Grid_excelexport")
+        {
+            var fileNameToExport = !string.IsNullOrWhiteSpace(FileName) ? FileName + ".xlsx" : "ExportedData.xlsx";
+            ExcelExportProperties exportProperties = new ExcelExportProperties
+            {
+                FileName = fileNameToExport,
+            };
+            await Grid.ExportToExcelAsync(exportProperties);
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="OrderData.cs" %}
+
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData(int orderID, string customerID, double freight, string shipCity, string shipName)
+    {
+        this.OrderID = orderID;
+        this.CustomerID = customerID;
+        this.Freight = freight;
+        this.ShipCity = shipCity;
+        this.ShipName = shipName;
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        {
+            Orders.Add(new OrderData(10248, "VINET", 32.38, "Reims", "Vins et alcools Chevalier"));
+            Orders.Add(new OrderData(10249, "TOMSP", 11.61, "Münster", "Toms Spezialitäten"));
+            Orders.Add(new OrderData(10250, "HANAR", 65.83, "Rio de Janeiro", "Hanari Carnes"));
+            Orders.Add(new OrderData(10251, "VICTE", 41.34, "Lyon", "Victuailles en stock"));
+            Orders.Add(new OrderData(10252, "SUPRD", 51.3, "Charleroi", "Suprêmes délices"));
+            Orders.Add(new OrderData(10253, "HANAR", 58.17, "Rio de Janeiro", "Hanari Carnes"));
+            Orders.Add(new OrderData(10254, "CHOPS", 22.98, "Bern", "Chop-suey Chinese"));
+            Orders.Add(new OrderData(10255, "RICSU", 148.33, "Genève", "Richter Supermarkt"));
+            Orders.Add(new OrderData(10256, "WELLI", 13.97, "Resende", "Wellington Import Export"));
+            Orders.Add(new OrderData(10257, "HILAA", 81.91, "San Cristóbal", "Hila Alimentos"));
+            Orders.Add(new OrderData(10258, "ERNSH", 140.51, "Graz", "Ernst Handel"));
+            Orders.Add(new OrderData(10259, "CENTC", 3.25, "México D.F.", "Centro comercial"));
+            Orders.Add(new OrderData(10260, "OTTIK", 55.09, "Köln", "Ottilies Käseladen"));
+            Orders.Add(new OrderData(10261, "QUEDE", 3.05, "Rio de Janeiro", "Que delícia"));
+            Orders.Add(new OrderData(10262, "RATTC", 48.29, "Albuquerque", "Rattlesnake Canyon Grocery"));
+        }
+
+        return Orders;
+    }
+
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBItJMWfSuvFmBn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Customizing columns on export
+
+The Syncfusion Blazor DataGrid allows you to customize the appearance of Grid columns in your exported Excel or CSV documents. This feature empowers you to tailor specific column attributes such as field, header text, and text alignment, ensuring that your exported Excels align perfectly with your design and reporting requirements.
+
+To customize the Grid columns, you can follow these steps:
+
+1. Access the [ExcelExportProperties.Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_Columns) of the Grid.
+
+2. Define a custom **List<GridColumn>** with the desired properties such as Field, HeaderText, TextAlign, Format, and Width for each column to be exported.
+
+3. Assign this list to the `Columns` property of the `ExcelExportProperties` object, then pass it to the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) to apply the customizations during export.
+
+The following example demonstrates how to customize the Grid columns when exporting a document. In this scenario, the attributes for different columns have been customized: **OrderID** with `HeaderText` set to **Order Number**, **CustomerID** with headerText as **Customer Name**, and **Freight** with a center-aligned `TextAlign` property, which is not rendered in the Grid columns:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+
+<SfGrid ID="Grid" @ref="Grid" DataSource="@Orders" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport" })" Height="348">
+    <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="OrderData"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150" />
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="150" />
+        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" Width="150" />
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private SfGrid<OrderData> Grid;
+    public List<OrderData> Orders { get; set; }
+
+
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }
+
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Id == "Grid_excelexport")
+        {
+            List<GridColumn> ExportColumns = new List<GridColumn>();
+            ExportColumns.Add(new GridColumn() { Field = "OrderID", HeaderText = "Order Number", Width = "120" });
+            ExportColumns.Add(new GridColumn() { Field = "CustomerID", HeaderText = "Customer Name", Width = "120" });
+            ExportColumns.Add(new GridColumn() { Field = "Freight", HeaderText = "Freight", Width = "120", Format = "C2", TextAlign = TextAlign.Center });
+            var exportProperties = new ExcelExportProperties
+            {
+                Columns = ExportColumns
+            };
+            await Grid.ExportToExcelAsync(exportProperties);
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="OrderData.cs" %}
+
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData(int orderID, string customerID, double freight, string shipCity, string shipCountry)
+    {
+        this.OrderID = orderID;
+        this.CustomerID = customerID;
+        this.Freight = freight;
+        this.ShipCity = shipCity;
+        this.ShipCountry = shipCountry;
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        {
+            Orders.Add(new OrderData(10248, "VINET", 32.38, "Reims", "France"));
+            Orders.Add(new OrderData(10249, "TOMSP", 11.61, "Münster", "Germany"));
+            Orders.Add(new OrderData(10250, "HANAR", 65.83, "Rio de Janeiro", "Brazil"));
+            Orders.Add(new OrderData(10251, "VICTE", 41.34, "Lyon", "France"));
+            Orders.Add(new OrderData(10252, "SUPRD", 51.3, "Charleroi", "Belgium"));
+            Orders.Add(new OrderData(10253, "HANAR", 58.17, "Rio de Janeiro", "Brazil"));
+            Orders.Add(new OrderData(10254, "CHOPS", 22.98, "Bern", "Switzerland"));
+            Orders.Add(new OrderData(10255, "RICSU", 148.33, "Genève", "Switzerland"));
+            Orders.Add(new OrderData(10256, "WELLI", 13.97, "Resende", "Brazil"));
+            Orders.Add(new OrderData(10257, "HILAA", 81.91, "San Cristóbal", "Venezuela"));
+            Orders.Add(new OrderData(10258, "ERNSH", 140.51, "Graz", "Austria"));
+            Orders.Add(new OrderData(10259, "CENTC", 3.25, "México D.F.", "Mexico"));
+            Orders.Add(new OrderData(10260, "OTTIK", 55.09, "Köln", "Germany"));
+            Orders.Add(new OrderData(10261, "QUEDE", 3.05, "Rio de Janeiro", "Brazil"));
+            Orders.Add(new OrderData(10262, "RATTC", 48.29, "Albuquerque", "USA"));
+        }
+
+        return Orders;
+    }
+
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipCountry { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVyDpiXSTLiKArB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Font and color customization
+
+The Excel or CSV export feature in Grid provides an option to include themes for the exported Excel or CSV document. This feature is particularly useful when you want to maintain a consistent and visually appealing style for the exported data in Excel.
+
+To apply a theme to the exported Excel or CSV document, you can define the [Theme](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_Theme) property within the [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html). This property allows you to specify the `Theme` to be used in the exported Excel file, including styles for the caption, header, and record content.
+
+[Caption](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelTheme.html#Syncfusion_Blazor_Grids_ExcelTheme_Caption): This property defines the theme style for the caption content in the exported Excel document. The caption is the title or description that appears at the top of the exported Excel or CSV sheet.
+
+[Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelTheme.html#Syncfusion_Blazor_Grids_ExcelTheme_Header): This property is used to defines the style for the header content in the exported Excel document. The header corresponds to the column headers in the Grid.
+
+[Record](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelTheme.html#Syncfusion_Blazor_Grids_ExcelTheme_Record): This property defines the theme style for the record content in the exported Excel or CSV document. The record represents the data rows in the Grid that are exported to Excel or CSV.
+
+In the following example, apply font styling to the caption, header, and record in the Excel file using the `Theme` property:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+
+<SfGrid ID="Grid" @ref="Grid" DataSource="@Orders" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport" })" Height="348">
+    <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="OrderData"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150" />
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120" />
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="150" />
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="150" />
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private SfGrid<OrderData> Grid;
+    public List<OrderData> Orders { get; set; }
+
+
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }
+
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Id == "Grid_excelexport")
+        {
+            ExcelExportProperties excelProperties = new ExcelExportProperties();
+            ExcelTheme Theme = new ExcelTheme();
+            ExcelStyle ThemeStyle = new ExcelStyle()
+            {
+                FontName = "Segoe UI",
+                FontColor = "#666666",
+                FontSize = 20
+            };
+            Theme.Header = ThemeStyle;
+            Theme.Record = ThemeStyle;
+            Theme.Caption = ThemeStyle;
+            excelProperties.Theme = Theme;
+            await Grid.ExportToExcelAsync(excelProperties);
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="OrderData.cs" %}
+
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData(int orderID, string customerID, double freight, string shipCity, string shipName)
+    {
+        this.OrderID = orderID;
+        this.CustomerID = customerID;
+        this.Freight = freight;
+        this.ShipCity = shipCity;
+        this.ShipName = shipName;
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        {
+            Orders.Add(new OrderData(10248, "VINET", 32.38, "Reims", "Vins et alcools Chevalier"));
+            Orders.Add(new OrderData(10249, "TOMSP", 11.61, "Münster", "Toms Spezialitäten"));
+            Orders.Add(new OrderData(10250, "HANAR", 65.83, "Rio de Janeiro", "Hanari Carnes"));
+            Orders.Add(new OrderData(10251, "VICTE", 41.34, "Lyon", "Victuailles en stock"));
+            Orders.Add(new OrderData(10252, "SUPRD", 51.3, "Charleroi", "Suprêmes délices"));
+            Orders.Add(new OrderData(10253, "HANAR", 58.17, "Rio de Janeiro", "Hanari Carnes"));
+            Orders.Add(new OrderData(10254, "CHOPS", 22.98, "Bern", "Chop-suey Chinese"));
+            Orders.Add(new OrderData(10255, "RICSU", 148.33, "Genève", "Richter Supermarkt"));
+            Orders.Add(new OrderData(10256, "WELLI", 13.97, "Resende", "Wellington Import Export"));
+            Orders.Add(new OrderData(10257, "HILAA", 81.91, "San Cristóbal", "Hila Alimentos"));
+            Orders.Add(new OrderData(10258, "ERNSH", 140.51, "Graz", "Ernst Handel"));
+            Orders.Add(new OrderData(10259, "CENTC", 3.25, "México D.F.", "Centro comercial"));
+            Orders.Add(new OrderData(10260, "OTTIK", 55.09, "Köln", "Ottilies Käseladen"));
+            Orders.Add(new OrderData(10261, "QUEDE", 3.05, "Rio de Janeiro", "Que delícia"));
+            Orders.Add(new OrderData(10262, "RATTC", 48.29, "Albuquerque", "Rattlesnake Canyon Grocery"));
+        }
+
+        return Orders;
+    }
+
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZVyDpiXSTLiKArB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+
+## Customizing the background color for a Grid in an exported Excel or CSV document
+
+The Syncfusion Blazor DataGrid allows you to customize the background color of the Grid content (header, record, and caption rows) when exporting it to an Excel or CSV document. This feature helps enhance the readability and visual appearance of the exported files.
+
+To apply a background color in the exported Excel or CSV file:
+
+1. Create an instance of the [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) class.
+
+2. Define an [ExcelTheme](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelTheme.html) instance.
+
+3. Set a custom  [ExcelStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelStyle.html#properties) with the [BackColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelStyle.html#Syncfusion_Blazor_Grids_ExcelStyle_BackColor) property.
+
+4. Assign the style to the [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelTheme.html#Syncfusion_Blazor_Grids_ExcelTheme_Header), [Record](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelTheme.html#Syncfusion_Blazor_Grids_ExcelTheme_Record), and [Caption](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelTheme.html#Syncfusion_Blazor_Grids_ExcelTheme_Caption) properties of the theme.
+
+5. Assign the theme to the [Theme](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_Theme) property of `ExcelExportProperties`.
+
+6. Trigger the export operation using the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) or [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToCsvAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_)  method.
+
+The following sample demonstrates how to apply a custom background color to the Grid's header, rows, and caption in the exported Excel file:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+
+<SfGrid ID="Grid" @ref="Grid" DataSource="@Orders" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport" })" Height="348">
+    <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="OrderData"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150" />
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120" />
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="150" />
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="150" />
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private SfGrid<OrderData> Grid;
+    public List<OrderData> Orders { get; set; }
+    public string FileName { get; set; } = string.Empty;
+
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }
+
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Id == "Grid_excelexport")
+        {
+            ExcelExportProperties ExcelProperties = new ExcelExportProperties();
+            ExcelTheme Theme = new ExcelTheme();
+            ExcelStyle ThemeStyle = new ExcelStyle()
+                {
+                    BackColor = "#C67878"
+                };
+            Theme.Header = ThemeStyle;
+            Theme.Record = ThemeStyle;
+            Theme.Caption = ThemeStyle;
+            ExcelProperties.Theme = Theme;
+
+            await Grid.ExportToExcelAsync(ExcelProperties);
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="OrderData.cs" %}
+
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData(int orderID, string customerID, double freight, string shipCity, string shipName)
+    {
+        this.OrderID = orderID;
+        this.CustomerID = customerID;
+        this.Freight = freight;
+        this.ShipCity = shipCity;
+        this.ShipName = shipName;
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        {
+            Orders.Add(new OrderData(10248, "VINET", 32.38, "Reims", "Vins et alcools Chevalier"));
+            Orders.Add(new OrderData(10249, "TOMSP", 11.61, "Münster", "Toms Spezialitäten"));
+            Orders.Add(new OrderData(10250, "HANAR", 65.83, "Rio de Janeiro", "Hanari Carnes"));
+            Orders.Add(new OrderData(10251, "VICTE", 41.34, "Lyon", "Victuailles en stock"));
+            Orders.Add(new OrderData(10252, "SUPRD", 51.3, "Charleroi", "Suprêmes délices"));
+            Orders.Add(new OrderData(10253, "HANAR", 58.17, "Rio de Janeiro", "Hanari Carnes"));
+            Orders.Add(new OrderData(10254, "CHOPS", 22.98, "Bern", "Chop-suey Chinese"));
+            Orders.Add(new OrderData(10255, "RICSU", 148.33, "Genève", "Richter Supermarkt"));
+            Orders.Add(new OrderData(10256, "WELLI", 13.97, "Resende", "Wellington Import Export"));
+            Orders.Add(new OrderData(10257, "HILAA", 81.91, "San Cristóbal", "Hila Alimentos"));
+            Orders.Add(new OrderData(10258, "ERNSH", 140.51, "Graz", "Ernst Handel"));
+            Orders.Add(new OrderData(10259, "CENTC", 3.25, "México D.F.", "Centro comercial"));
+            Orders.Add(new OrderData(10260, "OTTIK", 55.09, "Köln", "Ottilies Käseladen"));
+            Orders.Add(new OrderData(10261, "QUEDE", 3.05, "Rio de Janeiro", "Que delícia"));
+            Orders.Add(new OrderData(10262, "RATTC", 48.29, "Albuquerque", "Rattlesnake Canyon Grocery"));
+        }
+
+        return Orders;
+    }
+
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htrSZTCifvHcgdTG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Add additional worksheets to excel file while exporting
+
+The Syncfusion Blazor DataGrid allows you to add additional worksheets to the Excel or CSV file during export. This is especially useful when you want to include supplementary information, summaries, or additional datasets alongside the grid content in the exported document.
+
+To add additional worksheets during the export:
+
+1. Create a new instance of the `Workbook` class and assign it to the [Workbook](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_Workbook) property of [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html).
+
+2. Use the `Worksheets.Add` method to append new worksheets to the workbook.
+
+3. Set the `GridSheetIndex` property to specify the worksheet index where the Grid data should be placed.
+
+4. Trigger the export operation using the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) or [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToCsvAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_)  method.
+
+In the following example, two extra blank worksheets are added along with the worksheet containing the Grid data
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.ExcelExport
+
+<SfGrid ID="Grid" @ref="Grid" DataSource="@Orders" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport" })" Height="348">
+    <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="OrderData"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150" />
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120" />
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="150" />
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="150" />
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private SfGrid<OrderData> Grid;
+    public List<OrderData> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }
+
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Id == "Grid_excelexport")
+        {
+
+            ExcelExportProperties ExportProperties = new ExcelExportProperties();
+            // Add a new workbook to the excel file that contains only 1 worksheet.
+            ExportProperties.Workbook = new Workbook();
+            // Add additional worksheets.
+            ExportProperties.Workbook.Worksheets.Add();
+            ExportProperties.Workbook.Worksheets.Add();
+            // Define the Gridsheet index where Grid data must be exported.
+            ExportProperties.GridSheetIndex = 0;
+            await Grid.ExportToExcelAsync(ExportProperties);
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="OrderData.cs" %}
+
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData(int orderID, string customerID, double freight, string shipCity, string shipName)
+    {
+        this.OrderID = orderID;
+        this.CustomerID = customerID;
+        this.Freight = freight;
+        this.ShipCity = shipCity;
+        this.ShipName = shipName;
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        {
+            Orders.Add(new OrderData(10248, "VINET", 32.38, "Reims", "Vins et alcools Chevalier"));
+            Orders.Add(new OrderData(10249, "TOMSP", 11.61, "Münster", "Toms Spezialitäten"));
+            Orders.Add(new OrderData(10250, "HANAR", 65.83, "Rio de Janeiro", "Hanari Carnes"));
+            Orders.Add(new OrderData(10251, "VICTE", 41.34, "Lyon", "Victuailles en stock"));
+            Orders.Add(new OrderData(10252, "SUPRD", 51.3, "Charleroi", "Suprêmes délices"));
+            Orders.Add(new OrderData(10253, "HANAR", 58.17, "Rio de Janeiro", "Hanari Carnes"));
+            Orders.Add(new OrderData(10254, "CHOPS", 22.98, "Bern", "Chop-suey Chinese"));
+            Orders.Add(new OrderData(10255, "RICSU", 148.33, "Genève", "Richter Supermarkt"));
+            Orders.Add(new OrderData(10256, "WELLI", 13.97, "Resende", "Wellington Import Export"));
+            Orders.Add(new OrderData(10257, "HILAA", 81.91, "San Cristóbal", "Hila Alimentos"));
+            Orders.Add(new OrderData(10258, "ERNSH", 140.51, "Graz", "Ernst Handel"));
+            Orders.Add(new OrderData(10259, "CENTC", 3.25, "México D.F.", "Centro comercial"));
+            Orders.Add(new OrderData(10260, "OTTIK", 55.09, "Köln", "Ottilies Käseladen"));
+            Orders.Add(new OrderData(10261, "QUEDE", 3.05, "Rio de Janeiro", "Que delícia"));
+            Orders.Add(new OrderData(10262, "RATTC", 48.29, "Albuquerque", "Rattlesnake Canyon Grocery"));
+        }
+
+        return Orders;
+    }
+
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtVytTCWguoXpvbV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Conditional cell formatting
+
+When exporting data from the Grid, you have an option to conditionally format the cells in the exported Excel exporting document. This allows you to customize the appearance of specific cells based on their values or other criteria.
+
+To achieve this feature, you need to use the [ExcelQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelQueryCellInfoEvent) event of the Grid. This event is triggered for each cell during the export process to Excel. Within this event, you can access the cell object using the [ args.Cell.CellStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelHeaderQueryCellInfoEventArgs.html#Syncfusion_Blazor_Grids_ExcelHeaderQueryCellInfoEventArgs_Cell) property and modify its properties, such as the background color, based on your desired conditions.
+
+The following example demonstrate how to customize the background color of the **Freight** column in the exported Excel document using the ` args.Cell.CellStyle.BackColor` property of the `excelQueryCellInfo` event.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+
+<SfGrid ID="Grid" @ref="Grid" DataSource="@Orders" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport" })" Height="348">
+    <GridEvents QueryCellInfo="QueryCellInfoHandler" ExcelQueryCellInfoEvent="ExcelQueryCellInfoHandler" OnToolbarClick="ToolbarClickHandler" TValue="OrderData"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150" />
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120" />
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="150" />
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="150" />
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private SfGrid<OrderData> Grid;
+    public List<OrderData> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }
+
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Id == "Grid_excelexport")
+        {
+            await Grid.ExportToExcelAsync();
+        }
+    }
+
+    public void QueryCellInfoHandler(Syncfusion.Blazor.Grids.QueryCellInfoEventArgs<OrderData> args)
+    {
+        if (args.Column.Field == "Freight")
+        {
+            if (args.Data.Freight < 30)
+            {
+                args.Cell.AddStyle(new[] { "background-color: #99ffcc" });
+            }
+            else if (args.Data.Freight < 60)
+            {
+                args.Cell.AddStyle(new[] { "background-color: #ffffb3" });
+            }
+            else
+            {
+                args.Cell.AddStyle(new[] { "background-color: #ff704d" });
+            }
+        }
+    }
+
+    public void ExcelQueryCellInfoHandler(ExcelQueryCellInfoEventArgs<OrderData> args)
+    {
+        if (args.Column.Field == "Freight")
+        {
+            if (args.Data.Freight < 30)
+            {
+                args.Style.BackColor = "#99ffcc";
+            }
+            else if (args.Data.Freight < 60)
+            {
+                args.Style.BackColor = "#ffffb3";
+            }
+            else
+            {
+                args.Style.BackColor = "#ff704d";
+            }
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="OrderData.cs" %}
+
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData(int orderID, string customerID, double freight, string shipCity, string shipName)
+    {
+        this.OrderID = orderID;
+        this.CustomerID = customerID;
+        this.Freight = freight;
+        this.ShipCity = shipCity;
+        this.ShipName = shipName;
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        {
+            Orders.Add(new OrderData(10248, "VINET", 32.38, "Reims", "Vins et alcools Chevalier"));
+            Orders.Add(new OrderData(10249, "TOMSP", 11.61, "Münster", "Toms Spezialitäten"));
+            Orders.Add(new OrderData(10250, "HANAR", 65.83, "Rio de Janeiro", "Hanari Carnes"));
+            Orders.Add(new OrderData(10251, "VICTE", 41.34, "Lyon", "Victuailles en stock"));
+            Orders.Add(new OrderData(10252, "SUPRD", 51.3, "Charleroi", "Suprêmes délices"));
+            Orders.Add(new OrderData(10253, "HANAR", 58.17, "Rio de Janeiro", "Hanari Carnes"));
+            Orders.Add(new OrderData(10254, "CHOPS", 22.98, "Bern", "Chop-suey Chinese"));
+            Orders.Add(new OrderData(10255, "RICSU", 148.33, "Genève", "Richter Supermarkt"));
+            Orders.Add(new OrderData(10256, "WELLI", 13.97, "Resende", "Wellington Import Export"));
+            Orders.Add(new OrderData(10257, "HILAA", 81.91, "San Cristóbal", "Hila Alimentos"));
+            Orders.Add(new OrderData(10258, "ERNSH", 140.51, "Graz", "Ernst Handel"));
+            Orders.Add(new OrderData(10259, "CENTC", 3.25, "México D.F.", "Centro comercial"));
+            Orders.Add(new OrderData(10260, "OTTIK", 55.09, "Köln", "Ottilies Käseladen"));
+            Orders.Add(new OrderData(10261, "QUEDE", 3.05, "Rio de Janeiro", "Que delícia"));
+            Orders.Add(new OrderData(10262, "RATTC", 48.29, "Albuquerque", "Rattlesnake Canyon Grocery"));
+        }
+
+        return Orders;
+    }
+
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLSZfiWAQxFziVz?appbar=true&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Adding header and footer in the exported Excel file
+
+The Excel or CSV Export feature in Grid allows you to include header and footer content in the exported Excel or CSV document. This feature is particularly useful when you want to add additional information or branding to the exported Excel or CSV file.
+
+To achieve this, you can use [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event along with defining the [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_Header) and [Footer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_Footer) properties in the [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) object allowing you to customize the header and footer content.
+
+The following example demonstrates how to add a header and footer to the exported Grid:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+
+<SfGrid ID="Grid" @ref="Grid" DataSource="@Orders" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport" })" Height="348">
+    <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="OrderData"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150" />
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="150" />
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="150" />
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private SfGrid<OrderData> Grid;
+    public List<OrderData> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }
+
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Id == "Grid_excelexport")
+        {
+            var exportProperties = new ExcelExportProperties();
+            var header = new ExcelHeader { HeaderRows = 8 };
+            header.Rows = new List<ExcelRow>
+            {
+                new ExcelRow
+                {
+                    Cells = new List<ExcelCell>
+                    {
+                        new ExcelCell
+                        {
+                            ColSpan = 4,
+                            Value = "Northwind Traders",
+                            Style = new ExcelStyle
+                            {
+                                FontColor = "#C67878",
+                                FontSize = 20,
+                                HAlign = ExcelHorizontalAlign.Center,
+                                Bold = true
+                            }
+                        }
+                    }
+                },
+                new ExcelRow
+                {
+                    Cells = new List<ExcelCell>
+                    {
+                        new ExcelCell
+                        {
+                            ColSpan = 4,
+                            Value = "2501 Aerial Center Parkway",
+                            Style = new ExcelStyle
+                            {
+                                FontColor = "#C67878",
+                                FontSize = 15,
+                                HAlign = ExcelHorizontalAlign.Center,
+                                Bold = true
+                            }
+                        }
+                    }
+                },
+                new ExcelRow
+                {
+                    Cells = new List<ExcelCell>
+                    {
+                        new ExcelCell
+                        {
+                            ColSpan = 4,
+                            Value = "Suite 200 Morrisville, NC 27560 USA",
+                            Style = new ExcelStyle
+                            {
+                                FontColor = "#C67878",
+                                FontSize = 15,
+                                HAlign =ExcelHorizontalAlign.Center,
+                                Bold = true
+                            }
+                        }
+                    }
+                },
+                new ExcelRow
+                {
+                    Cells = new List<ExcelCell>
+                    {
+                        new ExcelCell
+                        {
+                            ColSpan = 4,
+                            Value = "Tel +1 888.936.8638 Fax +1 919.573.0306",
+                            Style = new ExcelStyle
+                            {
+                                FontColor = "#C67878",
+                                FontSize = 15,
+                                HAlign = ExcelHorizontalAlign.Center,
+                                Bold = true
+                            }
+                        }
+                    }
+                },
+                new ExcelRow
+                {
+                    Cells = new List<ExcelCell>
+                    {
+                        new ExcelCell
+                        {
+                            ColSpan = 4,
+                            Hyperlink = new Hyperlink { Target = "https://www.northwind.com/", DisplayText = "www.northwind.com" },
+                            Style = new ExcelStyle { HAlign = ExcelHorizontalAlign.Center }
+                        }
+                    }
+                },
+                new ExcelRow
+                {
+                    Cells = new List<ExcelCell>
+                    {
+                        new ExcelCell
+                        {
+                            ColSpan = 4,
+                            Hyperlink = new Hyperlink { Target = "mailto:support@northwind.com" },
+                            Style = new ExcelStyle { HAlign = ExcelHorizontalAlign.Center }
+                        }
+                    }
+                },
+                new ExcelRow { }, 
+                new ExcelRow { }
+            };
+
+            
+            var footer = new ExcelFooter { FooterRows = 4 };
+            footer.Rows = new List<ExcelRow>
+            {
+                new ExcelRow { }, 
+                new ExcelRow { },
+                new ExcelRow
+                {
+                    Cells = new List<ExcelCell>
+                    {
+                        new ExcelCell
+                        {
+                            ColSpan = 4,
+                            Value = "Thank you for your business!",
+                            Style = new ExcelStyle { HAlign = ExcelHorizontalAlign.Center, Bold = true }
+                        }
+                    }
+                },
+                new ExcelRow
+                {
+                    Cells = new List<ExcelCell>
+                    {
+                        new ExcelCell
+                        {
+                            ColSpan = 4,
+                            Value = "!Visit Again!",
+                            Style = new ExcelStyle { HAlign = ExcelHorizontalAlign.Center, Bold = true }
+                        }
+                    }
+                }
+            };
+            exportProperties.Header = header;
+            exportProperties.Footer = footer;
+            await Grid.ExportToExcelAsync(exportProperties);
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="OrderData.cs" %}
+
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData(int orderID, string customerID, double freight, string shipCity, string shipName)
+    {
+        this.OrderID = orderID;
+        this.CustomerID = customerID;
+        this.Freight = freight;
+        this.ShipCity = shipCity;
+        this.ShipName = shipName;
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        {
+            Orders.Add(new OrderData(10248, "VINET", 32.38, "Reims", "Vins et alcools Chevalier"));
+            Orders.Add(new OrderData(10249, "TOMSP", 11.61, "Münster", "Toms Spezialitäten"));
+            Orders.Add(new OrderData(10250, "HANAR", 65.83, "Rio de Janeiro", "Hanari Carnes"));
+            Orders.Add(new OrderData(10251, "VICTE", 41.34, "Lyon", "Victuailles en stock"));
+            Orders.Add(new OrderData(10252, "SUPRD", 51.3, "Charleroi", "Suprêmes délices"));
+            Orders.Add(new OrderData(10253, "HANAR", 58.17, "Rio de Janeiro", "Hanari Carnes"));
+            Orders.Add(new OrderData(10254, "CHOPS", 22.98, "Bern", "Chop-suey Chinese"));
+            Orders.Add(new OrderData(10255, "RICSU", 148.33, "Genève", "Richter Supermarkt"));
+            Orders.Add(new OrderData(10256, "WELLI", 13.97, "Resende", "Wellington Import Export"));
+            Orders.Add(new OrderData(10257, "HILAA", 81.91, "San Cristóbal", "Hila Alimentos"));
+            Orders.Add(new OrderData(10258, "ERNSH", 140.51, "Graz", "Ernst Handel"));
+            Orders.Add(new OrderData(10259, "CENTC", 3.25, "México D.F.", "Centro comercial"));
+            Orders.Add(new OrderData(10260, "OTTIK", 55.09, "Köln", "Ottilies Käseladen"));
+            Orders.Add(new OrderData(10261, "QUEDE", 3.05, "Rio de Janeiro", "Que delícia"));
+            Orders.Add(new OrderData(10262, "RATTC", 48.29, "Albuquerque", "Rattlesnake Canyon Grocery"));
+        }
+
+        return Orders;
+    }
+
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVItTsCruFliZJm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
