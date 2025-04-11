@@ -155,7 +155,7 @@ Add the Syncfusion Blazor Chat UI component in the **~/Pages/Index.razor** file.
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion Blazor Chat UI component in your default web browser.
 
-![Blazor Chat UI Component](./images/chat-ui-component.png)
+![Blazor Chat UI Component.](images/chat-ui-component.png)
 
 ## Configure messages and user
 
@@ -185,4 +185,5 @@ You can use the [Messages](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LZLfWBixUbETBpmk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor Chat UI default prompt](./images/default-messages.png)
+![Blazor Chat UI default prompt.](images/default-messages.png)
+
