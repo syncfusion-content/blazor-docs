@@ -21,7 +21,6 @@ To get start quickly with Blazor Web App, you can check on this video.
 [Blazor Playground](https://blazor.syncfusion.com/documentation/blazor-playground/overview) allows you to interact with our Blazor components directly in your web browser without need to install any required NuGet packages. By default, the `Syncfusion.Blazor` package is included in this.
 
 {% playground "https://blazorplayground.syncfusion.com/" %}
-<!-- [https://blazorplayground.syncfusion.com/](https://blazorplayground.syncfusion.com/) -->
 
 ## Using Syncfusion Blazor Templates
 

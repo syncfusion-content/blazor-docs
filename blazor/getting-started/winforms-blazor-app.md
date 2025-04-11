@@ -1,36 +1,31 @@
 ---
 layout: post
-title: Getting Started with WPF Blazor App in Visual Studio | Syncfusion
-description: Check out the documentation for getting started with WPF Blazor App and Syncfusion Blazor Components in Visual Studio and much more.
+title: Getting Started with WinForms Blazor App in Visual Studio | Syncfusion
+description: Check out the documentation for getting started with WinForms Blazor App and Syncfusion Blazor Components in Visual Studio and much more.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Getting Started with WPF Blazor Application
+# Getting Started with WinForms Blazor Application
 
-This section explains how to create and run the first WPF Blazor App UI (.NET WPF Blazor) app with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
+This section explains how to create and run the first WinForms Blazor App UI (.NET WinForms Blazor) app with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
 
-To get start quickly with Blazor WPF App, you can check on this video.
+## What is WinForms Blazor App?
 
-{% youtube
-"youtube:https://www.youtube.com/watch?v=MxSGEbPUbMg" %}
+WinForms Blazor App is an app where `Blazor web app` is hosted in WinForms app using `BlazorWebView` control. This enable a Blazor web app to be integrated with platform features and UI controls. Also, BlazorWebView can be added to any page of WinForms Blazor app, and pointed to the root of the Blazor app. The Blazor components run natively in the .NET process and render web UI to an embedded web view control. WinForms Blazor apps can run on all the platforms supported by WinForms.
 
-## What is WPF Blazor App?
-
-WPF Blazor App is an app where `Blazor web app` is hosted in WPF app using `BlazorWebView` control. This enable a Blazor web app to be integrated with platform features and UI controls. Also, BlazorWebView can be added to any page of WPF Blazor app, and pointed to the root of the Blazor app. The Blazor components run natively in the .NET process and render web UI to an embedded web view control. WPF Blazor apps can run on all the platforms supported by WPF.
-
-Visual Studio provides **WPF Application** template to create WPF Blazor Apps.
+Visual Studio provides **WinForms Application** template to create WinForms Blazor Apps.
 
 ## Prerequisites
 
-* [Supported platforms (WPF documentation)](https://learn.microsoft.com/en-us/dotnet/desktop/wpf/overview/?view=netdesktop-8.0)
+* [Supported platforms (WinForms documentation)](https://learn.microsoft.com/en-us/dotnet/desktop/winforms/overview/?view=netdesktop-8.0)
 
 * [Visual Studio 2022](https://visualstudio.microsoft.com/vs/) with the .NET desktop development workload
 
-## Create a new WPF Blazor App in Visual Studio
+## Create a new WinForms Blazor App in Visual Studio
 
-To create a **WPF Blazor App** using Visual Studio, it is essential<sup style="font-size:70%">&reg;</sup> to follow the comprehensive steps outlined in the [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/wpf?view=aspnetcore-8.0) documentation. Ensuring that you understand each step from the official guide will provide the foundation needed to continue with this documentation.
+To create a **WinForms Blazor App** using Visual Studio, it is essential<sup style="font-size:70%">&reg;</sup> to follow the comprehensive steps outlined in the [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/windows-forms?view=aspnetcore-8.0) documentation. Ensuring that you understand each step from the official guide will provide the foundation needed to continue with this documentation.
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendars and Themes NuGet in the App
 
@@ -45,9 +40,9 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Ensure that the package `Microsoft.AspNetCore.Components.WebView.Wpf` updated to version `8.0.16`.
+N> Ensure that the package `Microsoft.AspNetCore.Components.WebView.WindowsForms` updated to version `8.0.16`.
 
-![WPF Blazor App NuGet package reference](images/wpf/wpf-blazor-package-reference.png)
+![Winforms Blazor App NuGet package reference](images/winforms/winforms-blazor-package-reference.png)
 
 N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
@@ -62,14 +57,14 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 
 ```
 
-Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the `MainWindow.xaml.cs` file of your WPF Blazor App.
+Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the `Form1.cs` file of your WinForms Blazor App.
 
 {% tabs %}
-{% highlight C# tabtitle="~/MainWindow.xaml.cs" hl_lines="1 3" %}
+{% highlight C# tabtitle="~/Form1.cs" hl_lines="1 3" %}
 
     using Syncfusion.Blazor;
     ....
-    serviceCollection.AddSyncfusionBlazor();
+    service.AddSyncfusionBlazor();
     ....
 
 {% endhighlight %}
@@ -102,8 +97,4 @@ Now add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component in any
 
 In the Visual Studio toolbar, select the start button to build and run the app.
 
-![Build and run WPF Blazor App](images/wpf/start-button.png)
-
-![WPF Blazor App with Syncfusion Blazor Components](images/wpf/wpf-blazor-calendar.png)
-
-N> Download demo from [GitHub](https://github.com/SyncfusionExamples/blazor-general-cross-platform-wpf)
+![WinForms Blazor App with Syncfusion Blazor Components](images/winforms/winforms-blazor-calendar.png)
