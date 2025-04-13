@@ -11,14 +11,13 @@ documentation: ug
 
 This section provides information about creating Razor Class Library with the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components using [Visual Studio](https://visualstudio.microsoft.com/vs/).
 
-## Prerequisites
-
-* [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/)
-* [.NET 9.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0)/[.NET 8.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)/[.NET 7.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0)/[.NET 6.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
-
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
+
+## Prerequisites
+
+[System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
 ## Create a Razor Class Library in Visual Studio 2022
 
@@ -79,6 +78,10 @@ This Blazor component is defined in the <strong>RazorClassLibrary</strong> packa
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
+
+## Prerequisites
+
+* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
 ## Create a Razor class library in Visual Studio Code
 
