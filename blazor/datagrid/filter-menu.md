@@ -195,11 +195,11 @@ public class OrderData
 
 **Default filter input for OrderID column**
 
-![Default filter input OrderID column](images/Blazor-default-filter-input-datagrid.gif)
+![Default filter input OrderID column.](images/Blazor-default-filter-input-datagrid.gif)
 
 **Custom dropdown filter for OrderID column**
 
-![Custom dropdown filter for OrderID column](images/blazor-custom-dropdown-filter-datagrid.gif)
+![Custom dropdown filter for OrderID column.](images/blazor-custom-dropdown-filter-datagrid.gif)
 
 ## Show 24 hours time format in filter dialog
 
