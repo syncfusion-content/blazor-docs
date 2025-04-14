@@ -299,7 +299,7 @@ public class EmployeeInfo
 > Ensure to include the package **Microsoft.AspNetCore.Components.DataAnnotations.Validation** for complex type validation using the following reference: 
 `<PackageReference Include="Microsoft.AspNetCore.Components.DataAnnotations.Validation" Version="3.2.0-rc1.20223.4" />`
 
-![Validate Complex Column Using Data Annotation Attribute in Blazor DataGrid](./images/blazor-datagrid-validate-complex-column-using-data-annotation-attribute.gif)
+![Validate Complex Column Using Data Annotation Attribute in Blazor DataGrid.](images/blazor-datagrid-validate-complex-column-using-data-annotation-attribute.gif)
 
 ## Custom validator component
 
@@ -396,7 +396,7 @@ public class MyCustomValidator : ComponentBase
 }
 ```
 
-![Blazor DataGrid with Custom Validator in Editing](./images/blazor-datagrid-custom-validator-in-editing.png)
+![Blazor DataGrid with Custom Validator in Editing.](images/blazor-datagrid-custom-validator-in-editing.png)
 
 ## Display validation message using in-built tooltip
 
@@ -429,7 +429,7 @@ protected void HandleValidation(FieldIdentifier identifier)
 }
 ```
 
-![Blazor DataGrid with Custom Validator in Editing](./images/blazor-datagrid-custom-validator.png)
+![Blazor DataGrid with Custom Validator in Editing.](images/blazor-datagrid-custom-validator.png)
 
 ## Disable in-built validator component
 
