@@ -217,7 +217,7 @@ The trackball is used to track the data point that is closest to the mouse or to
 
 ## Highlighting data range with crosshair
 
-The `HighlightCategory`property in [ChartCrosshairSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCrosshairSettings.html) enhances data visualization by highlighting the entire range of the corresponding category's data point when hovered over. This feature aids in trend analysis across multiple data points, especially in time series or category axis charts, making comparisons clearer and more visually distinct.
+The [HighlightCategory](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCrosshairSettings.html#Syncfusion_Blazor_Charts_ChartCrosshairSettings_HighlightCategory) property in [ChartCrosshairSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCrosshairSettings.html) enhances data visualization by highlighting the entire range of the corresponding category's data point when hovered over. This feature aids in trend analysis across multiple data points, especially in time series or category axis charts, making comparisons clearer and more visually distinct.
 
 ```cshtml
 
@@ -235,15 +235,15 @@ The `HighlightCategory`property in [ChartCrosshairSettings](https://help.syncfus
     <ChartCrosshairSettings Enable="true" LineType="LineType.Vertical" HighlightCategory="true"></ChartCrosshairSettings>
     <ChartTooltipSettings Enable="true" Shared="true" Format="${series.name} : ${point.x} : ${point.y}"></ChartTooltipSettings>
     <ChartSeriesCollection>
-        <ChartSeries DataSource="StepChartValues" Type="ChartSeriesType.Line" XName="Year" YName="Y" Name="China">
+        <ChartSeries DataSource="StepChartValues" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Line" XName="Year" YName="Y" Name="China">
             <ChartMarker Visible="true" Width="10" Height="10">
             </ChartMarker>
         </ChartSeries>
-        <ChartSeries DataSource="StepChartValues" Type="ChartSeriesType.Line" XName="Year" YName="Y1" Name="Australia">
+        <ChartSeries DataSource="StepChartValues" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Line" XName="Year" YName="Y1" Name="Australia">
             <ChartMarker Visible="true" Width="10" Height="10">
             </ChartMarker>
         </ChartSeries>
-        <ChartSeries DataSource="StepChartValues" Type="ChartSeriesType.Line" XName="Year" YName="Y2" Name="Japan">
+        <ChartSeries DataSource="StepChartValues" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Line" XName="Year" YName="Y2" Name="Japan">
             <ChartMarker Visible="true" Width="10" Height="10">
             </ChartMarker>
         </ChartSeries>
@@ -275,6 +275,7 @@ The `HighlightCategory`property in [ChartCrosshairSettings](https://help.syncfus
 ```
 
 ![Crosshair in Blazor Line Chart with highlight background](images/crosshair/blazor-line-chart-with-highlight-background-trackball.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBIjJjJztIfQRsg?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
