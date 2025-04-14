@@ -564,6 +564,68 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZVpMWhMhJHQEtIF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+### Render RadioButton in a column
+
+The Syncfusion Blazor DataGrid supports rendering a [RadioButton](https://blazor.syncfusion.com/documentation/radio-button/getting-started-webapp) within a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This feature is particularly useful for displaying selection options such as order statuses, payment methods, or approval choices directly within the Grid.
+
+In the following example, a `RadioButton` is rendered in the **Order Status** column of the DataGrid by defining the `Template` property.
+
+```
+<SfRadioButton Label="Pending" Name="@radioGroupName" Value="0" Checked="raido.Freight"></SfRadioButton>
+<SfRadioButton Label="Confirmed" Name="@radioGroupName" Value="1" Checked="raido.Freight"></SfRadioButton>
+<SfRadioButton Label="Shipped" Name="@radioGroupName" Value="2" Checked="raido.Freight"></SfRadioButton>
+```
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+@using System.Dynamic
+@using Syncfusion.Blazor.Buttons
+
+<SfGrid DataSource="@Orders" AllowPaging="true"  Height="315">
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="70"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Width="100"></GridColumn>
+        <GridColumn HeaderText=" Order Status">
+            <Template>
+                @{
+                    var raido = (context as Order);
+                    var radioGroupName = $"RadioBtn_{raido.OrderID}";
+                    <SfRadioButton Label="Pending" Name="@radioGroupName" Value="0" Checked="raido.Freight"></SfRadioButton>
+                    <SfRadioButton Label="Confirmed" Name="@radioGroupName" Value="1" Checked="raido.Freight"></SfRadioButton>
+                    <SfRadioButton Label="Shipped" Name="@radioGroupName" Value="2" Checked="raido.Freight"></SfRadioButton>
+                }
+            </Template>
+        </GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<Order> Orders { get; set; }
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+                Freight = (new int[] { 0, 1, 2 })[new Random().Next(3)],
+
+            }).ToList();
+    }
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public int? Freight { get; set; }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLSDJssBIUUAdCw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## Using condition template
 
 The conditional column [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) allows you to display template elements based on specific conditions.
