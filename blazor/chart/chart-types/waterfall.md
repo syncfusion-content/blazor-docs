@@ -192,6 +192,7 @@ The [ChartCornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 ```
 
 ![Blazor Waterfall Chart with corner radius](../images/chart-types-images/blazor-waterfall-chart-corner-radius.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBINztpgOESJjZh?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 We can also customize the corner radius for individual points in the chart series using the [OnPointRender](https://blazor.syncfusion.com/documentation/chart/events#onpointrender) event by utilizing the [CornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_CornerRadius) property in its event argument.
 
@@ -233,7 +234,7 @@ We can also customize the corner radius for individual points in the chart serie
 
     public void PointRenderEvent(PointRenderEventArgs args)
     {
-        if (args.Point.X == "Income" || args.Point.X == "Development" || args.Point.X == "Balance" || args.Point.X == "Tax")
+        if ((args.Point.X as string) == "Income" || (args.Point.X as string) == "Development" || (args.Point.X as string) == "Balance" || (args.Point.X as string) == "Tax")
         {
             args.CornerRadius.BottomLeft = 5;
             args.CornerRadius.BottomRight = 5;
@@ -245,6 +246,7 @@ We can also customize the corner radius for individual points in the chart serie
 ```
 
 ![Blazor Waterfall Chart with corner radius using OnPointRender event](../images/chart-types-images/blazor-waterfall-chart-corner-radius-onPointRender.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrSZfDfpXVcpRWL?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 ## Empty points
 
