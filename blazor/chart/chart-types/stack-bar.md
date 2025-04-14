@@ -415,16 +415,16 @@ The [ChartCornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
 
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@StackedDataList" XName="X" YName="Y" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn100">
+        <ChartSeries DataSource="@StackedDataList" XName="X" YName="Y" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingBar100">
             <ChartCornerRadius BottomRight="5" TopRight="5" BottomLeft="5" TopLeft="5"></ChartCornerRadius>
         </ChartSeries>
-        <ChartSeries DataSource="@StackedDataList" XName="X" YName="Y1" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn100">
+        <ChartSeries DataSource="@StackedDataList" XName="X" YName="Y1" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingBar100">
             <ChartCornerRadius BottomRight="5" TopRight="5" BottomLeft="5" TopLeft="5"></ChartCornerRadius>
         </ChartSeries>
-        <ChartSeries DataSource="@StackedDataList" XName="X" YName="Y2" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn100">
+        <ChartSeries DataSource="@StackedDataList" XName="X" YName="Y2" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingBar100">
             <ChartCornerRadius BottomRight="5" TopRight="5" BottomLeft="5" TopLeft="5"></ChartCornerRadius>
         </ChartSeries>
-        <ChartSeries DataSource="@StackedDataList" XName="X" YName="Y3" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn100">
+        <ChartSeries DataSource="@StackedDataList" XName="X" YName="Y3" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingBar100">
             <ChartCornerRadius BottomRight="5" TopRight="5" BottomLeft="5" TopLeft="5"></ChartCornerRadius>
         </ChartSeries>
     </ChartSeriesCollection>
@@ -454,6 +454,7 @@ The [ChartCornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 ```
 
 ![Blazor Stacked bar 100 with corner radius](../images/chart-types-images/blazor-stacked-bar-100-chart-corner-radius.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVejpNfAyexsHPk?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 We can also customize the corner radius for individual points in the chart series using the [OnPointRender](https://blazor.syncfusion.com/documentation/chart/events#onpointrender) event by utilizing the [CornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_CornerRadius) property in its event argument.
 
@@ -500,7 +501,7 @@ We can also customize the corner radius for individual points in the chart serie
 
     public void PointRenderEvent(PointRenderEventArgs args)
     {
-        if (args.Point.X == "2015" || args.Point.X == "2017" || args.Point.X == "2019")
+        if ((args.Point.X as string) == "2015" || (args.Point.X as string) == "2017" || (args.Point.X as string) == "2019")
         {
             args.CornerRadius.BottomRight = 20;
             args.CornerRadius.BottomLeft = 20;
@@ -511,6 +512,7 @@ We can also customize the corner radius for individual points in the chart serie
 }
 ```
 ![Blazor Stacked bar 100 with corner radius using OnPointRender event](../images/chart-types-images/blazor-stacked-bar-100-chart-corner-radius-onPointRender.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVSNTZzKmxcZcBe?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 ## Empty points
 
