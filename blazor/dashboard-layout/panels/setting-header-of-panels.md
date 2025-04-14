@@ -55,4 +55,4 @@ Basically, Dashboard Layout Component have two templates to render the data in p
 
 The following output demonstrates the Header and content of Panels using templates.
 
-![Blazor Dashboard Layout with Header](../images/blazor-admin-template-layout-with-header.png)
+![Blazor Dashboard Layout with Header.](images/blazor-admin-template-layout-with-header.png)
