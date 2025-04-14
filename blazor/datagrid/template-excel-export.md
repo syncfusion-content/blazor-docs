@@ -7,9 +7,9 @@ control: DataGrid
 documentation: ug
 ---
 
-# Exporting grid with templates in Blazor DataGrid Component
+# Exporting grid with templates in Syncfusion Blazor DataGrid
 
-The grid offers the option to export the column, detail, and caption templates to an Excel document. The template contains images, hyperlinks, and customized text.
+The Syncfusion Blazor DataGrid offers the option to export the column, detail, and caption templates to an Excel document. The template contains images, hyperlinks, and customized text.
 
 ## Exporting with column template
 
@@ -19,29 +19,36 @@ In the following sample, the **CustomerID** column is a template column. The tem
 
 > Excel Export supports base64 string to export the images.
 
-```cshtml
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Grids
 
 <SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" Toolbar="@(new List<string>() { "ExcelExport" })" AllowExcelExport="true" AllowPaging="true">
-    <GridEvents ExcelQueryCellInfoEvent="ExcelQueryCellInfoHandler" OnToolbarClick="ToolbarClickHandler" TValue="Order"></GridEvents>
+    <GridEvents ExcelQueryCellInfoEvent="ExcelQueryCellInfoHandler" OnToolbarClick="ToolbarClickHandler" TValue="OrderData"></GridEvents>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150">
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150">
             <Template>
                 @{
-                    var con = (context as Order);
+                    var con = (context as OrderData);
                 }
                 <span>Mr.@con.CustomerID</span>
             </Template>
         </GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
-
-@code{
-    private SfGrid<Order> DefaultGrid;
-    public List<Order> Orders { get; set; }
+@code {
+    private SfGrid<OrderData> DefaultGrid;
+    public List<OrderData> Orders { get; set; }
+    public bool OrderDateVisible { get; set; } = false;
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
@@ -52,51 +59,83 @@ In the following sample, the **CustomerID** column is a template column. The tem
             await this.DefaultGrid.ExportToExcelAsync(ExportProperties);
         }
     }
-    public void ExcelQueryCellInfoHandler(ExcelQueryCellInfoEventArgs<Order> args)
+
+    public void ExcelQueryCellInfoHandler(ExcelQueryCellInfoEventArgs<OrderData> args)
     {
         if (args.Column.Field == "CustomerID")
         {
             args.Cell.Value = "Mr." + args.Data.CustomerID;
         }
     }
-    protected override void OnInitialized()
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="OrderData.cs" %}
+
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData(int orderID, string customerID, DateTime orderDate, double freight)
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "Alfki", "Anantr", "Anton", "Blonp", "Bolid" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
+        OrderID = orderID;
+        CustomerID = customerID;
+        OrderDate = orderDate;
+        Freight = freight;
     }
 
-    public class Order
+    public static List<OrderData> GetAllRecords()
     {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
+        if (Orders.Count == 0)
+        {
+            Orders.Add(new OrderData(10248, "VINET", new DateTime(2023, 1, 15), 32.38));
+            Orders.Add(new OrderData(10249, "TOMSP", new DateTime(2023, 2, 10), 11.61));
+            Orders.Add(new OrderData(10250, "HANAR", new DateTime(2023, 3, 5), 65.83));
+            Orders.Add(new OrderData(10251, "VICTE", new DateTime(2023, 4, 20), 41.34));
+            Orders.Add(new OrderData(10252, "SUPRD", new DateTime(2023, 5, 25), 51.30));
+            Orders.Add(new OrderData(10253, "HANAR", new DateTime(2023, 6, 15), 58.17));
+            Orders.Add(new OrderData(10254, "CHOPS", new DateTime(2023, 7, 10), 22.98));
+            Orders.Add(new OrderData(10255, "RICSU", new DateTime(2023, 8, 18), 148.33));
+            Orders.Add(new OrderData(10256, "WELLI", new DateTime(2023, 9, 7), 13.97));
+            Orders.Add(new OrderData(10257, "HILAA", new DateTime(2023, 10, 3), 81.91));
+        }
+
+        return Orders;
     }
+
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public DateTime OrderDate { get; set; }
+    public double Freight { get; set; }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDrStTCAyrjIiJqY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 
 ## Exporting with group caption template
 
-The Excel export feature enables exporting of Grid with a caption template to an Excel document.
+The Syncfusion Blazor Grid allows you to export the Grid data along with a custom caption template into an Excel document. This feature can be useful when you want to provide meaningful group captions (e.g., count of records) in the exported Excel file.
 
-The example below demonstrates how to customize the caption text in the Excel using the [ExcelGroupCaptionTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelGroupCaptionTemplateInfo) event.
+To customize the caption text in the exported Excel file, you can handle the [ExcelGroupCaptionTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelGroupCaptionTemplateInfo) event. This event provides you with the necessary information to set the group caption in the exported Excel file, such as the group key, record count, and header text. Within the event, you can set a customized group caption using `args.Cell.Value` property.
 
-```cshtml
+The following example demonstrates how the Grid is grouped by the **CustomerID** field and exports the grid data to Excel with a custom group caption template, utilizing the `OnToolbarClick` event and the `ExportToExcelAsync` method.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.Navigations
 
 <SfGrid ID="Grid" @ref="Grid" DataSource="@GridData" AllowGrouping="true" Height="315px" Toolbar="@(new List<string>() { "ExcelExport" })" AllowExcelExport="true">
     <GridEvents OnToolbarClick="ToolbarClickHandler" ExcelGroupCaptionTemplateInfo="ExcelGroupCaptionInfoHandler" TValue="OrderData"></GridEvents>
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Name" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="City" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="value" Width="80"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="90"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" TextAlign="TextAlign.Right" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Width="80"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="100"></GridColumn>
     </GridColumns>
     <GridGroupSettings Columns=@(new string[] { "CustomerID" })>
         <CaptionTemplate>
@@ -108,101 +147,111 @@ The example below demonstrates how to customize the caption text in the Excel us
     </GridGroupSettings>
 </SfGrid>
 
-@code {
-    public List<OrderData> GridData { get; set; }
 
-    public SfGrid<OrderData> Grid { get; set; }
+
+@code {
+    private SfGrid<OrderData> Grid;
+    public List<OrderData> GridData { get; set; }
 
     protected override void OnInitialized()
     {
-        GridData = OrderData.GetAllRecords();
+        GridData = OrderData.GetAllRecords(); // Replace with your actual data logic.
     }
 
-    public async Task ToolbarClickHandler(ClickEventArgs args)
+
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_excelexport")
+        if (args.Item.Id == "Grid_excelexport")  // Id is the combination of Grid's ID and item name.
         {
-            await Grid.ExportToExcelAsync();
+            if (args.Item.Id == "Grid_excelexport")
+            {
+                await Grid.ExportToExcelAsync();
+            }
         }
     }
 
     public void ExcelGroupCaptionInfoHandler(ExcelCaptionTemplateArgs args)
     {
-        args.Cell.Value = args.Key + "-" + args.Count + " Records: " + args.HeaderText;       //customize the caption cell value here
-    }
-
-    public class OrderData
-    {
-        public static List<OrderData> Orders = new List<OrderData>();
-
-        public OrderData()
-        {
-
-        }
-        public OrderData(int? OrderID, string CustomerID, string ShipCity, double? Freight)
-        {
-            this.OrderID = OrderID;
-            this.CustomerID = CustomerID;
-            this.ShipCity = ShipCity;
-            this.Freight = Freight;
-        }
-
-        public static List<OrderData> GetAllRecords()
-        {
-            if (Orders.Count() == 0)
-            {
-                int code = 10;
-                for (int i = 1; i < 2; i++)
-                {
-                    Orders.Add(new OrderData(10248, "VINET", "Reims", 3.25));
-                    Orders.Add(new OrderData(10249, "TOMSP", "Münster", 22.98));
-                    Orders.Add(new OrderData(10250, "HANAR", "Rio de Janeiro", 140.51));
-                    Orders.Add(new OrderData(10251, "VICTE", "Lyon", 65.83));
-                    Orders.Add(new OrderData(10252, "SUPRD", "Charleroi", 58.17));
-                    Orders.Add(new OrderData(10253, "HANAR", "Lyon", 81.91));
-                    Orders.Add(new OrderData(10254, "CHOPS", "Rio de Janeiro", 3.05));
-                    Orders.Add(new OrderData(10255, "RICSU", "Münster", 55.09));
-                    Orders.Add(new OrderData(10256, "WELLI", "Reims", 48.29));
-                    code += 5;
-                }
-            }
-            return Orders;
-        }
-
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public string ShipCity { get; set; }
-        public double? Freight { get; set; }
-    }
+        args.Cell.Value = args.Key + "-" + args.Count + " Records: " + args.HeaderText; 
+    } 
 }
-```
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="OrderData.cs" %}
+
+public class OrderData
+{
+    public OrderData(int orderID, string customerID, double freight, string shipCity)
+    {
+        this.OrderID = orderID;
+        this.CustomerID = customerID;
+        this.Freight = freight;
+        this.ShipCity = shipCity;
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        return new List<OrderData>
+        {
+            new OrderData(10248, "VINET", 32.38, "Reims"),
+            new OrderData(10249, "TOMSP", 11.61, "Münster"),
+            new OrderData(10250, "HANAR", 65.83, "Rio de Janeiro"),
+            new OrderData(10251, "VICTE", 41.34, "Lyon"),
+            new OrderData(10252, "SUPRD", 51.30, "Charleroi"),
+            new OrderData(10253, "HANAR", 58.17, "Rio de Janeiro"),
+            new OrderData(10254, "CHOPS", 22.98, "Bern"),
+            new OrderData(10255, "RICSU", 148.33, "Genève"),
+            new OrderData(10256, "WELLI", 13.97, "Resende"),
+            new OrderData(10257, "HILAA", 81.91, "San Cristóbal"),
+            new OrderData(10258, "ERNSH", 140.51, "Graz"),
+            new OrderData(10259, "CENTC", 3.25, "México D.F."),
+            new OrderData(10260, "OTTIK", 55.09, "Köln"),
+            new OrderData(10261, "QUEDE", 3.05, "Rio de Janeiro"),
+            new OrderData(10262, "RATTC", 48.29, "Albuquerque"),
+            new OrderData(10263, "ERNSH", 76.56, "Graz"),
+            new OrderData(10264, "FOLKO", 67.10, "Bräcke"),
+            new OrderData(10265, "BLONP", 36.65, "Strasbourg"),
+            new OrderData(10266, "WARTH", 27.19, "Stavanger"),
+            new OrderData(10267, "FRANK", 65.83, "München")
+        };
+    }
+
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCity { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/rDhSjfifINuSYyye" %}
 
 ## Exporting with detail template
 
-By default, the Grid exports the parent grid along with expanded detail rows only. To modify the exporting behavior, utilize the [ExcelExportProperties.ExcelDetailRowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailRowMode.html) property. The available options include:
+By default, the Grid exports the parent Grid along with expanded detail rows only. To modify the exporting behavior, utilize the [ExcelExportProperties.ExcelDetailRowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailRowMode.html) property. The available options include:
 
 | Mode | Behavior |
 |-------|----------|
-| Expand | Exports the parent grid with expanded detail rows.
-| Collapse | Exports the parent grid with collapsed detail rows.
-| None | Exports the parent grid alone.
+| Expand | Exports the parent Grid with expanded detail rows.
+| Collapse | Exports the parent Grid with collapsed detail rows.
+| None | Exports the parent Grid alone.
 
-The detail rows in the exported Excel can be customized or formatted using the [ExcelDetailTemplateExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelDetailTemplateExporting) event. In this event, the detail rows of the Excel document are formatted in accordance with their parent row details.
+You can customize and format the detail rows in the exported Excel document using the [ExcelDetailTemplateExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelDetailTemplateExporting) event. In this event, the detail rows of the Excel document are formatted in accordance with their parent row details.
 
 In the provided example, detail row content is formatted by specifying the [Headers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_ExcelDetailTemplateRowSettings_Headers), [Rows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_ExcelDetailTemplateRowSettings_Rows) using parent row details, facilitating the creation of detail rows within the Excel. Additionally, custom styles can be applied to specific cells using the [Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailTemplateCell.html#Syncfusion_Blazor_Grids_ExcelDetailTemplateCell_Style) property.
 
-```cshtml
-@using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.Buttons
-@using Syncfusion.Blazor.Data
-@using Syncfusion.Blazor.Navigations
-@using Syncfusion.Blazor
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 
-<SfGrid @ref="DefaultGrid" ID="Grid" DataSource="@Employees" Toolbar="@(new List<string>() { "ExcelExport" })" AllowExcelExport="true" Height="450px">
+@using Syncfusion.Blazor.Grids
+
+<SfGrid @ref="Grid" ID="Grid" DataSource="@Employees" Toolbar="@(new List<string>() { "ExcelExport" })" AllowExcelExport="true" Height="450px">
     <GridTemplates>
         <DetailTemplate>
             @{
-                var employee = (context as Product);
+                var employee = (context as ProductData);
                 <table class="detailtable" width="100%">
                     <colgroup>
                         <col width="40%" />
@@ -236,7 +285,7 @@ In the provided example, detail row content is formatted by specifying the [Head
                         </tr>
                         <tr>
                             <td style="text-align: center;">
-                                <span class="${Status}" style="font-weight: 500;"> @employee.Status</span>
+                                <span class="@((employee.Status == "Available") ? "available" : "unavailable")" style="font-weight: 500;"> @employee.Status</span>
                             </td>
                             <td>
                                 <span>@employee.ReturnPolicy</span>
@@ -265,11 +314,11 @@ In the provided example, detail row content is formatted by specifying the [Head
             }
         </DetailTemplate>
     </GridTemplates>
-    <GridEvents ExcelDetailTemplateExporting="ExcelDetailTemplateHandler" OnToolbarClick="ToolbarClickHandler" TValue="Product"></GridEvents>
+    <GridEvents ExcelDetailTemplateExporting="ExcelDetailTemplateHandler" OnToolbarClick="ToolbarClickHandler" TValue="ProductData"></GridEvents>
     <GridColumns>
-        <GridColumn Field=@nameof(Product.Category) HeaderText="Category" Width="110"> </GridColumn>
-        <GridColumn Field=@nameof(Product.ProductID) HeaderText="Product ID" Width="160"> </GridColumn>
-        <GridColumn Field=@nameof(Product.Status) HeaderText="Status" Width="180"></GridColumn>
+        <GridColumn Field=@nameof(ProductData.Category) HeaderText="Category" Width="110"> </GridColumn>
+        <GridColumn Field=@nameof(ProductData.ProductID) HeaderText="Product ID" Width="160"> </GridColumn>
+        <GridColumn Field=@nameof(ProductData.Status) HeaderText="Status" Width="180"></GridColumn>
     </GridColumns>
 </SfGrid>
 
@@ -283,156 +332,236 @@ In the provided example, detail row content is formatted by specifying the [Head
         white-space: nowrap;
         font-weight: normal;
     }
+
+    .unavailable {
+        color: #FF0000;
+    }
+
+    .available {
+        color: #00FF00;
+    }
 </style>
 
-@code {
 
-    SfGrid<Product> DefaultGrid;
-    public List<Product> Employees { get; set; }
-    public async Task ToolbarClickHandler(ClickEventArgs args)
+
+@code {
+    private SfGrid<ProductData> Grid;
+    public List<ProductData> Employees { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Employees = ProductData.GetAllRecords();
+    }
+
+
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
         if (args.Item.Id == "Grid_excelexport")  // Id is the combination of Grid's ID and item name.
         {
             ExcelExportProperties ExportProperties = new ExcelExportProperties();
             ExportProperties.ExcelDetailRowMode = ExcelDetailRowMode.Expand;
-            await this.DefaultGrid.ExportToExcelAsync(ExportProperties);
+            await Grid.ExportToExcelAsync(ExportProperties);
         }
     }
 
-    public void ExcelDetailTemplateHandler(ExcelDetailTemplateEventArgs<Product> args)
+    public void ExcelDetailTemplateHandler(ExcelDetailTemplateEventArgs<ProductData> args)
     {
         var excelRows = new List<ExcelDetailTemplateRow>();
         var data = args.ParentRow.Data;
-        args.RowInfo.Headers = new List<ExcelDetailTemplateRow>() { new ExcelDetailTemplateRow() { Cells = new List<ExcelDetailTemplateCell>() { new ExcelDetailTemplateCell() { Index = 0, CellValue = "Product Details", ColumnSpan = 2, Style = new ExcelStyle() { Bold = true, BackColor = "#ADD8E6" } } } } };
+        args.RowInfo.Headers = new List<ExcelDetailTemplateRow>() { 
+            new ExcelDetailTemplateRow() { 
+                Cells = new List<ExcelDetailTemplateCell>() { 
+                    new ExcelDetailTemplateCell() { 
+                        Index = 0, 
+                        CellValue = "Product Details", 
+                        ColumnSpan = 2,
+                        Style = new ExcelStyle() { 
+                        Bold = true, BackColor = "#ADD8E6" 
+                        } 
+                    } 
+                } 
+            } 
+        };
         excelRows.Add(new ExcelDetailTemplateRow()
-            {
-                Cells = new List<ExcelDetailTemplateCell>()
         {
-            new ExcelDetailTemplateCell()
+            Cells = new List<ExcelDetailTemplateCell>()
             {
-                CellValue = data.ProductDesc, Index = 0
-            },
-            new ExcelDetailTemplateCell()
-            {
-                Index = 1, Hyperlink = new Hyperlink() { DisplayText = data.Contact, Target = data.Contact }
-            }
-        }
-            });
-        excelRows.Add(
-            new ExcelDetailTemplateRow()
+                new ExcelDetailTemplateCell()
                 {
-                    Cells = new List<ExcelDetailTemplateCell>()
-                            {
-            new ExcelDetailTemplateCell()
-            {
-                CellValue = data.Cost, Index = 0
-            },
-            new ExcelDetailTemplateCell()
-            {
-                Index = 1, CellValue = "Available :" + data.Available }
-                            }
-                });
-        excelRows.Add(new ExcelDetailTemplateRow()
-            {
-                Cells = new List<ExcelDetailTemplateCell>()
-            {
-            new ExcelDetailTemplateCell()
-            {
-                CellValue = data.Status, Index = 0
-            },
-            new ExcelDetailTemplateCell()
-            {
-                Index = 1, CellValue = data.ReturnPolicy }
-            }
-            });
-        excelRows.Add(new ExcelDetailTemplateRow()
-            {
-                Cells = new List<ExcelDetailTemplateCell>()
-            {
-            new ExcelDetailTemplateCell()
-            {
-                CellValue = "Offers :" + data.Offers, Index = 0, Style = new ExcelStyle()
+                    CellValue = data.ProductDesc, Index = 0
+                },
+                new ExcelDetailTemplateCell()
                 {
-                  FontColor = "#0A76FF", FontSize = 12
-                }
-            },
-            new ExcelDetailTemplateCell()
-            {
-                Index = 1, CellValue = data.Cancellation }
-            }
-            });
-        excelRows.Add(new ExcelDetailTemplateRow()
-            {
-                Cells = new List<ExcelDetailTemplateCell>()
-            {
-            new ExcelDetailTemplateCell()
-            {
-                CellValue = "Ratings: " + data.Ratings, Index = 0, Style = new ExcelStyle()
-                {
-                  FontColor = "#0A76FF", FontSize = 12
-                }
-            },
-            new ExcelDetailTemplateCell()
-            {
-                Index = 1, CellValue = data.Delivery, Style = new ExcelStyle()
-                {
-                  FontColor = "#0A76FF", FontSize = 12
+                    Index = 1, Hyperlink = new Hyperlink() { DisplayText = data.Contact, Target = data.Contact }
                 }
             }
+        });
+        excelRows.Add( new ExcelDetailTemplateRow()
+        {
+            Cells = new List<ExcelDetailTemplateCell>()
+            {
+                new ExcelDetailTemplateCell()
+                {
+                    CellValue = data.Cost, Index = 0
+                },
+                new ExcelDetailTemplateCell()
+                {
+                    Index = 1, CellValue = "Available :" + data.Available 
+                }
             }
-            });
+        });
+        excelRows.Add(new ExcelDetailTemplateRow()
+        {
+            Cells = new List<ExcelDetailTemplateCell>()
+            {
+                new ExcelDetailTemplateCell()
+                {
+                    CellValue = data.Status, Index = 0,
+                    Style = new ExcelStyle()
+                    {
+                        FontColor = data.Status == "Available" ? "#00FF00" : "#FF0000"
+                    }
+                },
+                new ExcelDetailTemplateCell()
+                {
+                    Index = 1, CellValue = data.ReturnPolicy 
+                }
+            }
+        });
+        excelRows.Add(new ExcelDetailTemplateRow()
+        {
+            Cells = new List<ExcelDetailTemplateCell>()
+            {
+                new ExcelDetailTemplateCell()
+                {
+                    CellValue = "Offers :" + data.Offers, Index = 0, Style = new ExcelStyle()
+                    {
+                        FontColor = "#0A76FF", FontSize = 12
+                    }
+                },
+                new ExcelDetailTemplateCell()
+                {
+                    Index = 1, CellValue = data.Cancellation
+                }
+            }
+        });
+        excelRows.Add(new ExcelDetailTemplateRow()
+        {
+            Cells = new List<ExcelDetailTemplateCell>()
+            {
+                new ExcelDetailTemplateCell()
+                {
+                    CellValue = "Ratings: " + data.Ratings, Index = 0, Style = new ExcelStyle()
+                    {
+                      FontColor = "#0A76FF", FontSize = 12
+                    }
+                },
+                new ExcelDetailTemplateCell()
+                {
+                    Index = 1, CellValue = data.Delivery, Style = new ExcelStyle()
+                    {
+                      FontColor = "#0A76FF", FontSize = 12
+                    }
+                }
+            }
+        });
         args.RowInfo.Rows = excelRows;
     }
+}
 
-    protected override void OnInitialized()
+{% endhighlight %}
+
+{% highlight c# tabtitle="OrderData.cs" %}
+
+public class ProductData
+{
+    public static List<ProductData> Products = new List<ProductData>();
+
+    public ProductData(string category, string offers, string cost, string available, string itemID, string productID,
+                       string contact, string status, string productDesc, string returnPolicy,
+                       string delivery, string cancellation, string ratings)
     {
-        Employees = new List<Product>
-        {
-            new Product() {Category = "Suits/Slim", Offers="5%", Cost ="199.99$", Available = "10", ItemID="Suit-001",ProductID="EJ-SU-01", Contact="nancy@domain.com", Status = "Available", ProductDesc = "Slim Fit Suit", ReturnPolicy = "No Returns Applicable", Delivery = "** FREE Delivery **", Cancellation = "Cancellation upto 12 hrs", Ratings ="4.5" },
-            new Product() {Category = "Suits/Classic", Offers="12%", Cost ="249.99$", Available = "8", ItemID="Suit-002",ProductID="EJ-SU-02", Contact="nancy@domain.com", Status = "Available", ProductDesc = "Classic Fit Suit", ReturnPolicy = "No Returns Applicable", Delivery = "** FREE Delivery **", Cancellation = "Cancellation upto 24 hrs", Ratings ="4.8" },
-            new Product() {Category = "Suits/Formal", Offers="5%", Cost ="149.99$", Available = "15", ItemID="Suit-003",ProductID="EJ-SU-03", Contact="nancy@domain.com", Status = "Available", ProductDesc = "Formal Fit Suit", ReturnPolicy = "No Returns Applicable", Delivery = "** FREE Delivery **", Cancellation = "Cancellation upto 12 hrs", Ratings ="4.7" },
-            new Product() {Category = "Phants/Slim", Offers="10%", Cost ="19.99$", Available = "50", ItemID="Phant-001",ProductID="EJ-PH-01", Contact="nancy@domain.com", Status = "Available", ProductDesc = "Slim Fit Phant", ReturnPolicy = "Returns Applicable upto 2 days", Delivery = "** FREE Delivery **", Cancellation = "No Cancellation", Ratings ="4.5" },
-            new Product() {Category = "Phants/Classic", Offers="10%", Cost ="24.99$", Available = "45", ItemID="Phant-002",ProductID="EJ-PH-02", Contact="nancy@domain.com", Status = "Available", ProductDesc = "Classic Fit Phant", ReturnPolicy = "No Returns Applicable", Delivery = "** FREE Delivery **", Cancellation = "No Cancellation", Ratings ="4.6" },
-            new Product() {Category = "Shirts/Slim", Offers="8%", Cost ="19.99$", Available = "30", ItemID="Shirt-001",ProductID="EJ-SH-01", Contact="nancy@domain.com", Status = "Available", ProductDesc = "Slim Fit Shirt", ReturnPolicy = "No Returns Applicable", Delivery = "** FREE Delivery **", Cancellation = "No Cancellation", Ratings ="4.5" },
-            new Product() {Category = "Shirts/Formal", Offers="10%", Cost ="14.99$", Available = "30", ItemID="Shirt-002",ProductID="EJ-SH-02", Contact="nancy@domain.com", Status = "Available", ProductDesc = "Formal Shirt", ReturnPolicy = "No Returns Applicable", Delivery = "** FREE Delivery **", Cancellation = "No Cancellation", Ratings ="4.0" },
-            new Product() {Category = "Shirts/Classic", Offers="5%", Cost ="249.99$", Available = "25", ItemID="Shirt-003",ProductID="EJ-SH-03", Contact="nancy@domain.com", Status = "Available", ProductDesc = "Slim Fit Classic", ReturnPolicy = "No Returns Applicable", Delivery = "** FREE Delivery **", Cancellation = "Cancellation upto 12 hrs", Ratings ="4.8" },
-            new Product() {Category = "Shirts/Slim", Offers="10%", Cost ="14.99$", Available = "30", ItemID="Shirt-001",ProductID="EJ-SH-01", Contact="nancy@domain.com", Status = "Available", ProductDesc = "Slim Fit Shirt", ReturnPolicy = "No Returns Applicable", Delivery = "** FREE Delivery **", Cancellation = "No Cancellation", Ratings ="4.5" },
-        };
+        Category = category;
+        Offers = offers;
+        Cost = cost;
+        Available = available;
+        ItemID = itemID;
+        ProductID = productID;
+        Contact = contact;
+        Status = status;
+        ProductDesc = productDesc;
+        ReturnPolicy = returnPolicy;
+        Delivery = delivery;
+        Cancellation = cancellation;
+        Ratings = ratings;
     }
 
-    public class Product
+    public string Category { get; set; }
+    public string Offers { get; set; }
+    public string Cost { get; set; }
+    public string Available { get; set; }
+    public string ItemID { get; set; }
+    public string ProductID { get; set; }
+    public string Contact { get; set; }
+    public string Status { get; set; }
+    public string ProductDesc { get; set; }
+    public string ReturnPolicy { get; set; }
+    public string Delivery { get; set; }
+    public string Cancellation { get; set; }
+    public string Ratings { get; set; }
+
+    public static List<ProductData> GetAllRecords()
     {
-        public string Category { get; set; }
-        public string Offers { get; set; }
-        public string Cost { get; set; }
-        public string Available { get; set; }
-        public string ItemID { get; set; }
-        public string ProductID { get; set; }
-        public string Contact { get; set; }
-        public string Status { get; set; }
-        public string ProductImg { get; set; }
-        public string ProductDesc { get; set; }
-        public string ReturnPolicy { get; set; }
-        public string Delivery { get; set; }
-        public string Cancellation { get; set; }
-        public string Ratings { get; set; }
+        if (Products.Count == 0)
+        {
+            Products.Add(new ProductData("Suits/Slim", "5%", "199.99$", "10", "Suit-001", "EJ-SU-01", "nancy@domain.com", "Available", "Slim Fit Suit", "No Returns Applicable", "** FREE Delivery **", "Cancellation upto 12 hrs", "4.5"));
+            Products.Add(new ProductData("Suits/Classic", "12%", "249.99$", "8", "Suit-002", "EJ-SU-02", "andrew@domain.com", "Available", "Classic Fit Suit", "No Returns Applicable", "** FREE Delivery **", "Cancellation upto 24 hrs", "4.8"));
+            Products.Add(new ProductData("Suits/Formal", "5%", "149.99$", "15", "Suit-003", "EJ-SU-03", "janet@domain.com", "Available", "Formal Fit Suit", "No Returns Applicable", "** FREE Delivery **", "Cancellation upto 12 hrs", "4.7"));
+            Products.Add(new ProductData("Pants/Slim", "10%", "19.99$", "50", "Pant-001", "EJ-PA-01", "margaret@domain.com", "Available", "Slim Fit Pants", "No Returns Applicable", "** FREE Delivery **", "Cancellation upto 12 hrs", "4.2"));
+            Products.Add(new ProductData("Pants/Casual", "15%", "25.99$", "35", "Pant-002", "EJ-PA-02", "steven@domain.com", "Available", "Casual Cotton Pants", "Return within 7 days", "** FREE Delivery **", "Cancellation upto 24 hrs", "4.4"));
+            Products.Add(new ProductData("Shirts/Formal", "8%", "39.99$", "20", "Shirt-001", "EJ-SH-01", "michael@domain.com", "Available", "Formal Cotton Shirt", "No Returns Applicable", "** FREE Delivery **", "Cancellation upto 24 hrs", "4.6"));
+            Products.Add(new ProductData("Shirts/Casual", "10%", "29.99$", "60", "Shirt-002", "EJ-SH-02", "robert@domain.com", "Available", "Casual Check Shirt", "Return within 15 days", "** FREE Delivery **", "Cancellation upto 48 hrs", "4.3"));
+            Products.Add(new ProductData("Shirts/Denim", "6%", "49.99$", "25", "Shirt-003", "EJ-SH-03", "laura@domain.com", "Available", "Denim Shirt", "Return within 10 days", "** FREE Delivery **", "Cancellation upto 24 hrs", "4.1"));
+            Products.Add(new ProductData("Jackets/Leather", "18%", "199.99$", "5", "Jacket-001", "EJ-JA-01", "anne@domain.com", "Available", "Leather Jacket", "No Returns Applicable", "** FREE Delivery **", "Cancellation upto 6 hrs", "4.9"));
+            Products.Add(new ProductData("Jackets/Bomber", "20%", "129.99$", "12", "Jacket-002", "EJ-JA-02", "paul@domain.com", "Available", "Bomber Jacket", "Return within 7 days", "** FREE Delivery **", "Cancellation upto 12 hrs", "4.6"));
+
+            Products.Add(new ProductData("T-Shirts/Graphic", "10%", "19.99$", "80", "TShirt-001", "EJ-TS-01", "nancy@domain.com", "Available", "Graphic Tee", "Return within 15 days", "** FREE Delivery **", "Cancellation upto 24 hrs", "4.5"));
+            Products.Add(new ProductData("T-Shirts/Plain", "5%", "14.99$", "90", "TShirt-002", "EJ-TS-02", "andrew@domain.com", "Available", "Plain T-Shirt", "Return within 10 days", "** FREE Delivery **", "Cancellation upto 24 hrs", "4.2"));
+            Products.Add(new ProductData("T-Shirts/Sports", "12%", "24.99$", "70", "TShirt-003", "EJ-TS-03", "janet@domain.com", "Available", "Sports Tee", "Return within 7 days", "** FREE Delivery **", "Cancellation upto 12 hrs", "4.7"));
+            Products.Add(new ProductData("Jeans/Skinny", "15%", "59.99$", "30", "Jeans-001", "EJ-JE-01", "margaret@domain.com", "Available", "Skinny Fit Jeans", "Return within 15 days", "** FREE Delivery **", "Cancellation upto 24 hrs", "4.6"));
+            Products.Add(new ProductData("Jeans/Straight", "8%", "54.99$", "40", "Jeans-002", "EJ-JE-02", "steven@domain.com", "Available", "Straight Cut Jeans", "Return within 10 days", "** FREE Delivery **", "Cancellation upto 24 hrs", "4.4"));
+            Products.Add(new ProductData("Sweaters/Wool", "10%", "34.99$", "18", "Sweater-001", "EJ-SW-01", "michael@domain.com", "Available", "Woolen Sweater", "No Returns Applicable", "** FREE Delivery **", "Cancellation upto 6 hrs", "4.3"));
+            Products.Add(new ProductData("Sweaters/Cotton", "7%", "29.99$", "22", "Sweater-002", "EJ-SW-02", "robert@domain.com", "Available", "Cotton Sweater", "Return within 10 days", "** FREE Delivery **", "Cancellation upto 12 hrs", "4.2"));
+            Products.Add(new ProductData("Blazers/Formal", "14%", "89.99$", "10", "Blazer-001", "EJ-BL-01", "laura@domain.com", "Available", "Formal Blazer", "Return within 5 days", "** FREE Delivery **", "Cancellation upto 6 hrs", "4.7"));
+            Products.Add(new ProductData("Blazers/Casual", "10%", "79.99$", "14", "Blazer-002", "EJ-BL-02", "anne@domain.com", "Available", "Casual Blazer", "No Returns Applicable", "** FREE Delivery **", "Cancellation upto 12 hrs", "4.5"));
+            Products.Add(new ProductData("Hoodies/Zip", "0%", "39.99$", "0", "Hoodie-001", "EJ-HO-01", "paul@domain.com", "Unavailable", "Zip-up Hoodie", "Return within 10 days", "** FREE Delivery **", "Cancellation upto 24 hrs", "4.6"));
+        }
+
+        return Products;
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/hDVoZTCpzaSIZraq" %}
 
 ## Exporting hierarchical grid using detail template
 
-The DataGrid offers an option to export the hierarchical Grid to Excel using the detail template exporting feature. The detail rows in the exported Excel can be customized or formatted using the [ExcelDetailTemplateExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelDetailTemplateExporting) event. In this event, the detail rows of the Excel document are formatted in accordance with their parent row details.
+The Syncfusion Blazor DataGrid allows you to export hierarchical Grid data to Excel using the detail template feature. This is particularly useful for scenarios where data is nested within parent rows (such as employee details and their related orders), and you need to export both the parent and child records to a single Excel document.
+
+You can customize and format the detail rows in the exported Excel document using the [ExcelDetailTemplateExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelDetailTemplateExporting) event. In this event, the detail rows of the Excel document are formatted in accordance with their parent row details.
 
 In the provided example, detail row content is formatted by specifying the [Headers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_ExcelDetailTemplateRowSettings_Headers), [Rows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_ExcelDetailTemplateRowSettings_Rows) using parent row details. Additionaly, this achieves a nested level of children using the [ChildRowInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailTemplateRow.html#Syncfusion_Blazor_Grids_ExcelDetailTemplateRow_ChildRowInfo) property.
 
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Data
 
-<SfGrid @ref="DefaultGrid" ID="Grid" DataSource="@Employees" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport"})">
+<SfGrid @ref="Grid" ID="Grid" DataSource="@Employees" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport"})">
     <GridTemplates>
         <DetailTemplate>
             @{
@@ -473,65 +602,29 @@ In the provided example, detail row content is formatted by specifying the [Head
 </SfGrid>
 
 @code {
-    SfGrid<EmployeeData> DefaultGrid;
+    private SfGrid<EmployeeData> Grid;
     public List<EmployeeData> Employees { get; set; }
     public List<OrderDetails> OrderInfo { get; set; }
     public static List<Order> Orders { get; set; }
 
     protected override void OnInitialized()
     {
-        Employees = new List<EmployeeData>
-        {
-            new EmployeeData() {EmployeeID = 1, FirstName="Nancy",  Title="Sales Representative",City="Texas", Country="USA"},
-            new EmployeeData() {EmployeeID = 2, FirstName="Andrew",  Title="Vice President",City="London", Country="UK"},
-            new EmployeeData() {EmployeeID = 3, FirstName="Janet",  Title="Sales",City="London", Country="UK"},
-            new EmployeeData() {EmployeeID = 4, FirstName="Margaret",  Title="Sales Manager",City="London", Country="UK"},
-            new EmployeeData() {EmployeeID = 5, FirstName="Steven",  Title="Inside Sales Coordinator",City="Vegas", Country="USA"},
-            new EmployeeData() {EmployeeID = 6, FirstName="Smith",  Title="HR Manager",City="Dubai", Country="UAE"},
-            new EmployeeData() {EmployeeID = 7, FirstName="Steven",  Title="Inside Sales Coordinator",City="Paris", Country="France"},
-            new EmployeeData() {EmployeeID = 8, FirstName="Smith",  Title="HR Manager",City="Mumbai", Country="India"},
-            new EmployeeData() {EmployeeID = 9, FirstName="Smith",  Title="HR Manager",City="Chennai", Country="India"},
-        };
-        Orders = new List<Order>
-        {
-            new Order() {EmployeeID = 1, OrderID=1001, CustomerID="Nancy", ShipCity="Texas", Freight=2.1*1 },
-            new Order() {EmployeeID = 2, OrderID=1002, CustomerID="Andrew", ShipCity="London", Freight=2.1*2},
-            new Order() {EmployeeID = 3, OrderID=1003, CustomerID="Janet", ShipCity="London", Freight=2.1*3},
-            new Order() {EmployeeID = 4, OrderID=1004, CustomerID="Margaret", ShipCity="London", Freight= 2.1*4},
-            new Order() {EmployeeID = 5, OrderID=1005, CustomerID="Steven", ShipCity="Vegas", Freight=2.1*5},
-            new Order() {EmployeeID = 6, OrderID=1006, CustomerID="Smith", ShipCity="Dubai", Freight=2.1*6},
-            new Order() {EmployeeID = 7, OrderID=1007, CustomerID="Steven", ShipCity="Paris", Freight=2.1*7},
-            new Order() {EmployeeID = 8, OrderID=1008, CustomerID="Smith", ShipCity="Mumbai", Freight=2.1*8},
-            new Order() {EmployeeID = 9, OrderID=1009, CustomerID="Smith", ShipCity="Chennai", Freight=2.1*9},
-            new Order() {EmployeeID = 2, OrderID=1010, CustomerID="Smith", ShipCity="Chennai", Freight=2.1*9},
-            new Order() {EmployeeID = 3, OrderID=1011, CustomerID="Smith", ShipCity="Chennai", Freight=2.1*9},
-            new Order() {EmployeeID = 3, OrderID=1012, CustomerID="Smith", ShipCity="Chennai", Freight=2.1*9},
-        };
-
-        OrderInfo = new List<OrderDetails>
-        {
-            new OrderDetails() { OrderID=1001, Title="Sales Representative", CustomerID="Nancy", Country="Germany", Address="Obere Str. 57" },
-            new OrderDetails() { OrderID=1002, Title="HR Manager", CustomerID="Andrew", Country="Mexico", Address="Avda. de la Constitución 2222"},
-            new OrderDetails() { OrderID=1003, Title="Vice President", CustomerID="Janet", Country="Mexico", Address="Mataderos 2312"},
-            new OrderDetails() { OrderID=1004, Title="Inside Sales Coordinator", CustomerID="Margaret", Country="Mexico", Address="Mataderos 2312"},
-            new OrderDetails() { OrderID=1005, Title="HR Manager", CustomerID="Steven", Country="Spain", Address="C/ Araquil, 67"},
-            new OrderDetails() { OrderID=1006, Title="Vice President", CustomerID="Smith", Country="Mexico", Address="Avda. de la Constitución 2222"},
-            new OrderDetails() { OrderID=1007, Title="Sales", CustomerID="Steven", Country="France", Address="24, place Kléber"},
-            new OrderDetails() { OrderID=1008, Title="HR Manager", CustomerID="Smith", Country="Spain", Address="C/ Araquil, 67"},
-            new OrderDetails() { OrderID=1009, Title="Sales", CustomerID="Smith", Country="Mexico", Address="Mataderos 2312"},
-            new OrderDetails() { OrderID=1010, Title="Vice President", CustomerID="Smith", Country="Spain", Address="C/ Araquil, 67"},
-            new OrderDetails() { OrderID=1011, Title="Inside Sales Coordinator", CustomerID="Smith", Country="Mexico", Address="Mataderos 2312"},
-            new OrderDetails() { OrderID=1012, Title="HR Manager", CustomerID="Smith", Country="India", Address="45A "},
-        };
+        Employees = EmployeeData.GetAllRecords();
+        Orders = Order.GetAllRecords();
+        OrderInfo = OrderDetails.GetAllRecords();
     }
 
-    public async Task ToolbarClickHandler(ClickEventArgs args)
+
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
         if (args.Item.Id == "Grid_excelexport")  // Id is the combination of Grid's ID and item name.
         {
-            ExcelExportProperties ExportProperties = new ExcelExportProperties();
-            ExportProperties.ExcelDetailRowMode = ExcelDetailRowMode.Expand;
-            await this.DefaultGrid.ExportToExcelAsync(ExportProperties);
+            if (args.Item.Id == "Grid_excelexport")
+            {
+                ExcelExportProperties ExportProperties = new ExcelExportProperties();
+                ExportProperties.ExcelDetailRowMode = ExcelDetailRowMode.Expand;
+                await Grid.ExportToExcelAsync(ExportProperties);
+            }
         }
     }
 
@@ -566,31 +659,130 @@ In the provided example, detail row content is formatted by specifying the [Head
         }
         return new ExcelDetailTemplateRow { Cells = cells };
     }
-
-    public class EmployeeData
-    {
-        public int? EmployeeID { get; set; }
-        public string FirstName { get; set; }
-        public string Title { get; set; }
-        public string City { get; set; }
-        public string Country { get; set; }
-    }
-    public class Order
-    {
-        public int OrderID { get; set; }
-        public int? EmployeeID { get; set; }
-        public string CustomerID { get; set; }
-        public double Freight { get; set; }
-        public string ShipCity { get; set; }
-    }
-
-    public class OrderDetails
-    {
-        public int OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public string Title { get; set; }
-        public string Address { get; set; }
-        public string Country { get; set; }
-    }
 }
-```
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="EmployeeData.cs" %}
+
+public class EmployeeData
+{
+    public EmployeeData(int employeeID, string firstName, string title, string city, string country)
+    {
+        this.EmployeeID = employeeID;
+        this.FirstName = firstName;
+        this.Title = title;
+        this.City = city;
+        this.Country = country;
+    }
+
+    public static List<EmployeeData> GetAllRecords()
+    {
+        return new List<EmployeeData>
+        {
+            new EmployeeData(1, "Nancy", "Sales Representative", "Texas", "USA"),
+            new EmployeeData(2, "Andrew", "Vice President", "London", "UK"),
+            new EmployeeData(3, "Janet", "Sales", "London", "UK"),
+            new EmployeeData(4, "Margaret", "Sales Manager", "London", "UK"),
+            new EmployeeData(5, "Steven", "Inside Sales Coordinator", "Vegas", "USA"),
+            new EmployeeData(6, "Smith", "HR Manager", "Dubai", "UAE"),
+            new EmployeeData(7, "Steven", "Inside Sales Coordinator", "Paris", "France"),
+            new EmployeeData(8, "Smith", "HR Manager", "Mumbai", "India"),
+            new EmployeeData(9, "Smith", "HR Manager", "Chennai", "India")
+        };
+    }
+
+    public int EmployeeID { get; set; }
+    public string FirstName { get; set; }
+    public string Title { get; set; }
+    public string City { get; set; }
+    public string Country { get; set; }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="Order.cs" %}
+
+public class Order
+{
+    public Order(int employeeID, int orderID, string customerID, string shipCity, double freight)
+    {
+        this.EmployeeID = employeeID;
+        this.OrderID = orderID;
+        this.CustomerID = customerID;
+        this.ShipCity = shipCity;
+        this.Freight = freight;
+    }
+
+    public static List<Order> GetAllRecords()
+    {
+        return new List<Order>
+    {
+        new Order(1, 1001, "Nancy", "Texas", 2.1 * 1),
+        new Order(2, 1002, "Andrew", "London", 2.1 * 2),
+        new Order(3, 1003, "Janet", "London", 2.1 * 3),
+        new Order(4, 1004, "Margaret", "London", 2.1 * 4),
+        new Order(5, 1005, "Steven", "Vegas", 2.1 * 5),
+        new Order(6, 1006, "Smith", "Dubai", 2.1 * 6),
+        new Order(7, 1007, "Steven", "Paris", 2.1 * 7),
+        new Order(8, 1008, "Smith", "Mumbai", 2.1 * 8),
+        new Order(9, 1009, "Smith", "Chennai", 2.1 * 9),
+        new Order(2, 1010, "Smith", "Chennai", 2.1 * 9),
+        new Order(3, 1011, "Smith", "Chennai", 2.1 * 9),
+        new Order(3, 1012, "Smith", "Chennai", 2.1 * 9)
+    };
+    }
+
+    public int EmployeeID { get; set; }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipCity { get; set; }
+    public double Freight { get; set; }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="OrderDetails.cs" %}
+
+
+public class OrderDetails
+{
+    public OrderDetails(int orderID, string title, string customerID, string country, string address)
+    {
+        this.OrderID = orderID;
+        this.Title = title;
+        this.CustomerID = customerID;
+        this.Country = country;
+        this.Address = address;
+    }
+
+    public static List<OrderDetails> GetAllRecords()
+    {
+        return new List<OrderDetails>
+        {
+            new OrderDetails(1001, "Sales Representative", "Nancy", "Germany", "Obere Str. 57"),
+            new OrderDetails(1002, "HR Manager", "Andrew", "Mexico", "Avda. de la Constitución 2222"),
+            new OrderDetails(1003, "Vice President", "Janet", "Mexico", "Mataderos 2312"),
+            new OrderDetails(1004, "Inside Sales Coordinator", "Margaret", "Mexico", "Mataderos 2312"),
+            new OrderDetails(1005, "HR Manager", "Steven", "Spain", "C/ Araquil, 67"),
+            new OrderDetails(1006, "Vice President", "Smith", "Mexico", "Avda. de la Constitución 2222"),
+            new OrderDetails(1007, "Sales", "Steven", "France", "24, place Kléber"),
+            new OrderDetails(1008, "HR Manager", "Smith", "Spain", "C/ Araquil, 67"),
+            new OrderDetails(1009, "Sales", "Smith", "Mexico", "Mataderos 2312"),
+            new OrderDetails(1010, "Vice President", "Smith", "Spain", "C/ Araquil, 67"),
+            new OrderDetails(1011, "Inside Sales Coordinator", "Smith", "Mexico", "Mataderos 2312"),
+            new OrderDetails(1012, "HR Manager", "Smith", "India", "45A")
+        };
+    }
+
+    public int OrderID { get; set; }
+    public string Title { get; set; }
+    public string CustomerID { get; set; }
+    public string Country { get; set; }
+    public string Address { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/VNLINpCfyLFRJyFJ" %}
