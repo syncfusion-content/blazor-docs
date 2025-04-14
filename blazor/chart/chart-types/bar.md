@@ -371,8 +371,9 @@ The [ChartCornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 ```
 
 ![Blazor Bar Chart with corner radius](../images/chart-types-images/blazor-bar-chart-corner-radius.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBINTjfrHKsRaBF?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
-We can customize the corner radius for individual points in the chart series using the [OnPointRender](https://blazor.syncfusion.com/documentation/chart/events#onpointrender) event by utilizing the `CornerRadius` property in its event argument.
+We can customize the corner radius for individual points in the chart series using the [OnPointRender](https://blazor.syncfusion.com/documentation/chart/events#onpointrender) event by utilizing the [CornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_CornerRadius) property in its event argument.
 
 ```cshtml
  @using Syncfusion.Blazor.Charts
@@ -411,7 +412,7 @@ We can customize the corner radius for individual points in the chart series usi
 
     public void PointRenderEvent(PointRenderEventArgs args)
     {
-        if (args.Point.X == "Jan" || args.Point.X == "Mar" || args.Point.X == "May" || args.Point.X == "Aug" || args.Point.X == "Nov")
+        if ((args.Point.X as string) == "Jan" || (args.Point.X as string) == "Mar" || (args.Point.X as string == "May") || (args.Point.X as string == "Aug") || (args.Point.X as string) == "Nov")
         {
             args.CornerRadius.TopRight = 5;
             args.CornerRadius.BottomRight = 5;
@@ -421,6 +422,7 @@ We can customize the corner radius for individual points in the chart series usi
 
 ```
 ![Blazor bar chart with corner radius using OnPointRender event](../images/chart-types-images/blazor-bar-chart-corner-radius-using_onPointRenderEvent.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBejJXJVPrWIMKc?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 ## Bar space and width
 
