@@ -120,6 +120,8 @@ In the following example, **Id**, **FolderName**, and **SubFolders** columns fro
 
 ![Blazor TreeView with Hierarchical Data](./images/blazor-treeview-hierarchical-data.png)
 
+N> In the Blazor TreeView component, observable collection support is provided only for the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_DataSource) property, not for the [`Child`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_Child) property. The [`Child`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_Child) property supports only the `List<T>` data type.
+
 ### Self-referential data
 
 Blazor TreeView can be populated from self-referential data structure that contains list of objects with `ParentID` mapping. The self-referential data can be directly assigned to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_DataSource) property, and map all the field members with corresponding keys from self-referential data to [`TreeViewFieldsSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldsSettings-1.html) property.
@@ -1139,7 +1141,7 @@ N> The CRUD operation has been performed in the TreeView component using the con
         </TreeViewFieldsSettings>
         <TreeViewEvents TValue="Employee" NodeClicked="nodeClicked"></TreeViewEvents>
         <SfContextMenu TValue="MenuItem" @ref="menu" Target="#treeview" Items="@MenuItems">
-            <ContextMenuEvents TValue="MenuItem" ItemSelected="MenuSelect"></ContextMenuEvents>
+            <MenuEvents TValue="MenuItem" ItemSelected="MenuSelect"></MenuEvents>
         </SfContextMenu>
     </SfTreeView>
 </div>
@@ -1175,8 +1177,10 @@ N> The CRUD operation has been performed in the TreeView component using the con
 
     protected override async Task OnInitializedAsync()
     {
+        var response = await Http.GetStringAsync("api/Default");
+        var employees = JsonConvert.DeserializeObject<List<Employee>>(response);
         // To get the last item index from the db
-        var count = await Http.GetJsonAsync<int>("api/Default/index");
+        var count = await Http.GetFromJsonAsync<int>("api/Default/index");
         this.index = count + 1;
     }
 
@@ -1189,7 +1193,7 @@ N> The CRUD operation has been performed in the TreeView component using the con
         if ((eventParameters["which"]).ToString() == "3")
         {
             // To get the selected node id upon context menu click
-            this.selectedId = (await args.Node.GetAttribute("data-uid")).ToString();
+            this.selectedId = (await args.NodeData.GetAttribute("data-uid")).ToString();
         }
     }
 
@@ -1218,7 +1222,7 @@ N> The CRUD operation has been performed in the TreeView component using the con
     // To edit a tree node
     async void RenameNodes()
     {
-        tree.BeginEdit(this.selectedId);
+        tree.BeginEditAsync(this.selectedId);
     }
 
     // Triggers when context menu is selected
