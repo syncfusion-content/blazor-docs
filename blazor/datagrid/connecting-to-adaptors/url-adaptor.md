@@ -100,9 +100,9 @@ namespace URLAdaptor.Controllers
     public class GridController : ControllerBase
     {
         /// <summary>
-        /// Retrieve data from the data source.
+        /// Retrieves the list of orders.
         /// </summary>
-        /// <returns>Returns a list of ordersdetails records.</returns>
+        /// <returns>Retrieve data from the data source.</returns>
         [HttpGet]
         public List<OrdersDetails> GetOrderData()
         {
@@ -247,9 +247,9 @@ namespace URLAdaptor.Controllers
     public class GridController : ControllerBase
     {
         /// <summary>
-        /// Retrieve data from the data source.
+        /// Retrieves the list of orders.
         /// </summary>
-        /// <returns>Returns a list of ordersdetails records.</returns>
+        /// <returns>Retrieve data from the data source.</returns>
         [HttpGet]
         public List<OrdersDetails> GetOrderData()
         {
