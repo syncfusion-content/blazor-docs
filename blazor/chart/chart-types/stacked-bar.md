@@ -454,8 +454,9 @@ The [ChartCornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 ```
 
 ![Blazor Stacked bar chart with corner radius](../images/chart-types-images/blazor-stacked-bar-chart-corner-radius.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLIXzXpqbHxThSx?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
-We can also customize the corner radius for individual points in the chart series using the [OnPointRender](https://blazor.syncfusion.com/documentation/chart/events#onpointrender) event by utilizing the `CornerRadius` property in its event argument.
+We can also customize the corner radius for individual points in the chart series using the [OnPointRender](https://blazor.syncfusion.com/documentation/chart/events#onpointrender) event by utilizing the [CornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_CornerRadius) property in its event argument.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -499,7 +500,7 @@ We can also customize the corner radius for individual points in the chart serie
 
     public void PointRenderEvent(PointRenderEventArgs args)
     {
-        if (args.Point.X == "2015" || args.Point.X == "2017" || args.Point.X == "2019")
+        if ((args.Point.X as string) == "2015" || (args.Point.X as string) == "2017" || (args.Point.X as string) == "2019")
         {
             args.CornerRadius.BottomRight = 20;
             args.CornerRadius.BottomLeft = 20;
@@ -510,6 +511,7 @@ We can also customize the corner radius for individual points in the chart serie
 }
 ```
 ![Blazor Stacked bar chart with corner radius using OnPointRender event](../images/chart-types-images/blazor-stacked-bar-chart-corner-radius-onPointRender.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVIjTXJKkhNeecS?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 ## Stacking group
 
