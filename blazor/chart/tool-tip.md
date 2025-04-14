@@ -286,7 +286,7 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartT
 
 ## Enabling highlight for series with tooltip
 
-By enabling the `EnableHighlight` property in [ChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html), all points in the hovered series will be highlighted, while points in other series are dimmed. This feature enhances focus and clarity by drawing attention to the selected series.
+By enabling the [EnableHighlight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_EnableHighlight) property in [ChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html), all points in the hovered series will be highlighted, while points in other series are dimmed. This feature enhances focus and clarity by drawing attention to the selected series.
 
 ```cshtml
 
@@ -294,15 +294,15 @@ By enabling the `EnableHighlight` property in [ChartTooltipSettings](https://hel
 
 <SfChart Title="Unemployment Rates 1975-2010">
     <ChartSeriesCollection>
-        <ChartSeries DataSource="StepChartValues" Type="ChartSeriesType.StepLine" XName="Year" YName="Y" Name="China">
+        <ChartSeries DataSource="StepChartValues" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StepLine" XName="Year" YName="Y" Name="China">
             <ChartMarker Visible="true" Width="10" Height="10">
             </ChartMarker>
         </ChartSeries>
-        <ChartSeries DataSource="StepChartValues" Type="ChartSeriesType.StepLine" XName="Year" YName="Y1" Name="Australia">
+        <ChartSeries DataSource="StepChartValues" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StepLine" XName="Year" YName="Y1" Name="Australia">
             <ChartMarker Visible="true" Width="10" Height="10">
             </ChartMarker>
         </ChartSeries>
-        <ChartSeries DataSource="StepChartValues" Type="ChartSeriesType.StepLine" XName="Year" YName="Y2" Name="Japan">
+        <ChartSeries DataSource="StepChartValues" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StepLine" XName="Year" YName="Y2" Name="Japan">
             <ChartMarker Visible="true" Width="10" Height="10">
             </ChartMarker>
         </ChartSeries>
@@ -336,12 +336,13 @@ By enabling the `EnableHighlight` property in [ChartTooltipSettings](https://hel
 ```
 
 ![Blazor Chart tooltip with highlight series](images/tooltip/blazor-tooltip-enable-highlight.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZretJjTJXQadkbO?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 ## Displaying tooltip for nearest data point
 
-The `ShowNearestTooltip` property in the [ChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html) displays tooltips for the data point nearest to the cursor. It automatically identifies and highlights the closest point within a defined interaction zone, enhancing usability and accessibility, especially when dealing with densely packed or overlapping data points.
+The [ShowNearestTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_ShowNearestTooltip) property in the [ChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html) displays tooltips for the data point nearest to the cursor. It automatically identifies and highlights the closest point within a defined interaction zone, enhancing usability and accessibility, especially when dealing with densely packed or overlapping data points.
 
-N> By default, `ShowNearestTooltip` property in [ChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html) is set to true for all series. By disabling this property in a specific `ChartSeries`, you can prevent the tooltip from appearing for the nearest data point in that series.
+N> By default, `ShowNearestTooltip` property in [ChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html) is set to **true** for all series. By disabling this property in a specific `ChartSeries`, you can prevent the tooltip from appearing for the nearest data point in that series.
 
 ```cshtml
 
@@ -349,15 +350,15 @@ N> By default, `ShowNearestTooltip` property in [ChartSeries](https://help.syncf
 
 <SfChart Title="Unemployment Rates 1975-2010">
     <ChartSeriesCollection>
-        <ChartSeries DataSource="StepChartValues" Type="ChartSeriesType.StepLine" XName="Year" YName="Y" Name="China">
+        <ChartSeries DataSource="StepChartValues" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StepLine" XName="Year" YName="Y" Name="China">
             <ChartMarker Visible="true" Width="10" Height="10">
             </ChartMarker>
         </ChartSeries>
-        <ChartSeries DataSource="StepChartValues" Type="ChartSeriesType.StepLine" XName="Year" YName="Y1" Name="Australia" ShowNearestTooltip="false">
+        <ChartSeries DataSource="StepChartValues" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StepLine" XName="Year" YName="Y1" Name="Australia" ShowNearestTooltip="false">
             <ChartMarker Visible="true" Width="10" Height="10">
             </ChartMarker>
         </ChartSeries>
-        <ChartSeries DataSource="StepChartValues" Type="ChartSeriesType.StepLine" XName="Year" YName="Y2" Name="Japan">
+        <ChartSeries DataSource="StepChartValues" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StepLine" XName="Year" YName="Y2" Name="Japan">
             <ChartMarker Visible="true" Width="10" Height="10">
             </ChartMarker>
         </ChartSeries>
@@ -391,6 +392,7 @@ N> By default, `ShowNearestTooltip` property in [ChartSeries](https://help.syncf
 ```
 
 ![Blazor Chart shows nearest tooltip](images/tooltip/blazor-chart-nearest-tooltip.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBoZJtzTMXtrCZt?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
