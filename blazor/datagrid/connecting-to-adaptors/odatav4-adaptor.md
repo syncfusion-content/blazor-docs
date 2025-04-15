@@ -103,7 +103,7 @@ builder.Services.AddControllers().AddOData(
  
 **6. Create an API controller**
  
-Create an API controller (named **GridController.cs**) under the **Controllers** folder within the `ODataV4Adaptor` project. This controller facilitates data communication with the Blazor DataGrid.
+Create an API controller (aka, **GridController.cs**) file under the **Controllers** folder within the `ODataV4Adaptor` project. This controller facilitates data communication with the Blazor DataGrid.
  
 ```csharp
  
@@ -170,6 +170,8 @@ Install-Package Syncfusion.Blazor.Grid -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 ```
 
+> Syncfusion Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for a complete list of available packages.
+
 **2. Register Syncfusion Blazor service**
 
 - Open the **~/_Imports.razor** file and import the required namespaces.
@@ -206,7 +208,7 @@ Include the theme stylesheet and script references in the **~/Components/App.raz
 > * Refer to the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic for various methods to include themes (e.g., Static Web Assets, CDN, or CRG).
 > * Set the `rendermode` to **InteractiveServer** or **InteractiveAuto** in your Blazor Web App configuration.
 
-**4. Add Blazor Grid and configure with server**
+**4. Add Blazor DataGrid and configure with server**
 
 To connect the Blazor DataGrid to an OData V4 service, use the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) and set the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Adaptor) property to `Adaptors.ODataV4Adaptor`. Update the **Index.razor** file as follows.
 
@@ -266,7 +268,7 @@ namespace ODataV4Adaptor.Controllers
  
 **5. Run the application**
  
-When you run the application, the Blazor DataGrid  will display data fetched from the OData V4 service.
+When you run the application, the Blazor DataGrid will display data fetched from the OData V4 service.
 
 ![Odatav4 adaptor data](../images/blazor-odatav4-adaptors.gif)
 
@@ -469,7 +471,7 @@ builder.Services.AddControllers().AddOData(
     options => options
     // Enables $count query option to retrieve total record count.
     .Count()
-    // Limits the maximum number of records returned via $top.
+    // Limits the maximum number of records returned using $top.
     .SetMaxTop(recordCount)
     .AddRouteComponents(
         "odata",
@@ -526,7 +528,7 @@ To enable CRUD operations in the Syncfusion DataGrid within your application, fo
 {% endhighlight %}
 {% endtabs %}
 
-> Normal/Inline editing is the default edit [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) for the Grid. To enable CRUD operations, ensure that the [isPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property is set to **true** for a specific Grid column, ensuring that its value is unique.
+> Normal/Inline editing is the default edit [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) for the Grid. To enable CRUD operations, ensure that the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property is set to **true** for a specific Grid column, ensuring that its value is unique.
 
 **Insert Record**
 
