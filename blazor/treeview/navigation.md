@@ -331,11 +331,11 @@ The [**NavigateUrl**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Na
 
 ```
 
-## NavigateUrl with Built-in URLs in Azure AD Apps
+## NavigateUrl with Built-in URLs
 
-The anchor tag href functionality has been moved to the [NavigationManager.NavigateTo](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.navigationmanager.navigateto?view=aspnetcore-9.0) method for the Blazor TreeView component's [**NavigateUrl**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_NavigateUrl) property, in accordance with Blazor standards, starting from package version [27.1.48](https://blazor.syncfusion.com/documentation/release-notes/27.1.48?type=all#treeview).
+The anchor tag href functionality has been moved to the [NavigationManager.NavigateTo](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.navigationmanager.navigateto?view=aspnetcore-9.0) method for the Blazor TreeView component's [**NavigateUrl**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_NavigateUrl) property, in accordance with Blazor standards.
 
-However, when using the built-in URLs from the NuGet package (for example, **MicrosoftIdentity/Account/SignOut** from **Microsoft.Identity.Web.UI**), they may not function properly in an Azure AD application. To overcome this, you can use the [NavigationManager.NavigateTo](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.navigationmanager.navigateto?view=aspnetcore-9.0) method inside the [NodeSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeSelecting) event, as shown below:
+However, when using the built-in URLs from the NuGet package (for example, **MicrosoftIdentity/Account/SignOut** from **Microsoft.Identity.Web.UI**), these URLs may not function properly in the application. To resolve this, you need to prevent the default navigation functionality by setting [`args.Cancel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.NodeSelectEventArgs.html#Syncfusion_Blazor_Navigations_NodeSelectEventArgs_Cancel) to **true** and then use the [NavigationManager.NavigateTo](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.navigationmanager.navigateto?view=aspnetcore-9.0) method within the [NodeSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeSelecting) event, as shown below:
 
 ```cshtml
 
