@@ -283,7 +283,7 @@ namespace URLAdaptor.Controllers
  
 **5. Run the application**
  
-When you run the application, the Blazor DataGrid  will display data fetched from the API.
+When you run the application, the Blazor DataGrid will display data fetched from the API.
  
 ![UrlAdaptor data](../images/blazor-datagrid-adaptors.gif)
  
