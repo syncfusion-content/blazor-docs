@@ -9,11 +9,11 @@ documentation: ug
 
 # Scrolling in Blazor DataGrid
 
-The scrolling feature in the Blazor DataGrid allows you to navigate through content that extends beyond the visible area of the grid. It provides scrollbars that are automatically displayed when the content exceeds the specified `Width` or `Height` of the grid element. This feature is useful when you have a large amount of data or when the content needs to be displayed within a limited space. The vertical and horizontal scrollbars are displayed based on the following criteria:
+The scrolling feature in the Blazor DataGrid allows you to navigate through content that extends beyond the visible area of the Grid. It provides scrollbars that are automatically displayed when the content exceeds the specified `Width` or `Height` of the Grid element. This feature is useful when you have a large amount of data or when the content needs to be displayed within a limited space. The vertical and horizontal scrollbars are displayed based on the following criteria:
 
-* The vertical scrollbar appears when the total height of rows in the grid exceeds its element height.
-* The horizontal scrollbar appears when the total width of columns exceeds the grid element width.
-* The [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Width) properties are used to set the grid's height and width, respectively.
+* The vertical scrollbar appears when the total height of rows in the Grid exceeds its element height.
+* The horizontal scrollbar appears when the total width of columns exceeds the Grid element width.
+* The [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Width) properties are used to set the Grid's height and width, respectively.
 
 > The default values for `Height` and `Width` are `auto`.
 
@@ -247,7 +247,7 @@ public class LazyLoadDetails
 
 ## Scroll to selected row
 
-The Blazor DataGrid allows you to scroll the grid content to the position of the selected row, ensuring that the selected row is automatically brought into view. This feature is particularly useful when dealing with a large dataset and maintaining focus on the selected row. To achieve this, you can utilize the [ScrollIntoViewAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ScrollIntoViewAsync_System_Int32_System_Int32_System_Int32_) method provided by the Grid.
+The Blazor DataGrid allows you to scroll the Grid content to the position of the selected row, ensuring that the selected row is automatically brought into view. This feature is particularly useful when dealing with a large dataset and maintaining focus on the selected row. To achieve this, you can utilize the [ScrollIntoViewAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ScrollIntoViewAsync_System_Int32_System_Int32_System_Int32_) method provided by the Grid.
 
 The following example demonstrates how to use the `ScrollIntoViewAsync` method to scroll to the selected row:
 
@@ -360,7 +360,7 @@ public class LazyLoadDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rjroNWAMLmoWziOq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Customize grid scroll bar
+## Customize Grid scroll bar
 
 The Grid uses the native browser scrollbar to scroll through the content when the content exceeds the Grid's size. Refer to [this](https://css-tricks.com/almanac/properties/s/scrollbar/) to customize the appearance of the scrollbar.
 

@@ -91,7 +91,7 @@ public class TaskDetails
 
 ### Render buffered data using Overscan count
 
-The [OverscanCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_OverscanCount) property plays a crucial role in optimizing scrolling performance. It allows for the rendering of extra records before and after the viewport of the grid. It effectively reduces the frequency of data fetch requests while scrolling vertically.
+The [OverscanCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_OverscanCount) property plays a crucial role in optimizing scrolling performance. It allows for the rendering of extra records before and after the viewport of the Grid. It effectively reduces the frequency of data fetch requests while scrolling vertically.
 
 The following example demonstrates how to set the `OverscanCount` property to **5**, allowing five additional records to be preloaded before and after the current viewport.
 
@@ -186,13 +186,13 @@ public class OrderDetails
 	2. Detail template
 	3. Row template
 	4. Autofill
-	5. Hierarchy grid
-* When row virtual scrolling is activated, compatibility for copy-paste and drag-and-drop operations is limited to the data items visible in the current viewport of the grid.
+	5. Hierarchy Grid
+* When row virtual scrolling is activated, compatibility for copy-paste and drag-and-drop operations is limited to the data items visible in the current viewport of the Grid.
 * The cell-based selection is not supported for row virtual scrolling. 
 * Using different row heights with a template column, when the template height differs for each row, is not supported.
 * Group expand and collapse state will not be persisted.
 * Due to the element height limitation in browsers, the maximum number of records loaded by the Grid is limited by the browser capability.
-* The height of the grid content is calculated using the row height and total number of records in the data source and hence features which changes row height such as text wrapping are not supported.
+* The height of the Grid content is calculated using the row height and total number of records in the data source and hence features which changes row height such as text wrapping are not supported.
 * If you want to increase the row height to accommodate the content then you can specify the row height as below to ensure all the table rows are in same height.
 
     ```css
@@ -200,13 +200,13 @@ public class OrderDetails
         height: 2em;
     }
     ```
-* Since data is virtualized in grid, the aggregated information and total group items are displayed based on the current view items. 
-* The page size provided must be two times larger than the number of visible rows in the datagrid. If the page size is failed to meet this condition then the size will be determined by datagrid.
+* Since data is virtualized in Grid, the aggregated information and total group items are displayed based on the current view items. 
+* The page size provided must be two times larger than the number of visible rows in the DataGrid. If the page size is failed to meet this condition then the size will be determined by DataGrid.
 * It is necessary to set a static height for the component or its parent container when using row virtualization. The 100% height will work only if the component height is set to 100%, and its parent container has a static height.
 
 ## Column virtualization
 
-Column virtualization is a feature in the Syncfusion Grid that optimizes the rendering of columns by displaying only the columns currently within the viewport. It allows horizontal scrolling to view additional columns. This feature is particularly useful when dealing with grids that have a large number of columns, as it helps improve performance and reduces the initial loading time.
+Column virtualization is a feature in the Syncfusion Grid that optimizes the rendering of columns by displaying only the columns currently within the viewport. It allows horizontal scrolling to view additional columns. This feature is particularly useful when dealing with Grids that have a large number of columns, as it helps improve performance and reduces the initial loading time.
 
 To enable column virtualization, set the [EnableColumnVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableColumnVirtualization) property of the Grid to **true**. This configuration instructs the Grid to render only the columns visible in the viewport.
 
@@ -587,7 +587,7 @@ public class OrderDetails
     4. Stacked header
     5. Row template
     6. Detail template
-    7. Hierarchy grid
+    7. Hierarchy Grid
     8. Autofill
     9. Column chooser
 
@@ -878,9 +878,9 @@ public class VirtualData
 
 ## Scroll the content by external button
 
-In certain scenarios, you may want to programmatically scroll the grid content into view instead of relying on manual scrolling. The Syncfusion Grid provides the [ScrollIntoViewAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ScrollIntoViewAsync_System_Int32_System_Int32_System_Int32_) method, which allows you to scroll to a specific row or column by passing their respective indices as parameters.
+In certain scenarios, you may want to programmatically scroll the Grid content into view instead of relying on manual scrolling. The Syncfusion Grid provides the [ScrollIntoViewAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ScrollIntoViewAsync_System_Int32_System_Int32_System_Int32_) method, which allows you to scroll to a specific row or column by passing their respective indices as parameters.
 
-To enable smooth scrolling behavior, ensure that virtualization is enabled in the grid:
+To enable smooth scrolling behavior, ensure that virtualization is enabled in the Grid:
 
 * **Horizontal scrolling:** Set both [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) and [EnableColumnVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableColumnVirtualization) properties to **true**.
 * **Vertical scrolling:** Set the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) property to **true** to enable row virtualization.
@@ -986,9 +986,9 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjrotMgNKGXhbHbT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Refresh virtualized grid externally
+## Refresh virtualized Grid externally
 
-The [UpdatePageSizeAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_UpdatePageSizeAsync_System_Int32_System_Int32_) method refreshes the virtualized Grid's [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) externally by using the specified Grid height or Grid container height and row height. This method calculates the grid `PageSize` programmatically and refreshes the virtualized Grid with the newly calculated `PageSize`.
+The [UpdatePageSizeAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_UpdatePageSizeAsync_System_Int32_System_Int32_) method refreshes the virtualized Grid's [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) externally by using the specified Grid height or Grid container height and row height. This method calculates the Grid `PageSize` programmatically and refreshes the virtualized Grid with the newly calculated `PageSize`.
 
 To refresh the virtualized Grid externally, set [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) to **true**.
 
@@ -1060,7 +1060,7 @@ To refresh the virtualized Grid externally, set [EnableVirtualization](https://h
 }
 ```
 
-> If [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) is specified, the page size is calculated based on the given row height. Otherwise, RowHeight will be determined from the offset height of the grid row element.
+> If [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) is specified, the page size is calculated based on the given row height. Otherwise, RowHeight will be determined from the offset height of the Grid row element.
 
 > You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
 
