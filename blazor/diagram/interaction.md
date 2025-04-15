@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Interaction in Blazor Diagram Component | Syncfusion
+title: Connector Interactions in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about interaction in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Interaction in Blazor Diagram Component
+# Connector Interactions in Blazor Diagram Component
 
 ## Selection
 
