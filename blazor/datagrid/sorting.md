@@ -533,6 +533,105 @@ The following example demonstrates how to define custom sort comparer function f
 > * The SortComparer property will work only for local data.
 > * When using the column template to display data in a column, you will need to use the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) property of [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) to work with the [SortComparer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_SortComparer) property.
 
+### Display null values always at bottom
+
+By default, null values in the Syncfusion Blazor DataGrid are displayed at the top when sorting in descending order and at the bottom when sorting in ascending order. However, there may be scenarios where null values need to be consistently shown at the bottom of the grid, regardless of the sort direction. This can be achieved by using the [SortComparer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_SortComparer) property of the column.
+
+The `SortComparer` allows custom comparison logic for sorting. By implementing a custom comparer, null values can be handled separately and positioned at the end of the sorted list in both ascending and descending orders.
+
+The following example demonstrates how to configure the `SortComparer` for the **CustomrID** column to always place null values at the bottom:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowSorting="true">
+    <GridEvents Sorting="SortingHandler" TValue="Order"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" SortComparer="new CustomComparer()" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="Syncfusion.Blazor.Grids.ColumnType.Date" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<Order> Orders { get; set; }
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 12).Select(x => new Order()
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID", "", "CHARLIE", "DELTA", "ECHO", "FOXTROT", "GOLF", "HOTEL", "INDIA", "JULIET" })[new Random().Next(14)],
+                Freight = 2.1 * x,
+                OrderDate = DateTime.Now.AddDays(-x),
+            }).ToList();
+    }
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+    static bool flag = true;
+    public void SortingHandler(SortingEventArgs args)
+    {
+        if (args.Direction == Syncfusion.Blazor.Grids.SortDirection.Ascending)
+        {
+            flag = true;
+
+        }
+        else if (args.Direction == Syncfusion.Blazor.Grids.SortDirection.Descending)
+        {
+            flag = false;
+        }
+    }
+    public class CustomComparer : IComparer<Object>
+    {
+        public int Compare(object XRowDataToCompare, object YRowDataToCompare)
+        {
+            Order XRowData = XRowDataToCompare as Order;
+            Order YRowData = YRowDataToCompare as Order;
+            string value1 = XRowData.CustomerID;
+            string value2 = YRowData.CustomerID;
+            if (flag == true){
+                if (string.IsNullOrEmpty(value1) && string.IsNullOrEmpty(value2))
+                {
+                    return 0;
+                }
+                else if (string.IsNullOrEmpty(value1))
+                {
+                    return 1; // Place value1 after value2 (empty string goes to the bottom)
+                }
+                else if (string.IsNullOrEmpty(value2))
+                {
+                    return -1; // Place value2 after value1 (empty string goes to the bottom)
+                }
+            }
+            else if(flag == false){
+                if (string.IsNullOrEmpty(value1) && string.IsNullOrEmpty(value2))
+                {
+                    return 0;
+                }
+                else if (string.IsNullOrEmpty(value1))
+                {
+                    return -1; 
+                }
+                else if (string.IsNullOrEmpty(value2))
+                {
+                    return 1; 
+                }
+            }
+            return string.Compare(value1, value2, StringComparison.OrdinalIgnoreCase);
+        }
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBIZTMpUEvLsNyW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## Touch interaction
 
 When you tap the datagrid header on touchscreen devices, the selected column header is sorted. A popup ![Sorting in Blazor DataGrid.](./images/blazor-datagrid-sorting.jpg) is displayed for multi-column sorting. To sort multiple columns, tap the popup![Multiple sorting in Blazor DataGrid.](./images/blazor-datagrid-multiple-sorting.jpg), and then tap the desired datagrid headers.

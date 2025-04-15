@@ -542,6 +542,14 @@ The following example demonstrates how to sort the **CustomerID** column by sett
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjhUCMZGLoABNhxp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+## Group with paging
+
+The Sycnfusion Blazor DataGrid supports grouping columns along with paging. When grouping is applied, the grid displays aggregate values and group counts based on the current page by default. This means the group caption and group summary/footer will only reflect data from the current page.
+
+To calculate aggregates and total item counts across all pages, set the [DisablePageWiseAggregates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_DisablePageWiseAggregates) property to **false** in the `GridGroupSettings`. This allows the grid to display complete aggregate information for each group, regardless of paging.
+
+> If remote data is bound to grid dataSource, two requests will be sent when performing grouping action one for getting the grouped data and another for getting aggregate details and total items count.
+
 ## Group by format
 
 By default, columns are grouped by the data or value present for the particular row. However, you can also group numeric or datetime columns based on the specified format. To enable this feature, you need to set the [EnableGroupByFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EnableGroupByFormat)
@@ -1150,7 +1158,11 @@ The following example demonstrates how the `Grouping` and `Grouped` events work 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDLpNCtffrjjtSYQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+## Limitations
 
+* Grouping is not compatible with the following features:
+    1.  Autofill
+    
 ## See Also
 
 * [Exporting grouped records](https://blazor.syncfusion.com/documentation/datagrid/excel-exporting#exporting-grouped-records)
