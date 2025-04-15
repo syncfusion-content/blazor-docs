@@ -310,7 +310,7 @@ In the following example, `ODataAdaptor` is  used to fetch data from remote serv
 
 <SfDropDownTree TValue="int?" TItem="TreeData" Placeholder="Select an employee" Width="500px">
     <DropDownTreeField TItem="TreeData" Query="@Query" ID="EmployeeID" Text="FirstName" ParentID="ReportsTo" HasChildren="HasChildren">
-        <SfDataManager Url="https://blazor.syncfusion.com/services/development/odata/DropDownTreeOData" Adaptor="@Syncfusion.Blazor.Adaptors.ODataAdaptor" CrossDomain="true"></SfDataManager>
+        <SfDataManager Url="https://blazor.syncfusion.com/services/production/odata/DropDownTreeOData" Adaptor="@Syncfusion.Blazor.Adaptors.ODataAdaptor" CrossDomain="true"></SfDataManager>
     </DropDownTreeField>
 </SfDropDownTree>
 
@@ -338,7 +338,7 @@ In the following example, `ODataV4Adaptor` is  used to fetch data from remote se
 
 <SfDropDownTree TValue="int?" TItem="TreeData" Placeholder="Select an employee" Width="500px">
     <DropDownTreeField TItem="TreeData" Query="@Query" ID="EmployeeID" Text="FirstName" ParentID="ReportsTo" HasChildren="HasChildren">
-        <SfDataManager Url="https://blazor.syncfusion.com/services/development/odata/DropDownTreeODataV4" Adaptor="@Syncfusion.Blazor.Adaptors.ODataV4Adaptor" CrossDomain="true"></SfDataManager>
+        <SfDataManager Url="https://blazor.syncfusion.com/services/production/odata/DropDownTreeODataV4" Adaptor="@Syncfusion.Blazor.Adaptors.ODataV4Adaptor" CrossDomain="true"></SfDataManager>
     </DropDownTreeField>
 </SfDropDownTree>
 
