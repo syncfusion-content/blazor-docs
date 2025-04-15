@@ -3,13 +3,14 @@ layout: post
 title: Bind data and perform CRUD action with WebApiAdaptor in Syncfusion Blazor DataGrid
 description: Learn about bind data and performing CRUD operations using WebApiAdaptor in Syncfusion Blazor DataGrid.
 platform: Blazor
+keywords: adaptors, webapiadaptor, webapi adaptor, remotedata
 control: DataGrid
 documentation: ug
 ---
 
 # WebApiAdaptor in Syncfusion Blazor DataGrid
 
-The `WebApiAdaptor` is an extension of the `ODataAdaptor`, designed to interact with Web APIs created with OData endpoints. This adaptor ensures seamless communication between the Syncfusion Blazor DataGrid and OData-endpoint-based Web APIs, enabling efficient data retrieval and manipulation. For successful integration, the endpoint must be capable of understanding OData-formatted queries sent along with the request.
+The [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor) is an extension of the [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor), designed to interact with Web APIs created with OData endpoints. This adaptor ensures seamless communication between the Syncfusion Blazor DataGrid and OData-endpoint-based Web APIs, enabling efficient data retrieval and manipulation. For successful integration, the endpoint must be capable of understanding OData-formatted queries sent along with the request.
 
 To enable the OData query option for a Web API, please refer to the corresponding [documentation](https://learn.microsoft.com/en-us/aspnet/web-api/overview/odata-support-in-aspnet-web-api/supporting-odata-query-options), which provides detailed instructions on configuring the endpoint to understand OData-formatted queries.
 
@@ -21,7 +22,7 @@ To configure a server with the Syncfusion Blazor DataGrid, follow these steps:
  
 **1. Create a Blazor web app**
  
-You can create a **Blazor Web App** named **WebApiAdaptor** using Visual Studio 2022, either via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). Ensure you configure the appropriate [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows).
+You can create a **Blazor Web App** named **WebApiAdaptor** using Visual Studio 2022, either via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). Make sure to configure the appropriate [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows).
 
 **2. Create a model class**
  
@@ -32,7 +33,6 @@ namespace WebApiAdaptor.Models
 {
     public class OrdersDetails
     {
-        // Static list to hold order data.
         public static List<OrdersDetails> order = new List<OrdersDetails>();
  
         // Default constructor.
@@ -106,7 +106,7 @@ namespace WebApiAdaptor.Controllers
     public class GridController : ControllerBase
     {
         /// <summary>
-        /// Retrieves order data.
+        /// Retrieve data from the data source.
         /// </summary>
         /// <returns>Returns a JSON object with the list of orders and the total count.</returns>
         [HttpGet]
@@ -149,10 +149,7 @@ To integrate the Syncfusion Blazor DataGrid into your project using Visual Studi
  
 **1. Install Syncfusion Blazor Grid and Themes NuGet packages**
  
-- Open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*).
-- Search for and install the following packages:
-    - [Syncfusion.Blazor.Grid]( https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)
-    - [Syncfusion.Blazor.Themes]( https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
+To add the Blazor DataGrid in the app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
  
 If your Blazor Web App uses `WebAssembly` or `Auto` render modes, install the Syncfusion Blazor NuGet packages in the client project.
  
@@ -203,10 +200,10 @@ Include the theme stylesheet and script references in the **~/Components/App.raz
  
 > * Refer to the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic for various methods to include themes (e.g., Static Web Assets, CDN, or CRG).
 > * Set the `rendermode` to **InteractiveServer** or **InteractiveAuto** in your Blazor Web App configuration.
+
+**4. Add Blazor Grid and configure with server**
  
-**4. Map the API URL to the DataGrid**
- 
-To connect the Blazor DataGrid to a hosted API, use the [Url]( https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property of [SfDataManager]( https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html). Update the **Index.razor** file as follows.
+To connect the Blazor DataGrid to a hosted API, use the [Url]( https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property of [SfDataManager]( https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html). The `SfDataManager` offers multiple adaptor options to connect with remote database based on an API service. Below is an example of the [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor) configuration where an API service are set up to return the resulting data in the **item** and **count** format. Update the **Index.razor** file as follows.
  
 {% tabs %}
 {% highlight razor tabtitle="Index.razor"%}
@@ -504,7 +501,6 @@ public object GetOrderData()
         // Split the sorting query into individual conditions using commas as delimiters.
         var sortConditions = sort.Split(',');
         IOrderedEnumerable<OrdersDetails>? orderedData = null;
-
         foreach (var sortCondition in sortConditions)
         {
             // Split each sorting condition into field and direction (asc/desc).
