@@ -760,6 +760,98 @@ In the following code sample, you can prevent default filter query generation us
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZrzXrWOrKYCkblp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+## Render foreign key value in column template
+
+The Syncfusion Blazor DataGrid supports rendering foreign key values within a column template, allowing for a more meaningful display of related data. Instead of showing the underlying foreign key value, you can customize the column to display a corresponding descriptive value from a related data source.
+
+To achieve this, define a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property and use the foreign key mapping to bind and render the desired value. This approach is especially useful when the foreign key refers to an ID and you want to display the corresponding name or label.
+
+The following example demonstrates how to render a foreign key value using a column template in the Blazor DataGrid:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" Height="315">
+    <GridColumns>
+        <GridColumn Field="OrderID" HeaderText="Order ID" IsPrimaryKey="true" Width="120" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" />
+        <GridForeignColumn Field="EmployeeID" HeaderText="Employee Name" ForeignDataSource="@Employees" ForeignKeyField="EmployeeID" ForeignKeyValue="FirstName" Width="150">
+            <Template Context="data">
+                @{
+                    var order = (OrderData)data;
+                    var emp = Employees.FirstOrDefault(e => e.EmployeeID == order.EmployeeID);
+                }
+                <a href="#">@emp?.FirstName</a>
+            </Template>
+        </GridForeignColumn>
+        <GridColumn Field="Freight" HeaderText="Freight" Format="C2" Width="120" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" />
+        <GridColumn Field="ShipCity" HeaderText="Ship City" Width="120" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" />
+    </GridColumns>
+</SfGrid>
+@code {
+    public List<OrderData> Orders { get; set; }
+    public List<EmployeeData> Employees { get; set; }
+    protected override void OnInitialized()
+    {
+        Employees = EmployeeData.GetAllRecords();
+        Orders = OrderData.GetAllRecords();
+    }
+    private async Task LogToConsole(int? orderId)
+    {
+        await JS.InvokeVoidAsync("console.log", $"OrderID clicked: {orderId}");
+    }
+    public class EmployeeData
+    {
+        public int? EmployeeID { get; set; }
+        public string FirstName { get; set; }
+        public EmployeeData(int? employeeID, string firstName)
+        {
+            EmployeeID = employeeID;
+            FirstName = firstName;
+        }
+        public static List<EmployeeData> GetAllRecords()
+        {
+            return new List<EmployeeData>
+            {
+                new EmployeeData(1, "Nancy"),
+                new EmployeeData(2, "Andrew"),
+                new EmployeeData(3, "Janet"),
+                new EmployeeData(4, "Margaret"),
+                new EmployeeData(5, "Steven")
+            };
+        }
+    }
+    public class OrderData
+    {
+        public int? OrderID { get; set; }
+        public int? EmployeeID { get; set; }
+        public string ShipCity { get; set; }
+        public double? Freight { get; set; }
+        public OrderData(int? orderId, int? employeeId, string shipCity, double? freight)
+        {
+            OrderID = orderId;
+            EmployeeID = employeeId;
+            ShipCity = shipCity;
+            Freight = freight;
+        }
+        public static List<OrderData> GetAllRecords()
+        {
+            return new List<OrderData>
+            {
+                new OrderData(10248, 1, "Reims", 32.18),
+                new OrderData(10249, 2, "Münster", 33.33),
+                new OrderData(10250, 3, "Rio de Janeiro", 12.35),
+                new OrderData(10251, 4, "Lyon", 63.43),
+                new OrderData(10252, 5, "Charleroi", 56.98),
+            };
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDrItpiWpAQSwTsg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Enable multiple foreign key columns
 
