@@ -523,6 +523,124 @@ public static List<OrderData> Orders = new List<OrderData>();
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rjhTMsZwzXeNByOG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+## Render Syncfusion Chart in row template
+
+The Syncfusion Blazor DataGrid provides the flexibility to include custom controls, such as a Chart, within the rows of the Grid. This feature enhances Grid interactivity by allowing graphical representations of data instead of plain text.
+
+To render a Syncfusion Blazor Chart within a row template of the DataGrid, use the [RowTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_RowTemplate) property. This property accepts a Razor template that defines the layout for each row, enabling rich data visualization directly inside the Grid.
+
+Here is an example that demonstrates rendering Syncfusion Chart within a row template:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@page "/"
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Charts
+<SfGrid @ref="Grid" DataSource="@Orders" AllowSelection="true" Height="400px">
+    <GridTemplates>
+        <RowTemplate Context="emp">
+            @{
+                var order = emp as Order;
+            }
+            <td class="details">
+                <table class="CardTable" cellpadding="3" cellspacing="2">
+                    <tbody>
+                        <tr>
+                            <td class="CardHeader">Customer ID</td>
+                            <td>@order.CustomerID</td>
+                        </tr>
+                        <tr>
+                            <td class="CardHeader">Freight</td>
+                            <td>@order.Freight</td>
+                        </tr>
+                        <tr>
+                            <td class="CardHeader">Order Date</td>
+                            <td>@order.OrderDate?.ToShortDateString()</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+            <td class="chart">
+                <SfChart Width="100%" Height="200px">
+                    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+                    <ChartSeriesCollection>
+                        <ChartSeries DataSource="@GetChartData(order.OrderID)" XName="Category" 
+                            YName="Value" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Column">
+                        </ChartSeries>
+                    </ChartSeriesCollection>
+                </SfChart>
+            </td>
+        </RowTemplate>
+    </GridTemplates>
+    <GridColumns>
+        <GridColumn HeaderText="Order Details" Width="50%"></GridColumn>
+        <GridColumn HeaderText="Chart" Width="50%"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+<style type="text/css">
+    .details {
+        padding-left: 18px;
+        border-color: #e0e0e0;
+        border-width: 1px 0px 0px 0px;
+        border-style: solid;
+    }
+    .details > table {
+        width: 100%;
+    }
+
+    .CardHeader {
+        font-weight: 600;
+    }
+    td {
+        padding: 4px;
+    }
+</style>
+@code {
+    public List<Order> Orders { get; set; }
+    SfGrid<Order> Grid;
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 5).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+    public class Order
+    {
+        public int OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+    public class ChartData
+    {
+        public string Category { get; set; }
+        public double Value { get; set; }
+    }
+
+    private List<ChartData> GetChartData(int orderId)
+    {
+        // Simulated data per row (can vary by orderId if needed).
+        return new List<ChartData>
+        {
+            new ChartData { Category = "Q1", Value = orderId % 10 + 10 },
+            new ChartData { Category = "Q2", Value = orderId % 5 + 15 },
+            new ChartData { Category = "Q3", Value = orderId % 7 + 5 },
+            new ChartData { Category = "Q4", Value = orderId % 9 + 20 },
+        };
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVINfWegMFKNCdv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## Limitations
 
 Row template feature is not compatible with all the features which are available in the grid, and it has limited features support. The features that are incompatible with the row template feature are listed below.
