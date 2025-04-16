@@ -1488,11 +1488,11 @@ public class OrderData
 
 ## Exporting Grid Data as Stream
 
-The Syncfusion Blazor Grid allows exporting Grid data as a memory stream, enabling programmatic handling before saving or processing. The following sections cover how to export Grid data as a memory stream, merge multiple memory streams into one, and convert the memory stream to a file stream for saving the exported file.
+The SyncfusioSyncfusion Blazor DataGrid allows exporting Grid data as a memory stream, enabling programmatic handling before saving or processing. The following sections cover how to export Grid data as a memory stream, merge multiple memory streams into one, and convert the memory stream to a file stream for saving the exported file.
 
 ### Exporting Grid Data as Memory Stream
 
-The Export to Memory Stream feature allows you to export data from a grid to a memory stream instead of saving it to a file directly on the server. This can be particularly useful when you want to generate and serve the file directly to the client without saving it on the server, ensuring a smooth and efficient download process.
+The Export to Memory Stream feature allows you to export data from a Grid to a memory stream instead of saving it to a file directly on the server. This can be particularly useful when you want to generate and serve the file directly to the client without saving it on the server, ensuring a smooth and efficient download process.
 
 To achieve this functionality, you can utilize the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_System_Int32_System_Int32_System_Int32_) method along with the `asMemoryStream` parameter set to **true** within the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event. This method will export an Excel workbook as a memory stream, which can then be sent to the browser for download.
 
@@ -1644,9 +1644,9 @@ public class OrderData
 
 ### Converting Memory Stream to File Stream for Excel Export
 
-The Excel Export feature in Syncfusion Blazor Grid allows you to export the grid data to an Excel workbook. In some cases, you may want to save the exported Excel file as a physical file on your system. This is useful for scenarios where you need to store or process the file outside of the browser context.
+The Excel Export feature in Syncfusion Blazor DataGrid allows you to export the Grid data to an Excel workbook. In some cases, you may want to save the exported Excel file as a physical file on your system. This is useful for scenarios where you need to store or process the file outside of the browser context.
 
-To achieve this, you can use the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event in conjunction with the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_System_Int32_System_Int32_System_Int32_) method. The `ExportToExcelAsync` method generates the Excel file as a MemoryStream. You can then convert this memory stream into a FileStream and save the file to a specified location.
+To achieve this, you can use the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event in conjunction with the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_System_Int32_System_Int32_System_Int32_) method. The `ExportToExcelAsync` method generates the Excel file as a `MemoryStream`. You can then convert this memory stream into a `FileStream` and save the file to a specified location.
 
 The example below demonstrates how to achieve this by converting the memory stream into a file stream for saving the exported Excel file:
 
