@@ -1485,3 +1485,515 @@ public class OrderData
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtVItTsCruFliZJm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Exporting Grid Data as Stream
+
+The Syncfusion Blazor Grid allows exporting Grid data as a memory stream, enabling programmatic handling before saving or processing. The following sections cover how to export Grid data as a memory stream, merge multiple memory streams into one, and convert the memory stream to a file stream for saving the exported file.
+
+### Exporting Grid Data as Memory Stream
+
+The Export to Memory Stream feature allows you to export data from a grid to a memory stream instead of saving it to a file directly on the server. This can be particularly useful when you want to generate and serve the file directly to the client without saving it on the server, ensuring a smooth and efficient download process.
+
+To achieve this functionality, you can utilize the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_System_Int32_System_Int32_System_Int32_) method along with the `asMemoryStream` parameter set to **true** within the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event. This method will export an Excel workbook as a memory stream, which can then be sent to the browser for download.
+
+The provided example showcases the process of exporting the file as a memory stream and sending the byte to initiate a browser download.
+
+**Step 1**: **Add JavaScript for File Download**
+
+Create a JavaScript file named **saveAsFile.js** under the **wwwroot/scripts** directory and include the following function to trigger browser download:
+
+{% tabs %}
+{% highlight razor tabtitle="saveAsFile.js" %}
+
+function saveAsFile(filename, bytesBase64) {
+    var link = document.createElement('a');
+    link.download = filename;
+    link.href = "data:application/octet-stream;base64," + bytesBase64;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+**Step 2**:**Register the JavaScript file**
+
+Include the script reference inside your **App.razor** (or **index.html** in Blazor WebAssembly):
+
+{% tabs %}
+{% highlight razor tabtitle="App.razor" %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="/" />
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" href="BlazorApp1.styles.css" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <script src="saveAsFile.js"></script>
+    <HeadOutlet @rendermode="InteractiveServer" />
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+</head>
+<body>
+    <Routes @rendermode="InteractiveServer" />
+    <script src="_framework/blazor.web.js"></script>
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+</body>
+</html>
+
+{% endhighlight %}
+{% endtabs %}
+
+**Step 3: Invoke the JavaScript function to perform the browser download using the memory stream**
+
+In the **Index.razor** file, the Grid is set up, the export operation is triggered, and the `saveAsFile` function is invoked to handle the browser download.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+@using System.IO;
+@using Syncfusion.XlsIO
+@using Syncfusion.ExcelExport;
+@inject IJSRuntime JSRuntime
+
+<SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" Toolbar="@(new List<string>() { "ExcelExport"})" AllowExcelExport="true" AllowPaging="true">
+    <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="OrderData"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150" />
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120" />
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="150" />
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="150" />
+    </GridColumns>
+</SfGrid>
+
+@code{
+    private SfGrid<OrderData> Grid;
+    public List<OrderData> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }
+
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {       
+        if (args.Item.Id == "Grid_excelexport") //Id is combination of Grid's ID and itemname.
+        {           
+           MemoryStream streamDoc =  await Grid.ExportToExcelAsync(asMemoryStream: true);
+           await JSRuntime.InvokeVoidAsync("saveAsFile", new object[] { "ExcelStream.xlsx", Convert.ToBase64String(streamDoc.ToArray()), true });
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="OrderData.cs" %}
+
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData(int orderID, string customerID, double freight, string shipCity, string shipName)
+    {
+        this.OrderID = orderID;
+        this.CustomerID = customerID;
+        this.Freight = freight;
+        this.ShipCity = shipCity;
+        this.ShipName = shipName;
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        {
+            Orders.Add(new OrderData(10248, "VINET", 32.38, "Reims", "Vins et alcools Chevalier"));
+            Orders.Add(new OrderData(10249, "TOMSP", 11.61, "Münster", "Toms Spezialitäten"));
+            Orders.Add(new OrderData(10250, "HANAR", 65.83, "Rio de Janeiro", "Hanari Carnes"));
+            Orders.Add(new OrderData(10251, "VICTE", 41.34, "Lyon", "Victuailles en stock"));
+            Orders.Add(new OrderData(10252, "SUPRD", 51.3, "Charleroi", "Suprêmes délices"));
+            Orders.Add(new OrderData(10253, "HANAR", 58.17, "Rio de Janeiro", "Hanari Carnes"));
+            Orders.Add(new OrderData(10254, "CHOPS", 22.98, "Bern", "Chop-suey Chinese"));
+            Orders.Add(new OrderData(10255, "RICSU", 148.33, "Genève", "Richter Supermarkt"));
+            Orders.Add(new OrderData(10256, "WELLI", 13.97, "Resende", "Wellington Import Export"));
+            Orders.Add(new OrderData(10257, "HILAA", 81.91, "San Cristóbal", "Hila Alimentos"));
+            Orders.Add(new OrderData(10258, "ERNSH", 140.51, "Graz", "Ernst Handel"));
+            Orders.Add(new OrderData(10259, "CENTC", 3.25, "México D.F.", "Centro comercial"));
+            Orders.Add(new OrderData(10260, "OTTIK", 55.09, "Köln", "Ottilies Käseladen"));
+            Orders.Add(new OrderData(10261, "QUEDE", 3.05, "Rio de Janeiro", "Que delícia"));
+            Orders.Add(new OrderData(10262, "RATTC", 48.29, "Albuquerque", "Rattlesnake Canyon Grocery"));
+        }
+
+        return Orders;
+    }
+
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Converting Memory Stream to File Stream for Excel Export
+
+The Excel Export feature in Syncfusion Blazor Grid allows you to export the grid data to an Excel workbook. In some cases, you may want to save the exported Excel file as a physical file on your system. This is useful for scenarios where you need to store or process the file outside of the browser context.
+
+To achieve this, you can use the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event in conjunction with the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_System_Int32_System_Int32_System_Int32_) method. The `ExportToExcelAsync` method generates the Excel file as a MemoryStream. You can then convert this memory stream into a FileStream and save the file to a specified location.
+
+The example below demonstrates how to achieve this by converting the memory stream into a file stream for saving the exported Excel file:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+@using System.IO;
+@using Syncfusion.XlsIO
+@using Syncfusion.ExcelExport;
+@inject IJSRuntime JSRuntime
+
+<SfGrid ID="Grid" @ref="Grid" DataSource="@Orders" Toolbar="@(new List<string>() { "ExcelExport"})" AllowExcelExport="true" AllowPaging="true">
+    <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="OrderData"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150" />
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120" />
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="150" />
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="150" />
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private SfGrid<OrderData> Grid;
+    public List<OrderData> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }
+
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {       
+        if (args.Item.Id == "Grid_excelexport") //Id is combination of Grid's ID and itemname.
+        {
+            MemoryStream streamDoc =  await Grid.ExportToExcelAsync(asMemoryStream: true);
+            
+            //Create a copy of streamDoc1 to read the memory stream.
+            MemoryStream copyOfStreamDoc1 = new MemoryStream(streamDoc.ToArray());
+
+            //For creating the exporting location with file name, for this need to specify the physical exact path of the file.
+            string filePaths = "C:Users/abc/Downloads/SampleTestExcel.xlsx";
+
+            // Create a FileStream to write the memoryStream contents to a file.
+            using (FileStream fileStream = File.Create(filePaths))
+            {
+                // Copy the MemoryStream data to the FileStream.
+                copyOfStreamDoc1.CopyTo(fileStream);
+            }
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="OrderData.cs" %}
+
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData(int orderID, string customerID, double freight, string shipCity, string shipName)
+    {
+        this.OrderID = orderID;
+        this.CustomerID = customerID;
+        this.Freight = freight;
+        this.ShipCity = shipCity;
+        this.ShipName = shipName;
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        {
+            Orders.Add(new OrderData(10248, "VINET", 32.38, "Reims", "Vins et alcools Chevalier"));
+            Orders.Add(new OrderData(10249, "TOMSP", 11.61, "Münster", "Toms Spezialitäten"));
+            Orders.Add(new OrderData(10250, "HANAR", 65.83, "Rio de Janeiro", "Hanari Carnes"));
+            Orders.Add(new OrderData(10251, "VICTE", 41.34, "Lyon", "Victuailles en stock"));
+            Orders.Add(new OrderData(10252, "SUPRD", 51.3, "Charleroi", "Suprêmes délices"));
+            Orders.Add(new OrderData(10253, "HANAR", 58.17, "Rio de Janeiro", "Hanari Carnes"));
+            Orders.Add(new OrderData(10254, "CHOPS", 22.98, "Bern", "Chop-suey Chinese"));
+            Orders.Add(new OrderData(10255, "RICSU", 148.33, "Genève", "Richter Supermarkt"));
+            Orders.Add(new OrderData(10256, "WELLI", 13.97, "Resende", "Wellington Import Export"));
+            Orders.Add(new OrderData(10257, "HILAA", 81.91, "San Cristóbal", "Hila Alimentos"));
+            Orders.Add(new OrderData(10258, "ERNSH", 140.51, "Graz", "Ernst Handel"));
+            Orders.Add(new OrderData(10259, "CENTC", 3.25, "México D.F.", "Centro comercial"));
+            Orders.Add(new OrderData(10260, "OTTIK", 55.09, "Köln", "Ottilies Käseladen"));
+            Orders.Add(new OrderData(10261, "QUEDE", 3.05, "Rio de Janeiro", "Que delícia"));
+            Orders.Add(new OrderData(10262, "RATTC", 48.29, "Albuquerque", "Rattlesnake Canyon Grocery"));
+        }
+
+        return Orders;
+    }
+
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLSZfiWAQxFziVz?appbar=true&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+
+### Merging Two Excel Memory Streams
+
+When merging two Excel memory streams and exporting the resulting file as an Excel workbook, you can leverage the capabilities of the [Syncfusion.Blazor.XlslO](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core/) package to copy a worksheet between workbooks or within the same workbook.
+
+The example below demonstrates how to merge two memory streams and export that merged memory stream for browser download.
+
+In this example, there are two memory streams: *streamDoc1* and *streamDoc2*. streamDoc1 represents the normal grid memory stream, while streamDoc2 contains the memory stream of a customized grid using the [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) class. The merging process combines the contents of streamDoc1 with streamDoc2, resulting in a combined workbook saved as a memory stream. This merged memory stream is then utilized to initiate the browser download.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+@using System.IO;
+@using Syncfusion.XlsIO
+@using Syncfusion.ExcelExport;
+@inject IJSRuntime JSRuntime
+
+<SfGrid ID="Grid" @ref="Grid" DataSource="@Orders" Toolbar="@(new List<string>() { "ExcelExport"})" AllowExcelExport="true" AllowPaging="true">
+    <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="OrderData"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150" />
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120" />
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="150" />
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="150" />
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private SfGrid<OrderData> Grid;
+    public List<OrderData> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {       
+        if (args.Item.Id == "Grid_excelexport") //Id is combination of Grid's ID and itemname.
+        {
+            //Merging two memory stream for excel export.
+            MemoryStream mergedStream = new MemoryStream();
+
+            MemoryStream streamDoc1 = await Grid.ExportToExcelAsync(asMemoryStream: true);
+            //Create a copy of streamDoc1 to access the memory stream.
+            MemoryStream copyOfStreamDoc1 = new MemoryStream(streamDoc1.ToArray());
+            
+            //Cusotmized grid memory stream.
+            ExcelExportProperties ExcelProperties = new ExcelExportProperties();
+            ExcelTheme Theme = new ExcelTheme();
+            ExcelStyle ThemeStyle = new ExcelStyle()
+            {
+                BackColor = "#C67878"
+            };
+            Theme.Header = ThemeStyle;
+            Theme.Record = ThemeStyle;
+            ExcelProperties.Theme = Theme;
+            MemoryStream streamDoc2 = await Grid.ExportToExcelAsync(asMemoryStream: true, ExcelProperties);
+            //Create a copy of streamDoc2 to access the memory stream.
+            MemoryStream copyOfStreamDoc2 = new MemoryStream(streamDoc2.ToArray());
+
+            using (ExcelEngine excelEngine = new ExcelEngine())
+            {
+                IApplication application = excelEngine.Excel;
+                application.DefaultVersion = ExcelVersion.Xlsx;
+                IWorkbook workbook1 = application.Workbooks.Open(copyOfStreamDoc1);
+                IWorkbook workbook2 = application.Workbooks.Open(copyOfStreamDoc2);
+
+                //Copy first worksheet from the workbook1 workbook to the workbook2 workbook
+                workbook2.Worksheets.AddCopy(workbook1.Worksheets[0]);
+                workbook2.ActiveSheetIndex = 1;
+
+                //Saving merged workbook as memorystream.
+                workbook2.SaveAs(mergedStream);
+            }
+
+            await JSRuntime.InvokeVoidAsync("saveAsFile", new object[] { "MemoryStreamMerge.xlsx", Convert.ToBase64String(mergedStream.ToArray()), true });
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% highlight js tabtitle="wwwroot/scripts/saveAsFile.js" %}
+
+function saveAsFile(filename, bytesBase64) {
+    var link = document.createElement('a');
+    link.download = filename;
+    link.href = "data:application/octet-stream;base64," + bytesBase64;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="OrderData.cs" %}
+
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData(int orderID, string customerID, double freight, string shipCity, string shipName)
+    {
+        this.OrderID = orderID;
+        this.CustomerID = customerID;
+        this.Freight = freight;
+        this.ShipCity = shipCity;
+        this.ShipName = shipName;
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        {
+            Orders.Add(new OrderData(10248, "VINET", 32.38, "Reims", "Vins et alcools Chevalier"));
+            Orders.Add(new OrderData(10249, "TOMSP", 11.61, "Münster", "Toms Spezialitäten"));
+            Orders.Add(new OrderData(10250, "HANAR", 65.83, "Rio de Janeiro", "Hanari Carnes"));
+            Orders.Add(new OrderData(10251, "VICTE", 41.34, "Lyon", "Victuailles en stock"));
+            Orders.Add(new OrderData(10252, "SUPRD", 51.3, "Charleroi", "Suprêmes délices"));
+            Orders.Add(new OrderData(10253, "HANAR", 58.17, "Rio de Janeiro", "Hanari Carnes"));
+            Orders.Add(new OrderData(10254, "CHOPS", 22.98, "Bern", "Chop-suey Chinese"));
+            Orders.Add(new OrderData(10255, "RICSU", 148.33, "Genève", "Richter Supermarkt"));
+            Orders.Add(new OrderData(10256, "WELLI", 13.97, "Resende", "Wellington Import Export"));
+            Orders.Add(new OrderData(10257, "HILAA", 81.91, "San Cristóbal", "Hila Alimentos"));
+            Orders.Add(new OrderData(10258, "ERNSH", 140.51, "Graz", "Ernst Handel"));
+            Orders.Add(new OrderData(10259, "CENTC", 3.25, "México D.F.", "Centro comercial"));
+            Orders.Add(new OrderData(10260, "OTTIK", 55.09, "Köln", "Ottilies Käseladen"));
+            Orders.Add(new OrderData(10261, "QUEDE", 3.05, "Rio de Janeiro", "Que delícia"));
+            Orders.Add(new OrderData(10262, "RATTC", 48.29, "Albuquerque", "Rattlesnake Canyon Grocery"));
+        }
+
+        return Orders;
+    }
+
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNLSZfiWAQxFziVz?appbar=true&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+ ```cshtml
+@using Syncfusion.Blazor.Grids
+@using System.IO;
+@using Syncfusion.Pdf
+@using Syncfusion.XlsIO
+@using Syncfusion.PdfExport;
+@using Syncfusion.ExcelExport;
+@inject IJSRuntime JSRuntime
+
+<SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" Toolbar="@(new List<string>() { "ExcelExport"})" AllowExcelExport="true" AllowPaging="true">
+    <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="Order"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    private SfGrid<Order> DefaultGrid;
+    public List<Order> Orders { get; set; }
+
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {       
+        if (args.Item.Id == "Grid_excelexport") //Id is combination of Grid's ID and itemname
+        {
+            //Merging two memory stream for excel export
+            MemoryStream mergedStream = new MemoryStream();
+
+            MemoryStream streamDoc1 = await DefaultGrid.ExportToExcelAsync(asMemoryStream: true);
+            //Create a copy of streamDoc1 to access the memory stream
+            MemoryStream copyOfStreamDoc1 = new MemoryStream(streamDoc1.ToArray());
+            
+            //Cusotmized grid memory stream
+            ExcelExportProperties ExcelProperties = new ExcelExportProperties();
+            ExcelTheme Theme = new ExcelTheme();
+            ExcelStyle ThemeStyle = new ExcelStyle()
+            {
+                BackColor = "#C67878"
+            };
+            Theme.Header = ThemeStyle;
+            Theme.Record = ThemeStyle;
+            ExcelProperties.Theme = Theme;
+            MemoryStream streamDoc2 = await DefaultGrid.ExportToExcelAsync(asMemoryStream: true, ExcelProperties);
+            //Create a copy of streamDoc2 to access the memory stream
+            MemoryStream copyOfStreamDoc2 = new MemoryStream(streamDoc2.ToArray());
+
+            using (ExcelEngine excelEngine = new ExcelEngine())
+            {
+                IApplication application = excelEngine.Excel;
+                application.DefaultVersion = ExcelVersion.Xlsx;
+                IWorkbook workbook1 = application.Workbooks.Open(copyOfStreamDoc1);
+                IWorkbook workbook2 = application.Workbooks.Open(copyOfStreamDoc2);
+
+                //Copy first worksheet from the workbook1 workbook to the workbook2 workbook
+                workbook2.Worksheets.AddCopy(workbook1.Worksheets[0]);
+                workbook2.ActiveSheetIndex = 1;
+
+                //Saving merged workbook as memorystream
+                workbook2.SaveAs(mergedStream);
+            }
+
+            await JSRuntime.InvokeVoidAsync("saveAsFile", new object[] { "MemoryStreamMerge.xlsx", Convert.ToBase64String(mergedStream.ToArray()), true });
+        }
+    }
+    public List<Order> GetAllRecords()
+    {
+        List<Order> data = new List<Order>();
+        int count = 1000;
+        for (int i = 0; i < 15; i++)
+        {
+            data.Add(new Order() { OrderID = count + 1, CustomerID = "ALFKI", OrderDate = new DateTime(1995, 05, 15), Freight = 25.7 * 2 });
+            data.Add(new Order() { OrderID = count + 2, CustomerID = "ANANTR", OrderDate = new DateTime(1994, 04, 04), Freight = 26.7 * 2 });
+            data.Add(new Order() { OrderID = count + 3, CustomerID = "BLONP", OrderDate = new DateTime(1993, 03, 10), Freight = 27.7 * 2 });
+            data.Add(new Order() { OrderID = count + 4, CustomerID = "ANTON", OrderDate = new DateTime(1992, 02, 14), Freight = 28.7 * 2 });
+            data.Add(new Order() { OrderID = count + 5, CustomerID = "BOLID", OrderDate = new DateTime(1991, 01, 18), Freight = 29.7 * 2 });
+            count += 5;
+        }
+        return data;
+    }
+    protected override void OnInitialized()
+    {
+        Orders = GetAllRecords();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+```
