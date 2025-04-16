@@ -53,14 +53,13 @@ To modify the Scheduler appearance, you need to override the default CSS of Sche
 
 # Work cells in vertical views of scheduler
 
-This class targets work cells (the individual time slots) in the vertical view of the Syncfusion Scheduler.
+This CSS selector targets the work cells in the vertical views (Day, Week, and WorkWeek) of the Syncfusion Scheduler component. These cells represent the individual time slots arranged vertically where appointments are displayed and can be scheduled.
 
 ```cshtml
 
 @using Syncfusion.Blazor.Schedule
 <div class="component-container">
     <SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
-        <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
         <ScheduleViews>
             <ScheduleView Option="View.Day"></ScheduleView>
             <ScheduleView Option="View.Week"></ScheduleView>
@@ -73,11 +72,6 @@ This class targets work cells (the individual time slots) in the vertical view o
 
 @code{
     DateTime CurrentDate = new DateTime(2020, 2, 14);
-    List<AppointmentData> DataSource = new List<AppointmentData>
-    {
-        new AppointmentData { Id = 1, Subject = "Paris", StartTime = new DateTime(2020, 2, 13, 10, 0, 0) , EndTime = new DateTime(2020, 2, 13, 12, 0, 0) },
-        new AppointmentData { Id = 2, Subject = "Germany", StartTime = new DateTime(2020, 2, 15, 10, 0, 0) , EndTime = new DateTime(2020, 2, 15, 12, 0, 0) }
-    };
     public class AppointmentData
     {
         public int Id { get; set; }
@@ -103,3 +97,135 @@ This class targets work cells (the individual time slots) in the vertical view o
 ```
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDLSjzXQfGnvGHlh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Work cells in vertical views](images/blazor-scheduler-verticalview-workcells.png)" %}
+
+# Work cells in month view of scheduler
+
+This CSS selector targets the work cells (day cells) that belong to the current month in the month view of the Syncfusion Scheduler. These cells represent the individual days of the displayed month where users can schedule and view appointments.
+
+```cshtml
+
+@using Syncfusion.Blazor.Schedule
+<div class="component-container">
+    <SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
+        <ScheduleViews>
+            <ScheduleView Option="View.Month"></ScheduleView>
+        </ScheduleViews>
+    </SfSchedule>
+</div>
+
+@code{
+    DateTime CurrentDate = new DateTime(2020, 2, 14);
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+    }
+} 
+<style>
+    .e-schedule .e-month-view .e-work-cells
+    {
+        background-color:rgb(150, 244, 166);
+        border: 1px solid #cceeff;
+    }
+</style>
+
+```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXBSXpMdpcPUpdLW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Work cells in month view](images/blazor-scheduler-monthview-workcells.png)" %}
+
+#  Work cells of other month in month view of scheduler
+
+This CSS selector targets the work cells that represent days from adjacent months (previous or next month) that are visible in the current month view of the scheduler. These cells typically appear at the beginning and end of a month view to complete the week rows.
+
+```cshtml
+
+@using Syncfusion.Blazor.Schedule
+<div class="component-container">
+    <SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
+        <ScheduleViews>
+            <ScheduleView Option="View.Month"></ScheduleView>
+        </ScheduleViews>
+    </SfSchedule>
+</div>
+
+@code{
+    DateTime CurrentDate = new DateTime(2020, 2, 14);
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+    }
+} 
+<style>
+    .e-schedule .e-month-view .e-other-month 
+    {
+        background-color:rgb(218, 207, 240);
+        opacity: 0.7;
+        color: #999999;
+    }
+</style>
+
+```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVoDfinplIYBcIi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Other month work cells in month view](images/blazor-scheduler-othermonth-workcells.png)" %}
+
+#  Work cells in timeline views of scheduler
+
+This CSS selector targets the work cells in the standard timeline views of the Syncfusion Scheduler. These cells represent time slots arranged horizontally across the scheduler.
+
+```cshtml
+
+@using Syncfusion.Blazor.Schedule
+<div class="component-container">
+    <SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
+        <ScheduleViews>
+            <ScheduleView Option="View.TimelineDay"></ScheduleView>
+            <ScheduleView Option="View.TimelineWeek"></ScheduleView>
+        </ScheduleViews>
+    </SfSchedule>
+</div>
+
+@code{
+    DateTime CurrentDate = new DateTime(2020, 2, 14);
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+    }
+} 
+<style>
+    .e-schedule .e-timeline-view .e-work-cells 
+    {
+        background-color: rgb(119, 165, 234);
+        border: 2px solid #dce7fa;
+        min-width: 120px;
+    }
+</style>
+
+```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVetzsdeXJJNgsX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Work cells in timeline views](images/blazor-scheduler-timelineview-workcells.png)" %}
