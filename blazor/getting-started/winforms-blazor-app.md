@@ -21,7 +21,7 @@ Visual Studio provides **WinForms Application** template to create WinForms Blaz
 
 * [Supported platforms (WinForms documentation)](https://learn.microsoft.com/en-us/dotnet/desktop/winforms/overview/?view=netdesktop-8.0)
 
-* [Visual Studio 2022](https://visualstudio.microsoft.com/vs/) with the .NET desktop development workload
+* [Visual Studio 2022](https://visualstudio.microsoft.com/vs/)
 
 ## Create a new WinForms Blazor App in Visual Studio
 
