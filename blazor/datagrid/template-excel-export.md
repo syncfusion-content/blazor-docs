@@ -13,41 +13,53 @@ The Syncfusion Blazor DataGrid offers the option to export the column, detail, a
 
 ## Exporting with column template
 
-The Excel export functionality allows you to export Grid columns that include images, hyperlinks, and custom text to an Excel document. The Excel export provides an option to export template columns of the DataGrid by defining the [IncludeTemplateColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_IncludeTemplateColumn) of [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) as **true**.
+The Excel export functionality allows you to export Grid columns that include images, hyperlinks, and custom text to an Excel document. 
 
-In the following sample, the **CustomerID** column is a template column. The template values cannot be directly exported into the cells. To customize the values of the template columns in Excel file, you must use [ExcelQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelQueryCellInfoEvent).
+To export the template columns into an Excel document, set the [IncludeTemplateColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_IncludeTemplateColumn) property of the  [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) to **true**.
+
+The template values cannot be directly exported into the cells. To customize the values of the template columns in Excel file, you must use [ExcelQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelQueryCellInfoEvent) event.
 
 > Excel Export supports base64 string to export the images.
 
+The following sample demonstrates how to export template columns such as **FirstName** and **EmailID** into an Excel document:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
 
-<SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" Toolbar="@(new List<string>() { "ExcelExport" })" AllowExcelExport="true" AllowPaging="true">
-    <GridEvents ExcelQueryCellInfoEvent="ExcelQueryCellInfoHandler" OnToolbarClick="ToolbarClickHandler" TValue="OrderData"></GridEvents>
+<SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@EmployeeData.GetAllRecords()" Toolbar="@(new List<string>() { "ExcelExport" })" AllowExcelExport="true" AllowPaging="true">
+    <GridEvents ExcelQueryCellInfoEvent="ExcelQueryCellInfoHandler" OnToolbarClick="ToolbarClickHandler" TValue="EmployeeData"></GridEvents>
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150">
+        <GridColumn Field=@nameof(EmployeeData.EmployeeID) HeaderText="Employee ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.FirstName) HeaderText="Employee Name" Width="150">
             <Template>
                 @{
-                    var con = (context as OrderData);
+                    var con = (context as EmployeeData);
                 }
-                <span>Mr.@con.CustomerID</span>
+                <span>Mr.@con.FirstName</span>
             </Template>
         </GridColumn>
-        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.EmailID) HeaderText="Email" Width="180">
+            <Template>
+                @{
+                    var employee = (context as EmployeeData);
+                }
+                <a href="mailto:@employee.EmailID">@employee.EmailID</a>
+            </Template>
+        </GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Title" Width="180"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.City) HeaderText="City" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
+
 @code {
-    private SfGrid<OrderData> DefaultGrid;
-    public List<OrderData> Orders { get; set; }
+    private SfGrid<EmployeeData> DefaultGrid;
+    public List<EmployeeData> Orders { get; set; }
     public bool OrderDateVisible { get; set; } = false;
     protected override void OnInitialized()
     {
-        Orders = OrderData.GetAllRecords();
+        Orders = EmployeeData.GetAllRecords();
     }
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
@@ -60,60 +72,67 @@ In the following sample, the **CustomerID** column is a template column. The tem
         }
     }
 
-    public void ExcelQueryCellInfoHandler(ExcelQueryCellInfoEventArgs<OrderData> args)
+    public void ExcelQueryCellInfoHandler(ExcelQueryCellInfoEventArgs<EmployeeData> args)
     {
-        if (args.Column.Field == "CustomerID")
+        if (args.Column.Field == "FirstName")
         {
-            args.Cell.Value = "Mr." + args.Data.CustomerID;
+            args.Cell.Value = "Mr." + args.Data.FirstName;
         }
+        else if (args.Column.Field == "EmailID")
+       {
+           var email = args.Data.EmailID;
+           args.Cell.Value = $"<a href='mailto:{email}'>{email}</a>";
+
+       }
     }
 }
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="OrderData.cs" %}
+{% highlight c# tabtitle="EmployeeData.cs" %}
 
-public class OrderData
+public class EmployeeData
 {
-    public static List<OrderData> Orders = new List<OrderData>();
+    public static List<EmployeeData> Employees = new List<EmployeeData>();
 
-    public OrderData(int orderID, string customerID, DateTime orderDate, double freight)
+    public EmployeeData(int employeeID, string firstName, string emailID, string title, string city)
     {
-        OrderID = orderID;
-        CustomerID = customerID;
-        OrderDate = orderDate;
-        Freight = freight;
+        EmployeeID = employeeID;
+        FirstName = firstName;
+        EmailID = emailID;
+        Title = title;
+        City = city;
     }
 
-    public static List<OrderData> GetAllRecords()
+    public static List<EmployeeData> GetAllRecords()
     {
-        if (Orders.Count == 0)
+        if (Employees.Count == 0)
         {
-            Orders.Add(new OrderData(10248, "VINET", new DateTime(2023, 1, 15), 32.38));
-            Orders.Add(new OrderData(10249, "TOMSP", new DateTime(2023, 2, 10), 11.61));
-            Orders.Add(new OrderData(10250, "HANAR", new DateTime(2023, 3, 5), 65.83));
-            Orders.Add(new OrderData(10251, "VICTE", new DateTime(2023, 4, 20), 41.34));
-            Orders.Add(new OrderData(10252, "SUPRD", new DateTime(2023, 5, 25), 51.30));
-            Orders.Add(new OrderData(10253, "HANAR", new DateTime(2023, 6, 15), 58.17));
-            Orders.Add(new OrderData(10254, "CHOPS", new DateTime(2023, 7, 10), 22.98));
-            Orders.Add(new OrderData(10255, "RICSU", new DateTime(2023, 8, 18), 148.33));
-            Orders.Add(new OrderData(10256, "WELLI", new DateTime(2023, 9, 7), 13.97));
-            Orders.Add(new OrderData(10257, "HILAA", new DateTime(2023, 10, 3), 81.91));
+            Employees.Add(new EmployeeData(1, "Davolio", "nancy@domain.com", "Sales Representative", "Seattle"));
+            Employees.Add(new EmployeeData(2, "Fuller", "andrew@domain.com", "Vice President, Sales", "Tacoma"));
+            Employees.Add(new EmployeeData(3, "Leverling", "janet@domain.com", "Sales Representative", "Kirkland"));
+            Employees.Add(new EmployeeData(4, "Peacock", "steven@domain.com", "Sales Manager", "London"));
+            Employees.Add(new EmployeeData(5, "Buchanan", "michael@domain.com", "Sales Manager", "Seattle"));
+            Employees.Add(new EmployeeData(6, "Suyama", "yoshiko@domain.com", "Sales Representative", "Tokyo"));
+            Employees.Add(new EmployeeData(7, "King", "charles@domain.com", "Sales Representative", "London"));
+            Employees.Add(new EmployeeData(8, "Callahan", "allison@domain.com", "Inside Sales Coordinator", "Seattle"));
+            Employees.Add(new EmployeeData(9, "Dodsworth", "nancy@domain.com", "Sales Representative", "London"));
         }
 
-        return Orders;
+        return Employees;
     }
 
-    public int OrderID { get; set; }
-    public string CustomerID { get; set; }
-    public DateTime OrderDate { get; set; }
-    public double Freight { get; set; }
+    public int EmployeeID { get; set; }
+    public string FirstName { get; set; }
+    public string EmailID { get; set; }
+    public string Title { get; set; }
+    public string City { get; set; }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDrStTCAyrjIiJqY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVeZpinSuMCxdjJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 
 ## Exporting with group caption template
