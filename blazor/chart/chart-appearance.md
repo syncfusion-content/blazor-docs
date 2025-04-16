@@ -291,7 +291,7 @@ The [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfCha
 
 ### Title position
 
-The `Position` property customizes the placement of the chart title. It supports the following options: `Right`, `Left`, `Bottom`, `Top`, and `Custom`, providing flexible title alignment based on layout requirements. By default, the chart title appears at the top of the chart.
+The [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitleStyle.html#Syncfusion_Blazor_Charts_ChartTitleStyle_Position) property customizes the placement of the chart title. It supports the following options: [Right](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitlePosition.html#Syncfusion_Blazor_Charts_ChartTitlePosition_Right), [Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitlePosition.html#Syncfusion_Blazor_Charts_ChartTitlePosition_Left), [Bottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitlePosition.html#Syncfusion_Blazor_Charts_ChartTitlePosition_Bottom), [Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitlePosition.html#Syncfusion_Blazor_Charts_ChartTitlePosition_Top), and [Custom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitlePosition.html#Syncfusion_Blazor_Charts_ChartTitlePosition_Custom), providing flexible title alignment based on layout requirements. By default, the chart title appears at the top of the chart.
 
 N> The subtitle, which appears below the title, will also be positioned along with the title when the `Position` property is set.
 
@@ -306,7 +306,7 @@ N> The subtitle, which appears below the title, will also be positioned along wi
     </ChartPrimaryXAxis>
 
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@MedalDetails" XName="Country" YName="Gold" Type="ChartSeriesType.Column">
+        <ChartSeries DataSource="@MedalDetails" XName="Country" YName="Gold" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Column">
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
@@ -333,8 +333,9 @@ N> The subtitle, which appears below the title, will also be positioned along wi
 
 ```
 ![Position customization of title in Blazor Chart](images/appearance/blazor-chart-title-position.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hthIjzjTrISHobHi?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
-When the `Position` is set to `Custom`, the title can be positioned anywhere on the chart using the `X` and `Y` properties in [ChartTitleStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitleStyle.html). This provides precise control over the title’s location, enabling customization to fit specific design or layout needs. The `X` and `Y` values specify the horizontal and vertical coordinates, respectively.
+When the `Position` is set to `Custom`, the title can be positioned anywhere on the chart using the [X](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitleStyle.html#Syncfusion_Blazor_Charts_ChartTitleStyle_X) and [Y](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitleStyle.html#Syncfusion_Blazor_Charts_ChartTitleStyle_Y) properties in [ChartTitleStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTitleStyle.html). This provides precise control over the title’s location, enabling customization to fit specific design or layout needs. The `X` and `Y` values specify the horizontal and vertical coordinates, respectively.
 
 ```cshtml 
 
@@ -349,7 +350,7 @@ When the `Position` is set to `Custom`, the title can be positioned anywhere on 
     </ChartPrimaryXAxis>
 
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@MedalDetails" XName="Country" YName="Gold" Type="ChartSeriesType.Column">
+        <ChartSeries DataSource="@MedalDetails" XName="Country" YName="Gold" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Column">
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
@@ -376,6 +377,7 @@ When the `Position` is set to `Custom`, the title can be positioned anywhere on 
 
 ```
 ![Custom position of title in Blazor Chart](images/appearance/blazor-chart-title-position-custom.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjLoXTtfLyEQbMWr?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 ## Chart subtitle
 
