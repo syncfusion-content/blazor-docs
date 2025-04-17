@@ -7,7 +7,39 @@ control: DataGrid
 documentation: ug
 ---
 
-# Cell Edit Types in Blazor DataGrid Component
+# Edit Types in Blazor DataGrid Component
+
+The Blazor DataGrid component in Syncfusion provides various edit types that allow you to customize the editing behavior for different types of columns. These edit types enhance the editing experience and provide flexibility in handling different data types.
+
+## Default cell edit type editor
+
+The Syncfusion DataGrid provides pre-built default editors that enhance data editing and input handling within the grid. These default editors are designed to simplify the process of defining the editor component for specific columns based on the data type of the column within the grid. To configure default editors for grid columns, leverage the [EditType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.EditType.html) property.
+
+The available default edit types are as follows:
+
+Component|Edit Type value |Description
+----|-----|-----
+[TextBox](https://blazor.syncfusion.com/documentation/textbox/getting-started-webapp)|DefaultEdit	|  The  `DefaultEdit` type renders a TextBox component for string data type columns. 
+[NumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started)|numericedit	| The `NumericEdit` type renders a NumericTextBox component for integers,double,float ,short ,byte ,long ,long double and decimal data types columns.
+[DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app)|DropDownEdit	| The `DropDownEdit` type renders a DropdownList component for string data type columns.
+[Checkbox](https://blazor.syncfusion.com/documentation/check-box/getting-started-with-web-app)|booleanedit	| The `BooleanEdit` type renders a CheckBox component for boolean data type columns.
+[DatePicker](https://blazor.syncfusion.com/documentation/datepicker/getting-started-with-web-app)|DatePickerEdit	|The `DatePickerEdit` type renders a DatePicker component for date data type columns.
+[DateTimePicker](https://blazor.syncfusion.com/documentation/datetime-picker/getting-started-with-web-app)|DateTimePickerEdit	| The `DateTimePickerEdit` type renders a DateTimePicker component for date time data type columns.
+
+The following example demonstrates how to define the `EditType` for grid columns:
+
+```cs
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" EditType="EditType.DefaultEdit" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" EditType="EditType.DropDownEdit" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Time" EditType="EditType.DateTimePickerEdit" Format="dd/MM/yyyy hh:mm a" Width="130" Type="ColumnType.Date"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" EditType="EditType.NumericEdit" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" EditType="EditType.DatePickerEdit" Format="dd/MM/yyyy" Width="130" Type="ColumnType.Date"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.IsVerified) HeaderText="Verified" DisplayAsCheckBox="true" EditType="EditType.BooleanEdit" Width="120"></GridColumn>
+    </GridColumns>
+```
+
+> If `EditType` is not defined in the column, then it will be considered as the DefaultEdit type (TextBox component) .
 
 ## Default editors
 
