@@ -25,7 +25,7 @@ In this example, the **.e-gridpager** class targets the pager root element. You 
 
 ![Grid pager root element](../images/style-and-appearance/grid-pager-root-element.png)
 
-## Customizing the grid pager container element
+## Customizing the Grid pager container element
 
 To customize the appearance of the Grid pager container element, you can use the following CSS code:
 

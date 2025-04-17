@@ -13,7 +13,7 @@ You can customize the appearance of filtering elements in the Syncfusion Blazor 
 
 ## Customizing the filter bar cell element
 
-To customize the appearance of the filter bar cell element in the grid header, you can use the following CSS code:
+To customize the appearance of the filter bar cell element in the Grid header, you can use the following CSS code:
 
 ```css
 
@@ -22,13 +22,13 @@ To customize the appearance of the filter bar cell element in the grid header, y
 }
 
 ```
-In this example, the **.e-filterbarcell** class targets the filter bar cell element in the grid header. You can modify the `background-color` property to change the color of the filter bar cell element.
+In this example, the **.e-filterbarcell** class targets the filter bar cell element in the Grid header. You can modify the `background-color` property to change the color of the filter bar cell element.
 
 ![Filter bar cell element](../images/style-and-appearance/filter-bar-cell-element.png)
 
 ## Customizing the filter bar input element
 
-To customize the appearance of the filter bar input element in the grid header, you can use the following CSS code:
+To customize the appearance of the filter bar input element in the Grid header, you can use the following CSS code:
 
 ```css
 
@@ -73,7 +73,7 @@ In this example, the **.e-clear-icon** class targets the clear icon element with
 
 ## Customizing the grid filtering icon
 
-To customize the appearance of the grid's filtering icon in the grid header, you can use the following CSS code:
+To customize the appearance of the Grid's filtering icon in the Grid header, you can use the following CSS code:
 
 ```css
 

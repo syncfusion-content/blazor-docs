@@ -1,13 +1,13 @@
 ---
 layout: post
-title: State Management in Blazor DataGrid Component | Syncfusion
+title: Style and appearance in Blazor DataGrid Component | Syncfusion
 description: Checkout and learn here all about State Management in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Style and appearance in Blazor DataGrid
+# Style and appearance in Syncfusion Blazor DataGrid
 
 The Grid control offers various ways to customize its appearance using both default CSS and custom themes. Let's go over some common approaches:
 
@@ -47,11 +47,11 @@ To customize the appearance of the root element of the Syncfusion Blazor Grid, y
 
 ```
 
-![grid root element](../images/style-and-appearance/style-font-family.png)
+![Grid root element](../images/style-and-appearance/style-font-family.png)
 
-The above code snippet, the **.e-grid** class targets the root element of the Syncfusion Blazor Grid, and the `font-family` property is set to cursive to change the font family of the grid content.
+The above code snippet, the **.e-grid** class targets the root element of the Syncfusion Blazor Grid, and the `font-family` property is set to cursive to change the font family of the Grid content.
 
-In the following sample, the font family of grid content is changed to **cursive**, and the background color of rows, selected rows, alternate rows, and row hovering color is modified using the below CSS styles.
+In the following sample, the font family of Grid content is changed to **cursive**, and the background color of rows, selected rows, alternate rows, and row hovering color is modified using the below CSS styles.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

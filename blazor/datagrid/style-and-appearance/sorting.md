@@ -27,7 +27,7 @@ In this example, the **.e-icon-ascending::before** class targets the sorting ico
 
 ![Grid sorting icon](../images/style-and-appearance/grid-sorting-icons.png)
 
-## Customizing the grid multi sorting icon
+## Customizing the Grid multi sorting icon
 
 To customize the multi sorting icon that appears in the Grid header when multiple columns are sorted, you can use the following CSS code:
 

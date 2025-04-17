@@ -11,7 +11,7 @@ documentation: ug
 
 You can customize the appearance of the header elements in the Syncfusion Blazor DataGrid using CSS. Here are examples of how to customize the Grid header, header cell, and header cell div element.
 
-## Customizing the grid header
+## Customizing the Grid header
 
 To customize the appearance of the Grid header root element, you can use the following CSS code:
 
@@ -21,13 +21,13 @@ To customize the appearance of the Grid header root element, you can use the fol
     border: 2px solid green;
 }
 ```
-In this example, the **.e-gridheader** class targets the Grid header root element. You can modify the `border` property to change the style of the header border. This customization allows you to override the thin line between the header and content of the grid.
+In this example, the **.e-gridheader** class targets the Grid header root element. You can modify the `border` property to change the style of the header border. This customization allows you to override the thin line between the header and content of the Grid.
 
 ![Grid header](../images/style-and-appearance/grid-header.png)
 
-## Customizing the grid header cell
+## Customizing the Grid header cell
 
-To customize the appearance of the grid header cell elements, you can use the following CSS code:
+To customize the appearance of the Grid header cell elements, you can use the following CSS code:
 
 ```css
 
@@ -41,9 +41,9 @@ In this example, the **.e-headercell** class targets the header cell elements. Y
 
 ![Grid header cell](../images/style-and-appearance/grid-header-cell.png)
 
-## Customizing the grid header cell div element
+## Customizing the Grid header cell div element
 
-To customize the appearance of the grid header cell div element, you can use the following CSS code:
+To customize the appearance of the Grid header cell div element, you can use the following CSS code:
 
 ```css
 
