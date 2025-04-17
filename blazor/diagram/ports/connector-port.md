@@ -43,7 +43,6 @@ The following code example demonstrates how to create a connector port:
                     ID = "port",
                     Visibility = PortVisibility.Visible,
                     Shape = PortShapes.Square,
-                    Style = new ShapeStyle(){ Fill = "gray", StrokeColor = "black" },
                 }
             }
         };
@@ -61,6 +60,12 @@ The `PathPosition` property allows you to place a connector port along the path 
 You can set any value between 0 and 1 to position the port at a specific location along the connector's path.
 
 >**Note:** The default value of PathPosition is 0.5, which places the port at the midpoint of the connector.
+
+| PathPosition value | Output |
+|---|---|
+| 0 | ![Start](../images/ConnectorPort/ConnectorPortPathPosition0.png) |
+| 0.5 | ![Center](../images/ConnectorPort/ConnectorPortDefault.png) |
+| 1 | ![End](../images/ConnectorPort/ConnectorPortPathPosition1.png) |
 
 The following code example demonstrates how to set the PathPosition for a connector port:
 
@@ -95,7 +100,6 @@ The following code example demonstrates how to set the PathPosition for a connec
                     Visibility = PortVisibility.Visible,
                     Shape = PortShapes.Square,
                     PathPosition = 0,
-                    Style = new ShapeStyle(){ Fill = "gray", StrokeColor = "black" },
                 }
             }
         };
@@ -109,3 +113,73 @@ The following code example demonstrates how to set the PathPosition for a connec
 Connector ports are used to establish connections between connectors. To create such a connection, set the `SourcePortID` or `TargetPortID` property to the ID of the corresponding port on the connector.
 
 The following code example demonstrates how to connect one connector to a port on another connector:
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Height="600px" Connectors="@connectors">
+</SfDiagramComponent>
+
+@code
+{
+    // Initialize connector collection
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+
+    protected override void OnInitialized()
+    {
+        Connector connector1 = new Connector()
+        {
+            ID = "connector1",
+            SourcePoint = new DiagramPoint() { X = 200, Y = 100 },
+            TargetPoint = new DiagramPoint() { X = 350, Y = 250 },
+            Type = ConnectorSegmentType.Bezier,
+            Ports = new DiagramObjectCollection<PathPort>()
+            {
+                new PathPort()
+                {
+                    ID = "port",
+                    Visibility = PortVisibility.Visible,
+                    Shape = PortShapes.Square,
+                }
+            }
+        };
+
+        Connector connector2 = new Connector()
+        {
+            ID = "connector2",
+            SourcePoint = new DiagramPoint() { X = 600, Y = 100 },
+            TargetPoint = new DiagramPoint() { X = 750, Y = 250 },
+            Type = ConnectorSegmentType.Bezier,
+            Ports = new DiagramObjectCollection<PathPort>()
+            {
+                new PathPort()
+                {
+                    ID = "port",
+                    Visibility = PortVisibility.Visible,
+                    Shape = PortShapes.Square,
+                }
+            }
+        };
+        Connector connector3 = new Connector()
+        {
+            ID = "connector3",
+            SourceID = "connector1",
+            SourcePortID = "port",
+            TargetID = "connector2",
+            TargetPortID = "port",
+            Type = ConnectorSegmentType.Straight
+        };
+        connectors.Add(connector1);
+        connectors.Add(connector2);
+        connectors.Add(connector3);
+    }
+}
+```
+
+## See also
+
+* [How to customize the ports](./appearance.md)
+
+* [How to set the position of the port](./positioning.md)
+
+* [How to interact with the ports](./interaction.md)
