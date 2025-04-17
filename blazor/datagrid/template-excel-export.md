@@ -134,14 +134,13 @@ public class EmployeeData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rjVeZpinSuMCxdjJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-
 ## Exporting with group caption template
 
 The Syncfusion Blazor Grid allows you to export the Grid data along with a custom caption template into an Excel document. This feature can be useful when you want to provide meaningful group captions (e.g., count of records) in the exported Excel file.
 
 To customize the caption text in the exported Excel file, you can handle the [ExcelGroupCaptionTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelGroupCaptionTemplateInfo) event. This event provides you with the necessary information to set the group caption in the exported Excel file, such as the group key, record count, and header text. Within the event, you can set a customized group caption using `args.Cell.Value` property.
 
-The following example demonstrates how the Grid is grouped by the **CustomerID** field and exports the grid data to Excel with a custom group caption template, utilizing the `OnToolbarClick` event and the `ExportToExcelAsync` method.
+The following example demonstrates how the Grid is grouped by the **CustomerID** field and exports the Grid data to Excel with a custom group caption template, utilizing the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event and the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -165,8 +164,6 @@ The following example demonstrates how the Grid is grouped by the **CustomerID**
         </CaptionTemplate>
     </GridGroupSettings>
 </SfGrid>
-
-
 
 @code {
     private SfGrid<OrderData> Grid;
@@ -245,11 +242,11 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/rDhSjfifINuSYyye" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVejJMmrqlNTnoQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Exporting with detail template
 
-By default, the Grid exports the parent Grid along with expanded detail rows only. To modify the exporting behavior, utilize the [ExcelExportProperties.ExcelDetailRowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailRowMode.html) property. The available options include:
+The Syncfusion Blazor DataGrid provides the capability to export both parent and child (detail) records, including nested data, to an Excel document. By default, the Grid exports the parent Grid along with expanded detail rows only. To modify the exporting behavior, utilize the [ExcelExportProperties.ExcelDetailRowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailRowMode.html) property. The available options include:
 
 | Mode | Behavior |
 |-------|----------|
@@ -259,7 +256,7 @@ By default, the Grid exports the parent Grid along with expanded detail rows onl
 
 You can customize and format the detail rows in the exported Excel document using the [ExcelDetailTemplateExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelDetailTemplateExporting) event. In this event, the detail rows of the Excel document are formatted in accordance with their parent row details.
 
-In the provided example, detail row content is formatted by specifying the [Headers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_ExcelDetailTemplateRowSettings_Headers), [Rows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_ExcelDetailTemplateRowSettings_Rows) using parent row details, facilitating the creation of detail rows within the Excel. Additionally, custom styles can be applied to specific cells using the [Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailTemplateCell.html#Syncfusion_Blazor_Grids_ExcelDetailTemplateCell_Style) property.
+In the following example, the detail row content is formatted by specifying the [Headers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_ExcelDetailTemplateRowSettings_Headers), [Rows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_ExcelDetailTemplateRowSettings_Rows) using parent row details, facilitating the creation of detail rows within the Excel. Additionally, custom styles can be applied to specific cells using the [Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailTemplateCell.html#Syncfusion_Blazor_Grids_ExcelDetailTemplateCell_Style) property.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -329,7 +326,6 @@ In the provided example, detail row content is formatted by specifying the [Head
                         </tr>
                     </tbody>
                 </table>
-
             }
         </DetailTemplate>
     </GridTemplates>
@@ -360,8 +356,6 @@ In the provided example, detail row content is formatted by specifying the [Head
         color: #00FF00;
     }
 </style>
-
-
 
 @code {
     private SfGrid<ProductData> Grid;
@@ -563,7 +557,7 @@ public class ProductData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/hDVoZTCpzaSIZraq" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBSNfWcLSCKHChU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Exporting hierarchical grid using detail template
 
@@ -571,8 +565,7 @@ The Syncfusion Blazor DataGrid allows you to export hierarchical Grid data to Ex
 
 You can customize and format the detail rows in the exported Excel document using the [ExcelDetailTemplateExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelDetailTemplateExporting) event. In this event, the detail rows of the Excel document are formatted in accordance with their parent row details.
 
-In the provided example, detail row content is formatted by specifying the [Headers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_ExcelDetailTemplateRowSettings_Headers), [Rows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_ExcelDetailTemplateRowSettings_Rows) using parent row details. Additionaly, this achieves a nested level of children using the [ChildRowInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailTemplateRow.html#Syncfusion_Blazor_Grids_ExcelDetailTemplateRow_ChildRowInfo) property.
-
+In the following example, the detail row content is formatted by specifying the [Headers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_ExcelDetailTemplateRowSettings_Headers), [Rows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_ExcelDetailTemplateRowSettings_Rows) using parent row details. Additionaly, this achieves a nested level of children using the [ChildRowInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailTemplateRow.html#Syncfusion_Blazor_Grids_ExcelDetailTemplateRow_ChildRowInfo) property.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -804,4 +797,4 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/VNLINpCfyLFRJyFJ" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjBytpWQhgOCVmqd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
