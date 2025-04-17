@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Globalization in Blazor DataGrid
+# Globalization in Syncfusion Blazor DataGrid
 
 The Syncfusion Blazor DataGrid provides a feature known as Globalization (global and local), which makes the application more accessible and useful for individuals from different regions and language backgrounds. You have the ability to view data in your preferred language and format, resulting in an enhanced overall experience.
 
@@ -358,7 +358,7 @@ await builder.Build().RunAsync();
 {% endhighlight %}
 {% endtabs %}
 
-**7: In the project file, Add the Following Code:**
+**7: In the project file, add the following code:**
 
 ```
 <PropertyGroup>
@@ -367,7 +367,7 @@ await builder.Build().RunAsync();
 
 ```
  
-**8. Add JavaScript Function for Culture Management**
+**8. Add javaScript function for culture management**
 
 For a Blazor Web App, add the following JavaScript function to the **~/Components/App.razor** file (after the Blazor `<script>` tag and before the closing `</body>`). This function retrieves and sets the user's selected culture in the browser's local storage.
 
@@ -403,7 +403,7 @@ For a Blazor Web App, add the following JavaScript function to the **~/Component
 {% endhighlight %}
 {% endtabs %}
 
-**9. Configure Culture Switching with Syncfusion Grid** 
+**9. Configure culture switching with Syncfusion Grid** 
 
 In the **Counter.razor** file, add the following code to change the culture and display a Syncfusion Grid with a Button to switch between English (en-US) and French (fr-FR):
  
@@ -513,6 +513,8 @@ When you run the application, the Blazor DataGrid will display data fetched from
 
 The Right to Left (RTL) feature in the Syncfusion Blazor DataGrid allows you to switch the text direction and layout from left-to-right to right-to-left. This feature is especially beneficial for interacting with the grid in languages that are written and read from right to left, such as **Arabic**, **Farsi,** **Urdu**, and others. Enabling RTL significantly improves the experience and accessibility for such languages.
 
+To enable RTL in the Syncfusion Blazor DataGrid, you can use the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableRtl) property. This property switches the text direction and layout from left-to-right to right-to-left.
+
 To achieve this, follow the steps below:
 
 **1. Create a Blazor web app**
@@ -601,7 +603,7 @@ namespace LocalizationSample.Client
 
 **6. Configure ~/Program.cs file**
 
-Register the `SyncfusionLocalizer` and Syncfusion Blazor services in both **~/Program.cs**  files for WebAssembly or Auto render modes.
+Register the `SyncfusionLocalizer` and Syncfusion Blazor services in both **~/Program.cs**  files.
  
 {% tabs %}
 {% highlight cs tabtitle="Program.cs" %}
@@ -615,7 +617,7 @@ builder.Services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(Syncfus
 {% endhighlight %}
 {% endtabs %}
 
-**8. Setting the Culture in Blazor Start Option**
+**8. Setting the culture in Blazor start option**
 
 * Add the **autostart="false"** attribute to the Blazor <script> tag to prevent Blazor from starting automatically.
 
@@ -655,7 +657,7 @@ builder.Services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(Syncfus
 {% endhighlight %}
 {% endtabs %}
 
-**9. Enable or Disable RTL Mode using Toggle Switch**
+**9. Enable or disable RTL mode using toggle Switch**
 
 The [EJ2 Toggle Switch Button](https://blazor.syncfusion.com/documentation/toggle-switch-button) is added to enable or disable the Right-to-Left (RTL) feature for the Arabic (ar-AE) locale. When the switch is toggled, the [ValueChange](http://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_ValueChange) event is triggered, and the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableRtl) property of the Grid is updated accordingly.
 
