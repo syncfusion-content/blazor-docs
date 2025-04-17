@@ -152,7 +152,7 @@ To customize the appearance of the excel filter dialog's number filters, you can
 
 ```css
 
-.e-grid .e-filter-popup .e-contextmenu-wrapper ul{
+.e-grid .e-filter-popup .e-contextmenu-container ul{
       background-color: #deecf9;
 }
 

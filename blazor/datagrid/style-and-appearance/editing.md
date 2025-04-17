@@ -31,7 +31,7 @@ To customize the appearance of edited row input elements in the Grid, you can us
 
 ```css
 
-.e-grid .e-gridform .e-rowcell .e-input-group .e-input.e-field {
+.e-grid .e-gridform .e-rowcell .e-input-group .e-input {
     font-family: cursive;
     color:rgb(214, 33, 123)
 }
@@ -55,21 +55,6 @@ To customize the appearance of the edit dialog header element in the Grid, you c
 In this example, the **.e-edit-dialog** class represents the edit dialog, and the **.e-dlg-header-content** class targets the header content within the dialog. You can modify the `background-color` property to change the color of the header element.
 
 ![Customizing the edit dialog header element](../images/style-and-appearance/edit-dialog-header-element.png)
-
-## Customizing the edited row input element in dialog edit mode
-
-To customize the appearance of edited row input elements in dialog edit mode, you can use the following CSS code:
-
-```css
-
-.e-gridform .e-rowcell .e-float-input .e-field {
-    font-family: cursive;
-}
-
-```
-In this example, the **.e-gridform** class represents the editing form, and the **.e-float-input** class targets the floating input elements within the form. You can modify the `font-family` property to change the font of the input elements.
-
-![Customizing the edited row input element in dialog](../images/style-and-appearance/edited-row-input-element-in-dialog.png)
 
 ## Customizing the command column buttons
 
