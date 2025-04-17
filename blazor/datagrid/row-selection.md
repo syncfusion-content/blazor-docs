@@ -362,7 +362,7 @@ Single row selection allows you to select a single row at a time within the Grid
 
 To achieve single row selection, you can use the [SelectRowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRowAsync_System_Int32_System_Nullable_System_Boolean__) method. This method allows you to programmatically select a specific row within the Grid by specifying its index.
 
-The following example demonstrates how to select a single row within the Grid by obtaining the selected row index through a textbox and passing this row index as an argument to the `SelectRowAsync` method. When the button event is triggered by clicking the **Select Row** button, a single row is selected within the Grid:
+The following example demonstrates how to select a single row within the Grid by obtaining the selected row index through a `NumericTextBox` and passing this row index as an argument to the `SelectRowAsync` method. When the button event is triggered by clicking the **Select Row** button, a single row is selected within the Grid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -450,13 +450,111 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LthetJCezkFWiJjM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+### Multiple rows selection
+
+The Blazor DataGrid allows you to select multiple rows within the Grid simultaneously. This feature is valuable when you need to perform actions or operations on several rows at once or focus on specific areas of your data.
+
+To achieve multiple row selection, you can use the [SelectRowsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRowsAsync_System_Int32___) method. This method allows you to select a collection of rows by specifying their indexes, giving you the ability to interact with multiple rows together.
+
+The following example, demonstrates how to select multiple rows in the Grid by calling the `SelectRowsAsync` method within the button click event and passing an array of row indexes as arguments.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
+
+<div style="padding: 10px 0px 20px 0px">
+    <SfButton CssClass="btn" OnClick="() => SelectMultipleRows(new[] { 1,3 })">Select [1, 3]</SfButton>
+    <SfButton CssClass="btn" OnClick="() => SelectMultipleRows(new[] { 0, 2 })">Select [0, 2]</SfButton>
+    <SfButton CssClass="btn" OnClick="() => SelectMultipleRows(new[] { 2, 4 })">Select [2, 4]</SfButton>
+    <SfButton CssClass="btn" OnClick="() => SelectMultipleRows(new[] { 0, 5 })">Select [0, 5]</SfButton>
+    <SfButton CssClass="btn" OnClick="() => SelectMultipleRows(new[] { 1, 6 })">Select [1, 6]</SfButton>
+</div>
+<div style="padding: 10px 0px 20px 0px">
+    <SfButton CssClass="btn" OnClick="() => SelectMultipleRows(new[] { 0, 7, 8 })">Select [0, 7, 8]</SfButton>
+    <SfButton CssClass="btn" OnClick="() => SelectMultipleRows(new[] { 1, 9, 10 })">Select [1, 9, 10]</SfButton>
+    <SfButton CssClass="btn" OnClick="() => SelectMultipleRows(new[] { 4, 7, 12 })">Select [4, 7, 12]</SfButton>
+    <SfButton CssClass="btn" OnClick="() => SelectMultipleRows(new[] { 2, 5, 6 })">Select [2, 5, 6]</SfButton>
+</div>
+<SfGrid @ref="Grid" DataSource="@OrderData" AllowSelection="true" Height="315">
+    <GridSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Multiple" Mode="Syncfusion.Blazor.Grids.SelectionMode.Row"></GridSelectionSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipCountry) HeaderText="Ship Country" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private SfGrid<OrderDetails> Grid;
+    public List<OrderDetails> OrderData { get; set; }
+    protected override void OnInitialized()
+    {
+        OrderData = OrderDetails.GetAllRecords();
+    }
+    public async Task SelectMultipleRows(int[] rowIndexes)
+    {
+        await Grid.SelectRowsAsync(rowIndexes);
+    }
+}
+
+{% endhighlight %}
+
+{% highlight cs tabtitle="OrderDetails.cs" %}
+
+public class OrderDetails
+{
+    public static List<OrderDetails> order = new List<OrderDetails>();
+    public OrderDetails() { }
+    public OrderDetails(int orderID, string customerId, double freight, string shipCountry)
+    {
+        this.OrderID = orderID;
+        this.CustomerID = customerId;
+        this.Freight = freight;
+        this.ShipCountry = shipCountry;
+    }
+    public static List<OrderDetails> GetAllRecords()
+    {
+        if (order.Count == 0)
+        {
+            order.Add(new OrderDetails(10248, "VINET", 32.38, "France"));
+            order.Add(new OrderDetails(10249, "TOMSP", 11.61, "Germany"));
+            order.Add(new OrderDetails(10250, "HANAR", 65.83, "Brazil"));
+            order.Add(new OrderDetails(10251, "VICTE", 41.34, "France"));
+            order.Add(new OrderDetails(10252, "SUPRD", 51.3, "Belgium"));
+            order.Add(new OrderDetails(10253, "HANAR", 58.17, "Brazil"));
+            order.Add(new OrderDetails(10254, "CHOPS", 22.98, "Switzerland"));
+            order.Add(new OrderDetails(10255, "RICSU", 148.33, "Switzerland"));
+            order.Add(new OrderDetails(10256, "WELLI", 13.97, "Brazil"));
+            order.Add(new OrderDetails(10257, "HILAA", 81.91, "Venezuela"));
+            order.Add(new OrderDetails(10258, "ERNSH", 140.51, "Austria"));
+            order.Add(new OrderDetails(10259, "CENTC", 3.25, "Mexico"));
+            order.Add(new OrderDetails(10260, "OTTIK", 55.09, "Germany"));
+            order.Add(new OrderDetails(10261, "QUEDE", 3.05, "Brazil"));
+            order.Add(new OrderDetails(10262, "RATTC", 48.29, "USA"));
+        }
+        return order;
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double? Freight { get; set; }
+    public string ShipCountry { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBejJCxVytqWHSm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ### Range of rows selection 
 
-Range of row selection in the Grid enables you to select a continuous range of rows within the grid. This feature is particularly useful when you want to perform actions on multiple rows simultaneously or focus on a specific range of data.
+Range of row selection in the Grid enables you to select a continuous range of rows within the Grid. This feature is particularly useful when you want to perform actions on multiple rows simultaneously or focus on a specific range of data.
 
-To achieve range of row selection, you can use the [selectRowsByRange](https://ej2.syncfusion.com/angular/documentation/api/grid/selection/#selectcolumnsbyrange) method. This method selects a range of rows from start and end row indexes.
+To achieve range of row selection, you can use the [SelectRowsByRangeAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRowsByRangeAsync_System_Int32_System_Nullable_System_Int32__) method. This method selects a range of rows from start and end row indexes.
  
-The following example, demonstrates how to select a range of rows within the Grid by obtaining the selected rows start index and end index through textbox. Then, pass these start index and end index as arguments to the `selectRowsByRange` method. When you trigger the button event by clicking the **Select Rows** button, a range of rows is selected within the Grid.
+The following example, demonstrates how to select a range of rows within the Grid by obtaining the selected rows start index and end index through `NumericTextBox`. Then, pass these start index and end index as arguments to the `SelectRowsByRangeAsync` method. When you trigger the button event by clicking the **Select Rows** button, a range of rows is selected within the Grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -548,3 +646,519 @@ public class OrderDetails
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNhINfiIdMXhvlal?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## How to get selected row indexes 
+
+You can retrieve the indexes of the currently selected rows in the Grid. This feature is particularly useful when you need to perform actions or operations specifically on the selected rows. 
+
+To achieve this, you can leverage the [GetSelectedRowIndexesAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetSelectedRowIndexesAsync) method, which returns an array of numbers representing the indexes of the selected rows.
+
+The following example demonstrates how to get selected row indexes using  `GetSelectedRowIndexesAsync` method:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
+
+<div style="padding: 10px 0px 20px 0px">
+    <SfButton CssClass="btn" OnClick="GetSelectedRowIndexes">Get selected row indexes</SfButton>
+</div>
+@if (ShowMessage)
+{
+    <p id="message">Selected row indexes: @string.Join(", ", SelectedRowIndexes)</p>
+}
+<SfGrid @ref="Grid" DataSource="@OrderData" AllowSelection="true">
+    <GridSelectionSettings Mode="Syncfusion.Blazor.Grids.SelectionMode.Row" Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></GridSelectionSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipCity) HeaderText="Ship City" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipName) HeaderText="Ship Name" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private SfGrid<OrderDetails> Grid;
+    public List<OrderDetails> OrderData { get; set; }
+    protected override void OnInitialized()
+    {
+        OrderData = OrderDetails.GetAllRecords();
+    }
+    private List<int> SelectedRowIndexes = new();
+    private bool ShowMessage = false;
+    public async Task GetSelectedRowIndexes()
+    {
+        if (Grid != null)
+        {
+            SelectedRowIndexes = await Grid.GetSelectedRowIndexesAsync();
+            ShowMessage = SelectedRowIndexes.Count > 0;
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="OrderDetails.cs" %}
+
+public class OrderDetails
+{
+    public static List<OrderDetails> order = new List<OrderDetails>();
+    public OrderDetails() { }
+    public OrderDetails(int orderID, string customerId, string shipCity, string shipName)
+    {
+        this.OrderID = orderID;
+        this.CustomerID = customerId;
+        this.ShipCity = shipCity;
+        this.ShipName = shipName;
+    }
+    public static List<OrderDetails> GetAllRecords()
+    {
+        if (order.Count == 0)
+        {
+            order.Add(new OrderDetails(10248, "VINET", "Reims", "Vins et alcools Chevalier"));
+            order.Add(new OrderDetails(10249, "TOMSP", "Münster", "Toms Spezialitäten"));
+            order.Add(new OrderDetails(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+            order.Add(new OrderDetails(10251, "VICTE", "Lyon", "Victuailles en stock"));
+            order.Add(new OrderDetails(10252, "SUPRD", "Charleroi", "Suprêmes délices"));
+            order.Add(new OrderDetails(10253, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+            order.Add(new OrderDetails(10254, "CHOPS", "Bern", "Chop-suey Chinese"));
+            order.Add(new OrderDetails(10255, "RICSU", "Genève", "Richter Supermarkt"));
+            order.Add(new OrderDetails(10256, "WELLI", "Resende", "Wellington Importadora"));
+            order.Add(new OrderDetails(10257, "HILAA", "San Cristóbal", "HILARION-Abastos"));
+            order.Add(new OrderDetails(10258, "ERNSH", "Graz", "Ernst Handel"));
+            order.Add(new OrderDetails(10259, "CENTC", "México D.F.", "Centro comercial Moctezuma"));
+            order.Add(new OrderDetails(10260, "OTTIK", "Köln", "Ottilies Käseladen"));
+            order.Add(new OrderDetails(10261, "QUEDE", "Rio de Janeiro", "Que Delícia"));
+            order.Add(new OrderDetails(10262, "RATTC", "Albuquerque", "Rattlesnake Canyon Grocery"));
+        }
+        return order;
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVyNpCHKqQLLwhl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## How to get selected records on various pages 
+
+The DataGrid allows you to retrieve the selected records even when navigating to different pages. This feature is useful when working with large data sets and allows you to perform actions on the selected records across multiple pages. 
+
+To persist the selection across pages, you need to enable the [PersistSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_PersistSelection) property. By default, this property is set to **false**. To enable it, set the value to **true** in the `GridSelectionSettings` property of the Grid.
+
+To retrieve the selected records from different pages, you can use the  [GetSelectedRecordsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetSelectedRecordsAsync) method. This method returns an array of the selected records.
+
+The following example demonstrates how to retrieve selected records from various pages using the `GetSelectedRecordsAsync` method and display **OrderID** in a dialog when a button is clicked:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Popups
+
+<div style="margin-bottom: 10px">
+    <SfButton OnClick="ShowSelectedRecords">Show Selected Records</SfButton>
+</div>
+<SfDialog Visible="@DialogVisible" Width="50%" ShowCloseIcon="true" Header="Selected Row Details">
+    <DialogTemplates>
+        <Content>
+            @if (selectedRecords != null)
+            {
+                @foreach (var record in selectedRecords)
+                {
+                    <p><b>Order ID:</b>@record.OrderID</p>
+                }                
+            }
+        </Content>
+    </DialogTemplates>
+</SfDialog>
+<SfGrid @ref="Grid" DataSource="@OrderData" AllowSelection="true" AllowPaging="true" Height="315">
+    <GridSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Multiple" Mode="Syncfusion.Blazor.Grids.SelectionMode.Row" PersistSelection="true"></GridSelectionSettings>
+    <GridColumns>
+        <GridColumn Type="ColumnType.CheckBox" Width="50"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipCountry) HeaderText="Ship Country" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private SfGrid<OrderDetails> Grid;
+    public List<OrderDetails> OrderData { get; set; }
+    private List<OrderDetails> selectedRecords;
+    private bool DialogVisible { get; set; } = false;
+    protected override void OnInitialized()
+    {
+        OrderData = OrderDetails.GetAllRecords();
+    }
+    private async Task ShowSelectedRecords()
+    {
+        selectedRecords = await Grid.GetSelectedRecordsAsync();
+        DialogVisible = true;
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="OrderDetails.cs" %}
+
+public class OrderDetails
+{
+    public static List<OrderDetails> order = new List<OrderDetails>();
+    public OrderDetails() { }
+    public OrderDetails(int orderID, string customerId, double freight, string shipCountry)
+    {
+        this.OrderID = orderID;
+        this.CustomerID = customerId;
+        this.Freight = freight;
+        this.ShipCountry = shipCountry;
+    }
+    public static List<OrderDetails> GetAllRecords()
+    {
+        if (order.Count == 0)
+        {
+            string[] customerIds = { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD", "CHOPS", "RICSU", "WELLI", "HILAA", "ERNSH" };
+            string[] countries = { "France", "Germany", "Brazil", "USA", "Sweden", "Venezuela", "Mexico", "Austria", "Finland", "UK" };
+            Random rand = new Random();
+            for (int i = 1; i <= 50; i++)
+            {
+                int orderId = 10247 + i;
+                string customerId = customerIds[rand.Next(customerIds.Length)];
+                double freight = Math.Round(rand.NextDouble() * 200, 2); // up to 200
+                string country = countries[rand.Next(countries.Length)];
+                order.Add(new OrderDetails(orderId, customerId, freight, country));
+            }
+        }
+        return order;
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double? Freight { get; set; }
+    public string ShipCountry { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNrojpCGMsgUVzNP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+
+> To persist the Grid selection, it is necessary to define any one of the columns as a primary key using the [GridColumn.IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property.
+
+## How to get selected records  
+
+The get selected records allows you to retrieve the data of the selected rows from the Grid. This can be particularly useful when you need to perform actions on the selected data or display specific information based on the selected rows.
+
+To retrieve the selected records, you can use the [GetSelectedRecordsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetSelectedRecordsAsync) method. This method allows you to obtain an array of objects representing the selected records.
+
+Here's an example that displays the selected row count using the `GetSelectedRecordsAsync` method:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
+
+<div style="padding: 10px 0px 20px 0px">
+    <SfButton CssClass="btn" OnClick="SelectedRecordsCount">Selected Records count</SfButton>
+</div>
+@if (ShowMessage)
+{
+    <p id="message">Selected record count: @string.Join(", ", SelectedRecordscount.Count)</p>
+}
+<SfGrid @ref="Grid" DataSource="@OrderData" AllowSelection="true">
+    <GridSelectionSettings Mode="Syncfusion.Blazor.Grids.SelectionMode.Row" Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></GridSelectionSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.OrderDate) HeaderText="Order Date" Format="d" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipCountry) HeaderText="Ship Country" Width="120"></GridColumn> 
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private SfGrid<OrderDetails> Grid;
+    public List<OrderDetails> OrderData { get; set; }
+    protected override void OnInitialized()
+    {
+        OrderData = OrderDetails.GetAllRecords();
+    }
+    private List<OrderDetails> SelectedRecordscount = new();
+    private bool ShowMessage = false;
+    public async Task SelectedRecordsCount()
+    {
+        if (Grid != null)
+        {
+            SelectedRecordscount = await Grid.GetSelectedRecordsAsync();
+            ShowMessage = SelectedRecordscount.Count > 0;
+        }
+    }
+}
+<style>
+    #message {
+        color: red;
+        text-align: center;
+        padding: 0px 0px 10px 0px;
+    }
+</style>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="OrderDetails.cs" %}
+
+public class OrderDetails
+{
+    public static List<OrderDetails> order = new List<OrderDetails>();
+    public OrderDetails() { }
+    public OrderDetails(int orderID, string customerId, DateTime orderDate, double freight, string shipCountry)
+    {
+        this.OrderID = orderID;
+        this.CustomerID = customerId;
+        this.OrderDate = orderDate;
+        this.Freight = freight;
+        this.ShipCountry = shipCountry;
+    }
+    public static List<OrderDetails> GetAllRecords()
+    {
+        if (order.Count == 0)
+        {
+            order.Add(new OrderDetails(10248, "VINET", new DateTime(1996, 7, 4), 32.38, "France"));
+            order.Add(new OrderDetails(10249, "TOMSP", new DateTime(1996, 7, 5), 11.61, "Germany"));
+            order.Add(new OrderDetails(10250, "HANAR", new DateTime(1996, 7, 8), 65.83, "Brazil"));
+            order.Add(new OrderDetails(10251, "VICTE", new DateTime(1996, 7, 8), 41.34, "France"));
+            order.Add(new OrderDetails(10252, "SUPRD", new DateTime(1996, 7, 9), 51.3, "Belgium"));
+            order.Add(new OrderDetails(10253, "HANAR", new DateTime(1996, 7, 10), 58.17, "Brazil"));
+            order.Add(new OrderDetails(10254, "CHOPS", new DateTime(1996, 7, 11), 22.98, "Switzerland"));
+            order.Add(new OrderDetails(10255, "RICSU", new DateTime(1996, 7, 12), 148.33, "Switzerland"));
+            order.Add(new OrderDetails(10256, "WELLI", new DateTime(1996, 7, 15), 13.97, "Brazil"));
+            order.Add(new OrderDetails(10257, "HILAA", new DateTime(1996, 7, 16), 81.91, "Venezuela"));
+            order.Add(new OrderDetails(10258, "ERNSH", new DateTime(1996, 7, 17), 140.51, "Austria"));
+            order.Add(new OrderDetails(10259, "CENTC", new DateTime(1996, 7, 18), 3.25, "Mexico"));
+            order.Add(new OrderDetails(10260, "OTTIK", new DateTime(1996, 7, 19), 55.09, "Germany"));
+            order.Add(new OrderDetails(10261, "QUEDE", new DateTime(1996, 7, 19), 3.05, "Brazil"));
+            order.Add(new OrderDetails(10262, "RATTC", new DateTime(1996, 7, 22), 48.29, "USA"));
+        }
+        return order;
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public DateTime OrderDate { get; set; }
+    public double? Freight { get; set; }
+    public string ShipCountry { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVeXJsnfmHOKSNw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Clear row selection programmatically 
+
+Clearing row selection programmatically in the Grid is a useful feature when you want to remove any existing row selections. To achieve this, you can use the [ClearRowSelectionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearRowSelectionAsync) method.
+
+>The `ClearRowSelectionAsync` method is applicable when the selection [GridSelectionSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Type) is set to **Multiple** or **Single**.
+
+The following example demonstrates how to clear row selection by calling the `ClearRowSelectionAsync` method in the button click event.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
+
+<div style="margin-bottom: 10px">
+    <SfButton CssClass="btn" OnClick="ClearRowSelection">Clear Row Selection</SfButton>
+</div>
+<SfGrid @ref="Grid" DataSource="@OrderData" AllowSelection="true" SelectedRowIndex="2" Height="315">
+    <GridSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Multiple" Mode="Syncfusion.Blazor.Grids.SelectionMode.Row"></GridSelectionSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipCountry) HeaderText="Ship Country" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private SfGrid<OrderDetails> Grid;
+    public List<OrderDetails> OrderData { get; set; }
+    protected override void OnInitialized()
+    {
+        OrderData = OrderDetails.GetAllRecords();
+    }
+    public async Task ClearRowSelection()
+    {
+       await Grid.ClearRowSelectionAsync();  
+    }
+}
+
+{% endhighlight %}
+
+{% highlight cs tabtitle="OrderDetails.cs" %}
+
+public class OrderDetails
+{
+    public static List<OrderDetails> order = new List<OrderDetails>();
+    public OrderDetails() { }
+    public OrderDetails(int orderID, string customerId, double freight, string shipCountry)
+    {
+        this.OrderID = orderID;
+        this.CustomerID = customerId;
+        this.Freight = freight;
+        this.ShipCountry = shipCountry;
+    }
+    public static List<OrderDetails> GetAllRecords()
+    {
+        if (order.Count == 0)
+        {
+            order.Add(new OrderDetails(10248, "VINET", 32.38, "France"));
+            order.Add(new OrderDetails(10249, "TOMSP", 11.61, "Germany"));
+            order.Add(new OrderDetails(10250, "HANAR", 65.83, "Brazil"));
+            order.Add(new OrderDetails(10251, "VICTE", 41.34, "France"));
+            order.Add(new OrderDetails(10252, "SUPRD", 51.3, "Belgium"));
+            order.Add(new OrderDetails(10253, "HANAR", 58.17, "Brazil"));
+            order.Add(new OrderDetails(10254, "CHOPS", 22.98, "Switzerland"));
+            order.Add(new OrderDetails(10255, "RICSU", 148.33, "Switzerland"));
+            order.Add(new OrderDetails(10256, "WELLI", 13.97, "Brazil"));
+            order.Add(new OrderDetails(10257, "HILAA", 81.91, "Venezuela"));
+            order.Add(new OrderDetails(10258, "ERNSH", 140.51, "Austria"));
+            order.Add(new OrderDetails(10259, "CENTC", 3.25, "Mexico"));
+            order.Add(new OrderDetails(10260, "OTTIK", 55.09, "Germany"));
+            order.Add(new OrderDetails(10261, "QUEDE", 3.05, "Brazil"));
+            order.Add(new OrderDetails(10262, "RATTC", 48.29, "USA"));
+        }
+        return order;
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double? Freight { get; set; }
+    public string ShipCountry { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVSDTsxJlVCTaNq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Row selection events 
+
+The Grid provides several events related to row selection that allow you to respond to and customize the behavior of row selection. These events give you control over various aspects of row selection. Here are the available row selection events:
+
+[RowSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowSelecting): This event is triggered before any row selection occurs. It provides an opportunity to implement custom logic or validation before a row is selected, allowing you to control the selection process.
+
+[RowSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowSelected): This event is triggered after a row is successfully selected. You can use this event to perform actions or updates when a row is selected.
+
+[RowDeselecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDeselecting): This event is triggered just before a selected row is deselected. It allows you to perform custom logic or validation to decide whether the row should be deselected or not.
+
+[RowDeselected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDeselected): This event is triggered when a particular selected row is deselected. You can use this event to perform actions or validations when a row is no longer selected.
+
+In the following example, row selection is canceled when the value of **CustomerID** is equal to **VINET** within the `RowSelecting` event and row deselection is canceled when the value of **OrderID** is even within the `RowDeselecting` event. A notification message is displayed to indicate which event was triggered whenever a row is selected.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+
+<div style="text-align: center; color: red">
+    <span>@RowSelectionMessage</span>
+</div>
+<SfGrid @ref="Grid" DataSource="@OrderData" AllowSelection="true" Height="315">
+    <GridSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Multiple" Mode="Syncfusion.Blazor.Grids.SelectionMode.Row"></GridSelectionSettings>
+    <GridEvents RowSelected="RowselectHandler" RowSelecting="RowselectingHandler" RowDeselected="RowDeselectHandler" RowDeselecting="RowDeselectingHandler" TValue="OrderDetails"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer Name" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipCountry) HeaderText="Ship Country" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private SfGrid<OrderDetails> Grid;
+    public List<OrderDetails> OrderData { get; set; }
+    protected override void OnInitialized()
+    {
+        OrderData = OrderDetails.GetAllRecords();
+    }
+    public string RowSelectionMessage;
+    public void RowselectingHandler(RowSelectingEventArgs<OrderDetails> Args)
+    {
+        if (Args.Data.CustomerID == "VINET")
+        {
+            Args.Cancel = true;
+            RowSelectionMessage = "RowSelecting event is triggered. Selection prevented for CustomerID column Vinet value.";
+        }
+    }
+    public void RowselectHandler(RowSelectEventArgs<OrderDetails> Args)
+    {
+        RowSelectionMessage = "Trigger RowSelected.";
+    }
+    public void RowDeselectingHandler(RowDeselectEventArgs<OrderDetails> Args)
+    {
+        if ((Args.Data.OrderID)%2 == 0)
+        {
+            Args.Cancel = true;
+            RowSelectionMessage = "RowDeSelecting event is triggered. DeSelection prevented for OrderID column even values";
+        }
+    }
+    public void RowDeselectHandler(RowDeselectEventArgs<OrderDetails> Args)
+    {
+        RowSelectionMessage = "Trigger RowDeSelected.";        
+    }
+}
+
+{% endhighlight %}
+
+{% highlight cs tabtitle="OrderDetails.cs" %}
+
+public class OrderDetails
+{
+    public static List<OrderDetails> order = new List<OrderDetails>();
+    public OrderDetails() { }
+    public OrderDetails(int orderID, string customerId, double freight, string shipCountry)
+    {
+        this.OrderID = orderID;
+        this.CustomerID = customerId;
+        this.Freight = freight;
+        this.ShipCountry = shipCountry;
+    }
+    public static List<OrderDetails> GetAllRecords()
+    {
+        if (order.Count == 0)
+        {
+            order.Add(new OrderDetails(10248, "VINET", 32.38, "France"));
+            order.Add(new OrderDetails(10249, "TOMSP", 11.61, "Germany"));
+            order.Add(new OrderDetails(10250, "HANAR", 65.83, "Brazil"));
+            order.Add(new OrderDetails(10251, "VICTE", 41.34, "France"));
+            order.Add(new OrderDetails(10252, "SUPRD", 51.3, "Belgium"));
+            order.Add(new OrderDetails(10253, "HANAR", 58.17, "Brazil"));
+            order.Add(new OrderDetails(10254, "CHOPS", 22.98, "Switzerland"));
+            order.Add(new OrderDetails(10255, "RICSU", 148.33, "Switzerland"));
+            order.Add(new OrderDetails(10256, "WELLI", 13.97, "Brazil"));
+            order.Add(new OrderDetails(10257, "HILAA", 81.91, "Venezuela"));
+            order.Add(new OrderDetails(10258, "ERNSH", 140.51, "Austria"));
+            order.Add(new OrderDetails(10259, "CENTC", 3.25, "Mexico"));
+            order.Add(new OrderDetails(10260, "OTTIK", 55.09, "Germany"));
+            order.Add(new OrderDetails(10261, "QUEDE", 3.05, "Brazil"));
+            order.Add(new OrderDetails(10262, "RATTC", 48.29, "USA"));
+        }
+        return order;
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double? Freight { get; set; }
+    public string ShipCountry { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVojfiHRoXjmSqN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
