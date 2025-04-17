@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Pdf Export in Blazor DataGrid | Syncfusion
-description: Checkout and learn here all about Pdf Export in Syncfusion Blazor DataGrid and much more.
+title: Pdf Export Options in Blazor DataGrid | Syncfusion
+description: Checkout and learn here all about Pdf Export Options in Syncfusion Blazor DataGrid and much more.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -34,8 +34,7 @@ The following example demonstrates how to export current page to a PDF document 
     </SfDropDownList>
 </div>
 
-<SfGrid ID="Grid" @ref="Grid" DataSource="@Orders" AllowPaging="true" AllowPdfExport="true"
-        Toolbar="@(new List<string>() { "PdfExport" })" Height="300">
+<SfGrid ID="Grid" @ref="Grid" DataSource="@Orders" AllowPaging="true" AllowPdfExport="true" Toolbar="@(new List<string>() { "PdfExport" })" Height="300">
     <GridEvents TValue="EmployeeData" OnToolbarClick="ToolbarClickHandler"></GridEvents>
     <GridPageSettings PageSize="8"></GridPageSettings>
     <GridColumns>
@@ -166,7 +165,6 @@ The following example demonstrates how to export the selected records to a PDF d
     private SfGrid<OrderData> Grid;
     public List<OrderData> Orders { get; set; }
 
-
     protected override void OnInitialized()
     {
         Orders = OrderData.GetAllRecords();
@@ -177,12 +175,10 @@ The following example demonstrates how to export the selected records to a PDF d
         if (args.Item.Id == "Grid_pdfexport")
         {
             var selectedRecords = await Grid.GetSelectedRecordsAsync();
-
             PdfExportProperties exportProperties = new PdfExportProperties
                 {
                     DataSource = selectedRecords
                 };
-
             await this.Grid.ExportToPdfAsync(exportProperties);
         }
     }
@@ -364,8 +360,7 @@ The following example demonstrates how to export hidden columns to a PDF file. I
     <SfSwitch @bind-Checked="IncludeHiddenColumns"></SfSwitch>
 </div>
 
-<SfGrid ID="Grid" @ref="Grid" DataSource="@Orders" AllowPaging="true" AllowPdfExport="true"
-        Toolbar="@(new List<string>() { "PdfExport" })" Height="348">
+<SfGrid ID="Grid" @ref="Grid" DataSource="@Orders" AllowPaging="true" AllowPdfExport="true" Toolbar="@(new List<string>() { "PdfExport" })" Height="348">
     <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="OrderData"></GridEvents>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
@@ -464,7 +459,7 @@ To show or hide columns based on user interaction during the export process, you
 
 1. Handle the [ToolbarClick](https://blazor.syncfusion.com/documentation/datagrid/events#ontoolbarclick) event of the Grid.
 
-2. Update the visibility of the desired columns by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Visible)) property of the column to **true** or **false**.
+2. Update the visibility of the desired columns by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Visible) property of the column to **true** or **false**.
 
 3. Export the Grid to PDF.
 
@@ -477,8 +472,7 @@ In the following example, the **CustomerID** is initially a hidden column in the
 
 @using Syncfusion.Blazor.Grids
 
-<SfGrid ID="Grid" @ref="Grid" DataSource="@Orders"  AllowPdfexport="true"
-Toolbar="@(new List<string>() { "Pdfexport" })" Height="348">
+<SfGrid ID="Grid" @ref="Grid" DataSource="@Orders"  AllowPdfexport="true" Toolbar="@(new List<string>() { "Pdfexport" })" Height="348">
     <GridEvents OnToolbarClick="ToolbarClickHandler" ExportComplete="ExportCompleteHandler" TValue="OrderData"></GridEvents>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
@@ -506,7 +500,7 @@ Toolbar="@(new List<string>() { "Pdfexport" })" Height="348">
         {
             CustomerIDVisible = true;
             ShipCityVisible=false;
-            await Grid.ExportToExcelAsync();
+            await Grid.ExportToPdfAsync();
         }
     }
 
@@ -590,8 +584,7 @@ The following example demonstrates how to export the Grid into PDF document by s
 
 @using Syncfusion.Blazor.Grids
 
-<SfGrid ID="Grid" @ref="Grid" DataSource="@Orders"  AllowPdfexport="true"
-Toolbar="@(new List<string>() { "Pdfexport" })" Height="348">
+<SfGrid ID="Grid" @ref="Grid" DataSource="@Orders"  AllowPdfexport="true" Toolbar="@(new List<string>() { "Pdfexport" })" Height="348">
     <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="OrderData"></GridEvents>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
@@ -730,8 +723,7 @@ The following example demonstrates how to export the Grid into PDF document by s
     </SfDropDownList>
 </div>
 
-<SfGrid @ref="Grid" DataSource="@Orders" AllowPaging="true" AllowPdfExport="true"
-        Toolbar="@(new List<string>() { "PdfExport" })" Height="300">
+<SfGrid @ref="Grid" DataSource="@Orders" AllowPaging="true" AllowPdfExport="true" Toolbar="@(new List<string>() { "PdfExport" })" Height="300">
     <GridEvents TValue="OrderData" OnToolbarClick="ToolbarClickHandler" />
     <GridColumns>
         <GridColumn Field="OrderID" HeaderText="Order ID" Width="90" TextAlign="TextAlign.Right" />
@@ -783,7 +775,6 @@ The following example demonstrates how to export the Grid into PDF document by s
             {
                 PageSize = Enum.TryParse<PdfPageSize>(SelectedPageSize, out var size) ? size : PdfPageSize.A4
             };
-
             await Grid.ExportToPdfAsync(exportProps);
         }
     }
@@ -1089,8 +1080,6 @@ The following example demonstrates how to customize the Grid columns when export
     {
         if (args.Item.Id == "Grid_pdfexport")
         {
- 
-
             List<GridColumn> ExportColumns = new List<GridColumn>();
             ExportColumns.Add(new GridColumn() { Field = "OrderID", HeaderText = "Order Number", Width = "120" });
             ExportColumns.Add(new GridColumn() { Field = "CustomerID", HeaderText = "Customer Name", Width = "120" });
@@ -1100,7 +1089,6 @@ The following example demonstrates how to customize the Grid columns when export
                 {
                     Columns = ExportColumns
                 };
-
             await Grid.ExportToPdfAsync(exportProperties);
         }
     }
@@ -1204,9 +1192,7 @@ The following example demonstrates, how to change the default font when exportin
 </SfGrid>
 
 @code {
-
     private SfGrid<OrderData> Grid;
-
 
     public List<OrderData> Orders { get; set; }
     public string fontFamily { get; set; } = "TimesRoman";
@@ -1215,7 +1201,6 @@ The following example demonstrates, how to change the default font when exportin
     {
         Orders = OrderData.GetAllRecords();
     }
-
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
@@ -1246,7 +1231,6 @@ The following example demonstrates, how to change the default font when exportin
                         }
                     }
                 };
-
             await Grid.ExportToPdfAsync(exportProps);
         }
     }
@@ -1346,8 +1330,6 @@ The following example demonstrates how to use the custom **Algeria** font for ex
         Orders = OrderData.GetAllRecords();
     }
 
-
-
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
         if (args.Item.Id == "Grid_pdfexport")
@@ -1377,7 +1359,6 @@ The following example demonstrates how to use the custom **Algeria** font for ex
                         }
                     }
                 };
-
             await Grid.ExportToPdfAsync(exportProps);
         }
     }
@@ -1438,3 +1419,419 @@ public class OrderData
 {% endtabs %}
 
 ![Add custom font](./images/Add-custom-font.png)
+
+## Exporting Grid Data as Stream
+
+The Syncfusion Blazor DataGrid allows exporting Grid data as a memory stream, enabling programmatic handling before saving or processing. The following sections cover how to export Grid data as a memory stream, merge multiple memory streams into one, and convert the memory stream to a file stream for saving the exported file.
+
+### Exporting Grid Data as Memory Stream
+
+The Export to Memory Stream feature allows you to export data from a Grid to a memory stream instead of saving it to a file directly on the server. This can be particularly useful when you want to generate and serve the file directly to the client without saving it on the server, ensuring a smooth and efficient download process.
+
+To achieve this functionality, you can utilize the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method along with the `asMemoryStream` parameter set to **true** within the [OnToolbarClick](https://blazor.syncfusion.com/documentation/datagrid/events#ontoolbarclick) event. This method will export an Pdf workbook as a memory stream, which can then be sent to the browser for download.
+
+The provided example showcases the process of exporting the file as a memory stream and sending the byte to initiate a browser download.
+
+**Step 1**: **Add JavaScript for File Download**
+
+Create a JavaScript file named **saveAsFile.js** under the **wwwroot/scripts** directory and include the following function to trigger browser download:
+
+{% tabs %}
+{% highlight razor tabtitle="saveAsFile.js" %}
+
+function saveAsFile(filename, bytesBase64) {
+    var link = document.createElement('a');
+    link.download = filename;
+    link.href = "data:application/octet-stream;base64," + bytesBase64;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+**Step 2**:**Register the JavaScript file**
+
+Include the script reference inside your **App.razor** (or **index.html** in Blazor WebAssembly):
+
+{% tabs %}
+{% highlight razor tabtitle="App.razor" %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="/" />
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" href="BlazorApp1.styles.css" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <script src="saveAsFile.js"></script>
+    <HeadOutlet @rendermode="InteractiveServer" />
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+</head>
+<body>
+    <Routes @rendermode="InteractiveServer" />
+    <script src="_framework/blazor.web.js"></script>
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+</body>
+</html>
+
+{% endhighlight %}
+{% endtabs %}
+
+**Step 3: Invoke the JavaScript function to perform the browser download using the memory stream**
+
+In the **Index.razor** file, the Grid is set up, the export operation is triggered, and the `saveAsFile` function is invoked to handle the browser download.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+@using System.IO;
+@using Syncfusion.Pdf
+@using Syncfusion.XlsIO
+@using Syncfusion.PdfExport;
+@inject IJSRuntime JSRuntime
+
+<SfGrid ID="Grid" @ref="DefaultGrid" Toolbar="@(new List<string>() { "PdfExport" })" AllowPdfExport="true" AllowPaging="true">
+    <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="Order"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150" />
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120" />
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="150" />
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="150" />
+    </GridColumns>
+</SfGrid>
+
+@code{
+    private SfGrid<OrderData> Grid;
+    public List<OrderData> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }
+
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {       
+        if (args.Item.Id == "Grid_pdfexport") //Id is combination of Grid's ID and itemname.
+        {
+            MemoryStream streamDoc = await DefaultGrid.ExportToPdfAsync(asMemoryStream: true);
+            await JSRuntime.InvokeVoidAsync("saveAsFile", new object[] {"PdfMemoryStream.pdf", Convert.ToBase64String(streamDoc.ToArray()), true });
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="OrderData.cs" %}
+
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData(int orderID, string customerID, double freight, string shipCity, string shipName)
+    {
+        this.OrderID = orderID;
+        this.CustomerID = customerID;
+        this.Freight = freight;
+        this.ShipCity = shipCity;
+        this.ShipName = shipName;
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        {
+            Orders.Add(new OrderData(10248, "VINET", 32.38, "Reims", "Vins et alcools Chevalier"));
+            Orders.Add(new OrderData(10249, "TOMSP", 11.61, "Münster", "Toms Spezialitäten"));
+            Orders.Add(new OrderData(10250, "HANAR", 65.83, "Rio de Janeiro", "Hanari Carnes"));
+            Orders.Add(new OrderData(10251, "VICTE", 41.34, "Lyon", "Victuailles en stock"));
+            Orders.Add(new OrderData(10252, "SUPRD", 51.3, "Charleroi", "Suprêmes délices"));
+            Orders.Add(new OrderData(10253, "HANAR", 58.17, "Rio de Janeiro", "Hanari Carnes"));
+            Orders.Add(new OrderData(10254, "CHOPS", 22.98, "Bern", "Chop-suey Chinese"));
+            Orders.Add(new OrderData(10255, "RICSU", 148.33, "Genève", "Richter Supermarkt"));
+            Orders.Add(new OrderData(10256, "WELLI", 13.97, "Resende", "Wellington Import Export"));
+            Orders.Add(new OrderData(10257, "HILAA", 81.91, "San Cristóbal", "Hila Alimentos"));
+            Orders.Add(new OrderData(10258, "ERNSH", 140.51, "Graz", "Ernst Handel"));
+            Orders.Add(new OrderData(10259, "CENTC", 3.25, "México D.F.", "Centro comercial"));
+            Orders.Add(new OrderData(10260, "OTTIK", 55.09, "Köln", "Ottilies Käseladen"));
+            Orders.Add(new OrderData(10261, "QUEDE", 3.05, "Rio de Janeiro", "Que delícia"));
+            Orders.Add(new OrderData(10262, "RATTC", 48.29, "Albuquerque", "Rattlesnake Canyon Grocery"));
+        }
+        return Orders;
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Converting Memory Stream to File Stream for Pdf Export
+
+The Pdf Export feature in Syncfusion Blazor DataGrid allows you to export the Grid data to an Pdf workbook. In some cases, you may want to save the exported Pdf file as a physical file on your system. This is useful for scenarios where you need to store or process the file outside of the browser context.
+
+To achieve this, you can use the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event in conjunction with the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method. The `ExportToPdfAsync` method generates the Pdf file as a `MemoryStream`. You can then convert this memory stream into a `FileStream` and save the file to a specified location.
+
+The example below demonstrates how to achieve this by converting the memory stream into a file stream for saving the exported Pdf file:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+@using System.IO;
+@using Syncfusion.XlsIO
+@using Syncfusion.PdfExport;
+@inject IJSRuntime JSRuntime
+
+<SfGrid ID="Grid" @ref="Grid" DataSource="@Orders" Toolbar="@(new List<string>() { "PdfExport" })" AllowPdfExport="true" AllowPaging="true">
+    <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="OrderData"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150" />
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120" />
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="150" />
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="150" />
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private SfGrid<OrderData> Grid;
+    public List<OrderData> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }
+
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {       
+       if (args.Item.Id == "Grid_pdfexport") //Id is combination of Grid's ID and itemname.
+        {
+            //Memory stream to file stream exporting.
+            MemoryStream streamDoc1 = await DefaultGrid.ExportToPdfAsync(asMemoryStream: true);
+
+            //Create a copy of streamDoc1.
+            MemoryStream copyOfStreamDoc1 = new MemoryStream(streamDoc1.ToArray());
+            //For creating the exporting location with file name, for this need to specify the physical exact path of the file.
+            string filePaths = "C:Users/abc/Downloads/SampleTestPdf.pdf";
+
+            // Create a FileStream to write the moryStream contents to a file.
+            using (FileStream fileStream = File.Create(filePaths))
+            {
+                 // Copy the MemoryStream data to the FileStream.
+                 copyOfStreamDoc1.CopyTo(fileStream);
+            }
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="OrderData.cs" %}
+
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData(int orderID, string customerID, double freight, string shipCity, string shipName)
+    {
+        this.OrderID = orderID;
+        this.CustomerID = customerID;
+        this.Freight = freight;
+        this.ShipCity = shipCity;
+        this.ShipName = shipName;
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        {
+            Orders.Add(new OrderData(10248, "VINET", 32.38, "Reims", "Vins et alcools Chevalier"));
+            Orders.Add(new OrderData(10249, "TOMSP", 11.61, "Münster", "Toms Spezialitäten"));
+            Orders.Add(new OrderData(10250, "HANAR", 65.83, "Rio de Janeiro", "Hanari Carnes"));
+            Orders.Add(new OrderData(10251, "VICTE", 41.34, "Lyon", "Victuailles en stock"));
+            Orders.Add(new OrderData(10252, "SUPRD", 51.3, "Charleroi", "Suprêmes délices"));
+            Orders.Add(new OrderData(10253, "HANAR", 58.17, "Rio de Janeiro", "Hanari Carnes"));
+            Orders.Add(new OrderData(10254, "CHOPS", 22.98, "Bern", "Chop-suey Chinese"));
+            Orders.Add(new OrderData(10255, "RICSU", 148.33, "Genève", "Richter Supermarkt"));
+            Orders.Add(new OrderData(10256, "WELLI", 13.97, "Resende", "Wellington Import Export"));
+            Orders.Add(new OrderData(10257, "HILAA", 81.91, "San Cristóbal", "Hila Alimentos"));
+            Orders.Add(new OrderData(10258, "ERNSH", 140.51, "Graz", "Ernst Handel"));
+            Orders.Add(new OrderData(10259, "CENTC", 3.25, "México D.F.", "Centro comercial"));
+            Orders.Add(new OrderData(10260, "OTTIK", 55.09, "Köln", "Ottilies Käseladen"));
+            Orders.Add(new OrderData(10261, "QUEDE", 3.05, "Rio de Janeiro", "Que delícia"));
+            Orders.Add(new OrderData(10262, "RATTC", 48.29, "Albuquerque", "Rattlesnake Canyon Grocery"));
+        }
+
+        return Orders;
+    }
+
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Merging Two Pdf Memory Streams
+
+When merging two Pdf memory streams and exporting the resulting file as an Pdf workbook, you can leverage the capabilities of the [Syncfusion.Blazor.XlslO](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core/) package to copy a worksheet between workbooks or within the same workbook.
+
+The example below demonstrates how to merge two memory streams and export that merged memory stream for browser download.
+
+In this example, there are two memory streams: *streamDoc1* and *streamDoc2*. streamDoc1 represents the normal grid memory stream, while streamDoc2 contains the memory stream of a customized grid using the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) class. The merging process combines the contents of streamDoc1 with streamDoc2, resulting in a combined workbook saved as a memory stream. This merged memory stream is then utilized to initiate the browser download.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+@using System.IO;
+@using Syncfusion.PdfExport;
+@using Syncfusion.Pdf
+@inject IJSRuntime JSRuntime
+
+<SfGrid ID="Grid" @ref="Grid" DataSource="@Orders" Toolbar="@(new List<string>() { "PdfExport"})" AllowPdfExport="true" AllowPaging="true">
+    <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="OrderData"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150" />
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120" />
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="150" />
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="150" />
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private SfGrid<OrderData> Grid;
+    public List<OrderData> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Id == "Grid_pdfexport") //Id is combination of Grid's ID and itemname.
+        {
+            //Merging two memory stream.
+            MemoryStream mergedStream = new MemoryStream();
+
+            //Creates a PDF document.
+            Syncfusion.Pdf.PdfDocument finalDoc = new Syncfusion.Pdf.PdfDocument();
+            MemoryStream streamDoc1 = await DefaultGrid.ExportToPdfAsync(asMemoryStream: true);
+            //Create a copy of streamDoc1 to access the memory stream.
+            MemoryStream copyOfStreamDoc1 = new MemoryStream(streamDoc1.ToArray());
+
+            //Customized grid for memory stream export.
+            PdfExportProperties ExportProperties = new PdfExportProperties();
+            PdfTheme Theme = new PdfTheme();
+            PdfBorder HeaderBorder = new PdfBorder();
+            HeaderBorder.Color = "#000000";
+
+            PdfThemeStyle HeaderThemeStyle = new PdfThemeStyle()
+            {
+                FontColor = "#6A5ACD",
+                FontName = "Comic Sans MS",
+                FontSize = 17,
+                Bold = true,
+                Border = HeaderBorder
+            };
+            Theme.Header = HeaderThemeStyle;
+
+            PdfThemeStyle RecordThemeStyle = new PdfThemeStyle()
+            {
+                FontColor = "#800080",
+                FontName = "Comic Sans MS",
+                FontSize = 14,
+                Border = HeaderBorder
+            };
+            Theme.Record = RecordThemeStyle;
+
+            ExportProperties.Theme = Theme;
+            MemoryStream streamDoc2 = await DefaultGrid.ExportToPdfAsync(asMemoryStream: true, ExportProperties);
+            //Create a copy of streamDoc2 to access the memory stream.
+            MemoryStream copyOfStreamDoc2 = new MemoryStream(streamDoc2.ToArray());
+
+            //Creates a PDF stream for merging.
+            Stream[] streams = { copyOfStreamDoc1, copyOfStreamDoc2 };
+            Syncfusion.Pdf.PdfDocument.Merge(finalDoc, streams);
+            finalDoc.Save(mergedStream);
+            await JSRuntime.InvokeVoidAsync("saveAsFile", new object[] { "MemoryStreamMerge.pdf", Convert.ToBase64String(mergedStream.ToArray()), true });
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% highlight js tabtitle="wwwroot/scripts/saveAsFile.js" %}
+
+function saveAsFile(filename, bytesBase64) {
+    var link = document.createElement('a');
+    link.download = filename;
+    link.href = "data:application/octet-stream;base64," + bytesBase64;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="OrderData.cs" %}
+
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData(int orderID, string customerID, double freight, string shipCity, string shipName)
+    {
+        this.OrderID = orderID;
+        this.CustomerID = customerID;
+        this.Freight = freight;
+        this.ShipCity = shipCity;
+        this.ShipName = shipName;
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        {
+            Orders.Add(new OrderData(10248, "VINET", 32.38, "Reims", "Vins et alcools Chevalier"));
+            Orders.Add(new OrderData(10249, "TOMSP", 11.61, "Münster", "Toms Spezialitäten"));
+            Orders.Add(new OrderData(10250, "HANAR", 65.83, "Rio de Janeiro", "Hanari Carnes"));
+            Orders.Add(new OrderData(10251, "VICTE", 41.34, "Lyon", "Victuailles en stock"));
+            Orders.Add(new OrderData(10252, "SUPRD", 51.3, "Charleroi", "Suprêmes délices"));
+            Orders.Add(new OrderData(10253, "HANAR", 58.17, "Rio de Janeiro", "Hanari Carnes"));
+            Orders.Add(new OrderData(10254, "CHOPS", 22.98, "Bern", "Chop-suey Chinese"));
+            Orders.Add(new OrderData(10255, "RICSU", 148.33, "Genève", "Richter Supermarkt"));
+            Orders.Add(new OrderData(10256, "WELLI", 13.97, "Resende", "Wellington Import Export"));
+            Orders.Add(new OrderData(10257, "HILAA", 81.91, "San Cristóbal", "Hila Alimentos"));
+            Orders.Add(new OrderData(10258, "ERNSH", 140.51, "Graz", "Ernst Handel"));
+            Orders.Add(new OrderData(10259, "CENTC", 3.25, "México D.F.", "Centro comercial"));
+            Orders.Add(new OrderData(10260, "OTTIK", 55.09, "Köln", "Ottilies Käseladen"));
+            Orders.Add(new OrderData(10261, "QUEDE", 3.05, "Rio de Janeiro", "Que delícia"));
+            Orders.Add(new OrderData(10262, "RATTC", 48.29, "Albuquerque", "Rattlesnake Canyon Grocery"));
+        }
+        return Orders;
+    }
+
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
