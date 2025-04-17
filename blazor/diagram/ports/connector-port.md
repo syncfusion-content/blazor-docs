@@ -11,7 +11,7 @@ documentation: ug
 
 Creating connector ports is similar to creating node ports. To define connector ports, you need to create a collection of `PathPort` and assign it to the connector’s `Ports` property.
 
-The following code example demonstrates how to create a connector port:
+The following code example demonstrates how to create a connector port.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -67,7 +67,7 @@ You can set any value between 0 and 1 to position the port at a specific locatio
 | 0.5 | ![Center](../images/ConnectorPort/ConnectorPortDefault.png) |
 | 1 | ![End](../images/ConnectorPort/ConnectorPortPathPosition1.png) |
 
-The following code example demonstrates how to set the PathPosition for a connector port:
+The following code example demonstrates how to set the PathPosition for a connector port.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -112,7 +112,7 @@ The following code example demonstrates how to set the PathPosition for a connec
 
 Connector ports are used to establish connections between connectors. To create such a connection, set the `SourcePortID` or `TargetPortID` property to the ID of the corresponding port on the connector.
 
-The following code example demonstrates how to connect one connector to a port on another connector:
+The following code example demonstrates how to connect one connector to a port on another connector.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
