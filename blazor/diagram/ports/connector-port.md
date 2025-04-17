@@ -50,6 +50,8 @@ The following code example demonstrates how to create a connector port.
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ConnectorPort/CreateConnectorPorts)
+
 ## Port PathPosition
 
 The `PathPosition` property allows you to place a connector port along the path of a connector. It accepts a value between 0 and 1, where:
@@ -107,6 +109,7 @@ The following code example demonstrates how to set the PathPosition for a connec
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ConnectorPort/ConnectorPortPathPosition)
 
 ## Connector port connection
 
@@ -175,6 +178,7 @@ The following code example demonstrates how to connect one connector to a port o
     }
 }
 ```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ConnectorPort/ConnectorPortConnection)
 
 ## See also
 
