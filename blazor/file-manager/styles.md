@@ -28,6 +28,9 @@ Use the following CSS to customize the File Manager navigation pane.
     background: #0000ff;
 }
 ```
+
+![Blazor File Manager displays Customized Navigation Pane](images/blazor-filemanager-customized-navigation-pane.png)
+
 ## Customizing the File Manager thumbnail
 
 Use the following CSS to customize the File Manager thumbnail.
@@ -186,6 +189,8 @@ Use the following CSS to customize the File Manager thumbnail.
 
 ```
 
+![Blazor FileManager displays Custom Thumbnail](images/blazor-filemanager-custom-thumbnail.png)
+
 ## Customizing the File Manager layout
 
 Use the following CSS to customize the File Manager layout.
@@ -195,7 +200,7 @@ Use the following CSS to customize the File Manager layout.
 .e-filemanager .e-layout-content {
     border: 3px solid #000000;
 }
-    /*For File Manager breadcrumb */
+/*For File Manager breadcrumb */
 .e-filemanager .e-layout-content .e-address {
     border-bottom: 2px solid #000000;
     background: #00ffff;
@@ -205,11 +210,13 @@ Use the following CSS to customize the File Manager layout.
     background: #7fffd4;
 }
 /*For File Manager details view */
-    .e-filemanager .e-layout-content .e-grid {
+.e-filemanager .e-layout-content .e-grid {
     background: #7fffd4;
 }
 
 ```
+
+![Blazor FileManager displays Custom Layout](images/blazor-filemanager-custom-layout.png)
 
 ## Customizing the File Manager Toolbar
 
@@ -218,20 +225,12 @@ Use the following CSS to customize the File Manager Toolbar.
 ```css
 
 .e-filemanager .e-toolbar {
-    background: yellow;
     border: 2px solid green;
-}
-
-/*For File Manager Toolbar items*/
-.e-filemanager .e-toolbar .e-toolbar-item {
-    background: aqua;
-    border: 1px solid cornflowerblue;
 }
 
 /*For File Manager Toolbar buttons*/
 .e-filemanager .e-toolbar .e-tbar-btn {
     background: green;
-    border: 1px solid orange;
 }
 
 /*For File Manager Toolbar items icon*/
@@ -242,19 +241,28 @@ Use the following CSS to customize the File Manager Toolbar.
 
 ```
 
+![Blazor FileManager displays Custom Toolbar](images/blazor-filemanager-custom-toolbar.png)
+
 ## Customizing the File Manager selected files/folders
 
 Use the following CSS to customize the File Manager selected files/folders.
 
 ```css
 
-.e-filemanager li.e-list-item.e-large-icon.e-active.e-focus {
+/*For File Manager largeicons view */
+.e-filemanager li.e-list-item.e-large-icon.e-active {
     background: #ee82ee;
     border: 2px solid #00ffff;
     border-radius: 10%;
 }
+/*For File Manager details view */ 
+.e-filemanager .e-grid td.e-active {
+    background: #ee82ee;
+}
 
 ```
+
+![Blazor FileManager displays Custom Selected Items](images/blazor-filemanager-custom-selected-items.png)
 
 ## Customizing the File Manager Dialog
 
@@ -287,3 +295,5 @@ Use the following CSS to customize the File Manager Dialog.
 }
 
 ```
+
+![Blazor FileManager displays Custom Dialog](images/blazor-filemanager-custom-dialog.png)
