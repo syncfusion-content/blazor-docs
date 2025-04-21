@@ -460,7 +460,7 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNVyjfjkrhfaJLAr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Disable the Context menu for specific columns in DataGrid
+## Disable the context menu for specific columns in DataGrid
 
 In certain scenarios, you may want to restrict the context menu from appearing on specific columns within the Syncfusion Blazor DataGrid. This can be helpful to prevent actions like copying or editing on columns that contain sensitive or read-only data. 
 
@@ -571,17 +571,17 @@ public class OrderData
 
 ## Enable or disable context menu items
 
-The Syncfusion Blazor DataGrid allows you to dynamically enable or disable specific context menu items using `Disabled` property. This feature is particularly useful in scenarios where certain actions, such as Edit or Delete, should be restricted based on the column, the data in the row, or other custom logic.
+The Syncfusion Blazor DataGrid allows you to dynamically enable or disable specific context menu items using [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Disabled)property. This feature is particularly useful in scenarios where certain actions, such as Edit or Delete, should be restricted based on the column, the data in the row, or other custom logic.
 
 To achieve this, handle the [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events#contextmenuopen) event. This event is triggered before the context menu is opened, allowing you to enable or disable the desired menu items dynamically.
 
-To enable or disable context menu items dynamically:
+To enable or disable context menu items dynamically, follow the steps below:
 
 1. Handle the `ContextMenuOpen` event of the DataGrid and use the `Args.ContextMenuObj.Items` collection within the handler to access the context menu items.
 
 2. Set the `Disabled` property of the desired item(s) to `true` or `false` based on your logic.
 
-The following example demonstrates how to dynamically enable or disable **Copy** context menu items in the Grid using the `ContextMenuOpen` event:
+The following example demonstrates how to dynamically enable or disable **Copy** context menu items in the Grid using the `ContextMenuOpen` event. The **Copy** item is disabled for the **ShipCity** column and enabled for other columns.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -680,13 +680,13 @@ The Syncfusion Blazor DataGrid  provides the flexibility to show or hide both de
 
 This can be achieved using  the [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events#contextmenuopen) event. This event is triggered before the context menu is opened , allowing you to customize context menu items visibility dynamically.
 
-To control the visibility of context menu items:
+To control the visibility of context menu items, follow the steps below:
 
 1. Handle the `ContextMenuOpen` event of the Grid and access the `Args.ContextMenu.Items` collection within the event handler to modify the visibility of specific menu items.
 
-2. Set the `Hidden` property of the desired item(s) to **true** or **false** based on your conditions.
+2. Set the [Hidden](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Hidden) property of `MenuItems` to **true** or **false**, based on your conditions
 
-The following example demonstrates how to dynamically show or hide **Edit** context menu items in the Grid using the `ContextMenuOpen` event:
+The following example demonstrates how to dynamically show or hide **Edit** context menu items in the Grid using the `ContextMenuOpen` event. The **Edit** item is disabled for the **CustomerID** column and enabled for other columns.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -706,7 +706,6 @@ The following example demonstrates how to dynamically show or hide **Edit** cont
 </SfGrid>
 
 @code {
-    private SfGrid<OrderData> Grid;
     public List<OrderData> Orders { get; set; }
 
 
