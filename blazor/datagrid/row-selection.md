@@ -260,6 +260,124 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXVStrjfsuosZEoz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+## Select rows in any page based on index value 
+
+The Grid allows you to select rows in any page based on their index value. This feature is useful when you want to perform specific actions on rows, such as highlighting, applying styles, or executing operations, regardless of their location across multiple pages within the grid.
+
+To achieve this, you can utilize the [SelectRowsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRowsAsync_System_Int32___) method and the [GoToPageAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GoToPageAsync_System_Int32_) method of the Grid. By handling the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event of `DropDownList`, you can implement the logic to navigate to the desired page and select the row based on the index value. 
+
+The following example demonstrates how to select rows in any page based on index value using `ValueChange` event:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.DropDowns
+
+<div style="display:flex; margin-bottom:5px;">
+    <label style="margin: 5px 5px 0 0"> Select Row :</label>
+    <SfDropDownList TValue="int" TItem="DropDownOrder" Width="150px" Placeholder="Select Row Index" DataSource="@DropDownData">
+        <DropDownListEvents TItem="DropDownOrder" TValue="int" ValueChange="@ValueChange"></DropDownListEvents>
+        <DropDownListFieldSettings Text="Text" Value="Value"></DropDownListFieldSettings>
+    </SfDropDownList>
+</div>
+<SfGrid @ref="Grid" DataSource="@Orders" AllowSelection="true" AllowPaging="true" Height="315">
+    <GridSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Multiple" Mode="Syncfusion.Blazor.Grids.SelectionMode.Row"></GridSelectionSettings>
+    <GridPageSettings PageSize="@PageSizeValue"></GridPageSettings> 
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" Width="120"></GridColumn> 
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private SfGrid<Order> Grid;
+    public List<Order> Orders { get; set; }
+    protected override void OnInitialized()
+    {
+        Orders = Order.GetAllRecords();
+    }
+    public class DropDownOrder
+    {
+        public string Text { get; set; }
+        public string Value { get; set; }
+    }
+    public int PageSizeValue = 10;
+    private List<DropDownOrder> DropDownData = new()
+    {
+        new() { Text = "1", Value = "1" },
+        new() { Text = "2", Value = "2" },
+        new() { Text = "30", Value = "30" },
+        new() { Text = "80", Value = "80" },
+        new() { Text = "110", Value = "110" },
+        new() { Text = "120", Value = "120" },
+        new() { Text = "210", Value = "210" },
+        new() { Text = "310", Value = "310" },
+        new() { Text = "410", Value = "410" },
+        new() { Text = "230", Value = "230" }
+    };
+    private async Task ValueChange(ChangeEventArgs<int, DropDownOrder> Args)
+    {
+        int seletedrowIndex = Args.Value;
+        int pageSize = Grid.PageSettings.PageSize;
+        int pageIndex = (seletedrowIndex - 1) / pageSize + 1;
+        int rowIndex = (seletedrowIndex - 1) % pageSize;      
+        await Grid.GoToPageAsync(pageIndex);
+        await Grid.SelectRowAsync(rowIndex, true);        
+    }    
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="Order.cs" %}
+
+public class Order
+{
+    public static List<Order> Orders = new List<Order>();
+    public Order() { }
+    public Order(int orderID, string customerID, double freight, DateTime orderDate, string shipCountry)
+    {
+        this.OrderID = orderID;
+        this.CustomerID = customerID;
+        this.Freight = freight;
+        this.OrderDate = orderDate;
+        this.ShipCountry = shipCountry;
+    }
+    public static List<Order> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        {
+            string[] customerIDs = { "VINET", "TOMSP", "HANAR", "SUPRD", "CHOPS", "RATTC", "ERNSH", "FOLKO", "BLONP", "WARTH" };
+            string[] countries = { "France", "Germany", "Brazil", "Belgium", "Switzerland", "USA", "Canada", "Mexico", "Italy", "UK" };
+            Random rand = new Random();
+            DateTime startDate = new DateTime(2020, 1, 1);
+            for (int i = 0; i < 500; i++)
+            {
+                int orderId = 10248 + i;
+                string customerId = customerIDs[rand.Next(customerIDs.Length)];
+                double freight = Math.Round(rand.NextDouble() * 500, 2); 
+                DateTime orderDate = startDate.AddDays(rand.Next(0, 1000));
+                string shipCountry = countries[rand.Next(countries.Length)];
+                Orders.Add(new Order(orderId, customerId, freight, orderDate, shipCountry));
+            }
+        }
+        return Orders;
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public DateTime OrderDate { get; set; }
+    public string ShipCountry { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVojfLsCxSoSKyn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## Multiple row selection by single click on row 
 
 The DataGrid allows you to perform multiple row selections by simply clicking on rows one by one without pressing the CTRL or SHIFT keys. This means that when you click on a row, it will be selected, and clicking on another row will add it to the selection without deselecting the previously selected rows. To deselect a previously selected row, you can click on the row again, and it will be unselected.
@@ -831,7 +949,7 @@ public class OrderDetails
             {
                 int orderId = 10247 + i;
                 string customerId = customerIds[rand.Next(customerIds.Length)];
-                double freight = Math.Round(rand.NextDouble() * 200, 2); // up to 200
+                double freight = Math.Round(rand.NextDouble() * 200, 2); 
                 string country = countries[rand.Next(countries.Length)];
                 order.Add(new OrderDetails(orderId, customerId, freight, country));
             }
