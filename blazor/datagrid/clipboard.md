@@ -208,6 +208,8 @@ The AutoFill feature in the Syncfusion Blazor DataGrid allows you to copy the da
 
 This feature is enabled by defining [EnableAutoFill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableAutoFill) property as **true**.
 
+The following example demonstrates how to enable the autofill feature in the Grid.
+
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
