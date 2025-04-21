@@ -139,7 +139,7 @@ app.MapControllers();
  
 **5. Run the application**
  
-Run the application in Visual Studio. The API will be accessible at a URL like **https://localhost:xxxx/api/Grid** (replace **xxxx** with the port number). Verify that the API returns the order data.
+Run the application in Visual Studio. The API will be accessible at a URL like **https://localhost:xxxx/api/Grid** (where **xxxx** represents the port number). Please verify that the API returns the order data.
  
 ![WebApiAdaptor-data](../images/web-api-adaptor-data.png)
 
@@ -147,7 +147,7 @@ Run the application in Visual Studio. The API will be accessible at a URL like *
  
 To integrate the Syncfusion Blazor DataGrid into your project using Visual Studio, follow the below steps:
  
-**1. Install Syncfusion Blazor Grid and Themes NuGet packages**
+**1. Install Syncfusion Blazor DataGrid and Themes NuGet packages**
  
 To add the Blazor DataGrid in the app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
  
@@ -199,9 +199,9 @@ Include the theme stylesheet and script references in the **~/Components/App.raz
 ```
  
 > * Refer to the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic for various methods to include themes (e.g., Static Web Assets, CDN, or CRG).
-> * Set the `rendermode` to **InteractiveServer** or **InteractiveAuto** in your Blazor Web App configuration.
+> * Set the render mode to **InteractiveServer** or **InteractiveAuto** in your Blazor Web App configuration.
 
-**4. Add Blazor Grid and configure with server**
+**4. Add Blazor DataGrid and configure with server**
  
 To connect the Blazor DataGrid to a hosted API, use the [Url]( https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property of [SfDataManager]( https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html). The `SfDataManager` offers multiple adaptor options to connect with remote database based on an API service. Below is an example of the [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor) configuration where an API service are set up to return the resulting data in the **items** and **count** format. Update the **Index.razor** file as follows.
  
@@ -260,15 +260,15 @@ namespace WebApiAdaptor.Controllers
  
 **5. Run the application**
  
-When you run the application, the Blazor DataGrid  will display data fetched from the API.
+When you run the application, the Blazor DataGrid will display data fetched from the API.
  
-![WebMethod Adaptor Data](../images/blazor-datagrid-adaptors.gif)
+![WebApiAdaptor Data](../images/blazor-datagrid-adaptors.gif)
 
 ## Handling searching operation
 
 To handle search operations, implement the search logic on the server side according to the received OData-formatted query.
 
-![WebApiAdaptor searching](../images/web-api-adaptor-searching.png)
+![WebApiAdaptor- Searching](../images/web-api-adaptor-searching.png)
 
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
@@ -354,7 +354,7 @@ public object GetOrderData()
 
 To handle filter operations, ensure that your Web API endpoint supports filtering based on OData-formatted queries. Implement the filtering logic on the server side as shown in the following code snippet.
 
-![WebApi Adaptor filtering](../images/web-api-adaptor-filtering.png)
+![WebApiAdaptor - Filtering](../images/web-api-adaptor-filtering.png)
 
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
@@ -467,11 +467,11 @@ To handle sorting actions, implement sorting logic on the server side according 
 
 ***Ascending Sorting***
 
-![Sorting Ascending query](../images/web-api-adaptor-asc-sorting.png)
+![WebApiAdaptor - Sorting Ascending query](../images/web-api-adaptor-asc-sorting.png)
 
 ***Descending Sorting***
 
-![Sorting Descending query](../images/web-api-adaptor-desc-sorting.png)
+![WebApiAdaptor - Sorting Descending query](../images/web-api-adaptor-desc-sorting.png)
 
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
@@ -557,7 +557,7 @@ public object GetOrderData()
 
 Implement paging logic on the server-side according to the received OData-formatted query. Ensure that the endpoint supports paging based on the specified criteria.
 
-![WebApiAdaptor paging](../images/web-api-adaptor-paging.png)
+![WebApiAdaptor - Paging](../images/web-api-adaptor-paging.png)
 
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
@@ -640,13 +640,13 @@ To enable CRUD operations in the Syncfusion Blazor DataGrid component, follow th
 {% endhighlight %}
 {% endtabs %}
 
-> Normal/Inline editing is the default edit [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) for the Grid. To enable CRUD operations, ensure that the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property is set to **true** for a specific Grid column, ensuring that its value is unique.
+> Normal/Inline editing is the default edit [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) for the DataGrid. To enable CRUD operations, ensure that the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property is set to **true** for a specific DataGrid column, ensuring that its value is unique.
 
-### Insert operation
+**Insert operation:**
 
-To insert a new record into your Syncfusion Grid, you can utilize the `HttpPost` method in your server application. Below is a sample implementation of inserting a record using the **GridController**:
+To insert a new record into your Syncfusion Blazor DataGrid, you can utilize the `HttpPost` method in your server application. Below is a sample implementation of inserting a record using the **GridController**:
 
-![Insert record](../images/web-api-adaptor-insert.png)
+![Insert Record](../images/web-api-adaptor-insert.png)
 
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
@@ -665,11 +665,11 @@ public void Post([FromBody] OrdersDetails newRecord)
 {% endhighlight %}
 {% endtabs %}
 
-### Update operation
+**Update operation:**
 
-Updating a record in the Syncfusion Grid can be achieved by utilizing the `HttpPut` method in your controller. Here's a sample implementation of updating a record:
+Updating a record in the Syncfusion Blazor DataGrid can be achieved by utilizing the `HttpPut` method in your controller. Here's a sample implementation of updating a record:
 
-![Update record](../images/web-api-adaptor-update.png)
+![Update Record](../images/web-api-adaptor-update.png)
 
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
@@ -697,7 +697,7 @@ public void Put([FromBody] OrdersDetails updatedOrder)
 {% endhighlight %}
 {% endtabs %}
 
-### Delete operation
+**Delete operation:**
 
 To delete a record from your Syncfusion Blazor DataGrid, you can use the `HttpDelete` method in your controller. Below is a sample implementation:
 
@@ -713,7 +713,7 @@ To delete a record from your Syncfusion Blazor DataGrid, you can use the `HttpDe
 [HttpDelete("{id}")]
 public void Delete(int id)
 {
-    // Find the order to remove by id.
+    // Find the existing record that matches the deleted record's "OrderID".
     var orderToRemove = OrdersDetails.GetAllRecords().FirstOrDefault(order => order.OrderID == id);
     // If the order exists, remove it.
     if (orderToRemove != null)
