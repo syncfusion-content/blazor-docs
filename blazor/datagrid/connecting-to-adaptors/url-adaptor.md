@@ -147,7 +147,7 @@ app.MapControllers();
  
 **5. Run the application**
  
-Run the application in Visual Studio. The API will be accessible at a URL like **https://localhost:xxxx/api/grid** (replace **xxxx** with the port number). Verify that the API returns the order data.
+Run the application in Visual Studio. The API will be accessible at a URL like **https://localhost:xxxx/api/grid** (where **xxxx** represents the port number). Please verify that the API returns the order data.
  
 ![UrlAdaptor-data](../images/blazor-datagrid-adaptors-data.png)
 
@@ -206,7 +206,7 @@ Include the theme stylesheet and script references in the **~/Components/App.raz
 ```
  
 > * Refer to the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic for various methods to include themes (e.g., Static Web Assets, CDN, or CRG).
-> * Set the `rendermode` to **InteractiveServer** or **InteractiveAuto** in your Blazor Web App configuration.
+> * Set the render mode to **InteractiveServer** or **InteractiveAuto** in your Blazor Web App configuration.
  
 **4. Add Blazor DataGrid and configure with server**
  
@@ -285,7 +285,7 @@ namespace URLAdaptor.Controllers
  
 When you run the application, the Blazor DataGrid will display data fetched from the API.
  
-![UrlAdaptor data](../images/blazor-datagrid-adaptors.gif)
+![UrlAdaptor Data](../images/blazor-datagrid-adaptors.gif)
  
 > * The Syncfusion Blazor DataGrid supports server-side operations such as **searching**, **sorting**, **filtering**, **aggregating**, and **paging**. These can be handled using methods like [PerformSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSearching__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_SearchFilter__), [PerformFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformFiltering__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_WhereFilter__System_String_), [PerformSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSorting__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_Sort__), [PerformTake](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformTake__1_System_Linq_IQueryable___0__System_Int32_), and [PerformSkip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSkip__1_System_Linq_IQueryable___0__System_Int32_) from the **Syncfusion.Blazor.Data** package. Let's explore how to manage these data operations using the `UrlAdaptor`.
 > * In an API service project, add **Syncfusion.Blazor.Data** by opening the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install it.
@@ -294,7 +294,7 @@ When you run the application, the Blazor DataGrid will display data fetched from
 
 To handle the searching operation, ensure that your API endpoint supports custom searching criteria. Implement the searching logic on the server side using the [PerformSearching](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSearching__1_System_Linq_IQueryable___0__System_Collections_Generic_List_Syncfusion_Blazor_Data_SearchFilter__) method from the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class. This allows the custom data source to undergo searching based on the criteria specified in the incoming [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) object.
 
-![UrlAdaptor searching](../images/urladaptor-searching.png)
+![UrlAdaptor - Searching](../images/urladaptor-searching.png)
 
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
@@ -308,7 +308,7 @@ To handle the searching operation, ensure that your API endpoint supports custom
 [Route("api/[controller]")]
 public object Post([FromBody] DataManagerRequest DataManagerRequest)
 {
-    // Retrieve data from the data source (e.g., database).
+    // Retrieve data from the data source.
     IQueryable<OrdersDetails> DataSource = GetOrderData().AsQueryable();
 
     // Handling searching operation.
@@ -368,7 +368,7 @@ To handle the filtering operation, ensure that your API endpoint supports custom
 [Route("api/[controller]")]
 public object Post([FromBody] DataManagerRequest DataManagerRequest)
 {
-    // Retrieve data from the data source (e.g., database).
+    // Retrieve data from the data source.
     IQueryable<OrdersDetails> DataSource = GetOrderData().AsQueryable();
 
     // Handling filtering operation.
@@ -434,7 +434,7 @@ To handle the sorting operation, ensure that your API endpoint supports custom s
 [Route("api/[controller]")]
 public object Post([FromBody] DataManagerRequest DataManagerRequest)
 {
-    // Retrieve data from the data source (e.g., database).
+    // Retrieve data from the data source.
     IQueryable<OrdersDetails> DataSource = GetOrderData().AsQueryable();
 
     // Handling sorting operation.
@@ -476,7 +476,7 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
 
 To handle the paging operation, ensure that your API endpoint supports custom paging criteria. Implement the paging logic on the server side using the [PerformTake](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformTake__1_System_Linq_IQueryable___0__System_Int32_) and [PerformSkip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html#Syncfusion_Blazor_DataOperations_PerformSkip__1_System_Linq_IQueryable___0__System_Int32_) methods from the [DataOperations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataOperations.html) class. This allows the custom data source to undergo paging based on the criteria specified in the incoming [DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) object.
 
-![UrlAdaptor paging](../images/urladaptor-paging.png)
+![UrlAdaptor - Paging](../images/urladaptor-paging.png)
 
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
@@ -490,7 +490,7 @@ To handle the paging operation, ensure that your API endpoint supports custom pa
 [Route("api/[controller]")]
 public object Post([FromBody] DataManagerRequest DataManagerRequest)
 {
-    // Retrieve data from the data source (e.g., database).
+    // Retrieve data from the data source.
     IQueryable<OrdersDetails> DataSource = GetOrderData().AsQueryable();
 
     // Get the total records count.
@@ -592,7 +592,7 @@ public class CRUDModel<T> where T : class
 
 To insert a new record, use the [InsertUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_InsertUrl) property to specify the controller action mapping URL for the insert operation. The details of the newly added record are passed to the **newRecord** parameter.
 
-![Insert record](../images/urladaptor-insert-record.png)
+![Insert Record](../images/urladaptor-insert-record.png)
 
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
@@ -620,7 +620,7 @@ public void Insert([FromBody] CRUDModel<OrdersDetails> newRecord)
 
 For updating existing records, use the [UpdateUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_UpdateUrl) property to specify the controller action mapping URL for the update operation. The details of the updated record are passed to the **updatedRecord** parameter.
 
-![Update record](../images/urladaptor-update-record.png)
+![Update Record](../images/urladaptor-update-record.png)
 
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
@@ -684,9 +684,9 @@ public void Remove([FromBody] CRUDModel<OrdersDetails> deletedRecord)
 {% endhighlight %}
 {% endtabs %}
 
-![UrlAdaptor crud operations](../images/adaptor-crud-operation.gif)
+![UrlAdaptor CRUD operations](../images/adaptor-crud-operation.gif)
 
-**Single method for performing all CRUD operations**
+**Single method for performing all CRUD operations:**
 
 Using the [CrudUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_CrudUrl) property, the controller action mapping URL can be specified to perform all CRUD operations on the server side using a single method, instead of specifying separate controller action methods for CRUD (Insert, Update, and Delete) operations.
 
@@ -755,7 +755,7 @@ public void CrudUpdate([FromBody] CRUDModel<OrdersDetails> request)
 {% endhighlight %}
 {% endtabs %}
 
-**Batch operation**
+**Batch operation:**
 
 To perform batch operation, define the edit [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) as **Batch** and specify the [BatchUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_BatchUrl) property in the `DataManager`. Use the **Add** toolbar button to insert new row in batch editing mode. To edit a cell, double-click the desired cell and update the value as required. To delete a record, simply select the record and press the **Delete** toolbar button. Now, all CRUD operations will be executed in single request. Clicking the **Update** toolbar button will update the newly added, edited, or deleted records from the **OrdersDetails** table using a single API POST request.
 
@@ -787,7 +787,7 @@ public IActionResult BatchUpdate([FromBody] CRUDModel<OrdersDetails> batchModel)
         // Iterate through each changed record.
         foreach (var changedOrder in batchModel.changed)
         {
-            // Find the existing record that matches the changed record's OrderID.
+            // Find the existing record that matches the changed record's "OrderID".
             var existingOrder = OrdersDetails.GetAllRecords().FirstOrDefault(or => or.OrderID == changedOrder.OrderID);
             if (existingOrder != null)
             {
@@ -806,7 +806,7 @@ public IActionResult BatchUpdate([FromBody] CRUDModel<OrdersDetails> batchModel)
         // Iterate through each deleted record.
         foreach (var deletedOrder in batchModel.deleted)
         {
-            // Find the existing record that matches the deleted record's OrderID.
+            // Find the existing record that matches the deleted record's "OrderID".
             var orderToDelete = OrdersDetails.GetAllRecords().FirstOrDefault(or => or.OrderID == deletedOrder.OrderID);
             if (orderToDelete != null)
             {
@@ -842,4 +842,4 @@ public IActionResult BatchUpdate([FromBody] CRUDModel<OrdersDetails> batchModel)
 {% endhighlight %}
 {% endtabs %}
 
-![UrlAdaptor batch editing](../images/urladaptor-batch-editing.gif)
+![UrlAdaptor - Batch Editing](../images/urladaptor-batch-editing.gif)
