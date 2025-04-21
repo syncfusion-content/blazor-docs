@@ -149,13 +149,13 @@ app.MapControllers();
  
 Run the application in Visual Studio. The API will be accessible at a URL like **https://localhost:xxxx/api/grid** (where **xxxx** represents the port number). Please verify that the API returns the order data.
  
-![UrlAdaptor-data](../images/blazor-datagrid-adaptors-data.png)
+![UrlAdaptor Data](../images/blazor-datagrid-adaptors-data.png)
 
 ## Connecting Syncfusion Blazor DataGrid to an API service
  
 To integrate the Syncfusion Blazor DataGrid into your project using Visual Studio, follow the below steps:
  
-**1. Install Syncfusion Blazor Grid and Themes NuGet packages**
+**1. Install Syncfusion Blazor DataGrid and Themes NuGet packages**
  
 To add the Blazor DataGrid in the app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
  
@@ -283,7 +283,7 @@ namespace URLAdaptor.Controllers
  
 **5. Run the application**
  
-When you run the application, the Blazor DataGrid will display data fetched from the API.
+When you run the application, the Blazor DataGrid  will display data fetched from the API.
  
 ![UrlAdaptor Data](../images/blazor-datagrid-adaptors.gif)
  
@@ -653,7 +653,7 @@ public void Update([FromBody] CRUDModel<OrdersDetails> updatedRecord)
 {% endhighlight %}
 {% endtabs %}
 
-**Delete operation**
+**Delete operation:**
 
 To delete existing records, use the [RemoveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_RemoveUrl) property to specify the controller action mapping URL for the delete operation. The primary key value of the deleted record is passed to the **deletedRecord** parameter.
 
