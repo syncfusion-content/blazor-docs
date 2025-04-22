@@ -612,13 +612,13 @@ The following example demonstrates how to dynamically enable or disable **Copy**
 
     public void OnContextMenuOpen(ContextMenuOpenEventArgs<OrderData> Args)
     {
-        if (Args.Column.Field == "ShipCity") 
+        if (Args.Column.Field == "ShipCity") // You can check condition based on your requirement.
         {
-            Args.ContextMenu.Items[0].Disabled = true;
+            Args.ContextMenu.Items[0].Disabled = true; // To disable edit context menu item.
         }
         else
         {
-            Args.ContextMenu.Items[0].Disabled = false;
+            Args.ContextMenu.Items[0].Disabled = false; // To enable edit context menu item.
         }
     }
 }
