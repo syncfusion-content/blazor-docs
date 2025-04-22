@@ -180,6 +180,177 @@ The following example demonstrates how to add a custom text to the group caption
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hXVzjiXvgoxRzKIb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+## Customize group caption text using locale
+
+The Syncfusion Blazor DataGrid allows you to customize the group caption text based on the locale. This feature enables you to display localized text or translated content in the group captions according to different language or region settings.
+
+The following example demonstrates, how to customize group caption text based on **ar** locale.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowGrouping="true" AllowPaging="true" Height="315">
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.Country) HeaderText="Country" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.City) HeaderText="City" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+@code {
+    public List<Order> Orders { get; set; }
+    protected override void OnInitialized()
+    {
+        var countries = new[] { "USA", "UK", "Germany", "Canada", "France" };
+        var cities = new[] { "New York", "London", "Berlin", "Toronto", "Paris" };
+        var random = new Random();
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[random.Next(5)],
+            Country = countries[random.Next(countries.Length)],
+            City = cities[random.Next(cities.Length)]
+        }).ToList();
+    }
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public string Country { get; set; }
+        public string City { get; set; }
+    }
+}
+{% endhighlight %}
+{% highlight c# tabtitle="SyncfusionLocalizer.cs" %}
+
+using Syncfusion.Blazor;
+namespace LocalizationSample.Client
+{
+    public class SyncfusionLocalizer : ISyncfusionStringLocalizer
+    {
+        public string GetText ( string key )
+        {
+            return this.ResourceManager.GetString(key);
+        }
+        public System.Resources.ResourceManager ResourceManager
+        {
+            get
+            {
+                // Replace the ApplicationNamespace with your application name.
+                return LocalizationSample.Client.Resources.SfResources.ResourceManager;
+            }
+        }
+    }
+}
+
+{% endhighlight %}
+{% highlight c# tabtitle="SfResources.ar.resx" %}
+
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Grid_GroupDropArea" xml:space="preserve">
+    <value>اسحب رأس العمود هنا لتجميع العمود</value>
+  </data>
+  <data name="Grid_UnGroupButton" xml:space="preserve">
+    <value>انقر هنا لإلغاء التجميع</value>
+  </data>
+  <data name="Grid_GroupDisable" xml:space="preserve">
+    <value>تم تعطيل التجميع لهذا العمود</value>
+  </data>
+  <data name="Grid_Item" xml:space="preserve">
+    <value>بند</value>
+  </data>
+  <data name="Grid_Items" xml:space="preserve">
+    <value>العناصر</value>
+  </data>
+  <data name="Grid_Group" xml:space="preserve">
+    <value>تجميع حسب هذا العمود</value>
+  </data>
+  <data name="Grid_Ungroup" xml:space="preserve">
+    <value>فك تجميع بواسطة هذا العمود</value>
+  </data>
+</root>
+
+{% endhighlight %}
+{% highlight razor tabtitle="App.razor" %}
+
+<body>
+    ...
+    <script src="_framework/blazor.web.js" autostart="false"></script>
+    <script>
+        Blazor.start({
+            webAssembly: {
+                applicationCulture: 'ar'
+            }
+        });
+    </script>
+    ...
+</body>
+
+{% endhighlight %}
+{% endtabs %}
+
+![Customize group caption text using locale](./images/blazor-datagrid-customize-group-caption-text-locale.png)
+
 ## Render custom component in group caption
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid offers the flexibility to render a custom component in the group caption, providing advanced or interactive functionality within the group caption row. This feature allows you to display custom UI elements, like buttons, icons, or dropdowns, and handle user interactions directly within the group caption.
