@@ -151,15 +151,15 @@ app.MapControllers();
 
 Run the application in Visual Studio. It will be hosted at the URL **https://localhost:xxxx**. 
 
-After running the application, you can verify that the server-side API controller successfully returns the order data at the URL **https://localhost:xxxx/odata/grid**. Here, **xxxx** denotes the port number.
+After running the application, you can verify that the server-side API controller successfully returns the order data at the URL **https://localhost:xxxx/odata/grid** (where **xxxx** represents the port number).
 
-![Odatav4 adaptor data](../images/odatav4-adaptors-data.png)
+![ODataV4Adaptor Data](../images/odatav4-adaptors-data.png)
 
 ## Connecting Syncfusion Blazor DataGrid to an OData V4 Service
 
 To integrate the Syncfusion Blazor DataGrid into your project using Visual Studio, follow the below steps:
 
-**1. Install Syncfusion Blazor Grid and Themes NuGet packages**
+**1. Install Syncfusion Blazor DataGrid and Themes NuGet packages**
 
 To add the Blazor DataGrid to the app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*) for the `ODataV4Adaptor.Client` project, search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
@@ -206,7 +206,7 @@ Include the theme stylesheet and script references in the **~/Components/App.raz
 ```
 
 > * Refer to the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic for various methods to include themes (e.g., Static Web Assets, CDN, or CRG).
-> * Set the `rendermode` to **InteractiveServer** or **InteractiveAuto** in your Blazor Web App configuration.
+> * Set the render mode to **InteractiveServer** or **InteractiveAuto** in your Blazor Web App configuration.
 
 **4. Add Blazor DataGrid and configure with server**
 
@@ -270,7 +270,7 @@ namespace ODataV4Adaptor.Controllers
  
 When you run the application, the Blazor DataGrid will display data fetched from the OData V4 service.
 
-![Odatav4 adaptor data](../images/blazor-odatav4-adaptors.gif)
+![ODataV4Adaptor Data](../images/blazor-odatav4-adaptors.gif)
 
 > Replace `https://localhost:xxxx/odata/` with the actual URL of your OData V4 service.
 
@@ -337,7 +337,7 @@ builder.Services.AddControllers().AddOData(
 {% endhighlight %}
 {% endtabs %}
 
-![Searching query](../images/odatav4-adaptor-searching.png)
+![ODataV4Adaptor - Searching](../images/odatav4-adaptor-searching.png)
 
 ## Handling filtering operation
 
@@ -387,10 +387,10 @@ builder.Services.AddControllers().AddOData(
 {% endtabs %}
 
 **Single column filtering**
-![Single column filtering query](../images/odatav4-adaptor-filtering.png)
+![Single column filtering](../images/odatav4-adaptor-filtering.png)
 
 **Multi column filtering**
-![Multi column filtering query](../images/odatav4-adaptor-multi-filtering.png)
+![Multi column filtering](../images/odatav4-adaptor-multi-filtering.png)
 
 ## Handling sorting operation
 
@@ -499,7 +499,7 @@ builder.Services.AddControllers().AddOData(
 {% endhighlight %}
 {% endtabs %}
 
-![odatav4 adaptor paging query](../images/odatav4-adaptor-paging.png)
+![ODataV4Adaptor - Paging](../images/odatav4-adaptor-paging.png)
 
 ## Handling CRUD operations
 
@@ -530,7 +530,7 @@ To enable CRUD operations in the Syncfusion DataGrid within your application, fo
 
 > Normal/Inline editing is the default edit [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) for the Grid. To enable CRUD operations, ensure that the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property is set to **true** for a specific Grid column, ensuring that its value is unique.
 
-**Insert Record**
+**Insert Record:**
 
 To insert a new record into your Syncfusion DataGrid, you can utilize the `HttpPost` method in your server application. Below is a sample implementation of inserting a record using the **GridController**:
 
@@ -562,9 +562,9 @@ public IActionResult Post([FromBody] OrdersDetails addRecord)
 {% endhighlight %}
 {% endtabs %}
 
-![Odatav4 adaptor insert record](../images/odatav4-adaptor-insert-record.png)
+![Insert Record](../images/odatav4-adaptor-insert-record.png)
 
-**Update Record**
+**Update Record:**
 
 Updating a record in the Syncfusion DataGrid can be achieved by utilizing the `HttpPatch` method in your controller. Here's a sample implementation of updating a record:
 
@@ -605,9 +605,9 @@ public IActionResult Patch(int key, [FromBody] OrdersDetails updateRecord)
 {% endhighlight %}
 {% endtabs %}
 
-![Odatav4 adaptor update record](../images/odatav4-adaptor-update-record.png)
+![Update Record](../images/odatav4-adaptor-update-record.png)
 
-**Delete Record**
+**Delete Record:**
 
 To delete a record from your Syncfusion DataGrid, you can utilize the `HttpDelete` method in your controller. Below is a sample implementation:
 
@@ -639,4 +639,4 @@ public IActionResult Delete(int key)
 {% endhighlight %}
 {% endtabs %}
 
-![Odatav4 adaptor delete record](../images/odatav4-adaptor-delete-record.png)
+![Delete Record](../images/odatav4-adaptor-delete-record.png)
