@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Grouping in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn here all about Grouping in Syncfusion Blazor DataGrid component and much more details.
+title: Hierarchy Grid in Blazor DataGrid Component | Syncfusion
+description: Checkout and learn here all about Hierarchy Grid in Syncfusion Blazor DataGrid component and much more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -555,6 +555,8 @@ public class OrderData
 
 {% endhighlight %}
 {% endtabs %}
+
+![Template column in child Grid](images/hierarchy-grid/hierarchy-grid-template.png)
 
 ## Expand all by external button
 
