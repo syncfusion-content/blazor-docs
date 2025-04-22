@@ -191,6 +191,98 @@ To display only icons in the built-in Toolbar Items of the Grid, you can use CSS
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VjLAsNrYBydmAXyF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+### Customize the built-in toolbar items
+
+The Syncfusion Blazor DataGrid allows you to customize the built-in toolbar items to meet your specific requirements. This can include adding, removing, or modifying toolbar items, as well as handling custom actions when toolbar buttons are clicked.
+
+To customize the built-in toolbar items, you can use the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event of the Grid.
+
+The following example demonstrate how to customize the toolbar by disabling and canceling the **Add** button functionlity and showing a custom message when the **Add** button of toolbar is clicked.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+
+<p style="color:red;" id="message">@message</p>
+
+<SfGrid ID="Grid" @ref="Grid" DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add","Edit","Delete", "Cancel", "Update" })" Height="348">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
+    <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="OrderData"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150" />
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="120" />
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="150" />
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private SfGrid<OrderData> Grid;
+    public List<OrderData> Orders { get; set; }
+    private string message;
+
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }
+
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Id == "Grid_add") 
+        {
+            args.Cancel = true;
+            var newRecord = new OrderData(10247, "TOMSP", "Hanari Carnes", "Lyon");
+            await Grid.AddRecordAsync(newRecord);
+            message = "The default adding action is canceled, and a new record is added using the addRecord method.";
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="OrderData.cs" %}
+
+public class OrderData
+{
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipName { get; set; }
+    public string ShipCity { get; set; }
+
+    public OrderData(int orderID, string customerID, string shipName, string shipCity)
+    {
+        OrderID = orderID;
+        CustomerID = customerID;
+        ShipName = shipName;
+        ShipCity = shipCity;
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        return new List<OrderData>
+    {
+               new OrderData(10248, "ALFKI", "Maria Anders", "Berlin"),
+            new OrderData(10249, "ANATR", "Ana Trujillo", "Mexico City"),
+            new OrderData(10250, "ANTON", "Antonio Moreno", "Madrid"),
+            new OrderData(10251, "BERGS", "Christina Berglund", "Luleå"),
+            new OrderData(10252, "BLAUS", "Hanna Moos", "Mannheim"),
+            new OrderData(10253, "BLONP", "Frédérique Citeaux", "Strasbourg"),
+            new OrderData(10254, "BOLID", "Martín Sommer", "Madrid"),
+            new OrderData(10255, "BONAP", "Laurence Lebihan", "Marseille"),
+            new OrderData(10256, "BOTTM", "Elizabeth Lincoln", "London"),
+            new OrderData(10257, "BSBEV", "Victoria Ashworth", "London"),
+            new OrderData(10258, "CACTU", "Patricio Simpson", "Buenos Aires"),
+            new OrderData(10259, "CENTC", "Francisco Chang", "Mexico D.F.")
+    };
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVINzCcAGRIvWxA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## Custom Toolbar Items
 
 Adding custom Toolbar Items to the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid involves incorporating personalized functionality into the Toolbar.
