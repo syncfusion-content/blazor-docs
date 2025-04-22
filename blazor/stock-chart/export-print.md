@@ -127,7 +127,7 @@ In the code below, when the stock chart is exported to Excel format, the exporte
 
 <SfStockChart Title="AAPL Stock Price">
     <StockChartSeriesCollection>
-        <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Candle" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Volume="Volume"></StockChartSeries>
+        <StockChartSeries DataSource="@StockDetails" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Candle" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Volume="Volume"></StockChartSeries>
     </StockChartSeriesCollection>
     <StockChartPrimaryYAxis>
         <StockChartAxisLineStyle Color="Transparent"></StockChartAxisLineStyle>
@@ -164,18 +164,18 @@ In the code below, when the stock chart is exported to Excel format, the exporte
         new ChartData { Date = new DateTime(2012, 05, 28), Open= 81.5571, High = 83.0714,Low = 80.0743, Close = 80.1414,Volume = 480059584}
     };
 
-    public void BeforeExport(BeforeExportEventArgs args)
+    public void BeforeExport(ChartExportEventArgs args)
     {
         if (args.Workbook != null)
         {
             Worksheet firstSheet = args.Workbook.Worksheets.First();
             firstSheet.Columns[0].Width = 200;
             firstSheet.Columns[1].Width = 200;
-            firstSheet.Cells[0].Value = "Country";
+            firstSheet.Rows[1].Cells[0].Value = "Country";
             firstSheet.Rows[1].Cells[1].Value = "GigaWatts";
-            firstSheet.CellStyle.BackColor = "#FFA07A";
+            firstSheet.Rows[0].Cells[0].CellStyle.BackColor = "#FFA07A";
 
-            for (int i = 2; i < afirstSheet.Rows.Count; i++)
+            for (int i = 2; i < firstSheet.Rows.Count; i++)
             {
                 for (int j = 0; j < 2; j++)
                 {
