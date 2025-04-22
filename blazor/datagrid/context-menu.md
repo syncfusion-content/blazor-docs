@@ -571,7 +571,7 @@ public class OrderData
 
 ## Enable or disable context menu items
 
-The Syncfusion Blazor DataGrid allows you to dynamically enable or disable specific context menu items using [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Disabled)property. This feature is particularly useful in scenarios where certain actions, such as Edit or Delete, should be restricted based on the column, the data in the row, or other custom logic.
+The Syncfusion Blazor DataGrid allows you to dynamically enable or disable specific context menu items using [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Disabled) property. This feature is particularly useful in scenarios where certain actions, such as **Edit** or **Delete**, should be restricted based on the column, the data in the row, or other custom logic.
 
 To achieve this, handle the [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events#contextmenuopen) event. This event is triggered before the context menu is opened, allowing you to enable or disable the desired menu items dynamically.
 
