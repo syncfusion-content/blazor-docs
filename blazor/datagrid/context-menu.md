@@ -472,7 +472,7 @@ To prevent the context menu from opening on a specific column:
 
 2. Set `Args.Cancel` as **true** to prevent the menu from opening on that column.
 
-The following example prevents the context menu from opening when the you right-clicks on the **Freight** column. The [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuClickEventArgs-1.html) event is used to handle actions when context menu items are clicked. Except for the **Freight** column, the [CopyAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_CopyAsync_System_Nullable_System_Boolean__) method action will be executed when a context menu item is right-clicked.
+The following example demonstrates how to prevent the context menu from opening when right-clicking on the **Freight** column. The [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuClickEventArgs-1.html) event is used to handle actions triggered by context menu item clicks. The [CopyAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_CopyAsync_System_Nullable_System_Boolean__) method will be executed for all columns except **Freight** column, where the context menu is disabled.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
