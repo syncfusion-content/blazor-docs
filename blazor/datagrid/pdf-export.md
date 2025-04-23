@@ -9,11 +9,11 @@ documentation: ug
 
 # Pdf export in Blazor Grid 
 
-The PDF export feature in the Syncfusion Blazor DataGrid allows you to export grid data to a PDF document, providing the ability to generate printable reports or share data in a standardized format.
+The PDF export feature in the Grid allows you to export Grid data to a PDF document, providing the ability to generate printable reports or share data in a standardized format.
 
-To enable PDF export in the grid, you need to set the [AllowPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPdfExport) property to **true** and use the **PdfExport** method for exporting. 
+To enable PDF export in the Grid, you need to set the [AllowPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPdfExport) property to **true** and use the **PdfExport** method for exporting. 
 
-The following example demonstrates how to perform a PDF export action in the grid.
+The following example demonstrates how to perform a PDF export action in the Grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -94,15 +94,15 @@ public class OrderDetails
 
 ## Show spinner while exporting
 
-Showing a spinner while exporting in the Syncfusion Blazor DataGrid enhances the experience by displaying a spinner during the export process. This feature provides a visual indication of the export progress, improving the understanding of the exporting process.
+Showing a spinner while exporting in the Grid enhances the experience by displaying a spinner during the export process. This feature provides a visual indication of the export progress, improving the understanding of the exporting process.
 
-To show or hide a spinner while exporting the grid, you can utilize the [ShowSpinnerAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowSpinnerAsync) and [HideSpinnerAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_HideSpinnerAsync) methods provided by the Grid within the [OnToolbarClick](https://blazor.syncfusion.com/documentation/datagrid/events#ontoolbarclick) event.
+To show or hide a spinner while exporting the Grid, you can utilize the [ShowSpinnerAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowSpinnerAsync) and [HideSpinnerAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_HideSpinnerAsync) methods provided by the Grid within the [OnToolbarClick](https://blazor.syncfusion.com/documentation/datagrid/events#ontoolbarclick) event.
 
 The `OnToolbarClick` event is triggered when a toolbar item in the Grid is clicked. Within the event handler, the code checks if the clicked **item** is related with PDF export, specifically the **Grid_pdfexport** item. If a match is found, the `ShowSpinnerAsync` method is used on the Grid instance to display the spinner. 
 
 To hide the spinner after the exporting is completed, bind the [ExportComplete](https://blazor.syncfusion.com/documentation/datagrid/events#exportcomplete) event and use the `HideSpinnerAsync` method on the Grid instance to hide the spinner.
 
-The following example demonstrates how to show and hide the spinner during PDF export in a grid.
+The following example demonstrates how to show and hide the spinner during PDF export in a Grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -189,11 +189,11 @@ public class OrderDetails
 
 ## Binding custom data source while exporting
 
-The Syncfusion Blazor DataGrid provides a convenient way to export data to a PDF format. With the PDF export feature, you can define a custom data source while exporting. This allows you to export data that is not necessarily bind to the grid, which can be generated or retrieved based on your application logic.
+The Grid provides a convenient way to export data to a PDF format. With the PDF export feature, you can define a custom data source while exporting. This allows you to export data that is not necessarily bind to the Grid, which can be generated or retrieved based on your application logic.
 
 To export data, you need to define the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_DataSource) property within the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) object. This property represents the data source that will be used for the PDF export.
 
-The following example demonstrates how to render custom data source during PDF export. By utilizing the **PdfExport** method and passing the `PdfExportProperties` object through the grid instance, the grid data will be exported to a PDF using the dynamically defined data source.
+The following example demonstrates how to render custom data source during PDF export. By utilizing the **PdfExport** method and passing the `PdfExportProperties` object through the Grid instance, the Grid data will be exported to a PDF using the dynamically defined data source.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -331,13 +331,13 @@ public class ChangeData
 
 ## Exporting with custom aggregate
 
-Custom aggregates in the Syncfusion Blazor DataGrid involves exporting grid data that includes additional calculated values based on specific requirements. This feature enables you to show the comprehensive view of the data in the exported file by incorporating the specific aggregated information you need for analysis or reporting purposes.
+Custom aggregates in the Grid involves exporting Grid data that includes additional calculated values based on specific requirements. This feature enables you to show the comprehensive view of the data in the exported file by incorporating the specific aggregated information you need for analysis or reporting purposes.
 
 In order to utilize custom aggregation, you need to specify the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html?_gl=1*n3kv9z*_gcl_aw*R0NMLjE3MzgwNjYwODYuQ2p3S0NBaUFuZUs4QmhBVkVpd0FveTJIWVFDU1Nhbm1XaWRsRGpDb2lSTEZBZEhPR21xMERSM2VxSGZRRzVGUVA3WEZsNjV1NndrRG14b0NqMHNRQXZEX0J3RQ..*_ga*NzE4Mzg0MjU3LjE3NDEwOTIxNDg.*_ga_41J4HFMX1J*MTc0NDE5NjE5My4xMjAuMS4xNzQ0MTk3ODY5LjAuMC4w#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) property as **Custom**.
 
 Within the **CustomAggregateFunction** function, it takes an input data that contains a result property. The function calculates the count of objects in this data where the **ShipCountry** field value is equal to **Brazil** and returns the count with a descriptive label.
 
-The following example shows how to export the grid with a custom aggregate that shows the calculation of the **Brazil** count of the **ShipCountry** column.
+The following example shows how to export the Grid with a custom aggregate that shows the calculation of the **Brazil** count of the **ShipCountry** column.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -450,11 +450,11 @@ public class OrderDetails
 
 ## Exporting with custom date format
 
-The exporting functionality in the Syncfusion Blazor DataGrid allows you to export grid data, including custom date format. This feature is useful when you need to export grid data with customized date values. 
+The exporting functionality in the Grid allows you to export Grid data, including custom date format. This feature is useful when you need to export Grid data with customized date values. 
 
-To apply a custom date format to grid columns during the export, you can utilize the [Columns.Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html?_gl=1*menbkd*_gcl_aw*R0NMLjE3MzgwNjYwODYuQ2p3S0NBaUFuZUs4QmhBVkVpd0FveTJIWVFDU1Nhbm1XaWRsRGpDb2lSTEZBZEhPR21xMERSM2VxSGZRRzVGUVA3WEZsNjV1NndrRG14b0NqMHNRQXZEX0J3RQ..*_ga*NzE4Mzg0MjU3LjE3NDEwOTIxNDg.*_ga_41J4HFMX1J*MTc0NDI2NjE5MC4xMjIuMS4xNzQ0MjY3NTQ1LjAuMC4w#Syncfusion_Blazor_Grids_GridColumn_Format) property. This property allows you to define a custom format using format options.
+To apply a custom date format to Grid columns during the export, you can utilize the [Columns.Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html?_gl=1*menbkd*_gcl_aw*R0NMLjE3MzgwNjYwODYuQ2p3S0NBaUFuZUs4QmhBVkVpd0FveTJIWVFDU1Nhbm1XaWRsRGpDb2lSTEZBZEhPR21xMERSM2VxSGZRRzVGUVA3WEZsNjV1NndrRG14b0NqMHNRQXZEX0J3RQ..*_ga*NzE4Mzg0MjU3LjE3NDEwOTIxNDg.*_ga_41J4HFMX1J*MTc0NDI2NjE5MC4xMjIuMS4xNzQ0MjY3NTQ1LjAuMC4w#Syncfusion_Blazor_Grids_GridColumn_Format) property. This property allows you to define a custom format using format options.
 
-The following example demonstrates how to export the grid data with custom date format. In this example, the formatOptions object is used as the `Columns.Format` property for the **OrderDate** column. This custom date format displays the date in the format of day-of-the-week, month abbreviation, day, and 2-digit year (e.g., Thu, Jul 4, '96).
+The following example demonstrates how to export the Grid data with custom date format. In this example, the formatOptions object is used as the `Columns.Format` property for the **OrderDate** column. This custom date format displays the date in the format of day-of-the-week, month abbreviation, day, and 2-digit year (e.g., Thu, Jul 4, '96).
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
