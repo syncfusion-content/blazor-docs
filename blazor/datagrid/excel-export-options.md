@@ -65,7 +65,7 @@ The following example demonstrates how to export current page to a Excel documen
         Orders = EmployeeData.GetAllRecords();
     }
 
-    public async Task ToolbarClickHandler(ClickEventArgs args)
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
         if (args.Item.Id == "Grid_excelexport")
         {
@@ -369,7 +369,6 @@ The following example demonstrates how to export hidden columns to a Excel file.
 @code {
     private SfGrid<OrderData> Grid;
     public List<OrderData> Orders { get; set; }
-
     public bool IncludeHiddenColumns { get; set; } = false;
 
     protected override void OnInitialized()
@@ -450,7 +449,7 @@ The Syncfusion Blazor DataGrid provides the functionality to show or hide column
 
 To show or hide columns based on user interaction during the export process, you can follow these steps:
 
-1. Handle the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick)  event of the Grid.
+1. Handle the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event of the Grid.
 
 2. Update the visibility of the desired columns by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Visible) property of the column to **true** or **false**.
 
@@ -699,7 +698,6 @@ The following example demonstrates how to customize the Grid columns when export
     private SfGrid<OrderData> Grid;
     public List<OrderData> Orders { get; set; }
 
-
     protected override void OnInitialized()
     {
         Orders = OrderData.GetAllRecords();
@@ -808,7 +806,6 @@ In the following example, apply font styling to the caption, header, and record 
 @code {
     private SfGrid<OrderData> Grid;
     public List<OrderData> Orders { get; set; }
-
 
     protected override void OnInitialized()
     {
