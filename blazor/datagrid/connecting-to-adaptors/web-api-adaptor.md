@@ -14,7 +14,7 @@ The [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#we
 
 To enable the OData query option for a Web API, please refer to the corresponding [documentation](https://learn.microsoft.com/en-us/aspnet/web-api/overview/odata-support-in-aspnet-web-api/supporting-odata-query-options), which provides detailed instructions on configuring the endpoint to understand OData-formatted queries.
 
-This section describes a step-by-step process for retrieving data using the `WebApiAdaptor` and binding it to the Blazor DataGrid to facilitate data and CRUD operations.
+This section describes a step-by-step process for retrieving data using the `WebApiAdaptor` and binding it to the Blazor Grid to facilitate data and CRUD operations.
 
 ## Creating an API service
  
@@ -34,11 +34,9 @@ namespace WebApiAdaptor.Models
     public class OrdersDetails
     {
         public static List<OrdersDetails> order = new List<OrdersDetails>();
- 
-        // Default constructor.
+
         public OrdersDetails() { }
  
-        // Parameterized constructor to initialize order details.
         public OrdersDetails(int OrderID, string CustomerId, int EmployeeId, double Freight, bool Verified, DateTime OrderDate, string ShipCity, string ShipName, string ShipCountry, DateTime ShippedDate, string ShipAddress)
         {
             this.OrderID = OrderID;
@@ -54,7 +52,6 @@ namespace WebApiAdaptor.Models
             this.ShipAddress = ShipAddress;
         }
 
-        // Method to generate sample order records.
         public static List<OrdersDetails> GetAllRecords()
         {
             if (order.Count() == 0)
@@ -72,8 +69,7 @@ namespace WebApiAdaptor.Models
             }
             return order;
         }
- 
-        // Properties representing order details.
+
         public int? OrderID { get; set; }
         public string? CustomerID { get; set; }
         public int? EmployeeID { get; set; }
@@ -90,7 +86,7 @@ namespace WebApiAdaptor.Models
 ```
 **3. Create an API controller**
 
-Create a new folder named **Controllers**. Then, add a controller named **GridController.cs** in the **Controllers** folder to handle data communication. Implement the `Get` method in the controller to return data in JSON format, including the `Items` and `Count` properties as required by the `WebApiAdaptor`.
+Create a new folder named **Controllers**. Then, add a controller named **GridController.cs** in the **Controllers** folder to handle data communication with Blazor Grid. Implement the `Get` method in the controller to return data in JSON format, including the `Items` and `Count` properties as required by the `WebApiAdaptor`.
  
 {% tabs %}
 {% highlight c# tabtitle="GridController.cs"%}
@@ -141,13 +137,13 @@ app.MapControllers();
  
 Run the application in Visual Studio. The API will be accessible at a URL like **https://localhost:xxxx/api/Grid** (replace **xxxx** with the port number). Verify that the API returns the order data.
  
-![WebApiAdaptor-data](../images/web-api-adaptor-data.png)
+![WebApiAdaptor Data](../images/web-api-adaptor-data.png)
 
 ## Connecting Syncfusion Blazor DataGrid to an API service
  
 To integrate the Syncfusion Blazor DataGrid into your project using Visual Studio, follow the below steps:
  
-**1. Install Syncfusion Blazor Grid and Themes NuGet packages**
+**1. Install Syncfusion Blazor DataGrid and Themes NuGet packages**
  
 To add the Blazor DataGrid in the app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
  
@@ -203,7 +199,7 @@ Include the theme stylesheet and script references in the **~/Components/App.raz
 
 **4. Add Blazor Grid and configure with server**
  
-To connect the Blazor DataGrid to a hosted API, use the [Url]( https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property of [SfDataManager]( https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html). The `SfDataManager` offers multiple adaptor options to connect with remote database based on an API service. Below is an example of the [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor) configuration where an API service are set up to return the resulting data in the **items** and **count** format. Update the **Index.razor** file as follows.
+To connect the Blazor Grid to a hosted API, use the [Url]( https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property of [SfDataManager]( https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html). The `SfDataManager` offers multiple adaptor options to connect with remote database based on an API service. Below is an example of the [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor) configuration where an API service are set up to return the resulting data in the **items** and **count** format. Update the **Index.razor** file as follows.
  
 {% tabs %}
 {% highlight razor tabtitle="Index.razor"%}
@@ -260,7 +256,7 @@ namespace WebApiAdaptor.Controllers
  
 **5. Run the application**
  
-When you run the application, the Blazor DataGrid  will display data fetched from the API.
+When you run the application, the Blazor Grid  will display data fetched from the API.
  
 ![WebMethod Adaptor Data](../images/blazor-datagrid-adaptors.gif)
 
@@ -327,7 +323,7 @@ public object GetOrderData()
     int totalRecordsCount = data.Count();
 
     // Return the filtered data and the total count as a JSON object.
-    return new { result = data, count = totalRecordsCount };
+    return new { Items = data, count = totalRecordsCount };
 }
 {% endhighlight %}
 
@@ -437,7 +433,7 @@ public object GetOrderData()
     int totalRecordsCount = data.Count();
 
     // Return the filtered data and the total count as a JSON object.
-    return new { result = data, count = totalRecordsCount };
+    return new { Items = data, count = totalRecordsCount };
 }
 
 {% endhighlight %}
@@ -529,7 +525,7 @@ public object GetOrderData()
     int totalRecordsCount = data.Count();
 
     // Return the sorted data and the total count as a JSON object.
-    return new { result = data, count = totalRecordsCount };
+    return new { Items = data, count = totalRecordsCount };
 }
 
 {% endhighlight %}
@@ -615,9 +611,9 @@ public object GetOrderData()
 
 ## Handling CRUD operations
 
-To manage CRUD (Create, Read, Update, Delete) operations using the WebApiAdaptor in Syncfusion Blazor DataGrid, follow the provided guide for configuring the DataGrid for [editing](https://blazor.syncfusion.com/documentation/datagrid/editing) and utilize the sample implementation of the `GridController` in your server application. This controller handles HTTP requests for CRUD operations such as GET, POST, PUT, and DELETE.
+To manage CRUD (Create, Read, Update, and Delete) operations using the WebApiAdaptor in Syncfusion Blazor DataGrid, follow the provided guide for configuring the Grid for [editing](https://blazor.syncfusion.com/documentation/datagrid/editing) and utilize the sample implementation of the `GridController` in your server application. This controller handles HTTP requests for CRUD operations such as GET, POST, PUT, and DELETE.
 
-To enable CRUD operations in the Syncfusion Blazor DataGrid component, follow the steps below:
+To enable CRUD operations in the Syncfusion Blazor DataGrid, follow the steps below:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -644,7 +640,7 @@ To enable CRUD operations in the Syncfusion Blazor DataGrid component, follow th
 
 ### Insert operation
 
-To insert a new record into your Syncfusion Grid, you can utilize the `HttpPost` method in your server application. Below is a sample implementation of inserting a record using the **GridController**:
+To insert a new record into your Syncfusion Grid, you can utilize the `HttpPost` method in your server application. The details of the newly added record are passed to the **newRecord** parameter. Below is a sample implementation of inserting a record using the **GridController**: 
 
 ![Insert record](../images/web-api-adaptor-insert.png)
 
@@ -658,7 +654,7 @@ To insert a new record into your Syncfusion Grid, you can utilize the `HttpPost`
 [HttpPost]
 public void Post([FromBody] OrdersDetails newRecord)
 {
-    // Insert a new record into the OrdersDetails model.
+    // Add the new record to the data collection.
     OrdersDetails.GetAllRecords().Insert(0, newRecord);
 }
 
@@ -667,7 +663,7 @@ public void Post([FromBody] OrdersDetails newRecord)
 
 ### Update operation
 
-Updating a record in the Syncfusion Grid can be achieved by utilizing the `HttpPut` method in your controller. Here's a sample implementation of updating a record:
+Updating a record in the Syncfusion Grid can be achieved by utilizing the `HttpPut` method in your controller. The details of the updated record are passed to the **updatedRecord** parameter. Here's a sample implementation of updating a record:
 
 ![Update record](../images/web-api-adaptor-update.png)
 
@@ -675,22 +671,22 @@ Updating a record in the Syncfusion Grid can be achieved by utilizing the `HttpP
 {% highlight cs tabtitle="GridController.cs" %}
 
 /// <summary>
-/// Updates an existing data item in the data collection.
+/// Update a existing data item from the data collection.
 /// </summary>
-/// <param name="updatedOrder">Holds the details of the record to be updated.</param>
-[HttpPut]
-public void Put([FromBody] OrdersDetails updatedOrder)
+/// <param name="updatedRecord">It contains the updated record detail which is need to be updated.</param>
+/// <returns>Returns void.</returns>
+public void Put([FromBody] OrdersDetails updatedRecord)
 {
-    var id = updatedOrder.OrderID;
+    var id = updatedRecord.OrderID;
     // Find the existing order by id.
     var existingOrder = OrdersDetails.GetAllRecords().FirstOrDefault(o => o.OrderID == id);
     if (existingOrder != null)
     {
         // If the order exists, update its properties.
-        existingOrder.OrderID = updatedOrder.OrderID;
-        existingOrder.CustomerID = updatedOrder.CustomerID;
-        existingOrder.ShipCity = updatedOrder.ShipCity;
-        existingOrder.ShipCountry = updatedOrder.ShipCountry;
+        existingOrder.OrderID = updatedRecord.OrderID;
+        existingOrder.CustomerID = updatedRecord.CustomerID;
+        existingOrder.ShipCity = updatedRecord.ShipCity;
+        existingOrder.ShipCountry = updatedRecord.ShipCountry;
     }
 }
 
@@ -699,7 +695,7 @@ public void Put([FromBody] OrdersDetails updatedOrder)
 
 ### Delete operation
 
-To delete a record from your Syncfusion Blazor DataGrid, you can use the `HttpDelete` method in your controller. Below is a sample implementation:
+To delete a record from your Syncfusion Blazor DataGrid, you can use the `HttpDelete` method in your controller. The primary key value of the deleted record is passed to the **deletedRecord** parameter.Below is a sample implementation:
 
 ![Delete Record](../images/web-api-adaptor-delete.png)
 
