@@ -141,7 +141,7 @@ To export the selected records from the Grid to a PDF file, you can follow these
 
 3. Assign the selected data to the `ExportProperties.DataSource` property.
 
-4. Trigger the export operation using the `PdfExport` method.
+4. Trigger the export operation using the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method.
 
 The following example demonstrates how to export the selected records to a PDF document.
 
@@ -248,7 +248,7 @@ To export only the filtered data from the Grid to a PDF file, you can follow the
 
 3. Assign the filtered data to the `ExportProperties.DataSource` property.
 
-4. Trigger the export operation using the `PdfExport` method.
+4. Trigger the export operation using the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method.
 
 The following example demonstrates how to export the filtered records to a PDF document.
 
