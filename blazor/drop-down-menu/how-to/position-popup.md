@@ -17,17 +17,19 @@ In the following example, the `Top` position of the popup element.
 
 @using Syncfusion.Blazor.SplitButtons
 
-<SfDropDownButton Content="EDIT" CssClass="custom">
-    <DropDownMenuItems>
-        <DropDownMenuItem Text="Cut"></DropDownMenuItem>
-        <DropDownMenuItem Text="Copy"></DropDownMenuItem>
-        <DropDownMenuItem Text="Paste"></DropDownMenuItem>
-    </DropDownMenuItems>
-</SfDropDownButton>
+<div style="margin: 150px auto; width: 250px;">
+    <SfDropDownButton Content="EDIT" CssClass="custom">
+        <DropDownMenuItems>
+            <DropDownMenuItem Text="Cut"></DropDownMenuItem>
+            <DropDownMenuItem Text="Copy"></DropDownMenuItem>
+            <DropDownMenuItem Text="Paste"></DropDownMenuItem>
+        </DropDownMenuItems>
+    </SfDropDownButton>
+</div>
 
 <style>
     .custom.e-dropdown-popup {
-        margin: -122px -27px;
+        margin: -135px -27px;
     }
 </style>
 
