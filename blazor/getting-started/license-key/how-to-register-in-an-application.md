@@ -41,11 +41,11 @@ Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY
 
 ## Blazor Server App
 
-* For .NET 6 and .NET 7 app, open the **~/Program.cs** file and register the Syncfusion<sup style="font-size:70%">&reg;</sup> license key.
+* For .NET 8 and .NET 9 app, open the **~/Program.cs** file and register the Syncfusion<sup style="font-size:70%">&reg;</sup> license key.
 
 {% tabs %}
 
-{% highlight C# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="2 3" %}
+{% highlight C# tabtitle=".NET 8 & .NET 9 (~/Program.cs)" hl_lines="2 3" %}
 
 var app = builder.Build();
 //Register Syncfusion license
@@ -54,7 +54,7 @@ Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
-    app.UseExceptionHandler("/Error");
+    app.UseExceptionHandler("/Home/Error");
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
@@ -69,7 +69,7 @@ Open **~/Program.cs** file and register the Syncfusion<sup style="font-size:70%"
 
 {% tabs %}
 
-{% highlight C# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" hl_lines="1 2" %}
+{% highlight C# tabtitle=".NET 8 & .NET 9 (~/Program.cs)" hl_lines="1 2" %}
 
 //Register Syncfusion license
 Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
