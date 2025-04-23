@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Pdf Export in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn here all about Pdf Export in Syncfusion Blazor DataGrid component and much more details.
+title: Pdf Export in Blazor DataGrid | Syncfusion
+description: Checkout and learn here all about Pdf Export in Syncfusion Blazor DataGrid and much more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Pdf export in Blazor Grid 
+# PDF export in Blazor DataGrid 
 
-The PDF export feature in the Grid allows you to export Grid data to a PDF document, providing the ability to generate printable reports or share data in a standardized format.
+The PDF export feature in the Syncfusion Blazor DataGrid allows you to export Grid data to a PDF document, providing the ability to generate printable reports or share data in a standardized format.
 
-To enable PDF export in the Grid, you need to set the [AllowPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPdfExport) property to **true** and use the **PdfExport** method for exporting. 
+To enable PDF export in the Grid, you need to set the [AllowPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPdfExport) property to **true** and use the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method for exporting. 
 
 The following example demonstrates how to perform a PDF export action in the Grid.
 
@@ -37,7 +37,7 @@ The following example demonstrates how to perform a PDF export action in the Gri
     {
         if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Grid's ID and itemname.
         {
-            await this.DefaultGrid.PdfExport();
+            await this.DefaultGrid.ExportToPdfAsync();
         }
     }
     protected override void OnInitialized()
@@ -94,7 +94,7 @@ public class OrderDetails
 
 ## Show spinner while exporting
 
-Showing a spinner while exporting in the Grid enhances the experience by displaying a spinner during the export process. This feature provides a visual indication of the export progress, improving the understanding of the exporting process.
+Showing a spinner while exporting in the Syncfusion Blazor Grid enhances the experience by displaying a spinner during the export process. This feature provides a visual indication of the export progress, improving the understanding of the exporting process.
 
 To show or hide a spinner while exporting the Grid, you can utilize the [ShowSpinnerAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowSpinnerAsync) and [HideSpinnerAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_HideSpinnerAsync) methods provided by the Grid within the [OnToolbarClick](https://blazor.syncfusion.com/documentation/datagrid/events#ontoolbarclick) event.
 
@@ -127,7 +127,7 @@ The following example demonstrates how to show and hide the spinner during PDF e
         if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Grid's ID and itemname.
         {
             await this.DefaultGrid.ShowSpinnerAsync();
-            await this.DefaultGrid.PdfExport();
+            await this.DefaultGrid.ExportToPdfAsync();
         }
     }
     public async void ExportCompleteHandler(object args)
@@ -189,11 +189,11 @@ public class OrderDetails
 
 ## Binding custom data source while exporting
 
-The Grid provides a convenient way to export data to a PDF format. With the PDF export feature, you can define a custom data source while exporting. This allows you to export data that is not necessarily bind to the Grid, which can be generated or retrieved based on your application logic.
+The Syncfusion Blazor Grid provides a convenient way to export data to a PDF format. With the PDF export feature, you can define a custom data source while exporting. This allows you to export data that is not necessarily bind to the Grid, which can be generated or retrieved based on your application logic.
 
 To export data, you need to define the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_DataSource) property within the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) object. This property represents the data source that will be used for the PDF export.
 
-The following example demonstrates how to render custom data source during PDF export. By utilizing the **PdfExport** method and passing the `PdfExportProperties` object through the Grid instance, the Grid data will be exported to a PDF using the dynamically defined data source.
+The following example demonstrates how to render custom data source during PDF export. By utilizing the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_)  method and passing the `PdfExportProperties` object through the Grid instance, the Grid data will be exported to a PDF using the dynamically defined data source.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -221,14 +221,14 @@ The following example demonstrates how to render custom data source during PDF e
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_pdfexport")  // Id = Grid ID + _ + Toolbar Item Name.
+        if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Grid's ID and itemname.
         {
             var convertedOrders = ConvertToOrderDetails(newOrders);
             PdfExportProperties PdfProperties = new PdfExportProperties
                 {
                     DataSource = convertedOrders
                 };
-            await this.DefaultGrid.PdfExport(PdfProperties);
+            await this.DefaultGrid.ExportToPdfAsync(PdfProperties);
         }
     }
     protected override void OnInitialized()
@@ -331,11 +331,13 @@ public class ChangeData
 
 ## Exporting with custom aggregate
 
-Custom aggregates in the Grid involves exporting Grid data that includes additional calculated values based on specific requirements. This feature enables you to show the comprehensive view of the data in the exported file by incorporating the specific aggregated information you need for analysis or reporting purposes.
+Custom aggregates in the Syncfusion Blazor Grid involves exporting Grid data that includes additional calculated values based on specific requirements. This feature enables you to show the comprehensive view of the data in the exported file by incorporating the specific aggregated information you need for analysis or reporting purposes.
 
 In order to utilize custom aggregation, you need to specify the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html?_gl=1*n3kv9z*_gcl_aw*R0NMLjE3MzgwNjYwODYuQ2p3S0NBaUFuZUs4QmhBVkVpd0FveTJIWVFDU1Nhbm1XaWRsRGpDb2lSTEZBZEhPR21xMERSM2VxSGZRRzVGUVA3WEZsNjV1NndrRG14b0NqMHNRQXZEX0J3RQ..*_ga*NzE4Mzg0MjU3LjE3NDEwOTIxNDg.*_ga_41J4HFMX1J*MTc0NDE5NjE5My4xMjAuMS4xNzQ0MTk3ODY5LjAuMC4w#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) property as **Custom**.
 
 Within the **CustomAggregateFunction** function, it takes an input data that contains a result property. The function calculates the count of objects in this data where the **ShipCountry** field value is equal to **Brazil** and returns the count with a descriptive label.
+
+The [PdfAggregateTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfAggregateTemplateInfo) event is used to handle custom aggregates during the export process. Within this event, the custom aggregate value is applied to the `args.Cell.Value` property, allowing you to include the custom aggregation in the exported PDF file.
 
 The following example shows how to export the Grid with a custom aggregate that shows the calculation of the **Brazil** count of the **ShipCountry** column.
 
@@ -382,9 +384,9 @@ The following example shows how to export the Grid with a custom aggregate that 
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_pdfexport")  // "Grid" + "_" + "Toolbar Item".
+        if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Grid's ID and itemname. 
         {
-            await DefaultGrid.PdfExport();
+            await DefaultGrid.ExportToPdfAsync();
         }
     }
 
@@ -450,11 +452,11 @@ public class OrderDetails
 
 ## Exporting with custom date format
 
-The exporting functionality in the Grid allows you to export Grid data, including custom date format. This feature is useful when you need to export Grid data with customized date values. 
+The exporting functionality in the Syncfusion Blazor Grid allows you to export Grid data, including custom date format. This feature is useful when you need to export Grid data with customized date values. 
 
-To apply a custom date format to Grid columns during the export, you can utilize the [Columns.Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html?_gl=1*menbkd*_gcl_aw*R0NMLjE3MzgwNjYwODYuQ2p3S0NBaUFuZUs4QmhBVkVpd0FveTJIWVFDU1Nhbm1XaWRsRGpDb2lSTEZBZEhPR21xMERSM2VxSGZRRzVGUVA3WEZsNjV1NndrRG14b0NqMHNRQXZEX0J3RQ..*_ga*NzE4Mzg0MjU3LjE3NDEwOTIxNDg.*_ga_41J4HFMX1J*MTc0NDI2NjE5MC4xMjIuMS4xNzQ0MjY3NTQ1LjAuMC4w#Syncfusion_Blazor_Grids_GridColumn_Format) property. This property allows you to define a custom format using format options.
+To apply a custom date format to Grid columns during the export, you can utilize the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html?_gl=1*menbkd*_gcl_aw*R0NMLjE3MzgwNjYwODYuQ2p3S0NBaUFuZUs4QmhBVkVpd0FveTJIWVFDU1Nhbm1XaWRsRGpDb2lSTEZBZEhPR21xMERSM2VxSGZRRzVGUVA3WEZsNjV1NndrRG14b0NqMHNRQXZEX0J3RQ..*_ga*NzE4Mzg0MjU3LjE3NDEwOTIxNDg.*_ga_41J4HFMX1J*MTc0NDI2NjE5MC4xMjIuMS4xNzQ0MjY3NTQ1LjAuMC4w#Syncfusion_Blazor_Grids_GridColumn_Format) property. This property allows you to define a custom format using format options.
 
-The following example demonstrates how to export the Grid data with custom date format. In this example, the formatOptions object is used as the `Columns.Format` property for the **OrderDate** column. This custom date format displays the date in the format of day-of-the-week, month abbreviation, day, and 2-digit year (e.g., Thu, Jul 4, '96).
+The following example demonstrates how to export the Grid with a custom date format. In this example, the `Format` property is used for the **OrderDate** column. This custom date `Format` displays the date in the format of day-of-the-week, month abbreviation, day, and 2-digit year (e.g., Sun, Jan 15, 23).
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -464,9 +466,9 @@ The following example demonstrates how to export the Grid data with custom date 
 <SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" Toolbar="@(new List<string>() { "PdfExport" })" AllowPdfExport="true" AllowPaging="true">
     <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="OrderData"></GridEvents>
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Type="Syncfusion.Blazor.Grids.ColumnType.Date" Format="@FormatOptions" Width="100">
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Type="ColumnType.Date" Format="@FormatOptions" Width="100">
         <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Width="80"></GridColumn>
         </GridColumn>
     </GridColumns>
@@ -481,7 +483,7 @@ The following example demonstrates how to export the Grid data with custom date 
     {
         if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Grid's ID and itemname.
         {
-            await this.DefaultGrid.PdfExport();
+            await this.DefaultGrid.ExportToPdfAsync();
         }
     }
 
@@ -548,3 +550,118 @@ public class OrderData
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjVSNfWZIXZQsIfM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Passing additional parameters to the server when exporting
+
+Passing additional parameters to the server when exporting data in the Syncfusion Blazor DataGrid involves providing flexibility to include extra information or customize the export process based on specific requirements.
+
+You can achieve this by utilizing the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html) property and the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event. Within the `Query` property, you can invoke the [AddParams](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html#Syncfusion_Blazor_Data_Query_AddParams_System_String_System_Object_) method to add parameters to the request.
+
+The following example demonstrates how to pass additional parameters to the server when PDF exporting within the `OnToolbarClick` event. Within the event, the additional parameters, specifically **recordcount** as **15**, are passed using the `AddParams` method and displayed as a message.  Additionally, the [ExportComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExportComplete) event is used to reset the query state after the export is completed.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+
+<p>@message</p>
+<SfGrid ID="Grid" @ref="Grid" DataSource="@Orders" AllowPdfExport="true" Toolbar="@(new List<string>() { "PdfExport" })" Height="348">
+    <GridEvents OnToolbarClick="ToolbarClickHandler" ExportComplete="ExportCompleteHandler" TValue="OrderData"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="150" />
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="150" />
+        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="150" />
+    </GridColumns>
+</SfGrid>
+<style>
+    p{
+        color: red;
+        text-align:center;
+    }
+</style>
+@code {
+    private SfGrid<OrderData> Grid;
+    public List<OrderData> Orders { get; set; }
+    private string message = "";
+    private Query queryClone;
+
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }
+
+    public async Task ToolbarClickHandler(ClickEventArgs args)
+    {
+        if (args.Item.Id == "Grid_pdfexport") //Id is combination of Grid's ID and itemname.
+        {
+            queryClone = this.Grid?.Query;
+            this.Grid!.Query = new Query().AddParams("recordcount", "15");
+
+            if (this.Grid!.Query.Queries.Params?.Count > 0)
+            {
+                var param = Grid.Query.Queries.Params.First();
+                message = $"Key: {param.Key} and Value: {param.Value?.ToString()} on {args.Item.Text}";
+            }
+            await Grid.ExportToPdfAsync();
+        }
+    }
+
+    public void ExportCompleteHandler(object args)
+    {
+        if (queryClone != null)
+        {
+            this.Grid!.Query = queryClone;
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="OrderData.cs" %}
+
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+    public OrderData(int orderID, string customerID, double freight, string shipCity, string shipName)
+    {
+        this.OrderID = orderID;
+        this.CustomerID = customerID;
+        this.Freight = freight;
+        this.ShipCity = shipCity;
+        this.ShipName = shipName;
+    }
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        { 
+            Orders.Add(new OrderData(10248, "VINET", 32.38, "Reims", "Vins et alcools Chevalier"));
+            Orders.Add(new OrderData(10249, "TOMSP", 11.61, "Münster", "Toms Spezialitäten"));
+            Orders.Add(new OrderData(10250, "HANAR", 65.83, "Rio de Janeiro", "Hanari Carnes"));
+            Orders.Add(new OrderData(10251, "VICTE", 41.34, "Lyon", "Victuailles en stock"));
+            Orders.Add(new OrderData(10252, "SUPRD", 51.3, "Charleroi", "Suprêmes délices"));
+            Orders.Add(new OrderData(10253, "HANAR", 58.17, "Rio de Janeiro", "Hanari Carnes"));
+            Orders.Add(new OrderData(10254, "CHOPS", 22.98, "Bern", "Chop-suey Chinese"));
+            Orders.Add(new OrderData(10255, "RICSU", 148.33, "Genève", "Richter Supermarkt"));
+            Orders.Add(new OrderData(10256, "WELLI", 13.97, "Resende", "Wellington Import Export"));
+            Orders.Add(new OrderData(10257, "HILAA", 81.91, "San Cristóbal", "Hila Alimentos"));
+            Orders.Add(new OrderData(10258, "ERNSH", 140.51, "Graz", "Ernst Handel"));
+            Orders.Add(new OrderData(10259, "CENTC", 3.25, "México D.F.", "Centro comercial"));
+            Orders.Add(new OrderData(10260, "OTTIK", 55.09, "Köln", "Ottilies Käseladen"));
+            Orders.Add(new OrderData(10261, "QUEDE", 3.05, "Rio de Janeiro", "Que delícia"));
+            Orders.Add(new OrderData(10262, "RATTC", 48.29, "Albuquerque", "Rattlesnake Canyon Grocery"));
+        }
+        return Orders;
+    }
+
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBIZTssVIvJCeji?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

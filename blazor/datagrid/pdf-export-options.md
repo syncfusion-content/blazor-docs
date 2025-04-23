@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Pdf Export Options in Blazor DataGrid | Syncfusion
-description: Checkout and learn here all about Pdf Export Options in Syncfusion Blazor DataGrid and much more.
+title: PDF Export Options in Blazor DataGrid | Syncfusion
+description: Checkout and learn here all about PDF Export Options in Syncfusion Blazor DataGrid and much more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Pdf Export Options in Blazor DataGrid
+# PDF Export Options in Blazor DataGrid
 
-The Grid allows you to customize the PDF export options functionality. This flexibility enables you to have greater control over the exported content and layout to meet your specific requirements.
+The Syncfusion Blazor Grid allows you to customize the PDF export options functionality. This flexibility enables you to have greater control over the exported content and layout to meet your specific requirements.
 
 The PDF export action can be customized based on your requirements using the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) property. By using the `PdfExportProperties` property, you can export the current page records, selected records, or filtered records. Additionally, you can customize the page alignments using the `PdfExportProperties` property.
 
 ## Export current page records
 
-Exporting the current page in Grid to a PDF document provides the ability to export the currently displayed page records. This feature allows for generating PDF documents that specifically include the content from the current page of the Grid.
+Exporting the current page in Syncfusion Blazor Grid to a PDF document provides the ability to export the currently displayed page records. This feature allows for generating PDF documents that specifically include the content from the current page of the Grid.
 
 To export the current page of the Grid to a PDF document, you need to specify the [ExportType](https://ej2.syncfusion.com/Blazor/documentation/api/grid/pdfExportProperties/#exporttype) property as **CurrentPage**.
 
@@ -60,9 +60,9 @@ The following example demonstrates how to export current page to a PDF document 
         Orders = EmployeeData.GetAllRecords();
     }
 
-    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    public async Task ToolbarClickHandler(ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_pdfexport")
+        if (args.Item.Id == "Grid_pdfexport") //Id is combination of Grid's ID and itemname.
         {
             var exportProperties = new PdfExportProperties
                 {
@@ -129,7 +129,7 @@ The following example demonstrates how to export current page to a PDF document 
 
 ## Export selected records
 
-Exporting only the selected records from the Grid allows generating PDF document that include only the desired data from the Grid. This feature provides the flexibility to export specific records that are relevant to the needs, enabling more focused and targeted PDF exports.
+Exporting only the selected records from the Syncfusion Blazor Grid allows generating PDF document that include only the desired data from the Grid. This feature provides the flexibility to export specific records that are relevant to the needs, enabling more focused and targeted PDF exports.
 
 To export only the selected records by utilizing the [ExportProperties.DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_DataSource) property in the [ToolbarClick](https://blazor.syncfusion.com/documentation/datagrid/events#ontoolbarclick) event. 
 
@@ -170,9 +170,9 @@ The following example demonstrates how to export the selected records to a PDF d
         Orders = OrderData.GetAllRecords();
     }
 
-    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    public async Task ToolbarClickHandler(ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_pdfexport")
+        if (args.Item.Id == "Grid_pdfexport") //Id is combination of Grid's ID and itemname.
         {
             var selectedRecords = await Grid.GetSelectedRecordsAsync();
             PdfExportProperties exportProperties = new PdfExportProperties
@@ -236,7 +236,7 @@ public class OrderData
 
 ## Export filtered records
 
-Exporting only the filtered records from the Grid allows you to generate PDF document that include only the data that matches your applied filters. This feature is useful when you want to export a subset of data based on specific criteria.
+Exporting only the filtered records from the Syncfusion Blazor Grid allows you to generate PDF document that include only the data that matches your applied filters. This feature is useful when you want to export a subset of data based on specific criteria.
 
 This can be achieved by defining the filtered data in the [ExportProperties.DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_DataSource) property before initiating the export.
 
@@ -277,9 +277,9 @@ The following example demonstrates how to export the filtered records to a PDF d
         Orders = OrderData.GetAllRecords();
     }
 
-    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    public async Task ToolbarClickHandler(ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_pdfexport")
+        if (args.Item.Id == "Grid_pdfexport") //Id is combination of Grid's ID and itemname.
         {
         var FilterdRecords = (IEnumerable<OrderData>)await Grid.GetFilteredRecordsAsync();
         PdfExportProperties exportProperties = new PdfExportProperties
@@ -343,7 +343,7 @@ public class OrderData
 
 ## Export with hidden columns
 
-Exporting hidden columns in the Grid allows you to include hidden columns in the exported PDF document. This feature is useful when you have columns that are hidden in the UI but still need to be included in the exported document.
+Exporting hidden columns in the Syncfusion Blazor Grid allows you to include hidden columns in the exported PDF document. This feature is useful when you have columns that are hidden in the UI but still need to be included in the exported document.
 
 To export hidden columns of the Grid to a PDF file, you need to set the [IncludeHiddenColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_IncludeHiddenColumn) property as **true** in the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) property.
 
@@ -382,9 +382,9 @@ The following example demonstrates how to export hidden columns to a PDF file. I
         Orders = OrderData.GetAllRecords();
     }
 
-    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    public async Task ToolbarClickHandler(ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_pdfexport")
+        if (args.Item.Id == "Grid_pdfexport") //Id is combination of Grid's ID and itemname.
         {
             PdfExportProperties exportProperties = new PdfExportProperties
                 {
@@ -453,7 +453,7 @@ public class OrderData
 
 ## Show or hide columns while exporting
 
-The Grid provides the functionality to show or hide columns dynamically during the export process. This feature allows you to selectively display or hide specific columns based on your requirements.
+The Syncfusion Blazor Grid provides the functionality to show or hide columns dynamically during the export process. This feature allows you to selectively display or hide specific columns based on your requirements.
 
 To show or hide columns based on user interaction during the export process, you can follow these steps:
 
@@ -494,9 +494,9 @@ In the following example, the **CustomerID** is initially a hidden column in the
         Orders = OrderData.GetAllRecords();
     }
 
-    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    public async Task ToolbarClickHandler(ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_pdfexport")
+        if (args.Item.Id == "Grid_pdfexport") //Id is combination of Grid's ID and itemname.
         {
             CustomerIDVisible = true;
             ShipCityVisible=false;
@@ -567,7 +567,7 @@ public class OrderData
 
 ## Change page orientation
 
-The Grid allows you to change the page orientation of the exported PDF document from the default portrait mode to landscape mode. This feature provides the flexibility to adjust the layout and presentation of the exported PDF according to your needs.
+The Syncfusion Blazor Grid allows you to change the page orientation of the exported PDF document from the default portrait mode to landscape mode. This feature provides the flexibility to adjust the layout and presentation of the exported PDF according to your needs.
 
 To change the page orientation to landscape for the exported document, you can set the [PageOrientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_PageOrientation) property of the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) property. 
 
@@ -583,34 +583,62 @@ The following example demonstrates how to export the Grid into PDF document by s
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Navigations
+@using System.Collections.Generic
 
-<SfGrid ID="Grid" @ref="Grid" DataSource="@Orders"  AllowPdfexport="true" Toolbar="@(new List<string>() { "Pdfexport" })" Height="348">
-    <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="OrderData"></GridEvents>
+<div style="display: flex; align-items: center; margin-bottom: 10px;">
+    <label style="padding: 10px 10px 26px 0">Change the page orientation property:</label>
+    <SfDropDownList TValue="string" TItem="OrientationItem" @bind-Value="SelectedOrientation" DataSource="@Orientations" Placeholder="Select Orientation" PopupHeight="150px" Width="120px">
+        <DropDownListFieldSettings Text="Text" Value="Value"></DropDownListFieldSettings>
+    </SfDropDownList>
+</div>
+
+<SfGrid ID="Grid" @ref="Grid" DataSource="@Data" AllowPaging="true" AllowPdfExport="true" Toolbar="@(new List<string>() { "PdfExport" })" Height="272">
+    <GridEvents TValue="OrderData" OnToolbarClick="ToolbarClickHandler"></GridEvents>
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
-        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150" />
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120" />
-        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="150" />
-        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" Width="150" />
+        <GridColumn Field="OrderID" HeaderText="Order ID" Width="90" TextAlign="TextAlign.Right" />
+        <GridColumn Field="CustomerID" HeaderText="Customer ID" Width="100" />
+        <GridColumn Field="ShipCity" HeaderText="Ship City" Width="120" />
+        <GridColumn Field="ShipName" HeaderText="Ship Name" Width="100" />
     </GridColumns>
 </SfGrid>
 
 @code {
     private SfGrid<OrderData> Grid;
-    public List<OrderData> Orders { get; set; }
+    public List<OrderData> Data { get; set; }
+
+    public class OrientationItem
+    {
+        public string Text { get; set; }
+        public string Value { get; set; }
+    }
+
+    public string SelectedOrientation { get; set; } = "Portrait";
+
+    public List<OrientationItem> Orientations = new List<OrientationItem>
+    {
+        new OrientationItem { Text = "Portrait", Value = "Portrait" },
+        new OrientationItem { Text = "Landscape", Value = "Landscape" }
+    };
 
     protected override void OnInitialized()
     {
-        Orders = OrderData.GetAllRecords();
+        Data = OrderData.GetAllRecords(); 
     }
 
-    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    public async Task ToolbarClickHandler(ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_pdfexport")
+        if (args.Item.Id.Contains("pdfexport", StringComparison.OrdinalIgnoreCase))
         {
-           PdfExportProperties ExportProperties = new PdfExportProperties();
-            ExportProperties.PageOrientation = Syncfusion.Blazor.Grids.PageOrientation.Landscape;
-            await this.Grid.PdfExport(ExportProperties);
+            var exportProps = new PdfExportProperties
+            {
+                PageOrientation = SelectedOrientation == "Landscape"
+                    ? Syncfusion.Blazor.Grids.PageOrientation.Landscape
+                    : Syncfusion.Blazor.Grids.PageOrientation.Portrait
+            };
+
+            await Grid.ExportToPdfAsync(exportProps);
         }
     }
 }
@@ -668,11 +696,11 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXryZzCpgLAZwSaU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLeNzVKUaStvZne?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Change page size
 
-The Grid allows you to customize the page size of the exported PDF document according to your requirements. This feature provides the flexibility to adjust the layout and dimensions of the exported PDF to fit different paper sizes or printing needs. 
+The Syncfusion Blazor Grid allows you to customize the page size of the exported PDF document according to your requirements. This feature provides the flexibility to adjust the layout and dimensions of the exported PDF to fit different paper sizes or printing needs. 
 
 To customize the page size for the exported document, you can set the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_PageSize) property of the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) property to the desired page size. 
 
@@ -767,9 +795,9 @@ The following example demonstrates how to export the Grid into PDF document by s
         Orders = OrderData.GetAllRecords();
     }
 
-    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    public async Task ToolbarClickHandler(ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_pdfexport")
+        if (args.Item.Id == "Grid_pdfexport") //Id is combination of Grid's ID and itemname.
         {
             var exportProps = new PdfExportProperties
             {
@@ -839,7 +867,7 @@ public class OrderData
 
 ## Define file name
 
-The Grid allows you to specify a custom file name for the exported PDF document. This feature enables you to provide a meaningful and descriptive name for the exported file, making it easier to identify and manage the exported data.
+The Syncfusion Blazor Grid allows you to specify a custom file name for the exported PDF document. This feature enables you to provide a meaningful and descriptive name for the exported file, making it easier to identify and manage the exported data.
 
 To assign a custom file name for the exported document, you can set the [FileName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_FileName) property of the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html) property to the desired file name.
 
@@ -864,9 +892,9 @@ The following example demonstrates how to define a file name using `PdfExportPro
     private SfGrid<OrderDetails> DefaultGrid;
     public List<OrderDetails> Orders { get; set; }
 
-    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    public async Task ToolbarClickHandler(ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Grid's ID and itemname
+        if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Grid's ID and itemname.
         {
             PdfExportProperties ExportProperties = new PdfExportProperties();
             ExportProperties.FileName = "New.pdf";
@@ -928,7 +956,7 @@ public class OrderDetails
 
 ## Enabling horizontal overflow
 
-The Grid allows you to display all defined Grid columns on a single page even when the number of columns exceeds the maximum limits for columns in the exported PDF document. This ensures that your exported PDF maintains its readability and comprehensiveness.
+The Syncfusion Blazor Grid allows you to display all defined Grid columns on a single page even when the number of columns exceeds the maximum limits for columns in the exported PDF document. This ensures that your exported PDF maintains its readability and comprehensiveness.
 
 You can achieve this by utilizing the [PdfExportProperties.AllowHorizontalOverflow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_AllowHorizontalOverflow) property of the Grid.
 
@@ -970,9 +998,9 @@ In the following example, the [EJ2 Toggle Switch Button](https://blazor.syncfusi
     {
         Orders = OrderData.GetAllRecords();
     }
-    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    public async Task ToolbarClickHandler(ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_pdfexport")
+        if (args.Item.Id == "Grid_pdfexport") //Id is combination of Grid's ID and itemname.
         {
             var pdfExportProps = new PdfExportProperties
                 {
@@ -1040,7 +1068,7 @@ In the following example, the [EJ2 Toggle Switch Button](https://blazor.syncfusi
 
 ## Customizing columns on export
 
-The Grid allows you to customize the appearance of Grid columns in your exported PDF documents. This feature empowers you to tailor specific column attributes such as field, header text, and text alignment, ensuring that your exported PDFs align perfectly with your design and reporting requirements.
+The Syncfusion Blazor Grid allows you to customize the appearance of Grid columns in your exported PDF documents. This feature empowers you to tailor specific column attributes such as field, header text, and text alignment, ensuring that your exported PDFs align perfectly with your design and reporting requirements.
 
 To customize the Grid columns, you can follow these steps:
 
@@ -1060,7 +1088,7 @@ The following example demonstrates how to customize the Grid columns when export
 <SfGrid ID="Grid" @ref="Grid" DataSource="@Orders" AllowPdfExport="true" Toolbar="@(new List<string>() { "PdfExport" })" Height="348">
     <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="OrderData"></GridEvents>
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120" IsPrimaryKey="true" />
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150" />
         <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="150" />
         <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" Width="150" />
@@ -1076,9 +1104,9 @@ The following example demonstrates how to customize the Grid columns when export
         Orders = OrderData.GetAllRecords();
     }
 
-    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    public async Task ToolbarClickHandler(ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_pdfexport")
+        if (args.Item.Id == "Grid_pdfexport") //Id is combination of Grid's ID and itemname.
         {
             List<GridColumn> ExportColumns = new List<GridColumn>();
             ExportColumns.Add(new GridColumn() { Field = "OrderID", HeaderText = "Order Number", Width = "120" });
@@ -1155,7 +1183,7 @@ The Syncfusion Blazor Grid provides the ability to customize the font in the exp
 
 ### Default fonts
 
-By default, the Grid uses the **Helvetica** font in the exported document. However, you can change the default font by utilizing the [PdfExportProperties.Theme](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfTheme.html) property. The available default fonts that you can choose from are:
+By default, the Syncfusion Blazor Grid uses the **Helvetica** font in the exported document. However, you can change the default font by utilizing the [PdfExportProperties.Theme](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfTheme.html) property. The available default fonts that you can choose from are:
 
 * Helvetica
 * TimesRoman
@@ -1183,9 +1211,9 @@ The following example demonstrates, how to change the default font when exportin
     <GridGroupSettings Columns="@Initial"></GridGroupSettings>
 
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120" IsPrimaryKey="true" />
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150" />
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120" />
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120" />
         <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="150" />
         <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="150" />
     </GridColumns>
@@ -1202,9 +1230,9 @@ The following example demonstrates, how to change the default font when exportin
         Orders = OrderData.GetAllRecords();
     }
 
-    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    public async Task ToolbarClickHandler(ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_pdfexport")
+        if (args.Item.Id == "Grid_pdfexport") //Id is combination of Grid's ID and itemname.
         {
             var exportProps = new PdfExportProperties
                 {
@@ -1309,9 +1337,9 @@ The following example demonstrates how to use the custom **Algeria** font for ex
     <GridGroupSettings Columns="@Initial"></GridGroupSettings>
 
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120" IsPrimaryKey="true" />
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150" />
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120" />
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120" />
         <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="150" />
         <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="150" />
     </GridColumns>
@@ -1330,9 +1358,9 @@ The following example demonstrates how to use the custom **Algeria** font for ex
         Orders = OrderData.GetAllRecords();
     }
 
-    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    public async Task ToolbarClickHandler(ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_pdfexport")
+        if (args.Item.Id == "Grid_pdfexport") //Id is combination of Grid's ID and itemname.
         {
             var exportProps = new PdfExportProperties
                 {
@@ -1422,13 +1450,13 @@ public class OrderData
 
 ## Exporting Grid Data as Stream
 
-The Grid allows exporting Grid data as a memory stream, enabling programmatic handling before saving or processing. The following sections cover how to export Grid data as a memory stream, merge multiple memory streams into one, and convert the memory stream to a file stream for saving the exported file.
+The Syncfusion Blazor Grid allows exporting Grid data as a memory stream, enabling programmatic handling before saving or processing. The following sections cover how to export Grid data as a memory stream, merge multiple memory streams into one, and convert the memory stream to a file stream for saving the exported file.
 
 ### Exporting Grid Data as Memory Stream
 
-The Export to Memory Stream feature allows you to export data from a Grid to a memory stream instead of saving it to a file directly on the server. This can be particularly useful when you want to generate and serve the file directly to the client without saving it on the server, ensuring a smooth and efficient download process.
+The Export to Memory Stream feature allows you to export data from a Syncfusion Blazor Grid to a memory stream instead of saving it to a file directly on the server. This can be particularly useful when you want to generate and serve the file directly to the client without saving it on the server, ensuring a smooth and efficient download process.
 
-To achieve this functionality, you can utilize the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method along with the `asMemoryStream` parameter set to **true** within the [OnToolbarClick](https://blazor.syncfusion.com/documentation/datagrid/events#ontoolbarclick) event. This method will export an Pdf workbook as a memory stream, which can then be sent to the browser for download.
+To achieve this functionality, you can utilize the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method along with the `asMemoryStream` parameter set to **true** within the [OnToolbarClick](https://blazor.syncfusion.com/documentation/datagrid/events#ontoolbarclick) event. This method will export an PDF workbook as a memory stream, which can then be sent to the browser for download.
 
 The provided example showcases the process of exporting the file as a memory stream and sending the byte to initiate a browser download.
 
@@ -1516,7 +1544,7 @@ In the **Index.razor** file, the Grid is set up, the export operation is trigger
         Orders = OrderData.GetAllRecords();
     }
 
-    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    public async Task ToolbarClickHandler(ClickEventArgs args)
     {       
         if (args.Item.Id == "Grid_pdfexport") //Id is combination of Grid's ID and itemname.
         {
@@ -1575,13 +1603,13 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-### Converting Memory Stream to File Stream for Pdf Export
+### Converting Memory Stream to File Stream for PDF Export
 
-The Pdf Export feature in Grid allows you to export the Grid data to an Pdf workbook. In some cases, you may want to save the exported Pdf file as a physical file on your system. This is useful for scenarios where you need to store or process the file outside of the browser context.
+The PDF Export feature in Syncfusion Blazor Grid allows you to export the Grid data to an PDF workbook. In some cases, you may want to save the exported PDF file as a physical file on your system. This is useful for scenarios where you need to store or process the file outside of the browser context.
 
-To achieve this, you can use the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event in conjunction with the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method. The `ExportToPdfAsync` method generates the Pdf file as a `MemoryStream`. You can then convert this memory stream into a `FileStream` and save the file to a specified location.
+To achieve this, you can use the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event in conjunction with the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method. The `ExportToPdfAsync` method generates the PDF file as a `MemoryStream`. You can then convert this memory stream into a `FileStream` and save the file to a specified location.
 
-The example below demonstrates how to achieve this by converting the memory stream into a file stream for saving the exported Pdf file:
+The example below demonstrates how to achieve this by converting the memory stream into a file stream for saving the exported PDF file:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1612,7 +1640,7 @@ The example below demonstrates how to achieve this by converting the memory stre
         Orders = OrderData.GetAllRecords();
     }
 
-    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    public async Task ToolbarClickHandler(ClickEventArgs args)
     {       
        if (args.Item.Id == "Grid_pdfexport") //Id is combination of Grid's ID and itemname.
         {
@@ -1685,9 +1713,9 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-### Merging Two Pdf Memory Streams
+### Merging Two PDF Memory Streams
 
-When merging two Pdf memory streams and exporting the resulting file as an Pdf workbook, you can leverage the capabilities of the [Syncfusion.Blazor.XlslO](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core/) package to copy a worksheet between workbooks or within the same workbook.
+When merging two PDF memory streams and exporting the resulting file as an PDF workbook, you can leverage the capabilities of the [Syncfusion.Blazor.XlslO](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core/) package to copy a worksheet between workbooks or within the same workbook.
 
 The example below demonstrates how to merge two memory streams and export that merged memory stream for browser download.
 
@@ -1721,7 +1749,7 @@ In this example, there are two memory streams: *streamDoc1* and *streamDoc2*. st
     {
         Orders = OrderData.GetAllRecords();
     }
-    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    public async Task ToolbarClickHandler(ClickEventArgs args)
     {
         if (args.Item.Id == "Grid_pdfexport") //Id is combination of Grid's ID and itemname.
         {
