@@ -216,7 +216,7 @@ The Syncfusion Blazor DataGrid provides a convenient way to export data to a Exc
 
 To export data, you need to define the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_DataSource) property within the [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) object. This property represents the data source that will be used for the Excel or CSV export.
 
-The following example demonstrates how to render custom dataSource during Excel export. By calling the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method and passing the `ExcelExportProperties` object through the Grid instance, the Grid data will be exported to a Excel using the dynamically defined data source.
+The following example demonstrates how to use a custom data source during Excel export. In the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event handler, by calling [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) and passing an `ExcelExportProperties` object to the Grid instance, the Grid data will be exported to Excel using the dynamically defined data source:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -436,7 +436,7 @@ The exporting functionality in the Syncfusion Blazor DataGrid allows you to expo
 
 To apply a custom date format to Grid columns during the export, you can utilize the [Columns.Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Format) property. This property allows you to define a custom format using format options.
 
-The following example demonstrates how to export the Grid with a custom date format. In this example, the `Format` property is used for the **OrderDate** column. This custom date `Format` displays the date in the format of day-of-the-week, month abbreviation, day, and 2-digit year (e.g., Sun, Jan 15, 23).
+The following example demonstrates how to export the Grid with a custom date format . In this example, the `Format` property is used for the **OrderDate** column. This custom date `Format` displays the date in the format of day-of-the-week, month abbreviation, day, and 2-digit year (e.g., Sun, Jan 15, 23). The [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method is called in the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event to export the data to Excel.
 
 
 {% tabs %}
