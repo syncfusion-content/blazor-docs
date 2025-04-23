@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Edit Types in Blazor DataGrid Component | Syncfusion
+title: Edit Types in Blazor Grid Component | Syncfusion
 description: Checkout and learn here all about Cell Edit Types in Syncfusion Blazor DataGrid component and much more details.
 platform: Blazor
-control: DataGrid
+control: Grid
 documentation: ug
 ---
 
-# Edit Types in Blazor DataGrid Component
+# Edit Types in Blazor Grid Component
 
 The Syncfusion Blazor DataGrid component offers a variety of edit types, enabling you to customize the editing behavior for different column types. These edit types enhance the editing experience and provide flexibility in managing various data types.
 
@@ -55,6 +55,7 @@ The following sample code demonstrates the customization applied to the TextBox 
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+
 @page "/"
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Inputs
@@ -79,8 +80,11 @@ The following sample code demonstrates the customization applied to the TextBox 
         Orders = OrderData.GetAllRecords();
     }
 }
+
 {% endhighlight %}
+
 {% highlight c# tabtitle="OrderData.cs" %}
+
 public class OrderData
 {
     public static List<OrderData> Orders = new List<OrderData>();
@@ -129,6 +133,7 @@ public class OrderData
     public string ShipCountry { get; set; }
     public int EmployeeID { get; set; } 
 }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -144,10 +149,11 @@ The table below highlights the key aspects of customizing a NumericTextBox contr
 |------------------------------------------------------------------------------------------------|-------------|---------------------------------------------------------------------------------------------------------------|---------------------------------------|
 | [NumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started)  | NumericEdit | Renders a NumericTextBox component for integer, double, float, short, byte, long, long double, and decimal data type columns. Refer to the [NumericTextBox API documentation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html) for more properties. | Params: { decimals: 2, value: 5 }    |
 
-Below is an example demonstrating how to customize the NumericTextBox component for the **Freight** column in a Syncfusion DataGrid:
+Below is an example demonstrating how to customize the NumericTextBox component for the **Freight** column in a Syncfusion Grid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+
 @page "/"
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Inputs
@@ -173,8 +179,11 @@ Below is an example demonstrating how to customize the NumericTextBox component 
         Orders = OrderData.GetAllRecords();
     }
 }
+
 {% endhighlight %}
+
 {% highlight c# tabtitle="OrderData.cs" %}
+
 public class OrderData
 {
     public static List<OrderData> Orders = new List<OrderData>();
@@ -223,6 +232,7 @@ public class OrderData
     public string ShipCountry { get; set; }
     public int EmployeeID { get; set; } 
 }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -240,6 +250,7 @@ In the example below, while editing a row, the NumericTextBox in the **Freight**
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+
 @page "/"
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Inputs
@@ -270,8 +281,11 @@ In the example below, while editing a row, the NumericTextBox in the **Freight**
         Orders = OrderData.GetAllRecords();
     }
 }
+
 {% endhighlight %}
+
 {% highlight c# tabtitle="OrderData.cs" %}
+
 public class OrderData
 {
     public static List<OrderData> Orders = new List<OrderData>();
@@ -320,6 +334,7 @@ public class OrderData
     public string ShipCountry { get; set; }
     public int EmployeeID { get; set; } 
 }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -337,10 +352,11 @@ The table below outlines the key aspects of customizing a DropDownList control u
 
 > **Note:** The `DataSource` property in `DropDownListModel` must be of type `IEnumerable<TItem>`. Avoid binding `string[]` or `List<string>` directly to the `DataSource` property.
 
-Below is an example demonstrating how to customize the DropDownList component for the **ShipCity** column in a Syncfusion DataGrid:
+Below is an example demonstrating how to customize the DropDownList component for the **ShipCity** column in a Syncfusion Grid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+
 @page "/"
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
@@ -367,8 +383,11 @@ Below is an example demonstrating how to customize the DropDownList component fo
         Orders = OrderData.GetAllRecords();
     }
 }
+
 {% endhighlight %}
+
 {% highlight c# tabtitle="OrderData.cs" %}
+
 public class OrderData
 {
     public static List<OrderData> Orders = new List<OrderData>();
@@ -417,6 +436,7 @@ public class OrderData
     public string ShipCountry { get; set; }
     public int EmployeeID { get; set; } 
 }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -424,14 +444,15 @@ public class OrderData
 
 ### Provide custom data source for DropDownList component
 
-In Syncfusion’s Blazor DataGrid component, you can provide a custom data source for the DropDownList component used in the **EditForm**. This feature allows you to define a specific set of values for the DropDownList, tailoring it to meet your requirements.
+In Syncfusion’s Blazor Grid component, you can provide a custom data source for the DropDownList component used in the **EditForm**. This feature allows you to define a specific set of values for the DropDownList, tailoring it to meet your requirements.
 
 To achieve this, use the [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditorSettings) property of the Grid column to specify the custom data source and additional configurations for the DropDownList. Additionally, when setting a new data source, you can define a [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html#Syncfusion_Blazor_DropDowns_DropDownListModel_2_Query) property to filter or retrieve specific data for the DropDownList.
 
-Below is an example demonstrating how to provide a custom data source for the **ShipCountry** column while editing in the DataGrid:
+Below is an example demonstrating how to provide a custom data source for the **ShipCountry** column while editing in the Grid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+
 @page "/"
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
@@ -462,8 +483,11 @@ Below is an example demonstrating how to provide a custom data source for the **
         Orders = OrderData.GetAllRecords();
     }
 }
+
 {% endhighlight %}
+
 {% highlight c# tabtitle="OrderData.cs" %}
+
 public class OrderData
 {
     public static List<OrderData> Orders = new List<OrderData>();
@@ -514,12 +538,13 @@ public class OrderData
     public int EmployeeID { get; set; }
     public TimeOnly? OrderTime { get; set; }
 }
+
 {% endhighlight %}
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZLTWhiHBprRSZPy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-### Apply Filtering for DropDownList Component
+### Apply filtering for DropDownList Component
 
 The Syncfusion Blazor DataGrid component supports filtering for the DropDownList within the **EditForm**. This feature enables users to select options from a predefined list and search for specific items using the built-in filtering functionality.
 
@@ -529,6 +554,7 @@ In the following example, filtering is enabled for the **ShipCountry** column:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+
 @page "/"
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
@@ -556,8 +582,11 @@ In the following example, filtering is enabled for the **ShipCountry** column:
         Orders = OrderData.GetAllRecords();
     }
 }
+
 {% endhighlight %}
+
 {% highlight c# tabtitle="OrderData.cs" %}
+
 public class OrderData
 {
     public static List<OrderData> Orders = new List<OrderData>();
@@ -606,6 +635,7 @@ public class OrderData
     public string ShipCountry { get; set; }
     public int EmployeeID { get; set; } 
 }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -623,6 +653,7 @@ The table below highlights the key aspects of customizing a DropDownList control
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+
 @page "/"
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
@@ -649,8 +680,11 @@ The table below highlights the key aspects of customizing a DropDownList control
         Orders = OrderData.GetAllRecords();
     }
 }
+
 {% endhighlight %}
+
 {% highlight c# tabtitle="OrderData.cs" %}
+
 public class OrderData
 {
     public static List<OrderData> Orders = new List<OrderData>();
@@ -699,6 +733,7 @@ public class OrderData
     public string ShipCountry { get; set; }
     public int EmployeeID { get; set; } 
 }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -714,10 +749,11 @@ The table below highlights the key aspects of customizing a DatePicker control u
 |------------|--------------|----------------------------------------------------------------------------------------------------------|---------------------------------|
 | [DatePicker](https://blazor.syncfusion.com/documentation/datepicker/getting-started-with-web-app) | DatePickerEdit  | The DatePickerEdit type renders a DatePicker component for date data type columns. To customize the DatePicker component, refer to the [DatePicker API documentation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html) for detailed information on available properties. | Params: { Format:’dd.MM.yyyy’ }      |
 
-Below is an example demonstrating how to customize the DatePicker component for the **OrderDate** column in the Syncfusion DataGrid:
+Below is an example demonstrating how to customize the DatePicker component for the **OrderDate** column in the Syncfusion Grid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+
 @page "/"
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Calendars
@@ -749,8 +785,11 @@ Below is an example demonstrating how to customize the DatePicker component for 
         Orders = OrderData.GetAllRecords();
     }
 }
+
 {% endhighlight %}
+
 {% highlight c# tabtitle="OrderData.cs" %}
+
 public class OrderData
 {
     public static List<OrderData> Orders = new List<OrderData>();
@@ -801,6 +840,7 @@ public class OrderData
     public int EmployeeID { get; set; }
     public TimeOnly? OrderTime { get; set; }
 }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -814,10 +854,11 @@ The table below highlights the key aspects of customizing a TimePicker control u
 |------------|--------------|----------------------------------------------------------------------------------------------------------|---------------------------------|
 | [TimePicker](https://blazor.syncfusion.com/documentation/timepicker/getting-started-with-web-app) | TimePickerEdit  | The TimePickerEdit type renders a TimePicker component for time data type columns. To customize the TimePicker component, refer to the [TimePicker API documentation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfTimePicker-1.html) for detailed information on available properties. | Params: { Value: new Date() }    |
 
-Below is an example demonstrating how to customize the DatePicker component for the **OrderTime** column in the Syncfusion DataGrid:
+Below is an example demonstrating how to customize the DatePicker component for the **OrderTime** column in the Syncfusion Grid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+
 @page "/"
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Calendars
@@ -845,8 +886,11 @@ Below is an example demonstrating how to customize the DatePicker component for 
         Orders = OrderData.GetAllRecords();
     }
 }
+
 {% endhighlight %}
+
 {% highlight c# tabtitle="OrderData.cs" %}
+
 namespace BlazorApp1.Data
 {
     public class OrderData
@@ -900,10 +944,132 @@ namespace BlazorApp1.Data
         public TimeOnly? OrderTime { get; set; }
     }
 }
+
 {% endhighlight %}
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VNrfWhWRHKMBbbnG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Customize DateTimePicker Component of DateTimePickerEdit Type
+
+The `DateTimeEditCellParams` class enables customization of the DateTimePicker component in the Grid **EditForm** for columns with date-time data types. By configuring the [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditorSettings) property of a GridColumn, you can modify the DateTimePicker component's properties and behavior to suit your requirements.
+
+The table below highlights the key aspects of customizing a DateTimePicker control using the `EditorSettings` property of a GridColumn:
+
+| Component                                                                                      | Edit Type          | Description                                                                                                   | Example Customized Edit Params       |
+|------------------------------------------------------------------------------------------------|--------------------|---------------------------------------------------------------------------------------------------------------|---------------------------------------|
+| [DateTimePicker](https://blazor.syncfusion.com/documentation/datetime-picker/getting-started-with-web-app) | DateTimePickerEdit | Renders a DateTimePicker component for date-time data type columns. Refer to the [DateTimePicker API documentation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html) for detailed information on available properties. | Params: { Value: new Date() }         |
+
+Below is an example demonstrating how to customize the DateTimePicker component for the **OrderDate** column in the Syncfusion Grid:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@page "/"
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Calendars
+@using BlazorApp1.Data
+
+<SfGrid DataSource="@Orders"
+        Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })"
+        Width="1000px">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" EditType="EditType.NumericEdit" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Width="180"
+                    EditType="EditType.DateTimePickerEdit"
+                    Format="MM-dd-yyyy hh:mm tt"
+                    Type="ColumnType.DateTime"
+                    EditorSettings="@DateTimeEditCellParams"
+                    TextAlign="TextAlign.Right">
+        </GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<OrderData> Orders { get; set; }
+
+    public IEditorSettings DateTimeEditCellParams = new DateTimeEditCellParams<object>
+        {
+            Params = new DateTimePickerModel<object>
+            {
+                ShowClearButton = false,
+                Format = "MM-dd-yyyy hh:mm tt",
+                Start = Syncfusion.Blazor.Calendars.CalendarView.Year
+            }
+        };
+
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="OrderData.cs" %}
+
+namespace BlazorApp1.Data
+{
+    public class OrderData
+    {
+        public static List<OrderData> Orders = new List<OrderData>();
+
+        public OrderData() { }
+
+        public OrderData(int OrderID, string CustomerID, string ShipName, double Freight, DateTime? OrderDate, DateTime? ShippedDate, bool? IsVerified, string ShipCity, string ShipCountry, int employeeID, TimeOnly? OrderTime)
+        {
+            this.OrderID = OrderID;
+            this.CustomerID = CustomerID;
+            this.ShipName = ShipName;
+            this.Freight = Freight;
+            this.OrderDate = OrderDate;
+            this.ShippedDate = ShippedDate;
+            this.IsVerified = IsVerified;
+            this.ShipCity = ShipCity;
+            this.ShipCountry = ShipCountry;
+            this.EmployeeID = employeeID;
+            this.OrderTime = OrderTime;
+        }
+
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count == 0)
+            {
+                Orders.Add(new OrderData(10248, "VINET", "Vins et alcools Chevalier", 32.38, new DateTime(1996, 7, 4), new DateTime(1996, 08, 07), true, "Reims", "France", 1, new TimeOnly(9, 30, 0)));
+                Orders.Add(new OrderData(10249, "TOMSP", "Toms Spezialitäten", 11.61, new DateTime(1996, 7, 5), new DateTime(1996, 08, 07), false, "Münster", "Germany", 2, new TimeOnly(10, 0, 0)));
+                Orders.Add(new OrderData(10250, "HANAR", "Hanari Carnes", 65.83, new DateTime(1996, 7, 6), new DateTime(1996, 08, 07), true, "Rio de Janeiro", "India", 3, new TimeOnly(14, 15, 0)));
+                Orders.Add(new OrderData(10251, "VINET", "Vins et alcools Chevalier", 41.34, new DateTime(1996, 7, 7), new DateTime(1996, 08, 07), false, "Lyon", "France", 1, new TimeOnly(11, 45, 0)));
+                Orders.Add(new OrderData(10252, "SUPRD", "Suprêmes délices", 151.30, new DateTime(1996, 7, 8), new DateTime(1996, 08, 07), true, "Charleroi", "Belgium", 2, new TimeOnly(13, 0, 0)));
+                Orders.Add(new OrderData(10253, "HANAR", "Hanari Carnes", 58.17, new DateTime(1996, 7, 9), new DateTime(1996, 08, 07), false, "Bern", "Switzerland", 3, new TimeOnly(16, 30, 0)));
+                Orders.Add(new OrderData(10254, "CHOPS", "Chop-suey Chinese", 22.98, new DateTime(1996, 7, 10), new DateTime(1996, 08, 07), true, "Genève", "Switzerland", 2, new TimeOnly(8, 0, 0)));
+                Orders.Add(new OrderData(10255, "VINET", "Vins et alcools Chevalier", 148.33, new DateTime(1996, 7, 11), new DateTime(1996, 08, 07), false, "Resende", "India", 1, new TimeOnly(10, 30, 0)));
+                Orders.Add(new OrderData(10256, "HANAR", "Hanari Carnes", 13.97, new DateTime(1996, 7, 12), new DateTime(1996, 08, 07), true, "Paris", "France", 3, new TimeOnly(9, 45, 0)));
+            }
+            return Orders;
+        }
+
+        public int OrderID { get; set; }
+        public string? CustomerID { get; set; }
+        public string? ShipName { get; set; }
+        public double? Freight { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public DateTime? ShippedDate { get; set; }
+        public bool? IsVerified { get; set; }
+        public string? ShipCity { get; set; }
+        public string? ShipCountry { get; set; }
+        public int EmployeeID { get; set; }
+        public TimeOnly? OrderTime { get; set; }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNBoZfrBCuEvMRrS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Render custom cell editors
 
@@ -925,6 +1091,7 @@ The following example demonstrates how to render a textArea component in the **S
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+
 @page "/"
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Inputs
@@ -953,8 +1120,11 @@ The following example demonstrates how to render a textArea component in the **S
         Orders = OrderData.GetAllRecords();
     }
 }
+
 {% endhighlight %}
+
 {% highlight c# tabtitle="OrderData.cs" %}
+
 public class OrderData
 {
     public static List<OrderData> Orders = new List<OrderData>();
@@ -1007,6 +1177,7 @@ public class OrderData
     public int EmployeeID { get; set; }
     public TimeOnly? OrderTime { get; set; }
 }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -1022,6 +1193,7 @@ The following example demonstrates how to render an AutoComplete component in th
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+
 @page "/"
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
@@ -1050,8 +1222,11 @@ The following example demonstrates how to render an AutoComplete component in th
         Orders = OrderData.GetAllRecords();
     }
 }
+
 {% endhighlight %}
+
 {% highlight c# tabtitle="OrderData.cs" %}
+
 public class OrderData
 {
     public static List<OrderData> Orders = new List<OrderData>();
@@ -1104,6 +1279,7 @@ public class OrderData
     public int EmployeeID { get; set; }
     public TimeOnly? OrderTime { get; set; }
 }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -1117,6 +1293,7 @@ Here’s an example of how to render a MaskedTextBox component in the CustomerNu
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+
 @page "/"
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Inputs
@@ -1143,8 +1320,11 @@ Here’s an example of how to render a MaskedTextBox component in the CustomerNu
         Orders = OrderData.GetAllRecords();
     }
 }
+
 {% endhighlight %}
+
 {% highlight c# tabtitle="OrderData.cs" %}
+
  public class OrderData
  {
      public static List<OrderData> Orders = new List<OrderData>();
@@ -1199,6 +1379,7 @@ Here’s an example of how to render a MaskedTextBox component in the CustomerNu
      public TimeOnly? OrderTime { get; set; }
      public string CustomerNumber { get; set; } 
  }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -1214,6 +1395,7 @@ The following example demonstrates how to render a DropDownList component in the
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+
 @page "/"
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
@@ -1255,8 +1437,11 @@ The following example demonstrates how to render a DropDownList component in the
         Orders = OrderData.GetAllRecords();
     }
 }
+
 {% endhighlight %}
+
 {% highlight c# tabtitle="OrderData.cs" %}
+
 public class OrderData
 {
     public static List<OrderData> Orders = new List<OrderData>();
@@ -1309,6 +1494,7 @@ public class OrderData
     public int EmployeeID { get; set; }
     public TimeOnly? OrderTime { get; set; }
 }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -1324,6 +1510,7 @@ The following example demonstrates how to render images in the DropDownList edit
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+
 @page "/"
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
@@ -1366,8 +1553,11 @@ The following example demonstrates how to render images in the DropDownList edit
         Employees = EmployeeData.GetAllRecords();
     }
 }
+
 {% endhighlight %}
+
 {% highlight c# tabtitle="OrderData.cs" %}
+
 public class OrderData
 {
     public static List<OrderData> Orders = new List<OrderData>();
@@ -1473,6 +1663,7 @@ public class EmployeeData
     public string City { get; set; }
     public DateTime HireDate { get; set; }
 }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -1490,6 +1681,7 @@ The following example demonstrates how to render a DropDownList component with m
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+
 @page "/"
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
@@ -1552,8 +1744,11 @@ The following example demonstrates how to render a DropDownList component with m
     }
 }
 
+
 {% endhighlight %}
+
 {% highlight c# tabtitle="OrderData.cs" %}
+
 public class OrderData
 {
     public static List<OrderData> Orders = new List<OrderData>();
@@ -1606,6 +1801,7 @@ public class OrderData
     public int EmployeeID { get; set; }
     public TimeOnly? OrderTime { get; set; }
 }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -1623,6 +1819,7 @@ The following example demonstrates how to render a ComboBox component in the **S
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+
 @page "/"
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
@@ -1665,8 +1862,11 @@ The following example demonstrates how to render a ComboBox component in the **S
         Orders = OrderData.GetAllRecords();
     }
 }
+
 {% endhighlight %}
+
 {% highlight c# tabtitle="OrderData.cs" %}
+
 public class OrderData
 {
     public static List<OrderData> Orders = new List<OrderData>();
@@ -1719,6 +1919,7 @@ public class OrderData
     public int EmployeeID { get; set; }
     public TimeOnly? OrderTime { get; set; }
 }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -1734,6 +1935,7 @@ The following example demonstrates how to render a TimePicker component in the *
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+
 @page "/"
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Calendars
@@ -1762,8 +1964,11 @@ The following example demonstrates how to render a TimePicker component in the *
     }
 }
 
+
 {% endhighlight %}
+
 {% highlight c# tabtitle="OrderData.cs" %}
+
 public class OrderData
 {
     public static List<OrderData> Orders = new List<OrderData>();
@@ -1818,6 +2023,7 @@ public class OrderData
     public TimeOnly? OrderTime { get; set; }
     public string CustomerNumber { get; set; } 
 }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -1831,48 +2037,62 @@ To render a TimePicker in the edit form, you need to define an [EditTemplate](ht
 
 The following example demonstrates how to render a MultiSelect component in the ShipCity column of the Syncfusion Grid:
 
-### Render RichTextEditor component in edit form
-
-The Syncfusion Grid allows you to render the RichTextEditor component within the edit form. This feature is valuable when you need to format and style text content using various formatting options such as bold, italic, underline, bullet lists, numbered lists, and more during editing a specific column.
-
-To render a RichTextEditor in the edit form, you need to define an [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) in the GridColumn. The `EditTemplate` property specifies the cell edit template that used as an editor for a particular column. It can accept either a template string or an HTML element ID.
-
-Additionally, you need set the [AllowTextWrap]() property of the corresponding grid column to **true**. By enabling this property, the rich text editor component will automatically adjust its width and wrap the text content to fit within the boundaries of the column.
-
-The following example demonstrates how to render a RichTextEditor component in the ShipAddress column of the Syncfusion Grid. 
-
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+
 @page "/"
 @using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.RichTextEditor
+@using Syncfusion.Blazor.DropDowns
 @using BlazorApp1.Data
 
-<SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
-    <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="@Syncfusion.Blazor.Grids.EditMode.Normal"></GridEditSettings>
+<SfGrid DataSource="@Orders" Toolbar="@(new List<string> { "Add", "Edit", "Delete", "Cancel", "Update" })">
+    <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="EditMode.Normal" />
     <GridColumns>
-    <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true})" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID"   Width="100"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText=" Order Date" EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="100" Type="ColumnType.Date"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.ShipAddress) HeaderText="Ship Address" Width="150" DisableHtmlEncode=false>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules { Required = true })" TextAlign="TextAlign.Right" Width="120" />
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="100" />
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit" Width="100" />
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="100" Type="ColumnType.Date" />
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="150" DisableHtmlEncode="false">
             <EditTemplate>
-                <SfRichTextEditor ID="ShipAddress" @bind-value="@((context as OrderData).ShipAddress)" />
+                @{
+                    var order = context as OrderData;
+                }
+                <SfMultiSelect TItem="MultiSelectDataSource" TValue="string" @bind-Value="order.ShipCity" Placeholder="Select cities" DataSource="@CityList" Width="300px">
+                    <MultiSelectFieldSettings Text="Text" Value="Value" />
+                </SfMultiSelect>
             </EditTemplate>
-        </GridColumn> 
+        </GridColumn>
     </GridColumns>
 </SfGrid>
 
 @code {
     public List<OrderData> Orders { get; set; }
 
+    public class MultiSelectDataSource
+    {
+        public string Value { get; set; }
+        public string Text { get; set; }
+    }
+
+    public List<MultiSelectDataSource> CityList = new List<MultiSelectDataSource>
+    {
+        new MultiSelectDataSource { Value = "Reims", Text = "Reims" },
+        new MultiSelectDataSource { Value = "Münster", Text = "Münster" },
+        new MultiSelectDataSource { Value = "Rio de Janeiro", Text = "Rio de Janeiro" },
+        new MultiSelectDataSource { Value = "Lyon", Text = "Lyon" },
+        new MultiSelectDataSource { Value = "Charleroi", Text = "Charleroi" }
+    };
+
     protected override void OnInitialized()
     {
         Orders = OrderData.GetAllRecords();
     }
 }
+
 {% endhighlight %}
+
 {% highlight c# tabtitle="OrderData.cs" %}
+
 public class OrderData
 {
     public static List<OrderData> Orders = new List<OrderData>();
@@ -1925,5 +2145,433 @@ public class OrderData
     public int EmployeeID { get; set; }
     public TimeOnly? OrderTime { get; set; }
 }
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtLyZpLVMImGWFCC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+### Render RichTextEditor component in edit form
+
+The Syncfusion Grid allows you to render the RichTextEditor component within the edit form. This feature is valuable when you need to format and style text content using various formatting options such as bold, italic, underline, bullet lists, numbered lists, and more during editing a specific column.
+
+To render a RichTextEditor in the edit form, you need to define an [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) in the GridColumn. The `EditTemplate` property specifies the cell edit template that used as an editor for a particular column. It can accept either a template string or an HTML element ID.
+
+Additionally, you need set the [AllowTextWrap]() property of the corresponding grid column to **true**. By enabling this property, the rich text editor component will automatically adjust its width and wrap the text content to fit within the boundaries of the column.
+
+The following example demonstrates how to render a RichTextEditor component in the ShipAddress column of the Syncfusion Grid. 
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@page "/"
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.RichTextEditor
+@using BlazorApp1.Data
+
+<SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
+    <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="@Syncfusion.Blazor.Grids.EditMode.Normal"></GridEditSettings>
+    <GridColumns>
+    <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true})" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID"   Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText=" Order Date" EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="100" Type="ColumnType.Date"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.ShipAddress) HeaderText="Ship Address" Width="150" DisableHtmlEncode=false>
+            <EditTemplate>
+                <SfRichTextEditor ID="ShipAddress" @bind-value="@((context as OrderData).ShipAddress)" />
+            </EditTemplate>
+        </GridColumn> 
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<OrderData> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="OrderData.cs" %}
+
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData() { }
+
+    public OrderData(int OrderID, string CustomerID, string ShipName, double Freight, DateTime? OrderDate, DateTime? ShippedDate, bool? IsVerified, string ShipCity, string ShipCountry, string ShipAddress, int employeeID, TimeOnly? OrderTime)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;
+        this.ShipName = ShipName;
+        this.Freight = Freight;
+        this.OrderDate = OrderDate;
+        this.ShippedDate = ShippedDate;
+        this.IsVerified = IsVerified;
+        this.ShipCity = ShipCity;
+        this.ShipCountry = ShipCountry;
+        this.ShipAddress = ShipAddress;
+        this.EmployeeID = employeeID;
+        this.OrderTime = OrderTime;
+    }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        {
+            Orders.Add(new OrderData(10248, "VINET", "Vins et alcools Chevalier", 32.38, new DateTime(1996, 7, 4), new DateTime(1996, 08, 07), true, "Reims", "France", "12 Rue des Fleurs", 1, new TimeOnly(9, 30, 0)));
+            Orders.Add(new OrderData(10249, "TOMSP", "Toms Spezialitäten", 11.61, new DateTime(1996, 7, 5), new DateTime(1996, 08, 07), false, "Münster", "Germany", "45 Straße der Nationen", 2, new TimeOnly(10, 0, 0)));
+            Orders.Add(new OrderData(10250, "HANAR", "Hanari Carnes", 65.83, new DateTime(1996, 7, 6), new DateTime(1996, 08, 07), true, "Rio de Janeiro", "India", "89 MG Road", 3, new TimeOnly(14, 15, 0)));
+            Orders.Add(new OrderData(10251, "VINET", "Vins et alcools Chevalier", 41.34, new DateTime(1996, 7, 7), new DateTime(1996, 08, 07), false, "Lyon", "France", "23 Rue Victor Hugo", 1, new TimeOnly(11, 45, 0)));
+            Orders.Add(new OrderData(10252, "SUPRD", "Suprêmes délices", 151.30, new DateTime(1996, 7, 8), new DateTime(1996, 08, 07), true, "Charleroi", "Belgium", "78 Rue de l'Industrie", 2, new TimeOnly(13, 0, 0)));
+            Orders.Add(new OrderData(10253, "HANAR", "Hanari Carnes", 58.17, new DateTime(1996, 7, 9), new DateTime(1996, 08, 07), false, "Bern", "Switzerland", "5 Bahnhofstrasse", 3, new TimeOnly(16, 30, 0)));
+            Orders.Add(new OrderData(10254, "CHOPS", "Chop-suey Chinese", 22.98, new DateTime(1996, 7, 10), new DateTime(1996, 08, 07), true, "Genève", "Switzerland", "12 Rue de Mont Blanc", 2, new TimeOnly(8, 0, 0)));
+            Orders.Add(new OrderData(10255, "VINET", "Vins et alcools Chevalier", 148.33, new DateTime(1996, 7, 11), new DateTime(1996, 08, 07), false, "Resende", "India", "7 Residency Road", 1, new TimeOnly(10, 30, 0)));
+            Orders.Add(new OrderData(10256, "HANAR", "Hanari Carnes", 13.97, new DateTime(1996, 7, 12), new DateTime(1996, 08, 07), true, "Paris", "France", "15 Rue de Rivoli", 3, new TimeOnly(9, 45, 0)));
+        }
+        return Orders;
+    }
+
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipName { get; set; }
+    public double? Freight { get; set; }
+    public DateTime? OrderDate { get; set; }
+    public DateTime? ShippedDate { get; set; }
+    public bool? IsVerified { get; set; }
+    public string? ShipCity { get; set; }
+    public string ShipCountry { get; set; }
+    public string ShipAddress { get; set; }
+    public int EmployeeID { get; set; }
+    public TimeOnly? OrderTime { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLJiLsFKiBkUUQg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+### Render cascading DropDownList component in edit form
+
+The Syncfusion Blazor DataGrid enables the rendering of cascading DropDownLists within the edit form using the `EditTemplate` property of the `GridColumn` component. This functionality is particularly beneficial for creating a hierarchy of options, such as selecting a country and then choosing a state based on the selected country.
+
+To implement cascading DropDownLists in Grid editing, utilize the `EditTemplate` property of the `GridColumn` component.
+
+The following example demonstrates how to render cascading DropDownLists for the **ShipCountry** and **ShipState** columns during Grid editing.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.DropDowns
+
+<SfGrid @ref="GridRef" AllowPaging="true" DataSource="@GridData" ShowColumnChooser="true" Toolbar="@(new List<string>() { "Add","Edit","Delete","Update","Cancel" })">
+    <GridEvents OnActionBegin="OnActionBegin" TValue="Orders"></GridEvents>
+    <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="@EditMode.Normal"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Orders.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="@TextAlign.Center" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(Orders.Freight) HeaderText="Freight" EditType="EditType.NumericEdit" Format="C2" Width="140" TextAlign="@TextAlign.Right"></GridColumn>
+        <GridColumn Field=@nameof(Orders.OrderDate) HeaderText="Order Date" EditType="EditType.DatePickerEdit" Format="d" Type="ColumnType.Date" Width="160"></GridColumn>
+        <GridColumn Field=@nameof(Orders.ShipCountry) HeaderText="Ship Country" EditType="EditType.DropDownEdit" Width="150">
+            <EditTemplate>
+                <SfDropDownList ID="ShipCountry" Placeholder="Select a Country" TItem="string" TValue="string" @bind-Value="@((context as Orders).ShipCountry)" DataSource="@Countries">
+                    <DropDownListEvents TValue="string" TItem="string" ValueChange="ValueChange"></DropDownListEvents>
+                    <DropDownListFieldSettings Text="ShipCountry" Value="ShipCountry"></DropDownListFieldSettings>
+                </SfDropDownList>
+            </EditTemplate>
+        </GridColumn>
+        <GridColumn Field=@nameof(Orders.ShipState) HeaderText=" Ship State" EditType="EditType.DropDownEdit" Width="150">
+            <EditTemplate>
+                <SfDropDownList ID="ShipState" Placeholder="Select a State" TItem="string" Enabled="@Enabled" TValue="string" @bind-Value="@((context as Orders).ShipState)" DataSource="@States">
+                    <DropDownListFieldSettings Text="ShipState" Value="ShipState"></DropDownListFieldSettings>
+                </SfDropDownList>
+            </EditTemplate>
+        </GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    SfGrid<Orders> GridRef;
+    public List<Orders> GridData { get; set; } = new List<Orders>();
+    public List<string> Countries = new List<string>() { "United States", "Australia" };
+    public List<string> States = new List<string>() { "New York", "Virginia", "Washington", "Queensland", "Tasmania", "Victoria" };
+    public bool Enabled = false;
+    protected override void OnInitialized()
+    {
+        if (GridData.Count() == 0)
+        {
+            int code = 10000;
+            for (int i = 1; i < 10; i++)
+            {
+                GridData.Add(new Orders(code + 1, "ALFKI", i + 0, 2.3 * i, new DateTime(1991, 05, 15), "United States", "New York"));
+                GridData.Add(new Orders(code + 2, "ANATR", i + 2, 3.3 * i, new DateTime(1990, 04, 04), "Australia", "Queensland"));
+                GridData.Add(new Orders(code + 3, "ANTON", i + 1, 4.3 * i, new DateTime(1957, 11, 30), "United States", "Virginia"));
+                GridData.Add(new Orders(code + 4, "BLONP", i + 3, 5.3 * i, new DateTime(1930, 10, 22), "United States", "Washington"));
+                GridData.Add(new Orders(code + 5, "BOLID", i + 4, 6.3 * i, new DateTime(1953, 02, 18), "Australia", "Victoria"));
+                code += 5;
+            }
+        }
+    }
+
+    public class Orders
+    {
+        public Orders()
+        {
+
+        }
+        public Orders(long OrderId, string CustomerId, int EmployeeId, double Freight, DateTime OrderDate, string ShipCountry, string ShipState)
+        {
+            this.OrderID = OrderId;
+            this.CustomerID = CustomerId;
+            this.EmployeeID = EmployeeId;
+            this.Freight = Freight;
+            this.OrderDate = OrderDate;
+            this.ShipCountry = ShipCountry;
+            this.ShipState = ShipState;
+        }
+        public long OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public int EmployeeID { get; set; }
+        public double Freight { get; set; }
+        public DateTime OrderDate { get; set; }
+        public string ShipCountry { get; set; }
+        public string ShipState { get; set; }
+    }
+    public void ValueChange(@Syncfusion.Blazor.DropDowns.ChangeEventArgs<string,string> args)
+    {
+        if (args.Value == "United States")
+        {
+            States = new List<string>() { "New York", "Virginia", "Washington" };
+        }
+        else if (args.Value == "Australia")
+        {
+            States = new List<string>() { "Queensland", "Tasmania", "Victoria" };
+        }
+        Enabled = true;
+        GridRef.PreventRender(false);
+    }
+    public void OnActionBegin(ActionEventArgs<Orders> args)
+    {
+        if (args.RequestType == Syncfusion.Blazor.Grids.Action.BeginEdit)
+        {
+            Enabled = false;
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### DynamicObject data binding with edit template feature
+
+By defining the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) feature of a [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html), you can render a custom editor component in the Grid's edit form. Two-way (`@bind-Value`) binding cannot be defined for the editor component inside the `EditTemplate`, as its data type is unknown when the Grid is bound to a `DynamicObject`. In such cases, you can use the following approach to perform CRUD operations in a `DynamicObject`-bound Grid with an `EditTemplate`.
+
+The ComboBox component is defined inside the `EditTemplate`, and changes can be saved to the Grid using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_ValueChange) event of the ComboBox and the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event of the Grid.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using System.Dynamic;
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.DropDowns
+
+<SfGrid DataSource="@Orders" AllowGrouping="true" AllowFiltering="true" AllowSorting="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal"></GridEditSettings>
+    <GridEvents OnActionBegin="ActionBeginHandler" TValue="OrdersDetails"></GridEvents>
+    <GridColumns>
+        <GridColumn IsPrimaryKey="true" Field="OrderID"
+                    HeaderText="Order ID"
+                    TextAlign="TextAlign.Right"
+                    Width="120">
+        </GridColumn>
+        <GridColumn Field="CustomerID"
+                    HeaderText="Customer Name"
+                    Width="150">
+        </GridColumn>
+        <GridColumn Field="OrderDate"
+                    HeaderText=" Order Date"
+                    EditType="EditType.DatePickerEdit"
+                    TextAlign="TextAlign.Right"
+                    Format="d"
+                    Type="ColumnType.Date"
+                    Width="130">
+        </GridColumn>
+        <GridColumn Field="Freight"
+                    HeaderText="Freight"
+                    Format="C2"
+                    TextAlign="TextAlign.Right"
+                    Width="120">
+        </GridColumn>
+        <GridColumn Field="Account"
+                    HeaderText="Account"
+                    EditType="EditType.DropDownEdit"
+                    TextAlign="TextAlign.Right"
+                    Width="120">
+            <EditTemplate>
+                @{
+                    var ord = context as OrdersDetails;
+                    ComboBoxValue = (string)DataUtil.GetDynamicValue(ord as DynamicObject, "Account");
+                    <SfComboBox ID="Account" Placeholder="Select an Account" Value="@ComboBoxValue" TItem="string" TValue="string" DataSource="@accounts">
+                        <ComboBoxEvents TValue="string" TItem="string" ValueChange="ValueChangeHandler"></ComboBoxEvents>
+                    </SfComboBox>
+                }
+            </EditTemplate>
+        </GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public List<OrdersDetails> Orders { get; set; } = new List<OrdersDetails>();
+    public List<string> accounts { get; set; } = (new List<string> { "pavan", "kumar", "sai", "saketh", "vijaya", "Swaroop" });
+    public string ComboBoxValue { get; set; }
+
+    public void ValueChangeHandler(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string, string> args) {
+        ComboBoxValue = args.Value;
+    }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 12).Select((x) =>
+        {
+            dynamic dynamicObj = new OrdersDetails();
+            dynamicObj.OrderID = 1000 + x;
+            dynamicObj.CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })
+            [new Random().Next(5)];
+            dynamicObj.Freight = 2.1 * x;
+            dynamicObj.Account = "";
+            dynamicObj.OrderDate = DateTime.Now.AddDays(-x);
+            return dynamicObj;
+        }).Cast<OrdersDetails>().ToList<OrdersDetails>();
+    }
+
+    public async void ActionBeginHandler(ActionEventArgs<OrdersDetails> Args)
+    {
+        if (Args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Save))
+        {
+            if (Args.Action == "Add")
+            {
+                ((OrdersDetails)Args.Data).TrySetMember(new DataSetMemberBinderClone("Account", false), ComboBoxValue);
+            }
+           else if (Args.Action == "Edit")
+            {
+                ((OrdersDetails)Args.Data).TrySetMember(new DataSetMemberBinderClone("Account", false), ComboBoxValue);
+            }
+        }
+        await Task.CompletedTask;
+    }
+
+    public class OrdersDetails : DynamicObject
+    {
+        Dictionary<string, object> OrdersDictionary = new Dictionary<string, object>();
+
+        public override bool TryGetMember(GetMemberBinder binder, out object result)
+        {
+            string name = binder.Name;
+            return OrdersDictionary.TryGetValue(name, out result);
+        }
+
+        public override bool TrySetMember(SetMemberBinder binder, object value)
+        {
+            OrdersDictionary[binder.Name] = value;
+            return true;
+        }
+
+        public override IEnumerable<string> GetDynamicMemberNames()
+        {
+            return this.OrdersDictionary?.Keys;
+        }
+    }
+    public class DataSetMemberBinderClone : SetMemberBinder
+    {
+        public DataSetMemberBinderClone(string name, bool ignoreCase)
+            : base(name, ignoreCase)
+        {
+        }
+
+        public override DynamicMetaObject FallbackSetMember(DynamicMetaObject target, DynamicMetaObject value, DynamicMetaObject errorSuggestion)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### ExpandoObject data binding with edit template feature
+
+By defining the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) feature of a [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html), you can render a custom editor component in Grid edit form. Two-way (@bind-Value) binding cannot be defined to the editor component inside EditTemplate, since its data type is unknown when Grid is bound by ExpandoObject. In this case, you can use the following way to perform a CRUD operation in the ExpandoObject data binding Grid with EditTemplate.
+
+The `SfTextBox` component is defined inside the EditTemplate and changes can be saved into the Grid using the ValueChange event of the TextBox and the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event of the Grid.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+@using System.Dynamic
+@using Syncfusion.Blazor.Inputs 
+@using Action = Syncfusion.Blazor.Grids.Action;
+
+<SfGrid DataSource="@Orders" AllowPaging="true"  Toolbar="@ToolbarItems">
+<GridEvents OnActionBegin="OnActionBegin" TValue="ExpandoObject"></GridEvents>
+    <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field="OrderID" HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field="CustomerID" HeaderText="Customer Name" Width="120">
+            <EditTemplate>
+                @{
+                    var employee = (context as IDictionary<string, object>);
+                    var edit = (string)employee["CustomerID"];
+                    <SfTextBox Value="@edit" ValueChange="ValueChange"></SfTextBox>
+                }
+            </EditTemplate>
+        </GridColumn>
+        <GridColumn Field="Freight" HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field="OrderDate" HeaderText=" Order Date" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
+        <GridColumn Field="ShipCountry" HeaderText="Ship Country"  Width="150"></GridColumn>
+        <GridColumn Field="Verified" HeaderText="Active" DisplayAsCheckBox="true" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<ExpandoObject> Orders { get; set; } = new List<ExpandoObject>();
+    private List<string> ToolbarItems = new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" };
+    public object TextBoxValue { get; set; } = "";
+
+    public void ValueChange(ChangedEventArgs args)
+    {
+        TextBoxValue = args.Value;
+    }
+
+    public void OnActionBegin(ActionEventArgs<ExpandoObject> args)
+    {
+        if (args.RequestType.Equals(Action.Save) || args.RequestType.Equals(Action.Add))
+        {
+            var data = args.Data as IDictionary<string, object>;
+            data["CustomerID"] = TextBoxValue; // Assign the value selected from dropdown to the corresponding column fields.
+        }
+    }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select((x) =>
+        {
+            dynamic expandObject = new ExpandoObject();
+            expandObject.OrderID = 1000 + x;
+            expandObject.CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)];
+            expandObject.Freight = (new double[] { 2, 1, 4, 5, 3 })[new Random().Next(5)] * x;
+            expandObject.OrderDate = (new DateTime[] { new DateTime(2010, 11, 5), new DateTime(2018, 10, 3), new DateTime(1995, 9, 9), new DateTime(2012, 8, 2), new DateTime(2015, 4, 11) })[new Random().Next(5)];
+            expandObject.ShipCountry = (new string[] { "USA", "UK" })[new Random().Next(2)];;
+            expandObject.Verified = (new bool[] { true, false })[new Random().Next(2)];
+            return expandObject;
+        }).Cast<ExpandoObject>().ToList<ExpandoObject>();
+    }
+}
+
 {% endhighlight %}
 {% endtabs %}
