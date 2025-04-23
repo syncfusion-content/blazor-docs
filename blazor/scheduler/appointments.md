@@ -429,7 +429,7 @@ There are scenarios where you need to restrict the CRUD action on specific appoi
 }
 ```
 
-N> By default, the event editor is prevented to open on the read-only events when [`IsReadonly`]((https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleField.html#Syncfusion_Blazor_Schedule_ScheduleField_IsReadonly)) field is set to **true**.
+N> By default, the event editor is prevented to open on the read-only events when [`IsReadonly`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleField.html#Syncfusion_Blazor_Schedule_ScheduleField_IsReadonly) field is set to **true**.
 
 ## Customize the order of the overlapping events
 
