@@ -27,7 +27,7 @@ To add text in the header or footer of the exported PDF document, follow these s
 
 The following code example demostrates how to add the header in the exported PDF document. 
 
-```typescript
+```cshtml
 
 PdfExportProperties ExportProperties = new PdfExportProperties();
 var header = new PdfHeader
@@ -64,7 +64,7 @@ To add a line in the header or footer of the exported PDF document, you can acce
 
 The following code example demostrates how to draw a line in the header of the exported PDF document. 
 
-```typescript
+```cshtml
 
  var header = new PdfHeader
         {
@@ -143,7 +143,7 @@ To add a page number in the header or footer of the exported PDF document, you c
 
 The following code example demostrates how to add a page number in the footer of the exported PDF document.
 
-```typescript
+```cshtml
 
    var footer = new PdfFooter
         {

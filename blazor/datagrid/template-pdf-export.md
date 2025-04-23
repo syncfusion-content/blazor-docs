@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Exporting grid with templates in Syncfusion Blazor DataGrid
+# Exporting grid with templates in Blazor DataGrid
 
 The Syncfusion Blazor DataGrid offers the option to export the column, detail, and caption templates to an Excel document. The template contains images, hyperlinks, and customized text.
 
@@ -217,7 +217,8 @@ public class OrderData
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtVyjfMHqkQMUKqH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Exporting with detail template
-By default, the Grid exports the parent Grid along with expanded detail rows only. To modify the exporting behavior, utilize the [PdfExportProperties.PdfDetailRowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailRowMode.html) property. The available options include:
+
+By default, the Syncfusion Blazor Grid exports the parent Grid along with expanded detail rows only. To modify the exporting behavior, utilize the [PdfExportProperties.PdfDetailRowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailRowMode.html) property. The available options include:
 
 | Mode | Behavior |
 |-------|----------|
