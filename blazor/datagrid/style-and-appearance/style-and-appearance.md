@@ -155,3 +155,19 @@ public class OrderData
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtrStpWnJrFIGhRs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Customizing alternate row with frozen columns
+
+To customize the alternate row style in the Grid when frozen columns are enabled, you can use the following CSS code:
+
+
+```css
+.e-grid .e-altrow .e-rowcell {
+    background-color: #E8EEFA;
+}
+
+```
+
+In this example, the **.e-altrow .e-rowcell** class targets the cells in alternate rows and applies a custom background color. 
+
+![Grid root element](../images/style-and-appearance/style-frozon.png)
