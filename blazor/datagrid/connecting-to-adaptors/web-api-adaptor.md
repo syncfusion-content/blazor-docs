@@ -378,7 +378,7 @@ The following example demonstrates how to extract the `$filter` parameter and ap
 {% highlight cs tabtitle="GridController.cs" %}
 
 /// <summary>
-/// Retrieves order data and processes filtering operations based on OData-formatted queries.
+/// Retrieves order data and processes filtering operations based on the provided query parameters.
 /// </summary>
 /// <returns>Returns a JSON object containing the filtered list of orders and the total count.</returns>
 [HttpGet]
@@ -499,7 +499,7 @@ The following example demonstrates how to extract the `$orderby` parameter and a
 {% highlight cs tabtitle="GridController.cs" %}
 
 /// <summary>
-/// Retrieves order data and processes sorting operations based on OData-formatted queries.
+/// Retrieves order data and processes sorting operations based on the provided query parameters.
 /// </summary>
 /// <returns>Returns a JSON object containing the sorted list of orders and the total count.</returns>
 [HttpGet]
@@ -589,9 +589,9 @@ The following example demonstrates how to apply paging logic:
 {% highlight cs tabtitle="GridController.cs" %}
 
 /// <summary>
-/// Retrieves order data and processes paging operations based on OData-formatted queries.
+/// Retrieves order data and applies paging logic based on the provided query parameters.
 /// </summary>
-/// <returns>Returns a JSON object containing the paged list of orders and the total count.</returns>
+/// <returns>Returns a JSON object containing the paged list of orders and the total record count.</returns>
 [HttpGet]
 [Route("api/[controller]")]
 public object GetOrderData()
