@@ -84,7 +84,7 @@ The following example demonstrates how to export current page to a PDF document 
 }
 
 {% endhighlight %}
-{% highlight c# tabtitle="OrderData.cs" %}
+{% highlight c# tabtitle="EmployeeData.cs" %}
 
  public class EmployeeData
  {
@@ -131,11 +131,11 @@ The following example demonstrates how to export current page to a PDF document 
 
 Exporting only the selected records from the Syncfusion Blazor Grid allows generating PDF document that include only the desired data from the Grid. This feature provides the flexibility to export specific records that are relevant to the needs, enabling more focused and targeted PDF exports.
 
-To export only the selected records by utilizing the [ExportProperties.DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_DataSource) property in the [ToolbarClick](https://blazor.syncfusion.com/documentation/datagrid/events#ontoolbarclick) event. 
+To export only the selected records by utilizing the [ExportProperties.DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_DataSource) property in the [OnToolbarClick](https://blazor.syncfusion.com/documentation/datagrid/events#ontoolbarclick) event. 
 
 To export the selected records from the Grid to a PDF file, you can follow these steps:
 
-1. Handle the `ToolbarClick` event of the Grid.
+1. Handle the `OnToolbarClick` event of the Grid.
 
 2. Retrieve the selected records using the [GetSelectedRecordsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetSelectedRecordsAsync) method.
 
@@ -457,7 +457,7 @@ The Syncfusion Blazor Grid provides the functionality to show or hide columns dy
 
 To show or hide columns based on user interaction during the export process, you can follow these steps:
 
-1. Handle the [ToolbarClick](https://blazor.syncfusion.com/documentation/datagrid/events#ontoolbarclick) event of the Grid.
+1. Handle the [OnToolbarClick](https://blazor.syncfusion.com/documentation/datagrid/events#ontoolbarclick) event of the Grid.
 
 2. Update the visibility of the desired columns by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Visible) property of the column to **true** or **false**.
 
