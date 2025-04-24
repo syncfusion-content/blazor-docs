@@ -126,13 +126,14 @@ The following example demonstrates how to show and hide the spinner during PDF e
     {
         if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Grid's ID and itemname.
         {
+            // Show spinner while exporting.
             await this.DefaultGrid.ShowSpinnerAsync();
             await this.DefaultGrid.ExportToPdfAsync();
         }
     }
     public async void ExportCompleteHandler(object args)
     {
-
+        // Hide spinner after export completes.
         await this.DefaultGrid.HideSpinnerAsync();
     }
     protected override void OnInitialized()
@@ -193,7 +194,7 @@ The Syncfusion Blazor DataGrid provides a convenient way to export data to a PDF
 
 To export data, you need to define the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_DataSource) property within the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) object. This property represents the data source that will be used for the PDF export.
 
-The following example demonstrates how to render custom data source during PDF export. By utilizing the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_)  method and passing the `PdfExportProperties` object through the Grid instance, the Grid data will be exported to a PDF using the dynamically defined data source.
+The following example demonstrates how to render custom data source during PDF export. By utilizing the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method and passing the `PdfExportProperties` object through the Grid instance, the Grid data will be exported to a PDF using the dynamically defined data source.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
