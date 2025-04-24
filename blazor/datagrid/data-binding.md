@@ -503,9 +503,13 @@ To bind a `DataTable`, convert it into an **IQueryable&lt;ExpandoObject&gt;** co
 
 * Convert it to a list of **ExpandoObject** using a helper method.
 
-* Use a custom adaptor by extending the `DataAdaptor` class.
+* Use a custom adaptor by extending the [DataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html) class.
 
-* Override the `Read` method to handle data fetching and operations.
+* Override the [Read](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Read_Syncfusion_Blazor_DataManagerRequest_System_String_) method to handle data fetching and operations.
+
+The following example demonstrates how to bind a `DataTable` with a **CustomAdaptor**. In the example below, the `DataTable` is passed to the `ToQueryableCollection` method, which converts the `DataTable` data source into an **IQueryable** collection data source.
+
+You can perform data operations like **searching**, **sorting**, and **filtering** using the `PerformDataOperation` method. This method takes a `DataTable` and a `[DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) object as parameters, processes the data operations, and then returns an **IQueryable** data source.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -520,10 +524,10 @@ To bind a `DataTable`, convert it into an **IQueryable&lt;ExpandoObject&gt;** co
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
     <GridPageSettings PageSize="8"></GridPageSettings>
     <GridColumns>
-        <GridColumn Field="OrderID" HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true, Number=true})" Width="120"></GridColumn>
-        <GridColumn Field="CustomerID" HeaderText="Customer Name" ValidationRules="@(new ValidationRules { Required=true})" Width="150"></GridColumn>
-        <GridColumn Field="OrderDate" HeaderText="Order Date" Format="d" Type="ColumnType.Date" Width="130"></GridColumn>
-        <GridColumn Field="EmployeeID" HeaderText="Employee ID" Width="120"></GridColumn>
+        <GridColumn Field="OrderID" HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true, Number=true})" Width="100"></GridColumn>
+        <GridColumn Field="CustomerID" HeaderText="Customer Name" ValidationRules="@(new ValidationRules { Required=true})" Width="100"></GridColumn>
+        <GridColumn Field="OrderDate" HeaderText="Order Date" Format="d" Type="ColumnType.Date" Width="110"></GridColumn>
+        <GridColumn Field="EmployeeID" HeaderText="Employee ID" Width="100"></GridColumn>
     </GridColumns>
 </SfGrid>
 
@@ -534,66 +538,70 @@ To bind a `DataTable`, convert it into an **IQueryable&lt;ExpandoObject&gt;** co
     protected override void OnInitialized()
     {
         dataTable = GetData();
-        
-        // Convert DataTable to IQueryable ExpandoObject list
+
+        // Convert the DataTable to an IQueryable<ExpandoObject> collection.
         DataSource = ToQueryableCollection(dataTable);  
     }
 
-    // Implementing custom adaptor by extending the DataAdaptor class
+    // Custom adaptor class to handle data operations.
     public class CustomAdaptor : DataAdaptor
     {
-        // Performs data Read operation
-        public override object Read(DataManagerRequest dm, string key = null)
+        // Perform the Read operation to fetch data from the source.
+        public override object Read(DataManagerRequest DataManagerRequest, string key = null)
         {
-            // Performs Searching, Sorting, Filtering
-            DataSource = PerformDataOperation(dataTable, dm);
+            // Apply searching, sorting, and filtering.
+            DataSource = PerformDataOperation(dataTable, DataManagerRequest);
 
+            // Get the total record count.
             int count = DataSource.Cast<ExpandoObject>().Count();
-            if (dm.Skip != 0)
+
+            // Perform paging operation using skip and take.
+            if (DataManagerRequest.Skip != 0)
             {
-                //Paging
-                DataSource = QueryableOperation.PerformSkip<object>((IQueryable<object>)DataSource, dm.Skip);
+                DataSource = QueryableOperation.PerformSkip<object>((IQueryable<object>)DataSource, DataManagerRequest.Skip);
             }
-            if (dm.Take != 0)
+            if (DataManagerRequest.Take != 0)
             {
-                DataSource = QueryableOperation.PerformTake<object>((IQueryable<object>)DataSource, dm.Take);
+                DataSource = QueryableOperation.PerformTake<object>((IQueryable<object>)DataSource, DataManagerRequest.Take);
             }
 
-            return dm.RequiresCounts ? new DataResult() { Result = DataSource, Count = count } : (object)DataSource;
+            // Return the result with count if required.
+            return DataManagerRequest.RequiresCounts ? new DataResult() { Result = DataSource, Count = count } : (object)DataSource;
         }
-    }
+    }    
 
-    // Performs data operations like Searching, Sorting, and Filtering
-    public static IQueryable PerformDataOperation(DataTable dt, DataManagerRequest dm)
+    // Performs data operations like Searching, Sorting, and Filtering.
+    public static IQueryable PerformDataOperation(DataTable DataTable, DataManagerRequest DataManagerRequest)
     {
-        // Convert DataTable to IQueryable collection of datasource
-        DataSource = ToQueryableCollection(dt);
-        if (dm.Search != null && dm.Search.Count > 0)
+        // Convert the DataTable to an IQueryable collection.
+        DataSource = ToQueryableCollection(DataTable);
+
+        if (DataManagerRequest.Search != null && DataManagerRequest.Search.Count > 0)
         {
-            // Searching
-            DataSource = DynamicObjectOperation.PerformSearching(DataSource, dm.Search);
+            // Perform searching operation.
+            DataSource = DynamicObjectOperation.PerformSearching(DataSource, DataManagerRequest.Search);
         }
-        if (dm.Where != null && dm.Where.Count > 0)
+        if (DataManagerRequest.Where != null && DataManagerRequest.Where.Count > 0)
         {
-            // Filtering
-            DataSource = DynamicObjectOperation.PerformFiltering(DataSource, dm.Where, dm.Where[0].Operator);
+            // Perform filtering operation.
+            DataSource = DynamicObjectOperation.PerformFiltering(DataSource, DataManagerRequest.Where, DataManagerRequest.Where[0].Operator);
         }
-        if (dm.Sorted != null && dm.Sorted.Count > 0)
+        if (DataManagerRequest.Sorted != null && DataManagerRequest.Sorted.Count > 0)
         {
-            // Sorting
-            DataSource = DynamicObjectOperation.PerformSorting(DataSource, dm.Sorted);
+            // Perform sorting operation.
+            DataSource = DynamicObjectOperation.PerformSorting(DataSource, DataManagerRequest.Sorted);
         }
         return DataSource;
     }
 
-    // This method converts the DataTable data source into an IQueryable collection data source.
-    public static IQueryable ToQueryableCollection(DataTable dt)
+    // Converts a DataTable to an IQueryable collection of ExpandoObjects.
+    public static IQueryable ToQueryableCollection(DataTable DataTable)
     {
         List<ExpandoObject> expandoList = new List<ExpandoObject>();
-        foreach (DataRow row in dt.Rows)
+        foreach (DataRow row in DataTable.Rows)
         {
             var expandoDict = new ExpandoObject() as IDictionary<String, Object>;
-            foreach (DataColumn col in dt.Columns)
+            foreach (DataColumn col in DataTable.Columns)
             {
                 var colValue = row[col.ColumnName];
                 colValue = (colValue == DBNull.Value) ? null : colValue;
@@ -606,108 +614,73 @@ To bind a `DataTable`, convert it into an **IQueryable&lt;ExpandoObject&gt;** co
 
     public DataTable GetData()
     {
-        DataTable dt = new DataTable();
-        dt.Columns.AddRange(new DataColumn[4] { new DataColumn("OrderID", typeof(long)),
-                                                new DataColumn("CustomerID", typeof(string)),
-                                                new DataColumn("EmployeeID",typeof(int)),
-                                                new DataColumn("OrderDate",typeof(DateTime))
-    });
-
+        DataTable DataTable = new DataTable();
+        DataTable.Columns.AddRange(new DataColumn[4] { 
+            new DataColumn("OrderID", typeof(long)),
+            new DataColumn("CustomerID", typeof(string)),
+            new DataColumn("EmployeeID",typeof(int)),
+            new DataColumn("OrderDate",typeof(DateTime))
+        });
         int code = 1000;
         int id = 0;
         for (int i = 1; i <= 15; i++)
         {
-            dt.Rows.Add(code + 1, "ALFKI", id + 1, new DateTime(1991, 05, 15));
-            dt.Rows.Add(code + 2, "ANATR", id + 2, new DateTime(1990, 04, 04));
-            dt.Rows.Add(code + 3, "ANTON", id + 3, new DateTime(1957, 11, 30));
-            dt.Rows.Add(code + 4, "BLONP", id + 4, new DateTime(1930, 10, 22));
-            dt.Rows.Add(code + 5, "BOLID", id + 5, new DateTime(1953, 02, 18));
+            DataTable.Rows.Add(code + 1, "ALFKI", id + 1, new DateTime(1991, 05, 15));
+            DataTable.Rows.Add(code + 2, "CHOPS", id + 2, new DateTime(1990, 04, 04));
+            DataTable.Rows.Add(code + 3, "ANTON", id + 3, new DateTime(1957, 11, 30));
+            DataTable.Rows.Add(code + 4, "DRACH", id + 4, new DateTime(1930, 10, 22));
+            DataTable.Rows.Add(code + 5, "BOLID", id + 5, new DateTime(1953, 02, 18));
             code += 5;
             id += 5;
         }
-        return dt;
+        return DataTable;
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-In the above example, DataTable is passed to the `ToQueryableCollection` method, which converts the DataTable datasource into an **IQueryable** collection datasource.
+**Grouping and Aggregates with DataTable:**
 
-You can perform data operations like **searching**, **sorting** and **filtering** using the `PerformDataOperation` method. This method takes a DataTable and a DataManagerRequest object as parameters, processes the data operations, and then returns an IQueryable data source.
+The Syncfusion Blazor DataGrid supports dynamic **grouping** and **aggregates** even when bound to a `DataTable` via a custom adaptor. This allows you to group rows by one or more columns and apply aggregate functions (such as **Sum**, **Average**, **Count**, etc.) on those groups or entire datasets.
 
-Refer to the following code example for how to implement **grouping** and **aggregates** in a DataTable using a custom adaptor.
+Below is an example showing how to implement grouping and aggregates in a custom adaptor.
 
-```cshtml
-    // Implementing custom adaptor by extending the DataAdaptor class
-    public class CustomAdaptor : DataAdaptor
-    {
-        // Performs data Read operation
-        public override object Read(DataManagerRequest dm, string key = null)
-        {
-            // Convert DataTable to IQueryable ExpandoObject list
-            DataSource = ToQueryableCollection(dataTable);
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 
-            int count = DataSource.Cast<ExpandoObject>().Count();
-            if (dm.Skip != 0)
-            {
-                //Paging
-                DataSource = QueryableOperation.PerformSkip<object>((IQueryable<object>)DataSource, dm.Skip);
-            }
-            if (dm.Take != 0)
-            {
-                DataSource = QueryableOperation.PerformTake<object>((IQueryable<object>)DataSource, dm.Take);
-            }
-
-            // Aggregation
-            IDictionary<string, object> aggregates = new Dictionary<string, object>();
-            if (dm.Aggregates != null)
-            {
-                aggregates = DataUtil.PerformAggregation(DataSource, dm.Aggregates);
-            }
-
-            // Grouping
-            DataResult DataObject = new DataResult();
-            if (dm.Group != null)
-            {
-                IEnumerable result = (IEnumerable)DataSource;
-                foreach (var group in dm.Group)
-                {
-                    result = DataUtil.Group<ExpandoObject>(result, group, dm.Aggregates, 0, dm.GroupByFormatter);
-                }
-                return dm.RequiresCounts ? new DataResult() { Result = result, Count = count, Aggregates = aggregates } : (object)DataSource;
-            }
-            return dm.RequiresCounts ? new DataResult() { Result = DataSource, Count = count, Aggregates = aggregates } : (object)DataSource;
-        }
-    }
-```
-#### DataTable with CRUD operations
-
-To perform CRUD operations for a DataTable, can be implemented by overriding the CRUD methods of the **DataAdaptor** abstract class.
-
-* **Insert/InsertAsync**
-* **Remove/RemoveAsync**
-* **Update/UpdateAsync**
-* **BatchUpdate/BatchUpdateAsync**
-
-While using batch editing in DataGrid, use the BatchUpdate/BatchUpdateAsync method to handle the corresponding CRUD operations.
-
-```cshtml
-@using Syncfusion.Blazor;
-@using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
-@using System.Dynamic;
-@using System.Data;
+@using Syncfusion.Blazor.Data
+@using System.Data
+@using System.Dynamic
+@using System.Collections
 
-<SfGrid TValue="ExpandoObject" ID="Grid" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Delete", "Update", "Cancel" })">
+<SfGrid TValue="ExpandoObject" AllowPaging="true" AllowGrouping="true">
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
-    <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="@EditMode.Normal"></GridEditSettings>
+    <GridGroupSettings ShowGroupedColumn="true"></GridGroupSettings>
     <GridPageSettings PageSize="8"></GridPageSettings>
+    <GridAggregates>
+        <GridAggregate>
+            <GridAggregateColumns>
+                <GridAggregateColumn Field=Freight Type="AggregateType.Sum" Format="C2">
+                    <FooterTemplate>
+                        @{
+                            var aggregate = (context as AggregateTemplateContext);
+                            <div>
+                                <p>Sum: @aggregate.Sum</p>
+                            </div>
+                        }
+                    </FooterTemplate>
+                </GridAggregateColumn>
+            </GridAggregateColumns>
+        </GridAggregate>
+    </GridAggregates>
     <GridColumns>
-        <GridColumn Field="OrderID" HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true, Number=true})" Width="120"></GridColumn>
-        <GridColumn Field="CustomerID" HeaderText="Customer Name" ValidationRules="@(new ValidationRules { Required=true})" Width="150"></GridColumn>
-        <GridColumn Field="OrderDate" HeaderText="Order Date" Format="d" Type="ColumnType.Date" Width="130"></GridColumn>
-        <GridColumn Field="EmployeeID" HeaderText="Employee ID" Width="120"></GridColumn>
+        <GridColumn Field="OrderID" HeaderText="Order ID" Width="100" TextAlign="TextAlign.Right" />
+        <GridColumn Field="CustomerID" HeaderText="Customer Name" Width="100" />
+        <GridColumn Field="EmployeeID" HeaderText="Employee ID" Width="100" />
+        <GridColumn Field="OrderDate" HeaderText="Order Date" Width="110" Format="d" Type="ColumnType.Date" />
+        <GridColumn Field="Freight" TextAlign="TextAlign.Right" AllowGrouping="false" Format="C2" Width="100"></GridColumn>
     </GridColumns>
 </SfGrid>
 
@@ -718,33 +691,182 @@ While using batch editing in DataGrid, use the BatchUpdate/BatchUpdateAsync meth
     protected override void OnInitialized()
     {
         dataTable = GetData();
-        DataSource = ToQueryableCollection(dataTable);         // Convert DataTable to IQueryable ExpandoObject list
+
+        // Convert the DataTable to an IQueryable<ExpandoObject> collection.
+        DataSource = ToQueryableCollection(dataTable);  
     }
 
-    // Implementing custom adaptor by extending the DataAdaptor class
+    // Custom adaptor class to handle data operations.
     public class CustomAdaptor : DataAdaptor
     {
-        // Performs data Read operation
-        public override object Read(DataManagerRequest dm, string key = null)
+        // Perform the Read operation to fetch data from the source.
+        public override object Read(DataManagerRequest DataManagerRequest, string key = null)
         {
-            // Performs Searching, Sorting, Filtering
-            DataSource = PerformDataOperation(dataTable, dm);
+            // Convert DataTable to IQueryable ExpandoObject list
+            DataSource = ToQueryableCollection(dataTable);
+
+            // Get the total record count.
             int count = DataSource.Cast<ExpandoObject>().Count();
-            if (dm.Skip != 0)
+
+            // Perform paging operation using skip and take.
+            if (DataManagerRequest.Skip != 0)
             {
-                //Paging
-                DataSource = QueryableOperation.PerformSkip<object>((IQueryable<object>)DataSource, dm.Skip);
+                DataSource = QueryableOperation.PerformSkip<object>((IQueryable<object>)DataSource, DataManagerRequest.Skip);
             }
-            if (dm.Take != 0)
+            if (DataManagerRequest.Take != 0)
             {
-                DataSource = QueryableOperation.PerformTake<object>((IQueryable<object>)DataSource, dm.Take);
+                DataSource = QueryableOperation.PerformTake<object>((IQueryable<object>)DataSource, DataManagerRequest.Take);
             }
 
-            return dm.RequiresCounts ? new DataResult() { Result = DataSource, Count = count } : (object)DataSource;
+            // Perform aggregation operation.
+            IDictionary<string, object> aggregates = new Dictionary<string, object>();
+            if (DataManagerRequest.Aggregates != null)
+            {
+                aggregates = DataUtil.PerformAggregation(DataSource, DataManagerRequest.Aggregates);
+            }
+
+            // Perform grouping operation.
+            DataResult DataObject = new DataResult();
+            if (DataManagerRequest.Group != null)
+            {
+                IEnumerable result = (IEnumerable)DataSource;
+                foreach (var group in DataManagerRequest.Group)
+                {
+                    result = DataUtil.Group<ExpandoObject>(result, group, DataManagerRequest.Aggregates, 0, DataManagerRequest.GroupByFormatter);
+                }
+
+                // Return grouped data with count and aggregates if required.
+                return DataManagerRequest.RequiresCounts ? new DataResult() { Result = result, Count = count, Aggregates = aggregates } : (object)DataSource;
+            }
+            
+            // Return the final result with count and aggregates if required.
+            return DataManagerRequest.RequiresCounts ? new DataResult() { Result = DataSource, Count = count, Aggregates = aggregates } : (object)DataSource;
+        }
+    }
+
+    // Converts a DataTable to an IQueryable collection of ExpandoObjects.
+    public static IQueryable ToQueryableCollection(DataTable DataTable)
+    {
+        List<ExpandoObject> expandoList = new List<ExpandoObject>();
+        foreach (DataRow row in DataTable.Rows)
+        {
+            var expandoDict = new ExpandoObject() as IDictionary<String, Object>;
+            foreach (DataColumn col in DataTable.Columns)
+            {
+                var colValue = row[col.ColumnName];
+                colValue = (colValue == DBNull.Value) ? null : colValue;
+                expandoDict.Add(col.ToString(), colValue);
+            }
+            expandoList.Add((ExpandoObject)expandoDict);
+        }
+        return expandoList.AsQueryable();
+    }
+
+    public DataTable GetData()
+    {
+        DataTable DataTable = new DataTable();
+        DataTable.Columns.AddRange(new DataColumn[5] { 
+            new DataColumn("OrderID", typeof(long)),
+            new DataColumn("CustomerID", typeof(string)),
+            new DataColumn("EmployeeID",typeof(int)),
+            new DataColumn("OrderDate",typeof(DateTime)),
+            new DataColumn("Freight", typeof(double))
+        });
+        int code = 1000;
+        int id = 0;
+        for (int i = 1; i <= 15; i++)
+        {
+            DataTable.Rows.Add(code + 1, "ALFKI", id + 1, new DateTime(1991, 05, 15), 2.32 * i);
+            DataTable.Rows.Add(code + 2, "CHOPS", id + 2, new DateTime(1990, 04, 04), 1.28 * i);
+            DataTable.Rows.Add(code + 3, "ANTON", id + 3, new DateTime(1957, 11, 30), 4.31 * i );
+            DataTable.Rows.Add(code + 4, "DRACH", id + 4, new DateTime(1930, 10, 22), 2.56 * i);
+            DataTable.Rows.Add(code + 5, "BOLID", id + 5, new DateTime(1953, 02, 18), 5.54 * i);
+            code += 5;
+            id += 5;
+        }
+        return DataTable;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+**DataTable with CRUD operations**
+
+The Syncfusion Blazor DataGrid supports CRUD (Create, Read, Update, Delete) operations with a DataTable using a custom adaptor. You can enable editing in the Grid and override specific methods of the [DataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html) base class to update your `DataTable` in memory.
+
+**The supported methods are:**
+
+* [Insert](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Insert_Syncfusion_Blazor_DataManager_System_Object_System_String_) / [InsertAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_InsertAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_) – Adds a new record to the `DataTable`.
+
+* [Update](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Update_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) / [UpdateAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_UpdateAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) – Updates an existing record.
+
+* [Remove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Remove_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) / [RemoveAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_RemoveAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) – Removes a record from the `DataTable`.
+
+* [BatchUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_BatchUpdate_Syncfusion_Blazor_DataManager_System_Object_System_Object_System_Object_System_String_System_String_System_Nullable_System_Int32__) / [BatchUpdateAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_BatchUpdateAsync_Syncfusion_Blazor_DataManager_System_Object_System_Object_System_Object_System_String_System_String_System_Nullable_System_Int32__) – Handles batch operations like add, update, and delete in a single transaction (used for Batch Editing).
+
+When using batch editing in the Grid, use the `BatchUpdate`/`BatchUpdateAsync` method to handle the corresponding CRUD operations.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor;
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Grids
+@using System.Dynamic;
+@using System.Data;
+
+<SfGrid TValue="ExpandoObject" ID="Grid" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
+    <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
+    <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="@EditMode.Normal"></GridEditSettings>
+    <GridPageSettings PageSize="8"></GridPageSettings>
+    <GridColumns>
+        <GridColumn Field="OrderID" HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true, Number=true})" Width="100"></GridColumn>
+        <GridColumn Field="CustomerID" HeaderText="Customer Name" ValidationRules="@(new ValidationRules { Required=true})" Width="100"></GridColumn>
+        <GridColumn Field="OrderDate" HeaderText="Order Date" Format="d" Type="ColumnType.Date" Width="110"></GridColumn>
+        <GridColumn Field="EmployeeID" HeaderText="Employee ID" Width="100"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public static DataTable dataTable { get; set; }
+    public static IQueryable DataSource;
+    protected override void OnInitialized()
+    {
+        dataTable = GetData();
+
+        // Convert the DataTable to an IQueryable<ExpandoObject> collection.
+        DataSource = ToQueryableCollection(dataTable);
+    }
+
+    // Custom adaptor class to handle data operations.
+    public class CustomAdaptor : DataAdaptor
+    {
+        // Perform the Read operation to fetch data from the source.
+        public override object Read(DataManagerRequest DataManagerRequest, string key = null)
+        {
+            // Convert DataTable to IQueryable ExpandoObject list
+            DataSource = ToQueryableCollection(dataTable);
+
+            // Get the total record count.
+            int count = DataSource.Cast<ExpandoObject>().Count();
+
+            // Perform paging operation using skip and take.
+            if (DataManagerRequest.Skip != 0)
+            {
+                DataSource = QueryableOperation.PerformSkip<object>((IQueryable<object>)DataSource, DataManagerRequest.Skip);
+            }
+            if (DataManagerRequest.Take != 0)
+            {
+                DataSource = QueryableOperation.PerformTake<object>((IQueryable<object>)DataSource, DataManagerRequest.Take);
+            }
+            
+            // Return the result with count if required.
+            return DataManagerRequest.RequiresCounts ? new DataResult() { Result = DataSource, Count = count } : (object)DataSource;
         }
 
-        //Performs Insert operation
-        public override object Insert(DataManager dm, object value, string key)
+        // Perform Insert operation.
+        public override object Insert(DataManager DataManagerRequest, object value, string key)
         {
             DataRow newRow = dataTable.NewRow();
             var data = (ExpandoObject)value;
@@ -752,16 +874,19 @@ While using batch editing in DataGrid, use the BatchUpdate/BatchUpdateAsync meth
             {
                 newRow[item.Key] = item.Value ?? DBNull.Value;
             }
+            
+            // Insert the new row at the top of the DataTable.
             dataTable.Rows.InsertAt(newRow, 0);
 
             return value;
         }
 
-        //Performs Remove operation
-        public override object Remove(DataManager dm, object value, string keyField, string key)
+        // Perform Remove operation.
+        public override object Remove(DataManager DataManagerRequest, object value, string keyField, string key)
         {
             DataRow? rowToRemove = null;
 
+            // Find the row to remove based on the key field value.
             foreach (DataRow row in dataTable.Rows)
             {
                 if (row[keyField].Equals(value))
@@ -771,6 +896,7 @@ While using batch editing in DataGrid, use the BatchUpdate/BatchUpdateAsync meth
                 }
             }
 
+            // Remove the row from the DataTable if it exists.
             if (rowToRemove != null)
             {
                 dataTable.Rows.Remove(rowToRemove);
@@ -778,14 +904,17 @@ While using batch editing in DataGrid, use the BatchUpdate/BatchUpdateAsync meth
             return value;
         }
 
-        // Performs Update operation
-        public override object Update(DataManager dm, object value, string keyField, string key)
+        // Perform Update operation.
+        public override object Update(DataManager DataManagerRequest, object value, string keyField, string key)
         {
             var data = (IDictionary<string, object>)value;
-            var rowToUpdate = dataTable.Rows
-                .Cast<DataRow>()
-                .FirstOrDefault(row => row[keyField].Equals(data[keyField]));
 
+            // Find the row to update based on the key field value.
+            var rowToUpdate = dataTable.Rows
+            .Cast<DataRow>()
+            .FirstOrDefault(row => row[keyField].Equals(data[keyField]));
+
+            // Update the row with new values if found.
             if (rowToUpdate != null)
             {
                 foreach (DataColumn column in dataTable.Columns)
@@ -798,9 +927,10 @@ While using batch editing in DataGrid, use the BatchUpdate/BatchUpdateAsync meth
             return value;
         }
 
-        // Performs BatchUpdate operation
-        public override object BatchUpdate(DataManager dm, object Changed, object Added, object Deleted, string KeyField, string Key, int? dropIndex)
+        // Perform BatchUpdate operation for changed, added, and deleted records.
+        public override object BatchUpdate(DataManager DataManagerRequest, object Changed, object Added, object Deleted, string KeyField, string Key, int? dropIndex)
         {
+            // Handle changed records.
             if (Changed != null)
             {
                 var changedRecords = (IEnumerable<IDictionary<string, object>>)Changed;
@@ -819,6 +949,7 @@ While using batch editing in DataGrid, use the BatchUpdate/BatchUpdateAsync meth
                 }
             }
 
+            // Handle added records.
             if (Added != null)
             {
                 var addedRecords = (IEnumerable<IDictionary<string, object>>)Added;
@@ -830,10 +961,13 @@ While using batch editing in DataGrid, use the BatchUpdate/BatchUpdateAsync meth
                     {
                         newRow[item.Key] = item.Value ?? DBNull.Value;
                     }
+
+                    // Add the new row to the DataTable.
                     dataTable.Rows.Add(newRow);
                 }
             }
 
+            // Handle deleted records.
             if (Deleted != null)
             {
                 var deletedRecords = (IEnumerable<IDictionary<string, object>>)Deleted;
@@ -848,6 +982,8 @@ While using batch editing in DataGrid, use the BatchUpdate/BatchUpdateAsync meth
                         }
                     }
                 }
+
+                // Remove the rows from the DataTable.
                 foreach (DataRow rowToRemove in rowsToRemove)
                 {
                     dataTable.Rows.Remove(rowToRemove);
@@ -857,37 +993,14 @@ While using batch editing in DataGrid, use the BatchUpdate/BatchUpdateAsync meth
         }
     }
 
-    // Performs data operations like Searching, Sorting, and Filtering
-    public static IQueryable PerformDataOperation(DataTable dt, DataManagerRequest dm)
-    {
-        // Convert DataTable to IQueryable collection of datasource
-        DataSource = ToQueryableCollection(dt);
-        if (dm.Search != null && dm.Search.Count > 0)
-        {
-            // Searching
-            DataSource = DynamicObjectOperation.PerformSearching(DataSource, dm.Search);
-        }
-        if (dm.Where != null && dm.Where.Count > 0)
-        {
-            // Filtering
-            DataSource = DynamicObjectOperation.PerformFiltering(DataSource, dm.Where, dm.Where[0].Operator);
-        }
-        if (dm.Sorted != null && dm.Sorted.Count > 0)
-        {
-            // Sorting
-            DataSource = DynamicObjectOperation.PerformSorting(DataSource, dm.Sorted);
-        }
-        return DataSource;
-    }
-
-    // This method converts the DataTable data source into an IQueryable collection data source.
-    public static IQueryable ToQueryableCollection(DataTable dt)
+    // Converts a DataTable to an IQueryable collection of ExpandoObjects.
+    public static IQueryable ToQueryableCollection(DataTable DataTable)
     {
         List<ExpandoObject> expandoList = new List<ExpandoObject>();
-        foreach (DataRow row in dt.Rows)
+        foreach (DataRow row in DataTable.Rows)
         {
             var expandoDict = new ExpandoObject() as IDictionary<String, Object>;
-            foreach (DataColumn col in dt.Columns)
+            foreach (DataColumn col in DataTable.Columns)
             {
                 var colValue = row[col.ColumnName];
                 colValue = (colValue == DBNull.Value) ? null : colValue;
@@ -900,29 +1013,32 @@ While using batch editing in DataGrid, use the BatchUpdate/BatchUpdateAsync meth
 
     public DataTable GetData()
     {
-        DataTable dt = new DataTable();
-        dt.Columns.AddRange(new DataColumn[4] { new DataColumn("OrderID", typeof(long)),
-                                                new DataColumn("CustomerID", typeof(string)),
-                                                new DataColumn("EmployeeID",typeof(int)),
-                                                new DataColumn("OrderDate",typeof(DateTime))
-    });
+        DataTable DataTable = new DataTable();
+        DataTable.Columns.AddRange(new DataColumn[4] { 
+            new DataColumn("OrderID", typeof(long)),
+            new DataColumn("CustomerID", typeof(string)),
+            new DataColumn("EmployeeID",typeof(int)),
+            new DataColumn("OrderDate",typeof(DateTime))
+        });
 
         int code = 1000;
         int id = 0;
         for (int i = 1; i <= 15; i++)
         {
-            dt.Rows.Add(code + 1, "ALFKI", id + 1, new DateTime(1991, 05, 15));
-            dt.Rows.Add(code + 2, "ANATR", id + 2, new DateTime(1990, 04, 04));
-            dt.Rows.Add(code + 3, "ANTON", id + 3, new DateTime(1957, 11, 30));
-            dt.Rows.Add(code + 4, "BLONP", id + 4, new DateTime(1930, 10, 22));
-            dt.Rows.Add(code + 5, "BOLID", id + 5, new DateTime(1953, 02, 18));
+            DataTable.Rows.Add(code + 1, "ALFKI", id + 1, new DateTime(1991, 05, 15));
+            DataTable.Rows.Add(code + 2, "ANATR", id + 2, new DateTime(1990, 04, 04));
+            DataTable.Rows.Add(code + 3, "ANTON", id + 3, new DateTime(1957, 11, 30));
+            DataTable.Rows.Add(code + 4, "BLONP", id + 4, new DateTime(1930, 10, 22));
+            DataTable.Rows.Add(code + 5, "BOLID", id + 5, new DateTime(1953, 02, 18));
             code += 5;
             id += 5;
         }
-        return dt;
+        return DataTable;
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Remote data
 
