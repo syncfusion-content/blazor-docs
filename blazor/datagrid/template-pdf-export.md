@@ -58,7 +58,7 @@ The template values cannot be directly exported into the cells. To customize the
         Orders = EmployeeData.GetAllRecords();
     }
 
-    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    public async Task ToolbarClickHandler(ClickEventArgs args)
     {
         if (args.Item.Id == "Grid_pdfexport")  // Id is the combination of Grid's ID and item name.
         {
@@ -169,7 +169,7 @@ The following example demonstrates how the Grid is grouped by the **CustomerID**
         GridData = OrderData.GetAllRecords(); 
     }
 
-    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    public async Task ToolbarClickHandler(ClickEventArgs args)
     {
        if (args.Item.Id == "Grid_pdfexport")
        {
@@ -348,7 +348,7 @@ In the following example, detail row content is formatted by specifying the [Hea
 
   public List<ProductData>Employees {get;set;}
 
-  public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args) {
+  public async Task ToolbarClickHandler(ClickEventArgs args) {
     if (args.Item.Id=="Grid_pdfexport") // Id is the combination of Grid's ID and item name.
       {
       PdfExportProperties PdfExportProperties=new PdfExportProperties();
@@ -593,7 +593,7 @@ In the following example, detail row content is formatted by specifying the [Hea
         OrderInfo = OrderDetails.GetAllRecords();
     }
 
-    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    public async Task ToolbarClickHandler(ClickEventArgs args)
     {
         if (args.Item.Id == "Grid_pdfexport")  // Id is the combination of Grid's ID and item name.
         {
