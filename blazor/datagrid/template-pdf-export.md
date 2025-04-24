@@ -13,101 +13,120 @@ The Syncfusion Blazor DataGrid offers the option to export the column, detail, a
 
 ## Exporting with column template
 
-The PDF export functionality allows you to export Grid columns that include images, hyperlinks, and custom text to a PDF document. Export the template columns of the DataGrid by defining the [IncludeTemplateColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_IncludeTemplateColumn) of [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) as **true**.
+The PDF export functionality allows you to export Grid columns that include images, hyperlinks, and custom text to a PDF document.
 
-In the following sample, the **CustomerID** column is a template column. The template values cannot be directly exported into the cells. To customize the values of template columns in the PDF document, you must use [PdfQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfQueryCellInfoEvent).
+To export the template columns into an PDF document, set the [IncludeTemplateColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_IncludeTemplateColumn) property of the  [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) to **true** in the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event, and pass it to the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method.
+
+The template values cannot be directly exported into the cells. To customize the values of the template columns in PDF document, you must use [PdfQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfQueryCellInfoEvent) event.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor" %}@using Syncfusion.Blazor.Grids
+{% highlight razor tabtitle="Index.razor" %}
 
-<SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" Toolbar="@(new List<string>() { "PdfExport" })" AllowPdfExport="true" AllowPaging="true">
-    <GridEvents PdfQueryCellInfoEvent="PdfQueryCellInfoHandler" OnToolbarClick="ToolbarClickHandler" TValue="OrderData"></GridEvents>
+@using Syncfusion.Blazor.Grids
+
+<SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@EmployeeData.GetAllRecords()" Toolbar="@(new List<string>() { "PdfExport" })" AllowPdfExport="true" AllowPaging="true">
+    <GridEvents PdfQueryCellInfoEvent="PdfQueryCellInfoHandler" OnToolbarClick="ToolbarClickHandler" TValue="EmployeeData"></GridEvents>
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150">
+        <GridColumn Field=@nameof(EmployeeData.EmployeeID) HeaderText="Employee ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.FirstName) HeaderText="Employee Name" Width="150">
             <Template>
                 @{
-                    var con = (context as OrderData);
+                    var con = (context as EmployeeData);
                 }
-                <span>Mr.@con.CustomerID</span>
+                <span>Mr.@con.FirstName</span>
             </Template>
         </GridColumn>
-        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.EmailID) HeaderText="Email" Width="180">
+            <Template>
+                @{
+                    var employee = (context as EmployeeData);
+                }
+                <a href="mailto:@employee.EmailID">@employee.EmailID</a>
+            </Template>
+        </GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Title" Width="180"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.City) HeaderText="City" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code{
-    private SfGrid<OrderData> DefaultGrid;
-    public List<OrderData> Orders { get; set; }
-
+@code {
+    private SfGrid<EmployeeData> DefaultGrid;
+    public List<EmployeeData> Orders { get; set; }
+    public bool OrderDateVisible { get; set; } = false;
     protected override void OnInitialized()
     {
-        Orders = OrderData.GetAllRecords();
+        Orders = EmployeeData.GetAllRecords();
     }
 
-    public async Task ToolbarClickHandler(ClickEventArgs args)
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Grid's ID and itemname.
+        if (args.Item.Id == "Grid_pdfexport")  // Id is the combination of Grid's ID and item name.
         {
             PdfExportProperties ExportProperties = new PdfExportProperties();
             ExportProperties.IncludeTemplateColumn = true;
             await this.DefaultGrid.ExportToPdfAsync(ExportProperties);
         }
     }
-    public void PdfQueryCellInfoHandler(PdfQueryCellInfoEventArgs<OrderData> args)
+
+    public void PdfQueryCellInfoHandler(PdfQueryCellInfoEventArgs<EmployeeData> args)
     {
-        if (args.Column.Field == "CustomerID")
+        if (args.Column.Field == "FirstName")
         {
-            args.Cell.Value = "Mr." + args.Data.CustomerID;
+            args.Cell.Value = "Mr." + args.Data.FirstName;
         }
+        else if (args.Column.Field == "EmailID")
+        {
+            args.Cell.Value = $"{args.Data.EmailID}";
+        }   
     }
 }
+
 {% endhighlight %}
 
-{% highlight c# tabtitle="OrderData.cs" %}
+{% highlight c# tabtitle="EmployeeData.cs" %}
 
-public class OrderData
+public class EmployeeData
 {
-    public static List<OrderData> Orders = new List<OrderData>();
+    public static List<EmployeeData> Employees = new List<EmployeeData>();
 
-    public OrderData(int orderID, string customerID, DateTime orderDate, double freight)
+    public EmployeeData(int employeeID, string firstName, string emailID, string title, string city)
     {
-        OrderID = orderID;
-        CustomerID = customerID;
-        OrderDate = orderDate;
-        Freight = freight;
+        EmployeeID = employeeID;
+        FirstName = firstName;
+        EmailID = emailID;
+        Title = title;
+        City = city;
     }
 
-    public static List<OrderData> GetAllRecords()
+    public static List<EmployeeData> GetAllRecords()
     {
-        if (Orders.Count == 0)
+        if (Employees.Count == 0)
         {
-            Orders.Add(new OrderData(10248, "VINET", new DateTime(2023, 1, 15), 32.38));
-            Orders.Add(new OrderData(10249, "TOMSP", new DateTime(2023, 2, 10), 11.61));
-            Orders.Add(new OrderData(10250, "HANAR", new DateTime(2023, 3, 5), 65.83));
-            Orders.Add(new OrderData(10251, "VICTE", new DateTime(2023, 4, 20), 41.34));
-            Orders.Add(new OrderData(10252, "SUPRD", new DateTime(2023, 5, 25), 51.30));
-            Orders.Add(new OrderData(10253, "HANAR", new DateTime(2023, 6, 15), 58.17));
-            Orders.Add(new OrderData(10254, "CHOPS", new DateTime(2023, 7, 10), 22.98));
-            Orders.Add(new OrderData(10255, "RICSU", new DateTime(2023, 8, 18), 148.33));
-            Orders.Add(new OrderData(10256, "WELLI", new DateTime(2023, 9, 7), 13.97));
-            Orders.Add(new OrderData(10257, "HILAA", new DateTime(2023, 10, 3), 81.91));
+            Employees.Add(new EmployeeData(1, "Davolio", "nancy@domain.com", "Sales Representative", "Seattle"));
+            Employees.Add(new EmployeeData(2, "Fuller", "andrew@domain.com", "Vice President, Sales", "Tacoma"));
+            Employees.Add(new EmployeeData(3, "Leverling", "janet@domain.com", "Sales Representative", "Kirkland"));
+            Employees.Add(new EmployeeData(4, "Peacock", "steven@domain.com", "Sales Manager", "London"));
+            Employees.Add(new EmployeeData(5, "Buchanan", "michael@domain.com", "Sales Manager", "Seattle"));
+            Employees.Add(new EmployeeData(6, "Suyama", "yoshiko@domain.com", "Sales Representative", "Tokyo"));
+            Employees.Add(new EmployeeData(7, "King", "charles@domain.com", "Sales Representative", "London"));
+            Employees.Add(new EmployeeData(8, "Callahan", "allison@domain.com", "Inside Sales Coordinator", "Seattle"));
+            Employees.Add(new EmployeeData(9, "Dodsworth", "nancy@domain.com", "Sales Representative", "London"));
         }
 
-        return Orders;
+        return Employees;
     }
 
-    public int OrderID { get; set; }
-    public string CustomerID { get; set; }
-    public DateTime OrderDate { get; set; }
-    public double Freight { get; set; }
+    public int EmployeeID { get; set; }
+    public string FirstName { get; set; }
+    public string EmailID { get; set; }
+    public string Title { get; set; }
+    public string City { get; set; }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrSjJCHAltLAyPh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVItzhpzpJHfBYo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Exporting with group caption template
 
@@ -218,7 +237,7 @@ public class OrderData
 
 ## Exporting with detail template
 
-By default, the Syncfusion Blazor DataGrid exports the parent Grid along with expanded detail rows only. To modify the exporting behavior, utilize the [PdfExportProperties.PdfDetailRowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailRowMode.html) property. The available options include:
+The Syncfusion Blazor DataGrid provides the capability to export both parent and child (detail) records, including nested data, to an PDF document. By default, the Grid exports the parent Grid along with expanded detail rows only. To customize the exporting behavior, utilize the [PdfExportProperties.PdfDetailRowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailRowMode.html) property within the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event, and pass it to the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method. The available options include:
 
 | Mode | Behavior |
 |-------|----------|
@@ -228,7 +247,7 @@ By default, the Syncfusion Blazor DataGrid exports the parent Grid along with ex
 
 You can customize and format the detail rows in the exported PDF document using the [PdfDetailTemplateExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfDetailTemplateExporting) event. In this event, the detail rows of the PDF document are formatted in accordance with their parent row details.
 
-In the provided example, detail row content is formatted by specifying the [Headers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_PdfDetailTemplateRowSettings_Headers), [Rows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_PdfDetailTemplateRowSettings_Rows) using parent row details, facilitating the creation of detail rows within the PDF. Additionally, custom styles can be applied to specific cells using the [Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailTemplateCell.html#Syncfusion_Blazor_Grids_PdfDetailTemplateCell_Style) property.
+In the following example, detail row content is formatted by specifying the [Headers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_PdfDetailTemplateRowSettings_Headers), [Rows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_PdfDetailTemplateRowSettings_Rows) using parent row details, facilitating the creation of detail rows within the PDF. Additionally, custom styles can be applied to specific cells using the [Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailTemplateCell.html#Syncfusion_Blazor_Grids_PdfDetailTemplateCell_Style) property.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -512,7 +531,7 @@ The Syncfusion Blazor DataGrid allows you to export hierarchical Grid data to PD
 
 You can customize and format the detail rows in the exported PDF document using the [PdfDetailTemplateExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfDetailTemplateExporting) event. In this event, the detail rows of the PDF document are formatted in accordance with their parent row details.
 
-In the provided example, detail row content is formatted by specifying the [Headers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_PdfDetailTemplateRowSettings_Headers), [Rows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_PdfDetailTemplateRowSettings_Rows) using parent row details. Additionaly, this achieves a nested level of children using the [ChildRowInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailTemplateRow.html#Syncfusion_Blazor_Grids_PdfDetailTemplateRow_ChildRowInfo) property.
+In the following example, detail row content is formatted by specifying the [Headers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_PdfDetailTemplateRowSettings_Headers), [Rows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_PdfDetailTemplateRowSettings_Rows) using parent row details. Additionaly, this achieves a nested level of children using the [ChildRowInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailTemplateRow.html#Syncfusion_Blazor_Grids_PdfDetailTemplateRow_ChildRowInfo) property, which is set to **Expand** to export the parent Grid with expanded detail rows within the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event. This property is then passed to the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
