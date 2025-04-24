@@ -296,7 +296,9 @@ public class OrderData
 
 * The AutoFill feature does not support generating non-linear series or sequential data automatically. Cannot create complex series or patterns by simply dragging cells with non-sequential data. The autofill feature is designed for copying and pasting data from a selected range of cells.
 
-* The Auto Fill feature can only be applied to the viewport cell when enabling the features of virtual scrolling, infinite scrolling, or column virtualization in the Grid.
+* The AutoFill feature does not support virtual scrolling or column virtualization in the Grid.
+
+* The Auto Fill feature can only be applied to the viewport cell when enabling the features of infinite scrolling in the Grid.
 
 ## Paste
 
