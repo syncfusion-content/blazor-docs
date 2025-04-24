@@ -17,7 +17,7 @@ The Excel export functionality allows you to export Grid columns that include im
 
 To export the template columns into an Excel document, set the [IncludeTemplateColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_IncludeTemplateColumn) property of the  [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) to **true** in the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event, and pass it to the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) or [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToCsvAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method.
 
-The template values cannot be directly exported into the cells. To customize the values of the template columns in Excel file, you must use [ExcelQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelQueryCellInfoEvent) event.
+The template values cannot be directly exported into the cells. To customize the values of the template columns in Excel document, you must use [ExcelQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelQueryCellInfoEvent) event.
 
 > Excel Export supports base64 string to export the images.
 
@@ -134,9 +134,9 @@ public class EmployeeData
 
 ## Exporting with group caption template
 
-The Syncfusion Blazor Grid allows you to export the Grid data along with a custom caption template into an Excel document. This feature can be useful when you want to provide meaningful group captions (e.g., count of records) in the exported Excel file.
+The Syncfusion Blazor Grid allows you to export the Grid data along with a custom caption template into an Excel document. This feature can be useful when you want to provide meaningful group captions (e.g., count of records) in the exported Excel document.
 
-To customize the caption text in the exported Excel file, you can handle the [ExcelGroupCaptionTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelGroupCaptionTemplateInfo) event. This event provides you with the necessary information to set the group caption in the exported Excel file, such as the group key, record count, and header text. Within the event, you can set a customized group caption using `args.Cell.Value` property.
+To customize the caption text in the exported Excel document, you can handle the [ExcelGroupCaptionTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelGroupCaptionTemplateInfo) event. This event provides you with the necessary information to set the group caption in the exported Excel document, such as the group key, record count, and header text. Within the event, you can set a customized group caption using `args.Cell.Value` property.
 
 The following example demonstrates how the Grid is grouped by the **CustomerID** field and exports the Grid data to Excel with a custom group caption template, utilizing the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event and the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method.
 
