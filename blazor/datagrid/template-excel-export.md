@@ -15,7 +15,7 @@ The Syncfusion Blazor DataGrid offers the option to export the column, detail, a
 
 The Excel export functionality allows you to export Grid columns that include images, hyperlinks, and custom text to an Excel document. 
 
-To export the template columns into an Excel document, set the [IncludeTemplateColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_IncludeTemplateColumn) property of the  [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) to **true**.
+To export the template columns into an Excel document, set the [IncludeTemplateColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_IncludeTemplateColumn) property of the  [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) to **true** in the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event, and pass it to the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) or [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToCsvAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method.
 
 The template values cannot be directly exported into the cells. To customize the values of the template columns in Excel file, you must use [ExcelQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelQueryCellInfoEvent) event.
 
@@ -82,7 +82,6 @@ The following sample demonstrates how to export template columns such as **First
        {
            var email = args.Data.EmailID;
            args.Cell.Value = $"<a href='mailto:{email}'>{email}</a>";
-
        }
     }
 }
@@ -118,7 +117,6 @@ public class EmployeeData
             Employees.Add(new EmployeeData(8, "Callahan", "allison@domain.com", "Inside Sales Coordinator", "Seattle"));
             Employees.Add(new EmployeeData(9, "Dodsworth", "nancy@domain.com", "Sales Representative", "London"));
         }
-
         return Employees;
     }
 
@@ -246,7 +244,7 @@ public class OrderData
 
 ## Exporting with detail template
 
-The Syncfusion Blazor DataGrid provides the capability to export both parent and child (detail) records, including nested data, to an Excel document. By default, the Grid exports the parent Grid along with expanded detail rows only. To modify the exporting behavior, utilize the [ExcelExportProperties.ExcelDetailRowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailRowMode.html) property. The available options include:
+The Syncfusion Blazor DataGrid provides the capability to export both parent and child (detail) records, including nested data, to an Excel document. By default, the Grid exports the parent Grid along with expanded detail rows only. To customize the exporting behavior, utilize the [ExcelExportProperties.ExcelDetailRowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailRowMode.html) property within the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event, and pass it to the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) or [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToCsvAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method. The available options include:
 
 | Mode | Behavior |
 |-------|----------|
@@ -365,7 +363,6 @@ In the following example, the detail row content is formatted by specifying the 
     {
         Employees = ProductData.GetAllRecords();
     }
-
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
@@ -549,7 +546,6 @@ public class ProductData
             Products.Add(new ProductData("Blazers/Casual", "10%", "79.99$", "14", "Blazer-002", "EJ-BL-02", "anne@domain.com", "Available", "Casual Blazer", "No Returns Applicable", "** FREE Delivery **", "Cancellation upto 12 hrs", "4.5"));
             Products.Add(new ProductData("Hoodies/Zip", "0%", "39.99$", "0", "Hoodie-001", "EJ-HO-01", "paul@domain.com", "Unavailable", "Zip-up Hoodie", "Return within 10 days", "** FREE Delivery **", "Cancellation upto 24 hrs", "4.6"));
         }
-
         return Products;
     }
 }
@@ -559,13 +555,13 @@ public class ProductData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDBSNfWcLSCKHChU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Exporting hierarchical grid using detail template
+## Exporting hierarchical Grid using detail template
 
 The Syncfusion Blazor DataGrid allows you to export hierarchical Grid data to Excel using the detail template feature. This is particularly useful for scenarios where data is nested within parent rows (such as employee details and their related orders), and you need to export both the parent and child records to a single Excel document.
 
 You can customize and format the detail rows in the exported Excel document using the [ExcelDetailTemplateExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelDetailTemplateExporting) event. In this event, the detail rows of the Excel document are formatted in accordance with their parent row details.
 
-In the following example, the detail row content is formatted by specifying the [Headers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_ExcelDetailTemplateRowSettings_Headers), [Rows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_ExcelDetailTemplateRowSettings_Rows) using parent row details. Additionaly, this achieves a nested level of children using the [ChildRowInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailTemplateRow.html#Syncfusion_Blazor_Grids_ExcelDetailTemplateRow_ChildRowInfo) property.
+In the following example, the detail row content is formatted by specifying the [Headers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_ExcelDetailTemplateRowSettings_Headers), [Rows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_ExcelDetailTemplateRowSettings_Rows) using parent row details. Additionally, this achieves a nested level of children using the [ChildRowInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailTemplateRow.html#Syncfusion_Blazor_Grids_ExcelDetailTemplateRow_ChildRowInfo) property and the [ExcelExportProperties.ExcelDetailRowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailRowMode.html) property, which is set to **Expand** to export the parent grid with expanded detail rows within the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event. This property is then passed to the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -625,7 +621,6 @@ In the following example, the detail row content is formatted by specifying the 
         Orders = Order.GetAllRecords();
         OrderInfo = OrderDetails.GetAllRecords();
     }
-
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
@@ -729,20 +724,20 @@ public class Order
     public static List<Order> GetAllRecords()
     {
         return new List<Order>
-    {
-        new Order(1, 1001, "Nancy", "Texas", 2.1 * 1),
-        new Order(2, 1002, "Andrew", "London", 2.1 * 2),
-        new Order(3, 1003, "Janet", "London", 2.1 * 3),
-        new Order(4, 1004, "Margaret", "London", 2.1 * 4),
-        new Order(5, 1005, "Steven", "Vegas", 2.1 * 5),
-        new Order(6, 1006, "Smith", "Dubai", 2.1 * 6),
-        new Order(7, 1007, "Steven", "Paris", 2.1 * 7),
-        new Order(8, 1008, "Smith", "Mumbai", 2.1 * 8),
-        new Order(9, 1009, "Smith", "Chennai", 2.1 * 9),
-        new Order(2, 1010, "Smith", "Chennai", 2.1 * 9),
-        new Order(3, 1011, "Smith", "Chennai", 2.1 * 9),
-        new Order(3, 1012, "Smith", "Chennai", 2.1 * 9)
-    };
+        {
+            new Order(1, 1001, "Nancy", "Texas", 2.1 * 1),
+            new Order(2, 1002, "Andrew", "London", 2.1 * 2),
+            new Order(3, 1003, "Janet", "London", 2.1 * 3),
+            new Order(4, 1004, "Margaret", "London", 2.1 * 4),
+            new Order(5, 1005, "Steven", "Vegas", 2.1 * 5),
+            new Order(6, 1006, "Smith", "Dubai", 2.1 * 6),
+            new Order(7, 1007, "Steven", "Paris", 2.1 * 7),
+            new Order(8, 1008, "Smith", "Mumbai", 2.1 * 8),
+            new Order(9, 1009, "Smith", "Chennai", 2.1 * 9),
+            new Order(2, 1010, "Smith", "Chennai", 2.1 * 9),
+            new Order(3, 1011, "Smith", "Chennai", 2.1 * 9),
+            new Order(3, 1012, "Smith", "Chennai", 2.1 * 9)
+        };
     }
 
     public int EmployeeID { get; set; }
@@ -755,7 +750,6 @@ public class Order
 {% endhighlight %}
 
 {% highlight c# tabtitle="OrderDetails.cs" %}
-
 
 public class OrderDetails
 {
