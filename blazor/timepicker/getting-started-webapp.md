@@ -250,8 +250,7 @@ The below code demonstrates how to render TimePicker component in 24 hours Forma
 
 ## See Also
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Client-Side in .NET Core CLI](../getting-started/blazor-webassembly-dotnet-cli)
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Server-side in Visual Studio](../getting-started/blazor-server-side-visual-studio)
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor for Server-Side in .NET Core CLI](../getting-started/blazor-server-side-dotnet-cli)
+* [Getting Started with Syncfusion Blazor Web Assembly App in Visual Studio or .NET CLI](../getting-started/blazor-webassembly-app)
+* [Getting Started with Syncfusion Blazor Web App in Visual Studio or .NET CLI](../getting-started/blazor-web-app)
 
 N> You can also explore our [Blazor TimePicker Example](https://blazor.syncfusion.com/demos/timepicker/default-functionalities?theme=fluent) that shows you how to render and configure the TimePicker.
