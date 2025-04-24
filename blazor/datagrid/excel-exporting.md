@@ -13,7 +13,7 @@ The Excel or CSV exporting feature in the Syncfusion Blazor DataGrid allows you 
 
 To enable Excel export in the Grid, you need to set the [AllowExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowExcelExport) property to **true**. This property is responsible for enabling the Excel or CSV export option in the Grid.
 
-To initiate the excel export process, you need to use the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_System_Boolean_Syncfusion_Blazor_Grids_ExcelExportProperties_) method provided by the Grid. This method is responsible for exporting the Grid data to an Excel document.
+To initiate the Excel export process, you need to use the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_System_Boolean_Syncfusion_Blazor_Grids_ExcelExportProperties_) method provided by the Grid. This method is responsible for exporting the Grid data to an Excel document.
 
 > To initiate the CSV export process, you need to use the [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToCsvAsync_System_Boolean_Syncfusion_Blazor_Grids_ExcelExportProperties_) method provided by the Grid. This method is responsible for exporting the Grid data to an CSV document.
 
@@ -637,5 +637,3 @@ public class OrderData
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNryZJitJZwsZqkm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-
