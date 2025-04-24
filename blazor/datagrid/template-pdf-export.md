@@ -46,7 +46,7 @@ In the following sample, the **CustomerID** column is a template column. The tem
         Orders = OrderData.GetAllRecords();
     }
 
-    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    public async Task ToolbarClickHandler(ClickEventArgs args)
     {
         if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Grid's ID and itemname.
         {
@@ -55,7 +55,7 @@ In the following sample, the **CustomerID** column is a template column. The tem
             await this.DefaultGrid.ExportToPdfAsync(ExportProperties);
         }
     }
-    public void PdfQueryCellInfoHandler(Syncfusion.Blazor.Grids.PdfQueryCellInfoEventArgs<OrderData> args)
+    public void PdfQueryCellInfoHandler(PdfQueryCellInfoEventArgs<OrderData> args)
     {
         if (args.Column.Field == "CustomerID")
         {
@@ -158,7 +158,7 @@ The following example demonstrates how the Grid is grouped by the **CustomerID**
        }
     }
 
-    public void PdfGroupCaptionInfoHandler(Syncfusion.Blazor.Grids.PdfCaptionTemplateArgs args)
+    public void PdfGroupCaptionInfoHandler(PdfCaptionTemplateArgs args)
     {
        args.Cell.Value = args.Key + "-" + args.Count + " Records: " + args.HeaderText; 
     } 
@@ -349,7 +349,7 @@ In the provided example, detail row content is formatted by specifying the [Head
             Index=0,
             CellValue="Product Details",
             ColumnSpan=2,
-            Style=new Syncfusion.Blazor.Grids.PdfThemeStyle() {
+            Style=new PdfThemeStyle() {
               Bold=true,
               FontColor="#0A76FF",
               FontSize=13
@@ -401,7 +401,7 @@ In the provided example, detail row content is formatted by specifying the [Head
     pdfRows.Add(new PdfDetailTemplateRow() {
         Cells=new List<PdfDetailTemplateCell>() {
           new PdfDetailTemplateCell() {
-            CellValue="Offers :" + data.Offers, Index=0, Style=new Syncfusion.Blazor.Grids.PdfThemeStyle() {
+            CellValue="Offers :" + data.Offers, Index=0, Style=new PdfThemeStyle() {
               FontColor="#0A76FF", FontSize=12
             }
           },
@@ -414,12 +414,12 @@ In the provided example, detail row content is formatted by specifying the [Head
     pdfRows.Add(new PdfDetailTemplateRow() {
         Cells=new List<PdfDetailTemplateCell>() {
           new PdfDetailTemplateCell() {
-            CellValue="Ratings: " + data.Ratings, Index=0, Style=new Syncfusion.Blazor.Grids.PdfThemeStyle() {
+            CellValue="Ratings: " + data.Ratings, Index=0, Style=new PdfThemeStyle() {
               FontColor="#0A76FF", FontSize=12
             }
           },
           new PdfDetailTemplateCell() {
-            Index=1, CellValue=data.Delivery, Style=new Syncfusion.Blazor.Grids.PdfThemeStyle() {
+            Index=1, CellValue=data.Delivery, Style=new PdfThemeStyle() {
               FontColor="#0A76FF", FontSize=12
             }
           }
@@ -535,18 +535,18 @@ In the provided example, detail row content is formatted by specifying the [Head
                         }
                         <SfGrid DataSource="@OrderInfo" TValue="OrderDetails" Query="@(new Query().Where("OrderID", "equal", customer.OrderID))">
                             <GridColumns>
-                                <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="110"> </GridColumn>
+                                <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer ID" TextAlign="TextAlign.Right" Width="110"> </GridColumn>
                                 <GridColumn Field=@nameof(OrderDetails.Title) HeaderText="Title" Width="110"></GridColumn>
-                                <GridColumn Field=@nameof(OrderDetails.Address) HeaderText="Address" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90" Format="C2"></GridColumn>
+                                <GridColumn Field=@nameof(OrderDetails.Address) HeaderText="Address" TextAlign="TextAlign.Right" Width="90" Format="C2"></GridColumn>
                                 <GridColumn Field=@nameof(OrderDetails.Country) HeaderText="Country" Width="110"></GridColumn>
                             </GridColumns>
                         </SfGrid>
                     </DetailTemplate>
                 </GridTemplates>
                 <GridColumns>
-                    <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="110"> </GridColumn>
+                    <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="110"> </GridColumn>
                     <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="110"></GridColumn>
-                    <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="90" Format="C2"></GridColumn>
+                    <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" TextAlign="TextAlign.Right" Width="90" Format="C2"></GridColumn>
                     <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="110"></GridColumn>
                 </GridColumns>
             </SfGrid>
