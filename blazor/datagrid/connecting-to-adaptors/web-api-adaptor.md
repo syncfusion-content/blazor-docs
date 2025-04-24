@@ -86,7 +86,7 @@ namespace WebApiAdaptor.Models
 ```
 **3. Create an API controller**
 
-Create a new folder named **Controllers**. Then, add a controller named **GridController.cs** in the **Controllers** folder to handle data communication with Blazor Grid. Implement the `Get` method in the controller to return data in JSON format, including the `Items` and `Count` properties as required by the `WebApiAdaptor`.
+Create a new folder named **Controllers**. Then, add a controller named **GridController.cs** in the **Controllers** folder to handle data communication with Blazor DataGrid. Implement the `Get` method in the controller to return data in JSON format, including the `Items` and `Count` properties as required by the `WebApiAdaptor`.
  
 {% tabs %}
 {% highlight c# tabtitle="GridController.cs"%}
@@ -613,7 +613,7 @@ public object GetOrderData()
 
 To manage CRUD (Create, Read, Update, and Delete) operations using the WebApiAdaptor in Syncfusion Blazor DataGrid, follow the provided guide for configuring the Grid for [editing](https://blazor.syncfusion.com/documentation/datagrid/editing) and utilize the sample implementation of the `GridController` in your server application. This controller handles HTTP requests for CRUD operations such as GET, POST, PUT, and DELETE.
 
-To enable CRUD operations in the Syncfusion Blazor DataGrid, follow the steps below:
+To enable CRUD operations in the Grid, follow the steps below:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
