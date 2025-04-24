@@ -246,9 +246,10 @@ The following example demonstrates how to use a custom data source during Excel 
     {
         if (args.Item.Id == "Grid_excelexport") //Id is combination of Grid's ID and itemname.
         {
-            ExcelExportProperties exportProperties = new ExcelExportProperties
+            var filteredData = Orders.Where(x => x.OrderID <= 10255).ToList();
+            ExcelExportProperties exportProps = new ExcelExportProperties
             {
-                    DataSource = Orders
+                DataSource = filteredData
             };
             await Grid.ExportToExcelAsync(exportProperties);
         }
@@ -304,7 +305,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXVoZJXYSzVlckdF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNhotfhJUHIXUNlC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Exporting with custom aggregate
 
