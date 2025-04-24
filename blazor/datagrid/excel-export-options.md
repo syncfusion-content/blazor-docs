@@ -138,7 +138,7 @@ To export the selected records from the Grid to a Excel or CSV document, you can
 
 2. Assign the selected data to the [ExportProperties.DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_DataSource) property.
 
-3. Trigger the export operation using the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) or [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToCsvAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method
+3. Trigger the export operation using the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) or [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToCsvAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method.
 
 The following example demonstrates how to export the selected records to a Excel document when a toolbar item is clicked.
 
@@ -327,13 +327,17 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDhSNTiDpmrJDsrV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+## Limitations
+
+Microsoft Excel permits up to seven nested levels in outlines. So that in the datagrid we can able to provide only up to seven nested levels and if it exceeds more than seven levels then the document will be exported without outline option. Refer the [Microsoft Limitation](https://learn.microsoft.com/en-us/sql/reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs?view=sql-server-2017#ExcelLimitations).
+
 ## Export with hidden columns
 
 Exporting hidden columns in the Syncfusion Blazor DataGrid allows you to include hidden columns in the exported Excel or CSV document. This feature is useful when you have columns that are hidden in the UI but still need to be included in the exported document.
 
 To export hidden columns of the Grid to a Excel or CSV document, you need to set the [includeHiddenColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_IncludeHiddenColumn) property as **true** in the [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) property.
 
-The following example demonstrates how to export hidden columns to a Excel document using the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event and the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method. In this example, the **ShipCity** column, which is not visible in the UI, is exported to the Excel document. You can also export the Grid by changing the `ExcelExportProperties.IncludeHiddenColumn` property based on the switch toggle using the `bind-Checked` property of the [EJ2 Toggle Switch Button](https://blazor.syncfusion.com/documentation/toggle-switch-button/getting-started-webapp).
+The following example demonstrates how to export hidden columns to a Excel document using the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event and the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method. In this example, the **ShipCity** column, which is not visible in the UI, is exported to the Excel document. You can also export the Grid by changing the `ExcelExportProperties.IncludeHiddenColumn` property based on the switch toggle using the `bind-Checked` property of the [Blazor Toggle Switch Button](https://blazor.syncfusion.com/documentation/toggle-switch-button/getting-started-webapp).
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -458,7 +462,7 @@ Toolbar="@(new List<string>() { "ExcelExport" })" Height="348">
     <GridEvents OnToolbarClick="ToolbarClickHandler" ExportComplete="ExportCompleteHandler" TValue="OrderData"></GridEvents>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
-        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Visible="@CustomerIDVisible" Width="150" />
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Visible="@isCustomerIDVisible" Width="150" />
         <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120" />
         <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Visible="@ShipCityVisible" Width="150" />
         <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" Width="150" />
@@ -468,7 +472,7 @@ Toolbar="@(new List<string>() { "ExcelExport" })" Height="348">
 @code {
     private SfGrid<OrderData> Grid;
     public List<OrderData> Orders { get; set; }
-    public bool CustomerIDVisible { get; set; } = false;
+    public bool isCustomerIDVisible { get; set; } = false;
     public bool ShipCityVisible { get; set; }
 
     protected override void OnInitialized()
@@ -480,7 +484,7 @@ Toolbar="@(new List<string>() { "ExcelExport" })" Height="348">
     {
         if (args.Item.Id == "Grid_excelexport")
         {
-            CustomerIDVisible = true;
+            isCustomerIDVisible = true;
             ShipCityVisible=false;
             await Grid.ExportToExcelAsync();
         }
@@ -488,7 +492,7 @@ Toolbar="@(new List<string>() { "ExcelExport" })" Height="348">
 
     public void ExportCompleteHandler(object args)
     {
-        CustomerIDVisible = false;
+        isCustomerIDVisible = false;
         ShipCityVisible=true;
     }
 }
@@ -662,7 +666,7 @@ To customize the Grid columns, you can follow these steps:
 
 1. Handle the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event, and access the [ExcelExportProperties.Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_Columns) property of the Grid.
 
-2. Define a custom **List<GridColumn>** with the desired properties such as Field, HeaderText, TextAlign, Format, and Width for each column to be exported.
+2.  Define new list of GridColumn objects with the desired properties such as Field, HeaderText, TextAlign, Format, and Width for each column to be exported.
 
 3. Assign this list to the `Columns` property of the `ExcelExportProperties` object, then pass it to the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) or [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToCsvAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) to apply the customizations during export.
 
@@ -761,6 +765,8 @@ public class OrderData
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZVyDpiXSTLiKArB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+> By default, material theme is applied to exported excel document.
 
 ## Font and color customization
 
