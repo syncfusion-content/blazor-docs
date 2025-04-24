@@ -260,9 +260,27 @@ When you run the application, the Blazor Grid  will display data fetched from th
  
 ![WebMethod Adaptor Data](../images/blazor-datagrid-adaptors.gif)
 
-## Handling searching operation
+**Perform data operations in a WebAPI service**
 
-To handle search operations, implement the search logic on the server side according to the received OData-formatted query.
+When using the `WebApiAdaptor` with the `SfDataManager` component, data operations such as filtering, sorting, paging, and searching are executed on the server side. These operations are sent from the client to the server as **QueryString** parameters, which can be accessed in your API controller using `Request.Query`.
+
+**Query parameters for data operations**
+
+The following table lists the query parameters used by the Blazor DataGrid for various data operations:
+
+| Key           | Description                                                                 |
+|---------------|-----------------------------------------------------------------------------|
+| `$skip`, `$top` | Specifies the query parameters for performing paging operations on the server side.   |
+| `$filter`      | Specifies the query parameter for performing filtering and searching operations on the server side. |
+| `$orderby`     | Specifies the query parameter for performing sorting operations on the server side.   |
+
+> These parameters are automatically sent when the `WebApiAdaptor` is used. You can access and process them in your Web API Controller to perform the corresponding operations.
+
+## Handling search operations
+
+When a search operation is triggered, the `$filter` parameter is sent to the server. The `$filter` parameter specifies the query conditions that are applied to the data to perform the search.
+
+The following example demonstrates how to extract the `$filter` parameter and apply search logic across multiple fields:
 
 ![WebApiAdaptor - Searching](../images/web-api-adaptor-searching.png)
 
@@ -272,7 +290,7 @@ To handle search operations, implement the search logic on the server side accor
 /// <summary>
 /// Retrieves order data and handles search operations based on the provided filter query.
 /// </summary>
-/// <returns>Returns a JSON object containing the filtered list of orders and the total count.</returns>
+/// <returns>Returns a JSON object containing the searched list of orders and the total count.</returns>
 [HttpGet]
 [Route("api/[controller]")]
 public object GetOrderData()
@@ -346,9 +364,13 @@ public object GetOrderData()
 {% endhighlight %}
 {% endtabs %}
 
+> This example demonstrates a custom way of handling the `$filter` query sent by the Grid. You can also handle it using your own logic based on the query string format or use dynamic expression evaluation libraries for a more generic approach..
+
 ## Handling filtering operation
 
-To handle filter operations, ensure that your Web API endpoint supports filtering based on OData-formatted queries. Implement the filtering logic on the server side as shown in the following code snippet.
+When filtering is applied, the `$filter` parameter is sent to the server. The `$filter` parameter specifies the conditions for filtering the data based on the provided criteria.
+
+The following example demonstrates how to extract the `$filter` parameter and apply filtering logic based on custom conditions:
 
 ![WebApiAdaptor - Filtering](../images/web-api-adaptor-filtering.png)
 
@@ -457,9 +479,13 @@ public object GetOrderData()
 {% endhighlight %}
 {% endtabs %}
 
+> The `$filter` parameter can include various conditions, such as **substringof**, **eq** (equals), **gt** (greater than), and more. You can customize the filtering logic based on your specific data structure and requirements.
+
 ## Handling sorting operation
 
-To handle sorting actions, implement sorting logic on the server side according to the received OData-formatted query.
+When sorting is triggered, the `$orderby` parameter is sent to the server. The `$orderby` parameter specifies the fields to sort by, along with the sort direction (ascending or descending).
+
+The following example demonstrates how to extract the `$orderby` parameter and apply sorting logic:
 
 ***Ascending Sorting***
 
@@ -549,9 +575,13 @@ public object GetOrderData()
 {% endhighlight %}
 {% endtabs %}
 
+> You can parse the `$orderby` parameter to dynamically apply sorting on one or more fields in either ascending or descending order.
+
 ## Handling paging operation
 
-Implement paging logic on the server-side according to the received OData-formatted query. Ensure that the endpoint supports paging based on the specified criteria.
+When paging is applied, the `$skip` and `$top` parameters are sent to the server. The `$skip` parameter specifies the number of records to skip, while the `$top` parameter specifies how many records to retrieve for the current page.
+
+The following example demonstrates how to apply paging logic:
 
 ![WebApiAdaptor - Paging](../images/web-api-adaptor-paging.png)
 
@@ -608,6 +638,10 @@ public object GetOrderData()
 
 {% endhighlight %}
 {% endtabs %}
+
+>  Always calculate the total record count before applying paging. This ensures that the Grid can display the correct total number of records for pagination.
+
+N> If you want to handle filtering, sorting, and paging operations using Dynamic LINQ Expressions, you can refer to this [GitHub repository](https://github.com/SyncfusionExamples/blazor-datagrid-data-operations-in-wep-api-service) for an example of how to implement it dynamically.
 
 ## Handling CRUD operations
 
@@ -722,3 +756,5 @@ public void Delete(int id)
 {% endtabs %}
 
 ![WebApiAdaptor CRUD operations](../images/adaptor-crud-operation.gif)
+
+N> ASP.NET Core (Blazor) Web API with batch handling is not yet supported by ASP.NET Core v3+. Therefore, it is currently not feasible to support batch mode CRUD operations until ASP.NET Core provides support for batch handling. For more details, refer to [this GitHub issue](https://github.com/dotnet/aspnetcore/issues/14722).
