@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Adding header and footer in Blazor DataGrid | Syncfusion
-description: Checkout and learn here all about Adding Header and Footer in Pdf Export Syncfusion Blazor DataGrid and much more details.
+description: Checkout and learn here all about Adding Header and Footer in PDF Export Syncfusion Blazor DataGrid and much more details.
 platform: Blazor
 control: DataGrid
 documentation: ug

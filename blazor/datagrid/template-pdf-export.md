@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Pdf Export with Templates in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn here all about Template Pdf Export in Syncfusion Blazor DataGrid component and much more details.
+title: PDF Export with Templates in Blazor DataGrid Component | Syncfusion
+description: Checkout and learn here all about Template PDF Export in Syncfusion Blazor DataGrid component and much more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Exporting grid with templates in Blazor DataGrid
 
-The Syncfusion Blazor DataGrid offers the option to export the column, detail, and caption templates to an Excel document. The template contains images, hyperlinks, and customized text.
+The Syncfusion Blazor DataGrid offers the option to export the column, detail, and caption templates to an PDF document. The template contains images, hyperlinks, and customized text.
 
 ## Exporting with column template
 
@@ -48,7 +48,7 @@ In the following sample, the **CustomerID** column is a template column. The tem
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Grid's ID and itemname
+        if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Grid's ID and itemname.
         {
             PdfExportProperties ExportProperties = new PdfExportProperties();
             ExportProperties.IncludeTemplateColumn = true;
@@ -111,11 +111,11 @@ public class OrderData
 
 ## Exporting with group caption template
 
-The Syncfusion Blazor Grid allows you to export the Grid data along with a custom caption template into an Excel document. This feature can be useful when you want to provide meaningful group captions (e.g., count of records) in the exported Excel file.
+The Syncfusion Blazor DataGrid allows you to export the Grid data along with a custom caption template into an PDF document. This feature can be useful when you want to provide meaningful group captions (e.g., count of records) in the exported PDF document.
 
-To customize the caption text in the exported Excel file, you can handle the [ExcelGroupCaptionTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelGroupCaptionTemplateInfo) event. This event provides you with the necessary information to set the group caption in the exported Excel file, such as the group key, record count, and header text. Within the event, you can set a customized group caption using `args.Cell.Value` property.
+To customize the caption text in the exported PDF document, you can handle the [PdfGroupCaptionTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfGroupCaptionTemplateInfo) event. This event provides you with the necessary information to set the group caption in the exported PDF document, such as the group key, record count, and header text. Within the event, you can set a customized group caption using `args.Cell.Value` property.
 
-The following example demonstrates how the Grid is grouped by the **CustomerID** field and exports the grid data to Excel with a custom group caption template, utilizing the `OnToolbarClick` event and the `ExportToExcelAsync` method.
+The following example demonstrates how the Grid is grouped by the **CustomerID** field and exports the grid data to PDF with a custom group caption template, utilizing the [OnToolbarClick](https://blazor.syncfusion.com/documentation/datagrid/events#ontoolbarclick) event and the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -147,7 +147,7 @@ The following example demonstrates how the Grid is grouped by the **CustomerID**
 
     protected override void OnInitialized()
     {
-        GridData = OrderData.GetAllRecords(); // Replace with your actual data logic.
+        GridData = OrderData.GetAllRecords(); 
     }
 
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
@@ -218,7 +218,7 @@ public class OrderData
 
 ## Exporting with detail template
 
-By default, the Syncfusion Blazor Grid exports the parent Grid along with expanded detail rows only. To modify the exporting behavior, utilize the [PdfExportProperties.PdfDetailRowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailRowMode.html) property. The available options include:
+By default, the Syncfusion Blazor DataGrid exports the parent Grid along with expanded detail rows only. To modify the exporting behavior, utilize the [PdfExportProperties.PdfDetailRowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailRowMode.html) property. The available options include:
 
 | Mode | Behavior |
 |-------|----------|
@@ -226,7 +226,7 @@ By default, the Syncfusion Blazor Grid exports the parent Grid along with expand
 | Collapse | Exports the parent Grid with collapsed detail rows.
 | None | Exports the parent Grid alone.
 
-You can customize and format the detail rows in the exported Excel document using the [PdfDetailTemplateExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfDetailTemplateExporting) event. In this event, the detail rows of the PDF document are formatted in accordance with their parent row details.
+You can customize and format the detail rows in the exported PDF document using the [PdfDetailTemplateExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfDetailTemplateExporting) event. In this event, the detail rows of the PDF document are formatted in accordance with their parent row details.
 
 In the provided example, detail row content is formatted by specifying the [Headers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_PdfDetailTemplateRowSettings_Headers), [Rows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_PdfDetailTemplateRowSettings_Rows) using parent row details, facilitating the creation of detail rows within the PDF. Additionally, custom styles can be applied to specific cells using the [Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailTemplateCell.html#Syncfusion_Blazor_Grids_PdfDetailTemplateCell_Style) property.
 
@@ -508,9 +508,9 @@ public class ProductData
 
 ## Exporting hierarchical grid using detail template
 
-The Syncfusion Blazor DataGrid allows you to export hierarchical Grid data to Excel using the detail template feature. This is particularly useful for scenarios where data is nested within parent rows (such as employee details and their related orders), and you need to export both the parent and child records to a single Excel document.
+The Syncfusion Blazor DataGrid allows you to export hierarchical Grid data to PDF using the detail template feature. This is particularly useful for scenarios where data is nested within parent rows (such as employee details and their related orders), and you need to export both the parent and child records to a single PDF document.
 
-You can customize and format the detail rows in the exported Excel document using the [PdfDetailTemplateExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfDetailTemplateExporting) event. In this event, the detail rows of the PDF document are formatted in accordance with their parent row details.
+You can customize and format the detail rows in the exported PDF document using the [PdfDetailTemplateExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfDetailTemplateExporting) event. In this event, the detail rows of the PDF document are formatted in accordance with their parent row details.
 
 In the provided example, detail row content is formatted by specifying the [Headers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_PdfDetailTemplateRowSettings_Headers), [Rows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_PdfDetailTemplateRowSettings_Rows) using parent row details. Additionaly, this achieves a nested level of children using the [ChildRowInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailTemplateRow.html#Syncfusion_Blazor_Grids_PdfDetailTemplateRow_ChildRowInfo) property.
 
