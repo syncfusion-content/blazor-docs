@@ -17,7 +17,7 @@ Row selection in the Grid allows you to interactively select specific rows or ra
 
 Single row selection allows you to select a single row at a time within the Grid. This feature is useful when you want to focus on specific rows or perform actions on the data within a particular row.
 
-To enable single row selection, set the [GridSelectionSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Mode) property to **Row** and the [GridSelectionSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Type) property to **Single**. This configuration allows you to select a only one row at a time within the grid.
+To enable single row selection, set the [GridSelectionSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Mode) property to **Row** and the [GridSelectionSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Type) property to **Single**. This configuration allows you to select a only one row at a time within the Grid.
 
 Here's an example of how to enable single row selection using properties:
 
@@ -48,7 +48,7 @@ Here's an example of how to enable single row selection using properties:
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="OrderDetails.cs" %}
+{% highlight cs tabtitle="OrderDetails.cs" %}
 
 public class OrderDetails
 {
@@ -133,7 +133,7 @@ Here's an example of how to enable multiple rows selection using properties:
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="OrderDetails.cs" %}
+{% highlight cs tabtitle="OrderDetails.cs" %}
 
 public class OrderDetails
 {
@@ -214,7 +214,7 @@ The following example demonstrates how to select a row during the initial render
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="OrderDetails.cs" %}
+{% highlight cs tabtitle="OrderDetails.cs" %}
 
 public class OrderDetails
 {
@@ -262,7 +262,7 @@ public class OrderDetails
 
 ## Select rows in any page based on index value 
 
-The Grid allows you to select rows in any page based on their index value. This feature is useful when you want to perform specific actions on rows, such as highlighting, applying styles, or executing operations, regardless of their location across multiple pages within the grid.
+The Grid allows you to select rows in any page based on their index value. This feature is useful when you want to perform specific actions on rows, such as highlighting, applying styles, or executing operations, regardless of their location across multiple pages within the Grid.
 
 To achieve this, you can utilize the [SelectRowsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRowsAsync_System_Int32___) method and the [GoToPageAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GoToPageAsync_System_Int32_) method of the Grid. By handling the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event of `DropDownList`, you can implement the logic to navigate to the desired page and select the row based on the index value. 
 
@@ -332,7 +332,7 @@ The following example demonstrates how to select rows in any page based on index
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="Order.cs" %}
+{% highlight cs tabtitle="Order.cs" %}
 
 public class Order
 {
@@ -424,7 +424,7 @@ The following example demonstrates how to enable multiple row selection with a s
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="OrderDetails.cs" %}
+{% highlight cs tabtitle="OrderDetails.cs" %}
 
 public class OrderDetails
 {
@@ -817,7 +817,7 @@ The following example demonstrates how to get selected row indexes using  `GetSe
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="OrderDetails.cs" %}
+{% highlight cs tabtitle="OrderDetails.cs" %}
 
 public class OrderDetails
 {
@@ -925,7 +925,7 @@ The following example demonstrates how to retrieve selected records from various
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="OrderDetails.cs" %}
+{% highlight cs tabtitle="OrderDetails.cs" %}
 
 public class OrderDetails
 {
@@ -1030,7 +1030,7 @@ Here's an example that displays the selected row count using the `GetSelectedRec
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="OrderDetails.cs" %}
+{% highlight cs tabtitle="OrderDetails.cs" %}
 
 public class OrderDetails
 {
