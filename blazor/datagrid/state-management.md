@@ -1,6 +1,6 @@
 ---
 layout: post
-title: State Management in Blazor DataGrid Component | Syncfusion
+title: State Management in Blazor DataGrid | Syncfusion
 description: Checkout and learn here all about State Management in Syncfusion Blazor DataGrid and more.
 platform: Blazor
 control: DataGrid
@@ -295,7 +295,7 @@ public class OrderDetails
 
 ## Restore to specific state version
 
-Syncfusion Blazor DataGrid supports state persistence, allowing to save and restore Grid configurations such as column settings, filters, sorting, grouping, paging, and more. This example demonstrates how to implement version-based state persistence using localStorage.
+The Syncfusion Blazor DataGrid supports state persistence, allowing to save and restore Grid configurations such as column settings, filters, sorting, grouping, paging, and more. This example demonstrates how to implement version-based state persistence using localStorage.
 
 In this sample, each version represents a unique saved Grid configuration (or state). When a version button is clicked:
 
@@ -307,7 +307,7 @@ In this sample, each version represents a unique saved Grid configuration (or st
 
 4. If no data is found, a new state will be stored the next time the Grid is modified.
 
-To implement version-based persistence in Syncfusion Blazor Grid, set **PersistenceKey** dynamically based on the selected version (e.g., gridOrderDetails_v.1), ensuring each version maintains a unique state in localStorage. The core logic for switching versions is handled in the `ChangeVersion` method. This method saves the current Grid state using [GetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetPersistDataAsync) before switching versions. It then attempts to load the state associated with the selected version using [SetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SetPersistDataAsync_System_String_). If a persisted state is available, it is applied to the Grid. otherwise, a message is displayed indicating that no saved state exists and a new state will be stored going forward.
+To implement version-based persistence in Grid, set **PersistenceKey** dynamically based on the selected version (e.g., gridOrderDetails_v.1), ensuring each version maintains a unique state in localStorage. The core logic for switching versions is handled in the `ChangeVersion` method. This method saves the current Grid state using [GetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetPersistDataAsync) before switching versions. It then attempts to load the state associated with the selected version using [SetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SetPersistDataAsync_System_String_). If a persisted state is available, it is applied to the Grid. otherwise, a message is displayed indicating that no saved state exists and a new state will be stored going forward.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -425,7 +425,7 @@ The Syncfusion Blazor DataGrid allows you to save and restore its state using lo
 
 To implement this functionality, use the `getItem` and `setItem` methods for local storage, along with the Grid `setProperties` and [GetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetPersistDataAsync) methods.
 
-The provided code demonstrates how to save and restore the previous state of a Syncfusion Blazor Grid  using local storage.
+The provided code demonstrates how to save and restore the previous state of a Grid  using local storage.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -478,7 +478,7 @@ The provided code demonstrates how to save and restore the previous state of a S
         if (!string.IsNullOrEmpty(state))
         {
             await Grid.SetPersistDataAsync(state);
-            Message = "Previous grid state restored.";
+            Message = "Previous Grid state restored.";
         }
         else
         {
@@ -636,7 +636,7 @@ await JS.InvokeVoidAsync("localStorage.setItem", localStorageKey, modelJson);
 ```
 ## Prevent columns from persisting
 
-In the Grid, you may sometimes want to prevent certain settings from being persisted when using the [EnablePersistence](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnablePersistence) feature. When the `EnablePersistence` property is set to **true**, the Grid properties such as [Grouping](https://ej2.syncfusion.com/angular/documentation/api/grid/groupSettings/), [Paging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings), [Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings), [Sorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SortSettings), and [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Columns) will persist. 
+In the Syncfusion Blazor Grid, you may sometimes want to prevent certain settings from being persisted when using the [EnablePersistence](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnablePersistence) feature. When the `EnablePersistence` property is set to **true**, the Grid properties such as [Grouping](https://ej2.syncfusion.com/angular/documentation/api/grid/groupSettings/), [Paging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings), [Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings), [Sorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SortSettings), and [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Columns) will persist. 
 
 The following example demonstrates how to prevent Grid columns from persisting.
 
@@ -748,7 +748,7 @@ public class OrderDetails
 
 ## Handling Grid state manually
 
-You can handle the Grid's state manually by using in-built state persistence methods. You can use [GetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetPersistDataAsync), [SetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SetPersistDataAsync_System_String_), [ResetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ResetPersistDataAsync) methods of Grid to save, load and reset the Grid's persisted state manually. [GetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetPersistDataAsync) method will return Grid current state as a string value, which is suitable for sending them over network and storing in data bases.
+You can handle the Syncfusion Blazor Grid's state manually by using in-built state persistence methods. You can use [GetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetPersistDataAsync), [SetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SetPersistDataAsync_System_String_), [ResetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ResetPersistDataAsync) methods of Grid to save, load and reset the Grid's persisted state manually. [GetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetPersistDataAsync) method will return Grid current state as a string value, which is suitable for sending them over network and storing in data bases.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
