@@ -174,7 +174,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
  
 - Open the **~/_Imports.razor** file and import the required namespaces.
  
-```razor
+```cs
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
 ```
