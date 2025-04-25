@@ -889,9 +889,9 @@ To apply a background color in the exported Excel or CSV document:
 
 1. Create an instance of the [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) class within the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event.
 
-2. Define an [ExcelTheme](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelTheme.html) instance.
+2. Define an [ExcelTheme](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelTheme.html) instance for customization.
 
-3. Set a custom  [ExcelStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelStyle.html#properties) with the [BackColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelStyle.html#Syncfusion_Blazor_Grids_ExcelStyle_BackColor) property.
+3. Set a custom [ExcelStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelStyle.html#properties) with the [BackColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelStyle.html#Syncfusion_Blazor_Grids_ExcelStyle_BackColor) property.
 
 4. Assign the style to the [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelTheme.html#Syncfusion_Blazor_Grids_ExcelTheme_Header), [Record](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelTheme.html#Syncfusion_Blazor_Grids_ExcelTheme_Record), and [Caption](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelTheme.html#Syncfusion_Blazor_Grids_ExcelTheme_Caption) properties of the theme.
 
@@ -1003,17 +1003,17 @@ public class OrderData
 
 The Syncfusion Blazor DataGrid allows you to add additional worksheets to the Excel or CSV document during export. This is especially useful when you want to include supplementary information, summaries, or additional datasets alongside the Grid content in the exported document.
 
-To add additional worksheets during the export:
+To add additional worksheets during export, follow the steps below:
 
 1. Create a new instance of the `Workbook` class and assign it to the [Workbook](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_Workbook) property of [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html).
 
 2. Use the `Worksheets.Add` method to append new worksheets to the workbook.
 
-3. Set the `GridSheetIndex` property to specify the worksheet index where the Grid data should be placed.
+3. Set the [GridSheetIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_GridSheetIndex) property to specify the worksheet index where the Grid data should be placed.
 
 4. Trigger the export operation using the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) or [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToCsvAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method.
 
-In the following example, two extra blank worksheets are added along with the worksheet containing the Grid data
+In the following example, two extra blank worksheets are added along with the worksheet containing the Grid data:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1047,7 +1047,7 @@ In the following example, two extra blank worksheets are added along with the wo
         {
 
             ExcelExportProperties ExportProperties = new ExcelExportProperties();
-            // Add a new workbook to the excel document that contains only 1 worksheet.
+            // Add a new workbook to the Excel document that contains only 1 worksheet.
             ExportProperties.Workbook = new Workbook();
             // Add additional worksheets.
             ExportProperties.Workbook.Worksheets.Add();
@@ -1114,11 +1114,13 @@ public class OrderData
 
 ## Conditional cell formatting
 
-When exporting data from the Syncfusion Blazor DataGrid, you have an option to conditionally format the cells in the exported Excel exporting document. This allows you to customize the appearance of specific cells based on their values or other criteria.
+When exporting data from the Syncfusion Blazor DataGrid, you have an option to conditionally format the cells in the exported Excel document. This allows you to customize the appearance of specific cells based on their values or other criteria.
 
-To achieve this feature, you need to use the [ExcelQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelQueryCellInfoEvent) event of the Grid. This event is triggered for each cell during the export process to Excel document. Within this event, you can access the cell object using the [ args.Cell.CellStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelHeaderQueryCellInfoEventArgs.html#Syncfusion_Blazor_Grids_ExcelHeaderQueryCellInfoEventArgs_Cell) property and modify its properties, such as the background color, based on your desired conditions.
+To achieve this feature, you need to use the [ExcelQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelQueryCellInfoEvent) event of the Grid. This event is triggered for each cell during the export process to Excel document. Within this event, you can access the [args.Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelHeaderQueryCellInfoEventArgs.html#Syncfusion_Blazor_Grids_ExcelHeaderQueryCellInfoEventArgs_Style) property and modify its properties, such as the background color, based on your desired conditions.
 
-The following example demonstrate how to customize the background color of the **Freight** column in the exported Excel document using the `ExcelQueryCellInfoEvent` event.The [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_QueryCellInfo) event is used to customize the appearance of the Grid UI, and the Excel or CSV export is triggered using the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method method.
+> You can also access the cell object using the [args.Cell.CellStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelHeaderQueryCellInfoEventArgs.html#Syncfusion_Blazor_Grids_ExcelHeaderQueryCellInfoEventArgs_Cell) property and modify its properties, such as the background color, based on your desired conditions with the `ExcelQueryCellInfoEvent` event.
+
+The following example demonstrate how to customize the background color of the **Freight** column in the exported Excel document using the `ExcelQueryCellInfoEvent` event.The [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_QueryCellInfo) event is used to customize the appearance of the Grid UI, and the Excel or CSV export is triggered using the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1283,10 +1285,14 @@ The following example demonstrates how to add a header and footer to the exporte
         {
             var exportProperties = new ExcelExportProperties();
             var header = new ExcelHeader { HeaderRows = 8 };
+
+           // Initialize the list of rows for the header.
             header.Rows = new List<ExcelRow>
             {
+                // Add a new row to the header with specific cells.
                 new ExcelRow
                 {
+                    // Define the cells within this row.
                     Cells = new List<ExcelCell>
                     {
                         new ExcelCell
@@ -1387,12 +1393,15 @@ The following example demonstrates how to add a header and footer to the exporte
 
             
             var footer = new ExcelFooter { FooterRows = 4 };
+
+            // Initialize the list of footer rows.
             footer.Rows = new List<ExcelRow>
             {
                 new ExcelRow { }, 
                 new ExcelRow { },
                 new ExcelRow
-                {
+                {   
+                    // Define the cells within this row.
                     Cells = new List<ExcelCell>
                     {
                         new ExcelCell
