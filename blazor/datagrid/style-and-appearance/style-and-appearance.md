@@ -9,7 +9,7 @@ documentation: ug
 
 # Style and appearance in Syncfusion Blazor DataGrid
 
-The Grid control offers various ways to customize its appearance using both default CSS and custom themes. Let's go over some common approaches:
+The Syncfusion Blazor DataGrid control offers various ways to customize its appearance using both default CSS and custom themes. Let's go over some common approaches:
 
 **Default CSS overrides:**
 
