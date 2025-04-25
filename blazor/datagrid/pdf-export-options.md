@@ -1177,6 +1177,8 @@ To apply a theme to the exported PDF document, you can define the [Theme](https:
 
 [Record](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfTheme.html#Syncfusion_Blazor_Grids_PdfTheme_Record): This property defines the theme style for the record content in the exported PDF document. The record represents the data rows in the Grid that are exported to PDF document.
 
+N> By default, material theme is applied to exported PDF document.
+
 ### Default fonts
 
 By default, the Syncfusion Blazor DataGrid uses the **Helvetica** font in the exported document. However, you can change the default font by utilizing the [PdfExportProperties.Theme](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfTheme.html) property. The available default fonts that you can choose from are:
