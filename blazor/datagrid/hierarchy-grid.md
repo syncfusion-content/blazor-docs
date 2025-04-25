@@ -837,7 +837,6 @@ public class OrderData
             new OrderData { OrderID = 10265, CustomerID = "BLONP", ShipCity = "Strasbourg", ShipName = "Blondel père et fils", EmployeeID = 2, Freight = 55.28 },
             new OrderData { OrderID = 10266, CustomerID = "WARTH", ShipCity = "Stavern", ShipName = "Wartian Herkku", EmployeeID = 3, Freight = 25.73 },
             new OrderData { OrderID = 10267, CustomerID = "FRANK", ShipCity = "München", ShipName = "Frankenversand", EmployeeID = 4, Freight = 208.58 }
-
         };
     }
 }
@@ -1288,18 +1287,18 @@ In this example, the **.e-filter-popup** class targets the filter dialog, and th
 
 ![Blazor Grid filter dialog button element.](images/hierarchy-grid/grid-child-filter-dialog-button-element.png)
 
-**Customizing the child Grid excel filter dialog number filters element**
+**Customizing the child Grid Excel filter dialog number filters element**
 
-To customize the appearance of the excel filter dialog's number filters in the child Grid, you can use the following CSS code:
+To customize the appearance of the Excel filter dialog's number filters in the child Grid, you can use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-filter-popup .e-contextmenu {
     background-color: #deecf9;
 }
 ```
-In this example, the **.e-filter-popup .e-contextmenu-wrapper** ul classes target the number filter elements within the excel filter dialog. You can modify the `background-color` property to change the color of these elements.
+In this example, the **.e-filter-popup .e-contextmenu-wrapper** ul classes target the number filter elements within the Excel filter dialog. You can modify the `background-color` property to change the color of these elements.
 
-![Blazor Grid excel filter dialog number filters element.](images/hierarchy-grid/grid-child-excel-filter-dialog-element.png)
+![Blazor Grid Excel filter dialog number filters element.](images/hierarchy-grid/grid-child-excel-filter-dialog-element.png)
 
 ### Grouping
 
