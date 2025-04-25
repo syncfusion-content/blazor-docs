@@ -235,7 +235,7 @@ You can create a **Blazor Web App** named **LocalizationSample** using Visual St
 
 **2. Install Syncfusion Blazor Grid and Themes NuGet packages**
  
-To add the Blazor DataGrid in the app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+To add the Syncfusion Blazor Grid in the app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
  
 If your Blazor Web App uses `WebAssembly` or `Auto` render modes, install the Syncfusion Blazor NuGet packages in the client project.
  
@@ -505,15 +505,15 @@ namespace LocalizationSample.Client.Data
 
 **12. Run the application**
  
-When you run the application, the Blazor DataGrid will display data fetched from the API.
+When you run the application, the Syncfusion Blazor DataGrid will display data fetched from the API.
 
 ![Switch the different localization](images/globalization/switch.png)
 
 ## Right to Left - RTL
 
-The Right to Left (RTL) feature in the Syncfusion Blazor DataGrid allows you to switch the text direction and layout from left-to-right to right-to-left. This feature is especially beneficial for interacting with the grid in languages that are written and read from right to left, such as **Arabic**, **Farsi,** **Urdu**, and others. Enabling RTL significantly improves the experience and accessibility for such languages.
+The Right to Left (RTL) feature in the Syncfusion Blazor DataGrid allows you to switch the text direction and layout from left-to-right to right-to-left. This feature is especially beneficial for interacting with the Grid in languages that are written and read from right to left, such as **Arabic**, **Farsi,** **Urdu**, and others. Enabling RTL significantly improves the experience and accessibility for such languages.
 
-To enable RTL in the Syncfusion Blazor DataGrid, you can use the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableRtl) property. This property switches the text direction and layout from left-to-right to right-to-left.
+To enable RTL in the Grid, you can use the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableRtl) property. This property switches the text direction and layout from left-to-right to right-to-left.
 
 To achieve this, follow the steps below:
 
