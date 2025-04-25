@@ -9,7 +9,7 @@ documentation: ug
 
 # Enable disable Grid and its actions in Blazor DataGrid
 
-You can enable/disable the Grid and its actions by applying/removing corresponding CSS styles.
+You can enable/disable the Syncfusion Blazor DataGrid and its actions by applying/removing corresponding CSS styles.
 
 To enable/disable the Grid and its actions, follow the given steps:
 

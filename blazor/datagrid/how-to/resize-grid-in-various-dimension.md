@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Resize the Grid in various dimension in in Blazor DataGrid | Syncfusion
-description: Learn here all about Resize the Grid in various dimension in Syncfusion Blazor Grid.
+description: Learn here all about Resize the Grid in various dimension in Syncfusion Blazor DataGrid.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Resize the Grid in various dimension in Blazor DataGrid
 
-The Syncfusion Blazor Grid offers a friendly way to resize the Grid, allowing you to adjust its width and height for improved data visualization.
+The Syncfusion Blazor DataGrid offers a friendly way to resize the Grid, allowing you to adjust its width and height for improved data visualization.
 
 To resize the Grid externally, you can use an external button to modify the width of the parent element that contains the Grid. This will effectively resize the Grid along with its parent container.
 
