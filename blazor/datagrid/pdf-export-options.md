@@ -469,7 +469,7 @@ In the following example, the **CustomerID** is initially a hidden column in the
     <GridEvents OnToolbarClick="ToolbarClickHandler" ExportComplete="ExportCompleteHandler" TValue="OrderData"></GridEvents>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
-        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Visible="@CustomerIDVisible" Width="150" />
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Visible="@isCustomerIDVisible" Width="150" />
         <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120" />
         <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Visible="@ShipCityVisible" Width="150" />
         <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" Width="150" />
@@ -479,7 +479,7 @@ In the following example, the **CustomerID** is initially a hidden column in the
 @code {
     private SfGrid<OrderData> Grid;
     public List<OrderData> Orders { get; set; }
-    public bool CustomerIDVisible { get; set; } = false;
+    public bool isCustomerIDVisible { get; set; } = false;
     public bool ShipCityVisible { get; set; }=true;
 
     protected override void OnInitialized()
@@ -491,7 +491,7 @@ In the following example, the **CustomerID** is initially a hidden column in the
     {
         if (args.Item.Id == "Grid_pdfexport") //Id is combination of Grid's ID and itemname.
         {
-            CustomerIDVisible = true;
+            isCustomerIDVisible = true;
             ShipCityVisible=false;
             await Grid.ExportToPdfAsync();
         }
@@ -499,7 +499,7 @@ In the following example, the **CustomerID** is initially a hidden column in the
 
     public void ExportCompleteHandler(object args)
     {
-        CustomerIDVisible = false;
+        isCustomerIDVisible = false;
         ShipCityVisible=true;
     }
 }
@@ -858,7 +858,7 @@ public class OrderData
 
 The Syncfusion Blazor DataGrid allows you to specify a custom file name for the exported PDF document. This feature enables you to provide a meaningful and descriptive name for the exported file, making it easier to identify and manage the exported data.
 
-To assign a custom file name for the exported document, you can set the [FileName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_FileName) property of the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html) property in the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event and pass it to the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) or [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToCsvAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method.
+To assign a custom file name for the exported document, you can set the [FileName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_FileName) property of the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html) property in the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event and pass it to the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method.
 
 The following example demonstrates how to define a file name using `PdfExportProperties.FileName` property when exporting to PDF document, based on the entered value as the file name.
 
