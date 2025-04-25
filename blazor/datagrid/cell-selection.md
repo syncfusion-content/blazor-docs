@@ -133,7 +133,7 @@ In the following example demonstrates how to enable multiple cell selection usin
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="OrderDetails.cs" %}
+{% highlight cs tabtitle="OrderDetails.cs" %}
 
 public class OrderDetails
 {
