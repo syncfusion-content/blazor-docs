@@ -899,3 +899,402 @@ public class EmployeeDetails
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BNBJCLZnLheGLept?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > You can find the fully working sample [here](https://github.com/SyncfusionExamples/blazor-datagrid-prevent-query-generation-for-foriegnkey-column).
+
+## Edit template in foreign key column using remote data
+
+The Syncfusion Blazor DataGrid allows you to customize the edit template for foreign key columns when using remote data. By default, a [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) is used for editing foreign key column. Other editable components can be rendered using the EditTemplate feature of Grid. 
+
+This example demonstrates how to use an edit template in a foreign key column with remote data. In this case, an [AutoComplete](https://blazor.syncfusion.com/documentation/autocomplete/getting-started-with-web-app)  is rendered as the edit template for the **EmployeeID** foreign key column. You can use `SfDataManager` instead of the `DataSource` property to bind remote data. Follow the steps below to achieve this:
+
+**1. Create a Blazor web app**
+
+You can create a **Blazor Web App** named **URLAdaptor** using Visual Studio 2022, either via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). Make sure to configure the appropriate [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows).
+
+**2. Install Syncfusion Blazor DataGrid, AutoComplete, and Themes NuGet Packages**
+
+To add the Blazor DataGrid and AutoComplete in the app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/), [Syncfusion.Blazor.DropDowns](https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns), and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+
+If your Blazor Web App uses `WebAssembly` or `Auto` render modes, install the Syncfusion Blazor NuGet packages in the client project.
+
+Alternatively, use the following Package Manager commands:
+
+```powershell
+Install-Package Syncfusion.Blazor.Grid -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
+Install-Package Syncfusion.Blazor.DropDowns -Version {{ site.releaseversion }}
+```
+
+> Syncfusion Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for a complete list of available packages.
+ 
+**3. Register Syncfusion Blazor service**
+
+- Open the **~/_Imports.razor** file and import the required namespaces.
+
+```razor
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.DropDowns
+```
+
+- Register the Syncfusion Blazor service in the **~/Program.cs** file.
+
+```csharp
+using Syncfusion.Blazor;
+
+builder.Services.AddSyncfusionBlazor();
+```
+
+For apps using `WebAssembly` or `Auto (Server and WebAssembly)` render modes, register the service in both **~/Program.cs** files.
+
+**4. Add stylesheet and script resources**
+
+Include the theme stylesheet and script references in the **~/Components/App.razor** file.
+
+```html
+<head>
+    ....
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+</head>
+....
+<body>
+    ....
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+</body>
+```
+
+> * Refer to the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic for various methods to include themes (e.g., Static Web Assets, CDN, or CRG).
+> * Set the render mode to **InteractiveServer** or **InteractiveAuto** in your Blazor Web App configuration.
+
+**5. Register controllers in `Program.cs`**
+
+Add the following lines in the `Program.cs` file to register controllers:
+
+```csharp
+// Register controllers in the service container.
+builder.Services.AddControllers();
+
+// Map controller routes.
+app.MapControllers();
+```
+ 
+**6. Create a model class**
+
+Create a new folder named **Models**. Inside this folder, add a model class named **OrdersDetails.cs** to represent the order data, and another model class named **EmployeeData.cs** to represent the employee data.
+
+{% tabs %}
+{% highlight cs tabtitle="GridController.cs" %}
+
+namespace EditTemplate.Models
+{
+    public class OrdersDetails
+    {
+        private static List<OrdersDetails> order = new List<OrdersDetails>();
+        public OrdersDetails() { }
+
+        public OrdersDetails(int OrderID, string CustomerID, int EmployeeID, string ShipName, string ShipCountry)
+        {
+            this.OrderID = OrderID;
+            this.CustomerID = CustomerID;
+            this.EmployeeID = EmployeeID;
+            this.ShipName = ShipName;
+            this.ShipCountry = ShipCountry;
+        }
+
+        public static List<OrdersDetails> GetAllRecords()
+        {
+            if (order.Count == 0)
+            {
+                order.Add(new OrdersDetails(1, "ALFKI", 1, "Simons Bistro", "Denmark"));
+                order.Add(new OrdersDetails(2, "ANATR", 2, "Queen Cozinha", "Brazil"));
+                order.Add(new OrdersDetails(3, "ANTON", 3, "Frankenversand", "Germany"));
+                order.Add(new OrdersDetails(4, "BLONP", 4, "Ernst Handel", "Austria"));
+                order.Add(new OrdersDetails(5, "BOLID", 5, "Hanari Carnes", "Switzerland"));
+                order.Add(new OrdersDetails(6, "ALFKI", 6, "Smith Foods", "UK"));
+                order.Add(new OrdersDetails(7, "ANATR", 7, "La Cuisine", "France"));
+                order.Add(new OrdersDetails(8, "ANTON", 8, "Gourmet Market", "USA"));
+                order.Add(new OrdersDetails(9, "BLONP", 9, "Pasta Supremo", "Italy"));
+                order.Add(new OrdersDetails(10, "BOLID", 10, "Frankenversand", "Germany"));
+            }
+            return order;
+        }
+
+        public int? OrderID { get; set; }
+        public string? CustomerID { get; set; }
+        public int? EmployeeID { get; set; }
+        public string? ShipName { get; set; }
+        public string? ShipCountry { get; set; }
+    }
+}
+
+{% endhighlight %}
+
+{% highlight cs tabtitle="EmployeeData.cs" %}
+
+namespace EditTemplate.Models
+{
+    public class EmployeeData
+    {
+            public int? EmployeeID { get; set; }
+            public string? FirstName { get; set; }
+            public string? LastName { get; set; }
+            public string? Department { get; set; }
+            public string? Email { get; set; }
+            public string? PhoneNumber { get; set; }
+
+            public static List<EmployeeData> GetAllRecords()
+            {
+                return new List<EmployeeData>
+                {
+                    new EmployeeData { EmployeeID = 1, FirstName = "John", LastName = "Doe", Department = "Sales", Email = "john.doe@example.com", PhoneNumber = "123-456-7890" },
+                    new EmployeeData { EmployeeID = 2, FirstName = "David", LastName = "Smith", Department = "Marketing", Email = "david.smith@example.com", PhoneNumber = "987-654-3210" },
+                    new EmployeeData { EmployeeID = 3, FirstName = "Maria", LastName = "Gonzalez", Department = "HR", Email = "maria.gonzalez@example.com", PhoneNumber = "456-789-0123" },
+                    new EmployeeData { EmployeeID = 4, FirstName = "Sophia", LastName = "Brown", Department = "Finance", Email = "sophia.brown@example.com", PhoneNumber = "321-654-0987" },
+                    new EmployeeData { EmployeeID = 5, FirstName = "James", LastName = "Wilson", Department = "IT", Email = "james.wilson@example.com", PhoneNumber = "654-321-7654" },
+                    new EmployeeData { EmployeeID = 6, FirstName = "Emma", LastName = "Taylor", Department = "Operations", Email = "emma.taylor@example.com", PhoneNumber = "213-546-8790" },
+                    new EmployeeData { EmployeeID = 7, FirstName = "Daniel", LastName = "Anderson", Department = "Logistics", Email = "daniel.anderson@example.com", PhoneNumber = "789-654-3210" },
+                    new EmployeeData { EmployeeID = 8, FirstName = "Olivia", LastName = "Thomas", Department = "Procurement", Email = "olivia.thomas@example.com", PhoneNumber = "567-890-1234" },
+                    new EmployeeData { EmployeeID = 9, FirstName = "Michael", LastName = "Harris", Department = "R&D", Email = "michael.harris@example.com", PhoneNumber = "890-123-4567" },
+                    new EmployeeData { EmployeeID = 10, FirstName = "Lucas", LastName = "Martin", Department = "Customer Service", Email = "lucas.martin@example.com", PhoneNumber = "345-678-9012" },
+                };
+            }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+**7. Create an API controller**
+
+Create an API controller (aka, **GridController.cs and EmployeesController.cs**) file under **Controllers** folder that helps to establish data communication with the Grid.
+
+> * The **GetOrderData** method retrieves sample order data. Replace it with your custom logic to fetch data from a database or other sources.
+> * The **GetEmployeeDetails** method retrieves sample employee data. Replace it with your custom logic to fetch data from a database or other sources.
+
+{% tabs %}
+{% highlight cs tabtitle="GridController.cs" %}
+
+using EditTemplate.Models;
+using Microsoft.AspNetCore.Mvc;
+using Syncfusion.Blazor;
+using Syncfusion.Blazor.Data;
+
+namespace EditTemplate.Controllers
+{
+    [ApiController]
+    [Route("api/[controller]")]
+    public class GridController : ControllerBase
+    {
+        /// <summary>
+        /// Retrieves the list of orders.
+        /// </summary>
+        /// <returns>Retrieve data from the data source.</returns>
+        [HttpGet]
+        public List<OrdersDetails> GetOrdersDetails()
+        {
+            return OrdersDetails.GetAllRecords().ToList();
+        }
+
+        /// <summary>
+        /// Handles server-side data operations such as filtering, sorting, paging, and returns the processed data.
+        /// </summary>
+        /// <returns>Returns the data and total count in result and count format.</returns>
+        [HttpPost]
+        public object Post([FromBody] DataManagerRequest DataManagerRequest)
+        {
+            // Retrieve data source and convert to queryable.
+            IQueryable<OrdersDetails> DataSource = GetOrdersDetails().AsQueryable();
+
+            // Get the total records count.
+            int totalRecordsCount = DataSource.Count();
+
+            // Handling Paging in UrlAdaptor.
+            if (DataManagerRequest.Skip != 0)
+            {
+                DataSource = DataOperations.PerformSkip(DataSource, DataManagerRequest.Skip);
+                //Add custom logic here if needed and remove above method
+            }
+            if (DataManagerRequest.Take != 0)
+            {
+                DataSource = DataOperations.PerformTake(DataSource, DataManagerRequest.Take);
+                //Add custom logic here if needed and remove above method
+            }
+            // Get total records count.
+            int totalRecordsCount = DataSource.Count();
+            
+            // Return data and count.
+           return new { result = DataSource, count = totalRecordsCount };
+        }
+
+        /// <summary>
+        /// Inserts a new data item into the data collection.
+        /// </summary>
+        /// <param name="value">It contains the new record detail which is need to be inserted.</param>
+        /// <returns>Returns void.</returns>
+        [HttpPost("Insert")]
+        public void Insert([FromBody] CRUDModel<OrdersDetails> newRecord)
+        {
+            if (newRecord.value != null)
+            {
+                // Add the new record to the data collection.
+                OrdersDetails.GetAllRecords().Insert(0, newRecord.value);
+            }
+        }
+
+        /// <summary>
+        /// Update a existing data item from the data collection.
+        /// </summary>
+        /// <param name="updatedRecord">It contains the updated record detail which is need to be updated.</param>
+        /// <returns>Returns void.</returns>
+        [HttpPost("Update")]
+        public void Update([FromBody] CRUDModel<OrdersDetails> updatedRecord)
+        {
+            var updatedOrder = updatedRecord.value;
+            if (updatedOrder != null)
+            {
+                var data = OrdersDetails.GetAllRecords().FirstOrDefault(or => or.OrderID == updatedOrder.OrderID);
+                if (data != null)
+                {
+                    // Update the existing record.
+                    data.OrderID = updatedOrder.OrderID;
+                    data.CustomerID = updatedOrder.CustomerID;
+                    data.EmployeeID = updatedOrder.EmployeeID;
+                    data.ShipCountry = updatedOrder.ShipCountry;
+                    // Update other properties similarly.
+                }
+            }
+        }
+
+        /// <summary>
+        /// Remove a specific data item from the data collection.
+        /// </summary>
+        /// <param name="deletedRecord">It contains the specific record detail which is need to be removed.</param>
+        /// <return>Returns void.</return>
+        [HttpPost("Remove")]
+        public void Remove([FromBody] CRUDModel<OrdersDetails> deletedRecord)
+        {
+            // Get the key value from the deletedRecord.
+            int orderId = int.Parse(deletedRecord.key.ToString());
+            var data = OrdersDetails.GetAllRecords().FirstOrDefault(OrdersDetails => OrdersDetails.OrderID == orderId);
+            if (data != null)
+            {
+                // Remove the record from the data collection.
+                OrdersDetails.GetAllRecords().Remove(data);
+            }
+        }
+
+        public class CRUDModel<T> where T : class
+        {
+            public string? action { get; set; }
+            public string? keyColumn { get; set; }
+            public object? key { get; set; }
+            public T? value { get; set; }
+            public List<T>? added { get; set; }
+            public List<T>? changed { get; set; }
+            public List<T>? deleted { get; set; }
+            public IDictionary<string, object>? @params { get; set; }
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% highlight cs tabtitle="EmployeesController.cs" %}
+
+using EditTemplate.Models;
+using Microsoft.AspNetCore.Mvc;
+using Syncfusion.Blazor;
+
+namespace EditTemplate.Controllers
+{
+    [ApiController]
+    public class EmployeesController : ControllerBase
+    {
+        [HttpGet]
+        [Route("api/[controller]")]
+        public List<EmployeeData> GetEmployeeDetails()
+        {
+            var data = EmployeeData.GetAllRecords().ToList();
+            return data;
+        }
+        [HttpPost]
+        [Route("api/[controller]")]
+        public object Post([FromBody] DataManagerRequest DataManagerRequest)
+        {
+            // Retrieve data from the data source (e.g., database).
+            IQueryable<EmployeeData> DataSource = GetEmployeeDetails().AsQueryable();
+
+            return DataSource;
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+**8. Add Blazor DataGrid, AutoComplete and configure with server**
+
+To implement a Blazor DataGrid with an editable foreign key column using **AutoComplete** with remote data, add the following code to the **Home.razor** file:
+
+{% tabs %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Data
+@using EditTemplate.Models
+@using Syncfusion.Blazor.DropDowns
+
+<SfGrid TValue="OrdersDetails" ID="Grid" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
+    <SfDataManager Url="https://localhost:7198/api/grid" InsertUrl="https://localhost:7198/api/grid/Insert" UpdateUrl="https://localhost:7198/api/grid/Update" RemoveUrl="https://localhost:7198/api/grid/Remove" Adaptor="Adaptors.UrlAdaptor">
+    </SfDataManager>    
+    <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="EditMode.Normal"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field="@nameof(OrdersDetails.OrderID)" HeaderText="Order ID" IsPrimaryKey="true" Width="150"></GridColumn>
+        <GridForeignColumn TValue="EmployeeData" Field=@nameof(OrdersDetails.EmployeeID) HeaderText="Employee Name" ForeignKeyValue="FirstName" Width="150">
+            <ChildContent>
+                <Syncfusion.Blazor.Data.SfDataManager Url="https://localhost:7198/api/employees" CrossDomain="true" Adaptor="Syncfusion.Blazor.Adaptors.UrlAdaptor">
+                </Syncfusion.Blazor.Data.SfDataManager>
+            </ChildContent>
+             <EditTemplate>
+                 @{
+                        var data = context as OrdersDetails;
+                    }
+                <SfAutoComplete ID="CustomerID" TValue="int?" TItem="EmployeeData" @bind-Value="data.EmployeeID">
+                    <Syncfusion.Blazor.Data.SfDataManager Url="https://localhost:7198/api/employees" 
+                        Adaptor="Syncfusion.Blazor.Adaptors.UrlAdaptor">
+                    </Syncfusion.Blazor.Data.SfDataManager>
+                    <AutoCompleteFieldSettings Text="FirstName" Value="EmployeeID" />                    
+                </SfAutoComplete>
+            </EditTemplate>
+        </GridForeignColumn>
+        <GridColumn Field="@nameof(OrdersDetails.ShipName)" HeaderText="Ship Name" Width="150"></GridColumn>
+        <GridColumn Field="@nameof(OrdersDetails.ShipCountry)" HeaderText="Ship Country" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+@code {
+
+    public class OrdersDetails
+    {
+        public int? OrderID { get; set; }
+        public int? EmployeeID { get; set; }
+        public string? ShipCountry { get; set; }
+        public string? ShipName { get; set; }
+
+    }
+
+    public class EmployeeData
+    {
+        public int EmployeeID { get; set; }
+        public string FirstName { get; set; }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+
+**5. Run the application**
+
+When you run the application, the Blazor DataGrid  will display data fetched from the API.
+
+![Edit template in foreign key column using remote data](../images/blazor-datagrid-adaptors.gif)
+
+
