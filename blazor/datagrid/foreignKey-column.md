@@ -1243,23 +1243,23 @@ To implement a Blazor DataGrid with an editable foreign key column using **AutoC
 @using Syncfusion.Blazor.DropDowns
 
 <SfGrid TValue="OrdersDetails" ID="Grid" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
-    <SfDataManager Url="https://localhost:7198/api/grid" InsertUrl="https://localhost:7198/api/grid/Insert" UpdateUrl="https://localhost:7198/api/grid/Update" RemoveUrl="https://localhost:7198/api/grid/Remove" Adaptor="Adaptors.UrlAdaptor">
-    </SfDataManager>    
+    <SfDataManager Url="https://localhost:xxxx/api/grid" InsertUrl="https://localhost:xxxx/api/grid/Insert" UpdateUrl="https://localhost:xxxx/api/grid/Update" RemoveUrl="https://localhost:xxxx/api/grid/Remove" Adaptor="Adaptors.UrlAdaptor">
+    </SfDataManager>  //Use remote server host number instead ****. 
     <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="EditMode.Normal"></GridEditSettings>
     <GridColumns>
         <GridColumn Field="@nameof(OrdersDetails.OrderID)" HeaderText="Order ID" IsPrimaryKey="true" Width="150"></GridColumn>
         <GridForeignColumn TValue="EmployeeData" Field=@nameof(OrdersDetails.EmployeeID) HeaderText="Employee Name" ForeignKeyValue="FirstName" Width="150">
             <ChildContent>
-                <Syncfusion.Blazor.Data.SfDataManager Url="https://localhost:7198/api/employees" CrossDomain="true" Adaptor="Syncfusion.Blazor.Adaptors.UrlAdaptor">
+                <Syncfusion.Blazor.Data.SfDataManager Url="https://localhost:xxxx/api/employees" CrossDomain="true" Adaptor="Syncfusion.Blazor.Adaptors.UrlAdaptor">
                 </Syncfusion.Blazor.Data.SfDataManager>
             </ChildContent>
              <EditTemplate>
-                 @{
-                        var data = context as OrdersDetails;
-                    }
+                @{
+                    var data = context as OrdersDetails;
+                }
                 <SfAutoComplete ID="CustomerID" TValue="int?" TItem="EmployeeData" @bind-Value="data.EmployeeID">
-                    <Syncfusion.Blazor.Data.SfDataManager Url="https://localhost:7198/api/employees" 
-                        Adaptor="Syncfusion.Blazor.Adaptors.UrlAdaptor">
+                    <Syncfusion.Blazor.Data.SfDataManager Url="https://localhost:xxxx/api/employees" 
+                        Adaptor="Syncfusion.Blazor.Adaptors.UrlAdaptor"> //Use remote server host number instead ****.
                     </Syncfusion.Blazor.Data.SfDataManager>
                     <AutoCompleteFieldSettings Text="FirstName" Value="EmployeeID" />                    
                 </SfAutoComplete>
@@ -1295,6 +1295,6 @@ To implement a Blazor DataGrid with an editable foreign key column using **AutoC
 
 When you run the application, the Blazor DataGrid  will display data fetched from the API.
 
-![Edit template in foreign key column using remote data](../images/blazor-datagrid-adaptors.gif)
+![Edit template in foreign key column using remote data](./images/edit-template.gif)
 
 
