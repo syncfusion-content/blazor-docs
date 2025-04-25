@@ -984,7 +984,7 @@ A package of Blazor input components comes with a collection of form components.
 <li><a href="https://blazor.syncfusion.com/documentation/file-upload/getting-started-with-web-app">File Upload</a></li>
 <li><a href="https://blazor.syncfusion.com/documentation/signature/getting-started-webapp">Signature</a></li>
 <li><a href="https://blazor.syncfusion.com/documentation/textarea/getting-started-webapp">TextArea</a></li>
-<li><a href="https://blazor.syncfusion.com/documentation/otp-input/getting-started-webapp">OTP Input</li>
+<li><a href="https://blazor.syncfusion.com/documentation/otp-input/getting-started-webapp">OTP Input</a></li>
 <li><a href="https://blazor.syncfusion.com/documentation/speech-to-text/getting-started-web-app">Speech To Text</a></li>
 </ul>
 </td>
