@@ -87,7 +87,16 @@ namespace WebApiAdaptor.Models
 **3. Create an API controller**
 
 Create a new folder named **Controllers**. Then, add a controller named **GridController.cs** in the **Controllers** folder to handle data communication with Blazor DataGrid. Implement the `Get` method in the controller to return data in JSON format, including the `Items` and `Count` properties as required by the `WebApiAdaptor`.
- 
+
+The sample response object should look like this:
+
+```
+{
+    Items: [{..}, {..}, {..}, ...],
+    Count: 830
+}
+```
+
 {% tabs %}
 {% highlight c# tabtitle="GridController.cs"%}
  
@@ -120,6 +129,8 @@ namespace WebApiAdaptor.Controllers
 
 {% endhighlight %}
 {% endtabs %}
+
+> When using the WebAPI Adaptor, the data source is returned as a pair of **Items** and **Count**. However, if the `Offline` property of `SfDataManager` is enabled, the entire data source is returned from the server as a collection of objects. In this case, the `$inlinecount` will not be included. Additionally, only a single request is made to fetch all the data from the server, and no further requests are sent.
 
 **4. Register controllers in `Program.cs`**
  
@@ -199,7 +210,7 @@ Include the theme stylesheet and script references in the **~/Components/App.raz
 
 **4. Add Blazor DataGrid and configure with server**
  
-To connect the Blazor DataGrid to a hosted API, use the [Url]( https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property of [SfDataManager]( https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html). The `SfDataManager` offers multiple adaptor options to connect with remote database based on an API service. Below is an example of the [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor) configuration where an API service are set up to return the resulting data in the **items** and **count** format. Update the **Index.razor** file as follows.
+To connect the Blazor DataGrid to a hosted API, use the [Url]( https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property of [SfDataManager]( https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html). The `SfDataManager` offers multiple adaptor options to connect with remote database based on an API service. Below is an example of the [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor) configuration where an API service are set up to return the resulting data in the **Items** and **Count** format. Update the **Index.razor** file as follows.
  
 {% tabs %}
 {% highlight razor tabtitle="Index.razor"%}
@@ -262,7 +273,7 @@ When you run the application, the Blazor Grid  will display data fetched from th
 
 **Perform data operations in a WebAPI service**
 
-When using the `WebApiAdaptor` with the `SfDataManager` component, data operations such as filtering, sorting, paging, and searching are executed on the server side. These operations are sent from the client to the server as **QueryString** parameters, which can be accessed in your API controller using `Request.Query`.
+When using the `WebApiAdaptor` with the `SfDataManager`, data operations such as filtering, sorting, paging, and searching are executed on the server side. These operations are sent from the client to the server as **QueryString** parameters, which can be accessed in your API controller using `Request.Query`.
 
 **Query parameters for data operations**
 
@@ -645,7 +656,7 @@ N> If you want to handle filtering, sorting, and paging operations using Dynamic
 
 ## Handling CRUD operations
 
-To manage CRUD (Create, Read, Update, and Delete) operations using the WebApiAdaptor in Syncfusion Blazor DataGrid, follow the provided guide for configuring the Grid for [editing](https://blazor.syncfusion.com/documentation/datagrid/editing) and utilize the sample implementation of the `GridController` in your server application. This controller handles HTTP requests for CRUD operations such as GET, POST, PUT, and DELETE.
+To manage CRUD (Create, Read, Update, and Delete) operations using the WebApiAdaptor in Syncfusion Blazor DataGrid, follow the provided guide for configuring the Grid for [editing](https://blazor.syncfusion.com/documentation/datagrid/editing) and utilize the sample implementation of the `GridController` in your server application. This controller handles HTTP requests for CRUD operations such as **GET, POST, PUT,** and **DELETE**.
 
 To enable CRUD operations in the Grid, follow the steps below:
 
@@ -729,7 +740,7 @@ public void Put([FromBody] OrdersDetails updatedRecord)
 
 **Delete operation:**
 
-To delete a record from your Syncfusion Blazor DataGrid, you can use the `HttpDelete` method in your controller. The primary key value of the deleted record is passed to the **deletedRecord** parameter.Below is a sample implementation:
+To delete a record from your Syncfusion Grid, you can use the `HttpDelete` method in your controller. The primary key value of the deleted record is passed to the **deletedRecord** parameter.Below is a sample implementation:
 
 ![Delete Record](../images/web-api-adaptor-delete.png)
 
@@ -757,4 +768,4 @@ public void Delete(int id)
 
 ![WebApiAdaptor CRUD operations](../images/adaptor-crud-operation.gif)
 
-N> ASP.NET Core (Blazor) Web API with batch handling is not yet supported by ASP.NET Core v3+. Therefore, it is currently not feasible to support batch mode CRUD operations until ASP.NET Core provides support for batch handling. For more details, refer to [this GitHub issue](https://github.com/dotnet/aspnetcore/issues/14722).
+N> ASP.NET Core (Blazor) Web API with batch handling is not yet supported by ASP.NET Core v3+. Therefore, it is currently not feasible to support **Batch** mode CRUD operations until ASP.NET Core provides support for batch handling. For more details, refer to [this GitHub issue](https://github.com/dotnet/aspnetcore/issues/14722).
