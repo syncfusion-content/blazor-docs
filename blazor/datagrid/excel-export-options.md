@@ -464,7 +464,7 @@ Toolbar="@(new List<string>() { "ExcelExport" })" Height="348">
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Visible="@isCustomerIDVisible" Width="150" />
         <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120" />
-        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Visible="@ShipCityVisible" Width="150" />
+        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Visible="@isShipCityVisible" Width="150" />
         <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" Width="150" />
     </GridColumns>
 </SfGrid>
@@ -473,7 +473,7 @@ Toolbar="@(new List<string>() { "ExcelExport" })" Height="348">
     private SfGrid<OrderData> Grid;
     public List<OrderData> Orders { get; set; }
     public bool isCustomerIDVisible { get; set; } = false;
-    public bool ShipCityVisible { get; set; }
+    public bool isShipCityVisible { get; set; }
 
     protected override void OnInitialized()
     {
@@ -485,7 +485,7 @@ Toolbar="@(new List<string>() { "ExcelExport" })" Height="348">
         if (args.Item.Id == "Grid_excelexport")
         {
             isCustomerIDVisible = true;
-            ShipCityVisible=false;
+            isShipCityVisible=false;
             await Grid.ExportToExcelAsync();
         }
     }
@@ -493,7 +493,7 @@ Toolbar="@(new List<string>() { "ExcelExport" })" Height="348">
     public void ExportCompleteHandler(object args)
     {
         isCustomerIDVisible = false;
-        ShipCityVisible=true;
+        isShipCityVisible=true;
     }
 }
 
@@ -766,7 +766,7 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rZVyDpiXSTLiKArB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> By default, material theme is applied to exported excel document.
+> By default, material theme is applied to exported Excel document.
 
 ## Font and color customization
 
