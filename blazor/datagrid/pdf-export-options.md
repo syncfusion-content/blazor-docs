@@ -1448,7 +1448,7 @@ public class OrderData
 
 ## Rotate a header text in the exported grid
 
-The Syncfusion DataGrid provides support for customizing column header styles, including rotating the header text to a certain degree in the exported PDF document on the server side. To achieve this requirement, you can use the `BeginCellLayout` event of the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) class along with a custom event handler.
+The Syncfusion Blazor DataGrid provides support for customizing column header styles, including rotating the header text to a certain degree in the exported PDF document on the server side. To achieve this requirement, you can use the `BeginCellLayout` event of the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) class along with a custom event handler.
 
 1. The [PdfHeaderQueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfHeaderQueryCellInfoEvent) event is triggered when creating a column header for the PDF document to be exported. In this event, you can collect the column header details and handle customizations.
 
