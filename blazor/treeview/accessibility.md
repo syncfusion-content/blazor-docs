@@ -57,10 +57,10 @@ The Blazor TreeView component followed the [keyboard interaction](https://www.w3
 
 | Windows | Mac | Description |
 |------|----|-----|
-| <kbd>Arrow Up</kbd> | <kbd>↑</kbd> | Goes to the previous node. |
-| <kbd>Arrow Down</kbd> | <kbd>↓</kbd> | Goes to the next node. |
-| <kbd>Arrow Right</kbd> | <kbd>→</kbd> | Expands the current node. |
-| <kbd>Arrow Left</kbd> | <kbd>←</kbd> | Collapses the current node. |
+| <kbd>↑</kbd> | <kbd>↑</kbd> | Goes to the previous node. |
+| <kbd>↓</kbd> | <kbd>↓</kbd> | Goes to the next node. |
+| <kbd>→</kbd> | <kbd>→</kbd> | Expands the current node. |
+| <kbd>←</kbd> | <kbd>←</kbd> | Collapses the current node. |
 | <kbd>Home</kbd> | <kbd>fn</kbd>+<kbd>←</kbd> | Goes to the first node. |
 | <kbd>End</kbd> | <kbd>fn</kbd>+<kbd>→</kbd> | Goes to the last node. |
 | <kbd>F2</kbd> | <kbd>F2</kbd> | Edits the focused node. |
