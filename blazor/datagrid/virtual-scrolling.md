@@ -9,7 +9,7 @@ documentation: ug
 
 # Virtual scrolling in Blazor DataGrid
 
-The virtual scrolling feature in the Grid allows you to efficiently handle and display large amounts of data without experiencing any [performance](https://www.syncfusion.com/blazor-components/blazor-datagrid/performance) degradation. It optimizes the rendering process by loading only the visible rows in the Grid viewport, rather than rendering the entire dataset at once. This is particularly useful when dealing with datasets containing thousands of records.
+The virtual scrolling feature in the Syncfusion Blazor DataGrid allows you to efficiently handle and display large amounts of data without experiencing any [performance](https://www.syncfusion.com/blazor-components/blazor-datagrid/performance) degradation. It optimizes the rendering process by loading only the visible rows in the Grid viewport, rather than rendering the entire dataset at once. This is particularly useful when dealing with datasets containing thousands of records.
 
 To learn about **Virtualization** in the Grid, you can check out this video.
 
@@ -91,7 +91,9 @@ public class TaskDetails
 
 ### Render buffered data using Overscan count
 
-The [OverscanCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_OverscanCount) property plays a crucial role in optimizing scrolling performance. It allows for the rendering of extra records before and after the viewport of the Grid. It effectively reduces the frequency of data fetch requests while scrolling vertically.
+The [OverscanCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_OverscanCount) property in the Syncfusion Blazor DataGrid is used to optimize scrolling performance by pre-rendering additional rows beyond the current viewport. It renders extra items in the DOM before and after the visible items (based on the page size) during virtual scrolling and initial rendering, which reduces the frequency of both data fetch requests and DOM rendering operations, resulting in a smoother scrolling experience.
+
+By rendering extra rows before and after the visible area, `OverscanCount` helps buffer data, minimizing loading delays.
 
 The following example demonstrates how to set the `OverscanCount` property to **5**, allowing five additional records to be preloaded before and after the current viewport.
 
@@ -206,7 +208,7 @@ public class OrderDetails
 
 ## Column virtualization
 
-Column virtualization is a feature in the Syncfusion Grid that optimizes the rendering of columns by displaying only the columns currently within the viewport. It allows horizontal scrolling to view additional columns. This feature is particularly useful when dealing with Grids that have a large number of columns, as it helps improve performance and reduces the initial loading time.
+Column virtualization is a feature in the Syncfusion Blazor DataGrid that optimizes the rendering of columns by displaying only the columns currently within the viewport. It allows horizontal scrolling to view additional columns. This feature is particularly useful when dealing with Grids that have a large number of columns, as it helps improve performance and reduces the initial loading time.
 
 To enable column virtualization, set the [EnableColumnVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableColumnVirtualization) property of the Grid to **true**. This configuration instructs the Grid to render only the columns visible in the viewport.
 
@@ -394,7 +396,17 @@ public class VirtualData
 
 ### Column Virtualization With Row Virtualization
 
-In this demo, we have configured the [EnableColumnVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableColumnVirtualization) and [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) properties to **true**.
+Column virtualization is a feature in the Syncfusion Blazor DataGrid that optimizes the rendering of columns by displaying only the columns currently within the viewport. It allows horizontal scrolling to view additional columns. This feature is particularly useful when dealing with Grids that have a large number of columns, as it helps improve performance and reduces the initial loading time.
+
+Similarly, Row virtualization renders only the visible rows within the viewport, enabling smooth vertical scrolling when handling a large dataset.
+
+[EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization): Only the rows visible in the viewport are rendered. As the user scrolls vertically, more rows are dynamically loaded into the Grid.
+
+[EnableColumnVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableColumnVirtualization): Only the columns visible in the viewport are rendered. As the user scrolls horizontally, more columns are dynamically loaded.
+
+By enabling both features together, you can significantly enhance the responsiveness and usability of the Grid, even with thousands of rows and hundreds of columns.
+
+The following example demonstrates how to enable both column and row virtualization in the Grid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -479,7 +491,19 @@ public class OrderDetails
 
 ### Column virtualization with paging
 
-In this demo, we have configured the [EnableColumnVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableColumnVirtualization) and [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging) properties to **true**.
+Column virtualization in the Syncfusion Blazor DataGrid improves performance by rendering only the columns that are currently visible in the viewport. As the user scrolls horizontally, additional columns are dynamically loaded.
+
+When combined with paging, the Grid only loads a limited number of rows per page (based on the configured page size), while still rendering only the visible columns. This setup significantly reduces both memory usage and initial rendering time, especially when working with a large number of columns and rows.
+
+To use column virtualization with paging, you must enable both the [EnableColumnVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableColumnVirtualization) and [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging) properties of the Grid.
+
+* `EnableColumnVirtualization` enables the rendering of only visible columns.
+
+* `AllowPaging` allows the Grid to display data in pages, limiting the number of rows visible at once.
+
+By combining these two properties, you can achieve optimized rendering for both columns and rows, ensuring a smooth user experience even with large datasets.
+
+The following example demonstrates how to enable both column virtualization and paging in the Grid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -563,15 +587,15 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VtVejhtAVPeiBUyd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> * Column's [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Width) is required for column virtualization. If column's width is not defined then Grid will consider its value as **200px**.
+> * Column's [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Width) is required for column virtualization. If column's `Width` is not defined then Grid will consider its value as **200px**.
 > * The collapsed/expanded state will persist only for the local dataSource while scrolling.
 
 ### Limitations 
 
-* While using column virtual scrolling, column width should be in pixel. Percentage values are not accepted.
+* While using column virtualization, column width should be in pixel. Percentage values are not accepted.
 * Selected column details are retained only within the viewport. When the next set of columns is loaded, the selection for previously visible columns is lost.
-* The cell selection is not supported for column virtual scrolling.
-* The **Ctrl + Home** and **Ctrl + End** keys are not supported when using column virtual scrolling.
+* The cell selection is not supported for column virtualization.
+* The **Ctrl + Home** and **Ctrl + End** keys are not supported when using column virtualization.
 * The following features are compatible with column virtualization and work within the viewport:
    1. Column resizing
    2. Column reordering
@@ -593,14 +617,16 @@ public class OrderDetails
 
 ## Enable cell placeholder during Virtualization
 
-The Syncfusion Blazor DataGrid supports rendering placeholder indicators in Grid cells while loading new data during row or column virtualization. This feature enhances perceived performance and improves the user experience by visually indicating that data is being loaded as the user scrolls through the Grid.
+The Syncfusion Blazor DataGrid provides an option to render cell placeholders while new data is being loaded during row or column virtualization. This feature enhances the user experience by displaying a visual cue (a loading placeholder) in the Grid cells while new data is being fetched. It is particularly useful in scenarios where there is a large dataset or when virtualization is used to load data dynamically as the user scrolls through the Grid.
 
-When enabled, the same DOM elements are reused while scrolling, and a loading placeholder is displayed in the cells until the new data is fetched and rendered.
+When enabled, the Grid reuses the same DOM elements while scrolling. A placeholder indicator is shown in the Grid cells until the new data has been fetched and rendered. This not only improves the perceived performance of the Grid but also provides a smooth and responsive experience for the user.
 
-To enable cell placeholders during virtualization, set the [EnableVirtualMaskRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualMaskRow) property to **true** along with either:
+To enable the display of cell placeholders during virtualization, set the [EnableVirtualMaskRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualMaskRow) property to **true**. Additionally, you need to enable either:
 
 * [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) for row virtualization, or
 * [EnableColumnVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableColumnVirtualization) for column virtualization.
+
+Here’s an example demonstrating how to enable cell placeholders during row and column virtualization:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -689,11 +715,21 @@ public class OrderDetails
 
 ## Frozen columns virtualization
 
-This feature virtualizes the row and movable column data. Column virtualization allows you to virtualize the movable columns, and a cell placeholder is rendered before new columns load into the viewport.
+Frozen columns virtualization in Syncfusion Blazor DataGrid allows for the efficient rendering of both frozen and movable columns, along with row virtualization. This feature optimizes the Grid's performance by virtualizing both the rows and the movable columns while ensuring smooth scrolling and a seamless user experience.
 
-Row virtualization enables the virtualization of vertical data with a cell placeholder. This placeholder is rendered before new row data loads into the viewport.
+**Column Virtualization:** This optimizes the horizontal scrolling experience by rendering only the visible columns and virtualizing the others. The frozen columns remain fixed in place while the movable columns are rendered dynamically as you scroll horizontally.
 
-To setup the frozen right/left columns, you need to define Column property of [Freeze](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Freeze) as **Right** or **Left** along with enabling the column property of [IsFrozen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsFrozen).
+**Row Virtualization:** This ensures that only the rows within the current viewport are rendered, with placeholders shown for rows that are being dynamically loaded during scrolling.
+
+When row virtualization and column virtualization are both enabled, cell placeholders are displayed in both rows and columns until the data has been loaded into the Grid.
+
+To enable frozen columns with virtualization, follow these steps:
+
+**Define Frozen Columns:** Set the `Column` property of the [Freeze](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Freeze) option to **Right** or **Left** for the desired columns, and enable the [IsFrozen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsFrozen) property of the `GridColumn`.
+
+**Enable Virtualization:** Enable both [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) for row virtualization and [EnableColumnVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableColumnVirtualization) for column virtualization to ensure a smooth experience when scrolling through large datasets.
+
+Here's an example demonstrating how to enable frozen columns along with row and column virtualization in Grid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
