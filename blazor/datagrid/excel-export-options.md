@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Excel Export in Blazor DataGrid Component | Syncfusion
+title: Excel Export in Blazor DataGrid | Syncfusion
 description: Checkout and learn here all about Excel Export in Syncfusion Blazor DataGrid component and much more.
 platform: Blazor
 control: DataGrid
@@ -22,7 +22,7 @@ To export the current page of the Grid to an Excel or CSV document, you need to 
 1. **CurrentPage**: Exports only the records on the current Grid page.
 2. **AllPages**: Exports all the records from the Grid.
 
-The following example demonstrates how to export current page to a Excel document when a toolbar item is clicked, using the  [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event and the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method.
+The following example demonstrates how to export current page to a Excel document when a toolbar item is clicked, using the  [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event and the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -140,7 +140,7 @@ To export the selected records from the Grid to a Excel or CSV document, you can
 
 3. Trigger the export operation using the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) or [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToCsvAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method.
 
-The following example demonstrates how to export the selected records to a Excel document when a toolbar item is clicked.
+The following example demonstrates how to export the selected records to a Excel document when a toolbar item is clicked:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -337,7 +337,7 @@ Exporting hidden columns in the Syncfusion Blazor DataGrid allows you to include
 
 To export hidden columns of the Grid to a Excel or CSV document, you need to set the [includeHiddenColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_IncludeHiddenColumn) property as **true** in the [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) property.
 
-The following example demonstrates how to export hidden columns to a Excel document using the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event and the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method. In this example, the **ShipCity** column, which is not visible in the UI, is exported to the Excel document. You can also export the Grid by changing the `ExcelExportProperties.IncludeHiddenColumn` property based on the switch toggle using the `bind-Checked` property of the [Blazor Toggle Switch Button](https://blazor.syncfusion.com/documentation/toggle-switch-button/getting-started-webapp).
+The following example demonstrates how to export hidden columns to a Excel document using the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event and the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method. In this example, the **ShipCity** column, which is not visible in the UI, is exported to the Excel document. You can also export the Grid by changing the `ExcelExportProperties.IncludeHiddenColumn` property based on the switch toggle using the `bind-Checked` property of the [Blazor Toggle Switch Button](https://blazor.syncfusion.com/documentation/toggle-switch-button/getting-started-webapp):
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -450,7 +450,7 @@ To show or hide columns based on user interaction during the export process, you
 
 3. Handle the [ExportComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExportComplete) event to restore the column visibility to its original state.
 
-In the following example, the **CustomerID** is initially a hidden column in the Grid. However, during the export process, the **CustomerID** column is made visible, while the **ShipCity** column is hidden.
+In the following example, the **CustomerID** is initially a hidden column in the Grid. However, during the export process, the **CustomerID** column is made visible, while the **ShipCity** column is hidden:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -558,7 +558,7 @@ The Syncfusion Blazor DataGrid allows you to specify a custom file name for the 
 
 To assign a custom file name for the exported document, you can set the [FileName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_FileName) property of the [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) property in the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event and pass it to the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) or [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToCsvAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method.
 
-The following example demonstrates how to define a file name using `ExcelExportProperties.FileName` property when exporting to Excel document, based on the entered value as the file name.
+The following example demonstrates how to define a file name using `ExcelExportProperties.FileName` property when exporting to Excel document, based on the entered value as the file name:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1120,7 +1120,7 @@ To achieve this feature, you need to use the [ExcelQueryCellInfoEvent](https://h
 
 > You can also access the cell object using the [args.Cell.CellStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelHeaderQueryCellInfoEventArgs.html#Syncfusion_Blazor_Grids_ExcelHeaderQueryCellInfoEventArgs_Cell) property and modify its properties, such as the background color, based on your desired conditions with the `ExcelQueryCellInfoEvent` event.
 
-The following example demonstrate how to customize the background color of the **Freight** column in the exported Excel document using the `ExcelQueryCellInfoEvent` event.The [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_QueryCellInfo) event is used to customize the appearance of the Grid UI, and the Excel or CSV export is triggered using the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method.
+The following example demonstrate how to customize the background color of the **Freight** column in the exported Excel document using the `ExcelQueryCellInfoEvent` event.The [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_QueryCellInfo) event is used to customize the appearance of the Grid UI, and the Excel or CSV export is triggered using the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1495,7 +1495,7 @@ The Export to Memory Stream feature allows you to export data from a Grid to a m
 
 To achieve this functionality, you can utilize the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_System_Int32_System_Int32_System_Int32_) or [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToCsvAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method along with the `asMemoryStream` parameter set to **true** within the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event. This method will export an Excel workbook as a memory stream, which can then be sent to the browser for download.
 
-The provided example showcases the process of exporting the file as a memory stream and sending the byte to initiate a browser download.
+The provided example showcases the process of exporting the file as a memory stream and sending the byte to initiate a browser download:
 
 **Step 1**: **Add JavaScript for File Download**
 
@@ -1690,10 +1690,10 @@ The example below demonstrates how to achieve this by converting the memory stre
             //For creating the exporting location with file name, for this need to specify the physical exact path of the file.
             string filePaths = "C:Users/abc/Downloads/SampleTestExcel.xlsx";
 
-            // Create a FileStream to write the memoryStream contents to a file.
+            // Create a FileStream to write the memory stream contents to a file.
             using (FileStream fileStream = File.Create(filePaths))
             {
-                // Copy the MemoryStream data to the FileStream.
+                // Copy the memory stream data to the FileStream.
                 copyOfStreamDoc1.CopyTo(fileStream);
             }
         }
@@ -1753,11 +1753,11 @@ public class OrderData
 
 ### Merging Two Excel Memory Streams
 
-When merging two Excel memory streams and exporting the resulting file as an Excel workbook, you can leverage the capabilities of the [Syncfusion.Blazor.XlslO](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core/) package to copy a worksheet between workbooks or within the same workbook.
+When merging two Excel memory streams and exporting the combined file as an Excel workbook, you can use the [Syncfusion.Blazor.XlslO](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core/) library to efficiently copy worksheets either between different workbooks or within the same workbook.
 
 The example below demonstrates how to merge two memory streams and export that merged memory stream for browser download.
 
-In this example, there are two memory streams: *streamDoc1* and *streamDoc2*. streamDoc1 represents the normal Grid memory stream, while streamDoc2 contains the memory stream of a customized Grid using the [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) class. The merging process combines the contents of streamDoc1 with streamDoc2, resulting in a combined workbook saved as a memory stream. This merged memory stream is then utilized to initiate the browser download.
+In this example, there are two memory streams: *streamDoc1* and *streamDoc2*. streamDoc1 represents the normal Grid memory stream, while streamDoc2 contains the memory stream of a customized Grid using the [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) class. The merging process combines the contents of streamDoc1 with streamDoc2, resulting in a combined workbook saved as a memory stream. This merged memory stream is then utilized to initiate the browser download:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1791,14 +1791,15 @@ In this example, there are two memory streams: *streamDoc1* and *streamDoc2*. st
     {       
         if (args.Item.Id == "Grid_excelexport") //Id is combination of Grid's ID and itemname.
         {
-            //Merging two memory stream for excel export.
+            //Merging two memory stream for Excel export.
             MemoryStream mergedStream = new MemoryStream();
 
             MemoryStream streamDoc1 = await Grid.ExportToExcelAsync(asMemoryStream: true);
+
             //Create a copy of streamDoc1 to access the memory stream.
             MemoryStream copyOfStreamDoc1 = new MemoryStream(streamDoc1.ToArray());
             
-            //Cusotmized grid memory stream.
+            //Cusotmized Grid memory stream.
             ExcelExportProperties ExcelProperties = new ExcelExportProperties();
             ExcelTheme Theme = new ExcelTheme();
             ExcelStyle ThemeStyle = new ExcelStyle()
@@ -1809,6 +1810,7 @@ In this example, there are two memory streams: *streamDoc1* and *streamDoc2*. st
             Theme.Record = ThemeStyle;
             ExcelProperties.Theme = Theme;
             MemoryStream streamDoc2 = await Grid.ExportToExcelAsync(asMemoryStream: true, ExcelProperties);
+
             //Create a copy of streamDoc2 to access the memory stream.
             MemoryStream copyOfStreamDoc2 = new MemoryStream(streamDoc2.ToArray());
 
@@ -1819,11 +1821,11 @@ In this example, there are two memory streams: *streamDoc1* and *streamDoc2*. st
                 IWorkbook workbook1 = application.Workbooks.Open(copyOfStreamDoc1);
                 IWorkbook workbook2 = application.Workbooks.Open(copyOfStreamDoc2);
 
-                //Copy first worksheet from the workbook1 workbook to the workbook2 workbook
+                //Copy first worksheet from the workbook1 workbook to the workbook2 workbook.
                 workbook2.Worksheets.AddCopy(workbook1.Worksheets[0]);
                 workbook2.ActiveSheetIndex = 1;
 
-                //Saving merged workbook as memorystream.
+                //Saving merged workbook as memory stream.
                 workbook2.SaveAs(mergedStream);
             }
 
