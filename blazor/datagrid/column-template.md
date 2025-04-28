@@ -610,7 +610,6 @@ In the following example, a `RadioButton` is rendered in the **Order Status** co
                 OrderID = 1000 + x,
                 CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
                 Freight = (new int[] { 0, 1, 2 })[new Random().Next(3)],
-
             }).ToList();
     }
     public class Order

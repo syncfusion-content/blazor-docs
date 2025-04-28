@@ -707,7 +707,7 @@ Before proceeding this, learn about [DynamicObject Binding](https://blazor.syncf
 
 ### How to set complex column as foreign key column
 
-The Syncfusion Blazor DataGrid component provides the ability to use complex columns as foreign key columns. This allows related data from a foreign data source to be displayed based on the value of a complex column.
+The Syncfusion Blazor DataGrid provides the ability to use complex columns as foreign key columns. This allows related data from a foreign data source to be displayed based on the value of a complex column.
 
 The following example demonstrates how to set the **Employee.EmployeeID** column as a foreign key column, and display the **FirstName** column from the foreign data source.
 
