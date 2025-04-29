@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Excel Exporting with Templates in Blazor Grid Component | Syncfusion
-description: Checkout and learn here all about Template Excel Export in Syncfusion Blazor DataGrid component and much more.
+title: Excel Exporting with Templates in Blazor Grid | Syncfusion
+description: Checkout and learn here all about Template Excel Export in Syncfusion Blazor DataGrid and much more.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -138,7 +138,7 @@ The Syncfusion Blazor Grid allows you to export the Grid data along with a custo
 
 To customize the caption text in the exported Excel document, you can handle the [ExcelGroupCaptionTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelGroupCaptionTemplateInfo) event. This event provides you with the necessary information to set the group caption in the exported Excel document, such as the group key, record count, and header text. Within the event, you can set a customized group caption using `args.Cell.Value` property.
 
-The following example demonstrates how the Grid is grouped by the **CustomerID** field and exports the Grid data to Excel with a custom group caption template, utilizing the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event and the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method.
+The following example demonstrates how the Grid is grouped by the **CustomerID** field and exports the Grid data to Excel document with a custom group caption template, utilizing the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event and the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -254,7 +254,7 @@ The Syncfusion Blazor DataGrid provides the capability to export both parent and
 
 You can customize and format the detail rows in the exported Excel document using the [ExcelDetailTemplateExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelDetailTemplateExporting) event. In this event, the detail rows of the Excel document are formatted in accordance with their parent row details.
 
-In the following example, the detail row content is formatted by specifying the [Headers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_ExcelDetailTemplateRowSettings_Headers), [Rows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_ExcelDetailTemplateRowSettings_Rows) using parent row details, facilitating the creation of detail rows within the Excel. Additionally, custom styles can be applied to specific cells using the [Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailTemplateCell.html#Syncfusion_Blazor_Grids_ExcelDetailTemplateCell_Style) property.
+In the following example, the detail row content is formatted by specifying the [Headers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_ExcelDetailTemplateRowSettings_Headers), [Rows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_ExcelDetailTemplateRowSettings_Rows) using parent row details, facilitating the creation of detail rows within the Excel document. Additionally, custom styles can be applied to specific cells using the [Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailTemplateCell.html#Syncfusion_Blazor_Grids_ExcelDetailTemplateCell_Style) property.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -557,11 +557,11 @@ public class ProductData
 
 ## Exporting hierarchical Grid using detail template
 
-The Syncfusion Blazor DataGrid allows you to export hierarchical Grid data to Excel using the detail template feature. This is particularly useful for scenarios where data is nested within parent rows (such as employee details and their related orders), and you need to export both the parent and child records to a single Excel document.
+The Syncfusion Blazor DataGrid allows you to export hierarchical Grid data to Excel document using the detail template feature. This is particularly useful for scenarios where data is nested within parent rows (such as employee details and their related orders), and you need to export both the parent and child records to a single Excel document.
 
 You can customize and format the detail rows in the exported Excel document using the [ExcelDetailTemplateExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelDetailTemplateExporting) event. In this event, the detail rows of the Excel document are formatted in accordance with their parent row details.
 
-In the following example, the detail row content is formatted by specifying the [Headers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_ExcelDetailTemplateRowSettings_Headers), [Rows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_ExcelDetailTemplateRowSettings_Rows) using parent row details. Additionally, this achieves a nested level of children using the [ChildRowInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailTemplateRow.html#Syncfusion_Blazor_Grids_ExcelDetailTemplateRow_ChildRowInfo) property and the [ExcelExportProperties.ExcelDetailRowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailRowMode.html) property, which is set to **Expand** to export the parent grid with expanded detail rows within the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event. This property is then passed to the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method:
+In the following example, the detail row content is formatted by specifying the [Headers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_ExcelDetailTemplateRowSettings_Headers), [Rows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_ExcelDetailTemplateRowSettings_Rows) using parent row details. Additionally, this achieves a nested level of children using the [ChildRowInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailTemplateRow.html#Syncfusion_Blazor_Grids_ExcelDetailTemplateRow_ChildRowInfo) property and the [ExcelExportProperties.ExcelDetailRowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailRowMode.html) property, which is set to **Expand** to export the parent Grid with expanded detail rows within the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event. This property is then passed to the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -622,48 +622,95 @@ In the following example, the detail row content is formatted by specifying the 
         OrderInfo = OrderDetails.GetAllRecords();
     }
 
+    // Handles toolbar click event (for Excel export).
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_excelexport")  // Id is the combination of Grid's ID and item name.
+        if (args.Item.Id == "Grid_excelexport")  // Check if the Excel export button is clicked.
         {
-            if (args.Item.Id == "Grid_excelexport")
-            {
-                ExcelExportProperties ExportProperties = new ExcelExportProperties();
-                ExportProperties.ExcelDetailRowMode = ExcelDetailRowMode.Expand;
-                await Grid.ExportToExcelAsync(ExportProperties);
-            }
+            ExcelExportProperties ExportProperties = new ExcelExportProperties();
+            ExportProperties.ExcelDetailRowMode = ExcelDetailRowMode.Expand; // Specify that detailed rows should be expanded.
+            await Grid.ExportToExcelAsync(ExportProperties); // Export the data to Excel.
         }
     }
 
+    // Customizes the Excel detail export for each employee.
     public void ExcelDetailTemplateHandler(ExcelDetailTemplateEventArgs<EmployeeData> args)
     {
         var excelRows = new List<ExcelDetailTemplateRow>();
+
+        // Fetch all orders for the current employee.
         var data = Orders.ToList().Where(_ => _.EmployeeID == args.ParentRow.Data.EmployeeID).ToList();
+
         for (var i = 0; i < data.Count(); i++)
         {
             var row = data[i];
+
+            // Fetch all order details for the current order.
             var childData = OrderInfo.ToList().Where(_ => _.OrderID == row.OrderID).ToList();
+
             var excelchildRows = new List<ExcelDetailTemplateRow>();
-            var excelRow = ProcessExcelRow(new List<string>() { row.OrderID.ToString(), row.CustomerID.ToString(), row.Freight.ToString(), row.ShipCity });
+
+            // For each order (parent row), create a new Excel row with specific columns.
+            var excelRow = ProcessExcelRow(new List<string>() { 
+                row.OrderID.ToString(), 
+                row.CustomerID.ToString(), 
+                row.Freight.ToString(), 
+                row.ShipCity 
+            });
+
+            // For each order detail (child row), create an Excel row with the following details.
             for (var j = 0; j < childData.Count; j++)
             {
                 var childRow = childData[j];
-                excelchildRows.Add(ProcessExcelRow(new List<string>() { childRow.CustomerID.ToString(), childRow.Title.ToString(), childRow.Address.ToString(), childRow.Country }));
+                excelchildRows.Add(ProcessExcelRow(new List<string>() { 
+                    childRow.CustomerID.ToString(), 
+                    childRow.Title.ToString(), 
+                    childRow.Address.ToString(), 
+                    childRow.Country 
+                }));
             }
-            excelRow.ChildRowInfo = new ExcelDetailTemplateRowSettings() { Headers = new List<ExcelDetailTemplateRow>() { ProcessExcelRow(new List<string>() { "Customer Name", "Title", "Address", "Country" }) }, Rows = excelchildRows };
+
+            // Add the child rows under the parent row.
+            excelRow.ChildRowInfo = new ExcelDetailTemplateRowSettings()
+            {
+                // Set headers for child rows (order details).
+                Headers = new List<ExcelDetailTemplateRow>()
+                {
+                    ProcessExcelRow(new List<string>() { "Customer Name", "Title", "Address", "Country" })
+                },
+                // Set the child rows (the actual order details).
+                Rows = excelchildRows
+            };
+
+            // Add the row to the list of rows for this employee's orders.
             excelRows.Add(excelRow);
         }
-        args.RowInfo.Headers = new List<ExcelDetailTemplateRow>() { ProcessExcelRow(new List<string>() { "Order ID", "Customer ID", "Freight", "Ship City" }) };
+
+        // Set the parent row headers (order-related information).
+        args.RowInfo.Headers = new List<ExcelDetailTemplateRow>()
+        {
+            ProcessExcelRow(new List<string>() { "Order ID", "Customer ID", "Freight", "Ship City" })
+        };
+
+        // Set the final row data (parent and child rows) for the Excel export.
         args.RowInfo.Rows = excelRows;
     }
 
+    // Utility method to convert a list of cell values into an Excel row.
     ExcelDetailTemplateRow ProcessExcelRow(List<string> value)
     {
         var cells = new List<ExcelDetailTemplateCell>();
+        
+        // Populate each cell with the corresponding value.
         for (var j = 0; j < value.Count(); j++)
         {
-            cells.Add(new ExcelDetailTemplateCell { CellValue = $"{value[j]}", Index = j });
+            cells.Add(new ExcelDetailTemplateCell { 
+                CellValue = $"{value[j]}", 
+                Index = j  // Set the index of each cell.
+            });
         }
+        
+        // Return the Excel row with its cells.
         return new ExcelDetailTemplateRow { Cells = cells };
     }
 }
