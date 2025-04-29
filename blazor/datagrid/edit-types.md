@@ -13,7 +13,7 @@ The Syncfusion Blazor DataGrid provides various edit types that allow you to cus
 
 ## Default cell edit type editor
 
-The Syncfusion Blazor DataGrid provides pre-built default editors to enhance data editing and input handling within the grid. These editors simplify defining the editor for specific columns based on the column's data type. To configure default editors for grid columns, use the [EditType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.EditType.html) property.
+The Syncfusion Blazor DataGrid provides pre-built default editors to enhance data editing and input handling within the Grid. These editors simplify defining the editor for specific columns based on the column's data type. To configure default editors for Grid columns, use the [EditType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.EditType.html) property.
 
 The available default edit types are as follows:
 
@@ -26,7 +26,7 @@ The available default edit types are as follows:
 | [DatePicker](https://blazor.syncfusion.com/documentation/datepicker/getting-started-with-web-app) | DatePickerEdit       | The `DatePickerEdit` type renders a DatePicker for date data type columns.                          |
 | [DateTimePicker](https://blazor.syncfusion.com/documentation/datetime-picker/getting-started-with-web-app) | DateTimePickerEdit   | The `DateTimePickerEdit` type renders a DateTimePicker for date-time data type columns.             |
 
-The following example demonstrates how to define the `EditType` for grid columns:
+The following example demonstrates how to define the `EditType` for Grid columns:
 
 ```cs
     <GridColumns>
@@ -1078,7 +1078,7 @@ namespace BlazorApp1.Data
 
 ## Render custom cell editors
 
-The Syncfusion Blazor DataGrid allows you to render custom cell editors for particular columns. This feature is particularly useful when you need to use custom components to edit the data within a Gridcolumn. To achieve this, you can make use of the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) of the Grid Column.
+The Syncfusion Blazor DataGrid allows you to render custom cell editors for particular columns. This feature is particularly useful when you need to use custom components to edit the data within a GridColumn. To achieve this, you can make use of the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) of the Grid Column.
 
 N > Before adding edit template to the datagrid, it is recommended to go through the [template](https://blazor.syncfusion.com/documentation/datagrid/templates) section topic to configure the template.
 
