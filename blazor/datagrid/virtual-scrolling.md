@@ -619,9 +619,7 @@ public class OrderDetails
 
 The Syncfusion Blazor DataGrid provides an option to render cell placeholders while new data is being loaded during row or column virtualization. This feature enhances the user experience by displaying a visual cue (a loading placeholder) in the Grid cells while new data is being fetched. It is particularly useful in scenarios where there is a large dataset or when virtualization is used to load data dynamically as the user scrolls through the Grid.
 
-When enabled, the Grid reuses the same DOM elements while scrolling. A placeholder indicator is shown in the Grid cells until the new data has been fetched and rendered. This not only improves the perceived performance of the Grid but also provides a smooth and responsive experience for the user.
-
-To enable the display of cell placeholders during virtualization, set the [EnableVirtualMaskRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualMaskRow) property to **true**. Additionally, you need to enable either:
+When the [EnableVirtualMaskRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualMaskRow) property is set to **true**, the Grid reuses the same DOM elements while scrolling and displays placeholder indicators in the cells until new data is fetched and rendered. This enhances perceived performance and provides a smoother, more responsive scrolling experience. To use this feature, you must also enable either:
 
 * [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) for row virtualization, or
 * [EnableColumnVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableColumnVirtualization) for column virtualization.

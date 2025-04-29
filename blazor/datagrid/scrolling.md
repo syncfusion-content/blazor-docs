@@ -359,44 +359,32 @@ public class LazyLoadDetails
 
 ## Customize the appearance of scroll bar
 
-The Syncfusion Blazor DataGrid uses the native browser scrollbar to scroll through the content when the content exceeds the Grid's size. Refer to [this](https://css-tricks.com/almanac/properties/s/scrollbar/) to customize the appearance of the scrollbar.
+By default, the Syncfusion Blazor DataGrid uses the native browser scrollbar for both horizontal and vertical scrolling when the content exceeds the visible area of the Grid. While functional, native scrollbars may not always match the desired UI aesthetics of your application.
 
-By referring to the above link, we have customized the appearance of the scrollbar in the following sample.
+You can customize the scrollbar appearance using standard CSS properties, depending on browser support. This allows you to create a more visually consistent and branded user interface. Refer to this [CSS Tricks](https://css-tricks.com/almanac/properties/s/scrollbar/) article for detailed information and examples of styling scrollbars across different browsers.
 
-> You can find the fully working sample [here](https://github.com/SyncfusionExamples/blazor-datagrid-customize-default-scrollbar).
+The following example demonstrates how to apply custom scrollbar styles to the Grid by referring to the link above:
 
-```csharp
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Orders" Height="315" Width="400">
+<SfGrid DataSource="@OrderData" Height="315" Width="400">
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipCountry) HeaderText="Ship Country" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 @code{
-    public List<Order> Orders { get; set; }
+    public List<OrderDetails> OrderData { get; set; }
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-            ShipCountry = (new string[] { "USA", "UK", "JAPAN" })[new Random().Next(3)]
-        }).ToList();
-    }
-    public class Order {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
-        public string ShipCountry { get; set; }
+        OrderData = OrderDetails.GetAllRecords();
     }
 }
 <style>
@@ -411,6 +399,55 @@ By referring to the above link, we have customized the appearance of the scrollb
         background-color: #bbbbbb;
     }
 </style>
-```
 
-![Customizing the scroll bar in Blazor DataGrid.](./images/blazor-datagrid-scrollbar-customization.png)
+{% endhighlight %}
+
+{% highlight cs tabtitle="OrderDetails.cs" %}
+
+public class OrderDetails
+{
+    public static List<OrderDetails> order = new List<OrderDetails>();
+
+    public OrderDetails() { }
+
+    public OrderDetails(int? OrderID, string CustomerID, DateTime? OrderDate, double? Freight, string ShipCountry)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;
+        this.OrderDate = OrderDate;
+        this.Freight = Freight;
+        this.ShipCountry = ShipCountry;
+    }
+
+    public static List<OrderDetails> GetAllRecords()
+    {
+        if (order.Count == 0)
+        {
+            var customerIds = new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" };
+            var countries = new string[] { "USA", "UK", "JAPAN" };
+            var rand = new Random();
+
+            order = Enumerable.Range(1, 75).Select(x => new OrderDetails(
+                1000 + x,
+                customerIds[rand.Next(customerIds.Length)],
+                DateTime.Now.AddDays(-x),
+                2.1 * x,
+                countries[rand.Next(countries.Length)]
+            )).ToList();
+        }
+        return order;
+    }
+
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public DateTime? OrderDate { get; set; }
+    public double? Freight { get; set; }
+    public string ShipCountry { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLIjfVOsgWujwMH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+> You can find the fully working sample [here](https://github.com/SyncfusionExamples/blazor-datagrid-customize-default-scrollbar).
