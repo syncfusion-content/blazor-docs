@@ -444,6 +444,8 @@ These complex data (components) are placed as the panel content by assigning the
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXLzZWrYhAuIgUlf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Blazor Dashboard Layout displays Chart Component Content](images/blazor-dashboard-layout-with-chart-component.png)" %}
 
+N> While using the **SfRangeNavigator** component in this sample, ensure that the [Syncfusion.Blazor.RangeNavigator](https://www.nuget.org/packages/Syncfusion.Blazor.RangeNavigator) NuGet package is installed in your project. You can install the package from [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor).
+
 To get started quickly with designing a Blazor Dashboard Layout with UI Components, you can check the video below.
 
 {% youtube
