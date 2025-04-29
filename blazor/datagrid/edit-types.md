@@ -1,30 +1,30 @@
 ---
 layout: post
-title: Edit Types in Blazor Grid Component | Syncfusion
-description: Checkout and learn here all about Cell Edit Types in Syncfusion Blazor DataGrid component and much more details.
+title: Edit Types in Blazor Grid | Syncfusion
+description: Checkout and learn here all about Edit Types in Syncfusion Blazor DataGrid and much more details.
 platform: Blazor
 control: Grid
 documentation: ug
 ---
 
-# Edit Types in Blazor Grid Component
+# Edit Types in Blazor DataGrid
 
-The Syncfusion Blazor DataGrid component offers a variety of edit types, enabling you to customize the editing behavior for different column types. These edit types enhance the editing experience and provide flexibility in managing various data types.
+The Syncfusion Blazor DataGrid provides various edit types that allow you to customize the editing behavior for different types of columns. These edit types enhance the editing experience and provide flexibility in handling different data types.
 
 ## Default cell edit type editor
 
-The Syncfusion Blazor DataGrid provides pre-built default editors that enhance data editing and input handling within the grid. These default editors simplify the process of defining the editor component for specific columns based on the column's data type. To configure default editors for grid columns, use the [EditType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.EditType.html) property.
+The Syncfusion Blazor DataGrid provides pre-built default editors to enhance data editing and input handling within the grid. These editors simplify defining the editor for specific columns based on the column's data type. To configure default editors for grid columns, use the [EditType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.EditType.html) property.
 
 The available default edit types are as follows:
 
 | Component                                                                                      | Edit Type Value      | Description                                                                                                   |
 |------------------------------------------------------------------------------------------------|----------------------|---------------------------------------------------------------------------------------------------------------|
-| [TextBox](https://blazor.syncfusion.com/documentation/textbox/getting-started-webapp)          | DefaultEdit          | The `DefaultEdit` type renders a TextBox component for string data type columns.                              |
-| [NumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started)  | NumericEdit          | The `NumericEdit` type renders a NumericTextBox component for integer, double, float, and other numeric types.|
-| [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) | DropDownEdit         | The `DropDownEdit` type renders a DropDownList component for string data type columns.                        |
-| [Checkbox](https://blazor.syncfusion.com/documentation/check-box/getting-started-with-web-app) | BooleanEdit          | The `BooleanEdit` type renders a CheckBox component for boolean data type columns.                            |
-| [DatePicker](https://blazor.syncfusion.com/documentation/datepicker/getting-started-with-web-app) | DatePickerEdit       | The `DatePickerEdit` type renders a DatePicker component for date data type columns.                          |
-| [DateTimePicker](https://blazor.syncfusion.com/documentation/datetime-picker/getting-started-with-web-app) | DateTimePickerEdit   | The `DateTimePickerEdit` type renders a DateTimePicker component for date-time data type columns.             |
+| [TextBox](https://blazor.syncfusion.com/documentation/textbox/getting-started-webapp)          | DefaultEdit          | The `DefaultEdit` type renders a TextBox for string data type columns.                              |
+| [NumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started)  | NumericEdit          | The `NumericEdit` type renders a NumericTextBox for integer, double, float, and other numeric types.|
+| [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) | DropDownEdit         | The `DropDownEdit` type renders a DropDownList for string data type columns.                        |
+| [Checkbox](https://blazor.syncfusion.com/documentation/check-box/getting-started-with-web-app) | BooleanEdit          | The `BooleanEdit` type renders a CheckBox for boolean data type columns.                            |
+| [DatePicker](https://blazor.syncfusion.com/documentation/datepicker/getting-started-with-web-app) | DatePickerEdit       | The `DatePickerEdit` type renders a DatePicker for date data type columns.                          |
+| [DateTimePicker](https://blazor.syncfusion.com/documentation/datetime-picker/getting-started-with-web-app) | DateTimePickerEdit   | The `DateTimePickerEdit` type renders a DateTimePicker for date-time data type columns.             |
 
 The following example demonstrates how to define the `EditType` for grid columns:
 
@@ -39,19 +39,26 @@ The following example demonstrates how to define the `EditType` for grid columns
     </GridColumns>
 ```
 
-> If `EditType` is not defined in the column, it will default to the `DefaultEdit` type (TextBox component).
+> If `EditType` is not defined in the column, it will default to the `DefaultEdit` type (TextBox).
 
-## Customize TextBox Component of DefaultEdit type
+## Customizing the default editor controls
 
-The [StringEditCellParams](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.StringEditCellParams.html) class enables customization of the default TextBox component in the Grid **EditForm** for string data type columns. This feature allows you to modify the TextBox properties and behavior by configuring the [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditorSettings) of the respective GridColumn. Below is a detailed explanation and implementation of this customization.
+You can customize the behavior of the editors through the [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property of the [GridColumn](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html).
 
-The table below highlights the key aspects of customizing a TextBox control using the `EditorSettings` property of a GridColumn:
+>*  The properties of the editors that can be customized using `EditorSettings` in the default Grid editors are limited. You can find the list of customizable properties in the topics below.
+>*  If you want to customize additional properties, refer to our [Template](https://blazor.syncfusion.com/documentation/datagrid/template-editing) documentation to render custom components inside the EditForm along with your required customization.
+
+## Customize TextBox of StringEdit type
+
+You can customize the default TextBox in the Grid EditForm for string data type columns using the [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditorSettings) property. This allows you to adjust the TextBox properties and behavior to meet your specific requirements. The [StringEditCellParams](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.StringEditCellParams.html) class helps you achieve this customization by configuring the `EditorSettings` of the respective GridColumn.
+
+The table below highlights the key aspects of customizing a TextBox using the `EditorSettings` property of a GridColumn:
 
 | Component                                                                                      | Edit Type   | Description                                                                                                   | Example Customized Edit Params       |
 |------------------------------------------------------------------------------------------------|-------------|---------------------------------------------------------------------------------------------------------------|---------------------------------------|
-| [TextBox](https://blazor.syncfusion.com/documentation/textbox/getting-started-webapp)          | DefaultEdit | The `DefaultEdit` type renders a TextBox component for string data type columns. To customize the `TextBox` component, refer to the [TextBox API documentation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html) for detailed information on available properties. | Params: { ShowClearButton: true } |
+| [TextBox](https://blazor.syncfusion.com/documentation/textbox/getting-started-webapp)          | DefaultEdit | The `DefaultEdit` type renders a TextBox for string data type columns. To customize the `TextBox`, refer to the [TextBox API documentation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html) for detailed information on available properties. | Params: { ShowClearButton: true } |
 
-The following sample code demonstrates the customization applied to the TextBox component of the **CustomerID** Grid column:
+The following sample code demonstrates the customization applied to the TextBox of the **CustomerID** Grid column:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -139,17 +146,17 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htLfMhCpUkUNGHdd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Customize NumericTextBox component of NumericEdit type 
+## Customize NumericTextBox of NumericEdit type 
 
-The [NumericEditCellParams](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.NumericEditCellParams.html) class allows customization of the NumericTextBox component in the Grid **EditForm** for columns with numeric data types. By configuring the [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditorSettings) property of a GridColumn, you can modify the properties and behavior of the NumericTextBox component.
+You can customize the NumericTextBox in the Grid EditForm using its [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditorSettings) property. This allows you to configure various properties of the NumericTextBox, tailoring its behavior and appearance to meet your specific requirements. The [NumericEditCellParams](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.NumericEditCellParams.html) class helps customize the NumericTextBox for numeric data type columns in the Grid EditForm.
 
-The table below highlights the key aspects of customizing a NumericTextBox control using the `EditorSettings` property of a GridColumn:
+The table below highlights the key aspects of customizing a NumericTextBox using the `EditorSettings` property of a GridColumn:
 
 | Component                                                                                      | Edit Type   | Description                                                                                                   | Example Customized Edit Params       |
 |------------------------------------------------------------------------------------------------|-------------|---------------------------------------------------------------------------------------------------------------|---------------------------------------|
-| [NumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started)  | NumericEdit | Renders a NumericTextBox component for integer, double, float, short, byte, long, long double, and decimal data type columns. Refer to the [NumericTextBox API documentation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html) for more properties. | Params: { decimals: 2, value: 5 }    |
+| [NumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started)  | NumericEdit | Renders a NumericTextBox for integer, double, float, short, byte, long, long double, and decimal data type columns. Refer to the [NumericTextBox API documentation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html) for more properties. | Params: { decimals: 2, value: 5 }    |
 
-Below is an example demonstrating how to customize the NumericTextBox component for the **Freight** column in a Syncfusion Grid:
+Below is an example demonstrating how to customize the NumericTextBox  for the **Freight** column in a DataGrid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -240,7 +247,7 @@ public class OrderData
 
 ### Restrict decimal points in a NumericTextBox while editing a numeric column
 
-By default, the `NumericTextBox` component allows entering decimal values with up to two decimal places when editing a numeric column. However, there may be scenarios where you want to restrict input to whole numbers only, without any decimal points. In such cases, you can use the [ValidateDecimalOnType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html#Syncfusion_Blazor_Inputs_SfNumericTextBox_1_ValidateDecimalOnType) and [Decimals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html#Syncfusion_Blazor_Inputs_SfNumericTextBox_1_Decimals) properties provided by Syncfusion's `NumericTextBox` component.
+By default, the `NumericTextBox`  allows entering decimal values with up to two decimal places when editing a numeric column. However, there may be scenarios where you want to restrict input to whole numbers only, without any decimal points. In such cases, you can use the [ValidateDecimalOnType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html#Syncfusion_Blazor_Inputs_SfNumericTextBox_1_ValidateDecimalOnType) and [Decimals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html#Syncfusion_Blazor_Inputs_SfNumericTextBox_1_Decimals) properties provided by Syncfusion's `NumericTextBox`.
 
 The `ValidateDecimalOnType` property controls whether decimal points are allowed during input in the NumericTextBox. By default, it is set to **false**, allowing decimal points to be entered. When set to **true**, decimal points are restricted, and only whole numbers can be entered.
 
@@ -340,19 +347,19 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtLziLMHBZggNEbl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Customize DropDownList component of DropDownEdit type
+## Customize DropDownList of DropDownEdit type
 
-The [DropDownEditCellParams](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.DropDownEditCellParams.html) class allows you to customize the DropDownList component in the Grid **EditForm** for columns with string data types. By configuring the [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditorSettings) property of a GridColumn, you can adjust the DropDownList component's properties and behavior to suit your requirements.
+You can customize the DropDownList in the Grid EditForm by configuring its [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditorSettings) property. This allows you to adjust the behavior and appearance of the DropDownList to meet your specific requirements within the Grid. The [DropDownEditCellParams](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.DropDownEditCellParams.html) class enables further customization of the DropDownList for string data type columns.
 
 The table below outlines the key aspects of customizing a DropDownList control using the `EditorSettings` property of a GridColumn:
 
 | Component                                                                                      | Edit Type     | Description                                                                                                                                              | Example Customized Edit Params     |
 |------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------|
-| [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) | DropDownEdit | Renders a DropDownList component for string data type columns. Refer to the [DropDownList API documentation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html) for more customization options. | Params = { Value: 'Germany' }       |
+| [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) | DropDownEdit | Renders a DropDownList for string data type columns. Refer to the [DropDownList API documentation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html) for more customization options. | Params = { Value: 'Germany' }       |
 
 > **Note:** The `DataSource` property in `DropDownListModel` must be of type `IEnumerable<TItem>`. Avoid binding `string[]` or `List<string>` directly to the `DataSource` property.
 
-Below is an example demonstrating how to customize the DropDownList component for the **ShipCity** column in a Syncfusion Grid:
+Below is an example demonstrating how to customize the DropDownList for the **ShipCity** column in a DataGrid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -442,13 +449,13 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNVfMrCdhCGwIKJJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-### Provide custom data source for DropDownList component
+### Provide custom data source for DropDownList
 
-In Syncfusion’s Blazor Grid component, you can provide a custom data source for the DropDownList component used in the **EditForm**. This feature allows you to define a specific set of values for the DropDownList, tailoring it to meet your requirements.
+In Syncfusion’s Blazor DataGrid, you can provide a custom data source for the DropDownList used in the **EditForm**. This feature allows you to define a specific set of values for the DropDownList, tailoring it to meet your requirements.
 
 To achieve this, use the [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditorSettings) property of the Grid column to specify the custom data source and additional configurations for the DropDownList. Additionally, when setting a new data source, you can define a [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html#Syncfusion_Blazor_DropDowns_DropDownListModel_2_Query) property to filter or retrieve specific data for the DropDownList.
 
-Below is an example demonstrating how to provide a custom data source for the **ShipCountry** column while editing in the Grid:
+Below is an example demonstrating how to provide a custom data source for the **ShipCountry** column when editing in the Grid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -544,9 +551,9 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZLTWhiHBprRSZPy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-### Apply filtering for DropDownList Component
+### Apply filtering for DropDownList
 
-The Syncfusion Blazor DataGrid component supports filtering for the DropDownList within the **EditForm**. This feature enables users to select options from a predefined list and search for specific items using the built-in filtering functionality.
+The Syncfusion Blazor DataGrid supports filtering for the DropDownList within the EditForm. This feature enables users to select options from a predefined list and search for specific items using the built-in filtering functionality.
 
 To enable filtering, set the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowFiltering) property to **true** within the [DropDownEditCellParams](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.DropDownEditCellParams.html). This activates the filtering feature in the DropDownList.
 
@@ -641,15 +648,15 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZLTsVMdrosEQULA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Customize CheckBox Component of BooleanEdit Type
+## Customize CheckBox of BooleanEdit Type
 
-The [BooleanEditCellParams](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.BooleanEditCellParams.html) class enables customization of the CheckBox component in the Grid **EditForm** for columns with boolean data types. By configuring the [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditorSettings) property of a GridColumn, you can modify the CheckBox component's properties and behavior to suit your requirements.
+You can customize the CheckBox in the Grid EditForm for boolean data type columns using the [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditorSettings) property. This allows you to adjust the CheckBox properties and behavior to meet your specific requirements. The [BooleanEditCellParams](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.BooleanEditCellParams.html) class helps you achieve this customization by configuring the `EditorSettings` of the respective GridColumn.
 
 The table below highlights the key aspects of customizing a DropDownList control using the `EditorSettings` property of a GridColumn:
 
 | Component  | Edit Type    | Description                                                                                              | Example Customized Edit Params |
 |------------|--------------|----------------------------------------------------------------------------------------------------------|---------------------------------|
-| [CheckBox](https://blazor.syncfusion.com/documentation/check-box/getting-started-with-web-app) | BooleanEdit  | Renders a CheckBox component for boolean data type columns. Refer to the [CheckBox API documentation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfCheckBox.html) for more customization options. | Params: { Checked: true }      |
+| [CheckBox](https://blazor.syncfusion.com/documentation/check-box/getting-started-with-web-app) | BooleanEdit  | Renders a CheckBox for boolean data type columns. Refer to the [CheckBox API documentation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfCheckBox.html) for more customization options. | Params: { Checked: true }      |
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -739,17 +746,17 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rjrTsLCxTsZNVXjP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Customize DatePicker Component of DatePickerEdit Type
+## Customize DatePicker of DatePickerEdit Type
 
-The [DateEditCellParams](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.DatePickerEditCellParams.html) class enables customization of the DatePicker and DateTimePicker component in the Grid **EditForm** for columns with Date data types. By configuring the [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditorSettings) property of a GridColumn, you can modify the CheckBox component's properties and behavior to suit your requirements.
+You can customize the DatePicker in the Grid EditForm for Date data type columns using the [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditorSettings) property. This allows you to adjust the properties and behavior of the DatePicker to meet your specific requirements. The [DateEditCellParams](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.DatePickerEditCellParams.html) class helps you achieve this customization by configuring the `EditorSettings` of the respective GridColumn.
 
 The table below highlights the key aspects of customizing a DatePicker control using the `EditorSettings` property of a GridColumn:
 
 | Component  | Edit Type    | Description                                                                                              | Example Customized Edit Params |
 |------------|--------------|----------------------------------------------------------------------------------------------------------|---------------------------------|
-| [DatePicker](https://blazor.syncfusion.com/documentation/datepicker/getting-started-with-web-app) | DatePickerEdit  | The DatePickerEdit type renders a DatePicker component for date data type columns. To customize the DatePicker component, refer to the [DatePicker API documentation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html) for detailed information on available properties. | Params: { Format:’dd.MM.yyyy’ }      |
+| [DatePicker](https://blazor.syncfusion.com/documentation/datepicker/getting-started-with-web-app) | DatePickerEdit  | The DatePickerEdit type renders a DatePicker for date data type columns. To customize the DatePicker, refer to the [DatePicker API documentation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html) for detailed information on available properties. | Params: { Format:’dd.MM.yyyy’ }      |
 
-Below is an example demonstrating how to customize the DatePicker component for the **OrderDate** column in the Syncfusion Grid:
+Below is an example demonstrating how to customize the DatePicker for the **OrderDate** column in the DataGrid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -844,17 +851,20 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-## Customize TimePicker Component of TimePickerEdit Type
+### Disable the date value prior to the selected date value in DatePicker control
 
-The [TimeEditCellParams](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.TimeEditCellParams.html) class enables customization of the DatePicker and DateTimePicker component in the Grid **EditForm** for columns with Date data types. By configuring the [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditorSettings) property of a GridColumn, you can modify the CheckBox component's properties and behavior to suit your requirements.
+
+## Customize TimePicker of TimePickerEdit Type
+
+You can customize the TimePicker in the Grid EditForm for Time data type columns using the [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditorSettings) property. This allows you to adjust the properties and behavior of the TimePicker to meet your specific requirements. The [TimeEditCellParams](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.TimeEditCellParams.html) class helps you achieve this customization by configuring the `EditorSettings` of the respective GridColumn.
 
 The table below highlights the key aspects of customizing a TimePicker control using the `EditorSettings` property of a GridColumn:
 
 | Component  | Edit Type    | Description                                                                                              | Example Customized Edit Params |
 |------------|--------------|----------------------------------------------------------------------------------------------------------|---------------------------------|
-| [TimePicker](https://blazor.syncfusion.com/documentation/timepicker/getting-started-with-web-app) | TimePickerEdit  | The TimePickerEdit type renders a TimePicker component for time data type columns. To customize the TimePicker component, refer to the [TimePicker API documentation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfTimePicker-1.html) for detailed information on available properties. | Params: { Value: new Date() }    |
+| [TimePicker](https://blazor.syncfusion.com/documentation/timepicker/getting-started-with-web-app) | TimePickerEdit  | The TimePickerEdit type renders a TimePicker for time data type columns. To customize the TimePicker, refer to the [TimePicker API documentation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfTimePicker-1.html) for detailed information on available properties. | Params: { Value: new Date() }    |
 
-Below is an example demonstrating how to customize the DatePicker component for the **OrderTime** column in the Syncfusion Grid:
+Below is an example demonstrating how to customize the DatePicker for the **OrderTime** column in the DataGrid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -950,17 +960,17 @@ namespace BlazorApp1.Data
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VNrfWhWRHKMBbbnG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Customize DateTimePicker Component of DateTimePickerEdit Type
+## Customize DateTimePicker of DateTimePickerEdit Type
 
-The `DateTimeEditCellParams` class enables customization of the DateTimePicker component in the Grid **EditForm** for columns with date-time data types. By configuring the [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditorSettings) property of a GridColumn, you can modify the DateTimePicker component's properties and behavior to suit your requirements.
+You can customize the DateTimePicker in the Grid EditForm for DateTime data type columns using the [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditorSettings) property. This allows you to adjust the properties and behavior of the DateTimePicker to meet your specific requirements. The [DateTimeEditCellParams](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.DateTimeEditCellParams-1.html) class helps you achieve this customization by configuring the `EditorSettings` of the respective GridColumn.
 
 The table below highlights the key aspects of customizing a DateTimePicker control using the `EditorSettings` property of a GridColumn:
 
 | Component                                                                                      | Edit Type          | Description                                                                                                   | Example Customized Edit Params       |
 |------------------------------------------------------------------------------------------------|--------------------|---------------------------------------------------------------------------------------------------------------|---------------------------------------|
-| [DateTimePicker](https://blazor.syncfusion.com/documentation/datetime-picker/getting-started-with-web-app) | DateTimePickerEdit | Renders a DateTimePicker component for date-time data type columns. Refer to the [DateTimePicker API documentation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html) for detailed information on available properties. | Params: { Value: new Date() }         |
+| [DateTimePicker](https://blazor.syncfusion.com/documentation/datetime-picker/getting-started-with-web-app) | DateTimePickerEdit | Renders a DateTimePicker for date-time data type columns. Refer to the [DateTimePicker API documentation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html) for detailed information on available properties. | Params: { Value: new Date() }         |
 
-Below is an example demonstrating how to customize the DateTimePicker component for the **OrderDate** column in the Syncfusion Grid:
+Below is an example demonstrating how to customize the DateTimePicker for the **OrderDate** column in the DataGrid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -979,12 +989,7 @@ Below is an example demonstrating how to customize the DateTimePicker component 
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="130"></GridColumn>
         <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" EditType="EditType.NumericEdit" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Width="180"
-                    EditType="EditType.DateTimePickerEdit"
-                    Format="MM-dd-yyyy hh:mm tt"
-                    Type="ColumnType.DateTime"
-                    EditorSettings="@DateTimeEditCellParams"
-                    TextAlign="TextAlign.Right">
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Width="180" EditType="EditType.DateTimePickerEdit" Format="MM-dd-yyyy hh:mm tt" Type="ColumnType.DateTime" EditorSettings="@DateTimeEditCellParams" TextAlign="TextAlign.Right">
         </GridColumn>
     </GridColumns>
 </SfGrid>
@@ -1073,21 +1078,21 @@ namespace BlazorApp1.Data
 
 ## Render custom cell editors
 
-The Syncfusion Blazor DataGrid allows you to render custom cell editors for particular columns. This feature is particularly useful when you need to use custom components to edit the data within a Gridcolumn. To achieve this, you can make use of the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) of the Grid Column component.
+The Syncfusion Blazor DataGrid allows you to render custom cell editors for particular columns. This feature is particularly useful when you need to use custom components to edit the data within a Gridcolumn. To achieve this, you can make use of the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) of the Grid Column.
 
 N > Before adding edit template to the datagrid, it is recommended to go through the [template](https://blazor.syncfusion.com/documentation/datagrid/templates) section topic to configure the template.
 
 > Custom components inside the `EditTemplate` must be specified with two-way (@bind-Value) binding to reflect the changes in Grid.
 
-### Render textArea in edit form 
+### Render TextArea in EditTemplate 
 
-The Syncfusion Blazor DataGrid allows you to render a textArea within the Grid's edit form for a specific column. This feature is especially valuable when you need to edit and display multi-line text content, providing an efficient way to manage extensive text data within the Grid's columns.
+The Syncfusion Blazor DataGrid allows you to render a TextArea within the Grid's edit form for a specific column. This feature is especially valuable when you need to edit and display multi-line text content, providing an efficient way to manage extensive text data within the Grid's columns.
 
-To render a textArea in the edit form, you need to define an [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) in the GridColumn. The `EditTemplate` property specifies the cell edit template that used as an editor for a particular column. It can accept either a template string or an HTML element ID.
+To render a TextArea in the edit form, you need to define an [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) in the GridColumn. The `EditTemplate` property specifies the cell edit template that is used as an editor for a particular column. It can accept either a template string or an HTML element ID.
 
-> When using a text area, please use **Shift+Enter** to move to the next line. By default, pressing **Enter** will trigger a record update while you are in edit mode.
+> When using a TextArea, press **Shift+Enter** to move to the next line. By default, pressing **Enter** will trigger a record update while you are in edit mode.
 
-The following example demonstrates how to render a textArea component in the **ShipAdress** column of the Syncfusion Grid.
+The following example demonstrates how to render a TextArea in the **ShipAddress** column of the Grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1183,13 +1188,13 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXLTCBinRSrHTcKR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-### Render AutoComplete component in edit form
+### Render AutoComplete in EditTemplate
 
-The Syncfusion Blazor DataGrid allows you to render a AutoComplete component within the Grid's edit form for a specific column. This feature is especially valuable when you need to provide a dropdown-like auto-suggestion and input assistance for data entry in the Grid’s columns.
+The Syncfusion Blazor DataGrid allows you to render an AutoComplete within the Grid's edit form for a specific column. This feature is especially valuable when you need to provide a dropdown-like auto-suggestions and input assistance for data entry in the Grid’s columns.
 
-To render a AutoComplete in the edit form, you need to define an [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) in the GridColumn. The `EditTemplate` property specifies the cell edit template that used as an editor for a particular column. It can accept either a template string or an HTML element ID.
+To render an AutoComplete in the edit form, you need to define an [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) in the GridColumn. The `EditTemplate` property specifies the cell edit template that is used as an editor for a particular column. It can accept either a template string or an HTML element ID.
 
-The following example demonstrates how to render an AutoComplete component in the CustomerID column of the Syncfusion Grid.
+The following example demonstrates how to render an AutoComplete in the **CustomerID** column of the Grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1283,13 +1288,13 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-### Render MaskedTextBox component in edit form
+### Render MaskedTextBox in EditTemplate
 
-The Syncfusion Grid allows you to render a MaskedTextBox component within the Grid's edit form for a specific column. This feature is especially useful when you need to provide masked input fields that require a specific format, such as phone numbers or postal codes.
+The Syncfusion Blazor DataGrid allows you to render a MaskedTextBox within the Grid's edit form for a specific column. This feature is especially useful when you need to provide masked input fields that require a specific format, such as phone numbers or postal codes.
 
-To render a MaskedTextBox in the edit form, you need to define an [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) in the GridColumn. The `EditTemplate` property specifies the cell edit template that used as an editor for a particular column. It can accept either a template string or an HTML element ID.
+To render a MaskedTextBox in the edit form, you need to define an [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) in the GridColumn. The `EditTemplate` property specifies the cell edit template that is used as an editor for a particular column. It can accept either a template string or an HTML element ID.
 
-Here’s an example of how to render a MaskedTextBox component in the CustomerNumber column of the Syncfusion Grid.
+Here’s an example demonstrating how to render a MaskedTextBox in the **CustomerNumber** column of the Grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1385,13 +1390,13 @@ Here’s an example of how to render a MaskedTextBox component in the CustomerNu
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rjrfsBiwLfMauJYY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-### Render DropDownList component in edit form
+### Render DropDownList in EditTemplate
 
-The Syncfusion Grid allows you to render a DropDownList component within the Grid’s edit form for a specific column. This feature is valuable when you need to provide a convenient way to select options from a predefined list while editing data in the Grid's edit form.
+The Syncfusion Blazor DataGrid allows you to render a DropDownList within the Grid’s edit form for a specific column. This feature is valuable when you need to provide a convenient way to select options from a predefined list while editing data in the Grid's edit form.
 
-To render a DropDownList in the edit form, you need to define an [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) in the GridColumn. The `EditTemplate` property specifies the cell edit template that used as an editor for a particular column. It can accept either a template string or an HTML element ID.
+To render a DropDownList in the edit form, you need to define an [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) in the GridColumn. The `EditTemplate` property specifies the cell edit template that is used as an editor for a particular column. It can accept either a template string or an HTML element ID.
 
-The following example demonstrates how to render a DropDownList component in the **ShipCountry** column of the Syncfusion Grid:
+The following example demonstrates how to render a DropDownList in the **ShipCountry** column of the Grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1498,15 +1503,15 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-### Render images in the DropDownList editor component using the ItemTemplate
+### Render images in the DropDownList editor using the ItemTemplate
 
-The Syncfusion Blazor DataGrid allows you to render images in the DropDownList editor component. This feature is valuable when you want to display images for each item in the dropdown list of a particular column, enhancing the visual representation of your data.
+The Syncfusion Blazor DataGrid allows you to render images in the DropDownList editor. This feature is valuable when you want to display images for each item in the dropdown list of a particular column, enhancing the visual representation of your data.
 
-To render a DropDownList in the edit form, you need to define an [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) in the GridColumn. The `EditTemplate` property specifies the cell edit template that used as an editor for a particular column. It can accept either a template string or an HTML element ID.
+To render a DropDownList in the edit form, you need to define an [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) in the GridColumn. The `EditTemplate` property specifies the cell edit template that is used as an editor for a particular column. It can accept either a template string or an HTML element ID.
 
-To display an image in the DropDownList editor component, you can utilize the ItemTemplate property of DropDownList. This property allows you to customize the content of each item in the dropdown list.
+To display an image in the DropDownList editor, use the [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ItemTemplate) property of the DropDownList. This property allows you to customize the content of each item in the dropdown list.
 
-The following example demonstrates how to render images in the DropDownList editor component using the ItemTemplate within the EmployeeName column of the Syncfusion Blazor DataGrid.
+The following example demonstrates how to render images in the DropDownList editor using the `ItemTemplate` within the **EmployeeName** column of the Grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1667,17 +1672,17 @@ public class EmployeeData
 {% endhighlight %}
 {% endtabs %}
 
-![Render images in the DropDownList editor component using the ItemTemplate](./images/blazor-datagrid-render-image-using-item-template.gif)
+![Render images in the DropDownList editor using the ItemTemplate](./images/blazor-datagrid-render-image-using-item-template.gif)
 
-### Render Multiple columns in DropDownList component
+### Render Multiple columns in DropDownList
 
-The Syncfusion Blazor DataGrid allows you to render a DropDownList component within the Grid's edit form for a specific column. This feature is particularly useful when you want to display more detailed information for each item in the dropdown list during editing a specific column.
+The Syncfusion Blazor DataGrid allows you to render a DropDownList within the Grid's edit form for a specific column. This feature is particularly useful when you want to display more detailed information for each item in the dropdown list while editing a column.
 
-To render a DropDownList in the edit form, you need to define an [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) for the Grid column. The `EditTemplate` property specifies the cell edit template that used as an editor for a particular column. It can accept either a template string or an HTML element ID.
+To render a DropDownList in the edit form, you need to define an [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) for the Grid column. The `EditTemplate` property specifies the cell edit template that is used as an editor for a particular column. It can accept either a template string or an HTML element ID.
 
-The DropDownList has been provided with several options to customize each list item, group title, selected value, header, and footer element. By default, list items can be rendered as a single column in the DropDownList component. Instead of this, multiple columns can be rendered. This can be achieved by using the [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_HeaderTemplate) and [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ItemTemplate) properties of the DropDownList component.
+The DropDownList provides several options to customize each list item, group title, selected value, header, and footer elements. By default, list items are rendered in a single column. However, you can render multiple columns by using the [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_HeaderTemplate) and [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ItemTemplate) properties of the DropDownList.
 
-The following example demonstrates how to render a DropDownList component with multiple columns within in the ShipCountry column. 
+The following example demonstrates how to render a DropDownList with multiple columns within in the **ShipCountry** column of the Grid. 
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1807,15 +1812,15 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDhJMLWbrwBsJFQa?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> To learn more about the available templates in the DropDownList component, check the [documentation](https://blazor.syncfusion.com/documentation/dropdown-list/templates).
+> To learn more about the available templates in the DropDownList, check the [documentation](https://blazor.syncfusion.com/documentation/dropdown-list/templates).
 
-### Render ComboBox component in edit form 
+### Render ComboBox in EditTemplate 
 
-The Syncfusion Blazor DataGrid allows you to render a ComboBox component within the Grid's edit form for a specific column. This feature is especially valuable when you need to provide a drop-down selection with auto-suggestions for data entry.
+The Syncfusion Blazor DataGrid allows you to render a ComboBox within the Grid's edit form for a specific column. This feature is especially valuable when you need to provide a drop-down selection with auto-suggestions for data entry.
 
-To render a ComboBox in the edit form, you need to define an [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) in the GridColumn. The `EditTemplate` property specifies the cell edit template that used as an editor for a particular column. It can accept either a template string or an HTML element ID.
+To render a ComboBox in the edit form, you need to define an [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) in the GridColumn. The `EditTemplate` property specifies the cell edit template that is used as an editor for a particular column. It can accept either a template string or an HTML element ID.
 
-The following example demonstrates how to render a ComboBox component in the **ShipCountry** column of the Syncfusion Grid:
+The following example demonstrates how to render a ComboBox in the **ShipCountry** column of the Grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1925,13 +1930,13 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BNVpWVMQfcIDGLDJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-### Render TimePicker component in edit form
+### Render TimePicker in EditTemplate
 
-The Syncfusion Blazor DataGrid allows you to render a TimePicker component within the Grid’s edit form for a specific column. This feature is especially valuable when you need to provide a time input, such as appointment times, event schedules, or any other time-related data for editing in the Grid.
+The Syncfusion Blazor DataGrid allows you to render a TimePicker within the Grid’s edit form for a specific column. This feature is especially valuable when you need to provide a time input, such as appointment times, event schedules, or any other time-related data for editing in the Grid.
 
-To render a TimePicker in the edit form, you need to define an [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) in the GridColumn. The `EditTemplate` property specifies the cell edit template that used as an editor for a particular column. It can accept either a template string or an HTML element ID.
+To render a TimePicker in the edit form, you need to define an [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) in the GridColumn. The `EditTemplate` property specifies the cell edit template that is used as an editor for a particular column. It can accept either a template string or an HTML element ID.
 
-The following example demonstrates how to render a TimePicker component in the **OrderDate** column of the Syncfusion Grid.
+The following example demonstrates how to render a TimePicker in the **OrderDate** column of the Grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -2029,13 +2034,13 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDLJiLsFKiBkUUQg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-### Render MultiSelect component in edit form
+### Render MultiSelect in EditTemplate
 
-The Syncfusion Blazor DataGrid allows you to render a MultiSelect component within the Grid’s edit form, enabling you to select multiple values from a dropdown list when editing a specific column. This feature is particularly useful when you need to handle situations where multiple selections are required for a column.
+The Syncfusion Blazor DataGrid allows you to render a MultiSelect within the Grid’s edit form, enabling users to select multiple values from a dropdown list when editing a specific column. This feature is particularly useful when you need to handle scenarios where multiple selections are required for a column.
 
-To render a TimePicker in the edit form, you need to define an [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) in the GridColumn. The `EditTemplate` property specifies the cell edit template that used as an editor for a particular column. It can accept either a template string or an HTML element ID.
+To render a MultiSelect in the edit form, you need to define an [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) for the Grid column. The `EditTemplate` property specifies the cell edit template that is used as an editor for a particular column. It can accept either a template string or an HTML element ID.
 
-The following example demonstrates how to render a MultiSelect component in the ShipCity column of the Syncfusion Grid:
+The following example demonstrates how to render a MultiSelect in the **ShipCity** column of the Grid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -2151,15 +2156,15 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtLyZpLVMImGWFCC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-### Render RichTextEditor component in edit form
+### Render RichTextEditor in EditTemplate
 
-The Syncfusion Grid allows you to render the RichTextEditor component within the edit form. This feature is valuable when you need to format and style text content using various formatting options such as bold, italic, underline, bullet lists, numbered lists, and more during editing a specific column.
+The Syncfusion Blazor DataGrid allows you to render the RichTextEditor within the edit form. This feature is valuable when you need to format and style text content using various formatting options such as bold, italic, underline, bullet lists, numbered lists, and more while editing a specific column.
 
-To render a RichTextEditor in the edit form, you need to define an [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) in the GridColumn. The `EditTemplate` property specifies the cell edit template that used as an editor for a particular column. It can accept either a template string or an HTML element ID.
+To render a RichTextEditor in the edit form, you need to define an [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) for the Grid column. The `EditTemplate` property specifies the cell edit template that is used as an editor for a particular column. It can accept either a template string or an HTML element ID.
 
-Additionally, you need set the [AllowTextWrap]() property of the corresponding grid column to **true**. By enabling this property, the rich text editor component will automatically adjust its width and wrap the text content to fit within the boundaries of the column.
+Additionally, you need to set the [AllowTextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowTextWrap) property of the corresponding Grid column to **true**. Enabling this property ensures that the rich text editor will automatically adjust its width and wrap the text content to fit within the boundaries of the column.
 
-The following example demonstrates how to render a RichTextEditor component in the ShipAddress column of the Syncfusion Grid. 
+The following example demonstrates how to render a RichTextEditor in the **ShipAddress** column of the Grid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -2255,13 +2260,149 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDLJiLsFKiBkUUQg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-### Render cascading DropDownList component in edit form
+### Render Uploader in EditTemplate
 
-The Syncfusion Blazor DataGrid enables the rendering of cascading DropDownLists within the edit form using the `EditTemplate` property of the `GridColumn` component. This functionality is particularly beneficial for creating a hierarchy of options, such as selecting a country and then choosing a state based on the selected country.
+The Syncfusion Blazor DataGrid allows you to render an Uploader within the Grid’s edit form. This feature is especially valuable when you need to upload and manage files or images in a specific column during data editing.
 
-To implement cascading DropDownLists in Grid editing, utilize the `EditTemplate` property of the `GridColumn` component.
+To render a Uploader in the edit form, you need to define an [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) for the Grid column. The `EditTemplate` property specifies the cell edit template that is used as an editor for a particular column. It can accept either a template string or an HTML element ID.
 
-The following example demonstrates how to render cascading DropDownLists for the **ShipCountry** and **ShipState** columns during Grid editing.
+The following example demonstrates how to render a Uploader in the **Employee Image** column of the Grid.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@page "/"
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Inputs
+@using System.IO
+
+<SfGrid AllowPaging="true" @ref="Grid" DataSource="@EmployeeData" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
+    <GridEvents TValue="EmployeeDetails" RowUpdating="RowUpdatingHandler"></GridEvents>
+    <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="EditMode.Normal">
+    </GridEditSettings>
+    <GridColumns>
+        <GridColumn Field="@nameof(EmployeeDetails.EmployeeID)" HeaderText="Employee ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="140"></GridColumn>
+        <GridColumn Field="@nameof(EmployeeDetails.FirstName)" HeaderText="First Name" Width="140"></GridColumn>
+        <GridColumn Field="@nameof(EmployeeDetails.LastName)" HeaderText="Last Name" Width="140"></GridColumn>
+        <GridColumn Field="@nameof(EmployeeDetails.Title)" HeaderText="Title" Width="140"></GridColumn>
+        <GridColumn Field="ImageUrl" HeaderText="Employee Image" Width="200">
+            <Template>
+                @* Display the Image in a div with styling. *@
+                @{
+                    var imageUrl = (context as EmployeeDetails).ImageUrl;
+                }
+                <div class="image">
+                    <img src="@imageUrl" />
+                </div>
+            </Template>
+            <EditTemplate>
+                @* Display an uploader in the edit form. *@
+                <SfUploader AutoUpload="true">
+                    <UploaderEvents ValueChange="@OnChange" FileSelected="Selected"></UploaderEvents>
+                </SfUploader>
+            </EditTemplate>
+        </GridColumn>
+    </GridColumns>
+</SfGrid>
+
+<style>
+    .image img {
+        height: 55px;
+        width: 55px;
+        border-radius: 50px;
+        box-shadow: inset 0 0 1px #e0e0e0, inset 0 0 14px rgba(0, 0, 0, 0.2);
+    }
+</style>
+
+@code {
+    public List<fileInfo> files = new List<fileInfo>();
+    public SfGrid<EmployeeDetails> Grid { get; set; }
+    public string UploadedFile { get; set; }
+    public List<EmployeeDetails> EmployeeData { get; set; }
+
+    private async Task OnChange(UploadChangeEventArgs args)
+    {
+        try
+        {
+            foreach (var file in args.Files)
+            {
+                var path = @"" + file.FileInfo.Name;
+                FileStream filestream = new FileStream(path, FileMode.Create, FileAccess.Write);
+                await file.File.OpenReadStream(long.MaxValue).CopyToAsync(filestream);
+                filestream.Close();
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+    }
+
+    public void RowUpdatingHandler(RowUpdatingEventArgs<EmployeeDetails> args)
+    {
+        if (!string.IsNullOrEmpty(UploadedFile))
+        {
+            args.Data.ImageUrl = "scripts/Images/Employees/" + UploadedFile;
+        }
+    }
+
+    public void OnUploadSuccess(SuccessEventArgs args)
+    {
+        if (args.Operation == "upload")
+        {
+            // File uploaded successfully.
+            var uploadedFile = files.FirstOrDefault(f => f.Name == args.File.Name);
+            if (uploadedFile != null)
+            {
+                uploadedFile.Path = "scripts/Images/Employees/" + args.File.Name;
+            }
+        }
+    }
+
+    public void Selected(SelectedEventArgs args)
+    {
+        UploadedFile = args.FilesData[0].Name;
+    }
+
+    protected override void OnInitialized()
+    {
+        EmployeeData = Enumerable.Range(1, 9).Select(x => new EmployeeDetails()
+            {
+                EmployeeID = x,
+                FirstName = (new string[] { "John", "Jane", "Alex", "Emily", "Chris" })[new Random().Next(5)],
+                LastName = (new string[] { "Doe", "Smith", "Johnson", "Williams", "Brown" })[new Random().Next(5)],
+                Title = (new string[] { "Developer", "Engineer", "CEO", "Manager", "Analyst" })[new Random().Next(5)],
+                ImageUrl = "scripts/Images/Employees/" + x + ".png",
+            }).ToList();
+    }
+
+    public class EmployeeDetails
+    {
+        public int EmployeeID { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Title { get; set; }
+        public string ImageUrl { get; set; }
+    }
+
+    public class fileInfo
+    {
+        public string Path { get; set; }
+        public string Name { get; set; }
+        public double Size { get; set; }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Render cascading DropDownList in EditTemplate
+
+The Syncfusion Blazor DataGrid enables the rendering of cascading DropDownLists within the edit form using the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) property of the GridColumn. This functionality is particularly beneficial for creating a hierarchy of options, such as selecting a country and then choosing a state based on the selected country.
+
+To implement cascading DropDownLists in Grid editing, you need to utilize the `EditTemplate` property of the GridColumn.
+
+The following example demonstrates how to render cascading DropDownLists for the **ShipCountry** and **ShipState** columns during Grid editing:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -2366,11 +2507,11 @@ The following example demonstrates how to render cascading DropDownLists for the
 {% endhighlight %}
 {% endtabs %}
 
-### DynamicObject data binding with edit template feature
+### DynamicObject data binding with EditTemplate
 
-By defining the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) feature of a [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html), you can render a custom editor component in the Grid's edit form. Two-way (`@bind-Value`) binding cannot be defined for the editor component inside the `EditTemplate`, as its data type is unknown when the Grid is bound to a `DynamicObject`. In such cases, you can use the following approach to perform CRUD operations in a `DynamicObject`-bound Grid with an `EditTemplate`.
+By defining the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) feature of a [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html), you can render a custom editor in the Grid's edit form. Two-way (`@bind-Value`) binding cannot be defined for the editor inside the `EditTemplate`, as its data type is unknown when the Grid is bound to a `DynamicObject`. In such cases, you can use the following approach to perform CRUD operations in a `DynamicObject`-bound Grid with an `EditTemplate`.
 
-The ComboBox component is defined inside the `EditTemplate`, and changes can be saved to the Grid using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_ValueChange) event of the ComboBox and the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event of the Grid.
+The ComboBox is defined inside the `EditTemplate`, and changes can be saved to the Grid using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_ValueChange) event of the ComboBox and the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event of the Grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -2384,35 +2525,12 @@ The ComboBox component is defined inside the `EditTemplate`, and changes can be 
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal"></GridEditSettings>
     <GridEvents OnActionBegin="ActionBeginHandler" TValue="OrdersDetails"></GridEvents>
     <GridColumns>
-        <GridColumn IsPrimaryKey="true" Field="OrderID"
-                    HeaderText="Order ID"
-                    TextAlign="TextAlign.Right"
-                    Width="120">
-        </GridColumn>
-        <GridColumn Field="CustomerID"
-                    HeaderText="Customer Name"
-                    Width="150">
-        </GridColumn>
-        <GridColumn Field="OrderDate"
-                    HeaderText=" Order Date"
-                    EditType="EditType.DatePickerEdit"
-                    TextAlign="TextAlign.Right"
-                    Format="d"
-                    Type="ColumnType.Date"
-                    Width="130">
-        </GridColumn>
-        <GridColumn Field="Freight"
-                    HeaderText="Freight"
-                    Format="C2"
-                    TextAlign="TextAlign.Right"
-                    Width="120">
-        </GridColumn>
-        <GridColumn Field="Account"
-                    HeaderText="Account"
-                    EditType="EditType.DropDownEdit"
-                    TextAlign="TextAlign.Right"
-                    Width="120">
-            <EditTemplate>
+    <GridColumn IsPrimaryKey="true" Field="OrderID" HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" />
+    <GridColumn Field="CustomerID" HeaderText="Customer Name" Width="150" />
+    <GridColumn Field="OrderDate" HeaderText="Order Date" EditType="EditType.DatePickerEdit" TextAlign="TextAlign.Right" Format="d" Type="ColumnType.Date" Width="130" />
+    <GridColumn Field="Freight" HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120" />
+    <GridColumn Field="Account" HeaderText="Account" EditType="EditType.DropDownEdit" TextAlign="TextAlign.Right" Width="120">
+        <EditTemplate>
                 @{
                     var ord = context as OrdersDetails;
                     ComboBoxValue = (string)DataUtil.GetDynamicValue(ord as DynamicObject, "Account");
@@ -2420,8 +2538,8 @@ The ComboBox component is defined inside the `EditTemplate`, and changes can be 
                         <ComboBoxEvents TValue="string" TItem="string" ValueChange="ValueChangeHandler"></ComboBoxEvents>
                     </SfComboBox>
                 }
-            </EditTemplate>
-        </GridColumn>
+        </EditTemplate>
+    </GridColumn>
     </GridColumns>
 </SfGrid>
 
@@ -2503,11 +2621,11 @@ The ComboBox component is defined inside the `EditTemplate`, and changes can be 
 {% endhighlight %}
 {% endtabs %}
 
-### ExpandoObject data binding with edit template feature
+### ExpandoObject data binding with Edit template
 
-By defining the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) feature of a [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html), you can render a custom editor component in Grid edit form. Two-way (@bind-Value) binding cannot be defined to the editor component inside EditTemplate, since its data type is unknown when Grid is bound by ExpandoObject. In this case, you can use the following way to perform a CRUD operation in the ExpandoObject data binding Grid with EditTemplate.
+By defining the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) feature of a [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html), you can render a custom editor in Grid edit form. Two-way (@bind-Value) binding cannot be defined to the editor inside EditTemplate, since its data type is unknown when Grid is bound by ExpandoObject. In this case, you can use the following way to perform a CRUD operation in the ExpandoObject data binding Grid with EditTemplate.
 
-The `SfTextBox` component is defined inside the EditTemplate and changes can be saved into the Grid using the ValueChange event of the TextBox and the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event of the Grid.
+The `SfTextBox` is defined inside the EditTemplate and changes can be saved into the Grid using the ValueChange event of the TextBox and the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event of the Grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -2517,7 +2635,7 @@ The `SfTextBox` component is defined inside the EditTemplate and changes can be 
 @using Syncfusion.Blazor.Inputs 
 @using Action = Syncfusion.Blazor.Grids.Action;
 
-<SfGrid DataSource="@Orders" AllowPaging="true"  Toolbar="@ToolbarItems">
+<SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@ToolbarItems">
 <GridEvents OnActionBegin="OnActionBegin" TValue="ExpandoObject"></GridEvents>
     <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true"></GridEditSettings>
     <GridColumns>
@@ -2575,3 +2693,75 @@ The `SfTextBox` component is defined inside the EditTemplate and changes can be 
 
 {% endhighlight %}
 {% endtabs %}
+
+### Prevent the enter key functionality in multiline textbox while editing
+
+While editing a particular row in normal or dialog edit mode, pressing the **ENTER** key will save the changes made in the specific cell or edit form. Similarly, pressing the **ENTER** key while editing with a multiline textbox will save the changes. However, in a multiline textbox, instead of this behavior, a new line break should be added to the text content when pressing the **ENTER** key. This can be achieved using the `OnFocus` event of the `SfTextBox`.
+
+In the following sample, the multiline textbox is rendered in the Customer ID column. The `stopPropagation()` method is called using **Microsoft.JSInterop** in the `OnFocus` event of the `SfTextBox` to prevent the **ENTER** key action when editing the Customer ID column.
+
+```cshtml
+function editKeyDown(id) {    
+    document.getElementById(id).addEventListener("keydown", function (e) {        
+        if (e.key == "Enter") {            
+            e.stopPropagation();
+        }
+    });
+}
+```
+
+```cshtml
+@using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.Grids
+@inject IJSRuntime Runtime
+
+<SfGrid DataSource="@OrderData" Toolbar=@ToolbarItems>
+    <GridEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Center" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" EditType="EditType.DefaultEdit" TextAlign="TextAlign.Center" Width="130">
+            <EditTemplate>
+                <SfTextBox ID="CustomerID" OnFocus="Focus" ShowClearButton="false" Multiline="true" @bind-Value="((context as Order).CustomerID)">
+                </SfTextBox>
+            </EditTemplate>
+        </GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" EditType="EditType.NumericEdit" TextAlign="TextAlign.Center" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" TextAlign="TextAlign.Center" EditType="EditType.DropDownEdit" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public string[] ToolbarItems = new string[] { "Add", "Edit", "Delete", "Update", "Cancel" };
+    public void Focus()
+    {
+        Runtime.InvokeVoidAsync("editKeyDown", "CustomerID");
+    }
+    List<Order> OrderData = new List<Order>
+    {
+        new Order() { OrderID = 10248, CustomerID = "VINET", Freight = 32.38, ShipName = "Vins et alcools Chevalier", Verified = true },
+        new Order() { OrderID = 10249, CustomerID = "TOMSP", Freight = 11.61, ShipName = "Toms Spezialitäten", Verified = false },
+        new Order() { OrderID = 10250, CustomerID = "HANAR", Freight = 65.83, ShipName = "Hanari Carnes", Verified = true },
+        new Order() { OrderID = 10251, CustomerID = "VICTE", Freight = 41.34, ShipName = "Victuailles en stock", Verified = false },
+        new Order() { OrderID = 10252, CustomerID = "SUPRD", Freight = 51.3, ShipName = "Suprêmes délices", Verified = false },
+        new Order() { OrderID = 10253, CustomerID = "HANAR", Freight = 58.17, ShipName = "Hanari Carnes", Verified = false },
+        new Order() { OrderID = 10254, CustomerID = "CHOPS", Freight = 22.98, ShipName = "Chop-suey Chinese", Verified = true },
+        new Order() { OrderID = 10255, CustomerID = "RICSU", Freight = 148.33, ShipName = "Richter Supermarket", Verified = true },
+        new Order() { OrderID = 10256, CustomerID = "WELLI", Freight = 13.97, ShipName = "Wellington Importadora", Verified = false },
+        new Order() { OrderID = 10257, CustomerID = "HILAA", Freight = 81.91, ShipName = "HILARION-Abastos", Verified = true }
+    };
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public double Freight { get; set; }
+        public string ShipName { get; set; }
+        public Boolean Verified { get; set; }
+    }
+}
+```
+
+N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-prevent-enter-key-functionality-in-multiline-textbox)
+
+## See also
+
+* [Edit one column update the value in another column](https://www.syncfusion.com/forums/151238/edit-one-column-update-the-value-in-another-column)
