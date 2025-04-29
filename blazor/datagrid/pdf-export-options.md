@@ -465,8 +465,6 @@ In the following example, the **CustomerID** is initially a hidden column in the
 
 @using Syncfusion.Blazor.Grids
 
-@using Syncfusion.Blazor.Grids
-
 <SfGrid ID="Grid" @ref="Grid" DataSource="@Orders"  AllowPdfExport="true"
 Toolbar="@(new List<string>() { "PdfExport" })" Height="348">
     <GridEvents OnToolbarClick="ToolbarClickHandler" ExportComplete="ExportCompleteHandler" TValue="OrderData"></GridEvents>
@@ -483,7 +481,7 @@ Toolbar="@(new List<string>() { "PdfExport" })" Height="348">
     private SfGrid<OrderData> Grid;
     public List<OrderData> Orders { get; set; }
     public bool isCustomerIDVisible { get; set; } = false;
-    public bool ShipCityVisible { get; set; };
+    public bool ShipCityVisible { get; set; }
 
     protected override void OnInitialized()
     {
@@ -559,7 +557,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNBSDTVEAnhljzKI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNByZTBaJDQfXHAZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Change page orientation
 
