@@ -1799,7 +1799,7 @@ In this example, there are two memory streams: *streamDoc1* and *streamDoc2*. st
             //Create a copy of streamDoc1 to access the memory stream.
             MemoryStream copyOfStreamDoc1 = new MemoryStream(streamDoc1.ToArray());
             
-            //Cusotmized Grid memory stream.
+            //Customized Grid memory stream.
             ExcelExportProperties ExcelProperties = new ExcelExportProperties();
             ExcelTheme Theme = new ExcelTheme();
             ExcelStyle ThemeStyle = new ExcelStyle()
