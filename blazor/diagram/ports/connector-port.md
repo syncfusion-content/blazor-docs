@@ -7,7 +7,7 @@ control: Diagram Component
 documentation: ug
 ---
 
-## Create connector port
+## How to create a connector port
 
 Creating connector ports is similar to creating node ports. To define connector ports, you need to create a collection of `PathPort` and assign it to the connector’s `Ports` property.
 
@@ -52,7 +52,9 @@ The following code example demonstrates how to create a connector port.
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ConnectorPort/CreateConnectorPorts)
 
-## Port PathPosition
+>**Note:** Port's Id should not start with numbers or special characters and should not contain special characters such as underscores(_) or spaces.
+
+## How to set PathPosition for connector port
 
 The `PathPosition` property allows you to place a connector port along the path of a connector. It accepts a value between 0 and 1, where:
 
@@ -111,7 +113,7 @@ The following code example demonstrates how to set the PathPosition for a connec
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ConnectorPort/ConnectorPortPathPosition)
 
-## Connector port connection
+## How to connect a connector to a port
 
 Connector ports are used to establish connections between connectors. To create such a connection, set the `SourcePortID` or `TargetPortID` property to the ID of the corresponding port on the connector.
 
