@@ -9,15 +9,14 @@ documentation: ug
 
 # Hide Expand Icon in Hierarchical Grid When It Has No Child Records
 
-Hierarchical structure in Grid can be achieved using the Detail Template feature of Grid. But in some scenarios, the child grid may not have records. So, expanding it will show an empty Grid. You can hide the expand icon when child grid has no records.
+The hierarchical structure in the Syncfusion Blazor DataGrid can be created using the Detail Template feature. In some cases, the child grid may not contain any records. When expanding such a row, it will result in displaying an empty grid, which may not be ideal. To handle this, the expand icon can be hidden when no child records exist, providing a cleaner user experience.
 
-You can achieve this requirement using [`RowDataBound`](https://blazor.syncfusion.com/documentation/datagrid/events#rowdatabound) event of the DataGrid component. This event will be triggered when a row is created in Grid.
+This behavior can be achieved by using the [`RowDataBound`](https://blazor.syncfusion.com/documentation/datagrid/events#rowdatabound) event of the DataGrid component. The `RowDataBound` event triggers whenever a row is created in the Grid. Within this event, it is possible to check whether the corresponding child grid has any data by verifying the current row's record details against the child grid's data source. Based on the result, a specific CSS class can be added to the row using the `AddClass` method. This class is then used to traverse and hide the expand icon and disable the pointer interactions for that row.
 
-In this event, we have checked whether the Child grid has any records using the current record details and child grid datasource. Based on the results, we have added specific class name to row using AddClass method. We have traversed that specific element to hide the icon and pointer events.
+The following example demonstrates how to hide the expand icon when there are no child records. The parent grid displays employee data, and the detail template renders another grid that shows orders related to each employee. In the `RowDataBound` event, the code checks if any orders exist for the current employee. If no matching records are found, a CSS class is added to the row, which hides the expand icon and disables its click functionality.
 
-This is demonstrated in the following sample code where expand icon is hidden for some specific records.
-
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
 
@@ -49,25 +48,23 @@ This is demonstrated in the following sample code where expand icon is hidden fo
     .e-detail-disable .e-detailrowcollapse {
         pointer-events: none;
     }
-
-        /*if required hide the icons*/
-        .e-detail-disable .e-detailrowcollapse .e-icon-grightarrow {
-            visibility: hidden;
-        }
+    /*if required hide the icons*/
+    .e-detail-disable .e-detailrowcollapse .e-icon-grightarrow {
+        visibility: hidden;
+    }
 </style>
 
 
 @code{
     public void RowDataBound(RowDataBoundEventArgs<EmployeeData> Args) // will be triggered when row is created
     {
-        if (Orders.Where(x => x.EmployeeID == Args.Data.EmployeeID).ToList().Count == 0) // check condition here whether the detail grid has records
+        if (Orders.Where(x => x.EmployeeID == Args.Data.EmployeeID).ToList().Count == 0) // Check condition here whether the detail grid has records.
         {
             Args.Row.AddClass(new string[] { "e-detail-disable" });
         }
     }
-
     List<EmployeeData> Employees = new List<EmployeeData>
-{
+    {
         new EmployeeData() {EmployeeID = 1001, FirstName="Nancy", LastName="Fuller", Title="Sales Representative", Country="USA"},
         new EmployeeData() {EmployeeID = 1002, FirstName="Andrew", LastName="Davolio", Title="Vice President", Country="UK"},
         new EmployeeData() {EmployeeID = 1003, FirstName="Janet", LastName="Leverling", Title="Sales", Country="UK"},
@@ -78,7 +75,6 @@ This is demonstrated in the following sample code where expand icon is hidden fo
         new EmployeeData() {EmployeeID = 1008, FirstName="Steven", LastName="Smith", Title="HR Manager", Country="UAE"},
         new EmployeeData() {EmployeeID = 1009, FirstName="Fuller", LastName="Janet", Title="HR Manager", Country="UAE"},
     };
-
     List<Order> Orders = new List<Order> {
         new Order() {EmployeeID = 1001, OrderID=001, CustomerName="Nancy", ShipCountry="USA"},
         new Order() {EmployeeID = 1001, OrderID=002, CustomerName="Steven", ShipCountry="UR"},
@@ -91,7 +87,6 @@ This is demonstrated in the following sample code where expand icon is hidden fo
         new Order() {EmployeeID = 1007, OrderID=012, CustomerName="Buchanan", ShipCountry="GER"},
         new Order() {EmployeeID = 1006, OrderID=014, CustomerName="Andrew", ShipCountry="UAE"},
     };
-
     public class EmployeeData
     {
         public int? EmployeeID { get; set; }
@@ -100,7 +95,6 @@ This is demonstrated in the following sample code where expand icon is hidden fo
         public string Title { get; set; }
         public string Country { get; set; }
     }
-
     public class Order
     {
         public int? EmployeeID { get; set; }
@@ -109,4 +103,8 @@ This is demonstrated in the following sample code where expand icon is hidden fo
         public string ShipCountry { get; set; }
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLojTrPKyYFBigV?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

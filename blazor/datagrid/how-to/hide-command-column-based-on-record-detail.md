@@ -9,11 +9,14 @@ documentation: ug
 
 # Hide the Command Column Button in a Specific Record
 
-Command Columns can be used to perform CRUD operation in Grid records. For some specific records, these editing actions can be prevented by hiding the command buttons. i.e., some records can be prevented from being edited, some records can be prevented from being deleted. This can be achieved by hiding the command buttons in [`RowDataBound`](https://blazor.syncfusion.com/documentation/datagrid/events#rowdatabound) event of the DataGrid component.
+In the Syncfusion Blazor DataGrid, command columns are used to perform CRUD operations on records, such as editing or deleting. Sometimes, you may want to hide the command buttons for specific records based on certain conditions. This can be done by using the [`RowDataBound`](https://blazor.syncfusion.com/documentation/datagrid/events#rowdatabound) event, which is triggered every time a row is created or updated in the grid.
 
-This is demonstrated in the following sample code where the RowDataBound event is triggered when record is created. Based on record details, you can add specific class name to that row and hide the command buttons using CSS styles.
+Inside the `RowDataBound` event, you can check the data of each record and conditionally add a class to the row. For example, if a record is marked as "Verified," you can add a class to hide the Edit button for that row. Similarly, you can add another class to hide the Delete button for unverified records.
 
-```cshtml
+To hide the buttons, you can use CSS to target the added class and apply the **display: none** style to the buttons. This method gives you control over which buttons are shown or hidden for each record, depending on the data. This way, you can easily prevent editing or deleting certain rows based on your application's requirements.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true" Height="315">
@@ -34,19 +37,16 @@ This is demonstrated in the following sample code where the RowDataBound event i
         </GridColumn>
     </GridColumns>
 </SfGrid>
-
 <style>
     /*to remove the edit button alone*/
     .e-removeEditcommand .e-unboundcell .e-unboundcelldiv button.e-Editbutton {
         display: none;
     }
-
     /*to remove the delete button alone*/
     .e-removeDeletecommand .e-unboundcell .e-unboundcelldiv button.e-Deletebutton {
         display: none;
     }
 </style>
-
 @code{
     public List<Order> Orders { get; set; }
     public void RowBound(RowDataBoundEventArgs<Order> Args)
@@ -72,7 +72,6 @@ This is demonstrated in the following sample code where the RowDataBound event i
             ShipCountry = (new string[] { "USA", "UK", "CHINA", "RUSSIA", "INDIA" })[new Random().Next(5)]
         }).ToList();
     }
-
     public class Order
     {
         public int? OrderID { get; set; }
@@ -83,4 +82,7 @@ This is demonstrated in the following sample code where the RowDataBound event i
         public string ShipCountry { get; set; }
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLetprbTsENCfsy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
