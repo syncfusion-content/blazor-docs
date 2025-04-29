@@ -7,13 +7,15 @@ control: DataGrid
 documentation: ug
 ---
 
-# Custom Control in Datagrid Toolbar in Blazor DataGrid Component
+# Custom Control in Datagrid Toolbar in Blazor DataGrid
 
-You can render custom controls inside the datagrid's toolbar area. This can be achieved by initializing the custom controls within the Template property of the Toolbar component. This toolbar component is defined inside the datagrid component.
+The Syncfusion Blazor DataGrid allows you to render custom controls inside its toolbar area. This can be achieved by initializing the custom controls within the `Template` property of the Toolbar component. This toolbar component is defined inside the Grid.
 
-This is demonstrated in the following sample code where Autocomplete component is rendered inside the DataGrid's toolbar and is used for performing search operation on the datagrid,
+This is demonstrated in the following sample code where [Autocomplete](https://blazor.syncfusion.com/documentation/autocomplete/getting-started-with-web-app) component is rendered inside the Grid's toolbar and is used for performing search operation on the Grid.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.DropDowns
@@ -36,8 +38,8 @@ This is demonstrated in the following sample code where Autocomplete component i
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="ShipCountry" Width="130"></GridColumn>
     </GridColumns>
 </SfGrid>
 
@@ -45,47 +47,77 @@ This is demonstrated in the following sample code where Autocomplete component i
     public class CustomerDetails
     {
         public string Name { get; set; }
-
         public int Id { get; set; }
     }
 
     List<CustomerDetails> Customers = new List<CustomerDetails>
     {
-        new CustomerDetails() { Name = "ALFKI", Id = 1 },
-        new CustomerDetails() { Name = "ANANTR", Id = 2 },
-        new CustomerDetails() { Name = "ANTON", Id = 3 },
-        new CustomerDetails() { Name = "BLONP", Id = 4 },
-        new CustomerDetails() { Name = "BOLID", Id = 5 }
+        new CustomerDetails() { Name = "VINET", Id = 1 },
+        new CustomerDetails() { Name = "TOMSP", Id = 2 },
+        new CustomerDetails() { Name = "HANAR", Id = 3 },
+        new CustomerDetails() { Name = "VICTE", Id = 4 },
+        new CustomerDetails() { Name = "SUPRD", Id = 5 }
     };
     private SfGrid<Order> Grid;
     public List<Order> Orders { get; set; }
 
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
+        Orders = Order.GetAllRecords();
     }
 
     public async Task  OnSearch(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string,CustomerDetails> args)
     {
-        await this.Grid.Search(args.Value);
-    }
-
-    public class Order
-    {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
+        await this.Grid.SearchAsync(args.Value);
     }
 }
-```
 
-The following GIF represents the search operation performed on the datagrid using the Autocomplete component rendered in the toolbar,
+{% endhighlight %}
+{% highlight c# tabtitle="Order.cs" %}
 
-![Blazor DataGrid with Custom ToolBar](../images/blazor-datagrid-custom-toolbar.gif)
+ public class Order
+ {
+     public static List<Order> Orders = new List<Order>();
+
+     public Order(int orderID, string customerID, double freight, string shipCity, string shipName, string shipCountry)
+     {
+         this.OrderID = orderID;
+         this.CustomerID = customerID;
+         this.Freight = freight;
+         this.ShipCity = shipCity;
+         this.ShipName = shipName;
+         this.ShipCountry = shipCountry;
+     }
+
+     public static List<Order> GetAllRecords()
+     {
+         if (Orders.Count == 0)
+         {
+             Orders.Add(new Order(10248, "VINET", 32.38, "Reims", "Vins et alcools Chevalier", "France"));
+             Orders.Add(new Order(10249, "TOMSP", 11.61, "Münster", "Toms Spezialitäten", "Germany"));
+             Orders.Add(new Order(10250, "HANAR", 65.83, "Rio de Janeiro", "Hanari Carnes", "Brazil"));
+             Orders.Add(new Order(10251, "VICTE", 41.34, "Lyon", "Victuailles en stock", "France"));
+             Orders.Add(new Order(10252, "SUPRD", 51.3, "Charleroi", "Suprêmes délices", "Belgium"));
+             Orders.Add(new Order(10253, "HANAR", 58.17, "Rio de Janeiro", "Hanari Carnes", "Brazil"));
+             Orders.Add(new Order(10254, "VICTE", 22.98, "Bern", "Chop-suey Chinese", "Switzerland"));
+             Orders.Add(new Order(10255, "TOMSP", 148.33, "Genève", "Richter Supermarkt", "Switzerland"));
+             Orders.Add(new Order(10256, "HANAR", 13.97, "Resende", "Wellington Import Export", "Brazil"));
+             Orders.Add(new Order(10257, "VINET", 81.91, "San Cristóbal", "Hila Alimentos", "Venezuela"));
+            
+         }
+
+         return Orders;
+     }
+
+     public int OrderID { get; set; }
+     public string CustomerID { get; set; }
+     public double Freight { get; set; }
+     public string ShipCity { get; set; }
+     public string ShipName { get; set; }
+     public string ShipCountry { get; set; }
+ }
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BthoNTLFzGxGrdMg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
