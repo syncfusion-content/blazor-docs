@@ -112,7 +112,7 @@ The following code explains how to draw the connector by using the port constrai
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/Interaction/DrawConstraints)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/Interaction/ConnectorPortDraw)
 
 ![Drawing Connector Port Connection in Blazor Diagram](../images/ConnectorPort/ConnectorPortDraw.gif)
 
