@@ -7,13 +7,14 @@ control: DataGrid
 documentation: ug
 ---
 
-# Cascading DropDownList in Blazor DataGrid Component Editing
+# Cascading DropDownList in Blazor DataGrid Editing
 
-You can achieve the Cascading DropDownList with datagrid editing by using the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) component.
+The Syncfusion Blazor DataGrid allows creating cascading DropDownLists while editing by using the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property of Grid columns. In this example, two columns **ShipCountry** and **ShipState** use dropdowns where the state options depend on the selected country. When a country is chosen in the ShipCountry dropdown, the `ValueChange` event updates the ShipState dropdown with relevant state values and enables it for selection.
 
-This is demonstrated in the following sample code where cascading dropdown list is rendered for the **ShipCountry** and **ShipState** columns when editing in datagrid.
+The data for countries and states is managed using separate lists, and the state dropdown is disabled initially during editing using the `OnActionBegin` event. Once a country is selected, the matching state list is loaded, and the grid is refreshed using `GridRef.PreventRender(false)` to show the updated options. This setup provides a smooth way to handle related dropdowns during inline editing in the Blazor DataGrid.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
 
@@ -110,4 +111,7 @@ This is demonstrated in the following sample code where cascading dropdown list 
         }
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNByNJqDUxOMnySL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

@@ -9,11 +9,12 @@ documentation: ug
 
 # Custom Toolbar Items with Text Name Same as Default Toolbar Items
 
-You can create the Custom toolbar items with text name same as default toolbar items (Add, Edit, Delete, etc.). But while creating them, they will be considered as default toolbar items which will cause some issues while clicking on them. To overcome this behavior, define the **Id** property for custom toolbar items.
+When creating custom toolbar items in a Syncfusion Blazor DataGrid with the same text as default toolbar items (like "Add" or "Delete"), the grid treats them as default items, which can cause issues during interactions. To resolve this, you should define an **Id** property for each custom toolbar item. This ensures that the custom items are recognized as distinct from the default toolbar items and function as intended.
 
-This is demonstrated in the following sample code where there are custom toolbar items with text same as **Add** and **Delete** buttons. These toolbar buttons will be enabled only when GridEditSettings is defined in DataGrid. So custom toolbar will be disabled state considering it as default toolbar item. We have overcome that behavior by defining the Id property.
+In the provided example, custom "Add" and "Delete" buttons are created with the same text as the default items. To prevent these buttons from being disabled, the Id property is assigned to each item. Additionally, an event handler is used to perform actions when the toolbar buttons are clicked, ensuring proper functionality while maintaining the original button names.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 
 @{
@@ -21,7 +22,6 @@ This is demonstrated in the following sample code where there are custom toolbar
     Toolbaritems.Add(new Syncfusion.Blazor.Navigations.ItemModel() { Text = "Add", Id = "add", TooltipText = "Add Record", PrefixIcon = "add" });
     Toolbaritems.Add(new Syncfusion.Blazor.Navigations.ItemModel() { Text = "Delete", Id = "delete", TooltipText = "Delete Record", PrefixIcon = "delete" });
 }
-
 <SfGrid DataSource="@Orders" @ref="Grid" AllowGrouping="true" AllowPaging="true" Height="200" Toolbar="Toolbaritems">
     <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="Order"></GridEvents>
     <GridColumns>
@@ -45,7 +45,6 @@ This is demonstrated in the following sample code where there are custom toolbar
             OrderDate = DateTime.Now.AddDays(-x),
         }).ToList();
     }
-
     public class Order
     {
         public int? OrderID { get; set; }
@@ -53,17 +52,19 @@ This is demonstrated in the following sample code where there are custom toolbar
         public DateTime? OrderDate { get; set; }
         public double? Freight { get; set; }
     }
-
     public void ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
         if (args.Item.Text == "Add")
         {
-            //perform your actions here
+            //perform your actions here.
         }
         if (args.Item.Text == "Delete")
         {
-            //perform your actions here
+            //perform your actions here.
         }
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjrSNfADgcWrdqkU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

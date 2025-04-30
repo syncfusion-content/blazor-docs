@@ -9,13 +9,14 @@ documentation: ug
 
 # Custom Data Source & Filtering for DropDownList in Blazor DataGrid
 
-You can provide custom data source and enable filter option for DropDownList while performing DataGrid editing by using the [Edit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) params property.
+In the Syncfusion Blazor DataGrid, a custom data source can be provided for the DropDownList used during editing by configuring the `EditType` and assigning a custom data source using `EditorSettings`. Along with the data, filtering support can be enabled by setting the `AllowFiltering` property to **true**. This helps users easily search and select values, especially when the dropdown contains many items.
 
-While setting new data source for DropDownList using [Edit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) params, you must also specify a new [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html#Syncfusion_Blazor_DropDowns_DropDownListModel_2_Query) property for DropDownList.
+To achieve this, a `DropDownEditCellParams` object is defined with a `DropDownListModel` that includes a custom data source. This configuration is then assigned to the `EditorSettings` of the target Grid column. In the sample, the Customer Name column uses a local list of country names as its dropdown data source with filtering enabled for better usability during editing.
 
 This is demonstrated in the following sample code,
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
 
@@ -30,9 +31,7 @@ This is demonstrated in the following sample code,
 </SfGrid>
 
 @code{
-
     public List<Order> Orders { get; set; }
-
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
@@ -55,9 +54,12 @@ This is demonstrated in the following sample code,
         public double? Freight { get; set; }
     }
     public static List<Order> LocalData = new List<Order> {
-                new Order() { CustomerID= "United States" },
-                new Order() { CustomerID= "Australia" },
-                new Order() { CustomerID= "India" }
+        new Order() { CustomerID= "United States" },
+        new Order() { CustomerID= "Australia" },
+        new Order() { CustomerID= "India" }
     };
 }
-```
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVetJUNUxOPHKlT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

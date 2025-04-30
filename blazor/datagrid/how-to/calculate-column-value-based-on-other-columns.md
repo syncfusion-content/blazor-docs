@@ -9,11 +9,12 @@ documentation: ug
 
 # Calculate Column Value Based on Other Columns in Blazor DataGrid
 
-You can calculate the values for a datagrid column based on other column values by using the **context** parameter in the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property of the [GridColumn](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component. Inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template), you can access the column values using the implicit named parameter **context** and then calculate the values for the new column as required.
+In the Syncfusion Blazor DataGrid, calculated column values can be displayed by using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property of a [GridColumn](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html). This allows combining or processing values from other columns in each row. The **context** parameter inside the template provides access to the current row data, which can be used to perform custom calculations like addition, subtraction, or any other logic.
 
-This is demonstrated in the following sample code where the value for **FinalCost** column is calculated based on the values of **ManfCost** and **LabCost** columns,
+In the provided example, a **FinalCost** column is not bound to a direct data field but is instead calculated by adding values from the **ManfCost** and **LabCost** columns for each row. The template reads the context, performs the addition, and displays the result inside a div.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true">
@@ -37,9 +38,7 @@ This is demonstrated in the following sample code where the value for **FinalCos
 </SfGrid>
 
 @code{
-
     public List<Order> Orders { get; set; }
-
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 25).Select(x => new Order()
@@ -61,5 +60,7 @@ This is demonstrated in the following sample code where the value for **FinalCos
         public double? FinalCost { get; set; }
     }
 }
-```
-![Calculating Column Value Based on Other Columns in Blazor DataGrid](../images/blazor-datagrid-calculate-column-values.png)
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVoNfKNztPbnpjL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
