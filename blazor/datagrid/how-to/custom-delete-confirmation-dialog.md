@@ -7,22 +7,26 @@ control: DataGrid
 documentation: ug
 ---
 
-# Custom Delete Confirmation Dialog in Blazor DataGrid Component
+# Custom Delete Confirmation Dialog in Blazor DataGrid
 
-You can customize the appearance and contents of delete confirmation dialog by rendering a customized [SfDialog](https://blazor.syncfusion.com/documentation/dialog/getting-started) instead of the default grid delete confirmation dialog.
+You can replace the default delete confirmation dialog in the Syncfusion Blazor DataGrid with a custom dialog to control its content, appearance, and behavior. This allows you to customize the delete confirmation message and provide your own buttons for confirming or canceling the deletion.
 
-This is demonstrated in the following sample code,
+To achieve this, use the [SfDialog](https://blazor.syncfusion.com/documentation/dialog/getting-started) from the Blazor Popups package. Inside the `SfDialog`, you can define the dialog header, content, and buttons using `DialogTemplates` and `DialogButtons`. The dialog should be initially hidden and only shown when the user triggers a delete action on a record.
 
-```cshtml
+In the `SfGrid`, enable the "Delete" option in the toolbar and set the `AllowDeleting` property to true to allow record deletion. You can then use the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event to cancel the default delete action, display the custom dialog, and handle the user's response. When the user clicks the "OK" button on the dialog, the selected record is deleted programmatically.
+
+Here is the code for implementing a custom delete confirmation dialog in a Blazor DataGrid:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Popups
 
-<SfDialog @ref="Dialog" Width="250px" Visible="false" ShowCloseIcon="true" IsModal="true">
+<SfDialog @ref="Dialog" Width="250px" Visible="@IsDialogVisible" ShowCloseIcon="true" IsModal="true">
     <DialogEvents Closed="Closed"></DialogEvents>
     <DialogTemplates>
-        @*Here you can customize the Header and Content of delete confirmation dialog*@
-        <Header> Delete Record</Header>
-        <Content> You are about to Delete a Record @SelectedData ?</Content>
+        <Header>Delete Record</Header>
+        <Content>You are about to delete the record @SelectedData ?</Content>
     </DialogTemplates>
     <DialogButtons>
         <DialogButton OnClick="@OkClick" Content="OK" IsPrimary="true"></DialogButton>
@@ -36,53 +40,58 @@ This is demonstrated in the following sample code,
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" Width="150"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code{
-    SfGrid<Order> Grid;
-    SfDialog Dialog;
-    public List<Order> Orders { get; set; }
-    public object SelectedData;
-    public bool flag = true;
-    public void Closed()
+@code {
+    private SfGrid<Order> Grid;
+    private SfDialog Dialog;
+    private List<Order> Orders { get; set; }
+    private object SelectedData;
+    private bool flag = true;
+    private bool IsDialogVisible = false;
+    private void Closed()
     {
         flag = true;
     }
-    public void OnActionBegin(ActionEventArgs<Order> Args)
+    private async Task OnActionBegin(ActionEventArgs<Order> Args)
     {
-        if (Args.RequestType.ToString() == "Delete" && flag)
+        if (Args.RequestType == Action.Delete && flag)
         {
-            Args.Cancel = true;  //Cancel default delete action.
-            Dialog.Show();
+            Args.Cancel = true;
+            IsDialogVisible = true;
+            StateHasChanged(); // Re-render to show dialog.
             flag = false;
         }
     }
-    public void RowSelectHandler(RowSelectEventArgs<Order> Args)
+    private void RowSelectHandler(RowSelectEventArgs<Order> Args)
     {
         SelectedData = Args.Data.OrderID;
     }
-    private void OkClick()
+    private async Task OkClick()
     {
-        Grid.DeleteRecord();   //Delete the record programmatically while clicking OK button.
-        Dialog.Hide();
+        await Grid.DeleteRecordAsync();
+        IsDialogVisible = false;
+        StateHasChanged();
     }
     private void CancelClick()
     {
-        Dialog.Hide();
+        IsDialogVisible = false;
+        StateHasChanged();
     }
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        var random = new Random();
+        Orders = Enumerable.Range(1, 75).Select(x => new Order
         {
             OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            CustomerID = (new[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[random.Next(5)],
             Freight = 2.1 * x,
             OrderDate = DateTime.Now.AddDays(-x),
-            ShipCountry = (new string[] { "USA", "UK", "CHINA", "RUSSIA", "INDIA" })[new Random().Next(5)]
+            ShipCountry = (new[] { "USA", "UK", "CHINA", "RUSSIA", "INDIA" })[random.Next(5)]
         }).ToList();
     }
     public class Order
@@ -94,4 +103,7 @@ This is demonstrated in the following sample code,
         public string ShipCountry { get; set; }
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhejzVuAeUpKESj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

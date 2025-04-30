@@ -7,13 +7,14 @@ control: DataGrid
 documentation: ug
 ---
 
-# Customize Empty Grid Display Message in Blazor DataGrid Component
+# Customize Empty Grid Display Message in Blazor DataGrid
 
-You can customize the message shown when rendering an empty grid by using the `EmptyRecordTemplate` feature.
+The Syncfusion Blazor DataGrid allows customization of the message displayed when there are no records to show by using the `EmptyRecordTemplate`.
 
-This is demonstrated in the following sample code,
+Use the `EmptyRecordTemplate` within the `GridTemplates` tag to display a custom message or content when the Grid has no data.
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true">
@@ -32,7 +33,6 @@ This is demonstrated in the following sample code,
 
 @code{
     public List<Order> Orders { get; set; }
-
     public class Order
     {
         public int? OrderID { get; set; }
@@ -41,4 +41,7 @@ This is demonstrated in the following sample code,
         public double? Freight { get; set; }
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXLoZfhOAaAMhcgo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
