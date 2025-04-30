@@ -394,11 +394,9 @@ public class VirtualData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rjLoZWBlzonBSEEX?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-### Column Virtualization With Row Virtualization
+### Column virtualization with row virtualization
 
-Column virtualization is a feature in the Syncfusion Blazor DataGrid that optimizes the rendering of columns by displaying only the columns currently within the viewport. It allows horizontal scrolling to view additional columns. This feature is particularly useful when dealing with Grids that have a large number of columns, as it helps improve performance and reduces the initial loading time.
-
-Similarly, Row virtualization renders only the visible rows within the viewport, enabling smooth vertical scrolling when handling a large dataset.
+Column virtualization in Syncfusion Blazor DataGrid improves performance by rendering only the visible columns and enabling horizontal scrolling for large datasets. Similarly, row virtualization renders only the visible rows within the viewport, enabling smooth vertical scrolling when handling large datasets.
 
 [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization): Only the rows visible in the viewport are rendered. As the user scrolls vertically, more rows are dynamically loaded into the Grid.
 
@@ -588,7 +586,7 @@ public class OrderDetails
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VtVejhtAVPeiBUyd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > * Column's [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Width) is required for column virtualization. If column's `Width` is not defined then Grid will consider its value as **200px**.
-> * The collapsed/expanded state will persist only for the local dataSource while scrolling.
+> * The collapsed/expanded state of grouped data will persist only for the local dataSource while scrolling.
 
 ### Limitations 
 
@@ -723,7 +721,7 @@ When row virtualization and column virtualization are both enabled, cell placeho
 
 To enable frozen columns with virtualization, follow these steps:
 
-**Define Frozen Columns:** Set the `Column` property of the [Freeze](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Freeze) option to **Right** or **Left** for the desired columns, and enable the [IsFrozen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsFrozen) property of the `GridColumn`.
+**Define Frozen Columns:** Set the [GridColumn.Freeze](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Freeze) property to **Right** or **Left** for the desired columns, and enable the [IsFrozen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsFrozen) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html).
 
 **Enable Virtualization:** Enable both [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) for row virtualization and [EnableColumnVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableColumnVirtualization) for column virtualization to ensure a smooth experience when scrolling through large datasets.
 
