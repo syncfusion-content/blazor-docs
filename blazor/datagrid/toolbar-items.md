@@ -261,8 +261,8 @@ public class OrderData
     public static List<OrderData> GetAllRecords()
     {
         return new List<OrderData>
-    {
-               new OrderData(10248, "ALFKI", "Maria Anders", "Berlin"),
+        {
+            new OrderData(10248, "ALFKI", "Maria Anders", "Berlin"),
             new OrderData(10249, "ANATR", "Ana Trujillo", "Mexico City"),
             new OrderData(10250, "ANTON", "Antonio Moreno", "Madrid"),
             new OrderData(10251, "BERGS", "Christina Berglund", "Luleå"),
@@ -274,7 +274,7 @@ public class OrderData
             new OrderData(10257, "BSBEV", "Victoria Ashworth", "London"),
             new OrderData(10258, "CACTU", "Patricio Simpson", "Buenos Aires"),
             new OrderData(10259, "CENTC", "Francisco Chang", "Mexico D.F.")
-    };
+        };
     }
 }
 
