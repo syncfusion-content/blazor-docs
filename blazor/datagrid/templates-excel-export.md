@@ -376,8 +376,13 @@ In the following example, the detail row content is formatted by specifying the 
 
     public void ExcelDetailTemplateHandler(ExcelDetailTemplateEventArgs<ProductData> args)
     {
+        // Initialize a list to hold detail template rows for the Excel export.
         var excelRows = new List<ExcelDetailTemplateRow>();
+
+        // Get the parent row's data.
         var data = args.ParentRow.Data;
+
+        // Set the header row for the detail template.
         args.RowInfo.Headers = new List<ExcelDetailTemplateRow>() { 
             new ExcelDetailTemplateRow() { 
                 Cells = new List<ExcelDetailTemplateCell>() { 
@@ -392,6 +397,8 @@ In the following example, the detail row content is formatted by specifying the 
                 } 
             } 
         };
+
+        // Add the first row with product description and contact as a hyperlink.
         excelRows.Add(new ExcelDetailTemplateRow()
         {
             Cells = new List<ExcelDetailTemplateCell>()
@@ -420,6 +427,8 @@ In the following example, the detail row content is formatted by specifying the 
                 }
             }
         });
+
+        // Add the second row with product cost and availability status.
         excelRows.Add(new ExcelDetailTemplateRow()
         {
             Cells = new List<ExcelDetailTemplateCell>()
@@ -438,6 +447,8 @@ In the following example, the detail row content is formatted by specifying the 
                 }
             }
         });
+
+        // Add the third row with product status and return policy.
         excelRows.Add(new ExcelDetailTemplateRow()
         {
             Cells = new List<ExcelDetailTemplateCell>()
@@ -455,6 +466,8 @@ In the following example, the detail row content is formatted by specifying the 
                 }
             }
         });
+
+         // Add the fifth row with product ratings and delivery information.
         excelRows.Add(new ExcelDetailTemplateRow()
         {
             Cells = new List<ExcelDetailTemplateCell>()
@@ -475,6 +488,8 @@ In the following example, the detail row content is formatted by specifying the 
                 }
             }
         });
+
+        // Assign the customized detail rows to the RowInfo.
         args.RowInfo.Rows = excelRows;
     }
 }
@@ -696,7 +711,7 @@ In the following example, the detail row content is formatted by specifying the 
         args.RowInfo.Rows = excelRows;
     }
 
-    // Utility method to convert a list of cell values into an Excel row.
+    // Converts a list of cell values into an Excel row.
     ExcelDetailTemplateRow ProcessExcelRow(List<string> value)
     {
         var cells = new List<ExcelDetailTemplateCell>();
