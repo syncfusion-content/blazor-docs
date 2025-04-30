@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Editing in DataGrid control | Syncfusion
-description: Learn here all about Editing in Syncfusion DataGrid control of Syncfusion Essential JS 2 and more.
+title: Editing in DataGrid | Syncfusion
+description: Learn here all about editing in Syncfusion DataGrid of Syncfusion Essential JS 2 and more.
 platform: Blazor
 control: DataGrid
 documentation: ug

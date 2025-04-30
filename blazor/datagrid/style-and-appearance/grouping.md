@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Grouping in Blazor DataGrid control | Syncfusion
-description: Learn here all about Grouping in Syncfusion Blazor DataGrid control of Syncfusion Essential JS 2 and more.
+title: Grouping in Blazor DataGrid | Syncfusion
+description: Learn here all about grouping in Syncfusion Blazor DataGrid of Syncfusion Essential JS 2 and more.
 platform: Blazor
 control: DataGrid
 documentation: ug

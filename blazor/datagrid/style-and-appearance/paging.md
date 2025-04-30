@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Paging in Blazor DataGrid control | Syncfusion
-description: Learn here all about Paging in Syncfusion Blazor DataGrid control of Syncfusion Essential JS 2 and more.
+title: Paging in Blazor DataGrid | Syncfusion
+description: Learn here all about paging in Syncfusion Blazor DataGrid of Syncfusion Essential JS 2 and more.
 platform: Blazor
 control: DataGrid
 documentation: ug

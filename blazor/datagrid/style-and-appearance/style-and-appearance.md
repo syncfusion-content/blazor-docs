@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Style and appearance in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn here all about State Management in Syncfusion Blazor DataGrid component and more.
+title: Style and appearance in Blazor DataGrid | Syncfusion
+description: Checkout and learn here all about style and appearance in Syncfusion Blazor DataGrid and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
