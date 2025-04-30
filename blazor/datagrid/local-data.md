@@ -252,7 +252,6 @@ The following example demonstrates how an Excel document is uploaded, parsed, co
 
 [!Binding data from Excel document](./images/excel-import-data.gif)
 
-
 ## ExpandoObject binding
 
 The Syncfusion Blazor DataGrid is a generic component typically bound to a specific model type. However, there are scenarios where the model type is unknown during compile time. In such cases, you can bind data to the Grid using a list of **ExpandoObject**. This allows for dynamic data structures that can adapt to various data shapes without a predefined schema.
@@ -516,16 +515,20 @@ N> While binding the Grid datasource dynamically in the form of a list of IEnume
 
 ## HTTP client
 
-It is possible to call web api from the Blazor WebAssembly(client-side) app. This can be used for sending HTTP requests to fetch data from web api and bind them in the DataGrid's data source. The requests are sent using [HttpClient](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-3.0) service.
+In a Blazor WebAssembly (client-side) application, you can call a Web API to fetch data and bind it to a Syncfusion Blazor DataGrid using HTTP requests. The requests are sent using [HttpClient](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-3.0) service.
 
-This can be achieved by initially injecting the `HttpClient` instance in the app.
+This can be achieved by To follow below step,
+
+**Step 1:** Create a Blazor WebAssembly app, and to integrate the Syncfusion Blazor DataGrid, refer to the [Getting Started documentation](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app).
+
+**Step 2:** To send HTTP requests, inject the `HttpClient` service into your Blazor app.
 
 ```cshtml
 @using System.Net.Http
 @inject HttpClient Http
 ```
 
-After that the data to be fetched is defined in the api controller of the Blazor WebAssembly app.
+**Step 3:** Define the data to be fetched in the API controller of the Blazor WebAssembly app.
 
 {% tabs %}
 {% highlight cs tabtitle="EmployeeController.cs" %}
@@ -562,7 +565,7 @@ public class Employee
 {% endhighlight %}
 {% endtabs %}
 
-Then using the `GetFromJsonAsync` method request is sent to the api controller for fetching data which is bounded to the DataGrid's data source
+**Step 4:**  Use the `GetFromJsonAsync` method to send a request to the API controller for fetching data, which is then bound to the Grid data source.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -585,7 +588,7 @@ Then using the `GetFromJsonAsync` method request is sent to the api controller f
 
     protected override async Task OnInitializedAsync()
     {
-        Employees = await Http.GetFromJsonAsync<List<Employee>>("https://localhost:XXXX/api/Employee");
+        Employees = await Http.GetFromJsonAsync<List<Employee>>("https://localhost:XXXX/api/Employee"); //Use remote server host instead number xxxx.
     }
 
     public class Employee
@@ -606,9 +609,9 @@ N> The above steps are processed in the Blazor WebAssembly app which has the pre
 
 An Observable collection is a special type of collection in .NET that automatically notifies any subscribers (such as the UI or other components) when changes are made to the collection. This is particularly useful in data-binding scenarios, where you want the UI to reflect changes in the underlying data model without having to manually update the view.
 
-This [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=netframework-4.8)(dynamic data collection) provides notifications when items added, removed and moved. The implement [INotifyCollectionChanged](https://learn.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=netframework-4.8) notifies when dynamic changes of add,remove, move and clear the collection. The implement [INotifyPropertyChanged](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=netframework-4.8) notifies when property value has changed in client side.
+To achieve this, you can use the [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=netframework-4.8), which is a dynamic data collection that provides notifications when items are added, removed, or moved. It implements the [INotifyCollectionChanged](https://learn.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=netframework-4.8) interface to notify subscribers of changes such as adding, removing, moving, or clearing items in the collection, and also implements the [INotifyPropertyChanged](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=netframework-4.8) interface to notify when a property value changes on the client side.
 
-Here, Order class implements the interface of **INotifyPropertyChanged** and it raises the event when CustomerID property value was changed.
+The following sample demonstrates how the Order class implements the **INotifyPropertyChanged** interface and raises the event when the `CustomerID`property value is changed.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -748,7 +751,7 @@ namespace BlazorApp1.Data
 
 The following screenshot represents the DataGrid with **Observable Collection**.
 
-![Blazor DataGrid with ObservableCollection](./images/b)
+![Blazor DataGrid with ObservableCollection](./images/blazor-datagrid-observable.gif)
 
 N> While using an Observable collection, the added, removed, and changed records are reflected in the UI. But while updating the Observable collection using external actions like timers, events, and other notifications, you need to call the StateHasChanged method to reflect the changes in the UI.
 
@@ -833,3 +836,10 @@ The following sample code demonstrates how to notify when a server-side exceptio
 
 {% endhighlight %}
 {% endtabs %}
+
+![Handling exceptions](./images/error.png)
+
+## See also
+
+* [How to import data from Excel sheet and bind to Blazor Grid](https://support.syncfusion.com/kb/article/11560/how-to-import-data-from-excel-sheet-and-bind-to-blazor-grid)
+* [How to clear all Data from Grid](https://www.syncfusion.com/forums/150965/how-to-clear-all-data-from-grid)
