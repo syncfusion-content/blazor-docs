@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Lazy Load Grouping in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn here all about Lazy Load Grouping in Syncfusion Blazor DataGrid component and much more details.
+title: Local Data in Blazor DataGrid | Syncfusion
+description: Checkout and learn here all about Local Data in Syncfusion Blazor DataGrid and much more.
 platform: Blazor
 control: DataGrid
 documentation: ug
