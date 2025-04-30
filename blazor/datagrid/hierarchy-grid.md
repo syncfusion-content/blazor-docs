@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Hierarchy Grid in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn here all about Hierarchy Grid in Syncfusion Blazor DataGrid component and much more details.
+title: Hierarchy Grid in Blazor DataGrid | Syncfusion
+description: Checkout and learn here all about hierarchy Grid in Syncfusion Blazor DataGrid and much more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
