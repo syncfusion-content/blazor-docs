@@ -81,7 +81,7 @@ This Blazor component is defined in the <strong>RazorClassLibrary</strong> packa
 
 ## Prerequisites
 
-* [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
+[System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
 ## Create a Razor class library in Visual Studio Code
 
