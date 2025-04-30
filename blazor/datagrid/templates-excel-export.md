@@ -640,11 +640,16 @@ In the following example, the detail row content is formatted by specifying the 
     // Handles toolbar click event (for Excel export).
     public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_excelexport")  // Check if the Excel export button is clicked.
+        // Id is the combination of Grid's ID and item name.
+        if (args.Item.Id == "Grid_excelexport")
         {
             ExcelExportProperties ExportProperties = new ExcelExportProperties();
-            ExportProperties.ExcelDetailRowMode = ExcelDetailRowMode.Expand; // Specify that detailed rows should be expanded.
-            await Grid.ExportToExcelAsync(ExportProperties); // Export the data to Excel.
+
+            // Specify that detailed rows should be expanded.
+            ExportProperties.ExcelDetailRowMode = ExcelDetailRowMode.Expand;
+
+            // Export the data to Excel document.
+            await Grid.ExportToExcelAsync(ExportProperties);
         }
     }
 
