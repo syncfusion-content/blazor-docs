@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Globalization in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn here all about Globalization in Syncfusion Blazor DataGrid component and much more.
+title: Globalization in Blazor DataGrid | Syncfusion
+description: Checkout and learn here all about globalization in Syncfusion Blazor DataGrid and much more.
 platform: Blazor
 control: DataGrid
 documentation: ug
