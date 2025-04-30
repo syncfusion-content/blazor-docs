@@ -132,6 +132,8 @@ public class EmployeeData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rjVeZpinSuMCxdjJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+![Exporting with column template](./images/column-template.gif)
+
 ## Exporting with group caption template
 
 The Syncfusion Blazor Grid allows you to export the Grid data along with a custom caption template into an Excel document. This feature can be useful when you want to provide meaningful group captions (e.g., count of records) in the exported Excel document.
@@ -241,6 +243,8 @@ public class OrderData
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rjVejJMmrqlNTnoQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+![Exporting with group caption template](./images/group-caption.gif)
 
 ## Exporting with detail template
 
@@ -570,6 +574,8 @@ public class ProductData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDBSNfWcLSCKHChU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+![Exporting with detail template](./images/detail-template.gif)
+
 ## Exporting hierarchical Grid using detail template
 
 The Syncfusion Blazor DataGrid allows you to export hierarchical Grid data to Excel document using the detail template feature. This is particularly useful for scenarios where data is nested within parent rows (such as employee details and their related orders), and you need to export both the parent and child records to a single Excel document.
@@ -859,3 +865,5 @@ public class OrderDetails
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjBytpWQhgOCVmqd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+![Exporting hierarchical Grid using detail template](./images/hierarchical-detail-template.gif)
