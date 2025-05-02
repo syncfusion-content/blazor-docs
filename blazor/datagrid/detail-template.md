@@ -176,7 +176,7 @@ public static List<EmployeeData> Employees = new List<EmployeeData>();
 
 >You can customize the Grid to display multiple levels of hierarchy using the Detail Template feature.
 
-## Expand child Grid initially
+## Expand detail DataGrid initially
 
 Expanding the detail Grid initially in the Syncfusion Blazor DataGrid is useful when you want the detail rows to be displayed by default upon Grid load. This can be beneficial in scenarios where you want to provide immediate visibility into related or nested data without requiring the you to manually expand each detail row.
 
@@ -473,13 +473,13 @@ public class CustomerDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtrIjIXVTIJFmFjd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Template column in child Grid
+## Template column in detail DataGrid
 
-A template column in a child Grid within the Syncfusion Blazor DataGrid is valuable when you want to customize the appearance and functionality of specific columns in the child Grid. It is useful for incorporating interactive elements, custom formatting, or complex data representation within specific columns of the child Grid.
+A template column in a detail Grid within the Syncfusion Blazor DataGrid is valuable when you want to customize the appearance and functionality of specific columns in the detail Grid. It is useful for incorporating interactive elements, custom formatting, or complex data representation within specific columns of the detail Grid.
 
 To achieve this, you can utilize the `Template` property of a column to display a custom element instead of a field value in the Grid.
 
-The following example demonstrates, how to show a custom image in the **Employee Image** column of the child Grid by utilizing the `Template` property of the column.
+The following example demonstrates, how to show a custom image in the **Employee Image** column of the detail Grid by utilizing the `Template` property of the column.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -614,7 +614,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-![Template column in child Grid](images/hierarchy-grid/hierarchy-grid-template.png)
+![Template column in detail Grid](images/hierarchy-grid/hierarchy-grid-template.png)
 
 ## Expand by external button
 
@@ -1431,13 +1431,13 @@ public static List<EmployeeData> Employees = new List<EmployeeData>();
 
 > [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagrid-set-instance-for-child-component)
 
-## Hide the expand/collapse icon in parent row when no record in child Grid
+## Hide the expand/collapse icon in parent row when no record in detail DataGrid
 
-The Syncfusion Blazor DataGrid allows you to hide the expand/collapse icon in the parent row when there are no records in the child Grid. However, in certain scenarios, you may want to hide the expand/collapse icon for parent rows that do not have any child records, providing a cleaner and more intuitive interface by eliminating unnecessary icons in empty parent rows.
+The Syncfusion Blazor DataGrid allows you to hide the expand/collapse icon in the parent row when there are no records in the detail Grid. However, in certain scenarios, you may want to hide the expand/collapse icon for parent rows that do not have any child records, providing a cleaner and more intuitive interface by eliminating unnecessary icons in empty parent rows.
 
-To achieve this, you can use the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDataBound) event, which is triggered when a row is created in the Grid. In this event, you can check whether the child Grid has any records by inspecting the current record's details and the child Grid's datasource. Based on this condition, you can add a specific class to the row using the `AddClass` method. Then, you can target that row element to hide the expand/collapse icon and disable pointer events.
+To achieve this, you can use the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDataBound) event, which is triggered when a row is created in the Grid. In this event, you can check whether the detail Grid has any records by inspecting the current record's details and the detail Grid's datasource. Based on this condition, you can add a specific class to the row using the `AddClass` method. Then, you can target that row element to hide the expand/collapse icon and disable pointer events.
 
-The following example demonstrates how to hide the expand/collapse icon in the row with **EmployeeID** as **1**, which does not have record in child Grid.
+The following example demonstrates how to hide the expand/collapse icon in the row with **EmployeeID** as **1**, which does not have record in detail Grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1572,13 +1572,13 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtryXzhVUTHNobav?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Render aggregates in child Grid
+## Render aggregates in detail DataGrid
 
-The Aggregates feature in the Syncfusion Blazor DataGrid allows you to display aggregate values in the footer, group footer, and group caption of the child Grid. With this feature, you can easily perform calculations on specific columns and show summary information.
+The Aggregates feature in the Syncfusion Blazor DataGrid allows you to display aggregate values in the footer, group footer, and group caption of the detail Grid. With this feature, you can easily perform calculations on specific columns and show summary information.
 
-Rendering aggregates in a child Grid involves displaying summary data at the footer or group caption of the Grid. This can be particularly useful in hierarchical Grids where each child Grid represents detailed data that needs to be summarized.
+Rendering aggregates in a detail Grid involves displaying summary data at the footer or group caption of the Grid. This can be particularly useful in hierarchical Grids where each detail Grid represents detailed data that needs to be summarized.
 
-The following example demonstrates how to render aggregates in a child Grid to display the sum and maximum values of the **Freight** column.
+The following example demonstrates how to render aggregates in a detail Grid to display the sum and maximum values of the **Freight** column.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1731,28 +1731,28 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LDLSXTVBKnztlkUQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Customize the child Grid
+## Customize the detail DataGrid
 
-The Syncfusion Blazor DataGrid offers various ways to customize the child Grid appearance using both default CSS and custom themes. To access the child Grid elements, you can use the **.e-detailcell** class selector, which targets the child Grid.
+The Syncfusion Blazor DataGrid offers various ways to customize the detail Grid appearance using both default CSS and custom themes. To access the detail Grid elements, you can use the **.e-detailcell** class selector, which targets the detail Grid.
 
 ### Header
 
-You can customize the appearance of the header elements in the child Grid using CSS. Here are examples of how to customize the child Grid header, header cell, and header cell div element.
+You can customize the appearance of the header elements in the detail Grid using CSS. Here are examples of how to customize the detail Grid header, header cell, and header cell div element.
 
-**Customizing the child Grid header**
+**Customizing the detail Grid header**
 
-To customize the appearance of the child Grid header root element, you can use the following CSS code:
+To customize the appearance of the detail Grid header root element, you can use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-headercontent{
     border: 2px solid green;
 }
 ```
-In this example, the **.e-detailcell** class targets the child Grid and **.e-headercontent** targets its header root element. You can modify the `border` property to change the style of the header border. This customization allows you to override the thin line between the header and content of the child Grid.
+In this example, the **.e-detailcell** class targets the detail Grid and **.e-headercontent** targets its header root element. You can modify the `border` property to change the style of the header border. This customization allows you to override the thin line between the header and content of the detail Grid.
 
-![Child header Grid in Blazor.](images/hierarchy-grid/grid-child-header.png)
+![detail header Grid in Blazor.](images/hierarchy-grid/grid-child-header.png)
 
-**Customizing the child Grid header cell**
+**Customizing the detail Grid header cell**
 
 To customize the appearance of the Grid header cell elements, you can use the following CSS code:
 
@@ -1762,13 +1762,13 @@ To customize the appearance of the Grid header cell elements, you can use the fo
     background-color: #1ea8bd;
 }
 ```
-In this example, the **.e-headercell** class targets the header cell elements. You can modify the `color` and `background-color` properties to change the text color and background of the child Grid's header cells.
+In this example, the **.e-headercell** class targets the header cell elements. You can modify the `color` and `background-color` properties to change the text color and background of the deatil Grid's header cells.
 
-![Customize the child Grid header cell in Blazor.](images/hierarchy-grid/grid-child-header-cell.png)
+![Customize the deatil Grid header cell in Blazor.](images/hierarchy-grid/grid-child-header-cell.png)
 
-**Customizing the child Grid header cell div element**
+**Customizing the deatil Grid header cell div element**
 
-To customize the appearance of the child Grid header cell div element, you can use the following CSS code:
+To customize the appearance of the deatil Grid header cell div element, you can use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-headercelldiv {
@@ -1777,17 +1777,17 @@ To customize the appearance of the child Grid header cell div element, you can u
     color: darkblue;
 }
 ```
-In this example, the **.e-headercelldiv** class targets the div element within the header cell of the child Grid. You can modify the `font-size`, `font-weight`, `color` properties to change the font size, font-weight and color of the header text content.
+In this example, the **.e-headercelldiv** class targets the div element within the header cell of the deatil Grid. You can modify the `font-size`, `font-weight`, `color` properties to change the font size, font-weight and color of the header text content.
 
-![child Grid header cell div element in Blazor.](images/hierarchy-grid/grid-child-header-cell-div-element.png)
+![detail Grid header cell div element in Blazor.](images/hierarchy-grid/grid-child-header-cell-div-element.png)
 
 ### Paging
 
-You can customize the appearance of the paging elements in the child Grid using CSS. Here are examples of how to customize the pager root element, pager container element, pager navigation elements, pager page numeric link elements, and pager current page numeric element of the child Grid.
+You can customize the appearance of the paging elements in the deatil Grid using CSS. Here are examples of how to customize the pager root element, pager container element, pager navigation elements, pager page numeric link elements, and pager current page numeric element of the deatil Grid.
 
-**Customizing the child Grid pager root element**
+**Customizing the deatil Grid pager root element**
 
-To customize the appearance of the child Grid pager root element, you can use the following CSS code:
+To customize the appearance of the deatil Grid pager root element, you can use the following CSS code:
 
 ```css
 .e-detailcell .e-grid  .e-gridpager {
@@ -1795,13 +1795,13 @@ To customize the appearance of the child Grid pager root element, you can use th
     background-color: #deecf9;
 }
 ```
-In this example, the **.e-detailcell** class targets the child Grid and the **.e-gridpager** class targets the pager root element. You can modify the `font-family` to change the font family and `background-color` property to change the background color of the pager.
+In this example, the **.e-detailcell** class targets the deatil Grid and the **.e-gridpager** class targets the pager root element. You can modify the `font-family` to change the font family and `background-color` property to change the background color of the pager.
 
 ![Blazor Grid pager root element.](images/hierarchy-grid/child-grid-pager-root-element.png)
 
-**Customizing the child Grid pager container element**
+**Customizing the deatil Grid pager container element**
 
-To customize the appearance of the child Grid pager container element, you can use the following CSS code:
+To customize the appearance of the deatil Grid pager container element, you can use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-pagercontainer {
@@ -1814,9 +1814,9 @@ In this example, the **.e-pagercontainer** class targets the pager container ele
 
 ![Blazor Grid pager container element.](images/hierarchy-grid/grid-child-pager-container-element.png)
 
-**Customizing the child Grid pager navigation elements**
+**Customizing the deatil Grid pager navigation elements**
 
-To customize the appearance of the child Grid pager navigation elements, you can use the following CSS code:
+To customize the appearance of the deatil Grid pager navigation elements, you can use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-gridpager .e-prevpagedisabled,
@@ -1831,13 +1831,13 @@ To customize the appearance of the child Grid pager navigation elements, you can
 }
 ```
 
-In this example, the classes **.e-prevpagedisabled, .e-prevpage, .e-nextpage, .e-nextpagedisabled, .e-lastpagedisabled, .e-lastpage, .e-firstpage,** and **.e-firstpagedisabled** target the various pager navigation elements of the child Grid. You can modify the `background-color` property to change the background color of these elements.
+In this example, the classes **.e-prevpagedisabled, .e-prevpage, .e-nextpage, .e-nextpagedisabled, .e-lastpagedisabled, .e-lastpage, .e-firstpage,** and **.e-firstpagedisabled** target the various pager navigation elements of the deatil Grid. You can modify the `background-color` property to change the background color of these elements.
 
 ![Blazor Grid pager navigation elements.](images/hierarchy-grid/grid-child-pager-navigation-element.png)
 
-**Customizing the child Grid pager page numeric link elements**
+**Customizing the deatil Grid pager page numeric link elements**
 
-To customize the appearance of the child Grid pager current page numeric link elements, you can use the following CSS code:
+To customize the appearance of the deatil Grid pager current page numeric link elements, you can use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-gridpager .e-numericitem {
@@ -1856,9 +1856,9 @@ In this example, the **.e-numericitem** class targets the page numeric link elem
 
 ![Blazor Grid pager numeric link elements.](images/hierarchy-grid/grid-child-page-numeric-link-elements.png)
 
-**Customizing the child Grid pager current page numeric element**
+**Customizing the deatil Grid pager current page numeric element**
 
-To customize the appearance of the child Grid pager current page numeric element, you can use the following CSS code:
+To customize the appearance of the deatil Grid pager current page numeric element, you can use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-gridpager .e-currentitem {
@@ -1873,11 +1873,11 @@ In this example, the **.e-currentitem** class targets the current page numeric i
 
 ### Sorting
 
-You can customize the appearance of the sorting icons and multi sorting icons in the child Grid using CSS.You can use the available Syncfusion [icons](https://blazor.syncfusion.com/documentation/appearance/icons#bootstrap-5) based on your theme. Here's how to do it:
+You can customize the appearance of the sorting icons and multi sorting icons in the deatil Grid using CSS.You can use the available Syncfusion [icons](https://blazor.syncfusion.com/documentation/appearance/icons#bootstrap-5) based on your theme. Here's how to do it:
 
-**Customizing the child Grid sorting icon**
+**Customizing the deatil Grid sorting icon**
 
-To customize the sorting icon that appears in the child Grid header when sorting is applied, you can use the following CSS code:
+To customize the sorting icon that appears in the deatil Grid header when sorting is applied, you can use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-icon-ascending::before {
@@ -1890,13 +1890,13 @@ To customize the sorting icon that appears in the child Grid header when sorting
     /* Icon code for descending order */
 }
 ```
-In this example, the **.e-detailcell** class targets the child Grid and the **.e-icon-ascending::before** class targets the sorting icon for ascending order, and the **.e-icon-descending::before** class targets the sorting icon for descending order.
+In this example, the **.e-detailcell** class targets the deatil Grid and the **.e-icon-ascending::before** class targets the sorting icon for ascending order, and the **.e-icon-descending::before** class targets the sorting icon for descending order.
 
 ![Blazor Grid sorting icon.](images/hierarchy-grid/grid-child-sorting-icons.png)
 
-**Customizing the child Grid multi sorting icon**
+**Customizing the deatil Grid multi sorting icon**
 
-To customize the multi sorting icon that appears in the child Grid header when multiple columns are sorted, you can use the following CSS code:
+To customize the multi sorting icon that appears in the deatil Grid header when multiple columns are sorted, you can use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-sortnumber {
@@ -1911,11 +1911,11 @@ In this example, the **.e-sortnumber** class targets the background color and fo
 
 ### Filtering
 
-You can customize the appearance of filtering elements in the child Grid using CSS. Below are examples of how to customize various filtering elements, including filter bar cell elements, filter bar input elements, focus styles, clear icons, filter icons, filter dialog content, filter dialog footer, filter dialog input elements, filter dialog button elements, and Excel filter dialog number filters.
+You can customize the appearance of filtering elements in the deatil Grid using CSS. Below are examples of how to customize various filtering elements, including filter bar cell elements, filter bar input elements, focus styles, clear icons, filter icons, filter dialog content, filter dialog footer, filter dialog input elements, filter dialog button elements, and Excel filter dialog number filters.
 
-**Customizing the child Grid filter bar cell element**
+**Customizing the deatil Grid filter bar cell element**
 
-To customize the appearance of the filter bar cell element in the child Grid header, you can use the following CSS code:
+To customize the appearance of the filter bar cell element in the deatil Grid header, you can use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-filterbar .e-filterbarcell {
@@ -1923,13 +1923,13 @@ To customize the appearance of the filter bar cell element in the child Grid hea
 }
 
 ```
-In this example, the **.e-detailcell** class targets the child Grid and the **.e-filterbarcell** class targets the filter bar cell element in the child Grid header. You can modify the `background-color` property to change the color of the filter bar cell element.
+In this example, the **.e-detailcell** class targets the deatil Grid and the **.e-filterbarcell** class targets the filter bar cell element in the deatil Grid header. You can modify the `background-color` property to change the color of the filter bar cell element.
 
 ![Blazor Grid filter bar cell element.](images/hierarchy-grid/grid-child-filter-bar-cell-element.png)
 
-**Customizing the child Grid filter bar input element**
+**Customizing the deatil Grid filter bar input element**
 
-To customize the appearance of the filter bar input element in the child Grid header, you can use the following CSS code:
+To customize the appearance of the filter bar input element in the deatil Grid header, you can use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-filterbarcell .e-input-group input.e-input{
@@ -1940,9 +1940,9 @@ In this example, the **.e-filterbarcell** class targets the filter bar cell elem
 
 ![Blazor Grid filter bar input element.](images/hierarchy-grid/grid-child-filter-bar-input-element.png)
 
-**Customizing the child Grid filter bar input focus**
+**Customizing the deatil Grid filter bar input focus**
 
-To customize the appearance of the child Grid's filter bar input element's focus highlight, you can use the following CSS code:
+To customize the appearance of the deatil Grid's filter bar input element's focus highlight, you can use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-filterbarcell .e-input-group.e-input-focus{
@@ -1953,9 +1953,9 @@ In this example, the **.e-filterbarcell** class targets the filter bar cell elem
 
 ![Blazor Grid filter bar input focus.](images/hierarchy-grid/grid-child-filter-bar-input-element-focus.png)
 
-**Customizing the child Grid filter bar input clear icon**
+**Customizing the deatil Grid filter bar input clear icon**
 
-To customize the appearance of the child Grid's filter bar input element's clear icon, you can use the following CSS code:
+To customize the appearance of the deatil Grid's filter bar input element's clear icon, you can use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-filterbarcell .e-input-group .e-clear-icon::before {
@@ -1966,9 +1966,9 @@ In this example, the **.e-clear-icon** class targets the clear icon element with
 
 ![Blazor Grid filter bar input clear icon.](images/hierarchy-grid/child-grid-filter-bar-input-clear-icon.png)
 
-**Customizing the child Grid child Grid filtering icon**
+**Customizing the deatil Grid child Grid filtering icon**
 
-To customize the appearance of the filtering icon in the child Grid header, you can use the following CSS code:
+To customize the appearance of the filtering icon in the deatil Grid header, you can use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-icon-filter::before{
@@ -1979,9 +1979,9 @@ In this example, the **.e-icon-filter** class targets the filtering icon element
 
 ![Blazor Grid filtering icon.](images/hierarchy-grid/grid-child-filtering-icon.png)
 
-**Customizing the child Grid filter dialog content**
+**Customizing the deatil Grid filter dialog content**
 
-To customize the appearance of the child Grid's filter dialog's content element, you can use the following CSS code:
+To customize the appearance of the deatil Grid's filter dialog's content element, you can use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-filter-popup .e-dlg-content {
@@ -1992,9 +1992,9 @@ In this example, the **.e-filter-popup .e-dlg-content** classes target the conte
 
 ![Blazor Grid filter dialog content.](images/hierarchy-grid/grid-child-filter-dialog-content.png)
 
-**Customizing the child Grid filter dialog footer**
+**Customizing the deatil Grid filter dialog footer**
 
-To customize the appearance of the child Grid's filter dialog's footer element, you can use the following CSS code:
+To customize the appearance of the deatil Grid's filter dialog's footer element, you can use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-filter-popup .e-footer-content {
@@ -2005,9 +2005,9 @@ In this example, the **.e-filter-popup .e-footer-content** classes target the fo
 
 ![Blazor Grid filter dialog footer.](images/hierarchy-grid/child-grid-filter-dialog-footer.png)
 
-**Customizing the child Grid filter dialog input element**
+**Customizing the deatil Grid filter dialog input element**
 
-To customize the appearance of the child Grid's filter dialog's input elements, you can use the following CSS code:
+To customize the appearance of the deatil Grid's filter dialog's input elements, you can use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-filter-popup .e-input-group input.e-input{
@@ -2018,9 +2018,9 @@ In this example, the **.e-filter-popup** class targets the filter dialog, and th
 
 ![Blazor Grid filter dialog input element.](images/hierarchy-grid/grid-child-filter-dialog-input-element.png)
 
-**Customizing the child Grid filter dialog button element**
+**Customizing the deatil Grid filter dialog button element**
 
-To customize the appearance of the child Grid's filter dialog's button elements, you can use the following CSS code:
+To customize the appearance of the deatil Grid's filter dialog's button elements, you can use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-filter-popup .e-btn{
@@ -2031,9 +2031,9 @@ In this example, the **.e-filter-popup** class targets the filter dialog, and th
 
 ![Blazor Grid filter dialog button element.](images/hierarchy-grid/grid-child-filter-dialog-button-element.png)
 
-**Customizing the child Grid Excel filter dialog number filters element**
+**Customizing the deatil Grid Excel filter dialog number filters element**
 
-To customize the appearance of the Excel filter dialog's number filters in the child Grid, you can use the following CSS code:
+To customize the appearance of the Excel filter dialog's number filters in the deatil Grid, you can use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-filter-popup .e-contextmenu {
@@ -2046,24 +2046,24 @@ In this example, the **.e-filter-popup .e-contextmenu-wrapper** ul classes targe
 
 ### Grouping
 
-You can customize the appearance of grouping elements in the child Grid using CSS. Here are examples of how to customize the group header, group expand/collapse icons, group caption row, and grouping indent cell.
+You can customize the appearance of grouping elements in the deatil Grid using CSS. Here are examples of how to customize the group header, group expand/collapse icons, group caption row, and grouping indent cell.
 
-**Customizing the child Grid group header**
+**Customizing the deatil Grid group header**
 
-To customize the appearance of the child Grid's group header element, you can use the following CSS code:
+To customize the appearance of the deatil Grid's group header element, you can use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-groupdroparea {
     background-color: #132f49;
 }
 ```
-In this example, the **.e-detailcell** class targets the child Grid and the **.e-groupdroparea** class targets the group header element. You can modify the `background-color` property to change the color of the group header.
+In this example, the **.e-detailcell** class targets the deatil Grid and the **.e-groupdroparea** class targets the group header element. You can modify the `background-color` property to change the color of the group header.
 
-![child Grid group header in Blazor.](images/hierarchy-grid/grid-child-group-header.png)
+![detail Grid group header in Blazor.](images/hierarchy-grid/grid-child-group-header.png)
 
-**Customizing the child Grid group expand or collapse icons**
+**Customizing the deatil Grid group expand or collapse icons**
 
-To customize the appearance of the group expand/collapse icons in the child Grid, you can use the following CSS code:
+To customize the appearance of the group expand/collapse icons in the deatil Grid, you can use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-icon-gdownarrow::before{
@@ -2076,11 +2076,11 @@ To customize the appearance of the group expand/collapse icons in the child Grid
 
 In this example, the **.e-icon-gdownarrow** and **.e-icon-grightarrow** classes target the expand and collapse icons, respectively. You can modify the `content` property to change the icon displayed. You can use the available Syncfusion<sup style="font-size:70%">&reg;</sup> icons based on your theme.
 
-![child Grid group expand or collapse icons in Blazor.](images/hierarchy-grid/grid-child-group-expand-or-collapse-icons.png)
+![detail Grid group expand or collapse icons in Blazor.](images/hierarchy-grid/grid-child-group-expand-or-collapse-icons.png)
 
-**Customizing the child Grid group caption row**
+**Customizing the deatil Grid group caption row**
 
-To customize the appearance of the child Grid's group caption row and the icons indicating record expansion or collapse, you can use the following CSS code:
+To customize the appearance of the deatil Grid's group caption row and the icons indicating record expansion or collapse, you can use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-groupcaption {
@@ -2095,11 +2095,11 @@ To customize the appearance of the child Grid's group caption row and the icons 
 
 In this example, the **.e-groupcaption** class targets the group caption row element, and the **.e-recordplusexpand** and **.e-recordpluscollapse** classes target the icons indicating record expansion or collapse. You can modify the `background-color` property to change the color of these elements.
 
-![child Grid group caption row in Blazor.](images/hierarchy-grid/child-grid-group-caption-row.png)
+![detail Grid group caption row in Blazor.](images/hierarchy-grid/child-grid-group-caption-row.png)
 
-**Customizing the child Grid grouping indent cell**
+**Customizing the deatil Grid grouping indent cell**
 
-To customize the appearance of the child Grid's grouping indent cell element, you can use the following CSS code:
+To customize the appearance of the deatil Grid's grouping indent cell element, you can use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-indentcell {
@@ -2109,15 +2109,15 @@ To customize the appearance of the child Grid's grouping indent cell element, yo
 
 In this example, the **.e-indentcell** class targets the grouping indent cell element. You can modify the `background-color` property to change the color of the indent cell.
 
-![child Grid grouping indent cell in Blazor.](images/hierarchy-grid/child-grid-indent-cell.png)
+![detail Grid grouping indent cell in Blazor.](images/hierarchy-grid/child-grid-indent-cell.png)
 
 ### Toolbar
 
-You can customize the appearance of the toolbar in the child Grid using CSS. Here are examples of how to customize the toolbar root element and toolbar button element.
+You can customize the appearance of the toolbar in the deatil Grid using CSS. Here are examples of how to customize the toolbar root element and toolbar button element.
 
-**Customizing the child Grid toolbar root element**
+**Customizing the deatil Grid toolbar root element**
 
-To customize the appearance of the child Grid's toolbar root element, you can use the following CSS code:
+To customize the appearance of the deatil Grid's toolbar root element, you can use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-toolbar-items {
@@ -2125,13 +2125,13 @@ To customize the appearance of the child Grid's toolbar root element, you can us
 }
 ```
 
-In this example, the **.e-detailcell** class targets the child Grid and the **.e-toolbar-items** class targets the background color of the toolbar root element. You can modify the `background-color` property to change the background color of the toolbar.
+In this example, the **.e-detailcell** class targets the deatil Grid and the **.e-toolbar-items** class targets the background color of the toolbar root element. You can modify the `background-color` property to change the background color of the toolbar.
 
-![child Grid toolbar root element in Blazor.](images/hierarchy-grid/child-grid-toolbar-root-element.png)
+![detail Grid toolbar root element in Blazor.](images/hierarchy-grid/child-grid-toolbar-root-element.png)
 
-**Customizing the child Grid toolbar button element**
+**Customizing the deatil Grid toolbar button element**
 
-To customize the appearance of the child Grid's toolbar buttons, you can use the following CSS code:
+To customize the appearance of the deatil Grid's toolbar buttons, you can use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-toolbar .e-btn {
@@ -2141,15 +2141,15 @@ To customize the appearance of the child Grid's toolbar buttons, you can use the
 
 In this example, the **.e-toolbar .e-btn** selector targets the background color of the toolbar button elements. You can modify the `background-color` property to change the background color of the toolbar buttons.
 
-![child Grid toolbar button element in Blazor.](images/hierarchy-grid/child-grid-toolbar-button-element.png)
+![detail Grid toolbar button element in Blazor.](images/hierarchy-grid/child-grid-toolbar-button-element.png)
 
 ### Editing
 
-You can customize the appearance of editing-related elements in the child Grid using CSS. Below are examples of how to customize various editing-related elements.
+You can customize the appearance of editing-related elements in the deatil Grid using CSS. Below are examples of how to customize various editing-related elements.
 
-**Customizing the child Grid edited and added row element**
+**Customizing the deatil Grid edited and added row element**
 
-To customize the appearance of edited and added row table elements in the child Grid, you can use the following CSS code:
+To customize the appearance of edited and added row table elements in the deatil Grid, you can use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-editedrow table, 
@@ -2157,14 +2157,14 @@ To customize the appearance of edited and added row table elements in the child 
 	background-color: #62b2eb;
 }
 ```
-In this example, the **.e-detailcell** class targets the child Grid and the .**e-editedrow** class represents the edited row element, and the **.e-addedrow** class represents the added row element. You can modify the `background-color` property to change the color of these row table elements.
+In this example, the **.e-detailcell** class targets the deatil Grid and the .**e-editedrow** class represents the edited row element, and the **.e-addedrow** class represents the added row element. You can modify the `background-color` property to change the color of these row table elements.
 
-![child Grid customizing the edited row element in Blazor.](images/hierarchy-grid/child-grid-edited-row-element.png)
-![child Grid customizing the added row element in Blazor.](images/hierarchy-grid/child-grid-added-row-element.png)
+![detail Grid customizing the edited row element in Blazor.](images/hierarchy-grid/child-grid-edited-row-element.png)
+![detail Grid customizing the added row element in Blazor.](images/hierarchy-grid/child-grid-added-row-element.png)
 
-**Customizing the child Grid edited row input element**
+**Customizing the deatil Grid edited row input element**
 
-To customize the appearance of edited row input elements in the child Grid, you can use the following CSS code:
+To customize the appearance of edited row input elements in the deatil Grid, you can use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-editedrow .e-input-group input.e-input{
@@ -2174,11 +2174,11 @@ To customize the appearance of edited row input elements in the child Grid, you 
 ```
 In this example, the **.e-editedrow** class represents the edited row element, and the **.e-input** class represents the input elements within the form. You can modify the `font-family` property to change the font and `color` property  to change text color of the input elements.
 
-![child Grid customizing the edited row input element in Blazor.](images/hierarchy-grid/child-grid-edited-row-input-element.png)
+![detail Grid customizing the edited row input element in Blazor.](images/hierarchy-grid/child-grid-edited-row-input-element.png)
 
-**Customizing the child Grid edit dialog header element**
+**Customizing the detail Grid edit dialog header element**
 
-To customize the appearance of the edit dialog header element in the child Grid, you can use the following CSS code:
+To customize the appearance of the edit dialog header element in the detail Grid, you can use the following CSS code:
 
 ```css
 .e-edit-dialog .e-dlg-header-content {
@@ -2187,11 +2187,11 @@ To customize the appearance of the edit dialog header element in the child Grid,
 ```
 In this example, the **.e-edit-dialog** class represents the edit dialog, and the **.e-dlg-header-content** class targets the header content within the dialog. You can modify the `background-color` property to change the color of the header element.
 
-![child Grid customizing the edit dialog header element in Blazor.](images/hierarchy-grid/child-grid-edit-dialog-header-element.png)
+![detail Grid customizing the edit dialog header element in Blazor.](images/hierarchy-grid/child-grid-edit-dialog-header-element.png)
 
-**Customizing the child Grid command column buttons**
+**Customizing the detail Grid command column buttons**
 
-To customize the appearance of the child Grid's command column buttons such as edit, delete, update, and cancel, you can use the following CSS code:
+To customize the appearance of the detail Grid's command column buttons such as edit, delete, update, and cancel, you can use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-delete::before ,.e-grid .e-cancel-icon::before{
@@ -2203,16 +2203,16 @@ To customize the appearance of the child Grid's command column buttons such as e
 ```
 In this example, the **.e-edit, .e-delete, .e-update, and .e-cancel-icon** classes represent the respective command column buttons. You can modify the `color` property to change the color of these buttons.
 
-![child Grid customize command column button in Blazor.](images/hierarchy-grid/child-grid-command-button.png)
-![child Grid customize command column button in Blazor.](images/hierarchy-grid/child-grid-next-command-button.png)
+![detail Grid customize command column button in Blazor.](images/hierarchy-grid/child-grid-command-button.png)
+![detail Grid customize command column button in Blazor.](images/hierarchy-grid/child-grid-next-command-button.png)
 
 ### Aggregate
 
-You can customize the appearance of aggregate elements in the child Grid using CSS. Below are examples of how to customize the aggregate root element and the aggregate cell elements.
+You can customize the appearance of aggregate elements in the detail Grid using CSS. Below are examples of how to customize the aggregate root element and the aggregate cell elements.
 
-**Customizing the child Grid aggregate root element**
+**Customizing the detail Grid aggregate root element**
 
-To customize the appearance of the child Grid's aggregate root elements, you can use the following CSS code:
+To customize the appearance of the detail Grid's aggregate root elements, you can use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-gridfooter {
@@ -2220,13 +2220,13 @@ To customize the appearance of the child Grid's aggregate root elements, you can
 }
 ```
 
-In this example, the **.e-detailcell** class targets the child Grid and the **e-gridfooter** class represents the root element of the aggregate row in the grid footer. You can modify the `font-family` property to change the font of the aggregate root element.
+In this example, the **.e-detailcell** class targets the detail Grid and the **e-gridfooter** class represents the root element of the aggregate row in the grid footer. You can modify the `font-family` property to change the font of the aggregate root element.
 
-![child Grid customize aggregate root element in Blazor.](images/hierarchy-grid/child-grid-aggregate-root-element.png)
+![detail Grid customize aggregate root element in Blazor.](images/hierarchy-grid/child-grid-aggregate-root-element.png)
 
-**Customizing the child Grid aggregate cell elements**
+**Customizing the detail Grid aggregate cell elements**
 
-To customize the appearance of the child Grid's aggregate cell elements (summary row cell elements), you can use the following CSS code:
+To customize the appearance of the detail Grid's aggregate cell elements (summary row cell elements), you can use the following CSS code:
 
 ```css
 .e-detailcell .e-grid .e-summaryrow .e-summarycell {
@@ -2236,28 +2236,28 @@ To customize the appearance of the child Grid's aggregate cell elements (summary
 
 In this example, the **e-summaryrow** class represents the summary row containing aggregate cells, and the **e-summarycell** class targets individual aggregate cells within the summary row. You can modify the `background-color` property to change the `color` of the aggregate cell elements.
 
-![child Grid customize aggregate cell element in Blazor.](images/hierarchy-grid/child-grid-aggregate-cell-element.png)
+![detail Grid customize aggregate cell element in Blazor.](images/hierarchy-grid/child-grid-aggregate-cell-element.png)
 
 ### Selection
 
-You can customize the appearance of the selection in the child Grid using CSS. Here are examples of how to customize the row selection background, cell selection background, and column selection background.
+You can customize the appearance of the selection in the detail Grid using CSS. Here are examples of how to customize the row selection background, cell selection background, and column selection background.
 
-**Customizing the child Grid row selection background**
+**Customizing the detail Grid row selection background**
 
-To customize the appearance of the child Grid's row selection, you can use the following CSS code:
+To customize the appearance of the detail Grid's row selection, you can use the following CSS code:
 
 ```css
 .e-detailcell .e-grid td.e-selectionbackground {
     background-color: #00b7ea;
 }
 ```
-In this example, the **.e-detailcell** class targets the child Grid and the **.e-selectionbackground** class targets the background color of the row selection. You can modify the `background-color` property to change the background color of the selected rows.
+In this example, the **.e-detailcell** class targets the detail Grid and the **.e-selectionbackground** class targets the background color of the row selection. You can modify the `background-color` property to change the background color of the selected rows.
 
-![child Grid row selection in Blazor.](images/hierarchy-grid/child-grid-row-selection.png)
+![detail Grid row selection in Blazor.](images/hierarchy-grid/child-grid-row-selection.png)
 
-**Customizing the child Grid cell selection background**
+**Customizing the detail Grid cell selection background**
 
-To customize the appearance of the child Grid's cell selection, you can use the following CSS code:
+To customize the appearance of the deatil Grid's cell selection, you can use the following CSS code:
 
 ```css
 .e-detailcell .e-grid td.e-cellselectionbackground {
@@ -2267,7 +2267,7 @@ To customize the appearance of the child Grid's cell selection, you can use the 
 
 In this example, the **.e-cellselectionbackground** class targets the background color of the cell selection. You can modify the `background-color` property to change the background color of the selected cells.
 
-![child Grid cell selection in Blazor.](images/hierarchy-grid/child-grid-cell-selection.png)
+![detail Grid cell selection in Blazor.](images/hierarchy-grid/child-grid-cell-selection.png)
 
 ## Limitations
 
