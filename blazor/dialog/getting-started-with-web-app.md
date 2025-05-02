@@ -261,7 +261,7 @@ The dialog component is maintained in the DOM after hiding the dialog when the [
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVfjCBaAUCATHQS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDVfjCBaAUCATHQS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage 
 ![Prerender Blazor Dialog](./images/blazor-prerender-dialog.png)
 
 ## Modal Blazor dialog
@@ -331,8 +331,7 @@ The Dialog header can be enabled by adding the header content as text or HTML co
 
 {% endhighlight %}
 {% endtabs %}
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrJZWrYAArBuqod?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5"  %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDrJZWrYAArBuqod?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage
 ![Blazor Dialog with Header](./images/blazor-dialog-header.png)
 
 ## Render Blazor Dialog with buttons
@@ -390,7 +389,7 @@ By adding the [DialogButtons](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVpjWVkggLndKKB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVpjWVkggLndKKB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage
 ![Blazor Dialog with Buttons](./images/blazor-dialog-buttons.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/Dialog).
