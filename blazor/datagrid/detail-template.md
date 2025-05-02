@@ -174,6 +174,8 @@ public static List<EmployeeData> Employees = new List<EmployeeData>();
 
 ![Blazor DataGrid with Detail Template](./images/blazor-datagrid-detail-template.png)
 
+>You can customize the Grid to display multiple levels of hierarchy using the Detail Template feature.
+
 ## Expand child Grid initially
 
 Expanding the detail Grid initially in the Syncfusion Blazor DataGrid is useful when you want the detail rows to be displayed by default upon Grid load. This can be beneficial in scenarios where you want to provide immediate visibility into related or nested data without requiring the you to manually expand each detail row.
@@ -303,183 +305,173 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXBotJBVqIGMRxXj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Rendering custom component
+## Creating custom component/Hierarchical DataGrid 
 
-The Grid component provides a powerful feature that allows you to render custom components inside the detail row. This feature is helpful when you need to add additional information or functionality for a specific row in the grid.
+The Syncfusion Blazor Grid component provides a powerful feature to display hierarchical data by using nested grids or rendering custom components inside the detail row of a parent Grid. This feature is especially useful when you need to display related child records (such as orders and customer details) under a parent record (like employees), all within a structured interface. It also allows you to add additional information or functionality for a specific row in the Grid.
 
-To render the custom component inside the detail row, define the template in the [DetailTemplate](./templates/#detailtemplates-component) and render the custom component in any of the detail row element.
+To render a custom component or create a Hierarchical Grid inside the detail row, you define the template in the [DetailTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_DetailTemplate) within the `GridTemplates` section. This template enables you to render either custom components or a child Grid in the detail row of each parent Grid element.
 
-In the following sample, a DataGrid component is rendered as custom component using detailed row details.
+In the following sample, the detail template feature of the DataGrid is used to display parent-child relationship data in a hierarchical structure, rendered as a custom component in the Grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
-@page "/"
+
 @using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.Data
-@using BlazorApp1.Data
 
-<SfGrid @ref="Grid" DataSource="@Employees">
-<GridTemplates>
-<DetailTemplate>
-@{
-var order = (context as OrderData);
-var employee = (context as EmployeeData);
-
-                <SfGrid DataSource="@Orders" Query="@(new Query().Where("EmployeeID", "equal", employee.EmployeeID))">
-                    <GridColumns>
-                        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="OrderID" Width="110"> </GridColumn>
-                        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="110"></GridColumn>
-                        <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="ShipCountry" Width="110"></GridColumn>
-                    </GridColumns>
-                </SfGrid>
+<SfGrid DataSource="@Employees" Height="315px" TValue="EmployeeData">
+    <GridTemplates>
+        <DetailTemplate Context="employeeContext">
+            @{
+                var employee = (EmployeeData)employeeContext;
             }
+            <SfGrid DataSource="@Orders" Query="@(new Query().Where(nameof(OrderData.EmployeeID), "equal", employee.EmployeeID))" TValue="OrderData">
+                <GridTemplates>
+                    <DetailTemplate Context="orderContext">
+                        @{
+                            var order = (OrderData)orderContext;
+                        }
+                        <SfGrid DataSource="@Customers" Query="@(new Query().Where(nameof(CustomerDetails.CustomerID), "equal", order.CustomerID))" TValue="CustomerDetails">
+                            <GridColumns>
+                                <GridColumn Field=@nameof(CustomerDetails.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
+                                <GridColumn Field=@nameof(CustomerDetails.ContactTitle) HeaderText="Title" Width="120"></GridColumn>
+                                <GridColumn Field=@nameof(CustomerDetails.Address) HeaderText="Address" Width="150"></GridColumn>
+                                <GridColumn Field=@nameof(CustomerDetails.Country) HeaderText="Country" Width="100"></GridColumn>
+                            </GridColumns>
+                        </SfGrid>
+                    </DetailTemplate>
+                </GridTemplates>
+                <GridColumns>
+                    <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></GridColumn>
+                    <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
+                    <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="120"></GridColumn>
+                    <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="150"></GridColumn>
+                </GridColumns>
+            </SfGrid>
         </DetailTemplate>
     </GridTemplates>
     <GridColumns>
-        <GridColumn Field=@nameof(EmployeeData.FirstName) HeaderText="First Name" Width="110"> </GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.LastName) HeaderText="Last Name" Width="110"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Title" Width="110"></GridColumn>
-        <GridColumn Field=@nameof(EmployeeData.Country) HeaderText="Country" Width="110"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.EmployeeID) HeaderText="Employee ID" Width="120" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.FirstName) HeaderText="First Name" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.LastName) HeaderText="Last Name" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(EmployeeData.Country) HeaderText="Country" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-<style type="text/css" class="cssStyles">
-    .detailtable td {
-        font-size: 13px;
-        padding: 4px;
-        max-width: 0;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-</style>
-
 @code {
-private SfGrid<EmployeeData> Grid;
-public List<EmployeeData> Employees { get; set; }
-public List<OrderData> Orders { get; set; }
+    public List<EmployeeData> Employees { get; set; }
+    public List<OrderData> Orders { get; set; }
+    public List<CustomerDetails> Customers { get; set; }
+
     protected override void OnInitialized()
     {
         Employees = EmployeeData.GetAllRecords();
         Orders = OrderData.GetAllRecords();
+        Customers = CustomerDetails.GetAllRecords();
     }
 }
+
 {% endhighlight %}
+
 {% highlight c# tabtitle="OrderData.cs" %}
-namespace BlazorApp1.Data
-{
+
 public class OrderData
 {
-public static List<OrderData> Orders = new List<OrderData>();
-
-        public OrderData() { }
-
-        public OrderData(int? OrderID, string CustomerID, string ShipName, double Freight, DateTime? OrderDate, DateTime? ShippedDate, bool? IsVerified, string ShipCity, string ShipCountry, int employeeID)
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+    public int EmployeeID { get; set; }
+    public static List<OrderData> GetAllRecords()
+    {
+        return new List<OrderData>
         {
-            this.OrderID = OrderID;
-            this.CustomerID = CustomerID;
-            this.ShipName = ShipName;
-            this.Freight = Freight;
-            this.OrderDate = OrderDate;
-            this.ShippedDate = ShippedDate;
-            this.IsVerified = IsVerified;
-            this.ShipCity = ShipCity;
-            this.ShipCountry = ShipCountry;
-            this.EmployeeID = employeeID;
-        }
-
-        public static List<OrderData> GetAllRecords()
-        {
-            if (Orders.Count == 0)
-            {
-                Orders.Add(new OrderData(10248, "VINET", "Vins et alcools Chevalier", 32.38, new DateTime(1996, 7, 4), new DateTime(1996, 08, 07), true, "Reims", "France", 1));
-                Orders.Add(new OrderData(10249, "TOMSP", "Toms Spezialitäten", 11.61, new DateTime(1996, 7, 5), new DateTime(1996, 08, 07), false, "Münster", "Germany", 2));
-                Orders.Add(new OrderData(10250, "HANAR", "Hanari Carnes", 65.83, new DateTime(1996, 7, 6), new DateTime(1996, 08, 07), true, "Rio de Janeiro", "Brazil", 3));
-                Orders.Add(new OrderData(10251, "VINET", "Vins et alcools Chevalier", 41.34, new DateTime(1996, 7, 7), new DateTime(1996, 08, 07), false, "Lyon", "France", 1));
-                Orders.Add(new OrderData(10252, "SUPRD", "Suprêmes délices", 151.30, new DateTime(1996, 7, 8), new DateTime(1996, 08, 07), true, "Charleroi", "Belgium", 2));
-                Orders.Add(new OrderData(10253, "HANAR", "Hanari Carnes", 58.17, new DateTime(1996, 7, 9), new DateTime(1996, 08, 07), false, "Bern", "Switzerland", 3));
-                Orders.Add(new OrderData(10254, "CHOPS", "Chop-suey Chinese", 22.98, new DateTime(1996, 7, 10), new DateTime(1996, 08, 07), true, "Genève", "Switzerland", 2));
-                Orders.Add(new OrderData(10255, "VINET", "Vins et alcools Chevalier", 148.33, new DateTime(1996, 7, 11), new DateTime(1996, 08, 07), false, "Resende", "Brazil", 1));
-                Orders.Add(new OrderData(10256, "HANAR", "Hanari Carnes", 13.97, new DateTime(1996, 7, 12), new DateTime(1996, 08, 07), true, "Paris", "France", 3));
-            }
-            return Orders;
-        }
-
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public string ShipName { get; set; }
-        public double? Freight { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public DateTime? ShippedDate { get; set; }
-        public bool? IsVerified { get; set; }
-        public string ShipCity { get; set; }
-        public string ShipCountry { get; set; }
-        public int EmployeeID { get; set; }
+            new OrderData { OrderID = 10248, CustomerID = "VINET", ShipCity = "Reims", ShipName = "Vins et alcools Chevalier", EmployeeID = 5 },
+            new OrderData { OrderID = 10249, CustomerID = "TOMSP", ShipCity = "Münster", ShipName = "Toms Spezialitäten", EmployeeID = 6 },
+            new OrderData { OrderID = 10250, CustomerID = "HANAR", ShipCity = "Rio de Janeiro", ShipName = "Hanari Carnes", EmployeeID = 4 },
+            new OrderData { OrderID = 10251, CustomerID = "VICTE", ShipCity = "Lyon", ShipName = "Victuailles en stock", EmployeeID = 3 },
+            new OrderData { OrderID = 10252, CustomerID = "SUPRD", ShipCity = "Charleroi", ShipName = "Suprêmes délices", EmployeeID = 2 },
+            new OrderData { OrderID = 10253, CustomerID = "HANAR", ShipCity = "Rio de Janeiro", ShipName = "Hanari Carnes", EmployeeID = 7 },
+            new OrderData { OrderID = 10254, CustomerID = "CHOPS", ShipCity = "Bern", ShipName = "Chop-suey Chinese", EmployeeID = 5 },
+            new OrderData { OrderID = 10255, CustomerID = "RICSU", ShipCity = "Genève", ShipName = "Richter Supermarkt", EmployeeID = 9 },
+            new OrderData { OrderID = 10256, CustomerID = "WELLI", ShipCity = "Resende", ShipName = "Wellington Importadora", EmployeeID = 3 },
+            new OrderData { OrderID = 10257, CustomerID = "HILAA", ShipCity = "San Cristóbal", ShipName = "HILARION-Abastos", EmployeeID = 4 },
+            new OrderData { OrderID = 10258, CustomerID = "ERNSH", ShipCity = "Graz", ShipName = "Ernst Handel", EmployeeID = 1 },
+            new OrderData { OrderID = 10259, CustomerID = "CENTC", ShipCity = "México D.F.", ShipName = "Centro comercial Moctezuma", EmployeeID = 4 },
+            new OrderData { OrderID = 10260, CustomerID = "OTTIK", ShipCity = "Köln", ShipName = "Ottilies Käseladen", EmployeeID = 4 },
+            new OrderData { OrderID = 10261, CustomerID = "QUEDE", ShipCity = "Rio de Janeiro", ShipName = "Que Delícia", EmployeeID = 4 },
+            new OrderData { OrderID = 10262, CustomerID = "RATTC", ShipCity = "Albuquerque", ShipName = "Rattlesnake Canyon Grocery", EmployeeID = 8 }
+        };
     }
 }
 
 {% endhighlight %}
+
 {% highlight c# tabtitle="EmployeeData.cs" %}
-namespace BlazorApp1.Data
-{
+
 public class EmployeeData
 {
-public static List<EmployeeData> Employees = new List<EmployeeData>();
+    public int EmployeeID { get; set; }
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+    public string Country { get; set; }
 
-        public EmployeeData() { }
-
-        public EmployeeData(int EmployeeID, string FirstName, string LastName, string Title, string Country, string City, DateTime HireDate)
+    public static List<EmployeeData> GetAllRecords()
+    {
+        return new List<EmployeeData>
         {
-            this.EmployeeID = EmployeeID;
-            this.FirstName = FirstName;
-            this.LastName = LastName;
-            this.Title = Title;
-            this.Country = Country;
-            this.City = City;
-            this.HireDate = HireDate;
-        }
+            new EmployeeData { EmployeeID = 1, FirstName = "Nancy", LastName = "Davolio", Country = "USA" },
+            new EmployeeData { EmployeeID = 2, FirstName = "Andrew", LastName = "Fuller", Country = "UK" },
+            new EmployeeData { EmployeeID = 3, FirstName = "Janet", LastName = "Leverling", Country = "USA" },
+            new EmployeeData { EmployeeID = 4, FirstName = "Margaret", LastName = "Peacock", Country = "Canada" },
+            new EmployeeData { EmployeeID = 5, FirstName = "Steven", LastName = "Buchanan", Country = "USA" },
+            new EmployeeData { EmployeeID = 6, FirstName = "Michael", LastName = "Suyama", Country = "Japan" },
+            new EmployeeData { EmployeeID = 7, FirstName = "Robert", LastName = "King", Country = "UK" },
+            new EmployeeData { EmployeeID = 8, FirstName = "Laura", LastName = "Callahan", Country = "USA" },
+            new EmployeeData { EmployeeID = 9, FirstName = "Anne", LastName = "Dodsworth", Country = "Germany" },
+            new EmployeeData { EmployeeID = 10, FirstName = "Paul", LastName = "Henriot", Country = "France" },
+            new EmployeeData { EmployeeID = 11, FirstName = "Thomas", LastName = "Hardy", Country = "UK" },
+            new EmployeeData { EmployeeID = 12, FirstName = "Maria", LastName = "Anders", Country = "Germany" }
+        };
+    }
+}
 
-        public static List<EmployeeData> GetAllRecords()
+{% endhighlight %}
+
+{% highlight c# tabtitle="CustomerDetails.cs" %}
+
+public class CustomerDetails
+{
+    public string CustomerID { get; set; }
+    public string ContactTitle { get; set; }
+    public string Country { get; set; }
+    public string Address { get; set; }
+
+    public static List<CustomerDetails> GetAllRecords()
+    {
+        return new List<CustomerDetails>
         {
-            if (Employees.Count == 0)
-            {
-                var firstNames = new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" };
-                var lastNames = new string[] { "Davolio", "Fuller", "Leverling", "Peacock", "Buchanan" };
-                var titles = new string[] { "Sales Representative", "Vice President, Sales", "Sales Manager", "Inside Sales Coordinator" };
-                var countries = new string[] { "USA", "UK", "UAE", "NED", "BER" };
-                var cities = new string[] { "New York", "London", "Dubai", "Amsterdam", "Berlin" };
-
-                Random random = new Random();
-                for (int i = 1; i <= 5; i++)
-                {
-                    Employees.Add(new EmployeeData(
-                        i,
-                        firstNames[random.Next(firstNames.Length)],
-                        lastNames[random.Next(lastNames.Length)],
-                        titles[random.Next(titles.Length)],
-                        countries[random.Next(countries.Length)],
-                        cities[random.Next(cities.Length)],
-                        DateTime.Now.AddDays(-random.Next(1000, 5000))
-                    ));
-                }
-            }
-            return Employees;
-        }
-
-        public int EmployeeID { get; set; }
-        public string? FirstName { get; set; }
-        public string? LastName { get; set; }
-        public string? Title { get; set; }
-        public string? Country { get; set; }
-        public string? City { get; set; }
-        public DateTime HireDate { get; set; }
+            new CustomerDetails { CustomerID = "VINET", ContactTitle = "Vins et alcools Chevalier", Country = "France", Address = "59 rue de l'Abbaye" },
+            new CustomerDetails { CustomerID = "TOMSP", ContactTitle = "Toms Spezialitäten", Country = "Germany", Address = "Luisenstr. 48" },
+            new CustomerDetails { CustomerID = "HANAR", ContactTitle = "Hanari Carnes", Country = "Brazil", Address = "Rua do Paço, 67" },
+            new CustomerDetails { CustomerID = "VICTE", ContactTitle = "Victuailles en stock", Country = "France", Address = "1 rue de la Paix" },
+            new CustomerDetails { CustomerID = "SUPRD", ContactTitle = "Suprêmes délices", Country = "Belgium", Address = "Boulevard de l'Indépendance" },
+            new CustomerDetails { CustomerID = "CHOPS", ContactTitle = "Chop-suey Chinese", Country = "Switzerland", Address = "Münsterstr. 16" },
+            new CustomerDetails { CustomerID = "RICSU", ContactTitle = "Richter Supermarkt", Country = "Switzerland", Address = "Hauptstr. 45" },
+            new CustomerDetails { CustomerID = "WELLI", ContactTitle = "Wellington Importadora", Country = "Brazil", Address = "Rua dos Três Irmãos" },
+            new CustomerDetails { CustomerID = "HILAA", ContactTitle = "HILARION-Abastos", Country = "Venezuela", Address = "Av. de la Independencia" },
+            new CustomerDetails { CustomerID = "ERNSH", ContactTitle = "Ernst Handel", Country = "Austria", Address = "Kirchgasse 6" },
+            new CustomerDetails { CustomerID = "CENTC", ContactTitle = "Centro comercial Moctezuma", Country = "Mexico", Address = "Av. Moctezuma 56" },
+            new CustomerDetails { CustomerID = "OTTIK", ContactTitle = "Ottilies Käseladen", Country = "Germany", Address = "Waldstr. 15" },
+            new CustomerDetails { CustomerID = "QUEDE", ContactTitle = "Que Delícia", Country = "Brazil", Address = "Av. Rio Branco 20" },
+            new CustomerDetails { CustomerID = "RATTC", ContactTitle = "Rattlesnake Canyon Grocery", Country = "USA", Address = "17th St. W" }
+        };
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZhTMCCqWvITKsfB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtrIjIXVTIJFmFjd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Template column in child Grid
 
