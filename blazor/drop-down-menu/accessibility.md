@@ -53,14 +53,14 @@ The Blazor Dropdown Menu component followed the WAI-ARIA patterns to meet the ac
 
 The Blazor Dropdown button component followed the keyboard interaction guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Dropdown Menu component.
 
-| **Press** | **To do this** |
-| --- | --- |
-| <kbd>Esc</kbd> | Closes the popup. |
-| <kbd>Enter</kbd> | Opens the popup, or activates the highlighted item and closes the popup. |
-| <kbd>Space</kbd> | Opens the popup. |
-| <kbd>Up</kbd> | Navigates up or to the previous action item. |
-| <kbd>Alt + Up Arrow</kbd> | Closes the popup. |
-| <kbd>Alt + Down Arrow</kbd> | Opens the popup. |
+| Windows | Mac | Actions |
+| --- | --- | --- |
+| <kbd>Esc</kbd> | <kbd>Esc</kbd> | Closes the popup. |
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Opens the popup, or activates the highlighted item and closes the popup. |
+| <kbd>Space</kbd> | <kbd>Space</kbd> | Opens the popup. |
+| <kbd>↑</kbd> | <kbd>↑</kbd> | Navigates up or to the previous action item. |
+| <kbd>Alt</kbd> + <kbd>↑</kbd> | <kbd>⌥</kbd> + <kbd>↑</kbd> | Closes the popup. |
+| <kbd>Alt</kbd> + <kbd>↓</kbd> | <kbd>⌥</kbd> + <kbd>↓</kbd> | Opens the popup. |
 
 ## Ensuring accessibility
 
