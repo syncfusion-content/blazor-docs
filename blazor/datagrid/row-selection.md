@@ -26,7 +26,7 @@ Here's an example of how to enable single row selection using properties:
 
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@OrderData" AllowSelection="true">
+<SfGrid DataSource="@OrderData" AllowPaging="true" AllowSelection="true">
     <GridSelectionSettings Mode="SelectionMode.Row" Type="SelectionType.Single"></GridSelectionSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
@@ -96,7 +96,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZLSXBNpsPDFTpMg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBeNytTxjBLpwCY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Multiple row selection 
 
@@ -111,7 +111,7 @@ Here's an example of how to enable multiple rows selection using properties:
 
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@OrderData" AllowSelection="true">
+<SfGrid DataSource="@OrderData" AllowPaging="true" AllowSelection="true">
     <GridSelectionSettings Mode="SelectionMode.Row" Type="SelectionType.Multiple"></GridSelectionSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
@@ -181,7 +181,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VjVIXBNJCPSpibPz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BthIjeZfHjHdCEwD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Select row at initial rendering 
 
@@ -194,7 +194,7 @@ The following example demonstrates how to select a row during the initial render
 
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@OrderData" AllowSelection="true" SelectedRowIndex="1">
+<SfGrid DataSource="@OrderData" AllowSelection="true" SelectedRowIndex="1" Height="315">
     <GridSelectionSettings Mode="SelectionMode.Row" Type="SelectionType.Multiple"></GridSelectionSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
@@ -258,7 +258,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rXVStrjfsuosZEoz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtroXSZfRWMkkcaW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Select rows in any page based on index value 
 
@@ -480,7 +480,7 @@ Single row selection in the Syncfusion Blazor DataGrid allows you to select a si
 
 To achieve single row selection, you can use the [SelectRowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRowAsync_System_Int32_System_Nullable_System_Boolean__) method. This method allows you to programmatically select a specific row within the Grid by specifying its index.
 
-The following example demonstrates how to select a single row within the Grid by obtaining the selected row index through a `NumericTextBox` and passing this row index as an argument to the `SelectRowAsync` method. When the button event is triggered by clicking the **Select Row** button, a single row is selected within the Grid:
+The following example demonstrates how to select a single row within the Grid by obtaining the selected row index through a [NumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started-webapp) and passing this row index as an argument to the `SelectRowAsync` method. When the button event is triggered by clicking the **Select Row** button, a single row is selected within the Grid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -672,7 +672,7 @@ Range of row selection in the Syncfusion Blazor DataGrid enables you to select a
 
 To achieve range of row selection, you can use the [SelectRowsByRangeAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRowsByRangeAsync_System_Int32_System_Nullable_System_Int32__) method. This method selects a range of rows from start and end row indexes.
  
-The following example, demonstrates how to select a range of rows within the Grid by obtaining the selected rows start index and end index through `NumericTextBox`. Then, pass these start index and end index as arguments to the `SelectRowsByRangeAsync` method. When you trigger the button event by clicking the **Select Rows** button, a range of rows is selected within the Grid.
+The following example, demonstrates how to select a range of rows within the Grid by obtaining the selected rows start index and end index through [NumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started-webapp). Then, pass these start index and end index as arguments to the `SelectRowsByRangeAsync` method. When you trigger the button event by clicking the **Select Rows** button, a range of rows is selected within the Grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -786,7 +786,7 @@ The following example demonstrates how to get selected row indexes using  `GetSe
 {
     <p id="message">Selected row indexes: @string.Join(", ", SelectedRowIndexes)</p>
 }
-<SfGrid @ref="Grid" DataSource="@OrderData" AllowSelection="true">
+<SfGrid @ref="Grid" DataSource="@OrderData" AllowSelection="true" Height="315">
     <GridSelectionSettings Mode="Syncfusion.Blazor.Grids.SelectionMode.Row" Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></GridSelectionSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
@@ -861,7 +861,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVyNpCHKqQLLwhl?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVSXojzHLZfAtKS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## How to get selected records on various pages 
 
@@ -896,8 +896,9 @@ The following example demonstrates how to retrieve selected records from various
         </Content>
     </DialogTemplates>
 </SfDialog>
-<SfGrid @ref="Grid" DataSource="@OrderData" AllowSelection="true" AllowPaging="true" Height="315">
+<SfGrid @ref="Grid" DataSource="@OrderData" AllowSelection="true" AllowPaging="true">
     <GridSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Multiple" Mode="Syncfusion.Blazor.Grids.SelectionMode.Row" PersistSelection="true"></GridSelectionSettings>
+    <GridPageSettings PageSize="5"></GridPageSettings>
     <GridColumns>
         <GridColumn Type="ColumnType.CheckBox" Width="50"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="140"></GridColumn>
@@ -965,7 +966,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNrojpCGMsgUVzNP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VjLyNotfnVyUShmR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > To persist the Grid selection, it is necessary to define any one of the columns as a primary key using the [GridColumn.IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property.
 
@@ -990,7 +991,7 @@ Here's an example that displays the selected row count using the `GetSelectedRec
 {
     <p id="message">Selected record count: @string.Join(", ", SelectedRecordscount.Count)</p>
 }
-<SfGrid @ref="Grid" DataSource="@OrderData" AllowSelection="true">
+<SfGrid @ref="Grid" DataSource="@OrderData" AllowPaging="true" AllowSelection="true">
     <GridSelectionSettings Mode="Syncfusion.Blazor.Grids.SelectionMode.Row" Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></GridSelectionSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
@@ -1075,7 +1076,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVeXJsnfmHOKSNw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhSjStfdJDnCgcQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Clear row selection programmatically 
 
@@ -1094,8 +1095,9 @@ The following example demonstrates how to clear row selection by calling the `Cl
 <div style="margin-bottom: 10px">
     <SfButton CssClass="btn" OnClick="ClearRowSelection">Clear Row Selection</SfButton>
 </div>
-<SfGrid @ref="Grid" DataSource="@OrderData" AllowSelection="true" SelectedRowIndex="2" Height="315">
+<SfGrid @ref="Grid" DataSource="@OrderData" AllowPaging="true" AllowSelection="true" SelectedRowIndex="2">
     <GridSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Multiple" Mode="Syncfusion.Blazor.Grids.SelectionMode.Row"></GridSelectionSettings>
+    
     <GridColumns>
         <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="140"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
@@ -1163,7 +1165,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVSDTsxJlVCTaNq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVIZoZTxRbhiIYw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Row selection events 
 
@@ -1187,7 +1189,7 @@ In the following example, row selection is canceled when the value of **Customer
 <div style="text-align: center; color: red">
     <span>@RowSelectionMessage</span>
 </div>
-<SfGrid @ref="Grid" DataSource="@OrderData" AllowSelection="true" Height="315">
+<SfGrid @ref="Grid" DataSource="@OrderData" AllowSelection="true" EnableHover="false">
     <GridSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Multiple" Mode="Syncfusion.Blazor.Grids.SelectionMode.Row"></GridSelectionSettings>
     <GridEvents RowSelected="RowselectHandler" RowSelecting="RowselectingHandler" RowDeselected="RowDeselectHandler" RowDeselecting="RowDeselectingHandler" TValue="OrderDetails"></GridEvents>
     <GridColumns>
@@ -1278,4 +1280,4 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVojfiHRoXjmSqN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNBSDoDzHHtCzbSp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
