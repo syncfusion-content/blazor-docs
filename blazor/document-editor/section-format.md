@@ -52,4 +52,49 @@ You can define the distance of footer content from the bottom of the page by usi
 await documentEditor.Selection.SectionFormat.SetFooterDistanceAsync(72);
 ```
 
+## Columns
+
+You can define the number of columns, column width, and space between columns for the pages in a section.
+
+The following code example illustrates how to define the two columns layout for the pages in a section.
+
+```csharp
+ public async void OnApplyColumns() {
+        SelectionColumnFormat column = new SelectionColumnFormat() {
+            Width = 216,
+            Space = 36
+        };
+        SelectionColumnFormat[] columns = new SelectionColumnFormat[] {
+            column, column
+        };
+        documentEditor.Selection.SectionFormat.SetColumns(columns);
+    }
+```
+
+## Breaks
+
+You can insert Column break
+
+The following code indicate that the text following the column break will begin in the next column
+
+```csharp
+documentEditor.Editor.InsertColumnBreakAsync();
+```
+
+You can insert next page section break to start the new section on the next page
+
+The following code example illustrates how to insert a next page section break
+
+```csharp
+documentEditor.Editor.InsertSectionBreakAsync(SectionBreakType.NewPage);
+```
+
+You can insert continuous section break to start the new section on the same page
+
+The following code example illustrates how to insert a continuous section break
+
+```csharp
+documentEditor.Editor.InsertSectionBreakAsync(SectionBreakType.Continuous);
+```
+
 You can also explore our [Blazor Word Processor](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) example to know how to render and configure the document editor.
