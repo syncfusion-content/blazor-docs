@@ -838,7 +838,7 @@ public static List<EmployeeData> Employees = new List<EmployeeData>();
 
 ## Expand or collapse specific detail template row
 
-To expand or collapse a specific row of a detail template in the Syncfusion Blazor Grid, you can use the [ExpandCollapseDetailRowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExpandCollapseDetailRowAsync__0_) method. This method allows you to programmatically expand or collapse the detail template for a specific row of data by passing the data object representing that row.
+To expand or collapse a specific row of a detail template in the Syncfusion Blazor DataGrid, you can use the [ExpandCollapseDetailRowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExpandCollapseDetailRowAsync__0_) method. This method allows you to programmatically expand or collapse the detail template for a specific row of data by passing the data object representing that row.
 
 The following code demonstrates how to expand the particular rows using `ExpandCollapseDetailRowAsync` method of the Grid when a button is clicked, using the Grid reference.
 
@@ -1049,7 +1049,7 @@ public static List<EmployeeData> Employees = new List<EmployeeData>();
 
 ## Customize detail template icon
 
-The detail template icon in the Syncfusion Blazor Grid is used to expand or collapse the detail content of a row. By default, the icon represents a right arrow for the collapsed state and a down arrow for the expanded state. If you want to customize this icon, you can achieve it by overriding the following CSS styles:
+The detail template icon in the Syncfusion Blazor DataGrid is used to expand or collapse the detail content of a row. By default, the icon represents a right arrow for the collapsed state and a down arrow for the expanded state. If you want to customize this icon, you can achieve it by overriding the following CSS styles:
 
 ```css
     .e-grid .e-icon-grightarrow::before {
