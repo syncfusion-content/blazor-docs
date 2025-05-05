@@ -1,24 +1,24 @@
 ---
 layout: post
-title: Detail Template in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn here all about Detail Template in Syncfusion Blazor DataGrid component and much more details.
+title: Detail Template in Blazor DataGrid | Syncfusion
+description: Checkout and learn here all about Detail Template in Syncfusion Blazor DataGrid and much more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Detail Template in Blazor DataGrid Component
+# Detail Template in Blazor DataGrid
 
-The Detail Template feature in the Syncfusion Blazor DataGrid component allows you to display expanded or collapsible sections for each row to show additional, context-specific information. This is particularly useful for scenarios where rows contain nested or supplementary data that would otherwise clutter the main Grid view. You can use the [DetailTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_DetailTemplate) property to define an HTML template for the detail row, which can include any HTML element, Syncfusion component, or custom Blazor component.
+The Detail Template feature in the Syncfusion Blazor DataGrid allows you to display expanded or collapsible sections for each row to show additional, context-specific information. This is particularly useful for scenarios where rows contain nested or supplementary data that would otherwise clutter the main Grid view. You can use the [DetailTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_DetailTemplate) property to define an HTML template for the detail row, which can include any HTML element, Syncfusion component, or custom Blazor component.
 
 > Before adding detail template to the datagrid, it is recommended to go through the [Template](https://blazor.syncfusion.com/documentation/datagrid/templates) section topic to configure the template.
 
-To know about **Detail Template** in Blazor DataGrid Component, you can check this video.
+To know about **Detail Template** in Blazor DataGrid, you can check this video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=Dft0kerEGUQ"%}
 
-To integrate the Detail Template in the Blazor DataGrid component:
+To integrate the Detail Template in the Blazor DataGrid:
 
 1. Add the <DetailTemplate> element within the <GridTemplates> component to specify the content of the detail row.
 2. Use any HTML structure or additional Blazor components within the DetailTemplate to define custom content for each expanded row.
@@ -471,8 +471,7 @@ public class CustomerDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtrIjIXVTIJFmFjd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> * You can customize using Detail template to display multiple levels of hierarchical Grid.
-> * By default, the Blazor DataGrid does not have built-in hierarchical support.
+> By default, the Syncfusion Blazor DataGrid does not have built-in hierarchical support. However, you can customize the Grid using the detail template feature to display multiple levels of a hierarchical Grid, as shown in the example above.
 
 ## Template column in detail DataGrid
 
@@ -835,13 +834,13 @@ public static List<EmployeeData> Employees = new List<EmployeeData>();
 ![Expand by external button](./images/blazor-datagrid-detail-template-externalbutton.png)
 
 > * You can expand all the rows by using `ExpandAllDetailRowAsync` method.
-* If you want to expand all the rows at initial DataGrid rendering, then use `ExpandAllDetailRowAsync` method in [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound) event of the DataGrid.
+* If you want to expand all the rows at initial Grid rendering, then use `ExpandAllDetailRowAsync` method in [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound) event of the Grid.
 
 ## Expand or collapse specific detail template row
 
 To expand or collapse a specific row of a detail template in the Syncfusion Grid, you can use the [ExpandCollapseDetailRowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExpandCollapseDetailRowAsync__0_) method. This method allows you to programmatically expand or collapse the detail template for a specific row of data by passing the data object representing that row.
 
-The following code demonstrates how to expand the particular rows using `ExpandCollapseDetailRowAsync` method of the DataGrid component when a button is clicked, using the DataGrid reference.
+The following code demonstrates how to expand the particular rows using `ExpandCollapseDetailRowAsync` method of the Grid when a button is clicked, using the Grid reference.
 
 In the below code, the **Expand** method is defined to expand or collapse the detail row of a specific employee when the "Expand/Collapse" button is clicked.
 
@@ -1225,7 +1224,7 @@ public static List<EmployeeData> Employees = new List<EmployeeData>();
 
 ## How to access the child component in the detail template
 
-Using the detail template feature of the DataGrid component, a grid-like structure with hierarchical binding can be achieved by rendering a SfGrid component inside the DetailTemplate. By default, the @ref property of the Grid component will be of SfGrid<T>, which will carry a particular grid instance. But for the hierarchy grid, this scenario will be different and an instance for each child grid cannot be found directly. To access each child grid instance, the @ref property is defined using a dictionary object with a key and value pair. Where the values are of the SfGrid<T> type and the keys are unique within the dictionary object.
+Using the detail template feature of the DataGrid, a grid-like structure with hierarchical binding can be achieved by rendering a SfGrid component inside the DetailTemplate. By default, the @ref property of the Grid will be of SfGrid<T>, which will carry a particular grid instance. But for the hierarchy grid, this scenario will be different and an instance for each child grid cannot be found directly. To access each child grid instance, the @ref property is defined using a dictionary object with a key and value pair. Where the values are of the SfGrid<T> type and the keys are unique within the dictionary object.
 
 In the following sample, you can get the instance of that particular child grid using the unique key value sent as an additional argument in the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event and fetch the selected record details from each child grid using the [GetSelectedRecordsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetSelectedRecordsAsync) method of each child grid.
 
