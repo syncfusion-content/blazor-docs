@@ -19,7 +19,7 @@ Customizing the styles of rows in the Syncfusion Blazor DataGrid allows you to m
 
 You can customize the appearance of the rows by using the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDataBound) event. This event triggers for every row when it is bound to the data source. In the event handler, you can get the [RowDataBoundEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.RowDataBoundEventArgs-1.html) object, which contains details of the row. You can use this object to modify the row’s appearance, add custom elements, or perform any other customization.
 
-Here’s an example of how you can use the `RowDataBound` event to customize the styles of rows based on the value of the **Freight** column. This example involves checking the value of the Freight column for each row and adding a CSS class to the row based on the value. The CSS classes **below-30**, **below-80**, and **above-80** can then be defined in your stylesheet to apply the desired styles to the rows.
+Here’s an example of how you can use the `RowDataBound` event to customize the styles of rows based on the value of the **Freight** column. This example involves checking the value of the Freight column for each row and adding a CSS class to the row based on the value. The CSS classes **below-30**, **below-80**, and **above-80** can then be defined in your stylesheet to apply the desired styles to the rows:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -330,7 +330,7 @@ namespace BlazorApp1.Data
 
 The Syncfusion Blazor DataGrid allows you to customize the height of rows based on your needs. This feature can be useful when you need to display more content in a row or when you want to reduce the height of rows to fit its content. You can achieve this by using the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) property of the Grid. This property allows you to change the height of the entire Grid row to your desired value.
 
-In the below example, we will demonstrate how to dynamically change the height of the rows using the `RowHeight` property.
+In the below example, we will demonstrate how to dynamically change the height of the rows using the `RowHeight` property:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -548,7 +548,7 @@ The Row Hover feature in the Syncfusion Blazor DataGrid  provides a visual effec
 
 By default, the `EnableHover` property is set to **true**, which means that the row hovering effect is enabled. To disable the row hover effect, set the `EnableHover` property to **false**.
 
-Here is an example that demonstrates how to enable/disable row hover based on the Switch:
+Here is an example that demonstrates how to enable/disable row hover based on the [Switch](https://blazor.syncfusion.com/documentation/toggle-switch-button/getting-started-webapp):
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -648,7 +648,7 @@ To know about frozen rows in Grid, you can check this video.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=L2NvKyBomhM"%}
 
-In the following example, the [FrozenRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenRows) property is set to **2**. This configuration freezes the top two rows of the Grid, and they will remain fixed in their positions while the rest of the Grid can be scrolled vertically.
+In the following example, the [FrozenRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenRows) property is set to **2**. This configuration freezes the top two rows of the Grid, and they will remain fixed in their positions while the rest of the Grid can be scrolled vertically:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

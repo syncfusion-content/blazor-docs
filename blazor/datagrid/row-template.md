@@ -396,7 +396,7 @@ The Syncfusion Blazor DataGrid allows you to render custom Syncfusion controls w
 
 To enable a Syncfusion control in a row template, you need to set the `RowTemplate` property of the Grid. This property accepts a custom HTML template that defines the layout for each row.
 
-Here is an example that demonstrates rendering Syncfusion controls within a row template :
+Here is an example that demonstrates rendering Syncfusion controls within a row template:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
