@@ -160,6 +160,62 @@ The following code explains how to draw the connector by using the port constrai
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/Interaction/DrawConstraintsWithDrawingObject).
 
 ![Drawing Bezier Port Connection in Blazor Diagram](../images/blazor-diagram-draw-port-connection-bezier.gif)
+
+## How to set sticky tooltip for ports
+
+With this mode set to `true`, Tooltips for ports can be made to show up on the screen as long as the close icon is pressed. In this mode, close icon is attached to the Tooltip located at the top right corner. This mode can be enabled or disabled using the `IsSticky` property in tooltip. By default, the value of the IsSticky property is set to false.
+
+The following code example demonstrates how to set the IsSticky property to true for the ports:
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Popups
+@using Syncfusion.Blazor.Buttons
+<SfDiagramComponent @ref="@diagram" Width="1000px" Height="500px" Nodes="@nodes" />
+@code
+{
+    //Define diagram's nodes collection
+    DiagramObjectCollection<Node> nodes;
+    //Reference the diagram
+    SfDiagramComponent diagram;
+    protected override void OnInitialized()
+    {
+        //Intialize diagram's nodes collection
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
+            {
+                ID = "node1",
+                OffsetX = 100,
+                OffsetY = 100,
+                Width = 100,
+                Height = 100,
+                Style = new ShapeStyle()
+                {
+                    Fill = "#6495ED",
+                    StrokeColor = "white"
+                },
+                Tooltip = new DiagramTooltip() { Content = "NodeContent", IsSticky = true },
+                Constraints = NodeConstraints.Default | NodeConstraints.Tooltip,
+                Ports = new DiagramObjectCollection<PointPort>()
+                {
+                new PointPort(){
+                    ID="Port1",
+                    Style = new ShapeStyle(){ Fill = "gray" },
+                    Offset = new DiagramPoint() { X = 1, Y = 0.5 },
+                    Visibility = PortVisibility.Visible,
+                    Tooltip = new DiagramTooltip(){ Content = "PortContent" , IsSticky = true},
+                    Constraints = PortConstraints.Default | PortConstraints.Draw
+                }
+                },
+            };
+        nodes.Add(node);
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip/)
+
+![ToolTip During hover the ports with Stikcy Mode](../images/PortIsSticky.png)
+
 ## See also
 
 * [How to create a node](../nodes/nodes)
