@@ -765,6 +765,108 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNhINfiIdMXhvlal?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+## Select Grid rows based on certain condition
+
+You can programmatically select specific rows in the Syncfusion Blazor DataGrid based on a certain condition. This feature is particularly useful when you need to dynamically highlight or manipulate specific rows in the Grid based on custom conditions. This functionality can be achieved using the [SelectRowsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRowsAsync_System_Int32___) method in the [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound) event of Grid.
+
+In the below demo, we have selected the Grid rows only when **EmployeeID** column value greater than **3**.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+
+<SfGrid @ref="Grid" DataSource="@OrderData" AllowSelection="true" AllowPaging="true" Height="315">
+    <GridSelectionSettings Type="SelectionType.Multiple"></GridSelectionSettings>
+    <GridEvents DataBound="DataBound" TValue="OrderDetails"></GridEvents>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer Name" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.EmployeeID) HeaderText="Employee ID" Width="100" TextAlign="TextAlign.Right" />
+        <GridColumn Field=@nameof(OrderDetails.OrderDate) HeaderText="Order Date" Type="ColumnType.Date" Format="yMd" Width="110" TextAlign="TextAlign.Right"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" Format="C2" Width="100" TextAlign="TextAlign.Right"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private SfGrid<OrderDetails> Grid;
+    public List<OrderDetails> OrderData { get; set; }
+    protected override void OnInitialized()
+    {
+        OrderData = OrderDetails.GetAllRecords();
+    }
+    public List<int> SelectIndex { get; set; }
+    public async Task DataBound()
+    {
+        var currentViewData = await Grid.GetCurrentViewRecordsAsync();
+        var indexNum = 0;
+        SelectIndex = new List<int>();
+        foreach (var record in currentViewData)
+        {
+            if (record.EmployeeID > 3)
+            {
+                SelectIndex.Add(indexNum);
+            }
+            indexNum++;
+        }
+        await Grid.SelectRowsAsync(SelectIndex.ToArray());
+    }
+}
+
+{% endhighlight %}
+
+{% highlight cs tabtitle="OrderDetails.cs" %}
+
+public class OrderDetails
+{
+    public static List<OrderDetails> order = new List<OrderDetails>();
+
+    public OrderDetails() { }
+
+    public OrderDetails(int orderID, string customerId, int employeeId, DateTime orderDate, double freight)
+    {
+        this.OrderID = orderID;
+        this.CustomerID = customerId;
+        this.EmployeeID = employeeId;
+        this.OrderDate = orderDate;
+        this.Freight = freight;
+    }
+
+    public static List<OrderDetails> GetAllRecords()
+    {
+        if (order.Count == 0)
+        {
+            order.Add(new OrderDetails(10248, "VINET", 5, new DateTime(1996, 7, 4), 32.38));
+            order.Add(new OrderDetails(10249, "TOMSP", 6, new DateTime(1996, 7, 5), 11.61));
+            order.Add(new OrderDetails(10250, "HANAR", 4, new DateTime(1996, 7, 8), 65.83));
+            order.Add(new OrderDetails(10251, "VICTE", 3, new DateTime(1996, 7, 8), 41.34));
+            order.Add(new OrderDetails(10252, "SUPRD", 4, new DateTime(1996, 7, 9), 51.3));
+            order.Add(new OrderDetails(10253, "HANAR", 3, new DateTime(1996, 7, 10), 58.17));
+            order.Add(new OrderDetails(10254, "CHOPS", 5, new DateTime(1996, 7, 11), 22.98));
+            order.Add(new OrderDetails(10255, "RICSU", 9, new DateTime(1996, 7, 12), 148.33));
+            order.Add(new OrderDetails(10256, "WELLI", 3, new DateTime(1996, 7, 15), 13.97));
+            order.Add(new OrderDetails(10257, "HILAA", 4, new DateTime(1996, 7, 16), 81.91));
+            order.Add(new OrderDetails(10258, "ERNSH", 1, new DateTime(1996, 7, 17), 140.51));
+            order.Add(new OrderDetails(10259, "CENTC", 4, new DateTime(1996, 7, 18), 3.25));
+            order.Add(new OrderDetails(10260, "OTTIK", 4, new DateTime(1996, 7, 19), 55.09));
+            order.Add(new OrderDetails(10261, "QUEDE", 4, new DateTime(1996, 7, 19), 3.05));
+            order.Add(new OrderDetails(10262, "RATTC", 8, new DateTime(1996, 7, 22), 48.29));
+        }
+        return order;
+    }
+
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public int EmployeeID { get; set; }
+    public DateTime OrderDate { get; set; }
+    public double Freight { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtVeXIjeIHNkaocG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## How to get selected row indexes 
 
 The Syncfusion Blazor DataGrid allows you to retrieve the indexes of the currently selected rows in the Grid. This feature is particularly useful when you need to perform actions or operations specifically on the selected rows. 
@@ -1097,7 +1199,7 @@ The following example demonstrates how to clear row selection by calling the `Cl
 </div>
 <SfGrid @ref="Grid" DataSource="@OrderData" AllowPaging="true" AllowSelection="true" SelectedRowIndex="2">
     <GridSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Multiple" Mode="Syncfusion.Blazor.Grids.SelectionMode.Row"></GridSelectionSettings>
-    
+    <GridPageSettings PageSize="5"></GridPageSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="140"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
