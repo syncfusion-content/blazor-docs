@@ -21,6 +21,10 @@ To learn more about creating nodes and exploring different node shapes in a Blaz
 
 {% youtube "youtube:https://www.youtube.com/watch?v=4_RCxBnDs3w" %}
 
+To create a node easily and to know about different types of node shapes in a Blazor Diagram, refer to the below video link.
+
+{% youtube "youtube:https://www.youtube.com/watch?v=4_RCxBnDs3w" %}
+
 ## How to add node through nodes collection
 
 To create a node, define the [Node](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html) object and add that to the nodes collection of the diagram. The following code example shows how to add a node to the diagram.

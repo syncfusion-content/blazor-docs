@@ -19,6 +19,10 @@ To create and customize the connectors easily in the Blazor Diagram component, r
 
 {% youtube "youtube:https://www.youtube.com/watch?v=EH4c8QVQoHo" %}
 
+To create and customize the connectors easily in the Blazor Diagram component, refer to the below video link.
+
+{% youtube "youtube:https://www.youtube.com/watch?v=EH4c8QVQoHo" %}
+
 ## How to add connectors through connectors collection
 
 The [SourcePoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_SourcePoint) and [TargetPoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_TargetPoint) properties of connector allow you to define the endpoints of a connector.
