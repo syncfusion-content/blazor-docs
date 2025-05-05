@@ -11,7 +11,7 @@ documentation: ug
 
 CSS isolation allows defining component-specific styles by creating a `.razor.css` file that matches the name of the `.razor` file. This ensures that the styles apply only to the intended component without affecting other parts of the application. For example, to apply styles to an `Index` component, create a file named `Index.razor.css` in the same folder as `Index.razor`.
 
-To enable CSS isolation for the DataGrid, it is recommended to wrap the **SfGrid** inside a standard HTML <div> element. This setup helps properly scope the styles when using the **::deep** combinator, which is required to target nested child elements within the isolated styles.
+To enable CSS isolation for the Grid, it is recommended to wrap the **SfGrid** inside a standard HTML <div> element. This setup helps properly scope the styles when using the **::deep** combinator, which is required to target nested child elements within the isolated styles.
 
 Below is an example of implementing a simple DataGrid inside the `Index.razor` file:
 

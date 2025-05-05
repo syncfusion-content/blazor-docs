@@ -11,7 +11,7 @@ documentation: ug
 
 The Syncfusion Blazor DataGrid allows creating cascading DropDownLists while editing by using the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property of Grid columns. In this example, two columns **ShipCountry** and **ShipState** use dropdowns where the state options depend on the selected country. When a country is chosen in the ShipCountry dropdown, the `ValueChange` event updates the ShipState dropdown with relevant state values and enables it for selection.
 
-The data for countries and states is managed using separate lists, and the state dropdown is disabled initially during editing using the `OnActionBegin` event. Once a country is selected, the matching state list is loaded, and the grid is refreshed using `GridRef.PreventRender(false)` to show the updated options. This setup provides a smooth way to handle related dropdowns during inline editing in the Blazor DataGrid.
+The data for countries and states is managed using separate lists, and the state dropdown is disabled initially during editing using the `OnActionBegin` event. Once a country is selected, the matching state list is loaded, and the grid is refreshed using `GridRef.PreventRender(false)` to show the updated options. This setup provides a smooth way to handle related dropdowns during inline editing in the Grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

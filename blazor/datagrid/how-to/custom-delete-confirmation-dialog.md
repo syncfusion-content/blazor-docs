@@ -15,7 +15,7 @@ To achieve this, use the [SfDialog](https://blazor.syncfusion.com/documentation/
 
 In the `SfGrid`, enable the "Delete" option in the toolbar and set the `AllowDeleting` property to true to allow record deletion. You can then use the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event to cancel the default delete action, display the custom dialog, and handle the user's response. When the user clicks the "OK" button on the dialog, the selected record is deleted programmatically.
 
-Here is the code for implementing a custom delete confirmation dialog in a Blazor DataGrid:
+Here is the code for implementing a custom delete confirmation dialog in a Grid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

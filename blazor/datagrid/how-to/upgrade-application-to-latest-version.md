@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Upgrade Application To Latest Version in Blazor DataGrid Component
+# Upgrade Application To Latest Version in Blazor DataGrid
 
 **Step 1:** Update the latest Syncfusion Blazor [NuGet](https://www.nuget.org/packages/Syncfusion.Blazor/) from NuGet package manager in your application.
 

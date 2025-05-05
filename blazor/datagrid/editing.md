@@ -332,9 +332,9 @@ N> [View Sample in GitHub.](https://github.com/SyncfusionExamples/blazor-datagri
 
 ##  Editing with Template Column in Blazor DataGrid
 
-The editing template column feature in the Sycnfusion Blazor DataGrid allows you to create custom editing templates for specific columns in the grid. This feature is particularly useful when you need to customize the editing experience for certain columns, such as using custom input controls or displaying additional information during editing.
+The editing template column feature in the Sycnfusion Blazor DataGrid allows you to create custom editing templates for specific columns in the Grid. This feature is particularly useful when you need to customize the editing experience for certain columns, such as using custom input controls or displaying additional information during editing.
 
-To enable the editing template column feature, you need to define the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) property for the specific column in the grid’s configuration. The `Field` property maps the column to the corresponding field name in the data source, allowing you to edit the value of that field.
+To enable the editing template column feature, you need to define the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) property for the specific column in the Grid’s configuration. The `Field` property maps the column to the corresponding field name in the data source, allowing you to edit the value of that field.
 
 In the following demo, the **CustomerID** column is rendered with the template.
 

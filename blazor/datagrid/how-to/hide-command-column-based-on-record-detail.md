@@ -9,7 +9,7 @@ documentation: ug
 
 # Hide the Command Column Button in a Specific Record
 
-In the Syncfusion Blazor DataGrid, command columns are used to perform CRUD operations on records, such as editing or deleting. Sometimes, you may want to hide the command buttons for specific records based on certain conditions. This can be done by using the [`RowDataBound`](https://blazor.syncfusion.com/documentation/datagrid/events#rowdatabound) event, which is triggered every time a row is created or updated in the grid.
+In the Syncfusion Blazor DataGrid, command columns are used to perform CRUD operations on records, such as editing or deleting. Sometimes, you may want to hide the command buttons for specific records based on certain conditions. This can be done by using the [`RowDataBound`](https://blazor.syncfusion.com/documentation/datagrid/events#rowdatabound) event, which is triggered every time a row is created or updated in the Grid.
 
 Inside the `RowDataBound` event, you can check the data of each record and conditionally add a class to the row. For example, if a record is marked as "Verified," you can add a class to hide the Edit button for that row. Similarly, you can add another class to hide the Delete button for unverified records.
 
