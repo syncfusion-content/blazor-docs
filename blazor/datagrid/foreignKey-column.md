@@ -7,21 +7,21 @@ control: DataGrid
 documentation: ug
 ---
 
-# Foreign key column in Blazor DataGrid component
+# Foreign key column in Blazor DataGrid
 
-The Foreign key column in the Syncfusion Grid component allows you to display related data from a foreign key data source in a column within the grid. This feature is particularly useful when you have a column in the grid that represents a foreign key relationship with another data source.
+The Foreign key column in the Syncfusion DataGrid allows you to display related data from a foreign key data source in a column within the Grid. This feature is particularly useful when you have a column in the Grid that represents a foreign key relationship with another data source.
 
 Foreign key column can be enabled by using `ForeignDataSource`, [ForeignKeyField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyField) and [ForeignKeyValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyValue) properties of **GridForeignColumn** directive.
 
-Define the foreign key column in the grid using the following properties:
+Define the foreign key column in the Grid using the following properties:
 
 * `ForeignDataSource` - Specifies the foreign data source that contains the related data.
-* [ForeignKeyField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyField) - Maps the column name in the grid to the field in the foreign data source that represents the foreign key relationship.
-* [ForeignKeyValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyValue) -Specifies the field from the foreign data source that should be displayed in the grid as the related data.
+* [ForeignKeyField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyField) - Maps the column name in the Grid to the field in the foreign data source that represents the foreign key relationship.
+* [ForeignKeyValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyValue) -Specifies the field from the foreign data source that should be displayed in the Grid as the related data.
 
 ## Binding local data
 
-The Syncfusion Grid component provides a convenient way to bind local data to a foreign key column. This allows you to display related data from a local data source within the grid. Here’s an example of how to bind local data to a Foreign Key column in Syncfusion Grid:
+The Syncfusion DataGrid provides a convenient way to bind local data to a foreign key column. This allows you to display related data from a local data source within the Grid. Here’s an example of how to bind local data to a Foreign Key column in Grid:
 
 In this example, data is the local data source for the Grid, and **Employee Name** is the local data source for the foreign key column. The ForeignKeyValue property is set to **FirstName** which represents the field name in the  **Employee Name** that you want to display in the foreign key column.
 
@@ -119,9 +119,9 @@ public class EmployeeDetails
 
 ## Binding remote data
 
-The Foreign key column in Syncfusion Grid allows you to bind remote data for a foreign key column. You can use `SfDataManager` component instead of using `DataSource` property. 
+The Foreign key column in Syncfusion Grid allows you to bind remote data for a foreign key column. You can use `SfDataManager` instead of using `DataSource` property. 
 
-This example demonstrates how to use the foreign key column with remote data binding using the `ODataV4Adaptor` in the grid:
+This example demonstrates how to use the foreign key column with remote data binding using the `ODataV4Adaptor` in the Grid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -204,9 +204,9 @@ public class OrderDetails
 
 ## Use edit template in foreign key column
 
-The Syncfusion Grid provides support for using an edit template in a foreign key column. By default, a dropdown component is used for editing foreign key column. Other editable components can be rendered using the EditTemplate feature of Grid. The following example demonstrates the way of using edit template with ComboBox component in the foreign column.
+The Syncfusion Grid provides support for using an edit template in a foreign key column. By default, a dropdown is used for editing foreign key column. Other editable components can be rendered using the EditTemplate feature of Grid. The following example demonstrates the way of using edit template with ComboBox in the foreign column.
 
-In the following code example, the Employee Name is a foreign key column. When editing, the ComboBox component is rendered instead of DropDownList.
+In the following code example, the Employee Name is a foreign key column. When editing, the ComboBox is rendered instead of DropDownList.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -323,11 +323,11 @@ In the following code example, the Employee Name is a foreign key column. When e
 
 ## Customize filter UI in foreignkey column
 
-The Syncfusion Grid allows you to customize the filtering user interface (UI) for foreign key columns by using the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) property. By default, a dropdown component is used for filtering foreign key columns. However, you can create your own custom filtering UI by [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) property. Here’s an example that demonstrates how to create a custom filtering UI in a foreign key column:
+The Syncfusion Grid allows you to customize the filtering user interface (UI) for foreign key columns by using the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) property. By default, a dropdown is used for filtering foreign key columns. However, you can create your own custom filtering UI by [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) property. Here’s an example that demonstrates how to create a custom filtering UI in a foreign key column:
 
 > For all filter types other than FilterBar, filtering parameters will be sent in the form of `PredicateModel<T>`. Here, T represents the type of `ForeignKeyValue` property when using the foreignkey column.
 
-In this example, a DropDownList component is rendered as the filter UI for the **“EmployeeID”** foreign key column. The  **DataSource** property of the `SfDropDownList` component is set to the employees data, and the Fields property is configured to display the **FirstName** field as the text and **EmployeeID** field as the value. The `value` property is set to the current filter value of the column.
+In this example, a DropDownList is rendered as the filter UI for the **“EmployeeID”** foreign key column. The  **DataSource** property of the `SfDropDownList` is set to the employees data, and the Fields property is configured to display the **FirstName** field as the text and **EmployeeID** field as the value. The `value` property is set to the current filter value of the column.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -435,7 +435,7 @@ public class EmployeeDetails
 
 You can use the filter  template in a foreign key column in Grid by using the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) property. This allows you to customize the filter bar for the foreign key column with a custom component or HTML template. Here’s an example that demonstrates how to use a Filter template in a foreign key column:
 
-In this example, the **“EmployeeID”** column is a foreign key column. The `FilterTemplate` property is used to render a Syncfusion DropDownList component as a filter, you can select filter value by using the **DropDown** options.
+In this example, the **“EmployeeID”** column is a foreign key column. The `FilterTemplate` property is used to render a DropDownList as a filter, you can select filter value by using the **DropDown** options.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -567,7 +567,7 @@ public class EmployeeDetails
 
 ## Perform aggregation in foreign key column
 
-By default, aggregations are not supported in a foreign key column in the Syncfusion DataGrid. However, you can achieve aggregation for a foreign key column by using `customAggregate`.
+By default, aggregations are not supported in a foreign key column in the Grid. However, you can achieve aggregation for a foreign key column by using `customAggregate`.
 
 To perform aggregation in a foreign key column, follow these steps:
 
@@ -577,7 +577,7 @@ To perform aggregation in a foreign key column, follow these steps:
 
 Here's an example that demonstrates how to perform aggregation in a foreign key column:
 
-In the provided example, the `customAggregateFn` function is used to filter and count the **Margaret** data based on the **FirstName** field of the foreign key column. The result is displayed in the DataGrid's footer template using the [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_FooterTemplate) property.
+In the provided example, the `customAggregateFn` function is used to filter and count the **Margaret** data based on the **FirstName** field of the foreign key column. The result is displayed in the Grid's footer template using the [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_FooterTemplate) property.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -763,7 +763,7 @@ In the following code sample, you can prevent default filter query generation us
 
 ## Enable multiple foreign key columns
 
-The Syncfusion Grid component supports the feature of enabling multiple foreign key columns with editing options. This allows users to display columns from foreign data sources in the Grid component.
+The Syncfusion DataGrid supports the feature of enabling multiple foreign key columns with editing options. This allows users to display columns from foreign data sources in the Grid.
 
 In the following example, Employee Name and Ship City are foreign key columns that display the FirstName and ShipCity columns from foreign data.
 
