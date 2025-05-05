@@ -544,11 +544,11 @@ The following example demonstrates how to sort the **CustomerID** column by sett
 
 ## Group with paging
 
-The Sycnfusion Blazor DataGrid supports grouping columns along with paging. When grouping is applied, the grid displays aggregate values and group counts based on the current page by default. This means the group caption and group summary/footer will only reflect data from the current page.
+The Sycnfusion Blazor DataGrid supports grouping columns along with paging. When grouping is applied, the Grid displays aggregate values and group counts based on the current page by default. This means the group caption and group summary/footer will only reflect data from the current page.
 
-To calculate aggregates and total item counts across all pages, set the [DisablePageWiseAggregates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_DisablePageWiseAggregates) property to **false** in the `GridGroupSettings`. This allows the grid to display complete aggregate information for each group, regardless of paging.
+To calculate aggregates and total item counts across all pages, set the [DisablePageWiseAggregates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_DisablePageWiseAggregates) property to **false** in the `GridGroupSettings`. This allows the Grid to display complete aggregate information for each group, regardless of paging.
 
-> If remote data is bound to grid dataSource, two requests will be sent when performing grouping action one for getting the grouped data and another for getting aggregate details and total items count.
+> If remote data is bound to Grid dataSource, two requests will be sent when performing grouping action one for getting the grouped data and another for getting aggregate details and total items count.
 
 ## Group by format
 

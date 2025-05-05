@@ -527,7 +527,7 @@ public static List<OrderData> Orders = new List<OrderData>();
 
 The Syncfusion Blazor DataGrid provides the flexibility to include custom controls, such as a Chart, within the rows of the Grid. This feature enhances Grid interactivity by allowing graphical representations of data instead of plain text.
 
-To render a Syncfusion Blazor Chart within a row template of the DataGrid, use the [RowTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_RowTemplate) property. This property accepts a Razor template that defines the layout for each row, enabling rich data visualization directly inside the Grid.
+To render a Syncfusion Blazor Chart within a row template of the Grid, use the [RowTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_RowTemplate) property. This property accepts a Razor template that defines the layout for each row, enabling rich data visualization directly inside the Grid.
 
 Here is an example that demonstrates rendering Syncfusion Chart within a row template:
 
