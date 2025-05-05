@@ -35,7 +35,7 @@ To select range of rows or cells or columns, press and hold the SHIFT key and cl
         <DropDownListEvents ValueChange="@OnChange" TValue="SelectionType" TItem="DropDownOrder"></DropDownListEvents>
     </SfDropDownList>
 </div>
-<SfGrid DataSource="@OrderData" AllowSelection="true">
+<SfGrid DataSource="@OrderData" AllowSelection="true" Height="315">
     <GridSelectionSettings Type="@SelectionTypeValue"></GridSelectionSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
@@ -113,7 +113,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjByXTDlpKtiPteM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtrIZyjJxwYNLLwY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Selection mode
 
@@ -127,7 +127,7 @@ To enable selection mode, you can set the [GridSelectionSettings.Mode](https://h
 
 * **Both** - Allows you to select rows and cells at the same time.
 
-The following example, demonstrates how to dynamically enable and change the `GridSelectionSettings.Mode` using the `DropDownList`:
+The following example, demonstrates how to dynamically enable and change the `GridSelectionSettings.Mode` using the [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app):
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -142,7 +142,7 @@ The following example, demonstrates how to dynamically enable and change the `Gr
         <DropDownListEvents ValueChange="@OnChange" TValue="Syncfusion.Blazor.Grids.SelectionMode" TItem="DropDownOrder"></DropDownListEvents>
     </SfDropDownList>
 </div>
-<SfGrid DataSource="@OrderData" AllowSelection="true">
+<SfGrid DataSource="@OrderData" AllowSelection="true" Height="315">
     <GridSelectionSettings Mode="@SelectionModeValue"></GridSelectionSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
@@ -222,7 +222,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLyNzXbpADGyODh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXLyXeNfdPWbBobj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Touch interaction
 
@@ -276,7 +276,7 @@ The following example demonstrates how to enable the toggle selection for both c
     <label>Enable or Disable Toggle selection:</label>
     <SfSwitch ValueChange="Change" TChecked="bool" Checked="ToggleValue" style="margin-top:5px"></SfSwitch>
 </div>
-<SfGrid DataSource="@OrderData" AllowSelection="true">
+<SfGrid DataSource="@OrderData" AllowSelection="true" Height="315">
     <GridSelectionSettings Mode="@SelectionModeValue" EnableToggle="ToggleValue" Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></GridSelectionSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
@@ -360,7 +360,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VNhSXpZPJfpcMSga?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDLItyZpnEdccjFY?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > * If multi selection is enabled, then first click on any selected row (without pressing Ctrl key), it will clear the multi selection and in second click on the same row, it will be unselected.
 > * Toggle selection is a feature that can be applied to all types of selections. When the `CheckboxOnly` property is set to **true**, it restricts the ability to select or deselect rows or cells by clicking on them.
@@ -382,8 +382,9 @@ In the following example, it demonstrates how to clear all selection by calling 
 <div style="margin-bottom:5px">
     <SfButton OnClick="ClearSelection">Clear Selection</SfButton>
 </div>
-<SfGrid @ref="Grid" DataSource="@OrderData" AllowSelection="true">
+<SfGrid @ref="Grid" DataSource="@OrderData" AllowSelection="true" AllowPaging="true">
     <GridSelectionSettings Mode="Syncfusion.Blazor.Grids.SelectionMode.Both" Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></GridSelectionSettings>
+    <GridPageSettings PageSize="5"></GridPageSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
@@ -451,7 +452,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVSjJXPTALrrHfb?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVyDoDeWHPLhtfz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > In **Both** mode, if you call `ClearCellSelectionAsync` first, it will clear cell selections, and then if you call `ClearRowSelectionAsync`, it will clear row selections. The order of method calls determines which type of selection is cleared first.
 > To remove a specific selection in a row, cell, or column, utilize the following methods: [ClearRowSelectionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearRowSelectionAsync) for clearing row selections, [ClearCellSelectionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearCellSelectionAsync) for clearing cell selections.
@@ -464,7 +465,7 @@ To enable persist selection, set the [GridSelectionSettings.PersistSelection](ht
 
 > * While using persist selection feature, at least one column in your Grid should be enabled as a primary key. This ensures that the Grid can identify and persist the selected items correctly.
 > * The `PersistSelection` feature is not supported for cell selections in the Grid.
-> * The `PersistSelection` feature is only supported for Grid `multiple` type selections.
+> * The `PersistSelection` feature is only supported for Grid `Multiple` type selections.
 
 In the following example, it demonstrates how to enable the persist selection feature for both rows and columns using the `GridSelectionSettings.PersistSelection` property:
 
@@ -473,8 +474,9 @@ In the following example, it demonstrates how to enable the persist selection fe
 
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@OrderData" AllowSelection="true" AllowPaging="true">
+<SfGrid DataSource="@OrderData" AllowSelection="true" AllowPaging="true" Height="315">
     <GridSelectionSettings PersistSelection="true" Mode="SelectionMode.Both" Type="SelectionType.Multiple"></GridSelectionSettings>
+    <GridPageSettings PageSize="5"></GridPageSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
@@ -538,4 +540,4 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtroXJjFpqqBslwJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLejIZoMcsYDjdk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
