@@ -195,7 +195,7 @@ The Grid supports three types of cell selection mode which can be set by using [
 
 > Cell Selection requires the [GridSelectionSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Mode) to be **Cell** or  **Both** and [GridSelectionSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Type) should be **Multiple**.
 
-In the following example demonstrates how to dynamically enable and change the `GridSelectionSettings.CellSelectionMode` using the `DropDownList`:
+In the following example demonstrates how to dynamically enable and change the `GridSelectionSettings.CellSelectionMode` using the [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app):
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -529,8 +529,9 @@ The following example demonstrates how to obtain the selected row and cell index
         </Content>
     </DialogTemplates>
 </SfDialog>
-<SfGrid @ref="Grid" DataSource="@OrderData" AllowSelection="true" Height="315">
+<SfGrid @ref="Grid" DataSource="@OrderData" AllowSelection="true" AllowPaging="true">
     <GridSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Multiple" Mode="Syncfusion.Blazor.Grids.SelectionMode.Cell"></GridSelectionSettings>
+    <GridPageSettings PageSize="5"></GridPageSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="140"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
@@ -607,11 +608,11 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBetziRAPpKWdMw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNryZyZyzmehMywJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ##  Clear cell selection programmatically 
 
-Clearing cell selection programmatically in the Syncfusion Blazor DataGrid is a useful feature when you want to remove any existing cell selections. To achieve this, you can use the [CClearCellSelectionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearCellSelectionAsync) method.
+Clearing cell selection programmatically in the Syncfusion Blazor DataGrid is a useful feature when you want to remove any existing cell selections. To achieve this, you can use the [ClearCellSelectionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearCellSelectionAsync) method.
 
 > The `ClearCellSelectionAsync` method is applicable when the selection [GridSelectionSettings.Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Type) is set to **Multiple** or **Single**.
 
@@ -626,8 +627,9 @@ The following example demonstrates how to clear cell selection by calling the `C
 <div style="margin-bottom: 10px">
     <SfButton CssClass="btn" OnClick="ClearCellSelection">Clear Cell Selection</SfButton>
 </div>
-<SfGrid @ref="Grid" DataSource="@OrderData" AllowSelection="true" Height="315">
+<SfGrid @ref="Grid" DataSource="@OrderData" AllowSelection="true" AllowPaging="true">
     <GridSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Multiple" Mode="Syncfusion.Blazor.Grids.SelectionMode.Cell"></GridSelectionSettings>
+    <GridPageSettings PageSize="5"></GridPageSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="140"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
@@ -695,7 +697,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLyjJCxzNzEQyvE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXhStItSpmRvIpIy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Cell selection events 
 
