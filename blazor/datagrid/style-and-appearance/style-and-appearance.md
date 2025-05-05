@@ -49,7 +49,7 @@ To customize the appearance of the root element of the Syncfusion Blazor Grid, y
 
 ![Grid root element](../images/style-and-appearance/style-font-family.png)
 
-The above code snippet, the **.e-grid** class targets the root element of the Syncfusion Blazor Grid, and the `font-family` property is set to cursive to change the font family of the Syncfusion Blazor Grid.
+The above code snippet, the **.e-grid** class targets the root element of the Grid, and the `font-family` property is set to cursive to change the font family of Grid.
 
 In the following sample, the font family of Grid content is changed to **cursive**, and the background color of rows, selected rows, alternate rows, and row hovering color is modified using the below CSS styles.
 
@@ -158,10 +158,9 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtrStpWnJrFIGhRs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Customizing alternate row with frozen columns
+## Customizing alternate row with Frozen columns
 
-To customize the alternate row style in the Grid when frozen columns are enabled, you can use the following CSS code:
-
+To customize the alternate row style in the Grid when [Frozen columns](https://blazor.syncfusion.com/documentation/datagrid/frozen-column) are enabled, you can use the following CSS code:
 
 ```css
 .e-grid .e-altrow .e-rowcell {
