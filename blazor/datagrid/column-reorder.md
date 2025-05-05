@@ -9,7 +9,7 @@ documentation: ug
 
 # Column Reorder in Blazor DataGrid component
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid component allows to reorder columns by drag and drop of a particular column header from one index to another index within the grid.
+The Syncfusion Blazor Grid component allows to reorder columns by drag and drop of a particular column header from one index to another index within the grid.
 
 To reorder the columns, set the [AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowReordering) property to true in the grid.
 
@@ -85,7 +85,7 @@ public class OrderDetails
 
 ## Prevent reordering for particular column
 
-By default, all columns in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid can be reordered by dragging and dropping their headers to another location within the grid. However, there may be certain columns that you do not want to be reordered. In such cases, you can set the [AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowReordering) property of that particular column to false. Here is an example that demonstrates how to prevent reordering for a specific column:
+By default, all columns in the Syncfusion Blazor Grid can be reordered by dragging and dropping their headers to another location within the grid. However, there may be certain columns that you do not want to be reordered. In such cases, you can set the [AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowReordering) property of that particular column to false. Here is an example that demonstrates how to prevent reordering for a specific column:
 
 In this example, the **ShipCity** column is prevented from being reordered by setting the `AllowReordering` property to **false**.
 
@@ -154,7 +154,7 @@ public class OrderDetails
 
 ## Reorder columns externally
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid allows you to reorder columns externally, which means that using methods you can programmatically move columns around within the grid, based on their index or target index, or by using their field name.
+The Syncfusion Blazor Grid allows you to reorder columns externally, which means that using methods you can programmatically move columns around within the grid, based on their index or target index, or by using their field name.
 
 > When reordering columns externally, you must set the [AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowReordering) property of the grid to **true**.
 
@@ -328,7 +328,7 @@ public class OrderDetails
 
 ### Reorder column based on field names
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to programmatically reorder columns using the [ReorderColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ReorderColumnAsync_System_String_System_String_) and [ReorderColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ReorderColumnsAsync_System_Collections_Generic_List_System_String__System_String_) methods. These methods provide flexibility for dynamically rearranging columns based on their field names.
+The Syncfusion Blazor DataGrid allows you to programmatically reorder columns using the [ReorderColumnAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ReorderColumnAsync_System_String_System_String_) and [ReorderColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ReorderColumnsAsync_System_Collections_Generic_List_System_String__System_String_) methods. These methods provide flexibility for dynamically rearranging columns based on their field names.
 
 1. `ReorderColumnAsync`: This method is used to reorder a single column by specifying its current field name and the target column's field name. It takes the following arguments:
     * **FromFieldName**: The field name of the column to be moved.

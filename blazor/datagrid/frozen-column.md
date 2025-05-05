@@ -9,7 +9,7 @@ documentation: ug
 
 # Column Pinning (Frozen) in Blazor DataGrid component
 
-In the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component, you have the capability to **freeze** columns, ensuring they remain visible as you scroll through extensive datasets. This functionality significantly improves user experience by keeping critical information constantly within view, even when navigating through large volumes of data. This means that important columns remain fixed in their positions, making it easier to access and reference key data points while working with the grid.
+In the Syncfusion Blazor DataGrid component, you have the capability to **freeze** columns, ensuring they remain visible as you scroll through extensive datasets. This functionality significantly improves user experience by keeping critical information constantly within view, even when navigating through large volumes of data. This means that important columns remain fixed in their positions, making it easier to access and reference key data points while working with the grid.
 
 To know about frozen columns in Blazor DataGrid Component, you can check this video.
 
@@ -137,7 +137,7 @@ public class OrderDetails
 
 ## Change default frozen line color
 
-You can customize the frozen line borders of frozen columns in the Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid component by applying custom CSS styles to the specific frozen column. This allows you to change the border color of the left frozen columns, right frozen columns, and fixed frozen columns to match your application's design and theme.
+You can customize the frozen line borders of frozen columns in the Syncfusion DataGrid component by applying custom CSS styles to the specific frozen column. This allows you to change the border color of the left frozen columns, right frozen columns, and fixed frozen columns to match your application's design and theme.
 
 To change default frozen line color, use the following class name and apply the border color based on your requirement.
 
@@ -274,7 +274,7 @@ The following example demonstrates how to change the default frozen line color u
 
 ## Detail template with frozen columns
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid allows columns to be **frozen** while using a [detail template](https://blazor.syncfusion.com/documentation/datagrid/detail-template). The detail template in the DataGrid component enables you to display additional information about a specific row by expanding or collapsing its detail content.
+The Syncfusion DataGrid allows columns to be **frozen** while using a [detail template](https://blazor.syncfusion.com/documentation/datagrid/detail-template). The detail template in the DataGrid component enables you to display additional information about a specific row by expanding or collapsing its detail content.
 
 Here’s an example of using the **detail template** alongside **frozen columns** in the DataGrid:
 
@@ -409,11 +409,11 @@ public class EmployeeDetails
 
 ## Add or remove frozen columns by dragging the column separator
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to dynamically add or remove columns from the frozen content by dragging and dropping the column separator. This provides flexibility to customize the grid layout directly through individual interactions.
+The Syncfusion Blazor DataGrid allows you to dynamically add or remove columns from the frozen content by dragging and dropping the column separator. This provides flexibility to customize the grid layout directly through individual interactions.
 
 To enable this feature, set the [AllowFreezeLineMoving](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFreezeLineMoving) property to **true** in the Grid component.
 
-Here is an example that demonstrates how to enable and use the `AllowFreezeLineMoving` property in the Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid.
+Here is an example that demonstrates how to enable and use the `AllowFreezeLineMoving` property in the Syncfusion DataGrid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -505,7 +505,7 @@ public class OrderDetails
 
 ## Limitations of frozen columns and freeze direction  
 
-The frozen columns and freeze direction features in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid have the following limitations:
+The frozen columns and freeze direction features in Syncfusion Blazor DataGrid have the following limitations:
 
 **General limitations for frozen columns** 
 
