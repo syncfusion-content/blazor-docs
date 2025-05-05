@@ -26,7 +26,7 @@ Refer to the following code sample for the custom tool with the tooltip text, wh
         <RichTextEditorCustomToolbarItems>
             <RichTextEditorCustomToolbarItem Name="Symbol">
                 <Template>
-                    <SfButton @onclick="ClickHandler">Ω</SfButton>
+                    <SfButton @onclick="ClickHandler">Insert Symbol</SfButton>
                 </Template>
             </RichTextEditorCustomToolbarItem>
         </RichTextEditorCustomToolbarItems>
@@ -47,9 +47,10 @@ Refer to the following code sample for the custom tool with the tooltip text, wh
     };
     private void ClickHandler()
     {
-        //Perform your action here
+        ExecuteCommandOption executeCommandOption = new ExecuteCommandOption();
+        executeCommandOption.Undo = true;
+        await this.RteObj.ExecuteCommandAsync(CommandName.InsertText, "₹", executeCommandOption);    }
     }
-}
 
 {% endhighlight %}
 {% endtabs %}
