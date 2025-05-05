@@ -9,7 +9,7 @@ documentation: ug
 
 # Sorting in Syncfusion Blazor DataGrid
 
-You can customize the appearance of the sorting icons and multi sorting icons in the Syncfusion Blazor DataGrid using CSS. You can use the available Syncfusion [icons](../../appearance/icons/#material) based on your theme. Here's how to do it:
+You can customize the appearance of the sorting icons and multi sorting icons in the Syncfusion Blazor DataGrid using CSS. You can use the available Syncfusion [icons](https://blazor.syncfusion.com/themestudio/?theme=material3) based on your theme. Here's how to do it:
 
 ## Customizing the Blazor DataGrid sorting icon
 
