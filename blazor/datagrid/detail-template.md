@@ -2293,4 +2293,4 @@ Detail template is not supported with the following features:
 * Row spanning
 * Column spanning
 * Lazy load grouping
-* State persistence 
+* State persistence
