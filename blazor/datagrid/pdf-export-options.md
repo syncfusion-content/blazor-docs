@@ -571,7 +571,7 @@ The supported `PageOrientation` options are:
 
 2. **Portrait**: Exports the Grid with a portrait PDF page orientation.
 
-The following example demonstrates how to export the Grid into PDF document by setting the `PdfExportProperties.PageOrientation` property using the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value)property of the [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list).
+The following example demonstrates how to export the Grid into PDF document by setting the `PdfExportProperties.PageOrientation` property using the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) property of the [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list).
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -724,7 +724,7 @@ Supported [PdfPageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 * Letter11x17
 * Ledger
 
-The following example demonstrates how to export the Grid into PDF document by setting the `PdfExportProperties.PageSize` property by using [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value)property of the [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list).
+The following example demonstrates how to export the Grid into PDF document by setting the `PdfExportProperties.PageSize` property by using [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_Value) property of the [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list).
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1065,7 +1065,7 @@ To customize the Grid columns, you can follow these steps:
 
 2. Define new list of GridColumn objects with the desired properties such as Field, HeaderText, TextAlign, Format, and Width for each column to be exported.
 
-3. Assign this list to the `Columns` property of the `PdfExportProperties` object, then pass it to the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_)to apply the customizations during export.
+3. Assign this list to the `Columns` property of the `PdfExportProperties` object, then pass it to the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) to apply the customizations during export.
 
 The following example demonstrates how to customize the Grid columns when exporting a document. In this scenario, the attributes for different columns have been customized: **OrderID** with `HeaderText` set to **Order Number**, **CustomerID** with headerText as **Customer Name**, and **Freight** with a center-aligned `TextAlign` property, which is not rendered in the Grid columns:
 
