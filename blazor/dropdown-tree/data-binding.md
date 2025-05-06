@@ -302,64 +302,56 @@ Adaptor is responsible for processing response and request from/to the service e
 
 ### Binding with OData services
 
-In the following example, `ODataAdaptor` is  used to fetch data from remote services. The **EmployeeID**, **FirstName**, and **EmployeeID** columns from Employees table have been mapped to **ID**, **Text**, and **HasChildren** fields respectively for first level nodes.
-
-The **OrderID**, **EmployeeID**, and **ShipName** columns from orders table have been mapped to **ID**, **ParentID**, and **Text** fields respectively for second level nodes.
+In the following example, `ODataAdaptor` is  used to fetch data from remote services. In the initial request, entire data will be returned.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Data
 
 <SfDropDownTree TValue="int?" TItem="TreeData" Placeholder="Select an employee" Width="500px">
-    <DropDownTreeField TItem="TreeData" Query="@Query" ID="EmployeeID" Text="FirstName" HasChildren="EmployeeID">
-        <SfDataManager Url="http://services.odata.org/Northwind/Northwind.svc" Adaptor="@Syncfusion.Blazor.Adaptors.ODataAdaptor" CrossDomain="true"></SfDataManager>
-    </DropDownTreeField>
-    <DropDownTreeField TItem="TreeData" Query="@SubQuery" ID="OrderID" Text="ShipName" ParentID="EmployeeID">
-        <SfDataManager Url="http://services.odata.org/Northwind/Northwind.svc" Adaptor="@Syncfusion.Blazor.Adaptors.ODataAdaptor" CrossDomain="true"></SfDataManager>
+    <DropDownTreeField TItem="TreeData" Query="@Query" ID="EmployeeID" Text="FirstName" ParentID="ReportsTo" HasChildren="HasChildren">
+        <SfDataManager Url="https://blazor.syncfusion.com/services/production/odata/DropDownTreeOData" Adaptor="@Syncfusion.Blazor.Adaptors.ODataAdaptor" CrossDomain="true"></SfDataManager>
     </DropDownTreeField>
 </SfDropDownTree>
 
 @code {
-    public Query Query = new Query().From("Employees").Select(new List<string> { "EmployeeID", "FirstName" }).Take(3).RequiresCount();
-    public Query SubQuery = new Query().From("Orders").Select(new List<string> { "OrderID", "EmployeeID", "ShipName" }).Take(2).RequiresCount();
+    public Query Query = new Query();
     public class TreeData
     {
-        public int? EmployeeID { get; set; }
-        public int OrderID { get; set; }
-        public string ShipName { get; set; }
+        public string EmployeeID { get; set; }
+        public string ReportsTo { get; set; }
         public string FirstName { get; set; }
+        public string Designation { get; set; }
+        public string Country { get; set; }
+        public bool HasChildren { get; set; }
     }
 }
 ```
 
 ### Binding with OData V4 services
 
-In the following example, `ODataV4Adaptor` is  used to fetch data from remote services. The **EmployeeID**, **FirstName**, and **EmployeeID** columns from Employees table have been mapped to **ID**, **Text**, and **HasChildren** fields respectively for first level nodes.
-
-The **OrderID**, **EmployeeID**, and **ShipName** columns from orders table have been mapped to **ID**, **ParentID**, and **Text** fields respectively for second level nodes.
+In the following example, `ODataV4Adaptor` is  used to fetch data from remote services. In the initial request, entire data will be returned.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Data
 
 <SfDropDownTree TValue="int?" TItem="TreeData" Placeholder="Select an employee" Width="500px">
-    <DropDownTreeField TItem="TreeData" Query="@Query" ID="EmployeeID" Text="FirstName" HasChildren="EmployeeID">
-        <SfDataManager Url="http://services.odata.org/V4/Northwind/Northwind.svc" Adaptor="@Syncfusion.Blazor.Adaptors.ODataV4Adaptor" CrossDomain="true"></SfDataManager>
-    </DropDownTreeField>
-    <DropDownTreeField TItem="TreeData" Query="@SubQuery" ID="OrderID" Text="ShipName" ParentID="EmployeeID">
-        <SfDataManager Url="http://services.odata.org/V4/Northwind/Northwind.svc" Adaptor="@Syncfusion.Blazor.Adaptors.ODataV4Adaptor" CrossDomain="true"></SfDataManager>
+    <DropDownTreeField TItem="TreeData" Query="@Query" ID="EmployeeID" Text="FirstName" ParentID="ReportsTo" HasChildren="HasChildren">
+        <SfDataManager Url="https://blazor.syncfusion.com/services/production/odata/DropDownTreeODataV4" Adaptor="@Syncfusion.Blazor.Adaptors.ODataV4Adaptor" CrossDomain="true"></SfDataManager>
     </DropDownTreeField>
 </SfDropDownTree>
 
 @code {
-    public Query Query = new Query().From("Employees").Select(new List<string> { "EmployeeID", "FirstName" }).Take(5).RequiresCount();
-    public Query SubQuery = new Query().From("Orders").Select(new List<string> { "OrderID", "EmployeeID", "ShipName" }).Take(5).RequiresCount();
+    public Query Query = new Query();
     public class TreeData
     {
-        public int? EmployeeID { get; set; }
-        public int OrderID { get; set; }
-        public string ShipName { get; set; }
+        public string EmployeeID { get; set; }
+        public string ReportsTo { get; set; }
         public string FirstName { get; set; }
+        public string Designation { get; set; }
+        public string Country { get; set; }
+        public bool HasChildren { get; set; }
     }
 }
 ```
