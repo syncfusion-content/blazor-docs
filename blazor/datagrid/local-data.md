@@ -52,7 +52,7 @@ The following example demonstrates how to show and hide the spinner during data 
         await Grid.HideSpinnerAsync();
     }
 
-    // Method to show/hide the spinner based on button click
+    // Method to show/hide the spinner based on button click.
     private async Task ShowHideSpinner(string buttonId)
     {
         if (buttonId == "showButton")
@@ -117,11 +117,11 @@ public class OrderData
 
 ## Binding data from Excel document
 
-The Syncfusion Blazor DataGrid allows you to import data from Excel files into your web application for display and manipulation within the Grid. This feature streamlines the process of transferring Excel data to a web-based environment. You can achieve this by using the `ValueChange` event of the **File Upload**.
+The Syncfusion Blazor DataGrid allows you to import data from Excel documents into your web application for display and manipulation within the Grid. This feature streamlines the process of transferring Excel data to a web-based environment. You can achieve this by using the `ValueChange` event of the **File Upload**.
 
 To import Excel data into Grid, you can follow these steps:
 
-1. Use the [File Upload](https://blazor.syncfusion.com/documentation/file-upload/getting-started-with-web-app) to upload the Excel file.
+1. Use the [File Upload](https://blazor.syncfusion.com/documentation/file-upload/getting-started-with-web-app) to upload the Excel document.
 
 2. Parse the file using the [Syncfusion.XlslO](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core/) library.
 
@@ -129,7 +129,7 @@ To import Excel data into Grid, you can follow these steps:
 
 4. Bind the list to the Blazor Grid.
 
-The following example demonstrates how an Excel document is uploaded, parsed, converted into a list of ``ExpandoObject`, and then bound to the Grid:
+The following example demonstrates how an Excel document is uploaded, parsed, converted into a list of `ExpandoObject`, and then bound to the Grid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -256,7 +256,7 @@ The following example demonstrates how an Excel document is uploaded, parsed, co
 
 The Syncfusion Blazor DataGrid is a generic component typically bound to a specific model type. However, there are scenarios where the model type is unknown during compile time. In such cases, you can bind data to the Grid using a list of **ExpandoObject**. This allows for dynamic data structures that can adapt to various data shapes without a predefined schema.
 
-To know about **ExpandoObject** data binding in Blazor Grid, you can check on this video.
+To know about **ExpandoObject** data binding in Grid, you can check on this video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=Xhaw3DdHmJk"%}
@@ -372,7 +372,7 @@ The Syncfusion Blazor DataGrid is a generic component which is strongly bound to
 
 To bind an **ExpandoObject** to the Grid, you need to assign it to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property. This enables the Grid to perform various supported data operations and editing on the **DynamicObject**.
 
-To know about **DynamicObject** data binding in Blazor Grid, you can check on this video.
+To know about **DynamicObject** data binding in Grid, you can check on this video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=Xhaw3DdHmJk"%}
@@ -776,7 +776,7 @@ public void ConfigureServices(IServiceCollection services)
 
 ## Handling exceptions
 
-Exceptions occurred during  Syncfusion Blazor Grid actions can be handled without stopping application.  You can capture these error messages or exception details using the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionFailure) event of the Grid. This event provides an argument containing the error details returned from the server.
+Exceptions occurred during  Syncfusion Blazor DataGrid actions can be handled without stopping application.  You can capture these error messages or exception details using the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionFailure) event of the Grid. This event provides an argument containing the error details returned from the server.
 
 N> We recommend you to bind **OnActionFailure** event during your application development phase, this helps you to find any exceptions. You can pass these exception details to our support team to get solution as early as possible.
 
