@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Filter Bar in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn here all about Filter Bar in Syncfusion Blazor DataGrid component and much more details.
+title: Filter Bar in Blazor DataGrid | Syncfusion
+description: Checkout and learn here all about Filter Bar in Syncfusion Blazor DataGrid and much more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Filter bar in Blazor Grid component
+# Filter bar in Blazor DataGrid
 
-The filter bar feature provides a user-friendly way to filter data in the Syncfusion<sup style="font-size:70%">&reg;</sup> Angular Grid. It displays an input field for each column, allowing you to enter filter criteria and instantly see the filtered results.
+The filter bar feature provides a user-friendly way to filter data in the Syncfusion Blazor DataGrid. It displays an input field for each column, allowing you to enter filter criteria and instantly see the filtered results.
 
 By defining the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) to true, then filter bar row will be rendered next to header which allows you to filter data. You can filter the records with different expressions depending upon the column type.
 
@@ -29,10 +29,11 @@ Expression |Example |Description |Column Type
 N/A |N/A | **equal** operator will always be used for date filter. |Date
 N/A |N/A |**equal** operator will always be used for Boolean filter. |Boolean
 
-The following example demonstrates how to activate default filtering in the grid.
+The following example demonstrates how to activate default filtering in the Grid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@GridData" @ref="Grid" AllowFiltering="true" AllowPaging="true" Height="273px">
@@ -58,56 +59,56 @@ The following example demonstrates how to activate default filtering in the grid
         GridData = OrderData.GetAllRecords();
     }
 }
+
 {% endhighlight %}
+
 {% highlight c# tabtitle="OrderData.cs" %}
+
 public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData() {}
+    public OrderData(int? OrderID, string CustomerID, DateTime? OrderDate, string ShipCity, string ShipName)
     {
-        public static List<OrderData> Orders = new List<OrderData>();
+        this.OrderID = OrderID;    
+        this.CustomerID = CustomerID;
+        this.OrderDate = OrderDate;
+        this.ShipCity = ShipCity;
+        this.ShipName = ShipName;           
+    }
 
-        public OrderData()
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count() == 0)
         {
-
-        }
-        public OrderData(int? OrderID, string CustomerID, DateTime? OrderDate, string ShipCity, string ShipName)
-        {
-            this.OrderID = OrderID;    
-            this.CustomerID = CustomerID;
-            this.OrderDate = OrderDate;
-            this.ShipCity = ShipCity;
-            this.ShipName = ShipName;           
-        }
-
-        public static List<OrderData> GetAllRecords()
-        {
-            if (Orders.Count() == 0)
-            {
                
-                int OrderID = 10247;
+            int OrderID = 10247;
 
-                for (int i = 1; i < 3; i++)
-                {
-                    Orders.Add(new OrderData(OrderID + 1, "VINET", new DateTime(1996, 07, 06), "Reims", "Vins et alcools Chevali"));
-                    Orders.Add(new OrderData(OrderID + 2, "TOMSP", new DateTime(1996, 07, 06), "Münster", "Toms Spezialitäten"));
-                    Orders.Add(new OrderData(OrderID + 3, "HANAR", new DateTime(1996, 07, 06), "Rio de Janeiro", "Hanari Carnes"));
-                    Orders.Add(new OrderData(OrderID + 4, "VICTE", new DateTime(1996, 07, 06), "Lyon", "Victuailles en stock"));
-                    Orders.Add(new OrderData(OrderID + 5, "SUPRD", new DateTime(1996, 07, 06), "Charleroi", "Suprêmes délices"));
-                    Orders.Add(new OrderData(OrderID + 6, "HANAR", new DateTime(1996, 07, 06), "Lyon", "Hanari Carnes"));
-                    Orders.Add(new OrderData(OrderID + 7, "CHOPS", new DateTime(1996, 07, 06), "Rio de Janeiro", "Chop-suey Chinese"));
-                    Orders.Add(new OrderData(OrderID + 8, "RICSU", new DateTime(1996, 07, 06), "Münster", "Richter Supermarkt"));
-                    Orders.Add(new OrderData(OrderID + 9, "WELLI", new DateTime(1996, 07, 06), "Reims", "Wellington Import"));
-                   
-                    OrderID += 9;
-                }
+            for (int i = 1; i < 3; i++)
+            {
+                Orders.Add(new OrderData(OrderID + 1, "VINET", new DateTime(1996, 07, 06), "Reims", "Vins et alcools Chevali"));
+                Orders.Add(new OrderData(OrderID + 2, "TOMSP", new DateTime(1996, 07, 06), "Münster", "Toms Spezialitäten"));
+                Orders.Add(new OrderData(OrderID + 3, "HANAR", new DateTime(1996, 07, 06), "Rio de Janeiro", "Hanari Carnes"));
+                Orders.Add(new OrderData(OrderID + 4, "VICTE", new DateTime(1996, 07, 06), "Lyon", "Victuailles en stock"));
+                Orders.Add(new OrderData(OrderID + 5, "SUPRD", new DateTime(1996, 07, 06), "Charleroi", "Suprêmes délices"));
+                Orders.Add(new OrderData(OrderID + 6, "HANAR", new DateTime(1996, 07, 06), "Lyon", "Hanari Carnes"));
+                Orders.Add(new OrderData(OrderID + 7, "CHOPS", new DateTime(1996, 07, 06), "Rio de Janeiro", "Chop-suey Chinese"));
+                Orders.Add(new OrderData(OrderID + 8, "RICSU", new DateTime(1996, 07, 06), "Münster", "Richter Supermarkt"));
+                Orders.Add(new OrderData(OrderID + 9, "WELLI", new DateTime(1996, 07, 06), "Reims", "Wellington Import"));
+                OrderID += 9;
             }
-            return Orders;
         }
+        return Orders;
+    }
 
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public string ShipCity { get; set; }
-        public string ShipName { get; set; }
-   }
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public DateTime? OrderDate { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -115,16 +116,17 @@ public class OrderData
 
 ## Filter bar modes
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid component refers to two different ways in which the grid’s filter bar can operate when filtering criteria are applied. These modes, “OnEnter Mode” and “Immediate Mode,” offer users different experiences and behaviors when interacting with the filter bar.
+The Syncfusion Blazor DataGrid refers to two different ways in which the Grid’s filter bar can operate when filtering criteria are applied. These modes, **OnEnter Mode** and **Immediate Mode**, offer users different experiences and behaviors when interacting with the filter bar.
 
 **OnEnter Mode:**
-By Setting the filter bar [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Mode) property as [OnEnter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterBarMode.html#Syncfusion_Blazor_Grids_FilterBarMode_OnEnter) within the [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) component, the filter bar captures the filter criteria entered but doesn’t initiate filtering until the **Enter** key is pressed. This allows multiple criteria modifications without triggering immediate filtering actions.
+By Setting the filter bar [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Mode) property as [OnEnter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterBarMode.html#Syncfusion_Blazor_Grids_FilterBarMode_OnEnter) within the [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings), the filter bar captures the filter criteria entered but doesn’t initiate filtering until the **Enter** key is pressed. This allows multiple criteria modifications without triggering immediate filtering actions.
 
 **Immediate Mode:**
-By Setting the filter bar [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Mode) property as [Immediate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterBarMode.html#Syncfusion_Blazor_Grids_FilterBarMode_Immediate) within the [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) component, the filter bar instantly applies filtering as filter criteria are entered. Filtering actions take place as soon as criteria are input or modified, providing real-time previews of filtering results.
+By Setting the filter bar [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Mode) property as [Immediate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterBarMode.html#Syncfusion_Blazor_Grids_FilterBarMode_Immediate) within the [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings), the filter bar instantly applies filtering as filter criteria are entered. Filtering actions take place as soon as criteria are input or modified, providing real-time previews of filtering results.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
 
@@ -174,56 +176,54 @@ By Setting the filter bar [Mode](https://help.syncfusion.com/cr/blazor/Syncfusio
         GridData = OrderData.GetAllRecords();
     }
 }
+
 {% endhighlight %}
+
 {% highlight c# tabtitle="OrderData.cs" %}
+
 public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+    public OrderData() {}
+    public OrderData(int? OrderID, string CustomerID, DateTime? OrderDate, string ShipCity, string ShipName)
     {
-        public static List<OrderData> Orders = new List<OrderData>();
+        this.OrderID = OrderID;    
+        this.CustomerID = CustomerID;
+        this.OrderDate = OrderDate;
+        this.ShipCity = ShipCity;
+        this.ShipName = ShipName;           
+    }
 
-        public OrderData()
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count() == 0)
         {
-
-        }
-        public OrderData(int? OrderID, string CustomerID, DateTime? OrderDate, string ShipCity, string ShipName)
-        {
-            this.OrderID = OrderID;    
-            this.CustomerID = CustomerID;
-            this.OrderDate = OrderDate;
-            this.ShipCity = ShipCity;
-            this.ShipName = ShipName;           
-        }
-
-        public static List<OrderData> GetAllRecords()
-        {
-            if (Orders.Count() == 0)
-            {
                
-                int OrderID = 10247;
-
-                for (int i = 1; i < 3; i++)
-                {
-                    Orders.Add(new OrderData(OrderID + 1, "VINET", new DateTime(1996, 07, 06), "Reims", "Vins et alcools Chevali"));
-                    Orders.Add(new OrderData(OrderID + 2, "TOMSP", new DateTime(1996, 07, 06), "Münster", "Toms Spezialitäten"));
-                    Orders.Add(new OrderData(OrderID + 3, "HANAR", new DateTime(1996, 07, 06), "Rio de Janeiro", "Hanari Carnes"));
-                    Orders.Add(new OrderData(OrderID + 4, "VICTE", new DateTime(1996, 07, 06), "Lyon", "Victuailles en stock"));
-                    Orders.Add(new OrderData(OrderID + 5, "SUPRD", new DateTime(1996, 07, 06), "Charleroi", "Suprêmes délices"));
-                    Orders.Add(new OrderData(OrderID + 6, "HANAR", new DateTime(1996, 07, 06), "Lyon", "Hanari Carnes"));
-                    Orders.Add(new OrderData(OrderID + 7, "CHOPS", new DateTime(1996, 07, 06), "Rio de Janeiro", "Chop-suey Chinese"));
-                    Orders.Add(new OrderData(OrderID + 8, "RICSU", new DateTime(1996, 07, 06), "Münster", "Richter Supermarkt"));
-                    Orders.Add(new OrderData(OrderID + 9, "WELLI", new DateTime(1996, 07, 06), "Reims", "Wellington Import"));
-                   
-                    OrderID += 9;
-                }
+            int OrderID = 10247;
+            for (int i = 1; i < 3; i++)
+            {
+                Orders.Add(new OrderData(OrderID + 1, "VINET", new DateTime(1996, 07, 06), "Reims", "Vins et alcools Chevali"));
+                Orders.Add(new OrderData(OrderID + 2, "TOMSP", new DateTime(1996, 07, 06), "Münster", "Toms Spezialitäten"));
+                Orders.Add(new OrderData(OrderID + 3, "HANAR", new DateTime(1996, 07, 06), "Rio de Janeiro", "Hanari Carnes"));
+                Orders.Add(new OrderData(OrderID + 4, "VICTE", new DateTime(1996, 07, 06), "Lyon", "Victuailles en stock"));
+                Orders.Add(new OrderData(OrderID + 5, "SUPRD", new DateTime(1996, 07, 06), "Charleroi", "Suprêmes délices"));
+                Orders.Add(new OrderData(OrderID + 6, "HANAR", new DateTime(1996, 07, 06), "Lyon", "Hanari Carnes"));
+                Orders.Add(new OrderData(OrderID + 7, "CHOPS", new DateTime(1996, 07, 06), "Rio de Janeiro", "Chop-suey Chinese"));
+                Orders.Add(new OrderData(OrderID + 8, "RICSU", new DateTime(1996, 07, 06), "Münster", "Richter Supermarkt"));
+                Orders.Add(new OrderData(OrderID + 9, "WELLI", new DateTime(1996, 07, 06), "Reims", "Wellington Import"));
+                OrderID += 9;
             }
-            return Orders;
         }
+        return Orders;
+    }
 
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public string ShipCity { get; set; }
-        public string ShipName { get; set; }
-   }
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public DateTime? OrderDate { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -231,12 +231,13 @@ public class OrderData
 
 ## Display filter text in pager
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid component provides an option to display filter text within the pager, indicating the current filtering status. Enabling this feature provides you with a clear understanding of the applied filters and the criteria used for filtering.
+The Syncfusion Blazor DataGrid provides an option to display filter text within the pager, indicating the current filtering status. Enabling this feature provides you with a clear understanding of the applied filters and the criteria used for filtering.
 
 To enable the display of filter text within the pager, you should set the [ShowFilterBarStatus](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_ShowFilterBarStatus) property within the [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) configuration.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
 
@@ -297,56 +298,54 @@ To enable the display of filter text within the pager, you should set the [ShowF
         GridData = OrderData.GetAllRecords();
     }
 }
+
 {% endhighlight %}
+
 {% highlight c# tabtitle="OrderData.cs" %}
+
 public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+    public OrderData(){}
+    public OrderData(int? OrderID, string CustomerID, DateTime? OrderDate, string ShipCity, string ShipName)
     {
-        public static List<OrderData> Orders = new List<OrderData>();
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;
+        this.OrderDate = OrderDate;
+        this.ShipCity = ShipCity;
+        this.ShipName = ShipName;
+    }
 
-        public OrderData()
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count() == 0)
         {
 
-        }
-        public OrderData(int? OrderID, string CustomerID, DateTime? OrderDate, string ShipCity, string ShipName)
-        {
-            this.OrderID = OrderID;
-            this.CustomerID = CustomerID;
-            this.OrderDate = OrderDate;
-            this.ShipCity = ShipCity;
-            this.ShipName = ShipName;
-        }
-
-        public static List<OrderData> GetAllRecords()
-        {
-            if (Orders.Count() == 0)
+            int OrderID = 10247;
+            for (int i = 1; i < 3; i++)
             {
-
-                int OrderID = 10247;
-
-                for (int i = 1; i < 3; i++)
-                {
-                    Orders.Add(new OrderData(OrderID + 1, "VINET", new DateTime(1996, 07, 06), "Reims", "Vins et alcools Chevali"));
-                    Orders.Add(new OrderData(OrderID + 2, "TOMSP", new DateTime(1996, 07, 06), "Münster", "Toms Spezialitäten"));
-                    Orders.Add(new OrderData(OrderID + 3, "HANAR", new DateTime(1996, 07, 06), "Rio de Janeiro", "Hanari Carnes"));
-                    Orders.Add(new OrderData(OrderID + 4, "VICTE", new DateTime(1996, 07, 06), "Lyon", "Victuailles en stock"));
-                    Orders.Add(new OrderData(OrderID + 5, "SUPRD", new DateTime(1996, 07, 06), "Charleroi", "Suprêmes délices"));
-                    Orders.Add(new OrderData(OrderID + 6, "HANAR", new DateTime(1996, 07, 06), "Lyon", "Hanari Carnes"));
-                    Orders.Add(new OrderData(OrderID + 7, "CHOPS", new DateTime(1996, 07, 06), "Rio de Janeiro", "Chop-suey Chinese"));
-                    Orders.Add(new OrderData(OrderID + 8, "RICSU", new DateTime(1996, 07, 06), "Münster", "Richter Supermarkt"));
-                    Orders.Add(new OrderData(OrderID + 9, "WELLI", new DateTime(1996, 07, 06), "Reims", "Wellington Import"));
-
-                    OrderID += 9;
-                }
+                Orders.Add(new OrderData(OrderID + 1, "VINET", new DateTime(1996, 07, 06), "Reims", "Vins et alcools Chevali"));
+                Orders.Add(new OrderData(OrderID + 2, "TOMSP", new DateTime(1996, 07, 06), "Münster", "Toms Spezialitäten"));
+                Orders.Add(new OrderData(OrderID + 3, "HANAR", new DateTime(1996, 07, 06), "Rio de Janeiro", "Hanari Carnes"));
+                Orders.Add(new OrderData(OrderID + 4, "VICTE", new DateTime(1996, 07, 06), "Lyon", "Victuailles en stock"));
+                Orders.Add(new OrderData(OrderID + 5, "SUPRD", new DateTime(1996, 07, 06), "Charleroi", "Suprêmes délices"));
+                Orders.Add(new OrderData(OrderID + 6, "HANAR", new DateTime(1996, 07, 06), "Lyon", "Hanari Carnes"));
+                Orders.Add(new OrderData(OrderID + 7, "CHOPS", new DateTime(1996, 07, 06), "Rio de Janeiro", "Chop-suey Chinese"));
+                Orders.Add(new OrderData(OrderID + 8, "RICSU", new DateTime(1996, 07, 06), "Münster", "Richter Supermarkt"));
+                Orders.Add(new OrderData(OrderID + 9, "WELLI", new DateTime(1996, 07, 06), "Reims", "Wellington Import"));
+                OrderID += 9;
             }
-            return Orders;
         }
+        return Orders;
+    }
 
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public string ShipCity { get; set; }
-        public string ShipName { get; set; }
-   }
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public DateTime? OrderDate { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -354,12 +353,13 @@ public class OrderData
 
 ## Prevent filtering for particular column
 
-In the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid, you can prevent filtering for a specific column by utilizing the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) object and setting it to **false**. This feature is useful when you want to disable filtering options for a particular column.
+In the Syncfusion Blazor DataGrid, you can prevent filtering for a specific column by utilizing the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) object and setting it to **false**. This feature is useful when you want to disable filtering options for a particular column.
 
-Here’s an example that demonstrates how to remove the filter bar for the **CustomerID** column in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid:
+Here’s an example that demonstrates how to remove the filter bar for the **CustomerID** column in Grid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@GridData" AllowFiltering="true" Height="273px">
@@ -380,54 +380,52 @@ Here’s an example that demonstrates how to remove the filter bar for the **Cus
         GridData = OrderData.GetAllRecords();
     }
 }
+
 {% endhighlight %}
+
 {% highlight c# tabtitle="OrderData.cs" %}
+
 public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+    public OrderData(){}
+
+    public OrderData(int? OrderID,string CustomerID,string ShipCity, string ShipName)
     {
-        public static List<OrderData> Orders = new List<OrderData>();
+        this.OrderID = OrderID;    
+        this.CustomerID = CustomerID;
+        this.ShipCity = ShipCity;
+        this.ShipName = ShipName;           
+    }
 
-        public OrderData()
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count() == 0)
         {
-
-        }
-        public OrderData(int? OrderID,string CustomerID,string ShipCity, string ShipName)
-        {
-            this.OrderID = OrderID;    
-            this.CustomerID = CustomerID;
-            this.ShipCity = ShipCity;
-            this.ShipName = ShipName;           
-        }
-
-        public static List<OrderData> GetAllRecords()
-        {
-            if (Orders.Count() == 0)
+            int OrderID = 10248;
+            for (int i = 1; i < 3; i++)
             {
-               
-                int OrderID = 10248;
-
-                for (int i = 1; i < 3; i++)
-                {
-                    Orders.Add(new OrderData(OrderID + 1, "VINET", "Reims", "Vins et alcools Chevalier"));
-                    Orders.Add(new OrderData(OrderID+2, "TOMSP", "Münster", "Toms Spezialitäten"));
-                    Orders.Add(new OrderData(OrderID+3, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
-                    Orders.Add(new OrderData(OrderID+4, "VICTE", "Lyon", "Victuailles en stock"));
-                    Orders.Add(new OrderData(OrderID+5, "SUPRD", "Charleroi", "Suprêmes délices"));
-                    Orders.Add(new OrderData(OrderID+6, "HANAR", "Lyon", "Hanari Carnes"));
-                    Orders.Add(new OrderData(OrderID+7, "CHOPS", "Rio de Janeiro", "Chop-suey Chinese"));
-                    Orders.Add(new OrderData(OrderID+8, "RICSU", "Münster", "Richter Supermarkt"));
-                    Orders.Add(new OrderData(OrderID+9, "WELLI", "Reims", "Wellington Import"));
-                   
-                    OrderID += 9;
-                }
+                Orders.Add(new OrderData(OrderID + 1, "VINET", "Reims", "Vins et alcools Chevalier"));
+                Orders.Add(new OrderData(OrderID+2, "TOMSP", "Münster", "Toms Spezialitäten"));
+                Orders.Add(new OrderData(OrderID+3, "HANAR", "Rio de Janeiro", "Hanari Carnes"));
+                Orders.Add(new OrderData(OrderID+4, "VICTE", "Lyon", "Victuailles en stock"));
+                Orders.Add(new OrderData(OrderID+5, "SUPRD", "Charleroi", "Suprêmes délices"));
+                Orders.Add(new OrderData(OrderID+6, "HANAR", "Lyon", "Hanari Carnes"));
+                Orders.Add(new OrderData(OrderID+7, "CHOPS", "Rio de Janeiro", "Chop-suey Chinese"));
+                Orders.Add(new OrderData(OrderID+8, "RICSU", "Münster", "Richter Supermarkt"));
+                Orders.Add(new OrderData(OrderID+9, "WELLI", "Reims", "Wellington Import"));
+                OrderID += 9;
             }
-            return Orders;
         }
+        return Orders;
+    }
 
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public string ShipCity { get; set; }
-        public string ShipName { get; set; }
-   }
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -435,14 +433,15 @@ public class OrderData
 
 ## Hide filter bar for template column
 
-By default, the filter bar is set to a disabled mode for template columns in the grid. However, in certain cases, you may want to hide the filter bar for a template column to provide a customized filtering experience.
+By default, the filter bar is set to a disabled mode for template columns in the Syncfusion Blazor DataGrid. However, in certain cases, you may want to hide the filter bar for a template column to provide a customized filtering experience.
 
 To hide the filter bar for a template column, you can use the  [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) property  of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). This property allows you to define a custom template for the filter bar of a column.
 
-Here’s an example that demonstrates how to hide the filter bar for a template column in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid:
+Here’s an example that demonstrates how to hide the filter bar for a template column in the Grid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
 
@@ -470,50 +469,49 @@ Here’s an example that demonstrates how to hide the filter bar for a template 
         GridData = OrderData.GetAllRecords();
     }
 }
+
 {% endhighlight %}
+
 {% highlight c# tabtitle="OrderData.cs" %}
+
 public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+    public OrderData() {}
+
+    public OrderData(int? OrderID,string CustomerID)
     {
-        public static List<OrderData> Orders = new List<OrderData>();
+        this.OrderID = OrderID;    
+        this.CustomerID = CustomerID;          
+    }
 
-        public OrderData()
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count() == 0)
         {
-
-        }
-        public OrderData(int? OrderID,string CustomerID)
-        {
-            this.OrderID = OrderID;    
-            this.CustomerID = CustomerID;          
-        }
-
-        public static List<OrderData> GetAllRecords()
-        {
-            if (Orders.Count() == 0)
-            {
                
-                int OrderID = 10247;
-
-                for (int i = 1; i < 3; i++)
-                {
-                    Orders.Add(new OrderData(OrderID + 1, "VINET"));
-                    Orders.Add(new OrderData(OrderID+2, "TOMSP"));
-                    Orders.Add(new OrderData(OrderID+3, "HANAR"));
-                    Orders.Add(new OrderData(OrderID+4, "VICTE"));
-                    Orders.Add(new OrderData(OrderID+5, "SUPRD"));
-                    Orders.Add(new OrderData(OrderID+6, "HANAR"));
-                    Orders.Add(new OrderData(OrderID+7, "CHOPS"));
-                    Orders.Add(new OrderData(OrderID+8, "RICSU"));
-                    Orders.Add(new OrderData(OrderID+9, "WELLI"));
-                   
-                    OrderID += 9;
-                }
+            int OrderID = 10247;
+            for (int i = 1; i < 3; i++)
+            {
+                Orders.Add(new OrderData(OrderID + 1, "VINET"));
+                Orders.Add(new OrderData(OrderID+2, "TOMSP"));
+                Orders.Add(new OrderData(OrderID+3, "HANAR"));
+                Orders.Add(new OrderData(OrderID+4, "VICTE"));
+                Orders.Add(new OrderData(OrderID+5, "SUPRD"));
+                Orders.Add(new OrderData(OrderID+6, "HANAR"));
+                Orders.Add(new OrderData(OrderID+7, "CHOPS"));
+                Orders.Add(new OrderData(OrderID+8, "RICSU"));
+                Orders.Add(new OrderData(OrderID+9, "WELLI"));   
+                OrderID += 9;
             }
-            return Orders;
         }
+        return Orders;
+    }
 
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-   }
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -521,12 +519,13 @@ public class OrderData
 
 ## Filter bar template with custom component
 
-The [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) feature in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid allows you to customize the components displayed in the filter bar. Normally, a text box is the default element rendered in the filter bar cell. This flexibility allows you to use various components, such as datepicker, numerictextbox, combobox, and multiselect, within the filter bar based on your specific requirements.
+The [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) feature in the Syncfusion Blazor DataGrid allows you to customize the components displayed in the filter bar. Normally, a text box is the default element rendered in the filter bar cell. This flexibility allows you to use various components, such as datepicker, numerictextbox, combobox, and multiselect, within the filter bar based on your specific requirements.
 
 To utilize this feature, you can define a custom template for the filter bar by setting the `FilterTemplate` property  of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) in your Blazor application:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Inputs
@@ -668,55 +667,56 @@ To utilize this feature, you can define a custom template for the filter bar by 
         GridData = OrderData.GetAllRecords();
     }
 }
+
 {% endhighlight %}
+
 {% highlight c# tabtitle="OrderData.cs" %}
- public class OrderData
+
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+
+    public OrderData() { }
+    public OrderData(int? OrderID, string CustomerID, double? Freight, DateTime? OrderDate, string ShipCity, string ShipCountry)
     {
-        public static List<OrderData> Orders = new List<OrderData>();
-
-        public OrderData()
-        {
-
-        }
-        public OrderData(int? OrderID, string CustomerID, double? Freight, DateTime? OrderDate, string ShipCity, string ShipCountry)
-        {
-            this.OrderID = OrderID;
-            this.CustomerID = CustomerID;
-            this.Freight = Freight;
-            this.OrderDate = OrderDate;
-            this.ShipCity = ShipCity;
-            this.ShipCountry = ShipCountry;
-        }
-
-        public static List<OrderData> GetAllRecords()
-        {
-            if (Orders.Count() == 0)
-            {
-                int OrderID = 10247;
-                for (int i = 1; i < 3; i++)
-                {
-                    Orders.Add(new OrderData(OrderID + 1, "VINET", 32.38, new DateTime(1996, 07, 04), "Reims", "France"));
-                    Orders.Add(new OrderData(OrderID + 2, "TOMSP", 11.61, new DateTime(1996, 07, 05), "Münster", "Germany"));
-                    Orders.Add(new OrderData(OrderID + 3, "HANAR", 65.83, new DateTime(1996, 07, 06), "Rio de Janeiro", "Brazil"));
-                    Orders.Add(new OrderData(OrderID + 4, "VICTE", 45.78, new DateTime(1996, 07, 07), "Lyon", "Belgium"));
-                    Orders.Add(new OrderData(OrderID + 5, "SUPRD", 98.6, new DateTime(1996, 07, 08), "Charleroi", "Switzerland"));
-                    Orders.Add(new OrderData(OrderID + 6, "HANAR", 103.45, new DateTime(1996, 07, 09), "Lyon", "Venezuela"));
-                    Orders.Add(new OrderData(OrderID + 7, "CHOPS", 103.45, new DateTime(1996, 07, 10), "Rio de Janeiro", "Austria"));
-                    Orders.Add(new OrderData(OrderID + 8, "RICSU", 112.48, new DateTime(1996, 07, 11), "Münster", "Mexico"));
-                    Orders.Add(new OrderData(OrderID + 9, "WELLI", 33.45, new DateTime(1996, 07, 12), "Reims", "USA"));
-                    OrderID += 9;
-                }
-            }
-            return Orders;
-        }
-
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public double? Freight { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public string ShipCountry { get; set; }
-        public string ShipCity { get; set; }
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;
+        this.Freight = Freight;
+        this.OrderDate = OrderDate;
+        this.ShipCity = ShipCity;
+        this.ShipCountry = ShipCountry;
     }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count() == 0)
+        {
+            int OrderID = 10247;
+            for (int i = 1; i < 3; i++)
+            {
+                Orders.Add(new OrderData(OrderID + 1, "VINET", 32.38, new DateTime(1996, 07, 04), "Reims", "France"));
+                Orders.Add(new OrderData(OrderID + 2, "TOMSP", 11.61, new DateTime(1996, 07, 05), "Münster", "Germany"));
+                Orders.Add(new OrderData(OrderID + 3, "HANAR", 65.83, new DateTime(1996, 07, 06), "Rio de Janeiro", "Brazil"));
+                Orders.Add(new OrderData(OrderID + 4, "VICTE", 45.78, new DateTime(1996, 07, 07), "Lyon", "Belgium"));
+                Orders.Add(new OrderData(OrderID + 5, "SUPRD", 98.6, new DateTime(1996, 07, 08), "Charleroi", "Switzerland"));
+                Orders.Add(new OrderData(OrderID + 6, "HANAR", 103.45, new DateTime(1996, 07, 09), "Lyon", "Venezuela"));
+                Orders.Add(new OrderData(OrderID + 7, "CHOPS", 103.45, new DateTime(1996, 07, 10), "Rio de Janeiro", "Austria"));
+                Orders.Add(new OrderData(OrderID + 8, "RICSU", 112.48, new DateTime(1996, 07, 11), "Münster", "Mexico"));
+                Orders.Add(new OrderData(OrderID + 9, "WELLI", 33.45, new DateTime(1996, 07, 12), "Reims", "USA"));
+                OrderID += 9;
+            }
+        }
+        return Orders;
+    }
+
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double? Freight { get; set; }
+    public DateTime? OrderDate { get; set; }
+    public string ShipCountry { get; set; }
+    public string ShipCity { get; set; }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
