@@ -19,6 +19,10 @@ To export the template columns into an PDF document, set the [IncludeTemplateCol
 
 The template values cannot be directly exported into the cells. To customize the values of the template columns in PDF document, you must use [PdfQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfQueryCellInfoEvent) event.
 
+> PDF Export supports base64 string to export the images.
+
+The following sample demonstrates how to export template columns such as **FirstName** and **EmailID** into an PDF document:
+
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
@@ -128,6 +132,8 @@ public class EmployeeData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDVItzhpzpJHfBYo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+![Exporting with column template](./images/exporting-pdf-column-template.gif)
+
 ## Exporting with group caption template
 
 The Syncfusion Blazor DataGrid allows you to export the Grid data along with a custom caption template into an PDF document. This feature can be useful when you want to provide meaningful group captions (e.g., count of records) in the exported PDF document.
@@ -235,6 +241,8 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtVyjfMHqkQMUKqH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+![Exporting with group caption template](./images/exporting-pdf-group-caption-template.gif)
+
 ## Exporting with detail template
 
 The Syncfusion Blazor DataGrid provides the capability to export both parent and child (detail) records, including nested data, to an PDF document. By default, the Grid exports the parent Grid along with expanded detail rows only. To customize the exporting behavior, utilize the [PdfExportProperties.PdfDetailRowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailRowMode.html) property within the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event, and pass it to the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method. The available options include:
@@ -247,7 +255,7 @@ The Syncfusion Blazor DataGrid provides the capability to export both parent and
 
 You can customize and format the detail rows in the exported PDF document using the [PdfDetailTemplateExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfDetailTemplateExporting) event. In this event, the detail rows of the PDF document are formatted in accordance with their parent row details.
 
-In the following example, detail row content is formatted by specifying the [Headers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_PdfDetailTemplateRowSettings_Headers), [Rows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_PdfDetailTemplateRowSettings_Rows) using parent row details, facilitating the creation of detail rows within the PDF. Additionally, custom styles can be applied to specific cells using the [Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailTemplateCell.html#Syncfusion_Blazor_Grids_PdfDetailTemplateCell_Style) property.
+In the following example, detail row content is formatted by specifying the [Headers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_PdfDetailTemplateRowSettings_Headers), [Rows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_PdfDetailTemplateRowSettings_Rows) using parent row details, facilitating the creation of detail rows within the PDF document. Additionally, custom styles can be applied to specific cells using the [Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailTemplateCell.html#Syncfusion_Blazor_Grids_PdfDetailTemplateCell_Style) property.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -525,9 +533,11 @@ public class ProductData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDVSNTCGsQlftohG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+![Exporting with detail template](./images/exporting-pdf-detail-template.gif)
+
 ## Exporting hierarchical Grid using detail template
 
-The Syncfusion Blazor DataGrid allows you to export hierarchical Grid data to PDF using the detail template feature. This is particularly useful for scenarios where data is nested within parent rows (such as employee details and their related orders), and you need to export both the parent and child records to a single PDF document.
+The Syncfusion Blazor DataGrid allows you to export hierarchical Grid data to PDF document using the detail template feature. This is particularly useful for scenarios where data is nested within parent rows (such as employee details and their related orders), and you need to export both the parent and child records to a single PDF document.
 
 You can customize and format the detail rows in the exported PDF document using the [PdfDetailTemplateExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfDetailTemplateExporting) event. In this event, the detail rows of the PDF document are formatted in accordance with their parent row details.
 
@@ -593,45 +603,79 @@ In the following example, detail row content is formatted by specifying the [Hea
         OrderInfo = OrderDetails.GetAllRecords();
     }
 
+    // Handles toolbar click event (for PDF export).
     public async Task ToolbarClickHandler(ClickEventArgs args)
     {
         if (args.Item.Id == "Grid_pdfexport")  // Id is the combination of Grid's ID and item name.
         {
             PdfExportProperties PdfExportProperties = new PdfExportProperties();
+
+            // Specify that detailed rows should be expanded.
             PdfExportProperties.PdfDetailRowMode = PdfDetailRowMode.Expand;
+
+            // Export the data to PDF document.
             await this.Grid.ExportToPdfAsync(PdfExportProperties);
         }
     }
 
+    // Customizes the PDF detail export for each employee.
     public void PdfDetailTemplateHandler(PdfDetailTemplateEventArgs<EmployeeData> args)
     {
         var pdfRows = new List<PdfDetailTemplateRow>();
+
+        // Fetch all orders for the current employee.
         var data = Orders.ToList().Where(_ => _.EmployeeID == args.ParentRow.Data.EmployeeID).ToList();
         for (var i = 0; i < data.Count(); i++)
         {
             var row = data[i];
+
+            // Fetch all order details for the current order.
             var childData = OrderInfo.ToList().Where(_ => _.OrderID == row.OrderID).ToList();
             var pdfchildRows = new List<PdfDetailTemplateRow>();
             var pdfRow = ProcessPdfRow(new List<string>() { row.OrderID.ToString(), row.CustomerID.ToString(), row.Freight.ToString(), row.ShipCity });
+
+            // For each order detail (child row), create an PDF row with the following details.
             for (var j = 0; j < childData.Count; j++)
             {
                 var childRow = childData[j];
                 pdfchildRows.Add(ProcessPdfRow(new List<string>() { childRow.CustomerID.ToString(), childRow.Title.ToString(), childRow.Address.ToString(), childRow.Country }));
             }
-            pdfRow.ChildRowInfo = new PdfDetailTemplateRowSettings() { Headers = new List<PdfDetailTemplateRow>() { ProcessPdfRow(new List<string>() { "Customer Name", "Title", "Address", "Country" }) }, Rows = pdfchildRows };
+
+            // Add the child rows under the parent row.
+            pdfRow.ChildRowInfo = new PdfDetailTemplateRowSettings() 
+            {
+                 // Set headers for child rows (order details).
+                 Headers = new List<PdfDetailTemplateRow>() 
+                 { 
+                    ProcessPdfRow(new List<string>() { "Customer Name", "Title", "Address", "Country" }) 
+                 },
+
+                 // Set the child rows (the actual order details). 
+                 Rows = pdfchildRows };
+
+            // Add the row to the list of rows for this employee's orders.
             pdfRows.Add(pdfRow);
         }
+
+        // Set the parent row headers (order-related information).
         args.RowInfo.Headers = new List<PdfDetailTemplateRow>() { ProcessPdfRow(new List<string>() { "Order ID", "Customer ID", "Freight", "Ship City" }) };
+
+        // Set the final row data (parent and child rows) for the PDF export.
         args.RowInfo.Rows = pdfRows;
     }
 
+    // Converts a list of cell values into an PDF row.
     PdfDetailTemplateRow ProcessPdfRow(List<string> value)
     {
         var cells = new List<PdfDetailTemplateCell>();
+
+        // Populate each cell with the corresponding value.
         for (var j = 0; j < value.Count(); j++)
         {
             cells.Add(new PdfDetailTemplateCell { CellValue = $"{value[j]}", Index = j });
         }
+
+        // Return the PDF row with its cells.
         return new PdfDetailTemplateRow { Cells = cells };
     }
 }
@@ -760,3 +804,5 @@ public class OrderDetails
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VtByZTscrNDihvvB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+![Exporting hierarchical Grid using detail template](./images/exporting-pdf-hierachy-grid.gif)
