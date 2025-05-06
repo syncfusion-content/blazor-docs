@@ -25,7 +25,7 @@ To add text in the header or footer of the exported PDF document, follow these s
 2. Set the [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_Header) or [Footer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_Footer) property to a string value representing the desired text.
 3. Trigger the PDF export operation.
 
-The following code example demostrates how to add the header in the exported PDF document. 
+The following code example demonstrates how to add the header in the exported PDF document. 
 
 ```cshtml
 
@@ -62,7 +62,7 @@ This can be achieved using the [PdfExportProperties](https://help.syncfusion.com
 
 To add a line in the header or footer of the exported PDF document, you can access the `Header.Contents` or `Footer.Contents` property of the [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_Header) or [Footer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_Footer) in the `PdfExportProperties` property of the Grid. 
 
-The following code example demostrates how to draw a line in the header of the exported PDF document. 
+The following code example demonstrates how to draw a line in the header of the exported PDF document. 
 
 ```cshtml
 
@@ -141,7 +141,7 @@ This can be achieved using the [PdfExportProperties](https://help.syncfusion.com
 
 To add a page number in the header or footer of the exported PDF document, you can access the `Header.Contents` or `Footer.Contents` property of the [Header](https://ej2.syncfusion.com/angular/documentation/api/grid/pdfExportProperties/#header) or [Footer](https://ej2.syncfusion.com/angular/documentation/api/grid/pdfExportProperties/#footer) in the `PdfExportProperties` property of the Grid. 
 
-The following code example demostrates how to add a page number in the footer of the exported PDF document.
+The following code example demonstrates how to add a page number in the footer of the exported PDF document.
 
 ```cshtml
 
