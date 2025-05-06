@@ -127,7 +127,7 @@ To import Excel data into Grid, you can follow these steps:
 
 3. Convert the parsed data into a list of `ExpandoObject`.
 
-4. Bind the list to the Blazor Grid.
+4. Bind the list to the Grid.
 
 The following example demonstrates how an Excel document is uploaded, parsed, converted into a list of `ExpandoObject`, and then bound to the Grid:
 
