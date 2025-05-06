@@ -237,7 +237,7 @@ public class OrderData
 
 ## Customize column chooser dialog size
 
-The column chooser dialog in Syncfusion Blazor Grid comes with default size, but you can modify its height and width as per your specific needs using CSS styles.
+The column chooser dialog in Syncfusion Blazor DataGrid comes with default size, but you can modify its height and width as per your specific needs using CSS styles.
 
 To customize the column chooser dialog size, you can use the following CSS styles:
 
@@ -336,9 +336,9 @@ public class OrderData
 
 ## Change default search operator of the column chooser
 
-The column chooser dialog in the Syncfusion Blazor Grid provides a search box that allows you to search for column names. By default, the search functionality uses the **StartsWith** operator to match columns and display the results in the column chooser dialog. However, there might be cases where you need to change the default search operator to achieve more precise data matching.
+The column chooser dialog in the Syncfusion Blazor DataGrid provides a search box that allows you to search for column names. By default, the search functionality uses the **StartsWith** operator to match columns and display the results in the column chooser dialog. However, there might be cases where you need to change the default search operator to achieve more precise data matching.
 
-To change the default search operator of the column chooser in Syncfusion Grid, you need to use the [Operator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Operator.html) property of the [GridColumnChooserSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html) class.
+To change the default search operator of the column chooser in Grid, you need to use the [Operator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Operator.html) property of the [GridColumnChooserSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html) class.
 
 Here’s an example of how to change the default search operator of the column chooser to **Contains** in the Blazor Grid:
 
