@@ -370,11 +370,11 @@ public class OrderDetails
 
 In Syncfusion Blazor DataGrid, you can toggle row selection programmatically using the [SelectRowAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRowAsync_System_Int32_System_Nullable_System_Boolean__) method. By passing **true** as the second argument (**isToggle**), the method will toggle the selection state of the specified row:
 
-* If the row is already selected, it will be deselected.
+If the row is already selected, it will be deselected; otherwise, it will be selected.
 
-* If the row is not selected, it will be selected.
+This feature is especially useful when controlling row selection through custom logic or external UI elements.
 
-The following example demonstrates how to programmatically toggle the row index 2.
+The following example demonstrates how to programmatically toggle selection for the row at index 2.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
