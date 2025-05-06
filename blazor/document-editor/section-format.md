@@ -34,6 +34,8 @@ await documentEditor.Selection.SectionFormat.SetTopMarginAsync(10);
 await documentEditor.Selection.SectionFormat.SetBottomMarginAsync(10);
 ```
 
+>Note: The maximum value of Margin is 1584, as per Microsoft Word application and you can set any value less than or equal to 1584 to this property. If you set any value greater than 1584, then Syncfusion Document editor will automatically reset as 1584.
+
 ## Header distance
 
 You can define the distance of header content from the top of the page by using the following sample code.
