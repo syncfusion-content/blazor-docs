@@ -304,7 +304,7 @@ Markers can be added to the Google Maps layer by setting the latitude and longit
 }
 ```
 
-![Blazor Google Maps with Markers and Navigation Line](../images/MapProviders//Google-maps/blazor-google-maps-marker-and-line.png)
+![Blazor Google Maps with Markers and Navigation Line](../images/MapProviders/Google-maps/blazor-google-maps-marker-and-line.png)
 
 N>You can refer to the method for obtaining the session token as explained in the above section **Displaying Google Maps**.
 
