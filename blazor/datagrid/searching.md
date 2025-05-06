@@ -322,7 +322,7 @@ The following example demonstrates how to set the `SearchSettings.Operator` prop
 
 The Syncfusion Blazor DataGrid allows you to perform searches programmatically, enabling you to search for records using an external button instead of relying solely on the built-in search bar. This feature provides flexibility and allows for custom search implementations within your application. To search for records using an external button, you can utilize the [SearchAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SearchAsync_System_String_) method provided by the Grid.
 
-The `SearchAsync` method allows you to perform a search operation based on a search key or criteria. The following example demonstatres how to implement `SearchAsync` by an external button using the following steps:
+The `SearchAsync` method allows you to perform a search operation based on a search key or criteria. The following example demonstrates how to implement `SearchAsync` by an external button using the following steps:
 
 1. Add a [Button](https://blazor.syncfusion.com/documentation/button/getting-started-with-web-app) element outside of the Grid.
 
