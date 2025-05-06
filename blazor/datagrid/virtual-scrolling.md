@@ -389,6 +389,7 @@ public class VirtualData
     public int FIELD29 { get; set; }
     public int FIELD30 { get; set; }
 }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -482,6 +483,7 @@ public class OrderDetails
     public DateTime ShippedDate { get; set; }
     public bool Verified { get; set; }
 }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -596,12 +598,10 @@ public class OrderDetails
 * The **Ctrl + Home** and **Ctrl + End** keys are not supported when using column virtualization.
 * The following features are compatible with column virtualization and work within the viewport:
    1. Column resizing
-   2. Column reordering
-   3. Column chooser
-   4. Auto-fit
-   5. Print
-   6. Clipboard
-   7. Column menu - Column chooser, AutofitAll
+   2. Column chooser
+   3. Auto-fit
+   4. Clipboard
+   5. Column menu - Column chooser, AutofitAll
 * Column virtual scrolling is not compatible with the following feature:
     1. Grouping
     2. Batch editing
@@ -611,7 +611,6 @@ public class OrderDetails
     6. Detail template
     7. Hierarchy Grid
     8. Autofill
-    9. Column chooser
 
 ## Enable cell placeholder during Virtualization
 
