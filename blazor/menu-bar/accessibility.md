@@ -53,16 +53,16 @@ The Blazor Menu bar component followed the [WAI-ARIA](https://www.w3.org/WAI/ARI
 
 The Blazor Menu bar component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Menu Bar component.
 
-| **Press** | **To do this** |
-| --- | --- |
-| <kbd>Esc</kbd> | Closes the sub Menu that contains focus and returns focus to the parent element. |
-| <kbd>Enter</kbd> | Opens the sub Menu if focused menu item has sub Menu, and places focus on its first item or activates the item and closes the sub menu. |
-| <kbd>Up</kbd> | Navigates up or to the previous menu item. |
-| <kbd>Down</kbd> | Navigates down or to the next menu item. |
-| <kbd>Left</kbd> | Closes the current sub menu and navigates to the parent menu. |
-| <kbd>Right</kbd> | Navigates and open the next sub menu. |
-| <kbd>Home</kbd> | Focuses the first item. |
-| <kbd>End</kbd> | Focuses the last item.
+| Windows | Mac | Actions |
+| --- | --- | --- |
+| <kbd>Esc</kbd> | <kbd>Esc</kbd> | Closes the sub Menu that contains focus and returns focus to the parent element. |
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Opens the sub Menu if focused menu item has sub Menu, and places focus on its first item or activates the item and closes the sub menu. |
+| <kbd>↑</kbd> | <kbd>↑</kbd> | Navigates up or to the previous menu item. |
+| <kbd>↓</kbd> | <kbd>↓</kbd> | Navigates down or to the next menu item. |
+| <kbd>←</kbd> | <kbd>←</kbd> | Closes the current sub menu and navigates to the parent menu. |
+| <kbd>→</kbd> | <kbd>→</kbd> | Navigates and open the next sub menu. |
+| <kbd>Home</kbd> | <kbd>Home</kbd> | Focuses the first item. |
+| <kbd>End</kbd> | <kbd>End</kbd> | Focuses the last item.
 
 ## Ensuring accessibility
 
