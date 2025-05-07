@@ -160,46 +160,392 @@ To refer to optimized CSS files, use the following syntax:
 </head>
 ```
 
-| Theme Name | CDN Reference |
-|--- | --- |
-| Tailwind 3.4 | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind3.css |
-| Tailwind 3.4 Dark | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind3-dark.css |
-| Bootstrap 5.3 | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5.3.css |
-| Bootstrap 5.3 Dark | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5.3-dark.css |
-| Fluent 2 | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fluent2.css |
-| Fluent 2 Dark | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fluent2-dark.css |
-| Material 3 | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material3.css |
-| Material 3 Lite | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material3-lite.css |
-| Material 3 Dark | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material3-dark.css |
-| Material 3 Dark Lite | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material3-dark-lite.css |
-| Bootstrap 5 | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5.css |
-| Bootstrap 5 Lite | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5-lite.css |
-| Bootstrap 5 Dark| https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5-dark.css |
-| Bootstrap 5 Dark Lite| https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5-dark-lite.css |
-| Bootstrap 4 | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css |
-| Bootstrap 4 Lite | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4-lite.css |
-| Bootstrap 3 | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap.css |
-| Bootstrap 3 Lite | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap-lite.css |
-| Bootstrap 3 Dark| https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap-dark.css |
-| Bootstrap 3 Dark Lite| https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap-dark-lite.css |
-| Google’s Material | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material.css |
-| Google’s Material Lite | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material-lite.css |
-| Google’s Material Dark | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material-dark.css |
-| Google’s Material Dark Lite | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material-dark-lite.css |
-| Tailwind CSS | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind.css |
-| Tailwind CSS Lite | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind-lite.css |
-| Tailwind CSS Dark | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind-dark.css |
-| Tailwind CSS Dark Lite | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind-dark-lite.css |
-| Fluent | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fluent.css |
-| Fluent Lite | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fluent-lite.css |
-| Fluent Dark | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fluent-dark.css |
-| Fluent Dark Lite | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fluent-dark-lite.css |
-| Microsoft Office Fabric  | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fabric.css |
-| Microsoft Office Fabric Lite  | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fabric-lite.css |
-| Microsoft Office Fabric Dark | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fabric-dark.css |
-| Microsoft Office Fabric Dark Lite | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fabric-dark-lite.css |
-| High Contrast  | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/highcontrast.css |
-| High Contrast Lite  | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/highcontrast-lite.css |
+<table style="width:100%">
+<tr>
+<th style="width:30%">Theme Name</th>
+<th style="width:70%">CDN Reference</th>
+</tr>
+<tr>
+<td>Tailwind 3.4</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind3.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Tailwind 3.4 Dark</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind3-dark.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Bootstrap 5.3</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5.3.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Bootstrap 5.3 Dark</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5.3-dark.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Fluent 2</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fluent2.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Fluent 2 Dark</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fluent2-dark.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Material 3</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material3.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Material 3 Lite</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material3-lite.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Material 3 Dark</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material3-dark.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Material 3 Dark Lite</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material3-dark-lite.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Bootstrap 5</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Bootstrap 5 Lite</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5-lite.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Bootstrap 5 Dark</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5-dark.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Bootstrap 5 Dark Lite</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5-dark-lite.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Bootstrap 4</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Bootstrap 4 Lite</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4-lite.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Bootstrap 3</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Bootstrap 3 Lite</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap-lite.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Bootstrap 3 Dark</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap-dark.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Bootstrap 3 Dark Lite</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap-dark-lite.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Google's Material</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Google's Material Lite</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material-lite.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Google’s Material Dark</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material-dark.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Google’s Material Dark Lite</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material-dark-lite.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Tailwind CSS</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Tailwind CSS Lite</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind-lite.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Tailwind CSS Dark</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind-dark.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Tailwind CSS Dark Lite</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind-dark-lite.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Fluent</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fluent.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Fluent Lite</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fluent-lite.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Fluent Dark</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fluent-dark.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Fluent Dark Lite</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fluent-dark-lite.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Microsoft Office Fabric</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fabric.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Microsoft Office Fabric Lite</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fabric-lite.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Microsoft Office Fabric Dark</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fabric-dark.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Microsoft Office Fabric Dark Lite</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fabric-dark-lite.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>High Contrast</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/highcontrast.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>High Contrast Lite</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/highcontrast-lite.css
+{% endhighlight %}
+
+</td>
+</tr>
+</table>
 
 ## LibMan
 
@@ -411,10 +757,10 @@ The following shows the importing theme path for the overall theme.
 
 Below table lists the importing theme path for the individual components.
 
-<table>
+<table style="width:100%">
     <tr>
-        <th>Component</th>
-        <th>Importing theme path</th>
+        <th style="width:25%">Component</th>
+        <th style="width:75%">Importing theme path</th>
     </tr>
     <tr>
         <td>Accordion</td>
