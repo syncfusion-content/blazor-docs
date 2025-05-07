@@ -540,7 +540,7 @@ This configuration ensures that your Blazor application can communicate with the
 
 After completing the setup, run your application. The Syncfusion Blazor DataGrid will fetch and display data from the configured GraphQL API. Ensure that both the Blazor application and the GraphQL server are running and accessible.
  
-![GraphQL Adaptor Data](./images/blazor-datagrid-adaptors.gif)
+![GraphQL Adaptor Data](../images/blazor-datagrid-graphql-adaptor-data.gif)
 
 **Understanding DataManagerRequestInput Class**
 
@@ -548,10 +548,14 @@ Before you dive into specific data operations like search, sorting, or filtering
 
 The following code demonstrates the `DataManagerRequestInput` class, which encapsulates parameters such as pagination (Skip, Take), search filters (Search), sorting (Sorted), and more. These parameters are passed as arguments to the resolver function for processing.
 
-```cs
+{% tabs %}
+{% highlight cs tabtitle="DataManagerRequest.cs" %}
 
 namespace GraphQLServer.Models
 {
+    /// <summary>
+    /// Represents the input structure for data manager requests.
+    /// </summary>
     public class DataManagerRequestInput
     {
         [GraphQLName("Skip")]
@@ -585,7 +589,6 @@ namespace GraphQLServer.Models
         public List<string>? Group { get; set; }
 
         [GraphQLName("antiForgery")]
-
         public string? antiForgery { get; set; }
 
         [GraphQLName("Table")]
@@ -613,6 +616,9 @@ namespace GraphQLServer.Models
         public bool? LazyExpandAllGroup { get; set; }
     }
 
+    /// <summary>
+    /// Represents an aggregate operation in the data manager request.
+    /// </summary>
     public class Aggregate
     {
         [GraphQLName("Field")]
@@ -622,6 +628,9 @@ namespace GraphQLServer.Models
         public string Type { get; set; }
     }
 
+    /// <summary>
+    /// Represents a search filter in the data manager request.
+    /// </summary>
     public class SearchFilter
     {
         [GraphQLName("Fields")]
@@ -637,6 +646,9 @@ namespace GraphQLServer.Models
         public bool IgnoreCase { get; set; }
     }
 
+    /// <summary>
+    /// Represents a sorting operation in the data manager request.
+    /// </summary>
     public class Sort
     {
         [GraphQLName("Name")]
@@ -650,6 +662,9 @@ namespace GraphQLServer.Models
         public object Comparer { get; set; }
     }
 
+    /// <summary>
+    /// Represents a filter condition in the data manager request.
+    /// </summary>
     public class WhereFilter
     {
         [GraphQLName("Field")]
@@ -679,7 +694,8 @@ namespace GraphQLServer.Models
     }
 }
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Handling searching operation
 
@@ -1537,6 +1553,8 @@ namespace GraphQLServer.GraphQL
 
 {% endhighlight %}
 {% endtabs %}
+
+![Crud Operation](../images/blazor-datagrid-graphql-adaptor-crud.gif)
 
 **Batch operation**
 
