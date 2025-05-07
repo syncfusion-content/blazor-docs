@@ -16,6 +16,7 @@ Document Editor supports performing `spell checking` for any input text. You can
 
 If your running web service Url is `http://localhost:62870/`, set the serviceUrl like below:
 
+In the provided below Blazor code, EnableSpellCheck="true" enables real-time spell checking in the Syncfusion SfDocumentEditorContainer, underlining misspelled words and offering suggestions.
 ```cshtml
 @using Syncfusion.Blazor.DocumentEditor 
 @using Syncfusion.EJ2.SpellChecker; 
