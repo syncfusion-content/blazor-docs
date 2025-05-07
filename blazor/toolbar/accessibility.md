@@ -58,14 +58,14 @@ The following list of attributes are added in the Toolbar.
 
 Keyboard navigation is enabled, by default. Possible keys are:
 
-| Keyboard shortcuts | Actions |
-|-------- | ------|
-| <kbd>Left</kbd>    | Focuses the previous element. |
-| <kbd>Right</kbd>   | Focuses the next element. |
-| <kbd>Enter</kbd> | When focused on a ToolBar command, clicking the key triggers the click of Toolbar element. When popup drop-down icon is focused, the popup opens. |
-| <kbd>Esc(Escape)</kbd> | Closes popup. |
-| <kbd>Down</kbd> | Focuses the next popup element.  |
-| <kbd>Up</kbd> | Focuses the previous popup element. |
+| Windows | Mac | Actions |
+|-------- | ------ | ------|
+| <kbd>←</kbd> | <kbd>←</kbd> | Focuses the previous element. |
+| <kbd>→</kbd> | <kbd>→</kbd> | Focuses the next element. |
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | When focused on a ToolBar command, clicking the key triggers the click of Toolbar element. When popup drop-down icon is focused, the popup opens. |
+| <kbd>Esc(Escape)</kbd> | <kbd>Esc</kbd> | Closes popup. |
+| <kbd>↓</kbd> | <kbd>↓</kbd> | Focuses the next popup element.  |
+| <kbd>↑</kbd> | <kbd>↑</kbd> | Focuses the previous popup element. |
 
 ## Ensuring accessibility
 

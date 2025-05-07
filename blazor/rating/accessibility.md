@@ -55,13 +55,13 @@ The Blazor Rating component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/
 
 The Blazor Rating component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/slider/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Rating component.
 
-| Keyboard shortcuts | Actions |
-|------------|-------------------|
-| <kbd>Space</kbd> | When **Reset Button** is focused, resets to `min` value. |
-| <kbd>Arrow Up</kbd> | Increases the value. |
-| <kbd>Arrow Left</kbd> | Decreases the value; in RTL mode, increases the value. |
-| <kbd>Arrow Down</kbd> | Decreases the value. |
-| <kbd>Arrow Right</kbd> | Increases the value; in RTL mode, decreases the value. |
+| Windows | Mac | Actions |
+|------------|-------------------| ---|
+| <kbd>Space</kbd> | <kbd>Space</kbd> | When **Reset Button** is focused, resets to `min` value. |
+| <kbd>↑</kbd> | <kbd>↑</kbd> | Increases the value. |
+| <kbd>←</kbd> | <kbd>←</kbd> | Decreases the value; in RTL mode, increases the value. |
+| <kbd>↓</kbd> | <kbd>↓</kbd> | Decreases the value. |
+| <kbd>→</kbd> | <kbd>→</kbd> | Increases the value; in RTL mode, decreases the value. |
 
 ## Ensuring accessibility
 
