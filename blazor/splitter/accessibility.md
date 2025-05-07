@@ -41,15 +41,15 @@ The accessibility compliance for the Blazor Splitter component is outlined below
 
 The following key shortcuts can be used to access the Blazor Splitter without interruptions:
 
-| **Keyboard shortcuts** | **Actions** |
-| --- | --- |
-| <kbd>Tab</kbd> | Helps in focusing the splitter on the page and switching between the consecutive splitter bars. |
-| <kbd>Shift</kbd> + <kbd>Tab</kbd> | Helps in focusing the previous splitter bar element on the splitter. |
-| <kbd>Right arrow</kbd> | Helps in moving the active `Horizontal` orientated splitter bar to its `Right` side. |
-| <kbd>Left arrow</kbd> | Helps in moving the active `Horizontal` orientated splitter bar to its `Left` side. |
-| <kbd>Up arrow</kbd> | Helps in moving the active `Vertical` orientated splitter bar to its `Up` side. |
-| <kbd>Down arrow</kbd> | Helps in moving the active `Vertical` orientated splitter bar to its `Down` side. |
-| <kbd>Enter</kbd> | Helps to toggle between `Expand` and `Collapse` actions of the splitter bar when it is active. |
+| Windows | Mac | Actions |
+| --- | --- | --- |
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Helps in focusing the splitter on the page and switching between the consecutive splitter bars. |
+| <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Helps in focusing the previous splitter bar element on the splitter. |
+| <kbd>→</kbd> | <kbd>→</kbd> | Helps in moving the active `Horizontal` orientated splitter bar to its `Right` side. |
+| <kbd>←</kbd> | <kbd>←</kbd> | Helps in moving the active `Horizontal` orientated splitter bar to its `Left` side. |
+| <kbd>↑</kbd> | <kbd>↑</kbd> | Helps in moving the active `Vertical` orientated splitter bar to its `Up` side. |
+| <kbd>↓</kbd> | <kbd>↓</kbd> | Helps in moving the active `Vertical` orientated splitter bar to its `Down` side. |
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Helps to toggle between `Expand` and `Collapse` actions of the splitter bar when it is active. |
 
 ## Ensuring accessibility
 
