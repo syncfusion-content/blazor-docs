@@ -123,7 +123,7 @@ private class ErrorDetails
 
 ```
 
-**STEP 3**: To initialize the Syncfusion Maps component, the **FetchSessionToken** function is invoked in the **OnInitializedAsync** method. After retrieving the session token, both the session token and the API key are appended to the UrlTemplate property of the Maps component. This ensures secure authentication and proper access to the map tiles, allowing the Syncfusion Maps component to display the map with the appropriate data.
+**STEP 3**: To initialize the Syncfusion Maps component, the **FetchSessionToken** function is invoked in the **OnInitializedAsync** method. After retrieving the session token, both the session token and the API key are appended to the `UrlTemplate` property of the Maps component. This ensures secure authentication and proper access to the map tiles, allowing the Syncfusion Maps component to display the map with the appropriate data.
 
 ```cshtml
 
@@ -261,7 +261,7 @@ The Google Maps layer supports both zooming and panning. Zooming allows you to c
 
 ![Blazor Google Maps with Zooming and Panning](../images/MapProviders/Google-maps/blazor-google-maps-zooming.png)
 
-N>You can refer to the method for obtaining the session token as explained in the above section **Displaying Google Maps**.
+N>You can refer to the method for obtaining the session token as explained in the above section [Displaying Google Maps](https://blazor.syncfusion.com/documentation/maps/providers/google-maps#displaying-google-maps).
 
 ## Adding markers and navigation line
 
@@ -306,7 +306,7 @@ Markers can be added to the Google Maps layer by setting the latitude and longit
 
 ![Blazor Google Maps with Markers and Navigation Line](../images/MapProviders/Google-maps/blazor-google-maps-marker-and-line.png)
 
-N>You can refer to the method for obtaining the session token as explained in the above section **Displaying Google Maps**.
+N>You can refer to the method for obtaining the session token as explained in the above section [Displaying Google Maps](https://blazor.syncfusion.com/documentation/maps/providers/google-maps#displaying-google-maps).
 
 ## Adding sublayer
 
@@ -330,7 +330,7 @@ A GeoJSON shape can be rendered as a sublayer on top of the Google Maps layer to
 
 ![Blazor Google Maps with Sublayer](../images/MapProviders/Google-maps/blazor-google-maps-sublayer.png)
 
-N>You can refer to the method for obtaining the session token as explained in the above section **Displaying Google Maps**.
+N>You can refer to the method for obtaining the session token as explained in the above section [Displaying Google Maps](https://blazor.syncfusion.com/documentation/maps/providers/google-maps#displaying-google-maps).
 
 ## Enable legend
 
@@ -393,4 +393,4 @@ In the example below, the legend is added to the markers on the Google Maps laye
 
 ![Blazor Google Maps with Legend](../images/MapProviders/Google-maps/blazor-google-maps-legend.png)
 
-N>You can refer to the method for obtaining the session token as explained in the above section **Displaying Google Maps**.
+N>You can refer to the method for obtaining the session token as explained in the above section [Displaying Google Maps](https://blazor.syncfusion.com/documentation/maps/providers/google-maps#displaying-google-maps).
