@@ -766,7 +766,7 @@ The Syncfusion Blazor DataGrid supports rendering foreign key values within a co
 
 To achieve this, define a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property and use the foreign key mapping to bind and render the desired value. This approach is especially useful when the foreign key refers to an ID and you want to display the corresponding name or label.
 
-The following example demonstrates how to render a foreign key value using a column template in the Blazor DataGrid:
+The following example demonstrates how to render a foreign key value using a column template in the Grid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -781,7 +781,7 @@ The following example demonstrates how to render a foreign key value using a col
                     var order = (OrderData)data;
                     var emp = Employees.FirstOrDefault(e => e.EmployeeID == order.EmployeeID);
                 }
-                <a href="#">@emp?.FirstName</a>
+                <a href="#" @onclick="() => LogToConsole(order?.OrderID)">@emp?.FirstName</a>
             </Template>
         </GridForeignColumn>
         <GridColumn Field="Freight" HeaderText="Freight" Format="C2" Width="120" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" />
@@ -851,7 +851,7 @@ The following example demonstrates how to render a foreign key value using a col
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDrItpiWpAQSwTsg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXrSDojmVniWmsTS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Enable multiple foreign key columns
 
