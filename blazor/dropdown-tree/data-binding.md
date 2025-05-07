@@ -9,11 +9,11 @@ documentation: ug
 
 # Data Binding in Blazor Dropdown Tree Component
 
-The Blazor Dropdown Tree component provides the option to load data either from the local data sources or from remote data services. This can be done through `DataSource` property that is a member of the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#constructors) property. The `DataSource` property supports list of objects and `DataManager`. It also supports different kinds of data services such as OData, OData V4, Web API, URL, and JSON with the help of `DataManager` adaptors.
+The Blazor Dropdown Tree component provides the option to load data either from the local data sources or from remote data services. This can be done through [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#Syncfusion_Blazor_Navigations_DropDownTreeField_1_DataSource) property that is a member of the [DropDownTreeField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#constructors) property. The `DataSource` property supports list of objects and [`DataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html). It also supports different kinds of data services such as OData, OData V4, Web API, URL, and JSON with the help of `DataManager` adaptors.
 
 ## Binding local data 
 
-To bind local data to the Blazor Dropdown Tree, assign a list of objects to the `DataSource` property. The Blazor Dropdown Tree component requires three fields (Id, Text, and ParentID) to render local data source. When mapper fields are not specified, it takes the default values as the mapping fields. Local data source can also be provided as an instance of the `DataManager`. It supports two kinds of local data binding methods.
+To bind local data to the Blazor Dropdown Tree, assign a list of objects to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#Syncfusion_Blazor_Navigations_DropDownTreeField_1_DataSource) property. The Blazor Dropdown Tree component requires three fields (Id, Text, and ParentID) to render local data source. When mapper fields are not specified, it takes the default values as the mapping fields. Local data source can also be provided as an instance of the `DataManager`. It supports two kinds of local data binding methods.
 
 * Hierarchical data
 
@@ -21,7 +21,7 @@ To bind local data to the Blazor Dropdown Tree, assign a list of objects to the 
 
 ### Hierarchical data
 
-Blazor Dropdown Tree can be populated with hierarchical data source that contains nested list of objects. A hierarchical data can be directly assigned to the `DataSource` property, and map all the field members with corresponding keys from the hierarchical data to [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#constructors) property.
+Blazor Dropdown Tree can be populated with hierarchical data source that contains nested list of objects. A hierarchical data can be directly assigned to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#Syncfusion_Blazor_Navigations_DropDownTreeField_1_DataSource) property, and map all the field members with corresponding keys from the hierarchical data to [DropDownTreeField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#constructors) property.
 
 In the following example, **Id**, **FolderName**, and **SubFolders** columns from hierarchical data have been mapped to **ID**, **Text**, and **Child** fields, respectively.
 
@@ -35,10 +35,10 @@ In the following example, **Id**, **FolderName**, and **SubFolders** columns fro
 @code {
     public class MailItem
     {
-        public string Id { get; set; }
-        public string FolderName { get; set; }
+        public string? Id { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
-        public List<MailItem> SubFolders { get; set; }
+        public List<MailItem>? SubFolders { get; set; }
     }
 
     List<MailItem> MyFolder = new List<MailItem>()
@@ -104,7 +104,7 @@ In the following example, **Id**, **FolderName**, and **SubFolders** columns fro
 
 ### Self-referential data
 
-Blazor Dropdown Tree can be populated from self-referential data structure that contains list of objects with `ParentID` mapping. The self-referential data can be directly assigned to the `DataSource` property, and map all the field members with corresponding keys from self-referential data to [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#constructors) property.
+Blazor Dropdown Tree can be populated from self-referential data structure that contains list of objects with [`ParentID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#Syncfusion_Blazor_Navigations_DropDownTreeField_1_ParentID) mapping. The self-referential data can be directly assigned to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#Syncfusion_Blazor_Navigations_DropDownTreeField_1_DataSource) property, and map all the field members with corresponding keys from self-referential data to [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#constructors) property.
 
 To render the root level nodes, specify the ParentID as null or no need to specify the ParentID in `DataSource`. In the following example, **Id**, **Pid**, **HasSubFolders**, and **FolderName** columns from self-referential data have been mapped to **ID**, **ParentId**, **HasChildren**, and **Text** fields, respectively.
 
@@ -132,9 +132,9 @@ To render the root level nodes, specify the ParentID as null or no need to speci
 
     public class MailItem
     {
-        public string Id { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? Id { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
     }
@@ -143,18 +143,18 @@ To render the root level nodes, specify the ParentID as null or no need to speci
 
 ### ExpandoObject binding 
 
-The Blazor Dropdown Tree is a generic component that is strongly bound to a specific model type, but in cases where the model type is unknown at compile time, the Dropdown Tree can be bound to a list of ExpandoObjects using the `DataSource` property. This allows the Dropdown Tree to perform all supported data operations.
+The Blazor Dropdown Tree is a generic component that is strongly bound to a specific model type, but in cases where the model type is unknown at compile time, the Dropdown Tree can be bound to a list of ExpandoObjects using the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.DropDownTreeField-1.html#Syncfusion_Blazor_Navigations_DropDownTreeField_1_DataSource) property. This allows the Dropdown Tree to perform all supported data operations.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
 @using System.Dynamic
 
 <SfDropDownTree TValue="string" TItem="ExpandoObject" Placeholder="Select a Item">
-    <DropDownTreeField TItem="ExpandoObject" ID="ID" DataSource="@TreeData" Text="Name" ParentID="ParentID" HasChildren="ChildRecordID" Expanded="Expanded"></DropDownTreeField>
+    <DropDownTreeField TItem="ExpandoObject" ID="ID" DataSource="@TreeData" Text="Name" ParentID="ParentID" HasChildren="HasChildren" Expanded="Expanded"></DropDownTreeField>
 </SfDropDownTree>
 
 @code {
-    public List<ExpandoObject> TreeData { get; set; }
+    public List<ExpandoObject>? TreeData { get; set; }
 
     protected override void OnInitialized()
     {
@@ -178,6 +178,7 @@ The Blazor Dropdown Tree is a generic component that is strongly bound to a spec
             ParentRecord.Name = "Parent " + i;
             ParentRecord.ParentID = null;
             ParentRecord.Expanded = true;
+            ParentRecord.HasChildren = true;
             Data.Add(ParentRecord);
             AddChildRecords(ParentRecordID);
         }
@@ -207,12 +208,13 @@ The Blazor Dropdown Tree is a generic component that is strongly bound to a spec
 ```cshtml
 @using Syncfusion.Blazor.Navigations
 @using System.Dynamic
+
 <SfDropDownTree TValue="string" TItem="DynamicDictionary" Placeholder="Select a Item">
-    <DropDownTreeField TItem="DynamicDictionary" ID="ID" DataSource="@TreeData" Text="Name" ParentID="ParentID" HasChildren="ChildRecordID" Expanded="Expanded"></DropDownTreeField>
+    <DropDownTreeField TItem="DynamicDictionary" ID="ID" DataSource="@TreeData" Text="Name" ParentID="ParentID" HasChildren="HasChildren" Expanded="Expanded"></DropDownTreeField>
 </SfDropDownTree>
 
 @code {
-    public List<DynamicDictionary> TreeData { get; set; }
+    public List<DynamicDictionary>? TreeData { get; set; }
     protected override void OnInitialized()
     {
         this.TreeData = GetData().ToList();
@@ -233,6 +235,7 @@ The Blazor Dropdown Tree is a generic component that is strongly bound to a spec
             ParentRecord.Name = "Parent " + i;
             ParentRecord.ParentID = null;
             ParentRecord.Expanded = true;
+            ParentRecord.HasChildren = true;
             Data.Add(ParentRecord);
             AddChildRecords(ParentRecordID);
         }
@@ -277,7 +280,7 @@ The Blazor Dropdown Tree is a generic component that is strongly bound to a spec
 
 ## Binding Remote data
 
-Blazor Dropdown Tree can also be populated from a remote data service with the help of `DataManager` component and `Query` property. It supports different kinds of data services such as OData, OData V4, Web API, URL, and JSON with the help of `DataManager` adaptors. A service data can be assigned as an instance of `DataManager` to the `DataSource` property. To interact with remote data source, provide the endpoint `url`.
+Blazor Dropdown Tree can also be populated from a remote data service with the help of [`DataManager`](https://blazor.syncfusion.com/documentation/data/getting-started) component and `Query` property. It supports different kinds of data services such as OData, OData V4, Web API, URL, and JSON with the help of `DataManager` adaptors. A service data can be assigned as an instance of `DataManager` to the `DataSource` property. To interact with remote data source, provide the endpoint `url`.
 
 The `DataManager` that acts as an interface between the service endpoint and the Dropdown Tree requires the following information to interact with service endpoint properly.
 
@@ -299,71 +302,63 @@ Adaptor is responsible for processing response and request from/to the service e
 
 ### Binding with OData services
 
-In the following example, `ODataAdaptor` is  used to fetch data from remote services. The **EmployeeID**, **FirstName**, and **EmployeeID** columns from Employees table have been mapped to **ID**, **Text**, and **HasChildren** fields respectively for first level nodes.
-
-The **OrderID**, **EmployeeID**, and **ShipName** columns from orders table have been mapped to **ID**, **ParentID**, and **Text** fields respectively for second level nodes.
+In the following example, `ODataAdaptor` is  used to fetch data from remote services. In the initial request, entire data will be returned.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Data
 
 <SfDropDownTree TValue="int?" TItem="TreeData" Placeholder="Select an employee" Width="500px">
-    <DropDownTreeField TItem="TreeData" Query="@Query" ID="EmployeeID" Text="FirstName" HasChildren="EmployeeID">
-        <SfDataManager Url="http://services.odata.org/Northwind/Northwind.svc" Adaptor="@Syncfusion.Blazor.Adaptors.ODataAdaptor" CrossDomain="true"></SfDataManager>
-    </DropDownTreeField>
-    <DropDownTreeField TItem="TreeData" Query="@SubQuery" ID="OrderID" Text="ShipName" ParentID="EmployeeID">
-        <SfDataManager Url="http://services.odata.org/Northwind/Northwind.svc" Adaptor="@Syncfusion.Blazor.Adaptors.ODataAdaptor" CrossDomain="true"></SfDataManager>
+    <DropDownTreeField TItem="TreeData" Query="@Query" ID="EmployeeID" Text="FirstName" ParentID="ReportsTo" HasChildren="HasChildren">
+        <SfDataManager Url="https://blazor.syncfusion.com/services/production/odata/DropDownTreeOData" Adaptor="@Syncfusion.Blazor.Adaptors.ODataAdaptor" CrossDomain="true"></SfDataManager>
     </DropDownTreeField>
 </SfDropDownTree>
 
 @code {
-    public Query Query = new Query().From("Employees").Select(new List<string> { "EmployeeID", "FirstName" }).Take(3).RequiresCount();
-    public Query SubQuery = new Query().From("Orders").Select(new List<string> { "OrderID", "EmployeeID", "ShipName" }).Take(2).RequiresCount();
+    public Query Query = new Query();
     public class TreeData
     {
-        public int? EmployeeID { get; set; }
-        public int OrderID { get; set; }
-        public string ShipName { get; set; }
+        public string EmployeeID { get; set; }
+        public string ReportsTo { get; set; }
         public string FirstName { get; set; }
+        public string Designation { get; set; }
+        public string Country { get; set; }
+        public bool HasChildren { get; set; }
     }
 }
 ```
 
 ### Binding with OData V4 services
 
-In the following example, `ODataV4Adaptor` is  used to fetch data from remote services. The **EmployeeID**, **FirstName**, and **EmployeeID** columns from Employees table have been mapped to **ID**, **Text**, and **HasChildren** fields respectively for first level nodes.
-
-The **OrderID**, **EmployeeID**, and **ShipName** columns from orders table have been mapped to **ID**, **ParentID**, and **Text** fields respectively for second level nodes.
+In the following example, `ODataV4Adaptor` is  used to fetch data from remote services. In the initial request, entire data will be returned.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Data
 
 <SfDropDownTree TValue="int?" TItem="TreeData" Placeholder="Select an employee" Width="500px">
-    <DropDownTreeField TItem="TreeData" Query="@Query" ID="EmployeeID" Text="FirstName" HasChildren="EmployeeID">
-        <SfDataManager Url="http://services.odata.org/V4/Northwind/Northwind.svc" Adaptor="@Syncfusion.Blazor.Adaptors.ODataV4Adaptor" CrossDomain="true"></SfDataManager>
-    </DropDownTreeField>
-    <DropDownTreeField TItem="TreeData" Query="@SubQuery" ID="OrderID" Text="ShipName" ParentID="EmployeeID">
-        <SfDataManager Url="http://services.odata.org/V4/Northwind/Northwind.svc" Adaptor="@Syncfusion.Blazor.Adaptors.ODataV4Adaptor" CrossDomain="true"></SfDataManager>
+    <DropDownTreeField TItem="TreeData" Query="@Query" ID="EmployeeID" Text="FirstName" ParentID="ReportsTo" HasChildren="HasChildren">
+        <SfDataManager Url="https://blazor.syncfusion.com/services/production/odata/DropDownTreeODataV4" Adaptor="@Syncfusion.Blazor.Adaptors.ODataV4Adaptor" CrossDomain="true"></SfDataManager>
     </DropDownTreeField>
 </SfDropDownTree>
 
 @code {
-    public Query Query = new Query().From("Employees").Select(new List<string> { "EmployeeID", "FirstName" }).Take(5).RequiresCount();
-    public Query SubQuery = new Query().From("Orders").Select(new List<string> { "OrderID", "EmployeeID", "ShipName" }).Take(5).RequiresCount();
+    public Query Query = new Query();
     public class TreeData
     {
-        public int? EmployeeID { get; set; }
-        public int OrderID { get; set; }
-        public string ShipName { get; set; }
+        public string EmployeeID { get; set; }
+        public string ReportsTo { get; set; }
         public string FirstName { get; set; }
+        public string Designation { get; set; }
+        public string Country { get; set; }
+        public bool HasChildren { get; set; }
     }
 }
 ```
 
 ### Web API Adaptor
 
-In the following example, `WebApiAdaptor` is  used to fetch data from server side.
+In the following example, `WebApiAdaptor` is  used to fetch data from server side. In the initial request, entire data will be returned.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -412,23 +407,8 @@ namespace DropDownTreeSample.Controllers
                 new NodeResult { ProductID = 5, ProductName = "SubChild1", pid = 3, haschild = false },
                 new NodeResult { ProductID = 6, ProductName = "SubChild2", pid = 3, haschild = false },
             };
-
             var data = localData.ToList();
-            var queryString = Request.Query;
-
-            if (queryString.Keys.Contains("$filter"))
-            {
-                string filter = string.Join("", queryString["$filter"].ToString().Split(' ').Skip(2)); // get filter from querystring
-                // filter the data based on the expand node id.
-                data = data.Where(d => d.pid.ToString() == filter).ToList();
-                return data;
-            }
-            else
-            {
-                // if the parent id is null.
-                data = data.Where(d => d.pid == null).ToList();
-                return data;
-            }
+            return data;
         }
 
         public class NodeResult
@@ -801,7 +781,7 @@ namespace DBTree.Data
 
 #### Creating web API controller
 
- A Web API Controller has to be created, which allows the Dropdown Tree to directly consume data from the Entity Framework.
+ A Web API Controller has to be created, which allows the Dropdown Tree to directly consume data from the Entity Framework. In the initial request, entire data will be returned.
 
 ```csharp
 using DBTree.Data;
@@ -820,22 +800,7 @@ namespace DBTree.Controller
         {
             // Get the DataSource from Database
             var data = db.GetAllEmployees().ToList();
-            var queryString = Request.Query;
-            if (queryString.Keys.Contains("$filter"))
-            {
-                StringValues Skip;
-                StringValues Take;
-                int skip = (queryString.TryGetValue("$skip", out Skip)) ? Convert.ToInt32(Skip[0]) : 0;
-                int top = (queryString.TryGetValue("$top", out Take)) ? Convert.ToInt32(Take[0]) : data.Count();
-                string filter = string.Join("", queryString["$filter"].ToString().Split(' ').Skip(2)); // get filter from querystring
-                data = data.Where(d => d.PId?.ToString() == filter).ToList();
-                return data.Skip(skip).Take(top);
-            }
-            else
-            {
-                data = data.Where(d => d.PId == null).ToList();
-                return data;
-            }
+            return data;
         }
     }
 }
@@ -890,7 +855,7 @@ In the following demo, initially there are five tree items rendered. On clicking
     List<EmployeeData> Data = new List<EmployeeData>
     {
         new EmployeeData() { Id = "1", Name = "Steven Buchanan", Job = "General Manager", HasChild = true, Expanded = true },
-        new EmployeeData() { Id = "2", PId = "1", Name = "Laura Callahan", Job = "Product Manager", HasChild = true },
+        new EmployeeData() { Id = "2", PId = "1", Name = "Laura Callahan", Job = "Product Manager" },
         new EmployeeData() { Id = "3", Name = "Andrew Fuller", Job = "Team Lead", HasChild = true },
         new EmployeeData() { Id = "4", PId = "3", Name = "Anne Dodsworth", Job = "Developer" },
         new EmployeeData() { Id = "10", PId = "3", Name = "Lilly", Job = "Developer" }
@@ -902,12 +867,12 @@ In the following demo, initially there are five tree items rendered. On clicking
     }
     class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Job { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Job { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
-        public string PId { get; set; }
+        public string? PId { get; set; }
     }
 }
 ```
@@ -943,12 +908,12 @@ In the following example, the [LoadOnDemand](https://help.syncfusion.com/cr/blaz
 
     class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Job { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Job { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
-        public string PId { get; set; }
+        public string? PId { get; set; }
     }
 }
 ```
@@ -997,14 +962,14 @@ By clicking the `GetTree Data` button, you can retrieve the Name and Job details
     }
     class EmployeeData
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Job { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? Job { get; set; }
         public bool HasChild { get; set; }
         public bool Expanded { get; set; }
         public bool Selected { get; set; }
         public bool IsChecked { get; set; }
-        public string PId { get; set; }
+        public string? PId { get; set; }
     }
 }
 

@@ -429,7 +429,7 @@ There are scenarios where you need to restrict the CRUD action on specific appoi
 }
 ```
 
-N> By default, the event editor is prevented to open on the read-only events when [`IsReadonly`]((https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleField.html#Syncfusion_Blazor_Schedule_ScheduleField_IsReadonly)) field is set to **true**.
+N> By default, the event editor is prevented to open on the read-only events when [`IsReadonly`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleField.html#Syncfusion_Blazor_Schedule_ScheduleField_IsReadonly) field is set to **true**.
 
 ## Customize the order of the overlapping events
 
@@ -844,6 +844,59 @@ After enabling the default tooltip, it is possible to customize the display of n
 ![Tooltip in Blazor Scheduler](images/blazor-scheduler-appointments-tooltip-template.png)
 
 N> All the field names that are mapped from the Scheduler dataSource to the appropriate field properties such as subject, description, location, startTime and endTime within the `ScheduleEventSettings` can be accessed within the template.
+
+### How to prevent the tooltip for specific events
+
+By using the [`TooltipOpening`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_TooltipOpening) event, you can selectively control when tooltips appear, based on appointment data or other custom conditions.
+
+To prevent a tooltip from appearing for certain events, you can set the `cancel` property to `true` within the [`TooltipOpening`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_TooltipOpening) event. This ensures that tooltips are only displayed for the relevant appointments, improving user experience by minimizing unnecessary distractions.
+
+```cshtml
+@using Syncfusion.Blazor.Schedule
+ 
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
+<ScheduleEvents TValue="AppointmentData" TooltipOpening="tooltipOpen"></ScheduleEvents>
+<ScheduleEventSettings DataSource="@DataSource" EnableTooltip="true"></ScheduleEventSettings>
+<ScheduleViews>
+<ScheduleView Option="View.Day"></ScheduleView>
+<ScheduleView Option="View.Week"></ScheduleView>
+<ScheduleView Option="View.WorkWeek"></ScheduleView>
+<ScheduleView Option="View.Month"></ScheduleView>
+<ScheduleView Option="View.Agenda"></ScheduleView>
+</ScheduleViews>
+</SfSchedule>
+ 
+@code {
+    DateTime CurrentDate = new DateTime(2025, 1, 10);
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData { Id = 1, Subject = "Paris", StartTime = new DateTime(2025, 1, 8, 10, 0, 0) , EndTime = new DateTime(2023, 1, 8, 12, 0, 0),
+        IsReadonly = true },
+        new AppointmentData { Id = 2, Subject = "Germany", StartTime = new DateTime(2025, 1, 10, 10, 0, 0) , EndTime = new DateTime(2023, 1, 10, 12, 0, 0) }
+        new AppointmentData { Id = 3, Subject = "Vacation", StartTime = new DateTime(2025, 1, 10, 10, 0, 0) , EndTime = new DateTime(2023, 1, 10, 12, 0, 0) }
+    };
+    public void tooltipOpen(TooltipOpenEventArgs<AppointmentData> args)
+    {
+        if(args.Data.Subject == "Vacation" ){
+            args.Cancel = true;
+        }
+    }
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public bool IsReadonly { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+    }
+}
+```
 
 ## Appointment selection
 

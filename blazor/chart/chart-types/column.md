@@ -11,7 +11,13 @@ documentation: ug
 
 ## Column
 
-[Column Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/column-chart) is the most common chart type that is used to compare **Frequency**, **Count**, **Total**, or **Average** of data in different categories. It is ideal for showing variations in the value of an item over time. To render a [Column Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/column-chart) series in your chart, define the series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) as [`Column`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Column) in your chart configuration. This indicates that the data should be represented as a column chart, which is ideal for visualizing for comparing different categories of data or tracking changes over time.
+[Column Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/column-chart) is the most common chart type that is used to compare **Frequency**, **Count**, **Total**, or **Average** of data in different categories. It is ideal for showing variations in the value of an item over time.
+
+You can learn how to create a column chart using Blazor Charts by watching the video below.
+
+{% youtube "youtube:https://www.youtube.com/watch?v=IQb0sJPlvZI" %}
+
+To render a [Column Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/column-chart) series in your chart, define the series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) as [`Column`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Column) in your chart configuration. This indicates that the data should be represented as a column chart, which is ideal for visualizing for comparing different categories of data or tracking changes over time.
 
 ```cshtml
 
@@ -328,6 +334,97 @@ The [ChartSeriesBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDVptaigJiSoAyNW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+### Corner radius
+
+The [ChartCornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html) property is used to customize the corner radius for column series. This allows you to create columns with rounded corners, giving your chart a more polished appearance. You can customize each corner of the columns using the [BottomLeft](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html#Syncfusion_Blazor_Charts_ChartCornerRadius_BottomLeft), [BottomRight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html#Syncfusion_Blazor_Charts_ChartCornerRadius_BottomRight), [TopLeft](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html#Syncfusion_Blazor_Charts_ChartCornerRadius_TopLeft), [TopRight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCornerRadius.html#Syncfusion_Blazor_Charts_ChartCornerRadius_TopRight) properties.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+<SfChart>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@Sales" XName="Month" YName="Income" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Column">
+            <ChartMarker Visible="true">
+            </ChartMarker>
+            <ChartCornerRadius TopLeft="10" TopRight="10"></ChartCornerRadius>
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+@code {
+    public class SalesInfo
+    {
+        public string Month { get; set; }
+        public double Income { get; set; }
+    }
+    public List<SalesInfo> Sales = new List<SalesInfo>
+    {
+        new SalesInfo { Month = "Jan", Income = 35 },
+        new SalesInfo { Month = "Feb", Income = 28 },
+        new SalesInfo { Month = "Mar", Income = 34 },
+        new SalesInfo { Month = "Apr", Income = 32 },
+        new SalesInfo { Month = "May", Income = -40 },
+        new SalesInfo { Month = "Jun", Income = -32 },
+        new SalesInfo { Month = "Jul", Income = -35 }
+    };
+}
+
+```
+
+![Blazor Column Chart with corner radius](../images/chart-types-images/blazor-column-chart-corner-radius.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZretpNTBvfSKfSg?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+
+We can also customize the corner radius for individual points in the chart series using the [OnPointRender](https://blazor.syncfusion.com/documentation/chart/events#onpointrender) event by utilizing the [CornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_CornerRadius) property in its event argument.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartEvents OnPointRender="PointRenderEvent"></ChartEvents>
+
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@Sales" XName="Month" YName="Income" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Column">
+            <ChartMarker Visible="true">
+            </ChartMarker>
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code {
+    public class SalesInfo
+    {
+        public string Month { get; set; }
+        public double Income { get; set; }
+    }
+
+    public List<SalesInfo> Sales = new List<SalesInfo>
+    {
+        new SalesInfo { Month = "Jan", Income = 35 },
+        new SalesInfo { Month = "Feb", Income = 28 },
+        new SalesInfo { Month = "Mar", Income = 34 },
+        new SalesInfo { Month = "Apr", Income = 32 },
+        new SalesInfo { Month = "May", Income = -40 },
+        new SalesInfo { Month = "Jun", Income = -32 },
+        new SalesInfo { Month = "Jul", Income = -35 }
+    };
+
+    public void PointRenderEvent(PointRenderEventArgs args)
+    {
+        if ((args.Point.X as string) == "Jan" || (args.Point.X as string) == "May")
+        {
+            args.CornerRadius.TopLeft = 10;
+            args.CornerRadius.TopRight = 10;
+        } 
+    }
+}
+```
+
+![Blazor column chart with corner radius using OnPointRender event](../images/chart-types-images/blazor-column-chart-corner-radius-onPointRender.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLetfjzLvFuJDKv?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 ## Column space and width
 

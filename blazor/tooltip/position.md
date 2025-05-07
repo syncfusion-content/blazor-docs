@@ -9,7 +9,7 @@ documentation: ug
 
 # Position in Blazor Tooltip Component
 
-Tooltips can be attached to 12 static locations around the target. On initializing the Tooltip, set the position property with any one of the following values:
+Tooltips can be attached to 12 static locations around the target. On initializing the Tooltip, set the [**Position**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_Position) property with any one of the following values:
 
 * `TopLeft`
 * `TopCenter`
@@ -24,7 +24,7 @@ Tooltips can be attached to 12 static locations around the target. On initializi
 * `RightCenter`
 * `RightBottom`
 
-N> By default, Tooltip is placed at the `TopCenter` of the target element.
+N> By default, Tooltip is placed at the **TopCenter** of the target element.
 
 ```cshtml
 @using Syncfusion.Blazor.Popups
@@ -44,7 +44,7 @@ N> By default, Tooltip is placed at the `TopCenter` of the target element.
 
 ## Mouse trailing
 
-Tooltips can be positioned relative to the mouse pointer. This behavior can be enabled or disabled by using the `MouseTrail` property. By default, it is set to `false`.
+Tooltips can be positioned relative to the mouse pointer. This behavior can be enabled or disabled by using the [`MouseTrail`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_MouseTrail) property. By default, it is set to `false`.
 
 ```cshtml
 @using Syncfusion.Blazor.Popups
@@ -77,7 +77,7 @@ N> When mouse trailing option is enabled, the tip pointer position gets auto adj
 
 ## Setting offset values
 
-Offset values are set to specify the distance between the target and tooltip element. `OffsetX` and `OffsetY` properties are used to specify the offset left and top values.
+Offset values are set to specify the distance between the target and Tooltip element. [`OffsetX`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_OffsetX) and [`OffsetY`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_OffsetY) properties are used to specify the offset left and top values.
 
 * `OffsetX` specifies the distance between the target and Tooltip element in X axis.
 * `OffsetY` specifies the distance between the target and Tooltip element in Y axis.
@@ -114,7 +114,7 @@ N> By default, collision is handled automatically and therefore when collision i
 
 ## Change collision target to viewport when setting Target
 
-You can set the [WindowCollision](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_WindowCollision) property to change collision target to `viewport` instead of parent of ToolTip element.
+You can set the [WindowCollision](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_WindowCollision) property to change collision target to `viewport` instead of parent of Tooltip element.
 
 ```cshtml
 @using Syncfusion.Blazor.Popups

@@ -9,13 +9,13 @@ documentation: ug
 
 # Navigation in Blazor TreeView Component
 
-Using the **NavigateUrl** of the Blazor TreeView component, you can navigate from one page to another based on the node selection and link provided in the corresponding nodes.
+Using the [**NavigateUrl**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_NavigateUrl) of the Blazor TreeView component, you can navigate from one page to another based on the node selection and link provided in the corresponding nodes.
 
 To perform navigation in the TreeView component, use and map the **NavigateUrl** field in the data source.
 
 ## Navigation URL binding in Blazor TreeView Component
 
-In the Blazor TreeView component, use the **NavigateUrl** property to specify the URL to navigate to when the tree node is selected.
+In the Blazor TreeView component, use the [**NavigateUrl**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_NavigateUrl) property to specify the URL to navigate to when the tree node is selected.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -26,12 +26,12 @@ In the Blazor TreeView component, use the **NavigateUrl** property to specify th
 @code {
     public class MailItem
     {
-        public string ID { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? ID { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
-        public string NavigateUrl { get; set; }
+        public string? NavigateUrl { get; set; }
     }
     List<MailItem> MyFolder = new List<MailItem>();
     protected override void OnInitialized()
@@ -93,12 +93,12 @@ The TreeView [FullRowNavigable](https://help.syncfusion.com/cr/blazor/Syncfusion
 @code{
     public class MailItem
     {
-        public string ID { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? ID { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
-        public string NavigateUrl { get; set; }
+        public string? NavigateUrl { get; set; }
     }
     List<MailItem> MyFolder = new List<MailItem>();
     protected override void OnInitialized()
@@ -187,9 +187,9 @@ In the Blazor TreeView component, when clicking on the TreeView node, you can ge
     SfTreeView<MailItem> tree;
     public class MailItem
     {
-        public string ID { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? ID { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
         public Dictionary<string, object> HtmlAttributes { get; set; }
@@ -234,9 +234,9 @@ In the Blazor TreeView component, when clicking on the TreeView node, you can ge
             });
 
     }
-    public string ID;
-    public string Text;
-    public string ParentID;
+    public string? ID;
+    public string? Text;
+    public string? ParentID;
     public void nodeClicked(NodeClickEventArgs args)
     {
         ID = (args.NodeData.Id);
@@ -247,7 +247,7 @@ In the Blazor TreeView component, when clicking on the TreeView node, you can ge
 <style>
     .containers {
         margin-top: -200px;
-        margin-left: 500px;
+        margin-left: 800px;
     }
     .tree{
         width:50%;
@@ -258,7 +258,7 @@ In the Blazor TreeView component, when clicking on the TreeView node, you can ge
 
 ## Tree node as hyperlink in Blazor TreeView Component
 
-The **NavigateUrl** property is used to navigate from one page to other pages on tree node selection. Using the CSS styles, you can customize the TreeView node as a hyperlink.
+The [**NavigateUrl**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_NavigateUrl) property is used to navigate from one page to other pages on tree node selection. Using the CSS styles, you can customize the TreeView node as a hyperlink.
 
 ```cshtml
 
@@ -270,12 +270,12 @@ The **NavigateUrl** property is used to navigate from one page to other pages on
 @code{
     public class MailItem
     {
-        public string ID { get; set; }
-        public string ParentId { get; set; }
-        public string FolderName { get; set; }
+        public string? ID { get; set; }
+        public string? ParentId { get; set; }
+        public string? FolderName { get; set; }
         public bool Expanded { get; set; }
         public bool HasSubFolders { get; set; }
-        public string NavigateUrl { get; set; }
+        public string? NavigateUrl { get; set; }
     }
     List<MailItem> MyFolder = new List<MailItem>();
     protected override void OnInitialized()
@@ -328,5 +328,80 @@ The **NavigateUrl** property is used to navigate from one page to other pages on
         text-decoration: underline;
     }
 </style>
+
+```
+
+## NavigateUrl with Built-in URLs
+
+The functionality of the href attribute in the Blazor TreeView component's [`NavigateUrl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewFieldOptions-1.html#Syncfusion_Blazor_Navigations_TreeViewFieldOptions_1_NavigateUrl) property has been updated to align with Blazor routing standards. Instead of rendering a traditional anchor tag with an href, the component now uses the [NavigationManager.NavigateTo](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.navigationmanager.navigateto?view=aspnetcore-9.0) method to programmatically navigate to the specified URL.
+
+However, when using the built-in URLs from the NuGet package (for example, **MicrosoftIdentity/Account/SignOut** from **Microsoft.Identity.Web.UI**), these URLs may not function properly in the application. To resolve this, you need to prevent the default navigation functionality by setting [`args.Cancel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.NodeSelectEventArgs.html#Syncfusion_Blazor_Navigations_NodeSelectEventArgs_Cancel) to **true** and then use the [NavigationManager.NavigateTo](https://learn.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.components.navigationmanager.navigateto?view=aspnetcore-9.0) method within the [NodeSelecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeSelecting) event, as shown below:
+
+```cshtml
+
+@inject NavigationManager Navigate
+@using Syncfusion.Blazor.Navigations
+
+<SfTreeView TValue="NavbarItemTree" ExpandOn="@ExpandAction.Click">
+    <TreeViewEvents TValue="NavbarItemTree" NodeSelecting="NodeSelecting"></TreeViewEvents>
+    <TreeViewFieldsSettings TValue="NavbarItemTree"
+                            Id="@nameof(NavbarItemTree.NodeId)"
+                            NavigateUrl="@nameof(NavbarItemTree.NodeLink)"
+                            Text="@nameof(NavbarItemTree.NodeText)"
+                            HasChildren="@nameof(NavbarItemTree.HasChild)"
+                            ParentID="@nameof(NavbarItemTree.ParentId)"
+                            DataSource="@NavbarItemNodes">
+    </TreeViewFieldsSettings>
+</SfTreeView>
+
+@code {
+    public void NodeSelecting(NodeSelectEventArgs args)
+    {
+        if (args.NodeData.Id == "3")
+        {
+            args.Cancel = true;
+            Navigate.NavigateTo("MicrosoftIdentity/Account/SignOut", true);
+        }
+    }
+
+    public class NavbarItemTree
+    {
+        public int NodeId { get; set; }
+        public int? ParentId { get; set; }
+        public bool HasChild { get; set; }
+        public bool Expanded { get; set; }
+        public bool Selected { get; set; }
+        public string NodeText { get; set; }
+        public string NodeLink { get; set; }
+    }
+
+    private readonly List<NavbarItemTree> NavbarItemNodes = new();
+
+    protected override void OnInitialized()
+    {
+        NavbarItemNodes.Add(new NavbarItemTree
+        {
+            NodeId = 1,
+            NodeText = "Account",
+            HasChild = true
+        });
+
+        NavbarItemNodes.Add(new NavbarItemTree
+        {
+            ParentId = 1,
+            NodeId = 2,
+            NodeLink = "/counter",
+            NodeText = "Profile"
+        });
+
+        NavbarItemNodes.Add(new NavbarItemTree
+        {
+            ParentId = 1,
+            NodeId = 3,
+            NodeLink = "MicrosoftIdentity/Account/SignOut",
+            NodeText = "Logout"
+        });
+    }
+}
 
 ```
