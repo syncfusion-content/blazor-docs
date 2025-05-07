@@ -72,17 +72,17 @@ The Blazor File Manager component followed the [WAI-ARIA](https://www.w3.org/WAI
 
 You can use the following key shortcuts to access the File Manager without interruptions.
 
-| **Keyboard shortcuts** | **Actions** |
-| --- | --- |
-| <kbd>Page Down</kbd> | Scrolls down to the next folder or file and selects the first item when files are loaded. |
-| <kbd>Page Up</kbd> | Scrolls up to previous folder and select the first item when files are loaded. |
-| <kbd>Enter</kbd> | Selects the focused item and navigate through the child elements. |
-| <kbd>Tab</kbd> | Focuses on the first element of toolbar and navigates through the next tab indexed element. |
-| <kbd>Esc(Escape)</kbd> | Closes the image when it is in open state. |
-| <kbd>Alt+N</kbd> | Creates a new folder dialog.|
-| <kbd>F5</kbd> | Refresh the File Manager element. |
-| <kbd>Ctrl+Shift+1</kbd> | Changes the File Manager layout to Grid view. |
-| <kbd>Ctrl+Shift+2</kbd> | Changes the File Manager layout to Details view. |
+| Windows | Mac | Actions |
+| --- | --- | --- |
+| <kbd>Page Down</kbd> | <kbd>Page Down</kbd> | Scrolls down to the next folder or file and selects the first item when files are loaded. |
+| <kbd>Page Up</kbd> | <kbd>Page Up</kbd> | Scrolls up to previous folder and select the first item when files are loaded. |
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Selects the focused item and navigate through the child elements. |
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Focuses on the first element of toolbar and navigates through the next tab indexed element. |
+| <kbd>Esc(Escape)</kbd> | <kbd>Esc</kbd> | Closes the image when it is in open state. |
+| <kbd>Alt</kbd> + <kbd>N</kbd> | <kbd>⌥</kbd> + <kbd>N</kbd> | Creates a new folder dialog.|
+| <kbd>F5</kbd> | <kbd>F5</kbd> | Refresh the File Manager element. |
+| <kbd>Ctrl+Shift+1</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>1</kbd> | Changes the File Manager layout to Grid view. |
+| <kbd>Ctrl+Shift+2</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>2</kbd> | Changes the File Manager layout to Details view. |
 
 ## Ensuring accessibility
 

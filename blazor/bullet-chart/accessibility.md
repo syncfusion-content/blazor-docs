@@ -51,14 +51,14 @@ The Blazor Bullet Chart component followed the [WAI-ARIA](https://www.w3.org/WAI
 
 The Blazor Bullet Chart component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Bullet Chart component.
 
-| Interaction Keys | Description |
-| --- | --- |
-|<kbd>Alt + J</kbd> | Moves the focus to the Bullet Chart element. |
-| <kbd>Tab</kbd> | Moves the focus to the next element in the Bullet Chart. |
-| <kbd>Shift + Tab</kbd> | Moves the focus to the previous element in the Bullet Chart. |
-|<kbd>UpArrow/Right Arrow</kbd> |Moves the focus to the legend right side from the selected legend. |
-|<kbd>DownArrow/Left Arrow</kbd> |Moves the focus to the legend left side from the selected legend. |
-| <kbd>Ctrl + P</kbd> | Prints the Bullet Chart. |
+| Windows | Mac | Description |
+| --- | --- | --- |
+|<kbd>Alt</kbd> + <kbd>J</kbd> | <kbd>⌥</kbd> + <kbd>J</kbd> | Moves the focus to the Bullet Chart element. |
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Moves the focus to the next element in the Bullet Chart. |
+| <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Moves the focus to the previous element in the Bullet Chart. |
+| <kbd>↑</kbd> / <kbd>→</kbd> | <kbd>↑</kbd> / <kbd>→</kbd> | Moves the focus to the legend right side from the selected legend. |
+| <kbd>↓</kbd> / <kbd>←</kbd> | <kbd>↓</kbd> / <kbd>←</kbd> | Moves the focus to the legend left side from the selected legend. |
+| <kbd>Ctrl + P</kbd> | <kbd>⌘</kbd> + <kbd>P</kbd> | Prints the Bullet Chart. |
 
 ## Ensuring accessibility
 
