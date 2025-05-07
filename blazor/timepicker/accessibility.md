@@ -68,18 +68,18 @@ The Blazor TimePicker component has built-in keyboard accessibility support by f
 
 N> It supports the following list of shortcut keys to interact with the TimePicker component:
 
-| **Keys** | **Description** |
-| --- | --- |
-| <kbd>Upper Arrow</kbd> | Navigates and selects the previous item. |
-| <kbd>Down Arrow</kbd> | Navigates and selects the next item. |
-| <kbd>Left Arrow</kbd> | Moves the cursor towards arrow key pressed direction. |
-| <kbd>Right Arrow</kbd> | Moves the cursor towards arrow key pressed direction. |
-| <kbd>Home</kbd> | Navigates and selects the first item. |
-| <kbd>End</kbd> | Navigates and selects the last item. |
-| <kbd>Enter</kbd> | Selects the currently focused item and close the popup. |
-| <kbd>Alt + Upper Arrow</kbd> | Closes the popup. |
-| <kbd>Alt + Down Arrow</kbd> | Opens the popup. |
-| <kbd>Esc</kbd> | Closes the popup. |
+| Windows | Mac | **Description** |
+| --- | --- | --- |
+| <kbd>↑</kbd> | <kbd>↑</kbd> | Navigates and selects the previous item. |
+| <kbd>↓</kbd> | <kbd>↓</kbd> | Navigates and selects the next item. |
+| <kbd>←</kbd> | <kbd>←</kbd> | Moves the cursor towards arrow key pressed direction. |
+| <kbd>→</kbd> | <kbd>→</kbd> | Moves the cursor towards arrow key pressed direction. |
+| <kbd>Home</kbd> | <kbd>Home</kbd> | Navigates and selects the first item. |
+| <kbd>End</kbd> | <kbd>End</kbd> | Navigates and selects the last item. |
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Selects the currently focused item and close the popup. |
+| <kbd>Alt</kbd> + <kbd>↑</kbd> | <kbd>⌥</kbd> + <kbd>↑</kbd> | Closes the popup. |
+| <kbd>Alt</kbd> + <kbd>↓</kbd> | <kbd>⌥</kbd> + <kbd>↓</kbd> | Opens the popup. |
+| <kbd>Esc</kbd> | <kbd>Esc</kbd> | Closes the popup. |
 
 N> To focusout the TimePicker component, use the `t` keys. For additional information about native event, [click](https://blazor.syncfusion.com/documentation/timepicker/native-events) here.
 

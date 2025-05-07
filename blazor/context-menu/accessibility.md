@@ -52,14 +52,14 @@ The Blazor ContextMenu component followed the [WAI-ARIA](https://www.w3.org/WAI/
 
 The Blazor ContextMenu component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor ContextMenu component.
 
-| **Press** | **To do this** |
-| --- | --- |
-| <kbd>Esc</kbd> | Closes the opened sub menu. |
-| <kbd>Enter</kbd> | Selects the focused item. |
-| <kbd>Up</kbd> | Navigates up or to the previous menu item. |
-| <kbd>Down</kbd> | Navigates down or to the next menu item. |
-| <kbd>Left</kbd> | Close the current sub menu and navigates to the parent menu. |
-| <kbd>Right</kbd> | Navigates and open the next sub menu. |
+| Windows | Mac | Actions |
+| --- | --- | --- |
+| <kbd>Esc</kbd> | <kbd>Esc</kbd> | Closes the opened sub menu. |
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Selects the focused item. |
+| <kbd>↑</kbd> | <kbd>↑</kbd> | Navigates up or to the previous menu item. |
+| <kbd>↓</kbd> | <kbd>↓</kbd> | Navigates down or to the next menu item. |
+| <kbd>←</kbd> | <kbd>←</kbd> | Close the current sub menu and navigates to the parent menu. |
+| <kbd>→</kbd> | <kbd>→</kbd> | Navigates and open the next sub menu. |
 
 ## Ensuring accessibility
 
