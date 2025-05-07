@@ -55,19 +55,19 @@ The Blazor TreeView component followed the [WAI-ARIA](https://www.w3.org/WAI/ARI
 
 The Blazor TreeView component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/treeview/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the TreeView component.
 
-| Interaction Keys | Description |
-|------|---------|
-| <kbd>Arrow Up</kbd> | Goes to the previous node. |
-| <kbd>Arrow Down</kbd> | Goes to the next node. |
-| <kbd>Arrow Right</kbd> | Expands the current node. |
-| <kbd>Arrow Left</kbd> | Collapses the current node. |
-| <kbd>Home</kbd> | Goes to the first node. |
-| <kbd>End</kbd> | Goes to the last node. |
-| <kbd>F2</kbd> | Edits the focused node. |
-| <kbd>Esc</kbd> | Focuses out the edit state without saving the edited text. |
-| <kbd>Enter</kbd> | Selects the focused node/saves the edited text. |
-| <kbd>Space</kbd> | Checks the current node. |
-| <kbd>Ctrl + A</kbd> | Selects all nodes. |
+| Windows | Mac | Description |
+|------|----|-----|
+| <kbd>↑</kbd> | <kbd>↑</kbd> | Goes to the previous node. |
+| <kbd>↓</kbd> | <kbd>↓</kbd> | Goes to the next node. |
+| <kbd>→</kbd> | <kbd>→</kbd> | Expands the current node. |
+| <kbd>←</kbd> | <kbd>←</kbd> | Collapses the current node. |
+| <kbd>Home</kbd> | <kbd>fn</kbd>+<kbd>←</kbd> | Goes to the first node. |
+| <kbd>End</kbd> | <kbd>fn</kbd>+<kbd>→</kbd> | Goes to the last node. |
+| <kbd>F2</kbd> | <kbd>F2</kbd> | Edits the focused node. |
+| <kbd>Esc</kbd> | <kbd>Esc</kbd> | Focuses out the edit state without saving the edited text. |
+| <kbd>Enter</kbd> |<kbd>return</kbd> | Selects the focused node/saves the edited text. |
+| <kbd>Space</kbd> | <kbd>space</kbd> | Checks the current node. |
+| <kbd>Ctrl + A</kbd> | <kbd>⌘</kbd> + <kbb>A</kbd> | Selects all nodes. |
 
 ## Ensuring accessibility
 
