@@ -92,11 +92,11 @@ The following table lists the default keyboard shortcuts for formatting the para
 |<kbd>Ctrl</kbd> + <kbd>↓</kbd> | <kbd>⌘</kbd> + <kbd>↓</kbd> | Moves the cursor position one paragraph down.|
 |<kbd>Tab</kbd> (in table) | <kbd>Tab</kbd> | Moves the cursor position one cell to the right.|
 |<kbd>Shift</kbd> + <kbd>Tab</kbd> (in table) | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Moves the cursor position one cell to the left.|
-|<kbd>Home</kbd> | <kbd>Home</kbd> | Moves the cursor position to the start of a line.|
+|<kbd>Home</kbd> | <kbd>Fn</kbd> + <kbd>←</kbd> | Moves the cursor position to the start of a line.|
 |<kbd>End</kbd> | <kbd>End</kbd> | Moves the cursor position to the end of a line.|
 |<kbd>Page up</kbd> | <kbd>Page up</kbd> | Moves the cursor position one screen up.|
 |<kbd>Page down</kbd> | <kbd>Page down</kbd> | Moves the cursor position one screen down.|
-|<kbd>Ctrl</kbd> + <kbd>Home</kbd> | <kbd>⌘</kbd> + <kbd>Home</kbd> | Moves the cursor position to the start of a document.|
+|<kbd>Ctrl</kbd> + <kbd>Home</kbd> | <kbd>⌘</kbd> + <kbd>Fn</kbd> + <kbd>←</kbd> | Moves the cursor position to the start of a document.|
 |<kbd>Ctrl</kbd> + <kbd>End</kbd> | <kbd>⌘</kbd> + <kbd>End</kbd> | Moves the cursor position to the end of a document.|
 
 ### Keyboard shortcut to extend selection
@@ -107,14 +107,14 @@ The following table lists the default keyboard shortcuts for formatting the para
 |<kbd>Shift</kbd> + <kbd>→</kbd> | <kbd>⇧</kbd> + <kbd>→</kbd> | Extends selection one character to the right.|
 |<kbd>Shift</kbd> + <kbd>↓</kbd> | <kbd>⇧</kbd> + <kbd>↓</kbd> | Extends selection one line downward.|
 |<kbd>Shift</kbd> + <kbd>↑</kbd> | <kbd>⇧</kbd> + <kbd>↑</kbd> | Extends selection one line upward.|
-|<kbd>Shift</kbd> + <kbd>Home</kbd> | <kbd>⇧</kbd> + <kbd>Home</kbd> | Extends selection to the start of a line.|
+|<kbd>Shift</kbd> + <kbd>Home</kbd> | <kbd>⇧</kbd> + <kbd>Fn</kbd> + <kbd>←</kbd> | Extends selection to the start of a line.|
 |<kbd>Shift</kbd> + <kbd>End</kbd> | <kbd>⇧</kbd> + <kbd>End</kbd> | Extends Selection to the end of a line.|
 |<kbd>Ctrl</kbd> + <kbd>A</kbd> | <kbd>⌘</kbd> + <kbd>A</kbd> | Extends selection to the entire document.|
 |<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>←</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>←</kbd> | Extends selection one word to the left.|
 |<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>→</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>→</kbd> | Extends selection one word to the right.|
 |<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>↓</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>↓</kbd> | Extends selection to the end of a paragraph.|
 |<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>↑</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>↑</kbd> | Extends selection to the start of a paragraph.|
-|<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Home</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>Home</kbd> | Extends selection to the start of a document.|
+|<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Home</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>Fn</kbd> + <kbd>←</kbd> | Extends selection to the start of a document.|
 |<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>End</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>End</kbd> | Extends selection to the end of a document.|
 
 ### Find and Replace

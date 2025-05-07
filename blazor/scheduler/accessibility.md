@@ -73,7 +73,7 @@ All the Scheduler actions can be controlled via keyboard keys and is availed by 
 | <kbd>←</kbd> or <kbd>→</kbd> | <kbd>←</kbd> or <kbd>→</kbd> | On pressing any of these keys when focus is currently on the Scheduler header bar, moves the focus to the previous or next items in the header bar. |
 | <kbd>Space</kbd> or <kbd>Enter</kbd> | <kbd>Space</kbd> or <kbd>Enter</kbd> | It activates any of the focused items. |
 | <kbd>Page Up</kbd> & <kbd>Page Down</kbd> | <kbd>Page Up</kbd> & <kbd>Page Down</kbd> | To scroll through the work cells area. |
-| <kbd>Home</kbd> | <kbd>Home</kbd> | To move the selection to the first cell of Scheduler. |
+| <kbd>Home</kbd> | <kbd>Fn</kbd> + <kbd>←</kbd> | To move the selection to the first cell of Scheduler. |
 | <kbd>F12</kbd> | <kbd>F12</kbd> | To have the inline option for both cells and events. |
 | <kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>Y</kbd> | <kbd>⇧</kbd> + <kbd>⌥</kbd> + <kbd>Y</kbd> | To navigate to today date. |
 | <kbd>Shift</kbd> + <kbd>Alt</kbd> + <kbd>N</kbd> | <kbd>⇧</kbd> + <kbd>⌥</kbd> + <kbd>N</kbd> | To open editor window. |

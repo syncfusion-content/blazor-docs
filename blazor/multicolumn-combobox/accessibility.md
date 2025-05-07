@@ -65,7 +65,7 @@ You can use the following key shortcuts to access the Blazor MultiColumn ComboBo
 |**Input Navigation**| | |
 | <kbd>Alt</kbd> + <kbd>↓</kbd> | <kbd>⌥</kbd> + <kbd>↓</kbd> | Opens the popup list. |
 | <kbd>Alt</kbd> + <kbd>↑</kbd> | <kbd>⌥</kbd> + <kbd>↑</kbd> | Closes the popup list. |
-| <kbd>Home</kbd> | <kbd>Home</kbd> | Cursor moves before the first character in the input. |
+| <kbd>Home</kbd> | <kbd>Fn</kbd> + <kbd>←</kbd> | Cursor moves before the first character in the input. |
 | <kbd>End</kbd> | <kbd>End</kbd> | Cursor moves before the last character in the input. |
 | <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Focuses on the previous TabIndex element on the page when the popup is closed. Otherwise, closes the popup list and remains the focus of the component. |
 |**Selection**| | |
