@@ -48,9 +48,9 @@ The Blazor Floating action button component followed the [WAI-ARIA](https://www.
 
 The Blazor Floating action button component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/button/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Floating action button component.
 
-| **Press** | **To do this** |
-| --- | --- |
-| <kbd>Space</kbd> | When the floating action button has focus, pressing the space key changes the state of the floating action button. |
+| Windows | Mac | Actions |
+| --- | --- | --- |
+| <kbd>Space</kbd> | <kbd>Space</kbd> | When the floating action button has focus, pressing the space key changes the state of the floating action button. |
 
 ## Ensuring accessibility
 

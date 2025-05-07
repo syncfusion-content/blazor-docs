@@ -9,6 +9,8 @@ documentation: ug
 
 # Build your first Blazor App with our blocks
 
+This tutorial guides you through building a Blazor Web App using Syncfusion's UI Kit blocks. It demonstrates how to set up a new Blazor Server project, choose between Tailwind CSS or Bootstrap 5.3 themes, and add a sign-in block in your application. The goal is to help developers quickly build responsive, modern web apps using a variety of prebuilt blocks with minimal effort.
+
 ## Create a new Blazor App
 A Blazor Web App is used for this example. To create a new app, follow the official setup guide [here](https://learn.microsoft.com/en-us/training/modules/build-your-first-blazor-web-app/3-exercise-configure-environment?pivots=vscode). This tutorial then walks through the step-by-step process of adding a simple sign-in block to the newly created app, named **MyBlazorApp**.
 
@@ -16,13 +18,13 @@ A Blazor Web App is used for this example. To create a new app, follow the offic
 
 ![New Blazor App](images/new-blazor-app.png)
 
-## Setting up Tailwind or Bootstrap 5.3 theme in the app
+## Setting up Tailwind CSS or Bootstrap 5.3 theme in the app
 
-After creating the new Blazor app named **MyBlazorApp**, open it in Visual Studio Code (which we’ll be using throughout this walkthrough). The next step is to choose a theme, either Tailwind or Bootstrap 5.3, in either light or dark mode, and configure the app accordingly.
+After creating the new Blazor app named **MyBlazorApp**, open it in Visual Studio Code (which will be used throughout this walkthrough). The next step is to choose a theme, either Tailwind CSS or Bootstrap 5.3, in either light or dark mode, and configure the app accordingly.
 
-### Tailwind configuration
+### Tailwind CSS configuration
 
-If you choose **Tailwind** theme, follow these steps to configure it.
+If you choose **Tailwind CSS** theme, follow these steps to configure it.
 
 1. In **Components -> App.razor** file, add the following code for light mode (`class="light"`) and dark mode (`class="dark"`) in the `<html>` tag.
 
@@ -38,7 +40,7 @@ If you choose **Tailwind** theme, follow these steps to configure it.
     <html lang="en" class="dark">
     ```
 
-2. In **Components -> App.razor** file, add the following scripts in the `<head>` tag.
+2. In **Components -> App.razor** file, add the following scripts in the `<head>` tag. The main purpose of these scripts is to dynamically generate the appropriate Tailwind CSS classes at runtime based on the styles used in the application, and to replace the primary (highlight) color in the CSS with a custom indigo color palette.
 
     ```html
     <script src="https://cdn.tailwindcss.com"></script>
@@ -68,8 +70,7 @@ If you choose **Tailwind** theme, follow these steps to configure it.
       }
     </script>
     ```
-    > The Syncfusion Blazor components uses **Indigo** for light mode and **Cyan** for dark mode. So, please change the primary color accordingly to maintain a uniform appearance.
-
+    > The Syncfusion Blazor components uses **Indigo** for light mode and **Cyan** for dark mode. To maintain a uniform appearance, change the primary color accordingly.
 
 3. In **Components -> App.razor** file, add the style oriented CDN link for Syncfusion Blazor components in the `<head>` tag.
 
@@ -85,7 +86,7 @@ If you choose **Tailwind** theme, follow these steps to configure it.
      <link href="https://cdn.syncfusion.com/blazor/29.1.33/styles/tailwind.css" rel="stylesheet" />
      ```
 
-4. **OPTIONAL**: If you wish to use our font icons prepared for **Tailwind**, you can include the following CDN link:
+4. **OPTIONAL**: If you wish to use our font icons prepared for **Tailwind CSS**, you can include the following CDN link:
 
     ```html
     <link href="https://cdn.syncfusion.com/blazor/ui-kit/font-icons/tailwind-icons.css" rel="stylesheet" />
@@ -93,9 +94,9 @@ If you choose **Tailwind** theme, follow these steps to configure it.
      
 You can refer to the consolidated screenshot below for more details.
 
-![Tailwind configuration](images/tailwind-configuration.png)
+![Tailwind CSS configuration](images/tailwind-configuration.png)
 
-Now that the **Tailwind** theme is configured for either light or dark mode of your choice, the app is ready for the next set of processes.
+Now that the **Tailwind CSS** theme is configured for either light or dark mode of your choice, the app is ready for the next set of processes.
 
 ### Bootstrap 5.3 configuration
 
@@ -153,19 +154,20 @@ Now that **MyBlazorApp** is set up with the desired theme configuration, the nex
 
 ### Steps to explore and copy block code snippets from the online demo
 
-1. In the [online demo](https://blazor.syncfusion.com), navigate to the **Authentication** category and select the **Sign In** block. This will direct you to the appropriate demo page.
+1. In the [online demo](https://blazor.syncfusion.com/essential-ui-kit), navigate to the **Authentication** category and select the **Sign In** block. This will direct you to the appropriate demo page.
 
     ![Navigate to the sign-in block demo](images/navigate-to-the-sign-in-block-demo.png)
 
 2. On the demo page, go to the first demo, which showcases a simple sign-in block. Choose the desired theme, then switch from the **Preview** tab to the **Code** tab.
 
-    ![Choose Tailwind or Bootstrap theme](images/choose-tailwind-or-bootstrap-theme.png)
+    ![Choose Tailwind CSS or Bootstrap theme](images/choose-tailwind-or-bootstrap-theme.png)
 
 3. In the **Code** tab, copy the Razor (HTML) code using the **Copy to Clipboard** option and paste it into the **Components -> Pages -> Home.razor** file, replacing its content with the provided "Hello, world!" example.
 
     ![Copy HTML code snippet to clipboard](images/copy-HTML-code-snippet-to-clipboard.png)
 
 >  Ensure that you do not remove the `@page` directive and `<PageTitle>` element while replacing the content. These are essential for routing and setting the page title.
+
 
 4. If CSS is provided, copy the CSS code, create a new file **Components -> Pages -> Home.razor.css**, and paste the code into it. Similarly, if a C# code is provided, create a new file **Components -> Pages -> Home.razor.cs** and paste the C# code into it. Otherwise, you can ignore this step.
 
@@ -182,7 +184,7 @@ Now that **MyBlazorApp** is set up with the desired theme configuration, the nex
     ![View the sign-in block demo files](images/view-the-sign-in-block-demo-files.png)
 
 > **Note:**
-> 1. In the Razor file, the **Tailwind** and **Bootstrap 5.3** design code is placed in their respective if-else statements. You can copy and paste as per your requirement.
+> 1. In the Razor file, the **Tailwind CSS** and **Bootstrap 5.3** design code is placed in their respective if-else statements. You can copy and paste as per your requirement.
 > 2. Ignore the code within the **"SB Code - Start"** and **"SB Code - End"** comments, as it is intended solely for sample browser purposes.
 
 ## Steps to install and configure Syncfusion Blazor components
@@ -203,11 +205,11 @@ After restoring the packages, import the required namespaces `Syncfusion.Blazor.
 
 ![Importing Syncfusion Namespaces](images/import-syncfusion-namespaces.png)
 
-Finally, again check the [online demo](https://blazor.syncfusion.com) or the [GitHub repository](https://github.com/syncfusion/essential-ui-kit-for-blazor) and copy the required Razor (HTML) code for the simple sign-in block into your app as outlined in the previous topic.
+Finally, again check the [online demo](https://blazor.syncfusion.com/essential-ui-kit) or the [GitHub repository](https://github.com/syncfusion/essential-ui-kit-for-blazor) and copy the required Razor (HTML) code for the simple sign-in block into your app as outlined in the previous topic.
 
 ## Steps to download and add assets to the app
 
-If you want to view and experience the images used in our design, you can download the **assets** folder from the following [GitHub repository](https://github.com/syncfusion/essential-ui-kit-for-blazor), place it inside the **wwwroot** folder of **MyBlazorApp**, and modify the image URLs in the Razor (HTML) if necessary.
+If you want to view and experience the images used in our design, you can download the **assets** folder from the following [GitHub repository](https://github.com/syncfusion/essential-ui-kit-for-blazor/tree/master/UI_Blocks/wwwroot/assets), place it inside the **wwwroot** folder of **MyBlazorApp**, and modify the image URLs in the Razor (HTML) if necessary.
 
 ## Steps to run the app
 

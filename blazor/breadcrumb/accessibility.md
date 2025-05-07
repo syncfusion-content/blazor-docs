@@ -49,12 +49,12 @@ The Blazor Breadcrumb component followed the [WAI-ARIA](https://www.w3.org/WAI/A
 
 The Blazor Breadcrumb component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Breadcrumb component.
 
-| **Press** | **To do this** |
-| --- | --- |
-| <kbd>Tab</kbd> | Navigate to the next item and also next item in the popup of menu type overflow. |
-| <kbd>Shift + Tab</kbd> | Navigate to the previous item also previous item in the popup of menu type overflow. |
-| <kbd>Enter key in normal mode</kbd> | Select the breadcrumb item. |
-| <kbd>Enter key in normal mode</kbd> | To open the popup of menu type overflow mode when you press enter on collapsed button and It will expand the items of collapsed type overflow mode when you press enter on collapsed button. |
+| Windows | Mac | Actions |
+| --- | --- | --- |
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Navigate to the next item and also next item in the popup of menu type overflow. |
+| <kbd>Shift + Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Navigate to the previous item also previous item in the popup of menu type overflow. |
+| <kbd>Enter</kbd> key in normal mode | <kbd>Enter</kbd> key in normal mode | Select the breadcrumb item. |
+| <kbd>Enter</kbd> key in normal mode | <kbd>Enter</kbd> key in normal mode | To open the popup of menu type overflow mode when you press enter on collapsed button and It will expand the items of collapsed type overflow mode when you press enter on collapsed button. |
 
 ## Ensuring accessibility
 
