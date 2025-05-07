@@ -576,7 +576,7 @@ To drag and drop between two Tree Grid, enable the [AllowRowDragAndDrop](https:/
     public List<TreeData.BusinessObject> SecondGrid { get; set; } = new List<TreeData.BusinessObject>();
     protected override void OnInitialized()
     {       
-        this.TreeGridData = TreeData.GetSelfDataSource().ToList();
+        this.TreeGridData = WrapData.GetWrapData().ToList();
     }
 }
 

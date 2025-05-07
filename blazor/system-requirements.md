@@ -11,6 +11,8 @@ documentation: ug
 
 Blazor applications can be developed using one of the following IDEs or using [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 
+Syncfusion Blazor applications can be developed, hosted, and run on all major [platforms supported by Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/supported-platforms?view=aspnetcore-9.0), including Windows, Linux, and macOS.
+
 ## Integrated Development Environment
 
 Blazor applications can be developed using one of the following IDEs. You can also develop using [.NET CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/) without below IDEs.
@@ -27,8 +29,8 @@ One of the the following .NET SDK is required to develop and run the Blazor appl
 | ------------- | ------------- |
 | [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) | 27.2.2 and above |
 | [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) | 23.2.4 and above |
-| [.NET 7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) | 20.4.0.38 and above |
-| [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) | 19.3.0.43 and above |
+| [.NET 7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) | 20.4.0.38 to 28.2.12 |
+| [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) | 19.3.0.43 to 28.2.12 |
 | [.NET 5.0](https://dotnet.microsoft.com/en-us/download/dotnet/5.0) | 18.4.0.30 to 20.1.0.61  |
 | [.NET Core 3.1](https://dotnet.microsoft.com/en-us/download/dotnet/3.1) | 17.4.0.39 to 20.3.0.61 |
 

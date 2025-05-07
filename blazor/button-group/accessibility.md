@@ -41,12 +41,12 @@ The accessibility compliance for the Blazor Button Group component is outlined b
 
 The Blazor Button Group component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/button/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Button Group component.
 
-| **Press** | **To do this** |
-| --- | --- |
-| <kbd>Tab</kbd> | Focuses the next button in the multiple selection type Button Group. |
-| <kbd>Shift + Tab</kbd> | Focuses the previous button in the multiple selection Button Group. |
-| <kbd>Arrow</kbd> | Focuses and activates the next / previous button in the single selection ButtonGroup. |
-| <kbd>Space</kbd> | Activates the focused button in the Button Group. |
+| Windows | Mac | Actions |
+| --- | --- | --- |
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Focuses the next button in the multiple selection type Button Group. |
+| <kbd>Shift + Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Focuses the previous button in the multiple selection Button Group. |
+| Arrows (<kbd>↑</kbd> , <kbd>→</kbd> , <kbd>↓</kbd> , <kbd>←</kbd>) | Arrows (<kbd>↑</kbd> , <kbd>→</kbd> , <kbd>↓</kbd> , <kbd>←</kbd>) | Focuses and activates the next / previous button in the single selection ButtonGroup. |
+| <kbd>Space</kbd> | <kbd>Space</kbd> | Activates the focused button in the Button Group. |
 
 ## Ensuring accessibility
 
