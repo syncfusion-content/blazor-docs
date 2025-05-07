@@ -1796,4 +1796,4 @@ namespace GraphQLServer.GraphQL
 {% endhighlight %}
 {% endtabs %}
 
-You can get the entire code in the [github](https://github.com/SyncfusionExamples/GraphQLAdaptor-Binding-Blazor-DataGrid) sample.
+You can get the entire code in the [github](https://github.com/SyncfusionExamples/Binding-data-from-remote-service-to-blazor-data-grid/tree/master/GraphQLAdaptor) sample.
