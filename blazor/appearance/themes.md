@@ -40,7 +40,23 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Bootstrap Theme is d
 
 ## Optimized CSS Themes
 
-By default, Syncfusion Blazor themes include styles for both **normal** and **bigger** size modes within the main `<theme_name>.css` file. While this ensures comprehensive styling support, it increases the file size. To address this, we offer optimized theme files named `<theme_name>-lite.css`, which include styles exclusively for the **normal** size mode, omitting the **bigger** size mode styles. Using these lightweight theme files significantly reduces the file size, improving load times and enhancing overall application performance, particularly when the bigger size mode is not required.
+Syncfusion Blazor themes are available in two variants to help optimize application's performance:
+ 
+**Standard Theme Files:**
+
+* The default theme files (<theme_name>.css) include comprehensive styling for both normal and bigger size modes, ensuring full UI flexibility but with a larger file size.
+ 
+**Lite Theme Files:**
+
+For improved performance, we offer optimized lite theme files (<theme_name>-lite.css) that:
+
+* Include styles exclusively for normal size mode
+* Omit bigger size mode styles
+* Reduce file size by approximately 30%, so improve application load times
+
+**When to Use Lite Themes:**
+
+* Choose the lite theme variant when your application doesn't require the bigger size mode. To implement a lite theme, simply reference the -lite.css version instead of the standard theme file in your application.
 
 Comparison of the Syncfusion Blazor Button Component in **normal** and **bigger** size modes:
 
@@ -48,38 +64,35 @@ Comparison of the Syncfusion Blazor Button Component in **normal** and **bigger*
 
 Refer to the comparison below for the default and optimized theme file sizes:
 
-| Default Theme Name | Default Theme Size | Optimized Theme Name | Optimized Theme Size |
-| -- | -- | -- | -- |
-| Fluent 2 | 3.88 MB | Fluent 2 Lite |2.90 MB |
-| Fluent 2 Dark | 3.85 MB | Fluent2 Dark Lite |2.86 MB |
-| material 3 | 3.98 MB | material 3 Lite |2.85 MB |
-| material 3 Dark | 3.98 MB | material 3 Dark Lite |2.84 MB |
-| Bootstrap 5.3 | 3.53 MB | Bootstrap 5.3 Lite 2 |2.73 MB |
-| Bootstrap 5.3 Dark | 3.51 MB | Bootstrap 5.3 Dark Lite |2.71 MB |
-| Bootstrap 5 | 3.36 MB | Bootstrap 5 Lite 2 |2.57 MB |
-| Bootstrap 5 Dark | 3.36 MB | Bootstrap 5 Dark Lite |2.57 MB |
-| Bootstrap 4 | 3.35 MB | Bootstrap 4 Lite |2.56 MB |
-| Bootstrap | 3.29 MB | Bootstrap Lite |2.53 MB |
-| Bootstrap Dark | 3.31 MB | Bootstrap Dark Lite |2.54 MB |
-| Google’s Material | 3.88 MB | Google’s Material Lite |2.80 MB |
-| Google’s Material Dark | 3.93 MB | Google’s Material Dark Lite |2.84 MB |
-| Tailwind | 3.26 MB | Tailwind Lite |2.46 MB |
-| Tailwind Dark | 3.30 MB | Tailwind Dark Lite |2.49 MB |
-| Fluent | 3.31 MB | Fluent Lite |2.51 MB |
-| Fluent Dark | 3.31 MB | Fluent Dark Lite |2.51 MB |
-| Microsoft Office Fabric | 3.20 MB | Microsoft Office Fabric Lite |2.44 MB |
-| Microsoft Office Fabric Dark | 3.25 MB | Microsoft Office Fabric Dark Lite |2.49 MB |
-| High Contrast | 3.22 MB | High Contrast Lite |2.45 MB |
+| Default Theme Name | Optimized Theme Name |
+| -- | -- |
+| Fluent 2 | Fluent 2 Lite |
+| Fluent 2 Dark | Fluent2 Dark Lite |
+| material 3 | material 3 Lite |
+| material 3 Dark | material 3 Dark Lite |
+| Bootstrap 5.3 | Bootstrap 5.3 Lite 2 |
+| Bootstrap 5.3 Dark | Bootstrap 5.3 Dark Lite |
+| Bootstrap 5 | Bootstrap 5 Lite 2 |
+| Bootstrap 5 Dark | Bootstrap 5 Dark Lite |
+| Bootstrap 4 | Bootstrap 4 Lite |
+| Bootstrap | Bootstrap Lite |
+| Bootstrap Dark | Bootstrap Dark Lite |
+| Google’s Material | Google’s Material Lite |
+| Google’s Material Dark | Google’s Material Dark Lite |
+| Tailwind | Tailwind Lite |
+| Tailwind Dark | Tailwind Dark Lite |
+| Fluent | Fluent Lite |
+| Fluent Dark | Fluent Dark Lite |
+| Microsoft Office Fabric | Microsoft Office Fabric Lite |
+| Microsoft Office Fabric Dark | Microsoft Office Fabric Dark Lite |
+| High Contrast | High Contrast Lite |
 
 ## Reference themes in Blazor application
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor themes can be used in your Blazor application by referencing the style sheet.
 
-*  For **Blazor Web App**, refer style sheet inside the `<head>` of **~/Components/App.razor** file for .NET 9 or .NET 8.
-* For **Blazor WebAssembly application**, refer style sheet inside the `<head>` of **wwwroot/index.html** file.
-* For **Blazor Server application**, refer style sheet inside the `<head>` of
-    * **~/Pages/_Host.cshtml** file for .NET 7.
-    * **~/Pages/_Layout.cshtml** file for .NET 6.
+*  For **Blazor Web App** or **Blazor Server App**, refer style sheet inside the `<head>` of **~/Components/App.razor** file for .NET 9 or .NET 8.
+* For **Blazor WebAssembly App**, refer style sheet inside the `<head>` of **wwwroot/index.html** file.
 
 Using the below approaches the themes can be referenced in the Blazor application,
 
@@ -103,12 +116,9 @@ N> For **Blazor Web App with interaction mode as  Auto & Blazor WASM App**, call
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor themes are available as static web assets in the [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) NuGet Packages.
 
-*  For **Blazor Web App**,  refer style sheet inside the `<head>` of **~/Components/App.razor** file for .NET 9 or .NET 8.
+*  For **Blazor Web App** or **Blazor Server App**,  refer style sheet inside the `<head>` of **~/Components/App.razor** file for .NET 9 or .NET 8.
 
-* For **Blazor WebAssembly application**, refer style sheet inside the `<head>` element of **wwwroot/index.html** file.
-* For **Blazor Server application**, refer style sheet inside the `<head>` element of
-    * **~/Pages/_Host.cshtml** file for .NET 7.
-    * **~/Pages/_Layout.cshtml** file for .NET 6.
+* For **Blazor WebAssembly App**, refer style sheet inside the `<head>` element of **wwwroot/index.html** file.
 
 When using individual NuGet packages in your application, add [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet Package and reference style sheet as below,
 
@@ -160,46 +170,392 @@ To refer to optimized CSS files, use the following syntax:
 </head>
 ```
 
-| Theme Name | CDN Reference |
-|--- | --- |
-| Tailwind 3.4 | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind3.css |
-| Tailwind 3.4 Dark | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind3-dark.css |
-| Bootstrap 5.3 | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5.3.css |
-| Bootstrap 5.3 Dark | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5.3-dark.css |
-| Fluent 2 | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fluent2.css |
-| Fluent 2 Dark | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fluent2-dark.css |
-| Material 3 | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material3.css |
-| Material 3 Lite | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material3-lite.css |
-| Material 3 Dark | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material3-dark.css |
-| Material 3 Dark Lite | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material3-dark-lite.css |
-| Bootstrap 5 | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5.css |
-| Bootstrap 5 Lite | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5-lite.css |
-| Bootstrap 5 Dark| https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5-dark.css |
-| Bootstrap 5 Dark Lite| https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5-dark-lite.css |
-| Bootstrap 4 | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css |
-| Bootstrap 4 Lite | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4-lite.css |
-| Bootstrap 3 | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap.css |
-| Bootstrap 3 Lite | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap-lite.css |
-| Bootstrap 3 Dark| https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap-dark.css |
-| Bootstrap 3 Dark Lite| https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap-dark-lite.css |
-| Google’s Material | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material.css |
-| Google’s Material Lite | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material-lite.css |
-| Google’s Material Dark | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material-dark.css |
-| Google’s Material Dark Lite | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material-dark-lite.css |
-| Tailwind CSS | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind.css |
-| Tailwind CSS Lite | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind-lite.css |
-| Tailwind CSS Dark | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind-dark.css |
-| Tailwind CSS Dark Lite | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind-dark-lite.css |
-| Fluent | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fluent.css |
-| Fluent Lite | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fluent-lite.css |
-| Fluent Dark | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fluent-dark.css |
-| Fluent Dark Lite | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fluent-dark-lite.css |
-| Microsoft Office Fabric  | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fabric.css |
-| Microsoft Office Fabric Lite  | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fabric-lite.css |
-| Microsoft Office Fabric Dark | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fabric-dark.css |
-| Microsoft Office Fabric Dark Lite | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fabric-dark-lite.css |
-| High Contrast  | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/highcontrast.css |
-| High Contrast Lite  | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/highcontrast-lite.css |
+<table style="width:100%">
+<tr>
+<th style="width:30%">Theme Name</th>
+<th style="width:70%">CDN Reference</th>
+</tr>
+<tr>
+<td>Tailwind 3.4</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind3.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Tailwind 3.4 Dark</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind3-dark.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Bootstrap 5.3</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5.3.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Bootstrap 5.3 Dark</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5.3-dark.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Fluent 2</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fluent2.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Fluent 2 Dark</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fluent2-dark.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Material 3</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material3.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Material 3 Lite</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material3-lite.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Material 3 Dark</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material3-dark.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Material 3 Dark Lite</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material3-dark-lite.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Bootstrap 5</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Bootstrap 5 Lite</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5-lite.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Bootstrap 5 Dark</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5-dark.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Bootstrap 5 Dark Lite</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5-dark-lite.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Bootstrap 4</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Bootstrap 4 Lite</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4-lite.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Bootstrap 3</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Bootstrap 3 Lite</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap-lite.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Bootstrap 3 Dark</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap-dark.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Bootstrap 3 Dark Lite</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap-dark-lite.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Google's Material</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Google's Material Lite</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material-lite.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Google’s Material Dark</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material-dark.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Google’s Material Dark Lite</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material-dark-lite.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Tailwind CSS</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Tailwind CSS Lite</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind-lite.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Tailwind CSS Dark</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind-dark.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Tailwind CSS Dark Lite</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind-dark-lite.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Fluent</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fluent.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Fluent Lite</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fluent-lite.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Fluent Dark</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fluent-dark.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Fluent Dark Lite</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fluent-dark-lite.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Microsoft Office Fabric</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fabric.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Microsoft Office Fabric Lite</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fabric-lite.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Microsoft Office Fabric Dark</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fabric-dark.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>Microsoft Office Fabric Dark Lite</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fabric-dark-lite.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>High Contrast</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/highcontrast.css
+{% endhighlight %}
+
+</td>
+</tr>
+<tr>
+<td>High Contrast Lite</td>
+<td>
+
+{% highlight cshtml %}
+https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/highcontrast-lite.css
+{% endhighlight %}
+
+</td>
+</tr>
+</table>
 
 ## LibMan
 
@@ -411,10 +767,10 @@ The following shows the importing theme path for the overall theme.
 
 Below table lists the importing theme path for the individual components.
 
-<table>
+<table style="width:100%">
     <tr>
-        <th>Component</th>
-        <th>Importing theme path</th>
+        <th style="width:25%">Component</th>
+        <th style="width:75%">Importing theme path</th>
     </tr>
     <tr>
         <td>Accordion</td>
@@ -783,7 +1139,7 @@ The following example demonstrates how to change a theme dynamically in Blazor a
 
 ```
 
-* To include `DropDownComponent` in the `~/MainLayout.razor` as shown bellow
+* To include `DropDownComponent` in the `~/MainLayout.razor` as shown below
 
 {% tabs %}
 {% highlight c# tabtitle="C#" hl_lines="4 5 6 7" %}
@@ -807,20 +1163,18 @@ The following example demonstrates how to change a theme dynamically in Blazor a
 
 The following example demonstrates how to change a theme dynamically in Blazor application using Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor themes using Syncfusion<sup style="font-size:70%">&reg;</sup> Dropdown component.
 
-1. For **Blazor Server application**, the theme is changed based on query string at the
-    * **~/Pages/_Host.cshtml** file for .NET 7.
-    * **~/Pages/_Layout.cshtml** file for .NET 6.
+1. For **Blazor Server application**, the theme is changed based on query string at the **~/Components/App.razor** file.
 
 {% tabs %}
-{% highlight c# tabtitle=".NET 7 (~/_Host.cshtml)" %}
+{% highlight c# tabtitle=".NET 9 & .NET 8 (~/App.razor)" %}
 
 @page "/"
 @namespace BlazorThemeSwitcher.Pages
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
 @{
-    Layout = null;
-    QueryHelpers.ParseQuery(Request.QueryString.Value).TryGetValue("theme", out var themeName);
+    var uri = UrlHelper.ToAbsoluteUri(UrlHelper.Uri);
+    QueryHelpers.ParseQuery(uri.Query).TryGetValue("theme", out var themeName);
     themeName = themeName.Count > 0 ? themeName.First() : "bootstrap4";
 }
 ...
@@ -832,70 +1186,29 @@ The following example demonstrates how to change a theme dynamically in Blazor a
 ...
 
 {% endhighlight %}
-{% highlight c# tabtitle=".NET 6 (~/_Layout.cshtml)" %}
-
-@using Microsoft.AspNetCore.Components.Web
-@using Microsoft.AspNetCore.Components;
-@using Microsoft.AspNetCore.WebUtilities;
-@namespace BlazorThemeSwitcher.Pages
-@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
-@inject NavigationManager UrlHelper;
-
-@{
-    Layout = null;
-    var uri = UrlHelper.ToAbsoluteUri(UrlHelper.Uri);
-    QueryHelpers.ParseQuery(uri.Query).TryGetValue("theme", out var themeName);
-    themeName = themeName.Count > 0 ? themeName.First() : "bootstrap4";
-}
-
-...
-<head>
-...
-    @*Sets the selected theme name into styles*@
-    <link href=@("_content/Syncfusion.Blazor.Themes/" + themeName + ".css") rel="stylesheet" />
-</head>
-...
-
-{% endhighlight %}
 {% endtabs %}
 
-2.Modify the MainLayout.razor page with the code below to implement dynamic theme change using the dropdown by modifying the query string to change the theme in the application.
+2.Create a new `DropDownComponent.razor` page, and then add the provided code snippet to enable dynamic theming within the application using [Syncfusion<sup style="font-size:70%">&reg;</sup> DropDown List Component](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app).
 
 ```cshtml
-@inherits LayoutComponentBase
+@rendermode InteractiveServer
 @inject NavigationManager UrlHelper;
 @using Syncfusion.Blazor.DropDowns;
 @using Syncfusion.Blazor.Buttons;
 @using Microsoft.AspNetCore.WebUtilities
 
-<div class="page">
-    <div class="main">
-        <div class="top-row px-4">
-            <div class="theme-switcher">
-                @*Theme switcher*@
-                <SfDropDownList TItem="ThemeDetails" TValue="string" @bind-Value="themeName" DataSource="@Themes">
-                    <DropDownListFieldSettings Text="Text" Value="ID"></DropDownListFieldSettings>
-                    <DropDownListEvents TItem="ThemeDetails" TValue="string" ValueChange="OnThemeChange"></DropDownListEvents>
-                </SfDropDownList>
-            </div>
-            <a href="http://blazor.net" target="_blank" class="ml-md-auto">About</a>
-        </div>
-
-        <div class="content px-4">
-            @Body
-        </div>
-    </div>
-</div>
+<SfDropDownList TItem="ThemeDetails" TValue="string" @bind-Value="themeName" DataSource="@Themes">
+    <DropDownListFieldSettings Text="Text" Value="ID"></DropDownListFieldSettings>
+    <DropDownListEvents TItem="ThemeDetails" TValue="string" ValueChange="OnThemeChange"></DropDownListEvents>
+</SfDropDownList>
 
 @code {
     private string themeName;
-
     public class ThemeDetails
     {
         public string ID { get; set; }
         public string Text { get; set; }
     }
-
     private List<ThemeDetails> Themes = new List<ThemeDetails>() {
         new ThemeDetails(){ ID = "material3", Text = "Material 3" },
         new ThemeDetails(){ ID = "material", Text = "Material" },
@@ -910,7 +1223,6 @@ The following example demonstrates how to change a theme dynamically in Blazor a
         new ThemeDetails(){ ID = "fabric-dark", Text = "Fabric Dark" },
         new ThemeDetails(){ ID = "highcontrast", Text = "High Contrast" }
     };
-
     public void OnThemeChange(ChangeEventArgs<string, ThemeDetails> args)
     {
         var theme = GetThemeName();
@@ -919,28 +1231,44 @@ The following example demonstrates how to change a theme dynamically in Blazor a
             UrlHelper.NavigateTo(GetUri(args.ItemData.ID ), true);
         }
     }
-
     private string GetThemeName()
     {
         var uri = UrlHelper.ToAbsoluteUri(UrlHelper.Uri);
         QueryHelpers.ParseQuery(uri.Query).TryGetValue("theme", out var theme);
         return theme.Count > 0 ? theme.First() : "bootstrap4";
     }
-
     private string GetUri(string themeName)
     {
         var uri = UrlHelper.ToAbsoluteUri(UrlHelper.Uri);
         return uri.AbsolutePath + "?theme=" + themeName;
     }
-
     protected override void OnInitialized()
     {
         var theme = GetThemeName();
         themeName = theme.Contains("bootstrap4") ? "bootstrap4" : theme;
     }
 }
-
 ```
+
+* To include `DropDownComponent` in the `~/MainLayout.razor` as shown below
+
+{% tabs %}
+{% highlight c# tabtitle="C#" hl_lines="4 5 6 7" %}
+....
+    <main>
+        <div class="top-row px-4">
+            <div class="theme-switcher">
+                @*Theme switcher*@
+                <DropDownComponent></DropDownComponent>
+            </div>
+            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+        </div>
+     ....
+    </main>
+</div>
+
+{% endhighlight %}
+{% endtabs %}
 
 ![Change theme dynamically in blazor server app](images/blazor-dynamic-theme-switching.gif)
 
@@ -1047,11 +1375,8 @@ Material and Tailwind Themes uses online roboto font. If your app is designed to
    ![Customized CSS](images/custom-css-crg.png)
 5. Copy the files under the **customized** folder to Blazor application `~/wwwroot` folder.
 6. Now, manually add the custom styles in the Blazor App to render the components without any issues on the machines that contains no internet access.
-    * For **Blazor Web App**, reference custom styles in `~/Components/App.razor` file
+    * For **Blazor Web App** or **Blazor Server App**, reference custom styles in `~/Components/App.razor` file
     * For **Blazor WASM App**, reference custom styles in `~/wwwroot/index.html` file.
-    * For **Blazor Server App**, reference custom styles in
-        * `~/Pages/_Layout.cshtml` file for `.NET 6` project
-        * `~/Pages/_Host.cshtml` file for `.NET 7` project.
 
 ```html
     <head>
