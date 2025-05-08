@@ -61,8 +61,8 @@ The Blazor TreeView component followed the [keyboard interaction](https://www.w3
 | <kbd>↓</kbd> | <kbd>↓</kbd> | Goes to the next node. |
 | <kbd>→</kbd> | <kbd>→</kbd> | Expands the current node. |
 | <kbd>←</kbd> | <kbd>←</kbd> | Collapses the current node. |
-| <kbd>Home</kbd> | <kbd>fn</kbd>+<kbd>←</kbd> | Goes to the first node. |
-| <kbd>End</kbd> | <kbd>fn</kbd>+<kbd>→</kbd> | Goes to the last node. |
+| <kbd>Home</kbd> | <kbd>Fn</kbd>+<kbd>←</kbd> | Goes to the first node. |
+| <kbd>End</kbd> | <kbd>Fn</kbd>+<kbd>→</kbd> | Goes to the last node. |
 | <kbd>F2</kbd> | <kbd>F2</kbd> | Edits the focused node. |
 | <kbd>Esc</kbd> | <kbd>Esc</kbd> | Focuses out the edit state without saving the edited text. |
 | <kbd>Enter</kbd> |<kbd>return</kbd> | Selects the focused node/saves the edited text. |

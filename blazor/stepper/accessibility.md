@@ -57,8 +57,8 @@ The following keyboard shortcuts are supported by the Stepper component.
 | <kbd>↓</kbd> | <kbd>↓</kbd> | Focuses the next step in a vertical Stepper. |
 | <kbd>←</kbd> | <kbd>←</kbd> | Focuses the previous step in a horizontal Stepper. |
 | <kbd>→</kbd> | <kbd>→</kbd> | Focuses the next step in a horizontal Stepper. |
-| <kbd>Home</kbd> | <kbd>Home</kbd> | Focuses on the first step of the Stepper. |
-| <kbd>End</kbd> | <kbd>End</kbd> | Focuses on the last step of the Stepper. |
+| <kbd>Home</kbd> | <kbd>Fn</kbd> + <kbd>←</kbd> | Focuses on the first step of the Stepper. |
+| <kbd>End</kbd> | <kbd>Fn</kbd> + <kbd>→</kbd> | Focuses on the last step of the Stepper. |
 | <kbd>Enter / Space</kbd> | <kbd>Enter / Space</kbd> | Activates the currently focused step. |
 
 ## Ensuring accessibility

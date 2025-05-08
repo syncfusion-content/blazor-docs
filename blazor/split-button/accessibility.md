@@ -56,7 +56,7 @@ The Blazor SplitButton component followed the keyboard interaction guideline, ma
 | --- | --- | --- |
 | <kbd>Esc</kbd> | <kbd>Esc</kbd> | Closes the opened popup. |
 | <kbd>Enter</kbd> | <kbd>Enter</kbd> | Opens the popup, or activates the highlighted item and closes the popup. |
-| <kbd>Space</</kbd> | <kbd>Space</kbd> | Opens the popup. |
+| <kbd>Space</kbd> | <kbd>Space</kbd> | Opens the popup. |
 | <kbd>↑</kbd> | <kbd>↑</kbd> | Navigates up or to the previous action item. |
 | <kbd>↓</kbd> | <kbd>↓</kbd> | Navigates down or to the next action item. |
 | <kbd>Alt</kbd> + <kbd>↑</kbd> | <kbd>⌥</kbd> + <kbd>↑</kbd> | Closes the popup. |

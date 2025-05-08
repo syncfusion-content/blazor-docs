@@ -56,12 +56,12 @@ The Blazor Stock Chart component followed the [keyboard interaction](https://www
 | --- | --- | --- |
 | <kbd>Alt + J</kbd> | <kbd>⌥</kbd> + <kbd>J</kbd> | Moves the focus to the Stock Chart element. |
 | <kbd>Tab</kbd> | <kbd>Tab</kbd> | Moves the focus to the next element in the Stock Chart. |
-| <kbd>Shift + Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Moves the focus to the previous element in the Stock Chart. |
+| <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Moves the focus to the previous element in the Stock Chart. |
 | <kbd>↓</kbd> | <kbd>↓</kbd> | Moves the focus to the data point left side from the selected point. |
 | <kbd>↑</kbd> | <kbd>↑</kbd> | Moves the focus to the data point right side from the selected point. |
 | <kbd>↓</kbd> or <kbd>←</kbd> | <kbd>↓</kbd> or <kbd>←</kbd> | Moves the focus to the legend left side from the selected legend. |
 | <kbd>↑</kbd> or <kbd>→</kbd> | <kbd>↑</kbd> or <kbd>→</kbd> | Moves the focus to the legend right side from the selected legend. |
-| <kbd>Enter/Space</kbd> | <kbd>Enter/Space</kbd> | Toggles the visibility of the corresponding series. |
+| <kbd>Enter</kbd> / <kbd>Space</kbd> | <kbd>Enter</kbd> / <kbd>Space</kbd> | Toggles the visibility of the corresponding series. |
 | <kbd>ESC</kbd> | <kbd>Esc</kbd> | Cancel the tooltip for the data point. |
 | <kbd>Ctrl + P</kbd> | <kbd>⌘</kbd> + <kbd>P</kbd> | Prints the Stock Chart. |
 

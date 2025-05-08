@@ -61,14 +61,14 @@ The following keyboard shortcuts are supported by the Chat UI component.
 | <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Moves focus backward through the interactive elements. |
 | <kbd>Page Up</kbd> | <kbd>Page Up</kbd> | Scroll up through chat history. |
 | <kbd>Page Down</kbd> | <kbd>Page Down</kbd> | Scroll down through chat history. |
-| <kbd>Ctrl</kbd> + <kbd>Home</kbd> | <kbd>⌘</kbd> + <kbd>Home</kbd> | Scroll to the first message. |
-| <kbd>Ctrl</kbd> + <kbd>End</kbd> | <kbd>⌘</kbd> + <kbd>End</kbd> | Scroll to the most recent message. |
+| <kbd>Ctrl</kbd> + <kbd>Home</kbd> | <kbd>⌘</kbd> + <kbd>Fn</kbd> + <kbd>←</kbd> | Scroll to the first message. |
+| <kbd>Ctrl</kbd> + <kbd>End</kbd> | <kbd>⌘</kbd> + <kbd>Fn</kbd> + <kbd>→</kbd> | Scroll to the most recent message. |
 |<b>Chat UI Toolbars</b>|||
 | <kbd>←</kbd> | <kbd>←</kbd> | Focuses the previous toolbar element.  |
 | <kbd>→</kbd> | <kbd>→</kbd> | Focuses the next toolbar element. |
 | <kbd>Enter</kbd> / <kbd>Soace</kbd> | <kbd>Enter</kbd> / <kbd>Space</kbd> | Select the focused item or activate the selected option. |
-| <kbd>Home</kbd> | <kbd>Home</kbd> | Moves focus to the first toolbar element. |
-| <kbd>End</kbd> | <kbd>End</kbd> | Moves focus to the last toolbar element. |
+| <kbd>Home</kbd> | <kbd>Fn</kbd> + <kbd>←</kbd> | Moves focus to the first toolbar element. |
+| <kbd>End</kbd> | <kbd>Fn</kbd> + <kbd>→</kbd> | Moves focus to the last toolbar element. |
 
 ## Ensuring accessibility
 

@@ -62,8 +62,8 @@ This control implements keyboard navigation support by following WAI-ARIA practi
  ------------------ |----------------|--------------- |
 | <kbd>Alt</kbd> + <kbd>J</kbd> | <kbd>⌥</kbd> + <kbd>J</kbd> | Keys to focus the carousel component (done at application end). |
 | Arrows (<kbd>←</kbd> , <kbd>→</kbd>) | Arrows (<kbd>←</kbd> , <kbd>→</kbd>) | Keys to navigate between slides. |
-| <kbd>Home</kbd> | <kbd>Home</kbd> | To navigate to the first slide. |
-| <kbd>End</kbd> | <kbd>End</kbd> | To navigate to the last slide. |
+| <kbd>Home</kbd> | <kbd>Fn</kbd> + <kbd>←</kbd> | To navigate to the first slide. |
+| <kbd>End</kbd> | <kbd>Fn</kbd> + <kbd>→</kbd> | To navigate to the last slide. |
 | <kbd>Space</kbd> | <kbd>Space</kbd> | To play/pause the slide transitions. |
 | <kbd>Enter</kbd> | <kbd>Enter</kbd> | To perform the respective action on its focus. |
 

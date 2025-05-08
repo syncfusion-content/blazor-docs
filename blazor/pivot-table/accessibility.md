@@ -83,10 +83,10 @@ The pivot table component followed the [keyboard interaction](https://www.w3.org
 | <kbd>Shift</kbd> + <kbd>→</kbd> | <kbd>⇧</kbd> + <kbd>→</kbd> | Extends the cell selection to the right side. |
 | <kbd>Ctrl</kbd> + <kbd>A</kbd> | <kbd>⌘</kbd> + <kbd>A</kbd> | Selects all cells. |
 | <kbd>Esc</kbd> | <kbd>Esc</kbd> | Deselects all cells. If the current active element is a context menu, then the context menu popup will be closed. |
-| <kbd>Home</kbd> | <kbd>Home</kbd> | Goes to the first cell in the current row. |
-| <kbd>End</kbd> | <kbd>End</kbd> | Goes to the last cell in the current row. |
-| <kbd>Ctrl + Home</kbd> | <kbd>⌘</kbd> + <kbd>Home</kbd> | Goes to the first cell in the table. |
-| <kbd>Ctrl + End</kbd> | <kbd>⌘</kbd> + <kbd>End</kbd> | Goes to the last cell in the table. |
+| <kbd>Home</kbd> | <kbd>Fn</kbd> + <kbd>←</kbd> | Goes to the first cell in the current row. |
+| <kbd>End</kbd> | <kbd>Fn</kbd> + <kbd>→</kbd> | Goes to the last cell in the current row. |
+| <kbd>Ctrl</kbd> + <kbd>Home</kbd> | <kbd>⌘</kbd> + <kbd>Fn</kbd> + <kbd>←</kbd> | Goes to the first cell in the table. |
+| <kbd>Ctrl</kbd> + <kbd>End</kbd> | <kbd>⌘</kbd> + <kbd>Fn</kbd> + <kbd>→</kbd> | Goes to the last cell in the table. |
 | <kbd>Enter</kbd> | <kbd>Enter</kbd> | If the current cell is an expand/collapse cell, it performs expand/collapse operation (drill operation). If the current row/column header is in value sort state, it performs value sorting. If the current cell is in selection state, it moves to the next row, column or individual cell. If drill-through or editing is enabled in the pivot table, the drill-through dialog will be opened based on the selected value cell. If the current active element is a context menu popup, menu selection will be performed. |
 | <kbd>Shift</kbd> + <kbd>Enter</kbd> | <kbd>⇧</kbd> + <kbd>Enter</kbd> | If value sorting is enabled in the pivot table and the current cell is a header with respect to its value axis, it performs value sorting to either ascending or descending order. If the current cell is in selection state, it moves to the previous row, column or individual cell. |
 | <kbd>Ctrl</kbd> + <kbd>Enter</kbd> | <kbd>⌘</kbd> + <kbd>Enter</kbd> | If hyperlink is enabled in the current cell, it performs hyperlink selection. |
@@ -108,8 +108,8 @@ The pivot table component followed the [keyboard interaction](https://www.w3.org
 | <kbd>↑</kbd> | <kbd>↑</kbd> | If the current active element is a tree node, it moves to the previous node. |
 | <kbd>←</kbd> | <kbd>←</kbd> | If the current active element is a tree node, it collapses the current node. |
 | <kbd>→</kbd> | <kbd>→</kbd> | If the current active element is a tree node, it expands the current node. |
-| <kbd>Home</kbd> | <kbd>Home</kbd> | If the current active element is a tree node, it goes to the first node. |
-| <kbd>End</kbd> | <kbd>End</kbd> | If the current active element is a tree node, it goes to the last node. |
+| <kbd>Home</kbd> | <kbd>Fn</kbd> + <kbd>←</kbd> | If the current active element is a tree node, it goes to the first node. |
+| <kbd>End</kbd> | <kbd>Fn</kbd> + <kbd>→</kbd> | If the current active element is a tree node, it goes to the last node. |
 | <kbd>Space</kbd> | <kbd>Space</kbd> | If the current active element is a tree node or a checkbox element, it will be either checked or unchecked. |
 | <kbd>Esc</kbd> or <kbd>Escape</kbd> | <kbd>Escape</kbd> | Closes the popup field list dialog. |
 
@@ -126,8 +126,8 @@ The pivot table component followed the [keyboard interaction](https://www.w3.org
 | <kbd>Delete</kbd> | <kbd>Delete</kbd> | If the current active element is a field's button, the selected field will be removed from the current report. |
 | <kbd>↓</kbd> | <kbd>↓</kbd> | If the current active element is a dropdown list, the next item will be selected. |
 | <kbd>↑</kbd> | <kbd>↑</kbd> | If the current active element is a dropdown list, the previous item will be selected. |
-| <kbd>Home</kbd> | <kbd>Home</kbd> | If the current active element is a dropdown list, the first item will be selected. |
-| <kbd>End</kbd> | <kbd>End</kbd> | If the current active element is a dropdown list, the last item will be selected. |
+| <kbd>Home</kbd> | <kbd>Fn</kbd> + <kbd>←</kbd> | If the current active element is a dropdown list, the first item will be selected. |
+| <kbd>End</kbd> | <kbd>Fn</kbd> + <kbd>→</kbd> | If the current active element is a dropdown list, the last item will be selected. |
 | <kbd>Alt</kbd> + <kbd>↓</kbd> | <kbd>⌥</kbd> + <kbd>↓</kbd> | If the current active element is a dropdown list, the popup will be opened. |
 | <kbd>Alt</kbd> + <kbd>↑</kbd> | <kbd>⌥</kbd> + <kbd>↑</kbd> | If the current active element is a dropdown list, the popup will be closed. |
 | <kbd>Esc</kbd> or <kbd>Escape</kbd> | <kbd>Escape</kbd> | Closes the dropdown list. |
@@ -143,8 +143,8 @@ The pivot table component followed the [keyboard interaction](https://www.w3.org
 | <kbd>↑</kbd> | <kbd>↑</kbd> | If the current active element is a tree node, it moves to the previous node. |
 | <kbd>←</kbd> | <kbd>←</kbd> | If the current active element is a tree node, it collapses the current node. If the current active element is a tab, it moves focus to the previous tab element. |
 | <kbd>→</kbd> | <kbd>→</kbd> | If the current active element is a tree node, it expands the current node. If the current active element is a tab, it moves focus to the next tab element. |
-| <kbd>Home</kbd> | <kbd>Home</kbd> | If the current active element is a tree node, it goes to the first node. |
-| <kbd>End</kbd> | <kbd>End</kbd> | If the current active element is a tree node, it goes to the last node. |
+| <kbd>Home</kbd> | <kbd>Fn</kbd> + <kbd>←</kbd> | If the current active element is a tree node, it goes to the first node. |
+| <kbd>End</kbd> | <kbd>Fn</kbd> + <kbd>→</kbd> | If the current active element is a tree node, it goes to the last node. |
 | <kbd>Space</kbd> | <kbd>Space</kbd> | If the current active element is a tree node or a checkbox element, it will be either checked or unchecked. |
 | <kbd>Alt</kbd> + <kbd>↓</kbd> | <kbd>⌥</kbd> + <kbd>↓</kbd> | If the current active element is a DropDownList or DatePicker or DateTimePicker, the popup will be opened. |
 | <kbd>Alt</kbd> + <kbd>↑</kbd> | <kbd>⌥</kbd> + <kbd>↑</kbd> | If the current active element is a DropDownList or DatePicker or DateTimePicker, the popup will be closed. |
@@ -162,8 +162,8 @@ The pivot table component followed the [keyboard interaction](https://www.w3.org
 | <kbd>↑</kbd> | <kbd>↑</kbd> | If the current active element is a tree node, it moves to the previous node. |
 | <kbd>←</kbd> | <kbd>←</kbd> | If the current active element is a tree node, it collapses the current node. |
 | <kbd>→</kbd> | <kbd>→</kbd> | If the current active element is a tree node, it expands the current node. If the current active element is a tree node and has a menu icon, the aggregation menu will be opened to select appropriate aggregation type to the selected field. |
-| <kbd>Home</kbd> | <kbd>Home</kbd> | If the current active element is a tree node, it goes to the first node. |
-| <kbd>End</kbd> | <kbd>End</kbd> | If the current active element is a tree node, it goes to the last node. |
+| <kbd>Home</kbd> | <kbd>Fn</kbd> + <kbd>←</kbd> | If the current active element is a tree node, it goes to the first node. |
+| <kbd>End</kbd> | <kbd>Fn</kbd> + <kbd>→</kbd> | If the current active element is a tree node, it goes to the last node. |
 | <kbd>Enter</kbd> | <kbd>Enter</kbd> | Performs the selection operation of the current active element. If the current active element is a tree node, it copies the selected field name/formula to the formula text area to perform calculations. |
 | <kbd>Esc</kbd> or <kbd>Escape</kbd> | <kbd>Escape</kbd> | Closes the calculated field dialog. |
 
@@ -175,8 +175,8 @@ The pivot table component followed the [keyboard interaction](https://www.w3.org
 | <kbd>Shift + Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Moves to the previous active element in the formatting dialog. If no active elements present, it moves to the previous active element in the browser page. |
 | <kbd>↓</kbd> | <kbd>↓</kbd> | If the current active element is a DropDownList, the next item will be selected. |
 | <kbd>↑</kbd> | <kbd>↑</kbd> | If the current active element is a DropDownList, the previous item will be selected. |
-| <kbd>Home</kbd> | <kbd>Home</kbd> | If the current active element is a DropDownList, the first item will be selected. |
-| <kbd>End</kbd> | <kbd>End</kbd> | If the current active element is a DropDownList, the last item will be selected. |
+| <kbd>Home</kbd> | <kbd>Fn</kbd> + <kbd>←</kbd> | If the current active element is a DropDownList, the first item will be selected. |
+| <kbd>End</kbd> | <kbd>Fn</kbd> + <kbd>→</kbd> | If the current active element is a DropDownList, the last item will be selected. |
 | <kbd>Alt</kbd> + <kbd>↓</kbd> | <kbd>⌥</kbd> + <kbd>↓</kbd> | If the current active element is a DropDownList or ColorPicker, the popup will be opened. |
 | <kbd>Alt</kbd> + <kbd>↑</kbd> | <kbd>⌥</kbd> + <kbd>↑</kbd> | If the current active element is a DropDownList or ColorPicker, the popup will be closed. |
 | <kbd>Enter</kbd> | <kbd>Enter</kbd> | Performs the selection operation of the current active element. |
@@ -200,10 +200,10 @@ The pivot table component followed the [keyboard interaction](https://www.w3.org
 | <kbd>↑</kbd> | <kbd>↑</kbd> | Moves the row/cell focus upwards. |
 | <kbd>←</kbd> | <kbd>←</kbd> | Moves the cell focus left side. |
 | <kbd>→</kbd> | <kbd>→</kbd> | Moves the cell focus right side. |
-| <kbd>Home</kbd> | <kbd>Home</kbd> | Goes to the first cell in the current row. |
-| <kbd>End</kbd> | <kbd>End</kbd>  | Goes to the last cell in the current row. |
-| <kbd>Ctrl</kbd> + <kbd>Home</kbd> | <kbd>⌘</kbd> + <kbd>Home</kbd> | Goes to the first cell in the table. |
-| <kbd>Ctrl</kbd> + <kbd>End</kbd> | <kbd>⌘</kbd> + <kbd>End</kbd> | Goes to the last cell in the table. |
+| <kbd>Home</kbd> | <kbd>Fn</kbd> + <kbd>←</kbd> | Goes to the first cell in the current row. |
+| <kbd>End</kbd> | <kbd>Fn</kbd> + <kbd>→</kbd>  | Goes to the last cell in the current row. |
+| <kbd>Ctrl</kbd> + <kbd>Home</kbd> | <kbd>⌘</kbd> + <kbd>Fn</kbd> + <kbd>←</kbd> | Goes to the first cell in the table. |
+| <kbd>Ctrl</kbd> + <kbd>End</kbd> | <kbd>⌘</kbd> + <kbd>Fn</kbd> + <kbd>→</kbd> | Goes to the last cell in the table. |
 | <kbd>Enter</kbd> | <kbd>Enter</kbd> | Performs the selection operation of the current active element. |
 | <kbd>Esc</kbd> or <kbd>Escape</kbd> | <kbd>Escape</kbd> | If the cell is in selected state, then it deselects all rows/cells. If the row/cell is in edit state, it cancels the current entries in the row/cell. If the current active element is not a row/cell, it closes the drill-through dialog. |
 | <kbd>F2</kbd> | <kbd>F2</kbd> | Initiate editing a row/cell in the data grid. |

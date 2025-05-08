@@ -69,8 +69,8 @@ It supports the following list of shortcut keys:
 | <kbd>↓</kbd> | <kbd>↓</kbd> | Focuses the same day of the next week. |
 | <kbd>←</kbd> | <kbd>←</kbd> | Focuses the previous day. |
 | <kbd>→</kbd> | <kbd>→</kbd> | Focuses the next day. |
-| <kbd>Home</kbd> | <kbd>Home</kbd> | Focuses the first day of the month. |
-| <kbd>End</kbd> | <kbd>End</kbd> | Focuses the last day of the month. |
+| <kbd>Home</kbd> | <kbd>Fn</kbd> + <kbd>←</kbd> | Focuses the first day of the month. |
+| <kbd>End</kbd> | <kbd>Fn</kbd> + <kbd>→</kbd> | Focuses the last day of the month. |
 | <kbd>Page Up</kbd> | <kbd>Page Up</kbd> | Focuses the same date of the previous month. |
 | <kbd>Page Down</kbd> | <kbd>Page Down</kbd> | Focuses the same date of the next month. |
 | <kbd>Enter</kbd> | <kbd>Enter</kbd> | Selects the currently focused date. |
@@ -78,8 +78,8 @@ It supports the following list of shortcut keys:
 | <kbd>Shift</kbd> + <kbd>Page Down</kbd> | <kbd>⇧</kbd> + <kbd>Page Down</kbd> | Focuses the same date for the next year. |
 | <kbd>Ctrl</kbd> + <kbd>↑</kbd> | <kbd>⌘</kbd> + <kbd>↑</kbd> | Moves to the inner level of view like month to year and year to decade. |
 | <kbd>Ctrl</kbd> + <kbd>↓</kbd> | <kbd>⌘</kbd> + <kbd>↓</kbd> | Moves out from the depth level view like decade to year and year to month. |
-| <kbd>Ctrl</kbd> + <kbd>Home</kbd> | <kbd>⌘</kbd> + <kbd>Home</kbd> | Focuses the first date of the current year. |
-| <kbd>Ctrl</kbd> + <kbd>End</kbd> | <kbd>⌘</kbd> + <kbd>End</kbd> | Focuses the last date of the current year. |
+| <kbd>Ctrl</kbd> + <kbd>Home</kbd> | <kbd>⌘</kbd> + <kbd>Fn</kbd> + <kbd>←</kbd> | Focuses the first date of the current year. |
+| <kbd>Ctrl</kbd> + <kbd>End</kbd> | <kbd>⌘</kbd> + <kbd>Fn</kbd> + <kbd>→</kbd> | Focuses the last date of the current year. |
 
 ## Ensuring accessibility
 

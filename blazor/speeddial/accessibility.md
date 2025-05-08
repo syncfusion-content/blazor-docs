@@ -62,8 +62,8 @@ The Blazor Speed Dial component followed the [keyboard interaction](https://www.
 | <kbd>←</kbd> | <kbd>←</kbd> | Focuses the previous menu item. |
 | <kbd>↓</kbd> | <kbd>↓</kbd> | Focuses the previous menu item. |
 | <kbd>→</kbd> | <kbd>→</kbd> | Focuses the next menu item. |
-| <kbd>Home</kbd> | <kbd>Home</kbd> | Focuses the first menu item. |
-| <kbd>End</kbd> | <kbd>End</kbd> | Focuses the last menu item. |
+| <kbd>Home</kbd> | <kbd>Fn</kbd> + <kbd>←</kbd> | Focuses the first menu item. |
+| <kbd>End</kbd> | <kbd>Fn</kbd> + <kbd>→</kbd> | Focuses the last menu item. |
 | <kbd>Esc</kbd> | <kbd>Esc</kbd> | Closes the menu. |
 
 ## Ensuring accessibility

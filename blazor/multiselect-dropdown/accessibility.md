@@ -68,8 +68,8 @@ You can use the following key shortcuts to access the Blazor MultiSelect Dropdow
 | <kbd>Alt</kbd> + <kbd>↓</kbd> | <kbd>⌥</kbd> + <kbd>↓</kbd> | Opens the popup list. |
 | <kbd>Alt</kbd> + <kbd>↑</kbd> | <kbd>⌥</kbd> + <kbd>↑</kbd> | Closes the popup list. |
 | <kbd>Esc(Escape)</kbd> | <kbd>Escape</kbd> | Closes the popup list when it is in an open state and the currently selected item remains the same. |
-| <kbd>Home</kbd> | <kbd>Home</kbd> | Sets focus to the first item. |
-| <kbd>End</kbd> | <kbd>End</kbd> | Sets focus to the last item. |
+| <kbd>Home</kbd> | <kbd>Fn</kbd> + <kbd>←</kbd> | Sets focus to the first item. |
+| <kbd>End</kbd> | <kbd>Fn</kbd> + <kbd>→</kbd> | Sets focus to the last item. |
 
 ## Ensuring accessibility
 

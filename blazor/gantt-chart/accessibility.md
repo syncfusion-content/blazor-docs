@@ -115,10 +115,10 @@ The Gantt component follows the [keyboard interaction](https://www.w3.org/WAI/AR
 | ----- | ----- | ----- |
 | <kbd>Esc</kbd> | <kbd>Esc</kbd> | Closes the opened sub menu. |
 | <kbd>Enter</kbd> | <kbd>Enter</kbd> | Selects the focused item. |
-| <kbd>Up</kbd> | <kbd>Up</kbd> | Navigates up or to the previous menu item. |
-| <kbd>Down</kbd> |  <kbd>Down</kbd> | Navigates down or to the next menu item. |
-| <kbd>Left</kbd> | <kbd>Left</kbd> | Close the current sub menu and navigates to the parent menu. |
-| <kbd>Right</kbd> | <kbd>Right</kbd> | Navigates and open the next sub menu. |
+| <kbd>↑</kbd> | <kbd>↑</kbd> | Navigates up or to the previous menu item. |
+| <kbd>↓</kbd> |  <kbd>↓</kbd> | Navigates down or to the next menu item. |
+| <kbd>←</kbd> | <kbd>←</kbd> | Close the current sub menu and navigates to the parent menu. |
+| <kbd>→</kbd> | <kbd>→</kbd> | Navigates and open the next sub menu. |
 
 <b>Cell Editing</b>
 
@@ -178,7 +178,7 @@ The Gantt component follows the [keyboard interaction](https://www.w3.org/WAI/AR
 | Windows | MAC | Actions |
 | ----- | ----- | ----- |
 | <kbd>Ctrl</kbd> + <kbd>Insert</kbd> | <kbd>⌘</kbd> + <kbd>Insert</kbd> | Opens the add row dialog popup. |
-| <kbd>Ctrl</kbd> + <kbd>F2</kbd> | <kbd>⌘ + F2</kbd> | Opens the edit row dialog popup. |
+| <kbd>Ctrl</kbd> + <kbd>F2</kbd> | <kbd>⌘</kbd> + <kbd>F2</kbd> | Opens the edit row dialog popup. |
 | <kbd>Del</kbd> | <kbd>Del</kbd> | Deletes the currently selected record. |
 | <kbd>Enter</kbd> | <kbd>Enter</kbd> | Saves the current row. |
 | <kbd>Esc</kbd> | <kbd>Esc</kbd> | Closes the dialog. |
