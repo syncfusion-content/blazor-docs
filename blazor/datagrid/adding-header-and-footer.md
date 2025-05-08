@@ -166,7 +166,7 @@ public class OrderData
 
 When exporting data from the Syncfusion Blazor DataGrid to a PDF document, you have an option to draw lines in the header and footer sections. This feature allows you to enhance the visual appearance of the exported PDF document and create a clear separation between the header/footer and the content.
 
-This can be achieved using the [PdfDashStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDashStyle.html) property. You can customize the line style using different supported [PdfDashStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDashStyle.html#fields)options listed below:
+This can be achieved using the [PdfDashStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDashStyle.html) property. You can customize the line style using different supported [PdfDashStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDashStyle.html#fields) options listed below:
 
 * Dash
 * Dot
