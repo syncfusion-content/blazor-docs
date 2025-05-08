@@ -640,3 +640,5 @@ public IActionResult Delete(int key)
 {% endtabs %}
 
 ![Delete Record](../images/odatav4-adaptor-delete-record.png)
+
+Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/Binding-data-from-remote-service-to-blazor-data-grid/tree/master/ODataV4Adaptor).
