@@ -1,7 +1,7 @@
 ---
 layout: post
-title: PDF Export with Templates in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn here all about PDF Export with Templates in Syncfusion Blazor DataGrid component and much more details.
+title: PDF Export with Templates in Blazor DataGrid | Syncfusion
+description: Checkout and learn here all about PDF Export with Templates in Syncfusion Blazor DataGridd and much more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
