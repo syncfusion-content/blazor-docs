@@ -56,40 +56,33 @@ Keyboard interaction of Blazor Dialog component has been designed based on [WAI-
 <!-- markdownlint-disable MD033 -->
 <table>
 <tr>
-<td><b>Windows</b></td>
-<td><b>Mac</b</td>
-<td><b>Actions</b></td></tr>
+<td>
+<b>Keyboard shortcuts</b></td><td>
+<b>Actions</b></td></tr>
 <tr>
 <td>
-<kbd>Esc</kbd></td>
-<td><kbd>Esc</kbd></td>
-<td>Closes the Dialog. This functionality can be controlled by using <b>closeOnEscape</b></td></tr>
+<kbd>Esc</kbd></td><td>
+Closes the Dialog. This functionality can be controlled by using <b>closeOnEscape</b></td></tr>
 <tr>
 <td>
-<kbd>Enter</kbd></td>
-<td><kbd>Enter</kbd></td>
-<td>When the Dialog button or any input (except text area) is in focus state, when
+<kbd>Enter</kbd></td><td>
+When the Dialog button or any input (except text area) is in focus state, when
 pressing the Enter key, the click event associated with the primary button or button will
 trigger. Enter key does not work when the Dialog content contains any text area with
 initial focus</td></tr>
 <tr>
 <td>
-<kbd>Ctrl</kbd> + <kbd>Enter</kbd></td>
-<td><kbd>⌘</kbd> + <kbd>Enter</kbd></td>
-<td>When the Dialog content contains text area and it is in focus state, press the Ctrl + Enter
+<kbd>Ctrl + Enter</kbd></td><td>
+When the Dialog content contains text area and it is in focus state, press the Ctrl + Enter
 key to call the click event
 function associated with primary button</td></tr>
 <tr>
 <td>
-<kbd>Tab</kbd></td>
-<td><kbd>Tab</kbd></td>
-<td>
+<kbd>Tab</kbd></td><td>
 Focus will be changed within the Dialog elements</td></tr>
 <tr>
 <td>
-<kbd>Shift</kbd> + <kbd>Tab</kbd></td>
-<td><kbd>⇧</kbd> + <kbd>Tab</kbd></td>
-<td>
+<kbd>Shift + Tab</kbd></td><td>
 The Focus will be changed previous focusable element within the Dialog elements. When focusing a
 first focusable element in the Dialog, then press the shift + tab key, it will change the focus
 to last focusable element</td></tr>
