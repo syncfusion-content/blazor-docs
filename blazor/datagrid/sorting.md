@@ -535,44 +535,31 @@ The following example demonstrates how to define custom sort comparer function f
 
 ### Display null values always at bottom
 
-By default, null values in the Syncfusion Blazor DataGrid are displayed at the top when sorting in descending order and at the bottom when sorting in ascending order. However, there may be scenarios where null values need to be consistently shown at the bottom of the grid, regardless of the sort direction. This can be achieved by using the [SortComparer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_SortComparer) property of the column.
+By default, null values in the Syncfusion Blazor DataGrid are displayed at the top when sorting in descending order and at the bottom when sorting in ascending order. However, there may be scenarios where null values need to be consistently shown at the bottom of the Grid, regardless of the sort direction. This can be achieved by using the [SortComparer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_SortComparer) property of the column. This feature is particularly useful when working with data sets where null values might need to be clearly separated from actual data entries.
 
-The `SortComparer` allows custom comparison logic for sorting. By implementing a custom comparer, null values can be handled separately and positioned at the end of the sorted list in both ascending and descending orders.
+The `SortComparer` allows custom comparison logic for sorting. By implementing a custom comparer, null values can be handled separately and positioned at the end of the sorted list in both ascending and descending orders. You can use the [Sorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Sorting) event to detect the sort direction and apply the appropriate logic in the custom comparer.
 
-The following example demonstrates how to configure the `SortComparer` for the **CustomrID** column to always place null values at the bottom:
+The example below demonstrates how to display null values at the bottom of the Grid while sorting the **CustomerID** column in both ascending and descending order.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-
-<SfGrid DataSource="@Orders" AllowSorting="true">
-    <GridEvents Sorting="SortingHandler" TValue="Order"></GridEvents>
+<SfGrid @ref="Grid" ID="Grid" DataSource="@OrderData" AllowPaging="true" AllowSorting="true">                
+     <GridEvents Sorting="SortingHandler" TValue="OrderDetails"></GridEvents>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" SortComparer="new CustomComparer()" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="Syncfusion.Blazor.Grids.ColumnType.Date" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer ID" Width="140" SortComparer="new CustomComparer()"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" Format="C2" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.OrderDate) HeaderText="Order Date" Format="d" Type="Syncfusion.Blazor.Grids.ColumnType.Date" Width="140"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 @code {
-    public List<Order> Orders { get; set; }
+    public SfGrid<OrderDetails> Grid { get; set; }
+    public List<OrderDetails> OrderData { get; set; }
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 12).Select(x => new Order()
-            {
-                OrderID = 1000 + x,
-                CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID", "", "CHARLIE", "DELTA", "ECHO", "FOXTROT", "GOLF", "HOTEL", "INDIA", "JULIET" })[new Random().Next(14)],
-                Freight = 2.1 * x,
-                OrderDate = DateTime.Now.AddDays(-x),
-            }).ToList();
-    }
-    public class Order
-    {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
+        OrderData = OrderDetails.GetAllRecords();
     }
     static bool flag = true;
     public void SortingHandler(SortingEventArgs args)
@@ -587,14 +574,16 @@ The following example demonstrates how to configure the `SortComparer` for the *
             flag = false;
         }
     }
+
     public class CustomComparer : IComparer<Object>
     {
         public int Compare(object XRowDataToCompare, object YRowDataToCompare)
         {
-            Order XRowData = XRowDataToCompare as Order;
-            Order YRowData = YRowDataToCompare as Order;
+            OrderDetails XRowData = XRowDataToCompare as OrderDetails;
+            OrderDetails YRowData = YRowDataToCompare as OrderDetails;
             string value1 = XRowData.CustomerID;
             string value2 = YRowData.CustomerID;
+
             if (flag == true){
                 if (string.IsNullOrEmpty(value1) && string.IsNullOrEmpty(value2))
                 {
@@ -628,9 +617,47 @@ The following example demonstrates how to configure the `SortComparer` for the *
     }
 }
 {% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+public class OrderDetails
+   {
+    public static List<OrderDetails> order = new List<OrderDetails>();
+    public OrderDetails(int OrderID, string CustomerId, int EmployeeId, double Freight, DateTime OrderDate)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerId;
+        this.EmployeeID = EmployeeId;
+        this.Freight = Freight;
+        this.OrderDate = OrderDate;
+    }
+    public static List<OrderDetails> GetAllRecords()
+    {
+        if (order.Count == 0)
+        {
+            order.Add(new OrderDetails(10248, "VINET",  5,  32.38, new DateTime(1996, 7, 4)));
+            order.Add(new OrderDetails(10249, "",  6,  11.61, new DateTime(1996, 7, 5)));
+            order.Add(new OrderDetails(10250, "HANAR",  4,  65.83,new DateTime(1996, 7, 8)));
+            order.Add(new OrderDetails(10251, "VICTE",  3, 41.34, new DateTime(1996, 7, 8)));
+            order.Add(new OrderDetails(10252, "SUPRD",  4, 51.3, new DateTime(1996, 7, 9)));
+            order.Add(new OrderDetails(10253, "",  3,  58.17, new DateTime(1996, 7, 10)));
+            order.Add(new OrderDetails(10254, "CHOPS",  5,  22.98, new DateTime(1996, 7, 11)));
+            order.Add(new OrderDetails(10255, "RICSU",  9,  148.33,  new DateTime(1996, 7, 12)));
+            order.Add(new OrderDetails(10256, "WELLI",  3,  13.97, new DateTime(1996, 7, 15)));
+            order.Add(new OrderDetails(10257, "HILAA",  4,  81.91, new DateTime(1996, 7, 16)));
+            order.Add(new OrderDetails(10258, "",  1,  140.51, new DateTime(1996, 7, 17)));
+            order.Add(new OrderDetails(10259, "CENTC",  4, 3.25, new DateTime(1996, 7, 18)));
+        }
+        return order;
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public int EmployeeID { get; set; }
+    public double Freight { get; set; }
+    public DateTime OrderDate { get; set; }    
+}
+{% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VZBIZTMpUEvLsNyW?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtBoDSNvhpqoYagK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Touch interaction
 
