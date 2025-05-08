@@ -48,9 +48,9 @@ The Blazor Button component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/
 
 The Blazor Button component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/button/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Button component.
 
-| **Press** | **To do this** |
-| --- | --- |
-| <kbd>Space</kbd> | When the button has focus, pressing the space key changes the state of the button. |
+| Windows | Mac | Actions |
+| --- | --- | --- |
+| <kbd>Space</kbd> | <kbd>Space</kbd> | When the button has focus, pressing the space key changes the state of the button. |
 
 ## Ensuring accessibility
 

@@ -52,17 +52,17 @@ The Blazor ListBox component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA
 
 The Blazor ListBox component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor ListBox component.
 
-| **Press** | **To do this** |
-| --- | --- |
-| <kbd>Up arrow</kbd> | Moves focus to the previous option. |
-| <kbd>Down arrow</kbd> | Moves focus to the next option. |
-| <kbd>Home</kbd> | Moves focus to first option. |
-| <kbd>End</kbd> | Moves focus to last option. |
-| <kbd>Space</kbd> | Changes the selection state of the focused option. |
-| <kbd>Ctrl + A</kbd> | Selects all options in the list. |
-| <kbd>Ctrl + Shift + Home</kbd> | Selects the focused option and all options up to the first option. |
-| <kbd>Ctrl + Shift + End</kbd> | Selects the focused option and all options down to the last option. |
-| <kbd>Ctrl + (Up or Down)</kbd> | Press Ctrl key with up / down arrow or mouse to select multiple items. |
+| Windows | Mac| Actions |
+| --- | --- | --- |
+| <kbd>↑</kbd> | <kbd>↑</kbd> | Moves focus to the previous option. |
+| <kbd>↓</kbd> | <kbd>↓</kbd> | Moves focus to the next option. |
+| <kbd>Home</kbd> | <kbd>Home</kbd> | Moves focus to first option. |
+| <kbd>End</kbd> | <kbd>End</kbd> | Moves focus to last option. |
+| <kbd>Space</kbd> | <kbd>Space</kbd> | Changes the selection state of the focused option. |
+| <kbd>Ctrl + A</kbd> | <kbd>⌘</kbd> + <kbd>A</kbd> | Selects all options in the list. |
+| <kbd>Ctrl + Shift + Home</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>Home</kbd> | Selects the focused option and all options up to the first option. |
+| <kbd>Ctrl + Shift + End</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>End</kbd> | Selects the focused option and all options down to the last option. |
+| <kbd>Ctrl</kbd> + <kbd>↑</kbd> or <kbd>↓</kbd> | <kbd>⌘</kbd> + <kbd>↑</kbd> or <kbd>↓</kbd> | Press Ctrl key with up / down arrow or mouse to select multiple items. |
 
 ## Ensuring accessibility
 

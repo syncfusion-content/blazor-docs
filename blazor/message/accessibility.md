@@ -49,10 +49,10 @@ The Blazor Message component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA
 
 The Blazor Message component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Message component.
 
-| **Press** | **To do this** |
-| --- | --- |
-| <kbd>Tab / Shift + Tab</kbd> | To focus the close icon in the message. |
-| <kbd>Enter / Space</kbd> | Closes the focused close icon's message. |
+| Windows | Mac | Actions |
+| --- | --- | --- |
+| <kbd>Tab</kbd> / <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>Tab</kbd> / <kbd>⇧</kbd> + <kbd>Tab</kbd> | To focus the close icon in the message. |
+| <kbd>Enter</kbd> / <kbd>Space</kbd> | <kbd>Enter</kbd> / <kbd>Space</kbd> | Closes the focused close icon's message. |
 
 ## Ensuring accessibility
 
