@@ -1,5 +1,4 @@
 ---
----
 layout: post
 title: Remote Data in Blazor DataGrid | Syncfusion
 description: Learn all about remote data in Syncfusion Blazor DataGrid and much more.
@@ -345,3 +344,81 @@ namespace WebApiAdaptor.Controllers
 {% endtabs %}
  
 > Replace https://localhost:xxxx/api/Grid with the actual URL of your API endpoint that provides the data in a consumable format (e.g., JSON).
+
+## Fetch result from the DataManager query using external button
+
+By default, Syncfusion Blazor DataGrid binds to a remote data source using the DataManager. However, you may want to fetch data dynamically from the server in response to an external button click, giving you more control over when and how data is loaded into the Grid.
+
+To achieve this, you can use an external button to trigger an HTTP request, fetch the data, and then assign it to the DataGrid's `DataSource` property.
+
+The following example demonstrates how to fetch data from the server when a button is clicked and display a status message indicating the fetch status:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@page "/"
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor
+@using WebApiAdaptor.Models
+@using System.Net.Http.Json
+@inject HttpClient Http
+
+<SfButton OnClick="ExecuteQuery" CssClass="e-primary">Execute Query</SfButton>
+
+<p style="@StatusStyle">@StatusMessage</p>
+
+<SfGrid TValue="OrdersDetails" DataSource="@Orders" AllowPaging="true">
+    <GridColumns>
+        <GridColumn Field="OrderID" HeaderText="Order ID" Width="120" TextAlign="TextAlign.Right" />
+        <GridColumn Field="CustomerID" HeaderText="Customer ID" Width="160" />
+        <GridColumn Field="EmployeeID" HeaderText="Employee ID" Width="120" TextAlign="TextAlign.Right" />
+        <GridColumn Field="Freight" HeaderText="Freight" Width="150" Format="C2" TextAlign="TextAlign.Right" />
+        <GridColumn Field="ShipCountry" HeaderText="Ship Country" Width="150" />
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public string StatusMessage { get; set; } = "";
+    public string StatusStyle { get; set; } = "color:black;";
+    public List<OrdersDetails> Orders { get; set; } = new();
+
+    private async Task ExecuteQuery()
+    {
+        try
+        {
+            StatusMessage = "Fetching data...";
+            StatusStyle = "color:blue;";
+
+            var response = await Http.GetFromJsonAsync<GridResponse<OrdersDetails>>("https://localhost:7167/api/Grid");
+
+            if (response != null)
+            {
+                Orders = response.Items;
+                StatusMessage = $"Data fetched successfully! Total Records: {response.Count}";
+                StatusStyle = "color:green; text-align:center;";
+            }
+            else
+            {
+                StatusMessage = "No data returned from server.";
+                StatusStyle = "color:orange;text-align:center;";
+            }
+        }
+        catch (Exception ex)
+        {
+            StatusMessage = $"Error fetching data: {ex.Message}";
+            StatusStyle = "color:red;text-align:center;";
+        }
+    }
+
+    public class GridResponse<T>
+    {
+        public List<T> Items { get; set; }
+        public int Count { get; set; }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Fetch result using query](../images/fetch-query.png)
