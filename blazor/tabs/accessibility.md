@@ -67,7 +67,7 @@ By default, keyboard navigation is enabled. This component implements keyboard n
 | <kbd>Esc(Escape)</kbd> | <kbd>Esc</kbd> | Closes the popup if popup is in opened state. |
 | <kbd>↑</kbd> or <kbd>↓</kbd> | <kbd>↑</kbd> or <kbd>↓</kbd> | When the popup is open and focused, it will move to previous or next Tab items of the popup in the vertical direction. |
 |  <kbd>Home</kbd> | <kbd>Fn</kbd> + <kbd>←</kbd> | Moves focus to the first Tab. |
-|  <kbd>End </kbd> | <kbd>End</kbd> | Moves focus to the last Tab. |
+|  <kbd>End </kbd> | <kbd>Fn</kbd> + <kbd>→</kbd> | Moves focus to the last Tab. |
 |  <kbd>Shift + F10 </kbd> | <kbd>⇧</kbd> + <kbd>F10</kbd> | If popup mode is enabled, it opens the popup when the Tab is focused. |
 |  <kbd>Delete</kbd> | <kbd>Delete</kbd> | Deletes the Tab, if close button is enabled in Tab header. |
 

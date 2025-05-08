@@ -62,7 +62,7 @@ The Blazor Menu bar component followed the [keyboard interaction](https://www.w3
 | <kbd>←</kbd> | <kbd>←</kbd> | Closes the current sub menu and navigates to the parent menu. |
 | <kbd>→</kbd> | <kbd>→</kbd> | Navigates and open the next sub menu. |
 | <kbd>Home</kbd> | <kbd>Fn</kbd> + <kbd>←</kbd> | Focuses the first item. |
-| <kbd>End</kbd> | <kbd>End</kbd> | Focuses the last item.
+| <kbd>End</kbd> | <kbd>Fn</kbd> + <kbd>→</kbd> | Focuses the last item.
 
 ## Ensuring accessibility
 

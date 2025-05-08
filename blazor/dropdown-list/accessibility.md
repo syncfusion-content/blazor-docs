@@ -74,7 +74,7 @@ You can use the following key shortcuts to access the Blazor DropDownList withou
 | <kbd>Page down</kbd> | <kbd>Page down</kbd> | Scrolls down to the next page and selects the first item when the popup list opens. |
 | <kbd>Page up</kbd> | <kbd>Page up</kbd> | Scrolls up to the previous page and selects the first item when the popup list opens. |
 | <kbd>Home</kbd> | <kbd>Fn</kbd> + <kbd>←</kbd> | Selects the first item. |
-| <kbd>End</kbd> | <kbd>End</kbd> | Selects the last item. |
+| <kbd>End</kbd> | <kbd>Fn</kbd> + <kbd>→</kbd> | Selects the last item. |
 
 ## Ensuring accessibility
 

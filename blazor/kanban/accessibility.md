@@ -58,7 +58,7 @@ The Blazor Kanban component followed the [keyboard interaction](https://www.w3.o
 | Windows | Mac | Actions |
 | --- | --- | --- |
 | <kbd>Home</kbd> | <kbd>Fn</kbd> + <kbd>←</kbd> | To select the first card in the kanban |
-| <kbd>End</kbd> | <kbd>End</kbd> | To select the last card in the kanban |
+| <kbd>End</kbd> | <kbd>Fn</kbd> + <kbd>→</kbd> | To select the last card in the kanban |
 | <kbd>↑</kbd> | <kbd>↑</kbd> | Select the card through the up arrow |
 | <kbd>↓</kbd> | <kbd>↓</kbd> | Select the card through the down arrow |
 | <kbd>→</kbd> | <kbd>→</kbd> | Move the column selection to the right |
