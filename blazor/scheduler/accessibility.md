@@ -61,10 +61,10 @@ All the Scheduler actions can be controlled via keyboard keys and is availed by 
 | <kbd>Alt</kbd> + <kbd>J</kbd> | <kbd>⌥</kbd> + <kbd>J</kbd> | Focuses the Scheduler [Provided from application end]. |
 | <kbd>Tab</kbd> | <kbd>Tab</kbd> | Focuses the first or active item on the scheduler header bar and then moves the focus to the next available event elements. If no events present, then focus moves out of the component. |
 | <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Reverse focusing of the Tab functionality. Inverse focusing of event elements from the last one and then moves onto the first or active item on Scheduler header bar and then moves out of the component. |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Arrows</kbd> (<kbd>↑</kbd> , <kbd>→</kbd> , <kbd>↓</kbd> , <kbd>←</kbd>) | <kbd>⌘</kbd> + <kbd>⇧</kbd> + Arrows (<kbd>↑</kbd> , <kbd>→</kbd> , <kbd>↓</kbd> , <kbd>←</kbd>) | Focuses the event element and then moves the focus to the next available event elements between the resources. |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + Arrows (<kbd>↑</kbd> , <kbd>→</kbd> , <kbd>↓</kbd> , <kbd>←</kbd>) | <kbd>⌘</kbd> + <kbd>⇧</kbd> + Arrows (<kbd>↑</kbd> , <kbd>→</kbd> , <kbd>↓</kbd> , <kbd>←</kbd>) | Focuses the event element and then moves the focus to the next available event elements between the resources. |
 | <kbd>Escape</kbd> | <kbd>Escape</kbd> | Closes any of the popup that are in open state. |
 | <kbd>↑</kbd> , <kbd>→</kbd> , <kbd>↓</kbd> , <kbd>←</kbd> | <kbd>↑</kbd> , <kbd>→</kbd> , <kbd>↓</kbd> , <kbd>←</kbd> | To move onto the next available cells in either of the needed directions (left, right, top and right) |
-| <kbd>Shift</kbd> + <kbd>Arrow</kbd> | <kbd>⇧</kbd> + Arrows (<kbd>↑</kbd> , <kbd>→</kbd> , <kbd>↓</kbd> , <kbd>←</kbd>) | For multiple cell selection on either direction. |
+| <kbd>Shift</kbd> + Arrows (<kbd>↑</kbd> , <kbd>→</kbd> , <kbd>↓</kbd> , <kbd>←</kbd>) | <kbd>⇧</kbd> + Arrows (<kbd>↑</kbd> , <kbd>→</kbd> , <kbd>↓</kbd> , <kbd>←</kbd>) | For multiple cell selection on either direction. |
 | <kbd>Delete</kbd> | <kbd>Delete</kbd> | Deletes one or more selected events. |
 | <kbd>Ctrl</kbd> + <kbd>Click</kbd> on events | <kbd>⌘</kbd> + <kbd>Click</kbd> | To select multiple events. |
 | <kbd>Alt</kbd> + <kbd>Number</kbd> (from 1 to 6) | <kbd>⌥</kbd> + <kbd>Number</kbd> (from 1 to 6) | To switch between the views on Scheduler. |
