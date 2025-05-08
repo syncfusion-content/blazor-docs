@@ -1,80 +1,253 @@
 ---
 layout: post
-title: Data Binding in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn here all about Data Binding in Syncfusion Blazor DataGrid component and much more.
+title: Data Binding in Blazor DataGrid | Syncfusion
+description: Checkout and learn here all about Data Binding in Syncfusion Blazor DataGrid and much more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Data Binding in Blazor DataGrid Component
+# Data Binding in Blazor DataGrid
 
-The DataGrid uses [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html), which supports both RESTful JSON data services binding and IEnumerable binding. The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) value can be assigned either with the property values from [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) or list of business objects.
+Data binding is a fundamental technique that empowers the DataGrid to integrate data into its interface, enabling the creation of dynamic and interactive Grid views. This feature is particularly valuable when working with large datasets or when data needs to be fetched remotely. 
 
-It supports the following kinds of data binding method:
-* List binding
+The Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid utilizes the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html), which supports both RESTful JSON data service binding and IEnumerable binding. The key property, [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource), can be assigned to a DataManager instance or a collection of JavaScript object arrays.
+
+It supports two kinds of data binding methods:
+
+* Local data
 * Remote data
 
-N> When using [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) as `IEnumerable<T>`, component type(TValue) will be inferred from its value. When using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) for data binding then the **TValue** must be provided explicitly in the datagrid component.
+> When using [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) as `IEnumerable<T>`, the component type (TValue) will be inferred from its value. When using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) for data binding, the **TValue** must be provided explicitly in the datagrid.
 
-## List binding
+## Refresh the datasource using property
 
-To bind list binding to the datagrid, you can assign a IEnumerable object to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property. The list data source can also be provided as an instance of the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) or by using[SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component.
+Refreshing the data source in a Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid involves updating the data that the Grid displays dynamically. This operation is essential when you need to reflect changes in the underlying data without reloading the entire page or Grid.
 
-```cshtml
+To achieve this, you can make use of the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property. This ensures that the grid reflects the changes in the data source without requiring a complete page or Grid reload.
+
+To refresh the grid’s data at runtime:
+
+* Modify the underlying data list (e.g., by inserting new records).
+
+* Reassign the updated list to the same property bound to the grid's DataSource.
+
+The following example demonstrates adding a new record to the data source through an external button:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
 
-<SfGrid DataSource="@Orders" AllowPaging="true">
-    <GridPageSettings PageSize="5"></GridPageSettings>
+<div style="margin-bottom:5px">
+    <SfButton OnClick="ChangeDatasource">Refresh Datasource</SfButton>
+</div>
+<SfGrid @ref="Grid" DataSource="@Orders" Height="280">
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.DateOnly" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderTime) HeaderText="Order Time" Type="ColumnType.TimeOnly" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipName) HeaderText="Ship Name" Width="130"></GridColumn>
     </GridColumns>
 </SfGrid>
 
-@code{
-    public List<Order> Orders { get; set; }
-
+@code {
+    private SfGrid<Order> Grid;
+    private List<Order> Orders = new();
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 10).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = new DateOnly(2023, 2, x),
-            OrderTime = new TimeOnly(x, 00)
-        }).ToList();
+        Orders = Order.GetAllRecords();
     }
+    private void ChangeDatasource()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            var newRecord = new Order
+                {
+                    OrderID = GenerateOrderId(),
+                    CustomerID = GenerateCustomerId(),
+                    Freight = GenerateFreight(),
+                    ShipName = GenerateShipName()
+                };
 
-    public class Order {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateOnly? OrderDate { get; set; }
-        public TimeOnly? OrderTime { get; set; }
-        public double? Freight { get; set; }
+            Orders.Insert(0, newRecord); // Unshift equivalent.
+        }
+        // Re-assign to trigger change detection.
+        Orders = Orders.ToList(); // Clone list to force refresh.
+    }
+    private int GenerateOrderId() => Random.Shared.Next(10000, 99999);
+    private string GenerateCustomerId()
+    {
+        const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        return new string(Enumerable.Range(0, 5).Select(_ => chars[Random.Shared.Next(chars.Length)]).ToArray());
+    }    
+    private double GenerateFreight() => Math.Round((double)(Random.Shared.NextDouble() * 100), 2);
+    private string GenerateShipName()
+    {
+        string[] names = new[] { "Que Delícia", "Bueno Foods", "Island Trading", "Laughing Bacchus Winecellars" };
+        return names[Random.Shared.Next(names.Length)];
     }
 }
-```
+{% endhighlight %}
+{% highlight cs tabtitle="Order.cs" %}
 
-N> By default, [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) uses **BlazorAdaptor** for list data-binding.
+public class Order
+{
+    public static List<Order> order = new List<Order>();
+    public Order(){}
+    public Order(int orderID, string customerID, double freight, string shipName)
+    {
+        this.OrderID = orderID;
+        this.CustomerID = customerID;
+        this.Freight = freight;
+        this.ShipName = shipName;
+    }
+    public static List<Order> GetAllRecords()
+    {
+        if (order.Count == 0)
+        {
+            order.Add(new Order(10248, "VINET", 32.38, "Vins et alcools Chevalier"));
+            order.Add(new Order(10249, "TOMSP", 11.61, "Toms Spezialitäten"));
+            order.Add(new Order(10250, "HANAR", 65.83, "Hanari Carnes"));
+            order.Add(new Order(10251, "VICTE", 41.34, "Victuailles en stock"));
+            order.Add(new Order(10252, "SUPRD", 51.3, "Suprêmes délices"));
+            order.Add(new Order(10253, "HANAR", 58.17, "Hanari Carnes"));
+            order.Add(new Order(10254, "CHOPS", 22.98, "Chop-suey Chinese"));
+            order.Add(new Order(10255, "RICSU", 148.33, "Richter Supermarkt"));
+            order.Add(new Order(10256, "WELLI", 13.97, "Wellington Importadora"));
+            order.Add(new Order(10257, "HILAA", 81.91, "HILARION-Abastos"));
+            order.Add(new Order(10258, "ERNSH", 140.51, "Ernst Handel"));
+            order.Add(new Order(10259, "CENTC", 3.25, "Centro comercial Moctezuma"));
+            order.Add(new Order(10260, "OTTIK", 55.09, "Ottilies Käseladen"));
+            order.Add(new Order(10261, "QUEDE", 3.05, "Que Delícia"));
+            order.Add(new Order(10262, "RATTC", 48.29, "Rattlesnake Canyon Grocery"));
+        }
+        return order;
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public string ShipName { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BthotpBBiCAhJtsd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## List binding
+
+The Syncfusion Blazor DataGrid supports binding data from a list of objects (e.g., a List&lt;T&gt; or IEnumerable&lt;T&gt; collection). This is the most common approach when working with in-memory data in Blazor applications.
+
+List binding allows the Grid to render and manage a collection of data directly in memory without requiring a remote service or external data manager unless needed. This is ideal for local CRUD operations, small datasets, or preloaded data.
+
+**How to enable list binding**
+
+You can bind a list of data to the DataGrid using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property. The list can be:
+
+* A basic in-memory IEnumerable&lt;T&gt; (e.g., List&lt;Order&gt;).
+
+* Provided via an [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) for additional data operations or offline capabilities.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@OrderData" AllowPaging="true">
+    <GridPageSettings PageSize="5" PageCount="3"></GridPageSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.DateOnly" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.OrderTime) HeaderText="Order Time" Type="ColumnType.TimeOnly" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="100"></GridColumn>       
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private List<OrderDetails> OrderData;
+    protected override void OnInitialized()
+    {
+        OrderData = OrderDetails.GetAllRecords();
+    }
+}
+
+{% endhighlight %}
+
+{% highlight cs tabtitle="OrderDetails.cs" %}
+
+public class OrderDetails
+{
+    public static List<OrderDetails> orders = new List<OrderDetails>();
+    public OrderDetails() { }
+    public OrderDetails(int orderID, string customerID, DateTime orderDateTime, double freight)
+    {
+        this.OrderID = orderID;
+        this.CustomerID = customerID;
+        this.OrderDate = DateOnly.FromDateTime(orderDateTime);
+        this.OrderTime = TimeOnly.FromDateTime(orderDateTime);
+        this.Freight = freight;
+    }
+    public static List<OrderDetails> GetAllRecords()
+    {
+        if (orders.Count == 0)
+        {
+            orders.Add(new OrderDetails(10248, "VINET", new DateTime(1996, 7, 4, 9, 30, 0), 32.38));
+            orders.Add(new OrderDetails(10249, "TOMSP", new DateTime(1996, 7, 5, 11, 45, 0), 11.61));
+            orders.Add(new OrderDetails(10250, "HANAR", new DateTime(1996, 7, 8, 14, 15, 0), 65.83));
+            orders.Add(new OrderDetails(10251, "VICTE", new DateTime(1996, 7, 8, 16, 0, 0), 41.34));
+            orders.Add(new OrderDetails(10252, "SUPRD", new DateTime(1996, 7, 9, 10, 20, 0), 51.3));
+            orders.Add(new OrderDetails(10253, "HANAR", new DateTime(1996, 7, 10, 13, 5, 0), 58.17));
+            orders.Add(new OrderDetails(10254, "CHOPS", new DateTime(1996, 7, 11, 17, 45, 0), 22.98));
+            orders.Add(new OrderDetails(10255, "RICSU", new DateTime(1996, 7, 12, 8, 50, 0), 148.33));
+            orders.Add(new OrderDetails(10256, "WELLI", new DateTime(1996, 7, 15, 12, 10, 0), 13.97));
+            orders.Add(new OrderDetails(10257, "HILAA", new DateTime(1996, 7, 16, 15, 30, 0), 81.91));
+            orders.Add(new OrderDetails(10258, "ERNSH", new DateTime(1996, 7, 17, 10, 45, 0), 140.51));
+            orders.Add(new OrderDetails(10259, "CENTC", new DateTime(1996, 7, 18, 9, 0, 0), 3.25));
+            orders.Add(new OrderDetails(10260, "OTTIK", new DateTime(1996, 7, 19, 16, 20, 0), 55.09));
+            orders.Add(new OrderDetails(10261, "QUEDE", new DateTime(1996, 7, 19, 13, 25, 0), 3.05));
+            orders.Add(new OrderDetails(10262, "RATTC", new DateTime(1996, 7, 22, 11, 40, 0), 48.29));
+        }
+        return orders;
+    }
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public DateOnly OrderDate { get; set; }
+    public TimeOnly OrderTime { get; set; }
+    public double Freight { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtreNzrLVoDAAALh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+> By default, the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) uses the **BlazorAdaptor** for list data binding.
 
 ### ExpandoObject binding
 
-Grid is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile type. In such cases you can bound data to the grid as list of  **ExpandoObject**.
+The Syncfusion Blazor DataGrid is a strongly-typed generic component typically bound to a specific model at compile time. However, there are scenarios, especially in dynamic or metadata-driven applications, where the structure of the data is not known until runtime. In such cases, you can bind the DataGrid to a collection of [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-9.0) instances for a fully dynamic Grid structure.
 
-To know about **ExpandoObject** data binding in Blazor DataGrid component, you can check on this video.
+**When to use ExpandoObject:**
+
+* When your data model is dynamic or generated at runtime.
+
+* When you need to construct grid columns and data dynamically (e.g., based on user input or metadata).
+
+* When integrating systems where the shape of the data cannot be statically defined.
+
+For a visual demonstration of how to bind **ExpandoObject** in the Blazor DataGrid, watch this video:
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=Xhaw3DdHmJk"%}
 
+You can assign a list of **ExpandoObject** to the Grid’s [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property. Grid features like **paging**, **sorting**, **filtering**, and even **editing** are supported when using **ExpandoObject**.
 
-**ExpandoObject** can be bound to datagrid by assigning to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property. Grid can also perform all kind of supported data operations and editing in ExpandoObject.
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 
-```cshtml
 @using Syncfusion.Blazor.Grids
 @using System.Dynamic
 
@@ -93,31 +266,34 @@ To know about **ExpandoObject** data binding in Blazor DataGrid component, you c
 @code {
     public List<ExpandoObject> Orders { get; set; } = new List<ExpandoObject>();
     private List<string> ToolbarItems = new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" };
-
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select((x) =>
         {
-            dynamic d = new ExpandoObject();
-            d.OrderID = 1000 + x;
-            d.CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)];
-            d.Freight = (new double[] { 2, 1, 4, 5, 3 })[new Random().Next(5)] * x;
-            d.OrderDate = (new DateTime[] { new DateTime(2010, 11, 5), new DateTime(2018, 10, 3), new DateTime(1995, 9, 9), new DateTime(2012, 8, 2), new DateTime(2015, 4, 11) })[new Random().Next(5)];
-            d.ShipCountry = (new string[] { "USA", "UK" })[new Random().Next(2)];
-            d.Verified = (new bool[] { true, false })[new Random().Next(2)];
-
-            return d;
+            dynamic Order = new ExpandoObject();
+            Order.OrderID = 1000 + x;
+            Order.CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)];
+            Order.Freight = (new double[] { 2, 1, 4, 5, 3 })[new Random().Next(5)] * x;
+            Order.OrderDate = (new DateTime[] { new DateTime(1996, 11, 5), new DateTime(1996, 10, 3), new DateTime(1996, 9, 9), new DateTime(1996, 8, 2), new DateTime(1996, 4, 11) })[new Random().Next(5)];
+            Order.ShipCountry = (new string[] { "USA", "UK" })[new Random().Next(2)];
+            Order.Verified = (new bool[] { true, false })[new Random().Next(2)];
+            return Order;
         }).Cast<ExpandoObject>().ToList<ExpandoObject>();
-
     }
 }
-```
 
-### ExpandoObject Complex data binding
+{% endhighlight %}
+{% endtabs %}
 
-You can achieve ExpandoObject complex data binding in the datagrid by using the dot(.) operator in the column.field. In the following examples, `CustomerID.Name` and `ShipCountry.Country` are complex data.
+### ExpandoObject complex data binding
 
-```cshtml
+When working with complex or nested data structures using [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-9.0), the Syncfusion Blazor DataGrid allows you to bind these nested fields using dot (.) notation. This is especially helpful when your **ExpandoObject** contains sub-objects or hierarchical data, and you want to present specific properties of those nested objects in individual Grid columns.
+
+The following example demonstrates how to bind complex properties within an **ExpandoObject** to the Grid. In this sample, **CustomerID.Name** and **ShipCountry.Country** represent nested fields from the underlying dynamic object, and they are individually bound to display in their respective columns:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Grids
 @using System.Dynamic
 
@@ -136,52 +312,60 @@ You can achieve ExpandoObject complex data binding in the datagrid by using the 
 @code {
     public List<ExpandoObject> Orders { get; set; } = new List<ExpandoObject>();
     private List<string> ToolbarItems = new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" };
-
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select((x) =>
         {
-            dynamic d = new ExpandoObject();
+            dynamic Order = new ExpandoObject();
             dynamic customerName = new ExpandoObject();
             dynamic countryName = new ExpandoObject();
-            d.OrderID = 1000 + x;
+            Order.OrderID = 1000 + x;
             customerName.Name = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)];
-            d.CustomerID = customerName;
-            d.Freight = (new double[] { 2, 1, 4, 5, 3 })[new Random().Next(5)] * x;
-            d.OrderDate = (new DateTime[] { new DateTime(2010, 11, 5), new DateTime(2018, 10, 3), new DateTime(1995, 9, 9), new DateTime(2012, 8, 2), new DateTime(2015, 4, 11) })[new Random().Next(5)];
+            Order.CustomerID = customerName;
+            Order.Freight = (new double[] { 2, 1, 4, 5, 3 })[new Random().Next(5)] * x;
+            Order.OrderDate = (new DateTime[] { new DateTime(1996, 11, 5), new DateTime(1996, 10, 3), new DateTime(1996, 9, 9), new DateTime(1996, 8, 2), new DateTime(1996, 4, 11) })[new Random().Next(5)];
             countryName.Country = (new string[] { "USA", "UK" })[new Random().Next(2)];
-            d.ShipCountry = countryName;
-            d.Verified = (new bool[] { true, false })[new Random().Next(2)];
+            Order.ShipCountry = countryName;
+            Order.Verified = (new bool[] { true, false })[new Random().Next(2)];
 
-            return d;
+            return Order;
         }).Cast<ExpandoObject>().ToList<ExpandoObject>();
-
     }
 }
-```
 
-N> You can perform the Data operations and CRUD operations for Complex ExpandoObject binding fields too.
+{% endhighlight %}
+{% endtabs %}
+
+> You can perform data operations and CRUD operations for complex ExpandoObject binding fields as well.
 
 The following image represents ExpandoObject complex data binding,
 
-![Binding ExpandObject with Complex Data in Blazor DataGrid](./images/blazor-datagrid-expand-complex-data.png)
+![Binding ExpandObject with complex data in Blazor DataGrid](./images/blazor-datagrid-expand-complex-data.png)
 
 ### DynamicObject binding
 
-Grid is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile type. In such cases you can bound data to the grid as list of  **DynamicObject**.
+The Syncfusion Blazor DataGrid is designed to work with strongly-typed models. However, in scenarios where the model structure is not known at compile time, such as metadata-driven Grids or dynamic data sources, you can bind the Grid to a list of objects derived from [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject).
 
-To know about **DynamicObject** data binding in Blazor DataGrid component, you can check on this video.
+**When to use DynamicObject:**
+
+* When data models are unknown at compile time.
+
+* When creating dynamic, metadata-driven Grid layouts.
+
+* When integrating external or runtime-generated data sources with unpredictable structures.
+
+For a visual demonstration of how to bind a **DynamicObject** in the Blazor DataGrid, watch this video:
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=Xhaw3DdHmJk"%}
 
+To bind a **DynamicObject**, assign a list of dynamic instances to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property.
 
+> You must override the [GetDynamicMemberNames](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames?view=net-9.0) method in your **DynamicObject** implementation. This allows the Grid to detect the property names during rendering and perform **editing**, **sorting**, **filtering**, and **paging** operations.
 
-**DynamicObject** can be bound to datagrid by assigning to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property. Grid can also perform all kind of supported data operations and editing in DynamicObject.
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 
-N> The [GetDynamicMemberNames](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames?view=net-8.0) method of DynamicObject class must be overridden and return the property names to perform data operation and editing while using DynamicObject.
-
-```cshtml
 @using Syncfusion.Blazor.Grids
 @using System.Dynamic
 
@@ -196,24 +380,23 @@ N> The [GetDynamicMemberNames](https://learn.microsoft.com/en-us/dotnet/api/syst
 </SfGrid>
 
 @code {
-    private List<string> ToolbarItems = new List<string>(){ "Add","Edit","Delete","Update","Cancel"};
+    private List<string> ToolbarItems = new List<string>(){ "Add", "Edit", "Delete", "Update", "Cancel"};
     public List<DynamicDictionary> Orders = new List<DynamicDictionary>() { };
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 1075).Select((x) =>
+        Orders = Enumerable.Range(1, 15).Select((x) =>
         {
-            dynamic d = new DynamicDictionary();
-            d.OrderID = 1000 + x;
-            d.CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)];
-            d.Freight = (new double[] { 2, 1, 4, 5, 3 })[new Random().Next(5)] * x;
-            d.OrderDate = DateTime.Now.AddDays(-x);
-            return d;
+            dynamic Order = new DynamicDictionary();
+            Order.OrderID = 1000 + x;
+            Order.CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)];
+            Order.Freight = (new double[] { 2, 1, 4, 5, 3 })[new Random().Next(5)] * x;
+            Order.OrderDate = (new DateTime[] { new DateTime(1996, 11, 5), new DateTime(1996, 10, 3), new DateTime(1996, 9, 9), new DateTime(1996, 8, 2), new DateTime(1996, 4, 11) })[new Random().Next(5)];
+            return Order;
         }).Cast<DynamicDictionary>().ToList<DynamicDictionary>();
     }
     public class DynamicDictionary : DynamicObject
     {
         Dictionary<string, object> dictionary = new Dictionary<string, object>();
-
         public override bool TryGetMember(GetMemberBinder binder, out object result)
         {
             string name = binder.Name;
@@ -224,21 +407,25 @@ N> The [GetDynamicMemberNames](https://learn.microsoft.com/en-us/dotnet/api/syst
             dictionary[binder.Name] = value;
             return true;
         }
-
         public override System.Collections.Generic.IEnumerable<string> GetDynamicMemberNames()
         {
             return this.dictionary?.Keys;
         }
-
     }
 }
-```
 
-#### DynamicObject Complex data binding
+{% endhighlight %}
+{% endtabs %}
 
-You can achieve DynamicObject complex data binding in the datagrid by using the dot(.) operator in the column.field. In the following examples, `CustomerID.Name` and `ShipCountry.Country` are complex data.
+### DynamicObject complex data binding
 
-```cshtml
+When working with complex or nested data structures using [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject), the Syncfusion Blazor DataGrid allows you to bind these nested fields using dot (.) notation. This is especially helpful when your **DynamicObject** contains sub-objects or hierarchical data, and you want to present specific properties of those nested objects in individual Grid columns.
+
+The following example demonstrates how to bind complex properties within a **DynamicObject** to the Grid. In this sample, **CustomerID.Name** and **ShipCountry.Country** represent nested fields from the underlying dynamic object, and they are individually bound to display in their respective columns:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Grids
 @using System.Dynamic
 
@@ -258,25 +445,24 @@ You can achieve DynamicObject complex data binding in the datagrid by using the 
     public List<DynamicDictionary> Orders = new List<DynamicDictionary>() { };
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 1075).Select((x) =>
+        Orders = Enumerable.Range(1, 15).Select((x) =>
         {
-            dynamic d = new DynamicDictionary();
-            dynamic combo = new DynamicDictionary();
+            dynamic Order = new DynamicDictionary();
+            dynamic customerName = new DynamicDictionary();
             dynamic countryName = new DynamicDictionary();
-            d.OrderID = 1000 + x;
-            combo.Name = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)];
-            d.CustomerID = combo;
-            d.Freight = (new double[] { 2, 1, 4, 5, 3 })[new Random().Next(5)] * x;
-            d.OrderDate = DateTime.Now.AddDays(-x);
+            Order.OrderID = 1000 + x;
+            customerName.Name = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)];
+            Order.CustomerID = customerName;
+            Order.Freight = (new double[] { 2, 1, 4, 5, 3 })[new Random().Next(5)] * x;
+            Order.OrderDate = (new DateTime[] { new DateTime(1996, 11, 5), new DateTime(1996, 10, 3), new DateTime(1996, 9, 9), new DateTime(1996, 8, 2), new DateTime(1996, 4, 11) })[new Random().Next(5)];
             countryName.Country = (new string[] { "USA", "UK" })[new Random().Next(2)];
-            d.ShipCountry = countryName;
-            return d;
+            Order.ShipCountry = countryName;
+            return Order;
         }).Cast<DynamicDictionary>().ToList<DynamicDictionary>();
     }
     public class DynamicDictionary : DynamicObject
     {
         Dictionary<string, object> dictionary = new Dictionary<string, object>();
-
         public override bool TryGetMember(GetMemberBinder binder, out object result)
         {
             string name = binder.Name;
@@ -287,32 +473,47 @@ You can achieve DynamicObject complex data binding in the datagrid by using the 
             dictionary[binder.Name] = value;
             return true;
         }
-
         public override System.Collections.Generic.IEnumerable<string> GetDynamicMemberNames()
         {
             return this.dictionary?.Keys;
         }
     }
 }
-```
 
-N> * you can perform the Data operations and CRUD operations for Complex DynamicObject binding fields too.
+{% endhighlight %}
+{% endtabs %}
+
+> You can perform data operations and CRUD operations for complex DynamicObject binding fields as well.
 
 The following image represents DynamicObject complex data binding
 
 ![Binding DynamicObject with Complex Data in Blazor DataGrid](./images/blazor-datagrid-dynamic-complex-data.png)
 
-N> While binding the Grid DataSource dynamically in the form of a list of IEnumerable collections, you need to call the Refresh() method of the Grid to reflect the changes externally. Because tracking items of IEnumerable for changes made externally is avoided for performance considerations.
+> When binding the Grid DataSource dynamically as a list of IEnumerable collections, you need to call the [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Refresh_System_Boolean_) method of the Grid to reflect the changes externally. This is because tracking changes made externally to IEnumerable items is avoided for performance considerations.
 
 ### DataTable binding
 
-DataTable represents a table with data rows and columns. Data binding of the DataTable can be achieved in the DataGrid component by providing the **CustomAdaptor** class and overriding the `Read` or `ReadAsync` method of the `DataAdaptor` abstract class.
+The Syncfusion Blazor DataGrid supports binding data from a `System.Data.DataTable` using a custom adaptor, enabling dynamic generation of rows and columns based on backend data. This approach is particularly useful for scenarios where data is retrieved or processed in a DataTable format, and it provides full support for built-in data operations like paging, filtering, sorting, and searching. 
 
-To bind DataTable to the datagrid, you can assign `TValue` to the **ExpandoObject**. 
+To bind a `DataTable`, convert it into an **IQueryable&lt;ExpandoObject&gt;** collection, and supply it through a custom adaptor that extends DataAdaptor.
 
-Refer to the following code example for how to bind the DataTable using custom adaptor.
+**How to bind DataTable to the Grid:**
 
-```cshtml
+* Create a `DataTable` and populate it with data.
+
+* Convert it to a list of **ExpandoObject** using a helper method.
+
+* Use a custom adaptor by extending the [DataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html) class.
+
+* Override the [Read](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Read_Syncfusion_Blazor_DataManagerRequest_System_String_) method to handle data fetching and operations.
+
+The following example demonstrates how to bind a `DataTable` with a **CustomAdaptor**. In the example below, the `DataTable` is passed to the `ToQueryableCollection` method, which converts the `DataTable` data source into an **IQueryable** collection data source.
+
+You can perform data operations like **searching**, **sorting**, and **filtering** using the `PerformDataOperation` method. This method takes a `DataTable` and a `[DataManagerRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManagerRequest.html) object as parameters, processes the data operations, and then returns an **IQueryable** data source.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor;
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
@@ -323,10 +524,10 @@ Refer to the following code example for how to bind the DataTable using custom a
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
     <GridPageSettings PageSize="8"></GridPageSettings>
     <GridColumns>
-        <GridColumn Field="OrderID" HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true, Number=true})" Width="120"></GridColumn>
-        <GridColumn Field="CustomerID" HeaderText="Customer Name" ValidationRules="@(new ValidationRules { Required=true})" Width="150"></GridColumn>
-        <GridColumn Field="OrderDate" HeaderText="Order Date" Format="d" Type="ColumnType.Date" Width="130"></GridColumn>
-        <GridColumn Field="EmployeeID" HeaderText="Employee ID" Width="120"></GridColumn>
+        <GridColumn Field="OrderID" HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true, Number=true})" Width="100"></GridColumn>
+        <GridColumn Field="CustomerID" HeaderText="Customer Name" ValidationRules="@(new ValidationRules { Required=true})" Width="100"></GridColumn>
+        <GridColumn Field="OrderDate" HeaderText="Order Date" Format="d" Type="ColumnType.Date" Width="110"></GridColumn>
+        <GridColumn Field="EmployeeID" HeaderText="Employee ID" Width="100"></GridColumn>
     </GridColumns>
 </SfGrid>
 
@@ -337,64 +538,70 @@ Refer to the following code example for how to bind the DataTable using custom a
     protected override void OnInitialized()
     {
         dataTable = GetData();
-        DataSource = ToQueryableCollection(dataTable);      // Convert DataTable to IQueryable ExpandoObject list
+
+        // Convert the DataTable to an IQueryable<ExpandoObject> collection.
+        DataSource = ToQueryableCollection(dataTable);  
     }
 
-    // Implementing custom adaptor by extending the DataAdaptor class
+    // Custom adaptor class to handle data operations.
     public class CustomAdaptor : DataAdaptor
     {
-        // Performs data Read operation
-        public override object Read(DataManagerRequest dm, string key = null)
+        // Perform the Read operation to fetch data from the source.
+        public override object Read(DataManagerRequest DataManagerRequest, string key = null)
         {
-            // Performs Searching, Sorting, Filtering
-            DataSource = PerformDataOperation(dataTable, dm);
+            // Apply searching, sorting, and filtering.
+            DataSource = PerformDataOperation(dataTable, DataManagerRequest);
 
+            // Get the total record count.
             int count = DataSource.Cast<ExpandoObject>().Count();
-            if (dm.Skip != 0)
+
+            // Perform paging operation using skip and take.
+            if (DataManagerRequest.Skip != 0)
             {
-                //Paging
-                DataSource = QueryableOperation.PerformSkip<object>((IQueryable<object>)DataSource, dm.Skip);
+                DataSource = QueryableOperation.PerformSkip<object>((IQueryable<object>)DataSource, DataManagerRequest.Skip);
             }
-            if (dm.Take != 0)
+            if (DataManagerRequest.Take != 0)
             {
-                DataSource = QueryableOperation.PerformTake<object>((IQueryable<object>)DataSource, dm.Take);
+                DataSource = QueryableOperation.PerformTake<object>((IQueryable<object>)DataSource, DataManagerRequest.Take);
             }
 
-            return dm.RequiresCounts ? new DataResult() { Result = DataSource, Count = count } : (object)DataSource;
+            // Return the result with count if required.
+            return DataManagerRequest.RequiresCounts ? new DataResult() { Result = DataSource, Count = count } : (object)DataSource;
         }
-    }
+    }    
 
-    // Performs data operations like Searching, Sorting, and Filtering
-    public static IQueryable PerformDataOperation(DataTable dt, DataManagerRequest dm)
+    // Performs data operations like Searching, Sorting, and Filtering.
+    public static IQueryable PerformDataOperation(DataTable DataTable, DataManagerRequest DataManagerRequest)
     {
-        // Convert DataTable to IQueryable collection of datasource
-        DataSource = ToQueryableCollection(dt);
-        if (dm.Search != null && dm.Search.Count > 0)
+        // Convert the DataTable to an IQueryable collection.
+        DataSource = ToQueryableCollection(DataTable);
+
+        if (DataManagerRequest.Search != null && DataManagerRequest.Search.Count > 0)
         {
-            // Searching
-            DataSource = DynamicObjectOperation.PerformSearching(DataSource, dm.Search);
+            // Perform searching operation.
+            DataSource = DynamicObjectOperation.PerformSearching(DataSource, DataManagerRequest.Search);
         }
-        if (dm.Where != null && dm.Where.Count > 0)
+        if (DataManagerRequest.Where != null && DataManagerRequest.Where.Count > 0)
         {
-            // Filtering
-            DataSource = DynamicObjectOperation.PerformFiltering(DataSource, dm.Where, dm.Where[0].Operator);
+            // Perform filtering operation.
+            DataSource = DynamicObjectOperation.PerformFiltering(DataSource, DataManagerRequest.Where, DataManagerRequest.Where[0].Operator);
         }
-        if (dm.Sorted != null && dm.Sorted.Count > 0)
+        if (DataManagerRequest.Sorted != null && DataManagerRequest.Sorted.Count > 0)
         {
-            // Sorting
-            DataSource = DynamicObjectOperation.PerformSorting(DataSource, dm.Sorted);
+            // Perform sorting operation.
+            DataSource = DynamicObjectOperation.PerformSorting(DataSource, DataManagerRequest.Sorted);
         }
         return DataSource;
     }
 
-    // This method converts the DataTable data source into an IQueryable collection data source.
-    public static IQueryable ToQueryableCollection(DataTable dt)
+    // Converts a DataTable to an IQueryable collection of ExpandoObjects.
+    public static IQueryable ToQueryableCollection(DataTable DataTable)
     {
         List<ExpandoObject> expandoList = new List<ExpandoObject>();
-        foreach (DataRow row in dt.Rows)
+        foreach (DataRow row in DataTable.Rows)
         {
             var expandoDict = new ExpandoObject() as IDictionary<String, Object>;
-            foreach (DataColumn col in dt.Columns)
+            foreach (DataColumn col in DataTable.Columns)
             {
                 var colValue = row[col.ColumnName];
                 colValue = (colValue == DBNull.Value) ? null : colValue;
@@ -407,105 +614,73 @@ Refer to the following code example for how to bind the DataTable using custom a
 
     public DataTable GetData()
     {
-        DataTable dt = new DataTable();
-        dt.Columns.AddRange(new DataColumn[4] { new DataColumn("OrderID", typeof(long)),
-                                                new DataColumn("CustomerID", typeof(string)),
-                                                new DataColumn("EmployeeID",typeof(int)),
-                                                new DataColumn("OrderDate",typeof(DateTime))
-    });
-
+        DataTable DataTable = new DataTable();
+        DataTable.Columns.AddRange(new DataColumn[4] { 
+            new DataColumn("OrderID", typeof(long)),
+            new DataColumn("CustomerID", typeof(string)),
+            new DataColumn("EmployeeID",typeof(int)),
+            new DataColumn("OrderDate",typeof(DateTime))
+        });
         int code = 1000;
         int id = 0;
         for (int i = 1; i <= 15; i++)
         {
-            dt.Rows.Add(code + 1, "ALFKI", id + 1, new DateTime(1991, 05, 15));
-            dt.Rows.Add(code + 2, "ANATR", id + 2, new DateTime(1990, 04, 04));
-            dt.Rows.Add(code + 3, "ANTON", id + 3, new DateTime(1957, 11, 30));
-            dt.Rows.Add(code + 4, "BLONP", id + 4, new DateTime(1930, 10, 22));
-            dt.Rows.Add(code + 5, "BOLID", id + 5, new DateTime(1953, 02, 18));
+            DataTable.Rows.Add(code + 1, "ALFKI", id + 1, new DateTime(1991, 05, 15));
+            DataTable.Rows.Add(code + 2, "CHOPS", id + 2, new DateTime(1990, 04, 04));
+            DataTable.Rows.Add(code + 3, "ANTON", id + 3, new DateTime(1957, 11, 30));
+            DataTable.Rows.Add(code + 4, "DRACH", id + 4, new DateTime(1930, 10, 22));
+            DataTable.Rows.Add(code + 5, "BOLID", id + 5, new DateTime(1953, 02, 18));
             code += 5;
             id += 5;
         }
-        return dt;
+        return DataTable;
     }
 }
-```
-In the above example, DataTable is passed to the `ToQueryableCollection` method, which converts the DataTable datasource into an **IQueryable** collection datasource.
 
-You can perform data operations like **searching**, **sorting** and **filtering** using the `PerformDataOperation` method. This method takes a DataTable and a DataManagerRequest object as parameters, processes the data operations, and then returns an IQueryable data source.
+{% endhighlight %}
+{% endtabs %}
 
-Refer to the following code example for how to implement **grouping** and **aggregates** in a DataTable using a custom adaptor.
+**Grouping and Aggregates with DataTable:**
 
-```cshtml
-    // Implementing custom adaptor by extending the DataAdaptor class
-    public class CustomAdaptor : DataAdaptor
-    {
-        // Performs data Read operation
-        public override object Read(DataManagerRequest dm, string key = null)
-        {
-            // Convert DataTable to IQueryable ExpandoObject list
-            DataSource = ToQueryableCollection(dataTable);
+The Syncfusion Blazor DataGrid supports dynamic **grouping** and **aggregates** even when bound to a `DataTable` via a custom adaptor. This allows you to group rows by one or more columns and apply aggregate functions (such as **Sum**, **Average**, **Count**, etc.) on those groups or entire datasets.
 
-            int count = DataSource.Cast<ExpandoObject>().Count();
-            if (dm.Skip != 0)
-            {
-                //Paging
-                DataSource = QueryableOperation.PerformSkip<object>((IQueryable<object>)DataSource, dm.Skip);
-            }
-            if (dm.Take != 0)
-            {
-                DataSource = QueryableOperation.PerformTake<object>((IQueryable<object>)DataSource, dm.Take);
-            }
+Below is an example showing how to implement grouping and aggregates in a custom adaptor.
 
-            // Aggregation
-            IDictionary<string, object> aggregates = new Dictionary<string, object>();
-            if (dm.Aggregates != null)
-            {
-                aggregates = DataUtil.PerformAggregation(DataSource, dm.Aggregates);
-            }
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 
-            // Grouping
-            DataResult DataObject = new DataResult();
-            if (dm.Group != null)
-            {
-                IEnumerable result = (IEnumerable)DataSource;
-                foreach (var group in dm.Group)
-                {
-                    result = DataUtil.Group<ExpandoObject>(result, group, dm.Aggregates, 0, dm.GroupByFormatter);
-                }
-                return dm.RequiresCounts ? new DataResult() { Result = result, Count = count, Aggregates = aggregates } : (object)DataSource;
-            }
-            return dm.RequiresCounts ? new DataResult() { Result = DataSource, Count = count, Aggregates = aggregates } : (object)DataSource;
-        }
-    }
-```
-#### DataTable with CRUD operations
-
-To perform CRUD operations for a DataTable, can be implemented by overriding the CRUD methods of the **DataAdaptor** abstract class.
-
-* **Insert/InsertAsync**
-* **Remove/RemoveAsync**
-* **Update/UpdateAsync**
-* **BatchUpdate/BatchUpdateAsync**
-
-While using batch editing in DataGrid, use the BatchUpdate/BatchUpdateAsync method to handle the corresponding CRUD operations.
-
-```cshtml
-@using Syncfusion.Blazor;
-@using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
-@using System.Dynamic;
-@using System.Data;
+@using Syncfusion.Blazor.Data
+@using System.Data
+@using System.Dynamic
+@using System.Collections
 
-<SfGrid TValue="ExpandoObject" ID="Grid" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Delete", "Update", "Cancel" })">
+<SfGrid TValue="ExpandoObject" AllowPaging="true" AllowGrouping="true">
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
-    <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="@EditMode.Normal"></GridEditSettings>
+    <GridGroupSettings ShowGroupedColumn="true"></GridGroupSettings>
     <GridPageSettings PageSize="8"></GridPageSettings>
+    <GridAggregates>
+        <GridAggregate>
+            <GridAggregateColumns>
+                <GridAggregateColumn Field=Freight Type="AggregateType.Sum" Format="C2">
+                    <FooterTemplate>
+                        @{
+                            var aggregate = (context as AggregateTemplateContext);
+                            <div>
+                                <p>Sum: @aggregate.Sum</p>
+                            </div>
+                        }
+                    </FooterTemplate>
+                </GridAggregateColumn>
+            </GridAggregateColumns>
+        </GridAggregate>
+    </GridAggregates>
     <GridColumns>
-        <GridColumn Field="OrderID" HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true, Number=true})" Width="120"></GridColumn>
-        <GridColumn Field="CustomerID" HeaderText="Customer Name" ValidationRules="@(new ValidationRules { Required=true})" Width="150"></GridColumn>
-        <GridColumn Field="OrderDate" HeaderText="Order Date" Format="d" Type="ColumnType.Date" Width="130"></GridColumn>
-        <GridColumn Field="EmployeeID" HeaderText="Employee ID" Width="120"></GridColumn>
+        <GridColumn Field="OrderID" HeaderText="Order ID" Width="100" TextAlign="TextAlign.Right" />
+        <GridColumn Field="CustomerID" HeaderText="Customer Name" Width="100" />
+        <GridColumn Field="EmployeeID" HeaderText="Employee ID" Width="100" />
+        <GridColumn Field="OrderDate" HeaderText="Order Date" Width="110" Format="d" Type="ColumnType.Date" />
+        <GridColumn Field="Freight" TextAlign="TextAlign.Right" AllowGrouping="false" Format="C2" Width="100"></GridColumn>
     </GridColumns>
 </SfGrid>
 
@@ -516,33 +691,182 @@ While using batch editing in DataGrid, use the BatchUpdate/BatchUpdateAsync meth
     protected override void OnInitialized()
     {
         dataTable = GetData();
-        DataSource = ToQueryableCollection(dataTable);         // Convert DataTable to IQueryable ExpandoObject list
+
+        // Convert the DataTable to an IQueryable<ExpandoObject> collection.
+        DataSource = ToQueryableCollection(dataTable);  
     }
 
-    // Implementing custom adaptor by extending the DataAdaptor class
+    // Custom adaptor class to handle data operations.
     public class CustomAdaptor : DataAdaptor
     {
-        // Performs data Read operation
-        public override object Read(DataManagerRequest dm, string key = null)
+        // Perform the Read operation to fetch data from the source.
+        public override object Read(DataManagerRequest DataManagerRequest, string key = null)
         {
-            // Performs Searching, Sorting, Filtering
-            DataSource = PerformDataOperation(dataTable, dm);
+            // Convert DataTable to IQueryable ExpandoObject list
+            DataSource = ToQueryableCollection(dataTable);
+
+            // Get the total record count.
             int count = DataSource.Cast<ExpandoObject>().Count();
-            if (dm.Skip != 0)
+
+            // Perform paging operation using skip and take.
+            if (DataManagerRequest.Skip != 0)
             {
-                //Paging
-                DataSource = QueryableOperation.PerformSkip<object>((IQueryable<object>)DataSource, dm.Skip);
+                DataSource = QueryableOperation.PerformSkip<object>((IQueryable<object>)DataSource, DataManagerRequest.Skip);
             }
-            if (dm.Take != 0)
+            if (DataManagerRequest.Take != 0)
             {
-                DataSource = QueryableOperation.PerformTake<object>((IQueryable<object>)DataSource, dm.Take);
+                DataSource = QueryableOperation.PerformTake<object>((IQueryable<object>)DataSource, DataManagerRequest.Take);
             }
 
-            return dm.RequiresCounts ? new DataResult() { Result = DataSource, Count = count } : (object)DataSource;
+            // Perform aggregation operation.
+            IDictionary<string, object> aggregates = new Dictionary<string, object>();
+            if (DataManagerRequest.Aggregates != null)
+            {
+                aggregates = DataUtil.PerformAggregation(DataSource, DataManagerRequest.Aggregates);
+            }
+
+            // Perform grouping operation.
+            DataResult DataObject = new DataResult();
+            if (DataManagerRequest.Group != null)
+            {
+                IEnumerable result = (IEnumerable)DataSource;
+                foreach (var group in DataManagerRequest.Group)
+                {
+                    result = DataUtil.Group<ExpandoObject>(result, group, DataManagerRequest.Aggregates, 0, DataManagerRequest.GroupByFormatter);
+                }
+
+                // Return grouped data with count and aggregates if required.
+                return DataManagerRequest.RequiresCounts ? new DataResult() { Result = result, Count = count, Aggregates = aggregates } : (object)DataSource;
+            }
+            
+            // Return the final result with count and aggregates if required.
+            return DataManagerRequest.RequiresCounts ? new DataResult() { Result = DataSource, Count = count, Aggregates = aggregates } : (object)DataSource;
+        }
+    }
+
+    // Converts a DataTable to an IQueryable collection of ExpandoObjects.
+    public static IQueryable ToQueryableCollection(DataTable DataTable)
+    {
+        List<ExpandoObject> expandoList = new List<ExpandoObject>();
+        foreach (DataRow row in DataTable.Rows)
+        {
+            var expandoDict = new ExpandoObject() as IDictionary<String, Object>;
+            foreach (DataColumn col in DataTable.Columns)
+            {
+                var colValue = row[col.ColumnName];
+                colValue = (colValue == DBNull.Value) ? null : colValue;
+                expandoDict.Add(col.ToString(), colValue);
+            }
+            expandoList.Add((ExpandoObject)expandoDict);
+        }
+        return expandoList.AsQueryable();
+    }
+
+    public DataTable GetData()
+    {
+        DataTable DataTable = new DataTable();
+        DataTable.Columns.AddRange(new DataColumn[5] { 
+            new DataColumn("OrderID", typeof(long)),
+            new DataColumn("CustomerID", typeof(string)),
+            new DataColumn("EmployeeID",typeof(int)),
+            new DataColumn("OrderDate",typeof(DateTime)),
+            new DataColumn("Freight", typeof(double))
+        });
+        int code = 1000;
+        int id = 0;
+        for (int i = 1; i <= 15; i++)
+        {
+            DataTable.Rows.Add(code + 1, "ALFKI", id + 1, new DateTime(1991, 05, 15), 2.32 * i);
+            DataTable.Rows.Add(code + 2, "CHOPS", id + 2, new DateTime(1990, 04, 04), 1.28 * i);
+            DataTable.Rows.Add(code + 3, "ANTON", id + 3, new DateTime(1957, 11, 30), 4.31 * i );
+            DataTable.Rows.Add(code + 4, "DRACH", id + 4, new DateTime(1930, 10, 22), 2.56 * i);
+            DataTable.Rows.Add(code + 5, "BOLID", id + 5, new DateTime(1953, 02, 18), 5.54 * i);
+            code += 5;
+            id += 5;
+        }
+        return DataTable;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+**DataTable with CRUD operations**
+
+The Syncfusion Blazor DataGrid supports CRUD (Create, Read, Update, Delete) operations with a DataTable using a custom adaptor. You can enable editing in the Grid and override specific methods of the [DataAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html) base class to update your `DataTable` in memory.
+
+**The supported methods are:**
+
+* [Insert](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Insert_Syncfusion_Blazor_DataManager_System_Object_System_String_) / [InsertAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_InsertAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_) – Adds a new record to the `DataTable`.
+
+* [Update](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Update_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) / [UpdateAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_UpdateAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) – Updates an existing record.
+
+* [Remove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_Remove_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) / [RemoveAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_RemoveAsync_Syncfusion_Blazor_DataManager_System_Object_System_String_System_String_) – Removes a record from the `DataTable`.
+
+* [BatchUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_BatchUpdate_Syncfusion_Blazor_DataManager_System_Object_System_Object_System_Object_System_String_System_String_System_Nullable_System_Int32__) / [BatchUpdateAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataAdaptor.html#Syncfusion_Blazor_DataAdaptor_BatchUpdateAsync_Syncfusion_Blazor_DataManager_System_Object_System_Object_System_Object_System_String_System_String_System_Nullable_System_Int32__) – Handles batch operations like add, update, and delete in a single transaction (used for Batch Editing).
+
+When using batch editing in the Grid, use the `BatchUpdate`/`BatchUpdateAsync` method to handle the corresponding CRUD operations.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor;
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Grids
+@using System.Dynamic;
+@using System.Data;
+
+<SfGrid TValue="ExpandoObject" ID="Grid" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
+    <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
+    <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="@EditMode.Normal"></GridEditSettings>
+    <GridPageSettings PageSize="8"></GridPageSettings>
+    <GridColumns>
+        <GridColumn Field="OrderID" HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true, Number=true})" Width="100"></GridColumn>
+        <GridColumn Field="CustomerID" HeaderText="Customer Name" ValidationRules="@(new ValidationRules { Required=true})" Width="100"></GridColumn>
+        <GridColumn Field="OrderDate" HeaderText="Order Date" Format="d" Type="ColumnType.Date" Width="110"></GridColumn>
+        <GridColumn Field="EmployeeID" HeaderText="Employee ID" Width="100"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public static DataTable dataTable { get; set; }
+    public static IQueryable DataSource;
+    protected override void OnInitialized()
+    {
+        dataTable = GetData();
+
+        // Convert the DataTable to an IQueryable<ExpandoObject> collection.
+        DataSource = ToQueryableCollection(dataTable);
+    }
+
+    // Custom adaptor class to handle data operations.
+    public class CustomAdaptor : DataAdaptor
+    {
+        // Perform the Read operation to fetch data from the source.
+        public override object Read(DataManagerRequest DataManagerRequest, string key = null)
+        {
+            // Convert DataTable to IQueryable ExpandoObject list
+            DataSource = ToQueryableCollection(dataTable);
+
+            // Get the total record count.
+            int count = DataSource.Cast<ExpandoObject>().Count();
+
+            // Perform paging operation using skip and take.
+            if (DataManagerRequest.Skip != 0)
+            {
+                DataSource = QueryableOperation.PerformSkip<object>((IQueryable<object>)DataSource, DataManagerRequest.Skip);
+            }
+            if (DataManagerRequest.Take != 0)
+            {
+                DataSource = QueryableOperation.PerformTake<object>((IQueryable<object>)DataSource, DataManagerRequest.Take);
+            }
+            
+            // Return the result with count if required.
+            return DataManagerRequest.RequiresCounts ? new DataResult() { Result = DataSource, Count = count } : (object)DataSource;
         }
 
-        //Performs Insert operation
-        public override object Insert(DataManager dm, object value, string key)
+        // Perform Insert operation.
+        public override object Insert(DataManager DataManagerRequest, object value, string key)
         {
             DataRow newRow = dataTable.NewRow();
             var data = (ExpandoObject)value;
@@ -550,16 +874,19 @@ While using batch editing in DataGrid, use the BatchUpdate/BatchUpdateAsync meth
             {
                 newRow[item.Key] = item.Value ?? DBNull.Value;
             }
+            
+            // Insert the new row at the top of the DataTable.
             dataTable.Rows.InsertAt(newRow, 0);
 
             return value;
         }
 
-        //Performs Remove operation
-        public override object Remove(DataManager dm, object value, string keyField, string key)
+        // Perform Remove operation.
+        public override object Remove(DataManager DataManagerRequest, object value, string keyField, string key)
         {
             DataRow? rowToRemove = null;
 
+            // Find the row to remove based on the key field value.
             foreach (DataRow row in dataTable.Rows)
             {
                 if (row[keyField].Equals(value))
@@ -569,6 +896,7 @@ While using batch editing in DataGrid, use the BatchUpdate/BatchUpdateAsync meth
                 }
             }
 
+            // Remove the row from the DataTable if it exists.
             if (rowToRemove != null)
             {
                 dataTable.Rows.Remove(rowToRemove);
@@ -576,14 +904,17 @@ While using batch editing in DataGrid, use the BatchUpdate/BatchUpdateAsync meth
             return value;
         }
 
-        // Performs Update operation
-        public override object Update(DataManager dm, object value, string keyField, string key)
+        // Perform Update operation.
+        public override object Update(DataManager DataManagerRequest, object value, string keyField, string key)
         {
             var data = (IDictionary<string, object>)value;
-            var rowToUpdate = dataTable.Rows
-                .Cast<DataRow>()
-                .FirstOrDefault(row => row[keyField].Equals(data[keyField]));
 
+            // Find the row to update based on the key field value.
+            var rowToUpdate = dataTable.Rows
+            .Cast<DataRow>()
+            .FirstOrDefault(row => row[keyField].Equals(data[keyField]));
+
+            // Update the row with new values if found.
             if (rowToUpdate != null)
             {
                 foreach (DataColumn column in dataTable.Columns)
@@ -596,9 +927,10 @@ While using batch editing in DataGrid, use the BatchUpdate/BatchUpdateAsync meth
             return value;
         }
 
-        // Performs BatchUpdate operation
-        public override object BatchUpdate(DataManager dm, object Changed, object Added, object Deleted, string KeyField, string Key, int? dropIndex)
+        // Perform BatchUpdate operation for changed, added, and deleted records.
+        public override object BatchUpdate(DataManager DataManagerRequest, object Changed, object Added, object Deleted, string KeyField, string Key, int? dropIndex)
         {
+            // Handle changed records.
             if (Changed != null)
             {
                 var changedRecords = (IEnumerable<IDictionary<string, object>>)Changed;
@@ -617,6 +949,7 @@ While using batch editing in DataGrid, use the BatchUpdate/BatchUpdateAsync meth
                 }
             }
 
+            // Handle added records.
             if (Added != null)
             {
                 var addedRecords = (IEnumerable<IDictionary<string, object>>)Added;
@@ -628,10 +961,13 @@ While using batch editing in DataGrid, use the BatchUpdate/BatchUpdateAsync meth
                     {
                         newRow[item.Key] = item.Value ?? DBNull.Value;
                     }
+
+                    // Add the new row to the DataTable.
                     dataTable.Rows.Add(newRow);
                 }
             }
 
+            // Handle deleted records.
             if (Deleted != null)
             {
                 var deletedRecords = (IEnumerable<IDictionary<string, object>>)Deleted;
@@ -646,6 +982,8 @@ While using batch editing in DataGrid, use the BatchUpdate/BatchUpdateAsync meth
                         }
                     }
                 }
+
+                // Remove the rows from the DataTable.
                 foreach (DataRow rowToRemove in rowsToRemove)
                 {
                     dataTable.Rows.Remove(rowToRemove);
@@ -655,37 +993,14 @@ While using batch editing in DataGrid, use the BatchUpdate/BatchUpdateAsync meth
         }
     }
 
-    // Performs data operations like Searching, Sorting, and Filtering
-    public static IQueryable PerformDataOperation(DataTable dt, DataManagerRequest dm)
-    {
-        // Convert DataTable to IQueryable collection of datasource
-        DataSource = ToQueryableCollection(dt);
-        if (dm.Search != null && dm.Search.Count > 0)
-        {
-            // Searching
-            DataSource = DynamicObjectOperation.PerformSearching(DataSource, dm.Search);
-        }
-        if (dm.Where != null && dm.Where.Count > 0)
-        {
-            // Filtering
-            DataSource = DynamicObjectOperation.PerformFiltering(DataSource, dm.Where, dm.Where[0].Operator);
-        }
-        if (dm.Sorted != null && dm.Sorted.Count > 0)
-        {
-            // Sorting
-            DataSource = DynamicObjectOperation.PerformSorting(DataSource, dm.Sorted);
-        }
-        return DataSource;
-    }
-
-    // This method converts the DataTable data source into an IQueryable collection data source.
-    public static IQueryable ToQueryableCollection(DataTable dt)
+    // Converts a DataTable to an IQueryable collection of ExpandoObjects.
+    public static IQueryable ToQueryableCollection(DataTable DataTable)
     {
         List<ExpandoObject> expandoList = new List<ExpandoObject>();
-        foreach (DataRow row in dt.Rows)
+        foreach (DataRow row in DataTable.Rows)
         {
             var expandoDict = new ExpandoObject() as IDictionary<String, Object>;
-            foreach (DataColumn col in dt.Columns)
+            foreach (DataColumn col in DataTable.Columns)
             {
                 var colValue = row[col.ColumnName];
                 colValue = (colValue == DBNull.Value) ? null : colValue;
@@ -698,29 +1013,32 @@ While using batch editing in DataGrid, use the BatchUpdate/BatchUpdateAsync meth
 
     public DataTable GetData()
     {
-        DataTable dt = new DataTable();
-        dt.Columns.AddRange(new DataColumn[4] { new DataColumn("OrderID", typeof(long)),
-                                                new DataColumn("CustomerID", typeof(string)),
-                                                new DataColumn("EmployeeID",typeof(int)),
-                                                new DataColumn("OrderDate",typeof(DateTime))
-    });
+        DataTable DataTable = new DataTable();
+        DataTable.Columns.AddRange(new DataColumn[4] { 
+            new DataColumn("OrderID", typeof(long)),
+            new DataColumn("CustomerID", typeof(string)),
+            new DataColumn("EmployeeID",typeof(int)),
+            new DataColumn("OrderDate",typeof(DateTime))
+        });
 
         int code = 1000;
         int id = 0;
         for (int i = 1; i <= 15; i++)
         {
-            dt.Rows.Add(code + 1, "ALFKI", id + 1, new DateTime(1991, 05, 15));
-            dt.Rows.Add(code + 2, "ANATR", id + 2, new DateTime(1990, 04, 04));
-            dt.Rows.Add(code + 3, "ANTON", id + 3, new DateTime(1957, 11, 30));
-            dt.Rows.Add(code + 4, "BLONP", id + 4, new DateTime(1930, 10, 22));
-            dt.Rows.Add(code + 5, "BOLID", id + 5, new DateTime(1953, 02, 18));
+            DataTable.Rows.Add(code + 1, "ALFKI", id + 1, new DateTime(1991, 05, 15));
+            DataTable.Rows.Add(code + 2, "ANATR", id + 2, new DateTime(1990, 04, 04));
+            DataTable.Rows.Add(code + 3, "ANTON", id + 3, new DateTime(1957, 11, 30));
+            DataTable.Rows.Add(code + 4, "BLONP", id + 4, new DateTime(1930, 10, 22));
+            DataTable.Rows.Add(code + 5, "BOLID", id + 5, new DateTime(1953, 02, 18));
             code += 5;
             id += 5;
         }
-        return dt;
+        return DataTable;
     }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Remote data
 
