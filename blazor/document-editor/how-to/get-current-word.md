@@ -13,7 +13,9 @@ You can get the current word or paragraph content from the Blazor Document Edito
 
 ## Select and get the word in current cursor position
 
-You can use [`SelectCurrentWordAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_SelectCurrentWordAsync_System_Boolean_) API in selection module to select the current word at cursor position and use [`GetTextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_GetTextAsync) API to get the selected content as plain text from Blazor Document Editor component.
+You can use [`SelectCurrentWordAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_SelectCurrentWordAsync_System_Boolean_) API in selection module to select the current word at cursor position.
+* use [`GetTextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_GetTextAsync) API to get the selected content as **plain text** from Blazor Document Editor component.
+* use [`GetSfdtAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_GetSfdtAsync) API to get the selected content as **SFDT text** from Blazor Document Editor component.
 
 The following example code illustrates how to select and get the current word as plain text.
 
@@ -34,7 +36,9 @@ The following example code illustrates how to select and get the current word as
         // To select the current word in document
         await container.DocumentEditor.Selection.SelectCurrentWordAsync();
         // To get the selected content as text
-        string selectedContent = await container.DocumentEditor.Selection.GetTextAsync();
+        string selectedContentText = await container.DocumentEditor.Selection.GetTextAsync();
+        // To get the selected content as SFDT (rich text)
+        string selectedContentSFDT = await container.DocumentEditor.Selection.GetSfdtAsync();
     }
 }
 ```
@@ -43,7 +47,10 @@ To get the bookmark content as SFDT (rich text), check this [`link`](../../docum
 
 ## Select and get the paragraph in current cursor position
 
-You can use [`SelectParagraphAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_SelectParagraphAsync) API in selection module to select the current paragraph at cursor position and use [`GetTextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_GetTextAsync) API or [`GetSfdtAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_GetSfdtAsync) API to get the selected content as plain text or SFDT from Blazor Document Editor component.
+You can use [`SelectParagraphAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_SelectParagraphAsync) API in selection module to select the current paragraph at cursor position.
+
+* use [`GetTextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_GetTextAsync) API to get the selected content as **plain text** from Blazor Document Editor component.
+* use [`GetSfdtAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_GetSfdtAsync) API to get the selected content as **SFDT text** from Blazor Document Editor component.
 
 The following example code illustrates how to select and get the current paragraph as SFDT.
 
@@ -63,8 +70,10 @@ The following example code illustrates how to select and get the current paragra
         await container.DocumentEditor.Editor.InsertTextAsync("Document editor");
         // To select the current paragraph in document
         await container.DocumentEditor.Selection.SelectParagraphAsync();
-        // To get the selected content as SFDT
-        string selectedContent = await container.DocumentEditor.Selection.GetSfdtAsync();
+        // To get the selected content as text
+        string selectedContentText = await container.DocumentEditor.Selection.GetTextAsync();
+        // To get the selected content as SFDT (rich text)
+        string selectedContentSFDT = await container.DocumentEditor.Selection.GetSfdtAsync();
     }
 }
 ```
