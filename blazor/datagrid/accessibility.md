@@ -98,108 +98,108 @@ The Grid component followed the [keyboard interaction](https://www.w3.org/WAI/AR
 
 <b>Pager</b>
 
-**Windows**  | **MAC** | **To do this**
------|----- | -----
-<kbd>Tab</kbd> | <kbd>Tab</kbd> | Focus on the next pager item.
-<kbd>Shift + Tab</kbd> | <kbd>Shift + Tab</kbd> | Focus on the previous pager item.
-<kbd>Enter / Space</kbd> | <kbd>Enter / Space</kbd> | Select the currently focused page.
-<kbd>PageUp / Left Arrow</kbd> | <kbd>Left Arrow</kbd> | Navigate to previous page.
-<kbd>PageDown / Right Arrow</kbd> | <kbd>Right Arrow</kbd> | Navigate to next page.
-<kbd>Home / Ctrl + Alt + PageUp</kbd> | <kbd>Fn + Left Arrow</kbd> | Navigate to first page.
-<kbd>End / Ctrl + Alt + PageDown</kbd> | <kbd>Fn + Right Arrow</kbd> | Navigate to last page.
+| Windows | MAC | Actions |
+|-----|----- | -----|
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Focus on the next pager item.|
+| <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Focus on the previous pager item.|
+| <kbd>Enter</kbd> / <kbd>Space</kbd> | <kbd>Enter</kbd> / <kbd>Space</kbd> | Select the currently focused page.|
+|<kbd>PageUp</kbd> / <kbd>←</kbd> | <kbd>←</kbd> | Navigate to previous page.|
+|<kbd>PageDown</kbd> / <kbd>→</kbd> | <kbd>→</kbd> | Navigate to next page.|
+| <kbd>Home</kbd> / <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>PageUp</kbd> | <kbd>Fn</kbd> + <kbd>←</kbd> | Navigate to first page.|
+| <kbd>End</kbd> / <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>PageDown</kbd> | <kbd>Fn</kbd> + <kbd>→</kbd> | Navigate to last page.|
 
 <b>Focus Elements</b>
 
-**Windows**  | **MAC** | **To do this**
------|----- | -----
-<kbd>Home</kbd> | <kbd>Fn + Left Arrow</kbd> | Moves the focus to the first cell of the focused row.
-<kbd>End</kbd> | <kbd>Fn + Right Arrow</kbd> | Moves the focus to the last cell of the focused row.
-<kbd>Ctrl + Home</kbd> | <kbd>Command + Fn + Left Arrow</kbd> | Moves the focus to the first Cell of the first row in the grid.
-<kbd>Ctrl + End</kbd> | <kbd>Command +  Fn + Right Arrow</kbd> | Moves the focus to the last Cell of the last row in the grid.
-<kbd>Up Arrow</kbd> | <kbd>Up Arrow</kbd> | Moves the cell focus upward from the focused cell.
-<kbd>Down Arrow</kbd> | <kbd>Down Arrow</kbd> |  Moves the cell focus downward from the focused cell.
-<kbd>Right Arrow</kbd> | <kbd>Right Arrow</kbd> | Moves the cell focus right side from the focused cell.
-<kbd>Left Arrow</kbd> | <kbd>Left Arrow</kbd> |  Moves the cell focus left side from the focused cell.
-<kbd>Alt + J</kbd> | <kbd>Alt + J</kbd> | Moves the focus to the entire grid.
-<kbd>Alt + W</kbd> | <kbd>Alt + W</kbd> | Move the focus to the grid content element.
+| Windows  | MAC | Actions |
+|-----|----- | -----|
+| <kbd>Home</kbd> | <kbd>Fn</kbd> + <kbd>←</kbd> | Moves the focus to the first cell of the focused row.|
+| <kbd>End</kbd> | <kbd>Fn</kbd> + <kbd>→</kbd> | Moves the focus to the last cell of the focused row.|
+| <kbd>Ctrl</kbd> + <kbd>Home</kbd> | <kbd>⌘</kbd> + <kbd>Fn</kbd> + <kbd>←</kbd> | Moves the focus to the first Cell of the first row in the grid.|
+| <kbd>Ctrl</kbd> + <kbd>End</kbd> | <kbd>⌘</kbd> + <kbd>Fn</kbd> + <kbd>→</kbd> | Moves the focus to the last Cell of the last row in the grid.|
+| <kbd>↑</kbd> | <kbd>↑</kbd> | Moves the cell focus upward from the focused cell.|
+| <kbd>↓</kbd> | <kbd>↓</kbd> |  Moves the cell focus downward from the focused cell.|
+| <kbd>→</kbd> | <kbd>→</kbd> | Moves the cell focus right side from the focused cell.|
+| <kbd>←</kbd> | <kbd>←</kbd> |  Moves the cell focus left side from the focused cell.|
+| <kbd>Alt</kbd> + <kbd>J</kbd> | <kbd>⌥</kbd> + <kbd>J</kbd> | Moves the focus to the entire grid.|
+| <kbd>Alt</kbd> + <kbd>W</kbd> | <kbd>⌥</kbd> + <kbd>W</kbd> | Move the focus to the grid content element.|
 
 <b>Selection</b>
 
-**Windows**  | **MAC** | **To do this**
------|----- | -----
-<kbd>Up Arrow</kbd> | <kbd>Up Arrow</kbd> | Moves up a row/cell selection from the selected row/cell.
-<kbd>Down Arrow</kbd> | <kbd>Down Arrow</kbd> | Moves down a row/cell selection from the selected row/cell.
-<kbd>Right Arrow</kbd> | <kbd>Right Arrow</kbd> | Moves to the right cell selection from the selected cell.
-<kbd>Left Arrow</kbd> | <kbd>Left Arrow</kbd> | Moves to the left cell selection from the selected cell.
-<kbd>Shift + Up Arrow</kbd> | <kbd>Shift + Up Arrow</kbd> | Extends the row/cell selection upwards from the selected row/cell.
-<kbd>Shift + Down Arrow</kbd> | <kbd>Shift + Down Arrow</kbd> | Extends the row/cell selection downwards from the selected row/cell.
-<kbd>Shift + Right Arrow</kbd> | <kbd>Shift + Right Arrow</kbd> | Extends the cell selection to the right side from the selected cell.
-<kbd>Shift + Left Arrow</kbd> | <kbd>Shift + Left Arrow</kbd> | Extends the cell selection to the left side from the selected cell.
-<kbd>Enter</kbd> | <kbd>Enter</kbd> | Moves the row/cell selection downward from the selected cell/row.
-<kbd>Shift + Enter</kbd> | <kbd>Shift + Enter</kbd> | Moves the row/cell selection upward.
-<kbd>Esc</kbd> | <kbd>Esc</kbd> | Deselects all the selected row/cells.
-<kbd>Ctrl + A</kbd> | <kbd>Ctrl + A</kbd> | Select all the row/cells in the current page.
+| Windows  | MAC | Actions |
+| -----|----- | ----- |
+| <kbd>↑</kbd> | <kbd>↑</kbd> | Moves up a row/cell selection from the selected row/cell. |
+| <kbd>↓</kbd> | <kbd>↓</kbd> | Moves down a row/cell selection from the selected row/cell. |
+| <kbd>→</kbd> | <kbd>→</kbd> | Moves to the right cell selection from the selected cell. |
+| <kbd>←</kbd> | <kbd>←</kbd> | Moves to the left cell selection from the selected cell. |
+| <kbd>Shift</kbd> + <kbd>↑</kbd> | <kbd>⇧</kbd> + <kbd>↑</kbd> | Extends the row/cell selection upwards from the selected row/cell. |
+| <kbd>Shift</kbd> + <kbd>↓</kbd> | <kbd>⇧</kbd> + <kbd>↓</kbd> | Extends the row/cell selection downwards from the selected row/cell. |
+| <kbd>Shift</kbd> + <kbd>→</kbd> | <kbd>⇧</kbd> + <kbd>→</kbd> | Extends the cell selection to the right side from the selected cell. |
+| <kbd>Shift</kbd> + <kbd>←</kbd> | <kbd>⇧</kbd> + <kbd>←</kbd> | Extends the cell selection to the left side from the selected cell. |
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Moves the row/cell selection downward from the selected cell/row. |
+| <kbd>Shift</kbd> + <kbd>Enter</kbd> | <kbd>⇧</kbd> + <kbd>Enter</kbd> | Moves the row/cell selection upward. |
+| <kbd>Esc</kbd> | <kbd>Esc</kbd> | Deselects all the selected row/cells. |
+| <kbd>Ctrl</kbd> + <kbd>A</kbd> | <kbd>⌘</kbd> + <kbd>A</kbd> | Select all the row/cells in the current page. |
 
 <b>Grouping</b>
 
-**Windows**  | **MAC** | **To do this**
------|----- | -----
-<kbd>Ctrl + Up Arrow</kbd> | <kbd>Command + Up Arrow</kbd> | Collapses all the visible groups.
-<kbd>Ctrl + Down Arrow</kbd> | <kbd>Command + Down Arrow</kbd> | Expands all the visible groups.
-<kbd>Ctrl + Space</kbd> | <kbd>Ctrl + Space</kbd> | Performs grouping when focused on a header element.
-<kbd>Alt + Up Arrow</kbd> | <kbd>Alt + Up Arrow</kbd> | Collapses the selected group.
-<kbd>Alt + Down Arrow</kbd> | <kbd>Alt + Down Arrow</kbd> | Expands the selected group.
+| Windows | MAC | Actions |
+|-----|----- | -----|
+| <kbd>Ctrl</kbd> + <kbd>↑</kbd> | <kbd>⌘</kbd> + <kbd>↑</kbd> | Collapses all the visible groups. |
+| <kbd>Ctrl</kbd> + <kbd>↓</kbd> | <kbd>⌘</kbd> + <kbd>↓</kbd> | Expands all the visible groups. |
+| <kbd>Ctrl</kbd> + <kbd>Space</kbd> | <kbd>⌘</kbd> + <kbd>Space</kbd> | Performs grouping when focused on a header element. |
+| <kbd>Alt</kbd> + <kbd>↑</kbd> | <kbd>⌥</kbd> + <kbd>↑</kbd> | Collapses the selected group. |
+| <kbd>Alt</kbd> + <kbd>↓</kbd> | <kbd>⌥</kbd> + <kbd>↓</kbd> | Expands the selected group. |
 
 <b>Print</b>
 
-**Windows**  | **MAC** | **To do this**
------|----- | -----
-<kbd>Ctrl + P</kbd> | <kbd>Command + P</kbd>| Prints the Grid.
+| Windows | MAC | Actions |
+|-----|----- | -----|
+| <kbd>Ctrl</kbd> + <kbd>P</kbd> | <kbd>⌘</kbd> + <kbd>P</kbd> | Prints the Grid. |
 
 <b>Clipboard</b>
 
-**Windows**  | **MAC** | **To do this**
------|----- | -----
-<kbd>Ctrl + C</kbd> | <kbd>Command + C</kbd> | Copies selected rows or cells data into the clipboard.
-<kbd>Ctrl + Shift + H</kbd> | <kbd>Ctrl + Shift + H</kbd> | Copies selected rows or cells data with header into clipboard
+| Windows | MAC | Actions |
+|-----|----- | -----|
+| <kbd>Ctrl</kbd> + <kbd>C</kbd> | <kbd>⌘</kbd> + <kbd>C</kbd> | Copies selected rows or cells data into the clipboard. |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>H</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> | Copies selected rows or cells data with header into clipboard |
 
 <b>Editing</b>
 
-**Windows**  | **MAC** | **To do this**
------|----- | -----
-<kbd>F2</kbd> | <kbd>F2</kbd> | Starts editing of selected row if Mode is Normal/Dialog or Starts editing of selected cell if Mode is Batch.
-<kbd>Enter</kbd> | <kbd>Enter</kbd> | Saves the current form it the Mode is Normal or Dialog / Saves the current cell and starts editing the next row cell if Mode is Batch.
-<kbd>Insert</kbd> | <kbd>Ctrl + Command + Enter<kbd> | Creates a new add form depending on the NewRowPosition.
-<kbd>Delete</kbd> | <kbd>Delete</kbd> | Deletes the current selected record.
-<kbd>Tab</kbd> | <kbd>Tab</kbd> | Navigates to the next editable cell if the Mode is Normal or Dialog / Saves the current cell and starts editing the next cell is Mode is Batch.
-<kbd>Shift + Tab</kbd> | <kbd>Shift + Tab</kbd> | Navigates to the previous editable cell if the Mode is Normal or Dialog / Saves the current cell and starts editing the previous cell is Mode is Batch.
-<kbd>Shift + Enter</kbd> | <kbd>Shift + Enter</kbd> | Saves the current cell and starts editing the previous row cell if Mode is Batch.
+| Windows | MAC | Actions |
+|-----|----- | -----|
+| <kbd>F2</kbd> | <kbd>F2</kbd> | Starts editing of selected row if Mode is Normal/Dialog or Starts editing of selected cell if Mode is Batch. |
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Saves the current form it the Mode is Normal or Dialog / Saves the current cell and starts editing the next row cell if Mode is Batch. |
+| <kbd>Insert</kbd> | <kbd>⌘</kbd> + <kbd>Enter</kbd> | Creates a new add form depending on the NewRowPosition. |
+| <kbd>Delete</kbd> | <kbd>Delete</kbd> | Deletes the current selected record. |
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Navigates to the next editable cell if the Mode is Normal or Dialog / Saves the current cell and starts editing the next cell is Mode is Batch. |
+| <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Navigates to the previous editable cell if the Mode is Normal or Dialog / Saves the current cell and starts editing the previous cell is Mode is Batch. |
+| <kbd>Shift</kbd> + <kbd>Enter</kbd> | <kbd>⇧</kbd> + <kbd>Enter</kbd> | Saves the current cell and starts editing the previous row cell if Mode is Batch. |
 
 <b>Filtering</b>
 
-**Windows**  | **MAC** | **To do this**
------|----- | -----
-<kbd>Alt + Down arrow</kbd> | <kbd>Alt + Down arrow</kbd> | Opens the filter menu(excel, menu and checkbox filter) when its header element is in focused state.
+| Windows | MAC | Actions |
+| ----- | ----- | ----- |
+| <kbd>Alt</kbd> + <kbd>↓</kbd> | <kbd>⌥</kbd> + <kbd>↓</kbd> | Opens the filter menu(excel, menu and checkbox filter) when its header element is in focused state. |
 
 <b>Column Menu</b>
 
-**Windows**  | **MAC** | **To do this**
------|----- | -----
-<kbd>Alt + Down arrow</kbd> | <kbd>Alt + Down arrow</kbd> | Opens column menu when its header element is in focused state.
+| Windows | MAC | Actions |
+| ----- | ----- | ----- |
+| <kbd>Alt</kbd> + <kbd>↓</kbd> | <kbd>Alt</kbd> + <kbd>↓</kbd> | Opens column menu when its header element is in focused state. |
 
 <b>Reordering</b>
 
-**Windows**  | **MAC** | **To do this**
------|----- | -----
-<kbd>Ctrl + left arrow or right arrow</kbd> | <kbd>Command  + left arrow or right arrow</kbd> | Reorders the focused header column to the left or right side.
+| Windows | MAC | Actions |
+| ----- | ----- | ----- |
+| <kbd>Ctrl</kbd> + <kbd>←</kbd> / <kbd>→</kbd> | <kbd>⌘</kbd> + <kbd>←</kbd> / <kbd>→</kbd> | Reorders the focused header column to the left or right side. |
 
 <b>Sorting</b>
 
-**Windows**  | **MAC** | **To do this**
------|----- | -----
-<kbd>Enter</kbd> | <kbd>Enter</kbd> | Performs sorting(ascending/descending) on a column when its header element is in focused state.
-<kbd>Ctrl + Enter</kbd> | <kbd>Command + Enter</kbd> | Performs multi-sorting on a column when its header element is in focused state.
-<kbd>Shift + Enter</kbd> | <kbd>Shift + Enter</kbd> | Clears sorting for the focused header column.
+| Windows | MAC | Actions |
+| ----- | ----- | ----- |
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Performs sorting(ascending/descending) on a column when its header element is in focused state. |
+| <kbd>Ctrl</kbd> + <kbd>Enter</kbd> | <kbd>⌘</kbd> + <kbd>Enter</kbd> | Performs multi-sorting on a column when its header element is in focused state. |
+| <kbd>Shift</kbd> + <kbd>Enter</kbd> | <kbd>⇧</kbd> + <kbd>Enter</kbd> | Clears sorting for the focused header column. |
 
 <br>
 
