@@ -847,7 +847,7 @@ You can prevent autofill feature by setting the [Autofill](https://help.syncfusi
 
 When performing filtering programmatically using methods in the Syncfusion Blazor DataGrid, the default filter icons in the column headers can be hidden to simplify the user interface.
 
-To hide the filter icon, use the following CSS targeting the filter icon element:
+To customize the filter icon in the Grid, use the display property of the filtermenu as mentioned below:
 
 ```cshtml
 <style>
@@ -857,7 +857,7 @@ To hide the filter icon, use the following CSS targeting the filter icon element
 </style>
 ```
 
-The following example demonstrates how to filter the CustomerID column programmatically and hide the default filter icons:
+The following example demonstrates how to filter the **CustomerID** column programmatically and hide the default filter icons:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
