@@ -13,7 +13,7 @@ State management in the Syncfusion Blazor DataGrid allows you to maintain the Gr
 
 To enable state persistence in the Grid, you can utilize the [EnablePersistence](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnablePersistence) property. When this property is set to **true**, the Grid will automatically save its state in the browser's [LocalStorage](https://www.w3schools.com/html/html5_webstorage.asp#), ensuring that the state is preserved across page reloads.
 
-```cshtml
+```razor
 <SfGrid DataSource="@Orders" EnablePersistence="true">
 ```
 
@@ -40,6 +40,8 @@ The Grid will persist only the last selected row index.
 State persistence allows the Syncfusion Blazor DataGrid to retain the current Grid state in the browser local storage for state maintenance. This action is handled through the [EnablePersistence](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnablePersistence) property which is set to false by default. When it is set to true, some properties of the Grid will be retained even after refreshing the page.
 
 N> The state will be persisted based on **ID** property. So, it is recommended to explicitly set the **ID** property for Grid.
+
+The following example demonstrates how to enabling persistence in Grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -625,18 +627,18 @@ If the [EnablePersistence](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 To retrieve the Grid model from Local Storage, follow these steps:
 
-```cshtml
+```razor
 string localStorageKey = "gridOrders"; //"gridOrders" is component name + component id.
 string modelJson = await JS.InvokeAsync<string>("localStorage.getItem", localStorageKey);
 var modelObject = JsonSerializer.Deserialize<object>(modelJson);
 ```
 
-```cshtml
+```razor
 await JS.InvokeVoidAsync("localStorage.setItem", localStorageKey, modelJson);
 ```
 ## Prevent columns from persisting
 
-In the Syncfusion Blazor Grid, you may sometimes want to prevent certain settings from being persisted when using the [EnablePersistence](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnablePersistence) feature. When the `EnablePersistence` property is set to **true**, the Grid properties such as [Grouping](https://ej2.syncfusion.com/angular/documentation/api/grid/groupSettings/), [Paging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings), [Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings), [Sorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SortSettings), and [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Columns) will persist. 
+In the Syncfusion Blazor DataGrid, you may sometimes want to prevent certain settings from being persisted when using the [EnablePersistence](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnablePersistence) feature. When the `EnablePersistence` property is set to **true**, the Grid properties such as [Grouping](https://ej2.syncfusion.com/angular/documentation/api/grid/groupSettings/), [Paging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings), [Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings), [Sorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SortSettings), and [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Columns) will persist. 
 
 The following example demonstrates how to prevent Grid columns from persisting.
 
@@ -748,7 +750,9 @@ public class OrderDetails
 
 ## Handling Grid state manually
 
-You can handle the Syncfusion Blazor Grid's state manually by using in-built state persistence methods. You can use [GetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetPersistDataAsync), [SetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SetPersistDataAsync_System_String_), [ResetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ResetPersistDataAsync) methods of Grid to save, load and reset the Grid's persisted state manually. [GetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetPersistDataAsync) method will return Grid current state as a string value, which is suitable for sending them over network and storing in data bases.
+You can handle the Syncfusion Blazor DataGrid state manually by using in-built state persistence methods. You can use [GetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetPersistDataAsync), [SetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SetPersistDataAsync_System_String_), [ResetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ResetPersistDataAsync) methods of Grid to save, load and reset the Grid's persisted state manually. [GetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetPersistDataAsync) method will return Grid current state as a string value, which is suitable for sending them over network and storing in data bases.
+
+The following example demonstrates how to handling Grid state manually.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
