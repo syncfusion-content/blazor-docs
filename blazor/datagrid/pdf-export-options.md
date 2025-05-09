@@ -1055,6 +1055,8 @@ In the following example, the [Blazor Toggle Switch Button](https://blazor.syncf
 
 ![Enabling horizontal overflow](./images/Enabling-horizontal-overflow.gif)
 
+> You can find a complete sample on [GitHub](https://github.com/SyncfusionExamples/exporting-blazor-datagrid/tree/master/Exporting-PDF-Datagrid/Horizontal_overflow).
+
 ## Customizing columns on export
 
 The Syncfusion Blazor DataGrid allows you to customize the appearance of Grid columns in your exported PDF documents. This feature empowers you to tailor specific column attributes such as field, header text, and text alignment, ensuring that your exported PDFs align perfectly with your design and reporting requirements.
@@ -1170,7 +1172,7 @@ public class OrderData
 
 The PDF export feature allows customization of the columns being exported by using the [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_Columns) property of the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html). While defining the columns, you can adjust their widths as needed.
 
-In the following code sample, we have customized the column widths for the exported PDF document by enabling the[DisableAutoFitWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_DisableAutoFitWidth) property of the `PdfExportProperties`.
+The following example demonstrates how to customize the column widths of the exported PDF document by enabling the[DisableAutoFitWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_DisableAutoFitWidth) property of the `PdfExportProperties`.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1686,6 +1688,8 @@ public class OrderData
 
 ![PDF Exported Grid Cell Customization in Blazor DataGrid](./images/blazor-datagrid-pdf-exported-grid-cell-customization.png)
 
+> You can find a complete sample on [GitHub](https://github.com/SyncfusionExamples/exporting-blazor-datagrid/tree/master/Exporting-PDF-Datagrid/Rotate_header).
+
 ## Exporting Grid data as stream
 
 The Syncfusion Blazor DataGrid allows exporting Grid data as a memory stream, enabling programmatic handling before saving or processing. The following sections cover how to export Grid data as a memory stream, merge multiple memory streams into one, and convert the memory stream to a file stream for saving the exported file.
@@ -1700,7 +1704,7 @@ The provided example showcases the process of exporting the file as a memory str
 
 **Step 1**: **Add JavaScript for file download**
 
-Create a JavaScript file named **saveAsFile.js** under the **wwwroot/scripts** directory and include the following function to trigger browser download:
+Create a JavaScript file named **saveAsFile.js** under the **wwwroot** directory and include the following function to trigger browser download:
 
 {% tabs %}
 {% highlight razor tabtitle="saveAsFile.js" %}
@@ -1755,15 +1759,15 @@ In the **Index.razor** file, the Grid is set up, the export operation is trigger
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
-@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Grids;
+@using Syncfusion.Blazor.Navigations;
 @using System.IO;
 @using Syncfusion.Pdf
-@using Syncfusion.XlsIO
 @using Syncfusion.PdfExport;
 @inject IJSRuntime JSRuntime
 
-<SfGrid ID="Grid" @ref="DefaultGrid" Toolbar="@(new List<string>() { "PdfExport" })" AllowPdfExport="true" AllowPaging="true">
-    <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="Order"></GridEvents>
+<SfGrid ID="Grid" @ref="Grid" DataSource="@Orders" Toolbar="@(new List<string>() { "PdfExport" })" AllowPdfExport="true" AllowPaging="true">
+    <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="OrderData"></GridEvents>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150" />
@@ -1786,7 +1790,7 @@ In the **Index.razor** file, the Grid is set up, the export operation is trigger
     {       
         if (args.Item.Id == "Grid_pdfexport") //Id is combination of Grid's ID and itemname.
         {
-            MemoryStream streamDoc = await DefaultGrid.ExportToPdfAsync(asMemoryStream: true);
+            MemoryStream streamDoc = await Grid.ExportToPdfAsync(asMemoryStream: true);
             await JSRuntime.InvokeVoidAsync("saveAsFile", new object[] {"PdfMemoryStream.pdf", Convert.ToBase64String(streamDoc.ToArray()), true });
         }
     }
@@ -1841,6 +1845,8 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
+> You can find a complete sample on [GitHub](https://github.com/SyncfusionExamples/exporting-blazor-datagrid/tree/master/Exporting-PDF-Datagrid/Blazor_Memory_Stream).
+
 ### Converting memory stream to file stream for PDF export
 
 The PDF Export feature in Syncfusion Blazor DataGrid allows you to converting a memory stream obtained from the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method into a file stream to export PDF document.
@@ -1858,23 +1864,22 @@ The example below demonstrates how to achieve this by converting the memory stre
 
 @using Syncfusion.Blazor.Grids
 @using System.IO;
-@using Syncfusion.XlsIO
+@using Syncfusion.Pdf
 @using Syncfusion.PdfExport;
 @inject IJSRuntime JSRuntime
 
-<SfGrid ID="Grid" @ref="Grid" DataSource="@Orders" Toolbar="@(new List<string>() { "PdfExport" })" AllowPdfExport="true" AllowPaging="true">
+<SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" Toolbar="@(new List<string>() { "PdfExport" })" AllowPdfExport="true" AllowPaging="true">
     <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="OrderData"></GridEvents>
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
-        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150" />
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120" />
-        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="150" />
-        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="150" />
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 @code {
-    private SfGrid<OrderData> Grid;
+    private SfGrid<OrderData> DefaultGrid;
     public List<OrderData> Orders { get; set; }
 
     protected override void OnInitialized()
@@ -1909,51 +1914,45 @@ The example below demonstrates how to achieve this by converting the memory stre
 
 {% highlight c# tabtitle="OrderData.cs" %}
 
-public class OrderData
-{
-    public static List<OrderData> Orders = new List<OrderData>();
+ public class OrderData
+ {
+     public static List<OrderData> Orders = new List<OrderData>();
+     public OrderData() { }
+     public OrderData(int OrderID, string CustomerID, double Freight, DateTime? OrderDate)
+     {
+         this.OrderID = OrderID;
+         this.CustomerID = CustomerID;
+         this.Freight = Freight;
+         this.OrderDate = OrderDate;
+     }
 
-    public OrderData(int orderID, string customerID, double freight, string shipCity, string shipName)
-    {
-        this.OrderID = orderID;
-        this.CustomerID = customerID;
-        this.Freight = freight;
-        this.ShipCity = shipCity;
-        this.ShipName = shipName;
-    }
+     public static List<OrderData> GetAllRecords()
+     {
+         if (Orders.Count == 0)
+         {
+             Orders.Add(new OrderData { OrderID = 10248, CustomerID = "VINET", Freight = 32.38, OrderDate = new DateTime(1996, 7, 4) });
+             Orders.Add(new OrderData { OrderID = 10249, CustomerID = "TOMSP", Freight = 11.61, OrderDate = new DateTime(1996, 7, 5) });
+             Orders.Add(new OrderData { OrderID = 10250, CustomerID = "HANAR", Freight = 65.83, OrderDate = new DateTime(1996, 7, 6) });
+             Orders.Add(new OrderData { OrderID = 10251, CustomerID = "VINET", Freight = 41.34, OrderDate = new DateTime(1996, 7, 7) });
+             Orders.Add(new OrderData { OrderID = 10252, CustomerID = "SUPRD", Freight = 151.30, OrderDate = new DateTime(1996, 7, 8) });
+             Orders.Add(new OrderData { OrderID = 10253, CustomerID = "HANAR", Freight = 58.17, OrderDate = new DateTime(1996, 7, 9) });
+             Orders.Add(new OrderData { OrderID = 10254, CustomerID = "CHOPS", Freight = 22.98, OrderDate = new DateTime(1996, 7, 10) });
+             Orders.Add(new OrderData { OrderID = 10255, CustomerID = "VINET", Freight = 148.33, OrderDate = new DateTime(1996, 7, 11) });
+             Orders.Add(new OrderData { OrderID = 10256, CustomerID = "HANAR", Freight = 13.97, OrderDate = new DateTime(1996, 7, 12) });
+         }
+         return Orders;
+     }
 
-    public static List<OrderData> GetAllRecords()
-    {
-        if (Orders.Count == 0)
-        {
-            Orders.Add(new OrderData(10248, "VINET", 32.38, "Reims", "Vins et alcools Chevalier"));
-            Orders.Add(new OrderData(10249, "TOMSP", 11.61, "Münster", "Toms Spezialitäten"));
-            Orders.Add(new OrderData(10250, "HANAR", 65.83, "Rio de Janeiro", "Hanari Carnes"));
-            Orders.Add(new OrderData(10251, "VICTE", 41.34, "Lyon", "Victuailles en stock"));
-            Orders.Add(new OrderData(10252, "SUPRD", 51.3, "Charleroi", "Suprêmes délices"));
-            Orders.Add(new OrderData(10253, "HANAR", 58.17, "Rio de Janeiro", "Hanari Carnes"));
-            Orders.Add(new OrderData(10254, "CHOPS", 22.98, "Bern", "Chop-suey Chinese"));
-            Orders.Add(new OrderData(10255, "RICSU", 148.33, "Genève", "Richter Supermarkt"));
-            Orders.Add(new OrderData(10256, "WELLI", 13.97, "Resende", "Wellington Import Export"));
-            Orders.Add(new OrderData(10257, "HILAA", 81.91, "San Cristóbal", "Hila Alimentos"));
-            Orders.Add(new OrderData(10258, "ERNSH", 140.51, "Graz", "Ernst Handel"));
-            Orders.Add(new OrderData(10259, "CENTC", 3.25, "México D.F.", "Centro comercial"));
-            Orders.Add(new OrderData(10260, "OTTIK", 55.09, "Köln", "Ottilies Käseladen"));
-            Orders.Add(new OrderData(10261, "QUEDE", 3.05, "Rio de Janeiro", "Que delícia"));
-            Orders.Add(new OrderData(10262, "RATTC", 48.29, "Albuquerque", "Rattlesnake Canyon Grocery"));
-        }
-        return Orders;
-    }
-
-    public int OrderID { get; set; }
-    public string CustomerID { get; set; }
-    public double Freight { get; set; }
-    public string ShipCity { get; set; }
-    public string ShipName { get; set; }
-}
+     public int OrderID { get; set; }
+     public string CustomerID { get; set; }
+     public double? Freight { get; set; }
+     public DateTime? OrderDate { get; set; }
+ }
 
 {% endhighlight %}
 {% endtabs %}
+
+> You can find a complete sample on [GitHub](https://github.com/SyncfusionExamples/exporting-blazor-datagrid/tree/master/Exporting-PDF-Datagrid/PDF_Converting_Memory_Stream).
 
 ### Merging two PDF memory streams
 
@@ -1968,23 +1967,22 @@ In this example, there are two memory streams: *streamDoc1* and *streamDoc2*. st
 
 @using Syncfusion.Blazor.Grids
 @using System.IO;
+@using Syncfusion.Pdf;
 @using Syncfusion.PdfExport;
-@using Syncfusion.Pdf
 @inject IJSRuntime JSRuntime
 
-<SfGrid ID="Grid" @ref="Grid" DataSource="@Orders" Toolbar="@(new List<string>() { "PdfExport"})" AllowPdfExport="true" AllowPaging="true">
+<SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" Toolbar="@(new List<string>() { "PdfExport" })" AllowPdfExport="true" AllowPaging="true">
     <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="OrderData"></GridEvents>
     <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
-        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150" />
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120" />
-        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="150" />
-        <GridColumn Field=@nameof(OrderData.ShipName) HeaderText="Ship Name" Width="150" />
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 @code {
-    private SfGrid<OrderData> Grid;
+    private SfGrid<OrderData> DefaultGrid;
     public List<OrderData> Orders { get; set; }
 
     protected override void OnInitialized()
@@ -2032,6 +2030,7 @@ In this example, there are two memory streams: *streamDoc1* and *streamDoc2*. st
 
             ExportProperties.Theme = Theme;
             MemoryStream streamDoc2 = await DefaultGrid.ExportToPdfAsync(asMemoryStream: true, ExportProperties);
+
             // Create a copy of streamDoc2 to access the memory stream.
             MemoryStream copyOfStreamDoc2 = new MemoryStream(streamDoc2.ToArray());
 
@@ -2046,7 +2045,7 @@ In this example, there are two memory streams: *streamDoc1* and *streamDoc2*. st
 
 {% endhighlight %}
 
-{% highlight js tabtitle="wwwroot/scripts/saveAsFile.js" %}
+{% highlight js tabtitle="wwwroot/saveAsFile.js" %}
 
 function saveAsFile(filename, bytesBase64) {
     var link = document.createElement('a');
@@ -2065,44 +2064,40 @@ public class OrderData
 {
     public static List<OrderData> Orders = new List<OrderData>();
 
-    public OrderData(int orderID, string customerID, double freight, string shipCity, string shipName)
+    public OrderData() { }
+
+    public OrderData(int OrderID, string CustomerID,  double Freight, DateTime? OrderDate)
     {
-        this.OrderID = orderID;
-        this.CustomerID = customerID;
-        this.Freight = freight;
-        this.ShipCity = shipCity;
-        this.ShipName = shipName;
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;
+        this.Freight = Freight;
+        this.OrderDate = OrderDate;
     }
 
     public static List<OrderData> GetAllRecords()
     {
         if (Orders.Count == 0)
         {
-            Orders.Add(new OrderData(10248, "VINET", 32.38, "Reims", "Vins et alcools Chevalier"));
-            Orders.Add(new OrderData(10249, "TOMSP", 11.61, "Münster", "Toms Spezialitäten"));
-            Orders.Add(new OrderData(10250, "HANAR", 65.83, "Rio de Janeiro", "Hanari Carnes"));
-            Orders.Add(new OrderData(10251, "VICTE", 41.34, "Lyon", "Victuailles en stock"));
-            Orders.Add(new OrderData(10252, "SUPRD", 51.3, "Charleroi", "Suprêmes délices"));
-            Orders.Add(new OrderData(10253, "HANAR", 58.17, "Rio de Janeiro", "Hanari Carnes"));
-            Orders.Add(new OrderData(10254, "CHOPS", 22.98, "Bern", "Chop-suey Chinese"));
-            Orders.Add(new OrderData(10255, "RICSU", 148.33, "Genève", "Richter Supermarkt"));
-            Orders.Add(new OrderData(10256, "WELLI", 13.97, "Resende", "Wellington Import Export"));
-            Orders.Add(new OrderData(10257, "HILAA", 81.91, "San Cristóbal", "Hila Alimentos"));
-            Orders.Add(new OrderData(10258, "ERNSH", 140.51, "Graz", "Ernst Handel"));
-            Orders.Add(new OrderData(10259, "CENTC", 3.25, "México D.F.", "Centro comercial"));
-            Orders.Add(new OrderData(10260, "OTTIK", 55.09, "Köln", "Ottilies Käseladen"));
-            Orders.Add(new OrderData(10261, "QUEDE", 3.05, "Rio de Janeiro", "Que delícia"));
-            Orders.Add(new OrderData(10262, "RATTC", 48.29, "Albuquerque", "Rattlesnake Canyon Grocery"));
+            Orders.Add(new OrderData { OrderID = 10248, CustomerID = "VINET", Freight = 32.38, OrderDate = new DateTime(1996, 7, 4) });
+            Orders.Add(new OrderData { OrderID = 10249, CustomerID = "TOMSP", Freight = 11.61, OrderDate = new DateTime(1996, 7, 5) });
+            Orders.Add(new OrderData { OrderID = 10250, CustomerID = "HANAR", Freight = 65.83, OrderDate = new DateTime(1996, 7, 6) });
+            Orders.Add(new OrderData { OrderID = 10251, CustomerID = "VINET", Freight = 41.34, OrderDate = new DateTime(1996, 7, 7) });
+            Orders.Add(new OrderData { OrderID = 10252, CustomerID = "SUPRD", Freight = 151.30, OrderDate = new DateTime(1996, 7, 8) });
+            Orders.Add(new OrderData { OrderID = 10253, CustomerID = "HANAR", Freight = 58.17, OrderDate = new DateTime(1996, 7, 9) });
+            Orders.Add(new OrderData { OrderID = 10254, CustomerID = "CHOPS", Freight = 22.98, OrderDate = new DateTime(1996, 7, 10) });
+            Orders.Add(new OrderData { OrderID = 10255, CustomerID = "VINET", Freight = 148.33, OrderDate = new DateTime(1996, 7, 11) });
+            Orders.Add(new OrderData { OrderID = 10256, CustomerID = "HANAR", Freight = 13.97, OrderDate = new DateTime(1996, 7, 12) });
         }
         return Orders;
     }
 
     public int OrderID { get; set; }
     public string CustomerID { get; set; }
-    public double Freight { get; set; }
-    public string ShipCity { get; set; }
-    public string ShipName { get; set; }
+    public double? Freight { get; set; }
+    public DateTime? OrderDate { get; set; }
 }
 
 {% endhighlight %}
 {% endtabs %}
+
+> You can find a complete sample on [GitHub](https://github.com/SyncfusionExamples/exporting-blazor-datagrid/tree/master/Exporting-PDF-Datagrid/Merging_Two_PDF_Memory_Stream).
