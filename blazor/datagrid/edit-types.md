@@ -772,7 +772,7 @@ Below is an example demonstrating how to customize the DatePicker for the **Orde
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Center" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" TextAlign="TextAlign.Center" Width="130"></GridColumn>
         <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" EditType="EditType.NumericEdit" TextAlign="TextAlign.Center" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" EditType="EditType.DatePickerEdit" Format="yyyy-MM-dd" Type="ColumnType.Date" EditorSettings="@DateEditParams" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" EditType="EditType.DatePickerEdit" Format="dd-MM-yyyy" Type="ColumnType.Date" EditorSettings="@DateEditParams" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.IsVerified) HeaderText="Verified" EditType="EditType.BooleanEdit" TextAlign="TextAlign.Center" DisplayAsCheckBox="true" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -851,8 +851,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-### Disable the date value prior to the selected date value in DatePicker control
-
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLSNIZvThWbEVjR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Customize TimePicker of TimePickerEdit Type
 
@@ -2258,7 +2257,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLJiLsFKiBkUUQg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZrIjfLihgqffanp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Render Uploader in EditTemplate
 
