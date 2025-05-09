@@ -42,117 +42,117 @@ The accessibility compliance for the Blazor Document Editor component is outline
 
 The following table lists the default keyboard shortcuts in document editor for formatting text:
 
-| Key combination | Description |
-|-----------------|-------------|
-|<kbd>Ctrl</kbd> + <kbd>B</kbd>  |Toggles the bold property of selected text.|
-|<kbd>Ctrl</kbd> + <kbd>I</kbd> | Toggles the italic property of selected text.|
-|<kbd>Ctrl</kbd> + <kbd>U</kbd> | Toggles the underline property of selected text.|
-|<kbd>Ctrl</kbd> + <kbd>+</kbd> | Toggles the subscript formatting of selected text.|
-|<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>+</kbd> | Toggles the superscript formatting of selected contents.|
-| <kbd>Ctrl</kbd> + <kbd>}</kbd> | Increases the actual font size of selected text by one point.|
-| <kbd>Ctrl</kbd> + <kbd>{</kbd> | Decreases the actual font size of selected text by one point.|
+| Windows | Mac | Description |
+|-----------------|------|-------|
+|<kbd>Ctrl</kbd> + <kbd>B</kbd> | <kbd>⌘</kbd> + <kbd>B</kbd> |Toggles the bold property of selected text.|
+|<kbd>Ctrl</kbd> + <kbd>I</kbd> | <kbd>⌘</kbd> + <kbd>I</kbd> | Toggles the italic property of selected text.|
+|<kbd>Ctrl</kbd> + <kbd>U</kbd> | <kbd>⌘</kbd> + <kbd>U</kbd> | Toggles the underline property of selected text.|
+|<kbd>Ctrl</kbd> + <kbd>+</kbd> | <kbd>⌘</kbd> + <kbd>+</kbd> | Toggles the subscript formatting of selected text.|
+|<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>+</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> +<kbd>+</kbd> | Toggles the superscript formatting of selected contents.|
+| <kbd>Ctrl</kbd> + <kbd>}</kbd> | <kbd>⌘</kbd> + <kbd>}</kbd> | Increases the actual font size of selected text by one point.|
+| <kbd>Ctrl</kbd> + <kbd>{</kbd> | <kbd>⌘</kbd> + <kbd>{</kbd> | Decreases the actual font size of selected text by one point.|
 
 ### Paragraph formatting
 
 The following table lists the default keyboard shortcuts for formatting the paragraph:
 
-| Key combination | Description |
-|-----------------|-------------|
-|<kbd>Ctrl</kbd> + <kbd>E</kbd> | Selected paragraphs are center aligned.|
-|<kbd>Ctrl</kbd> + <kbd>J</kbd> |Selected paragraphs are justified.|
-|<kbd>Ctrl</kbd> + <kbd>L</kbd> | Selected paragraphs are left aligned.|
-|<kbd>Ctrl</kbd> + <kbd>R</kbd> | Selected paragraphs are right aligned.|
-|<kbd>Ctrl</kbd> + <kbd>1</kbd> | Single line spacing is applied for selected paragraphs.|
-|<kbd>Ctrl</kbd> + <kbd>5</kbd> | 1.5 line spacing is applied for selected paragraphs.|
-|<kbd>Ctrl</kbd> + <kbd>2</kbd> | Double spacing is applied for selected paragraphs.|
-|<kbd>Ctrl</kbd> + <kbd>0</kbd> | No spacing is applied before the selected paragraphs.|
-|<kbd>Ctrl</kbd> + <kbd>M</kbd> | Increases the left indent of selected paragraphs by a factor of 36 points.|
-|<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>M</kbd> | Decreases the left indent of selected paragraphs by a factor of 36 points.|
-|<kbd>Ctrl</kbd> + <kbd>*</kbd> | Show/Hide the hidden characters like spaces, tab, paragraph marks, and breaks.|
+| Windows | Mac | Description |
+|---------|--------|-------------|
+|<kbd>Ctrl</kbd> + <kbd>E</kbd> | <kbd>⌘</kbd> + <kbd>E</kbd> | Selected paragraphs are center aligned.|
+|<kbd>Ctrl</kbd> + <kbd>J</kbd> | <kbd>⌘</kbd> + <kbd>J</kbd> |Selected paragraphs are justified.|
+|<kbd>Ctrl</kbd> + <kbd>L</kbd> | <kbd>⌘</kbd> + <kbd>L</kbd> | Selected paragraphs are left aligned.|
+|<kbd>Ctrl</kbd> + <kbd>R</kbd> | <kbd>⌘</kbd> + <kbd>R</kbd> | Selected paragraphs are right aligned.|
+|<kbd>Ctrl</kbd> + <kbd>1</kbd> | <kbd>⌘</kbd> + <kbd>1</kbd> | Single line spacing is applied for selected paragraphs.|
+|<kbd>Ctrl</kbd> + <kbd>5</kbd> | <kbd>⌘</kbd> + <kbd>5</kbd> | 1.5 line spacing is applied for selected paragraphs.|
+|<kbd>Ctrl</kbd> + <kbd>2</kbd> | <kbd>⌘</kbd> + <kbd>2</kbd> | Double spacing is applied for selected paragraphs.|
+|<kbd>Ctrl</kbd> + <kbd>0</kbd> | <kbd>⌘</kbd> + <kbd>0</kbd> | No spacing is applied before the selected paragraphs.|
+|<kbd>Ctrl</kbd> + <kbd>M</kbd> | <kbd>⌘</kbd> + <kbd>M</kbd> | Increases the left indent of selected paragraphs by a factor of 36 points.|
+|<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>M</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>M</kbd> | Decreases the left indent of selected paragraphs by a factor of 36 points.|
+|<kbd>Ctrl</kbd> + <kbd>*</kbd> | <kbd>⌘</kbd> + <kbd>*</kbd> | Show/Hide the hidden characters like spaces, tab, paragraph marks, and breaks.|
 
 ### Clipboard
 
-|Key Combination| Description |
-|---------------|-------------|
-|<kbd>Ctrl</kbd> + <kbd>C</kbd> | Copies selected contents to the clipboard.|
-|<kbd>Ctrl</kbd> + <kbd>V</kbd> | Pastes plain text content from the clipboard.|
-|<kbd>Ctrl</kbd> + <kbd>X</kbd> | Moves selected content to the clipboard.|
+|Windows |Mac| Description |
+|--------|-------|-------------|
+|<kbd>Ctrl</kbd> + <kbd>C</kbd> | <kbd>⌘</kbd> + <kbd>C</kbd> | Copies selected contents to the clipboard.|
+|<kbd>Ctrl</kbd> + <kbd>V</kbd> | <kbd>⌘</kbd> + <kbd>V</kbd> | Pastes plain text content from the clipboard.|
+|<kbd>Ctrl</kbd> + <kbd>X</kbd> | <kbd>⌘</kbd> + <kbd>X</kbd> | Moves selected content to the clipboard.|
 
 ### Keyboard shortcut to navigate around the document
 
-|Key Combination| Description |
-|---------------|-------------|
-|<kbd>Left arrow<kbd/>| Moves the cursor position one character to the left.|
-|<kbd>Right arrow<kbd/>| Moves the cursor position one character to the right.|
-|<kbd>Down arrow</kbd>| Moves the cursor position down one line.|
-|<kbd>Up arrow</kbd>| Moves the cursor position up one line.|
-|<kbd>Ctrl</kbd> + <kbd>Left arrow</kbd>| Moves the cursor position one word to the left.|
-|<kbd>Ctrl</kbd> + <kbd>Right arrow</kbd>| Moves the cursor position one word to the right.|
-|<kbd>Ctrl</kbd> + <kbd>Up arrow</kbd>| Moves the cursor position one paragraph up.|
-|<kbd>Ctrl</kbd> + <kbd>Down arrow</kbd>| Moves the cursor position one paragraph down.|
-|<kbd>Tab</kbd> (in table)| Moves the cursor position one cell to the right.|
-|<kbd>Shift</kbd> + <kbd>Tab</kbd> (in table)| Moves the cursor position one cell to the left.|
-|<kbd>Home</kbd>| Moves the cursor position to the start of a line.|
-|<kbd>End</kbd>| Moves the cursor position to the end of a line.|
-|<kbd>Page up</kbd>| Moves the cursor position one screen up.|
-|<kbd>Page down</kbd>| Moves the cursor position one screen down.|
-|<kbd>Ctrl</kbd> + <kbd>Home</kbd>| Moves the cursor position to the start of a document.|
-|<kbd>Ctrl</kbd> + <kbd>End</kbd>| Moves the cursor position to the end of a document.|
+|Windows | Mac | Description |
+|--------|-------|-------------|
+|<kbd>←</kbd> | <kbd>←</kbd> | Moves the cursor position one character to the left.|
+|<kbd>→</kbd> | <kbd>→</kbd> | Moves the cursor position one character to the right.|
+|<kbd>↓</kbd> | <kbd>↓</kbd> | Moves the cursor position down one line.|
+|<kbd>↑</kbd> | <kbd>↑</kbd> | Moves the cursor position up one line.|
+|<kbd>Ctrl</kbd> + <kbd>←</kbd> | <kbd>⌘</kbd> + <kbd>←</kbd> | Moves the cursor position one word to the left.|
+|<kbd>Ctrl</kbd> + <kbd>→</kbd> | <kbd>⌘</kbd> + <kbd>→</kbd> | Moves the cursor position one word to the right.|
+|<kbd>Ctrl</kbd> + <kbd>↑</kbd> | <kbd>⌘</kbd> + <kbd>↑</kbd> | Moves the cursor position one paragraph up.|
+|<kbd>Ctrl</kbd> + <kbd>↓</kbd> | <kbd>⌘</kbd> + <kbd>↓</kbd> | Moves the cursor position one paragraph down.|
+|<kbd>Tab</kbd> (in table) | <kbd>Tab</kbd> | Moves the cursor position one cell to the right.|
+|<kbd>Shift</kbd> + <kbd>Tab</kbd> (in table) | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Moves the cursor position one cell to the left.|
+|<kbd>Home</kbd> | <kbd>Home</kbd> | Moves the cursor position to the start of a line.|
+|<kbd>End</kbd> | <kbd>End</kbd> | Moves the cursor position to the end of a line.|
+|<kbd>Page up</kbd> | <kbd>Page up</kbd> | Moves the cursor position one screen up.|
+|<kbd>Page down</kbd> | <kbd>Page down</kbd> | Moves the cursor position one screen down.|
+|<kbd>Ctrl</kbd> + <kbd>Home</kbd> | <kbd>⌘</kbd> + <kbd>Home</kbd> | Moves the cursor position to the start of a document.|
+|<kbd>Ctrl</kbd> + <kbd>End</kbd> | <kbd>⌘</kbd> + <kbd>End</kbd> | Moves the cursor position to the end of a document.|
 
 ### Keyboard shortcut to extend selection
 
-|Key Combination| Description|
-|---------------|------------|
-|<kbd>Shift</kbd> + <kbd>Left arrow</kbd>| Extends selection one character to the left.|
-|<kbd>Shift</kbd> + <kbd>Right arrow</kbd>| Extends selection one character to the right.|
-|<kbd>Shift</kbd> + <kbd>Down arrow</kbd>| Extends selection one line downward.|
-|<kbd>Shift</kbd> + <kbd>Up arrow</kbd>| Extends selection one line upward.|
-|<kbd>Shift</kbd> + <kbd>Home</kbd>| Extends selection to the start of a line.|
-|<kbd>Shift</kbd> + <kbd>End</kbd>| Extends Selection to the end of a line.|
-|<kbd>Ctrl</kbd> + <kbd>A</kbd>| Extends selection to the entire document.|
-|<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Left arrow</kbd>| Extends selection one word to the left.|
-|<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Right arrow</kbd>| Extends selection one word to the right.|
-|<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Down arrow</kbd>| Extends selection to the end of a paragraph.|
-|<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Up arrow</kbd>| Extends selection to the start of a paragraph.|
-|<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Home</kbd>| Extends selection to the start of a document.|
-|<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>End</kbd>| Extends selection to the end of a document.|
+|Windows | Mac | Description|
+|--------|-------|------------|
+|<kbd>Shift</kbd> + <kbd>←</kbd> | <kbd>⇧</kbd> + <kbd>←</kbd> | Extends selection one character to the left.|
+|<kbd>Shift</kbd> + <kbd>→</kbd> | <kbd>⇧</kbd> + <kbd>→</kbd> | Extends selection one character to the right.|
+|<kbd>Shift</kbd> + <kbd>↓</kbd> | <kbd>⇧</kbd> + <kbd>↓</kbd> | Extends selection one line downward.|
+|<kbd>Shift</kbd> + <kbd>↑</kbd> | <kbd>⇧</kbd> + <kbd>↑</kbd> | Extends selection one line upward.|
+|<kbd>Shift</kbd> + <kbd>Home</kbd> | <kbd>⇧</kbd> + <kbd>Home</kbd> | Extends selection to the start of a line.|
+|<kbd>Shift</kbd> + <kbd>End</kbd> | <kbd>⇧</kbd> + <kbd>End</kbd> | Extends Selection to the end of a line.|
+|<kbd>Ctrl</kbd> + <kbd>A</kbd> | <kbd>⌘</kbd> + <kbd>A</kbd> | Extends selection to the entire document.|
+|<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>←</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>←</kbd> | Extends selection one word to the left.|
+|<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>→</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>→</kbd> | Extends selection one word to the right.|
+|<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>↓</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>↓</kbd> | Extends selection to the end of a paragraph.|
+|<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>↑</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>↑</kbd> | Extends selection to the start of a paragraph.|
+|<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Home</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>Home</kbd> | Extends selection to the start of a document.|
+|<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>End</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>End</kbd> | Extends selection to the end of a document.|
 
 ### Find and Replace
 
-|Key Combination|Description|
-|---------------|-----------|
-|<kbd>Ctrl</kbd> + <kbd>F</kbd>| Opens options pane.|
-|<kbd>Ctrl</kbd> + <kbd>H</kbd>| Opens replace tab in options pane.|
+|Windows | Mac |Description|
+|--------|-------|-----------|
+|<kbd>Ctrl</kbd> + <kbd>F</kbd> | <kbd>⌘</kbd> + <kbd>F</kbd> | Opens options pane.|
+|<kbd>Ctrl</kbd> + <kbd>H</kbd> | <kbd>⌘</kbd> + <kbd>H</kbd> | Opens replace tab in options pane.|
 
 ### Print document
 
-|Key Combination|Description|
-|---------------|-----------|
-|<kbd>Ctrl</kbd> + <kbd>P</kbd>| Prints the document.|
+|Windows | Mac |Description|
+|--------|-------|-----------|
+|<kbd>Ctrl</kbd> + <kbd>P</kbd> | <kbd>⌘</kbd> + <kbd>P</kbd> | Prints the document.|
 
 ### Edit Operation
 
-|Key Combination|Description|
-|---------------|-----------|
-|<kbd>Backspace</kbd> | Deletes one character to the left.|
-|<kbd>Delete</kbd> | Deletes one character to the right.|
-|<kbd>Ctrl</kbd> + <kbd>Z</kbd> | Undo last performed action.|
-|<kbd>Ctrl</kbd> + <kbd>Y</kbd> | Redo last undo action.|
+| Windows | Mac | Description |
+|---------|------|-----------|
+|<kbd>Backspace</kbd> | <kbd>Backspace</kbd> | Deletes one character to the left.|
+|<kbd>Delete</kbd> | <kbd>Delete</kbd> | Deletes one character to the right.|
+|<kbd>Ctrl</kbd> + <kbd>Z</kbd> | <kbd>⌘</kbd> + <kbd>Z</kbd> | Undo last performed action.|
+|<kbd>Ctrl</kbd> + <kbd>Y</kbd> | <kbd>⌘</kbd> + <kbd>Y</kbd> | Redo last undo action.|
 
 ### Insert special characters
 
-|Key Combination|Description|
-|---------------|-----------|
-|<kbd>Ctrl</kbd> + <kbd>Enter</kbd> | Inserts page break.|
-|<kbd>Shift</kbd> + <kbd>Enter</kbd> | Inserts line break.|
+| Windows | Mac | Description |
+|---------|------|-----------|
+|<kbd>Ctrl</kbd> + <kbd>Enter</kbd> | <kbd>⌘</kbd> + <kbd>Enter</kbd> | Inserts page break.|
+|<kbd>Shift</kbd> + <kbd>Enter</kbd> | <kbd>⇧</kbd> + <kbd>Enter</kbd> | Inserts line break.|
 
 ### Dialog
 
-|Key Combination|Description|
-|---------------|-----------|
-|<kbd>Ctrl</kbd> + <kbd>F</kbd>| Opens options pane.|
-|<kbd>Ctrl</kbd> + <kbd>D</kbd>| Opens font dialog.|
-|<kbd>Ctrl</kbd> + <kbd>K</kbd>| Opens hyperlink dialog.|
+| Windows | Mac | Description |
+|--------|-------|-----------|
+|<kbd>Ctrl</kbd> + <kbd>F</kbd> | <kbd>⌘</kbd> + <kbd>F</kbd> | Opens options pane.|
+|<kbd>Ctrl</kbd> + <kbd>D</kbd> | <kbd>⌘</kbd> + <kbd>D</kbd> | Opens font dialog.|
+|<kbd>Ctrl</kbd> + <kbd>K</kbd> | <kbd>⌘</kbd> + <kbd>K</kbd> | Opens hyperlink dialog.|
 
 You can refer to our [Blazor Word Processor](https://www.syncfusion.com/blazor-components/blazor-word-processor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Word Processor example](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) to know how to render and configure the document editor.
 

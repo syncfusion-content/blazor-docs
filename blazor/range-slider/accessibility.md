@@ -57,14 +57,14 @@ The Blazor Range Slider component followed the [WAI-ARIA](https://www.w3.org/WAI
 
 The Keyboard interaction of the Blazor Range Slider component is designed based on the [WAI-ARIA Practices](https://www.w3.org/TR/wai-aria-practices/#slider) described for Slider. Users can use the following shortcut keys to interact with the Slider.
 
-| **Keyboard shortcuts** | **Actions** |
-| --- | --- |
-| <kbd>Right Arrow</kbd> <kbd>Up Arrow</kbd> | Increase the Slider value.|
-| <kbd>Left Arrow</kbd> <kbd>Down Arrow</kbd> | Decrease the Slider value. |
-| <kbd>Home</kbd> | Moves to the start value (for Range Slider when the second thumb is focused and the Home key is pressed, it moves to the first thumb value). |
-| <kbd>End</kbd> | Moves to the end value (for Range Slider when the first thumb is focused and the End key is pressed, it moves to the second thumb value). |
-| <kbd>Page Up</kbd> | Increases the Slider by `LargeStep` value. |
-| <kbd>Page Down</kbd> | Decreases the Slider by `LargeStep` value. |
+| Windows | Mac | Actions |
+| --- | --- | --- |
+| <kbd>↑</kbd> or <kbd>→</kbd> | <kbd>↑</kbd> or <kbd>→</kbd> | Increase the Slider value.|
+| <kbd>↓</kbd> , <kbd>←</kbd> | <kbd>↓</kbd> or <kbd>←</kbd> | Decrease the Slider value. |
+| <kbd>Home</kbd> | <kbd>Home</kbd> | Moves to the start value (for Range Slider when the second thumb is focused and the Home key is pressed, it moves to the first thumb value). |
+| <kbd>End</kbd> | <kbd>End</kbd> | Moves to the end value (for Range Slider when the first thumb is focused and the End key is pressed, it moves to the second thumb value). |
+| <kbd>Page Up</kbd> | <kbd>Page Up</kbd> | Increases the Slider by `LargeStep` value. |
+| <kbd>Page Down</kbd> | <kbd>Page Down</kbd> | Decreases the Slider by `LargeStep` value. |
 
 ## Ensuring accessibility
 

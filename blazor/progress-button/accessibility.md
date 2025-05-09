@@ -49,9 +49,9 @@ The Blazor ProgressButton component followed the [WAI-ARIA](https://www.w3.org/W
 
 The Blazor ProgressButton component followed the keyboard interaction guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor ProgressButton component.
 
-| **Press** | **To do this** |
-| --- | --- |
-| <kbd>Enter / Space</kbd> | Starts the progress. |
+| Windows | Mac | Actions |
+| --- | --- | --- |
+| <kbd>Enter</kbd> / <kbd>Space</kbd> | <kbd>Enter</kbd> / <kbd>Space</kbd> | Starts the progress. |
 
 ## Ensuring accessibility
 

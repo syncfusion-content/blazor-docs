@@ -48,12 +48,12 @@ The following ARIA attributes are used in the OTP Input component:
 
 The following keyboard shortcuts are supported by the OTP Input component.
 
-| **Press** | **To do this** |
-| --- | --- |
-| <kbd>Left Arrow</kbd> | Focuses the previous input in the OTP. |
-| <kbd>Right Arrow</kbd> | Focuses the next input in OTP |
-| <kbd>Tab</kbd> | Moves the initial focus and shifts focus to the next input of the OTP. |
-| <kbd>Shift + Tab</kbd> | Moves the focus to the previous input of the OTP. |
+| Windows | Mac | Actions |
+| --- | --- | --- |
+| <kbd>←</kbd> | <kbd>←</kbd> | Focuses the previous input in the OTP. |
+| <kbd>→</kbd> | <kbd>→</kbd> | Focuses the next input in OTP |
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Moves the initial focus and shifts focus to the next input of the OTP. |
+| <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Moves the focus to the previous input of the OTP. |
 
 ## See also
 

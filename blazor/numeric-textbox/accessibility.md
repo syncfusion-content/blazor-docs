@@ -59,10 +59,10 @@ Keyboard interaction of the Blazor NumericTextBox component has been designed ba
 
 The following table shows shortcut keys and its corresponding usage.
 
-| **Keyboard shortcuts** | **Actions** |
-| --- | --- |
-| <kbd>Arrow Down</kbd> | Increments the value. |
-| <kbd>Arrow Up</kbd> | Decrements the value. |
+| Windows | Mac | Actions |
+| --- | --- | --- |
+| <kbd>↓</kbd> | <kbd>↓</kbd> | Increments the value. |
+| <kbd>↑</kbd> | <kbd>↑</kbd> | Decrements the value. |
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs

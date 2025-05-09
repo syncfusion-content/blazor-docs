@@ -30,8 +30,7 @@ Visual Studio provides **WPF Application** template to create WPF Blazor Apps.
 
 ## Create a new WPF Blazor App in Visual Studio
 
-You can create a **WPF Blazor App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/wpf?view=aspnetcore-8.0)
-
+To create a **WPF Blazor App** using Visual Studio, it is essential<sup style="font-size:70%">&reg;</sup> to follow the comprehensive steps outlined in the [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/wpf?view=aspnetcore-8.0) documentation. Ensuring that you understand each step from the official guide will provide the foundation needed to continue with this documentation.
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendars and Themes NuGet in the App
 
@@ -45,6 +44,10 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
+
+N> Ensure that the package `Microsoft.AspNetCore.Components.WebView.Wpf` updated to version `8.0.16`.
+
+![WPF Blazor App NuGet package reference](images/wpf/wpf-blazor-package-reference.png)
 
 N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
@@ -62,7 +65,7 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in the `MainWindow.xaml.cs` file of your WPF Blazor App.
 
 {% tabs %}
-{% highlight C# tabtitle="~/MainWindow.xaml.cs.cs" hl_lines="1 3" %}
+{% highlight C# tabtitle="~/MainWindow.xaml.cs" hl_lines="1 3" %}
 
     using Syncfusion.Blazor;
     ....
