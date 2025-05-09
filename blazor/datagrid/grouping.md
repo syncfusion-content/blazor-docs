@@ -1149,8 +1149,7 @@ The following example demonstrates how the `Grouping` and `Grouped` events work 
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDLpNCtffrjjtSYQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-
+    
 ## See Also
 
 * [Exporting grouped records](https://blazor.syncfusion.com/documentation/datagrid/excel-exporting#exporting-grouped-records)
