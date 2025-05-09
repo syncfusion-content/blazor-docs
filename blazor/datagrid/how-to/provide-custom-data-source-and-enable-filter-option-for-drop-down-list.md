@@ -9,7 +9,7 @@ documentation: ug
 
 # Custom Data Source & Filtering for DropDownList in Blazor DataGrid
 
-In the Syncfusion Blazor DataGrid, a custom data source can be provided for the DropDownList used during editing by configuring the `EditType` and assigning a custom data source using `EditorSettings`. Along with the data, filtering support can be enabled by setting the `AllowFiltering` property to **true**. This helps users easily search and select values, especially when the dropdown contains many items.
+In the Syncfusion Blazor DataGrid, a custom data source can be provided for the `DropDownList` used during editing by configuring the `EditType` and assigning a custom data source using `EditorSettings`. Along with the data, filtering support can be enabled by setting the `AllowFiltering` property to **true**. This helps users easily search and select values, especially when the dropdown contains many items.
 
 To achieve this, a `DropDownEditCellParams` object is defined with a `DropDownListModel` that includes a custom data source. This configuration is then assigned to the `EditorSettings` of the target Grid column. In the sample, the Customer Name column uses a local list of country names as its dropdown data source with filtering enabled for better usability during editing.
 

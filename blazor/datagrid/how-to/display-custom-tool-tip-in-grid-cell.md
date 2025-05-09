@@ -45,9 +45,7 @@ In the example below, the tooltip is added to the **FirstName** column by placin
 
 @code {
     public List<EmployeeData> Employees { get; set; }
-
     int Count { get; set; } = 0;
-
     protected override void OnInitialized()
     {
         Employees = Enumerable.Range(1, 9).Select(x => new EmployeeData()
@@ -55,8 +53,7 @@ In the example below, the tooltip is added to the **FirstName** column by placin
                 EmployeeID = x,
                 FirstName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" })[new Random().Next(5)],
                 LastName = (new string[] { "Davolio", "Fuller", "Leverling", "Peacock", "Buchanan" })[new Random().Next(5)],
-                Title = (new string[] { "Sales Representative", "Vice President, Sales", "Sales Manager",
-                                    "Inside Sales Coordinator" })[new Random().Next(4)],
+                Title = (new string[] { "Sales Representative", "Vice President, Sales", "Sales Manager","Inside Sales Coordinator" })[new Random().Next(4)],
                 HireDate = DateTime.Now.AddDays(-x),
             }).ToList();
     }

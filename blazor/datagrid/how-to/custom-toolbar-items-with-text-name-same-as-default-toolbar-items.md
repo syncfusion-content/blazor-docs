@@ -9,7 +9,7 @@ documentation: ug
 
 # Custom Toolbar Items with Text Name Same as Default Toolbar Items
 
-When creating custom toolbar items in a Syncfusion Blazor DataGrid with the same text as default toolbar items (like "Add" or "Delete"), the grid treats them as default items, which can cause issues during interactions. To resolve this, you should define an **Id** property for each custom toolbar item. This ensures that the custom items are recognized as distinct from the default toolbar items and function as intended.
+When creating custom toolbar items in a Syncfusion Blazor DataGrid with the same text as default toolbar items (like "Add" or "Delete"), the Grid treats them as default items, which can cause issues during interactions. To resolve this, you should define an **Id** property for each custom toolbar item. This ensures that the custom items are recognized as distinct from the default toolbar items and function as intended.
 
 In the provided example, custom "Add" and "Delete" buttons are created with the same text as the default items. To prevent these buttons from being disabled, the Id property is assigned to each item. Additionally, an event handler is used to perform actions when the toolbar buttons are clicked, ensuring proper functionality while maintaining the original button names.
 

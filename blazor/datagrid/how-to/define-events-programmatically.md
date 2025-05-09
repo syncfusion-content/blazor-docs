@@ -53,7 +53,6 @@ The following example demonstrates how to configure the [OnActionBegin](https://
             ShipCountry = (new string[] { "Sweden", "Germany", "Argentina", "Mexico", "Denmark", "Finland", "Switzerland", "UK" })[new Random().Next(8)],
         }).ToList();
     }
-
     public class Order
     {
         public int? OrderID { get; set; }

@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# How to use radio button instead of checkbox for row selection of Grid
+# How to use radio button instead of checkbox for row selection of DataGrid
 
 By default, the Syncfusion DataGrid provides checkboxes to allow multiple row selection. If there is a need to allow only one row to be selected at a time, a radio button can be used instead of checkboxes. This can be achieved by using the column template feature to render a radio button in each row. The radio button can be linked to a unique value from the data source, such as the primary key field.
 

@@ -7,11 +7,11 @@ control: DataGrid
 documentation: ug
 ---
 
-# Blazor DataGrid Component Inside the Tab with Specific Height
+# Blazor DataGrid Inside the Tab with Specific Height
 
 By default, DataGrid will occupy the entire space of the parent element when DataGrid [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Width) properties are defined as 100%. But if you render the similar DataGrid inside the Tab control, it will consider the entire page and render the DataGrid without horizontal scroller.
 
-To overcome this behavior, override the below CSS style of the `SfTab`. This CSS style will hide the default page scroller and add a scroller to the grid to keep the tab header fixed.
+To overcome this behavior, override the below CSS style of the `SfTab`. This CSS style will hide the default page scroller and add a scroller to the Grid to keep the tab header fixed.
 
 ```cshtml
 <style>

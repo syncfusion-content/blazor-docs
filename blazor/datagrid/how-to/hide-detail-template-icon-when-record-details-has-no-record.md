@@ -54,11 +54,10 @@ The following example demonstrates how to hide the expand icon when there are no
     }
 </style>
 
-
 @code{
-    public void RowDataBound(RowDataBoundEventArgs<EmployeeData> Args) // will be triggered when row is created
+    public void RowDataBound(RowDataBoundEventArgs<EmployeeData> Args) // Will be triggered when row is created.
     {
-        if (Orders.Where(x => x.EmployeeID == Args.Data.EmployeeID).ToList().Count == 0) // Check condition here whether the detail grid has records.
+        if (Orders.Where(x => x.EmployeeID == Args.Data.EmployeeID).ToList().Count == 0) // Check condition here whether the detail Grid has records.
         {
             Args.Row.AddClass(new string[] { "e-detail-disable" });
         }
