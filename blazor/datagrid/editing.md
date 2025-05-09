@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Editing in Blazor DataGrid | Syncfusion
+title: Editing in Blazor DataGrid component | Syncfusion
 description: Checkout and learn here all about Editing in Syncfusion Blazor DataGrid component and much more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Editing in Blazor DataGrid
+# Editing in Blazor DataGrid component
 
 The DataGrid component has options to dynamically insert, delete, and update records.
 
