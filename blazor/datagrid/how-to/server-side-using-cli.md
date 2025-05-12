@@ -11,7 +11,7 @@ documentation: ug
 
 # Blazor DataGrid in Server Side App using CLI
 
-This article provides a step-by-step instructions for building Blazor Server App with `Blazor DataGrid` using the [.NET CLI](https://dotnet.microsoft.com/en-us/download/dotnet/7.0).
+This article provides a step-by-step instructions for building Blazor Server App with `Syncfusion Blazor DataGrid` using the [.NET CLI](https://dotnet.microsoft.com/en-us/download/dotnet/7.0).
 
 ## Prerequisites
 
@@ -189,9 +189,9 @@ To bind data for the Syncfusion Blazor DataGrid, you can assign a IEnumerable ob
 
 ## Defining columns
 
-The columns are automatically generated when columns declaration is empty or undefined while initializing the datagrid.
+The columns are automatically generated when columns declaration is empty or undefined while initializing the Syncfusion Blazor DataGrid.
 
-The Syncfusion Blazor DataGrid has an option to define columns using [GridColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumns.html). In `GridColumn` we have properties to customize columns.
+The Grid has an option to define columns using [GridColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumns.html). In `GridColumn` we have properties to customize columns.
 
 Let’s check the properties used here:
 

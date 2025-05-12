@@ -11,7 +11,7 @@ documentation: ug
 
 # Blazor DataGrid in WebAssembly App using Visual Studio
 
-This article provides a step-by-step instructions for building Blazor WebAssembly App with Blazor DataGrid using [Visual Studio](https://visualstudio.microsoft.com/vs/).
+This article provides a step-by-step instructions for building Blazor WebAssembly App with Syncfusion Blazor DataGrid using [Visual Studio](https://visualstudio.microsoft.com/vs/).
 
 ## Prerequisites
 
@@ -23,7 +23,7 @@ You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft T
 
 ## Install Syncfusion Blazor DataGrid and Themes NuGet in the App
 
-To add `Blazor DataGrid` in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
+To add `Syncfusion Blazor DataGrid` in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -159,9 +159,9 @@ To bind data for the Syncfusion Blazor DataGrid, you can assign a IEnumerable ob
 
 ## Defining columns
 
-The columns are automatically generated when columns declaration is empty or undefined while initializing the datagrid.
+The columns are automatically generated when columns declaration is empty or undefined while initializing the Syncfusion Blazor DataGrid.
 
-The Syncfusion Blazor DataGrid has an option to define columns using [GridColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumns.html). In `GridColumn` we have properties to customize columns.
+The Grid has an option to define columns using [GridColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumns.html). In `GridColumn` we have properties to customize columns.
 
 Let’s check the properties used here:
 
