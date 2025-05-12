@@ -539,7 +539,7 @@ By default, null values in the Syncfusion Blazor DataGrid are displayed at the t
 
 The `SortComparer` allows custom comparison logic for sorting. By implementing a custom comparer, null values can be handled separately and positioned at the end of the sorted list in both ascending and descending orders. You can use the [Sorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Sorting) event to detect the sort direction and apply the appropriate logic in the custom comparer.
 
-The example below demonstrates how to display null values at the bottom of the Grid while sorting the **CustomerID** column in both ascending and descending order.
+The example below demonstrates how to display null values at the bottom of the Grid while sorting the **CustomerID** column in both ascending and descending order:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

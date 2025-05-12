@@ -184,7 +184,7 @@ The following example demonstrates how to add a custom text to the group caption
 
 The Syncfusion Blazor DataGrid allows you to customize the group caption text based on the locale. This feature enables you to display localized text or translated content in the group captions according to different language or region settings.
 
-The following example demonstrates, how to customize group caption text based on **ar** locale.
+The following example demonstrates, how to customize group caption text based on **ar** locale:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
