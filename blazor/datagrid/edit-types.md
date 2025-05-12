@@ -1075,6 +1075,8 @@ namespace BlazorApp1.Data
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VNBoZfrBCuEvMRrS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+> By default, the Grid saves the cell when clicking outside the editor component. If your components, like multiple popups, are dynamically rendered, the Grid may not recognize them, causing the editor to close when the popup is clicked. To prevent this, apply the `edit-custom-template` class to both your main component and sub-components. If you are using Syncfusion® components, set their `cssClass` property to include the `edit-custom-template` class.
+ 
 ## Render custom cell editors
 
 The Syncfusion Blazor DataGrid allows you to render custom cell editors for particular columns. This feature is particularly useful when you need to use custom components to edit the data within a GridColumn. To achieve this, you can make use of the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) of the Grid Column.
