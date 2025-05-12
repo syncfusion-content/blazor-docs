@@ -76,20 +76,20 @@ if you are referencing script and style references from CDN, then add CDN domain
 
 Some Syncfusion components use inline styles to achieve responsive layouts, precise positioning, dynamic sizing, and visual behaviors essential to their functionality. The table below lists components that depend on inline styles, along with the properties or features that require them.
 
-| Component                | Properties/Functionalities Requiring Inline Styles                                                                 |
+| Components                | Properties/Functionalities requiring inline Styles                                                                 |
 |--------------------------|---------------------------------------------------------------------------------------------------------------------|
-| 3D Charts, TreeMap, Charts, ProgressBar, Circular Gauge, HeatMap Chart, LinaerGauge, Maps, Bullet Chart, ImageEditor, RangeSlider, Sankey, SmithChart, SparklineChart, Stock Chart                | Appearance customization, layout, and rendering.|
 | Accordion, Tabs, Toolbar, Kanban, Carousel, Toast, Skeleton, Splitter                 | Height and Width.|
+| 3D Charts, TreeMap, Charts, ProgressBar, Circular Gauge, HeatMap Chart, LinaerGauge, Maps, Bullet Chart, ImageEditor, RangeSlider, Sankey, SmithChart, SparklineChart, Stock Chart                | Appearance customization, layout, and rendering.|
 | DatePicker, DateTime Picker, DateRange Picker, In-place Editor, Input Mask, ListBox, MultiSelect Dropdown, Numeric TextBox, Query Builder, TextArea, TextBox, TimePicker                 | Width|
-| Dashboard Layout         | Panel height, gridline styles.|
+| Dashboard Layout         | Panel Height, gridline styles.|
 | Sidebar                  | Width and transform in normal and docker mode.|
 | Stepper                  | Width and transform.|
-| Dialog                   | Z-index, height, and width.|
+| Dialog                   | Z-index, Height, and Width.|
 | AutoComplete             | Width, PopupHeight, and PopupWidth.|
 | Pivot Table              | Grouping bar layout, conditional formatting dialog, height and width of pivot chart and pager, cell positioning.|
-| Rich Text Editor         | Height, width, font styling, toolbar styling.|
+| Rich Text Editor         | Height, Width, font styling, toolbar styling.|
 | Gantt Chart              | Taskbar Dimensions, Chart Row Layout, Timeline and Header Layout, Label Containers and Connectors, Progress Bars and Segments, Baseline and Connector Styling, Virtualization Elements.|
-| Context Menu, Menu Bar             | Menu popup visibility.|
+| Context Menu, Menu Bar   | Menu popup visibility.|
 | Scheduler                | Agenda view, resource headers, appointment styling, tooltip—positioning and colors.|
 | Dropdown List            | Width, PopupHeight, PopupWidth|
 | Mention                  | PopupHeight and popup visibility.|
@@ -101,7 +101,7 @@ Some Syncfusion components use inline styles to achieve responsive layouts, prec
 | ComboBox                 | Width, PopupHeight, and PopupWidth.|
 | DataForm                 | Width, ColumnSpacing.|
 | SpeedDial                | Speed dial animation and layout styles|
-| Ribbon                   | filemenu and helpTemplate width for ribbon tab. |
+| Ribbon                   | Filemenu and HelpTemplate width for ribbon tab. |
 
 
 ## See also
