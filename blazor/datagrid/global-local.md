@@ -162,9 +162,9 @@ To switch to a different localization, follow these steps:
  
 You can create a **Blazor Web App** named **LocalizationSample** using Visual Studio 2022, either via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). Make sure to configure the appropriate [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows).
 
-**Step 2: Install Syncfusion Blazor Grid and Themes NuGet packages**
+**Step 2: Install Syncfusion Blazor DataGrid and Themes NuGet packages**
  
-To add the Syncfusion Blazor Grid in the app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+To add the Syncfusion Blazor DataGrid in the app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
  
 If your Blazor Web App uses `WebAssembly` or `Auto` render modes, install the Syncfusion Blazor NuGet packages in the client project.
  
@@ -332,9 +332,9 @@ For a Blazor Web App, add the following JavaScript function to the **~/Component
 {% endhighlight %}
 {% endtabs %}
 
-**Step 9: Configure culture switching with Syncfusion Grid** 
+**Step 9: Configure culture switching with Syncfusion Blazor DataGrid** 
 
-In the **Counter.razor** file, add the following code to change the culture and display a Syncfusion Grid with a Button to switch between English (en-US) and French (fr-FR):
+In the **Counter.razor** file, add the following code to change the culture and display a Grid with a Button to switch between English (en-US) and French (fr-FR):
  
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
