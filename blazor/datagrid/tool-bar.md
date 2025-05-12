@@ -13,7 +13,7 @@ The toolbar in the Syncfusion Blazor DataGrid offers several general use cases t
 
 This service provides the necessary methods to interact with the toolbar items. The toolbar can be customized with built-in toolbar items or custom toolbar items using the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property. The `Toolbar` property accepts an array of strings representing the built-in toolbar items or an array of [ItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ItemModel.html#Syncfusion_Blazor_Navigations_ItemModel__ctor) objects for custom toolbar items.
 
-The following example demonstrates how to enable toolbar items in the Grid.
+The following example demonstrates how to enable toolbar items in the Grid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -91,7 +91,7 @@ Enabling or disabling toolbar items dynamically in Syncfusion Blazor DataGrid is
 
 You can enable or disable toolbar items dynamically by using the [EnableToolbarItemsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableToolbarItemsAsync_System_Collections_Generic_List_System_String__System_Boolean_) method. This method allows you to control the availability of specific toolbar items based on your application logic.
 
-In the following example, the [Blazor Toggle Switch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html) Button is added to enable and disable the toolbar items using `EnableToolbarItemsAsync` method. When the switch is toggled, the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_ValueChange) event is triggered and the toolbar items are updated accordingly.
+In the following example, the [Blazor Toggle Switch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html) Button is added to enable and disable the toolbar items using `EnableToolbarItemsAsync` method. When the switch is toggled, the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_ValueChange) event is triggered and the toolbar items are updated accordingly:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -209,7 +209,7 @@ In the following example, the [Blazor Toggle Switch](https://help.syncfusion.com
 
 Customizing Toolbar buttons in Syncfusion Blazor DataGrid using CSS involves modifying the appearance of built-in toolbar buttons by applying CSS styles. This provides a flexible and customizable way to enhance the visual presentation of the toolbar and create a cohesive interface.
 
-The appearance of the built-in Toolbar buttons can be modified by applying the following CSS styles.
+The appearance of the built-in Toolbar buttons can be modified by applying the following CSS styles:
 
 ```csharp
 .e-grid .e-toolbar .e-tbar-btn .e-icons,

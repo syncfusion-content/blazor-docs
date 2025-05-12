@@ -362,7 +362,7 @@ Rendering a component or element using the Toolbar Template in the Syncfusion Bl
 
 To render custom components or elements within the Toolbar, use the `Template` directive. This allows you to include other components, such as a [SfButton](https://help.syncfusion.com/cr/blazor/syncfusion.blazor.buttons.sfbutton.html), and perform specific Grid actions based on the button click. For example, when the **ExcelExport** button is clicked, the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_System_Nullable_System_Boolean__System_Object_System_Nullable_System_Boolean__) method is called to export the Grid to Excel. Similarly, when the **PdfExport** button is clicked, the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_System_Nullable_System_Boolean__System_Object_System_Nullable_System_Boolean__) method is called to export the Grid to PDF format.Likewise, when the Print button is clicked, the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PrintAsync) method will triggered to print the Grid.
 
-The following example demonstrates how to render a **SfButton** in the Toolbar using `Template` and perform Grid action based on the respected button click.
+The following example demonstrates how to render a **SfButton** in the Toolbar using `Template` and perform Grid action based on the respected button click:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

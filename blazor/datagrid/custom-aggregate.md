@@ -120,7 +120,7 @@ Here’s an example that demonstrates how to use the custom aggregate feature in
 
 You can calculate the count of distinct values in an aggregate row by using custom aggregate functions. By specifying the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) as **Custom** and providing a custom aggregate function in the `CustomAggregate` property, you can achieve this behavior.
 
-Here’s an example that demonstrates how to show the count of distinct values for the **ShipCountry** column using a custom aggregate.
+Here’s an example that demonstrates how to show the count of distinct values for the **ShipCountry** column using a custom aggregate:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
