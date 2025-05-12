@@ -7,221 +7,150 @@ control: DataGrid
 documentation: ug
 ---
 
-# Globalization in Syncfusion Blazor DataGrid
+# Globalization in Blazor DataGrid
 
 The Syncfusion Blazor DataGrid provides a feature known as Globalization (global and local), which makes the application more accessible and useful for individuals from different regions and language backgrounds. You have the ability to view data in your preferred language and format, resulting in an enhanced overall experience.
 
 ## Localization
 
-The Syncfusion Blazor DataGrid supports localization, allowing you to customize the text used in the Grid to suit different languages or cultural preferences. With this library, With this feature, you can change static text on various elements, such as **group drop area text** and **pager information text**, to different cultures, such as **Arabic**, **Deutsch**, **French**, and more. For detailed instructions, refer to the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion Blazor components.
-
-The following list of properties and its values are used in the Grid.
+The Syncfusion Blazor DataGrid supports localization, allowing you to customize the text used in the Grid to suit different languages or cultural preferences. You can change static text on various elements, such as **group drop area text** and pager **information text**, to different cultures, such as **Arabic**, **Deutsch**, **French**, and more.. For detailed instructions, refer to the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion Blazor components.
 
 **Data Rendering**
 
 Locale key words |Text | Example 
 -----|-----|-----
-EmptyRecord | No records to display | ![Locale empty record](images/globalization/locale-empty-record.png)
-EmptyDataSourceError | DataSource must not be empty at initial load since columns are generated from dataSource in AutoGenerate Column Grid
+Grid_EmptyRecord | No records to display | ![Locale empty record](images/globalization/locale-empty-record.png)
+Grid_EmptyDataSourceError | DataSource must not be empty at initial load since columns are generated from dataSource in AutoGenerate Column Grid
 
 **Columns**
 
 Locale key words |Text | Example 
 -----|-----|-----
-True | true | ![Locale true](images/globalization/locale-true.png)
-False | false | ![Locale false](images/globalization/locale-false.png)
-ColumnHeader | column header  | ![Locale column header](images/globalization/locale-column-header.png)
-TemplateCell | is template cell | ![Locale template cell](images/globalization/locale-templatecell.png)
-ClipBoard | clipboard | ![Locale clipboard](images/globalization/locale-clipboard.png)
-CheckBoxLabel | checkbox | ![Locale checkbox label](images/globalization/locale-checkbox-label.png)
+Grid_True | true | ![Locale true](images/globalization/locale-true.png)
+Grid_False | false | ![Locale false](images/globalization/locale-false.png)
 
 **ColumnChooser**
 
 Locale key words |Text | Example 
 -----|-----|-----
-Columnchooser | Columns | ![Locale columnchooser](images/globalization/locale-column-chooser.png)
-ChooseColumns | Choose Column | ![Locale choose columns](images/globalization/locale-choose-columns.png)
-ColumnChooserDialogARIA | Column chooser | ![Locale columnchooser dialog ARIA](images/globalization/locale-columnchooser-dialog-ARIA.png)
+Grid_Columnchooser | Columns | ![Locale columnchooser](images/globalization/locale-column-chooser.png)
+Grid_ChooseColumns | Choose Column | ![Locale choose columns](images/globalization/locale-choose-columns.png)
 
 **Editing**
 
 Locale key words |Text | Example 
 -----|-----|-----
-Add | Add | ![Locale add](images/globalization/locale-add.png)
-Edit| Edit | ![Locale edit](images/globalization/locale-edit.png)
-Cancel| Cancel | ![Locale cancel](images/globalization/locale-cancel.png)
-Update| Update | ![Locale update](images/globalization/locale-update.png)
-Delete | Delete | ![Locale delete](images/globalization/locale-delete.png)
-Save | Save | ![Locale save](images/globalization/locale-save.png)
-EditOperationAlert | No records selected for edit operation | ![Locale edit operation alert](images/globalization/locale-edit-operation-alert.png)
-DeleteOperationAlert | No records selected for delete operation | ![Locale delete operation alert](images/globalization/locale-delete-operation-alert.png)
-SaveButton | Save | ![Locale save button](images/globalization/locale-save-button.png)
-OKButton | OK | ![Locale ok button](images/globalization/locale-ok-button.png)
-CancelButton | Cancel | ![Locale cancel button](images/globalization/locale-cancel-button.png)
-EditFormTitle | Details of | ![Locale edit form title](images/globalization/locale-edit-form-title.png)
-AddFormTitle | Add New Record | ![Locale add form title](images/globalization/locale-add-form-title.png)
-BatchSaveConfirm | Are you sure you want to save changes? | ![Locale batch save confirm](images/globalization/locale-batch-save-confirm.png)
-BatchSaveLostChanges | Unsaved changes will be lost. Are you sure you want to continue? | ![Locale batch save lost changes](images/globalization/locale-batch-save-lost-changes.png)
-ConfirmDelete | Are you sure you want to Delete Record? | ![Locale confirm delete](images/globalization/locale-confirm-delete.png)
-CancelEdit | Are you sure you want to Cancel the changes? | ![Locale cancel edit](images/globalization/locale-cancel-edit.png)
-DialogEditARIA | Edit dialog | 
-CommandColumnAria | is Command column column header  | ![Locale command column aria](images/globalization/locale-command-column-aria.png)
-DialogEdit | Dialog edit | ![Locale dialog edit](images/globalization/locale-dialog-edit.png)
+Grid_Add | Add | ![Locale add](images/globalization/locale-add.png)
+Grid_Edit| Edit | ![Locale edit](images/globalization/locale-edit.png)
+Grid_Cancel| Cancel | ![Locale cancel](images/globalization/locale-cancel.png)
+Grid_Update| Update | ![Locale update](images/globalization/locale-update.png)
+Grid_Delete | Delete | ![Locale delete](images/globalization/locale-delete.png)
+Grid_Save | Save | ![Locale save](images/globalization/locale-save.png)
+Grid_EditOperationAlert | No records selected for edit operation | ![Locale edit operation alert](images/globalization/locale-edit-operation-alert.png)
+Grid_DeleteOperationAlert | No records selected for delete operation | ![Locale delete operation alert](images/globalization/locale-delete-operation-alert.png)
+Grid_SaveButton | Save | ![Locale save button](images/globalization/locale-save-button.png)
+Grid_OKButton | OK | ![Locale ok button](images/globalization/locale-ok-button.png)
+Grid_CancelButton | Cancel | ![Locale cancel button](images/globalization/locale-cancel-button.png)
+Grid_EditFormTitle | Details of | ![Locale edit form title](images/globalization/locale-edit-form-title.png)
+Grid_AddFormTitle | Add New Record | ![Locale add form title](images/globalization/locale-add-form-title.png)
+Grid_BatchSaveConfirm | Are you sure you want to save changes? | ![Locale batch save confirm](images/globalization/locale-batch-save-confirm.png)
+Grid_BatchSaveLostChanges | Unsaved changes will be lost. Are you sure you want to continue? | ![Locale batch save lost changes](images/globalization/locale-batch-save-lost-changes.png)
+Grid_ConfirmDelete | Are you sure you want to Delete Record? | ![Locale confirm delete](images/globalization/locale-confirm-delete.png)
+Grid_CancelEdit | Are you sure you want to Cancel the changes? | ![Locale cancel edit](images/globalization/locale-cancel-edit.png)
 
 **Grouping**
 
 Locale key words |Text | Example 
 -----|-----|-----
-GroupDropArea | Drag a column header here to group its column | ![Locale group drop area](images/globalization/locale-group-drop-area.png)
-UnGroup | Click here to ungroup | ![Locale un group](images/globalization/locale-un-group.png)
-GroupDisable | Grouping is disabled for this column | ![Locale group disable](images/globalization/locale-group-disable.png)
-Item | item | ![Locale Item](images/globalization/locale-item.png)
-Items | items | ![Locale Items](images/globalization/locale-items.png)
-UnGroupButton | Click here to ungroup |
-GroupDescription | Press Ctrl space to group | ![Locale group description](images/globalization/locale-group-description.png)
-GroupButton | Group button | ![Locale group button](images/globalization/locale-group-button.png)
-UnGroupAria | ungroup button | ![Locale ungroup aria](images/globalization/locale-ungroup-aria.png)
-GroupSeperator | Separator for the grouped columns | ![Locale group seperator](images/globalization/locale-group-seperator.png)
-UnGroupIcon | ungroup the grouped column  | ![Locale ungroup icon](images/globalization/locale-ungroup-icon.png)
-GroupedSortIcon | sort the grouped column  | ![Locale grouped sort icon](images/globalization/locale-grouped-sort-icon.png)
-GroupedDrag | Drag the grouped column | ![Locale grouped drag](images/globalization/locale-grouped-drag.png)
-GroupCaption | is groupcaption cell | ![Locale group caption](images/globalization/locale-group-caption.png)
-Expanded | Expanded | ![Locale expanded](images/globalization/locale-expanded.png)
-Collapsed | Collapsed | ![Locale collapsed](images/globalization/locale-collapsed.png)
+Grid_GroupDropArea | Drag a column header here to group its column | ![Locale group drop area](images/globalization/locale-group-drop-area.png)
+Grid_UnGroup | Click here to ungroup | ![Locale un group](images/globalization/locale-un-group.png)
+Grid_GroupDisable | Grouping is disabled for this column | ![Locale group disable](images/globalization/locale-group-disable.png)
+Grid_Item | item | ![Locale Item](images/globalization/locale-item.png)
+Grid_Items | items | ![Locale Items](images/globalization/locale-items.png)
+Grid_UnGroupButton | Click here to ungroup |
+Grid_GroupDescription | Press Ctrl space to group | ![Locale group description](images/globalization/locale-group-description.png)
 
 **Filtering**
 
 Locale key words |Text | Example 
 -----|-----|-----
-InvalidFilterMessage | Invalid Filter Data
-FilterbarTitle | \s filter bar cell | ![Locale filterbar title](images/globalization/locale-filterbar-title.png)
-Matchs | No Matches Found | ![Locale matchs](images/globalization/locale-matchs.png)
-FilterButton | Filter | ![Locale filter button](images/globalization/locale-filter-button.png)
-ClearButton | Clear | ![Locale clear button](images/globalization/locale-clear-button.png)
-StartsWith | Starts With | ![Locale starts with](images/globalization/locale-starts-with.png)
-EndsWith | Ends With | ![Locale ends with](images/globalization/locale-ends-with.png)
-Contains | Contains | ![Locale contains](images/globalization/locale-contains.png)
-Equal | Equal | ![Locale equal](images/globalization/locale-equal.png)
-NotEqual | Not Equal | ![Locale not equal](images/globalization/locale-not-equal.png)
-LessThan | Less Than | ![Locale less than](images/globalization/locale-less-than.png)
-LessThanOrEqual | Less Than Or Equal | ![Locale less than or equal](images/globalization/locale-less-than-or-equal.png)
-GreaterThan | Greater Than | ![Locale greater than](images/globalization/locale-greater-than.png)
-GreaterThanOrEqual | Greater Than Or Equal | ![Locale greater than or equal](images/globalization/locale-greater-than-or-equal.png)
-ChooseDate | Choose a Date | ![Locale choose date](images/globalization/locale-choose-date.png)
-EnterValue | Enter the value | ![Locale enter value](images/globalization/locale-enter-value.png)
-SelectAll | Select All | ![Locale select all](images/globalization/locale-select-all.png)
-Blanks | Blanks | ![Locale blanks](images/globalization/locale-blanks.png)
-FilterTrue | True | ![Locale filter true](images/globalization/locale-filter-true.png)
-FilterFalse | False | ![Locale filter false](images/globalization/locale-filter-false.png)
-NoResult | No Matches Found | ![Locale no result](images/globalization/locale-no-result.png)
-ClearFilter | Clear Filter | ![Locale clear filter](images/globalization/locale-clear-filter.png)
-NumberFilter | Number Filters | ![Locale number filter](images/globalization/locale-number-filter.png)
-TextFilter | Text Filters | ![Locale text filter](images/globalization/locale-text-filter.png)
-DateFilter | Date Filters | ![Locale date filter](images/globalization/locale-date-filter.png)
-DateTimeFilter | DateTime Filters | ![Locale date time filter](images/globalization/locale-date-time-filter.png)
-MatchCase | Match Case | ![Locale match case](images/globalization/locale-match-case.png)
-Between | Between | ![Locale between](images/globalization/locale-between.png)
-CustomFilter | Custom Filter | ![Locale custom filter](images/globalization/locale-custom-filter.png)
-CustomFilterPlaceHolder | Enter the value | ![Locale custom filter placeholder](images/globalization/locale-custom-filter-placeholder.png)
-CustomFilterDatePlaceHolder | Choose a date | ![Locale custom filter date placeholder](images/globalization/locale-custom-filter-date-placeholder.png)
-AND | AND | ![Locale AND](images/globalization/locale-AND.png)
-OR | OR | ![Locale OR](images/globalization/locale-OR.png)
-ShowRowsWhere | Show rows where: | ![Locale show rows where](images/globalization/locale-show-rows-where.png)
-NotStartsWith | Does Not Start With | ![Locale not starts with](images/globalization/locale-not-starts-with.png)
-Like | Like | ![Locale like](images/globalization/locale-like.png)
-NotEndsWith | Does Not End With | ![Locale not ends with](images/globalization/locale-not-ends-with.png)
-NotContains | Does Not Contain | ![Locale not contains](images/globalization/locale-not-contains.png)
-IsNull | Null | ![Locale is null](images/globalization/locale-is-null.png)
-NotNull | Not Null | ![Locale not null](images/globalization/locale-not-null.png)
-IsEmpty | Empty | ![Locale is empty](images/globalization/locale-is-empty.png)
-IsNotEmpty | Not Empty | ![Locale is not empty](images/globalization/locale-is-not-empty.png)
-AddCurrentSelection | Add current selection to filter | ![Locale add current selection](images/globalization/locale-add-current-selection.png)
-FilterMenuDialogARIA | Filter menu dialog | ![Locale filter menu dialog ARIA](images/globalization/locale-filter-menu-dialog-ARIA.png)
-ExcelFilterDialogARIA | Excel filter dialog | ![Locale excel menu dialog ARIA](images/globalization/locale-excel-menu-dialog-ARIA.png)
-CustomFilterDialogARIA | Custom filter dialog | ![Locale Custom filter dialog ARIA](images/globalization/locale-custom-filter-dialog-ARIA.png)
-SortAtoZ | Sort A to Z | ![Locale sort AtoZ](images/globalization/locale-sortAtoZ.png)
-SortZtoA | Sort Z to A | ![Locale sort ZtoA](images/globalization/locale-sortZtoA.png)
-SortByOldest | Sort by Oldest | ![Locale sort by oldest](images/globalization/locale-sort-by-oldest.png)
-SortByNewest | Sort by Newest | ![Locale sort by newest](images/globalization/locale-sort-by-newest.png)
-SortSmallestToLargest | Sort Smallest to Largest | ![Locale sort smallest to largest](images/globalization/locale-sort-smallest-to-largest.png)
-SortLargestToSmallest | Sort Largest to Smallest | ![Locale sort largest to smallest](images/globalization/locale-sort-largest-to-smallest.png)
-FilterDescription | Press Alt Down to open filter Menu | ![Locale filter description](images/globalization/locale-filter-description.png)
+Grid_InvalidFilterMessage | Invalid Filter Data
+Grid_FilterbarTitle | \s filter bar cell | ![Locale filterbar title](images/globalization/locale-filterbar-title.png)
+Grid_Matchs | No Matches Found | ![Locale matchs](images/globalization/locale-matchs.png)
+Grid_FilterButton | Filter | ![Locale filter button](images/globalization/locale-filter-button.png)
+Grid_ClearButton | Clear | ![Locale clear button](images/globalization/locale-clear-button.png)
+Grid_StartsWith | Starts With | ![Locale starts with](images/globalization/locale-starts-with.png)
+Grid_EndsWith | Ends With | ![Locale ends with](images/globalization/locale-ends-with.png)
+Grid_Contains | Contains | ![Locale contains](images/globalization/locale-contains.png)
+Grid_Equal | Equal | ![Locale equal](images/globalization/locale-equal.png)
+Grid_NotEqual | Not Equal | ![Locale not equal](images/globalization/locale-not-equal.png)
+Grid_LessThan | Less Than | ![Locale less than](images/globalization/locale-less-than.png)
+Grid_LessThanOrEqual | Less Than Or Equal | ![Locale less than or equal](images/globalization/locale-less-than-or-equal.png)
+Grid_GreaterThan | Greater Than | ![Locale greater than](images/globalization/locale-greater-than.png)
+Grid_GreaterThanOrEqual | Greater Than Or Equal | ![Locale greater than or equal](images/globalization/locale-greater-than-or-equal.png)
+Grid_ChooseDate | Choose a Date | ![Locale choose date](images/globalization/locale-choose-date.png)
+Grid_EnterValue | Enter the value | ![Locale enter value](images/globalization/locale-enter-value.png)
+Grid_SelectAll | Select All | ![Locale select all](images/globalization/locale-select-all.png)
+Grid_Blanks | Blanks | ![Locale blanks](images/globalization/locale-blanks.png)
+Grid_FilterTrue | True | ![Locale filter true](images/globalization/locale-filter-true.png)
+Grid_FilterFalse | False | ![Locale filter false](images/globalization/locale-filter-false.png)
+Grid_NoResult | No Matches Found | ![Locale no result](images/globalization/locale-no-result.png)
+Grid_ClearFilter | Clear Filter | ![Locale clear filter](images/globalization/locale-clear-filter.png)
+Grid_NumberFilter | Number Filters | ![Locale number filter](images/globalization/locale-number-filter.png)
+Grid_TextFilter | Text Filters | ![Locale text filter](images/globalization/locale-text-filter.png)
+Grid_DateFilter | Date Filters | ![Locale date filter](images/globalization/locale-date-filter.png)
+Grid_DateTimeFilter | DateTime Filters | ![Locale date time filter](images/globalization/locale-date-time-filter.png)
+Grid_MatchCase | Match Case | ![Locale match case](images/globalization/locale-match-case.png)
+Grid_Between | Between | ![Locale between](images/globalization/locale-between.png)
+Grid_CustomFilter | Custom Filter | ![Locale custom filter](images/globalization/locale-custom-filter.png)
+Grid_CustomFilterPlaceHolder | Enter the value | ![Locale custom filter placeholder](images/globalization/locale-custom-filter-placeholder.png)
+Grid_CustomFilterDatePlaceHolder | Choose a date | ![Locale custom filter date placeholder](images/globalization/locale-custom-filter-date-placeholder.png)
+Grid_AND | AND | ![Locale AND](images/globalization/locale-AND.png)
+Grid_OR | OR | ![Locale OR](images/globalization/locale-OR.png)
+Grid_ShowRowsWhere | Show rows where: | ![Locale show rows where](images/globalization/locale-show-rows-where.png)
 
 **Searching**
 
 Locale key words |Text | Example 
 -----|-----|-----
-Search | Search | ![Locale search](images/globalization/locale-search.png)
-SearchColumns | search columns
-Clear | Clear | ![Locale clear](images/globalization/locale-clear.png)
-
-**Sorting**
-
-Locale key words |Text | Example 
------|-----|-----
-Sort | Sort | ![Locale sort](images/globalization/locale-sort.png)
-SortDescription | Press Enter to sort | ![Locale sort description](images/globalization/locale-sort-description.png)
+Grid_Search | Search | ![Locale search](images/globalization/locale-search.png)
+Grid_SearchColumns | search columns
 
 **Toolbar**
 
 Locale key words |Text | Example 
 -----|-----|-----
-Print | Print | ![Locale print](images/globalization/locale-print.png)
-Pdfexport | PDF Export | ![Locale pdfexport](images/globalization/locale-pdfexport.png)
-Excelexport | Excel Export | ![Locale excelexport](images/globalization/locale-excelexport.png)
-Csvexport | CSV Export | ![Locale csvexport](images/globalization/locale-csvexport.png)
+Grid_Print | Print | ![Locale print](images/globalization/locale-print.png)
+Grid_Pdfexport | PDF Export | ![Locale pdfexport](images/globalization/locale-pdfexport.png)
+Grid_Excelexport | Excel Export | ![Locale excelexport](images/globalization/locale-excelexport.png)
+Grid_Csvexport | CSV Export | ![Locale csvexport](images/globalization/locale-csvexport.png)
 
 **ColumnMenu**
 
 Locale key words |Text | Example 
 -----|-----|-----
-FilterMenu | Filter | ![Locale filter menu](images/globalization/locale-filter-menu.png)
-AutoFitAll | Autofit all columns |
-AutoFit | Autofit this column |
-ColumnMenuDialogARIA | Column menu dialog | ![Locale columnmenu dialog ARIA](images/globalization/locale-columnmenu-dialog-ARIA.png)
-ColumnMenuDescription | Press Alt Down to open Column Menu | ![Locale columnmenu description](images/globalization/locale-columnmenu-description.png)
+Grid_FilterMenu | Filter | ![Locale filter menu](images/globalization/locale-filter-menu.png)
+Grid_AutoFitAll | Autofit all columns |
+Grid_AutoFit | Autofit this column |
 
 **ContextMenu**
 
 Locale key words |Text | Example 
 -----|-----|-----
-Copy | Copy | ![Locale copy](images/globalization/locale-copy.png)
-Group | Group by this column | ![Locale group](images/globalization/locale-group.png)
-Ungroup | Ungroup by this column | ![Locale ungroup](images/globalization/locale-ungroup.png)
-autoFitAll | Auto Fit all columns | ![Locale autofit all](images/globalization/locale-autofit-all.png)
-autoFit | Auto Fit this column | ![Locale autofit](images/globalization/locale-autofit.png)
-Export | Export | ![Locale export](images/globalization/locale-export.png)
-FirstPage | First Page | ![Locale first page](images/globalization/locale-first-page.png)
-LastPage | Last Page | ![Locale last page](images/globalization/locale-last-page.png)
-PreviousPage | Previous Page | ![Locale previous page](images/globalization/locale-previous-page.png)
-NextPage | Next Page | ![Locale next page](images/globalization/locale-next-page.png)
-SortAscending | Sort Ascending | ![Locale sort ascending](images/globalization/locale-sort-ascending.png)
-SortDescending | Sort Descending | ![Locale sort descending](images/globalization/locale-sort-descending.png)
-EditRecord | Edit Record | ![Locale edit record](images/globalization/locale-edit-record.png)
-DeleteRecord | Delete Record | ![Locale delete record](images/globalization/locale-delete-record.png)
-
-**Pager**
-
-Locale key words |Text | Example 
------|-----|-----
-currentPageInfo | {0} of {1} pages | ![Locale current page info](images/globalization/locale-current-page-info.png)
-totalItemsInfo | ({0} items) | ![Locale total items info](images/globalization/locale-total-items-info.png)
-firstPageTooltip | Go to first page | ![Locale first page tooltip](images/globalization/locale-first-page-tooltip.png)
-lastPageTooltip | Go to last page | ![Locale last page tooltip](images/globalization/locale-last-page-tooltip.png)
-nextPageTooltip | Go to next page | ![Locale next page tooltip](images/globalization/locale-next-page-tooltip.png)
-previousPageTooltip | Go to previous page | ![Locale previous page tooltip](images/globalization/locale-previous-page-tooltip.png)
-nextPagerTooltip | Go to next pager items | ![Locale next pager tooltip](images/globalization/locale-next-pager-tooltip.png)
-previousPagerTooltip | Go to previous pager items | ![Locale previous pager tooltip](images/globalization/locale-previous-pager-tooltip.png)
-pagerDropDown | Items per page | ![Locale pager drop down](images/globalization/locale-pager-drop-down.png)
-pagerAllDropDown | Items | ![Locale pager all drop down](images/globalization/locale-pager-all-drop-down.png)
-All | All | ![Locale pager all](images/globalization/locale-pager-all.png)
-totalItemInfo | ({0} item) | ![Locale total item info](images/globalization/locale-pager-total-item-info.png)
-Container | Pager Container | ![Locale pager container](images/globalization/locale-pager-container.png)
-Information | Pager Information |
-ExternalMsg | Pager external message | ![Locale pager external msg](images/globalization/locale-pager-external-msg.png)
-Page | Page  |
-Of |  of  | ![Locale pager of](images/globalization/locale-pager-of.png)
-Pages |  Pages |
+Grid_Copy | Copy | ![Locale copy](images/globalization/locale-copy.png)
+Grid_Group | Group by this column | ![Locale group](images/globalization/locale-group.png)
+Grid_Ungroup | Ungroup by this column | ![Locale ungroup](images/globalization/locale-ungroup.png)
+Grid_autoFitAll | Auto Fit all columns | ![Locale autofit all](images/globalization/locale-autofit-all.png)
+Grid_autoFit | Auto Fit this column | ![Locale autofit](images/globalization/locale-autofit.png)
+Grid_Export | Export | ![Locale export](images/globalization/locale-export.png)
+Grid_FirstPage | First Page | ![Locale first page](images/globalization/locale-first-page.png)
+Grid_LastPage | Last Page | ![Locale last page](images/globalization/locale-last-page.png)
+Grid_PreviousPage | Previous Page | ![Locale previous page](images/globalization/locale-previous-page.png)
+Grid_NextPage | Next Page | ![Locale next page](images/globalization/locale-next-page.png)
+Grid_SortAscending | Sort Ascending | ![Locale sort ascending](images/globalization/locale-sort-ascending.png)
+Grid_SortDescending | Sort Descending | ![Locale sort descending](images/globalization/locale-sort-descending.png)
+Grid_EditRecord | Edit Record | ![Locale edit record](images/globalization/locale-edit-record.png)
+Grid_DeleteRecord | Delete Record | ![Locale delete record](images/globalization/locale-delete-record.png)
 
 ### Switch the different localization
 
@@ -229,11 +158,11 @@ The Syncfusion Blazor DataGrid allows you to switch the localization from one cu
 
 To switch to a different localization, follow these steps:
 
-**1. Create a Blazor web app**
+**Step 1: Create a Blazor web app**
  
 You can create a **Blazor Web App** named **LocalizationSample** using Visual Studio 2022, either via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). Make sure to configure the appropriate [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows).
 
-**2. Install Syncfusion Blazor Grid and Themes NuGet packages**
+**Step 2: Install Syncfusion Blazor Grid and Themes NuGet packages**
  
 To add the Syncfusion Blazor Grid in the app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
  
@@ -249,7 +178,7 @@ Install-Package Syncfusion.Blazor.Buttons -Version {{ site.releaseversion }}
  
 > Syncfusion Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for a complete list of available packages.
  
-**3. Register Syncfusion Blazor service**
+**Step 3: Register Syncfusion Blazor service**
  
 - Open the **~/_Imports.razor** file and import the required namespaces.
  
@@ -259,7 +188,7 @@ Install-Package Syncfusion.Blazor.Buttons -Version {{ site.releaseversion }}
 @using Syncfusion.Blazor.Buttons
 ```
   
-**4. Add stylesheet and script resources**
+**Step 4: Add stylesheet and script resources**
  
 Include the theme stylesheet and script references in the **~/Components/App.razor** file.
  
@@ -278,7 +207,7 @@ Include the theme stylesheet and script references in the **~/Components/App.raz
 > * Refer to the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic for various methods to include themes (e.g., Static Web Assets, CDN, or CRG).
 > * Set the `rendermode` to **InteractiveServer** or **InteractiveAuto** in your Blazor Web App configuration.
 
-**5. Create and register localization service**
+**Step 5: Create and register localization service**
 
 Create a **SyncfusionLocalizer.cs** file and add the following code. For detailed steps on creating and registering a localization service, refer to the [Blazor Localization documentation](https://blazor.syncfusion.com/documentation/common/localization?cs-save-lang=1&cs-lang=csharp#create-and-register-localization-service).
 
@@ -313,7 +242,7 @@ namespace LocalizationSample.Client
 {% endhighlight %}
 {% endtabs %}
 
-**6. Configure ~/Program.cs file**
+**Step 6: Configure ~/Program.cs file**
 
 * **Set the Culture of the Application:** In the client-side **~/Program.cs** , use JavaScript Interop to retrieve the user's culture setting from local storage. If none is found, set the default to **en-US**.
 
@@ -358,7 +287,7 @@ await builder.Build().RunAsync();
 {% endhighlight %}
 {% endtabs %}
 
-**7: In the project file, add the following code:**
+**Step 7: In the project file, add the following code:**
 
 ```
 <PropertyGroup>
@@ -367,7 +296,7 @@ await builder.Build().RunAsync();
 
 ```
  
-**8. Add javaScript function for culture management**
+**Step 8: Add javaScript function for culture management**
 
 For a Blazor Web App, add the following JavaScript function to the **~/Components/App.razor** file (after the Blazor `<script>` tag and before the closing `</body>`). This function retrieves and sets the user's selected culture in the browser's local storage.
 
@@ -403,7 +332,7 @@ For a Blazor Web App, add the following JavaScript function to the **~/Component
 {% endhighlight %}
 {% endtabs %}
 
-**9. Configure culture switching with Syncfusion Grid** 
+**Step 9: Configure culture switching with Syncfusion Grid** 
 
 In the **Counter.razor** file, add the following code to change the culture and display a Syncfusion Grid with a Button to switch between English (en-US) and French (fr-FR):
  
@@ -452,7 +381,7 @@ In the **Counter.razor** file, add the following code to change the culture and 
 {% endtabs %}
 
 
-**11. Create a model class**
+**Step 11: Create a model class**
 
 Create a new folder named **Data**. Then, add a model class named **OrderData.cs** in the **Data** folder to represent the order data.
 
@@ -503,9 +432,9 @@ namespace LocalizationSample.Client.Data
 {% endhighlight %}
 {% endtabs %}
 
-**12. Run the application**
+**Step 12: Run the application**
  
-When you run the application, the Syncfusion Blazor DataGrid will display data fetched from the API.
+When you run the application, the Grid will display data fetched from the API.
 
 ![Switch the different localization](images/globalization/switch.png)
 
@@ -517,91 +446,9 @@ To enable RTL in the Grid, you can use the [EnableRtl](https://help.syncfusion.c
 
 To achieve this, follow the steps below:
 
-**1. Create a Blazor web app**
- 
-You can create a **Blazor Web App** named **LocalizationSample** using Visual Studio 2022, either via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). Make sure to configure the appropriate [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows).
+**Step 1:** Follow the steps from Step 1 to Step 5 in the following [link](https://blazor.syncfusion.com/documentation/datagrid/global-local#switch-the-different-localization), then continue with the steps below.
 
-**2. Install Syncfusion Blazor Grid and Themes NuGet packages**
- 
-To add the Blazor DataGrid in the app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
- 
-If your Blazor Web App uses `WebAssembly` or `Auto` render modes, install the Syncfusion Blazor NuGet packages in the client project.
- 
-Alternatively, use the following Package Manager commands:
- 
-```powershell
-Install-Package Syncfusion.Blazor.Grid -Version {{ site.releaseversion }}
-Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
-Install-Package Syncfusion.Blazor.Buttons -Version {{ site.releaseversion }}
-```
- 
-> Syncfusion Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to the [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for a complete list of available packages.
- 
-**3. Register Syncfusion Blazor service**
- 
-- Open the **~/_Imports.razor** file and import the required namespaces.
- 
-```razor
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.Buttons
-```
-  
-**4. Add stylesheet and script resources**
- 
-Include the theme stylesheet and script references in the **~/Components/App.razor** file.
- 
-```html
-<head>
-    ....
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
-</head>
-....
-<body>
-    ....
-    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-</body>
-```
- 
-> * Refer to the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic for various methods to include themes (e.g., Static Web Assets, CDN, or CRG).
-> * Set the `rendermode` to **InteractiveServer** or **InteractiveAuto** in your Blazor Web App configuration.
-
-**5. Create and register localization service**
-
-Create a **SyncfusionLocalizer.cs** file and add the following code. For detailed steps on creating and registering a localization service, refer to the [Blazor Localization documentation](https://blazor.syncfusion.com/documentation/common/localization?cs-save-lang=1&cs-lang=csharp#create-and-register-localization-service).
-
-{% tabs %}
-{% highlight cs tabtitle="SyncfusionLocalizer.cs" %}
-
-using Syncfusion.Blazor;
-
-namespace LocalizationSample.Client
-{
-    public class SyncfusionLocalizer : ISyncfusionStringLocalizer
-    {
-        // To get the locale key from mapped resources file
-        public string GetText(string key)
-        {
-            return this.ResourceManager.GetString(key);
-        }
-
-        // To access the resource file and get the exact value for locale key
-
-        public System.Resources.ResourceManager ResourceManager
-        {
-            get
-            {
-                // Replace the ApplicationNamespace with your application name.
-                return LocalizationSample.Client.Resources.SfResources.ResourceManager;
-            }
-        }
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-**6. Configure ~/Program.cs file**
+**Step 2: Configure ~/Program.cs file**
 
 Register the `SyncfusionLocalizer` and Syncfusion Blazor services in both **~/Program.cs**  files.
  
@@ -617,7 +464,7 @@ builder.Services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(Syncfus
 {% endhighlight %}
 {% endtabs %}
 
-**8. Setting the culture in Blazor start option**
+**Step 3: Setting the culture in Blazor start option**
 
 * Add the **autostart="false"** attribute to the Blazor <script> tag to prevent Blazor from starting automatically.
 
@@ -657,7 +504,7 @@ builder.Services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(Syncfus
 {% endhighlight %}
 {% endtabs %}
 
-**9. Enable or disable RTL mode using toggle Switch**
+**Step 4: Enable or disable RTL mode using toggle Switch**
 
 The [EJ2 Toggle Switch Button](https://blazor.syncfusion.com/documentation/toggle-switch-button) is added to enable or disable the Right-to-Left (RTL) feature for the Arabic (ar-AE) locale. When the switch is toggled, the [ValueChange](http://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html#Syncfusion_Blazor_Buttons_SfSwitch_1_ValueChange) event is triggered, and the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableRtl) property of the Grid is updated accordingly.
 
@@ -675,7 +522,7 @@ The [EJ2 Toggle Switch Button](https://blazor.syncfusion.com/documentation/toggl
 </div>
 
 
-<SfGrid @ref="Grid" DataSource="@Orders" AllowSorting="true" AllowGrouping="true" AllowFiltering="true" ShowColumnMenu="true" ShowColumnChooser="true" AllowPaging="true" Height="315" EnableRtl="@IsRtl" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
+<SfGrid @ref="Grid" DataSource="@Orders" AllowSorting="true" AllowGrouping="true" AllowFiltering="true" ShowColumnMenu="true" ShowColumnChooser="true" AllowPaging="true" Height="315" EnableRtl="@isRTLEnabled" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
     <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal"></GridEditSettings>
     <GridColumns>
@@ -691,7 +538,7 @@ The [EJ2 Toggle Switch Button](https://blazor.syncfusion.com/documentation/toggl
     private SfGrid<OrderData> Grid;
 
     public List<OrderData> Orders { get; set; }
-    public bool IsRtl { get; set; } = false;
+    public bool isRTLEnabled { get; set; } = false;
 
     protected override void OnInitialized()
     {
@@ -700,7 +547,7 @@ The [EJ2 Toggle Switch Button](https://blazor.syncfusion.com/documentation/toggl
 
     private void Change(Syncfusion.Blazor.Buttons.ChangeEventArgs<bool> args)
     {
-        IsRtl = args.Checked;
+        isRTLEnabled = args.Checked;
         Grid.Refresh();
     }
 }
@@ -708,7 +555,7 @@ The [EJ2 Toggle Switch Button](https://blazor.syncfusion.com/documentation/toggl
 {% endhighlight %}
 {% endtabs %}
 
-**11. Create a model class**
+**Step 5: Create a model class**
 
 Create a new folder named **Models**. Then, add a model class named **OrderData.cs** in the **Models** folder to represent the order data.
 
@@ -759,8 +606,8 @@ namespace LocalizationSample.Client.Models
 {% endhighlight %}
 {% endtabs %}
 
-**12. Run the application**
+**Step 6: Run the application**
  
-When you run the application, the Blazor DataGrid will display data fetched from the API.
+When you run the application, the Grid will display data fetched from the API.
 
 ![Right to Left - RTL](images/globalization/enable-rtl.png)
