@@ -18,7 +18,6 @@ The following example demonstrates how to group column chooser items using the d
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
-@using Playground.User
 
 <SfGrid @ref="grid" TValue="Order" DataSource="@GridData" ShowColumnChooser="true" Toolbar="@( new List<string>() { "ColumnChooser"})" AllowPaging="true">
     <GridColumnChooserSettings>
