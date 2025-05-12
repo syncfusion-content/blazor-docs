@@ -1354,6 +1354,8 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VtrzMhZrzICSfxBH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+![Using external form](./images/blazor-datagrid-editing-form.gif)
+
 ## Troubleshoot editing works only for first row
 
 Editing functionalities can be performed based on the primary key value of the selected row. If the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property is not defined in the Grid, the edit or delete action will always target the first row. To resolve this, ensure that the `IsPrimaryKey` property is set to **true** for the column that holds the unique identifier for each row.
