@@ -856,9 +856,9 @@ namespace BlazorApp1.Data
 
 ## Edit foreign key column
 
-The Syncfusion Blazor DataGrid offers a powerful editing feature for foreign key columns, enhancing the default rendering of the [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) during editing. This flexibility is particularly useful when you need to customize the editor for foreign key columns. By default, the Syncfusion Blazor DataGrid renders the DropDownList as the editor for foreign key columns during editing. However, you can enhance and customize this behavior by leveraging the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) for the GridColumn. The `EditTemplate` allows you to specify a cell edit template that serves as an editor for a particular column, accepting either a template string or an HTML element ID.
+The Syncfusion Blazor DataGrid offers a powerful editing feature for foreign key columns, enhancing the default rendering of the [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) during editing. This flexibility is particularly useful when you need to customize the editor for foreign key columns. By default, the Grid renders the `DropDownList` as the editor for foreign key columns during editing. However, you can enhance and customize this behavior by leveraging the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) for the GridColumn. The `EditTemplate` allows you to specify a cell edit template that serves as an editor for a particular column, accepting either a template string or an HTML element ID.
 
-In the following code example, the Employee Name is a foreign key column. When editing, the [ComboBox](https://blazor.syncfusion.com/documentation/combobox/getting-started-with-web-app) is rendered instead of the DropDownList.
+In the following code example, the Employee Name is a foreign key column. When editing, the [ComboBox](https://blazor.syncfusion.com/documentation/combobox/getting-started-with-web-app) is rendered instead of the `DropDownList`.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1454,6 +1454,8 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDVACDDzLCOPwlKE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+> If a template column has a corresponding [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) property defined, the value entered in the template column’s input field will be stored in the associated edit column of the row’s data object.
+> 
 ## Event trace while editing
 
 The Syncfusion Blazor DataGrid provides granular control over editing workflows using dedicated events. These events allow you to monitor and customize actions such as editing, adding, deleting, and updating rows.
@@ -1649,7 +1651,6 @@ public class Book
     public bool? Available { get; set; }
 }
 ```
-The `Book` class represents the structure of a book in the library, including properties like Id, Name, Author, Quantity, Price, and Available.
 
 **ILibraryService Interface**
 
