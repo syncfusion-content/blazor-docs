@@ -843,6 +843,81 @@ You can prevent autofill feature by setting the [Autofill](https://help.syncfusi
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtBpXMrazUJxtJCP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+## Hide default filter icons while perform filtering through method
+
+When performing filtering programmatically using methods in the Syncfusion Blazor DataGrid, the default filter icons in the column headers can be hidden to simplify the user interface.
+
+To customize the filter icon in the Grid, use the display property of the filtermenu as mentioned below:
+
+```cshtml
+<style>
+    .e-filtermenudiv.e-icons.e-icon-filter {
+        display: none;
+    }
+</style>
+```
+
+The following example demonstrates how to filter the **CustomerID** column programmatically and hide the default filter icons:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
+<SfButton OnClick="filterAction">Filter Customer ID Column</SfButton>
+<SfButton style="margin-left:5px" OnClick="clearFilter"> Clear Filter</SfButton>
+<SfGrid DataSource="@Orders" @ref="Grid" AllowPaging="true" AllowFiltering="true">
+    <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="Syncfusion.Blazor.Grids.ColumnType.Date" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+<style type="text/css">
+    .e-filtermenudiv.e-icons.e-icon-filter {
+        display: none;
+    }
+</style>
+@code {
+    public List<Order> Orders { get; set; }  
+        SfGrid<Order> Grid; 
+    protected override void OnInitialized()
+    {
+        var customerIds = new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID", "ECHO", "CHARLIE", "DELTA", "FOXTROT", "GOLF", "HOTEL", "INDIA", "JULIET" };
+        Orders = Enumerable.Range(1, 12).Select(x => new Order()
+            {
+                OrderID = 1000 + x,
+                CustomerID = customerIds[x % customerIds.Length],
+                Freight = 2.1 * x,
+                OrderDate = DateTime.Now.AddDays(-x),
+            }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+    public async Task filterAction()
+    {
+        await Grid.FilterByColumnAsync("CustomerID", "equal", "ECHO");
+    }
+    public async Task clearFilter()
+    {
+        await Grid.ClearFilteringAsync();
+    } 
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBpXMrazUJxtJCP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## Filter menu events
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid offers the [Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Filtering), [Filtered](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Filtered), [FilterDialogOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_FilterDialogOpening) and [FilterDialogOpened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_FilterDialogOpened) events, which provide information about the actions being performed.
