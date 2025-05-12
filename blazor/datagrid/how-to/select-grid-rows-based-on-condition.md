@@ -9,91 +9,73 @@ documentation: ug
 
 # Select Rows Based on Certain Condition in Blazor DataGrid Component
 
-You can programmatically select specific rows in the Syncfusion Blazor DataGrid based on [SelectRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRows_System_Double___) method within the [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound) event of the Grid.
+You can select specific rows in the datagrid based on some conditions by using the [SelectRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRows_System_Double___) method in the [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound) event of the DataGrid component.
 
-In the following example, rows where the **Freight** column value is greater than 10 are identified in the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDataBound) event, and their corresponding row indexes are stored. These indexes are then passed to the `SelectRows` method during the `DataBound` event to highlight the matching rows.
+This is demonstrated in the following sample code, where the index value of datagrid rows with **Freight** column value greater than 10 are stored in the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDataBound) event and then selected in the [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound) event,
 
-{% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-
+```cshtml
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Delete", "Edit","Update", "Cancel" })" AllowPaging="true">
-    <GridEvents OnActionBegin="OnActionBegin" TValue="Order"></GridEvents>
-    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
+<SfGrid @ref="DefaultGrid" DataSource="@Orders" AllowPaging="true">
+    <GridSelectionSettings Type="SelectionType.Multiple"></GridSelectionSettings>
+    <GridEvents RowDataBound="OnRowDataBound" DataBound="OnDataBound" TValue="Order"></GridEvents>
     <GridPageSettings PageSize="8"></GridPageSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type=ColumnType.Date TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 @code{
-    private SfGrid<Order> Grid;
+    private SfGrid<Order> DefaultGrid;
+
     public List<Order> Orders { get; set; }
+
+    public List<double> SelectedNodeIndex = new List<double>();
 
     protected override void OnInitialized()
     {
-        Orders = Order.GetAllRecords();
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.5 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
     }
 
-    public void OnActionBegin(ActionEventArgs<Order> args)
+    public async Task  OnDataBound(object args)
     {
-        if (args.RequestType == Action.Add)
+        // The filtered index values are selected
+        await this.DefaultGrid.SelectRows(SelectedNodeIndex.ToArray());
+    }
+
+    public void OnRowDataBound(RowDataBoundEventArgs<Order> args)
+    {
+        // Freight values greater than 10 are filtered by comparing the primary column values
+        if (args.Data.Freight > 10)
         {
-            args.Cancel = true;
+            var dataSource = this.DefaultGrid.DataSource;
+            var index = 0;
+            foreach (var data in dataSource)
+            {
+                if (data.OrderID == args.Data.OrderID)
+                {
+                    SelectedNodeIndex.Add(index);
+                    break;
+                }
+                index++;
+            }
         }
     }
 }
-
-{% endhighlight %}
-{% highlight c# tabtitle="Order.cs" %}
-
- public class Order
- {
-     public static List<Order> Orders = new List<Order>();
-
-     public Order(int orderID, string customerID, double freight, string shipCity, string shipName, string shipCountry)
-     {
-         this.OrderID = orderID;
-         this.CustomerID = customerID;
-         this.Freight = freight;
-         this.ShipCity = shipCity;
-         this.ShipName = shipName;
-         this.ShipCountry = shipCountry;
-     }
-
-     public static List<Order> GetAllRecords()
-     {
-         if (Orders.Count == 0)
-         {
-             Orders.Add(new Order(10248, "VINET", 32.38, "Reims", "Vins et alcools Chevalier", "France"));
-             Orders.Add(new Order(10249, "TOMSP", 11.61, "Münster", "Toms Spezialitäten", "Germany"));
-             Orders.Add(new Order(10250, "HANAR", 65.83, "Rio de Janeiro", "Hanari Carnes", "Brazil"));
-             Orders.Add(new Order(10251, "VICTE", 41.34, "Lyon", "Victuailles en stock", "France"));
-             Orders.Add(new Order(10252, "SUPRD", 51.3, "Charleroi", "Suprêmes délices", "Belgium"));
-             Orders.Add(new Order(10253, "HANAR", 58.17, "Rio de Janeiro", "Hanari Carnes", "Brazil"));
-             Orders.Add(new Order(10254, "VICTE", 22.98, "Bern", "Chop-suey Chinese", "Switzerland"));
-             Orders.Add(new Order(10255, "TOMSP", 148.33, "Genève", "Richter Supermarkt", "Switzerland"));
-             Orders.Add(new Order(10256, "HANAR", 13.97, "Resende", "Wellington Import Export", "Brazil"));
-             Orders.Add(new Order(10257, "VINET", 81.91, "San Cristóbal", "Hila Alimentos", "Venezuela"));
-            
-         }
-
-         return Orders;
-     }
-
-     public int OrderID { get; set; }
-     public string CustomerID { get; set; }
-     public double Freight { get; set; }
-     public string ShipCity { get; set; }
-     public string ShipName { get; set; }
-     public string ShipCountry { get; set; }
- }
-
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhSZpVOJpckzofz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+```
