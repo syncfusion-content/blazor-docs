@@ -13,7 +13,7 @@ The Syncfusion Blazor DataGrid provides a feature known as Globalization (global
 
 ## Localization
 
-The Syncfusion Blazor DataGrid supports localization, allowing you to customize the text used in the Grid to suit different languages or cultural preferences. You can change static text on various elements, such as **group drop area text** and pager **information text**, to different cultures, such as **Arabic**, **Deutsch**, **French**, and more.. For detailed instructions, refer to the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion Blazor components.
+The Syncfusion Blazor DataGrid supports localization, allowing you to customize the text used in the Grid to suit different languages or cultural preferences. You can change static text on various elements, such as **group drop area text** and pager **information text**, to different cultures, such as **Arabic**, **Deutsch**, **French**, and more. For detailed instructions, refer to the [Blazor Localization](https://blazor.syncfusion.com/documentation/common/localization) topic to localize Syncfusion Blazor components.
 
 **Data Rendering**
 
