@@ -9,9 +9,9 @@ documentation: ug
 
 # Custom Control in Datagrid Toolbar in Blazor DataGrid
 
-The Syncfusion Blazor DataGrid allows you to render custom controls inside its toolbar area. This can be achieved by initializing the custom controls within the `Template` property of the Toolbar component. This toolbar component is defined inside the Grid.
+The Syncfusion Blazor DataGrid allows you to render custom controls inside its toolbar area. This can be achieved by initializing the custom controls within the `Template` property of the Toolbar component, which is placed inside the Grid.
 
-This is demonstrated in the following sample code where [Autocomplete](https://blazor.syncfusion.com/documentation/autocomplete/getting-started-with-web-app) component is rendered inside the Grid's toolbar and is used for performing search operation on the Grid.
+The following example demonstrates how the [Autocomplete](https://blazor.syncfusion.com/documentation/autocomplete/getting-started-with-web-app) component can be rendered inside the Grid's toolbar and used to perform search operations on the Grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

@@ -11,7 +11,7 @@ documentation: ug
 
 The [GridColumnChooserItemGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserItemGroup.html) allows you to organize column chooser items into logical groups. You can define column's group name by using the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserItemGroup.html#Syncfusion_Blazor_Grids_GridColumnChooserItemGroup_Title) property of `GridColumnChooserItemGroup` directive.
 
-The following example demonstrates how to group column chooser items using the default settings.
+The following example demonstrates how to group column chooser items using the default settings:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
