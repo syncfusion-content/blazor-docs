@@ -1,7 +1,7 @@
 ---
 layout: post
 title: PDF Export with Templates in Blazor DataGrid | Syncfusion
-description: Checkout and learn here all about PDF Export with Templates in Syncfusion Blazor DataGridd and much more details.
+description: Checkout and learn here all about PDF Export with Templates in Syncfusion Blazor DataGrid and much more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -67,7 +67,7 @@ The following sample demonstrates how to export template columns such as **First
         if (args.Item.Id == "Grid_pdfexport")  // Id is the combination of Grid's ID and item name.
         {
             PdfExportProperties ExportProperties = new PdfExportProperties();
-            ExportProperties.IncludeTemplateColumn = true;
+            ExportProperties.IncludeTemplateColumn = true; // Ensures template columns are included in the export.
             await this.DefaultGrid.ExportToPdfAsync(ExportProperties);
         }
     }
@@ -183,6 +183,7 @@ The following example demonstrates how the Grid is grouped by the **CustomerID**
        }
     }
 
+    // Customize the group caption in the exported PDF document.
     public void PdfGroupCaptionInfoHandler(PdfCaptionTemplateArgs args)
     {
        args.Cell.Value = args.Key + "-" + args.Count + " Records: " + args.HeaderText; 
@@ -250,12 +251,13 @@ The Syncfusion Blazor DataGrid provides the capability to export both parent and
 | Mode | Behavior |
 |-------|----------|
 | Expand | Exports the parent Grid with expanded detail rows.
-| Collapse | Exports the parent Grid with collapsed detail rows.
 | None | Exports the parent Grid alone.
 
 You can customize and format the detail rows in the exported PDF document using the [PdfDetailTemplateExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfDetailTemplateExporting) event. In this event, the detail rows of the PDF document are formatted in accordance with their parent row details.
 
 In the following example, detail row content is formatted by specifying the [Headers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_PdfDetailTemplateRowSettings_Headers), [Rows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_PdfDetailTemplateRowSettings_Rows) using parent row details, facilitating the creation of detail rows within the PDF document. Additionally, custom styles can be applied to specific cells using the [Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailTemplateCell.html#Syncfusion_Blazor_Grids_PdfDetailTemplateCell_Style) property.
+
+> If [ColumnCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_PdfDetailTemplateRowSettings_ColumnCount) is not provided or is less than the number of cells in the first row of Headers/Rows, the columns in the detail row of the PDF Grid will be generated based on the count of cells in the first row of Headers/Rows.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -368,7 +370,11 @@ In the following example, detail row content is formatted by specifying the [Hea
   public void PdfDetailTemplateHandler(PdfDetailTemplateEventArgs<ProductData> args) {
     var pdfRows=new List<PdfDetailTemplateRow>();
     var data=args.ParentRow.Data;
+
+    // Define number of columns in detail section.
     args.RowInfo.ColumnCount=2;
+
+    // Set the header row for detail section.
     args.RowInfo.Headers=new List<PdfDetailTemplateRow>() {
       new PdfDetailTemplateRow() {
         Cells=new List<PdfDetailTemplateCell>() {
@@ -380,39 +386,27 @@ In the following example, detail row content is formatted by specifying the [Hea
               Bold=true,
               FontColor="#0A76FF",
               FontSize=13
-            }
-          }
-        }
-      }
-    };
+            }}}}};
 
+    // Add each row of product details.
     pdfRows.Add(new PdfDetailTemplateRow() {
         Cells=new List<PdfDetailTemplateCell>() {
           new PdfDetailTemplateCell() {
             CellValue=data.ProductDesc, Index=0
-          }
-
-          ,
+          },
           new PdfDetailTemplateCell() {
             Index=1, Hyperlink=new Hyperlink() {
               DisplayText=data.Contact, Target=data.Contact
-            }
-          }
-        }
-      });
+            }}}});
 
     pdfRows.Add(new PdfDetailTemplateRow() {
         Cells=new List<PdfDetailTemplateCell>() {
           new PdfDetailTemplateCell() {
             CellValue=data.Cost, Index=0
-          }
-
-          ,
+          },
           new PdfDetailTemplateCell() {
             Index=1, CellValue="Available :" + data.Available
-          }
-        }
-      });
+          }}});
 
     pdfRows.Add(new PdfDetailTemplateRow() {
         Cells=new List<PdfDetailTemplateCell>() {
@@ -421,37 +415,30 @@ In the following example, detail row content is formatted by specifying the [Hea
           },
           new PdfDetailTemplateCell() {
             Index=1, CellValue=data.ReturnPolicy
-          }
-        }
-      });
+          }}});
 
     pdfRows.Add(new PdfDetailTemplateRow() {
         Cells=new List<PdfDetailTemplateCell>() {
           new PdfDetailTemplateCell() {
             CellValue="Offers :" + data.Offers, Index=0, Style=new PdfThemeStyle() {
               FontColor="#0A76FF", FontSize=12
-            }
-          },
+            }},
           new PdfDetailTemplateCell() {
             Index=1, CellValue=data.Cancellation
-          }
-        }
-      });
+          }}});
 
     pdfRows.Add(new PdfDetailTemplateRow() {
         Cells=new List<PdfDetailTemplateCell>() {
           new PdfDetailTemplateCell() {
             CellValue="Ratings: " + data.Ratings, Index=0, Style=new PdfThemeStyle() {
               FontColor="#0A76FF", FontSize=12
-            }
-          },
+            }},
           new PdfDetailTemplateCell() {
             Index=1, CellValue=data.Delivery, Style=new PdfThemeStyle() {
               FontColor="#0A76FF", FontSize=12
-            }
-          }
-        }
-      });
+            }}}});
+
+    // Assign the list of rows to the RowInfo.  
     args.RowInfo.Rows=pdfRows;
   }
 
