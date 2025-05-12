@@ -78,7 +78,7 @@ Some Syncfusion components use inline styles to achieve responsive layouts, prec
 
 | Components                | Properties/Functionalities requiring inline Styles                                                                 |
 |--------------------------|---------------------------------------------------------------------------------------------------------------------|
-| Accordion, Tabs, Toolbar, Kanban, Carousel, Toast, Skeleton, Splitter                 | Height and Width.|
+| Accordion, Tabs, Toolbar, Kanban, Carousel, Toast, Skeleton, Splitter, TreeGrid, TreeView                 | Height and Width.|
 | 3D Charts, TreeMap, Charts, ProgressBar, Circular Gauge, HeatMap Chart, LinaerGauge, Maps, Bullet Chart, ImageEditor, RangeSlider, Sankey, SmithChart, SparklineChart, Stock Chart                | Appearance customization, layout, and rendering.|
 | DatePicker, DateTime Picker, DateRange Picker, In-place Editor, Input Mask, ListBox, MultiSelect Dropdown, Numeric TextBox, Query Builder, TextArea, TextBox, TimePicker                 | Width|
 | Dashboard Layout         | Panel Height, gridline styles.|
