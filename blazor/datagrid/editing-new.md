@@ -28,7 +28,7 @@ To learn about the available edit modes and edit types in the Blazor Grid, you c
 @using Syncfusion.Blazor.Grids
 @using BlazorApp1.Data
 
-<SfGrid DataSource="@Orders">
+<SfGrid DataSource="@Orders" height="273px">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="100" ValidationRules="@(new ValidationRules{ Required=true})"></GridColumn>
@@ -110,7 +110,7 @@ public class OrderData
 
 ## Toolbar with edit option
 
-The toolbar with the edit option feature in the Blazor DataGrid provides a [built-in toolbar](https://blazor.syncfusion.com/documentation/datagrid/toolbar-items#built-in-toolbar-item) that includes various items for executing editing actions. This feature allows you to easily perform edit operations on the Grid data, such as modifying cell values, updating changes, and canceling edits.
+The toolbar with the edit option feature in the Syncfusion Blazor DataGrid provides a [built-in toolbar](https://blazor.syncfusion.com/documentation/datagrid/toolbar-items#built-in-toolbar-item) that includes various items for executing editing actions. This feature allows you to easily perform edit operations on the Grid data, such as modifying cell values, updating changes, and canceling edits.
 
 To enable this feature, you need to configure the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property of the Grid. This property allows you to define the items that will be displayed in the Grid toolbar. By including the relevant items like **Edit**, **Add**, **Delete**, **Update**, and **Cancel** within the `Toolbar` property, you can enable the edit options in the toolbar.
 
@@ -208,6 +208,8 @@ namespace BlazorApp1.Data
 In the Syncfusion Blazor DataGrid, you have the option to disable editing for a specific column. This feature is useful when you want to prevent editing certain columns, such as those containing calculated values or read-only data.
 
 To disable editing for a particular column, you can use the [AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowEditing) property of the [GridColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) object. By setting this property to **false**, you can prevent editing for that specific column.
+
+> Similarly [AllowAdding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowAdding) property at the column level helps us to disable the particular column from inserting value to it.
 
 Here’s an example that demonstrates how to disable editing for a column in the Grid:
 
@@ -334,7 +336,7 @@ public class OrderData
 
 The editing template column feature in the Syncfusion Blazor DataGrid allows you to create custom editing templates for specific columns in the Grid. This feature is particularly useful when you need to customize the editing experience for certain columns, such as using custom input controls or displaying additional information during editing.
 
-To enable the editing template column feature, you need to define the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) property for the specific column in the grid’s configuration. The `Field` property maps the column to the corresponding field name in the data source, allowing you to edit the value of that field.
+To enable the editing template column feature, you need to define the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) property for the specific column in the Grid’s configuration. The `Field` property maps the column to the corresponding field name in the data source, allowing you to edit the value of that field.
 
 In the following demo, the **ShipCountry** column is rendered with the template.
 
@@ -435,14 +437,18 @@ public class OrderData
 
 ## Customize delete confirmation dialog
 
-Customizing the delete confirmation dialog in the Grid allows you to personalize its appearance, content, and behavior when attempting to delete an item. You can modify properties like the header, showCloseIcon, and height to tailor the dialog to your specific requirements. Additionally, you can override default localization strings to provide custom text for buttons or other elements within the dialog.
+The Syncfusion Blazor DataGrid includes a built-in delete confirmation dialog that prompts you before removing a record. This confirmation step helps prevent accidental deletions by requiring your acknowledgment before the action is completed.
 
-To customize the delete confirmation dialog, you can use the [RowDeleting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.RowDeletingEventArgs-1.html) event of the Grid. This event lets you cancel the default delete behavior and display a custom confirmation dialog, allowing users to confirm or cancel the delete action.
+To enable the default confirmation dialog, set the [ShowDeleteConfirmDialog](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_ShowDeleteConfirmDialog) property to **true** in the `GridEditSettings`. This displays a standard dialog when a delete action is triggered.
 
->* Enable delete functionality in the Grid using [AllowDeleting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_AllowDeleting) in [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html).
->* Use a [SfDialog](https://blazor.syncfusion.com/documentation/dialog/getting-started-with-web-app) to create a custom confirmation dialog.
->* Handle the `RowDeleting` event to cancel the default delete action and display the custom dialog.
->* Perform the delete operation programmatically if the user confirms the action.
+You can also customize the delete confirmation dialog to personalize its appearance, content, and behavior. Properties such as `header`, `showCloseIcon`, and `height` can be modified to suit your requirements.
+
+To fully customize the confirmation dialog, use the [RowDeleting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.RowDeletingEventArgs-1.html) event of the Grid. This event allows you to cancel the default delete action and display a custom dialog using the `SfDialog`.
+
+- Enable delete functionality in the Grid by setting [AllowDeleting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_AllowDeleting) to **true** in `GridEditSettings`.
+- Use an [SfDialog](https://blazor.syncfusion.com/documentation/dialog/getting-started-with-web-app) to create a custom confirmation dialog.
+- Handle the `RowDeleting` event to cancel the default delete action and show your custom dialog.
+- Perform the delete operation programmatically if you confirm the action.
 
 The following example demonstrates how to customize the delete confirmation dialog using a custom dialog:
 
@@ -454,7 +460,7 @@ The following example demonstrates how to customize the delete confirmation dial
 @using Syncfusion.Blazor.Popups
 @using BlazorApp1.Data
 
-<SfDialog @ref="Dialog" Width="350px" Visible="DialogVisible" ShowCloseIcon="true" IsModal="true">
+<SfDialog @ref="Dialog" Width="350px" Visible="isDialogVisible" ShowCloseIcon="true" IsModal="true">
     <DialogEvents Closed="Closed"></DialogEvents>
     <DialogTemplates>
         <Header>Delete Confirmation Dialog</Header>
@@ -463,8 +469,8 @@ The following example demonstrates how to customize the delete confirmation dial
         </Content>
     </DialogTemplates>
     <DialogButtons>
-        <DialogButton OnClick="@OkClick" Content="YES" IsPrimary="true"></DialogButton>
-        <DialogButton OnClick="@CancelClick" Content="Discard"></DialogButton>
+        <DialogButton OnClick="@okClick" Content="YES" IsPrimary="true"></DialogButton>
+        <DialogButton OnClick="@cancelClick" Content="Discard"></DialogButton>
     </DialogButtons>
 </SfDialog>
 
@@ -486,7 +492,7 @@ The following example demonstrates how to customize the delete confirmation dial
     public object SelectedData;
 
     // Boolean to control the visibility of the dialog.
-    public bool DialogVisible { get; set; } = false;
+    public bool isDialogVisible { get; set; } = false;
 
     // Flag to prevent multiple dialog triggers.
     public bool flag = true;
@@ -504,21 +510,21 @@ The following example demonstrates how to customize the delete confirmation dial
         {
             Args.Cancel = true; // Cancel the default delete action.
             flag = false;
-            DialogVisible = true; // Show the dialog.
+            isDialogVisible = true; // Show the dialog.
         }
     }
 
     // Confirm the delete action and delete the record programmatically.
-    private async Task OkClick()
+    private async Task okClick()
     {
         await Grid.DeleteRecordAsync(); // Delete the record.
-        DialogVisible = false; // Hide the dialog.
+        isDialogVisible = false; // Hide the dialog.
     }
 
     // Cancel the delete action and hide the dialog.
-    private void CancelClick()
+    private void cancelClick()
     {
-        DialogVisible = false; // Hide the dialog.
+        isDialogVisible = false; // Hide the dialog.
     }
 
     protected override void OnInitialized()
@@ -583,13 +589,15 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVTWsLIKoaZlyNL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhStSCBAAMoaTLj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Update boolean column value with a single click
 
-The Syncfusion Blazor DataGrid enables you to update a boolean column value with a single click in normal editing mode. This feature simplifies the process of toggling boolean values within the grid, improving interaction and efficiency. It can be implemented using the column template feature.
+The Syncfusion Blazor DataGrid enables you to update a boolean column value with a single click in normal editing mode. This feature streamlines toggling boolean values directly within the Grid, enhancing user interaction and efficiency. You can achieve this using the [column template](https://blazor.syncfusion.com/documentation/datagrid/column-template) feature.
 
-In the following example, the [CheckBox](https://blazor.syncfusion.com/documentation/check-box/getting-started-with-web-app) is rendered as a template in the **Verified** column, allowing it to be editable with a single click.
+The column template allows you to define custom UI elements, such as a checkbox, for a specific column. By using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property of the column, you can render a checkbox in the desired column and handle its change event to update the value with a single click.
+
+In the following example, a checkbox is rendered as a template in the **Verified** column, enabling you to toggle its value with a single click.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1151,7 +1159,7 @@ public class OrderData
 
 ### Using external form
 
-Performing the edit operation in a custom external form in the Syncfusion Blazor DataGrid is a useful feature when you need to customize the edit operation within a separate form instead of using the default in-grid editing.
+Performing the edit operation in a custom external form in the Syncfusion Blazor DataGrid is a useful feature when you need to customize the edit operation within a separate form instead of using the default in Grid editing.
 
 To enable the use of an external form for editing in the Grid, you can utilize the [RowSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowSelected) event. This event allows you to trigger the edit operation when a row is selected.
 
@@ -1350,7 +1358,7 @@ public class OrderData
 
 Editing functionalities can be performed based on the primary key value of the selected row. If the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property is not defined in the Grid, the edit or delete action will always target the first row. To resolve this, ensure that the `IsPrimaryKey` property is set to **true** for the column that holds the unique identifier for each row.
  
-## How to make a grid column always editable
+## How to make a Grid column always editable
 
 To make a Grid column always editable, you can use the column template feature of the Grid. This feature is particularly useful when you want to allow direct editing of a specific column's values within the Grid.
 
