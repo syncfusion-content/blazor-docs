@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Edit Types in Blazor Grid | Syncfusion
+title: Edit Types in Blazor DataGrid | Syncfusion
 description: Checkout and learn here all about Edit Types in Syncfusion Blazor DataGrid and much more details.
 platform: Blazor
 control: Grid
@@ -156,7 +156,7 @@ The table below highlights the key aspects of customizing a NumericTextBox using
 |------------------------------------------------------------------------------------------------|-------------|---------------------------------------------------------------------------------------------------------------|---------------------------------------|
 | [NumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started)  | NumericEdit | Renders a NumericTextBox for integer, double, float, short, byte, long, long double, and decimal data type columns. Refer to the [NumericTextBox API documentation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html) for more properties. | Params: { decimals: 2, value: 5 }    |
 
-Below is an example demonstrating how to customize the NumericTextBox  for the **Freight** column in a DataGrid:
+Below is an example demonstrating how to customize the NumericTextBox  for the **Freight** column in a Grid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -359,7 +359,7 @@ The table below outlines the key aspects of customizing a DropDownList control u
 
 > **Note:** The `DataSource` property in `DropDownListModel` must be of type `IEnumerable<TItem>`. Avoid binding `string[]` or `List<string>` directly to the `DataSource` property.
 
-Below is an example demonstrating how to customize the DropDownList for the **ShipCity** column in a DataGrid:
+Below is an example demonstrating how to customize the DropDownList for the **ShipCity** column in a Grid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -451,7 +451,7 @@ public class OrderData
 
 ### Provide custom data source for DropDownList
 
-In Syncfusion’s Blazor DataGrid, you can provide a custom data source for the DropDownList used in the **EditForm**. This feature allows you to define a specific set of values for the DropDownList, tailoring it to meet your requirements.
+In Syncfusion Blazor DataGrid, you can provide a custom data source for the DropDownList used in the **EditForm**. This feature allows you to define a specific set of values for the DropDownList, tailoring it to meet your requirements.
 
 To achieve this, use the [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditorSettings) property of the Grid column to specify the custom data source and additional configurations for the DropDownList. Additionally, when setting a new data source, you can define a [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html#Syncfusion_Blazor_DropDowns_DropDownListModel_2_Query) property to filter or retrieve specific data for the DropDownList.
 
@@ -756,7 +756,7 @@ The table below highlights the key aspects of customizing a DatePicker control u
 |------------|--------------|----------------------------------------------------------------------------------------------------------|---------------------------------|
 | [DatePicker](https://blazor.syncfusion.com/documentation/datepicker/getting-started-with-web-app) | DatePickerEdit  | The DatePickerEdit type renders a DatePicker for date data type columns. To customize the DatePicker, refer to the [DatePicker API documentation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html) for detailed information on available properties. | Params: { Format:’dd.MM.yyyy’ }      |
 
-Below is an example demonstrating how to customize the DatePicker for the **OrderDate** column in the DataGrid:
+Below is an example demonstrating how to customize the DatePicker for the **OrderDate** column in the Grid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -863,7 +863,7 @@ The table below highlights the key aspects of customizing a TimePicker control u
 |------------|--------------|----------------------------------------------------------------------------------------------------------|---------------------------------|
 | [TimePicker](https://blazor.syncfusion.com/documentation/timepicker/getting-started-with-web-app) | TimePickerEdit  | The TimePickerEdit type renders a TimePicker for time data type columns. To customize the TimePicker, refer to the [TimePicker API documentation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfTimePicker-1.html) for detailed information on available properties. | Params: { Value: new Date() }    |
 
-Below is an example demonstrating how to customize the DatePicker for the **OrderTime** column in the DataGrid:
+Below is an example demonstrating how to customize the DatePicker for the **OrderTime** column in the Grid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -969,7 +969,7 @@ The table below highlights the key aspects of customizing a DateTimePicker contr
 |------------------------------------------------------------------------------------------------|--------------------|---------------------------------------------------------------------------------------------------------------|---------------------------------------|
 | [DateTimePicker](https://blazor.syncfusion.com/documentation/datetime-picker/getting-started-with-web-app) | DateTimePickerEdit | Renders a DateTimePicker for date-time data type columns. Refer to the [DateTimePicker API documentation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html) for detailed information on available properties. | Params: { Value: new Date() }         |
 
-Below is an example demonstrating how to customize the DateTimePicker for the **OrderDate** column in the DataGrid:
+Below is an example demonstrating how to customize the DateTimePicker for the **OrderDate** column in the Grid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1079,7 +1079,7 @@ namespace BlazorApp1.Data
 
 The Syncfusion Blazor DataGrid allows you to render custom cell editors for particular columns. This feature is particularly useful when you need to use custom components to edit the data within a GridColumn. To achieve this, you can make use of the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) of the Grid Column.
 
-N > Before adding edit template to the datagrid, it is recommended to go through the [template](https://blazor.syncfusion.com/documentation/datagrid/templates) section topic to configure the template.
+N > Before adding edit template to the Grid, it is recommended to go through the [template](https://blazor.syncfusion.com/documentation/datagrid/templates) section topic to configure the template.
 
 > Custom components inside the `EditTemplate` must be specified with two-way (@bind-Value) binding to reflect the changes in Grid.
 
