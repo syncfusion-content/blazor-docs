@@ -1,17 +1,25 @@
 ---
 layout: post
-title: Prevent default action in Blazor DataGrid Component | Syncfusion
-description: Learn here all about preventing the default DataGrid action in Syncfusion Blazor DataGrid component and more.
+title: Prevent default action in Blazor DataGrid | Syncfusion
+description: Learn here all about preventing the default action in Syncfusion Blazor DataGrid and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Prevent Default Datagrid Action in Blazor DataGrid Component
+# Prevent default action in Blazor DataGrid
 
-The Syncfusion Blazor DataGrid allows you to prevent its default actions by handling the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event.
+The Syncfusion Blazor DataGrid provides flexibility to intercept and control its built-in operations by using the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event.
 
-The following example demonstrates how to prevent the `Add` operation by setting the `Cancel` argument to `true` in the `OnActionBegin` event:
+To prevent a default action:
+
+* **Handle `OnActionBegin`** – Assign the `OnActionBegin` event in the [GridEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html).
+
+* **Check [RequestType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ActionEventArgs-1.html#Syncfusion_Blazor_Grids_ActionEventArgs_1_RequestType)** – Inside the event handler, examine the `RequestType `property to identify the operation (e.g., Add, Edit, Delete).
+
+* **Cancel the operation** – Set `args.Cancel = true` to prevent the action from executing.
+
+The following example demonstrates how to cancel the `Add` action in the Grid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

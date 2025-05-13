@@ -11,7 +11,7 @@ documentation: ug
 
 The empty record template feature in the Syncfusion Blazor DataGrid allows you to use custom content such as images, text, or other components, when the Grid doesn't contain any records to display. This feature replaces the default message of 'No records to display' typically shown in the Grid.
 
-To activate this feature, set the `EmptyRecordTemplate` feature of the Grid. The `EmptyRecordTemplate` feature expects the HTML element or a function that returns the HTML element.
+To activate this feature, set the [EmptyRecordTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_EmptyRecordTemplate) feature of the Grid. The `EmptyRecordTemplate` feature expects the HTML element or a function that returns the HTML element.
 
 The following example demonstrates how an image and text can be rendered as a template to indicate that the Grid has no data to display:
 

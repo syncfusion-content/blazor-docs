@@ -1,17 +1,27 @@
 ---
 layout: post
-title: DataGrid customization in Blazor DataGrid | Syncfusion
-description: Checkout and learn here all about DataGrid customization in Syncfusion Blazor DataGrid and more.
+title: Apply custom cell styling based on data in Blazor DataGrid | Syncfusion
+description: Checkout and learn here all about apply custom cell styling based on data in Syncfusion Blazor DataGrid and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# DataGrid Customization in Blazor DataGrid
+# Apply custom cell styling based on data in Blazor DataGrid
 
-The Syncfusion Blazor DataGrid allows you to customize the default styles of the Grid by dynamically applying CSS classes to its cells. This can be achieved by adding class dynamically to the columns using the `AddClass` method of the [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Query) event. Then the required styles are added to this class.
+The Syncfusion Blazor DataGrid allows you to dynamically apply custom styles to individual cells using the [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_QueryCellInfo) event. This feature enables highlighting or visually differentiating specific data based on conditions.
 
-The following sample code demonstrates this customization approach:
+In the example below, the `QueryCellInfo `event is used to add CSS classes to the **Freight** column cells based on their values. Each class is styled with a different text and background color using standard CSS.
+
+To implement this:
+
+* Attach the **QueryCellInfoHandler** method to the `GridEvents.QueryCellInfo` event of the Grid.
+
+* Inside the handler method, use [args.Cell.AddClass()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.CellDOM.html#Syncfusion_Blazor_Grids_CellDOM_AddClass_System_String___) to add CSS classes based on the value of the **Freight** field.
+
+* Create corresponding CSS rules for each class to apply the desired styles such as color and background-color.
+
+The following example demonstrates how to apply custom cell styling based on data:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -30,17 +40,20 @@ The following sample code demonstrates this customization approach:
 </SfGrid>
 
 <style>
-    .e-grid .e-gridcontent .e-rowcell.above-40 {
-        color: green;
-    }
+.e-grid .e-gridcontent .e-rowcell.above-40 {
+    color: green;
+    background-color: #e8f5e9; 
+}
 
-    .e-grid .e-gridcontent .e-rowcell.above-20 {
-        color: blue;
-    }
+.e-grid .e-gridcontent .e-rowcell.above-20 {
+    color: blue;
+    background-color: #e3f2fd;
+}
 
-    .e-grid .e-gridcontent .e-rowcell.below-20 {
-        color: red;
-    }
+.e-grid .e-gridcontent .e-rowcell.below-20 {
+    color: red;
+    background-color: #ffebee; 
+}
 </style>
 
 @code{
@@ -116,4 +129,4 @@ The following sample code demonstrates this customization approach:
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BNrSDJruhcTxMXei?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNroZyCqJkbikUBx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

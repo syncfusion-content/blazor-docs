@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Use custom helper inside the loop with templates in Blazor DataGrid | Syncfusion
-description: Learn here all about Place cancel icon in search bar in Syncfusion Blazor DataGrid.
+description: Learn here all about place cancel icon in search bar in Syncfusion Blazor DataGrid.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 The Syncfusion Blazor DataGrid allows you to use custom helpers inside the loop with [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html?#Syncfusion_Blazor_Grids_GridColumn_Template) property of a column. This feature enables you to create complex templates that can incorporate additional helper functions.
 
-The customer rating column includes a custom template defined using `Template`. Inside this template, iterates through the item array and generates `<span>` tag, displayed as stars using the CSS below:
+The **customer rating** column includes a custom template defined using `Template`. Inside this template, iterates through the item array and generates `<span>` tag, displayed as stars using the CSS below:
 
 ```css
 .e-grid .rating .star:before {
