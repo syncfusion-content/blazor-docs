@@ -59,17 +59,17 @@ The following list of attributes are added in the Tab.
 
 By default, keyboard navigation is enabled. This component implements keyboard navigation support by following the [WAI-ARIA](https://www.w3.org/TR/wai-aria-practices/#Tabpanel) practices. Once focused on the active Tab element, you can use the following key combination for interacting with the Tab.
 
-| Keyboard shortcuts           | Actions                                                                         |
-|---------------|-------------------------------------------------------------------------------------|
-| <kbd>Left</kbd>    | Moves focus to the previous Tab. If focus is on the first Tab, the focus will not move to any Tab. |
-| <kbd>Right</kbd>   | Moves focus to the next Tab. If focus is on the last Tab element, the focus will not move to any Tab. |
-| <kbd>Enter</kbd> or <kbd> Space</kbd>  | Selects the Tab if it is not selected. Opens the popup dropdown icon if it is focused. Select the Tab item as active when popup item is focused. |
-| <kbd>Esc(Escape)</kbd>           | Closes the popup if popup is in opened state.       |
-| <kbd>Down</kbd> or <kbd>Up</kbd>   | When the popup is open and focused, it will move to previous or next Tab items of the popup in the vertical direction. |
-|  <kbd>Home</kbd>    | Moves focus to the first Tab. |
-|  <kbd>End </kbd>   | Moves focus to the last Tab. |
-|  <kbd>Shift + F10 </kbd>   | If popup mode is enabled, it opens the popup when the Tab is focused. |
-|  <kbd>Delete</kbd>    | Deletes the Tab, if close button is enabled in Tab header. |
+| Windows | Mac | Actions |
+|--- |--- | --- |
+| <kbd>←</kbd> | <kbd>←</kbd> | Moves focus to the previous Tab. If focus is on the first Tab, the focus will not move to any Tab. |
+| <kbd>→</kbd> | <kbd>→</kbd> | Moves focus to the next Tab. If focus is on the last Tab element, the focus will not move to any Tab. |
+| <kbd>Enter</kbd> or <kbd> Space</kbd> | <kbd>Enter</kbd> or <kbd> Space</kbd> | Selects the Tab if it is not selected. Opens the popup dropdown icon if it is focused. Select the Tab item as active when popup item is focused. |
+| <kbd>Esc(Escape)</kbd> | <kbd>Esc</kbd> | Closes the popup if popup is in opened state. |
+| <kbd>↑</kbd> or <kbd>↓</kbd> | <kbd>↑</kbd> or <kbd>↓</kbd> | When the popup is open and focused, it will move to previous or next Tab items of the popup in the vertical direction. |
+|  <kbd>Home</kbd> | <kbd>Home</kbd> | Moves focus to the first Tab. |
+|  <kbd>End </kbd> | <kbd>End</kbd> | Moves focus to the last Tab. |
+|  <kbd>Shift + F10 </kbd> | <kbd>⇧</kbd> + <kbd>F10</kbd> | If popup mode is enabled, it opens the popup when the Tab is focused. |
+|  <kbd>Delete</kbd> | <kbd>Delete</kbd> | Deletes the Tab, if close button is enabled in Tab header. |
 
 ## Ensuring accessibility
 

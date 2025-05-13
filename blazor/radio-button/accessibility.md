@@ -48,10 +48,10 @@ The Blazor RadioButton component followed the [WAI-ARIA](https://www.w3.org/WAI/
 
 The Blazor RadioButton component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/radio/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor RadioButton component.
 
-| **Press** | **To do this** |
-| --- | --- |
-| <kbd>UP/Left arrow</kbd> | Move and select the previous options. |
-| <kbd>Down/Right arrow</kbd> | Move and select the next options. |
+| Windows | Mac | Actions |
+| --- | --- | --- |
+| <kbd>↑</kbd> or <kbd>←</kbd> | <kbd>↑</kbd> or <kbd>←</kbd> | Move and select the previous options. |
+| <kbd>↓</kbd> or <kbd>→</kbd> | <kbd>↓</kbd> or <kbd>→</kbd> | Move and select the next options. |
 
 ## Ensuring accessibility
 

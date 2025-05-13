@@ -62,25 +62,25 @@ The Blazor Chart component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/a
 
 The Blazor Chart component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Chart component.
 
-Interaction Keys |Description
------|-----
-<kbd>Alt + J</kbd> | Moves the focus to the chart element.
-<kbd>Tab</kbd> |Moves the focus to the next element in the chart.
-<kbd>Shift + Tab</kbd> |Moves the focus to the previous element in the chart.
-<kbd>DownArrow</kbd> |Moves the focus to the data point right side from the selected point.
-<kbd>UpArrow</kbd> |Moves the focus to the data point right side from the selected point.
-<kbd>Left Arrow</kbd> |Moves the focus to the next series in our Chart component.
-<kbd>Right Arrow</kbd> |Moves the focus to the previous series in our Chart component.
-<kbd>Enter/Space</kbd> |Selects the data point in the series
-<kbd>Down/Left Arrow</kbd> |Moves the focus to the legend left side from the selected legend.
-<kbd>Up/Right Arrow</kbd> | Moves the focus to the legend right side from the selected legend.
-<kbd>Enter/Space</kbd> |Toggles the visibility of the corresponding series.
-<kbd>Ctrl + +</kbd> |Zoom in the chart.
-<kbd>Ctrl + -</kbd> |Zoom out the chart.
-<kbd>Down/Up Arrow</kbd> |Pans the chart vertically.
-<kbd>Left/Right Arrow</kbd> |Pans the chart horizontally.
-<kbd>R</kbd> |Reset the zoomed chart.
-<kbd>Ctrl + P</kbd> |Prints the Chart.
+| Windows | Mac | Description |
+|-----|-----|---|
+|<kbd>Alt + J</kbd> | <kbd>⌥</kbd> + <kbd>J</kbd> | Moves the focus to the chart element.|
+|<kbd>Tab</kbd> | <kbd>Tab</kbd> | Moves the focus to the next element in the chart.|
+|<kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Moves the focus to the previous element in the chart.|
+| <kbd>↓</kbd> | <kbd>↓</kbd> | Moves the focus to the data point right side from the selected point.|
+| <kbd>↑</kbd> | <kbd>↑</kbd> | Moves the focus to the data point right side from the selected point.|
+| <kbd>←</kbd> | <kbd>←</kbd> | Moves the focus to the next series in our Chart component.|
+| <kbd>→</kbd> | <kbd>→</kbd> | Moves the focus to the previous series in our Chart component.|
+|<kbd>Enter</kbd> / <kbd>Space</kbd> | <kbd>Enter</kbd> / <kbd>Space</kbd> | Selects the data point in the series|
+| <kbd>↓</kbd> , <kbd>←</kbd> | <kbd>↓</kbd> / <kbd>←</kbd> | Moves the focus to the legend left side from the selected legend.|
+| <kbd>↑</kbd> , <kbd>→</kbd> | <kbd>↑</kbd> / <kbd>→</kbd> | Moves the focus to the legend right side from the selected legend.|
+| <kbd>Enter</kbd> / <kbd>Space</kbd> | <kbd>Enter</kbd> / <kbd>Space</kbd> |Toggles the visibility of the corresponding series.|
+| <kbd>Ctrl</kbd> + <kbd>+</kbd> | <kbd>⌘</kbd> + <kbd>+</kbd> | Zoom in the chart.|
+| <kbd>Ctrl</kbd> + <kbd>-</kbd> | <kbd>⌘</kbd> + <kbd>-</kbd> | Zoom out the chart.|
+| <kbd>↓</kbd> / <kbd>↑</kbd> | <kbd>↓</kbd> / <kbd>↑</kbd> | Pans the chart vertically.|
+| <kbd>←</kbd> / <kbd>→</kbd> | <kbd>←</kbd> / <kbd>→</kbd> | Pans the chart horizontally.|
+|<kbd>R</kbd> | <kbd>R</kbd> | Reset the zoomed chart.|
+|<kbd>Ctrl + P</kbd> | <kbd>⌘</kbd> + <kbd>P</kbd> | Prints the Chart.|
 
 ## Ensuring accessibility
 

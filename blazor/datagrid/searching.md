@@ -879,5 +879,3 @@ The following example demonstrates how to clear the searched records using an ex
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZVzjpXoqkaJnBKx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > You can also clear the searched records by using the clear icon within the search input field.
-
-

@@ -60,38 +60,38 @@ The accessibility compliance for the Blazor SfPdfViewer component is outlined be
 
 The Blazor SfPdfViewer component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Message component.
 
-| **Press (Windows)** |**Press (Macintosh)** | **To do this** |
+| Windows | Mac | Actions |
 | --- | --- | --- |
 |||**Shortcuts for page navigation**|
-| <kbd>CONTROL + Left Arrow (or) CONTROL + Up Arrow</kbd> | <kbd>COMMAND + Left Arrow (or) COMMAND + Up Arrow </kbd> |Navigate to the first page |
-| <kbd>CONTROL + Right Arrow (or) CONTROL + Down Arrow</kbd> |<kbd>COMMAND + Right Arrow (or) COMMAND + Down Arrow</kbd> |Navigate to the last page |
-|<kbd>Left Arrow</kbd> |<kbd> Left Arrow (or) Shift + Space </kbd> |Navigate to the previous page|
-| <kbd>Right Arrow</kbd> | <kbd>Right Arrow (or) Space</kbd> | Navigate to the next page |
-| <kbd>CONTROL + G</kbd> | <kbd>COMMAND + G</kbd> | Go To The Page|
-|<kbd>Up Arrow</kbd> |<kbd>Up Arrow </kbd> |Scroll up|
-| <kbd>Down Arrow</kbd> | <kbd>Down Arrow</kbd> | Scroll down|
+| <kbd>Ctrl</kbd> + <kbd>←</kbd> / <kbd>Ctrl</</kbd> + <kbd>↑</kbd> | <kbd>⌘</kbd> + <kbd>←</kbd> or <kbd>⌘</kbd> + <kbd>↑</kbd> |Navigate to the first page |
+| <kbd>Ctrl</kbd> + <kbd>→</kbd> / <kbd>Ctrl</</kbd> + <kbd>↓</kbd> | <kbd>⌘</kbd> + <kbd>→</kbd> or <kbd>⌘</kbd> + <kbd>↓</kbd> |Navigate to the last page |
+| <kbd>←</kbd> | <kbd>←</kbd> / <kbd>⇧</kbd> + <kbd>Space</kbd> |Navigate to the previous page |
+| <kbd>→</kbd> | <kbd>→</kbd> / <kbd>Space</kbd> | Navigate to the next page |
+| <kbd>Ctrl</kbd> + <kbd>G</kbd> | <kbd>⌘</kbd> + <kbd>G</kbd> | Go To The Page|
+|<kbd>↑</kbd> |<kbd>↑</kbd> |Scroll up|
+| <kbd>↓</kbd> | <kbd>↓</kbd> | Scroll down|
 |||**Shortcuts for Zooming**|
-|<kbd>CONTROL + =</kbd> |<kbd>COMMAND + =</kbd> | Perform zoom-in operation |
-| <kbd>CONTROL + -</kbd> | <kbd>COMMAND + -</kbd> | Perform zoom-out operation |
-|<kbd>CONTROL + 0</kbd> |<kbd>COMMAND + 0</kbd> | Retain the zoom level to 1 |
+|<kbd>Ctrl</kbd> + <kbd>=</kbd> |<kbd>⌘</kbd> + <kbd>=</kbd> | Perform zoom-in operation |
+| <kbd>Ctrl</kbd> + <kbd>-</kbd> | <kbd>⌘</kbd> + <kbd>-</kbd> | Perform zoom-out operation |
+|<kbd>Ctrl</kbd> + <kbd>0</kbd> | <kbd>⌘</kbd> + <kbd>0</kbd> | Retain the zoom level to 1 |
 |||**Shortcut for Text Search**|
-| <kbd>CONTROL + F</kbd> | <kbd>COMMAND + F</kbd> |Open the search toolbar|
+| <kbd>Ctrl</kbd> + <kbd>F</kbd> | <kbd>⌘</kbd> + <kbd>F</kbd> | Open the search toolbar|
 |||**Shortcut for Text Selection**|
-|<kbd>CONTROL + C</kbd> |<kbd>CONTROL + C</kbd> | Copy the selected text or annotation |
-| <kbd>CONTROL + X</kbd> | <kbd>CONTROL + X</kbd> |Cut the selected text or annotation |
-|<kbd>CONTROL + Y</kbd> |<kbd>CONTROL + Y</kbd> |Paste the selected text or annotation |
+|<kbd>Ctrl</kbd> + <kbd>C</kbd> | <kbd>⌘</kbd> + <kbd>C</kbd> | Copy the selected text or annotation |
+| <kbd>Ctrl</kbd> + <kbd>X</kbd> | <kbd>⌘</kbd> + <kbd>X</kbd> |Cut the selected text or annotation |
+|<kbd>Ctrl</kbd> + <kbd>V</kbd> | <kbd>⌘</kbd> + <kbd>V</kbd> |Paste the selected text or annotation |
 |||**Shortcuts for the general operation**|
-| <kbd>CONTROL + Z</kbd> | <kbd>CONTROL + Z</kbd> |Undo the action|
-|<kbd>CONTROL + Y</kbd> |<kbd>CONTROL + Y</kbd> |Redo the action|
-| <kbd>CONTROL + P</kbd> | <kbd>COMMAND + P</kbd> |Print the document|
-|<kbd>Delete</kbd> |<kbd>Delete</kbd> |Delete the annotations|
-|<kbd>CONTROL + Shift + A</kbd> |<kbd>COMMAND + Shift + A</kbd> |Toggle Annotation Toolbar|
-|<kbd>CONTROL + Alt + 0</kbd> |<kbd>COMMAND + Option + 0</kbd> |Show Command panel|
-|<kbd>CONTROL + Alt + 2</kbd> |<kbd>COMMAND + Option + 2</kbd> |Show Bookmarks|
-|<kbd>CONTROL + Alt + 1</kbd> |<kbd>COMMAND + Option + 1</kbd> |Show Thumbnails|
-|<kbd>CONTROL + S</kbd> |<kbd>COMMAND + S</kbd> |Download|
-|<kbd>Shift + H</kbd> |<kbd>Shift + H</kbd> |Enable pan mode|
-|<kbd>Shift + V</kbd> |<kbd>Shift + V</kbd> |Enable text selection mode|
+| <kbd>Ctrl</kbd> + <kbd>Z</kbd> | <kbd>⌘</kbd> + <kbd>Z</kbd> |Undo the action|
+|<kbd>Ctrl</kbd> + <kbd>Y</kbd> | <kbd>⌘</kbd> + <kbd>Y</kbd> |Redo the action|
+| <kbd>Ctrl</kbd> + <kbd>P</kbd> | <kbd>⌘</kbd> + <kbd>P</kbd> |Print the document|
+| <kbd>Delete</kbd> | <kbd>Delete</kbd> |Delete the annotations|
+| <kbd>Ctrl</kbd>  + <kbd>Shift</kbd> + <kbd>A</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd> |Toggle Annotation Toolbar|
+| <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>0</kbd> | <kbd>⌘</kbd> + <kbd>⌥</kbd> + <kbd>0</kbd> |Show Command panel|
+| <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>2</kbd> | <kbd>⌘</kbd> + <kbd>⌥</kbd> + <kbd>2</kbd> |Show Bookmarks|
+|<kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>1</kbd> | <kbd>⌘</kbd> + <kbd>⌥</kbd> + <kbd>1</kbd> |Show Thumbnails|
+| <kbd>Ctrl</kbd> + <kbd>S</kbd> | <kbd>⌘</kbd> + <kbd>S</kbd> |Download|
+| <kbd>Shift</kbd> + <kbd>H</kbd> | <kbd>⇧</kbd> + <kbd>H</kbd> |Enable pan mode |
+| <kbd>Shift</kbd> + <kbd>V</kbd> |<kbd>⇧</kbd> + <kbd>V</kbd> |Enable text selection mode|
 
 ## Ensuring accessibility
 
