@@ -21,9 +21,9 @@ The footer section, on the other hand, appears at the bottom of each page. It's 
 
 To add text in the header and footer of the exported PDF document, follow these steps:
 
-1. Access the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) of the Grid.
-2. Set the [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_Header) and [Footer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_Footer) property to a string value representing the desired text.
-3. Using [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method to trigger the PDF export operation.
+* Access the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) of the Grid.
+* Set the [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_Header) and [Footer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_Footer) property to a string value representing the desired text.
+* Using [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method to trigger the PDF export operation.
 
 The following example demonstrates how to add text in the header and footer of the exported PDF document:
 
@@ -176,9 +176,9 @@ You can achieve this by using the [PdfDashStyle](https://help.syncfusion.com/cr/
 
 To draw a line in the header and footer of the exported PDF document:
 
-1. Access the `Header.Contents` and `Footer.Contents` properties from the [Header] (https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_Header) and [Footer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_Footer) sections of the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html).
+* Access the `Header.Contents` and `Footer.Contents` properties from the [Header] (https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_Header) and [Footer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_Footer) sections of the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html).
 
-2. Customize these sections to include a line with the desired dash style using the `PdfDashStyle` options.
+* Customize these sections to include a line with the desired dash style using the `PdfDashStyle` options.
 
 The following example demonstrates how to draw a line in the header and footer of the exported PDF document using a [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) to dynamically select a line style:
 
@@ -382,9 +382,9 @@ You can choose from the following [PageNumberType](https://help.syncfusion.com/c
 
 To add page numbers to the header and footer of the exported PDF document:
 
-1. Access the `Header.Contents` and `Footer.Content`s properties of the [Header](https://ej2.syncfusion.com/angular/documentation/api/grid/pdfExportProperties/#header) and [Footer](https://ej2.syncfusion.com/angular/documentation/api/grid/pdfExportProperties/#footer) sections in the `PdfExportProperties`.
+* Access the `Header.Contents` and `Footer.Content`s properties of the [Header](https://ej2.syncfusion.com/angular/documentation/api/grid/pdfExportProperties/#header) and [Footer](https://ej2.syncfusion.com/angular/documentation/api/grid/pdfExportProperties/#footer) sections in the `PdfExportProperties`.
 
-2. Set the ContentType to `PageNumber` and define the desired page number format using `PageNumberType`.
+* Set the ContentType to `PageNumber` and define the desired page number format using `PageNumberType`.
 
 The following example demonstrates how to add a page number in the header and footer of the exported PDF document using a [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) to dynamically select the page number format:
 
@@ -542,9 +542,9 @@ Images can be inserted using a Base64-encoded string in the .jpeg format. This c
 
 To insert an image in the header and footer of the exported PDF document, follow these steps:
 
-1. Convert your desired image to a Base64 string in the .jpeg format.
+* Convert your desired image to a Base64 string in the .jpeg format.
 
-2. Access the `PdfExportProperties` and assign the Base64 string or image file path to the `Src` property of the corresponding entry in the `Header.Contents` or `Footer.Contents` collection.
+* Access the `PdfExportProperties` and assign the Base64 string or image file path to the `Src` property of the corresponding entry in the `Header.Contents` or `Footer.Contents` collection.
 
 The following example demonstrates how to insert an image in header and footer of the exported PDF document:
 
