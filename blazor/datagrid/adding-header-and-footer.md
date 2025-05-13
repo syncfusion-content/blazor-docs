@@ -66,9 +66,9 @@ The following example demonstrates how to add text in the header and footer of t
                     {
                         new PdfHeaderFooterContent
                         {
-                            Type = ContentType.Text, // Set content as text.
-                            Value = "This is the PDF Header Text", // Header text content.
-                            Position = new PdfPosition { X = 200, Y = 30 }, // Position of the text.
+                            Type = ContentType.Text, // Set content type as text.
+                            Value = "This is the PDF Header Text", // // Set the text to display in PDF document header section.
+                            Position = new PdfPosition { X = 200, Y = 30 }, // Set the position of header text.
                             Style = new PdfContentStyle
                             {
                                 TextBrushColor = "#000000",
@@ -85,9 +85,9 @@ The following example demonstrates how to add text in the header and footer of t
                     {
                         new PdfHeaderFooterContent
                         {
-                            Type = ContentType.Text, // Set content as text.    
-                            Value = "This is the PDF Footer Text", // Footer text content.
-                            Position = new PdfPosition { X = 200, Y = 20 }, // Position of the text.
+                            Type = ContentType.Text, // Set content type as text.    
+                            Value = "This is the PDF Footer Text", // Set the text to display in PDF document footer section.
+                            Position = new PdfPosition { X = 200, Y = 20 }, Set the position of footer text.
                             Style = new PdfContentStyle
                             {
                                 TextBrushColor = "#000000",
@@ -166,7 +166,7 @@ public class OrderData
 
 When exporting data from the Syncfusion Blazor DataGrid to a PDF document, you have an option to draw lines in the header and footer sections. This feature allows you to enhance the visual appearance of the exported PDF document and create a clear separation between the header/footer and the content.
 
-This can be achieved using the [PdfDashStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDashStyle.html) property. You can customize the line style using different supported [PdfDashStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDashStyle.html#fields) options listed below:
+You can achieve this by using the [PdfDashStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDashStyle.html) property, which defines the style of the line drawn. The supported [PdfDashStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDashStyle.html#fields) include:
 
 * Dash
 * Dot
@@ -174,7 +174,11 @@ This can be achieved using the [PdfDashStyle](https://help.syncfusion.com/cr/bla
 * DashDotDot
 * Solid
 
-To add a line in the header and footer of the exported PDF, you can access the `Header.Contents` and `Footer.Contents` property of the [Header] (https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_Header) and [Footer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_Footer) in the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) property of the Grid.
+To draw a line in the header and footer of the exported PDF document:
+
+1. Access the `Header.Contents` and `Footer.Contents` properties from the [Header] (https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_Header) and [Footer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportPropertiesBase.html#Syncfusion_Blazor_Grids_PdfExportPropertiesBase_Footer) sections of the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html).
+
+2. Customize these sections to include a line with the desired dash style using the `PdfDashStyle` options.
 
 The following example demonstrates how to draw a line in the header and footer of the exported PDF document using a [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) to dynamically select a line style:
 
@@ -214,6 +218,7 @@ The following example demonstrates how to draw a line in the header and footer o
     // Dropdown selection for line style.
     private string SelectedLineStyle = "Solid";
 
+    // Dropdown options for line styles.
     public List<LineStyleOption> LineStyles = new()
     {
         new LineStyleOption { Text = "Solid", Value = "Solid" },
@@ -281,6 +286,7 @@ The following example demonstrates how to draw a line in the header and footer o
                 }
             };
 
+            // Set the header and footer content for the export.
             var exportProps = new PdfExportProperties
             {
                 Header = new PdfHeader
@@ -365,7 +371,7 @@ When exporting data from the Syncfusion Blazor DataGrid to a PDF document, you h
 
 This can be achieved using the [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) property, which allows customization of the header and footer content. Page numbers can be inserted using the [ContentType.PageNumber](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContentType.html#Syncfusion_Blazor_Grids_ContentType_PageNumber) setting in the [PdfHeaderFooterContent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfHeaderFooterContent.html).
 
-You can choose from several page number formats, including:
+You can choose from the following [PageNumberType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfPageNumberType.html#fields) formats:
 
 * LowerLatin - a, b, c,
 * UpperLatin - A, B, C,
@@ -374,7 +380,11 @@ You can choose from several page number formats, including:
 * Number - 1,2,3,
 * Arabic - 1,2,3.
 
-To add a page number in the header and footer of the exported PDF document, you can access the `Header.Contents` and `Footer.Contents` property of the [Header](https://ej2.syncfusion.com/angular/documentation/api/grid/pdfExportProperties/#header) and [Footer](https://ej2.syncfusion.com/angular/documentation/api/grid/pdfExportProperties/#footer) in the `PdfExportProperties` property of the Grid. 
+To add page numbers to the header and footer of the exported PDF document:
+
+1. Access the `Header.Contents` and `Footer.Content`s properties of the [Header](https://ej2.syncfusion.com/angular/documentation/api/grid/pdfExportProperties/#header) and [Footer](https://ej2.syncfusion.com/angular/documentation/api/grid/pdfExportProperties/#footer) sections in the `PdfExportProperties`.
+
+2. Set the ContentType to `PageNumber` and define the desired page number format using `PageNumberType`.
 
 The following example demonstrates how to add a page number in the header and footer of the exported PDF document using a [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) to dynamically select the page number format:
 
@@ -411,6 +421,7 @@ The following example demonstrates how to add a page number in the header and fo
 
     private string SelectedPageNumberType = "Arabic";
 
+    // Dropdown options for page number.
     public List<PageNumberOption> PageNumberTypes = new()
     {
         new PageNumberOption { Text = "Arabic", Value = "Arabic" },
@@ -444,8 +455,8 @@ The following example demonstrates how to add a page number in the header and fo
             {
                 Type = ContentType.PageNumber,
                 PageNumberType = pageType, // Set the selected page number format.
-                Value = "Page ${current} of ${total}", // Format string with placeholders.
-                Position = new PdfPosition { X= 360, Y = 20 }, 
+                Value = "Page ${current} of ${total}", // Set placeholders for dynamic page numbers.
+                Position = new PdfPosition { X= 360, Y = 20 }, // set the position of the text in the header/footer.
                 Style = new PdfContentStyle
                 {
                     TextBrushColor = "#4169e1",
@@ -456,8 +467,8 @@ The following example demonstrates how to add a page number in the header and fo
 
             var exportProps = new PdfExportProperties
             {
-                Header = new PdfHeader { Height = 60, Contents = new List<PdfHeaderFooterContent> { pageNumber } },
-                Footer = new PdfFooter { Height = 60, Contents = new List<PdfHeaderFooterContent> { pageNumber } }
+                Header = new PdfHeader { Height = 60, Contents = new List<PdfHeaderFooterContent> { pageNumber } }, // Add page number to header.
+                Footer = new PdfFooter { Height = 60, Contents = new List<PdfHeaderFooterContent> { pageNumber } } // Add page number to footer.
             };
 
             await Grid.ExportToPdfAsync(exportProps);
@@ -531,9 +542,9 @@ Images can be inserted using a Base64-encoded string in the .jpeg format. This c
 
 To insert an image in the header and footer of the exported PDF document, follow these steps:
 
-1. Convert your desired image to a base64 string in the .jpeg format.
+1. Convert your desired image to a Base64 string in the .jpeg format.
 
-2. Access the PdfExportProperties and assign the Base64 string or image file path to the `Src` property of the corresponding entry in the `Header.Contents` or `Footer.Contents` collection.
+2. Access the `PdfExportProperties` and assign the Base64 string or image file path to the `Src` property of the corresponding entry in the `Header.Contents` or `Footer.Contents` collection.
 
 The following example demonstrates how to insert an image in header and footer of the exported PDF document:
 
@@ -565,10 +576,10 @@ The following example demonstrates how to insert an image in header and footer o
     {
        new PdfHeaderFooterContent()
         {
-            Type = ContentType.Image, // Indicates the content is an image.
-            Src = "/9j/4AAQSkZJRgABAQAAAQABAAD....", // Base64 image source.
-            Position = new PdfPosition() { X = 10, Y = 10 }, // Position of the image in the header/footer.
-            Size = new PdfSize() { Height = 15, Width = 15 }  // Size of the image.
+            Type = ContentType.Image, // Set the content type to image.
+            Src = "/9j/4AAQSkZJRgABAQAAAQABAAD....", // Place the Base64 encoded image string.
+            Position = new PdfPosition() { X = 10, Y = 10 }, // Set the position of the image in the header/footer.
+            Size = new PdfSize() { Height = 15, Width = 15 }  // Place the size of the image.
         }
     };
 
