@@ -123,7 +123,7 @@ Here’s an example of how to enable the toolbar with the edit option in the Gri
 @using Syncfusion.Blazor.Grids
 @using BlazorApp1.Data
 
-<SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
+<SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" height="273px">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120" ValidationRules="@(new ValidationRules{ Required=true,Number=true})"></GridColumn>
@@ -201,7 +201,7 @@ namespace BlazorApp1.Data
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BtrfMiVbAESNqmNd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rZBIDysApJMqmYgM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Disable editing for particular column
 
@@ -228,7 +228,7 @@ Here’s an example that demonstrates how to disable editing for a column in the
         <DropDownListEvents TValue="string" TItem="ColumnOption" ValueChange="OnColumnSelectionChange"></DropDownListEvents>
     </SfDropDownList>
 </div>
-<SfGrid @ref="Grid" DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
+<SfGrid @ref="Grid" DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" AllowPaging="true">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120" ValidationRules="@(new ValidationRules{ Required=true})" AllowEditing="@(SelectedColumn != nameof(OrderData.OrderID))"></GridColumn>
@@ -326,7 +326,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDBTMWBYiLcvZECc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtByjysAfpJUHTUr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > * If the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property is set to **true** for a column, editing will be automatically disabled for that column.
 > * You can disable the particular row using [RowEditing](https://blazor.syncfusion.com/documentation/datagrid/events#rowediting) event.
@@ -433,7 +433,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDLTiMVEWAvGBnfF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXLIDIsKfTIGXHqy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Customize delete confirmation dialog
 
@@ -589,7 +589,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXhStSCBAAMoaTLj?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BtBSXSiUJTudnRLI?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Update boolean column value with a single click
 
@@ -608,7 +608,7 @@ In the following example, a checkbox is rendered as a template in the **Verified
 @using Syncfusion.Blazor.Inputs
 @using BlazorApp1.Data
 
-<SfGrid DataSource="@Orders" Toolbar="@(new string[] {"Add", "Edit" ,"Delete","Update","Cancel" })">
+<SfGrid DataSource="@Orders" Height="315px" Toolbar="@(new string[] {"Add", "Edit" ,"Delete","Update","Cancel" })">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true">
     </GridEditSettings>
     <GridColumns>
@@ -692,7 +692,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXreZpCfMwYSpafD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDreXIsqTejwCyFR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Edit enum column
 
@@ -776,7 +776,7 @@ In the following example, the input element is rendered in the edit template of 
 @using Syncfusion.Blazor.Inputs
 @using BlazorApp1.Data
 
-<SfGrid DataSource="@Employees" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
+<SfGrid DataSource="@Employees" Height="" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="Syncfusion.Blazor.Grids.EditMode.Normal"></GridEditSettings>
     <GridColumns>
         <GridColumn Field="@nameof(EmployeeDetails.EmployeeID)" HeaderText="Employee ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" IsPrimaryKey="true" Width="120">
@@ -852,7 +852,7 @@ namespace BlazorApp1.Data
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZLpWBZBCPEnQmvE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNVoZICKzSgNsjJk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Edit foreign key column
 
@@ -1055,7 +1055,7 @@ The following example demonstrates the integration of the Grid with a separate t
     </ToolbarItems>
 </SfToolbar>
 
-<SfGrid @ref="Grid" DataSource="@Orders" >
+<SfGrid @ref="Grid" DataSource="@Orders" AllowPaging="true">
     <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true"></GridEditSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
@@ -1155,7 +1155,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rDLzirZhqEaHrapA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDBSZSWKpIfWuqrR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Using external form
 
@@ -1352,7 +1352,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtrzMhZrzICSfxBH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDBytoiqfIIReUci?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Using external form](./images/blazor-datagrid-editing-form.gif)
 
@@ -1454,10 +1454,10 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVACDDzLCOPwlKE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rthoDoCKTxtufhdP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > If a template column has a corresponding [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) property defined, the value entered in the template column’s input field will be stored in the associated edit column of the row’s data object.
-> 
+
 ## Event trace while editing
 
 The Syncfusion Blazor DataGrid provides granular control over editing workflows using dedicated events. These events allow you to monitor and customize actions such as editing, adding, deleting, and updating rows.
