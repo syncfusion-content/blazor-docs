@@ -13,7 +13,7 @@ CSS isolation allows defining component-specific styles by creating a `.razor.cs
 
 To enable CSS isolation for the Grid, it is recommended to wrap the **SfGrid** inside a standard HTML <div> element. This setup helps properly scope the styles when using the **::deep** combinator, which is required to target nested child elements within the isolated styles.
 
-Below is an example of implementing a simple DataGrid inside the `Index.razor` file:
+Below is an example of implementing a simple Grid inside the `Index.razor` file:
 
 ```csharp
 

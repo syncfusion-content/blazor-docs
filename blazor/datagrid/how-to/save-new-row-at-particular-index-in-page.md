@@ -13,7 +13,7 @@ By default, when a new row is added to the Syncfusion Blazor DataGrid, it is ins
 
 To achieve this customization, the `args.Index` property can be set during the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event of the Grid. This allows the developer to define the exact position where the new row should be saved in the underlying data source.
 
-The following example demonstrates how to insert and save a newly added row as the last row of the currently displayed page.
+The following example demonstrates how to insert and save a newly added row as the last row of the currently displayed page:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

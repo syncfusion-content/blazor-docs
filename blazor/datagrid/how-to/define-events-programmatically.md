@@ -13,7 +13,7 @@ In the Syncfusion Blazor DataGrid, events are typically defined using the GridEv
 
 To define events programmatically, a reference to the Grid is set using the `@ref` directive. After the Grid is rendered, the `GridEvents` property can be assigned within the `OnAfterRenderAsync` lifecycle method. The event handlers are created using the `EventCallbackFactory`, which ensures the handlers are properly bound.
 
-The following example demonstrates how to configure the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event programmatically to prevent editing a record when the **ShipCountry** field value is **Germany**. In this example, the Grid allows editing, adding, and deleting records, but cancels the edit action conditionally based on the row data.
+The following example demonstrates how to configure the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event programmatically to prevent editing a record when the **ShipCountry** field value is **Germany**. In this example, the Grid allows editing, adding, and deleting records, but cancels the edit action conditionally based on the row data:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
