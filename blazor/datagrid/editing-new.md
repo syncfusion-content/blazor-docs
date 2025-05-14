@@ -104,8 +104,11 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VNVoZysVJpYKYwEU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> * If [IsIdentity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsIdentity) is enabled, it will be treated as a read-only column when editing or adding a record.
+> * The Grid uses `Activator.CreateInstance<TValue>()` to generate a new record when an insert operation is invoked, so the model class and any referenced complex type classes must have parameterless constructors defined. To provide custom logic for object creation during editing, refer to [this section](#provide-new-item-or-edited-item-using-events).
+> * If [IsIdentity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsIdentity) is enabled, the column will be treated as read-only when editing or adding a record.
 > * You can disable editing for a specific column by setting [Columns.AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowEditing) to **false**.
+> * You can disable adding for a particular column by setting [AllowAdding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowAdding) to **false**.
+> * You can disable editing of a record on double-click by setting [EditSettings.AllowEditOnDblClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_AllowEditOnDblClick) to **false**.
 > * You can use the **Insert** key to add a new row to the Grid and the **Delete** key to remove the selected row from the Grid.
 
 ## Toolbar with edit option
