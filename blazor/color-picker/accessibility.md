@@ -55,14 +55,14 @@ The Blazor Color Picker component followed the [WAI-ARIA](https://www.w3.org/WAI
 
 The Blazor Color Picker component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor ColorPicker component.
 
-| **Press** | **To do this** |
-| --- | --- |
-| <kbd>Up Arrow</kbd> | Moves the handler/tile up from the current position. |
-| <kbd>Down Arrow</kbd> | Moves the handler/tile down from the current position. |
-| <kbd>Left Arrow</kbd> | Moves the handler/tile left from the current position. |
-| <kbd>Right Arrow</kbd> | Moves the handler/tile right from the current position. |
-| <kbd>Enter</kbd> | Apply the selected color value. |
-| <kbd>Tab</kbd> | To focus the next focusable element in the ColorPicker popup. |
+| Windows | Mac | Actions |
+| --- | --- | --- |
+| <kbd>↑</kbd> | <kbd>↑</kbd> | Moves the handler/tile up from the current position. |
+| <kbd>↓</kbd> | <kbd>↓</kbd> | Moves the handler/tile down from the current position. |
+| <kbd>←</kbd> | <kbd>←</kbd> | Moves the handler/tile left from the current position. |
+| <kbd>→</kbd> | <kbd>→</kbd> | Moves the handler/tile right from the current position. |
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Apply the selected color value. |
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | To focus the next focusable element in the ColorPicker popup. |
 
 ## Ensuring accessibility
 

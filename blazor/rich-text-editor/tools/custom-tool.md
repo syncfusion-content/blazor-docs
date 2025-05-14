@@ -49,9 +49,9 @@ Refer to the following code sample for the custom tool with the tooltip text, wh
     {
         ExecuteCommandOption executeCommandOption = new ExecuteCommandOption();
         executeCommandOption.Undo = true;
-        await this.RteObj.ExecuteCommandAsync(CommandName.InsertText, "₹", executeCommandOption);    }
+        await this.RteObj.ExecuteCommandAsync(CommandName.InsertText, "₹", executeCommandOption);
     }
-
+}
 {% endhighlight %}
 {% endtabs %}
 
