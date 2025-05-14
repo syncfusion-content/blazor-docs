@@ -65,7 +65,7 @@ It provides grouped buttons and dropdowns for editing, formatting, inserting ele
 
 The Toolbar items as follows.
 
-![Toolabr Items set 1](images/End_User_Manual_images/Toolbar_First_Set.PNG)
+![Toolabr Items set 1](images/End_User_Manual_images/Toolbar_First_Set.png)
 ![Toolabr Items set 2](images/End_User_Manual_images/Toolbar_Second_Set.png)
 
 #### File Operations Group
@@ -76,7 +76,7 @@ The Toolbar items as follows.
 
 The Toolbar Open as follows.
 
-![New](images/End_User_Manual_images/Toolbar_New.PNG)
+![New](images/End_User_Manual_images/Toolbar_New.png)
 
 ##### Open
 
@@ -84,7 +84,7 @@ The Toolbar Open as follows.
 
 The Toolbar Open as follows.
 
-![Open](images/End_User_Manual_images/Toolbar_Open.PNG)
+![Open](images/End_User_Manual_images/Toolbar_Open.png)
 
 #### Editing Group
 
@@ -94,7 +94,7 @@ The Toolbar Open as follows.
 
 The Toolbar Undo / Redo as follows.
 
-![Undo / Redo](images/End_User_Manual_images/Toolbar_Undo_Redo.PNG)
+![Undo / Redo](images/End_User_Manual_images/Toolbar_Undo_Redo.png)
 
 
 ##### Find / Replace
@@ -103,7 +103,7 @@ The Toolbar Undo / Redo as follows.
 
 The Toolbar Find / Replace as follows.
 
-![Find / Replace](images/End_User_Manual_images/Toolbar_Search.PNG)
+![Find / Replace](images/End_User_Manual_images/Toolbar_Search.png)
 
 #### Insert Group
 
@@ -113,7 +113,7 @@ The Toolbar Find / Replace as follows.
 
 The Toolbar Table as follows.
 
-![Table](images/End_User_Manual_images/Toolbar_Table.PNG)
+![Table](images/End_User_Manual_images/Toolbar_Table.png)
 
 ##### Image
 
@@ -121,7 +121,7 @@ The Toolbar Table as follows.
 
 The Toolbar Image as follows.
 
-![Image](images/End_User_Manual_images/Toolbar_Image.PNG)
+![Image](images/End_User_Manual_images/Toolbar_Image.png)
 
 ##### Hyperlink
 
@@ -129,7 +129,7 @@ The Toolbar Image as follows.
 
 The Toolbar Hyperlink as follows.
 
-![Hyperlink](images/End_User_Manual_images/Toolbar_Link.PNG)
+![Hyperlink](images/End_User_Manual_images/Toolbar_Link.png)
 
 ##### Bookmark
 
@@ -137,7 +137,7 @@ The Toolbar Hyperlink as follows.
 
 The Toolbar Bookmark as follows.
 
-![Bookmark](images/End_User_Manual_images/Toolbar_Bookmark.PNG)
+![Bookmark](images/End_User_Manual_images/Toolbar_Bookmark.png)
 
 ##### Page Break
 
@@ -145,7 +145,7 @@ The Toolbar Bookmark as follows.
 
 The Toolbar Break as follows.
 
-![Break](images/End_User_Manual_images/Toolbar_Break.PNG)
+![Break](images/End_User_Manual_images/Toolbar_Break.png)
 
 * **Page Break** 
 
@@ -154,7 +154,7 @@ The Toolbar Break as follows.
     
     The Toolbar Break as follows.
 
-    ![Page Break](images/End_User_Manual_images/Toolbar_PageBreak.PNG)
+    ![Page Break](images/End_User_Manual_images/Toolbar_PageBreak.png)
 * **Section Breaks** 
 
     These breaks divide the document into sections so that each section can have independent formatting (e.g., different headers/footers, orientation, margins, etc.).
@@ -173,7 +173,7 @@ The Toolbar Break as follows.
 
     The Toolbar Break as follows.
 
-    ![Section Break](images/End_User_Manual_images/Toolbar_SectionBreak.PNG)
+    ![Section Break](images/End_User_Manual_images/Toolbar_SectionBreak.png)
 
 * **Line Break (Manual Line Break)**
     * **Usage**: Moves text to the next line without starting a new paragraph.
@@ -187,7 +187,7 @@ The Toolbar Break as follows.
 
 The Toolbar Header & Footer as follows.
 
-![Header & Footer](images/End_User_Manual_images/Toolbar_Header_Footer.PNG)
+![Header & Footer](images/End_User_Manual_images/Toolbar_Header_Footer.png)
 
 ##### Page Numbers
 
@@ -195,7 +195,7 @@ The Toolbar Header & Footer as follows.
 
 The Toolbar Page Numbers as follows.
 
-![Page Numbers](images/End_User_Manual_images/Toolbar_PageNumber.PNG)
+![Page Numbers](images/End_User_Manual_images/Toolbar_PageNumber.png)
 
 #### References Group
 
@@ -205,7 +205,7 @@ The Toolbar Page Numbers as follows.
 
 The Toolbar Table of Contents as follows.
 
-![Table of Contents](images/End_User_Manual_images/Toolbar_TOC.PNG)
+![Table of Contents](images/End_User_Manual_images/Toolbar_TOC.png)
 
 ##### Update Fields
 
@@ -213,7 +213,7 @@ The Toolbar Table of Contents as follows.
 
 The Toolbar Update Fields as follows.
 
-![Update Fields](images/End_User_Manual_images/Toolbar_UpdateField.PNG)
+![Update Fields](images/End_User_Manual_images/Toolbar_UpdateField.png)
 
 ##### Footnotes
 
@@ -230,7 +230,7 @@ The Toolbar Update Fields as follows.
 
 The Toolbar Footnotes as follows.
 
-![Footnotes](images/End_User_Manual_images/Toolbar_Footnote.PNG)
+![Footnotes](images/End_User_Manual_images/Toolbar_Footnote.png)
 
 ##### Endnotes
 
@@ -242,7 +242,7 @@ The Toolbar Footnotes as follows.
 
 The Toolbar Endnotes as follows.
 
-![Endnotes](images/End_User_Manual_images/Toolbar_Endnote.PNG)
+![Endnotes](images/End_User_Manual_images/Toolbar_Endnote.png)
 
 #### Review Group
 
@@ -252,7 +252,7 @@ The Toolbar Endnotes as follows.
 
 The Toolbar Track Changes as follows.
 
-![Track Changes](images/End_User_Manual_images/Toolbar_Trackchanges.PNG)
+![Track Changes](images/End_User_Manual_images/Toolbar_Trackchanges.png)
 
 ##### Comments
 
@@ -260,7 +260,7 @@ The Toolbar Track Changes as follows.
 
 The Toolbar Comments as follows.
 
-![Comments](images/End_User_Manual_images/Toolbar_Comment.PNG)
+![Comments](images/End_User_Manual_images/Toolbar_Comment.png)
 
 #### Content Control group
 
@@ -283,7 +283,7 @@ The Toolbar Comments as follows.
 
 The Toolbar Form Fields as follows.
 
-![Form Fields](images/End_User_Manual_images/Toolbar_FormField.PNG)
+![Form Fields](images/End_User_Manual_images/Toolbar_FormField.png)
 
 ## Customizing the Toolbar
 
@@ -310,7 +310,7 @@ When text is selected, we can modify
 
 The Text Properties Pane as follows.
 
-![Text Properties Pane](images/End_User_Manual_images/Pane_TextFormat.PNG)
+![Text Properties Pane](images/End_User_Manual_images/Pane_TextFormat.png)
 
 #### Paragraph Formatting
 
@@ -323,7 +323,7 @@ When a paragraph is selected, we can modify
 
 The Paragrapgh Properties Pane as follows.
 
-![Paragrapgh Properties Pane](images/End_User_Manual_images/Pane_ParaFormat.PNG)
+![Paragrapgh Properties Pane](images/End_User_Manual_images/Pane_ParaFormat.png)
 
 #### Table Properties
 
@@ -337,7 +337,7 @@ When a table is selected, we can modify
 
 The Table Properties Pane as follows.
 
-![Table Properties Pane](images/End_User_Manual_images/Pane_TableFormat.PNG)
+![Table Properties Pane](images/End_User_Manual_images/Pane_TableFormat.png)
  
 #### Image Properties
 
@@ -347,7 +347,7 @@ When an image is selected, we can modify
 
 The Image Properties Pane as follows.
 
-![Image Properties Pane](images/End_User_Manual_images/Pane_ImageFormat.PNG)
+![Image Properties Pane](images/End_User_Manual_images/Pane_ImageFormat.png)
 
 #### Header & Footer Properties
 
@@ -374,7 +374,7 @@ This section controls the spacing of header and footer content on the page:
 
 The Header & Footer Properties Pane as follows.
 
-![Header & Footer Properties Pane](images/End_User_Manual_images/Pane_HeaderFooterFormat.PNG)
+![Header & Footer Properties Pane](images/End_User_Manual_images/Pane_HeaderFooterFormat.png)
 
 #### Table of Contents (TOC) Pane
 
@@ -402,7 +402,7 @@ The TOC pane enables you to generate a **summary of document headings** with pag
 
 The Table of Contents Properties Pane as follows.
 
-![Table of Contents Properties Pane](images/End_User_Manual_images/Pane_TOC.PNG)
+![Table of Contents Properties Pane](images/End_User_Manual_images/Pane_TOC.png)
 
 
 #### Restrict Editing Pane
@@ -429,7 +429,7 @@ You can specify parts of the document that certain users are allowed to edit:
 
 The Restrict Editing Pane as follows.
 
-![Restrict Editing Pane](images/End_User_Manual_images/Pane_Restrict_Editing.PNG)
+![Restrict Editing Pane](images/End_User_Manual_images/Pane_Restrict_Editing.png)
 
 #### Comments Pane
 
@@ -446,7 +446,7 @@ The **Comments** pane allows you to add and manage comments in your document. Be
 
 The Comments Pane as follows.
 
-![Comments Pane](images/End_User_Manual_images/Pane_Comments.PNG)
+![Comments Pane](images/End_User_Manual_images/Pane_Comments.png)
 
 #### Track Changes Pane
 
@@ -466,7 +466,7 @@ For each change entry, you have the following options:
 
 The Track Changes Pane as follows.
 
-![Track Changes Pane](images/End_User_Manual_images/Pane_TrackChanges.PNG)
+![Track Changes Pane](images/End_User_Manual_images/Pane_TrackChanges.png)
 
 #### Navigation Pane
 
@@ -492,7 +492,7 @@ The pane displays the search results, showing the occurrences of the search term
 
 The Navigation Pane - Find Tab as follows.
 
-![Navigation Pane - Find Tab](images/End_User_Manual_images/Pane_Nav_Find.PNG)
+![Navigation Pane - Find Tab](images/End_User_Manual_images/Pane_Nav_Find.png)
 
 ##### Heading Tab
 
@@ -509,7 +509,7 @@ The pane displays a list of headings present in your document. For example:
 
 The Navigation Pane - Heading Tab as follows.
 
-![Navigation Pane - Heading Tab](images/End_User_Manual_images/Pane_Nav_Heading.PNG)
+![Navigation Pane - Heading Tab](images/End_User_Manual_images/Pane_Nav_Heading.png)
 
 ##### Replace Tab
 
@@ -528,7 +528,7 @@ The **Replace** tab allows you to find and replace text within your document eff
 
 The Navigation Pane - Replace Tab as follows.
 
-![Navigation Pane - Replace Tab](images/End_User_Manual_images/Pane_Nav_Replace.PNG)
+![Navigation Pane - Replace Tab](images/End_User_Manual_images/Pane_Nav_Replace.png)
 
 ### Dialogs
 
@@ -562,7 +562,7 @@ The **Bookmark Dialog** allows users to create, navigate to, and manage bookmark
 
 The Bookmark Dialog as follows.
 
-![Bookmark Dialog](images/End_User_Manual_images/Dialog_Bookmark.PNG)
+![Bookmark Dialog](images/End_User_Manual_images/Dialog_Bookmark.png)
 
 #### Table Dialog
 
@@ -573,7 +573,7 @@ The **Insert Table** dialog allows you to insert a table into a document or edit
 
 The Table Dialog as follows.
 
-![Table Dialog](images/End_User_Manual_images/Dialog_Table.PNG)
+![Table Dialog](images/End_User_Manual_images/Dialog_Table.png)
 
 #### Hyperlink Dialog
 
@@ -587,7 +587,7 @@ The **Insert Hyperlink** dialog allows you to create hyperlinks in your document
 
 The Hyperlink Dialog as follows.
 
-![Hyperlink Dialog](images/End_User_Manual_images/Dialog_Link.PNG)
+![Hyperlink Dialog](images/End_User_Manual_images/Dialog_Link.png)
 
 #### Page Setup Dialog
 
@@ -611,7 +611,7 @@ You can choose the orientation of your page:
 
 The Page Setup Dialog-Margin tab as follows.
 
-![Page Setup Dialog-Margin tab](images/End_User_Manual_images/Dialog_PageSetup_Margin_tab.PNG)
+![Page Setup Dialog-Margin tab](images/End_User_Manual_images/Dialog_PageSetup_Margin_tab.png)
 
 ##### Paper Tab
 
@@ -626,7 +626,7 @@ The **Paper** tab allows you to configure the size and dimensions of the paper f
 
 The Page Setup Dialog-Paper tab as follows.
 
-![Page Setup Dialog-Paper tab](images/End_User_Manual_images/Dialog_PageSetup_Paper_tab.PNG)
+![Page Setup Dialog-Paper tab](images/End_User_Manual_images/Dialog_PageSetup_Paper_tab.png)
 
 ##### Layout Tab
 
@@ -642,7 +642,7 @@ The **Layout** tab allows you to configure the layout settings for your document
 
 The Page Setup Dialog-Layout tab as follows.
 
-![Page Setup Dialog-Layout tab](images/End_User_Manual_images/Dialog_PageSetup_Layout_tab.PNG)
+![Page Setup Dialog-Layout tab](images/End_User_Manual_images/Dialog_PageSetup_Layout_tab.png)
 
 #### Styles Dialog
 
@@ -662,7 +662,7 @@ The dialog displays a list of predefined text styles, such as:
 
 The Styles Dialog as follows.
 
-![Styles Dialog](images/End_User_Manual_images/Dialog_Styles.PNG)
+![Styles Dialog](images/End_User_Manual_images/Dialog_Styles.png)
 
 #### Modify Style Dialog
 
@@ -686,7 +686,7 @@ The **Modify Style** dialog allows you to change the properties and formatting o
 
 The Modify Style Dialog as follows.
 
-![Modify Style Dialog](images/End_User_Manual_images/Dialog_Modify_Styles.PNG)
+![Modify Style Dialog](images/End_User_Manual_images/Dialog_Modify_Styles.png)
 
 #### Font Dialog
 
@@ -712,7 +712,7 @@ You can apply various text effects by checking the corresponding boxes:
 
 The Font Dialog as follows.
 
-![Font Dialog](images/End_User_Manual_images/Dialog_Font.PNG)
+![Font Dialog](images/End_User_Manual_images/Dialog_Font.png)
 
 #### Paragraph Dialog
 
@@ -749,7 +749,7 @@ The **Paragraph** dialog allows you to customize the formatting and layout of pa
 
 The Paragraph Dialog as follows.
 
-![Paragraph Dialog](images/End_User_Manual_images/Dialog_Para.PNG)
+![Paragraph Dialog](images/End_User_Manual_images/Dialog_Para.png)
 
 #### Tabs Dialog
 
@@ -785,7 +785,7 @@ Choose the leader style for the tab stop using the radio buttons:
 
 The Tabs Dialog as follows.
 
-![Tabs Dialog](images/End_User_Manual_images/Dialog_Tabs.PNG)
+![Tabs Dialog](images/End_User_Manual_images/Dialog_Tabs.png)
 
 #### Table Properties Dialog
 
@@ -821,7 +821,7 @@ Choose the alignment for the table:
 
 The Table Properties Dialog - Table tab as follows.
 
-![Table Properties Dialog - Table tab](images/End_User_Manual_images/Dialog_Table_Properties_Table_Tab.PNG)
+![Table Properties Dialog - Table tab](images/End_User_Manual_images/Dialog_Table_Properties_Table_Tab.png)
 
 ##### Row Tab
 
@@ -842,7 +842,7 @@ The **Row** tab allows you to customize the properties of table rows. Below are 
 
 The Table Properties Dialog - Row tab as follows.
 
-![Table Properties Dialog - Row tab](images/End_User_Manual_images/Dialog_Table_Properties_Row_Tab.PNG)
+![Table Properties Dialog - Row tab](images/End_User_Manual_images/Dialog_Table_Properties_Row_Tab.png)
 
 ##### Cell Tab
 
@@ -866,7 +866,7 @@ Additional Options
 
 The Table Properties Dialog - Cell tab as follows.
 
-![Table Properties Dialog - Cell tab](images/End_User_Manual_images/Dialog_Table_Properties_Cell_Tab.PNG)
+![Table Properties Dialog - Cell tab](images/End_User_Manual_images/Dialog_Table_Properties_Cell_Tab.png)
 
 #### Borders and Shading Dialog
 
@@ -889,7 +889,7 @@ The **Borders and Shading** dialog allows you to customize the appearance of bor
 
 The Borders and Shading Dialog as follows.
 
-![Borders and Shading Dialog](images/End_User_Manual_images/Dialog_Border_Shading.PNG)
+![Borders and Shading Dialog](images/End_User_Manual_images/Dialog_Border_Shading.png)
 
 ### Status Bar
 
@@ -897,7 +897,7 @@ The status bar provides important information about the current state of your do
 
 The Status Bar as follows.
 
-![Status Bar](images/End_User_Manual_images/StatusBar.PNG)
+![Status Bar](images/End_User_Manual_images/StatusBar.png)
  
 **Page Information**
 * **Page 1 of 1**: Indicates the current page number and the total number of pages in the document.
@@ -919,7 +919,7 @@ You can enable the Track Changes item in the toolbar. By clicking it, the Track 
 
 The Enabled TrackChanges shown as follows.
 
-![Enabled TrackChanges](images/End_User_Manual_images/Enable_TrackChanges.PNG)
+![Enabled TrackChanges](images/End_User_Manual_images/Enable_TrackChanges.png)
 
 #### Show/Hide Revisions Pane
 
@@ -931,7 +931,7 @@ After inserting a word in the editor after enabling track changes, you can click
 
 The Track changes Revision Pane follows.
 
-![Track changes Revision Pane](images/End_User_Manual_images/Show_Revision_Pane.PNG)
+![Track changes Revision Pane](images/End_User_Manual_images/Show_Revision_Pane.png)
  
 ##### To Hide Revision Pane
 
@@ -939,7 +939,7 @@ After inserting a word in the editor after enabling track changes, you can click
 
 The Track changes Revision Pane closing follows.
 
-![Track changes Revision Pane closing](images/End_User_Manual_images/Hide_Revision_pane.PNG)
+![Track changes Revision Pane closing](images/End_User_Manual_images/Hide_Revision_pane.png)
 
 #### Insertion and Deletion
 
@@ -947,7 +947,7 @@ After enabling track changes, you can insert or delete content. Adding new text,
 
 The Track changes Insertion/Deletion follows.
 
-![Track changes Insertion/Deletion](images/End_User_Manual_images/TrackChanges_Insertion_Deletion.PNG)
+![Track changes Insertion/Deletion](images/End_User_Manual_images/TrackChanges_Insertion_Deletion.png)
 
 #### Accept and Reject
 
@@ -959,7 +959,7 @@ You can accept the inserted or deleted content. This will accept the changes and
 
 The Accept changes in Revision follows.
 
-![Accept changes in Revision](images/End_User_Manual_images/Accept_Changes.PNG)
+![Accept changes in Revision](images/End_User_Manual_images/Accept_Changes.png)
 
 **Reject specific Revision by User interface**
 
@@ -967,7 +967,7 @@ You can reject the inserted or deleted content. This will reject the changes and
 
 The Reject Changes in Revision follows.
 
-![Reject Changes in Revision](images/End_User_Manual_images/Reject_Changes.PNG)
+![Reject Changes in Revision](images/End_User_Manual_images/Reject_Changes.png)
 
 ##### Accept/Reject all Revision
 
@@ -977,7 +977,7 @@ You can accept/reject all the inserted and deleted content. So, that will accept
 
 The Accept All / Reject All Changes in Revision follows.
 
-![Accept All / Reject All Changes in Revision](images/End_User_Manual_images/AcceptAll_RejectAll.PNG)
+![Accept All / Reject All Changes in Revision](images/End_User_Manual_images/AcceptAll_RejectAll.png)
 
 #### **Selection / Navigation between the tracked changes**
 
@@ -985,13 +985,13 @@ You can select the inserted and deleted content in the Editor, which will indica
 
 The Selection Tracked Changes follows.
 
-![Track changes Revision Pane closing](images/End_User_Manual_images/Selection_Tracked_Changes.PNG)
+![Track changes Revision Pane closing](images/End_User_Manual_images/Selection_Tracked_Changes.png)
 
 In DocumentEditor, we have a built-in review panel in which we provide support for filtering changes based on the user.
 
 The Filtering Changes Based On User follows.
 
-![Filtering Changes Based On User](images/End_User_Manual_images/Filtering_Changes_Based_On_User.PNG)
+![Filtering Changes Based On User](images/End_User_Manual_images/Filtering_Changes_Based_On_User.png)
 
 #### Protect the document in track changes only mode
 
@@ -999,32 +999,32 @@ Document Editor allows viewing and correcting with **RevisionsOnly protection** 
 
 **Step 1:** Click the `Restrict Editing` item in the Toolbar and select the Protections button from the dropdown.
 
-![Enabling TrackChanges](images/End_User_Manual_images/Enabling_TrackChanges.PNG)
+![Enabling TrackChanges](images/End_User_Manual_images/Enabling_TrackChanges.png)
 
 **Step 2:** The Restrict Editing Pane will Open, then click the Tracked changes option and allow formatting based on your preferences.
 
-![Formatting Restriction](images/End_User_Manual_images/Format_Restriction.PNG)
+![Formatting Restriction](images/End_User_Manual_images/Format_Restriction.png)
 
 **Step 3:** Click `Yes, Start Enforcing Protection` button to protect the tracked changes.
 
-![Enforce Protection](images/End_User_Manual_images/Enforce_Protection.PNG)
+![Enforce Protection](images/End_User_Manual_images/Enforce_Protection.png)
 
 **Step 4:** Enforce the restriction with a password, so you can secure it.
 
-![Enforcing Protection By PassWord](images/End_User_Manual_images/Enforcing_Protection_By_PassWord.PNG)
+![Enforcing Protection By PassWord](images/End_User_Manual_images/Enforcing_Protection_By_PassWord.png)
 
 **Step 5:** Now you can see the document is restricted; you can’t accept/reject (disabled) the changes without stopping the protection.
 
-![Show Revision and Restriction Pane after Enforcing Protection](images/End_User_Manual_images/Show_Revision_Restriction_Pane.PNG)
+![Show Revision and Restriction Pane after Enforcing Protection](images/End_User_Manual_images/Show_Revision_Restriction_Pane.png)
 
 **Step 6:** Click the `Stop Protection` button to stop protection using the same password that was used to enforce protection earlier.
 
-![Stop Protection](images/End_User_Manual_images/Stop_Protection.PNG)
+![Stop Protection](images/End_User_Manual_images/Stop_Protection.png)
  
 
 After stopping protection, the document retains its original form, and you can Accept/Reject (enabled) the changes.
 
-![Show Revision and Restriction Pane after Stop Protection](images/End_User_Manual_images/Show_Revision_Restriction_Pane_After_Stop_Protection.PNG)
+![Show Revision and Restriction Pane after Stop Protection](images/End_User_Manual_images/Show_Revision_Restriction_Pane_After_Stop_Protection.png)
 
 
 
