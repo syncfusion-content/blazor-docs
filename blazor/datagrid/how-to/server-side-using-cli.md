@@ -11,7 +11,7 @@ documentation: ug
 
 This article provides a step-by-step instructions to build a Blazor Server App with Syncfusion Blazor DataGrid using the [.NET CLI](https://dotnet.microsoft.com/en-us/download/dotnet).
 
-## Manually Creating a Project
+## Manually creating a project
 
 This section provides a brief explanation on how to manually create a Blazor Server App using CLI.
 
@@ -45,7 +45,7 @@ This command creates new Blazor app project and places it in a new directory cal
 
 N> If you have installed multiple SDK versions and need any specific framework version (net5.0/netcoreapp3.1) project, then add -f flag along with dotnet new blazorserver comment. Refer [here](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new) for the available options.
 
-### Install Syncfusion Blazor DataGrid and Themes NuGet in the App
+### Install Syncfusion Blazor DataGrid and Themes NuGet in the app
 
 To add the `Syncfusion.Blazor.Grid` NuGet package to your application, use the following command in the command prompt (Windows) or terminal (Linux/macOS). For more details, refer to the [Install and manage packages using the dotnet CLI](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-dotnet-cli).
 
@@ -61,7 +61,7 @@ dotnet restore
 
 N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
-### Register Syncfusion Blazor Service
+### Register Syncfusion Blazor service
 
 1. Import namespaces:
 
@@ -103,7 +103,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 * For **.NET 6** Blazor Server app, include it in **~/Pages/_Layout.cshtml** file.
 
-* For **.NET 7,8,9** Blazor Server app, include it in the **~/Pages/_Host.cshtml** file.
+* For **.NET 7,8,9 and 10** Blazor Server app, include it in the **~/Pages/_Host.cshtml** file.
 
 ```html
 <head>
@@ -160,7 +160,8 @@ public class OrderData
                 Orders.Add(new OrderData(2, "ALFKI"));
                 Orders.Add(new OrderData(3, "ANANTR"));
                 Orders.Add(new OrderData(4, "ANANTR"));
-                Orders.Add(new OrderData(5, "ALFKI"));                                                                           code += 5;
+                Orders.Add(new OrderData(5, "ALFKI"));
+                code += 5;
             }
         }
         return Orders;

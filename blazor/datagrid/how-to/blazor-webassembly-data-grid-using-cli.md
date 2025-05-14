@@ -11,13 +11,13 @@ documentation: ug
 
 This article provides step-by-step instructions to build a Blazor WebAssembly App using the Syncfusion Blazor DataGrid with the [.NET CLI](https://dotnet.microsoft.com/en-us/download/dotnet).
 
-## Using Playground
+## Using playground
 
 [Blazor Playground](https://blazor.syncfusion.com/documentation/blazor-playground/overview) allows you to interact with our Blazor components directly in your web browser without need to install any required NuGet packages. By default, the `Syncfusion.Blazor` package is included in this.
 
 {% playground "https://blazorplayground.syncfusion.com/" %}
 
-## Manually Creating a Project
+## Manually creating a project
 
 This section provides a brief explanation on how to manually create a Blazor WebAssembly App using CLI.
 
@@ -34,7 +34,7 @@ dotnet --version
 {% endhighlight %}
 {% endtabs %}
 
-### Create a Blazor WebAssembly project using .NET CLI
+### Create a Blazor webAssembly project using .NET CLI
 
 To create a new Blazor WebAssembly app, open your terminal or command prompt and run:
 
@@ -59,7 +59,7 @@ dotnet new blazorwasm -o BlazorApp -ho
 
 N> If you have installed multiple SDK versions and need any specific framework version (net6.0/net7.0) project, then add -f flag along with dotnet new blazorwasm comment. Refer [here](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new#blazorwasm) for the available options.
 
-### Install Syncfusion Blazor DataGrid and Themes NuGet in the App
+### Install Syncfusion Blazor DataGrid and Themes NuGet in the app
 
 To add the `Syncfusion.Blazor.Grid` NuGet package to your application, use the following command in the command prompt (Windows) or terminal (Linux/macOS). For more details, refer to the [Install and manage packages using the dotnet CLI](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-dotnet-cli).
 
@@ -75,9 +75,9 @@ dotnet restore
 
 N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
-### Register Syncfusion Blazor Service
+### Register Syncfusion Blazor service
 
-1. Import Namespaces
+1. Import namespaces
 
 Open the **~/_Imports.razor** file and add the following namespaces:
 
@@ -87,7 +87,7 @@ Open the **~/_Imports.razor** file and add the following namespaces:
 @using Syncfusion.Blazor.Grids
 
 ```
-2. Register the syncfusion service
+2. Register the Syncfusion service
 
 In your **~/Program.cs** file, register the Syncfusion Blazor service as shown below:
 
@@ -175,7 +175,8 @@ public class OrderData
                 Orders.Add(new OrderData(2, "ALFKI"));
                 Orders.Add(new OrderData(3, "ANANTR"));
                 Orders.Add(new OrderData(4, "ANANTR"));
-                Orders.Add(new OrderData(5, "ALFKI"));                                                                           code += 5;
+                Orders.Add(new OrderData(5, "ALFKI"));
+                code += 5;
             }
         }
         return Orders;
