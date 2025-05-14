@@ -9,11 +9,11 @@ documentation: ug
 
 # Data Annotation in Blazor DataGrid
 
-Data Annotations are used to define rules for model classes or properties, allowing validation of data and the display of appropriate messages to end-users. By leveraging Data Annotations, you can ensure that data entered into your application conforms to the expected format and meets specific validation criteria. In Syncfusion's Blazor DataGrid, Data Annotations help map these validation rules to the corresponding DataGrid column properties.
+Data Annotations are used to define rules for model classes or properties, allowing validation of data and the display of appropriate messages to end-users. By leveraging Data Annotations, you can ensure that data entered into your application conforms to the expected format and meets specific validation criteria. In Syncfusion's Blazor DataGrid, Data Annotations help map these validation rules to the corresponding Grid column properties.
 
-To enable Data Annotations for validation in a Syncfusion Blazor DataGrid, you need to reference the **System.ComponentModel.DataAnnotations** namespace in your Blazor application. Once enabled, the DataGrid automatically uses the data annotations applied to your model class properties to perform data validation.
+To enable Data Annotations for validation in a Grid, you need to reference the **System.ComponentModel.DataAnnotations** namespace in your Blazor application. Once enabled, the Grid automatically uses the data annotations applied to your model class properties to perform data validation.
 
-The following table lists the data annotation attributes supported in the DataGrid:
+The following table lists the data annotation attributes supported in the Grid:
 
 | Attribute Name | Properties | Functionality |
 |---------------|------------|--------------|
@@ -30,12 +30,12 @@ The following table lists the data annotation attributes supported in the DataGr
 | DisplayFormat | NeedsHtmlEncode | Sets whether HTML encoding should be disabled for a particular column |
 | ScaffoldColumnAttribute | Scaffold | Sets whether the column is visible in the user interface |
 | EditableAttribute | ReadOnly | Sets whether the column allows editing |
-| Key | Key | Marks a column as the primary key in the DataGrid |
-| Validation Attributes:<br><br>1. RequiredAttribute<br>2. StringLengthAttribute<br>3. RangeAttribute<br>4. RegularExpressionAttribute<br>5. MinLengthAttribute<br>6. MaxLengthAttribute<br>7. EmailAddressAttribute<br>8. CompareAttribute<br> | | These validation attributes are used as `validation rules` in DataGrid CRUD operations |
+| Key | Key | Marks a column as the primary key in the Grid |
+| Validation Attributes:<br><br>1. RequiredAttribute<br>2. StringLengthAttribute<br>3. RangeAttribute<br>4. RegularExpressionAttribute<br>5. MinLengthAttribute<br>6. MaxLengthAttribute<br>7. EmailAddressAttribute<br>8. CompareAttribute<br> | | These validation attributes are used as `validation rules` in Grid CRUD operations |
 
-> The DataGrid property takes precedence over data annotation attributes. For example, when both the DisplayName attribute and `HeaderText` are assigned to a field in the DataGrid model class for a specific column, the `HeaderText` value will be prioritized and displayed in the DataGrid header.
+> The Syncfusion Blazor DataGrid property takes precedence over data annotation attributes. For example, when both the DisplayName attribute and `HeaderText` are assigned to a field in the Grid model class for a specific column, the `HeaderText` value will be prioritized and displayed in the Grid header.
 
-The following sample code demonstrates how to use data annotations in the DataGrid:
+The following sample code demonstrates how to use data annotations in the Grid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -119,22 +119,22 @@ The following sample code demonstrates how to use data annotations in the DataGr
 
     public class Order
     {
-        // Sets column as primary key
+        // Sets column as primary key.
         [Key]
-        // Sets column as required and error message to be displayed when empty
+        // Sets column as required and error message to be displayed when empty.
         [Required(ErrorMessage = "Order ID should not be empty")]
-        // Sets header text to the column
+        // Sets header text to the column.
         [Display(ShortName = "ID")]
         public int OrderID { get; set; }
         [Display(Name = "CustomerID", Description ="List of Customers")]
-        // Sets column as required and error message to be displayed when empty
+        // Sets column as required and error message to be displayed when empty.
         [Required(ErrorMessage = "Field should not be empty")]
         [DisplayFormat(NullDisplayText = "Empty", ConvertEmptyStringToNull = true)]
         public string? CustomerID { get; set; }
-        // Sets data type of column as Date
+        // Sets data type of column as Date.
         [DataType(DataType.Date)]
         [Display(Name = "Order Date")]
-        // Sets column as read only
+        // Sets column as read only.
         [Editable(false)]
         public DateTime? OrderDate { get; set; }
         [Display(Name = "Freight", AutoGenerateFilter = false)]
@@ -150,10 +150,10 @@ The following sample code demonstrates how to use data annotations in the DataGr
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LthIZotuimdZMRyd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-The following image shows how Data Annotations are applied to DataGrid columns in a Blazor application:
+The following image shows how Data Annotations are applied to Grid columns in a Blazor application:
 
-![Data Annotation in Blazor DataGrid](./images/blazor-datagrid-data-annotation.png)
+![Data Annotation in Grid](./images/blazor-datagrid-data-annotation.png)
 
 > The **Verified** column displays the `Enum` member using the `Display` attribute name, enhancing user experience by rendering a human-readable label instead of the raw enum value.
 
-> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its features. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand how to present and manipulate data.
+> You can refer to our [Syncfusion Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its features. You can also explore our [Syncfusion Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand how to present and manipulate data.
