@@ -1,23 +1,23 @@
 ---
 layout: post
-title: Integration with Microsoft.Extensions.AI in Blazor AI AssistView Component | Syncfusion
+title: Integration of Microsoft.Extensions.AI with the Blazor AI AssistView component | Syncfusion
 description: Checkout and learn about Integration with Microsoft.Extensions.AI and Keyboard interaction with Blazor AI AssistView component and more details.
 platform: Blazor
 control: AI AssistView
 documentation: ug
 ---
 
-# Integration with Microsoft.Extensions.AI in Blazor AI AssistView component
+# Integration of Microsoft.Extensions.AI with the Blazor AI AssistView component
 
 The Syncfusion AI AssistView component supports integration with the `Microsoft.Extensions.AI` framework, enabling seamless communication with various large language models (LLMs) such as `Azure OpenAI`, `OpenAI`, and more.
 
-`The Microsoft.Extensions.AI` simplifies integration with different models, requiring minimal configuration changes depending on the provider. The following example demonstrates integration using Azure OpenAI.
+`The Microsoft.Extensions.AI` simplifies integration with different models, requiring minimal configuration changes depending on the provider. The following example demonstrates integration using `Azure OpenAI`.
 
 N> The Microsoft AI extension libraries are currently in preview, and breaking changes may occur. Ensure that you use compatible versions to avoid integration issues.
 
 ### Getting started with AI AssistView
 
-Before integrating `AI AssistView` with `Microsoft.Extensions.AI`, ensure the basic SfAIAssistView component is rendered by following the appropriate guide:
+Before integrating `AI AssistView` with `Microsoft.Extensions.AI`, ensure the SfAIAssistView component is rendered by following the appropriate project guideline:
 
 * [Blazor Web App](../getting-started-webapp)
 * [Blazor WASM App](../getting-started)
@@ -48,12 +48,11 @@ dotnet add package Markdig
 
 ### Configure services in Program.cs
 
-Register the Azure OpenAI client and Syncfusion components within the Blazor application.
+Register the `Azure OpenAI` client and Syncfusion AI Assistview component within the Blazor application.
 
 {% tabs %}
 {% highlight c# tabtitle="~/_Program.cs" hl_lines="2 9" %}
 
-...
 using Syncfusion.Blazor;
 using Microsoft.Extensions.AI;
 using Azure.AI.OpenAI;
@@ -67,7 +66,7 @@ builder.Services.AddRazorComponents()
 
 // Set Azure OpenAI configuration
 var endpoint = "https://azure-testresource.openai.azure.com";
-var apiKey = "YOUR_API_KEY"; // Replace with your actual key
+var apiKey = "YOUR_API_KEY"; // Replace with your actual key;
 var deploymentName = "gpt-4o-mini";
 
 var credential = new AzureKeyCredential(apiKey);
@@ -83,7 +82,6 @@ builder.Services.AddChatClient(
 builder.Services.AddSyncfusionBlazor();
 
 var app = builder.Build();
-....
 
 {% endhighlight %}
 {% endtabs %}
@@ -92,7 +90,7 @@ var app = builder.Build();
 
 The Syncfusion `AI AssistView` component is built to seamlessly integrate with external AI services. When the `IChatClient` is registered via `Microsoft.Extensions.AI`, the component automatically uses it to handle user prompts without any additional configuration.
 
-In the following example, the user input is processed using the injected `IChatClient`. The AI model's response is returned in Markdown format and is converted to clean HTML using the `Markdig` library before rendering in the AssistView component.
+In the following example, the user input is processed using the injected `IChatClient`. The AI model's response is returned in Markdown format which is converted to HTML using the `Markdig` library before rendering in the AI AssistView component.
 
 {% tabs %}
 {% highlight razor %}
@@ -105,7 +103,7 @@ In the following example, the user input is processed using the injected `IChatC
 @using System.Text.RegularExpressions;
 @inject IChatClient ChatClient
 
-<div class="aiassist-container" style="height: 350px; width: 650px;">
+<div style="height: 350px; width: 650px;">
     <SfAIAssistView PromptRequested="@OnPromptRequested"></SfAIAssistView>
 </div>
 
