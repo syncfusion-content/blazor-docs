@@ -260,7 +260,6 @@ You can render the chip items from collection using for loop in Blazor Chip comp
     protected override async Task OnInitializedAsync()
     {
         await base.OnInitializedAsync();
-        await Task.Delay(2000);
         ChipData.Add(new ChipCollection
         {
             text = "Jenifer",
