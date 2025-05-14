@@ -2418,7 +2418,7 @@ The following example demonstrates how to render cascading DropDownLists for the
 @using Syncfusion.Blazor.DropDowns
 
 <SfGrid @ref="GridRef" AllowPaging="true" DataSource="@GridData" ShowColumnChooser="true" Toolbar="@(new List<string>() { "Add","Edit","Delete","Update","Cancel" })">
-    <GridEvents OnActionBegin="OnActionBegin" TValue="Orders"></GridEvents>
+    <GridEvents OnBeginEdit="OnBeginEdit" TValue="Orders"></GridEvents>
     <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="@EditMode.Normal"></GridEditSettings>
     <GridColumns>
         <GridColumn Field=@nameof(Orders.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="@TextAlign.Center" Width="140"></GridColumn>
@@ -2502,17 +2502,16 @@ The following example demonstrates how to render cascading DropDownLists for the
         Enabled = true;
         GridRef.PreventRender(false);
     }
-    public void OnActionBegin(ActionEventArgs<Orders> args)
+    public void OnBeginEdit(BeginEditArgs<Orders> args)
     {
-        if (args.RequestType == Syncfusion.Blazor.Grids.Action.BeginEdit)
-        {
             Enabled = false;
-        }
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVACDDzLCOPwlKE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### DynamicObject data binding with EditTemplate
 
