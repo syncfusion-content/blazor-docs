@@ -117,7 +117,7 @@ public class OrderData
 
 ## Binding data from Excel document
 
-The Syncfusion Blazor DataGrid allows you to import data from Excel documents into your web application for display and manipulation within the Grid. This feature streamlines the process of transferring Excel data to a web-based environment. You can achieve this by using the `ValueChange` event of the **File Upload**.
+The Syncfusion Blazor DataGrid allows you to import data from Excel documents into your web application for display and manipulation within the Grid. This feature streamlines the process of transferring Excel data to a web-based environment. You can achieve this by using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_ValueChange) event of the **File Upload**.
 
 To import Excel data into Grid, you can follow these steps:
 
