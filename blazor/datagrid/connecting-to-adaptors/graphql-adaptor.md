@@ -11,9 +11,9 @@ documentation: ug
 
 GraphQL is a powerful query language for APIs, designed to provide a more efficient alternative to traditional REST APIs. It allows you to precisely fetch the data you need, reducing over-fetching and under-fetching of data. GraphQL provides a flexible and expressive syntax for querying, enabling clients to request only the specific data they require.
 
-Syncfusion’s Blazor DataGrid  seamlessly integrates with GraphQL servers using the GraphQLAdaptor in the DataManager. This specialized adaptor simplifies the interaction between the Syncfusion® Blazor DataGrid and GraphQL servers, allowing efficient data retrieval with support for various operations like CRUD (Create, Read, Update, Delete), paging, sorting, and filtering.
+Syncfusion’s Blazor DataGrid  seamlessly integrates with GraphQL servers using the GraphQLAdaptor in the DataManager. This specialized adaptor simplifies the interaction between the Grid and GraphQL servers, allowing efficient data retrieval with support for various operations like CRUD (Create, Read, Update, Delete), paging, sorting, and filtering.
 
-This section describes a step-by-step process for retrieving data from a GraphQL service using GraphQLAdaptor, then binding it to the Blazor DataGrid  to facilitate data and CRUD operations.
+This section describes a step-by-step process for retrieving data from a GraphQL service using GraphQLAdaptor, then binding it to the Grid  to facilitate data and CRUD operations.
 
 ## Configure a GraphQL Server
 
@@ -396,7 +396,7 @@ Create a **Blazor Web App** named **BlazorGrid** using Visual Studio 2022. You c
 
 **Step 2: Install Syncfusion Blazor Grid and Themes NuGet Packages**
 
-To add the Blazor DataGrid to your app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*). Search for and install the following packages:
+To add the Syncfusion Blazor DataGrid to your app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*). Search for and install the following packages:
 
 - [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/)
 - [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
@@ -878,7 +878,7 @@ On the server, these parameters are parsed and used to filter the data source ac
 
 using GraphQLServer.Models;
 
-// Defines the GraphQL resolver for handling DataGrid requests.
+// Defines the GraphQL resolver for handling Grid requests.
 public class GraphQLQuery
 {
     // Returns order data based on the DataManager request received from the Grid.
@@ -1034,7 +1034,7 @@ When a sort action is triggered in the Grid, the DataManager sends the sorting c
 
 using GraphQLServer.Models;
 
-// Defines the GraphQL resolver for handling DataGrid requests.
+// Defines the GraphQL resolver for handling Grid requests.
 public class GraphQLQuery
 {
     // Returns order data based on the DataManager request received from the Grid.
@@ -1145,7 +1145,7 @@ On the server side, the data is sliced based on the **Skip** and **Take** values
 
 using GraphQLServer.Models;
 
-// Defines the GraphQL resolver for handling DataGrid requests.
+// Defines the GraphQL resolver for handling Grid requests.
 public class GraphQLQuery
 {
     // Returns order data based on the DataManager request received from the Grid.
@@ -1181,9 +1181,9 @@ public class OrdersDataResponse
 
 ## Handling CRUD operation
 
-The Syncfusion Blazor DataGrid integrates seamlessly with GraphQL APIs using the GraphQLAdaptor, enabling support for CRUD (Create, Read, Update and Delete) and Batch operations. This adaptor maps DataGrid actions to GraphQL queries and mutations for real-time data interaction.
+The Syncfusion Blazor DataGrid integrates seamlessly with GraphQL APIs using the GraphQLAdaptor, enabling support for CRUD (Create, Read, Update, and Delete) and Batch operations. This adaptor maps Grid actions to GraphQL queries and mutations for real-time data interaction.
 
-This section demonstrates how to configure the DataGrid with actual code to bind data and perform CRUD actions using the GraphQLAdaptor.
+This section demonstrates how to configure the Grid with actual code to bind data and perform CRUD actions using the GraphQLAdaptor.
 
 **Set Up Mutation Queries**
 
@@ -1662,7 +1662,7 @@ namespace GraphQLServer.GraphQL
 
 ```
 
-The following sections explain how to configure each CRUD and batch operation in the Syncfusion Blazor DataGrid using GraphQL.
+The following sections explain how to configure each CRUD and batch operation in the Grid using GraphQL.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
