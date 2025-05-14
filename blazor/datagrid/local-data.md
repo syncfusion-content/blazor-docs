@@ -261,7 +261,7 @@ To know about **ExpandoObject** data binding in Grid, you can check on this vide
 {% youtube
 "youtube:https://www.youtube.com/watch?v=Xhaw3DdHmJk"%}
 
-To bind an ExpandoObject to the Grid, you need to assign it to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property. The Grid supports various data operations such as sorting, filtering, and editing when using ExpandoObject.
+To bind an **ExpandoObject** to the Grid, you need to assign it to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property. The Grid supports various data operations such as sorting, filtering, and editing when using **ExpandoObject**.
 
 The following sample demonstrates **ExpandoObject** binding:
 
@@ -379,7 +379,7 @@ To know about **DynamicObject** data binding in Grid, you can check on this vide
 
 N> The [GetDynamicMemberNames](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames?view=net-8.0) method of **DynamicObject** class must be overridden and return the property names to perform data operation and editing while using **DynamicObject**.
 
-Here’s an example of how to bind a list of DynamicObject to the Grid:
+Here’s an example of how to bind a list of **DynamicObject** to the Grid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
