@@ -13,7 +13,7 @@ GraphQL is a powerful query language for APIs, designed to provide a more effici
 
 Syncfusion’s Blazor DataGrid  seamlessly integrates with GraphQL servers using the GraphQLAdaptor in the DataManager. This specialized adaptor simplifies the interaction between the Grid and GraphQL servers, allowing efficient data retrieval with support for various operations like CRUD (Create, Read, Update, Delete), paging, sorting, and filtering.
 
-This section describes a step-by-step process for retrieving data from a GraphQL service using GraphQLAdaptor, then binding it to the Grid  to facilitate data and CRUD operations.
+This section describes a step-by-step process for retrieving data from a GraphQL service using GraphQLAdaptor, then binding it to the Grid to facilitate data and CRUD operations.
 
 ## Configure a GraphQL Server
 
