@@ -106,7 +106,6 @@ N> Before use the Syncfusion Blazor Project Template, check whether the Syncfusi
      | ------------- | ------------- |
      | Syncfusion Blazor Web App | None and Individual Accounts |
      | Syncfusion Blazor WebAssembly App | None, Individual Accounts and Microsoft Identity Platform |
-     | Syncfusion Blazor Server App | None, Individual Accounts, Microsoft Identity Platform, and Windows |
 
      If you choose the **Blazor Web App** application type, you can customize the Interactivity type and Interactivity location options.
 
