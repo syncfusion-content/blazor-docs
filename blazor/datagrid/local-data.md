@@ -117,11 +117,11 @@ public class OrderData
 
 ## Binding data from Excel document
 
-The Syncfusion Blazor DataGrid allows you to import data from Excel documents into your web application for display and manipulation within the Grid. This feature streamlines the process of transferring Excel data to a web-based environment. You can achieve this by using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_ValueChange) event of the **File Upload**.
+The Syncfusion Blazor DataGrid allows you to import data from Excel documents into your web application for display and manipulation within the Grid. This feature streamlines the process of transferring Excel data to a web-based environment. You can achieve this by using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_ValueChange) event of the `SfFileUploader`.
 
 To import Excel data into Grid, you can follow these steps:
 
-1. Use the [File Upload](https://blazor.syncfusion.com/documentation/file-upload/getting-started-with-web-app) to upload the Excel document.
+1. Use the [SfFileUploader](https://blazor.syncfusion.com/documentation/file-upload/getting-started-with-web-app) to upload the Excel document.
 
 2. Parse the file using the [Syncfusion.XlslO](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core/) library.
 
@@ -252,279 +252,17 @@ The following example demonstrates how an Excel document is uploaded, parsed, co
 
 [!Binding data from Excel document](./images/excel-import-data.gif)
 
-## ExpandoObject binding
-
-The Syncfusion Blazor DataGrid is a generic component typically bound to a specific model type. However, there are scenarios where the model type is unknown during compile time. In such cases, you can bind data to the Grid using a list of **ExpandoObject**. This allows for dynamic data structures that can adapt to various data shapes without a predefined schema.
-
-To know about **ExpandoObject** data binding in Grid, you can check on this video.
-
-{% youtube
-"youtube:https://www.youtube.com/watch?v=Xhaw3DdHmJk"%}
-
-To bind an **ExpandoObject** to the Grid, you need to assign it to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property. The Grid supports various data operations such as sorting, filtering, and editing when using **ExpandoObject**.
-
-The following sample demonstrates **ExpandoObject** binding:
-
-{% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-
-@using Syncfusion.Blazor.Grids
-@using System.Dynamic
-
-<SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@ToolbarItems">
-    <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true"></GridEditSettings>
-    <GridColumns>
-        <GridColumn Field="OrderID" HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field="CustomerID" HeaderText="Customer Name" Width="120"></GridColumn>
-        <GridColumn Field="Freight" HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field="OrderDate" HeaderText=" Order Date" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
-        <GridColumn Field="ShipCountry" HeaderText="Ship Country" EditType="EditType.DropDownEdit" Width="150"></GridColumn>
-        <GridColumn Field="Verified" HeaderText="Active" DisplayAsCheckBox="true" Width="150"></GridColumn>
-    </GridColumns>
-</SfGrid>
-
-@code {
-    public List<ExpandoObject> Orders { get; set; } = new List<ExpandoObject>();
-    private List<string> ToolbarItems = new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" };
-
-    protected override void OnInitialized()
-    {
-        Orders = Enumerable.Range(1, 75).Select((x) =>
-        {
-            dynamic d = new ExpandoObject();
-            d.OrderID = 1000 + x;
-            d.CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)];
-            d.Freight = (new double[] { 2, 1, 4, 5, 3 })[new Random().Next(5)] * x;
-            d.OrderDate = (new DateTime[] { new DateTime(2010, 11, 5), new DateTime(2018, 10, 3), new DateTime(1995, 9, 9), new DateTime(2012, 8, 2), new DateTime(2015, 4, 11) })[new Random().Next(5)];
-            d.ShipCountry = (new string[] { "USA", "UK" })[new Random().Next(2)];
-            d.Verified = (new bool[] { true, false })[new Random().Next(2)];
-
-            return d;
-        }).Cast<ExpandoObject>().ToList<ExpandoObject>();
-
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-### ExpandoObject Complex data binding
-
-This feature is useful for binding complex data structures to the Syncfusion Blazor DataGrid. You can achieve complex data binding with ExpandoObject by using the dot (.) operator in the `Column.Field` property. This allows you to access nested properties within the **ExpandoObject**.
-
-In the following example, the fields `CustomerID.Name` and `ShipCountry.Country` represent complex data bound to the Grid.
-
-{% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-
-@using Syncfusion.Blazor.Grids
-@using System.Dynamic
-
-<SfGrid DataSource="@Orders" AllowPaging="true" AllowFiltering="true" AllowSorting="true" AllowGrouping="true" Toolbar="@ToolbarItems">
-    <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true"></GridEditSettings>
-    <GridColumns>
-        <GridColumn Field="OrderID" HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field="CustomerID.Name" HeaderText="Customer Name" Width="120"></GridColumn>
-        <GridColumn Field="Freight" HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field="OrderDate" HeaderText=" Order Date" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
-        <GridColumn Field="ShipCountry.Country" HeaderText="Ship Country"  Width="150"></GridColumn>
-        <GridColumn Field="Verified" HeaderText="Active" DisplayAsCheckBox="true" Width="150"></GridColumn>
-    </GridColumns>
-</SfGrid>
-
-@code {
-    public List<ExpandoObject> Orders { get; set; } = new List<ExpandoObject>();
-    private List<string> ToolbarItems = new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" };
-
-    protected override void OnInitialized()
-    {
-        Orders = Enumerable.Range(1, 75).Select((x) =>
-        {
-            dynamic d = new ExpandoObject();
-            dynamic customerName = new ExpandoObject();
-            dynamic countryName = new ExpandoObject();
-            d.OrderID = 1000 + x;
-            customerName.Name = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)];
-            d.CustomerID = customerName;
-            d.Freight = (new double[] { 2, 1, 4, 5, 3 })[new Random().Next(5)] * x;
-            d.OrderDate = (new DateTime[] { new DateTime(2010, 11, 5), new DateTime(2018, 10, 3), new DateTime(1995, 9, 9), new DateTime(2012, 8, 2), new DateTime(2015, 4, 11) })[new Random().Next(5)];
-            countryName.Country = (new string[] { "USA", "UK" })[new Random().Next(2)];
-            d.ShipCountry = countryName;
-            d.Verified = (new bool[] { true, false })[new Random().Next(2)];
-
-            return d;
-        }).Cast<ExpandoObject>().ToList<ExpandoObject>();
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-N> You can perform the Data operations and CRUD operations for Complex **ExpandoObject** binding fields too.
-
-The following image represents **ExpandoObject** complex data binding,
-
-![Binding ExpandObject with Complex Data in Blazor DataGrid](./images/blazor-datagrid-expand-complex-data.png)
-
-## DynamicObject binding
-
-The Syncfusion Blazor DataGrid is a generic component which is strongly bound to a model type. However, there are scenarios where the model type is unknown during compile time. In such cases, you can bind data to the Grid using a list of **ExpandoObject**. This allows for dynamic data structures that can adapt to various data shapes without a predefined schema.
-
-To bind an **ExpandoObject** to the Grid, you need to assign it to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property. This enables the Grid to perform various supported data operations and editing on the **DynamicObject**.
-
-To know about **DynamicObject** data binding in Grid, you can check on this video.
-
-{% youtube
-"youtube:https://www.youtube.com/watch?v=Xhaw3DdHmJk"%}
-
-N> The [GetDynamicMemberNames](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames?view=net-8.0) method of **DynamicObject** class must be overridden and return the property names to perform data operation and editing while using **DynamicObject**.
-
-Here’s an example of how to bind a list of **DynamicObject** to the Grid:
-
-{% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-
-@using Syncfusion.Blazor.Grids
-@using System.Dynamic
-
-<SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@ToolbarItems">
-    <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true"></GridEditSettings>
-    <GridColumns>
-        <GridColumn Field="OrderID" HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field="CustomerID" HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field="OrderDate" HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" EditType="EditType.DatePickerEdit" Width="130"></GridColumn>
-        <GridColumn Field="Freight" HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-    </GridColumns>
-</SfGrid>
-
-@code {
-    private List<string> ToolbarItems = new List<string>(){ "Add","Edit","Delete","Update","Cancel"};
-    public List<DynamicDictionary> Orders = new List<DynamicDictionary>() { };
-    protected override void OnInitialized()
-    {
-        Orders = Enumerable.Range(1, 1075).Select((x) =>
-        {
-            dynamic d = new DynamicDictionary();
-            d.OrderID = 1000 + x;
-            d.CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)];
-            d.Freight = (new double[] { 2, 1, 4, 5, 3 })[new Random().Next(5)] * x;
-            d.OrderDate = DateTime.Now.AddDays(-x);
-            return d;
-        }).Cast<DynamicDictionary>().ToList<DynamicDictionary>();
-    }
-    public class DynamicDictionary : DynamicObject
-    {
-        Dictionary<string, object> dictionary = new Dictionary<string, object>();
-
-        public override bool TryGetMember(GetMemberBinder binder, out object result)
-        {
-            string name = binder.Name;
-            return dictionary.TryGetValue(name, out result);
-        }
-        public override bool TrySetMember(SetMemberBinder binder, object value)
-        {
-            dictionary[binder.Name] = value;
-            return true;
-        }
-
-        public override System.Collections.Generic.IEnumerable<string> GetDynamicMemberNames()
-        {
-            return this.dictionary?.Keys;
-        }
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-#### DynamicObject Complex data binding
-
-You can achieve complex data binding with **DynamicObject** in the Syncfusion Blazor DataGrid by using the dot (.) operator in the `Column.Field` property. This allows you to access and bind to nested properties within the **DynamicObject**, enabling the display of structured data in the Grid.
-
-In the following example, `CustomerID.Name` and `ShipCountry.Country` are considered complex data fields that are bound to the Grid:
-
-{% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-
-@using Syncfusion.Blazor.Grids
-@using System.Dynamic
-
-<SfGrid DataSource="@Orders" AllowPaging="true" AllowFiltering="true" AllowSorting="true" AllowGrouping="true" Toolbar="@ToolbarItems">
-    <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true"></GridEditSettings>
-    <GridColumns>
-        <GridColumn Field="OrderID" HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field="CustomerID.Name" HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field="OrderDate" HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" EditType="EditType.DatePickerEdit" Width="130"></GridColumn>
-        <GridColumn Field="Freight" HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field="ShipCountry.Country" HeaderText="Ship Country" Width="150"></GridColumn>
-    </GridColumns>
-</SfGrid>
-
-@code {
-    private List<string> ToolbarItems = new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" };
-    public List<DynamicDictionary> Orders = new List<DynamicDictionary>() { };
-    protected override void OnInitialized()
-    {
-        Orders = Enumerable.Range(1, 1075).Select((x) =>
-        {
-            dynamic d = new DynamicDictionary();
-            dynamic combo = new DynamicDictionary();
-            dynamic countryName = new DynamicDictionary();
-            d.OrderID = 1000 + x;
-            combo.Name = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)];
-            d.CustomerID = combo;
-            d.Freight = (new double[] { 2, 1, 4, 5, 3 })[new Random().Next(5)] * x;
-            d.OrderDate = DateTime.Now.AddDays(-x);
-            countryName.Country = (new string[] { "USA", "UK" })[new Random().Next(2)];
-            d.ShipCountry = countryName;
-            return d;
-        }).Cast<DynamicDictionary>().ToList<DynamicDictionary>();
-    }
-    public class DynamicDictionary : DynamicObject
-    {
-        Dictionary<string, object> dictionary = new Dictionary<string, object>();
-
-        public override bool TryGetMember(GetMemberBinder binder, out object result)
-        {
-            string name = binder.Name;
-            return dictionary.TryGetValue(name, out result);
-        }
-        public override bool TrySetMember(SetMemberBinder binder, object value)
-        {
-            dictionary[binder.Name] = value;
-            return true;
-        }
-
-        public override System.Collections.Generic.IEnumerable<string> GetDynamicMemberNames()
-        {
-            return this.dictionary?.Keys;
-        }
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-N> * you can perform the Data operations and CRUD operations for Complex **DynamicObject** binding fields too.
-
-The following image represents **DynamicObject** complex data binding
-
-![Binding DynamicObject with Complex Data in Blazor DataGrid](./images/blazor-datagrid-dynamic-complex-data.png)
-
-N> While binding the Grid datasource dynamically in the form of a list of IEnumerable collections, you need to call the [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Refresh_System_Boolean_) method of the Grid to reflect the changes externally. Because tracking items of IEnumerable for changes made externally is avoided for performance considerations.
-
 ## HTTP client
 
 In a Blazor WebAssembly (client-side) application, you can call a Web API to fetch data and bind it to a Syncfusion Blazor DataGrid using HTTP requests. The requests are sent using [HttpClient](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-3.0) service.
 
-This can be achieved by To follow below step,
+This can be achieved by following the below steps,
 
 **Step 1:** Create a Blazor WebAssembly app, and to integrate the Syncfusion Blazor DataGrid, refer to the [Getting Started documentation](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app).
 
 **Step 2:** To send HTTP requests, inject the `HttpClient` service into your Blazor app.
 
 ```cshtml
-@using System.Net.Http
 @inject HttpClient Http
 ```
 
@@ -749,30 +487,11 @@ namespace BlazorApp1.Data
 {% endhighlight %}
 {% endtabs %}
 
-The following screenshot represents the DataGrid with **Observable Collection**.
+The following screenshot represents the Grid with **Observable Collection**.
 
 ![Blazor DataGrid with ObservableCollection](./images/blazor-datagrid-observable.gif)
 
 N> While using an Observable collection, the added, removed, and changed records are reflected in the UI. But while updating the Observable collection using external actions like timers, events, and other notifications, you need to call the StateHasChanged method to reflect the changes in the UI.
-
-## Troubleshoot: DataGrid renders without data even though server returns with correct data
-
-In ASP.NET Core, by default the JSON results are returned in **camelCase** format. So datagrid field names are also changed in **camelCase**.
-
-To avoid this problem, you need to add [DefaultContractResolver](https://learn.microsoft.com/en-us/dotnet/api/system.runtime.serialization.datacontractresolver?view=net-7.0) in **Startup.cs** file.
-
-```csharp
-public void ConfigureServices(IServiceCollection services)
-{
-  services.AddRazorPages();
-  services.AddServerSideBlazor().AddCircuitOptions();
-  services.AddSingleton<WeatherForecastService>();
-  services.AddMvc().AddNewtonsoftJson(options =>
-  {
-    options.SerializerSettings.ContractResolver = new DefaultContractResolver();
-  });
-}
-```
 
 ## Handling exceptions
 
@@ -837,7 +556,7 @@ The following sample code demonstrates how to notify when a server-side exceptio
 {% endhighlight %}
 {% endtabs %}
 
-![Handling exceptions](./images/error.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXhoXyCoiYMkYGCs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## See also
 
