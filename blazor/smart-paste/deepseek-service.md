@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Smart Components using DeepSeek AI
 
-This guide demonstrates how to integrate DeepSeek's powerful AI capabilities with Syncfusion Smart Components in your Blazor Web App. 
+This guide demonstrates how to integrate DeepSeek's powerful AI capabilities with Syncfusion Smart Components in your Blazor App. 
 
 ## Prerequisites
 

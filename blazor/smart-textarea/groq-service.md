@@ -8,7 +8,7 @@ documentation: ug
 
 # Getting Started with Smart Components using Groq AI Service
 
-This guide provides step-by-step instructions for integrating and using Syncfusion's Smart Components with Groq AI services in your Blazor Web App. 
+This guide provides step-by-step instructions for integrating and using Syncfusion's Smart Components with Groq AI services in your Blazor App. 
 
 ## Prerequisites
 

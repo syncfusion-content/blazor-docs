@@ -8,7 +8,7 @@ documentation: ug
 
 # Getting Started with Smart Components using Gemini AI Service
 
-This guide provides step-by-step instructions for integrating and using Syncfusion's Smart Components with Gemini AI services in your Blazor Web App.
+This guide provides step-by-step instructions for integrating and using Syncfusion's Smart Components with Gemini AI services in your Blazor App.
 
 ## Prerequisites
 
@@ -16,7 +16,6 @@ Before you begin, ensure you have:
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 * [Gemini API Key](https://ai.google.dev/gemini-api/docs/api-key) - Obtain an API key from Google AI Studio
-* Basic understanding of Blazor Web App development
 
 
 ## Models
