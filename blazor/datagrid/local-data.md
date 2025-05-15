@@ -495,7 +495,9 @@ N> While using an Observable collection, the added, removed, and changed records
 
 ## Handling exceptions
 
-Exceptions occurred during  Syncfusion Blazor DataGrid actions can be handled without stopping application.  You can capture these error messages or exception details using the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionFailure) event of the Grid. This event provides an argument containing the error details returned from the server.
+Exceptions occurred during  Syncfusion Blazor DataGrid actions can be handled without stopping application. This is especially useful when your Grid interacts with a remote Web API that may be unavailable or return errors. Gracefully handling these exceptions allows you to display user-friendly error messages, log details for troubleshooting, enable retrying or continuing work, and prevent the entire application from crashing or freezing.
+
+You can capture these error messages or exception details using the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionFailure) event of the Grid. This event provides an argument containing the error details returned from the server.
 
 N> We recommend you to bind **OnActionFailure** event during your application development phase, this helps you to find any exceptions. You can pass these exception details to our support team to get solution as early as possible.
 
