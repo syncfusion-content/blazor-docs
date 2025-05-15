@@ -56,12 +56,12 @@ The Blazor ListBox component followed the [keyboard interaction](https://www.w3.
 | --- | --- | --- |
 | <kbd>↑</kbd> | <kbd>↑</kbd> | Moves focus to the previous option. |
 | <kbd>↓</kbd> | <kbd>↓</kbd> | Moves focus to the next option. |
-| <kbd>Home</kbd> | <kbd>Home</kbd> | Moves focus to first option. |
-| <kbd>End</kbd> | <kbd>End</kbd> | Moves focus to last option. |
+| <kbd>Home</kbd> | <kbd>Fn</kbd> + <kbd>←</kbd> | Moves focus to first option. |
+| <kbd>End</kbd> | <kbd>Fn</kbd> + <kbd>→</kbd> | Moves focus to last option. |
 | <kbd>Space</kbd> | <kbd>Space</kbd> | Changes the selection state of the focused option. |
 | <kbd>Ctrl + A</kbd> | <kbd>⌘</kbd> + <kbd>A</kbd> | Selects all options in the list. |
-| <kbd>Ctrl + Shift + Home</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>Home</kbd> | Selects the focused option and all options up to the first option. |
-| <kbd>Ctrl + Shift + End</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>End</kbd> | Selects the focused option and all options down to the last option. |
+| <kbd>Ctrl + Shift + Home</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>Fn</kbd> + <kbd>←</kbd> | Selects the focused option and all options up to the first option. |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>End</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>Fn</kbd> + <kbd>→</kbd> | Selects the focused option and all options down to the last option. |
 | <kbd>Ctrl</kbd> + <kbd>↑</kbd> or <kbd>↓</kbd> | <kbd>⌘</kbd> + <kbd>↑</kbd> or <kbd>↓</kbd> | Press Ctrl key with up / down arrow or mouse to select multiple items. |
 
 ## Ensuring accessibility

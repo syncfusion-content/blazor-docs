@@ -107,8 +107,8 @@ The Ribbon component followed the [keyboard interaction](https://www.w3.org/WAI/
 | <kbd>Alt</kbd> + <kbd>↓</kbd> | <kbd>⌥</kbd> + <kbd>↓</kbd> | Open the popup list |
 | <kbd>Alt</kbd> + <kbd>↑</kbd> | <kbd>⌥</kbd> + <kbd>↑</kbd> | Close the popup list |
 | <kbd>Esc(Escape)</kbd> | <kbd>Esc</kbd> | Closes the popup list when it is in an open state and the currently selected item remains the same. |
-| <kbd>Home</kbd> | <kbd>Home</kbd> | Cursor moves to before of first character in input |
-| <kbd>End</kbd> | <kbd>End</kbd> | Cursor moves to next of last character in input |
+| <kbd>Home</kbd> | <kbd>Fn</kbd> + <kbd>←</kbd> | Cursor moves to before of first character in input |
+| <kbd>End</kbd> | <kbd>Fn</kbd> + <kbd>→</kbd> | Cursor moves to next of last character in input |
 
 ## Ensuring accessibility
 

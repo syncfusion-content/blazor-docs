@@ -63,8 +63,8 @@ The following keyboard shortcuts are supported by the AI AssistView component.
 | <kbd>←</kbd> | <kbd>←</kbd> | Focuses the previous toolbar element.  |
 | <kbd>→</kbd> | <kbd>→</kbd> | Focuses the next toolbar element. |
 | <kbd>Enter</kbd> / <kbd>Space</kbd> | <kbd>Enter</kbd> / <kbd>Space</kbd> | Select the focused item or activate the selected option. |
-| <kbd>Home</kbd> | <kbd>Home</kbd> | Moves focus to the first toolbar element. |
-| <kbd>End</kbd> | <kbd>End</kbd> | Moves focus to the last toolbar element. |
+| <kbd>Home</kbd> | <kbd>Fn</kbd> + <kbd>←</kbd> | Moves focus to the first toolbar element. |
+| <kbd>End</kbd> | <kbd>Fn</kbd> + <kbd>→</kbd> | Moves focus to the last toolbar element. |
 
 ## Ensuring accessibility
 

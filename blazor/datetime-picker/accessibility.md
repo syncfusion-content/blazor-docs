@@ -77,17 +77,17 @@ Use the following keys to interact with the Calendar after the DatePicker popup 
 | <kbd>↓</kbd> | <kbd>↓</kbd> | Focuses the next week date. |
 | <kbd>←</kbd> | <kbd>←</kbd> | Focuses the previous date. |
 | <kbd>→</kbd> | <kbd>→</kbd> | Focuses the next date. |
-| <kbd>Home</kbd> | <kbd>Home</kbd> | Focuses the first date in the month. |
-| <kbd>End</kbd> | <kbd>End</kbd> | Focuses the last date in the month. |
+| <kbd>Home</kbd> | <kbd>Fn</kbd> + <kbd>←</kbd> | Focuses the first date in the month. |
+| <kbd>End</kbd> | <kbd>Fn</kbd> + <kbd>→</kbd> | Focuses the last date in the month. |
 | <kbd>Page Up</kbd> | <kbd>Page Up</kbd> | Focuses the same date in the previous month. |
 | <kbd>Page Down</kbd> | <kbd>Page Down</kbd> | Focuses the same date in the next month. |
 | <kbd>Enter</kbd> | <kbd>Enter</kbd> | Selects the currently focused date. |
 | <kbd>Shift + Page Up</kbd> | <kbd>⇧</kbd> + <kbd>Page Up</kbd> | Focuses the same date in the previous year. |
 | <kbd>Shift + Page Down</kbd> | <kbd>⇧</kbd> + <kbd>Page Down</kbd> | Focuses the same date in the previous year. |
-| <kbd>Ctrl + </kbd> + <kbd>↑</kbd> | <kbd>⌘</kbd> + <kbd>↑</kbd> | Moves into the inner level of view like month-year, year-decade |
+| <kbd>Ctrl</kbd> + <kbd>↑</kbd> | <kbd>⌘</kbd> + <kbd>↑</kbd> | Moves into the inner level of view like month-year, year-decade |
 | <kbd>Ctrl</kbd> + <kbd>↓</kbd> | <kbd>⌘</kbd> + <kbd>↓</kbd> | Moves out from the depth level view like decade-year, year-month |
-| <kbd>Control +Home</kbd> | <kbd>⌘</kbd> + <kbd>Home</kbd> | Focuses the starting date in the current year. |
-| <kbd>Control +End</kbd> | <kbd>⌘</kbd> + <kbd>End</kbd> | Focuses the ending date in the current year. |
+| <kbd>Ctrl</kbd> + <kbd>Home</kbd> | <kbd>⌘</kbd> + <kbd>Fn</kbd> + <kbd>←</kbd> | Focuses the starting date in the current year. |
+| <kbd>Ctrl</kbd> + <kbd>End</kbd> | <kbd>⌘</kbd> + <kbd>Fn</kbd> + <kbd>→</kbd> | Focuses the ending date in the current year. |
 
 Use the following shortcut keys to interact with the TimePicker after the TimePicker Popup has opened:
 
@@ -97,8 +97,8 @@ Use the following shortcut keys to interact with the TimePicker after the TimePi
 | <kbd>↓</kbd> | <kbd>↓</kbd> | Navigates and selects the next item. |
 | <kbd>←</kbd> | <kbd>←</kbd> | Moves the cursor towards arrow key pressed direction. |
 | <kbd>→</kbd> | <kbd>→</kbd> | Moves the cursor towards arrow key pressed direction. |
-| <kbd>Home</kbd> | <kbd>Home</kbd> | Navigates and selects the first item. |
-| <kbd>End</kbd> | <kbd>End</kbd> | Navigates and selects the last item. |
+| <kbd>Home</kbd> | <kbd>Fn</kbd> + <kbd>←</kbd> | Navigates and selects the first item. |
+| <kbd>End</kbd> | <kbd>Fn</kbd> + <kbd>→</kbd> | Navigates and selects the last item. |
 | <kbd>Enter</kbd> | <kbd>Enter</kbd> | Selects the currently focused item and close the popup. |
 | <kbd>Alt</kbd> + <kbd>↑</kbd> | <kbd>⌥</kbd> + <kbd>↑</kbd> | Closes the popup. |
 | <kbd>Alt</kbd> + <kbd>↓</kbd> | <kbd>⌥</kbd> + <kbd>↓</kbd> | Opens the popup. |

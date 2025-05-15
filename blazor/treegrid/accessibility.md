@@ -64,10 +64,10 @@ The Blazor Tree Grid component followed the [keyboard interaction](https://www.w
 |<kbd>Ctrl + Alt + PageUp</kbd>| <kbd>⌘</kbd> + <kbd>⌥</kbd> + <kbd>PageUp</kbd> |Goes to the first page.|
 |<kbd>Alt + PageDown</kbd>| <kbd>⌥</kbd> + <kbd>PageDown</kbd> |Goes to the next page.|
 |<kbd>Alt + PageUp</kbd>| <kbd>⌥</kbd> + <kbd>PageUp</kbd> |Goes to the previous page.|
-|<kbd>Home</kbd>| <kbd>fn</kbd>+<kbd>←</kbd> |Goes to the first cell.|
-|<kbd>End</kbd>| <kbd>fn</kbd>+<kbd>→</kbd> |Goes to the last cell.|
-|<kbd>Ctrl + Home</kbd>| <kbd>⌘</kbd> + <kbd>Home</kbd> |Goes to the first row.|
-|<kbd>Ctrl + End</kbd>| <kbd>⌘</kbd> + <kbd>End</kbd> |Goes to the last row.|
+|<kbd>Home</kbd>| <kbd>Fn</kbd>+<kbd>←</kbd> |Goes to the first cell.|
+|<kbd>End</kbd>| <kbd>Fn</kbd>+<kbd>→</kbd> |Goes to the last cell.|
+|<kbd>Ctrl + Home</kbd>| <kbd>⌘</kbd> + <kbd>Fn</kbd> + <kbd>←</kbd> |Goes to the first row.|
+|<kbd>Ctrl + End</kbd>| <kbd>⌘</kbd> + <kbd>Fn</kbd> + <kbd>→</kbd> |Goes to the last row.|
 |<kbd>DownArrow</kbd>| <kbd>↓</kbd> |Moves the cell focus downward.|
 |<kbd>UpArrow</kbd> | <kbd>↑</kbd> |Moves the cell focus upward.|
 |<kbd>LeftArrow</kbd>| <kbd>←</kbd> |Moves the cell focus left side.|
