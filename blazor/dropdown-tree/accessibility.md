@@ -68,8 +68,8 @@ You can use the following key shortcuts to access the Dropdown Tree without inte
 | <kbd>↓</kbd> | <kbd>↓</kbd> | Goes to the next item in the popup. |
 | <kbd>→</kbd> | <kbd>→</kbd> | Expands the current item. |
 | <kbd>←</kbd> | <kbd>←</kbd> | Collapses the current item in the popup. |
-| <kbd>Home</kbd> | <kbd>Home</kbd> | Goes to the first item in the popup. |
-| <kbd>End</kbd> | <kbd>End</kbd> | Goes to the last item in the popup. |
+| <kbd>Home</kbd> | <kbd>Fn</kbd> + <kbd>←</kbd> | Goes to the first item in the popup. |
+| <kbd>End</kbd> | <kbd>Fn</kbd> + <kbd>→</kbd> | Goes to the last item in the popup. |
 | <kbd>Enter</kbd> | <kbd>Enter</kbd> | Selects the focused item in the popup. |
 | <kbd>Space</kbd> | <kbd>Space</kbd> | Checks the current item in the popup. |
 |**Over All Checkbox**| | |

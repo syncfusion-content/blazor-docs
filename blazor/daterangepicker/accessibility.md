@@ -75,15 +75,15 @@ Use the following list of keys to navigate the currently focused Calendar after 
 | <kbd>↓</kbd> | <kbd>↓</kbd> | Focuses the same day of the next week. |
 | <kbd>←</kbd> | <kbd>←</kbd> | Focuses the previous day. |
 | <kbd>→</kbd> | <kbd>→</kbd> | Focuses the next day. |
-| <kbd>Home</kbd> | <kbd>Home</kbd> | Focuses the first day of the month. |
-| <kbd>End</kbd> | <kbd>End</kbd> | Focuses the last day of the month. |
+| <kbd>Home</kbd> | <kbd>Fn</kbd> + <kbd>←</kbd> | Focuses the first day of the month. |
+| <kbd>End</kbd> | <kbd>Fn</kbd> + <kbd>→</kbd> | Focuses the last day of the month. |
 | <kbd>Page Up</kbd> | <kbd>Page Up</kbd> | Focuses the same date of the previous month. |
 | <kbd>Page Down</kbd> | <kbd>Page Down</kbd> | Focuses the same date of the next month. |
 | <kbd>Enter</kbd> | <kbd>Enter</kbd> | Selects the currently focused date. |
 | <kbd>Shift</kbd> + <kbd>Page Up</kbd> | <kbd>⇧</kbd> + <kbd>Page Up</kbd> | Focuses the same date for the previous year. |
 | <kbd>Shift</kbd> + <kbd>Page Down</kbd> | <kbd>⇧</kbd> + <kbd>Page Down</kbd> | Focuses the same date for the next year. |
-| <kbd>Ctrl</kbd> + <kbd>Home</kbd> | <kbd>⌘</kbd> + <kbd>Home</kbd> | Focuses the first date of the current year. |
-| <kbd>Ctrl</kbd> + <kbd>End</kbd> | <kbd>⌘</kbd> + <kbd>End</kbd> | Focuses the last date of the current year. |
+| <kbd>Ctrl</kbd> + <kbd>Home</kbd> | <kbd>⌘</kbd> + <kbd>Fn</kbd> + <kbd>←</kbd> | Focuses the first date of the current year. |
+| <kbd>Ctrl</kbd> + <kbd>End</kbd> | <kbd>⌘</kbd> + <kbd>Fn</kbd> + <kbd>→</kbd> | Focuses the last date of the current year. |
 | <kbd>Alt</kbd> + <kbd>→</kbd> | <kbd>⌥</kbd> + <kbd>→</kbd> | Focuses through out the pop-up container in forward direction. |
 | <kbd>Alt</kbd> + <kbd>←</kbd> | <kbd>⌥</kbd> + <kbd>←</kbd> | Focuses through out the pop-up container in backward direction. |
 

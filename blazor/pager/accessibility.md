@@ -57,8 +57,8 @@ The Blazor Pager component followed the [keyboard interaction](https://www.w3.or
 |<kbd>Enter</kbd> / <kbd>Space</kbd> | <kbd>Enter</kbd> / <kbd>Space</kbd> | Select the currently focused page.|
 |<kbd>Tab</kbd> | <kbd>Tab</kbd> | Focus on the next pager item.|
 |<kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Focus on the previous pager item.|
-|<kbd>Home</kbd> | <kbd>Home</kbd> | Navigates to the first page.|
-|<kbd>End</kbd> | <kbd>End</kbd> | Navigates to the last page.|
+|<kbd>Home</kbd> | <kbd>Fn</kbd> + <kbd>←</kbd> | Navigates to the first page.|
+|<kbd>End</kbd> | <kbd>Fn</kbd> + <kbd>→</kbd> | Navigates to the last page.|
 |<kbd>Alt</kbd> + <kbd>Page up</kbd> | <kbd>⌥</kbd> + <kbd>Page up</kbd> | Navigates to the previous pager.|
 |<kbd>Alt</kbd> + <kbd>Page down</kbd> | <kbd>⌥</kbd> + <kbd>Page down</kbd> | Navigates to the next pager.|
 

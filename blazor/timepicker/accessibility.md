@@ -74,8 +74,8 @@ N> It supports the following list of shortcut keys to interact with the TimePick
 | <kbd>↓</kbd> | <kbd>↓</kbd> | Navigates and selects the next item. |
 | <kbd>←</kbd> | <kbd>←</kbd> | Moves the cursor towards arrow key pressed direction. |
 | <kbd>→</kbd> | <kbd>→</kbd> | Moves the cursor towards arrow key pressed direction. |
-| <kbd>Home</kbd> | <kbd>Home</kbd> | Navigates and selects the first item. |
-| <kbd>End</kbd> | <kbd>End</kbd> | Navigates and selects the last item. |
+| <kbd>Home</kbd> | <kbd>Fn</kbd> + <kbd>←</kbd> | Navigates and selects the first item. |
+| <kbd>End</kbd> | <kbd>Fn</kbd> + <kbd>→</kbd> | Navigates and selects the last item. |
 | <kbd>Enter</kbd> | <kbd>Enter</kbd> | Selects the currently focused item and close the popup. |
 | <kbd>Alt</kbd> + <kbd>↑</kbd> | <kbd>⌥</kbd> + <kbd>↑</kbd> | Closes the popup. |
 | <kbd>Alt</kbd> + <kbd>↓</kbd> | <kbd>⌥</kbd> + <kbd>↓</kbd> | Opens the popup. |
