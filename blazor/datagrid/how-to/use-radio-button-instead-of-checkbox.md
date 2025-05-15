@@ -7,13 +7,21 @@ control: DataGrid
 documentation: ug
 ---
 
-# How to use radio button instead of checkbox for row selection of grid
+# How to use radio button instead of checkbox for row selection of Blazor DataGrid
 
-Checkbox selection provides an option to select datagrid records with the help of a checkbox in each row. Instead, you can render the radio button for selecting the Grid row. This can be achieved by using the column template feature of the Grid.
+By default, the Syncfusion Blazor DataGrid provides checkbox selection to allow multiple row selection. If there is a need to allow only one row to be selected at a time, a radio button can be used instead of checkbox selection. This can be achieved by using the column [Template](https://blazor.syncfusion.com/documentation/datagrid/column-template) feature to render a [SfRadioButton](https://blazor.syncfusion.com/documentation/radio-button/getting-started-webapp) in each row. The radio button can be linked to a unique value from the data source, such as the primary key field.
 
-In the following sample, the **SfRadioButton** component is rendered in the Grid column. In the [valueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfRadioButton-1.html#Syncfusion_Blazor_Buttons_SfRadioButton_1_ValueChange) event of the [SfRadioButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfRadioButton-1.html), you can select the row using the [selectRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRowsAsync_System_Double___) method of the Grid based on the row index fetched from the PrimaryKey column value of the Grid. To prevent selection in the Grid by clicking the row, the [CheckboxOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_CheckboxOnly) property is enabled.
+Steps to configure row selection using radio buttons:
 
-```csharp
+* When a radio button is selected, the [valueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfRadioButton-1.html#Syncfusion_Blazor_Buttons_SfRadioButton_1_ValueChange) event is triggered.
+* In the `ValueChange` event, retrieve the row index using the [GetRowIndexByPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetRowIndexByPrimaryKeyAsync_System_Object_) method based on the selected value.
+* Select the corresponding row using the [selectRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRowsAsync_System_Double___) method.
+* To prevent selection in the Grid by clicking the row, the [CheckboxOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_CheckboxOnly) property is enabled.
+
+The following example demonstrates how to handle row selection in the Grid using radio buttons:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
 
@@ -24,7 +32,7 @@ In the following sample, the **SfRadioButton** component is rendered in the Grid
             <Template>
                 @{
                     var PrimaryVal = (context as Order);
-                    <SfRadioButton @ref="RadioButtonInstance"  Name="RadioBtn "Value="@PrimaryVal.CustomerID" ValueChange="ValueChange" TChecked="string"></SfRadioButton>
+                    <SfRadioButton @ref="RadioButtonInstance" Name="RadioBtn "Value="@PrimaryVal.CustomerID" ValueChange="ValueChange" TChecked="string"></SfRadioButton>
                 }
             </Template>
         </GridColumn>
@@ -32,7 +40,7 @@ In the following sample, the **SfRadioButton** component is rendered in the Grid
         </GridColumn>
         <GridColumn Field=@nameof(Order.ShipCity) HeaderText="Ship City" Width="110"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Width="110" Type="ColumnType.Date"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Width="110" Type="Syncfusion.Blazor.Grids.ColumnType.Date"></GridColumn>
     </GridColumns>
 </SfGrid>
 
@@ -40,7 +48,6 @@ In the following sample, the **SfRadioButton** component is rendered in the Grid
     public List<Order> Orders { get; set; }
     SfRadioButton<string> RadioButtonInstance;
     SfGrid<Order> GridInstance;
-
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 4).Select(x => new Order()
@@ -64,5 +71,7 @@ In the following sample, the **SfRadioButton** component is rendered in the Grid
         public string ShipCity { get; set; }
     }
 }
+{% endhighlight %}
+{% endtabs %}
 
-```
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjhStfhbAvgdQqQU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
