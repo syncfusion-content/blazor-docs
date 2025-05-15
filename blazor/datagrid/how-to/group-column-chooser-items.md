@@ -13,13 +13,13 @@ The Syncfusion Blazor DataGrid supports grouping items in the column chooser dia
 
 To implement this:
 
-* **Enable Column Chooser** – Set [ShowColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowColumnChooser) property as **true** in the Grid and add **ColumnChooser** to the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar).
+* **Enable column chooser** – Set [ShowColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowColumnChooser) property as **true** in the Grid and add **ColumnChooser** to the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar).
 
-* **Use Template in [GridColumnChooserSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html)** – Customize the layout of chooser items using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html#Syncfusion_Blazor_Grids_GridColumnChooserSettings_Template) property.
+* **Use template in [GridColumnChooserSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html)** – Customize the layout of chooser items using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html#Syncfusion_Blazor_Grids_GridColumnChooserSettings_Template) property.
 
-* **Group Items** – Use [GridColumnChooserItemGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserItemGroup.html) to define logical groups with a [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserItemGroup.html#Syncfusion_Blazor_Grids_GridColumnChooserItemGroup_Title), and render corresponding columns under each group.
+* **Group items** – Use [GridColumnChooserItemGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserItemGroup.html) to define logical groups with a [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserItemGroup.html#Syncfusion_Blazor_Grids_GridColumnChooserItemGroup_Title), and render corresponding columns under each group.
 
-* **Filter Group Columns** – Write helper methods to fetch grouped columns dynamically using field names.
+* **Filter group columns** – Write helper methods to fetch grouped columns dynamically using field names.
 
 The following example demonstrates how to group column chooser items using these steps:
 

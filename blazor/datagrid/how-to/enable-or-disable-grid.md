@@ -9,51 +9,37 @@ documentation: ug
 
 # Enable or disable Blazor DataGrid and its actions
 
-You can enable/disable the Syncfusion Blazor DataGrid and its actions by applying/removing corresponding CSS styles.
+The Syncfusion Blazor DataGrid can be dynamically enabled or disabled by toggling a button. This is achieved by applying a CSS class to restrict interaction and setting a custom attribute for styling.
 
-To enable/disable the Grid and its actions, follow the given steps:
+To implement this:
 
-**Step 1**: Create CSS class with custom style to override the default style of Grid.
+* Define a CSS class `(.disabled)` to visually and functionally disable the Grid.
 
 ```css
-    .disablegrid {
-        pointer-events: none;
-        opacity: 0.4;
-    }
-    .wrapper {
-        cursor: not-allowed;
-    }
-
+.grid-wrapper.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    touch-action: none;
+    cursor: not-allowed;
+}
 ```
+* Bind a boolean flag `IsGridDisabled` to update the wrapper class and Grid attributes.
 
-**Step 2**: Add/Remove the CSS class to the Grid in the click event handler of Button.
+* Use a button to toggle the flag and control the Grid state.
 
-```cshtml
-     private void ToggleGrid()
-    {
-        if (GridWrapperClass.Contains("disablegrid"))
-        {
-            GridWrapperClass = "";
-        }
-        else
-        {
-            GridWrapperClass = "wrapper disablegrid";
-        }
-    }
-```
-
-In the below demo, the button click will enable/disable the Grid and its actions.
+The following example demonstrates how to enable or disable the Grid and its actions using a button:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
 
-<SfButton CssClass="e-flat" @onclick="ToggleGrid">Enable/Disable Grid</SfButton>
+<SfButton CssClass="e-flat" @onclick="ToggleGrid">
+    @(IsGridDisabled ? "Enable Grid" : "Disable Grid")
+</SfButton>
 
-<div id="GridParent" class="@GridWrapperClass">
-    <SfGrid @ref="Grid" DataSource="@Orders" AllowPaging="true" Height="273px"
-            Toolbar="@Toolbar">
+<div class="@(IsGridDisabled ? "grid-wrapper disabled" : "grid-wrapper")">
+    <SfGrid DataSource="@Orders" @attributes="@GridAttributes" AllowPaging="true" Height="273px" Toolbar="@Toolbar">
         <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
         <GridColumns>
             <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" IsPrimaryKey="true" Width="100"></GridColumn>
@@ -65,38 +51,38 @@ In the below demo, the button click will enable/disable the Grid and its actions
 </div>
 
 <style>
-    .disablegrid {
+    .grid-wrapper.disabled {
         opacity: 0.5;
         pointer-events: none;
+        touch-action: none;
         cursor: not-allowed;
-    }
-
-    .wrapper {
-        background-color: #f3f3f3;
-        padding: 10px;
-        border-radius: 6px;
     }
 </style>
 
 @code {
-    private SfGrid<OrderDetails> Grid;
+    private bool IsGridDisabled = false;
+    private Dictionary<string, object> GridAttributes { get; set; } = new();
     public List<OrderDetails> Orders { get; set; }
     private List<string> Toolbar = new() { "Add", "Edit", "Delete", "Update", "Cancel" };
-    private string GridWrapperClass = "";
+
     protected override void OnInitialized()
     {
-         Orders = OrderDetails.GetAllRecords();
+        GridAttributes.Add("disable", "no");
+        Orders = OrderDetails.GetAllRecords();
     }
+
     private void ToggleGrid()
     {
-        if (GridWrapperClass.Contains("disablegrid"))
-        {
-            GridWrapperClass = "";
-        }
-        else
-        {
-            GridWrapperClass = "wrapper disablegrid";
-        }
+        IsGridDisabled = !IsGridDisabled;
+        GridAttributes["disable"] = IsGridDisabled ? "yes" : "no";
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
     }
 }
 
@@ -148,4 +134,4 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjLSZTBAfLsZcZfE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjheZIiyqvGbDYvc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

@@ -627,6 +627,8 @@ public class OrderData
 
 ![Blazor DataGrid](../images/blazor-datagrid.gif)
 
+> Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/How-to-Getting-Started-Blazor-DataGrid-Samples/tree/master/WebAssembly_BlazorApp).
+
 ## See also
 
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Data Grid in Blazor WebAssembly using .NET Core CLI](./blazor-webassembly-data-grid-using-cli)

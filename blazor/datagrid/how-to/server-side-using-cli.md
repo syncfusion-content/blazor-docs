@@ -652,6 +652,8 @@ public class OrderData
 
 ![Blazor DataGrid](../images/blazor-datagrid.gif)
 
+> Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/How-to-Getting-Started-Blazor-DataGrid-Samples/tree/master/BlazorServerApp).
+
 ## See also
 
 * [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid in Blazor Server-Side using Visual Studio 2022](../getting-started)
