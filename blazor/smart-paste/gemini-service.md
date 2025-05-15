@@ -16,7 +16,6 @@ Before you begin, ensure you have:
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 * [Gemini API Key](https://ai.google.dev/gemini-api/docs/api-key) - Obtain an API key from Google AI Studio
-* Basic understanding of Blazor Web App development
 
 
 ## Models
