@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Exporting Grid with templates in Blazor DataGrid
+# Exporting Blazor DataGrid with templates
 
 The Syncfusion Blazor DataGrid offers the option to export the column, detail, and caption templates to an PDF document. The template contains images, hyperlinks, and customized text.
 
