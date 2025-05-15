@@ -9,7 +9,7 @@ documentation: ug
 
 # Enable or disable Blazor DataGrid and its actions
 
-The Syncfusion Blazor DataGrid can be dynamically enabled or disabled by toggling a button. This is achieved by applying a CSS class to restrict interaction and setting a custom attribute for styling.
+The Syncfusion Blazor DataGrid can be dynamically enabled or disabled by toggling a button. This is achieved by applying a CSS class to restrict interaction and setting a `attribute` for styling.
 
 To implement this:
 
