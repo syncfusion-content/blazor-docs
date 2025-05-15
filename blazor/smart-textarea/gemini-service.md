@@ -2,7 +2,7 @@
 layout: post
 title: Gemini AI with Syncfusion Smart Components in Blazor App | Syncfusion
 description: Learn how to implement a custom AI service using Google's Gemini API with Syncfusion Smart Components in a Blazor App.
-control: Smart Paste Button
+control: Smart TextArea
 documentation: ug
 ---
 
@@ -27,9 +27,9 @@ For a complete list of models and their capabilities, visit the [Gemini Models D
 
 After completing this setup, you can:
 
-1. [Add Smart Components to your Blazor pages](https://blazor.syncfusion.com/documentation/smart-paste/getting-started)
-2. [Configure form annotations for better AI understanding](https://blazor.syncfusion.com/documentation/smart-paste/annotation)
-3. [Customize the appearance and behavior of Smart Components](https://blazor.syncfusion.com/documentation/smart-paste/customization)
+1. [Add Smart TextArea to your Blazor pages](https://blazor.syncfusion.com/documentation/smart-textarea/getting-started)
+2. [Configure AI integration in Smart TextArea](https://blazor.syncfusion.com/documentation/smart-textarea/ai-integration)
+3. [Customize Smart TextArea features](https://blazor.syncfusion.com/documentation/smart-textarea/customization)
 
 ---
 
