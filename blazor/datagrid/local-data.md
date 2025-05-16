@@ -1393,7 +1393,7 @@ N> While using an Observable collection, the added, removed, and changed records
 
 ## Add a range of items into ObservableCollection in Blazor DataGrid
 
-The Syncfusion Blazor DataGrid supports binding to an ObservableCollection, which allows the Grid to automatically reflect changes made to the data source. This approach is particularly useful when you need to add a large batch of records to the Blazor DataGrid at once, such as:
+The Syncfusion Blazor DataGrid supports binding to an ObservableCollection, which allows the Grid to automatically reflect changes made to the data source. This approach is particularly useful when you need to add a large batch of records to the Grid at once, such as:
 
   * Loading or importing a large dataset dynamically.
 
