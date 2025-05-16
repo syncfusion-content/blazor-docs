@@ -182,7 +182,7 @@ Install-Package Syncfusion.Blazor.Buttons -Version {{ site.releaseversion }}
  
 - Open the **~/_Imports.razor** file and import the required namespaces.
  
-```razor
+```cs
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons

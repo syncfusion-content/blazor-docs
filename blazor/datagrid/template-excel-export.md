@@ -1,35 +1,35 @@
 ---
 layout: post
-title: Excel Exporting with Templates in Blazor Grid | Syncfusion
-description: Checkout and learn here all about Template Excel Export in Syncfusion Blazor DataGrid and much more.
+title: PDF Export with Templates in Blazor DataGrid | Syncfusion
+description: Checkout and learn here all about PDF Export with Templates in Syncfusion Blazor DataGrid and much more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Exporting grid with templates in Syncfusion Blazor DataGrid
+# Exporting Blazor DataGrid with templates
 
-The Syncfusion Blazor DataGrid offers the option to export the column, detail, and caption templates to an Excel document. The template contains images, hyperlinks, and customized text.
+The Syncfusion Blazor DataGrid offers the option to export the column, detail, and caption templates to an PDF document. The template contains images, hyperlinks, and customized text.
 
 ## Exporting with column template
 
-The Excel export functionality allows you to export Grid columns that include images, hyperlinks, and custom text to an Excel document. 
+The PDF export functionality allows you to export Grid columns that include images, hyperlinks, and custom text to a PDF document.
 
-To export the template columns into an Excel document, set the [IncludeTemplateColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_IncludeTemplateColumn) property of the  [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) to **true** in the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event, and pass it to the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) or [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToCsvAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method.
+To export the template columns into an PDF document, set the [IncludeTemplateColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_IncludeTemplateColumn) property of the  [PdfExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) to **true** in the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event, and pass it to the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method.
 
-The template values cannot be directly exported into the cells. To customize the values of the template columns in Excel document, you must use [ExcelQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelQueryCellInfoEvent) event.
+The template values cannot be directly exported into the cells. To customize the values of the template columns in PDF document, you must use [PdfQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfQueryCellInfoEvent) event.
 
-> Excel Export supports base64 string to export the images.
+> PDF Export supports base64 string to export the images.
 
-The following sample demonstrates how to export template columns such as **FirstName** and **EmailID** into an Excel document:
+The following sample demonstrates how to export template columns such as **FirstName** and **EmailID** into an PDF document:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
 
-<SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@EmployeeData.GetAllRecords()" Toolbar="@(new List<string>() { "ExcelExport" })" AllowExcelExport="true" AllowPaging="true">
-    <GridEvents ExcelQueryCellInfoEvent="ExcelQueryCellInfoHandler" OnToolbarClick="ToolbarClickHandler" TValue="EmployeeData"></GridEvents>
+<SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@EmployeeData.GetAllRecords()" Toolbar="@(new List<string>() { "PdfExport" })" AllowPdfExport="true" AllowPaging="true">
+    <GridEvents PdfQueryCellInfoEvent="PdfQueryCellInfoHandler" OnToolbarClick="ToolbarClickHandler" TValue="EmployeeData"></GridEvents>
     <GridColumns>
         <GridColumn Field=@nameof(EmployeeData.EmployeeID) HeaderText="Employee ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(EmployeeData.FirstName) HeaderText="Employee Name" Width="150">
@@ -62,27 +62,26 @@ The following sample demonstrates how to export template columns such as **First
         Orders = EmployeeData.GetAllRecords();
     }
 
-    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    public async Task ToolbarClickHandler(ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_excelexport")  // Id is the combination of Grid's ID and item name.
+        if (args.Item.Id == "Grid_pdfexport")  // Id is the combination of Grid's ID and item name.
         {
-            ExcelExportProperties ExportProperties = new ExcelExportProperties();
-            ExportProperties.IncludeTemplateColumn = true;
-            await this.DefaultGrid.ExportToExcelAsync(ExportProperties);
+            PdfExportProperties ExportProperties = new PdfExportProperties();
+            ExportProperties.IncludeTemplateColumn = true; // Ensures template columns are included in the export.
+            await this.DefaultGrid.ExportToPdfAsync(ExportProperties);
         }
     }
 
-    public void ExcelQueryCellInfoHandler(ExcelQueryCellInfoEventArgs<EmployeeData> args)
+    public void PdfQueryCellInfoHandler(PdfQueryCellInfoEventArgs<EmployeeData> args)
     {
         if (args.Column.Field == "FirstName")
         {
             args.Cell.Value = "Mr." + args.Data.FirstName;
         }
         else if (args.Column.Field == "EmailID")
-       {
-           var email = args.Data.EmailID;
-           args.Cell.Value = $"<a href='mailto:{email}'>{email}</a>";
-       }
+        {
+            args.Cell.Value = $"{args.Data.EmailID}";
+        }   
     }
 }
 
@@ -117,6 +116,7 @@ public class EmployeeData
             Employees.Add(new EmployeeData(8, "Callahan", "allison@domain.com", "Inside Sales Coordinator", "Seattle"));
             Employees.Add(new EmployeeData(9, "Dodsworth", "nancy@domain.com", "Sales Representative", "London"));
         }
+
         return Employees;
     }
 
@@ -130,25 +130,26 @@ public class EmployeeData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVeZpinSuMCxdjJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVItzhpzpJHfBYo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Exporting with column template](./images/column-template.gif)
+![Exporting with column template](./images/exporting-pdf-column-template.gif)
 
 ## Exporting with group caption template
 
-The Syncfusion Blazor Grid allows you to export the Grid data along with a custom caption template into an Excel document. This feature can be useful when you want to provide meaningful group captions (e.g., count of records) in the exported Excel document.
+The Syncfusion Blazor DataGrid allows you to export the Grid data along with a custom caption template into an PDF document. This feature can be useful when you want to provide meaningful group captions (e.g., count of records) in the exported PDF document.
 
-To customize the caption text in the exported Excel document, you can handle the [ExcelGroupCaptionTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelGroupCaptionTemplateInfo) event. This event provides you with the necessary information to set the group caption in the exported Excel document, such as the group key, record count, and header text. Within the event, you can set a customized group caption using `args.Cell.Value` property.
+To customize the caption text in the exported PDF document, you can handle the [PdfGroupCaptionTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfGroupCaptionTemplateInfo) event. This event provides you with the necessary information to set the group caption in the exported PDF document, such as the group key, record count, and header text. Within the event, you can set a customized group caption using `args.Cell.Value` property.
 
-The following example demonstrates how the Grid is grouped by the **CustomerID** field and exports the Grid data to Excel document with a custom group caption template, utilizing the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event and the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method.
+The following example demonstrates how the Grid is grouped by the **CustomerID** field and exports the Grid data to PDF with a custom group caption template, utilizing the [OnToolbarClick](https://blazor.syncfusion.com/documentation/datagrid/events#ontoolbarclick) event and the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Navigations
 
-<SfGrid ID="Grid" @ref="Grid" DataSource="@GridData" AllowGrouping="true" Height="315px" Toolbar="@(new List<string>() { "ExcelExport" })" AllowExcelExport="true">
-    <GridEvents OnToolbarClick="ToolbarClickHandler" ExcelGroupCaptionTemplateInfo="ExcelGroupCaptionInfoHandler" TValue="OrderData"></GridEvents>
+<SfGrid ID="Grid" @ref="Grid" DataSource="@GridData" AllowGrouping="true" Height="315px" Toolbar="@(new List<string>() { "PdfExport" })" AllowPdfExport="true">
+    <GridEvents OnToolbarClick="ToolbarClickHandler" PdfGroupCaptionTemplateInfo="PdfGroupCaptionInfoHandler" TValue="OrderData"></GridEvents>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="90"></GridColumn>
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" TextAlign="TextAlign.Right" Width="100"></GridColumn>
@@ -171,24 +172,21 @@ The following example demonstrates how the Grid is grouped by the **CustomerID**
 
     protected override void OnInitialized()
     {
-        GridData = OrderData.GetAllRecords(); // Replace with your actual data logic.
+        GridData = OrderData.GetAllRecords(); 
     }
 
-
-    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    public async Task ToolbarClickHandler(ClickEventArgs args)
     {
-        if (args.Item.Id == "Grid_excelexport")  // Id is the combination of Grid's ID and item name.
-        {
-            if (args.Item.Id == "Grid_excelexport")
-            {
-                await Grid.ExportToExcelAsync();
-            }
-        }
+       if (args.Item.Id == "Grid_pdfexport")
+       {
+            await Grid.ExportToPdfAsync();
+       }
     }
 
-    public void ExcelGroupCaptionInfoHandler(ExcelCaptionTemplateArgs args)
+    // Customize the group caption in the exported PDF document.
+    public void PdfGroupCaptionInfoHandler(PdfCaptionTemplateArgs args)
     {
-        args.Cell.Value = args.Key + "-" + args.Count + " Records: " + args.HeaderText; 
+       args.Cell.Value = args.Key + "-" + args.Count + " Records: " + args.HeaderText; 
     } 
 }
 
@@ -209,28 +207,28 @@ public class OrderData
     public static List<OrderData> GetAllRecords()
     {
         return new List<OrderData>
-        {
-            new OrderData(10248, "VINET", 32.38, "Reims"),
-            new OrderData(10249, "TOMSP", 11.61, "Münster"),
-            new OrderData(10250, "HANAR", 65.83, "Rio de Janeiro"),
-            new OrderData(10251, "VICTE", 41.34, "Lyon"),
-            new OrderData(10252, "SUPRD", 51.30, "Charleroi"),
-            new OrderData(10253, "HANAR", 58.17, "Rio de Janeiro"),
-            new OrderData(10254, "CHOPS", 22.98, "Bern"),
-            new OrderData(10255, "RICSU", 148.33, "Genève"),
-            new OrderData(10256, "WELLI", 13.97, "Resende"),
-            new OrderData(10257, "HILAA", 81.91, "San Cristóbal"),
-            new OrderData(10258, "ERNSH", 140.51, "Graz"),
-            new OrderData(10259, "CENTC", 3.25, "México D.F."),
-            new OrderData(10260, "OTTIK", 55.09, "Köln"),
-            new OrderData(10261, "QUEDE", 3.05, "Rio de Janeiro"),
-            new OrderData(10262, "RATTC", 48.29, "Albuquerque"),
-            new OrderData(10263, "ERNSH", 76.56, "Graz"),
-            new OrderData(10264, "FOLKO", 67.10, "Bräcke"),
-            new OrderData(10265, "BLONP", 36.65, "Strasbourg"),
-            new OrderData(10266, "WARTH", 27.19, "Stavanger"),
-            new OrderData(10267, "FRANK", 65.83, "München")
-        };
+    {
+        new OrderData(10248, "VINET", 32.38, "Reims"),
+        new OrderData(10249, "TOMSP", 11.61, "Münster"),
+        new OrderData(10250, "HANAR", 65.83, "Rio de Janeiro"),
+        new OrderData(10251, "VICTE", 41.34, "Lyon"),
+        new OrderData(10252, "SUPRD", 51.30, "Charleroi"),
+        new OrderData(10253, "HANAR", 58.17, "Rio de Janeiro"),
+        new OrderData(10254, "CHOPS", 22.98, "Bern"),
+        new OrderData(10255, "RICSU", 148.33, "Genève"),
+        new OrderData(10256, "WELLI", 13.97, "Resende"),
+        new OrderData(10257, "HILAA", 81.91, "San Cristóbal"),
+        new OrderData(10258, "ERNSH", 140.51, "Graz"),
+        new OrderData(10259, "CENTC", 3.25, "México D.F."),
+        new OrderData(10260, "OTTIK", 55.09, "Köln"),
+        new OrderData(10261, "QUEDE", 3.05, "Rio de Janeiro"),
+        new OrderData(10262, "RATTC", 48.29, "Albuquerque"),
+        new OrderData(10263, "ERNSH", 76.56, "Graz"),
+        new OrderData(10264, "FOLKO", 67.10, "Bräcke"),
+        new OrderData(10265, "BLONP", 36.65, "Strasbourg"),
+        new OrderData(10266, "WARTH", 27.19, "Stavanger"),
+        new OrderData(10267, "FRANK", 65.83, "München")
+    };
     }
 
     public int OrderID { get; set; }
@@ -242,30 +240,44 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rjVejJMmrqlNTnoQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVyjfMHqkQMUKqH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Exporting with group caption template](./images/group-caption.gif)
+![Exporting with group caption template](./images/exporting-pdf-group-caption-template.gif)
 
 ## Exporting with detail template
 
-The Syncfusion Blazor DataGrid provides the capability to export both parent and child (detail) records, including nested data, to an Excel document. By default, the Grid exports the parent Grid along with expanded detail rows only. To customize the exporting behavior, utilize the [ExcelExportProperties.ExcelDetailRowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailRowMode.html) property within the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event, and pass it to the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) or [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToCsvAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method. The available options include:
+The Syncfusion Blazor DataGrid provides the capability to export both parent and child (detail) records, including nested data, to an PDF document. By default, the Grid exports the parent Grid along with expanded detail rows only. To customize the exporting behavior, utilize the [PdfExportProperties.PdfDetailRowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailRowMode.html) property within the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event, and pass it to the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method. The available options include:
 
 | Mode | Behavior |
 |-------|----------|
 | Expand | Exports the parent Grid with expanded detail rows.
-| Collapse | Exports the parent Grid with collapsed detail rows.
 | None | Exports the parent Grid alone.
 
-You can customize and format the detail rows in the exported Excel document using the [ExcelDetailTemplateExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelDetailTemplateExporting) event. In this event, the detail rows of the Excel document are formatted in accordance with their parent row details.
+You can customize and format the detail rows in the exported PDF document using the [PdfDetailTemplateExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfDetailTemplateExporting) event. In this event, the detail rows of the PDF document are formatted in accordance with their parent row details.
 
-In the following example, the detail row content is formatted by specifying the [Headers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_ExcelDetailTemplateRowSettings_Headers), [Rows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_ExcelDetailTemplateRowSettings_Rows) using parent row details, facilitating the creation of detail rows within the Excel document. Additionally, custom styles can be applied to specific cells using the [Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailTemplateCell.html#Syncfusion_Blazor_Grids_ExcelDetailTemplateCell_Style) property.
+In the following example:
+
+* The detail row content is formatted by specifying:
+
+    * [Headers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_PdfDetailTemplateRowSettings_Headers)
+
+    * [Rows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_PdfDetailTemplateRowSettings_Rows)
+
+  These are based on the parent row's details to dynamically generate content within the PDF document.
+
+* Additionally, custom styles can be applied to specific cells using the [Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailTemplateCell.html#Syncfusion_Blazor_Grids_PdfDetailTemplateCell_Style) property.
+
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor
 
-<SfGrid @ref="Grid" ID="Grid" DataSource="@Employees" Toolbar="@(new List<string>() { "ExcelExport" })" AllowExcelExport="true" Height="450px">
+<SfGrid @ref="DefaultGrid" ID="Grid" DataSource="@Employees" Toolbar="@(new List<string>() { "PdfExport" })" AllowPdfExport="true" Height="450px">
     <GridTemplates>
         <DetailTemplate>
             @{
@@ -303,7 +315,7 @@ In the following example, the detail row content is formatted by specifying the 
                         </tr>
                         <tr>
                             <td style="text-align: center;">
-                                <span class="@((employee.Status == "Available") ? "available" : "unavailable")" style="font-weight: 500;"> @employee.Status</span>
+                                <span class="${Status}" style="font-weight: 500;"> @employee.Status</span>
                             </td>
                             <td>
                                 <span>@employee.ReturnPolicy</span>
@@ -328,174 +340,120 @@ In the following example, the detail row content is formatted by specifying the 
                         </tr>
                     </tbody>
                 </table>
+
             }
         </DetailTemplate>
     </GridTemplates>
-    <GridEvents ExcelDetailTemplateExporting="ExcelDetailTemplateHandler" OnToolbarClick="ToolbarClickHandler" TValue="ProductData"></GridEvents>
+    <GridEvents PdfDetailTemplateExporting="PdfDetailTemplateHandler" OnToolbarClick="ToolbarClickHandler" TValue="ProductData"></GridEvents>
     <GridColumns>
         <GridColumn Field=@nameof(ProductData.Category) HeaderText="Category" Width="110"> </GridColumn>
         <GridColumn Field=@nameof(ProductData.ProductID) HeaderText="Product ID" Width="160"> </GridColumn>
         <GridColumn Field=@nameof(ProductData.Status) HeaderText="Status" Width="180"></GridColumn>
     </GridColumns>
 </SfGrid>
+<style type="text/css" class="cssStyles">.detailtable td {
+  font-size: 13px;
+  padding: 4px;
+  max-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: normal;
+}
 
-<style type="text/css" class="cssStyles">
-    .detailtable td {
-        font-size: 13px;
-        padding: 4px;
-        max-width: 0;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        font-weight: normal;
+</style>@code {
+
+  SfGrid<ProductData>DefaultGrid;
+
+  public List<ProductData>Employees {get;set;}
+
+  public async Task ToolbarClickHandler(ClickEventArgs args) {
+    if (args.Item.Id=="Grid_pdfexport") // Id is the combination of Grid's ID and item name.
+      {
+      PdfExportProperties PdfExportProperties=new PdfExportProperties();
+      PdfExportProperties.PdfDetailRowMode=PdfDetailRowMode.Expand;
+      await this.DefaultGrid.ExportToPdfAsync(PdfExportProperties);
     }
+  }
 
-    .unavailable {
-        color: #FF0000;
-    }
+  public void PdfDetailTemplateHandler(PdfDetailTemplateEventArgs<ProductData> args) {
+    var pdfRows=new List<PdfDetailTemplateRow>();
+    var data=args.ParentRow.Data;
 
-    .available {
-        color: #00FF00;
-    }
-</style>
+    // Define number of columns in detail section.
+    args.RowInfo.ColumnCount=2;
 
-@code {
-    private SfGrid<ProductData> Grid;
-    public List<ProductData> Employees { get; set; }
+    // Set the header row for detail section.
+    args.RowInfo.Headers=new List<PdfDetailTemplateRow>() {
+      new PdfDetailTemplateRow() {
+        Cells=new List<PdfDetailTemplateCell>() {
+          new PdfDetailTemplateCell() {
+            Index=0,
+            CellValue="Product Details",
+            ColumnSpan=2,
+            Style=new PdfThemeStyle() {
+              Bold=true,
+              FontColor="#0A76FF",
+              FontSize=13
+            }}}}};
 
-    protected override void OnInitialized()
-    {
-        Employees = ProductData.GetAllRecords();
-    }
+    // Add each row of product details.
+    pdfRows.Add(new PdfDetailTemplateRow() {
+        Cells=new List<PdfDetailTemplateCell>() {
+          new PdfDetailTemplateCell() {
+            CellValue=data.ProductDesc, Index=0
+          },
+          new PdfDetailTemplateCell() {
+            Index=1, Hyperlink=new Hyperlink() {
+              DisplayText=data.Contact, Target=data.Contact
+            }}}});
 
-    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
-    {
-        if (args.Item.Id == "Grid_excelexport")  // Id is the combination of Grid's ID and item name.
-        {
-            ExcelExportProperties ExportProperties = new ExcelExportProperties();
-            ExportProperties.ExcelDetailRowMode = ExcelDetailRowMode.Expand;
-            await Grid.ExportToExcelAsync(ExportProperties);
-        }
-    }
+    pdfRows.Add(new PdfDetailTemplateRow() {
+        Cells=new List<PdfDetailTemplateCell>() {
+          new PdfDetailTemplateCell() {
+            CellValue=data.Cost, Index=0
+          },
+          new PdfDetailTemplateCell() {
+            Index=1, CellValue="Available :" + data.Available
+          }}});
 
-    public void ExcelDetailTemplateHandler(ExcelDetailTemplateEventArgs<ProductData> args)
-    {
-        // Initialize a list to hold detail template rows for the Excel export.
-        var excelRows = new List<ExcelDetailTemplateRow>();
+    pdfRows.Add(new PdfDetailTemplateRow() {
+        Cells=new List<PdfDetailTemplateCell>() {
+          new PdfDetailTemplateCell() {
+            CellValue=data.Status, Index=0
+          },
+          new PdfDetailTemplateCell() {
+            Index=1, CellValue=data.ReturnPolicy
+          }}});
 
-        // Get the parent row's data.
-        var data = args.ParentRow.Data;
+    pdfRows.Add(new PdfDetailTemplateRow() {
+        Cells=new List<PdfDetailTemplateCell>() {
+          new PdfDetailTemplateCell() {
+            CellValue="Offers :" + data.Offers, Index=0, Style=new PdfThemeStyle() {
+              FontColor="#0A76FF", FontSize=12
+            }},
+          new PdfDetailTemplateCell() {
+            Index=1, CellValue=data.Cancellation
+          }}});
 
-        // Set the header row for the detail template.
-        args.RowInfo.Headers = new List<ExcelDetailTemplateRow>() { 
-            new ExcelDetailTemplateRow() { 
-                Cells = new List<ExcelDetailTemplateCell>() { 
-                    new ExcelDetailTemplateCell() { 
-                        Index = 0, 
-                        CellValue = "Product Details", 
-                        ColumnSpan = 2,
-                        Style = new ExcelStyle() { 
-                        Bold = true, BackColor = "#ADD8E6" 
-                        } 
-                    } 
-                } 
-            } 
-        };
+    pdfRows.Add(new PdfDetailTemplateRow() {
+        Cells=new List<PdfDetailTemplateCell>() {
+          new PdfDetailTemplateCell() {
+            CellValue="Ratings: " + data.Ratings, Index=0, Style=new PdfThemeStyle() {
+              FontColor="#0A76FF", FontSize=12
+            }},
+          new PdfDetailTemplateCell() {
+            Index=1, CellValue=data.Delivery, Style=new PdfThemeStyle() {
+              FontColor="#0A76FF", FontSize=12
+            }}}});
 
-        // Add the first row with product description and contact as a hyperlink.
-        excelRows.Add(new ExcelDetailTemplateRow()
-        {
-            Cells = new List<ExcelDetailTemplateCell>()
-            {
-                new ExcelDetailTemplateCell()
-                {
-                    CellValue = data.ProductDesc, Index = 0
-                },
-                new ExcelDetailTemplateCell()
-                {
-                    Index = 1, Hyperlink = new Hyperlink() { DisplayText = data.Contact, Target = data.Contact }
-                }
-            }
-        });
-        excelRows.Add( new ExcelDetailTemplateRow()
-        {
-            Cells = new List<ExcelDetailTemplateCell>()
-            {
-                new ExcelDetailTemplateCell()
-                {
-                    CellValue = data.Cost, Index = 0
-                },
-                new ExcelDetailTemplateCell()
-                {
-                    Index = 1, CellValue = "Available :" + data.Available 
-                }
-            }
-        });
+    // Assign the list of rows to the RowInfo.  
+    args.RowInfo.Rows=pdfRows;
+  }
 
-        // Add the second row with product cost and availability status.
-        excelRows.Add(new ExcelDetailTemplateRow()
-        {
-            Cells = new List<ExcelDetailTemplateCell>()
-            {
-                new ExcelDetailTemplateCell()
-                {
-                    CellValue = data.Status, Index = 0,
-                    Style = new ExcelStyle()
-                    {
-                        FontColor = data.Status == "Available" ? "#00FF00" : "#FF0000"
-                    }
-                },
-                new ExcelDetailTemplateCell()
-                {
-                    Index = 1, CellValue = data.ReturnPolicy 
-                }
-            }
-        });
-
-        // Add the third row with product status and return policy.
-        excelRows.Add(new ExcelDetailTemplateRow()
-        {
-            Cells = new List<ExcelDetailTemplateCell>()
-            {
-                new ExcelDetailTemplateCell()
-                {
-                    CellValue = "Offers :" + data.Offers, Index = 0, Style = new ExcelStyle()
-                    {
-                        FontColor = "#0A76FF", FontSize = 12
-                    }
-                },
-                new ExcelDetailTemplateCell()
-                {
-                    Index = 1, CellValue = data.Cancellation
-                }
-            }
-        });
-
-         // Add the fifth row with product ratings and delivery information.
-        excelRows.Add(new ExcelDetailTemplateRow()
-        {
-            Cells = new List<ExcelDetailTemplateCell>()
-            {
-                new ExcelDetailTemplateCell()
-                {
-                    CellValue = "Ratings: " + data.Ratings, Index = 0, Style = new ExcelStyle()
-                    {
-                      FontColor = "#0A76FF", FontSize = 12
-                    }
-                },
-                new ExcelDetailTemplateCell()
-                {
-                    Index = 1, CellValue = data.Delivery, Style = new ExcelStyle()
-                    {
-                      FontColor = "#0A76FF", FontSize = 12
-                    }
-                }
-            }
-        });
-
-        // Assign the customized detail rows to the RowInfo.
-        args.RowInfo.Rows = excelRows;
-    }
+  protected override void OnInitialized() {
+    Employees=ProductData.GetAllRecords();
+  }
 }
 
 {% endhighlight %}
@@ -506,9 +464,7 @@ public class ProductData
 {
     public static List<ProductData> Products = new List<ProductData>();
 
-    public ProductData(string category, string offers, string cost, string available, string itemID, string productID,
-                       string contact, string status, string productDesc, string returnPolicy,
-                       string delivery, string cancellation, string ratings)
+    public ProductData(string category, string offers, string cost, string available, string itemID, string productID,string contact, string status, string productDesc, string returnPolicy, string delivery, string cancellation, string ratings)
     {
         Category = category;
         Offers = offers;
@@ -553,7 +509,6 @@ public class ProductData
             Products.Add(new ProductData("Shirts/Denim", "6%", "49.99$", "25", "Shirt-003", "EJ-SH-03", "laura@domain.com", "Available", "Denim Shirt", "Return within 10 days", "** FREE Delivery **", "Cancellation upto 24 hrs", "4.1"));
             Products.Add(new ProductData("Jackets/Leather", "18%", "199.99$", "5", "Jacket-001", "EJ-JA-01", "anne@domain.com", "Available", "Leather Jacket", "No Returns Applicable", "** FREE Delivery **", "Cancellation upto 6 hrs", "4.9"));
             Products.Add(new ProductData("Jackets/Bomber", "20%", "129.99$", "12", "Jacket-002", "EJ-JA-02", "paul@domain.com", "Available", "Bomber Jacket", "Return within 7 days", "** FREE Delivery **", "Cancellation upto 12 hrs", "4.6"));
-
             Products.Add(new ProductData("T-Shirts/Graphic", "10%", "19.99$", "80", "TShirt-001", "EJ-TS-01", "nancy@domain.com", "Available", "Graphic Tee", "Return within 15 days", "** FREE Delivery **", "Cancellation upto 24 hrs", "4.5"));
             Products.Add(new ProductData("T-Shirts/Plain", "5%", "14.99$", "90", "TShirt-002", "EJ-TS-02", "andrew@domain.com", "Available", "Plain T-Shirt", "Return within 10 days", "** FREE Delivery **", "Cancellation upto 24 hrs", "4.2"));
             Products.Add(new ProductData("T-Shirts/Sports", "12%", "24.99$", "70", "TShirt-003", "EJ-TS-03", "janet@domain.com", "Available", "Sports Tee", "Return within 7 days", "** FREE Delivery **", "Cancellation upto 12 hrs", "4.7"));
@@ -572,25 +527,36 @@ public class ProductData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDBSNfWcLSCKHChU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VDVSNTCGsQlftohG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Exporting with detail template](./images/detail-template.gif)
+![Exporting with detail template](./images/exporting-pdf-detail-template.gif)
 
-## Exporting hierarchical Grid using detail template
+> If [ColumnCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_PdfDetailTemplateRowSettings_ColumnCount) is not provided or is less than the number of cells in the first row of Headers/Rows, the columns in the detail row of the PDF Grid will be generated based on the count of cells in the first row of Headers/Rows.
 
-The Syncfusion Blazor DataGrid allows you to export hierarchical Grid data to Excel document using the detail template feature. This is particularly useful for scenarios where data is nested within parent rows (such as employee details and their related orders), and you need to export both the parent and child records to a single Excel document.
+## Exporting hierarchical Blazor DataGrid using detail template
 
-You can customize and format the detail rows in the exported Excel document using the [ExcelDetailTemplateExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelDetailTemplateExporting) event. In this event, the detail rows of the Excel document are formatted in accordance with their parent row details.
+The Syncfusion Blazor DataGrid allows you to export hierarchical Grid data to PDF document using the detail template feature. This is particularly useful for scenarios where data is nested within parent rows (such as employee details and their related orders), and you need to export both the parent and child records to a single PDF document.
 
-In the following example, the detail row content is formatted by specifying the [Headers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_ExcelDetailTemplateRowSettings_Headers), [Rows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_ExcelDetailTemplateRowSettings_Rows) using parent row details. Additionally, this achieves a nested level of children using the [ChildRowInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailTemplateRow.html#Syncfusion_Blazor_Grids_ExcelDetailTemplateRow_ChildRowInfo) property and the [ExcelExportProperties.ExcelDetailRowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelDetailRowMode.html) property, which is set to **Expand** to export the parent Grid with expanded detail rows within the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event. This property is then passed to the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_) method:
+You can customize and format the detail rows in the exported PDF document using the [PdfDetailTemplateExporting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfDetailTemplateExporting) event. In this event, the detail rows of the PDF document are formatted in accordance with their parent row details.
+
+In the following example:
+
+* The detail row content is formatted by specifying the [Headers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_PdfDetailTemplateRowSettings_Headers) and [Rows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailTemplateRowSettings.html#Syncfusion_Blazor_Grids_PdfDetailTemplateRowSettings_Rows) based on the parent row's data.
+
+* A nested level of child records is achieved using the [ChildRowInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfDetailTemplateRow.html#Syncfusion_Blazor_Grids_PdfDetailTemplateRow_ChildRowInfo) property.
+
+* This property is set to **Expand** within the [OnToolbarClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnToolbarClick) event to ensure that all detail rows are expanded and included in the export.
+
+* Finally, the configured export settings are passed to the [ExportToPdfAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ExportToPdfAsync_Syncfusion_Blazor_Grids_PdfExportProperties_) method to generate the PDF document with hierarchical data.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Data
 
-<SfGrid @ref="Grid" ID="Grid" DataSource="@Employees" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport"})">
+<SfGrid @ref="Grid" ID="Grid" DataSource="@Employees" AllowPdfExport="true" Toolbar="@(new List<string>() { "PdfExport" })">
     <GridTemplates>
         <DetailTemplate>
             @{
@@ -621,7 +587,7 @@ In the following example, the detail row content is formatted by specifying the 
             </SfGrid>
         </DetailTemplate>
     </GridTemplates>
-    <GridEvents ExcelDetailTemplateExporting="ExcelDetailTemplateHandler" OnToolbarClick="ToolbarClickHandler" TValue="EmployeeData"></GridEvents>
+    <GridEvents PdfDetailTemplateExporting="PdfDetailTemplateHandler" OnToolbarClick="ToolbarClickHandler" TValue="EmployeeData"></GridEvents>
     <GridColumns>
         <GridColumn Field=@nameof(EmployeeData.EmployeeID) HeaderText="EmployeeID" Width="110"> </GridColumn>
         <GridColumn Field=@nameof(EmployeeData.FirstName) HeaderText="First Name" Width="110"> </GridColumn>
@@ -643,101 +609,80 @@ In the following example, the detail row content is formatted by specifying the 
         OrderInfo = OrderDetails.GetAllRecords();
     }
 
-    // Handles toolbar click event (for Excel export).
-    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    // Handles toolbar click event (for PDF export).
+    public async Task ToolbarClickHandler(ClickEventArgs args)
     {
-        // Id is the combination of Grid's ID and item name.
-        if (args.Item.Id == "Grid_excelexport")
+        if (args.Item.Id == "Grid_pdfexport")  // Id is the combination of Grid's ID and item name.
         {
-            ExcelExportProperties ExportProperties = new ExcelExportProperties();
+            PdfExportProperties PdfExportProperties = new PdfExportProperties();
 
             // Specify that detailed rows should be expanded.
-            ExportProperties.ExcelDetailRowMode = ExcelDetailRowMode.Expand;
+            PdfExportProperties.PdfDetailRowMode = PdfDetailRowMode.Expand;
 
-            // Export the data to Excel document.
-            await Grid.ExportToExcelAsync(ExportProperties);
+            // Export the data to PDF document.
+            await this.Grid.ExportToPdfAsync(PdfExportProperties);
         }
     }
 
-    // Customizes the Excel detail export for each employee.
-    public void ExcelDetailTemplateHandler(ExcelDetailTemplateEventArgs<EmployeeData> args)
+    // Customizes the PDF detail export for each employee.
+    public void PdfDetailTemplateHandler(PdfDetailTemplateEventArgs<EmployeeData> args)
     {
-        var excelRows = new List<ExcelDetailTemplateRow>();
+        var pdfRows = new List<PdfDetailTemplateRow>();
 
         // Fetch all orders for the current employee.
         var data = Orders.ToList().Where(_ => _.EmployeeID == args.ParentRow.Data.EmployeeID).ToList();
-
         for (var i = 0; i < data.Count(); i++)
         {
             var row = data[i];
 
             // Fetch all order details for the current order.
             var childData = OrderInfo.ToList().Where(_ => _.OrderID == row.OrderID).ToList();
+            var pdfchildRows = new List<PdfDetailTemplateRow>();
+            var pdfRow = ProcessPdfRow(new List<string>() { row.OrderID.ToString(), row.CustomerID.ToString(), row.Freight.ToString(), row.ShipCity });
 
-            var excelchildRows = new List<ExcelDetailTemplateRow>();
-
-            // For each order (parent row), create a new Excel row with specific columns.
-            var excelRow = ProcessExcelRow(new List<string>() { 
-                row.OrderID.ToString(), 
-                row.CustomerID.ToString(), 
-                row.Freight.ToString(), 
-                row.ShipCity 
-            });
-
-            // For each order detail (child row), create an Excel row with the following details.
+            // For each order detail (child row), create an PDF row with the following details.
             for (var j = 0; j < childData.Count; j++)
             {
                 var childRow = childData[j];
-                excelchildRows.Add(ProcessExcelRow(new List<string>() { 
-                    childRow.CustomerID.ToString(), 
-                    childRow.Title.ToString(), 
-                    childRow.Address.ToString(), 
-                    childRow.Country 
-                }));
+                pdfchildRows.Add(ProcessPdfRow(new List<string>() { childRow.CustomerID.ToString(), childRow.Title.ToString(), childRow.Address.ToString(), childRow.Country }));
             }
 
             // Add the child rows under the parent row.
-            excelRow.ChildRowInfo = new ExcelDetailTemplateRowSettings()
+            pdfRow.ChildRowInfo = new PdfDetailTemplateRowSettings() 
             {
-                // Set headers for child rows (order details).
-                Headers = new List<ExcelDetailTemplateRow>()
-                {
-                    ProcessExcelRow(new List<string>() { "Customer Name", "Title", "Address", "Country" })
-                },
-                // Set the child rows (the actual order details).
-                Rows = excelchildRows
-            };
+                 // Set headers for child rows (order details).
+                 Headers = new List<PdfDetailTemplateRow>() 
+                 { 
+                    ProcessPdfRow(new List<string>() { "Customer Name", "Title", "Address", "Country" }) 
+                 },
+
+                 // Set the child rows (the actual order details). 
+                 Rows = pdfchildRows };
 
             // Add the row to the list of rows for this employee's orders.
-            excelRows.Add(excelRow);
+            pdfRows.Add(pdfRow);
         }
 
         // Set the parent row headers (order-related information).
-        args.RowInfo.Headers = new List<ExcelDetailTemplateRow>()
-        {
-            ProcessExcelRow(new List<string>() { "Order ID", "Customer ID", "Freight", "Ship City" })
-        };
+        args.RowInfo.Headers = new List<PdfDetailTemplateRow>() { ProcessPdfRow(new List<string>() { "Order ID", "Customer ID", "Freight", "Ship City" }) };
 
-        // Set the final row data (parent and child rows) for the Excel export.
-        args.RowInfo.Rows = excelRows;
+        // Set the final row data (parent and child rows) for the PDF export.
+        args.RowInfo.Rows = pdfRows;
     }
 
-    // Converts a list of cell values into an Excel row.
-    ExcelDetailTemplateRow ProcessExcelRow(List<string> value)
+    // Converts a list of cell values into an PDF row.
+    PdfDetailTemplateRow ProcessPdfRow(List<string> value)
     {
-        var cells = new List<ExcelDetailTemplateCell>();
-        
+        var cells = new List<PdfDetailTemplateCell>();
+
         // Populate each cell with the corresponding value.
         for (var j = 0; j < value.Count(); j++)
         {
-            cells.Add(new ExcelDetailTemplateCell { 
-                CellValue = $"{value[j]}", 
-                Index = j  // Set the index of each cell.
-            });
+            cells.Add(new PdfDetailTemplateCell { CellValue = $"{value[j]}", Index = j });
         }
-        
-        // Return the Excel row with its cells.
-        return new ExcelDetailTemplateRow { Cells = cells };
+
+        // Return the PDF row with its cells.
+        return new PdfDetailTemplateRow { Cells = cells };
     }
 }
 
@@ -797,20 +742,20 @@ public class Order
     public static List<Order> GetAllRecords()
     {
         return new List<Order>
-        {
-            new Order(1, 1001, "Nancy", "Texas", 2.1 * 1),
-            new Order(2, 1002, "Andrew", "London", 2.1 * 2),
-            new Order(3, 1003, "Janet", "London", 2.1 * 3),
-            new Order(4, 1004, "Margaret", "London", 2.1 * 4),
-            new Order(5, 1005, "Steven", "Vegas", 2.1 * 5),
-            new Order(6, 1006, "Smith", "Dubai", 2.1 * 6),
-            new Order(7, 1007, "Steven", "Paris", 2.1 * 7),
-            new Order(8, 1008, "Smith", "Mumbai", 2.1 * 8),
-            new Order(9, 1009, "Smith", "Chennai", 2.1 * 9),
-            new Order(2, 1010, "Smith", "Chennai", 2.1 * 9),
-            new Order(3, 1011, "Smith", "Chennai", 2.1 * 9),
-            new Order(3, 1012, "Smith", "Chennai", 2.1 * 9)
-        };
+    {
+        new Order(1, 1001, "Nancy", "Texas", 2.1 * 1),
+        new Order(2, 1002, "Andrew", "London", 2.1 * 2),
+        new Order(3, 1003, "Janet", "London", 2.1 * 3),
+        new Order(4, 1004, "Margaret", "London", 2.1 * 4),
+        new Order(5, 1005, "Steven", "Vegas", 2.1 * 5),
+        new Order(6, 1006, "Smith", "Dubai", 2.1 * 6),
+        new Order(7, 1007, "Steven", "Paris", 2.1 * 7),
+        new Order(8, 1008, "Smith", "Mumbai", 2.1 * 8),
+        new Order(9, 1009, "Smith", "Chennai", 2.1 * 9),
+        new Order(2, 1010, "Smith", "Chennai", 2.1 * 9),
+        new Order(3, 1011, "Smith", "Chennai", 2.1 * 9),
+        new Order(3, 1012, "Smith", "Chennai", 2.1 * 9)
+    };
     }
 
     public int EmployeeID { get; set; }
@@ -864,6 +809,6 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjBytpWQhgOCVmqd?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtByZTscrNDihvvB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Exporting hierarchical Grid using detail template](./images/hierarchical-detail-template.gif)
+![Exporting hierarchical Grid using detail template](./images/exporting-pdf-hierachy-grid.gif)
