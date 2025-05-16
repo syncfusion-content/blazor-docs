@@ -1,69 +1,80 @@
 ---
 layout: post
-title: Enable or Disable the Blazor Grid | Syncfusion
-description: Learn here all about how to enable or disable the entire Syncfusion Blazor DataGrid component and more.
+title: Enable or Disable the Blazor DataGrid | Syncfusion
+description: Learn here all about how to enable or disable the entire Syncfusion Blazor DataGrid and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Enable or Disable the Grid Component
+# Enable or disable Blazor DataGrid and its actions
 
-You can enable or disable the Grid component by adding the attributes for the Grid and applying the style accordingly.
+The Syncfusion Blazor DataGrid can be dynamically enabled or disabled by toggling a button. This is achieved by applying a CSS class to restrict interaction and setting a `attribute` for styling.
 
-In the following sample, the `SfRadioButton` is rendered: Using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfRadioButton-1.html#Syncfusion_Blazor_Buttons_SfRadioButton_1_ValueChange) event of the `SfRadioButton`, you can enable or disable the Grid component.
+To implement this:
 
-```cshtml
+* Define a CSS class `(.disabled)` to visually and functionally disable the Grid.
+
+```css
+.grid-wrapper.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    touch-action: none;
+    cursor: not-allowed;
+}
+```
+* Bind a boolean flag `IsGridDisabled` to update the wrapper class and Grid attributes.
+
+* Use a button to toggle the flag and control the Grid state.
+
+The following example demonstrates how to enable or disable the Grid and its actions using a button:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
 
-<SfRadioButton Label="Disable" TChecked="string" Name="options" @bind-Checked="stringChecked" Value="Yes" ValueChange="@((args)=>OnChange(args,"Yes"))"></SfRadioButton>
-<SfRadioButton Label="Enable" TChecked="string" Name="options" @bind-Checked="stringChecked" Value="No" ValueChange="@((args)=>OnChange(args,"No"))"></SfRadioButton>
+<SfButton CssClass="e-flat" @onclick="ToggleGrid">
+    @(IsGridDisabled ? "Enable Grid" : "Disable Grid")
+</SfButton>
 
-<SfGrid DataSource="@Orders" @attributes="@GridAttributes" AllowPaging="true" Width="900" Height="400">
-    <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="80"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" Width="80"></GridColumn>
-    </GridColumns>
-</SfGrid>
+<div class="@(IsGridDisabled ? "grid-wrapper disabled" : "grid-wrapper")">
+    <SfGrid DataSource="@Orders" @attributes="@GridAttributes" AllowPaging="true" Height="273px" Toolbar="@Toolbar">
+        <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
+        <GridColumns>
+            <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" IsPrimaryKey="true" Width="100"></GridColumn>
+            <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
+            <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" EditType="EditType.NumericEdit" Width="120" Format="C2"></GridColumn>
+            <GridColumn Field=@nameof(OrderDetails.ShipCountry) HeaderText="Ship Country"  EditType="EditType.DropDownEdit" Width="150"></GridColumn>
+        </GridColumns>
+    </SfGrid>
+</div>
+
 <style>
-    .e-grid[disable="yes"] {
-        opacity: .5;
+    .grid-wrapper.disabled {
+        opacity: 0.5;
         pointer-events: none;
-        -ms-touch-action: none;
         touch-action: none;
-        cursor: no-drop;
+        cursor: not-allowed;
     }
 </style>
 
-@code{
-    private string stringChecked = "No";
-    public void OnChange(ChangeArgs<string> Args, string val)
-    {
-        if (val == "Yes")
-        {
-            GridAttributes["disable"] = "yes";
-        }
-        else if (val == "No")
-        {
-            GridAttributes["disable"] = "no";
-        }
-    }
-
-    private Dictionary<string, object> GridAttributes { get; set; } = new Dictionary<string, object>();
-    public List<Order> Orders { get; set; }
+@code {
+    private bool IsGridDisabled = false;
+    private Dictionary<string, object> GridAttributes { get; set; } = new();
+    public List<OrderDetails> Orders { get; set; }
+    private List<string> Toolbar = new() { "Add", "Edit", "Delete", "Update", "Cancel" };
 
     protected override void OnInitialized()
     {
         GridAttributes.Add("disable", "no");
-        Orders = Enumerable.Range(1, 1000).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
+        Orders = OrderDetails.GetAllRecords();
+    }
+
+    private void ToggleGrid()
+    {
+        IsGridDisabled = !IsGridDisabled;
+        GridAttributes["disable"] = IsGridDisabled ? "yes" : "no";
     }
 
     public class Order
@@ -75,5 +86,52 @@ In the following sample, the `SfRadioButton` is rendered: Using the [ValueChange
     }
 }
 
-```
-![Enable or Disable the Blazor DataGrid](../images/enable-or-disable-the-blazor-datagrid.gif)
+{% endhighlight %}
+{% highlight c# tabtitle="OrderDetails.cs" %}
+
+public class OrderDetails
+{
+    public static List<OrderDetails> order = new List<OrderDetails>();
+
+    public OrderDetails(int orderId, string customerId, string shipCity, string shipName,double freight, DateTime orderDate, string shipCountry)
+    {
+        this.OrderID = orderId;
+        this.CustomerID = customerId;
+        this.ShipCity = shipCity;
+        this.ShipName = shipName;
+        this.Freight = freight;
+        this.OrderDate = orderDate;
+        this.ShipCountry = shipCountry;
+    }
+
+    public static List<OrderDetails> GetAllRecords()
+    {
+        if (order.Count == 0)
+        {
+            order.Add(new OrderDetails(10248, "VINET", "Reims", "Vins et alcools Chevalier", 32.38, new DateTime(2024, 1, 5), "France"));
+            order.Add(new OrderDetails(10249, "TOMSP", "Münster", "Toms Spezialitäten", 11.61, new DateTime(2024, 1, 7), "Germany"));
+            order.Add(new OrderDetails(10250, "HANAR", "Rio de Janeiro", "Hanari Carnes", 65.83, new DateTime(2024, 1, 10), "Brazil"));
+            order.Add(new OrderDetails(10251, "VICTE", "Lyon", "Victuailles en stock", 41.34, new DateTime(2024, 1, 12), "France"));
+            order.Add(new OrderDetails(10252, "SUPRD", "Charleroi", "Suprêmes délices", 51.30, new DateTime(2024, 1, 14), "Belgium"));
+            order.Add(new OrderDetails(10253, "HANAR", "Rio de Janeiro", "Hanari Carnes", 58.17, new DateTime(2024, 1, 16), "Brazil"));
+            order.Add(new OrderDetails(10254, "CHOPS", "Bern", "Chop-suey Chinese", 22.98, new DateTime(2024, 1, 18), "Switzerland"));
+            order.Add(new OrderDetails(10255, "RICSU", "Genève", "Richter Supermarkt", 148.33, new DateTime(2024, 1, 20), "Switzerland"));
+            order.Add(new OrderDetails(10256, "WELLI", "Resende", "Wellington Importadora", 13.97, new DateTime(2024, 1, 22), "Brazil"));
+            order.Add(new OrderDetails(10257, "HILAA", "San Cristóbal", "HILARION-Abastos", 81.91, new DateTime(2024, 1, 24), "Venezuela"));
+        }
+        return order;
+    }
+
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ShipCity { get; set; }
+    public string ShipName { get; set; }
+    public double Freight { get; set; }
+    public DateTime OrderDate { get; set; }
+    public string ShipCountry { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjheZIiyqvGbDYvc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

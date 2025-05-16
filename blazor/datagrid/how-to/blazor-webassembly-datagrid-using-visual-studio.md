@@ -1,29 +1,40 @@
 ---
 layout: post
-title: Getting Stared with Blazor DataGrid in WebAssembly | Syncfusion
-description: Checkout the documentation for getting started with Blazor WebAssembly App and Syncfusion Blazor DataGrid Component in Visual Studio and much more.
+title: Getting Stared with Blazor DataGrid in webAssembly | Syncfusion
+description: Checkout the documentation for getting started with Blazor webAssembly app and Syncfusion Blazor DataGrid in visual studio and much more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
- <!-- markdownlint-disable MD024 -->
+# Blazor DataGrid in WebAssembly App using Visual Studio
 
-# Blazor DataGrid Component in WebAssembly App using Visual Studio
+This article provides a step-by-step instructions to build a Blazor WebAssembly App using the Syncfusion Blazor DataGrid with the [Visual Studio](https://visualstudio.microsoft.com/vs/).
 
-This article provides a step-by-step instructions for building Blazor WebAssembly App with Blazor DataGrid component using [Visual Studio](https://visualstudio.microsoft.com/vs/).
+{% youtube
+"youtube:https://www.youtube.com/watch?v=zKU580cOqjg" %}
 
-## Prerequisites
+## Using playground
+
+[Blazor Playground](https://blazor.syncfusion.com/documentation/blazor-playground/overview) allows you to interact with our Blazor components directly in your web browser without need to install any required NuGet packages. By default, the `Syncfusion.Blazor` package is included in this.
+
+{% playground "https://blazorplayground.syncfusion.com/" %}
+
+## Manually creating a project
+
+This section provides a brief explanation on how to manually create a Blazor WebAssembly App using Visual Studio.
+
+### Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-## Create a Blazor WebAssembly App in Visual Studio
+### Create a Blazor webAssembly app in Visual Studio
 
-You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid and Themes NuGet in the App
+### Install Syncfusion Blazor DataGrid and Themes NuGet in the app
 
-To add `Blazor DataGrid` component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
+To add `Syncfusion Blazor DataGrid` in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/). Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
 {% highlight C# tabtitle="Package Manager" %}
@@ -35,9 +46,9 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 {% endhighlight %}
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
+N> Syncfusion Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
-## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+### Register Syncfusion Blazor service
 
 Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Grids` namespace.
 
@@ -50,7 +61,7 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor WebAssembly App.
+Now, register the Syncfusion Blazor Service in the **~/Program.cs** file of your Blazor WebAssembly App.
 
 {% tabs %}
 {% highlight C# tabtitle="Blazor WebAssembly App" hl_lines="3 11" %}
@@ -72,7 +83,7 @@ await builder.Build().RunAsync();
 {% endhighlight %}
 {% endtabs %}
 
-## Add stylesheet and script resources
+### Add stylesheet and script resources
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows:
 
@@ -87,185 +98,536 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 ```
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-## Add Blazor DataGrid Component
+### Add Blazor DataGrid
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component in the **~/Pages/Index.razor** file.
+Add the Syncfusion Blazor DataGrid in the **~/Pages/Index.razor** file.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Index.razor" %}
 
-<SfGrid DataSource="@Orders" />
+@using Syncfusion.Blazor.Grids
 
-@code{
-    public List<Order> Orders { get; set; }
+<SfGrid DataSource="@Orders"></SfGrid>
 
+@code {
+    public List<OrderData> Orders { get; set; }
+       
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 5).Select(x => new Order()
-        {
-            OrderID = 0 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-        }).ToList();
-    }
+        Orders = OrderData.GetAllRecords();
+    }   
+}
 
-    public class Order
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+    public OrderData()
     {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
 
     }
+    public OrderData( int? OrderID, string CustomerID)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;
+    }
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count() == 0)
+        {
+            int code = 10;
+            for (int i = 1; i < 2; i++)
+            {
+                Orders.Add(new OrderData(1, "ALFKI"));
+                Orders.Add(new OrderData(2, "ALFKI"));
+                Orders.Add(new OrderData(3, "ANANTR"));
+                Orders.Add(new OrderData(4, "ANANTR"));
+                Orders.Add(new OrderData(5, "ALFKI"));  
+                code += 5;
+            }
+        }
+        return Orders;
+    }
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component in your default web browser.
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjrIZoWghZXnoxDw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-![Blazor DataGrid Component](../images/blazor-datagrid-component.png)
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Grid in your default web browser.
 
-## Defining row data
+![Blazor DataGrid](../images/blazor-datagrid-component.png)
 
-To bind data for the DataGrid component, you can assign a IEnumerable object to the [dataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property. The list data source can also be provided as an instance of the `DataManager`. You can assign the data source through the `OnInitialized` life cycle of the page.
+### Defining row data
+
+To bind data for the Syncfusion Blazor DataGrid, assign a `List<OrderData>` (or any other collection that implements `IEnumerable<OrderData>`) to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property. The list data source can also be provided as an instance of the `DataManager`. You can assign the data source through the `OnInitialized` life cycle of the page.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Index.razor" %}
 
-<SfGrid DataSource="@Orders" />
+@using Syncfusion.Blazor.Grids
 
-@code{
-    public List<Order> Orders { get; set; }
+<SfGrid DataSource="@Orders"></SfGrid>
 
+@code {
+    public List<OrderData> Orders { get; set; }
+       
     protected override void OnInitialized()
     {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
-    }
-
-    public class Order {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
-    }
+        Orders = OrderData.GetAllRecords();
+    }   
 }
 
 {% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+    public OrderData()
+    {
+
+    }
+    public OrderData( int? OrderID, string CustomerID, DateTime? OrderDate, double? Freight)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;
+        this.OrderDate = OrderDate;
+        this.Freight = Freight;
+    }
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count() == 0)
+        {
+            int code = 10;
+            for (int i = 1; i < 2; i++)
+            {
+                Orders.Add(new OrderData(10248, "VINET",new DateTime(1996,07,07), 32.38));
+                Orders.Add(new OrderData(10249, "TOMSP", new DateTime(1996, 07, 07), 92.38));
+                Orders.Add(new OrderData(10250, "HANAR", new DateTime(1996, 07, 07), 62.77));
+                Orders.Add(new OrderData(10251, "VICTE", new DateTime(1996, 07, 07), 12.38));
+                Orders.Add(new OrderData(10252, "SUPRD", new DateTime(1996, 07, 07), 82.38));
+                Orders.Add(new OrderData(10253, "CHOPS", new DateTime(1996, 07, 07), 31.31));
+                Orders.Add(new OrderData(10254, "RICSU", new DateTime(1996, 07, 07), 22.37));
+                Orders.Add(new OrderData(10255, "WELLI", new DateTime(1996, 07, 07), 44.34));
+                Orders.Add(new OrderData(10256, "RICSU", new DateTime(1996, 07, 07), 31.33));                                                                                    
+                code += 5;
+            }
+        }
+        return Orders;
+    }
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public DateTime? OrderDate { get; set; }
+    public double? Freight { get; set; }
+} 
+{% endhighlight %}
 {% endtabs %}
 
-## Defining columns
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNrotoiKCoYkHoHn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-The columns are automatically generated when columns declaration is empty or undefined while initializing the datagrid.
+### Defining columns
 
-The DataGrid has an option to define columns using [GridColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumns.html) component. In `GridColumn` component we have properties to customize columns.
+The columns are automatically generated when columns declaration is empty or undefined while initializing the Syncfusion Blazor DataGrid.
 
-Let’s check the properties used here:
+The Grid has an option to define columns using [GridColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumns.html). In `GridColumn` we have properties to customize columns.
 
-* [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) is added to map with a property name an array of JavaScript objects.
-* [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderText) is added to change the title of columns.
-* [TextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_TextAlign) is used to change the alignment of columns. By default, columns will be left aligned. To change columns to right align, define `TextAlign` as `Right`.
-* Also, we have used another useful property, [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Format). Using this, you can format number and date values to standard or custom formats.
+Here are the key properties used in the example below:
+
+* [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) : Binds the column to a property on your data model.
+
+* [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderText) : Sets the displayed column title.
+
+* [TextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_TextAlign) : Controls the horizontal alignment of cell text. By default, text is left-aligned; set this to `TextAlign.Right` to right-align.
+
+* [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Format) : Applies standard or custom formatting to numeric and date values.
+
+* [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type) : Specifies the column data type.
+
+* [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Width): Sets the column’s width.
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders">
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Type="Syncfusion.Blazor.Grids.ColumnType.Date" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="130"></GridColumn>
     </GridColumns>
 </SfGrid>
 
+@code {
+   private SfGrid<OrderData> Grid;
+    public List<OrderData> Orders { get; set; }
+       
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }       
+}
+
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+    public OrderData()
+    {
+
+    }
+    public OrderData( int? OrderID, string CustomerID, DateTime? OrderDate, double? Freight)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;
+        this.OrderDate = OrderDate;
+        this.Freight = Freight;
+    }
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count() == 0)
+        {
+            int code = 10;
+            for (int i = 1; i < 2; i++)
+            {
+                Orders.Add(new OrderData(10248, "VINET",new DateTime(1996,07,07), 32.38));
+                Orders.Add(new OrderData(10249, "TOMSP", new DateTime(1996, 07, 07), 92.38));
+                Orders.Add(new OrderData(10250, "HANAR", new DateTime(1996, 07, 07), 62.77));
+                Orders.Add(new OrderData(10251, "VICTE", new DateTime(1996, 07, 07), 12.38));
+                Orders.Add(new OrderData(10252, "SUPRD", new DateTime(1996, 07, 07), 82.38));
+                Orders.Add(new OrderData(10253, "CHOPS", new DateTime(1996, 07, 07), 31.31));
+                Orders.Add(new OrderData(10254, "RICSU", new DateTime(1996, 07, 07), 22.37));
+                Orders.Add(new OrderData(10255, "WELLI", new DateTime(1996, 07, 07), 44.34));
+                Orders.Add(new OrderData(10256, "RICSU", new DateTime(1996, 07, 07), 31.33));                                                                                    
+                code += 5;
+            }
+        }
+        return Orders;
+    }
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public DateTime? OrderDate { get; set; }
+    public double? Freight { get; set; }
+} 
 {% endhighlight %}
 {% endtabs %}
 
-## Enable paging
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNLyNosqiEMHcPrL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-The paging feature enables users to view the datagrid record in a paged view. It can be enabled by setting the [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging) property to `true`. Pager can be customized using the [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings) component.
+### Enable paging
+
+The Syncfusion Blazor DataGrid can display records in a paged format. To enable paging, set the [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging) property to **true**. You can customize the pager using the [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings).
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true">
- <GridPageSettings PageSize="5"></GridPageSettings>
-   <GridColumns>
-     <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-     <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-     <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-     <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-   </GridColumns>
+     <GridPageSettings PageSize="5"></GridPageSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Type="Syncfusion.Blazor.Grids.ColumnType.Date" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="130"></GridColumn>
+    </GridColumns>
 </SfGrid>
 
+@code {
+    public List<OrderData> Orders { get; set; }
+       
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }       
+}
+
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+    public OrderData()
+    {
+
+    }
+    public OrderData( int? OrderID, string CustomerID, DateTime? OrderDate, double? Freight)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;
+        this.OrderDate = OrderDate;
+        this.Freight = Freight;
+    }
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count() == 0)
+        {
+            int code = 10;
+            for (int i = 1; i < 2; i++)
+            {
+                Orders.Add(new OrderData(10248, "VINET",new DateTime(1996,07,07), 32.38));
+                Orders.Add(new OrderData(10249, "TOMSP", new DateTime(1996, 07, 07), 92.38));
+                Orders.Add(new OrderData(10250, "HANAR", new DateTime(1996, 07, 07), 62.77));
+                Orders.Add(new OrderData(10251, "VICTE", new DateTime(1996, 07, 07), 12.38));
+                Orders.Add(new OrderData(10252, "SUPRD", new DateTime(1996, 07, 07), 82.38));
+                Orders.Add(new OrderData(10253, "CHOPS", new DateTime(1996, 07, 07), 31.31));
+                Orders.Add(new OrderData(10254, "RICSU", new DateTime(1996, 07, 07), 22.37));
+                Orders.Add(new OrderData(10255, "WELLI", new DateTime(1996, 07, 07), 44.34));
+                Orders.Add(new OrderData(10256, "RICSU", new DateTime(1996, 07, 07), 31.33));                                                                                    
+                code += 5;
+            }
+        }
+        return Orders;
+    }
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public DateTime? OrderDate { get; set; }
+    public double? Freight { get; set; }
+} 
 {% endhighlight %}
 {% endtabs %}
 
-## Enable sorting
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrejSMgCdnGAijD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-The sorting feature enables you to order the records. It can be enabled by setting the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property as `true`. Sorting feature can be customized using the [GridSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SortSettings) component.
+### Enable sorting
+
+The Syncfusion Blazor DataGrid can sort records in ascending or descending order. To enable sorting, set the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) property to **true**. You can customize the sorting using the [GridSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SortSettings).
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Index.razor" %}
 
-<SfGrid DataSource="@Orders" AllowPaging="true" AllowSorting="true">
- <GridPageSettings PageSize="5"></GridPageSettings>
-   <GridColumns>
-     <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-     <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-     <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-     <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-   </GridColumns>
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowSorting="true">
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Type="Syncfusion.Blazor.Grids.ColumnType.Date" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="130"></GridColumn>
+    </GridColumns>
 </SfGrid>
 
+@code {
+    public List<OrderData> Orders { get; set; }
+       
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }       
+}
+
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+    public OrderData()
+    {
+
+    }
+    public OrderData( int? OrderID, string CustomerID, DateTime? OrderDate, double? Freight)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;
+        this.OrderDate = OrderDate;
+        this.Freight = Freight;
+    }
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count() == 0)
+        {
+            int code = 10;
+            for (int i = 1; i < 2; i++)
+            {
+                Orders.Add(new OrderData(10248, "VINET",new DateTime(1996,07,07), 32.38));
+                Orders.Add(new OrderData(10249, "TOMSP", new DateTime(1996, 07, 07), 92.38));
+                Orders.Add(new OrderData(10250, "HANAR", new DateTime(1996, 07, 07), 62.77));
+                Orders.Add(new OrderData(10251, "VICTE", new DateTime(1996, 07, 07), 12.38));
+                Orders.Add(new OrderData(10252, "SUPRD", new DateTime(1996, 07, 07), 82.38));
+                Orders.Add(new OrderData(10253, "CHOPS", new DateTime(1996, 07, 07), 31.31));
+                Orders.Add(new OrderData(10254, "RICSU", new DateTime(1996, 07, 07), 22.37));
+                Orders.Add(new OrderData(10255, "WELLI", new DateTime(1996, 07, 07), 44.34));
+                Orders.Add(new OrderData(10256, "RICSU", new DateTime(1996, 07, 07), 31.33));                                                                                    
+                code += 5;
+            }
+        }
+        return Orders;
+    }
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public DateTime? OrderDate { get; set; }
+    public double? Freight { get; set; }
+} 
 {% endhighlight %}
 {% endtabs %}
 
-## Enable filtering
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZhSXosACxQRZrki?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-The filtering feature enables you to view reduced amount of records based on filter criteria. It can be enabled by setting the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property as `true`. Filtering feature can be customized using the [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) component.
+### Enable filtering
+
+The Syncfusion Blazor DataGrid can filter records to display only those that meet specific criteria. To enable filtering, set the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) property to **true**. You can customize the filtering behavior using the [GridFilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings).
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Index.razor" %}
 
-<SfGrid DataSource="@Orders" AllowPaging="true" AllowSorting="true" AllowFiltering="true">
- <GridPageSettings PageSize="5"></GridPageSettings>
-   <GridColumns>
-     <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-     <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-     <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-     <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-   </GridColumns>
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowFiltering="true">
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Type="Syncfusion.Blazor.Grids.ColumnType.Date" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="130"></GridColumn>
+    </GridColumns>
 </SfGrid>
+
+@code {
+    public List<OrderData> Orders { get; set; }
+       
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }       
+}
+
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+    public OrderData()
+    {
+
+    }
+    public OrderData( int? OrderID, string CustomerID, DateTime? OrderDate, double? Freight)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;
+        this.OrderDate = OrderDate;
+        this.Freight = Freight;
+    }
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count() == 0)
+        {
+            int code = 10;
+            for (int i = 1; i < 2; i++)
+            {
+                Orders.Add(new OrderData(10248, "VINET",new DateTime(1996,07,07), 32.38));
+                Orders.Add(new OrderData(10249, "TOMSP", new DateTime(1996, 07, 07), 92.38));
+                Orders.Add(new OrderData(10250, "HANAR", new DateTime(1996, 07, 07), 62.77));
+                Orders.Add(new OrderData(10251, "VICTE", new DateTime(1996, 07, 07), 12.38));
+                Orders.Add(new OrderData(10252, "SUPRD", new DateTime(1996, 07, 07), 82.38));
+                Orders.Add(new OrderData(10253, "CHOPS", new DateTime(1996, 07, 07), 31.31));
+                Orders.Add(new OrderData(10254, "RICSU", new DateTime(1996, 07, 07), 22.37));
+                Orders.Add(new OrderData(10255, "WELLI", new DateTime(1996, 07, 07), 44.34));
+                Orders.Add(new OrderData(10256, "RICSU", new DateTime(1996, 07, 07), 31.33));                                                                                    
+                code += 5;
+            }
+        }
+        return Orders;
+    }
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public DateTime? OrderDate { get; set; }
+    public double? Freight { get; set; }
+} 
 
 {% endhighlight %}
 {% endtabs %}
 
-## Enable grouping
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rDrIDoMqsHPeUEtz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-The grouping feature enables you to view the datagrid record in a grouped view. It can be enabled by setting the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property as `true`. Grouping feature can be customized using the [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GroupSettings) component.
+### Enable grouping
+
+The Syncfusion Blazor DataGrid can group records by one or more columns. To enable grouping, set the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property to **true**. You can customize grouping behavior using the [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GroupSettings).
 
 {% tabs %}
-{% highlight razor %}
+{% highlight razor tabtitle="Index.razor" %}
 
-<SfGrid DataSource="@Orders" AllowPaging="true" AllowSorting="true" AllowFiltering="true" AllowGrouping="true">
- <GridPageSettings PageSize="5"></GridPageSettings>
-   <GridColumns>
-     <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-     <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-     <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-     <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-   </GridColumns>
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowGrouping="true">
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Type="Syncfusion.Blazor.Grids.ColumnType.Date" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="130"></GridColumn>
+    </GridColumns>
 </SfGrid>
+
+@code {
+    public List<OrderData> Orders { get; set; }
+       
+    protected override void OnInitialized()
+    {
+        Orders = OrderData.GetAllRecords();
+    }       
+}
+
+{% endhighlight %}
+{% highlight c# tabtitle="OrderData.cs" %}
+
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+    public OrderData()
+    {
+
+    }
+    public OrderData( int? OrderID, string CustomerID, DateTime? OrderDate, double? Freight)
+    {
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;
+        this.OrderDate = OrderDate;
+        this.Freight = Freight;
+    }
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count() == 0)
+        {
+            int code = 10;
+            for (int i = 1; i < 2; i++)
+            {
+                Orders.Add(new OrderData(10248, "VINET",new DateTime(1996,07,07), 32.38));
+                Orders.Add(new OrderData(10249, "TOMSP", new DateTime(1996, 07, 07), 92.38));
+                Orders.Add(new OrderData(10250, "HANAR", new DateTime(1996, 07, 07), 62.77));
+                Orders.Add(new OrderData(10251, "VICTE", new DateTime(1996, 07, 07), 12.38));
+                Orders.Add(new OrderData(10252, "SUPRD", new DateTime(1996, 07, 07), 82.38));
+                Orders.Add(new OrderData(10253, "CHOPS", new DateTime(1996, 07, 07), 31.31));
+                Orders.Add(new OrderData(10254, "RICSU", new DateTime(1996, 07, 07), 22.37));
+                Orders.Add(new OrderData(10255, "WELLI", new DateTime(1996, 07, 07), 44.34));
+                Orders.Add(new OrderData(10256, "RICSU", new DateTime(1996, 07, 07), 31.33));                                                                                    
+                code += 5;
+            }
+        }
+        return Orders;
+    }
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public DateTime? OrderDate { get; set; }
+    public double? Freight { get; set; }
+} 
 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor DataGrid Component](../images/blazor-datagrid.gif)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBoZosUMRYBBVqA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+![Blazor DataGrid](../images/blazor-datagrid.gif)
+
+> Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/How-to-Getting-Started-Blazor-DataGrid-Samples/tree/master/WebAssembly_BlazorApp).
 
 ## See also
 
