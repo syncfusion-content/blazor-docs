@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting started with Blazor Component using Syncfusion.Blazor NuGet
 
-This section briefly explains how to include a Blazor component with the Syncfusion.Blazor Single NuGet package in your Blazor Server App and Blazor WebAssembly App using Visual Studio.
+This section briefly explains how to include a Blazor component with the Syncfusion.Blazor Single NuGet package in your Blazor Web App Server Render Mode and Blazor WebAssembly Standalone App using Visual Studio.
 
 ## Prerequisites
 
@@ -17,7 +17,7 @@ This section briefly explains how to include a Blazor component with the Syncfus
 
 ## Create a new Blazor App in Visual Studio
 
-You can create a **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+You can create a **Blazor Web App (Server Interactive Mode) or WebAssembly Standalone**using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Single NuGet in the App
 
@@ -35,7 +35,7 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
-Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Calendars` namespace.
+Open **~/Components/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Calendars` namespace.
 
 ```cshtml
 
@@ -44,7 +44,7 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusio
 
 ```
 
-Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor Server App or Blazor WebAssembly App.
+Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor WebApp Server Interactive Mode or WebAssembly Standalone app.
 
 {% tabs %}
 {% highlight C# tabtitle="Blazor Server App" hl_lines="3 10" %}
@@ -87,11 +87,11 @@ await builder.Build().RunAsync();
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows:
 
-* For **.NET 6** Blazor Server app, include it in **~/Pages/_Layout.cshtml** file.
 
-* For **.NET 7** Blazor Server app, include it in the **~/Pages/_Host.cshtml** file.
+* For **.NET 8 and .NET 9 WebAssembly Standalone app** , include it in **wwwroot/index.html** file.
 
-* For Blazor WebAssembly app, include it in the **~/index.html** file.
+* For **.NET 8 and .NET 9 Blazor WebApp Server Interactive Mode**, include it in **~/Components/App.razor**.
+
 
 ```html
 <head>
@@ -105,7 +105,7 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component
 
-* Now, add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendar component in the **~/Pages/Index.razor**  file.
+* Now, add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendar component in the **~/Components/Pages/Index.razor**  file.
 
 {% tabs %}
 {% highlight razor %}
