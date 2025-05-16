@@ -1244,7 +1244,13 @@ The following example demonstrates how an Excel document is uploaded, parsed, co
 
 An Observable collection is a special type of collection in .NET that automatically notifies any subscribers (such as the UI or other components) when changes are made to the collection. This is particularly useful in data-binding scenarios, where you want the UI to reflect changes in the underlying data model without having to manually update the view.
 
-To achieve this, you can use the [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=netframework-4.8), which is a dynamic data collection that provides notifications when items are added, removed, or moved. It implements the [INotifyCollectionChanged](https://learn.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=netframework-4.8) interface to notify subscribers of changes such as adding, removing, moving, or clearing items in the collection, and also implements the [INotifyPropertyChanged](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=netframework-4.8) interface to notify when a property value changes on the client side.
+To achieve this, you can use the [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=netframework-4.8), a dynamic data collection that:
+
+   * Provides notifications when items are added, removed, or moved.
+
+   * Implements the [INotifyCollectionChanged](https://learn.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=netframework-4.8) interface to notify subscribers about changes such as adding, removing, moving, or clearing items in the collection.
+
+   * Implements the [INotifyPropertyChanged](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=netframework-4.8) interface to notify when a property value changes on the client side.
 
 The following sample demonstrates how the Order class implements the **INotifyPropertyChanged** interface and raises the event when the `CustomerID`property value is changed.
 
@@ -1397,7 +1403,7 @@ The Syncfusion Blazor DataGrid supports binding to an ObservableCollection, whic
 
   * Loading or importing a large dataset dynamically.
 
-  *  Appending multiple items retrieved from an API or database.
+  * Appending multiple items retrieved from an API or database.
 
   * Performing bulk updates or data synchronization operations.
 
@@ -1408,7 +1414,7 @@ The Syncfusion Blazor DataGrid supports binding to an ObservableCollection, whic
 
 By default, the `Add` method is used to insert a single item into the **ObservableCollection**. When multiple items are added one by one using a `foreach` loop, the Grid refreshes after each addition. This can lead to performance issues and UI flickering, especially when adding a large number of items.
 
-To optimize performance when adding multiple items at once, you can extend the `ObservableCollection<T>` class by implementing an `AddRange` method. This method adds all items first and then raises a single notification to update the Grid only once, minimizing the overhead caused by multiple refreshes.
+To optimize performance when adding multiple items at once, you can extend the `ObservableCollection<T>` class by implementing an `AddRange` method. By using this method, you can add a range of items and ensure that the `OnCollectionChanged` event is triggered only once, updating the Grid a single time for the entire batch operation.
 
 To implement this functionality, follow these steps:
 
