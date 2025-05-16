@@ -629,7 +629,6 @@ public object GetOrderData()
 }
 
 {% endhighlight %}
-{% endtabs %}
 
 {% highlight razor tabtitle="Index.razor" %}
 
