@@ -1238,6 +1238,8 @@ The following example demonstrates how an Excel document is uploaded, parsed, co
 
 [!Binding data from Excel document](./images/excel-import-data.gif)
 
+> You can find the complete sample on [GitHub](https://github.com/SyncfusionExamples/databinding-in-blazor-datagrid/tree/master/Binding_data_from_excel/Excel_Export).
+
 ## Observable collection
 
 An Observable collection is a special type of collection in .NET that automatically notifies any subscribers (such as the UI or other components) when changes are made to the collection. This is particularly useful in data-binding scenarios, where you want the UI to reflect changes in the underlying data model without having to manually update the view.
@@ -1250,10 +1252,9 @@ The following sample demonstrates how the Order class implements the **INotifyPr
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 @using Syncfusion.Blazor.Buttons
 @using System.Collections.ObjectModel
-
+@using Observable_Collection.Components.Data;
 
 <div Style="margin-bottom:15px">
     <SfButton CssClass="e-outline" OnClick="@(() => AddRecords())" Content="Add Data"></SfButton>
@@ -1306,7 +1307,7 @@ The following sample demonstrates how the Order class implements the **INotifyPr
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 
-namespace BlazorApp1.Data
+namespace Observable_Collection.Components.Data
 {
     public class OrdersDetailsObserveData : INotifyPropertyChanged
     {
@@ -1386,6 +1387,8 @@ The following screenshot represents the Grid with **Observable Collection**.
 
 ![Blazor DataGrid with ObservableCollection](./images/blazor-datagrid-observable.gif)
 
+> You can find the complete sample on [GitHub](https://github.com/SyncfusionExamples/databinding-in-blazor-datagrid/tree/master/observable_collection/Observable_Collection).
+
 N> While using an Observable collection, the added, removed, and changed records are reflected in the UI. But while updating the Observable collection using external actions like timers, events, and other notifications, you need to call the StateHasChanged method to reflect the changes in the UI.
 
 ## Add a Range of Items into ObservableCollection in Blazor DataGrid
@@ -1439,6 +1442,7 @@ The following example demonstrates how to use this approach in a Grid:
 @using Syncfusion.Blazor.Buttons
 @using System.Collections.ObjectModel
 @using System.Collections.Specialized
+@using ObservableCollection.Components.Data;
 
 <div style="padding-bottom:20px">
     <SfButton OnClick="AddRangeItems">Add Range of Items</SfButton>
@@ -1482,7 +1486,7 @@ The following example demonstrates how to use this approach in a Grid:
 
 {% highlight cs tabtitle="OrdersDetailsObserveData.cs" %}
 
-namespace BlazorApp1.Data
+namespace ObservableCollection.Components.Data
 {
     public class OrdersDetailsObserveData
     {
@@ -1510,6 +1514,8 @@ namespace BlazorApp1.Data
 The following screenshot represents the Grid with **Observable Collection**.
 
 ![Blazor DataGrid with ObservableCollection](./images/Observable-collection-range.gif)
+
+> You can find the complete sample on [GitHub](https://github.com/SyncfusionExamples/databinding-in-blazor-datagrid/tree/master/add_range_items_observableCollection/ObservableCollection).
 
 ## See also
 
