@@ -13,7 +13,7 @@ State management in the Syncfusion Blazor DataGrid allows you to maintain the Gr
 
 To enable state persistence in the Grid, you can utilize the [EnablePersistence](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnablePersistence) property. When this property is set to **true**, the Grid will automatically save its state in the browser's [LocalStorage](https://www.w3schools.com/html/html5_webstorage.asp#), ensuring that the state is preserved across page reloads.
 
-```razor
+```cs
 <SfGrid DataSource="@Orders" EnablePersistence="true">
 ```
 
@@ -427,7 +427,7 @@ The Syncfusion Blazor DataGrid allows you to save and restore its state using lo
 
 To implement this functionality, use the `getItem` and `setItem` methods for local storage, along with the Grid `setProperties` and [GetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetPersistDataAsync) methods.
 
-The provided code demonstrates how to save and restore the previous state of a Grid  using local storage.
+The provided code demonstrates how to save and restore the previous state of a Grid using local storage.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -627,13 +627,13 @@ If the [EnablePersistence](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 To retrieve the Grid model from Local Storage, follow these steps:
 
-```razor
+```cs
 string localStorageKey = "gridOrders"; //"gridOrders" is component name + component id.
 string modelJson = await JS.InvokeAsync<string>("localStorage.getItem", localStorageKey);
 var modelObject = JsonSerializer.Deserialize<object>(modelJson);
 ```
 
-```razor
+```cs
 await JS.InvokeVoidAsync("localStorage.setItem", localStorageKey, modelJson);
 ```
 ## Prevent columns from persisting
