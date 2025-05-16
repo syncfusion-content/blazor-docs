@@ -17,7 +17,7 @@ This section briefly explains how to include a Blazor component with the Syncfus
 
 ## Create a new Blazor App in Visual Studio
 
-You can create a **Blazor Web App (Server Render Mode) or WebAssembly Standalone**using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+You can create a **Blazor Web App (Server Interactive Mode) or WebAssembly Standalone**using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Single NuGet in the App
 
@@ -44,7 +44,7 @@ Open **~/Components/_Imports.razor** file and import the `Syncfusion.Blazor` and
 
 ```
 
-Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor Server App or Blazor WebAssembly App.
+Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor WebApp Server Interactive Mode or WebAssembly Standalone app.
 
 {% tabs %}
 {% highlight C# tabtitle="Blazor Server App" hl_lines="3 10" %}
@@ -88,9 +88,9 @@ await builder.Build().RunAsync();
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows:
 
 
-* For **WebAssembly Standalone app** , include it in **wwwroot/index.html** file.
+* For **.NET 8 and .NET 9 WebAssembly Standalone app** , include it in **wwwroot/index.html** file.
 
-* For **.NET 8 and .NET 9 Server Render Mode webapp**, include it in **~/Components/App.razor**.
+* For **.NET 8 and .NET 9 Blazor WebApp Server Interactive Mode**, include it in **~/Components/App.razor**.
 
 
 ```html
