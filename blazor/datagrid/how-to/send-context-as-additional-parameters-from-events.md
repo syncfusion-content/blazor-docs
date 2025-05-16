@@ -9,9 +9,23 @@ documentation: ug
 
 # Sending context as additional parameters from events in Blazor DataGrid
 
-The Syncfusion Blazor DataGrid provides the flexibility to pass additional context information during events. This feature is particularly helpful for modifying Grid data based on other component events, enabling dynamic updates in the Grid.
+The Syncfusion Blazor DataGrid offers flexibility to pass additional context information during events. This capability is especially useful for dynamically updating Grid data based on interactions with other components, enabling seamless, real-time data modifications within the Grid.
 
-To achieve this, in the provided example, the ComboBox `ValueChange` event passes context data (the current row data) to the `ChangePayToCd` method. This method updates fields like **SupplierName**, **SupplierNameKana**, and **SupplierShortName** based on the selected value from the ComboBox.
+To implement this, follow these steps:
+
+   1. Place the [ComboBox](https://blazor.syncfusion.com/documentation/combobox/getting-started-with-web-app) inside the Grid's `GridEditSettings.Template` to customize the edit form.
+
+   2. Bind the ComboBox’s `ValueChange` event to a handler method.
+
+   3. The method receives two parameters:
+
+      * **args**: The event arguments containing the new `ComboBox` value and selected item.
+
+      * **Contextdata**: The current row data is referenced by the variable **Supplier**, which is cast from the template’s context object as **SuppliermBM**.
+
+    4. Within the event handler, you can update properties of the current row, such as **SupplierName**, **SupplierNameKana**, and **SupplierShortName**, based on the selected ComboBox value. The Grid is directly bound to the data object, so changes made to this object are immediately reflected in the Grid UI.
+
+The following example demonstrates this approach:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

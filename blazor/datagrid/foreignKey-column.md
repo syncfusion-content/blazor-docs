@@ -902,17 +902,17 @@ public class EmployeeDetails
 
 ## Edit template in foreign key column using remote data
 
-The Syncfusion Blazor DataGrid allows you to customize the edit template for foreign key columns when using remote data. By default, a [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) is used for editing foreign key column. Other editable components can be rendered using the EditTemplate feature of Grid. 
+The Syncfusion Blazor DataGrid allows you to customize the edit template for foreign key columns when using remote data. By default, a [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) is used for editing foreign key column. Other editable components can be rendered using the edit template feature of Grid. 
 
 This example demonstrates how to use an edit template in a foreign key column with remote data. In this case, an [AutoComplete](https://blazor.syncfusion.com/documentation/autocomplete/getting-started-with-web-app)  is rendered as the edit template for the **EmployeeID** foreign key column. You can use `SfDataManager` instead of the `DataSource` property to bind remote data. Follow the steps below to achieve this:
 
 **1. Create a Blazor web app**
 
-You can create a **Blazor Web App** named **URLAdaptor** using Visual Studio 2022, either via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). Make sure to configure the appropriate [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows).
+You can create a **Blazor Web App** named **EditTemplate** using Visual Studio 2022, either via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). Make sure to configure the appropriate [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows).
 
 **2. Install Syncfusion Blazor DataGrid, AutoComplete, and Themes NuGet Packages**
 
-To add the Blazor DataGrid and AutoComplete in the app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/), [Syncfusion.Blazor.DropDowns](https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns), and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
+To add the `Grid` and `AutoComplete` in the app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Grid](https://www.nuget.org/packages/Syncfusion.Blazor.Grid/), [Syncfusion.Blazor.DropDowns](https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns), and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
 If your Blazor Web App uses `WebAssembly` or `Auto` render modes, install the Syncfusion Blazor NuGet packages in the client project.
 
@@ -1067,8 +1067,8 @@ namespace EditTemplate.Models
 
 Create an API controller (aka, **GridController.cs and EmployeesController.cs**) file under **Controllers** folder that helps to establish data communication with the Grid.
 
-> * The **GetOrderData** method retrieves sample order data. Replace it with your custom logic to fetch data from a database or other sources.
-> * The **GetEmployeeDetails** method retrieves sample employee data. Replace it with your custom logic to fetch data from a database or other sources.
+  * The **GetOrderData** method retrieves sample order data. Replace it with your custom logic to fetch data from a database or other sources.
+  * The **GetEmployeeDetails** method retrieves sample employee data. Replace it with your custom logic to fetch data from a database or other sources.
 
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
@@ -1095,9 +1095,9 @@ namespace EditTemplate.Controllers
         }
 
         /// <summary>
-        /// Handles server-side data operations such as filtering, sorting, paging, and returns the processed data.
+        /// Handles server-side paging and returns the processed data.
         /// </summary>
-        /// <returns>Returns the data and total count in result and count format.</returns>
+        /// <returns>Returns the paged data and total record count in result and count format.</returns>
         [HttpPost]
         public object Post([FromBody] DataManagerRequest DataManagerRequest)
         {
@@ -1111,12 +1111,12 @@ namespace EditTemplate.Controllers
             if (DataManagerRequest.Skip != 0)
             {
                 DataSource = DataOperations.PerformSkip(DataSource, DataManagerRequest.Skip);
-                //Add custom logic here if needed and remove above method
+                //Add custom logic here if needed and remove above method.
             }
             if (DataManagerRequest.Take != 0)
             {
                 DataSource = DataOperations.PerformTake(DataSource, DataManagerRequest.Take);
-                //Add custom logic here if needed and remove above method
+                //Add custom logic here if needed and remove above method.
             }
             // Get total records count.
             int totalRecordsCount = DataSource.Count();
@@ -1209,6 +1209,10 @@ namespace EditTemplate.Controllers
     [ApiController]
     public class EmployeesController : ControllerBase
     {
+        /// <summary>
+        /// Retrieves all employee data from the data source.
+        /// </summary>
+        /// <returns>Returns the full list of employee data.</returns>
         [HttpGet]
         [Route("api/[controller]")]
         public List<EmployeeData> GetEmployeeDetails()
@@ -1216,13 +1220,17 @@ namespace EditTemplate.Controllers
             var data = EmployeeData.GetAllRecords().ToList();
             return data;
         }
+
+        /// <summary>
+        /// Returns all employee data for the POST request.
+        /// </summary>
+        /// <returns>Returns the full employee data as an IQueryable collection.</returns>
         [HttpPost]
         [Route("api/[controller]")]
         public object Post([FromBody] DataManagerRequest DataManagerRequest)
         {
             // Retrieve data from the data source (e.g., database).
             IQueryable<EmployeeData> DataSource = GetEmployeeDetails().AsQueryable();
-
             return DataSource;
         }
     }
@@ -1231,9 +1239,9 @@ namespace EditTemplate.Controllers
 {% endhighlight %}
 {% endtabs %}
 
-**8. Add Blazor DataGrid, AutoComplete and configure with server**
+**8. Add Grid, AutoComplete and configure with server**
 
-To implement a Blazor DataGrid with an editable foreign key column using **AutoComplete** with remote data, add the following code to the **Home.razor** file:
+To implement a Grid with an editable foreign key column using **AutoComplete** with remote data, add the following code to the **Home.razor** file:
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -1277,7 +1285,6 @@ To implement a Blazor DataGrid with an editable foreign key column using **AutoC
         public int? EmployeeID { get; set; }
         public string? ShipCountry { get; set; }
         public string? ShipName { get; set; }
-
     }
 
     public class EmployeeData
@@ -1293,7 +1300,7 @@ To implement a Blazor DataGrid with an editable foreign key column using **AutoC
 
 **5. Run the application**
 
-When you run the application, the Blazor DataGrid  will display data fetched from the API.
+When you run the application, the Grid  will display data fetched from the API.
 
 ![Edit template in foreign key column using remote data](./images/edit-template.gif)
 
