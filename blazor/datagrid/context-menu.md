@@ -157,7 +157,7 @@ public class OrderData
 
 The Syncfusion Blazor DataGrid empowers you to enhance your user experience by incorporating custom context menu items into the default context menu. These customized options enable you to tailor the context menu to meet the unique requirements of your application.
 
-To incorporate custom context menu items in the Syncfusion Blazor DataGrid, you can achieve this by specifying the [ContextMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuItemModel.html) property as a collection of [ContextMenuItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuItemModel.html). This allows you to define and customize the appearance and behavior of these additional context menu items according to your requirements.
+To incorporate custom context menu items in the Grid, you can achieve this by specifying the [ContextMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuItemModel.html) property as a collection of [ContextMenuItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuItemModel.html). This allows you to define and customize the appearance and behavior of these additional context menu items according to your requirements.
 
 Furthermore, you can assign actions to these custom items by utilizing the [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuClickEventArgs-1.html) event. This event provides you with the means to handle user interactions with the custom context menu items, enabling you to execute specific actions or operations when these items are clicked. 
 
@@ -577,7 +577,7 @@ To achieve this, handle the [ContextMenuOpen](https://blazor.syncfusion.com/docu
 
 To enable or disable context menu items dynamically, follow the steps below:
 
-1. Handle the `ContextMenuOpen` event of the DataGrid and use the `Args.ContextMenuObj.Items` collection within the handler to access the context menu items.
+1. Handle the `ContextMenuOpen` event of the Grid and use the `Args.ContextMenuObj.Items` collection within the handler to access the context menu items.
 
 2. Set the `Disabled` property of the desired item(s) to `true` or `false` based on your logic.
 
@@ -676,7 +676,7 @@ public class OrderData
 
 ## Show or hide context menu 
 
-The Syncfusion Blazor DataGrid  provides the flexibility to show or hide both default and custom context menu items. This feature allows you to customize the context menu items based on various conditions or individuals interactions.
+The Syncfusion Blazor DataGrid provides the flexibility to show or hide both default and custom context menu items. This feature allows you to customize the context menu items based on various conditions or individuals interactions.
 
 This can be achieved using  the [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events#contextmenuopen) event. This event is triggered before the context menu is opened , allowing you to customize context menu items visibility dynamically.
 
