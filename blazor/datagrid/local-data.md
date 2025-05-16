@@ -1388,6 +1388,129 @@ The following screenshot represents the Grid with **Observable Collection**.
 
 N> While using an Observable collection, the added, removed, and changed records are reflected in the UI. But while updating the Observable collection using external actions like timers, events, and other notifications, you need to call the StateHasChanged method to reflect the changes in the UI.
 
+## Add a Range of Items into ObservableCollection in Blazor DataGrid
+
+The Syncfusion Blazor DataGrid supports binding to an ObservableCollection, which allows the Grid to automatically reflect changes made to the data source. This approach is particularly useful when you need to add a large batch of records to the Blazor DataGrid at once, such as:
+
+  * Loading or importing a large dataset dynamically.
+
+  *  Appending multiple items retrieved from an API or database.
+
+  * Performing bulk updates or data synchronization operations.
+
+  * Avoiding UI lag and flickering caused by multiple individual item additions.
+
+  * Ensuring smoother and more efficient data rendering in scenarios with high-frequency data changes.
+
+
+By default, the `Add` method is used to insert a single item into the **ObservableCollection**. When multiple items are added one by one using a `foreach` loop, the Grid refreshes after each addition. This can lead to performance issues and UI flickering, especially when adding a large number of items.
+
+To optimize performance when adding multiple items at once, you can extend the `ObservableCollection<T>` class by implementing an `AddRange` method. This method adds all items first and then raises a single notification to update the Grid only once, minimizing the overhead caused by multiple refreshes.
+
+To implement this functionality, follow these steps:
+
+1. **Create a Custom Collection Class**
+
+    Define a new class **SmartObservableCollection<T>** that inherits from `ObservableCollection<T>`. This allows you to customize the behavior of the collection.
+
+2. **Add a flag to control notifications**
+
+    Introduce a private boolean **flag _preventNotification** to temporarily disable collection change notifications while adding multiple items.
+
+3. **Override the OnCollectionChanged method**
+
+    Override this method to check the **_preventNotification** flag. When the flag is set to **true**, skip raising the notification to avoid multiple UI refreshes.
+
+4. **Implement the AddRange method**
+
+    This method enables adding multiple items efficiently by:
+
+      * Setting **_preventNotification** to **true** to suppress notifications.
+      * Adding each item from the input list to the collection using the `Add` method within a `foreach` loop.
+      * Resetting **_preventNotification** to **false**.
+      * Raising a single **NotifyCollectionChangedAction.Reset** notification to inform the Grid that the entire collection has changed.
+
+The following example demonstrates how to use this approach in a Grid:  
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
+@using System.Collections.ObjectModel
+@using System.Collections.Specialized
+
+<div style="padding-bottom:20px">
+    <SfButton OnClick="AddRangeItems">Add Range of Items</SfButton>
+</div>
+<SfGrid @ref="Grid" DataSource="@GridData" AllowPaging="true">
+    <GridColumns>
+        <GridColumn Field=@nameof(OrdersDetailsObserveData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrdersDetailsObserveData.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrdersDetailsObserveData.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrdersDetailsObserveData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+@code {
+    SfGrid<OrdersDetailsObserveData> Grid;
+    public SmartObservableCollection<OrdersDetailsObserveData> GridData = new SmartObservableCollection<OrdersDetailsObserveData>();
+    public void AddRangeItems()
+    {
+        GridData.AddRange(OrdersDetailsObserveData.GetAllRecords());
+    }
+
+    public class SmartObservableCollection<T> : ObservableCollection<T>
+    {
+        private bool _preventNotification = false;
+        protected override void OnCollectionChanged(NotifyCollectionChangedEventArgs e)
+        {
+            if (!_preventNotification)
+                base.OnCollectionChanged(e);
+        }
+        public void AddRange(IEnumerable<T> list)
+        {
+            _preventNotification = true;
+            foreach (T item in list)
+                Add(item);
+            _preventNotification = false;
+            OnCollectionChanged(new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Reset));
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% highlight cs tabtitle="OrdersDetailsObserveData.cs" %}
+
+namespace BlazorApp1.Data
+{
+    public class OrdersDetailsObserveData
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+
+        public static IEnumerable<OrdersDetailsObserveData> GetAllRecords()
+        {
+            return Enumerable.Range(1, 10).Select(x => new OrdersDetailsObserveData
+            {
+                OrderID = 1000 + x,
+                CustomerID = (new[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+                Freight = Math.Round(2.1 * x, 2),
+                OrderDate = DateTime.Now.AddDays(-x)
+            }).ToList();
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+The following screenshot represents the Grid with **Observable Collection**.
+
+![Blazor DataGrid with ObservableCollection](./images/Observable-collection-range.gif)
+
 ## See also
 
 * [How to import data from Excel sheet and bind to Blazor Grid](https://support.syncfusion.com/kb/article/11560/how-to-import-data-from-excel-sheet-and-bind-to-blazor-grid)
