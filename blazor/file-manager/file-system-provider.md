@@ -21,3 +21,5 @@ The following file providers are added in Syncfusion<sup style="font-size:70%">&
 * [SQL database file system provider](https://blazor.syncfusion.com/documentation/file-manager/SQL-database-file-system-provider)
 * [Google Drive file system provider](https://blazor.syncfusion.com/documentation/file-manager/Google-Drive-file-system-provider)
 * [Firebase Real time Database file system provider](https://blazor.syncfusion.com/documentation/file-manager/Firebase-Real-time-Database-file-system-provider)
+
+N> The **ApiController** attribute is not required when working with our file service providers. However, enabling this attribute may lead to unexpected issues in functionalities such as **GetImage** and **Upload**, as well as problems with image preview visibility and the overall success of file uploads.
