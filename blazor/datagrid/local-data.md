@@ -89,7 +89,6 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BthSXpBAUaAyeguK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-
 ## List binding
 
 The Syncfusion Blazor DataGrid supports binding data from a list of objects (e.g., a List&lt;T&gt; or IEnumerable&lt;T&gt; collection). This is the most common approach when working with in-memory data in Blazor applications.
