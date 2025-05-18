@@ -992,16 +992,15 @@ public class EmployeeDetails
 
 > You can find the fully working sample [here](https://github.com/SyncfusionExamples/blazor-datagrid-prevent-query-generation-for-foriegnkey-column).
 
-
 ## Edit template in foreign key column using remote data
 
-The Syncfusion Blazor DataGrid allows you to customize the edit template for foreign key columns when using remote data. By default, a [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) is used for editing foreign key column. Other editable components can be rendered using the edit template feature of Grid. 
+The Syncfusion Blazor DataGrid allows you to customize the edit template for foreign key columns when using remote data. By default, a [SfDropdownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) is used for editing foreign key column. Other editable components can be rendered using the edit template feature of Grid. 
 
-This example demonstrates how to use an edit template in a foreign key column with remote data. In this case, an [AutoComplete](https://blazor.syncfusion.com/documentation/autocomplete/getting-started-with-web-app)  is rendered as the edit template for the **EmployeeID** foreign key column. You can use `SfDataManager` instead of the `DataSource` property to bind remote data. Follow the steps below to achieve this:
+This example demonstrates how to use an edit template in a foreign key column with remote data. In this case, an [SfAutoComplete](https://blazor.syncfusion.com/documentation/autocomplete/getting-started-with-web-app)  is rendered as the edit template for the **EmployeeID** foreign key column. You can use `SfDataManager` instead of the `DataSource` property to bind remote data. Follow the steps below to achieve this:
 
 **1. Create a Blazor web app**
 
-You can create a **Blazor Web App** named **EditTemplate** using Visual Studio 2022, either via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). Make sure to configure the appropriate [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows).
+You can create a **Blazor Web App** named **EditTemplate** using Visual Studio 2022, either via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio). Make sure to configure the appropriate [interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows).
 
 **2. Install Syncfusion Blazor DataGrid, AutoComplete, and Themes NuGet Packages**
 
@@ -1200,7 +1199,7 @@ namespace EditTemplate.Controllers
             // Get the total records count.
             int totalRecordsCount = DataSource.Count();
 
-            // Handling Paging in UrlAdaptor.
+            // Handling paging in UrlAdaptor.
             if (DataManagerRequest.Skip != 0)
             {
                 DataSource = DataOperations.PerformSkip(DataSource, DataManagerRequest.Skip);

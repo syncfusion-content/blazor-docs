@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor DataGrid in Server Side | Syncfusion
-description: Checkout the documentation for getting started with Syncfusion Blazor DataGrid Component in Visual Side using .NET CLI and much more.
+title: Foreign key column in Blazor DataGrid Component | Syncfusion
+description: Checkout and learn here all about Foreign key column in the Syncfusion Blazor DataGrid component and much more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -98,7 +98,7 @@ The following example demonstrates this approach:
     public SfComboBox<string, Supplierm> comboPayToObj { get; set; }
     public SfGrid<SuppliermBM> Grid { get; set; }
 
-    // Sample data for payments and suppliers
+    // Sample data for payments and suppliers.
     public List<Supplierm> Payments = new List<Supplierm>
     {
         new Supplierm { SupplierCd = "Supplier01", SupplierName = "Supplier01" },
