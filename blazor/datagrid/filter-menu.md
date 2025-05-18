@@ -97,7 +97,7 @@ public class OrderData
 
 ## Custom component in filter menu
 
-You can enhance the filtering experience in the Syncfusion Blazor DataGrid by customizing the filter menu with custom components. This allows you to replace the default search box with custom components like dropdowns or textboxes. By default, the filter menu provides an `Autocomplete` for string type columns, a [NumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started) for number type columns, and a `DropDownList` for boolean type columns, making it easy to search for values.
+You can enhance the filtering experience in the Syncfusion Blazor DataGrid by customizing the filter menu with custom components. This allows you to replace the default search box with custom components like dropdowns or textboxes. By default, the filter menu provides an [Autocomplete](https://blazor.syncfusion.com/documentation/autocomplete/getting-started-with-web-app) for string type columns, a [NumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started) for number type columns, and a [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started) for boolean type columns, making it easy to search for values.
 
 To customize the filter menu, you can make use the [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property. This property allows you to integrate your desired custom filter component into a specific column of the Grid. To implement a custom filter UI, you need to define the following functions:
 
