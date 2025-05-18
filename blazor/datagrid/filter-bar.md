@@ -521,7 +521,7 @@ public class OrderData
 
 ## Filter bar template with custom component
 
-The [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) feature in the Syncfusion Blazor DataGrid allows you to customize the components displayed in the filter bar. Normally, a text box is the default element rendered in the filter bar cell. This flexibility allows you to use various components, such as datepicker, numerictextbox, combobox, and multiselect, within the filter bar based on your specific requirements.
+The [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_FilterTemplate) feature in the Syncfusion Blazor DataGrid allows you to customize the components displayed in the filter bar. Normally, a text box is the default element rendered in the filter bar cell. This flexibility allows you to use various components, such as [DatePicker](https://blazor.syncfusion.com/documentation/datepicker/getting-started), [NumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started), [ComboBox](https://blazor.syncfusion.com/documentation/combobox/getting-started-with-web-app), and [MultiSelect Dropdown](https://blazor.syncfusion.com/documentation/multiselect-dropdown/getting-started-webapp), within the filter bar based on your specific requirements.
 
 To utilize this feature, you can define a custom template for the filter bar by setting the `FilterTemplate` property  of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) in your Blazor application:
 

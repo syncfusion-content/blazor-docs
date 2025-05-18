@@ -941,7 +941,7 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rtLTXCAsUitWDKfU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Filter DataGrid programmatically with single and multiple values using method
+## Filter Blazor DataGrid programmatically with single and multiple values using method
 
 Programmatic filtering in the Syncfusion Blazor DataGrid with single and multiple values allows you to apply filters to specific columns in the Grid without relying on interactions through the interface.
 
