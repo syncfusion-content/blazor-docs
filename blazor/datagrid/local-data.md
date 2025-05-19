@@ -9,7 +9,7 @@ documentation: ug
 
 # Local data in Blazor DataGrid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid offers a straightforward way to bind local data, such as arrays or JSON objects, to the Grid. This feature allows you to display and manipulate data within the Grid without the need for external server calls, making it particularly useful for scenarios where you're working with static or locally stored data.
+The Syncfusion Blazor DataGrid offers a straightforward way to bind local data, such as arrays or JSON objects, to the Grid. This feature allows you to display and manipulate data within the Grid without the need for external server calls, making it particularly useful for scenarios where you're working with static or locally stored data.
 
 To achieve this, you can assign a JavaScript object array to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property. Additionally, you have an option to provide the local data source using an instance of the **DataManager**.
 
@@ -91,9 +91,9 @@ public class OrderDetails
 
 ## Data binding with SignalR 
 
-The syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid provides support for real-time data binding using SignalR, allowing you to update the grid automatically as data changes on the server-side. This feature is particularly useful for applications requiring live updates and synchronization across multiple clients.
+The Syncfusion Blazor DataGrid provides support for real-time data binding using SignalR, allowing you to update the Grid automatically as data changes on the server-side. This feature is particularly useful for applications requiring live updates and synchronization across multiple clients.
 
-To achieve real-time data binding with SignalR in your Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, follow the steps below:
+To achieve real-time data binding with SignalR in your Syncfusion Blazor DataGrid, follow the steps below:
 
 **Step 1:** Install the SignalR server package:
 
@@ -136,7 +136,7 @@ app.Run();
 
 ```
 
-**Step 4:** Create a simple Grid by following the [Getting Started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation link.
+**Step 4:** Create a simple Syncfusion Blazor DataGrid by following the [Getting Started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation link.
 
 **Step 5:** Create a **Data** folder and add Data Controller (**OrderDetails.cs**) in your project to handle CRUD operations for the Grid: 
 
@@ -179,15 +179,7 @@ namespace SignalRDataGrid.Data
             }
 
             return Task.FromResult(OrderList);
-        }
-
-        public Task<OrderDetails> UpdateAsync(OrderDetails model)
-        {
-            var ord = OrderList.Where(x => x.OrderID == model.OrderID).FirstOrDefault();
-            ord.CustomerID = model.CustomerID;
-            ord.ShipName = model.ShipName;
-            return Task.FromResult(model);
-        }
+        }        
 
         public List<OrderDetails> DeleteAsync(OrderDetails model)
         {
@@ -201,7 +193,7 @@ namespace SignalRDataGrid.Data
 {% endhighlight %}
 {% endtabs %}
 
-**Step 5:** In your **Home.razor** file, establish a connection to the SignalR hub and configure the grid data.
+**Step 5:** In your **Home.razor** file, establish a connection to the SignalR hub and configure the Grid data.
 
 {% tabs %}
 {% highlight razor tabtitle="Home.razor" %}
@@ -213,7 +205,7 @@ namespace SignalRDataGrid.Data
 @inject OrderDetails OrderService
 @implements IAsyncDisposable
 
-<SfGrid @ref="Grid" DataSource="@OrderData" AllowSorting="true" AllowFiltering="true" EnablePersistence="true" ID="GridDemo" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel", "Search" })">
+<SfGrid @ref="Grid" DataSource="@OrderData" AllowSorting="true" AllowFiltering="true" ID="GridDemo" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel", "Search" })">
     <GridEvents OnActionComplete="ActionComplete" TValue="OrderDetails"></GridEvents>
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
     <GridColumns>
@@ -229,16 +221,24 @@ namespace SignalRDataGrid.Data
     public List<OrderDetails> OrderData = new List<OrderDetails>();
     protected override async Task OnInitializedAsync()
     {
+        // Initialize SignalR connection.
         hubConnection = new HubConnectionBuilder()
         .WithUrl(NavigationManager.ToAbsoluteUri("/chathub"))
         .Build();
+
+        // Set up a handler for receiving messages from the hub.
         hubConnection.On("ReceiveMessage", () =>
         {
+            // Refresh grid on receiving a message
             CallLoadData();
         });
+
+        // Start SignalR connection.
         await hubConnection.StartAsync();
         await LoadData();
     }
+
+    // Handles CRUD (Create, Read, Update, and Delete) operations.
     public async Task ActionComplete(ActionEventArgs<OrderDetails> Args)
     {
         if (Args.RequestType == Syncfusion.Blazor.Grids.Action.Save)
@@ -260,11 +260,15 @@ namespace SignalRDataGrid.Data
     {
         OrderData = await OrderDetails.GetOrdersAsync();
     }
+
+    // Send a message to SignalR hub to notify other clients.
     async Task Send() =>
         await hubConnection.SendAsync("SendMessage");
 
+        // Property to check SignalR connection state
         public bool IsConnected => hubConnection.State == HubConnectionState.Connected;
 
+        // Dispose the SignalR connection properly when component is disposed
         public async ValueTask DisposeAsync()
         {
             if (hubConnection is not null)
@@ -277,7 +281,7 @@ namespace SignalRDataGrid.Data
 {% endhighlight %}
 {% endtabs %}
 
-This code demonstrates how to connect to a SignalR hub and refresh the Grid data in real time when updates are received.
+The above code demonstrates how to connect to a SignalR hub and refresh the Grid data in real time when updates are received.
 
 **Step 6:** Adding the `OrderService` reference:
 
