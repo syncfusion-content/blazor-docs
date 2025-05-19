@@ -447,3 +447,357 @@ This CSS selector targets the work cells representing days that belong to adjace
 ```
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htrINyszfvZfowQQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Other month work cells in month agenda view](images/blazor-scheduler-monthagenda-othermonth-workcells.png)" %}
+
+
+# Work Cells of Other Month in Year View of Scheduler
+
+This CSS selector targets the work cells representing days from adjacent months (previous or next month) that are visible in the year view of the Syncfusion Scheduler.
+
+```cshtml
+@using Syncfusion.Blazor.Schedule
+<div class="component-container">
+    <SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
+        <ScheduleViews>
+            <ScheduleView Option="View.Year"></ScheduleView>
+        </ScheduleViews>
+    </SfSchedule>
+</div>
+
+@code{
+    DateTime CurrentDate = new DateTime(2020, 2, 14);
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+    }
+} 
+<style>
+    .e-schedule .e-year-view .e-work-cells.e-other-month
+    {
+        background-color: rgba(230, 230, 250, 0.7);
+        color: #999999;
+    }
+</style>
+
+```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BXBeNIMOzziiJCIN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Other month work cells in Year view](images/blazor-scheduler-yearview-othermonth-workcells.png)" %}
+
+
+# All Day Cells in Vertical Views of Scheduler
+
+This CSS selector targets the all-day cells in the vertical views (Day, Week, and WorkWeek) of the Syncfusion Scheduler component. These cells represent the time slots designated for all-day events, providing users with a straightforward way to visualize and manage significant appointments.
+
+```cshtml
+@using Syncfusion.Blazor.Schedule
+<div class="component-container">
+    <SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
+        <ScheduleViews>
+            <ScheduleView Option="View.Day"></ScheduleView>
+            <ScheduleView Option="View.Week"></ScheduleView>
+            <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        </ScheduleViews>
+    </SfSchedule>
+</div>
+
+@code{
+    DateTime CurrentDate = new DateTime(2020, 2, 14);
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+    }
+} 
+<style>
+    .e-schedule .e-vertical-view .e-date-header-wrap .e-all-day-cells
+    {
+        background-color: #f8c8c8;
+        border: 1px solid #f8c8c8;
+    }
+</style>
+
+```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNByDoMYpJcFHjMv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[All-Day cells in vertical view](images/blazor-scheduler-Alldaycells-verticalview.png)" %}
+
+
+# Work Hour Cells in Vertical Views of Scheduler
+
+This CSS selector targets the work hour cells in vertical views (Day, Week, WorkWeek) of the Syncfusion Scheduler. These cells show the working hours where users can add appointments, making it easier to see available time slots.
+
+```cshtml
+@using Syncfusion.Blazor.Schedule
+<div class="component-container">
+    <SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
+        <ScheduleViews>
+            <ScheduleView Option="View.Day"></ScheduleView>
+            <ScheduleView Option="View.Week"></ScheduleView>
+            <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        </ScheduleViews>
+    </SfSchedule>
+</div>
+
+@code{
+    DateTime CurrentDate = new DateTime(2020, 2, 14);
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+    }
+} 
+<style>
+    .e-schedule .e-vertical-view .e-work-hours
+    {
+        background-color: #d1eaf8;
+        border: 1px solid #b2d3f7;
+    }
+</style>
+
+```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtrSDeiOfoMsMoZt?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Work hour cells in vertical view](images/blazor-scheduler-work-hour-cells-verticalview.png)" %}
+
+
+# Work Day Cells in Month View of Scheduler
+
+This CSS selector targets the work day cells in the month view of the Syncfusion Scheduler. These cells show the days meant for scheduling work, helping users easily see which days are available for appointments.
+
+```cshtml
+
+@using Syncfusion.Blazor.Schedule
+<div class="component-container">
+    <SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
+        <ScheduleViews>
+            <ScheduleView Option="View.Month"></ScheduleView>
+        </ScheduleViews>
+    </SfSchedule>
+</div>
+
+@code{
+    DateTime CurrentDate = new DateTime(2020, 2, 14);
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+    }
+} 
+<style>
+    .e-schedule .e-month-view .e-work-days
+    {
+        background-color:rgb(168, 167, 205);
+        border: 1px solidrgb(39, 143, 191);
+    }
+</style>
+
+```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVStIiapeGmfItK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Work day cells in month view](images/blazor-scheduler-work-Day-cells-monthview.png)" %}
+
+
+# Work Day Cells in Month Agenda View of Scheduler
+
+This CSS selector targets the work day cells that represent the days in the month agenda view of the Syncfusion Scheduler. These cells show the specific days within the scheduled month where users can place appointments.
+
+```cshtml
+
+@using Syncfusion.Blazor.Schedule
+<div class="component-container">
+    <SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
+        <ScheduleViews>
+            <ScheduleView Option="View.MonthAgenda"></ScheduleView>
+        </ScheduleViews>
+    </SfSchedule>
+</div>
+
+@code{
+    DateTime CurrentDate = new DateTime(2020, 2, 14);
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+    }
+} 
+<style>
+    .e-schedule .e-month-agenda-view .e-work-days
+    {
+        background-color: #e2f7e2;
+        border: 1px solid #c9e1c9;
+    }
+</style>
+
+```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNVStIiapeGmfItK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Work day cells in month agenda view](images/blazor-scheduler-work-day-cells-monthagenda-view.png)" %}
+
+
+# Work Hour Cells in Timeline Views of Scheduler
+
+This CSS selector targets the work hour cells in the timeline views (TimelineDay, TimelineWeek) of the Syncfusion Scheduler. These cells represent the slots of time designated for work hours, providing users with a visual indication of when appointments can be scheduled.
+
+```cshtml
+
+@using Syncfusion.Blazor.Schedule
+<div class="component-container">
+    <SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
+        <ScheduleViews>
+            <ScheduleView Option="View.TimelineDay"></ScheduleView>
+            <ScheduleView Option="View.TimelineWeek"></ScheduleView>
+        </ScheduleViews>
+    </SfSchedule>
+</div>
+
+@code{
+    DateTime CurrentDate = new DateTime(2020, 2, 14);
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+    }
+} 
+<style>
+    .e-schedule .e-timeline-view .e-work-hours
+    {
+        background-color: #d1eaf8;
+        border: 1px solid #b2d3f7;
+    }
+</style>
+
+```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBIXyCYpxaMcIgD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Work hour cells in timeline view](images/blazor-scheduler-work-hour-cells-timeline-view.png)" %}
+
+
+# Work Day Cells in Timeline Month View of Scheduler
+
+This CSS selector targets the work day cells in the timeline month view of the Syncfusion Scheduler. These cells represent the specific days designated as working days for the month timeline, allowing users to visualize their tasks and appointments within those time frames.
+
+```cshtml
+
+@using Syncfusion.Blazor.Schedule
+<div class="component-container">
+    <SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
+        <ScheduleViews>
+            <ScheduleView Option="View.TimelineMonth"></ScheduleView>
+        </ScheduleViews>
+    </SfSchedule>
+</div>
+
+@code{
+    DateTime CurrentDate = new DateTime(2020, 2, 14);
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+    }
+} 
+<style>
+    .e-schedule .e-timeline-month-view .e-work-days
+    {
+        background-color:rgb(204, 165, 198);
+        border: 1px solid #a1d95a;
+    }
+</style>
+
+```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rthIXICaJwbDIMPr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Work day cells in timeline month view](images/blazor-scheduler-work-day-cells-timeline-monthview.png)" %}
+
+
+# Work Day Cells in Timeline Year View of Scheduler
+
+This CSS selector targets the work day cells in the timeline year view of the Syncfusion Scheduler. These cells highlight the working days throughout the entire year, giving users a comprehensive overview of their yearly schedule and enabling easier appointment management.
+
+```cshtml
+
+@using Syncfusion.Blazor.Schedule
+<div class="component-container">
+    <SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
+        <ScheduleViews>
+            <ScheduleView Option="View.TimelineYear"></ScheduleView>
+        </ScheduleViews>
+    </SfSchedule>
+</div>
+
+@code{
+    DateTime CurrentDate = new DateTime(2020, 2, 14);
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+    }
+} 
+<style>
+    .e-schedule .e-timeline-year-view .e-work-days
+    {
+        background-color:rgb(104, 177, 211);
+        border: 1px solid #81d4fa;
+    }
+</style>
+
+```
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtLytSsaTviyMXFM?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Work day cells in timeline year view](images/blazor-scheduler-work-day-cells-timeline-yearview.png)" %}
