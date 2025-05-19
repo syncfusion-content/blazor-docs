@@ -1202,7 +1202,13 @@ namespace SignalRDataGrid.Data
 
             return Task.FromResult(OrderList);
         }        
-
+        public Task<OrderDetails> UpdateAsync(OrderDetails model)
+        {
+            var ord = OrderList.Where(x => x.OrderID == model.OrderID).FirstOrDefault();
+            ord.CustomerID = model.CustomerID;
+            ord.ShipName = model.ShipName;
+            return Task.FromResult(model);
+        }
         public List<OrderDetails> DeleteAsync(OrderDetails model)
         {
             var ord = OrderList.Remove(model);
@@ -1251,7 +1257,7 @@ namespace SignalRDataGrid.Data
         // Set up a handler for receiving messages from the hub.
         hubConnection.On("ReceiveMessage", () =>
         {
-            // Refresh grid on receiving a message
+            // Refresh grid on receiving a message.
             CallLoadData();
         });
 
@@ -1287,10 +1293,10 @@ namespace SignalRDataGrid.Data
     async Task Send() =>
         await hubConnection.SendAsync("SendMessage");
 
-        // Property to check SignalR connection state
+        // Property to check SignalR connection state.
         public bool IsConnected => hubConnection.State == HubConnectionState.Connected;
 
-        // Dispose the SignalR connection properly when component is disposed
+        // Dispose the SignalR connection properly when component is disposed.
         public async ValueTask DisposeAsync()
         {
             if (hubConnection is not null)
