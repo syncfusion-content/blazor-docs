@@ -15,9 +15,7 @@ To define events programmatically:
 
 * Set a reference to the Grid using the `@ref` directive.
 * After the Grid is rendered, assign the `GridEvents` property within the `OnAfterRenderAsync` lifecycle method.
-* Use the `EventCallbackFactory` to create event handlers, ensuring they are correctly bound to the component context.
-
-The following example demonstrates how to configure the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event programmatically to prevent editing a record when the **ShipCountry** field value is **Germany**. 
+* Use the `EventCallbackFactory` to create event handlers, ensuring they are correctly bound to the component context. 
 
 The following example demonstrates how to configure the [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound) event programmatically to perform custom logic after the Grid's data has been populated:
 

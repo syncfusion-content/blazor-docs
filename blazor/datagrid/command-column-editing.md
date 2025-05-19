@@ -210,14 +210,12 @@ public class OrderDetails
 
 In the Syncfusion Blazor DataGrid, command columns are used to perform CRUD operations on records, such as editing or deleting. Sometimes, you may want to hide the command buttons for specific records based on certain conditions. This can be done by using the [`RowDataBound`](https://blazor.syncfusion.com/documentation/datagrid/events#rowdatabound) event, which is triggered every time a row is created or updated in the Grid.
 
-This is demonstrated in the following sample code where the `RowDataBound` event is triggered when a record is created. Based on the record details, you can add a specific class name to that row and hide the command buttons using CSS styles.
-
-Procedure:
+This is demonstrated in the following steps where the `RowDataBound` event is triggered when a record is created. Based on the record details, you can add a specific class name to that row and hide the command buttons using CSS styles.
 
 * Use the `RowDataBound` event of the Grid to access each row's data at the time of rendering.
 * Inside the event, check the value of the **Verified** column for the current record.
-* Based on the value of the Verified column, if Verified is **false**, only the **Edit** button will be shown; if Verified is **true**, only the **Delete** button will be shown.
-* In order to hide buttons (**display: none** style to the buttons), a CSS class is applied to the row inside the `RowDataBound` event based on the record condition, and corresponding CSS rules are defined to hide the respective command buttons.
+* Based on the value of the **Verified** column, if Verified is **false**, only the **Edit** button will be shown; otherwise **Delete** button will be shown.
+* In order to hide buttons (**display: none** style to the buttons), CSS class is applied to the row inside the `RowDataBound` event based on the record condition using `addClass` method, and corresponding CSS rules are defined to hide the respective command buttons.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

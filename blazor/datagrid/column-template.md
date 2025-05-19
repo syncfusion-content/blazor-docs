@@ -737,7 +737,7 @@ In the following code, checkbox is rendered based on **Discontinued** field valu
 
 ### Calculate column value based on other columns in Blazor DataGrid
 
-In the Syncfusion Blazor DataGrid, it is often necessary to display a value that is not directly available in the underlying data source but is instead derived from existing column values. For example, in financial or inventory applications, users may want to show a total or calculated value such as the sum of two cost fields in a separate column. This can be done using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property of the [GridColumn](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html).
+In the Syncfusion Blazor DataGrid, it is often necessary to display a value that is not directly available in the underlying data source but is instead derived from existing column values. For example, in financial or inventory applications, users may want to show a total or calculated value such as the sum of two cost fields in a separate column. This can be done using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property.
 
 The `Template` allows customizing how a column's content is rendered, and it provides access to the current row's data through the **context** parameter. This makes it possible to define inline expressions or logic that compute values based on other fields in the same row.
 

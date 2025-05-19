@@ -580,17 +580,17 @@ In the following sample, the **Collapse All** Toolbar item is positioned on the 
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LXhKMNXKhRPOCyLS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Customize the text name of custom toolbar items with same as default Toolbar Items
+## Customize the text name of custom Toolbar Items with same as default Toolbar Items
 
-When creating custom toolbar items in the Syncfusion Blazor DataGrid using the same text as default toolbar items (such as "Add", "Edit", or "Delete"), the Grid treats them as default items. This may result in unexpected behavior—such as the toolbar buttons becoming disabled during certain grid states.
+When creating custom toolbar items in the Syncfusion Blazor DataGrid using the same text as default toolbar items (such as "Add", "Edit", or "Delete"), the Grid treats them as default items. This may result in unexpected behavior—such as the toolbar buttons becoming disabled during certain Grid states.
 
-To avoid this issue and ensure proper functionality:
+To avoid this behavior and ensure proper functionality:
 
 * Assign a unique **Id** to each custom toolbar item to distinguish them from default toolbar items.
-* Use the Text, PrefixIcon, and TooltipText properties of the [ItemModel]([ItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ItemModel.html#Syncfusion_Blazor_Navigations_ItemModel__ctor)) to define the button appearance.
+* Use the `Text`, `PrefixIcon`, and `TooltipText` properties of the [ItemModel]([ItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ItemModel.html#Syncfusion_Blazor_Navigations_ItemModel__ctor)) to define the button appearance.
 * Handle actions using the `OnToolbarClick` event based on the Id or Text.
 
-Custom toolbar item text can be customized using `ItemModel` properties. Assigning an Id ensures the item does not inherit the default behavior of built-in toolbar items.
+This is demonstrated in the following sample code where there are custom toolbar items with text same as Add and Delete buttons. These toolbar buttons will be enabled only when `GridEditSettings` is defined in Grid. So custom toolbar will be disabled state considering it as default toolbar item.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Saving a new row at a particular index of the Blazor DataGrid
+# Saving a new row at a particular index in Blazor DataGrid
 
 By default, when a new row is added to the Syncfusion Blazor DataGrid, it is inserted and saved at the top of the Grid’s data source. However, certain use cases may require saving the newly added row at a different position—for example, at the end of the current page or a custom index based on business logic.
 
