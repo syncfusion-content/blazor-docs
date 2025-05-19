@@ -294,15 +294,15 @@ By enabling the [EnableHighlight](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 <SfChart Title="Unemployment Rates 1975-2010">
     <ChartSeriesCollection>
-        <ChartSeries DataSource="StepChartValues" Type="ChartSeriesType.StepLine" XName="Year" YName="Y" Name="China">
+        <ChartSeries DataSource="StepChartValues" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StepLine" XName="Year" YName="Y" Name="China">
             <ChartMarker Visible="true" Width="10" Height="10">
             </ChartMarker>
         </ChartSeries>
-        <ChartSeries DataSource="StepChartValues" Type="ChartSeriesType.StepLine" XName="Year" YName="Y1" Name="Australia">
+        <ChartSeries DataSource="StepChartValues" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StepLine" XName="Year" YName="Y1" Name="Australia">
             <ChartMarker Visible="true" Width="10" Height="10">
             </ChartMarker>
         </ChartSeries>
-        <ChartSeries DataSource="StepChartValues" Type="ChartSeriesType.StepLine" XName="Year" YName="Y2" Name="Japan">
+        <ChartSeries DataSource="StepChartValues" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StepLine" XName="Year" YName="Y2" Name="Japan">
             <ChartMarker Visible="true" Width="10" Height="10">
             </ChartMarker>
         </ChartSeries>
@@ -336,6 +336,7 @@ By enabling the [EnableHighlight](https://help.syncfusion.com/cr/blazor/Syncfusi
 ```
 
 ![Blazor Chart tooltip with highlight series](images/tooltip/blazor-tooltip-enable-highlight.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BZretJjTJXQadkbO?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 ## Displaying tooltip for nearest data point
 
@@ -349,15 +350,15 @@ N> By default, `ShowNearestTooltip` property in [ChartSeries](https://help.syncf
 
 <SfChart Title="Unemployment Rates 1975-2010">
     <ChartSeriesCollection>
-        <ChartSeries DataSource="StepChartValues" Type="ChartSeriesType.StepLine" XName="Year" YName="Y" Name="China">
+        <ChartSeries DataSource="StepChartValues" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StepLine" XName="Year" YName="Y" Name="China">
             <ChartMarker Visible="true" Width="10" Height="10">
             </ChartMarker>
         </ChartSeries>
-        <ChartSeries DataSource="StepChartValues" Type="ChartSeriesType.StepLine" XName="Year" YName="Y1" Name="Australia" ShowNearestTooltip="false">
+        <ChartSeries DataSource="StepChartValues" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StepLine" XName="Year" YName="Y1" Name="Australia" ShowNearestTooltip="false">
             <ChartMarker Visible="true" Width="10" Height="10">
             </ChartMarker>
         </ChartSeries>
-        <ChartSeries DataSource="StepChartValues" Type="ChartSeriesType.StepLine" XName="Year" YName="Y2" Name="Japan">
+        <ChartSeries DataSource="StepChartValues" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StepLine" XName="Year" YName="Y2" Name="Japan">
             <ChartMarker Visible="true" Width="10" Height="10">
             </ChartMarker>
         </ChartSeries>
@@ -391,6 +392,7 @@ N> By default, `ShowNearestTooltip` property in [ChartSeries](https://help.syncf
 ```
 
 ![Blazor Chart shows nearest tooltip](images/tooltip/blazor-chart-nearest-tooltip.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtBoZJtzTMXtrCZt?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
