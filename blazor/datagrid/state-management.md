@@ -35,10 +35,6 @@ When enabling state persistence, the following Grid settings will persist in the
 
 The Grid will persist only the last selected row index.
 
-## Enabling persistence in Grid
-
-State persistence allows the Syncfusion Blazor DataGrid to retain the current Grid state in the browser local storage for state maintenance. This action is handled through the [EnablePersistence](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnablePersistence) property which is set to false by default. When it is set to true, some properties of the Grid will be retained even after refreshing the page.
-
 N> The state will be persisted based on **ID** property. So, it is recommended to explicitly set the **ID** property for Grid.
 
 The following example demonstrates how to enabling persistence in Grid:
@@ -125,11 +121,13 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VNByDfrqqfeXQzlJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Restore initial Grid state
+## Restore initial Blazor DataGrid state
 
 In the Syncfusion Blazor DataGrid, you have the capability to restore the Grid to its initial state, reverting all changes and configurations made during the interaction. This feature can be particularly useful when you want to reset the Grid to its original settings, eliminating any applied filters, sorting, or column reordering.
 
-Here are the steps to reset the Grid to its initial state, even when the [EnablePersistence](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnablePersistence) property is enabled:
+### Using method
+
+Here are the steps to reset the Syncfusion Blazor DataGrid to its initial state, even when the [EnablePersistence](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnablePersistence) property is enabled:
 
 You can use [ResetPersistData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ResetPersistData) method to reset Grid state to its original state. This will clear persisted data in window local storage and renders Grid with its original property values.
 
@@ -310,7 +308,11 @@ In this sample, each version represents a unique saved Grid configuration (or st
 
 4. If no data is found, a new state will be stored the next time the Grid is modified.
 
-To implement version-based persistence in Grid, set **PersistenceKey** dynamically based on the selected version (e.g., gridOrderDetails_v.1), ensuring each version maintains a unique state in localStorage. The core logic for switching versions is handled in the `ChangeVersion` method. This method saves the current Grid state using [GetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetPersistDataAsync) before switching versions. It then attempts to load the state associated with the selected version using [SetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SetPersistDataAsync_System_String_). If a persisted state is available, it is applied to the Grid. otherwise, a message is displayed indicating that no saved state exists and a new state will be stored going forward.
+To implement version-based persistence in Grid, set **PersistenceKey** dynamically based on the selected version (e.g., gridOrderDetails_v.1), ensuring each version maintains a unique state in localStorage. The core logic for switching versions is handled in the `ChangeVersion` method.
+
+* This method saves the current Grid state using [GetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetPersistDataAsync) before switching versions. The `GetPersistDataAsync` method returns the Grid’s current state as a string, which is suitable for sending over a network or storing in databases.
+
+* It then attempts to load the state associated with the selected version using [SetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SetPersistDataAsync_System_String_). If a persisted state is available, it is applied to the Grid. Otherwise, a message is displayed indicating that no saved state exists and a new state will be stored going forward.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -427,7 +429,7 @@ public class OrderDetails
 
 The Syncfusion Blazor DataGrid allows you to save and restore its state using local storage. This feature is helpful when you want to preserve the current state of the Grid, such as column order, sorting, and filtering, so that you can return to your previous work or configurations.
 
-To implement this functionality, use the `getItem` and `setItem` methods for local storage, along with the Grid `setProperties` and [GetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetPersistDataAsync) methods.
+To implement this functionality, use the `getItem` and `setItem` methods for local storage, along with the Grid's [GetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetPersistDataAsync) and [SetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SetPersistDataAsync_System_String_) methods. The `GetPersistDataAsync` method retrieves the current Grid state as a string, which can be saved in local storage. The `SetPersistDataAsync` method restores the saved Grid state from local storage.
 
 The provided code demonstrates how to save and restore the previous state of a Grid using local storage.
 
@@ -551,7 +553,7 @@ public class OrderDetails
 
 ## Maintaining custom query in a persistent state
 
-When [EnablePersistence](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnablePersistence)  is enabled, the Grid does not automatically maintain custom query parameters after a page load. This is because the Grid refreshes its query params for every page load. You can maintain the custom query params by resetting the `AddParams` method in the [OnActionBegin](https://blazor.syncfusion.com/documentation/datagrid/events#onactionbegin) event.
+When [EnablePersistence](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnablePersistence)  is enabled, the Syncfusion Blazor DataGrid does not automatically maintain custom query parameters after a page load. This is because the Grid refreshes its query params for every page load. You can maintain the custom query params by resetting the `AddParams` method in the [OnActionBegin](https://blazor.syncfusion.com/documentation/datagrid/events#onactionbegin) event.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -627,7 +629,7 @@ public class OrderDetails
 
 ## Get or set local storage value
 
-If the [EnablePersistence](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnablePersistence) property is set to **true**, the Grid property value is saved in the **window.localStorage** for reference. You can get or set the localStorage value by using the **getItem** and **setItem** methods in **window.localStorage**.
+If the [EnablePersistence](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnablePersistence) property is set to **true**, the Syncfusion Blazor DataGrid property value is saved in the **window.localStorage** for reference. You can get or set the localStorage value by using the **getItem** and **setItem** methods in **window.localStorage**.
 
 To retrieve the Grid model from Local Storage, follow these steps:
 
@@ -642,7 +644,7 @@ await JS.InvokeVoidAsync("localStorage.setItem", localStorageKey, modelJson);
 ```
 ## Prevent columns from persisting
 
-In the Syncfusion Blazor DataGrid, you may sometimes want to prevent certain settings from being persisted when using the [EnablePersistence](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnablePersistence) feature. When the `EnablePersistence` property is set to **true**, the Grid properties such as [Grouping](https://ej2.syncfusion.com/angular/documentation/api/grid/groupSettings/), [Paging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings), [Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings), [Sorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SortSettings), and [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Columns) will persist. 
+In the Syncfusion Blazor DataGrid, you may sometimes want to prevent certain settings from being persisted when using the [EnablePersistence](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnablePersistence) feature. When the `EnablePersistence` property is set to **true**, the Grid properties such as [Grouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GroupSettings), [Paging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings), [Filtering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings), [Sorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SortSettings), and [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Columns) will persist. 
 
 The following example demonstrates how to prevent Grid columns from persisting:
 
@@ -752,99 +754,5 @@ public class OrderDetails
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BNBSZJLKLzxANPLC?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
-
-## Handling Grid state manually
-
-You can handle the Syncfusion Blazor DataGrid state manually by using in-built state persistence methods. You can use [GetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetPersistDataAsync), [SetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SetPersistDataAsync_System_String_), [ResetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ResetPersistDataAsync) methods of Grid to save, load and reset the Grid's persisted state manually. [GetPersistDataAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetPersistDataAsync) method will return Grid current state as a string value, which is suitable for sending them over network and storing in data bases.
-
-The following example demonstrates how to handling Grid state manually:
-
-{% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-
-@using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.Buttons
-
-<SfButton OnClick="@(async () => _state = await Grid.GetPersistDataAsync())">Save State</SfButton>
-<SfButton OnClick="@(async() => await Grid.SetPersistDataAsync(_state))">Set State</SfButton>
-<SfButton OnClick="@(async() =>await Grid.ResetPersistDataAsync())">Reset State</SfButton>
-
-<SfGrid ID="Grid" DataSource="@Orders" Height="315" EnablePersistence="true" AllowPaging="true" AllowFiltering="true" AllowGrouping="true" AllowSorting="true">
-    <GridColumns>
-        <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-    </GridColumns>
-</SfGrid>
-
-@code {
-    private SfGrid<OrderData> Grid;
-    public List<OrderData> Orders { get; set; }
-
-    public string _state;
-    protected override void OnInitialized()
-    {
-        Orders = OrderData.GetAllRecords();
-    }
-}
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="OrderData.cs" %}
-
-public class OrderData
-{
-    public static List<OrderData> Orders = new List<OrderData>();
-
-    public OrderData() { }
-
-    public OrderData(int OrderID, string CustomerID, string ShipName, double Freight, DateTime? OrderDate, DateTime? ShippedDate, bool? IsVerified, string ShipCity, string ShipCountry, int employeeID)
-    {
-        this.OrderID = OrderID;
-        this.CustomerID = CustomerID;
-        this.ShipName = ShipName;
-        this.Freight = Freight;
-        this.OrderDate = OrderDate;
-        this.ShippedDate = ShippedDate;
-        this.IsVerified = IsVerified;
-        this.ShipCity = ShipCity;
-        this.ShipCountry = ShipCountry;
-        this.EmployeeID = employeeID;
-    }
-
-    public static List<OrderData> GetAllRecords()
-    {
-        if (Orders.Count == 0)
-        {
-            Orders.Add(new OrderData(10248, "VINET", "Vins et alcools Chevalier", 32.38, new DateTime(1996, 7, 4), new DateTime(1996, 08, 07), true, "Reims", "France", 1));
-            Orders.Add(new OrderData(10249, "TOMSP", "Toms Spezialitäten", 11.61, new DateTime(1996, 7, 5), new DateTime(1996, 08, 07), false, "Münster", "Germany", 2));
-            Orders.Add(new OrderData(10250, "HANAR", "Hanari Carnes", 65.83, new DateTime(1996, 7, 6), new DateTime(1996, 08, 07), true, "Rio de Janeiro", "Brazil", 3));
-            Orders.Add(new OrderData(10251, "VINET", "Vins et alcools Chevalier", 41.34, new DateTime(1996, 7, 7), new DateTime(1996, 08, 07), false, "Lyon", "France", 1));
-            Orders.Add(new OrderData(10252, "SUPRD", "Suprêmes délices", 151.30, new DateTime(1996, 7, 8), new DateTime(1996, 08, 07), true, "Charleroi", "Belgium", 2));
-            Orders.Add(new OrderData(10253, "HANAR", "Hanari Carnes", 58.17, new DateTime(1996, 7, 9), new DateTime(1996, 08, 07), false, "Bern", "Switzerland", 3));
-            Orders.Add(new OrderData(10254, "CHOPS", "Chop-suey Chinese", 22.98, new DateTime(1996, 7, 10), new DateTime(1996, 08, 07), true, "Genève", "Switzerland", 2));
-            Orders.Add(new OrderData(10255, "VINET", "Vins et alcools Chevalier", 148.33, new DateTime(1996, 7, 11), new DateTime(1996, 08, 07), false, "Resende", "Brazil", 1));
-            Orders.Add(new OrderData(10256, "HANAR", "Hanari Carnes", 13.97, new DateTime(1996, 7, 12), new DateTime(1996, 08, 07), true, "Paris", "France", 3));
-        }
-        return Orders;
-    }
-
-    public int OrderID { get; set; }
-    public string CustomerID { get; set; }
-    public string ShipName { get; set; }
-    public double? Freight { get; set; }
-    public DateTime? OrderDate { get; set; }
-    public DateTime? ShippedDate { get; set; }
-    public bool? IsVerified { get; set; }
-    public string ShipCity { get; set; }
-    public string ShipCountry { get; set; }
-    public int EmployeeID { get; set; }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BXVIZJLqVEATFpSp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand how to present and manipulate data.
