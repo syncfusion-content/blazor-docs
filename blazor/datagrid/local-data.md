@@ -1327,7 +1327,7 @@ To import Excel data into Grid, you can follow these steps:
 
 1. Use the [SfFileUploader](https://blazor.syncfusion.com/documentation/file-upload/getting-started-with-web-app) to upload the Excel document.
 
-2. Parse the file using the [Syncfusion.XlslO](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core/) library.
+2. Parse the file using the [Syncfusion.XlsIO](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core/) library.
 
 3. Convert the parsed data into a list of `ExpandoObject`.
 
