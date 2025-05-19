@@ -453,8 +453,8 @@ To implement a custom delete confirmation dialog, follow the steps below using t
 - Enable delete functionality in the Grid by setting [AllowDeleting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_AllowDeleting) to **true** in `GridEditSettings`.
 - Use an [SfDialog](https://blazor.syncfusion.com/documentation/dialog/getting-started-with-web-app) to create a custom confirmation dialog.
 - Handle the `RowDeleting` event to cancel the default delete action and show your custom dialog.
-- In the dialog’s OK button click event, call the [DeleteRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DeleteRecordAsync) method to manually delete the selected record from the Grid.
-- In the dialog’s Discard button click event, cancel the delete action by simply hide the dialog using a Boolean flag.
+- In the dialog’s **Ok** button click event, call the [DeleteRecordAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DeleteRecordAsync) method to manually delete the selected record from the Grid.
+- In the dialog’s **Discard** button click event, cancel the delete action by simply hide the dialog using a Boolean flag.
 
 The following example demonstrates how to customize the delete confirmation dialog using a custom dialog:
 
