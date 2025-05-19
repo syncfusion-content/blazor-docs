@@ -19,7 +19,6 @@ To enable state persistence in the Grid, you can utilize the [EnablePersistence]
 
 > The Grid will store the state using the combination of the component name and component ID in the storage. For example, if the component name is **Grid** and the ID is **OrderDetails**, the state will be stored as **gridOrderDetails**.
 
-
 When enabling state persistence, the following Grid settings will persist in the local storage.
 
 | Grid Settings    | Properties persist                                                                                                                                                                                                                                                                                                                | Ignored properties                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
