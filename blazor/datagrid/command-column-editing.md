@@ -206,13 +206,18 @@ public class OrderDetails
 
 > The Grid component does not support adding a new record using the command column. Because, the command column, along with the command buttons, will be rendered only after the record is created. As a result, Grid only supported edit, delete, cancel, and update options in the command column.
 
-## Hide the Command Column Button in a Specific Record
+## Hide the command column button in a specific record
 
 In the Syncfusion Blazor DataGrid, command columns are used to perform CRUD operations on records, such as editing or deleting. Sometimes, you may want to hide the command buttons for specific records based on certain conditions. This can be done by using the [`RowDataBound`](https://blazor.syncfusion.com/documentation/datagrid/events#rowdatabound) event, which is triggered every time a row is created or updated in the Grid.
 
-Inside the `RowDataBound` event, you can check the data of each record and conditionally add a class to the row. For example, if a record is marked as "Verified," you can add a class to hide the Edit button for that row. Similarly, you can add another class to hide the Delete button for unverified records.
+This is demonstrated in the following sample code where the `RowDataBound` event is triggered when a record is created. Based on the record details, you can add a specific class name to that row and hide the command buttons using CSS styles.
 
-To hide the buttons, you can use CSS to target the added class and apply the **display: none** style to the buttons. This method gives you control over which buttons are shown or hidden for each record, depending on the data. This way, you can easily prevent editing or deleting certain rows based on your application's requirements.
+Procedure:
+
+* Use the `RowDataBound` event of the Grid to access each row's data at the time of rendering.
+* Inside the event, check the value of the **Verified** column for the current record.
+* Based on the value of the Verified column, if Verified is **false**, only the **Edit** button will be shown; if Verified is **true**, only the **Delete** button will be shown.
+* In order to hide buttons (**display: none** style to the buttons), a CSS class is applied to the row inside the `RowDataBound` event based on the record condition, and corresponding CSS rules are defined to hide the respective command buttons.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

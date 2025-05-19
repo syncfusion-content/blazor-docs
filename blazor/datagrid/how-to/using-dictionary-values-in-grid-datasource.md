@@ -7,11 +7,11 @@ control: DataGrid
 documentation: ug
 ---
 
-# Using Dictionary Values as Datasource in Blazor DataGrid
+# Using dictionary values as datasource in DataGrid
 
 The Syncfusion Blazor DataGrid can use dictionary values as a data source within a column by accessing them through the **KeyValuePair** type inside the column's [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template). This is helpful when you want to display values from a shared dictionary that maps keys to specific values. Since a dictionary isn't a typical scalar field, a custom template is needed to extract and display the correct value for each row using the row's key.
 
-In the example, the **ShipName** column is not a simple string, but a dictionary. Inside the Template, the dictionary is filtered to match the current row’s **OrderID** and the corresponding value is displayed. This approach allows each row in the grid to dynamically retrieve and render the appropriate dictionary value based on its key:
+This is demonstrated in the following sample code, where **ShipName** is defined as Dictionary value and it is accessed inside the template property of the `GridColumn` using **KeyValuePair** data type. The key value is compared with the **OrderID** column value and based on that the value is displayed.This approach allows each row in the Grid to dynamically retrieve and render the appropriate dictionary value based on its key:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

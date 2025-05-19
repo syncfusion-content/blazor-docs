@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Create Custom Grid in Blazor DataGrid
+# Create custom Blazor DataGrid
 
 You can create a custom DataGrid by rendering the `SfGrid` as a new razor component. It helps to create your own custom component when you want to create multiple Grids with same configuration or with default configuration throughout your application.
 
