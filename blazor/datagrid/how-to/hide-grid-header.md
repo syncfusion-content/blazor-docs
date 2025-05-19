@@ -7,9 +7,11 @@ control: DataGrid
 documentation: ug
 ---
 
-# Hide DataGrid Header in Blazor DataGrid Component
+# Hide DataGrid Header in Blazor DataGrid
 
-You can hide the DataGrid header by applying the following styles to the DataGrid component.
+In the Syncfusion Blazor DataGrid, the header row (which displays the column titles) can be hidden using simple CSS styles.
+
+Apply the following CSS to your application. This will completely hide the column headers of every Grid on the page:
 
 ```html
 <style>
@@ -19,4 +21,4 @@ You can hide the DataGrid header by applying the following styles to the DataGri
 </style>
 ```
 
-N> If you want to hide the header for particular DataGrid, then you can apply the above styles to that DataGrid using the ID (#Grid.e-grid .e-gridheader .e-columnheader) property value.
+N> If you want to hide the header for particular Grid, then you can apply the above styles to that Grid using the ID (#Grid.e-grid .e-gridheader .e-columnheader) property value.
