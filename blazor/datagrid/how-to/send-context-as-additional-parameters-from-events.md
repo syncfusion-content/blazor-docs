@@ -219,4 +219,4 @@ The following example demonstrates this approach:
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/VNByZJrAfvXfuvkP" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rjheZIWaBrEumlde?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
