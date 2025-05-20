@@ -65,6 +65,6 @@ Index.razor.css
     background-color: violet;
 }
 ```
-> Find the sample from this [GitHub location](https://github.com/SyncfusionExamples/How-to-Getting-Started-Blazor-DataGrid-Samples/tree/master/CSS_Isolation).
+> You can find the sample in [GitHub](https://github.com/SyncfusionExamples/How-to-Getting-Started-Blazor-DataGrid-Samples/tree/master/CSS_Isolation) link.
 
 N> You can get more information on CSS Isolation [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/css-isolation?view=aspnetcore-8.0#child-component-support).

@@ -622,7 +622,15 @@ This is demonstrated in the following sample code where there are custom toolbar
 
     protected override void OnInitialized()
     {
-        Orders = OrderData.GetAllRecords();
+        var random = new Random();
+        var customerIds = new[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" };
+        Orders = Enumerable.Range(1, 25).Select(x => new OrderData
+        {
+            OrderID = 1000 + x,
+            CustomerID = customerIds[random.Next(customerIds.Length)],
+            OrderDate = DateTime.Now.AddDays(-x),
+            Freight = Math.Round(random.NextDouble() * 100, 2),
+        }).ToList();
     }
 
     public void ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
@@ -655,22 +663,12 @@ This is demonstrated in the following sample code where there are custom toolbar
         public string CustomerID { get; set; }
         public DateTime OrderDate { get; set; }
         public double Freight { get; set; }
-
-        public static List<OrderData> GetAllRecords()
-        {
-            return new List<OrderData>()
-            {
-                new OrderData(){ OrderID = 1001, CustomerID = "ALFKI", OrderDate = DateTime.Now.AddDays(-10), Freight = 50.5 },
-                new OrderData(){ OrderID = 1002, CustomerID = "ANATR", OrderDate = DateTime.Now.AddDays(-8), Freight = 70.2 },
-                new OrderData(){ OrderID = 1003, CustomerID = "ANTON", OrderDate = DateTime.Now.AddDays(-5), Freight = 40.0 }
-            };
-        }
     }
 }
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVIDeiYsmubsWYf?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDheXeVNVHTgrfqL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Customizing the toolbar items tooltip text
 
