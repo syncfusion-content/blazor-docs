@@ -2334,7 +2334,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/htrSjyVNJjotXFbu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5f" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htrSjyVNJjotXFbu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Render RichTextEditor in EditTemplate
 
