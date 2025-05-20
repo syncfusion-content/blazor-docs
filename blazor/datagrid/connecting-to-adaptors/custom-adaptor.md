@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bind data and perform CRUD actions with CustomAdaptor in Syncfusion Blazor DataGrid
-description: Learn all about Custom Binding in the Syncfusion Blazor DataGrid component and much more.
+description: Learn all about Custom Binding in the Syncfusion Blazor DataGrid and much more.
 platform: Blazor
 control: DataGrid
 keywords: adaptors, CustomAdaptor, custom adaptor, remotedata, custombinding, custom binding
@@ -70,7 +70,7 @@ public abstract class DataAdaptor
 }
 ```
 
-To learn more about **Custom Binding** in the Syncfusion Blazor DataGrid, watch this video:
+To learn more about **Custom Binding** in the Grid, watch this video:
 
 {% youtube "youtube:https://www.youtube.com/watch?v=LmdUGJBUJqE" %}
 
@@ -280,7 +280,7 @@ A Custom Adaptor can be created as a component when the `DataAdaptor` class is e
 Ensure that your service is registered in the **Program.cs** file.
 
 ```csharp
-// Register the Order service as scoped in the Program.cs file.
+// Register the order service as scoped in the Program.cs file.
 builder.Services.AddScoped<Order>();
 ```
 
@@ -1106,9 +1106,20 @@ N> You can refer to the [Syncfusion Blazor DataGrid](https://www.syncfusion.com/
 
 ## How to pass additional parameters to custom adaptor
 
-To send additional parameters with the data request, use the `AddParams` method of the `Query` class. Assign the `Query` object containing the additional parameters to the Syncfusion Blazor DataGrid’s [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Query) property.
+The Syncfusion Blazor DataGrid allows you to send custom parameters with each data request. This is particularly useful when you need to pass additional information (e.g., user role, token, or filters) to the server for enhanced processing logic.
 
-The following sample code demonstrates how to send additional parameters to the custom adaptor using the `Query` property of the Grid.
+You can achieve this by using the [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Query) property of the grid along with the `AddParams` method of the `Query` class.
+
+To enable custom parameters in data requests for the Grid, follow these steps:
+
+1. **Bind the Query Object to the Grid:**  
+    Assign the initialized `Query` object to the DataGrid’s `Query` property.
+2. **Initialize the Query Object:**  
+    Create a new instance of the `Query` class and use the `AddParams` method to add your custom parameters.
+3. **Access Parameters in the Custom Adaptor:**  
+    In your custom adaptor, access the parameters via `dm.Params` and use them as needed for server-side logic.
+
+The following example demonstrates how to send additional parameters to the server.
 
 ```cshtml
 @using Syncfusion.Blazor
