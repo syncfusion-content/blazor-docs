@@ -238,6 +238,8 @@ You can assign a list of **ExpandoObject** to the Grid’s [DataSource](https://
 {% endhighlight %}
 {% endtabs %}
 
+Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/databinding-in-blazor-datagrid/blob/master/ListBinding/ListBinding/Components/Pages/ExpandoObjectBinding.razor).
+
 ### ExpandoObject complex data binding
 
 When working with complex or nested data structures using [ExpandoObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-9.0), the Syncfusion Blazor DataGrid allows you to bind these nested fields using dot (.) notation. This is especially helpful when your **ExpandoObject** contains sub-objects or hierarchical data, and you want to present specific properties of those nested objects in individual Grid columns.
@@ -294,6 +296,8 @@ The following example demonstrates how to bind complex properties within an **Ex
 The following image represents ExpandoObject complex data binding,
 
 ![Binding ExpandObject with complex data in Blazor DataGrid](./images/blazor-datagrid-expand-complex-data.png)
+
+Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/databinding-in-blazor-datagrid/blob/master/ListBinding/ListBinding/Components/Pages/ExpandoObjectComplexBinding.razor).
 
 ### DynamicObject binding
 
@@ -370,6 +374,8 @@ To bind a **DynamicObject**, assign a list of dynamic instances to the [DataSour
 {% endhighlight %}
 {% endtabs %}
 
+Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/databinding-in-blazor-datagrid/blob/master/ListBinding/ListBinding/Components/Pages/DynamicObjectBinding.razor).
+
 ### DynamicObject complex data binding
 
 When working with complex or nested data structures using [DynamicObject](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject), the Syncfusion Blazor DataGrid allows you to bind these nested fields using dot (.) notation. This is especially helpful when your **DynamicObject** contains sub-objects or hierarchical data, and you want to present specific properties of those nested objects in individual Grid columns.
@@ -441,6 +447,8 @@ The following example demonstrates how to bind complex properties within a **Dyn
 The following image represents DynamicObject complex data binding
 
 ![Binding DynamicObject with Complex Data in Blazor DataGrid](./images/blazor-datagrid-dynamic-complex-data.png)
+
+Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/databinding-in-blazor-datagrid/blob/master/ListBinding/ListBinding/Components/Pages/DynamicObjectComplexBinding.razor).
 
 > When binding the Grid DataSource dynamically as a list of IEnumerable collections, you need to call the [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Refresh_System_Boolean_) method of the Grid to reflect the changes externally. This is because tracking changes made externally to IEnumerable items is avoided for performance considerations.
 
@@ -993,6 +1001,8 @@ When using batch editing in the Grid, use the `BatchUpdate`/`BatchUpdateAsync` m
 {% endhighlight %}
 {% endtabs %}
 
+Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/databinding-in-blazor-datagrid/tree/master/DataTable).
+
 ## Managing spinner visibility during data loading
 
 Showing a spinner during data loading in the Syncfusion Blazor DataGrid enhances the experience by providing a visual indication of the loading progress. This feature helps to understand that data is being fetched or processed.
@@ -1101,6 +1111,220 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LZVSXfVYgqFBPutf?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
+## Data binding with SignalR 
+
+The Syncfusion Blazor DataGrid provides support for real-time data binding using SignalR, allowing you to update the Grid automatically as data changes on the server-side. This feature is particularly useful for applications requiring live updates and synchronization across multiple clients.
+
+To achieve real-time data binding with SignalR in your Syncfusion Blazor DataGrid, follow the steps below:
+
+**Step 1:** Install the SignalR server package:
+
+To add the SignalR server package to the app, open the NuGet Package Manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for, and install the [Microsoft.AspNetCore.SignalR.Client](https://www.nuget.org/packages/Microsoft.AspNetCore.SignalR.Client) package.
+
+**Step 2:** Create a **Hubs** folder and add the following **ChatHub** class (**Hubs/ChatHub.cs**):
+
+```cs
+
+using Microsoft.AspNetCore.SignalR;
+
+namespace SignalRDataGrid.Hubs;
+
+public class ChatHub : Hub
+{
+    public async Task SendMessage()
+    {
+        await Clients.All.SendAsync("ReceiveMessage");
+    }
+}
+
+```
+
+**Step 3:** Configure the SignalR server to route requests to the SignalR hub. In the **Program.cs** file, include the following code:
+
+```cs
+
+using SignalRDataGrid.Hubs;
+
+var app = builder.Build();
+
+app.UseRouting();
+app.UseAntiforgery();
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapHub<ChatHub>("/chathub");
+    endpoints.MapFallbackToFile("/_Host");
+});
+app.Run();
+
+```
+
+**Step 4:** Create a simple Syncfusion Blazor DataGrid by following the [Getting Started](https://blazor.syncfusion.com/documentation/datagrid/getting-started-with-web-app) documentation link.
+
+**Step 5:** Create a **Data** folder and add Data Controller (**OrderDetails.cs**) in your project to handle CRUD operations for the Grid: 
+
+{% tabs %}
+{% highlight cs tabtitle="OrderDetails.cs" %}
+
+namespace SignalRDataGrid.Data
+{
+    public class OrderDetails
+    {
+        public int OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public string ShipName { get; set; }
+
+        public static List<OrderDetails> OrderList = new List<OrderDetails>();
+
+        private static readonly string[] CustomerIDs = new[]
+        {
+        "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD", "CHOPS", "RICSU", "WELLI", "HILAA", "ERNSH", "CENTC", "OTTIK", "QUEDE", "RATTC"
+        };
+
+        private static readonly string[] ShipNames = new[]
+        {
+        "Vins et alcools Chevalier", "Toms Spezialitäten", "Hanari Carnes", "Victuailles en stock", "Suprêmes délices",
+        "Chop-suey Chinese", "Richter Supermarkt", "Wellington Importadora", "HILARION-Abastos", "Ernst Handel",
+        "Centro comercial Moctezuma", "Ottilies Käseladen", "Que Delícia", "Rattlesnake Canyon Grocery"
+        };
+
+        public static Task<List<OrderDetails>> GetOrdersAsync()
+        {
+            var rng = new Random();
+            if (OrderList.Count == 0)
+            {
+                OrderList = Enumerable.Range(10248, 75).Select(index => new OrderDetails
+                {
+                    OrderID = index,
+                    CustomerID = CustomerIDs[rng.Next(CustomerIDs.Length)],
+                    ShipName = ShipNames[rng.Next(ShipNames.Length)]
+                }).ToList();
+            }
+
+            return Task.FromResult(OrderList);
+        }        
+        public Task<OrderDetails> UpdateAsync(OrderDetails model)
+        {
+            var ord = OrderList.Where(x => x.OrderID == model.OrderID).FirstOrDefault();
+            ord.CustomerID = model.CustomerID;
+            ord.ShipName = model.ShipName;
+            return Task.FromResult(model);
+        }
+        public List<OrderDetails> DeleteAsync(OrderDetails model)
+        {
+            var ord = OrderList.Remove(model);
+
+            return OrderList;
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+**Step 5:** In your **Home.razor** file, establish a connection to the SignalR hub and configure the Grid data.
+
+{% tabs %}
+{% highlight razor tabtitle="Home.razor" %}
+
+@using Syncfusion.Blazor.Grids
+@using Microsoft.AspNetCore.SignalR.Client
+@inject NavigationManager NavigationManager
+@using SignalRDataGrid.Data
+@inject OrderDetails OrderService
+@implements IAsyncDisposable
+
+<SfGrid @ref="Grid" DataSource="@OrderData" AllowSorting="true" AllowFiltering="true" ID="GridDemo" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel", "Search" })">
+    <GridEvents OnActionComplete="ActionComplete" TValue="OrderDetails"></GridEvents>
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipName) HeaderText=" Ship Name" Width="130"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    SfGrid<OrderDetails> Grid { get; set; }
+    private HubConnection hubConnection;
+    public List<OrderDetails> OrderData = new List<OrderDetails>();
+    protected override async Task OnInitializedAsync()
+    {
+        // Initialize SignalR connection.
+        hubConnection = new HubConnectionBuilder()
+        .WithUrl(NavigationManager.ToAbsoluteUri("/chathub"))
+        .Build();
+
+        // Set up a handler for receiving messages from the hub.
+        hubConnection.On("ReceiveMessage", () =>
+        {
+            // Refresh grid on receiving a message.
+            CallLoadData();
+        });
+
+        // Start SignalR connection.
+        await hubConnection.StartAsync();
+        await LoadData();
+    }
+
+    // Handles CRUD (Create, Read, Update, and Delete) operations.
+    public async Task ActionComplete(ActionEventArgs<OrderDetails> Args)
+    {
+        if (Args.RequestType == Syncfusion.Blazor.Grids.Action.Save)
+        {
+            await OrderService.UpdateAsync(Args.Data);
+            if (IsConnected) await Send();
+        }
+        if (Args.RequestType == Syncfusion.Blazor.Grids.Action.Delete)
+        {
+            OrderData = OrderService.DeleteAsync(Args.Data);
+            if (IsConnected) await Send();
+        }
+    }
+    private void CallLoadData()
+    {
+        Grid.Refresh();
+    }
+    protected async Task LoadData()
+    {
+        OrderData = await OrderDetails.GetOrdersAsync();
+    }
+
+    // Send a message to SignalR hub to notify other clients.
+    async Task Send() =>
+        await hubConnection.SendAsync("SendMessage");
+
+        // Property to check SignalR connection state.
+        public bool IsConnected => hubConnection.State == HubConnectionState.Connected;
+
+        // Dispose the SignalR connection properly when component is disposed.
+        public async ValueTask DisposeAsync()
+        {
+            if (hubConnection is not null)
+            {
+                await hubConnection.DisposeAsync();
+            }
+        }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+The above code demonstrates how to connect to a SignalR hub and refresh the Grid data in real time when updates are received.
+
+**Step 6:** Adding the `OrderService` reference:
+
+To include the `OrderService` reference, update the following line in your `Program.cs` file:
+
+```csharp
+builder.Services.AddSingleton<OrderDetails>();
+```
+
+The following screenshot illustrates the addition, editing, and deletion operations performed, with changes reflected across all client sides.
+
+![SignalR Data](./images/signalR.gif)
+
+Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/databinding-in-blazor-datagrid/tree/master/SignalRDataGrid).
+
 ## Binding data from Excel document
 
 The Syncfusion Blazor DataGrid allows you to import data from Excel documents into your web application for display and manipulation within the Grid. This feature streamlines the process of transferring Excel data to a web-based environment. You can achieve this by using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_ValueChange) event of the `SfFileUploader`.
@@ -1109,7 +1333,7 @@ To import Excel data into Grid, you can follow these steps:
 
 1. Use the [SfFileUploader](https://blazor.syncfusion.com/documentation/file-upload/getting-started-with-web-app) to upload the Excel document.
 
-2. Parse the file using the [Syncfusion.XlslO](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core/) library.
+2. Parse the file using the [Syncfusion.XlsIO](https://www.nuget.org/packages/Syncfusion.XlsIO.Net.Core/) library.
 
 3. Convert the parsed data into a list of `ExpandoObject`.
 
