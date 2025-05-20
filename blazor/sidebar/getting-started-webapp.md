@@ -555,7 +555,7 @@ In the following example, the Sidebar is rendered with Accordion component in it
 6. Any type of HTML content or component can be placed in the sidebar for quick access and easy navigation.
 7. The component can position content to the left or right side of the main content area, allowing placement of two sidebars simultaneously for showing primary and secondary content.
 8. Auto-collapse/expand behavior based on screen size thresholds.
-9. Use the [IsOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfSidebar.html#Syncfusion_Blazor_Navigations_SfSidebar_IsOpen) property to programmatically control the open or closed state of the Sidebar.
+9. Provides the [IsOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfSidebar.html#Syncfusion_Blazor_Navigations_SfSidebar_IsOpen) property support to programmatically control the open or closed state of the Sidebar.
 10. Custom actions can be bound to any element (like hamburger menu or buttons) to toggle the Sidebar.
 11. The component provides smooth transitions when expanding or collapsing the sidebar.
 12. Seamless support for RTL languages using [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfSidebar.html#Syncfusion_Blazor_Navigations_SfSidebar_EnableRtl) property, making the component suitable for international applications.
