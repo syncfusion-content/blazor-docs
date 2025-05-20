@@ -9,7 +9,7 @@ documentation: ug
 
 # Customize Blazor ListView Component to Grid Layout
 
-In Listview, list items can be rendered in grid layout with the following data manipulations.
+In ListView, list items can be rendered in grid layout with the following data manipulations.
 
 * Add Item
 * Remove Item

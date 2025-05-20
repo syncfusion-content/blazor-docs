@@ -18,7 +18,7 @@ To customize the Blazor ListView component header, items, and group header using
 
 ## Header Template
 
-Listview header can be customized with the help of the [`HeaderTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_HeaderTemplate) property. To customize header template in your application, set your customized template string to `HeaderTemplate` property along with [`ShowHeader`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_ShowHeader) property as `true` to display the Listview header.
+ListView header can be customized with the help of the [`HeaderTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_HeaderTemplate) property. To customize header template in your application, set your customized template string to `HeaderTemplate` property along with [`ShowHeader`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_ShowHeader) property as `true` to display the ListView header.
 
 ```cshtml
 @using Syncfusion.Blazor.Lists
@@ -238,7 +238,7 @@ The following built-in CSS classes can be used to customize the list-items.
 
 ListView group header can be customized with the help of the [`GroupTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_GroupTemplate) property. To customize the group template in the application, set the customized template string to `GroupTemplate` property.
 
-In the following example, Listview is grouped based on the category. The category of each list item should be mapped with [`GroupBy`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewFieldSettings-1.html#Syncfusion_Blazor_Lists_ListViewFieldSettings_1_GroupBy) field of the data. The grouped list items have also displayed count in the group list header.
+In the following example, ListView is grouped based on the category. The category of each list item should be mapped with [`GroupBy`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewFieldSettings-1.html#Syncfusion_Blazor_Lists_ListViewFieldSettings_1_GroupBy) field of the data. The grouped list items have also displayed count in the group list header.
 
 ```cshtml
 @using Syncfusion.Blazor.Lists
