@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Use custom helper inside the loop with templates in Blazor DataGrid
+# Use custom helper inside the loop with templates
 
 The Syncfusion Blazor DataGrid allows you to use custom helpers inside the loop with [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html?#Syncfusion_Blazor_Grids_GridColumn_Template) property of a column. This feature enables you to create complex templates that can incorporate additional helper functions.
 

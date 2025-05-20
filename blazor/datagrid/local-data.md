@@ -1101,7 +1101,7 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LZVSXfVYgqFBPutf?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
-## Change datasource dynamically in Blazor DataGrid
+## Change datasource dynamically
 
 The Syncfusion Blazor DataGrid allows to change the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) of the Grid  dynamically through an external button. This feature is useful to display different sets of data based on specific actions.
 
