@@ -1,19 +1,17 @@
 ---
 layout: post
-title: Resolving Panel Positioning Issues in Blazor Dashboard Layout Component | Syncfusion
-description: Check out and learn how to resolve panel positioning issues in the Syncfusion Blazor Dashboard Layout component.
+title: Preventing Panel Overlap in Blazor Dashboard Layout Component | Syncfusion
+description: Check out and learn how to preventing panel overlap in the Syncfusion Blazor Dashboard Layout component.
 platform: Blazor
 control: Dashboard Layout
 documentation: ug
 ---
 
-# Resolving Panel Positioning Issues in Blazor Dashboard Layout
+# Preventing Panel Overlap in Blazor Dashboard Layout
 
-When rendering panels dynamically in the Syncfusion Blazor Dashboard Layout component, all panels may appear in the same position (Row=0, Column=0). This issue occurs when each panel is assigned the same **Id**, causing the component to treat them as duplicates.
+When rendering [DashboardLayoutPanel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html) components dynamically, it is important to assign a unique [Id](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_Id) to each panel. The **Id** property is used internally by the Dashboard Layout component to uniquely identify and manage panels. If multiple panels are assigned the same **Id**, they will be treated as the same instance, and render in the same position (e.g., Row = 0, Column = 0). Assigning unique **Ids** ensures that each panel is rendered independently in its specified location.
 
-To avoid this issue, assign a unique [Id](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html#Syncfusion_Blazor_Layouts_DashboardLayoutPanel_Id) to each [DashboardLayoutPanel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.DashboardLayoutPanel.html) when rendering them dynamically.
-
-Here is an example of how to assign unique Ids to each panel:
+Here is an example of how to assign unique **Ids** to each panel:
 
 ```cshtml
 
