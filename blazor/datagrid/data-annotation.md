@@ -9,9 +9,11 @@ documentation: ug
 
 # Data Annotation in Blazor DataGrid
 
-Data Annotations are used to define rules for model classes or properties, allowing validation of data and the display of appropriate messages to end-users. By leveraging Data Annotations, you can ensure that data entered into your application conforms to the expected format and meets specific validation criteria. In Syncfusion's Blazor DataGrid, Data Annotations help map these validation rules to the corresponding Grid column properties.
+Data Annotations are used to define validation rules for model classes or properties, ensuring that data entered into an application conforms to the expected format and meets specific criteria. They also enable the display of appropriate error messages to end users.
 
-To enable Data Annotations for validation in a Grid, you need to reference the **System.ComponentModel.DataAnnotations** namespace in your Blazor application. Once enabled, the Grid automatically uses the data annotations applied to your model class properties to perform data validation.
+In the Syncfusion Blazor DataGrid, Data Annotations are leveraged to automatically map these validation rules to the corresponding [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) properties. This integration provides seamless data validation during editing operations within the Grid.
+
+To enable Data Annotations for validation in a Grid, you need to refer the **System.ComponentModel.DataAnnotations** namespace in your Blazor application. Once enabled, the Grid automatically uses the data annotations applied to your model class properties to perform data validation.
 
 The following table lists the data annotation attributes supported in the Grid:
 
