@@ -2005,7 +2005,7 @@ public class OrderData
 
 ### Render NumericTextBox in EditTemplate 
 
-The Syncfusion Blazor DataGrid allows you to render a [SfNumerictextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started-webapp) within the Grid's edit form for a specific column. This feature is particularly useful when you want to restrict user input to numeric values, with support for formatting, increment/decrement controls, and validation options.
+The Syncfusion Blazor DataGrid allows you to render a [SfNumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started-webapp) within the Grid's edit form for a specific column. This feature is particularly useful when you want to restrict user input to numeric values, with support for formatting, increment/decrement controls, and validation options.
 
 To render a `SfNumericTextBox` in the edit form, you need to define an [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) in the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). The `EditTemplate` property specifies the cell edit template that is used as an editor for a particular column. It can accept either a template string or an HTML element ID.
 
