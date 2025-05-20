@@ -20,9 +20,9 @@ The available default edit types are as follows:
 | Component                                                                                      | Edit Type Value      | Description                                                                                                   |
 |------------------------------------------------------------------------------------------------|----------------------|---------------------------------------------------------------------------------------------------------------|
 | [SfTextBox](https://blazor.syncfusion.com/documentation/textbox/getting-started-webapp)          | DefaultEdit          | The `DefaultEdit` type renders a `SfTextBox` for string data type columns.                              |
-| [SfNumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started)  | NumericEdit          | The `NumericEdit` type renders a SfNumericTextBox for integer, double, float, and other numeric types.|
+| [SfNumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started)  | NumericEdit          | The `NumericEdit` type renders a `SfNumericTextBox` for integer, double, float, and other numeric types.|
 | [`SfDropDownList`](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) | DropDownEdit         | The `DropDownEdit` type renders a `SfDropDownList` for string data type columns.                        |
-| [SfCheckBox](https://blazor.syncfusion.com/documentation/check-box/getting-started-with-web-app) | BooleanEdit          | The `BooleanEdit` type renders a SfCheckBox for boolean data type columns.                            |
+| [SfCheckBox](https://blazor.syncfusion.com/documentation/check-box/getting-started-with-web-app) | BooleanEdit          | The `BooleanEdit` type renders a `SfCheckBox` for boolean data type columns.                            |
 | [SfDatePicker](https://blazor.syncfusion.com/documentation/datepicker/getting-started-with-web-app) | DatePickerEdit       | The `DatePickerEdit` type renders a `SfDatePicker` for date data type columns.                          |
 | [SfDateTimePicker](https://blazor.syncfusion.com/documentation/datetime-picker/getting-started-with-web-app) | DateTimePickerEdit   | The `DateTimePickerEdit` type renders a `SfDateTimePicker` for date-time data type columns.             |
 
@@ -50,7 +50,7 @@ You can customize the behavior of the editors through the [EditorSettings](https
 
 ## Customize TextBox of StringEdit type
 
-You can customize the default [SfTextBox](https://blazor.syncfusion.com/documentation/textbox/getting-started-webapp) in the Grid edit form for string data type columns using the [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditorSettings) property. This customization allows you to configure various properties of the TexBox, tailoring its behavior and appearance to match your specific requirements within the Grid. The [StringEditCellParams](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.StringEditCellParams.html) class helps you achieve this customization by configuring the `EditorSettings` of the respective column.
+You can customize the default [SfTextBox](https://blazor.syncfusion.com/documentation/textbox/getting-started-webapp) in the Grid edit form for string data type columns using the [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditorSettings) property. This customization allows you to configure various properties of the `SfTexBox`, tailoring its behavior and appearance to match your specific requirements within the Grid. The [StringEditCellParams](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.StringEditCellParams.html) class helps you achieve this customization by configuring the `EditorSettings` of the respective column.
 
 The table below highlights the key aspects of customizing a `SfTextBox` using the `EditorSettings` property of a [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html):
 
@@ -156,7 +156,7 @@ The table below highlights the key aspects of customizing a `SfNumericTextBox` u
 |------------------------------------------------------------------------------------------------|-------------|---------------------------------------------------------------------------------------------------------------|---------------------------------------|
 | [SfNumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started)  | NumericEdit | Renders a `SfNumericTextBox` for integer, double, float, short, byte, long, long double, and decimal data type columns. Refer to the [SfNumericTextBox API documentation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html) for more properties. | Params: { decimals: 2, value: 5 }    |
 
-Below is an example demonstrating how to customize the SfNumericTextBox  for the **Freight** column in a Grid:
+Below is an example demonstrating how to customize the `SfNumericTextBox`  for the **Freight** column in a Grid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -1193,7 +1193,7 @@ public class OrderData
 
 While editing a particular row in normal or dialog edit mode, pressing the **ENTER** key will save the changes made in the specific cell or edit form. Similarly, pressing the **ENTER** key while editing with a multiline textbox will save the changes. However, in a multiline textbox, instead of this behavior, a new line break should be added to the text content when pressing the **ENTER** key. This can be achieved using the `OnFocus` event of the `SfTextBox`.
 
-In the following sample, the multiline textbox is rendered in the Customer ID column. The `stopPropagation()` method is called using **Microsoft.JSInterop** in the `OnFocus` event of the `SfTextBox` to prevent the **ENTER** key action when editing the Customer ID column.
+In the following sample, the multiline textbox is rendered in the **CustomerID** column. The `stopPropagation()` method is called using **Microsoft.JSInterop** in the `OnFocus` event of the `SfTextBox` to prevent the **ENTER** key action when editing the Customer ID column.
 
 ```cshtml
 function editKeyDown(id) {    
@@ -1578,7 +1578,7 @@ public class OrderData
 
 ### Render images in the DropDownList editor using the ItemTemplate
 
-The Syncfusion Blazor DataGrid allows you to render images in the `SfDropDownList` editor. This feature is valuable when you want to display images for each item in the dropdown list of a particular column, enhancing the visual representation of your data.
+The Syncfusion Blazor DataGrid allows you to render images in the [SfDropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) editor. This feature is valuable when you want to display images for each item in the dropdown list of a particular column, enhancing the visual representation of your data.
 
 To render a `SfDropDownList` in the edit form, you need to define an [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) in the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). The `EditTemplate` property specifies the cell edit template that is used as an editor for a particular column. It can accept either a template string or an HTML element ID.
 
@@ -2222,7 +2222,6 @@ The following example demonstrates how to render a `SfMultiSelect` in the **Ship
 @page "/"
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" Toolbar="@(new List<string> { "Add", "Edit", "Delete", "Cancel", "Update" })" Height="273px">
     <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="EditMode.Normal" />
@@ -2231,12 +2230,19 @@ The following example demonstrates how to render a `SfMultiSelect` in the **Ship
         <GridColumn Field=@nameof(OrderData.CustomerID) HeaderText="Customer ID" Width="100" />
         <GridColumn Field=@nameof(OrderData.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit" Width="100" />
         <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="100" Type="ColumnType.Date" />
-        <GridColumn Field=@nameof(OrderData.ShipCity) HeaderText="Ship City" Width="150" DisableHtmlEncode="false">
+        <GridColumn HeaderText="Ship City" Width="150">
+            <Template>
+                @{
+                    var order = context as OrderData;
+                    var cities = order.ShipCity != null ? string.Join(", ", order.ShipCity) : "";
+                }
+                @cities
+            </Template>
             <EditTemplate>
                 @{
                     var order = context as OrderData;
                 }
-                <SfMultiSelect TItem="MultiSelectDataSource" TValue="string" @bind-Value="order.ShipCity" Placeholder="Select cities" DataSource="@CityList" Width="300px">
+                <SfMultiSelect TItem="MultiSelectDataSource" TValue="List<string>" @bind-Value="order.ShipCity" Placeholder="Select cities" DataSource="@CityList" Width="300px">
                     <MultiSelectFieldSettings Text="Text" Value="Value" />
                 </SfMultiSelect>
             </EditTemplate>
@@ -2273,62 +2279,62 @@ The following example demonstrates how to render a `SfMultiSelect` in the **Ship
 {% highlight c# tabtitle="OrderData.cs" %}
 
 public class OrderData
-{
-    public static List<OrderData> Orders = new List<OrderData>();
-
-    public OrderData() { }
-
-    public OrderData(int OrderID, string CustomerID, string ShipName, double Freight, DateTime? OrderDate, DateTime? ShippedDate, bool? IsVerified, string ShipCity, string ShipCountry, string ShipAddress, int employeeID, TimeOnly? OrderTime)
     {
-        this.OrderID = OrderID;
-        this.CustomerID = CustomerID;
-        this.ShipName = ShipName;
-        this.Freight = Freight;
-        this.OrderDate = OrderDate;
-        this.ShippedDate = ShippedDate;
-        this.IsVerified = IsVerified;
-        this.ShipCity = ShipCity;
-        this.ShipCountry = ShipCountry;
-        this.ShipAddress = ShipAddress;
-        this.EmployeeID = employeeID;
-        this.OrderTime = OrderTime;
-    }
+        public static List<OrderData> Orders = new List<OrderData>();
 
-    public static List<OrderData> GetAllRecords()
-    {
-        if (Orders.Count == 0)
+        public OrderData() { }
+
+        public OrderData(int OrderID, string CustomerID, string ShipName, double Freight, DateTime? OrderDate, DateTime? ShippedDate, bool? IsVerified, List<string> ShipCity, string ShipCountry, string ShipAddress, int employeeID, TimeOnly? OrderTime)
         {
-            Orders.Add(new OrderData(10248, "VINET", "Vins et alcools Chevalier", 32.38, new DateTime(1996, 7, 4), new DateTime(1996, 08, 07), true, "Reims", "France", "12 Rue des Fleurs", 1, new TimeOnly(9, 30, 0)));
-            Orders.Add(new OrderData(10249, "TOMSP", "Toms Spezialitäten", 11.61, new DateTime(1996, 7, 5), new DateTime(1996, 08, 07), false, "Münster", "Germany", "45 Straße der Nationen", 2, new TimeOnly(10, 0, 0)));
-            Orders.Add(new OrderData(10250, "HANAR", "Hanari Carnes", 65.83, new DateTime(1996, 7, 6), new DateTime(1996, 08, 07), true, "Rio de Janeiro", "India", "89 MG Road", 3, new TimeOnly(14, 15, 0)));
-            Orders.Add(new OrderData(10251, "VINET", "Vins et alcools Chevalier", 41.34, new DateTime(1996, 7, 7), new DateTime(1996, 08, 07), false, "Lyon", "France", "23 Rue Victor Hugo", 1, new TimeOnly(11, 45, 0)));
-            Orders.Add(new OrderData(10252, "SUPRD", "Suprêmes délices", 151.30, new DateTime(1996, 7, 8), new DateTime(1996, 08, 07), true, "Charleroi", "Belgium", "78 Rue de l'Industrie", 2, new TimeOnly(13, 0, 0)));
-            Orders.Add(new OrderData(10253, "HANAR", "Hanari Carnes", 58.17, new DateTime(1996, 7, 9), new DateTime(1996, 08, 07), false, "Bern", "Switzerland", "5 Bahnhofstrasse", 3, new TimeOnly(16, 30, 0)));
-            Orders.Add(new OrderData(10254, "CHOPS", "Chop-suey Chinese", 22.98, new DateTime(1996, 7, 10), new DateTime(1996, 08, 07), true, "Genève", "Switzerland", "12 Rue de Mont Blanc", 2, new TimeOnly(8, 0, 0)));
-            Orders.Add(new OrderData(10255, "VINET", "Vins et alcools Chevalier", 148.33, new DateTime(1996, 7, 11), new DateTime(1996, 08, 07), false, "Resende", "India", "7 Residency Road", 1, new TimeOnly(10, 30, 0)));
-            Orders.Add(new OrderData(10256, "HANAR", "Hanari Carnes", 13.97, new DateTime(1996, 7, 12), new DateTime(1996, 08, 07), true, "Paris", "France", "15 Rue de Rivoli", 3, new TimeOnly(9, 45, 0)));
+            this.OrderID = OrderID;
+            this.CustomerID = CustomerID;
+            this.ShipName = ShipName;
+            this.Freight = Freight;
+            this.OrderDate = OrderDate;
+            this.ShippedDate = ShippedDate;
+            this.IsVerified = IsVerified;
+            this.ShipCity = ShipCity;
+            this.ShipCountry = ShipCountry;
+            this.ShipAddress = ShipAddress;
+            this.EmployeeID = employeeID;
+            this.OrderTime = OrderTime;
         }
-        return Orders;
-    }
 
-    public int OrderID { get; set; }
-    public string CustomerID { get; set; }
-    public string ShipName { get; set; }
-    public double? Freight { get; set; }
-    public DateTime? OrderDate { get; set; }
-    public DateTime? ShippedDate { get; set; }
-    public bool? IsVerified { get; set; }
-    public string? ShipCity { get; set; }
-    public string ShipCountry { get; set; }
-    public string ShipAddress { get; set; }
-    public int EmployeeID { get; set; }
-    public TimeOnly? OrderTime { get; set; }
-}
+        public static List<OrderData> GetAllRecords()
+        {
+            if (Orders.Count == 0)
+            {
+                Orders.Add(new OrderData(10248, "VINET", "Vins et alcools Chevalier", 32.38, new DateTime(1996, 7, 4), new DateTime(1996, 08, 07), true, new List<string> { "Reims" }, "France", "12 Rue des Fleurs", 1, new TimeOnly(9, 30, 0)));
+                Orders.Add(new OrderData(10249, "TOMSP", "Toms Spezialitäten", 11.61, new DateTime(1996, 7, 5), new DateTime(1996, 08, 07), false, new List<string> { "Münster" }, "Germany", "45 Straße der Nationen", 2, new TimeOnly(10, 0, 0)));
+                Orders.Add(new OrderData(10250, "HANAR", "Hanari Carnes", 65.83, new DateTime(1996, 7, 6), new DateTime(1996, 08, 07), true, new List<string> { "Rio de Janeiro" }, "India", "89 MG Road", 3, new TimeOnly(14, 15, 0)));
+                Orders.Add(new OrderData(10251, "VINET", "Vins et alcools Chevalier", 41.34, new DateTime(1996, 7, 7), new DateTime(1996, 08, 07), false, new List<string> { "Lyon" }, "France", "23 Rue Victor Hugo", 1, new TimeOnly(11, 45, 0)));
+                Orders.Add(new OrderData(10252, "SUPRD", "Suprêmes délices", 151.30, new DateTime(1996, 7, 8), new DateTime(1996, 08, 07), true, new List<string> { "Charleroi" }, "Belgium", "78 Rue de l'Industrie", 2, new TimeOnly(13, 0, 0)));
+                Orders.Add(new OrderData(10253, "HANAR", "Hanari Carnes", 58.17, new DateTime(1996, 7, 9), new DateTime(1996, 08, 07), false, new List<string> { "Bern" }, "Switzerland", "5 Bahnhofstrasse", 3, new TimeOnly(16, 30, 0)));
+                Orders.Add(new OrderData(10254, "CHOPS", "Chop-suey Chinese", 22.98, new DateTime(1996, 7, 10), new DateTime(1996, 08, 07), true, new List<string> { "Genève" }, "Switzerland", "12 Rue de Mont Blanc", 2, new TimeOnly(8, 0, 0)));
+                Orders.Add(new OrderData(10255, "VINET", "Vins et alcools Chevalier", 148.33, new DateTime(1996, 7, 11), new DateTime(1996, 08, 07), false, new List<string> { "Resende" }, "India", "7 Residency Road", 1, new TimeOnly(10, 30, 0)));
+                Orders.Add(new OrderData(10256, "HANAR", "Hanari Carnes", 13.97, new DateTime(1996, 7, 12), new DateTime(1996, 08, 07), true, new List<string> { "Paris" }, "France", "15 Rue de Rivoli", 3, new TimeOnly(9, 45, 0)));
+            }
+            return Orders;
+        }
+
+        public int OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public string ShipName { get; set; }
+        public double? Freight { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public DateTime? ShippedDate { get; set; }
+        public bool? IsVerified { get; set; }
+        public List<string> ShipCity { get; set; }
+        public string ShipCountry { get; set; }
+        public string ShipAddress { get; set; }
+        public int EmployeeID { get; set; }
+        public TimeOnly? OrderTime { get; set; }
+    }
 
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VtByjyMpiavpHVWn?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/htrSjyVNJjotXFbu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5f" %}
 
 ### Render RichTextEditor in EditTemplate
 
@@ -2436,11 +2442,11 @@ public class OrderData
 
 ### Render Uploader in EditTemplate
 
-The Syncfusion Blazor DataGrid allows you to render an Uploader within the Grid’s edit form. This feature is especially valuable when you need to upload and manage files or images in a specific column during data editing.
+The Syncfusion Blazor DataGrid allows you to render an [SfUpload](https://blazor.syncfusion.com/documentation/file-upload/getting-started-with-web-app) within the Grid’s edit form. This feature is especially valuable when you need to upload and manage files or images in a specific column during data editing.
 
-To render a Uploader in the edit form, you need to define an [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) for the Grid column. The `EditTemplate` property specifies the cell edit template that is used as an editor for a particular column. It can accept either a template string or an HTML element ID.
+To render a `SfUpload` in the edit form, you need to define an [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) for the Grid column. The `EditTemplate` property specifies the cell edit template that is used as an editor for a particular column. It can accept either a template string or an HTML element ID.
 
-The following example demonstrates how to render a Uploader in the **Employee Image** column of the Grid.
+The following example demonstrates how to render a `SfUpload` in the **Employee Image** column of the Grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -2574,11 +2580,9 @@ The following example demonstrates how to render a Uploader in the **Employee Im
 
 You can find the complete code for this sample on [GitHub](https://github.com/SyncfusionExamples/Render-Upload-component-in-edit-template-in-Blazor-DataGrid).
 
-> By default, the Grid saves the cell when clicking outside the editor component. If your components, like multiple popups, are dynamically rendered, the Grid may not recognize them, causing the editor to close when the popup is clicked. To prevent this, apply the `edit-custom-template` class to both your main component and sub-components. If you are using Syncfusion® components, set their `cssClass` property to include the `edit-custom-template` class.
-
 ### Render cascading DropDownList in EditTemplate
 
-The Syncfusion Blazor DataGrid enables the rendering of cascading DropDownLists within the edit form using the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) property of the GridColumn. This functionality is particularly beneficial for creating a hierarchy of options, such as selecting a country and then choosing a state based on the selected country.
+The Syncfusion Blazor DataGrid enables the rendering of cascading DropDownLists within the edit form using the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). This functionality is particularly beneficial for creating a hierarchy of options, such as selecting a country and then choosing a state based on the selected country.
 
 To implement cascading DropDownLists in Grid editing, you need to utilize the `EditTemplate` property of the GridColumn.
 
@@ -2690,7 +2694,7 @@ The following example demonstrates how to render cascading DropDownLists for the
 
 By defining the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) feature of a [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html), you can render a custom editor in the Grid's edit form. However, two-way (@bind-Value) binding cannot be defined for the editor inside the `EditTemplate` because its data type is unknown when the Grid is bound to a `DynamicObject`. In such cases, you can use an alternative approach to perform CRUD operations within a `DynamicObject` bound Grid using an `EditTemplate`.
 
-For instance, a [ComboBox](https://blazor.syncfusion.com/documentation/combobox/getting-started-with-web-app) can be defined inside the EditTemplate, and any changes made by the user can be captured and saved to the Grid by handling the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_ValueChange) event of the ComboBox alongside the Grid’s [RowUpdating](https://blazor.syncfusion.com/documentation/datagrid/events#rowupdating) event. This event-driven method allows you to manually update the underlying dynamic data, ensuring smooth editing functionality despite the absence of compile-time property types.
+For instance, a [SfComboBox](https://blazor.syncfusion.com/documentation/combobox/getting-started-with-web-app) can be defined inside the `EditTemplate`, and any changes made by the user can be captured and saved to the Grid by handling the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_ValueChange) event of the `SfComboBox` alongside the Grid’s [RowUpdating](https://blazor.syncfusion.com/documentation/datagrid/events#rowupdating) event. This event-driven method allows you to manually update the underlying dynamic data, ensuring smooth editing functionality despite the absence of compile-time property types.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -2795,7 +2799,7 @@ You can find the complete code for this sample on [GitHub](https://github.com/Sy
 
 ### ExpandoObject data binding with Edit template
 
-By defining the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) feature of a [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html), you can render a custom editor in Grid edit form. Two-way (@bind-Value) binding cannot be defined to the editor inside EditTemplate, since its data type is unknown when Grid is bound by ExpandoObject. In this case, you can use the following way to perform a CRUD operation in the ExpandoObject data binding Grid with EditTemplate.
+By defining the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) feature of a [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html), you can render a custom editor in Grid edit form. Two-way (@bind-Value) binding cannot be defined to the editor inside `EditTemplate`, since its data type is unknown when Grid is bound by ExpandoObject. In this case, you can use the following way to perform a CRUD operation in the ExpandoObject data binding Grid with EditTemplate.
 
 The `SfTextBox` is defined inside the EditTemplate and changes can be saved into the Grid using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_ValueChange) event of the `SfTextBox` and the [RowUpdating](https://blazor.syncfusion.com/documentation/datagrid/events#rowupdating) event of the Grid.
 
@@ -2867,6 +2871,8 @@ The `SfTextBox` is defined inside the EditTemplate and changes can be saved into
 
 {% endhighlight %}
 {% endtabs %}
+
+You can find the complete code for this sample on [GitHub](https://github.com/SyncfusionExamples/ExpandoObject-data-binding-with-EditTemplate-in-Blazor-DataGrid).
 
 ## See also
 
