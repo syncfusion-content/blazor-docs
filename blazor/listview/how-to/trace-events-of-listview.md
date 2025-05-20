@@ -19,8 +19,6 @@ The ListView control triggers events based on its actions. The events can be use
 
 4. Get the clicked item details from the `ClickEventArgs` in the Clicked event, and display the clicked list item text in the event trace panel while clicking list items.
 
-5. Use clear button to remove event trace information.
-
 ```cshtml
 @using Syncfusion.Blazor.Lists
 
