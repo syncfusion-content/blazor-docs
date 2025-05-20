@@ -1580,11 +1580,11 @@ public class OrderData
 
 The Syncfusion Blazor DataGrid allows you to render images in the `SfDropDownList` editor. This feature is valuable when you want to display images for each item in the dropdown list of a particular column, enhancing the visual representation of your data.
 
-To render a `sfDropDownList` in the edit form, you need to define an [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) in the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). The `EditTemplate` property specifies the cell edit template that is used as an editor for a particular column. It can accept either a template string or an HTML element ID.
+To render a `SfDropDownList` in the edit form, you need to define an [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) in the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). The `EditTemplate` property specifies the cell edit template that is used as an editor for a particular column. It can accept either a template string or an HTML element ID.
 
-To display an image in the SfDropDownList editor, use the [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ItemTemplate) property of the `SfDropDownList`. This property allows you to customize the content of each item in the dropdown list.
+To display an image in the `SfDropDownList` editor, use the [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ItemTemplate) property of the `SfDropDownList`. This property allows you to customize the content of each item in the dropdown list.
 
-The following example demonstrates how to render images in the `SfDropDownList` editor using the `ItemTemplate` within the **EmployeeName** column of the Grid.
+In the example below, images are rendered inside the dropdown of the **EmployeeName** column. The column uses a `GridForeignColumn` to bind the **EmployeeID** field to the foreign data source **Employees**, displaying the employee's first name and photo.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -2572,6 +2572,8 @@ The following example demonstrates how to render a Uploader in the **Employee Im
 
 ![Render Uploader in EditTemplate](./images/blazor-datagrid-editing-upload.gif)
 
+You can find the complete code for this sample on [GitHub](https://github.com/SyncfusionExamples/Render-Upload-component-in-edit-template-in-Blazor-DataGrid).
+
 > By default, the Grid saves the cell when clicking outside the editor component. If your components, like multiple popups, are dynamically rendered, the Grid may not recognize them, causing the editor to close when the popup is clicked. To prevent this, apply the `edit-custom-template` class to both your main component and sub-components. If you are using Syncfusion® components, set their `cssClass` property to include the `edit-custom-template` class.
 
 ### Render cascading DropDownList in EditTemplate
@@ -2686,13 +2688,14 @@ The following example demonstrates how to render cascading DropDownLists for the
 
 ### DynamicObject data binding with EditTemplate
 
-By defining the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) feature of a [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html), you can render a custom editor in the Grid's edit form. Two-way (`@bind-Value`) binding cannot be defined for the editor inside the `EditTemplate`, as its data type is unknown when the Grid is bound to a `DynamicObject`. In such cases, you can use the following approach to perform CRUD operations in a `DynamicObject` bound Grid with an `EditTemplate`.
+By defining the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) feature of a [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html), you can render a custom editor in the Grid's edit form. However, two-way (@bind-Value) binding cannot be defined for the editor inside the `EditTemplate` because its data type is unknown when the Grid is bound to a `DynamicObject`. In such cases, you can use an alternative approach to perform CRUD operations within a `DynamicObject` bound Grid using an `EditTemplate`.
 
-The ComboBox is defined inside the `EditTemplate`, and changes can be saved to the Grid using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_ValueChange) event of the ComboBox and the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event of the Grid.
+For instance, a [ComboBox](https://blazor.syncfusion.com/documentation/combobox/getting-started-with-web-app) can be defined inside the EditTemplate, and any changes made by the user can be captured and saved to the Grid by handling the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_ValueChange) event of the ComboBox alongside the Grid’s [RowUpdating](https://blazor.syncfusion.com/documentation/datagrid/events#rowupdating) event. This event-driven method allows you to manually update the underlying dynamic data, ensuring smooth editing functionality despite the absence of compile-time property types.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
+@page "/"
 @using System.Dynamic;
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
@@ -2700,7 +2703,7 @@ The ComboBox is defined inside the `EditTemplate`, and changes can be saved to t
 
 <SfGrid DataSource="@Orders" AllowGrouping="true" AllowFiltering="true" AllowSorting="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal"></GridEditSettings>
-    <GridEvents OnActionBegin="ActionBeginHandler" TValue="OrdersDetails"></GridEvents>
+    <GridEvents RowUpdating="RowUpdating" TValue="OrdersDetails"></GridEvents>
     <GridColumns>
     <GridColumn IsPrimaryKey="true" Field="OrderID" HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" />
     <GridColumn Field="CustomerID" HeaderText="Customer Name" Width="150" />
@@ -2722,7 +2725,7 @@ The ComboBox is defined inside the `EditTemplate`, and changes can be saved to t
 
 @code{
     public List<OrdersDetails> Orders { get; set; } = new List<OrdersDetails>();
-    public List<string> accounts { get; set; } = (new List<string> { "pavan", "kumar", "sai", "saketh", "vijaya", "Swaroop" });
+    public List<string> accounts { get; set; } = (new List<string> { "John", "Jane", "Joe", "Jack", "Smith", "Elena" });
     public string ComboBoxValue { get; set; }
 
     public void ValueChangeHandler(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string, string> args) {
@@ -2744,19 +2747,9 @@ The ComboBox is defined inside the `EditTemplate`, and changes can be saved to t
         }).Cast<OrdersDetails>().ToList<OrdersDetails>();
     }
 
-    public async void ActionBeginHandler(ActionEventArgs<OrdersDetails> Args)
+    public async void RowUpdating(RowUpdatingEventArgs<OrdersDetails> Args)
     {
-        if (Args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Save))
-        {
-            if (Args.Action == "Add")
-            {
-                ((OrdersDetails)Args.Data).TrySetMember(new DataSetMemberBinderClone("Account", false), ComboBoxValue);
-            }
-           else if (Args.Action == "Edit")
-            {
-                ((OrdersDetails)Args.Data).TrySetMember(new DataSetMemberBinderClone("Account", false), ComboBoxValue);
-            }
-        }
+        ((OrdersDetails)Args.Data).TrySetMember(new DataSetMemberBinderClone("Account", false), ComboBoxValue);
         await Task.CompletedTask;
     }
 
@@ -2798,22 +2791,25 @@ The ComboBox is defined inside the `EditTemplate`, and changes can be saved to t
 {% endhighlight %}
 {% endtabs %}
 
+You can find the complete code for this sample on [GitHub](https://github.com/SyncfusionExamples/DynamicObject-data-binding-with-EditTemplate-in-Blazor-DataGrid).
+
 ### ExpandoObject data binding with Edit template
 
 By defining the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) feature of a [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html), you can render a custom editor in Grid edit form. Two-way (@bind-Value) binding cannot be defined to the editor inside EditTemplate, since its data type is unknown when Grid is bound by ExpandoObject. In this case, you can use the following way to perform a CRUD operation in the ExpandoObject data binding Grid with EditTemplate.
 
-The `SfTextBox` is defined inside the EditTemplate and changes can be saved into the Grid using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_ValueChange) event of the `SfTextBox` and the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event of the Grid.
+The `SfTextBox` is defined inside the EditTemplate and changes can be saved into the Grid using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_ValueChange) event of the `SfTextBox` and the [RowUpdating](https://blazor.syncfusion.com/documentation/datagrid/events#rowupdating) event of the Grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
+@page "/"
 @using Syncfusion.Blazor.Grids
 @using System.Dynamic
-@using Syncfusion.Blazor.Inputs 
+@using Syncfusion.Blazor.Inputs
 @using Action = Syncfusion.Blazor.Grids.Action;
 
 <SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@ToolbarItems">
-<GridEvents OnActionBegin="OnActionBegin" TValue="ExpandoObject"></GridEvents>
+    <GridEvents RowUpdating="RowUpdating" TValue="ExpandoObject"></GridEvents>
     <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true"></GridEditSettings>
     <GridColumns>
         <GridColumn Field="OrderID" HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
@@ -2828,7 +2824,7 @@ The `SfTextBox` is defined inside the EditTemplate and changes can be saved into
         </GridColumn>
         <GridColumn Field="Freight" HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field="OrderDate" HeaderText=" Order Date" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
-        <GridColumn Field="ShipCountry" HeaderText="Ship Country"  Width="150"></GridColumn>
+        <GridColumn Field="ShipCountry" HeaderText="Ship Country" Width="150"></GridColumn>
         <GridColumn Field="Verified" HeaderText="Active" DisplayAsCheckBox="true" Width="150"></GridColumn>
     </GridColumns>
 </SfGrid>
@@ -2843,13 +2839,14 @@ The `SfTextBox` is defined inside the EditTemplate and changes can be saved into
         TextBoxValue = args.Value;
     }
 
-    public void OnActionBegin(ActionEventArgs<ExpandoObject> args)
+    public void RowUpdating(RowUpdatingEventArgs<ExpandoObject> args)
     {
-        if (args.RequestType.Equals(Action.Save) || args.RequestType.Equals(Action.Add))
+        var data = args.Data as IDictionary<string, object>;
+        if (string.IsNullOrEmpty(TextBoxValue?.ToString()))
         {
-            var data = args.Data as IDictionary<string, object>;
-            data["CustomerID"] = TextBoxValue; // Assign the value selected from dropdown to the corresponding column fields.
+            TextBoxValue = data["CustomerID"];
         }
+        data["CustomerID"] = TextBoxValue;
     }
 
     protected override void OnInitialized()
@@ -2861,7 +2858,7 @@ The `SfTextBox` is defined inside the EditTemplate and changes can be saved into
             expandObject.CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)];
             expandObject.Freight = (new double[] { 2, 1, 4, 5, 3 })[new Random().Next(5)] * x;
             expandObject.OrderDate = (new DateTime[] { new DateTime(2010, 11, 5), new DateTime(2018, 10, 3), new DateTime(1995, 9, 9), new DateTime(2012, 8, 2), new DateTime(2015, 4, 11) })[new Random().Next(5)];
-            expandObject.ShipCountry = (new string[] { "USA", "UK" })[new Random().Next(2)];;
+            expandObject.ShipCountry = (new string[] { "USA", "UK" })[new Random().Next(2)]; ;
             expandObject.Verified = (new bool[] { true, false })[new Random().Next(2)];
             return expandObject;
         }).Cast<ExpandoObject>().ToList<ExpandoObject>();
