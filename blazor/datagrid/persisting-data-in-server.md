@@ -23,7 +23,7 @@ For more information, see the [UrlAdaptor documentation](https://blazor.syncfusi
 
 **Using ODataV4Adaptor**
 
-The [ODataV4Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor) allows the Syncfusion Blazor DataGrid to integrate with OData V4 services, supporting efficient data querying and manipulation. You can perform CRUD operations using the `ODataV4Adaptor` to ensure compatibility with OData-compliant backends.
+The [ODataV4Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odatav4-adaptor) allows the Syncfusion Blazor DataGrid to integrate with OData V4 services, supporting efficient data querying and manipulation. You can perform CRUD operations using the `ODataV4Adaptor` to ensure compatibility with OData-compliant backend.
 
 For more information, see the [ODataV4Adaptor documentation](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/odatav4-adaptor).
 
