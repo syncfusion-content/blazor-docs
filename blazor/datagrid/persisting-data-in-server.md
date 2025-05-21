@@ -11,7 +11,7 @@ documentation: ug
 
 The Syncfusion Blazor DataGrid enables you to persist data changes made in the Grid to a server or database using RESTful web services. All CRUD (Create, Read, Update, Delete) operations performed in the Grid are managed by the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html), which can bind to server-side data sources and synchronize updates with the backend. This ensures that any changes made in the UI are reliably saved to your data store.
 
-> The [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) persists data in the server according to the OData protocol.
+> The [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) persists data in the server according to the **OData** protocol.
 
 Syncfusion provides multiple adaptors to handle different server protocols and APIs, enabling smooth integration with RESTful services. Below are the various adaptors you can use to persist data in the Grid.
 
@@ -29,7 +29,7 @@ For more information, see the [ODataV4Adaptor documentation](https://blazor.sync
 
 **Using WebApiAdaptor**
 
-The [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor) is designed for use with Web APIs that follow the OData protocol. It extends the capabilities of the `ODataAdaptor` and enables smooth communication between the Grid and OData-based Web APIs for data retrieval and updates.
+The [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#web-api-adaptor) is designed for use with Web APIs that follow the **OData** protocol. It extends the capabilities of the `ODataAdaptor` and enables smooth communication between the Grid and OData-based Web APIs for data retrieval and updates.
 
 For more information, see the [WebApiAdaptor documentation](https://blazor.syncfusion.com/documentation/datagrid/connecting-to-adaptors/web-api-adaptor).
 
