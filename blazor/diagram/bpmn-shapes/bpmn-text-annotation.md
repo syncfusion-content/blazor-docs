@@ -11,11 +11,11 @@ documentation: ug
 
 * A BPMN object can be associated with a text annotation that does not affect the flow but provides information about objects within a flow. 
 
-* A TextAnnotation points to or references another BPMN shape, which we call the [TextAnnotationTarget](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnTextAnnotation.html#Syncfusion_Blazor_Diagram_BpmnTextAnnotation_TextAnnotationTarget) of the TextAnnotation. When a target shape is moved, copied, or deleted, any TextAnnotations attached to the shape will be moved, copied, or deleted too. Thus, the TextAnnotations remain with their target shapes though you can reposition the TextAnnotation to any offset from its target. The [TextAnnotationTarget](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnTextAnnotation.html#Syncfusion_Blazor_Diagram_BpmnTextAnnotation_TextAnnotationTarget) property of the [BpmnTextAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnTextAnnotation.html) is used to connect an annotation element to the BPMN Node.
+* A Text Annotation points to or references another BPMN shape, which we call the [TextAnnotationTarget](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnTextAnnotation.html#Syncfusion_Blazor_Diagram_BpmnTextAnnotation_TextAnnotationTarget) of the Text Annotation. When a target shape is moved, copied, or deleted, any Text Annotations attached to the shape will be moved, copied, or deleted too. Thus, the Text Annotations remain with their target shapes though you can reposition the Text Annotation to any offset from its target. The [TextAnnotationTarget](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnTextAnnotation.html#Syncfusion_Blazor_Diagram_BpmnTextAnnotation_TextAnnotationTarget) property of the [BpmnTextAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnTextAnnotation.html) is used to connect an annotation element to the BPMN Node.
 
 * The annotation element can be switched from a BPMN node to another BPMN node simply by dragging the source end of the annotation connector into the other BPMN node.
 
-* By default, the TextAnnotation shape has a connection.
+* By default, the Text Annotation shape has a connection.
 
 * The [TextAnnotationDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnTextAnnotation.html#Syncfusion_Blazor_Diagram_BpmnTextAnnotation_TextAnnotationDirection) property is used to set the shape direction of the text annotation.
 
@@ -25,7 +25,7 @@ documentation: ug
 
 * The [OffsetX](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_OffsetX) and [OffsetY](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_OffsetY) properties are used to set the distance between the BPMN node and the TextAnnotation.
 
-* The TextAnnotation element can be moved (if their have connected with any BPMN Node) while dragging the BPMN node.
+* The Text Annotation element can be moved (if their have connected with any BPMN Node) while dragging the BPMN node.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -72,7 +72,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Auto BPMN Shape](../images/Bpmn-TextAnnotation-Auto.png)
 
-The following code example represents how to create a TextAnnotation and connect the Activity and TextAnnotation shape.
+The following code example represents how to create a Text Annotation and connect the Activity and Text Annotation shape.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -138,10 +138,10 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Auto BPMN Shape](../images/bpmn-text-annotation_WithTarget.png) 
 
-## How to connect the TextAnnotation to BPMNNode
-Drag and drop any bpmn shapes from the palette to the diagram and connect the BPMN Node and TextAnnotation.
+## How to Connect a Text Annotation to a BPMN Node
+Drag and drop any bpmn shapes from the palette to the diagram and connect the BPMN Node and Text Annotation.
 
-The following image shows how to drag a symbol from the palette and connect the TextAnnotation to the BPMNNode with interaction.
+The following image shows how to drag a symbol from the palette and connect the Text Annotation to the BPMN Node with interaction.
 
 ![Auto BPMN Shape](../images/Bpmn-TextAnnotationTarget-Connect.gif)
 
