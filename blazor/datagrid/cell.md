@@ -342,9 +342,6 @@ The following example demonstrates how to add a `QueryCellInfo` event handler to
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LDLgjvivAmfpAZcD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-<<<<<<< HEAD
-> The  [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.QueryCellInfoEventArgs-1.html) event is triggered for every cell of the Grid, so it may impact the performance of the Grid whether used to modify a large number of cells.
-=======
 * Similarly, using the `QueryCellInfo` event, we can customize the appearance of the `Freight` column based on value ranges, and in this sample, each range is styled with distinct text and background colors using refined CSS:
 
 {% tabs %}
@@ -456,7 +453,6 @@ The following example demonstrates how to add a `QueryCellInfo` event handler to
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VNroZyCqJkbikUBx?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > The  [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.QueryCellInfoEventArgs-1.html) event is triggered for every cell of the grid, so it may impact the performance of the grid whether used to modify a large number of cells.
->>>>>>> cbb83939d8881abd46a4c000efc612e40d9df06f
 
 ### Using CSS
 
