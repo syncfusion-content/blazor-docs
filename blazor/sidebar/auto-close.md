@@ -42,10 +42,6 @@ In the following sample, **mediaQuery** has been used for specific resolution to
         font-size: 1.5rem;
         padding: 3rem;
     }
-
-    .main > div {
-        padding: 0px !important;
-    }
 </style>
 
 ```

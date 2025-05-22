@@ -381,7 +381,7 @@ The example provided demonstrates how to use the `ItemSelected` event of the con
 
 ### Add or remove node programmatically
 
-The Blazor TreeView component allows for the dynamic addition or removal of specific nodes by manipulating the data source.This can be achieved by using appropriate methods to update the data source.
+The Blazor TreeView component allows for the dynamic addition or removal of specific nodes by manipulating the data source. This can be achieved by using appropriate methods to update the data source.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -1381,6 +1381,8 @@ The Blazor TreeView component with template enables dynamic editing of specific 
 The Blazor TreeView component can be set to read-only mode by disabling certain features or handling events that trigger actions, such as disabling the context menu, handling item selected, item expand, and item collapse events, and disabling the editable property of the TreeView component, which will prevent for adding, removing, or editing nodes.
 
 ```cshtml
+@using Syncfusion.Blazor.Navigations
+
 <SfTreeView TValue="MailItem">
     <TreeViewFieldsSettings TValue="MailItem" Id="Id" DataSource="@MyFolder" Text="FolderName" ParentID="ParentId" HasChildren="HasSubFolders" Expanded="Expanded"></TreeViewFieldsSettings>
     <TreeViewEvents TValue="MailItem" NodeSelecting="NodeSelecting" NodeExpanding="NodeExpanding" NodeCollapsing="NodeCollapsing"></TreeViewEvents>

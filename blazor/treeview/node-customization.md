@@ -124,7 +124,7 @@ The Blazor TreeView component has the built-in option to customize each node's a
     /* Loading sprite image for TreeView */
     .e-treeview .e-list-icon {
         background-repeat: no-repeat;
-        background-image: url('@UriHelper.ToAbsoluteUri($"https://blazor.syncfusion.com/demos/_content/blazorservercommon_net6/images/treeview/file-icons.png")');
+        background-image: url('@UriHelper.ToAbsoluteUri($"https://blazor.syncfusion.com/demos/_content/blazor_server_common_net9/images/treeview/file-icons.png")');
         height: 20px;
     }
     .e-treeview .e-list-img {
@@ -444,6 +444,8 @@ In the Blazor TreeView component, you can show or hide particular TreeView nodes
 In the Blazor TreeView component, you can show or hide particular TreeView nodes dynamically on a button click by adding or removing them from the data source. 
 
 ```cshtml
+@using Syncfusion.Blazor.Navigations
+
 <SfTreeView TValue="MailItem">
     <TreeViewFieldsSettings TValue="MailItem" DataSource="@MyFolder" Id="ID" Text="FolderName" ParentID="ParentId" HasChildren="HasSubFolders" Expanded="Expanded"></TreeViewFieldsSettings>
 </SfTreeView>
@@ -523,7 +525,7 @@ In the Blazor TreeView component, you can show or hide particular TreeView nodes
 
 ## Enable Tooltip in Blazor TreeView Component
 
-The TreeView control allows to set tooltip option to tree nodes using the **Tooltip** property. 
+The TreeView component allows to set tooltip option to tree nodes using the **Tooltip** property. 
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

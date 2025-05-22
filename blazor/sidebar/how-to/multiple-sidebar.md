@@ -72,10 +72,6 @@ In the following sample, more than one Sidebar is rendered based on `Position` p
         font-size: 1.5rem;
         padding: 3rem;
     }
-
-    .main > div {
-        padding: 0px !important;
-    }
 </style>
 
 ```

@@ -165,10 +165,6 @@ In the following sample, the list item has icon with text representation. On doc
         font-weight: normal;
         font-style: normal;
     }
-
-    .main > div {
-        padding: 0px !important;
-    }
     /* end of sidebar styles */
 </style>
 

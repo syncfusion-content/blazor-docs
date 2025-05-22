@@ -154,14 +154,6 @@ In the following example, the Sidebar is rendered with ListView component in its
         text-align: center;
         padding: 20px;
     }
-
-    body {
-        margin: 0;
-    }
-
-    .main > div {
-        padding: 0px !important;
-    }
 </style>
 
 

@@ -240,10 +240,6 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
         font-size: 1.5rem;
         padding: 3rem;
     }
-
-    .main > div {
-        padding: 0px !important;
-    }
 </style>
 
 {% endhighlight %}
@@ -302,10 +298,6 @@ Here, the DOM elements will not get changed. It only closes the main content by 
         font-size: 1.5rem;
         padding: 3rem;
     }
-
-    .main > div {
-        padding: 0px !important;
-    }
 </style>
 
 {% endhighlight %}
@@ -361,10 +353,6 @@ Animation transitions can be set while expanding or collapsing the Sidebar using
         font-size: 1.5rem;
         padding: 3rem;
     }
-
-    .main > div {
-        padding: 0px !important;
-    }
 </style>
 
 {% endhighlight %}
@@ -380,6 +368,9 @@ In the following example, the Sidebar is rendered with Accordion component in it
 
 {% tabs %}
 {% highlight razor %}
+
+@using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.Buttons
 
 <div id="head">
     <SfToolbar>
@@ -498,10 +489,6 @@ In the following example, the Sidebar is rendered with Accordion component in it
         background-color: midnightblue;
         color: white;
         font-size: 16px;
-    }
-
-    .main > div {
-        padding: 0px !important;
     }
 
     .e-avatar.image {
