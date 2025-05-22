@@ -9,7 +9,7 @@ documentation: ug
 
 ## How to create a connector port
 
-Creating connector ports is similar to creating node ports. To define connector ports, you need to create a collection of `PathPort` and assign it to the connector’s `Ports` property.
+Creating connector ports is similar to creating node ports. To define connector ports, you need to create a collection of `ConnectorPort` and assign it to the connector’s `Ports` property.
 
 The following code example demonstrates how to create a connector port.
 
@@ -36,9 +36,9 @@ The following code example demonstrates how to create a connector port.
             SourcePoint = new DiagramPoint() { X = 400, Y = 200 },
             TargetPoint = new DiagramPoint() { X = 550, Y = 350 },
             Type = ConnectorSegmentType.Orthogonal,
-            Ports = new DiagramObjectCollection<PathPort>()
+            Ports = new DiagramObjectCollection<ConnectorPort>()
             {
-                new PathPort()
+                new ConnectorPort()
                 {
                     ID = "port",
                     Visibility = PortVisibility.Visible,
@@ -96,9 +96,9 @@ The following code example demonstrates how to set the PathPosition for a connec
             SourcePoint = new DiagramPoint() { X = 400, Y = 200 },
             TargetPoint = new DiagramPoint() { X = 550, Y = 350 },
             Type = ConnectorSegmentType.Orthogonal,
-            Ports = new DiagramObjectCollection<PathPort>()
+            Ports = new DiagramObjectCollection<ConnectorPort>()
             {
-                new PathPort()
+                new ConnectorPort()
                 {
                     ID = "port",
                     Visibility = PortVisibility.Visible,
@@ -138,9 +138,9 @@ The following code example demonstrates how to connect one connector to a port o
             SourcePoint = new DiagramPoint() { X = 200, Y = 100 },
             TargetPoint = new DiagramPoint() { X = 350, Y = 250 },
             Type = ConnectorSegmentType.Bezier,
-            Ports = new DiagramObjectCollection<PathPort>()
+            Ports = new DiagramObjectCollection<ConnectorPort>()
             {
-                new PathPort()
+                new ConnectorPort()
                 {
                     ID = "port",
                     Visibility = PortVisibility.Visible,
@@ -155,9 +155,9 @@ The following code example demonstrates how to connect one connector to a port o
             SourcePoint = new DiagramPoint() { X = 600, Y = 100 },
             TargetPoint = new DiagramPoint() { X = 750, Y = 250 },
             Type = ConnectorSegmentType.Bezier,
-            Ports = new DiagramObjectCollection<PathPort>()
+            Ports = new DiagramObjectCollection<ConnectorPort>()
             {
-                new PathPort()
+                new ConnectorPort()
                 {
                     ID = "port",
                     Visibility = PortVisibility.Visible,

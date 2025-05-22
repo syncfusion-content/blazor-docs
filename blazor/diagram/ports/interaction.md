@@ -97,9 +97,9 @@ The following code explains how to draw the connector by using the port constrai
             SourcePoint = new DiagramPoint() { X = 400, Y = 200 },
             TargetPoint = new DiagramPoint() { X = 550, Y = 350 },
             Type = ConnectorSegmentType.Bezier,
-            Ports = new DiagramObjectCollection<PathPort>()
+            Ports = new DiagramObjectCollection<ConnectorPort>()
             {
-                new PathPort()
+                new ConnectorPort()
                 {
                     ID = "port",
                     Visibility = PortVisibility.Visible,
