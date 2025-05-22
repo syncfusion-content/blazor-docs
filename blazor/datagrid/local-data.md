@@ -1208,9 +1208,6 @@ public class OrderData
     public DateTime? OrderDate { get; set; }
 }
 
-{% endhighlight %}
-{% endtabs %}
-
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDhIXeCHJywphWgL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ![Changing Datasource Dynamically in Blazor DataGrid](../images/blazor-datagrid-dynamic-datasource.gif)
