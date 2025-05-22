@@ -1690,11 +1690,11 @@ public class OrderData
 
 > You can find a complete sample on [GitHub](https://github.com/SyncfusionExamples/exporting-blazor-datagrid/tree/master/Exporting-PDF-Datagrid/Rotate_header).
 
-## Exporting Grid data as stream
+## Exporting Blazor DataGrid data as stream
 
 The Syncfusion Blazor DataGrid allows exporting Grid data as a memory stream, enabling programmatic handling before saving or processing. The following sections cover how to export Grid data as a memory stream, merge multiple memory streams into one, and convert the memory stream to a file stream for saving the exported file.
 
-### Exporting Grid data as memory stream
+### Exporting Blazor DataGrid data as memory stream
 
 The export to memory stream feature allows you to export data from a Grid to a memory stream instead of saving it to a file directly on the server. This can be particularly useful when you want to generate and serve the file directly to the client without saving it on the server, ensuring a smooth and efficient download process.
 
