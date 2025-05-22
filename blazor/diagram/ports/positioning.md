@@ -7,7 +7,7 @@ control: Diagram Component
 documentation: ug
 ---
 
-# How to position node’s port
+# How to Position a Node’s Port
 
 Diagram allows you to customize the position and appearance of the port efficiently. Ports can be aligned relative to the node boundaries. It has Margin, Offset, Horizontal, and Vertical alignment settings. It is quite tricky when all four alignments are used together but gives more control over alignments properties of the [PointPort](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PointPort.html) class. Ports of a node can be positioned using the following properties of `PointPort`.
 
@@ -16,7 +16,7 @@ Diagram allows you to customize the position and appearance of the port efficien
 * VerticalAlignment
 * Margin
 
-## How to change offset at runtime
+## How to Change Offset at Runtime
 
 The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PointPort.html#Syncfusion_Blazor_Diagram_PointPort_Offset) property is used to align the ports based on fractions. 0 represents top/left corner, 1 represents bottom/right corner, and 0.5 represents half of width/height.
 
@@ -84,7 +84,7 @@ The following table shows the relationship between the shape port position and p
 
 
 
-## How to change Horizontal and Vertical alignment
+## How to Change Horizontal and Vertical Alignment
 
 The [HorizontalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_HorizontalAlignment) property of the port is used to set how the port is horizontally aligned at the port position determined from the fraction values. The [VerticalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_VerticalAlignment) property is used to set how the port is vertically aligned at the port position.
 
@@ -156,9 +156,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 N> By default, the value of the `HorizontalAlignment` and `VerticalAlignment` is `Center`. The alignment is positioned based on the offset value.
 
-## How to update margin for port
+## How to Update Margin for Port
 
-[Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_Margin) is an absolute value used to add some blank space to any one of its four sides. The ports can be displaced with the margin property. The following code example explains how to align a port based on its Offset, HorizontalAlignment, VerticalAlignment, and Margin values.
+[Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_Margin) is an absolute value used to add some blank space to any one of its four sides. The ports can be displaced with the margin property. The following code example explains how to align a port based on its Offset, Horizontal Alignment, Vertical Alignment, and Margin values.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram

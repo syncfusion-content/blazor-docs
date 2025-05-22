@@ -10,7 +10,7 @@ documentation: ug
 # Swimlane-Palette in Blazor Diagram Component
   Diagram provides support to add lanes and phases to the symbol palette. 
 
-## Add lanes and phases into symbol palette
+## Add Lanes and Phases to the Symbol Palette
 
 Swimlane elements such as [Lane](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Lane.html) and [Phase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Phase.html) can be used to visualize the symbols.
 

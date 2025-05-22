@@ -7,7 +7,7 @@ control: Diagram Component
 documentation: ug
 ---
 
-# How to position connector’s annotation
+# How to Position Connector’s Annotation
 
 Annotations of a connector can be positioned using the following properties of Annotation class.
 
@@ -19,7 +19,7 @@ Annotations of a connector can be positioned using the following properties of A
 * VerticalAlignment
 * Margin
 
-## How to update offset for annotations
+## How to Update the Offset for Annotations
 
 The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PathAnnotation.html#Syncfusion_Blazor_Diagram_PathAnnotation_Offset) property of an annotation is used to align the annotations based on fractions. A value of 0 represents Top-Left corner, 1 represents Bottom-Right corner, and 0.5 represents half of Width/Height.
 
@@ -78,7 +78,7 @@ The following image shows the relationship between the annotation position and o
 > * By default, offset value of the connector annotation is 0.5.
 > * Connector annotation's Id should not start with numbers or special characters and should not contain special characters such as underscores(_) or spaces.
 
-## How to change the alignment of an annotation
+## How to Change the Alignment of an Annotation
 
 The connector’s annotation can be aligned over its segment path using the [Alignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PathAnnotation.html#Syncfusion_Blazor_Diagram_PathAnnotation_Alignment) property of the annotation.
 
@@ -129,7 +129,7 @@ The following screenshot shows how the annotation of the connector aligned over 
 
 N> By default, Alignment value of the connector annotation is `Center`.
 
-## How to change the displacement of an annotation
+## How to Change the Displacement of an Annotation
 
 The [Displacement](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PathAnnotation.html#Syncfusion_Blazor_Diagram_PathAnnotation_Displacement) property is used to dislocate the annotation by the value given. By default, annotation will be in centered on the connector path. When you assign a value to the Displacement property, the annotation will be displaced from its position by displacement value.
 
@@ -173,7 +173,7 @@ The [Displacement](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagr
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/AnnotationOfConnector/DisplacementOfAnnotation)
 
-## How to update the segment angle of an annotation
+## How to Update the Segment Angle of an Annotation
 
 The [SegmentAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PathAnnotation.html#Syncfusion_Blazor_Diagram_PathAnnotation_SegmentAngle) property is used to rotate the annotation based on the connectors segment direction. By default, the annotation will be rotated in the connector path. When you assign a value to the SegmentPath property, the annotation will be rotated from its position based on the connector segment direction.
 

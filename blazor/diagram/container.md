@@ -276,7 +276,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Blazor Diagram Container Palette](images/ContainerImages/ContainerPalette.png)
 
-## Interactively add or remove diagram elements into Container
+## Interactively Add or Remove Diagram Elements into Container
 
 Diagram elements can be added or removed from a container at runtime. When an element is dropped onto the container's edges, the container automatically adjusts its size to accommodate the new element.
 
