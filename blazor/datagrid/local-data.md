@@ -1207,6 +1207,8 @@ public class OrderData
     public double Freight { get; set; }
     public DateTime? OrderDate { get; set; }
 }
+{% endhighlight %}
+{% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rDhIXeCHJywphWgL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
