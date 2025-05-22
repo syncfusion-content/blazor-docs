@@ -7,11 +7,11 @@ control: DataGrid
 documentation: ug
 ---
 
-# Create Custom Grid Component in Blazor DataGrid Component
+# Create custom Blazor DataGrid
 
-You can create a custom Grid component by rendering the SfGrid as a new razor component. It helps to create your own custom component when you want to create multiple grids with same configuration or with default configuration throughout your application.
+You can create a custom DataGrid by rendering the `SfGrid` as a new razor component. It helps to create your own custom component when you want to create multiple Grids with same configuration or with default configuration throughout your application.
 
-This is demonstrated in the following example by creating a custom Grid component called CustomGrid, where SfGrid is rendered with some basic default properties such as GridPageSettings etc., which will be reflected in all the Grids rendered using the CustomGrid component.
+This is demonstrated in the following example by creating a custom Grid called CustomGrid, where `SfGrid` is rendered with some basic default properties such as `GridPageSettings` etc., which will be reflected in all the Grids rendered using the CustomGrid:
 
 CustomGrid.razor
 
