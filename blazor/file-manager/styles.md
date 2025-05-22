@@ -93,9 +93,10 @@ To customize the File Manager layout, use the `.e-layout-content` selector and a
     border: 3px solid #000000;
 }
 
-/* Customize the background of the breadcrumb (address bar) */
+/* Style for breadcrumb (address bar) */
 .e-filemanager .e-layout-content .e-address {
-    background: #fbefff;
+    background: #aceebb;
+    border-bottom: 2px solid;
 }
 
 /* Customize the background for the Large Icons view */
@@ -120,20 +121,19 @@ To customize the File Manager toolbar items, use the `.e-toolbar` selector and a
 ```css
 
 /* Add border to the entire File Manager toolbar */
-.e-filemanager .e-toolbar { 
-    border: 2px solid #0b0bf9;
+.e-filemanager .e-toolbar {
+    border: 2px solid #0d9cf6;
 }
 
 /* Style for individual toolbar buttons */
 .e-filemanager .e-toolbar .e-tbar-btn {
-    background: #0b0bf9;
+        background: #0d9cf6;
     border: 1px solid #000000;
 }
 
 /* Style for toolbar icons */
 .e-filemanager .e-toolbar .e-tbar-btn .e-icons {
-    background: #ffffff;
-    color: #000000;
+    color: #ffffff;
 }
 
 /* Style for toolbar button text */
@@ -151,16 +151,22 @@ To customize the File Manager selected files/folders, use the below selectors an
 
 ```css
 
-/* Highlight for active item in Large Icons view */
-.e-filemanager li.e-list-item.e-large-icon.e-active {
-    background: #1f47a5a1;
+/* Highlight for active and hover item in Large Icons view */
+.e-filemanager li.e-list-item.e-large-icon.e-active,
+.e-filemanager li.e-list-item.e-large-icon.e-active:hover {
+    background: #dee2e6;
     border: 2px solid #000000;
     border-radius: 10%;
 }
 
+/* Color for text */
+.e-filemanager .e-large-icons .e-active {
+    color: #212529;
+}
+
 /* Highlight for active row in Details view */
 .e-filemanager .e-grid td.e-active {
-    background: #1f47a5a1;
+    background: #dee2e6;
 }
 
 ```
