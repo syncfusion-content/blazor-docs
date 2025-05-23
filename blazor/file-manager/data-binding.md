@@ -798,3 +798,109 @@ To load image in File Manager component with injected service, utilize the [Befo
 {% endtabs %}
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-filemanager-with-flat-data).
+
+
+## Understanding FileManagerDirectoryContent Class in Blazor File Manager
+
+The `FileManagerDirectoryContent` class is integral to the Blazor FileManager component, serving as the primary data model for representing files and folders. It is essential to correctly populate its fields to ensure accurate functionality and data representation.
+
+{% tabs %}
+{% highlight razor %}
+
+@code{
+    Data.Add(new FileManagerDirectoryContent()
+    {
+        CaseSensitive = false,
+        DateCreated = new DateTime(2022, 1, 2),
+        DateModified = new DateTime(2022, 2, 3),
+        FilterPath = "/",
+        FilterId = "0/",
+        HasChild = false,
+        Id = "1",
+        IsFile = false,
+        Name = "Documents",
+        ParentId = "0",
+        ShowHiddenItems = false,
+        Size = 680786,
+        Type = "folder"
+    });
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+
+**Required Properties**
+
+These properties are crucial for each file or folder item's representation:
+
+Property | Description
+ ---  | ---
+[Id](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerDirectoryContent.html#Syncfusion_Blazor_FileManager_FileManagerDirectoryContent_Id) | Unique identifier for each file or folder item, ensuring distinct handling within the file manager.
+[Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerDirectoryContent.html#Syncfusion_Blazor_FileManager_FileManagerDirectoryContent_Name) | The display name of the file or folder.
+[IsFile](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerDirectoryContent.html#Syncfusion_Blazor_FileManager_FileManagerDirectoryContent_IsFile) | Boolean value indicating whether the item is a file `true` or a folder `false`.
+[Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerDirectoryContent.html#Syncfusion_Blazor_FileManager_FileManagerDirectoryContent_Size) | Specifies the size in bytes for files, or an aggregated size for folders.
+[ParentId](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerDirectoryContent.html#Syncfusion_Blazor_FileManager_FileManagerDirectoryContent_ParentId) | References the parent folder's ID, creating the hierarchical structure. 
+[DateModified](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerDirectoryContent.html#Syncfusion_Blazor_FileManager_FileManagerDirectoryContent_DateModified) | Indicates when the file or folder was last modified.
+[Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerDirectoryContent.html#Syncfusion_Blazor_FileManager_FileManagerDirectoryContent_Type) |  File extension (for files) `File` or  (for folders) `folder`.
+[FiltePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerDirectoryContent.html#Syncfusion_Blazor_FileManager_FileManagerDirectoryContent_FilterPath) | Relative path to the file or folder.
+[FilterId](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerDirectoryContent.html#Syncfusion_Blazor_FileManager_FileManagerDirectoryContent_FilterId) | Similar to the FilterPath,  FilterPath-like structure using IDs, used for hierarchical operations.
+[HasChild](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerDirectoryContent.html#Syncfusion_Blazor_FileManager_FileManagerDirectoryContent_HasChild) | Determines if a directory contains nested items (`true` for has children, `false` otherwise)
+[DateCreated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerDirectoryContent.html#Syncfusion_Blazor_FileManager_FileManagerDirectoryContent_DateCreated) | Creation date of the file/folder.
+
+
+**Optional Properties**
+
+Property | Description
+ ---  | ---
+[CaseSensitive](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerDirectoryContent.html#Syncfusion_Blazor_FileManager_FileManagerDirectoryContent_CaseSensitive) | Flag for case-sensitive operations.
+[ShowHiddenItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerDirectoryContent.html#Syncfusion_Blazor_FileManager_FileManagerDirectoryContent_ShowHiddenItems) | Flag for displaying hidden items.
+[Path](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerDirectoryContent.html#Syncfusion_Blazor_FileManager_FileManagerDirectoryContent_Path) | Used in specific operations but not required for basic representation.
+[Action](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerDirectoryContent.html#Syncfusion_Blazor_FileManager_FileManagerDirectoryContent_Action) | Defines actions like renaming or deleting the file or folder.
+[NewName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerDirectoryContent.html#Syncfusion_Blazor_FileManager_FileManagerDirectoryContent_NewName) | Specifies a new name for the item, used in rename operations.
+
+
+**Understanding FilterPath vs Path in FileManagerDirectoryContent**
+
+
+Property | Purpose
+ ---  | ---
+[FilterPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerDirectoryContent.html#Syncfusion_Blazor_FileManager_FileManagerDirectoryContent_FilterPath) | A persistent property that acts like an address, telling where an item is located within the file system hierarchy. It's used for navigation within the component and helps display the path in breadcrumb-like features.
+[Path](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.FileManager.FileManagerDirectoryContent.html#Syncfusion_Blazor_FileManager_FileManagerDirectoryContent_Path) | A temporary property used exclusively during file operations like move, delete, or copy. It specifies the target location for where the operation should occur but is not stored permanently with the item.
+
+Below is an example demonstrating how to use `FilterPath` and `Path` in practical scenarios:
+
+{% tabs %}
+{% highlight razor %}
+
+@code{
+    // Folder definition
+    var documentsFolder = new FileManagerDirectoryContent()
+    {
+        Id = "1",
+        Name = "Documents",
+        IsFile = false,
+        ParentId = "0",
+        FilterPath = "/",  // This indicates that the 'Documents' folder is at the root level
+    };
+
+    // File definition inside the folder
+    var pdfFile = new FileManagerDirectoryContent()
+    {
+        Id = "5",
+        Name = "Report.pdf",
+        IsFile = true,
+        ParentId = "1",
+        FilterPath = "/Documents/",  // Shows that the 'Report.pdf' file is inside 'Documents'
+    };
+
+    // Moving the file
+    var moveOperation = new FileManagerDirectoryContent()
+    {
+        Path = "/Pictures/",  // The new target location for 'Report.pdf'
+        Name = "Report.pdf",  // File that is being moved
+    };
+}
+
+{% endhighlight %}
+{% endtabs %}
