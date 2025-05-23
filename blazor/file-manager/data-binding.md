@@ -808,6 +808,7 @@ The `FileManagerDirectoryContent` class is integral to the Blazor FileManager co
 {% highlight razor %}
 
 @code{
+
     Data.Add(new FileManagerDirectoryContent()
     {
         CaseSensitive = false,
@@ -874,6 +875,7 @@ Below is an example demonstrating how to use `FilterPath` and `Path` in practica
 {% highlight razor %}
 
 @code{
+
     // Folder definition
     var documentsFolder = new FileManagerDirectoryContent()
     {
