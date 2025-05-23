@@ -47,7 +47,7 @@ ListView can generate its list items through an array of complex data. To get it
     protected override void OnInitialized()
     {
         base.OnInitialized();
-        Data.Add(new DataModel { Text = "Hennessey Venom !", Id = "list-01" });
+        Data.Add(new DataModel { Text = "Hennessey Venom", Id = "list-01" });
         Data.Add(new DataModel { Text = "Bugatti Chiron", Id = "list-02" });
         Data.Add(new DataModel { Text = "Bugatti Veyron Super Sport", Id = "list-03" });
         Data.Add(new DataModel { Text = "SSC Ultimate Aero", Id = "list-04" });
