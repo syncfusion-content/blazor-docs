@@ -9,7 +9,7 @@ documentation: ug
 
 # Add and remove list items in Blazor ListView Component
 
-You can add or remove list items from the ListView control using the `ObservableCollection`.
+You can add or remove list items from the ListView component using the `ObservableCollection`.
 
 Refer to the following steps to add or remove a list item.
 

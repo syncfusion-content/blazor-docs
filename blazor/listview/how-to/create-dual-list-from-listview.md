@@ -235,19 +235,9 @@ The following example demonstrates how to manipulate data between two ListView c
         padding: 4px;
     }
 
-    .right__align {
-        text-align: right;
-        margin-right: 8px;
-        padding-right: 8px;
-    }
-
     .left__align {
         margin-left: 8px;
         padding-left: 8px;
-    }
-
-    .content__container {
-        background-color: aliceblue;
     }
 
     .flex {
@@ -264,47 +254,6 @@ The following example demonstrates how to manipulate data between two ListView c
 
     .vertical {
         flex-direction: column;
-    }
-
-    .flex__order__1 {
-        order: 1;
-    }
-
-    .flex__order__2 {
-        order: 2;
-    }
-
-    .flex__1 {
-        flex: 1;
-    }
-
-    .flex__2 {
-        flex: 2;
-    }
-
-    .flex__3 {
-        flex: 3;
-    }
-
-    .flex__5 {
-        flex: 5;
-    }
-
-    .flex__8 {
-        flex: 8;
-    }
-
-    .bold {
-        font-weight: 500;
-    }
-
-    .margin {
-        margin: 10px;
-    }
-
-    .small__font {
-        font-size: 13px;
-        margin: 2px 0;
     }
 </style>
 ```

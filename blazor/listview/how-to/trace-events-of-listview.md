@@ -9,7 +9,7 @@ documentation: ug
 
 # Trace events of listview in Blazor ListView Component
 
-The ListView control triggers events based on its actions. The events can be used as extension points to perform custom operations. Refer to the following steps to trace the ListView events:
+The ListView component triggers events based on its actions. The events can be used as extension points to perform custom operations. Refer to the following steps to trace the ListView events:
 
 1. Render the ListView with [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_DataSource), and bind the [`OnActionBegin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewEvents-1.html#Syncfusion_Blazor_Lists_ListViewEvents_1_OnActionBegin), [`OnActionComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewEvents-1.html#Syncfusion_Blazor_Lists_ListViewEvents_1_OnActionComplete), and [`Clicked`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewEvents-1.html#Syncfusion_Blazor_Lists_ListViewEvents_1_Clicked) events.
 
@@ -18,8 +18,6 @@ The ListView control triggers events based on its actions. The events can be use
 3. Provide event log details for `OnActionBegin` and `OnActionComplete` events, and they will be displayed in the event trace panel when the ListView action starts and the dataSource bound successfully.
 
 4. Get the clicked item details from the `ClickEventArgs` in the Clicked event, and display the clicked list item text in the event trace panel while clicking list items.
-
-5. Use clear button to remove event trace information.
 
 ```cshtml
 @using Syncfusion.Blazor.Lists

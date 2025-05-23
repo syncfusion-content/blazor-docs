@@ -72,7 +72,7 @@ ListView can generate its list items through an array of complex data. To get it
 
 ## Bind to remote data
 
-The ListView supports to retrieve the data from remote data services with the help of [`DataManager`](https://blazor.syncfusion.com/documentation/data/getting-started) control. The `Query` property allows to fetch data and return it to the ListView from the database.
+The ListView supports to retrieve the data from remote data services with the help of [`DataManager`](https://blazor.syncfusion.com/documentation/data/getting-started) component. The [`Query`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_Query) property allows to fetch data and return it to the ListView from the database.
 
 In the following sample, `first 6 products` from the **Product** table of **NorthWind** data service are displayed.
 
@@ -80,7 +80,7 @@ In the following sample, `first 6 products` from the **Product** table of **Nort
 @using Syncfusion.Blazor.Lists
 @using Syncfusion.Blazor.Data
 
-<SfListView  HeaderTitle="Products" ShowHeader="true" TValue="Data" Query="@query">
+<SfListView HeaderTitle="Products" ShowHeader="true" TValue="Data" Query="@query">
     <ListViewFieldSettings TValue="Data" Id="ProductID" Text="ProductName"></ListViewFieldSettings>
     <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
 </SfListView>
@@ -94,7 +94,7 @@ In the following sample, `first 6 products` from the **Product** table of **Nort
     Query query = new Query().From("Products").Select(column).Take(6);
     public class Data
     {
-        public string ProductID { get; set; }
+        public int ProductID { get; set; }
         public string ProductName { get; set; }
     }
 }
