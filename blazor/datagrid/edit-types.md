@@ -2801,7 +2801,7 @@ You can find the complete code for this sample on [GitHub](https://github.com/Sy
 
 By defining the [EditTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditTemplate) feature of a [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html), you can render a custom editor in Grid edit form. Two-way (@bind-Value) binding cannot be defined to the editor inside `EditTemplate`, since its data type is unknown when Grid is bound by ExpandoObject. In this case, you can use the following way to perform a CRUD operation in the ExpandoObject data binding Grid with EditTemplate.
 
-The `SfTextBox` is defined inside the EditTemplate and changes can be saved into the Grid using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_ValueChange) event of the `SfTextBox` and the [RowUpdating](https://blazor.syncfusion.com/documentation/datagrid/events#rowupdating) event of the Grid.
+The `SfTextBox` is defined inside the `EditTemplate` and changes can be saved into the Grid using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxEvents-2.html#Syncfusion_Blazor_DropDowns_ComboBoxEvents_2_ValueChange) event of the `SfTextBox` and the [RowUpdating](https://blazor.syncfusion.com/documentation/datagrid/events#rowupdating) event of the Grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
