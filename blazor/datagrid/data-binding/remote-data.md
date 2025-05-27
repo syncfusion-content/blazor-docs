@@ -15,7 +15,7 @@ To bind remote data in the Grid:
 
 - Create an instance of `SfDataManager` and configure its [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property with the endpoint of your remote data service.
 - Set the [Adaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Adaptor) property to match the type of service you are connecting to (e.g., `ODataAdaptor`, `WebApiAdaptor`, `UrlAdaptor`, etc.).
-- Assign the configured `SfDataManager` to the `DataSource` property of the `SfGrid`.
+- Assign the configured `SfDataManager` to the `DataSource` property of the Grid.
 - Explicitly specify the `TValue` type for the Grid to match your data model.
 
 **Example:**
@@ -99,9 +99,9 @@ The following example demonstrates how to bind an OData service to the Grid usin
 
 ## Enable SfDataManager after initial rendering
 
-In Syncfusion Blazor DataGrid, remote data binding using the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) is typically configured during initialization. However, in some scenarios where data should not be loaded immediately when the page is rendered. Instead, you might want to load data only after a specific user action such as clicking a Load Data button, selecting a filter, or making a dropdown selection. This approach optimizes performance by reducing initial load time and avoiding unnecessary network calls.
+In Syncfusion Blazor DataGrid, remote data binding using the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) is typically configured during initialization. However, in some scenarios where data should not be loaded immediately when the page is rendered. Instead, you can load data dynamically based on specific conditions or user actions. This approach optimizes performance by reducing initial load time and avoiding unnecessary network calls.
 
-To enable this behavior, the Grid can initially be rendered with no data source. You can then conditionally assign the `SfDataManager` to the Grid's [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property in response to a user event. When the `SfDataManager` is added dynamically, the Grid will immediately initiate a request to the configured remote endpoint and display the fetched data.
+Initially, render the Grid with an empty data source. You can then conditionally assign the `SfDataManager` to the Grid's [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property in response to a user event. When the `SfDataManager` is added dynamically, the Grid will immediately initiate a request to the configured remote endpoint and display the fetched data.
 
 The following example demonstrates how to bind the Grid to a remote Web API service only after a button is clicked by the user.
 
