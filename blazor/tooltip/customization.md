@@ -9,11 +9,11 @@ documentation: ug
 
 # Customization in Blazor Tooltip Component
 
-The Tooltip can be customized by using the `CssClass` property, which accepts custom CSS class names that defines the specific user-defined styles and themes to be applied on the Tooltip element.
+The Tooltip can be customized by using the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_CssClass) property, which accepts custom CSS class names that defines the specific user-defined styles and themes to be applied on the Tooltip element.
 
 ## Tip pointer customization
 
-Styling the tip pointer's size, background, and border colors can be done using the `CssClass` property, as given below.
+Styling the tip pointer's size, background, and border colors can be done using the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_CssClass) property, as given below.
 
 ```cshtml
 @using Syncfusion.Blazor.Popups
@@ -30,38 +30,28 @@ Styling the tip pointer's size, background, and border colors can be done using 
 
 <style>
     #target {
-        background-color: #ececec;
-        border: 1px solid #c8c8c8;
+        background-color: #cfd8dc;
+        border: 3px solid #eceff1;
         box-sizing: border-box;
-        margin: 70px auto;
-        padding: 20px;
+        margin: 80px auto;
+        padding: 20px 0;
         width: 200px;
+        text-align: center;
+        color: #424242;
+        font-size: 20px;
+        user-select: none;
     }
-
-    /* csslint ignore:start */
 
     .customtip.e-tooltip-wrap {
         padding: 4px;
     }
 
-    .customtip.e-tooltip-wrap .e-arrow-tip.e-tip-bottom {
-        height: 20px;
-        width: 12px;
-    }
-
-    .customtip.e-tooltip-wrap .e-arrow-tip.e-tip-top {
-        height: 20px;
-        width: 12px;
-    }
-
-    .customtip.e-tooltip-wrap .e-arrow-tip.e-tip-left {
-        height: 12px;
-        width: 20px;
-    }
-
+    .customtip.e-tooltip-wrap .e-arrow-tip.e-tip-bottom,
+    .customtip.e-tooltip-wrap .e-arrow-tip.e-tip-top,
+    .customtip.e-tooltip-wrap .e-arrow-tip.e-tip-left,    
     .customtip.e-tooltip-wrap .e-arrow-tip.e-tip-right {
-        height: 12px;
-        width: 20px;
+        height: 20px;
+        width: 12px;
     }
 
     .customtip.e-tooltip-wrap .e-arrow-tip-outer.e-tip-bottom {

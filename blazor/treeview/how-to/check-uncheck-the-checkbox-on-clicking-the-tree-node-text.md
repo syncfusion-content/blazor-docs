@@ -9,7 +9,7 @@ documentation: ug
 
 # Check/uncheck on clicking the tree node text in Blazor TreeView
 
- The checkboxes of the tree view can be checked and unchecked by clicking the tree node using the `NodeClicked` event of TreeView.
+ The checkboxes of the TreeView can be checked and unchecked by clicking the tree node using the [`NodeClicked`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeClicked) event of TreeView.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -30,7 +30,7 @@ documentation: ug
     {
         public int Id { get; set; }
         public int? ParentId { get; set; }
-        public string Name { get; set; }
+        public string? Name { get; set; }
         public bool Expanded { get; set; }
         public bool? IsChecked { get; set; }
         public bool HasChild { get; set; }

@@ -20,7 +20,7 @@ To get start quickly with Blazor WebAssembly App, you can check on this video.
 
 [Blazor Playground](https://blazor.syncfusion.com/documentation/blazor-playground/overview) allows you to interact with our Blazor components directly in your web browser without need to install any required NuGet packages. By default, the `Syncfusion.Blazor` package is included in this.
 
-[https://blazorplayground.syncfusion.com/](https://blazorplayground.syncfusion.com/)
+{% playground "https://blazorplayground.syncfusion.com/" %}
 
 ## Using Syncfusion Blazor Templates
 
@@ -40,7 +40,7 @@ This section provides a brief explanation on how to manually create a Blazor Web
 
 ### Create a new Blazor WebAssembly App in Visual Studio
 
-You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 ### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendars and Themes NuGet in the App
 
@@ -92,7 +92,7 @@ dotnet new blazorwasm -o BlazorApp -ho
 
 This command creates new Blazor WebAssembly app project and places it in a new directory called `BlazorApp` inside your current location. See [Create Blazor app topic](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/create) and [dotnet new command](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new) topics for more details.
 
-N> If you have installed multiple SDK versions and need any specific framework version (net8.0/net9.0) project, then add `-f` flag along with `dotnet new blazorwasm` comment. Refer [here](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new#blazorwasm) for the available options.
+N> If you have installed multiple SDK versions and need any specific framework version (net6.0/net7.0) project, then add `-f` flag along with `dotnet new blazorwasm` comment. Refer [here](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new#blazorwasm) for the available options.
 
 ### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Calendars and Themes NuGet in the App
 

@@ -54,21 +54,21 @@ The following ARIA attributes are used in the Chat UI component:
 
 The following keyboard shortcuts are supported by the Chat UI component.
 
-| **Press** | **To do this** |
-| --- | --- |
-| <kbd>Enter</kbd> | Select the focused item or send a message when the input is focused. |
-| <kbd>Tab</kbd> | Moves focus forward through the interactive elements. |
-| <kbd>Shift + Tab</kbd> | Moves focus backward through the interactive elements. |
-| <kbd>Page Up</kbd> | Scroll up through chat history. |
-| <kbd>Page Down</kbd> | Scroll down through chat history. |
-| <kbd>Ctrl + Home</kbd> | Scroll to the first message. |
-| <kbd>Ctrl + End</kbd> | Scroll to the most recent message. |
-<b>Chat UI Toolbars</b>||
-| <kbd>Left Arrow</kbd> | Focuses the previous toolbar element.  |
-| <kbd>Right Arrow</kbd> | Focuses the next toolbar element. |
-| <kbd>Enter / Space</kbd> | Select the focused item or activate the selected option. |
-| <kbd>Home</kbd> | Moves focus to the first toolbar element. |
-| <kbd>End</kbd> | Moves focus to the last toolbar element. |
+| Windows | Mac | Actions |
+| --- | --- | --- |
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Select the focused item or send a message when the input is focused. |
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Moves focus forward through the interactive elements. |
+| <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Moves focus backward through the interactive elements. |
+| <kbd>Page Up</kbd> | <kbd>Page Up</kbd> | Scroll up through chat history. |
+| <kbd>Page Down</kbd> | <kbd>Page Down</kbd> | Scroll down through chat history. |
+| <kbd>Ctrl</kbd> + <kbd>Home</kbd> | <kbd>⌘</kbd> + <kbd>Home</kbd> | Scroll to the first message. |
+| <kbd>Ctrl</kbd> + <kbd>End</kbd> | <kbd>⌘</kbd> + <kbd>End</kbd> | Scroll to the most recent message. |
+|<b>Chat UI Toolbars</b>|||
+| <kbd>←</kbd> | <kbd>←</kbd> | Focuses the previous toolbar element.  |
+| <kbd>→</kbd> | <kbd>→</kbd> | Focuses the next toolbar element. |
+| <kbd>Enter</kbd> / <kbd>Soace</kbd> | <kbd>Enter</kbd> / <kbd>Space</kbd> | Select the focused item or activate the selected option. |
+| <kbd>Home</kbd> | <kbd>Home</kbd> | Moves focus to the first toolbar element. |
+| <kbd>End</kbd> | <kbd>End</kbd> | Moves focus to the last toolbar element. |
 
 ## Ensuring accessibility
 

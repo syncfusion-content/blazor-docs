@@ -42,12 +42,12 @@ The Blazor Uploader component characterized with complete ARIA accessibility sup
 
 The following are the standard keys that works on uploader component:
 
-| **Keyboard shortcuts** | **Actions** |
-| --- | --- |
-| <kbd>Tab</kbd> | Move focus to next element. |
-| <kbd>Shift + Tab</kbd> | Move focus to previous element. |
-| <kbd>Enter</kbd> | Triggers corresponding action to button element. |
-| <kbd>Esc</kbd> | Close the file browser dialog alone and cancels the upload on drop the file. |
+| Windows | Mac | Actions |
+| --- | --- | --- |
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Move focus to next element. |
+| <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Move focus to previous element. |
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Triggers corresponding action to button element. |
+| <kbd>Esc</kbd> | <kbd>Esc</kbd> | Close the file browser dialog alone and cancels the upload on drop the file. |
 
 ## Ensuring accessibility
 

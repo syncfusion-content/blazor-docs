@@ -43,7 +43,7 @@ The Blazor Tooltip component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA
 
 | Attributes | Purpose |
 | --- | --- |
-| role=”tooltip” | The element that serves as the container for the tooltip has the ARIA role of `tooltip`. |
+| role=”tooltip” | The element that serves as the container for the Tooltip has the ARIA role of `tooltip`. |
 | aria-describedby | This attribute is added to the target element on which the Tooltip gets opened, when focusing or hovering over it. It usually holds the randomly generated `Id` value of the Tooltip element.<br/><br/>In case, the target element already holds an `aria-describedby` attribute with `Id` value of some other component, then the Tooltip Id value can be additionally appended to the existing `aria-describedby` attribute separated by a space as shown in the example below.<br/><br/>**For example**:<br/>aria-describedby = “my-text my-tooltip”<br/>**my-text** is the Id of some other component.<br/>**my-tooltip** is the id of Tooltip component.<br/><br/>When the Tooltip is closed, the `aria-describedby` attribute is removed from the target. |
 | aria-hidden | This attribute is assigned to the Tooltip element whose default value is `true`.<br/><br/>When `true`, it denotes that the Tooltip element is in a hidden or a closed state. When the Tooltip appears on the screen, it’s value changes to `false`. |
 
@@ -51,10 +51,10 @@ The Blazor Tooltip component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA
 
 The Blazor Tooltip component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/tooltip/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Tooltip component.
 
-| Keyboard shortcuts | Actions |
-| --- | --- |
-| <kbd>Escape</kbd> | Closes or dismisses the Tooltip. |
-| <kbd>Tab</kbd> | A form control receiving focus (say through tab key), opens the Tooltip, and on focus out closes it. |
+| Windows | Mac | Actions |
+| --- | --- | --- |
+| <kbd>Escape</kbd> | <kbd>Escape</kbd> | Closes or dismisses the Tooltip. |
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | A form control receiving focus (say through tab key), opens the Tooltip, and on focus out closes it. |
 
 ## Ensuring accessibility
 

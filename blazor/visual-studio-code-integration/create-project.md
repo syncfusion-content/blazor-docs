@@ -30,9 +30,8 @@ N> Refer to the .NET SDK support for Syncfusion® Blazor Components [here](https
     | .NET SDK version | Supported Syncfusion Blazor Application Type |
     | ---------------- | -------------------------------------------- |
     | [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0), [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) | Syncfusion Blazor Web App |
-    | [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0), [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0), [.NET 7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0), [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) | Syncfusion Blazor WebAssembly App |
-    | [.NET 7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0), [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) | Syncfusion Blazor Server App |
-
+    | [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0), [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) | Syncfusion Blazor WebAssembly App |
+    
     In the **Syncfusion Blazor Web App** application type, you can configure the following options:
 
     <table>
@@ -58,15 +57,15 @@ N> Refer to the .NET SDK support for Syncfusion® Blazor Components [here](https
 
     ![WebAppTemplate](images/WebAppType.png)
 
-     In the **Syncfusion Blazor WebAssembly App** application type, you can choose ASP.NET Core hosted, Progressive Web Application, or both.
+     In the **Syncfusion Blazor WebAssembly App** application type, you can choose Progressive Web Application.
 
      ![ProjectType](images/ProjectTypeDetails.png)
 
-4. The Configuration section will be displayed when you click either **Next** or the **Configuration** tab. Here, you have the option for selecting the required .NET Core version, themes, https configuration, and Blazor Web Assembly project types (ASP.NET Core hosted and Progressive Web Application).
+4. The Configuration section will be displayed when you click either **Next** or the **Configuration** tab. Here, you have the option for selecting the required .NET Core version, themes, https configuration, and Blazor Web Assembly project types (Progressive Web Application).
 
     ![Configuration](images/Configuration.png)
 
-    N> ASP.NET Core hosted and Progressive Web Application options are only visible if Blazor Web Assembly App project type is selected.
+    N> Progressive Web Application options are only visible if Blazor Web Assembly App project type is selected.
 
 5. Click the **Create** button. The Syncfusion® Blazor application has been created. The created Syncfusion® Blazor app has the Syncfusion® NuGet packages, styles, and the component render code for the Syncfusion® component added to the Index, Counter, and FetchData pages.
 
@@ -93,7 +92,6 @@ The selected theme is added from Syncfusion® NuGet and its reference at these a
 | Application type  | File location  |
 |---|---|
 | Syncfusion Blazor Web App | ~/Components/App.razor |
-| Syncfusion Blazor Server App | {Project location}/Pages//_Host.cshtml |
 | Syncfusion Blazor WebAssembly App (ASPNET Core hosted) <br/> Syncfusion Blazor WebAssembly App (Progressive Web Application) | {Client Project location}/wwwroot/index.html  |
 | Syncfusion Blazor WebAssembly App  | {Project location}/wwwroot/index.html|
 

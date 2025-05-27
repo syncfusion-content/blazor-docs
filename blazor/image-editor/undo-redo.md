@@ -43,7 +43,7 @@ Here is an example of undoing and redoing the action using the [`UndoAsync`](htt
 
     private async void OpenAsync()
     {
-        await ImageEditor.OpenAsync("nature.png");
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
 
     private async void DrawTextAsync()
