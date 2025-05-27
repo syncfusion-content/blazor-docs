@@ -9,7 +9,7 @@ documentation: ug
 
 # Remote Data in Blazor DataGrid
 
-In the Blazor DataGrid component, binding remote data is a fundamental feature that enables efficient interaction with external data services. This process involves assigning a remote data service, represented by an instance of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html), to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property of the Grid. By specifying the endpoint URL and the appropriate adaptor, you can seamlessly connect the Grid to remote sources such as OData, Web API, RESTful services, or GraphQL endpoints.
+In the Syncfusion Blazor DataGrid, binding remote data is a fundamental feature that enables efficient interaction with external data services. This process involves assigning a remote data service, represented by an instance of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html), to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property of the Grid. By specifying the endpoint URL and the appropriate adaptor, you can seamlessly connect the Grid to remote sources such as OData, Web API, RESTful services, or GraphQL endpoints.
 
 To bind remote data in the Grid:
 
@@ -99,7 +99,7 @@ The following example demonstrates how to bind an OData service to the Grid usin
 
 ## Enable SfDataManager after initial rendering
 
-In Syncfusion Blazor DataGrid, remote data binding using the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) is typically configured during component initialization. However, in some scenarios where data should not be loaded immediately when the page is rendered. Instead, you might want to load data only after a specific user action such as clicking a Load Data button, selecting a filter, or making a dropdown selection. This approach optimizes performance by reducing initial load time and avoiding unnecessary network calls.
+In Syncfusion Blazor DataGrid, remote data binding using the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) is typically configured during initialization. However, in some scenarios where data should not be loaded immediately when the page is rendered. Instead, you might want to load data only after a specific user action such as clicking a Load Data button, selecting a filter, or making a dropdown selection. This approach optimizes performance by reducing initial load time and avoiding unnecessary network calls.
 
 To enable this behavior, the Grid can initially be rendered with no data source. You can then conditionally assign the `SfDataManager` to the Grid's [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property in response to a user event. When the `SfDataManager` is added dynamically, the Grid will immediately initiate a request to the configured remote endpoint and display the fetched data.
 
@@ -155,7 +155,7 @@ The following GIF demonstrates dynamically rendering the data manager in the Gri
 
 ## Configuring HttpClient
 
-The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) component uses an [HttpClient](https://learn.microsoft.com/dotnet/api/system.net.http.httpclient) instance to make HTTP requests to data services. When initializing, `SfDataManager` checks if an `HttpClient` is already registered in the [service container](https://learn.microsoft.com/aspnet/core/fundamentals/dependency-injection). If found, it uses the registered instance; otherwise, it creates and adds its own `HttpClient` to the service container for server requests.
+The [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) uses an [HttpClient](https://learn.microsoft.com/dotnet/api/system.net.http.httpclient) instance to make HTTP requests to data services. When initializing, `SfDataManager` checks if an `HttpClient` is already registered in the [service container](https://learn.microsoft.com/aspnet/core/fundamentals/dependency-injection). If found, it uses the registered instance; otherwise, it creates and adds its own `HttpClient` to the service container for server requests.
 
 > Register your `HttpClient` before calling `AddSyncfusionBlazor()` in `Program.cs`. This ensures `SfDataManager` uses your pre-configured `HttpClient` (with base address, authentication, default headers, etc.) instead of creating a new one.
 
