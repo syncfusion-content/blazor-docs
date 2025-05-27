@@ -35,13 +35,13 @@ The [FlipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.D
 
 | DiagramFlipMode | Description | 
 | -------- | -------- |
-|Content| It flips the content along with the object while keeping the text readable.|
+|Content| Flips the node along with annotations and their text.|
 |Port| It enables or disables the flip for an object’s port.|
-|All| It enables or disables the flip for both the object’s content,content text and port.|
-|ContentText| It flips the object and inverts the content text without changing its position.|
-|PortAndContent| It flips the port and content along with the object while keeping the text readable.|
-|PortAndContentText| It flips the port and content text along with the object.|
-|ContentAndContentText| It flips the content and content text along with the Object.|
+|All| Enables or disables flip operations for annotations, their text, and ports|
+|Text| Flips only the text of annotations, excluding the annotation elements themselves.|
+|PortAndLabelOnly| Flips the node along with ports and annotations, excluding the annotation text.|
+|PortWithLabelText| Flips the node along with ports and annotation text, excluding the annotation elements themselves.|
+|LabelOnly| Flips the node along with annotations, excluding their text.|
 
 
 **Note:** The [FlipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramFlipMode.html) property is exclusively applicable to nodes within the diagram. It does not affect connectors or any other diagram elements.
@@ -63,10 +63,10 @@ The following code example shows how to flip the node.
      <option value="None">None</option>
      <option value="Content">Content</option>
      <option value="Port">Port</option>
-     <option value="ContentText">ContentLabel</option>
+     <option value="Text">Text</option>
      <option value="PortAndContent">PortAndContent</option>
-     <option value="PortAndContentText">PortAndContentText</option>
-     <option value="ContentAndContentText">ContentAndContentText</option>
+     <option value="PortWithLabelText">PortWithLabelText</option>
+     <option value="LabelOnly">LabelOnly</option>
      <option value="All">All</option>
  </select>
 
@@ -203,26 +203,26 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 | -------- | -------- | -------- |
 |Horizontal|Content| ![HorizontalDirection with Content Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-Content.png)|
 |Horizontal|Port|![HorizontalDirection with Port Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-content.png)|
-|Horizontal|Content Text| ![HorizontalDirection with Content Text Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-ContentText.png)|
-|Horizontal|Port And Content |![HorizontalDirection with Port And Content Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-portAndcontent.png)|
-|Horizontal|Port And Content Text| ![HorizontalDirection with Port And Content Text Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-PortAndContentText.png)|
-|Horizontal|Content And Content Text|![HorizontalDirection with Content And Content Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-ContentAndContentText.png)|
+|Horizontal|Text| ![HorizontalDirection with Text Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-Text.png)|
+|Horizontal|Port And LabelOnly |![HorizontalDirection with Port And LabelOnly Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-portAndLabelOnly.png)|
+|Horizontal|Port With LabelText| ![HorizontalDirection with Port With LabelText Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-PortWithLabelText.png)|
+|Horizontal|Content|![HorizontalDirection with Content Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-Content.png)|
 |Horizontal|All|![HorizontalDirection with All Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-all.png)|
 |Horizontal|None|![HorizontalDirection with None Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-none.png)|
 |Vertical|Content| ![VerticalDirection with Content Mode](./images/blazor-diagram-flip-direction-as-Vertical-flip-mode-as-Content.png)|
 |Vertical|Port|![VerticalDirection with Port Mode](./images/blazor-diagram-flip-direction-as-Vertical-flip-mode-as-content.png)|
-|Vertical|Content Text| ![VerticalDirection with Content Text Mode](./images/blazor-diagram-flip-direction-as-Vertical-flip-mode-as-ContentText.png)|
-|Vertical|Port And Content |![VerticalDirection with Port And Content Mode](./images/blazor-diagram-flip-direction-as-Vertical-flip-mode-as-portAndcontent.png)|
-|Vertical|Port And Content Text| ![VerticalDirection with Port And Content Text Mode](./images/blazor-diagram-flip-direction-as-Vertical-flip-mode-as-PortAndContentText.png)|
-|Vertical|Content And Content Text|![VerticalDirection with Content And Content Mode](./images/blazor-diagram-flip-direction-as-Vertical-flip-mode-as-ContentAndContentText.png)|
+|Vertical|Text| ![VerticalDirection with Text Mode](./images/blazor-diagram-flip-direction-as-Vertical-flip-mode-as-Text.png)|
+|Vertical|Port And LabelOnly |![VerticalDirection with Port And LabelOnly Mode](./images/blazor-diagram-flip-direction-as-Vertical-flip-mode-as-portAndLabelOnly.png)|
+|Vertical|Port With LabelText| ![VerticalDirection with Port With LabelText Mode](./images/blazor-diagram-flip-direction-as-Vertical-flip-mode-as-PortWithLabelText.png)|
+|Vertical|Content|![VerticalDirection with Content  Mode](./images/blazor-diagram-flip-direction-as-Vertical-flip-mode-as-Content.png)|
 |Vertical|All|![VerticalDirection with All Mode](./images/blazor-diagram-flip-direction-as-vertical-flip-mode-as-All.png)|
 |Vertical|None|![VerticalDirection with None Mode](./images/blazor-diagram-flip-direction-as-vertical-flip-mode-as-none.png)|
 |Both|Content| ![BothDirection with Content Mode](./images/blazor-diagram-flip-direction-as-Both-flip-mode-as-Content.png)|
 |Both|Port|![BothDirection with Port Mode](./images/blazor-diagram-flip-direction-as-Both-flip-mode-as-content.png)|
-|Both|Content Text| ![BothDirection with Content Text Mode](./images/blazor-diagram-flip-direction-as-Both-flip-mode-as-ContentText.png)|
-|Both|Port And Content |![BothDirection with Port And Content Mode](./images/blazor-diagram-flip-direction-as-Both-flip-mode-as-portAndcontent.png)|
-|Both|Port And Content Text| ![BothDirection with Port And Content Text Mode](./images/blazor-diagram-flip-direction-as-Both-flip-mode-as-PortAndContentText.png)|
-|Both|Content And Content Text|![BothDirection with Content And Content Mode](./images/blazor-diagram-flip-direction-as-Both-flip-mode-as-ContentAndContentText.png)|
+|Both|Text| ![BothDirection with  Text Mode](./images/blazor-diagram-flip-direction-as-Both-flip-mode-as-Text.png)|
+|Both|Port And LabelOnly |![BothDirection with Port And LabelOnly Mode](./images/blazor-diagram-flip-direction-as-Both-flip-mode-as-portAndLabelOnly.png)|
+|Both|Port With LabelText| ![BothDirection with Port With LabelText Mode](./images/blazor-diagram-flip-direction-as-Both-flip-mode-as-PortWithLabelText.png)|
+|Both|Content|![BothDirection with Content Mode](./images/blazor-diagram-flip-direction-as-Both-flip-mode-as-Content.png)|
 |Both|All|![BothDirection with All Mode](./images/blazor-diagram-flip-direction-as-both-flip-mode-as-all.png)|
 |Both|None|![BothDirection with None Mode](./images/blazor-diagram-flip-direction-as-both-flip-mode-as-none.png)|
 
@@ -262,10 +262,10 @@ The following code example shows how to flip the group.
      <option value="None">None</option>
      <option value="Content">Content</option>
      <option value="Port">Port</option>
-     <option value="ContentText">ContentLabel</option>
-     <option value="PortAndContent">PortAndContent</option>
-     <option value="PortAndContentText">PortAndContentText</option>
-     <option value="ContentAndContentText">ContentAndContentText</option>
+     <option value="Text">Text</option>
+     <option value="PortAndLabelOnly">PortAndLabelOnly</option>
+     <option value="PortWithLabelText">PortWithLabelText</option>
+     <option value="LabelOnly">LabelOnly</option>
      <option value="All">All</option>
  </select>
 <SfDiagramComponent @ref="diagram" Width="1000px" Height="1000px" Nodes="@NodeCollection" Connectors="@connectors">
@@ -426,13 +426,13 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 |Horizontal|None|![HorizontalDirection with NoneMode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-none.png)|
 |Horizontal|All|![HorizontalDirection with AllMode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-all.png)|
 |Horizontal|Content|![HorizontalDirection with ContentMode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-content.png)|
-|Horizontal|ContentText|![HorizontalDirection with ContentMode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-contentText.png)|
+|Horizontal|Text|![HorizontalDirection with Text Mode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-Text.png)|
 |Horizontal|Port|![HorizontalDirection with PortMode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-port.png)|
-|Horizontal|PortAndContent|![HorizontalDirection with ContentMode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-portandContent.png)|
-|Horizontal|PortAndContentText|![HorizontalDirection with ContentMode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-portandContentText.png)|
-|Horizontal|ContentAndContentText|![HorizontalDirection with ContentMode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-contentandContentText.png)|
+|Horizontal|PortAndLabelOnly|![HorizontalDirection with Port and LabelOnly Mode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-portandLabelOnly.png)|
+|Horizontal|PortWithLabelText|![HorizontalDirection with PortWithLabelText Mode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-PortWithLabelText.png)|
+|Horizontal|Content|![HorizontalDirection with ContentMode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-content.png)|
 
-
+![GroupFlip](./images/blazor-diagram-flip-groupnode.gif)
 
 ## How to flip the connector
 
