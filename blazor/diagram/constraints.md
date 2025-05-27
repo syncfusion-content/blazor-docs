@@ -41,7 +41,7 @@ To know more about Bitwise operators, refer to the [Bitwise Operations](constrai
 |Routing|Determines if automatic line routing is enabled or disabled for connectors. When enabled, lines are automatically routed to avoid overlapping with nodes and other obstacles.|
 |Default|Enables or disables all constraints in diagram.|
 
-The following example shows how to disable PageEditable constraint from default diagram constraints.
+The following example shows how to disable Page Editable constraint from default diagram constraints.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
