@@ -47,29 +47,41 @@ The compiled app with AOT will be available in:
 bin/Release/net8.0/publish/wwwroot/
 ```
 
+> AOT improves speed but increases the WASM size (~1.5–2x). Use Brotli compression and cache headers to mitigate.
+
 ---
 
 ## Size vs Performance Tradeoff
 
 | Metric                     | Without AOT          | With AOT             |
 |----------------------------|----------------------|----------------------|
-| Startup time               | ~2.5 seconds         | ~1.2 seconds         |
-| Syncfusion Grid Load       | ~34 ms               | ~25 ms              |
-| Bundle size (Brotli)       | ~192 MB              | ~114 MB              |
+| Initial Load time          | ~3.90 seconds        | ~3.04 seconds        |
+| On Page Refresh            | ~71 ms               | ~61 ms               |
+| Bundle size (Brotli)       | ~114 MB              | ~192 MB              |
 | Memory usage               | Slightly lower       | Slightly higher      |
 
-AOT compilation increases the app size but improves interactivity and execution speed, especially for **data-heavy Syncfusion components**.
+AOT compilation increases the app size but improves interactivity and execution speed, especially for **data-heavy Syncfusion components** like DataGrid, Charts, and Scheduler.
 
-## Limitations and Considerations
+## Limitations
 
-- **Build Time**: AOT increases compile time significantly.
-- **WASM Size**: Output size is larger due to native WebAssembly files.
-- **Debugging**: Source maps are limited. Use Debug builds for development.
-- **Reflection/Trimming**: Use `[DynamicDependency]` or `[PreserveDependency]` for reflection-heavy features.
+  - **Longer Build Time:** The compilation process is significantly slower compared to non-AOT builds.
 
----
+  - **Increased Bundle Size:** AOT increases the overall application size due to native WebAssembly files.
 
-> ⚠️ AOT improves speed but increases the WASM size (~1.5–2x). Use Brotli compression and cache headers to mitigate.
+  - **Reduced Flexibility:** Features relying on reflection or dynamic code may not work without special handling.
+
+  - **More Complex Debugging:** Limited source map support makes AOT code harder to debug.
+
+  - **Slower Iterations:** Any code changes requires a full rebuild, impacting development efficiency.
+
+## Considerations
+  - **Better Performance:** Native WebAssembly code improves runtime execution speed and responsiveness.
+
+  - **Optimized Memory Usage:** AOT reduces memory overhead, enabling more efficient resource usage.
+
+  - **Enhanced Security:** Compiled machine code is harder to reverse-engineer than IL code.
+
+  - **Cross-Platform Consistency:** AOT delivers consistent behavior across all supported browsers and devices.
 
 ## Specific Recommendations
 
@@ -79,10 +91,6 @@ To reduce the published folder size, enable Linker and Trimming Option in our .c
 <PublishTrimmed>true</PublishTrimmed>
 <InvariantGlobalization>true</InvariantGlobalization>
 <BlazorWebAssemblyEnableLinking>true</BlazorWebAssemblyEnableLinking>
-
 ```
 > **InvariantGlobalization** reduces globalization data size. Use only if your app doesn’t rely on specific culture info.
-
-
-
 
