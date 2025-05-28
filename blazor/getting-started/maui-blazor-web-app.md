@@ -22,9 +22,9 @@ Visual Studio provides **.NET MAUI Blazor Hybrid and Web App** template to creat
 
 ## Prerequisites
 
-* .NET SDK 7.0 (Latest .NET SDK 7.0.101 or above)
+* .NET SDK 8.0 (Latest .NET SDK 8.0.101 or above)
 
-* The latest preview of Visual Studio 2022 17.1 or above, with required workloads:
+* The latest preview of Visual Studio 2022 17.3 or above, with required workloads:
    * [Mobile development with .NET](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?tabs=vswin)
    * ASP.NET and web development
 
@@ -117,45 +117,11 @@ Before running the sample, make sure the mode is `Windows Machine`. Also to buil
 
 ![Build and run MAUI Blazor App](images/maui/windows-machine-mode.png)
 
-N> If you want to run the application in Android or iOS refer [MAUI Getting Started](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui?view=aspnetcore-8.0#run-the-app-in-the-android-emulator) for the setup.
+N> If you want to run the application in Android or iOS refer [MAUI Getting Started](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui?view=aspnetcore-9.0#run-the-app-in-the-android-emulator) for the setup.
 
 ![MAUI Blazor App with Syncfusion Blazor Components](images/maui/maui-blazor-calendar.png)
 
 N> Download demo from [GitHub](https://github.com/SyncfusionExamples/MAUI-Blazor-Hybrid-with-Blazor-Web-App-using-Syncfuion-Blazor-Components)
-
-### How to solve deployment errors in Windows?
-
-If you get error dialog like "There were deployment errors", Enable developer mode. For more details refer [Enable your device for development](https://learn.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development).
-
-![Enable developer mode in system settings](images/maui/enable-developer-mode.png)
-
-<hr/>
-
-### How to solve deployment errors in iOS?
-
-In iOS code is statically compiled ahead of time, so, configure Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor assemblies in `MtouchExtraArgs` tag for the iOS Release configuration in the project when deploy on a real device.
-
-Below are possible errors if `MtouchExtraArgs` tag is not configured,
-1. App won't load on real device with error "An unhandled error has occurred" after you compile in Release mode with Visual Studio and deploy to real device.
-2. AOT related failures like [`Attempting to JIT compile method while running in aot-only mode`](https://github.com/xamarin/xamarin-macios/issues/12416)
-
- ```
-<PropertyGroup Condition="$(TargetFramework.Contains('-ios')) And $(Configuration.Contains('Release')) ">
-  <UseInterpreter>true</UseInterpreter>
-  <MtouchExtraArgs>--linkskip=Syncfusion.Blazor.Themes --linkskip=Syncfusion.Blazor.Inputs</MtouchExtraArgs>
-</PropertyGroup>
- ```
-
-Reference:
-* [Could not AOT the assembly of my App](https://learn.microsoft.com/en-us/answers/questions/396055/could-not-aot-the-assembly-of-my-app)
-
-<hr/>
-
-### How to solve "The project doesn't know how to run the profile Windows Machine" while running MAUI Blazor App?
-
-* This issue has been fixed in most recent release of Visual Studio. For more details refer [here](https://developercommunity.visualstudio.com/t/the-project-doesnt-know-how-to-run-the-profile-win/1530395).
-
-* You can also fix this error by installing [Single-project MSIX Packaging Tools](https://marketplace.visualstudio.com/items?itemName=ProjectReunion.MicrosoftSingleProjectMSIXPackagingToolsDev17).
 
 ## See also
 
