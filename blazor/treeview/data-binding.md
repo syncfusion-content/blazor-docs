@@ -1135,11 +1135,11 @@ N> The CRUD operation has been performed in the TreeView component using the con
 @inject HttpClient Http
 
 <div id="treeview">
-    <SfTreeView @ref="tree" TValue="Employee">
-        <TreeViewFieldsSettings TValue="Employee" Id="Id" Text="Name" ParentID="ParentId" HasChildren="HasTeam" Expanded="IsExpanded">
-            <SfDataManager Url="api/Default" Adaptor="Adaptors.WebApiAdaptor" CrossDomain="true"></SfDataManager>
+    <SfTreeView @ref="tree" TValue="Employee" @bind-SelectedNodes="@selectedNodes" @bind-ExpandedNodes="expandedNodes">
+        <TreeViewFieldsSettings TValue="Employee" Id="Id" Text="Name" ParentID="ParentId" HasChildren="HasTeam" Expanded="IsExpanded" Query="TreeViewQuery">
+            <SfDataManager Url="api/Default" CrossDomain="true" Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor"></SfDataManager>
         </TreeViewFieldsSettings>
-        <TreeViewEvents TValue="Employee" NodeClicked="nodeClicked"></TreeViewEvents>
+        <TreeViewEvents TValue="Employee" NodeSelected="OnSelect" NodeClicked="nodeClicked"></TreeViewEvents>
         <SfContextMenu TValue="MenuItem" @ref="menu" Target="#treeview" Items="@MenuItems">
             <MenuEvents TValue="MenuItem" ItemSelected="MenuSelect"></MenuEvents>
         </SfContextMenu>
@@ -1151,10 +1151,11 @@ N> The CRUD operation has been performed in the TreeView component using the con
     SfTreeView<Employee> tree;
 
     SfContextMenu<MenuItem> menu;
-
+    public string[] selectedNodes = Array.Empty<string>();
+    public string[] expandedNodes = new string[] { };
     string selectedId;
     int index;
-
+    public Query TreeViewQuery = new Query();
     // Datasource for menu items
     public List<MenuItem> MenuItems = new List<MenuItem>{
         new MenuItem  { Text = "Edit" },
@@ -1177,36 +1178,34 @@ N> The CRUD operation has been performed in the TreeView component using the con
 
     protected override async Task OnInitializedAsync()
     {
-        var response = await Http.GetStringAsync("api/Default");
-        var employees = JsonConvert.DeserializeObject<List<Employee>>(response);
         // To get the last item index from the db
         var count = await Http.GetFromJsonAsync<int>("api/Default/index");
         this.index = count + 1;
     }
+    // Triggers when TreeView Node is selected
+    public void OnSelect(NodeSelectEventArgs args)
+    {
+        selectedId = args.NodeData.Id;
+    }
 
     // Triggers when TreeView node is clicked
-    public async void nodeClicked(NodeClickEventArgs args)
+    public void nodeClicked(NodeClickEventArgs args)
     {
-        this.selectedId = null;
-        string eventString = JsonConvert.SerializeObject(args.Event);
-        Dictionary<string, dynamic> eventParameters = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(eventString);
-        if ((eventParameters["which"]).ToString() == "3")
-        {
-            // To get the selected node id upon context menu click
-            this.selectedId = (await args.NodeData.GetAttribute("data-uid")).ToString();
-        }
+        selectedId = args.NodeData.Id;
+        selectedNodes = new string[] { args.NodeData.Id };
     }
 
     // To add a new node
     void AddNodes()
     {
+        // Expand the selected nodes
+        expandedNodes = new string[] { this.selectedId };
         List<Employee> TreeData = new List<Employee>();
         TreeData.Add(new Employee
         {
             Id = this.index,
             Name = "New Entry",
-            ParentId = Int32.Parse(this.selectedId)
-
+            ParentId = int.TryParse(this.selectedId, out var pid) ? pid : null
         });
         this.tree.AddNodes(TreeData, this.selectedId);
         this.index = this.index + 1;
@@ -1220,18 +1219,19 @@ N> The CRUD operation has been performed in the TreeView component using the con
     }
 
     // To edit a tree node
-    async void RenameNodes()
+    async Task RenameNodes()
     {
-        tree.BeginEditAsync(this.selectedId);
+        await tree.BeginEditAsync(this.selectedId);
     }
 
     // Triggers when context menu is selected
-    public void MenuSelect(MenuEventArgs<MenuItem> args)
+    public async Task MenuSelect(MenuEventArgs<MenuItem> args)
     {
-        string selectedText = args.Item.Text;
+        string selectedText;
+        selectedText = args.Item.Text;
         if (selectedText == "Edit")
         {
-            this.RenameNodes();
+            await this.RenameNodes();
         }
         else if (selectedText == "Remove")
         {
@@ -1241,7 +1241,6 @@ N> The CRUD operation has been performed in the TreeView component using the con
         {
             this.AddNodes();
         }
-        this.selectedId = null;
     }
 }
 

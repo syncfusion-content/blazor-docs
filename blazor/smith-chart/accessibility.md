@@ -52,18 +52,18 @@ The Blazor Smith Chart component followed the [WAI-ARIA](https://www.w3.org/WAI/
 
 The Blazor Smith Chart component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Smith Chart component.
 
-| Interaction Keys | Description |
-| --- | --- |
-| <kbd>Tab</kbd> | Moves the focus to the next element in the Smith Chart. |
-| <kbd>Shift + Tab</kbd> | Moves the focus to the previous element in the Smith Chart. |
-| <kbd>DownArrow</kbd> | Moves the focus to the data point right side from the selected point. |
-| <kbd>UpArrow</kbd> | Moves the focus to the data point right side from the selected point. |
-| <kbd>Left Arrow</kbd> | Moves the focus to the next series in our Smith Chart component. |
-| <kbd>Right Arrow</kbd> | Moves the focus to the previous series in our Smith Chart component. |
-| <kbd>Down/Left Arrow</kbd> | Moves the focus to the legend left side from the selected legend. |
-| <kbd>Up/Right Arrow</kbd> | Moves the focus to the legend right side from the selected legend. |
-| <kbd>Enter/Space</kbd> | Toggles the visibility of the corresponding series. |
-| <kbd>Ctrl + P</kbd> | Prints the Smith Chart. |
+| Windows | Mac | Description |
+| --- | --- | --- |
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Moves the focus to the next element in the Smith Chart. |
+| <kbd>Shift + Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Moves the focus to the previous element in the Smith Chart. |
+| <kbd>↓</kbd> | <kbd>↓</kbd> | Moves the focus to the data point right side from the selected point. |
+| <kbd>↑</kbd> | <kbd>↑</kbd> | Moves the focus to the data point right side from the selected point. |
+| <kbd>←</kbd> | <kbd>←</kbd> | Moves the focus to the next series in our Smith Chart component. |
+| <kbd>→</kbd> | <kbd>→</kbd> | Moves the focus to the previous series in our Smith Chart component. |
+| <kbd>↓</kbd> or <kbd>←</kbd> | <kbd>↓</kbd> or <kbd>←</kbd> | Moves the focus to the legend left side from the selected legend. |
+| <kbd>↑</kbd> or <kbd>→</kbd> | <kbd>↑</kbd> or <kbd>→</kbd> | Moves the focus to the legend right side from the selected legend. |
+| <kbd>Enter</kbd> or <kbd>Space</kbd> | <kbd>Enter</kbd> or <kbd>Space</kbd> | Toggles the visibility of the corresponding series. |
+| <kbd>Ctrl + P</kbd> | <kbd>⌘</kbd> + <kbd>P</kbd> | Prints the Smith Chart. |
 
 ## Ensuring accessibility
 
