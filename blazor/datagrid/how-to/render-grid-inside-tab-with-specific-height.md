@@ -7,11 +7,11 @@ control: DataGrid
 documentation: ug
 ---
 
-# Blazor DataGrid Component Inside the Tab with Specific Height
+# Blazor DataGrid inside the tab with specific height
 
-By default, DataGrid will occupy the entire space of the parent element when DataGrid [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Width) properties are defined as 100%. But if you render the similar DataGrid inside the Tab control, it will consider the entire page and render the DataGrid without horizontal scroller.
+By default, Syncfusion Blazor DataGrid will occupy the entire space of the parent element when Grid [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Width) properties are defined as 100%. But if you render the similar Grid inside the Tab control, it will consider the entire page and render the Grid without horizontal scroller.
 
-To overcome this behavior, override the below CSS style of the `SfTab` component. This CSS style will hide the default page scroller and add a scroller to the grid to keep the tab header fixed.
+To overcome this behavior, override the below CSS style of the [SfTab](https://blazor.syncfusion.com/documentation/tabs/getting-started-webapp). This CSS style will hide the default page scroller and add a scroller to the Grid to keep the tab header fixed.
 
 ```cshtml
 <style>
@@ -26,7 +26,8 @@ To overcome this behavior, override the below CSS style of the `SfTab` component
 
 This can be demonstrated in the following sample:
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Grids
@@ -35,7 +36,7 @@ This can be demonstrated in the following sample:
     <SfTab ID="Ej2Tab" Height="100%">
         <TabItems>
             <TabItem>
-                   <HeaderTemplate>
+                <HeaderTemplate>
                     Grid1
                 </HeaderTemplate>
                 <ContentTemplate>     
@@ -50,7 +51,7 @@ This can be demonstrated in the following sample:
                 </ContentTemplate>
             </TabItem>
             <TabItem>
-                 <HeaderTemplate>
+                <HeaderTemplate>
                     Grid2
                 </HeaderTemplate>
                 <ContentTemplate>        
@@ -67,10 +68,9 @@ This can be demonstrated in the following sample:
             </TabItem>
         </TabItems>
     </SfTab>
-    </div>
+</div>
 
 @code {
-
     public List<Order> Orders { get; set; }
     public List<EmployeeData> Employees { get; set; }
     protected override void OnInitialized()
@@ -117,4 +117,7 @@ This can be demonstrated in the following sample:
         height: 100%;
     }
 </style>
-```
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VtByDTUtUQZxuNwG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
