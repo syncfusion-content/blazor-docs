@@ -16,7 +16,7 @@ When enabling strict Content Security Policy (CSP), some browser features are di
 To use Syncfusion<sup style="font-size:70%">&reg;</sup> blazor components with strict CSP mode, the following directives must be included in the CSP meta tag:
 
 * `font-src data:` - This directive allows for the use of `base64` encoded font icons.
-* `style-src 'self' unsafe-inline` - This directive permits the use of inline styles, allowing components to apply parameters such as Width, Height, positioning, etc. Additionally, certain [components](#components-utilizing-inline-style-for-functionality) depend on inline styling to render interactive behaviors and complex layouts effectively.
+* `style-src 'self' unsafe-inline` - This directive permits the use of inline styles, allowing components to apply parameters such as Width, Height, positioning, etc. Additionally, certain components depend on inline styling to render dynamic behaviors and responsive UX design.
 * `connect-src 'self' https: wss:` - This directive enables web sockets.
 * `script-src 'self' unsafe-eval` - This directive allows for the use of the `new()` and `eval()` functions. Used in animation enabled Syncfusion<sup style="font-size:70%">&reg;</sup> components.
 
@@ -71,38 +71,6 @@ if you are referencing script and style references from CDN, then add CDN domain
 
 {% endhighlight %}
 {% endtabs %}
-
-## Components Utilizing Inline Style for Functionality
-
-Some Syncfusion components use inline styles to achieve responsive layouts, precise positioning, dynamic sizing, and visual behaviors essential to their functionality. The table below lists components that depend on inline styles, along with the properties or features that require them.
-
-| Components                | Properties/Functionalities requiring inline Styles                                                                 |
-|--------------------------|---------------------------------------------------------------------------------------------------------------------|
-| Accordion, Tabs, Toolbar, Kanban, Carousel, Toast, Skeleton, Splitter, TreeGrid, TreeView                 | Height and Width.|
-| 3D Charts, TreeMap, Charts, ProgressBar, Circular Gauge, HeatMap Chart, LinaerGauge, Maps, Bullet Chart, ImageEditor, RangeSlider, Sankey, SmithChart, SparklineChart, Stock Chart                | Appearance customization, layout, and rendering.|
-| DatePicker, DateTime Picker, DateRange Picker, In-place Editor, Input Mask, ListBox, MultiSelect Dropdown, Numeric TextBox, Query Builder, TextArea, TextBox, TimePicker                 | Width|
-| Dashboard Layout         | Panel Height, gridline styles.|
-| Sidebar                  | Width and transform in normal and docker mode.|
-| Stepper                  | Width and transform.|
-| Dialog                   | Z-index, Height, and Width.|
-| AutoComplete             | Width, PopupHeight, and PopupWidth.|
-| Pivot Table              | Grouping bar layout, conditional formatting dialog, height and width of pivot chart and pager, cell positioning.|
-| Rich Text Editor         | Height, Width, font styling, toolbar styling.|
-| Gantt Chart              | Taskbar Dimensions, Chart Row Layout, Timeline and Header Layout, Label Containers and Connectors, Progress Bars and Segments, Baseline and Connector Styling, Virtualization Elements.|
-| Context Menu, Menu Bar   | Menu popup visibility.|
-| Scheduler                | Agenda view, resource headers, appointment styling, tooltip—positioning and colors.|
-| Dropdown List            | Width, PopupHeight, PopupWidth|
-| Mention                  | PopupHeight and popup visibility.|
-| MultiColumn ComboBox     | Width, PopupHeight, PopupWidth, Z-Index|
-| Progress Button          | Spinner theme CSS|
-| Rating                   | Rating fill value.|
-| Spinner                  | Z-index and styling from spinner CSS theme|
-| ColorPicker              | Color|
-| ComboBox                 | Width, PopupHeight, and PopupWidth.|
-| DataForm                 | Width, ColumnSpacing.|
-| SpeedDial                | Speed dial animation and layout styles|
-| Ribbon                   | Filemenu and HelpTemplate width for ribbon tab. |
-
 
 ## See also
 
