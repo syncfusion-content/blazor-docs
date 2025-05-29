@@ -116,6 +116,7 @@ To enable IL trimming in a Syncfusion Blazor application, update the project fil
           <BlazorLinkerDescriptor Include="LinkerConfig.xml" />
       </ItemGroup>
     ```
+
 ### Final Evaluation
     We evaluated the size of a Blazor WebAssembly test application that includes a Syncfusion Blazor Grid with paging enabled.
 
