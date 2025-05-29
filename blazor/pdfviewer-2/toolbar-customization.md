@@ -525,3 +525,143 @@ Refer to the image below for the mobile view.
 ![Blazor PDFViewer with Custom Toolbar](./images/Form_Designer_Toolbar_Customization_Mobile.png)
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/Form%20Designer/Components/Pages/CustomFormDesignerToolbar.razor).
+
+## How to customize the  Redaction Toolbar
+
+The **Redaction Toolbar** in the PDF Viewer allows users to mark and permanently redact sensitive content from a PDF document. This guide explains how to enable and customize the Redaction Toolbar for both desktop and mobile platforms, and how to control its visibility dynamically.
+
+### Enabling the Redaction Toolbar on Desktop
+
+To enable the Redaction Toolbar on desktop platforms, include the required `ToolbarItems` in the `SfPdfViewer2` component as shown below:
+
+#### Code Example
+
+```razor
+@page "/"
+
+<SfPdfViewer2 Height="100%" Width="100%" DocumentPath="Annotations.pdf">
+    <PdfViewerToolbarSettings ToolbarItems="ToolbarItems"></PdfViewerToolbarSettings>
+</SfPdfViewer2>
+
+@code {
+    private List<ToolbarItem> ToolbarItems = new List<ToolbarItem>();
+    protected override void OnInitialized()
+    {
+        ToolbarItems = new List<ToolbarItem>()
+        {
+            ToolbarItem.OpenOption,
+            ToolbarItem.PageNavigationTool,
+            ToolbarItem.MagnificationTool,
+            ToolbarItem.SelectionTool,
+            ToolbarItem.PanTool,
+            ToolbarItem.UndoRedoTool,
+            ToolbarItem.CommentTool,
+            ToolbarItem.SubmitForm,
+            ToolbarItem.SearchOption,
+            ToolbarItem.AnnotationEditTool,
+            ToolbarItem.Redaction,              // Enables Redaction toolbar
+            ToolbarItem.FormDesigner,
+            ToolbarItem.PrintOption,
+            ToolbarItem.DownloadOption
+        };
+    }
+}
+```
+Refer to the image below for the desktop view.
+![Enable Redaction Toolbar for Desktop](./annotation/redaction-annotations-images/enable-redaction-toolbar-for-desktop.png)
+
+### Enabling the Redaction Toolbar on Mobile
+
+To enable the Redaction Toolbar in mobile view, use the `MobileToolbarItems` property as shown below:
+
+#### Code Example
+
+```razor
+@page "/"
+
+<SfPdfViewer2 Height="100%" Width="100%" DocumentPath="Annotations.pdf">
+    <PdfViewerToolbarSettings MobileToolbarItems="MobileToolbarItems"></PdfViewerToolbarSettings>
+</SfPdfViewer2>
+
+@code {
+    private List<MobileToolbarItem> MobileToolbarItems = new List<MobileToolbarItem>();
+    protected override void OnInitialized()
+    {
+        MobileToolbarItems = new List<MobileToolbarItem>()
+        {
+            MobileToolbarItem.Open,
+            MobileToolbarItem.UndoRedo,
+            MobileToolbarItem.EditAnnotation,
+            MobileToolbarItem.Redaction,        // Enables Redaction toolbar
+            MobileToolbarItem.FormDesigner,
+            MobileToolbarItem.Search
+        };
+    }
+}
+```
+
+Refer to the image below for the mobile view.
+
+![Mobile Redaction Toolbar](./annotation/redaction-annotations-images/mobile-redaction-toolbar.png)
+
+## Showing or Hiding the Redaction Toolbar
+
+The Redaction Toolbar in the Blazor PDF Viewer provides tools for applying redactions to PDF documents. Its visibility can be controlled either through the built-in toolbar interface or programmatically using the `ShowRedactionToolbar` API.
+
+### Displaying the Redaction Toolbar Using the Toolbar Icon
+
+When `ToolbarItem.Redaction` or `MobileToolbarItem.Redaction` is enabled, clicking the redaction icon in the main toolbar toggles the visibility of the Redaction Toolbar.
+
+Refer to the Image below for details.
+![Show Redaction Toolbar](./annotation/redaction-annotations-images/redaction-icon-toolbar.png)
+
+### Displaying the Redaction Toolbar Programmatically
+
+The visibility of the Redaction Toolbar can also be controlled programmatically by invoking the `ShowRedactionToolbar` method of the SfPdfViewer component. This approach is suitable for scenarios where toolbar visibility must be managed based on application logic, user permissions, or contextual requirements.
+
+The following example demonstrates how to toggle the visibility of the Redaction Toolbar using a button:
+
+```razor
+@page "/"
+
+<SfButton @onclick="ToggleRedactionToolbar">
+    @(isRedactionToolbarVisible ? "Hide Redaction Toolbar" : "Show Redaction Toolbar")
+</SfButton>
+<SfPdfViewer2 @ref="SfPdfViewer2" DocumentPath="wwwroot/data/Annotations.pdf" Width="100%" Height="600px" >
+     <PdfViewerToolbarSettings ToolbarItems="ToolbarItems"></PdfViewerToolbarSettings>
+</SfPdfViewer2>
+
+@code {
+    private SfPdfViewer2 SfPdfViewer2;
+    private bool isRedactionToolbarVisible = false;
+    private List<ToolbarItem> ToolbarItems = new List<ToolbarItem>();
+    protected override void OnInitialized()
+    {
+        ToolbarItems = new List<ToolbarItem>()
+        {
+            ToolbarItem.OpenOption,
+            ToolbarItem.PageNavigationTool,
+            ToolbarItem.MagnificationTool,
+            ToolbarItem.SelectionTool,
+            ToolbarItem.PanTool,
+            ToolbarItem.UndoRedoTool,
+            ToolbarItem.CommentTool,
+            ToolbarItem.SubmitForm,
+            ToolbarItem.SearchOption,
+            ToolbarItem.AnnotationEditTool,
+            ToolbarItem.Redaction,              // Enables Redaction toolbar
+            ToolbarItem.FormDesigner,
+            ToolbarItem.PrintOption,
+            ToolbarItem.DownloadOption
+        };
+    }
+    private void ToggleRedactionToolbar()
+    {
+        isRedactionToolbarVisible = !isRedactionToolbarVisible;
+        SfPdfViewer2.ShowRedactionToolbar(isRedactionToolbarVisible);
+    }
+}
+```
+
+Refer to the Image below for details.
+![Show Redaction Toolbar](./annotation/redaction-annotations-images/show-redaction-toolbar.png)
