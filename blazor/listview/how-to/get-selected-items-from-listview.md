@@ -192,10 +192,6 @@ In scenarios where you build custom templates in Blazor ListView Component, you 
         display: flex;
     }
 
-    .flex__center {
-        justify-content: center;
-    }
-
     .margin {
         margin: 10px;
     }
