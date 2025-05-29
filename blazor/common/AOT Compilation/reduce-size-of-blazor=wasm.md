@@ -111,11 +111,11 @@ To enable IL trimming in a Syncfusion Blazor application, update the project fil
   ```
   3. Prevent Trimming of .NET Core Runtime Types. If your app uses reflection, LINQ expressions, or dynamic operations, consider including a LinkerConfig.xml to preserve critical system libraries. It is completely optional.
 
-    ```xml
-      <ItemGroup>
-          <BlazorLinkerDescriptor Include="LinkerConfig.xml" />
-      </ItemGroup>
-    ```
+   ```xml
+    <ItemGroup>
+        <BlazorLinkerDescriptor Include="LinkerConfig.xml" />
+    </ItemGroup>
+   ```
 
 ### Final Evaluation
 
