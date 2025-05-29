@@ -9,7 +9,7 @@ documentation: ug
 
 # Customize Blazor ListView Component to Grid Layout
 
-In Listview, list items can be rendered in grid layout with the following data manipulations.
+In ListView, list items can be rendered in grid layout with the following data manipulations.
 
 * Add Item
 * Remove Item
@@ -173,9 +173,9 @@ To effectively manage item removal, a delete button is introduced, which becomes
 
 @code
 {
-    async void Remove(ListDataModel data)
+    void Remove(ListDataModel data)
     {
-        await DataSourceOG.RemoveAt(DataSourceOG.FindIndex(e => e.Id == data.Id));
+        DataSourceOG.RemoveAt(DataSourceOG.FindIndex(e => e.Id == data.Id));
         DataSource = new List<ListDataModel>(DataSourceOG);
     }
 }
@@ -304,9 +304,9 @@ The below code explains adding, removing, searching and sorting within a list of
         }
     }
 
-    async void Remove(ListDataModel data)
+    void Remove(ListDataModel data)
     {
-        await DataSourceOG.RemoveAt(DataSourceOG.FindIndex(e => e.Id == data.Id));
+        DataSourceOG.RemoveAt(DataSourceOG.FindIndex(e => e.Id == data.Id));
         DataSource = new List<ListDataModel>(DataSourceOG);
     }
 
