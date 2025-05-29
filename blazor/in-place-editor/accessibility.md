@@ -40,10 +40,10 @@ The accessibility compliance for the Blazor In-place editor component is outline
 
 You can use the following key shortcuts to access the Blazor In-place editor without interruptions:
 
-| **Keyboard shortcuts** | **Actions** |
-| --- | --- |
-| <kbd>Tab</kbd> | Helps in focusing the Inplace editor on the page and switching between the consecutive Inplace editor bars. |
-| <kbd>Shift</kbd> + <kbd>Tab</kbd> | Helps in focusing the previous Inplace editor bar element on the Inplace editor. |
+| Windows | Mac | Actions |
+| --- | --- | --- |
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Helps in focusing the Inplace editor on the page and switching between the consecutive Inplace editor bars. |
+| <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Helps in focusing the previous Inplace editor bar element on the Inplace editor. |
 
 ## Ensuring accessibility
 

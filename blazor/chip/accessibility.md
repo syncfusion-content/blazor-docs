@@ -55,10 +55,10 @@ The Blazor Chips component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/a
 
 The following shortcut keys are used to access the Blazor Chip component without any interruption.
 
-| Keyboard shortcuts | Actions |
-|------------|-------------------|
-| <kbd>Enter</kbd> | Selects the targeted chip from the Chip/ChipItems. |
-| <kbd>Delete</kbd> | Deletes the targeted chip from the Chip/ChipItems. |
+| Windows | Mac | Actions |
+|------------|-------|------------|
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Selects the targeted chip from the Chip/ChipItems. |
+| <kbd>Delete</kbd> | <kbd>Delete</kbd> | Deletes the targeted chip from the Chip/ChipItems. |
 
 ## Ensuring accessibility
 

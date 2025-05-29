@@ -31,6 +31,9 @@ To add **Blazor DocumentEditor** component in the app, open the NuGet package ma
 
 If you utilize `WebAssembly or Auto` render modes in the Blazor Web App need to be install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components NuGet packages within the client project.
 
+W> <br/> * The Document Editor is not part of the common package. If you wish to use the Document Editor with other components, please import all the components individually.
+<br/> * Do not use both `Syncfusion.Blazor` and individual NuGet packages ([Syncfusion.Blazor.WordProcessor](https://www.nuget.org/packages/Syncfusion.Blazor.WordProcessor/)) in the same application. It will throw ambiguous errors while compiling the project.
+
 Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
