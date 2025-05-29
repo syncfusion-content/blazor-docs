@@ -86,7 +86,7 @@ Below is an example that demonstrates how to create and add a redaction annotati
             FillColor = "#EEEEEE",
 
             // Specify the annotation type
-            Type = AnnotationType.Rectangle
+            Type = AnnotationType.Redaction
         };
 
         // Add the annotation to the PDF Viewer
