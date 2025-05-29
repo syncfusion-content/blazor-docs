@@ -62,7 +62,7 @@ bin/Release/net8.0/publish/wwwroot/
 | Bundle Size (Brotli)       | ~114 MB              | ~192 MB              |
 | Memory Usage               | Slightly lower       | Slightly higher      |
 
-> AOT increases bundle size but significantly improves runtime speed, particularly useful for **data-heavy Syncfusion components** like DataGrid, Charts, and Scheduler.
+> [AOT compilation](https://learn.microsoft.com/en-us/aspnet/core/blazor/webassembly-build-tools-and-aot?view=aspnetcore-9.0#ahead-of-time-aot-compilation) increases the application size but significantly improves load time, interactivity, and overall runtime performance in Blazor WebAssembly applications.
 
 ---
 
