@@ -372,7 +372,7 @@ You can achieve the desired dot variant by customizing the border, outline and b
 
 ### Dot outline
 
-By adding the `e-outline` class to the Timeline `CssClass` property it enables the dots to have an outline state.
+By adding the `e-outline` class to the Timeline [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfTimeline.html#Syncfusion_Blazor_Layouts_SfTimeline_CssClass) property it enables the dots to have an outline state.
 
 ```cshtml
 
