@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Overview of the Blazor Diagram Component | Syncfusion
+title: SfDiagram Component Overview | Syncfusion
 description: Checkout and learn here all about Overview of the Syncfusion Blazor Diagram component and much more.
 platform: Blazor
 control: Diagram Component

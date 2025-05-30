@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Straight Segment in Blazor Diagram Component | Syncfusion
+title: Straight Segments Creation and Customization | Syncfusion
 description: Checkout and learn here all about Straight Segments in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component

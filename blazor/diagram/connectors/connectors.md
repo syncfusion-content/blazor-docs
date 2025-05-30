@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Actions of Connectors in Blazor Diagram Component | Syncfusion
+title: Connectors in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about actions of connectors in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component

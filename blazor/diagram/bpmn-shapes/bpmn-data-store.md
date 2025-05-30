@@ -1,6 +1,6 @@
 ---
 layout: post
-title: BPMN Data Source in Blazor Diagram Component | Syncfusion
+title: BPMN Data Store in Blazor Diagram Component | Syncfusion
 description: Learn here all about how to create the BPMN DataStore in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component

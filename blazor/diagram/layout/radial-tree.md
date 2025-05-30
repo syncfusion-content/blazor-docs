@@ -1,6 +1,6 @@
 ---
 layout: post
-title: RadialTree Layout in Blazor Diagram Component | Syncfusion
+title: Radial Tree Layout in Blazor Diagram Component | Syncfusion
 description: Learn here all about how to create the RadialTree layout in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component

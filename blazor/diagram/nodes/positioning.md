@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Positioning in Blazor Diagram Component | Syncfusion
+title: Positioning Nodes in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about Positioning in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component

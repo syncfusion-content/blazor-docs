@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ruler settings in Blazor Diagram Component | Syncfusion
+title: Ruler in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about the Ruler feature in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component

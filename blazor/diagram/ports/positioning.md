@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Positioning in Blazor Diagram Component | Syncfusion
+title: How to Position a Node’s Port | Syncfusion
 description: Checkout and learn here all about positioning in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component

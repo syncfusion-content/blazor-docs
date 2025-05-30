@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Swimlane-Palette in Blazor Diagram Component | Syncfusion
+title: Add Swimlane to Palette | Syncfusion
 description: Learn here all about Swimlane-Palette support in Syncfusion Blazor Diagram component, its elements and more.
 platform: Blazor
 control: Diagram Component

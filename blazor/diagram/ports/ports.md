@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Actions of Ports in Blazor Diagram Component | Syncfusion
+title: Ports in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about actions of ports in Syncfusion Blazor Diagram component and much more.
 platform: Blazor
 control: Diagram Component

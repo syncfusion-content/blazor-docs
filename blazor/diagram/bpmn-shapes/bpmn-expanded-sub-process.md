@@ -1,6 +1,6 @@
 ---
 layout: post
-title: BPMN group in Blazor Diagram Component | Syncfusion
+title: BPMN Expanded Sub-Process in Blazor Diagram Component | Syncfusion
 description: Learn here all about how to create and update the BPMN Expanded Sub-Process in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component

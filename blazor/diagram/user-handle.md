@@ -1,6 +1,6 @@
 ---
 layout: post
-title: User Handle in Blazor Diagram Component | Syncfusion
+title: User Handles for Nodes and Connectors in the Blazor Diagram Component | Syncfusion
 description: Learn here all about how to create the user handles in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component

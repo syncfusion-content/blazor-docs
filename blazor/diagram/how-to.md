@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Common use cases in Blazor Diagram Component | Syncfusion
+title: How to Achieve Common Use Cases Using Diagram Methods and Properties | Syncfusion
 description: Checkout and learn here all about how to achieve common use cases in Syncfusion Blazor Diagram component, it's elements and more.
 platform: Blazor
 control: DiagramComponent

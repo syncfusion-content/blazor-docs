@@ -1,6 +1,6 @@
 ---
 layout: post
-title: DiagramIcon in Blazor Diagram Component | Syncfusion
+title: Expand and Collapse Icon Support for Node in Blazor Diagram Component | Syncfusion
 description: Learn here all about how to create the Diagram Icon handles in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component

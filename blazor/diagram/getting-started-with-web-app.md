@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Syncfusion Blazor Diagram Component in Web App
+title: Getting Started with the Blazor Diagram Component in Web App
 description: Checkout and learn about the documentation for getting started with Blazor Diagram Component in Blazor Web App.
 platform: Blazor
 component: Diagram
