@@ -50,25 +50,22 @@ The following code example shows how to flip the node.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.DropDowns
+        <SfDropDownList TItem="FlipOption" TValue="string"
+                DataSource="@FlipDirections"
+                Placeholder="Flip">
+    <DropDownListEvents TItem="FlipOption" TValue="string"
+                        ValueChange="@FlipDirectionChange" />
+    <DropDownListFieldSettings Text="Name" Value="Value"></DropDownListFieldSettings>
+</SfDropDownList>
 
- <select id="flip" @onchange="@FlipDirectionChange">
-     <option disabled selected>Flip</option>
-     <option value="None">None</option>
-     <option value="Horizontal">Horizontal</option>
-     <option value="Vertical">Vertical</option>
-     <option value="Both">Both</option>
- </select>
- <select id="flipmode" @onchange="@FlipModeChange">
-     <option disabled selected>FlipMode</option>
-     <option value="None">None</option>
-     <option value="Content">Content</option>
-     <option value="Port">Port</option>
-     <option value="Text">Text</option>
-     <option value="PortAndContent">PortAndContent</option>
-     <option value="PortWithLabelText">PortWithLabelText</option>
-     <option value="LabelOnly">LabelOnly</option>
-     <option value="All">All</option>
- </select>
+  <SfDropDownList TItem="FlipOption" TValue="string"
+                DataSource="@FlipModes"
+                Placeholder="Flip">
+    <DropDownListEvents TItem="FlipOption" TValue="string"
+                        ValueChange="@FlipModeChange" />
+    <DropDownListFieldSettings Text="Name" Value="Value"></DropDownListFieldSettings>
+</SfDropDownList>
 
 <SfDiagramComponent @ref="diagram" Width="1000px" Height="1000px" Nodes="@NodeCollection" Connectors="@connectors">
 </SfDiagramComponent>
@@ -80,6 +77,31 @@ The following code example shows how to flip the node.
     public SfDiagramComponent diagram;
     //Define diagram nodes collection
     DiagramObjectCollection<Node> NodeCollection;
+     public class FlipOption
+ {
+     public string Name { get; set; } 
+     public string Value { get; set; } // Bound value
+ }
+
+ List<FlipOption> FlipDirections = new()
+ {
+     new FlipOption { Name = "None", Value = "None" },
+     new FlipOption { Name = "Horizontal", Value = "Horizontal" },
+     new FlipOption { Name = "Vertical", Value = "Vertical" },
+     new FlipOption { Name = "Both", Value = "Both" }
+ };
+
+ List<FlipOption> FlipModes = new()
+ {
+     new FlipOption { Name = "None", Value = "None" },
+     new FlipOption { Name = "Content", Value = "Content" },
+     new FlipOption { Name = "Port", Value = "Port" },
+     new FlipOption { Name = "Text", Value = "Text" },
+     new FlipOption { Name = "PortAndLabelOnly", Value = "LabelOnly" },
+     new FlipOption { Name = "PortWithLabelText", Value = "PortWithLabelText" },
+     new FlipOption { Name = "LabelOnly", Value = "LabelOnly" },
+     new FlipOption { Name = "All", Value = "All" }
+ };
     protected override void OnInitialized()
     {
         Node node1 = new Node()
@@ -158,7 +180,7 @@ The following code example shows how to flip the node.
         NodeCollection = new DiagramObjectCollection<Node>() { node1, node2 };
     }
  // This method applys flipDirection to the selected node's
- public void FlipDirectionChange(ChangeEventArgs args)
+ public void FlipDirectionChange(ChangeEventArgs<string, FlipOption> args)
  {
      diagram.StartGroupAction();
 
@@ -178,7 +200,7 @@ The following code example shows how to flip the node.
  }
 
  //This method apply's diagramFLipMode to the selected node's
- public void FlipModeChange(ChangeEventArgs args)
+ public void FlipModeChange(ChangeEventArgs<string, FlipOption> args)
  {
      diagram.StartGroupAction();
 
@@ -250,24 +272,22 @@ The following code example shows how to flip the group.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-<select id="flip" @onchange="@FlipDirectionChange">
-     <option disabled selected>Flip</option>
-     <option value="None">None</option>
-     <option value="Horizontal">Horizontal</option>
-     <option value="Vertical">Vertical</option>
-     <option value="Both">Both</option>
- </select>
- <select id="flipmode" @onchange="@FlipModeChange">
-     <option disabled selected>FlipMode</option>
-     <option value="None">None</option>
-     <option value="Content">Content</option>
-     <option value="Port">Port</option>
-     <option value="Text">Text</option>
-     <option value="PortAndLabelOnly">PortAndLabelOnly</option>
-     <option value="PortWithLabelText">PortWithLabelText</option>
-     <option value="LabelOnly">LabelOnly</option>
-     <option value="All">All</option>
- </select>
+@using Syncfusion.Blazor.DropDowns
+       <SfDropDownList TItem="FlipOption" TValue="string"
+                DataSource="@FlipDirections"
+                Placeholder="Flip">
+    <DropDownListEvents TItem="FlipOption" TValue="string"
+                        ValueChange="@FlipDirectionChange" />
+    <DropDownListFieldSettings Text="Name" Value="Value"></DropDownListFieldSettings>
+</SfDropDownList>
+
+  <SfDropDownList TItem="FlipOption" TValue="string"
+                DataSource="@FlipModes"
+                Placeholder="Flip">
+    <DropDownListEvents TItem="FlipOption" TValue="string"
+                        ValueChange="@FlipModeChange" />
+    <DropDownListFieldSettings Text="Name" Value="Value"></DropDownListFieldSettings>
+</SfDropDownList>
 <SfDiagramComponent @ref="diagram" Width="1000px" Height="1000px" Nodes="@NodeCollection" Connectors="@connectors">
     <SnapSettings Constraints="@SnapConstraints.None"></SnapSettings>
 </SfDiagramComponent>
@@ -279,6 +299,31 @@ The following code example shows how to flip the group.
     public SfDiagramComponent diagram;
     //Define diagram's nodes collection
     DiagramObjectCollection<Node> NodeCollection;
+     public class FlipOption
+ {
+     public string Name { get; set; } 
+     public string Value { get; set; } // Bound value
+ }
+
+ List<FlipOption> FlipDirections = new()
+ {
+     new FlipOption { Name = "None", Value = "None" },
+     new FlipOption { Name = "Horizontal", Value = "Horizontal" },
+     new FlipOption { Name = "Vertical", Value = "Vertical" },
+     new FlipOption { Name = "Both", Value = "Both" }
+ };
+
+ List<FlipOption> FlipModes = new()
+ {
+     new FlipOption { Name = "None", Value = "None" },
+     new FlipOption { Name = "Content", Value = "Content" },
+     new FlipOption { Name = "Port", Value = "Port" },
+     new FlipOption { Name = "Text", Value = "Text" },
+     new FlipOption { Name = "PortAndLabelOnly", Value = "LabelOnly" },
+     new FlipOption { Name = "PortWithLabelText", Value = "PortWithLabelText" },
+     new FlipOption { Name = "LabelOnly", Value = "LabelOnly" },
+     new FlipOption { Name = "All", Value = "All" }
+ };
     protected override void OnInitialized()
     {
         Node node3 = new Node()
@@ -381,7 +426,7 @@ The following code example shows how to flip the group.
         NodeCollection.Add(groupNode);
     }
    // This method applys flipDirection to the selected node's
- public void FlipDirectionChange(ChangeEventArgs args)
+ public void FlipDirectionChange(ChangeEventArgs<string, FlipOption> args)
  {
      diagram.StartGroupAction();
 
@@ -401,7 +446,7 @@ The following code example shows how to flip the group.
  }
 
  //This method apply's diagramFLipMode to the selected node's
- public void FlipModeChange(ChangeEventArgs args)
+ public void FlipModeChange(ChangeEventArgs<string, FlipOption> args)
  {
      diagram.StartGroupAction();
 
