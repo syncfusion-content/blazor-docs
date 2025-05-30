@@ -843,3 +843,5 @@ public IActionResult BatchUpdate([FromBody] CRUDModel<OrdersDetails> batchModel)
 {% endtabs %}
 
 ![UrlAdaptor - Batch Editing](../images/urladaptor-batch-editing.gif)
+
+Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/Binding-data-from-remote-service-to-blazor-data-grid/tree/master/UrlAdaptor).
