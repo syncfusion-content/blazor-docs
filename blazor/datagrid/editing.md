@@ -26,7 +26,6 @@ To learn about the available edit modes and edit types in the Grid, you can chec
 
 @page "/"
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" height="273px">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
@@ -124,7 +123,6 @@ Here’s an example of how to enable the toolbar with the edit option in the Gri
 
 @page "/"
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" height="273px">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
@@ -149,8 +147,6 @@ Here’s an example of how to enable the toolbar with the edit option in the Gri
 
 {% highlight c# tabtitle="OrderData.cs" %}
 
-namespace BlazorApp1.Data
-{
     public class OrderData
     {
         public static List<OrderData> Orders = new List<OrderData>();
@@ -199,7 +195,6 @@ namespace BlazorApp1.Data
         public string ShipCountry { get; set; }
         public int EmployeeID { get; set; } 
     }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -222,7 +217,6 @@ Here’s an example that demonstrates how to disable editing for a column in the
 @page "/"
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
-@using BlazorApp1.Data
 
 <div style="display:flex; margin:3px">
     <label style="padding:  10px 10px 12px 0">Select column to disable editing</label>
@@ -350,7 +344,6 @@ In the following demo, the **ShipCountry** column is rendered with the template.
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Inputs
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" Toolbar="@(new string[] {"Add", "Edit" ,"Delete","Update","Cancel" })">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true">
@@ -464,7 +457,6 @@ The following example demonstrates how to customize the delete confirmation dial
 @page "/"
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Popups
-@using BlazorApp1.Data
 
 <SfDialog @ref="Dialog" Width="350px" Visible="isDialogVisible" ShowCloseIcon="true" IsModal="true">
     <DialogEvents Closed="Closed"></DialogEvents>
@@ -612,7 +604,6 @@ In the following example, a checkbox is rendered as a template in the **Verified
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Inputs
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" Height="315px" Toolbar="@(new string[] {"Add", "Edit" ,"Delete","Update","Cancel" })">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true">
@@ -786,7 +777,6 @@ In the following example, the input element is rendered in the edit template of 
 @page "/"
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Inputs
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Employees" Height="" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="Syncfusion.Blazor.Grids.EditMode.Normal"></GridEditSettings>
@@ -819,8 +809,7 @@ In the following example, the input element is rendered in the edit template of 
 
 {% endhighlight %}
 {% highlight c# tabtitle="EmployeeDetails.cs" %}
-namespace BlazorApp1.Data
-{
+
     public class EmployeeDetails
     {
         public EmployeeDetails() { }
@@ -859,7 +848,6 @@ namespace BlazorApp1.Data
         public string FirstName { get; set; }
         public string LastName { get; set; }
     }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -878,7 +866,6 @@ In the following code example, the Employee Name is a foreign key column. When e
 @page "/"
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" Height="315" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
     <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true"></GridEditSettings>
@@ -911,8 +898,6 @@ In the following code example, the Employee Name is a foreign key column. When e
 
 {% highlight c# tabtitle="OrderData.cs" %}
 
-namespace BlazorApp1.Data
-{
     public class OrderData
     {
         public static List<OrderData> Orders = new List<OrderData>();
@@ -961,14 +946,12 @@ namespace BlazorApp1.Data
         public string ShipCountry { get; set; }
         public int EmployeeID { get; set; } 
     }
-}
+
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="EmployeeData.cs" %}
 
-namespace BlazorApp1.Data
-{
     public class EmployeeData
     {
         public static List<EmployeeData> Employees = new List<EmployeeData>();
@@ -1022,7 +1005,6 @@ namespace BlazorApp1.Data
         public string City { get; set; }
         public DateTime HireDate { get; set; }
     }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -1054,7 +1036,6 @@ The following example demonstrates the integration of the Grid with a separate t
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Navigations
-@using BlazorApp1.Data
 
 <SfToolbar>
     <ToolbarEvents Clicked="OnClicked"></ToolbarEvents>
@@ -1186,7 +1167,6 @@ The following example demonstrates how to edit data using an external form by le
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.Buttons
-@using BlazorApp1.Data
 
 <div class="row">
     <div class="col-md-3">
@@ -1384,7 +1364,6 @@ In the following example, the [SfTextBox](https://blazor.syncfusion.com/document
 @page "/"
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Inputs
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders">
     <GridColumns>

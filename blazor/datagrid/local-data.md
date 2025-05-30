@@ -1015,7 +1015,6 @@ The following example demonstrates how to show and hide the spinner during data 
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 @using Syncfusion.Blazor.Buttons
 
 <div Style="margin-bottom:15px">
@@ -1724,7 +1723,7 @@ The following screenshot represents the Grid with **Observable Collection**.
 
 N> While using an Observable collection, the added, removed, and changed records are reflected in the UI. But while updating the Observable collection using external actions like timers, events, and other notifications, you need to call the StateHasChanged method to reflect the changes in the UI.
 
-## Add a range of items into ObservableCollection in Blazor DataGrid
+### Add a range of items into ObservableCollection in Blazor DataGrid
 
 The Syncfusion Blazor DataGrid supports binding to an ObservableCollection, which allows the Grid to automatically reflect changes made to the data source. This approach is particularly useful when you need to add a large batch of records to the Grid at once, such as:
 

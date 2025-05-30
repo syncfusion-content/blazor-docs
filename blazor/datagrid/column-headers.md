@@ -20,7 +20,6 @@ To enable the `HeaderText` property, you simply need to define it in the **GridC
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" Height="315">
     <GridColumns>
@@ -359,7 +358,6 @@ Here is an example of using the `HeaderTextAlign` property to align the text of 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" AllowPaging="true">
     <GridColumns>
@@ -835,7 +833,6 @@ This is demonstrated in the following sample:
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 @inject IJSRuntime IJSRuntime
 
 <SfGrid DataSource="@Orders" Height="240" RowHeight="60">
@@ -1064,7 +1061,6 @@ Here's an example that demonstrates how to customize the appearance of a specifi
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" AllowPaging="true">
     <GridColumns>

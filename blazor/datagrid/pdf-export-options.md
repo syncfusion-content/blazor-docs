@@ -63,13 +63,13 @@ The following example demonstrates how to export current page to a PDF document 
         Orders = EmployeeData.GetAllRecords();
     }
 
-    public async Task ToolbarClickHandler(ClickEventArgs args)
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
         if (args.Item.Id == "Grid_pdfexport") //Id is combination of Grid's ID and itemname.
         {
             var exportProperties = new PdfExportProperties
                 {
-                    ExportType = SelectedExportType == "AllPages" ? ExportType.AllPages : ExportType CurrentPage
+                    ExportType = SelectedExportType == "AllPages" ? ExportType.AllPages : ExportType.CurrentPage
                 };
             await Grid.ExportToPdfAsync(exportProperties);
         }
@@ -165,7 +165,7 @@ The following example demonstrates how to export the selected records to a PDF d
         Orders = OrderData.GetAllRecords();
     }
 
-    public async Task ToolbarClickHandler(ClickEventArgs args)
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
         if (args.Item.Id == "Grid_pdfexport") //Id is combination of Grid's ID and itemname.
         {
@@ -272,7 +272,7 @@ The following example demonstrates how to export the filtered records to a PDF d
         Orders = OrderData.GetAllRecords();
     }
 
-    public async Task ToolbarClickHandler(ClickEventArgs args)
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
         if (args.Item.Id == "Grid_pdfexport") //Id is combination of Grid's ID and itemname.
         {
@@ -377,7 +377,7 @@ The following example demonstrates how to export hidden columns to a PDF documen
         Orders = OrderData.GetAllRecords();
     }
 
-    public async Task ToolbarClickHandler(ClickEventArgs args)
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
         if (args.Item.Id == "Grid_pdfexport") //Id is combination of Grid's ID and itemname.
         {
@@ -481,14 +481,14 @@ Toolbar="@(new List<string>() { "PdfExport" })" Height="348">
     private SfGrid<OrderData> Grid;
     public List<OrderData> Orders { get; set; }
     public bool isCustomerIDVisible { get; set; } = false;
-    public bool isShipCityVisible { get; set; }
+    public bool isShipCityVisible { get; set; } = true;
 
     protected override void OnInitialized()
     {
         Orders = OrderData.GetAllRecords();
     }
 
-    public async Task ToolbarClickHandler(ClickEventArgs args)
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
         if (args.Item.Id == "Grid_pdfexport") //Id is combination of Grid's ID and itemname.
         {
@@ -621,7 +621,7 @@ The following example demonstrates how to export the Grid into PDF document by s
         Data = OrderData.GetAllRecords(); 
     }
 
-    public async Task ToolbarClickHandler(ClickEventArgs args)
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
         if (args.Item.Id.Contains("pdfexport", StringComparison.OrdinalIgnoreCase))
         {
@@ -785,7 +785,7 @@ The following example demonstrates how to export the Grid into PDF document by s
         Orders = OrderData.GetAllRecords();
     }
 
-    public async Task ToolbarClickHandler(ClickEventArgs args)
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
         if (args.Item.Id == "Grid_pdfexport") //Id is combination of Grid's ID and itemname.
         {
@@ -882,7 +882,7 @@ The following example demonstrates how to define a file name using `PdfExportPro
     private SfGrid<OrderDetails> DefaultGrid;
     public List<OrderDetails> Orders { get; set; }
 
-    public async Task ToolbarClickHandler(ClickEventArgs args)
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
         if (args.Item.Id == "Grid_pdfexport")  //Id is combination of Grid's ID and itemname.
         {
@@ -988,7 +988,7 @@ In the following example, the [Blazor Toggle Switch Button](https://blazor.syncf
     {
         Orders = OrderData.GetAllRecords();
     }
-    public async Task ToolbarClickHandler(ClickEventArgs args)
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
         if (args.Item.Id == "Grid_pdfexport") //Id is combination of Grid's ID and itemname.
         {
@@ -1095,7 +1095,7 @@ The following example demonstrates how to customize the Grid columns when export
         Orders = OrderData.GetAllRecords();
     }
 
-    public async Task ToolbarClickHandler(ClickEventArgs args)
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
         if (args.Item.Id == "Grid_pdfexport") //Id is combination of Grid's ID and itemname.
         {
@@ -1312,7 +1312,7 @@ The following example demonstrates, how to change the default font, font color, 
         Orders = OrderData.GetAllRecords();
     }
 
-    public async Task ToolbarClickHandler(ClickEventArgs args)
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
         if (args.Item.Id == "Grid_pdfexport") //Id is combination of Grid's ID and itemname.
         {
@@ -1440,7 +1440,7 @@ The following example demonstrates how to use the custom **Algeria** font for ex
         Orders = OrderData.GetAllRecords();
     }
 
-    public async Task ToolbarClickHandler(ClickEventArgs args)
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
         if (args.Item.Id == "Grid_pdfexport") //Id is combination of Grid's ID and itemname.
         {
@@ -1786,7 +1786,7 @@ In the **Index.razor** file, the Grid is set up, the export operation is trigger
         Orders = OrderData.GetAllRecords();
     }
 
-    public async Task ToolbarClickHandler(ClickEventArgs args)
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {       
         if (args.Item.Id == "Grid_pdfexport") //Id is combination of Grid's ID and itemname.
         {
@@ -1887,7 +1887,7 @@ The example below demonstrates how to achieve this by converting the memory stre
         Orders = OrderData.GetAllRecords();
     }
 
-    public async Task ToolbarClickHandler(ClickEventArgs args)
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {       
        if (args.Item.Id == "Grid_pdfexport") //Id is combination of Grid's ID and itemname.
         {
@@ -1989,7 +1989,7 @@ In this example, there are two memory streams: *streamDoc1* and *streamDoc2*. st
     {
         Orders = OrderData.GetAllRecords();
     }
-    public async Task ToolbarClickHandler(ClickEventArgs args)
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
         if (args.Item.Id == "Grid_pdfexport") //Id is combination of Grid's ID and itemname.
         {

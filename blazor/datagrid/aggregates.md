@@ -24,7 +24,6 @@ By default, the aggregate values are displayed in the footer, group, and caption
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" AllowPaging="true" AllowGrouping="true">
     <GridGroupSettings Columns=@GroupOption></GridGroupSettings>
@@ -151,7 +150,6 @@ Here is an example that demonstrates how to use built-in aggregates types in the
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" AllowPaging="true" AllowGrouping="true">
     <GridGroupSettings Columns=@GroupOption></GridGroupSettings>

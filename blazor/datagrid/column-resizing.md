@@ -360,7 +360,7 @@ The following example demonstrates how to resize the columns in a grid. This is 
 <div style="display:flex; margin-bottom:5px;">
     <label style="margin: 5px 5px 0 0"> Select column name:</label>
     <SfDropDownList TValue="string" TItem="Columns" Width="120px" Placeholder="Select a Column" DataSource="@LocalData" @bind-Value="@DropDownValue">
-        <DropDownListEvents TItem="Columns" TValue="string" ValueChange="ChangeColumn"></DropDownListEvents>
+        <DropDownListEvents TItem="Columns" TValue="string"></DropDownListEvents>
         <DropDownListFieldSettings Value="ID" Text="Value"></DropDownListFieldSettings>
     </SfDropDownList>
 </div>

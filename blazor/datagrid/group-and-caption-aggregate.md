@@ -22,7 +22,6 @@ Here’s an example that demonstrates how to use group footer aggregates in the 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" AllowPaging="true" AllowGrouping="true">
     <GridPageSettings PageSize="5"></GridPageSettings>
@@ -122,7 +121,6 @@ Here’s an example that demonstrates how to use group and caption aggregates in
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" AllowPaging="true" AllowGrouping="true">
     <GridPageSettings PageSize="5"></GridPageSettings>

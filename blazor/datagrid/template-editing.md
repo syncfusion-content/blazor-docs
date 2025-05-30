@@ -1141,7 +1141,7 @@ public class EmployeeDetails
         {
             FirstName = firstName,
             LastName = lastName,
-            salarydetails = new SalaryDetails { Salary = salary }
+            SalaryDetails = new SalaryDetails { Salary = salary }
         };
         Title = title;
     }

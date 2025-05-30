@@ -50,7 +50,7 @@ The default menu items are displayed in the following table,
 public class OrderData
 {
     public static List<OrderData> Order = new List<OrderData>();
-    public OrderData(int OrderID, double Freight, string CustomerId, string ShipCity, string ShipCountry)
+    public OrderData(int OrderID, double Freight, string CustomerId, string ShipCity)
     {
         this.OrderID = OrderID;
         this.Freight = Freight;
@@ -415,12 +415,12 @@ Here is an example of how to configure the `ColumnMenuItems` property to include
 public class OrderData
 {
     public static List<OrderData> Orders = new List<OrderData>();
-    public OrderData(int? OrderID, string CustomerID, double Freight,string ShipCity)
+    public OrderData(int? OrderID, string CustomerID, double Freight,string ShipCountry)
     {
         this.OrderID = OrderID;
         this.CustomerID = CustomerID;
         this.Freight = Freight;
-        this.ShipCountry = ShipCity;
+        this.ShipCountry = ShipCountry;
     }
     public static List<OrderData> GetAllRecords()
     {
@@ -500,43 +500,42 @@ Here is an example that demonstrates how to customize the column menu icon in th
 public class OrderData
 {
     public static List<OrderData> Orders = new List<OrderData>();
-    public OrderData(int OrderID, string CustomerID, double Freight,string ShipCity)
+
+    public OrderData(int OrderID, string CustomerID, double Freight, string ShipName)
     {
         this.OrderID = OrderID;
         this.CustomerID = CustomerID;
         this.Freight = Freight;
-        this.ShipName = ShipCity; 
+        this.ShipName = ShipName; 
     }
+
     public static List<OrderData> GetAllRecords()
     {
-        if (Orders.Count() == 0)
+        if (Orders.Count == 0)
         {
-            int code = 10;
-            for (int i = 1; i < 2; i++)
-            {
-                Orders.Add(new OrderData(10248, "ALFKI",33.32, "France"));
-                Orders.Add(new OrderData(10249, "ANANTR", 34.32, "Germany"));
-                Orders.Add(new OrderData(10250, "ANTON", 36.32, "Brazil"));
-                Orders.Add(new OrderData(10251, "BLONP", 54.31, "Belgium"));
-                Orders.Add(new OrderData(10252, "BOLID", 35.36, "Switzerland"));
-                Orders.Add(new OrderData(10253, "ANTON", 37.35, "Switzerland"));
-                Orders.Add(new OrderData(10254, "BLONP", 33.32, "Germany"));
-                Orders.Add(new OrderData(10255, "BOLID", 76.74, "Germany"));
-                Orders.Add(new OrderData(10256, "ALFKI",55.43, "Belgium"));                   
-                code += 5;
-            }
+            Orders.Add(new OrderData(10248, "ALFKI", 33.32, "Ever Given"));
+            Orders.Add(new OrderData(10249, "ANANTR", 34.32, "Queen Mary 2"));
+            Orders.Add(new OrderData(10250, "ANTON", 36.32, "Maersk Alabama"));
+            Orders.Add(new OrderData(10251, "BLONP", 54.31, "Titanic"));
+            Orders.Add(new OrderData(10252, "BOLID", 35.36, "Santa Maria"));
+            Orders.Add(new OrderData(10253, "ANTON", 37.35, "Black Pearl"));
+            Orders.Add(new OrderData(10254, "BLONP", 33.32, "Sea Cloud"));
+            Orders.Add(new OrderData(10255, "BOLID", 76.74, "Symphony of the Seas"));
+            Orders.Add(new OrderData(10256, "ALFKI", 55.43, "Aurora"));
         }
         return Orders;
     }
+
     public int OrderID { get; set; }
     public string CustomerID { get; set; }
     public double Freight { get; set; }
     public string ShipName { get; set; }
 }
+
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LXrgCMDHftqrDkea?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LthetSqtfZnABCcg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Column menu events
 

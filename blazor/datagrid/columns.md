@@ -179,7 +179,6 @@ The column width is specified as an absolute pixel value. For example, a column 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" Height="315">
     <GridColumns>
@@ -253,7 +252,6 @@ You can use the [Column.Format](https://help.syncfusion.com/cr/blazor/Syncfusion
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" Height="315">
     <GridColumns>
@@ -340,7 +338,6 @@ The following example code demonstrates the formatting of data for **Mark 1** an
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" Height="315">
     <GridColumns>
@@ -430,7 +427,6 @@ Type="ColumnType.Date" Format="dMM/dd/yyyy hh:mm:ss tt" | 04/07/1996 12:00 AM
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" AllowPaging="true" Height="315">
     <GridColumns>
@@ -622,7 +618,6 @@ To illustrate how to format a template column value, consider the following exam
 {% highlight razor tabtitle="Index.razor" %}
 @page "/"
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders">
     <GridPageSettings PageSize="5"></GridPageSettings>
@@ -725,7 +720,6 @@ In the below example, the numberFormatOptions object is used as the format prope
 {% highlight razor tabtitle="Index.razor" %}
 @page "/"
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders">
     <GridPageSettings PageSize="5"></GridPageSettings>
@@ -821,7 +815,6 @@ Here is an example of using the `TextAlign` property to align the text of a Data
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
-@using BlazorApp1.Data
 
 <div style="display:flex; margin:3px">
     <label style="padding:  10px 10px 12px 0">Align the text for columns :</label>
@@ -878,8 +871,7 @@ Here is an example of using the `TextAlign` property to align the text of a Data
 }
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
-  namespace BlazorApp1.Data
-{
+
     public class OrderData
     {
         public static List<OrderData> Orders = new List<OrderData>();
@@ -928,7 +920,6 @@ Here is an example of using the `TextAlign` property to align the text of a Data
         public string ShipCountry { get; set; }
         public int EmployeeID { get; set; } 
     }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -946,7 +937,6 @@ To enable the rendering of boolean values as checkboxes, you need to set the `Di
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders">
     <GridColumns>
@@ -1027,7 +1017,6 @@ The [AutoFitColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid @ref="Grid" DataSource="@Orders" Height="315" GridLines="GridLine.Both">
     <GridEvents DataBound="DataboundHandler" TValue="OrderData"></GridEvents>
@@ -1197,7 +1186,6 @@ Here's an example code snippet in Blazor that demonstrates how to auto fit colum
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids;
-@using BlazorApp1.Data
 
 <SfGrid @ref="Grid" DataSource="@Orders" ShowColumnChooser="true" Toolbar=@ToolbarItems>
     <GridEvents OnActionComplete="OnActionComplete" TValue="OrderData"></GridEvents>
@@ -1369,7 +1357,6 @@ In the below example, the **ShipCity** column is defined with `Visible` property
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" Height="315">
     <GridColumns>
@@ -1458,7 +1445,6 @@ Here's an example of how to show or hide a column based on the HeaderText in the
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfButton OnClick="Show" CssClass="e-primary" Content="Show"></SfButton>
 <SfButton OnClick="Hide" CssClass="e-primary" Content="Hide"></SfButton>
@@ -1547,7 +1533,6 @@ Here's an example of how to show or hide a column based on the field in the Blaz
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfButton OnClick="Show" CssClass="e-primary" Content="Show"></SfButton>
 <SfButton OnClick="Hide" CssClass="e-primary" Content="Hide"></SfButton>
@@ -1738,7 +1723,6 @@ Here is an example code that demonstrates how to control datagrid actions for sp
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" Height="315" AllowFiltering="true" AllowPaging="true" AllowGrouping="true" AllowReordering="true" AllowSorting="true" AllowResizing="true" Toolbar="@ToolbarItems">
     <GridColumns>
@@ -1882,7 +1866,6 @@ Here's an example of how you can add and remove a column from the datagrid:
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
-@using BlazorApp1.Data
 
 <SfButton CssClass="e-primary" OnClick="AddColumns">Add Coluumn</SfButton>
 <SfButton CssClass="e-primary" OnClick="DeleteColumns">Delete Column</SfButton>
@@ -1993,7 +1976,6 @@ In this example, we have a DataGrid that displays data with three columns: **Ord
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" Height="315">
     <GridColumns>

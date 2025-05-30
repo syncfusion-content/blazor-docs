@@ -18,7 +18,6 @@ The following example demonstrates, how to render the custom Toolbar using `Temp
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Navigations
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" AllowPaging="true" Height="200" @ref="Grid" AllowGrouping="true">
     <GridTemplates>
@@ -129,7 +128,6 @@ The following example demonstrates how to render an image in the Toolbar of the 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" AllowPaging="true" Height="200" @ref="Grid">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
@@ -237,7 +235,6 @@ In the **OnChange** method, the text of the selected item is checked to determin
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.DropDowns
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" AllowPaging="true" Height="200" @ref="Grid">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>    
@@ -488,7 +485,6 @@ The following example demonstrates how to render a **SfButton** component in the
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" AllowPaging="true" AllowExcelExport="true" AllowPdfExport="true" Height="200" @ref="Grid">
     <SfToolbar>

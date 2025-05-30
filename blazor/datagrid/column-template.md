@@ -29,7 +29,6 @@ The following example demonstrates how to define a `Template` for the **Employee
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders">
     <GridColumns>
@@ -206,6 +205,7 @@ In the following example, we rendered the Sparkline Chart component in the Grid 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Charts
 
 <SfGrid DataSource="@EmployeeData">
     <GridColumns>
@@ -295,7 +295,7 @@ public class EmployeeDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VXBJsWrWVXXLwpde?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LZLIDogDAvSxmdWU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Render DropDownList component in a column
 
@@ -410,6 +410,7 @@ In the following code, we rendered the Chips component in the Grid **First Name*
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
 
 <SfGrid DataSource="@EmployeeData">
     <GridColumns>
@@ -655,7 +656,6 @@ In the following code, checkbox is rendered based on **Discontinued** field valu
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders">
     <GridColumns>
@@ -1085,7 +1085,6 @@ This can be achieved by initially defining an anchor tag inside the column templ
 {% highlight razor tabtitle="Index.razor" %}
 @inject NavigationManager UriHelper
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders">
     <GridColumns>

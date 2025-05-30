@@ -263,7 +263,7 @@ The following example demonstrates how to define both built-in and custom contex
 @using Syncfusion.Blazor.Grids
 
 <SfGrid @ref="Grid" DataSource="@Orders" AllowPaging="true" ContextMenuItems="@(new List<Object>() { "Copy", new ContextMenuItemModel { Text = "Copy with headers", Target = ".e-content", Id = "copywithheader" } })">
-    <GridEvents ContextMenuItemClicked="OnContextMenuClick" TValue="Order"></GridEvents>
+    <GridEvents ContextMenuItemClicked="OnContextMenuClick" TValue="OrderData"></GridEvents>
     <GridPageSettings PageSize="8"></GridPageSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" IsPrimaryKey="true" />
@@ -383,10 +383,10 @@ The following example demonstrates how to create a sub context menu titled **Cli
             Text = "Clipboard",
             Target = ".e-content",
             Id = "clipboard",
-            Items = new List<MenuItem>
+            Items = new List<Syncfusion.Blazor.Navigations.MenuItem>
             {
-                new MenuItem { Text = "Copy", Id = "copy" },
-                new MenuItem { Text = "Copy With Header", Id = "copywithheader" }
+                new Syncfusion.Blazor.Navigations.MenuItem { Text = "Copy", Id = "copy" },
+                new Syncfusion.Blazor.Navigations.MenuItem { Text = "Copy With Header", Id = "copywithheader" }
             }
         }
     };
