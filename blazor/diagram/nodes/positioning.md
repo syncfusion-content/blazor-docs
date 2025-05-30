@@ -7,9 +7,9 @@ control: Diagram Component
 documentation: ug
 ---
 
-# Positioning a node in Blazor Diagram Component
+# Positioning Nodes in Blazor Diagram Component
 
-## How to arrange the nodes
+## How to Arrange the Nodes
 
 * The position of a node is controlled by using the [OffsetX](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_OffsetX) and [OffsetY](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_OffsetY) properties. By default, these offset properties represent the distance between the origin of the diagram’s page and node’s center point.
 
@@ -77,7 +77,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Arranging Node Position in Blazor Diagram](../images/blazor-diagram-node-position.png)
 
-Rotation of a node is controlled by using the [RotationAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_RotationAngle) property. The following code shows how to change the RotationAngle value.
+Rotation of a node is controlled by using the [RotationAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_RotationAngle) property. The following code shows how to change the Rotation Angle value.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -118,7 +118,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Changing Node Rotation Angle in Blazor Diagram](../images/blazor-diagram-node-rotation-angle.png)
 
-## How to set minimum size and maximum size for the node
+## How to Set Minimum and Maximum Size for a Node
 
 The [MinWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_MinWidth) and [MinHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_MinHeight) properties of node allows you to control the minimum size of the node while resizing. Similarly, the [MaxWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_MaxWidth) and [MaxHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_MaxHeight) properties of node allows you to control the maximum size of the node while resizing. The below gif explains how minimum and maximum sizes are controlled.
 

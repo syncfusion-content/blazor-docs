@@ -7,9 +7,9 @@ control: Diagram Component
 documentation: ug
 ---
 
-# Straight Segments in Blazor Diagram Component
+# Straight Segments in the Blazor Diagram Component
 
-## How to create straight segment
+## How to Create Straight Segments
 
 To create a straight line, specify the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_Type) of the segment as [Straight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Straight) and add a straight segment to the [Segments](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_Segments) collection and need to specify Type for the connector. The following code example illustrates how to create a default straight segment.
 
@@ -55,7 +55,7 @@ To create a straight line, specify the [Type](https://help.syncfusion.com/cr/bla
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments/Straight)
 
-### Straight segment editing
+### Editing Straight Segments
 
 * The end point of each straight segment is represented by a thumb that enables editing the segment.
 * Any number of new segments can be inserted into a straight line by clicking when Shift and Ctrl keys are pressed (Ctrl+Shift+Click).
@@ -100,11 +100,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Editing Straight Segment in Blazor Diagram](../../images/blazor-diagram-edit-straight-segment.gif)
 
-## How to customize Straight Segment Thumb Shape 
+## How to Customize Straight Segments Thumb Shape 
 
 The Straight connector can have multiple segments between the source and target points. By default, these segments are rendered as circles, but this can be customized either globally or for individual connectors using the [SegmentThumbSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbSettings.html) class.
 
-To change the segment thumb shape for all Straight connectors, configure the [SegmentThumbSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbSettings.html) property of the SfDiagramComponent class and set the Shape property to the desired shape.
+To change the segment thumb shape for all Straight connectors, configure the [SegmentThumbSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbSettings.html) property of the SfDiagram Component class and set the Shape property to the desired shape.
 
 To customize the segment thumb shape for a specific connector, first disable the [InheritSegmentThumbShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_InheritSegmentThumbShape) constraint. Then, configure the [SegmentThumbSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbSettings.html) property of the Connector class, specifying the desired shape using the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbSettings.html#Syncfusion_Blazor_Diagram_SegmentThumbSettings_Shape) property of the [SegmentThumbSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbSettings.html) class. 
 

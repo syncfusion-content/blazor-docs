@@ -7,19 +7,19 @@ control: Diagram Component
 documentation: ug
 ---
 
-# Undo Redo support in Blazor Diagram Component
+# Undo Redo Support in Blazor Diagram Component
 
 The Blazor Diagram component tracks the history of actions performed after initialization and provides support to reverse and restore those changes.
 
-## Undo and redo
+## Undo and Redo
 
 The [Diagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html) offers built-in functionality to track changes made through both user interactions and public APIs. These changes can be reverted or restored using shortcut keys or commands.
 
-## Undo/redo through shortcut keys
+## Undo/Redo Through Shortcut keys
 
 Undo and redo commands can be executed through shortcut keys. Shortcut key for undo is Ctrl+Z and shortcut key for redo is Ctrl+Y.
 
-## Undo/redo through public APIs
+## Undo/Redo Through Public APIs
 
 The [Undo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Undo) and [Redo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Redo) methods allow you to programmatically revert or restore changes. The following code example illustrates how to undo/redo the changes through code.
 
@@ -35,7 +35,7 @@ diagram.Redo();
 
 The [HistoryChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_HistoryChanged) event is triggered when a change in the diagram is reverted or restored.
 
-### Group multiple changes
+### Group Multiple Changes
 
 The History list feature enables users to revert or restore multiple changes through a single undo/redo command. This functionality is particularly useful when dealing with complex operations, such as modifying the fill color of multiple elements simultaneously.
 
@@ -52,7 +52,7 @@ diagram.StartGroupAction();
 diagram.EndGroupAction();
 ```
 
-## History change event
+## History Change Event
 
 * This event can be utilized for customization purposes during interactions with diagram elements.
 * When users interact with nodes or connectors, entries are added to the history list, triggering this event.
@@ -79,7 +79,7 @@ The [HistoryChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Undo-Redo/HistoryChange)
 
-## How to set stack limit
+## How to Set Stack Limit
 
 The [StackLimit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramHistoryManager.html#Syncfusion_Blazor_Diagram_DiagramHistoryManager_StackLimit) property of the history manager allows you to set a maximum number of history entries that can be stored in the history list. This limit helps control the memory usage and optimizes the performance of undo and redo operations by restricting the number of actions that can be undone or redone.
 
@@ -127,7 +127,7 @@ Download a complete working sample from [GitHub](https://github.com/SyncfusionEx
 
 ![StackLimit in Blazor Diagram](images/stackLimitGIF.gif)
 
-## How to track custom entry
+## How to Track Custom Entry
 
 [Diagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html) offers robust functionality to monitor and track modifications made to custom properties. The following example demonstrates how to effectively implement change tracking for custom property alterations, enhancing the diagram's undo-redo capabilities and providing better control over the diagram's state.
 
@@ -178,7 +178,7 @@ Download a complete working sample from [GitHub](https://github.com/SyncfusionEx
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Undo-Redo/CustomEntry)
 
-### HistoryAdding Event
+### History Adding Event
 
 [HistoryAdding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramHistoryManager.html#Syncfusion_Blazor_Diagram_DiagramHistoryManager_HistoryAdding) event in the [DiagramHistoryManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramHistoryManager.html) allows you to control the addition of history entries. This event is triggered before a new entry is added to the history stack. It provides a history entry as an argument and expects a boolean return value indicating whether the specific entry should be added (true) or discarded (false).
 
@@ -223,7 +223,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Undo-Redo/HistoryAdding)
 
-### Custom undo redo
+### Custom Undo/Redo
 
 The custom undo-redo process allows you to store and manage actions that are not captured by the default undo-redo history list. This feature provides greater flexibility and control over the diagram's state management.
 
