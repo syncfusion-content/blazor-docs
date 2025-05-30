@@ -21,9 +21,9 @@ They are classified as follows.
 The `BPMN Association` flow is used to link flow objects with their corresponding text or artifact. An association is represented as a dotted graphical line with an opened arrow. 
 To create an Association, the [Flow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlow.html#Syncfusion_Blazor_Diagram_BpmnFlow_Flow) property of the [BpmnFlowShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlow.html) should be set to [AssociationFlow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlowType.html#Syncfusion_Blazor_Diagram_BpmnFlowType_AssociationFlow). The types of association are as follows:
 
-* DirectionalAssociationFlow: Represented as a dotted graphical line with one side arrow.
-* BiDirectionalAssociationFlow: Represented as a dotted graphical line with double side arrow.
-* AssociationFlow: An Association is represented as a dotted graphical line with an opened arrow.
+* Directional Association Flow: Represented as a dotted graphical line with one side arrow.
+* Bi-Directional Association Flow: Represented as a dotted graphical line with double side arrow.
+* Association Flow: An Association is represented as a dotted graphical line with an opened arrow.
 
 The following code example explains how to create an association.
 
@@ -74,9 +74,9 @@ The following table shows the visual representation of association flows.
 
 A `Sequence` flow shows the order that the activities are performed in a BPMN process and is represented by a solid graphical line. To create a SequenceFlow, [Flow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlow.html#Syncfusion_Blazor_Diagram_BpmnFlow_Flow) property of the [BpmnFlowShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlow.html) should be set to [SequenceFlow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlowType.html#Syncfusion_Blazor_Diagram_BpmnFlowType_SequenceFlow). The types of sequence are as follows:
 
-* SequenceFlow: Sequence flows represent the typical path between the two flow objects.
-* ConditionalSequenceFlow: Conditional sequence flows are used to control the flow of a process based on certain conditions.
-* DefaultSequenceFlow: Default sequence flows are represented by an arrow with a tic mark on one end.
+* Sequence Flow: Sequence flows represent the typical path between the two flow objects.
+* Conditional Sequence Flow: Conditional sequence flows are used to control the flow of a process based on certain conditions.
+* Default Sequence Flow: Default sequence flows are represented by an arrow with a tic mark on one end.
 
 The following code example explains how to create a sequence flow.
 
@@ -129,9 +129,9 @@ N> The default value for the property `Sequence` is **Normal.**
 
 `Message` flows are used when two separately controlled processes communicate and collaborate with one another. An activity or event in one pool can initiate a message to the another pool. Message Flows are depicted as lines with an empty circle indicating where the message originates and an empty arrowhead where the message terminates. To create a MessageFlow, the [Flow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlow.html#Syncfusion_Blazor_Diagram_BpmnFlow_Flow) property of the [BpmnFlowShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlow.html) should be set to [MessageFlow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlowType.html#Syncfusion_Blazor_Diagram_BpmnFlowType_MessageFlow). The types of message flows are as follows:
 
-* InitiatingMessageFlow: An activity or event in one pool can initiate a message to another pool.
-* NonInitiatingMessageFlow: An activity or event in one pool cannot initiate a message to another pool.
-* MessageFlow: A MessageFlow shows the flow of messages between two participants and is represented by line.
+* Initiating Message Flow: An activity or event in one pool can initiate a message to another pool.
+* Non-Initiating Message Flow: An activity or event in one pool cannot initiate a message to another pool.
+* Message Flow: A MessageFlow shows the flow of messages between two participants and is represented by line.
 
 The following code example explains how to define a message flow.
 

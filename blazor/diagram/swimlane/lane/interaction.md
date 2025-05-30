@@ -7,7 +7,7 @@ control: Diagram Component
 documentation: ug
 ---
 
-# Lane interaction in Blazor Diagram Component
+# Lane Interaction in Blazor Diagram Component
 
 The diagram provides support to select, resize, or swap the lane interactively. 
 
@@ -15,7 +15,7 @@ The diagram provides support to select, resize, or swap the lane interactively.
 
 A Lane can be selected by clicking (tapping) the header of the lane.
 
-## Resizing lane
+## Resizing Lane
 
 * A lane can be resized in the bottom and right direction.
 * A lane can be resized by using the resize selector of the lane.
@@ -27,7 +27,7 @@ The following image shows how to resize the lane.
 
 ![Lane Resizing](../Swimlane-images/Lane_Resize.gif)
 
-## Lane swapping
+## Lane Swapping
 
 * Lanes can be swapped by dragging the lanes over another lane.
 * The helper will indicate the insertion point during lane swapping.
@@ -35,7 +35,7 @@ The following image shows how to swap lanes.
 
 ![Lane Swapping](../Swimlane-images/Lane_Swapping.gif)
 
-## Children interaction in lanes
+## Children Interaction in Lanes
 
 * You can resize the child node within swimlanes.
 * You can drag the child nodes within the lane.

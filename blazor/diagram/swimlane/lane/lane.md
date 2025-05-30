@@ -14,7 +14,7 @@ A [Lane](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Lane.ht
 
 The number of lanes can be added to a swimlane and rendered in the diagram. The lanes are automatically stacked inside the swimlane based on the order they are added.
 
-## Create an empty lane
+## Create an Empty Lane
 
 * You can create a [Lane](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Lane.html) and add it to the [Lanes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Swimlane.html#Syncfusion_Blazor_Diagram_Swimlane_Lanes) collection of the Swimlane.
 
@@ -79,7 +79,7 @@ The following code example explains how to define a swimlane with lane.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Lane/LaneCreation).
 
-## Create Lane Header and Header customization
+## Create a Lane Header and Customize the Header
 
 * The [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Lane.html#Syncfusion_Blazor_Diagram_Lane_Header) property of a lane allows you to textually describe the lane and customize the appearance of the description.
 * The size of the lane header can be controlled using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneChild.html#Syncfusion_Blazor_Diagram_SwimlaneChild_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneChild.html#Syncfusion_Blazor_Diagram_SwimlaneChild_Height) properties of the header.
@@ -227,7 +227,7 @@ The following code example explains how to define a lane header annotation templ
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Lane/LaneHeaderTemplate)
 
-## Add and Remove the lane at runtime
+## Add and Remove a Lane at Runtime
 
  You can add and remove the lane at runtime by using the `Add` and `Remove` methods of the [Swimlane.Lanes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Swimlane.html#Syncfusion_Blazor_Diagram_Swimlane_Lanes) Collection. The following code explains how to dynamically add and remove the lane in a swimlane.
 
@@ -317,7 +317,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Lane/AddRemoveLaneAtRuntime).
 
-## Add children to lane
+## Add children to a Lane
 
  To add nodes to the lane, you should add a node collection to the [Children](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Lane.html#Syncfusion_Blazor_Diagram_Lane_Children) collection of the lane.
 
@@ -406,7 +406,7 @@ The following code example explains how to add nodes to lane.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Lane/LaneChildren).
 
-## Header Selection and Resize
+## How to Select and Resize Header
 
  * You can select the individual lane header by clicking on the header twice. On the first click, the respective lane can be selected.
 
@@ -418,7 +418,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Header Select and Resize](../Swimlane-images/Header_Selection_Resize.gif).
   
-## Lane header editing
+## Lane Header Editing
 
 The diagram provides support for editing Lane headers at runtime. You can achieve header editing by using the double-click event. Double-clicking the header label enables the editing of that specific header. 
 

@@ -17,7 +17,7 @@ When working with an extensive diagram, it can be challenging to maintain contex
 
 The SfDiagramOverviewComponent offers an elegant solution to these challenges by providing a compact preview of the entire diagram. This overview displays a miniature representation of your diagram, with a rectangular viewport indicator highlighting your current focus area. Navigation becomes intuitive and effortless as you can simply drag this viewport rectangle to instantly move to different parts of the diagram, enhancing both productivity and user experience.
 
-## Create an overview
+## Create an Overview
 
 The [SourceID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Overview.SfDiagramOverviewComponent.html#Syncfusion_Blazor_Diagram_Overview_SfDiagramOverviewComponent_SourceID) property of the SfDiagramOverviewComponent is essential for linking the overview to its corresponding diagram. To establish this connection, set the SourceID to match the [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ID) of the target diagram component. This ensures that the overview displays an accurate representation of the main diagram.
 
