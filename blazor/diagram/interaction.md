@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Interaction in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about interaction in Syncfusion Blazor Diagram component and much more details.
+title: Connector Interactions in Blazor Diagram Component | Syncfusion
+description: Checkout and learn here all about connector interaction in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Interaction in Blazor Diagram Component
+# Connector Interactions in Blazor Diagram Component
 
 ## Selection
 
@@ -80,6 +80,18 @@ During a single click, any existing item in the selection list is cleared, and o
 
 Clicking and dragging the diagram area allows to create a rectangular region. The elements that are covered under the rectangular region are selected at the end.
 
+## Diagram Element Highlighter
+
+The Diagram Element Highlighter feature enhances the selection process by visually distinguishing selected elements and indicating which elements are part of a selection when performing multiple selection actions.
+
+* Rubber Band Selection: The first added diagram element will be highlighted with a 2px stroke width, while other selected elements will have a 1px stroke width.
+
+* Ctrl+Click: The first selected element will have a 2px stroke width, while other selected elements will have a 1px stroke width.
+
+* Single Selection: The selection highlighter is not applicable.
+
+For more information about customizing the Diagram Element Highlighter, refer [Customize Highlights for Selected Diagram Elements](./style#how-to-customize-highlights-for-selected-diagram-elements).
+
 ![Multiple Selection in Blazor Diagram](images/blazor-diagram-multiple-selection.gif)
 
 ## Select/Unselect elements using program
@@ -87,6 +99,42 @@ Clicking and dragging the diagram area allows to create a rectangular region. Th
 The [Select](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Select_System_Collections_ObjectModel_ObservableCollection_Syncfusion_Blazor_Diagram_IDiagramObject__System_Nullable_System_Boolean__) and [ClearSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ClearSelection) methods help to select or clear the selection of the elements at runtime.
 
 Get the currently selected items from the [Nodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Nodes) and [Connectors](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Connectors) collection of the [SelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionSettings) property of the diagram model.
+
+## Toggle selection
+
+You can toggle the selection state of diagram elements, including nodes, connectors, groups, and swimlanes, by clicking on them at runtime. The [CanToggleSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramSelectionSettings.html#Syncfusion_Blazor_Diagram_DiagramSelectionSettings_CanToggleSelection) property in [DiagramSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramSelectionSettings.html) determines whether the selection state of a diagram element should toggle with a mouse click at runtime. By default, this property is set to false.
+In the following example, the node can be selected with the first click and unselected with the second click.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Height="600px" Nodes="@nodes" SelectionSettings="@selectionSettings" />
+
+@code
+{
+    DiagramObjectCollection<Node> nodes;
+    DiagramSelectionSettings selectionSettings = new DiagramSelectionSettings() { CanToggleSelection = true };
+
+    protected override void OnInitialized()
+    {
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
+            {
+                ID = "node1",
+                OffsetX = 250,
+                OffsetY = 250,
+                Width = 100,
+                Height = 100,
+                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
+            };
+        nodes.Add(node);
+        
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction/UnSelectSample)
+
+![Toggle Selection in Blazor Diagram](images/UnselectSample.gif)
 
 ## Select entire elements in diagram programmatically
 

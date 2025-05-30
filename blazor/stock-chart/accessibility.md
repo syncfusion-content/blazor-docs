@@ -52,18 +52,18 @@ The Blazor Stock Chart component followed the [WAI-ARIA](https://www.w3.org/WAI/
 
 The Blazor Stock Chart component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Stock Chart component.
 
-| Interaction Keys | Description |
-| --- | --- |
-| <kbd>Alt + J</kbd> | Moves the focus to the Stock Chart element. |
-| <kbd>Tab</kbd> | Moves the focus to the next element in the Stock Chart. |
-| <kbd>Shift + Tab</kbd> | Moves the focus to the previous element in the Stock Chart. |
-| <kbd>Down Arrow</kbd> | Moves the focus to the data point left side from the selected point. |
-| <kbd>Up Arrow</kbd> | Moves the focus to the data point right side from the selected point. |
-| <kbd>Down/Left Arrow</kbd> | Moves the focus to the legend left side from the selected legend. |
-| <kbd>Up/Right Arrow</kbd> | Moves the focus to the legend right side from the selected legend. |
-| <kbd>Enter/Space</kbd> | Toggles the visibility of the corresponding series. |
-| <kbd>ESC</kbd> | Cancel the tooltip for the data point. |
-| <kbd>Ctrl + P</kbd> | Prints the Stock Chart. |
+| Windows | Mac | Description |
+| --- | --- | --- |
+| <kbd>Alt + J</kbd> | <kbd>⌥</kbd> + <kbd>J</kbd> | Moves the focus to the Stock Chart element. |
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Moves the focus to the next element in the Stock Chart. |
+| <kbd>Shift + Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Moves the focus to the previous element in the Stock Chart. |
+| <kbd>↓</kbd> | <kbd>↓</kbd> | Moves the focus to the data point left side from the selected point. |
+| <kbd>↑</kbd> | <kbd>↑</kbd> | Moves the focus to the data point right side from the selected point. |
+| <kbd>↓</kbd> or <kbd>←</kbd> | <kbd>↓</kbd> or <kbd>←</kbd> | Moves the focus to the legend left side from the selected legend. |
+| <kbd>↑</kbd> or <kbd>→</kbd> | <kbd>↑</kbd> or <kbd>→</kbd> | Moves the focus to the legend right side from the selected legend. |
+| <kbd>Enter/Space</kbd> | <kbd>Enter/Space</kbd> | Toggles the visibility of the corresponding series. |
+| <kbd>ESC</kbd> | <kbd>Esc</kbd> | Cancel the tooltip for the data point. |
+| <kbd>Ctrl + P</kbd> | <kbd>⌘</kbd> + <kbd>P</kbd> | Prints the Stock Chart. |
 
 ## Ensuring accessibility
 

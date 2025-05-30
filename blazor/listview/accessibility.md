@@ -50,12 +50,12 @@ The Blazor ListView component followed the [WAI-ARIA](https://www.w3.org/WAI/ARI
 
 The Blazor ListView component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the ListView component.
 
-| Keyboard shortcuts | Actions |
-|------------|-------------------|
-| <kbd>Arrow Up</kbd> | Move to the previous list item. |
-| <kbd>Arrow Down</kbd> | Move to the next list item. |
-| <kbd>Select</kbd> | Select the targeted list from the whole list. |
-| <kbd>Back</kbd> | Get back to the previous lists if it is in nested list. |
+| Windows | Mac | Actions |
+|------------|------ | -------------|
+| <kbd>↑</kbd> | <kbd>↑</kbd> | Move to the previous list item. |
+| <kbd>↓</kbd> | <kbd>↓</kbd> | Move to the next list item. |
+| <kbd>Space</kbd> | <kbd>Space</kbd> | Select the targeted list from the whole list. |
+| <kbd>Back</kbd> | <kbd>Back</kbd> | Get back to the previous lists if it is in nested list. |
 
 ```cshtml
 @using Syncfusion.Blazor.Lists

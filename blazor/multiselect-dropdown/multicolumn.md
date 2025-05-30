@@ -28,6 +28,18 @@ Display the custom text alignment in each column using a built-in class like in 
 
 ![Blazor MultiSelect with Multicolumn](./images/multicolumn/blazor_multiselect_multicolumn.png)
 
-## Limitation of multicolumn multiselect dropdownlist
+## How to Display MultiColumn Item and CheckBox Inline
 
-The component will not support column filtering and sorting, and the column will be alligned as same as grid.
+To ensure the checkbox and item details are aligned perfectly on the same line, you can apply the following CSS styles. These styles position the checkbox within the template, making it inline with the item details:
+
+ ```css
+    .e-popup.e-multi-select-list-wrapper .e-list-item .e-checkbox-wrapper {
+     position: absolute;
+     top: 10px;
+     left: 5px;
+   }
+```
+
+## Limitation of multicolumn multiselect dropdown
+
+The component will not support column filtering and sorting, and the column will be aligned as same as grid.

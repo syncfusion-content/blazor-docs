@@ -9,9 +9,9 @@ documentation: ug
 
 # Content Render Mode in Blazor Accordion Component
 
-[Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) provides support to render the content of all [AccordionItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html) at initial load which will be maintained in DOM. For that, disable the [LoadOnDemand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAccordion.html#Syncfusion_Blazor_Navigations_SfAccordion_LoadOnDemand) property to load all the contents.
+The [Blazor Accordion](https://www.syncfusion.com/blazor-components/blazor-accordion) component provides support for rendering the content of all [AccordionItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html) elements at initial load, which will be maintained in the DOM. To enable this behavior, set the [LoadOnDemand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAccordion.html#Syncfusion_Blazor_Navigations_SfAccordion_LoadOnDemand) property to `false`.
 
-N> The default value of the property `LoadOnDemand` is true.
+> The default value of the `LoadOnDemand` property is `true`.
 
 ```cshtml
 

@@ -28,7 +28,7 @@ To get start quickly with Avatar component using Blazor, you can check on this v
 
 ## Create a new Blazor App in Visual Studio
 
-You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=windows) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Themes NuGet in the App
 
@@ -125,6 +125,12 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Avatar component
 
 <!-- xLarge Avatar-->
 <div class="e-avatar e-avatar-xlarge image"></div>
+
+<style>
+    .e-avatar {
+        background-image: url(https://ej2.syncfusion.com/demos/src/avatar/images/pic01.png);
+    }
+</style>
 
 {% endhighlight %}
 {% endtabs %}

@@ -11,6 +11,11 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor Breadcrumb](https://www.syncfusion.com/blazor-components/blazor-breadcrumb) component in your Blazor WebAssembly App using Visual Studio and Visual Studio Code.
 
+To get started quickly with Blazor Breadcrumb component, check on the following video:
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=yWqATPayFS0" %}
+
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
@@ -21,7 +26,7 @@ This section briefly explains about how to include [Blazor Breadcrumb](https://w
 
 ## Create a new Blazor App in Visual Studio
 
-You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=windows) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Navigations and Themes NuGet in the App
 

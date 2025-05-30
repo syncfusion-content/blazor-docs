@@ -21,9 +21,9 @@ This section briefly explains about how to include [Blazor Sidebar](https://www.
 
 ## Create a new Blazor Web App in Visual Studio
 
-You can create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+You can create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-You need to configure the corresponding [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows) while creating a Blazor Web Application.
+You need to configure the corresponding [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs) while creating a Blazor Web Application.
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Navigations and Themes NuGet in the App
 
@@ -216,6 +216,8 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 {% tabs %}
 {% highlight razor %}
 
+@using Syncfusion.Blazor.Navigations
+
 <div id="header" style="height:45px;text-align: center;color:white;background-color:midnightblue;font-size:1.2rem;line-height:45px;">
     Header
 </div>
@@ -309,13 +311,13 @@ Here, the DOM elements will not get changed. It only closes the main content by 
 {% endhighlight %}
 {% endtabs %}
 
-N> Class can be added to the sidebar element using `HtmlAttributes` property. In that class, you have to add new styles or override existing styles of sidebar element.
+N> Class can be added to the Sidebar element using `HtmlAttributes` property. In that class, you have to add new styles or override existing styles of Sidebar element.
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjhTjsAXUHEgsGGw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "[Enabling Backdrop in Blazor Sidebar](./images/blazor-sidebar-enable-backdrop.png)" %}
 
 ## Enable Animation
 
-Animation transitions can be set while expanding or collapsing the Sidebar using the `Animate` property. By default, `Animate` property is set to true. `EnableRTL` will display the sidebar in the right-to-left direction.
+Animation transitions can be set while expanding or collapsing the Sidebar using the [`Animate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfSidebar.html#Syncfusion_Blazor_Navigations_SfSidebar_Animate) property. By default, `Animate` property is set to true. [`EnableRtl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfSidebar.html#Syncfusion_Blazor_Navigations_SfSidebar_EnableRtl) will display the Sidebar in the right-to-left direction.
 
 {% tabs %}
 {% highlight razor %}
@@ -475,19 +477,19 @@ In the following example, the Sidebar is rendered with Accordion component in it
     }
 
     .e-tbar-search-icon:before {
-        content: "\ec0d";
+        content: "\e754";
         color: white;
         font-size: 16px;
     }
 
     .e-tbar-settings-icon:before {
-        content: "\e679";
+        content: "\e880";
         color: white;
         font-size: 16px;
     }
 
     .e-tbar-menu-icon:before {
-        content: "\e718";
+        content: "\e799";
         color: white;
         font-size: 16px;
     }
@@ -549,7 +551,7 @@ In the following example, the Sidebar is rendered with Accordion component in it
 2. Different sliding types provides the user to adjust the main content by pushing, overlaying or sliding the content.
 3. Includes [docking](https://blazor.syncfusion.com/documentation/sidebar/docking-sidebar) support.
 4. Provided with touch friendly gestures for easy interaction in mobile devices.
-5. Flexible option to initialize the sidebar to any HTML element as [target](https://blazor.syncfusion.com/documentation/sidebar/custom-context) other than the body element.
+5. Flexible option to initialize the Sidebar to any HTML element as [target](https://blazor.syncfusion.com/documentation/sidebar/custom-context) other than the body element.
 
 ## See Also
 

@@ -11,6 +11,11 @@ documentation: ug
 
 This section briefly explains about how to include [Blazor TextArea](https://www.syncfusion.com/blazor-components/blazor-TextArea) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and Visual Studio Code.
 
+To get started quickly with Blazor TextArea component, check on the following video:
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=4qrr0FXvzMA" %}
+
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}

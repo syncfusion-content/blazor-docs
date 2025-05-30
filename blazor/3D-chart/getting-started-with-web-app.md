@@ -11,6 +11,11 @@ documentation: ug
 
 This section briefly explains about how to include `Blazor 3D Chart` component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and Visual Studio Code.
 
+To get started quickly with Blazor 3D Chart component, check on the following video:
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=iCWdoRnu-6s" %}
+
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}

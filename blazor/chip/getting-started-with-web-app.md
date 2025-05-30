@@ -216,6 +216,8 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 {% tabs %}
 {% highlight razor %}
 
+@using Syncfusion.Blazor.Buttons
+
 <SfChip>
     <ChipItems>
         <ChipItem Text="Janet Leverling"></ChipItem>
@@ -258,7 +260,6 @@ You can render the chip items from collection using for loop in Blazor Chip comp
     protected override async Task OnInitializedAsync()
     {
         await base.OnInitializedAsync();
-        await Task.Delay(2000);
         ChipData.Add(new ChipCollection
         {
             text = "Jenifer",

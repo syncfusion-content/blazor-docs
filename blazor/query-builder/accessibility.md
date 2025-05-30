@@ -50,9 +50,9 @@ The following list of ARIA attributes is used in Blazor Query Builder.
 
 The Blazor Query Builder component followed the keyboard interaction guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Query Builder component.
 
-| **Press** | **To do this** |
-| --- | --- |
-| <kbd>Tab / Shift + Tab</kbd> | To focus the next item in the rule. |
+| Windows | Mac | Actions |
+| --- | --- | --- |
+| <kbd>Tab</kbd> / <kbd>Shift + Tab</kbd> | <kbd>Tab</kbd> / <kbd>⇧</kbd> + <kbd>Tab</kbd> | To focus the next item in the rule. |
 
 ## Ensuring accessibility
 

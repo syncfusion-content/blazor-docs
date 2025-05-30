@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Syncfusion Blazor FileManager Component in WebApp
-description: Checkout and learn about the documentation for getting started with Blazor FileManager Component in Blazor Web App.
+title: Getting Started with Blazor File Manager Component | Syncfusion
+description: Checkout and learn about the documentation for getting started with Blazor File Manager Component in Blazor Web App.
 platform: Blazor
 component: File Manager
 documentation: ug
 ---
 
-# Getting Started with Blazor FileManager Component in Web App
+# Getting Started with Blazor File Manager Component in Web App
 
 This section briefly explains about how to include [Blazor FileManager](https://www.syncfusion.com/blazor-components/blazor-file-manager) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and Visual Studio Code and Visual Studio Code.
 
@@ -21,11 +21,11 @@ This section briefly explains about how to include [Blazor FileManager](https://
 
 ## Create a new Blazor Web App in Visual Studio
 
-You can create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
+You can create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
 
-You need to configure the corresponding [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows) while creating a Blazor Web Application.
+You need to configure the corresponding [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs) while creating a Blazor Web Application.
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor FileManager and Themes NuGet in the Blazor Web App
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager and Themes NuGet in the Blazor Web App
 
 To add **Blazor FileManager** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.FileManager](https://www.nuget.org/packages/Syncfusion.Blazor.FileManager/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
@@ -72,7 +72,7 @@ cd BlazorWebApp.Client
 
 N> For more information on creating a **Blazor Web App** with various interactive modes and locations, refer to this [link](https://blazor.syncfusion.com/documentation/getting-started/blazor-web-app?tabcontent=visual-studio-code#render-interactive-modes).
 
-## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor FileManager and Themes NuGet in the App
+## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager and Themes NuGet in the App
 
 If you utilize `WebAssembly` or `Auto` render modes in the Blazor Web App need to be install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components NuGet packages within the client project.
 
@@ -191,9 +191,9 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor FileManager component
+## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor FileManager component in `.razor` file inside the `Pages` folder. If an interactivity location as `Per page/component` in the web app, define a render mode at top of the component, as follows:
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component in `.razor` file inside the `Pages` folder. If an interactivity location as `Per page/component` in the web app, define a render mode at top of the component, as follows:
 
 | Interactivity location | RenderMode | Code |
 | --- | --- | --- |
@@ -215,6 +215,8 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 
 {% tabs %}
 {% highlight razor %}
+
+@using Syncfusion.Blazor.FileManager
 
 <SfFileManager TValue="FileManagerDirectoryContent">
     <FileManagerAjaxSettings Url="https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
@@ -341,10 +343,12 @@ This will configure and map the controller in your Blazor App.
 
 ## Create Web App
 
-Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor FileManager component in `.razor` file inside the `Pages` folder.
+Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component in `.razor` file inside the `Pages` folder.
 
 {% tabs %}
 {% highlight razor %}
+
+@using Syncfusion.Blazor.FileManager
 
 <SfFileManager TValue="FileManagerDirectoryContent">
     <FileManagerAjaxSettings Url="/api/FileManager/FileOperations"
@@ -383,9 +387,9 @@ Add your required files and folders under the `wwwroot\Files` directory.
 
 * In your  project, the `wwwroot` directory is where static files are served from. It is typically found at the root level of your server project.
 * Inside the `wwwroot` directory, create a new folder named `Files`. This will be used to store static files like images, documents, or other resources that you want to serve directly.
-* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor FileManager component in your default web browser.
+* Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor File Manager component in your default web browser.
 
-![Blazor FileManager Component](images/blazor-filemanager-component.png)
+![Blazor File Manager Component](images/blazor-filemanager-component.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/FileManager).
 
@@ -395,6 +399,8 @@ To perform the download operation, initialize the [DownloadUrl](https://help.syn
 
 {% tabs %}
 {% highlight razor %}
+
+@using Syncfusion.Blazor.FileManager
 
 <SfFileManager TValue="FileManagerDirectoryContent">
     <FileManagerAjaxSettings Url="/api/FileManager/FileOperations"
@@ -438,6 +444,8 @@ To perform the upload operation, initialize the [UploadUrl](https://help.syncfus
 
 {% tabs %}
 {% highlight razor %}
+
+@using Syncfusion.Blazor.FileManager
 
 <SfFileManager TValue="FileManagerDirectoryContent">
     <FileManagerAjaxSettings Url="/api/FileManager/FileOperations"
@@ -523,6 +531,8 @@ To perform image preview support in the File Manager component, initialize the [
 {% tabs %}
 {% highlight razor %}
 
+@using Syncfusion.Blazor.FileManager
+
 <SfFileManager TValue="FileManagerDirectoryContent">
     <FileManagerAjaxSettings Url="/api/FileManager/FileOperations"
                                 GetImageUrl="/api/FileManager/GetImage">
@@ -554,9 +564,8 @@ namespace filemanager.Server.Controllers
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor FileManager with Image Preview](images/blazor-filemanager-image-preview.png)
+![Blazor File Manager with Image Preview](images/blazor-filemanager-image-preview.png)
 
-Refer the sample [link](https://www.syncfusion.com/downloads/support/directtrac/general/ze/FileManager1055616812).
 
 ## See also
 

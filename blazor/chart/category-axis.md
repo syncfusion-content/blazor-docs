@@ -11,6 +11,10 @@ documentation: ug
 
 The category axis is used to represent string values instead of integers.
 
+You can learn how to customize the category axis by watching the video below.
+
+{% youtube "youtube:https://www.youtube.com/watch?v=Mv6MS6fbcNE4" %}
+
 ```cshtml
 
 @using Syncfusion.Blazor.Charts

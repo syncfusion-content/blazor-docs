@@ -9,6 +9,12 @@ documentation: ug
 
 # Axis Labels in Blazor Charts Component
 
+This section provides a brief explanation on how to customize the Blazor Charts axis labels.
+
+You can learn how to customize the chart axis labels by watching the video below.
+
+{% youtube "youtube:https://www.youtube.com/watch?v=FzH0Pl_LnvQ" %}
+
 ## Smart Axis Labels
 
 When the axis labels overlap, the [LabelIntersectAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_LabelIntersectAction) property in the axis can be used to intelligently arrange them.
@@ -738,4 +744,4 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Chart-Ax
 * [Tooltip](./tool-tip)
 * [Marker](./data-markers)
 
-N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
