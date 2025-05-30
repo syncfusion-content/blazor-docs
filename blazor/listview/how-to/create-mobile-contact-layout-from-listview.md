@@ -43,7 +43,7 @@ ListDataModel item = context as ListDataModel;
 
 * Sort the contact names using the [`SortOder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_SortOrder) property of ListView.
 
-* Enable the [`ShowHeader`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_ShowHeader) property, and set the `HeaderTitle` as `Contacts`.
+* Enable the [`ShowHeader`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_ShowHeader) property, and set the [`HeaderTitle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_HeaderTitle) as `Contacts`.
 
 ```cshtml
 @using Syncfusion.Blazor.Lists
@@ -170,34 +170,6 @@ ListDataModel item = context as ListDataModel;
 
     .flex__center {
         justify-content: center;
-    }
-
-    .vertical__center {
-        align-items: center;
-    }
-
-    .vertical {
-        flex-direction: column;
-    }
-
-    .flex__1 {
-        flex: 1;
-    }
-
-    .flex__2 {
-        flex: 2;
-    }
-
-    .flex__3 {
-        flex: 3;
-    }
-
-    .flex__4 {
-        flex: 4;
-    }
-
-    .bold {
-        font-weight: 500;
     }
 
     .margin {

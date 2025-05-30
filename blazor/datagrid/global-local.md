@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Globalization in Blazor DataGrid | Syncfusion
-description: Checkout and learn here all about globalization in Syncfusion Blazor DataGrid and much more.
+description: Learn all about globalization and right-to-left text support in the Syncfusion Blazor DataGrid component.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -182,7 +182,7 @@ Install-Package Syncfusion.Blazor.Buttons -Version {{ site.releaseversion }}
  
 - Open the **~/_Imports.razor** file and import the required namespaces.
  
-```razor
+```cs
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons

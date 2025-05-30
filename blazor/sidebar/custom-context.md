@@ -13,7 +13,7 @@ documentation: ug
 
 By default, [Blazor Sidebar](https://www.syncfusion.com/blazor-components/blazor-sidebar) initializes context to the body element. Using the [`Target`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfSidebar.html#Syncfusion_Blazor_Navigations_SfSidebar_Target) property, set context element to initialize Sidebar inside any HTML element apart from the body element.
 
-In the following sample, click the toggle button to expand or collapse the Sidebar and add button in Sidebar element.
+In the following sample, click the toggle button to expand or collapse the Sidebar.
 
 ```cshtml
 
@@ -119,11 +119,6 @@ In the following sample, click the toggle button to expand or collapse the Sideb
         background-color: midnightblue;
         color: white;
         font-size: 16px;
-    }
-
-    .main > div {
-        padding-left: 0px !important;
-        padding-right: 0px !important;
     }
 </style>
 

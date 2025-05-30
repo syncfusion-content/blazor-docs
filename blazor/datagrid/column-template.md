@@ -735,6 +735,66 @@ In the following code, checkbox is rendered based on **Discontinued** field valu
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rNrKWsDsASInUbPD?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+### Calculate column value based on other columns in Blazor DataGrid
+
+In the Syncfusion Blazor DataGrid, it is often necessary to display a value that is not directly available in the underlying data source but is instead derived from existing column values. For example, in financial or inventory applications, users may want to show a total or calculated value such as the sum of two cost fields in a separate column. This can be done using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property.
+
+The `Template` allows customizing how a column's content is rendered, and it provides access to the current row's data through the **context** parameter. This makes it possible to define inline expressions or logic that compute values based on other fields in the same row.
+
+In the example below, a new column called **FinalCost** is created to display the sum of the **ManfCost** and **LabCost** columns. This column does not bind to a field in the model but instead calculates the value dynamically within the template. The **context** is cast to the appropriate model type (Order), and the sum is computed and displayed in a <div> element.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowPaging="true">
+    <GridPageSettings PageSize="8"></GridPageSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Center" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" TextAlign="TextAlign.Center" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type=ColumnType.Date TextAlign="TextAlign.Center" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.ManfCost) HeaderText="Manufacturing Cost" Format="C2" TextAlign="TextAlign.Center" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.LabCost) HeaderText="Labor Cost" Format="C2" TextAlign="TextAlign.Center" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.FinalCost) HeaderText="Final price" Format="C2" TextAlign="TextAlign.Center" Width="120">
+            <Template>
+                @{
+                    var value = (context as Order);
+                    var finalAmount = value.ManfCost + value.LabCost;
+                    <div>$@finalAmount</div>
+                }
+            </Template>
+        </GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public List<Order> Orders { get; set; }
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 25).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            ManfCost = 10 * x,
+            LabCost = 3 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public int? ManfCost { get; set; }
+        public int? LabCost { get; set; }
+        public double? FinalCost { get; set; }
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNVoNfKNztPbnpjL?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
 ## How to get the row object by clicking on the template element
 
 The Sycnfusion Blazor DataGrid allows you to retrieve the row object of the selected record when clicking on a [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) element. This feature can be useful when you need to perform custom actions based on the selected record.
