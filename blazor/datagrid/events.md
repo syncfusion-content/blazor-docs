@@ -1,24 +1,24 @@
 ---
 layout: post
-title: Events in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn here all about Events in Syncfusion Blazor DataGrid component and much more details.
+title: Events in Blazor DataGrid | Syncfusion
+description: Checkout and learn here all about Events in Syncfusion Blazor DataGrid and much more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Events in Blazor DataGrid Component
+# Events in Blazor DataGrid
 
-In this section, we have provided the list of events of the datagrid component which will be
-triggered for appropriate datagrid actions.
+In this section, we have provided the list of events of the Syncfusion Blazor DataGrid which will be
+triggered for appropriate Grid actions.
 
-The events should be provided to the datagrid using **GridEvents** component. When using events of datagrid, **TValue** must be provided in the **GridEvents** component.
+The events should be provided to the Grid using **GridEvents**. When using events of Grid, **TValue** must be provided in the **GridEvents**.
 
-N> All the events should be provided in a single **GridEvents** component.
+N> All the events should be provided in a single **GridEvents**.
 
 ## OnActionBegin
 
-[OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event triggers when DataGrid actions such as sorting, filtering, paging, grouping, [editing](https://blazor.syncfusion.com/documentation/datagrid/editing#event-trace-while-editing) etc., starts.
+[OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event triggers when Syncfusion Blazor DataGrid actions such as sorting, filtering, paging, grouping, [editing](https://blazor.syncfusion.com/documentation/datagrid/editing#event-trace-while-editing) etc., starts.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -65,7 +65,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## OnActionComplete
 
-[OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionComplete) event triggers when DataGrid actions such as sorting, filtering, paging, grouping, [editing](https://blazor.syncfusion.com/documentation/datagrid/editing#event-trace-while-editing), etc. are completed.
+[OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionComplete) event triggers when Syncfusion Blazor DataGrid actions such as sorting, filtering, paging, grouping, [editing](https://blazor.syncfusion.com/documentation/datagrid/editing#event-trace-while-editing), etc. are completed.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -110,7 +110,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## OnActionFailure
 
-[OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionFailure) event triggers when any DataGrid action failed to achieve the desired results. By using this event you can get the error details and its cause. In the below sample we have provided the wrong url so that it will throw the OnActionFailure event.
+[OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionFailure) event triggers when any Syncfusion Blazor DataGrid action failed to achieve the desired results. By using this event you can get the error details and its cause. In the below sample we have provided the wrong url so that it will throw the `OnActionFailure` event.
 
 ```cshtml
 @using Syncfusion.Blazor
@@ -196,7 +196,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## Created
 
-[Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Created) event triggers when the datagrid component is created.
+[Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Created) event triggers when the Syncfusion Blazor DataGrid is created.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -241,7 +241,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## OnLoad
 
-[OnLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnLoad) event triggers before the rendering process starts which allows customization of DataGrid properties before the DataGrid rendering.
+[OnLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnLoad) event triggers before the rendering process starts which allows customization of Syncfusion Blazor DataGrid properties before the Grid rendering.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -286,7 +286,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## Destroyed
 
-[Destroyed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Destroyed) event triggers when the datagrid component is destroyed. By using this event you can confirm that the datagrid gets completely destroyed.
+[Destroyed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_Destroyed) event triggers when the Syncfusion Blazor DataGrid is destroyed. By using this event you can confirm that the Grid gets completely destroyed.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -331,7 +331,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## OnDataBound
 
-[OnDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnDataBound) event triggers before data is bound to DataGrid.
+[OnDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnDataBound) event triggers before data is bound to Syncfusion Blazor DataGrid.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -376,7 +376,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## DataBound
 
-[DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound) event triggers when data source is populated in the DataGrid.
+[DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound) event triggers when data source is populated in the Syncfusion Blazor DataGrid.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -421,7 +421,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## RowDataBound
 
-[RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDataBound) event triggers every time a request is made to access row information, element, or data and also before the row element is appended to the DataGrid element.
+[RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDataBound) event triggers every time a request is made to access row information, element, or data and also before the row element is appended to the Syncfusion Blazor DataGrid element.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -572,14 +572,14 @@ N> All the events should be provided in a single **GridEvents** component.
     }
     public void DetailDataBoundHandler(DetailDataBoundEventArgs<EmployeeData> args)
     {
-    // Here you can customize your code
+    // Here you can customize your code.
     }
 }
 ```
 
 ## QueryCellInfo
 
-[QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_QueryCellInfo) event triggers every time a request is made to access cell information, element, or data and also before the cell element is appended to the DataGrid element.
+[QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_QueryCellInfo) event triggers every time a request is made to access cell information, element, or data and also before the cell element is appended to the Syncfusion Blazor DataGrid element.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1604,7 +1604,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
     public void ContextMenuItemClickedHandler(ContextMenuClickEventArgs<Order> args)
     {
-        // Here you can customize your code
+        // Here you can customize your code.
     }
 }
 ```
@@ -1659,7 +1659,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## OnPdfExport
 
-[OnPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnPdfExport) event triggers before DataGrid data is exported to PDF document.
+[OnPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnPdfExport) event triggers before Syncfusion Blazor DataGrid data is exported to PDF document.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1712,7 +1712,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## PdfHeaderQueryCellInfoEvent
 
-[PdfHeaderQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfHeaderQueryCellInfoEvent) event triggers before DataGrid data is exported to PDF document. It can be used to customize the header content in pdf document.
+[PdfHeaderQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfHeaderQueryCellInfoEvent) event triggers before Syncfusion Blazor DataGrid data is exported to PDF document. It can be used to customize the header content in PDF document.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1765,7 +1765,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## PdfQueryCellInfoEvent
 
-[PdfQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfQueryCellInfoEvent) event triggers before DataGrid data is exported to PDF document. It can be used to customize the DataGrid content in pdf document.
+[PdfQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfQueryCellInfoEvent) event triggers before Syncfusion Blazor DataGrid data is exported to PDF document. It can be used to customize the Grid content in PDF document.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1818,7 +1818,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## PdfAggregateTemplateInfo
 
-[PdfAggregateTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfAggregateTemplateInfo) event triggers before DataGrid data is exported to PDF document. It can be used to customize the DataGrid aggregate content in pdf document.
+[PdfAggregateTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfAggregateTemplateInfo) event triggers before Syncfusion Blazor DataGrid data is exported to PDF document. It can be used to customize the Grid aggregate content in PDF document.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1901,7 +1901,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## PdfGroupCaptionTemplateInfo
 
-[PdfGroupCaptionTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfGroupCaptionTemplateInfo) event triggers when exporting the group caption template of the PDF document. It can be used to customize the DataGrid group caption content in a PDF document.
+[PdfGroupCaptionTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PdfGroupCaptionTemplateInfo) event triggers when exporting the group caption template of the PDF document. It can be used to customize the Syncfusion Blazor DataGrid group caption content in a PDF document.
 
 ```csharp
 @using Syncfusion.Blazor.Grids
@@ -1965,7 +1965,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## OnExcelExport
 
-[OnExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnExcelExport) event triggers before DataGrid data is exported to excel file.
+[OnExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnExcelExport) event triggers before Syncfusion Blazor DataGrid data is exported to excel document.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2018,7 +2018,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## ExcelHeaderQueryCellInfoEvent
 
-[ExcelHeaderQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelHeaderQueryCellInfoEvent) event triggers before DataGrid data is exported to Excel file. It can be used to customize the header content in Excel file.
+[ExcelHeaderQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelHeaderQueryCellInfoEvent) event triggers before Syncfusion Blazor DataGrid data is exported to Excel document. It can be used to customize the header content in Excel document.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2071,7 +2071,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## ExcelQueryCellInfoEvent
 
-[ExcelQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelQueryCellInfoEvent) event triggers before DataGrid data is exported to Excel file. It can be used to customize the DataGrid content in Excel file.
+[ExcelQueryCellInfoEvent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelQueryCellInfoEvent) event triggers before Syncfusion Blazor DataGrid data is exported to Excel document. It can be used to customize the Grid content in Excel document.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2124,7 +2124,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## ExcelAggregateTemplateInfo
 
-[ExcelAggregateTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelAggregateTemplateInfo) event triggers before DataGrid data is exported to Excel file. It can be used to customize the DataGrid aggregate content in Excel File.
+[ExcelAggregateTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelAggregateTemplateInfo) event triggers before Syncfusion Blazor DataGrid data is exported to Excel document. It can be used to customize the Grid aggregate content in Excel document.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2207,7 +2207,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## ExcelGroupCaptionTemplateInfo
 
-[ExcelGroupCaptionTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelGroupCaptionTemplateInfo) event triggers when exporting the group caption template of the Excel File. It can be used to customize the DataGrid group caption content in Excel File.
+[ExcelGroupCaptionTemplateInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExcelGroupCaptionTemplateInfo) event triggers when exporting the group caption template of the Excel document. It can be used to customize the Syncfusion Blazor DataGrid group caption content in Excel document.
 
 ```csharp
 @using Syncfusion.Blazor.Grids
@@ -2272,7 +2272,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 ## ExportComplete
 
-[ExportComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExportComplete) event triggers once DataGrid data is exported to file formats (Pdf, Excel and CSV).
+[ExportComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_ExportComplete) event triggers once Syncfusion Blazor DataGrid data is exported to file formats (PDF, Excel and CSV).
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2476,7 +2476,7 @@ N> All the events should be provided in a single **GridEvents** component.
 
 [RowDropped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDropped) event triggers when row is dropped.
 
-N> We are not going to limit datagrid with these events, we will be adding new events in future based on the user requests. If the event, you are looking for is not in the list, then request [here](https://www.syncfusion.com/feedback/blazor-components).
+N> We are not going to limit Grid with these events, we will be adding new events in future based on the user requests. If the event, you are looking for is not in the list, then request [here](https://www.syncfusion.com/feedback/blazor-components).
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
