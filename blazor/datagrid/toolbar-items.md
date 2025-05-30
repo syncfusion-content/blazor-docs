@@ -36,7 +36,6 @@ The following example demonstrates how to enable built-in Toolbar items such as 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" AllowPaging="true" Height="200" @ref="Grid"  Toolbar=@ToolbarItems>
    <GridColumns>
@@ -115,7 +114,6 @@ To display only icons in the built-in Toolbar Items of the Grid, you can use CSS
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid @ref="Grid" DataSource="@Orders" Height="200" Toolbar=@ToolbarItems>
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
@@ -296,7 +294,6 @@ By default, custom Toolbar Items are positioned on the **left** side of the Tool
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Navigations
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" @ref="Grid" AllowGrouping="true" Height="200" Toolbar=@Toolbaritems>
     <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="OrderData"></GridEvents>
@@ -397,7 +394,6 @@ The following example demonstrates, how to use both built-in and custom toolbar 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Navigations
-@using BlazorApp1.Data
 
 <div style="margin-left:280px"><p style="color:red;" id="message">@message</p></div>
 
@@ -494,7 +490,6 @@ In the following sample, the **Collapse All** Toolbar item is positioned on the 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Navigations
-@using BlazorApp1.Data
 
 <SfGrid @ref="Grid" DataSource="@Orders" AllowGrouping="true" Toolbar="@Toolbaritems" Height="315">
     <GridEvents OnToolbarClick="ToolbarClickHandler" TValue="OrderData"></GridEvents>
@@ -678,7 +673,6 @@ You can customize the toolbar items tooltip text by adding toolbar items externa
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Navigations
-@using BlazorApp1.Data
 
 <SfGrid ID="Grid" @ref="Grid" DataSource="@Orders" AllowPaging="true" Toolbar=@ToolbarItems>
     <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true"></GridEditSettings>

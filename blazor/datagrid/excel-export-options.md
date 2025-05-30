@@ -473,8 +473,8 @@ Toolbar="@(new List<string>() { "ExcelExport" })" Height="348">
     private SfGrid<OrderData> Grid;
     public List<OrderData> Orders { get; set; }
     public bool isCustomerIDVisible { get; set; } = false;
-    public bool isShipCityVisible { get; set; }
-
+    public bool isShipCityVisible { get; set; } = true;
+    
     protected override void OnInitialized()
     {
         Orders = OrderData.GetAllRecords();

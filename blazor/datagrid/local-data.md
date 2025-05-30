@@ -1015,7 +1015,6 @@ The following example demonstrates how to show and hide the spinner during data 
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 @using Syncfusion.Blazor.Buttons
 
 <div Style="margin-bottom:15px">

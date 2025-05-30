@@ -212,7 +212,6 @@ Here is an example of how to define a global formatting function for a date colu
 @page "/"
 
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid @ref="Grid" DataSource="@Employees" AllowSelection="true" Height="315px">
     <GridTemplates>

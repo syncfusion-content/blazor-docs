@@ -340,7 +340,7 @@ In this example, a DropDownList component is rendered as the filter UI for the *
         <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridForeignColumn Field=@nameof(OrderDetails.EmployeeID) HeaderText="Employee Name" ForeignKeyValue="FirstName" ForeignDataSource="@Employees" Width="150">
             <FilterTemplate>
-                <SfDropDownList Placeholder="FirstName" ID="FirstName" @bind-Value="@((context as PredicateModel<string>).Value)" TItem="EmployeeData" TValue="string" DataSource="@Employees">
+                <SfDropDownList Placeholder="FirstName" ID="FirstName" @bind-Value="@((context as PredicateModel<string>).Value)" TItem="EmployeeDetails" TValue="string" DataSource="@Employees">
                     <DropDownListFieldSettings Value="FirstName" Text="FirstName"></DropDownListFieldSettings>
                 </SfDropDownList>
             </FilterTemplate>
@@ -704,13 +704,13 @@ In the following code sample, you can prevent default filter query generation us
 
 <SfGrid ID="Grid" @ref="Grid" Query="@currentQuery" TValue="Book" Toolbar="@ToolbarItems" Height="100%" AllowPaging="true" AllowSorting="true" AllowFiltering="true">
     <GridPageSettings PageSize="10" PageSizes="true"></GridPageSettings>
-    <SfDataManager Url="http://localhost:64956/odata/books" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
+    <SfDataManager Url="http://localhost:64956/odata/books" Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor"></SfDataManager>
     <GridEvents TValue="Book" OnActionBegin="OnActionBegin"/>
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="@EditMode.Normal"></GridEditSettings>
     <GridColumns>
         <GridColumn Field=@nameof(Book.Id) IsPrimaryKey="true" Width="150"></GridColumn>
         <GridForeignColumn TValue="Customer" Field=@nameof(Book.CustomerId)  AllowFiltering="true" ForeignKeyValue="Name" ForeignKeyField="Id" HeaderText="Name" Width="100" >
-            <SfDataManager Url="http://localhost:64956/odata/customers" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
+            <SfDataManager Url="http://localhost:64956/odata/customers" Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor"></SfDataManager>
         </GridForeignColumn>
         <GridColumn Field=@nameof(Book.CreditLimit) Width="200" EditType="EditType.NumericEdit"></GridColumn>
         <GridColumn Field=@nameof(Book.Active) Width="200" EditType="EditType.BooleanEdit"></GridColumn>
@@ -771,6 +771,7 @@ The following example demonstrates how to render a foreign key value using a col
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
+@inject IJSRuntime JS
 
 <SfGrid DataSource="@Orders" Height="315">
     <GridColumns>

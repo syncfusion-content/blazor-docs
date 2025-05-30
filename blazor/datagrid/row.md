@@ -26,7 +26,6 @@ Here’s an example of how you can use the `RowDataBound` event to customize the
 @page "/"
 
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders">
     <GridEvents TValue="OrderData" RowDataBound="RowBound"></GridEvents>
@@ -76,8 +75,6 @@ Here’s an example of how you can use the `RowDataBound` event to customize the
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
 
- namespace BlazorApp1.Data
-{
     public class OrderData
     {
         public static List<OrderData> Orders = new List<OrderData>();
@@ -120,7 +117,6 @@ Here’s an example of how you can use the `RowDataBound` event to customize the
         public bool? IsVerified { get; set; }
         public string ShipCity { get; set; } 
     }
-}
 {% endhighlight %}
 {% endtabs %}
 
@@ -143,7 +139,6 @@ To change the background color of the alternate rows, you can add the following 
 @page "/"
 
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders">
     <GridColumns>
@@ -171,8 +166,6 @@ To change the background color of the alternate rows, you can add the following 
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
 
- namespace BlazorApp1.Data
-{
     public class OrderData
     {
         public static List<OrderData> Orders = new List<OrderData>();
@@ -215,7 +208,6 @@ To change the background color of the alternate rows, you can add the following 
         public bool? IsVerified { get; set; }
         public string ShipCity { get; set; } 
     }
-}
 {% endhighlight %}
 {% endtabs %}
 
@@ -240,7 +232,6 @@ Here’s an example of how to use the **.e-selectionbackground** class to style 
 @page "/"
 
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid ID="CustomGrid" DataSource="@Orders">
     <GridColumns>
@@ -271,8 +262,7 @@ Here’s an example of how to use the **.e-selectionbackground** class to style 
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
 
- namespace BlazorApp1.Data
-{
+
     public class OrderData
     {
         public static List<OrderData> Orders = new List<OrderData>();
@@ -315,7 +305,7 @@ Here’s an example of how to use the **.e-selectionbackground** class to style 
         public bool? IsVerified { get; set; }
         public string ShipCity { get; set; } 
     }
-}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -334,8 +324,6 @@ In the below example, we will demonstrate how to dynamically change the height o
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
 
-@using BlazorApp1.Data
-
 <div>
     <SfButton class="e-btn e-small" @onclick="() => ChangeRowHeight(20)">Change height 20px</SfButton>
     <SfButton class="e-btn e-small" @onclick="() => ChangeRowHeight(42)">Default height 42px</SfButton>
@@ -343,7 +331,7 @@ In the below example, we will demonstrate how to dynamically change the height o
 </div>
 
 <div style="padding-top:20px">
-    <SfGrid @ref="Grid" DataSource="@Orders" RowHeight="RowHeight" Height="400">
+    <SfGrid @ref="Grid" DataSource="@Orders" RowHeight="@RowHeightValue" Height="400">
         <GridColumns>
             <GridColumn Field="OrderID" HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
             <GridColumn Field="CustomerID" HeaderText="Customer Name" Width="150"></GridColumn>
@@ -358,7 +346,7 @@ In the below example, we will demonstrate how to dynamically change the height o
 @code {
     private SfGrid<OrderData> Grid;
     public List<OrderData> Orders { get; set; }
-    public int RowHeight { get; set; } = 42; // Default height
+    public int RowHeightValue { get; set; } = 42; // Default height
 
     protected override void OnInitialized()
     {
@@ -367,16 +355,13 @@ In the below example, we will demonstrate how to dynamically change the height o
 
     private void ChangeRowHeight(int height)
     {
-        RowHeight = height;
+        RowHeightValue = height;
         Grid.Refresh(); // Refresh the grid to apply the new row height.
     }
 }
 
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
-
- namespace BlazorApp1.Data
-{
     public class OrderData
     {
         public static List<OrderData> Orders = new List<OrderData>();
@@ -423,11 +408,11 @@ In the below example, we will demonstrate how to dynamically change the height o
         public string ShipCity { get; set; }
         public string ShipCountry { get; set; }
     }
-}
+
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/BZBJWDgtqYsIJUYQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNhSDegNUuYbSOVh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > The `RowHeight` property can only be used to set the height of the entire grid row. It cannot be used to set the height of individual cells within a row.
 > The `RowHeight` property applies the height to all rows in the grid, including the header and footer rows.
@@ -446,7 +431,6 @@ In the below example, the row height for the row with **OrderID** as ‘10249’
 @page "/"
 
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid @ref="Grid" DataSource="@Orders" AllowSelection="true" Height="315px">
     <GridEvents TValue="OrderData" RowDataBound="RowBound"></GridEvents>
@@ -483,8 +467,7 @@ In the below example, the row height for the row with **OrderID** as ‘10249’
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
 
- namespace BlazorApp1.Data
-{
+
     public class OrderData
     {
         public static List<OrderData> Orders = new List<OrderData>();
@@ -531,7 +514,6 @@ In the below example, the row height for the row with **OrderID** as ‘10249’
         public string ShipCity { get; set; }
         public string ShipCountry { get; set; }
     }
-}
 {% endhighlight %}
 {% endtabs %}
 
@@ -551,8 +533,6 @@ Here is an example that demonstrates how to enable/disable row hover based on th
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
-@using BlazorApp1.Data
-
     
     <div style="padding:20px">
         <label>Enable/Disable Row Hover</label>
@@ -581,8 +561,6 @@ Here is an example that demonstrates how to enable/disable row hover based on th
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
 
- namespace BlazorApp1.Data
-{
     public class OrderData
     {
         public static List<OrderData> Orders = new List<OrderData>();
@@ -629,7 +607,7 @@ Here is an example that demonstrates how to enable/disable row hover based on th
         public string ShipCity { get; set; }
         public string ShipCountry { get; set; }
     }
-}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -654,7 +632,6 @@ In the following example, the [FrozenRows](https://help.syncfusion.com/cr/blazor
 @using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
-@using BlazorApp1.Data
 
 <div style="display: flex; align-items: center; padding-bottom: 20px;">
     <label style="padding-right: 10px; font-weight: bold;">Change the frozen rows:</label>
@@ -700,8 +677,7 @@ In the following example, the [FrozenRows](https://help.syncfusion.com/cr/blazor
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
 
- namespace BlazorApp1.Data
-{
+
     public class OrderData
     {
         public static List<OrderData> Orders = new List<OrderData>();
@@ -748,7 +724,7 @@ In the following example, the [FrozenRows](https://help.syncfusion.com/cr/blazor
         public string ShipCity { get; set; }
         public string ShipCountry { get; set; }
     }
-}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -780,7 +756,6 @@ By applying this CSS class, you can set the background color of frozen rows to t
 @using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
-@using BlazorApp1.Data
 
 <SfGrid @ref="Grid" DataSource="@Orders" AllowSelection="false" EnableHover="false"
         FrozenRows="3" Height="315px">
@@ -813,8 +788,6 @@ By applying this CSS class, you can set the background color of frozen rows to t
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
 
- namespace BlazorApp1.Data
-{
     public class OrderData
     {
         public static List<OrderData> Orders = new List<OrderData>();
@@ -861,7 +834,7 @@ By applying this CSS class, you can set the background color of frozen rows to t
         public string ShipCity { get; set; }
         public string ShipCountry { get; set; }
     }
-}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -890,7 +863,6 @@ Here’s an example of how to add a new row using the `AddRecordAsync` method:
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
-@using BlazorApp1.Data
 
 <div style="padding: 0px 0px 20px 0px">
     <SfButton CssClass="e-primary" @onclick="AddRow">Add New Row</SfButton>
@@ -963,8 +935,7 @@ Here’s an example of how to add a new row using the `AddRecordAsync` method:
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
 
- namespace BlazorApp1.Data
-{
+
     public class OrderData
     {
         public static List<OrderData> Orders = new List<OrderData>();
@@ -1011,7 +982,6 @@ Here’s an example of how to add a new row using the `AddRecordAsync` method:
         public string ShipCity { get; set; }
         public string ShipCountry { get; set; }
     }
-}
 {% endhighlight %}
 {% endtabs %}
 

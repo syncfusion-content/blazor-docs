@@ -26,7 +26,7 @@ Here’s an example of how to enable drag and drop within the Grid:
 {% highlight razor tabtitle="Index.razor" %}
 @page "/"
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
+
 <SfGrid DataSource="@Orders" ID="Grid" AllowSelection="true" AllowRowDragAndDrop="true">
     <GridSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></GridSelectionSettings>
     <GridColumns>
@@ -48,8 +48,7 @@ Here’s an example of how to enable drag and drop within the Grid:
 }
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
-namespace BlazorApp1.Data
-{
+
     public class OrderData
     {
         public static List<OrderData> Orders = new List<OrderData>();
@@ -96,7 +95,6 @@ namespace BlazorApp1.Data
         public string ShipCountry { get; set; }
         public int EmployeeID { get; set; } 
     }
-}
 {% endhighlight %}
 {% endtabs %}
 
@@ -114,7 +112,6 @@ Here’s an example code snippet that demonstrates how to enable Row drag and dr
 {% highlight razor tabtitle="Index.razor" %}
 @page "/"
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 <SfGrid DataSource="@Orders" ID="Grid" AllowSelection="true" AllowRowDragAndDrop="true">
     <GridRowDropSettings TargetID="DestGrid"></GridRowDropSettings>
     <GridSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></GridSelectionSettings>
@@ -146,8 +143,7 @@ Here’s an example code snippet that demonstrates how to enable Row drag and dr
 }
 {% endhighlight %}
 {% highlight c# tabtitle="OrderData.cs" %}
-namespace BlazorApp1.Data
-{
+
     public class OrderData
     {
         public static List<OrderData> Orders = new List<OrderData>();
@@ -196,7 +192,7 @@ namespace BlazorApp1.Data
         public string ShipCountry { get; set; }
         public int EmployeeID { get; set; } 
     }
-}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -213,7 +209,7 @@ In the below example, the selected grid row is dragged and dropped in to the [Tr
 @page "/"
 @using Syncfusion.Blazor.Grids;
 @using Syncfusion.Blazor.TreeGrid;
-@using BlazorApp1.Data
+
 <div>
     <SfGrid @ref="grid" ID="Grid" DataSource="@GridData" AllowRowDragAndDrop="true" AllowSelection="true">
         <GridSelectionSettings Type="Syncfusion.Blazor.Grids.SelectionType.Multiple"></GridSelectionSettings>
@@ -270,8 +266,7 @@ In the below example, the selected grid row is dragged and dropped in to the [Tr
 
 {% endhighlight %}
 {% highlight c# tabtitle="WrapData.cs" %}
-namespace BlazorApp1.Data
-{
+
     public class WrapData
     {
         public int TaskID { get; set; }
@@ -583,7 +578,7 @@ namespace BlazorApp1.Data
     };
     }
     }
-}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -601,7 +596,6 @@ The Grid component provides a set of events that are triggered during drag and d
 {% highlight razor tabtitle="Index.razor" %}
 @page "/"
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <p>@message</p>
 <SfGrid @ref="Grid" DataSource="@Orders" ID="Grid" AllowSelection="true" AllowRowDragAndDrop="true">
