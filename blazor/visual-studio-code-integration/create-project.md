@@ -9,7 +9,7 @@ documentation: ug
 
 # Creating a Syncfusion® Blazor application
 
-Syncfusion® provides **Visual Studio Code project templates** for creating Syncfusion® Blazor application. Syncfusion® Blazor generates application that include the necessary Syncfusion® NuGet packages, namespaces, and component render code for the Calendar, Button, and DataGrid components, as well as the style for making Syncfusion® component development easier.
+Syncfusion® provides Visual Studio Code project templates for creating Syncfusion® Blazor applications. These templates generate an application that includes the necessary Syncfusion® NuGet packages, namespaces, and component render code for the Calendar, Button, and DataGrid components, along with the styles to make Syncfusion® component development easier.
 
 N> Blazor project templates from `v17.4.0.39` are supported by the Syncfusion® Visual Studio Code project template.
 
@@ -92,7 +92,6 @@ The selected theme is added from Syncfusion® NuGet and its reference at these a
 | Application type  | File location  |
 |---|---|
 | Syncfusion Blazor Web App | ~/Components/App.razor |
-| Syncfusion Blazor Server App | {Project location}/Pages//_Host.cshtml |
 | Syncfusion Blazor WebAssembly App (ASPNET Core hosted) <br/> Syncfusion Blazor WebAssembly App (Progressive Web Application) | {Client Project location}/wwwroot/index.html  |
 | Syncfusion Blazor WebAssembly App  | {Project location}/wwwroot/index.html|
 

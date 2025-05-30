@@ -9,13 +9,13 @@ documentation: ug
 
 # Syncfusion® Blazor Scaffolding
 
-Syncfusion® provides **Visual Studio Scaffolding** for the Syncfusion® Blazor platform, that allowing you to quickly add code that interacts with data models and reduce the time it takes to develop with data operations in your application. Scaffolding simplifies the creation of Razor and Controller action methods for Syncfusion® Blazor DataGrid, Charts, Scheduler, Diagram, Tree Grid, Rich Text Editor, and Document Editor, and PDF Viewer controls. 
+Syncfusion® provides **Visual Studio Scaffolding** for the Syncfusion® Blazor platform, allowing you to quickly add code that interacts with data models, reducing the time required for developing data operations in your application. Scaffolding simplifies the creation of Razor pages and Controller action methods for Syncfusion® Blazor controls such as DataGrid, Charts, Scheduler, Diagram, Tree Grid, Rich Text Editor, Document Editor, and PDF Viewer.
 
 N> Check that at least one Entity Framework model exists, and the application has been compiled once. If no Entity Framework model exists in your application, refer to this [documentation](https://www.freecodecamp.org/news/how-to-create-an-application-using-blazor-and-entity-framework-core-1c1679d87c7e/) to generate the Entity Framework model. After the model file has been added, check that the required DBContext and properties are added. Now, build the application, and try scaffolding. If any changes made in the model properties, rebuild the application once before perform scaffolding.
 
 <!-- markdownlint-disable MD026 -->
 
-N> The Syncfusion Blazor Scaffolder is available from `v17.4.0.39` for Blazor server-side application and provided the Scaffolding support to Blazor client-side application from `v18.4.0.39`.
+N> The Syncfusion® Blazor Scaffolder is available from `v17.4.0.39` for Blazor server-side application and provided the Scaffolding support to Blazor client-side application from `v18.4.0.39`.
 
 ## Add a scaffolded item
 
@@ -35,11 +35,11 @@ N> Before use the Syncfusion® Blazor Scaffolding, check whether the Syncfusion�
 
     ![Choose Syncfusion Scaffolding from Visual Studio Add scaffold dialog](images/Syncfusion_scaffolder.png)
 
-3. In the Syncfusion UI Scaffolder dialog, select the desired control to perform scaffolding, and then click **Next**.
+3. In the Syncfusion® UI Scaffolder dialog, select the desired control to perform scaffolding, and then click **Next**.
 
     ![Choose required control](images/Control_Window.png)
 
-4. The Syncfusion UI Scaffolder dialog for the selected control will be displayed. As per the application requirements, follow these steps to set up your application.
+4. The Syncfusion® UI Scaffolder dialog for the selected control will be displayed. As per the application requirements, follow these steps to set up your application.
 
     **Select Data Source Type**
     
@@ -55,17 +55,15 @@ N> Before use the Syncfusion® Blazor Scaffolding, check whether the Syncfusion�
 
         To set up your application with remote data, first enter the **Razor page name**, choose the **Adaptor type**, and then enter the valid **URL**. Next, enter the **TValue**. Finally, click **Next** to continue.
 
-        N> In the DataGrid and TreeGrid controls, when selecting the **URL adaptor** in the **Adaptor type**, an additional **Remote service** option will appear. You need to select either the **Localhost URL** or **API URL**. 
-        If you select the **Localhost URL**, enter the **Controller/Service name**. Then, select the required **Model class** for the active application and choose the relevant **Data context class**. Finally, click **Next** to continue. 
-        If you select the **API URL**, enter the valid **URL**. Next, enter the **TValue**. Finally, click **Next** to continue.
+        N> In the DataGrid and TreeGrid controls, when selecting the **URL adaptor** in the **Adaptor type**, an additional **Remote service** option will appear. You need to select either the **Localhost URL** or **API URL**. If you select the Localhost URL, enter the **Controller/Service** name. Then, select the required Model class for the active application and choose the relevant **Data context class**. Finally, click **Next** to continue. If you select the **API URL**, enter the valid **URL**. Next, enter the **TValue**. Finally, click **Next** to continue.
 
         ![Choose required Model](images/Model_Window_Remote.png)
 
-        When using adaptor types in Blazor scaffolding, it's important to note that we provide default adaptor links for sample purposes only. These default links are designed to help you understand how the adaptors work, but they do not perform CRUD (Add, Edit, Update, Delete) operations. Instead, these default links are placeholders to demonstrate the integration process.
+        When using adaptor types in Blazor scaffolding, it's important to note that we provide default adaptor links for sample purposes only. These default links are intended to help you understand how the adaptors work, but they do not perform CRUD (Add, Edit, Update, Delete) operations. Instead, these default links act as placeholders to demonstrate the integration process.
 
-        To help you implement CRUD operations, we will provide sample code that you can use as a reference. This code will guide you through the necessary steps to enable CRUD functionality in your application. You can modify and integrate this sample code to suit your specific requirements.
+        To help you implement CRUD operations, we will provide sample code for reference. This code will guide you through the necessary steps to enable CRUD functionality in your application. You can modify and integrate this sample code to fit your specific requirements.
 
-        However, if you wish to perform CRUD operations, you need to provide a valid link that handles these operations. This link should point to an endpoint or a service that is capable of managing the database operations required by your application. By providing this link, you ensure that your application can interact with the back end service to perform CRUD operations effectively.
+        However, if you wish to perform CRUD operations, you need to provide a valid link that handles these operations. This link should point to an endpoint or service capable of managing the database operations required by your application. By providing this link, you ensure that your application can effectively interact with the back-end service to perform CRUD operations.
 
     For **ServerSide Application**, both Local data and Remote data types will be available.
 
@@ -75,7 +73,7 @@ N> Before use the Syncfusion® Blazor Scaffolding, check whether the Syncfusion�
 
     ![Choose required selected control features for the hosted project](images/Fetaure_window_hosted.png)
 
-5. In the Syncfusion UI Scaffolder, the dialog for the selected control feature will open. Choose the required features, update the necessary data fields, and then click **Add**.
+5. In the Syncfusion® UI Scaffolder, the dialog for the selected control feature will open. Choose the required features, update the necessary data fields, and then click **Add**.
 
     ![Choose required selected control features for the hosted project](images/Fetaure_window_hosted_feature.png)
 
@@ -99,7 +97,7 @@ N> Before use the Syncfusion® Blazor Scaffolding, check whether the Syncfusion�
 
 ## Syncfusion® Blazor Command-line Scaffolding
 
-**Scaffolding command-line** for Syncfusion® Blazor allows you to quickly add code that interacts with data models and reduce the amount of time it takes to develop with data operations in your application. Scaffolding simplifies the creation of view file and Controller action methods for Syncfusion® Blazor DataGrid, Charts, Scheduler, Diagram, Tree Grid, Rich Text Editor, Document Editor, and PDF Viewer controls.
+The **Scaffolding command-line** for Syncfusion® Blazor allows you to quickly add code that interacts with data models, reducing the time required to develop data operations in your application. Scaffolding simplifies the creation of view files and Controller action methods for Syncfusion® Blazor controls such as DataGrid, Charts, Scheduler, Diagram, Tree Grid, Rich Text Editor, Document Editor, and PDF Viewer.
 
 N> Verify that at least one Entity Framework model exists. If your application lacks an Entity Framework model, use this [documentation](https://www.freecodecamp.org/news/how-to-create-an-application-using-blazor-and-entity-framework-core-1c1679d87c7e/) to create one. After you've added the model file, double-check that the necessary DBContext and properties have been added. Now, build the application and experiment with scaffolding. If any changes made in the model properties, rebuild the application once before perform scaffolding.
 
@@ -159,7 +157,7 @@ N> Before adding the scaffolded item from command-line, check whether the **dotn
 
     ![CommandLine Scaffold](images/commandline.png)
 
-5. As we can see controller and view files generated successfully and also added the Syncfusion NuGet packages and styles which is required to render Syncfusion control.
+5. As we can see controller and view files generated successfully and also added the Syncfusion® NuGet packages and styles which is required to render Syncfusion® control.
 
     ![Blazor added Files](images/blazorfile.png)
 
@@ -167,9 +165,9 @@ N> Before adding the scaffolded item from command-line, check whether the **dotn
 
 <!-- markdownlint-disable MD026 -->
 
-## How to render Syncfusion control?
+## How to render Syncfusion® control?
 
-Refer to the following UG links to render Syncfusion control after performing scaffolding:
+Refer to the following UG links to render Syncfusion® control after performing scaffolding:
 
 WebAssembly App: [Configure Blazor components using Syncfusion Blazor Component NuGet Package](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio)
 

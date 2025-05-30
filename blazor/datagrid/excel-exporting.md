@@ -518,6 +518,7 @@ public class OrderData
     public string ShipCountry { get; set; }
 }
 
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjVeDfWXVMQonozp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
@@ -635,6 +636,7 @@ public class OrderData
     public string ShipName { get; set; }
 }
 
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hNryZJitJZwsZqkm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
