@@ -41,7 +41,7 @@ You can use the [`AddAnnotationAsync`](https://help.syncfusion.com/cr/blazor/Syn
 
 Below is an example that demonstrates how to create and add a redaction annotation with customized appearance, redaction properties, and positioning on the first page of the PDF document.
 
-```razor
+```cshtml
 @page "/"
 
 <SfButton OnClick="AddRedactionAnnotation">Add Redaction Annotation</SfButton>
@@ -123,7 +123,7 @@ To update an existing redaction annotation, first retrieve it using [`GetAnnotat
 
 The following example demonstrates how to update an existing redaction annotation in the PDF Viewer. It retrieves the annotation, modifies redaction-specific properties such as overlay text, fill color, border color, and opacity, along with general appearance settings like font size and text alignment, and then applies the changes using the [`EditAnnotationAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EditAnnotationAsync_Syncfusion_Blazor_SfPdfViewer_PdfAnnotation_) method.
 
-```razor
+```cshtml
 @page "/"
 
 <SfButton OnClick="EditRedaction">Edit Redaction</SfButton>
@@ -197,7 +197,7 @@ These settings are applied to newly added **toolbar-based** redaction annotation
 
 The example below shows how to set default properties for redaction annotations using the [`PdfViewerRedactionSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PdfViewer.PdfViewerRedactionSettings.html) in the Syncfusion Blazor PDF Viewer. These settings control how new redaction annotations.
 
-```razor
+```cshtml
 @* 
     This component demonstrates how to configure default redaction annotation settings 
     in the Syncfusion Blazor PDF Viewer.
@@ -250,7 +250,7 @@ This is useful when the full page contains confidential data.
 
 The following example adds redaction annotations to specific pages in a PDF using 0-based page indexes. Here, redaction is applied to the first and third pages.
 
-```razor
+```cshtml
 @page "/"
 
 <SfButton OnClick="RedactPages">Add Redact Pages</SfButton>

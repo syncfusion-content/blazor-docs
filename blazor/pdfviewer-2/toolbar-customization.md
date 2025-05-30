@@ -536,7 +536,7 @@ To enable the Redaction Toolbar on desktop platforms, include the required `Tool
 
 #### Code Example
 
-```razor
+```cshtml
 @page "/"
 
 <SfPdfViewer2 Height="100%" Width="100%" DocumentPath="Annotations.pdf">
@@ -576,7 +576,7 @@ To enable the Redaction Toolbar in mobile view, use the `MobileToolbarItems` pro
 
 #### Code Example
 
-```razor
+```cshtml
 @page "/"
 
 <SfPdfViewer2 Height="100%" Width="100%" DocumentPath="Annotations.pdf">
@@ -621,7 +621,7 @@ The visibility of the Redaction Toolbar can also be controlled programmatically 
 
 The following example demonstrates how to toggle the visibility of the Redaction Toolbar using a button:
 
-```razor
+```cshtml
 @page "/"
 
 <SfButton @onclick="ToggleRedactionToolbar">
