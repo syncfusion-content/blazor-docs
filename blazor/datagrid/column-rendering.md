@@ -705,3 +705,63 @@ Before proceeding this, learn about [DynamicObject Binding](https://blazor.syncf
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BtBgNdrjLuIpsnpS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+### How to set complex column as foreign key column
+
+The Syncfusion Blazor DataGrid provides the ability to use complex columns as foreign key columns. This allows related data from a foreign data source to be displayed based on the value of a complex column.
+
+The following example demonstrates how to set the **Employee.EmployeeID** column as a foreign key column, and display the **FirstName** column from the foreign data source.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+@using System.Dynamic
+
+<p>Complex data binding with foreign data source</p>
+
+<SfGrid DataSource="@Orders" Height="315">
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" Width="120"></GridColumn>
+        <GridForeignColumn Field=Employee.EmployeeID HeaderText="Employee Name" ForeignKeyValue="FirstName" ForeignKeyField="EmployeeID" ForeignDataSource="@Employees1" Width="150"></GridForeignColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Format="d" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<Order> Orders { get; set; }
+    public List<EmployeeData> Employees1 { get; set; }
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+            {
+                OrderID = 1000 + x,
+                Employee = new EmployeeData()
+                {
+                    EmployeeID = x,
+                },
+                Freight = 2.1 * x,
+                OrderDate = DateTime.Now.AddDays(-x),
+            }).ToList();
+        Employees1 = Enumerable.Range(1, 75).Select(x => new EmployeeData()
+            {
+                EmployeeID = x,
+                FirstName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" })[new Random().Next(5)],
+            }).ToList();
+    }
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public EmployeeData Employee { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+    public class EmployeeData
+    {
+        public int? EmployeeID { get; set; }
+        public string FirstName { get; set; }
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtBoXTisskOldOAN?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

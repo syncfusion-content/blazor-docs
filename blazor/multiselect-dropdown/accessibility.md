@@ -56,20 +56,20 @@ The Blazor MultiSelect Dropdown component uses the `Listbox` role, and each list
 
 You can use the following key shortcuts to access the Blazor MultiSelect Dropdown without interruptions:
 
-| **Keyboard shortcuts** | **Actions** |
-| --- | --- |
-| <kbd>Arrow Down</kbd> | Sets focus at the first item in the MultiSelect when no item is selected. Otherwise, moves focus next to the currently selected item. |
-| <kbd>Arrow Up</kbd> | Moves focus previous to the currently selected one. |
-| <kbd>Page Down</kbd> | Scrolls down to the next page and set focus to the first item when popup list opens. |
-| <kbd>Page Up</kbd> | Scrolls up to the previous page and set focus to the first item when popup list opens. |
-| <kbd>Enter</kbd> | Selects the focused item, and when it is in an close state the popup list opens. |
-| <kbd>Tab</kbd> | Focuses on the next TabIndex element on the page when the popup is closed. Otherwise, closes the popup list and remains the focus of the component. |
-| <kbd>Shift + tab </kbd> | Focuses on the previous TabIndex element on the page when the popup is closed. Otherwise, closes the popup list and remains the focus of the component. |
-| <kbd>Alt + Down</kbd> | Opens the popup list. |
-| <kbd>Alt + Up</kbd> | Closes the popup list. |
-| <kbd>Esc(Escape)</kbd> | Closes the popup list when it is in an open state and the currently selected item remains the same. |
-| <kbd>Home</kbd> | Sets focus to the first item. |
-| <kbd>End</kbd> | Sets focus to the last item. |
+| Windows | Mac | Actions |
+| --- | --- | --- |
+| <kbd>↓</kbd> | <kbd>↓</kbd> | Sets focus at the first item in the MultiSelect when no item is selected. Otherwise, moves focus next to the currently selected item. |
+| <kbd>↑</kbd> | <kbd>↑</kbd> | Moves focus previous to the currently selected one. |
+| <kbd>Page Down</kbd> | <kbd>Page Down</kbd> | Scrolls down to the next page and set focus to the first item when popup list opens. |
+| <kbd>Page Up</kbd> | <kbd>Page Up</kbd> | Scrolls up to the previous page and set focus to the first item when popup list opens. |
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Selects the focused item, and when it is in an close state the popup list opens. |
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Focuses on the next TabIndex element on the page when the popup is closed. Otherwise, closes the popup list and remains the focus of the component. |
+| <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Focuses on the previous TabIndex element on the page when the popup is closed. Otherwise, closes the popup list and remains the focus of the component. |
+| <kbd>Alt</kbd> + <kbd>↓</kbd> | <kbd>⌥</kbd> + <kbd>↓</kbd> | Opens the popup list. |
+| <kbd>Alt</kbd> + <kbd>↑</kbd> | <kbd>⌥</kbd> + <kbd>↑</kbd> | Closes the popup list. |
+| <kbd>Esc(Escape)</kbd> | <kbd>Escape</kbd> | Closes the popup list when it is in an open state and the currently selected item remains the same. |
+| <kbd>Home</kbd> | <kbd>Home</kbd> | Sets focus to the first item. |
+| <kbd>End</kbd> | <kbd>End</kbd> | Sets focus to the last item. |
 
 ## Ensuring accessibility
 

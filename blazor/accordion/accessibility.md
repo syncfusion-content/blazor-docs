@@ -54,13 +54,13 @@ The accessibility compliance for the Blazor Accordion component is outlined belo
 
 Keyboard navigation is enabled by default. The possible keys are:
 
-| Key           | Description       |
-|---------------|-------------------|
-| <kbd>Space or Enter</kbd>    | When the focus is on the Accordion header, clicking on the focused element makes the element to expand and collapse. |
-| <kbd>Down Arrow</kbd>   | Focus the next Accordion header. |
-| <kbd>Up Arrow</kbd>         | Focus the previous Accordion header. |
-| <kbd>Home</kbd>           | Focus the first Accordion header. |
-| <kbd>End</kbd>   | Focus the last Accordion header. |
+| Windows | Mac | Description |
+|---------------|-----------|--------|
+| <kbd>Space</kbd> / <kbd>Enter</kbd> | <kbd>Space</kbd> / <kbd>Enter</kbd> | When the focus is on the Accordion header, clicking on the focused element makes the element to expand and collapse. |
+| <kbd>↓</kbd> | <kbd>↓</kbd> | Focus the next Accordion header. |
+| <kbd>↑</kbd> | <kbd>↑</kbd> | Focus the previous Accordion header. |
+| <kbd>Home</kbd> | <kbd>Home</kbd> | Focus the first Accordion header. |
+| <kbd>End</kbd> | <kbd>End</kbd> | Focus the last Accordion header. |
 
 ## Ensuring accessibility
 

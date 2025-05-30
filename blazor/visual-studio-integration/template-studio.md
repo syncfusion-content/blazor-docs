@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Template Studio in Blazor - Syncfusion
-description: Learn here about how to create the Blazor application using Syncusion Blazor Components with the help of template studio.
+description: Learn here about how to create the Blazor application using Syncusion® Blazor Components with the help of template studio.
 platform: Blazor
 component: Common
 documentation: ug
@@ -9,13 +9,13 @@ documentation: ug
 
 # Syncfusion® Blazor Template Studio
 
-Syncfusion® provides the Blazor Template Studio, which allows you to create a Syncfusion Blazor application with Syncfusion® components. The Syncfusion® Blazor app is created with the required component Syncfusion NuGet references, namespaces, styles, and component render code. The Template Studio provides an easy-to-use project wizard that walks you through the process of creating an application with Syncfusion® components.
+Syncfusion® provides the Blazor Template Studio, which allows you to create a Syncfusion Blazor application using Syncfusion® components. The Syncfusion® Blazor app is created with the required Syncfusion® NuGet references, namespaces, styles, and component render code. The Template Studio includes an easy-to-use project wizard that guides you through the process of creating an application with Syncfusion® components.
 
-The steps below will assist you to create your **Syncfusion Blazor Application** through **Visual Studio 2022**:
+The steps below will assist you to create your **Syncfusion® Blazor Application** through **Visual Studio 2022**:
 
 > **Note:** The Syncfusion® Blazor Extensions for Visual Studio 2019 are available on Essential Studio® release "20.3.0.56" and below.
 
-N> Before use the Syncfusion Blazor Project Template, check whether the Syncfusion Blazor Template Studio Extension installed or not in Visual Studio Extension Manager by clicking on the Extensions -> Manage Extensions -> Installed. If this extension not installed, install the extension by follow the steps from the [download and installation](https://blazor.syncfusion.com/documentation/visual-studio-integration/download-and-installation) help topic.
+N> Before use the Syncfusion® Blazor Project Template, check whether the Syncfusion® Blazor Template Studio Extension installed or not in Visual Studio Extension Manager by clicking on the Extensions -> Manage Extensions -> Installed. If this extension not installed, install the extension by follow the steps from the [download and installation](https://blazor.syncfusion.com/documentation/visual-studio-integration/download-and-installation) help topic.
 
 1. Open Visual Studio 2022.
 
@@ -29,15 +29,15 @@ N> Before use the Syncfusion Blazor Project Template, check whether the Syncfusi
 
      **Option 2**
 
-     Choose **File -> New -> Project** from the menu. This launches a new dialogue for creating a new application. Syncfusion templates for Blazor can be found by filtering the application type for **Syncfusion** or by entering **Syncfusion** as a keyword in the search option.
+     Choose **File -> New -> Project** from the menu. This launches a new dialogue for creating a new application. Syncfusion® templates for Blazor can be found by filtering the application type for **Syncfusion** or by entering **Syncfusion** as a keyword in the search option.
 
      ![CreateNewWindow](images/createnewwindow.png)
 
-3. Select the **Syncfusion Blazor Template Studio** and click **Next**.
+3. Select the **Syncfusion® Blazor Template Studio** and click **Next**.
 
      ![CreateNewWizard](images/createnewwizard.png)
 
-4. The Syncfusion Blazor Template Studio wizard will be launched to configure the Syncfusion Blazor app.
+4. The Syncfusion® Blazor Template Studio wizard will be launched to configure the Syncfusion Blazor app.
 
      > **Note:** Refer to the .NET SDK support for Syncfusion Blazor Components [here](https://blazor.syncfusion.com/documentation/system-requirements#net-sdk).
 
@@ -106,7 +106,6 @@ N> Before use the Syncfusion Blazor Project Template, check whether the Syncfusi
      | ------------- | ------------- |
      | Syncfusion Blazor Web App | None and Individual Accounts |
      | Syncfusion Blazor WebAssembly App | None, Individual Accounts and Microsoft Identity Platform |
-     | Syncfusion Blazor Server App | None, Individual Accounts, Microsoft Identity Platform, and Windows |
 
      If you choose the **Blazor Web App** application type, you can customize the Interactivity type and Interactivity location options.
 
@@ -126,13 +125,13 @@ N> Before use the Syncfusion Blazor Project Template, check whether the Syncfusi
 
      ![Readme](images/readme.png)
 
-9. The Syncfusion Blazor application configures with most recent Syncfusion Blazor NuGet packages version, selected style, namespaces, selected authentication, and component render code for Syncfusion® components.
+9. The Syncfusion® Blazor application configures with most recent Syncfusion® Blazor NuGet packages version, selected style, namespaces, selected authentication, and component render code for Syncfusion® components.
 
 10. If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion® license key to your application since Syncfusion® introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio® release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion® license key to your application. Refer to this [blog](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2.aspx) post for understanding the licensing changes introduced in Essential Studio®.
 
 ## Authentication Configuration
 
-We need to register the created application in Google Platform API Console for Individual Accounts and Azure Active Directory for Microsoft Identity Platform. From Google Platform API Console registration we can get the client id for Individual Accounts. From Azure Active Directory registration we can get the tenant id and application client id for Microsoft Identity Platform. We need to configure these id values in created applications then only application will be run correctly with authentication support.
+We need to register the created application in the Google API Console for Individual Accounts and in Azure Active Directory for the Microsoft Identity Platform. From the Google API Console registration, we can obtain the client ID for Individual Accounts. From the Azure Active Directory registration, we can obtain the tenant ID and application client ID for the Microsoft Identity Platform. We need to configure these ID values in the created applications; only then will the application run correctly with authentication support.
 
 ### Individual Accounts Authentication
 

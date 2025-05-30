@@ -51,15 +51,15 @@ The following ARIA attributes are used in the Stepper component:
 
 The following keyboard shortcuts are supported by the Stepper component.
 
-| **Press** | **To do this** |
-| --- | --- |
-| <kbd>Up Arrow</kbd> | Focuses the previous step in a vertical Stepper. |
-| <kbd>Down Arrow</kbd> | Focuses the next step in a vertical Stepper. |
-| <kbd>Left Arrow</kbd> | Focuses the previous step in a horizontal Stepper. |
-| <kbd>Right Arrow</kbd> | Focuses the next step in a horizontal Stepper. |
-| <kbd>Home</kbd> | Focuses on the first step of the Stepper. |
-| <kbd>End</kbd> | Focuses on the last step of the Stepper. |
-| <kbd>Enter / Space</kbd> | Activates the currently focused step. |
+| Windows | Mac | **To do this** |
+| --- | --- | --- |
+| <kbd>↑</kbd> | <kbd>↑</kbd> | Focuses the previous step in a vertical Stepper. |
+| <kbd>↓</kbd> | <kbd>↓</kbd> | Focuses the next step in a vertical Stepper. |
+| <kbd>←</kbd> | <kbd>←</kbd> | Focuses the previous step in a horizontal Stepper. |
+| <kbd>→</kbd> | <kbd>→</kbd> | Focuses the next step in a horizontal Stepper. |
+| <kbd>Home</kbd> | <kbd>Home</kbd> | Focuses on the first step of the Stepper. |
+| <kbd>End</kbd> | <kbd>End</kbd> | Focuses on the last step of the Stepper. |
+| <kbd>Enter / Space</kbd> | <kbd>Enter / Space</kbd> | Activates the currently focused step. |
 
 ## Ensuring accessibility
 

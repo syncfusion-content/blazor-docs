@@ -51,14 +51,14 @@ The Blazor Sparkline component followed the [WAI-ARIA](https://www.w3.org/WAI/AR
 
 The Blazor Sparkline component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Sparkline component.
 
-| Interaction Keys | Description |
-| --- | --- |
-| <kbd>Tab</kbd> | Moves the focus to the next element in the Sparkline. |
-| <kbd>Shift + Tab</kbd> | Moves the focus to the previous element in the Sparkline. |
-| <kbd>DownArrow</kbd> | Moves the focus to the data point right side from the selected point. |
-| <kbd>UpArrow</kbd> | Moves the focus to the data point right side from the selected point. |
-| <kbd>ESC</kbd> | Cancel the tooltip for the data point. |
-| <kbd>Ctrl + P</kbd> | Prints the Sparkline. |
+| Windows | Mac | Description |
+| --- | --- | --- |
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Moves the focus to the next element in the Sparkline. |
+| <kbd>Shift + Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Moves the focus to the previous element in the Sparkline. |
+| <kbd>↓</kbd> | <kbd>↓</kbd> | Moves the focus to the data point right side from the selected point. |
+| <kbd>↑</kbd> | <kbd>↑</kbd> | Moves the focus to the data point right side from the selected point. |
+| <kbd>ESC</kbd> | <kbd>ESC</kbd> | Cancel the tooltip for the data point. |
+| <kbd>Ctrl + P</kbd> | <kbd>⌘</kbd> + <kbd>P</kbd> | Prints the Sparkline. |
 
 ## Ensuring accessibility
 

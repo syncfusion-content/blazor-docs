@@ -56,42 +56,42 @@ The Blazor Tree Grid component followed the [WAI-ARIA](https://www.w3.org/WAI/AR
 
 The Blazor Tree Grid component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/treegrid/) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Tree Grid component.
 
-Interaction Keys |Description
------|-----
-<kbd>PageDown</kbd> |Goes to the next page.
-<kbd>PageUp</kbd> |Goes to the previous page.
-<kbd>Ctrl + Alt +PageDown</kbd> |Goes to the last page.
-<kbd>Ctrl + Alt + PageUp</kbd> |Goes to the first page.
-<kbd>Alt + PageDown</kbd> |Goes to the next page.
-<kbd>Alt + PageUp</kbd> |Goes to the previous page.
-<kbd>Home</kbd> |Goes to the first cell.
-<kbd>End</kbd> |Goes to the last cell.
-<kbd>Ctrl + Home</kbd> |Goes to the first row.
-<kbd>Ctrl + End</kbd> |Goes to the last row.
-<kbd>DownArrow</kbd> |Moves the cell focus downward.
-<kbd>UpArrow</kbd> |Moves the cell focus upward.
-<kbd>LeftArrow</kbd> |Moves the cell focus left side.
-<kbd>RightArrow</kbd> |Moves the cell focus right side.
-<kbd>Shift + DownArrow</kbd> |Extends the row/cell selection downwards.
-<kbd>Shift + UpArrow</kbd> |Extends the row/cell selection upwards.
-<kbd>Shift + LeftArrow</kbd> |Extends the cell selection to the left side.
-<kbd>Shift + RightArrow</kbd> |Extends the cell selection to the right side.
-<kbd>Enter</kbd> | Moves the row/cell selection downward. If current cell is in edit state, then completes the editing. If the current cell is a header then performs sorting.
-<kbd>Shift + Enter</kbd> | Moves the row/cell selection upward. If the current cell is a header then clears sorting for the selected column.
-<kbd>Ctrl + Enter</kbd> | If the current cell is a header then performs multi-sorting.
-<kbd>Tab</kbd> | Moves the cell selection right side.
-<kbd>Shift + Tab</kbd> | Moves the cell selection left side.
-<kbd>Esc</kbd> |Deselects all the rows/cells.
-<kbd>Ctrl + A</kbd> |Selects all the rows/cells.
-<kbd>UpArrow</kbd> |Moves up a row/cell selection.
-<kbd>DownArrow</kbd> |Moves down a row/cell selection.
-<kbd>RightArrow</kbd> |Moves to the right cell selection.
-<kbd>LeftArrow</kbd> |Moves to the left cell selection.
-<kbd>Alt + DownArrow</kbd> |Expands the selected group.
-<kbd>Ctrl + DownArrow</kbd> |Expands all the visible groups.
-<kbd>Alt + UpArrow</kbd> |Collapses the selected group.
-<kbd>Ctrl + UpArrow</kbd> |Collapses all the visible groups.
-<kbd>Ctrl + P</kbd> |Prints the Tree Grid.
+| Windows | Mac | Description |
+| ----- | ----- | ---- |
+| <kbd>PageDown</kbd> | <kbd>PageDown</kbd> |Goes to the next page.|
+|<kbd>PageUp</kbd>| <kbd>PageUp</kbd> |Goes to the previous page.|
+|<kbd>Ctrl + Alt +PageDown</kbd>| <kbd>⌘</kbd> + <kbd>⌥</kbd> + <kbd>PageDown</kbd> |Goes to the last page.|
+|<kbd>Ctrl + Alt + PageUp</kbd>| <kbd>⌘</kbd> + <kbd>⌥</kbd> + <kbd>PageUp</kbd> |Goes to the first page.|
+|<kbd>Alt + PageDown</kbd>| <kbd>⌥</kbd> + <kbd>PageDown</kbd> |Goes to the next page.|
+|<kbd>Alt + PageUp</kbd>| <kbd>⌥</kbd> + <kbd>PageUp</kbd> |Goes to the previous page.|
+|<kbd>Home</kbd>| <kbd>fn</kbd>+<kbd>←</kbd> |Goes to the first cell.|
+|<kbd>End</kbd>| <kbd>fn</kbd>+<kbd>→</kbd> |Goes to the last cell.|
+|<kbd>Ctrl + Home</kbd>| <kbd>⌘</kbd> + <kbd>Home</kbd> |Goes to the first row.|
+|<kbd>Ctrl + End</kbd>| <kbd>⌘</kbd> + <kbd>End</kbd> |Goes to the last row.|
+|<kbd>DownArrow</kbd>| <kbd>↓</kbd> |Moves the cell focus downward.|
+|<kbd>UpArrow</kbd> | <kbd>↑</kbd> |Moves the cell focus upward.|
+|<kbd>LeftArrow</kbd>| <kbd>←</kbd> |Moves the cell focus left side.|
+|<kbd>RightArrow</kbd>| <kbd>→</kbd> |Moves the cell focus right side.|
+|<kbd>Shift + DownArrow</kbd>| <kbd>⇧</kbd> + <kbd>↓</kbd> |Extends the row/cell selection downwards.|
+|<kbd>Shift + UpArrow</kbd>| <kbd>⇧</kbd> + <kbd>↑</kbd> |Extends the row/cell selection upwards.|
+|<kbd>Shift + LeftArrow</kbd>| <kbd>⇧</kbd> + <kbd>←</kbd> |Extends the cell selection to the left side.|
+|<kbd>Shift + RightArrow</kbd>| <kbd>⇧</kbd> + <kbd>→</kbd> |Extends the cell selection to the right side.|
+|<kbd>Enter</kbd>| <kbd>Enter</kbd> | Moves the row/cell selection downward. If current cell is in edit state, then completes the editing. If the current cell is a header then performs sorting.|
+|<kbd>Shift + Enter</kbd>| <kbd>⇧</kbd> + <kbd>Enter</kbd> | Moves the row/cell selection upward. If the current cell is a header then clears sorting for the selected column.|
+|<kbd>Ctrl + Enter</kbd>| <kbd>⌘</kbd> + <kbd>Enter</kbd> | If the current cell is a header then performs multi-sorting.|
+|<kbd>Tab</kbd> | Tab | Moves the cell selection right side.|
+|<kbd>Shift + Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Moves the cell selection left side.|
+|<kbd>Esc</kbd> | <kbd>Esc</kbd> |Deselects all the rows/cells.|
+|<kbd>Ctrl + A</kbd> | <kbd>⌘</kbd> + <kbd>A</kbd> |Selects all the rows/cells.|
+|<kbd>↑</kbd> | <kbd>↑</kbd> | Moves up a row/cell selection.|
+|<kbd>↓</kbd>| <kbd>↓</kbd> | Moves down a row/cell selection.|
+|<kbd>→</kbd>| <kbd>→</kbd> | Moves to the right cell selection.|
+|<kbd>←</kbd>| <kbd>←</kbd> | Moves to the left cell selection.|
+|<kbd>Alt + DownArrow</kbd> | <kbd>⌥</kbd> + <kbd>↓</kbd> | Expands the selected group.|
+|<kbd>Ctrl + DownArrow</kbd> | <kbd>⌘</kbd> + <kbd>↓</kbd> | Expands all the visible groups.|
+|<kbd>Alt + UpArrow</kbd> | <kbd>⌥</kbd> + <kbd>↑</kbd> | Collapses the selected group.|
+|<kbd>Ctrl + UpArrow</kbd> | <kbd>⌘</kbd> + <kbd>↑</kbd> | Collapses all the visible groups.|
+|<kbd>Ctrl + P</kbd> | <kbd>⌘</kbd> + <kbd>P</kbd> | Prints the Tree Grid.|
 
 ## Ensuring accessibility
 
