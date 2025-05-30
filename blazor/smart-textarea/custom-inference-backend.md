@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Custom AI Service Integration with Smart Components
-description: Learn how to use IInferenceBackend to integrate custom AI services with Syncfusion Smart Components
+description: Learn how to use IAIInferenceBackend to integrate custom AI services with Syncfusion Smart Components
 platform: Blazor
 control: Smart TextArea
 documentation: ug
@@ -11,15 +11,15 @@ documentation: ug
 
 ## Overview
 
-Syncfusion Smart Components provide built-in support for OpenAI and Azure OpenAI services. However, you can also integrate other AI services using the `IInferenceBackend` interface, which acts as a bridge between Smart Components and your custom AI service.
+Syncfusion Smart Components provide built-in support for OpenAI and Azure OpenAI services. However, you can also integrate other AI services using the `IAIInferenceBackend` interface, which acts as a bridge between Smart Components and your custom AI service.
 
 
-## IInferenceBackend Interface
+## IAIInferenceBackend Interface
 
-The `IInferenceBackend` interface defines a simple contract for AI service integration:
+The `IAIInferenceBackend` interface defines a simple contract for AI service integration:
 
 ```csharp
-public interface IInferenceBackend
+public interface IAIInferenceBackend
 {
     Task<string> GetChatResponseAsync(ChatParameters options);
 }
@@ -32,7 +32,7 @@ This interface enables:
 
 ## Implemented AI Services
 
-Here are examples of AI services integrated using the `IInferenceBackend` interface:
+Here are examples of AI services integrated using the `IAIInferenceBackend` interface:
 
 | Service | Description | Documentation |
 |---------|-------------|---------------|
@@ -47,6 +47,7 @@ Here are examples of AI services integrated using the `IInferenceBackend` interf
 Register your custom implementation in `Program.cs`:
 
 ```csharp
-builder.Services.AddSingleton<IInferenceBackend, YourCustomService>();
+using Syncfusion.Blazor.AI;
+builder.Services.AddSingleton<IAIInferenceBackend, YourCustomService>();
 ```
 
