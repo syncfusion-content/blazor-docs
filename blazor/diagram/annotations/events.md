@@ -7,7 +7,7 @@ control: Diagram Component
 documentation: ug
 ---
 
-# Events in Blazor Diagram Component
+# Annotation Events in Blazor Diagram Component
 
 ## Text Change Event
 

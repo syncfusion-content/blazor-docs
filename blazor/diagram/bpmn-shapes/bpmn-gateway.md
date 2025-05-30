@@ -7,7 +7,7 @@ control: Diagram Component
 documentation: ug
 ---
 
-# BPMN Gate Way in Blazor Diagram Component
+# BPMN Gateway in Blazor Diagram Component
 
 A Gate Way is used to control the flow of a process and it is represented in diamond shape. The [GatewayType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnGateway.html#Syncfusion_Blazor_Diagram_BpmnGateway_GatewayType) property of the [BpmnGateway](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnGateway.html) can be set with any of the appropriate gateways. By default, the value of [GatewayType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnGateway.html#Syncfusion_Blazor_Diagram_BpmnGateway_GatewayType) is **None.** The following code example explains how to create a BPMN Gate Way.
 

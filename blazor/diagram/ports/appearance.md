@@ -7,7 +7,7 @@ control: Diagram Component
 documentation: ug
 ---
 
-# How to Customize Port Appearance and Positioning
+# Port Appearance
 
 ## How to Change the Appearance of a Port
 

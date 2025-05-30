@@ -7,7 +7,7 @@ control: Diagram Component
 documentation: ug
 ---
 
-# Interaction in Blazor Diagram Component
+# Connector Interaction in Blazor Diagram Component
 
 Connectors can be selected, dragged, and routed over the diagram page.
 

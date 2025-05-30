@@ -7,7 +7,7 @@ control: Diagram Component
 documentation: ug
 ---
 
-# Symbol Palette in Blazor Diagram Component
+# Symbol Palette Customization in Blazor Diagram Component
 
 The [SymbolPalette](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.html) component showcases a collection of [Palettes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_Palettes), each containing a set of predefined nodes and connectors. This powerful feature enables users to easily drag and drop these elements into the diagram, streamlining the process of creating and modifying complex diagrams.
 

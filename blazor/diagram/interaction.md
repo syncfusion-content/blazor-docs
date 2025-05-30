@@ -7,7 +7,7 @@ control: Diagram Component
 documentation: ug
 ---
 
-# Connector Interactions in the Blazor Diagram Component
+# Interaction in the Blazor Diagram Component
 
 ## Selection
 

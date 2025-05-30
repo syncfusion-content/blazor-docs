@@ -7,7 +7,7 @@ control: Diagram Component
 documentation: ug
 ---
  
-# Orthogonal Segments in Blazor Diagram Component
+# Orthogonal Segments Creation and Customization
 
 ## How to Create an orthogonal Segment
 

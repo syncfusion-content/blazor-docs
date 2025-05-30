@@ -7,7 +7,7 @@ control: Diagram Component
 documentation: ug
 ---
 
-# Multiple Segments in Blazor Diagram Component
+# Multiple Segments Creation
 
 ## How to Create Multiple Segments
 

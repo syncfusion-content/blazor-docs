@@ -7,7 +7,7 @@ control: Diagram Component
 documentation: ug
 ---
 
-# Bezier Segments in Blazor Diagram Component
+# Bezier Segments Creation and Customization
 
 ## How to Create a Bezier Segment
 

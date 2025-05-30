@@ -7,7 +7,7 @@ control: Diagram Component
 documentation: ug
 ---
 
-# Events in Blazor Diagram Component
+# Layout Events in Blazor Diagram Component
 
 ## Data Loaded
 

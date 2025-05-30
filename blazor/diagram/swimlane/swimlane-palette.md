@@ -7,7 +7,7 @@ control: Diagram Component
 documentation: ug
 ---
 
-# Swimlane-Palette in Blazor Diagram Component
+# Add Swimlane to Palette
   Diagram provides support to add lanes and phases to the symbol palette. 
 
 ## Add Lanes and Phases to the Symbol Palette

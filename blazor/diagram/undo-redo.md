@@ -7,7 +7,7 @@ control: Diagram Component
 documentation: ug
 ---
 
-# Undo Redo Support in Blazor Diagram Component
+# Undo and Redo in Blazor Diagram Component
 
 The Blazor Diagram component tracks the history of actions performed after initialization and provides support to reverse and restore those changes.
 

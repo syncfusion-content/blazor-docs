@@ -7,7 +7,7 @@ control: Diagram Component
 documentation: ug
 ---
 
-# How to Position Connector’s Annotation
+# Connector Annotation in Blazor Diagram Component
 
 Annotations of a connector can be positioned using the following properties of Annotation class.
 

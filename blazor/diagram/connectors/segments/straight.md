@@ -7,7 +7,7 @@ control: Diagram Component
 documentation: ug
 ---
 
-# Straight Segments in the Blazor Diagram Component
+# Straight Segments Creation and Customization
 
 ## How to Create Straight Segments
 
