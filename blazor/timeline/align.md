@@ -9,11 +9,11 @@ documentation: ug
 
 # Alignment in Blazor Timeline component
 
-You can display the Timeline content `Before`, `After`, `Alternate` and `AlternateReverse` by using the [Alignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfTimeline.html#Syncfusion_Blazor_Layouts_SfTimeline_Alignment) property. The `oppositeContent` will be displayed parallel to the content when configured in the [TimelineItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineItem.html) directive.
+You can display the Timeline content [`Before`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineAlignment.html#Syncfusion_Blazor_Layouts_TimelineAlignment_Before), [`After`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineAlignment.html#Syncfusion_Blazor_Layouts_TimelineAlignment_After), [`Alternate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineAlignment.html#Syncfusion_Blazor_Layouts_TimelineAlignment_Alternate) and [`AlternateReverse`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineAlignment.html#Syncfusion_Blazor_Layouts_TimelineAlignment_AlternateReverse) by using the [`Alignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.SfTimeline.html#Syncfusion_Blazor_Layouts_SfTimeline_Alignment) property. The [`oppositeContent`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineItem.html#Syncfusion_Blazor_Layouts_TimelineItem_OppositeContent) will be displayed parallel to the content when configured in the [`TimelineItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineItem.html) directive.
 
 ## Before
 
-In [Before](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineAlignment.html) alignment, for `horizontal` orientation the item content is placed at the top and `oppositeContent` at the bottom whereas in `vertical`, the content to the left and `oppositeContent` to the right.
+In [`Before`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineAlignment.html#Syncfusion_Blazor_Layouts_TimelineAlignment_Before) alignment, for [`horizontal`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineOrientation.html#Syncfusion_Blazor_Layouts_TimelineOrientation_Horizontal) orientation the item content is placed at the top and [`oppositeContent`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineItem.html#Syncfusion_Blazor_Layouts_TimelineItem_OppositeContent) at the bottom whereas in [`vertical`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineOrientation.html#Syncfusion_Blazor_Layouts_TimelineOrientation_Vertical), the content to the left and [`oppositeContent`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineItem.html#Syncfusion_Blazor_Layouts_TimelineItem_OppositeContent) to the right.
 
 ```cshtml
 
@@ -54,7 +54,7 @@ In [Before](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.Time
 
 ## After
 
-In [After](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineAlignment.html) alignment, for `horizontal` orientation the item content is placed at the bottom and `oppositeContent` at the top whereas in `vertical`, the content to the right and `oppositeContent` to the left.
+In [`After`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineAlignment.html#Syncfusion_Blazor_Layouts_TimelineAlignment_After) alignment, for [`horizontal`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineOrientation.html#Syncfusion_Blazor_Layouts_TimelineOrientation_Horizontal) orientation the item content is placed at the bottom and [`oppositeContent`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineItem.html#Syncfusion_Blazor_Layouts_TimelineItem_OppositeContent) at the top whereas in `vertical`, the content to the right and [`oppositeContent`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineItem.html#Syncfusion_Blazor_Layouts_TimelineItem_OppositeContent) to the left.
 
 ```cshtml
 
@@ -95,7 +95,7 @@ In [After](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.Timel
 
 ## Alternate
 
-In [Alternate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineAlignment.html) alignment, the item content are arranged alternatively regardless of the Timeline orientation.
+In [`Alternate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineAlignment.html#Syncfusion_Blazor_Layouts_TimelineAlignment_Alternate) alignment, the item content are arranged alternatively regardless of the Timeline orientation.
 
 ```cshtml
 
@@ -136,7 +136,7 @@ In [Alternate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.T
 
 ## Alternate reverse
 
-In [AlternateReverse](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineAlignment.html) alignment, the item content are arranged in reverse alternate regardless of the Timeline orientation.
+In [`AlternateReverse`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Layouts.TimelineAlignment.html#Syncfusion_Blazor_Layouts_TimelineAlignment_AlternateReverse) alignment, the item content are arranged in reverse alternate regardless of the Timeline orientation.
 
 ```cshtml
 
