@@ -9,9 +9,9 @@ documentation: ug
 
 # Paging in Blazor DataGrid
 
-[Paging](https://www.syncfusion.com/blazor-components/blazor-datagrid/paging) provides an option to display Grid data in segmented pages, making it easier to navigate through large datasets. This feature is particularly useful when dealing with extensive data sets.
+[Paging](https://www.syncfusion.com/blazor-components/blazor-datagrid/paging) provides an option to display Syncfsion Blazor DataGrid data in segmented pages, making it easier to navigate through large datasets. This feature is particularly useful when dealing with extensive data sets.
 
-To enable paging, you need to set the [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging) property to **true**. This property determines whether paging is enabled or disabled for the Grid. When paging is enabled, a pager component rendered at the bottom of the Grid, allowing you to navigate through different pages of data.
+To enable paging, you need to set the [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging) property to **true**. This property determines whether paging is enabled or disabled for the Grid. When paging is enabled, a pager rendered at the bottom of the Grid, allowing you to navigate through different pages of data.
 
 Paging options can be configured through the [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings) component. The `GridPageSettings` allows you to control various aspects of paging, such as the page size, current page, and total number of records.
 
@@ -19,7 +19,7 @@ Paging options can be configured through the [GridPageSettings](https://help.syn
 
 ## Customize the pager options
 
-Customizing the pager options in the Syncfusion Blazor DataGrid allows you to tailor the pagination control according to your specific requirements. You can customize the pager to display the number of pages using the `PageCount` property, change the current page using `CurrentPage` property, display the number of records in the Grid using the `PageSize` property, and even adjust the page sizes in a dropdown using the `PageSizes` property. <!--Additionally, you can include the current page as a query string in the URL for convenient navigation.-->
+Customizing the pager options in the Syncfusion Blazor DataGrid allows you to tailor the pagination according to your specific requirements. You can customize the pager to display the number of pages using the `PageCount` property, change the current page using `CurrentPage` property, display the number of records in the Grid using the `PageSize` property, and even adjust the page sizes in a dropdown using the `PageSizes` property. <!--Additionally, you can include the current page as a query string in the URL for convenient navigation.-->
 
 ### Change the page size
 

@@ -226,7 +226,7 @@ The following example demonstrates how to render an image in the Toolbar of the 
 
 ## Render SfDropDownList in Custom Toolbar
 
-Render **SfDropDownList** in Custom Toolbar in Syncfusion Blazor DataGrid enables you to extend the functionality of the Custom Toolbar by incorporating a [DropDownList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html), allowing you to perform various actions within the Grid based on their selections.
+Render **SfDropDownList** in Custom Toolbar in Syncfusion Blazor DataGrid enables you to extend the functionality of the Custom Toolbar by incorporating a [SfDropDownList](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html), allowing you to perform various actions within the Grid based on their selections.
 
 This can be achieved by utilizing the `Template`. The example below demonstrates how to render the **SfDropDownList** in the Custom Toolbar, where the Toolbar Template includes the its [ValueChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_ValueChanged) event is bound to the **OnChange** method.
 

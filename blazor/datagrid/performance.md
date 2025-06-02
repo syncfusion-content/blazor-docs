@@ -9,7 +9,7 @@ documentation: ug
 
 # Performance tips for Blazor DataGrid
 
-This article is a comprehensive guide on improving the loading performance of the Syncfusion Blazor DataGrid, especially when dealing with large datasets along with large number of columns. It provides valuable insights into the steps that need to be followed to bind a large data source without experiencing any performance degradations. By offering detailed explanations and actionable tips, this resource aims to empower readers with the knowledge and best practices necessary to optimize the performance of the Blazor Grid during data binding, ensuring a smooth and efficient user experience.
+This article is a comprehensive guide on improving the loading performance of the Syncfusion Blazor DataGrid, especially when dealing with large datasets along with large number of columns. It provides valuable insights into the steps that need to be followed to bind a large data source without experiencing any performance degradations. By offering detailed explanations and actionable tips, this resource aims to empower readers with the knowledge and best practices necessary to optimize the performance of the Grid during data binding, ensuring a smooth and efficient user experience.
 
 ## How to improve loading performance by binding large dataset
 
