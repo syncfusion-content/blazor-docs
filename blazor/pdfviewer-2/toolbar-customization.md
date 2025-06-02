@@ -622,46 +622,18 @@ The visibility of the Redaction Toolbar can also be controlled programmatically 
 The following example demonstrates how to toggle the visibility of the Redaction Toolbar using a button:
 
 ```cshtml
-@page "/"
-
-<SfButton @onclick="ToggleRedactionToolbar">
-    @(isRedactionToolbarVisible ? "Hide Redaction Toolbar" : "Show Redaction Toolbar")
-</SfButton>
-<SfPdfViewer2 @ref="SfPdfViewer2" DocumentPath="wwwroot/data/Annotations.pdf" Width="100%" Height="600px" >
-     <PdfViewerToolbarSettings ToolbarItems="ToolbarItems"></PdfViewerToolbarSettings>
-</SfPdfViewer2>
-
-@code {
-    private SfPdfViewer2 SfPdfViewer2;
-    private bool isRedactionToolbarVisible = false;
-    private List<ToolbarItem> ToolbarItems = new List<ToolbarItem>();
-    protected override void OnInitialized()
-    {
-        ToolbarItems = new List<ToolbarItem>()
-        {
-            ToolbarItem.OpenOption,
-            ToolbarItem.PageNavigationTool,
-            ToolbarItem.MagnificationTool,
-            ToolbarItem.SelectionTool,
-            ToolbarItem.PanTool,
-            ToolbarItem.UndoRedoTool,
-            ToolbarItem.CommentTool,
-            ToolbarItem.SubmitForm,
-            ToolbarItem.SearchOption,
-            ToolbarItem.AnnotationEditTool,
-            ToolbarItem.Redaction,              // Enables Redaction toolbar
-            ToolbarItem.FormDesigner,
-            ToolbarItem.PrintOption,
-            ToolbarItem.DownloadOption
-        };
-    }
-    private void ToggleRedactionToolbar()
-    {
-        isRedactionToolbarVisible = !isRedactionToolbarVisible;
-        SfPdfViewer2.ShowRedactionToolbar(isRedactionToolbarVisible);
-    }
+private void ToggleRedactionToolbar()
+{
+    isRedactionToolbarVisible = !isRedactionToolbarVisible;
+    SfPdfViewer2.ShowRedactionToolbar(isRedactionToolbarVisible);
 }
 ```
 
 Refer to the Image below for details.
 ![Show Redaction Toolbar](./annotation/redaction-annotations-images/show-redaction-toolbar.png)
+
+## See also
+
+* [Adding the shape annotation in pdf viewer](./annotation/shape-annotation)
+* [Adding the redaction annotation in pdf viewer](./annotation/redaction-annotation)
+* [Form designer in pdf viewer](./form-designer/overview)
