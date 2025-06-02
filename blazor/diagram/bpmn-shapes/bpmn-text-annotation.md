@@ -1,13 +1,13 @@
 ---
 layout: post
-title: BPMN Text Annotation in Blazor Diagram Component | Syncfusion
+title: Controlling BPMN Text Annotation in Blazor Diagrams | Syncfusion
 description: Learn here all about how to create BPMN text annotation in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# BPMN Text Annotation in Blazor Diagram Component
+# Controlling BPMN Text Annotation in Blazor Diagrams
 
 * A BPMN object can be associated with a text annotation that does not affect the flow but provides information about objects within a flow. 
 
@@ -138,7 +138,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Auto BPMN Shape](../images/bpmn-text-annotation_WithTarget.png) 
 
-## How to connect the TextAnnotation to BPMNNode
+## How to Connect a Text Annotation to a BPMN Node
 Drag and drop any bpmn shapes from the palette to the diagram and connect the BPMN Node and TextAnnotation.
 
 The following image shows how to drag a symbol from the palette and connect the TextAnnotation to the BPMNNode with interaction.
