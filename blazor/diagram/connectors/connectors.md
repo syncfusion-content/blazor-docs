@@ -21,7 +21,7 @@ To create and customize the connectors easily in the Blazor Diagram component, r
 
 ## How to add Connectors through the Connectors Collection
 
-The [SourcePoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_SourcePoint) and [TargetPoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_TargetPoint) properties of connector allow you to define the end points of a connector.
+The [SourcePoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_SourcePoint) and [TargetPoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_TargetPoint) properties of connector allow you to define the endpoints of a connector.
 
 The following code example illustrates how to add a connector through the connector collection,
 
@@ -59,7 +59,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 >**Note:** 
 > * [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_ID) for each connector should be unique and so it is further used to find the connector at runtime and perform any customization. 
-> * Connector's Id should not start with numbers or special characters and should not contain special characters such as underscores(_) or spaces.
+> * Connectors' Id should not start with numbers or special characters and should not contain special characters such as underscores(_) or spaces.
 
 ## How to Add Connectors at Runtime
 
@@ -482,7 +482,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 * When you remove [NodeConstraints.InConnect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_InConnect) from Default, the node accepts only an outgoing connection to dock in it. Similarly, when you remove [NodeConstraints.OutConnect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_OutConnect) from Default, the node accepts only an incoming connection to dock in it.
 
-* When you remove both In Connect and Out Connect [NodeConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html) from [Default](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_Default), the node restricts connectors from establishing a connection to it.
+* When you remove both InConnect and OutConnect [NodeConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html) from [Default](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_Default), the node restricts connectors from establishing a connection to it.
 
 ### Connections with Ports
 

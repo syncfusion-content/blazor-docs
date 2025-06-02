@@ -256,8 +256,8 @@ The size of the icon can be changed with the [Height](https://help.syncfusion.co
 ### Shape
 
 The shape of an [ExpandIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_ExpandIcon) and a [CollapseIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_CollapseIcon) can be changed by using the Shape property of [DiagramExpandIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExpandIcon.html) and [DiagramCollapseIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramCollapseIcon.html) respectively. 
-To explore the different types of Diagram Expand Icon shapes, refer to [DiagramExpandIcons](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExpandIcons.html).
-To explore the different types of Diagram Collapse Icon shapes, refer to [DiagramCollapseIcons](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramCollapseIcons.html).
+To explore the different types of DiagramExpandIcon shapes, refer to [DiagramExpandIcons](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExpandIcons.html).
+To explore the different types of DiagramCollapseIcon shapes, refer to [DiagramCollapseIcons](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramCollapseIcons.html).
 If you need to render a custom shape, then you can set shape to [Path](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExpandIcons.html#Syncfusion_Blazor_Diagram_DiagramExpandIcons_Path) and define the path using the [PathData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramIcon.html#Syncfusion_Blazor_Diagram_DiagramIcon_PathData) property.
 
 The following code explains how to Initialize the Icon with Path shape.

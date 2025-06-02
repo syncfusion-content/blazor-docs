@@ -77,7 +77,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Arranging Node Position in Blazor Diagram](../images/blazor-diagram-node-position.png)
 
-Rotation of a node is controlled by using the [RotationAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_RotationAngle) property. The following code shows how to change the Rotation Angle value.
+Rotation of a node is controlled by using the [RotationAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_RotationAngle) property. The following code shows how to change the RotationAngle value.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram

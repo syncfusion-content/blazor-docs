@@ -15,9 +15,9 @@ Diagram allows you to customize the connector appearances. The following topics 
 
 * Starting and ending points of a connector can be decorated with some customizable shapes like arrows, circles, diamonds, or paths. The connection end points can be decorated with the [SourceDecorator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_SourceDecorator) and [TargetDecorator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_TargetDecorator) properties of the connector.
 
-* The [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DecoratorSettings.html#Syncfusion_Blazor_Diagram_DecoratorSettings_Shape) property of Source Decorator allows you to define the shape of the source decorator. Similarly, the Shape property of Target Decorator allows to define the shape of the target decorator.
+* The [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DecoratorSettings.html#Syncfusion_Blazor_Diagram_DecoratorSettings_Shape) property of SourceDecorator allows you to define the shape of the source decorator. Similarly, the Shape property of TargetDecorator allows to define the shape of the target decorator.
 
-* To create custom shape for source decorator, use the [PathData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DecoratorSettings.html#Syncfusion_Blazor_Diagram_DecoratorSettings_PathData) property. Similarly, to create custom shape for the target decorator, use the Path Data property.
+* To create custom shape for source decorator, use the [PathData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DecoratorSettings.html#Syncfusion_Blazor_Diagram_DecoratorSettings_PathData) property. Similarly, to create custom shape for the target decorator, use the PathData property.
 
 To learn more about customization of connectors, refer to the below video link.
 
@@ -76,7 +76,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 * The source decorator’s [StrokeColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeColor), [StrokeWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeWidth), and [StrokeDashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeDashArray) properties are used to customize the color, width, and appearance of the decorator.
 
-* To set the border stroke color, stroke width, and stroke dash array for the target decorator, use Stroke Color, Stroke Width, and Stroke Dash Array.
+* To set the border stroke color, stroke width, and stroke dash array for the target decorator, use StrokeColor, StrokeWidth, and StrokeDashArray.
 
 * To set the size for source and target decorator, use [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DecoratorSettings.html#Syncfusion_Blazor_Diagram_DecoratorSettings_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DecoratorSettings.html#Syncfusion_Blazor_Diagram_DecoratorSettings_Height) properties.
 
@@ -312,7 +312,7 @@ The following code example illustrates how to enable line bridging.
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/Bridging)
 
-The [BridgeSpace](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_BridgeSpace) property of connectors can be used to define the width for line bridging. By default, the Bridge Space value is 10px.
+The [BridgeSpace](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_BridgeSpace) property of connectors can be used to define the width for line bridging. By default, the BridgeSpace value is 10px.
 
 Limitation: [BezierSegment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierSegment.html) do not support bridging.
 
@@ -381,7 +381,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 * The [IsVisible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_IsVisible) property of the connector indicates whether the connector is visible in the user interface or not.
 
-* Default values for all the [Connectors](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html) can be set by using the [ConnectorCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ConnectorCreating) event call back method. For example, if all connectors have the same type or property, then such properties can be moved into Connector Creating.
+* Default values for all the [Connectors](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html) can be set by using the [ConnectorCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ConnectorCreating) event callback method. For example, if all connectors have the same type or property, then such properties can be moved into ConnectorCreating.
 
 ### How to Customize the Segment Appearance
 
@@ -592,7 +592,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to Set Hit Padding for Connector
 
-* The [HitPadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_HitPadding) refers to the space around the connector's edges. To make it easy to select, selecting when the mouse comes near its vicinity area should be possible. The Hit Padding property allows you to customize the vicinity area while selecting. The default value is 10px. Within the hit padding region, the connector can be selected and deselected.
+* The [HitPadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_HitPadding) refers to the space around the connector's edges. To make it easy to select, selecting when the mouse comes near its vicinity area should be possible. The HitPadding property allows you to customize the vicinity area while selecting. The default value is 10px. Within the hit padding region, the connector can be selected and deselected.
 
 To learn more about connector HitPadding, refer to the below video link,
 
@@ -636,9 +636,9 @@ The following code illustrates how to set the HitPadding for the connector.
 
 * The [SourcePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_SourcePadding) property of a connector defines space between the source point and the source node of the connector.
 
-* The [TargetPadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_TargetPadding) property of a connector defines space between the end point and the target node of the connector.
+* The [TargetPadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_TargetPadding) property of a connector defines space between the endpoint and the target node of the connector.
 
-The following code example illustrates how to leave space between the connection end points and source and target nodes.
+The following code example illustrates how to leave space between the connection endpoints and source and target nodes.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram

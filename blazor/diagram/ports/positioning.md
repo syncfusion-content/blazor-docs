@@ -158,7 +158,7 @@ N> By default, the value of the `HorizontalAlignment` and `VerticalAlignment` is
 
 ## How to Update Margin for Port
 
-[Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_Margin) is an absolute value used to add some blank space to any one of its four sides. The ports can be displaced with the margin property. The following code example explains how to align a port based on its Offset, Horizontal Alignment, Vertical Alignment, and Margin values.
+[Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_Margin) is an absolute value used to add some blank space to any one of its four sides. The ports can be displaced with the margin property. The following code example explains how to align a port based on its Offset, HorizontalAlignment, VerticalAlignment, and Margin values.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram

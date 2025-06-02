@@ -159,7 +159,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 The Orthogonal connector can have multiple segments between the source and target points. By default, these segments are rendered as circles, but this can be customized either globally or for individual connectors using the [SegmentThumbSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbSettings.html) class.
 
-To change the segment thumb shape for all Orthogonal connectors, configure the [SegmentThumbSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbSettings.html) property of the SfDiagram Component class and set the Shape property to the desired shape.
+To change the segment thumb shape for all Orthogonal connectors, configure the [SegmentThumbSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbSettings.html) property of the SfDiagramComponent class and set the Shape property to the desired shape.
 
 To customize the segment thumb shape for a specific connector, first disable the [InheritSegmentThumbShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_InheritSegmentThumbShape) constraint. Then, configure the [SegmentThumbSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbSettings.html) property of the Connector class, specifying the desired shape using the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbSettings.html#Syncfusion_Blazor_Diagram_SegmentThumbSettings_Shape) property of the [SegmentThumbSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbSettings.html) class.
 
@@ -211,7 +211,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 When the `InheritSegmentThumbShape` constraint is enabled in the connector, the shape specified at the diagram level will be applied to the connector segment thumb. This allows for consistent segment thumb shapes across the entire diagram.
 
-The following code example illustrates how to customize orthogonal segment thumb shape using Inherit Segment Thumb Shape.
+The following code example illustrates how to customize orthogonal segment thumb shape using InheritSegmentThumbShape.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
