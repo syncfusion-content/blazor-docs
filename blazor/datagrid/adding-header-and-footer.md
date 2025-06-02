@@ -87,7 +87,7 @@ The following example demonstrates how to add text in the header and footer of t
                         {
                             Type = ContentType.Text, // Set content type as text.    
                             Value = "This is the PDF Footer Text", // Set the text to display in PDF document footer section.
-                            Position = new PdfPosition { X = 200, Y = 20 }, Set the position of footer text.
+                            Position = new PdfPosition { X = 200, Y = 20 }, //Set the position of footer text.
                             Style = new PdfContentStyle
                             {
                                 TextBrushColor = "#000000",

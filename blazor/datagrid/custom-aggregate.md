@@ -26,7 +26,6 @@ Here’s an example that demonstrates how to use the custom aggregate feature in
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid @ref="Grid" DataSource="@Orders" AllowPaging="true">
    <GridAggregates>
@@ -125,7 +124,6 @@ Here’s an example that demonstrates how to show the count of distinct values f
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid @ref="Grid" DataSource="@Orders" AllowPaging="true">
     <GridAggregates>
