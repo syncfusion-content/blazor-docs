@@ -342,7 +342,7 @@ The following example demonstrates, how to disable sorting for **CustomerID** co
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtVgWMDhqzLxBsoB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Customizing sorting functionality with the allowUnsort property
+## Customizing sorting functionality with the AllowUnsort property
 
 When the [AllowUnsort](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortSettings.html#Syncfusion_Blazor_Grids_GridSortSettings_AllowUnsort) property is set to **false** in [GridSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortSettings.html), the Grid cannot be placed in an unsorted state by clicking on a sorted column header. This setting restricts the action of reverting the Grid to its original unsorted layout through column header clicks.
 
