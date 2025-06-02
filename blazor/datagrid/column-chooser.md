@@ -347,7 +347,7 @@ Here’s an example of how to change the default search operator of the column c
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" ShowColumnChooser="true" Toolbar=@ToolbarItems>
-    <GridColumnChooserSettings Operator="Operator.Contains"></GridColumnChooserSettings>
+    <GridColumnChooserSettings Operator="Syncfusion.Blazor.Operator.Contains"></GridColumnChooserSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderData.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderData.OrderDate) HeaderText="Order Date" Format="d" Type="ColumnType.DateOnly" TextAlign="TextAlign.Right" Width="130"></GridColumn>
@@ -408,7 +408,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDhfsrsLBUKAKYLo?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtVojSqXAvCdYvzJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Column chooser template
 
@@ -626,8 +626,7 @@ The [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gri
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.Buttons
-@using BlazorApp1.Data
+@using Syncfusion.Blazor.Grids
 
 <SfGrid @ref="grid" TValue="OrderData" DataSource="@GridData" ShowColumnChooser="true" Toolbar="@( new List<string>() { "ColumnChooser"})" AllowPaging="true">
     <GridColumnChooserSettings>

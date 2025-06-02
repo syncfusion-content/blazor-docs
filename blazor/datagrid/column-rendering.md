@@ -30,7 +30,6 @@ Here's an example code snippet that demonstrates how to define columns manually 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders">
     <GridColumns>
@@ -106,7 +105,6 @@ You can use the following code snippet to enable auto-generated columns in the S
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders"></SfGrid>
 
@@ -182,7 +180,6 @@ Here is an example code snippet that shows how to set a primary key for an auto-
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid @ref="Grid" TValue="OrderData" DataSource="@Orders">
     <GridEvents OnDataBound="DataBoundHandler" TValue="OrderData"></GridEvents>
@@ -260,7 +257,6 @@ In the below example, `Width` is set for **OrderID** column, **date** `Type` is 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid @ref="Grid" TValue="OrderData" DataSource="@Orders">
     <GridEvents OnDataBound="DataBoundHandler" TValue="OrderData"></GridEvents>
@@ -353,7 +349,6 @@ You can refer the following code example to achieve this.
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders">
     <GridEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true"></GridEditSettings>
