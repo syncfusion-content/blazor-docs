@@ -62,7 +62,7 @@ builder.Services.AddSignalR(hubOptions =>
 });
 ```
 
-## How to improve performance of DataGrid in WASM application
+## How to improve performance of Blazor DataGrid in WASM application
 
 This section provides performance guidelines for using Syncfusion Blazor DataGrid efficiently in Blazor WebAssembly application. The general framework Blazor WebAssembly performance best practice/guidelines can be found [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance?view=aspnetcore-8.0).
 
