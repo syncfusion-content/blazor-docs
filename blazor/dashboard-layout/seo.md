@@ -209,7 +209,7 @@ The Blazor Dashboard Layout component is used for creating dynamic and responsiv
     double[] CellSpacing = new double[] { 5, 5 };
     int Columns = 6;
     double Ratio = 100 / 85;
-    private Theme Theme { get; set; }
+    private Syncfusion.Blazor.Theme Theme { get; set; }
     public string[] ShapePropertyPath = { "continent" };
     public string ShapeDataPath = "Continent";
     public List<VisitorsData> VisitorData = new List<VisitorsData>

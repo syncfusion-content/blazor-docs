@@ -142,3 +142,93 @@ public class OrderData
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LZBoNSXVUGazWuEg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Hide Blazor DataGrid header
+
+In the Syncfusion Blazor DataGrid, the header row (which displays the column titles) can be hidden using simple CSS styles.
+
+Apply the following CSS to your application. This will completely hide the column headers of every Grid on the page:
+
+```css
+<style>
+    .e-grid .e-gridheader .e-columnheader{
+        display: none;
+    }
+</style>
+```
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+
+<SfGrid @ref="Grid" DataSource="@Orders" AllowPaging="true">
+    <GridColumns>
+        <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer ID" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.OrderDate) HeaderText="Order Date" Format="d" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+<style>
+    .e-grid .e-gridheader .e-columnheader{
+        display: none;
+    }
+</style>
+
+@code {
+    private SfGrid<OrderDetails> Grid;
+    public List<OrderDetails> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = OrderDetails.GetAllRecords();
+    }
+}
+
+{% endhighlight %}
+{% highlight c# tabtitle="OrderDetails.cs" %}
+
+public class OrderDetails
+{
+    public static List<OrderDetails> Orders = new List<OrderDetails>();
+
+    public OrderDetails(int orderID, string customerID, double freight, DateTime orderDate)
+    {
+        this.OrderID = orderID;
+        this.CustomerID = customerID;
+        this.Freight = freight;
+        this.OrderDate = orderDate;
+    }
+
+    public static List<OrderDetails> GetAllRecords()
+    {
+        if (Orders.Count == 0)
+        {
+            Orders.Add(new OrderDetails(10248, "VINET", 32.38, new DateTime(2024, 1, 10)));
+            Orders.Add(new OrderDetails(10249, "TOMSP", 11.61, new DateTime(2024, 1, 11)));
+            Orders.Add(new OrderDetails(10250, "HANAR", 65.83, new DateTime(2024, 1, 12)));
+            Orders.Add(new OrderDetails(10251, "VICTE", 41.34, new DateTime(2024, 1, 13)));
+            Orders.Add(new OrderDetails(10252, "SUPRD", 51.3, new DateTime(2024, 1, 14)));
+            Orders.Add(new OrderDetails(10253, "HANAR", 58.17, new DateTime(2024, 1, 15)));
+            Orders.Add(new OrderDetails(10254, "CHOPS", 22.98, new DateTime(2024, 1, 16)));
+            Orders.Add(new OrderDetails(10255, "RICSU", 148.33, new DateTime(2024, 1, 17)));
+            Orders.Add(new OrderDetails(10256, "WELLI", 13.97, new DateTime(2024, 1, 18)));
+            Orders.Add(new OrderDetails(10257, "HILAA", 81.91, new DateTime(2024, 1, 19)));
+        }
+
+        return Orders;
+    }
+
+    public int OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double Freight { get; set; }
+    public DateTime OrderDate { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VZVoDohZJpGSPqod?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+N> If you want to hide the header for particular Grid, then you can apply the above styles to that Grid using the ID (#Grid.e-grid .e-gridheader .e-columnheader) property value.

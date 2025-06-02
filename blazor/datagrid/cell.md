@@ -27,7 +27,6 @@ In the following example, the [Blazor Toggle Switch](https://www.syncfusion.com/
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
-@using BlazorApp1.Data
 
 <label> Enable or disable HTML Encode</label>
 <SfSwitch ValueChange="Change" TChecked="bool"></SfSwitch>
@@ -134,7 +133,6 @@ The following example demonstrates how to set the `AllowTextWrap` property to **
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
-@using BlazorApp1.Data
 
 <label>Change the wrapmode of auto wrap feature:</label>
 <SfDropDownList TValue="WrapMode" TItem="DropDownOrder" @bind-Value="@WrapModeValue" DataSource="@DropDownValue" Width="100px">
@@ -243,7 +241,6 @@ The following example demonstrates how to add a `QueryCellInfo` event handler to
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" AllowSelection="false" EnableHover="false" Height="315">
     <GridEvents QueryCellInfo="CustomizeCell" TValue="OrderData"></GridEvents>
@@ -471,7 +468,6 @@ The following example demonstrates how to customize the appearance of a specific
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" AllowSelection="true" AllowPaging="true">
     <GridSelectionSettings CellSelectionMode="CellSelectionMode.Box" Mode="SelectionMode.Cell" Type="SelectionType.Multiple"></GridSelectionSettings>
@@ -573,7 +569,6 @@ The following example demonstrates how to customize the appearance of the **Orde
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" Height="315">
     <GridColumns>
@@ -669,7 +664,6 @@ The following example demonstrates, how to set the [ClipMode](https://help.syncf
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
-@using BlazorApp1.Data
 
 <label> Change the clip mode: </label>
 <SfDropDownList TValue="ClipMode" TItem="DropDownOrder" DataSource="@DropDownValue" Width="100px">
@@ -690,7 +684,7 @@ The following example demonstrates, how to set the [ClipMode](https://help.syncf
 @code {
     private SfGrid<OrderData> Grid;
     public List<OrderData> Orders { get; set; }
-    public ClipMode ClipValue { get; set; } = ClipMode.Clip;
+    public ClipMode ClipValue { get; set; } = Syncfusion.Blazor.Grids.ClipMode.Clip;
       
     protected override void OnInitialized()
     {
@@ -708,9 +702,9 @@ The following example demonstrates, how to set the [ClipMode](https://help.syncf
     }
     List<DropDownOrder> DropDownValue = new List<DropDownOrder>
     {
-        new DropDownOrder() { Text = "Clip", Value =ClipMode.Clip },
-        new DropDownOrder() { Text = "Ellipsis", Value = ClipMode.Ellipsis},
-        new DropDownOrder() { Text = "Ellipsis With Tooltip", Value = ClipMode.EllipsisWithTooltip }
+        new DropDownOrder() { Text = "Clip", Value =Syncfusion.Blazor.Grids.ClipMode.Clip },
+        new DropDownOrder() { Text = "Ellipsis", Value = Syncfusion.Blazor.Grids.ClipMode.Ellipsis},
+        new DropDownOrder() { Text = "Ellipsis With Tooltip", Value = Syncfusion.Blazor.Grids.ClipMode.EllipsisWithTooltip }
     };
 }
 {% endhighlight %}
@@ -782,7 +776,6 @@ This is demonstrated in the following sample code, where the tooltip for the **F
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Popups
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders">
     <GridColumns>
@@ -884,7 +877,6 @@ The following example demonstrates how to set the `GridLines` property based on 
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
-@using BlazorApp1.Data
 
 <label> Change the Grid lines: </label>
 <SfDropDownList TValue="GridLine" TItem="DropDownOrder" DataSource="@DropDownValue" Width="100px">

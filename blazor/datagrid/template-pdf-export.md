@@ -64,7 +64,7 @@ The following sample demonstrates how to export template columns such as **First
         Orders = EmployeeData.GetAllRecords();
     }
 
-    public async Task ToolbarClickHandler(ClickEventArgs args)
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
         if (args.Item.Id == "Grid_pdfexport")  // Id is the combination of Grid's ID and item name.
         {
@@ -177,7 +177,7 @@ The following example demonstrates how the Grid is grouped by the **CustomerID**
         GridData = OrderData.GetAllRecords(); 
     }
 
-    public async Task ToolbarClickHandler(ClickEventArgs args)
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
        if (args.Item.Id == "Grid_pdfexport")
        {
@@ -369,7 +369,7 @@ In the following example:
 
   public List<ProductData>Employees {get;set;}
 
-  public async Task ToolbarClickHandler(ClickEventArgs args) {
+  public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args) {
     if (args.Item.Id=="Grid_pdfexport") // Id is the combination of Grid's ID and item name.
       {
       PdfExportProperties PdfExportProperties=new PdfExportProperties();
@@ -612,7 +612,7 @@ In the following example:
     }
 
     // Handles toolbar click event (for PDF export).
-    public async Task ToolbarClickHandler(ClickEventArgs args)
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
         if (args.Item.Id == "Grid_pdfexport")  // Id is the combination of Grid's ID and item name.
         {
