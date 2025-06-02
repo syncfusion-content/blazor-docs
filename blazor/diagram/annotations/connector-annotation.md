@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Controlling Connector Annotations in Blazor Diagrams | Syncfusion
+title: Controlling Connector Annotation in Blazor Diagrams | Syncfusion
 description: Checkout and learn here all about Annotation for Connector in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Controlling Connector Annotations in Blazor Diagrams
+# Controlling Connector Annotation in Blazor Diagrams
 
 Annotations of a connector can be positioned using the following properties of Annotation class.
 
