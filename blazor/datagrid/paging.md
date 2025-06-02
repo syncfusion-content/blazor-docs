@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Paging in Blazor Grid
+# Paging in Blazor DataGrid
 
 [Paging](https://www.syncfusion.com/blazor-components/blazor-datagrid/paging) provides an option to display Grid data in segmented pages, making it easier to navigate through large datasets. This feature is particularly useful when dealing with extensive data sets.
 
@@ -19,11 +19,11 @@ Paging options can be configured through the [GridPageSettings](https://help.syn
 
 ## Customize the pager options
 
-Customizing the pager options in the Syncfusion DataGrid allows you to tailor the pagination control according to your specific requirements. You can customize the pager to display the number of pages using the `PageCount` property, change the current page using `CurrentPage` property, display the number of records in the Grid using the `PageSize` property, and even adjust the page sizes in a dropdown using the `PageSizes` property. <!--Additionally, you can include the current page as a query string in the URL for convenient navigation.-->
+Customizing the pager options in the Syncfusion Blazor DataGrid allows you to tailor the pagination control according to your specific requirements. You can customize the pager to display the number of pages using the `PageCount` property, change the current page using `CurrentPage` property, display the number of records in the Grid using the `PageSize` property, and even adjust the page sizes in a dropdown using the `PageSizes` property. <!--Additionally, you can include the current page as a query string in the URL for convenient navigation.-->
 
 ### Change the page size
 
-The Syncfusion DataGrid allows you to control the number of records displayed per page, providing you with flexibility in managing your data. This feature is particularly useful when you want to adjust the amount of data visible to you at any given time. To achieve this, you can utilize the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSize) property in [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings) component. This property is used to specify the initial number of records to display on each page. The default value of pageSize property is 12.
+The Syncfusion Blazor DataGrid allows you to control the number of records displayed per page, providing you with flexibility in managing your data. This feature is particularly useful when you want to adjust the amount of data visible to you at any given time. To achieve this, you can utilize the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSize) property in [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings) component. This property is used to specify the initial number of records to display on each page. The default value of pageSize property is 12.
 
 The following example demonstrates how to change the page size of a Grid using an external button click based on **NumericTextBox** input.
 
@@ -129,9 +129,9 @@ The following example demonstrates how to change the page size of a Grid using a
 
 ### Change the page count
 
-The Syncfusion DataGrid allows you to adjust the number of pages displayed in the pager container. This is useful when you want to manage the number of pages you see while navigating through extensive datasets. The default value of **PageCount** property is 8.
+The Syncfusion Blazor DataGrid allows you to adjust the number of pages displayed in the pager container. This is useful when you want to manage the number of pages you see while navigating through extensive datasets. The default value of **PageCount** property is 8.
 
-To change the page count in the Grid, you can utilize the [PageCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageCount) property in [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings) component, which defines the number of pages displayed in the pager container.
+To change the page count in the Syncfusion Blazor DataGrid, you can utilize the [PageCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageCount) property in [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings) component, which defines the number of pages displayed in the pager container.
 
 The following example demonstrates how to change the page count of a Grid using an external button click based on **NumericTextBox** input.
 
@@ -236,7 +236,7 @@ public class OrderData
 
 ### Change the current page
 
-The Syncfusion DataGrid allows you to change the currently displayed page, which can be particularly useful when you need to navigate through different pages of data either upon the initial rendering of the grid or update the displayed page based on interactions or specific conditions. The default value of **CurrentPage** property is 1.
+The Syncfusion Blazor DataGrid allows you to change the currently displayed page, which can be particularly useful when you need to navigate through different pages of data either upon the initial rendering of the Grid or update the displayed page based on interactions or specific conditions. The default value of **CurrentPage** property is 1.
 
 To change the current page in the Grid, you can utilize the [CurrentPage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_CurrentPage) property in [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings) component, which defines the current page number of the pager.
 
@@ -440,7 +440,7 @@ In the following example, the [Blazor Toggle Switch Button](https://blazor.syncf
 
 ## Pager template
 
-The pager template in Syncfusion DataGrid allows you to customize the appearance and behavior of the pager element, which is used for navigation through different pages of Grid data. This feature is particularly useful when you want to use custom elements inside the pager instead of the default elements.
+The pager template in Syncfusion Blazor DataGrid allows you to customize the appearance and behavior of the pager element, which is used for navigation through different pages of Grid data. This feature is particularly useful when you want to use custom elements inside the pager instead of the default elements.
 
 To use the pager template, you need to specify the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_Template) property of the [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html) component in your Grid configuration. The pagerTemplate property allows you to define a custom template for the pager. Within the Template, you can access the [CurrentPage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_CurrentPage), [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSize), [PageCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageCount), **TotalPage** and **TotalRecordCount** values.
 
@@ -552,7 +552,7 @@ public class OrderData
 
 ## Pager with page size dropdown
 
-The pager with a page size dropdown in Syncfusion DataGrid allows you to dynamically change the number of records displayed in the Grid. This feature is useful when you want to easily customize the number of records to be shown per page.
+The pager with a page size dropdown in Syncfusion Blazor DataGrid allows you to dynamically change the number of records displayed in the Grid. This feature is useful when you want to easily customize the number of records to be shown per page.
 
 To enable the page size Dropdown feature in the Grid, you need to set the [PageSizes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSizes) property to true in [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings) component. This property configuration triggers the rendering of a dropdown list within the pager, allowing you to select the desired page size. The selected page size determines the number of records displayed on each page of the Grid.
 
@@ -638,7 +638,7 @@ public class OrderData
 
 ### Customize page size dropdown
 
-The Syncfusion DataGrid allows you to customize the default values of the page size dropdown in the pager, allowing you to change the number of records displayed per page. To achieve this, you can define the [PageSizes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSizes) property as an array of string instead of boolean value.
+The Syncfusion Blazor DataGrid allows you to customize the default values of the page size dropdown in the pager, allowing you to change the number of records displayed per page. To achieve this, you can define the [PageSizes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSizes) property as an array of string instead of boolean value.
 
 The following example demonstrate how to customize the default values of the pager dropdown using the `PageSizes` property:
 
@@ -715,9 +715,9 @@ The following example demonstrate how to customize the default values of the pag
 
 ## How to navigate to particular page
 
-Navigating to a particular page in the Syncfusion DataGrid is particularly useful when dealing with large datasets. It provides a quick and efficient way to jump to a specific page within the Grid.
+Navigating to a particular page in the Syncfusion Blazor DataGrid is particularly useful when dealing with large datasets. It provides a quick and efficient way to jump to a specific page within the Grid.
 
-To achieve page navigation, you can use the [GotoPageAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GoToPageAsync_System_Int32_) method provided by Syncfusion Grid. This method allows you to programmatically navigate to a specific page within the Grid.
+To achieve page navigation, you can use the [GotoPageAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GoToPageAsync_System_Int32_) method provided by Grid. This method allows you to programmatically navigate to a specific page within the Grid.
 
 The following example demonstrates how to dynamically navigate to a particular page using the `GotoPageAsync` method triggered by an external button click based on **NumericTextBox** input:
 
@@ -864,9 +864,9 @@ The following example demonstrates how to calculate the page size based on the e
         value = args.Value;
         GridHeight = (int)args.Value;
         var RowHeight = 37; //height of the each row.
-        Grid.Height = GridHeight.ToString(); ////datagrid height.
-        var PageSize = (this.Grid.PageSettings as GridPageSettings).PageSize; //initial page size.
-        decimal PageResize = ((GridHeight) - (PageSize * RowHeight)) / RowHeight; //new page size is obtained here.
+        Grid.Height = GridHeight.ToString(); //DataGrid height.
+        var PageSize = (this.Grid.PageSettings as GridPageSettings).PageSize; //Initial page size.
+        decimal PageResize = ((GridHeight) - (PageSize * RowHeight)) / RowHeight; //New page size is obtained here.
         Grid.PageSettings.PageSize = PageSize + (int)Math.Round(PageResize);
         await Grid.Refresh();
     }
@@ -921,7 +921,7 @@ The following example demonstrates how to calculate the page size based on the e
 
 ## Render pager at the top of the Grid
 
-By default, the Pager will be rendered at the bottom of the Grid when the [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging) property is enabled. Using the `SfPager`, it is possible to render the Pager at the top of the grid. This can be achieved by disabling the default pager of the Grid using the `AllowPaging` property and rendering the `SfPager` externally. Now, syncing the paging action with the Grid can be performed by following the step below:
+By default, the Pager will be rendered at the bottom of the Grid when the [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging) property is enabled. Using the `SfPager`, it is possible to render the Pager at the top of the Grid. This can be achieved by disabling the default pager of the Grid using the `AllowPaging` property and rendering the `SfPager` externally. Now, syncing the paging action with the Grid can be performed by following the step below:
 
 In the following sample, the SfPager is rendered on top of the Grid. Initially, using the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_PageSize) property of the Pager, the data for the Grid is bound to the current page. In the following code snippet, the `PageSize` is defined as "10" so that the first ten records from the data source of the Grid will be displayed on the current page using the Skip and Take values. The SfPager also includes a [PageSizes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_PageSizes) property, denoting a list of available page sizes such as { 5, 10, 12, 20 }. The `PageSizes` property provides a dropdown list dynamically, allowing users to select from these predefined page sizes and customize the number of records displayed on each page. Through the navigation of the pager items, you can view the records on the Grid page by page. This can be achieved by using the [ItemClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfPager.html#Syncfusion_Blazor_Navigations_SfPager_ItemClick) event of the Pager. In the `ItemClick` event of the Pager, the SkipValue and TakeValue are calculated using the `PageSize` property and arguments of the `ItemClick` event (CurrentPage, PreviousPage). Based on these details, you can view the records on the Grid page by page.
 
@@ -1042,7 +1042,7 @@ In the following sample, the SfPager is rendered on top of the Grid. Initially, 
 
 ## Pager events
 
-The Syncfusion Grid triggers two pager events during paging actions:
+The Syncfusion Blazor DataGrid triggers two pager events during paging actions:
 
 [PageChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_PageChanging)- This event triggered before any paging action (such as changing the page, changing the page size and etc) is initiated. You can use this event to customize or control the behavior of paging actions.
 

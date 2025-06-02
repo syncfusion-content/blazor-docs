@@ -11,7 +11,7 @@ documentation: ug
 
 The Syncfusion Blazor DataGrid allows you to calculate and display aggregate values in the footer cells. The footer aggregate value is calculated from all the rows in the Grid. You can use the [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_FooterTemplate) property to render the aggregate value in the footer cells.
 
-To access the aggregate values inside the **FooterTemplate**, you can use the implicit named parameter **context**. You can type cast the **context** as **AggregateTemplateContext** to get aggregate values inside template.
+To access the aggregate values inside the **FooterTemplate**, you can use the implicit named parameter **context**. You can type cast the **context** as **AggregateTemplateContext** to get aggregate values inside template. 
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
