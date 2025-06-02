@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Action of Nodes in Blazor Diagram Component | Syncfusion
+title: Controlling Nodes in Blazor Diagrams | Syncfusion
 description: Checkout and learn here all about action of nodes in Syncfusion Blazor Diagram component and much more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Node in Blazor Diagram Component
+# Controlling Nodes in Blazor Diagrams
 
 Nodes are graphical objects that are used to visually represent the geometrical information, process flow, internal business procedure, entity, or any other kind of data and it represents the functions of a complete system, including how it interacts with external entities, providing a clear visual representation of complex processes and relationships.
 

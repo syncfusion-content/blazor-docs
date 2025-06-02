@@ -1,13 +1,13 @@
 ---
 layout: post
-title: User Handles for Nodes and Connectors in the Blazor Diagram Component | Syncfusion
+title: Controlling User Handles for Nodes and Connectors in Blazor Diagrams | Syncfusion
 description: Learn here all about how to create the user handles in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# User Handles for Nodes and Connectors in the Blazor Diagram Component
+# Controlling User Handles for Nodes and Connectors in Blazor Diagrams
 
 User handles are customizable interactive elements that enhance diagram functionality. They can be utilized to execute custom-defined actions as well as perform standard clipboard operations, providing a versatile and user-friendly interface for diagram manipulation.
 

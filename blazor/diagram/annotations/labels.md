@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Actions of Annotation in Blazor Diagram Component | Syncfusion
+title: Controlling Annotation in Blazor Diagrams | Syncfusion
 description: Checkout and learn here all about actions of annotation in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Annotation in Blazor Diagram Component
+# Controlling Annotation in Blazor Diagrams
 
 The [Annotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html) is a block of text that can be displayed over a node or connector and it is used to textually represent an object with a string that can be edited at run time. Multiple annotations can be added to a node or connector.
 

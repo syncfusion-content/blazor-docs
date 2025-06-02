@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Printing in Blazor Diagram Component | Syncfusion
+title: Controlling Printing in Blazor Diagrams | Syncfusion
 description: Checkout and learn here all about the Printing feature in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Printing in Blazor Diagram Component
+# Controlling Printing in Blazor Diagrams
 
 Diagram provides support to print the content displayed on the diagram page using the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PrintAsync_) method.
 

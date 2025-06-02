@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Bezier Segment in Blazor Diagram Component | Syncfusion
+title: Creating and Customizing Bezier Segments in Blazor Diagrams | Syncfusion
 description: Check out and learn about Bezier Segments in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Bezier Segments Creation and Customization
+# Creating and Customizing Bezier Segments in Blazor Diagrams
 
 ## How to Create a Bezier Segment
 

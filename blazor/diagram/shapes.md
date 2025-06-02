@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Node Shapes in Blazor Diagram Component | Syncfusion
+title: Controlling Node Shapes in Blazor Diagrams | Syncfusion
 description: Checkout and learn here all about Shapes in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Node Shapes in Blazor Diagram Component
+# Controlling Node Shapes in Blazor Diagrams
 
 Diagram provides support to add different kind of nodes. They are as follows:
 

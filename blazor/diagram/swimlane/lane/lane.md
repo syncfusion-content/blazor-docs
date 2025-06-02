@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Lane in Blazor Diagram Component | Syncfusion
+title: Controlling Lane in Blazor Diagrams | Syncfusion
 description: Check out and learn here all about Lane in Syncfusion Blazor Diagram component, its elements and more.
 platform: Blazor
 control: Diagram Component
@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Lane in Blazor Diagram Component
+# Controlling Lane in Blazor Diagrams
 
 A [Lane](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Lane.html) is a functional unit or a responsible department of a business process that helps to map a process within the functional unit or between other functional units.
 

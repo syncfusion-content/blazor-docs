@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Swimlane in Blazor Diagram Component | Syncfusion
+title: Controlling Swimlane in Blazor Diagrams | Syncfusion
 description: Check out and learn here all about swimlane support in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Swimlane in Blazor Diagram Component
+# Controlling Swimlane in Blazor Diagrams
 
 A [Swimlane](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Swimlane.html) is a type of diagram node that is used to visualize the connection between a business process and its responsible department. It emphasizes logical relationships among activities, making it easier to understand the dynamics of the process and the associated departmental responsibilities.
 

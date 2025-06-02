@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Connector Customization in Blazor Diagram Component | Syncfusion
+title: Controlling Connector Customization in Blazor Diagrams | Syncfusion
 description: Checkout and learn here all about Customization in Syncfusion Blazor Diagram component and much more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Connector Customization in Blazor Diagram Component
+# Controlling Connector Customization in Blazor Diagrams
 
 ## How to Add Decorator to a Connector
 

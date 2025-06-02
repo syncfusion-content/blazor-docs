@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Undo and Redo in Blazor Diagram Component | Syncfusion
+title: Controlling Undo and Redo in Blazor Diagrams | Syncfusion
 description: Checkout and learn here all about undo redo support in Syncfusion Blazor Diagram component and much more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Undo and Redo in Blazor Diagram Component
+# Controlling Undo and Redo in Blazor Diagrams
 
 The Blazor Diagram component tracks the history of actions performed after initialization and provides support to reverse and restore those changes.
 

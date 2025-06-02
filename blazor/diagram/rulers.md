@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Ruler in Blazor Diagram Component | Syncfusion
+title: Controlling the Ruler in Blazor Diagrams | Syncfusion
 description: Checkout and learn here all about the Ruler feature in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Ruler in Blazor Diagram Component
+# Controlling the Ruler in Blazor Diagrams
 
 The Ruler provides horizontal and vertical guides for measuring in the Diagram control. It can be used to measure diagram objects, indicate positions, and align diagram elements, making it especially useful in creating scale models.
 

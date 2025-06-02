@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Phase in Blazor Diagram Component | Syncfusion
+title: Controlling Phase in Blazor Diagrams | Syncfusion
 description: Check out and learn here all about Phase support in Syncfusion Blazor Diagram component, its elements and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Phase in Blazor Diagram Component
+# Controlling Phase in Blazor Diagrams
 
  The [Phase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Phase.html) is a subprocess that splits each lane either horizontally or vertically based on the swimlane orientation. Multiple phases can be added to the swimlane.
 

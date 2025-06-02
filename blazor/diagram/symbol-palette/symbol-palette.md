@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Symbol Palette in Blazor Diagram Component | Syncfusion
+title: Controlling the Symbol Palette in Blazor Diagrams | Syncfusion
 description: Checkout and learn here all about Symbol Palette in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Symbol Palette in Blazor Diagram Component
+# Controlling the Symbol Palette in Blazor Diagrams
 
 The [SymbolPalette](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.html) component displays a collection of [Palettes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_Palettes), each containing a set of predefined nodes and connectors. This versatile tool enables users to easily drag and drop these elements into the diagram, streamlining the process of creating and modifying diagrams efficiently.
 
