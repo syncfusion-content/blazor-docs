@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Selection in Blazor DataGrid | Syncfusion
-description: Checkout and learn here all about Selection in Syncfusion Blazor DataGrid and much more details.
+description: Learn all about the different types of selection supported in the Syncfusion Blazor DataGrid component.
 platform: Blazor
 control: DataGrid
 documentation: ug
