@@ -327,14 +327,14 @@ The zoom limits work seamlessly with tile rendering for enhanced performance at 
 
 ## Optimizing Zoom Performance with RestrictZoomRequest
 
-The SfPdfViewer provides the [RestrictZoomRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_RestrictZoomRequest) property to optimize performance during zoom operations. This property controls how page images are fetched during zoom operations.
+The SfPdfViewer provides the [RestrictZoomRequest](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_RestrictZoomRequest) property to optimize performance during zoom operations. This property controls how page images are regenerated on the client-side during zoom changes.
 
 ### RestrictZoomRequest Property
 
-**Property Value**: A boolean value that controls page image fetching behavior during zoom operations. The default value is false.
+**Property Value**: A boolean value that controls how images are regenerated during zoom operations. The default value is false.
 
-* When set to `true`: Page images are fetched only when the zoom percentage is 100%. This reduces the number of server requests and improves performance.
-* When set to `false` (default): Multiple page images are fetched for different zoom percentages during zoom operations, providing smoother visual experience but with more server requests.
+* When set to `true`: A single image is generated at 100% zoom and reused across all zoom levels. This eliminates the need for image regeneration during zoom interactions, thereby reducing client-side processing and enhancing overall performance, particularly on devices with limited resources. However, this may result in a slight reduction in image clarity at zoom levels other than 100%.
+* When set to `false` (default): Page images are regenerated for each zoom level, providing a smoother and more visually accurate zooming experience at the cost of increased client-side processing.
 
 ### Basic Usage of RestrictZoomRequest in Blazor SfPdfViewer Component
 
