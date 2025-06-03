@@ -112,7 +112,7 @@ public class OrderData
 >* `PreventRender` method accepts boolean argument that accepts true or false to disable or enable rendering respectively.
 >* `PreventRender` method can be used only after Grid completed initial rendering. Calling this method during initial rendering will not have any effect.
 
-## Avoid unnecessary component renders after Grid events
+## Avoid unnecessary component renders after Blazor DataGrid events
 
 When a callback method is assigned to the Syncfusion Blazor DataGrid events, then the **StateHasChanged** will be called in parent component of the Grid automatically once the event is completed.
 
