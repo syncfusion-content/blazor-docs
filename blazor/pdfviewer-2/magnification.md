@@ -356,7 +356,7 @@ The SfPdfViewer provides the [RestrictZoomRequest](https://help.syncfusion.com/c
 
 Refer to the Image below for details.
 
-![RestrictZoomRequest API](./images/RestrictZoomRequest-API.png)
+![Restrict Zoom Request API method in Blazor PDF Viewer](./images/RestrictZoomRequest-API.png)
 
 ## See also
 
