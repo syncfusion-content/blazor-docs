@@ -9,7 +9,7 @@ documentation: ug
 
 # Controlling Bezier Segment Interaction in Blazor Diagrams
 
-## How to interact with the Bezier segments efficiently
+## How to Interact with Bezier Segments Efficiently
 
 When interacting with multiple bezier segments, maintain their control points at the same distance and angle by using the [BezierConnectorSettings.Smoothness](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierConnectorSettings.html#Syncfusion_Blazor_Diagram_BezierConnectorSettings_Smoothness) property of the Connector class.
 
