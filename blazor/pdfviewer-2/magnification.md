@@ -345,7 +345,8 @@ The SfPdfViewer provides the [RestrictZoomRequest](https://help.syncfusion.com/c
 <SfPdfViewer2 DocumentPath="@DocumentPath"
               Height="600px"
               Width="100%"
-              RestrictZoomRequest="true" />
+              RestrictZoomRequest="true">
+</SfPdfViewer2>
 
 @code {
     private string DocumentPath { get; set; } = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
