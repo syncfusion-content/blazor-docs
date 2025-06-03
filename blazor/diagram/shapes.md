@@ -440,7 +440,7 @@ The list of flow shapes are as follows.
 
 ![FlowShape Node in Blazor Diagram](images/blazor-diagram-flow-shapes-node.png)
 
-## SVG Template Shapes
+## SVG Template Shape
 
 The diagram provides support to embed SVG element into a node. The Shape property of the node allows to set the type of node. To create a SVG node, it should be set as [SVG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeShapes.html#Syncfusion_Blazor_Diagram_NodeShapes_SVG). The following code illustrates how a SVG node is created.
 

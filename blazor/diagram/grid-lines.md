@@ -57,7 +57,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 To show only horizontal/vertical gridlines or to hide gridlines, refer to [SnapConstraints](constraints#snap-constraints).
 
-correct the casing, proper heading and grammer  suitable for  heading
+## How to Customize the Appearance of the Grid Lines
 
 The appearance of the gridlines can be customized by using a set of predefined properties.
 

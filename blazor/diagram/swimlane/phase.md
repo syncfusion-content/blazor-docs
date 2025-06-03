@@ -89,7 +89,7 @@ The following code example explains how to add a phase at the swimlane.
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Phase/PhaseCreation).
 
 
-## Dynamically aAdd Phase to Swimlane
+## Dynamically Add Phase to Swimlane
 
  You can dynamically add or remove a phase at runtime by using the `Add` and `Remove` methods of the [Swimlane.Phases](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Swimlane.html#Syncfusion_Blazor_Diagram_Swimlane_Phases) collection. The following code example explains how to add and remove phases at run time.
 
