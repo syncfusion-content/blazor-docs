@@ -7,9 +7,9 @@ control: DataGrid
 documentation: ug
 ---
 
-# Custom aggregate in Blazor Grid component
+# Custom aggregate in Blazor DataGrid
 
-The custom aggregate feature in Syncfusion’s Blazor Grid component allows you to calculate aggregate values using your own aggregate function. This feature can be useful in scenarios where the built-in aggregate functions do not meet your specific requirements. To use the custom aggregate option, follow the steps below:
+The custom aggregate feature in Syncfusion’s Blazor DataGrid allows you to calculate aggregate values using your own aggregate function. This feature can be useful in scenarios where the built-in aggregate functions do not meet your specific requirements. To use the custom aggregate option, follow the steps below:
 
 * Set the **AggregateType** as Custom in **GridAggregateColumn** component.
 
@@ -21,7 +21,7 @@ The custom aggregate function will be invoked differently for total and group ag
 
 **Group Aggregation:** The custom aggregate function will be called with the current group details and the aggregate column object as arguments.
 
-Here’s an example that demonstrates how to use the custom aggregate feature in the Blazor Grid component:
+Here’s an example that demonstrates how to use the custom aggregate feature in the Grid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -119,7 +119,7 @@ Here’s an example that demonstrates how to use the custom aggregate feature in
 
 You can calculate the count of distinct values in an aggregate row by using custom aggregate functions. By specifying the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) as **Custom** and providing a custom aggregate function in the `CustomAggregate` property, you can achieve this behavior.
 
-Here’s an example that demonstrates how to show the count of distinct values for the **ShipCountry** column using a custom aggregate.
+Here’s an example that demonstrates how to show the count of distinct values for the **ShipCountry** column using a custom aggregate:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -149,7 +149,6 @@ Here’s an example that demonstrates how to show the count of distinct values f
         <GridColumn Field=@nameof(OrderData.ShipCountry) HeaderText="Ship Country" Width="150"></GridColumn>
     </GridColumns>
 </SfGrid>
-
 
 @code {
     private SfGrid<OrderData> Grid;
@@ -216,5 +215,4 @@ Here’s an example that demonstrates how to show the count of distinct values f
 
 > To display the aggregate value of the current column in another column, you can use the [ColumnName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_ColumnName) property. If the `ColumnName` property is not defined, the field name value will be assigned to the `ColumnName` property.
 
-
-> You can refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
+> You can refer to the [Syncfusion Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore [Syncfusion Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
