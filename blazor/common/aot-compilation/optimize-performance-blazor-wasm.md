@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Optimize Performance in Blazor WebAssembly using AOT Compilation - Syncfusion
+title: Optimize Performance in Blazor WASM using AOT Compilation - Syncfusion
 description: Check out the documentation for Optimize Performance in Blazor WebAssembly in Blazor
 platform: Blazor
 component: Common
