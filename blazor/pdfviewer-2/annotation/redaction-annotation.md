@@ -33,7 +33,7 @@ The Blazor PDF Viewer provides support for redacting sensitive content through r
 
 ![Resizing Redaction Annotation](redaction-annotations-images/resizing-redaction-annotation.png)
 
-N> The redaction tool is not available in the toolbar by default. To display the redaction tool, the toolbar must be customized to include it. For instructions on customizing the toolbar, refer to the [Toolbar Customization section](./../toolbar-customization.md).
+N> The redaction tool is not available in the toolbar by default. To display the redaction tool, the toolbar must be customized to include it. For instructions on customizing the toolbar, refer to the [Toolbar Customization section](./../toolbar-customization).
 
 ### Adding a Redaction annotation using Programmatically
 
@@ -187,7 +187,9 @@ Redaction annotations can be deleted directly within the viewer using any of the
 
 ### Deleting Redaction Annotations Programmatically
 
-Redaction annotations can also be deleted programmatically using the `DeleteAnnotationAsync` method. This method enables the removal of a specific annotation by providing its ID or object reference.
+Redaction annotations can also be deleted programmatically using the [`DeleteAnnotationAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DeleteAnnotationsAsync)method. This method enables the removal of a specific annotation by providing its ID or object reference.
+
+For detailed implementation examples and additional methods for deleting annotations, see the [Delete Annotation Programmatically](./text-markup-annotation#delete-annotation-programmatically) section.
 
 ## Configuring Default Properties for Redaction Annotations
 
@@ -279,6 +281,53 @@ Refer to the Image below for details.
 
 ![Add Page Redaction](redaction-annotations-images/add-page-redaction.png)
 
+## Applying Redaction to the Document
+
+The Blazor PDF Viewer provides functionality to permanently apply redaction annotations to the document, removing the marked content and making the redaction irreversible. This can be done through the UI using the redact button or programmatically.
+
+### Applying Redaction Using the Redact Button
+
+The redact button in the toolbar allows users to permanently apply all redaction annotations present in the document.
+
+* The redact button is disabled when no redaction annotations exist in the document.
+* The button automatically enables when redaction annotations are present.
+
+![Redact Button Icon](redaction-annotations-images/redact-button-icon.png)
+
+ A confirmation dialog is displayed before applying redaction to ensure users are aware that the redaction process is permanent and irreversible.
+
+ ![Apply Redaction Dialog](redaction-annotations-images/apply-redaction-dialog.png)
+
+ ### Applying Redaction Using the Redact Button
+
+Use the `RedactAsync` method to programmatically apply all redaction annotations.
+
+```cshtml
+@page "/"
+
+<SfButton OnClick="ApplyRedaction">Apply Redaction</SfButton>
+
+<SfPdfViewer2 @ref="SfPdfViewer2" DocumentPath="@DocumentPath" Height="800px" Width="100%">
+</SfPdfViewer2>
+
+@code{
+    private string DocumentPath { get; set; } = "wwwroot/data/Annotations.pdf";
+    private SfPdfViewer2? SfPdfViewer2;
+
+    // Applies all redaction annotations permanently
+    async private void ApplyRedaction()
+    {
+        await SfPdfViewer2.RedactAsync();
+    }
+}
+```
+
+Refer to the Image below for details.
+
+![Programmatically Redact](redaction-annotations-images/programmatically-redact.png)
+
+N> The redaction process is irreversible. Once applied, the original content cannot be recovered.
+
 ## Redaction Property Panel
 
 When no annotation is selected, the property panel shows **default values** from [`PdfViewerRedactionSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PdfViewer.PdfViewerRedactionSettings.html). When a redaction is selected, the panel shows the current annotation's properties.
@@ -293,10 +342,16 @@ Refer to the Image below for details.
 
 The redaction annotations support **commenting** through the built-in **comment panel**. Users can add remarks, track review notes, or indicate why a section is redacted.
 
-Commenting is available through both UI and API. Learn more in the [Comments Documentation](./comments.md).
+Commenting is available through both UI and API. Learn more in the [Comments Documentation](./comments).
 
 ## Export and Import Support for the Redaction Annotations
 
 The SfPdfViewer supports exporting and importing redaction annotations, allowing users to save and reload redaction annotation.
 
-For more details, refer to the [Export and Import Annotations Documentation](./import-export-annotation.md).
+For more details, refer to the [Export and Import Annotations Documentation](./import-export-annotation).
+
+## See also
+
+* [Adding the shape annotation in pdf viewer](./annotation/shape-annotation)
+* [Toolbar customization in pdf viewer](./../toolbar-customization)
+* [Form designer in pdf viewer](./form-designer/overview)
