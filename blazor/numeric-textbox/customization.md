@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customization in Blazor Numeric TextBox Component | Syncfusion
-description: Checkout and learn here all about data binding in Syncfusion Blazor Numeric TextBox component and more.
+description: Check out and learn about data binding in the Syncfusion Blazor Numeric TextBox component and more.
 platform: Blazor
 control: Numeric TextBox
 documentation: ug
