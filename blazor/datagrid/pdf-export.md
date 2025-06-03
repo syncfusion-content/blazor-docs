@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Pdf Export in Blazor DataGrid | Syncfusion
-description: Checkout and learn here all about Pdf Export in Syncfusion Blazor DataGrid and much more details.
+description: Learn all about exporting to PDF from the Syncfusion Blazor DataGrid component and the various exporting options.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -564,6 +564,7 @@ The following example demonstrates how to pass additional parameters to the serv
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Data
 
 <p>@message</p>
 <SfGrid ID="Grid" @ref="Grid" DataSource="@Orders" AllowPdfExport="true" Toolbar="@(new List<string>() { "PdfExport" })" Height="348">
@@ -592,7 +593,7 @@ The following example demonstrates how to pass additional parameters to the serv
         Orders = OrderData.GetAllRecords();
     }
 
-    public async Task ToolbarClickHandler(ClickEventArgs args)
+    public async Task ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
     {
         if (args.Item.Id == "Grid_pdfexport") //Id is combination of Grid's ID and itemname.
         {
@@ -665,4 +666,4 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hZBIZTssVIvJCeji?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDLoZogDqknpIKBk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

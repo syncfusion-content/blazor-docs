@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Selection in Blazor DataGrid | Syncfusion
-description: Checkout and learn here all about Selection in Syncfusion Blazor DataGrid and much more details.
+description: Learn all about the different types of selection supported in the Syncfusion Blazor DataGrid component.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -574,8 +574,8 @@ In the following example, it demonstrates how to clear all selection by calling 
     <GridColumns>
         <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(OrderDetails.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(OrderDetails.ShipCountry) HeaderText="Ship Country" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(OrderDetails.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipCity) HeaderText="Ship City" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrderDetails.ShipName) HeaderText="Ship Name" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
@@ -638,7 +638,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LNVyDoDeWHPLhtfz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VNrSjeUtTtrXrowm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > In **Both** mode, if you call `ClearCellSelectionAsync` first, it will clear cell selections, and then if you call `ClearRowSelectionAsync`, it will clear row selections. The order of method calls determines which type of selection is cleared first.
 > To remove a specific selection in a row, cell, or column, utilize the following methods: [ClearRowSelectionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearRowSelectionAsync) for clearing row selections, [ClearCellSelectionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ClearCellSelectionAsync) for clearing cell selections.
@@ -661,7 +661,7 @@ In the following example, it demonstrates how to enable the persist selection fe
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@OrderData" AllowSelection="true" AllowPaging="true" Height="315">
-    <GridSelectionSettings PersistSelection="true" Mode="SelectionMode.Both" Type="SelectionType.Multiple"></GridSelectionSettings>
+    <GridSelectionSettings PersistSelection="true" Mode="Syncfusion.Blazor.Grids.SelectionMode.Both" Type="SelectionType.Multiple"></GridSelectionSettings>
     <GridPageSettings PageSize="5"></GridPageSettings>
     <GridColumns>
         <GridColumn Field=@nameof(OrderDetails.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>

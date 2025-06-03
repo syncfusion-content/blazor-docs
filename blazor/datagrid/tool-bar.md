@@ -18,7 +18,6 @@ The following example demonstrates how to enable toolbar items in the Grid:
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" Height="200" Toolbar=@ToolbarItems>
     <GridColumns>
@@ -97,7 +96,6 @@ In the following example, the [Blazor Toggle Switch](https://help.syncfusion.com
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
-@using BlazorApp1.Data
 
 <label>Enable or disable toolbar items</label>
 <SfSwitch ValueChange="Change" TChecked="bool"></SfSwitch>
@@ -222,7 +220,6 @@ The following example demonstrates how to change the background color of the `Ad
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" AllowPaging="true" Height="200" @ref="Grid"  Toolbar=@ToolbarItems>
 <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>

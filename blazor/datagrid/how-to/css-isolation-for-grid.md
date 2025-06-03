@@ -7,11 +7,13 @@ control: DataGrid
 documentation: ug
 ---
 
-# CSS Isolation for DataGrid Component
+# CSS isolation for Blazor DataGrid
 
-By using the CSS isolation, you can define component-specific styles by creating a .razor.css file matching the name of the .razor file in the same folder. For example, to apply CSS for `Index` Component, create a file named `Index.razor.css`.
+CSS isolation allows defining component-specific styles by creating a `.razor.css` file that matches the name of the `.razor` file. This ensures that the styles apply only to the intended component without affecting other parts of the application. For example, to apply styles to an `Index` component, create a file named `Index.razor.css` in the same folder as `Index.razor`.
 
-To apply the CSS isolation for the DataGrid component, you have to wrap the SfGrid Component inside a HTML div element and then use the **::deep** selector as like provided in the below code snippet.
+To enable CSS isolation for the Grid, it is recommended to wrap the **SfGrid** inside a standard HTML <div> element. This setup helps properly scope the styles when using the **::deep** combinator, which is required to target nested child elements within the isolated styles.
+
+Below is an example of implementing a simple Grid inside the `Index.razor` file:
 
 ```csharp
 
@@ -63,5 +65,6 @@ Index.razor.css
     background-color: violet;
 }
 ```
+> Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/How-to-Getting-Started-Blazor-DataGrid-Samples/tree/master/CSS_Isolation).
 
 N> You can get more information on CSS Isolation [here](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/css-isolation?view=aspnetcore-8.0#child-component-support).

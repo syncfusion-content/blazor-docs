@@ -20,7 +20,6 @@ Here’s an example code snippet demonstrating how to auto update aggregate valu
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" AllowPaging="true" AllowGrouping="true" Toolbar="@ToolbarItems">
     <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode="EditMode.Batch"></GridEditSettings>

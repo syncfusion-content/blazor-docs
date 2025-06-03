@@ -18,7 +18,6 @@ To add the printing option to the Grid’s Toolbar, simply include the [Toolbar]
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" Height="315" Toolbar="@(new List<object>() { "Print" })">
     <GridColumns>
@@ -104,7 +103,6 @@ You can print the Syncfusion Blazor DataGrid’s content using an external butto
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
-@using BlazorApp1.Data
 
 <SfButton Content="Print" OnClick="PrintContent"></SfButton>
 <SfGrid @ref="DefaultGrid" DataSource="@Orders" >
@@ -184,7 +182,6 @@ By default, the Syncfusion Blazor DataGrid prints all the pages of the Grid. The
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
-@using BlazorApp1.Data
 
 <label>Select Print Mode: </label>
 <SfDropDownList TValue="PrintMode" TItem="DropDownOrder" @bind-Value="@PrintMode" DataSource="@DropDownValue" Width="130px">

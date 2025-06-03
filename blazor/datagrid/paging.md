@@ -455,7 +455,8 @@ The following example demonstrates how to render a **NumericTextBox** in the pag
       <GridPageSettings PageSize="@pageSize">
         <Template>
             @{
-                var Paging = ( context as PagerModel );
+                var Paging = ( context as PagerTemplateContext );
+            <div>
                 <div>
                     <div>
                         <div>
@@ -545,7 +546,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hDVJXirSLdBgDLic?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjhStfVqKnNpLgxv?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > * Inside the **Template** RenderFragment, you can access the parameters passed to the pager templates using implicit parameter named context matching with the [PagerTemplateContent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PagerModel.html#Syncfusion_Blazor_Grids_PagerModel__ctor) class name. 
 > * You can refer to our [Blazor Grid Pager Template](https://blazor.syncfusion.com/demos/datagrid/pager-template) online demo of Pager Template feature in Grid.

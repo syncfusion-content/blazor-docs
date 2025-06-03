@@ -16,7 +16,6 @@ To access the aggregate values inside the **FooterTemplate**, you can use the im
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" AllowPaging="true">
     <GridPageSettings PageSize="8"></GridPageSettings>
@@ -123,7 +122,6 @@ To format the aggregate value result in the Syncfusion Blazor DataGrid, you can 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" AllowPaging="true">
     <GridPageSettings PageSize="8"></GridPageSettings>
