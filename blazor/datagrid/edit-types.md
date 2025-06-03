@@ -3,7 +3,7 @@ layout: post
 title: Edit Types in Blazor DataGrid | Syncfusion
 description: Checkout and learn here all about Edit Types in Syncfusion Blazor DataGrid and much more details.
 platform: Blazor
-control: Grid
+control: DataGrid
 documentation: ug
 ---
 
