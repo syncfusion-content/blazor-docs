@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Reduce Size of Blazor WebAssembly Application - Syncfusion
-description: Check out the documentation for reduce size of blazor webassembly application in blazor
+description: Check out the documentation for reduce size of blazor webassembly application in blazor using various techniques
 platform: Blazor
 component: Common
 documentation: ug
