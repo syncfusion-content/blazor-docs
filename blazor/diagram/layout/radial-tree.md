@@ -1,13 +1,13 @@
 ---
 layout: post
-title: RadialTree Layout in Blazor Diagram Component | Syncfusion
+title: Controlling Radial Tree Layout in Blazor Diagrams | Syncfusion
 description: Learn here all about how to create the RadialTree layout in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Radial Tree Layout in Blazor Diagram Component
+# Controlling Radial Tree Layout in Blazor Diagrams
 
 A [RadialTree](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutType.html#Syncfusion_Blazor_Diagram_LayoutType_RadialTree) layout is a diagram that presents information in a hierarchical structure, with a central node at the core of the diagram. The central node represents the main concept or topic, and branches extend outward in a radial fashion, creating a tree-like structure. The layout [Root](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Root) property can be used to define the root node of the layout. When no root node is set, the algorithm automatically considers the node without any incoming edges (InEdges connector count of 0) as the root node. To create radial tree, the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Type) of layout should be set as [RadialTree](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutType.html#Syncfusion_Blazor_Diagram_LayoutType_RadialTree).
 
@@ -15,7 +15,7 @@ The `RadialTree` layout provides support for adding space between the nodes. The
 
 >**Note:** The radial tree structure used in this context does not accommodate nodes with multiple parents. Each node within the tree is intended to have a single parent, maintaining a clear hierarchical relationship.
 
-## How to create a RadialTree with DataSource
+## How to Create a Radial Tree with a Data Source
 
 You can create a radial tree layout with a DataSource. The following code example illustrates how to create a radial tree layout using a data source.
 
@@ -147,7 +147,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 >**Note:** In the DataSourceSettings, the type of the ID and ParentID properties is string. The provided DataSource should have a parent-child relationship. It is necessary for at least one node to have an empty ParentID.
 
-## How to create a RadialTree with nodes and connectors
+## How to Create a Radial Tree with Nodes and Connectors
 
 You can render a radial tree layout without using a Datasource. The following code demonstrates how to render a radial tree layout without using a DataSource.
 
