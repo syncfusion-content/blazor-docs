@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Model Binding in Blazor Numeric TextBox Component | Syncfusion
+title: Data annotations in Blazor Numeric Textbox component | Syncfusion
 description: Checkout and learn here all about model binding in Syncfusion Blazor Numeric TextBox component and more.
 platform: Blazor
 control: Numeric TextBox
