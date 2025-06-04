@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Blazor DataGrid in server side using CLI | Syncfusion
+title: Getting started with Blazor DataGrid on the server side | Syncfusion
 description: Check out the documentation for getting started with the Syncfusion Blazor DataGrid in a server-side app using the .NET CLI and more.
 platform: Blazor
 control: DataGrid
