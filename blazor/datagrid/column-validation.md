@@ -15,7 +15,7 @@ Validation is a crucial aspect of data integrity in any application. The Syncfus
 
 Column validation allows you to validate edited or newly added row data before saving it. This feature is particularly useful when you need to enforce specific rules or constraints on individual columns to ensure data integrity. By applying validation rules to columns, you can display error messages for invalid fields and prevent the saving of erroneous data. This feature leverages the **Form Validator** library to perform validation. You can define validation rules using the [GridColumn.ValidationRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ValidationRules) property to specify the criteria for validating column values.
 
-> Validation in DataGrid works based on the Microsoft Blazor EditForm behavior. Once a validation message is shown, it will be validated again only during form submission or when you focus out from that particular field. Refer to the [Microsoft Validation](https://learn.microsoft.com/en-us/aspnet/core/blazor/forms/validation?view=aspnetcore-5.0#data-annotations-validator-component-and-custom-validation) documentation for further reference.
+> Validation in Grid works based on the Microsoft Blazor EditForm behavior. Once a validation message is shown, it will be validated again only during form submission or when you focus out from that particular field. Refer to the [Microsoft Validation](https://learn.microsoft.com/en-us/aspnet/core/blazor/forms/validation?view=aspnetcore-5.0#data-annotations-validator-component-and-custom-validation) documentation for further reference.
 
 The following code example demonstrates how to define a validation rule for a Grid column:
 
@@ -88,7 +88,7 @@ public class OrderDetails
 
 ## Data annotation
 
-Data annotation validation attributes are used to validate fields in the DataGrid. The following validation attributes are supported in the DataGrid:
+Data annotation validation attributes are used to validate fields in the DataGrid. The following validation attributes are supported in the Grid:
 
 | Attribute Name | Functionality |
 |---------------|--------------|

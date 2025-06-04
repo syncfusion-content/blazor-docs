@@ -302,7 +302,7 @@ public class EmployeeDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjBytMVNBCJUWjzh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Adding a new row at the bottom of the Grid
+## Adding a new row at the bottom of the Blazor DataGrid
 
 The Syncfusion Blazor DataGrid allows you to add a new row at the bottom of the Grid, enabling you to insert a new record at the end of the existing data set. This feature is particularly useful when you want to conveniently add new records without scrolling up or manually repositioning the newly added row. To achieve this, use the [NewRowPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_NewRowPosition) property in the `GridEditSettings` configuration and set it to **Bottom**.
 

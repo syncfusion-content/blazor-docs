@@ -766,7 +766,7 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hDLStsZBUpReRDUm?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Adding a new row at the bottom of the Grid
+## Adding a new row at the bottom of the Blazor DataGrid
 
 The Syncfusion Blazor DataGrid allows you to add a new row at the bottom, enabling you to insert a new record at the end of the existing data set. This feature is especially useful when you want to conveniently add new records without scrolling up or manually repositioning the newly added row.
 
@@ -866,9 +866,9 @@ public class OrderDetails
 
 > The `NewRowPosition` property is supported for **Normal** and **Batch** editing modes.
 
-## Show add new row always in Grid
+## Show add new row always in Blazor DataGrid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid simplifies the addition of new records by consistently presenting a blank "add new row" form within the Grid. To enable this feature, set the [ShowAddNewRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_ShowAddNewRow) property within the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) configuration to **true**. This allows for continuous addition of new records. You can display the add new row at either the top or bottom of the Grid content, depending on the [NewRowPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_NewRowPosition) property of `GridEditSettings`. By default, the add new row is displayed at the top of the Grid content.
+The Syncfusion Blazor DataGrid simplifies the addition of new records by consistently presenting a blank "add new row" form within the Grid. To enable this feature, set the [ShowAddNewRow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_ShowAddNewRow) property within the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) configuration to **true**. This allows for continuous addition of new records. You can display the add new row at either the top or bottom of the Grid content, depending on the [NewRowPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_NewRowPosition) property of `GridEditSettings`. By default, the add new row is displayed at the top of the Grid content.
 
 The following sample demonstrates how to add a new record continuously using the `ShowAddNewRow` property.
 

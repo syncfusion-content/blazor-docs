@@ -9,7 +9,7 @@ documentation: ug
 
 # Command column editing in Blazor DataGrid
 
-The command column editing feature allows you to add CRUD (Create, Read, Update, Delete) action buttons in a column for performing operations on individual rows. This feature is commonly used when you want to enable inline editing, deletion, or saving of row changes directly within the Grid.
+The command column editing feature allows you to add CRUD (Create, Read, Update and Delete) action buttons in a column for performing operations on individual rows. This feature is commonly used when you want to enable inline editing, deletion, or saving of row changes directly within the Grid.
 
 To enable command column editing, use the [GridColumn.Commands](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Commands) property. By defining this property, you can specify the command buttons to display in the command column, such as Edit, Delete, Save, and Cancel.
 

@@ -638,7 +638,7 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LXrIDWZdLWqNBqts?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Implement calculated column inside Grid dialog editing
+## Implement calculated column inside Blazor DataGrid dialog editing
 
 You can automatically update the value of a column based on the edited value of another column using the Cell Edit Template feature. This feature is useful when you want to dynamically calculate and update a column's value in real time based on changes made to another related column.
 
