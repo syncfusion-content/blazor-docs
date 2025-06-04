@@ -126,7 +126,7 @@ Here is an example of how to specify column types in a Grid using the types ment
 
 * If you have more than one column with the column type as a **Checkbox**, the Grid will automatically enable the other column’s checkbox when selecting one column checkbox.
 
->To learn more about how to render boolean values as checkboxes in a Syncfusion GridColumn, please refer to the [Render boolean values as checkbox](https://blazor.syncfusion.com/documentation/datagrid/columns#render-boolean-values-as-checkbox) section.
+>To learn more about how to render boolean values as checkboxes in a GridColumn, please refer to the [Render boolean values as checkbox](https://blazor.syncfusion.com/documentation/datagrid/columns#render-boolean-values-as-checkbox) section.
 
 ## Column Width
 
@@ -499,7 +499,7 @@ Type="ColumnType.Date" Format="dMM/dd/yyyy hh:mm:ss tt" | 04/07/1996 12:00 AM
 
 ### Format the date column based on localization
 
-In Syncfusion Blazor Grid, you can format date columns to match the user’s locale settings by configuring the application’s localization. By setting up the application culture and using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Format) property in Grid columns, you can display dates in a format appropriate for the user’s region.
+In Syncfusion Blazor DataGrid, you can format date columns to match the user’s locale settings by configuring the application’s localization. By setting up the application culture and using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Format) property in Grid columns, you can display dates in a format appropriate for the user’s region.
 
 **Enabling Localization in a Blazor Application**
 
@@ -523,7 +523,7 @@ To enable localization in your Blazor application:
     CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo("es-AR");
     ```
 
-Once localization is enabled, you can specify a custom date format for each date column in the Syncfusion Blazor Grid by using the `Format` property. This property allows you to define how dates will be displayed, enhancing user experience by ensuring date formats are familiar to the user.
+Once localization is enabled, you can specify a custom date format for each date column in the Grid by using the `Format` property. This property allows you to define how dates will be displayed, enhancing user experience by ensuring date formats are familiar to the user.
 
 In the example below, the date format is set to **yyyy-MMM-dd** to align with the Spanish culture configured in the application.
 
@@ -717,7 +717,7 @@ public class OrderData
 
 ### Custom formatting
 
-Syncfusion Blazor DataGrid allows you to customize the formatting of data in the Grid columns. You can apply custom formats to numeric or date columns to display data in a specific way according to the requirements. To apply custom formatting to Grid columns in Syncfusion Grid, you can use the format property. Here’s an example of how you can use custom formatting for numeric and date columns:
+Syncfusion Blazor DataGrid allows you to customize the formatting of data in the Grid columns. You can apply custom formats to numeric or date columns to display data in a specific way according to the requirements. To apply custom formatting to Grid columns in Grid, you can use the format property. Here’s an example of how you can use custom formatting for numeric and date columns:
 
 In the below example, the numberFormatOptions object is used as the format property for the ‘Freight’ column to apply a custom numeric format with four decimal places. Similarly, the dateFormatOptions object is used as the format property for the ‘OrderDate’ column to apply a custom date format displaying the date in the format of day-of-the-week, month abbreviation, day, and 2-digit year (e.g. Sun, May 8, 23).
 
@@ -1358,7 +1358,7 @@ public class OrderDetails
 
 ## Show or hide columns
 
-The Syncfusion Grid control allows you to show or hide columns dynamically by using property or methods available in the Grid. This feature can be useful when you want to customize the visibility of columns in the Grid based on the requirements.
+The Syncfusion Blazor DataGrid allows you to show or hide columns dynamically by using property or methods available in the Grid. This feature can be useful when you want to customize the visibility of columns in the Grid based on the requirements.
 
 ### Using property
 
@@ -1808,13 +1808,13 @@ Here is an example code that demonstrates how to control Grid actions for specif
 
 ## Customize column styles
 
-Customizing the Syncfusion Blazor DataGrid column styles allows you to modify the appearance of columns in the Grid control to meet your design requirements. You can customize the font, background color, and other styles of the columns. To customize the columns styles in the Grid, you can use Grid event, css, property or method support.
+Customizing the Syncfusion Blazor DataGrid column styles allows you to modify the appearance of columns in the Grid to meet your design requirements. You can customize the font, background color, and other styles of the columns. To customize the columns styles in the Grid, you can use Grid event, css, property or method support.
 
 For more information check on this [documentation](https://blazor.syncfusion.com/documentation/datagrid/cell#customize-cell-styles).
 
 ## Manipulating columns
 
-The Syncfusion Blazor DataGrid for Blazor provides powerful features for manipulating columns in a Grid. This section explains how to access columns and add/remove columns using Syncfusion Grid properties, methods, and events.
+The Syncfusion Blazor DataGrid for Blazor provides powerful features for manipulating columns in a Grid. This section explains how to access columns and add/remove columns using Grid properties, methods, and events.
 
 ### Accessing Columns
 
@@ -1872,7 +1872,7 @@ This method returns an list of field names of all the columns in the Grid.
 
 ### Adding/Removing Columns
 
-The Blazor Grid allows you to dynamically add or remove columns to and from the Grid using the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property, which can be accessed through the instance of the Grid.
+The Syncfusion Blazor DataGrid allows you to dynamically add or remove columns to and from the Grid using the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property, which can be accessed through the instance of the Grid.
 
 To add a new column to the Grid, you can directly **Add** the new column object to the columns property.To remove a column from the Grid, you can use the **RemoveAt** method. This method allows you to remove a specific column from the columns list of the Grid. In the below provided code snippet, the column removed is the last column in the list. If you want to remove a specific list of columns by its index.
 

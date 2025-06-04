@@ -482,7 +482,7 @@ public class EmployeeDetails
 
 ### Render ProgressBar in a column
 
-The Syncfusion Blzor DataGrid supports rendering the [Progress Bar](https://blazor.syncfusion.com/documentation/progress-bar/getting-started-webapp) within a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. Displaying the `Progress Bar` in a Grid column allows users to visually track the progress of tasks or operations associated with specific records. This feature is particularly useful for applications involving processes such as data loading, task completion, or other progressive activities.
+The Syncfusion Blazor DataGrid supports rendering the [Progress Bar](https://blazor.syncfusion.com/documentation/progress-bar/getting-started-webapp) within a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. Displaying the `Progress Bar` in a Grid column allows users to visually track the progress of tasks or operations associated with specific records. This feature is particularly useful for applications involving processes such as data loading, task completion, or other progressive activities.
 
 In the following code, the `Progress Bar` render in the Grid **Freight** column by defining the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property:
 
