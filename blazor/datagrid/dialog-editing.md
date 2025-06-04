@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Dialog Editing in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn here all about Dialog Editing in Syncfusion Blazor DataGrid component and much more details.
+title: Dialog Editing in Blazor DataGrid | Syncfusion
+description: Checkout and learn here all about Dialog Editing in Syncfusion Blazor DataGrid and much more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Dialog editing in Blazor DataGrid component
+# Dialog editing in Blazor DataGrid
 
-Dialog editing is a feature in the Grid component that allows you to edit the data of the currently selected row using a dialog window. With dialog editing, you can easily modify cell values and save the changes back to the data source.This feature is particularly beneficial in scenarios where you need to quickly modify data without navigating to a separate page or view, and it streamlines the process of editing multiple cells.
+Dialog editing is a feature in the Syncfusion Blazor DataGrid that allows you to edit the data of the currently selected row using a dialog window. With dialog editing, you can easily modify cell values and save the changes back to the data source. This feature is particularly beneficial in scenarios where you need to quickly modify data without navigating to a separate page or view, and it streamlines the process of editing multiple cells.
 
-To enable dialog editing in grid component, you need to set the [GridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property to **Dialog**. This property determines the editing mode for the grid, and when set to **Dialog**, it enables the dialog editing feature.
+To enable dialog editing in the Grid, you need to set the [GridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property to **Dialog**. This property determines the editing mode for the Grid, and when set to **Dialog**, it enables the dialog editing feature.
 
-Here's an example how to enable dialog editing in the blazor grid component:
+Here's an example of how to enable dialog editing in the Grid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -81,11 +81,11 @@ public class OrderDetails
 
 ## Customize the edit dialog
 
-The edit dialog in the Grid component allows you to customize its appearance and behavior based on the type of action being performed, such as editing or adding a record. You can modify properties like header text, showCloseIcon, and height to tailor the edit dialog to your specific requirements.
+The edit dialog in the Syncfusion Blazor DataGrid allows you to customize its appearance and behavior based on the type of action being performed, such as editing or adding a record. You can modify properties like header text, showCloseIcon, and height to tailor the edit dialog to your specific requirements.
 
-To customize the edit dialog, you can use [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_HeaderTemplate) and [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_FooterTemplate) of the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) property to customize the appearance of edit dialog.
+To customize the edit dialog, use the [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_HeaderTemplate) and [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_FooterTemplate) properties of [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) to modify the appearance of the edit dialog.
 
-The following example that demonstrates how to customize the edit dialog.
+The following example demonstrates how to customize the edit dialog.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -128,11 +128,11 @@ The following example that demonstrates how to customize the edit dialog.
     }
     public async Task CancelEdit()
     {
-        await Grid.CloseEditAsync();     //Cancel editing action
+        await Grid.CloseEditAsync();     //Cancel editing action.
     }
     public async Task SaveEdit()
     {
-        await Grid.EndEditAsync();       //Save the edited/added data to Grid
+        await Grid.EndEditAsync();       //Save the edited/added data to Grid.
     }
 }
 {% endhighlight %}
@@ -179,26 +179,23 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDVyZWjvKbTMIaIU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> * The Grid add or edit dialog element has the max-height property, which is calculated based on the available window height. So, in the normal window (1920 x 1080), it is possible to set the dialog's height up to 658px.
-> * You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
+> * The Grid add or edit dialog element has a max-height property, which is calculated based on the available window height. In a standard window (1920 x 1080), you can set the dialog's height up to 658px.
+> * Refer to our [Grid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for an overview of its features. You can also explore our [Grid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to see how to present and manipulate data.
 
 ## Show or hide columns in dialog editing
 
-The show or hide columns in dialog editing feature in the grid allows you to dynamically control the visibility of columns while editing in the dialog edit mode. This feature is useful when you want to display specific columns based on the type of action being performed, such as editing an existing record or adding a new record. To achieve this, you can utilize the following events of the Grid. 
+The show or hide columns in dialog editing feature in the Syncfusion Blazor DataGrid allows you to dynamically control the visibility of columns while editing in dialog edit mode. This feature is useful when you want to display specific columns based on the type of action being performed, such as editing an existing record or adding a new record. To achieve this, you can utilize the following Grid events:
 
-1. [RowCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowCreating): Triggered before an add action is executed in the grid.
+1. [RowCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowCreating): Triggered before an add action is executed in the Grid.
+2. [RowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowEditing): Triggered before an edit action is executed in the Grid.
+3. [RowUpdating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowUpdating): Triggered before an update action is executed in the Grid.
+4. [EditCanceling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_EditCanceling): Triggered before a cancel action is executed in the Grid.
 
-2. [RowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowEditing): Triggered before an edit action is executed in the grid.
+The `RowCreating` and `RowEditing` events are triggered whenever an action such as adding or editing a record is initiated in the Grid. Within the event handlers, you can modify the visibility of columns using the [Column.Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Visible) property. This property determines whether a column should be displayed or hidden.
 
-3. [RowUpdating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDeleting): Triggered before a update action is executed in the grid.
+Additionally, you can reset the column visibility to its initial state using the `Column.Visible` property in the `RowUpdating` and `EditCanceling` events of the Grid.
 
-4. [EditCanceling](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_EditCanceling): Triggered before a cancel action is executed in the grid.
-
-The `RowCreating` and `RowEditing` events are triggered whenever an action such as adding or editing a record is initiated in the grid. Within the events handler, you can modify the visibility of columns using the [Column.Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Visible) property. This property determines whether a column should be displayed or hidden. 
-
-Additionally, you can reset the column visibility to its initial state using the `Column.Visible` property using `RowUpdating` and `EditCanceling` events of grid.
-
-In the following example, the **CustomerID** column is rendered as a hidden column, and the **ShipCountry** column is rendered as a visible column. In the edit mode, the **CustomerID** column will be changed to a visible state and the **ShipCountry** column will be changed to a hidden state.
+In the following example, the **CustomerID** column is initially hidden, and the **ShipCountry** column is visible. In edit mode, the **CustomerID** column is shown, and the **ShipCountry** column is hidden.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -323,13 +320,13 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VXrzWVLAqtMKVgod?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Use wizard like dialog editing
+## Use wizard-like dialog editing
 
-Wizard-like dialog editing is a powerful feature in the Grid component that enables the creation of intuitive step-by-step forms. This feature provides a structured approach to form completion or data entry by breaking down the process into manageable steps.This feature is particularly useful when you have complex forms that need to be broken down into smaller sections to guide you through the data entry process.
+Wizard-like dialog editing is a powerful feature in the Syncfusion Blazor DataGrid that enables the creation of intuitive, step-by-step forms. This approach provides a structured way to complete forms or enter data by breaking the process into manageable steps. It is especially useful for complex forms that need to be divided into smaller sections, guiding users through the data entry process.
 
-To achieve wizard-like dialog editing in the grid component, you can use the template feature. This feature allows you to define your own custom editing template using the [GridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property set to **Dialog** and the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) property of [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) to specify the template variable that defines the editors for each step of the wizard.
+To implement wizard-like dialog editing in the Grid, use the template feature. This allows you to define a custom editing template by setting the [GridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property to **Dialog** and specifying the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) property of [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html). The template defines the editors for each step of the wizard.
 
-The following example demonstrate the wizard like editing in the grid with the unobtrusive validation.
+The following example demonstrates wizard-like editing in the Grid with unobtrusive validation.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -559,9 +556,9 @@ public class OrderDetails
 
 ## Customize add/edit dialog footer
 
-The Customize add/edit dialog footer feature in the grid allows you to modify the footer section of the dialog that appears when editing the currently selected row or adding a new row. By default, the dialog displays two buttons in the footer section: Save and Cancel, which allow you to save or discard the changes made in the dialog. This feature is particularly helpful when you want to add custom buttons to the dialog's footer, implement specific actions, or customize the appearance of the buttons, such as changing their color or size in the dialog's footer. This can be achieved using the [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_FooterTemplate) of the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) property of the Grid component.
+The customize add/edit dialog footer feature in the Syncfusion Blazor DataGrid allows you to modify the footer section of the dialog that appears when editing the currently selected row or adding a new row. By default, the dialog displays two buttons in the footer section: Save and Cancel, which let you save or discard the changes made in the dialog. This feature is particularly helpful when you want to add custom buttons to the dialog's footer, implement specific actions, or customize the appearance of the buttons, such as changing their color or size. You can achieve this using the [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_FooterTemplate) property of the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html).
 
-In the following sample, the action for the custom button can be customized using the `FooterTemplate` property of the `GridEditSettings`.
+In the following sample, the action for the custom button is defined using the `FooterTemplate` property of the `GridEditSettings`.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -642,11 +639,11 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LZLSZyKtglluvsMB?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Implement calculated column inside grid dialog editing
+## Implement calculated column inside Blazor DataGrid dialog editing
 
-You can automatically update the value of a column based on the edited value of another column using Cell Edit Template feature. This feature is useful when you want to dynamically calculate and update a column's value in real-time based on changes made to another related column. 
+You can automatically update the value of a column based on the edited value of another column using the Cell Edit Template feature. This feature is useful when you want to dynamically calculate and update a column's value in real time based on changes made to another related column.
 
-In the following sample, the `SfNumericTextBox` component is rendered inside the dialog edit form. We have updated the **Total** column value based on the **Price** and **Quantity** columns using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.NumericTextBoxEvents-1.html#Syncfusion_Blazor_Inputs_NumericTextBoxEvents_1_ValueChange) event. This is achieved in combination with the [RowUpdating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowUpdating), [RowCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowCreating), and [RowEdited](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowEdited) events, along with the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) property of the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html).
+In the following sample, the `SfNumericTextBox` is rendered inside the dialog edit form. The **Total** column value is updated based on the **Price** and **Quantity** columns using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.NumericTextBoxEvents-1.html#Syncfusion_Blazor_Inputs_NumericTextBoxEvents_1_ValueChange) event. This is achieved in combination with the [RowUpdating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowUpdating), [RowCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowCreating), and [RowEdited](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowEdited) events, along with the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) property of the [GridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html).
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
