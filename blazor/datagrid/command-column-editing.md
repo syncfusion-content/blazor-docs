@@ -205,3 +205,86 @@ public class OrderDetails
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htVoDiBhCEmvtthU?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > The Syncfusion Blazor DataGrid does not support adding a new record using the command column. This is because the command column and its buttons are rendered only after a record is created. As a result, the Grid supports only edit, delete, cancel, and update options in the command column.
+
+## Hide the command column button in a specific record
+
+In the Syncfusion Blazor DataGrid, command columns are used to perform CRUD operations on records, such as editing or deleting. Sometimes, you may want to hide the command buttons for specific records based on certain conditions. This can be done by using the [`RowDataBound`](https://blazor.syncfusion.com/documentation/datagrid/events#rowdatabound) event, which is triggered every time a row is created or updated in the Grid.
+
+This is demonstrated in the following steps where the `RowDataBound` event is triggered when a record is created. Based on the record details, you can add a specific class name to that row and hide the command buttons using CSS styles.
+
+* Use the `RowDataBound` event of the Grid to access each row's data at the time of rendering.
+* Inside the event, check the value of the **Verified** column for the current record.
+* Based on the value of the **Verified** column, if Verified is **false**, only the **Edit** button will be shown; otherwise **Delete** button will be shown.
+* In order to hide buttons (**display: none** style to the buttons), CSS class is applied to the row inside the `RowDataBound` event based on the record condition using `addClass` method, and corresponding CSS rules are defined to hide the respective command buttons.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowPaging="true" Height="315">
+    <GridEvents RowDataBound="RowBound" TValue="Order"></GridEvents>
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn HeaderText="Manage Records" Width="150">
+            <GridCommandColumns>
+                <GridCommandColumn Type="CommandButtonType.Edit" ButtonOption="@(new CommandButtonOptions() { IconCss = "e-icons e-edit", CssClass = "e-flat" })"></GridCommandColumn>
+                <GridCommandColumn Type="CommandButtonType.Delete" ButtonOption="@(new CommandButtonOptions() { IconCss = "e-icons e-delete", CssClass = "e-flat" })"></GridCommandColumn>
+                <GridCommandColumn Type="CommandButtonType.Save" ButtonOption="@(new CommandButtonOptions() { IconCss = "e-icons e-update", CssClass = "e-flat" })"></GridCommandColumn>
+                <GridCommandColumn Type="CommandButtonType.Cancel" ButtonOption="@(new CommandButtonOptions() { IconCss = "e-icons e-cancel-icon", CssClass = "e-flat" })"></GridCommandColumn>
+            </GridCommandColumns>
+        </GridColumn>
+    </GridColumns>
+</SfGrid>
+<style>
+    /*to remove the edit button alone*/
+    .e-removeEditcommand .e-unboundcell .e-unboundcelldiv button.e-Editbutton {
+        display: none;
+    }
+    /*to remove the delete button alone*/
+    .e-removeDeletecommand .e-unboundcell .e-unboundcelldiv button.e-Deletebutton {
+        display: none;
+    }
+</style>
+@code{
+    public List<Order> Orders { get; set; }
+    public void RowBound(RowDataBoundEventArgs<Order> Args)
+    {
+        if (Args.Data.Verified)
+        {
+            Args.Row.AddClass(new string[] { "e-removeEditcommand" });
+        }
+        else
+        {
+            Args.Row.AddClass(new string[] { "e-removeDeletecommand" });
+        }
+    }
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+            Verified = (new bool[] { true, false })[new Random().Next(2)],
+            ShipCountry = (new string[] { "USA", "UK", "CHINA", "RUSSIA", "INDIA" })[new Random().Next(5)]
+        }).ToList();
+    }
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+        public bool Verified { get; set; }
+        public string ShipCountry { get; set; }
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LXLetprbTsENCfsy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
