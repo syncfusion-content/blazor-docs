@@ -869,7 +869,6 @@ In the following example:
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
-
 <SfGrid DataSource="@OrderData" Toolbar="@(new List<string>() { "Add", "Edit","Delete", "Update", "Cancel" })">
     <GridEvents TValue="OrderDetails" OnBatchAdd="BeforeAdd" OnCellEdit="CellEdit"></GridEvents>
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Batch"></GridEditSettings>
@@ -959,6 +958,7 @@ When you make edits or add new records, these changes are visually highlighted i
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
 
 <div style="margin-bottom:5px"><SfButton OnClick="BulkDataUpdate">Apply Batch Changes</SfButton></div>
 <SfGrid @ref="Grid" DataSource="@OrderData" Toolbar="@(new List<string>() { "Add", "Edit","Delete", "Update", "Cancel" })">
@@ -1037,4 +1037,4 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/LjryjWLMJUjxvGNs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hjrStoqXKmIboOTG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
