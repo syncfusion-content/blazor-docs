@@ -85,7 +85,7 @@ public class OrderDetails
 
 ## Prevent reordering for particular column
 
-By default, all columns in the Syncfusion Blazor Grid can be reordered by dragging and dropping their headers to another location within the Grid. However, there may be certain columns that you do not want to be reordered. In such cases, you can set the [AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowReordering) property of that particular column to false. Here is an example that demonstrates how to prevent reordering for a specific column:
+By default, all columns in the Syncfusion Blazor DataGrid can be reordered by dragging and dropping their headers to another location within the Grid. However, there may be certain columns that you do not want to be reordered. In such cases, you can set the [AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowReordering) property of that particular column to false. Here is an example that demonstrates how to prevent reordering for a specific column:
 
 In this example, the **ShipCity** column is prevented from being reordered by setting the `AllowReordering` property to **false**:
 
@@ -154,7 +154,7 @@ public class OrderDetails
 
 ## Reorder columns externally
 
-The Syncfusion Blazor Grid allows you to reorder columns externally, which means that using methods you can programmatically move columns around within the Grid, based on their index or target index, or by using their field name.
+The Syncfusion Blazor DataGrid allows you to reorder columns externally, which means that using methods you can programmatically move columns around within the Grid, based on their index or target index, or by using their field name.
 
 > When reordering columns externally, you must set the [AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowReordering) property of the Grid to **true**.
 

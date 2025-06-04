@@ -346,7 +346,7 @@ The following screenshot represents the column resizing in touch device.
 
 ## Resizing column externally
 
-Grid provides the ability to resize columns using an external button click. This can be achieved by changing the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Width) property of the column and refreshing the Grid using the [RefreshColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RefreshColumnsAsync) method in the external button click function.
+The Syncfusion Blazor DataGrid provides the ability to resize columns using an external button click. This can be achieved by changing the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Width) property of the column and refreshing the Grid using the [RefreshColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RefreshColumnsAsync) method in the external button click function.
 
 The following example demonstrates how to resize the columns in a Grid. This is done by using the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event of the `DropDownList` by change the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Width) property of the selected column. This is accomplished using the [GetColumnByFieldAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetColumnByFieldAsync_System_String_) on external button click. Then, the [RefreshColumnsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RefreshColumnsAsync) method is called on the Grid to update the displayed columns based on user interaction.
 
@@ -466,7 +466,7 @@ public class OrderDetails
 
 ## Resizing events
 
-During the resizing action, the Grid triggers the below two events.
+During the resizing action, the Syncfusion Blazor DataGrid triggers the below two events.
 
 1. The [OnResizeStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnResizeStart) event triggers when column resize starts. This event can be used to perform actions when the user begins to resize a column.
 

@@ -13,7 +13,7 @@ The Syncfusion Blazor DataGrid provides a comprehensive set of options to custom
 
 ## Header text
 
-By default, the header text of a column in DataGrid is displayed from the column's [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field)  value. However, you can easily override the default header title and provide a custom header text for the column using the [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderText) property. 
+By default, the header text of a column in Syncfusion Blazor DataGrid is displayed from the column's [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field)  value. However, you can easily override the default header title and provide a custom header text for the column using the [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderText) property. 
 
 To enable the `HeaderText` property, you simply need to define it in the **GridColumn**. The following example demonstrates how to enable header text for a Grid column:
 
@@ -556,7 +556,7 @@ The Syncfusion Blazor DataGrid provides a way to modify the header text of a cor
 
 **Using Event**
 
-To modify the header text of a corresponding column dynamically, you can use the [HeaderCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_HeaderCellInfo) event provided by the Syncfusion Grid. This event is triggered for each header cell element rendered in the Grid.
+To modify the header text of a corresponding column dynamically, you can use the [HeaderCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_HeaderCellInfo) event provided by the Grid. This event is triggered for each header cell element rendered in the Grid.
 
 When the `HeaderCellInfo` event is triggered, it provides a **HeaderCellInfoEventArgs** object as a parameter. This object contains the following properties:
 
@@ -1047,7 +1047,7 @@ public class OrderDetails
 
 ## Customize header text styles 
 
-Customizing the Sycnfusion Blazor DataGrid header styles allows you to modify the appearance of the column header in the Grid to meet your design requirements. You can customize the font, background color, and other styles of the header cells. To customize the header styles in the Grid, you can use CSS and CustomAttributes property of the GridColumn.
+Customizing the Syncfusion Blazor DataGrid header styles allows you to modify the appearance of the column header in the Grid to meet your design requirements. You can customize the font, background color, and other styles of the header cells. To customize the header styles in the Grid, you can use CSS and CustomAttributes property of the GridColumn.
 
 ### Using CSS
 

@@ -11,9 +11,9 @@ documentation: ug
 
 In Syncfusion Blazor DataGrid, column rendering provides you with the ability to finely control how data is presented. This allows you to manually define columns, automatically generate them, and dynamically customize data presentation. With column rendering, you can ensure that your data is displayed exactly as needed, offering a wide range of possibilities for organizing and showcasing information within the Grid.
 
-The column definitions are used as the DataSource schema in the Grid. The Grid operations such as sorting, filtering and grouping etc. are performed based on column definitions. The [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) property of Grid column is necessary to map the datasource values in the Grid columns.
+The column definitions are used as the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) schema in the Grid. The Grid operations such as sorting, filtering and grouping etc. are performed based on column definitions. The [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) property of Grid column is necessary to map the `DataSource` values in the Grid columns.
 
-> If the column `Field` is not specified in the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource), the column values will be empty.
+> If the column `Field` is not specified in the `DataSource`, the column values will be empty.
 > If the `Field` name contains **dot** operator, it is considered as complex binding.
 > It is must to define the `Field` property for a Template column, to perform CRUD or data Operations such as filtering, searching etc.
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Column Template in Blazor DataGrid
 
-Sycnfusion Blazor DataGrid provides a [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) option that allows you to display custom elements in a column instead of the field value. This can be useful when you need to display images, buttons, or other custom content within a column.
+Syncfusion Blazor DataGrid provides a [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) option that allows you to display custom elements in a column instead of the field value. This can be useful when you need to display images, buttons, or other custom content within a column.
 
 > Before adding column template to the Grid, it is recommended to go through the [template](./templates/#templates) section topic to configure the template.
 
@@ -118,7 +118,7 @@ The following example demonstrates how to define a `Template` for the **Employee
 
 ## Render hyperlink in a column
 
-The Sycnfusion Blazor DataGrid provides support for rendering hyperlink columns and performing routing on click using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This feature is useful when displaying data that requires a link to another page or website.
+The Syncfusion Blazor DataGrid provides support for rendering hyperlink columns and performing routing on click using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This feature is useful when displaying data that requires a link to another page or website.
 
 The following example demonstrates, how to render hyperlink column in the Grid using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property of the `GridColumn` tag. To define a `Template` for the column,  you can use the `Template` with the `a` tag to create the hyperlink:
 
@@ -195,7 +195,7 @@ public class EmployeeDetails
 
 ## Render other components in a column
 
-The column template has options to render a custom component in a Grid column instead of a field value.
+The column template has options to render a custom component in a Syncfusion Blazor DataGrid column instead of a field value.
 
 ### Render LineChart in a column
 
@@ -299,7 +299,7 @@ public class EmployeeDetails
 
 ### Render DropDownList in a column
 
-To render a custom component in a Grid column, you need to define a [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) for the column using the column `Template` property. In the following code, we rendered the [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) in the **Order Status** column by defining the `Template` property.
+To render a custom component in a Syncfusion Blazor DataGrid column, you need to define a [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) for the column using the column `Template` property. In the following code, we rendered the [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) in the **Order Status** column by defining the `Template` property.
 
 ```csharp
 <SfDropDownList TValue="string" Placeholder="Order Placed" PopupWidth="150" PopupHeight="150" TItem="EmployeeNames" @bind-Value="@Data.OrderStatus" DataSource="@EmployeeDetails">
@@ -395,7 +395,7 @@ public class OrderDetails
 
 ### Render Chip in a column
 
-The Sycnfusion Blazor DataGrid provides support for rendering [Chips](https://blazor.syncfusion.com/documentation/chip/getting-started-with-web-app) in a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This feature is useful when displaying data that requires a chip to be rendered in a column.
+The Syncfusion Blazor DataGrid provides support for rendering [Chips](https://blazor.syncfusion.com/documentation/chip/getting-started-with-web-app) in a column using the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property. This feature is useful when displaying data that requires a chip to be rendered in a column.
 
 In the following code, we rendered the Chips in the Grid **First Name** column by defining the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property:
 
@@ -797,7 +797,7 @@ In the example below, a new column called **FinalCost** is created to display th
 
 ## How to get the row object by clicking on the template element
 
-The Sycnfusion Blazor DataGrid allows you to retrieve the row object of the selected record when clicking on a [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) element. This feature can be useful when you need to perform custom actions based on the selected record.
+The Syncfusion Blazor DataGrid allows you to retrieve the row object of the selected record when clicking on a [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) element. This feature can be useful when you need to perform custom actions based on the selected record.
 
 In the following code, the button is rendered in the **Employee Data** column and [OnClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_OnClick) event binding is used to call the showDetails method when the template element is clicked and the [RowSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowSelected) event of the Grid used to access the selected row object and display it in the dialog popup.
 

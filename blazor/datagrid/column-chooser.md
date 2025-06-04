@@ -154,7 +154,7 @@ public class OrderData
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjVJihiLMwbAZjZk?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 > * The `ShowInColumnChooser` property is applied to each element individually. By setting it to false, you can hide specific columns from the column chooser dialog.
-> * To work with showing and hiding columns, it is necessary to have at least one column of the grid in a visible state.
+> * To work with showing and hiding columns, it is necessary to have at least one column of the Grid in a visible state.
 
 ## Open column chooser by external button
 

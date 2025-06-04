@@ -353,7 +353,7 @@ public class OrderData
 
 ## Render nested column menu
 
-The nested column menu feature provides an extended menu option in the Grid column headers, allows you to access additional actions and options related to the columns.
+The nested column menu feature provides an extended menu option in the Syncfusion Blazor DataGrid column headers, allows you to access additional actions and options related to the columns.
 
 To enable the nested column menu feature, you need to define the [ColumnMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ColumnMenuItems) property in your component. The `ColumnMenuItems` property is an array that contains the items for the column menu. Each item can be a string representing a built-in menu item or an object defining a custom menu item.
 
