@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Automatic Layout in Blazor Diagram Component | Syncfusion
+title: Controlling Automatic Layout in Blazor Diagrams | Syncfusion
 description: Learn here all about how to create automatic layout in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Automatic Layout in Blazor Diagram Component
+# Controlling Automatic Layout in Blazor Diagrams
 
 The Diagram component includes a set of built-in automatic layout algorithms designed to arrange nodes within the diagram area automatically based on predefined layout logic. This feature, referred to as [Layout](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html), simplifies the organization of nodes and their connections, providing a clear and visually appealing structure for diagrams. Diagram supports the following built-in automatic layout algorithms:
 
@@ -18,7 +18,7 @@ The Diagram component includes a set of built-in automatic layout algorithms des
 * Hierarchical tree layout
 * Complex Hierarchical tree layout
 
-## Defining layout
+## Defining Layout
 
 To implement an automatic layout in a diagram, you can configure the layout settings within the SfDiagramComponent. The layout [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Type), spacing, and other properties can be defined to control how nodes and connectors are arranged in the diagram.
 
@@ -90,7 +90,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Blazor Complex Hierarchical Diagram](../images/BasicLayout.png)
 
-## Updating layout
+## Updating Layout
 
 The DoLayoutAsync function is used to re-arrange the nodes in the diagram area whenever any of the following occur:
 

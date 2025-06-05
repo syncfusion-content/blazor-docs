@@ -1,13 +1,13 @@
 ---
 layout: post
-title: BPMN Event in Blazor Diagram Component | Syncfusion
+title: Controlling BPMN Event in Blazor Diagrams | Syncfusion
 description: Learn here all about how to create the BPMN event and event trigger in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# BPMN event in Blazor Diagram Component
+# Controlling BPMN Event in Blazor Diagrams
 
 An [Event](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnEvent.html) is a common BPMN process model element that represents something that happens during a business process and is notated with a circle. The type of events are as follows:
 
@@ -56,7 +56,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![None Trigger End event event BPMNShape](../images/Bpmn-Event-End.png)
 
-## BPMN event trigger
+## BPMN Event Trigger
 
 Event triggers are notated as icons inside the circle and they represent the specific details of the process. The [Trigger](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnEvent.html#Syncfusion_Blazor_Diagram_BpmnEvent_Trigger) property of the node allows you to set the type of trigger and by default, it is set to None. The following code example explains how to create a BPMN trigger.
 

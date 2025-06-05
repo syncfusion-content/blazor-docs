@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Tooltip in Blazor Diagram Component | Syncfusion
+title: Controlling Tooltip in Blazor Diagrams | Syncfusion
 description: Checkout and learn all about the Tooltip support in Syncfusion Blazor Diagram component and much more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Tooltip in Blazor Diagram Component
+# Controlling Tooltip in Blazor Diagrams
 
 In a Graphical User Interface (GUI), a tooltip is an informative pop-up message that appears when a user hovers their cursor over an interactive element. The diagram component offers comprehensive tooltip support, enhancing user experience during various interactions. These tooltips are displayed when dragging, resizing, or rotating nodes, as well as when the mouse hovers over any diagram element, providing contextual information and improving overall usability.
 
-## Default tooltip
+## Default Tooltip
 
 By default, the diagram features an interactive tooltip that dynamically displays crucial information about diagram elements during user interactions. This tooltip provides real-time data on size, position, and angle when users drag, resize, or rotate elements. The following images demonstrate how the diagram presents this node-specific information during various user interactions, enhancing the overall user experience and precision in element manipulation.
 
@@ -19,7 +19,7 @@ By default, the diagram features an interactive tooltip that dynamically display
 |------|--------|--------|
 |![ToolTip During Drag](images/Drag.png) | ![ToolTip During Resize](images/Resize.png) | ![ToolTip During Rotate](images/Rotate.png) |
 
-## Tooltip for a specific nodes/connectors
+## Tooltip for Specific Nodes/Connectors
 
 The diagram component offers a sophisticated tooltip feature that activates when the mouse hovers over nodes or connectors. This powerful functionality allows for highly customizable tooltips, enabling unique information display for each individual node and connector within the diagram.
 
@@ -87,7 +87,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![ToolTip During hover the node](images/blazor-diagram-connectortooltip.png) 
 
-## How to set tooltip position for nodes/connectors
+## How to Set the Tooltip Position for Nodes/Connectors
 
 Tooltips can be strategically attached to 12 predefined positions around the target element. When initializing the Tooltip, you can specify the desired location by setting the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Position) property with one of the following values:
 
@@ -189,7 +189,7 @@ The following code example sets the tooltip position for the connectors.
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip/TooltipPositionForConnector)
 
-## How to set tooltip content for nodes/connectors
+## How to Set Tooltip Content for Nodes/Connectors
 
 The Tooltip's [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Content) property accepts text or any informational content, which will be displayed as the primary message within the Tooltip when hovering over nodes or connectors in the diagram.
 
@@ -272,7 +272,7 @@ The following code example sets the tooltip content for the connectors.
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip/TooltipContentForConnector)
 
-## How to shows/hides the tip pointer for tooltip
+## How to Show or Hide the Tooltip Pointer
 
 The [ShowTipPointer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_ShowTipPointer) property determines the visibility of the tooltip pointer. When set to true, the pointer is displayed; when set to false, it remains hidden. This property allows you to customize the appearance of tooltips in your Blazor diagram.
 
@@ -359,7 +359,7 @@ The following code example is used to set tooltip tip pointer for connectors.
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip/TipPointerForConnectorTooltip)
 
-## Tooltip template content
+## Tooltip Template Content
 For advanced customization of tooltip content or to create a unique visual representation within the tooltip, utilize the [TooltipTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTemplates.html#Syncfusion_Blazor_Diagram_DiagramTemplates_TooltipTemplate) property of the `SfDiagramComponent`. This powerful feature allows you to design and implement tailored tooltip elements that enhance the user experience and provide more detailed or context-specific information.
 
 The following code example illustrates how to add the formatted template content to the tooltip for the nodes.
@@ -456,7 +456,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 >**Note:**  When the content propoerty of the tooltip is also defined with the template for either node , connector or diagram, only the  content will get rendered. The template content will get rendered only when the content property is undefined.
 
-## Tooltip animation
+## Tooltip Animation
 
 To animate the tooltip, a set of specific animation effects are available, and it can be controlled by using the animation property. The [Animation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_AnimationSettings) property also allows you to set delay, duration, and various other effects of your choice.
 
@@ -565,7 +565,7 @@ The following code example illustrates how to set the animation to the tooltip f
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip/TooltipAnimationForConnector)
 
-## Tooltip Open Mode
+## Tooltip Opening Mode
 
 The Tooltip's activation mode can be customized to determine how it appears on the page. You can configure it to open when hovering over, focusing on, or clicking the target element. To set this behavior, use the [OpensOn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_OpensOn) property when initializing the Tooltip. Choose one of the following values to define the desired interaction:
 
@@ -833,7 +833,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 For more information about tooltip, refer to [Tooltip](https://blazor.syncfusion.com/documentation/diagram/tool-tip)
 
-## How to set tooltip for user handles
+## How to Set a Tooltip for User Handles
 
 The Diagram component offers robust tooltip functionality for [UserHandles](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectorConstraints.html#Syncfusion_Blazor_Diagram_SelectorConstraints_UserHandle), enhancing user interaction. To implement this feature, configure the `Tooltip` property of the `UserHandle` with the desired [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Content) and specify its [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Position). This setup ensures that informative tooltips appear at the optimal location when users hover over the handles, providing a more intuitive and user-friendly diagramming experience.
 
@@ -888,7 +888,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Tooltip for UserHandle](images/UserHandleTooltip.gif)
 
-### How to set sticky tooltip for user handles
+### How to Set Sticky Tooltip for User Handles
 
 Tooltips for user handles can be configured to remain visible until manually dismissed, a feature known as "sticky" tooltips. When enabled, a close icon appears in the top-right corner of the tooltip, allowing users to explicitly close it when desired.
 
@@ -947,7 +947,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![ToolTip During hover the ports with Stikcy Mode](images/UserHandleIsSticky.png)
 
-## How to set tooltip for Fixed user handle
+## How to Set a Tooltip for a Fixed User Handle
 
 The diagram component offers robust tooltip functionality for [FixedUserHandles](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html), enhancing user interaction and information display. To enable this feature, configure the tooltip property within the diagram model. Specifically, define the tooltip [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Content) and set its [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTooltip.html#Syncfusion_Blazor_Diagram_DiagramTooltip_Position) relative to the handle. This configuration ensures that when users hover over a fixed user handle, contextual information appears at the specified location. It's important to note that tooltips are disabled by default and require explicit activation through these settings. you need to add the tooltip as shown in the following example.
 
@@ -992,7 +992,7 @@ The diagram component offers robust tooltip functionality for [FixedUserHandles]
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle/FixedUserHandleTooltip)
 ![Tooltip for UserHandle](images/FixedUserHandleTooltip.gif)
 
-### How to set sticky tooltip for fixed user handles
+### How to Set a Sticky Tooltip for Fixed User Handles
 
 When the `IsSticky` property of the tooltip is set to `true`, tooltips for fixed user handles will remain visible on the screen until the user explicitly dismisses them by clicking the close icon. In this mode, a close icon is added to the top-right corner of the tooltip. This persistent tooltip behavior can be enabled or disabled using the `IsSticky` property. By default, the `IsSticky` property is set to `false`, meaning tooltips will disappear automatically when the user moves the mouse away from the handle.
 
@@ -1039,7 +1039,7 @@ The following code example demonstrates how to set the IsSticky property to true
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle/FixedUserHandleIsSticky)
 ![ToolTip During hover the ports with Stikcy Mode](images/FixedUserHandleIsSticky.png)
 
-## How to set tooltip for ports
+## How to Set a Tooltip for Ports
 
 The Diagram component offers robust support for displaying tooltips when the mouse hovers over ports. This feature can be customized for each port individually, allowing for a more informative and interactive user experience.
 
@@ -1116,7 +1116,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![ToolTip During hover the port](./images/PortTooltip.gif )
 
-### How to set sticky tooltip for ports
+### How to Set a Sticky Tooltip for Ports
 
 Enhance your diagram's user experience with "sticky" tooltips for ports. This feature allows tooltips to remain visible until explicitly closed, providing users with persistent information. When enabled, a close icon appears in the top-right corner of the tooltip, empowering users to dismiss it at their convenience.
 
