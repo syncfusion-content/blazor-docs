@@ -36,10 +36,10 @@ Here are examples of AI services integrated using the `IAIInferenceBackend` inte
 
 | Service | Description | Documentation |
 |---------|-------------|---------------|
-| Claude | Anthropic's Claude AI | [Claude Integration](claude-service.md) |
-| DeepSeek | DeepSeek's AI platform | [DeepSeek Integration](deepseek-service.md) |
-| Groq | Groq inference engine | [Groq Integration](groq-service.md) |
-| Gemini | Google's Gemini AI | [Gemini Integration](gemini-service.md) |
+| Claude | Anthropic's Claude AI | [Claude Integration](claude-service) |
+| DeepSeek | DeepSeek's AI | [DeepSeek Integration](deepseek-service) |
+| Groq | Groq AI | [Groq Integration](groq-service) |
+| Gemini | Google's Gemini AI | [Gemini Integration](gemini-service) |
 
 
 ## Service Registration
