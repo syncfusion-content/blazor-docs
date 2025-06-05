@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Phase in Blazor Diagram Component | Syncfusion
+title: Controlling Phase in Blazor Diagrams | Syncfusion
 description: Check out and learn here all about Phase support in Syncfusion Blazor Diagram component, its elements and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Phase in Blazor Diagram Component
+# Controlling Phase in Blazor Diagrams
 
  The [Phase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Phase.html) is a subprocess that splits each lane either horizontally or vertically based on the swimlane orientation. Multiple phases can be added to the swimlane.
 
-## Create an empty Phase
+## Create an Empty Phase
 
 You can create a [Phase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Phase.html) and add it to the [Phases](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Swimlane.html#Syncfusion_Blazor_Diagram_Swimlane_Phases) collection of the Swimlane.
 
@@ -89,7 +89,7 @@ The following code example explains how to add a phase at the swimlane.
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Phase/PhaseCreation).
 
 
-## Dynamically add phase to Swimlane
+## Dynamically Add Phase to Swimlane
 
  You can dynamically add or remove a phase at runtime by using the `Add` and `Remove` methods of the [Swimlane.Phases](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Swimlane.html#Syncfusion_Blazor_Diagram_Swimlane_Phases) collection. The following code example explains how to add and remove phases at run time.
 
@@ -189,7 +189,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Phase/AddRemovePhaseAtRuntime).
 
-## Create the Phase Header and Header customization
+## Creating and Customizing the Phase Header
 
 * The [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Phase.html#Syncfusion_Blazor_Diagram_Phase_Header) property of the Phase allows you to describe the phase textually and customize the appearance of the description.
 * The size of the Phase header can be controlled by using the header's [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneChild.html#Syncfusion_Blazor_Diagram_SwimlaneChild_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SwimlaneChild.html#Syncfusion_Blazor_Diagram_SwimlaneChild_Height) properties.
@@ -342,7 +342,7 @@ The following code example explains how to define a Phase header annotation temp
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Phase/PhaseHeaderTemplate).
 
-## Header Selection and Resize
+## Header Selection and Resizing
 
  * You can select the individual phase header by clicking on the header twice. On the first click, you can select the respective phase. 
 
@@ -354,7 +354,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Header Select and Resize](Swimlane-images/Header_Selection_Resize.gif).
 
-## Phase header editing
+## Phase Header Editing
 
 The diagram provides support for editing phase headers at runtime. You can achieve header editing by using the double-click event. Double-clicking the header label enables the editing of that specific header. 
 
@@ -363,7 +363,7 @@ The following image shows how to edit the phase header.
 ![Phase Header Editing](Swimlane-images/Phase_Header_Edit.gif)
 
 
-## Phase interaction
+## Phase Interaction
 
 ### Select
 
