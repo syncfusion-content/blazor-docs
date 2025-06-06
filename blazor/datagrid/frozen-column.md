@@ -7,15 +7,15 @@ control: DataGrid
 documentation: ug
 ---
 
-# Column Pinning (Frozen) in Blazor DataGrid component
+# Column Pinning (Frozen) in Blazor DataGrid
 
-In the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid component, you have the capability to **freeze** columns, ensuring they remain visible as you scroll through extensive datasets. This functionality significantly improves user experience by keeping critical information constantly within view, even when navigating through large volumes of data. This means that important columns remain fixed in their positions, making it easier to access and reference key data points while working with the grid.
+In the Syncfusion Blazor DataGrid, you have the capability to **freeze** columns, ensuring they remain visible as you scroll through extensive datasets. This functionality significantly improves user experience by keeping critical information constantly within view, even when navigating through large volumes of data. This means that important columns remain fixed in their positions, making it easier to access and reference key data points while working with the Grid.
 
-To know about frozen columns in Blazor DataGrid Component, you can check this video.
+To know about frozen columns in Grid, you can check this video.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=L2NvKyBomhM"%}
 
-In the following example, the [FrozenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenColumns) property is set to **2**. This configuration freezes the left two columns of the grid, and they will remain fixed in their positions while the rest of the columns grid can be scrolled horizontally.
+In the following example, the [FrozenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenColumns) property is set to **2**. This configuration freezes the left two columns of the Grid, and they will remain fixed in their positions while the rest of the columns Grid can be scrolled horizontally:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -130,14 +130,14 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDhfWsCbfiSSvvZz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> * Frozen columns should not be set outside the grid view port.
+> * Frozen columns should not be set outside the Grid view port.
 > * Frozen Grid support column virtualization feature, which helps to improve the Grid performance while loading a large dataset.
 > * The frozen feature is supported only for the columns that are visible in the current view.
 > * You can use both `FrozenColumns` property and [FrozenRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenRows) property in the same application.
 
 ## Change default frozen line color
 
-You can customize the frozen line borders of frozen columns in the Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid component by applying custom CSS styles to the specific frozen column. This allows you to change the border color of the left frozen columns, right frozen columns, and fixed frozen columns to match your application's design and theme.
+You can customize the frozen line borders of frozen columns in the Syncfusion Blazor DataGrid by applying custom CSS styles to the specific frozen column. This allows you to change the border color of the left frozen columns, right frozen columns, and fixed frozen columns to match your application's design and theme.
 
 To change default frozen line color, use the following class name and apply the border color based on your requirement.
 
@@ -166,7 +166,7 @@ For fixed frozen columns, you need to specify both left and right border as ment
     border-right-color: rgb(10, 224, 10);
 }
 ```
-The following example demonstrates how to change the default frozen line color using CSS.
+The following example demonstrates how to change the default frozen line color using CSS:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -274,9 +274,9 @@ The following example demonstrates how to change the default frozen line color u
 
 ## Detail template with frozen columns
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid allows columns to be **frozen** while using a [detail template](https://blazor.syncfusion.com/documentation/datagrid/detail-template). The detail template in the DataGrid component enables you to display additional information about a specific row by expanding or collapsing its detail content.
+The Syncfusion Blazor DataGrid allows columns to be **frozen** while using a [detail template](https://blazor.syncfusion.com/documentation/datagrid/detail-template). The detail template in the Grid enables you to display additional information about a specific row by expanding or collapsing its detail content.
 
-Here’s an example of using the **detail template** alongside **frozen columns** in the DataGrid:
+Here’s an example of using the **detail template** alongside **frozen columns** in the Grid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -405,15 +405,15 @@ public class EmployeeDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VZheNULQpBltUNaZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> You can freeze the DataGrid columns either by using the [IsFrozen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsFrozen) or [FrozenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenColumns) properties.
+> You can freeze the Grid columns either by using the [IsFrozen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsFrozen) or [FrozenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenColumns) properties.
 
 ## Add or remove frozen columns by dragging the column separator
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to dynamically add or remove columns from the frozen content by dragging and dropping the column separator. This provides flexibility to customize the grid layout directly through individual interactions.
+The Syncfusion Blazor DataGrid allows you to dynamically add or remove columns from the frozen content by dragging and dropping the column separator. This provides flexibility to customize the Grid layout directly through individual interactions.
 
-To enable this feature, set the [AllowFreezeLineMoving](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFreezeLineMoving) property to **true** in the Grid component.
+To enable this feature, set the [AllowFreezeLineMoving](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFreezeLineMoving) property to **true** in the Grid.
 
-Here is an example that demonstrates how to enable and use the `AllowFreezeLineMoving` property in the Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid.
+Here is an example that demonstrates how to enable and use the `AllowFreezeLineMoving` property in the Grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -505,7 +505,7 @@ public class OrderDetails
 
 ## Limitations of frozen columns and freeze direction  
 
-The frozen columns and freeze direction features in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid have the following limitations:
+The frozen columns and freeze direction features in Syncfusion Blazor DataGrid have the following limitations:
 
 **General limitations for frozen columns** 
 
@@ -519,5 +519,4 @@ The frozen columns and freeze direction features in Syncfusion<sup style="font-s
 * Using a cell template or text wrap in any one of the panels may cause variable row heights between the panels. The height is recalculated based on the DOM offset height and applied uniformly across all rows to maintain consistency. This can lead to visual glitches. You can resolve this problem by setting static values for the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) property in `SfGrid`.  
 * The [Freeze](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Freeze) and [FrozenColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenColumns) properties are incompatible and cannot be used simultaneously.
 
-> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand how to present and manipulate data.
-
+> You can refer to our [Syncfusion Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Syncfusion Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap5) to understand how to present and manipulate data.
