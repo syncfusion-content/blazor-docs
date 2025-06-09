@@ -20,7 +20,7 @@ To bind remote data in the Grid:
 
 **Example:**
 
-```razor
+```cs
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
 
@@ -242,7 +242,7 @@ You can dynamically update the Syncfusion Blazor DataGrid's [Query](https://help
 
 The following example demonstrates how to modify the query parameter dynamically using button click. Initially, the Grid displays orders where `CustomerID` is "VINET". When you click the **Modify Query Data** button, the Grid updates to show orders where **CustomerID** is "HANAR".
 
-```razor
+```cs
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Data
