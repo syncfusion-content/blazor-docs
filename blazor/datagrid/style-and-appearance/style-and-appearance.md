@@ -57,7 +57,6 @@ In the following sample, the font family of Grid content is changed to **cursive
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid @ref="Grid" DataSource="@Orders" Height="315" AllowPaging="true">
    <GridSelectionSettings Type="SelectionType.Multiple"></GridSelectionSettings>
@@ -177,7 +176,6 @@ In this example, the **.e-altrow .e-rowcell** class targets the cells in alterna
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid @ref="Grid" DataSource="@Orders" Height="315" AllowPaging="true">
     <GridPageSettings PageSize="8"></GridPageSettings>

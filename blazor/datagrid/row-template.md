@@ -1,36 +1,34 @@
 ---
 layout: post
-title: Row Template in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn here all about Row Template in Syncfusion Blazor DataGrid component and much more details.
+title: Row Template in Blazor DataGrid | Syncfusion
+description: Checkout and learn here all about Row Template in Syncfusion Blazor DataGrid and much more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Row Template in Blazor DataGrid Component
+# Row Template in Blazor DataGrid
 
-The [RowTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_RowTemplate) feature in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to fully customize the appearance and layout of each row. This feature is particularly helpful when you need to display complex content within rows, such as images, buttons, or additional interactive controls, rather than just plain text or simple values.
+The [RowTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTemplates.html#Syncfusion_Blazor_Grids_GridTemplates_RowTemplate) feature in the Syncfusion Blazor DataGrid allows you to fully customize the appearance and layout of each row. This feature is particularly helpful when you need to display complex content within rows, such as images, buttons, or additional interactive controls, rather than just plain text or simple values.
 
-To enable and configure the `RowTemplate` feature in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid, follow these steps:
+To enable and configure the `RowTemplate` feature in Grid, follow these steps:
 
 1. **Set up the RowTemplate:** Use the `RowTemplate` to define custom row layouts.
 
-2. **Define Row Layout using GridTemplates Component:** The `RowTemplate` content must be wrapped within the [GridTemplates](https://blazor.syncfusion.com/documentation/datagrid/templates#gridtemplates-component) component, with each row template containing the same number of **<td>** elements as the columns defined in the DataGrid. This ensures alignment across rows.
+2. **Define Row Layout using GridTemplates Component:** The `RowTemplate` content must be wrapped within the [GridTemplates](https://blazor.syncfusion.com/documentation/datagrid/templates#gridtemplates-component), with each row template containing the same number of **<td>** elements as the columns defined in the Grid. This ensures alignment across rows.
 
 3. **Template Configuration:** For detailed guidance on configuring templates, review the [templates](https://blazor.syncfusion.com/documentation/datagrid/templates#templates) documentation, which covers essential steps for adding custom templates.
 
-To know about **Row Template** in Blazor DataGrid Component, you can check this video.
+To know about **Row Template** in Grid, you can check this video.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=Dft0kerEGUQ" %}
 
-The example below shows how to set up a Row Template in Blazor DataGrid to display an employee information with employee photo in the first column and employee details like Name, Address, etc., are presented in the second column for each row.
+The example below shows how to set up a Row Template in Grid to display an employee information with employee photo in the first column and employee details like Name, Address, etc., are presented in the second column for each row.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
-@page "/"
 
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid @ref="Grid" DataSource="@Employees" AllowSelection="true" Height="315px">
     <GridTemplates>
@@ -141,55 +139,53 @@ The example below shows how to set up a Row Template in Blazor DataGrid to displ
 }
 
 {% endhighlight %}
+
 {% highlight c# tabtitle="EmployeeData.cs" %}
-namespace BlazorApp1.Data
-{
+
 public class EmployeeData
 {
-public static List<EmployeeData> Employees = new List<EmployeeData>();
+    public static List<EmployeeData> Employees = new List<EmployeeData>();
 
-        public EmployeeData() { }
+    public EmployeeData() { }
 
-        public EmployeeData(int EmployeeID, string FirstName, string LastName, string Title, string Country)
-        {
-            this.EmployeeID = EmployeeID;
-            this.FirstName = FirstName;
-            this.LastName = LastName;
-            this.Title = Title;
-            this.Country = Country;
-        }
-
-        public static List<EmployeeData> GetAllRecords()
-        {
-            if (Employees.Count == 0)
-            {
-                var firstNames = new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" };
-                var lastNames = new string[] { "Davolio", "Fuller", "Leverling", "Peacock", "Buchanan" };
-                var titles = new string[] { "Sales Representative", "Vice President, Sales", "Sales Manager", "Inside Sales Coordinator" };
-                var countries = new string[] { "USA", "UK", "UAE", "NED", "BER" };
-
-                Random random = new Random();
-                for (int i = 1; i <= 5; i++)
-                {
-                    Employees.Add(new EmployeeData(
-                        i,
-                        firstNames[random.Next(firstNames.Length)],
-                        lastNames[random.Next(lastNames.Length)],
-                        titles[random.Next(titles.Length)],
-                        countries[random.Next(countries.Length)]
-                    ));
-                }
-            }
-            return Employees;
-        }
-
-        public int EmployeeID { get; set; }
-        public string? FirstName { get; set; }
-        public string? LastName { get; set; }
-        public string? Title { get; set; }
-        public string? Country { get; set; }
+    public EmployeeData(int EmployeeID, string FirstName, string LastName, string Title, string Country)
+    {
+        this.EmployeeID = EmployeeID;
+        this.FirstName = FirstName;
+        this.LastName = LastName;
+        this.Title = Title;
+        this.Country = Country;
     }
 
+    public static List<EmployeeData> GetAllRecords()
+    {
+        if (Employees.Count == 0)
+        {
+            var firstNames = new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" };
+            var lastNames = new string[] { "Davolio", "Fuller", "Leverling", "Peacock", "Buchanan" };
+            var titles = new string[] { "Sales Representative", "Vice President, Sales", "Sales Manager", "Inside Sales Coordinator" };
+            var countries = new string[] { "USA", "UK", "UAE", "NED", "BER" };
+
+            Random random = new Random();
+            for (int i = 1; i <= 5; i++)
+            {
+                Employees.Add(new EmployeeData(
+                    i,
+                    firstNames[random.Next(firstNames.Length)],
+                    lastNames[random.Next(lastNames.Length)],
+                    titles[random.Next(titles.Length)],
+                    countries[random.Next(countries.Length)]
+                ));
+            }
+        }
+        return Employees;
+    }
+
+    public int EmployeeID { get; set; }
+    public string? FirstName { get; set; }
+    public string? LastName { get; set; }
+    public string? Title { get; set; }
+    public string? Country { get; set; }
 }
 
 {% endhighlight %}
@@ -199,20 +195,18 @@ public static List<EmployeeData> Employees = new List<EmployeeData>();
 
 ## Row template with formatting
 
-Typically, Syncfusion<sup style="font-size:70%">&reg;</sup> DataGrid columns can be formatted using the [Columns.Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_Format) property, which formats values displayed in each column. However, when you use row templates, the `Columns.Format` property does not apply to values displayed within the template.
+Typically, the Syncfusion Blazor DataGrid columns can be formatted using the [Columns.Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_Format) property, which formats values displayed in each column. However, when you use row templates, the `Columns.Format` property does not apply to values displayed within the template.
 
 To format values inside a row template, define a global function that applies the desired formatting. This global function can then be called within the row template to format values, such as dates, currency, or custom text layouts, according to your specific requirements.
 
-For example, to format date values within a row template, create a global function that applies a [Custom DateTime](https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings) format to ensure the desired format is displayed consistently in the grid.
+For example, to format date values within a row template, create a global function that applies a [Custom DateTime](https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings) format to ensure the desired format is displayed consistently in the Grid.
 
 Here is an example of how to define a global formatting function for a date column and use it inside a rowTemplate:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
-@page "/"
 
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid @ref="Grid" DataSource="@Employees" AllowSelection="true" Height="315px">
     <GridTemplates>
@@ -331,75 +325,74 @@ Here is an example of how to define a global formatting function for a date colu
 }
 
 {% endhighlight %}
+
 {% highlight c# tabtitle="EmployeeData.cs" %}
-namespace BlazorApp1.Data
-{
+
+
 public class EmployeeData
 {
-public static List<EmployeeData> Employees = new List<EmployeeData>();
+    public static List<EmployeeData> Employees = new List<EmployeeData>();
 
-        public EmployeeData() { }
+    public EmployeeData() { }
 
-        public EmployeeData(int EmployeeID, string FirstName, string LastName, string Title, string Country, DateTime HireDate)
-        {
-            this.EmployeeID = EmployeeID;
-            this.FirstName = FirstName;
-            this.LastName = LastName;
-            this.Title = Title;
-            this.Country = Country;
-            this.HireDate = HireDate;
-        }
-
-        public static List<EmployeeData> GetAllRecords()
-        {
-            if (Employees.Count == 0)
-            {
-                var firstNames = new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" };
-                var lastNames = new string[] { "Davolio", "Fuller", "Leverling", "Peacock", "Buchanan" };
-                var titles = new string[] { "Sales Representative", "Vice President, Sales", "Sales Manager", "Inside Sales Coordinator" };
-                var countries = new string[] { "USA", "UK", "UAE", "NED", "BER" };
-
-                Random random = new Random();
-                for (int i = 1; i <= 5; i++)
-                {
-                    Employees.Add(new EmployeeData(
-                        i,
-                        firstNames[random.Next(firstNames.Length)],
-                        lastNames[random.Next(lastNames.Length)],
-                        titles[random.Next(titles.Length)],
-                        countries[random.Next(countries.Length)],
-                        DateTime.Now.AddDays(-random.Next(1000, 5000)) // Random hire date between 3-14 years ago
-                    ));
-                }
-            }
-            return Employees;
-        }
-
-        public int EmployeeID { get; set; }
-        public string? FirstName { get; set; }
-        public string? LastName { get; set; }
-        public string? Title { get; set; }
-        public string? Country { get; set; }
-        public DateTime HireDate { get; set; }
+    public EmployeeData(int EmployeeID, string FirstName, string LastName, string Title, string Country, DateTime HireDate)
+    {
+        this.EmployeeID = EmployeeID;
+        this.FirstName = FirstName;
+        this.LastName = LastName;
+        this.Title = Title;
+        this.Country = Country;
+        this.HireDate = HireDate;
     }
 
+    public static List<EmployeeData> GetAllRecords()
+    {
+        if (Employees.Count == 0)
+        {
+            var firstNames = new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" };
+            var lastNames = new string[] { "Davolio", "Fuller", "Leverling", "Peacock", "Buchanan" };
+            var titles = new string[] { "Sales Representative", "Vice President, Sales", "Sales Manager", "Inside Sales Coordinator" };
+            var countries = new string[] { "USA", "UK", "UAE", "NED", "BER" };
+
+            Random random = new Random();
+            for (int i = 1; i <= 5; i++)
+            {
+                Employees.Add(new EmployeeData(
+                    i,
+                    firstNames[random.Next(firstNames.Length)],
+                    lastNames[random.Next(lastNames.Length)],
+                    titles[random.Next(titles.Length)],
+                    countries[random.Next(countries.Length)],
+                    DateTime.Now.AddDays(-random.Next(1000, 5000)) // Random hire date between 3-14 years ago.
+                ));
+            }
+        }
+        return Employees;
+    }
+
+    public int EmployeeID { get; set; }
+    public string? FirstName { get; set; }
+    public string? LastName { get; set; }
+    public string? Title { get; set; }
+    public string? Country { get; set; }
+    public DateTime HireDate { get; set; }
 }
+
 {% endhighlight %}
 {% endtabs %}
 
 ![Row Formatting in Blazor DataGrid](./images/blazor-datagrid-row-format.png)
 
-## Render syncfusion<sup style="font-size:70%">&reg;</sup> control in row template
+## Render Syncfusion control in row template
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor DataGrid allows you to render custom Syncfusion<sup style="font-size:70%">&reg;</sup> controls within the rows of the grid. This feature is helpful as it enables you to display interactive Syncfusion<sup style="font-size:70%">&reg;</sup> controls instead of field values in the grid.
+The Syncfusion Blazor DataGrid allows you to render custom Syncfusion controls within the rows of the Grid. This feature is helpful as it enables you to display interactive Syncfusion controls instead of field values in the Grid.
 
-To enable a Syncfusion<sup style="font-size:70%">&reg;</sup> control in a row template, you need to set the `RowTemplate` property of the Grid component. This property accepts a custom HTML template that defines the layout for each row.
+To enable a Syncfusion control in a row template, you need to set the `RowTemplate` property of the Grid. This property accepts a custom HTML template that defines the layout for each row.
 
-Here is an example that demonstrates rendering Syncfusion<sup style="font-size:70%">&reg;</sup> controls within a row template :
+Here is an example that demonstrates rendering a [Chip](https://blazor.syncfusion.com/documentation/chip/getting-started-with-web-app) for **OrderID**, a [NumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started) for **Quantity**, a [DatePicker](https://blazor.syncfusion.com/documentation/datepicker/getting-started) for **OrderDate**, and a [DropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started) for **OrderStatus** within a row template:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
-@page "/"
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
@@ -461,14 +454,15 @@ Here is an example that demonstrates rendering Syncfusion<sup style="font-size:7
     {
         Orders = OrderData.GetAllRecords();
     }
-
 }
 
 {% endhighlight %}
+
 {% highlight c# tabtitle="OrderData.cs" %}
+
 public class OrderData
 {
-public static List<OrderData> Orders = new List<OrderData>();
+    public static List<OrderData> Orders = new List<OrderData>();
 
     public OrderData() { }
 
@@ -515,7 +509,6 @@ public static List<OrderData> Orders = new List<OrderData>();
     public int Quantity { get; set; }
     public DateTime OrderDate { get; set; }
     public string ShipAddress { get; set; }
-
 }
 
 {% endhighlight %}
@@ -643,7 +636,7 @@ Here is an example that demonstrates rendering Syncfusion Chart within a row tem
 
 ## Limitations
 
-Row template feature is not compatible with all the features which are available in the grid, and it has limited features support. The features that are incompatible with the row template feature are listed below.
+Row template feature is not compatible with all the features which are available in the Grid, and it has limited features support. The features that are incompatible with the row template feature are listed below.
 
 - Filtering
 - Paging
