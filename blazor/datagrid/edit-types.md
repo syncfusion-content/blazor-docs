@@ -748,7 +748,7 @@ public class OrderData
 
 ## Customize DatePicker of DatePickerEdit Type
 
-You can customize the [SfDatePicker](https://blazor.syncfusion.com/documentation/datepicker/getting-started-with-web-app) in the Grid edit form for date data type columns using the [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditorSettings) property. This customization allows you to adjust the properties and behavior of the `SfDatePicker` to meet your specific requirements. The [DateEditCellParams](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.DatePickerEditCellParams.html) class helps you achieve this customization by configuring the `EditorSettings` of the respective column in the Grid.
+You can customize the [SfDatePicker](https://blazor.syncfusion.com/documentation/datepicker/getting-started-with-web-app) in the Grid edit form for date data type columns using the [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EditorSettings) property. This customization allows you to adjust the properties and behavior of the `SfDatePicker` to meet your specific requirements. The [DateEditCellParams](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.DateEditCellParams.html) class helps you achieve this customization by configuring the `EditorSettings` of the respective column in the Grid.
 
 The table below highlights the key aspects of customizing a `SfDatePicker` using the `EditorSettings` property of a [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html):
 
