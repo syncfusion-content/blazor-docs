@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Positioning in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about Ports positioning in Syncfusion Blazor Diagram component and many more details.
+description: Checkout and learn here all about port positioning in Syncfusion Blazor Diagram component and many more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
