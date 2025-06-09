@@ -1623,7 +1623,7 @@ public class OrderData
 
 ## Perform CRUD operation using Blazor DataGrid events
 
-The Syncfusion Blazor DataGrid enables seamless CRUD (Create, Read, Update and Delete) operations directly with `IQueryable` data from a database without requiring additional data adaptors. This functionality can be implemented using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property of the Grid and handling the necessary CRUD actions through Grid events such as [RowCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowCreating), [RowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowEditing) and [RowDeleting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDeleting).
+The Syncfusion Blazor DataGrid enables seamless CRUD (Create, Read, Update and Delete) operations directly with `IQueryable` data from a database without requiring additional data adaptors. This functionality can be implemented using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property of the Grid and handling the necessary CRUD actions through Grid events such as [RowUpdated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowUpdated)and [RowDeleting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDeleting).
 
 ### Create an interface layer to the database
 
@@ -1747,15 +1747,13 @@ namespace LibraryManagement.Models
 
 ### Configure the DataGrid to perform CRUD actions using Blazor DataGrid events
 
-To implement CRUD (Create, Read, Update, and Delete) operations with the Syncfusion Blazor DataGrid and ensure changes are reflected in your database, handle the relevant Grid action events. The Grid binds to your data using the `DataSource` property, but you must explicitly update the database in response to user actions.
+To perform CRUD (Create, Read, Update, and Delete) operations with the Syncfusion Blazor DataGrid and keep your database in sync, handle the relevant Grid events. The Grid binds to your data using the `DataSource` property, but you must explicitly update your backend in response to user actions.
 
-**RowCreating:** Triggered when a new record is added. Use this event to insert the new record into your database.
-
-**RowEditing:** Triggered when a record is updated. Use this event to update the corresponding record in your database.
+**RowUpdated:** Triggered when a record is added or edited. Use this event to insert or update the record in your database.
 
 **RowDeleting:** Triggered when a record is deleted. Use this event to remove the record from your database.
 
-Below is an example demonstrating how to wire up these events to perform CRUD operations using a service:
+Below is an example showing how to wire up these events to perform CRUD operations using a service:
 
 ```cs
 @page "/counter"
@@ -1768,23 +1766,22 @@ Below is an example demonstrating how to wire up these events to perform CRUD op
 @inject ClientServices clientlibrary
 
 <SfGrid DataSource="@LibraryBooks"
-        Toolbar="@(new List<string> { "Add", "Edit", "Delete", "Cancel", "Update" })"
-        TValue="Book">
+    Toolbar="@(new List<string> { "Add", "Edit", "Delete", "Cancel", "Update" })"
+    TValue="Book">
     <GridEditSettings AllowAdding="true"
-                      AllowDeleting="true"
-                      AllowEditing="true"
-                      Mode="EditMode.Normal"></GridEditSettings>
-    <GridEvents RowCreating="RowCreating"
-                RowEditing="RowEditing"
-                RowDeleting="RowDeleting"
-                TValue="Book"></GridEvents>
+              AllowDeleting="true"
+              AllowEditing="true"
+              Mode="EditMode.Normal"></GridEditSettings>
+    <GridEvents RowDeleting="RowDeleting"
+        RowUpdated="RowUpdated"
+        TValue="Book"></GridEvents>
     <GridColumns>
-        <GridColumn Field="@nameof(Book.Id)" IsPrimaryKey="true" IsIdentity="true" Visible="false"></GridColumn>
-        <GridColumn Field="@nameof(Book.Name)" Width="150"></GridColumn>
-        <GridColumn Field="@nameof(Book.Author)" Width="150"></GridColumn>
-        <GridColumn Field="@nameof(Book.Quantity)" Width="90" TextAlign="TextAlign.Right"></GridColumn>
-        <GridColumn Field="@nameof(Book.Price)" Width="90" Format="C2" TextAlign="TextAlign.Right"></GridColumn>
-        <GridColumn Field="@nameof(Book.Available)" DisplayAsCheckBox="true" Width="70"></GridColumn>
+    <GridColumn Field="@nameof(Book.Id)" IsPrimaryKey="true" IsIdentity="true" Visible="false"></GridColumn>
+    <GridColumn Field="@nameof(Book.Name)" Width="150"></GridColumn>
+    <GridColumn Field="@nameof(Book.Author)" Width="150"></GridColumn>
+    <GridColumn Field="@nameof(Book.Quantity)" Width="90" TextAlign="TextAlign.Right"></GridColumn>
+    <GridColumn Field="@nameof(Book.Price)" Width="90" Format="C2" TextAlign="TextAlign.Right"></GridColumn>
+    <GridColumn Field="@nameof(Book.Available)" DisplayAsCheckBox="true" Width="70"></GridColumn>
     </GridColumns>
 </SfGrid>
 
@@ -1793,21 +1790,22 @@ Below is an example demonstrating how to wire up these events to perform CRUD op
 
     protected override async Task OnInitializedAsync()
     {
-        LibraryBooks = await clientlibrary.GetBooks();
-    }
-
-    public async Task RowCreating(RowCreatingEventArgs<Book> args)
-    {
-        await clientlibrary.InsertBook(args.Data);
-    }
-
-    public async Task RowEditing(RowEditingEventArgs<Book> args)
-    {
-        await clientlibrary.UpdateBook(args.Data.Id, args.Data);
+    LibraryBooks = await clientlibrary.GetBooks();
     }
     public async Task RowDeleting(RowDeletingEventArgs<Book> args)
     {
-        await clientlibrary.RemoveBook(args.Datas[0].Id);
+    await clientlibrary.RemoveBook(args.Datas[0].Id);
+    }
+    public async Task RowUpdated(RowUpdatedEventArgs<Book> args)
+    {
+    if (args.Action == SaveActionType.Added)
+    {
+        await clientlibrary.InsertBook(args.Data); // Handle insert.
+    }
+    else if (args.Action == SaveActionType.Edited)
+    {
+        await clientlibrary.UpdateBook(args.Data.Id, args.Data); // Handle update.
+    }
     }
 }
 ```
