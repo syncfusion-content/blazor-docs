@@ -9,7 +9,7 @@ documentation: ug
 
 # Redaction annotations in Blazor SfPdfViewer Component
 
-Redaction annotations help hide sensitive content in a PDF. Syncfusion Blazor PDF Viewer supports both interactive and programmatic redaction annotation annotations with customization and final application support.
+Redaction annotations help hide sensitive content in a PDF. Syncfusion Blazor PDF Viewer supports both interactive and programmatic redaction annotations with customization and final application support.
 
 ![Redaction Icon Toolbar](redaction-annotations-images/redaction-icon-toolbar.png)
 
@@ -17,9 +17,9 @@ Redaction annotations help hide sensitive content in a PDF. Syncfusion Blazor PD
 
 The redaction feature in the Blazor PDF Viewer allows users to hide sensitive content by adding redaction annotations to PDF pages. These annotations can be added either through the toolbar or programmatically, making the feature easy to use.
 
-### Adding a Redaction annotation using Toolbar
+### Adding a Redaction annotation using the Toolbar
 
-The Blazor PDF Viewer provides support for redacting sensitive content through redaction annotations. Users can activate the redaction tool from the toolbar and draw over specific content on the PDF pages to mark it for redaction. Once applied, the redaction annotation can display an overlay text (e.g., “Confidential”) or can be styled using customizable fill color property.
+The Blazor PDF Viewer provides support for redacting sensitive content through redaction annotations. Users can activate the redaction tool from the toolbar and draw over specific content on the PDF pages to mark it for redaction. Once applied, the redaction annotation can display overlay text (e.g., “Confidential”) or can be styled using customizable fill color property.
 
 ![Adding Redaction Annotation](redaction-annotations-images/adding-redaction-annotation.png)
 
@@ -54,7 +54,7 @@ Below is an example that demonstrates how to create and add a redaction annotati
     private SfPdfViewer2? SfPdfViewer2;
 
     // Adds a redaction annotation to the first page of the PDF Viewer
-    async private void AddRedactionAnnotation()
+    private async void AddRedactionAnnotation()
     {
         // Create a redaction annotation with custom appearance and properties
         PdfAnnotation annotation = new PdfAnnotation()
@@ -99,6 +99,8 @@ Refer to the Image below for details.
 
 ![Programmatically Adding Redaction Annotation](redaction-annotations-images/programmatically-adding-redaction-annotation.png)
 
+The `RedactionProperties` configuration allows customization of the redaction annotation's appearance and behavior. Key properties include `MarkerFillColor` for setting the overlay color, `MarkerOpacity` for controlling transparency (0.0 to 1.0), `MarkerBorderColor` for the border color, `OverlayText` for displaying custom text over the redacted area, and `IsRepeat` to control whether the overlay text repeats across larger redaction areas.
+
 ## Updating the properties of the Redaction  Annotations
 
 The Blazor PDF Viewer allows users to update redaction annotations after they have been added, providing flexibility to adjust redaction details as needed. Updates can be made either interactively through the **Property panel** or programmatically via the [`EditAnnotationAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PdfViewer.SfPdfViewer2.html#Syncfusion_Blazor_PdfViewer_SfPdfViewer2_EditAnnotationAsync_Syncfusion_Blazor_PdfViewer_PdfAnnotation_). API.
@@ -135,7 +137,7 @@ The following example demonstrates how to update an existing redaction annotatio
     private string DocumentPath { get; set; } = "wwwroot/data/Annotations.pdf";
     private SfPdfViewer2? SfPdfViewer2;
     // Updates the first redaction annotation's properties in the PDF Viewer
-    async private void EditRedaction()
+    private async void EditRedaction()
     {
         // Retrieve all annotations from the viewer
         List<PdfAnnotation> annotations = await SfPdfViewer2.GetAnnotationsAsync();
@@ -167,7 +169,7 @@ Refer to the Image below for details.
 
 ![Programmatically Updating the Redaction Annotation](redaction-annotations-images/programmatically-updating-the-redaction-annotation.png)
 
-## Deleting the Deleting Redaction Annotations
+## Deleting Redaction Annotations
 
 Redaction annotations in the PDF Viewer can be removed easily through user interaction or programmatically. The following methods are available:
 
@@ -268,7 +270,7 @@ The following example adds redaction annotations to specific pages in a PDF usin
 
     // Adds redaction annotations to entire pages using 0-based page indexes.
     // In this example, redaction is applied to the first (0) and third (2) pages.
-    async private void RedactPages()
+    private async void RedactPages()
     {
         List<int> pagesToRedact = new() { 0, 2 }; // Page indexes start from 0
         await SfPdfViewer2.AddPageRedactionsAsync(pagesToRedact);
@@ -294,11 +296,13 @@ The redact button in the toolbar allows users to permanently apply all redaction
 
 ![Redact Button Icon](redaction-annotations-images/redact-button-icon.png)
 
- A confirmation dialog is displayed before applying redaction to ensure users are aware that the redaction process is permanent and irreversible.
+A confirmation dialog is displayed before applying redaction to ensure users are aware that the redaction process is permanent and irreversible.
 
- ![Apply Redaction Dialog](redaction-annotations-images/apply-redaction-dialog.png)
+Refer to the Image below for details.
 
- ### Applying Redaction Using the Redact Button
+![Apply Redaction Dialog](redaction-annotations-images/apply-redaction-dialog.png)
+
+### Applying Redaction Using Programmatically
 
 Use the `RedactAsync` method to programmatically apply all redaction annotations.
 
@@ -315,7 +319,7 @@ Use the `RedactAsync` method to programmatically apply all redaction annotations
     private SfPdfViewer2? SfPdfViewer2;
 
     // Applies all redaction annotations permanently
-    async private void ApplyRedaction()
+    private async void ApplyRedaction()
     {
         await SfPdfViewer2.RedactAsync();
     }
@@ -346,12 +350,12 @@ Commenting is available through both UI and API. Learn more in the [Comments Doc
 
 ## Export and Import Support for the Redaction Annotations
 
-The SfPdfViewer supports exporting and importing redaction annotations, allowing users to save and reload redaction annotation.
+The SfPdfViewer supports exporting and importing redaction annotations, allowing users to save and reload redaction annotation for future use..
 
 For more details, refer to the [Export and Import Annotations Documentation](./import-export-annotation).
 
 ## See also
 
-* [Adding the shape annotation in pdf viewer](./annotation/shape-annotation)
-* [Toolbar customization in pdf viewer](./../toolbar-customization)
-* [Form designer in pdf viewer](./form-designer/overview)
+* [Adding the shape annotation in PDF viewer](./annotation/shape-annotation)
+* [Toolbar customization in PDF viewer](./../toolbar-customization)
+* [Form designer in PDF viewer](./../form-designer/overview)
