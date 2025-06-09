@@ -356,6 +356,6 @@ For more details, refer to the [Export and Import Annotations Documentation](./i
 
 ## See also
 
-* [Adding the shape annotation in PDF viewer](./annotation/shape-annotation)
+* [Adding the shape annotation in PDF viewer](./shape-annotation)
 * [Toolbar customization in PDF viewer](./../toolbar-customization)
-* [Form designer in PDF viewer](./../form-designer/overview)
+* [Form designer in PDF viewer](../form-designer/overview)
