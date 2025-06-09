@@ -1739,6 +1739,8 @@ public class EmployeeData
 
 ![Render images in the DropDownList editor using the ItemTemplate](./images/blazor-datagrid-render-image-using-item-template.gif)
 
+> You can find the sample in the following [Github](https://github.com/SyncfusionExamples/databinding-in-blazor-datagrid/tree/master/Render-image-in-dropdownlist) repository.
+
 ### Render multiple columns in DropDownList
 
 The Syncfusion Blazor DataGrid allows you to render a [SfDropDownList](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started-with-web-app) within the Grid's edit form for a specific column. This feature is particularly useful when you want to display more detailed information for each item in the `SfDropDownList` while editing a column.
