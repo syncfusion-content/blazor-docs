@@ -634,6 +634,6 @@ Refer to the Image below for details.
 
 ## See also
 
-* [Adding the shape annotation in pdf viewer](./annotation/shape-annotation)
-* [Adding the redaction annotation in pdf viewer](./annotation/redaction-annotation)
-* [Form designer in pdf viewer](./form-designer/overview)
+* [Adding the shape annotation in PDF viewer](./annotation/shape-annotation)
+* [Adding the redaction annotation in PDF viewer](./annotation/redaction-annotation)
+* [Form designer in PDF viewer](./form-designer/overview)
