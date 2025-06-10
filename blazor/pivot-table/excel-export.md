@@ -9,7 +9,7 @@ documentation: ug
 
 # Excel export in Blazor Pivot Table component
 
-The Excel export allows Pivot Table data to be exported as Excel document. To enable Excel export in the pivot table, set the [AllowExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_AllowExcelExport) property in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class to **true**. Once the API is set, user needs to call the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ExcelExport_System_Object_System_Nullable_System_Boolean__System_Object_System_Nullable_System_Boolean__)(false) method for exporting on external button click. In this sample, the method is invoked with false to initiate a direct download of the Excel file.
+The Excel export allows Pivot Table data to be exported as Excel document. To enable Excel export in the pivot table, set the [AllowExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_AllowExcelExport) property in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class to **true**. Once the API is set, user needs to call the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ExcelExport_System_Object_System_Nullable_System_Boolean__System_Object_System_Nullable_System_Boolean__) method for exporting on external button click.  This method accepts a boolean parameter, asMemoryStream, which determines the export behavior. When set to false, the file is directly downloaded. When set to true, the data is returned as a memory stream, which can be used for custom processing, storage, or further manipulation. In this sample, false is passed to initiate a direct download of the Excel file.
 
 N> The pivot table component can be exported to Excel format using options available in the toolbar. For more details [refer](./tool-bar) here.
 
@@ -246,7 +246,7 @@ By default, Microsoft Excel supports only 1,048,576 records in an Excel sheet. H
 
 ## CSV Export
 
-The Excel export allows pivot table data to be exported in **CSV** file format as well. To enable CSV export in the pivot table, set the [AllowExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_AllowExcelExport) property in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class as **true**. Once the API is set, user needs to call the [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_CsvExport_System_Object_System_Nullable_System_Boolean__System_Object_System_Nullable_System_Boolean__)(false) method for exporting on external button click. In this sample, the method is invoked with false to initiate a direct download of the Excel file.
+The Excel export allows pivot table data to be exported in **CSV** file format as well. To enable CSV export in the pivot table, set the [AllowExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_AllowExcelExport) property in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class as **true**. Once the API is set, user needs to call the [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_CsvExport_System_Object_System_Nullable_System_Boolean__System_Object_System_Nullable_System_Boolean__) method for exporting on external button click.  This method accepts a boolean parameter, asMemoryStream, which determines the export behavior. When set to false, the file is directly downloaded. When set to true, the data is returned as a memory stream, which can be used for custom processing, storage, or further manipulation. In this sample, false is passed to initiate a direct download of the Excel file.
 
 N> The pivot table component can be exported to CSV format using options available in the toolbar. For more details [refer](./tool-bar) here.
 
@@ -278,7 +278,7 @@ N> The pivot table component can be exported to CSV format using options availab
 @code{
     SfPivotView<ProductDetails> pivot;
     public List<ProductDetails> Data { get; set; }
-    protected override void OnInitialized(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+    protected override void OnInitialized()
     {
         this.Data = ProductDetails.GetProductData().ToList();
        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
@@ -335,7 +335,7 @@ When the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion
 
 ## Saving Excel document to stream
 
-Rather than exporting the Pivot Table as a downloadable file, user can save the Excel document as a memory stream. This is achieved by setting the **asMemoryStream** option to **true** in the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ExcelExport_System_Object_System_Nullable_System_Boolean__System_Object_System_Nullable_System_Boolean__) method. The resulting memory stream can then be further processed and customized by the user before being exported as a document.
+Rather than exporting the Pivot Table as a downloadable file, user can save the Excel document as a memory stream. This is achieved by setting the **asMemoryStream** parameter to **true** in the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ExcelExport_System_Object_System_Nullable_System_Boolean__System_Object_System_Nullable_System_Boolean__) method. The resulting memory stream can then be further processed and customized by the user before being exported as a document.
 
 N> This option is only available if virtualization is enabled in the pivot table.
 
@@ -444,7 +444,7 @@ The event [ExcelQueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.
     private SfPivotView<ProductDetails> pivot;
     public List<ProductDetails> Data { get; set; }
 
-    protected override void OnInitialized(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+    protected override void OnInitialized()
     {
         this.Data = ProductDetails.GetProductData().ToList();
         // Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
@@ -535,7 +535,7 @@ The event [ExcelHeaderQueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncf
     private SfPivotView<ProductDetails> pivot;
     public List<ProductDetails> Data { get; set; }
 
-    protected override void OnInitialized(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+    protected override void OnInitialized()
     {
         this.Data = ProductDetails.GetProductData().ToList();
         // Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
