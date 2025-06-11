@@ -96,7 +96,7 @@ The following table compares performance and size metrics for Blazor WebAssembly
 
 ## Specific Recommendations
 
-To further reduce published output size, enable linker and trimming options in your `.csproj`:
+To further reduce published output size, [enable linker and trimming](https://learn.microsoft.com/en-us/dotnet/core/deploying/trimming/trimming-options#enable-trimming) options in your `.csproj`:
 
 ```xml
 <PublishTrimmed>true</PublishTrimmed>

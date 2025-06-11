@@ -9,7 +9,7 @@ documentation: ug
 
 # Reduce Size of Blazor WebAssembly Application
 
-This article explains how to reduce the size of **Blazor WebAssembly (WASM)** applications. Although **Ahead-of-Time (AOT)** compilation improves performance, it also increases the app size. To help reduce this, you can enable code trimming options in our projects. Trimming automatically removes unused code from the final output, which helps lower the bundle size without affecting functionality. This is especially helpful when using large projects.
+This article explains how to reduce the size of **Blazor WebAssembly (WASM)** applications. Although [Ahead-of-Time (AOT)](https://learn.microsoft.com/en-us/aspnet/core/blazor/webassembly-build-tools-and-aot?view=aspnetcore-9.0#ahead-of-time-aot-compilation) compilation improves performance, it also increases the app size. To help reduce this, you can enable code trimming options in our projects. Trimming automatically removes unused code from the final output, which helps lower the bundle size without affecting functionality. This is especially helpful when using large projects.
 
 ## Configure the Linker for ASP.NET Core Blazor
 
@@ -30,7 +30,7 @@ To manually disable Intermediate Language linking, add the following MSBuild pro
 
 **PublishTrimmed** property enables code trimming for self-contained publishing.It automatically disables features that aren’t compatible with trimming and provides warnings about trimming conflicts during build.
 
-To enable trimming, add the following to your `.csproj` file:
+To [enable trimming](https://learn.microsoft.com/en-us/dotnet/core/deploying/trimming/trimming-options#enable-trimming), add the following to your `.csproj` file:
 
 ```xml
 <PropertyGroup>
@@ -40,7 +40,7 @@ To enable trimming, add the following to your `.csproj` file:
 
 ## Trim mode
 
-For all assemblies in a Blazor application, trimming is enabled by default from the.NET 8 target framework. Trim warnings may cause problems for applications that have previously used `PublishTrimmed=true` and `TrimMode=partial`. However, if your application compiles without any trim warnings, this default behavior shouldn't interfere with functionality or cause issues.
+For all assemblies in a Blazor application, trimming is enabled by default from the.NET 8 target framework. Trim warnings may cause problems for applications that have previously used `PublishTrimmed=true` and `TrimMode=partial`. However, if your application compiles without any trim warnings, this default behavior shouldn't interfere with functionality or cause issues. For more information, refer to the [trim configuration](https://learn.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/configure-trimmer?view=aspnetcore-9.0) documentation to achieve this.
 
 ### To Resolve trim warnings
 
@@ -54,7 +54,7 @@ Partial trimming is less aggressive and may be safer for applications that use r
 
 We can control **Intermediate Language (IL)** trimming on a per-assembly basis by supplying an XML configuration file. This approach allows you to explicitly preserve assemblies, types, or members that may be trimmed, even if they are not directly referenced in your application code.
 
-To enable Intermediate Language trimming in a Syncfusion Blazor application, update the project file as shown below. This example demonstrates how to safely configure trimming using the Grid paging feature.
+To [enable Intermediate Language trimming](https://learn.microsoft.com/en-us/dotnet/core/deploying/trimming/prepare-libraries-for-trimming#enable-project-specific-trimming) in a Syncfusion Blazor application, update the project file as shown below. This example demonstrates how to safely configure trimming using the Grid paging feature.
 
 #### How to Enable Intermediate Language Trimming Safely for Syncfusion Blazor Grid
 
@@ -62,9 +62,9 @@ To enable Intermediate Language trimming in a Syncfusion Blazor application, upd
 
 ```xml
 <ItemGroup>
-	<TrimmableAssembly Include="Syncfusion.Blazor" />
-	<TrimmerRootDescriptor Include="SyncfusionRoots.xml" />
-	<BlazorLinkerDescriptor Include="LinkerConfig.xml" />
+  <TrimmableAssembly Include="Syncfusion.Blazor" />
+  <TrimmerRootDescriptor Include="SyncfusionRoots.xml" />
+  <BlazorLinkerDescriptor Include="LinkerConfig.xml" />
 </ItemGroup>
 ```
 
