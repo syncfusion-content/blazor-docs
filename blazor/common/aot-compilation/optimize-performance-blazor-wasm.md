@@ -62,6 +62,7 @@ bin/Release/net8.0/publish/wwwroot/
 ---
 
 ## Size vs Performance Tradeoff
+The following table compares performance and size metrics for Blazor WebAssembly with and without AOT, using a Syncfusion Grid with paging enabled.
 
 | Metric                     | Without AOT          | With AOT             |
 |----------------------------|----------------------|----------------------|
