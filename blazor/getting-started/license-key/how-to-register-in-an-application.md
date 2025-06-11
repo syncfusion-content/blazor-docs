@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Overview of Syncfusion license registration - Syncfusion
+title: Getting started with Blazor license key registration | Syncfusion
 description: Learn here about how to register Syncfusion blazor license key for blazor application for license validation.
 platform: Blazor
 component: Common
