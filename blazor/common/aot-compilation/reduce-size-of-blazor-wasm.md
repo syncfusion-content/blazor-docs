@@ -54,9 +54,9 @@ Partial trimming is less aggressive and may be safer for applications that use r
 
 We can control **Intermediate Language (IL)** trimming on a per-assembly basis by supplying an XML configuration file. This approach allows you to explicitly preserve assemblies, types, or members that may be trimmed, even if they are not directly referenced in your application code.
 
-To enable IL trimming in a Syncfusion Blazor application, update the project file as shown below. This example demonstrates how to safely configure trimming using the Grid paging feature.
+To enable Intermediate Language trimming in a Syncfusion Blazor application, update the project file as shown below. This example demonstrates how to safely configure trimming using the Grid paging feature.
 
-### How to Enable IL Trimming Safely for Syncfusion Blazor Grid
+### How to Enable Intermediate Language Trimming Safely for Syncfusion Blazor Grid
 
 1. Modify your project file (.csproj) to include trimmable assemblies and descriptors:
 
