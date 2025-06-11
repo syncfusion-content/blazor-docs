@@ -39,21 +39,30 @@ Add the following to your `.csproj` file:
 
 Then publish the project using:
 
-```bash
+{% tabs %}
+{% highlight c# tabtitle="Blazor publish App" %}
+
 dotnet publish -c Release
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 The output will be located in:
 
-```bash
+{% tabs %}
+{% highlight c# tabtitle="Blazor publish App Location" %}
+
 bin/Release/net8.0/publish/wwwroot/
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 > AOT improves performance but increases WASM size (~1.5–2×). Use Brotli compression and proper caching to minimize impact.
 
 ---
 
 ## Size vs Performance Tradeoff
+The following table compares performance and size metrics for Blazor WebAssembly with and without AOT, using a Syncfusion Grid with paging enabled.
 
 | Metric                     | Without AOT          | With AOT             |
 |----------------------------|----------------------|----------------------|
@@ -62,7 +71,7 @@ bin/Release/net8.0/publish/wwwroot/
 | Bundle Size (Brotli)       | ~114 MB              | ~192 MB              |
 | Memory Usage               | Slightly lower       | Slightly higher      |
 
-> [AOT compilation](https://learn.microsoft.com/en-us/aspnet/core/blazor/webassembly-build-tools-and-aot?view=aspnetcore-9.0#ahead-of-time-aot-compilation) increases the application size but significantly improves load time, interactivity, and overall runtime performance in Blazor WebAssembly applications.
+> [AOT compilation](https://learn.microsoft.com/en-us/aspnet/core/blazor/webassembly-build-tools-and-aot?view=aspnetcore-9.0#ahead-of-time-aot-compilation) increases the application size but significantly improves load time, interactivity and overall runtime performance in Blazor WebAssembly applications.
 
 ---
 
@@ -70,6 +79,7 @@ bin/Release/net8.0/publish/wwwroot/
 
 - **Longer Build Time:** AOT compilation is slower compared to standard builds.
 - **Increased Bundle Size:** Final WebAssembly size is larger.
+- **Higher Memory Usage:** While AOT improves performance, it may result in slightly higher memory usage at runtime due to native code execution.
 - **Reduced Flexibility:** Dynamic features (e.g., reflection) may require additional handling.
 - **More Complex Debugging:** Source map support is limited.
 - **Slower Iterations:** Any code change needs full rebuild, affecting dev productivity.
@@ -79,15 +89,14 @@ bin/Release/net8.0/publish/wwwroot/
 ## Considerations
 
 - **Better Performance:** Native WebAssembly improves execution speed and UI responsiveness.
-- **Optimized Memory Usage:** Lower memory overhead at runtime.
-- **Enhanced Security:** Native code is harder to reverse-engineer than IL code.
+- **Enhanced Security:** Native code is harder to reverse-engineer than Intermediate Language code.
 - **Cross-Platform Consistency:** Consistent behavior across browsers and devices.
 
 ---
 
 ## Specific Recommendations
 
-To further reduce published output size, enable linker and trimming options in your `.csproj`:
+To further reduce published output size, [enable linker and trimming](https://learn.microsoft.com/en-us/dotnet/core/deploying/trimming/trimming-options#enable-trimming) options in your `.csproj`:
 
 ```xml
 <PublishTrimmed>true</PublishTrimmed>
