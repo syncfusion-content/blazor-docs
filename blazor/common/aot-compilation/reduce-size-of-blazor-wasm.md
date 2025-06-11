@@ -17,9 +17,9 @@ Blazor WebAssembly uses [Intermediate Language (IL) linking](https://learn.micro
 
 > Always publish your Blazor WebAssembly app using the `Release` configuration to enable trimming and optimize performance.
 
-### Disable IL Linking (Optional)
+### Disable Intermediate Language Linking (Optional)
 
-To manually disable IL linking, add the following MSBuild property in your `.csproj` file:
+To manually disable Intermediate Language linking, add the following MSBuild property in your `.csproj` file:
 
 ```xml
 <PropertyGroup>
@@ -58,17 +58,17 @@ To enable IL trimming in a Syncfusion Blazor application, update the project fil
 
 ### How to Enable IL Trimming Safely for Syncfusion Blazor Grid
 
-  1. Modify your project file (.csproj) to include trimmable assemblies and descriptors:
+1. Modify your project file (.csproj) to include trimmable assemblies and descriptors:
 
   ```xml
-  	  <ItemGroup>
-		      <TrimmableAssembly Include="Syncfusion.Blazor" />
-		      <TrimmerRootDescriptor Include="SyncfusionRoots.xml" />
-		      <BlazorLinkerDescriptor Include="LinkerConfig.xml" />
-	    </ItemGroup>
+  	<ItemGroup>
+		<TrimmableAssembly Include="Syncfusion.Blazor" />
+		<TrimmerRootDescriptor Include="SyncfusionRoots.xml" />
+		<BlazorLinkerDescriptor Include="LinkerConfig.xml" />
+	</ItemGroup>
   ```
 
-  2. Create the SyncfusionRoots.xml file in your project root with content like:
+2. Create the SyncfusionRoots.xml file in your project root with content like:
 
   ```xml
     <linker>
@@ -84,10 +84,10 @@ To enable IL trimming in a Syncfusion Blazor application, update the project fil
 		  <assembly fullname="Syncfusion.Blazor.Grids" >
           <type fullname="Syncfusion.Blazor.Grids.GridColumn" />
 			    <type fullname="Syncfusion.Blazor.Grids.GridFilterSettings" />
-    		  <type fullname="Syncfusion.Blazor.Grids.SortColumn" />
-    		  <type fullname="Syncfusion.Blazor.Grids.GridSortSettings" />
-    		  <type fullname="Syncfusion.Blazor.Grids.GridSelectionSettings" />
-    		  <type fullname="Syncfusion.Blazor.Grids.GridEditSettings" />
+    		    <type fullname="Syncfusion.Blazor.Grids.SortColumn" />
+    		    <type fullname="Syncfusion.Blazor.Grids.GridSortSettings" />
+    		    <type fullname="Syncfusion.Blazor.Grids.GridSelectionSettings" />
+    		    <type fullname="Syncfusion.Blazor.Grids.GridEditSettings" />
 			    <type fullname="Syncfusion.Blazor.Grids.GridTextWrapSettings" />
 			    <type fullname="Syncfusion.Blazor.Grids.GroupingEventArgs" />
 			    <type fullname="Syncfusion.Blazor.Grids.GroupedEventArgs" />
@@ -109,7 +109,7 @@ To enable IL trimming in a Syncfusion Blazor application, update the project fil
   		</assembly>
     </linker>
   ```
-  3. Prevent Trimming of .NET Core Runtime Types. If your app uses reflection, LINQ expressions, or dynamic operations, consider including a LinkerConfig.xml to preserve critical system libraries. It is completely optional.
+3. Prevent Trimming of .NET Core Runtime Types. If your app uses reflection, LINQ expressions, or dynamic operations, consider including a LinkerConfig.xml to preserve critical system libraries. It is completely optional.
 
    ```xml
     <ItemGroup>
@@ -119,11 +119,9 @@ To enable IL trimming in a Syncfusion Blazor application, update the project fil
 
 ### Final Evaluation
 
-we evaluated the size of a Blazor WebAssembly test application that includes a Syncfusion Blazor Grid with paging enabled.
+To evaluate application size, a Blazor WebAssembly test application was configured with Syncfusion components, specifically featuring the Blazor Grid with paging enabled.
 
 |   AOT Status          | With Trim            | Without Trim         |
 |-----------------------|----------------------|----------------------|
 |   Disable             |     23 MB            |    26 MB             |
 |   Enable              |     55 MB            |    59 MB             |
-
-
