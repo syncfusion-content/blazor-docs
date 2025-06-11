@@ -25,7 +25,7 @@ This article describes the most common installation errors, as well as the cause
 
 **Reason** <br /> You are attempting to use a Trial unlock key to unlock the licensed installer.
 
-**Suggested solution** <br /> Only a licensed unlock key can unlock a licensed installer. So, to unlock the Licensed installer, use the Licensed unlock key. To generate the licensed unlock key, refer to [this](http://syncfusion.com/kb/2326) article.
+**Suggested solution** <br /> Only a licensed unlock key can unlock a licensed installer. So, to unlock the Licensed installer, use the Licensed unlock key. To generate the licensed unlock key, refer to [this](https://syncfusion.com/kb/2326) article.
 
 ## License has expired
 
