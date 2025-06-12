@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# CSS isolation for DataGrid
+# CSS isolation for Blazor DataGrid
 
 CSS isolation allows defining component-specific styles by creating a `.razor.css` file that matches the name of the `.razor` file. This ensures that the styles apply only to the intended component without affecting other parts of the application. For example, to apply styles to an `Index` component, create a file named `Index.razor.css` in the same folder as `Index.razor`.
 
