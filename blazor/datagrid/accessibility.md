@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Accessibility in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor DataGrid component and much more.
+title: Accessibility in Blazor DataGrid | Syncfusion
+description: Checkout and learn here all about accessibility in Syncfusion Blazor DataGrid and much more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Accessibility in Blazor Grid component
+# Accessibility in Blazor DataGrid
 
-The Grid component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The Syncfusion Blazor DataGrid followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
-The accessibility compliance for the Grid component is outlined below.
+The accessibility compliance for the Grid is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -38,47 +38,47 @@ The accessibility compliance for the Grid component is outlined below.
 
 ## WAI-ARIA attributes
 
-The Grid component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/grid/) patterns to meet the accessibility. The following ARIA attributes are used in the Grid component:
+The Syncfusion Blazor DataGrid followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/grid/) patterns to meet the accessibility. The following ARIA attributes are used in the Grid:
 
 | Attributes | Purpose |
 | --- | --- |
-| `role=grid` | To represent the element containing the grid component. |
-| `role=row` | To represent the element containing the cells of the row in the grid. |
-| `role=rowgroup` | To represent the group of rows in the grid. |
-| `role=columnheader` | To represent the cell in a row contains header information for a column in the grid. |
-| `role=gridcell` | To represent a cell in the grid component. |
-| `role=button` | To represent the element that acts as a button in the grid. |
-| `role=search` | To represent the element that acts as a search region in the grid. |
+| `role=grid` | To represent the element containing the Grid. |
+| `role=row` | To represent the element containing the cells of the row in the Grid. |
+| `role=rowgroup` | To represent the group of rows in the Grid. |
+| `role=columnheader` | To represent the cell in a row contains header information for a column in the Grid. |
+| `role=gridcell` | To represent a cell in the Grid. |
+| `role=button` | To represent the element that acts as a button in the Grid. |
+| `role=search` | To represent the element that acts as a search region in the Grid. |
 | `role=presentation` | To represent the element to be not available for accessibility concerns. |
 | `role=navigation` | To represent the element containing pager elements to navigate from one page to another. |
-| `aria-colindex` | Defines the column index of the column with respect to the total number of columns within the grid. |
-| `aria-rowindex` | Defines row index of the row with respect to the total number of rows within the grid.  |
-| `aria-rowspan` | Defines the number of rows spanned by a cell within the grid.  |
-| `aria-colspan` | Defines the number of columns spanned by a cell within the grid. |
-| `aria-rowcount` | Defines the total number of rows in the grid.  |
-| `aria-colcount` | Defines the total number of columns in the grid. |
-| `aria-selected` | Indicates the current "selected" state of the rows and cells in the grid. |
-| `aria-expanded` | Indicate if the expand icon in the hierarchy grid or grouped grid or detail grid is expanded or collapsed |
-| `aria-sort` | Indicates whether the data in the grid are sorted in ascending or descending order. |
+| `aria-colindex` | Defines the column index of the column with respect to the total number of columns within the Grid. |
+| `aria-rowindex` | Defines row index of the row with respect to the total number of rows within the Grid.  |
+| `aria-rowspan` | Defines the number of rows spanned by a cell within the Grid.  |
+| `aria-colspan` | Defines the number of columns spanned by a cell within the Grid. |
+| `aria-rowcount` | Defines the total number of rows in the Grid.  |
+| `aria-colcount` | Defines the total number of columns in the Grid. |
+| `aria-selected` | Indicates the current "selected" state of the rows and cells in the Grid. |
+| `aria-expanded` | Indicate if the expand icon in the hierarchy Grid or grouped Grid or detail Grid is expanded or collapsed |
+| `aria-sort` | Indicates whether the data in the Grid are sorted in ascending or descending order. |
 | `aria-busy` | Indicates an element is being modified and that assistive technologies may want to wait until the changes are complete before informing the user about the update. |
 | `aria-owns` | Identifies an element in order to define a visual, functional, or contextual relationship between a parent and its child elements. |
 | `aria-hidden` | Hides the element from accessibility concerns. |
 | `aria-labelledby` | Provides an accessible name for the checkbox labels in excel filter, checkbox filter and column chooser dialog.  |
-| `aria-describedby` | Provides an description about the features enabled in the header when the grid header cell is focused. |
+| `aria-describedby` | Provides an description about the features enabled in the header when the Grid header cell is focused. |
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component is structured with a two-table architecture for its header and content. To enhance accessibility for screen readers, roles and ARIA attributes are incorporated for both the grid parent and all its child elements. Although this architectural approach may have some limitations with accessibility checker tools. It's important to note that these limitations do not affect the readability of the grid content over screen readers.
+The Grid is structured with a two-table architecture for its header and content. To enhance accessibility for screen readers, roles and ARIA attributes are incorporated for both the Grid parent and all its child elements. Although this architectural approach may have some limitations with accessibility checker tools. It's important to note that these limitations do not affect the readability of the Grid content over screen readers.
 
 The accessibility checker tools highlights the following known issues:
 
-* aria-required-children: This warning appears when rendering the grid without any features, as it contains textarea and grid content. Additionally, it appears when enabling features such as the toolbar and grouping.
+* aria-required-children: This warning appears when rendering the Grid without any features, as it contains textarea and Grid content. Additionally, it appears when enabling features such as the toolbar and grouping.
 
-* color-contrast: This warning appears when you are enabling the search item in the grid's toolbar.
+* color-contrast: This warning appears when you are enabling the search item in the Grid's toolbar.
 
-* An explicit ARIA 'role' is not valid for `<tr>` element within an ARIA role 'grid' per the ARIA in HTML specification.
+* An explicit ARIA 'role' is not valid for `<tr>` element within an ARIA role 'Grid' per the ARIA in HTML specification.
 
-* An explicit ARIA 'role' is not valid for `<th>` element within an ARIA role 'grid' per the ARIA in HTML specification.
+* An explicit ARIA 'role' is not valid for `<th>` element within an ARIA role 'Grid' per the ARIA in HTML specification.
 
-* An explicit ARIA 'role' is not valid for `<td>` element within an ARIA role 'grid' per the ARIA in HTML specification.
+* An explicit ARIA 'role' is not valid for `<td>` element within an ARIA role 'Grid' per the ARIA in HTML specification.
 
 * The element with role "button" contains descendants with roles "rowgroup" which are ignored by browsers.
 
@@ -88,13 +88,13 @@ The accessibility checker tools highlights the following known issues:
 
 * Text contrast of 4.10 with its background is less than the WCAG AA minimum requirements for text of size 13px and weight of 400.
 
-* Interactive component with ARIA role 'grid' does not have a programmatically associated name.
+* Interactive with ARIA role 'Grid' does not have a programmatically associated name.
 
-* The element with role "rowgroup" is not contained in or owned by an element with one of the following roles: "grid, table, treegrid".
+* The element with role "rowgroup" is not contained in or owned by an element with one of the following roles: "Grid, table, treeGrid".
 
 ## Keyboard interaction
 
-The Grid component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Grid component.
+The Syncfusion Blazor DataGrid followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Grid.
 
 <b>Pager</b>
 
@@ -114,14 +114,14 @@ The Grid component followed the [keyboard interaction](https://www.w3.org/WAI/AR
 |-----|----- | -----|
 | <kbd>Home</kbd> | <kbd>Fn</kbd> + <kbd>←</kbd> | Moves the focus to the first cell of the focused row.|
 | <kbd>End</kbd> | <kbd>Fn</kbd> + <kbd>→</kbd> | Moves the focus to the last cell of the focused row.|
-| <kbd>Ctrl</kbd> + <kbd>Home</kbd> | <kbd>⌘</kbd> + <kbd>Fn</kbd> + <kbd>←</kbd> | Moves the focus to the first Cell of the first row in the grid.|
-| <kbd>Ctrl</kbd> + <kbd>End</kbd> | <kbd>⌘</kbd> + <kbd>Fn</kbd> + <kbd>→</kbd> | Moves the focus to the last Cell of the last row in the grid.|
+| <kbd>Ctrl</kbd> + <kbd>Home</kbd> | <kbd>⌘</kbd> + <kbd>Fn</kbd> + <kbd>←</kbd> | Moves the focus to the first Cell of the first row in the Grid.|
+| <kbd>Ctrl</kbd> + <kbd>End</kbd> | <kbd>⌘</kbd> + <kbd>Fn</kbd> + <kbd>→</kbd> | Moves the focus to the last Cell of the last row in the Grid.|
 | <kbd>↑</kbd> | <kbd>↑</kbd> | Moves the cell focus upward from the focused cell.|
 | <kbd>↓</kbd> | <kbd>↓</kbd> |  Moves the cell focus downward from the focused cell.|
 | <kbd>→</kbd> | <kbd>→</kbd> | Moves the cell focus right side from the focused cell.|
 | <kbd>←</kbd> | <kbd>←</kbd> |  Moves the cell focus left side from the focused cell.|
-| <kbd>Alt</kbd> + <kbd>J</kbd> | <kbd>⌥</kbd> + <kbd>J</kbd> | Moves the focus to the entire grid.|
-| <kbd>Alt</kbd> + <kbd>W</kbd> | <kbd>⌥</kbd> + <kbd>W</kbd> | Move the focus to the grid content element.|
+| <kbd>Alt</kbd> + <kbd>J</kbd> | <kbd>⌥</kbd> + <kbd>J</kbd> | Moves the focus to the entire Grid.|
+| <kbd>Alt</kbd> + <kbd>W</kbd> | <kbd>⌥</kbd> + <kbd>W</kbd> | Move the focus to the Grid content element.|
 
 <b>Selection</b>
 
@@ -207,10 +207,10 @@ The Grid component followed the [keyboard interaction](https://www.w3.org/WAI/AR
 
 ## Ensuring accessibility
 
-The Grid component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
+The Syncfusion Blazor DataGrid's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
 
-The accessibility compliance of the Grid component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/datagrid) in a new window to evaluate the accessibility of the Grid component with accessibility tools.
+The accessibility compliance of the Grid is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/datagrid) in a new window to evaluate the accessibility of the Grid with accessibility tools.
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Syncfusion Blazor](https://blazor.syncfusion.com/documentation/common/accessibility)

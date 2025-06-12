@@ -137,4 +137,4 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Avatar component
 
 * Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. This will render the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Avatar component in your default web browser.
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rNBptBtvgkjMdjrE?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "![Blazor Avatar Component](./images/blazor-avatar-component.png)" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNreZyVMASlmWFyr?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" backgroundimage "![Blazor Avatar Component](./images/blazor-avatar-component.png)" %}
