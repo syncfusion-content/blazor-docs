@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Local Data in Blazor DataGrid | Syncfusion
-description: Checkout and learn here all about Local Data in Syncfusion Blazor DataGrid and much more.
+description: Checkout and learn here all about Local Data in Syncfusion Blazor DataGrid Component and much more.
 platform: Blazor
 control: DataGrid
 documentation: ug
