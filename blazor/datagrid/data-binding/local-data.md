@@ -1423,7 +1423,7 @@ builder.Services.AddSingleton<OrderDetails>();
 
 The following screenshot illustrates the addition, editing, and deletion operations performed, with changes reflected across all client sides.
 
-![SignalR Data](./images/signalR.gif)
+![SignalR Data](../images/signalR.gif)
 
 Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/databinding-in-blazor-datagrid/tree/master/SignalRDataGrid).
 
