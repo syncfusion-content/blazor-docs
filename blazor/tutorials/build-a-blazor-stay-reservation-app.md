@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Build a Blazor Stay Reservation App with Syncfusion Components - Syncfusion
-description: Build a Blazor Stay Reservation App step by step with Syncfusion Blazor components.
+title: Build a Blazor Stay Reservation App - Syncfusion
+description: Step by step tutorial to build a Blazor Stay Reservation Application using Syncfusion Blazor components.
 platform: Blazor
 component: Tutorials
 documentation: ug
