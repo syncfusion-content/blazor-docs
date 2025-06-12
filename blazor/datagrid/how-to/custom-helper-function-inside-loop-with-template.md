@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Use custom helper inside the loop with templates in Blazor DataGrid | Syncfusion
-description: Learn here all about place cancel icon in search bar in Syncfusion Blazor DataGrid.
+description: Checkout and Learn here all about place cancel icon in search bar in Syncfusion Blazor DataGrid.Component
 platform: Blazor
 control: DataGrid
 documentation: ug
