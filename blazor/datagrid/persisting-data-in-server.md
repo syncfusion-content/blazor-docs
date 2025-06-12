@@ -9,7 +9,7 @@ documentation: ug
 
 # Persisting data in the server in Blazor DataGrid
 
-The Syncfusion Blazor DataGrid enables you to persist data changes made in the Grid to a server or database using RESTful web services. All CRUD (create, read, update, and delete) operations performed in the Grid are managed by the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html), which can bind to server-side data sources and synchronize updates with the backend. This ensures that any changes made in the UI are reliably saved to your data store.
+The Syncfusion Blazor DataGrid enables you to persist data changes made in the Grid to a server or database using RESTful web services. All CRUD (Create, read, update, and delete) operations performed in the Grid are managed by the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html), which can bind to server-side data sources and synchronize updates with the backend. This ensures that any changes made in the UI are reliably saved to your data store.
 
 > The [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors#odata-adaptor) persists data in the server according to the **OData** protocol.
 
