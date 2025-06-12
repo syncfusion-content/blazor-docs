@@ -59,7 +59,6 @@ To [enable Intermediate Language trimming](https://learn.microsoft.com/en-us/dot
 #### How to Enable Intermediate Language Trimming Safely for Syncfusion Blazor Grid
 
 1. Modify your project file (.csproj) to include trimmable assemblies and descriptors:
-
 ```xml
 <ItemGroup>
   <TrimmableAssembly Include="Syncfusion.Blazor" />
@@ -67,7 +66,6 @@ To [enable Intermediate Language trimming](https://learn.microsoft.com/en-us/dot
   <BlazorLinkerDescriptor Include="LinkerConfig.xml" />
 </ItemGroup>
 ```
-
 2. Create the SyncfusionRoots.xml file in your project root with content like:
 
 ```xml
@@ -83,29 +81,29 @@ To [enable Intermediate Language trimming](https://learn.microsoft.com/en-us/dot
   <assembly fullname="Syncfusion.Blazor.Spinner" />
   <assembly fullname="Syncfusion.Blazor.Grids" >
     <type fullname="Syncfusion.Blazor.Grids.GridColumn" />
-	<type fullname="Syncfusion.Blazor.Grids.GridFilterSettings" />
+    <type fullname="Syncfusion.Blazor.Grids.GridFilterSettings" />
     <type fullname="Syncfusion.Blazor.Grids.SortColumn" />
     <type fullname="Syncfusion.Blazor.Grids.GridSortSettings" />
     <type fullname="Syncfusion.Blazor.Grids.GridSelectionSettings" />
     <type fullname="Syncfusion.Blazor.Grids.GridEditSettings" />
-	<type fullname="Syncfusion.Blazor.Grids.GridTextWrapSettings" />
-	<type fullname="Syncfusion.Blazor.Grids.GroupingEventArgs" />
-	<type fullname="Syncfusion.Blazor.Grids.GroupedEventArgs" />
-	<type fullname="Syncfusion.Blazor.Grids.GridSearchSettings" />
-	<type fullname="Syncfusion.Blazor.Grids.GridRowDropSettings" />
+    <type fullname="Syncfusion.Blazor.Grids.GridTextWrapSettings" />
+    <type fullname="Syncfusion.Blazor.Grids.GroupingEventArgs" />
+    <type fullname="Syncfusion.Blazor.Grids.GroupedEventArgs" />
+    <type fullname="Syncfusion.Blazor.Grids.GridSearchSettings" />
+    <type fullname="Syncfusion.Blazor.Grids.GridRowDropSettings" />
   </assembly>
   <assembly fullname="Syncfusion.Blazor.Data">
     <type fullname="Syncfusion.Blazor.Data.ColumnFilter" />
     <type fullname="Syncfusion.Blazor.Data.FilterBehavior" />
-	<type fullname="Syncfusion.Blazor.Data.DataUtil" />
-	<type fullname="Syncfusion.Blazor.Data.GraphQLAdaptor" />
-	<type fullname="Syncfusion.Blazor.Data.GraphQLAdaptorOptions" />
-	<type fullname="Syncfusion.Blazor.Data.GraphQLMutation" />
-	<type fullname="Syncfusion.Blazor.Data.QueryableOperation" />
-	<type fullname="Syncfusion.Blazor.Data.SortDescriptionIndex" />
-	<type fullname="Syncfusion.Blazor.Data.SortedColumn" />
-	<type fullname="Syncfusion.Blazor.Data.ValueConvert" />
-	<type fullname="Syncfusion.Blazor.Data.WhereFilter" />
+    <type fullname="Syncfusion.Blazor.Data.DataUtil" />
+    <type fullname="Syncfusion.Blazor.Data.GraphQLAdaptor" />
+    <type fullname="Syncfusion.Blazor.Data.GraphQLAdaptorOptions" />
+    <type fullname="Syncfusion.Blazor.Data.GraphQLMutation" />
+    <type fullname="Syncfusion.Blazor.Data.QueryableOperation" />
+    <type fullname="Syncfusion.Blazor.Data.SortDescriptionIndex" />
+    <type fullname="Syncfusion.Blazor.Data.SortedColumn" />
+    <type fullname="Syncfusion.Blazor.Data.ValueConvert" />
+    <type fullname="Syncfusion.Blazor.Data.WhereFilter" />
    </assembly>
 </linker>
 ```
