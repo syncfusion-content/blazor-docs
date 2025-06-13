@@ -227,7 +227,7 @@ In the following example demonstrates how to dynamically enable and change the `
     {
         OrderData = OrderDetails.GetAllRecords();
     }
-    public CellSelectionMode CellSelectionModeValue { get; set; } = CellSelectionMode.Box;
+    public CellSelectionMode CellSelectionModeValue { get; set; } = Syncfusion.Blazor.Grids.CellSelectionMode.Box;
     public class DropDownOrder
     {
         public string Text { get; set; }
@@ -235,9 +235,9 @@ In the following example demonstrates how to dynamically enable and change the `
     }
     List<DropDownOrder> DropDownData = new List<DropDownOrder>
     {
-        new DropDownOrder() { Text = "Box", Value = CellSelectionMode.Box },
-        new DropDownOrder() { Text = "Flow", Value = CellSelectionMode.Flow},
-        new DropDownOrder() { Text = "Box With Border", Value = CellSelectionMode.BoxWithBorder }
+        new DropDownOrder() { Text = "Box", Value = Syncfusion.Blazor.Grids.CellSelectionMode.Box },
+        new DropDownOrder() { Text = "Flow", Value = Syncfusion.Blazor.Grids.CellSelectionMode.Flow},
+        new DropDownOrder() { Text = "Box With Border", Value = Syncfusion.Blazor.Grids.CellSelectionMode.BoxWithBorder }
     };
     public void ValueChange(ChangeEventArgs<CellSelectionMode, DropDownOrder> Args)
     {
@@ -292,7 +292,7 @@ public class OrderDetails
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hXLojfCyJcvLejSc?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjVeDSKXKGvShjyg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Select cells externally 
 

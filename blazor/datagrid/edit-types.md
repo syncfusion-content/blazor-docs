@@ -3,7 +3,7 @@ layout: post
 title: Edit Types in Blazor DataGrid | Syncfusion
 description: Checkout and learn here all about Edit Types in Syncfusion Blazor DataGrid and much more details.
 platform: Blazor
-control: Grid
+control: DataGrid
 documentation: ug
 ---
 
@@ -66,7 +66,7 @@ The following sample code demonstrates the customization applied to the `SfTextB
 @page "/"
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Inputs
-@using BlazorApp1.Data
+
 <SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" Height="265px">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
     <GridColumns>
@@ -164,7 +164,7 @@ Below is an example demonstrating how to customize the `SfNumericTextBox`  for t
 @page "/"
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Inputs
-@using BlazorApp1.Data
+
 <SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
     <GridColumns>
@@ -261,7 +261,7 @@ In the example below, while editing a row, the `SfNumericTextBox` in the **Freig
 @page "/"
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Inputs
-@using BlazorApp1.Data
+
 <SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" Height="265px">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
     <GridColumns>
@@ -367,7 +367,7 @@ Below is an example demonstrating how to customize the `SfDropDownList` for the 
 @page "/"
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
-@using BlazorApp1.Data
+
 <SfGrid DataSource="@Orders" Height="265px" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
     <GridColumns>
@@ -463,7 +463,6 @@ Below is an example demonstrating how to provide a custom data source for the **
 @page "/"
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
-@using BlazorApp1.Data
 <SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" Height="273px">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
     <GridColumns>
@@ -565,7 +564,6 @@ In the following example, filtering is enabled for the **ShipCountry** column in
 @page "/"
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
-@using BlazorApp1.Data
 <SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" Height="273px">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
     <GridColumns>
@@ -667,7 +665,7 @@ The following sample code demonstrates the customization applied to `SfCheckBox`
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Calendars
-@using BlazorApp1.Data
+
 <SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" Height="265px">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
     <GridColumns>
@@ -766,7 +764,7 @@ Below is an example demonstrating how to customize the `SfDatePicker` for the **
 @page "/"
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Calendars
-@using BlazorApp1.Data
+
 
 <SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" Height="265px">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
@@ -873,7 +871,7 @@ Below is an example demonstrating how to customize the `SfTimePicker` for the **
 @page "/"
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Calendars
-@using BlazorApp1.Data
+
 
 <SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
@@ -902,8 +900,6 @@ Below is an example demonstrating how to customize the `SfTimePicker` for the **
 
 {% highlight c# tabtitle="OrderData.cs" %}
 
-namespace BlazorApp1.Data
-{
     public class OrderData
     {
         public static List<OrderData> Orders = new List<OrderData>();
@@ -954,7 +950,6 @@ namespace BlazorApp1.Data
         public int EmployeeID { get; set; }
         public TimeOnly? OrderTime { get; set; }
     }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -979,7 +974,7 @@ Below is an example demonstrating how to customize the `SfDateTimePicker` for th
 @page "/"
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Calendars
-@using BlazorApp1.Data
+
 
 <SfGrid DataSource="@Orders"
         Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })"
@@ -1018,8 +1013,6 @@ Below is an example demonstrating how to customize the `SfDateTimePicker` for th
 
 {% highlight c# tabtitle="OrderData.cs" %}
 
-namespace BlazorApp1.Data
-{
     public class OrderData
     {
         public static List<OrderData> Orders = new List<OrderData>();
@@ -1070,7 +1063,6 @@ namespace BlazorApp1.Data
         public int EmployeeID { get; set; }
         public TimeOnly? OrderTime { get; set; }
     }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -1101,7 +1093,7 @@ The following example demonstrates how to render a `SfTextArea` in the **ShipAdd
 @page "/"
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Inputs
-@using BlazorApp1.Data
+
 <SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" Height="273px">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
     <GridColumns>
@@ -1270,8 +1262,8 @@ The following example demonstrates how to render an `SfAutoComplete` in the **Cu
 
 @page "/"
 @using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.DropDowns
-@using BlazorApp1.Data
+@using Syncfusion.Blazor.DropDowns 
+
 
 <SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" Height="273px">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
@@ -1373,7 +1365,7 @@ Here’s an example demonstrating how to render a `SfMaskedTextBox` in the **Cus
 @page "/"
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Inputs
-@using BlazorApp1.Data
+
 
 <SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
@@ -1474,8 +1466,8 @@ The following example demonstrates how to render a SfDropDownList in the **ShipC
 
 @page "/"
 @using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.DropDowns
-@using BlazorApp1.Data
+@using Syncfusion.Blazor.DropDowns 
+
 
 <SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" Height="273px">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
@@ -1591,8 +1583,8 @@ In the example below, images are rendered inside the dropdown of the **EmployeeN
 
 @page "/"
 @using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.DropDowns
-@using BlazorApp1.Data
+@using Syncfusion.Blazor.DropDowns 
+
 
 <SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
     <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true"></GridEditSettings>
@@ -1762,8 +1754,8 @@ The following example demonstrates how to render a `SfDropDownList` with multipl
 
 @page "/"
 @using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.DropDowns
-@using BlazorApp1.Data
+@using Syncfusion.Blazor.DropDowns 
+
 
 <SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" Height="273px">
     <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true"></GridEditSettings>
@@ -1900,8 +1892,8 @@ The following example demonstrates how to render a `SfComboBox` in the **ShipCou
 
 @page "/"
 @using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.DropDowns
-@using BlazorApp1.Data
+@using Syncfusion.Blazor.DropDowns 
+
 
 <SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" Height="273px">
     <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true"></GridEditSettings>
@@ -2016,8 +2008,8 @@ The following example demonstrates how to render a `SfNumericTextBox` in the **F
 
 @page "/"
 @using Syncfusion.Blazor.Grids
-@using Syncfusion.Blazor.DropDowns
-@using BlazorApp1.Data
+@using Syncfusion.Blazor.DropDowns 
+
 
 <SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" Height="315">
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal"></GridEditSettings>
@@ -2119,7 +2111,7 @@ The following example demonstrates how to render a `SfTimePicker` in the **Order
 @page "/"
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Calendars
-@using BlazorApp1.Data
+
 
 <SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" Height="273px">
     <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true"></GridEditSettings>
@@ -2352,7 +2344,6 @@ The following example demonstrates how to render a `SfRichTextEditor` in the **S
 @page "/"
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.RichTextEditor
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
     <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="@Syncfusion.Blazor.Grids.EditMode.Normal"></GridEditSettings>
