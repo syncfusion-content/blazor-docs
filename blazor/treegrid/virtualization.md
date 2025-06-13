@@ -348,17 +348,19 @@ N> For example, when the OverscanCount is set to 5, only 5 buffer rows are rende
 
 ## Virtualization with hierarchical data binding
 
-Virtualization with hierarchical data binding is a performance optimization technique used in the TreeGrid to efficiently display large datasets structured in a parent-child (hierarchical) format. In [hierarchical data binding](https://blazor.syncfusion.com/documentation/treegrid/data-binding#hierarchy-data-binding), each parent record in the data source can contain a nested collection of child records, representing a tree-like structure.
+In [hierarchical data binding]((https://blazor.syncfusion.com/documentation/treegrid/data-binding#hierarchy-data-binding)), each parent record in the data source contains a nested collection of child records, representing a tree-like structure. When working with large hierarchical datasets, enabling virtualization helps significantly improve performance and rendering efficiency.
+
+Virtualization with hierarchical data binding in the TreeGrid is a performance optimization technique that allows only the visible rows within the viewport (and a few buffer rows) to be rendered at any given time, rather than the entire dataset. This approach ensures smooth scrolling and minimal memory usage, especially when displaying complex parent-child relationships across thousands of rows.
 
 * When using virtualization with hierarchical data binding, the data source should follow a flattened hierarchical structure, where each parent record is immediately followed by its child records in the correct sequence.
 
 * This differs from earlier implementations where only the top-level parent records were initially bound, and child data was loaded or rendered separately.
 
-* To support dynamic operations like expand/collapse and virtualization, a helper method is used to flatten the hierarchy while preserving the parent-child display order.
+* To ensure proper rendering and efficient virtual scrolling, the TreeGrid uses an internal helper method to flatten the hierarchical dataset. This method restructures the data while preserving the logical parent-child relationships and display order,, which is essential for supporting operations like expand and collapse behavior, virtual scrolling across all hierarchy levels.
 
 * This structure makes rendering efficient and ensures smooth interactions when working with large hierarchical datasets in a virtualized environment.
 
-To enable virtualization with hierarchical data binding, follow these steps to convert the hierarchical data into a self-referential flattened structure on the application side:
+To enable virtualization with hierarchical data binding, follow these steps to convert the hierarchical data into a self-referential, flattened structure handled on the application side before binding the data to the component:
 
 **Step 1:  Enabling virtualization with hierarchical binding properties:**
 
@@ -490,7 +492,7 @@ public class VirtualData
 
 ```
 
-The following sample demonstrates a complete working example of virtualization with hierarchical data binding:
+The following sample demonstrates virtualization implementation with hierarchical data binding:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -623,13 +625,18 @@ The following sample demonstrates a complete working example of virtualization w
 {% endhighlight %}
 {% endtabs %}
 
-> ExpandCollapse State maintenance is not supported for Hierarchy Data.
 
-* Batch Editing is not supported for Hierarchy Data.
+By organizing the data in this format, the TreeGrid can efficiently render large hierarchical datasets with virtualization enabled.
 
-* Row Drag and Drop feature is not supported for Hierarchy Data.
+**Limitations:**
 
-> Additionally, please refer to the [virtualization limitations](https://blazor.syncfusion.com/documentation/treegrid/virtualization#limitations-for-virtualization) for more details on current constraints when using virtualization with hierarchical data.
+1. ExpandCollapse State maintenance is not supported for Hierarchy Data.
+
+  * Batch Editing is not supported for Hierarchy Data.
+
+  * Row Drag and Drop feature is not supported for Hierarchy Data.
+
+2. Additionally, please refer to the [virtualization limitations](https://blazor.syncfusion.com/documentation/treegrid/virtualization#limitations-for-virtualization) for more details on current constraints when using virtualization with hierarchical data.
 
 ## Column Virtualization
 
