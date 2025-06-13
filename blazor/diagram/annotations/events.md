@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Events in Blazor Diagram Component | Syncfusion
+title: Controlling Annotation Events in Blazor Diagrams | Syncfusion
 description: Checkout and learn here all about Events in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Events in Blazor Diagram Component
+# Controlling Annotation Events in Blazor Diagrams
 
-## Text Change event
+## Text Change Event
 
 * While editing a node's or connector's annotation, the following event can be used to do the customization.
 * When a node's or connector's annotation is changed in the diagram, this event is getting triggered. 
@@ -65,7 +65,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## See also
 
-* [How to add or remove annotation constraints](../constraints/#annotation-constraints)
+* [How to add or remove annotation constraints](../constraints#annotation-constraints)
 
 * [How to customize the annotation](./appearance)
 

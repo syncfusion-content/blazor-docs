@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Container in Blazor Diagram Component | Syncfusion
+title: Controlling Container in Blazor Diagrams | Syncfusion
 description: Checkout and learn here all about Container support in Syncfusion Blazor Diagram component and much more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Container in Blazor Diagram Component
+# Controlling Container in Blazor Diagrams
 
 Containers provide a powerful way to organize and manage collections of diagram elements. They act as logical groupings of shapes enclosed by a customizable border, allowing for intuitive drag-and-drop operations during runtime. Changes to the container, such as position, size, or style, do not affect its children. This enhances diagram clarity by maintaining organization while allowing individual elements to be edited separately.
 
@@ -276,7 +276,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Blazor Diagram Container Palette](images/ContainerImages/ContainerPalette.png)
 
-## Interactively add or remove diagram elements into Container
+## Interactively Add or Remove Diagram Elements into Container
 
 Diagram elements can be added or removed from a container at runtime. When an element is dropped onto the container's edges, the container automatically adjusts its size to accommodate the new element.
 

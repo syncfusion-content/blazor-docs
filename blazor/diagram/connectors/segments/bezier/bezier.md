@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Bezier Segment in Blazor Diagram Component | Syncfusion
+title: Controlling Accessibility in Blazor Diagrams | Syncfusion
 description: Check out and learn about Bezier Segments in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Bezier Segments in Blazor Diagram Component
+# Controlling Accessibility in Blazor Diagrams
 
-## How to create bezier segment
+## How to Create a Bezier Segment
 
 Bezier segments are used to create curve segments, and the curves are configurable either with control points or vectors. To create a bezier segment, set the segment Type as [Bezier](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Bezier) and specify the type for the connector. The following code example illustrates how to create a default bezier segment.
 
@@ -104,7 +104,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Editing Bezier Segment in Blazor Diagram](../../../images/blazor-diagram-edit-bezier-segment.gif)
 
-## Avoid overlapping with bezier
+## Avoid Overlapping with Bezier
 
 By default, when there are no segments defined for a bezier connector, the bezier segments will be created automatically and routed in such a way that avoids overlapping with the source and target nodes.
 
@@ -244,7 +244,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Avoid overlapping with bezier](../../../images/bezierOverlap.png)
 
-## How to customize Bezier Segment Thumb Shape 
+## How to Customize Bezier Segment Thumb Shape 
 
 The Bezier connector can have multiple segments between the source and target points. By default, these segments are rendered as circles, but this can be customized either globally or for individual connectors using the [SegmentThumbSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbSettings.html) class.
 

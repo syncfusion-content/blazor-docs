@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Flowchart layout in Blazor Diagram Component | Syncfusion
+title: Controlling Flowchart Layout in Blazor Diagrams | Syncfusion
 description: Learn here all about how to create flowchart layout in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Flowchart layout in Blazor Diagram Component
+# Controlling Flowchart Layout in Blazor Diagrams
 
 The flowchart layout provides a visual representation of processes, workflows, systems, or algorithms in a diagrammatic format. It uses various symbols to depict different actions, with arrows connecting these symbols to indicate the flow or direction of the process. Flowcharts are essential tools for illustrating step-by-step sequences, making complex processes easier to understand and communicate.
 
-## Common flowchart symbols
+## Common Flowchart Symbols
 
 Different flowchart symbols have different meanings that are used to represent various states in flowchart. The following table describes the most common flowchart symbols that are used in creating flowchart.
 
@@ -212,11 +212,11 @@ Different flowchart symbols have different meanings that are used to represent v
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/FlowchartLayout/FlowchartLayout).
 
-## How to customize flowchart layout orientation
+## How to Customize Flowchart Layout Orientation
 
 The sequence of a node's direction can be customized by flowchart's orientation, either vertically from top to bottom or horizontally from left to right. The [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Orientation) property of the layout class allows you to define the flow direction for the flowchart as either [TopToBottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutOrientation.html#Syncfusion_Blazor_Diagram_LayoutOrientation_TopToBottom) or [LeftToRight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutOrientation.html#Syncfusion_Blazor_Diagram_LayoutOrientation_LeftToRight).
 
-### TopToBottom orientation
+### Top-to-Bottom Orientation
 
 This orientation arranges elements in the layout vertically, flowing from top to bottom. It is commonly used in flowcharts to represent the sequential progression of steps or actions in a process.
 
@@ -230,7 +230,7 @@ This orientation arranges elements in the layout vertically, flowing from top to
 ```
 ![Blazor Flowchart layout diagram](../images/Flowchart_Layout.png)
 
-### LeftToRight orientation
+### Left-to-Right Orientation
 
 This orientation arranges elements in the layout horizontally, flowing from left to right. It is typically used to represent processes or workflows that move sequentially across the page, emphasizing a linear progression of steps or actions.
 
@@ -244,7 +244,7 @@ This orientation arranges elements in the layout horizontally, flowing from left
 ```
 ![Blazor Flowchart layout diagram](../images/Flowchart_LeftToRight.png)
 
-## How to customize the decision output directions
+## How to Customize Decision Output Directions
 
 The decision symbol in a flowchart represents a question or condition that leads to different paths based on a binary outcome (Yes/No, True/False). You can customize the output direction of these paths using the [YesBranchDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FlowchartLayoutSettings.html#Syncfusion_Blazor_Diagram_FlowchartLayoutSettings_YesBranchDirection) and [NoBranchDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FlowchartLayoutSettings.html#Syncfusion_Blazor_Diagram_FlowchartLayoutSettings_NoBranchDirection) properties of the [FlowchartLayoutSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FlowchartLayoutSettings.html) class.
 
@@ -268,7 +268,7 @@ The following table will explain the pictorial representation of the behavior:
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/FlowchartLayout/FlowchartLayoutSettings).
 
-### Custom Yes and No branch values
+### Custom Yes and No Branch Values
 
 The decision symbol will produce two branches as output, which will be **Yes** branch and **No** branch. If the output branch connector text value matches the values in the [YesBranchValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FlowchartLayoutSettings.html#Syncfusion_Blazor_Diagram_FlowchartLayoutSettings_YesBranchValues) property of [FlowchartLayoutSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FlowchartLayoutSettings.html) class, it will be considered as the **Yes** branch. Similarly, if the connector text value matches the values in the [NoBranchValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FlowchartLayoutSettings.html#Syncfusion_Blazor_Diagram_FlowchartLayoutSettings_NoBranchValues) property, it will be considered as the **No** branch. By default, the [YesBranchValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FlowchartLayoutSettings.html#Syncfusion_Blazor_Diagram_FlowchartLayoutSettings_YesBranchValues) property contains **Yes** and **True** string values and the [NoBranchValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FlowchartLayoutSettings.html#Syncfusion_Blazor_Diagram_FlowchartLayoutSettings_NoBranchValues) property contains **No** and **False** string values.  
 
@@ -423,6 +423,6 @@ Any text value can be given as a connector text to describe the flow. Also, any 
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Layout/FlowchartLayout/CustomYesOrNoBranch).
 
-## How to update the spacing between nodes 
+## How to Update Node Spacing  
 
 You can control the spacing between nodes in your diagram layout using the [HorizontalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_HorizontalSpacing) and [VerticalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_VerticalSpacing) properties of the layout class. These properties allow you to adjust the distance between nodes both horizontally and vertically, giving you precise control over the appearance and organization of your diagram.

@@ -1,23 +1,23 @@
 ---
 layout: post
-title: Flip in Blazor Diagram Component | Syncfusion
+title: Controlling Flip in Blazor Diagrams | Syncfusion
 description: Checkout and learn here all about flip support in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Flip in Blazor Diagram Component
+# Controlling Flip in Blazor Diagrams
 
 The diagram component offers functionality to flip nodes, connectors, and groups. Flipping creates a mirror image of the original element, allowing for versatile visual representations within the diagram.
 
-## How to flip the node or group
+## How to Flip a Node or Group
 
 The [Flip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_Flip) command is used to mirror the content and ports of selected objects across either the horizontal, vertical, or both directions on the diagram page. This transformation allows for quick and easy reorientation of diagram elements.
 
 **Note:** The Flip command can be applied to both individual nodes and node groups, including their selected child nodes.
 
-### How to change the flip direction
+### How to Change the Flip Direction
 
 The [FlipDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FlipDirection.html) property is used to mirror nodes, groups, or connectors across horizontal, vertical, or both directions. This feature allows you to create symmetrical or reversed representations of diagram elements, enhancing the flexibility and visual appeal of your Blazor diagrams.
 
@@ -29,7 +29,7 @@ The [FlipDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diag
 |None| It is used to disable all the flip behavior. |  
 
 
-### How to change the flip mode
+### How to Change the Flip Mode
 
 The [FlipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramFlipMode.html) property is utilized to manage the flipping behavior of diagram objects. It determines whether the object should be flipped along with its associated ports and content, or if these elements should remain in their original orientation during the flip operation.
 
@@ -445,7 +445,7 @@ The following code example shows how to flip the group.
 For more information about node interaction, refer to [Node Interaction](./nodes/interaction).
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Flip/FlipGroup)
 
-## How to flip the connector
+## How to Flip the Connector
 
 The [Flip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_Flip) command is used to mirror selected objects across horizontal, vertical, or both directions on the diagram page. This feature allows for quick and easy creation of symmetrical designs or reversed orientations of diagram elements.
 
