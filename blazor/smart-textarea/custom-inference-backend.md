@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Custom AI Service Integration with Smart Components
+title: Custom AI Service Integration with Syncfusion Smart Components
 description: Learn how to use IChatInferenceService to integrate custom AI services with Syncfusion Smart Components
 platform: Blazor
 control: Smart TextArea
