@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Controlling Container in Blazor Diagrams | Syncfusion
+title: Controlling Container in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about Container support in Syncfusion Blazor Diagram component and much more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Controlling Container in Blazor Diagrams
+# Controlling Container in Blazor Diagram Component
 
 Containers provide a powerful way to organize and manage collections of diagram elements. They act as logical groupings of shapes enclosed by a customizable border, allowing for intuitive drag-and-drop operations during runtime. Changes to the container, such as position, size, or style, do not affect its children. This enhances diagram clarity by maintaining organization while allowing individual elements to be edited separately.
 

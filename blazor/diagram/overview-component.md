@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Controlling Overview in Blazor Diagrams | Syncfusion
+title: Controlling Overview in Blazor Diagram Component | Syncfusion
 description: Check out and learn here all about Overview Control in Syncfusion Blazor Diagram component and much more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Controlling Overview in Blazor Diagrams
+# Controlling Overview in Blazor Diagram Component
 
 The [SfDiagramOverviewComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Overview.SfDiagramOverviewComponent.html) provides a miniature view of the entire diagram content, offering a comprehensive preview at a glance. This powerful feature enables users to effortlessly navigate, pan, and zoom to specific areas of interest within large and complex diagrams. By presenting a bird's-eye view, it enhances the user's ability to understand the diagram's structure and quickly locate desired sections, significantly improving overall usability and efficiency.
 

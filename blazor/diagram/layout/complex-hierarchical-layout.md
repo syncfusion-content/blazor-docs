@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Controlling Complex Hierarchical Layout in Blazor Diagrams | Syncfusion
+title: Controlling Complex Hierarchical Layout in Blazor Diagram Component | Syncfusion
 description: Learn here all about how to create hierarchical layout in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Controlling Complex Hierarchical Layout in Blazor Diagrams
+# Controlling Complex Hierarchical Layout in Blazor Diagram Component
 
 Complex hierarchical tree layout arranges nodes in a tree-like structure, where a child node can have more than one parent. This layout is an extended version of the hierarchical tree layout. To create a complex hierarchical tree, the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Type) property of layout should be set to [ComplexHierarchicalTree](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutType.html#Syncfusion_Blazor_Diagram_LayoutType_ComplexHierarchicalTree).
 

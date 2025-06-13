@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Controlling Page Settings in Blazor Diagrams | Syncfusion
+title: Controlling Page Settings in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about Page Settings in Syncfusion Blazor Diagram component and much more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Controlling Page Settings in Blazor Diagrams
+# Controlling Page Settings in Blazor Diagram Component
 
 By default, Diagram’s page size is decided based on the position of its diagramming elements. The size and appearance of the diagram pages can be customized using the [PageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageSettings.html) property of the diagram.
 

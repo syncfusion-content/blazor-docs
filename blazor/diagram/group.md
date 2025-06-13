@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Controlling Node Group in Blazor Diagrams | Syncfusion
+title: Controlling Node Group in Blazor Diagram Component | Syncfusion
 description: Learn here all about how to create and update the NodeGroup in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Controlling Node Group in Blazor Diagrams
+# Controlling Node Group in Blazor Diagram Component
 
 [NodeGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeGroup.html) is used to cluster multiple nodes and connectors into a single element. It acts as a container for its children (nodes, node groups, and connectors). Every change made to the node group also affects the children. Child elements can be edited individually.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Controlling Flip in Blazor Diagrams | Syncfusion
+title: Controlling Flip in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about flip support in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Controlling Flip in Blazor Diagrams
+# Controlling Flip in Blazor Diagram Component
 
 The diagram component offers functionality to flip nodes, connectors, and groups. Flipping creates a mirror image of the original element, allowing for versatile visual representations within the diagram.
 

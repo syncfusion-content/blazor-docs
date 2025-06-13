@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Controlling Flowchart Layout in Blazor Diagrams | Syncfusion
+title: Controlling Flowchart Layout in Blazor Diagram Component | Syncfusion
 description: Learn here all about how to create flowchart layout in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Controlling Flowchart Layout in Blazor Diagrams
+# Controlling Flowchart Layout in Blazor Diagram Component
 
 The flowchart layout provides a visual representation of processes, workflows, systems, or algorithms in a diagrammatic format. It uses various symbols to depict different actions, with arrows connecting these symbols to indicate the flow or direction of the process. Flowcharts are essential tools for illustrating step-by-step sequences, making complex processes easier to understand and communicate.
 

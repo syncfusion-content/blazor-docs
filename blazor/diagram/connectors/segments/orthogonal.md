@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Controlling Orthogonal Segments in Blazor Diagrams | Syncfusion
+title: Controlling Orthogonal Segments in Blazor Diagram Component | Syncfusion
 description: Check out and learn about Orthogonal Segments in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
  
-# Controlling Orthogonal Segments in Blazor Diagrams
+# Controlling Orthogonal Segments in Blazor Diagram Component
 
 ## How to Create an orthogonal Segment
 
