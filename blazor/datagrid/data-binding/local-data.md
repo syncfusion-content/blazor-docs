@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Local Data in Blazor DataGrid | Syncfusion
-description: Checkout and learn here all about Local Data in Syncfusion Blazor DataGrid and much more.
+description: Explore how to bind and display local data in the Syncfusion Blazor DataGrid using various approaches and customization options.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -1015,7 +1015,6 @@ The following example demonstrates how to show and hide the spinner during data 
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 @using Syncfusion.Blazor.Buttons
 
 <div Style="margin-bottom:15px">
@@ -1424,7 +1423,7 @@ builder.Services.AddSingleton<OrderDetails>();
 
 The following screenshot illustrates the addition, editing, and deletion operations performed, with changes reflected across all client sides.
 
-![SignalR Data](./images/signalR.gif)
+![SignalR Data](../images/signalR.gif)
 
 Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/databinding-in-blazor-datagrid/tree/master/SignalRDataGrid).
 
@@ -1724,7 +1723,7 @@ The following screenshot represents the Grid with **Observable Collection**.
 
 N> While using an Observable collection, the added, removed, and changed records are reflected in the UI. But while updating the Observable collection using external actions like timers, events, and other notifications, you need to call the StateHasChanged method to reflect the changes in the UI.
 
-## Add a range of items into ObservableCollection in Blazor DataGrid
+### Add a range of items into ObservableCollection in Blazor DataGrid
 
 The Syncfusion Blazor DataGrid supports binding to an ObservableCollection, which allows the Grid to automatically reflect changes made to the data source. This approach is particularly useful when you need to add a large batch of records to the Grid at once, such as:
 

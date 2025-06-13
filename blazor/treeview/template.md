@@ -11,7 +11,7 @@ documentation: ug
 
 The Blazor TreeView component allows to customize the look of TreeView nodes using the `NodeTemplate` property. The [`NodeTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewTemplates-1.html#Syncfusion_Blazor_Navigations_TreeViewTemplates_1_NodeTemplate) tag is nested inside the TreeViewTemplates tag, where the custom structure for TreeView can be defined. Inside the NodeTemplate tag, a generic type context property is used to access the tree node details.
 
-To customize Blazor TreeView items easily using a template and the CssClass property, you can check on this video.
+To customize Blazor TreeView items easily using a template and the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTreeView-1.html#Syncfusion_Blazor_Navigations_SfTreeView_1_CssClass) property, you can check on this video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=LQlFt9d5E34" %}
