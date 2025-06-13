@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Controlling Straight Segments in Blazor Diagrams | Syncfusion
+title: Controlling Straight Segments in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about Straight Segments in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Controlling Straight Segments in Blazor Diagrams
+# Controlling Straight Segments in Blazor Diagram Component
 
 ## How to Create Straight Segments
 

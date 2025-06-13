@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Controlling Lane Interaction in Blazor Diagrams | Syncfusion
+title: Controlling Lane Interaction in Blazor Diagram Component | Syncfusion
 description: How to select, resize(with and without selection), and swap the lane, and how to add the child element into the lane.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Controlling Lane Interaction in Blazor Diagrams
+# Controlling Lane Interaction in Blazor Diagram Component
 
 The diagram provides support to select, resize, or swap the lane interactively. 
 

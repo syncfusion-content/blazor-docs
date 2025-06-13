@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Controlling Accessibility in Blazor Diagrams | Syncfusion
+title: Controlling Accessibility in Blazor Diagram Component | Syncfusion
 description: Check out and learn about Bezier Segments in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Controlling Accessibility in Blazor Diagrams
+# Controlling Accessibility in Blazor Diagram Component
 
 ## How to Create a Bezier Segment
 

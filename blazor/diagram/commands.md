@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Controlling Commands in Blazor Diagrams | Syncfusion
+title: Controlling Commands in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about Commands in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Controlling Commands in Blazor Diagrams
+# Controlling Commands in Blazor Diagram Component
 
 There are several commands available in the diagram as follows.
 

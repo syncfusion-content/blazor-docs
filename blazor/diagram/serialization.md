@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Controlling Serialization in Blazor Diagrams | Syncfusion
+title: Controlling Serialization in Blazor Diagram Component | Syncfusion
 description: Learn here all about how to save and load the diagram elements in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Controlling Serialization in Blazor Diagrams
+# Controlling Serialization in Blazor Diagram Component
 
 Serialization is the process of saving and loading the persistent state of the diagram.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Controlling Expand and Collapse Behavior for Nodes in Blazor Diagrams | Syncfusion
+title: Controlling Expand and Collapse Behavior for Nodes in Blazor Diagram Component | Syncfusion
 description: Learn here all about how to create the Diagram Icon handles in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Controlling Expand and Collapse Behavior for Nodes in Blazor Diagrams
+# Controlling Expand and Collapse Behavior for Nodes in Blazor Diagram Component
 
 Diagram provides support to describe the state of the node. i.e., whether the node is in an expanded or collapsed state. The IsExpanded property of node is used to expand or collapse its children nodes.The Expand and Collapse support is used to compress the hierarchy view so that only the roots of each elements are visible.
 

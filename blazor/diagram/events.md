@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Controlling Diagram Events in Blazor Diagrams | Syncfusion
+title: Controlling Diagram Events in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about Diagram events in Syncfusion Blazor Diagram component and much more.
 platform: Blazor
 control: DiagramComponent
 documentation: ug
 ---
 
-# Controlling Diagram Events in Blazor Diagrams
+# Controlling Diagram Events in Blazor Diagram Component
 
 ## Created Event
 

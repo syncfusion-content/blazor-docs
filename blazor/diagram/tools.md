@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Controlling Tools in Blazor Diagrams | Syncfusion
+title: Controlling Tools in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about tools in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Controlling Tools in Blazor Diagrams
+# Controlling Tools in Blazor Diagram Component
 
 ## Drawing Tools
 

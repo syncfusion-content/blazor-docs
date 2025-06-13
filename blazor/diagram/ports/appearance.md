@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Controlling Port Appearance in Blazor Diagrams | Syncfusion
+title: Controlling Port Appearance in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about Appearance in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Controlling Port Appearance in Blazor Diagrams
+# Controlling Port Appearance in Blazor Diagram Component
 
 ## How to Change the Appearance of a Port
 

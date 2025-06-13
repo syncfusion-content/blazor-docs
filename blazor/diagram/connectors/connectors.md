@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Controlling Connectors in Blazor Diagrams | Syncfusion
+title: Controlling Connectors in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about actions of connectors in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Controlling Connectors in Blazor Diagrams
+# Controlling Connectors in Blazor Diagram Component
 
 Connectors are objects used to create link between two points, nodes or ports to represent the relationships between them.
 
