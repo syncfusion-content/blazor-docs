@@ -1,20 +1,21 @@
 ---
 layout: post
-title: Excel Like Filter in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn here all about Excel like filter in Syncfusion Blazor DataGrid component and much more details.
+title: Excel Like Filter in Blazor DataGrid | Syncfusion
+description: Checkout and learn here all about Excel like filter in Syncfusion Blazor DataGrid and much more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Excel like filter in Blazor Grid component
+# Excel like filter in Blazor DataGrid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Grid component offers an Excel-like filter feature, providing a familiar and user-friendly interface for filtering data within the grid. This feature simplifies complex filtering operations on specific columns, allowing for quick data location and manipulation, similar to Microsoft Excel. Excel like filtering is especially useful when dealing with large datasets and complex filtering requirements.
+The Syncfusion Blazor DataGrid offers an Excel-like filter feature, providing a familiar and user-friendly interface for filtering data within the Grid. This feature simplifies complex filtering operations on specific columns, allowing for quick data location and manipulation, similar to Microsoft Excel. Excel like filtering is especially useful when dealing with large datasets and complex filtering requirements.
 
-Here is an example that showcasing how to render the excel like filter within the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid:
+Here is an example that showcasing how to render the Excel like filter within the Grid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Grids
 
 <SfGrid @ref="Grid" TValue="OrderData" AllowFiltering="true" AllowSorting="true" AllowPaging="true" DataSource="@GridData">
@@ -39,53 +40,53 @@ Here is an example that showcasing how to render the excel like filter within th
         GridData = OrderData.GetAllRecords();
     }
 }
+
 {% endhighlight %}
+
 {% highlight c# tabtitle="OrderData.cs" %}
+
 public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+    public OrderData() {}
+
+    public OrderData(int? OrderID, string CustomerID, DateTime? OrderDate, double? Freight)
     {
-        public static List<OrderData> Orders = new List<OrderData>();
-
-        public OrderData()
-        {
-
-        }
-        public OrderData(int? OrderID, string CustomerID, DateTime? OrderDate, double? Freight)
-        {
-            this.OrderID = OrderID;
-            this.CustomerID = CustomerID;
-            this.OrderDate = OrderDate;
-            this.Freight = Freight;
-        }
-
-        public static List<OrderData> GetAllRecords()
-        {
-            if (Orders.Count() == 0)
-            {
-                int OrderID = 10248;
-                
-                for (int i = 1; i < 3; i++)
-                {
-                    Orders.Add(new OrderData(OrderID + 1, "VINET", new DateTime(1996, 07, 04), 32.38));
-                    Orders.Add(new OrderData(OrderID + 2, "TOMSP", new DateTime(1996, 07, 05), 11.61));
-                    Orders.Add(new OrderData(OrderID + 3, "HANAR", new DateTime(1996, 07, 06), 65.83));
-                    Orders.Add(new OrderData(OrderID + 4, "VICTE", new DateTime(1996, 07, 07), 45.78));
-                    Orders.Add(new OrderData(OrderID + 5, "SUPRD", new DateTime(1996, 07, 08), 98.6));
-                    Orders.Add(new OrderData(OrderID + 6, "HANAR", new DateTime(1996, 07, 09), 103.45));
-                    Orders.Add(new OrderData(OrderID + 7, "CHOPS", new DateTime(1996, 07, 10), 103.45));
-                    Orders.Add(new OrderData(OrderID + 8, "RICSU", new DateTime(1996, 07, 11), 112.48));
-                    Orders.Add(new OrderData(OrderID + 9, "WELLI", new DateTime(1996, 07, 12), 33.45));
-                    OrderID += 9;
-                    
-                }
-            }
-            return Orders;
-        }
-
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;
+        this.OrderDate = OrderDate;
+        this.Freight = Freight;
     }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count() == 0)
+        {
+            int OrderID = 10248;
+                
+            for (int i = 1; i < 3; i++)
+            {
+                Orders.Add(new OrderData(OrderID + 1, "VINET", new DateTime(1996, 07, 04), 32.38));
+                Orders.Add(new OrderData(OrderID + 2, "TOMSP", new DateTime(1996, 07, 05), 11.61));
+                Orders.Add(new OrderData(OrderID + 3, "HANAR", new DateTime(1996, 07, 06), 65.83));
+                Orders.Add(new OrderData(OrderID + 4, "VICTE", new DateTime(1996, 07, 07), 45.78));
+                Orders.Add(new OrderData(OrderID + 5, "SUPRD", new DateTime(1996, 07, 08), 98.6));
+                Orders.Add(new OrderData(OrderID + 6, "HANAR", new DateTime(1996, 07, 09), 103.45));
+                Orders.Add(new OrderData(OrderID + 7, "CHOPS", new DateTime(1996, 07, 10), 103.45));
+                Orders.Add(new OrderData(OrderID + 8, "RICSU", new DateTime(1996, 07, 11), 112.48));
+                Orders.Add(new OrderData(OrderID + 9, "WELLI", new DateTime(1996, 07, 12), 33.45));
+                OrderID += 9; 
+            }
+        }
+        return Orders;
+    }
+
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public DateTime? OrderDate { get; set; }
+    public double? Freight { get; set; }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -96,12 +97,13 @@ public class OrderData
 
 ## Checkbox filtering
 
-The checkbox filtering feature in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid enables you to filter data based on checkbox selections within a column. This powerful filtering option simplifies the process of narrowing down data, providing a more efficient and user-friendly experience. The check box filter feature is particularly useful when dealing with columns containing categorical data.
+The checkbox filtering feature in the Syncfusion Blazor DataGrid enables you to filter data based on checkbox selections within a column. This powerful filtering option simplifies the process of narrowing down data, providing a more efficient and user-friendly experience. The check box filter feature is particularly useful when dealing with columns containing categorical data.
 
-Here is an example that showcasing how to render the check box filter within the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid:
+Here is an example that showcasing how to render the check box filter within the Grid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Grids
 
 <SfGrid @ref="Grid" TValue="OrderData" AllowFiltering="true" AllowSorting="true" AllowPaging="true" DataSource="@GridData">
@@ -126,52 +128,53 @@ Here is an example that showcasing how to render the check box filter within the
         GridData = OrderData.GetAllRecords();
     }
 }
+
 {% endhighlight %}
+
 {% highlight c# tabtitle="OrderData.cs" %}
+
 public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+    public OrderData() {}
+
+    public OrderData(int? OrderID, string CustomerID, DateTime? OrderDate, double? Freight)
     {
-        public static List<OrderData> Orders = new List<OrderData>();
-
-        public OrderData()
-        {
-
-        }
-        public OrderData(int? OrderID, string CustomerID, DateTime? OrderDate, double? Freight)
-        {
-            this.OrderID = OrderID;
-            this.CustomerID = CustomerID;
-            this.OrderDate = OrderDate;
-            this.Freight = Freight;
-        }
-
-        public static List<OrderData> GetAllRecords()
-        {
-            if (Orders.Count() == 0)
-            {
-                int OrderID = 10248;
-                
-                for (int i = 1; i < 3; i++)
-                {
-                    Orders.Add(new OrderData(OrderID + 1, "VINET", new DateTime(1996, 07, 04), 32.38));
-                    Orders.Add(new OrderData(OrderID + 2, "TOMSP", new DateTime(1996, 07, 05), 11.61));
-                    Orders.Add(new OrderData(OrderID + 3, "HANAR", new DateTime(1996, 07, 06), 65.83));
-                    Orders.Add(new OrderData(OrderID + 4, "VICTE", new DateTime(1996, 07, 07), 45.78));
-                    Orders.Add(new OrderData(OrderID + 5, "SUPRD", new DateTime(1996, 07, 08), 98.6));
-                    Orders.Add(new OrderData(OrderID + 6, "HANAR", new DateTime(1996, 07, 09), 103.45));
-                    Orders.Add(new OrderData(OrderID + 7, "CHOPS", new DateTime(1996, 07, 10), 103.45));
-                    Orders.Add(new OrderData(OrderID + 8, "RICSU", new DateTime(1996, 07, 11), 112.48));
-                    Orders.Add(new OrderData(OrderID + 9, "WELLI", new DateTime(1996, 07, 12), 33.45));
-                    OrderID += 9;
-                }
-            }
-            return Orders;
-        }
-
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;
+        this.OrderDate = OrderDate;
+        this.Freight = Freight;
     }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count() == 0)
+        {
+            int OrderID = 10248;
+                
+            for (int i = 1; i < 3; i++)
+            {
+                Orders.Add(new OrderData(OrderID + 1, "VINET", new DateTime(1996, 07, 04), 32.38));
+                Orders.Add(new OrderData(OrderID + 2, "TOMSP", new DateTime(1996, 07, 05), 11.61));
+                Orders.Add(new OrderData(OrderID + 3, "HANAR", new DateTime(1996, 07, 06), 65.83));
+                Orders.Add(new OrderData(OrderID + 4, "VICTE", new DateTime(1996, 07, 07), 45.78));
+                Orders.Add(new OrderData(OrderID + 5, "SUPRD", new DateTime(1996, 07, 08), 98.6));
+                Orders.Add(new OrderData(OrderID + 6, "HANAR", new DateTime(1996, 07, 09), 103.45));
+                Orders.Add(new OrderData(OrderID + 7, "CHOPS", new DateTime(1996, 07, 10), 103.45));
+                Orders.Add(new OrderData(OrderID + 8, "RICSU", new DateTime(1996, 07, 11), 112.48));
+                Orders.Add(new OrderData(OrderID + 9, "WELLI", new DateTime(1996, 07, 12), 33.45));
+                OrderID += 9; 
+            }
+        }
+        return Orders;
+    }
+
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public DateTime? OrderDate { get; set; }
+    public double? Freight { get; set; }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -179,16 +182,17 @@ public class OrderData
 
 ## Customize the filter choice count
 
-By default, the filter choice count is set to 1000, which means that the filter dialog will display a maximum of 1000 distinct values for each column as a checkbox list data. This default value ensures that the filter operation remains efficient, even with large datasets. Additionally, the filter dialog retrieves and displays distinct data from the first 1000 records bind to the Grid to optimize performance, while the remaining records are returned as a result of the search option within the filter dialog.
+By default, the filter choice count is set to 1000, which means that the filter dialog will display a maximum of 1000 distinct values for each column as a checkbox list data. This default value ensures that the filter operation remains efficient, even with large datasets. Additionally, the filter dialog retrieves and displays distinct data from the first 1000 records bind to the Syncfusion Blazor DataGrid to optimize performance, while the remaining records are returned as a result of the search option within the filter dialog.
 
-The Grid component allows you to customize the number of distinct data displayed in the checkbox list of the excel/checkbox type filter dialog. This can be useful when you want to customize the default filter choice count values while using large datasets.
+The Grid allows you to customize the number of distinct data displayed in the checkbox list of the Excel/Checkbox type filter dialog. This can be useful when you want to customize the default filter choice count values while using large datasets.
 
 However, you have the flexibility to increase or decrease the filter choice count based on your specific requirements. This can be achieved by adjusting the [FilterChoiceCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterDialogOpeningEventArgs.html#Syncfusion_Blazor_Grids_FilterDialogOpeningEventArgs_FilterChoiceCount) value.
 
-The following example demonstrates how to customize the filter choice count in the checkbox list of the filter dialog. In the [FilterDialogOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_FilterDialogOpening) event, you can set the `FilterChoiceCount` property to the desired value.
+The following example demonstrates how to customize the filter choice count in the checkbox list of the filter dialog. In the [FilterDialogOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_FilterDialogOpening) event, you can set the `FilterChoiceCount` property to the desired value:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Grids
 
 <SfGrid @ref="Grid" AllowFiltering="true" AllowPaging="true" Height="273px" DataSource="@GridData">
@@ -217,29 +221,29 @@ The following example demonstrates how to customize the filter choice count in t
         GridData = OrderData.GetAllRecords();
     }
 }
+
 {% endhighlight %}
+
 {% highlight c# tabtitle="OrderData.cs" %}
+
 public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+    public OrderData() {}
+
+    public OrderData(int? OrderID, string CustomerID, string ProductName, string Quantity)
     {
-        public static List<OrderData> Orders = new List<OrderData>();
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;
+        this.ProductName = ProductName;
+        this.Quantity = Quantity;
+    }
 
-        public OrderData()
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count() == 0)
         {
-
-        }
-        public OrderData(int? OrderID, string CustomerID, string ProductName, string Quantity)
-        {
-            this.OrderID = OrderID;
-            this.CustomerID = CustomerID;
-            this.ProductName = ProductName;
-            this.Quantity = Quantity;
-        }
-
-        public static List<OrderData> GetAllRecords()
-        {
-            if (Orders.Count() == 0)
-            {
-                string[] Product = {"Chai", "Chang", "Aniseed Syrup", "Chef Anton\"s Cajun Seasoning", "Chef Anton\"s Gumbo Mix", "Grandma\"s Boysenberry Spread",
+            string[] Product = {"Chai", "Chang", "Aniseed Syrup", "Chef Anton\"s Cajun Seasoning", "Chef Anton\"s Gumbo Mix", "Grandma\"s Boysenberry Spread",
         "Uncle Bob\"s Organic Dried Pears", "Northwoods Cranberry Sauce", "Mishi Kobe Niku", "Ikura", "Queso Cabrales", "Queso Manchego La Pastora", "Konbu",
         "Tofu", "Genen Shouyu", "Pavlova", "Alice Mutton", "Carnarvon Tigers", "Teatime Chocolate Biscuits", "Sir Rodney\"s Marmalade", "Sir Rodney\"s Scones",
         "Gustaf\"s Knäckebröd", "Tunnbröd", "Guaraná Fantástica", "NuNuCa Nuß-Nougat-Creme", "Gumbär Gummibärchen", "Schoggi Schokolade", "Rössle Sauerkraut",
@@ -251,11 +255,11 @@ public class OrderData
         "Gudbrandsdalsost", "Outback Lager", "Flotemysost", "Mozzarella di Giovanni", "Röd Kaviar", "Longlife Tofu", "Rhönbräu Klosterbier", "Lakkalikööri", "Original Frankfurter grüne Soße"};
 
 
-                string[] Quantity = {"10 boxes x 20 bags", "24 - 12 oz bottles", "12 - 550 ml bottles", "48 - 6 oz jars", "36 boxes", "12 - 8 oz jars", "12 - 1 lb pkgs.", "12 - 12 oz jars", "18 - 500 g pkgs.", "12 - 200 ml jars",
+            string[] Quantity = {"10 boxes x 20 bags", "24 - 12 oz bottles", "12 - 550 ml bottles", "48 - 6 oz jars", "36 boxes", "12 - 8 oz jars", "12 - 1 lb pkgs.", "12 - 12 oz jars", "18 - 500 g pkgs.", "12 - 200 ml jars",
             "1 kg pkg.", "10 - 500 g pkgs.", "2 kg box", "40 - 100 g pkgs.", "24 - 250 ml bottles", "32 - 500 g boxes", "20 - 1 kg tins", "16 kg pkg.", "10 boxes x 12 pieces", "30 gift boxes", "24 pkgs. x 4 pieces", "24 - 500 g pkgs.", "12 - 250 g pkgs.",
             "12 - 355 ml cans", "20 - 450 g glasses", "100 - 250 g bags" };
 
-                string[] CustomerID = {"VINET", "TOMSP", "HANAR", "VICTE", "SUPRD", "HANAR", "CHOPS", "RICSU", "WELLI", "HILAA", "ERNSH", "CENTC",
+            string[] CustomerID = {"VINET", "TOMSP", "HANAR", "VICTE", "SUPRD", "HANAR", "CHOPS", "RICSU", "WELLI", "HILAA", "ERNSH", "CENTC",
         "OTTIK", "QUEDE", "RATTC", "ERNSH", "FOLKO", "BLONP", "WARTH", "FRANK", "GROSR", "WHITC", "WARTH", "SPLIR", "RATTC", "QUICK", "VINET",
         "MAGAA", "TORTU", "MORGK", "BERGS", "LEHMS", "BERGS", "ROMEY", "ROMEY", "LILAS", "LEHMS", "QUICK", "QUICK", "RICAR", "REGGC", "BSBEV",
         "COMMI", "QUEDE", "TRADH", "TORTU", "RATTC", "VINET", "LILAS", "BLONP", "HUNGO", "RICAR", "MAGAA", "WANDK", "SUPRD", "GODOS", "TORTU",
@@ -264,33 +268,33 @@ public class OrderData
         "HUNGO", "PRINI", "FRANK", "OLDWO", "MEREP", "BONAP", "SIMOB", "FRANK", "LEHMS", "WHITC", "QUICK", "RATTC", "FAMIA"};
 
 
-                int OrderID = 10248;
-                int i = 0; int j = 0; int k = 0; int l = 0; int m = 0;
-                for (int x = 0; x < 25000; x++)
+            int OrderID = 10248;
+            int i = 0; int j = 0; int k = 0; int l = 0; int m = 0;
+            for (int x = 0; x < 25000; x++)
+            {
+                i = i >= CustomerID.Length ? 0 : i;
+                l = l >= Product.Length ? 0 : l;
+                k = k >= Quantity.Length ? 0 : k;
+                Orders.Add(new OrderData()
                 {
-                    i = i >= CustomerID.Length ? 0 : i;
-                    l = l >= Product.Length ? 0 : l;
-                    k = k >= Quantity.Length ? 0 : k;
-                    Orders.Add(new OrderData()
-                        {
-                            OrderID = OrderID + x,
-                            CustomerID = CustomerID[i],
-                            ProductName = Product[l],
-                            Quantity = Quantity[k],
+                    OrderID = OrderID + x,
+                    CustomerID = CustomerID[i],
+                    ProductName = Product[l],
+                    Quantity = Quantity[k],
 
-                        });
-                    i++; j++; k++; l++;
-                }
-
+                });
+                i++; j++; k++; l++;
             }
-            return Orders;
         }
-
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public string ProductName { get; set; }
-        public string Quantity { get; set; }
+        return Orders;
     }
+
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public string ProductName { get; set; }
+    public string Quantity { get; set; }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -300,14 +304,15 @@ public class OrderData
 
 ## Show customized text in checkbox list data
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid component provides you with the flexibility to customize the text displayed in the Excel/Checkbox filtering options. This allows you to modify the default text and provide more meaningful and contextual labels for the filtering.
+The Syncfusion Blazor DataGrid provides you with the flexibility to customize the text displayed in the Excel/Checkbox filtering options. This allows you to modify the default text and provide more meaningful and contextual labels for the filtering.
 
 To customize the text in the Excel/Checkbox filter, you can define a `FilterItemTemplate`  and bind it to the desired column. The `FilterItemTemplate`  property allows you to create custom templates for filter items. You can use any logic and HTML elements within this template to display the desired text or content.
 
-In the example below, you can see how you can customize the text displayed in the filter checkbox list for the **Delivered** column. This is achieved by defining a `FilterItemTemplate`  within the element for that specific column. Inside the template, you can use FilterItemTemplateContext to conditionally display **Delivered** if the data value is true and **Not delivered** if the value is false.
+In the example below, you can see how you can customize the text displayed in the filter checkbox list for the **Delivered** column. This is achieved by defining a `FilterItemTemplate`  within the element for that specific column. Inside the template, you can use FilterItemTemplateContext to conditionally display **Delivered** if the data value is true and **Not delivered** if the value is **false**:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@GridData" @ref="Grid" AllowFiltering="true" AllowPaging="true">
@@ -350,49 +355,49 @@ In the example below, you can see how you can customize the text displayed in th
         GridData = OrderData.GetAllRecords();
     }
 }
+
 {% endhighlight %}
+
 {% highlight c# tabtitle="OrderData.cs" %}
- public class OrderData
+
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+    public OrderData() {}
+    public OrderData(string CategoryName, bool Delivered, int? ProductID)
     {
-        public static List<OrderData> Orders = new List<OrderData>();
-
-        public OrderData()
-        {
-
-        }
-        public OrderData(string CategoryName, bool Delivered, int? ProductID)
-        {
-            this.CategoryName = CategoryName;
-            this.Delivered = Delivered;
-            this.ProductID = ProductID;
-        }
-
-       public static List<OrderData> GetAllRecords()
-        {
-            if (Orders.Count() == 0)
-            {
-                int ProductID = 0;
-                for (int i = 1; i < 7; i++)
-                {
-                    Orders.Add(new OrderData("Beverages", true, ProductID + 1));
-                    Orders.Add(new OrderData("Condiments", false, ProductID + 2));
-                    Orders.Add(new OrderData("Confections", false, ProductID + 3));
-                    Orders.Add(new OrderData("DairyProducts", true, ProductID + 4));
-                    Orders.Add(new OrderData("Grains", true, ProductID + 5));
-                    Orders.Add(new OrderData("Meat", false, ProductID + 6));
-                    Orders.Add(new OrderData("Produce", true, ProductID + 7));
-                    Orders.Add(new OrderData("Seafood", true, ProductID + 8));
-                    Orders.Add(new OrderData("Confections", false, ProductID + 9));
-                    ProductID += 9;
-                }
-            }
-            return Orders;
-        }
-
-        public string CategoryName { get; set; }
-        public bool Delivered { get; set; }
-        public int? ProductID { get; set; }
+        this.CategoryName = CategoryName;
+        this.Delivered = Delivered;
+        this.ProductID = ProductID;
     }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count() == 0)
+        {
+            int ProductID = 0;
+            for (int i = 1; i < 7; i++)
+            {
+                Orders.Add(new OrderData("Beverages", true, ProductID + 1));
+                Orders.Add(new OrderData("Condiments", false, ProductID + 2));
+                Orders.Add(new OrderData("Confections", false, ProductID + 3));
+                Orders.Add(new OrderData("DairyProducts", true, ProductID + 4));
+                Orders.Add(new OrderData("Grains", true, ProductID + 5));
+                Orders.Add(new OrderData("Meat", false, ProductID + 6));
+                Orders.Add(new OrderData("Produce", true, ProductID + 7));
+                Orders.Add(new OrderData("Seafood", true, ProductID + 8));
+                Orders.Add(new OrderData("Confections", false, ProductID + 9));
+                ProductID += 9;
+            }
+        }
+        return Orders;
+    }
+
+    public string CategoryName { get; set; }
+    public bool Delivered { get; set; }
+    public int? ProductID { get; set; }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -400,12 +405,13 @@ In the example below, you can see how you can customize the text displayed in th
 
 ## Show template in checkbox list data
 
-The `FilterItemTemplate` property in the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid allows you to customize the appearance of filter items in the grid’s filter checkbox list for a specific column. This property is useful when you want to provide a custom UI or additional information within the filter checkbox list, such as icons, text, or any HTML elements, alongside the default filter items.
+The `FilterItemTemplate` property in the Syncfusion Blazor DataGrid allows you to customize the appearance of filter items in the Grid’s filter checkbox list for a specific column. This property is useful when you want to provide a custom UI or additional information within the filter checkbox list, such as icons, text, or any HTML elements, alongside the default filter items.
 
-In this example, you can see how to use the `FilterItemTemplate` to render icons along with the category names in the filter checkbox list for the **CategoryName** column.
+In this example, you can see how to use the `FilterItemTemplate` to render icons along with the category names in the filter checkbox list for the **CategoryName** column:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@GridData" @ref="Grid" AllowFiltering="true" AllowPaging="true">
@@ -468,61 +474,61 @@ In this example, you can see how to use the `FilterItemTemplate` to render icons
         GridData = OrderData.GetAllRecords();
     }
 }
+
 {% endhighlight %}
+
 {% highlight c# tabtitle="OrderData.cs" %}
- public class OrderData
+
+public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+    public OrderData() {}
+    public OrderData(string CategoryName, bool Discontinued, int? ProductID)
     {
-        public static List<OrderData> Orders = new List<OrderData>();
-
-        public OrderData()
-        {
-
-        }
-        public OrderData(string CategoryName, bool Discontinued, int? ProductID)
-        {
-            this.CategoryName = CategoryName;
-            this.Discontinued = Discontinued;
-            this.ProductID = ProductID;
-        }
-
-        public static List<OrderData> GetAllRecords()
-        {
-            if (Orders.Count() == 0)
-            {
-                int ProductID = 0;
-                for (int i = 1; i < 7; i++)
-                {
-                    Orders.Add(new OrderData("Beverages", true, ProductID + 1));
-                    Orders.Add(new OrderData("Condiments", false, ProductID + 2));
-                    Orders.Add(new OrderData("Confections", false, ProductID + 3));
-                    Orders.Add(new OrderData("DairyProducts", true, ProductID + 4));
-                    Orders.Add(new OrderData("Grains", true, ProductID + 5));
-                    Orders.Add(new OrderData("Meat", false, ProductID + 6));
-                    Orders.Add(new OrderData("Produce", true, ProductID + 7));
-                    Orders.Add(new OrderData("Seafood", true, ProductID + 8));
-                    Orders.Add(new OrderData("Confections", false, ProductID + 9));
-                    ProductID += 9;
-                }
-            }
-            return Orders;
-        }
-
-        public string CategoryName { get; set; }
-        public bool Discontinued { get; set; }
-        public int? ProductID { get; set; }
+        this.CategoryName = CategoryName;
+        this.Discontinued = Discontinued;
+        this.ProductID = ProductID;
     }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count() == 0)
+        {
+            int ProductID = 0;
+            for (int i = 1; i < 7; i++)
+            {
+                Orders.Add(new OrderData("Beverages", true, ProductID + 1));
+                Orders.Add(new OrderData("Condiments", false, ProductID + 2));
+                Orders.Add(new OrderData("Confections", false, ProductID + 3));
+                Orders.Add(new OrderData("DairyProducts", true, ProductID + 4));
+                Orders.Add(new OrderData("Grains", true, ProductID + 5));
+                Orders.Add(new OrderData("Meat", false, ProductID + 6));
+                Orders.Add(new OrderData("Produce", true, ProductID + 7));
+                Orders.Add(new OrderData("Seafood", true, ProductID + 8));
+                Orders.Add(new OrderData("Confections", false, ProductID + 9));
+                ProductID += 9;
+            }
+        }
+        return Orders;
+    }
+
+    public string CategoryName { get; set; }
+    public bool Discontinued { get; set; }
+    public int? ProductID { get; set; }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZrJjVtQgjHtuqOK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Customize the excel filter dialog using CSS
+## Customize the Excel filter dialog using CSS
 
-In the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid, you have the flexibility to enhance the visual presentation of the excel filter dialog. This can be achieved by utilizing CSS styles to modify the dialog’s appearance according to the specific needs and aesthetics of your application.
+In the Syncfusion Blazor DataGrid, you have the flexibility to enhance the visual presentation of the Excel filter dialog. This can be achieved by utilizing CSS styles to modify the dialog’s appearance according to the specific needs and aesthetics of your application.
 
 **1.Removing context menu option**
 
-The excel filter dialog includes several features such as **context menu**, **search box**, and **checkbox list** that may not be required in some scenarios. You can remove these options using the className attribute in the grid component.
+The Excel filter dialog includes several features such as **context menu**, **search box**, and **checkbox list** that may not be required in some scenarios. You can remove these options using the className attribute in the Grid.
 
 ```cshtml
 <style>
@@ -532,10 +538,11 @@ The excel filter dialog includes several features such as **context menu**, **se
 </style>
 ```
 
-The following example demonstrates how to remove the context menu option in the excel filter dialog using above mentioned CSS
+The following example demonstrates how to remove the context menu option in the Excel filter dialog using above mentioned CSS:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Grids
 
 <SfGrid @ref="Grid" AllowFiltering="true" AllowPaging="true" DataSource="@GridData">
@@ -566,52 +573,51 @@ The following example demonstrates how to remove the context menu option in the 
         GridData = OrderData.GetAllRecords();
     }
 }
+
 {% endhighlight %}
+
 {% highlight c# tabtitle="OrderData.cs" %}
+
 public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+    public OrderData(){}
+    public OrderData(int? OrderID, string CustomerID, DateTime? OrderDate, double? Freight)
     {
-        public static List<OrderData> Orders = new List<OrderData>();
-
-        public OrderData()
-        {
-
-        }
-        public OrderData(int? OrderID, string CustomerID, DateTime? OrderDate, double? Freight)
-        {
-            this.OrderID = OrderID;
-            this.CustomerID = CustomerID;
-            this.OrderDate = OrderDate;
-            this.Freight = Freight;
-        }
-
-        public static List<OrderData> GetAllRecords()
-        {
-            if (Orders.Count() == 0)
-            {
-                int OrderID = 10248;
-
-                for (int i = 1; i < 3; i++)
-                {
-                    Orders.Add(new OrderData(OrderID + 1, "VINET", new DateTime(1996, 07, 06), 32.38));
-                    Orders.Add(new OrderData(OrderID + 2, "TOMSP", new DateTime(1996, 07, 06), 11.61));
-                    Orders.Add(new OrderData(OrderID + 3, "HANAR", new DateTime(1996, 07, 06), 65.83));
-                    Orders.Add(new OrderData(OrderID + 4, "VICTE", new DateTime(1996, 07, 06), 45.78));
-                    Orders.Add(new OrderData(OrderID + 5, "SUPRD", new DateTime(1996, 07, 06), 98.6));
-                    Orders.Add(new OrderData(OrderID + 6, "HANAR", new DateTime(1996, 07, 06), 103.45));
-                    Orders.Add(new OrderData(OrderID + 7, "CHOPS", new DateTime(1996, 07, 06), 103.45));
-                    Orders.Add(new OrderData(OrderID + 8, "RICSU", new DateTime(1996, 07, 06), 112.48));
-                    Orders.Add(new OrderData(OrderID + 9, "WELLI", new DateTime(1996, 07, 06), 33.45));
-                    OrderID += 9;
-                }
-            }
-            return Orders;
-        }
-
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;
+        this.OrderDate = OrderDate;
+        this.Freight = Freight;
     }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count() == 0)
+        {
+            int OrderID = 10248;
+            for (int i = 1; i < 3; i++)
+            {
+                Orders.Add(new OrderData(OrderID + 1, "VINET", new DateTime(1996, 07, 06), 32.38));
+                Orders.Add(new OrderData(OrderID + 2, "TOMSP", new DateTime(1996, 07, 06), 11.61));
+                Orders.Add(new OrderData(OrderID + 3, "HANAR", new DateTime(1996, 07, 06), 65.83));
+                Orders.Add(new OrderData(OrderID + 4, "VICTE", new DateTime(1996, 07, 06), 45.78));
+                Orders.Add(new OrderData(OrderID + 5, "SUPRD", new DateTime(1996, 07, 06), 98.6));
+                Orders.Add(new OrderData(OrderID + 6, "HANAR", new DateTime(1996, 07, 06), 103.45));
+                Orders.Add(new OrderData(OrderID + 7, "CHOPS", new DateTime(1996, 07, 06), 103.45));
+                Orders.Add(new OrderData(OrderID + 8, "RICSU", new DateTime(1996, 07, 06), 112.48));
+                Orders.Add(new OrderData(OrderID + 9, "WELLI", new DateTime(1996, 07, 06), 33.45));
+                OrderID += 9;
+            }
+        }
+        return Orders;
+    }
+
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public DateTime? OrderDate { get; set; }
+    public double? Freight { get; set; }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -621,10 +627,11 @@ public class OrderData
 
 You can customize the height and width of each column’s filter dialog using the CSS style in the [FilterDialogOpening](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_FilterDialogOpening) event of the Grid.
 
-Before opening a filter dialog for each column, the `FilterDialogOpening` event will be triggered. At that point, based on the boolean value, we have set the height and width of the CustomerID and OrderDate columns using the CSS style in the following sample.
+Before opening a filter dialog for each column, the `FilterDialogOpening` event will be triggered. At that point, based on the boolean value, we have set the height and width of the **CustomerID** and **OrderDate** columns using the CSS style in the following sample.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+
 @using Syncfusion.Blazor.Grids
 
 <SfGrid ID="Grid" @ref="Grid" AllowFiltering="true" AllowPaging="true" DataSource="@GridData">
@@ -690,52 +697,52 @@ Before opening a filter dialog for each column, the `FilterDialogOpening` event 
         }
     }
 }
+
 {% endhighlight %}
+
 {% highlight c# tabtitle="OrderData.cs" %}
+
 public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+    public OrderData(){}
+
+    public OrderData(int? OrderID, string CustomerID, DateTime? OrderDate, double? Freight)
     {
-        public static List<OrderData> Orders = new List<OrderData>();
-
-        public OrderData()
-        {
-
-        }
-        public OrderData(int? OrderID, string CustomerID, DateTime? OrderDate, double? Freight)
-        {
-            this.OrderID = OrderID;
-            this.CustomerID = CustomerID;
-            this.OrderDate = OrderDate;
-            this.Freight = Freight;
-        }
-
-        public static List<OrderData> GetAllRecords()
-        {
-            if (Orders.Count() == 0)
-            {
-                int OrderID = 10248;
-
-                for (int i = 1; i < 3; i++)
-                {
-                    Orders.Add(new OrderData(OrderID + 1, "VINET", new DateTime(1996, 07, 06), 32.38));
-                    Orders.Add(new OrderData(OrderID + 2, "TOMSP", new DateTime(1996, 07, 06), 11.61));
-                    Orders.Add(new OrderData(OrderID + 3, "HANAR", new DateTime(1996, 07, 06), 65.83));
-                    Orders.Add(new OrderData(OrderID + 4, "VICTE", new DateTime(1996, 07, 06), 45.78));
-                    Orders.Add(new OrderData(OrderID + 5, "SUPRD", new DateTime(1996, 07, 06), 98.6));
-                    Orders.Add(new OrderData(OrderID + 6, "HANAR", new DateTime(1996, 07, 06), 103.45));
-                    Orders.Add(new OrderData(OrderID + 7, "CHOPS", new DateTime(1996, 07, 06), 103.45));
-                    Orders.Add(new OrderData(OrderID + 8, "RICSU", new DateTime(1996, 07, 06), 112.48));
-                    Orders.Add(new OrderData(OrderID + 9, "WELLI", new DateTime(1996, 07, 06), 33.45));
-                    OrderID += 9;
-                }
-            }
-            return Orders;
-        }
-
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;
+        this.OrderDate = OrderDate;
+        this.Freight = Freight;
     }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count() == 0)
+        {
+            int OrderID = 10248;
+            for (int i = 1; i < 3; i++)
+            {
+                Orders.Add(new OrderData(OrderID + 1, "VINET", new DateTime(1996, 07, 06), 32.38));
+                Orders.Add(new OrderData(OrderID + 2, "TOMSP", new DateTime(1996, 07, 06), 11.61));
+                Orders.Add(new OrderData(OrderID + 3, "HANAR", new DateTime(1996, 07, 06), 65.83));
+                Orders.Add(new OrderData(OrderID + 4, "VICTE", new DateTime(1996, 07, 06), 45.78));
+                Orders.Add(new OrderData(OrderID + 5, "SUPRD", new DateTime(1996, 07, 06), 98.6));
+                Orders.Add(new OrderData(OrderID + 6, "HANAR", new DateTime(1996, 07, 06), 103.45));
+                Orders.Add(new OrderData(OrderID + 7, "CHOPS", new DateTime(1996, 07, 06), 103.45));
+                Orders.Add(new OrderData(OrderID + 8, "RICSU", new DateTime(1996, 07, 06), 112.48));
+                Orders.Add(new OrderData(OrderID + 9, "WELLI", new DateTime(1996, 07, 06), 33.45));
+                OrderID += 9;
+            }
+        }
+        return Orders;
+    }
+
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public DateTime? OrderDate { get; set; }
+    public double? Freight { get; set; }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -743,7 +750,7 @@ public class OrderData
 
 **3.Customize filter icon for filtered columns**
 
-After filtering the column, the DataGrid will display the in-built filtered icon with predefined styles by default. The filtered icon can also be customized using <b>.e-grid .e-filtered::before</b> class.
+After filtering the column, the Grid will display the in-built filtered icon with predefined styles by default. The filtered icon can also be customized using <b>.e-grid .e-filtered::before</b> class.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -762,8 +769,8 @@ After filtering the column, the DataGrid will display the in-built filtered icon
 
 <style>
     .e-grid .e-filtered::before {
-        color: red;               // set the color to filtered icon
-        font-size: medium;        // set the font-size to filtered icon
+        color: red;               // set the color to filtered icon.
+        font-size: medium;        // set the font-size to filtered icon.
     }
 </style>
 
@@ -777,52 +784,52 @@ After filtering the column, the DataGrid will display the in-built filtered icon
         GridData = OrderData.GetAllRecords();
     }
 }
+
 {% endhighlight %}
+
 {% highlight c# tabtitle="OrderData.cs" %}
+
 public class OrderData
+{
+    public static List<OrderData> Orders = new List<OrderData>();
+    public OrderData(){}
+
+    public OrderData(int? OrderID, string CustomerID, DateTime? OrderDate, double? Freight)
     {
-        public static List<OrderData> Orders = new List<OrderData>();
-
-        public OrderData()
-        {
-
-        }
-        public OrderData(int? OrderID, string CustomerID, DateTime? OrderDate, double? Freight)
-        {
-            this.OrderID = OrderID;
-            this.CustomerID = CustomerID;
-            this.OrderDate = OrderDate;
-            this.Freight = Freight;
-        }
-
-        public static List<OrderData> GetAllRecords()
-        {
-            if (Orders.Count() == 0)
-            {
-                int OrderID = 10248;
-
-                for (int i = 1; i < 3; i++)
-                {
-                    Orders.Add(new OrderData(OrderID + 1, "VINET", new DateTime(1996, 07, 06), 32.38));
-                    Orders.Add(new OrderData(OrderID + 2, "TOMSP", new DateTime(1996, 07, 06), 11.61));
-                    Orders.Add(new OrderData(OrderID + 3, "HANAR", new DateTime(1996, 07, 06), 65.83));
-                    Orders.Add(new OrderData(OrderID + 4, "VICTE", new DateTime(1996, 07, 06), 45.78));
-                    Orders.Add(new OrderData(OrderID + 5, "SUPRD", new DateTime(1996, 07, 06), 98.6));
-                    Orders.Add(new OrderData(OrderID + 6, "HANAR", new DateTime(1996, 07, 06), 103.45));
-                    Orders.Add(new OrderData(OrderID + 7, "CHOPS", new DateTime(1996, 07, 06), 103.45));
-                    Orders.Add(new OrderData(OrderID + 8, "RICSU", new DateTime(1996, 07, 06), 112.48));
-                    Orders.Add(new OrderData(OrderID + 9, "WELLI", new DateTime(1996, 07, 06), 33.45));
-                    OrderID += 9;
-                }
-            }
-            return Orders;
-        }
-
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
+        this.OrderID = OrderID;
+        this.CustomerID = CustomerID;
+        this.OrderDate = OrderDate;
+        this.Freight = Freight;
     }
+
+    public static List<OrderData> GetAllRecords()
+    {
+        if (Orders.Count() == 0)
+        {
+            int OrderID = 10248;
+            for (int i = 1; i < 3; i++)
+            {
+                Orders.Add(new OrderData(OrderID + 1, "VINET", new DateTime(1996, 07, 06), 32.38));
+                Orders.Add(new OrderData(OrderID + 2, "TOMSP", new DateTime(1996, 07, 06), 11.61));
+                Orders.Add(new OrderData(OrderID + 3, "HANAR", new DateTime(1996, 07, 06), 65.83));
+                Orders.Add(new OrderData(OrderID + 4, "VICTE", new DateTime(1996, 07, 06), 45.78));
+                Orders.Add(new OrderData(OrderID + 5, "SUPRD", new DateTime(1996, 07, 06), 98.6));
+                Orders.Add(new OrderData(OrderID + 6, "HANAR", new DateTime(1996, 07, 06), 103.45));
+                Orders.Add(new OrderData(OrderID + 7, "CHOPS", new DateTime(1996, 07, 06), 103.45));
+                Orders.Add(new OrderData(OrderID + 8, "RICSU", new DateTime(1996, 07, 06), 112.48));
+                Orders.Add(new OrderData(OrderID + 9, "WELLI", new DateTime(1996, 07, 06), 33.45));
+                OrderID += 9;
+            }
+        }
+        return Orders;
+    }
+
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public DateTime? OrderDate { get; set; }
+    public double? Freight { get; set; }
+}
+
 {% endhighlight %}
 {% endtabs %}
 

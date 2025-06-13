@@ -65,10 +65,6 @@ In the following sample, `IsOpen` property has been used to show or hide the Sid
         font-size: 1.5rem;
         padding: 3rem;
     }
-
-    .main > div {
-        padding: 0px !important;
-    }
 </style>
 
 ```

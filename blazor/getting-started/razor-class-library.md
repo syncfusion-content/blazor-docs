@@ -71,9 +71,7 @@ This Blazor component is defined in the <strong>RazorClassLibrary</strong> packa
 
 ## Create a Blazor project in Visual Studio
 
-* Refer to the [Blazor Tooling documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows) to create a new **Blazor Web App** using Visual Studio.
-
-* Refer to the [Blazor Tooling documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=windows) to create a new **Blazor Server App** or **Blazor WebAssembly App** using Visual Studio.
+* Refer to the [Blazor Tooling documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows) to create a new **Blazor Web App** or **Blazor WebAssembly Standalone App**using Visual Studio.
 
 {% endtabcontent %}
 
@@ -185,18 +183,17 @@ You can create a **Blazor Web App** or **Blazor Server App** or **Blazor WebAsse
     ```
 
 
-3. For Blazor Web App, include the stylesheet reference in the `<head>` section and the script reference at the end of the `<body>` in the **~/Components/App.razor** file:
+3. Include Stylesheet and Script References Based on Project Type:
 
-    * For Blazor WebAssembly app, include the stylesheet reference in the `<head>` section and the script reference at the end of the `<body>` in the **~/wwwroot/index.html** file.
+    * For Blazor WebAssembly standalone app, include the stylesheet reference in the `<head>` section and the script reference at the end of the `<body>` in the **~/wwwroot/index.html** file.
 
-    * For **.NET 7** project in Blazor Server App, include the stylesheet reference in the `<head>` section and the script reference at the end of the `<body>` in the **~/Pages/_Host.cshtml** file.
+    * For **.NET 8 and.NET 9**  Blazor Web Apps using any render mode (Server, WebAssembly, or Auto), include the stylesheet reference in the `<head>` section and the script reference at the end of the `<body>` in the **~/Components/Pages/App.razor** file.
 
-    * For **.NET 6** project in Blazor Server App, include the stylesheet reference in the `<head>` section and the script reference at the end of the `<body>` in the **~/Pages/_Layout.cshtml** file.
 
     ```html
     <head>
         ....
-        <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+        <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
     </head>
     ....
     <body>
@@ -207,7 +204,7 @@ You can create a **Blazor Web App** or **Blazor Server App** or **Blazor WebAsse
 
     N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-4. Now, add the created custom component in the **~/Pages/.razor** file.
+4. Now, add the created custom component in the **~/Components/Pages/.razor** file.
 
     ```cshtml
     <Component1></Component1>

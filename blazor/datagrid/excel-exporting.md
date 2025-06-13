@@ -247,7 +247,7 @@ The following example demonstrates how to use a custom data source during Excel 
         if (args.Item.Id == "Grid_excelexport") //Id is combination of Grid's ID and itemname.
         {
             var filteredData = Orders.Where(x => x.OrderID <= 10255).ToList();
-            ExcelExportProperties exportProps = new ExcelExportProperties
+            ExcelExportProperties exportProperties = new ExcelExportProperties
             {
                 DataSource = filteredData
             };
@@ -518,6 +518,7 @@ public class OrderData
     public string ShipCountry { get; set; }
 }
 
+{% endhighlight %}
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LjVeDfWXVMQonozp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
@@ -534,6 +535,7 @@ The following example demonstrates how to pass additional parameters to the serv
 {% highlight razor tabtitle="Index.razor" %}
 
 @using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Data
 
 <p>@message</p>
 <SfGrid ID="Grid" @ref="Grid" DataSource="@Orders" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport" })" Height="348">
