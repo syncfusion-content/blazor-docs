@@ -89,7 +89,7 @@ The dragging handler for the panels can be customized using the [`DraggableHandl
 </style>
 
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNLAMVLGpBoyKHBy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZVyjoVZzbiwbNQP?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 The following output demonstrates customizing the dragging handler of the panels, where the dragging action of panel occurs only with the header of the panel.
 
