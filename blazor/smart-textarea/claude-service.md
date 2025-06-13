@@ -39,8 +39,7 @@ For detailed specifications and capabilities, visit the [Claude Models Documenta
 After completing this setup, you can:
 
 1. [Add Smart TextArea to your Blazor pages](https://blazor.syncfusion.com/documentation/smart-textarea/getting-started)
-2. [Configure AI integration in Smart TextArea](https://blazor.syncfusion.com/documentation/smart-textarea/ai-integration)
-3. [Customize Smart TextArea features](https://blazor.syncfusion.com/documentation/smart-textarea/customization)
+2. [Customize Smart TextArea features](https://blazor.syncfusion.com/documentation/smart-textarea/customization)
 
 ---
 
