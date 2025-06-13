@@ -1057,6 +1057,7 @@ Include the theme stylesheet and script references in the **~/Components/App.raz
 
 > * Refer to the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic for various methods to include themes (e.g., Static Web Assets, CDN, or CRG).
 > * Set the render mode to **InteractiveServer** or **InteractiveAuto** in your Blazor Web App configuration.
+
 **5. Register controllers in `Program.cs`**
 
 Add the following lines in the `Program.cs` file to register controllers:

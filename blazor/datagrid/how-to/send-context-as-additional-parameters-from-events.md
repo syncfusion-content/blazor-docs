@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor DataGrid in Server Side | Syncfusion
-description: Checkout the documentation for getting started with Syncfusion Blazor DataGrid Component in Visual Side using .NET CLI and much more.
+title: Sending context as additional parameters from events in Blazor DataGrid| Syncfusion
+description: Checkout the documentation for sending context as additional parameters from events in Blazor DataGrid in Visual Side using .NET CLI and much more.
 platform: Blazor
 control: DataGrid
 documentation: ug
