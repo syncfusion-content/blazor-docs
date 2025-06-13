@@ -1499,7 +1499,7 @@ The provided example showcases the process of exporting the file as a memory str
 
 **Step 1**: **Add JavaScript for File Download**
 
-Create a JavaScript file named **saveAsFile.js** under the **wwwroot/scripts** directory and include the following function to trigger browser download:
+Create a JavaScript file named **saveAsFile.js** under the **wwwroot** directory and include the following function to trigger browser download:
 
 {% tabs %}
 {% highlight razor tabtitle="saveAsFile.js" %}
@@ -1641,6 +1641,8 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
+> You can find a complete sample on [GitHub](https://github.com/SyncfusionExamples/exporting-blazor-datagrid/tree/master/Exporting_Memory_Stream/Exporting_Stream).
+
 ### Converting Memory Stream to File Stream for Excel Export
 
 The Excel Export feature in Syncfusion Blazor DataGrid allows you to export the Grid data to an Excel workbook. In some cases, you may want to save the exported Excel document as a physical file on your system. This is useful for scenarios where you need to store or process the file outside of the browser context.
@@ -1750,6 +1752,8 @@ public class OrderData
 
 {% endhighlight %}
 {% endtabs %}
+
+> You can find a complete sample on [GitHub](https://github.com/SyncfusionExamples/exporting-blazor-datagrid/tree/master/Converting%20_Memory%20_File_Stream/Exporting_Stream).
 
 ### Merging Two Excel Memory Streams
 
@@ -1897,3 +1901,5 @@ public class OrderData
 
 {% endhighlight %}
 {% endtabs %}
+
+> You can find a complete sample on [GitHub](https://github.com/SyncfusionExamples/exporting-blazor-datagrid/tree/master/Merging_Two_Excel_Memory%20_Streams/Exporting_Stream).
