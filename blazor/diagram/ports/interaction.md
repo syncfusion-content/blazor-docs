@@ -11,8 +11,8 @@ documentation: ug
 
 The port can be used to create a connector by enabling the `Draw` in the [PortConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html).
 
-## How to draw connector from the port
-You can draw connectors from the port by enabling Draw constraints to the Constraints property. By default, the connector segment type is set to [Orthogonal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Orthogonal).
+## How to draw connector from the node port
+You can draw connectors from the node port by enabling Draw constraints to the Constraints property. By default, the connector segment type is set to [Orthogonal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Orthogonal).
 
 The following code explains how to draw the connector by using the port constraints.
 
@@ -68,6 +68,53 @@ The following code explains how to draw the connector by using the port constrai
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/Interaction/DrawConstraints)
 
 ![Drawing Port Connection in Blazor Diagram](../images/blazor-diagram-draw-port-connection.gif)
+
+## How to draw connector from the connector port
+You can draw connectors from the connector port by enabling Draw constraints to the Constraints property. By default, the connector segment type is set to [Orthogonal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Orthogonal).
+
+The following code explains how to draw the connector by using the port constraints.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Height="600px" Connectors="@connectors">
+</SfDiagramComponent>
+
+@code
+{
+    //Define diagram's connector collection
+    DiagramObjectCollection<Connector> connectors;
+
+    protected override void OnInitialized()
+    {
+        // A connector is created and stored in connectors collection.
+        connectors = new DiagramObjectCollection<Connector>();
+
+        // Create an orthogonal connector
+        Connector connector = new Connector()
+        {
+            ID = "connector",
+            SourcePoint = new DiagramPoint() { X = 400, Y = 200 },
+            TargetPoint = new DiagramPoint() { X = 550, Y = 350 },
+            Type = ConnectorSegmentType.Bezier,
+            Ports = new DiagramObjectCollection<ConnectorPort>()
+            {
+                new ConnectorPort()
+                {
+                    ID = "port",
+                    Visibility = PortVisibility.Visible,
+                    Shape = PortShapes.Square,
+                    Constraints = PortConstraints.Default | PortConstraints.Draw
+                }
+            }
+        };
+        connectors.Add(connector);
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/Interaction/ConnectorPortDraw)
+
+![Drawing Connector Port Connection in Blazor Diagram](../images/ConnectorPort/ConnectorPortDraw.gif)
 
 ## How to draw different types of connector from the port
 
