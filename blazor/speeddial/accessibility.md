@@ -55,16 +55,16 @@ The Blazor Speed Dial component followed the [WAI-ARIA](https://www.w3.org/WAI/A
 
 The Blazor Speed Dial component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/menubar/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Speed Dial component.
 
-| **Press** | **To do this** |
-|------------|-------------------|
-| <kbd>Enter</kbd> | Open/close the menu. |
-| <kbd>Up-arrow </kbd> | Focuses the next menu item. |
-| <kbd>Left-Arrow</kbd> | Focuses the previous menu item. |
-| <kbd>Down-Arrow</kbd> | Focuses the previous menu item. |
-| <kbd>Right-Arrow</kbd> | Focuses the next menu item. |
-| <kbd>Home</kbd> | Focuses the first menu item. |
-| <kbd>End</kbd> | Focuses the last menu item. |
-| <kbd>Esc</kbd> | Closes the menu. |
+| Windows | Mac | Actions |
+|------------|-------------------| --- |
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Open/close the menu. |
+| <kbd>↑</kbd> | <kbd>↑</kbd> | Focuses the next menu item. |
+| <kbd>←</kbd> | <kbd>←</kbd> | Focuses the previous menu item. |
+| <kbd>↓</kbd> | <kbd>↓</kbd> | Focuses the previous menu item. |
+| <kbd>→</kbd> | <kbd>→</kbd> | Focuses the next menu item. |
+| <kbd>Home</kbd> | <kbd>Fn</kbd> + <kbd>←</kbd> | Focuses the first menu item. |
+| <kbd>End</kbd> | <kbd>Fn</kbd> + <kbd>→</kbd> | Focuses the last menu item. |
+| <kbd>Esc</kbd> | <kbd>Esc</kbd> | Closes the menu. |
 
 ## Ensuring accessibility
 

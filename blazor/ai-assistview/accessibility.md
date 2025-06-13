@@ -54,17 +54,17 @@ The following ARIA attributes are used in the AI AssistView component:
 
 The following keyboard shortcuts are supported by the AI AssistView component.
 
-| **Press** | **To do this** |
-| --- | --- |
-| <kbd>Enter</kbd> | Select the focused item. |
-| <kbd>Tab</kbd> | Moves focus forward through the interactive elements. |
-| <kbd>Shift + Tab</kbd> | Moves focus backward through the interactive elements. |
-<b>AI AssistView Toolbars</b>||
-| <kbd>Left Arrow</kbd> | Focuses the previous toolbar element.  |
-| <kbd>Right Arrow</kbd> | Focuses the next toolbar element. |
-| <kbd>Enter / Space</kbd> | Select the focused item or activate the selected option. |
-| <kbd>Home</kbd> | Moves focus to the first toolbar element. |
-| <kbd>End</kbd> | Moves focus to the last toolbar element. |
+| Windows | Mac | Actions |
+| --- | --- | --- |
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Select the focused item. |
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Moves focus forward through the interactive elements. |
+| <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Moves focus backward through the interactive elements. |
+<b>AI AssistView Toolbars</b>|||
+| <kbd>←</kbd> | <kbd>←</kbd> | Focuses the previous toolbar element.  |
+| <kbd>→</kbd> | <kbd>→</kbd> | Focuses the next toolbar element. |
+| <kbd>Enter</kbd> / <kbd>Space</kbd> | <kbd>Enter</kbd> / <kbd>Space</kbd> | Select the focused item or activate the selected option. |
+| <kbd>Home</kbd> | <kbd>Fn</kbd> + <kbd>←</kbd> | Moves focus to the first toolbar element. |
+| <kbd>End</kbd> | <kbd>Fn</kbd> + <kbd>→</kbd> | Moves focus to the last toolbar element. |
 
 ## Ensuring accessibility
 

@@ -49,9 +49,9 @@ The following ARIA attributes are used in the SpeechToText component:
 
 The following keyboard shortcuts are supported by the SpeechToText component.
 
-| **Press** | **To do this** |
-| --- | --- |
-| <kbd>Enter</kbd>/<kbd>Space</kbd> | When the SpeechToText button has focus, pressing the enter/space key changes the state of the button. |
+| Windows | Mac | Actions |
+| --- | --- | --- |
+| <kbd>Enter</kbd>/<kbd>Space</kbd> | <kbd>Enter</kbd>/<kbd>Space</kbd> | When the SpeechToText button has focus, pressing the enter/space key changes the state of the button. |
 
 ## Ensuring accessibility
 

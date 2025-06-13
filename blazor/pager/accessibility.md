@@ -50,17 +50,17 @@ The Blazor Pager component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/a
 
 The Blazor Pager component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Pager component.
 
-Interaction Keys |Description
------|-----
-<kbd>Page down / Right arrow |Navigates to the next page.
-<kbd>Page up / Left arrow |Navigates to the previous page.
-<kbd>Enter / Space |Select the currently focused page.
-<kbd>Tab</kbd> |Focus on the next pager item.
-<kbd>Shift + Tab</kbd> |Focus on the previous pager item.
-<kbd>Home</kbd> |Navigates to the first page.
-<kbd>End</kbd> |Navigates to the last page.
-<kbd>Alt + Page up</kbd> |Navigates to the previous pager.
-<kbd>Alt + Page down</kbd> |Navigates to the next pager.
+|Windows | Mac |Description|
+|-----|-----| --- |
+|<kbd>Page down</kbd> / <kbd>→</kbd> | <kbd>Page down</kbd> / <kbd>→</kbd> |Navigates to the next page.|
+|<kbd>Page up</kbd> / <kbd>←</kbd> | <kbd>Page up</kbd> / <kbd>←</kbd> | Navigates to the previous page.|
+|<kbd>Enter</kbd> / <kbd>Space</kbd> | <kbd>Enter</kbd> / <kbd>Space</kbd> | Select the currently focused page.|
+|<kbd>Tab</kbd> | <kbd>Tab</kbd> | Focus on the next pager item.|
+|<kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Focus on the previous pager item.|
+|<kbd>Home</kbd> | <kbd>Fn</kbd> + <kbd>←</kbd> | Navigates to the first page.|
+|<kbd>End</kbd> | <kbd>Fn</kbd> + <kbd>→</kbd> | Navigates to the last page.|
+|<kbd>Alt</kbd> + <kbd>Page up</kbd> | <kbd>⌥</kbd> + <kbd>Page up</kbd> | Navigates to the previous pager.|
+|<kbd>Alt</kbd> + <kbd>Page down</kbd> | <kbd>⌥</kbd> + <kbd>Page down</kbd> | Navigates to the next pager.|
 
 ## Ensuring accessibility
 

@@ -55,24 +55,24 @@ The Blazor Kanban component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/
 
 The Blazor Kanban component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Kanban component.
 
-| **Keyboard shortcuts** | **Actions** |
-| --- | --- |
-| <kbd>Home</kbd> | To select the first card in the kanban |
-| <kbd>End</kbd> | To select the last card in the kanban |
-| <kbd>Arrow Up</kbd> | Select the card through the up arrow |
-| <kbd>Arrow Down</kbd> | Select the card through the down arrow |
-| <kbd>Arrow Right</kbd> | Move the column selection to the right |
-| <kbd>Arrow Left</kbd> | Move the column selection to the left |
-| <kbd>Ctrl</kbd> + <kbd>Enter</kbd> | Used to select the multi cards |
-| <kbd>Ctrl</kbd> + <kbd>Space</kbd> | Used to select the multi cards |
-| <kbd>Shift</kbd> + <kbd>Arrow Up</kbd> | Used to select the multiple cards towards up |
-| <kbd>Shift</kbd> + <kbd>Arrow Down</kbd> | Used to select the multiple cards towards down |
-| <kbd>Shift</kbd> + <kbd>Tab</kbd> | Reverse order of the tab action |
-| <kbd>Enter</kbd> | Open the selected cards |
-| <kbd>Tab</kbd> | To navigate the Kanban column |
-| <kbd>Delete</kbd> | To delete the selected cards |
-| <kbd>ESC</kbd> | Escape from the modified details |
-| <kbd>Space</kbd> | Used to open the card edit dialog based on the column selection |
+| Windows | Mac | Actions |
+| --- | --- | --- |
+| <kbd>Home</kbd> | <kbd>Fn</kbd> + <kbd>←</kbd> | To select the first card in the kanban |
+| <kbd>End</kbd> | <kbd>Fn</kbd> + <kbd>→</kbd> | To select the last card in the kanban |
+| <kbd>↑</kbd> | <kbd>↑</kbd> | Select the card through the up arrow |
+| <kbd>↓</kbd> | <kbd>↓</kbd> | Select the card through the down arrow |
+| <kbd>→</kbd> | <kbd>→</kbd> | Move the column selection to the right |
+| <kbd>←</kbd> | <kbd>←</kbd> | Move the column selection to the left |
+| <kbd>Ctrl</kbd> + <kbd>Enter</kbd> | <kbd>⌘</kbd> + <kbd>Enter</kbd> | Used to select the multi cards |
+| <kbd>Ctrl</kbd> + <kbd>Space</kbd> | <kbd>⌘</kbd> + <kbd>Space</kbd> | Used to select the multi cards |
+| <kbd>Shift</kbd> + <kbd>↑</kbd> | <kbd>⇧</kbd> + <kbd>↑</kbd> | Used to select the multiple cards towards up |
+| <kbd>Shift</kbd> + <kbd>↓</kbd> | <kbd>⇧</kbd> + <kbd>↓</kbd> | Used to select the multiple cards towards down |
+| <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Reverse order of the tab action |
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Open the selected cards |
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | To navigate the Kanban column |
+| <kbd>Delete</kbd> | <kbd>Delete</kbd> | To delete the selected cards |
+| <kbd>ESC</kbd> | <kbd>Esc</kbd> | Escape from the modified details |
+| <kbd>Space</kbd> | <kbd>Space</kbd> | Used to open the card edit dialog based on the column selection |
 
 ## Disable keyboard interaction
 

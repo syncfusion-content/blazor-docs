@@ -63,23 +63,23 @@ You can use the following keys to interact with the Calendar. This control imple
 
 It supports the following list of shortcut keys:
 
-| **Keys** | **Description** |
-| --- | --- |
-| <kbd>Upper Arrow</kbd>  | Focuses the same day of the previous week. |
-| <kbd>Down Arrow</kbd>  | Focuses the same day of the next week. |
-| <kbd>Left Arrow</kbd>  | Focuses the previous day. |
-| <kbd>Right Arrow</kbd>  | Focuses the next day. |
-| <kbd>Home</kbd>  | Focuses the first day of the month. |
-| <kbd>End</kbd>  | Focuses the last day of the month. |
-| <kbd>Page Up</kbd>  | Focuses the same date of the previous month. |
-| <kbd>Page Down</kbd>  | Focuses the same date of the next month. |
-| <kbd>Enter</kbd>  | Selects the currently focused date. |
-| <kbd>Shift + Page Up</kbd>  | Focuses the same date for the previous year. |
-| <kbd>Shift + Page Down</kbd>  | Focuses the same date for the next year. |
-| <kbd>Control + Upper Arrow</kbd>  | Moves to the inner level of view like month to year and year to decade. |
-| <kbd>Control + Down Arrow</kbd>  | Moves out from the depth level view like decade to year and year to month. |
-| <kbd>Control + Home</kbd>  | Focuses the first date of the current year. |
-| <kbd>Control + End</kbd>  | Focuses the last date of the current year. |
+| Windows | Mac | Description |
+| --- | --- | --- |
+| <kbd>↑</kbd> | <kbd>↑</kbd> | Focuses the same day of the previous week. |
+| <kbd>↓</kbd> | <kbd>↓</kbd> | Focuses the same day of the next week. |
+| <kbd>←</kbd> | <kbd>←</kbd> | Focuses the previous day. |
+| <kbd>→</kbd> | <kbd>→</kbd> | Focuses the next day. |
+| <kbd>Home</kbd> | <kbd>Fn</kbd> + <kbd>←</kbd> | Focuses the first day of the month. |
+| <kbd>End</kbd> | <kbd>Fn</kbd> + <kbd>→</kbd> | Focuses the last day of the month. |
+| <kbd>Page Up</kbd> | <kbd>Page Up</kbd> | Focuses the same date of the previous month. |
+| <kbd>Page Down</kbd> | <kbd>Page Down</kbd> | Focuses the same date of the next month. |
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Selects the currently focused date. |
+| <kbd>Shift</kbd> + <kbd>Page Up</kbd> | <kbd>⇧</kbd> + <kbd>Page Up</kbd> | Focuses the same date for the previous year. |
+| <kbd>Shift</kbd> + <kbd>Page Down</kbd> | <kbd>⇧</kbd> + <kbd>Page Down</kbd> | Focuses the same date for the next year. |
+| <kbd>Ctrl</kbd> + <kbd>↑</kbd> | <kbd>⌘</kbd> + <kbd>↑</kbd> | Moves to the inner level of view like month to year and year to decade. |
+| <kbd>Ctrl</kbd> + <kbd>↓</kbd> | <kbd>⌘</kbd> + <kbd>↓</kbd> | Moves out from the depth level view like decade to year and year to month. |
+| <kbd>Ctrl</kbd> + <kbd>Home</kbd> | <kbd>⌘</kbd> + <kbd>Fn</kbd> + <kbd>←</kbd> | Focuses the first date of the current year. |
+| <kbd>Ctrl</kbd> + <kbd>End</kbd> | <kbd>⌘</kbd> + <kbd>Fn</kbd> + <kbd>→</kbd> | Focuses the last date of the current year. |
 
 ## Ensuring accessibility
 

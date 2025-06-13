@@ -58,14 +58,14 @@ All Carousel actions can be controlled using keyboard keys through the [`AllowKe
 
 This control implements keyboard navigation support by following WAI-ARIA practices. Once focused on the active Carousel element, you can use the following key combinations to interact with the Carousel.
 
-| Key                | Description                                                     |
-| ------------------ | --------------------------------------------------------------- |
-| <kbd>Alt + J</kbd> | Keys to focus the carousel component (done at application end). |
-| <kbd>Arrows</kbd>  | Keys to navigate between slides.                                |
-| <kbd>Home</kbd>    | To navigate to the first slide.                                 |
-| <kbd>End</kbd>     | To navigate to the last slide.                                  |
-| <kbd>Space</kbd>   | To play/pause the slide transitions.                            |
-| <kbd>Enter</kbd>   | To perform the respective action on its focus.                  |
+| Windows | Mac | Description |
+ ------------------ |----------------|--------------- |
+| <kbd>Alt</kbd> + <kbd>J</kbd> | <kbd>⌥</kbd> + <kbd>J</kbd> | Keys to focus the carousel component (done at application end). |
+| Arrows (<kbd>←</kbd> , <kbd>→</kbd>) | Arrows (<kbd>←</kbd> , <kbd>→</kbd>) | Keys to navigate between slides. |
+| <kbd>Home</kbd> | <kbd>Fn</kbd> + <kbd>←</kbd> | To navigate to the first slide. |
+| <kbd>End</kbd> | <kbd>Fn</kbd> + <kbd>→</kbd> | To navigate to the last slide. |
+| <kbd>Space</kbd> | <kbd>Space</kbd> | To play/pause the slide transitions. |
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | To perform the respective action on its focus. |
 
 ## Ensuring accessibility
 

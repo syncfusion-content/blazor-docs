@@ -70,45 +70,45 @@ The Ribbon component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/pat
 
 The Ribbon component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/tabs/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Ribbon component.
 
-| **Press** | **To do this** |
-| --- | --- |
-<b>Ribbon Tab</b>||
-| <kbd>Tab</kbd> | To focus the ribbon tabs. |
-| <kbd>Right Arrow</kbd> | Moves focus to the next Tab.  |
-| <kbd>Left Arrow</kbd> | Moves focus to the previous Tab. |
-| <kbd>Enter / Space</kbd> | To select the currently focused ribbon tab. |
-<b>Ribbon Items</b>||
-| <kbd>Tab</kbd> | To focus the ribbon Items. |
-| <kbd>Right Arrow</kbd> | Focuses the next item. |
-| <kbd>Left Arrow</kbd> | Focuses the previous item. |
-| <kbd>Enter / Space</kbd> | To select the currently focused ribbon item. |
-<b>Ribbon Dropdown Items/ Ribbon Split button</b>||
-| <kbd>Esc</kbd> | Closes the popup. |
-| <kbd>Enter / Space</kbd> | Opens the popup, or activates the highlighted item and closes the popup. |
-| <kbd>Arrow Up</kbd> | Focuses the next item. |
-| <kbd>Arrow Down</kbd> | Focuses the previous item. |
-| <kbd>Alt + Arrow Up</kbd> | Closes the popup.|
-| <kbd>Alt + Arrow Down</kbd> | Opens the popup |
-<b>Ribbon File menu</b>||
-| <kbd>Tab</kbd> | To focus the ribbon file menu. |
-| <kbd>Esc</kbd> | Closes the popup. |
-| <kbd>Enter</kbd> | Opens the popup, or activates the highlighted item and closes the popup. |
-| <kbd>Arrow Up</kbd> | Focuses the previous action item. |
-| <kbd>Arrow Down</kbd> | Focuses the next action item. |
-| <kbd>Alt + Arrow Down</kbd> | Opens the popup |
-<b>Ribbon Combobox</b>||
-| <kbd>Arrow Down</kbd> | Selects the first item in the ComboBox when no item selected. Otherwise, selects the item next to the currently selected item. |
-| <kbd>Arrow Up</kbd> | Selects the item previous to the currently selected one. |
-| <kbd>Page Down</kbd> | Scrolls down to the next page and selects the first item when popup list opens. |
-| <kbd>Page Up</kbd> | Scrolls up to the previous page and selects the first item when popup list opens. |
-| <kbd>Enter</kbd> | Selects the focused item and popup list closes when it is in open state. |
-| <kbd>Tab</kbd> | Focuses on the next TabIndex element on the page when the popup is closed. Otherwise, closes the popup list and remains the focus of the component. |
-| <kbd>Shift + tab</kbd> | Focuses on the previous TabIndex element on the page when the popup is closed. Otherwise, closes the popup list and remains the focus of the component. |
-| <kbd>Alt + Down</kbd> | Open the popup list |
-| <kbd>Alt + Up</kbd> | Close the popup list |
-| <kbd>Esc(Escape)</kbd> | Closes the popup list when it is in an open state and the currently selected item remains the same. |
-| <kbd>Home</kbd> | Cursor moves to before of first character in input |
-| <kbd>End</kbd> | Cursor moves to next of last character in input |
+| Windows | Mac | Actions |
+| --- | --- | --- |
+| <b>Ribbon Tab</b> | | |
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | To focus the ribbon tabs. |
+| <kbd>→</kbd> | <kbd>→</kbd> | Moves focus to the next Tab.  |
+| <kbd>←</kbd> | <kbd>←</kbd> | Moves focus to the previous Tab. |
+| <kbd>Enter</kbd> or <kbd>Space</kbd> | <kbd>Enter</kbd> or <kbd>Space</kbd> | To select the currently focused ribbon tab. |
+| <b>Ribbon Items</b>| | |
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | To focus the ribbon Items. |
+| <kbd>→</kbd> | <kbd>→</kbd> | Focuses the next item. |
+| <kbd>←</kbd> | <kbd>←</kbd> | Focuses the previous item. |
+| <kbd>Enter</kbd> or <kbd>Space</kbd> | <kbd>Enter</kbd> or <kbd>Space</kbd> | To select the currently focused ribbon item. |
+| <b>Ribbon Dropdown Items/ Ribbon Split button</b>||
+| <kbd>Esc</kbd> | <kbd>Esc</kbd> | Closes the popup. |
+| <kbd>Enter</kbd> or <kbd>Space</kbd> | <kbd>Enter</kbd> or <kbd>Space</kbd> | Opens the popup, or activates the highlighted item and closes the popup. |
+| <kbd>↑</kbd> | <kbd>↑</kbd> | Focuses the next item. |
+| <kbd>↓</kbd> | <kbd>↓</kbd> | Focuses the previous item. |
+| <kbd>Alt</kbd> + <kbd>↑</kbd> | <kbd>⌥</kbd> + <kbd>↑</kbd> | Closes the popup.|
+| <kbd>Alt</kbd> + <kbd>↓</kbd> | <kbd>⌥</kbd> + <kbd>↓</kbd> | Opens the popup |
+| <b>Ribbon File menu</b>| | |
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | To focus the ribbon file menu. |
+| <kbd>Esc</kbd> | <kbd>Esc</kbd> | Closes the popup. |
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Opens the popup, or activates the highlighted item and closes the popup. |
+| <kbd>↑</kbd> | <kbd>↑</kbd> | Focuses the previous action item. |
+| <kbd>↓</kbd> | <kbd>↓</kbd> | Focuses the next action item. |
+| <kbd>Alt</kbd> + <kbd>↓</kbd> | <kbd>⌥</kbd> + <kbd>↓</kbd> | Opens the popup |
+| <b>Ribbon Combobox</b> | | |
+| <kbd>↓</kbd> | <kbd>↓</kbd> | Selects the first item in the ComboBox when no item selected. Otherwise, selects the item next to the currently selected item. |
+| <kbd>↑</kbd> | <kbd>↑</kbd> | Selects the item previous to the currently selected one. |
+| <kbd>Page Down</kbd> | <kbd>Page Down</kbd> | Scrolls down to the next page and selects the first item when popup list opens. |
+| <kbd>Page Up</kbd> | <kbd>Page Up</kbd> | Scrolls up to the previous page and selects the first item when popup list opens. |
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Selects the focused item and popup list closes when it is in open state. |
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Focuses on the next TabIndex element on the page when the popup is closed. Otherwise, closes the popup list and remains the focus of the component. |
+| <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Focuses on the previous TabIndex element on the page when the popup is closed. Otherwise, closes the popup list and remains the focus of the component. |
+| <kbd>Alt</kbd> + <kbd>↓</kbd> | <kbd>⌥</kbd> + <kbd>↓</kbd> | Open the popup list |
+| <kbd>Alt</kbd> + <kbd>↑</kbd> | <kbd>⌥</kbd> + <kbd>↑</kbd> | Close the popup list |
+| <kbd>Esc(Escape)</kbd> | <kbd>Esc</kbd> | Closes the popup list when it is in an open state and the currently selected item remains the same. |
+| <kbd>Home</kbd> | <kbd>Fn</kbd> + <kbd>←</kbd> | Cursor moves to before of first character in input |
+| <kbd>End</kbd> | <kbd>Fn</kbd> + <kbd>→</kbd> | Cursor moves to next of last character in input |
 
 ## Ensuring accessibility
 
