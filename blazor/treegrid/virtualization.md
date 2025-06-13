@@ -630,13 +630,13 @@ By organizing the data in this format, the TreeGrid can efficiently render large
 
 **Limitations:**
 
-1. ExpandCollapse State maintenance is not supported for Hierarchy Data.
+* ExpandCollapse State maintenance is not supported for Hierarchy Data.
 
   * Batch Editing is not supported for Hierarchy Data.
 
   * Row Drag and Drop feature is not supported for Hierarchy Data.
 
-2. Additionally, please refer to the [virtualization limitations](https://blazor.syncfusion.com/documentation/treegrid/virtualization#limitations-for-virtualization) for more details on current constraints when using virtualization with hierarchical data.
+* Additionally, please refer to the [virtualization limitations](https://blazor.syncfusion.com/documentation/treegrid/virtualization#limitations-for-virtualization) for more details on current constraints when using virtualization with hierarchical data.
 
 ## Column Virtualization
 
