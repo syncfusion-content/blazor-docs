@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Sending context as additional parameters from events in Blazor DataGrid| Syncfusion
+title: Send context as parameters from events in Blazor DataGrid | Syncfusion
 description: Checkout the documentation for sending context as additional parameters from events in Blazor DataGrid in Visual Side using .NET CLI and much more.
 platform: Blazor
 control: DataGrid
