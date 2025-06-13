@@ -575,16 +575,11 @@ This feature can be activated by adding the [AvoidLineOverlapping](https://help.
 
 ![Blazor Diagram Avoid Line Overlapping](../images/AvoidLineOverlapGif.gif)
 
-> **Note:** 
-> 
-> The Avoid Connector Overlapping feature ensures that connectors do not visually overlap within the viewport. This behavior enhances diagram readability and minimizes visual clutter.
->
-> **Connector Requirements:** This feature only works for orthogonal connectors with more than 3 segments.
->
-> **Viewport-Based Resolution:** Overlaps are resolved only for connectors currently visible in the viewport. As you scroll through the diagram, additional connectors will automatically adjust and avoid overlapping once they come into view.
->
-> **Overview Behavior:** In the Overview panel, connectors that lie outside the current viewport may initially appear overlapped. These will also be resolved dynamically as the corresponding area comes into focus in the main diagram view.
->
+The Avoid Connector Overlapping feature ensures that connectors do not visually overlap within the viewport. This behavior enhances diagram readability and minimizes visual clutter.
+#### Viewport-Based Resolution: 
+Overlaps are resolved only for connectors currently visible in the viewport. As you scroll through the diagram, additional connectors will automatically adjust and avoid overlapping once they come into view.
+#### Overview Behavior: 
+In the Overview panel, connectors that lie outside the current viewport may initially appear overlapped. These will also be resolved dynamically as the corresponding area comes into focus in the main diagram view.
 
 The following example demonstrates how to enable the AvoidLineOverlapping feature in the diagram.
 
