@@ -931,6 +931,8 @@ The following example demonstrates how to enable the AvoidLineOverlapping featur
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction/AvoidLineOverlap).
 
+**Note:** The overlap will get resolved only for the connectors visible in the viewport. The rest will be resolved as they are scrolled into view. The same applies to the overview, where connectors outside the viewport will appear overlapped and will resolve when focused within the viewport.
+
 ## How to flip the connector
 
 The [Flip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_Flip) is performed to give the mirrored image of the original element.
