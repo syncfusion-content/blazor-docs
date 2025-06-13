@@ -88,26 +88,20 @@ To customize the File Manager layout, use the `.e-layout-content` selector and a
 
 ```css
 
-/* Set a border around the main content area of the File Manager */
-.e-filemanager .e-layout-content {
-    border: 3px solid #000000;
-}
-
 /* Style for breadcrumb (address bar) */
 .e-filemanager .e-layout-content .e-address {
-    background: #aceebb;
-    border-bottom: 2px solid;
+    background: #dee2e6;
 }
 
 /* Customize the background for the Large Icons view */
 .e-filemanager .e-layout-content .e-large-icons {
-    background: #aceebb;
+    background: #f8f9fa;
 }
 
 /* Customize the background for the Details view table and content area */
 .e-filemanager .e-layout-content .e-grid .e-table,
 .e-filemanager .e-grid .e-gridcontent .e-content {
-    background: #aceebb;
+    background: #f8f9fa;
 }
 
 ```
@@ -119,11 +113,6 @@ To customize the File Manager layout, use the `.e-layout-content` selector and a
 To customize the File Manager toolbar items, use the `.e-toolbar` selector and apply styles.
 
 ```css
-
-/* Add border to the entire File Manager toolbar */
-.e-filemanager .e-toolbar {
-    border: 2px solid #0d9cf6;
-}
 
 /* Style for individual toolbar buttons */
 .e-filemanager .e-toolbar .e-tbar-btn {
@@ -190,8 +179,12 @@ In this example, we have applied styles to the header content.
 
 /* For File Manager Dialog header */
 .e-filemanager .e-dialog .e-dlg-header-content {
-    background-color: #0606fa4a;
-    border: 2px solid #000000;
+    background-color: #0d6efd;
+}
+/* For File Manager Dialog header close icon and text*/
+.e-filemanager .e-dialog .e-icon-dlg-close,
+.e-filemanager .e-dialog .e-dlg-header {
+    color: #fff;
 }
 
 ```
