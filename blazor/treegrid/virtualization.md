@@ -360,7 +360,7 @@ Virtualization with hierarchical data binding is a performance optimization tech
 
 To enable virtualization with hierarchical data binding, follow these steps to convert the hierarchical data into a self-referential flattened structure on the application side:
 
-**Step 1:  Enabling Virtualization with Hierarchical binding properties:**
+**Step 1:  Enabling virtualization with hierarchical binding properties:**
 
 Set the [enableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) property to **true** to enable virtualization. Additionally, when using hierarchical data binding, enable the [childMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ChildMapping) property to specify the child records collection. 
 
