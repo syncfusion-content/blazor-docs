@@ -21,7 +21,7 @@ The following table explains the usage of indicator icons.
 | Minus or restrict icon |Indicates that the dragged node is not to be dropped at the hovered region. |
 | In between icon | Indicates that the dragged node is to be added as siblings of hovered region. |
 
-* In order to prevent dragging action for a particular node, the [`OnNodeDragStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_OnNodeDragStart) event can be used which is triggered when the node drag is started. The [`OnNodeDragged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_OnNodeDragged) event is triggered when the drag is stopped.
+* In order to prevent dragging action for a particular node, the [`OnNodeDragStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_OnNodeDragStart) event can be used which is triggered when the node drag is started. The [`OnNodeDragged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_OnNodeDragged) event is triggered when a node is being dragged.
 
 * The [`NodeDropped`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TreeViewEvents-1.html#Syncfusion_Blazor_Navigations_TreeViewEvents_1_NodeDropped) event is triggered when the TreeView node is dropped on the target element successfully.
 
@@ -222,7 +222,6 @@ The default value of `AllowDragAndDrop` property is false.
 
 <SfTreeView TValue="MailItem" AllowDragAndDrop=true>
     <TreeViewFieldsSettings TValue="MailItem" Id="ID" DataSource="@MyFolder" Text="FolderName" ParentID="ParentId" HasChildren="HasSubFolders" Expanded="Expanded"></TreeViewFieldsSettings>
-    <TreeViewEvents TValue="MailItem"></TreeViewEvents>
 </SfTreeView>
 
 @code {
@@ -295,7 +294,6 @@ The Blazor TreeView component has built-in support for drag and drop functionali
 
                     <SfTreeView ID="tree2" TValue="TeamDetails" AllowDragAndDrop="true">
                         <TreeViewFieldsSettings TValue="TeamDetails" Id="Id" Text="Name" Child="Children" DataSource="@JSTeam" Expanded="Expanded"></TreeViewFieldsSettings>
-                        <TreeViewEvents TValue="TeamDetails"></TreeViewEvents>
                     </SfTreeView>
                 </div>
             </div>
@@ -307,7 +305,6 @@ The Blazor TreeView component has built-in support for drag and drop functionali
 
                     <SfTreeView ID="tree1" TValue="TeamDetails" AllowDragAndDrop="true">
                         <TreeViewFieldsSettings TValue="TeamDetails" Id="Id" Text="Name" Child="Children" DataSource="@ASPTeam" Expanded="Expanded"></TreeViewFieldsSettings>
-                        <TreeViewEvents TValue="TeamDetails"></TreeViewEvents>
                     </SfTreeView>
                 </div>
             </div>
