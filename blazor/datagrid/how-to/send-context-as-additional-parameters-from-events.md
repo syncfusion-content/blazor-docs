@@ -21,7 +21,7 @@ To implement this, follow these steps:
 
     * **args**: The event arguments containing the new `ComboBox` value and selected item.
 
-    * **Contextdata**: The current row data is referenced by the variable **Order**, which is cast from the template’s context object as **Order**.
+    * **Context**: The current row data is referenced by the variable **Order**, which is cast from the template’s context object as **Order**.
 
     4. Within the event handler, you can update properties of the current row, such as **ShipCity**, **ShipCountry** based on the selected `ComboBox` value. The Grid is directly bound to the data object, so changes made to this object are immediately reflected in the Grid UI.
 
