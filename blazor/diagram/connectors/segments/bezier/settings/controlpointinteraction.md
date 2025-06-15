@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Controlling Bezier Segment Interaction in Blazor Diagram Component | Syncfusion
+title: Bezier Segment Interaction in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about Bezier Segments in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Controlling Connector Annotation in Blazor Diagram Component | Syncfusion
+title: Connector Annotation in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about Annotation for Connector in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component

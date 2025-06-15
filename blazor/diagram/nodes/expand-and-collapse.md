@@ -7,7 +7,7 @@ control: Diagram Component
 documentation: ug
 ---
 
-# Controlling Expand and Collapse Behavior for Nodes in Blazor Diagram Component
+# Controlling Expand and Collapse Support for Nodes in Blazor Diagram Component
 
 Diagram provides support to describe the state of the node. i.e., whether the node is in an expanded or collapsed state. The IsExpanded property of node is used to expand or collapse its children nodes.The Expand and Collapse support is used to compress the hierarchy view so that only the roots of each elements are visible.
 

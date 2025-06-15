@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Controlling Connector Customization in Blazor Diagram Component | Syncfusion
+title: Connector Customization in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about Customization in Syncfusion Blazor Diagram component and much more.
 platform: Blazor
 control: Diagram Component
@@ -375,8 +375,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Blazor Diagram Connector with Corner Radius](../images/blazor-diagram-connector-with-corner-radious.png)
 
-
 ## How to Customize the Connector Appearance
+
 * The connector’s [StrokeWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeWidth), [StrokeColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeColor), [StrokeDashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeDashArray), and [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_Opacity) properties are used to customize the appearance of the connector segments.
 
 * The [IsVisible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_IsVisible) property of the connector indicates whether the connector is visible in the user interface or not.

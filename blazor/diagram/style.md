@@ -154,7 +154,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Rotate Handle Blazor Diagram](images/SelectionHighlighter.png)
 
-
+## How to Customize the Rotate Handle
 To customize the appearance of the rotation handle, apply the following CSS code to your Blazor diagram:
 
 ```cshtml

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Controlling Orthogonal Segments in Blazor Diagram Component | Syncfusion
+title: Orthogonal Segments in Blazor Diagram Component | Syncfusion
 description: Check out and learn about Orthogonal Segments in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
@@ -118,7 +118,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 N> You need to mention the segment type as you mentioned in the connector type. There should be no contradiction between connector type and segment type.
 
-### Orthogonal Segments Editing
+### Orthogonal Segment Editing
 
 * Orthogonal thumbs allow you to adjust the length of adjacent segments by clicking and dragging them.
 * When necessary, some segments are added or removed automatically, when dragging the segment. This is to maintain proper routing of orthogonality between segments.

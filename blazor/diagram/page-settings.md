@@ -70,7 +70,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 |Landscape|![Landscape Orientation](./images/LandscapeOrientation.png)|
 |Portrait|![Portrait Orientation](./images/PortraitOrientation.png)|
 
-## How to Enable Multiple Pages
+## How to Enable Multiple Page
 
 Based on the diagramming element position, the size of the page dynamically increases or decreases in multiples of page width and height using the [MultiplePage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageSettings.html#Syncfusion_Blazor_Diagram_PageSettings_MultiplePage) property of `PageSettings`.
 
@@ -171,7 +171,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![PageBackground Color](./images/PageBackground.png)
 
-### How to Customize the Appearance of Page Breaks
+### How to Customize the Appearance of Page Break
 
 The appearance of the `PageBreak` can be customized using the style properties such as stroke, stroke-width and stroke-dasharray of the diagram pagebreak class.
 
