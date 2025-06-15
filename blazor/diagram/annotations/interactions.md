@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Controlling Annotation Interaction in Blazor Diagram Component | Syncfusion
+title: Annotation Interaction in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about Interaction in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
