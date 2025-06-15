@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Multiple Segments in Blazor Diagram Component | Syncfusion
+title: Controlling Multiple Segments in Blazor Diagram Component | Syncfusion
 description: Check out and learn about Multiple Segments in the Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Multiple Segments in Blazor Diagram Component
+# Controlling Multiple Segments in Blazor Diagram Component
 
-## How to create multiple segments
+## How to Create Multiple Segments
 
 Multiple segments can be defined sequentially. To create a connector with multiple segments, define and add the segments to the [connector.Segments](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegment.html) collection. The following code example illustrates how to create a connector with multiple segments.
 

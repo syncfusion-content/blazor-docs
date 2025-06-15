@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Interaction in Blazor Diagram Component | Syncfusion
+title: Controlling Annotation Interaction in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about Interaction in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Annotation Interaction in Blazor Diagram Component
+# Controlling Annotation Interaction in Blazor Diagram Component
 
 Diagram provides the support to the annotations rotation interactively.
 
