@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Events in Blazor Diagram Component | Syncfusion
+title: Controlling Events in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about Events in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Events in Blazor Diagram Component
+# Controlling Events in Blazor Diagram Component
 
-## Selection change event
+## Selection Change Event
 
 * While selecting the diagram elements, the following events can be used to do the customization.
 * When selecting/unselecting the diagram elements, the following events will be triggered to do customization on those events.
@@ -85,7 +85,7 @@ The following code example explains how to get the selection change event in the
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Events/SelectionChangeEvent)
 
-## Position change event
+## Position Change Event
 
 * While dragging the diagram elements, the following events can be used to do the customization.
 
@@ -158,7 +158,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Events/PositionChangeEvent)
 
-## Connection change event
+## Connection Change Event
 
 * While changing the connection of the connector, the following events can be used to do the customization.
 
@@ -240,7 +240,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Events/ConnectionChangeEvent)
 
-## Source point change event
+## Source Point Change Event
 * While changing the source point of the connector, the following events can be used to do the customization.
 
 |Event Name|Arguments|Description|
@@ -298,7 +298,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Events/SourcePointChanged)
 
-## Target point change event
+## Target Point Change Event
 * While changing the target point of the connector, the following events can be used to do the customization.
 
 |Event Name|Arguments|Description|
@@ -356,7 +356,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Events/TargetPointChanged)
 
-## ConnectorCreating event
+## Connector Creating Event
 
 * The [ConnectorCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ConnectorCreating) event helps to define default properties of the connector. The connector creation is triggered when the diagram is initialized. In the Connector creating event, you can customize the connector properties. 
 
@@ -406,7 +406,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Events/ConnectorCreating)
 
-## Segment collection change event
+## Segment Collection Change Event
 
 * The [SegmentCollectionChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SegmentCollectionChange) event triggers when the connector’s segment collection is updated. To explore about arguments, refer to the [SegmentCollectionChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentCollectionChangeEventArgs.html).
 

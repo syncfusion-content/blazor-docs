@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Page Settings in Blazor Diagram Component | Syncfusion
+title: Controlling Page Settings in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about Page Settings in Syncfusion Blazor Diagram component and much more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Page Settings in Blazor Diagram Component
+# Controlling Page Settings in Blazor Diagram Component
 
 By default, Diagram’s page size is decided based on the position of its diagramming elements. The size and appearance of the diagram pages can be customized using the [PageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageSettings.html) property of the diagram.
 
@@ -70,7 +70,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 |Landscape|![Landscape Orientation](./images/LandscapeOrientation.png)|
 |Portrait|![Portrait Orientation](./images/PortraitOrientation.png)|
 
-## How to enable the multiple page
+## How to Enable Multiple Page
 
 Based on the diagramming element position, the size of the page dynamically increases or decreases in multiples of page width and height using the [MultiplePage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageSettings.html#Syncfusion_Blazor_Diagram_PageSettings_MultiplePage) property of `PageSettings`.
 
@@ -116,7 +116,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Multiple Page](./images/MultiplePage.png)
 
-## How to change the page appearance
+## How to Change the Page Appearance
 
 The appearance of the pages can be customized using the following properties of the `PageSettings` class:
 
@@ -171,7 +171,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![PageBackground Color](./images/PageBackground.png)
 
-### How to customize the appearance of the page break
+### How to Customize the Appearance of the Page Break
 
 The appearance of the `PageBreak` can be customized using the style properties such as stroke, stroke-width and stroke-dasharray of the diagram pagebreak class.
 
@@ -204,7 +204,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Pagebreak Color](./images/Pagebreak.png)
 
-## How to change the margin around the pages
+## How to Change the Margin Around the Pages
 
 The area between the maintain content of a page and the page edges can be changed by using the PageMargin property. The default values for the margin are set to 25 on all sides.
 
@@ -292,7 +292,7 @@ The following code example illustrates how to define boundary constraints with r
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/PageSettings/BoundaryConstraints)
 
-## Responsive with parent container
+## Responsive with Parent Container
 
 By setting the value in percentage, the diagram gets its dimention with respect to its parent container.Specify the Width and Height as 100% to make the diagram element fill its parent container.
 Setting the Height to 100% requires the diagram parent element to have explicit height or you can use calc function to set explicit height based on the browser layout.

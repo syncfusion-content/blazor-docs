@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview in Blazor Diagram Component | Syncfusion
+title: Controlling Overview in Blazor Diagram Component | Syncfusion
 description: Check out and learn here all about Overview Control in Syncfusion Blazor Diagram component and much more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Overview in Blazor Diagram Component
+# Controlling Overview in Blazor Diagram Component
 
 The [SfDiagramOverviewComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Overview.SfDiagramOverviewComponent.html) provides a miniature view of the entire diagram content, offering a comprehensive preview at a glance. This powerful feature enables users to effortlessly navigate, pan, and zoom to specific areas of interest within large and complex diagrams. By presenting a bird's-eye view, it enhances the user's ability to understand the diagram's structure and quickly locate desired sections, significantly improving overall usability and efficiency.
 
@@ -17,7 +17,7 @@ When working with an extensive diagram, it can be challenging to maintain contex
 
 The SfDiagramOverviewComponent offers an elegant solution to these challenges by providing a compact preview of the entire diagram. This overview displays a miniature representation of your diagram, with a rectangular viewport indicator highlighting your current focus area. Navigation becomes intuitive and effortless as you can simply drag this viewport rectangle to instantly move to different parts of the diagram, enhancing both productivity and user experience.
 
-## Create an overview
+## Create an Overview
 
 The [SourceID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Overview.SfDiagramOverviewComponent.html#Syncfusion_Blazor_Diagram_Overview_SfDiagramOverviewComponent_SourceID) property of the SfDiagramOverviewComponent is essential for linking the overview to its corresponding diagram. To establish this connection, set the SourceID to match the [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ID) of the target diagram component. This ensures that the overview displays an accurate representation of the main diagram.
 

@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Connector Interactions in Blazor Diagram Component | Syncfusion
+title: Controlling Interaction in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about connector interaction in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Connector Interactions in Blazor Diagram Component
+# Controlling Interaction in Blazor Diagram Component
 
 ## Selection
 
 [DiagramSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramSelectionSettings.html) provides a visual representation of selected elements. It behaves like a container and allows to update the size, position, and rotation angle of the selected elements through interaction and by using program. Single or multiple elements can be selected at a time.
 
-## Single selection
+## Single Selection
 
 An element can be selected by clicking that element. During single click, all previously selected items are cleared. The following image shows how the selected elements are visually represented.
 
@@ -64,11 +64,11 @@ An element can be selected by clicking that element. During single click, all pr
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction/DiagramSelectionEvent)
 
-## Selecting a group
+## Selecting a Group
 
 When a child element of any group is clicked, its contained group is selected instead of the child element. With consecutive clicks on the selected element, the selection is changed from top to bottom in the hierarchy of the parent group to its children.
 
-## Multiple selection
+## Multiple Selection
 
 Multiple elements can be selected with the following ways:
 
@@ -94,13 +94,13 @@ For more information about customizing the Diagram Element Highlighter, refer [C
 
 ![Multiple Selection in Blazor Diagram](images/blazor-diagram-multiple-selection.gif)
 
-## Select/Unselect elements using program
+## Select/Unselect Elements using a Program
 
 The [Select](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Select_System_Collections_ObjectModel_ObservableCollection_Syncfusion_Blazor_Diagram_IDiagramObject__System_Nullable_System_Boolean__) and [ClearSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ClearSelection) methods help to select or clear the selection of the elements at runtime.
 
 Get the currently selected items from the [Nodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Nodes) and [Connectors](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Connectors) collection of the [SelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionSettings) property of the diagram model.
 
-## Toggle selection
+## Toggle Selection
 
 You can toggle the selection state of diagram elements, including nodes, connectors, groups, and swimlanes, by clicking on them at runtime. The [CanToggleSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramSelectionSettings.html#Syncfusion_Blazor_Diagram_DiagramSelectionSettings_CanToggleSelection) property in [DiagramSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramSelectionSettings.html) determines whether the selection state of a diagram element should toggle with a mouse click at runtime. By default, this property is set to false.
 In the following example, the node can be selected with the first click and unselected with the second click.
@@ -139,7 +139,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ## Select entire elements in diagram programmatically
 
 The [SelectAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectAll) method is used to select all the elements such as nodes/connectors in the diagram. Refer to the following link which shows how to use SelectAll method on the diagram.
-### How to clone the selected nodes and connector at runtime
+### How to Clone Selected Nodes and Connectors at Runtime
 Clone is a virtual method of the node that is used to create a copy of a diagram object. After cloning, it is necessary to set a unique ID for the cloned nodes and connectors. The following code demonstrates how to clone selected nodes during runtime.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -497,11 +497,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 For more information about resizing, refer [Node Rotate](./nodes/interaction#how-to-rotate-the-node)
 
-## Connection editing
+## Connection Editing
 
 * Each segment of a selected connector is editable with some specific handles/thumbs.
 
-## End point handles
+## End Point Handles
 
 Source and target points of the selected connectors are represented by two handles. Clicking and dragging those handles help you to adjust the source and target points.
 
@@ -589,7 +589,7 @@ For more information, refer [End Point Dragging](./connectors/interactions#end-p
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction/DiagramConnectionEvent)
 
-## Straight segment editing
+## Straight Segment Editing
 
 * End point of each straight segment is represented by a thumb that enables to edit the segment.
 * Any number of new segments can be inserted into a straight line by clicking, when Shift and Ctrl keys are pressed (Ctrl+Shift+Click).
@@ -597,7 +597,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 For more information about straight segment editing, refer [Straight Segment Editing](./connectors/segments/straight#straight-segment-editing)
 
-## Orthogonal segment editing
+## Orthogonal Segment Editing
 
 * Orthogonal thumbs allow you to adjust the length of adjacent segments by clicking and dragging them.
 * When necessary, some segments are added or removed automatically, when dragging the segment. This is to maintain proper routing of orthogonality between segments.
@@ -673,32 +673,32 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 For more information about orthogonal segment editing, refer [Orthogonal Segment Editing](./connectors/segments/orthogonal#orthogonal-segment-editing).
 
-## User handles
+## User Handles
 
 * User handles are used to add some frequently used commands around the selector. To create user handles, define and add them to the [UserHandles](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramSelectionSettings.html#Syncfusion_Blazor_Diagram_DiagramSelectionSettings_UserHandles) collection of the [SelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionSettings) property.
 * The [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Name) property of user handle is used to define the name of the user handle and it is further used to find the user handle at runtime and do any customization.
 
-## How to align the user handle based on the node boundary
+## How to Align the User Handle Based on the Node Boundary
 
 User handles can be aligned relative to the node boundaries. It has [Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Margin), [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Offset), [Side](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Side), [HorizontalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_HorizontalAlignment), and [VerticalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_VerticalAlignment) settings. It is quite tricky when all four alignments are used together, but gives more control over alignment.
 
-##  How to position the user handle
+##  How to Position the User Handle
 
 The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Offset) property of a [UserHandle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html) is used to align the user handle based on fractions. 0 represents top/left corner, 1 represents bottom/right corner, and 0.5 represents half of width/height.
 
-## How to align the user handle based on the connector boundary
+## How to Align the User Handle Based on the Connector Boundary
 
 The [Side](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Side) property of a [UserHandle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html) is used to align the user handle by using the [Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Direction.html#Syncfusion_Blazor_Diagram_Direction_Top), [Bottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Direction.html#Syncfusion_Blazor_Diagram_Direction_Bottom), [Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Direction.html#Syncfusion_Blazor_Diagram_Direction_Left), and [Right](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Direction.html#Syncfusion_Blazor_Diagram_Direction_Right) options.
 
-## Add Horizontal and vertical alignments to the user handle
+## Add Horizontal and Vertical Alignments to the User Handle
 
 The [HorizontalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_HorizontalAlignment) property of a [UserHandle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html) is used to set how the user handle is horizontally aligned at the position based on the [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Offset). The [VerticalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_VerticalAlignment) property is used to set how user handle is vertically aligned at the position.
 
-## Add Margin to the user handle
+## Add Margin to the User Handle
 
 Margin is an absolute value used to add some blank space on any one of its four sides. The [UserHandle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html) can be displaced with the [Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Margin) property.
 
-## Notification for the mouse button clicked
+## Notification for the Mouse Button Click
 
 The diagram component notifies the mouse button clicked. For example, whenever the right mouse button is clicked, the clicked button is notified as right. The mouse click is notified with,
 
@@ -743,18 +743,18 @@ The diagram component notifies the mouse button clicked. For example, whenever t
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction/MouseClick)
 
-## Appearance of the user handle
+## Appearance of the User Handle
 
 The appearance of the user handle can be customized by using the [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Size), [BorderColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_BorderColor), [BackgroundColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_BackgroundColor), [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Visible), [PathData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_PathData), and [PathColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_PathColor) properties of the [UserHandle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html).
 
-## Zoom pan the diagram
+## Zoom and Pan the Diagram
 
 * When a large diagram is loaded, only certain portion of the diagram is visible. The remaining portions are clipped.       Clipped portions can be explored by scrolling the scrollbars or panning the diagram.
 * The diagram can be zoomed in or out by using Ctrl + mouse wheel.
 
 ![Zoom Pan in Blazor Diagram](images/blazor-diagram-zoom-pan.gif)
 
-## Keyboard shortcuts
+## Keyboard Shortcuts
 
 Diagram provides support to interact with elements with key gestures. By default, some in-built commands are bound with a relevant set of key combinations.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Hierarchical Layout in Blazor Diagram Component | Syncfusion
+title: Controlling Hierarchical Layout in Blazor Diagram Component | Syncfusion
 description: Learn here all about how to create hierarchical layout in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Hierarchical Layout in Blazor Diagram Component
+#  Controlling Hierarchical Layout in Blazor Diagram Component
 
 The hierarchical tree layout arranges nodes in a tree-like structure, where the nodes in the hierarchical layout may have multiple parents. There is no need to specify the layout root. To arrange the nodes in a hierarchical structure, specify the layout [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Type) as [HierarchicalTree](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutType.html#Syncfusion_Blazor_Diagram_LayoutType_HierarchicalTree). The following example shows how to arrange the nodes in a hierarchical structure.
 
@@ -156,9 +156,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 >**Note:** In the DataSourceSettings, the type of the ID and ParentID properties is string. The provided DataSource should have a parent-child relationship. It is necessary for at least one node to have an empty ParentID.
 
-## Customizing the properties
+## Customizing the Properties
 
-### How to change orientation 
+### How to Change Orientation 
 
 You can use the [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Orientation) property of the Layout to change the orientation at runtime. The following code shows how to change the layout.
 
@@ -177,7 +177,7 @@ public void UpdateOrientation()
 }
 ```
 
-### How to update the spacing between nodes
+### How to Adjust the Spacing Between Nodes
 
 You can change the horizontal and vertical spacing for the diagram layout by using the [HorizontalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_HorizontalSpacing) and [VerticalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_VerticalSpacing) properties of the layout.
 
@@ -200,7 +200,7 @@ public void UpdateSpacing()
 }
 ```
 
-### How to update the margin
+### How to Update the Margin
 
 You can also change the margin values for the diagram layout by using the [Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Margin) property.
 

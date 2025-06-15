@@ -1,13 +1,13 @@
 ---
 layout: post
-title: BPMN activity in Blazor Diagram Component | Syncfusion
+title: Controlling BPMN Activity in Blazor Diagram Component | Syncfusion
 description: Learn here all about BPMN activity such as task, sub-process in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# BPMN activity in Blazor Diagram Component
+# Controlling BPMN Activity in Blazor Diagram Component
 
 The [Activity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html) is the task that is performed in a business process. It is represented by a rounded rectangle.
 
@@ -56,7 +56,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
  ![Send Task BPMN Shape](../images/Task.png) 
 
-## BPMN activity task
+## BPMN Activity Task
 
 The [TaskType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html#Syncfusion_Blazor_Diagram_BpmnActivity_TaskType) property of the  [Bpmn Activity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html) allows you to define the type of task such as sending, receiving, user-based task, etc. By default, the value of [TaskType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html#Syncfusion_Blazor_Diagram_BpmnActivity_TaskType) property is set to **None.** This is shown by a small event symbol in the top of the corner. The following code explains how to create different types of BPMN tasks.
 
@@ -113,7 +113,7 @@ The various types of BPMN tasks are tabulated as follows.
 | User | ![User Task BPMN Shape](../images/User.png) |A User task represents that a human performer performs the task with the use of a software application.|
 | Script | ![Script Task BPMN Shape](../images/Script.png) |A Script task is an automated activity when a process execution arrives at the Script task, the corresponding script is executed.|
 
-## BPMN activity collapsed sub-process
+## BPMN Activity Collapsed Sub-Process
 
 A [Collapsed Sub-Process](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivityType.html#Syncfusion_Blazor_Diagram_BpmnActivityType_CollapsedSubProcess) is a group of tasks that is used to hide or reveal details of additional levels. The following code explains how to create a [Collapsed Sub-Process](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivityType.html#Syncfusion_Blazor_Diagram_BpmnActivityType_CollapsedSubProcess).
 
@@ -352,7 +352,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![IsAdHocActivity CollapsedSub-Process BPMN Shape](../images/Bpmn-CollapsedSub-Process-AdHocpng.png)
 
-### SubProcessType
+### Sub-Process Type
 
 SubProcessType represents the type of task that is being processed. The [SubProcessType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html#Syncfusion_Blazor_Diagram_BpmnActivity_SubProcessType) property of subprocess allows you to define the type of SubProcessType. By default, it is set to [Default](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnSubProcessType.html#Syncfusion_Blazor_Diagram_BpmnSubProcessType_Default).
 

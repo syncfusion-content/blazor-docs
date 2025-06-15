@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Interaction in Blazor Diagram Component | Syncfusion
+title: Controlling Node Interaction in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about Interaction in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Node Interaction in Blazor Diagram Component
+# Controlling Node Interaction in Blazor Diagram Component
 
 Diagram provides the support to select, drag, resize, or rotate the node interactively.
 
-## How to select the node
+## How to Select a Node
 
 A node can be selected at runtime by using the [Select](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Select_System_Collections_ObjectModel_ObservableCollection_Syncfusion_Blazor_Diagram_IDiagramObject__System_Nullable_System_Boolean__) method and the selection can be cleared by using the [ClearSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ClearSelection) method. The following code explains how to select and clear the selection in the diagram.
 
@@ -72,7 +72,7 @@ And also the selection enable during the interaction.
 
 ![Node Selection in Blazor Diagram](../images/blazor-diagram-node-selection.png)
 
-## How to drag the node
+## How to Drag a Node
 
 A node can be dragged at runtime by using the [Drag](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Drag_Syncfusion_Blazor_Diagram_IDiagramObject_System_Double_System_Double_) method. The following code explains how to drag the node by using the drag method.
 
@@ -125,7 +125,7 @@ Also, drag the node during the interaction.
 
 ![Dragging Node at Runtime in Blazor Diagram](../images/blazor-diagram-drag-node.gif)
 
-## How to resize the node
+## How to Resize a Node
 
 A node can be resized at runtime by using the [Scale](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Scale_Syncfusion_Blazor_Diagram_IDiagramObject_System_Double_System_Double_Syncfusion_Blazor_Diagram_DiagramPoint_) method. The following code explains how to resize the node by using the scale method.
 
@@ -179,7 +179,7 @@ Also, you can resize the node during interaction.
 
 ![Node Resizing in Blazor Diagram](../images/blazor-diagram-node-resizing.gif)
 
-## How to rotate the node
+## How to Rotate a Node
 
 A node can be rotated at runtime by using the [Rotate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Rotate_Syncfusion_Blazor_Diagram_IDiagramObject_System_Double_Syncfusion_Blazor_Diagram_DiagramPoint_) method. The following code explains how to rotate the node by using the rotate method.
 
@@ -234,7 +234,7 @@ Also, rotate the node during the interaction.
 
 ![Displaying Node Rotation in Blazor Diagram](../images/blazor-diagram-node-rotation.gif)
 
-## How to flip the node
+## How to Flip a Node
 
 The [Flip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_Flip) is performed to give the mirrored image of the original element.
 
@@ -244,12 +244,12 @@ For more information about node flip, refer to [Node Flip](../flip#how-to-flip-t
 
 * [How to get events while interacting with the node](./events)
 
-* [How to position the node](./positioning)
+* [How to Position the Node](./positioning)
 
-* [How to customize the node](./customization)
+* [How to Customize the Node](./customization)
 
-* [How to interact with the annotation in diagram](../annotations/node-annotation)
+* [How to interact with the Annotations in a Diagram](../annotations/node-annotation)
 
-* [How to interact with the port in diagram](../ports/interaction)
+* [How to Interact with Ports in a Diagram](../ports/interaction)
 
-* [How to interact with the connector in diagram](../connectors/interactions)
+* [How to Interact with Connectors in a Diagram](../connectors/interactions)

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Syncfusion Blazor Diagram Component in Web App
+title: Getting Started with the Syncfusion Blazor Diagram Component in Web App
 description: Checkout and learn about the documentation for getting started with Blazor Diagram Component in Blazor Web App.
 platform: Blazor
 component: Diagram
 documentation: ug
 ---
 
-# Getting Started with Blazor Diagram Component in Web App
+# Getting Started with the Blazor Diagram Component in Web App
 
 This section briefly explains about how to include [Blazor Diagram](https://www.syncfusion.com/blazor-components/blazor-diagram) component in your Blazor Web App using [Visual Studio](https://visualstudio.microsoft.com/vs/) and Visual Studio Code.
 
@@ -25,7 +25,7 @@ You can create a **Blazor Web App** using Visual Studio 2022 via [Microsoft Temp
 
 You need to configure the corresponding [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vs) while creating a Blazor Web Application.
 
-## Step 2: Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram and Themes NuGet in the Blazor Web App
+## Step 2: Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram and Themes NuGet Packages in the Blazor Web App
 
 To add **Blazor Diagram** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.Diagram](https://www.nuget.org/packages/Syncfusion.Blazor.Diagram/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
@@ -119,7 +119,7 @@ var app = builder.Build();
 {% endhighlight %}
 {% endtabs %}
 
-## Step 4: Add stylesheet and script resources
+## Step 4: Add Stylesheet and Script Resources
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet reference in the `<head>` section and the script reference at the end of the `<body>` in the **~/Components/App.razor** file as shown below:
 
@@ -137,7 +137,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-## Step 5: Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram component
+## Step 5: Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram Component
 
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram component in `.razor` file inside the `Pages` folder. If an interactivity location as `Per page/component` in the web app, define a render mode at top of the component, as follows:
 
@@ -177,7 +177,7 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
-## Step 1: Create a new Blazor Web App in Visual Studio Code
+## Step 1: Create a New Blazor Web App in Visual Studio Code
 
 You can create a **Blazor Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
 
@@ -294,7 +294,7 @@ var app = builder.Build();
 {% endhighlight %}
 {% endtabs %}
 
-## Step 4: Add stylesheet and script resources
+## Step 4: Add Stylesheet and Script Resources
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Include the stylesheet reference in the `<head>` section and the script reference at the end of the `<body>` in the **~/Components/App.razor** file as shown below:
 
@@ -312,7 +312,7 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 
 N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/appearance/themes) topic to discover various methods ([Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference), and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator)) for referencing themes in your Blazor application. Also, check out the [Adding Script Reference](https://blazor.syncfusion.com/documentation/common/adding-script-references) topic to learn different approaches for adding script references in your Blazor application.
 
-## Step 5: Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram component
+## Step 5: Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram Component
 
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Diagram component in `.razor` file inside the `Pages` folder. If an interactivity location as `Per page/component` in the web app, define a render mode at top of the component, as follows:
 
@@ -348,7 +348,7 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 
 {% endtabcontents %}
 
-## Basic Blazor Diagram elements
+## Basic Blazor Diagram Elements
 
 * Node: Visualize any graphical object using nodes, which can be arranged and manipulated at the same time on a Blazor diagram page.
 * Connector: Represents the relationship between two nodes. Three types of connectors provided as follows:
@@ -358,7 +358,7 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 * Port: Acts as the connection points of node or connector and allows you to create connections with only specific points.
 * Annotation: Additional information can be shown by adding text or labels on nodes and connectors.
 
-## How to create Blazor flowchart diagram
+## How to Create a Blazor Flowchart Diagram
 
 Let us create and add a [Node](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html) with specific position, size, label, and shape. Connect two or more nodes by using a [Connector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html).
 
@@ -493,7 +493,7 @@ Let us create and add a [Node](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DiagramComponent).
 
-## How to create organizational chart
+## How to Create Organizational Chart
 
 A built-in automatic layout algorithm is designed specifically for organizational charts, automatically arranging parent and child node positions for optimal structure and clarity.
 
