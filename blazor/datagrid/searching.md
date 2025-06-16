@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Searching in Blazor DataGrid | Syncfusion
-description: Checkout and learn here all about Searching in Syncfusion Blazor DataGrid and much more details.
+description: Explore and understand the Searching in Syncfusion Blazor DataGrid. Learn about its features, usage, customization, and more.
 platform: Blazor
 control: DataGrid
 documentation: ug

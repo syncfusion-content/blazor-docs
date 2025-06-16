@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Filter Menu in Blazor DataGrid | Syncfusion
-description: Checkout and learn here all about Filter Menu in Syncfusion Blazor DataGrid and much more details.
+description: Explore and understand the Filter Menu in Syncfusion Blazor DataGrid. Learn about its features, usage, customization, and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -965,7 +965,7 @@ You can prevent autofill feature by setting the [Autofill](https://help.syncfusi
 
 When performing filtering programmatically using methods in the Syncfusion Blazor DataGrid, the default filter icons in the column headers can be hidden to simplify the user interface.
 
-To customize the filter icon in the Grid, use the display property of the filtermenu as mentioned below:
+To customize the filter icon in the Grid, use the display property of the filter menu as mentioned below:
 
 ```cshtml
 <style>
