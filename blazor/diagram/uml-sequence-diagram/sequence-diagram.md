@@ -9,15 +9,15 @@ documentation: ug
 
 # Sequence Diagram Model in Blazor diagram component
 
-A sequence diagram is a type of interaction diagram that visually represents how objects communicate with each other in a particular sequence over time. The `SfDiagramComponent` in the Syncfusion Blazor suite supports the creation and visualization of UML sequence diagrams through the dedicated `UMLSequenceDiagramModel` class.
+A sequence diagram is a type of interaction diagram that visually represents how objects communicate with each other in a particular sequence over time. The `SfDiagramComponent` in the Syncfusion Blazor suite supports the creation and visualization of Uml sequence diagrams through the dedicated `UmlSequenceDiagramModel` class.
 
-To enable this functionality, assign an instance of `UMLSequenceDiagramModel` to the `Model` property of the SfDiagramComponent. This model encapsulates all necessary elements—such as lifelines, messages, activation boxes, and fragments—required to render a complete sequence diagram.
+To enable this functionality, assign an instance of `UmlSequenceDiagramModel` to the `Model` property of the SfDiagramComponent. This model encapsulates all necessary elements—such as lifelines, messages, activation boxes, and fragments—required to render a complete sequence diagram.
 
 ## Sequence Diagram Elements
 
 A sequence diagram consists of several key elements, including participants, messages, activation boxes, and fragments. Each of these components plays a crucial role in representing the flow of interaction between objects over time.
 
-The diagram component allows you to define and manage these elements through the `UMLSequenceDiagramModel`. Below is an overview of how each element can be implemented:
+The diagram component allows you to define and manage these elements through the `UmlSequenceDiagramModel`. Below is an overview of how each element can be implemented:
 
 * `Participants`: Represent the lifelines (such as actors or systems) involved in the interaction.
 * `Messages`: Indicate the communication between participants, including synchronous and asynchronous calls, returns, and self-messages.
@@ -28,11 +28,11 @@ Each of these elements can be programmatically configured and customized to suit
 
 ### Participants
 
-The `UMLSequenceParticipant` class represents the entities involved in the sequence of interactions—such as users, systems, or services. In a sequence diagram, participants are displayed at the top of the diagram, with vertical lifelines extending downward to indicate their presence throughout the interaction flow.
+The `UmlSequenceParticipant` class represents the entities involved in the sequence of interactions—such as users, systems, or services. In a sequence diagram, participants are displayed at the top of the diagram, with vertical lifelines extending downward to indicate their presence throughout the interaction flow.
 
 Each participant serves as the source or target of messages and is essential for illustrating the communication between different components in the system.
 
-You can define participants by adding instances of `UMLSequenceParticipant` to the `Participants` collection in the `UMLSequenceDiagramModel`.
+You can define participants by adding instances of `UmlSequenceParticipant` to the `Participants` collection in the `UmlSequenceDiagramModel`.
 
 The following code example explains how to create participants in sequence diagram.
 
@@ -66,7 +66,7 @@ The following code example explains how to create participants in sequence diagr
             }
         };
 
-        // Initialize the UML sequence diagram model
+        // Initialize the Uml sequence diagram model
         DiagramModel = new UmlSequenceDiagramModel()
             {
                 Participants = participants
@@ -79,7 +79,7 @@ You can download a complete working sample from [GitHub]().
 
 ![ParticipantsExample](./images/ParticipantsExample.png)
 
-#### UMLSequenceParticipant Properties
+#### UmlSequenceParticipant Properties
 
 | Property | Type | Description |
 |---|---|---|
@@ -91,7 +91,7 @@ You can download a complete working sample from [GitHub]().
 
 ### Messages
 
-The `UMLSequenceMessage` class represents communications or interactions between participants in a sequence diagram. Messages are visually displayed as arrows connecting the lifelines of two participants, indicating the direction and type of interaction.
+The `UmlSequenceMessage` class represents communications or interactions between participants in a sequence diagram. Messages are visually displayed as arrows connecting the lifelines of two participants, indicating the direction and type of interaction.
 
 These messages can represent various types of communication, such as:
 
@@ -100,11 +100,11 @@ These messages can represent various types of communication, such as:
 * Return messages (e.g., responses or results)
 * Self-messages (where a participant calls itself)
 
-Messages are added to the `Messages` collection in the `UMLSequenceDiagramModel`, and can be customized to define their source, target, message type, and label.
+Messages are added to the `Messages` collection in the `UmlSequenceDiagramModel`, and can be customized to define their source, target, message type, and label.
 
 #### Types of Messages
 
-The [UMLSequenceMessageType]() enum defines the following message types:
+The [UmlSequenceMessageType]() enum defines the following message types:
 
 | Message Type | Description | Example |
 |---|---|---|
@@ -214,7 +214,7 @@ The following code example explains how to create messages in sequence diagram.
             }
         };
 
-        // Initialize UML Sequence Diagram model
+        // Initialize Uml Sequence Diagram model
         DiagramModel = new UmlSequenceDiagramModel()
             {
                 Participants = participants,
@@ -228,7 +228,7 @@ You can download a complete working sample from [GitHub]().
 
 ![Message Example](./images/MessageExample.png)
 
-#### UMLSequenceMessage Properties
+#### UmlSequenceMessage Properties
 
 | Property | Type | Description |
 |---|---|---|
@@ -236,15 +236,15 @@ You can download a complete working sample from [GitHub]().
 | Content | string | The display text for the message |
 | FromParticipantID | string | ID of the participant sending the message |
 | ToParticipantID | string | ID of the participant receiving the message |
-| MessageType | UMLSequenceMessageType | Type of the message (Synchronous, Asynchronous, Reply, Create, Delete, Self) |
+| MessageType | UmlSequenceMessageType | Type of the message (Synchronous, Asynchronous, Reply, Create, Delete, Self) |
 
 ### Activation Boxes
 
-The `UMLSequenceActivationBox` class represents periods during which a participant is active—that is, when it is executing a process or handling a message. These are visually rendered as thin vertical rectangles placed on top of a participant's lifeline.
+The `UmlSequenceActivationBox` class represents periods during which a participant is active—that is, when it is executing a process or handling a message. These are visually rendered as thin vertical rectangles placed on top of a participant's lifeline.
 
 Activation boxes typically begin when a message is received and end when the processing is complete. They help illustrate the execution flow and the duration of operations within the sequence diagram.
 
-Activation boxes can be explicitly configured by adding them to the `ActivationBoxes` collection of the `UMLSequenceDiagramModel`, allowing precise control over their placement and duration.
+Activation boxes can be explicitly configured by adding them to the `ActivationBoxes` collection of the `UmlSequenceParticipant`, allowing precise control over their placement and duration.
 
 The following code example explains how to create activation boxes in sequence diagram.
 
@@ -321,7 +321,7 @@ You can download a complete working sample from [GitHub]().
 
 ![Activations Example](./images/ActivationsExample.png)
 
-#### UMLSequenceActivationBox Properties
+#### UmlSequenceActivationBox Properties
 
 | Property | Type | Description |
 |---|---|---|
@@ -331,17 +331,17 @@ You can download a complete working sample from [GitHub]().
 
 ### Fragments
 
-The `UMLSequenceFragment` class is used to group a set of messages based on specific conditions or interaction control structures within a sequence diagram. Fragments are displayed as rectangular enclosures that visually separate sections of the diagram, typically used to represent:
+The `UmlSequenceFragment` class is used to group a set of messages based on specific conditions or interaction control structures within a sequence diagram. Fragments are displayed as rectangular enclosures that visually separate sections of the diagram, typically used to represent:
 
 * Alternative flows (alt)
 * Optional interactions (opt)
 * Loops (loop)
 
-You can configure fragments by adding them to the `Fragments` collection of the `UMLSequenceDiagramModel`, specifying the type of fragment, condition labels, and the associated messages or nested fragments it encompasses.
+You can configure fragments by adding them to the `Fragments` collection of the `UmlSequenceDiagramModel`, specifying the type of fragment, condition labels, and the associated messages or nested fragments it encompasses.
 
 #### Types of Fragments
 
-The [UMLSequenceFragmentType]() enum defines the following fragment types:
+The [UmlSequenceFragmentType]() enum defines the following fragment types:
 
 | Fragment Type  | Description  | Example  |  
 |---------------|-------------|--------|  
@@ -351,7 +351,7 @@ The [UMLSequenceFragmentType]() enum defines the following fragment types:
 
 #### Creating Fragments
 
-To create fragments in your sequence diagram, you will need to use the `UMLSequenceFragment` to define fragments and the [UMLSequenceFragmentCondition]() to specify each condition block within those fragments.
+To create fragments in your sequence diagram, you will need to use the `UmlSequenceFragment` to define fragments and the [UmlSequenceFragmentCondition]() to specify each condition block within those fragments.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -453,25 +453,25 @@ You can download a complete working sample from [GitHub]().
 
 ![Fragment Example](images/FragmentExample.png)
 
-#### UMLSequenceFragment Properties
+#### UmlSequenceFragment Properties
 
 | Property | Type | Description |
 |---|---|---|
 | ID | string | A unique identifier for the fragment |
-| FragmentType | UMLSequenceFragmentType | Type of the fragment (Optional, Loop, Alternative) |
-| Conditions | IEnumerable\<UMLSequenceFragmentCondition\> | Collection of conditions for the fragment |
+| FragmentType | UmlSequenceFragmentType | Type of the fragment (Optional, Loop, Alternative) |
+| Conditions | IEnumerable\<UmlSequenceFragmentCondition\> | Collection of conditions for the fragment |
 
-#### UMLSequenceFragmentCondition Properties
+#### UmlSequenceFragmentCondition Properties
 
 | Property | Type | Description |
 |---|---|---|
 | Content | string | Text describing the condition or parameter |
 | MessageIds | IEnumerable\<string\> | Collection of message IDs included in this condition section |
-| Fragments | IEnumerable\<UMLSequenceFragment\> | Collection of nested fragments (for complex structures) |
+| Fragments | IEnumerable\<UmlSequenceFragment\> | Collection of nested fragments (for complex structures) |
 
 ### Customizing Participant Spacing in Sequence Diagram 
 
-The `SpaceBetweenParticipants` property of the `UMLSequenceDiagramModel` controls the horizontal spacing between participants in the sequence diagram. By default, this value is set to 100, ensuring a uniform gap between lifelines.
+The `SpaceBetweenParticipants` property of the `UmlSequenceDiagramModel` controls the horizontal spacing between participants in the sequence diagram. By default, this value is set to 100, ensuring a uniform gap between lifelines.
 
 You can customize this value to increase or decrease the spacing based on your diagram’s layout requirements or to accommodate longer participant names and message labels.
 
@@ -479,7 +479,6 @@ You can customize this value to increase or decrease the spacing based on your d
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent @ref="Diagram" Height="600px" Model="@DiagramModel">
-    <SnapSettings Constraints="SnapConstraints.None" />
 </SfDiagramComponent>
 
 @code {
@@ -572,7 +571,7 @@ You can customize this value to increase or decrease the spacing based on your d
             }
         };
 
-        // Initialize UML Sequence Diagram model
+        // Initialize Uml Sequence Diagram model
         DiagramModel = new UmlSequenceDiagramModel()
             {
                 SpaceBetweenParticipants = 200,
