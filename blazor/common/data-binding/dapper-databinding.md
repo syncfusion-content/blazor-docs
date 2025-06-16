@@ -220,7 +220,7 @@ builder.Services.AddSyncfusionBlazor();
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor provides different themes. They are:
 
-* Bootstrap4
+* Bootstrap5
 * Material
 * Fabric
 * Bootstrap
