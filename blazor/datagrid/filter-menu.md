@@ -755,6 +755,124 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXrftBDxzDMOqgsi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+## Customize the default filter menu dialog
+
+The Syncfusion Blazor DataGrid allows you to customize the default filter menu dialog by modifying the filter editor components on a per-column basis. This enables you to tailor the filter UI and behavior to better suit specific data types and user requirements, improving usability and filtering precision.
+
+You can achieve this customization by setting the `FilterEditorSettings` property on each GridColumn, which allows you to define the filter component type and configure its behavior.
+
+In the following example, different columns in the Grid are configured with custom filtering components:
+
+| Column         | Filter Component                                                                 | Customization                                         |
+| -------------- | ------------------------------------------------------------------------------- | ----------------------------------------------------- |
+| **Order ID**   | [NumericTextBox](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started)   | Show clear button enabled, minimum value set to 10,000 |
+| **Customer ID**| [AutoComplete](https://blazor.syncfusion.com/documentation/autocomplete/getting-started)        | Autofill disabled, debounce delay set to 2000 ms       |
+| **Ship City**  | [AutoComplete](https://blazor.syncfusion.com/documentation/autocomplete/getting-started)        | Autofill enabled, minimum input length set to 2        |
+| **Order Time** | [TimePicker](https://blazor.syncfusion.com/documentation/timepicker/getting-started)            | Step interval set to 10 minutes                        |
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.Calendars
+
+<SfGrid DataSource="@GridData" AllowFiltering="true" AllowPaging="true">
+    <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
+    <GridPageSettings PageCount="5"></GridPageSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Orders.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120" FilterEditorSettings="OrderIdFilterSettings"></GridColumn>
+        <GridColumn Field=@nameof(Orders.CustomerID) HeaderText="Customer ID" Width="150" FilterEditorSettings="CustomerIdFilterSettings"></GridColumn>
+        <GridColumn Field=@nameof(Orders.Freight) TextAlign="TextAlign.Right" Width="120" Format="C2"></GridColumn>
+        <GridColumn Field=@nameof(Orders.OrderDate) HeaderText="Order Date" Format="dd/MM/yyyy" Type="ColumnType.DateOnly" TextAlign="TextAlign.Right" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Orders.OrderTime) HeaderText="Order Time" Type="ColumnType.TimeOnly" TextAlign="TextAlign.Right" Width="160" FilterEditorSettings="OrderTimeFilterSettings"></GridColumn>
+        <GridColumn Field=@nameof(Orders.ShipCity) HeaderText="Ship City" Width="150" FilterEditorSettings="ShipCityFilterSettings"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<Orders> GridData { get; set; }
+    protected override void OnInitialized()
+    {
+        GridData = Orders.GetAllRecords();
+    }
+    public IFilterSettings CustomerIdFilterSettings = new AutoCompleteFilterParams
+    {
+        AutoCompleteParams = new AutoCompleteModel
+        {
+            DebounceDelay = 2000,
+            Autofill = false,
+        }
+    };
+    public IFilterSettings OrderIdFilterSettings = new NumericFilterParams
+    {
+        NumericTextBoxParams = new NumericTextBoxModel<object>
+        {
+            ShowClearButton = true,
+            Min = 10000,
+        }
+    };
+    public IFilterSettings ShipCityFilterSettings = new AutoCompleteFilterParams
+    {
+        AutoCompleteParams = new AutoCompleteModel
+        {
+            MinLength = 2,
+            Autofill = true,
+        }
+    };
+    public IFilterSettings OrderTimeFilterSettings = new TimeFilterParams
+    {
+        TimePickerParams = new TimePickerModel<object>
+        {
+            Step = 10
+        }
+    };
+}
+{% endhighlight %}
+{% highlight c# tabtitle="Orders.cs" %}
+
+public class Orders
+{
+    public Orders() { }
+
+    public Orders(int orderID, string customerID, double freight, DateOnly orderDate, TimeOnly orderTime, string shipCity)
+    {
+        OrderID = orderID;
+        CustomerID = customerID;
+        Freight = freight;
+        OrderDate = orderDate;
+        OrderTime = orderTime;
+        ShipCity = shipCity;
+    }
+
+    public static List<Orders> GetAllRecords()
+    {
+        List<Orders> orders = new List<Orders>();
+        int code = 10000;
+        for (int i = 1; i < 5; i++)
+        {
+            orders.Add(new Orders(code + 1, "ALFKI", Math.Round((2.3 * i), 2), new DateOnly(1991, 05, 15), new TimeOnly(10, 00, 00), "Berlin"));
+            orders.Add(new Orders(code + 2, "ANATR", Math.Round((3.3 * i), 2), new DateOnly(1990, 04, 04), new TimeOnly(11, 30, 00), "Madrid"));
+            orders.Add(new Orders(code + 3, "ANTON", Math.Round((4.3 * i), 2), new DateOnly(1957, 11, 30), new TimeOnly(12, 00, 00), "Cholchester"));
+            orders.Add(new Orders(code + 4, "BLONP", Math.Round((5.3 * i), 2), new DateOnly(1930, 10, 22), new TimeOnly(15, 30, 00), "Marseille"));
+            orders.Add(new Orders(code + 5, "BOLID", Math.Round((6.3 * i), 2), new DateOnly(1953, 02, 18), new TimeOnly(16, 30, 00), "Tsawassen"));
+            code += 5;
+        }
+        return orders;
+    }
+
+    public int? OrderID { get; set; }
+    public string CustomerID { get; set; }
+    public double? Freight { get; set; }
+    public DateOnly? OrderDate { get; set; }
+    public TimeOnly? OrderTime { get; set; }
+    public string ShipCity { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ### Prevent autofill option in autocomplete of menu filter
 
 By default, the [AutoComplete](https://blazor.syncfusion.com/documentation/autocomplete/getting-started) component in the filter menu dialog is set to automatically fill suggestions as you type. However, there might be scenarios where you want to prevent this autofill behavior to provide a more customized and controlled user experience.

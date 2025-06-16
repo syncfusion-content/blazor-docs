@@ -791,6 +791,91 @@ The following example demonstrates, how to perform a search with multiple keywor
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtVqCDqNBkpniqXe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+## How to ignore accent while searching
+
+By default, the searching operation in the Syncfusion Blazor DataGrid does not ignore diacritic characters or accents. However, there are cases where ignoring diacritic characters becomes necessary. This feature enhances the search experience by enabling data searching without considering accents, ensuring a more comprehensive and accurate search and it can be achieved by utilizing the [GridSearchSettings.IgnoreAccent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_IgnoreAccent) property of the Grid as **true**.
+
+The following example demonstrates how to define the `IgnoreAccent` property within the GridSearchSettings property of the Grid.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+
+<SfGrid @ref="Grid" DataSource="@GridData" Toolbar="@(new List<string>() { "Search" })">
+    <GridSearchSettings IgnoreAccent="true"></GridSearchSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(InventorDetails.Inventor) IsPrimaryKey="true" HeaderText="Inventor Name" Width="180"></GridColumn>
+        <GridColumn Field=@nameof(InventorDetails.PatentFamilies) HeaderText="Number of Patent Families" TextAlign="TextAlign.Right" Width="195"></GridColumn>
+        <GridColumn Field=@nameof(InventorDetails.Country) HeaderText="Country" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(InventorDetails.MainFields) HeaderText="Main Fields of Invention" Width="130"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    private SfGrid<InventorDetails> Grid;
+    public List<InventorDetails> GridData { get; set; }
+    protected override void OnInitialized()
+    {
+        GridData = InventorDetails.GetAllRecords();
+    }   
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="InventorDetails.cs" %}
+
+public class InventorDetails
+{
+    public static List<InventorDetails> Inventors = new List<InventorDetails>();
+    public InventorDetails()
+    {
+
+    }
+    public InventorDetails(string Inventor,int? PatentFamilies,string NumberofINPADOCpatents,string Country,string MainFields)
+    {
+      this.Inventor= Inventor;
+      this.PatentFamilies= PatentFamilies;
+      this.NumberofINPADOCpatents= NumberofINPADOCpatents;
+      this.Country= Country;
+      this.MainFields= MainFields;
+    }
+    public static List<InventorDetails> GetAllRecords()
+    {
+        if (Inventors.Count() == 0)
+        {
+            int code = 10;
+            for (int i = 1; i < 2; i++)
+            {
+                Inventors.Add(new InventorDetails("Łukasz Kowalski", 4737, "9839", "Australia", "Printing, Digital paper, Internet, Electronics,Lab-on-a-chip, MEMS, Mechanical, VLSI"));
+                Inventors.Add(new InventorDetails("João Pereira", 4677, "10000+", "Japan", "Various"));
+                Inventors.Add(new InventorDetails("Štěpán Novák",13197, "1332", "Canada", "Printing, Digital paper, Internet, Electronics, CGI, VLSI"));
+                Inventors.Add(new InventorDetails("Guðrún Jónsdóttir", 1255, "3099", "India", "Automotive, Stainless steel products"));
+                Inventors.Add(new InventorDetails("Zsófia Tóth", 1240, "2038", "USA", "Gaming machines"));
+                Inventors.Add(new InventorDetails("Márcio Silveira", 1240, "4126", "Canada", "Printing, Digital paper, Internet, Electronics, CGI, VLSI"));
+                Inventors.Add(new InventorDetails("René González", 1093, "3360", "USA", "Automotive, Stainless steel products"));
+                Inventors.Add(new InventorDetails("Émile Durand", 993, "1398", "Japan", "Various"));
+                Inventors.Add(new InventorDetails("José Martínez", 949,"NA", "India", "Printing, Digital paper, Internet, Electronics, CGI, VLSI"));                  
+                code += 5;
+            }
+        }
+        return Inventors;
+    }
+    public string Inventor { get; set; }
+    public int? PatentFamilies { get; set; }
+    public string NumberofINPADOCpatents { get; set; }
+    public string Country { get; set; }
+    public string MainFields { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LNrItRCfhblhPJaR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+> * You can set `GridSearchSettings.IgnoreAccent` property along with other search settings such as [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_Fields), [Operator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_Operator), and [IgnoreCase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_IgnoreCase) to achieve the desired search behavior.
+> * This feature works only for the characters that are not in the ASCII range.
+> * This feature may have a slight impact on search performance.
+
 ## Clear search by external button
 
 The Syncfusion Blazor DataGrid provides a capability to clear searched data in the Grid. This functionality offers the ability to reset or clear any active search filters that have been applied to the Grid's data.
