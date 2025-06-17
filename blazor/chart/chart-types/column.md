@@ -516,6 +516,48 @@ The [ColumnSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rNBTjaiKzKALphJK?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+### Column width in Pixel
+
+The `ColumnWidthInPixel` property in [ChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html) is used to set the width of columns in pixels. A double value should be assigned to this property to customize the column width. The default value is `double.NaN`.
+
+```cshtml
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@SalesDetails" XName="X" YName="Y" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Column" ColumnSpacing="0.2" ColumnWidthInPixel="50">
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code {
+    public class ChartData
+    {
+        public string X { get; set; }
+        public double Y { get; set; }
+    }
+
+    public List<ChartData> SalesDetails = new List<ChartData>
+    {
+        new ChartData { X= "Jan", Y= 35 },
+        new ChartData { X= "Feb", Y= 28 },
+        new ChartData { X= "Mar", Y= 34 },
+        new ChartData { X= "Apr", Y= 32 },
+        new ChartData { X= "May", Y= 40 },
+        new ChartData { X= "Jun", Y= 32 },
+        new ChartData { X= "Jul", Y= 35 },
+        new ChartData { X= "Aug", Y= 55 },
+        new ChartData { X= "Sep", Y= 38 },
+        new ChartData { X= "Oct", Y= 30 },
+        new ChartData { X= "Nov", Y= 25 },
+        new ChartData { X= "Dec", Y= 32 }
+    };
+}
+```
+![Blazor Column Chart with Column Width in Pixel](../images/chart-types-images/blazor-column-chart-width-in-pixels.png)
+
 ## Grouped column
 
 You can use the [GroupName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_GroupName) property to group the data points in the column type charts. Data points with same group name are grouped together.

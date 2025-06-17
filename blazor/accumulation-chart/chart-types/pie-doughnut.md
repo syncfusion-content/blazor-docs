@@ -344,6 +344,49 @@ When the mouse hovers over the pie/doughnut chart, the border appears by default
 ![Hiding Blazor Pie Chart Border](../images/pie-dough-nut/Blazor-pie-chart-disable-border.png)
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htVqCLWUzWZnpzJw?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+## Border Radius
+
+The `BorderRadius` property can be applied to the pie/doughnut chart series within the [AccumulationChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html). This property allows users to apply smooth, rounded corners to chart slices, enhancing the visual appeal and customization capabilities of these charts.
+
+```cshtml
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Charts
+ <SfAccumulationChart  EnableBorderOnMouseMove="false" Title="Food Consumption">
+        <AccumulationChartTooltipSettings Header="" Format="<b>${point.x}</b><br>Percentage: <b>${point.y}%</b>" Enable="true" EnableHighlight="true"></AccumulationChartTooltipSettings>
+        <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
+        <AccumulationChartSeriesCollection>
+            <AccumulationChartSeries DataSource="@DoughnutChartPoints" XName="Food" YName="Amount" Radius="@Radius" StartAngle="@StartAngle" InnerRadius="40%" Name="Project" BorderRadius="4">
+                <AccumulationDataLabelSettings Visible="true" Name="DataLabelMappingName" Position="AccumulationLabelPosition.Outside">
+                      <AccumulationChartConnector Length=@ConnectorLength Type="ConnectorType.Curve"></AccumulationChartConnector>
+                    <AccumulationChartDataLabelFont FontWeight="600" Size=@Size></AccumulationChartDataLabelFont>
+                </AccumulationDataLabelSettings>
+            </AccumulationChartSeries>
+        </AccumulationChartSeriesCollection>
+ </SfAccumulationChart>
+
+@code {
+    private string Radius { get; set; } = "70%";
+    public double StartAngle { get; set; } = 30;
+    public string ConnectorLength { get; set; } = "20px";
+    public string Size { get; set; } = "12px";
+    public List<DoughnutData> DoughnutChartPoints { get; set; } = new List<DoughnutData>
+    {
+        new DoughnutData { Food = "Milk", Amount = 10, DataLabelMappingName = "Milk: 10%"},
+        new DoughnutData { Food = "Rice", Amount = 30, DataLabelMappingName = "Rice: 30%"},
+        new DoughnutData { Food = "Cereals", Amount = 20, DataLabelMappingName = "Cereals: 20%"},
+        new DoughnutData { Food = "Water", Amount = 15, DataLabelMappingName = "Water: 15%"},
+        new DoughnutData { Food = "Vegetables", Amount = 25, DataLabelMappingName = "Vegetables: 25%"},
+    };
+    public class DoughnutData
+    {
+        public string Food { get; set; }
+        public double Amount { get; set; }
+        public string DataLabelMappingName { get; set; }
+    }
+}
+```
+![Blazor Pie Chart BorderRadius](../images/pie-dough-nut/Blazor-pie-chart-border-radius.png)
+
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap5) to know various features of accumulation charts and how it is used to represent numeric proportional data.
 
 ## See also

@@ -213,6 +213,44 @@ By setting the [Explode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 ![Explode in Blazor Pyramid Chart](../images/pyramid/blazor-pyramid-chart-explode.png)
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BthAMBMATgJWwkNT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+## Border Radius
+
+The `BorderRadius` property can be applied to the pyramid chart series within the [AccumulationChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html). This property allows users to apply smooth, rounded corners to chart slices, enhancing the visual appeal and customization capabilities of these charts.
+
+```cshtml
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Charts
+
+ <SfAccumulationChart Title="Mobile Browser Statistics" >
+    <AccumulationChartSeriesCollection>
+        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users"
+                                 Name="Browser" Type="AccumulationType.Pyramid" Width="40%" Height="80%" BorderRadius="6">
+        </AccumulationChartSeries>
+    </AccumulationChartSeriesCollection>
+
+    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
+</SfAccumulationChart>
+
+@code{
+    public class Statistics
+    {
+        public string Browser { get; set; }
+        public double Users { get; set; }
+    }
+
+    public List<Statistics> StatisticsDetails = new List<Statistics>
+	{
+        new Statistics { Browser = "Chrome", Users = 37 },
+        new Statistics { Browser = "UC Browser", Users = 17 },
+        new Statistics { Browser = "iPhone", Users = 19 },
+        new Statistics { Browser = "Others", Users = 4  },
+        new Statistics { Browser = "Opera", Users = 11 },
+        new Statistics { Browser = "Android", Users = 12 },
+    };
+}
+```
+![Blazor Pyramid Chart BorderRadius](../images/pyramid/blazor-pyramid-border-radius.png)
+
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pyramid?theme=bootstrap5) to know various features of accumulation charts and how it is used to represent numeric proportional data.
 
 ## See also

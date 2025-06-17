@@ -555,6 +555,65 @@ Use the [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjVpNasqqwTjdxmq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+## Stack Labels
+
+The `Stack Labels` feature enables the display of cumulative total values for stacked chart segments directly through data labels. This feature provides an enhanced user experience when stacked chart series are used in Blazor Charts. Stack labels help users quickly interpret the combined impact of multiple data series without having to manually calculate totals.
+
+```cshtml
+@using Syncfusion.Blazor.Charts
+
+<SfChart Title="Family Expense for Month">
+    <ChartStackLabelSettings Visible="true">
+    </ChartStackLabelSettings>
+    <ChartPrimaryXAxis LabelRotation="90" ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+    </ChartPrimaryXAxis>
+
+    <ChartSeriesCollection>
+        <ChartSeries XName="X" DataSource="@ExpenseReports" YName="Y" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingArea100">
+            <ChartMarker Visible="true"><ChartDataLabel Visible="true"/></ChartMarker>
+        </ChartSeries>
+        <ChartSeries XName="X" DataSource="@ExpenseReports" YName="Y1" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingArea100">
+            <ChartMarker Visible="true"><ChartDataLabel Visible="true"/></ChartMarker>
+        </ChartSeries>
+        <ChartSeries XName="X" DataSource="@ExpenseReports" YName="Y2" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingArea100">
+            <ChartMarker Visible="true"><ChartDataLabel Visible="true"/></ChartMarker>
+        </ChartSeries>
+        <ChartSeries XName="X" DataSource="@ExpenseReports" YName="Y3" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingArea100">
+            <ChartMarker Visible="true"><ChartDataLabel Visible="true"/></ChartMarker>
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code {
+    public class ChartData
+    {
+        public string X { get; set; }
+        public double Y { get; set; }
+        public double Y1 { get; set; }
+        public double Y2 { get; set; }
+        public double Y3 { get; set; }
+    }
+
+    public List<ChartData> ExpenseReports = new List<ChartData>
+    {
+         new ChartData { X = "Food" , Y = 90, Y1 = 40 , Y2= 70, Y3= 120},
+         new ChartData { X = "Transport", Y = 80, Y1 = 90, Y2= 110, Y3= 70 },
+         new ChartData { X = "Medical",Y = 50, Y1 = 80, Y2= 120, Y3= 50 },
+         new ChartData { X = "Clothes",Y = 70, Y1 = 30, Y2= 60, Y3= 180 },
+         new ChartData { X = "Personal Care", Y = 30, Y1 = 80, Y2= 80, Y3= 30 },
+         new ChartData { X = "Books", Y = 40, Y1 = 40, Y2= 70, Y3= 270},
+         new ChartData { X = "Fitness",Y = 100, Y1 = 30, Y2= 70, Y3= 40 },
+         new ChartData { X = "Electricity", Y = 55, Y1 = 95, Y2= 55, Y3= 75},
+         new ChartData { X = "Tax", Y = 20, Y1 = 50, Y2= 40, Y3= 65 },
+         new ChartData { X = "Pet Care", Y = 40, Y1 = 20, Y2= 80, Y3= 95 },
+         new ChartData { X = "Education", Y = 45, Y1 = 15, Y2= 45, Y3= 195 },
+         new ChartData { X = "Entertainment", Y = 75, Y1 = 45, Y2= 65, Y3= 115 }
+    };
+}
+```
+
+![Blazor Stacking Area 100% Chart with Stack Labels](../images/chart-types-images/blazor-stacked-area-100-stack-labels.png)
+
 ## Events
 
 ### Series render

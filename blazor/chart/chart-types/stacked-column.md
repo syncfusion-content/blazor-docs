@@ -724,6 +724,68 @@ Use the [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LXrJXaMqTnowQIMp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+## Stack Labels
+
+The `Stack Labels` feature enables the display of cumulative total values for stacked chart segments directly through data labels. This feature provides an enhanced user experience when stacked chart series are used in Blazor Charts. Stack labels help users quickly interpret the combined impact of multiple data series without having to manually calculate totals.
+
+```cshtml
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartStackLabelSettings Visible="true">
+    </ChartStackLabelSettings>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@StackedDataList" XName="X" YName="Y" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn">
+            <ChartMarker>
+                <ChartDataLabel Visible="true"/>
+            </ChartMarker>
+        </ChartSeries>
+        <ChartSeries DataSource="@StackedDataList" XName="X" YName="Y1" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn">
+            <ChartMarker>
+                <ChartDataLabel Visible="true"/>
+            </ChartMarker>
+        </ChartSeries>
+        <ChartSeries DataSource="@StackedDataList" XName="X" YName="Y2" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn">
+            <ChartMarker>
+                <ChartDataLabel Visible="true"/>
+            </ChartMarker>
+        </ChartSeries>
+        <ChartSeries DataSource="@StackedDataList" XName="X" YName="Y3" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn">
+            <ChartMarker>
+                <ChartDataLabel Visible="true"/>
+            </ChartMarker>
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code {
+    public class StackedData
+    {
+        public string X { get; set; }
+        public double Y { get; set; }
+        public double Y1 { get; set; }
+        public double Y2 { get; set; }
+        public double Y3 { get; set; }
+    }
+
+
+    public List<StackedData> StackedDataList = new List<StackedData>
+    {
+        new StackedData { X = "2014", Y = 111.1, Y1 = 76.9, Y2 = 66.1, Y3 = 34.1 },
+        new StackedData { X = "2015", Y = 127.3, Y1 = 99.5, Y2 = 79.3, Y3 = 38.2 },
+        new StackedData { X = "2016", Y = double.NaN, Y1 = 121.7, Y2 = 91.3, Y3 = 44.0 },
+        new StackedData { X = "2017", Y = 159.9, Y1 = 142.5, Y2 = 102.4, Y3 = 51.6 },
+        new StackedData { X = "2018", Y = 175.4, Y1 = 166.7, Y2 = 112.9, Y3 = 61.9 },
+        new StackedData { X = "2019", Y = 189.0, Y1 = 182.9, Y2 = double.NaN, Y3 = 71.5 },
+        new StackedData { X = "2020", Y = 202.7, Y1 = 197.3, Y2 = 120.9, Y3 = 82.0 }
+    };
+}
+```
+
+![Blazor Stacking Column Chart with Stack Labels](../images/chart-types-images/blazor-stacked-column-chart-stack-label.png)
+
 ## Events
 
 ### Series render
