@@ -1,13 +1,13 @@
 ---
 layout: post
-title: BPMN Expanded Sub-Process in Blazor Diagram Component | Syncfusion
+title: Controlling BPMN Expanded Sub-Process in Blazor Diagram | Syncfusion
 description: Learn here all about how to create and update the BPMN Expanded Sub-Process in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Controlling BPMN Expanded Sub-Process in Blazor Diagram Component
+# Controlling BPMN Expanded Sub-Process in Blazor Diagram
 
 An ExpandedSubProcess is used to frame a part of the diagram, shows that elements included in it logically belong together, and has no other semantics other than organizing elements. It is represented by a rounded rectangle.
 

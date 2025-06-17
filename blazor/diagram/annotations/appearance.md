@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Annotation Appearance in Blazor Diagram Component | Syncfusion
+title: Controlling Annotation Appearance in Blazor Diagram | Syncfusion
 description: Checkout and learn here all about Appearance in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Controlling Annotation Appearance in Blazor Diagram Component
+# Controlling Annotation Appearance in Blazor Diagram
 
 ## How to Update Size of an Annotation
 
