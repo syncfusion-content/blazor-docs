@@ -738,21 +738,25 @@ The `Stack Labels` feature enables the display of cumulative total values for st
 
     <ChartSeriesCollection>
         <ChartSeries DataSource="@StackedDataList" XName="X" YName="Y" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn">
+            <ChartSeriesAnimation Enable="false" />
             <ChartMarker>
                 <ChartDataLabel Visible="true"/>
             </ChartMarker>
         </ChartSeries>
         <ChartSeries DataSource="@StackedDataList" XName="X" YName="Y1" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn">
+            <ChartSeriesAnimation Enable="false" />
             <ChartMarker>
                 <ChartDataLabel Visible="true"/>
             </ChartMarker>
         </ChartSeries>
         <ChartSeries DataSource="@StackedDataList" XName="X" YName="Y2" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn">
+            <ChartSeriesAnimation Enable="false" />
             <ChartMarker>
                 <ChartDataLabel Visible="true"/>
             </ChartMarker>
         </ChartSeries>
         <ChartSeries DataSource="@StackedDataList" XName="X" YName="Y3" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn">
+            <ChartSeriesAnimation Enable="false" />
             <ChartMarker>
                 <ChartDataLabel Visible="true"/>
             </ChartMarker>
