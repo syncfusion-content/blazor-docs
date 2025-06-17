@@ -294,7 +294,7 @@ The zoom toolbar in the chart can be repositioned using the `ChartZoomToolbarPos
     };
 }
 ```
-![Blazor Line Chart with Zooming Toolbar Positioning](./images/zoom/blazor-line-chart-zoom-toolbar-position.png)
+![Blazor Line Chart with modified zoom toolbar position](./images/zoom/blazor-line-chart-zoom-toolbar-position.png)
 
 ## Enable pan
 
