@@ -214,54 +214,6 @@ Points can be exploded on mouse click by setting the [Explode](https://help.sync
 ![Explode in Blazor Funnel Chart](../images/funnel/blazor-funnel-chart-explode.png)
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BZLKMLsqzpZBowwH?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Border Radius
-
-The `BorderRadius` property can be applied to the funnel chart series within the [AccumulationChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html). This property allows users to apply smooth, rounded corners to chart slices, enhancing the visual appeal and customization capabilities of these charts.
-
-```cshtml
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.Charts
-
- <SfAccumulationChart Title="Recruitment Process" EnableAnimation="false" >
-            <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
-            <AccumulationChartSeriesCollection>
-                <AccumulationChartSeries DataSource="@FunnelChartPoints" XName="InterviewProcess" YName="Candidates" BorderRadius="4"
-                                         Type="AccumulationType.Funnel" Explode="false" GapRatio="0.03" Height="80%" Width="@Width" NeckWidth="@NeckWidth" NeckHeight="18%">
-                    <AccumulationDataLabelSettings Visible="true" Name="DataLabelMappingName" Position="AccumulationLabelPosition.Inside">
-                        <AccumulationChartConnector Length=@ConnectorLength></AccumulationChartConnector>
-                        <AccumulationChartDataLabelFont Size=@Size FontWeight="600"></AccumulationChartDataLabelFont>
-                    </AccumulationDataLabelSettings>
-                </AccumulationChartSeries>
-            </AccumulationChartSeriesCollection>
- </SfAccumulationChart>
-
-@code {
-    public string NeckWidth { get; set; } = "15%";
-    public TextWrap Wrap { get; set; } = TextWrap.Normal;
-    public string Width { get; set; } = "45%";
-    public string ConnectorLength { get; set; } = "20px";
-    public string Size { get; set; } = "12px";
-    public List<FunnelData> FunnelChartPoints { get; set; } = new List<FunnelData>
-    {
-        new FunnelData { InterviewProcess = "Hired", Candidates = 55, DataLabelMappingName="Hired: 55"},
-        new FunnelData { InterviewProcess = "Personal Interview", Candidates = 58, DataLabelMappingName="Personal Interview: 58"},
-        new FunnelData { InterviewProcess = "Telephonic Interview", Candidates = 85, DataLabelMappingName="Telephonic Interview: 85"},
-        new FunnelData { InterviewProcess = "Screening", Candidates = 105, DataLabelMappingName="Screening: 105"},
-        new FunnelData { InterviewProcess = "Initial Validation", Candidates = 145, DataLabelMappingName="Initial Validation: 145"},
-        new FunnelData { InterviewProcess = "Candidates Applied", Candidates = 250, DataLabelMappingName="Candidates Applied: 250"},
-    };
-
-    public class FunnelData
-    {
-        public string InterviewProcess { get; set; }
-        public double Candidates { get; set; }
-        public string DataLabelMappingName { get; set; }
-    }
-}
-
-```
-![BorderRadius in Blazor Funnel Chart](../images/funnel/blazor-funnel-border-radius.png)
-
 ## Smart Data Label
 
 Labels will be arranged automatically on the left side of the funnel and pyramid chart when they overlap with each other.
@@ -314,6 +266,54 @@ Labels will be arranged automatically on the left side of the funnel and pyramid
 
 ![Blazor Funnel Chart with Smart Data Label](../images/funnel/blazor-funnel-chart-smart-data-label.png)
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjVKWrCqppsLzynA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Border radius
+
+The corners of the first data point and last data point in the funnel chart series can be rounded using the `BorderRadius` property within the [AccumulationChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html).
+
+```cshtml
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Charts
+
+ <SfAccumulationChart Title="Recruitment Process" EnableAnimation="false" >
+            <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
+            <AccumulationChartSeriesCollection>
+                <AccumulationChartSeries DataSource="@FunnelChartPoints" XName="InterviewProcess" YName="Candidates" BorderRadius="4"
+                                         Type="AccumulationType.Funnel" Explode="false" GapRatio="0.03" Height="80%" Width="@Width" NeckWidth="@NeckWidth" NeckHeight="18%">
+                    <AccumulationDataLabelSettings Visible="true" Name="DataLabelMappingName" Position="AccumulationLabelPosition.Inside">
+                        <AccumulationChartConnector Length=@ConnectorLength></AccumulationChartConnector>
+                        <AccumulationChartDataLabelFont Size=@Size FontWeight="600"></AccumulationChartDataLabelFont>
+                    </AccumulationDataLabelSettings>
+                </AccumulationChartSeries>
+            </AccumulationChartSeriesCollection>
+ </SfAccumulationChart>
+
+@code {
+    public string NeckWidth { get; set; } = "15%";
+    public TextWrap Wrap { get; set; } = TextWrap.Normal;
+    public string Width { get; set; } = "45%";
+    public string ConnectorLength { get; set; } = "20px";
+    public string Size { get; set; } = "12px";
+    public List<FunnelData> FunnelChartPoints { get; set; } = new List<FunnelData>
+    {
+        new FunnelData { InterviewProcess = "Hired", Candidates = 55, DataLabelMappingName="Hired: 55"},
+        new FunnelData { InterviewProcess = "Personal Interview", Candidates = 58, DataLabelMappingName="Personal Interview: 58"},
+        new FunnelData { InterviewProcess = "Telephonic Interview", Candidates = 85, DataLabelMappingName="Telephonic Interview: 85"},
+        new FunnelData { InterviewProcess = "Screening", Candidates = 105, DataLabelMappingName="Screening: 105"},
+        new FunnelData { InterviewProcess = "Initial Validation", Candidates = 145, DataLabelMappingName="Initial Validation: 145"},
+        new FunnelData { InterviewProcess = "Candidates Applied", Candidates = 250, DataLabelMappingName="Candidates Applied: 250"},
+    };
+
+    public class FunnelData
+    {
+        public string InterviewProcess { get; set; }
+        public double Candidates { get; set; }
+        public string DataLabelMappingName { get; set; }
+    }
+}
+
+```
+![Blazor Funnel Chart with border radius applied.](../images/funnel/blazor-funnel-border-radius.png)
 
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/funnel?theme=bootstrap5) to know various features of accumulation charts and how it is used to represent numeric proportional data.
 
