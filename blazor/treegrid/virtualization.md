@@ -352,7 +352,7 @@ In [hierarchical data binding]((https://blazor.syncfusion.com/documentation/tree
 Virtualization works by rendering only the visible rows within the viewport, not the entire data hierarchy.
 However, in a traditional hierarchical structure, child records are nested and not directly accessible without recursive traversal. This becomes inefficient and error-prone for virtualization, which expects a linear data structure it can paginate through quickly.
 
-* To enable accurate scrolling, efficient skip/take operations, and smooth expand/collapse behavior, the data must be flattened such that:
+* To enable accurate scrolling, efficient skip/take operations, and smooth expand/collapse behavior,  the data needs to be converted from a hierarchical structure into a flattened structure such that:
 
   * Each parent record is directly followed by its visible child records.
   * The order of records in the list reflects their visual placement in the TreeGrid.
