@@ -345,16 +345,20 @@ By default, the number of records rendered per page will be twice the TreeGrid's
 
 N> For example, when the OverscanCount is set to 5, only 5 buffer rows are rendered on the first and last pages. However, on in-between pages, a total of 10 buffer rows are rendered, with 5 rows allocated for both before and after the current page's visible rows.
 
-
 ## Virtualization with hierarchical data binding
 
 In [hierarchical data binding]((https://blazor.syncfusion.com/documentation/treegrid/data-binding#hierarchy-data-binding)), each parent record in the data source contains a nested collection of child records, representing a tree-like structure. When working with large hierarchical datasets, enabling virtualization helps significantly improve performance and rendering efficiency.
 
-Virtualization with hierarchical data binding in the TreeGrid is a performance optimization technique that allows only the visible rows within the viewport (and a few buffer rows) to be rendered at any given time, rather than the entire dataset. This approach ensures smooth scrolling and minimal memory usage, especially when displaying complex parent-child relationships across thousands of rows.
+Virtualization works by rendering only the visible rows within the viewport, not the entire data hierarchy.
+However, in a traditional hierarchical structure, child records are nested and not directly accessible without recursive traversal. This becomes inefficient and error-prone for virtualization, which expects a linear data structure it can paginate through quickly.
 
-* When using virtualization with hierarchical data binding, the data source should follow a flattened hierarchical structure, where each parent record is immediately followed by its child records in the correct sequence.
+* To enable accurate scrolling, efficient skip/take operations, and smooth expand/collapse behavior, the data must be flattened such that:
 
-* This differs from earlier implementations where only the top-level parent records were initially bound, and child data was loaded or rendered separately.
+  * Each parent record is directly followed by its visible child records.
+  * The order of records in the list reflects their visual placement in the TreeGrid.
+  * Only the flattened visible items are processed during virtualization.
+
+* This approach differs from earlier implementations where only the top-level parent records were initially bound, and child data was loaded or rendered separately.
 
 * To ensure proper rendering and efficient virtual scrolling, the TreeGrid uses an internal helper method to flatten the hierarchical dataset. This method restructures the data while preserving the logical parent-child relationships and display order,, which is essential for supporting operations like expand and collapse behavior, virtual scrolling across all hierarchy levels.
 
@@ -379,7 +383,7 @@ protected override void OnInitialized()
 
 ```
 
-**Step 3: Flatten the hierarchical data source:**
+**Step 3: Convert the hierarchical data to a flat structure:**
 
 To flatten the data, implement a recursive method that processes each parent and appends its children immediately after it, maintaining the display order.
 
