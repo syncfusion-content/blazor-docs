@@ -1,7 +1,7 @@
 ---
 layout: post
 title: State Management in Blazor DataGrid | Syncfusion
-description: Checkout and learn here all about state management in Syncfusion Blazor DataGrid and more.
+description: Checkout and learn here all about state management in Syncfusion Blazor DataGrid and much more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
