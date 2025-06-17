@@ -737,7 +737,7 @@ The `Stack Labels` feature enables the display of cumulative total values for st
 }
 ```
 
-![Blazor Stacking Column 100% Chart with Stack Labels](../images/chart-types-images//blazor-stacked-column-100-chart-stack-labels.png)
+![Blazor Stacking Column 100 Chart with Stack Labels](../images/chart-types-images//blazor-stacked-column-100-chart-stack-labels.png)
 ## Events
 
 ### Series render
