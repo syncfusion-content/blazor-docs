@@ -314,4 +314,4 @@ N> [View Sample in GitHub](https://github.com/syncfusion/smart-ai-samples).
 
 ## See also
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Paste Button Blazor Server App](https://blazor.syncfusion.com/documentation)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart Paste Button Blazor Server App](https://blazor.syncfusion.com/documentation/smart-paste/getting-started-webapp)
