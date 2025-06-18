@@ -34,11 +34,11 @@ builder.Services.AddSyncfusionBlazor(options => { options.EnableRtl = true; });
 
 ### Blazor Server App
 
-* For `.NET 6 or .NET 7` Blazor Server App, set [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_EnableRtl) property as `true` using `AddSyncfusionBlazor` service method in `~/Program.cs` file.
+* For `.NET 8 or .NET 9` Blazor Web App, set [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_EnableRtl) property as `true` using `AddSyncfusionBlazor` service method in `~/Program.cs` file.
 
 {% tabs %}
 
-{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
+{% highlight c# tabtitle=".NET 8 & .NET 9 (~/Program.cs)" %}
 
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
@@ -63,7 +63,7 @@ If you're using Blazor WebAssembly App, set [EnableRtl](https://help.syncfusion.
 
 {% tabs %}
 
-{% highlight c# tabtitle=".NET 6 & .NET 7 (~/Program.cs)" %}
+{% highlight c# tabtitle=".NET 8 & .NET 9 (~/Program.cs)" %}
 
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
