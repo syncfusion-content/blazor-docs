@@ -61,7 +61,7 @@ Below is an example illustrating how to define the [AllowedFormats] and [DeniedF
 
 ## Shortcut keys for copy and paste format
 
-For more details on keyboard navigation, refer to the [Keyboard support](/blazor/rich-text-editor/accessibility#keyboard-support) documentation.
+For more details on keyboard navigation, refer to the [Keyboard support](https://blazor.syncfusion.com/documentation/rich-text-editor/keyboard-support) documentation.
 
 N> The format painter retains the formatting after application making it possible to apply the same formatting multiple times by using the <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>v</kbd> keyboard shortcut.
 
