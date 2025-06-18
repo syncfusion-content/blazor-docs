@@ -7,11 +7,6 @@ control: Spreadsheet
 documentation: ug
 ---
 
-<!-- markdownlint-disable MD024 -->
-<!-- markdownlint-disable MD012 -->
-<!-- markdownlint-disable MD029 -->
-<!-- markdownlint-disable MD009 -->
-
 # Getting Started with Blazor Spreadsheet Component
 
 This section briefly explains about how to include [Blazor Spreadsheet](https://www.syncfusion.com/blazor-components/blazor-pivot-table) component in your Blazor WebAssembly App using Visual Studio and Visual Studio Code.

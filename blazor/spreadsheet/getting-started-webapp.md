@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with Syncfusion Spreadsheet in Blazor Web App
-description: Check out the documentation for getting started with Syncfusion Blazor Spreadsheet Components in Blazor Web App.
+description: Check out the documentation for getting started with Syncfusion Blazor Spreadsheet Component in Blazor Web App.
 platform: Blazor
 control: Spreadsheet
 documentation: ug
