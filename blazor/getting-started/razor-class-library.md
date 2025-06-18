@@ -71,7 +71,7 @@ This Blazor component is defined in the <strong>RazorClassLibrary</strong> packa
 
 ## Create a Blazor project in Visual Studio
 
-* Refer to the [Blazor Tooling documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows) to create a new **Blazor Web App** or **Blazor WebAssembly Standalone App**using Visual Studio.
+* Refer to the [Blazor Tooling documentation](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=windows) to create a new **Blazor Web App** using Visual Studio.
 
 {% endtabcontent %}
 
@@ -187,8 +187,7 @@ You can create a **Blazor Web App** or **Blazor Server App** or **Blazor WebAsse
 
     * For Blazor WebAssembly standalone app, include the stylesheet reference in the `<head>` section and the script reference at the end of the `<body>` in the **~/wwwroot/index.html** file.
 
-    * For **.NET 8 and.NET 9**  Blazor Web Apps using any render mode (Server, WebAssembly, or Auto), include the stylesheet reference in the `<head>` section and the script reference at the end of the `<body>` in the **~/Components/Pages/App.razor** file.
-
+    * For **.NET 8 and .NET 9**  Blazor Web Apps using any render mode (Server, WebAssembly, or Auto), include the stylesheet reference in the `<head>` section and the script reference at the end of the `<body>` in the **~/Components/Pages/App.razor** file.
 
     ```html
     <head>

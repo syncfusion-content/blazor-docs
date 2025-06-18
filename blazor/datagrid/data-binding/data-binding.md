@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Binding in Blazor DataGrid | Syncfusion
-description: Checkout and learn here all about Data Binding in Syncfusion Blazor DataGrid and much more.
+description: Learn how to bind data from various sources to the Syncfusion Blazor DataGrid and explore supported data binding options in detail.
 platform: Blazor
 control: DataGrid
 documentation: ug
