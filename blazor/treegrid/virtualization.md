@@ -361,7 +361,6 @@ Virtualization relies on efficiently accessing data by index, which works well w
 
 * This nested organization makes it difficult for virtualization to quickly determine which rows to display, since the TreeGrid needs a linear sequence of rows to calculate what fits in the visible area.
 
-
 To use virtualization with hierarchical data, the nested tree structure must be converted into a flattened list before binding it to the TreeGrid. Flattening means:
 
 * Transforming the nested hierarchy into a single-level list.
