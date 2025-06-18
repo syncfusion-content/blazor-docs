@@ -351,7 +351,7 @@ When displaying hierarchical data in a TreeGrid, each parent record contains chi
 
 When the hierarchical dataset is large, rendering every node parent and child can be slow and consume a lot of memory. This can result in sluggish scrolling and delayed loading times.
 
-Virtualization solves this problem by rendering only the rows that are currently visible in the Grid’s viewport. Instead of loading all data at once, it loads data on demand as the user scrolls, improving performance significantly.
+Virtualization solves this problem by rendering only the rows that are currently visible in the TreeGrid’s viewport. Instead of loading all data at once, it loads data on demand as the user scrolls, improving performance significantly.
 
 Virtualization relies on efficiently accessing data by index, which works well with flat lists. However, hierarchical data is inherently nested:
 
@@ -359,10 +359,10 @@ Virtualization relies on efficiently accessing data by index, which works well w
 
 * The data is not a simple list but a tree structure.
 
-* This nested organization makes it difficult for virtualization to quickly determine which rows to display, since the Grid needs a linear sequence of rows to calculate what fits in the visible area.
+* This nested organization makes it difficult for virtualization to quickly determine which rows to display, since the TreeGrid needs a linear sequence of rows to calculate what fits in the visible area.
 
 
-To use virtualization with hierarchical data, the nested tree structure must be converted into a flattened list before binding it to the Grid. Flattening means:
+To use virtualization with hierarchical data, the nested tree structure must be converted into a flattened list before binding it to the TreeGrid. Flattening means:
 
 * Transforming the nested hierarchy into a single-level list.
 
