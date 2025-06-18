@@ -413,7 +413,7 @@ The method loops through every item at the current level of the hierarchy. Initi
 
 * **Add the current item to the flat list:**
 
-Each item it encounters — whether a parent or a child is immediately added to the flat list. This maintains the order of items as they appear in the original hierarchy.
+Each item encountered, whether a parent or a child, is immediately added to the flat list. This helps preserve the original hierarchical order.
 
 * **Find the children of the current item dynamically:**
 
