@@ -1,0 +1,13 @@
+<SfRichTextEditor >
+    <RichTextEditorSlashMenuSettings Enable="true" Items="@slashmenuItems" />
+</SfRichTextEditor>
+
+@code{
+    private List<SlashMenuItemModel> slashmenuItems = new List<SlashMenuItemModel> ()
+    {
+        new SlashMenuItemModel() {Command = SlashMenuCommand.Paragraph},
+        new SlashMenuItemModel() {Command = SlashMenuCommand.Heading1},
+        new SlashMenuItemModel() {Command = SlashMenuCommand.Heading2},
+        new SlashMenuItemModel() {Command = SlashMenuCommand.Heading3},
+    };
+}
