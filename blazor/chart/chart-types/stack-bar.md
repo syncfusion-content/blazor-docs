@@ -673,11 +673,11 @@ Use the [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 ```
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VDLfNuMASAjCTbTh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Stack Labels
+## Stack labels
 
-The Stack Labels feature enables the display of cumulative total values for stacked chart segments directly through data labels. This feature provides an enhanced user experience when stacked chart series are used in Blazor Charts. 
+The stack labels display cumulative total values for stack segments directly using data labels. If all the values in a stack segment are negative, the stack label is displayed below the point. 
 
-The `Visible` property of the `ChartStackLabelSettings` is used to control the visibility of stack labels. Setting it to true will display the stack labels.
+The `Visible` property of the `ChartStackLabelSettings` is used to enable stack labels. Setting it to **true** will display the stack labels.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -740,50 +740,37 @@ The `Visible` property of the `ChartStackLabelSettings` is used to control the v
 
 ```
 
-![Blazor Stacking Bar 100 Chart with Stack Labels](../images/chart-types-images/blazor-stacked-bar-100-chart-stack-labels.png)
+![Blazor Stacked Bar 100 Chart with stack labels](../images/chart-types-images/blazor-stacked-bar-100-chart-stack-labels.png)
 
-### Stack labels Customization
+### Customization
 
-Stack labels have various properties for customization to enhance the visual based on your requirements.
+The stack labels can be customized using the `ChartStackLabelSettings` properties as given below.
 
-* `fill` - Specifies the background color of the stack labels. The default value is transparent.
+* `Fill` - Specifies the background color of the stack labels when border is set. The default value is **transparent**.
+* `Format` - Specifies the format of the stack labels. It supports a placeholder `{value}` which will be replaced by the stack label value.
+* `Rx` - Specifies the rounded corner radius along the X-axis (horizontal direction) for the stack label background. The default value is **5**.
+* `Ry` - Specifies the rounded corner radius along the Y-axis (vertical direction) for the stack label background. The default value is **5**.
+* `Angle` - Specifies the rotation angle for stack labels in degrees. Default is **0**.
 
-* `format` - Specifies the format of the stack labels. It supports placeholder like {value}.
+We can customize the font of the stack labels using the `ChartStackLabelFont` properties as given below:
 
-* `Rx` - Specifies the rounded corner radius along the X-axis (horizontal direction) for the stack label background. The default value is 5.
+* `TextAlignment` - Customizes the alignment of the text within the stack label.
+* `FontFamily` - Customizes the font family for the stack label text.
+* `Size` - Customizes the font size of the stack label text.
+* `FontStyle` - Customizes the font style of the stack label text.
+* `FontWeight` - Customizes the font weight of the stack label text.
+* `Color` - Customizes the color of the stack label text.
 
-* `Ry` - Specifies the rounded corner radius along the Y-axis (vertical direction) for the stack label background. The default value is 5.
-
-* `Angle` - Specifies the rotation angle for stack labels in degrees. Default is 0.
-
-We can also customize the font using the `ChartStackLabelFont` of the stack labels with the properties:
-
-* `TextAlignment` - Specifies the alignment of the text within the stack label.
-
-* `FontFamily` - Specifies the font family for the stack label text.
-
-* `Size` - Specifies the font size of the stack label text.
-
-* `FontStyle` - Specifies the font style of the stack label text.
-
-* `FontWeight` - Specifies the font weight of the stack label text.
-
-* `Color` - Specifies the color of the stack label text.
-
-We also customize the border of the stack labels using the `ChartStackLabelBorder` with the properties:
+We can customize the border of the stack labels using the `ChartStackLabelBorder` properties as given below:
 
 * `Width` - Specifies the width of the border around the stack label.
-
 * `Color` - Specifies the color of the border around the stack label.
 
- To customize margin, we can use the `ChartStackLabelMargin` with the properties:
+ To customize the margin, we can use the `ChartStackLabelMargin` properties as given below:
 
 * `Bottom` - Specifies the bottom margin of the stack label.
-
 * `Top` - Specifies the top margin of the stack label.
-
 * `Right` - Specifies the right margin of the stack label.
-
 * `Left` - Specifies the left margin of the stack label.
 
 ```cshtml
@@ -850,7 +837,7 @@ We also customize the border of the stack labels using the `ChartStackLabelBorde
 }
 ```
 
-![Blazor Stacked Bar 100 Chart with Stack Labels Customization](../images/chart-types-images/blazor-stacked-bar-100-chart-stack-labels-customization.png)
+![Blazor Stacked Bar 100 Chart with stack label customization](../images/chart-types-images/blazor-stacked-bar-100-chart-stack-labels-customization.png)
 
 ## Events
 
