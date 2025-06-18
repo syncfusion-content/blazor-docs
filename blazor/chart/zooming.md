@@ -201,9 +201,9 @@ By default, the zooming toolbar appears only when the chart is zoomed. However, 
 
 ![Toolbar displayed during the initial load](images/zoom/blazor-column-chart-zoom-toolbar-displaymode.png)
 
-## Zoom Toolbar Positioning
+### Toolbar positioning
 
-Using `ChartZoomToolbarPosition`, you can customize the position of the zoom toolbar according to your preference. You can align it horizontally using the `HorizontalAlign` property with options such as `Right`, `Left`, and `Center`. Similarly, you can align it vertically using the `VerticalAlign` property with options including `Top`, `Bottom`, and `Middle`. Additionally, for more precise positioning, you can specify custom coordinates using `X` and `Y` values.
+The zoom toolbar in the chart can be repositioned using the `ChartZoomToolbarPosition`, allowing for flexible alignment and placement. It supports horizontal alignments (Near, Center, and Far) using the `HorizontalAlign` property, and vertical alignments (Top, Middle, and Bottom) using the `VerticalAlign` property. By default, these are set to **Far** (horizontal) and **Top** (vertical). Additionally, for more precise positioning, you can specify custom coordinates using the `X` and `Y` properties.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -504,7 +504,10 @@ The axis interval will be calculated automatically with respect to the zoomed ra
 
 ![Auto Interval on Zooming in Blazor Area Chart](images/zoom/blazor-area-chart-auto-interval-zooming.png)
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2411bce622b9ba3b72a3825026390045370fb70c
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See Also
