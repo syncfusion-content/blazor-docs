@@ -347,178 +347,42 @@ N> For example, when the OverscanCount is set to 5, only 5 buffer rows are rende
 
 ## Virtualization with hierarchical data binding
 
-In [hierarchical data binding]((https://blazor.syncfusion.com/documentation/treegrid/data-binding#hierarchy-data-binding)), each parent record in the data source contains a nested collection of child records, representing a tree-like structure. When working with large hierarchical datasets, enabling virtualization helps significantly improve performance and rendering efficiency.
+When displaying hierarchical data in a TreeGrid, each parent record contains child records nested within it, forming a tree-like structure. This hierarchical organization allows you to expand or collapse nodes to explore data in detail.
 
-Virtualization works by rendering only the visible rows within the viewport, not the entire data hierarchy.
-However, in a traditional hierarchical structure, child records are nested and not directly accessible without recursive traversal. This becomes inefficient and error-prone for virtualization, which expects a linear data structure it can paginate through quickly.
+When the hierarchical dataset is large, rendering every node parent and child can be slow and consume a lot of memory. This can result in sluggish scrolling and delayed loading times.
 
-* To enable accurate scrolling, efficient skip/take operations, and smooth expand/collapse behavior,  the data needs to be converted from a hierarchical structure into a flattened structure such that:
+Virtualization solves this problem by rendering only the rows that are currently visible in the Grid’s viewport. Instead of loading all data at once, it loads data on demand as the user scrolls, improving performance significantly.
 
-  * Each parent record is directly followed by its visible child records.
-  * The order of records in the list reflects their visual placement in the TreeGrid.
-  * Only the flattened visible items are processed during virtualization.
+Virtualization relies on efficiently accessing data by index, which works well with flat lists. However, hierarchical data is inherently nested:
 
-* This approach differs from earlier implementations where only the top-level parent records were initially bound, and child data was loaded or rendered separately.
+* Child records are stored inside parent records.
 
-* To ensure proper rendering and efficient virtual scrolling, the TreeGrid uses an internal helper method to flatten the hierarchical dataset. This method restructures the data while preserving the logical parent-child relationships and display order,, which is essential for supporting operations like expand and collapse behavior, virtual scrolling across all hierarchy levels.
+* The data is not a simple list but a tree structure.
 
-* This structure makes rendering efficient and ensures smooth interactions when working with large hierarchical datasets in a virtualized environment.
+* This nested organization makes it difficult for virtualization to quickly determine which rows to display, since the Grid needs a linear sequence of rows to calculate what fits in the visible area.
 
-To enable virtualization with hierarchical data binding, follow these steps to convert the hierarchical data into a self-referential, flattened structure handled on the application side before binding the data to the component:
 
-**Step 1:  Enabling virtualization with hierarchical binding properties:**
+To use virtualization with hierarchical data, the nested tree structure must be converted into a flattened list before binding it to the Grid. Flattening means:
 
-Set the [enableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) property to **true** to enable virtualization. Additionally, when using hierarchical data binding, enable the [childMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ChildMapping) property to specify the child records collection. 
+* Transforming the nested hierarchy into a single-level list.
 
-**Step 2: Initialize the flattened data in the component lifecycle:**
+* Ensuring that each parent is immediately followed by its visible child records.
 
-Use the `HierarchyToFlatData` method to convert the hierarchical data into a flattened array and bind it to the TreeGrid's data source.
+* Preserving the visual order as seen in the expanded tree.
 
-```ts
+This flat list enables virtualization to:
 
-protected override void OnInitialized()
-{
-  this.TreeGridData = HierarchyToFlatData(VirtualData.GetVirtualData(), "Children").ToArray();
-}
+* Quickly skip and take rows based on scroll position.
 
-```
+* Render only visible rows, including child nodes, in correct order.
 
-**Step 3: Convert the hierarchical data to a flat structure:**
+* Support expand/collapse behavior smoothly by dynamically updating the flat list when nodes expand or collapse.
 
-To flatten the data, implement a recursive method that processes each parent and appends its children immediately after it, maintaining the display order.
+You can flatten the hierarchical data on the application side using a recursive method. This method iterates through each parent record and appends its child records in order, creating a linear list.
+
+In a Blazor application, place the flattening method (**HierarchyToFlatData**) inside your component’s code block (e.g., in **Index.razor** or your relevant .razor file). Call this method during the component’s initialization lifecycle (for example, in **OnInitialized**) and assign the resulting flat list as the data source for the TreeGrid. Use the following code:
 
 ```ts
-
-  public List<VirtualData> HierarchyToFlatData(List<VirtualData> dataSource, string childMapping, List<VirtualData> addedData = null)
-  {
-    if (addedData == null)
-    {
-      addedData = new List<VirtualData>();
-    }
-
-    foreach (var item in dataSource)
-    {
-      addedData.Add(item);
-
-      // Get children dynamically using reflection.
-      var propertyInfo = item.GetType().GetProperty(childMapping);
-      var children = propertyInfo?.GetValue(item) as IEnumerable<VirtualData>;
-
-      if (children != null)
-      {
-        HierarchyToFlatData(children.ToList(), childMapping, addedData);
-      }
-    }
-    return addedData;
-  }
-
-```
-
-
-**Step 4: Define the data model:**
-
-Create a data model class that contains hierarchical data with a collection of child records.
-
-```ts
-
-public class VirtualData
-{
-  public int TaskID { get; set; }
-  public string FIELD1 { get; set; }
-  public int FIELD2 { get; set; }
-  public int? FIELD3 { get; set; }
-  public int? FIELD4 { get; set; }
-  ublic List<VirtualData> Children { get; set; }
-
-  static string[] Names = new string[] { "VINET", "TOMSP", "HANAR", "VICTE", "SUPRD", "HANAR", "CHOPS", "RICSU", "WELLI", "HILAA", "ERNSH", "CENTC","OTTIK", "QUEDE", "RATTC", "ERNSH", "FOLKO", "BLONP", "WARTH", "FRANK", "GROSR", "WHITC", "WARTH", "SPLIR", "RATTC", "QUICK", "VINET","MAGAA", "TORTU", "MORGK", "BERGS", "LEHMS", "BERGS", "ROMEY", "ROMEY", "LILAS", "LEHMS", "QUICK", "QUICK", "RICAR", "REGGC", "BSBEV","COMMI", "QUEDE", "TRADH", "TORTU", "RATTC", "VINET", "LILAS", "BLONP", "HUNGO", "RICAR", "MAGAA", "WANDK", "SUPRD", "GODOS", "TORTU","OLDWO", "ROMEY", "LONEP", "ANATR", "HUNGO", "THEBI", "DUMON", "WANDK", "QUICK", "RATTC", "ISLAT", "RATTC", "LONEP", "ISLAT", "TORTU","WARTH", "ISLAT", "PERIC", "KOENE", "SAVEA", "KOENE", "BOLID", "FOLKO", "FURIB", "SPLIR", "LILAS", "BONAP", "MEREP", "WARTH", "VICTE","HUNGO", "PRINI", "FRANK", "OLDWO", "MEREP", "BONAP", "SIMOB", "FRANK", "LEHMS", "WHITC", "QUICK", "RATTC", "FAMIA" };
-
-  public static List<VirtualData> GetVirtualData()
-  {
-    List<VirtualData> DataCollection = new List<VirtualData>();
-    var j = 0;
-    for (var i = 1; i <= 10000; i++)
-    {
-
-      var random = new Random();
-      var name = random.Next(50);
-      VirtualData Parent1 = new VirtualData()
-      {
-        TaskID = ++j,
-        FIELD1 = VirtualData.Names[name],
-        FIELD2 = 1967,
-        FIELD3 = 395,
-        FIELD4 = 87,
-        Children = new List<VirtualData>()
-      };
-      for (var k = 0; k < 4; k++)
-      {
-        name = random.Next(5);
-        VirtualData Child1 = new VirtualData()
-        {
-          TaskID = ++j,
-          FIELD1 = VirtualData.Names[name],
-          FIELD2 = 1968,
-          FIELD3 = 295,
-          FIELD4 = 44
-        };
-        Parent1.Children.Add(Child1);
-      }
-
-      name = random.Next(50);
-      VirtualData Parent2 = new VirtualData()
-      {
-        TaskID = ++j,
-        FIELD1 = VirtualData.Names[name],
-        FIELD2 = 1968,
-        FIELD3 = 295,
-        FIELD4 = 44,
-        Children = new List<VirtualData>()
-      };
-      for (var m = 0; m < 4; m++)
-      {
-        name = random.Next(50);
-        VirtualData Child2 = new VirtualData()
-        {
-          TaskID = ++j,
-          FIELD1 = VirtualData.Names[name],
-          FIELD2 = 1968,
-          FIELD3 = 295,
-          FIELD4 = 44
-        };
-        Parent2.Children.Add(Child2);
-      }
-      DataCollection.Add(Parent1);
-      DataCollection.Add(Parent2);
-    }
-    return DataCollection;
-  }
-}
-
-```
-
-The following sample demonstrates virtualization implementation with hierarchical data binding:
-
-{% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-
-@using Syncfusion.Blazor.TreeGrid;
-@using Syncfusion.Blazor.Grids;
-
-<SfTreeGrid RowHeight="35" OverscanCount="5" @ref="TreeGrid" TValue="VirtualData" DataSource="@TreeGridData" ChildMapping="Children" EnableVirtualization="true" Height="400" TreeColumnIndex="1" EnableVirtualMaskRow="true" Toolbar="@(new List<string>(){"Add","Edit","Delete","Update","Cancel","ExpandAll", "CollapseAll"})">
-  <TreeGridEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true" Mode="Syncfusion.Blazor.TreeGrid.EditMode.Cell" NewRowPosition="RowPosition.Child" />
-  <TreeGridPageSettings PageSize="30"></TreeGridPageSettings>
-  <TreeGridColumns>
-    <TreeGridColumn Field="TaskID" IsPrimaryKey="true" HeaderText="Player Jersey" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
-    <TreeGridColumn Field="FIELD1" HeaderText="Player Name" Width="100"></TreeGridColumn>
-    <TreeGridColumn Field="FIELD2" HeaderText="Year" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
-    <TreeGridColumn Field="FIELD3" HeaderText="Stint" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
-    <TreeGridColumn Field="FIELD4" HeaderText="TMID" Width="80"></TreeGridColumn>
-  </TreeGridColumns>
-</SfTreeGrid>
-
-@code {
-  private SfTreeGrid<VirtualData> TreeGrid;
-  public VirtualData[] TreeGridData { get; set; }
 
   protected override void OnInitialized()
   {
@@ -539,20 +403,87 @@ The following sample demonstrates virtualization implementation with hierarchica
       // Get children dynamically using reflection.
       var propertyInfo = item.GetType().GetProperty(childMapping);
       var children = propertyInfo?.GetValue(item) as IEnumerable<VirtualData>;
+
       if (children != null)
       {
         HierarchyToFlatData(children.ToList(), childMapping, addedData);
       }
     }
-
     return addedData;
   }
 
+```
+
+The following sample demonstrates how to bind hierarchical data to the TreeGrid using the `ChildMapping` property, enable virtualization by setting `EnableVirtualization` to true, and convert hierarchical data into a flat list using the `HierarchyToFlatData` method before binding it to the TreeGrid.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.TreeGrid;
+@using Syncfusion.Blazor.Grids;
+
+<SfTreeGrid RowHeight="35" OverscanCount="5" @ref="TreeGrid" TValue="VirtualData" DataSource="@TreeGridData" ChildMapping="Children" EnableVirtualization="true" Height="400" TreeColumnIndex="1" EnableVirtualMaskRow="true" Toolbar="@(new List<string>(){"Add","Edit","Delete","Update","Cancel","ExpandAll", "CollapseAll"})">
+  <TreeGridEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true" Mode="Syncfusion.Blazor.TreeGrid.EditMode.Cell" NewRowPosition="RowPosition.Child" />
+  <TreeGridPageSettings PageSize="30"></TreeGridPageSettings>
+  <TreeGridColumns>
+    <TreeGridColumn Field="TaskID" IsPrimaryKey="true" HeaderText="Player Jersey" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+    <TreeGridColumn Field="FIELD1" HeaderText="Player Name" Width="100"></TreeGridColumn>
+    <TreeGridColumn Field="FIELD2" HeaderText="Year" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+    <TreeGridColumn Field="FIELD3" HeaderText="Stint" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+    <TreeGridColumn Field="FIELD4" HeaderText="TMID" Width="80"></TreeGridColumn>
+  </TreeGridColumns>
+</SfTreeGrid>
+
+@code {
+  // Reference to TreeGrid instance.
+  private SfTreeGrid<VirtualData> TreeGrid;
+
+  // Flattened data source assigned to TreeGrid.
+  public VirtualData[] TreeGridData { get; set; }
+
+  // On component initialization, flatten the hierarchical data and bind to TreeGrid
+  protected override void OnInitialized()
+  {
+    this.TreeGridData = HierarchyToFlatData(VirtualData.GetVirtualData(), "Children").ToArray();
+  }
+
+  // Recursive method to flatten hierarchical data into a linear list preserving display order.
+  public List<VirtualData> HierarchyToFlatData(List<VirtualData> dataSource, string childMapping, List<VirtualData> addedData = null)
+  {
+    // If this is the first call, initialize the list to store flattened data.
+    if (addedData == null)
+    {
+      addedData = new List<VirtualData>();
+    }
+
+    foreach (var item in dataSource)
+    {
+      // Add the current item to the flattened list.
+      addedData.Add(item);
+
+      // Use reflection to get the property named by childMapping dynamically.
+      var propertyInfo = item.GetType().GetProperty(childMapping);
+
+      // Get the children collection of this item, cast to IEnumerable<VirtualData>.
+      var children = propertyInfo?.GetValue(item) as IEnumerable<VirtualData>;
+      if (children != null)
+      {
+        // Recursive call to process children.
+        HierarchyToFlatData(children.ToList(), childMapping, addedData);
+      }
+    }
+
+    // Return the fully flattened list.
+    return addedData;
+  }
+
+ // Expands all rows in the TreeGrid when called.
   private async Task ExpandAllOnClick()
   {
     await TreeGrid.ExpandAllAsync();
   }
 
+  // Sample data model with recursive Children property.
   public class VirtualData
   {
     public int TaskID { get; set; }
