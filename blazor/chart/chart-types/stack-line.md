@@ -762,7 +762,7 @@ The stack labels can be customized using the `ChartStackLabelSettings` propertie
 * `Format` - Specifies the format of the stack labels. It supports a placeholder `{value}` which will be replaced by the stack label value.
 * `Rx` - Specifies the rounded corner radius along the X-axis (horizontal direction) for the stack label background. The default value is **5**.
 * `Ry` - Specifies the rounded corner radius along the Y-axis (vertical direction) for the stack label background. The default value is **5**.
-* `Angle` - Specifies the rotation angle for stack labels in degrees. Default is **0**.
+* `Angle` - Specifies the rotation angle for stack labels in degrees. The default value is **0**.
 
 We can customize the font of the stack labels using the `ChartStackLabelFont` properties as given below:
 
