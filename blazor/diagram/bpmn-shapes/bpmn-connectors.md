@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Controlling BPMN Connectors in Blazor Diagram Component | Syncfusion
+title: BPMN Connectors in Blazor Diagram Component | Syncfusion
 description: Learn here all about BPMN Connectors such as association, sequence, message in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Controlling BPMN Connectors in Blazor Diagram Component
+# BPMN Connectors in Blazor Diagram Component
 
 The `BPMN Connectors` are lines that connect BPMN flow objects.
 
@@ -16,7 +16,7 @@ They are classified as follows.
 * Sequence
 * Message
 
-## Association
+## How to Create a Association Flow
 
 The `BPMN Association` flow is used to link flow objects with their corresponding text or artifact. An association is represented as a dotted graphical line with an opened arrow. 
 To create an Association, the [Flow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlow.html#Syncfusion_Blazor_Diagram_BpmnFlow_Flow) property of the [BpmnFlowShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlow.html) should be set to [AssociationFlow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlowType.html#Syncfusion_Blazor_Diagram_BpmnFlowType_AssociationFlow). The types of association are as follows:
@@ -70,7 +70,7 @@ The following table shows the visual representation of association flows.
 | DirectionalAssociationFlow | ![Directional BPMN FlowShapes](../images/Bpmn-DirectionalAssociatinFlow.png) |
 | BiDirectionalAssociationFlow | ![BiDirectional BPMN FlowShapes](../images/Bpmn-BidirectionalAssociationFlow.png) |
 
-## Sequence
+## How to Create a Sequence Flow
 
 A `Sequence` flow shows the order that the activities are performed in a BPMN process and is represented by a solid graphical line. To create a SequenceFlow, [Flow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlow.html#Syncfusion_Blazor_Diagram_BpmnFlow_Flow) property of the [BpmnFlowShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlow.html) should be set to [SequenceFlow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlowType.html#Syncfusion_Blazor_Diagram_BpmnFlowType_SequenceFlow). The types of sequence are as follows:
 
@@ -125,7 +125,7 @@ The following table contains various representation of sequence flows.
 
 N> The default value for the property `Sequence` is **Normal.**
 
-## Message
+## How to Create a Message Flow
 
 `Message` flows are used when two separately controlled processes communicate and collaborate with one another. An activity or event in one pool can initiate a message to the another pool. Message Flows are depicted as lines with an empty circle indicating where the message originates and an empty arrowhead where the message terminates. To create a MessageFlow, the [Flow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlow.html#Syncfusion_Blazor_Diagram_BpmnFlow_Flow) property of the [BpmnFlowShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlow.html) should be set to [MessageFlow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlowType.html#Syncfusion_Blazor_Diagram_BpmnFlowType_MessageFlow). The types of message flows are as follows:
 

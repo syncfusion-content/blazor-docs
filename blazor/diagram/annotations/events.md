@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Controlling Annotation Events in Blazor Diagram Component | Syncfusion
+title: Annotation Events in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about Events in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Controlling Annotation Events in Blazor Diagram Component
+# Annotation Events in Blazor Diagram Component
 
-## Text Change Event
+## How to Handle Text Change Event
 
 * While editing a node's or connector's annotation, the following event can be used to do the customization.
 * When a node's or connector's annotation is changed in the diagram, this event is getting triggered. 

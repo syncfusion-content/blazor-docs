@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Controlling Accessibility in Blazor Diagram Component | Syncfusion
+title: Accessibility Features in Blazor Diagram Component | Syncfusion
 description: Checkout and Learn all about accessibility in Syncfusion Blazor Diagram component and many more details.
 platform: Blazor
 control: Diagram
 documentation: ug
 ---
 
-# Controlling Accessibility in Blazor Diagram Component
+# Accessibility Features in Blazor Diagram Component
 
 Accessibility in the Blazor diagram component is achieved through compliance with the [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), and [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, as well as [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) and support for keyboard navigation. This ensures that users can effectively interact with the diagram features using assistive technologies such as screen readers.
 

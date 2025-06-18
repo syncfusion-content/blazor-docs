@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Controlling Connector Annotation in Blazor Diagram | Syncfusion
+title: Annotation Interaction in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about Interaction in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Controlling Annotation Interaction in Blazor Diagram
+# Annotation Interaction in Blazor Diagram Component
 
 Diagram provides the support to the annotations rotation interactively.
 
-## Annotation Rotation
+## How to Control Annotation Rotation
 The [RotationReference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeAnnotation.html#Syncfusion_Blazor_Diagram_ShapeAnnotation_RotationReference) property of an annotation allows you to control whether the text should rotate relative to its parent node or the Page. The following code examples illustrate how to configure RotationReference for an annotation.
 
 
