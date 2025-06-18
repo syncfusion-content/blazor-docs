@@ -89,6 +89,8 @@ N> Line breaks can be provided to texts in the `HoverTextFormat` property using 
 
 The appearance of the center label can be customized by using the `AccumulationChartCenterLabelFont`, which allows you to modify font properties such as size, font-family, font-style, font-weight, and color to enhance the visual presentation of the text displayed in the center of the chart.
 
+The position of the center label can be adjusted using the `XOffset` and `YOffset` properties in the `AccumulationChartCenterLabel`.
+
 ```cshtml
 @using Syncfusion.Blazor.Charts
 
