@@ -157,7 +157,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
  ![Collapsed Subprocess BPMN Shape](../images/Bpmn-CollapsedSub-Process-Loop-None.png)
 
-### How to Set Loop Types for BPMN Activity
+### How to Set Loop Type for BPMN Activity
 
 [Loop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html#Syncfusion_Blazor_Diagram_BpmnActivity_Loop) is a task that is internally being looped. The [Loop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html#Syncfusion_Blazor_Diagram_BpmnActivity_Loop) property of [Bpmn Activity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html) allows you to define the type of loop. The default value for [Loop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html#Syncfusion_Blazor_Diagram_BpmnActivity_Loop) is [None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnLoopCharacteristic.html#Syncfusion_Blazor_Diagram_BpmnLoopCharacteristic_None). 
 
@@ -352,7 +352,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![IsAdHocActivity CollapsedSub-Process BPMN Shape](../images/Bpmn-CollapsedSub-Process-AdHocpng.png)
 
-### How to Set Sub-Process Types for BPMN Activity
+### How to Set Sub-Process Type for BPMN Activity
 
 SubProcessType represents the type of task that is being processed. The [SubProcessType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnActivity.html#Syncfusion_Blazor_Diagram_BpmnActivity_SubProcessType) property of subprocess allows you to define the type of SubProcessType. By default, it is set to [Default](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnSubProcessType.html#Syncfusion_Blazor_Diagram_BpmnSubProcessType_Default).
 
