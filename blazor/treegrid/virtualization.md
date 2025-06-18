@@ -347,7 +347,7 @@ N> For example, when the OverscanCount is set to 5, only 5 buffer rows are rende
 
 ## Virtualization with hierarchical data binding
 
-By default, virtualization was not supported with hierarchical data binding in the Syncfusion Blazor TreeGrid. Now, with the enhanced support for hierarchical virtualization, you can efficiently manage large datasets that include multiple child records and deeply nested levels, all while maintaining a responsive and smooth user experience.
+Previously, virtualization was not supported with hierarchical data binding in the Grid. Now, Syncfusion has introduced virtualization support for hierarchical data, enabling efficient handling of large datasets with multiple child records and nested levels. This feature leverages an on-demand loading concept to boost performance and user experience
 
 This feature leverages on-demand data loading to reduce rendering overhead and optimize performance across large hierarchical structures.
 
