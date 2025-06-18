@@ -418,6 +418,39 @@ You can utilize the [`FileOpenEventArgs`](https://help.syncfusion.com/cr/blazor/
 ```
 ![Blazor Image Editor with Adding Watermark](./images/blazor-image-editor-add-watermark.jpeg)
 
+### Opening images with custom width and height
+
+Users can now open images with specified width and height values using the imageSettings parameter in the `Open` method. This enhancement introduces three additional properties: `width,` `height,` and `isAspectRatio.` Image dimensions can be precisely controlled while preserving the aspect ratio, if needed. This provides more control over rendering images, especially when dealing with high-resolution images or fixed canvas requirements.
+
+```cshtml
+@using Syncfusion.Blazor.ImageEditor 
+@using Syncfusion.Blazor.Buttons
+
+<div style="padding-bottom: 15px">
+    <SfButton OnClick="OpenImageAsync">Open Image</SfButton>
+</div>
+<SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="400">
+    <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
+</SfImageEditor>
+
+@code {
+    SfImageEditor ImageEditor;
+    private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>() { };
+
+    private async void OpenAsync()
+    {
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
+    }
+
+    private async void OpenImageAsync()
+    {
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png", true,"", -1, 500);
+    }
+}
+```
+
+![Blazor Image Editor with Opening an image](./images/blazor-image-editor-custom-height-width.png)
+
 ## Save as image
 
 The [`ExportAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_ExportAsync_System_String_Syncfusion_Blazor_ImageEditor_ImageEditorFileType_System_Double_) method in the Blazor Image Editor component is used to save the modified image as an image, and it accepts a file name and file type as parameters. The file type parameter supports PNG, JPEG, SVG, and WEBP the default file type is PNG. Users are allowed to save an image with a specified file name, file type, and image quality. This enhancement provides more control over the output, ensuring that users can save their work exactly as they need it.
