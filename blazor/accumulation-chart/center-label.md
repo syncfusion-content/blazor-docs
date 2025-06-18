@@ -9,9 +9,9 @@ documentation: ug
 
 # Center Label in Blazor Accumulation Chart Component
 
-The Center Label feature enables you to place custom text in the center of pie and doughnut charts using `AccumulationChartCenterLabel`. This is particularly useful for showing chart's title, percentage distribution, or other important metrics related to the data being visualized.
+The center label feature allows you to place custom text in the middle of pie and donut charts using the `AccumulationChartCenterLabel`. This is especially useful for displaying the chart's title, percentage distribution, or other key metrics pertinent to the visualized data.
 
-You can configure the text displayed in the center using the `Text` property within the `AccumulationChartCenterLabel`. This allows you to customize what information is shown at the focal point of your chart.
+You can configure the text that appears in the center using the `Text` property within the `AccumulationChartCenterLabel`.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -48,7 +48,9 @@ You can configure the text displayed in the center using the `Text` property wit
 
 ## Hover Text
 
-The center label text updates dynamically when hovering over chart slices using the `HoverTextFormat` property. This interactive feature enhances user engagement by providing relevant information about specific segments during exploration of the visualization.
+The center label text can be dynamically updated when hovering over pie or donut chart slices using the `HoverTextFormat` property. This interactive feature enhances user engagement by offering relevant information about specific segments during the exploration of the visualization.
+
+N> Line breaks can be provided to texts in the `HoverTextFormat` property using the `<br>` tag.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -85,7 +87,7 @@ The center label text updates dynamically when hovering over chart slices using 
 
 ## Customization
 
-The appearance of the center label can be customized by using the `AccumulationChartCenterLabelFont`, which allows you to modify font properties such as size, family, style, weight, and color to enhance the visual presentation of the text displayed in the center of the chart.
+The appearance of the center label can be customized by using the `AccumulationChartCenterLabelFont`, which allows you to modify font properties such as size, font-family, font-style, font-weight, and color to enhance the visual presentation of the text displayed in the center of the chart.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -126,5 +128,5 @@ N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/bla
 ## See also
 
 * [Data Label](./data-labels)
-* [Title and SubTitles](./title-and-sub-title)
+* [Title and Subtitle](./title-and-sub-title)
 * [Annotation](./annotation)

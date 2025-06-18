@@ -518,7 +518,7 @@ The [ColumnSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
 
 ### Column width in pixel
 
-The `ColumnWidthInPixel` property in [ChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html) is used to set the width of the column and rectangle-based series types in pixels. A double value should be assigned to this property to customize the column width. The default value is `double.NaN`.
+The `ColumnWidthInPixel` property in [ChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html) is used to set the width of the column and rectangle-based series types in pixels. This property ensures that each column maintains the specified width, providing a uniform appearance throughout the chart.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts

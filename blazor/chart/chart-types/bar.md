@@ -470,7 +470,7 @@ The [ColumnSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
 
 ### Column width in pixels
 
-The `ColumnWidthInPixel` property in [ChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html) is used to set the width of the bar and rectangle-based series types in pixels. This property ensures that each column maintains the specified width, providing a uniform appearance throughout the chart.
+The `ColumnWidthInPixel` property in [ChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html) is used to set the width of the bar and rectangle-based series types in pixels. This property ensures that each bar maintains the specified width, providing a uniform appearance throughout the chart.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
