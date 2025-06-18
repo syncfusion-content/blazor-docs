@@ -376,7 +376,7 @@ The `BorderRadius` property can be applied to the pie/doughnut chart series with
     }
 }
 ```
-![Blazor Pie Chart BorderRadius](../images/pie-dough-nut/Blazor-pie-chart-border-radius.png)
+![Blazor Pie Chart BorderRadius](../images/pie-dough-nut/blazor-pie-chart-border-radius.png)
 
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap5) to know various features of accumulation charts and how it is used to represent numeric proportional data.
 

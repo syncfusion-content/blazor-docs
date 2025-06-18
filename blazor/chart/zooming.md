@@ -504,10 +504,6 @@ The axis interval will be calculated automatically with respect to the zoomed ra
 
 ![Auto Interval on Zooming in Blazor Area Chart](images/zoom/blazor-area-chart-auto-interval-zooming.png)
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 2411bce622b9ba3b72a3825026390045370fb70c
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See Also
