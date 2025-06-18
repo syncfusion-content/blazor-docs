@@ -660,7 +660,7 @@ We also customize the border of the stack labels using the `ChartStackLabelBorde
 ```cshtml
 @using Syncfusion.Blazor.Charts
 
-<SfChart>
+<SfChart Title="Stacked Area 100% with Stack labels">
     <ChartStackLabelSettings Visible="true" Format="{value}" Fill="#ADD8E6" Rx="10" Ry="10" Angle="35">
         <ChartStackLabelFont TextAlignment="Alignment.Center" FontFamily="Roboto" Size="12px" FontStyle="bold" FontWeight="600" Color="blue" />
         <ChartStackLabelBorder Width="2" Color="#000000" />
