@@ -349,8 +349,6 @@ N> For example, when the OverscanCount is set to 5, only 5 buffer rows are rende
 
 Previously, virtualization was not supported with hierarchical data binding in the TreeGrid. Now, Syncfusion has introduced virtualization support for hierarchical data, enabling efficient handling of large datasets with multiple child records and nested levels. This feature leverages an on-demand loading concept to boost performance and user experience
 
-This feature leverages on-demand data loading to reduce rendering overhead and optimize performance across large hierarchical structures.
-
 When working with deeply nested hierarchical structures containing numerous child records, rendering all levels at once can cause performance issues such as flickering due to frequent height recalculations. For example, expanding a parent row that contains 100 or 1000 child records may trigger excessive DOM reflows as the TreeGrid dynamically adjusts height based on the number of loaded rows. This flickering can worsen when multiple child rows are expanded simultaneously. Additionally, the data source must be accurately transformed into a parent-child hierarchy before rendering. This involves recursive logic to correctly associate child records under their respective parents. If this conversion is incomplete or incorrect, the TreeGrid may misrender the hierarchy, leading to broken structures or display inconsistencies.
 
 To address the challenges of virtualization with deeply nested hierarchical data, Syncfusion employs a flat data conversion approach. This method offers several key advantages:
@@ -415,7 +413,7 @@ The method loops through every item at the current level of the hierarchy. Initi
 
 * **Add the current item to the flat list:**
 
-Each item it encounters — whether a parent or a child — is immediately added to the flat list. This maintains the order of items as they appear in the original hierarchy.
+Each item it encounters — whether a parent or a child is immediately added to the flat list. This maintains the order of items as they appear in the original hierarchy.
 
 * **Find the children of the current item dynamically:**
 
