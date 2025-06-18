@@ -414,7 +414,7 @@ In a Blazor application, place the flattening method (**HierarchyToFlatData**) i
 
 ```
 
-The following sample demonstrates how to bind hierarchical data to the TreeGrid using the `ChildMapping` property, enable virtualization by setting `EnableVirtualization` to true, and convert hierarchical data into a flat list using the `HierarchyToFlatData` method before binding it to the TreeGrid.
+The following sample demonstrates how to bind hierarchical data to the TreeGrid using the `ChildMapping` property, enable virtualization by setting `EnableVirtualization` to true, and convert hierarchical data into a flat list using the `HierarchyToFlatData` method before binding it to the TreeGrid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
