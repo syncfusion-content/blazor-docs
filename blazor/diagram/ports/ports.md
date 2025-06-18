@@ -25,7 +25,7 @@ Ports act as the connection points of the node and allows creating connections w
 
 ![Connection between Ports in Blazor Diagram](../images/blazor-diagram-port-connection.gif)
 
-## How to create ports
+## How to create a node port
 
 To add a connection port, define the port object and add it to node’s ports collection. The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PointPort.html#Syncfusion_Blazor_Diagram_PointPort_Offset) property of the port accepts an object of fractions and is used to determine the position of ports. The following code explains how to add ports when initializing the node.
 
@@ -75,7 +75,121 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Creating Port in Blazor Diagram](../images/blazor-diagram-create-port.png)
 
+## How to create a connector port
+
+Creating connector ports is similar to creating node ports. To define connector ports, you need to create a collection of `ConnectorPort` and assign it to the connector’s `Ports` property.
+
+The following code example demonstrates how to create a connector port.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Height="600px" Connectors="@connectors">
+</SfDiagramComponent>
+
+@code
+{
+    //Define diagram's connector collection
+    DiagramObjectCollection<Connector> connectors;
+
+    protected override void OnInitialized()
+    {
+        // A connector is created and stored in connectors collection.
+        connectors = new DiagramObjectCollection<Connector>();
+
+        // Create connector
+        Connector connector = new Connector()
+        {
+            ID = "connector",
+            SourcePoint = new DiagramPoint() { X = 400, Y = 200 },
+            TargetPoint = new DiagramPoint() { X = 550, Y = 350 },
+            Type = ConnectorSegmentType.Orthogonal,
+            Ports = new DiagramObjectCollection<ConnectorPort>()
+            {
+                new ConnectorPort()
+                {
+                    ID = "port",
+                    Visibility = PortVisibility.Visible,
+                    Shape = PortShapes.Square,
+                }
+            }
+        };
+        connectors.Add(connector);
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ConnectorPort/CreateConnectorPorts)
+
 >**Note:** Port's Id should not start with numbers or special characters and should not contain special characters such as underscores(_) or spaces.
+
+### How to connect a connector to a port
+
+Connector ports are used to establish connections between connectors. To create such a connection, set the `SourcePortID` or `TargetPortID` property to the ID of the corresponding port on the connector.
+
+The following code example demonstrates how to connect one connector to a port on another connector.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Height="600px" Connectors="@connectors">
+</SfDiagramComponent>
+
+@code
+{
+    // Initialize connector collection
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+
+    protected override void OnInitialized()
+    {
+        Connector connector1 = new Connector()
+        {
+            ID = "connector1",
+            SourcePoint = new DiagramPoint() { X = 200, Y = 100 },
+            TargetPoint = new DiagramPoint() { X = 350, Y = 250 },
+            Type = ConnectorSegmentType.Bezier,
+            Ports = new DiagramObjectCollection<ConnectorPort>()
+            {
+                new ConnectorPort()
+                {
+                    ID = "port",
+                    Visibility = PortVisibility.Visible,
+                    Shape = PortShapes.Square,
+                }
+            }
+        };
+
+        Connector connector2 = new Connector()
+        {
+            ID = "connector2",
+            SourcePoint = new DiagramPoint() { X = 600, Y = 100 },
+            TargetPoint = new DiagramPoint() { X = 750, Y = 250 },
+            Type = ConnectorSegmentType.Bezier,
+            Ports = new DiagramObjectCollection<ConnectorPort>()
+            {
+                new ConnectorPort()
+                {
+                    ID = "port",
+                    Visibility = PortVisibility.Visible,
+                    Shape = PortShapes.Square,
+                }
+            }
+        };
+        Connector connector3 = new Connector()
+        {
+            ID = "connector3",
+            SourceID = "connector1",
+            SourcePortID = "port",
+            TargetID = "connector2",
+            TargetPortID = "port",
+            Type = ConnectorSegmentType.Straight
+        };
+        connectors.Add(connector1);
+        connectors.Add(connector2);
+        connectors.Add(connector3);
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ConnectorPort/ConnectorPortConnection)
 
 ## How to add ports at runtime
 
