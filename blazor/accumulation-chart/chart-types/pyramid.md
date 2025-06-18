@@ -218,35 +218,35 @@ By setting the [Explode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 The `BorderRadius` property can be applied to the pyramid chart series within the [AccumulationChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html). This property allows users to apply smooth, rounded corners to chart slices, enhancing the visual appeal and customization capabilities of these charts.
 
 ```cshtml
-@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Charts
 
- <SfAccumulationChart Title="Mobile Browser Statistics" >
+<SfAccumulationChart Title="Food Consumption Pyramid">
+    <AccumulationChartLegendSettings Visible="false">
+    </AccumulationChartLegendSettings>
     <AccumulationChartSeriesCollection>
-        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users"
-                                 Name="Browser" Type="AccumulationType.Pyramid" Width="40%" Height="80%" BorderRadius="6">
+        <AccumulationChartSeries DataSource="@PyramidChartPoints" XName="Foods" YName="Percentage" Type="AccumulationType.Pyramid" Width="45%" Height="80%" BorderRadius="8">
+            <AccumulationDataLabelSettings Visible="true" Position="AccumulationLabelPosition.Outside" Name="DataLabelMappingName">
+            </AccumulationDataLabelSettings>
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
-
-    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
 </SfAccumulationChart>
 
-@code{
-    public class Statistics
+@code {
+    public List<PyramidData> PyramidChartPoints { get; set; } = new List<PyramidData>
     {
-        public string Browser { get; set; }
-        public double Users { get; set; }
-    }
-
-    public List<Statistics> StatisticsDetails = new List<Statistics>
-	{
-        new Statistics { Browser = "Chrome", Users = 37 },
-        new Statistics { Browser = "UC Browser", Users = 17 },
-        new Statistics { Browser = "iPhone", Users = 19 },
-        new Statistics { Browser = "Others", Users = 4  },
-        new Statistics { Browser = "Opera", Users = 11 },
-        new Statistics { Browser = "Android", Users = 12 },
+          new PyramidData { Foods = "Oils", Percentage = 2, DataLabelMappingName = "Oils: 2%" },
+          new PyramidData { Foods = "Nuts", Percentage = 10, DataLabelMappingName = "Nuts: 10%" },
+          new PyramidData { Foods = "Fruits", Percentage = 15, DataLabelMappingName = "Fruits: 15%" },
+          new PyramidData { Foods = "Dairy", Percentage = 23, DataLabelMappingName = "Dairy: 23%" },
+          new PyramidData { Foods = "Vegetables", Percentage = 23, DataLabelMappingName = "Vegetables: 23%" },
+          new PyramidData { Foods = "Grains", Percentage = 27, DataLabelMappingName = "Grains: 27%"}
     };
+    public class PyramidData
+    {
+        public string Foods { get; set; }
+        public double Percentage { get; set; }
+        public string DataLabelMappingName { get; set; }
+    }
 }
 ```
 ![Blazor Pyramid Chart BorderRadius](../images/pyramid/blazor-pyramid-border-radius.png)

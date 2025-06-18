@@ -219,28 +219,21 @@ Points can be exploded on mouse click by setting the [Explode](https://help.sync
 The `BorderRadius` property can be applied to the funnel chart series within the [AccumulationChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html). This property allows users to apply smooth, rounded corners to chart slices, enhancing the visual appeal and customization capabilities of these charts.
 
 ```cshtml
-@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Charts
 
  <SfAccumulationChart Title="Recruitment Process" EnableAnimation="false" >
             <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
             <AccumulationChartSeriesCollection>
-                <AccumulationChartSeries DataSource="@FunnelChartPoints" XName="InterviewProcess" YName="Candidates" BorderRadius="4"
-                                         Type="AccumulationType.Funnel" Explode="false" GapRatio="0.03" Height="80%" Width="@Width" NeckWidth="@NeckWidth" NeckHeight="18%">
+                <AccumulationChartSeries DataSource="@FunnelChartPoints" XName="InterviewProcess" YName="Candidates" BorderRadius="8"
+                                         Type="AccumulationType.Funnel" Height="80%" Width="40%">
                     <AccumulationDataLabelSettings Visible="true" Name="DataLabelMappingName" Position="AccumulationLabelPosition.Inside">
-                        <AccumulationChartConnector Length=@ConnectorLength></AccumulationChartConnector>
-                        <AccumulationChartDataLabelFont Size=@Size FontWeight="600"></AccumulationChartDataLabelFont>
+                        <AccumulationChartDataLabelFont FontWeight="600"></AccumulationChartDataLabelFont>
                     </AccumulationDataLabelSettings>
                 </AccumulationChartSeries>
             </AccumulationChartSeriesCollection>
  </SfAccumulationChart>
 
 @code {
-    public string NeckWidth { get; set; } = "15%";
-    public TextWrap Wrap { get; set; } = TextWrap.Normal;
-    public string Width { get; set; } = "45%";
-    public string ConnectorLength { get; set; } = "20px";
-    public string Size { get; set; } = "12px";
     public List<FunnelData> FunnelChartPoints { get; set; } = new List<FunnelData>
     {
         new FunnelData { InterviewProcess = "Hired", Candidates = 55, DataLabelMappingName="Hired: 55"},
@@ -258,7 +251,6 @@ The `BorderRadius` property can be applied to the funnel chart series within the
         public string DataLabelMappingName { get; set; }
     }
 }
-
 ```
 ![BorderRadius in Blazor Funnel Chart](../images/funnel/blazor-funnel-border-radius.png)
 

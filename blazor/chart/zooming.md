@@ -201,6 +201,47 @@ By default, the zooming toolbar appears only when the chart is zoomed. However, 
 
 ![Toolbar displayed during the initial load](images/zoom/blazor-column-chart-zoom-toolbar-displaymode.png)
 
+## Zoom Toolbar Positioning
+
+Using `ChartZoomToolbarPosition`, you can customize the position of the zoom toolbar according to your preference. You can align it horizontally using the `HorizontalAlign` property with options such as `Right`, `Left`, and `Center`. Similarly, you can align it vertically using the `VerticalAlign` property with options including `Top`, `Bottom`, and `Middle`. Additionally, for more precise positioning, you can specify custom coordinates using `X` and `Y` values.
+
+```cshtml
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartZoomSettings EnableSelectionZooming="true" EnableMouseWheelZooming="true" EnablePinchZooming="true" ToolbarDisplayMode="ToolbarMode.Always">
+        <ChartZoomToolbarPosition HorizontalAlign="Syncfusion.Blazor.Charts.HorizontalAlign.Left" VerticalAlign="Syncfusion.Blazor.Charts.VerticalAlign.Top" X="10" Y="5">
+        </ChartZoomToolbarPosition>
+    </ChartZoomSettings>
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@SalesReports" XName="X" YName="YValue" Type="ChartSeriesType.Column"></ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code {
+
+    public class ChartData1
+    {
+        public string X { get; set; }
+        public double YValue { get; set; }
+    }
+
+    public List<ChartData1> SalesReports = new List<ChartData1>
+    {
+        new ChartData1 { X= "USA", YValue= 50 },
+        new ChartData1 { X= "GBR", YValue= 20 },
+        new ChartData1 { X= "CHN", YValue= 26 },
+        new ChartData1 { X= "UK", YValue= 20 },
+        new ChartData1 { X= "AUS", YValue= 35 },
+        new ChartData1 { X= "IND", YValue= 15 },
+        new ChartData1 { X= "DEN", YValue= 40 },
+        new ChartData1 { X= "MEX", YValue= 30 },
+    };
+}
+```
+![Blazor Line Chart with Zooming Toolbar Positioning](./images/zoom/blazor-line-chart-zoom-toolbar-position.png)
+
 ## Enable pan
 
 By using the [EnablePan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html#Syncfusion_Blazor_Charts_ChartZoomSettings_EnablePan) property, one can pan the zoomed chart without the help of toolbar items.
@@ -308,6 +349,96 @@ The [EnableScrollbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 
 ![Zooming with Scrollbar in Blazor Area Chart](images/zoom/blazor-area-chart-zoom-with-scrollbar.png)
 
+## Scroll Bar Positioning
+
+The `Position` property in [ChartAxisScrollbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxisScrollbarSettings.html) is used for customizable scrollbar positioning, allowing users to choose their preferred placement. Users can set the scrollbar to appear at `Left`, `Right`, `Top`, `Bottom`, or `PlaceNextToAxisLine` locations. This feature is only active when the chart is zoomed, providing flexible navigation options for the expanded chart view.
+
+```cshtml
+@using Syncfusion.Blazor.Charts
+
+<SfChart Title="Scrollbar Sample Chart">
+    <ChartPrimaryXAxis Title="X Axis" ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+        <ChartAxisScrollbarSettings Enable="false" PointsLength="1000" Position="ScrollbarPosition.Top" />
+    </ChartPrimaryXAxis>
+
+    <ChartPrimaryYAxis Title="Y Axis">
+        <ChartAxisScrollbarSettings Enable="false" PointsLength="1000" Position="ScrollbarPosition.Left" />
+    </ChartPrimaryYAxis>
+
+    <ChartRows>
+        <ChartRow Height="50%" />
+        <ChartRow Height="50%" />
+    </ChartRows>
+
+    <ChartColumns>
+        <ChartColumn Width="50%" />
+        <ChartColumn Width="50%" />
+    </ChartColumns>
+
+    <ChartAxes>
+        <ChartAxis Title="X Axis 2" Name="XAxis2" ValueType="Syncfusion.Blazor.Charts.ValueType.Category" ColumnIndex="1">
+            <ChartAxisScrollbarSettings Enable="false" PointsLength="1000" Position="ScrollbarPosition.Top" />
+        </ChartAxis>
+        <ChartAxis Title="Y Axis 2" Name="YAxis2" RowIndex="0">
+            <ChartAxisScrollbarSettings Enable="false" PointsLength="1000" Position="ScrollbarPosition.Left" />
+        </ChartAxis>
+
+        <ChartAxis Title="X Axis 3" Name="XAxis3" ValueType="Syncfusion.Blazor.Charts.ValueType.Category" ColumnIndex="0">
+            <ChartAxisScrollbarSettings Enable="false" PointsLength="1000" Position="ScrollbarPosition.Top" />
+        </ChartAxis>
+        <ChartAxis Title="Y Axis 3" Name="YAxis3" RowIndex="1">
+            <ChartAxisScrollbarSettings Enable="false" PointsLength="1000" Position="ScrollbarPosition.Right" />
+        </ChartAxis>
+
+        <ChartAxis Title="X Axis 4" Name="XAxis4" ValueType="Syncfusion.Blazor.Charts.ValueType.Category" ColumnIndex="1">
+            <ChartAxisScrollbarSettings Enable="false" PointsLength="1000" Position="ScrollbarPosition.Top" />
+        </ChartAxis>
+        <ChartAxis Title="Y Axis 4" Name="YAxis4" RowIndex="1">
+            <ChartAxisScrollbarSettings Enable="false" PointsLength="1000" Position="ScrollbarPosition.Right" />
+        </ChartAxis>
+    </ChartAxes>
+
+    <ChartSeriesCollection>
+        <ChartSeries Name="Series1" DataSource="@SalesDetails" XName="X" YName="Y" Type="ChartSeriesType.Line">
+        </ChartSeries>
+        <ChartSeries Name="Series2" DataSource="@SalesDetails" XName="X" YName="Y" XAxisName="XAxis2" YAxisName="YAxis2" Type="ChartSeriesType.Line">
+        </ChartSeries>
+        <ChartSeries Name="Series3" DataSource="@SalesDetails" XName="X" YName="Y" XAxisName="XAxis3" YAxisName="YAxis3" Type="ChartSeriesType.Line">
+        </ChartSeries>
+        <ChartSeries Name="Series4" DataSource="@SalesDetails" XName="X" YName="Y" XAxisName="XAxis4" YAxisName="YAxis4" Type="ChartSeriesType.Line">
+        </ChartSeries>
+    </ChartSeriesCollection>
+
+    <ChartZoomSettings EnableMouseWheelZooming="true" EnableScrollbar="true" EnablePinchZooming="true"
+                       EnableSelectionZooming="true"></ChartZoomSettings>
+</SfChart>
+
+@code {
+    public class ChartData
+    {
+        public string X { get; set; }
+        public double Y { get; set; }
+    }
+
+    public List<ChartData> SalesDetails = new List<ChartData>
+    {
+        new ChartData { X = "Jan", Y = 50 },
+        new ChartData { X = "Feb", Y = 120 },
+        new ChartData { X = "Mar", Y = 60 },
+        new ChartData { X = "Apr", Y = 140 },
+        new ChartData { X = "May", Y = 70 },
+        new ChartData { X = "Jun", Y = 160 },
+        new ChartData { X = "Jul", Y = 80 },
+        new ChartData { X = "Aug", Y = 180 },
+        new ChartData { X = "Sep", Y = 90 },
+        new ChartData { X = "Oct", Y = 170 },
+        new ChartData { X = "Nov", Y = 100 },
+        new ChartData { X = "Dec", Y = 190 }
+    };
+}
+```
+![Blazor Line Chart with Scrollbar Positioning](./images/zoom/blazor-line-chart-scroll-bar-position.png)
+
 ## Auto interval on zooming
 
 The axis interval will be calculated automatically with respect to the zoomed range, if the [EnableAutoIntervalOnZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_EnableAutoIntervalOnZooming) property is set to **true**.
@@ -373,100 +504,6 @@ The axis interval will be calculated automatically with respect to the zoomed ra
 
 ![Auto Interval on Zooming in Blazor Area Chart](images/zoom/blazor-area-chart-auto-interval-zooming.png)
 
-## Zoom Toolbar Positioning
-
-Using `ChartZoomToolbarPosition`, you can customize the position of the zoom toolbar according to your preference. You can align it horizontally using the `HorizontalAlign` property with options such as `Right`, `Left`, and `Center`. Similarly, you can align it vertically using the `VerticalAlign` property with options including `Top`, `Bottom`, and `Middle`. Additionally, for more precise positioning, you can specify custom coordinates using `X` and `Y` values.
-
-```cshtml
-@using Syncfusion.Blazor.Charts
-
-<SfChart Title="ZoomToolbar sample" >
-    <ChartPrimaryXAxis Title="X Axis" ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
-    </ChartPrimaryXAxis>
-
-    <ChartPrimaryYAxis Title="Y Axis" >
-    </ChartPrimaryYAxis>
-
-    <ChartRows>
-        <ChartRow Height="50%" />
-        <ChartRow Height="50%" />
-    </ChartRows>
-
-    <ChartColumns>
-        <ChartColumn Width="50%" />
-        <ChartColumn Width="50%" />
-    </ChartColumns>
-
-    <ChartAxes>
-        <ChartAxis Title="X Axis 2" Name="XAxis2" ValueType="Syncfusion.Blazor.Charts.ValueType.Category" ColumnIndex="1" >
-        </ChartAxis>
-        <ChartAxis Title="Y Axis 2" Name="YAxis2" RowIndex="0"  >
-        </ChartAxis>
-
-        <ChartAxis Title="X Axis 3" Name="XAxis3" ValueType="Syncfusion.Blazor.Charts.ValueType.Category" ColumnIndex="0" >
-        </ChartAxis>
-        <ChartAxis Title="Y Axis 3" Name="YAxis3" RowIndex="1">
-        </ChartAxis>
-
-        <ChartAxis Title="X Axis 4" Name="XAxis4" ValueType="Syncfusion.Blazor.Charts.ValueType.Category" ColumnIndex="1" >
-        </ChartAxis>
-        <ChartAxis Title="Y Axis 4" Name="YAxis4" RowIndex="1" >
-        </ChartAxis>
-    </ChartAxes>
-
-    <ChartSeriesCollection>
-        <ChartSeries Name="Series1" DataSource="@SalesDetails" XName="X" YName="Y" Type="ChartSeriesType.Line">
-            <ChartMarker Visible="@markerVisible" Height="@markerHeight" />
-        </ChartSeries>
-        <ChartSeries Name="Series2" DataSource="@SalesDetails" XName="X" YName="Y" XAxisName="XAxis2" YAxisName="YAxis2" Type="ChartSeriesType.Line">
-            <ChartMarker Visible="@markerVisible" Height="@markerHeight" />
-        </ChartSeries>
-        <ChartSeries Name="Series3" DataSource="@SalesDetails" XName="X" YName="Y" XAxisName="XAxis3" YAxisName="YAxis3" Type="ChartSeriesType.Line">
-            <ChartMarker Visible="@markerVisible" Height="@markerHeight" />
-        </ChartSeries>
-        <ChartSeries Name="Series4" DataSource="@SalesDetails" XName="X" YName="Y" XAxisName="XAxis4" YAxisName="YAxis4" Type="ChartSeriesType.Line">
-            <ChartMarker Visible="@markerVisible" Height="@markerHeight" />
-        </ChartSeries>
-    </ChartSeriesCollection>
-
-    <ChartTooltipSettings Enable="@tooltipEnabled" />
-    <ChartZoomSettings EnableMouseWheelZooming="true" EnableScrollbar="true" EnablePinchZooming="true"
-        EnableSelectionZooming="true">
-        <ChartZoomToolbarPosition HorizontalAlign="HorizontalAlign.Left" VerticalAlign="VerticalAlign.Top" X="10" Y="5">
-        </ChartZoomToolbarPosition>
-    </ChartZoomSettings>
-</SfChart>
-
-@code {
-    
-    private bool markerVisible = false;
-    private int markerHeight = 0;
-    private bool tooltipEnabled = false;
-
-    public class ChartData
-    {
-        public string X { get; set; }
-        public double Y { get; set; }
-    }
-
-    public List<ChartData> SalesDetails = new List<ChartData>
-    {
-        new ChartData { X = "Jan", Y = 50 },
-        new ChartData { X = "Feb", Y = 120 },
-        new ChartData { X = "Mar", Y = 60 },
-        new ChartData { X = "Apr", Y = 140 },
-        new ChartData { X = "May", Y = 70 },
-        new ChartData { X = "Jun", Y = 160 },
-        new ChartData { X = "Jul", Y = 80 },
-        new ChartData { X = "Aug", Y = 180 },
-        new ChartData { X = "Sep", Y = 90 },
-        new ChartData { X = "Oct", Y = 170 },
-        new ChartData { X = "Nov", Y = 100 },
-        new ChartData { X = "Dec", Y = 190 }
-    };
-}
-```
-![Blazor Line Chart with Zooming Toolbar Positioning](./images/zoom/blazor-line-chart-zoom-toolbar-position.png)
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap5) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

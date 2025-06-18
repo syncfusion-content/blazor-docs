@@ -726,7 +726,9 @@ Use the [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 
 ## Stack Labels
 
-The `Stack Labels` feature enables the display of cumulative total values for stacked chart segments directly through data labels. This feature provides an enhanced user experience when stacked chart series are used in Blazor Charts. Stack labels help users quickly interpret the combined impact of multiple data series without having to manually calculate totals.
+The Stack Labels feature enables the display of cumulative total values for stacked chart segments directly through data labels. This feature provides an enhanced user experience when stacked chart series are used in Blazor Charts. 
+
+The `Visible` property of the `ChartStackLabelSettings` is used to control the visibility of stack labels. Setting it to true will display the stack labels.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -789,6 +791,114 @@ The `Stack Labels` feature enables the display of cumulative total values for st
 ```
 
 ![Blazor Stacking Column Chart with Stack Labels](../images/chart-types-images/blazor-stacked-column-chart-stack-label.png)
+
+### Stack labels Customization
+
+Stack labels have various properties for customization to enhance the visual based on your requirements.
+
+* `fill` - Specifies the background color of the stack labels. The default value is transparent.
+
+* `format` - Specifies the format of the stack labels. It supports placeholder like {value}.
+
+* `Rx` - Specifies the rounded corner radius along the X-axis (horizontal direction) for the stack label background. The default value is 5.
+
+* `Ry` - Specifies the rounded corner radius along the Y-axis (vertical direction) for the stack label background. The default value is 5.
+
+* `Angle` - Specifies the rotation angle for stack labels in degrees. Default is 0.
+
+We can also customize the font using the `ChartStackLabelFont` of the stack labels with the properties:
+
+* `TextAlignment` - Specifies the alignment of the text within the stack label.
+
+* `FontFamily` - Specifies the font family for the stack label text.
+
+* `Size` - Specifies the font size of the stack label text.
+
+* `FontStyle` - Specifies the font style of the stack label text.
+
+* `FontWeight` - Specifies the font weight of the stack label text.
+
+* `Color` - Specifies the color of the stack label text.
+
+We also customize the border of the stack labels using the `ChartStackLabelBorder` with the properties:
+
+* `Width` - Specifies the width of the border around the stack label.
+
+* `Color` - Specifies the color of the border around the stack label.
+
+ To customize margin, we can use the `ChartStackLabelMargin` with the properties:
+
+* `Bottom` - Specifies the bottom margin of the stack label.
+
+* `Top` - Specifies the top margin of the stack label.
+
+* `Right` - Specifies the right margin of the stack label.
+
+* `Left` - Specifies the left margin of the stack label.
+
+```cshtml
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartStackLabelSettings Visible="true" Format="{value}" Fill="#ADD8E6" Rx="10" Ry="10" Angle="35">
+        <ChartStackLabelFont TextAlignment="Alignment.Center" FontFamily="Roboto" Size="12px" FontStyle="bold" FontWeight="600" Color="blue" />
+        <ChartStackLabelBorder Width="2" Color="#000000" />
+        <ChartStackLabelMargin Bottom="10" Top="10" Right="10" Left="10" />
+    </ChartStackLabelSettings>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@StackedDataList" XName="X" YName="Y" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn">
+            <ChartSeriesAnimation Enable="false" />
+            <ChartMarker>
+                <ChartDataLabel Visible="true" />
+            </ChartMarker>
+        </ChartSeries>
+        <ChartSeries DataSource="@StackedDataList" XName="X" YName="Y1" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn">
+            <ChartSeriesAnimation Enable="false" />
+            <ChartMarker>
+                <ChartDataLabel Visible="true" />
+            </ChartMarker>
+        </ChartSeries>
+        <ChartSeries DataSource="@StackedDataList" XName="X" YName="Y2" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn">
+            <ChartSeriesAnimation Enable="false" />
+            <ChartMarker>
+                <ChartDataLabel Visible="true" />
+            </ChartMarker>
+        </ChartSeries>
+        <ChartSeries DataSource="@StackedDataList" XName="X" YName="Y3" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingColumn">
+            <ChartSeriesAnimation Enable="false" />
+            <ChartMarker>
+                <ChartDataLabel Visible="true" />
+            </ChartMarker>
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code {
+    public class StackedData
+    {
+        public string X { get; set; }
+        public double Y { get; set; }
+        public double Y1 { get; set; }
+        public double Y2 { get; set; }
+        public double Y3 { get; set; }
+    }
+
+
+    public List<StackedData> StackedDataList = new List<StackedData>
+    {
+        new StackedData { X = "2014", Y = 111.1, Y1 = 76.9, Y2 = 66.1, Y3 = 34.1 },
+        new StackedData { X = "2015", Y = 127.3, Y1 = 99.5, Y2 = 79.3, Y3 = 38.2 },
+        new StackedData { X = "2016", Y = double.NaN, Y1 = 121.7, Y2 = 91.3, Y3 = 44.0 },
+        new StackedData { X = "2017", Y = 159.9, Y1 = 142.5, Y2 = 102.4, Y3 = 51.6 },
+        new StackedData { X = "2018", Y = 175.4, Y1 = 166.7, Y2 = 112.9, Y3 = 61.9 },
+        new StackedData { X = "2019", Y = 189.0, Y1 = 182.9, Y2 = double.NaN, Y3 = 71.5 },
+        new StackedData { X = "2020", Y = 202.7, Y1 = 197.3, Y2 = 120.9, Y3 = 82.0 }
+    };
+}
+```
+![Blazor Stacked Column Chart with Stack Label Customization](../images/chart-types-images/blazor-stacked-column-chart-stack-label-customization.png)
 
 ## Events
 

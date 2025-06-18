@@ -349,26 +349,17 @@ When the mouse hovers over the pie/doughnut chart, the border appears by default
 The `BorderRadius` property can be applied to the pie/doughnut chart series within the [AccumulationChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html). This property allows users to apply smooth, rounded corners to chart slices, enhancing the visual appeal and customization capabilities of these charts.
 
 ```cshtml
-@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Charts
- <SfAccumulationChart  EnableBorderOnMouseMove="false" Title="Food Consumption">
-        <AccumulationChartTooltipSettings Header="" Format="<b>${point.x}</b><br>Percentage: <b>${point.y}%</b>" Enable="true" EnableHighlight="true"></AccumulationChartTooltipSettings>
-        <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
-        <AccumulationChartSeriesCollection>
-            <AccumulationChartSeries DataSource="@DoughnutChartPoints" XName="Food" YName="Amount" Radius="@Radius" StartAngle="@StartAngle" InnerRadius="40%" Name="Project" BorderRadius="4">
-                <AccumulationDataLabelSettings Visible="true" Name="DataLabelMappingName" Position="AccumulationLabelPosition.Outside">
-                      <AccumulationChartConnector Length=@ConnectorLength Type="ConnectorType.Curve"></AccumulationChartConnector>
-                    <AccumulationChartDataLabelFont FontWeight="600" Size=@Size></AccumulationChartDataLabelFont>
-                </AccumulationDataLabelSettings>
-            </AccumulationChartSeries>
-        </AccumulationChartSeriesCollection>
- </SfAccumulationChart>
+
+<SfAccumulationChart Title="Pie Chart with Border Radius">
+    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
+    <AccumulationChartSeriesCollection>
+        <AccumulationChartSeries DataSource="@DoughnutChartPoints" XName="Food" YName="Amount" InnerRadius="40%" BorderRadius="8">
+        </AccumulationChartSeries>
+    </AccumulationChartSeriesCollection>
+</SfAccumulationChart>
 
 @code {
-    private string Radius { get; set; } = "70%";
-    public double StartAngle { get; set; } = 30;
-    public string ConnectorLength { get; set; } = "20px";
-    public string Size { get; set; } = "12px";
     public List<DoughnutData> DoughnutChartPoints { get; set; } = new List<DoughnutData>
     {
         new DoughnutData { Food = "Milk", Amount = 10, DataLabelMappingName = "Milk: 10%"},

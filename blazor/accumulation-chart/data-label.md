@@ -378,57 +378,6 @@ Data labels can be customized using the template element for the accumulation ch
 ![Template in Blazor Accumulation Chart](images/data-label/blazor-accumulation-chart-with-data-label-template.png)
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BNLpZghnzXPGMCxq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Center Label
-
-The Blazor Accumulation Chart component offers Center Label Customization support for Pie and Donut charts. This feature provides the ability to display dynamic or static text at the center of the chart with full customization of position and appearance. The center label aligns accurately with the chart's center (using `CenterX`, `CenterY`) and supports offset positioning (`XOffset`, `YOffset`) and dynamic updates during interactions. To implement this functionality, use the `<AccumulationChartCenterLabel>` child component inside the [SfAccumulationChart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfAccumulationChart.html) component.
-
-```cshtml
-@using Syncfusion.Blazor
-@using Syncfusion.Blazor.Charts
-
- <SfAccumulationChart  EnableBorderOnMouseMove="false">
-        <AccumulationChartTooltipSettings Enable="false" EnableHighlight="true"></AccumulationChartTooltipSettings>
-        <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
-        <AccumulationChartSeriesCollection>
-            <AccumulationChartSeries DataSource="@DoughnutChartPoints" XName="Browser" YName="Users" Radius="@Radius" StartAngle="@StartAngle" InnerRadius="65%" Name="Project" Explode="false" BorderRadius="3">
-                <AccumulationChartSeriesBorder Color="#FFFFFF" Width="1"></AccumulationChartSeriesBorder>
-                <AccumulationDataLabelSettings Visible="true" Name="DataLabelMappingName" Position="AccumulationLabelPosition.Outside">
-                    <AccumulationChartConnector Length=@ConnectorLength Type="ConnectorType.Curve"></AccumulationChartConnector>
-                    <AccumulationChartDataLabelFont FontWeight="600" Size=@Size></AccumulationChartDataLabelFont>
-                </AccumulationDataLabelSettings>
-            </AccumulationChartSeries>
-        </AccumulationChartSeriesCollection>
-        <AccumulationChartCenterLabel Text=@CenterLabelText HoverTextFormat="${point.x} <br> Browser Share <br> ${point.y}%">
-            <AccumulationChartCenterLabelFont Size=@CenterLabelTextSize FontWeight="600" FontFamily="Inherit"></AccumulationChartCenterLabelFont>
-        </AccumulationChartCenterLabel>
-    </SfAccumulationChart>
-
-@code {
-    private string Radius { get; set; } = "70%";
-    public double StartAngle { get; set; } = 60;
-    public string ConnectorLength { get; set; } = "20px";
-    public string Size { get; set; } = "12px";
-    public string CenterLabelText { get; set; } = "Mobile Browser<br>Statistics 2024";
-    public string CenterLabelTextSize { get; set; } = "15px";
-    public List<DoughnutData> DoughnutChartPoints { get; set; } = new List<DoughnutData>
-    {
-        new DoughnutData { Browser = "Chrome", Users = 63.5, DataLabelMappingName = "Chrome: 63.5%"},
-        new DoughnutData { Browser = "Safari", Users = 25.0, DataLabelMappingName = "Safari: 25.0%"},
-        new DoughnutData { Browser = "Samsung Internet", Users = 6.0, DataLabelMappingName = "Samsung Internet: 6.0%"},
-        new DoughnutData { Browser = "UC Browser", Users = 2.5, DataLabelMappingName = "UC Browser: 2.5%"},
-        new DoughnutData { Browser = "Opera", Users = 1.5, DataLabelMappingName = "Opera: 1.5%"},
-        new DoughnutData { Browser = "Others", Users = 1.5, DataLabelMappingName = "Others: 1.5%"}
-    };
-    public class DoughnutData
-    {
-        public string Browser { get; set; }
-        public double Users { get; set; }
-        public string DataLabelMappingName { get; set; }
-    }
-}
-```
-![Center Label in Blazor Accumulation Chart](images/data-label/blazor-accumulation-chart-center-label.png)
-
 ## See also
 
 * [Tooltip](./tool-tip)
