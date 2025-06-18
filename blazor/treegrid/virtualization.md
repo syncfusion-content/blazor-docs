@@ -347,11 +347,11 @@ N> For example, when the OverscanCount is set to 5, only 5 buffer rows are rende
 
 ## Virtualization with hierarchical data binding
 
-Previously, virtualization was not supported with hierarchical data binding in the Grid. Now, Syncfusion has introduced virtualization support for hierarchical data, enabling efficient handling of large datasets with multiple child records and nested levels. This feature leverages an on-demand loading concept to boost performance and user experience
+Previously, virtualization was not supported with hierarchical data binding in the TreeGrid. Now, Syncfusion has introduced virtualization support for hierarchical data, enabling efficient handling of large datasets with multiple child records and nested levels. This feature leverages an on-demand loading concept to boost performance and user experience
 
 This feature leverages on-demand data loading to reduce rendering overhead and optimize performance across large hierarchical structures.
 
-When working with deeply nested hierarchical structures containing numerous child records, rendering all levels at once can cause performance issues such as flickering due to frequent height recalculations. For example, expanding a parent row that contains 100 or 1000 child records may trigger excessive DOM reflows as the Grid dynamically adjusts height based on the number of loaded rows. This flickering can worsen when multiple child rows are expanded simultaneously. Additionally, the data source must be accurately transformed into a parent-child hierarchy before rendering. This involves recursive logic to correctly associate child records under their respective parents. If this conversion is incomplete or incorrect, the TreeGrid may misrender the hierarchy, leading to broken structures or display inconsistencies.
+When working with deeply nested hierarchical structures containing numerous child records, rendering all levels at once can cause performance issues such as flickering due to frequent height recalculations. For example, expanding a parent row that contains 100 or 1000 child records may trigger excessive DOM reflows as the TreeGrid dynamically adjusts height based on the number of loaded rows. This flickering can worsen when multiple child rows are expanded simultaneously. Additionally, the data source must be accurately transformed into a parent-child hierarchy before rendering. This involves recursive logic to correctly associate child records under their respective parents. If this conversion is incomplete or incorrect, the TreeGrid may misrender the hierarchy, leading to broken structures or display inconsistencies.
 
 To address the challenges of virtualization with deeply nested hierarchical data, Syncfusion employs a flat data conversion approach. This method offers several key advantages:
 
@@ -369,7 +369,7 @@ Since the flat structure avoids dynamic height recalculations during on-demand l
 
 * **Expand/Collapse State Preservation:**
 
-Using a flat data structure helps maintain and synchronize the expand/collapse states across the hierarchical and flattened collections. This ensures that UI interactions like expanding or collapsing nodes are consistent and correctly reflected in both the underlying data model and the Grid's rendered view, avoiding state loss during virtualization or re-binding.
+Using a flat data structure helps maintain and synchronize the expand/collapse states across the hierarchical and flattened collections. This ensures that UI interactions like expanding or collapsing nodes are consistent and correctly reflected in both the underlying data model and the TreeGrid's rendered view, avoiding state loss during virtualization or re-binding.
 
 To apply this approach, implement a recursive method called `HierarchyToFlatData` that converts the hierarchical data into a flat list before binding it to the TreeGrid. This method should be placed within your component (e.g., Index.razor) and invoked during component initialization, like in the `OnInitialized` lifecycle method. use following code 
 
