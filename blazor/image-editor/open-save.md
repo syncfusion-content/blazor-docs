@@ -427,7 +427,7 @@ The following behaviors are supported through these properties:
     - Cover behavior: When both `width` and `height` are specified with `isAspectRatio` set to `true`, the image scales proportionally to fit within the given dimensions while preserving its aspect ratio.
     - Stretch or Shrink behavior: Setting `isAspectRatio` to `false` forces the image to strictly follow the specified `width` and `height`, allowing it to stretch or shrink regardless of its original aspect ratio.
 
-The following example showcases how all three behaviors can be achieved using the open method.
+The following example showcases how all three behaviors can be achieved using the OpenAsync method.
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor 
