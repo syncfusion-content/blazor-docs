@@ -51,10 +51,10 @@ The Blazor Tooltip component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA
 
 The Blazor Tooltip component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/tooltip/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Tooltip component.
 
-| Keyboard shortcuts | Actions |
-| --- | --- |
-| <kbd>Escape</kbd> | Closes or dismisses the Tooltip. |
-| <kbd>Tab</kbd> | A form control receiving focus (say through tab key), opens the Tooltip, and on focus out closes it. |
+| Windows | Mac | Actions |
+| --- | --- | --- |
+| <kbd>Escape</kbd> | <kbd>Escape</kbd> | Closes or dismisses the Tooltip. |
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | A form control receiving focus (say through tab key), opens the Tooltip, and on focus out closes it. |
 
 ## Ensuring accessibility
 

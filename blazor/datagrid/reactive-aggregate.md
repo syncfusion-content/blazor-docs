@@ -7,20 +7,19 @@ control: DataGrid
 documentation: ug
 ---
 
-# Reactive aggregate in Blazor Grid component
+# Reactive aggregate in Blazor DataGrid
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Grid component provides support for reactive aggregates, which allow you to update the aggregate values dynamically as the data changes. Reactive aggregates automatically recalculate their values when there are changes in the underlying data, providing real-time updates to the aggregate values in the grid.
+The Syncfusion Blazor DataGrid provides support for reactive aggregates, which allow you to update the aggregate values dynamically as the data changes. Reactive aggregates automatically recalculate their values when there are changes in the underlying data, providing real-time updates to the aggregate values in the Grid.
 
 ## Auto update aggregate value in batch editing
 
-When the grid is in batch editing mode, the aggregate values in the footer, group footer, and group caption are automatically refreshed every time a cell is saved. This ensures that the aggregate values accurately reflect the edited data.
+When the Grid is in batch editing mode, the aggregate values in the footer, group footer, and group caption are automatically refreshed every time a cell is saved. This ensures that the aggregate values accurately reflect the edited data.
 
 Here’s an example code snippet demonstrating how to auto update aggregate value in batch editing:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
-@using BlazorApp1.Data
 
 <SfGrid DataSource="@Orders" AllowPaging="true" AllowGrouping="true" Toolbar="@ToolbarItems">
     <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode="EditMode.Batch"></GridEditSettings>
@@ -126,7 +125,4 @@ Here’s an example code snippet demonstrating how to auto update aggregate valu
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjVgCtAjJfZhemgh?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> Adding a new record to the grouped grid will not refresh the aggregate values.
-
-
-
+> Adding a new record to the grouped Grid will not refresh the aggregate values.

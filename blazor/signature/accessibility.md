@@ -40,12 +40,12 @@ The accessibility compliance for the Blazor Signature component is outlined belo
 
 The Blazor Signature component followed the [keyboard interaction] guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Signature component.
 
-| **Press** | **To do this** |
-| --- | --- |
-| <kbd>Ctrl + Z</kbd> | Undo the last action. |
-| <kbd>Ctrl + Y</kbd> | Redo the last action. |
-| <kbd>Ctrl + S</kbd> | To save the signature. |
-| <kbd>delete</kbd> | Erases all the signature strokes signed by user. |
+| Windows | Mac | Actions |
+| --- | --- | --- |
+| <kbd>Ctrl + Z</kbd> | <kbd>⌘</kbd> + <kbd>Z</kbd> | Undo the last action. |
+| <kbd>Ctrl + Y</kbd> | <kbd>⌘</kbd> + <kbd>Y</kbd> | Redo the last action. |
+| <kbd>Ctrl + S</kbd> | <kbd>⌘</kbd> + <kbd>S</kbd> | To save the signature. |
+| <kbd>delete</kbd> | <kbd>delete</kbd> | Erases all the signature strokes signed by user. |
 
 ## Ensuring accessibility
 

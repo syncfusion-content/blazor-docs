@@ -7,13 +7,14 @@ control: DataGrid
 documentation: ug
 ---
 
-# Using Dictionary Values as Datasource in Blazor DataGrid Component
+# Using dictionary values as datasource in Blazor DataGrid
 
-You can assign dictionary values in the datagrid's data source by accessing them using **KeyValuePair** data type inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) component
+The Syncfusion Blazor DataGrid can use dictionary values as a data source within a column by accessing them through the **KeyValuePair** type inside the column's [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template). This is helpful when you want to display values from a shared dictionary that maps keys to specific values. Since a dictionary isn't a typical scalar field, a custom template is needed to extract and display the correct value for each row using the row's key.
 
-This is demonstrated in the following sample code, where **ShipName** is defined as Dictionary value and it is accessed inside the template property of the [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) using **KeyValuePair** data type. The key value is compared with the **OrderID** column value and based on that the value is displayed,
+This is demonstrated in the following sample code, where **ShipName** is defined as Dictionary value and it is accessed inside the template property of the `GridColumn` using **KeyValuePair** data type. The key value is compared with the **OrderID** column value and based on that the value is displayed.This approach allows each row in the Grid to dynamically retrieve and render the appropriate dictionary value based on its key:
 
-```cshtml
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@GridData" AllowPaging="true">
@@ -50,7 +51,6 @@ This is demonstrated in the following sample code, where **ShipName** is defined
         { 1009, "Rattlesnake Canyon Grocery" },
         { 1010, "Blondel et fils" }
     };
-
     List<OrderDetail> GridData = new List<OrderDetail>
     {
         new OrderDetail { OrderID = 1001, Freight = 2.3, OrderDate = new DateTime(1991, 05, 15), ShipCity = "Seattle", ShipName = ShipDetails, ShipCountry = "United States" },
@@ -64,7 +64,6 @@ This is demonstrated in the following sample code, where **ShipName** is defined
         new OrderDetail { OrderID = 1009, Freight = 6.3, OrderDate = new DateTime(1953, 02, 18), ShipCity = "Albuquerque", ShipName = ShipDetails, ShipCountry = "United States" },
         new OrderDetail { OrderID = 1010, Freight = 4.3, OrderDate = new DateTime(1923, 01, 28), ShipCity = "Strasbourg", ShipName = ShipDetails, ShipCountry = "France" }
     };
-
     public class OrderDetail
     {
         public int? OrderID { get; set; }
@@ -75,8 +74,7 @@ This is demonstrated in the following sample code, where **ShipName** is defined
         public Dictionary<int, string> ShipName { get; set; }
     }
 }
-```
+{% endhighlight %}
+{% endtabs %}
 
-The following image represent the datagrid rendered using the above sample code,
-
-![Dictionary Values in Blazor DataGrid](../images/blazor-datagrid-dictionary-values.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rtheXzKjfXFpgmwJ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}

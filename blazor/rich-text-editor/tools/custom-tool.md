@@ -21,12 +21,12 @@ Refer to the following code sample for the custom tool with the tooltip text, wh
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.RichTextEditor
 
-<SfRichTextEditor>
+<SfRichTextEditor @ref="RteObj">
     <RichTextEditorToolbarSettings Items="@Tools">
         <RichTextEditorCustomToolbarItems>
             <RichTextEditorCustomToolbarItem Name="Symbol">
                 <Template>
-                    <SfButton @onclick="ClickHandler">Ω</SfButton>
+                    <SfButton @onclick="ClickHandler">Insert Symbol</SfButton>
                 </Template>
             </RichTextEditorCustomToolbarItem>
         </RichTextEditorCustomToolbarItems>
@@ -35,6 +35,7 @@ Refer to the following code sample for the custom tool with the tooltip text, wh
 </SfRichTextEditor>
 
 @code {
+    SfRichTextEditor RteObj;
     private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
     {
         new ToolbarItemModel() { Command = ToolbarCommand.Bold },
@@ -45,9 +46,11 @@ Refer to the following code sample for the custom tool with the tooltip text, wh
         new ToolbarItemModel() { Command = ToolbarCommand.SourceCode },
         new ToolbarItemModel() { Command = ToolbarCommand.FullScreen }
     };
-    private void ClickHandler()
+    private async Task ClickHandler()
     {
-        //Perform your action here
+        ExecuteCommandOption executeCommandOption = new ExecuteCommandOption();
+        executeCommandOption.Undo = true;
+        await RteObj.ExecuteCommandAsync(CommandName.InsertText, "₹", executeCommandOption);
     }
 }
 

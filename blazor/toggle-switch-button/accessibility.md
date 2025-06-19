@@ -49,9 +49,9 @@ The Blazor Toggle Switch Button component followed the [WAI-ARIA](https://www.w3
 
 The Blazor Toggle Switch Button component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/switch/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Toggle Switch Button component.
 
-| **Press** | **To do this** |
-| --- | --- |
-| <kbd>Space</kbd> | When the Toggle Switch Button has focus, pressing the Space key changes the state of the Toggle Switch Button. |
+| Windows | Mac | Actions |
+| --- | --- | --- |
+| <kbd>Space</kbd> | <kbd>space</kbd> | When the Toggle Switch Button has focus, pressing the Space key changes the state of the Toggle Switch Button. |
 
 ## Ensuring accessibility
 

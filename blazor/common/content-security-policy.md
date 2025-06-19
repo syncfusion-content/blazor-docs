@@ -16,7 +16,7 @@ When enabling strict Content Security Policy (CSP), some browser features are di
 To use Syncfusion<sup style="font-size:70%">&reg;</sup> blazor components with strict CSP mode, the following directives must be included in the CSP meta tag:
 
 * `font-src data:` - This directive allows for the use of `base64` encoded font icons.
-* `style-src 'self' unsafe-inline` - This directive allows for the use of inline styles and external fonts.
+* `style-src 'self' unsafe-inline` - This directive permits the use of inline styles, allowing components to apply parameters such as Width, Height, positioning, etc. Additionally, certain components depend on inline styling to render dynamic behaviors and responsive UI design.
 * `connect-src 'self' https: wss:` - This directive enables web sockets.
 * `script-src 'self' unsafe-eval` - This directive allows for the use of the `new()` and `eval()` functions. Used in animation enabled Syncfusion<sup style="font-size:70%">&reg;</sup> components.
 
@@ -74,4 +74,4 @@ if you are referencing script and style references from CDN, then add CDN domain
 
 ## See also
 
-* [Content Security Policy for ASP.NET Core Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/security/content-security-policy?view=aspnetcore-7.0)
+* [Content Security Policy for ASP.NET Core Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/security/content-security-policy?view=aspnetcore-9.0)
