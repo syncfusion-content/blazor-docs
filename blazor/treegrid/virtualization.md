@@ -349,17 +349,17 @@ N> For example, when the OverscanCount is set to 5, only 5 buffer rows are rende
 
 Previously, virtualization was not supported with hierarchical data binding in the TreeGrid. Now, Syncfusion has introduced virtualization support for hierarchical data, enabling efficient handling of large datasets with multiple child records and nested levels. This feature leverages an on-demand loading concept to boost performance and user experience
 
-When working with deeply nested hierarchical structures containing numerous child records, rendering all levels at once can cause performance issues such as flickering due to frequent height recalculations. For example, expanding a parent row that contains 100 or 1000 child records may trigger excessive DOM reflows as the TreeGrid dynamically adjusts height based on the number of loaded rows. This flickering can worsen when multiple child rows are expanded simultaneously. Additionally, the data source must be accurately transformed into a parent-child hierarchy before rendering. This involves recursive logic to correctly associate child records under their respective parents. If this conversion is incomplete or incorrect, the TreeGrid may misrender the hierarchy, leading to broken structures or display inconsistencies.
+When working with deeply nested hierarchical structures containing a large number of child records, rendering all levels simultaneously can lead to significant performance issues, most notably UI flickering. This flickering occurs due to frequent height recalculations and excessive DOM reflows as the TreeGrid dynamically adjusts its layout based on the number of visible rows. For example, expanding a parent row that contains 100 or 1000 child records may trigger excessive DOM reflows as the TreeGrid dynamically adjusts height based on the number of loaded rows. This flickering can worsen when multiple child rows are expanded simultaneously.  In addition to performance challenges, accurate data transformation is critical. Before rendering, the data source must be correctly structured into a parent-child hierarchy. This typically involves recursive logic to associate each child record with its corresponding parent. If this mapping is incomplete or incorrect, the TreeGrid may misinterpret the hierarchy leading to broken structures, missing child nodes, or visual inconsistencies in the rendered output.
 
-To address the challenges of virtualization with deeply nested hierarchical data, Syncfusion employs a flat data conversion approach. This method offers several key advantages:
+To overcome these challenges, we have introduced an approach to convert hierarchical data into flat data. This method offers several key advantages:
 
 * **Efficient Mapping:**
 
-Handling large volumes of data with multiple levels increases complexity in associating each child with its corresponding parent. A flat data model simplifies this process by representing hierarchical relationships through reference fields (like parentId), improving clarity and manageability.
+Handling large volumes of data with multiple levels increases the complexity of associating each child with its corresponding parent. A flat data model simplifies this process by representing hierarchical relationships through the `ChildMapping` property, improving clarity and manageability.
 
 * **Performance Optimization:**
 
-Flattening the data enables the virtualization engine to treat it as a linear dataset, reducing overhead during row rendering and scrolling, especially with deeply nested hierarchies.
+Converting hierarchical data into a flat list enables the virtualization engine to treat it as a linear dataset, reducing overhead during row rendering and scrolling, especially with deeply nested hierarchies.
 
 * **Minimized Flickering:**
 
@@ -369,65 +369,52 @@ Since the flat structure avoids dynamic height recalculations during on-demand l
 
 Using a flat data structure helps maintain and synchronize the expand/collapse states across the hierarchical and flattened collections. This ensures that UI interactions like expanding or collapsing nodes are consistent and correctly reflected in both the underlying data model and the TreeGrid's rendered view, avoiding state loss during virtualization or re-binding.
 
-To apply this approach, implement a recursive method called `HierarchyToFlatData` that converts the hierarchical data into a flat list before binding it to the TreeGrid. This method should be placed within your component (e.g., Index.razor) and invoked during component initialization, like in the `OnInitialized` lifecycle method. use following code 
+To enable virtualization with hierarchical data in Syncfusion TreeGrid, you must first transform the hierarchical structure into a flat list at the application level using a recursive method named `HierarchyToFlatData` in application end. This method traverses all parent-child relationships and flattens them into a single-level collection. This flat data source can then be efficiently bound to the TreeGrid with virtualization enabled.
+
+Place the following method in your component (e.g., **Index.razor**) and call it during component initialization (OnInitialized lifecycle method) as like below:
 
 ```ts
 
   protected override void OnInitialized()
-  {
+{
+    // Call the method to flatten hierarchical data and assign it to TreeGridData.
     this.TreeGridData = HierarchyToFlatData(VirtualData.GetVirtualData(), "Children").ToArray();
+}
+
+public List<VirtualData> HierarchyToFlatData(List<VirtualData> dataSource, string childMapping, List<VirtualData> addedData = null)
+{
+  // If no list is passed to collect flat data, create a new one.
+  if (addedData == null)
+  {
+    addedData = new List<VirtualData>();
   }
 
-  public List<VirtualData> HierarchyToFlatData(List<VirtualData> dataSource, string childMapping, List<VirtualData> addedData = null)
- {
-    if (addedData == null)
-    {
-      addedData = new List<VirtualData>();
-    }
+  // Loop through each item in the current data level.
+  foreach (var item in dataSource)
+  {
+    // Add the current item to the flat list.
+    addedData.Add(item);
 
-    foreach (var item in dataSource)
-    {
-      addedData.Add(item);
-      var propertyInfo = item.GetType().GetProperty(childMapping);
-      var children = propertyInfo?.GetValue(item) as IEnumerable<VirtualData>;
+    // Get the property info for the child mapping (e.g., "Children").
+    var propertyInfo = item.GetType().GetProperty(childMapping);
 
-      if (children != null)
-      {
-        HierarchyToFlatData(children.ToList(), childMapping, addedData);
-      }
+    // Get the children using the property name.
+    var children = propertyInfo?.GetValue(item) as IEnumerable<VirtualData>;
+
+    // If there are child records, recursively flatten them too.
+    if (children != null)
+    {
+      HierarchyToFlatData(children.ToList(), childMapping, addedData);
     }
-    return addedData;
   }
+
+  // Return the final flat list.
+  return addedData;
+}
 
 ```
 
-**Complted explaintion the method :**
-
-* **Initialize the flat list container:**
-
-The method starts by checking if the list that will hold the flattened data exists. If it doesn’t, a new empty list is created. This list will accumulate all nodes from the hierarchy as the method processes each level.
-
-* **Traverse each item in the current data source:**
-
-The method loops through every item at the current level of the hierarchy. Initially, this is the root level data; as the method recurses, it processes child nodes deeper in the tree.
-
-* **Add the current item to the flat list:**
-
-Each item encountered, whether a parent or a child, is immediately added to the flat list. This helps preserve the original hierarchical order.
-
-* **Find the children of the current item dynamically:**
-
-Using reflection (a way to inspect object properties at runtime), the method identifies the property that contains the children of the current node. This property name is provided as an argument (e.g., "Children"). It then retrieves the list of children for the current node.
-
-* **Recursively process child items:**
-
-If the current item has children, the method calls itself recursively on the children collection. This recursive call continues until it reaches the leaf nodes (items with no children).
-
-* **Return the complete flat list:**
-
-After all items at all levels have been processed and added to the list, the method returns this accumulated list. This flat list contains every node from the original hierarchy, but arranged sequentially for easier processing.
-
-The following complete example demonstrates how to bind hierarchical data to the TreeGrid using the `ChildMapping` property, enable virtualization by setting `EnableVirtualization` to **true**, and convert hierarchical data into a flat list using the `HierarchyToFlatData` method before binding it to the TreeGrid:
+The following complete code example demonstrates how to bind hierarchical data to the Syncfusion TreeGrid using the ChildMapping property. Enable virtualization by setting EnableVirtualization to true and convert hierarchical data into a flat list using a recursive method (HierarchyToFlatData) before binding it to the TreeGrid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
