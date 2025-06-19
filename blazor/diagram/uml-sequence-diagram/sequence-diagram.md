@@ -459,15 +459,15 @@ You can download a complete working sample from [GitHub]().
 |---|---|---|
 | ID | string | A unique identifier for the fragment |
 | FragmentType | UmlSequenceFragmentType | Type of the fragment (Optional, Loop, Alternative) |
-| Conditions | IEnumerable\<UmlSequenceFragmentCondition\> | Collection of conditions for the fragment |
+| Conditions | List\<UmlSequenceFragmentCondition\> | Collection of conditions for the fragment |
 
 #### UmlSequenceFragmentCondition Properties
 
 | Property | Type | Description |
 |---|---|---|
 | Content | string | Text describing the condition or parameter |
-| MessageIds | IEnumerable\<string\> | Collection of message IDs included in this condition section |
-| Fragments | IEnumerable\<UmlSequenceFragment\> | Collection of nested fragments (for complex structures) |
+| MessageIds | List\<string\> | Collection of message IDs included in this condition section |
+| Fragments | List\<UmlSequenceFragment\> | Collection of nested fragments (for complex structures) |
 
 ### Customizing Participant Spacing in Sequence Diagram 
 
