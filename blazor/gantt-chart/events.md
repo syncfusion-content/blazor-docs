@@ -3556,7 +3556,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
         this.TaskCollection = GetTaskCollection();
     }
 
-    public void GanttDialogClosingHandler (GanttDialogCloseEventArgs<TaskData> args)
+    public void GanttDialogClosingHandler(GanttDialogCloseEventArgs<TaskData> args)
     {
         //Here, you can customize your code.
     }
