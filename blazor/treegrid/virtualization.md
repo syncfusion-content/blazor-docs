@@ -359,7 +359,7 @@ For example, in some scenarios, you might encounter a hierarchical structure whe
 
 Directly binding such deeply nested hierarchical data to the TreeGrid can lead to degraded performance and make it difficult to maintain a proper tree structure. This is because rendering and managing complex nested collections require significant processing.
 
-To avoid this complexity, we need to convert hierarchical data to flat data before binding it to the TreeGrid. This transformation simplifies the data structure, map parent with corresponding child records , improves performance, and ensures the tree structure is maintained properly.
+To simplify hierarchical data binding and avoid complexities, we need to convert hierarchical data into a flat structure before binding it to the TreeGrid. This transformation simplifies the data structure, map parent with corresponding child records, improves performance and ensures the tree structure is maintained properly.
 
 When dealing with large datasets in a hierarchical structure, enabling virtualization helps in improving performance. It leverages an on-demand loading concept to fetch and render only the visible portion of data, significantly reducing initial load time and memory usage.
 
