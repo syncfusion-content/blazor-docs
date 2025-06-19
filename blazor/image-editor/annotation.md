@@ -270,11 +270,11 @@ In the following example, you can using the DrawTextAsync method in the button c
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.SplitButtons
 
-<SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="330" Width="550">
+<SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="330" Width="550" ShowQuickAccessToolbar="false">
     <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
 </SfImageEditor>
 <div class="button-toolbar">
-    <SfButton Disabled="@IsTextInsterted" OnClick="AddTextAsync">Add Text</SfButton>
+    <SfButton CssClass="@(IsTextInsterted ? "e-disabled" : "e-primary")" Disabled="@IsTextInsterted" OnClick="AddTextAsync">Add Text</SfButton>
     <SfButtonGroup Mode="SelectionMode.Multiple">
         <ButtonGroupButton onclick="@BoldAsync">
             <span class="icon-text">
@@ -315,7 +315,7 @@ In the following example, you can using the DrawTextAsync method in the button c
         align-items: center;
         gap: 4px;
     }
- </style>
+</style>
 
 @code {
     SfImageEditor ImageEditor;

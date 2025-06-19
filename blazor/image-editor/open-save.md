@@ -433,11 +433,10 @@ The following example showcases how all three behaviors can be achieved using th
 @using Syncfusion.Blazor.ImageEditor 
 @using Syncfusion.Blazor.Buttons
 
-
 <SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="330" Width="550">
     <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
 </SfImageEditor>
-<div style="margin-top: 10px">
+<div style="display: flex; gap: 12px; margin-top: 10px">
     <SfButton OnClick="ContainsAsync">Fit to Width (Aspect Ratio)</SfButton>
     <SfButton OnClick="CoverAsync">Cover (Aspect Ratio)</SfButton>
     <SfButton OnClick="StretchAsync">Stretch / Shrink</SfButton>
