@@ -28,7 +28,7 @@ To know more about Bitwise operators, refer to the [Bitwise Operations](constrai
 | -------- | -------- |
 |None|Disable all diagram functionalities.|
 |Bridging|Enables or disables Bridging support for connector in diagram.|
-|Undo/redo|Enables or disables the Undo/Redo support for the diagram.|
+|UndoRedo|Enables or disables the Undo/Redo support for the diagram.|
 |UserInteraction|Enables or disables user interaction support for the diagram.|
 |ApiUpdate|Enables or disables update API support for the diagram.|
 |PageEditable|Enables or disables Page Editable support for the diagram.|
