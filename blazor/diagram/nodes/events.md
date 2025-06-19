@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Events in Blazor Diagram Component | Syncfusion
+title: Controlling Events and Constraints in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about Events in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Events and Constraints in Blazor Diagram Component
+# Controlling Events and Constraints in Blazor Diagram Component
 
 ## Events
 
 Diagram provides several events support for node that triggers when interacting with the node.
 
-## Selection change event
+## Selection Change Event
 
 * While selecting the diagram elements, the following events can be used to do the customization.
 * When selecting or unselecting the diagram elements, the following events are getting triggered. 
@@ -77,7 +77,7 @@ The following code example explains how to get the selection change event in the
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events/SelectionChange)
 
-## Position change event
+## Position Change Event
 
 * While dragging the node or connector through interaction, the following events can be used to do the customization.
 * When dragging the node, the following events are getting triggered. 
@@ -139,7 +139,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events/PositionChange)
 
-## Size change event
+## Size Change Event
 
 * While resizing the node during the interaction, the following events can be used to do the customization.
 * When resizing the node, the following events are getting triggered. 
@@ -200,7 +200,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events/SizeChange)
 
-## Rotate change event
+## Rotate Change Event
 
 * While rotating the node during the interaction, the following events can be used to do the customization.
 * When rotating the node, the following events are getting triggered. 
@@ -261,7 +261,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Events/RotationChange)
 
-## NodeCreating event
+## Node Creating Event
 
 * The [NodeCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_NodeCreating)  helps you to define the default properties of the node. The node creation is triggered when the diagram is initialized. In the node creating event, you can customize the node properties.
 
