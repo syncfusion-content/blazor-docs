@@ -420,20 +420,27 @@ You can utilize the [`FileOpenEventArgs`](https://help.syncfusion.com/cr/blazor/
 
 ### Opening images with custom width and height
 
-Users can now open images with specified width and height values using the optional parameter in the `Open` method. This enhancement introduces three additional properties: `width,` `height,` and `isAspectRatio.` Image dimensions can be precisely controlled while preserving the aspect ratio, if needed. This provides more control over rendering images, especially when dealing with high-resolution images or fixed canvas requirements.
+Users can now open images with specific width and height values using the optional (https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_OpenAsync_System_Object_System_Boolean_System_String_) parameters in the `OpenAsync` method. This enhancement introduces three optional properties: `width`, `height`, and `isAspectRatio`. These options allow precise control over the image dimensions, with the flexibility to preserve the original aspect ratio if needed. This feature is especially useful when rendering high-resolution images or when fitting images into fixed-size layouts or canvas areas.
+ 
+The following behaviors are supported through these properties:
+	- Contains behavior: By specifying only one dimension (either `width` or `height`) and enabling `isAspectRatio`, the other dimension is automatically calculated to maintain the image’s original proportions.
+    - Cover behavior: When both `width` and `height` are specified with `isAspectRatio` set to `true`, the image scales proportionally to fit within the given dimensions while preserving its aspect ratio.
+    - Stretch or Shrink behavior: Setting `isAspectRatio` to `false` forces the image to strictly follow the specified `width` and `height`, allowing it to stretch or shrink regardless of its original aspect ratio.
+
+The following example showcases how all three behaviors can be achieved using the open method.
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor 
 @using Syncfusion.Blazor.Buttons
 
 
-<SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="400">
+<SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="330" Width="550">
     <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
 </SfImageEditor>
-<div style="padding-bottom: 15px">
-    <SfButton OnClick="FitAsync">Fit to Image</SfButton>
-    <SfButton OnClick="StretchAsync">Stretch Image</SfButton>
-    <SfButton OnClick="ResetAsync">Reset</SfButton>
+<div style="margin-top: 10px">
+    <SfButton OnClick="ContainsAsync">Fit to Width (Aspect Ratio)</SfButton>
+    <SfButton OnClick="CoverAsync">Cover (Aspect Ratio)</SfButton>
+    <SfButton OnClick="StretchAsync">Stretch / Shrink</SfButton>
 </div>
 @code {
     SfImageEditor ImageEditor;
@@ -444,17 +451,17 @@ Users can now open images with specified width and height values using the optio
         await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
 
-    private async void FitAsync()
+    private async void ContainsAsync()
     {
-        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png", true, "", -1, 400);
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png", true, "", 550, -1, true);
+    }
+    private async void CoverAsync()
+    {
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png", true, "", 550, 550, true);
     }
     private async void StretchAsync()
     {
-        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png", true, "", 200, 200);
-    }
-    private async void ResetAsync()
-    {
-        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png", true, "", 330, 330, false);
     }
 }
 ```
