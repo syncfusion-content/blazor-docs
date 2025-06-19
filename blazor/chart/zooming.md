@@ -360,84 +360,57 @@ The `Position` property in [ChartAxisScrollbarSettings](https://help.syncfusion.
 ```cshtml
 @using Syncfusion.Blazor.Charts
 
-<SfChart Title="Scrollbar Sample Chart">
-    <ChartPrimaryXAxis Title="X Axis" ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
-        <ChartAxisScrollbarSettings Enable="false" PointsLength="1000" Position="ScrollbarPosition.Top" />
+<SfChart Title="Sales History of Product X">
+    <ChartPrimaryXAxis Title="Years" ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime"
+                       EdgeLabelPlacement="EdgeLabelPlacement.Shift">
+        <ChartAxisMajorGridLines Width="0"></ChartAxisMajorGridLines>
+        <ChartAxisScrollbarSettings Enable="false" PointsLength="1000" Position="ScrollbarPosition.Bottom" />
     </ChartPrimaryXAxis>
 
-    <ChartPrimaryYAxis Title="Y Axis">
-        <ChartAxisScrollbarSettings Enable="false" PointsLength="1000" Position="ScrollbarPosition.Left" />
+    <ChartPrimaryYAxis Title="Profit ($)" RangePadding="ChartRangePadding.None">
+        <ChartAxisLineStyle Width="0"></ChartAxisLineStyle>
+        <ChartAxisMajorTickLines Width="0"></ChartAxisMajorTickLines>
+        <ChartAxisScrollbarSettings Enable="false" PointsLength="1000" Position="ScrollbarPosition.Right" />
     </ChartPrimaryYAxis>
 
-    <ChartRows>
-        <ChartRow Height="50%" />
-        <ChartRow Height="50%" />
-    </ChartRows>
-
-    <ChartColumns>
-        <ChartColumn Width="50%" />
-        <ChartColumn Width="50%" />
-    </ChartColumns>
-
-    <ChartAxes>
-        <ChartAxis Title="X Axis 2" Name="XAxis2" ValueType="Syncfusion.Blazor.Charts.ValueType.Category" ColumnIndex="1">
-            <ChartAxisScrollbarSettings Enable="false" PointsLength="1000" Position="ScrollbarPosition.Top" />
-        </ChartAxis>
-        <ChartAxis Title="Y Axis 2" Name="YAxis2" RowIndex="0">
-            <ChartAxisScrollbarSettings Enable="false" PointsLength="1000" Position="ScrollbarPosition.Left" />
-        </ChartAxis>
-
-        <ChartAxis Title="X Axis 3" Name="XAxis3" ValueType="Syncfusion.Blazor.Charts.ValueType.Category" ColumnIndex="0">
-            <ChartAxisScrollbarSettings Enable="false" PointsLength="1000" Position="ScrollbarPosition.Top" />
-        </ChartAxis>
-        <ChartAxis Title="Y Axis 3" Name="YAxis3" RowIndex="1">
-            <ChartAxisScrollbarSettings Enable="false" PointsLength="1000" Position="ScrollbarPosition.Right" />
-        </ChartAxis>
-
-        <ChartAxis Title="X Axis 4" Name="XAxis4" ValueType="Syncfusion.Blazor.Charts.ValueType.Category" ColumnIndex="1">
-            <ChartAxisScrollbarSettings Enable="false" PointsLength="1000" Position="ScrollbarPosition.Top" />
-        </ChartAxis>
-        <ChartAxis Title="Y Axis 4" Name="YAxis4" RowIndex="1">
-            <ChartAxisScrollbarSettings Enable="false" PointsLength="1000" Position="ScrollbarPosition.Right" />
-        </ChartAxis>
-    </ChartAxes>
-
-    <ChartSeriesCollection>
-        <ChartSeries Name="Series1" DataSource="@SalesDetails" XName="X" YName="Y" Type="ChartSeriesType.Line">
-        </ChartSeries>
-        <ChartSeries Name="Series2" DataSource="@SalesDetails" XName="X" YName="Y" XAxisName="XAxis2" YAxisName="YAxis2" Type="ChartSeriesType.Line">
-        </ChartSeries>
-        <ChartSeries Name="Series3" DataSource="@SalesDetails" XName="X" YName="Y" XAxisName="XAxis3" YAxisName="YAxis3" Type="ChartSeriesType.Line">
-        </ChartSeries>
-        <ChartSeries Name="Series4" DataSource="@SalesDetails" XName="X" YName="Y" XAxisName="XAxis4" YAxisName="YAxis4" Type="ChartSeriesType.Line">
-        </ChartSeries>
-    </ChartSeriesCollection>
+    <ChartLegendSettings Visible="false"></ChartLegendSettings>
 
     <ChartZoomSettings EnableMouseWheelZooming="true" EnableScrollbar="true" EnablePinchZooming="true"
                        EnableSelectionZooming="true"></ChartZoomSettings>
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@SalesReports" Name="Warmest" XName="XValue" Width="2" Opacity="1"
+                     YName="YValue" Type="ChartSeriesType.Area">
+        </ChartSeries>
+    </ChartSeriesCollection>
+
+    <ChartArea>
+        <ChartAreaBorder Width="0"></ChartAreaBorder>
+    </ChartArea>
 </SfChart>
 
 @code {
     public class ChartData
     {
-        public string X { get; set; }
-        public double Y { get; set; }
+        public DateTime XValue { get; set; }
+        public double YValue { get; set; }
     }
 
-    public List<ChartData> SalesDetails = new List<ChartData>
+    public List<ChartData> SalesReports = new List<ChartData>
     {
-        new ChartData { X = "Jan", Y = 50 },
-        new ChartData { X = "Feb", Y = 120 },
-        new ChartData { X = "Mar", Y = 60 },
-        new ChartData { X = "Apr", Y = 140 },
-        new ChartData { X = "May", Y = 70 },
-        new ChartData { X = "Jun", Y = 160 },
-        new ChartData { X = "Jul", Y = 80 },
-        new ChartData { X = "Aug", Y = 180 },
-        new ChartData { X = "Sep", Y = 90 },
-        new ChartData { X = "Oct", Y = 170 },
-        new ChartData { X = "Nov", Y = 100 },
-        new ChartData { X = "Dec", Y = 190 }
+        new ChartData { XValue = new DateTime(2000, 02, 11), YValue = 14 },
+        new ChartData { XValue = new DateTime(2000, 09, 04), YValue = 20 },
+        new ChartData { XValue = new DateTime(2001, 02, 11), YValue = 25 },
+        new ChartData { XValue = new DateTime(2001, 09, 16), YValue = 21 },
+        new ChartData { XValue = new DateTime(2002, 02, 07), YValue = 13 },
+        new ChartData { XValue = new DateTime(2002, 09, 07), YValue = 18 },
+        new ChartData { XValue = new DateTime(2003, 02, 11), YValue = 24 },
+        new ChartData { XValue = new DateTime(2003, 09, 14), YValue = 23 },
+        new ChartData { XValue = new DateTime(2004, 02, 06), YValue = 19 },
+        new ChartData { XValue = new DateTime(2004, 09, 06), YValue = 31 },
+        new ChartData { XValue = new DateTime(2005, 02, 11), YValue = 39 },
+        new ChartData { XValue = new DateTime(2005, 09, 11), YValue = 50 },
+        new ChartData { XValue = new DateTime(2006, 02, 11), YValue = 24 },
     };
 }
 ```

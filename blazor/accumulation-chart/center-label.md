@@ -83,7 +83,7 @@ N> Line breaks can be provided to texts in the `HoverTextFormat` property using 
     }
 }
 ```
-![Blazor Accumulation Chart with Center Label Dynamic Text](./images/center-label/blazor-accumulation-chart-with-center-label-hover-text.png)
+![Blazor Accumulation Chart with Center Label Dynamic Text](./images/center-label/blazor-accumulation-chart-with-center-label-hover-text.gif)
 
 ## Customization
 
