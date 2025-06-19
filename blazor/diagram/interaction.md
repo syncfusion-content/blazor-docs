@@ -346,7 +346,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ![Grouping in Blazor Diagram](images/CloneSelection.gif)
 
 ### How to Access and Modify the Selected Node and Selected Connector at runtime
-you can access and update the properties of selected nodes and connectors using the [SelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionSettings) API in Syncfusion Blazor's [SfDiagramComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html). This allows you to respond to user selections and dynamically modify diagram elements at runtime. The following code demonstrates how to access and modify the selected Node and selected connector during runtime.
+You can access and update the properties of selected nodes and connectors using the [SelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionSettings) API in Syncfusion Blazor's [SfDiagramComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html). This allows you to respond to user selections and dynamically modify diagram elements at runtime. The following code demonstrates how to access and modify the selected Node and selected connector during runtime.
 ```
 @page "/"
 @using Syncfusion.Blazor.Diagram
