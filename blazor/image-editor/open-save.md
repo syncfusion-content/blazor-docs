@@ -418,9 +418,9 @@ You can utilize the [`FileOpenEventArgs`](https://help.syncfusion.com/cr/blazor/
 ```
 ![Blazor Image Editor with Adding Watermark](./images/blazor-image-editor-add-watermark.jpeg)
 
-### Opening images with custom width and height
+### Opening Images with Custom Width and Height
 
-Users can now open images with specific width and height values using the optional (https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_OpenAsync_System_Object_System_Boolean_System_String_) parameters in the `OpenAsync` method. This enhancement introduces three optional properties: `width`, `height`, and `isAspectRatio`. These options allow precise control over the image dimensions, with the flexibility to preserve the original aspect ratio if needed. This feature is especially useful when rendering high-resolution images or when fitting images into fixed-size layouts or canvas areas.
+Users can now open images with specific width and height values using the optional parameters in the [`OpenAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_OpenAsync_System_Object_System_Boolean_System_String_) method. This enhancement introduces three optional parameters: `width`, `height`, and `isAspectRatio`These options allow precise control over the image dimensions, with the flexibility to preserve the original aspect ratio if needed. This feature is especially useful when rendering high-resolution images or when fitting images into fixed-size layouts or canvas areas.
  
 The following behaviors are supported through these properties:
 	- Contains behavior: By specifying only one dimension (either `width` or `height`) and enabling `isAspectRatio`, the other dimension is automatically calculated to maintain the image’s original proportions.
