@@ -313,22 +313,22 @@ The corners of all the slices in the pie/donut chart series can be rounded using
 
 <SfAccumulationChart Title="Pie Chart with Border Radius">
     <AccumulationChartSeriesCollection>
-        <AccumulationChartSeries DataSource="@DoughnutChartPoints" XName="Food" YName="Amount" InnerRadius="40%" BorderRadius="8">
+        <AccumulationChartSeries DataSource="@DonutChartPoints" XName="Food" YName="Amount" InnerRadius="40%" BorderRadius="8">
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
     <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
 </SfAccumulationChart>
 
 @code {
-    public List<DoughnutData> DoughnutChartPoints { get; set; } = new List<DoughnutData>
+    public List<DonutData> DonutChartPoints { get; set; } = new List<DonutData>
     {
-        new DoughnutData { Food = "Milk", Amount = 10, DataLabelMappingName = "Milk: 10%"},
-        new DoughnutData { Food = "Rice", Amount = 30, DataLabelMappingName = "Rice: 30%"},
-        new DoughnutData { Food = "Cereals", Amount = 20, DataLabelMappingName = "Cereals: 20%"},
-        new DoughnutData { Food = "Water", Amount = 15, DataLabelMappingName = "Water: 15%"},
-        new DoughnutData { Food = "Vegetables", Amount = 25, DataLabelMappingName = "Vegetables: 25%"},
+        new DonutData { Food = "Milk", Amount = 10, DataLabelMappingName = "Milk: 10%"},
+        new DonutData { Food = "Rice", Amount = 30, DataLabelMappingName = "Rice: 30%"},
+        new DonutData { Food = "Cereals", Amount = 20, DataLabelMappingName = "Cereals: 20%"},
+        new DonutData { Food = "Water", Amount = 15, DataLabelMappingName = "Water: 15%"},
+        new DonutData { Food = "Vegetables", Amount = 25, DataLabelMappingName = "Vegetables: 25%"},
     };
-    public class DoughnutData
+    public class DonutData
     {
         public string Food { get; set; }
         public double Amount { get; set; }

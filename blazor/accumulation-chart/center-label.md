@@ -18,7 +18,7 @@ You can configure the text that appears in the center using the `Text` property 
 
 <SfAccumulationChart>
     <AccumulationChartSeriesCollection>
-        <AccumulationChartSeries DataSource="@DoughnutChartPoints" XName="Browser" YName="Users" InnerRadius="60%">
+        <AccumulationChartSeries DataSource="@DonutChartPoints" XName="Browser" YName="Users" InnerRadius="60%">
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
     <AccumulationChartCenterLabel Text="Mobile Browser<br>Statistics 2024">
@@ -27,16 +27,16 @@ You can configure the text that appears in the center using the `Text` property 
 </SfAccumulationChart>
 
 @code {
-    public List<DoughnutData> DoughnutChartPoints { get; set; } = new List<DoughnutData>
+    public List<DonutData> DonutChartPoints { get; set; } = new List<DonutData>
     {
-        new DoughnutData { Browser = "Chrome", Users = 63.5, DataLabelMappingName = "Chrome: 63.5%"},
-        new DoughnutData { Browser = "Safari", Users = 25.0, DataLabelMappingName = "Safari: 25.0%"},
-        new DoughnutData { Browser = "Samsung Internet", Users = 6.0, DataLabelMappingName = "Samsung Internet: 6.0%"},
-        new DoughnutData { Browser = "UC Browser", Users = 2.5, DataLabelMappingName = "UC Browser: 2.5%"},
-        new DoughnutData { Browser = "Opera", Users = 1.5, DataLabelMappingName = "Opera: 1.5%"},
-        new DoughnutData { Browser = "Others", Users = 1.5, DataLabelMappingName = "Others: 1.5%"}
+        new DonutData { Browser = "Chrome", Users = 63.5, DataLabelMappingName = "Chrome: 63.5%"},
+        new DonutData { Browser = "Safari", Users = 25.0, DataLabelMappingName = "Safari: 25.0%"},
+        new DonutData { Browser = "Samsung Internet", Users = 6.0, DataLabelMappingName = "Samsung Internet: 6.0%"},
+        new DonutData { Browser = "UC Browser", Users = 2.5, DataLabelMappingName = "UC Browser: 2.5%"},
+        new DonutData { Browser = "Opera", Users = 1.5, DataLabelMappingName = "Opera: 1.5%"},
+        new DonutData { Browser = "Others", Users = 1.5, DataLabelMappingName = "Others: 1.5%"}
     };
-    public class DoughnutData
+    public class DonutData
     {
         public string Browser { get; set; }
         public double Users { get; set; }
@@ -57,7 +57,7 @@ N> Line breaks can be provided to texts in the `HoverTextFormat` property using 
 
 <SfAccumulationChart>
     <AccumulationChartSeriesCollection>
-        <AccumulationChartSeries DataSource="@DoughnutChartPoints" XName="Browser" YName="Users" InnerRadius="60%">
+        <AccumulationChartSeries DataSource="@DonutChartPoints" XName="Browser" YName="Users" InnerRadius="60%">
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
     <AccumulationChartCenterLabel Text="Mobile Browser<br>Statistics 2024" HoverTextFormat="${point.x} <br> Browser Share <br> ${point.y}%">
@@ -66,16 +66,16 @@ N> Line breaks can be provided to texts in the `HoverTextFormat` property using 
 </SfAccumulationChart>
 
 @code {
-    public List<DoughnutData> DoughnutChartPoints { get; set; } = new List<DoughnutData>
+    public List<DonutData> DonutChartPoints { get; set; } = new List<DonutData>
     {
-        new DoughnutData { Browser = "Chrome", Users = 63.5, DataLabelMappingName = "Chrome: 63.5%"},
-        new DoughnutData { Browser = "Safari", Users = 25.0, DataLabelMappingName = "Safari: 25.0%"},
-        new DoughnutData { Browser = "Samsung Internet", Users = 6.0, DataLabelMappingName = "Samsung Internet: 6.0%"},
-        new DoughnutData { Browser = "UC Browser", Users = 2.5, DataLabelMappingName = "UC Browser: 2.5%"},
-        new DoughnutData { Browser = "Opera", Users = 1.5, DataLabelMappingName = "Opera: 1.5%"},
-        new DoughnutData { Browser = "Others", Users = 1.5, DataLabelMappingName = "Others: 1.5%"}
+        new DonutData { Browser = "Chrome", Users = 63.5, DataLabelMappingName = "Chrome: 63.5%"},
+        new DonutData { Browser = "Safari", Users = 25.0, DataLabelMappingName = "Safari: 25.0%"},
+        new DonutData { Browser = "Samsung Internet", Users = 6.0, DataLabelMappingName = "Samsung Internet: 6.0%"},
+        new DonutData { Browser = "UC Browser", Users = 2.5, DataLabelMappingName = "UC Browser: 2.5%"},
+        new DonutData { Browser = "Opera", Users = 1.5, DataLabelMappingName = "Opera: 1.5%"},
+        new DonutData { Browser = "Others", Users = 1.5, DataLabelMappingName = "Others: 1.5%"}
     };
-    public class DoughnutData
+    public class DonutData
     {
         public string Browser { get; set; }
         public double Users { get; set; }
@@ -96,7 +96,7 @@ The position of the center label can be adjusted using the `XOffset` and `YOffse
 
 <SfAccumulationChart>
     <AccumulationChartSeriesCollection>
-        <AccumulationChartSeries DataSource="@DoughnutChartPoints" XName="Browser" YName="Users" InnerRadius="60%">
+        <AccumulationChartSeries DataSource="@DonutChartPoints" XName="Browser" YName="Users" InnerRadius="60%">
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
     <AccumulationChartCenterLabel Text="Mobile Browser<br>Statistics 2024">
@@ -106,16 +106,16 @@ The position of the center label can be adjusted using the `XOffset` and `YOffse
 </SfAccumulationChart>
 
 @code {
-    public List<DoughnutData> DoughnutChartPoints { get; set; } = new List<DoughnutData>
+    public List<DonutData> DonutChartPoints { get; set; } = new List<DonutData>
     {
-        new DoughnutData { Browser = "Chrome", Users = 63.5, DataLabelMappingName = "Chrome: 63.5%"},
-        new DoughnutData { Browser = "Safari", Users = 25.0, DataLabelMappingName = "Safari: 25.0%"},
-        new DoughnutData { Browser = "Samsung Internet", Users = 6.0, DataLabelMappingName = "Samsung Internet: 6.0%"},
-        new DoughnutData { Browser = "UC Browser", Users = 2.5, DataLabelMappingName = "UC Browser: 2.5%"},
-        new DoughnutData { Browser = "Opera", Users = 1.5, DataLabelMappingName = "Opera: 1.5%"},
-        new DoughnutData { Browser = "Others", Users = 1.5, DataLabelMappingName = "Others: 1.5%"}
+        new DonutData { Browser = "Chrome", Users = 63.5, DataLabelMappingName = "Chrome: 63.5%"},
+        new DonutData { Browser = "Safari", Users = 25.0, DataLabelMappingName = "Safari: 25.0%"},
+        new DonutData { Browser = "Samsung Internet", Users = 6.0, DataLabelMappingName = "Samsung Internet: 6.0%"},
+        new DonutData { Browser = "UC Browser", Users = 2.5, DataLabelMappingName = "UC Browser: 2.5%"},
+        new DonutData { Browser = "Opera", Users = 1.5, DataLabelMappingName = "Opera: 1.5%"},
+        new DonutData { Browser = "Others", Users = 1.5, DataLabelMappingName = "Others: 1.5%"}
     };
-    public class DoughnutData
+    public class DonutData
     {
         public string Browser { get; set; }
         public double Users { get; set; }
