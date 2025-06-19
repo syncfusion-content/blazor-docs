@@ -1668,7 +1668,7 @@ namespace LibraryManagement.Models
 
 ### Create an intermediate service using the interface
 
-Now, implement the `ILibraryService` interface in a service class. This service interacts with the database using Entity Framework.
+Now, implement the `ILibraryService` interface in a service class. This service interacts with the database using Entity Framework and performs CRUD operations.
 
 ```csharp
 using Microsoft.EntityFrameworkCore;
@@ -1747,7 +1747,7 @@ namespace LibraryManagement.Models
 
 ### Configure the DataGrid to perform CRUD actions using Blazor DataGrid events
 
-To perform CRUD (Create, Read, Update, and Delete) operations with the Syncfusion Blazor DataGrid and keep your database in sync, handle the relevant Grid events. The Grid binds to your data using the `DataSource` property, but you must explicitly update your backend in response to user actions.
+To perform CRUD (Create, Read, Update, and Delete) operations with the Syncfusion Blazor DataGrid and keep your database in sync, handle the relevant Grid events. Since data is bound to the Grid using the `DataSource` property, you must explicitly update your backend in response to user actions.
 
 **RowUpdated:** Triggered when a record is added or edited. Use this event to insert or update the record in your database.
 
