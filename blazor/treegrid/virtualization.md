@@ -347,40 +347,49 @@ N> For example, when the OverscanCount is set to 5, only 5 buffer rows are rende
 
 ## Virtualization with hierarchical data binding
 
-Previously, virtualization was not supported with hierarchical data binding in the TreeGrid. Now, Syncfusion has introduced virtualization support for hierarchical data, enabling efficient handling of large datasets with multiple child records and nested levels. This feature leverages an on-demand loading concept to boost performance and user experience
+Previously, virtualization was not supported with hierarchical data binding in the TreeGrid. Now, Syncfusion has introduced virtualization support for hierarchical data, enabling efficient handling of large datasets with multiple child records and nested levels. This feature leverages an on-demand loading concept to boost performance and user experience.
 
-When working with deeply nested hierarchical structures containing a large number of child records, rendering all levels simultaneously can lead to significant performance issues, most notably UI flickering. This flickering occurs due to frequent height recalculations and excessive DOM reflows as the TreeGrid dynamically adjusts its layout based on the number of visible rows. For example, expanding a parent row that contains 100 or 1000 child records may trigger excessive DOM reflows as the TreeGrid dynamically adjusts height based on the number of loaded rows. This flickering can worsen when multiple child rows are expanded simultaneously.  In addition to performance challenges, accurate data transformation is critical. Before rendering, the data source must be correctly structured into a parent-child hierarchy. This typically involves recursive logic to associate each child record with its corresponding parent. If this mapping is incomplete or incorrect, the TreeGrid may misinterpret the hierarchy leading to broken structures, missing child nodes, or visual inconsistencies in the rendered output.
+When working with deeply nested hierarchical structures containing a large number of child records, rendering all levels simultaneously can lead to significant performance issues, most notably UI flickering. This flickering occurs due to frequent height recalculations and excessive DOM reflows as the TreeGrid dynamically adjusts its layout based on the number of visible rows. For example, expanding a parent row that contains 100 or 1000 child records may trigger excessive DOM reflows as the TreeGrid dynamically adjusts height based on the number of loaded rows. This flickering can worsen when multiple child rows are expanded simultaneously.  
+
+In addition to performance challenges, accurate data transformation is critical. Before rendering, the data source must be correctly structured into a parent-child hierarchy. This typically involves recursive logic to associate each child record with its corresponding parent. If this mapping is incomplete or incorrect, the TreeGrid may misinterpret the hierarchy leading to broken structures, missing child nodes, or visual inconsistencies in the rendered output.
 
 To overcome these challenges, we have introduced an approach to convert hierarchical data into flat data. This method offers several key advantages:
 
-* **Efficient Mapping:**
+* **Efficient mapping:**
 
 Handling large volumes of data with multiple levels increases the complexity of associating each child with its corresponding parent. A flat data model simplifies this process by representing hierarchical relationships through the `ChildMapping` property, improving clarity and manageability.
 
-* **Performance Optimization:**
+* **Performance optimization:**
 
 Converting hierarchical data into a flat list enables the virtualization engine to treat it as a linear dataset, reducing overhead during row rendering and scrolling, especially with deeply nested hierarchies.
 
-* **Minimized Flickering:**
+* **Minimized flickering:**
 
 Since the flat structure avoids dynamic height recalculations during on-demand loading, it provides a smoother UI experience without visible flicker when expanding or collapsing child records.
 
-* **Expand/Collapse State Preservation:**
+* **Expand/collapse state preservation:**
 
 Using a flat data structure helps maintain and synchronize the expand/collapse states across the hierarchical and flattened collections. This ensures that UI interactions like expanding or collapsing nodes are consistent and correctly reflected in both the underlying data model and the TreeGrid's rendered view, avoiding state loss during virtualization or re-binding.
 
-To enable virtualization with hierarchical data in Syncfusion TreeGrid, you must first transform the hierarchical structure into a flat list at the application level using a recursive method named `HierarchyToFlatData` in application end. This method traverses all parent-child relationships and flattens them into a single-level collection. This flat data source can then be efficiently bound to the TreeGrid with virtualization enabled.
+To enable virtualization with hierarchical data in Syncfusion TreeGrid, you must first transform the hierarchical structure into a flat list at the application level using a recursive method named **HierarchyToFlatData**. This method traverses all parent-child relationships and flattens them into a single-level collection. This flat data source can then be efficiently bound to the TreeGrid with virtualization enabled.
 
 Place the following method in your component (e.g., **Index.razor**) and call it during component initialization (OnInitialized lifecycle method) as like below:
 
 ```ts
 
-  protected override void OnInitialized()
+protected override void OnInitialized()
 {
-    // Call the method to flatten hierarchical data and assign it to TreeGridData.
-    this.TreeGridData = HierarchyToFlatData(VirtualData.GetVirtualData(), "Children").ToArray();
+  // Call the method to flatten hierarchical data and assign it to TreeGridData.
+  this.TreeGridData = HierarchyToFlatData(VirtualData.GetVirtualData(), "Children").ToArray();
 }
 
+/// <summary>
+/// Recursively flattens hierarchical data into a single-level list.
+/// </summary>
+/// <param name="dataSource">The original hierarchical data.</param>
+/// <param name="childMapping">The property name that maps to child records.</param>
+/// <param name="addedData">An internal list to accumulate the flattened records.</param>
+/// <returns>A flat list of all hierarchical records.</returns>
 public List<VirtualData> HierarchyToFlatData(List<VirtualData> dataSource, string childMapping, List<VirtualData> addedData = null)
 {
   // If no list is passed to collect flat data, create a new one.
@@ -414,7 +423,7 @@ public List<VirtualData> HierarchyToFlatData(List<VirtualData> dataSource, strin
 
 ```
 
-The following complete code example demonstrates how to bind hierarchical data to the Syncfusion TreeGrid using the ChildMapping property. Enable virtualization by setting EnableVirtualization to true and convert hierarchical data into a flat list using a recursive method (HierarchyToFlatData) before binding it to the TreeGrid:
+The following complete code example demonstrates how to bind hierarchical data to the TreeGrid using the [ChildMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ChildMapping) property. Enable virtualization by setting [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableVirtualization) to **true** and convert hierarchical data into a flat list using a recursive method (**HierarchyToFlatData**) before binding it to the TreeGrid:
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -437,11 +446,9 @@ The following complete code example demonstrates how to bind hierarchical data t
 @code {
   // Reference to TreeGrid instance.
   private SfTreeGrid<VirtualData> TreeGrid;
-
-  // Flattened data source assigned to TreeGrid.
   public VirtualData[] TreeGridData { get; set; }
 
-  // On component initialization, flatten the hierarchical data and bind to TreeGrid
+  // On component initialization, flatten the hierarchical data and bind to TreeGrid.
   protected override void OnInitialized()
   {
     this.TreeGridData = HierarchyToFlatData(VirtualData.GetVirtualData(), "Children").ToArray();
@@ -450,7 +457,7 @@ The following complete code example demonstrates how to bind hierarchical data t
   // Recursive method to flatten hierarchical data into a linear list preserving display order.
   public List<VirtualData> HierarchyToFlatData(List<VirtualData> dataSource, string childMapping, List<VirtualData> addedData = null)
   {
-    // If this is the first call, initialize the list to store flattened data.
+    // If no list is passed to collect flat data, create a new one.
     if (addedData == null)
     {
       addedData = new List<VirtualData>();
@@ -458,13 +465,13 @@ The following complete code example demonstrates how to bind hierarchical data t
 
     foreach (var item in dataSource)
     {
-      // Add the current item to the flattened list.
+      // Add the current item to the flat list.
       addedData.Add(item);
 
-      // Use reflection to get the property named by childMapping dynamically.
+      // Get the property info for the child mapping (e.g., "Children").
       var propertyInfo = item.GetType().GetProperty(childMapping);
 
-      // Get the children collection of this item, cast to IEnumerable<VirtualData>.
+      // Get the children using the property name.
       var children = propertyInfo?.GetValue(item) as IEnumerable<VirtualData>;
       if (children != null)
       {
@@ -473,14 +480,8 @@ The following complete code example demonstrates how to bind hierarchical data t
       }
     }
 
-    // Return the fully flattened list.
+    // Return the final flat list.
     return addedData;
-  }
-
- // Expands all rows in the TreeGrid when called.
-  private async Task ExpandAllOnClick()
-  {
-    await TreeGrid.ExpandAllAsync();
   }
 
   // Sample data model with recursive Children property.
