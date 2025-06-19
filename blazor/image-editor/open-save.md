@@ -420,19 +420,21 @@ You can utilize the [`FileOpenEventArgs`](https://help.syncfusion.com/cr/blazor/
 
 ### Opening images with custom width and height
 
-Users can now open images with specified width and height values using the imageSettings parameter in the `Open` method. This enhancement introduces three additional properties: `width,` `height,` and `isAspectRatio.` Image dimensions can be precisely controlled while preserving the aspect ratio, if needed. This provides more control over rendering images, especially when dealing with high-resolution images or fixed canvas requirements.
+Users can now open images with specified width and height values using the optional parameter in the `Open` method. This enhancement introduces three additional properties: `width,` `height,` and `isAspectRatio.` Image dimensions can be precisely controlled while preserving the aspect ratio, if needed. This provides more control over rendering images, especially when dealing with high-resolution images or fixed canvas requirements.
 
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor 
 @using Syncfusion.Blazor.Buttons
 
-<div style="padding-bottom: 15px">
-    <SfButton OnClick="OpenImageAsync">Open Image</SfButton>
-</div>
+
 <SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="400">
     <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
 </SfImageEditor>
-
+<div style="padding-bottom: 15px">
+    <SfButton OnClick="FitAsync">Fit to Image</SfButton>
+    <SfButton OnClick="StretchAsync">Stretch Image</SfButton>
+    <SfButton OnClick="ResetAsync">Reset</SfButton>
+</div>
 @code {
     SfImageEditor ImageEditor;
     private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>() { };
@@ -442,9 +444,17 @@ Users can now open images with specified width and height values using the image
         await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
 
-    private async void OpenImageAsync()
+    private async void FitAsync()
     {
-        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png", true,"", -1, 500);
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png", true, "", -1, 400);
+    }
+    private async void StretchAsync()
+    {
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png", true, "", 200, 200);
+    }
+    private async void ResetAsync()
+    {
+        await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
 }
 ```

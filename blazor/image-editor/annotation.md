@@ -258,7 +258,7 @@ Here is an example of adding additional font family using the `ImageEditorFontFa
 
 ### Formatting Text with Bold, Italic, Underline, and Strikethrough
 
-The [`DrawTextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawTextAsync_System_Double_System_Double_System_String_System_String_System_Int32_System_Boolean_System_Boolean_System_String_System_Boolean_System_Int32_System_String_System_String_System_Int32_) method in the Blazor Image Editor component allows you to insert a text annotation into the image with specific customization options. Applying these styles enhances the text by improving readability and emphasizing key information: bold increases visual weight to highlight important points, italic adds a slanted emphasis or creative touch, underline draws a line beneath the text for clarity or separation, and strikethrough places a line through text to indicate removal or outdated content. These formatting options enable users to make their annotations more visually distinctive and effective in conveying information.
+The [`DrawTextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ImageEditor.SfImageEditor.html#Syncfusion_Blazor_ImageEditor_SfImageEditor_DrawTextAsync_System_Double_System_Double_System_String_System_String_System_Int32_System_Boolean_System_Boolean_System_String_System_Boolean_System_Int32_System_String_System_String_System_Int32_) method in the Blazor Image Editor component allows you to insert a text annotation into the image with specific customization options. Applying these styles enhances the text by improving readability and emphasizing key information, where bold increases visual weight to highlight important points, italic adds a slanted emphasis or creative touch, underline draws a line beneath the text for clarity or separation, and strikethrough places a line through text to indicate removal or outdated content. These formatting options enable users to make their annotations more visually distinctive and effective in conveying information
 
 
 Here is an example of adding a text in a button click using `DrawTextAsync` method. 
@@ -268,20 +268,58 @@ In the following example, you can using the DrawTextAsync method in the button c
 ```cshtml
 @using Syncfusion.Blazor.ImageEditor
 @using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.SplitButtons
 
-<div style="padding-bottom: 15px">
-    <SfButton OnClick="DrawTextAsync">Draw Text</SfButton>
-    <SfButton OnClick="BoldAsync">Draw Text Bold</SfButton>
-    <SfButton OnClick="ItalicAsync">Draw Text Italic Color</SfButton>
-    <SfButton OnClick="UnderlineAsync">Draw Text Underline</SfButton>
-    <SfButton OnClick="StrikethroughAsync">Draw Text Strikethrough Color</SfButton>
-</div>
 <SfImageEditor @ref="ImageEditor" Toolbar="customToolbarItem" Height="400">
     <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
 </SfImageEditor>
+<div class="button-toolbar">
+    <SfButton  Disabled="@IsTextInsterted" OnClick="AddTextAsync">Add Text</SfButton>
+    <SfButtonGroup Mode="SelectionMode.Multiple">
+        <ButtonGroupButton onclick="@BoldAsync">
+            <span class="icon-text">
+                <SfIcon Name="IconName.Bold" />
+                Bold
+            </span>
+        </ButtonGroupButton>
+        <ButtonGroupButton onclick="@ItalicAsync">
+            <span class="icon-text">
+                <SfIcon Name="IconName.Italic" />
+                Italic
+            </span>
+        </ButtonGroupButton>
+        <ButtonGroupButton onclick="@UnderlineAsync">
+            <span class="icon-text">
+                <SfIcon Name="IconName.Underline" />
+                Underline
+            </span>
+        </ButtonGroupButton>
+        <ButtonGroupButton onclick="@StrikethroughAsync">
+            <span class="icon-text">
+                <SfIcon Name="IconName.Strikethrough" />
+                Strikethrough
+            </span>
+        </ButtonGroupButton>
+    </SfButtonGroup>
+</div>
+<style>
+    .button-toolbar {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: nowrap;
+    }
+
+    .icon-text {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+ </style>
 
 @code {
     SfImageEditor ImageEditor;
+    Boolean IsTextInsterted = false;
     private List<ImageEditorToolbarItemModel> customToolbarItem = new List<ImageEditorToolbarItemModel>() { };
 
     private async void OpenAsync()
@@ -289,10 +327,14 @@ In the following example, you can using the DrawTextAsync method in the button c
         await ImageEditor.OpenAsync("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
     }
 
-    private async void DrawTextAsync()
+    private async void AddTextAsync()
     {
-        ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
-        await ImageEditor.DrawTextAsync(Dimension.X.Value, Dimension.Y.Value, "Syncfusion");
+        if (!IsTextInsterted)
+        {
+            IsTextInsterted = true;
+            ImageDimension Dimension = await ImageEditor.GetImageDimensionAsync();
+            await ImageEditor.DrawTextAsync(Dimension.X.Value, Dimension.Y.Value, "Syncfusion");
+        }
     }
     private async void BoldAsync()
     {
