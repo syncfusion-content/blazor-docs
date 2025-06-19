@@ -731,8 +731,7 @@ The `Visible` property of the `ChartStackLabelSettings` is used to enable stack 
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Family Expense for Month">
-    <ChartStackLabelSettings Visible="true">
-    </ChartStackLabelSettings>
+
     <ChartPrimaryXAxis LabelRotation="90" ValueType="Syncfusion.Blazor.Charts.ValueType.Category" Interval="1">
     </ChartPrimaryXAxis>
 
@@ -766,6 +765,9 @@ The `Visible` property of the `ChartStackLabelSettings` is used to enable stack 
             </ChartMarker>
         </ChartSeries>
     </ChartSeriesCollection>
+
+    <ChartStackLabelSettings Visible="true">
+    </ChartStackLabelSettings>
 </SfChart>
 
 @code {
@@ -827,11 +829,7 @@ We can customize the border of the stack labels using the `ChartStackLabelBorder
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Family Expense for Month">
-    <ChartStackLabelSettings Visible="true" Format="{value}" Fill="#ADD8E6" Rx="10" Ry="10" Angle="35">
-        <ChartStackLabelFont TextAlignment="Alignment.Center" FontFamily="Roboto" Size="12px" FontStyle="bold" FontWeight="600" Color="blue" />
-        <ChartStackLabelBorder Width="2" Color="#000000" />
-        <ChartStackLabelMargin Bottom="10" Top="10" Right="10" Left="10" />
-    </ChartStackLabelSettings>
+
     <ChartPrimaryXAxis LabelRotation="90" ValueType="Syncfusion.Blazor.Charts.ValueType.Category" Interval="1">
     </ChartPrimaryXAxis>
 
@@ -865,6 +863,12 @@ We can customize the border of the stack labels using the `ChartStackLabelBorder
             </ChartMarker>
         </ChartSeries>
     </ChartSeriesCollection>
+
+    <ChartStackLabelSettings Visible="true" Format="{value}" Fill="#ADD8E6" Rx="10" Ry="10" Angle="35">
+        <ChartStackLabelFont TextAlignment="Alignment.Center" FontFamily="Roboto" Size="12px" FontStyle="bold" FontWeight="600" Color="blue" />
+        <ChartStackLabelBorder Width="2" Color="#000000" />
+        <ChartStackLabelMargin Bottom="10" Top="10" Right="10" Left="10" />
+    </ChartStackLabelSettings>
 </SfChart>
 
 @code {

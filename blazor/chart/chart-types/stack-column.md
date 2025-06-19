@@ -683,8 +683,7 @@ The `Visible` property of the `ChartStackLabelSettings` is used to enable stack 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <ChartStackLabelSettings Visible="true">
-    </ChartStackLabelSettings>
+
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
 
     <ChartSeriesCollection>
@@ -713,6 +712,9 @@ The `Visible` property of the `ChartStackLabelSettings` is used to enable stack 
             </ChartMarker>
         </ChartSeries>
     </ChartSeriesCollection>
+
+    <ChartStackLabelSettings Visible="true">
+    </ChartStackLabelSettings>
 </SfChart>
 
 @code {
@@ -776,11 +778,7 @@ We can customize the border of the stack labels using the `ChartStackLabelBorder
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Stacked Column 100% with Stack labels">
-    <ChartStackLabelSettings Visible="true" Format="{value}" Fill="#ADD8E6" Rx="10" Ry="10" Angle="35">
-        <ChartStackLabelFont TextAlignment="Alignment.Center" FontFamily="Roboto" Size="12px" FontStyle="bold" FontWeight="600" Color="blue" />
-        <ChartStackLabelBorder Width="2" Color="#000000" />
-        <ChartStackLabelMargin Bottom="8" Top="8" Right="8" Left="8" />
-    </ChartStackLabelSettings>
+
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
 
     <ChartSeriesCollection>
@@ -809,6 +807,12 @@ We can customize the border of the stack labels using the `ChartStackLabelBorder
             </ChartMarker>
         </ChartSeries>
     </ChartSeriesCollection>
+
+    <ChartStackLabelSettings Visible="true" Format="{value}" Fill="#ADD8E6" Rx="10" Ry="10" Angle="35">
+        <ChartStackLabelFont TextAlignment="Alignment.Center" FontFamily="Roboto" Size="12px" FontStyle="bold" FontWeight="600" Color="blue" />
+        <ChartStackLabelBorder Width="2" Color="#000000" />
+        <ChartStackLabelMargin Bottom="8" Top="8" Right="8" Left="8" />
+    </ChartStackLabelSettings>
 </SfChart>
 
 @code {

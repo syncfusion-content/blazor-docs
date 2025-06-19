@@ -306,17 +306,17 @@ The [StartAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 
 ## Border radius
 
-The corners of all the slices in the pie/doughnut chart series can be rounded using the `BorderRadius` property within the [AccumulationChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html).
+The corners of all the slices in the pie/donut chart series can be rounded using the `BorderRadius` property within the [AccumulationChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart Title="Pie Chart with Border Radius">
-    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@DoughnutChartPoints" XName="Food" YName="Amount" InnerRadius="40%" BorderRadius="8">
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
+    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
 </SfAccumulationChart>
 
 @code {

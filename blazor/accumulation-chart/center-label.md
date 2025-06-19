@@ -17,13 +17,13 @@ You can configure the text that appears in the center using the `Text` property 
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart>
-    <AccumulationChartCenterLabel Text="Mobile Browser<br>Statistics 2024">
-    </AccumulationChartCenterLabel>
-    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@DoughnutChartPoints" XName="Browser" YName="Users" InnerRadius="60%">
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
+    <AccumulationChartCenterLabel Text="Mobile Browser<br>Statistics 2024">
+    </AccumulationChartCenterLabel>
+    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
 </SfAccumulationChart>
 
 @code {
@@ -56,13 +56,13 @@ N> Line breaks can be provided to texts in the `HoverTextFormat` property using 
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart>
-    <AccumulationChartCenterLabel Text="Mobile Browser<br>Statistics 2024" HoverTextFormat="${point.x} <br> Browser Share <br> ${point.y}%">
-    </AccumulationChartCenterLabel>
-    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@DoughnutChartPoints" XName="Browser" YName="Users" InnerRadius="60%">
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
+    <AccumulationChartCenterLabel Text="Mobile Browser<br>Statistics 2024" HoverTextFormat="${point.x} <br> Browser Share <br> ${point.y}%">
+    </AccumulationChartCenterLabel>
+    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
 </SfAccumulationChart>
 
 @code {
@@ -95,14 +95,14 @@ The position of the center label can be adjusted using the `XOffset` and `YOffse
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart>
-    <AccumulationChartCenterLabel Text="Mobile Browser<br>Statistics 2024">
-        <AccumulationChartCenterLabelFont Size="15px" FontWeight="600" FontFamily="Roboto" fontStyle="Italic" Color="Blue" ></AccumulationChartCenterLabelFont>
-    </AccumulationChartCenterLabel>
-    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@DoughnutChartPoints" XName="Browser" YName="Users" InnerRadius="60%">
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
+    <AccumulationChartCenterLabel Text="Mobile Browser<br>Statistics 2024">
+        <AccumulationChartCenterLabelFont Size="15px" FontWeight="600" FontFamily="Roboto" fontStyle="Italic" Color="Blue" ></AccumulationChartCenterLabelFont>
+    </AccumulationChartCenterLabel>
+    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
 </SfAccumulationChart>
 
 @code {

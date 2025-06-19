@@ -210,13 +210,15 @@ The zoom toolbar in the chart can be repositioned using the `ChartZoomToolbarPos
 
 <SfChart>
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@SalesReports" XName="X" YName="YValue" Type="ChartSeriesType.Column"></ChartSeries>
+    </ChartSeriesCollection>
+
     <ChartZoomSettings EnableSelectionZooming="true" EnableMouseWheelZooming="true" EnablePinchZooming="true" ToolbarDisplayMode="ToolbarMode.Always">
         <ChartZoomToolbarPosition HorizontalAlign="Syncfusion.Blazor.Charts.HorizontalAlign.Left" VerticalAlign="Syncfusion.Blazor.Charts.VerticalAlign.Top" X="10" Y="5">
         </ChartZoomToolbarPosition>
     </ChartZoomSettings>
-    <ChartSeriesCollection>
-        <ChartSeries DataSource="@SalesReports" XName="X" YName="YValue" Type="ChartSeriesType.Column"></ChartSeries>
-    </ChartSeriesCollection>
 </SfChart>
 
 @code {
@@ -373,11 +375,6 @@ The `Position` property in [ChartAxisScrollbarSettings](https://help.syncfusion.
         <ChartAxisScrollbarSettings Enable="false" PointsLength="1000" Position="ScrollbarPosition.Right" />
     </ChartPrimaryYAxis>
 
-    <ChartLegendSettings Visible="false"></ChartLegendSettings>
-
-    <ChartZoomSettings EnableMouseWheelZooming="true" EnableScrollbar="true" EnablePinchZooming="true"
-                       EnableSelectionZooming="true"></ChartZoomSettings>
-
     <ChartSeriesCollection>
         <ChartSeries DataSource="@SalesReports" Name="Warmest" XName="XValue" Width="2" Opacity="1"
                      YName="YValue" Type="ChartSeriesType.Area">
@@ -387,6 +384,11 @@ The `Position` property in [ChartAxisScrollbarSettings](https://help.syncfusion.
     <ChartArea>
         <ChartAreaBorder Width="0"></ChartAreaBorder>
     </ChartArea>
+
+    <ChartZoomSettings EnableMouseWheelZooming="true" EnableScrollbar="true" EnablePinchZooming="true"
+                       EnableSelectionZooming="true"></ChartZoomSettings>
+    <ChartLegendSettings Visible="false"></ChartLegendSettings>
+
 </SfChart>
 
 @code {
