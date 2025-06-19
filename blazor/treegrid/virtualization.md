@@ -347,7 +347,7 @@ N> For example, when the OverscanCount is set to 5, only 5 buffer rows are rende
 
 ## Virtualization with hierarchical data binding
 
-Previously, virtualization was not supported with hierarchical data binding in the TreeGrid. Now, Syncfusion has introduced virtualization support for hierarchical data, enabling efficient handling of large datasets with multiple child records and nested levels. This feature leverages an on-demand loading concept to boost performance and user experience.
+Previously, virtualization was not supported with hierarchical data binding in the TreeGrid. Now, we have provided virtualization support for hierarchical data, enabling efficient handling of large datasets with multiple child records and nested levels. This feature leverages an on-demand loading concept to boost performance and user experience.
 
 When working with deeply nested hierarchical structures containing a large number of child records, rendering all levels simultaneously can lead to significant performance issues, most notably UI flickering. This flickering occurs due to frequent height recalculations and excessive DOM reflow as the TreeGrid dynamically adjusts its layout based on the number of visible rows. For example, expanding a parent row that contains 100 or 1000 child records may trigger excessive DOM reflow as the TreeGrid dynamically adjusts height based on the number of loaded rows. This flickering can worsen when multiple child rows are expanded simultaneously.  
 
