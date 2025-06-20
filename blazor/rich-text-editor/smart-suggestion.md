@@ -30,7 +30,7 @@ This list can include various formatting options such as paragraph and heading l
 {% endhighlight %}
 {% tabs %}
 
-# Customizing the popup width and height
+## Customizing the popup width and height
 
 The size of the Slash Menu popup can be customized using the [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorSlashMenuSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorSlashMenuSettings_PopupWidth) and [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorSlashMenuSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorSlashMenuSettings_PopupHeight) properties within SlashMenuSettings. Adjusting these values allows for control over the dimensions of the menu.
 
