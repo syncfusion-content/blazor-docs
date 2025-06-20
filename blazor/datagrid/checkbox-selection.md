@@ -364,3 +364,47 @@ public class OrderDetails
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htretIZeoziROVCs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Persist checkbox selection with remote data
+
+The Persist Selection feature in the Syncfusion Blazor DataGrid allows selected rows to remain selected even after performing actions such as paging, sorting, filtering, or data refreshes—including when using remote data sources. This is particularly useful in scenarios where users need to track selected items across different views or pages without losing the selection state.
+
+To enable this feature, set the [GridSelectionSettings.PersistSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_PersistSelection) property to **true**.
+
+> When using the persist selection feature, at least one column in your Grid should be set as a primary key using the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property. This ensures that the Grid can identify and persist the selected items correctly.
+
+The following example demonstrates how to persist checkbox selections when the Grid is bound to remote data using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) and `ODataV4Adaptor`:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Data
+
+<SfGrid AllowSelection="true" AllowPaging="true" AllowSorting="true" AllowFiltering="true" TValue="OrdersDetails">
+    <SfDataManager Url="https://blazor.syncfusion.com/services/development/odata/gridodatav4service" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
+    <GridSelectionSettings CheckboxOnly="true" PersistSelection="true"></GridSelectionSettings>
+    <GridColumns>
+        <GridColumn Type="ColumnType.CheckBox" Width="50"></GridColumn>
+        <GridColumn Field=@nameof(OrdersDetails.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" IsPrimaryKey="true" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(OrdersDetails.CustomerID) HeaderText="Customer ID" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(OrdersDetails.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(OrdersDetails.Freight) Format="C2" TextAlign="TextAlign.Right" Width="200"></GridColumn>
+        <GridColumn Field=@nameof(OrdersDetails.ShippedDate) HeaderText="Shipped Date" Format="d" TextAlign="TextAlign.Right" Type="ColumnType.Date" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public class OrdersDetails {
+        public int OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+        public DateTime? ShippedDate { get; set; }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZLSDxidsYqWFcdQ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
