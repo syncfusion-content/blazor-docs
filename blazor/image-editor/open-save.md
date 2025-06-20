@@ -437,9 +437,9 @@ The following example showcases how all three behaviors can be achieved using th
     <ImageEditorEvents Created="OpenAsync"></ImageEditorEvents>
 </SfImageEditor>
 <div style="display: flex; gap: 12px; margin-top: 10px">
-    <SfButton OnClick="ContainsAsync">Fit to Width (Aspect Ratio)</SfButton>
-    <SfButton OnClick="CoverAsync">Cover (Aspect Ratio)</SfButton>
-    <SfButton OnClick="StretchAsync">Stretch / Shrink</SfButton>
+    <SfButton CssClass="e-primary" OnClick="ContainsAsync">Fit to Width (Aspect Ratio)</SfButton>
+    <SfButton CssClass="e-primary" OnClick="CoverAsync">Cover (Aspect Ratio)</SfButton>
+    <SfButton CssClass="e-primary" OnClick="StretchAsync">Stretch / Shrink</SfButton>
 </div>
 @code {
     SfImageEditor ImageEditor;

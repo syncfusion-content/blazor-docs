@@ -276,29 +276,17 @@ In the following example, you can using the DrawTextAsync method in the button c
 <div class="button-toolbar">
     <SfButton CssClass="@(IsTextInsterted ? "e-disabled" : "e-primary")" Disabled="@IsTextInsterted" OnClick="AddTextAsync">Add Text</SfButton>
     <SfButtonGroup Mode="SelectionMode.Multiple">
-        <ButtonGroupButton onclick="@BoldAsync">
-            <span class="icon-text">
-                <SfIcon Name="IconName.Bold" />
-                Bold
-            </span>
+        <ButtonGroupButton onclick="@BoldAsync" IconCss="e-icons e-bold">
+            Bold
         </ButtonGroupButton>
-        <ButtonGroupButton onclick="@ItalicAsync">
-            <span class="icon-text">
-                <SfIcon Name="IconName.Italic" />
-                Italic
-            </span>
+        <ButtonGroupButton onclick="@ItalicAsync" IconCss="e-icons e-italic">
+            Italic
         </ButtonGroupButton>
-        <ButtonGroupButton onclick="@UnderlineAsync">
-            <span class="icon-text">
-                <SfIcon Name="IconName.Underline" />
-                Underline
-            </span>
+        <ButtonGroupButton onclick="@UnderlineAsync" IconCss="e-icons e-underline">
+            Underline
         </ButtonGroupButton>
-        <ButtonGroupButton onclick="@StrikethroughAsync">
-            <span class="icon-text">
-                <SfIcon Name="IconName.Strikethrough" />
-                Strikethrough
-            </span>
+        <ButtonGroupButton onclick="@StrikethroughAsync" IconCss="e-icons e-strikethrough">
+            Strikethrough
         </ButtonGroupButton>
     </SfButtonGroup>
 </div>
@@ -306,15 +294,9 @@ In the following example, you can using the DrawTextAsync method in the button c
     .button-toolbar {
         display: flex;
         align-items: center;
-        gap: 8px;
+        gap: 12px;
         flex-wrap: nowrap;
         margin-top: 10px;
-    }
-
-    .icon-text {
-        display: flex;
-        align-items: center;
-        gap: 4px;
     }
 </style>
 
