@@ -88,7 +88,7 @@ namespace MauiBlazorWindow;
 {% endhighlight %}
 {% endtabs %}
 
-## Step 4: How to Add Stylesheet and Script
+## Step 4: How to Add Stylesheet and Script Resources
 
 Add the following stylesheet and script to the head section of the **~/wwwroot/index.html** file.
 
@@ -246,7 +246,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Diagram component in th
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DiagramComponent/BlazorMAUIApp/DiagramSample).
 
-## How to Run the Sample on Windows 
+## How to Run the Sample on Windows
 
 Run the sample in Windows Machine mode, and it will run Blazor MAUI in Windows.
 
@@ -276,11 +276,11 @@ N> If you encounter any errors while using the Android Emulator, refer to the fo
 
 To use the MAUI project templates, install the Mobile development with the .NET extension for Visual Studio Code. For more details, refer to [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
 
-## Step 1: Create a new Blazor MAUI App in Visual Studio Code
+## Step 1: How to Create a New Blazor MAUI App Using Visual Studio Code
 
 You can create a Blazor MAUI App using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&view=net-maui-9.0&tabs=visual-studio-code) or the [Syncfusion® Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-code-integration/create-project).
 
-## Step 2: Install Diagram NuGet package in Blazor Maui App
+## Step 2: How to Install Diagram NuGet Packages in a Blazor MAUI App
 
 To add **Blazor Diagram**  component in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install [Syncfusion.Blazor.Diagram](https://www.nuget.org/packages/Syncfusion.Blazor.Diagram) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/).
 
@@ -298,7 +298,7 @@ dotnet restore
 
 N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) topic for available NuGet packages list with component details.
 
-## Step 3: Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+## Step 3: How to Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
 * In the **~/_Imports.razor** file, add the following namespaces:
 
@@ -348,7 +348,7 @@ namespace MauiBlazorWindow;
 {% endhighlight %}
 {% endtabs %}
 
-## Step 4: Adding stylesheet and script
+## Step 4: How to Add Stylesheet and Script Resources
 
 Add the following stylesheet and script to the head section of the **~/wwwroot/index.html** file.
 
@@ -369,7 +369,7 @@ If you are using Syncfusion.Blazor.Diagram && Syncfusion.Blazor.Themes NuGet pac
 </head>
 ```
 
-## Step 5: Add Diagram component
+## Step 5: How to Add the Diagram Component
 
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Diagram component in the **~/Pages/Index.razor** file.
 
@@ -506,7 +506,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Diagram component in th
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DiagramComponent/BlazorMAUIApp/DiagramSample).
 
-## Run on Windows
+## How to Run the Sample on Windows
 
 Run the sample in Windows Machine mode, and it will run Blazor MAUI in Windows.
 
@@ -516,7 +516,7 @@ When the application is successfully launched, the Diagram component will seamle
 
 ![Run Windows machine](images/blazor-diagram-maui-page.png)
 
-## Run on Android
+## How to Run the Sample on Android
 
 To run the Blazor DiagramComponent in a Blazor Android MAUI application using the Android emulator, follow these steps:
 
