@@ -67,7 +67,7 @@ The following code demonstrates how to set up the Custom Slash Menu item in the 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor mention integration](./images/smart-suggestion.png)
+![Blazor RichTextEditor slash commands](./images/smart-suggestion.png)
 
 > [View Sample](https://blazor.syncfusion.com/demos/rich-text-editor/smart-suggestion?theme=bootstrap5)
 
