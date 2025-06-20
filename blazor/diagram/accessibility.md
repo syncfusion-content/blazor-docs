@@ -37,7 +37,7 @@ The accessibility compliance for the Blazor diagram component is outlined below:
 
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
 
-## How to Use WAI-ARIA Attributes
+## WAI-ARIA Attributes
 
 The Blazor Diagram component followed the WAI-ARIA patterns to meet the accessibility. The following ARIA attributes are used in the Blazor Diagram component:
 
@@ -45,7 +45,7 @@ The Blazor Diagram component followed the WAI-ARIA patterns to meet the accessib
 | --- | --- |
 | `aria-label` | Provides an accessible name for the Diagram Objects. |
 
-### How to Use Aria-label Attributes
+### Aria-label
 The aria-label attribute provides the text label with some default description for below elements in diagram.
 
 <!-- markdownlint-disable MD033 -->
