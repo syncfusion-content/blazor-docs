@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Segments interaction in Blazor Diagram Component | Syncfusion
+title: Bezier Segments Interaction in Blazor Diagram | Syncfusion
 description: Checkout and learn here all about Bezier Segments in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Bezier Segments interaction in Blazor Diagram Component
+# Bezier Segments Interaction in Blazor Diagram
 
-## How to interact with the bezier segments efficiently
+## How to Interact with the Bezier Segments Efficiently
 
 When interacting with multiple bezier segments, maintain their control points at the same distance and angle by using the [BezierConnectorSettings.Smoothness](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierConnectorSettings.html#Syncfusion_Blazor_Diagram_BezierConnectorSettings_Smoothness) property of the Connector class.
 
@@ -21,7 +21,7 @@ When interacting with multiple bezier segments, maintain their control points at
 | None | Segment’s control points interact independently from each other. | ![SymmetricNone](../../../../images/SymmetricNone.gif)
 
 
-## How to show or hide the bezier segment's control points
+## How to Show or Hide Bezier Segment's Control Points
 
 By using the [BezierConnectorSettings.ControlPointsVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierConnectorSettings.html#Syncfusion_Blazor_Diagram_BezierConnectorSettings_ControlPointsVisibility) property of the Connector class, you can enable or disable the visibility of the bezier segment's control points.
 

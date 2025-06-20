@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Straight Segment in Blazor Diagram Component | Syncfusion
+title: Straight Segments in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about Straight Segments in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
@@ -9,7 +9,7 @@ documentation: ug
 
 # Straight Segments in Blazor Diagram Component
 
-## How to create straight segment
+## How to Create Straight Segments
 
 To create a straight line, specify the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_Type) of the segment as [Straight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Straight) and add a straight segment to the [Segments](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_Segments) collection and need to specify Type for the connector. The following code example illustrates how to create a default straight segment.
 
@@ -55,7 +55,7 @@ To create a straight line, specify the [Type](https://help.syncfusion.com/cr/bla
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Segments/Straight)
 
-### Straight segment editing
+### Hoe to Edit Straight Segments
 
 * The end point of each straight segment is represented by a thumb that enables editing the segment.
 * Any number of new segments can be inserted into a straight line by clicking when Shift and Ctrl keys are pressed (Ctrl+Shift+Click).
@@ -100,7 +100,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Editing Straight Segment in Blazor Diagram](../../images/blazor-diagram-edit-straight-segment.gif)
 
-## How to customize Straight Segment Thumb Shape 
+## How to Customize Straight Segment Thumb Shape 
 
 The Straight connector can have multiple segments between the source and target points. By default, these segments are rendered as circles, but this can be customized either globally or for individual connectors using the [SegmentThumbSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbSettings.html) class.
 
