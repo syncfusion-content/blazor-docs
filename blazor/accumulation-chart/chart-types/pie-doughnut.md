@@ -304,6 +304,40 @@ The [StartAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 ![Blazor Pie Chart with Color and Text Mapping](../images/pie-dough-nut/blazor-pie-chart-text-mapping.png)
 {% previewsample "https://blazorplayground.syncfusion.com/embed/VNrUCrWqTiZCBNJq?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+## Border radius
+
+The corners of all the slices in the pie/donut chart series can be rounded using the `BorderRadius` property within the [AccumulationChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html).
+
+```cshtml
+@using Syncfusion.Blazor.Charts
+
+<SfAccumulationChart Title="Pie Chart with Border Radius">
+    <AccumulationChartSeriesCollection>
+        <AccumulationChartSeries DataSource="@DonutChartPoints" XName="Food" YName="Amount" InnerRadius="40%" BorderRadius="8">
+        </AccumulationChartSeries>
+    </AccumulationChartSeriesCollection>
+    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
+</SfAccumulationChart>
+
+@code {
+    public List<DonutData> DonutChartPoints { get; set; } = new List<DonutData>
+    {
+        new DonutData { Food = "Milk", Amount = 10, DataLabelMappingName = "Milk: 10%"},
+        new DonutData { Food = "Rice", Amount = 30, DataLabelMappingName = "Rice: 30%"},
+        new DonutData { Food = "Cereals", Amount = 20, DataLabelMappingName = "Cereals: 20%"},
+        new DonutData { Food = "Water", Amount = 15, DataLabelMappingName = "Water: 15%"},
+        new DonutData { Food = "Vegetables", Amount = 25, DataLabelMappingName = "Vegetables: 25%"},
+    };
+    public class DonutData
+    {
+        public string Food { get; set; }
+        public double Amount { get; set; }
+        public string DataLabelMappingName { get; set; }
+    }
+}
+```
+![Blazor Pie Chart with border radius applied.](../images/pie-dough-nut/blazor-pie-chart-border-radius.png)
+
 ## Hide pie or doughnut border
 
 When the mouse hovers over the pie/doughnut chart, the border appears by default. The border can be turned off by setting the [EnableBorderOnMouseMove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfAccumulationChart.html#Syncfusion_Blazor_Charts_SfAccumulationChart_EnableBorderOnMouseMove) property to **false**.
