@@ -24,7 +24,7 @@ This list can include various formatting options such as paragraph and heading l
 {% tabs %}
 {% highlight cshtml %}
 
-{% include_relative code-snippet/smart-suggestion-items.razor %}
+{% include_relative code-snippet/slash-commands-items.razor %}
 
 {% endhighlight %}
 {% endtabs %}
@@ -38,7 +38,7 @@ Below is an code snippet showing how to customize both the width and height of t
 {% tabs %}
 {% highlight cshtml %}
 
-{% include_relative code-snippet/smart-suggestion-popup.razor %}
+{% include_relative code-snippet/slash-commands-popup.razor %}
 
 {% endhighlight %}
 {% endtabs %}
@@ -62,7 +62,7 @@ The following code demonstrates how to set up the Custom Slash Menu item in the 
 {% tabs %}
 {% highlight cshtml %}
 
-{% include_relative code-snippet/smart-suggestion.razor %}
+{% include_relative code-snippet/slash-commands.razor %}
 
 {% endhighlight %}
 {% endtabs %}
