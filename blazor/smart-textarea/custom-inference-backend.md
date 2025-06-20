@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Custom AI Service Integration with Smart Components
-description: Learn how to use IAIInferenceBackend to integrate custom AI services with Syncfusion Smart Components
+title: Custom AI Service Integration with Syncfusion Smart Components
+description: Learn how to use IChatInferenceService to integrate custom AI services with Syncfusion Smart Components
 platform: Blazor
 control: Smart TextArea
 documentation: ug
@@ -11,17 +11,17 @@ documentation: ug
 
 ## Overview
 
-Syncfusion Smart Components provide built-in support for OpenAI and Azure OpenAI services. However, you can also integrate other AI services using the `IAIInferenceBackend` interface, which acts as a bridge between Smart Components and your custom AI service.
+Syncfusion Smart Components provide built-in support for OpenAI and Azure OpenAI services. However, you can also integrate other AI services using the `IChatInferenceService` interface, which acts as a bridge between Smart Components and your custom AI service.
 
 
-## IAIInferenceBackend Interface
+## IChatInferenceService Interface
 
-The `IAIInferenceBackend` interface defines a simple contract for AI service integration:
+The `IChatInferenceService` interface defines a simple contract for AI service integration:
 
 ```csharp
-public interface IAIInferenceBackend
+public interface IChatInferenceService
 {
-    Task<string> GetChatResponseAsync(ChatParameters options);
+    Task<string> GenerateResponseAsync(ChatParameters options);
 }
 ```
 
@@ -32,14 +32,14 @@ This interface enables:
 
 ## Implemented AI Services
 
-Here are examples of AI services integrated using the `IAIInferenceBackend` interface:
+Here are examples of AI services integrated using the `IChatInferenceService` interface:
 
 | Service | Description | Documentation |
 |---------|-------------|---------------|
-| Claude | Anthropic's Claude AI | [Claude Integration](claude-service.md) |
-| DeepSeek | DeepSeek's AI platform | [DeepSeek Integration](deepseek-service.md) |
-| Groq | Groq inference engine | [Groq Integration](groq-service.md) |
-| Gemini | Google's Gemini AI | [Gemini Integration](gemini-service.md) |
+| Claude | Anthropic's Claude AI | [Claude Integration](claude-service) |
+| DeepSeek | DeepSeek's AI | [DeepSeek Integration](deepseek-service) |
+| Groq | Groq AI | [Groq Integration](groq-service) |
+| Gemini | Google's Gemini AI | [Gemini Integration](gemini-service) |
 
 
 ## Service Registration
@@ -48,6 +48,6 @@ Register your custom implementation in `Program.cs`:
 
 ```csharp
 using Syncfusion.Blazor.AI;
-builder.Services.AddSingleton<IAIInferenceBackend, YourCustomService>();
+builder.Services.AddSingleton<IChatInferenceService, YourCustomService>();
 ```
 
