@@ -308,6 +308,7 @@ In the following example, you can using the DrawTextAsync method in the button c
         align-items: center;
         gap: 8px;
         flex-wrap: nowrap;
+        margin-top: 10px;
     }
 
     .icon-text {
