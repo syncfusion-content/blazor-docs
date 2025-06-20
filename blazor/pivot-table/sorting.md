@@ -84,9 +84,9 @@ Usually string sorting is applied to field members even if it starts with number
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView ID="PivotView" TValue="AlphaNumericData" Width="100%" Height="600" ShowGroupingBar="true" ShowFieldList="true" ShowTooltip="false">
-    <PivotViewDataSourceSettings DataSource="@pivotData" ExpandAll="false" AllowMemberFilter="true" EnableSorting=true>
+    <PivotViewDataSourceSettings DataSource="@data" ExpandAll="false" AllowMemberFilter="true" EnableSorting=true>
         <PivotViewColumns>
-            <PivotViewColumn Name="Units"></PivotViewColumn>
+            <PivotViewColumn Name="Business"></PivotViewColumn>
         </PivotViewColumns>
         <PivotViewRows>
             <PivotViewRow Name="Product"></PivotViewRow>
@@ -96,7 +96,7 @@ Usually string sorting is applied to field members even if it starts with number
             <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
         </PivotViewValues>
         <PivotViewFieldMapping>
-            <PivotViewField Name="Units" DataType="number"></PivotViewField>
+            <PivotViewField Name="Business" DataType="number"></PivotViewField>
         </PivotViewFieldMapping>
     </PivotViewDataSourceSettings>
 </SfPivotView>
@@ -106,7 +106,26 @@ Usually string sorting is applied to field members even if it starts with number
     protected override void OnInitialized()
     {
         this.data = AlphaNumericData.GetProductData().ToList();
-        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+    }
+    public class AlphaNumericData
+    {
+        public string Product { get; set; }
+        public string Business { get; set; }
+        public int Sold { get; set; }
+        public int Amount { get; set; }
+
+        public static List<AlphaNumericData> GetProductData()
+        {
+            return new List<AlphaNumericData>
+            {
+                new AlphaNumericData { Product = "Bikes", Business = "1-Bussiness-1", Sold = 435, Amount = 1356 },
+                new AlphaNumericData { Product = "Bikes", Business = "2-Bussiness-9", Sold = 212, Amount = 876530 },
+                new AlphaNumericData { Product = "Bottles", Business = "2-Bussiness-10", Sold = 344, Amount = 1566 },
+                new AlphaNumericData { Product = "Bottles", Business = "3-Bussiness-10", Sold = 6531, Amount = 4366 },
+                new AlphaNumericData { Product = "Helmets", Business = "4-Bussiness-51", Sold = 1231, Amount = 34561 },
+                // Add more data as needed
+            };
+        }
     }
 }
 
@@ -206,7 +225,7 @@ In the following example, sort action can be restricted by setting the **args.Ca
             <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
         </PivotViewFormatSettings>
     </PivotViewDataSourceSettings>    
-   <PivotViewEvents TValue="PivotProductDetails" OnActionBegin="ActionBegin"></PivotViewEvents>
+   <PivotViewEvents TValue="ProductDetails" OnActionBegin="ActionBegin"></PivotViewEvents>
 </SfPivotView>
 
 @code{
@@ -268,7 +287,7 @@ N> This option is applicable only when the field based UI actions are performed 
             <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
         </PivotViewFormatSettings>
     </PivotViewDataSourceSettings>    
-   <PivotViewEvents TValue="PivotProductDetails" OnActionComplete="ActionComplete"></PivotViewEvents>
+   <PivotViewEvents TValue="ProductDetails" OnActionComplete="ActionComplete"></PivotViewEvents>
 </SfPivotView>
 
 @code{
