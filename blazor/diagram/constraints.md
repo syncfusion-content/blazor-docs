@@ -138,6 +138,7 @@ The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 |InheritTooltip|Enables or disables inherit tooltip option from the parent object.|
 |Resize|Enables or Disables the expansion or compression of a node.|
 |Inherit|Enables the node to inherit the interaction option from the parent object.|
+|RoutingObstacle|Enables or disables the node to be treated as obstacle while in routing.|
 |Default|Enables all default constraints for the node.|
 
 The following example shows how to disable rotate constraint from the default node constraints.
