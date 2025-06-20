@@ -3534,7 +3534,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 }
 ```
 ## GanttDialogClosing
-[GanttDialogClosing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_GanttDialogClosing) event is triggered before the dialog closes in the Gantt chart.
+[GanttDialogClosing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_GanttDialogClosing) event is triggered before the add and edit dialogs close in the Gantt chart.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
