@@ -13,11 +13,11 @@ The Slash Menu in the Rich Text Editor provides users with an efficient way to a
 
 ## Enabling the slash menu
 
-To enable the Slash Menu, set the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorSlashMenuSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorSlashMenuSettings_Enable) property within [RichTextEditorSlashMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorSlashMenuSettings.html) to true. By default, this feature is disabled. Once enabled, the Slash Menu will appear when the user types the “/” character in the editor.
+To enable the Slash Menu, set the `Enable` property within [RichTextEditorSlashMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorSlashMenuSettings.html) to true. By default, this feature is disabled. Once enabled, the Slash Menu will appear when the user types the “/” character in the editor.
 
 ## Configure the slash menu items
 
-The SlashMenuSettings property allows customization of the items displayed in the Slash Menu. By defining the [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorSlashMenuSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorSlashMenuSettings_Items) property, a list of available commands can be provided for users to choose from when they type a slash (/) in the Rich Text Editor.
+The SlashMenuSettings property allows customization of the `Items` displayed in the Slash Menu. By defining the [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorSlashMenuSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorSlashMenuSettings_Items) property, a list of available commands can be provided for users to choose from when they type a slash (/) in the Rich Text Editor.
 
 This list can include various formatting options such as paragraph and heading levels. Here’s an code snippet of configuring the Slash Menu items:
 
