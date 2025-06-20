@@ -27,7 +27,7 @@ This list can include various formatting options such as paragraph and heading l
 {% include_relative code-snippet/smart-suggestion-items.razor %}
 
 {% endhighlight %}
-{% tabs %}
+{% endtabs %}
 
 ## Customizing the popup width and height
 
