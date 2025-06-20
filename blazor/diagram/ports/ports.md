@@ -124,7 +124,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### How to connect a connector to a port
 
-Connector ports are used to establish connections between connectors. To create such a connection, set the `SourcePortID` or `TargetPortID` property to the ID of the corresponding port on the connector.
+Connector ports are used to establish connections between node ports, connector ports and nodes. To create such a connection, set the `SourcePortID` or `TargetPortID` property to the ID of the corresponding port on the connector.
 
 The following code example demonstrates how to connect one connector to a port on another connector.
 
