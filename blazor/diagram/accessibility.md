@@ -37,7 +37,7 @@ The accessibility compliance for the Blazor diagram component is outlined below:
 
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
 
-## WAI-ARIA Attributes
+## How to Use WAI-ARIA Attributes
 
 The Blazor Diagram component followed the WAI-ARIA patterns to meet the accessibility. The following ARIA attributes are used in the Blazor Diagram component:
 
@@ -45,7 +45,7 @@ The Blazor Diagram component followed the WAI-ARIA patterns to meet the accessib
 | --- | --- |
 | `aria-label` | Provides an accessible name for the Diagram Objects. |
 
-### Aria-label
+### How to Use Aria-label Attributes
 The aria-label attribute provides the text label with some default description for below elements in diagram.
 
 <!-- markdownlint-disable MD033 -->
@@ -100,7 +100,7 @@ The aria-label attribute provides the text label with some default description f
 </tr>
 </table>
 
-## Keyboard Navigation
+## How to Navigate Blazor Diagrams using Keyboard Shortcuts
 
 The Blazor Diagram component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Diagram component.
 
@@ -157,7 +157,7 @@ The Blazor Diagram component followed the [keyboard interaction](https://www.w3.
 
 N> You can download a complete working sample for keyboard navigation from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Accessibility/KeyBoardNavigation)
 
-## Ensuring Accessibility
+## How to Ensure Accessibility
 
 The Blazor diagram component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
 

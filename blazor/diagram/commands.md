@@ -1106,7 +1106,7 @@ The corresponding arrow keys are used to move the selected elements towards the 
 
 Nudge commands are particularly useful for accurate placement of elements.
 
-## How to Use Undo and Redo Commands
+## How to Enable Undo and Redo Functionality
 
 The [Undo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Undo) and [Redo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Redo) commands provide powerful functionality for managing changes in your diagram:
 

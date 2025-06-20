@@ -11,7 +11,7 @@ documentation: ug
 
 Diagram provides the support to the annotations rotation interactively.
 
-## How to Control Annotation Rotation
+## How to Rotate Annotations
 The [RotationReference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeAnnotation.html#Syncfusion_Blazor_Diagram_ShapeAnnotation_RotationReference) property of an annotation allows you to control whether the text should rotate relative to its parent node or the Page. The following code examples illustrate how to configure RotationReference for an annotation.
 
 
