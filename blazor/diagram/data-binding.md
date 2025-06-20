@@ -28,7 +28,7 @@ documentation: ug
     1. Local data
     2. Remote data
 
-## How to specify parent child relationship in Datasource
+## How to Define Parent-Child Relationships in DataSource
 
 The [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_ID) and [ParentID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_ParentID) types are string in DataSourceSettings. When creating a parent-child relationship, it's essential to ensure that at least one node has an empty ParentID. This node will act as the root or parent node, with other nodes linked as its children. For example, let's consider the data source settings. Within the DataSource, we have defined three specific details. The DataModel class has attributes such as ID, ParentID, and various other details. In this scenario, the initial dataset does not have a parent ID, which means we have set it as empty. This node acts as the parent or root node of the layout. Subsequent datasets, however, do contain a ParentID. Below is a code example illustrating this:
 
@@ -88,7 +88,7 @@ The [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSou
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/Parent-Child%20Relationship)
 
-## How to bind local data with diagram
+## How to Bind Local Data to the Diagram
 
 Diagram can be populated based on the user defined JSON data (Local Data) by mapping the relevant data source fields.
 
@@ -197,7 +197,7 @@ To map the user defined JSON data with diagram, configure the fields of `DataSou
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/LocalData)
 
-## How to bind expandoObject data with diagram
+## How to Bind ExpandoObject Data to the Diagram
 
 Diagram is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile time. In such circumstances data can be bound to the Diagram as a list of **ExpandoObjects**. 
 Diagram can also perform all kind of supported Layout operations in ExpandoObjects such as,
@@ -383,7 +383,7 @@ The following code example illustrates how to bind ExpandoObject data with the d
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/ExpandoObject)
 
-##  How to bind dynamicObject data with diagram
+##  How to Bind DynamicObject Data to the Diagram
 
 Diagram is a generic component that is strongly bound to a model type. There are cases when the model type is unknown during compile time. In such circumstances data can be bound to the Diagram as a list of **DynamicObject**.
 Diagram can also perform all kind of supported Layout operations in DynamicObject such as,
@@ -585,7 +585,7 @@ The following code example illustrates how to bind DynamicObject data with the d
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/DynamicObj)
 
-## How to bind json data with diagram
+## How to Bind JSON Data to the Diagram
 
 Local JSON data can be bound to the Diagram component by assigning the array of objects to the Json property of the SfDataManager component.
 
@@ -654,13 +654,13 @@ The following sample code demonstrates binding local data through the SfDataMana
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/JSONData)
 
-## How to bind remote data with diagram
+## How to Bind Remote Data to the Diagram
 
 To bind remote data to [Diagram component](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html), assign service data as an instance of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_DataSource) property or use the SfDataManager component. To interact with a remote data source, provide the endpoint Url.
 
 When using SfDataManager for data binding, the TValue must be provided explicitly in the diagram component. By default, SfDataManager uses ODataAdaptor for remote data-binding.
 
-### Binding with OData services
+### How to Bind OData Services to the Diagram
 
 OData (Open Data Protocol) is a standardized protocol for building and consuming RESTful APIs. It enables the creation and consumption of queryable and interoperable REST APIs in a simple and standard way. OData services expose data as resources that are addressable by URLs and can be queried using standard HTTP methods (GET, POST, PUT, DELETE). For more details on OData services, refer to the [OData documentation](https://www.odata.org/documentation/odata-version-3-0/odata-version-3-0-core-protocol/). To bind an OData service, use the ODataAdaptor.
 
@@ -749,7 +749,7 @@ OData (Open Data Protocol) is a standardized protocol for building and consuming
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/RemoteData/ODataAdaptor)
 
-### Binding with OData v4 services
+### How to Bind OData V4 Services to the Diagram
 
 The ODataV4 is an improved version of OData protocols, and the SfDataManager can also retrieve and consume OData v4 services. For more details on OData v4 services, refer to the [OData documentation](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197). To bind an OData v4 service, use the ODataV4Adaptor.
 
@@ -838,7 +838,7 @@ The ODataV4 is an improved version of OData protocols, and the SfDataManager can
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/RemoteData/ODataV4Adaptor)
 
-### Binding with WebAPI services
+### How to Bind Web API Services to the Diagram
 
 You can use the `WebApiAdaptor` to interact with Web APIs created with OData endpoints. The `WebApiAdaptor` is extended from the `ODataAdaptor`. Therefore, to use the `WebApiAdaptor`, the endpoint must understand the OData formatted queries sent with the request.
 
@@ -931,7 +931,7 @@ The following sample code demonstrates hoe to bind remote data to the Diagram co
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/RemoteData/WebAPIAdaptor)
 
-### Binding with URL services
+### How to Bind URL Services to the Diagram
 A URL service is a web service accessible via a Uniform Resource Locator (URL). These services provide specific functionalities or data when a client sends an HTTP request to the given URL. URL services are a foundational aspect of web-based APIs (Application Programming Interfaces) and RESTful services. The [UrlAdaptor](../data/adaptors#url-adaptor) serves as the base adaptor for interacting with remote data services. Most built-in adaptors are derived from the `UrlAdaptor`.
 
 The following sample code demonstrates how to bind data to the Diagram component through the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) using the `UrlAdaptor`,
@@ -1021,7 +1021,7 @@ The following sample code demonstrates how to bind data to the Diagram component
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/RemoteData/URLAdaptor)
 
-### How to bind custom data
+### How to Bind Custom Data
 The custom data binding can be performed in the diagram component by providing a custom adaptor class and overriding the Read or ReadAsync method of the DataAdaptor abstract class.
 
 The following sample code demonstrates implementing custom data binding using custom adaptor,
@@ -1141,7 +1141,7 @@ The following sample code demonstrates implementing custom data binding using cu
 }
 ```
 
-### CRUD operation
+### How to Perform CRUD Operations with Custom Data
 
 The CRUD operations for the custom bounded data in the diagram component can be implemented by overriding the following CRUD methods of the **DataAdaptor** abstract class,
 
@@ -1350,7 +1350,7 @@ The following sample code demonstrates implementing CRUD operations for the cust
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/DiagramWithCustomAdaptor)
 
-### Binding with GraphQL service
+### How to Bind GraphQL Service to the Diagram
 GraphQL is a query language for APIs that allows you to can get exactly what you need and nothing more. The GraphQLAdaptor provides an option to retrieve data from a GraphQL server. For more details on GraphQL service, refer to the [GraphQL documentation](../data/adaptors#graphql-service-binding).
 
 ```cshtml
@@ -1446,7 +1446,7 @@ GraphQL is a query language for APIs that allows you to can get exactly what you
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/GraphQLAdaptor)
 
-### Performing CRUD operation using mutation
+### How to Perform CRUD Operations Using Mutations
 
 You can perform CRUD operations by setting the mutation queries in the [Mutation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html#Syncfusion_Blazor_Data_GraphQLAdaptorOptions_Mutation) property of [GraphQLAdaptorOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.GraphQLAdaptorOptions.html).
 
@@ -1715,7 +1715,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 You need to follow the below steps to consume data from the **Entity Framework** in the diagram component.
 
-### Create DBContext class
+### How to Create DBContext Class
 
 The first step is to create a DBContext class called **DataBaseContext** to connect to a Microsoft SQL Server database.
 
@@ -1752,7 +1752,7 @@ namespace DiagramWithRemoteData.Data
 }
 ```
 
-### Creating Web API Controller
+### How to Create Web API Controller
 
  A Web API Controller has to be created which allows direct consumption of data from the Entity Framework.
 
@@ -1860,7 +1860,7 @@ namespace DiagramWithRemoteData.Controllers
 
 ```
 
-### Configure diagram component using Web API adaptor
+### How to Configure Diagram Component Using Web API Adaptor
 
 Now, you can configure the diagram using the **'SfDataManager'** to interact with the created Web API and consume the data appropriately. To interact with the web api, you need to use WebApiAdaptor.
 
@@ -1931,10 +1931,10 @@ Now, you can configure the diagram using the **'SfDataManager'** to interact wit
 }
 ```
 
-### CRUD
+### How to Perform CRUD Operations
 The SfDiagramComponent supports CRUD (Create, Read, Update, Delete) operations using SfDataManager for remote data management. By making API calls to update data, the diagram automatically re-renders, ensuring real-time synchronization between the front-end diagram and the back-end. This allows users to manage and manipulate diagram data from remote databases or APIs using methods like ReadData, UpdateData, InsertData, and DeleteData.
 
-### Read DataSource
+### How to Read Data Source
 The SfDiagramComponent can fetch and display data from remote sources using the ReadDataAsync method. This method retrieves data from the server, which is then visualized as nodes and connectors in the diagram. This method is invoked when the user wants to load the raw data from the server.
 ```csharp
     //To fetch data from the remote service
@@ -1944,7 +1944,7 @@ The SfDiagramComponent can fetch and display data from remote sources using the 
     }
 ```
 
-### Updating Existing Data
+### How to Update Existing Data
 The UpdateDataAsync method updates the data on the remote server through an API call. Once the data is updated, the diagram automatically refreshes and displays the latest data from the server.
 ```csharp
     //To update data in the remote service
@@ -1962,7 +1962,7 @@ The UpdateDataAsync method updates the data on the remote server through an API 
     }
 ```
 
-### Inserting New Data
+### How to Insert New Data
 The InsertDataAsync method adds new data to the remote server via an API. Once the data is inserted, the diagram updates itself to include the new nodes and connectors.
 ```csharp
    //To push data to the remote service
@@ -1980,7 +1980,7 @@ The InsertDataAsync method adds new data to the remote server via an API. Once t
     }
 ```
 
-### Deleting Data
+### How to Delete Data
 The DeleteDataAsync method removes data from the remote server. Once the data is deleted, the diagram refreshes itself to reflect the removal of nodes and connectors.
 ```csharp
     //To delete data in the remote service
