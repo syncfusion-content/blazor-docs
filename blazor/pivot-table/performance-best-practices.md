@@ -119,8 +119,8 @@ It obviously impacts the overall performance during pivot table rendering becaus
 </SfPivotView>
 
 @code{
-    private List<GroupData> data { get; set; } 
-    
+    private List<GroupData> data { get; set; }
+
     protected override void OnInitialized()
     {
         data = GroupData.GetGroupData();
@@ -190,6 +190,7 @@ It obviously impacts the overall performance during pivot table rendering becaus
                 PowUnits = 263,
                 ProCost = 125
             });
+            return groupData;
         }
     }
 }
@@ -303,6 +304,7 @@ Here's an example below of configuring grouping in your input raw data and assig
                 PowUnits = 263,
                 ProCost = 125
             });
+            return groupData;
         }
     }
 }

@@ -72,7 +72,7 @@ You can save the current layout of the pivot table by using [GetPersistDataAsync
         </PivotViewRows>
         <PivotViewValues>
             <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
-            <PivotViewValue Name="Amount" Caption="@caption"></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
         </PivotViewValues>
         <PivotViewFormatSettings>
             <PivotViewFormatSetting Name="Amount" Format="C0" UseGrouping=true></PivotViewFormatSetting>

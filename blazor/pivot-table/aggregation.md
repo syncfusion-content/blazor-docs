@@ -148,7 +148,7 @@ By default, in value axis each field would be displayed by its name and aggregat
 ```cshtml
 @using Syncfusion.Blazor.PivotView
 
-<SfPivotView TValue="ProductDetails">
+<SfPivotView TValue="ProductDetails" ShowGroupingBar="true" ShowFieldList="true">
      <PivotViewDataSourceSettings DataSource="@data" ShowAggregationOnValueField="false">
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
@@ -217,7 +217,7 @@ N> Icon to change the aggregation type can be hidden only in Grouping Bar but no
     public List<ProductDetails> data { get; set; }
     protected override void OnInitialized()
     {
-        this.data = ProductDetails.GetDefaultData().ToList();
+        this.data = ProductDetails.GetProductData().ToList();
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
 }
@@ -264,7 +264,7 @@ In the following example, action taken during aggregation type selection via dro
             <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
         </PivotViewFormatSettings>
     </PivotViewDataSourceSettings>
-   <PivotViewEvents TValue="PivotProductDetails" OnActionBegin="ActionBegin"></PivotViewEvents>
+   <PivotViewEvents TValue="ProductDetails" OnActionBegin="ActionBegin"></PivotViewEvents>
 </SfPivotView>
 
 @code{
@@ -300,8 +300,8 @@ N> This option is applicable only when the field based UI actions are performed 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
 
-<SfPivotView TValue="ProductDetails">
-     <PivotViewDataSourceSettings DataSource="@data" ShowFieldList="true" ShowGroupingBar="true">
+<SfPivotView TValue="ProductDetails" ShowFieldList="true" ShowGroupingBar="true">
+     <PivotViewDataSourceSettings DataSource="@data">
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
             <PivotViewColumn Name="Quarter"></PivotViewColumn>
@@ -348,8 +348,8 @@ The event [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 ```cshtml
 @using Syncfusion.Blazor.PivotView
 
-<SfPivotView TValue="ProductDetails" AllowExcelExport="true" AllowPdfExport="true" Width="100%"  ShowToolbar="true" Toolbar="@toolbar" ShowGroupingBar="true" AllowCalculatedField="true"  AllowDrillThrough="true" AllowConditionalFormatting="true" AllowNumberFormatting="true" ShowFieldList="true" Height="350">
-     <PivotViewDataSourceSettings DataSource="@data" ShowFieldList="true" ShowGroupingBar="true">
+<SfPivotView TValue="ProductDetails" AllowExcelExport="true" AllowPdfExport="true" Width="100%" ShowToolbar="true" Toolbar="@toolbar" ShowGroupingBar="true" AllowCalculatedField="true"  AllowDrillThrough="true" AllowConditionalFormatting="true" AllowNumberFormatting="true" ShowFieldList="true" Height="350">
+     <PivotViewDataSourceSettings DataSource="@data">
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
             <PivotViewColumn Name="Quarter"></PivotViewColumn>
@@ -366,7 +366,7 @@ The event [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
             <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
         </PivotViewFormatSettings>
     </PivotViewDataSourceSettings>
-   <PivotViewEvents TValue="PivotProductDetails" OnActionFailure="ActionFailure"></PivotViewEvents>
+   <PivotViewEvents TValue="ProductDetails" OnActionFailure="ActionFailure"></PivotViewEvents>
 </SfPivotView>
 
 @code{

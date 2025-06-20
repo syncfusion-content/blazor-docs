@@ -45,7 +45,7 @@ The pivot table has an option to show hyperlink option for all cells that are cu
             <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
         </PivotViewValues>
             <PivotViewFormatSettings>
-            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+            <PivotViewFormatSetting Name="Amount" Format="C0"></PivotViewFormatSetting>
         </PivotViewFormatSettings>
     </PivotViewDataSourceSettings>
     <PivotViewHyperlinkSettings ShowHyperlink="true" CssClass="e-custom-class">
@@ -94,7 +94,7 @@ The pivot table has an option to show hyperlink option for row header cells alon
             <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
         </PivotViewValues>
             <PivotViewFormatSettings>
-            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+            <PivotViewFormatSetting Name="Amount" Format="C0"></PivotViewFormatSetting>
         </PivotViewFormatSettings>
     </PivotViewDataSourceSettings>
     <PivotViewHyperlinkSettings ShowRowHeaderHyperlink="true" CssClass="e-custom-class">
@@ -143,7 +143,7 @@ The pivot table has an option to show hyperlink option for column header cells a
             <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
         </PivotViewValues>
         <PivotViewFormatSettings>
-            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+            <PivotViewFormatSetting Name="Amount" Format="C0"></PivotViewFormatSetting>
         </PivotViewFormatSettings>
     </PivotViewDataSourceSettings>
         <PivotViewHyperlinkSettings ShowColumnHeaderHyperlink="true" CssClass="e-custom-class">
@@ -192,7 +192,7 @@ The pivot table has an option to show hyperlink option for value cells alone tha
             <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
         </PivotViewValues>
             <PivotViewFormatSettings>
-            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+            <PivotViewFormatSetting Name="Amount" Format="C0"></PivotViewFormatSetting>
         </PivotViewFormatSettings>
     </PivotViewDataSourceSettings>
         <PivotViewHyperlinkSettings ShowValueCellHyperlink="true" CssClass="e-custom-class">
@@ -209,10 +209,10 @@ The pivot table has an option to show hyperlink option for value cells alone tha
 }
 </style>
 @code{
-    public List<PivotViewData.DefaultData> data { get; set; }
+    public List<ProductDetails> data { get; set; }
     protected override void OnInitialized()
     {
-        this.data = PivotViewData.GetDefaultData().ToList();
+        this.data = ProductDetails.GetProductData().ToList();
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
 }
@@ -241,7 +241,7 @@ The pivot table has an option to show hyperlink option for summary cells alone t
             <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
         </PivotViewValues>
             <PivotViewFormatSettings>
-            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+            <PivotViewFormatSetting Name="Amount" Format="C0"></PivotViewFormatSetting>
         </PivotViewFormatSettings>
     </PivotViewDataSourceSettings>
         <PivotViewHyperlinkSettings ShowSummaryCellHyperlink="true" CssClass="e-custom-class">
@@ -258,10 +258,10 @@ The pivot table has an option to show hyperlink option for summary cells alone t
 }
 </style>
 @code{
-    public List<PivotViewData.DefaultData> data { get; set; }
+    public List<ProductDetails> data { get; set; }
     protected override void OnInitialized()
     {
-        this.data = PivotViewData.GetDefaultData().ToList();
+        this.data = ProductDetails.GetProductData().ToList();
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
 }
@@ -296,7 +296,7 @@ The pivot table has an option to show hyperlink in the cells based on specific c
             <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
         </PivotViewValues>
             <PivotViewFormatSettings>
-            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+            <PivotViewFormatSetting Name="Amount" Format="C0"></PivotViewFormatSetting>
         </PivotViewFormatSettings>
     </PivotViewDataSourceSettings>
     <PivotViewHyperlinkSettings CssClass="e-custom-class">
@@ -316,12 +316,12 @@ The pivot table has an option to show hyperlink in the cells based on specific c
 }
 </style>
 @code{
-    public List<PivotViewData.DefaultData> data { get; set; }
-    protected override void OnInitialized()
-    {
-        this.data = PivotViewData.GetDefaultData().ToList();
-        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-    }
+	public List<ProductDetails> data { get; set; }
+	protected override void OnInitialized()
+	{
+		this.data = ProductDetails.GetProductData().ToList();
+		//Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+	}
 }
 ```
 
@@ -348,7 +348,7 @@ The pivot table has an option to show hyperlink in the cells based on specific r
             <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
         </PivotViewValues>
             <PivotViewFormatSettings>
-            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+            <PivotViewFormatSetting Name="Amount" Format="C0"></PivotViewFormatSetting>
         </PivotViewFormatSettings>
     </PivotViewDataSourceSettings>
     <PivotViewHyperlinkSettings HeaderText="FY 2015" CssClass="e-custom-class"></PivotViewHyperlinkSettings>
@@ -365,10 +365,10 @@ The pivot table has an option to show hyperlink in the cells based on specific r
 </style>
 
 @code{
-    public List<PivotViewData.DefaultData> data { get; set; }
+    public List<ProductDetails> data { get; set; }
     protected override void OnInitialized()
     {
-        this.data = PivotViewData.GetDefaultData().ToList();
+        this.data = ProductDetails.GetProductData().ToList();
         //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
 }

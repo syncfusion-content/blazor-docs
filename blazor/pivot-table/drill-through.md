@@ -54,23 +54,23 @@ Users can also view the underlying raw data though the pivot chart. By clicking 
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView TValue="ProductDetails" Width="800" Height="500" AllowDrillThrough="true">
-     <PivotViewDataSourceSettings DataSource="@data">
-        <PivotViewColumns>
-            <PivotViewColumn Name="Country"></PivotViewColumn>
-            <PivotViewColumn Name="Products"></PivotViewColumn>
-        </PivotViewColumns>
-        <PivotViewRows>
-            <PivotViewRow Name="Year"></PivotViewRow>
-            <PivotViewRow Name="Quarter"></PivotViewRow>
-        </PivotViewRows>
-        <PivotViewValues>
+    <PivotViewDataSourceSettings DataSource="@data">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
             <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
-            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-        </PivotViewValues>
-        <PivotViewFormatSettings>
-            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
-        </PivotViewFormatSettings>
-    </PivotViewDataSourceSettings>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
     <PivotViewDisplayOption View=View.Chart></PivotViewDisplayOption>
     <PivotChartSettings Title="Sales Analysis">
         <PivotChartSeries Type=ChartSeriesType.Column></PivotChartSeries>
@@ -103,8 +103,8 @@ The [MaxRowsInDrillThrough](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 @using Syncfusion.Blazor.PivotView
 
-<SfPivotView Width="800" Height="350" AllowDrillThrough="true" MaxRowsInDrillThrough="10">
-    <PivotViewDataSourceSettings ProviderType="ProviderType.SSAS" Catalog="Adventure Works DW 2008 SE" Cube="Adventure Works" Url="https://bi.syncfusion.com/olap/msmdpump.dll" LocaleIdentifier="1033" EnableSorting="true">
+<SfPivotView Width="800" TValue="ProductDetails" Height="350" AllowDrillThrough="true" MaxRowsInDrillThrough="10">
+    <PivotViewDataSourceSettings TValue="ProductDetails" ProviderType="ProviderType.SSAS" Catalog="Adventure Works DW 2008 SE" Cube="Adventure Works" Url="https://bi.syncfusion.com/olap/msmdpump.dll" LocaleIdentifier="1033" EnableSorting="true">
         <PivotViewColumns>
             <PivotViewColumn Name="[Product].[Product Categories]" Caption="Product Category"></PivotViewColumn>
             <PivotViewColumn Name="[Measures]" Caption="Measure"></PivotViewColumn>
@@ -124,6 +124,17 @@ The [MaxRowsInDrillThrough](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
         min-height: 200px;
     }
 </style>
+@code {
+    public class ProductDetails
+    {
+        public int Sold { get; set; }
+        public double Amount { get; set; }
+        public string Country { get; set; }
+        public string Products { get; set; }
+        public string Year { get; set; }
+        public string Quarter { get; set; }
+    }
+}
 
 ```
 
