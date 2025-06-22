@@ -13,9 +13,12 @@ This section explains how to create and run the first Microsoft Teams applicatio
 
 ## Prerequisites
 
-* Visual Studio 2022 [>= 17.3 version] with the required work loads (Visula studio Installer -> Workloads -> ASP.NET and web development -> Select Microsoft Teams development tools from option check list).
+* Visual Studio 2022 [> 17.13 version] with the required work loads (Visual studio Installer -> Workloads -> ASP.NET and web development -> Select Microsoft Teams development tools from option check list).
 
-* Microsoft Team Application - Enable side loading for testing the application.
+
+    ![workload installation](images/MSTeams/workload-installation.png)
+
+* Microsoft Teams Application
 
 * Microsoft Edge or Google Chrome browser with developer tools.
 
@@ -23,20 +26,25 @@ This section explains how to create and run the first Microsoft Teams applicatio
 
 1. Launch Visual Studio 2022, and in the start window click **Create a new project**.
 2. Search for Microsoft Teams app in Visual Studio template. Select **Microsoft teams App** and click on Next.
-![Create Microsoft Teams App](images\MSTeams\create-msteams-app.png)
+
+    ![Create Microsoft Teams App](images/MSTeams/create-msteams-app.png)
 3. Configure the project with required project name, select the location to save the application and click on Create.
-![Configure Microsoft Teams App](images\MSTeams\configure-msteams-app.png)
+
+    ![Configure Microsoft Teams App](images/MSTeams/configure-msteams-app.png)
 4. Select the type of Microsoft teams application to create. In this example, **Microsoft application with Tab** is selected.
-![Select type of Microsoft Teams Application](images\MSTeams\select-type-msteams-app.png)
+![Select type of Microsoft Teams Application](images/MSTeams/select-type-msteams-app.png)
 5. Wait for the project to be created, and its dependencies to be restored, then the project structure looks like below.
-![Microsoft Teams project structure](images\MSTeams\msteams-project-structure.png)
+
+    ![Microsoft Teams project structure](images/MSTeams/msteams-project-structure.png)
 
 ## Build and run the first Microsoft Team Application
 
-1. To configure the project with the Microsoft teams application, right Click on the Project Teams Toolkit Prepare Teams App Dependencies.
-![Configure dependecies with MS Teams Application](images\MSTeams\configure-teams-dependencies.png)
+1. To configure the project with the Microsoft teams application, right Click on the M365 Agent Project and Select Microsoft M365 Account.
+
+    ![Configure dependecies with MS Teams Application](images/MSTeams/configure-teams-dependencies.png)
 2. After configuring successfully, it dsipalys the window with Microsoft 365 Account. If you already have an account Select the available Office 365 account and click on continue. If you dont have account, create a new account and add the newly created account and click on continue.
-![Select the MS365 account to SignIn](images\MSTeams\ms365-account-select.png)
+
+    ![Select the MS365 account to SignIn](images\MSTeams\ms365-account-select.png)
 3. After successful login. Click on Debug -> Start Debugging or click on F5 to run the application.
 4. Once the application is build successfully, prompts the output window with create MyTeamsApp application. Click on Add in the created application
 ![Newly created teams application](images\MSTeams\new-teams-app.png)
@@ -60,12 +68,12 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 ## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
 
-Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` and `Syncfusion.Blazor.Kanban` namespace.
+Open **~/_Imports.razor** file and import the `Syncfusion.Blazor.Buttons` and `Syncfusion.Blazor.Kanban` namespace.
 
 ```cshtml
 
-@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Kanban
+@using Syncfusion.Blazor.Buttons
 
 ```
 
@@ -80,7 +88,8 @@ using Syncfusion.Blazor;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor();
+builder.Services.AddRazorComponents()
+    .AddInteractiveServerComponents();
 
 var config = builder.Configuration.Get<ConfigOptions>();
 builder.Services.AddTeamsFx(config.TeamsFx.Authentication);
@@ -89,7 +98,11 @@ builder.Services.AddScoped<MicrosoftTeams>();
 builder.Services.AddControllers();
 builder.Services.AddHttpClient("WebClient", client => client.Timeout = TimeSpan.FromSeconds(600));
 builder.Services.AddHttpContextAccessor();
+builder.Services.AddAntiforgery(o => o.SuppressXFrameOptionsHeader = true);
+
+builder.Services.AddSingleton<LibraryConfiguration>();
 builder.Services.AddSyncfusionBlazor();
+
 var app = builder.Build();
 ....
 
@@ -100,7 +113,7 @@ var app = builder.Build();
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows:
 
-* For **.NET 6** Microsoft teams app, include it in the **~/Pages/_Host.cshtml** file.
+* For **.NET 8 and .NET 9** Microsoft teams app, include it in the **~/Components/Pages/App.razor** file.
 
 ```html
 <head>
@@ -113,10 +126,10 @@ N> Check out the [Blazor Themes](https://blazor.syncfusion.com/documentation/app
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor component
 
-Now, add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Kanban component in the `Tab.razor` page under the `~/Pages` folder.
+Now, add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Kanban component in the `Tab.razor` page under the `~/Components/Pages/Tab.razor` folder.
 
 {% tabs %}
-{% highlight razor tabtitle="~/Tab.razor" %}
+{% highlight razor tabtitle="~/Components/Pages/Tab.razor" %}
 
 @using System.Collections.ObjectModel;
 @using System.ComponentModel;
