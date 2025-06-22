@@ -9,11 +9,11 @@ documentation: ug
 
 # Converting Blazor application to Syncfusion® Blazor application
 
-Syncfusion® Blazor conversion is a Visual Studio add-in that converts an existing Blazor application to the Syncfusion® Blazor application by adding the required assemblies and theme files.
+The Syncfusion® Blazor conversion is a Visual Studio add-in that transforms an existing Blazor application into a Syncfusion® Blazor application by adding the necessary assemblies and theme files.
 
-The steps below help you to convert the **Blazor application** to the **Syncfusion Blazor application** via the **Visual Studio 2022**:
+The steps below help you to convert the **Blazor application** to the **Syncfusion® Blazor application** via the **Visual Studio 2022**:
 
-N> Before use the Syncfusion® Blazor Project Conversion, check whether the Syncfusion Blazor Template Studio Extension installed or not in Visual Studio Extension Manager by clicking on the Extensions -> Manage Extensions -> Installed. If this extension not installed, install the extension by follow the steps from the [download and installation](download-and-installation) help topic.
+N> Before use the Syncfusion® Blazor Project Conversion, check whether the Syncfusion® Blazor Template Studio Extension installed or not in Visual Studio Extension Manager by clicking on the Extensions -> Manage Extensions -> Installed. If this extension not installed, install the extension by follow the steps from the [download and installation](download-and-installation) help topic.
 
 1. Open your existing Blazor application or create a new Blazor application in Visual Studio 2022.
 
@@ -21,13 +21,13 @@ N> Before use the Syncfusion® Blazor Project Conversion, check whether the Sync
 
     **Option 1:**
 
-    Choose **Extensions -> Syncfusion -> Essential Studio® for Blazor -> Convert Project...** in the Visual Studio menu.
+    Choose **Extensions -> Syncfusion® -> Essential Studio® for Blazor -> Convert Project...** in the Visual Studio menu.
 
     ![ConversionMenu](images/ConversionMenu.png)
 
     **Option 2:**
 
-    Right-click the application from the **Solution Explorer** and select the **Syncfusion Blazor** and choose the **Convert to Syncfusion Blazor application...**
+    Right-click the application from the **Solution Explorer** and select the **Syncfusion® Blazor** and choose the **Convert to Syncfusion® Blazor application...**
 
     ![ConversionAddin](images/ConversionAddin.png)
 
@@ -35,7 +35,7 @@ N> Before use the Syncfusion® Blazor Project Conversion, check whether the Sync
 
     ![ConversionWizard](images/Conversion.png)
 
-    N> The versions are loaded from the Syncfusion Blazor NuGet packages published in [`NuGet.org`](https://www.nuget.org/packages?q=Tags%3A%22blazor%22syncfusion) and it requires internet connectivity.
+    N> The versions are loaded from the Syncfusion® Blazor NuGet packages published in [`NuGet.org`](https://www.nuget.org/packages?q=Tags%3A%22blazor%22syncfusion) and it requires internet connectivity.
 
 4. Check the **“Enable a backup before converting”** checkbox if you want to take the project backup and choose the location.
 
@@ -47,6 +47,6 @@ N> Before use the Syncfusion® Blazor Project Conversion, check whether the Sync
 
     ![ConversionBackupLocation](images/Backuplocation.png)
 
-6. Selected Blazor application is converted to Syncfusion® Blazor application by installed Syncfusion Blazor NuGet packages with selected version, and added selected style in corresponding layout file.
+6. The selected Blazor application is converted into a Syncfusion® Blazor application by installing the appropriate Syncfusion Blazor NuGet packages with the selected version and adding the chosen styles to the corresponding layout file.
 
 7. If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion® license key to your application since Syncfusion® introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio® release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion® license key to your application. Refer to this [blog](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2) post for understanding the licensing changes introduced in Essential Studio®.
