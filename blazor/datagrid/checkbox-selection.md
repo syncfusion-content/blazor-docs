@@ -371,7 +371,6 @@ The Persist Selection feature in the Syncfusion Blazor DataGrid ensures that sel
 
 The following example demonstrates how to persist checkbox selections when the Grid is bound to remote data using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) and `ODataV4Adaptor`:
 
-
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 

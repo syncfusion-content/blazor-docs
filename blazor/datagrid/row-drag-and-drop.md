@@ -204,15 +204,11 @@ Here’s an example code snippet that demonstrates how to enable Row drag and dr
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BjBfWirtinCYhFlS?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Drag and drop to DataGrid in empty area
+## Drag and drop in empty area
 
-The Syncfusion Blazor DataGrid supports row drag and drop functionality, allowing you to move rows between different Grids using mouse or touch interactions. Rows can be dropped either over existing data rows or into empty areas of the target Grid.
-
-This feature improves the user experience by making the Grid more interactive and intuitive, especially for workflows involving data reordering or categorization between Grids.
-
-This functionality is enabled using the `AllowEmptyAreaDrop` property, which is enabled by default. To configure drag and drop, you also need to set the [TargetID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridRowDropSettings.html#Syncfusion_Blazor_Grids_GridRowDropSettings_TargetID) property of the [RowDropSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridRowDropSettings.html) and enable the [AllowRowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowRowDragAndDrop) property by setting it to **true** in the Grid configuration.
-
-Here’s an example code snippet that demonstrates how to enable row drag and drop to another Grid, including dropping into empty space:
+The Syncfusion Blazor DataGrid supports drag and drop functionality, allowing rows to be dropped both within and outside of the DataGrid. By default, the `AllowEmptyAreaDrop` property is enabled, enhancing the user experience by allowing rows to be dropped anywhere within the DataGrid content. Whenever rows are dropped in an empty area, they are placed at the end of the DataGrid.
+ 
+If you prefer to show the drop indicator only when hovering over rows, you can disable the `AllowEmptyAreaDrop` property to achieve this.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

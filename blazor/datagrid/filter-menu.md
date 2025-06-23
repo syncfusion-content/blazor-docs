@@ -755,13 +755,10 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXrftBDxzDMOqgsi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Customize the default filter menu dialog
+## How to customize filter input editor
 
-The Syncfusion Blazor DataGrid allows you to customize the default filter menu dialog by modifying the filter editor components on a per-column basis. This enables you to tailor the filter UI and behavior to better suit specific data types and user requirements, improving usability and filtering precision.
-
-You can achieve this customization by setting the `FilterEditorSettings` property on each GridColumn, which allows you to define the filter component type and configure its behavior.
-
-In the following example, different columns in the Grid are configured with custom filtering components:
+The Syncfusion Blazor DataGrid allows you to customize the built-in filter dialog editor components. You can achieve this customization by setting the FilterEditorSettings property on GridColumn.
+In the following example, we have customized the following component configurations:
 
 | Column         | Filter Component                                                                 | Customization                                         |
 | -------------- | ------------------------------------------------------------------------------- | ----------------------------------------------------- |
@@ -872,6 +869,8 @@ public class Orders
 
 {% endhighlight %}
 {% endtabs %}
+
+> This customization is applicable for both menu and excel filter dialogs.
 
 ### Prevent autofill option in autocomplete of menu filter
 
