@@ -406,13 +406,13 @@ The following code example explains how to add nodes to lane.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Lane/LaneChildren).
 
-## How to Set the Orientation of a Phase
-  The Orientation property in the Symbol Palette allows you to define whether a lane is displayed horizontally or vertically. This property is particularly relevant when the lane is part of a SymbolPalette.
+## How to Set the Orientation of a Lane
+
+  The [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Lane.html#Syncfusion_Blazor_Diagram_Lane_Orientation) property in the Symbol Palette allows you to define whether a lane is displayed horizontally or vertically. This property is particularly relevant when the lane is part of a SymbolPalette.
 
    * Horizontal Orientation: The lane will be aligned horizontally.
    * Vertical Orientation: The lane will be aligned vertically.
 
-   Example
    Below is an example demonstrating how to set the orientation for Lanes in a SfSymbolPaletteComponent:
    
 ```cshtml
@@ -503,9 +503,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
       }
     }
 ```
-   ![Phse](Swimlane-images/Swimlane_Phase.PNG).
+   ![Lane](../Swimlane-images/LaneOrientation.PNG).
    
-   You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Phase/PhaseCreation).
+   You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Lane).
 
 ## Header Selection and Resize
 

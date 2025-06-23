@@ -364,11 +364,11 @@ The following image shows how to edit the phase header.
 
 ## How to Set the Orientation of a Phase
 
-The Orientation property in the Symbol Palette allows you to define whether a phase is displayed horizontally or vertically. This property is particularly relevant when the phase is part of a SymbolPalette.
+The [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Phase.html#Syncfusion_Blazor_Diagram_Phase_Orientation) property in the Symbol Palette allows you to define whether a phase is displayed horizontally or vertically. This property is particularly relevant when the phase is part of a SymbolPalette.
+
  * Horizontal Orientation: The phase will be aligned horizontally.
  * Vertical Orientation: The phase will be aligned vertically.
 
-Example
 Below is an example demonstrating how to set the orientation for phases in a SfSymbolPaletteComponent:
 
 ```cshtml
@@ -431,9 +431,9 @@ Below is an example demonstrating how to set the orientation for phases in a SfS
       }
 }
 ```
-![Phse](Swimlane-images/Swimlane_Phase.PNG).
+![Phse](Swimlane-images/PhaseOrientation.PNG).
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Phase/PhaseCreation).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Phase).
 
 ## Phase interaction
 

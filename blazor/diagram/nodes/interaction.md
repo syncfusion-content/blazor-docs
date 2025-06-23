@@ -209,9 +209,9 @@ Use this property when you want to specify the node’s rotation at the time of 
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Interaction/Resize)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Interaction)
 
-![Node Resizing in Blazor Diagram](../images/blazor-diagram-node-resizing.gif)
+![Node Resizing in Blazor Diagram](../images/NodeRotation.png)
 
 ## How to rotate the node
 

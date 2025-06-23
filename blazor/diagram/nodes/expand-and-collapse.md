@@ -794,9 +794,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### How to Set Padding for the Expand/Collapse Icon
 
-The Blazor Diagram component provides template support for customizing the expand and collapse icons of nodes. This feature allows you to create personalized visual representations for these interactive elements, enhancing the user experience and matching your application's design language.
+The Blazor Diagram component features a [Padding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramIcon.html#Syncfusion_Blazor_Diagram_DiagramIcon_Padding) property specifically designed for the expand and collapse icons of the nodes. This property allows you to customize the spacing around these icons, providing greater control over their positioning. By adjusting the Padding, you can define the space that the icon should maintain from its border.
 
-When customizing the appearance of expand/collapse icons in your application, you can set the Padding property to achieve the desired layout. This property ensures that there is adequate space around the icon, providing a visually appealing and functional interface.
+The following code shows how to set the Padding property of expand/collapse icon.
 
 
 ```csharp
@@ -908,15 +908,11 @@ When customizing the appearance of expand/collapse icons in your application, yo
 }
 ```
 
-![Displaying DiagramIcon in Blazor Diagram layout](../images/ExpandCollapseIconTemplate.png)
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ExpandAndCollapse/ExpandCollapseIconTemplate)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ExpandAndCollapse)
 
 ### How to Set Margin for the Expand/Collapse Icon
 
-The Blazor Diagram component allows for extensive customization, including the ability to set margins for the expand and collapse icons of nodes. This control over margin settings enhances your ability to define the position of icons relative to their designated locations, contributing to a coherent and user-friendly design.
-
-Setting the Margin property helps in controlling the space from the actual offset values of the icon. This flexibility is crucial for aligning icons according to your design requirements and ensuring a polished appearance.
+The Blazor Diagram component includes a [Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramIcon.html#Syncfusion_Blazor_Diagram_DiagramIcon_Margin) property for the expand and collapse icons of the nodes. This property defines the space from the actual offset values of the icon, allowing you to precisely adjust how the icons are positioned relative to their surrounding elements.
 
 
 ```csharp
@@ -1029,8 +1025,6 @@ Setting the Margin property helps in controlling the space from the actual offse
     }
 }
 ```
-
-![Displaying DiagramIcon in Blazor Diagram layout](../images/ExpandCollapseIconTemplate.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ExpandAndCollapse/ExpandCollapseIconTemplate)
 

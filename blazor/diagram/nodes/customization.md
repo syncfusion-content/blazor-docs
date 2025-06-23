@@ -347,9 +347,9 @@ The diagram provides support to customize the border color of a node using the [
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/NodeShadow)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance)
 
-![Blazor Diagram Node with shadow](../images/blazor-diagram-node-shadow.png)
+![Border Color for Node](../images/BorderColor.png)
 
 ## How to change the border width of a node
 
@@ -391,9 +391,7 @@ The diagram allows you to customize the border width of a node using the [Border
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance/NodeShadow)
-
-![Blazor Diagram Node with shadow](../images/blazor-diagram-node-shadow.png)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Appearance)
 
 ## How to update shadow to a node
 

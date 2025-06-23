@@ -117,7 +117,7 @@ The following code examples illustrate how to configure RotationAngle for an ann
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Interaction/Resize)
 
-![Node Resizing in Blazor Diagram](../images/blazor-diagram-node-resizing.gif)
+![Annotation Rotation in Blazor Diagram](../images/RotationAngleAnnotation.png)
 
 ## See also
 
