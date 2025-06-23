@@ -262,11 +262,50 @@ Labels will be arranged automatically on the left side of the funnel and pyramid
         new Statistics { Country = "Germany", Users = 82114224 },
     };
 }
-
 ```
 
 ![Blazor Funnel Chart with Smart Data Label](../images/funnel/blazor-funnel-chart-smart-data-label.png)
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjVKWrCqppsLzynA?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Border radius
+
+The corners of the first data point and last data point in the funnel chart series can be rounded using the `BorderRadius` property within the [AccumulationChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html).
+
+```cshtml
+@using Syncfusion.Blazor.Charts
+
+ <SfAccumulationChart Title="Recruitment Process" EnableAnimation="false" >
+            <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
+            <AccumulationChartSeriesCollection>
+                <AccumulationChartSeries DataSource="@FunnelChartPoints" XName="InterviewProcess" YName="Candidates" BorderRadius="8"
+                                         Type="AccumulationType.Funnel" Height="80%" Width="40%">
+                    <AccumulationDataLabelSettings Visible="true" Name="DataLabelMappingName" Position="AccumulationLabelPosition.Inside">
+                        <AccumulationChartDataLabelFont FontWeight="600"></AccumulationChartDataLabelFont>
+                    </AccumulationDataLabelSettings>
+                </AccumulationChartSeries>
+            </AccumulationChartSeriesCollection>
+ </SfAccumulationChart>
+
+@code {
+    public List<FunnelData> FunnelChartPoints { get; set; } = new List<FunnelData>
+    {
+        new FunnelData { InterviewProcess = "Hired", Candidates = 55, DataLabelMappingName="Hired: 55"},
+        new FunnelData { InterviewProcess = "Personal Interview", Candidates = 58, DataLabelMappingName="Personal Interview: 58"},
+        new FunnelData { InterviewProcess = "Telephonic Interview", Candidates = 85, DataLabelMappingName="Telephonic Interview: 85"},
+        new FunnelData { InterviewProcess = "Screening", Candidates = 105, DataLabelMappingName="Screening: 105"},
+        new FunnelData { InterviewProcess = "Initial Validation", Candidates = 145, DataLabelMappingName="Initial Validation: 145"},
+        new FunnelData { InterviewProcess = "Candidates Applied", Candidates = 250, DataLabelMappingName="Candidates Applied: 250"},
+    };
+
+    public class FunnelData
+    {
+        public string InterviewProcess { get; set; }
+        public double Candidates { get; set; }
+        public string DataLabelMappingName { get; set; }
+    }
+}
+```
+![Blazor Funnel Chart with border radius applied.](../images/funnel/blazor-funnel-border-radius.png)
 
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/funnel?theme=bootstrap5) to know various features of accumulation charts and how it is used to represent numeric proportional data.
 
