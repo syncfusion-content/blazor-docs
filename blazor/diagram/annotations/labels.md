@@ -202,7 +202,7 @@ Also, a collection of annotations can be removed from the node by using the `Rem
 N>* You can delete multiple annotations from a node to pass the collection of annotation objects as argument.
 <br/>* The `Add`, `Remove`, and `RemoveAt` methods are applicable for connectors too.
 
-## How to Modify Annotation at Runtime
+## How to Update Annotation at Runtime
 
 You can get the annotation directly from the node’s annotations collection property and you can change any annotation properties at runtime.
 
