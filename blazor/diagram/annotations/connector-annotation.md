@@ -19,7 +19,7 @@ Annotations of a connector can be positioned using the following properties of A
 * VerticalAlignment
 * Margin
 
-## How to Set Offset Position for Annotations
+## How to Update Offset Position for Annotations
 
 The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PathAnnotation.html#Syncfusion_Blazor_Diagram_PathAnnotation_Offset) property of an annotation is used to align the annotations based on fractions. A value of 0 represents Top-Left corner, 1 represents Bottom-Right corner, and 0.5 represents half of Width/Height.
 
