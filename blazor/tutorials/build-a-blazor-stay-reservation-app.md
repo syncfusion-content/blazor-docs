@@ -538,8 +538,7 @@ Integrate `SfToast` for user notifications throughout the application. When a us
     </SfToast>
 ```
 
-We can bind the `OnActionBegin` event of the `SfSchedule` component to a method that will handle the toast notifications.
-
+The `OnActionBegin` event of the `SfSchedule` component can be bound to a method that will handle the toast notifications.
 ```csharp
     public async Task OnActionBegin(ActionEventArgs<AppointmentData> args)
     {
@@ -590,12 +589,13 @@ We can bind the `OnActionBegin` event of the `SfSchedule` component to a method 
 ```
 
 ## GitHub and demo references
-You can find the complete code for this example on our [GitHub repository](https://github.com/syncfusion/blazor-showcase-stay-reservation).
 
-You can try the demo of this example in [this link](https://blazor.syncfusion.com/showcase/stay-reservation).
+The complete code for this example is available in the [GitHub repository](https://github.com/syncfusion/blazor-showcase-stay-reservation).
+
+A demo of this example can be tried in [this link](https://blazor.syncfusion.com/showcase/stay-reservation).
 
 ## Summary
 
-We've successfully built a functional and interactive stay reservation application. We've seen how to compose a complex UI by combining multiple Syncfusion Blazor components like the **Scheduler**, **Sidebar**, **AppBar**, **Accordion**, **Inputs**, and **Dropdowns**.
+This guide has demonstrated how to build a functional and interactive stay reservation application. It has shown how to compose a complex UI by combining multiple Syncfusion Blazor components like the **Scheduler**, **Sidebar**, **AppBar**, **Accordion**, **Inputs**, and **Dropdowns**.
 
-Most importantly, we've implemented a clean state management pattern using a singleton service, allowing our components to communicate and share data seamlessly. This architecture is scalable and makes the application easy to maintain and extend with new features.
+Most importantly, a clean state management pattern has been implemented using a singleton service, allowing the components to communicate and share data seamlessly. This architecture is scalable and makes the application easy to maintain and extend with new features.
