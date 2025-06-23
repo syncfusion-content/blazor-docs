@@ -128,7 +128,7 @@ Download a complete working sample from [GitHub](https://github.com/SyncfusionEx
 ![StackLimit in Blazor Diagram](images/stackLimitGIF.gif)
 
 ## Current entry
-We can also get the current histry entry from the [CurrentEntry](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramHistoryManager.html#Syncfusion_Blazor_Diagram_DiagramHistoryManager_CurrentEntry) property of the [DiagramHistoryManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramHistoryManager.html) that allows you to track changes occurring during the undo/redo process.
+We can also get the current history entry from the [CurrentEntry](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramHistoryManager.html#Syncfusion_Blazor_Diagram_DiagramHistoryManager_CurrentEntry) property of the [DiagramHistoryManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramHistoryManager.html) that allows you to track changes occurring during the undo/redo process.
 
 The following code shows how to get the current entry from the diagram history:
 
