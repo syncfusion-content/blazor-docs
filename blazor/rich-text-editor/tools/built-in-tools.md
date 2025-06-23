@@ -190,7 +190,7 @@ The following table lists the tools available in the toolbar.
 <tr>
 <td><p>HorizontalLine</p></td>
 <td><img alt= "Horizontal Line in Blazor RichTextEditor" src="../images/horizontal-icon.png"></td>
-<td><p>Horizontal lines visually separate sections of content within the editor, improving readability and layout clarity.</p></td>
+<td><p>Horizontal lines visually separate sections of content in the editor, enhancing readability and layout clarity.</p></td>
 </tr>
 </table>
 
