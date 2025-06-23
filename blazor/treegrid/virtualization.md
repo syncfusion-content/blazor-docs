@@ -347,25 +347,11 @@ N> For example, when the OverscanCount is set to 5, only 5 buffer rows are rende
 
 ## Virtualization with hierarchical data binding
 
-When working with hierarchical data containing multiple nested child records, mapping the relationships between parent and child nodes can become complex and inefficient, especially when there are many levels, numerous child items, and large datasets. This complexity can lead to performance issues when rendering such data directly in a TreeGrid.
+Virtualization boosts TreeGrid performance by rendering only the rows visible in the viewport, ensuring smooth scrolling and low memory usage. It provides a fast, responsive experience for users working with large, complex hierarchical datasets.
 
-For example, in some scenarios, you might encounter a hierarchical structure where:
+In a TreeGrid, hierarchical data consists of parent rows with nested child rows. Virtual scrolling depends on knowing the total row count and their combined height to display only the rows in view. However, tree structures complicate this because the number of visible rows changes when users expand or collapse parents. Child rows remain hidden until their parent is expanded, making it hard to determine the total scrollable height in advance so it can be missing rows if the TreeGrid fails to render newly visible child rows or Jumpy or incomplete data display, inconsistent behavior and a degraded user experience. To avoid this, use the following solution to use the hierarchy binding with virtualization in TreeGrid.
 
-* Each record can have n number of child records.
-
-* There are multiple levels of nesting (e.g., parent → child → sub-child → ...).
-
-* Each level may contain a collection of nested data.
-
-Directly binding such deeply nested hierarchical data to the TreeGrid can lead to degraded performance and make it difficult to maintain a proper tree structure. This is because rendering and managing complex nested collections require significant processing.
-
-To avoid this complexity, we need to convert hierarchical data to flat data before binding it to the TreeGrid. This transformation simplifies the data structure, map parent with corresponding child records , improves performance, and ensures the tree structure is maintained properly.
-
-When dealing with large datasets in a hierarchical structure, enabling virtualization helps in improving performance. It leverages an on-demand loading concept to fetch and render only the visible portion of data, significantly reducing initial load time and memory usage.
-
-To enable virtualization with hierarchical data in Syncfusion TreeGrid, you must first transform the hierarchical structure into a flat list at the application level using a recursive method named **HierarchyToFlatData**. This method traverses all parent-child relationships and flattens them into a single-level collection. This flat data source can then be efficiently bound to the TreeGrid with virtualization enabled.
-
-Place the following method in your component (e.g., **Index.razor**) and call it during component initialization (OnInitialized lifecycle method) as like below:
+To convert the hierarchical data into a flat structure that tracks parent-child relationships and expansion states while enabling virtualization. Here’s how to implement it:
 
 ```ts
 
@@ -560,9 +546,9 @@ By organizing the data in this format, the TreeGrid can efficiently render large
 
 * ExpandCollapse State maintenance is not supported for Hierarchy Data.
 
-  * Batch Editing is not supported for Hierarchy Data.
+* Batch Editing is not supported for Hierarchy Data.
 
-  * Row Drag and Drop feature is not supported for Hierarchy Data.
+* Row Drag and Drop feature is not supported for Hierarchy Data.
 
 * Additionally, please refer to the [virtualization limitations](https://blazor.syncfusion.com/documentation/treegrid/virtualization#limitations-for-virtualization) for more details on current constraints when using virtualization with hierarchical data.
 
