@@ -344,6 +344,60 @@ Clone is a virtual method of the node that is used to create a copy of a diagram
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction/CloneSelectedItems)
 ![Grouping in Blazor Diagram](images/CloneSelection.gif)
+
+### How to Access and Modify the Selected Node and Selected Connector at runtime
+You can access and update the properties of selected nodes and connectors using the [SelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionSettings) API in Syncfusion Blazor's [SfDiagramComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html). This allows you to respond to user selections and dynamically modify diagram elements at runtime. The following code demonstrates how to access and modify the selected Node and selected connector during runtime.
+```
+@page "/"
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent @ref="diagram" Height="600px" Nodes="@NodeCollection" Connectors="@ConnectorCollection"
+SelectionChanged="OnSelectionChanged">
+</SfDiagramComponent>
+@code {
+    SfDiagramComponent diagram;
+    //Initailize the diagram's nodes collection
+    public DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+    //Initailize the diagram's connector collection
+    public DiagramObjectCollection<Connector> ConnectorCollection = new DiagramObjectCollection<Connector>();
+    protected override void OnInitialized()
+    {
+        Node node1 = new Node()
+            {
+                OffsetX = 100,
+                OffsetY = 200,
+                Height = 100,
+                Width = 100,
+                ID = "node1",
+            };
+        NodeCollection.Add(node1);
+        Connector connector1 = new Connector()
+            {
+                ID = "connector1",
+                SourcePoint = new DiagramPoint() { X = 300, Y = 100 },
+                TargetPoint = new DiagramPoint() { X = 400, Y = 300 },
+                Type = ConnectorSegmentType.Orthogonal
+            };
+        ConnectorCollection.Add(connector1);
+    }
+    //Event to notify selection changing event after selected the nodes/conenctors in diagram.
+    private void OnSelectionChanged(SelectionChangedEventArgs args)
+    {
+        if (diagram.SelectionSettings.Nodes.Count > 0)
+        {
+            Node selectedNode = diagram.SelectionSettings.Nodes[0];
+            //Here you can modified the selected node.
+        }
+        if (diagram.SelectionSettings.Connectors.Count > 0)
+        {
+            Connector selectedConnector = diagram.SelectionSettings.Connectors[0];
+            //Here you can modified the selected connector.
+        }
+    }
+}
+
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction/SelectedElements)
 ## Drag
 
 * An object can be dragged by clicking and dragging it. When multiple elements are selected, dragging any one of the selected elements moves every selected element.
