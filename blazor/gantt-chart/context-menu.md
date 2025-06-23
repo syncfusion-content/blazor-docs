@@ -384,11 +384,11 @@ The following sample code demonstrates how to enable or disable context menu ite
 #pragma warning disable BL0005
         if (Args.Column != null && Args.Column.Field == "Duration")  // You can check condition based on your requirement
         {
-            Args.ContextMenuObj.Items[0].Disabled = true; // To disable edit context menu item
+            Args.ContextMenu.Items[0].Disabled = true; // To disable edit context menu item
         }
         else
         {
-            Args.ContextMenuObj.Items[0].Disabled = false; // To enable edit context menu item
+            Args.ContextMenu.Items[0].Disabled = false; // To enable edit context menu item
         }
 #pragma warning restore BL0005
     }
