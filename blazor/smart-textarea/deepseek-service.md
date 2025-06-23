@@ -31,7 +31,7 @@ Before you begin, ensure you have:
 
 ---
 
-## Next Steps
+## Getting Started with DeepSeek AI in SmartTextArea
 
 After completing this setup, you can:
 

@@ -22,7 +22,7 @@ Before you begin, ensure you have:
 
 For a complete list of models and their capabilities, visit the [Gemini Models Documentation](https://ai.google.dev/gemini-api/docs/models).
 
-## Next Steps
+## Getting Started with Gemini AI in SmartTextArea
 
 After completing this setup, you can:
 

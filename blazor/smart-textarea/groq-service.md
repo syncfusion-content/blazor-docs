@@ -32,7 +32,7 @@ Before you begin, ensure you have:
 
 For detailed model specifications and capabilities, visit the [Groq Models Documentation](https://console.groq.com/docs/models).
 
-## Next Steps
+## Getting Started with Groq AI in SmartTextArea
 
 After completing this setup, you can:
 
