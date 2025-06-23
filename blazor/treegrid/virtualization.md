@@ -399,7 +399,7 @@ public List<VirtualData> HierarchyToFlatData(List<VirtualData> dataSource, strin
   return addedData;
 }
 
-```
+``` 
 
 The following complete code example demonstrates how to bind hierarchical data to the TreeGrid using the [ChildMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ChildMapping) property. Enable virtualization by setting [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EnableVirtualization) to **true** and convert hierarchical data into a flat list using a recursive method (**HierarchyToFlatData**) before binding it to the TreeGrid:
 
