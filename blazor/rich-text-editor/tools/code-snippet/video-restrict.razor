@@ -1,21 +1,11 @@
 @using Syncfusion.Blazor.RichTextEditor;
 <SfRichTextEditor>
     <RichTextEditorToolbarSettings Items="@Items" />
-        <RichTextEditorEvents FileUploading="@onFileUploading"></RichTextEditorEvents>
-        <RichTextEditorVideoSettings SaveUrl="https://aspnetmvc.syncfusion.com/services/api/uploadbox/Save" Path="../Files/"></RichTextEditorVideoSettings>
+        <RichTextEditorVideoSettings SaveUrl="https://aspnetmvc.syncfusion.com/services/api/uploadbox/Save" Path="../Files/" MaxFileSize="30000000"></RichTextEditorVideoSettings>
 </SfRichTextEditor>
 @code {
     private List<ToolbarItemModel> Items = new List<ToolbarItemModel>()
     {
         new ToolbarItemModel() { Command = ToolbarCommand.Video }
     };
-
-    private void onFileUploading(FileUploadingEventArgs args)
-    {
-        var imgSize = 500000;
-        var sizeInBytes = args.FilesData[0].Size;
-        if ( imgSize < sizeInBytes ) {
-            args.Cancel = true;
-        }
-    }
 }

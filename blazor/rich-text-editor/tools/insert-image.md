@@ -29,37 +29,6 @@ The image has been loaded from the local machine and it will be saved in the giv
 ```
 N> If you want to insert many tiny images in the editor and don't want a specific physical location for saving images, opt to save the format as `Base64`.
 
-### Restrict image upload based on size
-
-By using the Rich Text Editor's [RichTextEditorEvents.OnImageUploading](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorEvents.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorEvents_OnImageUploadSuccess) event, you can get the image size before uploading and restrict the image to upload when the given image size is greater than the allowed size.
-
-In the following code, the image size has been validated before uploading and it has been determined whether the image has been uploaded or not.
-
-{% tabs %}
-{% highlight razor %}
-
-@using Syncfusion.Blazor.RichTextEditor
-
-<SfRichTextEditor>
-    <RichTextEditorImageSettings SaveUrl="https://aspnetmvc.syncfusion.com/services/api/uploadbox/Save" Path="./Images/" />
-    <RichTextEditorEvents BeforeUploadImage="@BeforeUploadImage" />
-</SfRichTextEditor>
-
-@code {
-    private void BeforeUploadImage(ImageUploadingEventArgs args)
-    {
-        var sizeInBytes = args.FilesData[0].Size;
-        var imgSize = 500000;
-        if (imgSize < sizeInBytes) {
-            args.Cancel = true;
-        }
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-N> You can't restrict while uploading an image as a hyperlink in the insert image dialog. When inserting images using the link, the editor does not allow you to limit the image size. You could not identify the image file size when the image was provided as a link.
 
 ### Server side action
 
@@ -251,6 +220,33 @@ By default, the Rich Text Editor inserts the images in [Blob](https://help.syncf
 
 {% endhighlight %}
 {% endtabs %}
+
+## Maximum file size restriction
+
+By using the Rich Text Editor's [RichTextEditorImageSettings.MaxFileSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorImageSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorImageSettings_MaxFileSize) property, you can get the image size before uploading and restrict the image to upload when the given image size is greater than the allowed size.
+
+In the following code, the image size has been validated before uploading and it has been determined whether the image has been uploaded or not.
+
+{% tabs %}
+{% highlight razor %}
+
+@using Syncfusion.Blazor.RichTextEditor
+
+<SfRichTextEditor>
+    <RichTextEditorImageSettings SaveUrl="https://aspnetmvc.syncfusion.com/services/api/uploadbox/Save" Path="./Images/" MaxFileSize="30000000" />
+</SfRichTextEditor>
+
+@code {
+    private List<ToolbarItemModel> Items = new List<ToolbarItemModel>()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.Image }
+    };
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+N> You can't restrict while uploading an image as a hyperlink in the insert image dialog. When inserting images using the link, the editor does not allow you to limit the image size. You could not identify the image file size when the image was provided as a link.
 
 ## Delete image 
 
