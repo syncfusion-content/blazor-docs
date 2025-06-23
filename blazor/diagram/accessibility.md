@@ -100,7 +100,7 @@ The aria-label attribute provides the text label with some default description f
 </tr>
 </table>
 
-## How to Navigate Blazor Diagrams using Keyboard Shortcuts
+## Keyboard Shortcuts and Navigations
 
 The Blazor Diagram component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Blazor Diagram component.
 

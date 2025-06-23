@@ -382,7 +382,7 @@ You can change the font style of the annotations with the font specific properti
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/Appearance/AnnotationStyleatRunTime)
 
-## How to Enable and Use Editing Mode
+## How to Edit Annotations at Runtime
 
 The diagram provides support to edit an annotation at runtime, either programmatically or interactively. By default, the annotation is in view mode. However, it can be brought into edit mode in two ways.
 
