@@ -679,7 +679,6 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-@using System.Collections.ObjectModel
 
 <SfDiagramComponent @ref="@Diagram"
                     Width="100%"
@@ -705,7 +704,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
         };
         connectors.Add(Connector);
     }
-     //  Notify the Collection Changed event while changing the collection of the node or connector at run time.
+     //  Notify the Collection Changed event while changing the collection of the connector at run time.
     private void OnCollectionChanged(CollectionChangedEventArgs args)
     {
         //Action to be performed.
