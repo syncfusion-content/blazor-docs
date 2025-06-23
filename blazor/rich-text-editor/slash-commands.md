@@ -17,7 +17,9 @@ To enable the slash menu, set the [Enable](https://help.syncfusion.com/cr/blazor
 
 ## Configure the slash menu items
 
-The [RichTextEditorSlashMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorSlashMenuSettings.html) property allows customization of the `Items` displayed in the slash menu. By defining the [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorSlashMenuSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorSlashMenuSettings_Items) property, you can use a list [SlashMenuItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorSlashMenuSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorSlashMenuSettings_SlashMenuItemModel) to specify a range of commands available for users when they type a slash (/) in the Rich Text Editor.
+The [RichTextEditorSlashMenuSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorSlashMenuSettings.html) property allows customization of the `Items` displayed in the slash menu. By setting the [Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorSlashMenuSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorSlashMenuSettings_Items) property with a list of [SlashMenuItemModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorSlashMenuSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorSlashMenuSettings_SlashMenuItemModel), you can define which commands are available when a user types a slash (/) in the Rich Text Editor.
+
+
 
 This list can include various formatting options such as paragraph and heading levels. Here’s an code snippet of configuring the slash menu items:
 
@@ -52,7 +54,7 @@ Each custom item object can include the following properties:
 
 | API | Description | 
 |:----------------:|:---------:|
-| Text| The label of the menu item. | false | boolean |
+| Text| The label of the menu item. |
 | Command | The action to be executed when the item is clicked.|
 | GroupBy | Groups related items in the slash menu. |
 | IconCss | Specifies the CSS class for the item’s icon. | 
