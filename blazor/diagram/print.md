@@ -32,6 +32,7 @@ The diagram can be customized while printing using the following properties of t
 | PageWidth | Sets the page width of the diagram while printing the diagram in multiple pages. |
 | PageHeight| Sets the page height of the diagram while printing the diagram in multiple pages.|
 | Orientation | Sets the orientation of the page. |
+| ClipBounds | Sets teh custom bounds for the region of the diagram to be printed.|
 
 These properties behave the same as the properties in the `DiagramExportSettings` class. For more details, [refer](../export/Exporting options) 
 
