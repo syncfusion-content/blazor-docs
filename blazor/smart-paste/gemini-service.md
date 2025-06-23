@@ -230,11 +230,11 @@ public class GeminiChatParameters
 
 ## Step 3: Create a Custom AI Service
 
-The Syncfusion Smart Components are designed to work with different AI backends through the `IAIInferenceBackend` interface. This section shows you how to create a custom implementation that connects the Smart Components to the Gemini AI service.
+The Syncfusion Smart Components are designed to work with different AI backends through the `IChatInferenceService` interface. This section shows you how to create a custom implementation that connects the Smart Components to the Gemini AI service.
 
 ### Understanding the Interface
 
-The `IAIInferenceBackend` interface is the bridge between Syncfusion Smart Components and AI services:
+The `IChatInferenceService` interface is the bridge between Syncfusion Smart Components and AI services:
 
 1. Create a new file named `MyCustomService.cs`
 2. Add the following implementation:
@@ -242,7 +242,7 @@ The `IAIInferenceBackend` interface is the bridge between Syncfusion Smart Compo
 ```csharp
 using Syncfusion.Blazor.AI;
 
-public class MyCustomService : IAIInferenceBackend
+public class MyCustomService : IChatInferenceService
 {
     private readonly GeminiService _geminiService;
 
@@ -251,7 +251,7 @@ public class MyCustomService : IAIInferenceBackend
         _geminiService = geminiService;
     }
 
-    public Task<string> GetChatResponseAsync(ChatParameters options)
+    public Task<string> GenerateResponseAsync(ChatParameters options)
     {
         // Forward the chat parameters to our Gemini service
         return _geminiService.CompleteAsync(options.Messages);
@@ -274,7 +274,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSyncfusionBlazor();
 builder.Services.AddSyncfusionSmartComponents();
 builder.Services.AddSingleton<GeminiService>();
-builder.Services.AddSingleton<IAIInferenceBackend, MyCustomService>();
+builder.Services.AddSingleton<IChatInferenceService, MyCustomService>();
 
 var app = builder.Build();
 ....

@@ -100,7 +100,7 @@ namespace BlazorGanttChart.Data
             public int PrimaryId { get; set; }
             public int TaskId { get; set; }
             public int ResourceId { get; set; }
-            public double Unit { get; set; }
+            public double? Unit { get; set; }
         }
 
         public static List<ResourceInfoModel> GetResources = new List<ResourceInfoModel>()
@@ -250,7 +250,7 @@ namespace BlazorGanttChart.Data
             public int PrimaryId { get; set; }
             public int TaskId { get; set; }
             public int ResourceId { get; set; }
-            public double Unit { get; set; }
+            public double? Unit { get; set; }
         }
 
         public static List<ResourceInfoModel> GetResources = new List<ResourceInfoModel>()
@@ -403,7 +403,7 @@ namespace BlazorGanttChart.Data
             public int PrimaryId { get; set; }
             public int TaskId { get; set; }
             public int ResourceId { get; set; }
-            public double Unit { get; set; }
+            public double? Unit { get; set; }
         }
 
         public static List<ResourceInfoModel> GetResources = new List<ResourceInfoModel>()
@@ -557,7 +557,7 @@ namespace BlazorGanttChart.Data
             public int PrimaryId { get; set; }
             public int TaskId { get; set; }
             public int ResourceId { get; set; }
-            public double Unit { get; set; }
+            public double? Unit { get; set; }
         }
 
         public static List<ResourceInfoModel> GetResources = new List<ResourceInfoModel>()
@@ -725,7 +725,7 @@ These methods offer a convenient way to add, remove, and update task resources i
     private async void AddNewRecord()
     {
         var record = new GanttModel.AssignmentModel() { PrimaryId = 19, TaskId = 10, ResourceId = 8 };
-        GanttModel.TaskInfoModel data = new GanttModel.TaskInfoModel() { Id = 10, Name = "NewRecord", StartDate = new DateTime(2021, 03, 29), Duration = "2", };
+        GanttModel.TaskInfoModel data = new GanttModel.TaskInfoModel() { Id = 10, Name = "NewRecord", StartDate = new DateTime(2021, 03, 29), Duration = "2", TaskType="FixedDuration" };
         await ganttInstance.AddRecordAsync(data, 0, null, record);
     }
 }
@@ -763,7 +763,7 @@ namespace BlazorGanttChart.Data
             public int PrimaryId { get; set; }
             public int TaskId { get; set; }
             public int ResourceId { get; set; }
-            public double Unit { get; set; }
+            public double? Unit { get; set; }
         }
 
         public static List<ResourceInfoModel> GetResources = new List<ResourceInfoModel>()
@@ -935,7 +935,7 @@ namespace BlazorGanttChart.Data
             public int PrimaryId { get; set; }
             public int TaskId { get; set; }
             public int ResourceId { get; set; }
-            public double Unit { get; set; }
+            public double? Unit { get; set; }
         }
 
         public static List<ResourceInfoModel> GetResources = new List<ResourceInfoModel>()
@@ -1140,7 +1140,7 @@ namespace BlazorGanttChart.Data
             public int PrimaryId { get; set; }
             public int TaskId { get; set; }
             public int ResourceId { get; set; }
-            public double Unit { get; set; }
+            public double? Unit { get; set; }
         }
 
         public static List<ResourceInfoModel> GetResources = new List<ResourceInfoModel>()
