@@ -1,10 +1,11 @@
 @using Syncfusion.Blazor.RichTextEditor
 
-<SfRichTextEditor >
+<SfRichTextEditor Placeholder="@editorPlaceholder">
     <RichTextEditorSlashMenuSettings Enable="true" Items="@slashmenuItems" />
 </SfRichTextEditor>
 
 @code{
+    private string editorPlaceholder = "Type \"/\" and choose format";
     private List<SlashMenuItemModel> slashmenuItems = new List<SlashMenuItemModel> ()
     {
         new SlashMenuItemModel() {Command = SlashMenuCommand.Paragraph},
