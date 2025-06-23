@@ -49,20 +49,6 @@ In the audio dialog, using the `browse` option, select the audio from the local 
 
 If the path field is not specified in the [RichTextEditorAudioSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorAudioSettings.html), the audio will be converted into `Blob` url or `Base64` and inserted inside the Rich Text Editor.
 
-### Restrict audio upload based on size
-
-Using the Rich Text Editor `FileUploading` event, you can restrict the audio to upload when the given audio size is greater than the allowed fileSize. Also, the audio size in the argument will be returned in `bytes`.
-
-In the following illustration, the audio size has been validated before uploading, and it is determined whether the audio has been uploaded or not.
-
-{% tabs %}
-{% highlight cshtml %}
-
-{% include_relative code-snippet/audio-restrict.razor %}
-
-{% endhighlight %}
-{% endtabs %}
-
 ### Server-side action
 
 The selected audio can be uploaded to the required destination using the controller action below. Map this method name in [RichTextEditorMediaSettings.SaveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_SaveUrl) and provide the required destination path through [RichTextEditorMediaSettings.Path](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_Path) properties.
@@ -164,6 +150,20 @@ N> By default, the files are saved in the `Blob` format.
 </audio>
 
 ```
+
+## Maximum file size restriction
+
+By using the Rich Text Editor's [RichTextEditorAudioSettings.MaxFileSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorAudioSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorAudioSettings_MaxFileSize) property, you can restrict the audio to upload when the given audio size is greater than the allowed fileSize. 
+
+In the following illustration, the audio size has been validated before uploading, and it is determined whether the audio has been uploaded or not.
+
+{% tabs %}
+{% highlight cshtml %}
+
+{% include_relative code-snippet/audio-restrict.razor %}
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Replacing audio
 
