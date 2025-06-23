@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Local Data in Blazor DataGrid | Syncfusion
-description: Checkout and learn here all about Local Data in Syncfusion Blazor DataGrid and much more.
+description: Explore how to bind and display local data in the Syncfusion Blazor DataGrid using various approaches and customization options.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -1423,7 +1423,7 @@ builder.Services.AddSingleton<OrderDetails>();
 
 The following screenshot illustrates the addition, editing, and deletion operations performed, with changes reflected across all client sides.
 
-![SignalR Data](./images/signalR.gif)
+![SignalR Data](../images/signalR.gif)
 
 Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/databinding-in-blazor-datagrid/tree/master/SignalRDataGrid).
 
