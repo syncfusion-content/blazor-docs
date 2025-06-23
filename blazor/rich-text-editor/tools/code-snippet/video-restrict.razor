@@ -1,7 +1,7 @@
 @using Syncfusion.Blazor.RichTextEditor;
 <SfRichTextEditor>
     <RichTextEditorToolbarSettings Items="@Items" />
-        <RichTextEditorVideoSettings SaveUrl="api/Video/Save" Path="./Video/" MaxFileSize="30000000"></RichTextEditorVideoSettings>
+        <RichTextEditorVideoSettings MaxFileSize="30000000"></RichTextEditorVideoSettings>
 </SfRichTextEditor>
 @code {
     private List<ToolbarItemModel> Items = new List<ToolbarItemModel>()

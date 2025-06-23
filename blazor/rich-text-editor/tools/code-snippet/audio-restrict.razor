@@ -1,7 +1,7 @@
 @using Syncfusion.Blazor.RichTextEditor;
 <SfRichTextEditor>
     <RichTextEditorToolbarSettings Items="@Items" />
-        <RichTextEditorAudioSettings SaveUrl="api/Audio/Save" Path="./Audio" MaxFileSize="30000000"></RichTextEditorAudioSettings>
+        <RichTextEditorAudioSettings MaxFileSize="30000000"></RichTextEditorAudioSettings>
 </SfRichTextEditor>
 @code {
     private List<ToolbarItemModel> Items = new List<ToolbarItemModel>()

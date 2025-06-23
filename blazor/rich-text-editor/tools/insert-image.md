@@ -233,7 +233,7 @@ In the following code, the image size has been validated before uploading and it
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>
-    <RichTextEditorImageSettings SaveUrl="api/Image/Save" Path="./Images/" MaxFileSize="30000000" />
+    <RichTextEditorImageSettings MaxFileSize="30000000" />
 </SfRichTextEditor>
 
 @code {
