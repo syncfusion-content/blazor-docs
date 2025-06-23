@@ -791,3 +791,246 @@ To implement a custom template for expand and collapse icons, please refer to th
 ![Displaying DiagramIcon in Blazor Diagram layout](../images/ExpandCollapseIconTemplate.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ExpandAndCollapse/ExpandCollapseIconTemplate)
+
+### How to Set Padding for the Expand/Collapse Icon
+
+The Blazor Diagram component provides template support for customizing the expand and collapse icons of nodes. This feature allows you to create personalized visual representations for these interactive elements, enhancing the user experience and matching your application's design language.
+
+When customizing the appearance of expand/collapse icons in your application, you can set the Padding property to achieve the desired layout. This property ensures that there is adequate space around the icon, providing a visually appealing and functional interface.
+
+
+```csharp
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Height="600px" Nodes="@nodes" Connectors="@connectors" />
+
+@code
+{
+    //Initialize the diagram's nodes collection
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    //Initialize the diagram's connectors collection
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    protected override void OnInitialized()
+    {
+        Node node1 = new Node()
+        {
+            ID = "node1",
+            Width = 100,
+            Height = 100,
+            OffsetX = 300,
+            OffsetY = 300,
+            IsExpanded = false,
+            Style = new ShapeStyle()
+            {
+                Fill = "#6BA5D7",
+                StrokeColor = "white"
+            },
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+            {
+                new ShapeAnnotation()
+                {
+                    Content="Node1"
+                }
+            },
+            ExpandIcon = new DiagramExpandIcon()
+            {
+                Shape = DiagramExpandIcons.Minus,
+                Height = 20,
+                Width = 20,
+                Fill = "Gray",
+                   Padding = new DiagramThickness(){
+                Top = 1,
+                Bottom = 1,
+                Left = 1,
+                Right = 1,
+                },  
+                BorderColor = "Blue",
+                BorderWidth = 3,
+            },
+            CollapseIcon = new DiagramCollapseIcon()
+            {
+                Shape = DiagramCollapseIcons.Plus,
+                Height = 20,
+                Width = 20,
+                Fill = "Gray",
+                BorderColor = "Blue",
+                   Padding = new DiagramThickness(){
+                Top = 1,
+                Bottom = 1,
+                Left = 1,
+                Right = 1,
+                },   
+                BorderWidth = 3,
+            },
+        };
+        nodes.Add(node1);
+        Node node2 = new Node()
+        {
+            ID = "node2",
+            Width = 100,
+            Height = 100,
+            OffsetX = 300,
+            OffsetY = 500,
+            Style = new ShapeStyle()
+            {
+                Fill = "#6BA5D7",
+                StrokeColor = "white"
+            },
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+            {
+                new ShapeAnnotation()
+                {
+                    Content="Node2"
+                }
+            },
+            ExpandIcon = new DiagramExpandIcon()
+            {
+                Shape = DiagramExpandIcons.Minus,
+                Height = 20,
+                Width = 20,
+            },
+            CollapseIcon = new DiagramCollapseIcon()
+            {
+                Shape = DiagramCollapseIcons.Plus,
+                Height = 20,
+                Width = 20,
+            },
+        };
+        nodes.Add(node2);
+        Connector connector1 = new Connector()
+            {
+                ID = "connector1",
+                SourceID = "node1",
+                TargetID = "node2",
+            };
+        connectors.Add(connector1);
+    }
+}
+```
+
+![Displaying DiagramIcon in Blazor Diagram layout](../images/ExpandCollapseIconTemplate.png)
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ExpandAndCollapse/ExpandCollapseIconTemplate)
+
+### How to Set Margin for the Expand/Collapse Icon
+
+The Blazor Diagram component allows for extensive customization, including the ability to set margins for the expand and collapse icons of nodes. This control over margin settings enhances your ability to define the position of icons relative to their designated locations, contributing to a coherent and user-friendly design.
+
+Setting the Margin property helps in controlling the space from the actual offset values of the icon. This flexibility is crucial for aligning icons according to your design requirements and ensuring a polished appearance.
+
+
+```csharp
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Height="600px" Nodes="@nodes" Connectors="@connectors" />
+
+@code
+{
+    //Initialize the diagram's nodes collection
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    //Initialize the diagram's connectors collection
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    protected override void OnInitialized()
+    {
+        Node node1 = new Node()
+        {
+            ID = "node1",
+            Width = 100,
+            Height = 100,
+            OffsetX = 300,
+            OffsetY = 300,
+            IsExpanded = false,
+            Style = new ShapeStyle()
+            {
+                Fill = "#6BA5D7",
+                StrokeColor = "white"
+            },
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+            {
+                new ShapeAnnotation()
+                {
+                    Content="Node1"
+                }
+            },
+            ExpandIcon = new DiagramExpandIcon()
+            {
+                Shape = DiagramExpandIcons.Minus,
+                Height = 20,
+                Width = 20,
+                Fill = "Gray",
+               Margin = new DiagramThickness()
+                {
+                    Top = 5,
+                    Bottom = 5,
+                    Left = 5,
+                    Right = 5,
+                }, 
+                BorderColor = "Blue",
+                BorderWidth = 3,
+            },
+            CollapseIcon = new DiagramCollapseIcon()
+            {
+                Shape = DiagramCollapseIcons.Plus,
+                Height = 20,
+                Width = 20,
+                Fill = "Gray",
+                BorderColor = "Blue",
+               Margin = new DiagramThickness()
+                {
+                    Top = 5,
+                    Bottom = 5,
+                    Left = 5,
+                    Right = 5,
+                },    
+                BorderWidth = 3,
+            },
+        };
+        nodes.Add(node1);
+        Node node2 = new Node()
+        {
+            ID = "node2",
+            Width = 100,
+            Height = 100,
+            OffsetX = 300,
+            OffsetY = 500,
+            Style = new ShapeStyle()
+            {
+                Fill = "#6BA5D7",
+                StrokeColor = "white"
+            },
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+            {
+                new ShapeAnnotation()
+                {
+                    Content="Node2"
+                }
+            },
+            ExpandIcon = new DiagramExpandIcon()
+            {
+                Shape = DiagramExpandIcons.Minus,
+                Height = 20,
+                Width = 20,
+            },
+            CollapseIcon = new DiagramCollapseIcon()
+            {
+                Shape = DiagramCollapseIcons.Plus,
+                Height = 20,
+                Width = 20,
+            },
+        };
+        nodes.Add(node2);
+        Connector connector1 = new Connector()
+            {
+                ID = "connector1",
+                SourceID = "node1",
+                TargetID = "node2",
+            }; 
+        connectors.Add(connector1);
+    }
+}
+```
+
+![Displaying DiagramIcon in Blazor Diagram layout](../images/ExpandCollapseIconTemplate.png)
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ExpandAndCollapse/ExpandCollapseIconTemplate)
+
