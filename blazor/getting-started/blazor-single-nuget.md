@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting started with Blazor Component using Syncfusion.Blazor NuGet
 
-This section briefly explains how to include a Blazor component with the Syncfusion.Blazor Single NuGet package in your Blazor Web App Server Render Mode and Blazor WebAssembly Standalone App using Visual Studio.
+This section briefly explains how to include a Blazor component with the Syncfusion.Blazor Single NuGet package in your Blazor Server App and Blazor WebAssembly Standalone App using Visual Studio.
 
 ## Prerequisites
 
@@ -91,7 +91,6 @@ The theme stylesheet and script can be accessed from NuGet through [Static Web A
 * For **.NET 8 and .NET 9 WebAssembly Standalone app** , include it in **wwwroot/index.html** file.
 
 * For **.NET 8 and .NET 9 Blazor WebApp Server Interactive Mode**, include it in **~/Components/App.razor**.
-
 
 ```html
 <head>
