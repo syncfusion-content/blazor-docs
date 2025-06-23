@@ -48,7 +48,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Changing Annotation Size in Blazor Diagram](../images/blazor-diagram-annotation-size.png)
 
-## How to Add Hyperlink to Annotation
+## How to Add Hyper Link to Annotation
 
 The diagram provides support to add a [Hyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Hyperlink) to the node's or connector's annotation. It can also be customized.
 
@@ -94,7 +94,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Annotation with Hyperlink in Blazor Diagram](../images/blazor-diagram-annotation-with-hyperlink.png)
 
-### How to Display Text in Annotation Hyperlinks
+### How to Display Text in Annotation Hyper Links
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
