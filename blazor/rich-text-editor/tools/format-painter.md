@@ -13,7 +13,7 @@ The format painter tool enables users to replicate formatting from one text segm
 
 ## Configuring format painter tool in toolbar
 
-You can add the FormatPainter tool in the Rich Text Editor using the [RichTextEditorToolbarSettings.Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings_Items) property.
+You can add the `FormatPainter` tool in the Rich Text Editor using the [RichTextEditorToolbarSettings.Items](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings_Items) property.
 
 By double-clicking the format painter toolbar button, `sticky` mode will be enabled. In sticky mode, the format painter remains active until the `Escape` key is pressed again to disable it.
 
