@@ -505,7 +505,6 @@ The [MouseEnter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-@using System.Collections.ObjectModel
 
 <SfDiagramComponent @ref="@Diagram"
                     Width="100%"
@@ -546,7 +545,6 @@ The [MouseLeave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-@using System.Collections.ObjectModel
 
 <SfDiagramComponent @ref="@Diagram"
                     Width="100%"
@@ -587,7 +585,6 @@ The [MouseHover](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-@using System.Collections.ObjectModel
 
 <SfDiagramComponent @ref="@Diagram"
                     Width="100%"
