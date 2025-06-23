@@ -349,9 +349,11 @@ N> For example, when the OverscanCount is set to 5, only 5 buffer rows are rende
 
 Virtualization boosts TreeGrid performance by rendering only the rows visible in the viewport, ensuring smooth scrolling and low memory usage. It provides a fast, responsive experience for users working with large, complex hierarchical datasets.
 
-In a TreeGrid, hierarchical data consists of parent rows with nested child rows. Virtual scrolling depends on knowing the total row count and their combined height to display only the rows in view. However, tree structures complicate this because the number of visible rows changes when users expand or collapse parents. Child rows remain hidden until their parent is expanded, making it hard to determine the total scrollable height in advance so it can be missing rows if the TreeGrid fails to render newly visible child rows or Jumpy or incomplete data display, inconsistent behavior and a degraded user experience. To avoid this, use the following solution to use the hierarchy binding with virtualization in TreeGrid.
+In a TreeGrid, hierarchical data consists of parent rows with nested child rows. Virtual scrolling depends on knowing the total row count and their combined height to display only the rows in view. However, tree structures complicate this because the number of visible rows changes when users expand or collapse parents. Since child rows remain hidden until their parent is expanded, it's difficult to accurately determine the total scrollable height in advance. This can result in missing rows, jumpy scrolling, or incomplete data rendering, making it complicated for users to interact with the TreeGrid effectively. To avoid this, use the following solution to use the hierarchy binding with virtualization in TreeGrid.
 
-To convert the hierarchical data into a flat structure that tracks parent-child relationships and expansion states while enabling virtualization. Here’s how to implement it:
+To convert the hierarchical data into a flat structure that tracks parent-child relationships and expansion states while enabling virtualization, use a recursive method named **HierarchyToFlatData**. Here’s how to implement it:
+
+Place the following method in your component (e.g., **Index.razor**) and call it during component initialization (OnInitialized lifecycle method) as like below:
 
 ```ts
 
