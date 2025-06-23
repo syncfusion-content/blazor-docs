@@ -791,11 +791,11 @@ The following example demonstrates, how to perform a search with multiple keywor
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LtVqCDqNBkpniqXe?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## How to ignore accent while searching
+## Ignore accents in DataGrid search
 
-By default, the searching operation in the Syncfusion Blazor DataGrid does not ignore diacritic characters or accents. However, there are cases where ignoring diacritic characters becomes necessary. This feature enhances the search experience by enabling data searching without considering accents, ensuring a more comprehensive and accurate search and it can be achieved by utilizing the [GridSearchSettings.IgnoreAccent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_IgnoreAccent) property of the Grid as **true**.
+By default, the Syncfusion Blazor DataGrid's search functionality does not account for diacritic characters or accents. However, in scenarios where ignoring these characters is essential, this feature significantly improves the search experience. It allows for more comprehensive and accurate data searches by disregarding accents. This can be achieved by setting the [GridSearchSettings.IgnoreAccent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_IgnoreAccent) property of the DataGrid to **true**.
 
-The following example demonstrates how to define the `IgnoreAccent` property within the GridSearchSettings property of the Grid.
+The following example demonstrates how to configure the `IgnoreAccent` property within the `GridSearchSettings` of the Grid.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -872,9 +872,8 @@ public class InventorDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LNrItRCfhblhPJaR?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> * You can set `GridSearchSettings.IgnoreAccent` property along with other search settings such as [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_Fields), [Operator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_Operator), and [IgnoreCase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_IgnoreCase) to achieve the desired search behavior.
-> * This feature works only for the characters that are not in the ASCII range.
-> * This feature may have a slight impact on search performance.
+> * This feature ignores accents for both searching and filtering operations in the Syncfusion Blazor DataGrid when using an `IEnumerable` data source.
+> * This features works only for characters outside the ASCII range.
 
 ## Clear search by external button
 

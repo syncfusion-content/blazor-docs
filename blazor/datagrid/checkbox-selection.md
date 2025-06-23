@@ -365,15 +365,12 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/htretIZeoziROVCs?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Persist checkbox selection with remote data
+## Persist selection
 
-The Persist Selection feature in the Syncfusion Blazor DataGrid allows selected rows to remain selected even after performing actions such as paging, sorting, filtering, or data refreshes—including when using remote data sources. This is particularly useful in scenarios where users need to track selected items across different views or pages without losing the selection state.
-
-To enable this feature, set the [GridSelectionSettings.PersistSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_PersistSelection) property to **true**.
-
-> When using the persist selection feature, at least one column in your Grid should be set as a primary key using the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property. This ensures that the Grid can identify and persist the selected items correctly.
+The Persist Selection feature in the Syncfusion Blazor DataGrid ensures that selected rows remain selected even after performing actions such as paging, sorting, and filtering etc., This feature is applicable to both local and remote data sources. To enable this feature, set the  [GridSelectionSettings.PersistSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_PersistSelection) property to **true**. Additionally, ensure that at least one column in Grid is set as a primary key using the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property. 
 
 The following example demonstrates how to persist checkbox selections when the Grid is bound to remote data using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) and `ODataV4Adaptor`:
+
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
