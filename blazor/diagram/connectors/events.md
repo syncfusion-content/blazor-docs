@@ -453,7 +453,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## CollectionChange Event
 
-* The diagram provides specific events that are triggered when connectors are added to or removed from the diagram. These events offer opportunities for customization and are invoked whenever the node or connector collection undergoes changes.
+* The diagram provides specific events that are triggered when connectors are added to or removed from the diagram. These events offer opportunities for customization and are invoked whenever the connector collection undergoes changes.
 
 |Event Name|Arguments|Description|
 |------------|-----------|------------------------|
