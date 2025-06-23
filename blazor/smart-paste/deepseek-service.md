@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Deepseek AI Service with Syncfusion Smart Components in Blazor App | Syncfusion
+title: Custom AI Service with Syncfusion Smart Components in Blazor Web App
 description: Learn how to integrate and use the Syncfusion component in a Blazor Web App with DeepSeek AI services.
 platform: Blazor
 control: Smart Paste Button

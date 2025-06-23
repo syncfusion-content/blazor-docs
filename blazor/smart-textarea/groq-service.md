@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Groq AI Service with Syncfusion Smart Components in Blazor Web App
+title: Custom AI Service with Syncfusion Smart Components in Blazor Web App
 description: Learn how to implement a custom AI service using Groq API with Syncfusion Smart Components in a Blazor App.
 control: Smart TextArea
 documentation: ug
