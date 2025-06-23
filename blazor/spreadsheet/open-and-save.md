@@ -7,6 +7,8 @@ control: Spreadsheet
 documentation: ug
 ---
 
+# Open save in Blazor Spreadsheet Component
+
 The Open and Save features in our spreadsheet component enable users to efficiently manage their Excel files. These functionalities allow you to open existing excel files for analysis and modification, as well as save updates or new files to your system in compatible formats.
 
 ## Open
