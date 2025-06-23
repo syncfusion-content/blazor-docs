@@ -1,8 +1,10 @@
 @using Syncfusion.Blazor.RichTextEditor
-<SfRichTextEditor>
+<SfRichTextEditor  @bind-Value="@EditorContent">
     <RichTextEditorToolbarSettings Items="@Tools" />
     <RichTextEditorFormatPainterSettings AllowedFormats="p; h1; h2; h3; div; ul; ol; li; span; strong; em; code;" DeniedFormats="h3(e-rte-block-blue-text){background-color,padding,color}[title]; li{color}; span(e-inline-text-highlight){color}[title]; strong{color}(e-rte-strong-bg);" />
-    <h3>Format Painter in Rich Text Editor</h3><p>The <strong data-start="50" data-end="68">Format Painter</strong> allows you to quickly copy and apply text formatting within the editor, saving time and ensuring consistency.</p><h5>How to Use Format Painter?</h5>
+</SfRichTextEditor>
+@code {
+    private string EditorContent = @"<h3>Format Painter in Rich Text Editor</h3><p>The <strong data-start=""50"" data-end=""68"">Format Painter</strong> allows you to quickly copy and apply text formatting within the editor, saving time and ensuring consistency.</p><h5>How to Use Format Painter?</h5>
     <ul>
         <li><strong>Select the text</strong> with the formatting you want to copy.</li>
         <li>Click the <strong>Format Painter</strong> button (paintbrush icon) in the toolbar.</li>
@@ -15,9 +17,7 @@
         <li><strong>Saves time</strong> when formatting large documents.</li>
         <li><strong>Ensures consistency</strong> in text styles.</li>
         <li><strong>Easy to use</strong> for writers, editors, and content creators.</li>
-    </ul>
-</SfRichTextEditor>
-@code {
+    </ul>";
     private List<ToolbarItemModel> Tools = new List<ToolbarItemModel>()
     {
         new ToolbarItemModel() { Command = ToolbarCommand.FormatPainter },

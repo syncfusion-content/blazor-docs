@@ -9,7 +9,7 @@ documentation: ug
 
 # Format Painter
 
-The format painter tool enables users to replicate formatting from one text segment and apply it to another. It can be accessed through the toolbar or via keyboard shortcuts, allowing the transfer of styles from individual words to entire paragraphs. Customization options are available through the [RichTextEditorFormatPainterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.html) property.
+The format painter tool enables users to replicate formatting from one text segment and apply it to another. It can be accessed through the toolbar or via keyboard shortcuts, allowing the transfer of styles from individual words to entire paragraphs. Customization options are available through the [RichTextEditorFormatPainterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorFormatPainterSettings.html) property.
 
 ## Configuring format painter tool in toolbar
 
@@ -58,3 +58,6 @@ Below is an example illustrating how to define the `AllowedFormats` and `DeniedF
 For more details on keyboard navigation, refer to the [Keyboard support](https://blazor.syncfusion.com/documentation/rich-text-editor/keyboard-support) documentation.
 
 > The format painter retains the formatting after application making it possible to apply the same formatting multiple times by using the <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>v</kbd> keyboard shortcut.
+
+Additionally, You can perform the format painter actions programmatically using the [ExecuteCommandAsync](
+https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_ExecuteCommandAsync_Syncfusion_Blazor_RichTextEditor_CommandName_Syncfusion_Blazor_RichTextEditor_FormatPainterParams_Syncfusion_Blazor_RichTextEditor_ExecuteCommandOption_) public method.
