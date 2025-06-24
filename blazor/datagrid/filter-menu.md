@@ -755,10 +755,9 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/rXrftBDxzDMOqgsi?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## How to customize filter input editor
+## Customize filter input editor
 
-The Syncfusion Blazor DataGrid allows you to customize the built-in filter dialog editor components. You can achieve this customization by setting the `FilterEditorSettings` property on [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html).
-In the following example, we have customized the following component configurations:
+The Syncfusion Blazor DataGrid allows you to customize the built-in filter dialog editor components. You can achieve this customization by setting the `FilterEditorSettings` property on [GridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). In the following example, we have customized the following component configurations:
 
 | Column         | Filter Component                                                                 | Customization                                         |
 | -------------- | ------------------------------------------------------------------------------- | ----------------------------------------------------- |
