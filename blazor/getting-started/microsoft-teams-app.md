@@ -27,7 +27,7 @@ This section explains how to create and run the first Microsoft Teams applicatio
 1. Launch Visual Studio 2022, and in the start window click **Create a new project**.
 2. Search for Microsoft Teams app in Visual Studio template. Select **Microsoft teams App** and click on Next.
 
-    ![Create Microsoft Teams App](images/MSTeams/create-msteams-app.png)
+    ![Create Microsoft Teams App](images/MSTeams/create-msteams-app.jpg)
 3. Configure the project with required project name, select the location to save the application and click on Create.
 
     ![Configure Microsoft Teams App](images/MSTeams/configure-msteams-app.png)
@@ -42,13 +42,13 @@ This section explains how to create and run the first Microsoft Teams applicatio
 1. To configure the project with the Microsoft teams application, right Click on the M365 Agent Project and Select Microsoft M365 Account.
 
     ![Configure dependecies with MS Teams Application](images/MSTeams/configure-teams-dependencies.png)
-2. After configuring successfully, it dsipalys the window with Microsoft 365 Account. If you already have an account Select the available Office 365 account and click on continue. If you dont have account, create a new account and add the newly created account and click on continue.
+2. After configuring successfully, it displays the window with Microsoft 365 Account. If you already have an account Select the available Office 365 account and click on continue. If you dont have account, create a new account and add the newly created account and click on continue.
 
     ![Select the MS365 account to SignIn](images\MSTeams\ms365-account-select.png)
 3. After successful login. Click on Debug -> Start Debugging or click on F5 to run the application.
 4. Once the application is build successfully, prompts the output window with create MyTeamsApp application. Click on Add in the created application
 ![Newly created teams application](images\MSTeams\new-teams-app.png)
-5. On clicking on "Add" the new Microsfot application with personal Tab is created.
+5. On clicking on "Add" the new Microsoft application with personal Tab is created.
 ![New Teams application with Personal Tab](images\MSTeams\new-app-personal-tab.png)
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Kanban and Themes NuGet in the App
@@ -204,6 +204,6 @@ Now, add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Kanban comp
 {% endhighlight %}
 {% endtabs %}
 
-![Microsoft Teams Application with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor controls](images\MSTeams\output-msteams-syncfusion.png)
+![Microsoft Teams Application with Syncfusion Blazor controls](images\MSTeams\output-msteams-syncfusion.png)
 
 N> [View the complete Microsoft Teams Application with Blazor Syncfusion<sup style="font-size:70%">&reg;</sup> Controls on GitHub](https://github.com/SyncfusionExamples/Building-Apps-for-Microsoft-Teams-with-Blazor-using-Syncfusion-Components)
