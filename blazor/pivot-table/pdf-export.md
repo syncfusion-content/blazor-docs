@@ -19,7 +19,7 @@ N> The pivot table component can be exported to PDF format using options availab
 
 <SfButton OnClick="OnPdfExport" Content="Pdf Export"></SfButton>
 <SfPivotView TValue="ProductDetails" @ref="@pivot" AllowPdfExport="true" >
-    <PivotViewDataSourceSettings DataSource="@Data" EnableSorting=true>
+    <PivotViewDataSourceSettings DataSource="@data" EnableSorting=true>
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
             <PivotViewColumn Name="Quarter"></PivotViewColumn>
@@ -40,7 +40,7 @@ N> The pivot table component can be exported to PDF format using options availab
 
 @code{
     SfPivotView<ProductDetails> pivot;
-    public List<ProductDetails> Data { get; set; }
+    public List<ProductDetails> data { get; set; }
     protected override void OnInitialized()
     {
         this.data = ProductDetails.GetProductData().ToList();
@@ -345,7 +345,7 @@ N> By default, material theme will be applied to the pivot table during PDF expo
 
 <SfButton OnClick="OnPdfExport" Content="Pdf Export"></SfButton>
 <SfPivotView TValue="ProductDetails" @ref="@pivot" AllowPdfExport="true" >
-    <PivotViewDataSourceSettings DataSource="@Data" EnableSorting=true>
+    <PivotViewDataSourceSettings DataSource="@data" EnableSorting=true>
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
             <PivotViewColumn Name="Quarter"></PivotViewColumn>
@@ -366,7 +366,7 @@ N> By default, material theme will be applied to the pivot table during PDF expo
 
 @code{
     SfPivotView<ProductDetails> pivot;
-    public List<ProductDetails> Data { get; set; }
+    public List<ProductDetails> data { get; set; }
     protected override void OnInitialized()
     {
         this.data = ProductDetails.GetProductData().ToList();
@@ -416,39 +416,39 @@ The PDF export provides an option to change the file name of the document before
 @using Syncfusion.Blazor.Buttons
 
 <SfButton OnClick="OnPdfExport" Content="Pdf Export"></SfButton>
-<SfPivotView TValue="ProductDetails" @ref="@pivot" AllowPdfExport="true" >
-    <PivotViewDataSourceSettings DataSource="@Data" EnableSorting=true>
-        <PivotViewColumns>
-            <PivotViewColumn Name="Year"></PivotViewColumn>
-            <PivotViewColumn Name="Quarter"></PivotViewColumn>
-        </PivotViewColumns>
-        <PivotViewRows>
-            <PivotViewRow Name="Country"></PivotViewRow>
-            <PivotViewRow Name="Products"></PivotViewRow>
-        </PivotViewRows>
-        <PivotViewValues>
-            <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
-            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-        </PivotViewValues>
-        <PivotViewFormatSettings>
-            <PivotViewFormatSetting Name="Amount" Format="C0" UseGrouping=true></PivotViewFormatSetting>
-        </PivotViewFormatSettings>
-    </PivotViewDataSourceSettings>
+<SfPivotView TValue="ProductDetails" @ref="@pivot" AllowPdfExport="true">
+	<PivotViewDataSourceSettings DataSource="@data" EnableSorting=true>
+		<PivotViewColumns>
+			<PivotViewColumn Name="Year"></PivotViewColumn>
+			<PivotViewColumn Name="Quarter"></PivotViewColumn>
+		</PivotViewColumns>
+		<PivotViewRows>
+			<PivotViewRow Name="Country"></PivotViewRow>
+			<PivotViewRow Name="Products"></PivotViewRow>
+		</PivotViewRows>
+		<PivotViewValues>
+			<PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+			<PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+		</PivotViewValues>
+		<PivotViewFormatSettings>
+			<PivotViewFormatSetting Name="Amount" Format="C0" UseGrouping=true></PivotViewFormatSetting>
+		</PivotViewFormatSettings>
+	</PivotViewDataSourceSettings>
 </SfPivotView>
 
-@code{
-    SfPivotView<ProductDetails> pivot;
-    public List<PivotViewData.ProductDetails> data { get; set; }
-    protected override void OnInitialized()
-    {
-        this.data = PivotViewData.GetProductData().ToList();
-       //Bind your dataSource collection here, refer the getting started section. for more information.
-    }
-    public void OnPdfExport(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
-    {
-        Syncfusion.Blazor.Grids.PdfExportProperties pdfExportProperties = new Syncfusion.Blazor.Grids.PdfExportProperties() { FileName = "sample.pdf" };
-        this.pivot.ExportToPdfAsync(pdfExportProperties);
-    }
+@code {
+	SfPivotView<ProductDetails> pivot;
+	public List<ProductDetails> data { get; set; }
+	protected override void OnInitialized()
+	{
+		this.data = ProductDetails.GetProductData().ToList();
+		//Bind your dataSource collection here, refer the getting started section. for more information.
+	}
+	public void OnPdfExport(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+	{
+		Syncfusion.Blazor.Grids.PdfExportProperties pdfExportProperties = new Syncfusion.Blazor.Grids.PdfExportProperties() { FileName = "sample.pdf" };
+		this.pivot.ExportToPdfAsync(pdfExportProperties);
+	}
 }
 ```
 
@@ -466,7 +466,7 @@ The PDF export provides an option to change page size of the document before exp
 
 <SfButton OnClick="OnPdfExport" Content="Pdf Export"></SfButton>
 <SfPivotView TValue="ProductDetails" @ref="@pivot" AllowPdfExport="true" >
-    <PivotViewDataSourceSettings DataSource="@Data" EnableSorting=true>
+    <PivotViewDataSourceSettings DataSource="@data" EnableSorting=true>
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
             <PivotViewColumn Name="Quarter"></PivotViewColumn>
@@ -487,7 +487,7 @@ The PDF export provides an option to change page size of the document before exp
 
 @code{
     SfPivotView<ProductDetails> pivot;
-    public List<ProductDetails> Data { get; set; }
+    public List<ProductDetails> data { get; set; }
     protected override void OnInitialized()
     {
         this.data = ProductDetails.GetProductData().ToList();
@@ -512,39 +512,39 @@ The PDF export provides an option to change page orientation of the document bef
 @using Syncfusion.Blazor.Buttons
 
 <SfButton OnClick="OnPdfExport" Content="Pdf Export"></SfButton>
-<SfPivotView TValue="ProductDetails" @ref="@pivot" AllowPdfExport="true" >
-    <PivotViewDataSourceSettings DataSource="@Data" EnableSorting=true>
-        <PivotViewColumns>
-            <PivotViewColumn Name="Year"></PivotViewColumn>
-            <PivotViewColumn Name="Quarter"></PivotViewColumn>
-        </PivotViewColumns>
-        <PivotViewRows>
-            <PivotViewRow Name="Country"></PivotViewRow>
-            <PivotViewRow Name="Products"></PivotViewRow>
-        </PivotViewRows>
-        <PivotViewValues>
-            <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
-            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-        </PivotViewValues>
-        <PivotViewFormatSettings>
-            <PivotViewFormatSetting Name="Amount" Format="C0" UseGrouping=true></PivotViewFormatSetting>
-        </PivotViewFormatSettings>
-    </PivotViewDataSourceSettings>
+<SfPivotView TValue="ProductDetails" @ref="@pivot" AllowPdfExport="true">
+	<PivotViewDataSourceSettings DataSource="@data" EnableSorting=true>
+		<PivotViewColumns>
+			<PivotViewColumn Name="Year"></PivotViewColumn>
+			<PivotViewColumn Name="Quarter"></PivotViewColumn>
+		</PivotViewColumns>
+		<PivotViewRows>
+			<PivotViewRow Name="Country"></PivotViewRow>
+			<PivotViewRow Name="Products"></PivotViewRow>
+		</PivotViewRows>
+		<PivotViewValues>
+			<PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+			<PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+		</PivotViewValues>
+		<PivotViewFormatSettings>
+			<PivotViewFormatSetting Name="Amount" Format="C0" UseGrouping=true></PivotViewFormatSetting>
+		</PivotViewFormatSettings>
+	</PivotViewDataSourceSettings>
 </SfPivotView>
 
-@code{
-    SfPivotView<ProductDetails> pivot;
-    public List<ProductDetails> Data { get; set; }
-    protected override void OnInitialized(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
-    {
-        this.data = ProductDetails.GetProductData().ToList();
-       //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-    }
-    public void OnPdfExport()
-    {
-        Syncfusion.Blazor.Grids.PdfExportProperties pdfExportProperties = new Syncfusion.Blazor.Grids.PdfExportProperties() { PageOrientation = Syncfusion.Blazor.Grids.PageOrientation.PageOrientation.Landscape };
-        this.pivot.ExportToPdfAsync(pdfExportProperties);
-    }
+@code {
+	SfPivotView<ProductDetails> pivot;
+	public List<ProductDetails> data { get; set; }
+	protected override void OnInitialized()
+	{
+		this.data = ProductDetails.GetProductData().ToList();
+		//Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+	}
+	public void OnPdfExport()
+	{
+		Syncfusion.Blazor.Grids.PdfExportProperties pdfExportProperties = new Syncfusion.Blazor.Grids.PdfExportProperties() { PageOrientation = Syncfusion.Blazor.Grids.PageOrientation.Landscape };
+		this.pivot.ExportToPdfAsync(pdfExportProperties);
+	}
 }
 ```
 
@@ -638,72 +638,72 @@ The event [PdfQueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 @using Syncfusion.Blazor.Grids
 
 <SfButton OnClick="OnPdfExport" Content="Pdf Export"></SfButton>
-<SfPivotView TValue="ProductDetails" @ref="@pivot" EnableVirtualization="true" AllowPdfExport="true" >
-    <PivotViewDataSourceSettings DataSource="@Data" EnableSorting=true>
-        <PivotViewColumns>
-            <PivotViewColumn Name="Year"></PivotViewColumn>
-            <PivotViewColumn Name="Quarter"></PivotViewColumn>
-        </PivotViewColumns>
-        <PivotViewRows>
-            <PivotViewRow Name="Country"></PivotViewRow>
-            <PivotViewRow Name="Products"></PivotViewRow>
-        </PivotViewRows>
-        <PivotViewValues>
-            <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
-            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-        </PivotViewValues>
-        <PivotViewFormatSettings>
-            <PivotViewFormatSetting Name="Amount" Format="C0" UseGrouping=true></PivotViewFormatSetting>
-        </PivotViewFormatSettings>
-    </PivotViewDataSourceSettings>
-     <PivotViewEvents TValue="ProductDetails" PdfQueryCellInfo="PdfQueryCellEvent"></PivotViewEvents>
+<SfPivotView TValue="ProductDetails" @ref="@pivot" EnableVirtualization="true" AllowPdfExport="true">
+	<PivotViewDataSourceSettings DataSource="@data" EnableSorting=true>
+		<PivotViewColumns>
+			<PivotViewColumn Name="Year"></PivotViewColumn>
+			<PivotViewColumn Name="Quarter"></PivotViewColumn>
+		</PivotViewColumns>
+		<PivotViewRows>
+			<PivotViewRow Name="Country"></PivotViewRow>
+			<PivotViewRow Name="Products"></PivotViewRow>
+		</PivotViewRows>
+		<PivotViewValues>
+			<PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+			<PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+		</PivotViewValues>
+		<PivotViewFormatSettings>
+			<PivotViewFormatSetting Name="Amount" Format="C0" UseGrouping=true></PivotViewFormatSetting>
+		</PivotViewFormatSettings>
+	</PivotViewDataSourceSettings>
+	<PivotViewEvents TValue="ProductDetails" PdfQueryCellInfo="PdfQueryCellEvent"></PivotViewEvents>
 </SfPivotView>
 
-@code{
-    private SfPivotView<ProductDetails> pivot;
-    public List<ProductDetails> Data { get; set; }
+@code {
+	private SfPivotView<ProductDetails> pivot;
+	public List<ProductDetails> data { get; set; }
 
-    protected override void OnInitialized()
-    {
-        this.data = ProductDetails.GetProductData().ToList();
-        // Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-    }
-    
-    public void OnPdfExport(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
-    {
-        this.pivot.ExportToPdfAsync();
-    }
+	protected override void OnInitialized()
+	{
+		this.data = ProductDetails.GetProductData().ToList();
+		// Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+	}
 
-    // Triggers every time for row header and value cells during exporting.
-    public void PdfQueryCellEvent(PdfQueryCellInfoEventArgs<ProductDetails> args)
-    {
-        Matrix<Matrix<AxisSet>> pivotValues = Pivot?.PivotValues;
-        AxisSet cellInfo = null;
-        if (Pivot?.EnableVirtualization == true)
-        {
-            if (pivotValues != null)
-            {
-                cellInfo = pivotValues[args.RowIndex]?[args.ColumnIndex];
-            }
-        }
-        else
-        {
-            IDictionary<string, object> cellCoordinates = args.Column?.CustomAttributes;
-            if (pivotValues != null && cellCoordinates != null && cellCoordinates.ContainsKey("aria-colindex") && cellCoordinates.ContainsKey("aria-rowindex"))
-            {
-                // You will get the row index required to find the current cell information from the pivot value collection here.
-                int rowIndex = int.Parse(cellCoordinates["aria-rowindex"].ToString(), System.Globalization.NumberStyles.None);
-                // You will get the column index required to find the current cell information from the pivot value collection here.
-                int colIndex = int.Parse(cellCoordinates["aria-colindex"].ToString(), System.Globalization.NumberStyles.None);
-                cellInfo = pivotValues[rowIndex]?[colIndex];
-            }
-        }
-        if (cellInfo?.IsGrandSum == true || cellInfo?.Axis == "row")
-        {
-            args.Style.BackgroundBrush = new Syncfusion.PdfExport.PdfSolidBrush(cellInfo?.Axis == "row" ? new Syncfusion.PdfExport.PdfColor(System.Drawing.Color.LightGoldenrodYellow) : new Syncfusion.PdfExport.PdfColor(System.Drawing.Color.LightYellow));
-            args.Style.TextPen = new Syncfusion.PdfExport.PdfPen(System.Drawing.Color.IndianRed);
-        }
-    }
+	public void OnPdfExport(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+	{
+		this.pivot.ExportToPdfAsync();
+	}
+
+	// Triggers every time for row header and value cells during exporting.
+	public void PdfQueryCellEvent(PdfQueryCellInfoEventArgs<ProductDetails> args)
+	{
+		Matrix<Matrix<AxisSet>> pivotValues = pivot?.PivotValues;
+		AxisSet cellInfo = null;
+		if (pivot?.EnableVirtualization == true)
+		{
+			if (pivotValues != null)
+			{
+				cellInfo = pivotValues[args.RowIndex]?[args.ColumnIndex];
+			}
+		}
+		else
+		{
+			IDictionary<string, object> cellCoordinates = args.Column?.CustomAttributes;
+			if (pivotValues != null && cellCoordinates != null && cellCoordinates.ContainsKey("aria-colindex") && cellCoordinates.ContainsKey("aria-rowindex"))
+			{
+				// You will get the row index required to find the current cell information from the pivot value collection here.
+				int rowIndex = int.Parse(cellCoordinates["aria-rowindex"].ToString(), System.Globalization.NumberStyles.None);
+				// You will get the column index required to find the current cell information from the pivot value collection here.
+				int colIndex = int.Parse(cellCoordinates["aria-colindex"].ToString(), System.Globalization.NumberStyles.None);
+				cellInfo = pivotValues[rowIndex]?[colIndex];
+			}
+		}
+		if (cellInfo?.IsGrandSum == true || cellInfo?.Axis == "row")
+		{
+			args.Style.BackgroundBrush = new Syncfusion.PdfExport.PdfSolidBrush(cellInfo?.Axis == "row" ? new Syncfusion.PdfExport.PdfColor(System.Drawing.Color.LightGoldenrodYellow) : new Syncfusion.PdfExport.PdfColor(System.Drawing.Color.LightYellow));
+			args.Style.TextPen = new Syncfusion.PdfExport.PdfPen(System.Drawing.Color.IndianRed);
+		}
+	}
 }
 ```
 
@@ -726,7 +726,7 @@ The event [PdfHeaderQueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfus
 
 <SfButton OnClick="OnPdfExport" Content="Pdf Export"></SfButton>
 <SfPivotView TValue="ProductDetails" @ref="@pivot" EnableVirtualization="true" AllowPdfExport="true" >
-    <PivotViewDataSourceSettings DataSource="@Data" EnableSorting=true>
+    <PivotViewDataSourceSettings DataSource="@data" EnableSorting=true>
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
             <PivotViewColumn Name="Quarter"></PivotViewColumn>
@@ -748,7 +748,7 @@ The event [PdfHeaderQueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfus
 
 @code{
     private SfPivotView<ProductDetails> pivot;
-    public List<ProductDetails> Data { get; set; }
+    public List<ProductDetails> data { get; set; }
 
     protected override void OnInitialized()
     {
@@ -764,10 +764,10 @@ The event [PdfHeaderQueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfus
     // Triggers every time for column header cell during exporting.
     public void PdfHeaderEvent(PdfHeaderQueryCellInfoEventArgs args)
     {
-        Matrix<Matrix<AxisSet>> pivotValues = Pivot?.PivotValues;
+        Matrix<Matrix<AxisSet>> pivotValues = pivot?.PivotValues;
         AxisSet cellInfo = null;
 
-        if (Pivot?.EnableVirtualization == true)
+        if (pivot?.EnableVirtualization == true)
         {
             if (pivotValues != null)
             {
