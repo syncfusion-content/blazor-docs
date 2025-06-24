@@ -206,7 +206,7 @@ Here’s an example code snippet that demonstrates how to enable Row drag and dr
 
 ## Drag and drop in empty area
 
-The Syncfusion Blazor DataGrid supports drag and drop functionality, allowing rows to be dropped both within and outside of the DataGrid. By default, the `AllowEmptyAreaDrop` property is enabled, enhancing the user experience by allowing rows to be dropped anywhere within the DataGrid content. Whenever rows are dropped in an empty area, they are placed at the end of the DataGrid.
+The Syncfusion Blazor DataGrid supports drag and drop functionality. By default, the `AllowEmptyAreaDrop` property is enabled, enhancing the user experience by allowing rows to be dropped anywhere within the DataGrid content. Whenever rows are dropped in an empty area, they are placed at the end of the DataGrid. This applies to both within the same Grid and between different DataGrids.
  
 If you prefer to show the drop indicator only when hovering over rows, you can disable the `AllowEmptyAreaDrop` property to achieve this.
 
