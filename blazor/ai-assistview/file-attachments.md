@@ -15,7 +15,7 @@ You can use the `AttachmentSettings` property to configure the attachments in th
 
 ### Enabling attachment
 
-You can use the `Enable` property to enable the attachment in the AI AssistView.
+You can use the `Enable` property to enable the attachment in the AI AssistView. By default, the value is `false`.
 
 ```cshtml
 @using Syncfusion.Blazor.InteractiveChat
@@ -27,7 +27,9 @@ You can use the `Enable` property to enable the attachment in the AI AssistView.
 @code {
     private AssistViewAttachmentSettings attachmentSettings = new AssistViewAttachmentSettings()
     {
-        Enable = true
+        Enable = true,
+        SaveUrl = "https://blazor.syncfusion.com/services/production/api/FileUploader/Save",
+        RemoveUrl = "https://blazor.syncfusion.com/services/production/api/FileUploader/Remove"
     };
     private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
     {
@@ -37,6 +39,7 @@ You can use the `Enable` property to enable the attachment in the AI AssistView.
     }
 }
 ```
+![Blazor AI AssistView Attachment Enable](./images/enableAttachment.png)
 
 ### Setting SaveUrl and RemoveUrl
 
@@ -52,6 +55,7 @@ You can use the `SaveUrl` and `RemoveUrl` property to add the save and remove th
 @code {
     private AssistViewAttachmentSettings attachmentSettings = new AssistViewAttachmentSettings()
     {
+        Enable = true,
         SaveUrl = "https://blazor.syncfusion.com/services/production/api/FileUploader/Save",
         RemoveUrl = "https://blazor.syncfusion.com/services/production/api/FileUploader/Remove"
     };
@@ -63,10 +67,12 @@ You can use the `SaveUrl` and `RemoveUrl` property to add the save and remove th
     }
 }
 ```
+![Blazor AI AssistView Attachment Enable](./images/attachment.png)
 
 ### Setting file type
 
 You can use the `AllowedFileTypes` property to upload the specific file types in the attachment.
+
 ```cshtml
 @using Syncfusion.Blazor.InteractiveChat
 
@@ -77,6 +83,9 @@ You can use the `AllowedFileTypes` property to upload the specific file types in
 @code {
     private AssistViewAttachmentSettings attachmentSettings = new AssistViewAttachmentSettings()
     {
+        Enable = true,
+        SaveUrl = "https://blazor.syncfusion.com/services/production/api/FileUploader/Save",
+        RemoveUrl = "https://blazor.syncfusion.com/services/production/api/FileUploader/Remove",
         AllowedFileTypes = ".png",
     };
     private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
@@ -87,32 +96,11 @@ You can use the `AllowedFileTypes` property to upload the specific file types in
     }
 }
 ```
+![Blazor AI AssistView Attachment Enable](./images/fileType.png)
 
 ### Setting file size
 
-You can use the `MaxFileSize` property to allowed a maximum file size of the upload file in the AI AssistView.
-
-```cshtml
-@using Syncfusion.Blazor.InteractiveChat
-
-<div class="aiassist-container" style="height: 350px; width: 650px;">
-    <SfAIAssistView AttachmentSettings="attachmentSettings" PromptRequested="PromptRequest"></SfAIAssistView>
-</div>
-
-@code {
-    private AssistViewAttachmentSettings attachmentSettings = new AssistViewAttachmentSettings()
-    {
-        MaxFileSize = 1000000
-    };
-    private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
-    {
-        await Task.Delay(1000);
-        var defaultResponse = "For real-time prompt processing, connect the AI AssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
-        args.Response = defaultResponse;
-    }
-}
-```
-
+You can use the `MaxFileSize` property to allow the maximum file size of the upload file in the AI AssistView. By default, its value is `2000000` bytes.
 
 ```cshtml
 @using Syncfusion.Blazor.InteractiveChat
@@ -138,4 +126,4 @@ You can use the `MaxFileSize` property to allowed a maximum file size of the upl
 }
 ```
 
-![Blazor AI AssistView Attachment Enable](./images/attachment.png)
+![Blazor AI AssistView Attachment Enable](./images/fileSizeFailure.png)
