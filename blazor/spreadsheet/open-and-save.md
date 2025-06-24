@@ -7,17 +7,19 @@ control: Spreadsheet
 documentation: ug
 ---
 
-# Open save in Blazor Spreadsheet Component
+# Open and save in Blazor Spreadsheet component
 
-The Open and Save features in our spreadsheet component enable users to efficiently manage their Excel files. These functionalities allow you to open existing excel files for analysis and modification, as well as save updates or new files to your system in compatible formats.
+The open and save features in our spreadsheet component enable users to efficiently manage their Excel files. These functionalities allow you to open existing excel files for analysis and modification, as well as save updates or new files to your system in compatible formats.
 
-## Open
-The Spreadsheet Component opens an Excel document with its data, style, format, and more. 
+## Open an excel file from UI
+The Spreadsheet component opens an Excel document with its data, style, format, and more. 
 
 ### User Interface:
 In user interface you can open an Excel document by clicking `File > Open` menu item in ribbon.
 
-![the interface option for opening Excel files](./images/file-open-feature.png)
+![the user interface option for opening Excel files](./images/file-open-feature.png)
+
+![the user interface for selecting Excel file from file explorer](./images/select-excel-file.png)
 
 ### Open an excel file from local path
 
@@ -34,7 +36,7 @@ The Syncfusion Blazor Spreadsheet component allows you to load Excel files direc
     public byte[] DataSourceBytes { get; set; }
     protected void Task OnInitialized()
     {
-        string filePath = "//file path";
+        string filePath = "wwwroot/Sample.xlsx";
         DataSourceBytes = File.ReadAllBytes(filePath);
     }
 }
@@ -57,7 +59,7 @@ You can also load files by passing a Base64-encoded Excel file. This is useful w
     public byte[] DataSourceBytes { get; set; }
     protected override void OnInitialized()
     {
-        string base64String = "//base64String";
+        string base64String = "Enter your base64 string here";
         DataSourceBytes = Convert.FromBase64String(base64String);     
     }
 }
@@ -70,13 +72,15 @@ The following list of Excel file formats are supported in Spreadsheet:
 * MS Excel (.xlsx)
 * MS Excel 97-2003 (.xls)
 
-## Save
-The Spreadsheet Component saves its data, style, format, and more as Excel file document.
+## Save an excel file using UI
+The Spreadsheet component saves its data, style, format, and more as Excel file document.
 
 ### User Interface:
 In user interface, you can save Spreadsheet data as Excel document by clicking `File > Save As` menu item in ribbon.
 
-![The interface option for saving Excel files](./images/file-save-feature.png)
+![The user interface option for saving Excel files](./images/file-save-feature.png)
+
+![The user interface for entering a file name and saving it](./images/file-save-dialogbox.png)
 
 ### Supported file formats
 * MS Excel (.xlsx)
