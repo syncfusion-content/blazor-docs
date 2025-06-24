@@ -9,10 +9,10 @@ documentation: ug
 
 # Open and Save in Blazor Spreadsheet component
 
-The **Open** and **Save** options in the spreadsheet component enable efficient management of Excel files. These functionalities support opening existing Excel files for analysis and modification, as well as saving updates or new files to the system in compatible formats.
+The **Open** and **Save** options in the Spreadsheet component enable efficient management of Excel files. These functionalities support opening existing Excel files for analysis and modification, as well as saving updates or new files to the system in compatible formats.
 
 ## Open
-The spreadsheet component can open an Excel document along with its data, styles, formats, and more. 
+The Spreadsheet component can open an Excel document along with its data, styles, formats, and more. 
 
 ### Open an Excel file via the UI
 To open an Excel document using the interface, select the `File > Open` option from the ribbon menu.
@@ -22,7 +22,7 @@ To open an Excel document using the interface, select the `File > Open` option f
 ![File explorer showing Excel file](./images/select-excel-file.png)
 
 ### Open an Excel file from a local path
-The Syncfusion Blazor Spreadsheet component enables loading Excel files directly by converting them into byte arrays. This method is particularly effective for dynamically loading spreadsheet content from a backend service.
+The Syncfusion Blazor Spreadsheet component enables loading Excel files directly by converting them into byte arrays. This method is particularly effective for dynamically loading Spreadsheet content from a backend service.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -73,10 +73,10 @@ The following format is supported for opening:
 * MS Excel 97-2003 (.xls)
 
 ## Save
-The spreadsheet component can save data, styles, formatting, and additional content as an Excel file.
+The Spreadsheet component can save data, styles, formatting, and additional content as an Excel file.
 
 ### Save an Excel file using UI
-To save the spreadsheet content through the user interface, select the `File > Save As` option from the ribbon menu.
+To save the Spreadsheet content through the user interface, select the `File > Save As` option from the ribbon menu.
 
 ![UI showing file menu with save option](./images/file-save-feature.png)
 
