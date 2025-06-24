@@ -17,9 +17,9 @@ The Spreadsheet component opens an Excel document with its data, style, format, 
 ### User interface:
 In user interface you can open an Excel document by clicking `File > Open` menu item in ribbon.
 
-![the user interface option for opening Excel files](./images/file-open-feature.png)
+![User interface showing the File menu with Open option](./images/file-open-feature.png)
 
-![the user interface for selecting Excel file from file explorer](./images/select-excel-file.png)
+![Excel file from file explorer](./images/select-excel-file.png)
 
 ### Open an excel file from local path
 
@@ -78,9 +78,9 @@ The Spreadsheet component saves its data, style, format, and more as Excel file 
 ### User interface:
 In user interface, you can save Spreadsheet data as Excel document by clicking `File > Save As` menu item in ribbon.
 
-![The user interface option for saving Excel files](./images/file-save-feature.png)
+![User interface showing the File menu with Save option](./images/file-save-feature.png)
 
-![The user interface for entering a file name and saving it](./images/file-save-dialogbox.png)
+[User interface for entering a file name and saving it](./images/file-save-dialogbox.png)
 
 ### Supported file formats
 * MS Excel (.xlsx)
