@@ -717,7 +717,7 @@ For more information about selector constraints, refer to the [BoundaryConstrain
 N> By default, the following boundary constraints are enabled for the snap functionality in the diagram,
 <br/>* Diagram
 
-## How to Inherit Behaviors from Diagram
+## How to Inherit Behaviors
 
 Some of the behaviors can be defined through both the specific object (node or connector) and diagram. When the behaviors are contradictorily defined through both, the actual behavior is set through inherit options.
 

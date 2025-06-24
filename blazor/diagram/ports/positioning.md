@@ -82,7 +82,7 @@ The following table shows the relationship between the shape port position and p
 | (1,0.5) | ![Blazor Diagram Port in Right Center Offset Values](../images/blazor-diagram-port-in-rightcenter-offset-values.png) |
 | (1,1) | ![Blazor Diagram Port in Right Bottom Offset Values](../images/blazor-diagram-port-in-rightbottom-offset-values.png) |
 
-## How to set Path Position for Connector Port
+## How to Set Path Position for Connector Port
 
 The `PathPosition` property allows you to place a connector port along the path of a connector. It accepts a value between 0 to 1, where:
 

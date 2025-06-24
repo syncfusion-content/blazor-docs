@@ -25,7 +25,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Connector Endpoint Handle in Blazor Diagram](images/connector-endpoint.png)
 
-## How to Customize the Connector Endpoint Handle When Connected
+## How to Customize the Connector Endpoint Handle When it is Connected
 
 To enhance the visual appearance of the connector endpoint handle when it is in a connected state, apply the following CSS code:
 
@@ -41,7 +41,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Connector Endpoint Connected in Blazor Diagram](images/Connector-Endpoint-Connected.gif)
 
-## How to Customize the Connector Endpoint Handle When Disabled
+## How to Customize the Connector Endpoint Handle When it Disabled
 
 To customize the visual appearance of the connector endpoint handle when it is in a disabled state, apply the following CSS code to your Blazor application:
 

@@ -316,7 +316,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Blazor Diagram Label with Custom Annotation](../images/blazor-diagram-label-with-custom-annotation.png)
 
-## How to Change Annotation Font Style at Runtime
+## How to Update Annotation Font Style at Runtime
 
 You can change the font style of the annotations with the font specific properties such as [FontSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_FontSize), [FontFamily](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_FontFamily), and [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_Color). The following code explains how to update the font style of the annotation.
 
@@ -538,7 +538,7 @@ N> The default value is [InheritReadOnly](https://help.syncfusion.com/cr/blazor/
 
 Refer to [Constraints](https://blazor.syncfusion.com/documentation/diagram/constraints) to learn about how to enable or disable the annotation constraints.
 
-## How to Use Templates in Annotations
+## How to Define Templates in Annotations
 The Diagram provides support for templates in annotations. You can define HTML content at the tag level and specify the use of a template using the [UseTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_UseTemplate) property. If you need to define separate templates for each annotation, you can differentiate them by using the ID property.
 
 The following code illustrates how to define a template for a node's annotation. Similarly, you can define templates for connectors.

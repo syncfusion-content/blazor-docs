@@ -13,7 +13,7 @@ Port is a special connection point in a Node where you can glue the connectors. 
 
 ![Port in Blazor Diagram](../images/blazor-diagram-port.png)
 
-## How to Create Node-to-Node and Port-to-Port Connections
+## How to Create Node to Node and Port to Port Connections
 
 There are two main types of connections, node to node and port to port. The difference between these two connections is whether or not a connector remains glued to a specific connection point when you move the attached node or connector.
 
@@ -466,7 +466,7 @@ protected override void OnInitialized()
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ActionofPorts/UpdatePorts)
 
-## How to Set Connection Direction for Ports
+## How to Specify Connection Direction for Ports
 
 The [ConnectionDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_ConnectionDirection) property of a port allows users to specify the direction in which a connector should establish a connection. This can be either to the port incoming or from the port outgoing.
 

@@ -36,7 +36,6 @@ The following image shows how to swap lanes.
 ![Lane Swapping](../Swimlane-images/Lane_Swapping.gif)
 
 ## How to Interact with Child Nodes in Lanes
-## How to Interact with Child Nodes in Lanes
 
 * You can resize the child node within swimlanes.
 * You can drag the child nodes within the lane.

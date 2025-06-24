@@ -11,7 +11,7 @@ documentation: ug
 
 The [SfDiagramOverviewComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Overview.SfDiagramOverviewComponent.html) provides a miniature view of the entire diagram content, offering a comprehensive preview at a glance. This powerful feature enables users to effortlessly navigate, pan, and zoom to specific areas of interest within large and complex diagrams. By presenting a bird's-eye view, it enhances the user's ability to understand the diagram's structure and quickly locate desired sections, significantly improving overall usability and efficiency.
 
-## How to Use Overview to Easily View and Move Within Large Diagrams
+## Usage Scenario
 
 When working with an extensive diagram, it can be challenging to maintain context or navigate efficiently between different sections. The traditional approach of zooming out to view the entire diagram and then zooming in on a specific area can be cumbersome, especially when frequent navigation is required.
 

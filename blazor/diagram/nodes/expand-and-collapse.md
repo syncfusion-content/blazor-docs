@@ -250,10 +250,10 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ## How to Customize Expand and Collapse Icon
 Diagram allows you to customize the Expand and collapse Icons of the Node. To explore Expand and Collapse icon properties, refer to [DiagramExpandIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExpandIcon.html) and [DiagramCollapseIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramCollapseIcon.html).
 
-### How to Update Expand or Collapse Icon Size
+### How to Update Expand and Collapse Icon Size
 The size of the icon can be changed with the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramIcon.html#Syncfusion_Blazor_Diagram_DiagramIcon_Height) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramIcon.html#Syncfusion_Blazor_Diagram_DiagramIcon_Width) properties.
 
-### How to Customize Expand or Collapse Icon Shape
+### How to Customize Expand and Collapse Icon Shape
 
 The shape of an [ExpandIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_ExpandIcon) and a [CollapseIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_CollapseIcon) can be changed by using the Shape property of [DiagramExpandIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExpandIcon.html) and [DiagramCollapseIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramCollapseIcon.html) respectively. 
 To explore the different types of DiagramExpandIcon shapes, refer to [DiagramExpandIcons](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExpandIcons.html).

@@ -13,7 +13,7 @@ Serialization is the process of saving and loading the persistent state of the d
 
 {% youtube "youtube:https://www.youtube.com/watch?v=2hhl00gMObc" %} 
 
-## How to Enable Two-Way Binding
+## How to Use Two-Way Binding
 
 When saving and loading the diagram, we must use two-way binding (such as @bind) for nodes and connectors.
 

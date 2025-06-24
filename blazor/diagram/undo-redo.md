@@ -11,7 +11,7 @@ documentation: ug
 
 The Blazor Diagram component tracks the history of actions performed after initialization and provides support to reverse and restore those changes.
 
-## How to Enable Undo and Redo
+## Undo and Redo
 
 The [Diagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html) offers built-in functionality to track changes made through both user interactions and public APIs. These changes can be reverted or restored using shortcut keys or commands.
 

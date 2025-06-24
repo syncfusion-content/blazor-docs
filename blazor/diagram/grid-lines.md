@@ -150,7 +150,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Snapping
 
-### How to Enable or Disable Snap to Lines
+### How to Enable Snap to Lines
 
 This feature allows the diagram objects to snap to the nearest intersection of gridlines while being dragged or resized. This feature enables easier alignment during layout or design.
 
@@ -233,7 +233,7 @@ By default, the objects are snapped towards the nearest gridline. The gridline o
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Gridlines/CustomizeSnapInterval)
 
 
-### How to Enable or Disable Snap to Object
+### How to Enable Snap to Object
 
 The snap to object provides visual cues to assist with aligning and spacing diagram elements. A node can be snapped with its neighboring objects based on certain alignments. Such alignments are visually represented as smart guides.
 

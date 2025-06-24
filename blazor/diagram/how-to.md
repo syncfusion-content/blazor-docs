@@ -523,7 +523,7 @@ The [ClearSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dia
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/ClearSelection)
 
-## How to Get a Diagram Object by ID
+## How to Get Object in the Diagram
 The [GetObject](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_GetObject_System_String_) method in SfDiagramComponent accepts an ID as a parameter and returns an IDiagramObject. You can retrieve a specific connector or node by passing its unique identifier to this method. This powerful functionality allows for easy access and manipulation of diagram elements within your Blazor application.
 
 ```cshtml
@@ -1612,7 +1612,7 @@ The [RefreshDataSourceAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Methods/RefereshDataSource)
 
-## How to Get the Parent Object
+## How to Get the Parent of Object
 
 * The [GetParent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramObject.html#Syncfusion_Blazor_Diagram_DiagramObject_GetParent) method is used to retrieve the parent object of a specific diagram element when invoked. This method is particularly useful for navigating the hierarchy of objects within the diagram structure.
 

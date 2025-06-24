@@ -80,7 +80,7 @@ During a single click, any existing item in the selection list is cleared, and o
 
 Clicking and dragging the diagram area allows to create a rectangular region. The elements that are covered under the rectangular region are selected at the end.
 
-## How to Use the Diagram Element Highlighter
+## Diagram Element Highlighter
 
 The Diagram Element Highlighter feature enhances the selection process by visually distinguishing selected elements and indicating which elements are part of a selection when performing multiple selection actions.
 
@@ -808,7 +808,7 @@ The appearance of the user handle can be customized by using the [Size](https://
 
 ![Zoom Pan in Blazor Diagram](images/blazor-diagram-zoom-pan.gif)
 
-## How to Use Keyboard Shortcuts to Interact 
+## Keyboard Shortcuts and Navigation
 
 Diagram provides support to interact with elements with key gestures. By default, some in-built commands are bound with a relevant set of key combinations.
 

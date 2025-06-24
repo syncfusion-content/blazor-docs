@@ -104,7 +104,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Editing Bezier Segment in Blazor Diagram](../../../images/blazor-diagram-edit-bezier-segment.gif)
 
-## How to Automatically Avoid Node Overlap with Bezier Connectors
+## How to Avoid Overlapping with Bezier
 
 By default, when there are no segments defined for a bezier connector, the bezier segments will be created automatically and routed in such a way that avoids overlapping with the source and target nodes.
 

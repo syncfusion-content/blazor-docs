@@ -292,7 +292,7 @@ The following code example illustrates how to define boundary constraints with r
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/PageSettings/BoundaryConstraints)
 
-## How to Make Diagram Responsive to Its Parent Container
+## How to Make Responsive with Parent Container
 
 By setting the value in percentage, the diagram gets its dimention with respect to its parent container.Specify the Width and Height as 100% to make the diagram element fill its parent container.
 Setting the Height to 100% requires the diagram parent element to have explicit height or you can use calc function to set explicit height based on the browser layout.
@@ -325,7 +325,7 @@ The following code example illustrates how to set width and height in percentage
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/PageSettings/ResponsiveWithParentContainer)
 
-## How to Handle Page Settings Changes Using Callback Methods
+## How to Handle Page Settings Property Changes Using Callback Methods
 
 * BackgroundChanged : Specifies the callback to trigger when the Background value changes.
 * BoundaryConstraintsChanged : Specifies the callback to trigger when the BoundaryConstraints value changes.

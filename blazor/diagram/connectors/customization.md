@@ -9,7 +9,7 @@ documentation: ug
 
 # Customization in Blazor Diagram Component
 
-## How to Add and Customize Connector Decorators
+## How to Customize Connector Decorators
 
 Diagram allows you to customize the connector appearances. The following topics shows how to customize several properties of the connectors.
 
@@ -318,7 +318,7 @@ Limitation: [BezierSegment](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 ![Blazor Diagram Connector with Line Bridge](../images/blazor-diagram-connector-with-bridging.png)
 
-## How to Set Corner Radius for Connectors
+## How to Update Corner Radius for Connector
 
 Corner radius allows you to create connectors with rounded corners. The radius of the rounded corner is set with the [CornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_CornerRadius) property.
 
@@ -590,7 +590,7 @@ The following code illustrates how to render connector based on the stack order.
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/ZIndexProperty)
 
-## How to Set HitPadding for Connector
+## How to Set Hit Padding for Connector
 
 * The [HitPadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_HitPadding) refers to the space around the connector's edges. To make it easy to select, selecting when the mouse comes near its vicinity area should be possible. The HitPadding property allows you to customize the vicinity area while selecting. The default value is 10px. Within the hit padding region, the connector can be selected and deselected.
 
@@ -632,7 +632,7 @@ The following code illustrates how to set the HitPadding for the connector.
 }
 ```
 
-## How to Set SourcePadding and TargetPadding for Connectors
+## How to Set Source Padding and Target Padding for Connector
 
 * The [SourcePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_SourcePadding) property of a connector defines space between the source point and the source node of the connector.
 
@@ -685,7 +685,7 @@ The following code example illustrates how to leave space between the connection
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Customization/SourcePaddingAndTargetPadding)
 
-## How to Set ConnectionPadding for Connector
+## How to Set Connection Padding for Connector
 
 * The [ConnectionPadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_ConnectionPadding) property of a connector defines the connection padding value of the connector.
 

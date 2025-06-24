@@ -147,7 +147,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 >**Note:** In the DataSourceSettings, the type of the ID and ParentID properties is string. The provided DataSource should have a parent-child relationship. It is necessary for at least one node to have an empty ParentID.
 
-## How to Create a Radial Tree Using Nodes and Connectors
+## How to Create a Radial Tree With Nodes and Connectors
 
 You can render a radial tree layout without using a Datasource. The following code demonstrates how to render a radial tree layout without using a DataSource.
 

@@ -248,7 +248,7 @@ You can customize the margin for each side (top, right, bottom, left) using the 
 }
 ```
 
-## How to Handle Connector Overlap in Layout
+## How to Handle Connector Segment Overlap in Layout
 
 The [SamePoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_SamePoint) property controls whether connectors in the layout should be arranged without overlapping other connectors. By setting this property to true, the diagram ensures that connectors are spaced out properly to avoid any overlap, making the layout more readable and visually clear.
 

@@ -325,7 +325,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Customizing Appearance of Userhandle in Blazor Diagram](images/blazor-diagram-custom-user-handle-appearance.png)
 
-### How to Control User Handle Visibility
+### How to Change the Userhandle's Visible Target
 
 The [VisibleTarget](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.VisibleTarget.html) property determines the visibility of the user handle for specific diagram elements. It allows you to control whether the user handle is displayed for Nodes, Connectors, or both. By configuring this property, you can customize the user interaction experience and ensure that handles are only visible for the desired elements in your diagram.
 
@@ -652,7 +652,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Template for UserHandle](images/UserHandleTemplate.gif)
 
-## How to Use Fixed User Handles
+## Fixed User Handles
 
 The [FixedUserHandle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html) feature allows you to add customizable, readily accessible commands around nodes and connectors without requiring selection. This enhances user interaction and streamlines frequently used operations within the diagram.
 

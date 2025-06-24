@@ -217,7 +217,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Dragging Connector End Point in Blazor Diagram](../images/blazor-diagram-drag-connector-end-point.gif)
 
-## How to Enable Connector Routing
+## How to Route the Connectors
 
 The connectors may overlap with adjacent nodes when a node is positioned so that it encounters the connector. This overlap can reduce the clarity of the connector's path. To prevent this, the Routing process can be utilized.
 
@@ -491,7 +491,7 @@ By default, each connector's routing process is inherited based on the value of 
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Interaction/RoutingConstraints).
 
-### How to Define Obstacle Padding Between Nodes and Connectors
+### How to Define Distance Between Nodes and Connectors
 
 The [ObstaclePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LineRoutingSettings.html#Syncfusion_Blazor_Diagram_LineRoutingSettings_ObstaclePadding) defines the minimum distance between the connectors and obstacles when the advanced routing is enabled. This ensures connectors are routed with clear spacing around obstacles, improving diagram readability.
 

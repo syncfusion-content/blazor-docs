@@ -9,7 +9,7 @@ documentation: ug
  
 # Orthogonal Segments in Blazor Diagram Component
 
-## How to Create Orthogonal Segments
+## How to Create Orthogonal Segment
 
 Orthogonal segments are used to create segments that are perpendicular to each other. Set the segment Type as [Orthogonal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Orthogonal) to create a default orthogonal segment and need to specify Type. The following code example illustrates how to create a default orthogonal segment.
 

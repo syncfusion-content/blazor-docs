@@ -20,7 +20,7 @@ There are several commands available in the diagram as follows.
 * Zoom commands
 * Undo/Redo commands
 
-## How to Enable Alignment commands
+## Alignment Commands
 
 Alignment commands enable you to align the selected or defined objects, such as nodes and connectors with respect to the selection boundary. The following are the [AlignmentOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AlignmentOptions.html) available in the [SetAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SetAlign_Syncfusion_Blazor_Diagram_AlignmentOptions_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__Syncfusion_Blazor_Diagram_AlignmentMode_) commands, which shows how to use align methods in the diagram.
 
@@ -512,7 +512,7 @@ The following code example illustrates how to execute the space commands.
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/SetDistributeCommands)
-## How to Enable Sizing Commands
+## How to Use Sizing Commands
 
 Sizing [SetSameSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SetSameSize_Syncfusion_Blazor_Diagram_SizingMode_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) commands are used to resize all selected object based on the width, height, and size of the reference object (FirstSelectedItem).
 
@@ -598,7 +598,7 @@ The following code example illustrates how to execute the size commands.
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/SizingCommands)
-## How to Enable Clipboard Commands
+## How to Use Clipboard Commands
 
 Clipboard commands are used to cut, copy, or paste the selected elements.
 
@@ -686,7 +686,7 @@ The following code illustrates how to execute the clipboard commands.
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/ClipboardCommands)
-## How to Enable Grouping commands
+## How to Use Grouping commands
 
 **Grouping commands** are used to group or ungroup the selected elements on the diagram. To group the elements, select the elements using the select all command and group the selected elements using the group command.
 
@@ -1217,7 +1217,7 @@ protected override void OnInitialized()
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/BringintoCenter)
 
-## How to Bring the Entire Diagram into the Current Viewport Using Fit-To-Page Command
+## How to Bring the Entire Diagram into the Current Viewport Using Fit to Page Command
 
 The FitToPage command is used to bring the entire diagram (including large diagrams) into view. You can customize the behavior of the FitToPage command by passing a [FitOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FitOptions.html) object as a parameter. If no parameter is provided, the entire diagram is fit into the view using default settings.
 
@@ -1382,7 +1382,7 @@ The [Region](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Dia
 
 ![Region](./images/Region.gif)
 
-## How to Control Zoom-In Behaviour with CanZoomIn 
+## How to Enable Zoom in Behaviour
 
 The [CanZoomIn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FitOptions.html#Syncfusion_Blazor_Diagram_FitOptions_CanZoomIn) property controls whether the diagram can zoom in to fit smaller content into a larger viewport. When set to `true`, it allows zooming in, while `false` disables this feature. This is particularly useful for maintaining a minimum zoom level or preventing excessive magnification of small diagrams.
 
@@ -1506,7 +1506,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![CanZoomIn to bring the small diagram into view](images/CanZoomIn.png)
 
-## How to Use Command manager to Handle Keyboard Shortcuts
+## Command Manager
 
 Diagram provides support to map or bind command execution with desired combinations of key gestures. It includes a set of built-in commands for common operations.
 

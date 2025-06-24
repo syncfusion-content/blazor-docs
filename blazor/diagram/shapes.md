@@ -202,7 +202,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 |Slice|XMinYMax|![Node Image alignment in Blazor Diagram](images/blazor-diagram-slice-xmin-ymax.png)|
 |Slice|XMinYMin|![Node Image alignment in Blazor Diagram](images/blazor-diagram-slice-xmin-ymin.png)|
 
-## How to Use HTML Template Shapes
+## How to Create HTML Template Shapes
 
 Html elements can be embedded in the diagram through [HTML](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeShapes.html#Syncfusion_Blazor_Diagram_NodeShapes_HTML) type node. The Shape property of Node allows you to set the type of node and to create a HTML node it should be set as **HTML**. The following code illustrates how an HTML node is created.
 

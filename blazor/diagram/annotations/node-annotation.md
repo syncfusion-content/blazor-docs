@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Controlling Node Annotation Position in Blazor Diagram | Syncfusion
+title: Node Annotation Position in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about annotation for node in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Controlling Node Annotation Position in Blazor Diagram
+# Node Annotation Position in Blazor Diagram Component
 
 The diagram allows you to customize the position and appearance of the annotation efficiently. Annotations can be aligned relative to the node boundaries. It has Margin, Offset, Horizontal, and Vertical alignment settings. It is quite tricky when all four alignments are used together but gives more control over alignments properties of the [ShapeAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeAnnotation.html) class. Annotations of a node can be positioned using the following properties of `ShapeAnnotation`.
 
@@ -185,7 +185,7 @@ N>* The value of the `HorizontalAlignment` is [Center](https://help.syncfusion.c
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/AnnotationOfNode/MarginOfAnnotation)
 
 
-## How to Set Text Alignment
+## How to Align the Text
 
 The [TextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_TextAlign) property of an annotation allows you to set how the text should be aligned (Left, Right, Center, or Justify) inside the text block. The following code explains how to set TextAlign for an annotation.
 

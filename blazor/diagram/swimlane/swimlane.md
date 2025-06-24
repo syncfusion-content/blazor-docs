@@ -74,7 +74,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 >Note: We can't add swimlane elements such as phase, lane, and lane children at runtime by using the [AddDiagramElementsAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_AddDiagramElementsAsync_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) method.
 
-### How to Define and Customize the Swimlane Header
+### How to Create and Customize the Swimlane Header
 
 The Swimlane Header was the primary element for swimlanes. The [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Swimlane.html#Syncfusion_Blazor_Diagram_Swimlane_Header) property of swimlane allows you to define its textual description and to customize its appearance.
 

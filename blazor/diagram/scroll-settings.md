@@ -66,7 +66,7 @@ You can programmatically change the scroll offsets at runtime by using the exter
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ScrollSettings/ScrollStatus)
 
-## How to Use the Scroll Changed Event 
+## How to Handle the Scroll Changed Event 
 
 The Diagram control provides the following event for the scroll settings.
 
@@ -340,7 +340,7 @@ Scrolling beyond any particular rectangular area can be restricted by using the 
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/ScrollSettings/ScrollableArea)
-## How to Handle Scroll Settings Changes Using Callback Methods
+## How to Handle Scroll Settings Property Changes Using Callback Methods
 
 * CurrentZoomChanged : Specifies the callback to be triggered when the current zoom value changes.
 * HorizontalOffsetChanged : Specifies the callback to be triggered when the horizontal offset changes.

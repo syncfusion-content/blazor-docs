@@ -28,7 +28,7 @@ documentation: ug
     1. Local data
     2. Remote data
 
-## How to Define Parent-Child Relationships in DataSource
+## How to Specify Parent Child Relationship in Data Source
 
 The [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_ID) and [ParentID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_ParentID) types are string in DataSourceSettings. When creating a parent-child relationship, it's essential to ensure that at least one node has an empty ParentID. This node will act as the root or parent node, with other nodes linked as its children. For example, let's consider the data source settings. Within the DataSource, we have defined three specific details. The DataModel class has attributes such as ID, ParentID, and various other details. In this scenario, the initial dataset does not have a parent ID, which means we have set it as empty. This node acts as the parent or root node of the layout. Subsequent datasets, however, do contain a ParentID. Below is a code example illustrating this:
 
@@ -660,7 +660,7 @@ To bind remote data to [Diagram component](https://help.syncfusion.com/cr/blazor
 
 When using SfDataManager for data binding, the TValue must be provided explicitly in the diagram component. By default, SfDataManager uses ODataAdaptor for remote data-binding.
 
-### How to Bind OData Services to the Diagram
+### How to Bind OData Services
 
 OData (Open Data Protocol) is a standardized protocol for building and consuming RESTful APIs. It enables the creation and consumption of queryable and interoperable REST APIs in a simple and standard way. OData services expose data as resources that are addressable by URLs and can be queried using standard HTTP methods (GET, POST, PUT, DELETE). For more details on OData services, refer to the [OData documentation](https://www.odata.org/documentation/odata-version-3-0/odata-version-3-0-core-protocol/). To bind an OData service, use the ODataAdaptor.
 
@@ -749,7 +749,7 @@ OData (Open Data Protocol) is a standardized protocol for building and consuming
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/RemoteData/ODataAdaptor)
 
-### How to Bind OData V4 Services to the Diagram
+### How to Bind OData V4 Services
 
 The ODataV4 is an improved version of OData protocols, and the SfDataManager can also retrieve and consume OData v4 services. For more details on OData v4 services, refer to the [OData documentation](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197). To bind an OData v4 service, use the ODataV4Adaptor.
 
@@ -1141,7 +1141,7 @@ The following sample code demonstrates implementing custom data binding using cu
 }
 ```
 
-### How to Perform CRUD Operations with Custom Data
+### How to Perform CRUD Operation
 
 The CRUD operations for the custom bounded data in the diagram component can be implemented by overriding the following CRUD methods of the **DataAdaptor** abstract class,
 
@@ -1350,7 +1350,7 @@ The following sample code demonstrates implementing CRUD operations for the cust
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/DataBinding/DiagramWithCustomAdaptor)
 
-### How to Bind GraphQL Service to the Diagram
+### How to Bind GraphQL Service
 GraphQL is a query language for APIs that allows you to can get exactly what you need and nothing more. The GraphQLAdaptor provides an option to retrieve data from a GraphQL server. For more details on GraphQL service, refer to the [GraphQL documentation](../data/adaptors#graphql-service-binding).
 
 ```cshtml

@@ -348,7 +348,7 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 
 {% endtabcontents %}
 
-## How to Use Basic Elements in Blazor Diagram
+## Basic Blazor Diagram Elements
 
 * Node: Visualize any graphical object using nodes, which can be arranged and manipulated at the same time on a Blazor diagram page.
 * Connector: Represents the relationship between two nodes. Three types of connectors provided as follows:

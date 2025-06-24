@@ -19,7 +19,7 @@ By default, the diagram features an interactive tooltip that dynamically display
 |------|--------|--------|
 |![ToolTip During Drag](images/Drag.png) | ![ToolTip During Resize](images/Resize.png) | ![ToolTip During Rotate](images/Rotate.png) |
 
-## How to Show Custom Tooltips for Specific Nodes and Connectors
+## How to Show Tooltip for Specific Nodes and Connectors
 
 The diagram component offers a sophisticated tooltip feature that activates when the mouse hovers over nodes or connectors. This powerful functionality allows for highly customizable tooltips, enabling unique information display for each individual node and connector within the diagram.
 
@@ -750,7 +750,7 @@ The following code example illustrates how to set the open mode to the tooltip f
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Tooltip/TooltipOpenModeForConnector)
 
-## How to Enable Sticky Tooltip
+## How to Enable Sticky Mode
 
 Tooltips for nodes and connectors can be configured to remain visible until manually dismissed, a feature known as "sticky" tooltips. When enabled, a close icon appears in the top-right corner of the tooltip, allowing users to explicitly close it when desired.
 
