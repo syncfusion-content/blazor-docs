@@ -169,9 +169,9 @@ public class GroqResponseObject
 
 ## Step 3: Create a Custom AI Service
 
-Create a bridge between Syncfusion's Smart Components and our Groq service. This enables the Smart Components to use Groq's AI capabilities through a `IAIInferenceBackend` interface.
+Create a bridge between Syncfusion's Smart Components and our Groq service. This enables the Smart Components to use Groq's AI capabilities through a `IChatInferenceService` interface.
 
-The `IAIInferenceBackend` interface is part of Syncfusion's infrastructure that allows Smart Components to work with different AI providers:
+The `IChatInferenceService` interface is part of Syncfusion's infrastructure that allows Smart Components to work with different AI providers:
 
 1. Create a new file named `MyCustomService.cs` 
 2. Add the Syncfusion namespace
@@ -180,13 +180,13 @@ The `IAIInferenceBackend` interface is part of Syncfusion's infrastructure that 
 
 ```CSharp
 using Syncfusion.Blazor.AI;
-public class MyCustomService : IAIInferenceBackend
+public class MyCustomService : IChatInferenceService
 {
     public GroqService _groqServices;
     public MyCustomService(GroqService groqServices) {
         _groqServices = groqServices;
     }
-    public Task<string> GetChatResponseAsync(ChatParameters options)
+    public Task<string> GenerateResponseAsync(ChatParameters options)
     {
         return _groqServices.CompleteAsync(options.Messages);
         throw new NotImplementedException();
@@ -209,7 +209,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSyncfusionBlazor();
 builder.Services.AddSyncfusionSmartComponents();
 builder.Services.AddSingleton<GroqService>();
-builder.Services.AddSingleton<IAIInferenceBackend, MyCustomService>();
+builder.Services.AddSingleton<IChatInferenceService, MyCustomService>();
 
 var app = builder.Build();
 ....
