@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Open save in Blazor Spreadsheet Component | Syncfusion
+title: Open and save in Blazor Spreadsheet Component | Syncfusion
 description: Checkout and learn here all about open and save in Syncfusion Blazor Spreadsheet component and more | Syncfusion.
 platform: Blazor
 control: Spreadsheet
@@ -14,7 +14,7 @@ The open and save features in our spreadsheet component enable users to efficien
 ## Open an excel file from UI
 The Spreadsheet component opens an Excel document with its data, style, format, and more. 
 
-### User Interface:
+### User interface:
 In user interface you can open an Excel document by clicking `File > Open` menu item in ribbon.
 
 ![the user interface option for opening Excel files](./images/file-open-feature.png)
@@ -75,7 +75,7 @@ The following list of Excel file formats are supported in Spreadsheet:
 ## Save an excel file using UI
 The Spreadsheet component saves its data, style, format, and more as Excel file document.
 
-### User Interface:
+### User interface:
 In user interface, you can save Spreadsheet data as Excel document by clicking `File > Save As` menu item in ribbon.
 
 ![The user interface option for saving Excel files](./images/file-save-feature.png)
