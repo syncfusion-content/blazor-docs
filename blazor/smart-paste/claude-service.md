@@ -34,7 +34,7 @@ For detailed specifications and capabilities, visit the [Claude Models Documenta
 
 ---
 
-## Getting Started with Claude AI in SmartPasteButton
+## Getting Started for Claude AI in SmartPasteButton
 
 After completing this setup, you can:
 
