@@ -83,49 +83,67 @@ Usually string sorting is applied to field members even if it starts with number
 ```cshtml
 @using Syncfusion.Blazor.PivotView
 
-<SfPivotView ID="PivotView" TValue="AlphaNumericData" Width="100%" Height="600" ShowGroupingBar="true" ShowFieldList="true" ShowTooltip="false">
+<SfPivotView ID="PivotView" TValue="AlphaNumericData" Width="800" Height="350" ShowGroupingBar="true" ShowFieldList="true" ShowTooltip="false">
     <PivotViewDataSourceSettings DataSource="@data" ExpandAll="false" AllowMemberFilter="true" EnableSorting=true>
         <PivotViewColumns>
-            <PivotViewColumn Name="Business"></PivotViewColumn>
+            <PivotViewColumn Name="Country"></PivotViewColumn>
         </PivotViewColumns>
         <PivotViewRows>
-            <PivotViewRow Name="Product"></PivotViewRow>
+            <PivotViewRow Name="ProductID"></PivotViewRow>
         </PivotViewRows>
         <PivotViewValues>
             <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
             <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
         </PivotViewValues>
         <PivotViewFieldMapping>
-            <PivotViewField Name="Business" DataType="number"></PivotViewField>
+            <PivotViewField Name="ProductID" DataType="number"></PivotViewField>
         </PivotViewFieldMapping>
     </PivotViewDataSourceSettings>
 </SfPivotView>
 
-@code{
+@code {
     public List<AlphaNumericData> data { get; set; }
-    protected override void OnInitialized()
-    {
-        this.data = AlphaNumericData.GetProductData().ToList();
-    }
     public class AlphaNumericData
     {
-        public string Product { get; set; }
-        public string Business { get; set; }
+        public string ProductID { get; set; }
+        public string Country { get; set; }
         public int Sold { get; set; }
-        public int Amount { get; set; }
-
-        public static List<AlphaNumericData> GetProductData()
+        public long Amount { get; set; }
+    }
+    protected override void OnInitialized()
+    {
+        data = new List<AlphaNumericData>
         {
-            return new List<AlphaNumericData>
-            {
-                new AlphaNumericData { Product = "Bikes", Business = "1-Bussiness-1", Sold = 435, Amount = 1356 },
-                new AlphaNumericData { Product = "Bikes", Business = "2-Bussiness-9", Sold = 212, Amount = 876530 },
-                new AlphaNumericData { Product = "Bottles", Business = "2-Bussiness-10", Sold = 344, Amount = 1566 },
-                new AlphaNumericData { Product = "Bottles", Business = "3-Bussiness-10", Sold = 6531, Amount = 4366 },
-                new AlphaNumericData { Product = "Helmets", Business = "4-Bussiness-51", Sold = 1231, Amount = 34561 },
-                // Add more data as needed
-            };
-        }
+            new AlphaNumericData { ProductID = "618-XW", Country = "Canada", Sold = 90, Amount = 9219069 },
+            new AlphaNumericData { ProductID = "1111-GQ", Country = "Australia", Sold = 37, Amount = 1571126 },
+            new AlphaNumericData { ProductID = "330-BR", Country = "Germany", Sold = 31, Amount = 9523258 },
+            new AlphaNumericData { ProductID = "1035-VC", Country = "United States", Sold = 86, Amount = 1004572 },
+            new AlphaNumericData { ProductID = "36-SW", Country = "United Kingdom", Sold = 73, Amount = 4532163 },
+            new AlphaNumericData { ProductID = "71-AJ", Country = "Germany", Sold = 45, Amount = 1916052 },
+            new AlphaNumericData { ProductID = "980-PP", Country = "Canada", Sold = 85, Amount = 6586156 },
+            new AlphaNumericData { ProductID = "209-FB", Country = "Australia", Sold = 51, Amount = 6348087 },
+            new AlphaNumericData { ProductID = "428-PL", Country = "Germany", Sold = 65, Amount = 1365854 },
+            new AlphaNumericData { ProductID = "618-XW", Country = "United States", Sold = 81, Amount = 6461768 },
+            new AlphaNumericData { ProductID = "1111-GQ", Country = "United Kingdom", Sold = 33, Amount = 6181560 },
+            new AlphaNumericData { ProductID = "330-BR", Country = "Germany", Sold = 17, Amount = 611364 },
+            new AlphaNumericData { ProductID = "1035-VC", Country = "Canada", Sold = 41, Amount = 3688930 },
+            new AlphaNumericData { ProductID = "36-SW", Country = "Australia", Sold = 51, Amount = 4648920 },
+            new AlphaNumericData { ProductID = "71-AJ", Country = "Germany", Sold = 56, Amount = 4579862 },
+            new AlphaNumericData { ProductID = "980-PP", Country = "United States", Sold = 25, Amount = 1249117 },
+            new AlphaNumericData { ProductID = "209-FB", Country = "United Kingdom", Sold = 60, Amount = 9603891 },
+            new AlphaNumericData { ProductID = "428-PL", Country = "Canada", Sold = 31, Amount = 9548655 },
+            new AlphaNumericData { ProductID = "618-XW", Country = "Australia", Sold = 93, Amount = 7496742 },
+            new AlphaNumericData { ProductID = "1111-GQ", Country = "Germany", Sold = 62, Amount = 8692814 },
+            new AlphaNumericData { ProductID = "330-BR", Country = "United States", Sold = 22, Amount = 4789234 },
+            new AlphaNumericData { ProductID = "1035-VC", Country = "United Kingdom", Sold = 61, Amount = 7927531 },
+            new AlphaNumericData { ProductID = "36-SW", Country = "Germany", Sold = 68, Amount = 5440025 },
+            new AlphaNumericData { ProductID = "71-AJ", Country = "Canada", Sold = 87, Amount = 8097913 },
+            new AlphaNumericData { ProductID = "980-PP", Country = "Australia", Sold = 87, Amount = 1809071 },
+            new AlphaNumericData { ProductID = "209-FB", Country = "Germany", Sold = 96, Amount = 9893092 },
+            new AlphaNumericData { ProductID = "428-PL", Country = "United States", Sold = 22, Amount = 8136252 },
+            new AlphaNumericData { ProductID = "618-XW", Country = "United Kingdom", Sold = 29, Amount = 9190577 },
+            new AlphaNumericData { ProductID = "1111-GQ", Country = "Germany", Sold = 85, Amount = 5410172 }
+        };
     }
 }
 
