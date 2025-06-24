@@ -541,7 +541,7 @@ You can use the `EnableCompactMode` property to align all messages to the left i
 
 ## Configure message options
 
-You can customize the message toolbar items by using the [MessageToolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.MessageToolbar.html), [MessageToolbarItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.MessageToolbarItem.html) tag directives for richer chat experience in the Chat UI. By default, the message options available are `Copy`, `Reply`, `Pin`, and `Delete`.
+You can customize the message toolbar items by using the `MessageToolbar`, `MessageToolbarItem` tag directives for richer chat experience in the Chat UI. By default, the message options available are `Copy`, `Reply`, `Pin`, and `Delete`.
 
 ### Copying a message
 
@@ -675,5 +675,3 @@ You can use the `itemClicked` event when the toolbar item is clicked in the `Mes
 }
 
 ```
-
-![Blazor Chat UI ItemClicked](./images/messageToolbarItemClicked.png)
