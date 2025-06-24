@@ -1,16 +1,17 @@
-# Displaying Tooltip for Dynamically Created Elements
+---
+layout: post
+title: Displaying Tooltip on dynamically created target element in Blazor Tooltip Component | Syncfusion
+description: Checkout and learn here all about how to enable tooltips for dynamically generated target elements in Syncfusion Blazor Tooltip component and much more.
+platform: Blazor
+control: Tooltip
+documentation: ug
+---
 
-The Tooltip component automatically displays tooltips on dynamically created elements without requiring manual refresh. This enhancement eliminates extra coding effort and enhances dynamic content interactivity.
+# Displaying Tooltip for Dynamically Created Element
 
-## Overview
+The Tooltip component can be configured to display tooltip for element that are added to the DOM after the initial page load. This behavior is useful in applications where content is rendered dynamically, such as in response to user actions, API calls, or conditional logic.
 
-Dynamic target support allows tooltips to automatically work with elements that are added to the DOM after the initial page load. This is particularly useful in scenarios where content is generated based on user interactions, API responses, or conditional rendering.
-
-## Using TargetContainer Property
-
-Use the `TargetContainer` property to specify a container where target elements will automatically have tooltips applied. This approach provides better control over which elements should have tooltip functionality.
-
-### Basic Example
+Set the `TargetContainer` property to the CSS selector of the container that holds your tooltip targets. All elements inside this container that match the Target selector will automatically show tooltips, including those added after the component is rendered—no extra setup needed
 
 ```razor
 @using Syncfusion.Blazor.Popups
@@ -37,6 +38,7 @@ Use the `TargetContainer` property to specify a container where target elements 
     }
 }
 ```
+
 The TargetContainer property enables automatic tooltip registration for newly added elements, enhancing dynamic content interactivity.
 
 ![Blazor Tooltip with Dynamic Targets](images/dynamic-target.gif)
