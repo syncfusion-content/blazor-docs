@@ -140,3 +140,17 @@ The Rich Text Editor allows you to configure custom tools in its toolbar, and an
 {% endtabs %}
 
 ![Blazor RichTextEditor remove undo/redo tools](./images/blazor-richtexteditor-remove-undo-redo.png)
+
+## Clear Undo/Redo stack
+
+The Rich Text Editor automatically maintains an undo/redo stack, allowing users to revert or redo changes made during editing.
+
+To clear the entire undo and redo stack, use the public [ClearUndoRedoAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_ClearUndoRedoAsync) method. This is helpful when loading new content dynamically or resetting the editor to its initial state.
+
+{% tabs %}
+{% highlight razor %}
+
+{% include_relative code-snippet/clear-undo-redo.razor %}
+
+{% endhighlight %}
+{% endtabs %}
