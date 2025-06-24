@@ -22,7 +22,7 @@ Before you begin, ensure you have:
 
 For a complete list of models and their capabilities, visit the [Gemini Models Documentation](https://ai.google.dev/gemini-api/docs/models).
 
-## Getting Started for Gemini AI in SmartPasteButton
+## Getting Started for Gemini AI with SmartPasteButton
 
 After completing this setup, you can:
 

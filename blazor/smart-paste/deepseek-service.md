@@ -31,7 +31,7 @@ Before you begin, ensure you have:
 
 ---
 
-## Getting Started for DeepSeek AI in SmartPasteButton
+## Getting Started for DeepSeek AI with SmartPasteButton
 
 After completing this setup, you can:
 

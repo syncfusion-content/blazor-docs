@@ -32,7 +32,7 @@ Before you begin, ensure you have:
 
 For detailed model specifications and capabilities, visit the [Groq Models Documentation](https://console.groq.com/docs/models).
 
-## Getting Started for Groq AI in SmartPasteButton
+## Getting Started for Groq AI with SmartPasteButton
 
 After completing this setup, you can:
 

@@ -34,7 +34,7 @@ For detailed specifications and capabilities, visit the [Claude Models Documenta
 
 ---
 
-## Getting Started for Claude AI in SmartTextArea
+## Getting Started for Claude AI with SmartTextArea
 
 After completing this setup, you can:
 
