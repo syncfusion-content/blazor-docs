@@ -120,10 +120,6 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 The [SymbolMargin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_SymbolMargin) property allows you to define the space around individual symbols in the palette, outside of their defined borders. This margin creates visual separation between symbols, enhancing the overall layout and appearance of the Symbol Palette.
 
-## How to set symbol margin in the palette
-
-The [SymbolMargin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_SymbolMargin) property of the `SfSymbolPaletteComponent` allows you to define the spacing around each symbol within the palette. This property controls the margin space between symbols, providing better visual separation and layout control for symbols displayed in the palette.
-
 ## How to customize the symbol drag preview
 
 The symbol preview size of palette items can be customized using the [SymbolDragPreviewSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_SymbolDiagramPreviewSize) property. This property allows you to define a uniform preview size for all symbol palette items. The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_Height) properties of SymbolDragPreviewSize enable you to specify the dimensions of the preview for each symbol in the palette.
@@ -217,7 +213,102 @@ The [AllowDrag](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.
 
 ## How to get notification when a symbol is selected
 
-The [SelectionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_SelectionChanged) event of the `SfSymbolPaletteComponent` is triggered when a symbol in the symbol palette is selected or deselected. This event provides an opportunity to perform custom actions or track symbol selection changes within the palette.
+The [SelectionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_SelectionChanged) event of the `SfSymbolPaletteComponent` is triggered when a symbol in the symbol palette is selected or deselected. This event provides an opportunity to perform custom actions or track symbol selection changes within the palette. The `SelectionChanged` event uses [PaletteSelectionChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.PaletteSelectionChangedEventArgs.html) as its event argument, which provides access to both the previously selected symbol and the newly selected symbol through the following properties:
+
+- [OldValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.PaletteSelectionChangedEventArgs.html#Syncfusion_Blazor_Diagram_SymbolPalette_PaletteSelectionChangedEventArgs_OldValue): Contains the ID of the previously selected symbol
+- [NewValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.PaletteSelectionChangedEventArgs.html#Syncfusion_Blazor_Diagram_SymbolPalette_PaletteSelectionChangedEventArgs_NewValue): Contains the ID of the newly selected symbol
+
+This allows you to track selection changes and perform specific actions based on which symbols are being selected or deselected.
+
+The following code example illustrates how to use the selectionChanged event.
+
+```csharp
+@using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Diagram.SymbolPalette
+@using Syncfusion.Blazor.Buttons
+
+<div class="control-section">
+    <div style="width:20%">
+        <div id="palette-space" class="sb-mobile-palette" style="border: 2px solid #b200ff">
+            <SfSymbolPaletteComponent @ref="@symbolpalette" Height="300px" Width="200px"
+                                    Palettes="@Palettes" SymbolHeight="@symbolwidth" SymbolWidth="@symbolheight" 
+                                    SymbolMargin="@SymbolMargin" SelectionChanged="SelectionChanged">
+            </SfSymbolPaletteComponent>
+        </div>
+    </div>
+</div>
+
+@code {
+    // Define symbol properties
+    DiagramSize SymbolPreview;
+    SymbolMargin SymbolMargin = new SymbolMargin { Left = 15, Right = 15, Top = 15, Bottom = 15 };
+    double symbolwidth = 60;
+    double symbolheight = 60;
+    
+    // Reference the symbol palette
+    SfSymbolPaletteComponent symbolpalette;
+    
+    // Define palettes collection
+    DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
+    DiagramObjectCollection<NodeBase> PaletteNodes = new DiagramObjectCollection<NodeBase>();
+
+    protected override void OnInitialized()
+    {
+        InitPaletteModel();
+    }
+
+    private void InitPaletteModel()
+    {
+        Node node1 = new Node()
+        {
+            ID = "Rectangle",
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle },
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
+        };
+        Node node2 = new Node()
+        {
+            ID = "Ellipse",
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Ellipse },
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
+        };
+        Node node3 = new Node()
+        {
+            ID = "Diamond",
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Diamond },
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
+        };
+
+        PaletteNodes.Add(node1);
+        PaletteNodes.Add(node2);
+        PaletteNodes.Add(node3);
+
+        Palettes = new DiagramObjectCollection<Palette>()
+        {
+            new Palette(){Symbols = PaletteNodes, Title = "Basic Shapes", ID = "Basic Shapes" },
+        };
+    }
+
+    // Handle selection changes in the symbol palette
+    private void SelectionChanged(PaletteSelectionChangedEventArgs args)
+    {
+        // Check if Rectangle was previously selected
+        if(args.OldValue.Contains("Rectangle"))
+        {
+            // Perform actions when Rectangle is deselected
+        }
+        
+        // Check if Ellipse is newly selected
+        if(args.NewValue.Contains("Ellipse"))
+        {
+            // Perform actions when Ellipse is selected
+        }
+        
+        // You can also perform general selection tracking
+        Console.WriteLine($"Selection changed from: {args.OldValue} to: {args.NewValue}");
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/SelectionChanged).
 
 ## How to get notification for expanding the palette
 
