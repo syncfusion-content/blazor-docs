@@ -13,7 +13,7 @@ Port is a special connection point in a Node where you can glue the connectors. 
 
 ![Port in Blazor Diagram](../images/blazor-diagram-port.png)
 
-## How to create connections node to node and port to port
+## How to Create Node to Node and Port to Port Connections
 
 There are two main types of connections, node to node and port to port. The difference between these two connections is whether or not a connector remains glued to a specific connection point when you move the attached node or connector.
 
@@ -25,7 +25,7 @@ Ports act as the connection points of the node and allows creating connections w
 
 ![Connection between Ports in Blazor Diagram](../images/blazor-diagram-port-connection.gif)
 
-## How to create a node port
+## How to Create a Node Port
 
 To add a connection port, define the port object and add it to node’s ports collection. The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PointPort.html#Syncfusion_Blazor_Diagram_PointPort_Offset) property of the port accepts an object of fractions and is used to determine the position of ports. The following code explains how to add ports when initializing the node.
 
@@ -75,7 +75,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Creating Port in Blazor Diagram](../images/blazor-diagram-create-port.png)
 
-## How to create a connector port
+## How to Create a Connector Port
 
 Creating connector ports is similar to creating node ports. To define connector ports, you need to create a collection of `ConnectorPort` and assign it to the connector’s `Ports` property.
 
@@ -122,7 +122,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 >**Note:** Port's Id should not start with numbers or special characters and should not contain special characters such as underscores(_) or spaces.
 
-### How to connect a connector to a port
+### How to Connect a Connector to a Port
 
 Connector ports are used to establish connections between node ports, connector ports and nodes. To create such a connection, set the `SourcePortID` or `TargetPortID` property to the ID of the corresponding port on the connector.
 
@@ -191,7 +191,7 @@ The following code example demonstrates how to connect one connector to a port o
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ConnectorPort/ConnectorPortConnection)
 
-## How to add ports at runtime
+## How to Add Ports at Runtime
 
 You can add ports at runtime to the nodes collection in the Diagram component by using the `Add` method.
 
@@ -265,7 +265,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Adding Port in Blazor Diagram](../images/blazor-diagram-add-port.png)
 
-## How to add multiple ports at runtime
+## How to Add Multiple Ports at Runtime
 
 Add multiple ports at runtime by using the `Add` method in the port collection. The following code explains how to add two or more ports to node at runtime.
 
@@ -344,7 +344,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Adding Multiple Ports in Blazor Diagram](../images/blazor-diagram-add-multiple-ports.png)
 
-## How to add remove port at runtime
+## How to Remove Port at Runtime
 
 A collection of ports can be removed from the node by using the native `RemoveAt` method. Refer to the following example that shows how to remove ports at runtime.
 
@@ -405,7 +405,7 @@ A collection of ports can be removed from the node by using the native `RemoveAt
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ActionofPorts/RemovePorts)
 
-## How to add update port at runtime
+## How to Update Port at Runtime
 
 You can change any port properties at runtime.
 
@@ -466,7 +466,7 @@ protected override void OnInitialized()
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ActionofPorts/UpdatePorts)
 
-## How to specify connection direction to port
+## How to Specify Connection Direction for Ports
 
 The [ConnectionDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_ConnectionDirection) property of a port allows users to specify the direction in which a connector should establish a connection. This can be either to the port incoming or from the port outgoing.
 
@@ -550,7 +550,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Port Connection Direction](../images/PortDirection.gif)
 
-## How to get InEdges and OutEdges of ports
+## How to Get InEdges and OutEdges of Ports
 
 [InEdges](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_InEdges) is used to get the incoming connectors of the port that are connected to the port. [OutEdges](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_OutEdges) is used to get the outgoing connectors of the port that are connected to the port.
 

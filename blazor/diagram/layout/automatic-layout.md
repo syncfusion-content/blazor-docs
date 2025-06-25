@@ -90,7 +90,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Blazor Complex Hierarchical Diagram](../images/BasicLayout.png)
 
-## Updating layout
+## How to Update Layout
 
 The DoLayoutAsync function is used to re-arrange the nodes in the diagram area whenever any of the following occur:
 
@@ -107,7 +107,7 @@ This function refreshes the layout dynamically to reflect these updates. By invo
 
 The function can be called on-demand, making it flexible for use in scenarios where automatic layout updates are required only at specific times, such as after multiple changes or interactions.
 
-## Configuring Spacing in Layouts
+## How to Configure Spacing in Layouts
 
 The [HorizontalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_HorizontalSpacing) and [VerticalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_VerticalSpacing) properties of layouts are used to customize the space between successive nodes in the diagram, both horizontally and vertically. These properties help control the overall layout and visual organization of nodes, ensuring clear and consistent spacing across the diagram.
 
@@ -141,7 +141,7 @@ The default value for Horizontal Spacing is 30, and the default value for Vertic
 
 ![Blazor Complex Hierarchical Diagram](../images/LayoutSpacing.png)
 
-## Configuring Orientation for Layouts
+## How to Configure Layout Orientation
 
 [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Orientation) is used to arrange the layout based on the direction. It determines how the nodes are aligned in the diagram. The default value for orientation is [TopToBottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutOrientation.html#Syncfusion_Blazor_Diagram_LayoutOrientation_TopToBottom), which arranges the nodes vertically with the root placed at the top.
 
@@ -168,7 +168,7 @@ The default value for Horizontal Spacing is 30, and the default value for Vertic
 
 >**Note:** [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Orientation) is not applicable to [RadialTree](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutType.html#Syncfusion_Blazor_Diagram_LayoutType_RadialTree) layout. For [Flowchart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutType.html#Syncfusion_Blazor_Diagram_LayoutType_Flowchart) layout, only [TopToBottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutOrientation.html#Syncfusion_Blazor_Diagram_LayoutOrientation_TopToBottom) and [LeftToRight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutOrientation.html#Syncfusion_Blazor_Diagram_LayoutOrientation_LeftToRight) orientations are supported.
 
-## Configuring Layout Alignments
+## How to Configure Layout Alignments
 
 [HorizontalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_HorizontalAlignment) and [VerticalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_VerticalAlignment) properties control how the layout is positioned or stretched along the horizontal and vertical axes, respectively. These settings determine the positioning of the diagram elements (nodes and connectors) within the available space.
 
@@ -226,7 +226,7 @@ The possible values for VerticalAlignment are:
 ```
 ![Blazor Complex Hierarchical Diagram](../images/LayoutVerticalAlignmentBottom.png)
 
-## Configuring the Layout Margin
+## How to Configure Layout Margins
 
 The [LayoutMargin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Margin) property defines the space between the viewport and the layout, creating a space around the diagram. The default margin is left: 50, top: 50, right: 0, bottom: 0.
 
@@ -248,7 +248,7 @@ You can customize the margin for each side (top, right, bottom, left) using the 
 }
 ```
 
-## Handling Connector Segment Overlap in Layout
+## How to Handle Connector Segment Overlap in Layout
 
 The [SamePoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_SamePoint) property controls whether connectors in the layout should be arranged without overlapping other connectors. By setting this property to true, the diagram ensures that connectors are spaced out properly to avoid any overlap, making the layout more readable and visually clear.
 
