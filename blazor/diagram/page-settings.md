@@ -70,7 +70,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 |Landscape|![Landscape Orientation](./images/LandscapeOrientation.png)|
 |Portrait|![Portrait Orientation](./images/PortraitOrientation.png)|
 
-## How to enable the multiple page
+## How to Enable Multiple Pages
 
 Based on the diagramming element position, the size of the page dynamically increases or decreases in multiples of page width and height using the [MultiplePage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageSettings.html#Syncfusion_Blazor_Diagram_PageSettings_MultiplePage) property of `PageSettings`.
 
@@ -116,7 +116,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Multiple Page](./images/MultiplePage.png)
 
-## How to change the page appearance
+## How to Customize Page Appearance
 
 The appearance of the pages can be customized using the following properties of the `PageSettings` class:
 
@@ -171,7 +171,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![PageBackground Color](./images/PageBackground.png)
 
-### How to customize the appearance of the page break
+### How to Customize Page Break Appearance
 
 The appearance of the `PageBreak` can be customized using the style properties such as stroke, stroke-width and stroke-dasharray of the diagram pagebreak class.
 
@@ -204,7 +204,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Pagebreak Color](./images/Pagebreak.png)
 
-## How to change the margin around the pages
+## How to Change Page Margins
 
 The area between the maintain content of a page and the page edges can be changed by using the PageMargin property. The default values for the margin are set to 25 on all sides.
 
@@ -224,7 +224,7 @@ The area between the maintain content of a page and the page edges can be change
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/PageSettings/Margin)
 
-## Boundary constraints
+## How to Restrict Node Interaction Using Boundary Constraints
 
 The diagram provides support to restrict/customize the interactive region, out of which the elements cannot be dragged, resized, or rotated. The [BoundaryConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageSettings.html#Syncfusion_Blazor_Diagram_PageSettings_BoundaryConstraints) property of page settings allows you to customize the interactive region. To explore the boundary constraints, refer to [Boundary Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BoundaryConstraints.html).
 
@@ -292,7 +292,7 @@ The following code example illustrates how to define boundary constraints with r
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/PageSettings/BoundaryConstraints)
 
-## Responsive with parent container
+## How to Make Responsive with Parent Container
 
 By setting the value in percentage, the diagram gets its dimention with respect to its parent container.Specify the Width and Height as 100% to make the diagram element fill its parent container.
 Setting the Height to 100% requires the diagram parent element to have explicit height or you can use calc function to set explicit height based on the browser layout.
@@ -325,7 +325,7 @@ The following code example illustrates how to set width and height in percentage
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/PageSettings/ResponsiveWithParentContainer)
 
-## CallBack Methods
+## How to Handle Page Settings Property Changes Using Callback Methods
 
 * BackgroundChanged : Specifies the callback to trigger when the Background value changes.
 * BoundaryConstraintsChanged : Specifies the callback to trigger when the BoundaryConstraints value changes.
