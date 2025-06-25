@@ -81,3 +81,135 @@ The [PromptChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inte
     }
 }
 ```
+
+## AttachmentUploadStart
+
+The [AttachmentUploadStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_AttachmentUploadStart) event is triggered before the attached files upload begins in the AI AssistView
+
+```cshtml
+
+@using Syncfusion.Blazor.InteractiveChat
+@using Syncfusion.Blazor.Inputs
+
+<div class="aiassist-container" style="height: 350px; width: 650px;">
+    <SfAIAssistView AttachmentUploadStart="AttachmentUploadStart" AttachmentSettings="attachmentSettings" PromptRequested="PromptRequest"></SfAIAssistView>
+</div>
+
+@code {
+    private void AttachmentUploadStart(UploadingEventArgs args)
+    {
+        // Your required action here
+    }
+    private AssistViewAttachmentSettings attachmentSettings = new AssistViewAttachmentSettings()
+    {
+        Enable = true,
+        SaveUrl = "https://blazor.syncfusion.com/services/production/api/FileUploader/Save",
+        RemoveUrl = "https://blazor.syncfusion.com/services/production/api/FileUploader/Remove"
+    };
+    private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
+    {
+        await Task.Delay(1000);
+        var defaultResponse = "For real-time prompt processing, connect the AI AssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
+        args.Response = defaultResponse;
+    }
+}
+```
+
+## AttachmentUploadSuccess
+
+The [AttachmentUploadSuccess](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_AttachmentUploadSuccess) event is triggered when the attached file is successfully uploaded in the AI AssistView.
+
+```cshtml
+
+@using Syncfusion.Blazor.InteractiveChat
+@using Syncfusion.Blazor.Inputs
+
+<div class="aiassist-container" style="height: 350px; width: 650px;">
+    <SfAIAssistView AttachmentUploadSuccess="AttachmentUploadSuccess" AttachmentSettings="attachmentSettings" PromptRequested="PromptRequest"></SfAIAssistView>
+</div>
+
+@code {
+    private void AttachmentUploadSuccess(SuccessEventArgs args)
+    {
+        // Your required action here
+    }
+    private AssistViewAttachmentSettings attachmentSettings = new AssistViewAttachmentSettings()
+    {
+        Enable = true,
+        SaveUrl = "https://blazor.syncfusion.com/services/production/api/FileUploader/Save",
+        RemoveUrl = "https://blazor.syncfusion.com/services/production/api/FileUploader/Remove"
+    };
+    private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
+    {
+        await Task.Delay(1000);
+        var defaultResponse = "For real-time prompt processing, connect the AI AssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
+        args.Response = defaultResponse;
+    }
+}
+```
+
+## AttachmentUploadFailed
+
+The [AttachmentUploadFailed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_AttachmentUploadFailed) event is triggered when the attached file upload fails in the AI AssistView.
+
+```cshtml
+
+@using Syncfusion.Blazor.InteractiveChat
+@using Syncfusion.Blazor.Inputs
+
+<div class="aiassist-container" style="height: 350px; width: 650px;">
+    <SfAIAssistView AttachmentUploadFailed="AttachmentUploadFailed" AttachmentSettings="attachmentSettings" PromptRequested="PromptRequest"></SfAIAssistView>
+</div>
+
+@code {
+    private void AttachmentUploadFailed(FailureEventArgs args)
+    {
+        // Your required action here
+    }
+    private AssistViewAttachmentSettings attachmentSettings = new AssistViewAttachmentSettings()
+    {
+        Enable = true,
+        SaveUrl = "https://blazor.syncfusion.com/services/production/api/FileUploader/Save",
+        RemoveUrl = "https://blazor.syncfusion.com/services/production/api/FileUploader/Remove"
+    };
+    private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
+    {
+        await Task.Delay(1000);
+        var defaultResponse = "For real-time prompt processing, connect the AI AssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
+        args.Response = defaultResponse;
+    }
+}
+```
+
+## AttachmentRemoved
+
+The [AttachmentRemoved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.InteractiveChat.SfAIAssistView.html#Syncfusion_Blazor_InteractiveChat_SfAIAssistView_AttachmentRemoved) event is triggered when an attached file is removed in the AI AssistView.
+
+```cshtml
+
+@using Syncfusion.Blazor.InteractiveChat
+@using Syncfusion.Blazor.Inputs
+
+<div class="aiassist-container" style="height: 350px; width: 650px;">
+    <SfAIAssistView AttachmentRemoved="AttachmentRemoved" AttachmentSettings="attachmentSettings" PromptRequested="PromptRequest"></SfAIAssistView>
+</div>
+
+@code {
+    private void AttachmentRemoved(RemovingEventArgs args)
+    {
+        // Your required action here
+    }
+    private AssistViewAttachmentSettings attachmentSettings = new AssistViewAttachmentSettings()
+    {
+        Enable = true,
+        SaveUrl = "https://blazor.syncfusion.com/services/production/api/FileUploader/Save",
+        RemoveUrl = "https://blazor.syncfusion.com/services/production/api/FileUploader/Remove"
+    };
+    private async Task PromptRequest(AssistViewPromptRequestedEventArgs args)
+    {
+        await Task.Delay(1000);
+        var defaultResponse = "For real-time prompt processing, connect the AI AssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.";
+        args.Response = defaultResponse;
+    }
+}
+```
