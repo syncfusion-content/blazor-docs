@@ -28,7 +28,7 @@ To know more about Bitwise operators, refer to the [Bitwise Operations](constrai
 | -------- | -------- |
 |None|Disable all diagram functionalities.|
 |Bridging|Enables or disables Bridging support for connector in diagram.|
-|Undo/redo|Enables or disables the Undo/Redo support for the diagram.|
+|UndoRedo|Enables or disables the Undo/Redo support for the diagram.|
 |UserInteraction|Enables or disables user interaction support for the diagram.|
 |ApiUpdate|Enables or disables update API support for the diagram.|
 |PageEditable|Enables or disables Page Editable support for the diagram.|
@@ -138,6 +138,7 @@ The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 |InheritTooltip|Enables or disables inherit tooltip option from the parent object.|
 |Resize|Enables or Disables the expansion or compression of a node.|
 |Inherit|Enables the node to inherit the interaction option from the parent object.|
+|RoutingObstacle|Enables or disables the node to be treated as obstacle while in routing.|
 |Default|Enables all default constraints for the node.|
 
 The following example shows how to disable rotate constraint from the default node constraints.
