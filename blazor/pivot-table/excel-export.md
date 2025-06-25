@@ -9,7 +9,14 @@ documentation: ug
 
 # Excel export in Blazor Pivot Table component
 
-The Excel export allows Pivot Table data to be exported as Excel document. To enable Excel export in the pivot table, set the [AllowExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_AllowExcelExport) property in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class to **true**. Once the API is set, user needs to call the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ExcelExport_System_Object_System_Nullable_System_Boolean__System_Object_System_Nullable_System_Boolean__) method for exporting on external button click.
+The Excel export allows Pivot Table data to be exported as Excel document. To enable Excel export in the pivot table, set the [AllowExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_AllowExcelExport) property in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class to **true**. Once the API is set, user needs to call the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ExcelExport_System_Object_System_Nullable_System_Boolean__System_Object_System_Nullable_System_Boolean__) method for exporting on external button click. 
+
+This method accepts a boolean parameter, **"asMemoryStream"**, which determines the export behavior:
+
+* **false:** Downloads the Excel file directly.
+* **true:** Returns the file as a memory stream for custom processing, storage, or manipulation.
+
+In this example, false is used to initiate a direct download.
 
 N> The pivot table component can be exported to Excel format using options available in the toolbar. For more details [refer](./tool-bar) here.
 
@@ -43,12 +50,12 @@ N> The pivot table component can be exported to Excel format using options avail
     public List<ProductDetails> data { get; set; }
     protected override void OnInitialized()
     {
-        this.data = ProductDetails.GetProductData().ToList();
+        this.Data = ProductDetails.GetProductData().ToList();
        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
 
     public void OnExcelExport(Microsoft.AspNetCore.Components.Web.MouseEventArgs args){
-        this.pivot.ExportToExcelAsync();
+        this.pivot.ExportToExcelAsync(false);
     }
 }
 ```
@@ -91,7 +98,7 @@ N> By default, material theme will be applied to the pivot table during Excel ex
     public List<ProductDetails> data { get; set; }
     protected override void OnInitialized()
     {
-        this.data = ProductDetails.GetProductData().ToList();
+        this.Data = ProductDetails.GetProductData().ToList();
        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
 
@@ -223,7 +230,7 @@ The Excel export provides an option to change file name of the document before e
     public List<ProductDetails> data { get; set; }
     protected override void OnInitialized()
     {
-        this.data = ProductDetails.GetProductData().ToList();
+        this.Data = ProductDetails.GetProductData().ToList();
        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
 
@@ -246,7 +253,14 @@ By default, Microsoft Excel supports only 1,048,576 records in an Excel sheet. H
 
 ## CSV Export
 
-The Excel export allows pivot table data to be exported in **CSV** file format as well. To enable CSV export in the pivot table, set the [AllowExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_AllowExcelExport) property in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class as **true**. Once the API is set, user needs to call the [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_CsvExport_System_Object_System_Nullable_System_Boolean__System_Object_System_Nullable_System_Boolean__) method for exporting on external button click.
+The Excel export allows pivot table data to be exported in **CSV** file format as well. To enable CSV export in the pivot table, set the [AllowExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_AllowExcelExport) property in [SfPivotView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class as **true**. Once the API is set, user needs to call the [ExportToCsvAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_CsvExport_System_Object_System_Nullable_System_Boolean__System_Object_System_Nullable_System_Boolean__) method for exporting on external button click.  
+
+This method accepts a boolean parameter, **"asMemoryStream"**, which determines the export behavior:
+
+* **false:** Downloads the Excel file directly.
+* **true:** Returns the file as a memory stream for custom processing, storage, or manipulation.
+
+In this example, false is used to initiate a direct download.
 
 N> The pivot table component can be exported to CSV format using options available in the toolbar. For more details [refer](./tool-bar) here.
 
@@ -277,15 +291,17 @@ N> The pivot table component can be exported to CSV format using options availab
 
 @code{
     SfPivotView<ProductDetails> pivot;
-    public List<ProductDetails> data { get; set; }
+
+    public List<ProductDetails> Data { get; set; }
+
     protected override void OnInitialized()
     {
-        this.data = ProductDetails.GetProductData().ToList();
+        this.Data = ProductDetails.GetProductData().ToList();
        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
 
     public void OnCsvExport() {
-        this.pivot.ExportToCsvAsync();
+        this.pivot.ExportToCsvAsync(false);
     }
 }
 
@@ -332,6 +348,73 @@ When the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion
     };
 }
 ```
+
+## Saving Excel document to stream
+
+Rather than exporting the Pivot Table as a downloadable file, the user can save the Excel document as a memory stream. This is achieved by setting the **asMemoryStream** parameter to **true** in the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ExcelExport_System_Object_System_Nullable_System_Boolean__System_Object_System_Nullable_System_Boolean__) method. The resulting memory stream can then be further processed and customized by the user before being exported as a document.
+
+N> This option is only available if virtualization is enabled in the pivot table.
+
+```cshtml
+@using Syncfusion.Blazor.PivotView
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor
+@inject IJSRuntime JSRuntime
+
+<SfButton OnClick="OnExcelExport" Content="Excel Export"></SfButton>
+<SfPivotView TValue="ProductDetails" @ref="@pivot" AllowExcelExport="true" ShowValuesButton="true" EnableVirtualization="true">
+    <PivotViewDataSourceSettings DataSource="@Data" EnableSorting=true>
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C0" UseGrouping=true></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+</SfPivotView>
+
+<script type="text/javascript">
+    function saveAsFile(filename, bytesBase64) {
+        var link = document.createElement('a');
+        link.download = filename;
+        link.href = "data:application/octet-stream;base64," + bytesBase64;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+</script>
+
+@code {
+    private SfPivotView<ProductDetails> pivot;
+    private List<ProductDetails> Data { get; set; }
+    protected override void OnInitialized()
+    {
+         this.Data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+    }
+    private async Task OnPdfExport(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+    {
+        System.IO.MemoryStream memoryStream = new System.IO.MemoryStream();
+        //Excel document as a memory stream by setting the first parameter as "true" in the "ExportToExcelAsync" method.
+        memoryStream = await this.pivot.ExportToExcelAsync(true);
+        // You can then process the memory stream based on your needs and save it as mentioned in the last statement.
+        ......
+        ......
+        ......
+        await JSRuntime.InvokeVoidAsync("saveAsFile", new object[] { "default.xlsx", Convert.ToBase64String(memoryStream.ToArray()),true });
+    }
+}
+```
+
 ## Events
 
 ### ExcelQueryCellInfo
@@ -373,53 +456,55 @@ The event [ExcelQueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.
 	<PivotViewEvents TValue="ProductDetails" ExcelQueryCellInfo="ExcelQueryEvent"></PivotViewEvents>
 </SfPivotView>
 
-@code {
-	private SfPivotView<ProductDetails> pivot;
-	public List<ProductDetails> data { get; set; }
 
-	protected override void OnInitialized()
-	{
-		this.data = ProductDetails.GetProductData().ToList();
-		// Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-	}
+@code{
+    private SfPivotView<ProductDetails> pivot;
+    public List<ProductDetails> Data { get; set; }
 
-	public void OnExcelExport(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
-	{
-		this.pivot.ExportToExcelAsync();
-	}
+    protected override void OnInitialized()
+    {
+        this.Data = ProductDetails.GetProductData().ToList();
+        // Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+    }
 
-	// Triggers every time for row header and value cells during exporting.
-	public void ExcelQueryEvent(ExcelQueryCellInfoEventArgs<ProductDetails> args)
-	{
-		Matrix<Matrix<AxisSet>> pivotValues = pivot?.PivotValues;
-		AxisSet cellInfo = null;
+    public void OnExcelExport(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+    {
+        this.pivot.ExportToExcelAsync(false);
+    }
 
-		if (pivot?.EnableVirtualization == true)
-		{
-			if (pivotValues != null)
-			{
-				cellInfo = pivotValues[args.RowIndex]?[args.ColumnIndex];
-			}
-		}
-		else
-		{
-			IDictionary<string, object> cellCoordinates = args.Column?.CustomAttributes;
-			if (pivotValues != null && cellCoordinates != null && cellCoordinates.ContainsKey("aria-colindex") && cellCoordinates.ContainsKey("aria-rowindex"))
-			{
-				// You will get the row index required to find the current cell information from the pivot value collection here.
-				int rowIndex = int.Parse(cellCoordinates["aria-rowindex"].ToString(), System.Globalization.NumberStyles.None);
-				// You will get the column index required to find the current cell information from the pivot value collection here.
-				int colIndex = int.Parse(cellCoordinates["aria-colindex"].ToString(), System.Globalization.NumberStyles.None);
-				cellInfo = pivotValues[rowIndex]?[colIndex];
-			}
-		}
-		if (cellInfo?.IsGrandSum == true || cellInfo?.Axis == "row")
-		{
-			args.Cell.Value = cellInfo?.Axis == "value" ? cellInfo?.Value : cellInfo?.FormattedText;
-			args.Style.BackColor = args.Cell.CellStyle.BackColor = cellInfo?.Axis == "row" ? "#e3e384" : "#f7f77c";
-			args.Style.Bold = args.Cell.CellStyle.Bold = true;
-		}
-	}
+    // Triggers every time for row header and value cells during exporting.
+    public void ExcelQueryEvent(ExcelQueryCellInfoEventArgs<ProductDetails> args)
+    {
+        Matrix<Matrix<AxisSet>> pivotValues = pivot?.PivotValues;
+        AxisSet cellInfo = null;
+
+        if (pivot?.EnableVirtualization == true)
+        {
+            if (pivotValues != null)
+            {
+                cellInfo = pivotValues[args.RowIndex]?[args.ColumnIndex];
+            }
+        }
+        else
+        {
+            IDictionary<string, object> cellCoordinates = args.Column?.CustomAttributes;
+            if (pivotValues != null && cellCoordinates != null && cellCoordinates.ContainsKey("aria-colindex") && cellCoordinates.ContainsKey("aria-rowindex"))
+            {
+                // You will get the row index required to find the current cell information from the pivot value collection here.
+                int rowIndex = int.Parse(cellCoordinates["aria-rowindex"].ToString(), System.Globalization.NumberStyles.None);
+                // You will get the column index required to find the current cell information from the pivot value collection here.
+                int colIndex = int.Parse(cellCoordinates["aria-colindex"].ToString(), System.Globalization.NumberStyles.None);
+                cellInfo = pivotValues[rowIndex]?[colIndex];
+            }
+        }
+        if (cellInfo?.IsGrandSum == true || cellInfo?.Axis == "row")
+        {
+            args.Cell.Value = cellInfo?.Axis == "value" ? cellInfo?.Value : cellInfo?.FormattedText;
+            args.Style.BackColor = args.Cell.CellStyle.BackColor = cellInfo?.Axis == "row" ? "#e3e384" : "#f7f77c";
+            args.Style.Bold = args.Cell.CellStyle.Bold = true;
+        }
+    }
+
 }
 
 ```
@@ -470,13 +555,13 @@ The event [ExcelHeaderQueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncf
 
     protected override void OnInitialized()
     {
-        this.data = ProductDetails.GetProductData().ToList();
+        this.Data = ProductDetails.GetProductData().ToList();
         // Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
 
     public void OnExcelExport(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
     {
-        this.pivot.ExportToExcelAsync();
+        this.pivot.ExportToExcelAsync(false);
     }
 
     // Triggers every time for column header cells during exporting
