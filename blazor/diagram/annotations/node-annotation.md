@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Annotation for Node in Blazor Diagram Component | Syncfusion
+title: Node Annotation Position in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about annotation for node in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# How to position node’s annotation
+# Node Annotation Position in Blazor Diagram Component
 
 The diagram allows you to customize the position and appearance of the annotation efficiently. Annotations can be aligned relative to the node boundaries. It has Margin, Offset, Horizontal, and Vertical alignment settings. It is quite tricky when all four alignments are used together but gives more control over alignments properties of the [ShapeAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeAnnotation.html) class. Annotations of a node can be positioned using the following properties of `ShapeAnnotation`.
 
@@ -16,7 +16,7 @@ The diagram allows you to customize the position and appearance of the annotatio
 * VerticalAlignment
 * Margin
 
-## How to change the offset of an annotation
+## How to Change Annotation Offset Position
 
 The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeAnnotation.html#Syncfusion_Blazor_Diagram_ShapeAnnotation_Offset) property of an annotation is used to align the annotations based on fractions. 0 represents top/left corner, 1 represents bottom/right corner, and 0.5 represents half of width/height.
 
@@ -77,7 +77,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 > * Type of the offset property for a connector’s path annotation is double.
 > * Node annotation's Id should not start with numbers or special characters and should not contain special characters such as underscores(_) or spaces.
 
-## How to change the alignment of an annotation
+## How to Change the Annotation Alignment
 
 The [HorizontalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_HorizontalAlignment) property of an annotation is used to set how the annotation is horizontally aligned at the annotation position determined from the fraction values. The [VerticalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_VerticalAlignment) property is used to set how the annotation is vertically aligned at the annotation position.
 
@@ -140,7 +140,7 @@ N>* The value of the `HorizontalAlignment` is [Center](https://help.syncfusion.c
 <br/>* The value of the `VerticalAlignment` is [Center](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.VerticalAlignment.html#Syncfusion_Blazor_Diagram_VerticalAlignment_Center) by default.
 <br/>* Alignment is positioned based on the offset value.
 
-## How to change the margin of an annotation
+## How to Change Annotation Margin
 
 [Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Margin) is an absolute value used to add some blank space to any one of its four sides. The annotations can be displaced with the margin property. The following code example explains how to align an annotation based on its Offset, HorizontalAlignment, VerticalAlignment, and Margin values.
 
@@ -185,7 +185,7 @@ N>* The value of the `HorizontalAlignment` is [Center](https://help.syncfusion.c
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/AnnotationOfNode/MarginOfAnnotation)
 
 
-## How to align the text
+## How to Align the Text
 
 The [TextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_TextAlign) property of an annotation allows you to set how the text should be aligned (Left, Right, Center, or Justify) inside the text block. The following code explains how to set TextAlign for an annotation.
 
