@@ -208,6 +208,6 @@ Now, add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Kanban comp
 {% endhighlight %}
 {% endtabs %}
 
-![Microsoft Teams Application with Syncfusion Blazor controls](images\MSTeams\output-msteams-syncfusion.png)
+![Microsoft Teams Application with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor controls](images\MSTeams\output-msteams-syncfusion.png)
 
 N> [View the complete Microsoft Teams Application with Blazor Syncfusion<sup style="font-size:70%">&reg;</sup> Controls on GitHub](https://github.com/SyncfusionExamples/Building-Apps-for-Microsoft-Teams-with-Blazor-using-Syncfusion-Components)
