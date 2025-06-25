@@ -49,7 +49,6 @@ This example demonstrates using the **Syncfusion.Blazor.AI** package with OpenAI
   - `Syncfusion.Blazor.Grid`
   - `Syncfusion.Blazor.Themes`
   - `Syncfusion.Blazor.AI`
-- Obtain an OpenAI API key from the [OpenAI platform](https://platform.openai.com/account/api-keys).
 - Ensure your Blazor application meets the [System Requirements](https://blazor.syncfusion.com/documentation/system-requirements?utm_source=nuget&utm_medium=listing&utm_campaign=blazor-smart-nuget).
 - Add the following to `App.razor` for Syncfusion themes and scripts:
   
