@@ -9,11 +9,11 @@ documentation: ug
 
 # Getting Started with Microsoft Teams Application
 
-This section explains how to create and run the first Microsoft Teams application (M365 Agent App) with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
+This section explains how to create and run the first Microsoft Teams application (Tab App) with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components.
 
 ## Prerequisites
 
-* Visual Studio 2022 [> 17.13 version] with the required work loads (Visual studio Installer -> Workloads -> ASP.NET and web development -> Select Microsoft 365 Agents development tools from option check list).
+* Visual Studio 2022 [> 17.13 version] with the required work loads (Visual studio Installer -> Workloads -> ASP.NET and web development -> Select Microsoft 365 Agents development tools from Installation details).
 
 
     ![workload installation](images\MSTeams\workload-installation.png)
@@ -37,7 +37,7 @@ This section explains how to create and run the first Microsoft Teams applicatio
 
     ![Microsoft Teams project structure](images\MSTeams\msteams-project-structure.png)
 
-## Build and run the first Microsoft Team Application
+## Build and run the first Microsoft Teams Application
 
 1. To configure the project with the Microsoft teams application, right Click on the M365 Agent Project and Select Microsoft M365 Account.
 
@@ -77,7 +77,7 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor.Buttons` and `S
 
 ```
 
-Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the created Microsoft 365 Agent app. Open the `~/Program.cs` file and register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service as follows
+Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the created Microsoft Teams tab app. Open the `~/Program.cs` file and register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service as follows
 
 {% tabs %}
 {% highlight c# tabtitle="~/Program.cs" hl_lines="2 16" %}
@@ -113,7 +113,7 @@ var app = builder.Build();
 
 The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows:
 
-* For **.NET 8 and .NET 9** Microsoft 365 Agent app, include it in the **~/Components/Pages/App.razor** file.
+* For **.NET 8 and .NET 9** Microsoft Teams tab app, include it in the **~/Components/Pages/App.razor** file.
 
 ```html
 <head>
