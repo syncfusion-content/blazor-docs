@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Positioning in Blazor Diagram Component | Syncfusion
-description: Checkout and learn here all about positioning in Syncfusion Blazor Diagram component and much more details.
+description: Checkout and learn here all about port positioning in Syncfusion Blazor Diagram component and many more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
@@ -82,7 +82,64 @@ The following table shows the relationship between the shape port position and p
 | (1,0.5) | ![Blazor Diagram Port in Right Center Offset Values](../images/blazor-diagram-port-in-rightcenter-offset-values.png) |
 | (1,1) | ![Blazor Diagram Port in Right Bottom Offset Values](../images/blazor-diagram-port-in-rightbottom-offset-values.png) |
 
+## How to set PathPosition for connector port
 
+The `PathPosition` property allows you to place a connector port along the path of a connector. It accepts a value between 0 to 1, where:
+
+* 0 represents the starting point of the connector.
+* 1 represents the endpoint of the connector.
+
+You can set any value between 0 and 1 to position the port at a specific location along the connector's path.
+
+>**Note:** The default value of PathPosition is 0.5, which places the port at the midpoint of the connector.
+
+| PathPosition value | Output |
+|---|---|
+| 0 | ![Start](../images/ConnectorPort/ConnectorPortPathPosition0.png) |
+| 0.5 | ![Center](../images/ConnectorPort/ConnectorPortDefault.png) |
+| 1 | ![End](../images/ConnectorPort/ConnectorPortPathPosition1.png) |
+
+The following code example demonstrates how to set the PathPosition for a connector port.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Height="600px" Connectors="@connectors">
+</SfDiagramComponent>
+
+@code
+{
+    //Define diagram's connector collection
+    DiagramObjectCollection<Connector> connectors;
+
+    protected override void OnInitialized()
+    {
+        // A connector is created and stored in connectors collection.
+        connectors = new DiagramObjectCollection<Connector>();
+
+        // Create connector
+        Connector connector = new Connector()
+        {
+            ID = "connector",
+            SourcePoint = new DiagramPoint() { X = 400, Y = 200 },
+            TargetPoint = new DiagramPoint() { X = 550, Y = 350 },
+            Type = ConnectorSegmentType.Orthogonal,
+            Ports = new DiagramObjectCollection<ConnectorPort>()
+            {
+                new ConnectorPort()
+                {
+                    ID = "port",
+                    Visibility = PortVisibility.Visible,
+                    Shape = PortShapes.Square,
+                    PathPosition = 0,
+                }
+            }
+        };
+        connectors.Add(connector);
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ConnectorPort/ConnectorPortPathPosition)
 
 ## How to change Horizontal and Vertical alignment
 
