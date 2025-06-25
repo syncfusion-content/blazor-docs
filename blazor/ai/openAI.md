@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Using OpenAI with Syncfusion Blazor AI | Syncfusion
-description: Learn how to configure and use the Syncfusion.Blazor.AI library with OpenAI, including setup, integration steps, and practical examples for enabling AI-powered features in your Blazor applications.
+description: Learn how to configure and use the Syncfusion.Blazor.AI library with OpenAI, including setup, integration steps, and practical examples.
 platform: Blazor
 control: AI Integration
 documentation: ug
@@ -13,7 +13,7 @@ This section guides you through configuring and using the **Syncfusion.Blazor.AI
 
 ## Prerequisites
 - Install the **Syncfusion.Blazor.AI** package via NuGet.
-- Obtain an OpenAI API key from the [OpenAI platform](https://platform.openai.com/account/api-keys).
+- Obtain an OpenAI API key from the OpenAI platform.
 - Ensure your Blazor application meets the [System Requirements](https://blazor.syncfusion.com/documentation/system-requirements).
 
 ## Configuration

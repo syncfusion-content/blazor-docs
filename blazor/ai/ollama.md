@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Using Ollama with Syncfusion Blazor AI | Syncfusion
-description: Learn how to configure and use the Syncfusion.Blazor.AI library with Ollama, including setup, integration steps, and practical examples for enabling AI-powered features in your Blazor applications using locally hosted models.
+description: Learn how to set up and use Syncfusion.Blazor.AI with Ollama, including configuration, integration steps, and practical examples.
 platform: Blazor
 control: AI Integration
 documentation: ug

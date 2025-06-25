@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Using Azure OpenAI with Syncfusion Blazor AI | Syncfusion
-description: Learn how to configure and use the Syncfusion.Blazor.AI library with Azure OpenAI, including setup, integration steps, and practical examples for enabling AI-powered features in your Blazor applications.
+description: Learn how to set up and use Syncfusion.Blazor.AI with Azure OpenAI for AI-powered features in your Blazor apps, including configuration and examples.
 platform: Blazor
 control: AI Integration
 documentation: ug
@@ -15,7 +15,7 @@ This section guides you through configuring and using the **Syncfusion.Blazor.AI
 - Install the following NuGet packages:
   - `Syncfusion.Blazor.AI`
   - `Azure.AI.OpenAI`
-- Obtain an Azure OpenAI API key, endpoint, and deployment name from the [Azure portal](https://portal.azure.com/).
+- For **Azure OpenAI**, first [deploy an Azure OpenAI Service resource and model](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource), then values for `apiKey`, `deploymentName` and `endpoint` will all be provided to you.
 - Ensure your Blazor application meets the [System Requirements](https://blazor.syncfusion.com/documentation/system-requirements).
 
 ## Configuration
@@ -249,7 +249,7 @@ namespace AzureOpenAIExample.Components.Pages
 
         List<User> Users = GenerateRandomUsers(7);
 
-        private string TextAreaValue { get; set; } = "Find all users who lives in California and have over 500 credits";
+        private string TextAreaValue { get; set; } = "Find all users who lives in Los Angeles and have over 500 credits";
         SfQueryBuilder<User> QueryBuilderObj;
         private IEnumerable<User> GridData { get; set; }
         private IEnumerable<User> DataSource { get; set; }

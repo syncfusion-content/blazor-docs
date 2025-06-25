@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Using Custom AI Services with Syncfusion Blazor AI | Syncfusion
-description: Learn how to configure and use the Syncfusion.Blazor.AI library with custom AI providers, including setup, integration steps, and practical examples for enabling AI-powered features in your Blazor applications.
+description: Learn how to set up and use Syncfusion.Blazor.AI with custom AI providers, including configuration, integration steps, and practical examples.
 platform: Blazor
 control: AI Integration
 documentation: ug
@@ -13,7 +13,7 @@ This section guides you through configuring and using the **Syncfusion.Blazor.AI
 
 ## Prerequisites
 - Install the **Syncfusion.Blazor.AI** NuGet package.
-- Obtain a DeepSeek API key from the [DeepSeek platform](https://platform.deepseek.com/).
+- Obtain a DeepSeek API key from the [DeepSeek platform](https://platform.deepseek.com).
 - Ensure your Blazor application meets the [System Requirements](https://blazor.syncfusion.com/documentation/system-requirements).
 
 ## Configuration
