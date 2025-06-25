@@ -26,7 +26,7 @@ N> The pivot table component can be exported to Excel format using options avail
 
 <SfButton OnClick="OnExcelExport" Content="Excel Export"></SfButton>
 <SfPivotView TValue="ProductDetails" @ref="@pivot" AllowExcelExport="true" >
-    <PivotViewDataSourceSettings DataSource="@Data" EnableSorting=true>
+    <PivotViewDataSourceSettings DataSource="@data" EnableSorting=true>
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
             <PivotViewColumn Name="Quarter"></PivotViewColumn>
@@ -47,7 +47,7 @@ N> The pivot table component can be exported to Excel format using options avail
 
 @code{
     SfPivotView<ProductDetails> pivot;
-    public List<ProductDetails> Data { get; set; }
+    public List<ProductDetails> data { get; set; }
     protected override void OnInitialized()
     {
         this.Data = ProductDetails.GetProductData().ToList();
@@ -74,7 +74,7 @@ N> By default, material theme will be applied to the pivot table during Excel ex
 
 <SfButton OnClick="OnExcelExport" Content="Excel Export"></SfButton>
 <SfPivotView TValue="ProductDetails" @ref="@pivot" AllowExcelExport="true" >
-    <PivotViewDataSourceSettings DataSource="@Data" EnableSorting=true>
+    <PivotViewDataSourceSettings DataSource="@data" EnableSorting=true>
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
             <PivotViewColumn Name="Quarter"></PivotViewColumn>
@@ -95,7 +95,7 @@ N> By default, material theme will be applied to the pivot table during Excel ex
 
 @code{
     SfPivotView<ProductDetails> pivot;
-    public List<ProductDetails> Data { get; set; }
+    public List<ProductDetails> data { get; set; }
     protected override void OnInitialized()
     {
         this.Data = ProductDetails.GetProductData().ToList();
@@ -206,7 +206,7 @@ The Excel export provides an option to change file name of the document before e
 
 <SfButton OnClick="OnExcelExport" Content="Excel Export"></SfButton>
 <SfPivotView TValue="ProductDetails" @ref="@pivot" AllowExcelExport="true" >
-    <PivotViewDataSourceSettings DataSource="@Data" EnableSorting=true>
+    <PivotViewDataSourceSettings DataSource="@data" EnableSorting=true>
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
             <PivotViewColumn Name="Quarter"></PivotViewColumn>
@@ -227,7 +227,7 @@ The Excel export provides an option to change file name of the document before e
 
 @code{
     SfPivotView<ProductDetails> pivot;
-    public List<ProductDetails> Data { get; set; }
+    public List<ProductDetails> data { get; set; }
     protected override void OnInitialized()
     {
         this.Data = ProductDetails.GetProductData().ToList();
@@ -270,7 +270,7 @@ N> The pivot table component can be exported to CSV format using options availab
 
 <SfButton OnClick="OnCsvExport" Content="Csv Export"></SfButton>
 <SfPivotView TValue="ProductDetails" @ref="@pivot" AllowExcelExport="true" >
-    <PivotViewDataSourceSettings DataSource="@Data" EnableSorting=true>
+    <PivotViewDataSourceSettings DataSource="@data" EnableSorting=true>
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
             <PivotViewColumn Name="Quarter"></PivotViewColumn>
@@ -291,7 +291,9 @@ N> The pivot table component can be exported to CSV format using options availab
 
 @code{
     SfPivotView<ProductDetails> pivot;
+
     public List<ProductDetails> Data { get; set; }
+
     protected override void OnInitialized()
     {
         this.Data = ProductDetails.GetProductData().ToList();
@@ -433,26 +435,27 @@ The event [ExcelQueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.
 @using Syncfusion.Blazor.Grids
 
 <SfButton OnClick="OnExcelExport" Content="Excel Export"></SfButton>
-<SfPivotView TValue="ProductDetails" @ref="@pivot" EnableVirtualization="true" AllowExcelExport="true" >
-    <PivotViewDataSourceSettings DataSource="@Data" ExpandAll="false" EnableSorting="true" >
-        <PivotViewColumns>
-            <PivotViewColumn Name="Year"></PivotViewColumn>
-            <PivotViewColumn Name="Quarter"></PivotViewColumn>
-        </PivotViewColumns>
-        <PivotViewRows>
-            <PivotViewRow Name="Country"></PivotViewRow>
-            <PivotViewRow Name="Products"></PivotViewRow>
-        </PivotViewRows>
-        <PivotViewValues>
-            <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
-            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-        </PivotViewValues>
-        <PivotViewFormatSettings>
-            <PivotViewFormatSetting Name="Amount" Format="C0" UseGrouping=true></PivotViewFormatSetting>
-        </PivotViewFormatSettings>
-    </PivotViewDataSourceSettings>
-    <PivotViewEvents TValue="ProductDetails" ExcelQueryCellInfo="ExcelQueryEvent"></PivotViewEvents>
+<SfPivotView TValue="ProductDetails" @ref="@pivot" EnableVirtualization="true" AllowExcelExport="true">
+	<PivotViewDataSourceSettings DataSource="@data" ExpandAll="false" EnableSorting="true">
+		<PivotViewColumns>
+			<PivotViewColumn Name="Year"></PivotViewColumn>
+			<PivotViewColumn Name="Quarter"></PivotViewColumn>
+		</PivotViewColumns>
+		<PivotViewRows>
+			<PivotViewRow Name="Country"></PivotViewRow>
+			<PivotViewRow Name="Products"></PivotViewRow>
+		</PivotViewRows>
+		<PivotViewValues>
+			<PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+			<PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+		</PivotViewValues>
+		<PivotViewFormatSettings>
+			<PivotViewFormatSetting Name="Amount" Format="C0" UseGrouping=true></PivotViewFormatSetting>
+		</PivotViewFormatSettings>
+	</PivotViewDataSourceSettings>
+	<PivotViewEvents TValue="ProductDetails" ExcelQueryCellInfo="ExcelQueryEvent"></PivotViewEvents>
 </SfPivotView>
+
 
 @code{
     private SfPivotView<ProductDetails> pivot;
@@ -501,6 +504,7 @@ The event [ExcelQueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.
             args.Style.Bold = args.Cell.CellStyle.Bold = true;
         }
     }
+
 }
 
 ```
@@ -525,7 +529,7 @@ The event [ExcelHeaderQueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncf
 
 <SfButton OnClick="OnExcelExport" Content="Excel Export"></SfButton>
 <SfPivotView TValue="ProductDetails" @ref="@pivot" EnableVirtualization="true"  AllowExcelExport="true" >
-    <PivotViewDataSourceSettings DataSource="@Data" ExpandAll="false" EnableSorting="true" >
+    <PivotViewDataSourceSettings DataSource="@data" ExpandAll="false" EnableSorting="true" >
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
             <PivotViewColumn Name="Quarter"></PivotViewColumn>
@@ -547,7 +551,7 @@ The event [ExcelHeaderQueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncf
 
 @code{
     private SfPivotView<ProductDetails> pivot;
-    public List<ProductDetails> Data { get; set; }
+    public List<ProductDetails> data { get; set; }
 
     protected override void OnInitialized()
     {

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Custom AI Service with Syncfusion Smart Components in Blazor Web App
+title: Deepseek AI Service with Smart Components in Blazor App | Syncfusion
 description: Learn how to integrate and use the Syncfusion component in a Blazor Web App with DeepSeek AI services.
 platform: Blazor
 control: Smart Paste Button
@@ -31,7 +31,7 @@ Before you begin, ensure you have:
 
 ---
 
-## Next Steps
+## Getting Started for DeepSeek AI with SmartPasteButton
 
 After completing this setup, you can:
 
@@ -154,16 +154,16 @@ public class DeepSeekChoice
 
 ## Step 3: Create a Custom AI Service
 
-To integrate DeepSeek with Syncfusion Smart Components, we'll create a custom implementation of the `IAIInferenceBackend` interface. This interface acts as a bridge between Syncfusion components and your AI service.
+To integrate DeepSeek with Syncfusion Smart Components, we'll create a custom implementation of the `IChatInferenceService` interface. This interface acts as a bridge between Syncfusion components and your AI service.
 
-The `IAIInferenceBackend` interface is the bridge between Syncfusion Smart Components and AI services:
+The `IChatInferenceService` interface is the bridge between Syncfusion Smart Components and AI services:
 
 1. Create a new file named `MyCustomService.cs`
 2. Add the following implementation:
 
 ```csharp
 using Syncfusion.Blazor.AI;
-public class MyCustomService : IAIInferenceBackend
+public class MyCustomService : IChatInferenceService
 {
     private readonly DeepSeekAIService _DeepSeekService;
 
@@ -172,7 +172,7 @@ public class MyCustomService : IAIInferenceBackend
         _DeepSeekService = DeepSeekService;
     }
 
-    public Task<string> GetChatResponseAsync(ChatParameters options)
+    public Task<string> GenerateResponseAsync(ChatParameters options)
     {
         return _DeepSeekService.CompleteAsync(options.Messages);
     }
@@ -194,7 +194,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSyncfusionBlazor();
 builder.Services.AddSyncfusionSmartComponents();
 builder.Services.AddSingleton<DeepSeekAIService>();
-builder.Services.AddSingleton<IAIInferenceBackend, MyCustomService>();
+builder.Services.AddSingleton<IChatInferenceService, MyCustomService>();
 
 var app = builder.Build();
 ....
