@@ -1023,7 +1023,7 @@ Install-Package Syncfusion.Blazor.DropDowns -Version {{ site.releaseversion }}
 
 - Open the **~/_Imports.razor** file and import the required namespaces.
 
-```razor
+```csharp
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
