@@ -41,7 +41,7 @@ To enable deferred updates in the pivot table, set the property [AllowDeferLayou
             <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
         </PivotViewFormatSettings>
     </PivotViewDataSourceSettings>
-</SfPivotvotView>
+</SfPivotView>
 
 @code{
     public List<ProductDetails> data { get; set; }
