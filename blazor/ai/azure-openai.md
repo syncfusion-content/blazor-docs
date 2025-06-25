@@ -53,7 +53,6 @@ This example demonstrates using the **Syncfusion.Blazor.AI** package with **Azur
   - `Syncfusion.Blazor.AI`
   - `Syncfusion.Blazor.QueryBuilder`
   - `Azure.AI.OpenAI`
-- Obtain an OpenAI API key from the [OpenAI platform](https://platform.openai.com/account/api-keys).
 - Ensure your Blazor application meets the [System Requirements](https://blazor.syncfusion.com/documentation/system-requirements).
 - Add the following to `App.razor` for Syncfusion themes and scripts:
   
