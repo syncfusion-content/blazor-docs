@@ -46,7 +46,7 @@ builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
 using Syncfusion.Blazor.AI;
 ```
 
-## Example: Smart Data Restructuring with Ollama in a Blazor TreeGrid
+## Example: Syncfusion Tree Grid with Azure OpenAI in a Blazor Application
 
 This example demonstrates using the **Syncfusion.Blazor.AI** package with **Ollama** to perform smart data restructuring in a Syncfusion Blazor TreeGrid component. The application organizes hierarchical data by leveraging Ollama to assign appropriate `ParentId` values based on `CategoryName` relationships, updating the TreeGrid to reflect the corrected structure.
 

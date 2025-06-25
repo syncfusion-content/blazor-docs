@@ -40,7 +40,7 @@ builder.Services.AddSingleton<IChatInferenceService, SyncfusionAIService>();
 using Syncfusion.Blazor.AI;
 ```
 
-## Example: Anomaly Detection in a Blazor Grid
+## Example: Syncfusion Grid with Azure OpenAI in a Blazor Application
 
 This example demonstrates using the **Syncfusion.Blazor.AI** package with OpenAI to perform anomaly detection in a Syncfusion Blazor Grid component. The grid displays machine data (e.g., MachineID, Temperature, Pressure, Voltage, MotorSpeed, ProductionRate), and OpenAI identifies rows with irrelevant production rates relative to other factors, updating the grid with anomaly descriptions and visual styling.
 
