@@ -231,4 +231,4 @@ namespace OllamaExample.Components.Pages
 - **IChatInferenceService**: Injected to interact with the OpenAI service.
 - **ChatParameters**: Configures the AI request, including system and user messages, temperature, and token limits.
 - **GenerateResponseAsync**: Sends the request to OpenAI and retrieves the response asynchronously.
-- **Response**: Displays the AI-generated text or error message in the UI.
+- **Response**: Displays the AI-generated text.
