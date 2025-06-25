@@ -22,6 +22,10 @@ This section explains how to create and run the first Microsoft Teams applicatio
 
 * Microsoft Edge or Google Chrome browser with developer tools.
 
+* In the Teams client, go to the Apps icon > Manage your apps > Upload an app, and check for the "Upload a custom app" option to confirm if custom app upload is enabled. Contact Teams administrator, if you don't have the option to upload a custom app.
+
+    ![custom upload](images\MSTeams\custom-upload.png)
+
 ## Create a new Microsoft Team Application with Tab using Visual Studio
 
 1. Launch Visual Studio 2022, and in the start window click **Create a new project**.
