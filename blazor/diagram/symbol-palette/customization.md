@@ -477,9 +477,6 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ## How to customize the appearance of symbol description
 
 Customize the appearance of symbol descriptions in the symbol palette by adjusting the following properties:
-## How to customize the appearance of symbol description
-
-Customize the appearance of symbol descriptions in the symbol palette by adjusting the following properties:
 
 ### SymbolInfo Properties
 

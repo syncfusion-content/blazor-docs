@@ -365,7 +365,7 @@ The DiagramSelectionSettings provides access to:
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction/SelectedElements)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Interaction/CurrentSelection)
 
 ### How to clone the selected nodes and connector at runtime
 Clone is a virtual method of the node that is used to create a copy of a diagram object. After cloning, it is necessary to set a unique ID for the cloned nodes and connectors. The following code demonstrates how to clone selected nodes during runtime.
