@@ -58,7 +58,7 @@ N> The normal edit mode [EditMode.Normal](https://help.syncfusion.com/cr/blazor/
             <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
         </PivotViewValues>
         <PivotViewFormatSettings>
-            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+            <PivotViewFormatSetting Name="Amount" Format="C0"></PivotViewFormatSetting>
         </PivotViewFormatSettings>
     </PivotViewDataSourceSettings>
     <PivotViewCellEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode=EditMode.Normal></PivotViewCellEditSettings>
@@ -98,7 +98,7 @@ In dialog edit mode, when user starts editing, the currently selected row data w
             <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
         </PivotViewValues>
         <PivotViewFormatSettings>
-            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+            <PivotViewFormatSetting Name="Amount" Format="C0"></PivotViewFormatSetting>
         </PivotViewFormatSettings>
     </PivotViewDataSourceSettings>
     <PivotViewCellEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode=EditMode.Dialog></PivotViewCellEditSettings>
@@ -138,7 +138,7 @@ In batch edit mode, when user double-clicks any data grid cell, the state of tar
             <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
         </PivotViewValues>
         <PivotViewFormatSettings>
-            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+            <PivotViewFormatSetting Name="Amount" Format="C0"></PivotViewFormatSetting>
         </PivotViewFormatSettings>
     </PivotViewDataSourceSettings>
     <PivotViewCellEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode=EditMode.Batch></PivotViewCellEditSettings>
@@ -178,7 +178,7 @@ An additional column appended in the data grid layout holds the command buttons 
             <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
         </PivotViewValues>
         <PivotViewFormatSettings>
-            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+            <PivotViewFormatSetting Name="Amount" Format="C0"></PivotViewFormatSetting>
         </PivotViewFormatSettings>
     </PivotViewDataSourceSettings>
     <PivotViewCellEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" AllowCommandColumns="true" ></PivotViewCellEditSettings>
@@ -218,7 +218,7 @@ It allows editing of a value cell directly without the use of an external edit d
             <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
         </PivotViewValues>
         <PivotViewFormatSettings>
-            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+            <PivotViewFormatSetting Name="Amount" Format="C0"></PivotViewFormatSetting>
         </PivotViewFormatSettings>
     </PivotViewDataSourceSettings>
     <PivotViewCellEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" AllowInlineEditing="true" ></PivotViewCellEditSettings>
@@ -303,45 +303,45 @@ The event [`EditCompleted`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView TValue="ProductDetails" ShowFieldList="true" ShowGroupingBar="true">
-    <PivotViewDataSourceSettings DataSource="@data">
-        <PivotViewColumns>
-            <PivotViewColumn Name="Year"></PivotViewColumn>
-            <PivotViewColumn Name="Quarter"></PivotViewColumn>
-        </PivotViewColumns>
-        <PivotViewRows>
-            <PivotViewRow Name="Country"></PivotViewRow>
-            <PivotViewRow Name="Products"></PivotViewRow>
-        </PivotViewRows>
-        <PivotViewValues>
-            <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
-            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-        </PivotViewValues>
-        <PivotViewFormatSettings>
-            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
-        </PivotViewFormatSettings>
-    </PivotViewDataSourceSettings>
-    <PivotViewCellEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode=EditMode.Dialog></PivotViewCellEditSettings>
-    <PivotViewEvents TValue="ProductDetails" EditCompleted="EditCompleted"></PivotViewEvents>
+	<PivotViewDataSourceSettings DataSource="@data">
+		<PivotViewColumns>
+			<PivotViewColumn Name="Year"></PivotViewColumn>
+			<PivotViewColumn Name="Quarter"></PivotViewColumn>
+		</PivotViewColumns>
+		<PivotViewRows>
+			<PivotViewRow Name="Country"></PivotViewRow>
+			<PivotViewRow Name="Products"></PivotViewRow>
+		</PivotViewRows>
+		<PivotViewValues>
+			<PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
+			<PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+		</PivotViewValues>
+		<PivotViewFormatSettings>
+			<PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+		</PivotViewFormatSettings>
+	</PivotViewDataSourceSettings>
+	<PivotViewCellEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode=EditMode.Dialog></PivotViewCellEditSettings>
+	<PivotViewEvents TValue="ProductDetails" EditCompleted="EditCompleted"></PivotViewEvents>
 </SfPivotView>
 
 @code {
-    private List<ProductDetails> data { get; set; }
-    protected override void OnInitialized()
-    {
-        data = ProductDetails.GetProductData().ToList();
-        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-    }
-    private void EditCompleted(EditCompletedEventArgs<PivotProductDetails> args)
-    {
-        // Here you can obtain all the newly added raw data for the current edited cell which is used to add them in the datasource.
-        List<PivotProductDetails> addedData = args.AddedData;
+	private List<ProductDetails> data { get; set; }
+	protected override void OnInitialized()
+	{
+		data = ProductDetails.GetProductData().ToList();
+		//Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+	}
+	private void EditCompleted(EditCompletedEventArgs<ProductDetails> args)
+	{
+		// Here you can obtain all the newly added raw data for the current edited cell which is used to add them in the datasource.
+		List<ProductDetails> addedData = args.AddedData;
 
-        // Here you can obtain all the modified raw data of the current edited cell as well as their current index, which is used to identify and update them in the datasource.
-        Dictionary<int, PivotProductDetails> modifiedData = args.ModifiedData;
+		// Here you can obtain all the modified raw data of the current edited cell as well as their current index, which is used to identify and update them in the datasource.
+		Dictionary<int, ProductDetails> modifiedData = args.ModifiedData;
 
-        // Here you can obtain the current edited cell's all the removed raw data as well as their current index, which is used to identify and remove them from the datasource.
-        Dictionary<int, PivotProductDetails> removeData = args.RemovedData;
-    }
+		// Here you can obtain the current edited cell's all the removed raw data as well as their current index, which is used to identify and remove them from the datasource.
+		Dictionary<int, ProductDetails> removeData = args.RemovedData;
+	}
 }
 ```
 
@@ -426,8 +426,8 @@ The event [OnActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 ```cshtml
 @using Syncfusion.Blazor.PivotView
 
-<SfPivotView TValue="ProductDetails">
-     <PivotViewDataSourceSettings DataSource="@data" ShowFieldList="true" ShowGroupingBar="true">
+<SfPivotView TValue="ProductDetails" ShowFieldList="true" ShowGroupingBar="true">
+     <PivotViewDataSourceSettings DataSource="@data">
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
             <PivotViewColumn Name="Quarter"></PivotViewColumn>

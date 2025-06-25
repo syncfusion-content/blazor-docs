@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Custom AI Service with Syncfusion Smart Components in Blazor Web App
+title: Claude AI Service with Smart Components in Blazor App | Syncfusion
 description: Learn how to integrate and use the Syncfusion component in a Blazor Web App with Claude AI services.
 platform: Blazor
 control: Smart TextArea
@@ -34,7 +34,7 @@ For detailed specifications and capabilities, visit the [Claude Models Documenta
 
 ---
 
-## Next Steps
+## Getting Started for Claude AI with SmartTextArea
 
 After completing this setup, you can:
 

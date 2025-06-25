@@ -115,17 +115,17 @@ Organizational chart layout starts parsing from root and iterates through all it
 
 >**Note:** In the DataSourceSettings, the type of the ID and ParentID properties is string. The provided DataSource should have a parent-child relationship. It is necessary for at least one node to have an empty ParentID.
 
-## Customize layout
+## How to Customize Layout
 
 Orientation, spacings, and position of the layout can be customized with a set of properties.
 
 To explore layout properties, refer to `Layout Properties`.
 
-### How to update the Layout bounds
+### How to Update Layout Bounds
 
 Diagram provides support to align the layout within any custom rectangular area. For more information about bounds, refer to [Bounds](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Bounds).
 
-### How to align Layout 
+### How to Align Layout 
 
 The layout can be aligned anywhere over the layout bounds/viewport using the [HorizontalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_HorizontalAlignment) and [VerticalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_VerticalAlignment) properties of the layout.
 
@@ -227,11 +227,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Blazor Organization Diagram ChildNode in Vertical Right](../images/blazor-diagram-childnode-at-vertical-right.png)
 
-### How to update the Layout spacing
+### How to Update Layout Spacing
 
 Layout provides support to add space horizontally and vertically between the nodes. The [HorizontalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_HorizontalSpacing) and [VerticalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_VerticalSpacing) properties of the layout allow you to set the space between the nodes horizontally and vertically.
 
-### How to update the Layout margin
+### How to Update Layout Margin
 
 Layout provides support to add some blank space between the layout bounds/viewport and the layout. The [Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Margin) property of the layout allows you to set the blank space.
 
@@ -250,7 +250,7 @@ Layout provides support to add some blank space between the layout bounds/viewpo
 }
 ```
 
-### How to change orientation
+### How to Change Orientation
 
 Diagram provides support to customize the `Orientation` of the layout. You can set the desired orientation using `LayoutOrientation`.
 
@@ -268,7 +268,7 @@ The following code illustrates how to arrange the nodes in a BottomToTop orienta
 }
 ```
 
-### Fixed node
+### How to Set a Fixed Node Position
 
 Layout provides support to arrange the nodes with reference to the position of a fixed node and set it to the [FixedNode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_FixedNode) of the layout property. This is helpful when you try to expand/collapse a node. It might be expected that the position of the double-clicked node should not be changed.
 
@@ -288,7 +288,7 @@ Layout provides support to arrange the nodes with reference to the position of a
 
 ```
 
-## Assistant
+## How to Add Assistant
 
 [Assistants](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TreeInfo.html#Syncfusion_Blazor_Diagram_TreeInfo_Assistants) are child items that have a different relationship with the parent node. They are laid out in a dedicated part of the tree. A node can be specified as an assistant of its parent by adding it to the assistants property of the argument `Assistants`.
 
@@ -368,7 +368,7 @@ The following code example illustrates how to add assistants to the layout.
 }
 ```
 
-## How to refresh the layout
+## How to Refresh the Layout
 
 Diagram allows you to refresh the layout at runtime by using the [DoLayoutAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DoLayoutAsync) method. Use the following code example to refresh the layout.
 
