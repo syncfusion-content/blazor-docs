@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Claude AI Service with Syncfusion Smart Components in Blazor App | Syncfusion
+title: Claude AI Service with Smart Components in Blazor App | Syncfusion
 description: Learn how to integrate and use the Syncfusion component in a Blazor Web App with Claude AI services.
 platform: Blazor
 control: Smart Paste Button

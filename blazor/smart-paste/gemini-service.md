@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Gemini AI Service with Syncfusion Smart Components in Blazor App | Syncfusion
+title: Gemini AI Service with Smart Components in Blazor App | Syncfusion
 description: Learn how to implement a custom AI service using Google's Gemini API with Syncfusion Smart Components in a Blazor App.
 control: Smart Paste Button
 documentation: ug
