@@ -61,8 +61,8 @@ The following table shows shortcut keys and its corresponding usage.
 
 | Windows | Mac | Actions |
 | --- | --- | --- |
-| <kbd>↓</kbd> | <kbd>↓</kbd> | Increments the value. |
-| <kbd>↑</kbd> | <kbd>↑</kbd> | Decrements the value. |
+| <kbd>↑</kbd> | <kbd>↑</kbd> | Increments the value. |
+| <kbd>↓</kbd> | <kbd>↓</kbd> | Decrements the value. |
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs

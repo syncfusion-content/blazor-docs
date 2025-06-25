@@ -61,8 +61,8 @@ The Keyboard interaction of the Blazor Range Slider component is designed based 
 | --- | --- | --- |
 | <kbd>↑</kbd> or <kbd>→</kbd> | <kbd>↑</kbd> or <kbd>→</kbd> | Increase the Slider value.|
 | <kbd>↓</kbd> , <kbd>←</kbd> | <kbd>↓</kbd> or <kbd>←</kbd> | Decrease the Slider value. |
-| <kbd>Home</kbd> | <kbd>Home</kbd> | Moves to the start value (for Range Slider when the second thumb is focused and the Home key is pressed, it moves to the first thumb value). |
-| <kbd>End</kbd> | <kbd>End</kbd> | Moves to the end value (for Range Slider when the first thumb is focused and the End key is pressed, it moves to the second thumb value). |
+| <kbd>Home</kbd> | <kbd>Fn</kbd> + <kbd>←</kbd> | Moves to the start value (for Range Slider when the second thumb is focused and the Home key is pressed, it moves to the first thumb value). |
+| <kbd>End</kbd> | <kbd>Fn</kbd> + <kbd>→</kbd> | Moves to the end value (for Range Slider when the first thumb is focused and the End key is pressed, it moves to the second thumb value). |
 | <kbd>Page Up</kbd> | <kbd>Page Up</kbd> | Increases the Slider by `LargeStep` value. |
 | <kbd>Page Down</kbd> | <kbd>Page Down</kbd> | Decreases the Slider by `LargeStep` value. |
 

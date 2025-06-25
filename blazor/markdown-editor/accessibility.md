@@ -46,9 +46,9 @@ The accessibility compliance for the Blazor Markdown Editor component is outline
 | **Property** | **Functionalities** |
 | --- | --- |
 | role="toolbar" | This attribute added to the ToolBar element describes the actual role of the element. |
-| aria-orientation     | Indicates the ToolBar orientation. Default value is `horizontal`. |
-| aria-haspopup       | Indicates the popup mode of the Toolbar. Default value is false. When popup mode is enabled,  attribute value has to be changed to `true`. | |
-| aria-disabled       | Indicates the disabled state of the ToolBar. |
+| aria-orientation | Indicates the ToolBar orientation. Default value is `horizontal`. |
+| aria-haspopup | Indicates the popup mode of the Toolbar. Default value is false. When popup mode is enabled,  attribute value has to be changed to `true`. | |
+| aria-disabled | Indicates the disabled state of the ToolBar. |
 | aria-owns | Identifies an element to define a visual, functional, or contextual parent/child relationship between DOM elements when the DOM hierarchy cannot represent the relationship. In the Markdown Editor, the attribute contains the ID of the Markdown Editor to indicate the popup as a child element. |
 
 For further details of Toolbar ARIA attributes, refer the  [`accessibility of Toolbar`](../../toolbar/accessibility) documentation.
