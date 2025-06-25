@@ -7,9 +7,9 @@ control: AI Integration
 documentation: ug
 ---
 
-# Using Ollama with Syncfusion Blazor AI
+# Using Ollama with Syncfusion Blazor AI package
 
-This section guides you through configuring and using the **Syncfusion.Blazor.AI** package with **Ollama** to enable AI functionalities in your Blazor applications. The package provides seamless integration with Ollama's locally hosted AI models, allowing you to enhance any Syncfusion Blazor component with intelligent features.
+This section helps to configuring and using the **Syncfusion.Blazor.AI** package with **Ollama** to enable AI functionalities in your Blazor applications. The package provides seamless integration with Ollama's locally hosted AI models, allowing you to enhance any Syncfusion Blazor component with intelligent features.
 
 ## Prerequisites
 - Install the following NuGet package:

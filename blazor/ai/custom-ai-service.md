@@ -7,9 +7,9 @@ control: AI Integration
 documentation: ug
 ---
 
-# Using Custom AI Services with Syncfusion Blazor AI (DeepSeek Example)
+# Using Custom AI Services with Syncfusion Blazor AI package (DeepSeek Example)
 
-This section guides you through configuring and using the **Syncfusion.Blazor.AI** package with a **custom AI service** by implementing the `IChatInferenceService` interface, using DeepSeek as an example. This extensibility allows you to integrate DeepSeek or any custom AI provider into your Blazor applications, enhancing Syncfusion Blazor components with tailored AI functionalities.
+This section helps to configuring and using the **Syncfusion.Blazor.AI** package with a **custom AI service** by implementing the `IChatInferenceService` interface, using DeepSeek as an example. This extensibility allows you to integrate DeepSeek or any custom AI provider into your Blazor applications, enhancing Syncfusion Blazor components with tailored AI functionalities.
 
 ## Prerequisites
 - Install the **Syncfusion.Blazor.AI** NuGet package.

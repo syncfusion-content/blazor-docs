@@ -7,9 +7,9 @@ control: AI Integration
 documentation: ug
 ---
 
-# Using Azure OpenAI with Syncfusion Blazor AI
+# Using Azure OpenAI with Syncfusion Blazor AI package
 
-This section guides you through configuring and using the **Syncfusion.Blazor.AI** package with **Azure OpenAI** to enable AI functionalities in your Blazor applications. The package provides seamless integration with Azure OpenAI's API, allowing you to enhance any Syncfusion Blazor component with intelligent features.
+This section helps to configuring and using the **Syncfusion.Blazor.AI** package with **Azure OpenAI** to enable AI functionalities in your Blazor applications. The package provides seamless integration with Azure OpenAI's API, allowing you to enhance any Syncfusion Blazor component with intelligent features.
 
 ## Prerequisites
 - Install the following NuGet packages:
