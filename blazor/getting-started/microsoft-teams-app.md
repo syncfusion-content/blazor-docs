@@ -25,7 +25,7 @@ This section explains how to create and run the first Microsoft Teams applicatio
 ## Create a new Microsoft Team Application with Tab using Visual Studio
 
 1. Launch Visual Studio 2022, and in the start window click **Create a new project**.
-2. Search for Microsoft 365 Agents app in Visual Studio template. Select **Microsoft teams App** and click on Next.
+2. Search for Microsoft 365 Agents app in Visual Studio template. Select **Microsoft 365 Agents** and click on Next.
 
     ![Create Microsoft Teams App](images\MSTeams\create-msteams-app.png)
 3. Configure the project with required project name, select the location to save the application and click on Create.
