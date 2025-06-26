@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Cell Editing in Blazor Spreadsheet component | Syncfusion
-description: Check out and learn here about the cell editing features in the Syncfusion Blazor Spreadsheet component and more.
+description: Checkout and learn here about the cell editing features in the Syncfusion Blazor Spreadsheet component and more.
 platform: Blazor
 control: Spreadsheet
 documentation: ug
@@ -9,31 +9,31 @@ documentation: ug
 
 # Editing in Blazor Spreadsheet component
 
-The contents of a cell can be edited directly in the cell or by typing in the formula bar. By default, the editing feature is enabled in the Spreadsheet. Use the [AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowEditing) property to enable or disable the editing feature.
+The contents of a cell can be edited directly within the cell or by typing in the formula bar. By default, the editing feature is enabled in the Spreadsheet. Use the [AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowEditing) property to enable or disable the editing feature.
 
 ## Edit cell
 
-Editing can be started by one of the following ways,
+Editing can be started in one of the following ways,
 
-* Double click a cell to start the edit mode.
-* Press `F2` key to edit the active cell.
-* Use formula bar to perform editing.
-* Use `BACKSPACE` or `SPACE` key to clear the cell content and start the edit mode.
+* Double-click a cell to start edit mode.
+* Press the `F2` key to edit the active cell.
+* Use the formula bar to perform editing.
+* Press `BACKSPACE` or `SPACE` key to clear the cell content and start edit mode.
 
 ## Save cell
 
-If the cell is in editable state, the edited cell can be saved by one of the following ways,
+If the cell is in an editable state, the edited cell can be saved in one of the following ways,
 
-* Perform mouse click on any other cell rather than the current editing cell.
+* Click any other cell except the one currently being edited.
 
-* Press `Enter` or `Tab` keys to save the edited cell content.
+* Press the `Enter` or `Tab` key to save the edited cell.
 
 ## Cancel editing
 
-To cancel the editing without saving the changes, press the `ESCAPE` key. This will remove the editable state and update the unchanged cell content.
+To cancel editing without saving changes, press the `ESCAPE` key. This exits the editable state and restores the original cell content.
 
-The following animation illustrates the basic cell editing operations in the Spreadsheet component including double-clicking a cell to enter edit mode, editing cell values directly, saving edits by pressing Enter, and canceling edits with the Escape key.
+The following animation illustrates basic cell editing operations in the Spreadsheet component, including double-clicking a cell to enter edit mode, editing values directly, saving changes by pressing `ENTER` key, and canceling edits with the `ESCAPE` key.
 
-![UI showing cell editing Spreadsheet](./images/cell-editing.gif)
+![UI showing cell editing](./images/cell-editing.gif)
 
 
