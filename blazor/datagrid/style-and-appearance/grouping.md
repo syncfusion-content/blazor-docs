@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Grouping customization in Blazor DataGrid | Syncfusion
-description: Check out and learn here everything about grouping in Syncfusion Blazor DataGrid and much more details. 
+description: Check out and learn here everything about grouping customization in Syncfusion Blazor DataGrid and much more details.
 platform: Blazor
 control: DataGrid
 documentation: ug

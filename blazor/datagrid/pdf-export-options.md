@@ -1,7 +1,7 @@
 ---
 layout: post
 title: PDF Export Options in Blazor DataGrid | Syncfusion
-description: Check out and easily learn here everything about Row in Syncfusion Blazor DataGrid and much more details.
+description: Check out and easily learn here everything about row in Syncfusion Blazor DataGrid and much more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
