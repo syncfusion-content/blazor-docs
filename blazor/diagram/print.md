@@ -11,7 +11,7 @@ documentation: ug
 
 Diagram provides support to print the content displayed on the diagram page using the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PrintAsync_) method.
 
-## Page setup
+## How to Set Up Page Layout for Printing 
 
 Some of the print options cannot be configured through JavaScript code. Therefore, the layout, paper size, and margin options must be customized using the browser page setup dialog. Refer to the following links to learn more about the browser page setup:
 
@@ -20,7 +20,7 @@ Some of the print options cannot be configured through JavaScript code. Therefor
 * [Safari](https://www.mintprintables.com/print-tips/adjust-margins-osx/)
 * [IE](http://www.helpteaching.com/help/print/index.htm)
 
-## Printing Options
+## How to Customize Printing Options
 
 The diagram can be customized while printing using the following properties of the [DiagramPrintSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramPrintSettings.html) class. 
 

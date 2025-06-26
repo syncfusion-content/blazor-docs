@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Interaction in Blazor Diagram Component | Syncfusion
+title: Port Interaction in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about Interaction in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Interaction in Blazor Diagram Component
+# Port Interaction in Blazor Diagram Component
 
 The port can be used to create a connector by enabling the `Draw` in the [PortConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html).
 
-## How to draw connector from the node port
+## How to Draw Connector from Node Port
 You can draw connectors from the node port by enabling Draw constraints to the Constraints property. By default, the connector segment type is set to [Orthogonal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Orthogonal).
 
 The following code explains how to draw the connector by using the port constraints.
@@ -69,7 +69,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Drawing Port Connection in Blazor Diagram](../images/blazor-diagram-draw-port-connection.gif)
 
-## How to draw connector from the connector port
+## How to Draw Connector from Connector Port
 You can draw connectors from the connector port by enabling Draw constraints to the Constraints property. By default, the connector segment type is set to [Orthogonal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Orthogonal).
 
 The following code explains how to draw the connector by using the port constraints.
@@ -116,7 +116,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Drawing Connector Port Connection in Blazor Diagram](../images/ConnectorPort/ConnectorPortDraw.gif)
 
-## How to draw different types of connector from the port
+## How to Draw Different Connector Types from Port
 
 You can change the default connector type while drawing the connector from the port by setting the specific connector type instance to the [DrawingObject](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DrawingObject) property. This enables the drawing of various connector types from the port, including:
 * Straight
