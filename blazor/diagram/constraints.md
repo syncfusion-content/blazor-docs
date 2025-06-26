@@ -822,7 +822,3 @@ In the previous example, check whether the rotate constraints are enabled in a n
 * [How to Make HTML Node Resizable but Not Draggable in Blazor Diagram](https://support.syncfusion.com/kb/article/18727/how-to-make-html-node-resizable-but-not-draggable-in-blazor-diagram)
 
 * [How to Enable Panning Functionality Using Right-Click and Perform Panning in a Diagram](https://support.syncfusion.com/kb/article/18719/how-to-enable-panning-functionality-using-right-click-and-perform-panning-in-a-diagram)
-
-
-
-

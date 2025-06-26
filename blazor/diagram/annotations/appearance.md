@@ -647,6 +647,3 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to add annotation for Connector](./connector-annotation)
 
 * [How to Prevent Text Overflow and Display Excess Content on Hover in a Diagram](https://support.syncfusion.com/kb/article/18726/how-to-prevent-text-overflow-and-display-excess-content-on-hover-in-a-diagram)
-
-
-

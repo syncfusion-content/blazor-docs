@@ -1115,11 +1115,3 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to Create a Blazor Application for Dragging and Dropping Symbols from a Palette into Multiple Diagrams](https://support.syncfusion.com/kb/article/18717/how-to-create-a-blazor-application-for-dragging-and-dropping-symbols-from-a-palette-into-multiple-diagrams)
 
 * [How to Increase the Width When Resize the Splitter in Blazor Diagram](https://support.syncfusion.com/kb/article/18731/how-to-increase-the-width-when-resize-the-splitter-in-blazor-diagram)
-
-
-
-
-
-
-
-

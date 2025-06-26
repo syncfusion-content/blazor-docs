@@ -584,5 +584,3 @@ You can customize this value to increase or decrease the spacing based on your d
 ```
 
 You can download a complete working sample from [GitHub]().
-
-

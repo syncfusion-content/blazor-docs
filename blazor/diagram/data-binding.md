@@ -2007,4 +2007,3 @@ You can find the fully working sample [here](https://github.com/SyncfusionExampl
 * [How to Create the Org Chart Blazor Diagram by Using MDF Database](https://support.syncfusion.com/kb/article/12128/how-to-create-the-org-chart-blazor-diagram-by-using-mdf-database)
 
 * [How to Import a GraphML File and Generate a Blazor Diagram Using Its Data](https://support.syncfusion.com/kb/article/17217/how-to-import-a-graphml-file-and-generate-a-blazor-diagram-using-its-data)
-
