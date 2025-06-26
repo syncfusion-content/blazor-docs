@@ -17,33 +17,33 @@ Cell formatting allows you to visually emphasize data in the Spreadsheet by appl
 
 Cell formatting options include:
 
-* `Bold` - Emphasizes text with a heavier weight to make it stand out in the Spreadsheet.
+* **Bold** - Emphasizes text with a heavier weight to make it stand out in the Spreadsheet.
 
-* `Italic` - Slants text to create a distinct visual appearance, often used for emphasis or differentiation.
+* **Italic** - Slants text to create a distinct visual appearance, often used for emphasis or differentiation.
 
-* `Underline` - Adds a line beneath text for highlighting or indicating links.
+* **Underline** - Adds a line beneath text for highlighting or indicating links.
 
-* `Strikethrough` - Draws a line through text, often used to indicate completed tasks or obsolete data.
+* **Strikethrough** - Draws a line through text, often used to indicate completed tasks or obsolete data.
 
-* `Font Family` - Changes the typeface of text (such as Arial, Calibri, Times New Roman) to improve readability or aesthetic appeal.
+* **Font Family** - Changes the typeface of text (such as Arial, Calibri, Times New Roman) to improve readability or aesthetic appeal.
 
-* `Font Size` - Adjusts the text size to create visual hierarchy or improve readability within the Spreadsheet.
+* **Font Size** - Adjusts the text size to create visual hierarchy or improve readability within the Spreadsheet.
 
-* `Text Color` - Changes the color of text to enhance visual hierarchy or to color-code information.
+* **Text Color** - Changes the color of text to enhance visual hierarchy or to color-code information.
 
-* `Fill Color` - Adds background color to cells to organize data visually or highlight specific information.
+* **Fill Color** - Adds background color to cells to organize data visually or highlight specific information.
 
-* `Horizontal Alignment` - Controls text position from left to right within a cell. Options include Left (default for text), Center (useful for headings), and Right (default for numbers).
+* **Horizontal Alignment** - Controls text position from left to right within a cell. Options include Left (default for text), Center (useful for headings), and Right (default for numbers).
 
-* `Vertical Alignment` - Controls text position from top to bottom within a cell. Options include Top, Middle (centers content vertically), and Bottom (default).
+* **Vertical Alignment** - Controls text position from top to bottom within a cell. Options include Top, Middle (centers content vertically), and Bottom (default).
 
-* `Wrap Text` - Displays large content as multiple lines in a single cell instead of overflowing into adjacent cells.
+* **Wrap Text** - Displays large content as multiple lines in a single cell instead of overflowing into adjacent cells.
 
 Cell formatting can be applied to or removed from a cell or range of cells by selecting the appropriate formatting options from the ribbon toolbar under the Home tab.
 
 ## Autofill
 
-Autofill is used to fill the cells with data based on adjacent cells. It also follows a pattern from adjacent cells if available. There is no need to enter the repeated data manually. The [AllowAutofill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowAutofill) property can be used to enable/disable the autofill support. 
+Autofill is used to fill the cells with data based on adjacent cells. It also follows a pattern from adjacent cells if available. There is no need to enter the repeated data manually. The [AllowAutofill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowAutofill) property can be used to enable/disable the Autofill support. 
 
 > * The default value of `AllowAutofill` is **true**.
 
