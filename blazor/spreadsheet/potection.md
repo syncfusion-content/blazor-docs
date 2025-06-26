@@ -15,6 +15,34 @@ Sheet protection helps you to prevent the users from modifying the data in the s
 
 Protect sheet feature helps you to prevent the unknown users from accidentally changing, editing, moving, or deleting data in a spreadsheet. And you can also protect the sheet with or without password.
 
+### Protect Settings in Protected Sheet
+
+By default, when a sheet is protected, actions such as selecting cells, formatting, inserting, sorting and filtering are disabled.
+
+To enable specific functionalities while the sheet is protected:
+
+* Open the Protect Sheet dialog from the Review tab.
+
+* In the dialog, navigate to sheet options tab where you’ll find various protection settings.
+
+* Check or uncheck the options based on the actions you want to allow.
+
+* Click OK to apply the protection settings.
+
+The available protectSettings options in spreadsheet are,
+
+| Options | Uses |
+|------------------------|---------|
+| Select Cells | Used to perform Cell Selection. |
+| Format Cells | Used to perform Cell formatting. |
+| Format Rows | Used to perform Row formatting. |
+| Format Columns | Used to perform Column formatting. |
+| Insert Columns | Used to insert new columns. |
+| Insert Rows | Used to insert new rows. |
+| Insert Hyperlinks | Used to perform Hyperlink Insertions. |
+| Sort | Used to perform Sorting. |
+| Filter | Used to perform Filtering. |
+
 ### User interface
 
 In the active Spreadsheet, the sheet protection can be done by any of the following ways:
