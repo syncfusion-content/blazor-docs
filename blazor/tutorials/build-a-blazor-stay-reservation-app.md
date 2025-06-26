@@ -62,7 +62,7 @@ Now, let's configure the app to recognize and style the Syncfusion components.
 
     Open `Components/App.razor`. We need to add the Syncfusion theme stylesheet and the necessary script reference for component interactivity. We'll use the modern `tailwind.css` theme.
 
-    ```html Components/App.razor
+    ```html
     <!DOCTYPE html>
     <html lang="en">
     
@@ -90,7 +90,7 @@ Now, let's configure the app to recognize and style the Syncfusion components.
 
     To avoid having to add `@using` directives in every component, add the most common Syncfusion namespaces to your `_Imports.razor` file.
 
-    ```csharp _Imports.razor
+    ```csharp
     @using StayReservation
     @using StayReservation.Components
     @using Syncfusion.Blazor.Schedule
@@ -107,7 +107,7 @@ A real-world app needs a way to manage its data and state. For this, we'll creat
 
 First, define your data model in `Data/AppointmentData.cs`:
 
-```csharp Data/AppointmentData.cs
+```csharp
 public class AppointmentData
 {
     public int Id { get; set; }
@@ -121,7 +121,7 @@ public class AppointmentData
 
 Now, create the `AppointmentService.cs` in the `Data` folder. This service will hold the appointment list and references to our components.
 
-```csharp Data/AppointmentService.cs
+```csharp
 public class AppointmentService
 {
     // Holds all reservation data
@@ -141,7 +141,7 @@ public class AppointmentService
 
 Register this service as a singleton in `Program.cs`:
 
-```csharp Program.cs
+```csharp
 builder.Services.AddSingleton<AppointmentService>();
 ```
 
@@ -154,7 +154,7 @@ Our application has three main UI parts: the sidebar for calendar date navigatio
 This component uses an `<SfSidebar>` to contain calendar and filters. An `<SfCalendar>`allows the user to select the date desired date in scheduler.
 An `<SfAccordion>` organizes the filters, `<SfCheckBox>` component used to controls which floors are displayed. `<SfSlider>` is used to filter the price range.
 
-```html Components/Pages/Sidebar.razor
+```html
 @using StayReservation.Data
 @inject AppointmentService Service
 
@@ -228,7 +228,7 @@ The Scheduler needs two main pieces of data:
 
 The appointment and resource data will come from `AppointmentService`.
 
-```html Components/Pages/Schedule.razor
+```html
 @inject AppointmentService Service
 
 <div class="schedule-container">
@@ -296,7 +296,7 @@ Now, let's bring it all together in the main `Index.razor` page. This component 
 
 Update `Components/Pages/Index.razor` with the following code:
 
-```html Components/Pages/Index.razor
+```html
 @page "/"
 
 <div class="app-main-container" style="visibility:@(Service.Visible); opacity:@(Service.Opacity)">
@@ -325,7 +325,7 @@ Update `Components/Pages/Index.razor` with the following code:
 We need to connect the checkboxes in the sidebar to the data displayed in the scheduler. Since we're using our `AppointmentService` to hold the state, we can detect changes to the checkbox values and re-filter the scheduler's resource data. Can bind the change event to checkbox and sliders to form the filter query and update the resource data.
 
 Refer the following code to implement the filtering logic in `Components/Pages/Sidebar.razor`:
-```csharp Components/Pages/Sidebar.razor
+```csharp
 @code {
     // ... existing code ...
 
@@ -407,7 +407,7 @@ We can validate the form fields using the `ValidationMessage` component. The `Va
 
 We can apply the following code to the `Schedule.razor` file to create the custom form.
 
-```html Components/Pages/Schedule.razor
+```html
 <SfSchedule>
     <ScheduleTemplates>
     <EditorTemplate>
@@ -539,6 +539,7 @@ Integrate `SfToast` for user notifications throughout the application. When a us
 ```
 
 The `OnActionBegin` event of the `SfSchedule` component can be bound to a method that will handle the toast notifications.
+
 ```csharp
     public async Task OnActionBegin(ActionEventArgs<AppointmentData> args)
     {
