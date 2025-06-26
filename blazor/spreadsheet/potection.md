@@ -9,11 +9,11 @@ documentation: ug
 
 # Protect sheet in Blazor Spreadsheet Component
 
-Sheet protection helps you to prevent the users from modifying the data in the spreadsheet.
+Sheet protection helps to prevent modification of data in the spreadsheet.
 
 ## Protect Sheet
 
-Protect sheet feature helps you to prevent the unknown users from accidentally changing, editing, moving, or deleting data in a spreadsheet. And you can also protect the sheet with or without password.
+The Protect Sheet feature restricts accidental changes such as editing, moving, or deleting data. Protection can be applied with or without a password.
 
 ### Protect Settings in Protected Sheet
 
@@ -23,45 +23,45 @@ To enable specific functionalities while the sheet is protected:
 
 * Open the Protect Sheet dialog from the Review tab.
 
-* In the dialog, navigate to sheet options tab where you’ll find various protection settings.
+* In the dialog, go to the Sheet Options tab to view protection settings.
 
-* Check or uncheck the options based on the actions you want to allow.
+* Check or uncheck the options.
 
 * Click OK to apply the protection settings.
 
-The available protectSettings options in spreadsheet are,
+The available protection settings in spreadsheet are,
 
-| Options | Uses |
+| Options | Description |
 |------------------------|---------|
-| Select Cells | Used to perform Cell Selection. |
-| Format Cells | Used to perform Cell formatting. |
-| Format Rows | Used to perform Row formatting. |
-| Format Columns | Used to perform Column formatting. |
-| Insert Columns | Used to insert new columns. |
-| Insert Rows | Used to insert new rows. |
-| Insert Hyperlinks | Used to perform Hyperlink Insertions. |
-| Sort | Used to perform Sorting. |
-| Filter | Used to perform Filtering. |
+| Select Cells | Allows cell selection. |
+| Format Cells | Allows cell formatting. |
+| Format Rows | Allows row formatting. |
+| Format Columns | Allows column formatting. |
+| Insert Columns | Allows inserting new columns. |
+| Insert Rows | Allows inserting new rows. |
+| Insert Hyperlinks | Allows adding hyperlinks. |
+| Sort | Allows sorting data. |
+| Filter | Allows filtering data. |
 
 ### User interface
 
 In the active Spreadsheet, the sheet protection can be done by any of the following ways:
 
-* Select the Protect Sheet item in the Ribbon toolbar under the Review Tab, and then select your desired options.
+* Select Protect Sheet from the Review tab in the Ribbon toolbar and choose the desired options.
 
-* Right-click the sheet tab, select the Protect Sheet item in the context menu, and then select your desired options.
+* Right-click the sheet tab, select Protect Sheet from the context menu, and choose the desired options.
 
 ## Unprotect Sheet
 
-Unprotect sheet is used to enable all the functionalities that are already disabled in a protected spreadsheet.
+The Unprotect Sheet feature restores access to all actions that were restricted by protection.
 
 ### User interface
 
 In the active Spreadsheet, the sheet Unprotection can be done by any of the following ways:
 
-* Select the Unprotect Sheet item in the Ribbon toolbar under the Review Tab.
+* Select Unprotect Sheet from the Review tab in the Ribbon toolbar.
 
-* Right-click the sheet tab, select the Unprotect Sheet item in the context menu.
+* Right-click the sheet tab and select Unprotect Sheet from the context menu.
 
 ### Unlock the particular cells in the protected sheet via the UI
 
@@ -77,18 +77,24 @@ These specified cells will now be editable while the rest of the sheet remains p
 
 ## Protect Workbook
 
-Protect workbook feature helps you to protect the workbook so that users cannot insert, delete, rename, hide the sheets in the spreadsheet. You can enable workbook protection with or without a password, depending on your security requirements.
+The Protect Workbook feature prevents structural changes such as inserting, deleting, renaming, or hiding sheets. Protection can be applied with or without a password.
 
 ### User interface
 
-In the active Spreadsheet, you can protect the workbook by selecting the Review tab in the Ribbon toolbar and choosing the Protect Workbook item. Then, enter the password and confirm it and click on OK.
+To protect the workbook:
+
+* Go to the Review tab in the Ribbon toolbar.
+
+* Select Protect Workbook, enter and confirm the password, then click OK.
 
 ## Unprotect Workbook
 
-Unprotect Workbook is used to enable the insert, delete, rename, move, copy, hide or unhide sheets feature in the spreadsheet.
+The Unprotect Workbook feature allows structural changes like inserting, deleting, renaming, moving, copying, hiding, or unhiding sheets.
 
 ### User interface
 
-In the active Spreadsheet, the workbook can be unprotected using the following method:
+To unprotect the workbook:
 
-* Select the Unprotect Workbook item in the Ribbon toolbar under the Review Tab and provide the valid password in the dialog box.
+* Select Unprotect Workbook from the Review tab in the Ribbon toolbar.
+
+* Enter the correct password in the dialog box, then click OK.
