@@ -1100,3 +1100,26 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ## See Also
 
 * [How to add the symbol to the diagram](./nodes)
+
+* [How to Add Image Node in Symbol Palette in Blazor](https://support.syncfusion.com/kb/article/10090/how-to-add-image-node-in-symbol-palette-in-blazor)  
+* [How to Add Custom HTML Nodes in Symbol Palette for Blazor Diagram](https://support.syncfusion.com/kb/article/18737/how-to-add-custom-html-nodes-in-symbol-palette-for-blazor-diagram)  
+
+* [How to Render the Freehand Connector in Symbol Palette?](https://support.syncfusion.com/kb/article/17236/how-to-render-the-freehand-connector-in-symbol-palette)  
+
+* [How to Set Symbol Size in the Palette and Increase Node Size When Dropped onto the Diagram in Blazor Application](https://support.syncfusion.com/kb/article/17283/how-to-set-symbol-size-in-the-palette-and-increase-node-size-when-dropped-onto-the-diagram-in-blazor-application)
+
+* [How to Render SVG Nodes to Include Multiple Path Elements Within a Single Node for Both Diagram and Symbol Palette Rendering](https://support.syncfusion.com/kb/article/17266/how-to-render-svg-nodes-to-include-multiple-path-elements-within-a-single-node-for-both-diagram-and-symbol-palette-rendering)
+
+* [How to Create a Palette and a Diagram in the Same Razor Component by Combining Two Separate Razor Files](https://support.syncfusion.com/kb/article/17219/how-to-create-a-palette-and-a-diagram-in-the-same-razor-component-by-combining-two-separate-razor-files)
+
+* [How to Create a Blazor Application for Dragging and Dropping Symbols from a Palette into Multiple Diagrams](https://support.syncfusion.com/kb/article/18717/how-to-create-a-blazor-application-for-dragging-and-dropping-symbols-from-a-palette-into-multiple-diagrams)
+
+* [How to Increase the Width When Resize the Splitter in Blazor Diagram](https://support.syncfusion.com/kb/article/18731/how-to-increase-the-width-when-resize-the-splitter-in-blazor-diagram)
+
+
+
+
+
+
+
+

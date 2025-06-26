@@ -13,7 +13,7 @@ Connectors are objects used to create link between two points, nodes or ports to
 
 ## How to Create and Customize Connector
 
-Connector can be created by defining the source and target points of the connector. The path to be drawn can be defined with a collection of segments.
+[Connector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html) can be created by defining the source and target points of the connector. The path to be drawn can be defined with a collection of segments.
 
 To create and customize the connectors easily in the Blazor Diagram component, refer to the below video link.
 
@@ -400,7 +400,7 @@ The following code example explains how to change the connector properties.
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/ActionofConnectors/UpdateConnectorAtRunTime)
 
-N> BeginUpdate and EndUpdateAsync methods allow you to temporarily stop the continuous update of the control and resume it once the updates are complete.
+N> [BeginUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_BeginUpdate) and [EndUpdateAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_EndUpdateAsync) methods allow you to temporarily stop the continuous update of the control and resume it once the updates are complete.
 
 ## Connections
 
@@ -598,3 +598,21 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to get the connector events](./events)
 
 * [How to add annotations to the connectors](../annotations/labels)
+
+* [How to Customize Connector Styles in a Hierarchical Layout in Blazor Diagram](https://support.syncfusion.com/kb/article/16310/how-to-customize-connector-styles-in-a-hierarchical-layout-in-blazor-diagram)
+
+* [Why save and load functionality for nodes and connectors in Blazor Diagram?](https://support.syncfusion.com/kb/article/16008/why-save-and-load-functionality-for-nodes-and-connectors-in-blazor-diagram) 
+
+* [How to Add Nodes or Connectors by Clicking on the Diagram in Syncfusion Blazor Diagram Component?](https://support.syncfusion.com/kb/article/17233/how-to-add-nodes-or-connectors-by-clicking-on-the-diagram-in-syncfusion-blazor-diagram-component)
+
+* [How to add nodes and connectors at runtime asynchronously in Blazor Diagram Component?](https://support.syncfusion.com/kb/article/17285/how-to-add-nodes-and-connectors-at-runtime-asynchronously-in-blazor-diagram-component)
+
+* [How to render the Freehand connector in symbol palette?](https://support.syncfusion.com/kb/article/17236/how-to-render-the-freehand-connector-in-symbol-palette)
+
+* [How to Select and Highlight Ports and Connect Selected Elements in Syncfusion Blazor Diagram](https://support.syncfusion.com/kb/article/18997/how-to-select-and-highlight-ports-and-connect-selected-elements-in-syncfusion-blazor-diagram)  
+
+* [How to Dynamically Create and Connect Diagram Nodes with Annotations via Ports in Syncfusion Blazor Diagram](https://support.syncfusion.com/kb/article/19001/how-to-dynamically-create-and-connect-diagram-nodes-with-annotations-via-ports-in-syncfusion-blazor-diagram)
+
+* [How to Provide IDs for Diagram Elements in Blazor Diagrams](https://support.syncfusion.com/kb/article/17898/how-to-provide-ids-for-diagram-elements-in-blazor-diagrams)
+
+

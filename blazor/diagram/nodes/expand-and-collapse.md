@@ -791,3 +791,8 @@ To implement a custom template for expand and collapse icons, please refer to th
 ![Displaying DiagramIcon in Blazor Diagram layout](../images/ExpandCollapseIconTemplate.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ExpandAndCollapse/ExpandCollapseIconTemplate)
+
+## See also
+
+* [How to Find the Expand and Collapse State of a Node During Initial Load and Runtime in a Diagram](https://support.syncfusion.com/kb/article/18728/how-to-find-the-expand-and-collapse-state-of-a-node-during-initial-load-and-runtime-in-a-diagram)
+

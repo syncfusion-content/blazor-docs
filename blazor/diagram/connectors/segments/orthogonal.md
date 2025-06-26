@@ -170,15 +170,15 @@ The following predefined shapes are available for segment thumbs:
 |Rhombus| ![Rhombus](../../images/RhombusThumb.png) |
 | Square | ![Square](../../images/SquareThumb.png) |
 | Rectangle | ![Rectangle](../../images/RectangleThumb.png) |
-| Ellipse |![Ellipse](../../images/EllipseThumb.png) |
-| Circle |![Circle](../../images/CircleThumb.png) |
-|Arrow| ![Arrow](../../images/ArrowThumb.png) |
-| OpenArrow | ![OpenArrow](../../images/OpenArrowThumb.png) |
-| Fletch|![Fletch](../../images/FletchThumb.png) |
-|OpenFetch| ![OpenFetch](../../images/OpenFetchThumb.png) |
-| IndentedArrow | ![IndentedArrow](../../images/IndentedThumb.png) |
-| OutdentedArrow | ![OutdentedArrow](../../images/OutdentedThumb.png) |
-| DoubleArrow |![DoubleArrow](../../images/DoubleArrowThumb.png) |
+| [Ellipse](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbShapes.html#Syncfusion_Blazor_Diagram_SegmentThumbShapes_Ellipse) |![Ellipse](../../images/EllipseThumb.png) |
+| [Circle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbShapes.html#Syncfusion_Blazor_Diagram_SegmentThumbShapes_Circle) |![Circle](../../images/CircleThumb.png) |
+|[Arrow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbShapes.html#Syncfusion_Blazor_Diagram_SegmentThumbShapes_Arrow)| ![Arrow](../../images/ArrowThumb.png) |
+| [OpenArrow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbShapes.html#Syncfusion_Blazor_Diagram_SegmentThumbShapes_OpenArrow) | ![OpenArrow](../../images/OpenArrowThumb.png) |
+| [Fletch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbShapes.html#Syncfusion_Blazor_Diagram_SegmentThumbShapes_Fletch)|![Fletch](../../images/FletchThumb.png) |
+|[OpenFletch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbShapes.html#Syncfusion_Blazor_Diagram_SegmentThumbShapes_OpenFletch)| ![OpenFetch](../../images/OpenFetchThumb.png) |
+| [IndentedArrow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbShapes.html#Syncfusion_Blazor_Diagram_SegmentThumbShapes_IndentedArrow) | ![IndentedArrow](../../images/IndentedThumb.png) |
+| [OutdentedArrow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbShapes.html#Syncfusion_Blazor_Diagram_SegmentThumbShapes_OutdentedArrow) | ![OutdentedArrow](../../images/OutdentedThumb.png) |
+| [DoubleArrow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbShapes.html#Syncfusion_Blazor_Diagram_SegmentThumbShapes_DoubleArrow) |![DoubleArrow](../../images/DoubleArrowThumb.png) |
 
 The following code example illustrates how to customize orthogonal segment thumb shape.
 

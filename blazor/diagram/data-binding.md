@@ -1995,3 +1995,16 @@ You can find the fully working sample [here](https://github.com/SyncfusionExampl
 ## See Also
 
 * [How to arrange the diagram nodes and connectors using varies layout](./layout/automatic-layout)
+
+* [How to Specify Parent Child Relationship in Blazor Diagram Datasource](https://support.syncfusion.com/kb/article/16306/how-to-specify-parent-child-relationship-in-blazor-diagram-datasource)
+
+* [Why is it Important to Set the ParentID to Empty for at Least One Node When Creating a Layout in Syncfusion Blazor Diagram](https://support.syncfusion.com/kb/article/18708/why-is-it-important-to-set-the-parentid-to-empty-for-at-least-one-node-when-creating-a-layout-in-syncfusion-blazor-diagram)
+
+* [How to Create a Family Tree Structure in Blazor Diagram](https://support.syncfusion.com/kb/article/16300/how-to-create-a-family-tree-structure-in-blazor-diagram)
+
+* [Create and Render the Organization Chart Diagram by Using SQL Database](https://support.syncfusion.com/kb/article/12329/create-and-render-the-organization-chart-diagram-by-using-sql-database)
+
+* [How to Create the Org Chart Blazor Diagram by Using MDF Database](https://support.syncfusion.com/kb/article/12128/how-to-create-the-org-chart-blazor-diagram-by-using-mdf-database)
+
+* [How to Import a GraphML File and Generate a Blazor Diagram Using Its Data](https://support.syncfusion.com/kb/article/17217/how-to-import-a-graphml-file-and-generate-a-blazor-diagram-using-its-data)
+
