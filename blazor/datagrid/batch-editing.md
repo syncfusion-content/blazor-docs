@@ -1041,7 +1041,7 @@ public class OrderDetails
 
 ## Supported events for batch editing
 
-The Syncfusion Blazor DataGrid triggers the following events during batch editing:
+The Syncfusion Blazor DataGrid triggers the following events during `Batch` editing:
 
 | Event | Description |
 |-------|-------------|

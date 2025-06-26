@@ -1272,7 +1272,7 @@ public class OrderDetails
 
 ## Supported events for inline and dialog editing
 
-The Syncfusion Blazor DataGrid triggers the following events during inline and dialog editing:
+The Syncfusion Blazor DataGrid triggers the following events during `Inline` and `Dialog` editing:
 
 | Event | Description |
 |-------|-------------|

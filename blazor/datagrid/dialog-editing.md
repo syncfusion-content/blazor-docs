@@ -781,4 +781,4 @@ public class ProductDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LDLyXsZxfZTvqDJz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-> For information about the events triggered during dialog editing, please refer to this [documentation](https://blazor.syncfusion.com/documentation/datagrid/in-line-editing#supported-events-for-inline-and-dialog-editing).
+> For information about the events triggered during `Dialog` editing, please refer to this [documentation](https://blazor.syncfusion.com/documentation/datagrid/in-line-editing#supported-events-for-inline-and-dialog-editing).
