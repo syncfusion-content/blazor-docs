@@ -1,32 +1,35 @@
 ---
 layout: post
-title: "Undo Redo in Blazor Spreadsheet Component"
-component: "Spreadsheet"
-description: "Learn how to use the undo and redo functionality in the Syncfusion Blazor Spreadsheet component."
+title: Undo Redo in Blazor Spreadsheet Component
+description: Learn how to use the Undo and Redo functionality in the Syncfusion Blazor Spreadsheet component.
 platform: Blazor
 control: Spreadsheet
 documentation: ug
 ---
 
-# Undo Redo in Spreadsheet
+# Undo Redo in the Spreadsheet
 
-<b>Undo</b> option helps you to undone the last action performed and <b>Redo </b>option helps you to do the same action which is reverted in the Spreadsheet. 
+<b>Undo</b> Undo option allows you to reverse the last action performed, while the <b>Redo</b> option allows you to reapply an action that was previously undone in the spreadsheet
 
 
 ## Undo
 
-It reverses the last action you performed with Spreadsheet. <b>Undo</b> can be done by any of the following ways:
+<b>Undo</b> reverses the last action performed in the Spreadsheet. it can be done in the following ways:
 
-* Select the undo item from HOME tab in Ribbon toolbar.
+* Select the <b>Undo</b> option from the HOME tab on the Ribbon toolbar.
 
-* Use <kbd>Ctrl</kbd> + <kbd>Z</kbd> keyboard shortcut to perform the undo.
+* Use the keyboard shortcut  <kbd>Ctrl</kbd> + <kbd>Z</kbd>.
+
+![UI showing undo option](./images/undo-feature.png)
 
 ## Redo
 
-It reverses the last undo action you performed with Spreadsheet. <b>Redo</b> can be done by any of the following ways:
+<b>Redo</b> reverses the last last action performed in the Spreadsheet. it can be done in the following ways:
 
-* Select the redo item from HOME tab in Ribbon toolbar.
+* Select the <b>Redo</b> option from the HOME tab on the Ribbon toolbar.
 
-* Use <kbd>Ctrl</kbd> + <kbd>Y</kbd> keyboard shortcut to perform the redo.
+* Use the keyboard shortcut <kbd>Ctrl</kbd> + <kbd>Y</kbd>.
+
+![UI showing redo option](./images/redo-feature.png)
 
 
