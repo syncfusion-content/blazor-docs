@@ -7,7 +7,7 @@ control: Spreadsheet
 documentation: ug
 ---
 
-# Undo Redo the Spreadsheet
+# Undo Redo in Spreadsheet
 
 The <b>Undo</b> option reverses the last action performed in the spreadsheet, while the <b>Redo</b> option reapplies an action that was previously undone.
 
