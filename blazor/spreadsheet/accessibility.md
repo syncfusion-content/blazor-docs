@@ -47,7 +47,7 @@ The Syncfusion Blazor Spreadsheet followed keyboard interaction guidelines, maki
 |-----|----- | -----|
 | <kbd>Ctrl</kbd> + <kbd>C</kbd> | <kbd>⌘</kbd> + <kbd>C</kbd> | Copy the selected cells to clipboard |
 | <kbd>Ctrl</kbd> + <kbd>X</kbd> | <kbd>⌘</kbd> + <kbd>X</kbd> | Cut the selected cells to clipboard |
-| <kbd>Ctrl</kbd> + <kbd>V</kbd> | <kbd>⌘</kbd> + <kbd>V</kbd> | Paste clipboard content into the spreadsheet |
+| <kbd>Ctrl</kbd> + <kbd>V</kbd> | <kbd>⌘</kbd> + <kbd>V</kbd> | Paste clipboard content into the Spreadsheet |
 
 <b>Undo/Redo</b>
 
