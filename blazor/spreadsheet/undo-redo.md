@@ -7,7 +7,7 @@ control: Spreadsheet
 documentation: ug
 ---
 
-# Undo Redo in Spreadsheet
+# Undo and Redo in Blazor Spreadsheet component
 
 The <b>Undo</b> option reverses the last action performed in the Spreadsheet, while the <b>Redo</b> option reapplies an action that was previously undone.
 
