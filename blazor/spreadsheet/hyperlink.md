@@ -29,6 +29,7 @@ In the active Spreadsheet, select the cell where the hyperlink should be created
 
 
 ![UI showing the INSERT tab in the Ribbon toolbar with the Link option highlighted](images/insert-link.png)
+
 ![Screenshot of the hyperlink dialog showing options for inserting a web URL link](images/insert-hyperlink-dialogbox.png)
 
 ### Insert Hyperlink programmatically
@@ -57,7 +58,7 @@ To add hyperlinks programmatically in the Spreadsheet component, the [AddHyperLi
 
     public async Task AddHyperlinkHandler()
     {
-	    await spreadsheetObj.AddHyperLinkAsync("https://www.syncfusion.com/blazor-components/blazor-spreadsheet","A2:A5")
+	    await spreadsheetObj.AddHyperLinkAsync("https://www.syncfusion.com/blazor-components/blazor-spreadsheet","A2:A5");
     }
 }
 
