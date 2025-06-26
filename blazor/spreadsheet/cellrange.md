@@ -1,45 +1,51 @@
 ---
 layout: post
-title: Cell Range Management in Blazor Spreadsheet | Syncfusion
+title: Managing Cell Ranges in Blazor Spreadsheet component | Syncfusion
 description: Checkout and learn here about the cell range including cell formatting, autofill, and clear functionalities in the Syncfusion Blazor Spreadsheet component and more.
 platform: Blazor
 control: Spreadsheet
 documentation: ug
 ---
 
-# Cell range in Blazor Spreadsheet component
+# Managing Cell Ranges in Blazor Spreadsheet component
 
-A group of cells in a sheet is known as cell range.
+A cell range is a group of selected cells in a Spreadsheet that you can work with together.
 
 ## Cell Formatting
 
-Cell formatting allows you to visually emphasize data in the Spreadsheet by applying various styles and text formatting to cells or ranges of cells.
+Cell formatting enhances the visual presentation of data in a Spreadsheet by applying styles such as font changes, colors, borders, and alignment to individual cells or cell ranges. This helps in organizing and emphasizing important information effectively.
 
 Cell formatting options include:
 
-* **Bold** - Emphasizes text with a heavier weight to make it stand out in the Spreadsheet.
+* **Bold** - Applies a heavier font weight to make the text stand out in the Spreadsheet.
 
-* **Italic** - Slants text to create a distinct visual appearance, often used for emphasis or differentiation.
+* **Italic** - Slants the text to give it a distinct look, often used for emphasis or to highlight differences.
 
-* **Underline** - Adds a line beneath text for highlighting or indicating links.
+* **Underline** - Adds a line below the text, commonly used for emphasis or to indicate hyperlinks.
 
-* **Strikethrough** - Draws a line through text, often used to indicate completed tasks or obsolete data.
+* **Strikethrough** - Draws a line through the text, often used to show completed tasks or outdated information.
 
-* **Font Family** - Changes the typeface of text (such as Arial, Calibri, Times New Roman) to improve readability or aesthetic appeal.
+* **Font Family** - Changes the typeface of the text (e.g., Arial, Calibri, Times New Roman) to enhance readability or visual appeal.
 
-* **Font Size** - Adjusts the text size to create visual hierarchy or improve readability within the Spreadsheet.
+* **Font Size** - Adjusts the size of the text to create visual hierarchy or improve readability in the Spreadsheet.
 
-* **Text Color** - Changes the color of text to enhance visual hierarchy or to color-code information.
+* **Font Color** - Changes the color of the text to improve visual hierarchy or to organize information using color codes.
 
-* **Fill Color** - Adds background color to cells to organize data visually or highlight specific information.
+* **Fill Color** - Adds color to the cell background to visually organize data or highlight important information.
 
-* **Horizontal Alignment** - Controls text position from left to right within a cell. Options include Left (default for text), Center (useful for headings), and Right (default for numbers).
+* **Horizontal Alignment** - Controls the position of text from left to right within a cell. Options include:
+    * **Left** - Default for text
+    * **Center** - Useful for headings
+    * **Right** - Default for numbers
 
-* **Vertical Alignment** - Controls text position from top to bottom within a cell. Options include Top, Middle (centers content vertically), and Bottom (default).
+* **Vertical Alignment** - Controls the position of text from top to bottom within a cell. Options include:
+    * **Top** – Aligns content to the top of the cell
+    * **Middle** – Centers content vertically
+    * **Bottom** – Default alignment
 
-* **Wrap Text** - Displays large content as multiple lines in a single cell instead of overflowing into adjacent cells.
+* **Wrap Text** - Displays long content on multiple lines within a single cell, preventing it from overflowing into adjacent cells.
 
-Cell formatting can be applied to or removed from a cell or range of cells by selecting the appropriate formatting options from the ribbon toolbar under the Home tab.
+Cell formatting can be applied to or removed from a cell or range of cells by using the formatting options available in the ribbon toolbar under the Home tab.
 
 ## Autofill
 
@@ -92,11 +98,15 @@ The available parameters in AutofillAsync() method are,
 {% endhighlight %}
 {% endtabs %}
 
+The following animation demonstrates how to use autofill in the Spreadsheet component:
+
+![Autofill feature demonstration](images/autofill.gif)
+
 ## Clear
 
-Clear feature helps to clear the cell contents (formulas and data), formats (including number formats) in a Spreadsheet. When Clear All is applied, both the contents and the formats will be cleared simultaneously.
+Clear feature helps to clear the cell contents (formulas and data), formats (including number formats) in a Spreadsheet. When `Clear All` is applied, both the contents and the formats will be cleared simultaneously.
 
-### Apply Clear Feature
+### Applying the Clear Feature
 
 The clear feature can be applied using the following way:
 
@@ -108,3 +118,7 @@ The clear feature can be applied using the following way:
 | `Clear Formats` | Used to clear the formats (including number formats) in a cell. |
 | `Clear Contents` | Used to clear the contents (formulas and data) in a cell. |
 | `Clear Hyperlinks` | Used to clear the hyperlink in a cell. |
+
+The following image displays the clear options available in the Ribbon toolbar under the Home tab of the Blazor Spreadsheet.
+
+![Clear feature options in Blazor Spreadsheet](images/clear-feature.png)
