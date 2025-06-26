@@ -11,13 +11,13 @@ documentation: ug
 
 The diagram component offers functionality to flip nodes, connectors, and groups. Flipping creates a mirror image of the original element, allowing for versatile visual representations within the diagram.
 
-## How to flip the node or group
+## How to Flip the Node or Group
 
 The [Flip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_Flip) command is used to mirror the content and ports of selected objects across either the horizontal, vertical, or both directions on the diagram page. This transformation allows for quick and easy reorientation of diagram elements.
 
 **Note:** The Flip command can be applied to both individual nodes and node groups, including their selected child nodes.
 
-### How to change the flip direction
+### How to Change the Flip Direction
 
 The [FlipDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FlipDirection.html) property is used to mirror nodes, groups, or connectors across horizontal, vertical, or both directions. This feature allows you to create symmetrical or reversed representations of diagram elements, enhancing the flexibility and visual appeal of your Blazor diagrams.
 
@@ -29,7 +29,7 @@ The [FlipDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diag
 |None| It is used to disable all the flip behavior. |  
 
 
-### How to change the flip mode
+### How to Change the Flip Mode
 
 The [FlipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramFlipMode.html) property is utilized to manage the flipping behavior of diagram objects. It determines whether the object should be flipped along with its associated ports , content and content text, or if these elements should remain in their original orientation during the flip operation.
 
@@ -257,7 +257,7 @@ The flip functionality for a group node works similarly to that of normal nodes.
 - If a child node’s flip is set to Vertical and the group node’s flip is set to Horizontal, the resulting flip for the child node will be a combination of Vertical and Horizontal (effectively a “both” flip).
 - This ensures that the child nodes’ orientations adapt dynamically based on the group’s flip while maintaining their unique flip settings.
 
-## How to change Group flip mode
+## How to Change Group Flip Mode
 
 The [FlipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramFlipMode.html) of a group node also behave similarly to those of normal nodes. However,When you apply a flip mode to a group node, it takes precedence over any flip mode set on its child nodes, overriding their individual settings.
 
@@ -479,7 +479,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![GroupFlip](./images/blazor-diagram-flip-groupnode.gif)
 
-## How to flip the connector
+## How to Flip the Connector
 
 The [Flip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_Flip) command is used to mirror selected objects across horizontal, vertical, or both directions on the diagram page. This feature allows for quick and easy creation of symmetrical designs or reversed orientations of diagram elements.
 
