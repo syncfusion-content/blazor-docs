@@ -29,7 +29,7 @@ In the active Spreadsheet, click the cell where a hyperlink should be created. I
 
 ### Insert Hyperlink programmatically
 
-To add hyperlinks programmatically in the Spreadsheet component, the `AddHyperLinkAsync` method can be used.
+To add hyperlinks programmatically in the Spreadsheet component, the [AddHyperLinkAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AddHyperlinkAsync_System_String_System_String_System_String_) method can be used.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -86,7 +86,7 @@ In the active Spreadsheet, click the cell where a hyperlink should be removed. R
 
 ### Remove Hyperlink programmatically
 
-To remove hyperlinks programmatically in the Spreadsheet component, the `RemoveHyperLinkAsync()` method can be used.
+To remove hyperlinks programmatically in the Spreadsheet component, the [RemoveHyperLinkAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_RemoveHyperlinkAsync_System_String_) method can be used.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
