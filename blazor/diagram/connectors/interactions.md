@@ -952,3 +952,5 @@ For more information about the connector flip, refer to [Connector Flip](../flip
 * [How to change the segments](./segments)
 
 * [How to get the connector events](./events)
+
+* [How to animate connectors using annotationtemplate in angular diagram](https://support.syncfusion.com/kb/article/20265/how-to-animate-connectors-using-annotationtemplate-in-angular-diagram )

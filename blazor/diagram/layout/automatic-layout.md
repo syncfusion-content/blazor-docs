@@ -178,11 +178,11 @@ The possible values for HorizontalAlignment are:
 
 | Horizontal Alignment | Description |
 |-------- | -------- |
-| Stretch | Stretches the diagram element horizontally to its immediate parent, filling the available space. |
-| Left | Aligns the diagram element to the left side of its immediate parent. |
-| Right | Aligns the diagram element to the right side of its immediate parent. |
-| Center | Aligns the diagram element horizontally to the center of its immediate parent. |
-| Auto | Aligns the diagram element based on its immediate parent’s horizontal alignment property (default behavior). |
+| [Stretch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.HorizontalAlignment.html#Syncfusion_Blazor_Diagram_HorizontalAlignment_Stretch) | Stretches the diagram element horizontally to its immediate parent, filling the available space. |
+| [Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.HorizontalAlignment.html#Syncfusion_Blazor_Diagram_HorizontalAlignment_Left) | Aligns the diagram element to the left side of its immediate parent. |
+| [Right](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.HorizontalAlignment.html#Syncfusion_Blazor_Diagram_HorizontalAlignment_Right) | Aligns the diagram element to the right side of its immediate parent. |
+| [Center](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.HorizontalAlignment.html#Syncfusion_Blazor_Diagram_HorizontalAlignment_Center) | Aligns the diagram element horizontally to the center of its immediate parent. |
+| [Auto](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.HorizontalAlignment.html#Syncfusion_Blazor_Diagram_HorizontalAlignment_Auto) | Aligns the diagram element based on its immediate parent’s horizontal alignment property (default behavior). |
 
 ```csharp
 <SfDiagramComponent @ref="diagram" Width="900px" Height="800px">
@@ -205,11 +205,11 @@ The possible values for VerticalAlignment are:
 
 | Vertical Alignment | Description |
 |-------- | -------- |
-| Stretch | Stretches the diagram element vertically to its immediate parent, filling the available space. |
-| Top | Aligns the diagram element to the top side of its immediate parent. |
-| Bottom | Aligns the diagram element to the bottom side of its immediate parent. |
-| Center | Aligns the diagram element vertically to the center of its immediate parent. |
-| Auto | Aligns the diagram element based on its immediate parent’s vertical alignment property (default behavior). |
+| [Stretch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.VerticalAlignment.html#Syncfusion_Blazor_Diagram_VerticalAlignment_Stretch) | Stretches the diagram element vertically to its immediate parent, filling the available space. |
+| [Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.VerticalAlignment.html#Syncfusion_Blazor_Diagram_VerticalAlignment_Top) | Aligns the diagram element to the top side of its immediate parent. |
+| [Bottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.VerticalAlignment.html#Syncfusion_Blazor_Diagram_VerticalAlignment_Bottom) | Aligns the diagram element to the bottom side of its immediate parent. |
+| [Center](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.VerticalAlignment.html#Syncfusion_Blazor_Diagram_VerticalAlignment_Center) | Aligns the diagram element vertically to the center of its immediate parent. |
+| [Auto](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.VerticalAlignment.html#Syncfusion_Blazor_Diagram_VerticalAlignment_Auto) | Aligns the diagram element based on its immediate parent’s vertical alignment property (default behavior). |
 
 ```csharp
 <SfDiagramComponent @ref="diagram" Width="900px" Height="800px">
@@ -272,3 +272,28 @@ Here’s an example of how to use this property:
 * [How to generate the organization chart](./organizational-chart)
 
 * [How to generate the hierarchical layout](./hierarchical-layout)
+
+* [How to Create a Family Tree Structure in Blazor Diagram](https://support.syncfusion.com/kb/article/16300/how-to-create-a-family-tree-structure-in-blazor-diagram)
+
+* [Create and Render the Organization Chart Diagram by Using SQL Database](https://support.syncfusion.com/kb/article/12329/create-and-render-the-organization-chart-diagram-by-using-sql-database)
+
+* [How to Create the Org Chart Blazor Diagram by Using MDF Database](https://support.syncfusion.com/kb/article/12128/how-to-create-the-org-chart-blazor-diagram-by-using-mdf-database)
+
+* [Why Is It Important to Set the ParentID to Empty for at Least One Node When Creating a Layout in Syncfusion Blazor Diagram?](https://support.syncfusion.com/kb/article/18708/why-is-it-important-to-set-the-parentid-to-empty-for-at-least-one-node-when-creating-a-layout-in-syncfusion-blazor-diagram)
+
+* [How to Change the Parent Child Relationship in Layout at Runtime](https://support.syncfusion.com/kb/article/11632/how-to-change-the-parent-child-relationship-in-layout-at-runtime)
+
+* [How to Customize Connector Styles in a Hierarchical Layout in Blazor Diagram](https://support.syncfusion.com/kb/article/16310/how-to-customize-connector-styles-in-a-hierarchical-layout-in-blazor-diagram)
+
+* [How to Disable Node Interaction While Maintaining Layout Updates in Syncfusion Blazor Diagram](https://support.syncfusion.com/kb/article/20189/how-to-disable-node-interaction-while-maintaining-layout-updates-in-syncfusion-blazor-diagram)
+
+* [How to Embed Diagrams Inside Panels of a Dashboard Layout in Blazor](https://support.syncfusion.com/kb/article/18993/how-to-embed-diagrams-inside-panels-of-a-dashboard-layout-in-blazor)
+
+* [How to Drag and Drop Node in a Layout in Blazor Diagram](https://support.syncfusion.com/kb/article/16301/how-to-drag-and-drop-node-in-a-layout-in-blazor-diagram)
+
+* [How to Generate a Hierarchical Layout with Annotation at Runtime](https://support.syncfusion.com/kb/article/17884/how-to-generate-a-hierarchical-layout-with-annotation-at-runtime)
+
+* [How to Create an Organizational Chart Using Blazor Diagram](https://support.syncfusion.com/kb/article/16312/how-to-create-an-organizational-chart-using-blazor-diagram)
+
+* [How to Integrate Syncfusion SfDiagramComponent into a SfTab in a Blazor Application](https://support.syncfusion.com/kb/article/17224/how-to-integrate-syncfusion-sfdiagramcomponent-into-a-sftab-in-a-blazor-application)
+

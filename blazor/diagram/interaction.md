@@ -824,7 +824,7 @@ The following table illustrates those commands with the associated key values.
 | Ctrl + X | [Cut](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Cut) | Cuts the selected elements.|
 | Ctrl + Z | [Undo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Undo) | Reverses the last editing action performed on the diagram.|
 | Ctrl + Y | [Redo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Redo) | Restores the last editing action when no other actions have occurred since the last undo on the diagram.|
-| Delete | Delete | Deletes the selected elements.|
+| Delete | [Delete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Delete_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) | Deletes the selected elements.|
 | Ctrl/Shift + Click on object |  | Multiple selection (Selector binds all selected nodes/connectors).|
 | Up Arrow | [Nudge(Direction.Up)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Nudge_Syncfusion_Blazor_Diagram_Direction_System_Nullable_System_Int32__) | `NudgeUp`: Moves the selected elements towards up by one pixel.|
 | Down Arrow | [Nudge(Direction.Down)](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Nudge_Syncfusion_Blazor_Diagram_Direction_System_Nullable_System_Int32__) | `NudgeDown`: Moves the selected elements towards down by one pixel.|
@@ -837,3 +837,31 @@ The following table illustrates those commands with the associated key values.
 ## See Also
 
 * [How to control the diagram history](./undo-redo)
+
+* [How to Zoom the Diagram Without Ctrl + Wheel and Enable Pan on Right-Click Instead of Left-Click in Blazor Diagram](https://support.syncfusion.com/kb/article/18992/how-to-zoom-the-diagram-without-ctrl--wheel-and-enable-pan-on-right-click-instead-of-left-click-in-blazor-diagram)
+
+* [How to Get the Mouse Position When Hovering Over the Diagram Area in Blazor Diagram](https://support.syncfusion.com/kb/article/18960/how-to-get-the-mouse-position-when-hovering-over-the-diagram-area-in-blazor-diagram)
+
+* [How to Drag a Node Programmatically Without User Interaction in Syncfusion Blazor Diagram](https://support.syncfusion.com/kb/article/20172/how-to-drag-a-node-programmatically-without-user-interaction-in-syncfusion-blazor-diagram)
+
+* [How to Add Nodes and Connectors at Runtime Asynchronously in Blazor Diagram Component](https://support.syncfusion.com/kb/article/16312/how-to-add-nodes-and-connectors-at-runtime-asynchronously-in-blazor-diagram-component)
+
+* [How to Identify the Clicked Diagram Elements in Syncfusion Blazor Diagram](https://support.syncfusion.com/kb/article/17226/how-to-identify-the-clicked-diagram-elments-in-syncfusion-blazor-diagram)
+
+* [How to Notify the Double Click Event in Blazor Diagram](https://support.syncfusion.com/kb/article/16014/how-to-notify-the-double-click-event-in-blazor-diagram)
+
+* [How to Add Nodes or Connectors by Clicking on the Diagram in Syncfusion Blazor Diagram Component](https://support.syncfusion.com/kb/article/17233/how-to-add-nodes-or-connectors-by-clicking-on-the-diagram-in-syncfusion-blazor-diagram-component)
+
+* [How to Disable Node Interaction While Maintaining Layout Updates in Syncfusion Blazor Diagram](https://support.syncfusion.com/kb/article/20189/how-to-disable-node-interaction-while-maintaining-layout-updates-in-syncfusion-blazor-diagram)
+
+* [How to Make HTML Node Resizable but Not Draggable in Blazor Diagram](https://support.syncfusion.com/kb/article/18727/how-to-make-html-node-resizable-but-not-draggable-in-blazor-diagram)
+
+* [How to Drag and Drop Node in a Layout in Blazor Diagram](https://support.syncfusion.com/kb/article/16307/how-to-drag-and-drop-node-in-a-layout-in-blazor-diagram)
+
+* [How to Drag and Drop of Listbox Element into Blazor Diagram Control](https://support.syncfusion.com/kb/article/17895/how-to-drag-and-drop-of-listbox-element-into-blazor-diagram-control)
+
+* [How to Create a Blazor Application for Dragging and Dropping Symbols from a Palette into Multiple Diagrams](https://support.syncfusion.com/kb/article/18717/how-to-create-a-blazor-application-for-dragging-and-dropping-symbols-from-a-palette-into-multiple-diagrams)
+
+* [How to Customize the Appearance of the Selector in Blazor Diagram](https://support.syncfusion.com/kb/article/11635/how-to-customize-the-appearance-of-the-selector-in-blazor-diagram)
+
+* [How to Make Nodes Read-Only Except for Selection in Blazor Diagram](https://support.syncfusion.com/kb/article/16320/how-to-make-nodes-read-only-except-for-selection-in-blazor-diagram)

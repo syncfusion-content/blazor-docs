@@ -412,6 +412,13 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Segment shape  in Blazor Diagram](images/SegmentStyle.png)
 
+## see also
+
+* [How to Set Background Color for Entire Diagram Area in Blazor Diagram](https://support.syncfusion.com/kb/article/16016/how-to-set-background-color-for-entire-diagram-area-in-blazor-diagram)  
+
+
+
+
 
 
 
