@@ -1270,9 +1270,9 @@ public class OrderDetails
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/LthINCtgBmWlAIwy?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
-## Supported events for inline editing
+## Supported events for inline and dialog editing
 
-The Syncfusion Blazor DataGrid triggers the following events during inline editing:
+The Syncfusion Blazor DataGrid triggers the following events during inline and dialog editing:
 
 | Event | Description |
 |-------|-------------|
@@ -1288,3 +1288,5 @@ The Syncfusion Blazor DataGrid triggers the following events during inline editi
 | [OnBeginEdit](https://blazor.syncfusion.com/documentation/datagrid/events#onbeginedit) | Triggers before a row enters edit mode in the UI, such as on double-click or pressing F2. This event is useful for conditional editing logic. |
 | [RowEditing](https://blazor.syncfusion.com/documentation/datagrid/events#rowediting) | Triggers before the edit action is performed. This event is useful for validation or dynamic configuration of the editing interface. |
 | [RowEdited](https://blazor.syncfusion.com/documentation/datagrid/events#rowedited) | Triggers after the edit action is completed. |
+
+> The same events are also applicable when using **Dialog** editing mode.
