@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor Spreadsheet | Syncfusion
-description: Checkout and learn here all about accessibility in Syncfusion Blazor Spreadsheet and much more.
+title: Accessibility in Blazor Spreadsheet Component| Syncfusion
+description: Checkout and learn here all about accessibility in Syncfusion Blazor Spreadsheet component and much more | Syncfusion.
 platform: Blazor
 control: Spreadsheet
 documentation: ug
@@ -45,35 +45,35 @@ The Syncfusion Blazor Spreadsheet followed keyboard interaction guidelines, maki
 
 | Windows | MAC | Actions |
 |-----|----- | -----|
-| <kbd>Ctrl</kbd> + <kbd>C</kbd> | <kbd>⌘</kbd> + <kbd>C</kbd> | Copy the selected cells to clipboard |
-| <kbd>Ctrl</kbd> + <kbd>X</kbd> | <kbd>⌘</kbd> + <kbd>X</kbd> | Cut the selected cells to clipboard |
-| <kbd>Ctrl</kbd> + <kbd>V</kbd> | <kbd>⌘</kbd> + <kbd>V</kbd> | Paste clipboard content into the Spreadsheet |
+| <kbd>Ctrl</kbd> + <kbd>C</kbd> | <kbd>⌘</kbd> + <kbd>C</kbd> | Copies the selected cells to the clipboard.|
+| <kbd>Ctrl</kbd> + <kbd>X</kbd> | <kbd>⌘</kbd> + <kbd>X</kbd> | Cuts the selected cells to the clipboard.|
+| <kbd>Ctrl</kbd> + <kbd>V</kbd> | <kbd>⌘</kbd> + <kbd>V</kbd> | Pastes the clipboard content into the Spreadsheet.|
 
 <b>Undo/Redo</b>
 
 | Windows | MAC | Actions |
 |-----|----- | -----|
-| <kbd>Ctrl</kbd> + <kbd>Z</kbd> | <kbd>⌘</kbd> + <kbd>Z</kbd> | Undo the last action performed |
-| <kbd>Ctrl</kbd> + <kbd>Y</kbd> | <kbd>⌘</kbd> + <kbd>Y</kbd> | Redo the last action performed |
+| <kbd>Ctrl</kbd> + <kbd>Z</kbd> | <kbd>⌘</kbd> + <kbd>Z</kbd> | Reverses the last action performed.|
+| <kbd>Ctrl</kbd> + <kbd>Y</kbd> | <kbd>⌘</kbd> + <kbd>Y</kbd> | Reapplies the last action that was undone.|
 
 <b>Selection Operations</b>
 
 | Windows | MAC | Actions |
 |-----|----- | -----|
-| <kbd>Ctrl</kbd> + <kbd>A</kbd> | <kbd>⌘</kbd> + <kbd>A</kbd> | Select all cells in the current worksheet |
-| <kbd>Shift</kbd> + <kbd>Arrow Keys</kbd> | <kbd>⇧</kbd> + <kbd>Arrow Keys</kbd> | Extend the current selection in the direction of the arrow key |
+| <kbd>Ctrl</kbd> + <kbd>A</kbd> | <kbd>⌘</kbd> + <kbd>A</kbd> | Selects all cells in the current worksheet.|
+| <kbd>Shift</kbd> + <kbd>Arrow Keys</kbd> | <kbd>⇧</kbd> + <kbd>Arrow Keys</kbd> | Extends the current selection in the direction of the arrow key.|
 
 
 <b>Navigation</b>
 
 | Windows | MAC | Actions |
 |-----|----- | -----|
-| <kbd>Page Up</kbd> / <kbd>Page Down</kbd> | <kbd>Fn</kbd> + <kbd>↑</kbd> / <kbd>↓</kbd> | Scroll up or down one screen at a time |
-| <kbd>Arrow keys</kbd> | <kbd>Arrow keys</kbd> | Navigate between adjacent cells in the direction of the arrow |
-| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Navigate to the cell below after confirming entry |
-| <kbd>Shift</kbd> + <kbd>Enter</kbd> | <kbd>⇧</kbd> + <kbd>Enter</kbd> | Navigate to the cell above after confirming entry |
-| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Navigate to the cell to the right after confirming entry |
-| <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Navigate to the cell to the left after confirming entry |
+| <kbd>Page Up</kbd> / <kbd>Page Down</kbd> | <kbd>Fn</kbd> + <kbd>↑</kbd> / <kbd>↓</kbd> |Scrolls up or down one screen at a time.|
+| <kbd>Arrow keys</kbd> | <kbd>Arrow keys</kbd> | Navigates between adjacent cells in the direction of the arrow key.|
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Moves the selection to the cell below.|
+| <kbd>Shift</kbd> + <kbd>Enter</kbd> | <kbd>⇧</kbd> + <kbd>Enter</kbd> | Moves the selection to the cell above.|
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Moves the selection to the cell on the right.|
+| <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Moves the selection to the cell on the left.|
 
 
 
@@ -82,27 +82,27 @@ The Syncfusion Blazor Spreadsheet followed keyboard interaction guidelines, maki
 
 | Windows | MAC | Actions |
 |-----|----- | -----|
-| <kbd>F2</kbd> | <kbd>F2</kbd> | Start editing the active cell |
-| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Complete the current cell entry and move to the cell below |
-| <kbd>Shift</kbd> + <kbd>Enter</kbd> | <kbd>⇧</kbd> + <kbd>Enter</kbd> | Complete the current cell entry and move to the cell above |
-| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Complete the current cell entry and move to the cell to the right |
-| <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Complete the current cell entry and move to the cell to the left |
-| <kbd>Escape</kbd> | <kbd>Esc</kbd> | Cancel the current cell edit and revert to previous value |
+| <kbd>F2</kbd> | <kbd>F2</kbd> | Begin typing in the selected cell.|
+| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Finish typing in the current cell and move to the one below.|
+| <kbd>Shift</kbd> + <kbd>Enter</kbd> | <kbd>⇧</kbd> + <kbd>Enter</kbd> | Finish typing in the current cell and move to the one above.|
+| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Finish typing in the current cell and move to the one on the right. |
+| <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> |Finish typing in the current cell and move to the one on the left.|
+| <kbd>Escape</kbd> | <kbd>Esc</kbd> | Cancel editing and return to the original value in the cell.|
 
 
 <b>Clear Operation</b>
 
 | Windows | MAC | Actions |
 |-----|----- | -----|
-| <kbd>Delete</kbd> | <kbd>Delete</kbd> | Remove the content from the currently selected cells |
+| <kbd>Delete</kbd> | <kbd>Delete</kbd> | Clear the contents of the selected cells.|
 
 
 <b>Hyperlinks</b>
 
 | Windows | MAC | Actions |
 |-----|----- | -----|
-| <kbd>Ctrl</kbd> + <kbd>Click</kbd> | <kbd>⌘</kbd> + <kbd>Click</kbd> | Activate and navigate to the hyperlink in the selected cell |
-| <kbd>Ctrl</kbd> + <kbd>K</kbd> | <kbd>⌘</kbd> + <kbd>K</kbd> | Open hyperlink dialog (Edit existing or Insert new)|
+| <kbd>Ctrl</kbd> + <kbd>Click</kbd> | <kbd>⌘</kbd> + <kbd>Click</kbd> | Open the link in the selected cell.|
+| <kbd>Ctrl</kbd> + <kbd>K</kbd> | <kbd>⌘</kbd> + <kbd>K</kbd> | Opens the hyperlink dialog to insert a new link or edit an existing one.|
 
 
 
