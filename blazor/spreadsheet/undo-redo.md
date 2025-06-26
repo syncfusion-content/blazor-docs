@@ -9,7 +9,7 @@ documentation: ug
 
 # Undo Redo in Spreadsheet
 
-The <b>Undo</b> option reverses the last action performed in the spreadsheet, while the <b>Redo</b> option reapplies an action that was previously undone.
+The <b>Undo</b> option reverses the last action performed in the Spreadsheet, while the <b>Redo</b> option reapplies an action that was previously undone.
 
 
 ## Undo
