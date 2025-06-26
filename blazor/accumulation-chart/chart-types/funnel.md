@@ -306,6 +306,7 @@ The corners of the first data point and last data point in the funnel chart seri
 }
 ```
 ![Blazor Funnel Chart with border radius applied.](../images/funnel/blazor-funnel-border-radius.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LjheDHBnqcxEcNgL?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 N> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/funnel?theme=bootstrap5) to know various features of accumulation charts and how it is used to represent numeric proportional data.
 

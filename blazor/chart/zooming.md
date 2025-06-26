@@ -243,6 +243,7 @@ The zoom toolbar in the chart can be repositioned using the `ChartZoomToolbarPos
 }
 ```
 ![Blazor Line Chart with Zooming Toolbar Positioning](./images/zoom/blazor-line-chart-zoom-toolbar-position.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VXroZHVnTUnzfkob?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 ## Enable pan
 
@@ -377,7 +378,7 @@ The `Position` property in [ChartAxisScrollbarSettings](https://help.syncfusion.
 
     <ChartSeriesCollection>
         <ChartSeries DataSource="@SalesReports" Name="Warmest" XName="XValue" Width="2" Opacity="1"
-                     YName="YValue" Type="ChartSeriesType.Area">
+                     YName="YValue" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Area">
         </ChartSeries>
     </ChartSeriesCollection>
 
@@ -417,6 +418,7 @@ The `Position` property in [ChartAxisScrollbarSettings](https://help.syncfusion.
 }
 ```
 ![Blazor Line Chart with customized scrollbar position](./images/zoom/blazor-line-chart-scroll-bar-position.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rNryXRBRpKfeaJfn?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 ## Auto interval on zooming
 
