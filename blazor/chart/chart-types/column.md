@@ -557,6 +557,7 @@ The `ColumnWidthInPixel` property in [ChartSeries](https://help.syncfusion.com/c
 }
 ```
 ![Blazor Column Chart with column width set in pixel](../images/chart-types-images/blazor-column-chart-width-in-pixels.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LDhSNxBxzUFmUfTx?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 ## Grouped column
 

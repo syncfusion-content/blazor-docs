@@ -785,7 +785,7 @@ The `Visible` property of the `ChartStackLabelSettings` is used to enable stack 
     };
 }
 ```
-![Blazor Stacked Bar Chart with stack labels](../images/chart-types-images/blazor-stacked-bar-chart-stack-labels.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hZrSNxhHTLzDPlkS?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 ### Customization
 
@@ -882,7 +882,7 @@ We can customize the border of the stack labels using the `ChartStackLabelBorder
     };
 }
 ```
-![Blazor Stacked Bar Chart with stack label customization](../images/chart-types-images/blazor-stacked-bar-chart-stack-labels-customization.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LtLeXRBdJVyXgzXA?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 ## Events
 

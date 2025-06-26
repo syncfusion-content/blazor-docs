@@ -569,15 +569,15 @@ The `Visible` property of the `ChartStackLabelSettings` is used to enable stack 
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@ChartDataList" XName="X" YName="Y" Type="ChartSeriesType.StackingArea100">
+        <ChartSeries DataSource="@ChartDataList" XName="X" YName="Y" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingArea100">
             <ChartSeriesAnimation Enable="false" />
             <ChartMarker Visible="true"><ChartDataLabel Visible="true" /></ChartMarker>
         </ChartSeries>
-        <ChartSeries DataSource="@ChartDataList" XName="X" YName="Y1" Type="ChartSeriesType.StackingArea100">
+        <ChartSeries DataSource="@ChartDataList" XName="X" YName="Y1" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingArea100">
             <ChartSeriesAnimation Enable="false" />
             <ChartMarker Visible="true"><ChartDataLabel Visible="true" /></ChartMarker>
         </ChartSeries>
-        <ChartSeries DataSource="@ChartDataList" XName="X" YName="Y2" Type="ChartSeriesType.StackingArea100">
+        <ChartSeries DataSource="@ChartDataList" XName="X" YName="Y2" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingArea100">
             <ChartSeriesAnimation Enable="false" />
             <ChartMarker Visible="true"><ChartDataLabel Visible="true" /></ChartMarker>
         </ChartSeries>
@@ -611,7 +611,7 @@ The `Visible` property of the `ChartStackLabelSettings` is used to enable stack 
 }
 ```
 
-![Blazor Stacked Area 100 Chart with stack labels](../images/chart-types-images/blazor-stacked-area-100-stack-labels.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/rXByDxrngYpMFkxd?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 ### Customization
 
@@ -652,22 +652,22 @@ We can customize the border of the stack labels using the `ChartStackLabelBorder
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
 
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@ChartDataList" XName="X" YName="Y" Type="ChartSeriesType.StackingArea100">
+        <ChartSeries DataSource="@ChartDataList" XName="X" YName="Y" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingArea100">
             <ChartSeriesAnimation Enable="false" />
             <ChartMarker Visible="true"><ChartDataLabel Visible="true" /></ChartMarker>
         </ChartSeries>
-        <ChartSeries DataSource="@ChartDataList" XName="X" YName="Y1" Type="ChartSeriesType.StackingArea100">
+        <ChartSeries DataSource="@ChartDataList" XName="X" YName="Y1" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingArea100">
             <ChartSeriesAnimation Enable="false" />
             <ChartMarker Visible="true"><ChartDataLabel Visible="true" /></ChartMarker>
         </ChartSeries>
-        <ChartSeries DataSource="@ChartDataList" XName="X" YName="Y2" Type="ChartSeriesType.StackingArea100">
+        <ChartSeries DataSource="@ChartDataList" XName="X" YName="Y2" Type="Syncfusion.Blazor.Charts.ChartSeriesType.StackingArea100">
             <ChartSeriesAnimation Enable="false" />
             <ChartMarker Visible="true"><ChartDataLabel Visible="true" /></ChartMarker>
         </ChartSeries>
     </ChartSeriesCollection>
 
     <ChartStackLabelSettings Visible="true" Format="{value}" Fill="#ADD8E6" Rx="10" Ry="10" Angle="35">
-        <ChartStackLabelFont TextAlignment="Alignment.Center" FontFamily="Roboto" Size="12px" FontStyle="bold" FontWeight="600" Color="blue" />
+        <ChartStackLabelFont TextAlignment="Syncfusion.Blazor.Charts.Alignment.Center" FontFamily="Roboto" Size="12px" FontStyle="bold" FontWeight="600" Color="blue" />
         <ChartStackLabelBorder Width="2" Color="#000000" />
         <ChartStackLabelMargin Bottom="10" Top="10" Right="10" Left="10" />
     </ChartStackLabelSettings>
@@ -697,7 +697,7 @@ We can customize the border of the stack labels using the `ChartStackLabelBorder
     };
 }
 ```
-![Blazor Stacked Area Chart with stack label customization](../images/chart-types-images/blazor-stacked-area-100-stack-labels-customization.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BNBSZxVnqOcrRgBw?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 ## Events
 

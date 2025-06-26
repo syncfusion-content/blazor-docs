@@ -337,6 +337,7 @@ The corners of all the slices in the pie/donut chart series can be rounded using
 }
 ```
 ![Blazor Pie Chart with border radius applied.](../images/pie-dough-nut/blazor-pie-chart-border-radius.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BjreZdhRKPiaFxIm?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
 
 ## Hide pie or doughnut border
 
