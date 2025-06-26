@@ -9,7 +9,7 @@ documentation: ug
 
 # Editing in Blazor Spreadsheet component
 
-The contents of a cell can be edited directly in the cell or by typing in the formula bar. By default, the editing feature is enabled in the Spreadsheet. Use the `AllowEditing` property to enable or disable the editing feature.
+The contents of a cell can be edited directly in the cell or by typing in the formula bar. By default, the editing feature is enabled in the Spreadsheet. Use the [AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowEditing) property to enable or disable the editing feature.
 
 ## Edit cell
 
