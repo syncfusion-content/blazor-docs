@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Accessibility in Blazor Spreadsheet Component
+title: Accessibility in Blazor Spreadsheet Component| Syncfusion
 description: Checkout and learn here all about accessibility in Syncfusion Blazor Spreadsheet component and much more.
 platform: Blazor
 control: Spreadsheet
