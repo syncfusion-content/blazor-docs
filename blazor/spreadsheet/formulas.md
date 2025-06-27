@@ -25,7 +25,7 @@ Formulas in the Syncfusion Blazor Spreadsheet can be accessed and inserted using
 
 ![UI showing Insert Function dialog from Ribbon](./images/insert-formula.gif)
 
-* Type **=** in a cell or the formula bar to display a list of available functions. Select a function from the list to insert it into the cell.
+* Type **(=)** in a cell or the formula bar to display a list of available functions. Select a function from the list to insert it into the cell.
 
 ![UI showing Insert Function list](./images/formula-cell.gif)
 
@@ -61,9 +61,9 @@ If cell **C1** contains the formula **=A1 + B1**, and the value in **A1** or **B
 
 ## Named Ranges
 
-The **Named Ranges** feature allows you to assign a meaningful name to a specific cell or range of cells. This simplifies referencing and managing data within the spreadsheet. Named ranges can also be used in formulas, making them easier to read, understand, and maintain.
+The **Named Ranges** feature allows you to assign a meaningful name to a specific cell or range of cells. This simplifies referencing and managing data within the Spreadsheet. Named ranges can also be used in formulas, making them easier to read, understand, and maintain.
 
-N> Named ranges can only be defined for cells or ranges that contain values.
+N> Named ranges can be defined only for cells or ranges that contain values.
 
 ### Creating Named Ranges via the UI
 
