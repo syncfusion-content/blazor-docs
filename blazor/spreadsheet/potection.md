@@ -7,9 +7,9 @@ control: Spreadsheet
 documentation: ug
 ---
 
-# Protect Sheet in Blazor Spreadsheet Component
+# Protect Sheet in Blazor Spreadsheet component
 
-Sheet protection is used to prevent unauthorized modification of data within the Spreadsheet.
+Sheet protection is used to prevent unauthorized modification of data within the sheet.
 
 ## Protect Sheet
 
@@ -17,27 +17,27 @@ The **Protect Sheet** feature helps prevent accidental changes such as editing, 
 
 ### Protecting sheets via the UI
 
-In the active Spreadsheet, the sheet protection can be done by any of the following ways:
+In the active sheet, the sheet protection can be done by any of the following ways:
 
 * Select **Protect Sheet** from the **Review** tab in the Ribbon toolbar and choose the desired options.
 
-* Right-click the sheet tab, select **Protect Sheet** from the context menu, and choose the desired options.
+* Right-click the sheet tab context menu option, select **Protect Sheet** from the context menu, and choose the desired options.
 
 ![UI showing protected sheet dialog](./images/protect-sheet.gif)
 
-### Unlock Particular Cells in the Protected Sheet via the UI
+### Unlock particular cells in the protected sheet via the UI
 
-To allow editing of specific cells or ranges in a protected Spreadsheet:
+To allow editing of specific cells or ranges in a protected sheet:
 
 * Open the **Protect Sheet** dialog.
 
-* Navigate to the **Unlocked Ranges** tab.
+* Navigate to the **Unlock Range** tab.
 
 * Select the desired cell(s) or range(s) that should remain editable, even when the sheet is protected. These cells will not be locked and can be modified while other parts of the sheet remain restricted.
 
 ![UI showing unlocked ranges in protected sheet](./images/unlocked-range.gif)
 
-### Protection Settings in a Protected Sheet
+### Protection settings in a protected sheet
 
 By default, when a sheet is protected, most actions such as formatting, inserting, sorting, and filtering are restricted, while selecting cells remains allowed.
 
@@ -65,23 +65,25 @@ The available protection settings in Spreadsheet are,
 | Sort | Allows sorting data. |
 | Filter | Allows filtering data. |
 
+![UI showing sheet options](./images/sheet-options.png)
+
 ## Unprotect Sheet
 
 The **Unprotect Sheet** feature restores access to all actions that were previously restricted by sheet protection. Once unprotected, the sheet allows full interaction, including editing, formatting, inserting, and deleting content.
 
 ### Unprotecting sheets via the UI
 
-In the active Spreadsheet, the sheet Unprotection can be done by any of the following ways:
+In the active sheet, the sheet Unprotection can be done by any of the following ways:
 
 * Select **Unprotect Sheet** from the **Review** tab in the Ribbon toolbar.
 
-* Right-click the sheet tab and select **Unprotect Sheet** from the context menu.
+* Right-click the sheet tab context menu option and select **Unprotect Sheet** from the context menu.
 
 ![UI showing unprotected sheet dialog](./images/unprotect-sheet.png)
 
 ## Protect Workbook
 
-The **Protect Workbook** feature restricts structural modifications within a workbook. Actions such as inserting, deleting, renaming, or hiding worksheets are disabled when this protection is enabled. Protection can be configured with or without a password, depending on the desired level of security.
+The **Protect Workbook** feature restricts structural modifications within a workbook. Actions such as inserting, deleting, renaming, or hiding sheets are disabled when this protection is enabled. Protection can be configured with or without a password, depending on the desired level of security.
 
 ### Protecting workbooks via the UI
 
@@ -95,7 +97,7 @@ To protect the workbook:
 
 ## Unprotect Workbook
 
-The **Unprotect Workbook** feature enables structural modifications within a workbook. Once unprotected, actions such as inserting, deleting, renaming, moving, copying, hiding, or unhiding worksheets become available.
+The **Unprotect Workbook** feature enables structural modifications within a workbook. Once unprotected, actions such as inserting, deleting, renaming, moving, copying, hiding, or unhiding sheets become available.
 
 ### Unprotecting workbooks via the UI
 
