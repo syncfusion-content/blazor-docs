@@ -396,14 +396,14 @@ The [SetDistribute](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diag
 
 The factors to distribute the shapes using [DistributeOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DistributeOptions.html) are listed as follows:
 
-* RightToLeft: Distributes the objects based on the distance between the right and left sides of the adjacent objects.
-* Left: Distributes the objects based on the distance between the left sides of the adjacent objects.
-* Right: Distributes the objects based on the distance between the right sides of the adjacent objects.
-* Center: Distributes the objects based on the distance between the center of the adjacent objects.
-* BottomToTop: Distributes the objects based on the distance between the bottom and top sides of the adjacent objects.
-* Top: Distributes the objects based on the distance between the top sides of the adjacent objects.
-* Bottom: Distributes the objects based on the distance between the bottom sides of the adjacent objects.
-* Middle: Distributes the objects based on the distance between the vertical center of the adjacent objects.
+* [RightToLeft](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DistributeOptions.html#Syncfusion_Blazor_Diagram_DistributeOptions_RightToLeft): Distributes the objects based on the distance between the right and left sides of the adjacent objects.
+* [Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DistributeOptions.html#Syncfusion_Blazor_Diagram_DistributeOptions_Left): Distributes the objects based on the distance between the left sides of the adjacent objects.
+* [Right](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DistributeOptions.html#Syncfusion_Blazor_Diagram_DistributeOptions_Right): Distributes the objects based on the distance between the right sides of the adjacent objects.
+* [Center](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DistributeOptions.html#Syncfusion_Blazor_Diagram_DistributeOptions_Center): Distributes the objects based on the distance between the center of the adjacent objects.
+* [BottomToTop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DistributeOptions.html#Syncfusion_Blazor_Diagram_DistributeOptions_BottomToTop): Distributes the objects based on the distance between the bottom and top sides of the adjacent objects.
+* [Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DistributeOptions.html#Syncfusion_Blazor_Diagram_DistributeOptions_Top): Distributes the objects based on the distance between the top sides of the adjacent objects.
+* [Bottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DistributeOptions.html#Syncfusion_Blazor_Diagram_DistributeOptions_Bottom): Distributes the objects based on the distance between the bottom sides of the adjacent objects.
+* [Middle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DistributeOptions.html#Syncfusion_Blazor_Diagram_DistributeOptions_Middle): Distributes the objects based on the distance between the vertical center of the adjacent objects.
 
 The following code example illustrates how to execute the space commands.
 
@@ -1071,10 +1071,10 @@ The [Nudge](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDi
 
 The accepted values of the argument direction are as follows:
 
-* Up: Moves the selected elements towards up by the specified delta value.
-* Down: Moves the selected elements towards down by the specified delta value.
-* Left: Moves the selected elements towards left by the specified delta value.
-* Right: Moves the selected elements towards right by the specified delta value.
+* [Up](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Direction.html#Syncfusion_Blazor_Diagram_Direction_Top): Moves the selected elements towards up by the specified delta value.
+* [Down](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Direction.html#Syncfusion_Blazor_Diagram_Direction_Bottom): Moves the selected elements towards down by the specified delta value.
+* [Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Direction.html#Syncfusion_Blazor_Diagram_Direction_Left): Moves the selected elements towards left by the specified delta value.
+* [Right](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Direction.html#Syncfusion_Blazor_Diagram_Direction_Right): Moves the selected elements towards right by the specified delta value.
 
 The following code illustrates how to execute nudge command.
 
@@ -1377,8 +1377,8 @@ The [Region](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Dia
 
 |Values    | Description     |
 |------------|------------------|
-|PageSettings   | It is used to perform the fit to page based on the width and height of the page  |
-|Content   | It is used to perform the fit to page for the content area only    |
+|[PageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramRegion.html#Syncfusion_Blazor_Diagram_DiagramRegion_PageSettings)   | It is used to perform the fit to page based on the width and height of the page  |
+|[Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramRegion.html#Syncfusion_Blazor_Diagram_DiagramRegion_Content)   | It is used to perform the fit to page for the content area only    |
 
 ![Region](./images/Region.gif)
 

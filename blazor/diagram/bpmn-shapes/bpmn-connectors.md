@@ -66,9 +66,9 @@ The following table shows the visual representation of association flows.
 
 | Association | Image |
 | -------- | -------- |
-| AssociationFlow | ![Default BPMN FlowShapes](../images/Bpmn-AssociationFlow.png) |
-| DirectionalAssociationFlow | ![Directional BPMN FlowShapes](../images/Bpmn-DirectionalAssociatinFlow.png) |
-| BiDirectionalAssociationFlow | ![BiDirectional BPMN FlowShapes](../images/Bpmn-BidirectionalAssociationFlow.png) |
+| [AssociationFlow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlowType.html#Syncfusion_Blazor_Diagram_BpmnFlowType_AssociationFlow) | ![Default BPMN FlowShapes](../images/Bpmn-AssociationFlow.png) |
+| [DirectionalAssociationFlow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlowType.html#Syncfusion_Blazor_Diagram_BpmnFlowType_DirectionalAssociationFlow) | ![Directional BPMN FlowShapes](../images/Bpmn-DirectionalAssociatinFlow.png) |
+| [BiDirectionalAssociationFlow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlowType.html#Syncfusion_Blazor_Diagram_BpmnFlowType_BiDirectionalAssociationFlow) | ![BiDirectional BPMN FlowShapes](../images/Bpmn-BidirectionalAssociationFlow.png) |
 
 ## How to Create a Sequence
 
@@ -119,9 +119,9 @@ The following table contains various representation of sequence flows.
 
 | Sequence | Image |
 | -------- | -------- |
-| DefaultSequenceFlow | ![Default Sequence BPMN Shape](../images/Bpmn-DefaultSequentialFlow.png) |
-| ConditionalSequenceFlow | ![Conditional Sequence BPMN Shape](../images/Bpmn-ConditionalSequenceFlow.png) |
-| SequenceFlow | ![Normal Sequence BPMN Shape](../images/Bpmn-SequenceFlow.png) |
+| [DefaultSequenceFlow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlowType.html#Syncfusion_Blazor_Diagram_BpmnFlowType_DefaultSequenceFlow) | ![Default Sequence BPMN Shape](../images/Bpmn-DefaultSequentialFlow.png) |
+| [ConditionalSequenceFlow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlowType.html#Syncfusion_Blazor_Diagram_BpmnFlowType_ConditionalSequenceFlow) | ![Conditional Sequence BPMN Shape](../images/Bpmn-ConditionalSequenceFlow.png) |
+| [SequenceFlow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlowType.html#Syncfusion_Blazor_Diagram_BpmnFlowType_SequenceFlow) | ![Normal Sequence BPMN Shape](../images/Bpmn-SequenceFlow.png) |
 
 N> The default value for the property `Sequence` is **Normal.**
 
@@ -174,8 +174,8 @@ The following table contains various representation of message flows.
 
 | Message | Image |
 | -------- | -------- |
-| MessageFlow | ![Default Message BPMN Shape](../images/Bpmn-MessageFlow.png) |
-| InitiatingMessageFlow | ![InitiatingMessage Message BPMN Shape](../images/Bpmn-NonInitiatingMessageFlow.png) |
-| NonInitiatingMessageFlow | ![NonInitiatingMessage Message BPMN Shape](../images/Bpmn-InitiatingMessageFlow.png) |
+| [MessageFlow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlowType.html#Syncfusion_Blazor_Diagram_BpmnFlowType_MessageFlow) | ![Default Message BPMN Shape](../images/Bpmn-MessageFlow.png) |
+| [InitiatingMessageFlow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlowType.html#Syncfusion_Blazor_Diagram_BpmnFlowType_InitiatingMessageFlow) | ![InitiatingMessage Message BPMN Shape](../images/Bpmn-NonInitiatingMessageFlow.png) |
+| [NonInitiatingMessageFlow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BpmnFlowType.html#Syncfusion_Blazor_Diagram_BpmnFlowType_NonInitiatingMessageFlow) | ![NonInitiatingMessage Message BPMN Shape](../images/Bpmn-InitiatingMessageFlow.png) |
 
 N> The default value for the property `Flow` is **SequenceFlow.**
