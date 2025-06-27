@@ -15,7 +15,7 @@ Sheet protection is used to prevent unauthorized modification of data within the
 
 The **Protect Sheet** feature helps prevent accidental changes such as editing, moving, or deleting data. Protection can be applied with or without a password, depending on the level of security required.
 
-### User interface
+### Protecting sheets via the UI
 
 In the active Spreadsheet, the sheet protection can be done by any of the following ways:
 
@@ -69,7 +69,7 @@ The available protection settings in Spreadsheet are,
 
 The **Unprotect Sheet** feature restores access to all actions that were previously restricted by sheet protection. Once unprotected, the sheet allows full interaction, including editing, formatting, inserting, and deleting content.
 
-### User interface
+### Unprotecting sheets via the UI
 
 In the active Spreadsheet, the sheet Unprotection can be done by any of the following ways:
 
@@ -83,7 +83,7 @@ In the active Spreadsheet, the sheet Unprotection can be done by any of the foll
 
 The **Protect Workbook** feature restricts structural modifications within a workbook. Actions such as inserting, deleting, renaming, or hiding worksheets are disabled when this protection is enabled. Protection can be configured with or without a password, depending on the desired level of security.
 
-### User interface
+### Protecting workbooks via the UI
 
 To protect the workbook:
 
@@ -97,7 +97,7 @@ To protect the workbook:
 
 The **Unprotect Workbook** feature enables structural modifications within a workbook. Once unprotected, actions such as inserting, deleting, renaming, moving, copying, hiding, or unhiding worksheets become available.
 
-### User interface
+### Unprotecting workbooks via the UI
 
 To unprotect the workbook:
 
