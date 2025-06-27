@@ -142,8 +142,6 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Spreadsheet comp
 {% tabs %}
 {% highlight razor %}
 
-@using Syncfusion.Blazor.Spreadsheet
-
 <SfSpreadsheet DataSourceBytes="@DataSourceBytes">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>

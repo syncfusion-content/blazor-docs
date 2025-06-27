@@ -19,13 +19,13 @@ Hyperlinks can be inserted into worksheet cells to provide direct access to exte
 
 ### Insert Hyperlink via the UI
 
-In the active Spreadsheet, select the cell where the hyperlink should be created. A hyperlink can be inserted using any of the following methods:
+In the active sheet, select the cell where the hyperlink should be created. A hyperlink can be inserted using any of the following methods:
 
-* Select the INSERT tab in the Ribbon toolbar and choose the `Link` option.
+* Select the **Insert** tab in the Ribbon toolbar and choose the **Link** option.
 
-* Right click the selected cell, then choose the Hyperlink option from the context menu.
+* Right click the selected cell, then choose the **Hyperlink** option from the context menu.
 
-* Press `Ctrl + K` to insert a hyperlink using the keyboard shortcut.
+* Hyperlinks can be inserted or edited using the `Ctrl + K` keyboard shortcut.
 
 
 ![UI showing the INSERT tab in the Ribbon toolbar with the Link option highlighted](images/insert-link.png)
@@ -73,19 +73,19 @@ Existing hyperlinks in the workbook can be modified to update the destination or
 
 * **Modifying the Display Text**: Adjust the text shown in the cell without altering the hyperlink destination.
 
-* **Editing Cell References**: Update the hyperlink to point to a different cell within the same worksheet by changing the cell address (e.g., from A1 to B5).
+* **Editing Cell References**: Update the hyperlink to point to a different cell within the same sheet by changing the cell address (e.g., from A1 to B5).
 
-* **Updating Sheet Information**: Redirect the hyperlink to a different worksheet by modifying the sheet name in the reference (e.g., from Sheet1!A1 to Sheet2!C3).
+* **Updating Sheet Information**: Redirect the hyperlink to a different sheet by modifying the sheet name in the reference (e.g., from Sheet1!A1 to Sheet2!C3).
 
 ## Editing Hyperlinks via the UI
 
-In the active Spreadsheet, select the cell that contains the hyperlink to be modified. The hyperlink can be edited by opening the dialog using any of the following methods:
+In the active sheet, select the cell that contains the hyperlink to be modified. The hyperlink can be edited by opening the dialog using any of the following methods:
 
-* Select the INSERT tab in the Ribbon toolbar and click the `Link` option.
+* Select the **Insert** tab in the Ribbon toolbar and click the **Link** option.
 
 * Right click the cell and choose Edit Hyperlink from the context menu, or press `Ctrl + K`.
 
-* In the dialog box, make the necessary changes and click UPDATE to apply them.
+* In the dialog box, make the necessary changes and click **Update** to apply them.
 
 ![UI showing the hyperlink edit dialog with options for modifying an existing hyperlink](images/edit-hyperlink-dialogbox.png)
 
@@ -95,13 +95,14 @@ In the active Spreadsheet, select the cell that contains the hyperlink to be mod
 
 ### Remove Hyperlinks via the UI
 
-In the active Spreadsheet, select the cell containing the hyperlink to be removed. The hyperlink can be removed using any of the following ways:
+In the active sheet, select the cell containing the hyperlink to be removed. The hyperlink can be removed using any of the following ways:
 
-* Right click the cell and then click Remove Hyperlink option in the context menu.
+* Right click the cell and then click **Remove Hyperlink** option in the context menu.
+* Using [clear](https://blazor.syncfusion.com/documentation/spreadsheet/cell-range#clear) functionality.
 
 ![UI showing the Remove Hyperlink option in the context menu when right clicking on a cell containing a hyperlink](images/remove-hyperlink.png)
 
-### Remove Hyperlink Programmatically
+### Remove Hyperlink programmatically
 
 To remove hyperlinks programmatically in the Spreadsheet component, the [RemoveHyperLinkAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_RemoveHyperlinkAsync_System_String_) method can be used.
 
