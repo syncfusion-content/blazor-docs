@@ -231,3 +231,5 @@ The `HorizontalAlignment`, `VerticalAlignment` and `Margin` properties were expl
 * [How to add or remove annotation constraints](../constraints#annotation-constraints)
 
 * [How to customize the annotation](./appearance)
+
+* [How to animate connectors using annotationtemplate in angular diagram](https://support.syncfusion.com/kb/article/20265/how-to-animate-connectors-using-annotationtemplate-in-angular-diagram )

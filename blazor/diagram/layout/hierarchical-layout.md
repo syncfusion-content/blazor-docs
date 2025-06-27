@@ -230,3 +230,5 @@ public void UpdateMargin()
 * [How to create a node](../nodes/nodes)
 
 * [How to create a connector](../connectors/connectors)
+
+* [How to Generate a Hierarchical Layout with Annotation at Runtime](https://support.syncfusion.com/kb/article/17884/how-to-generate-a-hierarchical-layout-with-annotation-at-runtime)
