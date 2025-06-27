@@ -77,7 +77,7 @@ The following code example explains how to create participants in sequence diagr
 
 You can download a complete working sample from [GitHub]().
 
-![ParticipantsExample](./images/ParticipantsExample.png)
+![ParticipantsExample](./images/UmlSequenceDiagram/ParticipantsExample.png)
 
 #### UmlSequenceParticipant Properties
 
