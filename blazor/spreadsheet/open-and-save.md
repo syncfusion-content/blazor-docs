@@ -27,6 +27,8 @@ The Syncfusion Blazor Spreadsheet component enables loading Excel files directly
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
 
+@using Syncfusion.Blazor.Spreadsheet
+
 <SfSpreadsheet DataSource="DataSourceBytes" >
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
@@ -34,7 +36,7 @@ The Syncfusion Blazor Spreadsheet component enables loading Excel files directly
 @code {
     public byte[] DataSourceBytes { get; set; }
 
-    protected void Task OnInitialized()
+    protected override void OnInitialized()
     {
         string filePath = "wwwroot/Sample.xlsx";
         DataSourceBytes = File.ReadAllBytes(filePath);
@@ -49,6 +51,8 @@ Excel files can also be loaded by passing a Base64-encoded representation of the
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Spreadsheet
 
  <SfSpreadsheet DataSource="DataSourceBytes" >
     <SpreadsheetRibbon></SpreadsheetRibbon>

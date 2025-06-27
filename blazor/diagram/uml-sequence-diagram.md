@@ -77,7 +77,7 @@ The following code example explains how to create participants in sequence diagr
 
 You can download a complete working sample from [GitHub]().
 
-![ParticipantsExample](./images/ParticipantsExample.png)
+![ParticipantsExample](./images/UmlSequenceDiagram/ParticipantsExample.png)
 
 #### UmlSequenceParticipant Properties
 
@@ -108,12 +108,12 @@ The [UmlSequenceMessageType]() enum defines the following message types:
 
 | Message Type | Description | Example |
 |---|---|---|
-| Synchronous | The sender waits for a response | ![Synchronous Message](images/SynchronousMessage.png) |
-| Asynchronous | The sender continues without waiting | ![Asynchronous Message](images/AsyncronousMessage.png) |
-| Reply | A response to a previous message | ![Reply Message](images/ReplyMessage.png) |
-| Create | Creates a new participant | ![Create Message](images/CreateMessage.png) |
-| Delete | Terminates a participant | ![Delete Message](images/DeleteMessage.png) |
-| Self | A message from a participant to itself | ![Self Message](images/SelfMessage.png) |
+| Synchronous | The sender waits for a response | ![Synchronous Message](images/UmlSequenceDiagram/SynchronousMessage.png) |
+| Asynchronous | The sender continues without waiting | ![Asynchronous Message](images/UmlSequenceDiagram/AsyncronousMessage.png) |
+| Reply | A response to a previous message | ![Reply Message](images/UmlSequenceDiagram/ReplyMessage.png) |
+| Create | Creates a new participant | ![Create Message](images/UmlSequenceDiagram/CreateMessage.png) |
+| Delete | Terminates a participant | ![Delete Message](images/UmlSequenceDiagram/DeleteMessage.png) |
+| Self | A message from a participant to itself | ![Self Message](images/UmlSequenceDiagram/SelfMessage.png) |
 
 
 The following code example explains how to create messages in sequence diagram.
@@ -226,7 +226,7 @@ The following code example explains how to create messages in sequence diagram.
 ```
 You can download a complete working sample from [GitHub]().
 
-![Message Example](./images/MessageExample.png)
+![Message Example](./images/UmlSequenceDiagram/MessageExample.png)
 
 #### UmlSequenceMessage Properties
 
@@ -319,7 +319,7 @@ The following code example explains how to create activation boxes in sequence d
 ```
 You can download a complete working sample from [GitHub]().
 
-![Activations Example](./images/ActivationsExample.png)
+![Activations Example](./images/UmlSequenceDiagram/ActivationsExample.png)
 
 #### UmlSequenceActivationBox Properties
 
@@ -345,9 +345,9 @@ The [UmlSequenceFragmentType]() enum defines the following fragment types:
 
 | Fragment Type  | Description  | Example  |  
 |---------------|-------------|--------|  
-| Optional  | Represents a sequence that is executed only if a specified condition is met; otherwise, it is skipped. | ![Optional Fragment](images/OptFragment.png) |  
-| Alternative | Represents multiple conditional paths (if-else structure), where only one path executes based on the condition. | ![Alternative Fragment](images/AltFragment.png) |  
-| Loop | Represents a repeating sequence of interactions that continues based on a loop condition. | ![Loop Fragment](images/LoopFragment.png) |  
+| Optional  | Represents a sequence that is executed only if a specified condition is met; otherwise, it is skipped. | ![Optional Fragment](images/UmlSequenceDiagram/OptFragment.png) |  
+| Alternative | Represents multiple conditional paths (if-else structure), where only one path executes based on the condition. | ![Alternative Fragment](images/UmlSequenceDiagram/AltFragment.png) |  
+| Loop | Represents a repeating sequence of interactions that continues based on a loop condition. | ![Loop Fragment](images/UmlSequenceDiagram/LoopFragment.png) |  
 
 #### Creating Fragments
 
@@ -451,7 +451,7 @@ To create fragments in your sequence diagram, you will need to use the `UmlSeque
 
 You can download a complete working sample from [GitHub]().
 
-![Fragment Example](images/FragmentExample.png)
+![Fragment Example](images/UmlSequenceDiagram/FragmentExample.png)
 
 #### UmlSequenceFragment Properties
 
