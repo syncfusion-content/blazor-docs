@@ -105,4 +105,4 @@ To unprotect the workbook:
 
 * Enter the correct password in the dialog box, then click **OK**.
 
-![UI showing unprotected workbook dialog](./images/unprotect-workbook.gif)
+![UI showing unprotected workbook dialog](./images/unprotect-workbook.png)
