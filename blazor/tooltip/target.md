@@ -6,8 +6,18 @@ platform: Blazor
 control: Tooltip
 documentation: ug
 ---
+# Target
 
-# Displaying Tooltip for Dynamically Created Element
+The [`Target`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_Target) property specifies which elements should trigger the tooltip by accepting a CSS selector string. It enables tooltip activation on specific DOM elements based on user interactions like hover or focus.
+
+```razor
+<SfTooltip Content="Let's go green to save the planet!!" Target="#btn" >
+ <SfButton ID="btn" Content="Show Tooltip"></SfButton>
+</SfTooltip>
+```
+![Blazor Tooltip Target](images/target.png)
+
+## Displaying Tooltip for Dynamically Created Target Element
 
 The Tooltip component can be configured to display tooltip for element that are added to the DOM after the initial page load. This behavior is useful in applications where target is rendered dynamically, such as in response to user actions, API calls, or conditional logic.
 
