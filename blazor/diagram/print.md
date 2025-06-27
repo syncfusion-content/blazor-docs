@@ -36,7 +36,7 @@ The diagram can be customized while printing using the following properties of t
 
 These properties behave the same as the properties in the `DiagramExportSettings` class. For more details, [refer](../export/Exporting options) 
 
-The following code example illustrates how to print the region occupied by the diagram elements.
+The following code example illustrates how to print the region occupied by the diagram elements using page settings.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
