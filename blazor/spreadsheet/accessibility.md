@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in Blazor Spreadsheet Component| Syncfusion
-description: Checkout and learn here all about accessibility in Syncfusion Blazor Spreadsheet component and much more | Syncfusion.
+title: Accessibility in Blazor Spreadsheet Component | Syncfusion
+description: Checkout and learn here all about accessibility in Syncfusion Blazor Spreadsheet component and much more.
 platform: Blazor
 control: Spreadsheet
 documentation: ug
@@ -36,12 +36,11 @@ The accessibility compliance for the Spreadsheet is outlined below.
 
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
 
-
-## Keyboard interaction
+## Keyboard shortcuts
 
 The Syncfusion Blazor Spreadsheet followed keyboard interaction guidelines, making it accessible for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Spreadsheet.
 
-<b>Clipboard Operations</b>
+<b>Clipboard</b>
 
 | Windows | MAC | Actions |
 |-----|----- | -----|
@@ -56,13 +55,12 @@ The Syncfusion Blazor Spreadsheet followed keyboard interaction guidelines, maki
 | <kbd>Ctrl</kbd> + <kbd>Z</kbd> | <kbd>⌘</kbd> + <kbd>Z</kbd> | Reverses the last action performed.|
 | <kbd>Ctrl</kbd> + <kbd>Y</kbd> | <kbd>⌘</kbd> + <kbd>Y</kbd> | Reapplies the last action that was undone.|
 
-<b>Selection Operations</b>
+<b>Selection</b>
 
 | Windows | MAC | Actions |
 |-----|----- | -----|
 | <kbd>Ctrl</kbd> + <kbd>A</kbd> | <kbd>⌘</kbd> + <kbd>A</kbd> | Selects all cells in the current worksheet.|
 | <kbd>Shift</kbd> + <kbd>Arrow Keys</kbd> | <kbd>⇧</kbd> + <kbd>Arrow Keys</kbd> | Extends the current selection in the direction of the arrow key.|
-
 
 <b>Navigation</b>
 
@@ -75,10 +73,7 @@ The Syncfusion Blazor Spreadsheet followed keyboard interaction guidelines, maki
 | <kbd>Tab</kbd> | <kbd>Tab</kbd> | Moves the selection to the cell on the right.|
 | <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Moves the selection to the cell on the left.|
 
-
-
-
-<b>Cell Editing</b>
+<b>Editing</b>
 
 | Windows | MAC | Actions |
 |-----|----- | -----|
@@ -89,26 +84,20 @@ The Syncfusion Blazor Spreadsheet followed keyboard interaction guidelines, maki
 | <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> |Finish typing in the current cell and move to the one on the left.|
 | <kbd>Escape</kbd> | <kbd>Esc</kbd> | Cancel editing and return to the original value in the cell.|
 
-
-<b>Clear Operation</b>
+<b>Clear</b>
 
 | Windows | MAC | Actions |
 |-----|----- | -----|
-| <kbd>Delete</kbd> | <kbd>Delete</kbd> | Clear the contents of the selected cells.|
+| <kbd>Delete</kbd> | <kbd>Delete</kbd> | Clear contents of the selected cells.|
 
-
-<b>Hyperlinks</b>
+<b>Hyperlink</b>
 
 | Windows | MAC | Actions |
 |-----|----- | -----|
 | <kbd>Ctrl</kbd> + <kbd>Click</kbd> | <kbd>⌘</kbd> + <kbd>Click</kbd> | Open the link in the selected cell.|
 | <kbd>Ctrl</kbd> + <kbd>K</kbd> | <kbd>⌘</kbd> + <kbd>K</kbd> | Opens the hyperlink dialog to insert a new link or edit an existing one.|
 
-
-
-
 > * The <kbd>Command</kbd> and <kbd>Control</kbd> keys on Mac devices can be interchanged. When this switch occurs, use the <kbd>Command</kbd> key in place of the <kbd>Control</kbd> key for the above listed key interactions with Mac devices.
-
 
 ## See also
 
