@@ -37,5 +37,4 @@ The cell values can be sorted in the following orders:
 
 The following animation illustrates basic sorting operations in the Spreadsheet component, including selecting data, using the `Sort` options from the context menu, and viewing the sorted results. Sorting arranges data based on the active cell's column while maintaining row relationships.
 
-
 ![sorting](./images/sorting.gif)
