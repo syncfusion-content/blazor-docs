@@ -17,19 +17,19 @@ Different flowchart symbols have different meanings that are used to represent v
 
 |Symbol|Shape name|Description|
 |---|---|---|
-|![Blazor Diagram displays Terminator Symbol](../images/FlowShapes_Terminator.png)|Terminator|Indicates the beginning and ending of the process.|
-|![Blazor Diagram displays Data Symbol](../images//FlowShapes_Data.png)|Data|Indicates data input or output for a process.|
-|![Blazor Diagram displays Process Symbol](../images/FlowShapes_Process.png)|Process|Represents an operation or set of operations and data manipulations.|
-|![Blazor Diagram displays Decision Symbol](../images/FlowShapes_Decision.png)|Decision|Shows a branching point where the decision is made to choose one of the two paths|
-|![Blazor Diagram displays Document Symbol](../images//FlowShapes_Document.png)|Document|Represents a single document or report in the process.|
-|![Blazor Diagram displays SubProcess Symbol](../images/FlowShapes_PreDefinedProcess.png)|PreDefinedProcess|Represents a sequence of actions that combine to perform a specific task that is defined elsewhere.|
-|![Blazor Diagram displays DirectData Symbol](../images/FlowShapes_DirectData.png)|DirectData|Represents a collection of information that allows searching, sorting, and filtering.|
-|![Blazor Diagrma displays StoredData Symbol](../images/FlowShapes_StoredData.png)|StoredData|Represents a step where data get stored within a process.|
-|![Blazor Diagram displays ManualInput Symbol](../images/FlowShapes_ManualInput.png)|ManualInput|Represents the manual input of data into a field or step in a process.|
-|![Blazor Diagram displays ManualOperation Symbol](../images/FlowShapes_ManualOperation.png)|ManualOperation|Represents an operation in a process that must be done manually, not automatically.|
-|![Blazor Diagram displays Preparation Symbol](../images/FlowShapes_Preparation.png)|Preparation|Represents a setup or initialization process to another step in the process.|
-|![Blazor Diagram displays OffPageReference Symbol](../images/FlowShapes_OffPageReference.png)|OffPageReference|Represents a labeled connector used to link two flowcharts on different pages.|
-|![Blazor Diagram displays MultiDocument Symbol](../images/FlowShapes_MultiDocument.png)|MultiDocument|Represents multiple documents or reports in the process.|
+|![Blazor Diagram displays Terminator Symbol](../images/FlowShapes_Terminator.png)|[Terminator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeFlowShapes.html#Syncfusion_Blazor_Diagram_NodeFlowShapes_Terminator)|Indicates the beginning and ending of the process.|
+|![Blazor Diagram displays Data Symbol](../images//FlowShapes_Data.png)|[Data](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeFlowShapes.html#Syncfusion_Blazor_Diagram_NodeFlowShapes_Data)|Indicates data input or output for a process.|
+|![Blazor Diagram displays Process Symbol](../images/FlowShapes_Process.png)|[Process](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeFlowShapes.html#Syncfusion_Blazor_Diagram_NodeFlowShapes_Process)|Represents an operation or set of operations and data manipulations.|
+|![Blazor Diagram displays Decision Symbol](../images/FlowShapes_Decision.png)|[Decision](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeFlowShapes.html#Syncfusion_Blazor_Diagram_NodeFlowShapes_Decision)|Shows a branching point where the decision is made to choose one of the two paths|
+|![Blazor Diagram displays Document Symbol](../images//FlowShapes_Document.png)|[Document](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeFlowShapes.html#Syncfusion_Blazor_Diagram_NodeFlowShapes_Document)|Represents a single document or report in the process.|
+|![Blazor Diagram displays SubProcess Symbol](../images/FlowShapes_PreDefinedProcess.png)|[PreDefinedProcess](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeFlowShapes.html#Syncfusion_Blazor_Diagram_NodeFlowShapes_PreDefinedProcess)|Represents a sequence of actions that combine to perform a specific task that is defined elsewhere.|
+|![Blazor Diagram displays DirectData Symbol](../images/FlowShapes_DirectData.png)|[DirectData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeFlowShapes.html#Syncfusion_Blazor_Diagram_NodeFlowShapes_DirectData)|Represents a collection of information that allows searching, sorting, and filtering.|
+|![Blazor Diagrma displays StoredData Symbol](../images/FlowShapes_StoredData.png)|[StoredData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeFlowShapes.html#Syncfusion_Blazor_Diagram_NodeFlowShapes_StoredData)|Represents a step where data get stored within a process.|
+|![Blazor Diagram displays ManualInput Symbol](../images/FlowShapes_ManualInput.png)|[ManualInput](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeFlowShapes.html#Syncfusion_Blazor_Diagram_NodeFlowShapes_ManualInput)|Represents the manual input of data into a field or step in a process.|
+|![Blazor Diagram displays ManualOperation Symbol](../images/FlowShapes_ManualOperation.png)|[ManualOperation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeFlowShapes.html#Syncfusion_Blazor_Diagram_NodeFlowShapes_ManualOperation)|Represents an operation in a process that must be done manually, not automatically.|
+|![Blazor Diagram displays Preparation Symbol](../images/FlowShapes_Preparation.png)|[Preparation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeFlowShapes.html#Syncfusion_Blazor_Diagram_NodeFlowShapes_Preparation)|Represents a setup or initialization process to another step in the process.|
+|![Blazor Diagram displays OffPageReference Symbol](../images/FlowShapes_OffPageReference.png)|[OffPageReference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeFlowShapes.html#Syncfusion_Blazor_Diagram_NodeFlowShapes_OffPageReference)|Represents a labeled connector used to link two flowcharts on different pages.|
+|![Blazor Diagram displays MultiDocument Symbol](../images/FlowShapes_MultiDocument.png)|[MultiDocument](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeFlowShapes.html#Syncfusion_Blazor_Diagram_NodeFlowShapes_MultiDocument)|Represents multiple documents or reports in the process.|
 |![Blazor Diagram displays Connector Symbol](../images/FlowShapes_Connector.png)||Represents a direction of flow from one step to another. It will get created automatically based on the relationship between the parent and child.|
 
 ```csharp
