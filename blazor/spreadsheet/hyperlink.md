@@ -98,7 +98,7 @@ In the active sheet, select the cell that contains the hyperlink to be modified.
 In the active sheet, select the cell containing the hyperlink to be removed. The hyperlink can be removed using any of the following ways:
 
 * Right click the cell and then click **Remove Hyperlink** option in the context menu.
-* Using [clear](https://blazor.syncfusion.com/documentation/spreadsheet/cell-range#clear) functionality.
+<!-- * Using [clear](https://blazor.syncfusion.com/documentation/spreadsheet/cell-range#clear) functionality. -->
 
 ![UI showing the Remove Hyperlink option in the context menu when right clicking on a cell containing a hyperlink](images/remove-hyperlink.png)
 
