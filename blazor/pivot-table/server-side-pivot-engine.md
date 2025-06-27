@@ -875,6 +875,8 @@ Then, based on the **Action** parameter (**onExcelExport** or **onCsvExport**), 
 
 ```
 
+![Server-side engine excel exporting](images/excel-export-with-server-side-pivot-engine.png)
+
 ### Add header and footer while exporting
 
 The Excel export provides an option to include header and footer content for the excel document before exporting. In-order to add header and footer, define [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_Header) and [Footer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_Footer) properties in [ExcelExportProperties](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) and pass it as a parameter to the [ExportToExcelAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ExportToExcelAsync_Syncfusion_Blazor_Grids_ExcelExportProperties_System_Nullable_System_Boolean__System_Object_System_Nullable_System_Boolean__System_Boolean_) method.
@@ -948,6 +950,7 @@ The Excel export provides an option to include header and footer content for the
 }
 
 ```
+![Add header and footer while exporting](images/add-header-and-footer-while-exporting.png)
 
 ## CSV Export
 
@@ -1042,6 +1045,8 @@ Then, based on the **Action** parameter (**onExcelExport** or **onCsvExport**), 
         }
 
 ```
+
+![CSV Export](images/csv-export-with-server-side-pivot-engine.png)
 
 ## Export as Pivot
 
@@ -1140,3 +1145,5 @@ Then, based on the **Action** parameter (**onPivotExcelExport** or **onPivotCsvE
         }
 
 ```
+
+![Export as Pivot](images/export-as-pivot.png)
