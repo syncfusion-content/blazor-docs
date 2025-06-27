@@ -30,7 +30,7 @@ In the active Spreadsheet, select the cell where the hyperlink should be created
 
 ![UI showing the INSERT tab in the Ribbon toolbar with the Link option highlighted](images/insert-link.png)
 
-![Screenshot of the hyperlink dialog showing options for inserting a web URL link](images/insert-hyperlink-dialogbox.png)
+![Image of the hyperlink dialog showing options for inserting a web URL link](images/insert-hyperlink-dialogbox.png)
 
 ### Insert Hyperlink programmatically
 
@@ -87,7 +87,7 @@ In the active Spreadsheet, select the cell that contains the hyperlink to be mod
 
 * In the dialog box, make the necessary changes and click UPDATE to apply them.
 
-![Screenshot showing the hyperlink edit dialog with options for modifying an existing hyperlink](images/edit-hyperlink-dialogbox.png)
+![UI showing the hyperlink edit dialog with options for modifying an existing hyperlink](images/edit-hyperlink-dialogbox.png)
 
 ## Remove Hyperlink
 
@@ -99,7 +99,7 @@ In the active Spreadsheet, select the cell containing the hyperlink to be remove
 
 * Right click the cell and then click Remove Hyperlink option in the context menu.
 
-![Screenshot displaying the Remove Hyperlink option in the context menu when right-clicking on a cell containing a hyperlink](images/remove-hyperlink.png)
+![UI showing the Remove Hyperlink option in the context menu when right clicking on a cell containing a hyperlink](images/remove-hyperlink.png)
 
 ### Remove Hyperlink Programmatically
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Managing Cell Ranges in Blazor Spreadsheet component | Syncfusion
-description: Checkout and learn here about the cell range including cell formatting, autofill, and clear functionalities in the Syncfusion Blazor Spreadsheet component and more.
+description: Learn about the cell range features like formatting, autofill, and clear options in the Syncfusion Blazor Spreadsheet component and more.
 platform: Blazor
 control: Spreadsheet
 documentation: ug
