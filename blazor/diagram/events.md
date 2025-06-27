@@ -643,3 +643,11 @@ These properties allow for fine-tuned control over the auto-scrolling behavior i
 ![Speed Limit control in autoScroll support for node](images/SpeedLimitNodeConnector.gif) 
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Events/OnAutoScrollChange)
+
+## See also
+
+* [How to Identify the Clicked Diagram Elements in Syncfusion Blazor Diagram](https://support.syncfusion.com/kb/article/17226/how-to-identify-the-clicked-diagram-elments-in-syncfusion-blazor-diagram)
+
+* [How to Notify the Double-Click Event in Blazor Diagram](https://support.syncfusion.com/kb/article/16014/how-to-notify-the-double-click-event-in-blazor-diagram)
+
+* [How to Connect Visio While Dropping Node in Existing Blazor Diagram](https://support.syncfusion.com/kb/article/11181/how-to-connect-visio-while-dropping-node-in-existing-blazor-diagram)
