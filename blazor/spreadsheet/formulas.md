@@ -7,7 +7,7 @@ control: Spreadsheet
 documentation: ug
 ---
 
-# Formulas in Blazor Spreadsheet Component
+# Formulas in Blazor Spreadsheet component
 
 **Formulas** enable calculations within a worksheet by referencing cells from either the same worksheet or other worksheets in the workbook.
 
