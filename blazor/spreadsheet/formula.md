@@ -29,7 +29,7 @@ Formulas in the Syncfusion Blazor Spreadsheet can be accessed and inserted using
 
 ![UI showing Insert Function list](./images/formula-cell.gif)
 
-* Click the **fx** button next to the formula bar to open the Insert Function dialog, which provides the same categorized function list and insertion options as the Ribbon toolbar.
+* Click the **Insert Function (fx)** button next to the formula bar to open the Insert Function dialog, which provides the same categorized function list and insertion options as the Ribbon toolbar.
 
 ## Calculation Mode
 
