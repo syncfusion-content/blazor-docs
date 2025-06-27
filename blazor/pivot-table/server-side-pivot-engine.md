@@ -1069,7 +1069,6 @@ To enable native Excel pivot export in the PivotTable, the user must call the [E
         </PivotViewColumns>
         <PivotViewValues>
             <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
-            <PivotViewValue Name="Price" Caption="Sold Amount"></PivotViewValue>
         </PivotViewValues>
         <PivotViewFormatSettings>
             <PivotViewFormatSetting Name="Price" Format="C"></PivotViewFormatSetting>
