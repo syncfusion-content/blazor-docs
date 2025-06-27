@@ -67,8 +67,8 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 |Orientation|Output|
 |-------|-------|
-|Landscape|![Landscape Orientation](./images/LandscapeOrientation.png)|
-|Portrait|![Portrait Orientation](./images/PortraitOrientation.png)|
+|[Landscape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageOrientation.html#Syncfusion_Blazor_Diagram_PageOrientation_Landscape)|![Landscape Orientation](./images/LandscapeOrientation.png)|
+|[Portrait](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PageOrientation.html#Syncfusion_Blazor_Diagram_PageOrientation_Portrait)|![Portrait Orientation](./images/PortraitOrientation.png)|
 
 ## How to Enable Multiple Pages
 
@@ -353,3 +353,14 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
     }
 }
 ```
+
+## See also 
+
+
+* [How to Detect Nodes That Cross Page Breaks in Syncfusion Blazor Diagram](https://support.syncfusion.com/kb/article/20111/how-to-detect-nodes-that-cross-page-breaks-in-syncfusion-blazor-diagram)
+
+* [How to Set Background Color for Entire Diagram Area in Blazor Diagram](https://support.syncfusion.com/kb/article/16016/how-to-set-background-color-for-entire-diagram-area-in-blazor-diagram)
+
+* [How to Adjust Diagram Size When Sidebar Is Toggled in Blazor](https://support.syncfusion.com/kb/article/19989/how-to-adjust-diagram-size-when-sidebar-is-toggled-in-blazor)
+
+* [How to Integrate the Blazor Diagram with the SfDialog Box and Dynamically Adjust the Diagram's Width and Height Based on the Viewport](https://support.syncfusion.com/kb/article/17253/how-to-integrate-the-blazor-diagram-with-the-sfdialog-box-and-dynamically-adjust-the-diagrams-width-and-height-based-on-the-viewport)
