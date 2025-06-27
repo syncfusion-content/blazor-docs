@@ -14,7 +14,7 @@ The Syncfusion Blazor Spreadsheet provides comprehensive sorting capabilities fo
 The Blazor Spreadsheet component includes built-in support for sorting cell ranges in ascending or descending order. To enable sorting in the Spreadsheet, the [`AllowSorting`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowSorting) property can be used to enable or disable the sorting.
 >  The default value for `AllowSorting` property is **true**.
 
-## Sort by Cell Value
+## Sort by Active Cell
 
 The sort operation uses the column of the active cell as the primary sort criterion. Whether you select multiple cells or a single cell, the Blazor Spreadsheet component sorts all related data based on the values in the active cell's column. The range sort can be done in any of the following ways:
 
