@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Custom AI Service with Syncfusion Smart Components in Blazor Web App
+title: Claude AI Service with Smart Components in Blazor App | Syncfusion
 description: Learn how to integrate and use the Syncfusion component in a Blazor Web App with Claude AI services.
 platform: Blazor
 control: Smart Paste Button
@@ -34,7 +34,7 @@ For detailed specifications and capabilities, visit the [Claude Models Documenta
 
 ---
 
-## Next Steps
+## Getting Started for Claude AI with SmartPasteButton
 
 After completing this setup, you can:
 
@@ -168,9 +168,9 @@ public class ClaudeContentBlock
 
 ## Step 3: Create a Custom AI Service
 
-To integrate Claude with Syncfusion Smart Components, you need to implement the `IAIInferenceBackend` interface. This interface acts as a bridge between Syncfusion's components and Claude's AI capabilities.
+To integrate Claude with Syncfusion Smart Components, you need to implement the `IChatInferenceService` interface. This interface acts as a bridge between Syncfusion's components and Claude's AI capabilities.
 
-The `IAIInferenceBackend` interface is designed to allow custom AI service implementations. It defines the contract for how Syncfusion components communicate with AI services:
+The `IChatInferenceService` interface is designed to allow custom AI service implementations. It defines the contract for how Syncfusion components communicate with AI services:
 
 1. Create a new file named `MyCustomService.cs` 
 2. Add the Syncfusion namespace
@@ -178,7 +178,7 @@ The `IAIInferenceBackend` interface is designed to allow custom AI service imple
 
 ```CSharp
 using Syncfusion.Blazor.AI;
-public class MyCustomService : IAIInferenceBackend
+public class MyCustomService : IChatInferenceService
 {
     private readonly ClaudeService _ClaudeService;
 
@@ -187,7 +187,7 @@ public class MyCustomService : IAIInferenceBackend
         _ClaudeService = ClaudeService;
     }
 
-    public Task<string> GetChatResponseAsync(ChatParameters options)
+    public Task<string> GenerateResponseAsync(ChatParameters options)
     {
         return _ClaudeService.CompleteAsync(options.Messages);
     }
@@ -210,7 +210,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSyncfusionBlazor();
 builder.Services.AddSyncfusionSmartComponents();
 builder.Services.AddSingleton<ClaudeAIService>();
-builder.Services.AddSingleton<IAIInferenceBackend, MyCustomService>();
+builder.Services.AddSingleton<IChatInferenceService, MyCustomService>();
 
 var app = builder.Build();
 ....

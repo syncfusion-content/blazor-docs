@@ -11,13 +11,13 @@ documentation: ug
 
 The diagram component offers functionality to flip nodes, connectors, and groups. Flipping creates a mirror image of the original element, allowing for versatile visual representations within the diagram.
 
-## How to flip the node or group
+## How to Flip the Node or Group
 
 The [Flip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_Flip) command is used to mirror the content and ports of selected objects across either the horizontal, vertical, or both directions on the diagram page. This transformation allows for quick and easy reorientation of diagram elements.
 
 **Note:** The Flip command can be applied to both individual nodes and node groups, including their selected child nodes.
 
-### How to change the flip direction
+### How to Change the Flip Direction
 
 The [FlipDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FlipDirection.html) property is used to mirror nodes, groups, or connectors across horizontal, vertical, or both directions. This feature allows you to create symmetrical or reversed representations of diagram elements, enhancing the flexibility and visual appeal of your Blazor diagrams.
 
@@ -29,16 +29,20 @@ The [FlipDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diag
 |None| It is used to disable all the flip behavior. |  
 
 
-### How to change the flip mode
+### How to Change the Flip Mode
 
-The [FlipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramFlipMode.html) property is utilized to manage the flipping behavior of diagram objects. It determines whether the object should be flipped along with its associated ports and content, or if these elements should remain in their original orientation during the flip operation.
+The [FlipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramFlipMode.html) property is utilized to manage the flipping behavior of diagram objects. It determines whether the object should be flipped along with its associated ports , content and content text, or if these elements should remain in their original orientation during the flip operation.
 
 | DiagramFlipMode | Description | 
 | -------- | -------- |
-|Content| It enables or disables the flip for an object’s content.|
+|Content| Flips the node along with annotations and their text.|
 |Port| It enables or disables the flip for an object’s port.|
-|All| It enables or disables the flip for both the object’s content and port.|
-|None| It is used to disable all the flip mode behavior.|
+|All| Enables or disables flip operations for annotations, their text, and ports|
+|Text| Flips only the text of annotations, excluding the annotation elements themselves.|
+|PortAndLabelOnly| Flips the node along with ports and annotations, excluding the annotation text.|
+|PortWithLabelText| Flips the node along with ports and annotation text, excluding the annotation elements themselves.|
+|LabelOnly| Flips the node along with annotations, excluding their text.|
+
 
 **Note:** The [FlipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramFlipMode.html) property is exclusively applicable to nodes within the diagram. It does not affect connectors or any other diagram elements.
 
@@ -46,12 +50,22 @@ The following code example shows how to flip the node.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.DropDowns
+        <SfDropDownList TItem="FlipOption" TValue="string"
+                DataSource="@FlipDirections"
+                Placeholder="Flip">
+    <DropDownListEvents TItem="FlipOption" TValue="string"
+                        ValueChange="@FlipDirectionChange" />
+    <DropDownListFieldSettings Text="Name" Value="Value"></DropDownListFieldSettings>
+</SfDropDownList>
 
-<SfButton Content="HorizontalPort" OnClick="@HorizontalPort" />
-<SfButton Content="HorizontalContent" OnClick="@HorizontalContent" />
-<SfButton Content="HorizontalAll" OnClick="@HorizontalAll" />
-<SfButton Content="HorizontalNone" OnClick="@HorizontalNone" />
+  <SfDropDownList TItem="FlipOption" TValue="string"
+                DataSource="@FlipModes"
+                Placeholder="Flip">
+    <DropDownListEvents TItem="FlipOption" TValue="string"
+                        ValueChange="@FlipModeChange" />
+    <DropDownListFieldSettings Text="Name" Value="Value"></DropDownListFieldSettings>
+</SfDropDownList>
 
 <SfDiagramComponent @ref="diagram" Width="1000px" Height="1000px" Nodes="@NodeCollection" Connectors="@connectors">
 </SfDiagramComponent>
@@ -63,6 +77,31 @@ The following code example shows how to flip the node.
     public SfDiagramComponent diagram;
     //Define diagram nodes collection
     DiagramObjectCollection<Node> NodeCollection;
+     public class FlipOption
+ {
+     public string Name { get; set; } 
+     public string Value { get; set; } // Bound value
+ }
+
+ List<FlipOption> FlipDirections = new()
+ {
+     new FlipOption { Name = "None", Value = "None" },
+     new FlipOption { Name = "Horizontal", Value = "Horizontal" },
+     new FlipOption { Name = "Vertical", Value = "Vertical" },
+     new FlipOption { Name = "Both", Value = "Both" }
+ };
+
+ List<FlipOption> FlipModes = new()
+ {
+     new FlipOption { Name = "None", Value = "None" },
+     new FlipOption { Name = "Content", Value = "Content" },
+     new FlipOption { Name = "Port", Value = "Port" },
+     new FlipOption { Name = "Text", Value = "Text" },
+     new FlipOption { Name = "PortAndLabelOnly", Value = "LabelOnly" },
+     new FlipOption { Name = "PortWithLabelText", Value = "PortWithLabelText" },
+     new FlipOption { Name = "LabelOnly", Value = "LabelOnly" },
+     new FlipOption { Name = "All", Value = "All" }
+ };
     protected override void OnInitialized()
     {
         Node node1 = new Node()
@@ -140,111 +179,115 @@ The following code example shows how to flip the node.
             };
         NodeCollection = new DiagramObjectCollection<Node>() { node1, node2 };
     }
+ // This method applys flipDirection to the selected node's
+ public void FlipDirectionChange(ChangeEventArgs<string, FlipOption> args)
+ {
+     diagram.StartGroupAction();
 
-    public void HorizontalPort()
-    {
-        if (diagram.SelectionSettings.Nodes.Count > 0)
-        {
-            for (int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
-            {
-                diagram.SelectionSettings.Nodes[i].FlipMode = DiagramFlipMode.Port;
-                if (diagram.SelectionSettings.Nodes[i].Flip.HasFlag(FlipDirection.Horizontal))
-                {
-                    diagram.SelectionSettings.Nodes[i].Flip &= ~FlipDirection.Horizontal;
-                }
-                else
-                {
-                    diagram.SelectionSettings.Nodes[i].Flip |= FlipDirection.Horizontal;
-                }
-            }
-        }
-    }
-    //Method to flip the content horizontally
-    public void HorizontalContent()
-    {
-        if (diagram.SelectionSettings.Nodes.Count > 0)
-        {
-            for (int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
-            {
-                diagram.SelectionSettings.Nodes[i].FlipMode = DiagramFlipMode.Content;
-                if (diagram.SelectionSettings.Nodes[i].Flip.HasFlag(FlipDirection.Horizontal))
-                {
-                    diagram.SelectionSettings.Nodes[i].Flip &= ~FlipDirection.Horizontal;
-                }
-                else
-                {
-                    diagram.SelectionSettings.Nodes[i].Flip |= FlipDirection.Horizontal;
-                }
-            }
-        }
-    }
-    //Method to flip the content and port horizontally
-    public void HorizontalAll()
-    {
-        if (diagram.SelectionSettings.Nodes.Count > 0)
-        {
-            for (int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
-            {
-                diagram.SelectionSettings.Nodes[i].FlipMode = DiagramFlipMode.All;
-                if (diagram.SelectionSettings.Nodes[i].Flip.HasFlag(FlipDirection.Horizontal))
-                {
-                    diagram.SelectionSettings.Nodes[i].Flip &= ~FlipDirection.Horizontal;
-                }
-                else
-                {
-                    diagram.SelectionSettings.Nodes[i].Flip |= FlipDirection.Horizontal;
-                }
-            }
-        }
-    }
-    //Method to disable the flip operation
-    public void HorizontalNone()
-    {
-        if (diagram.SelectionSettings.Nodes.Count > 0)
-        {
-            for (int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
-            {
-                diagram.SelectionSettings.Nodes[i].FlipMode = DiagramFlipMode.None;
-                if (diagram.SelectionSettings.Nodes[i].Flip.HasFlag(FlipDirection.Horizontal))
-                {
-                    diagram.SelectionSettings.Nodes[i].Flip &= ~FlipDirection.Horizontal;
-                }
-                else
-                {
-                    diagram.SelectionSettings.Nodes[i].Flip |= FlipDirection.Horizontal;
-                }
-            }
-        }
-    }
+     if (diagram.SelectionSettings.Nodes.Count > 0)
+     {
+         for (int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
+         {
+             diagram.SelectionSettings.Nodes[i].Flip = (FlipDirection)Enum.Parse(typeof(FlipDirection), args.Value.ToString());
+         }
+     }
+     for (int i = 0; i < diagram.SelectionSettings.Connectors.Count; i++)
+     {
+         diagram.SelectionSettings.Connectors[i].Flip = (FlipDirection)Enum.Parse(typeof(FlipDirection), args.Value.ToString());
+     }
+     diagram.EndGroupAction();
+
+ }
+
+ //This method apply's diagramFLipMode to the selected node's
+ public void FlipModeChange(ChangeEventArgs<string, FlipOption> args)
+ {
+     diagram.StartGroupAction();
+
+     if (diagram.SelectionSettings.Nodes.Count > 0)
+     {
+         for (int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
+         {
+             diagram.SelectionSettings.Nodes[i].FlipMode = (DiagramFlipMode)Enum.Parse(typeof(DiagramFlipMode), args.Value.ToString());
+         }
+     }
+
+     diagram.EndGroupAction();
+
+ }
+
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Flip/FlipDirection)
 
+
 | FlipDirection | DiagramFlipMode | Output|
 | -------- | -------- | -------- |
-|Horizontal|Port| ![HorizontalDirection with Port Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-port.png)|
-|Horizontal|Content|![HorizontalDirection with Content Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-content.png)|
+|Horizontal|Content| ![HorizontalDirection with Content Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-Content.png)|
+|Horizontal|Port|![HorizontalDirection with Port Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-content.png)|
+|Horizontal|Text| ![HorizontalDirection with Text Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-Text.png)|
+|Horizontal|Port And LabelOnly |![HorizontalDirection with Port And LabelOnly Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-portAndLabelOnly.png)|
+|Horizontal|Port With LabelText| ![HorizontalDirection with Port With LabelText Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-PortWithLabelText.png)|
+|Horizontal|Content|![HorizontalDirection with Content Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-Content.png)|
 |Horizontal|All|![HorizontalDirection with All Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-all.png)|
 |Horizontal|None|![HorizontalDirection with None Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-none.png)|
-|Vertical|Port|![VerticalDirection with Port Mode](./images/blazor-diagram-flip-direction-as-vertical-flip-mode-as-port.png)|
-|Vertical|Content|![VerticalDirection with Content Mode](./images/blazor-diagram-flip-direction-as-vertical-flip-mode-as-content.png)|
-|Vertical|All|![VerticalDirection with All Mode](./images/blazor-diagram-flip-direction-as-vertical-flip-mode-as-both.png)|
+|Vertical|Content| ![VerticalDirection with Content Mode](./images/blazor-diagram-flip-direction-as-Vertical-flip-mode-as-Content.png)|
+|Vertical|Port|![VerticalDirection with Port Mode](./images/blazor-diagram-flip-direction-as-Vertical-flip-mode-as-content.png)|
+|Vertical|Text| ![VerticalDirection with Text Mode](./images/blazor-diagram-flip-direction-as-Vertical-flip-mode-as-Text.png)|
+|Vertical|Port And LabelOnly |![VerticalDirection with Port And LabelOnly Mode](./images/blazor-diagram-flip-direction-as-Vertical-flip-mode-as-portAndLabelOnly.png)|
+|Vertical|Port With LabelText| ![VerticalDirection with Port With LabelText Mode](./images/blazor-diagram-flip-direction-as-Vertical-flip-mode-as-PortWithLabelText.png)|
+|Vertical|Content|![VerticalDirection with Content  Mode](./images/blazor-diagram-flip-direction-as-Vertical-flip-mode-as-Content.png)|
+|Vertical|All|![VerticalDirection with All Mode](./images/blazor-diagram-flip-direction-as-vertical-flip-mode-as-All.png)|
 |Vertical|None|![VerticalDirection with None Mode](./images/blazor-diagram-flip-direction-as-vertical-flip-mode-as-none.png)|
-|Both|Port|![BothDirection with Port Mode](./images/blazor-diagram-flip-direction-as-both-flip-mode-as-port.png)|
-|Both|Content|![BothDirection with Content Mode](./images/blazor-diagram-flip-direction-as-both-flip-mode-as-content.png)|
+|Both|Content| ![BothDirection with Content Mode](./images/blazor-diagram-flip-direction-as-Both-flip-mode-as-Content.png)|
+|Both|Port|![BothDirection with Port Mode](./images/blazor-diagram-flip-direction-as-Both-flip-mode-as-content.png)|
+|Both|Text| ![BothDirection with  Text Mode](./images/blazor-diagram-flip-direction-as-Both-flip-mode-as-Text.png)|
+|Both|Port And LabelOnly |![BothDirection with Port And LabelOnly Mode](./images/blazor-diagram-flip-direction-as-Both-flip-mode-as-portAndLabelOnly.png)|
+|Both|Port With LabelText| ![BothDirection with Port With LabelText Mode](./images/blazor-diagram-flip-direction-as-Both-flip-mode-as-PortWithLabelText.png)|
+|Both|Content|![BothDirection with Content Mode](./images/blazor-diagram-flip-direction-as-Both-flip-mode-as-Content.png)|
 |Both|All|![BothDirection with All Mode](./images/blazor-diagram-flip-direction-as-both-flip-mode-as-all.png)|
 |Both|None|![BothDirection with None Mode](./images/blazor-diagram-flip-direction-as-both-flip-mode-as-none.png)|
 
 ![Flip](./images/blazor-diagram-flip-node.gif)
+## How to flip the Group Node
+The flip functionality for a group node works similarly to that of normal nodes. However, when flipping a group node, the flip of its child nodes is combined with the group’s flip. This combination ensures that the child nodes inherit the group’s flip while retaining their own individual flips.
+
+ Example:
+
+- If a child node’s flip is set to Vertical and the group node’s flip is set to Horizontal, the resulting flip for the child node will be a combination of Vertical and Horizontal (effectively a “both” flip).
+- This ensures that the child nodes’ orientations adapt dynamically based on the group’s flip while maintaining their unique flip settings.
+
+## How to Change Group Flip Mode
+
+The [FlipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramFlipMode.html) of a group node also behave similarly to those of normal nodes. However,When you apply a flip mode to a group node, it takes precedence over any flip mode set on its child nodes, overriding their individual settings.
+
+For example, in the below code,  
+the flipMode for the child node `Node1` is set to `ContentText`.  
+The flipMode for the group node is set to `Content`.  
+As a result, the effective flipMode for both the child node and the group node will be `Content`,
+as the group node’s flipMode overrides the child’s.
+
 
 The following code example shows how to flip the group.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-<input type="button" value="HorizontalPort" @onclick="@HorizontalPort" />
-<input type="button" value="HorizontalContent" @onclick="@HorizontalContent" />
-<input type="button" value="HorizontalAll" @onclick="@HorizontalAll" />
-<input type="button" value="HorizontalNone" @onclick="@HorizontalNone" />
+@using Syncfusion.Blazor.DropDowns
+       <SfDropDownList TItem="FlipOption" TValue="string"
+                DataSource="@FlipDirections"
+                Placeholder="Flip">
+    <DropDownListEvents TItem="FlipOption" TValue="string"
+                        ValueChange="@FlipDirectionChange" />
+    <DropDownListFieldSettings Text="Name" Value="Value"></DropDownListFieldSettings>
+</SfDropDownList>
+
+  <SfDropDownList TItem="FlipOption" TValue="string"
+                DataSource="@FlipModes"
+                Placeholder="Flip">
+    <DropDownListEvents TItem="FlipOption" TValue="string"
+                        ValueChange="@FlipModeChange" />
+    <DropDownListFieldSettings Text="Name" Value="Value"></DropDownListFieldSettings>
+</SfDropDownList>
 <SfDiagramComponent @ref="diagram" Width="1000px" Height="1000px" Nodes="@NodeCollection" Connectors="@connectors">
     <SnapSettings Constraints="@SnapConstraints.None"></SnapSettings>
 </SfDiagramComponent>
@@ -256,6 +299,31 @@ The following code example shows how to flip the group.
     public SfDiagramComponent diagram;
     //Define diagram's nodes collection
     DiagramObjectCollection<Node> NodeCollection;
+     public class FlipOption
+ {
+     public string Name { get; set; } 
+     public string Value { get; set; } // Bound value
+ }
+
+ List<FlipOption> FlipDirections = new()
+ {
+     new FlipOption { Name = "None", Value = "None" },
+     new FlipOption { Name = "Horizontal", Value = "Horizontal" },
+     new FlipOption { Name = "Vertical", Value = "Vertical" },
+     new FlipOption { Name = "Both", Value = "Both" }
+ };
+
+ List<FlipOption> FlipModes = new()
+ {
+     new FlipOption { Name = "None", Value = "None" },
+     new FlipOption { Name = "Content", Value = "Content" },
+     new FlipOption { Name = "Port", Value = "Port" },
+     new FlipOption { Name = "Text", Value = "Text" },
+     new FlipOption { Name = "PortAndLabelOnly", Value = "LabelOnly" },
+     new FlipOption { Name = "PortWithLabelText", Value = "PortWithLabelText" },
+     new FlipOption { Name = "LabelOnly", Value = "LabelOnly" },
+     new FlipOption { Name = "All", Value = "All" }
+ };
     protected override void OnInitialized()
     {
         Node node3 = new Node()
@@ -357,95 +425,61 @@ The following code example shows how to flip the group.
             };
         NodeCollection.Add(groupNode);
     }
-    //Method to flip the port horizontally
-    public void HorizontalPort()
-    {
-        if (diagram.SelectionSettings.Nodes.Count > 0)
-        {
-            for (int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
-            {
-                diagram.SelectionSettings.Nodes[i].FlipMode = DiagramFlipMode.Port;
-                if (diagram.SelectionSettings.Nodes[i].Flip.HasFlag(FlipDirection.Horizontal))
-                {
-                    diagram.SelectionSettings.Nodes[i].Flip &= ~FlipDirection.Horizontal;
-                }
-                else
-                {
-                    diagram.SelectionSettings.Nodes[i].Flip |= FlipDirection.Horizontal;
-                }
-            }
-        }
-    }
-    //Method to flip the content horizontally
-    public void HorizontalContent()
-    {
-        if (diagram.SelectionSettings.Nodes.Count > 0)
-        {
-            for (int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
-            {
-                diagram.SelectionSettings.Nodes[i].FlipMode = DiagramFlipMode.Content;
-                if (diagram.SelectionSettings.Nodes[i].Flip.HasFlag(FlipDirection.Horizontal))
-                {
-                    diagram.SelectionSettings.Nodes[i].Flip &= ~FlipDirection.Horizontal;
-                }
-                else
-                {
-                    diagram.SelectionSettings.Nodes[i].Flip |= FlipDirection.Horizontal;
-                }
-            }
-        }
-    }
-    //Method to flip the content and port horizontally
-    public void HorizontalAll()
-    {
-        if (diagram.SelectionSettings.Nodes.Count > 0)
-        {
-            for (int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
-            {
-                diagram.SelectionSettings.Nodes[i].FlipMode = DiagramFlipMode.All;
-                if (diagram.SelectionSettings.Nodes[i].Flip.HasFlag(FlipDirection.Horizontal))
-                {
-                    diagram.SelectionSettings.Nodes[i].Flip &= ~FlipDirection.Horizontal;
-                }
-                else
-                {
-                    diagram.SelectionSettings.Nodes[i].Flip |= FlipDirection.Horizontal;
-                }
-            }
-        }
-    }
-    public void HorizontalNone()
-    {
-        if (diagram.SelectionSettings.Nodes.Count > 0)
-        {
-            for (int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
-            {
-                diagram.SelectionSettings.Nodes[i].FlipMode = DiagramFlipMode.None;
-                if (diagram.SelectionSettings.Nodes[i].Flip.HasFlag(FlipDirection.Horizontal))
-                {
-                    diagram.SelectionSettings.Nodes[i].Flip &= ~FlipDirection.Horizontal;
-                }
-                else
-                {
-                    diagram.SelectionSettings.Nodes[i].Flip |= FlipDirection.Horizontal;
-                }
-            }
-        }
-    }
+   // This method applys flipDirection to the selected node's
+ public void FlipDirectionChange(ChangeEventArgs<string, FlipOption> args)
+ {
+     diagram.StartGroupAction();
+
+     if (diagram.SelectionSettings.Nodes.Count > 0)
+     {
+         for (int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
+         {
+             diagram.SelectionSettings.Nodes[i].Flip = (FlipDirection)Enum.Parse(typeof(FlipDirection), args.Value.ToString());
+         }
+     }
+     for (int i = 0; i < diagram.SelectionSettings.Connectors.Count; i++)
+     {
+         diagram.SelectionSettings.Connectors[i].Flip = (FlipDirection)Enum.Parse(typeof(FlipDirection), args.Value.ToString());
+     }
+     diagram.EndGroupAction();
+
+ }
+
+ //This method apply's diagramFLipMode to the selected node's
+ public void FlipModeChange(ChangeEventArgs<string, FlipOption> args)
+ {
+     diagram.StartGroupAction();
+
+     if (diagram.SelectionSettings.Nodes.Count > 0)
+     {
+         for (int i = 0; i < diagram.SelectionSettings.Nodes.Count; i++)
+         {
+             diagram.SelectionSettings.Nodes[i].FlipMode = (DiagramFlipMode)Enum.Parse(typeof(DiagramFlipMode), args.Value.ToString());
+         }
+     }
+
+     diagram.EndGroupAction();
+
+ }
 }
 ```
-
-| FlipDirection | DiagramFlipMode | Output|
-| -------- | -------- |-------- |
-|Horizontal|Port|![HorizontalDirection with PortMode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-port.png)|
-|Horizontal|Content|![HorizontalDirection with ContentMode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-content.png)|
-|Horizontal|All|![HorizontalDirection with AllMode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-all.png)|
-|Horizontal|None|![HorizontalDirection with NoneMode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-none.png)|
-
 For more information about node interaction, refer to [Node Interaction](./nodes/interaction).
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Flip/FlipGroup)
 
-## How to flip the connector
+| FlipDirection | DiagramFlipMode | Output|
+| -------- | -------- |-------- |
+|Horizontal|None|![HorizontalDirection with NoneMode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-none.png)|
+|Horizontal|All|![HorizontalDirection with AllMode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-all.png)|
+|Horizontal|Content|![HorizontalDirection with ContentMode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-content.png)|
+|Horizontal|Text|![HorizontalDirection with Text Mode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-Text.png)|
+|Horizontal|Port|![HorizontalDirection with PortMode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-port.png)|
+|Horizontal|PortAndLabelOnly|![HorizontalDirection with Port and LabelOnly Mode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-portandLabelOnly.png)|
+|Horizontal|PortWithLabelText|![HorizontalDirection with PortWithLabelText Mode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-PortWithLabelText.png)|
+|Horizontal|Content|![HorizontalDirection with ContentMode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-content.png)|
+
+![GroupFlip](./images/blazor-diagram-flip-groupnode.gif)
+
+## How to Flip the Connector
 
 The [Flip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_Flip) command is used to mirror selected objects across horizontal, vertical, or both directions on the diagram page. This feature allows for quick and easy creation of symmetrical designs or reversed orientations of diagram elements.
 
