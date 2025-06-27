@@ -9,7 +9,7 @@ documentation: ug
 
 # Sequence Diagram Model in Blazor diagram component
 
-A sequence diagram is a type of interaction diagram that visually represents how objects communicate with each other in a particular sequence over time. The [SfDiagramComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html)  in the Syncfusion Blazor suite supports the creation and visualization of Uml sequence diagrams through the dedicated [UmlSequenceDiagramModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceDiagramModel.html) class.
+A sequence diagram is a type of interaction diagram that visually represents how objects communicate with each other in a particular sequence over time. The [SfDiagramComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html)  in the Syncfusion Blazor suite supports the creation and visualization of Uml sequence diagrams through the dedicated `UmlSequenceDiagramModel` class.
 
 To enable this functionality, assign an instance of `UmlSequenceDiagramModel` to the `Model` property of the SfDiagramComponent. This model encapsulates all necessary elements—such as lifelines, messages, activation boxes, and fragments—required to render a complete sequence diagram.
 
@@ -77,7 +77,7 @@ The following code example explains how to create participants in sequence diagr
 
 You can download a complete working sample from [GitHub]().
 
-![ParticipantsExample](./images/ParticipantsExample.png)
+![ParticipantsExample](./images/UmlSequenceDiagram/ParticipantsExample.png)
 
 #### UmlSequenceParticipant Properties
 
@@ -104,16 +104,16 @@ Messages are added to the [Messages](https://help.syncfusion.com/cr/blazor/Syncf
 
 #### Types of Messages
 
-The [UmlSequenceMessageType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceMessageType.html) enum defines the following message types:
+The [UmlSequenceMessageType]() enum defines the following message types:
 
 | Message Type | Description | Example |
 |---|---|---|
-| [Synchronous](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceMessageType.html#Syncfusion_Blazor_Diagram_UmlSequenceMessageType_Synchronous) | The sender waits for a response | ![Synchronous Message](images/SynchronousMessage.png) |
-| [Asynchronous](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceMessageType.html#Syncfusion_Blazor_Diagram_UmlSequenceMessageType_Asynchronous) | The sender continues without waiting | ![Asynchronous Message](images/AsyncronousMessage.png) |
-| [Reply](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceMessageType.html#Syncfusion_Blazor_Diagram_UmlSequenceMessageType_Reply) | A response to a previous message | ![Reply Message](images/ReplyMessage.png) |
-| [Create](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceMessageType.html#Syncfusion_Blazor_Diagram_UmlSequenceMessageType_Create) | Creates a new participant | ![Create Message](images/CreateMessage.png) |
-| [Delete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceMessageType.html#Syncfusion_Blazor_Diagram_UmlSequenceMessageType_Delete) | Terminates a participant | ![Delete Message](images/DeleteMessage.png) |
-| [Self](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceMessageType.html#Syncfusion_Blazor_Diagram_UmlSequenceMessageType_Self) | A message from a participant to itself | ![Self Message](images/SelfMessage.png) |
+| [Synchronous](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceMessageType.html#Syncfusion_Blazor_Diagram_UmlSequenceMessageType_Synchronous) | The sender waits for a response | ![Synchronous Message](images/UmlSequenceDiagram/SynchronousMessage.png) |
+| [Asynchronous](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceMessageType.html#Syncfusion_Blazor_Diagram_UmlSequenceMessageType_Asynchronous) | The sender continues without waiting | ![Asynchronous Message](images/UmlSequenceDiagram/AsyncronousMessage.png) |
+| [Reply](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceMessageType.html#Syncfusion_Blazor_Diagram_UmlSequenceMessageType_Reply) | A response to a previous message | ![Reply Message](images/UmlSequenceDiagram/ReplyMessage.png) |
+| [Create](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceMessageType.html#Syncfusion_Blazor_Diagram_UmlSequenceMessageType_Create) | Creates a new participant | ![Create Message](images/UmlSequenceDiagram/CreateMessage.png) |
+| [Delete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceMessageType.html#Syncfusion_Blazor_Diagram_UmlSequenceMessageType_Delete) | Terminates a participant | ![Delete Message](images/UmlSequenceDiagram/DeleteMessage.png) |
+| [Self](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceMessageType.html#Syncfusion_Blazor_Diagram_UmlSequenceMessageType_Self) | A message from a participant to itself | ![Self Message](images/UmlSequenceDiagram/SelfMessage.png) |
 
 
 The following code example explains how to create messages in sequence diagram.
@@ -226,7 +226,7 @@ The following code example explains how to create messages in sequence diagram.
 ```
 You can download a complete working sample from [GitHub]().
 
-![Message Example](./images/MessageExample.png)
+![Message Example](./images/UmlSequenceDiagram/MessageExample.png)
 
 #### UmlSequenceMessage Properties
 
@@ -319,7 +319,7 @@ The following code example explains how to create activation boxes in sequence d
 ```
 You can download a complete working sample from [GitHub]().
 
-![Activations Example](./images/ActivationsExample.png)
+![Activations Example](./images/UmlSequenceDiagram/ActivationsExample.png)
 
 #### UmlSequenceActivationBox Properties
 
@@ -341,13 +341,13 @@ You can configure fragments by adding them to the [Fragments](https://help.syncf
 
 #### Types of Fragments
 
-The [UmlSequenceFragmentType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceFragmentType.html) enum defines the following fragment types:
+The [UmlSequenceFragmentType]() enum defines the following fragment types:
 
 | Fragment Type  | Description  | Example  |  
 |---------------|-------------|--------|  
-| [Optional](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceFragmentType.html#Syncfusion_Blazor_Diagram_UmlSequenceFragmentType_Optional)  | Represents a sequence that is executed only if a specified condition is met; otherwise, it is skipped. | ![Optional Fragment](images/OptFragment.png) |  
-| [Alternative](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceFragmentType.html#Syncfusion_Blazor_Diagram_UmlSequenceFragmentType_Alternative) | Represents multiple conditional paths (if-else structure), where only one path executes based on the condition. | ![Alternative Fragment](images/AltFragment.png) |  
-| [Loop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceFragmentType.html#Syncfusion_Blazor_Diagram_UmlSequenceFragmentType_Loop) | Represents a repeating sequence of interactions that continues based on a loop condition. | ![Loop Fragment](images/LoopFragment.png) |  
+| [Optional](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceFragmentType.html#Syncfusion_Blazor_Diagram_UmlSequenceFragmentType_Optional)  | Represents a sequence that is executed only if a specified condition is met; otherwise, it is skipped. | ![Optional Fragment](images/UmlSequenceDiagram/OptFragment.png) |  
+| [Alternative](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceFragmentType.html#Syncfusion_Blazor_Diagram_UmlSequenceFragmentType_Alternative) | Represents multiple conditional paths (if-else structure), where only one path executes based on the condition. | ![Alternative Fragment](images/UmlSequenceDiagram/AltFragment.png) |  
+| [Loop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UmlSequenceFragmentType.html#Syncfusion_Blazor_Diagram_UmlSequenceFragmentType_Loop) | Represents a repeating sequence of interactions that continues based on a loop condition. | ![Loop Fragment](images/UmlSequenceDiagram/LoopFragment.png) |  
 
 #### Creating Fragments
 
@@ -451,7 +451,7 @@ To create fragments in your sequence diagram, you will need to use the [UmlSeque
 
 You can download a complete working sample from [GitHub]().
 
-![Fragment Example](images/FragmentExample.png)
+![Fragment Example](images/UmlSequenceDiagram/FragmentExample.png)
 
 #### UmlSequenceFragment Properties
 
