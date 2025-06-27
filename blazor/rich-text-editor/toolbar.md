@@ -116,7 +116,7 @@ You can customize the inserted image in the editor by using the [RichTextEditorQ
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor image quick toolbar](./images/blazor-richtexteditor-image-toolbar.png)
+![Blazor RichTextEditor image quick toolbar](./images/blazor-richtexteditor-image-quick-toolbar.png)
 
 ### Link quick Toolbar
 
@@ -136,7 +136,7 @@ You can customize the selected link inside the editor through the quick toolbar 
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor link quick toolbar](./images/blazor-richtexteditor-link-toolbar.png)
+![Blazor RichTextEditor link quick toolbar](./images/blazor-richtexteditor-link-quick-toolbar.png)
 
 ### Table quick Toolbar
 
@@ -160,7 +160,7 @@ Quick toolbar is opened by clicking the table. You can customize the table by us
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor table quick toolbar](./images/blazor-richtexteditor-quick-toolbar-table.png)
+![Blazor RichTextEditor table quick toolbar](./images/blazor-richtexteditor-table-quick-toolbar.png)
 
 ### Audio quick Toolbar
 
@@ -180,7 +180,7 @@ The Rich Text Editor allows you to customize the inserted audio by using the [Ri
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor audio quick toolbar](./images/blazor-richtexteditor-quick-toolbar-audio.png)
+![Blazor RichTextEditor audio quick toolbar](./images/blazor-richtexteditor-audio-quick-toolbar.png)
 
 ### Video quick Toolbar
 
@@ -202,7 +202,7 @@ The Rich Text Editor allows you to customize the inserted video by using the [Ri
 {% endhighlight %}
 {% endtabs %}
 
-![Blazor RichTextEditor video quick toolbar](./images/blazor-richtexteditor-quick-toolbar-video.png)
+![Blazor RichTextEditor video quick toolbar](./images/blazor-richtexteditor-video-quick-toolbar.png)
 
 N> You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap5) example to knows how to render and configure the rich text editor tools.
 
@@ -215,16 +215,22 @@ By activating the "RichTextEditorQuickToolbarSettings.Text" property, the Rich T
 
 private List<ToolbarItemModel> textQuickToolbarItems = new List<ToolbarItemModel>()
     {
+        new ToolbarItemModel() { Command = ToolbarCommand.Formats },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
         new ToolbarItemModel() { Command = ToolbarCommand.Bold },
         new ToolbarItemModel() { Command = ToolbarCommand.Italic },
-        new ToolbarItemModel() { Command = ToolbarCommand.Underline },
         new ToolbarItemModel() { Command = ToolbarCommand.FontColor },
         new ToolbarItemModel() { Command = ToolbarCommand.BackgroundColor },
-        new ToolbarItemModel() { Command = ToolbarCommand.HorizontalSeparator },
-        new ToolbarItemModel() { Command = ToolbarCommand.Alignments },
-        new ToolbarItemModel() { Command = ToolbarCommand.Formats },
-        new ToolbarItemModel() { Command = ToolbarCommand.NumberFormatList },
-        new ToolbarItemModel() { Command = ToolbarCommand.BulletFormatList }
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.CreateLink },
+        new ToolbarItemModel() { Command = ToolbarCommand.Image },
+        new ToolbarItemModel() { Command = ToolbarCommand.CreateTable },
+        new ToolbarItemModel() { Command = ToolbarCommand.Blockquote },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.UnorderedList },
+        new ToolbarItemModel() { Command = ToolbarCommand.OrderedList },
+        new ToolbarItemModel() { Command = ToolbarCommand.Indent },
+        new ToolbarItemModel() { Command = ToolbarCommand.Outdent },
     };
 
 {% endhighlight %}
@@ -244,16 +250,22 @@ https://blazor.syncfusion.com/documentation/rich-text-editor/tools/built-in-tool
 @code {
     private List<ToolbarItemModel> TextQuickToolbarItems = new List<ToolbarItemModel>()
     {
+        new ToolbarItemModel() { Command = ToolbarCommand.Formats },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
         new ToolbarItemModel() { Command = ToolbarCommand.Bold },
         new ToolbarItemModel() { Command = ToolbarCommand.Italic },
-        new ToolbarItemModel() { Command = ToolbarCommand.Underline },
         new ToolbarItemModel() { Command = ToolbarCommand.FontColor },
         new ToolbarItemModel() { Command = ToolbarCommand.BackgroundColor },
-        new ToolbarItemModel() { Command = ToolbarCommand.HorizontalSeparator },
-        new ToolbarItemModel() { Command = ToolbarCommand.Alignments },
-        new ToolbarItemModel() { Command = ToolbarCommand.Formats },
-        new ToolbarItemModel() { Command = ToolbarCommand.NumberFormatList },
-        new ToolbarItemModel() { Command = ToolbarCommand.BulletFormatList }
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.CreateLink },
+        new ToolbarItemModel() { Command = ToolbarCommand.Image },
+        new ToolbarItemModel() { Command = ToolbarCommand.CreateTable },
+        new ToolbarItemModel() { Command = ToolbarCommand.Blockquote },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.UnorderedList },
+        new ToolbarItemModel() { Command = ToolbarCommand.OrderedList },
+        new ToolbarItemModel() { Command = ToolbarCommand.Indent },
+        new ToolbarItemModel() { Command = ToolbarCommand.Outdent },
     };
 }
 
