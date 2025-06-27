@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sorting in Blazor Spreadsheet Component | Syncfusion.
-description: Learn about the sorting support in Syncfusion Blazor Spreadsheet component and how to organize your data efficiently | Syncfusion.
+description: Learn about the sorting support in Syncfusion Blazor Spreadsheet component and how to organize your data efficiently.
 platform: Blazor
 component: Spreadsheet
 documentation: ug

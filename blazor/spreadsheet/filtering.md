@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Filtering in Blazor Spreadsheet Component | Syncfusion
-description: Learn all about the filter feature in Syncfusion Blazor Spreadsheet Component and more | Syncfusion
+description: Learn all about the filter feature in Syncfusion Blazor Spreadsheet Component and more.
 platform: Blazor
 control: Spreadsheet
 documentation: ug
