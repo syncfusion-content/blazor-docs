@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor DataGrid | Syncfusion
-description: Checkout and learn here all about accessibility in Syncfusion Blazor DataGrid and much more.
+description: Checkout and easily learn everything about accessibility in Syncfusion Blazor DataGrid and much more.
 platform: Blazor
 control: DataGrid
 documentation: ug

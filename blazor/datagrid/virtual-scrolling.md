@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Virtualization in Blazor DataGrid | Syncfusion
-description: Checkout and learn here all about Virtualization in Syncfusion Blazor DataGrid and much more.
+description: Check out and learn here all about virtualization in Syncfusion Blazor DataGrid and much more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
