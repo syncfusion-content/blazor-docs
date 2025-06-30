@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Formulas in Blazor Spreadsheet Component | Syncfusion
-description: Checkout and learn here all about formulas in Syncfusion Blazor Spreadsheet component and more | Syncfusion.
+description: Checkout and learn here all about formulas in Syncfusion Blazor Spreadsheet component and more.
 platform: Blazor
 control: Spreadsheet
 documentation: ug
@@ -11,9 +11,9 @@ documentation: ug
 
 **Formulas** enable calculations within a worksheet by referencing cells from either the same worksheet or other worksheets in the workbook.
 
-## Formula bar
+## Formula Bar
 
-The Formula Bar simplifies editing or entering cell data. Use the [ShowFormulaBar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ShowFormulaBar) property to enable or disable the formula bar.
+The **Formula Bar** simplifies editing or entering cell data. Use the [ShowFormulaBar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ShowFormulaBar) property to enable or disable the **Formula Bar**.
 
 > * The default value of the `ShowFormulaBar` property is `true`.
 
@@ -23,17 +23,17 @@ Formulas in the Syncfusion Blazor Spreadsheet can be accessed and inserted using
 
 * Select **Insert Function** from the **Formulas** tab in the Ribbon toolbar. In the **Insert Function** dialog, choose a category, then select the desired function to insert it into the selected cell.
 
-![UI showing Insert Function dialog from Ribbon](./images/insert-formula.gif)
+![Insert Function dialog](./images/insert-formula.gif)
 
 * Type **(=)** in a cell or the formula bar to display a list of available functions. Select a function from the list to insert it into the cell.
 
-![UI showing Insert Function list](./images/formula-cell.gif)
+![Formulas Intellisense](./images/formula-cell.gif)
 
 * Click the **Insert Function (fx)** button next to the formula bar to open the Insert Function dialog, which provides the same categorized function list and insertion options as the Ribbon toolbar.
 
 ## Calculation Mode
 
-The Spreadsheet includes a **Calculation Option** feature, similar to Excel's calculation settings, which controls when and how formulas are recalculated. The available modes are:
+The Spreadsheet includes **Calculation Option** functionality, similar to Excel's calculation settings, which controls when and how formulas are recalculated. The available modes are:
 
 * **Automatic**: Formulas recalculate instantly when any dependent cell changes.
 
@@ -67,23 +67,23 @@ N> Named ranges can be defined only for cells or ranges that contain values.
 
 ### Creating Named Ranges via the UI
 
-**Named ranges** can be created using the following methods:
+**Named Ranges** can be created using the following methods:
 
 * Select the desired range of cells and enter a name in the **Name Box**.
 
 * Select the range of cells, then click the **Name Manager** button in the Ribbon toolbar under the **Formulas** tab.
 
-![UI showing Name Manager dialog](./images/named-range.gif)
+![Name Manager dialog](./images/named-range.gif)
 
 ### Editing or Deleting Named Ranges
 
-**Named ranges** are managed through the **Name Manager** dialog, which supports editing and deletion.
+**Named Ranges** are managed through the **Name Manager** dialog, which supports editing and deletion.
 
 To Edit a Named Range
 
 * Open the **Name Manager** dialog.
 
-* Select the named range to be edited.
+* Select the Named Range to be edited.
 
 * Click the **Edit** icon.
 
@@ -95,13 +95,13 @@ To delete a Named Range
   
 * Open the **Name Manager** dialog.
 
-* Select the named range to be deleted.
+* Select the Named Range to be deleted.
 
 * Click the **Delete** icon, then click **OK** button to confirm.
 
-N> Deleting a named range used in formulas may cause formula errors. Ensure the named range is not referenced before deleting it.
+N> Deleting a Named Range used in formulas may cause formula errors. Ensure the Named Range is not referenced before deleting it.
 
-![UI showing edit and delete named range](./images/edit-and-delete.png)
+![Edit and Delete named range](./images/edit-and-delete.png)
 
 ## Supported Formulas
 
