@@ -1272,7 +1272,7 @@ public class OrderDetails
 
 ## Supported events for inline and dialog editing
 
-Inline and Dialog editing in the Syncfusion Blazor DataGrid provide flexible ways to modify records, catering to various user needs. This section outlines the key events triggered during the editing lifecycle, including adding, editing, updating, deleting, and cancelling, to help you effectively implement and customize the grid’s behavior for enhanced user interaction.
+Inline and Dialog editing in the Syncfusion Blazor DataGrid provide flexible ways to modify records, catering to various user needs. This section outlines the key events triggered during the editing lifecycle, including adding, editing, updating, deleting, and canceling, to help you effectively implement and customize the grid’s behavior for enhanced user interaction.
 
 **Sequence of events**
 
@@ -1306,7 +1306,7 @@ Inline and Dialog editing in the Syncfusion Blazor DataGrid provide flexible way
 | [RowDeleting](https://blazor.syncfusion.com/documentation/datagrid/events#rowdeleting) | Triggers before a row is deleted from the Grid. This event is used to confirm deletion or cancel the operation based on custom logic. |
 | [RowDeleted](https://blazor.syncfusion.com/documentation/datagrid/events#rowdeleted) | Triggers after a row is deleted from the Grid. |
 
-* **Cancelling an Edit Operation**
+* **Canceling an edit operation**
 
 | Event | Description |
 |-------|-------------|
