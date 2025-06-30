@@ -100,7 +100,7 @@ The available parameters in the `AutofillAsync()` method are:
 
 The following illustration demonstrates the use of autofill in the Spreadsheet component.
 
-![Autofill: Illustration](images/autofill.gif)
+![Autofill Illustration](images/autofill.gif)
 
 ## Clear
 
