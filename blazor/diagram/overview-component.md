@@ -129,12 +129,12 @@ The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 
 | Constraints | Description |
 | -------- | -------- |
-| None | Disables all the interactions in the overview component.|
-| Zoom | Enables the zooming interaction in the overview component. |
-| Pan | Enables the panning interaction in the overview component. |
-| DrawFocus | Enables to zoom or change the viewport area of the diagram by drawing the new rect in the overview component. | 
-| TapFocus | Enables the panning of the diagram viewport to a specific focus point by tapping on the overview component. |
-| Default | Enables all the interactions in the overview component. |
+| [None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramOverviewConstraints.html#Syncfusion_Blazor_Diagram_DiagramOverviewConstraints_None) | Disables all the interactions in the overview component.|
+| [Zoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramOverviewConstraints.html#Syncfusion_Blazor_Diagram_DiagramOverviewConstraints_Zoom) | Enables the zooming interaction in the overview component. |
+| [Pan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramOverviewConstraints.html#Syncfusion_Blazor_Diagram_DiagramOverviewConstraints_Pan) | Enables the panning interaction in the overview component. |
+| [DrawFocus](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramOverviewConstraints.html#Syncfusion_Blazor_Diagram_DiagramOverviewConstraints_DrawFocus) | Enables to zoom or change the viewport area of the diagram by drawing the new rect in the overview component. | 
+| [TapFocus](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramOverviewConstraints.html#Syncfusion_Blazor_Diagram_DiagramOverviewConstraints_TapFocus) | Enables the panning of the diagram viewport to a specific focus point by tapping on the overview component. |
+| [Default](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramOverviewConstraints.html#Syncfusion_Blazor_Diagram_DiagramOverviewConstraints_Default) | Enables all the interactions in the overview component. |
 
 The following example shows how to disable the zoom constraint from the default overview constraints.
 
@@ -199,3 +199,7 @@ The following example shows how to disable the zoom constraint from the default 
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Overview/OverviewConstraints)
+
+## See also 
+
+* [How to Integrate Syncfusion Blazor Diagram with Overview Support in SfTab Component](https://support.syncfusion.com/kb/article/17263/how-to-integrating-syncfusion-blazor-diagram-with-overview-support-in-sftab-component)
