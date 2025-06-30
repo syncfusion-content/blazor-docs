@@ -9,9 +9,9 @@ documentation: ug
 
 # Hyperlink in Blazor Spreadsheet component
 
-Hyperlinks in the Spreadsheet component allow users to navigate to web URLs, specific cell references within the same sheet, or to other sheets. To control this functionality, use the [AllowHyperLink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowHyperLink) property, which enables or disables hyperlink support in the Spreadsheet.
+Hyperlinks in the Spreadsheet component allow users to navigate to web URLs, specific cell references within the same sheet, or to other sheets. To control this functionality, use the [AllowHyperlink](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowHyperLink) property, which enables or disables hyperlink support in the Spreadsheet.
 
-> * The default value for `AllowHyperLink` property is **true**.
+> * The default value for `AllowHyperlink` property is **true**.
 
 ## Insert Hyperlink
 
