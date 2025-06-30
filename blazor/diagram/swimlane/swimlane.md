@@ -312,6 +312,116 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 | Horizontal | ![Horizontal](Swimlane-images/Swimlane_Horizontal.PNG) |
 | Vertical | ![Vertical](Swimlane-images/Swimlane_Vertical.PNG) |
 
+
+## How to set spacing between lane or phase header and its children
+
+The diagram allows you to define custom spacing between a lane or phase header and its child elements (such as nodes, connectors, or groups) using the [ChildrenSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Swimlane.html#Syncfusion_Blazor_Diagram_Swimlane_ChildrenSpacing) property. This property takes a DiagramThickness object to define spacing on all four sides: Top, Bottom, Left, and Right.
+
+By default, the ChildrenSpacing value is 20 pixels on all sides. You can modify this value to control the padding between the header and its children within the swimlane layout.
+
+The following example shows how to apply custom spacing using the ChildrenSpacing property.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+<!-- Diagram component rendering a swimlane layout -->
+<SfDiagramComponent Height="600px" Width="90%" Swimlanes="@swimlaneCollections">
+</SfDiagramComponent>
+@code {
+    /// <summary>
+    /// Collection of swimlanes used in the SfDiagramComponent.
+    /// </summary>
+    DiagramObjectCollection<Swimlane> swimlaneCollections = new DiagramObjectCollection<Swimlane>();
+    /// <summary>
+    /// Initializes the swimlane, phases, lanes, and child nodes for the diagram.
+    /// </summary>
+    protected override void OnInitialized()
+    {
+        // Define the first node
+        Node node1 = new Node()
+            {
+                ID = "node1",
+                Height = 100,
+                Width = 100,
+                OffsetX = 100,
+                OffsetY = 100,
+            };
+        // Define the second node
+        Node node2 = new Node()
+            {
+                ID = "node2",
+                Height = 100,
+                Width = 100,
+                OffsetX = 300,
+                OffsetY = 100,
+            };
+        // Create swimlane structure
+        swimlaneCollections = new DiagramObjectCollection<Swimlane>()
+        {
+            new Swimlane()
+            {
+                ID = "swimlane1",
+                Height = 200,
+                Width = 450,
+                Header = new SwimlaneHeader()
+                {
+                    Annotation = new ShapeAnnotation()
+                    {
+                        Content = "Header of swimlane"
+                    },
+                    Height = 30
+                },
+                Phases = new DiagramObjectCollection<Phase>()
+                {
+                    new Phase()
+                    {
+                        
+                        Header = new SwimlaneHeader()
+                        {
+                            Annotation = new ShapeAnnotation()
+                            {
+                                Content = "Header of phase"
+                            }
+                        },
+                        Width = 450
+                    }
+                },
+                Lanes = new DiagramObjectCollection<Lane>()
+                {
+                    
+                    new Lane()
+                    {
+                        Header = new SwimlaneHeader()
+                        {
+                            Style = new TextStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" },
+                            Annotation = new ShapeAnnotation()
+                            {
+                                Content = "Header of lane"
+                            }
+                        },
+                        Height = 100,
+                        Children = new DiagramObjectCollection<Node>()
+                        {
+                            node1,
+                            node2
+                        }
+                    }
+                },
+                ChildrenSpacing = new DiagramThickness()
+                {
+                    Bottom = 10,
+                    Left = 10,
+                    Right = 10,
+                    Top = 10
+                }
+            }
+        };
+    }
+}
+```
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/ChildrenSpacingProperty)
+
+
 ## Interaction
 
 ### How to Select the Swimlane

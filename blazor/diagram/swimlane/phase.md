@@ -342,6 +342,66 @@ The following code example explains how to define a Phase header annotation temp
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Phase/PhaseHeaderTemplate).
 
+## How to Set the Orientation of a Phase
+
+The [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Phase.html#Syncfusion_Blazor_Diagram_Phase_Orientation) property in the Symbol Palette allows you to define whether a phase is displayed horizontally or vertically. This property is particularly relevant when the phase is part of a SymbolPalette.
+
+ * Horizontal Orientation: The phase will be aligned horizontally.
+ * Vertical Orientation: The phase will be aligned vertically.
+
+Below is an example demonstrating how to set the orientation for phases in a SfSymbolPaletteComponent:
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Diagram.SymbolPalette
+<div class="control-section">
+    <div style="width:20%;">
+        <div id="palette-space" class="sb-mobile-palette" style="border: 2px solid #b200ff">
+            <SfSymbolPaletteComponent @ref="@symbolpalette" Height="300px" Width="200px"
+                                      Palettes="@Palettes" SymbolHeight="60" SymbolWidth="60" SymbolMargin="@SymbolMargin">
+            </SfSymbolPaletteComponent>
+        </div>
+    </div>
+</div>
+@code
+{
+    //Reference the symbolpreview.
+    DiagramSize SymbolPreview;
+    //Define symbol margin.
+    SymbolMargin SymbolMargin = new SymbolMargin { Left = 15, Right = 15, Top = 15, Bottom = 15 };
+    SfSymbolPaletteComponent symbolpalette;
+    //Define palattes collection.
+    DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
+    // Defines palette's swimlane-shape collection.
+    DiagramObjectCollection<NodeBase> SwimlaneNodes = new DiagramObjectCollection<NodeBase>();
+    protected override void OnInitialized()
+    {
+        InitPaletteModel();
+    }
+    private void InitPaletteModel()
+    {
+        Palettes = new DiagramObjectCollection<Palette>();
+        SwimlaneNodes = new DiagramObjectCollection<NodeBase>();
+        //create a horizontal phase.
+        Phase horizontalPhase = new Phase() { ID = "HorizontalPhase", Orientation = Orientation.Horizontal, Width = 80, Height = 1, Style = new ShapeStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" } };
+        //create a vertical phase.
+        Phase verticalPhase = new Phase() { ID = "VerticalPhase", Orientation = Orientation.Vertical, Width = 1, Height = 80, Style = new ShapeStyle() { Fill = "#5b9bd5", StrokeColor = "#5b9bd5" } };
+        SwimlaneNodes = new DiagramObjectCollection<NodeBase>()
+        {
+            horizontalPhase,
+            verticalPhase
+        };
+        Palettes = new DiagramObjectCollection<Palette>()
+        {
+            new Palette(){Symbols =SwimlaneNodes,Title="Swimlane Shapes",ID="SwimlaneShapes" },
+        };
+      }
+}
+```
+![Phse](Swimlane-images/PhaseOrientation.PNG).
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Phase/PhaseOrientation).
+
 ## How to Select and Resize Phase Header
 
  * You can select the individual phase header by clicking on the header twice. On the first click, you can select the respective phase. 

@@ -406,6 +406,95 @@ The following code example explains how to add nodes to lane.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Lane/LaneChildren).
 
+## How to Set the Orientation of a Lane
+
+  The [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Lane.html#Syncfusion_Blazor_Diagram_Lane_Orientation) property in the Symbol Palette allows you to define whether a lane is displayed horizontally or vertically. This property is particularly relevant when the lane is part of a SymbolPalette.
+
+   * Horizontal Orientation: The lane will be aligned horizontally.
+   * Vertical Orientation: The lane will be aligned vertically.
+
+   Below is an example demonstrating how to set the orientation for Lanes in a SfSymbolPaletteComponent:
+
+```cshtml
+   @using Syncfusion.Blazor.Diagram
+   @using Syncfusion.Blazor.Diagram.SymbolPalette
+<div class="control-section">
+    <div style="width:20%;">
+        <div id="palette-space" class="sb-mobile-palette" style="border: 2px solid #b200ff">
+            <SfSymbolPaletteComponent @ref="@symbolpalette" Height="300px" Width="200px"
+                                      Palettes="@Palettes" SymbolHeight="60" SymbolWidth="60" SymbolMargin="@SymbolMargin">
+            </SfSymbolPaletteComponent>
+        </div>
+    </div>
+</div>
+@code
+{
+    //Reference the symbolpreview.
+    DiagramSize SymbolPreview;
+    //Define symbol margin.
+    SymbolMargin SymbolMargin = new SymbolMargin { Left = 15, Right = 15, Top = 15, Bottom = 15 };
+    SfSymbolPaletteComponent symbolpalette;
+    //Define palattes collection.
+    DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
+    // Defines palette's swimlane-shape collection.
+    DiagramObjectCollection<NodeBase> SwimlaneNodes = new DiagramObjectCollection<NodeBase>();
+    protected override void OnInitialized()
+    {
+        InitPaletteModel();
+    }
+    private void InitPaletteModel()
+    {
+        Palettes = new DiagramObjectCollection<Palette>();
+        SwimlaneNodes = new DiagramObjectCollection<NodeBase>();
+        //create a horizontal lane.
+        Lane horizontalLane = new Lane()
+            {
+                ID = "HorizontalSwimlane",
+                Orientation = Orientation.Horizontal,
+                Height = 100,
+                Width = 150,
+                // Style = new TextStyle() { Fill = "orange", StrokeColor = "black" },
+                Header = new SwimlaneHeader()
+                {
+                    Annotation = new ShapeAnnotation() { Content = "Lane Title" },
+                    Style = new TextStyle() { Fill = "lightblue", StrokeColor = "black" },
+                    Width = 25,
+                    Height = 100
+                },
+            };
+        //create a vertical lane.
+        Lane verticalLane = new Lane()
+            {
+                ID = "VerticalSwimlane",
+                Orientation = Orientation.Vertical,
+                Height = 150,
+                Width = 100,
+                // Style = new TextStyle() { Fill = "orange", StrokeColor = "black" },
+                Header = new SwimlaneHeader()
+                {
+                    Annotation = new ShapeAnnotation() { Content = "Lane Title" },
+                    Style = new TextStyle() { Fill = "lightblue", StrokeColor = "black" },
+                    Width = 100,
+                    Height = 25
+                },
+            };
+        SwimlaneNodes = new DiagramObjectCollection<NodeBase>()
+        {
+            horizontalLane,
+            verticalLane,
+        };
+        Palettes = new DiagramObjectCollection<Palette>()
+        {
+            new Palette(){Symbols =SwimlaneNodes,Title="Swimlane Shapes",ID="SwimlaneShapes" },
+        };
+      }
+    }
+```
+   ![Lane](../Swimlane-images/LaneOrientation.PNG).
+
+   You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Lane/LaneOrientation).
+
+
 ## Header Selection and Resize
 
  * You can select the individual lane header by clicking on the header twice. On the first click, the respective lane can be selected.

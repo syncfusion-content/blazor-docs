@@ -163,6 +163,51 @@ The PortConstraints may have multiple behaviors like listed below:
 
 The [AdditionalInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_AdditionalInfo) property of the port allows you to maintain additional information for the port.
 
+The following code shows how to set the AdditionalInfo value for a port.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
+@code
+{
+    DiagramObjectCollection<Node> nodes;
+    protected override void OnInitialized()
+    {
+        nodes = new DiagramObjectCollection<Node>();
+        // Create a dictionary to hold additional information for the port.
+        Dictionary<string, object> PortInfo = new Dictionary<string, object>();
+        PortInfo.Add("portInfo", "Port A");
+        // Create a port with additional info.
+        PointPort port = new PointPort()
+            {
+                Offset = new DiagramPoint { X = 0.5, Y = 0.5 },
+                Visibility=PortVisibility.Visible,
+                AdditionalInfo = PortInfo
+            };
+        // A node is created and stored in nodes collection.
+        Node node = new Node()
+            {
+                OffsetX = 250,
+                OffsetY = 250,
+                Width = 100,
+                Height = 100,
+                Style = new ShapeStyle()
+                {
+                    Fill = "#6BA5D7",
+                    StrokeColor = "white"
+                },
+                Ports = new DiagramObjectCollection<PointPort>  { port }
+            };
+        // Add node.
+        nodes.Add(node);
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/Appearance)
+
+
+**Note:** Like AdditionalInfo for nodes, you can set any type of value for the AdditionalInfo property of a port.
+
 ## See also
 
 * [How to create a node](../nodes/nodes)

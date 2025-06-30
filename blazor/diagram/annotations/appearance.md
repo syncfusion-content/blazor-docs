@@ -638,6 +638,56 @@ The following code illustrates how to define a template for a node's annotation.
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/TemplateSupportforAnnotation)
 ![Blazor Diagram with Template Annotations](../images/TemplateSupportforAnnotation.png)
 
+## How to Add Additional Information for an Annotation
+
+The [AdditionalInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_AdditionalInfo) property of an annotation allows you to store extra information associated with the annotation in a flexible way. This can be useful for maintaining metadata or additional details that you may need to access programmatically.
+
+The following code shows how to set the AdditionalInfo value.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
+@code
+{
+    DiagramObjectCollection<Node> nodes;
+    protected override void OnInitialized()
+    {
+        nodes = new DiagramObjectCollection<Node>();
+        // Create a dictionary to store additional information for the annotation.
+        Dictionary<string, object> AnnotationInfo = new Dictionary<string, object>();
+        AnnotationInfo.Add("author", "John Doe");
+        AnnotationInfo.Add("modifiedDate", DateTime.Now);
+        // A node with an annotation containing additional information.
+        Node node = new Node()
+        {
+            OffsetX = 250,
+            OffsetY = 250,
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle()
+            {
+                Fill = "#6BA5D7",
+                StrokeColor = "white"
+            },
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+            {
+                new ShapeAnnotation
+                {
+                    Content = "Annotated Node",
+                    AdditionalInfo = AnnotationInfo
+                }
+            }
+        };
+        // Add the node to the collection.
+        nodes.Add(node);
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/AdditionalInfoProperty)
+
+**Note:** You can set any type of value for the AdditionalInfo property.
+
+
 ## See also
 
 * [How to add or remove annotation constraints](../constraints#annotation-constraints)
