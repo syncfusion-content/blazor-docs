@@ -59,6 +59,20 @@ You can display the toolbar items in a single line with horizontal scrolling by 
 
 ![Blazor RichTextEditor multirow toolbar](./images/blazor-richtexteditor-scrollable-toolbar.png)
 
+## Configuring a popup toolbar
+
+You can display the toolbar items in a popup container by setting the [ToolbarType.Popup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.ToolbarType.html#Syncfusion_Blazor_RichTextEditor_ToolbarType_Popup) property, which optimizes the toolbar layout for limited space and smaller screens.
+
+{% tabs %}
+{% highlight razor %}
+
+{% include_relative code-snippet/popup-toolbar.razor %}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Blazor RichTextEditor multirow toolbar](./images/blazor-richtexteditor-popup-toolbar.png)
+
 ## Floating Toolbar
 
 By default, toolbar is float at the top of the Rich Text Editor on scrolling. It can be customized by specifying the offset of the floating toolbar from documents top position using [FloatingToolbarOffset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.SfRichTextEditor.html#Syncfusion_Blazor_RichTextEditor_SfRichTextEditor_FloatingToolbarOffset).
@@ -79,6 +93,24 @@ You can enable or disable the floating toolbar using [RichTextEditorToolbarSetti
 {% endtabs %}
 
 ![Blazor RichTextEditor floating toolbar](./images/blazor-richtexteditor-floating.toolbar.png)
+
+## Configuring the toolbar position
+
+The Rich Text Editor allows you to position the toolbar at the top or bottom of the content area, depending on your layout requirements.
+
+By default, the toolbar is displayed at the top of the editor, making all formatting and editing tools immediately accessible above the content.
+
+To position the toolbar at the bottom, use the [RichTextEditorToolbarSettings.Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorToolbarSettings_Position) property and set its value to `Bottom`. This places the toolbar below the content area, which can help maintain a cleaner top layout and improve accessibility in certain use cases.
+
+{% tabs %}
+{% highlight razor %}
+
+{% include_relative code-snippet/bottom-toolbar.razor %}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Blazor RichTextEditor multirow toolbar](./images/blazor-richtexteditor-bottom-toolbar.png)
 
 ## Quick Toolbar
 

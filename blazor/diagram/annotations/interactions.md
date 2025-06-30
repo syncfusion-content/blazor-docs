@@ -84,3 +84,5 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to add annotation for Node](./node-annotation)
 
 * [How to add annotation for Connector](./connector-annotation)
+
+* [How to animate connectors using annotationtemplate in angular diagram](https://support.syncfusion.com/kb/article/20265/how-to-animate-connectors-using-annotationtemplate-in-angular-diagram )

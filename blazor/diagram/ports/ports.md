@@ -9,7 +9,7 @@ documentation: ug
 
 # Ports in Blazor Diagram Component
 
-Port is a special connection point in a Node where you can glue the connectors. When you glue a connector to a node or port, they remain connected even if one of the nodes is moved.
+[Port](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html) is a special connection point in a Node where you can glue the connectors. When you glue a connector to a node or port, they remain connected even if one of the nodes is moved.
 
 ![Port in Blazor Diagram](../images/blazor-diagram-port.png)
 
@@ -665,3 +665,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to interact with the ports](./interaction)
 
 * [How to set the position of the port](./positioning)
+
+* [How to Dynamically Create and Connect Diagram Nodes with Annotations via Ports in Syncfusion Blazor Diagram](https://support.syncfusion.com/kb/article/19001/how-to-dynamically-create-and-connect-diagram-nodes-with-annotations-via-ports-in-syncfusion-blazor-diagram)  
+
+
+* [How to Select and Highlight Ports and Connect Selected Elements in Syncfusion Blazor Diagram](https://support.syncfusion.com/kb/article/18997/how-to-select-and-highlight-ports-and-connect-selected-elements-in-syncfusion-blazor-diagram)
+
+
+* [How to Add Multiple Ports to All Sides of a Node in Syncfusion's Blazor Diagram Component](https://support.syncfusion.com/kb/article/18718/how-to-add-multiple-ports-to-all-sides-of-a-node-in-syncfusions-blazor-diagram-component)
