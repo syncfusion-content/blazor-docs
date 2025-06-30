@@ -34,12 +34,12 @@ This interface enables:
 
 Here are examples of AI services integrated using the `IChatInferenceService` interface:
 
-| Service | Description | Documentation |
-|---------|-------------|---------------|
-| Claude | Anthropic's Claude AI | [Claude Integration](claude-service) |
-| DeepSeek | DeepSeek's AI | [DeepSeek Integration](deepseek-service) |
-| Groq | Groq AI | [Groq Integration](groq-service) |
-| Gemini | Google's Gemini AI | [Gemini Integration](gemini-service) |
+| Service | Documentation |
+|---------|---------------|
+| Claude | [Claude Integration](claude-service) |
+| DeepSeek | [DeepSeek Integration](deepseek-service) |
+| Groq | [Groq Integration](groq-service) |
+| Gemini | [Gemini Integration](gemini-service) |
 
 
 ## Service Registration

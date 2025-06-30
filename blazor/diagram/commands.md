@@ -20,11 +20,11 @@ There are several commands available in the diagram as follows.
 * Zoom commands
 * Undo/Redo commands
 
-## Alignment commands
+## Alignment Commands
 
 Alignment commands enable you to align the selected or defined objects, such as nodes and connectors with respect to the selection boundary. The following are the [AlignmentOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AlignmentOptions.html) available in the [SetAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SetAlign_Syncfusion_Blazor_Diagram_AlignmentOptions_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__Syncfusion_Blazor_Diagram_AlignmentMode_) commands, which shows how to use align methods in the diagram.
 
-### How to align the selected objects to the left
+### How to Align the Selected Objects to the Left
 
 The following code example illustrates how to align all the selected objects to the left side of the selection boundary.
 
@@ -85,7 +85,7 @@ The following code example illustrates how to align all the selected objects to 
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/AlignLeft)
-### How to align the selected objects to the right
+### How to Align the Selected Objects to the Right
 
 The following code example illustrates how to align all the selected objects at the right side of the selection boundary.
 
@@ -146,7 +146,7 @@ The following code example illustrates how to align all the selected objects at 
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/AlignRight)
-### How to align the selected objects to the top
+### How to Align the Selected Objects to the Top
 
 The following code example illustrates how to align all the selected objects at the top of the selection boundary.
 
@@ -207,7 +207,7 @@ The following code example illustrates how to align all the selected objects at 
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/AlignTop)
-### How to align the selected objects to the bottom
+### How to Align the Selected Objects to the Bottom
 
 The following code example illustrates how to align all the selected objects at the bottom of the selection boundary.
 
@@ -268,7 +268,7 @@ The following code example illustrates how to align all the selected objects at 
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/AlignBottom)
-### How to align the selected objects to the middle
+### How to Align the Selected Objects to the Middle
 
 The following code example illustrates how to align all the selected objects at the middle of the selection boundary.
 
@@ -329,7 +329,7 @@ The following code example illustrates how to align all the selected objects at 
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/AlignMiddle)
-### How to align the selected objects to the center
+### How to Align the Selected Objects to the Center
 
 The following code example illustrates how to align all the selected objects at the center of the selection boundary.
 
@@ -390,20 +390,20 @@ The following code example illustrates how to align all the selected objects at 
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/AlignCenter)
-## Distribute
+## How to Distribute Diagram Elements
 
 The [SetDistribute](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SetDistribute_Syncfusion_Blazor_Diagram_DistributeOptions_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) commands enable you to place the selected objects on the page at equal intervals from each other. The selected objects are equally spaced within the selection boundary.
 
 The factors to distribute the shapes using [DistributeOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DistributeOptions.html) are listed as follows:
 
-* RightToLeft: Distributes the objects based on the distance between the right and left sides of the adjacent objects.
-* Left: Distributes the objects based on the distance between the left sides of the adjacent objects.
-* Right: Distributes the objects based on the distance between the right sides of the adjacent objects.
-* Center: Distributes the objects based on the distance between the center of the adjacent objects.
-* BottomToTop: Distributes the objects based on the distance between the bottom and top sides of the adjacent objects.
-* Top: Distributes the objects based on the distance between the top sides of the adjacent objects.
-* Bottom: Distributes the objects based on the distance between the bottom sides of the adjacent objects.
-* Middle: Distributes the objects based on the distance between the vertical center of the adjacent objects.
+* [RightToLeft](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DistributeOptions.html#Syncfusion_Blazor_Diagram_DistributeOptions_RightToLeft): Distributes the objects based on the distance between the right and left sides of the adjacent objects.
+* [Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DistributeOptions.html#Syncfusion_Blazor_Diagram_DistributeOptions_Left): Distributes the objects based on the distance between the left sides of the adjacent objects.
+* [Right](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DistributeOptions.html#Syncfusion_Blazor_Diagram_DistributeOptions_Right): Distributes the objects based on the distance between the right sides of the adjacent objects.
+* [Center](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DistributeOptions.html#Syncfusion_Blazor_Diagram_DistributeOptions_Center): Distributes the objects based on the distance between the center of the adjacent objects.
+* [BottomToTop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DistributeOptions.html#Syncfusion_Blazor_Diagram_DistributeOptions_BottomToTop): Distributes the objects based on the distance between the bottom and top sides of the adjacent objects.
+* [Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DistributeOptions.html#Syncfusion_Blazor_Diagram_DistributeOptions_Top): Distributes the objects based on the distance between the top sides of the adjacent objects.
+* [Bottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DistributeOptions.html#Syncfusion_Blazor_Diagram_DistributeOptions_Bottom): Distributes the objects based on the distance between the bottom sides of the adjacent objects.
+* [Middle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DistributeOptions.html#Syncfusion_Blazor_Diagram_DistributeOptions_Middle): Distributes the objects based on the distance between the vertical center of the adjacent objects.
 
 The following code example illustrates how to execute the space commands.
 
@@ -512,7 +512,7 @@ The following code example illustrates how to execute the space commands.
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/SetDistributeCommands)
-## Sizing Commands
+## How to Use Sizing Commands
 
 Sizing [SetSameSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SetSameSize_Syncfusion_Blazor_Diagram_SizingMode_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) commands are used to resize all selected object based on the width, height, and size of the reference object (FirstSelectedItem).
 
@@ -598,7 +598,7 @@ The following code example illustrates how to execute the size commands.
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/SizingCommands)
-## Clipboard commands
+## How to Use Clipboard Commands
 
 Clipboard commands are used to cut, copy, or paste the selected elements.
 
@@ -686,7 +686,7 @@ The following code illustrates how to execute the clipboard commands.
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/ClipboardCommands)
-## Grouping commands
+## How to Use Grouping commands
 
 **Grouping commands** are used to group or ungroup the selected elements on the diagram. To group the elements, select the elements using the select all command and group the selected elements using the group command.
 
@@ -759,11 +759,11 @@ The following code illustrates how to execute the grouping commands.
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/GroupingCommands)
-## Z-Order commands
+## How to Arrange Diagram Elements Using Z-Order Commands
 
 Z – Order commands are used to control the stacking order (Z-Order) of the diagram elements such as nodes, connectors, and groups. Also, you can arrange the selected objects on the diagram page with their Z-order values by using the Bring to front, Bring forward, Send to back, and Send backward features.
 
-### BringToFront
+### How to Use the Bring To Front Commands
 
 The [BringToFront](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_BringToFront) command is used to visually brings the selected element to the front over all other overlapped elements.
 
@@ -826,7 +826,7 @@ The following code illustrates how to execute the BringToFront command.
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/Z-OrderCommands/BringToFront)
 
 
-### SendToBack
+### How to Use the Send To Back Commands
 
 The [SendToBack](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SendToBack) command visually moves the selected elements behind all other overlapped elements.
 
@@ -888,7 +888,7 @@ The following code illustrates how to execute the SendToBack command.
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/Z-OrderCommands/SendToBack)
 
-### BringForward
+### How to Use the Bring Forward Commands
 
 The [BringForward](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_BringForward) command visually moves the selected element over the nearest overlapping element.
 
@@ -950,7 +950,7 @@ The following code illustrates how to execute the BringForward command.
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/Z-OrderCommands/BringForward)
 
-### SendBackward
+### How to Use the Send Backward Commands
 
 The [SendBackward](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SendBackward) command visually moves the selected elements behind the nearest underlying element.
 
@@ -1016,7 +1016,7 @@ The following gif illustrates how to perform z-order commands.
 
 ![Z-order Commands](./images/Z-Order-Commands.gif)
 
-## Zoom command
+## How to Use the Zoom command
 
 The [Zoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Zoom_System_Double_Syncfusion_Blazor_Diagram_DiagramPoint_) command is used to zoom in and zoom out the diagram view.
 
@@ -1063,7 +1063,7 @@ The following code illustrates how to zoom-in/zoom out the diagram.
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/ZoomingCommands)
 
-## Nudge command
+## How to Use the Nudge command
 
 The [Nudge](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Nudge_Syncfusion_Blazor_Diagram_Direction_System_Nullable_System_Int32__) commands reposition the selected object by the specified delta in the given direction.
 
@@ -1071,10 +1071,10 @@ The [Nudge](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDi
 
 The accepted values of the argument direction are as follows:
 
-* Up: Moves the selected elements towards up by the specified delta value.
-* Down: Moves the selected elements towards down by the specified delta value.
-* Left: Moves the selected elements towards left by the specified delta value.
-* Right: Moves the selected elements towards right by the specified delta value.
+* [Up](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Direction.html#Syncfusion_Blazor_Diagram_Direction_Top): Moves the selected elements towards up by the specified delta value.
+* [Down](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Direction.html#Syncfusion_Blazor_Diagram_Direction_Bottom): Moves the selected elements towards down by the specified delta value.
+* [Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Direction.html#Syncfusion_Blazor_Diagram_Direction_Left): Moves the selected elements towards left by the specified delta value.
+* [Right](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Direction.html#Syncfusion_Blazor_Diagram_Direction_Right): Moves the selected elements towards right by the specified delta value.
 
 The following code illustrates how to execute nudge command.
 
@@ -1098,7 +1098,7 @@ The following code illustrates how to execute nudge command.
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/NudgeCommand)
 
-## Nudge by using arrow keys
+## How to Nudge Elements with Arrow keys
 
 The corresponding arrow keys are used to move the selected elements towards the up, down, left, or right direction by 1 pixel.
 
@@ -1106,7 +1106,7 @@ The corresponding arrow keys are used to move the selected elements towards the 
 
 Nudge commands are particularly useful for accurate placement of elements.
 
-## Undo and Redo command
+## How to Enable Undo and Redo Functionality
 
 The [Undo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Undo) and [Redo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Redo) commands provide powerful functionality for managing changes in your diagram:
 
@@ -1145,7 +1145,7 @@ These commands enhance user experience by offering flexibility in diagram editin
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/UndoRedoCommands)
 
 
-## How to bring the specific element into the viewport of the diagram
+## How to Bring the Specific Element into the Viewport of the Diagram
 
 The [BringIntoView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_BringIntoView_Syncfusion_Blazor_Diagram_DiagramRect_) command is a powerful feature that allows you to navigate and focus on a specific area of your diagram. It automatically adjusts the viewport to display a specified rectangular region, ensuring that the area of interest is visible to the user.
 
@@ -1181,7 +1181,7 @@ protected override void OnInitialized()
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/BringInToView)
 
-## How to bring the specific element into the center of the viewport of the diagram
+## How to Bring the Specific Element into the Center of the Viewport of the Diagram
 
 The [BringIntoCenter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_BringIntoCenter_Syncfusion_Blazor_Diagram_DiagramRect_) command allows you to bring a specific rectangular region into the center of the diagram's viewport. This command is particularly useful for focusing on a particular area of interest within your diagram.
 
@@ -1217,7 +1217,7 @@ protected override void OnInitialized()
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/BringintoCenter)
 
-## How to bring the entire diagram into the current viewport using FitToPage command
+## How to Bring the Entire Diagram into the Current Viewport Using Fit to Page Command
 
 The FitToPage command is used to bring the entire diagram (including large diagrams) into view. You can customize the behavior of the FitToPage command by passing a [FitOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FitOptions.html) object as a parameter. If no parameter is provided, the entire diagram is fit into the view using default settings.
 
@@ -1377,12 +1377,12 @@ The [Region](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Dia
 
 |Values    | Description     |
 |------------|------------------|
-|PageSettings   | It is used to perform the fit to page based on the width and height of the page  |
-|Content   | It is used to perform the fit to page for the content area only    |
+|[PageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramRegion.html#Syncfusion_Blazor_Diagram_DiagramRegion_PageSettings)   | It is used to perform the fit to page based on the width and height of the page  |
+|[Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramRegion.html#Syncfusion_Blazor_Diagram_DiagramRegion_Content)   | It is used to perform the fit to page for the content area only    |
 
 ![Region](./images/Region.gif)
 
-## CanZoomIn 
+## How to Enable Zoom in Behaviour
 
 The [CanZoomIn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FitOptions.html#Syncfusion_Blazor_Diagram_FitOptions_CanZoomIn) property controls whether the diagram can zoom in to fit smaller content into a larger viewport. When set to `true`, it allows zooming in, while `false` disables this feature. This is particularly useful for maintaining a minimum zoom level or preventing excessive magnification of small diagrams.
 
@@ -1506,19 +1506,19 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![CanZoomIn to bring the small diagram into view](images/CanZoomIn.png)
 
-## Command manager
+## Command Manager
 
 Diagram provides support to map or bind command execution with desired combinations of key gestures. It includes a set of built-in commands for common operations.
 
 The [CommandManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.CommandManager.html) allows you to define custom commands in addition to the built-in ones. These custom commands are executed when their specified key gestures are recognized, enabling tailored interactions within your Blazor application.
 
-### Command Execution
+### How to Handle Command Execution
 
 The [Execute](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.CommandManager.html#Syncfusion_Blazor_Diagram_CommandManager_Execute) event callback method is triggered when a custom command is executed in the diagram. This allows you to define specific actions to be performed when the command is invoked.
 
 The [CanExecute](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.CommandManager.html#Syncfusion_Blazor_Diagram_CommandManager_CanExecute) event evaluates whether the command can be executed in its current state. This event enables you to implement conditional logic to determine if the command should be available or disabled based on the diagram's current context.
 
-### How to create custom command
+### How to Create Custom Command
 
 To define a custom command, specify the following properties:
 * [Gesture](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.KeyboardCommand.html#Syncfusion_Blazor_Diagram_KeyboardCommand_Gesture): A combination of [Key](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.KeyGesture.html#Syncfusion_Blazor_Diagram_KeyGesture_Key) and [Modifiers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.KeyGesture.html#Syncfusion_Blazor_Diagram_KeyGesture_Modifiers). This defines the keyboard shortcut for the command.
@@ -1623,7 +1623,7 @@ The following code example shows how to define a custom command.
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Commands/CustomCommands/CustomCommands)
 
-### Modify the existing command
+### How to Modify the Existing Command
 
 When certain default commands are not required for your application, they can be selectively disabled. Additionally, if you need to alter the behavior of a specific command, you have the flexibility to completely customize its functionality. This approach allows you to tailor the command set to your specific needs, enhancing user experience and streamlining the interface.
 

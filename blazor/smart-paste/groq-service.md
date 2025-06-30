@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Gemini AI with Syncfusion Smart Components in Blazor App | Syncfusion
+title: Groq AI Service with Smart Components in Blazor App | Syncfusion
 description: Learn how to implement a custom AI service using Groq API with Syncfusion Smart Components in a Blazor App.
 control: Smart Paste Button
 documentation: ug
@@ -32,7 +32,7 @@ Before you begin, ensure you have:
 
 For detailed model specifications and capabilities, visit the [Groq Models Documentation](https://console.groq.com/docs/models).
 
-## Next Steps
+## Getting Started for Groq AI with SmartPasteButton
 
 After completing this setup, you can:
 

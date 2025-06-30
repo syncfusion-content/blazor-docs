@@ -11,7 +11,7 @@ documentation: ug
 
 Diagram provides support to print the content displayed on the diagram page using the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PrintAsync_) method.
 
-## Page setup
+## How to Set Up Page Layout for Printing 
 
 Some of the print options cannot be configured through JavaScript code. Therefore, the layout, paper size, and margin options must be customized using the browser page setup dialog. Refer to the following links to learn more about the browser page setup:
 
@@ -20,18 +20,18 @@ Some of the print options cannot be configured through JavaScript code. Therefor
 * [Safari](https://www.mintprintables.com/print-tips/adjust-margins-osx/)
 * [IE](http://www.helpteaching.com/help/print/index.htm)
 
-## Printing Options
+## How to Customize Printing Options
 
 The diagram can be customized while printing using the following properties of the [DiagramPrintSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramPrintSettings.html) class. 
 
 | Name | Description|
 |-------- | -------- |
-| Region | Sets the region of the diagram to be printed. |
-| Margin | Sets the margin of the page to be printed/exported.|
-| FitToPage | Prints the diagram into a single or multiple pages. |
-| PageWidth | Sets the page width of the diagram while printing the diagram in multiple pages. |
-| PageHeight| Sets the page height of the diagram while printing the diagram in multiple pages.|
-| Orientation | Sets the orientation of the page. |
+| [Region](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramPrintSettings.html#Syncfusion_Blazor_Diagram_DiagramPrintSettings_Region) | Sets the region of the diagram to be printed. |
+| [Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramPrintSettings.html#Syncfusion_Blazor_Diagram_DiagramPrintSettings_Margin) | Sets the margin of the page to be printed/exported.|
+| [FitToPage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramPrintSettings.html#Syncfusion_Blazor_Diagram_DiagramPrintSettings_FitToPage) | Prints the diagram into a single or multiple pages. |
+| [PageWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramPrintSettings.html#Syncfusion_Blazor_Diagram_DiagramPrintSettings_PageWidth) | Sets the page width of the diagram while printing the diagram in multiple pages. |
+| [PageHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramPrintSettings.html#Syncfusion_Blazor_Diagram_DiagramPrintSettings_PageHeight)| Sets the page height of the diagram while printing the diagram in multiple pages.|
+| [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramPrintSettings.html#Syncfusion_Blazor_Diagram_DiagramPrintSettings_Orientation) | Sets the orientation of the page. |
 
 These properties behave the same as the properties in the `DiagramExportSettings` class. For more details, [refer](../export/Exporting options) 
 
@@ -81,3 +81,5 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ## See Also
 
 * [How to print or export the HTML and Native node into image format](https://support.syncfusion.com/kb/article/12332/how-to-print-or-export-the-html-and-native-node-into-image-format-in-blazor-diagarm)
+
+* [How to Export the Blazor Diagram to PDF](https://support.syncfusion.com/kb/article/16302/how-to-export-the-blazor-diagram-to-pdf)

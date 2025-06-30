@@ -156,9 +156,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 >**Note:** In the DataSourceSettings, the type of the ID and ParentID properties is string. The provided DataSource should have a parent-child relationship. It is necessary for at least one node to have an empty ParentID.
 
-## Customizing the properties
+## Customizing the Properties
 
-### How to change orientation 
+### How to Change Orientation 
 
 You can use the [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Orientation) property of the Layout to change the orientation at runtime. The following code shows how to change the layout.
 
@@ -177,7 +177,7 @@ public void UpdateOrientation()
 }
 ```
 
-### How to update the spacing between nodes
+### How to Update Spacing Between Nodes
 
 You can change the horizontal and vertical spacing for the diagram layout by using the [HorizontalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_HorizontalSpacing) and [VerticalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_VerticalSpacing) properties of the layout.
 
@@ -200,7 +200,7 @@ public void UpdateSpacing()
 }
 ```
 
-### How to update the margin
+### How to Update Margin
 
 You can also change the margin values for the diagram layout by using the [Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Margin) property.
 
@@ -230,3 +230,5 @@ public void UpdateMargin()
 * [How to create a node](../nodes/nodes)
 
 * [How to create a connector](../connectors/connectors)
+
+* [How to Generate a Hierarchical Layout with Annotation at Runtime](https://support.syncfusion.com/kb/article/17884/how-to-generate-a-hierarchical-layout-with-annotation-at-runtime)
