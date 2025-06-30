@@ -58,7 +58,7 @@ To add hyperlink programmatically in the Spreadsheet component, the [AddHyperlin
 
     public async Task AddHyperlinkHandler()
     {
-	    await spreadsheetObj.AddHyperLinkAsync("https://www.syncfusion.com/blazor-components/blazor-spreadsheet","A2:A5");
+	    await spreadsheetObj.AddHyperlinkAsync("https://www.syncfusion.com/blazor-components/blazor-spreadsheet","A2:A5");
     }
 }
 
@@ -127,7 +127,7 @@ To remove hyperlink programmatically in the Spreadsheet component, the [RemoveHy
 
     public async Task RemoveHyperlinkHandler()
     {
-	    await spreadsheetObj.RemoveHyperLinkAsync("A2:A5");
+	    await spreadsheetObj.RemoveHyperlinkAsync("A2:A5");
     }
 }
 
