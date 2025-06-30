@@ -1041,7 +1041,7 @@ public class OrderDetails
 
 ## Supported events for batch editing
 
-The Syncfusion Blazor DataGrid triggers the following events during `Batch` editing:
+Batch editing in the Syncfusion Blazor DataGrid offers a powerful way to edit multiple records simultaneously. Understanding the sequence and purpose of events triggered during this process enables users to customize or extend the data Grid's functionality. This section outlines the key events associated with batch editing, providing essential information to harness the full potential of this feature.
 
 | Event | Description |
 |-------|-------------|
