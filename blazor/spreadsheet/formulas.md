@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Formulas in Blazor Spreadsheet Component | Syncfusion
-description: Checkout and learn here all about formulas in Syncfusion Blazor Spreadsheet component and more.
+description: Checkout and learn here all about formulas in Syncfusion Blazor Spreadsheet component and more | Syncfusion.
 platform: Blazor
 control: Spreadsheet
 documentation: ug
@@ -29,7 +29,9 @@ Formulas in the Syncfusion Blazor Spreadsheet can be accessed and inserted using
 
 ![Formulas Intellisense](./images/formula-cell.gif)
 
-* Click the **Insert Function (fx)** button next to the **Formula Bar** to open the **Insert Function** dialog, which provides the same categorized function list and insertion options as the Ribbon toolbar.
+* Click the **Insert Function** button next to the **Formula Bar** to open the **Insert Function** dialog, which provides the same categorized function list and insertion options as the Ribbon toolbar.
+
+![Insert Function Button](./images/insert-function.gif)
 
 ## Calculation Mode
 
