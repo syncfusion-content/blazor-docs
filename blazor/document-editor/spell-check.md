@@ -11,7 +11,6 @@ documentation: ug
 
 Document Editor supports performing `spell checking` for any input text. You can perform spell checking for the text in Document Editor and it will provide suggestions for the mis-spelled words through dialog and in context menu. Document editor's spell checker is compatible with [Hunspell dictionary files](https://github.com/wooorm/dictionaries).
 
-
 >Note: Spell check operation requires server-side interaction, so Please refer the [example from GitHub](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) to configure the web service and set the [serviceUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditorContainer.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditorContainer_ServiceUrl).
 
 If your running web service Url is `http://localhost:62870/`, set the serviceUrl like below:
