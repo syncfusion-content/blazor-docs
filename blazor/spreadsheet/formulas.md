@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Formulas in Blazor Spreadsheet Component | Syncfusion
-description: Checkout and learn here all about formulas in Syncfusion Blazor Spreadsheet component and more | Syncfusion.
+description: Checkout and learn here all about formulas in Syncfusion Blazor Spreadsheet component and more.
 platform: Blazor
 control: Spreadsheet
 documentation: ug
