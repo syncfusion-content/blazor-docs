@@ -494,7 +494,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Events/CollectionChangeEvent)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Events/CollectionChangeEvent)
 
 ## How to Handle the Mouse Enter Event
 
@@ -568,7 +568,7 @@ The [MouseLeave](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/t
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Events/MouseLeaveEvent)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Events/MouseLeaveEvent)
 
 ## How to Handle the Mouse Hover Event
 
@@ -605,7 +605,7 @@ The [MouseHover](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/t
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Events/MouseHoverEvent)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Events/MouseHoverEvent)
 
 ## How to Handle Property Changed Event
 
