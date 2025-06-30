@@ -1038,3 +1038,16 @@ public class OrderDetails
 {% endtabs %}
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/hjrStoqXKmIboOTG?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+
+## Supported events for batch editing
+
+Batch editing in the Syncfusion Blazor DataGrid offers a powerful way to edit multiple records simultaneously. Understanding the sequence and purpose of events triggered during this process enables users to customize or extend the data Grid's functionality. This section outlines the key events associated with batch editing, providing essential information to harness the full potential of this feature.
+
+| Event | Description |
+|-------|-------------|
+| [OnBatchAdd](https://blazor.syncfusion.com/documentation/datagrid/events#onbatchadd) | Triggers before new records are added to the UI when the user clicks the add toolbar item or presses the insert key. |
+| [OnBatchSave](https://blazor.syncfusion.com/documentation/datagrid/events#onbatchsave) | Triggers before batch changes (added, edited, deleted data) are saved to the data source. A confirmation popup is displayed when the Update button is clicked. |
+| [OnBatchDelete](https://blazor.syncfusion.com/documentation/datagrid/events#onbatchdelete) | Triggers before records are deleted in the Grid. If no rows are selected, a popup prompts the user to select rows for deletion. |
+| [OnCellEdit](https://blazor.syncfusion.com/documentation/datagrid/events#oncelledit) | Triggers before a cell enters edit mode in the UI, such as on double-click or pressing F2. |
+| [OnCellSave](https://blazor.syncfusion.com/documentation/datagrid/events#oncellsave) | Triggers before cell changes are updated in the UI, such as on pressing Enter key or navigating to another cell. |
+| [CellSaved](https://blazor.syncfusion.com/documentation/datagrid/events#cellsaved) | Triggers after cell changes are updated in the UI and the edited values are highlighted in the Grid. |
