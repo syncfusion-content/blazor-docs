@@ -531,3 +531,7 @@ N> If you encounter any errors while using the Android Emulator, refer to the fo
 {% endtabcontent %}
 
 {% endtabcontents %}
+
+## See also
+
+* [How to Create Diagram Builder in MAUI Platform](https://support.syncfusion.com/kb/article/11346/how-to-create-diagram-builder-in-maui-platform)

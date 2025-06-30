@@ -149,8 +149,8 @@ There are several types of Text annotation directions as follows:
 
 | Direction | Image |
 | -------- | -------- |
-| Auto | ![Auto BPMN Shape](../images/Bpmn-TextAnnotation-Auto.png)|
-| Left | ![Left TextAnnotation BPMN Shape](../images/Bpmn-TextAnnotation-Auto.png)|
-| Right | ![Right TextAnnotation BPMN Shape](../images/Bpmn-TextAnnotation-Right.png)|
-| Top | ![Top TextAnnotation BPMN Shape](../images/Bpmn-TextAnnotation-Top.png)|
-| Bottom | ![Bottom TextAnnotation BPMN Shape](../images/Bpmn-TextAnnotation-Bottom.png)|
+| [Auto](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextAnnotationDirection.html#Syncfusion_Blazor_Diagram_TextAnnotationDirection_Auto) | ![Auto BPMN Shape](../images/Bpmn-TextAnnotation-Auto.png)|
+| [Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextAnnotationDirection.html#Syncfusion_Blazor_Diagram_TextAnnotationDirection_Left) | ![Left TextAnnotation BPMN Shape](../images/Bpmn-TextAnnotation-Auto.png)|
+| [Right](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextAnnotationDirection.html#Syncfusion_Blazor_Diagram_TextAnnotationDirection_Right) | ![Right TextAnnotation BPMN Shape](../images/Bpmn-TextAnnotation-Right.png)|
+| [Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextAnnotationDirection.html#Syncfusion_Blazor_Diagram_TextAnnotationDirection_Top) | ![Top TextAnnotation BPMN Shape](../images/Bpmn-TextAnnotation-Top.png)|
+| [Bottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextAnnotationDirection.html#Syncfusion_Blazor_Diagram_TextAnnotationDirection_Bottom) | ![Bottom TextAnnotation BPMN Shape](../images/Bpmn-TextAnnotation-Bottom.png)|

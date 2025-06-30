@@ -15,11 +15,11 @@ The diagram can be scrolled by using the vertical and horizontal scrollbars. In 
 
 Scroll settings allow you to read the scroll status, [CurrentZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html#Syncfusion_Blazor_Diagram_ScrollSettings_CurrentZoom) with a set of properties. To explore those properties, see [Scroll Settings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html).
 
-* CurrentZoom: Specifies the zooming level of the diagram page.
-* MinZoom: Specifies the minimum zooming level of the diagram page.
-* MaxZoom: Specifies the maximum zooming level of the diagram page.
-* HorizontalOffset: Specifies the horizontal origin or left side origin of the view port of the diagram page.
-* VerticalOffset: Specifies the vertical origin or top side of the view port of the diagram page.
+* [CurrentZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html#Syncfusion_Blazor_Diagram_ScrollSettings_CurrentZoom): Specifies the zooming level of the diagram page.
+* [MinZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html#Syncfusion_Blazor_Diagram_ScrollSettings_MinZoom): Specifies the minimum zooming level of the diagram page.
+* [MaxZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html#Syncfusion_Blazor_Diagram_ScrollSettings_MaxZoom): Specifies the maximum zooming level of the diagram page.
+* [HorizontalOffset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html#Syncfusion_Blazor_Diagram_ScrollSettings_HorizontalOffset): Specifies the horizontal origin or left side origin of the view port of the diagram page.
+* [VerticalOffset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html#Syncfusion_Blazor_Diagram_ScrollSettings_VerticalOffset): Specifies the vertical origin or top side of the view port of the diagram page.
 
 ## How to Define Scroll Status
 
@@ -227,9 +227,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 The scroll limit allows you to define the scrollable region of the Diagram while scrolling the page with the mouse. The [ScrollLimit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollSettings.html#Syncfusion_Blazor_Diagram_ScrollSettings_ScrollLimit) property of scroll settings helps to limit the scrolling area. It includes the following options:
 
-* Infinity: Allows you to scroll in any directions without being restricted.
-* Diagram: Allows you to scroll within the Diagram content.
-* Limited: Allows you to scroll within the specified area.
+* [Infinity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollLimitMode.html#Syncfusion_Blazor_Diagram_ScrollLimitMode_Infinity): Allows you to scroll in any directions without being restricted.
+* [Diagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollLimitMode.html#Syncfusion_Blazor_Diagram_ScrollLimitMode_Diagram): Allows you to scroll within the Diagram content.
+* [Limited](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ScrollLimitMode.html#Syncfusion_Blazor_Diagram_ScrollLimitMode_Limited): Allows you to scroll within the specified area.
 
 The default operation is Diagram.
 
@@ -367,3 +367,6 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
     }
 }
 ```
+## See also
+
+* [How to Detect Nodes That Cross Page Breaks in Syncfusion Blazor Diagram](https://support.syncfusion.com/kb/article/20111/how-to-detect-nodes-that-cross-page-breaks-in-syncfusion-blazor-diagram)
