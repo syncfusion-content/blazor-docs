@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Editing in Blazor DataGrid | Syncfusion
-description: Checkout and learn here all about Editing in Syncfusion Blazor DataGrid and much more details.
+description: Discover comprehensive details about editing features in the Syncfusion Blazor DataGrid, including how to enable and customize them.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -1621,6 +1621,198 @@ public class OrderData
 
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BDBTWrDHUvvLUGmg?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+## Perform CRUD operation using Blazor DataGrid events
+
+The Syncfusion Blazor DataGrid enables seamless CRUD (Create, Read, Update and Delete) operations directly with `IQueryable` data from a database without requiring additional data adaptors. This functionality can be implemented using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property of the Grid and handling the necessary CRUD actions through Grid events such as [RowUpdated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowUpdated)and [RowDeleting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDeleting).
+
+### Create an interface layer to the database
+
+Define the `Book` model class along with the `ILibraryService` interface. The Book model will represent the data structure for the books, and the `ILibraryService` interface will define the CRUD methods to interact with the database.
+
+**Book Model**
+
+The Book model represents the structure of a book in a library system. It includes essential properties such as Id, Name, Author, Quantity, Price, and Available.
+
+```cs
+public class Book
+{
+    public long Id { get; set; }
+    public string Name { get; set; } = null!;
+    public string Author { get; set; } = null!;
+    public int? Quantity { get; set; }
+    public int Price { get; set; }
+    public bool? Available { get; set; }
+}
+```
+
+**ILibraryService Interface**
+
+The `ILibraryService` interface declares the CRUD operations that interact with the database for managing `Book` data.
+
+```csharp
+using System.Collections.Generic;
+using System.Linq;
+
+namespace LibraryManagement.Models
+{
+    interface ILibraryService
+    {
+        IQueryable<Book> GetBooks();
+        void InsertBook(Book employee);
+        void UpdateBook(long id, Book employee);
+        Book SingleBook(long id);
+        void DeleteBook(long id);
+    }
+}
+```
+
+### Create an intermediate service using the interface
+
+Now, implement the `ILibraryService` interface in a service class. This service interacts with the database using Entity Framework and performs CRUD operations.
+
+```csharp
+using Microsoft.EntityFrameworkCore;
+using System.Linq;
+
+namespace LibraryManagement.Models
+{
+    public class LibraryService : ILibraryService
+    {
+        private LibraryContext _context;
+        public LibraryService(LibraryContext context)
+        {
+            _context = context;
+        }
+
+        public void DeleteBook(long id)
+        {
+            try
+            {
+                Book ord = _context.Books.Find(id);
+                _context.Books.Remove(ord);
+                _context.SaveChanges();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public IQueryable<Book> GetBooks()
+        {
+            try
+            {
+                return _context.Books.AsQueryable();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public void InsertBook(Book book)
+        {
+            try
+            {
+                _context.Books.Add(book);
+                _context.SaveChanges();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+        public void UpdateBook(long id, Book book)
+        {
+            try
+            {
+                var local = _context.Set<Book>().Local.FirstOrDefault(entry => entry.Id.Equals(book.Id));
+                // check if local is not null
+                if (local != null)
+                {
+                    // detach
+                    _context.Entry(local).State = EntityState.Detached;
+                }
+                _context.Entry(book).State = EntityState.Modified;
+                _context.SaveChanges();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+    }
+}
+```
+
+### Configure the DataGrid to perform CRUD actions using Blazor DataGrid events
+
+To perform CRUD (Create, Read, Update, and Delete) operations with the Syncfusion Blazor DataGrid and keep your database in sync, handle the relevant Grid events. Since data is bound to the Grid using the `DataSource` property, you must explicitly update your backend in response to user actions.
+
+**RowUpdated:** Triggered when a record is added or edited. Use this event to insert or update the record in your database.
+
+**RowDeleting:** Triggered when a record is deleted. Use this event to remove the record from your database.
+
+Below is an example showing how to wire up these events to perform CRUD operations using a service:
+
+```cs
+@page "/counter"
+@rendermode InteractiveAuto
+
+@using Syncfusion.Blazor.Data
+@using BlazorWebApp.Shared.Models
+@using BlazorWebApp.Shared.Services
+
+@inject ClientServices clientlibrary
+
+<SfGrid DataSource="@LibraryBooks"
+    Toolbar="@(new List<string> { "Add", "Edit", "Delete", "Cancel", "Update" })"
+    TValue="Book">
+    <GridEditSettings AllowAdding="true"
+              AllowDeleting="true"
+              AllowEditing="true"
+              Mode="EditMode.Normal"></GridEditSettings>
+    <GridEvents RowDeleting="RowDeleting"
+        RowUpdated="RowUpdated"
+        TValue="Book"></GridEvents>
+    <GridColumns>
+    <GridColumn Field="@nameof(Book.Id)" IsPrimaryKey="true" IsIdentity="true" Visible="false"></GridColumn>
+    <GridColumn Field="@nameof(Book.Name)" Width="150"></GridColumn>
+    <GridColumn Field="@nameof(Book.Author)" Width="150"></GridColumn>
+    <GridColumn Field="@nameof(Book.Quantity)" Width="90" TextAlign="TextAlign.Right"></GridColumn>
+    <GridColumn Field="@nameof(Book.Price)" Width="90" Format="C2" TextAlign="TextAlign.Right"></GridColumn>
+    <GridColumn Field="@nameof(Book.Available)" DisplayAsCheckBox="true" Width="70"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code {
+    public List<Book> LibraryBooks { get; set; } = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+    LibraryBooks = await clientlibrary.GetBooks();
+    }
+    public async Task RowDeleting(RowDeletingEventArgs<Book> args)
+    {
+    await clientlibrary.RemoveBook(args.Datas[0].Id);
+    }
+    public async Task RowUpdated(RowUpdatedEventArgs<Book> args)
+    {
+    if (args.Action == SaveActionType.Added)
+    {
+        await clientlibrary.InsertBook(args.Data); // Handle insert.
+    }
+    else if (args.Action == SaveActionType.Edited)
+    {
+        await clientlibrary.UpdateBook(args.Data.Id, args.Data); // Handle update.
+    }
+    }
+}
+```
+
+This approach ensures that all CRUD actions performed in the Grid are synchronized with your backend data source.
+
+> You can find the sample in the following [Github](https://github.com/SyncfusionExamples/blazor-server-datagrid-efcore-crud/) repository.
 
 ## See also
 
