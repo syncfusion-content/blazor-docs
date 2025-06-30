@@ -234,6 +234,156 @@ The following table shows all the possible alignments visually shows the user ha
 
 ### How to Customize User Handle Size
 
+The [Displacement](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Displacement)  property of user handles is applicable only for connectors allows you to set the margin or spacing between the user handle and the node's boundary. The Displacement property enables you to define the precise positioning of the user handle relative to the connector segment. By specifying x and y values, you can control the offset distance between the handle and the connector, allowing for fine-tuned placement and improved visual clarity.
+
+The following code explains how to customize displacement(margin) of the User Handle.
+
+```csharp
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Height="600px" Connectors="@connectors" SelectionSettings="@SelectedModel">
+</SfDiagramComponent>
+
+@code
+{
+    //Intialize diagram's connectors collection
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    // Defines diagram's SelectionSettings.
+    DiagramSelectionSettings SelectedModel = new DiagramSelectionSettings();
+    DiagramObjectCollection<UserHandle> UserHandles = new DiagramObjectCollection<UserHandle>();
+    protected override void OnInitialized()
+    {
+        //Creating the userhandle for cloning the objects.
+        UserHandle cloneHandle = new UserHandle()
+        {
+            //Name of the user handle.
+            Name = "clone",
+            //Set path data for userhandle.
+            PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z",
+            //Set visibility for the user handle.
+            Visible = true,
+            //Set the position for the user handle.
+            Offset = 0,
+            //Set side based on the given offset.
+            Side = Direction.Bottom,
+            //Set displacement of the userhandle
+            Displacement = 50,
+            //Set margin for the user handle.
+            Margin = new DiagramThickness() { Top = 0, Bottom = 0, Left = 0, Right = 0 },
+            //Set target of the userhandle
+            VisibleTarget = VisibleTarget.Connector,
+        };
+        //Add user handle to the collection.
+        UserHandles = new DiagramObjectCollection<UserHandle>()
+        {
+            cloneHandle
+        };
+        SelectedModel = new DiagramSelectionSettings()
+        {
+            //Enable userhandle for selected model.
+            Constraints = SelectorConstraints.All,
+            UserHandles = this.UserHandles,
+
+        };
+        Connector connector = new Connector()
+        {
+            SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
+            TargetPoint = new DiagramPoint() { X = 200, Y = 200 },
+            Type = ConnectorSegmentType.Orthogonal,
+            Style = new ShapeStyle() { StrokeColor = "#6495ED" },
+        };
+        connectors.Add(connector);
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle/UserHandleDisplacement)
+
+### How to align the user handle using horizontal and vertical alignment properties
+The HorizontalAlignment property of user handles is used to set how the user handle is horizontally aligned at the position based on the Offset. The VerticalAlignment property is used to set how the user handle is vertically aligned at the position. These alignment properties provide precise control over the user handle positioning relative to the calculated offset position, allowing for fine-tuned placement and improved visual consistency.
+
+The following code explains how to customize horizontal and vertical alignment of the User Handle.
+
+
+```csharp
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Height="600px" Nodes="@nodes" SelectionSettings="@SelectedModel">
+</SfDiagramComponent>
+
+@code
+{
+    //Initialize diagram's nodes collection
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    // Defines diagram's SelectionSettings.
+    DiagramSelectionSettings SelectedModel = new DiagramSelectionSettings();
+    DiagramObjectCollection<UserHandle> UserHandles = new DiagramObjectCollection<UserHandle>();
+    
+
+    
+    protected override void OnInitialized()
+    {
+        CreateUserHandle();
+        CreateSelectionSettings();
+        CreateNode();
+    }
+    
+    private void CreateUserHandle()
+    {
+        //Creating the userhandle for cloning the objects.
+        UserHandle cloneHandle = new UserHandle()
+        {
+            //Name of the user handle.
+            Name = "clone",
+            //Set path data for userhandle.
+            PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z",
+            //Set visibility for the user handle.
+            Visible = true,
+            //Set the position for the user handle.
+            //Set horizontal alignment for the user handle.
+            HorizontalAlignment = HorizontalAlignment.Left,
+            //Set vertical alignment for the user handle.
+            VerticalAlignment = VerticalAlignment.Top,
+            //Set margin for the user handle.
+            Margin = new DiagramThickness() { Top = 0, Bottom = 0, Left = 0, Right = 0 },
+            //Set target of the userhandle
+            VisibleTarget = VisibleTarget.Node,
+        };
+        //Add user handle to the collection.
+        UserHandles = new DiagramObjectCollection<UserHandle>()
+        {
+            cloneHandle
+        };
+    }
+    
+    private void CreateSelectionSettings()
+    {
+        SelectedModel = new DiagramSelectionSettings()
+        {
+            //Enable userhandle for selected model.
+            Constraints = SelectorConstraints.All,
+            UserHandles = this.UserHandles,
+        };
+    }
+    
+    private void CreateNode()
+    {
+        Node node = new Node()
+        {
+            Width = 100,
+            Height = 100,
+            OffsetX = 100,
+            OffsetY = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
+        };
+        nodes.Add(node);
+    }
+
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle/UserHandleAlignment)
+
+### How to change the size of the user handle
+
 The Diagram component enables customization of user handle dimensions through the [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Size) property. This property allows you to specify the width and height of user handles in pixels. If not explicitly set, the `Size` property defaults to 25 pixels, providing a standard visual representation. Adjusting this value lets you create user handles that are appropriately sized for your specific diagram requirements.
 
 ### How to Style User Handles
@@ -569,9 +719,157 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![VisibleTarget](Images/blazor-diagram-user-handle-visible-target.gif)
 
-### How to Provide a Template to User Handle
+### How to define the type of user handle
+The Blazor Diagram component provides support to render different types of user handles, giving you flexibility in how they appear and function. There are three main types of user handles you can define:
 
-You can customize the appearance of user handles by defining a template in the [UserHandleTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTemplates.html#Syncfusion_Blazor_Diagram_DiagramTemplates_UserHandleTemplate) at the tag level. This template will be rendered when neither the PathData nor ImageUrl properties of the user handle are specified. However, if either PathData or ImageUrl is defined, they take precedence, and the template will not be rendered. This allows for flexible styling options while maintaining a clear hierarchy of visual representations for user handles. The following code explains how to define a template for the [FixedUserHandle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html).
+#### 1. PathData Type
+This type renders a user handle using custom SVG path data. You define the shape and appearance using SVG path commands through the PathData property. This is the most flexible option for creating custom icons and shapes.
+
+The following code demonstrates how to create a user handle using PathData:
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent @ref="@Diagram" Width="1200px" Height="600px" Nodes="@nodes" Connectors="@connectors" SelectionSettings="@SelectedModel"> 
+</SfDiagramComponent>
+
+@code
+{
+    SfDiagramComponent Diagram;
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    // Defines diagram's SelectionSettings.
+    DiagramSelectionSettings SelectedModel = new DiagramSelectionSettings();
+    DiagramObjectCollection<UserHandle> UserHandles = new DiagramObjectCollection<UserHandle>();
+    protected override void OnInitialized()
+    {
+        //Creating the userhandle for cloning the objects.
+        UserHandle cloneHandle = new UserHandle()
+            {
+                Name = "user1",
+                //Set path data for userhandle.
+                PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z",
+                Visible = true,
+                Offset = 0,
+                Size = 30,
+                Side = Direction.Right,
+                Margin = new DiagramThickness() { Top = 0, Bottom = 0, Left = 0, Right = 0 },
+                VisibleTarget=VisibleTarget.Node
+            };
+        //Add user handle to the collection.
+        UserHandles = new DiagramObjectCollection<UserHandle>()
+        {
+            cloneHandle
+        };
+        SelectedModel = new DiagramSelectionSettings()
+            {
+                //Enable userhandle for the selected model.
+                Constraints = SelectorConstraints.UserHandle,
+                UserHandles = this.UserHandles
+            };
+        nodes = new DiagramObjectCollection<Node>();
+        Node diagramNode = new Node()
+            {
+                ID = "node1",
+                OffsetX = 300,
+                OffsetY = 200,
+                Width = 130,
+                Height = 130,
+                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "none" },
+                Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Node" } }
+            };
+        nodes.Add(diagramNode);
+
+        Connector connector1 = new Connector()
+        {
+            ID = "connector1",
+            SourcePoint = new DiagramPoint() { X = 600, Y = 120 },
+            TargetPoint = new DiagramPoint() { X = 750, Y = 270 },
+            Type = ConnectorSegmentType.Orthogonal
+        };
+        connectors.Add(connector1);
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle/CustomizeUserHandle)
+
+#### 2. ImageUrl Type
+This type renders an image as a user handle using an image URL through the Source property. You can specify any web-accessible image URL or base64 encoded image data. This is ideal when you want to use existing icons or images.
+
+The following code demonstrates how to create a user handle using an image URL:
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent @ref="@Diagram" Width="1200px" Height="600px" Nodes="@nodes" Connectors="@connectors" SelectionSettings="@SelectedModel"> 
+</SfDiagramComponent>
+
+@code
+{
+    SfDiagramComponent Diagram;
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    // Defines diagram's SelectionSettings.
+    DiagramSelectionSettings SelectedModel = new DiagramSelectionSettings();
+    DiagramObjectCollection<UserHandle> UserHandles = new DiagramObjectCollection<UserHandle>();
+    protected override void OnInitialized()
+    {
+        //Creating the userhandle for cloning the objects.
+        UserHandle cloneHandle = new UserHandle()
+        {
+            //Name of the user handle.
+            Name = "clone",
+            ImageUrl = "https://www.w3schools.com/images/w3schools_green.jpg",
+            //Set visibility for the user handle.
+            Visible = true,
+            //Set the position for the user handle.
+            Offset = 1,
+            //Set the side for the user handle.
+            Side = Direction.Left,
+            //Set target of the userhandle
+            VisibleTarget = VisibleTarget.Node,
+        };
+        //Add user handle to the collection.
+        UserHandles = new DiagramObjectCollection<UserHandle>()
+        {
+            cloneHandle
+        };
+        SelectedModel = new DiagramSelectionSettings()
+            {
+                //Enable userhandle for the selected model.
+                Constraints = SelectorConstraints.UserHandle,
+                UserHandles = this.UserHandles
+            };
+        nodes = new DiagramObjectCollection<Node>();
+        Node diagramNode = new Node()
+            {
+                ID = "node1",
+                OffsetX = 300,
+                OffsetY = 200,
+                Width = 130,
+                Height = 130,
+                Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "none" },
+                Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Node" } }
+            };
+        nodes.Add(diagramNode);
+
+        Connector connector1 = new Connector()
+        {
+            ID = "connector1",
+            SourcePoint = new DiagramPoint() { X = 600, Y = 120 },
+            TargetPoint = new DiagramPoint() { X = 750, Y = 270 },
+            Type = ConnectorSegmentType.Orthogonal
+        };
+        connectors.Add(connector1);
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle/CustomizeUserHandle)
+
+#### 3. Template Type
+This type renders a user handle using a predefined template defined in the UserHandleTemplate section of the diagram. This allows for completely custom HTML content. You can customize the appearance of user handles by defining a template in the [UserHandleTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramTemplates.html#Syncfusion_Blazor_Diagram_DiagramTemplates_UserHandleTemplate) at the tag level. This template will be rendered when neither the PathData nor ImageUrl properties of the user handle are specified. However, if either PathData or ImageUrl is defined, they take precedence, and the template will not be rendered. This allows for flexible styling options while maintaining a clear hierarchy of visual representations for user handles. 
+
+The following code explains how to define a template for the [UserHandle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -651,6 +949,14 @@ You can customize the appearance of user handles by defining a template in the [
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle/CustomizeUserHandle)
 
 ![Template for UserHandle](images/UserHandleTemplate.gif)
+
+Precedence Order
+The user handle types follow a specific precedence order when multiple options are defined:
+
+* PathData (Highest precedence)
+* ImageUrl (Medium precedence)
+* UserHandleTemplate (Lowest precedence)
+This means that if you specify multiple options for the same user handle, the one with higher precedence will be rendered. For example, if both PathData and Source are provided, the PathData will be used and the image will be ignored.
 
 ## Fixed User Handles
 
@@ -1071,3 +1377,7 @@ The Diagram control provides the following event for the fixed user handle.
 }
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/UserHandle/FixedUserHandleEvent)
+
+## See also
+
+* [How to Add Fixed Handle to Diagram from the Palette in Blazor Diagram](https://support.syncfusion.com/kb/article/18707/how-to-add-fixed-handle-to-diagram-from-the-palette-in-blazor-diagram)

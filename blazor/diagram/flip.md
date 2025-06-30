@@ -23,10 +23,10 @@ The [FlipDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diag
 
 | FlipDirection | Description | 
 | -------- | -------- |
-|Horizontal| It is used to flip the node or connector to be mirrored across the horizontal axis.|
-|Vertical| It is used to flip the node or connector to be mirrored across the vertical axis.|
-|Both| It is used to flip the node or connector to be mirrored across the horizontal and vertical axes.|
-|None| It is used to disable all the flip behavior. |  
+|[Horizontal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FlipDirection.html#Syncfusion_Blazor_Diagram_FlipDirection_Horizontal)| It is used to flip the node or connector to be mirrored across the horizontal axis.|
+|[Vertical](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FlipDirection.html#Syncfusion_Blazor_Diagram_FlipDirection_Vertical)| It is used to flip the node or connector to be mirrored across the vertical axis.|
+|[Both](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FlipDirection.html#Syncfusion_Blazor_Diagram_FlipDirection_Both)| It is used to flip the node or connector to be mirrored across the horizontal and vertical axes.|
+|[None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FlipDirection.html#Syncfusion_Blazor_Diagram_FlipDirection_None)| It is used to disable all the flip behavior. |  
 
 
 ### How to Change the Flip Mode
@@ -35,13 +35,13 @@ The [FlipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.D
 
 | DiagramFlipMode | Description | 
 | -------- | -------- |
-|Content| Flips the node along with annotations and their text.|
-|Port| It enables or disables the flip for an object’s port.|
-|All| Enables or disables flip operations for annotations, their text, and ports|
-|Text| Flips only the text of annotations, excluding the annotation elements themselves.|
-|PortAndLabelOnly| Flips the node along with ports and annotations, excluding the annotation text.|
-|PortWithLabelText| Flips the node along with ports and annotation text, excluding the annotation elements themselves.|
-|LabelOnly| Flips the node along with annotations, excluding their text.|
+|[Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramFlipMode.html#Syncfusion_Blazor_Diagram_DiagramFlipMode_Content)| Flips the node along with annotations and their text.|
+|[Port](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramFlipMode.html#Syncfusion_Blazor_Diagram_DiagramFlipMode_Port)| It enables or disables the flip for an object’s port.|
+|[All](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramFlipMode.html#Syncfusion_Blazor_Diagram_DiagramFlipMode_All)| Enables or disables flip operations for annotations, their text, and ports|
+|[Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramFlipMode.html#Syncfusion_Blazor_Diagram_DiagramFlipMode_Text)| Flips only the text of annotations, excluding the annotation elements themselves.|
+|[PortAndLabelOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramFlipMode.html#Syncfusion_Blazor_Diagram_DiagramFlipMode_PortAndLabelOnly)| Flips the node along with ports and annotations, excluding the annotation text.|
+|[PortWithLabelText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramFlipMode.html#Syncfusion_Blazor_Diagram_DiagramFlipMode_PortWithLabelText)| Flips the node along with ports and annotation text, excluding the annotation elements themselves.|
+|[LabelOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramFlipMode.html#Syncfusion_Blazor_Diagram_DiagramFlipMode_LabelOnly)| Flips the node along with annotations, excluding their text.|
 
 
 **Note:** The [FlipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramFlipMode.html) property is exclusively applicable to nodes within the diagram. It does not affect connectors or any other diagram elements.
@@ -228,7 +228,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 |Horizontal|Text| ![HorizontalDirection with Text Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-Text.png)|
 |Horizontal|Port And LabelOnly |![HorizontalDirection with Port And LabelOnly Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-portAndLabelOnly.png)|
 |Horizontal|Port With LabelText| ![HorizontalDirection with Port With LabelText Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-PortWithLabelText.png)|
-|Horizontal|Content|![HorizontalDirection with Content Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-Content.png)|
+|Horizontal|LabelOnly|![HorizontalDirection with LabelOnly Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-labelOnly.png)|
 |Horizontal|All|![HorizontalDirection with All Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-all.png)|
 |Horizontal|None|![HorizontalDirection with None Mode](./images/blazor-diagram-flip-direction-as-Horizontal-flip-mode-as-none.png)|
 |Vertical|Content| ![VerticalDirection with Content Mode](./images/blazor-diagram-flip-direction-as-Vertical-flip-mode-as-Content.png)|
@@ -236,7 +236,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 |Vertical|Text| ![VerticalDirection with Text Mode](./images/blazor-diagram-flip-direction-as-Vertical-flip-mode-as-Text.png)|
 |Vertical|Port And LabelOnly |![VerticalDirection with Port And LabelOnly Mode](./images/blazor-diagram-flip-direction-as-Vertical-flip-mode-as-portAndLabelOnly.png)|
 |Vertical|Port With LabelText| ![VerticalDirection with Port With LabelText Mode](./images/blazor-diagram-flip-direction-as-Vertical-flip-mode-as-PortWithLabelText.png)|
-|Vertical|Content|![VerticalDirection with Content  Mode](./images/blazor-diagram-flip-direction-as-Vertical-flip-mode-as-Content.png)|
+|Vertical|LabelOnly|![VerticalDirection with LabelOnly  Mode](./images/blazor-diagram-flip-direction-as-Vertical-flip-mode-as-LabelOnly.png)|
 |Vertical|All|![VerticalDirection with All Mode](./images/blazor-diagram-flip-direction-as-vertical-flip-mode-as-All.png)|
 |Vertical|None|![VerticalDirection with None Mode](./images/blazor-diagram-flip-direction-as-vertical-flip-mode-as-none.png)|
 |Both|Content| ![BothDirection with Content Mode](./images/blazor-diagram-flip-direction-as-Both-flip-mode-as-Content.png)|
@@ -244,7 +244,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 |Both|Text| ![BothDirection with  Text Mode](./images/blazor-diagram-flip-direction-as-Both-flip-mode-as-Text.png)|
 |Both|Port And LabelOnly |![BothDirection with Port And LabelOnly Mode](./images/blazor-diagram-flip-direction-as-Both-flip-mode-as-portAndLabelOnly.png)|
 |Both|Port With LabelText| ![BothDirection with Port With LabelText Mode](./images/blazor-diagram-flip-direction-as-Both-flip-mode-as-PortWithLabelText.png)|
-|Both|Content|![BothDirection with Content Mode](./images/blazor-diagram-flip-direction-as-Both-flip-mode-as-Content.png)|
+|Both|LabelOnly|![BothDirection with LabelOnly Mode](./images/blazor-diagram-flip-direction-as-Both-flip-mode-as-LabelOnly.png)|
 |Both|All|![BothDirection with All Mode](./images/blazor-diagram-flip-direction-as-both-flip-mode-as-all.png)|
 |Both|None|![BothDirection with None Mode](./images/blazor-diagram-flip-direction-as-both-flip-mode-as-none.png)|
 
@@ -262,8 +262,8 @@ The flip functionality for a group node works similarly to that of normal nodes.
 The [FlipMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramFlipMode.html) of a group node also behave similarly to those of normal nodes. However,When you apply a flip mode to a group node, it takes precedence over any flip mode set on its child nodes, overriding their individual settings.
 
 For example, in the below code,  
-the flipMode for the child node `Node1` is set to `ContentText`.  
-The flipMode for the group node is set to `Content`.  
+the flipMode for the child node `Node1` is set to [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramFlipMode.html#Syncfusion_Blazor_Diagram_DiagramFlipMode_Text).  
+The flipMode for the group node is set to [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramFlipMode.html#Syncfusion_Blazor_Diagram_DiagramFlipMode_Content).  
 As a result, the effective flipMode for both the child node and the group node will be `Content`,
 as the group node’s flipMode overrides the child’s.
 
@@ -470,7 +470,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 | -------- | -------- |-------- |
 |Horizontal|None|![HorizontalDirection with NoneMode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-none.png)|
 |Horizontal|All|![HorizontalDirection with AllMode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-all.png)|
-|Horizontal|Content|![HorizontalDirection with ContentMode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-content.png)|
+|Horizontal|LabelOnly|![HorizontalDirection with LabelOnly Mode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-LabelOnly.png)|
 |Horizontal|Text|![HorizontalDirection with Text Mode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-Text.png)|
 |Horizontal|Port|![HorizontalDirection with PortMode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-port.png)|
 |Horizontal|PortAndLabelOnly|![HorizontalDirection with Port and LabelOnly Mode](Images/blazor-diagram-group-node-flip-direction-as-horizontal-flip-mode-as-portandLabelOnly.png)|

@@ -13,7 +13,7 @@ The diagram provides support to select, resize, or swap the lane interactively.
 
 ## How to Select a Lane
 
-A Lane can be selected by clicking (tapping) the header of the lane.
+A [Lane](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Lane.html) can be selected by clicking (tapping) the header of the lane.
 
 ## How to Resize a Lane
 
