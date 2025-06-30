@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Getting started with Syncfusion Smart PdfViewer in Blazor Server App
-description: Checkout and learn here all about Getting started with Syncfusion Blazor Smart PdfViewer component in Blazor Server and more.
+title: Getting started with SfSmartPdfViewer in Blazor Server App
+description: Checkout and learn here all about Getting started with SfSmartPdfViewer component in Blazor Server and more.
 platform: Blazor
 platform: Blazor
-control: Smart PdfViewer
+control: SfSmartPdfViewer
 documentation: ug
 ---
 # Getting Started with Smart PdfViewer
@@ -26,24 +26,40 @@ You can create a **Blazor Server App** using Visual Studio 2022 via [Microsoft T
 
 To add **Blazor Smart PdfViewer** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.SfSmartPdfViewer](https://www.nuget.org/packages?q=Syncfusion.Blazor.SfSmartPdfViewer).
 
-Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor Server App.
+## Register Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service
+
+* In the **~/_Imports.razor** file, add the following namespaces:
 
 {% tabs %}
-{% highlight C# tabtitle="Blazor Server App" hl_lines="1 9 12" %}
+{% highlight razor tabtitle="~/_Imports.razor" %}
+
+@using Syncfusion.Blazor;
+@using Syncfusion.Blazor.SfPdfViewer;
+
+{% endhighlight %}
+{% endtabs %}
+
+* Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file.
+
+{% tabs %}
+{% highlight c# tabtitle="~/Program.cs" hl_lines="3 11 14" %}
+
+using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Web;
 using Syncfusion.Blazor;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents();
-	
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
+
 builder.Services.AddSignalR(o => { o.MaximumReceiveMessageSize = 102400000; });
-builder.Services.AddMemoryCache();
 
-builder.Services.AddSyncfusionBlazor();	
+// Add Syncfusion Blazor service to the container.
+builder.Services.AddSyncfusionBlazor();
 
-....
+var app = builder.Build();
 
 {% endhighlight %}
 {% endtabs %}
@@ -86,11 +102,33 @@ Here,
 
 For **Azure OpenAI**, first [deploy an Azure OpenAI Service resource and model](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource), then values for `apiKey`, `deploymentName` and `endpoint` will all be provided to you.
 
+## Adding stylesheet and script
+
+Add the following stylesheet and script to the head section. The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows:
+
+* For **.NET 6** Blazor Server app, include it in **~/Pages/_Layout.cshtml** file.
+
+* For **.NET 7** Blazor Server app, include it in the **~/Pages/_Host.cshtml** file.
+
+{% tabs %}
+{% highlight cshtml %}
+
+<head>
+    <!-- Syncfusion Blazor PDF Viewer control's theme style sheet -->
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    <!-- Syncfusion Blazor PDF Viewer control's scripts -->
+    <script src="_content/Syncfusion.Blazor.SfPdfViewer/scripts/syncfusion-blazor-sfpdfviewer.min.js" type="text/javascript"></script>
+</head>
+
+{% endhighlight %}
+{% endtabs %}
+
+
 ## Adding Blazor SfSmartPdfViewer component
 Add the Syncfusion<sup style="font-size:70%">&reg;</sup> **Blazor Smart PdfViewer** component in the **~Pages/Index.razor** file.
 
 {% tabs %}
-{% highlight razor tabtitle="~/Home.razor" %}
+{% highlight razor tabtitle="~/Index.razor" %}
 
 <div>
     <Syncfusion.Blazor.SmartPdfViewer.SfSmartPdfViewer id="pdf-viewer" Height="100%" Width="100%" DocumentPath="wwwroot/Fsharp_Succinctly.pdf">
@@ -105,3 +143,5 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> **Blazor Smart PdfViewe
 
 {% endhighlight %}
 {% endtabs %}
+
+N> If you don't provide the [DocumentPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_DocumentPath) property value, the PDF Viewer component will be rendered without loading the PDF document. Users can then use the **open** option from the toolbar to browse and open the PDF as required.
