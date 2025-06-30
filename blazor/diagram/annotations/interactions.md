@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Interaction in Blazor Diagram Component | Syncfusion
+title: Annotation Interaction in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about Interaction in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
@@ -11,7 +11,7 @@ documentation: ug
 
 Diagram provides the support to the annotations rotation interactively.
 
-## Annotation Rotation
+## How to Rotate Annotations
 The [RotationReference](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeAnnotation.html#Syncfusion_Blazor_Diagram_ShapeAnnotation_RotationReference) property of an annotation allows you to control whether the text should rotate relative to its parent node or the Page. The following code examples illustrate how to configure RotationReference for an annotation.
 
 
@@ -84,3 +84,5 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to add annotation for Node](./node-annotation)
 
 * [How to add annotation for Connector](./connector-annotation)
+
+* [How to animate connectors using annotationtemplate in angular diagram](https://support.syncfusion.com/kb/article/20265/how-to-animate-connectors-using-annotationtemplate-in-angular-diagram )
