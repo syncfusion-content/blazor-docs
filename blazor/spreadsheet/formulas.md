@@ -13,9 +13,9 @@ documentation: ug
 
 ## Formula Bar
 
-The **Formula Bar** simplifies editing or entering cell data. Use the [ShowFormulaBar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ShowFormulaBar) property to enable or disable the **Formula Bar**.
+The **Formula Bar** simplifies editing or entering cell data. The [ShowFormulaBar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ShowFormulaBar) property is used to enable or disable the **Formula Bar**.
 
-> * The default value of the `ShowFormulaBar` property is `true`.
+> * The default value of the `ShowFormulaBar` property is **true**.
 
 ### Working with Formulas via the UI
 
@@ -23,13 +23,13 @@ Formulas in the Syncfusion Blazor Spreadsheet can be accessed and inserted using
 
 * Select **Insert Function** from the **Formulas** tab in the Ribbon toolbar. In the **Insert Function** dialog, choose a category, then select the desired function to insert it into the selected cell.
 
-![Insert Function dialog](./images/insert-formula.gif)
+![Insert Function Dialog](./images/insert-formula.gif)
 
-* Type **(=)** in a cell or the Formula Bar to display a list of available functions. Select a function from the list to insert it into the cell.
+* Type **(=)** in a cell or the **Formula Bar** to display a list of available functions. Select a function from the list to insert it into the cell.
 
 ![Formulas Intellisense](./images/formula-cell.gif)
 
-* Click the **Insert Function (fx)** button next to the Formula Bar to open the Insert Function dialog, which provides the same categorized function list and insertion options as the Ribbon toolbar.
+* Click the **Insert Function (fx)** button next to the **Formula Bar** to open the **Insert Function** dialog, which provides the same categorized function list and insertion options as the Ribbon toolbar.
 
 ## Calculation Mode
 
@@ -61,7 +61,7 @@ If cell **C1** contains the formula **=A1 + B1**, and the value in **A1** or **B
 
 ## Named Ranges
 
-The **Named Ranges** feature allows you to assign a meaningful name to a specific cell or range of cells. This simplifies referencing and managing data within the Spreadsheet. Named ranges can also be used in formulas, making them easier to read, understand, and maintain.
+The **Named Ranges** support allows to assign a meaningful name to a specific cell or range of cells. This simplifies referencing and managing data within the Spreadsheet. Named ranges can also be used in formulas, making them easier to read, understand, and maintain.
 
 N> Named ranges can be defined only for cells or ranges that contain values.
 
@@ -73,13 +73,13 @@ N> Named ranges can be defined only for cells or ranges that contain values.
 
 * Select the range of cells, then click the **Name Manager** button in the Ribbon toolbar under the **Formulas** tab.
 
-![Name Manager dialog](./images/named-range.gif)
+![Name Manager Dialog](./images/named-range.gif)
 
 ### Editing or Deleting Named Ranges
 
 **Named Ranges** are managed through the **Name Manager** dialog, which supports editing and deletion.
 
-To Edit a Named Range
+To edit a Named Range:
 
 * Open the **Name Manager** dialog.
 
@@ -101,7 +101,7 @@ To delete a Named Range
 
 N> Deleting a Named Range used in formulas may cause formula errors. Ensure the Named Range is not referenced before deleting it.
 
-![Edit and Delete named range](./images/edit-and-delete.png)
+![Edit and Delete - Named Range](./images/edit-and-delete.png)
 
 ## Supported Formulas
 
