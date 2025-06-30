@@ -50,7 +50,7 @@ You need to configure the corresponding [Interactive render mode](https://learn.
 
 * Register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the program.cs file of your Blazor Web App.
 
-If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, you need to register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in both **~/Program.cs** files of your Blazor Web App.
+If the **Interactive Render Mode** is set to `Auto`, you need to register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in both **~/Program.cs** files of your Blazor Web App.
 
 If the **Interactive Render Mode** is set to `Server`, your project will contain a single **~/Program.cs** file. So, you should register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service only in that **~/Program.cs** file.
 
@@ -183,7 +183,7 @@ Add the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer (Next Gen) c
 
 | Interactivity location | RenderMode | Code |
 | --- | --- | --- |
-| Per page/component | Auto | @rendermode InteractiveAuto |
+| Per page/component | Auto | @rendermode InteractiveServer |
 |  | Server | @rendermode InteractiveServer |
 |  | None | --- |
 
@@ -193,7 +193,7 @@ N> If an **Interactivity Location** is set to `Global` and the **Render Mode** i
 {% highlight razor %}
 
 @* Your App render mode define here *@
-@rendermode InteractiveAuto
+@rendermode InteractiveServer
 
 {% endhighlight %}
 {% endtabs %}
