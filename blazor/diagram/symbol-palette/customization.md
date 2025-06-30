@@ -19,11 +19,14 @@ The [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Symb
 
 The [IsExpanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.Palette.html#Syncfusion_Blazor_Diagram_SymbolPalette_Palette_IsExpanded) property enables you to control the initial state of a palette, determining whether its items are visible (expanded) or hidden (collapsed) when the Symbol Palette is first loaded.
 
+The [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.Palette.html#Syncfusion_Blazor_Diagram_SymbolPalette_Palette_IconCss) property of the `Palette` allows you to add CSS class values to customize the appearance of icons in the palette header. By assigning CSS classes to this property, you can apply custom styling, colors, fonts, and other visual modifications to enhance the palette header icons and symbol content presentation.
+
 The following code illustrates how to change the Title and IsExpanded properties at runtime.
 
 ```csharp
 SymbolPalette.Palettes[0].Title = "NewTitle";
 SymbolPalette.Palettes[0].IsExpanded = false;
+SymbolPalette.Palettes[0].IconCss = "e-ddb-icons e-basic";
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/PaletteHeader)
 
@@ -209,7 +212,106 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 The [AllowDrag](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_AllowDrag) property of `SfSymbolPaletteComponent` enables or disables the ability to drag symbols from the palette. When set to `true`, users can drag symbols; when `false`, dragging is disabled. This property provides control over symbol interaction within the Symbol Palette component.
 
-## How to Get Notification for Expanding the Palette
+## How to get notification when a symbol is selected
+
+The [SelectionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_SelectionChanged) event of the `SfSymbolPaletteComponent` is triggered when a symbol in the symbol palette is selected or deselected. This event provides an opportunity to perform custom actions or track symbol selection changes within the palette. The `SelectionChanged` event uses [PaletteSelectionChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.PaletteSelectionChangedEventArgs.html) as its event argument, which provides access to both the previously selected symbol and the newly selected symbol through the following properties:
+
+- [OldValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.PaletteSelectionChangedEventArgs.html#Syncfusion_Blazor_Diagram_SymbolPalette_PaletteSelectionChangedEventArgs_OldValue): Contains the ID of the previously selected symbol
+- [NewValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.PaletteSelectionChangedEventArgs.html#Syncfusion_Blazor_Diagram_SymbolPalette_PaletteSelectionChangedEventArgs_NewValue): Contains the ID of the newly selected symbol
+
+This allows you to track selection changes and perform specific actions based on which symbols are being selected or deselected.
+
+The following code example illustrates how to use the selectionChanged event.
+
+```csharp
+@using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Diagram.SymbolPalette
+@using Syncfusion.Blazor.Buttons
+
+<div class="control-section">
+    <div style="width:20%">
+        <div id="palette-space" class="sb-mobile-palette" style="border: 2px solid #b200ff">
+            <SfSymbolPaletteComponent @ref="@symbolpalette" Height="300px" Width="200px"
+                                    Palettes="@Palettes" SymbolHeight="@symbolwidth" SymbolWidth="@symbolheight" 
+                                    SymbolMargin="@SymbolMargin" SelectionChanged="SelectionChanged">
+            </SfSymbolPaletteComponent>
+        </div>
+    </div>
+</div>
+
+@code {
+    // Define symbol properties
+    DiagramSize SymbolPreview;
+    SymbolMargin SymbolMargin = new SymbolMargin { Left = 15, Right = 15, Top = 15, Bottom = 15 };
+    double symbolwidth = 60;
+    double symbolheight = 60;
+    
+    // Reference the symbol palette
+    SfSymbolPaletteComponent symbolpalette;
+    
+    // Define palettes collection
+    DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
+    DiagramObjectCollection<NodeBase> PaletteNodes = new DiagramObjectCollection<NodeBase>();
+
+    protected override void OnInitialized()
+    {
+        InitPaletteModel();
+    }
+
+    private void InitPaletteModel()
+    {
+        Node node1 = new Node()
+        {
+            ID = "Rectangle",
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Rectangle },
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
+        };
+        Node node2 = new Node()
+        {
+            ID = "Ellipse",
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Ellipse },
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
+        };
+        Node node3 = new Node()
+        {
+            ID = "Diamond",
+            Shape = new BasicShape() { Type = NodeShapes.Basic, Shape = NodeBasicShapes.Diamond },
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
+        };
+
+        PaletteNodes.Add(node1);
+        PaletteNodes.Add(node2);
+        PaletteNodes.Add(node3);
+
+        Palettes = new DiagramObjectCollection<Palette>()
+        {
+            new Palette(){Symbols = PaletteNodes, Title = "Basic Shapes", ID = "Basic Shapes" },
+        };
+    }
+
+    // Handle selection changes in the symbol palette
+    private void SelectionChanged(PaletteSelectionChangedEventArgs args)
+    {
+        // Check if Rectangle was previously selected
+        if(args.OldValue.Contains("Rectangle"))
+        {
+            // Perform actions when Rectangle is deselected
+        }
+        
+        // Check if Ellipse is newly selected
+        if(args.NewValue.Contains("Ellipse"))
+        {
+            // Perform actions when Ellipse is selected
+        }
+        
+        // You can also perform general selection tracking
+        Console.WriteLine($"Selection changed from: {args.OldValue} to: {args.NewValue}");
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/SymbolPalette/SelectionChanged).
+
+## How to get notification for expanding the palette
 
 The [Expanding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_Expanding) event of the `SfSymbolPaletteComponent` is triggered just before an item in the symbol palette is expanded or collapsed. This event provides an opportunity to perform custom actions or modifications before the expansion/collapse state changes.
 
@@ -377,6 +479,22 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 Customize the appearance of symbol descriptions in the symbol palette by adjusting the following properties:
 
+### SymbolInfo Properties
+
+[Fit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SymbolInfo.html#Syncfusion_Blazor_Diagram_SymbolPalette_SymbolInfo_Fit): Represents whether the symbol can fit into the size that is defined by the symbol palette. When set to `true`, the symbol will be resized to fit within the dimensions specified by the symbol palette; otherwise `false` maintains the symbol's original size. The default value is `false`.
+
+[Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SymbolInfo.html#Syncfusion_Blazor_Diagram_SymbolPalette_SymbolInfo_Width): Defines the width of the symbol in the palette. This property allows you to control the horizontal space allocated to each symbol.
+
+[Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SymbolInfo.html#Syncfusion_Blazor_Diagram_SymbolPalette_SymbolInfo_Height): Defines the height of the symbol in the palette. This property allows you to control the vertical space allocated to each symbol.
+
+### SymbolDescription Properties
+
+[Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SymbolDescription.html#Syncfusion_Blazor_Diagram_SymbolPalette_SymbolDescription_Text): Represents the textual information to be displayed below the symbol in the palette. This is the actual content that users will see as the symbol's description.
+
+[Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SymbolDescription.html#Syncfusion_Blazor_Diagram_SymbolPalette_SymbolDescription_Margin): Gets or sets the margin around the text rendered in the symbol palette. This property uses `DiagramThickness` to define spacing on all sides (Top, Bottom, Left, Right) of the description text, improving the visual layout and readability.
+
+### TextStyle Properties
+
 [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_Color): Defines the color of the symbol description text, enhancing readability and visual appeal.
 
 [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_Fill): Sets the background color of the symbol description, improving contrast and highlighting important information.
@@ -395,9 +513,8 @@ Customize the appearance of symbol descriptions in the symbol palette by adjusti
 
 [TextOverflow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_TextOverflow): Defines the behavior when the symbol description text exceeds its container, ensuring all content is accessible.
 
-[Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SymbolDescription.html#Syncfusion_Blazor_Diagram_SymbolPalette_SymbolDescription_Margin): Adjusts the spacing around the symbol description, improving layout and readability.
-
 By fine-tuning these properties, you can create visually appealing and user-friendly symbol descriptions that seamlessly integrate with your Blazor application's design and enhance the overall user experience.
+
 
 The following code is an example to change the style of a symbol description for symbols in the palette.
 
