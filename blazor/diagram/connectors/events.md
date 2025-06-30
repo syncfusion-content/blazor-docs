@@ -406,7 +406,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Events/ConnectorCreating)
 
-## How to Handle Segment Collection Change Events
+## How to Handle Segment Collection Change Event
 
 * The [SegmentCollectionChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SegmentCollectionChange) event triggers when the connector’s segment collection is updated. To explore about arguments, refer to the [SegmentCollectionChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentCollectionChangeEventArgs.html).
 
@@ -451,7 +451,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Connectors/Events/SegmentCollectionChangeEvent)
 
-## How to Handle Collection Change Event
+## How to Handle Collection Change Events
 
 * The diagram provides specific events that are triggered when connectors are added to or removed from the diagram. These events offer opportunities for customization and are invoked whenever the connector collection undergoes changes.
 
