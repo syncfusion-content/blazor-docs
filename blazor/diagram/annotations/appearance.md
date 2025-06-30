@@ -683,7 +683,7 @@ The following code shows how to set the AdditionalInfo value.
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Annotations/AdditionalInfoProperty)
 
 **Note:** You can set any type of value for the AdditionalInfo property.
 

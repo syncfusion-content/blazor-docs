@@ -907,7 +907,7 @@ The following code shows how to set the Padding property of expand/collapse icon
 }
 ```
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ExpandAndCollapse)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ExpandAndCollapse/ExpanCollapsePadding)
 
 ### How to Set Margin for the Expand/Collapse Icon
 
@@ -1024,7 +1024,7 @@ The Blazor Diagram component includes a [Margin](https://help.syncfusion.com/cr/
 }
 ```
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ExpandAndCollapse/ExpandCollapseIconTemplate)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ExpandAndCollapse/ExpanCollapseMargin)
 
 ## See also
 

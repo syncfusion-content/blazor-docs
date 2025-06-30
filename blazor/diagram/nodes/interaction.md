@@ -261,7 +261,7 @@ Use this property when you want to specify the node’s rotation at the time of 
     }
 }
 ```
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Interaction)
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/Interaction/RotateAngleProperty)
 
 ![Node Resizing in Blazor Diagram](../images/NodeRotation.png)
 

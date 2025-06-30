@@ -492,7 +492,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ```
    ![Lane](../Swimlane-images/LaneOrientation.PNG).
 
-   You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Lane).
+   You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Lane/LaneOrientation).
 
 
 ## Header Selection and Resize

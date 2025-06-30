@@ -203,7 +203,8 @@ The following code shows how to set the AdditionalInfo value for a port.
     }
 }
 ```
-You can explore more complete working samples by visiting the GitHub repository.
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/Appearance)
+
 
 **Note:** Like AdditionalInfo for nodes, you can set any type of value for the AdditionalInfo property of a port.
 

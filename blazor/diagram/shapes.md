@@ -540,7 +540,7 @@ The following code example illustrates how to create a BPMN shape.
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Shapes)
 
-For more information about node constraints, refer to the [BPMN Shapes](https://blazor.syncfusion.com/documentation/diagram/bpmn-shapes).
+For more information about node constraints, refer to the [BPMN Shapes](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Shapes/BPMNShape).
 
 
 ![BPMN Node in Blazor Diagram](images/BPMNShape.png)

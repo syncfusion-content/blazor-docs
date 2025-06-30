@@ -400,7 +400,7 @@ Below is an example demonstrating how to set the orientation for phases in a SfS
 ```
 ![Phse](Swimlane-images/PhaseOrientation.PNG).
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Phase).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Swimlanes/Phase/PhaseOrientation).
 
 ## How to Select and Resize Phase Header
 
