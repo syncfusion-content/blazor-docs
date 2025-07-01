@@ -53,12 +53,6 @@ N> The pivot table component can be exported to PDF format using options availab
 }
 ```
 
-Additionally, we recommend configuring the maximum incoming SignalR message size in your **Program.cs** file, as shown in the code snippet below. This configuration helps ensure smooth handling of large data operations, especially when exporting data from the Pivot Table component
-
-```csharp
-builder.Services.AddServerSideBlazor().AddHubOptions(options => { options.MaximumReceiveMessageSize = 1024 * 128; });
-```
-
 ![PDF Export in Blazor PivotTable](images/blazor-pivottable-pdf-export.png)
 
 ## Export table and chart into the same document
@@ -115,6 +109,12 @@ N> This support is applicable only when the virtual scrolling is enabled.
         await this.pivot.ExportToPdfAsync(null, true);
     }
 }
+```
+
+Additionally, we recommend configuring the maximum incoming SignalR message size in your **Program.cs** file, as shown in the code snippet below. This configuration helps ensure smooth handling of large data operations, especially when exporting data from the Pivot Table component
+
+```csharp
+builder.Services.AddServerSideBlazor().AddHubOptions(options => { options.MaximumReceiveMessageSize = 1024 * 128; });
 ```
 
 ## To add header and footer while exporting
