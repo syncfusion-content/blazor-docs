@@ -236,6 +236,8 @@ Allows user to load the members on the basis of the level number set in the [Lev
 
 ```cshtml
 
+@using Syncfusion.Blazor.PivotView
+
 <SfPivotView TValue="ProductDetails" Width="800" Height="350" ShowFieldList="true">
     <PivotViewDataSourceSettings TValue="ProductDetails" ProviderType="ProviderType.SSAS" Catalog="Adventure Works DW 2008 SE" Cube="Adventure Works" Url="https://bi.syncfusion.com/olap/msmdpump.dll" LocaleIdentifier="1033" EnableSorting="true">
         <PivotViewColumns>
