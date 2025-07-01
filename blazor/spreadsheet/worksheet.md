@@ -73,7 +73,7 @@ The Spreadsheet component provides support for removing existing worksheets. The
 
 * Using [DeleteSheetAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_DeleteSheetAsync_System_Nullable_System_Int32__) method.
 
-### Delete a sheet programmatically
+### Delete sheet programmatically
 
 Sheets can be programmatically deleted at the desired index using the `DeleteSheetAsync()` method.
 
@@ -138,7 +138,7 @@ The following image illustrates the hide sheet option in the Spreadsheet.
 
 The Spreadsheet component also provides functionality to restore hidden worksheets to view. Hidden worksheets appear in a disabled state within the sheet selection menu. To make a hidden sheet visible again:
 
-* Click on the **Sheet** tab list icon `≡` and click the hidden sheet.
+* Click on the **Sheet** tab list icon and click the hidden sheet.
 
 The previously hidden sheet will reappear in the sheet tab collection and become available for editing.
 
@@ -201,11 +201,11 @@ The following images illustrates the move sheet options in the Spreadsheet.
 
 The Spreadsheet component provides functionality to create an exact copy of an existing worksheet. Duplicating a worksheet is helpful when creating multiple sheets with similar content or structure. Sheets can be duplicated in the following methods:
 
-* Right click on a sheet tab that needs to be duplicated and select **Duplicate** option from the context menu.
+* Right click on a **Sheet** tab that needs to be duplicated and select **Duplicate** option from the context menu.
 
 * Using  [DuplicateSheetAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_DuplicateSheetAsync_System_Nullable_System_Int32__) method.
 
-### Duplicate a sheet programmatically
+### Duplicate sheet programmatically
 
 The `DuplicateSheetAsync()` method can be used to create a copy of a sheet programmatically. The duplicate sheet will be inserted after the source sheet by default.
 
