@@ -7,7 +7,6 @@ control: DocumentEditor
 documentation: ug
 ---
 
-
 # End User Manual for Document Editor
 
 ## Contents
