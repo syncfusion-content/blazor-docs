@@ -1314,7 +1314,7 @@ N> Axis customization is not applicable for the accumulation chart types like pi
     <PivotViewDisplayOption View=View.Chart></PivotViewDisplayOption>
     <PivotChartSettings Title="Sales Analysis">
         <PivotChartSeries Type=ChartSeriesType.Column></PivotChartSeries>
-        <PivotChartPrimaryYAxis Title="Y Axis Title" LabelFormat="P" LabelPosition="PivotChartAxisPosition.Outside">
+        <PivotChartPrimaryYAxis Title="Y Axis Title" LabelPosition="PivotChartAxisPosition.Outside">
         </PivotChartPrimaryYAxis>
         <PivotChartPrimaryXAxis Title="X Axis Title" IsInversed="true" LabelPosition="PivotChartAxisPosition.Outside">
         </PivotChartPrimaryXAxis>
