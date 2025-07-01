@@ -26,12 +26,12 @@ I> Syncfusion<sup style="font-size:70%">&reg;</sup> license keys can be validate
 
 | Blazor Mode                          | Project(s) to Register License Key      | File(s) to Register License Key         |
 |---------------------------------------|-----------------------------------------|-----------------------------------------|
-| Blazor Web App (InteractiveAuto)      | Server & Client                         | `Server/Program.cs`, `Client/Program.cs`|
-| Blazor Web App (InteractiveServer)    | Server                                  | `Server/Program.cs`                     |
-| Blazor Web App (InteractiveWasm)      | Server & Client                         | `Server/Program.cs`, `Client/Program.cs`|
+| Blazor Web App (Interactive Auto)      | Server & Client                         | `Server/Program.cs`, `Client/Program.cs`|
+| Blazor Web App (Interactive Server)    | Server                                  | `Server/Program.cs`                     |
+| Blazor Web App (Interactive WASM)      | Server & Client                         | `Server/Program.cs`, `Client/Program.cs`|
 | Blazor Standalone WebAssembly App     | Client                                  | `Program.cs`                            |
 
-## Blazor Web App(Interactive Auto)
+## Blazor Web App (Interactive Auto)
 
 Open **~/Program.cs** file in both the server and client projects of a Blazor Web App(InteractiveAuto) and register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor license key.
 {% tabs %}
@@ -45,7 +45,7 @@ Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY
 
 {% endtabs %}
 
-## Blazor Web App(Interactive Server)
+## Blazor Web App (Interactive Server)
 
 * For .NET 8 and .NET 9 app, open the **~/Program.cs** file and register the Syncfusion<sup style="font-size:70%">&reg;</sup> license key.
 
@@ -69,7 +69,7 @@ if (!app.Environment.IsDevelopment())
 
 {% endtabs %}
 
-## Blazor Web App(Interactive WebAssembly)
+## Blazor Web App (Interactive WebAssembly)
 
 Open **~/Program.cs** file in both the server and client projects of a Blazor Web App(InteractiveWebAssembly) and register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor license key.
 {% tabs %}
