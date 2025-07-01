@@ -106,7 +106,7 @@ Date filters provide specialized filtering options for columns containing date v
   * Expand/collapse year groups using the arrow indicators
   * Select/deselect entire years or specific months with checkboxes
 
-![Date filter submenu](./images/date-filter.png)
+![Date filter submenu](./images/date-filter.gif)
 
 ### Number filters
 
@@ -132,7 +132,7 @@ The custom filter option provides advanced filtering capabilities with logical o
 * **Logical operator** - Choose between AND/OR to combine multiple conditions
 * **MatchCase option** - Enable case-sensitive filtering when checked
 
-![Custom filter dialog](./images/custom-filter-dialog.png)
+![Custom filter dialog](./images/custom-filter.png)
 
 
 ## Clear filter
