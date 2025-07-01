@@ -76,4 +76,5 @@ The following example code illustrates how to select and get the current paragra
         string selectedContentSFDT = await container.DocumentEditor.Selection.GetSfdtAsync();
     }
 }
+
 ```
