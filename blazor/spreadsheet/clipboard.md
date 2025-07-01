@@ -9,7 +9,7 @@ documentation: ug
 
 # Clipboard in Blazor Spreadsheet component
 
-The Spreadsheet provides support for the clipboard operations (cut, copy, and paste). Clipboard operations can be enabled or disabled by setting the [`EnableClipboard`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_EnableClipboard) property in Spreadsheet.
+The Spreadsheet provides support for clipboard operations such as **Cut**, **Copy**, and **Paste**. These operations can be enabled or disabled by setting the [`EnableClipboard`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_EnableClipboard) property in the Spreadsheet component.
 
 > By default, the `EnableClipboard` property is set to **true**.
 
@@ -109,7 +109,7 @@ The paste operation can be performed through multiple methods:
 {% endhighlight %}
 {% endtabs %}
 
-## Prevent the paste functionality
+## Prevent Pasting in the Spreadsheet
 
 The following example illustrates how to prevent the paste action in Spreadsheet. In the [`Pasting`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.PastingEventArgs.html) event, setting the `Cancel` argument to **true** prevents the paste operation.
 {% tabs %}
