@@ -55,13 +55,13 @@ To filter rows by a specific cell's value:
 
 The Blazor Spreadsheet component offers several types of filtering mechanisms for different data analysis needs:
 
-### Checkbox filter
+### Excel-Style Checkbox filter
 
 The checkbox filter provides a simple way to filter data by selecting or deselecting values in a column. When a filter is applied to a column, a dropdown button appears in the column header. Clicking this button displays a menu with the following options:
 
 * **Sort options** - Ascending and Descending sort commands
 * **Clear Filter** - Option to remove all filtering applied to the column
-* **Data Filter** - Submenu containing data-specific filter conditions(Text, Numeric and Date)
+* **Data Filter** - Submenu containing data type-specific filtering options (Text, Number, and Date) that change dynamically based on the column's content type.
 * **Search box** - For quickly finding values in the list
 * **Select All checkbox** - Toggles selection of all values
 * **Value checkboxes** - Individual checkboxes for each unique value in the column
@@ -70,9 +70,9 @@ This interface allows for quickly filtering data by simply checking or uncheckin
 
 ![Checkbox filter options](./images/checkbox-filter.png)
 
-### Text filters
+### Text Filters
 
-Text filters enable filtering based on specific text conditions. Clicking the **Text Filter** option in the filter dropdown reveals additional filtering criteria:
+Text filters enable filtering based on specific text conditions. Clicking the **Text Filters** option in the filter dropdown reveals additional filtering criteria:
 
 * **Equal** - Shows rows where the cell value exactly matches the specified text
 * **Not Equal** - Shows rows where the cell value does not match the specified text
@@ -84,9 +84,9 @@ Text filters enable filtering based on specific text conditions. Clicking the **
 
 ![Text filter submenu](./images/text-filter-options.png)
 
-### Date filters
+### Date Filters
 
-Date filters provide specialized filtering options for columns containing date values. When working with date columns, clicking the filter button displays a dropdown with both standard filtering options and date-specific filtering:
+**Date Filters** provide specialized filtering options for columns containing date values. When working with date columns, clicking the filter button displays a dropdown with both standard filtering options and date-specific filtering:
 
 
 * **Equal** - Shows rows where the date exactly matches a specified date
@@ -108,9 +108,9 @@ Date filters provide specialized filtering options for columns containing date v
 
 ![Date filter submenu](./images/date-filter.gif)
 
-### Number filters
+### Number Filters
 
-Number filters offer specialized filtering options for columns containing numeric data. The **Number Filter** menu provides both value-based filtering and comprehensive comparison operators:
+Number filters offer specialized filtering options for columns containing numeric data. The **Number Filters** menu provides both value-based filtering and comprehensive comparison operators:
 
 * **Equal** - Shows rows where values exactly match a specified number
 * **Not Equal** - Shows rows where values do not match a specified number
@@ -123,7 +123,7 @@ Number filters offer specialized filtering options for columns containing numeri
 
 ![Number filter submenu](./images/number-filter.png)
 
-### Custom filter
+### Custom Filter
 
 The custom filter option provides advanced filtering capabilities with logical operators. Selecting **Custom Filter** from the filters submenu opens a dialog with the following components:
 
@@ -143,10 +143,10 @@ Clear filter functionality in the Spreadsheet component removes active filters f
 
 To clear existing filters:
 
-* Click the **Sort & Filter** icon from the **Home** tab in the ribbon toolbar
+* Click the **Sort & Filter** icon from the **Home** tab in the Ribbon toolbar
 * Select the **Clear** option to remove all active filters
 
-![Clear filter option in ribbon toolbar](./images/clearfilter-option-ribbon.png)
+![Clear filter option in Ribbon toolbar](./images/clearfilter-option-ribbon.png)
 
 ## Clear filters programmatically
 
@@ -216,7 +216,7 @@ Reapply filter functionality updates filtered results to match current data valu
 
 To refresh a filter after data modifications:
 
-* Click **Reapply** button under the **Sort & Filter** icon from the **Home** tab
+* Click **Reapply** button under the **Sort & Filter** icon from the **Home** tab in the Ribbon toolbar
 * Alternatively, right-click a filtered cell and select the **Reapply** option from the context menu
 
 ![Reapply filter option in Ribbon toolbar](./images/reapplyfilter-option-ribbon.png)
