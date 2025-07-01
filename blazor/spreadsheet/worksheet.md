@@ -124,7 +124,7 @@ The following image illustrates the rename sheet option in the Spreadsheet.
 
 ![Rename sheet option](images/rename-sheet-option.png)
 
-## Sheet visibility
+## Hide sheet
 
 The Spreadsheet component provides support for hiding worksheets. Hiding worksheets helps prevent unauthorized or accidental changes to the file. Existing worksheets can be dynamically hidden through the following method:
 
@@ -133,6 +133,18 @@ The Spreadsheet component provides support for hiding worksheets. Hiding workshe
 The following image illustrates the hide sheet option in the Spreadsheet.
 
 ![Hide sheet option](images/hide-sheet-option.png)
+
+## Unhide sheet
+
+The Spreadsheet component also provides functionality to restore hidden worksheets to view. Hidden worksheets appear in a disabled state within the sheet selection menu. To make a hidden sheet visible again:
+
+* Click on the **Sheet** tab list icon `≡` and click the hidden sheet.
+
+The previously hidden sheet will reappear in the sheet tab collection and become available for editing.
+
+The following image illustrates the sheet selection menu showing a visible sheet (Sheet1) and a disabled hidden sheet (Sheet2).
+
+![Unhide sheet option](images/unhide-sheet-option.png)
 
 ## Move sheet
 
