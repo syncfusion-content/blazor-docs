@@ -56,6 +56,10 @@ The paste operation can be performed through multiple methods:
 
 > When using the keyboard shortcut keys for cut (`Ctrl + X`) or copy (`Ctrl + C`) from external sources, use the `Ctrl + V` shortcut to paste content into the Spreadsheet.
 
+![UI showing contextmenu cut, copy and paste option](./images/contextcutcopypaste.png)
+
+![UI showing ribbon cut, copy and paste option](./images/cutcopypaste.png)
+
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
  
