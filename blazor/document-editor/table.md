@@ -21,7 +21,51 @@ Refer to the following sample code.
 await documentEditor.Editor.InsertTableAsync(3, 3);
 ```
 
-The maximum size of row and column is limited to 32767 and 63 respectively.
+## Set the maximum number of rows when inserting a table
+
+You can use the [maximumRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.DocumentEditorSettingsModel.html#Syncfusion_Blazor_DocumentEditor_DocumentEditorSettingsModel_MaximumRows) property to set the maximum number of rows allowed while inserting a table in the Document Editor component.
+
+
+Refer to the following sample code.
+
+```csharp
+<SfDocumentEditorContainer @ref="container" EnableSpellCheck="true"  EnableToolbar=true DocumentEditorSettings="settings" >
+</SfDocumentEditorContainer> 
+
+@code { 
+    SfDocumentEditorContainer container; 
+    DocumentEditorSettingsModel settings = new DocumentEditorSettingsModel() { MaximumRows = 4 }; 
+};
+```
+
+When the maximum row limit is reached, an alert will appear, as follow 
+
+![Row Limit Alert](images/Row_Limit_Alert.PNG) 
+
+>Note: The maximum value of Row is 32767, as per Microsoft Word application and you can set any value less than or equal to 32767 to this property.
+## Set the maximum number of Columns when inserting a table
+
+
+You can use the [maximumColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.DocumentEditorSettingsModel.html#Syncfusion_Blazor_DocumentEditor_DocumentEditorSettingsModel_MaximumColumns) property to set the maximum number of columns allowed while inserting a table in the Document Editor component.
+
+
+Refer to the following sample code.
+
+```csharp
+<SfDocumentEditorContainer @ref="container" EnableSpellCheck="true"  EnableToolbar=true DocumentEditorSettings="settings" >
+</SfDocumentEditorContainer> 
+
+@code { 
+    SfDocumentEditorContainer container; 
+    DocumentEditorSettingsModel settings = new DocumentEditorSettingsModel() { MaximumColumns = 4 }; 
+};
+```
+
+When the maximum column limit is reached, an alert will appear, as follow 
+
+![Column Limit Alert](images/Column_Limit_Alert.PNG) 
+
+>Note: The maximum value of Column is 63, as per Microsoft Word application and you can set any value less than or equal to 63 to this property.
 
 ## Insert rows
 
