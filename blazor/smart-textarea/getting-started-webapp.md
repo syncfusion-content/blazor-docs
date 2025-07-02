@@ -66,12 +66,12 @@ You can create a **Blazor Web App** using Visual Studio Code via [Microsoft Temp
 
 You need to configure the corresponding [Interactive render mode](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/render-modes?view=aspnetcore-8.0#render-modes) and [Interactivity location](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-8.0&pivots=vsc) while creating a Blazor Web Application.
 
-For example, in a Blazor Web App with the `Auto` interactive render mode, use the following commands.
+For example, in a Blazor Web App with the `Server` interactive render mode, use the following commands.
 
 {% tabs %}
 {% highlight c# tabtitle="Blazor Web App" %}
 
-dotnet new blazor -o BlazorWebApp -int Auto
+dotnet new blazor -o BlazorWebApp -int Server
 cd BlazorWebApp
 cd BlazorWebApp.Client
 
@@ -82,7 +82,7 @@ N> For more information on creating a **Blazor Web App** with various interactiv
 
 ## Install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor SmartComponents and Themes NuGet in the App
 
-If you utilize `WebAssembly` or `Auto` render modes in the Blazor Web App need to be install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components NuGet packages within the client project.
+If you utilize `Server` render modes in the Blazor Web App need to be install Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components NuGet packages within the server project.
 
 * Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
 * Ensure you’re in the project root directory where your `.csproj` file is located.
@@ -110,7 +110,6 @@ N> Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are availa
 
 | Interactive Render Mode | Description |
 | -- | -- |
-| WebAssembly or Auto | Open **~/_Imports.razor** file from the client project.|
 | Server | Open **~/_import.razor** file, which is located in the `Components` folder.|
 
 Import the `Syncfusion.Blazor` and `Syncfusion.Blazor.SmartComponents` namespace.
@@ -123,10 +122,6 @@ Import the `Syncfusion.Blazor` and `Syncfusion.Blazor.SmartComponents` namespace
 
 {% endhighlight %}
 {% endtabs %}
-
-Now, register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service in the **~/Program.cs** file of your Blazor Web App.
-
-If the **Interactive Render Mode** is set to `WebAssembly` or `Auto`, you need to register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor service in both **~/Program.cs** files of your Blazor Web App.
 
 If the **Interactive Render Mode** is set to `Server`, your project will contain a single **~/Program.cs** file. So, you should register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Service only in that **~/Program.cs** file.
 
@@ -167,7 +162,7 @@ builder.Services.AddSyncfusionBlazor();
 
 string apiKey = "api-key";
 string deploymentName = "deployment-name";
-string endpoint = "end point url";
+string endpoint = "end point url";// Must be null for OpenAI
 
 builder.Services.AddSyncfusionSmartComponents()
 .ConfigureCredentials(new AIServiceCredentials(apiKey, deploymentName, endpoint))
@@ -191,9 +186,21 @@ N> From version 28.2.33, the Azure.AI.OpenAI package has been removed from the S
 
 If you are using **OpenAI**, [create an API key](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key) and place it at `apiKey`, leave the `endpoint` as `""`. The value for `deploymentName` is the [model](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models) you wish to use (e.g., `gpt-3.5-turbo`, `gpt-4`, etc.).
 
-### Using Ollama 
+### Configuring Ollama for Self-Hosted AI Models
 
-If you are using [Ollama](https://ollama.com/), set SelfHosted to true and provide the Endpoint URL where the model is hosted (e.g., http://localhost:11434). The value for DeploymentName should be the specific [model](https://ollama.com/library) you wish to use (e.g., `llama2:13b`, `mistral:7b`, etc.).
+To use Ollama for running self-hosted models:
+
+1. **Download and install Ollama**  
+   Visit [Ollama's official website](https://ollama.com) and install the application appropriate for your operating system.
+
+2. **Install the desired model from the Ollama library**  
+   You can browse and install models from the [Ollama Library](https://ollama.com/library) (e.g., `llama2:13b`, `mistral:7b`, etc.).
+
+3. **Configure your application**
+
+   - Set `SelfHosted` to `true`.
+   - Provide the `Endpoint` URL where the model is hosted (e.g., `http://localhost:11434`).
+   - Set `DeploymentName` to the specific model you installed (e.g., `llama2:13b`).
 
 Add the following settings to the **~/Program.cs** file in your Blazor Server app.
 
@@ -277,4 +284,4 @@ N> [View Sample in GitHub](https://github.com/syncfusion/smart-ai-samples).
 
 ## See also
 
-* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart TextArea in Blazor Server App](https://blazor.syncfusion.com/documentation/)
+* [Getting Started with Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor Smart TextArea in Blazor Server App](https://blazor.syncfusion.com/documentation/smart-textarea/getting-started-webapp)
