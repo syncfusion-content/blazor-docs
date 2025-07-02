@@ -24,10 +24,16 @@ N> * Place the license key between double quotes.  Also, ensure that Syncfusion.
 
 I> Syncfusion<sup style="font-size:70%">&reg;</sup> license keys can be validated during the Continuous Integration (CI) processes to ensure proper licensing and prevent licensing errors during deployment. Refer to the [CI License Validation](https://blazor.syncfusion.com/documentation/getting-started/license-key/ci-license-validation) section for detailed instructions on how to implement it.
 
-## Blazor Web App
+| Blazor Mode                          | Project(s) to Register License Key      | File(s) to Register License Key         |
+|---------------------------------------|-----------------------------------------|-----------------------------------------|
+| Blazor Web App (Interactive Auto)      | Server & Client                         | `Server/Program.cs`, `Client/Program.cs`|
+| Blazor Web App (Interactive Server)    | Server                                  | `Server/Program.cs`                     |
+| Blazor Web App (Interactive WASM)      | Server & Client                         | `Server/Program.cs`, `Client/Program.cs`|
+| Blazor Standalone WebAssembly App     | Client                                  | `Program.cs`                            |
 
-Open **~/Program.cs** file and register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor license key in the Blazor web app.
+## Blazor Web App (Interactive Auto)
 
+Open **~/Program.cs** file in both the server and client projects of a Blazor Web App(Interactive Auto) and register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor license key.
 {% tabs %}
 
 {% highlight C# tabtitle="Blazor Web App" hl_lines="1 2" %}
@@ -39,9 +45,9 @@ Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY
 
 {% endtabs %}
 
-## Blazor Server App
+## Blazor Web App (Interactive Server)
 
-* For .NET 8 and .NET 9 app, open the **~/Program.cs** file and register the Syncfusion<sup style="font-size:70%">&reg;</sup> license key.
+* For .NET 8 and .NET 9, open the **~/Program.cs** file and register the Syncfusion<sup style="font-size:70%">&reg;</sup> license key.
 
 {% tabs %}
 
@@ -63,7 +69,21 @@ if (!app.Environment.IsDevelopment())
 
 {% endtabs %}
 
-## Blazor WebAssembly App
+## Blazor Web App (Interactive WebAssembly)
+
+Open **~/Program.cs** file in both the server and client projects of a Blazor Web App(Interactive WebAssembly) and register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor license key.
+{% tabs %}
+
+{% highlight C# tabtitle="Blazor Web App" hl_lines="1 2" %}
+
+//Register Syncfusion license
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## Blazor Standalone WebAssembly App
 
 Open **~/Program.cs** file and register the Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor license key in the client web app.
 

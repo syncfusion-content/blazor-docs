@@ -1,6 +1,6 @@
 @using Syncfusion.Blazor.RichTextEditor
 
-<SfRichTextEditor   UndoRedoSteps="50" UndoRedoTimer="400">
+<SfRichTextEditor  @ref="rteInstance">
     <p>The Rich Text Editor component is WYSIWYG ('what you see is what you get') editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>
     <p><b> Key features:</b></p>
     <ul>
@@ -8,3 +8,17 @@
     <li><p> Capable of handling markdown editing.</p></li>
     </ul>
 </SfRichTextEditor>
+<br />
+<SfButton Id="clearunbdoredobtn" @onclick="ClearUndoRedoStack" IsPrimary="true">Clear Undo/Redo Stack</SfButton>
+
+@code {
+    private SfRichTextEditor rteInstance;
+
+    private async Task ClearUndoRedoStack()
+    {
+        if (rteInstance != null)
+        {
+            await rteInstance.ClearUndoRedoAsync();
+        }
+    }
+}
