@@ -57,7 +57,7 @@ The Blazor Spreadsheet component offers several types of filtering mechanisms fo
 
 ### Excel-Style Checkbox filter
 
-The checkbox filter provides a simple way to filter data by selecting or deselecting values in a column. When a filter is applied to a column, a dropdown button appears in the column header. Clicking this button displays a menu with the following options:
+The checkbox filter provides a simple way to filter data by checking or unchecking values in a column. When a filter is applied to a column, a dropdown button appears in the column header. Clicking this button displays a menu with the following options:
 
 * **Sort options** - Ascending and Descending sort commands
 * **Clear Filter** - Option to remove all filtering applied to the column
