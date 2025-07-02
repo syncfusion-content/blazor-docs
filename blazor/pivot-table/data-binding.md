@@ -267,25 +267,25 @@ In the meantime, the CSV data from the local *. csv file type can also be connec
 @using System.IO;
 @using System.Net;
 
-<SfPivotView TValue="string[]" Width="1500" Height="300">
+<SfPivotView TValue="string[]" Width="800" Height="300">
     <PivotViewDataSourceSettings TValue="string[]" DataSource="@dataSource" ExpandAll=false EnableSorting=true Type=DataSourceType.CSV>
         <PivotViewColumns>
-            <PivotViewColumn Name="Item Type"></PivotViewColumn>
-            <PivotViewColumn Name="Sales Channel"></PivotViewColumn>
+            <PivotViewColumn Name="ItemType"></PivotViewColumn>
+            <PivotViewColumn Name="SalesChannel"></PivotViewColumn>
         </PivotViewColumns>
         <PivotViewRows>
             <PivotViewRow Name="Region"></PivotViewRow>
             <PivotViewRow Name="Country"></PivotViewRow>
         </PivotViewRows>
         <PivotViewValues>
-            <PivotViewValue Name="Total Cost"></PivotViewValue>
-            <PivotViewValue Name="Total Revenue"></PivotViewValue>
-            <PivotViewValue Name="Total Profit"></PivotViewValue>
+            <PivotViewValue Name="TotalCost"></PivotViewValue>
+            <PivotViewValue Name="TotalRevenue"></PivotViewValue>
+            <PivotViewValue Name="TotalProfit"></PivotViewValue>
         </PivotViewValues>
         <PivotViewFormatSettings>
-            <PivotViewFormatSetting Name="Total Cost" Format="C0" UseGrouping=true></PivotViewFormatSetting>
-            <PivotViewFormatSetting Name="Total Revenue" Format="C0" UseGrouping=true></PivotViewFormatSetting>
-            <PivotViewFormatSetting Name="Total Profit" Format="C0" UseGrouping=true></PivotViewFormatSetting>
+            <PivotViewFormatSetting Name="TotalCost" Format="C0" UseGrouping=true></PivotViewFormatSetting>
+            <PivotViewFormatSetting Name="TotalRevenue" Format="C0" UseGrouping=true></PivotViewFormatSetting>
+            <PivotViewFormatSetting Name="TotalProfit" Format="C0" UseGrouping=true></PivotViewFormatSetting>
         </PivotViewFormatSettings>
     </PivotViewDataSourceSettings>
     <PivotViewGridSettings ColumnWidth="120"></PivotViewGridSettings>
@@ -385,11 +385,10 @@ OData is a standardized protocol for creating and consuming data. User can retri
 @using Syncfusion.Blazor.PivotView
 @using Syncfusion.Blazor.Data
 
-<SfPivotView TValue="OrderDetails" Width="800" Height="340">
+<SfPivotView TValue="OrderDetails" Width="800" Height="340" ShowFieldList="true">
     <PivotViewDataSourceSettings TValue="OrderDetails">
-        <SfDataManager Url="https://js.syncfusion.com/ejServices/Wcf/Northwind.svc/Orders" Adaptor="Syncfusion.Blazor.Adaptors.ODataAdaptor"></SfDataManager>
+        <SfDataManager Url="https://services.odata.org/Northwind/Northwind.svc/Orders" Adaptor="Syncfusion.Blazor.Adaptors.ODataAdaptor"></SfDataManager>
         <PivotViewColumns>
-            <PivotViewColumn Name="OrderDate"></PivotViewColumn>
             <PivotViewColumn Name="ShipCity"></PivotViewColumn>
         </PivotViewColumns>
         <PivotViewRows>
@@ -399,10 +398,10 @@ OData is a standardized protocol for creating and consuming data. User can retri
         <PivotViewValues>
             <PivotViewValue Name="Freight"></PivotViewValue>
         </PivotViewValues>
-        </PivotViewDataSourceSettings>
+    </PivotViewDataSourceSettings>
 </SfPivotView>
 
-@code{
+@code {
     public class OrderDetails
     {
         public int OrderID { get; set; }
@@ -1185,7 +1184,7 @@ The event [OnLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Pivot
             <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
         </PivotViewValues>
             <PivotViewFormatSettings>
-        <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+        <PivotViewFormatSetting Name="Amount" Format="C0"></PivotViewFormatSetting>
     </PivotViewFormatSettings>
         <PivotViewEvents TValue="ProductDetails" OnLoad="load"></PivotViewEvents>
     </PivotViewDataSourceSettings>

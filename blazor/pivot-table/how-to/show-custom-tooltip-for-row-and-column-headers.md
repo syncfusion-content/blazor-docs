@@ -95,7 +95,7 @@ In the following example, the [OnRender](https://help.syncfusion.com/cr/blazor/S
         var element = document.getElementById(ID);
         var cellElement = document.elementFromPoint(left, top);
         if (cellElement) {
-            var colIndex = Number(cellElement.getAttribute('aria-colindex'));
+            var colIndex = Number(cellElement.getAttribute('aria-colindex')) - 1;
             var rowIndex = Number(cellElement.getAttribute('index'));
         }
         var cellInfo = {};

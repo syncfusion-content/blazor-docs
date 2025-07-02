@@ -180,7 +180,7 @@ This will help to avoid performance lags when opening a member editor whose hier
 
 @using Syncfusion.Blazor.PivotView
 
-<SfPivotView TValue="ProductDetails"  Width="800" Height="350" LoadOnDemandInMemberEditor="true">
+<SfPivotView TValue="ProductDetails" Width="800" Height="350" LoadOnDemandInMemberEditor="true" ShowFieldList="true">
     <PivotViewDataSourceSettings TValue="ProductDetails" ProviderType="ProviderType.SSAS" Catalog="Adventure Works DW 2008 SE" Cube="Adventure Works" Url="https://bi.syncfusion.com/olap/msmdpump.dll" LocaleIdentifier="1033" EnableSorting="true">
         <PivotViewColumns>
             <PivotViewColumn Name="[Product].[Product Categories]" Caption="Product Category"></PivotViewColumn>
@@ -202,6 +202,17 @@ This will help to avoid performance lags when opening a member editor whose hier
     }
 </style>
 
+@code {
+    public class ProductDetails
+    {
+        public int Sold { get; set; }
+        public double Amount { get; set; }
+        public string Country { get; set; }
+        public string Products { get; set; }
+        public string Year { get; set; }
+        public string Quarter { get; set; }
+    }
+}
 ```
 
 ![On-Demand Loading in Blazor PivotTable](images/blazor-pivottable-on-demand-load.png)
@@ -227,7 +238,7 @@ Allows user to load the members on the basis of the level number set in the [Lev
 
 @using Syncfusion.Blazor.PivotView
 
-<SfPivotView TValue="ProductDetails"  Width="800" Height="350" >
+<SfPivotView TValue="ProductDetails" Width="800" Height="350" ShowFieldList="true">
     <PivotViewDataSourceSettings TValue="ProductDetails" ProviderType="ProviderType.SSAS" Catalog="Adventure Works DW 2008 SE" Cube="Adventure Works" Url="https://bi.syncfusion.com/olap/msmdpump.dll" LocaleIdentifier="1033" EnableSorting="true">
         <PivotViewColumns>
             <PivotViewColumn Name="[Product].[Product Categories]" Caption="Product Category"></PivotViewColumn>
@@ -241,8 +252,8 @@ Allows user to load the members on the basis of the level number set in the [Lev
             <PivotViewValue Name="[Measures].[Internet Sales Amount]" Caption="Internet Sales Amount"></PivotViewValue>
         </PivotViewValues>
         <PivotViewFilterSettings>
-            <PivotViewFilterSetting Name="[Customer].[Customer Geography]" Type=FilterType.Exclude Items="@(new string[] { '[Customer].[Customer Geography].[State-Province].&[NSW]&[AU]' })" LevelCount="2"></PivotViewFilterSetting>
-        </PivotViewFilterSettings>
+            <PivotViewFilterSetting Name="[Customer].[Customer Geography]" Type=FilterType.Exclude Items="@(new string[] { "[Customer].[Customer Geography].[State-Province].&[NSW]&[AU]" })" LevelCount="2"></PivotViewFilterSetting>
+        </PivotViewFilterSettings>
     </PivotViewDataSourceSettings>
     <PivotViewGridSettings ColumnWidth="160"></PivotViewGridSettings>
 </SfPivotView>
@@ -251,6 +262,18 @@ Allows user to load the members on the basis of the level number set in the [Lev
         min-height: 200px;
     }
 </style>
+
+@code {
+    public class ProductDetails
+    {
+        public int Sold { get; set; }
+        public double Amount { get; set; }
+        public string Country { get; set; }
+        public string Products { get; set; }
+        public string Year { get; set; }
+        public string Quarter { get; set; }
+    }
+}
 
 ```
 

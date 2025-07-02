@@ -751,8 +751,9 @@ N> The [Roles](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView
 ```cshtml
 
 @using Syncfusion.Blazor.PivotView
+@using System.Dynamic
 
-<SfPivotView TValue="ExpandoObject"  Width="800" Height="350" >
+<SfPivotView TValue="ExpandoObject" Width="800" Height="350">
     <PivotViewDataSourceSettings TValue="ExpandoObject" ProviderType="ProviderType.SSAS" Catalog="Adventure Works DW 2008 SE" Cube="Adventure Works" Url="https://bi.syncfusion.com/olap/msmdpump.dll" Roles="Role1" LocaleIdentifier="1033" EnableSorting="true">
         <PivotViewColumns>
             <PivotViewColumn Name="[Product].[Product Categories]" Caption="Product Category"></PivotViewColumn>
@@ -772,6 +773,9 @@ N> The [Roles](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView
     </PivotViewDataSourceSettings>
     <PivotViewGridSettings ColumnWidth="120"></PivotViewGridSettings>
 </SfPivotView>
+@code {
+    //other codes here...
+}
 
 ```
 
