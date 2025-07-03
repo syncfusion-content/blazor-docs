@@ -9,9 +9,7 @@ documentation: ug
 
 # Selection in Blazor Spreadsheet component
 
-Selection in the Spreadsheet component enables interactive highlighting and manipulation of cells, rows, or columns for data analysis and editing operations. The selection functionality provides intuitive mouse and keyboard interactions for efficient data management.
-
-## Selection operations
+The selection feature in the Spreadsheet component enables interactive highlighting and manipulation of cells, rows, or columns for data analysis and editing operations. The functionality offers intuitive mouse and keyboard interactions for efficient data management.
 
 The Blazor Spreadsheet provides multiple selection options to manage and analyze data effectively:
 
@@ -23,24 +21,23 @@ The Blazor Spreadsheet provides multiple selection options to manage and analyze
 
 In the active sheet, selection can be performed using any of the following ways:
 
-* **Using Mouse Interactions**:
+* **Using Mouse Interaction**:
    * Click to select individual cells
    * Click and drag to select ranges
    * Click row or column headers for full row or column selection
 
 * **Using Keyboard Navigation**:
-   * Use **Arrow keys** to navigate and select cells
-   * Use **Shift + Arrow keys** for range selection
-   * Use **Ctrl + click** for non-adjacent selections
+   * Use **Arrow** keys to navigate and select cells
+   * Use **Shift + Arrow** keys for range selection
+   * Use **Ctrl + Click** for non-adjacent selections
 
 * **Using Name Box**: Enter cell references or range names and press **Enter** key to select the specified range.
-  
 
 ## Cell selection
 
-The Blazor Spreadsheet component allows selecting individual cells or ranges of cells for various data operations. Cell selection forms the foundation of most Spreadsheet interactions and provides the basis for data entry and formatting.
+The Blazor Spreadsheet component allows selecting individual cells or ranges of cells for various data operations. Cell selection forms the foundation of most Spreadsheet interactions and serves as the basis for data entry and formatting.
 
-Single cell selection allows focusing on a specific cell for data entry or formatting operations. Range selection enables selecting multiple adjacent cells for batch operations like formatting, data entry, or calculations. Multiple range selection allows selecting non-adjacent cells or ranges for operations that need to be applied to scattered data.
+The single cell selection mode allows users to focus on a specific cell for data entry or formatting tasks. Range selection enables multiple adjacent cells to be selected for batch operations such as formatting, data entry, or calculations. Multiple range selection provides the ability to select non-adjacent cells or ranges, making it possible to apply operations to scattered data within the sheet.
 
 **Selecting ranges via the UI**
 
@@ -53,29 +50,29 @@ To select non-adjacent ranges:
 
 ## Row selection
 
-Row selection enables selecting entire rows for operations like formatting, insertion. This selection type is particularly useful for working with complete records or data entries. Rows can be selected individually or in multiples.
+The row selection feature allows entire rows to be selected for operations such as formatting or insertion. This selection type is especially useful when working with complete records or data entries. Rows can be selected individually or as multiple row groups.
 
 **Selecting rows via the UI**
 
-Row selection can be performed in the following methods:
+The row selection operation can be performed using the following methods:
 
 * **Adjacent rows**: Click the first row header, then drag to the last desired row header
 * **Adjacent rows with keyboard**: Click the first row header, then hold **Shift** key and click the last row header
 * **Non-adjacent rows**: Hold **Ctrl** key while clicking individual row headers
-* **Range with keyboard**: Use **Shift + Arrow keys** after selecting the initial row
+* **Range with keyboard**: Use **Shift + Arrow** keys after selecting the initial row
 
 ## Column selection
 
-Column selection allows selecting entire columns for operations like formatting, sorting. This selection type is essential for working with data fields or attributes.Columns can be selected individually or in multiples.
+The column selection feature allows entire columns to be selected for operations such as formatting and sorting. This selection type is essential for working with data fields or attributes. Columns can be selected individually or as multiple column groups.
 
 **Selecting columns via the UI**
 
-Column selection can be performed in the following methods:
+The column selection operation can be performed using the following methods:
 
 * **Adjacent columns**: Click the first column header, then drag to the last desired column header
 * **Adjacent columns with keyboard**: Click the first column header, then hold **Shift** and click the last column header
 * **Non-adjacent columns**: Hold **Ctrl** while clicking individual column headers
-* **Range with keyboard**: Use **Shift + Arrow keys** after selecting the initial column
+* **Range with keyboard**: Use **Shift + Arrow** keys after selecting the initial column
 
 ## Implementing selection programmatically
 
@@ -114,6 +111,6 @@ The Spreadsheet component supports comprehensive programmatic selection using th
 {% endhighlight %}
 {% endtabs %}
 
-The following animation illustrates the comprehensive selection capabilities available in the Blazor Spreadsheet component, including cell, row and column selection using both mouse and keyboard interactions.
+The following image illustrates the comprehensive selection capabilities available in the Blazor Spreadsheet component, including cell, row, and column selection using both mouse and keyboard interactions.
 
-![Comprehensive selection demonstration](./images/selection-types.gif)
+![Comprehensive selection operation](./images/selection-types.gif)
