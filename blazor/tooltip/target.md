@@ -6,6 +6,7 @@ platform: Blazor
 control: Tooltip
 documentation: ug
 ---
+
 # Target
 
 The [`Target`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.SfTooltip.html#Syncfusion_Blazor_Popups_SfTooltip_Target) property specifies the target selector where the Tooltip needs to be displayed. It enables Tooltip activation on specific DOM elements based on user interactions like hover or focus.
@@ -15,6 +16,7 @@ The [`Target`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Popups.Sf
  <SfButton ID="btn" Content="Show Tooltip"></SfButton>
 </SfTooltip>
 ```
+
 ![Blazor Tooltip Target](images/target.png)
 
 ## Displaying Tooltip for dynamically created target element
