@@ -19,7 +19,7 @@ The Blazor Spreadsheet provides multiple filtering options to manage and analyze
 * **Clear Filter** - Removes any active filters applied to columns.
 * **Reapply Filter** - Updates filtering results after changes are made to the data.
 
-### Accessing filter options via the UI
+**Accessing filter options via the UI**
 
 In the active sheet, filtering can be accessed using any of the following methods:
 
@@ -49,7 +49,43 @@ To filter rows by a specific cell's value:
 
 ![Cell value filtering interface](./images/filterbycellvalue-filter.png)
 
-## Filter types
+### Applying cell value filter programmatically
+
+The Spreadsheet component supports programmatic filtering using the [FilterByCellValueAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_FilterByCellValueAsync_System_Object_System_String_) method. This method applies filtering based on the specified value and cell range.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@using Syncfusion.Blazor.Spreadsheet
+
+<button @onclick="ApplyFilter">Filter by Value</button>
+
+<SfSpreadsheet @ref="SpreadsheetRef" DataSource="DataSourceBytes">
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
+
+@code {
+
+    public byte[] DataSourceBytes { get; set; }
+    public SfSpreadsheet SpreadsheetRef;
+
+    protected override void OnInitialized()
+    {
+        string filePath = "wwwroot/Sample.xlsx";
+        DataSourceBytes = File.ReadAllBytes(filePath);
+    }
+
+    public async Task ApplyFilter()
+    {
+        // Filter column A for "New York".
+        await SpreadsheetRef.FilterByCellValueAsync("New York", "A1"); 
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Filtering data with Excel Filter Dialog
 
 The Blazor Spreadsheet component offers several types of filtering mechanisms for different data analysis needs:
 
@@ -100,7 +136,9 @@ The date Filters provide specialized filtering options for columns containing da
 * **This Year/Last Year/Next Year** - Filters by annual periods
 * **Custom Filter** - Opens a dialog for creating more complex filter conditions
 
-* **Year/Month grouping** - Date values are automatically grouped by year and month for easier filtering of large date ranges
+**Date grouping**
+
+The date values are automatically grouped by year and month for easier filtering of large date ranges
   * Expand/collapse year groups using the arrow indicators
   * Select/deselect entire years or specific months with checkboxes
 
@@ -132,6 +170,19 @@ The custom filter option provides advanced filtering capabilities with logical o
 
 ![Custom filter](./images/custom-filter.png)
 
+## Reapply filter
+
+The reapply filter functionality updates filtered results to match current data values while preserving existing filter criteria. This feature is particularly useful when working with dynamic data that changes frequently.
+
+**Reapplying filter via the UI**
+
+To refresh a filter after data modifications:
+
+* Click **Reapply** button under the **Sort & Filter** icon from the **Home** tab in the Ribbon toolbar
+* Alternatively, right-click a filtered cell and select the **Reapply** option from the context menu
+
+![Reapply filter option in Ribbon toolbar](./images/reapplyfilter-option-ribbon.png)
+
 ## Clear filter
 
 The clear filter functionality in the Spreadsheet component removes active filters from columns, restoring the complete dataset view. This operation ensures seamless transitions between filtered and unfiltered data views without losing information.
@@ -149,7 +200,7 @@ To clear existing filters:
 
 The Blazor Spreadsheet component provides method to programmatically clear filters that have been applied to the worksheet data.
 
-#### Clear filter from specific column
+**Clear filter from specific column**
 
 The [ClearFilterAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ClearFilterAsync_System_Int32_) method removes filtering from a specific column in the Spreadsheet. The method takes a column index parameter to identify which column's filter should be cleared.
 
@@ -179,7 +230,7 @@ The [ClearFilterAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 {% endhighlight %}
 {% endtabs %}
 
-#### Clear all filters
+**Clear all filters**
 
 The [ClearAllFiltersAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ClearAllFiltersAsync) method removes all active filters from the Spreadsheet, restoring the complete dataset view. This method is particularly useful when multiple columns have filters applied and need to be cleared at once.
 
@@ -195,6 +246,7 @@ The [ClearAllFiltersAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 </SfSpreadsheet>
 
 @code {
+
     public SfSpreadsheet sfSpreadsheet { get; set; }
 
     public async Task ClearAllFilters()
@@ -206,51 +258,3 @@ The [ClearAllFiltersAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 {% endhighlight %}
 {% endtabs %}
 
-## Reapply filter
-
-The reapply filter functionality updates filtered results to match current data values while preserving existing filter criteria. This feature is particularly useful when working with dynamic data that changes frequently.
-
-### Reapplying filter via the UI
-
-To refresh a filter after data modifications:
-
-* Click **Reapply** button under the **Sort & Filter** icon from the **Home** tab in the Ribbon toolbar
-* Alternatively, right-click a filtered cell and select the **Reapply** option from the context menu
-
-![Reapply filter option in Ribbon toolbar](./images/reapplyfilter-option-ribbon.png)
-
-## Implementing filtering programmatically
-
-The Spreadsheet component supports programmatic filtering using the [FilterByCellValueAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_FilterByCellValueAsync_System_Object_System_String_) method. This method applies filtering based on the specified value and cell range.
-
-{% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-
-@using Syncfusion.Blazor.Spreadsheet
-
-<button @onclick="ApplyFilter">Filter by Value</button>
-
-<SfSpreadsheet @ref="SpreadsheetRef" DataSource="DataSourceBytes">
-    <SpreadsheetRibbon></SpreadsheetRibbon>
-</SfSpreadsheet>
-
-@code {
-
-    public byte[] DataSourceBytes { get; set; }
-    public SfSpreadsheet SpreadsheetRef;
-
-    protected override void OnInitialized()
-    {
-        string filePath = "wwwroot/Sample.xlsx";
-        DataSourceBytes = File.ReadAllBytes(filePath);
-    }
-
-    public async Task ApplyFilter()
-    {
-        // Filter column A for "New York".
-        await SpreadsheetRef.FilterByCellValueAsync("New York", "A1"); 
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
