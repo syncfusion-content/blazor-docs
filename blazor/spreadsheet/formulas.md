@@ -13,9 +13,7 @@ documentation: ug
 
 ## Formula Bar
 
-The **Formula Bar** simplifies editing or entering cell data. The [ShowFormulaBar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ShowFormulaBar) property is used to enable or disable the **Formula Bar**.
-
-> * The default value of the `ShowFormulaBar` property is **true**.
+The **Formula Bar** simplifies editing or entering cell data. The [ShowFormulaBar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ShowFormulaBar) property is used to enable or disable the **Formula Bar**. The default value of the `ShowFormulaBar` property is **true**.
 
 ### Working with Formulas via the UI
 
@@ -63,9 +61,9 @@ If cell **C1** contains the formula **=A1 + B1**, and the value in **A1** or **B
 
 ## Named Ranges
 
-The **Named Ranges** support allows to assign a meaningful name to a specific cell or range of cells. This simplifies referencing and managing data within the Spreadsheet. Named ranges can also be used in formulas, making them easier to read, understand, and maintain.
+The **Named Ranges** support allows to assign a meaningful name to a specific cell or range of cells. This simplifies referencing and managing data within the Spreadsheet. Named Ranges can also be used in formulas, making them easier to read, understand, and maintain.
 
-N> Named ranges can be defined only for cells or ranges that contain values.
+N> Named Ranges can be defined only for cells or ranges that contain values.
 
 ### Creating Named Ranges via the UI
 
@@ -93,7 +91,7 @@ To edit a Named Range:
 
 * Click the **Update Range** button, then click **OK** button to save changes.
 
-To delete a Named Range
+To delete a Named Range:
   
 * Open the **Name Manager** dialog.
 
@@ -142,7 +140,7 @@ Returns the number of areas in a reference<br/><br/></td></tr>
 <tr>
 <td>
 ARRAYTOTEXT<br/><br/></td><td>
-Returns the text representation of an array. Calculating this formula result is not supported in XlsIO<br/><br/></td></tr>
+Returns the text representation of an array, though calculation of this formula result is not supported in XlsIO<br/><br/></td></tr>
 <tr>
 <td>
 ASC<br/><br/></td><td>

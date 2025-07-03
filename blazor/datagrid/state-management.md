@@ -136,7 +136,7 @@ You can use [ResetPersistData](https://help.syncfusion.com/cr/blazor/Syncfusion.
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
 
-<SfButton OnClick="@(async() =>await Grid.ResetPersistDataAsync())">Restore Grid State</SfButton>
+<SfButton CssClass="e-primary" OnClick="@(async() =>await Grid.ResetPersistDataAsync())">Restore Grid State</SfButton>
 
 <SfGrid @ref="Grid" ID="OrderDetails" DataSource="@Orders" Height="315" AllowPaging="true" AllowFiltering="true" AllowGrouping="true" AllowSorting="true">
     <GridColumns>
@@ -206,7 +206,7 @@ public class OrderData
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/rZrKsMZhrntSJwyp?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/BDVetwXgrJTvTIlu?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Clearing local storage
 
