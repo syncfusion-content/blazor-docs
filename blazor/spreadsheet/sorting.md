@@ -11,9 +11,7 @@ documentation: ug
 
 Sorting in the Spreadsheet component enables organizing data in a meaningful order, allowing for better data analysis and presentation. The Blazor Spreadsheet component provides comprehensive sorting capabilities for worksheet data in ascending or descending order.
 
-To control sorting functionality, the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowSorting) property can be used to enable or disable sorting operations in the Spreadsheet.
-
-> * The default value for the `AllowSorting` property is **true**.
+To control the sorting functionality, the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowSorting) property can be used to enable or disable sorting operations in the Spreadsheet. The default value of the `AllowSorting` property is **true**.
 
 ## Sort operations
 
@@ -24,7 +22,7 @@ The Spreadsheet component offers two sorting orders:
 
 ### Sort by active cell
 
-The sort operation uses the column of the active cell as the primary sort criterion. When sorting is applied, the Spreadsheet component sorts all related data based on the values in the active cell's column, maintaining the integrity of rows even when only a specific range is selected.
+The sort operation uses the column of the active cell as the primary sort criterion. When sorting is applied, the Spreadsheet component sorts all related data based on the values in the active cell's column, maintaining row integrity even when only a specific range is selected.
 
 ### Performing sort operations via the UI
 
@@ -34,14 +32,14 @@ In the active sheet, select the cell range to be sorted. Sorting can be performe
    * Select the **Sort & Filter** icon from the **Home** tab
    * Click **Ascending** or **Descending**
 
-   ![Sort options in the Ribbon toolbar](./images/ribbon-sort.png)
+   ![Sort options via the Ribbon toolbar](./images/ribbon-sort.png)
 
 * **Using Context Menu**:
    * Right-click the selected range
    * Choose **Sort** > **Ascending** or **Descending**
 
-   ![Sort options in the context menu](./images/contextmenu-sort.png)
+   ![Sort options via the context menu](./images/contextmenu-sort.png)
 
-The following animation illustrates basic sorting operations in the Spreadsheet component, showing how data can be organized in ascending or descending order while maintaining row relationships.
+The following image illustrates basic sorting operations in the Spreadsheet component, showing how data can be organized in ascending or descending order while maintaining row relationships.
 
 ![Sorting demonstration in Blazor Spreadsheet](./images/sorting.gif)
