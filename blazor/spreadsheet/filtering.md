@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Filtering in Blazor Spreadsheet Component | Syncfusion
-description: Checkout and learn all about the comprehensive filter functionality in Syncfusion Blazor Spreadsheet Component and much more.
+description: Checkout and learn all about the comprehensive filter functionality in Syncfusion Blazor Spreadsheet component and much more.
 platform: Blazor
 control: Spreadsheet
 documentation: ug
@@ -9,17 +9,15 @@ documentation: ug
 
 # Filtering in Blazor Spreadsheet component
 
-Filtering in the Spreadsheet component enables displaying only relevant rows based on specified criteria, facilitating focused data analysis. To control this functionality, the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowFiltering) property can be used to enable or disable filtering operations in the Spreadsheet.
-
-> * The default value for the `AllowFiltering` property is **true**.
+Filtering in the Spreadsheet component enables the display of only relevant rows based on specified criteria, facilitating focused data analysis. To control this functionality, the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowFiltering) property can be used to enable or disable filtering operations in the Spreadsheet. The default value of the `AllowFiltering` property is **true**.
 
 ## Filter operations
 
 The Blazor Spreadsheet provides multiple filtering options to manage and analyze data effectively:
 
-* **Filter by Cell Value** - Shows only rows containing values that match a specific cell's content
-* **Clear Filter** - Removes active filters from columns
-* **Reapply Filter** - Refreshes filtering results after data modifications
+* **Filter by Cell Value** - Displays only the rows containing values that match a specific cell's content.
+* **Clear Filter** - Removes any active filters applied to columns.
+* **Reapply Filter** - Updates filtering results after changes are made to the data.
 
 ### Accessing filter options via the UI
 
@@ -29,17 +27,17 @@ In the active sheet, filtering can be accessed using any of the following method
    * Select the **Sort & Filter** icon from the **Home** tab
    * Click the filtering option required
 
-   ![Filter options in the Ribbon toolbar](./images/ribbon-filter.png)
+   ![Filter options via the Ribbon toolbar](./images/ribbon-filter.png)
 
 * **Using Context Menu**:
    * Right-click the selected cell
-   * Choose the **Filter** options from the context menu
+   * Choose the **Filter** option from the context menu
 
-   ![Filter options in the context menu](./images/contextmenu-filter.png)
+   ![Filter options via the context menu](./images/contextmenu-filter.png)
 
 ## Filter by cell value
 
-The Blazor Spreadsheet component allows filtering data to display only rows that contain values matching a specific cell's content. This provides a quick way to focus on particular data subsets without creating complex filter conditions.
+The Blazor Spreadsheet component allows filtering of data to display only rows that contain values matching a specific cell's content. This provides a quick way to focus on particular data subsets without the need to create complex filter conditions.
 
 ### Applying cell value filter via the UI
 
@@ -55,24 +53,24 @@ To filter rows by a specific cell's value:
 
 The Blazor Spreadsheet component offers several types of filtering mechanisms for different data analysis needs:
 
-### Excel-Style Checkbox filter
+### Excel-style checkbox filter
 
 The checkbox filter provides a simple way to filter data by checking or unchecking values in a column. When a filter is applied to a column, a dropdown button appears in the column header. Clicking this button displays a menu with the following options:
 
-* **Sort options** - Ascending and Descending sort commands
-* **Clear Filter** - Option to remove all filtering applied to the column
-* **Data Filter** - Submenu containing data type-specific filtering options (Text, Number, and Date) that change dynamically based on the column's content type.
+* **Sort options** - Ascending and descending sort commands
+* **Clear filter** - Option to remove all filtering applied to the column
+* **Data filter** - Submenu containing data type-specific filtering options (Text, Number, and Date) that change dynamically based on the column's content type
 * **Search box** - For quickly finding values in the list
 * **Select All checkbox** - Toggles selection of all values
 * **Value checkboxes** - Individual checkboxes for each unique value in the column
 
-This interface allows for quickly filtering data by simply checking or unchecking values to include or exclude them from the view.
+This interface enables quick filtering of data by simply checking or unchecking values to include or exclude them from the view.
 
-![Checkbox filter options](./images/checkbox-filter.png)
+![Checkbox filter](./images/checkbox-filter.png)
 
-### Text Filters
+### Text filters
 
-Text filters enable filtering based on specific text conditions. Clicking the **Text Filters** option in the filter dropdown reveals additional filtering criteria:
+The text filters enable filtering based on specific text conditions. Clicking the **Text Filters** option in the filter dropdown reveals additional filtering criteria:
 
 * **Equal** - Shows rows where the cell value exactly matches the specified text
 * **Not Equal** - Shows rows where the cell value does not match the specified text
@@ -82,11 +80,11 @@ Text filters enable filtering based on specific text conditions. Clicking the **
 * **Does Not Contain** - Shows rows where the cell value does not include the specified text
 * **Custom Filter** - Opens a dialog for creating more complex filter conditions
 
-![Text filter submenu](./images/text-filter-options.png)
+![Text filter](./images/text-filter-options.png)
 
-### Date Filters
+### Date filters
 
-**Date Filters** provide specialized filtering options for columns containing date values. When working with date columns, clicking the filter button displays a dropdown with both standard filtering options and date-specific filtering:
+The date Filters provide specialized filtering options for columns containing date values. When working with date columns, clicking the filter button displays a dropdown with both standard filtering options and date-specific filtering:
 
 
 * **Equal** - Shows rows where the date exactly matches a specified date
@@ -106,11 +104,11 @@ Text filters enable filtering based on specific text conditions. Clicking the **
   * Expand/collapse year groups using the arrow indicators
   * Select/deselect entire years or specific months with checkboxes
 
-![Date filter submenu](./images/date-filter.gif)
+![Date filter](./images/date-filter.gif)
 
-### Number Filters
+### Number filters
 
-Number filters offer specialized filtering options for columns containing numeric data. The **Number Filters** menu provides both value-based filtering and comprehensive comparison operators:
+The number filters offer specialized filtering options for columns containing numeric data. The **Number Filters** menu provides both value-based filtering and comprehensive comparison operators:
 
 * **Equal** - Shows rows where values exactly match a specified number
 * **Not Equal** - Shows rows where values do not match a specified number
@@ -121,9 +119,9 @@ Number filters offer specialized filtering options for columns containing numeri
 * **Between** - Shows rows where values fall within a specified numeric range
 * **Custom Filter** - Opens a dialog for creating more complex numeric conditions with AND/OR logical operators.
 
-![Number filter submenu](./images/number-filter.png)
+![Number filter](./images/number-filter.png)
 
-### Custom Filter
+### Custom filter
 
 The custom filter option provides advanced filtering capabilities with logical operators. Selecting **Custom Filter** from the filters submenu opens a dialog with the following components:
 
@@ -132,12 +130,11 @@ The custom filter option provides advanced filtering capabilities with logical o
 * **Logical operator** - Choose between AND/OR to combine multiple conditions
 * **MatchCase option** - Enable case-sensitive filtering when checked
 
-![Custom filter dialog](./images/custom-filter.png)
-
+![Custom filter](./images/custom-filter.png)
 
 ## Clear filter
 
-Clear filter functionality in the Spreadsheet component removes active filters from columns, restoring the complete dataset view. This operation ensures seamless transitions between filtered and unfiltered data views without losing information.
+The clear filter functionality in the Spreadsheet component removes active filters from columns, restoring the complete dataset view. This operation ensures seamless transitions between filtered and unfiltered data views without losing information.
 
 ### Clear filter via the UI
 
@@ -148,11 +145,11 @@ To clear existing filters:
 
 ![Clear filter option in Ribbon toolbar](./images/clearfilter-option-ribbon.png)
 
-## Clear filters programmatically
+### Clear filters programmatically
 
-The Blazor Spreadsheet component provides methods to programmatically clear filters that have been applied to the worksheet data.
+The Blazor Spreadsheet component provides method to programmatically clear filters that have been applied to the worksheet data.
 
-### Clear filter from specific column
+#### Clear filter from specific column
 
 The [ClearFilterAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ClearFilterAsync_System_Int32_) method removes filtering from a specific column in the Spreadsheet. The method takes a column index parameter to identify which column's filter should be cleared.
 
@@ -174,16 +171,17 @@ The [ClearFilterAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
     public async Task ClearColumnFilter()
     {
-        await sfSpreadsheet.ClearFilterAsync(1); // Clear filter from column A (index 1)
+        // Clear filter from column A (Index - 1)
+        await sfSpreadsheet.ClearFilterAsync(1);
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-### Clear all filters
+#### Clear all filters
 
-The [ClearAllFiltersAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ClearAllFiltersAsync) method removes all active filters from the Spreadsheet, restoring the complete dataset view. This method is particularly useful when multiple columns have filtering applied and all need to be cleared simultaneously.
+The [ClearAllFiltersAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ClearAllFiltersAsync) method removes all active filters from the Spreadsheet, restoring the complete dataset view. This method is particularly useful when multiple columns have filters applied and need to be cleared at once.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -210,7 +208,7 @@ The [ClearAllFiltersAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 
 ## Reapply filter
 
-Reapply filter functionality updates filtered results to match current data values while preserving existing filter criteria. This feature is particularly useful when working with dynamic data that changes frequently.
+The reapply filter functionality updates filtered results to match current data values while preserving existing filter criteria. This feature is particularly useful when working with dynamic data that changes frequently.
 
 ### Reapplying filter via the UI
 
@@ -249,7 +247,8 @@ The Spreadsheet component supports programmatic filtering using the [FilterByCel
 
     public async Task ApplyFilter()
     {
-        await SpreadsheetRef.FilterByCellValueAsync("New York", "A1"); // Filter column A for "New York"
+        // Filter column A for "New York".
+        await SpreadsheetRef.FilterByCellValueAsync("New York", "A1"); 
     }
 }
 

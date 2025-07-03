@@ -9,30 +9,28 @@ documentation: ug
 
 # Clipboard in Blazor Spreadsheet component
 
-The Spreadsheet provides support for clipboard operations such as **Cut**, **Copy**, and **Paste**. These operations can be enabled or disabled by setting the [`EnableClipboard`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_EnableClipboard) property in the Spreadsheet component.
-
-> By default, the `EnableClipboard` property is set to **true**.
+The Spreadsheet provides support for clipboard operations such as **Cut**, **Copy**, and **Paste**. These operations can be enabled or disabled by setting the [`EnableClipboard`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_EnableClipboard) property in the Spreadsheet component. By default, the `EnableClipboard` property is set to **true**.
 
 ## Cut
 
-Cuts data from a selected range of cells, rows, or columns in a sheet and places it on the clipboard for use elsewhere.
+The cut operation removes data from a selected range of cells, rows, or columns in a sheet and places it on the clipboard for use elsewhere.
 
 **Cutting Data in Spreadsheet**
 
-The cut operation can be performed through multiple methods:
+The cut operation can be performed through the following methods:
 
 * Select the **Cut** button in the **HOME** tab of the Ribbon toolbar to execute the cut operation.
 * Right-click and select the **Cut** option from the context menu.
-* Press the keyboard shortcut `Ctrl + X `(Windows) or `Command + X `(Mac).
+* Press the keyboard shortcut `Ctrl + X`(Windows) or `Command + X`(Mac).
 * Using the [`CutCellAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_CutCellAsync_System_String_) method.
 
 ## Copy
 
-Copies data from a selected range of cells, rows, or columns in a sheet and places it on the clipboard for use elsewhere.
+The copy operation copies data from a selected range of cells, rows, or columns in a sheet and places it on the clipboard for use elsewhere.
 
 **Copying Data in Spreadsheet**
 
-The copy operation can be performed through multiple methods:
+The copy operation can be performed through the following methods:
 
 * Select the **Copy** button in the **HOME** tab of the Ribbon toolbar to execute the copy operation.
 * Right-click and select the **Copy** option from the context menu.
@@ -41,13 +39,13 @@ The copy operation can be performed through multiple methods:
 
 ## Paste
 
-Pastes data from the clipboard into a selected range of cells, rows, or columns. This includes all information such as values and formatting.
+The paste operation pastes data from the clipboard into a selected range of cells, rows, or columns. This includes all information such as values and formatting.
 
-Supports external clipboard functionality. When using cut and paste, the clipboard is cleared after pasting. With copy and paste, the clipboard contents remain unchanged.
+External clipboard functionality is supported. When using cut and paste, the clipboard is cleared after pasting. With copy and paste, the clipboard contents remain unchanged.
 
 **Pasting Data in Spreadsheet**:
 
-The paste operation can be performed through multiple methods:
+The paste operation can be performed through the following methods:
 
 * Select the **Paste** button in the **HOME** tab of the Ribbon toolbar to execute the paste operation.
 * Right-click and select the **Paste** option from the context menu.
@@ -56,7 +54,7 @@ The paste operation can be performed through multiple methods:
 
 > When using the keyboard shortcut keys for cut (`Ctrl + X`) or copy (`Ctrl + C`) from external sources, use the `Ctrl + V` shortcut to paste content into the Spreadsheet.
 
-![UI showing contextmenu cut, copy and paste option](./images/contextcutcopypaste.png)
+![UI showing context menu cut, copy and paste option](./images/contextcutcopypaste.png)
 
 ![UI showing ribbon cut, copy and paste option](./images/cutcopypaste.png)
 
@@ -82,7 +80,6 @@ The paste operation can be performed through multiple methods:
  
 @code {
     public byte[] DataSourceBytes { get; set; }
-
     public SfSpreadsheet SpreadsheetRef { get; set; }
 
     protected override void OnInitialized()
@@ -113,9 +110,10 @@ The paste operation can be performed through multiple methods:
 {% endhighlight %}
 {% endtabs %}
 
-## Prevent Pasting in the Spreadsheet
+### Prevent pasting
 
-The following example illustrates how to prevent the paste action in Spreadsheet. In the [`Pasting`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.PastingEventArgs.html) event, setting the `Cancel` argument to **true** prevents the paste operation.
+The following example illustrates how to prevent the paste action in the Spreadsheet. In the [`Pasting`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.PastingEventArgs.html) event, setting the `Cancel` argument to **true** prevents the paste operation.
+
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
  
