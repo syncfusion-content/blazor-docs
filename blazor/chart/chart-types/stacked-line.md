@@ -792,7 +792,7 @@ The [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Cha
 }
 ```
 
-{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVStnhHpUjFzPHz?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/hNVStnhHpUjFzPHz?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ### Customization
 
@@ -892,7 +892,7 @@ We can customize the border of the stack labels using the [ChartStackLabelBorder
     };
 }
 ```
-{% previewsample "https://blazorplayground.syncfusion.com/embed/VthyDnhRpUCdUdvZ?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+{% previewsample "https://blazorplayground.syncfusion.com/embed/VthyDnhRpUCdUdvZ?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 ## Events
 
