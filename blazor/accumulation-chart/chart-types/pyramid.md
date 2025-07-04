@@ -213,6 +213,45 @@ By setting the [Explode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 ![Explode in Blazor Pyramid Chart](../images/pyramid/blazor-pyramid-chart-explode.png)
 {% previewsample "https://blazorplayground.syncfusion.com/embed/BthAMBMATgJWwkNT?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
+## Border radius
+
+The corners of the first data point and last data point in the pyramid chart series can be rounded using the [BorderRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_BorderRadius) property within the [AccumulationChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html).
+
+```cshtml
+@using Syncfusion.Blazor.Charts
+
+<SfAccumulationChart Title="Food Consumption Pyramid">
+    <AccumulationChartLegendSettings Visible="false">
+    </AccumulationChartLegendSettings>
+    <AccumulationChartSeriesCollection>
+        <AccumulationChartSeries DataSource="@PyramidChartPoints" XName="Foods" YName="Percentage" Type="AccumulationType.Pyramid" Width="45%" Height="80%" BorderRadius="8">
+            <AccumulationDataLabelSettings Visible="true" Position="AccumulationLabelPosition.Outside" Name="DataLabelMappingName">
+            </AccumulationDataLabelSettings>
+        </AccumulationChartSeries>
+    </AccumulationChartSeriesCollection>
+</SfAccumulationChart>
+
+@code {
+    public List<PyramidData> PyramidChartPoints { get; set; } = new List<PyramidData>
+    {
+          new PyramidData { Foods = "Oils", Percentage = 2, DataLabelMappingName = "Oils: 2%" },
+          new PyramidData { Foods = "Nuts", Percentage = 10, DataLabelMappingName = "Nuts: 10%" },
+          new PyramidData { Foods = "Fruits", Percentage = 15, DataLabelMappingName = "Fruits: 15%" },
+          new PyramidData { Foods = "Dairy", Percentage = 23, DataLabelMappingName = "Dairy: 23%" },
+          new PyramidData { Foods = "Vegetables", Percentage = 23, DataLabelMappingName = "Vegetables: 23%" },
+          new PyramidData { Foods = "Grains", Percentage = 27, DataLabelMappingName = "Grains: 27%"}
+    };
+    public class PyramidData
+    {
+        public string Foods { get; set; }
+        public double Percentage { get; set; }
+        public string DataLabelMappingName { get; set; }
+    }
+}
+```
+![Blazor Pyramid Chart with border radius applied.](../images/pyramid/blazor-pyramid-border-radius.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LthyDHBRqlAFfKbF?appbar=true&editor=true&result=true&errorlist=true&theme=bootstrap5" %}
+
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pyramid?theme=bootstrap5) to know various features of accumulation charts and how it is used to represent numeric proportional data.
 
 ## See also

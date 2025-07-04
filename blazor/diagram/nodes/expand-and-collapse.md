@@ -7,7 +7,7 @@ control: Diagram Component
 documentation: ug
 ---
 
-# Expand and Collapse support for Node in Blazor Diagram Component
+# Expand and Collapse Support for Nodes in Blazor Diagram Component
 
 Diagram provides support to describe the state of the node. i.e., whether the node is in an expanded or collapsed state. The IsExpanded property of node is used to expand or collapse its children nodes.The Expand and Collapse support is used to compress the hierarchy view so that only the roots of each elements are visible.
 
@@ -247,13 +247,13 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Displaying DiagramIcon in Blazor Diagram layout](../images/blazor-diagram-ExpandCollapse-Layout.gif)
 
-## How to customize the expand and collapse icon
+## How to Customize Expand and Collapse Icon
 Diagram allows you to customize the Expand and collapse Icons of the Node. To explore Expand and Collapse icon properties, refer to [DiagramExpandIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExpandIcon.html) and [DiagramCollapseIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramCollapseIcon.html).
 
-### Size
+### How to Update Expand and Collapse Icon Size
 The size of the icon can be changed with the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramIcon.html#Syncfusion_Blazor_Diagram_DiagramIcon_Height) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramIcon.html#Syncfusion_Blazor_Diagram_DiagramIcon_Width) properties.
 
-### Shape
+### How to Customize Expand and Collapse Icon Shape
 
 The shape of an [ExpandIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_ExpandIcon) and a [CollapseIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_CollapseIcon) can be changed by using the Shape property of [DiagramExpandIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExpandIcon.html) and [DiagramCollapseIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramCollapseIcon.html) respectively. 
 To explore the different types of DiagramExpandIcon shapes, refer to [DiagramExpandIcons](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramExpandIcons.html).
@@ -346,7 +346,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Displaying DiagramIcon in Blazor Diagram](../images/blazor-diagram-ExpandCollapse-Shape.png)
 
-### How to customize the appearance of expand and collapse icon 
+### How to Customize Expand and Collapse Icon Appearance 
 
 The appearance of the Icon can be customized by changing its [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramIcon.html#Syncfusion_Blazor_Diagram_DiagramIcon_Fill), [BorderColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramIcon.html#Syncfusion_Blazor_Diagram_DiagramIcon_BorderColor), [BorderWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramIcon.html#Syncfusion_Blazor_Diagram_DiagramIcon_BorderWidth), and [CornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramIcon.html#Syncfusion_Blazor_Diagram_DiagramIcon_CornerRadius) properties.
 
@@ -547,7 +547,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Displaying DiagramIcon in Blazor Diagram layout](../images/blazor-diagram-ExpandCollapse-Shape-CornerRadius.png)
 
-### How to position and align the expand and collapse icon
+### How to Position and Align Expand and Collapse Icon
 
 Diagram allows you to customize the position and alignment of the Icon efficiently. An Icon can be aligned in respect to the node boundaries. The following properties are used to position the Icon. 
 
@@ -675,7 +675,7 @@ The following table shows the relationship between the Icon position and Icon Of
 ```
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ExpandAndCollapse/IsExpandedProperty)
 
-### Template support for expand and collapse icon
+### How to Use Template Support for Expand and Collapse Icon
 
 The Blazor Diagram component provides template support for customizing the expand and collapse icons of nodes. This feature allows you to create personalized visual representations for these interactive elements, enhancing the user experience and matching your application's design language.
 
@@ -791,3 +791,241 @@ To implement a custom template for expand and collapse icons, please refer to th
 ![Displaying DiagramIcon in Blazor Diagram layout](../images/ExpandCollapseIconTemplate.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ExpandAndCollapse/ExpandCollapseIconTemplate)
+
+### How to Set Padding for the Expand/Collapse Icon
+
+The Blazor Diagram component features a [Padding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramIcon.html#Syncfusion_Blazor_Diagram_DiagramIcon_Padding) property specifically designed for the expand and collapse icons of the nodes. This property allows you to customize the spacing around these icons, providing greater control over their positioning. By adjusting the Padding, you can define the space that the icon should maintain from its border.
+The following code shows how to set the Padding property of expand/collapse icon.
+
+
+```csharp
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Height="600px" Nodes="@nodes" Connectors="@connectors" />
+
+@code
+{
+    //Initialize the diagram's nodes collection
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    //Initialize the diagram's connectors collection
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    protected override void OnInitialized()
+    {
+        Node node1 = new Node()
+        {
+            ID = "node1",
+            Width = 100,
+            Height = 100,
+            OffsetX = 300,
+            OffsetY = 300,
+            IsExpanded = false,
+            Style = new ShapeStyle()
+            {
+                Fill = "#6BA5D7",
+                StrokeColor = "white"
+            },
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+            {
+                new ShapeAnnotation()
+                {
+                    Content="Node1"
+                }
+            },
+            ExpandIcon = new DiagramExpandIcon()
+            {
+                Shape = DiagramExpandIcons.Minus,
+                Height = 20,
+                Width = 20,
+                Fill = "Gray",
+                   Padding = new DiagramThickness(){
+                Top = 1,
+                Bottom = 1,
+                Left = 1,
+                Right = 1,
+                },  
+                BorderColor = "Blue",
+                BorderWidth = 3,
+            },
+            CollapseIcon = new DiagramCollapseIcon()
+            {
+                Shape = DiagramCollapseIcons.Plus,
+                Height = 20,
+                Width = 20,
+                Fill = "Gray",
+                BorderColor = "Blue",
+                   Padding = new DiagramThickness(){
+                Top = 1,
+                Bottom = 1,
+                Left = 1,
+                Right = 1,
+                },   
+                BorderWidth = 3,
+            },
+        };
+        nodes.Add(node1);
+        Node node2 = new Node()
+        {
+            ID = "node2",
+            Width = 100,
+            Height = 100,
+            OffsetX = 300,
+            OffsetY = 500,
+            Style = new ShapeStyle()
+            {
+                Fill = "#6BA5D7",
+                StrokeColor = "white"
+            },
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+            {
+                new ShapeAnnotation()
+                {
+                    Content="Node2"
+                }
+            },
+            ExpandIcon = new DiagramExpandIcon()
+            {
+                Shape = DiagramExpandIcons.Minus,
+                Height = 20,
+                Width = 20,
+            },
+            CollapseIcon = new DiagramCollapseIcon()
+            {
+                Shape = DiagramCollapseIcons.Plus,
+                Height = 20,
+                Width = 20,
+            },
+        };
+        nodes.Add(node2);
+        Connector connector1 = new Connector()
+            {
+                ID = "connector1",
+                SourceID = "node1",
+                TargetID = "node2",
+            };
+        connectors.Add(connector1);
+    }
+}
+```
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ExpandAndCollapse/ExpanCollapsePadding)
+
+### How to Set Margin for the Expand/Collapse Icon
+
+The Blazor Diagram component includes a [Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramIcon.html#Syncfusion_Blazor_Diagram_DiagramIcon_Margin) property for the expand and collapse icons of the nodes. This property defines the space from the actual offset values of the icon, allowing you to precisely adjust how the icons are positioned relative to their surrounding elements.
+
+```csharp
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Height="600px" Nodes="@nodes" Connectors="@connectors" />
+
+@code
+{
+    //Initialize the diagram's nodes collection
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    //Initialize the diagram's connectors collection
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    protected override void OnInitialized()
+    {
+        Node node1 = new Node()
+        {
+            ID = "node1",
+            Width = 100,
+            Height = 100,
+            OffsetX = 300,
+            OffsetY = 300,
+            IsExpanded = false,
+            Style = new ShapeStyle()
+            {
+                Fill = "#6BA5D7",
+                StrokeColor = "white"
+            },
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+            {
+                new ShapeAnnotation()
+                {
+                    Content="Node1"
+                }
+            },
+            ExpandIcon = new DiagramExpandIcon()
+            {
+                Shape = DiagramExpandIcons.Minus,
+                Height = 20,
+                Width = 20,
+                Fill = "Gray",
+               Margin = new DiagramThickness()
+                {
+                    Top = 5,
+                    Bottom = 5,
+                    Left = 5,
+                    Right = 5,
+                }, 
+                BorderColor = "Blue",
+                BorderWidth = 3,
+            },
+            CollapseIcon = new DiagramCollapseIcon()
+            {
+                Shape = DiagramCollapseIcons.Plus,
+                Height = 20,
+                Width = 20,
+                Fill = "Gray",
+                BorderColor = "Blue",
+               Margin = new DiagramThickness()
+                {
+                    Top = 5,
+                    Bottom = 5,
+                    Left = 5,
+                    Right = 5,
+                },    
+                BorderWidth = 3,
+            },
+        };
+        nodes.Add(node1);
+        Node node2 = new Node()
+        {
+            ID = "node2",
+            Width = 100,
+            Height = 100,
+            OffsetX = 300,
+            OffsetY = 500,
+            Style = new ShapeStyle()
+            {
+                Fill = "#6BA5D7",
+                StrokeColor = "white"
+            },
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+            {
+                new ShapeAnnotation()
+                {
+                    Content="Node2"
+                }
+            },
+            ExpandIcon = new DiagramExpandIcon()
+            {
+                Shape = DiagramExpandIcons.Minus,
+                Height = 20,
+                Width = 20,
+            },
+            CollapseIcon = new DiagramCollapseIcon()
+            {
+                Shape = DiagramCollapseIcons.Plus,
+                Height = 20,
+                Width = 20,
+            },
+        };
+        nodes.Add(node2);
+        Connector connector1 = new Connector()
+            {
+                ID = "connector1",
+                SourceID = "node1",
+                TargetID = "node2",
+            }; 
+        connectors.Add(connector1);
+    }
+}
+```
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Nodes/ExpandAndCollapse/ExpanCollapseMargin)
+
+## See also
+
+* [How to Find the Expand and Collapse State of a Node During Initial Load and Runtime in a Diagram](https://support.syncfusion.com/kb/article/18728/how-to-find-the-expand-and-collapse-state-of-a-node-during-initial-load-and-runtime-in-a-diagram)

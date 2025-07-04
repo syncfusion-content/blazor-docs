@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Positioning in Blazor Diagram Component | Syncfusion
+title: Positioning a Port in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about positioning in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# How to position node’s port
+# Positioning a Port in Blazor Diagram Component
 
 Diagram allows you to customize the position and appearance of the port efficiently. Ports can be aligned relative to the node boundaries. It has Margin, Offset, Horizontal, and Vertical alignment settings. It is quite tricky when all four alignments are used together but gives more control over alignments properties of the [PointPort](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PointPort.html) class. Ports of a node can be positioned using the following properties of `PointPort`.
 
@@ -16,7 +16,7 @@ Diagram allows you to customize the position and appearance of the port efficien
 * VerticalAlignment
 * Margin
 
-## How to change offset at runtime
+## How to Change Offset at Runtime
 
 The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PointPort.html#Syncfusion_Blazor_Diagram_PointPort_Offset) property is used to align the ports based on fractions. 0 represents top/left corner, 1 represents bottom/right corner, and 0.5 represents half of width/height.
 
@@ -82,9 +82,66 @@ The following table shows the relationship between the shape port position and p
 | (1,0.5) | ![Blazor Diagram Port in Right Center Offset Values](../images/blazor-diagram-port-in-rightcenter-offset-values.png) |
 | (1,1) | ![Blazor Diagram Port in Right Bottom Offset Values](../images/blazor-diagram-port-in-rightbottom-offset-values.png) |
 
+## How to Set Path Position for Connector Port
 
+The `PathPosition` property allows you to place a connector port along the path of a connector. It accepts a value between 0 to 1, where:
 
-## How to change Horizontal and Vertical alignment
+* 0 represents the starting point of the connector.
+* 1 represents the endpoint of the connector.
+
+You can set any value between 0 and 1 to position the port at a specific location along the connector's path.
+
+>**Note:** The default value of PathPosition is 0.5, which places the port at the midpoint of the connector.
+
+| PathPosition value | Output |
+|---|---|
+| 0 | ![Start](../images/ConnectorPort/ConnectorPortPathPosition0.png) |
+| 0.5 | ![Center](../images/ConnectorPort/ConnectorPortDefault.png) |
+| 1 | ![End](../images/ConnectorPort/ConnectorPortPathPosition1.png) |
+
+The following code example demonstrates how to set the PathPosition for a connector port.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Height="600px" Connectors="@connectors">
+</SfDiagramComponent>
+
+@code
+{
+    //Define diagram's connector collection
+    DiagramObjectCollection<Connector> connectors;
+
+    protected override void OnInitialized()
+    {
+        // A connector is created and stored in connectors collection.
+        connectors = new DiagramObjectCollection<Connector>();
+
+        // Create connector
+        Connector connector = new Connector()
+        {
+            ID = "connector",
+            SourcePoint = new DiagramPoint() { X = 400, Y = 200 },
+            TargetPoint = new DiagramPoint() { X = 550, Y = 350 },
+            Type = ConnectorSegmentType.Orthogonal,
+            Ports = new DiagramObjectCollection<ConnectorPort>()
+            {
+                new ConnectorPort()
+                {
+                    ID = "port",
+                    Visibility = PortVisibility.Visible,
+                    Shape = PortShapes.Square,
+                    PathPosition = 0,
+                }
+            }
+        };
+        connectors.Add(connector);
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Ports/ConnectorPort/ConnectorPortPathPosition)
+
+## How to Change Horizontal and Vertical Alignment
 
 The [HorizontalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_HorizontalAlignment) property of the port is used to set how the port is horizontally aligned at the port position determined from the fraction values. The [VerticalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_VerticalAlignment) property is used to set how the port is vertically aligned at the port position.
 
@@ -156,7 +213,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 N> By default, the value of the `HorizontalAlignment` and `VerticalAlignment` is `Center`. The alignment is positioned based on the offset value.
 
-## How to update margin for port
+## How to Update Margin for Port
 
 [Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_Margin) is an absolute value used to add some blank space to any one of its four sides. The ports can be displaced with the margin property. The following code example explains how to align a port based on its Offset, HorizontalAlignment, VerticalAlignment, and Margin values.
 

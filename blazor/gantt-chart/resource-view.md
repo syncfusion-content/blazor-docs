@@ -88,7 +88,7 @@ namespace BlazorGanttChart.Data
             public int PrimaryId { get; set; }
             public int TaskId { get; set; }
             public int ResourceId { get; set; }
-            public double Unit { get; set; }
+            public double? Unit { get; set; }
         }
 
         public static List<ResourceInfoModel> GetResources = new List<ResourceInfoModel>()
@@ -237,7 +237,7 @@ namespace BlazorGanttChart.Data
             public int PrimaryId { get; set; }
             public int TaskId { get; set; }
             public int ResourceId { get; set; }
-            public double Unit { get; set; }
+            public double? Unit { get; set; }
         }
 
         public static List<ResourceInfoModel> GetResources = new List<ResourceInfoModel>()
@@ -379,7 +379,7 @@ namespace BlazorGanttChart.Data
             public int PrimaryId { get; set; }
             public int TaskId { get; set; }
             public int ResourceId { get; set; }
-            public double Unit { get; set; }
+            public double? Unit { get; set; }
         }
 
         public static List<ResourceInfoModel> GetResources = new List<ResourceInfoModel>()
@@ -491,7 +491,7 @@ For a compact view, multiple tasks assigned to each resource can be visualized i
 
 namespace BlazorGanttChart.Data
 {
-        public class GanttModel
+    public class GanttModel
     {
         public class ResourceInfoModel
         {
@@ -519,7 +519,7 @@ namespace BlazorGanttChart.Data
             public int PrimaryId { get; set; }
             public int TaskId { get; set; }
             public int ResourceId { get; set; }
-            public double Unit { get; set; }
+            public double? Unit { get; set; }
         }
 
         public static List<ResourceInfoModel> GetResources = new List<ResourceInfoModel>()
@@ -673,7 +673,7 @@ Within the Gantt chart, taskbar repositioning tasks among different resources ca
 
 namespace BlazorGanttChart.Data
 {
-        public class GanttModel
+    public class GanttModel
     {
         public class ResourceInfoModel
         {
@@ -701,7 +701,7 @@ namespace BlazorGanttChart.Data
             public int PrimaryId { get; set; }
             public int TaskId { get; set; }
             public int ResourceId { get; set; }
-            public double Unit { get; set; }
+            public double? Unit { get; set; }
         }
 
         public static List<ResourceInfoModel> GetResources = new List<ResourceInfoModel>()
@@ -884,7 +884,7 @@ namespace BlazorGanttChart.Data
             public int PrimaryId { get; set; }
             public int TaskId { get; set; }
             public int ResourceId { get; set; }
-            public double Unit { get; set; }
+            public double? Unit { get; set; }
         }
 
         public static List<ResourceInfoModel> GetResources = new List<ResourceInfoModel>()
@@ -1052,7 +1052,7 @@ namespace BlazorGanttChart.Data
             public int PrimaryId { get; set; }
             public int TaskId { get; set; }
             public int ResourceId { get; set; }
-            public double Unit { get; set; }
+            public double? Unit { get; set; }
         }
 
         public static List<ResourceInfoModel> GetResources = new List<ResourceInfoModel>()
