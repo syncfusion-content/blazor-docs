@@ -65,6 +65,176 @@ The following example code depicts how to set the Scheduler to display Monday, W
 
 ![Set Working Days in Blazor Scheduler](images/blazor-scheduler-workdays.png)
 
+## Dynamically setting working days
+
+When you need to change the working days of the Scheduler dynamically after component initialization, you can use the Scheduler methods provided for this purpose.
+
+### Using SetWorkDaysAsync method
+
+The `SetWorkDaysAsync` method allows you to dynamically set specific days as working days. This is useful when you want to change the working days based on certain conditions or user interactions during runtime.
+
+```cshtml
+@using Syncfusion.Blazor.Schedule
+@using Syncfusion.Blazor.Buttons
+
+<div class="col-lg-12 control-section">
+    <div class="control-wrapper">
+        <div class="schedule-container">
+            <div class="control-section">
+                <div class="content-wrapper">
+                    <div>
+                        <SfButton OnClick="@UpdateWorkingDays">Update to Monday, Wednesday, Friday</SfButton>
+                        <SfButton OnClick="@ResetWorkingDays">Reset to Default</SfButton>
+                    </div>
+                    <SfSchedule @ref="ScheduleRef" TValue="AppointmentData" Height="550px" Width="100%" SelectedDate="@(new DateTime(2023, 5, 6))">
+                        <ScheduleViews>
+                            <ScheduleView Option="View.Week"></ScheduleView>
+                            <ScheduleView Option="View.WorkWeek"></ScheduleView>
+                            <ScheduleView Option="View.Month"></ScheduleView>
+                        </ScheduleViews>
+                    </SfSchedule>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    SfSchedule<AppointmentData> ScheduleRef;
+    
+    public async Task UpdateWorkingDays()
+    {
+        // Set Monday, Wednesday, and Friday as working days
+        await ScheduleRef.SetWorkDaysAsync(new int[] { 1, 3, 5 });
+    }
+    
+    public async Task ResetWorkingDays()
+    {
+        // Call ResetWorkDaysAsync to restore default working days
+        await ScheduleRef.ResetWorkDaysAsync();
+    }
+    
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+    }
+}
+```
+
+In this example:
+- We create two buttons to demonstrate dynamically changing working days
+- The `UpdateWorkingDays` method uses `SetWorkDaysAsync` to set Monday (1), Wednesday (3), and Friday (5) as working days
+- When `SetWorkDaysAsync` is called, the Scheduler immediately updates its view to reflect the new working days
+
+### Using ResetWorkDaysAsync method
+
+The `ResetWorkDaysAsync` method allows you to reset the working days back to their default state. By default, the Scheduler considers Monday to Friday (1-5) as working days. This method is useful when you want to revert any custom working days you've set previously.
+
+```cshtml
+@using Syncfusion.Blazor.Schedule
+@using Syncfusion.Blazor.DropDowns
+
+<div class="col-lg-12 control-section">
+    <div class="control-wrapper">
+        <div class="schedule-container">
+            <div class="control-section">
+                <div class="content-wrapper">
+                    <div class="row">
+                        <div class="col-4">
+                            <label>Select Working Days Pattern:</label>
+                            <SfDropDownList TValue="string" TItem="WorkDaysPattern" @bind-Value="@SelectedPattern" DataSource="@WorkDaysPatterns" 
+                                           Placeholder="Select a working days pattern">
+                                <DropDownListFieldSettings Text="Name" Value="Id"></DropDownListFieldSettings>
+                                <DropDownListEvents TValue="string" ValueChange="OnPatternChange"></DropDownListEvents>
+                            </SfDropDownList>
+                        </div>
+                    </div>
+                    <SfSchedule @ref="ScheduleRef" TValue="AppointmentData" Height="550px" Width="100%" SelectedDate="@(new DateTime(2023, 5, 6))">
+                        <ScheduleViews>
+                            <ScheduleView Option="View.Week"></ScheduleView>
+                            <ScheduleView Option="View.WorkWeek"></ScheduleView>
+                            <ScheduleView Option="View.Month"></ScheduleView>
+                        </ScheduleViews>
+                    </SfSchedule>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    SfSchedule<AppointmentData> ScheduleRef;
+    public string SelectedPattern { get; set; } = "default";
+    
+    public List<WorkDaysPattern> WorkDaysPatterns = new List<WorkDaysPattern>
+    {
+        new WorkDaysPattern { Id = "default", Name = "Default (Monday-Friday)" },
+        new WorkDaysPattern { Id = "alt", Name = "Alternate Days (Mon, Wed, Fri)" },
+        new WorkDaysPattern { Id = "weekend", Name = "Weekend Included (Thu-Sun)" },
+        new WorkDaysPattern { Id = "reset", Name = "Reset to Default" }
+    };
+    
+    public async Task OnPatternChange(ChangeEventArgs<string, WorkDaysPattern> args)
+    {
+        switch (args.Value)
+        {
+            case "alt":
+                // Set Monday, Wednesday, Friday
+                await ScheduleRef.SetWorkDaysAsync(new int[] { 1, 3, 5 });
+                break;
+            case "weekend":
+                // Set Thursday, Friday, Saturday, Sunday
+                await ScheduleRef.SetWorkDaysAsync(new int[] { 4, 5, 6, 0 });
+                break;
+            case "reset":
+                // Reset to default working days
+                await ScheduleRef.ResetWorkDaysAsync();
+                break;
+            default:
+                // Default is already set, but to be explicit
+                await ScheduleRef.ResetWorkDaysAsync();
+                break;
+        }
+    }
+    
+    public class WorkDaysPattern
+    {
+        public string Id { get; set; }
+        public string Name { get; set; }
+    }
+    
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+    }
+}
+```
+
+In this example:
+- We create a dropdown list with different working day patterns
+- The `OnPatternChange` event handler demonstrates how to set different working day patterns and how to use `ResetWorkDaysAsync`
+- When "Reset to Default" is selected, the `ResetWorkDaysAsync` method is called to restore the default working days configuration
+
+When `ResetWorkDaysAsync` is called, the working days revert back to Monday through Friday (1-5), regardless of any custom configuration that was previously set using `SetWorkDaysAsync`.
+
 ## Hiding weekend days
 
 The [`ShowWeekend`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_ShowWeekend) property is used to either show or hide the weekend days of a week and it is not applicable on Work week view (as non-working days are usually not displayed on work week view). By default, it is set to `true`. The days which are not a part of the working days collection of a Scheduler are usually considered as non-working or weekend days.
