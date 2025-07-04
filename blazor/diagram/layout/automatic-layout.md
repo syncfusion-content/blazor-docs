@@ -90,7 +90,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Blazor Complex Hierarchical Diagram](../images/BasicLayout.png)
 
-## Updating layout
+## How to Update Layout
 
 The DoLayoutAsync function is used to re-arrange the nodes in the diagram area whenever any of the following occur:
 
@@ -107,7 +107,7 @@ This function refreshes the layout dynamically to reflect these updates. By invo
 
 The function can be called on-demand, making it flexible for use in scenarios where automatic layout updates are required only at specific times, such as after multiple changes or interactions.
 
-## Configuring Spacing in Layouts
+## How to Configure Spacing in Layouts
 
 The [HorizontalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_HorizontalSpacing) and [VerticalSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_VerticalSpacing) properties of layouts are used to customize the space between successive nodes in the diagram, both horizontally and vertically. These properties help control the overall layout and visual organization of nodes, ensuring clear and consistent spacing across the diagram.
 
@@ -141,7 +141,7 @@ The default value for Horizontal Spacing is 30, and the default value for Vertic
 
 ![Blazor Complex Hierarchical Diagram](../images/LayoutSpacing.png)
 
-## Configuring Orientation for Layouts
+## How to Configure Layout Orientation
 
 [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Orientation) is used to arrange the layout based on the direction. It determines how the nodes are aligned in the diagram. The default value for orientation is [TopToBottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutOrientation.html#Syncfusion_Blazor_Diagram_LayoutOrientation_TopToBottom), which arranges the nodes vertically with the root placed at the top.
 
@@ -168,7 +168,7 @@ The default value for Horizontal Spacing is 30, and the default value for Vertic
 
 >**Note:** [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Orientation) is not applicable to [RadialTree](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutType.html#Syncfusion_Blazor_Diagram_LayoutType_RadialTree) layout. For [Flowchart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutType.html#Syncfusion_Blazor_Diagram_LayoutType_Flowchart) layout, only [TopToBottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutOrientation.html#Syncfusion_Blazor_Diagram_LayoutOrientation_TopToBottom) and [LeftToRight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutOrientation.html#Syncfusion_Blazor_Diagram_LayoutOrientation_LeftToRight) orientations are supported.
 
-## Configuring Layout Alignments
+## How to Configure Layout Alignments
 
 [HorizontalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_HorizontalAlignment) and [VerticalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_VerticalAlignment) properties control how the layout is positioned or stretched along the horizontal and vertical axes, respectively. These settings determine the positioning of the diagram elements (nodes and connectors) within the available space.
 
@@ -178,11 +178,11 @@ The possible values for HorizontalAlignment are:
 
 | Horizontal Alignment | Description |
 |-------- | -------- |
-| Stretch | Stretches the diagram element horizontally to its immediate parent, filling the available space. |
-| Left | Aligns the diagram element to the left side of its immediate parent. |
-| Right | Aligns the diagram element to the right side of its immediate parent. |
-| Center | Aligns the diagram element horizontally to the center of its immediate parent. |
-| Auto | Aligns the diagram element based on its immediate parent’s horizontal alignment property (default behavior). |
+| [Stretch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.HorizontalAlignment.html#Syncfusion_Blazor_Diagram_HorizontalAlignment_Stretch) | Stretches the diagram element horizontally to its immediate parent, filling the available space. |
+| [Left](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.HorizontalAlignment.html#Syncfusion_Blazor_Diagram_HorizontalAlignment_Left) | Aligns the diagram element to the left side of its immediate parent. |
+| [Right](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.HorizontalAlignment.html#Syncfusion_Blazor_Diagram_HorizontalAlignment_Right) | Aligns the diagram element to the right side of its immediate parent. |
+| [Center](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.HorizontalAlignment.html#Syncfusion_Blazor_Diagram_HorizontalAlignment_Center) | Aligns the diagram element horizontally to the center of its immediate parent. |
+| [Auto](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.HorizontalAlignment.html#Syncfusion_Blazor_Diagram_HorizontalAlignment_Auto) | Aligns the diagram element based on its immediate parent’s horizontal alignment property (default behavior). |
 
 ```csharp
 <SfDiagramComponent @ref="diagram" Width="900px" Height="800px">
@@ -205,11 +205,11 @@ The possible values for VerticalAlignment are:
 
 | Vertical Alignment | Description |
 |-------- | -------- |
-| Stretch | Stretches the diagram element vertically to its immediate parent, filling the available space. |
-| Top | Aligns the diagram element to the top side of its immediate parent. |
-| Bottom | Aligns the diagram element to the bottom side of its immediate parent. |
-| Center | Aligns the diagram element vertically to the center of its immediate parent. |
-| Auto | Aligns the diagram element based on its immediate parent’s vertical alignment property (default behavior). |
+| [Stretch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.VerticalAlignment.html#Syncfusion_Blazor_Diagram_VerticalAlignment_Stretch) | Stretches the diagram element vertically to its immediate parent, filling the available space. |
+| [Top](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.VerticalAlignment.html#Syncfusion_Blazor_Diagram_VerticalAlignment_Top) | Aligns the diagram element to the top side of its immediate parent. |
+| [Bottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.VerticalAlignment.html#Syncfusion_Blazor_Diagram_VerticalAlignment_Bottom) | Aligns the diagram element to the bottom side of its immediate parent. |
+| [Center](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.VerticalAlignment.html#Syncfusion_Blazor_Diagram_VerticalAlignment_Center) | Aligns the diagram element vertically to the center of its immediate parent. |
+| [Auto](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.VerticalAlignment.html#Syncfusion_Blazor_Diagram_VerticalAlignment_Auto) | Aligns the diagram element based on its immediate parent’s vertical alignment property (default behavior). |
 
 ```csharp
 <SfDiagramComponent @ref="diagram" Width="900px" Height="800px">
@@ -226,7 +226,7 @@ The possible values for VerticalAlignment are:
 ```
 ![Blazor Complex Hierarchical Diagram](../images/LayoutVerticalAlignmentBottom.png)
 
-## Configuring the Layout Margin
+## How to Configure Layout Margins
 
 The [LayoutMargin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Margin) property defines the space between the viewport and the layout, creating a space around the diagram. The default margin is left: 50, top: 50, right: 0, bottom: 0.
 
@@ -248,7 +248,7 @@ You can customize the margin for each side (top, right, bottom, left) using the 
 }
 ```
 
-## Handling Connector Segment Overlap in Layout
+## How to Handle Connector Segment Overlap in Layout
 
 The [SamePoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_SamePoint) property controls whether connectors in the layout should be arranged without overlapping other connectors. By setting this property to true, the diagram ensures that connectors are spaced out properly to avoid any overlap, making the layout more readable and visually clear.
 
@@ -272,3 +272,27 @@ Here’s an example of how to use this property:
 * [How to generate the organization chart](./organizational-chart)
 
 * [How to generate the hierarchical layout](./hierarchical-layout)
+
+* [How to Create a Family Tree Structure in Blazor Diagram](https://support.syncfusion.com/kb/article/16300/how-to-create-a-family-tree-structure-in-blazor-diagram)
+
+* [Create and Render the Organization Chart Diagram by Using SQL Database](https://support.syncfusion.com/kb/article/12329/create-and-render-the-organization-chart-diagram-by-using-sql-database)
+
+* [How to Create the Org Chart Blazor Diagram by Using MDF Database](https://support.syncfusion.com/kb/article/12128/how-to-create-the-org-chart-blazor-diagram-by-using-mdf-database)
+
+* [Why Is It Important to Set the ParentID to Empty for at Least One Node When Creating a Layout in Syncfusion Blazor Diagram?](https://support.syncfusion.com/kb/article/18708/why-is-it-important-to-set-the-parentid-to-empty-for-at-least-one-node-when-creating-a-layout-in-syncfusion-blazor-diagram)
+
+* [How to Change the Parent Child Relationship in Layout at Runtime](https://support.syncfusion.com/kb/article/11632/how-to-change-the-parent-child-relationship-in-layout-at-runtime)
+
+* [How to Customize Connector Styles in a Hierarchical Layout in Blazor Diagram](https://support.syncfusion.com/kb/article/16310/how-to-customize-connector-styles-in-a-hierarchical-layout-in-blazor-diagram)
+
+* [How to Disable Node Interaction While Maintaining Layout Updates in Syncfusion Blazor Diagram](https://support.syncfusion.com/kb/article/20189/how-to-disable-node-interaction-while-maintaining-layout-updates-in-syncfusion-blazor-diagram)
+
+* [How to Embed Diagrams Inside Panels of a Dashboard Layout in Blazor](https://support.syncfusion.com/kb/article/18993/how-to-embed-diagrams-inside-panels-of-a-dashboard-layout-in-blazor)
+
+* [How to Drag and Drop Node in a Layout in Blazor Diagram](https://support.syncfusion.com/kb/article/16301/how-to-drag-and-drop-node-in-a-layout-in-blazor-diagram)
+
+* [How to Generate a Hierarchical Layout with Annotation at Runtime](https://support.syncfusion.com/kb/article/17884/how-to-generate-a-hierarchical-layout-with-annotation-at-runtime)
+
+* [How to Create an Organizational Chart Using Blazor Diagram](https://support.syncfusion.com/kb/article/16312/how-to-create-an-organizational-chart-using-blazor-diagram)
+
+* [How to Integrate Syncfusion SfDiagramComponent into a SfTab in a Blazor Application](https://support.syncfusion.com/kb/article/17224/how-to-integrate-syncfusion-sfdiagramcomponent-into-a-sftab-in-a-blazor-application)

@@ -7,14 +7,14 @@ control: Diagram Component
 documentation: ug
 ---
 
-# SfDiagramComponent Overview
+# Diagram Component Overview
  The Blazor Diagram component is a high-performance and versatile library designed for visualizing, creating, and editing interactive diagrams. With comprehensive support for flowcharts, organizational charts, mind maps, and other diagram types, this component empowers users to create sophisticated visual representations of data and processes with ease.
 
  {% youtube "youtube:https://www.youtube.com/watch?v=LIlVk9iOo2U" %}
 
- ![SfDiagramComponent Overview](images/flowchart.png)
+ ![Diagram Component Overview](images/flowchart.png)
 
-## Key features of SfDiagramComponent are as follows:
+## Key features of Diagram Component are as follows:
 
 * **Flowchart:** Provides all the standard flowchart shapes as ready-made objects, making it easy to add them to a diagram surface in a single call.
 * **Ports:** Connect connectors to specific locations on a node using various types of ports or connecting points for precise connectivity.
@@ -28,7 +28,7 @@ documentation: ug
 * **Z-Order:** Diagram elements overlapping can be controlled by changing their Z-Order value.
 * **Pan and Zoom:** Navigate the diagram with pan and zoom options for detailed and broad views.
 * **Snapping:** Precisely align nodes, connectors, and annotations while dragging them just by snapping to the nearest gridlines or objects.
-* **Undo/Redo:** Allows you to keep track of the recent changes made in a SfDiagramComponent to correct your mistakes.
+* **Undo/Redo:** Allows you to keep track of the recent changes made in a diagram component to correct your mistakes.
 * **Commands:** Frequently used commands like delete, connect, and duplicate can be shown as buttons near a selector. This makes it easy for users to quickly perform those operations instead of searching for the correct buttons in a toolbox.
 * **Keyboard Shortcuts:** Perform diagramming actions using customizable keyboard shortcuts.
 * **Clipboard Operations:** Ability to cut, copy, and paste or duplicate selected Diagram elements within and across diagrams.

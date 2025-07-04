@@ -125,6 +125,7 @@ Meanwhile, user can also view conditional formatting dialog in UI by invoking [S
 </SfPivotView>
 
 @code{
+    SfPivotView<ProductDetails> pivot;
     public List<ProductDetails> data { get; set; }
     protected override void OnInitialized()
     {
@@ -217,7 +218,7 @@ It allows the end user to apply conditional formatting to a specific value field
             <PivotViewFilter Name="Product_Categories" Caption="Product Categories"></PivotViewFilter>
         </PivotViewFilters>
         <PivotViewFormatSettings>
-            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+            <PivotViewFormatSetting Name="Amount" Format="C0"></PivotViewFormatSetting>
         </PivotViewFormatSettings>
         <PivotViewConditionalFormatSettings>
             <PivotViewConditionalFormatSetting Measure="Sold" Conditions=Condition.GreaterThan Value1=500>
