@@ -22,11 +22,9 @@ To use Syncfusion<sup style="font-size:70%">&reg;</sup> blazor components with s
 
 These directives should be included in the `<head>` tag of the application's webpage, typically
 
-* For **Blazor Web App**, inside the `<head>` of **~/Components/App.razor** file.
-* For **Blazor Server application**, inside the `<head>` of
-    * **~/Pages/_Host.cshtml** file for .NET 7.
-    * **~/Pages/_Layout.cshtml** for .NET 6.
-* For **Blazor WebAssembly App**, inside the `<head>` of **wwwroot/index.html** file.
+* For **.NET 8 and .NET 9**  Blazor Web Apps using any render mode (Server, WebAssembly, or Auto), inside the `<head>` of **~/Components/App.razor** file.
+
+* For **Blazor WebAssembly Standalone App**, inside the `<head>` of **wwwroot/index.html** file.
 
 {% tabs %}
 {% highlight c# hl_lines="9 10" %}
