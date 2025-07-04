@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Lane Interactions in Blazor Diagram Component | Syncfusion
+title: Lane Interaction in Blazor Diagram Component | Syncfusion
 description: How to select, resize(with and without selection), and swap the lane, and how to add the child element into the lane.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Lane interaction in Blazor Diagram Component
+# Lane Interaction in Blazor Diagram Component
 
 The diagram provides support to select, resize, or swap the lane interactively. 
 
-## Select
+## How to Select a Lane
 
-A Lane can be selected by clicking (tapping) the header of the lane.
+A [Lane](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Lane.html) can be selected by clicking (tapping) the header of the lane.
 
-## Resizing lane
+## How to Resize a Lane
 
 * A lane can be resized in the bottom and right direction.
 * A lane can be resized by using the resize selector of the lane.
@@ -27,7 +27,7 @@ The following image shows how to resize the lane.
 
 ![Lane Resizing](../Swimlane-images/Lane_Resize.gif)
 
-## Lane swapping
+## How to Swap Lanes
 
 * Lanes can be swapped by dragging the lanes over another lane.
 * The helper will indicate the insertion point during lane swapping.
@@ -35,7 +35,7 @@ The following image shows how to swap lanes.
 
 ![Lane Swapping](../Swimlane-images/Lane_Swapping.gif)
 
-## Children interaction in lanes
+## How to Interact with Child Nodes in Lanes
 
 * You can resize the child node within swimlanes.
 * You can drag the child nodes within the lane.

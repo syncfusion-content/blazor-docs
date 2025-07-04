@@ -17,13 +17,15 @@
     private List<TableToolbarItemModel> TableQuickToolbarItems = new List<TableToolbarItemModel>()
     {
         new TableToolbarItemModel() { Command = TableToolbarCommand.TableHeader },
+        new TableToolbarItemModel() { Command = TableToolbarCommand.TableRemove },
+        new TableToolbarItemModel() { Command = TableToolbarCommand.Separator },
         new TableToolbarItemModel() { Command = TableToolbarCommand.TableRows },
         new TableToolbarItemModel() { Command = TableToolbarCommand.TableColumns },
         new TableToolbarItemModel() { Command = TableToolbarCommand.TableCell },
-        new TableToolbarItemModel() { Command = TableToolbarCommand.HorizontalSeparator },
-        new TableToolbarItemModel() { Command = TableToolbarCommand.TableRemove },
+        new TableToolbarItemModel() { Command = TableToolbarCommand.Separator },
+        new TableToolbarItemModel() { Command = TableToolbarCommand.Styles },
         new TableToolbarItemModel() { Command = TableToolbarCommand.BackgroundColor },
-        new TableToolbarItemModel() { Command = TableToolbarCommand.TableCellVerticalAlign },
-        new TableToolbarItemModel() { Command = TableToolbarCommand.Styles }
+        new TableToolbarItemModel() { Command = TableToolbarCommand.Alignments },
+        new TableToolbarItemModel() { Command = TableToolbarCommand.TableCellVerticalAlign }
     };
 }
