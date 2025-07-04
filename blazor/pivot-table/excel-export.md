@@ -19,7 +19,7 @@ N> The pivot table component can be exported to Excel format using options avail
 
 <SfButton OnClick="OnExcelExport" Content="Excel Export"></SfButton>
 <SfPivotView TValue="ProductDetails" @ref="@pivot" AllowExcelExport="true" >
-    <PivotViewDataSourceSettings DataSource="@Data" EnableSorting=true>
+    <PivotViewDataSourceSettings DataSource="@data" EnableSorting=true>
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
             <PivotViewColumn Name="Quarter"></PivotViewColumn>
@@ -40,7 +40,7 @@ N> The pivot table component can be exported to Excel format using options avail
 
 @code{
     SfPivotView<ProductDetails> pivot;
-    public List<ProductDetails> Data { get; set; }
+    public List<ProductDetails> data { get; set; }
     protected override void OnInitialized()
     {
         this.data = ProductDetails.GetProductData().ToList();
@@ -67,7 +67,7 @@ N> By default, material theme will be applied to the pivot table during Excel ex
 
 <SfButton OnClick="OnExcelExport" Content="Excel Export"></SfButton>
 <SfPivotView TValue="ProductDetails" @ref="@pivot" AllowExcelExport="true" >
-    <PivotViewDataSourceSettings DataSource="@Data" EnableSorting=true>
+    <PivotViewDataSourceSettings DataSource="@data" EnableSorting=true>
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
             <PivotViewColumn Name="Quarter"></PivotViewColumn>
@@ -88,7 +88,7 @@ N> By default, material theme will be applied to the pivot table during Excel ex
 
 @code{
     SfPivotView<ProductDetails> pivot;
-    public List<ProductDetails> Data { get; set; }
+    public List<ProductDetails> data { get; set; }
     protected override void OnInitialized()
     {
         this.data = ProductDetails.GetProductData().ToList();
@@ -199,7 +199,7 @@ The Excel export provides an option to change file name of the document before e
 
 <SfButton OnClick="OnExcelExport" Content="Excel Export"></SfButton>
 <SfPivotView TValue="ProductDetails" @ref="@pivot" AllowExcelExport="true" >
-    <PivotViewDataSourceSettings DataSource="@Data" EnableSorting=true>
+    <PivotViewDataSourceSettings DataSource="@data" EnableSorting=true>
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
             <PivotViewColumn Name="Quarter"></PivotViewColumn>
@@ -220,7 +220,7 @@ The Excel export provides an option to change file name of the document before e
 
 @code{
     SfPivotView<ProductDetails> pivot;
-    public List<ProductDetails> Data { get; set; }
+    public List<ProductDetails> data { get; set; }
     protected override void OnInitialized()
     {
         this.data = ProductDetails.GetProductData().ToList();
@@ -256,7 +256,7 @@ N> The pivot table component can be exported to CSV format using options availab
 
 <SfButton OnClick="OnCsvExport" Content="Csv Export"></SfButton>
 <SfPivotView TValue="ProductDetails" @ref="@pivot" AllowExcelExport="true" >
-    <PivotViewDataSourceSettings DataSource="@Data" EnableSorting=true>
+    <PivotViewDataSourceSettings DataSource="@data" EnableSorting=true>
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
             <PivotViewColumn Name="Quarter"></PivotViewColumn>
@@ -277,8 +277,8 @@ N> The pivot table component can be exported to CSV format using options availab
 
 @code{
     SfPivotView<ProductDetails> pivot;
-    public List<ProductDetails> Data { get; set; }
-    protected override void OnInitialized(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
     {
         this.data = ProductDetails.GetProductData().ToList();
        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
@@ -352,74 +352,74 @@ The event [ExcelQueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.
 @using Syncfusion.Blazor.Grids
 
 <SfButton OnClick="OnExcelExport" Content="Excel Export"></SfButton>
-<SfPivotView TValue="ProductDetails" @ref="@pivot" EnableVirtualization="true" AllowExcelExport="true" >
-    <PivotViewDataSourceSettings DataSource="@Data" ExpandAll="false" EnableSorting="true" >
-        <PivotViewColumns>
-            <PivotViewColumn Name="Year"></PivotViewColumn>
-            <PivotViewColumn Name="Quarter"></PivotViewColumn>
-        </PivotViewColumns>
-        <PivotViewRows>
-            <PivotViewRow Name="Country"></PivotViewRow>
-            <PivotViewRow Name="Products"></PivotViewRow>
-        </PivotViewRows>
-        <PivotViewValues>
-            <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
-            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-        </PivotViewValues>
-        <PivotViewFormatSettings>
-            <PivotViewFormatSetting Name="Amount" Format="C0" UseGrouping=true></PivotViewFormatSetting>
-        </PivotViewFormatSettings>
-    </PivotViewDataSourceSettings>
-    <PivotViewEvents TValue="ProductDetails" ExcelQueryCellInfo="ExcelQueryEvent"></PivotViewEvents>
+<SfPivotView TValue="ProductDetails" @ref="@pivot" EnableVirtualization="true" AllowExcelExport="true">
+	<PivotViewDataSourceSettings DataSource="@data" ExpandAll="false" EnableSorting="true">
+		<PivotViewColumns>
+			<PivotViewColumn Name="Year"></PivotViewColumn>
+			<PivotViewColumn Name="Quarter"></PivotViewColumn>
+		</PivotViewColumns>
+		<PivotViewRows>
+			<PivotViewRow Name="Country"></PivotViewRow>
+			<PivotViewRow Name="Products"></PivotViewRow>
+		</PivotViewRows>
+		<PivotViewValues>
+			<PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+			<PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+		</PivotViewValues>
+		<PivotViewFormatSettings>
+			<PivotViewFormatSetting Name="Amount" Format="C0" UseGrouping=true></PivotViewFormatSetting>
+		</PivotViewFormatSettings>
+	</PivotViewDataSourceSettings>
+	<PivotViewEvents TValue="ProductDetails" ExcelQueryCellInfo="ExcelQueryEvent"></PivotViewEvents>
 </SfPivotView>
 
-@code{
-    private SfPivotView<ProductDetails> pivot;
-    public List<ProductDetails> Data { get; set; }
+@code {
+	private SfPivotView<ProductDetails> pivot;
+	public List<ProductDetails> data { get; set; }
 
-    protected override void OnInitialized(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
-    {
-        this.data = ProductDetails.GetProductData().ToList();
-        // Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-    }
+	protected override void OnInitialized()
+	{
+		this.data = ProductDetails.GetProductData().ToList();
+		// Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+	}
 
-    public void OnExcelExport(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
-    {
-        this.pivot.ExportToExcelAsync();
-    }
+	public void OnExcelExport(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+	{
+		this.pivot.ExportToExcelAsync();
+	}
 
-    // Triggers every time for row header and value cells during exporting.
-    public void ExcelQueryEvent(ExcelQueryCellInfoEventArgs<ProductDetails> args)
-    {
-        Matrix<Matrix<AxisSet>> pivotValues = Pivot?.PivotValues;
-        AxisSet cellInfo = null;
+	// Triggers every time for row header and value cells during exporting.
+	public void ExcelQueryEvent(ExcelQueryCellInfoEventArgs<ProductDetails> args)
+	{
+		Matrix<Matrix<AxisSet>> pivotValues = pivot?.PivotValues;
+		AxisSet cellInfo = null;
 
-        if (Pivot?.EnableVirtualization == true)
-        {
-            if (pivotValues != null)
-            {
-                cellInfo = pivotValues[args.RowIndex]?[args.ColumnIndex];
-            }
-        }
-        else
-        {
-            IDictionary<string, object> cellCoordinates = args.Column?.CustomAttributes;
-            if (pivotValues != null && cellCoordinates != null && cellCoordinates.ContainsKey("aria-colindex") && cellCoordinates.ContainsKey("aria-rowindex"))
-            {
-                // You will get the row index required to find the current cell information from the pivot value collection here.
-                int rowIndex = int.Parse(cellCoordinates["aria-rowindex"].ToString(), System.Globalization.NumberStyles.None);
-                // You will get the column index required to find the current cell information from the pivot value collection here.
-                int colIndex = int.Parse(cellCoordinates["aria-colindex"].ToString(), System.Globalization.NumberStyles.None);
-                cellInfo = pivotValues[rowIndex]?[colIndex];
-            }
-        }
-        if (cellInfo?.IsGrandSum == true || cellInfo?.Axis == "row")
-        {
-            args.Cell.Value = cellInfo?.Axis == "value" ? cellInfo?.Value : cellInfo?.FormattedText;
-            args.Style.BackColor = args.Cell.CellStyle.BackColor = cellInfo?.Axis == "row" ? "#e3e384" : "#f7f77c";
-            args.Style.Bold = args.Cell.CellStyle.Bold = true;
-        }
-    }
+		if (pivot?.EnableVirtualization == true)
+		{
+			if (pivotValues != null)
+			{
+				cellInfo = pivotValues[args.RowIndex]?[args.ColumnIndex];
+			}
+		}
+		else
+		{
+			IDictionary<string, object> cellCoordinates = args.Column?.CustomAttributes;
+			if (pivotValues != null && cellCoordinates != null && cellCoordinates.ContainsKey("aria-colindex") && cellCoordinates.ContainsKey("aria-rowindex"))
+			{
+				// You will get the row index required to find the current cell information from the pivot value collection here.
+				int rowIndex = int.Parse(cellCoordinates["aria-rowindex"].ToString(), System.Globalization.NumberStyles.None);
+				// You will get the column index required to find the current cell information from the pivot value collection here.
+				int colIndex = int.Parse(cellCoordinates["aria-colindex"].ToString(), System.Globalization.NumberStyles.None);
+				cellInfo = pivotValues[rowIndex]?[colIndex];
+			}
+		}
+		if (cellInfo?.IsGrandSum == true || cellInfo?.Axis == "row")
+		{
+			args.Cell.Value = cellInfo?.Axis == "value" ? cellInfo?.Value : cellInfo?.FormattedText;
+			args.Style.BackColor = args.Cell.CellStyle.BackColor = cellInfo?.Axis == "row" ? "#e3e384" : "#f7f77c";
+			args.Style.Bold = args.Cell.CellStyle.Bold = true;
+		}
+	}
 }
 
 ```
@@ -444,7 +444,7 @@ The event [ExcelHeaderQueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncf
 
 <SfButton OnClick="OnExcelExport" Content="Excel Export"></SfButton>
 <SfPivotView TValue="ProductDetails" @ref="@pivot" EnableVirtualization="true"  AllowExcelExport="true" >
-    <PivotViewDataSourceSettings DataSource="@Data" ExpandAll="false" EnableSorting="true" >
+    <PivotViewDataSourceSettings DataSource="@data" ExpandAll="false" EnableSorting="true" >
         <PivotViewColumns>
             <PivotViewColumn Name="Year"></PivotViewColumn>
             <PivotViewColumn Name="Quarter"></PivotViewColumn>
@@ -466,9 +466,9 @@ The event [ExcelHeaderQueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncf
 
 @code{
     private SfPivotView<ProductDetails> pivot;
-    public List<ProductDetails> Data { get; set; }
+    public List<ProductDetails> data { get; set; }
 
-    protected override void OnInitialized(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+    protected override void OnInitialized()
     {
         this.data = ProductDetails.GetProductData().ToList();
         // Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
@@ -482,10 +482,10 @@ The event [ExcelHeaderQueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncf
     // Triggers every time for column header cells during exporting
     public void ExcelHeaderEvent(ExcelHeaderQueryCellInfoEventArgs args)
     {
-        Matrix<Matrix<AxisSet>> pivotValues = Pivot?.PivotValues;
+        Matrix<Matrix<AxisSet>> pivotValues = pivot?.PivotValues;
         AxisSet cellInfo = null;
 
-        if (Pivot?.EnableVirtualization == true)
+        if (pivot?.EnableVirtualization == true)
         {
             if (pivotValues != null)
             {

@@ -57,20 +57,6 @@ In the video dialog, by using the `browse` option, select the video from the loc
 
 If the path field is not specified in the [RichTextEditorVideoSettings]https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorVideoSettings.html), the video will be converted into `Blob` url or `Base64` and inserted inside the Rich Text Editor.
 
-### Restrict video upload based on size
-
-Using the Rich Text Editor `FileUploading` event, you can restrict the video to upload when the given video size is greater than the allowed fileSize. Also, the video size in the argument will be returned in `bytes`.
-
-In the following example, the video size has been validated before uploading and determined whether the video has been uploaded or not.
-
-{% tabs %}
-{% highlight cshtml %}
-
-{% include_relative code-snippet/video-restrict.razor %}
-
-{% endhighlight %}
-{% endtabs %}
-
 ### Server-side action
 
 The selected video can be uploaded to the required destination using the controller action below. Map this method name in [RichTextEditorMediaSettings.SaveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_SaveUrl) and provide required destination path through [RichTextEditorMediaSettings.Path](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorMediaSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorMediaSettings_Path) properties.
@@ -176,6 +162,20 @@ N> By default, the files are saved in the `Blob` format.
 </video>
 
 ```
+
+## Maximum file size restriction
+
+By using the Rich Text Editor's [RichTextEditorVideoSettings.MaxFileSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.RichTextEditor.RichTextEditorVideoSettings.html#Syncfusion_Blazor_RichTextEditor_RichTextEditorVideoSettings_MaxFileSize) property, you can restrict the video to upload when the given video size is greater than the allowed fileSize.
+
+In the following example, the video size has been validated before uploading and determined whether the video has been uploaded or not.
+
+{% tabs %}
+{% highlight cshtml %}
+
+{% include_relative code-snippet/video-restrict.razor %}
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Replacing video
 

@@ -133,7 +133,11 @@ N> [Processing Large Files Without Increasing Maximum Message Size in SfPdfViewe
 
 ## Adding stylesheet and script
 
-Add the following stylesheet and script to the head section of the **~/Pages/_Host.cshtml** file.
+Add the following stylesheet and script to the head section. The theme stylesheet and script can be accessed from NuGet through [Static Web Assets](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets). Reference the stylesheet and script in the `<head>` of the main page as follows:
+
+* For **.NET 6** Blazor Server app, include it in **~/Pages/_Layout.cshtml** file.
+
+* For **.NET 7** Blazor Server app, include it in the **~/Pages/_Host.cshtml** file.
 
 {% tabs %}
 {% highlight cshtml %}
