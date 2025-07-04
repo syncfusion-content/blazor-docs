@@ -74,13 +74,9 @@ The following example code depicts how to set the Scheduler to display Monday, W
 
 ![Set Working Days in Blazor Scheduler](images/blazor-scheduler-workdays.png)
 
-## Dynamically setting working days
+## Dynamically setting work days
 
-When you need to change the working days of the Scheduler dynamically after component initialization, you can use the Scheduler methods provided for this purpose.
-
-### Using SetWorkDaysAsync method
-
-The `SetWorkDaysAsync` method allows you to dynamically set specific dates as working days in the Scheduler. This method accepts a list of dates and applies them as working days. The following example demonstrates setting different working days based on the day of the week.
+In Blazor, you can set the required working days on Scheduler, thus visually highlighting the cells of specific days. In the following code example, you can set the different working days for scheduler cells based on the day of the week by using the `SetWorkDaysAsync` method. Before setting up the custom working days we need to reset the default working days by using the `ResetWorkDaysAsync` method.
 
 ```
 
@@ -150,8 +146,12 @@ The `SetWorkDaysAsync` method allows you to dynamically set specific dates as wo
 
         List<DateTime> customDates = new List<DateTime>
         {
+            new DateTime (2020, 1, 7, 0, 0, 0, DateTimeKind.Utc),
+            new DateTime (2020, 1, 8, 0, 0, 0, DateTimeKind.Utc),
+            new DateTime (2020, 1, 9, 0, 0, 0, DateTimeKind.Utc),
             new DateTime (2020, 1, 14, 0, 0, 0, DateTimeKind.Utc),
-            new DateTime (2020, 1, 15, 0, 0, 0, DateTimeKind.Utc)
+            new DateTime (2020, 1, 15, 0, 0, 0, DateTimeKind.Utc),
+            new DateTime (2020, 1, 16, 0, 0, 0, DateTimeKind.Utc),
         };
         await ScheduleRef.SetWorkDaysAsync(customDates);
     }
@@ -168,114 +168,11 @@ The `SetWorkDaysAsync` method allows you to dynamically set specific dates as wo
         public string RecurrenceRule { get; set; }
         public string RecurrenceException { get; set; }
         public Nullable<int> RecurrenceID { get; set; }
-        public int OwnerId { get; set; }
-        public int RoomId { get; set; }
     }
 }
 ```
+![Set dynamic work Days in Blazor Scheduler](images/blazor-scheduler-setWorkDays-resetWorkDays.png)
 
-In this example:
-- We create two buttons to demonstrate dynamically changing working days
-- The `UpdateWorkingDays` method uses `SetWorkDaysAsync` to set Monday (1), Wednesday (3), and Friday (5) as working days
-- When `SetWorkDaysAsync` is called, the Scheduler immediately updates its view to reflect the new working days
-
-### Using ResetWorkDaysAsync method
-
-The `ResetWorkDaysAsync` method is used to reset the working days back to their default state for specific dates. This method is essential when you want to clear any custom working day settings before applying new ones.
-
-```cshtml
-@using Syncfusion.Blazor.Schedule
-@using Syncfusion.Blazor.Buttons
-
-<div class="control-section">
-    <div class="content-wrapper">
-        <div>
-            <SfButton OnClick="@SetWeekdaysOnly">Set Weekdays Only</SfButton>
-            <SfButton OnClick="@SetWeekendsOnly">Set Weekends Only</SfButton>
-            <SfButton OnClick="@ResetAllWorkDays">Reset to Default</SfButton>
-        </div>
-        <SfSchedule @ref="@ScheduleRef" TValue="AppointmentData" Height="550px" Width="100%" SelectedDate="@(new DateTime(2023, 5, 15))">
-            <ScheduleViews>
-                <ScheduleView Option="View.Week"></ScheduleView>
-            </ScheduleViews>
-            <ScheduleEventSettings DataSource="@TimeSlots"></ScheduleEventSettings>
-        </SfSchedule>
-    </div>
-</div>
-
-@code {
-    SfSchedule<AppointmentData> ScheduleRef;
-    
-    List<AppointmentData> TimeSlots = new List<AppointmentData>
-    {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2023, 5, 15, 14, 30, 0), EndTime = new DateTime(2023, 5, 15, 15, 30, 0) },
-        new AppointmentData { Id = 2, Subject = "Conference", StartTime = new DateTime(2023, 5, 16, 15, 30, 0), EndTime = new DateTime(2023, 5, 16, 16, 30, 0) }
-    };
-    
-    public async Task SetWeekdaysOnly()
-    {
-        // Get current view dates
-        List<DateTime> currentViewDates = ScheduleRef.GetCurrentViewDates();
-        
-        // First reset all working days for all dates in the current view
-        await ScheduleRef.ResetWorkDaysAsync(currentViewDates);
-        
-        // Filter for weekday dates (Monday through Friday)
-        List<DateTime> weekdayDates = currentViewDates.Where(date => 
-            date.DayOfWeek != DayOfWeek.Saturday && 
-            date.DayOfWeek != DayOfWeek.Sunday).ToList();
-        
-        // Set those weekday dates as working days
-        await ScheduleRef.SetWorkDaysAsync(weekdayDates);
-    }
-    
-    public async Task SetWeekendsOnly()
-    {
-        // Get current view dates
-        List<DateTime> currentViewDates = ScheduleRef.GetCurrentViewDates();
-        
-        // First reset all working days
-        await ScheduleRef.ResetWorkDaysAsync(currentViewDates);
-        
-        // Filter for weekend dates (Saturday and Sunday)
-        List<DateTime> weekendDates = currentViewDates.Where(date => 
-            date.DayOfWeek == DayOfWeek.Saturday || 
-            date.DayOfWeek == DayOfWeek.Sunday).ToList();
-        
-        // Set those weekend dates as working days
-        await ScheduleRef.SetWorkDaysAsync(weekendDates);
-    }
-    
-    public async Task ResetAllWorkDays()
-    {
-        // Get current view dates
-        List<DateTime> currentViewDates = ScheduleRef.GetCurrentViewDates();
-        
-        // Reset all dates in the current view to default working days
-        await ScheduleRef.ResetWorkDaysAsync(currentViewDates);
-    }
-    public class AppointmentData
-    {
-        public int Id { get; set; }
-        public string Subject { get; set; }
-        public string Location { get; set; }
-        public DateTime StartTime { get; set; }
-        public DateTime EndTime { get; set; }
-        public string Description { get; set; }
-        public bool IsAllDay { get; set; }
-        public string RecurrenceRule { get; set; }
-        public string RecurrenceException { get; set; }
-        public Nullable<int> RecurrenceID { get; set; }
-    }
-}
-```
-
-In this example:
-- We create a dropdown list with different working day patterns
-- The `OnPatternChange` event handler demonstrates how to set different working day patterns and how to use `ResetWorkDaysAsync`
-- When "Reset to Default" is selected, the `ResetWorkDaysAsync` method is called to restore the default working days configuration
-
-When `ResetWorkDaysAsync` is called, the working days revert back to Monday through Friday (1-5), regardless of any custom configuration that was previously set using `SetWorkDaysAsync`.
 
 ## Hiding weekend days
 
