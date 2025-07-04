@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Orthogonal Segment in Blazor Diagram Component | Syncfusion
+title: Orthogonal Segments in Blazor Diagram Component | Syncfusion
 description: Check out and learn about Orthogonal Segments in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
@@ -9,7 +9,7 @@ documentation: ug
  
 # Orthogonal Segments in Blazor Diagram Component
 
-## How to create orthogonal segment
+## How to Create Orthogonal Segment
 
 Orthogonal segments are used to create segments that are perpendicular to each other. Set the segment Type as [Orthogonal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Orthogonal) to create a default orthogonal segment and need to specify Type. The following code example illustrates how to create a default orthogonal segment.
 
@@ -118,7 +118,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 N> You need to mention the segment type as you mentioned in the connector type. There should be no contradiction between connector type and segment type.
 
-### Orthogonal segment editing
+### How to Edit Orthogonal Segments
 
 * Orthogonal thumbs allow you to adjust the length of adjacent segments by clicking and dragging them.
 * When necessary, some segments are added or removed automatically, when dragging the segment. This is to maintain proper routing of orthogonality between segments.
@@ -155,7 +155,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Editing Orthogonal Segment in Blazor Diagram](../../images/blazor-diagram-edit-orthogonal-segment.gif)
 
-## How to customize Orthogonal Segment Thumb Shape
+## How to Customize Orthogonal Segment Thumb Shape
 
 The Orthogonal connector can have multiple segments between the source and target points. By default, these segments are rendered as circles, but this can be customized either globally or for individual connectors using the [SegmentThumbSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbSettings.html) class.
 
@@ -170,15 +170,15 @@ The following predefined shapes are available for segment thumbs:
 |Rhombus| ![Rhombus](../../images/RhombusThumb.png) |
 | Square | ![Square](../../images/SquareThumb.png) |
 | Rectangle | ![Rectangle](../../images/RectangleThumb.png) |
-| Ellipse |![Ellipse](../../images/EllipseThumb.png) |
-| Circle |![Circle](../../images/CircleThumb.png) |
-|Arrow| ![Arrow](../../images/ArrowThumb.png) |
-| OpenArrow | ![OpenArrow](../../images/OpenArrowThumb.png) |
-| Fletch|![Fletch](../../images/FletchThumb.png) |
-|OpenFetch| ![OpenFetch](../../images/OpenFetchThumb.png) |
-| IndentedArrow | ![IndentedArrow](../../images/IndentedThumb.png) |
-| OutdentedArrow | ![OutdentedArrow](../../images/OutdentedThumb.png) |
-| DoubleArrow |![DoubleArrow](../../images/DoubleArrowThumb.png) |
+| [Ellipse](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbShapes.html#Syncfusion_Blazor_Diagram_SegmentThumbShapes_Ellipse) |![Ellipse](../../images/EllipseThumb.png) |
+| [Circle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbShapes.html#Syncfusion_Blazor_Diagram_SegmentThumbShapes_Circle) |![Circle](../../images/CircleThumb.png) |
+|[Arrow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbShapes.html#Syncfusion_Blazor_Diagram_SegmentThumbShapes_Arrow)| ![Arrow](../../images/ArrowThumb.png) |
+| [OpenArrow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbShapes.html#Syncfusion_Blazor_Diagram_SegmentThumbShapes_OpenArrow) | ![OpenArrow](../../images/OpenArrowThumb.png) |
+| [Fletch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbShapes.html#Syncfusion_Blazor_Diagram_SegmentThumbShapes_Fletch)|![Fletch](../../images/FletchThumb.png) |
+|[OpenFletch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbShapes.html#Syncfusion_Blazor_Diagram_SegmentThumbShapes_OpenFletch)| ![OpenFetch](../../images/OpenFetchThumb.png) |
+| [IndentedArrow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbShapes.html#Syncfusion_Blazor_Diagram_SegmentThumbShapes_IndentedArrow) | ![IndentedArrow](../../images/IndentedThumb.png) |
+| [OutdentedArrow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbShapes.html#Syncfusion_Blazor_Diagram_SegmentThumbShapes_OutdentedArrow) | ![OutdentedArrow](../../images/OutdentedThumb.png) |
+| [DoubleArrow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SegmentThumbShapes.html#Syncfusion_Blazor_Diagram_SegmentThumbShapes_DoubleArrow) |![DoubleArrow](../../images/DoubleArrowThumb.png) |
 
 The following code example illustrates how to customize orthogonal segment thumb shape.
 
