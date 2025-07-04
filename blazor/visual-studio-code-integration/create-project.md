@@ -9,7 +9,7 @@ documentation: ug
 
 # Creating a Syncfusion® Blazor application
 
-Syncfusion® provides **Visual Studio Code project templates** for creating Syncfusion® Blazor application. Syncfusion® Blazor generates application that include the necessary Syncfusion® NuGet packages, namespaces, and component render code for the Calendar, Button, and DataGrid components, as well as the style for making Syncfusion® component development easier.
+Syncfusion® provides the Blazor Template Studio in Visual Studio Code, which allows you to create a Syncfusion® Blazor application with Syncfusion® components. The Syncfusion® Blazor app is created with the required component Syncfusion® NuGet references, namespaces, styles, and component render code. The Template Studio provides an easy-to-use project wizard that walks you through the process of creating an application with Syncfusion® components.
 
 N> Blazor project templates from `v17.4.0.39` are supported by the Syncfusion® Visual Studio Code project template.
 
@@ -19,13 +19,13 @@ The instructions below assist you in creating **Syncfusion Blazor Applications**
 
     ![CreateProjectPalette](images/CreateBlazorProjectPalette.png)
 
-2. Select **Syncfusion Blazor Template Studio: Launch**, then press **Enter** key. The Template Studio wizard for configuring the Syncfusion® Blazor app will be launched. Provide the Project Name and Project Path.
+2. Select **Syncfusion Blazor Template Studio: Launch**, then press **Enter** key. The Template Studio wizard for configuring the Syncfusion® Blazor app will be launched. Provide the Project name and Project path.
 
-    ![TemplateStudioWizard](images/ProjectLocationName.png)
+    ![TemplateStudioWizard](images/ProjectLocationName1.png)
 
-N> Refer to the .NET SDK support for Syncfusion® Blazor Components [here](https://blazor.syncfusion.com/documentation/system-requirements#net-sdk).
+    N> Refer to the .NET SDK support for Syncfusion® Blazor Components [here](https://blazor.syncfusion.com/documentation/system-requirements#net-sdk).
 
-3. Select either **Next** or the **Project Type** tab. Syncfusion® Blazor project types will be displayed. Choose one of the following Syncfusion® Blazor project types based on the version of the .NET SDK you are using.
+3. Select either **Next** or the **Project type** tab. Syncfusion® Blazor project types will be displayed. Choose one of the following Syncfusion® Blazor project types based on the version of the .NET SDK you are using.
 
     | .NET SDK version | Supported Syncfusion Blazor Application Type |
     | ---------------- | -------------------------------------------- |
@@ -55,25 +55,63 @@ N> Refer to the .NET SDK support for Syncfusion® Blazor Components [here](https
     </tbody>
     </table>
 
-    ![WebAppTemplate](images/WebAppType.png)
+    ![WebAppTemplate](images/WebAppType1.png)
 
      In the **Syncfusion Blazor WebAssembly App** application type, you can choose Progressive Web Application.
 
-     ![ProjectType](images/ProjectTypeDetails.png)
+     ![ProjectType](images/ProjectTypeDetails1.png)
 
-4. The Configuration section will be displayed when you click either **Next** or the **Configuration** tab. Here, you have the option for selecting the required .NET Core version, themes, https configuration, and Blazor Web Assembly project types (Progressive Web Application).
+4. Click either **Next** or the **Controls** tab and select the Syncfusion Blazor components you want to add to your application.
 
-    ![Configuration](images/Configuration.png)
+     ![Controls Section](images/ControlsSection.png)
 
-    N> Progressive Web Application options are only visible if Blazor Web Assembly App project type is selected.
+     Choose the required control(s) by clicking the corresponding control box.
 
-5. Click the **Create** button. The Syncfusion® Blazor application has been created. The created Syncfusion® Blazor app has the Syncfusion® NuGet packages, styles, and the component render code for the Syncfusion® component added to the Index, Counter, and FetchData pages.
+     To unselect the added control(s), use either one of the following options:
 
-6. You can run the application to see the Syncfusion® components. Click **F5** or go to **Run>Start Debugging**.
+     **Option 1:** Click the corresponding selected control box.
 
-    ![Debug](images/Debug.png)
+     **Option 2:** Click ‘x’ button for corresponding control in the control list from **Project Details**.
 
-7. If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion® license key to your application since Syncfusion® introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio® release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion® license key to your application. Refer to this [UG](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) topic for understanding the licensing details in Essential Studio® for Blazor.
+     N> **Note:** Choose at least one control to enable the Features and Configuration tab.
+
+5. Click either **Next** or the **Features** tab, and you will see the features listed for the selected controls. You can choose the required features.
+
+    ![FeaturesSection](images/FeaturesSection.png)
+
+6. Click **Next** or the **Configuration** tab to load the Configuration section. You can choose the required (.NET 9.0 and .NET 8.0), themes, https configuration, localization option, authentication type, Blazor Web App, and Blazor Web Assembly application types.
+
+     Depending on your Syncfusion Blazor Application Type, refer to the table below for supported authentication types.
+
+     | Syncfusion Blazor Application Type | Supported Authentication Types |
+     | ------------- | ------------- |
+     | Syncfusion Blazor Web App | None and Individual Accounts |
+     | Syncfusion Blazor WebAssembly App | None, Individual Accounts and Microsoft Identity Platform |
+
+     If you choose the **Blazor Web App** application type, you can customize the Interactivity type and Interactivity location options.
+
+     ![WebAppConfiguration](images/WebApp.png)
+
+     If you choose the **Blazor Web Assembly App** application type, you can customize the Progressive Web Application option.
+
+     ![WASMConfiguration](images/WebAssembly.png)
+
+     **Project details section**
+
+     You can change the configuration details below in the Project Details section to change the application type, remove control(s) from the selected controls, or change the configurations.
+
+    ![ProjectDetails](images/ProjectDetailsRightSide.png)
+
+7. Click **Create** button. The Syncfusion® Blazor application has been created. The created Syncfusion® Blazor app has the Syncfusion NuGet packages, styles, and the render code for the selected Syncfusion® component.
+
+    
+8. You can run the application to see the Syncfusion® components. Click **F5** or go to **Run>Start Debugging**.
+
+     ![Readme](images/RunProject.png)
+
+9. The Syncfusion® Blazor application configures with most recent Syncfusion® Blazor NuGet packages version, selected style, namespaces, selected authentication, and component render code for Syncfusion® components.
+
+10. If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion® license key to your application since Syncfusion® introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio® release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion® license key to your application. Refer to this [UG](https://blazor.syncfusion.com/documentation/getting-started/license-key/overview) topic for understanding the licensing details in Essential Studio® for Blazor.
 
 ## Syncfusion® integration
 

@@ -63,7 +63,7 @@ N> When the work field is mapped from the data source, the default task type wil
         public int PrimaryId { get; set; }
         public int TaskId { get; set; }
         public int ResourceId { get; set; }
-        public double Unit { get; set; }
+        public double? Unit { get; set; }
     }
 
     List<ResourceInfoModel> GetResources = new List<ResourceInfoModel>() {
@@ -175,7 +175,7 @@ The work, duration and resource unit fields of a task depends upon each other an
         public int PrimaryId { get; set; }
         public int TaskId { get; set; }
         public int ResourceId { get; set; }
-        public double Unit { get; set; }
+        public double? Unit { get; set; }
     }
 
     List<ResourceInfoModel> GetResources = new List<ResourceInfoModel>() {
