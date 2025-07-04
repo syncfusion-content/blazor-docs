@@ -18,8 +18,9 @@ Diagram provides support to add different kind of nodes. They are as follows:
 * Flow shape
 * SVG shape
 * HTML template 
+* BPMN shape
 
-## Text node
+## How to Create and Customize a Text Node
 
 The diagram allows you to add texts as [TextShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextShape.html). The [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextShape.html#Syncfusion_Blazor_Diagram_TextShape_Content) property defines the text that is to be added. The [Style](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Style) of the node is used as [TextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html) to customize the appearance of the text.
 
@@ -61,7 +62,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Text Node in Blazor Diagram](images/blazor-diagram-TextNode.png)
 
-## Image node
+## How to Create a Image Node
 
 The diagram allows to add images as [ImageShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ImageShape.html). The [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Shape) property of node allows you to set the type of node and for image nodes, it should be set as **Image**. In addition, the [Source](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ImageShape.html#Syncfusion_Blazor_Diagram_ImageShape_Source) property of shape enables you to set the image.
 
@@ -104,7 +105,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Image Node in Blazor Diagram](images/blazor-diagram-image-node.png)
 
-### Base64 encoded image into the image node
+### How to Add a Base64 Encoded Image to an Image Node
 
 The following code illustrates how to add Base64 image into the image node.
 
@@ -148,7 +149,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 N> Deploy your HTML file in the web application and export the diagram (image node) or else the image node will not be exported in the Chrome and Firefox due to security issues.
 
-### Stretch and align the image
+### How to Stretch and Align Image Content
 
 Stretch and align the image content anywhere but within the node boundary. The [Scale](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ImageShape.html#Syncfusion_Blazor_Diagram_ImageShape_Scale) property of the node allows you to stretch the image as you desire. (either to maintain proportion or to stretch). By default, the Scale property of the node is set as [Meet](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramScale.html#Syncfusion_Blazor_Diagram_DiagramScale_Meet). The following code illustrates how to scale or stretch the content of the image node.
 
@@ -202,7 +203,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 |Slice|XMinYMax|![Node Image alignment in Blazor Diagram](images/blazor-diagram-slice-xmin-ymax.png)|
 |Slice|XMinYMin|![Node Image alignment in Blazor Diagram](images/blazor-diagram-slice-xmin-ymin.png)|
 
-## HTML template shape
+## How to Create HTML Template Shapes
 
 Html elements can be embedded in the diagram through [HTML](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeShapes.html#Syncfusion_Blazor_Diagram_NodeShapes_HTML) type node. The Shape property of Node allows you to set the type of node and to create a HTML node it should be set as **HTML**. The following code illustrates how an HTML node is created.
 
@@ -299,7 +300,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 N> HTML node cannot be exported to image format, like JPEG and PNG. It is by design, while exporting the diagram is drawn in a canvas. Further, this canvas is exported into image formats. Currently, drawing in a canvas equivalent from all possible HTML is not feasible. Hence, this limitation. Also , HTML node always appears as topmost layer ( whose index is the higher index, even though it is defined at the last).
 
-## Node with basic shapes
+## How to Create a Basic Shape Node
 
 The [BasicShapes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BasicShape.html) are common shapes that are used to represent the geometrical information visually. To create basic shapes, the **Type** of the shape should be set as [Basic](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeShapes.html#Syncfusion_Blazor_Diagram_NodeShapes_Basic). Its Shape property can be set with any one of the built-in shapes. To render a rounded rectangle, you need to set the type as **Basic** and shape as **Rectangle**. Set the [CornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BasicShape.html#Syncfusion_Blazor_Diagram_BasicShape_CornerRadius) property to specify the radius of rounded rectangle.
 
@@ -351,7 +352,7 @@ The list of basic shapes are as follows.
 
 ![BasicShape Node in Blazor Diagram](images/blazor-diagram-basic-shape-node.png)
 
-## Path shape node
+## How to Create a Path Shape Node
 
 The [PathShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PathShape.html) is a commonly used basic shape that allows visually to represent the geometrical information. As node path data, any geometrical data can be provided. You can create your own Geometry and assign it to data if you want anything different from the standard figures. A geometry does not require any dimension specifications, such as width or height, because it specifies its own size. If the node's size is set, the geometry is extended to fit the node's dimensions.
 
@@ -397,7 +398,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ![Path Shape Node in Blazor Diagram](images/blazor-diagram-path-shape-node.png)
 
-## Flow shape node
+## How to Create a Flow Shape Node
 
 The [Flow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FlowShape.html) shapes are used to represent the process flow. It is used for analyzing, designing and managing the documentation process. To create a flow shape, specify the shape type as **Flow**. By default, it is considered as a **Process**. The following code example illustrates how to create a flow shape.
 
@@ -440,7 +441,7 @@ The list of flow shapes are as follows.
 
 ![FlowShape Node in Blazor Diagram](images/blazor-diagram-flow-shapes-node.png)
 
-## SVG template shape
+## How to Create a SVG Template Shape
 
 The diagram provides support to embed SVG element into a node. The Shape property of the node allows to set the type of node. To create a SVG node, it should be set as [SVG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeShapes.html#Syncfusion_Blazor_Diagram_NodeShapes_SVG). The following code illustrates how a SVG node is created.
 
@@ -497,3 +498,59 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 N> Like the HTML node, the SVG node cannot be exported to image format. The fill color of the SVG node can be overridden by the inline style or fill of the SVG element specified in the template.
 
+## Node with BPMN shapes
+
+The [BPMN](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeShapes.html#Syncfusion_Blazor_Diagram_NodeShapes_Bpmn) shapes are used to visually represent Business Process Model and Notation elements such as events, tasks, gateways, and more. To create BPMN shapes, the Type of the shape should be set as Bpmn.
+
+Its Shape property can then be configured with any one of the available built-in BPMN subtypes, such as events, activities, or gateways. You can also further customize each BPMN shape by specifying its category and characteristics (like Event, Trigger, Loop, etc.).
+
+
+The following code example illustrates how to create a BPMN shape.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+@* Initialize Diagram *@
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
+@code
+{
+    // Initialize node collection with Node.
+    DiagramObjectCollection<Node> nodes;
+    protected override void OnInitialized()
+    {
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
+        {
+            // Position of the node.
+            OffsetX = 100,
+            OffsetY = 100,
+            // Size of the node.
+            Width = 100,
+            Height = 100,
+            // Unique Id of the node.
+            ID = "node1",
+            // Sets the shape to activity.
+            Shape = new BpmnActivity() 
+            { 
+                ActivityType = BpmnActivityType.Task 
+            },
+        };
+        nodes.Add(node);
+    }
+}
+```
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Shapes)
+
+For more information about node constraints, refer to the [BPMN Shapes](https://github.com/SyncfusionExamples/Blazor-Diagram-Examples/tree/master/UG-Samples/Shapes/BPMNShape).
+
+
+![BPMN Node in Blazor Diagram](images/BPMNShape.png)
+
+## See also
+
+* [How to Create Polygon and Circle Shapes in Blazor Diagram](https://support.syncfusion.com/kb/article/18054/how-to-create-polygon-and-circle-shapes-in-blazor-diagram)  
+* [How to Export HTML Shapes Into Image and PDF Format in Blazor Diagram](https://support.syncfusion.com/kb/article/16039/how-to-export-html-shapes-into-image-and-pdf-format-in-blazor-diagram)  
+* [How to Serialize the HTML Template Value of the NodeTemplate Property in Syncfusion Blazor Diagram](https://support.syncfusion.com/kb/article/17218/how-to-serialize-the-html-template-value-of-the-nodetemplate-property-in-syncfusion-blazor-diagram)  
+* [How to Add Custom HTML Nodes in Symbol Palette for Blazor Diagram](https://support.syncfusion.com/kb/article/18737/how-to-add-custom-html-nodes-in-symbol-palette-for-blazor-diagram)  
+* [How to Make HTML Node Resizable but Not Draggable in Blazor Diagram](https://support.syncfusion.com/kb/article/18727/how-to-make-html-node-resizable-but-not-draggable-in-blazor-diagram)  
+* [How to Update HTML Node Size on HTML Template in Blazor Diagram](https://support.syncfusion.com/kb/article/18692/how-to-update-html-node-size-on-html-template-in-blazor-diagram)  
+* [How to Print or Export the HTML and Native Node into Image Format in Blazor Diagram](https://support.syncfusion.com/kb/article/12332/how-to-print-or-export-the-html-and-native-node-into-image-format-in-blazor-diagarm)

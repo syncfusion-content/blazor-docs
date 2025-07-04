@@ -9,7 +9,7 @@ documentation: ug
 
 # Syncfusion® Notifications
 
-Syncfusion® enhances the user experience in Blazor applications through notification messages. These notifications cover various aspects, including alerts for trial applications when utilizing Syncfusion® trial assemblies, updates regarding the availability of the latest Syncfusion NuGet package, and notifications regarding newer releases of Essential Studio®. By keeping users informed, Syncfusion® ensures that developers stay updated with Syncfusion® latest features and enhancements.
+Syncfusion® enhances the user experience in Blazor applications through notification messages. These notifications cover various aspects, including alerts for trial applications when using Syncfusion® trial assemblies, updates about the availability of the latest Syncfusion NuGet package, and notifications about newer releases of Essential Studio®. By keeping users informed, Syncfusion® ensures that developers stay up to date with the latest features and enhancements.
 
 N> The Syncfusion® Notification feature is available from Essential Studio® v22.1.34.
 
@@ -43,7 +43,7 @@ If you use older versions of Syncfusion assemblies or NuGet packages from **Esse
 
 **4. Invalid License Key Notification**
 
-If you have mistakenly used an incorrect license key or used a license from another version or platform in your Blazor application, Syncfusion® will display a notification message stating, **The provided Syncfusion license key is invalid.** This message serves as a reminder to obtain a valid license key and ensure proper licensing for Syncfusion components.
+If you have mistakenly used an incorrect license key or a license from another version or platform in your Blazor application, Syncfusion® will display a notification message stating, **The provided Syncfusion license key is invalid**. This message serves as a reminder to obtain a valid license key and ensure proper licensing for Syncfusion components.
 
    ![Invalid Notification](images/blazor_invalid.png)
 
