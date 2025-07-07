@@ -215,7 +215,7 @@ By setting the [Explode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ## Border radius
 
-The corners of the first data point and last data point in the pyramid chart series can be rounded using the `BorderRadius` property within the [AccumulationChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html).
+The corners of the first data point and last data point in the pyramid chart series can be rounded using the [BorderRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_BorderRadius) property within the [AccumulationChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -250,6 +250,7 @@ The corners of the first data point and last data point in the pyramid chart ser
 }
 ```
 ![Blazor Pyramid Chart with border radius applied.](../images/pyramid/blazor-pyramid-border-radius.png)
+{% previewsample "https://blazorplayground.syncfusion.com/embed/LthyDHBRqlAFfKbF?appbar=false&editor=false&result=true&errorlist=false&theme=bootstrap5" %}
 
 N> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pyramid?theme=bootstrap5) to know various features of accumulation charts and how it is used to represent numeric proportional data.
 
